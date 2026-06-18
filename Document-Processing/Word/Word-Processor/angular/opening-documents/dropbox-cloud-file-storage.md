@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Open document from Dropbox cloud file storage 
 
-To load a document from Dropbox cloud file storage in a Document editor, you can follow the steps below
+To load a document from Dropbox cloud file storage in a [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor), you can follow the steps below
 
 **Step 1:** Create a Dropbox API
 

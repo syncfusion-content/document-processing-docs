@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Paragraph format in Angular Document editor component
 
-Document Editor supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
 
 ## Indentation
 

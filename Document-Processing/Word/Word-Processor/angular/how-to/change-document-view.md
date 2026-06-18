@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## How to change the document view in DocumentEditor component
 
-DocumentEditor allows you to change the view to web layout and print using the [`layoutType`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#layouttype) property with the supported [`LayoutType`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/layoutType/).
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) allows you to change the view to web layout and print using the [`layoutType`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#layouttype) property with the supported [`LayoutType`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/layoutType/).
 
 ```typescript
 import { Component, ViewChild, ViewEncapsulation } from '@angular/core';

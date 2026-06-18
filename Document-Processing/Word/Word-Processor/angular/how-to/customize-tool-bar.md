@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## How to customize existing toolbar in DocumentEditorContainer
 
-Document Editor Container allows you to customize(add, show, hide, enable, and disable) existing items in a toolbar.
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) Container allows you to customize(add, show, hide, enable, and disable) existing items in a toolbar.
 
 * Add - New items can defined by [`CustomToolbarItemModel`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/customToolbarItemModel/) and with existing items in [`toolbarItems`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/#toolbaritems) property. Newly added item click action can be defined in [`toolbarClick`](https://ej2.syncfusion.com/angular/documentation/api/toolbar/clickEventArgs/).
 

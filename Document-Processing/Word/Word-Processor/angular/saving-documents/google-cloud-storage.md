@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 To save a document to Google Cloud Storage, you can follow the steps below
 
-**Step 1:** Create a Simple Document Editor sample in angular
+**Step 1:** Create a Simple [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) sample in angular
 
 Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in angular. This will give you a basic setup of the Document Editor component.
 

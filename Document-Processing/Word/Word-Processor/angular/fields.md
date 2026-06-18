@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Fields in Angular Document editor component
 
-Document Editor has preservation support for all types of fields in an existing word document without any data loss.
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) has preservation support for all types of fields in an existing word document without any data loss.
 
 ## Adding Fields
 

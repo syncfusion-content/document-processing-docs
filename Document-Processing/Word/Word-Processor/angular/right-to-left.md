@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Right to left in Angular Document editor component
 
-Document Editor provides RTL (right-to-left) support. This can be enabled using the “enableRtl” property.
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) provides RTL (right-to-left) support. This can be enabled using the “enableRtl” property.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
