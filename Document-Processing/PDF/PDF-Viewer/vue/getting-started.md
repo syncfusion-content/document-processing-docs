@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with standalone Vue PDF Viewer Component in Vue 2
+# Getting Started with standalone Vue PDF Viewer Component in Vue 2
 
 This section explains how to create the **PDF Viewer** component and configure its available functionalities in a Vue 2 application using [Vue CLI](https://cli.vuejs.org/) with client-side rendering. The standalone PDF Viewer renders PDFs locally in the browser without requiring a server.
 

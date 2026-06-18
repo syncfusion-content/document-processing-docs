@@ -8,29 +8,77 @@ documentation: ug
 ---
 
 # Getting Started with Windows Forms PDF Viewer (PdfViewerControl)
+This section briefly explains how to include the [Syncfusion<sup>®</sup> WinForms PdfViewer](https://www.syncfusion.com/pdf-viewer-sdk/winforms-pdf-viewer) component in Windows Forms App using Visual Studio.
 
-## Adding reference to PdfViewerControl and dependent assemblies
+## Prerequisites
+* [System requirements for WinForms components](https://help.syncfusion.com/windowsforms/system-requirements)
 
-Refer to the [Control Dependencies](https://help.syncfusion.com/windowsforms/control-dependencies#pdf-viewer) section to get the list of assemblies.
+## Create a new Windows Forms App in Visual Studio
 
-### Installing NuGet packages
+You can create a **Windows Forms Application** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/desktop/winforms/get-started/create-app-visual-studio) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Windows Forms](https://help.syncfusion.com/windowsforms/visual-studio-integration/template-studio).
 
-Adding reference to Syncfusion<sup>&reg;</sup>; assemblies through NuGet packages is illustrated in the [NuGet Packages](https://help.syncfusion.com/windowsforms/installation/install-nuget-packages) section. 
+## Assemblies Deployment
 
-N> Starting with version 23.1.x, a reference to the Syncfusion.PdfToImageConverter.Base assembly is necessary for PdfViewer applications.
+To add a WinForms PdfViewer component to your application by installing it via NuGet packages(Recommended) or by manually adding the required assemblies to the project.
+
+{% tabcontents %}
+{% tabcontent NuGet Package %}
+
+### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Windows Forms PdfViewer NuGet packages
+
+To add **Windows Forms PdfViewer** component in the application, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install:
+
+•	[Syncfusion.PdfViewer.Windows](https://www.nuget.org/packages/Syncfusion.PdfViewer.Windows)
+
+{% endtabcontent %}
+ 
+{% tabcontent Assemblies (.dll)  %}
+
+### Add Syncfusion® WinForms PdfViewer Assemblies
+
+Below table describes, list of assemblies required to be added in project when the [WinForms PdfViewer](https://www.syncfusion.com/pdf-viewer-sdk/winforms-pdf-viewer) control is used in your application.
+
+<table>
+<tr>
+<th>
+Assembly</th><th>
+Description</th></tr>
+<tr>
+<td>
+Syncfusion.Compression.Base.dll</td><td>
+This library handles various compression and decompression operations that are used in the PDF file internally.</td></tr>
+<tr>
+<td>
+Syncfusion.Pdf.Base.dll</td><td>
+This library contains the PDF reader and creator that supports the PDF Viewer.</td></tr>
+<tr>
+<td>
+Syncfusion.PdfToImageConverter.Base.dll</td><td>
+This library is responsible for Pdfium integration and image generation, enhancing the capabilities of the PDF Viewer.</td></tr>
+<tr>
+<td>
+Syncfusion.PdfViewer.Windows.dll</td><td>
+This component contains the rendering area and other related UI elements.</td></tr>
+<tr>
+<td>
+Syncfusion.Shared.Base.dll</td><td>
+This component contains various UI controls (ColorPickerPalette and Numeric UpDown) that are used in the PDF Viewer.</td></tr>
+</table>
+
+{% endtabcontent %}
+ 
+{% endtabcontents %}
+
+N> Starting with version 23.1.x, Syncfusion PdfToImageConverter is necessary for PdfViewer applications.
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup>; assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to [this link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your Windows Forms application to use our components.
 
-### Adding from the installed location
 
-The [WinForms PDF Viewer](https://www.syncfusion.com/winforms-ui-controls/pdf-viewer) (PdfViewerControl) and dependent assemblies can be found from the below location in your machine. 
+## Add Windows Forms PdfViewer component
 
-system drive:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\precompiledassemblies\{{ site.releaseversion }}\
+WinForms PdfViewer control can be added to an application either through the designer (XAML) or programmatically using code.
 
-## Adding PdfViewerControl to an Application
-
-From v16.3.0x onwards, PDF Viewer uses PDFium as a default rendering engine to render the PDF pages, which is a more robust and promising rendering engine. Refer to this [link](https://help.syncfusion.com/windowsforms/pdf-viewer/pdf-rendering-engines) for more details.
-
-### Adding in designer
+{% tabcontents %}
+{% tabcontent Via Designer %}
 
 1. Open your form in the designer. Add the Syncfusion<sup>&reg;</sup>; controls to your .NET toolbox in Visual Studio if you haven't done so already (the install would have automatically done this unless you selected not to complete toolbox integration during installation).
    
@@ -42,49 +90,47 @@ From v16.3.0x onwards, PDF Viewer uses PDFium as a default rendering engine to r
  
 3. This will add the instance 'pdfViewerControl1' to the Designer cs file. The PDF can be loaded in the Form cs file using the [Load](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_Forms_PdfViewer_PdfViewerControl_Load_System_String_) method. 
 
-{% capture codesnippet1 %}
 {% tabs %}
-{% highlight c# %}
+{% highlight c# tabtitle="Form1.cs" %}
 
 //Loading the document in the PdfViewerControl
 pdfViewerControl1.Load("Sample.pdf");
 
 {% endhighlight %}
-{% highlight vb %}
+{% highlight vb tabtitle="Form1.cs" %}
 
 'Loading the document in the PdfViewerControl
 pdfViewerControl1.Load("Sample.pdf")
 
 {% endhighlight %}
 {% endtabs %}
-{% endcapture %}
-{{ codesnippet1 | OrderList_Indent_Level_1 }}
-	
-### Adding manually in code
+
+
+{% endtabcontent %}
+
+{% tabcontent Via Coding %}
 
 1. Add Syncfusion.Windows.Forms.PdfViewer namespace.
 
-{% capture codesnippet2 %}
+
 {% tabs %}
-{% highlight c# %}
+{% highlight c# tabtitle="Form1.cs" %}
 
 using Syncfusion.Windows.Forms.PdfViewer;
 
 {% endhighlight %}
-{% highlight vb %}
+{% highlight vb tabtitle="Form1.cs" %}
 
 Imports Syncfusion.Windows.Forms.PdfViewer
 
 {% endhighlight %}
 {% endtabs %}
-{% endcapture %}
-{{ codesnippet2 | OrderList_Indent_Level_1 }}
+
 
 2. Create PdfViewerControl instance and load the PDF.
 
-{% capture codesnippet3 %}
 {% tabs %}
-{% highlight c# %}
+{% highlight c# tabtitle="Form1.cs" %}
 
 //Initializing the PdfViewerControl
 PdfViewerControl pdfViewerControl1 = new PdfViewerControl();
@@ -98,7 +144,7 @@ pdfViewerControl1.Dock = DockStyle.Fill;
 pdfViewerControl1.Load("Sample.pdf");
 
 {% endhighlight %}
-{% highlight vb %}
+{% highlight vb tabtitle="Form1.cs" %}
 
 'Initializing the PdfViewerControl
 Dim pdfViewerControl1 As PdfViewerControl = New PdfViewerControl()
@@ -113,93 +159,15 @@ pdfViewerControl1.Load("Sample.pdf")
 
 {% endhighlight %}
 {% endtabs %}
-{% endcapture %}
-{{ codesnippet3 | OrderList_Indent_Level_1 }}
 
-## Adding PdfDocumentView to an Application
 
-The [PdfDocumentView](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfDocumentView.html) control allows you to view PDF files without a toolbar. Other features are similar to the PdfViewerControl.
-
-### Adding in designer
-
-1. Open your form in the designer. Add the Syncfusion<sup>&reg;</sup>; controls to your .NET toolbox in Visual Studio if you haven't done so already (the install would have automatically done this unless you selected not to complete toolbox integration during installation).
-   
-   ![Windows forms PdfDocumentView drag and drop from toolbox](Getting-Started_images/Getting-Started_img1.png)
-
-2. Drag the PdfDocumentView from the toolbox onto the form. Appearance and behavior related aspects of the PdfDocumentView can be controlled by setting the appropriate properties through the properties grid. 
-
-   ![Windows forms PdfDocumentView displays properties window of control](Getting-Started_images/Getting-Started_img3.png)
+{% endtabcontent %}
  
-3. This will add the instance 'pdfDocumentView1' to the Designer cs file. The PDF can be loaded in the Form cs file using the [Load](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfDocumentView.html#Syncfusion_Windows_Forms_PdfViewer_PdfDocumentView_Load_System_String_) method. 
+{% endtabcontents %}
 
-{% capture codesnippet1 %}
-{% tabs %}
-{% highlight c# %}
 
-//Loading the document in the PdfDocumentView
-pdfDocumentView1.Load("Sample.pdf");
+N>[View Sample in GitHub.](https://github.com/syncfusion/pdf-viewer-sdk-winforms-demos/tree/master/pdfviewer/Getting%20Started/Pdf%20Viewer%20Demo)
 
-{% endhighlight %}
-{% highlight vb %}
-
-'Loading the document in the PdfDocumentView
-pdfDocumentView1.Load("Sample.pdf")
-
-{% endhighlight %}
-{% endtabs %}
-{% endcapture %}
-{{ codesnippet1 | OrderList_Indent_Level_1 }}
-	
-### Adding manually in code
-
-1. Add Syncfusion.Windows.Forms.PdfViewer namespace.
-
-{% capture codesnippet2 %}
-{% tabs %}
-{% highlight c# %}
-
-using Syncfusion.Windows.Forms.PdfViewer;
-
-{% endhighlight %}
-{% highlight vb %}
-
-Imports Syncfusion.Windows.Forms.PdfViewer
-
-{% endhighlight %}
-{% endtabs %}
-{% endcapture %}
-{{ codesnippet2 | OrderList_Indent_Level_1 }}
-
-2. Create a PdfDocumentView instance and load the PDF.
-
-{% capture codesnippet3 %}
-{% tabs %}
-{% highlight c# %}
-
-//Initializing the PdfDocumentView
-PdfDocumentView pdfDocumentView1 = new PdfDocumentView();
-
-//Loading the document in the PdfDocumentView
-pdfDocumentView1.Load("Sample.pdf");
-//Add the PdfDocumentView to the Form
-Controls.Add(pdfDocumentView1);
-
-{% endhighlight %}
-{% highlight vb %}
-
-'Initializing the PdfDocumentView
-Dim pdfDocumentView1 As PdfDocumentView = New PdfDocumentView()
-
-'Loading the document in the PdfDocumentView
-pdfDocumentView1.Load("Sample.pdf")
-'Add the PdfDocumentView to the Form
-Controls.Add(pdfDocumentView1)
-
-{% endhighlight %}
-{% endtabs %}
-{% endcapture %}
-{{ codesnippet3 | OrderList_Indent_Level_1 }}
-
-Refer to [Viewing PDF files](/windowsforms/pdf-viewer/working-with-pdf-viewer#viewing-pdf-files) for more information.
-
-N> You can also explore our [WinForms PDF Viewer example](https://github.com/syncfusion/winforms-demos/tree/master/pdfviewer) that shows you how to render and configure the PDF Viewer.
+## See Also
+- [Viewing PDF files](/windowsforms/pdf-viewer/working-with-pdf-viewer#viewing-pdf-files)
+- [Working with PdfDocumentView](./working-with-pdfdocumentview)
