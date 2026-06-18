@@ -9,7 +9,7 @@ documentation: ug
 
 # Performance Metrics in blazor Spreadsheet Control
 
-Performance metrics show how efficiently the [Syncfusion® blazor Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) handles large datasets and core operations such as rendering, styling, number Formats and file import/export. This documentation provides the measured results for these operations to give a clear view of how the control performs under different workloads.
+Performance metrics show how efficiently the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) handles large datasets and core operations such as rendering, styling, number Formats and file import/export. This documentation provides the measured results for these operations to give a clear view of how the control performs under different workloads.
 
 
 ## Environment
