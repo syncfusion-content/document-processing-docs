@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Hyperlink navigation in PDF Viewer
+# Hyperlink navigation in React PDF Viewer
 
 ## Overview
 
