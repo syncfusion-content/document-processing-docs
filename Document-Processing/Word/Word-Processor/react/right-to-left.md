@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Right to left in React Document editor component
 
-Document Editor provides RTL (right-to-left) support. This can be enabled using the “enableRtl” property.
+[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) provides RTL (right-to-left) support. This can be enabled using the “enableRtl” property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

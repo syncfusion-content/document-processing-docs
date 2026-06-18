@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Insert page number and navigate to page in React Document editor component
 
-You can insert page number and navigate to specific page in React Document Editor component by following ways.
+You can insert page number and navigate to specific page in [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) component by following ways.
 
 ## Insert page number
 

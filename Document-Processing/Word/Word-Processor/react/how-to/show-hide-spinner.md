@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Show hide spinner in React Document editor component
 
-Using [`spinner`](https://ej2.syncfusion.com/documentation/spinner/getting-started#create-the-spinner-globally) component, you can show/hide spinner while opening document in DocumentEditor .
+Using [`spinner`](https://ej2.syncfusion.com/documentation/spinner/getting-started#create-the-spinner-globally) component, you can show/hide spinner while opening document in [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor).
 
 Example code snippet to show/hide spinner
 

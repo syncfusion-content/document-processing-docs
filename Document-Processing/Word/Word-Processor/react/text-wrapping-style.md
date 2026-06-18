@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Text wrapping style in React Document editor component
 
-Text wrapping refers to how images and shapes are fit with surrounding text in a document. Currently, DocumentEditor has only preservation support for image and textbox shape with below wrapping styles.
+Text wrapping refers to how images and shapes are fit with surrounding text in a document. Currently, [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) has only preservation support for image and textbox shape with below wrapping styles.
 
 ## In-Line with Text
 
