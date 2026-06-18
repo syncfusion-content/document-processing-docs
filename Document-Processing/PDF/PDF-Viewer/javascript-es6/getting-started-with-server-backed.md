@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Setup for Server-Backed TypeScript PDF Viewer | Syncfusion
+title: Getting Started with Server-Backed TypeScript PDF Viewer | Syncfusion
 description: Learn how to set up and run the Syncfusion TypeScript PDF Viewer in server-backed mode using a PDF Viewer web service.
 platform: document-processing
 control: PDF Viewer
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting started with TypeScript PDF Viewer (Server-Backed)
 
-This guide explains how to create and run the **TypeScript PDF Viewer in server-backed mode**. In this mode, PDF rendering and processing are performed on a server-side web service, while the TypeScript application acts as the client.
+This section briefly explains how to create and run the **TypeScript PDF Viewer in server-backed mode**. In this mode, PDF rendering and processing are performed on a server-side web service, while the TypeScript application acts as the client.
 
 N> Starting with the 2026 Vol 2 main release (June 2026), no new features will be added to the Server PDF Viewer, as almost all of the PDF Viewer functionalities are now available in the Standalone PDF Viewer. If you are currently using the server-backed PDF Viewer, please refer to the [migration documentation](./server-to-standalone) to transition to the Standalone PDF Viewer.
 
@@ -59,7 +59,7 @@ npm install
 Add the required Syncfusion styles to `src/styles/styles.css`:
 
 {% tabs %}
-{% highlight css tabtitle="~/src/styles/styles.css" %}
+{% highlight css tabtitle="styles.css" %}
 
 @import '../../node_modules/@syncfusion/ej2-base/styles/material.css';
 @import '../../node_modules/@syncfusion/ej2-buttons/styles/material.css';
@@ -83,7 +83,7 @@ To load and display a PDF in server-backed mode, configure the PDF Viewer with t
 Update `src/app.ts` as shown below:
 
 {% tabs %}
-{% highlight ts tabtitle="~/src/app.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 import { PdfViewer, Toolbar, Magnification, 
          Navigation, Annotation, LinkAnnotation,
          ThumbnailView, BookmarkView, TextSelection, 
@@ -128,7 +128,7 @@ The application will connect to the configured PDF Viewer web service and render
 
 ![Rendered PDF Viewer in browser](images/pdfviewer-control.png)
 
-[View Sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/Save%20and%20Load/Load%20PDF%20file%20from%20URL)
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/Save%20and%20Load/Load%20PDF%20file%20from%20URL)
 
 ## Run the PDF Viewer web service
 

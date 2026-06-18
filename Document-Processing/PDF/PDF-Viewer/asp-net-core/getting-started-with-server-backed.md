@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Server-Backed ASP.NET Core PDF Viewer | Syncfusion
+title: Getting Started with Server-Backed ASP.NET Core PDF Viewer | Syncfusion
 description: Learn how to integrate the server-backed PDF Viewer control in an ASP.NET Core application. View and annotate with server-side rendering.
 platform: document-processing
 control: PDF Viewer
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Server-Backed ASP.NET Core PDF Viewer
 
-This article shows how to add the [Syncfusion® Server-backed ASP.NET Core PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) to a ASP.NET Core Web application using Visual Studio or Visual Studio Code. A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-Getting-Started-Examples/tree/main/PDFViewer/ASP.NET%20Core%20Tag%20Helper%20Examples).
+This section briefly explains how to add the [Syncfusion® Server-backed ASP.NET Core PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) to a ASP.NET Core Web application using Visual Studio or Visual Studio Code. A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-Getting-Started-Examples/tree/main/PDFViewer/ASP.NET%20Core%20Tag%20Helper%20Examples).
 
 N> Starting with the 2026 Vol 2 main release (June 2026), no new features will be added to the Server PDF Viewer, as almost all of the PDF Viewer functionalities are now available in the Standalone PDF Viewer. If you are currently using the server-backed PDF Viewer, please refer to the [migration documentation](./server-to-standalone) to transition to the Standalone PDF Viewer.
 
@@ -45,15 +45,6 @@ Create an **ASP.NET Core Web App** in Visual Studio Code using the following com
 {% highlight c# tabtitle="ASP.NET Core" %}
 
 dotnet new webapp -o WebApp
-
-{% endhighlight %}
-{% endtabs %}
-
-Move into the newly created project folder:
-
-{% tabs %}
-{% highlight c# tabtitle="ASP.NET Core" %}
-
 cd WebApp
 
 {% endhighlight %}
@@ -71,25 +62,7 @@ Install the Syncfusion&reg; ASP.NET Core component NuGet packages within the pro
 {% highlight c# tabtitle="Package Manager" %}
 
 dotnet add package Syncfusion.EJ2.AspNet.Core -v {{ site.releaseversion }}
-
-{% endhighlight %}
-{% endtabs %}
-
-* Run the following commands to install the [Syncfusion.EJ2.PdfViewer.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.PdfViewer.AspNet.Core/) NuGet packages.
-
-{% tabs %}
-{% highlight c# tabtitle="Package Manager" %}
-
 dotnet add package Syncfusion.EJ2.PdfViewer.AspNet.Core -v {{ site.releaseversion }}
-
-{% endhighlight %}
-{% endtabs %}
-
-* After adding the package, run the following command to restore all project dependencies.
-
-{% tabs %}
-{% highlight c# tabtitle="Package Manager" %}
-
 dotnet restore
 
 {% endhighlight %}
@@ -150,7 +123,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer
 {% highlight c# tabtitle="~/Index.cshtml" %}
 
 <!-- documentPath specifies the PDF document to load -->
-<ejs-pdfviewer id="pdfviewer" style="height:600px" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
+<ejs-pdfviewer id="pdfviewer" style="height:600px" serviceUrl="/Index" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
 </ejs-pdfviewer>
 
 {% endhighlight %}
@@ -168,7 +141,7 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 ![ASP.NET Core PDF Viewer control in action](Core_Images/pdfviewer-control.png)
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-Getting-Started-Examples/tree/main/PDFViewer/ASP.NET%20Core%20Tag%20Helper%20Examples)
+> [View sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-Getting-Started-Examples/tree/main/PDFViewer/ASP.NET%20Core%20Tag%20Helper%20Examples)
 
 ## Deployment notes
 

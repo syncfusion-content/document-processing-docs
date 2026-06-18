@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Standalone ASP.NET Core PDF Viewer
 
-This article shows how to add the [Syncfusion® Standalone ASP.NET Core PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) to a ASP.NET Core Web application using Visual Studio or Visual Studio Code. A fully functional example project is available in the [GitHub repository](https://github.com/SyncfusionExamples/ASP-NET-Core-Getting-Started-Examples/tree/main/PDFViewer/ASP.NET%20Core%20Tag%20Helper%20Examples%20-%20Standalone%20PDF%20Viewer).
+This section briefly explains how to add the [Syncfusion® Standalone ASP.NET Core PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) to a ASP.NET Core Web application using Visual Studio or Visual Studio Code. A fully functional example project is available in the [GitHub repository](https://github.com/SyncfusionExamples/ASP-NET-Core-Getting-Started-Examples/tree/main/PDFViewer/ASP.NET%20Core%20Tag%20Helper%20Examples%20-%20Standalone%20PDF%20Viewer).
 
 ## Prerequisites
 
@@ -42,15 +42,6 @@ Create an **ASP.NET Core Web App** in Visual Studio Code using the following com
 {% highlight c# tabtitle="ASP.NET Core" %}
 
 dotnet new webapp -o WebApp
-
-{% endhighlight %}
-{% endtabs %}
-
-Move into the newly created project folder:
-
-{% tabs %}
-{% highlight c# tabtitle="ASP.NET Core" %}
-
 cd WebApp
 
 {% endhighlight %}
@@ -68,15 +59,6 @@ Install the Syncfusion&reg; ASP.NET Core component NuGet packages within the pro
 {% highlight c# tabtitle="Package Manager" %}
 
 dotnet add package Syncfusion.EJ2.AspNet.Core -v {{ site.releaseversion }}
-
-{% endhighlight %}
-{% endtabs %}
-
-* After adding the package, run the following command to restore all project dependencies.
-
-{% tabs %}
-{% highlight c# tabtitle="Package Manager" %}
-
 dotnet restore
 
 {% endhighlight %}

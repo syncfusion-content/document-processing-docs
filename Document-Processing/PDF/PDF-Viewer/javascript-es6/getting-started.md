@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting started with the TypeScript PDF Viewer
 
-This guide explains how to create and run a **TypeScript PDF Viewer** application using Syncfusion Essential JS 2 in **standalone mode**.
+This section briefly explains how to create and run a **TypeScript PDF Viewer** application using Syncfusion Essential JS 2 in **standalone mode**.
 
 ## Prerequisites
 
@@ -57,7 +57,7 @@ npm install
 Add the required Syncfusion styles to `src/styles/styles.css`:
 
 {% tabs %}
-{% highlight css tabtitle="~/src/styles/styles.css" %}
+{% highlight css tabtitle="styles.css" %}
 
 @import '../../node_modules/@syncfusion/ej2-base/styles/material.css';
 @import '../../node_modules/@syncfusion/ej2-buttons/styles/material.css';
@@ -79,7 +79,7 @@ N> Refer to the [Themes topic](https://ej2.syncfusion.com/documentation/appearan
 Import the PDF Viewer and inject only the required modules. Update `src/app.ts` as shown below:
 
 {% tabs %}
-{% highlight ts tabtitle="~/src/app.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 
 import { PdfViewer, Toolbar, Magnification, Navigation, 
          Annotation, LinkAnnotation, ThumbnailView,
