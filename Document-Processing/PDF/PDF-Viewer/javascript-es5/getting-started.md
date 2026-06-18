@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting started with Standalone JavaScript PDF Viewer
 
-This section briefly explains how to create and run a **JavaScript (ES5) PDF Viewer** application using Syncfusion Essential JS 2 in **standalone mode**.
+This section explains how to create and run a **JavaScript (ES5) PDF Viewer** application using Syncfusion Essential JS 2 in **standalone mode**.
 
 ## Create application folder
 
@@ -46,23 +46,17 @@ To use local scripts and styles for the Syncfusion® PDF Viewer, follow these st
 >
 > Styles: `C:/Program Files (x86)/Syncfusion/Essential Studio/JavaScript - EJ2/19.3.53/Web(Essential JS 2)/JavaScript/ej2-js-es5/styles/material.css`
 
-Alternatively, Run the following command to clone the [`Essential JS 2 quickstart`](https://github.com/syncfusion/ej2-quickstart.git) project from GitHub.
+Alternatively, Run the following command to clone the [`Essential JS 2 quickstart`](https://github.com/syncfusion/ej2-quickstart.git) project from GitHub and install the required packages.
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="CLI" %}
+
 git clone https://github.com/syncfusion/ej2-quickstart.git quickstart
-```
-
-Move into the cloned project directory:
-
-```bash
 cd quickstart
-```
-
-Run the following command to install the required dependencies:
-
-```bash
 npm install
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 2. Download the `pdfium.js` and `pdfium.wasm` files from the following links:
 
@@ -114,13 +108,6 @@ npm install
 
 {% tabcontent Using CDN Links %}
 
-Reference the scripts and styles directly from the CDN.
-
-```text
-Script: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/dist/global/{PACKAGE_NAME}.min.js
-Style: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/styles/{THEME_NAME}.css
-```
-
 Create an HTML page (index.html) in `pdf-viewer-app` location and add the CDN link references inside the `<head>` section of your `index.html` file.
 
 {% tabs %}
@@ -146,7 +133,7 @@ Create an HTML page (index.html) in `pdf-viewer-app` location and add the CDN li
 
 {% endtabcontents %}
 
-## Add the Syncfusion® PDF Viewer control
+## Add the Syncfusion® PDF Viewer component
 
 Add a container element for the PDF Viewer control in the `index.html` file and then initialize the control inside the `<body>` section of your `index.html` file.
 
@@ -154,10 +141,7 @@ Add a container element for the PDF Viewer control in the `index.html` file and 
 {% highlight html tabtitle="index.html" %}
 
 <!-- Element which will render as PDF Viewer -->
-<div id="container">
-    <div id="PdfViewer" style="height:500px;width:100%;"></div>
-</div>
-<script src="index.js" type="text/javascript"></script>
+<div id="PdfViewer" style="height:500px;width:100%;"></div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -210,11 +194,15 @@ N> The `documentPath` property is used to set the path of the PDF file to be loa
 
 ## Run the application
 
-Now run the following command in the console to start the development server. This command serves the application locally on your machine:
+Run the following command to start the JavaScript application:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 npx serve .
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 After the application starts, open the localhost URL displayed in the terminal in your web browser. The PDF document will be rendered in the browser. The output will appear as follows:
 

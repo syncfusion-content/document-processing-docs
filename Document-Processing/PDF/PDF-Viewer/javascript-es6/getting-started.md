@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting started with the TypeScript PDF Viewer
 
-This section briefly explains how to create and run a **TypeScript PDF Viewer** application using Syncfusion Essential JS 2 in **standalone mode**.
+This section explains how to create and run a **TypeScript PDF Viewer** application using Syncfusion Essential JS 2 in **standalone mode**.
 
 ## Prerequisites
 
@@ -28,29 +28,37 @@ Create a simple TypeScript application using the Essential® JS 2 [quickstart](h
 
 **Step 1:** Open the command prompt from the required directory and clone the quickstart project from GitHub.
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="CLI" %}
 git clone https://github.com/SyncfusionExamples/ej2-quickstart-webpack ej2-quickstart
-```
+{% endhighlight %}
+{% endtabs %}
 
 **Step 2:** Navigate to the `ej2-quickstart` folder.
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="CLI" %}
 cd ej2-quickstart
-```
+{% endhighlight %}
+{% endtabs %}
 
 **Step 3:** By default, the `ej2-quickstart` repository is preconfigured with the [@syncfusion/ej2](https://www.npmjs.com/package/@syncfusion/ej2) package in `~/package.json`. This package installs all Syncfusion Essential JS 2 components, including the PDF Viewer and other EJ2 controls.
 
 To install **only the PDF Viewer component**, replace the dependencies with [@syncfusion/ej2-pdfviewer](https://www.npmjs.com/package/@syncfusion/ej2-pdfviewer) in `package.json`:
 
-```json
+{% tabs %}
+{% highlight bash tabtitle="package.json" %}
 "@syncfusion/ej2-pdfviewer": "*"
-```
+{% endhighlight %}
+{% endtabs %}
 
 **Step 4:** Install the dependent npm packages.
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
 npm install
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Add CSS references
 
@@ -118,11 +126,13 @@ Add a container element for the PDF Viewer in `index.html`:
 
 ## Run the application
 
-Build and launch the application using the following command:
+Run the following command to start the TypeScript application:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
 npm start
-```
+{% endhighlight %}
+{% endtabs %}
 
 The image below shows how the PDF Viewer is rendered in the browser:
 
