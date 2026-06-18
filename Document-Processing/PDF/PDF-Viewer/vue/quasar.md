@@ -1,16 +1,16 @@
 ---
 layout: post
 title: Getting Started with Quasar Framework and Vue PDF Viewer | Syncfusion
-description: Check out and learn about getting started with the Quasar Framework and Vue PDF Viewer Component of Syncfusion Essential JS 2 and more details.
+description: Check out and learn about getting Started with the Quasar Framework and Vue PDF Viewer Component of Syncfusion Essential JS 2 and more details.
 control: Quasar
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with Vue PDF Viewer in Quasar Framework
+# Getting Started with Vue PDF Viewer in Quasar Framework
 
-This guide provides step-by-step instructions for integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue PDF Viewer component into a [Quasar Framework](https://quasar.dev/) project using the Composition API.
+This section provides step-by-step instructions for integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue PDF Viewer component into a [Quasar Framework](https://quasar.dev/) project using the Composition API.
 
 Quasar is a Vue.js-based open-source framework that enables developers to create high-performance, responsive applications across web, mobile, and desktop platforms. The Syncfusion Vue PDF Viewer integrates seamlessly with Quasar's architecture, providing a complete PDF viewing and annotation solution.
 
@@ -61,12 +61,10 @@ npm install @syncfusion/ej2-vue-pdfviewer --save
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components support multiple theme options. Refer to the [themes documentation](https://ej2.syncfusion.com/vue/documentation/appearance/theme) for details about built-in themes and different import approaches.
-
-In this example, the `Material 3` theme is applied using CSS styles from the installed packages. Import the required Material 3 CSS styles for the PDF Viewer and its dependencies into the `<style>` section of the `src/app.vue` file:
+Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components support multiple theme options. In this example, the `Material 3` theme is applied using CSS styles from the installed packages. Import the required Material 3 CSS styles for the PDF Viewer and its dependencies into the `<style>` section of the `src/app.vue` file:
 
 {% tabs %}
-{% highlight html tabtitle="~/src/app.vue" %}
+{% highlight html tabtitle="app.vue" %}
 
 <style>
   @import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
@@ -83,18 +81,19 @@ In this example, the `Material 3` theme is applied using CSS styles from the ins
 {% endhighlight %}
 {% endtabs %}
 
-> The order of importing CSS styles should be in line with their dependency graph.
+N> The order of importing CSS styles should be in line with their dependency graph.
+N> Refer to the [Themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Vue project.
 
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
 Add the PDF Viewer component to your Quasar application by following these instructions:
 
-### Import the PDF Viewer and Modules
+### Import and register the PDF Viewer
 
 Import the PDF Viewer component and its required modules in the `<script setup>` section of `src/app.vue` and Declare the `serviceUrl` and `documentPath` properties, and provide the required modules:
 
 {% tabs %}
-{% highlight html tabtitle="~/src/app.vue" %}
+{% highlight html tabtitle="app.vue" %}
 
 import { provide } from 'vue';
 import { PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -110,12 +109,12 @@ provide('PdfViewer', [ Toolbar, Magnification, Navigation, LinkAnnotation, Bookm
 {% endhighlight %}
 {% endtabs %}
 
-### Add the Component Template
+### Initialize the PDF Viewer
 
 Define the PDF Viewer component in the template section:
 
 {% tabs %}
-{% highlight html tabtitle="~/src/app.vue" %}
+{% highlight html tabtitle="app.vue" %}
 
 <ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath">
 </ejs-pdfviewer>
