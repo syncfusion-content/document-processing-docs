@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Blazor UI Builder Skill with Spreadsheet | Syncfusion®
-description: Install Blazor UI Builder to generate production-ready Blazor components with Spreadsheet from natural-language prompts.
-control: SfSpreadsheet
+description: Install Syncfusion® Blazor UI Builder to generate production-ready Blazor components with Spreadsheet from natural-language prompts.
+control: Spreadsheet
 platform: document-processing
 documentation: ug
 keywords: Blazor UI Builder, Skills, AI Assistants, Spreadsheet SDK, Agent Skills
 ---
 
-# Syncfusion® Blazor UI Builder Skill with Spreadsheet for AI Assistants
+# Syncfusion® Blazor UI Builder Skill with Spreadsheet
 
 **Syncfusion® Blazor UI Builder Skill** is an AI-powered skill and companion agent that accelerates Blazor Spreadsheet application development by transforming natural-language UI requirements into production-ready components using Syncfusion® Blazor UI libraries. 
 
@@ -24,7 +24,7 @@ Before installing Blazor UI Builder Skill with Spreadsheet, ensure the following
 - Required [Node.js](https://nodejs.org/en) version ≥ 18
 - **Agent Package Manager** (APM) installed — follow [Installation Guidelines](https://microsoft.github.io/apm/quickstart/#1-install-apm)
 - A supported AI agent or IDE that integrates with the Skills (VS Code, Cursor, Syncfusion® Code Studio, etc.)
-- Active Syncfusion<sup style="font-size:70%">&reg;</sup> license(any of the following):  
+- Active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):  
   - [Commercial](https://www.syncfusion.com/sales/unlimitedlicense)  
   - [Community License](https://www.syncfusion.com/products/communitylicense)  
   - [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials)
@@ -158,11 +158,11 @@ Create a employee directory using blazor spreadsheet component with columns for 
 {% endpromptcard %}
 {% endpromptcards %}
 
-* Generated code follows best practices with accessible, semantic HTML, responsive mobile-first layouts, strong C# typing, and built-in security measures such as input validation and avoidance of embedded secrets.
+Generated code follows best practices with accessible, semantic HTML, responsive mobile-first layouts, strong C# typing, and built-in security measures such as input validation and avoidance of embedded secrets.
 
 ## Best Practices
 
-Follow these guidelines to get the most out of UI Builder and ensure high-quality production-ready result:
+Follow these guidelines to get the most out of UI Builder and ensure high-quality production-ready results:
 
 - **Stay consistent** - Maintain consistent file organization, naming conventions, and coding standards throughout your project.
 - **Use advanced AI models** - For best results, use **Claude Sonnet 4.6 or higher** capability models to produce better code quality and more accurate implementations.
