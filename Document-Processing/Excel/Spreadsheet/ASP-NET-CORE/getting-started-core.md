@@ -10,7 +10,7 @@ documentation: ug
 
 # Getting Started with ASP.NET Core Spreadsheet Control
 
-This section briefly explains about how to include [ASP.NET Core Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-core-spreadsheet-editor) control in your ASP.NET Core application using Visual Studio.
+This section briefly explains about how to include [ASP.NET Core Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-core-spreadsheet-editor) control in your ASP.NET Core application using Visual Studio.
 
 ## Prerequisites
 
@@ -96,7 +96,7 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 ![ASP.NET Core Spreadsheet control](images/spreadsheet.png)
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-Getting-Started-Examples/tree/main/Spreadsheet/ASP.NET%20Core%20Tag%20Helper%20Examples). Looking for the full ASP.NET Core Spreadsheet component overview, features, pricing, and documentation? Visit the [ASP.NET Core Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-core-spreadsheet-editor) page.
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-Getting-Started-Examples/tree/main/Spreadsheet/ASP.NET%20Core%20Tag%20Helper%20Examples). Looking for the full ASP.NET Core Spreadsheet component overview, features, pricing, and documentation? Visit the [ASP.NET Core Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-core-spreadsheet-editor) page.
 
 ## See also
 

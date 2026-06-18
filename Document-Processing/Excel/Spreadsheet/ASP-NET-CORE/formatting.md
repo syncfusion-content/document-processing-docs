@@ -10,7 +10,7 @@ documentation: ug
 
 # Formatting in ASP.NET Core Spreadsheet Control
 
-Formatting options make your data easier to view and understand. The different types of formatting options in the [ASP.NET Core Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-core-spreadsheet-editor) are,
+Formatting options make your data easier to view and understand. The different types of formatting options in the [ASP.NET Core Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-core-spreadsheet-editor) are,
 * Number Formatting
 * Text Formatting
 * Cell Formatting
