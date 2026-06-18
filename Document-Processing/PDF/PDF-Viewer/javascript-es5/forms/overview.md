@@ -9,7 +9,7 @@ documentation: ug
 
 # Overview of Forms in JavaScript PDF Viewer
 
-The Syncfusion PDF Viewer delivers a complete, easy-to-use PDF forms experience. Users can read, fill, add, edit, and delete form fields directly within PDF documents via the intuitive user interface or programmatic APIs.
+The Javascript PDF Viewer delivers a complete, easy-to-use PDF forms experience. Users can read, fill, add, edit, and delete form fields directly within PDF documents via the intuitive user interface or programmatic APIs.
 
 The viewer includes import and export support for form data, making integration straightforward. Developers benefit from extensive API control, while end users enjoy a simple interface for seamless form filling.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Annotation selector customization | Syncfusion PDF Viewer
+title: Annotation selector customization | Javascript PDF Viewer
 description: Learn how to customize annotation selectors in the JavaScript PDF Viewer component using annotationSelectorSettings with examples.
 platform: document-processing
 control: PDF Viewer

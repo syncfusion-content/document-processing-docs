@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Deploy Docker image to Azure Kubernetes Service (AKS) in JavaScript PDF Viewer | Syncfusion
-description: Deploy the Syncfusion PDF Viewer server Docker image to Azure Kubernetes Service (AKS), expose it with a LoadBalancer, and connect it to a JavaScript client.
+description: Deploy the Javascript PDF Viewer server Docker image to Azure Kubernetes Service (AKS), expose it with a LoadBalancer, and connect it to a JavaScript client.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
