@@ -73,37 +73,6 @@ root.render(<App />);
 
 {% endraw %}
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-{% raw %}
-
-import * as ReactDOM from 'react-dom';
-import * as React from 'react';
-import './index.css';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  return (<div>
-    <div className='control-section'>
-      {/* Render the PDF Viewer with magnification enabled */}
-        <PdfViewerComponent
-          id="container"
-          documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-          enableMagnification={true}
-          serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
-          style={{ 'height': '640px' }}>
-
-              <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                                  ThumbnailView, Print, TextSelection, TextSearch]} />
-        </PdfViewerComponent>
-    </div>
-  </div>);
-}
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-
-{% endraw %}
-{% endhighlight %}
 {% endtabs %}
 
 ## Magnification Types

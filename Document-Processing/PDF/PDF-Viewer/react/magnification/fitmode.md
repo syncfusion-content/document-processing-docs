@@ -58,47 +58,6 @@ root.render(<App />);
 
 {% endraw %}
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-{% raw %}
-
-import * as ReactDOM from 'react-dom';
-import * as React from 'react';
-import './index.css';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  const pdfViewerRef = React.useRef(null);
-
-  const handleFitPage = () => {
-    // Fit entire page to viewport
-    pdfViewerRef.current.magnification.fitToPage();
-  };
-
-  return (<div>
-    <div className='button-container' style={{ marginBottom: '10px' }}>
-      <button onClick={handleFitPage}>Fit to Page</button>
-    </div>
-    <div className='control-section'>
-      <PdfViewerComponent
-        ref={pdfViewerRef}
-        id="container"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        enableMagnification={true}
-        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
-        style={{ 'height': '640px' }}>
-
-            <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                                ThumbnailView, Print, TextSelection, TextSearch]} />
-      </PdfViewerComponent>
-    </div>
-  </div>);
-}
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-
-{% endraw %}
-{% endhighlight %}
 {% endtabs %}
 
 ## Fit page width to the viewport
@@ -147,47 +106,6 @@ root.render(<App />);
 
 {% endraw %}
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-{% raw %}
-
-import * as ReactDOM from 'react-dom';
-import * as React from 'react';
-import './index.css';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  const pdfViewerRef = React.useRef(null);
-
-  const handleFitWidth = () => {
-    // Fit page width to viewport
-    pdfViewerRef.current.magnification.fitToWidth();
-  };
-
-  return (<div>
-    <div className='button-container' style={{ marginBottom: '10px' }}>
-      <button onClick={handleFitWidth}>Fit to Width</button>
-    </div>
-    <div className='control-section'>
-      <PdfViewerComponent
-        ref={pdfViewerRef}
-        id="container"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        enableMagnification={true}
-        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
-        style={{ 'height': '640px' }}>
-
-            <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                                ThumbnailView, Print, TextSelection, TextSearch]} />
-      </PdfViewerComponent>
-    </div>
-  </div>);
-}
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-
-{% endraw %}
-{% endhighlight %}
 {% endtabs %}
 
 ## Set a default fit mode on load (initial view)
@@ -218,40 +136,6 @@ function App() {
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         enableMagnification={true}
-        zoomMode="FitToWidth"
-        style={{ 'height': '640px' }}>
-
-            <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                                ThumbnailView, Print, TextSelection, TextSearch]} />
-      </PdfViewerComponent>
-    </div>
-  </div>);
-}
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-
-{% endraw %}
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-{% raw %}
-
-import * as ReactDOM from 'react-dom';
-import * as React from 'react';
-import './index.css';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  const pdfViewerRef = React.useRef(null);
-
-  return (<div>
-    <div className='control-section'>
-      <PdfViewerComponent
-        ref={pdfViewerRef}
-        id="container"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        enableMagnification={true}
-        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
         zoomMode="FitToWidth"
         style={{ 'height': '640px' }}>
 
@@ -334,67 +218,6 @@ root.render(<App />);
 
 {% endraw %}
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-{% raw %}
-
-import * as ReactDOM from 'react-dom';
-import * as React from 'react';
-import './index.css';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  const pdfViewerRef = React.useRef(null);
-  const [currentFitMode, setCurrentFitMode] = React.useState('width');
-
-  const handleFitPage = () => {
-    pdfViewerRef.current.magnification.fitToPage();
-    setCurrentFitMode('page');
-  };
-
-  const handleFitWidth = () => {
-    pdfViewerRef.current.magnification.fitToWidth();
-    setCurrentFitMode('width');
-  };
-
-  return (<div>
-    <div className='custom-toolbar' style={{ marginBottom: '10px', padding: '10px', backgroundColor: '#f0f0f0' }}>
-      <button 
-        onClick={handleFitPage}
-        style={{ fontWeight: currentFitMode === 'page' ? 'bold' : 'normal' }}
-      >
-        Fit Page
-      </button>
-      <button 
-        onClick={handleFitWidth}
-        style={{ fontWeight: currentFitMode === 'width' ? 'bold' : 'normal' }}
-      >
-        Fit Width
-      </button>
-      <p style={{ margin: '5px 0', fontSize: '12px', color: '#666' }}>
-        Current mode: {currentFitMode === 'page' ? 'Fit Page' : 'Fit Width'}
-      </p>
-    </div>
-    <div className='control-section'>
-      <PdfViewerComponent
-        ref={pdfViewerRef}
-        id="container"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        enableMagnification={true}
-        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
-        style={{ 'height': '640px' }}>
-
-            <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                                ThumbnailView, Print, TextSelection, TextSearch]} />
-      </PdfViewerComponent>
-    </div>
-  </div>);
-}
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-
-{% endraw %}
-{% endhighlight %}
 {% endtabs %}
 
 ## Combine fit mode with user zoom (when to override vs respect last zoom)
@@ -451,69 +274,6 @@ function App() {
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         enableMagnification={true}
-        onZoomChange={onZoomChange}
-        style={{ 'height': '640px' }}>
-
-            <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                                ThumbnailView, Print, TextSelection, TextSearch]} />
-      </PdfViewerComponent>
-    </div>
-  </div>);
-}
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-
-{% endraw %}
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-{% raw %}
-
-import * as ReactDOM from 'react-dom';
-import * as React from 'react';
-import './index.css';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  const pdfViewerRef = React.useRef(null);
-  const [lastZoom, setLastZoom] = React.useState(100);
-
-  const handleFitPage = () => {
-    // Fit mode overrides last zoom
-    pdfViewerRef.current.magnification.fitToPage();
-  };
-
-  const handleFitWidth = () => {
-    // Fit mode overrides last zoom
-    pdfViewerRef.current.magnification.fitToWidth();
-  };
-
-  const handleRestoreZoom = () => {
-    // Restore previously saved zoom level
-    pdfViewerRef.current.magnification.zoomTo(lastZoom);
-  };
-
-  const onZoomChange = (args) => {
-    // Capture user's manual zoom level
-    setLastZoom(Math.round(args.previousZoomValue));
-  };
-
-  return (<div>
-    <div className='toolbar' style={{ marginBottom: '10px', padding: '10px', backgroundColor: '#f0f0f0' }}>
-      <button onClick={handleFitPage}>Fit Page</button>
-      <button onClick={handleFitWidth}>Fit Width</button>
-      <button onClick={handleRestoreZoom}>Restore Zoom ({lastZoom}%)</button>
-      <p style={{ margin: '5px 0', fontSize: '12px', color: '#666' }}>
-        Fit modes override zoom. Use Restore to return to last manual zoom.
-      </p>
-    </div>
-    <div className='control-section'>
-      <PdfViewerComponent
-        ref={pdfViewerRef}
-        id="container"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        enableMagnification={true}
-        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
         onZoomChange={onZoomChange}
         style={{ 'height': '640px' }}>
 

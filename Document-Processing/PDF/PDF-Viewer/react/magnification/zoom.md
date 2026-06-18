@@ -50,37 +50,6 @@ root.render(<App />);
 
 {% endraw %}
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-{% raw %}
-
-import * as ReactDOM from 'react-dom';
-import * as React from 'react';
-import './index.css';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  return (<div>
-    <div className='control-section'>
-      {/* Render the PDF Viewer with magnification enabled */}
-        <PdfViewerComponent
-          id="container"
-          documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-          enableMagnification={true}
-          serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
-          style={{ 'height': '640px' }}>
-
-              <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                                  ThumbnailView, Print, TextSelection, TextSearch]} />
-        </PdfViewerComponent>
-    </div>
-  </div>);
-}
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-
-{% endraw %}
-{% endhighlight %}
 {% endtabs %}
 
 ## Zoom in and out using toolbar and programmatically
@@ -122,51 +91,6 @@ function App() {
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         enableMagnification={true}
-        style={{ 'height': '640px' }}>
-
-            <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                                ThumbnailView, Print, TextSelection, TextSearch]} />
-      </PdfViewerComponent>
-    </div>
-  </div>);
-}
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-
-{% endraw %}
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-{% raw %}
-
-import * as ReactDOM from 'react-dom';
-import * as React from 'react';
-import './index.css';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  const pdfViewerRef = React.useRef(null);
-
-  const handleZoomIn = () => {
-    pdfViewerRef.current.magnification.zoomIn();
-  };
-
-  const handleZoomOut = () => {
-    pdfViewerRef.current.magnification.zoomOut();
-  };
-
-  return (<div>
-    <div className='button-container' style={{ marginBottom: '10px' }}>
-      <button onClick={handleZoomIn}>Zoom In</button>
-      <button onClick={handleZoomOut}>Zoom Out</button>
-    </div>
-    <div className='control-section'>
-      <PdfViewerComponent
-        ref={pdfViewerRef}
-        id="container"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        enableMagnification={true}
-        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
             <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -237,56 +161,6 @@ root.render(<App />);
 
 {% endraw %}
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-{% raw %}
-
-import * as ReactDOM from 'react-dom';
-import * as React from 'react';
-import './index.css';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  const pdfViewerRef = React.useRef(null);
-
-  const handleZoom150 = () => {
-    pdfViewerRef.current.magnification.zoomTo(150);
-  };
-
-  const handleZoom200 = () => {
-    pdfViewerRef.current.magnification.zoomTo(200);
-  };
-
-  const handleZoom75 = () => {
-    pdfViewerRef.current.magnification.zoomTo(75);
-  };
-
-  return (<div>
-    <div className='button-container' style={{ marginBottom: '10px' }}>
-      <button onClick={handleZoom75}>75%</button>
-      <button onClick={handleZoom150}>150%</button>
-      <button onClick={handleZoom200}>200%</button>
-    </div>
-    <div className='control-section'>
-      <PdfViewerComponent
-        ref={pdfViewerRef}
-        id="container"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        enableMagnification={true}
-        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
-        style={{ 'height': '640px' }}>
-
-            <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                                ThumbnailView, Print, TextSelection, TextSearch]} />
-      </PdfViewerComponent>
-    </div>
-  </div>);
-}
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-
-{% endraw %}
-{% endhighlight %}
 {% endtabs %}
 
 ## Initialize the viewer with a default zoom (on load)
@@ -319,45 +193,6 @@ function App() {
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         enableMagnification={true}
-        documentLoad={onDocumentLoaded}
-        style={{ 'height': '640px' }}>
-
-            <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                                ThumbnailView, Print, TextSelection, TextSearch]} />
-      </PdfViewerComponent>
-    </div>
-  </div>);
-}
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-
-{% endraw %}
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-{% raw %}
-
-import * as ReactDOM from 'react-dom';
-import * as React from 'react';
-import './index.css';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  const pdfViewerRef = React.useRef(null);
-
-  const onDocumentLoaded = () => {
-    // Set default zoom to 150% when document is loaded
-    pdfViewerRef.current.magnification.zoomTo(150);
-  };
-
-  return (<div>
-    <div className='control-section'>
-      <PdfViewerComponent
-        ref={pdfViewerRef}
-        id="container"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        enableMagnification={true}
-        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
         documentLoad={onDocumentLoaded}
         style={{ 'height': '640px' }}>
 
@@ -468,95 +303,6 @@ root.render(<App />);
 
 {% endraw %}
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-{% raw %}
-
-import * as ReactDOM from 'react-dom';
-import * as React from 'react';
-import './index.css';
-import {
-  PdfViewerComponent,
-  Toolbar,
-  Magnification,
-  Navigation,
-  LinkAnnotation,
-  BookmarkView,
-  ThumbnailView,
-  Print,
-  TextSelection,
-  TextSearch,
-  Inject,
-} from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  const pdfViewerRef = React.useRef(null);
-
-  const handleZoom150 = () => {
-    pdfViewerRef.current.magnification.zoomTo(150);
-  };
-
-  const handleZoom200 = () => {
-    pdfViewerRef.current.magnification.zoomTo(200);
-  };
-
-  return (
-    <div>
-      {/* Custom Application Toolbar */}
-      <div
-        style={{
-          marginBottom: '10px',
-          padding: '10px',
-          backgroundColor: '#f0f0f0',
-        }}
-      >
-        <button onClick={handleZoom150}>Zoom 150%</button>
-        <button onClick={handleZoom200}>Zoom 200%</button>
-        <p style={{ fontSize: '12px', color: '#666' }}>
-          Zoom level is controlled by the application.
-        </p>
-      </div>
-
-      {/* PDF Viewer */}
-      <PdfViewerComponent
-        ref={pdfViewerRef}
-        id="container"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        enableMagnification={true}
-        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
-        toolbarSettings={{
-          toolbarItems: [
-            'OpenOption',
-            'PageNavigationTool',
-            'AnnotationEditTool',
-            'FormDesignerEditTool',
-            'PrintOption',
-          ],
-        }}
-        style={{ height: '640px' }}
-      >
-        <Inject
-          services={[
-            Toolbar,
-            Magnification,
-            Navigation,
-            LinkAnnotation,
-            BookmarkView,
-            ThumbnailView,
-            Print,
-            TextSelection,
-            TextSearch,
-          ]}
-        />
-      </PdfViewerComponent>
-    </div>
-  );
-}
-
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-
-{% endraw %}
-{% endhighlight %}
 {% endtabs %}
 
 ## Handle zoom changes
@@ -607,49 +353,6 @@ root.render(<App />);
 
 {% endraw %}
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-{% raw %}
-
-import * as ReactDOM from 'react-dom';
-import * as React from 'react';
-import './index.css';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  const pdfViewerRef = React.useRef(null);
-  const [zoomLevel, setZoomLevel] = React.useState(100);
-
-  const onZoomChange = (args) => {
-    // Update custom UI with new zoom level from magnification event
-    setZoomLevel(Math.round(args.zoomValue));
-  };
-
-  return (<div>
-    <div className='zoom-indicator' style={{ marginBottom: '10px' }}>
-      Current Zoom: {zoomLevel}%
-    </div>
-    <div className='control-section'>
-      <PdfViewerComponent
-        ref={pdfViewerRef}
-        id="container"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        enableMagnification={true}
-        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
-        onZoomChange={onZoomChange}
-        style={{ 'height': '640px' }}>
-
-            <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                                ThumbnailView, Print, TextSelection, TextSearch]} />
-      </PdfViewerComponent>
-    </div>
-  </div>);
-}
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-
-{% endraw %}
-{% endhighlight %}
 {% endtabs %}
 
 ## Zoom range and limits
@@ -679,38 +382,6 @@ function App() {
           documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
           resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
           enableMagnification={true}
-          minZoom={50}
-          maxZoom={300}
-          style={{ height: '640px' }}>
-
-            <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                                ThumbnailView, Print, TextSelection, TextSearch]} />
-        </PdfViewerComponent>
-      </div>
-    </div>
-  );
-}
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-{% endraw %}
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-{% raw %}
-import * as ReactDOM from 'react-dom';
-import * as React from 'react';
-import './index.css';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  return (
-    <div>
-      <div className='control-section'>
-        <PdfViewerComponent
-          id="container"
-          documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-          enableMagnification={true}
-          serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
           minZoom={50}
           maxZoom={300}
           style={{ height: '640px' }}>

@@ -124,7 +124,7 @@ class App extends React.Component {
                         ref={this.viewerRef}
                         id="PdfViewer"
                         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
+                        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
                         style={{ height: '640px' }}
                         exportSuccess={this.handleExportSuccess}
                     >

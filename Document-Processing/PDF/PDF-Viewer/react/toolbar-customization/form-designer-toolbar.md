@@ -19,7 +19,7 @@ This guide shows how to show or hide the form designer toolbar, and how to confi
 ## Prerequisites
 
 - EJ2 React PDF Viewer installed and added in project. See [getting started guide](../getting-started)
-- If using standalone WASM mode, provide [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#resourceurl) or a [`serviceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#serviceurl) for server mode.
+- If using standalone WASM mode, provide [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#resourceurl).
 
 ## Steps
 

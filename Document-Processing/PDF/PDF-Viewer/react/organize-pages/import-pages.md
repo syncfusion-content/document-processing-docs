@@ -20,7 +20,7 @@ This guide explains how to import pages from another PDF into the current docume
 
 - EJ2 React PDF Viewer installed
 - PDF Viewer is injected with `PageOrganizer` service
-- [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl) (standalone) or [`serviceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#serviceurl) (server-backed) configured when required
+- [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl) (standalone)
 
 ## Steps
 

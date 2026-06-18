@@ -338,7 +338,6 @@ root.render(<App />);
 ## Troubleshooting
 - **Overrides not applied?** Ensure the culture code matches in both `locale` and `L10n.load`.
 - **Some labels still English?** Add those keys to your `L10n.load` object.
-- **Service issues?** Verify your `serviceUrl` endpoint.
 
 ## See also
 - [Default Language](./default-language)

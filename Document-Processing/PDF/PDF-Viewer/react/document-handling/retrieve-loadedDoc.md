@@ -233,8 +233,6 @@ function App() {
         <PdfViewerComponent
           id="pdfViewer"
           ref={viewerRef}
-          // If you use a server for rendering, set it here:
-          // serviceUrl="https://your-server/api/pdfviewer"
 
           // For quick local run, use a public sample:
           documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"

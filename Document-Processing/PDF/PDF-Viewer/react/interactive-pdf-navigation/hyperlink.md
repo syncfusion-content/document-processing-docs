@@ -147,7 +147,7 @@ export default function App() {
 
 ## Troubleshooting
 
-- If links still open when [`enableHyperlink={false}`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enablehyperlink), ensure the page uses the correct [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl)/[`serviceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#serviceurl) and that `LinkAnnotation` is not being re-enabled elsewhere.
+- If links still open when [`enableHyperlink={false}`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enablehyperlink), ensure the page uses the correct [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl)and that `LinkAnnotation` is not being re-enabled elsewhere.
 - If events do not fire, verify that `Inject` includes `LinkAnnotation` and any other services shown in the examples.
 
 ## See also

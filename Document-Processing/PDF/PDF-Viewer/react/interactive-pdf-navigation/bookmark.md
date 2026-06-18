@@ -242,7 +242,7 @@ export default function App() {
 
 - **Bookmarks button is not enabled**: confirm the PDF actually contains bookmarks and [`enableBookmark={true}`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enablebookmark) is set.
 - **[`goToBookmark`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/bookmarkview#gotobookmark) throws an error**: ensure the target page index and coordinates exist; validate values before calling.
-- **Missing features**: add [`BookmarkView`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/bookmarkview) to the `<Inject services={[BookmarkView]} />` list and include [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl) or [`serviceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#serviceurl) when required.
+- **Missing features**: add [`BookmarkView`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/bookmarkview) to the `<Inject services={[BookmarkView]} />` list and include [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl)
 
 ## Related topics
 

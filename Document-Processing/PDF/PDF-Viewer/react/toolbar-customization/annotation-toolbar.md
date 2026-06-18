@@ -19,7 +19,7 @@ This guide shows how to show or hide the annotation toolbar and how to choose wh
 ## Prerequisites
 
 - EJ2 React PDF Viewer installed and added in your project. See [getting started guide](../getting-started)
-- A valid [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl) or [`serviceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#serviceurl) for viewer assets when running locally
+- A valid [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl).
 
 ## Steps
 

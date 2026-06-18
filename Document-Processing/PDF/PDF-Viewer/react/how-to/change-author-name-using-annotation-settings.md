@@ -42,17 +42,4 @@ viewer.freeTextSettings = { allowTextOnly : true };
 viewer.appendTo("#pdfViewer");
 
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, Print, Annotation, FormFields } from "../src/index";
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, Print, Annotation, FormFields);
-let viewer: PdfViewer = new PdfViewer();
-viewer.serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/";
-viewer.load('https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', null);
-viewer.annotationSettings = { author: 'syncfusion', minHeight: 30, maxHeight: 500, minWidth: 30, maxWidth: 500, isLock: false, isPrint: true, isDownload: true  };
-viewer.freeTextSettings = { allowTextOnly : true };
-viewer.appendTo("#pdfViewer");
-
-{% endhighlight %}
 {% endtabs %}
