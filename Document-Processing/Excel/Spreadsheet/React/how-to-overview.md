@@ -9,7 +9,7 @@ documentation: ug
 
 # React Spreadsheet – How-to Guides Overview
 
-Explore practical solutions and tips for working with the [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component. The guides below cover a variety of common scenarios, helping you implement, customize, and get the most out of your spreadsheet features.
+Explore practical solutions and tips for working with the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component. The guides below cover a variety of common scenarios, helping you implement, customize, and get the most out of your spreadsheet features.
 
 ## How-to Articles
 

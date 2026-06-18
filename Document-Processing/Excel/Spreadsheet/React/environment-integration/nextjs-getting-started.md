@@ -126,7 +126,7 @@ Import the `Material` theme into the **src/app/globals.css** file and removed th
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
-Follow the below steps to add the [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component to the Next.js project:
+Follow the below steps to add the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component to the Next.js project:
 
 1.Before adding the Spreadsheet component to your markup, create a `datasource.tsx` file within the **src/app/** folder and add the Spreadsheet component data.
 
@@ -446,4 +446,4 @@ yarn run dev
 
 To learn more about the functionality of the Spreadsheet component, refer to the [documentation](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/feature-list).
 
-N> Looking for the full React Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) page.
+N> Looking for the full React Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) page.

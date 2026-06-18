@@ -9,7 +9,7 @@ documentation: ug
 
 # Add Custom Icons to Cells in React Spreadsheet
 
-In the [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor), you can render custom icons inside specific cells by defining a custom template property within the cell model. During the [beforeCellRender](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforecellrender) event, the icon element can be appended to the corresponding table cell (td) by checking whether the cell contains this template property.
+In the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor), you can render custom icons inside specific cells by defining a custom template property within the cell model. During the [beforeCellRender](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforecellrender) event, the icon element can be appended to the corresponding table cell (td) by checking whether the cell contains this template property.
 
 The following sample demonstrates how to add icons to cells by assigning the template property in the cell definition. Additionally, a custom ribbon item named "Add Icon" is included under a new "Template" ribbon tab. When this ribbon item is selected, the Spreadsheet dynamically inserts an icon into the currently active cell.
 

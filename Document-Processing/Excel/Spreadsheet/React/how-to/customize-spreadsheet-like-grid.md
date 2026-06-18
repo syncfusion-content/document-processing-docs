@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize the Spreadsheet like a Grid in React Spreadsheet
 
-The [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component provides extensive customization options to make it behave and appear like a traditional data grid. This guide explains how to configure the Spreadsheet to mimic grid including hiding unnecessary UI elements and rendering checkboxes for a grid-like experience.
+The [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component provides extensive customization options to make it behave and appear like a traditional data grid. This guide explains how to configure the Spreadsheet to mimic grid including hiding unnecessary UI elements and rendering checkboxes for a grid-like experience.
 
 ## Steps to Customize Spreadsheet as a Grid
 
