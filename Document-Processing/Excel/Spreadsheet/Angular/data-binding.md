@@ -9,7 +9,7 @@ documentation: ug
 
 # Data binding in Angular Spreadsheet component
 
-The [Angular Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) uses [DataManager](https://helpej2.syncfusion.com/angular/documentation/data), which supports both RESTful JSON data services and local JavaScript object array binding to a range. The `dataSource` property can be assigned either with the instance of [DataManager](https://helpej2.syncfusion.com/angular/documentation/data) or JavaScript object array collection.
+The [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) uses [DataManager](https://helpej2.syncfusion.com/angular/documentation/data), which supports both RESTful JSON data services and local JavaScript object array binding to a range. The `dataSource` property can be assigned either with the instance of [DataManager](https://helpej2.syncfusion.com/angular/documentation/data) or JavaScript object array collection.
 
 > To bind data to a cell, use `cell data binding` support.
 
@@ -175,7 +175,7 @@ The following code example demonstrates how to dynamically update data using the
 
 ## Note
 
-You can refer to our [Angular Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/angular/#/material3/spreadsheet/default) to knows how to present and manipulate data.
+You can refer to our [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/angular/#/material3/spreadsheet/default) to knows how to present and manipulate data.
 
 ## See Also
 

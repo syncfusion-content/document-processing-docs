@@ -9,7 +9,7 @@ documentation: ug
 
 # Freeze pane in Angular Spreadsheet component
 
-Freeze Panes helps you to keep particular rows or columns visible when scrolling the sheet content in the [Angular Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor). You can specify the number of frozen rows and columns using the [`frozenRows`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#frozenrows) and [`frozenColumns`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#frozencolumns) properties inside the [`Sheet`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet#sheets) property.
+Freeze Panes helps you to keep particular rows or columns visible when scrolling the sheet content in the [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor). You can specify the number of frozen rows and columns using the [`frozenRows`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#frozenrows) and [`frozenColumns`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#frozencolumns) properties inside the [`Sheet`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet#sheets) property.
 
 ## Apply freeze panes on UI
 
@@ -65,7 +65,7 @@ Here, we have listed out the limitations with Freeze Panes feature.
 
 ## Note
 
-You can refer to our [Angular Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/angular/#/material3/spreadsheet/default) to knows how to present and manipulate data.
+You can refer to our [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/angular/#/material3/spreadsheet/default) to knows how to present and manipulate data.
 
 ## See Also
 
