@@ -13,7 +13,7 @@ documentation: ug
 The keyboard shortcuts supported in the spreadsheet are,
 
 | Shortcut | Description |
-|-------|---------|
+|----------|-------------|
 | Ctrl + O | Displays dialog to open a file. |
 | Ctrl + S / Alt + F2 | Saves the workbook. |
 | Ctrl + P | Print the active worksheet when the spreadsheet is in focus. |
@@ -40,20 +40,11 @@ The keyboard shortcuts supported in the spreadsheet are,
 | Alt + M | Go to `Formulas` tab. |
 | Alt + A | Go to `Data` tab. |
 | Alt + W | Go to `View` tab. |
-| Tab | Navigate the active cell to the next cell in the same row. |
-| Shift + Tab | Navigate the active cell to the previous cell in the same row. |
-| Right or Left arrow| Move the focus to next or previous item in the tab if the focus is on ribbon tab.|
-| Up arrow | When a menu is open, move focus to the next item. |
-| Down arrow | When a menu is open, move focus to the previous item. |
 | Spacebar or Enter | Activate a selected button. |
 | Ctrl + F8  | Expand or collapse the ribbon content. |
 | Ctrl + Shift + U | Expand or collapse the formula bar. |
 | Ctrl + 9 | Hide the selected row. |
 | Ctrl + 0 | Hide the selected column. |
-| Home | Moves the selection to starting column in worksheet. |
-| Ctrl + Home | Move the selection to the first visible cell on a worksheet. |
-| Ctrl + Shift + Home | Extend the selection of cells to the beginning of the worksheet. |
-| Ctrl + End | Move to the last cell on a worksheet, right most last column and last row cell. |
 | Ctrl + & | Apply an outline border to the selected cells. |
 | Ctrl + Shift + & | Apply an outline border to the cells that you've chosen. |
 | Ctrl + Shift + ~ | Apply the `General` number format. |
@@ -68,53 +59,21 @@ The keyboard shortcuts supported in the spreadsheet are,
 | Shift + Spacebar | Select an entire row in a worksheet. |
 | Shift + F3 | Opens `Insert Function` dialog. |
 | Ctrl + Alt + N | Opens new workbook. |
-| Shift + Page Down | Perform page down by selecting all cells between. |
-| Shift + Page Up | Perform page up by selecting all cells between. |
-| Ctrl + Left | Navigate to the non-blank cell before the active cell in the same row. |
-| Ctrl + Right | Navigate to the last non-blank cell in the same row as the active cell. |
-| Ctrl + Up | Navigate to the first non-blank cell in the same row as the active cell. |
-| Ctrl + Down | Navigate to the last cell that is not blank in the same column as the active cell. |
-| Ctrl + Shift + Left | Extend the cell selection to the previous non-blank cell in the same row as the active cell. |
-| Ctrl + Shift + Right | Extend the cell selection to the last non-blank cell in the same row as the active cell. |
-| Ctrl + Shift + Up | Extend the selection of cells to the first non-blank cell in the same row as the active cell. |
-| Ctrl + Shift + Down | Extend the selection of cells to the last non-blank cell in the same row as the active cell. |
 | Shift + Alt + K | Open the `List All Sheets` dropdown option. |
-| Up arrow | Navigate from the active cell to the previous cell in the same column. |
-| Down arrow | Navigate from the active cell to the next cell in the same column. |
-| Left arrow | Navigate from the active cell to the previous cell in the same row. |
-| Right arrow | Navigate from the active cell to the next cell in the same row. |
-| Page Up | Move page up. |    
-| Page Down | Move page down. |
-| Shift + Up | Extend the selection of cells to the previous row. | 
-| Shift + Down | Extend the selection of cells to the next row. | 
-| Shift + Left | Extend the selection of cells to the previous column. | 
-| Shift + Right | Extend the selection of cells to the next column. | 
-| Ctrl + Top | Navigate to the non-blank cell before the active cell in the same column. | 
-| Ctrl + Shift + Top | Extend the cell selection to the previous non-blank cell in the same column as the active cell. | 
-| Ctrl + Shift + Bottom | Extend the cell selection to the last non-blank cell in the same column as the active cell. | 
-| Enter | Navigate the active cell to the next cell in the same column. | 
-| Shift + Enter | Navigate to the previous cell in the same column from the active cell. | 
 | Alt + Down | Open the list data validation menu and filter menu. |
 | Alt + Up | Close the list data validation menu and filter menu. |
 | Delete | Remove the contents of the cell. |
-| Shift + Home | Extend the cell selection to the first column of a worksheet. |
 | Shift + F11 | Add a new sheet. |
+| Shift + F2 | Open the dialog box to add or edit notes for the desired cells. Meanwhile, upon pressing the `Esc` key, the dialog box for notes, when in focus, will save and close. |
 | Ctrl + Shift + 9 | Unhide the selected rows. |
 | Ctrl + Shift + 0 | Unhide the selected columns. |
 | Ctrl + D | Fill the cell down. |
 | Ctrl + R | Fill the cell right. |
-| Alt + Enter | While editing, add a new line. |
-| Enter | Complete the cell editing and select the cell below in the same column. |
-| Shift + Enter | Complete the cell editing and select the cell above in the same column. |
-| Tab | Complete the cell editing and select the next cell in the same row. |
-| Shift + Tab | Complete the cell editing and select the previous cell in the same row. |
 | Ctrl + Shift + F2 | Opens the comment editor for the active cell. Upon pressing the `Esc` key, the comment editor in focus will close. |
-| Shift + F2 | Open the dialog box to add or edit notes for the desired cells. Meanwhile, upon pressing the `Esc` key, the dialog box for notes, when in focus, will save and close. |
-| Alt | Focus on the active ribbon tab. |
-| Left | Move the focus to the previous items in the ribbon content. |
-| Right | Move the focus to the next items in the ribbon content. |
-| Alt + Down | Open the ribbon dropdown menu. |
-| Esc / Alt + Up | Close the ribbon dropdown menu. |
+
+## Note
+
+You can refer to our [ASP.NET Core Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-core-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [ASP.NET Core Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-core-spreadsheet-editor) to knows how to present and manipulate data.
 
 ## See Also
 

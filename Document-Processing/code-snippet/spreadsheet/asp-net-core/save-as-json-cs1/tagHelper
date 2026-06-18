@@ -1,0 +1,29 @@
+<div class="control-pane">
+    <div class="control-section spreadsheet-control">
+        <div style="padding: 8px 0;">
+            <button class="e-btn e-primary" onclick="handleSaveAsJson">Save as JSON</button>
+        </div>
+
+        <ejs-spreadsheet id="spreadsheet">
+        </ejs-spreadsheet>
+
+        <div id="savedJsonContainer" style="margin-top: 12px; display: none;">
+            <strong>Saved JSON</strong>
+            <pre id="savedJsonContent" style="max-height: 200px; overflow: auto; background: #f5f5f5; padding: 12px;"></pre>
+        </div>
+    </div>
+</div>
+
+<script>
+    function handleSaveAsJson() {
+        let spreadsheet = document.getElementById("spreadsheet").ej2_instances[0];
+        spreadsheet.saveAsJson().then(function(result) {
+            let jsonObject = result.jsonObject;
+            let content = JSON.stringify(jsonObject, null, 2);
+            let container = document.getElementById("savedJsonContainer");
+            let contentElement = document.getElementById("savedJsonContent");
+            contentElement.textContent = content;
+            container.style.display = "block";
+        });
+    }
+</script>
