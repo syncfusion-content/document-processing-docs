@@ -1,0 +1,39 @@
+<ejs-spreadsheet id="spreadsheet" contextMenuBeforeOpen="handleContextMenuBeforeOpen" contextMenuItemSelect="handleContextMenuItemSelect">
+</ejs-spreadsheet>
+
+<script>
+    // Add a custom context menu item right before the menu opens
+    function handleContextMenuBeforeOpen(args) {
+        // Get the Spreadsheet instance
+        const spreadsheet = document.getElementById('spreadsheet').ej2_instances[0];
+        if (!spreadsheet) return;
+
+        // Only modify the Spreadsheet's own context menu
+        if (args.element.id === `${spreadsheet.element.id}_contextmenu`) {
+            spreadsheet.addContextMenuItems([{ text: 'Custom Item' }], 'Paste Special', false);  //To pass the items, Item before / after that the element to be inserted, Set false if the items need to be inserted before the text.
+        }
+    }
+
+    // Handle clicks on context menu items (including our custom one)
+    function handleContextMenuItemSelect(args) {
+        // Get the Spreadsheet instance
+        const spreadsheet = document.getElementById('spreadsheet').ej2_instances[0];
+        if (!spreadsheet) return;
+
+        switch (args.item.text) {
+            case 'Custom Item': {
+                // Example action: write a note into the active cell
+                const sheet = spreadsheet.getActiveSheet();
+                const range = sheet.activeCell || 'A1';
+                spreadsheet.updateCell({ value: 'Custom item clicked' }, range);
+                break;
+            }
+            // You can also branch on built‑in items if you want custom behavior for them
+            // case 'Paste Special':
+            //   // custom logic for Paste Special (optional)
+            //   break;
+            default:
+                break;
+        }
+    }
+</script>

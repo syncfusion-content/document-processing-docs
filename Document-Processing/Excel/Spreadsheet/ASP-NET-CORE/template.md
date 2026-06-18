@@ -10,9 +10,24 @@ documentation: ug
 
 # Cell Template in ASP.NET Core Spreadsheet Control
 
-Cell Template is used for adding HTML elements into Spreadsheet. You can add the cell template in spreadsheet by using the `template` property and specify the address using the `address` property inside the `ranges` property. You can customize the HTML elements similar to Syncfusion<sup style="font-size:70%">&reg;</sup> components (TextBox, DropDownList, RadioButton, MultiSelect, DatePicker etc) by using the `beforeCellRender` event. In this demo, Cell template is applied to `C2:C9` and instantiated with HTML input components like TextBox, RadioButton, TextArea. You need to bind the events to perform any operations through HTML elements or Syncfusion<sup style="font-size:70%">&reg;</sup> components. Here, we have added `change` event in to the MultiSelect control, and we have updated the selected data into the spreadsheet cell through that change event.
+Cell templates allow you to embed HTML elements and Syncfusion<sup style="font-size:70%">&reg;</sup> components directly into spreadsheet cells. This enables rich, interactive data entry experiences beyond standard cell values.
 
-The following code example describes the above behavior.
+## Key Features
+
+- **HTML Elements** – You can add TextBox, RadioButton, TextArea, and other HTML controls to cells for enhanced user input options
+- **Syncfusion Components** – You can integrate DropDownList, MultiSelect, DatePicker, and other Syncfusion controls for advanced data entry
+- **Event Binding** – You can attach event handlers to perform operations on user interaction and update spreadsheet data
+- **Custom Rendering** – You can use the `beforeCellRender` event for advanced customization and dynamic template modifications
+
+## Cell Templates
+
+Define a cell template using the `template` property and specify the target range with the `address` property within the `ranges` configuration. This associates your template with specific cells in the spreadsheet.
+
+The `beforeCellRender` event fires before template rendering, allowing you to customize HTML elements and Syncfusion components dynamically based on cell address, data, or application state.
+
+The following sample describes the above behavior.
+
+Sample link: [`Cell template`](https://document.syncfusion.com/demos/spreadsheet-editor/asp-net-core/spreadsheet/celltemplates#/tailwind)
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -23,7 +38,9 @@ The following code example describes the above behavior.
 {% endhighlight %}
 {% endtabs %}
 
+## Note
 
+You can refer to our [ASP.NET Core Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-core-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [ASP.NET Core Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-core-spreadsheet-editor) to knows how to present and manipulate data.
 
 ## See Also
 

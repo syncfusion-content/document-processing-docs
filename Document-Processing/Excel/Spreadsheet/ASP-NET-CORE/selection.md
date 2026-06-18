@@ -10,19 +10,23 @@ documentation: ug
 
 # Selection in ASP.NET Core Spreadsheet Control
 
-Selection provides interactive support to highlight the cell, row, or column that you select. Selection can be done through Mouse, Touch, or Keyboard interaction. To enable selection, set `mode` as `Single` or `Multiple` in [`selectionSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_SelectionSettings). If you set `mode` to `None`, it disables the UI selection.
+Selection provides interactive support to highlight the cell, row, or column that you select. Selection can be done through Mouse, Touch, or Keyboard interaction.
 
-N> The default value for `mode` in  `selectionSettings` is `Multiple`.
+To configure selection, use the [`selectionSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_SelectionSettings) property:
+* `mode = "Single"` → allows selecting only one cell, row, or column at a time.  
+* `mode = "Multiple"` → allows selecting multiple cells, rows, or columns at once.  
+* `mode = "None"` → disables UI selection completely.
 
-You have the following options in Selection,
+> The default value for `mode` is `Multiple`.
 
-* Cell selection
-* Row selection
-* Column selection
+You can perform:
+* Cell selection – highlight individual cells.  
+* Row selection – highlight entire rows.  
+* Column selection – highlight entire columns.  
 
 ## Cell selection
 
-Cell selection is used to select a single or multiple cells. It can be performed using the `selectRange` method.
+Cell selection is used to select a single or multiple cells. It can be performed using the [`selectRange`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#selectrange) method.
 
 **User Interface**:
 
@@ -84,7 +88,7 @@ The following sample shows the column selection in the spreadsheet, here selecti
 
 ## Get selected cell values
 
-You can select single or multiple cells, rows, or columns using mouse and keyboard interactions. You can also programmatically perform selections using the [selectRange](https://helpej2.syncfusion.com/documentation/api/spreadsheet#selectrange) method. This selection behavior is controlled by the [selectionSettings](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_SelectionSettings) property. Finally, you can retrieve the selected cell values as a collection using the [getData](https://helpej2.syncfusion.com/documentation/api/spreadsheet#getdata) method.
+You can select single or multiple cells, rows, or columns using mouse and keyboard interactions. Additionally, you can also programmatically perform selection using the [selectRange](https://helpej2.syncfusion.com/javascript/documentation/api/spreadsheet#selectrange) method. This selection behavior is controlled based on the [selectionSettings](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_SelectionSettings) property. Now, retrieving the selected cell values as a collection is achievable using the [getData](https://helpej2.syncfusion.com/javascript/documentation/api/spreadsheet#getdata) method.
 
 Below is a code example demonstrating how to retrieve the selected cell values as a collection programmatically:
 
@@ -110,8 +114,10 @@ The following sample shows, how to remove the selection in the spreadsheet. Here
 {% endhighlight %}
 {% endtabs %}
 
-
-
 ## Limitations
 
 * We have a limitation while performing the Select All(`ctrl + A`). You can do this only by clicking the Select All button at the top left corner.
+
+## Note
+
+You can refer to our [ASP.NET Core Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-core-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [ASP.NET Core Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-core-spreadsheet-editor) to knows how to present and manipulate data.
