@@ -64,59 +64,9 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
+## Adding image from file path
 
-
-## Adding image from relative path
-
-Images can also be add images using relative file paths, which is useful for organizing documentation with local image resources. The following code example demonstrates how to add an image from a relative path.
-
-{% tabs %}
-
-{% highlight c# tabtitle="C#" %}
-
-// Creates a new MarkdownDocument instance
-MarkdownDocument markdownDocument = new MarkdownDocument();
-// Adds a new paragraph to the document
-MdParagraph paragraph = markdownDocument.AddParagraph();
-// Creates a new picture instance
-MdPicture image = new MdPicture();
-// Adds the image to the paragraph
-paragraph.Inlines.Add(image);
-// Sets the relative path to the image
-image.Url = "./Data/Adventure Cycle.png";
-// Saves the Markdown document to the file system
-markdownDocument.Save("Output.md");
-// Disposes the document
-markdownDocument.Dispose();
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET" %}
-
- ' Creates a new MarkdownDocument instance
- Dim markdownDocument As New MarkdownDocument()
- ' Adds a new paragraph to the document
- Dim paragraph As MdParagraph = markdownDocument.AddParagraph()
- ' Creates a new picture instance
- Dim image As New MdPicture()
- ' Adds the image to the paragraph
- paragraph.Inlines.Add(image)
- ' Sets the relative path to the image
- image.Url = "./Data/Adventure Cycle.png"
- ' Saves the Markdown document to the file system
- markdownDocument.Save("Output.md")
- ' Disposes the document
- markdownDocument.Dispose()
-
-{% endhighlight %}
-
-{% endtabs %}
-
-
-
-## Adding image from local file path
-
-The Syncfusion Markdown library supports adding images from absolute local file paths. The following code example demonstrates how to add an image from a local file path.
+The Syncfusion Markdown library supports adding images from file paths. The following code example demonstrates how to add an image from a file path.
 
 {% tabs %}
 
@@ -159,8 +109,6 @@ markdownDocument.Dispose()
 {% endhighlight %}
 
 {% endtabs %}
-
-
 
 ## Adding image from image bytes
 

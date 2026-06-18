@@ -16,7 +16,7 @@ You can set formats in the following ways:
 * Use the [`cellFormat`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#cellformat) method to apply formats to a cell or range of cells dynamically.  
 * Apply formatting directly by clicking the desired format option from the ribbon toolbar.
 
-### Fonts
+## Fonts
 
 The Syncfusion React Spreadsheet component provides comprehensive font formatting options to customize text appearance in cells. These options help improve readability and establish a clear visual hierarchy in your data.
 
@@ -31,7 +31,7 @@ The Spreadsheet supports the following font formatting options:
 | [`textDecoration`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#textdecoration) | Specifies decorative styling applied to the text. Supports values such as underline, overline, and line-through (strikethrough) to highlight, cross out, or distinguish content within a cell. |
 | [`color`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#color) | Specifies the color of the text. |
 
-### Text Alignment
+## Text Alignment
 
 You can align text in cells using the following options:
 
@@ -40,11 +40,11 @@ You can align text in cells using the following options:
 | [`textAlign`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/textalign) | Left, Center, Right | Aligns text horizontally from left to right within the cell. |
 | [verticalAlign](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/verticalalign) | Top, Middle, Bottom | Aligns text from top to bottom within the cell. |
 
-### Indents
+## Indents
 
 Indentation helps enhance the visual appearance of text in cells by adding space before the text content. You can apply cell text indentation using the [`textIndent`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#textindent) property.
 
-### Fill Color
+## Fill Color
 
 Fill color (background color) is used to highlight cells or ranges of cells across the workbook. You can apply background colors to cells using the [`backgroundColor`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#backgroundcolor) property.
 
@@ -67,11 +67,11 @@ The following code example shows the style formatting in text and cells of the s
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/cellformat-cs1" %}
 
-### Borders
+## Borders
 
 The Syncfusion React Spreadsheet component allows you to apply borders to a cell or a range of cells. Borders help you separate sections, highlight data, or format tables clearly in your worksheet. You can apply borders in different styles, sizes, and colors based on your needs.
 
-#### Border Types
+### Border Types
 
 The Spreadsheet supports many types of borders. Each type adds a border to a specific side or area of the selected cells:
 
@@ -88,7 +88,7 @@ The Spreadsheet supports many types of borders. Each type adds a border to a spe
 | **Outside Border** | Specifies the outside border of a range of cells.|
 | **Inside Border** | Specifies the inside border of a range of cells.|
 
-#### Customize Border Colors and Styles
+### Customize Border Colors and Styles
 
 You can also change how the border looks by adjusting its size and style. The Spreadsheet supports the following options:
 
@@ -127,7 +127,7 @@ The following code sample shows how to apply different typed border, colors and 
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/border-cs1" %} 
 
-### Limitations of Formatting
+## Limitations of Formatting
 
 The following features are not supported in Formatting:
 
