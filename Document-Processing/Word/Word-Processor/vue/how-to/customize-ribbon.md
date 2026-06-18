@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customize Ribbon in Vue Document Editor
 
-The Syncfusion Document Editor provides an extensive and flexible API to customize the built-in ribbon UI. You can:
+The [Vue Document Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) provides an extensive and flexible API to customize the built-in ribbon UI. You can:
 
 - Customize the File menu.
 - Add the Backstage menu instead of File menu.

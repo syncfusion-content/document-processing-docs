@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with Vue DOCX Editor (Vue 2)
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/Vue-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a Vue application.
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/Vue-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a Vue application.
 
 ## Steps to create a DOCX Editor in Vue 2
 
@@ -153,6 +153,8 @@ The Document Editor component requires server-side interactions for the followin
 N> If you don't require the above functionalities, you can deploy the component as a pure client-side solution without any server-side interactions.
 
 For detailed information about server-side dependencies, refer to the [Web Services Overview](./web-services-overview) page.
+
+N> Looking for the full Vue DOCX Editor component overview, features, pricing, and documentation? Visit the [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) page.
 
 ## See also
 

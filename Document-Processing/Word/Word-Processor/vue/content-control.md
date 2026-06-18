@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Content control in Vue Document editor control
 
-Document Editor provides support for inserting, editing content controls.
+[Vue Document Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) provides support for inserting, editing content controls.
 
 Content controls can be categorized based on its occurrence in a document as follows,
 

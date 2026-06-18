@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Dialog in Vue Document editor component
 
-Document Editor provides dialog support to major operations such as insert or edit hyperlink, formatting text, paragraph, style, list and table properties.
+[Vue Document Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) provides dialog support to major operations such as insert or edit hyperlink, formatting text, paragraph, style, list and table properties.
 
 ## Font Dialog
 

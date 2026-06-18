@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Clipboard in Vue Document editor component
 
-Document Editor takes advantage of system clipboard and allows you to copy or move a portion of the document into it in HTML format, so that it can be pasted in any application that supports clipboard.
+[Vue Document Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) takes advantage of system clipboard and allows you to copy or move a portion of the document into it in HTML format, so that it can be pasted in any application that supports clipboard.
 
 ## Copy
 

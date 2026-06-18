@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Open document from One Drive in Vue Document editor
 
-To load a document from One Drive in a Document editor, you can follow the steps below
+To load a document from One Drive in a [Vue Document Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor), you can follow the steps below
 
 **Step 1** Create the Microsoft graph API.
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Form fields in Vue Document editor component
 
-Document Editor Container component provide support for inserting Text, CheckBox, DropDown form fields through in-built toolbar.
+[Vue Document Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) Container component provide support for inserting Text, CheckBox, DropDown form fields through in-built toolbar.
 
 ![Form Fields](images/toolbar-form-fields.png)
 

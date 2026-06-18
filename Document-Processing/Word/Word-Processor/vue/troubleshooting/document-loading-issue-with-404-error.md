@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Document loading issue with 404 error in Vue DOCX Editor
 
-If document loading fails and you see a 404 error in the browser console, the Document Editor is unable to reach a valid Web Service endpoint.
+If document loading fails and you see a 404 error in the browser console, the [Vue Document Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) is unable to reach a valid Web Service endpoint.
 
 ## Reasons
 

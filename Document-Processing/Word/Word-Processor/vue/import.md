@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Import in Vue Document editor component
 
-In Document Editor, the documents are stored in its own format called **Syncfusion Document Text (SFDT)**.
+In [Vue Document Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor), the documents are stored in its own format called **Syncfusion Document Text (SFDT)**.
 
 The following example shows how to open SFDT data in Document Editor.
 
@@ -44,7 +44,7 @@ The following example shows how to import document from local machine.
 
 You can convert word documents into SFDT format using the .NET Standard library [`Syncfusion.EJ2.WordEditor.AspNet.Core`](<https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Core/>) by the web API service implementation. This library helps you to convert word documents (.dotx,.docx,.docm,.dot,.doc), rich text format documents (.rtf), and text documents (.txt) into SFDT format.
 
->Note: The Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
+>Note: The Vue Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
 
 Please refer the following example for converting word documents into SFDT.
 
@@ -224,7 +224,7 @@ To know about server-side action, please refer this [page](./web-services-overvi
 
 ## Compatibility with Microsoft Word
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor is a minimal viable Word document viewer/editor product for web applications. As most compatible Word editor, the product vision is adding valuable feature sets of Microsoft Word, and not to cover 100% feature sets of Microsoft Word desktop application. You can even see the feature sets difference between Microsoft Word desktop and their Word online application. So kindly don't misunderstand this component as a complete replacement for Microsoft Word desktop application and expect 100% feature sets of it.
+Vue Document Editor is a minimal viable Word document viewer/editor product for web applications. As most compatible Word editor, the product vision is adding valuable feature sets of Microsoft Word, and not to cover 100% feature sets of Microsoft Word desktop application. You can even see the feature sets difference between Microsoft Word desktop and their Word online application. So kindly don't misunderstand this component as a complete replacement for Microsoft Word desktop application and expect 100% feature sets of it.
 
 ### How Syncfusion<sup style="font-size:70%">&reg;</sup> accepts the feature request for Document Editor
 
@@ -236,7 +236,7 @@ You can report the problems with displaying, or editing Word documents in Docum
 
 ### Why the document pagination differs from Microsoft Word
 
-For your understanding about the Word document structure and the workflow of Word viewer/editor components, the Word document is a flow document in which content will not be preserved page by page; instead, the content will be preserved sequentially like a HTML file. Only the Word viewer/editor paginates the content of the Word document page by page dynamically, when opened for viewing or editing and this page-wise position information will not be preserved in the document level (it is Word file format specification standard). Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component also does the same.
+For your understanding about the Word document structure and the workflow of Word viewer/editor components, the Word document is a flow document in which content will not be preserved page by page; instead, the content will be preserved sequentially like a HTML file. Only the Word viewer/editor paginates the content of the Word document page by page dynamically, when opened for viewing or editing and this page-wise position information will not be preserved in the document level (it is Word file format specification standard). Vue Document Editor component also does the same.
   
 At present there is a known technical limitation related to slight difference in text size calculated using HTML element based text measuring approach. Even though the text size is calculated with correct font and font size values, the difference lies; it is as low as 0.00XX to 0. XXXX values compared to that of Microsoft Word application’s display. Hence the document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application.
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Retrieve the bookmark content as text in Vue Document editor component
 
-You can get the bookmark or whole document content from the Vue Document Editor component as plain text and SFDT (rich text).
+You can get the bookmark or whole document content from the [Vue Document Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) component as plain text and SFDT (rich text).
 
 ## Get the bookmark content as plain text
 

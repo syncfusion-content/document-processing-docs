@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Fields in Vue Document editor component
 
-Document Editor has preservation support for all types of fields in an existing word document without any data loss.
+[Vue Document Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) has preservation support for all types of fields in an existing word document without any data loss.
 
 ## Adding Fields
 

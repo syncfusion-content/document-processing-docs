@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Notes in Vue Document editor component
 
-DocumentEditorContainer component provides support for inserting footnotes and endnotes through the in-built toolbar. Refer to the following screenshot.
+[Vue Document Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) Container component provides support for inserting footnotes and endnotes through the in-built toolbar. Refer to the following screenshot.
 
 ![Insert footnote endnote](images/note-toolbar.jpg)
 

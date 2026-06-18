@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Right to left in Vue Document editor component
 
-Document Editor provides RTL (right-to-left) support. This can be enabled using the “enableRtl” property.
+[Vue Document Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) provides RTL (right-to-left) support. This can be enabled using the “enableRtl” property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

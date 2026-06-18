@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Insert text in current position in Vue Document editor component
 
-You can insert the text, paragraph and rich-text content in Vue Document Editor component.
+You can insert the text, paragraph and rich-text content in [Vue Document Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) component.
 
 ## Insert text in current cursor position
 
