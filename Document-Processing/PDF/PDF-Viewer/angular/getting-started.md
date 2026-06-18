@@ -42,9 +42,9 @@ cd pdfviewer-app
 
 > **Note:** When prompted during project creation, select the default options: **CSS** for stylesheet, **No** for SSR/SSG, and **None** for AI tools.
 
-## Installing Syncfusion® PDF Viewer package
+## Installing Syncfusion® Angular PDF Viewer package
 
-Install the Syncfusion Angular PDF Viewer package from npm:
+Install the Syncfusion [Angular PDF Viewer](https://www.npmjs.com/package/@syncfusion/ej2-angular-pdfviewer) package from npm:
 
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
@@ -54,12 +54,13 @@ npm install @syncfusion/ej2-angular-pdfviewer --save
 {% endhighlight %}
 {% endtabs %}
 
-## Adding CSS references
+## Add CSS references
 
 Add the required Syncfusion styles to the `src/styles.css` file:
 
 {% tabs %}
 {% highlight css tabtitle="styles.css" %}
+
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
@@ -69,12 +70,13 @@ Add the required Syncfusion styles to the `src/styles.css` file:
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-notifications/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css';
+
 {% endhighlight %}
 {% endtabs %}
 
 > **Note:** Refer to the [Themes topic](https://ej2.syncfusion.com/angular/documentation/appearance/overview) to learn more about built-in themes and different ways to refer to themes in an Angular project.
 
-## Add the PDF Viewer component
+## Add the Syncfusion® Angular PDF Viewer component to the application
 
 Add the PDF Viewer component to your Angular application to render and interact with PDF documents. The component requires the **PdfViewerModule** and its associated services.
 
