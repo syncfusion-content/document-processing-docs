@@ -79,6 +79,28 @@ For more information on configuring the spell check service, refer to the follow
 
 - [Web Service for Spell Check in Java](https://help.syncfusion.com/document-processing/word/word-processor/react/web-services/java#spell-check)
 
+## Spell Check architecture overview
+
+Spell check identifies misspelled words as the user types and provides suggestions through context menu and dialog by validating text against server-side dictionaries.
+
+```
+User Types Text
+   ↓
+Document Editor Captures Input (enableSpellCheck enabled, text detected)
+   ↓
+Spell Check Service Request (Text sent to configured server URL with languageID)
+   ↓
+Server Validates Against Dictionary (Dictionary lookup, misspelled words identified)
+   ↓
+Returns Misspelled Words & Suggestions (JSON response with errors and suggestions)
+   ↓
+Client Marks Words with Underline (Squiggly line applied unless removeUnderline is true)
+   ↓
+User Right-Clicks → Context Menu or Opens Spell Check Dialog
+   ↓
+User Applies Correction (Change, Ignore, Ignore All, Add to Dictionary, Change All)
+```
+
 ## Spell check settings
 
 ### Allow suggestions

@@ -28,6 +28,24 @@ The following example shows how to open SFDT data in Document Editor.
         
 {% previewsample "/document-processing/code-snippet/document-editor/react/import-cs1" %}
 
+## SFDT Document Import architecture overview
+
+SFDT document import directly reads the native Syncfusion Document Text format file and opens it in the Document Editor without server-side processing.
+
+```
+User Selects SFDT File
+   ↓
+Document Editor Captures File Input (File picker triggered, .sfdt file selected)
+   ↓
+Client Validates File Format (Checks if file extension is .sfdt)
+   ↓
+File Read Directly (FileReader API reads file content without server call)
+   ↓
+Document Editor Opens SFDT (documenteditor.open() method called directly with file data)
+   ↓
+Document Rendered Immediately in Editor (User sees native SFDT document displayed in viewport)
+```
+
 ## Import document from local machine
 
 The following example shows how to import document from local machine.
@@ -45,6 +63,26 @@ The following example shows how to import document from local machine.
 {% endtabs %}
         
 {% previewsample "/document-processing/code-snippet/document-editor/react/import-cs2" %}
+
+## Word Document Import architecture overview
+
+Word document and other format imports are sent to the server for conversion to SFDT before rendering in the Document Editor.
+
+```
+User Selects Word Document (DOCX, DOC, DOTX, DOTM, RTF, TXT, XML)
+   ↓
+Document Editor Captures File Input (File picker triggered, non-SFDT file selected)
+   ↓
+File Sent to Server (XMLHttpRequest POST to Import API endpoint with FormData)
+   ↓
+Server Converts Document (Detects format type, converts to SFDT, serializes to JSON)
+   ↓
+Server Returns SFDT JSON Response (Converted document data sent back as response)
+   ↓
+Document Editor Opens SFDT (documenteditor.open() method called with converted SFDT)
+   ↓
+Document Rendered in Editor (User sees converted document displayed in viewport)
+```
 
 ## Convert word documents into SFDT
 
