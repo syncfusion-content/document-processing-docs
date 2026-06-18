@@ -22,7 +22,7 @@ You can set formula for a cell in the following ways,
 
 ## Culture-Based Argument Separator
 
-Previously, although you could import culture-based Excel files into the Spreadsheet, the formulas wouldn't calculate correctly. This was due to the absence of culture-based argument separators and support for culture-based formatted numeric values as arguments. However, starting from version 25.1.35, you can now import culture-based Excel files into the Spreadsheet component.
+Previously, although you could import culture-based Excel files into the [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor), the formulas wouldn't calculate correctly. This was due to the absence of culture-based argument separators and support for culture-based formatted numeric values as arguments. However, starting from version 25.1.35, you can now import culture-based Excel files into the Spreadsheet component.
 
 > Before importing culture-based Excel files, ensure that the Spreadsheet is rendered with the corresponding culture. Additionally, launch the import/export services with the same culture to ensure compatibility.
 

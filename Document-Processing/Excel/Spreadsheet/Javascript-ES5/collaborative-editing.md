@@ -9,7 +9,7 @@ documentation: ug
 
 # Collaborative editing in EJ2 Javascript Spreadsheet control
 
-The collaborative editing support allows you to work at a spreadsheet collaboratively with other users. Multiple users can access to the the same spreadsheet simultaneously.
+The collaborative editing support allows you to work at a [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) collaboratively with other users. Multiple users can access to the the same spreadsheet simultaneously.
 
 > * To use Collaborative editing, inject the `CollaborativeEditing` module in the spreadsheet.
 

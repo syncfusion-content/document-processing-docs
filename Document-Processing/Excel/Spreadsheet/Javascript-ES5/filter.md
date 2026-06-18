@@ -9,7 +9,7 @@ documentation: ug
 
 # Filter in EJ2 Javascript Spreadsheet control
 
-Filtering helps you to view specific rows in the spreadsheet by hiding the other rows. You can use the [`allowFiltering`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowfiltering) property to enable or disable filtering functionality.
+Filtering helps you to view specific rows in the [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) by hiding the other rows. You can use the [`allowFiltering`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowfiltering) property to enable or disable filtering functionality.
 
 > * The default value for `allowFiltering` property is `true`.
 

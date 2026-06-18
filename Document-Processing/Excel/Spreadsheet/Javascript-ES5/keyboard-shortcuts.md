@@ -9,7 +9,7 @@ documentation: ug
 
 # Keyboard shortcuts in EJ2 Javascript Spreadsheet control
 
-The keyboard shortcuts supported in the spreadsheet are,
+The keyboard shortcuts supported in the [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) are,
 
 | Shortcut | Description |
 |-------|---------|

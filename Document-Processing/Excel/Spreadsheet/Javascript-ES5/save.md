@@ -9,7 +9,7 @@ documentation: ug
 
 # Save in EJ2 Javascript Spreadsheet control
 
-The Spreadsheet control saves its data, style, format, and more as Excel file document. To enable this feature, set [`allowSave`](../api/spreadsheet/#allowsave) to `true` and assign service url to the [`saveUrl`](../api/spreadsheet/#saveurl) property.
+The [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) control saves its data, style, format, and more as Excel file document. To enable this feature, set [`allowSave`](../api/spreadsheet/#allowsave) to `true` and assign service url to the [`saveUrl`](../api/spreadsheet/#saveurl) property.
 
 The following list of Excel file formats are supported in Spreadsheet:
 
