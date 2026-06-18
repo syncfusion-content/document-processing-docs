@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with ASP.NET MVC standalone PDF Viewer | Syncfusion
-description: Get started with the standalone Syncfusion ASP.NET MVC PDF Viewer. Add scripts/styles, configure the view, and load a PDF using documentPath and resourceUrl.
+title: Getting Started with ASP.NET MVC standalone PDF Viewer | Syncfusion
+description: Get Started with the standalone Syncfusion ASP.NET MVC PDF Viewer. Add scripts/styles, configure the view, and load a PDF using documentPath and resourceUrl.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -9,13 +9,13 @@ documentation: ug
 
 # Getting Started with ASP.NET MVC Standalone PDF Viewer Control
 
-This guide explains how to integrate the [ASP.NET MVC PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) into an ASP.NET MVC application using Visual Studio. A fully functional example project is available in the [GitHub repository](https://github.com/SyncfusionExamples/ASP-NET-MVC-Getting-Started-Examples/tree/main/PDFViewer/ASP.NET%20MVC%20Razor%20Examples).
+This section explains how to integrate the [ASP.NET MVC PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) into an ASP.NET MVC application using Visual Studio.
 
 ## Prerequisites
 
 - [System requirements for ASP.NET MVC controls](https://help.syncfusion.com/document-processing/system-requirements)
 
-- [Licensing](https://help.syncfusion.com/common/essential-studio/licensing/license-key)
+- [Syncfusion<sup style="font-size:70%">&reg;</sup> Licensing](https://help.syncfusion.com/common/essential-studio/licensing/license-key)
 
 ## Create a new ASP.NET MVC App in Visual Studio
 
@@ -27,12 +27,22 @@ To add .NET PDF Viewer control, the following NuGet packages need to be installe
 
 * [Syncfusion.EJ2.MVC5](https://www.nuget.org/packages/Syncfusion.EJ2.MVC5)
 
+Or run this command in Package Manager Console:
+
+{% tabs %}
+{% highlight C# tabtitle="Package Manager" %}
+
+Install-Package Syncfusion.EJ2.MVC5 -Version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Add namespace
 
 Add **Syncfusion.EJ2** namespace reference in `Web.config` under `Views` folder.
 
 {% tabs %}
-{% highlight c# tabtitle="~/Views/web.config" %}
+{% highlight c# tabtitle="web.config" %}
 <namespaces>
     <add namespace="Syncfusion.EJ2"/>
 </namespaces>
@@ -44,15 +54,12 @@ Add **Syncfusion.EJ2** namespace reference in `Web.config` under `Views` folder.
 The theme and required scripts are referenced by using a CDN inside the `<head>` of `~/Views/Shared/_Layout.cshtml` as follows:
 
 {% tabs %}
-{% highlight c# tabtitle="~/_Layout.cshtml" %}
+{% highlight c# tabtitle="_Layout.cshtml" %}
 
-<head>
-    ...
-    <!-- Syncfusion ASP.NET MVC controls styles -->
-    <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/fluent.css" />
-    <!-- Syncfusion ASP.NET MVC controls scripts -->
-    <script src="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/dist/ej2.min.js"></script>
-</head>
+<!-- Syncfusion ASP.NET MVC controls styles -->
+<link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/fluent.css" />
+<!-- Syncfusion ASP.NET MVC controls scripts -->
+<script src="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/dist/ej2.min.js"></script>
 
 {% endhighlight %}
 {% endtabs %}
@@ -61,32 +68,23 @@ N> To learn other ways to load themes or scripts (such as [NPM packages](https:/
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Script Manager
 
-Open `~/Views/Shared/_Layout.cshtml` page and register the script manager in the ASP.NET MVC application as follows.
+Open `~/Views/Shared/_Layout.cshtml` page and register the script manager at the end of the `<body>` element in the ASP.NET MVC application as follows.
 
 {% tabs %}
-{% highlight c# tabtitle="~/_Layout.cshtml" %}
+{% highlight c# tabtitle="_Layout.cshtml" %}
 
-<body>
-...
-    <!-- Syncfusion ASP.NET MVC Script Manager -->
-    @Html.EJS().ScriptManager()
-</body>
+<!-- Syncfusion ASP.NET MVC Script Manager -->
+@Html.EJS().ScriptManager()
 
 {% endhighlight %}
 {% endtabs %}
-
-N> Add the script manager `EJS().ScriptManager()` at the **end of `<body>`**.
 
 ## Add ASP.NET MVC PDF Viewer control
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC PDF Viewer control in `~/Views/Home/Index.cshtml`.
 
 {% tabs %}
-{% highlight c# tabtitle="~/Index.cshtml" %}
-
-@{
-    ViewBag.Title = "Home Page";
-}
+{% highlight c# tabtitle="Index.cshtml" %}
 
 <div>
     <div style="height:500px;width:100%;">
@@ -106,10 +104,10 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 ![ASP.NET MVC PDF Viewer Control](AspNetMVC_Images/pdfviewer-control.png)
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-MVC-Getting-Started-Examples/tree/main/PDFViewer/ASP.NET%20MVC%20Razor%20Examples)
+N> A fully functional example project is available in the [GitHub repository](https://github.com/SyncfusionExamples/ASP-NET-MVC-Getting-Started-Examples/tree/main/PDFViewer/ASP.NET%20MVC%20Razor%20Examples).
 
 ## See also
 
-- [Getting started with Server-Backed ASP.NET MVC PDF Viewer](./getting-started-with-server-backed)
+- [Getting Started with Server-Backed ASP.NET MVC PDF Viewer](./getting-started-with-server-backed)
 - [PDF Viewer Form Designer](./forms/overview#form-designer)
 - [Organize PDF pages](./organize-pages/overview)

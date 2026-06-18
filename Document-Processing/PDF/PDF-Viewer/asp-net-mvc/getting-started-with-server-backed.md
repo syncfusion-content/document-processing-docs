@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting started with the ASP.NET MVC PDF Viewer | Syncfusion
-description: Get started with the server‑backed Syncfusion ASP.NET MVC PDF Viewer. Install NuGet packages, add scripts/styles, configure the controller, and load a PDF.
+title: Getting Started with the ASP.NET MVC PDF Viewer | Syncfusion
+description: Get Started with the server‑backed Syncfusion ASP.NET MVC PDF Viewer. Install NuGet packages, add scripts/styles, configure the controller, and load a PDF.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Getting started with the ASP.NET MVC PDF Viewer control
+# Getting Started with the ASP.NET MVC PDF Viewer control
 
-This guide shows how to integrate the [ASP.NET MVC PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) into an ASP.NET MVC application using Visual Studio. A fully functional example project is available in the [GitHub repository](https://github.com/SyncfusionExamples/ASP-NET-MVC-Getting-Started-Examples/tree/main/PDFViewer/ASP.NET%20MVC%20Razor%20Examples).
+This section shows how to integrate the [ASP.NET MVC PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) into an ASP.NET MVC application using Visual Studio.
 
 N> Starting with the 2026 Vol 2 main release (June 2026), no new features will be added to the Server PDF Viewer, as almost all of the PDF Viewer functionalities are now available in the Standalone PDF Viewer. If you are currently using the server-backed PDF Viewer, please refer to the [migration documentation](./server-to-standalone) to transition to the Standalone PDF Viewer.
 
@@ -17,7 +17,7 @@ N> Starting with the 2026 Vol 2 main release (June 2026), no new features will b
 
 - [System requirements for ASP.NET MVC controls](https://help.syncfusion.com/document-processing/system-requirements)
 
-- [Licensing](https://help.syncfusion.com/common/essential-studio/licensing/license-key)
+- [Syncfusion<sup style="font-size:70%">&reg;</sup> Licensing](https://help.syncfusion.com/common/essential-studio/licensing/license-key)
 
 ## Create a new ASP.NET MVC App in Visual Studio
 
@@ -30,12 +30,23 @@ Install the following NuGet packages to add the PDF Viewer to the ASP.NET MVC ap
 * [Syncfusion.EJ2.PdfViewer.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.EJ2.PdfViewer.AspNet.Mvc5/)
 * [Syncfusion.EJ2.MVC5](https://www.nuget.org/packages/Syncfusion.EJ2.MVC5)
 
+Or run this command in Package Manager Console:
+
+{% tabs %}
+{% highlight C# tabtitle="Package Manager" %}
+
+Install-Package Syncfusion.EJ2.PdfViewer.AspNet.Mvc5 -Version {{ site.releaseversion }}
+Install-Package Syncfusion.EJ2.MVC5 -Version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Add namespace
 
 Add **Syncfusion.EJ2** namespace reference in `Web.config` under `Views` folder.
 
 {% tabs %}
-{% highlight c# tabtitle="~/Views/web.config" %}
+{% highlight c# tabtitle="web.config" %}
 <namespaces>
     <add namespace="Syncfusion.EJ2"/>
 </namespaces>
@@ -47,15 +58,12 @@ Add **Syncfusion.EJ2** namespace reference in `Web.config` under `Views` folder.
 Reference a theme and the required scripts from the CDN inside the `<head>` of `~/Views/Shared/_Layout.cshtml` as follows:
 
 {% tabs %}
-{% highlight c# tabtitle="~/_Layout.cshtml" %}
+{% highlight c# tabtitle="_Layout.cshtml" %}
 
-<head>
-    ...
-    <!-- Syncfusion ASP.NET MVC controls styles -->
-    <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/fluent.css" />
-    <!-- Syncfusion ASP.NET MVC controls scripts -->
-    <script src="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/dist/ej2.min.js"></script>
-</head>
+<!-- Syncfusion ASP.NET MVC controls styles -->
+<link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/fluent.css" />
+<!-- Syncfusion ASP.NET MVC controls scripts -->
+<script src="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/dist/ej2.min.js"></script>
 
 {% endhighlight %}
 {% endtabs %}
@@ -64,32 +72,23 @@ N> To learn other ways to load themes or scripts (such as [NPM packages](https:/
 
 ## Register the Syncfusion<sup style="font-size:70%">&reg;</sup> script manager
 
-Open `~/Views/Shared/_Layout.cshtml` and register the script manager in the ASP.NET MVC application as follows:
+Register the script manager at the end of the `<body>` element in the `~/Views/Shared/_Layout.cshtml` file.
 
 {% tabs %}
-{% highlight c# tabtitle="~/_Layout.cshtml" %}
+{% highlight c# tabtitle="_Layout.cshtml" %}
 
-<body>
-...
-    <!-- Syncfusion ASP.NET MVC Script Manager -->
-    @Html.EJS().ScriptManager()
-</body>
+<!-- Syncfusion ASP.NET MVC Script Manager -->
+@Html.EJS().ScriptManager()
 
 {% endhighlight %}
 {% endtabs %}
-
-N> Add the script manager `EJS().ScriptManager()` at the **end of `<body>`**.
 
 ## Add the ASP.NET MVC PDF Viewer control
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC PDF Viewer control in `~/Views/Home/Index.cshtml`. Load a PDF by setting the `DocumentPath` property to a file name or URL, as shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="~/Index.cshtml" %}
-
-@{
-    ViewBag.Title = "Home Page";
-}
+{% highlight c# tabtitle="Index.cshtml" %}
 
 <div>
     <div style="height:500px;width:100%;">
@@ -114,7 +113,7 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 ![ASP.NET MVC PDF Viewer Control](AspNetMVC_Images/pdfviewer-control.png)
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-MVC-Getting-Started-Examples/tree/main/PDFViewer/ASP.NET%20MVC%20Razor%20Examples)
+N> A fully functional example project is available in the [GitHub repository](https://github.com/SyncfusionExamples/ASP-NET-MVC-Getting-Started-Examples/tree/main/PDFViewer/ASP.NET%20MVC%20Razor%20Examples).
 
 ## Deployment notes
 
@@ -149,6 +148,6 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 ## See also
 
-- [Getting started with Syncfusion ASP.NET MVC Standalone PDF Viewer](./getting-started)
+- [Getting Started with Syncfusion ASP.NET MVC Standalone PDF Viewer](./getting-started)
 - [PDF Viewer Form Designer](./forms/overview#form-designer)
 - [Organize PDF pages](./organize-pages/overview)
