@@ -9,7 +9,7 @@ documentation: ug
 
 # Localization in Windows Forms Spreadsheet
 
-Localization is the process of configuring the application to a specific language. Spreadsheet provides support to localize all the static text in a Ribbon and all dialogs to any desired language. Localization can be done by adding resource file and setting the specific culture in the application.
+Localization is the process of configuring the application to a specific language. [Winforms Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/winforms-spreadsheet-editor) provides support to localize all the static text in a Ribbon and all dialogs to any desired language. Localization can be done by adding resource file and setting the specific culture in the application.
 
 Spreadsheet allows you to set custom resource using Resx file. You can define your string values in resource file for a specific culture and set the culture in your application.
 

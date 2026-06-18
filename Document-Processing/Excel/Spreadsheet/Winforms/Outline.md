@@ -9,7 +9,7 @@ documentation: ug
 
 # Outline in Windows Forms Spreadsheet
 
-Spreadsheet provides support for outlines like in excel which makes your data easier to view. You can group or ungroup the data’s either by rows or columns.
+[Winforms Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/winforms-spreadsheet-editor) provides support for outlines like in excel which makes your data easier to view. You can group or ungroup the data’s either by rows or columns.
 
 ## Grouping rows and columns
 

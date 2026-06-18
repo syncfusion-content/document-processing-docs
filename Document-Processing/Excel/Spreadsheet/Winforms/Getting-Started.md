@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Getting Started with Windows Forms Spreadsheet
-This section briefly explains how to include the [Syncfusion<sup>®</sup> WinForms Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/winforms-spreadsheet-editor) component in Windows Forms App using Visual Studio.
+This section briefly explains how to include the [WinForms Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/winforms-spreadsheet-editor) component in Windows Forms App using Visual Studio.
 
 ## Prerequisites
 * [System requirements for WinForms components](https://help.syncfusion.com/windowsforms/system-requirements)
@@ -37,7 +37,7 @@ To add **Windows Forms Spreadsheet** component in the application, open the NuGe
 
 ### Add Syncfusion® WinForms Spreadsheet Assemblies
 
-Below table describes, list of assemblies required to be added in project when the [WinForms Spreadsheet](https://www.syncfusion.com/winforms-ui-controls/spreadsheet) control is used in your application.
+Below table describes, list of assemblies required to be added in project when the (https://www.syncfusion.com/winforms-ui-controls/spreadsheet) control is used in your application.
 
 <table>
 <tr>
@@ -208,7 +208,7 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 To learn how to create, open, and save files in the WPF Spreadsheet Component, see [Workbook Operations](Workbook-Operations).
 
-N>[View Sample in GitHub.](https://github.com/SyncfusionExamples/winforms-spreadsheet-getting-started)
+N>[View Sample in GitHub.](https://github.com/SyncfusionExamples/winforms-spreadsheet-getting-started). Looking for the full Winforms Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [Winforms Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/winforms-spreadsheet-editor) page.
 
 ## See Also
 - [Data Management](Data-Management)
