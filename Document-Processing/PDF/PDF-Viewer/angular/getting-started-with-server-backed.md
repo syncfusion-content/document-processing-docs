@@ -1,5 +1,5 @@
 ---
-title: Getting Started with Angular Server-Backed Angular PDF Viewer | Syncfusion
+title: Getting Started with Angular Server-Backed PDF Viewer | Syncfusion
 description: Learn how to set up and run the Syncfusion Angular PDF Viewer in server-backed mode using Essential JS 2.
 platform: document-processing
 control: PDF Viewer
@@ -7,7 +7,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Angular PDF Viewer (Server-Backed)
+# Getting Started with Angular Server-Backed PDF Viewer Component
 
 This section explains how to create a simple Angular application and add the server-backed [Syncfusion® Angular PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/angular-pdf-viewer) component with the minimum required setup.
 
@@ -58,7 +58,7 @@ npm install @syncfusion/ej2-angular-pdfviewer --save
 
 ## Add CSS references
 
-Add the required Syncfusion styles to the `src/styles.css` file:
+Add the following PDF Viewer and dependent component style references to the `src/styles.css` file.
 
 {% tabs %}
 {% highlight css tabtitle="styles.css" %}

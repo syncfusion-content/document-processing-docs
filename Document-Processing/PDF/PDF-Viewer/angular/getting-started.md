@@ -7,7 +7,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Angular Standalone PDF Viewer
+# Getting Started with Angular Standalone PDF Viewer Component
 
 This section explains how to create a simple Angular application and add the standalone [Syncfusion® Angular PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/angular-pdf-viewer) component with the minimum required setup.
 
@@ -56,7 +56,7 @@ npm install @syncfusion/ej2-angular-pdfviewer --save
 
 ## Add CSS references
 
-Add the required Syncfusion styles to the `src/styles.css` file:
+Add the following PDF Viewer and dependent component style references to the `src/styles.css` file.
 
 {% tabs %}
 {% highlight css tabtitle="styles.css" %}
