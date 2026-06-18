@@ -211,5 +211,5 @@ To add control manually from code, follow these steps,
 N>[View Sample in GitHub.](https://github.com/SyncfusionExamples/WPF-PDFViewer-Examples/tree/master/GettingStarted)
 
 ## See Also
-- [Display pdf file](./display-PDF-file)
+- [Viewing PDF Files](./viewing-pdf-files)
 - [Themes](./Themes)
