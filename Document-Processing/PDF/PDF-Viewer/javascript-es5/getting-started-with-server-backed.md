@@ -16,11 +16,7 @@ N> Starting with the 2026 Vol 2 main release (June 2026), no new features will b
 
 > Ensure that the same version is used for all script and style references to avoid compatibility issues.
 
-## Setup the development environment
-
-This example uses a simple HTML-based setup with CDN links for Syncfusion components.
-
-### Create application folder
+## Create application folder
 
 Create an app folder `pdf-viewer-app` for the Essential JS 2 JavaScript components.
 
@@ -32,7 +28,7 @@ pdf-viewer-app/
 ├── index.js
 ```
 
-### Add style and script references
+## Add Syncfusion® PDF Viewer resources
 
 The Essential JS 2 component's global scripts and styles are hosted at the following CDN link formats.
 
@@ -46,56 +42,39 @@ The Essential JS 2 component's global scripts and styles are hosted at the follo
 >
 > Styles: [`https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-base/styles/material.css`](https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-base/styles/material.css)
 
-Create an HTML page (index.html) in `pdf-viewer-app` location and add the CDN link references.
-
-{% tabs %}
-{% highlight html tabtitle="index.html" hl_lines="8 9 10 11 12 13 14 15 16 17 19" %}
-
-<head>
-    <title>EJ2 PDF Viewer</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Typescript PDF Viewer Control">
-    <meta name="author" content="Syncfusion">
-    <link href="index.css" rel="stylesheet">
-    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-base/styles/material.css" rel="stylesheet">    
-    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-buttons/styles/material.css" rel="stylesheet">
-    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-popups/styles/material.css" rel="stylesheet">
-    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-navigations/styles/material.css" rel="stylesheet">
-    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-dropdowns/styles/material.css" rel="stylesheet">
-    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-lists/styles/material.css" rel="stylesheet">
-    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-inputs/styles/material.css" rel="stylesheet">    
-    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-splitbuttons/styles/material.css" rel="stylesheet">
-    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-notifications/styles/material.css" rel="stylesheet">
-    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-pdfviewer/styles/material.css" rel="stylesheet">
-    <!-- Essential JS 2 PDF Viewer's script --> 
-    <script src="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/dist/ej2.min.js" type="text/javascript"></script>
-</head>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Adding the PDF Viewer component
-
-Add a container element for the PDF Viewer control in the `index.html` file and then initialize the control.
+Create an HTML page (index.html) in `pdf-viewer-app` location and add the CDN link references inside the `<head>` section of your `index.html` file.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
 
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title>EJ2 PDF Viewer</title>
-    <!-- Add your style references here -->
-</head>
-<body>
-    <!-- Element which will render as PDF Viewer -->
-    <div id="container">
-        <div id="PdfViewer" style="height:500px;width:100%;"></div>
-    </div>
-    <script src="index.js" type="text/javascript"></script>
-</body>
-</html>
+<link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-base/styles/material.css" rel="stylesheet">    
+<link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-buttons/styles/material.css" rel="stylesheet">
+<link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-popups/styles/material.css" rel="stylesheet">
+<link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-navigations/styles/material.css" rel="stylesheet">
+<link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-dropdowns/styles/material.css" rel="stylesheet">
+<link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-lists/styles/material.css" rel="stylesheet">
+<link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-inputs/styles/material.css" rel="stylesheet">    
+<link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-splitbuttons/styles/material.css" rel="stylesheet">
+<link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-notifications/styles/material.css" rel="stylesheet">
+<link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-pdfviewer/styles/material.css" rel="stylesheet">
+<!-- Essential JS 2 PDF Viewer's script --> 
+<script src="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/dist/ej2.min.js" type="text/javascript"></script>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Add the Syncfusion® PDF Viewer control
+
+Add a container element for the PDF Viewer control in the `index.html` file and then initialize the control inside the `<body>` section of your `index.html` file.
+
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
+
+<!-- Element which will render as PDF Viewer -->
+<div id="container">
+   <div id="PdfViewer" style="height:500px;width:100%;"></div>
+</div>
+<script src="index.js" type="text/javascript"></script>
 
 {% endhighlight %}
 {% endtabs %}
