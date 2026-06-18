@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Open document from AWS S3 in JavaScript (ES6) Document editor
 
-To load a document from AWS S3 in a Document Editor, you can follow the steps below
+To load a document from AWS S3 in a [TypeScript Document Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor), you can follow the steps below
 
  
 

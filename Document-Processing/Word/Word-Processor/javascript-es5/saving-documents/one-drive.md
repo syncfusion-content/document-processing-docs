@@ -16,7 +16,7 @@ To save a document to One Drive, you can follow the steps below
 
 Need to create a Microsoft Graph API application and obtain the necessary credentials, namely the application ID and tenant ID. Follow the steps provided in the [link](https://learn.microsoft.com/en-us/training/modules/msgraph-access-file-data/3-exercise-access-files-onedrive) to create the application and obtain the required IDs. 
 
-**Step 2:** Create a Simple Document Editor sample in JavaScript
+**Step 2:** Create a Simple [JavaScript Document Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) sample in JavaScript
 
 Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in Javascript. This will give you a basic setup of the Document Editor component.
 

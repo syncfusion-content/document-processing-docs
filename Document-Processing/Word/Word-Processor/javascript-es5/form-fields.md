@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Form fields in JavaScript (ES5) Document editor control
 
-DocumentEditorContainer component provide support for inserting Text, CheckBox, DropDown form fields through in-built toolbar.
+[JavaScript Document Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) Container component provide support for inserting Text, CheckBox, DropDown form fields through in-built toolbar.
 
 ![Form Fields](images/toolbar-form-fields.png)
 

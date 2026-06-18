@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Styles in JavaScript (ES5) Document editor control
 
-Styles are useful for applying a set of formatting consistently throughout the document. In Document Editor, styles are created and added to a document programmatically or via the built-in Styles dialog.
+Styles are useful for applying a set of formatting consistently throughout the document. In [JavaScript Document Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor), styles are created and added to a document programmatically or via the built-in Styles dialog.
 
 ## Styles definition overview
 

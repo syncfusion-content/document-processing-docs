@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Spell check in JavaScript (ES6) Document editor control
 
-Document Editor supports performing spell checking for any input text. You can perform spell checking for the text in Document Editor and it will provide suggestions for the mis-spelled words through dialog and in context menu. Document editor's spell checker is compatible with [hunspell dictionary files](https://github.com/wooorm/dictionaries).
+[TypeScript Document Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) supports performing spell checking for any input text. You can perform spell checking for the text in Document Editor and it will provide suggestions for the mis-spelled words through dialog and in context menu. Document editor's spell checker is compatible with [hunspell dictionary files](https://github.com/wooorm/dictionaries).
 
 ```ts
 import { DocumentEditorContainer, Toolbar, SpellChecker } from '@syncfusion/ej2-documenteditor';

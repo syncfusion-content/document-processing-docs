@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Comments in JavaScript (ES5) Document editor control
 
-Document Editor allows you to add comments to documents. You can add, navigate and remove comments in code and from the UI.
+[JavaScript Document Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) allows you to add comments to documents. You can add, navigate and remove comments in code and from the UI.
 
 ## Add a new comment
 

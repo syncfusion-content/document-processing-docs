@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Export in JavaScript (ES5) Document editor control
 
-Document Editor exports the document into various known file formats in client-side such as Microsoft Word document (.docx), Word template (.dotx), text document (.txt), and its own format called **Syncfusion Document Text (.sfdt)**.
+[JavaScript Document Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) exports the document into various known file formats in client-side such as Microsoft Word document (.docx), Word template (.dotx), text document (.txt), and its own format called **Syncfusion Document Text (.sfdt)**.
 
 We are providing two types of save APIs as mentioned below.
 
@@ -49,7 +49,7 @@ The following example shows how to export documents in Document Editor as Syncfu
 
 The following example shows how to export the document as Word document (.docx).
 
->Note: The Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
+>Note: The JavaScript Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -77,7 +77,7 @@ The following example shows how to export the document as Word document (.docx).
 
 The following example shows how to export the document as Word Template (.dotx).
 
->Note: The Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
+>Note: The JavaScript Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # FAQs about SFDT in JavaScript (ES5) DOCX Editor
 
-The frequently asked questions about SFDT in Document Editor is listed below:
+The frequently asked questions about SFDT in [JavaScript Document Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) is listed below:
 
 ## What is SFDT format?
 

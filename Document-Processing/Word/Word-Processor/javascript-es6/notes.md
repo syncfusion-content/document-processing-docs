@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Notes in JavaScript (ES6) Document editor control
 
-DocumentEditorContainer component provides support for inserting footnotes and endnotes through the in-built toolbar. Refer to the following screenshot.
+[TypeScript Document Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) Container component provides support for inserting footnotes and endnotes through the in-built toolbar. Refer to the following screenshot.
 
 ![Insert footnote endnote](images/note-toolbar.jpg)
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Set default format in document editor in JavaScript (ES6) Document editor control
 
-You can set the default character format, paragraph format and section format in Document editor.
+You can set the default character format, paragraph format and section format in [TypeScript Document Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor).
 
 ## Set the default character format
 

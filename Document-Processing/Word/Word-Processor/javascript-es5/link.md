@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Link in JavaScript (ES5) Document editor control
 
-Document Editor supports hyperlink field. You can link a part of the document content to Internet or file location, mail address, or any text within the document.
+[JavaScript Document Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) supports hyperlink field. You can link a part of the document content to Internet or file location, mail address, or any text within the document.
 
 ## Navigate a hyperlink
 
