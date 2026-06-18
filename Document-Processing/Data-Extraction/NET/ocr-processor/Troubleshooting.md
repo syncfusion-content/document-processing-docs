@@ -26,7 +26,7 @@ keywords: Assemblies
 Set proper tesseract binaries and tessdata folder with all files and inner folders. The tessdata folder name is case-sensitive and should not change.  
 <br/><br/>
 {% tabs %}
-{% highlight C# tabtitle="C# [Cross-platform]" %}
+{% highlight C# %}
 
 //TesseractBinaries - path of the folder tesseract binaries. 
 OCRProcessor processor = new OCRProcessor(@"TesseractBinaries/");
@@ -209,7 +209,7 @@ By using the best tessdata, we can improve the OCR results. For more information
 1.Execute the following command to install Tesseract 5. 
 <br>
 {% tabs %}
-{% highlight C# %}
+{% highlight bash %}
 
 brew install tesseract
 
@@ -219,7 +219,7 @@ brew install tesseract
 If the "brew" is not installed on your machine, you can install it using the following command.
 <br>
 {% tabs %}
-{% highlight C# %}
+{% highlight bash %}
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
@@ -241,7 +241,7 @@ using (OCRProcessor processor = new OCRProcessor("/opt/homebrew/Cellar/tesseract
 3.Add the TessDataPath from bin folder. Refer to the example code below:
 <br>
 {% tabs %}
-{% highlight C# tabtitle="C# [Cross-platform]" %}
+{% highlight C# %}
 
 using (OCRProcessor processor = new OCRProcessor("/opt/homebrew/Cellar/tesseract/5.3.2/lib"))
 {
@@ -287,7 +287,7 @@ using (OCRProcessor processor = new OCRProcessor("/opt/homebrew/Cellar/tesseract
 1. Install the leptonica.
 <br>
 {% tabs %}
-{% highlight C# %}
+{% highlight bash %}
 
 sudo apt-get install libleptonica-dev
 
@@ -299,7 +299,7 @@ sudo apt-get install libleptonica-dev
 2.Install the tesseract.
 <br>
 {% tabs %}
-{% highlight C# %}
+{% highlight bash %}
 
 sudo apt-get install tesseract-ocr-eng
 
@@ -311,7 +311,7 @@ sudo apt-get install tesseract-ocr-eng
 3. Copy the binaries (liblept.so and libtesseract.so) to the missing files exception folder in the project location.
 <br>
 {% tabs %}
-{% highlight C# %}
+{% highlight bash %}
 
 cp /usr/lib/x86_64-linux-gnu/liblept.so /home/syncfusion/linuxdockersample/linuxdockersample/bin/Debug/net7.0/liblept1753.so
 
@@ -319,7 +319,7 @@ cp /usr/lib/x86_64-linux-gnu/liblept.so /home/syncfusion/linuxdockersample/linux
 {% endtabs %}
 <br>
 {% tabs %}
-{% highlight C# %}
+{% highlight bash %}
 
 cp /usr/lib/x86_64-linux-gnu/libtesseract.so.4 /home/syncfusion/linuxdockersample/linuxdockersample/bin/Debug/net7.0/libSyncfusionTesseract.so
 
@@ -349,7 +349,7 @@ To resolve this problem, you should install all required dependencies in your Li
 
 Step 1: Execute the following command in terminal window to check dependencies are installed properly.
 {% tabs %}
-{% highlight C# %}
+{% highlight bash %}
 
 ldd  liblept1753.so
 ldd  libSyncfusionTesseract.so
@@ -359,7 +359,7 @@ ldd  libSyncfusionTesseract.so
 Run the following commands in terminal<br>
 Step 1:
 {% tabs %}
-{% highlight C# %}
+{% highlight bash %}
 
 sudo apt-get install libleptonica-dev libjpeg62
 
@@ -367,7 +367,7 @@ sudo apt-get install libleptonica-dev libjpeg62
 {% endtabs %}
 Step 2:
 {% tabs %}
-{% highlight C# %}
+{% highlight bash %}
 
 ln -s /usr/lib/x86_64-linux-gnu/libtiff.so.6 /usr/lib/x86_64-linux-gnu/libtiff.so.5
 
@@ -375,7 +375,7 @@ ln -s /usr/lib/x86_64-linux-gnu/libtiff.so.6 /usr/lib/x86_64-linux-gnu/libtiff.s
 {% endtabs %}
 Step 3:
 {% tabs %}
-{% highlight C# %}
+{% highlight bash %}
 
 ln -s /lib/x86_64-linux-gnu/libdl.so.2 /usr/lib/x86_64-linux-gnu/libdl.so
 
@@ -403,28 +403,18 @@ ln -s /lib/x86_64-linux-gnu/libdl.so.2 /usr/lib/x86_64-linux-gnu/libdl.so
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight bash %}
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-
 RUN apt-get update && \
-
 apt-get install -yq --no-install-recommends \
-
 libgdiplus libc6-dev libleptonica-dev libjpeg62
-
 RUN ln -s /usr/lib/x86_64-linux-gnu/libtiff.so.6 /usr/lib/x86_64-linux-gnu/libtiff.so.5
-
 RUN ln -s /lib/x86_64-linux-gnu/libdl.so.2 /usr/lib/x86_64-linux-gnu/libdl.so
 
- 
-
 USER app
-
 WORKDIR /app
-
 EXPOSE 8080
-
 EXPOSE 8081
 
 {% endhighlight %}
@@ -569,7 +559,7 @@ Update your deployment YAML to include a writable temporary directory with `empt
 <br/><br/>
 {% tabs %}
 
-{% highlight C# %}
+{% highlight yaml %}
 
 spec:
   containers:
@@ -594,7 +584,7 @@ To ensure your container has permission to write to mounted volumes, add:
 <br/><br/>
 {% tabs %}
 
-{% highlight C# %}
+{% highlight yaml %}
 
 securityContext:
   runAsUser: 1000 # safer than root
@@ -612,7 +602,7 @@ If persistent storage is required, configure Azure Files:
 <br/><br/>
 {% tabs %}
 
-{% highlight C# %}
+{% highlight yaml %}
 
 volumes:
     - name: azurefile

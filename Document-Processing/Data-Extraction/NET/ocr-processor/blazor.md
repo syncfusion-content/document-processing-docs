@@ -93,11 +93,11 @@ public void ConfigureServices(IServiceCollection services)
 Step 7: Inject ExportService into *FetchData.razor* using the following code.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight CSHTML %}
 
 @inject ExportService exportService
 @inject Microsoft.JSInterop.IJSRuntime JS
-@using  System.IO;
+@using  System.IO
 
 {% endhighlight %}
 {% endtabs %}
@@ -152,7 +152,7 @@ public static class FileUtil
 Step 11: Add the following JavaScript function in the *_Host.cshtml* available under the Pages folder.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight CSHTML %}
 
 <script type="text/javascript">
     function saveAsFile(filename, bytesBase64) {
@@ -277,11 +277,11 @@ public void ConfigureServices(IServiceCollection services)
 Step 8: Inject ExportService into *FetchData.razor* using the following code.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight CSHTML %}
 
 @inject ExportService exportService
 @inject Microsoft.JSInterop.IJSRuntime JS
-@using  System.IO;
+@using  System.IO
 
 {% endhighlight %}
 {% endtabs %}
@@ -336,7 +336,7 @@ public static class FileUtil
 Step 12: Add the following JavaScript function in the *_Host.cshtml* available under the Pages folder.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight CSHTML %}
 
 <script type="text/javascript">
     function saveAsFile(filename, bytesBase64) {
@@ -476,7 +476,7 @@ public void ConfigureServices(IServiceCollection services)
 Step 7: Inject ExportService into *FetchData.razor* using the following code.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight CSHTML %}
 
 @inject ExportService exportService
 @inject Microsoft.JSInterop.IJSRuntime JS
@@ -535,7 +535,7 @@ public static class FileUtil
 Step 11: Add the following JavaScript function in the *_Host.cshtml* available under the Pages folder.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight CSHTML %}
 
 <script type="text/javascript">
     function saveAsFile(filename, bytesBase64) {

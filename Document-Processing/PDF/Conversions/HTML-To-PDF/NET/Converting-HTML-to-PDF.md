@@ -274,6 +274,9 @@ Please refer to the below code snippet to use the DisableIEWarning API to remove
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
 //Initialize the HTML to PDF converter 
  HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter(HtmlRenderingEngine.IE);
 IEConverterSettings settings = new IEConverterSettings();

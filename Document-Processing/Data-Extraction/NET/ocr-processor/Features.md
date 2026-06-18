@@ -1930,6 +1930,35 @@ using (OCRProcessor processor = new OCRProcessor())
 }
 {% endhighlight %}
 
+{% endhighlight %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
+//Initialize the OCR processor.
+using (OCRProcessor processor = new OCRProcessor())
+{
+    //Get stream from an image file. 
+    FileStream imageStream = new FileStream(@"Input.jpg", FileMode.Open);    
+    //Set OCR language to process.
+    processor.Settings.Language = Languages.English;
+    //Sets Unicode font to preserve the Unicode characters in a PDF document.
+    FileStream fontStream = new FileStream(@"ARIALUNI.ttf", FileMode.Open);
+    //Set the unicode font. 
+    processor.UnicodeFont = new PdfTrueTypeFont(fontStream, true, PdfFontStyle.Regular, 10);
+    //Set the PDF conformance level.
+    processor.Settings.Conformance = PdfConformanceLevel.Pdf_A1B;
+    //Process OCR by providing the bitmap image.  
+    PdfDocument document = processor.PerformOCR(imageStream);
+
+    //Save the PDF document to file stream.
+    document.Save("Output.pdf");
+    //Close the document.
+    document.Close(true);
+}
+{% endhighlight %}
+
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports Syncfusion.OCRProcessor
@@ -1996,9 +2025,15 @@ using (OCRProcessor processor = new OCRProcessor())
 
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 
 //By default unicode characters can be extracted from image file in .NET Framework applications like WF, WPF, ASP.NET and ASP.NET MVC.
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'By default unicode characters can be extracted from image file in .NET Framework applications like WF, WPF, ASP.NET and ASP.NET MVC.
 
 {% endhighlight %}
 {% endtabs %} 
@@ -2373,25 +2408,18 @@ using (OCRProcessor ocrProcessor = new OCRProcessor())
             new FileStream("arialuni.ttf", FileMode.Open), // Path to the TrueType font file
             12 // Font size
     );
-
     // Load the PDF document
     PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-
     // Configure OCR settings
     OCRSettings ocrSettings = new OCRSettings();
-
     // Specify the languages to be used for OCR
     ocrSettings.Language = "eng+deu+ara+ell+fra"; // English, German, Arabic, Greek, French
-
     // Apply the OCR settings to the OCR processor
     ocrProcessor.Settings = ocrSettings;
-
     // Perform OCR on the loaded PDF document, providing the path to the tessdata directory
     ocrProcessor.PerformOCR(loadedDocument, "tessdata");
-
     // Save the OCR-processed document
     loadedDocument.Save("Output.pdf");
-
     // Close the loaded document
     loadedDocument.Close(true);
 }
@@ -2408,22 +2436,16 @@ using (OCRProcessor ocrProcessor = new OCRProcessor())
 {
     // Load the PDF document
     PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-
     // Configure OCR settings
     OCRSettings ocrSettings = new OCRSettings();
-
     // Specify the languages to be used for OCR
     ocrSettings.Language = "eng+deu+ara+ell+fra"; // English, German, Arabic, Greek, French
-
     // Apply the OCR settings to the OCR processor
     ocrProcessor.Settings = ocrSettings;
-
     // Perform OCR on the loaded PDF document, providing the path to the tessdata directory
     ocrProcessor.PerformOCR(loadedDocument, "tessdata");
-
     // Save the OCR-processed document
     loadedDocument.Save("Output.pdf");
-
     // Close the loaded document
     loadedDocument.Close(true);
 }
@@ -2444,22 +2466,16 @@ Using ocrProcessor As New OCRProcessor()
     )
     ' Load the PDF document from the file stream
     Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
-
     ' Configure OCR settings
     Dim ocrSettings As New OCRSettings()
-
     ' Specify the languages to be used for OCR
     ocrSettings.Language = "eng+deu+ara+ell+fra" ' English, German, Arabic, Greek, French
-
     ' Apply the OCR settings to the OCR processor
     ocrProcessor.Settings = ocrSettings
-
     ' Perform OCR on the loaded PDF document, providing the path to the tessdata directory
     ocrProcessor.PerformOCR(loadedDocument, "tessdata")
-
     ' Save the OCR-processed document
     loadedDocument.Save("Output.pdf")
-
     ' Close the loaded document and commit changes
     loadedDocument.Close(True)
     
@@ -2489,24 +2505,18 @@ using (OCRProcessor processor = new OCRProcessor())
 {
     // Load the PDF document from the file stream
     PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument("Input.pdf");
-
     // Set OCR language to English
     processor.Settings.Language = Languages.English;
-
     // Set the page segmentation mode to process sparse text with orientation and script detection
     processor.Settings.PageSegment = PageSegMode.SparseTextOsd;
-
     // Perform OCR on the loaded PDF document to extract text
     processor.PerformOCR(pdfLoadedDocument, processor.TessDataPath, out OCRLayoutResult layoutResult);
-
     // Extract the OCRed text from the first page and join lines with newline characters
     string ocrText = string.Join("\n", layoutResult.Pages[0].Lines.Select(line => line.Text));
-
     // Save the PDF document to the file stream
     pdfLoadedDocument.Save("Output.pdf");
     // Close the PDF document
     pdfLoadedDocument.Close(true);
-
     // Write the extracted OCR text to an output text file
     File.WriteAllText("Output.txt", ocrText);
 }
@@ -2523,24 +2533,18 @@ using (OCRProcessor processor = new OCRProcessor())
 {
     // Load the PDF document from the file stream
     PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument("Input.pdf");
-
     // Set OCR language to English
     processor.Settings.Language = Languages.English;
-
     // Set the page segmentation mode to process sparse text with orientation and script detection
     processor.Settings.PageSegment = PageSegmentMode.SparseTextOsd;
-
     // Perform OCR on the loaded PDF document to extract text
     processor.PerformOCR(pdfLoadedDocument, processor.TessDataPath, out OCRLayoutResult layoutResult);
-
     // Extract the OCRed text from the first page and join lines with newline characters
     string ocrText = string.Join("\n", layoutResult.Pages[0].Lines.Select(line => line.Text));
-
     // Save the PDF document to the file stream
     pdfLoadedDocument.Save("Output.pdf");
     // Close the PDF document
     pdfLoadedDocument.Close(true);
-
     // Write the extracted OCR text to an output text file
     File.WriteAllText("Output.txt", ocrText);
 }
@@ -2556,23 +2560,17 @@ Imports Syncfusion.Pdf.Parsing
 Using processor As New OCRProcessor()
     ' Load the PDF document from the file stream
     Dim pdfLoadedDocument As New PdfLoadedDocument("Input.pdf")
-
     ' Set OCR language to English
     processor.Settings.Language = Languages.English
-
     ' Set the page segmentation mode to process sparse text with orientation and script detection
     processor.Settings.PageSegment = PageSegMode.SparseTextOsd
-
     ' Perform OCR on the loaded PDF document to extract text
     Dim layoutResult As OCRLayoutResult
     processor.PerformOCR(pdfLoadedDocument, processor.TessDataPath, layoutResult)
-
     ' Extract the OCRed text from the first page and join lines with newline characters
     Dim ocrText As String = String.Join(Environment.NewLine, layoutResult.Pages(0).Lines.Select(Function(line) line.Text))
-
     ' Save the PDF document to the file stream
     pdfLoadedDocument.Save("Output.pdf")
-
     ' Close the PDF document
     pdfLoadedDocument.Close(True)
 
@@ -2610,7 +2608,6 @@ using (OCRProcessor processor = new OCRProcessor())
     processor.TessDataPath = "TessdataBest/";
     processor.Settings.Language = Languages.English;
     processor.Settings.TesseractVersion = TesseractVersion.Version5_0;
-
     // Determine how many frames/pages the TIFF contains.
     int frameCount = img.GetFrameCount(FrameDimension.Page);
     if (frameCount <= 1)
@@ -2626,7 +2623,6 @@ using (OCRProcessor processor = new OCRProcessor())
         // Prefer Page dimension
         try { img.SelectActiveFrame(FrameDimension.Page, i); }
         catch { /* fallback if needed */ }
-
         // Clone the selected frame to a standalone Bitmap for OCR (important for some engines)
         using (Bitmap frameBmp = new Bitmap(img.Width, img.Height))
         using (Graphics g = Graphics.FromImage(frameBmp))
@@ -2666,7 +2662,6 @@ using (OCRProcessor processor = new OCRProcessor())
     processor.TessDataPath = "TessdataBest/";
     processor.Settings.Language = Languages.English;
     processor.Settings.TesseractVersion = TesseractVersion.Version5_0;
-
     // Determine how many frames/pages the TIFF contains.
     int frameCount = img.GetFrameCount(FrameDimension.Page);
     if (frameCount <= 1)
@@ -2676,13 +2671,11 @@ using (OCRProcessor processor = new OCRProcessor())
         frameCount = Math.Max(frameCount, img.GetFrameCount(FrameDimension.Resolution));
     }
     if (frameCount < 1) frameCount = 1;
-
     for (int i = 0; i < frameCount; i++)
     {
         // Prefer Page dimension
         try { img.SelectActiveFrame(FrameDimension.Page, i); }
         catch { /* fallback if needed */ }
-
         // Clone the selected frame to a standalone Bitmap for OCR (important for some engines)
         using (Bitmap frameBmp = new Bitmap(img.Width, img.Height))
         using (Graphics g = Graphics.FromImage(frameBmp))
@@ -2728,7 +2721,6 @@ Using processor As New OCRProcessor()
         frameCount = Math.Max(frameCount, img.GetFrameCount(FrameDimension.Resolution))
     End If
     If frameCount < 1 Then frameCount = 1
-
     For i As Integer = 0 To frameCount - 1
         ' Prefer Page dimension
         Try
@@ -2742,7 +2734,6 @@ Using processor As New OCRProcessor()
             Using g As Graphics = Graphics.FromImage(frameBmp)
                 g.DrawImage(img, 0, 0, img.Width, img.Height)
             End Using
-
             Dim pageText As String = processor.PerformOCR(frameBmp, processor.TessDataPath)
             output.AppendLine($"--- Page {i + 1} ---")
             output.AppendLine(If(pageText, String.Empty))
@@ -2750,7 +2741,6 @@ Using processor As New OCRProcessor()
         End Using
     Next
 End Using
-
 File.WriteAllText("Output.txt", output.ToString())
 
 {% endhighlight %}

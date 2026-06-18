@@ -90,7 +90,7 @@ Step 1: Open the terminal (Ctrl+` ) and run the following command to create a ne
 ```
 dotnet new console -n CreatePdfConsole
 ```
-Step 2: Replace ****CreatePdfConsole** with your desired project name.
+Step 2: Replace **CreatePdfConsole** with your desired project name.
 
 Step 3: Navigate to the project directory using the following command
 
