@@ -64,58 +64,6 @@ export default {
 }
 </script>
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-<template>
-  <div id="app">
-      <ejs-pdfviewer
-        id="pdfViewer"
-        ref="pdfviewer"
-        :serviceUrl="serviceUrl"
-        :documentPath="documentPath"
-        :documentLoad="documentLoad">
-      </ejs-pdfviewer>
-
-  </div>
-</template>
-
-<script>
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation,
-         LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
-         Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
-import {Browser} from '@syncfusion/ej2-base';
-Vue.use(PdfViewerPlugin);
-var viewer;
-
-export default {
-  name: 'app',
-  data () {
-    return {
-      serviceUrl:"https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-    };
-  },
-  provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
-                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer ]},
-
-  methods: {
-    documentLoad: function (args) {
-      viewer = this.$refs.pdfviewer.ej2Instances;
-      if (Browser.isDevice && !viewer.enableDesktopMode) {
-        viewer.maxZoom = 200;
-        viewer.minZoom = 10;
-      }
-      else{
-          viewer.zoomMode = 'Default';
-      }
-    }
-  }
-}
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 This limits maximum zoom to 200% and minimum zoom to 10% on mobile devices, helping prevent performance issues from excessive zooming.

@@ -22,7 +22,7 @@ Example: Disable tile rendering
 
     <ejs-pdfviewer
       ref="viewer"
-      :serviceUrl="serviceUrl"
+      :resourceUrl="resourceUrl"
       :documentPath="documentPath">
     </ejs-pdfviewer>
   </div>
@@ -54,7 +54,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: 'https://ej2services.syncfusion.com/production/web-services/api/pdfviewer',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
       documentPath: 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf'
     };
   },

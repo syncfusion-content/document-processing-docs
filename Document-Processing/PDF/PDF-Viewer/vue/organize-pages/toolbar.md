@@ -51,40 +51,6 @@ export default {
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-<template>
-  <div id="app">
-      <ejs-pdfviewer
-          id="pdfViewer"
-          ref="pdfviewer"
-          :serviceUrl="serviceUrl"
-          :documentPath="documentPath"
-          :pageOrganizerSettings="{ canInsert: false }">
-      </ejs-pdfviewer>
-  </div>
-</template>
-
-<script>
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
-
-export default {
-  name: 'app',
-  data () {
-    return {
-      serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer',
-      documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'
-    };
-  },
-  provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer ]
-  }
-}
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Show or hide the Delete option
@@ -126,40 +92,6 @@ export default {
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-<template>
-  <div id="app">
-      <ejs-pdfviewer
-          id="pdfViewer"
-          ref="pdfviewer"
-          :serviceUrl="serviceUrl"
-          :documentPath="documentPath"
-          :pageOrganizerSettings="{ canDelete: false }">
-      </ejs-pdfviewer>
-  </div>
-</template>
-
-<script>
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
-
-export default {
-  name: 'app',
-  data () {
-    return {
-      serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer',
-      documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'
-    };
-  },
-  provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer ]
-  }
-}
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Show or hide the Rotate option
@@ -192,40 +124,6 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib'
-    };
-  },
-  provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer ]
-  }
-}
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-<template>
-  <div id="app">
-      <ejs-pdfviewer
-          id="pdfViewer"
-          ref="pdfviewer"
-          :serviceUrl="serviceUrl"
-          :documentPath="documentPath"
-          :pageOrganizerSettings="{ canRotate: false }">
-      </ejs-pdfviewer>
-  </div>
-</template>
-
-<script>
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
-
-export default {
-  name: 'app',
-  data () {
-    return {
-      serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer',
-      documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'
     };
   },
   provide: {

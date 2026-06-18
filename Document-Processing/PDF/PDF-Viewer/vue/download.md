@@ -13,8 +13,6 @@ The Vue PDF Viewer lets users download the currently loaded PDF. Enable the down
 
 ![PDF Viewer toolbar with download button](./images/download.png)
 
-N> When loading documents from other origins, ensure that CORS is correctly configured on the server. In server-backed mode, the document is streamed through the serviceUrl endpoint, which must allow download requests.
-
 To invoke download programmatically, use the following snippet:
 
 {% tabs %}
@@ -91,79 +89,6 @@ export default {
 }
 </script>
 
-
-{% endhighlight %}
-{% highlight html tabtitle="Composition API (Server-Backed)" %}
-
-<template>
-  <div id="app">
-    <button v-on:click="downloadClicked">Download</button>
-    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :serviceUrl="serviceUrl" :documentPath="documentPath">
-    </ejs-pdfviewer>
-  </div>
-</template>
-
-<script setup>
-import { provide, ref } from 'vue';
-import {
-  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation,
-  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
-  Print, TextSelection, TextSearch, FormFields, FormDesigner
-} from '@syncfusion/ej2-vue-pdfviewer';
-
-const pdfviewer = ref(null);
-const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
-  const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-
-provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
-  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]);
-
-const downloadClicked = function (args) {
-  pdfviewer.value.ej2Instances.download();
-}
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (Server-Backed)" %}
-
-<template>
-  <div id="app">
-    <button v-on:click="downloadClicked">Download</button>
-    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :serviceUrl="serviceUrl" :documentPath="documentPath">
-    </ejs-pdfviewer>
-  </div>
-</template>
-
-<script>
-import {
-  PdfViewerComponent, Toolbar, Magnification, Navigation,
-  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
-  Print, TextSelection, TextSearch, FormFields, FormDesigner
-} from '@syncfusion/ej2-vue-pdfviewer';
-
-export default {
-  name: "App",
-  components: {
-    "ejs-pdfviewer": PdfViewerComponent
-  },
-  data() {
-    return {
-      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
-      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-    };
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
-      ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]
-  },
-
-  methods: {
-    downloadClicked: function () {
-      this.$refs.pdfviewer.ej2Instances.download();
-    }
-  }
-}
-</script>
 
 {% endhighlight %}
 {% endtabs %}

@@ -134,42 +134,6 @@ export default {
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-<template>
-  <div id="app">
-      <ejs-pdfviewer
-          id="pdfViewer"
-          ref="pdfviewer"
-          :serviceUrl="serviceUrl"
-          :documentPath="documentPath"
-          :enablePageOrganizer=true>
-      </ejs-pdfviewer>
-  </div>
-</template>
-
-<script>
-import Vue from 'vue';
-import {  PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation,
-          BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
-          TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
-
-export default {
-  name: 'app',
-  data () {
-    return {
-      serviceUrl:"https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-    };
-  },
-
-  provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer ]},
-
-}
-</script>
-{% endhighlight %}
 {% endtabs %}
 
 **isPageOrganizerOpen:** This API determines whether the page organizer dialog will be displayed automatically when a document is loaded into the PDF Viewer. By default, it is set to `false`, meaning the dialog is not displayed initially.
@@ -212,42 +176,6 @@ export default {
 }
 </script>
 
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-<template>
-  <div id="app">
-      <ejs-pdfviewer
-          id="pdfViewer"
-          ref="pdfviewer"
-          :serviceUrl="serviceUrl"
-          :documentPath="documentPath"
-          :isPageOrganizerOpen = true>
-      </ejs-pdfviewer>
-  </div>
-</template>
-
-<script>
-import Vue from 'vue';
-import {  PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation,
-          BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
-          TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
-
-export default {
-  name: 'app',
-  data () {
-    return {
-      serviceUrl:"https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-    };
-  },
-
-  provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer ]},
-
-}
-</script>
 {% endhighlight %}
 {% endtabs %}
 
@@ -292,43 +220,6 @@ export default {
 }
 </script>
 
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-<template>
-  <div id="app">
-      <ejs-pdfviewer
-          id="pdfViewer"
-          ref="pdfviewer"
-          :serviceUrl="serviceUrl"
-          :documentPath="documentPath"
-          :pageOrganizerSettings="pageOrganizerSettings">
-      </ejs-pdfviewer>
-  </div>
-</template>
-
-<script>
-import Vue from 'vue';
-import {  PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation,
-          BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
-          TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
-
-export default {
-  name: 'app',
-  data () {
-    return {
-      serviceUrl:"https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      pageOrganizerSettings : {canDelete: true, canInsert: true, canRotate: true, canCopy: true, canRearrange: true, canImport: true, imageZoom: 1, showImageZoomingSlider: true, imageZoomMin: 1, imageZoomMax: 5}
-    };
-  },
-
-  provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer ]},
-
-}
-</script>
 {% endhighlight %}
 {% endtabs %}
 

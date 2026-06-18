@@ -20,7 +20,7 @@ The example below changes the selector's resizer handle shape to circular and op
 
     <ejs-pdfviewer
       ref="viewer"
-      :serviceUrl="serviceUrl"
+      :resourceUrl="resourceUrl"
       :documentPath="documentPath">
     </ejs-pdfviewer>
   </div>
@@ -53,7 +53,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: 'https://ej2services.syncfusion.com/production/web-services/api/pdfviewer',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
       documentPath: 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf'
     };
   },
@@ -77,7 +77,7 @@ Composition API example
 
     <EjsPdfViewer
       ref="viewer"
-      :serviceUrl="serviceUrl"
+      :resoureUrl="resourceUrl"
       :documentPath="documentPath"
     />
   </div>
@@ -110,7 +110,7 @@ defineOptions({
   }
 });
 
-const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/pdfviewer';
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 const documentPath = 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf';
 
 const viewer = ref(null);

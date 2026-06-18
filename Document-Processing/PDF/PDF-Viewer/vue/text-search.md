@@ -76,66 +76,6 @@ export default {
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Composition API (Server-Backed)" %}
-
-<template>
-  <div id="app">
-    <ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath" :enableTextSearch="true">
-    </ejs-pdfviewer>
-  </div>
-</template>
-
-<script setup>
-import {
-  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation,
-  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
-  Print, TextSelection, TextSearch
-} from '@syncfusion/ej2-vue-pdfviewer';
-import { provide } from 'vue';
-
-const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
-const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-
-provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-  Annotation, ThumbnailView, Print, TextSelection, TextSearch])
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (Server-Backed)" %}
-
-<template>
-  <div id="app">
-    <ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath" :enableTextSearch="true">
-    </ejs-pdfviewer>
-  </div>
-</template>
-
-<script>
-import {
-  PdfViewerComponent, Toolbar, Magnification, Navigation,
-  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
-  Print, TextSelection, TextSearch
-} from '@syncfusion/ej2-vue-pdfviewer';
-
-export default {
-  name: "App",
-  components: {
-    "ejs-pdfviewer": PdfViewerComponent
-  },
-  data() {
-    return {
-      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
-      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-    };
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-      Annotation, ThumbnailView, Print, TextSelection, TextSearch]
-  }
-}
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Text search features
@@ -368,42 +308,6 @@ PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Th
 ```
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-backed" %}
-
-```html
-<template>
-  <div id="app">
-    <button v-on:click="textBounds">Form Fields Collection</button>
-<ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath"> </ejs-pdfviewer>
-  </div>
-</template>
-
-<script>
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
-export default {
-  name: 'app',
-  data () {
-return {
-  serviceUrl:"https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
-  documentPath:"PDF_Succinctly.pdf"
-};
-  },
-  provide: {
-PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner]
-  },
-  methods: {
-  textBounds: function() {
-    var viewer = document.getElementById('pdfViewer').ej2_instances[0];
-    viewer.textSearch.findText('pdf', false);
-  }
- }
-}
-</script>
-```
-
-{% endhighlight %}
 {% endtabs %}
 
 ### Find text on a specific page
@@ -430,42 +334,6 @@ export default {
   data () {
 return {
   resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-  documentPath:"PDF_Succinctly.pdf"
-};
-  },
-  provide: {
-PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner]
-  },
-  methods: {
-  textBounds: function() {
-    var viewer = document.getElementById('pdfViewer').ej2_instances[0];
-    viewer.textSearch.findText('pdf', false, 7);
-  }
- }
-}
-</script>
-```
-
-{% endhighlight %}
-{% highlight html tabtitle="Server-backed" %}
-
-```html
-<template>
-  <div id="app">
-    <button v-on:click="textBounds">Form Fields Collection</button>
-<ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath"> </ejs-pdfviewer>
-  </div>
-</template>
-
-<script>
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
-export default {
-  name: 'app',
-  data () {
-return {
-  serviceUrl:"https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
   documentPath:"PDF_Succinctly.pdf"
 };
   },
@@ -526,42 +394,6 @@ PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Th
 ```
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-backed" %}
-
-```html
-<template>
-  <div id="app">
-    <button v-on:click="textBounds">Form Fields Collection</button>
-<ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath"> </ejs-pdfviewer>
-  </div>
-</template>
-
-<script>
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
-export default {
-  name: 'app',
-  data () {
-return {
-  serviceUrl:"https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
-  documentPath:"PDF_Succinctly.pdf"
-};
-  },
-  provide: {
-PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner]
-  },
-  methods: {
-  textBounds: function() {
-    var viewer = document.getElementById('pdfViewer').ej2_instances[0];
-    viewer.textSearch.findText(['pdf', 'adobe'], false);
-  }
- }
-}
-</script>
-```
-
-{% endhighlight %}
 {% endtabs %}
 
 ### Find multiple text strings on a specific page
@@ -588,42 +420,6 @@ export default {
   data () {
 return {
   resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-  documentPath:"PDF_Succinctly.pdf"
-};
-  },
-  provide: {
-PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner]
-  },
-  methods: {
-  textBounds: function() {
-    var viewer = document.getElementById('pdfViewer').ej2_instances[0];
-    viewer.textSearch.findText(['pdf', 'adobe'], false, 7);
-  }
- }
-}
-</script>
-```
-
-{% endhighlight %}
-{% highlight html tabtitle="Server-backed" %}
-
-```html
-<template>
-  <div id="app">
-    <button v-on:click="textBounds">Form Fields Collection</button>
-<ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath"> </ejs-pdfviewer>
-  </div>
-</template>
-
-<script>
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
-export default {
-  name: 'app',
-  data () {
-return {
-  serviceUrl:"https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
   documentPath:"PDF_Succinctly.pdf"
 };
   },

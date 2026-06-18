@@ -11,7 +11,7 @@ documentation: ug
 
 Determine whether an added annotation was UI-drawn, imported, or existing using the [annotationAddMode](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationadd) property of the [annotationSelect](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationselect) event.
 
-**Step 1:** Follow the steps in the [Get started with Vue PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started/) guide to create a sample.
+**Step 1:** Follow the steps in the [Get started with Vue PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) guide to create a sample.
 
 **Step 2:** Use the following code to identify the added annotation mode.
 
@@ -20,7 +20,7 @@ Determine whether an added annotation was UI-drawn, imported, or existing using 
   <div>
     <ejs-pdfviewer
       ref="viewer"
-      :serviceUrl="serviceUrl"
+      :resourceUrl="resourceUrl"
       :documentPath="documentPath"
       :annotationSelect="onAnnotationSelect">
     </ejs-pdfviewer>
@@ -53,7 +53,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: 'https://ej2services.syncfusion.com/production/web-services/api/pdfviewer',
+      resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
       documentPath: 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf'
     };
   },
