@@ -9,7 +9,7 @@ documentation: ug
 
 # Working with Paragraph Formatting in Blazor DocumentEditor Component
 
-[Blazor Document Editor](https://www.syncfusion.com/blazor-components/blazor-word-processor) supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
+[Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
 
 ## Indentation
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Insert page number and navigate to page in Blazor Document Editor
 
-You can insert page number and navigate to specific page in Blazor Document Editor component by following ways.
+You can insert page number and navigate to specific page in [Blazor DOCX Editor ](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) component by following ways.
 
 ## Insert page number
 

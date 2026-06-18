@@ -10,9 +10,9 @@ keywords: Blazor UI Builder, Skills, AI Assistants, DOCX Editor SDK, Agent Skill
 
 # Blazor UI Builder Skill with DOCX Editor for AI Assistants
 
-**Syncfusion® Blazor UI Builder Skill** is an AI-powered skill and companion agent that accelerates Blazor DOCX Editor application development by transforming natural-language UI requirements into production-ready components using Syncfusion® Blazor UI libraries. 
+**Syncfusion® Blazor UI Builder Skill** is an AI-powered skill and companion agent that accelerates [Blazor DOCX Editor ](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor)application development by transforming natural-language UI requirements into production-ready components using Syncfusion® Blazor UI libraries. 
 
-Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® DOCX Editor** to deliver accurate and ready-to-use code.
+Integrated with your AI-powered IDE, it leverages deep knowledge of **Blazor DOCX Editor** to deliver accurate and ready-to-use code.
 By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, Blazor UI Builder helps you rapidly build scalable Document editing applications and user interfaces without leaving your development workflow.
 
 ## Prerequisites
@@ -109,7 +109,7 @@ Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targe
 
 1. **Intent Analysis** - Parse the user's prompt to identify component types and high-level layout intent.
 2. **Project Detection** - Automatically detects project framework, package manager, existing themes, and DOCX Editor configuration.
-3. **Component Mapping** - Map intent to Syncfusion® DOCX Editor and components and required feature modules.
+3. **Component Mapping** - Map intent to Blazor DOCX Editor and components and required feature modules.
 4. **Theming & Design System**  
    Load required theming guidelines and confirm key design choices:
    - CSS framework (Tailwind, Bootstrap, Material, or Greenfield(custom theme)). If no themes detected in the existing project, Greenfield and Syncfusion Tailwind3 theme are shown as the default option-proceed with this or change the theme as preferred.
@@ -198,6 +198,8 @@ Yes - the skill supports choosing Tailwind, Bootstrap, Material, or a custom the
 
 **Does it modify files automatically?**
 The skill proposes changes and requires confirmation for insertion; automatic dependency installation may be offered depending on agent permissions.
+
+N> Looking for the full Blazor DOCX Editor component overview, features, pricing, and documentation? Visit the [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) page.
 
 ## See also
 

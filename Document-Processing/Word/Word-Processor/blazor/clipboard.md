@@ -9,7 +9,7 @@ documentation: ug
 
 # Clipboard in Blazor DocumentEditor Component
 
-The [Blazor Word Processor](https://www.syncfusion.com/blazor-components/blazor-word-processor) (Document Editor) provides built-in support for clipboard operations, including cut, copy, and paste. These actions can be performed through the toolbar, context menus, standard keyboard shortcuts, or programmatically via the component's APIs.
+The [Blazor DOCX Editor ](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) provides built-in support for clipboard operations, including cut, copy, and paste. These actions can be performed through the toolbar, context menus, standard keyboard shortcuts, or programmatically via the component's APIs.
 
 ## Local vs. System Clipboard
 

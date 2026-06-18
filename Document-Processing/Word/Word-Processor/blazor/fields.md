@@ -9,7 +9,7 @@ documentation: ug
 
 # Working with Fields in Blazor DocumentEditor Component
 
-Fields are placeholders in a document that display data that can change, such as the current date, the total number of pages, or information from a data source (like in a mail merge). The [Blazor Word Processor](https://www.syncfusion.com/blazor-components/blazor-word-processor) (Document Editor) is designed to preserve all field types when loading an existing document, ensuring that no data or functionality is lost.
+Fields are placeholders in a document that display data that can change, such as the current date, the total number of pages, or information from a data source (like in a mail merge). The [Blazor DOCX Editor ](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) is designed to preserve all field types when loading an existing document, ensuring that no data or functionality is lost.
 
 This document explains how to update fields and interact with them programmatically using the Document Editor's APIs.
 
