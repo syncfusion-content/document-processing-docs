@@ -24,7 +24,7 @@ Step 3: Install the [Google.Apis.Drive.v3](https://www.nuget.org/packages/Google
 Step 4: Include the following namespaces in the Program.cs file.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C#" %}
 
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Drive.v3;
@@ -37,7 +37,7 @@ using Google.Apis.Util.Store;
 Step 5: Add the below code example to open a PDF from google drive.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C#" %}
 
 UserCredential credential;
 string[] Scopes = { DriveService.Scope.DriveReadonly };
@@ -53,7 +53,6 @@ using (var stream1 = new FileStream("credentials.json", FileMode.Open, FileAcces
         CancellationToken.None,
         new FileDataStore(credPath, true)).Result;
 }
-
 // Step 2: Create Drive API service
 var service = new DriveService(new BaseClientService.Initializer()
 {
@@ -71,12 +70,9 @@ request.Download(stream);
 
 // Step 5: Open the PDF with Syncfusion
 //PdfLoadedDocument loadedDocument = new PdfLoadedDocument(stream);
-
 // Use the loadedDocument for further processing (e.g., extracting text or images)
-
 // Remember to dispose of the loadedDocument when you're done
 //loadedDocument.Close(true);
-
 // Step 5: Save the PDF locally
 using (FileStream fileStream = new FileStream("output.pdf", FileMode.Create, FileAccess.Write))
 {
