@@ -34,7 +34,7 @@ To add **UWP PdfViewer** component in the application, open the NuGet package ma
 
 {% tabcontent Assemblies (.dll) %}
 
-### Add Syncfusion® UWP Spreadsheet Assemblies
+### Add Syncfusion® UWP PdfViewer Assemblies
 
 Below table describes, list of assemblies required to be added in project when the UWP PdfViewer control is used in your application.
 
@@ -90,35 +90,30 @@ UWP PdfViewer control can be added to an application either through the designer
 {% tabcontent Via Designer %}
 1. Click and open the MainPage.xaml file.
 
-2. Open the Visual Studio **Tool** **box**. Navigate to “Syncfusion<sup>®</sup> Controls for UWP” tab and find the  SfPdfViewerControl toolbox items.
+2. Open the Visual Studio **Tool** **box**. Navigate to "Syncfusion<sup>®</sup> Controls for UWP" tab and find the  SfPdfViewerControl toolbox items.
 
 ![SfPdfViewerControl in visual studio toolbox](Getting-Started_images/Getting-Started_img1.jpeg)
 
-3. Drag `SfSPdfViewer` and drop in to the Designer area from the Toolbox.
+3. Drag `SfPdfViewerControl`(https://help.syncfusion.com/cr/uwp/Syncfusion.Windows.PdfViewer.SfPdfViewerControl.html) and drop in to the Designer area from the Toolbox.
 
-When you drag the SfPdfViewer toolbox item to the window, it automatically adds the required assembly references to the current application.
+When you drag the SfPdfViewerControl toolbox item to the window, it automatically adds the required assembly references to the current application.
 
 {% endtabcontent %}
 
 {% tabcontent Via Coding %}
 
-PdfViewer is available in the following namespace [_Syncfusion.Windows.PdfViewer_](https://help.syncfusion.com/cr/UWP/Syncfusion.UI.Xaml.Spreadsheet.html) and it can be created programmatically either by using XAML or C# code.
-
+The SfPdfViewerControl is available in the following namespace [_Syncfusion.Windows.PdfViewer_](https://help.syncfusion.com/cr/UWP/Syncfusion.Windows.PdfViewer.html) and it can be created using XAML or programmatically using C#.
+1. Add the Syncfusion PdfViewer namespace
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<Page
-    x:Class="SimpleSample.MainPage"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:SimpleSample"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:syncfusion="using:Syncfusion.Windows.PdfViewer"
-    >
-    <Grid>
-        <syncfusion:SfPdfViewerControl Name="pdfViewer"> </syncfusion:SfPdfViewerControl>
-    </Grid>
-</Page>
+{% endhighlight %}
+{% endtabs %}
+
+2. Add SfPdfViewerControl
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+    <syncfusion:SfPdfViewerControl Name="pdfViewer"> </syncfusion:SfPdfViewerControl>
 {% endhighlight %}
 {% endtabs %}
 
@@ -126,13 +121,65 @@ PdfViewer is available in the following namespace [_Syncfusion.Windows.PdfViewer
 
 ## Load a PDF document
 
-After adding the `SfPdfViewer` control to the application, you can load and display PDF documents using various approaches such as:
+After adding the `SfPdfViewerControl`, you can load a PDF document using data binding.
 
-- Loading from a stream
-- Loading using a StorageFile
-- Loading using a PdfLoadedDocument
-- Loading through data binding
-- Loading at runtime using FileOpenPicker
+1. Add a PDF file to the project and set its **Build Action** to **Embedded Resource**.
+
+2. Create a simple class (`PdfReport.cs`) that provides the PDF stream.
+
+
+    {% tabs %}
+    {% highlight c# tabtitle="PdfReport.cs" %}
+    
+    class PdfReport
+    {
+        private Stream docStream;
+
+        /// <summary>
+        /// Stream object to be bound to the ItemsSource of the PDF Viewer
+        /// </summary>
+        public Stream DocumentStream
+        {
+            get
+            {
+                return docStream;
+            }
+            set
+            {
+                docStream = value;
+            }
+        }
+
+        public PdfReport()
+        { 
+            Assembly assembly = typeof(MainPage).GetTypeInfo().Assembly;
+            docStream = assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf");
+        }
+    }
+
+    {% endhighlight %} 
+    {% endtabs %}
+
+3.  Open the `MainPage.xaml` file again and add the namespace `PdfViewerExample` as local.
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+    xmlns:local="using:PdfViewerExample"
+{% endhighlight %} 
+{% endtabs %}
+
+4.  Set an instance of the `PdfReport` class as the `DataContext`. Bind the PDF viewer's [ItemSource] to the `DocumentStream` property of the `PdfReport` class.
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+    <Page.DataContext>
+        <local:PdfReport/>
+    </Page.DataContext>
+    <Grid>
+       <syncfusion:SfPdfViewerControl Name="pdfViewer" ItemsSource="{Binding DocumentStream}"></syncfusion:SfPdfViewerControl>
+    </Grid>
+{% endhighlight %} 
+{% endtabs %}
+
+You can load and display PDF documents using various approaches such as loading from a stream, StorageFile, PdfLoadedDocument, data binding, or FileOpenPicker.
 
 For detailed information and code examples, refer to [Viewing Pdf](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/viewing-pdf).
 
