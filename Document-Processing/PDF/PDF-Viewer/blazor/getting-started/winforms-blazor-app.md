@@ -70,7 +70,6 @@ Install the required NuGet packages in the WinForms project that will host the B
 dotnet add package Syncfusion.Blazor.SfPdfViewer -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 dotnet add package Microsoft.AspNetCore.Components.WebView.WindowsForms
-
 dotnet restore
 
 {% endhighlight %}
@@ -78,7 +77,6 @@ dotnet restore
 {% endtabs %}
 
 N> Syncfusion&reg; Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) for package details.
-
 N> Ensure the package `Microsoft.AspNetCore.Components.WebView.WindowsForms` is updated to version `8.0.16`.
 
 {% endtabcontent %}
@@ -101,7 +99,7 @@ The WinForms project must target Windows and enable WinForms. A typical project 
 {% endhighlight %} 
 {% endtabs %}
 
-Create a **Component** folder, add an **_Imports.razor** file in it, and include the required component namespaces within that folder.
+Create a **Component** folder, add an `_Imports.razor` file in it, and include the required component namespaces within that folder.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -142,33 +140,37 @@ Create a **Component** folder, add an **_Imports.razor** file in it, and include
 
 N> Ensure that the PDF Viewer static assets (themes and scripts) are loaded properly.
 
-Register Syncfusion Blazor services and BlazorWebView in **~/Form1.cs** so the WinForms window can host Blazor components.
+Add the `Syncfusion.Blazor` namespace to the `~/Form1.cs` file.
 
 {% tabs %}
-{% highlight c# tabtitle="Form1.cs (WinForms host)" hl_lines="2 3 4 5 9 10 11 12 13 14 15 16 17 18 19 21" %}
+{% highlight c# tabtitle="Form1.cs (WinForms host)" %}
 
-namespace WinFormsBlazorHybridApp;
 using Microsoft.AspNetCore.Components.WebView.WindowsForms;
 using Microsoft.Extensions.DependencyInjection;
 using Syncfusion.Blazor;
 using WinFormsBlazorHybridApp.Components;
 
-....
-        InitializeComponent();
-        ServiceCollection services = new ServiceCollection();
-        services.AddWindowsFormsBlazorWebView();
-        services.AddMemoryCache();
-        services.AddSyncfusionBlazor();
-        BlazorWebView blazorWebView = new BlazorWebView()
-        {
-            HostPage = "wwwroot\\index.html",
-            Services = services.BuildServiceProvider(),
-            Dock = DockStyle.Fill
-        };
-        blazorWebView.RootComponents.Add<YourRazorFileName>("#app");
-        <!-- Replace 'YourRazorFileName' with the actual Razor component class (e.g., Main) in your project's namespace -->
-        this.Controls.Add(blazorWebView);
-....
+{% endhighlight %}
+{% endtabs %}
+
+Register `Syncfusion.Blazor` services and BlazorWebView in `~/Form1.cs` after component initialized so the WinForms window can host Blazor components.
+
+{% tabs %}
+{% highlight c# tabtitle="Form1.cs (WinForms host)" %}
+
+ServiceCollection services = new ServiceCollection();
+services.AddWindowsFormsBlazorWebView();
+services.AddMemoryCache();
+services.AddSyncfusionBlazor();
+BlazorWebView blazorWebView = new BlazorWebView()
+{
+    HostPage = "wwwroot\\index.html",
+    Services = services.BuildServiceProvider(),
+    Dock = DockStyle.Fill
+};
+blazorWebView.RootComponents.Add<YourRazorFileName>("#app");
+<!-- Replace 'YourRazorFileName' with the actual Razor component class (e.g., Main) in your project's namespace -->
+this.Controls.Add(blazorWebView);
 
 {% endhighlight %}
 {% endtabs %}

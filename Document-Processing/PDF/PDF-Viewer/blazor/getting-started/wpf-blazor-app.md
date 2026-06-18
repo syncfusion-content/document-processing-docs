@@ -78,7 +78,6 @@ dotnet restore
 {% endtabs %}
 
 N> Syncfusion&reg; Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) for package details.
-
 N> Ensure the package `Microsoft.AspNetCore.Components.WebView.Wpf` is updated to version `8.0.16`.
 
 {% endtabcontent %}
@@ -101,7 +100,7 @@ The WPF project must target Windows and enable WPF. A typical project file looks
 {% endhighlight %} 
 {% endtabs %}
 
-Create an **_Imports.razor** and add the component namespace
+Create an `_Imports.razor` and add the component namespace
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -112,23 +111,28 @@ Create an **_Imports.razor** and add the component namespace
 {% endhighlight %}
 {% endtabs %}
 
-Register Syncfusion Blazor services and BlazorWebView in **~/MainWindow.xaml.cs** so that the WPF window can host Blazor components.
+Add the `Syncfusion.Blazor` namespace to the `~/MainWindow.xaml.cs` file.
 
 {% tabs %}
-{% highlight c# tabtitle="MainWindow.xaml.cs" hl_lines="3 4 6 7 8 9 10 11" %}
-
-....
+{% highlight c# tabtitle="MainWindow.xaml.cs" %}
 
 using Microsoft.Extensions.DependencyInjection;
 using Syncfusion.Blazor;
-        ....
-            InitializeComponent();
-            ServiceCollection services = new ServiceCollection();
-            services.AddWpfBlazorWebView();
-            services.AddMemoryCache();
-            services.AddSyncfusionBlazor();
-            Resources.Add("services", services.BuildServiceProvider());
-            ....
+
+{% endhighlight %}
+{% endtabs %}
+
+Register Syncfusion Blazor services and BlazorWebView in `~/MainWindow.xaml.cs` so that the WPF window can host Blazor components.
+
+{% tabs %}
+{% highlight c# tabtitle="MainWindow.xaml.cs" %}
+
+InitializeComponent();
+ServiceCollection services = new ServiceCollection();
+services.AddWpfBlazorWebView();
+services.AddMemoryCache();
+services.AddSyncfusionBlazor();
+Resources.Add("services", services.BuildServiceProvider());
 
 {% endhighlight %}
 {% endtabs %}
@@ -138,7 +142,6 @@ using Syncfusion.Blazor;
 * Create a new folder named `wwwroot` in the WPF project root.
 
 * Inside `wwwroot`, create an `index.html` host page for the Blazor UI. This host page initializes the Blazor runtime and loads static assets (themes and scripts). A basic `index.html` might look like the following:
-
 
 {% tabs %} 
 {% highlight html tabtitle="index.html" hl_lines="8 13" %}
