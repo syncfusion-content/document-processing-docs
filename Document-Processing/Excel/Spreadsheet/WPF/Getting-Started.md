@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Getting Started with WPF Spreadsheet (SfSpreadsheet)
-This section briefly explains how to include the [Syncfusion<sup>®</sup> WPF Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor) component in WPF App using Visual Studio.
+This section briefly explains how to include the [WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor) component in WPF App using Visual Studio.
 
 ## Prerequisites
 * [System requirements for WPF components](https://help.syncfusion.com/wpf/system-requirements)
@@ -273,7 +273,7 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 To learn how to create, open, and save files in the WPF Spreadsheet Component, see [Workbook Operations.](Workbook-Operations)
 
-N>[View Sample in GitHub.](https://github.com/SyncfusionExamples/create-view-edit-excel-files-using-wpf-spreadsheet)
+N>[View Sample in GitHub.](https://github.com/SyncfusionExamples/create-view-edit-excel-files-using-wpf-spreadsheet). Looking for the full WPF Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor) page.
 
 ## See Also
 - [Data Management](Data-Management)

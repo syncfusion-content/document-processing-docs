@@ -9,7 +9,7 @@ documentation: ug
 
 # Outline in WPF Spreadsheet (SfSpreadsheet)
 
-SfSpreadsheet provides support for outlines like in excel which makes your data easier to view. You can group or ungroup the data’s either by rows or columns.
+[WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor) provides support for outlines like in excel which makes your data easier to view. You can group or ungroup the data’s either by rows or columns.
 
 ## Group rows and columns
 
@@ -106,4 +106,4 @@ spreadsheet.RefreshOutlines(true, true);
 {% endtabs %}
 
 
-N> You can refer to our [WPF Spreadsheet](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [WPF Spreadsheet example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the spreadsheet.
+N> You can refer to our [WPF Spreadsheet Editor](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [WPF Spreadsheet example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the spreadsheet.

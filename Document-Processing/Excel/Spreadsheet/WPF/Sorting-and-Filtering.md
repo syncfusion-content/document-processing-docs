@@ -9,7 +9,7 @@ documentation: ug
 
 # Sorting and Filtering in WPF Spreadsheet (SfSpreadsheet)
 
-This section explains about sorting and filtering functionalities in the SfSpreadsheet.
+This section explains about sorting and filtering functionalities in the [WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor).
 
 ## Filtering
 
@@ -64,4 +64,4 @@ Currently SfSpreadsheet does not have support for following features.
 * While importing the workbook, checked and unchecked items are only displayed in the right most filtered column. Because unable to fetch the filtering order.
 
 
-N> You can refer to our [WPF Spreadsheet](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [WPF Spreadsheet example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the spreadsheet.
+N> You can refer to our [WPF Spreadsheet Editor](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [WPF Spreadsheet example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the spreadsheet.

@@ -9,7 +9,7 @@ documentation: ug
 
 # Editing in WPF Spreadsheet (SfSpreadsheet)
 
-This section explains about the Editing behavior, Data Validation and Hyperlinks in SfSpreadsheet.
+This section explains about the Editing behavior, Data Validation and Hyperlinks in [WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor).
 
 ## Editing
 
@@ -277,4 +277,4 @@ spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Cell(5,1));
 {% endtabs %}
 
 
-N> You can refer to our [WPF Spreadsheet](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [WPF Spreadsheet example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the spreadsheet.
+N> You can refer to our [WPF Spreadsheet Editor](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [WPF Spreadsheet example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the spreadsheet.

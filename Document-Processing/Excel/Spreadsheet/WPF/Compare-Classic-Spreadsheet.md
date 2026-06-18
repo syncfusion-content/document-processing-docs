@@ -10,7 +10,7 @@ documentation: ug
 
 ## Choose between SfSpreadsheet and Spreadsheet (Classic) control
 
-WPF suite contains **SfSpreadsheet** and **Spreadsheet (Classic)** control for viewing and editing the excel files. SfSpreadsheet is an alternate for Spreadsheet (Classic) control which is marked as classic control. Hence it is recommended to use SfSpreadsheet which provides better performance and rich set features over Spreadsheet (Classic) control. 
+WPF suite contains **SfSpreadsheet** and **Spreadsheet (Classic)** control for viewing and editing the excel files. SfSpreadsheet is an alternate for [WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor) (Classic) control which is marked as classic control. Hence it is recommended to use SfSpreadsheet which provides better performance and rich set features over Spreadsheet (Classic) control. 
 
 Below are the features that SfSpreadsheet have over Spreadsheet (Classic) control,
 
@@ -111,4 +111,4 @@ Gets the tab sheet name</td></tr>
 </table>
 
 
-N> You can refer to our [WPF Spreadsheet](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [WPF Spreadsheet example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the spreadsheet.
+N> You can refer to our [WPF Spreadsheet Editor](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [WPF Spreadsheet example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the spreadsheet.

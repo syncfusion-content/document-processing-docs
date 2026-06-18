@@ -11,7 +11,7 @@ documentation: ug
 
 ## Release memory held by AutomationPeer
 
-SfSpreadsheet holds some instance in memory even after disposing the spreadsheet or removed the sheets from the spreadsheet. Because, the **AutomationPeer** for WPF Components holds some memory and it needs to be released manually. This can be done by using the following steps.
+[WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor) holds some instance in memory even after disposing the spreadsheet or removed the sheets from the spreadsheet. Because, the **AutomationPeer** for WPF Components holds some memory and it needs to be released manually. This can be done by using the following steps.
 
 Create a class derived from `WindowAutomationPeer` and override it's `GetChildrenCore` method and returns “null” value that clears the **AutomationPeer** item from memory as follows
 
@@ -52,4 +52,4 @@ public partial class MainWindow : Window
 {% endtabs %}
 
 
-N> You can refer to our [WPF Spreadsheet](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [WPF Spreadsheet example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the spreadsheet.
+N> You can refer to our [WPF Spreadsheet Editor](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [WPF Spreadsheet example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the spreadsheet.

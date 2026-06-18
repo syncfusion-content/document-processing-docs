@@ -9,7 +9,7 @@ documentation: ug
 
 # Formulas in WPF Spreadsheet (SfSpreadsheet)
 
-SfSpreadsheet calculation engine offers automated calculation over a formula, expression, or cross sheet references. SfSpreadsheet calculation engine is preloaded with 409 formulas covering a broad range of business functions.
+[WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor) calculation engine offers automated calculation over a formula, expression, or cross sheet references. SfSpreadsheet calculation engine is preloaded with 409 formulas covering a broad range of business functions.
 
 ## Adding Formula into cell
 
@@ -1693,4 +1693,4 @@ Returns data from a web service on the Internet or Intranet<br/><br/></td></tr>
 </table>
 
 
-N> You can refer to our [WPF Spreadsheet](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [WPF Spreadsheet example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the spreadsheet.
+N> You can refer to our [WPF Spreadsheet Editor](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [WPF Spreadsheet example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the spreadsheet.

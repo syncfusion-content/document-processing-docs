@@ -12,7 +12,7 @@ This section explains about how to import and export the DataTable in `SfSpreads
 
 ## Import from DataTable
 
-SfSpreadsheet provides support to import the data. The following list of data can be imported into the worksheet
+[WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor) provides support to import the data. The following list of data can be imported into the worksheet
 
 * Data Table
 * Data Column

@@ -9,7 +9,7 @@ documentation: ug
 
 # Conditional Formatting in WPF Spreadsheet (SfSpreadsheet)
 
-This section explains about how to apply conditional formatting rules programmatically at run time in SfSpreadsheet.
+This section explains about how to apply conditional formatting rules programmatically at run time in [WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor).
 
 In SfSpreadsheet, to apply conditional format for a cell or range of cells, add [IConditionalFormat](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.IConditionalFormat.html) to that range by using [AddCondition](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.IConditionalFormats.html#Syncfusion_XlsIO_IConditionalFormats_AddCondition) method.
 
@@ -156,4 +156,4 @@ Sample Output
 ![WPF Spreadsheet Conditional Formatting with Icon Sets](Conditional-Formatting_images/wpf-spreadsheet-conditional-formatting-with-icon-sets.jpeg)
 
 
-N> You can refer to our [WPF Spreadsheet](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [WPF Spreadsheet example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the spreadsheet.
+N> You can refer to our [WPF Spreadsheet Editor](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [WPF Spreadsheet example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the spreadsheet.

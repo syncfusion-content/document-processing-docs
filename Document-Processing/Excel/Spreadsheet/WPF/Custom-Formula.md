@@ -9,7 +9,7 @@ documentation: ug
 
 # Custom Formula in WPF Spreadsheet (SfSpreadsheet)
 
-SfSpreadsheet allows you to add custom formulas into its function library. You can add the custom formula into the SfSpreadsheet by using the [AddFunction](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.FormulaEngine.html#Syncfusion_UI_Xaml_CellGrid_FormulaEngine_AddFunction_System_String_Syncfusion_UI_Xaml_CellGrid_FormulaEngine_LibraryFunction_) method of [FormulaEngine](http://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.FormulaEngine.html),
+[WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor) allows you to add custom formulas into its function library. You can add the custom formula into the SfSpreadsheet by using the [AddFunction](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.FormulaEngine.html#Syncfusion_UI_Xaml_CellGrid_FormulaEngine_AddFunction_System_String_Syncfusion_UI_Xaml_CellGrid_FormulaEngine_LibraryFunction_) method of [FormulaEngine](http://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.FormulaEngine.html),
 
 {% tabs %}
 {% highlight c# %}
@@ -45,4 +45,4 @@ public string ComputeLength(string range)
 {% endtabs %}
 
 
-N> You can refer to our [WPF Spreadsheet](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [WPF Spreadsheet example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the spreadsheet.
+N> You can refer to our [WPF Spreadsheet Editor](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [WPF Spreadsheet example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the spreadsheet.

@@ -9,7 +9,7 @@ documentation: ug
 
 # Find and Replace in WPF Spreadsheet (SfSpreadsheet)
 
-This section explains about Find and Replace operations in SfSpreadsheet. 
+This section explains about Find and Replace operations in [WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor). 
 
 ## Find 
 
@@ -194,4 +194,4 @@ spreadsheet.ActiveGrid.SetCellValue(cell, "sync");
 {% endtabs %}
 
 
-N> You can refer to our [WPF Spreadsheet](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [WPF Spreadsheet example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the spreadsheet.
+N> You can refer to our [WPF Spreadsheet Editor](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [WPF Spreadsheet example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the spreadsheet.

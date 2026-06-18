@@ -8,7 +8,7 @@ documentation: ug
 ---
 # Workbook Operations in WPF Spreadsheet
 
-This section explains how to manage Excel workbooks in SfSpreadsheet, including creating new files, opening existing workbooks from various sources, and saving changes efficiently.
+This section explains how to manage Excel workbooks in [WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor), including creating new files, opening existing workbooks from various sources, and saving changes efficiently.
 
 ## Creating a new Excel Workbook
 
@@ -74,3 +74,5 @@ spreadsheet.SaveAs();
 {% endhighlight %}
 {% endtabs %}
 
+
+N> Looking for the full WPF Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor) page.

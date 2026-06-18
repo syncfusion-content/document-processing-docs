@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Shapes in WPF Spreadsheet (SfSpreadsheet)
- This section explains how to import charts, sparklines, pictures and textboxes in SfSpreadsheet.
+ This section explains how to import charts, sparklines, pictures and textboxes in [WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor).
 
 ## Charts
 
@@ -165,4 +165,4 @@ spreadsheet.ActiveGrid.GraphicModel.ClearSelection();
 {% endtabs %}
 
 
-N> You can refer to our [WPF Spreadsheet](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [WPF Spreadsheet example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the spreadsheet.
+N> You can refer to our [WPF Spreadsheet Editor](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [WPF Spreadsheet example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the spreadsheet.
