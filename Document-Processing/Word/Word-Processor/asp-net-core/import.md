@@ -10,7 +10,7 @@ documentation: ug
 
 # Import in Document Editor Component
 
-In Document Editor, the documents are stored in its own format called **Syncfusion Document Text (SFDT)**.
+In [ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor), the documents are stored in its own format called **Syncfusion Document Text (SFDT)**.
 
 
 {% tabs %}

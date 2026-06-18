@@ -14,7 +14,7 @@ The table of contents in a document is same as the list of chapters at the begin
 
 ## Inserting table of contents
 
-Document editor exposes an API to insert table of contents at cursor position programmatically. You can specify the settings for table of contents explicitly. Otherwise, the default settings will be applied.
+[ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) exposes an API to insert table of contents at cursor position programmatically. You can specify the settings for table of contents explicitly. Otherwise, the default settings will be applied.
 
 `TableOfContentsSettings` contain the following properties:
 * **startLevel**: Specifies the start level for constructing table of contents.

@@ -10,7 +10,7 @@ documentation: ug
 
 # Hyperlink
 
-Document editor supports hyperlink field. You can link a part of the document content to Internet or file location, mail address, or any text within the document.
+[ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) supports hyperlink field. You can link a part of the document content to Internet or file location, mail address, or any text within the document.
 
 ## Navigate a hyperlink
 

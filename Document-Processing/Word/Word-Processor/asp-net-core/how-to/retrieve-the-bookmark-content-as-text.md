@@ -9,7 +9,7 @@ documentation: ug
 
 # How to retrieve the whole document and bookmark content as text in  Document Editor component
 
-You can get the bookmark or whole document content from the Document Editor component as plain text and SFDT (rich text).
+You can get the bookmark or whole document content from the [ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) component as plain text and SFDT (rich text).
 
 ## Get the bookmark content as plain text
 

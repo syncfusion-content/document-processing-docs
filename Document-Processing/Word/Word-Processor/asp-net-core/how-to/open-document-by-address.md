@@ -12,7 +12,7 @@ documentation: ug
 
 ## How to open a document from URL in DocumentEditor
 
-This article explains how to open a document from URL in DocumentEditor.
+This article explains how to open a document from URL in [ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor).
 
 
 {% tabs %}

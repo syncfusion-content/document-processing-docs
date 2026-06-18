@@ -10,7 +10,7 @@ documentation: ug
 
 # History in Document Editor Component
 
-Document editor tracks the history of all editing actions done in the document, which allows undo and redo functionality.
+[ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) tracks the history of all editing actions done in the document, which allows undo and redo functionality.
 
 ## Enable or disable history
 

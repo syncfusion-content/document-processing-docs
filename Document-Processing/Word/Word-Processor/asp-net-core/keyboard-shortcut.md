@@ -12,7 +12,7 @@ documentation: ug
 
 ## Text formatting
 
-The following table lists the default keyboard shortcuts in document editor for formatting text:
+The following table lists the default keyboard shortcuts in [ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) for formatting text:
 
 | Key combination | Description |
 |-----------------|-------------|

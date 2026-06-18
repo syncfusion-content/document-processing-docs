@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Open document from Google Drive
 
-To load a document from Google Drive in a Document editor, you can follow the steps below
+To load a document from Google Drive in a [ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor), you can follow the steps below
 
 **Step 1:** Set up Google Drive API
 

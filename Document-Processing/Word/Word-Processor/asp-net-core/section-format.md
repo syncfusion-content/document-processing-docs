@@ -10,7 +10,7 @@ documentation: ug
 
 # Working with Section Formatting
 
-Document editor supports various section formatting such as page size, page margins, and more.
+[ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) supports various section formatting such as page size, page margins, and more.
 
 ## Page size
 

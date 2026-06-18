@@ -10,7 +10,7 @@ documentation: ug
 
 # How to change height and width of Document Editor component
 
-This article explains how to change height and width of Document editor.
+This article explains how to change height and width of [ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor).
 
 ## Change height of Document Editor
 

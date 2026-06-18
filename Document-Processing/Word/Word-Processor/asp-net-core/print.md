@@ -10,7 +10,7 @@ documentation: ug
 
 # Print in Document Editor Control
 
-To print the document, use the `print` method from document editor instance.
+To print the document, use the `print` method from [ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) instance.
 
 
 {% tabs %}

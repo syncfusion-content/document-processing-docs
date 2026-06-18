@@ -10,7 +10,7 @@ documentation: ug
 
 # Form Fields in ASP.NET Core in Document Editor Control
 
-DocumentEditorContainer control provides support for inserting Text, CheckBox, DropDown form fields through in-built toolbar.
+[ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) Container control provides support for inserting Text, CheckBox, DropDown form fields through in-built toolbar.
 
 ![Form Fields](images/toolbar-form-fields.png)
 

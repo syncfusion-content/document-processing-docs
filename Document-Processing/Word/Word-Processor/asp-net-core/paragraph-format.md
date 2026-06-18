@@ -10,7 +10,7 @@ documentation: ug
 
 # Working with Paragraph Formatting
 
-Document editor supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
+[ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
 
 ## Indentation
 
