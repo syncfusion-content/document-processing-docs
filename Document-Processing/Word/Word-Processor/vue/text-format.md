@@ -189,7 +189,7 @@ this.$refs.documenteditor.ej2Instances.selection.characterFormat.highlightColor=
 
 ## Bidirectional
 
-The [bidi](https://ej2.syncfusion.com/vue/documentation/api/document-editor/characterformatproperties#bidi) property controls whether selected text is displayed as right-to-left (RTL) or left-to-right (LTR) for proper multilingual formatting. You can get or set this property using the following code example.
+The bidi property controls whether selected text is displayed as right-to-left (RTL) or left-to-right (LTR) for proper multilingual formatting. You can get or set this property using the following code example.
 
 ```ts
 // Get Bidi value of selected text
