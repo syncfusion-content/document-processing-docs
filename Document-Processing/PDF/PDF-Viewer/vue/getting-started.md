@@ -18,7 +18,7 @@ This section explains how to create the **PDF Viewer** component and configure i
 
 ## Create a Vue Application
 
-Use one of the following commands to create a Vue application using Vue CLI.
+Use one of the following commands to create a Vue application using [Vue CLI](https://cli.vuejs.org/#getting-started).
 
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
@@ -56,7 +56,7 @@ yarn add @syncfusion/ej2-vue-pdfviewer
 
 Add the required CSS styles for the PDF Viewer component and its dependencies to your `App.vue` file.
 
-In this example, the `Material` theme is applied using CSS styles available in the installed packages. The required `Material` CSS styles are imported into the `<style>` section of the **src/App.vue** file.
+In this example, the `Material` theme is applied using CSS styles available in the installed packages. The required `Material` CSS styles are imported into the `<style>` section of the `src/App.vue` file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -80,22 +80,15 @@ N> You can import themes for the Syncfusion Vue component in various ways, such 
 
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue PDF Viewer component
 
-Import and register the PDF Viewer component directives in the `script` section of **src/App.vue**. Then, define the component in the `template` section.
+Add the PDF Viewer component to your Vue application by following these instructions:
+
+### Import the PDF Viewer and Modules
+
+Import and register the PDF Viewer component directives in the `<script>` section of `src/App.vue`.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
-<template>
-  <div id="app">
-    <ejs-pdfviewer
-      id="pdfViewer"
-      :resourceUrl="resourceUrl"
-      :documentPath="documentPath">
-    </ejs-pdfviewer>
-  </div>
-</template>
-
-<script>
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
          BookmarkView,ThumbnailView, Print,TextSelection, TextSearch,
          Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
@@ -120,7 +113,19 @@ export default {
                  Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, PageOrganizer ]
   }
 }
-</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+### Add the Component Template
+
+Add the **Syncfusion Vue PDF Viewer** component to the `<template>` section in the `src/App.vue` file.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<ejs-pdfviewer id="pdfViewer" :resourceUrl="resourceUrl" :documentPath="documentPath">
+</ejs-pdfviewer>
 
 {% endhighlight %}
 {% endtabs %}

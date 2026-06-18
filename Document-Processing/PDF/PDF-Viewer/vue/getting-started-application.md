@@ -27,80 +27,80 @@ Install Node.js (version 18 or later recommended) along with npm or Yarn before 
 
 Use [Vite](https://vitejs.dev/) to quickly scaffold a Vue 3 project. Run one of the following commands to create a new project:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
 npm create vite@latest
-```
+{% endhighlight %}
 
-or
-
-```bash
+{% highlight bash tabtitle="yarn" %}
 yarn create vite
-```
+{% endhighlight %}
+{% endtabs %}
 
 After running the command, follow the interactive prompts shown below to configure the project:
 
 1. Define the project name: Specify the project name directly. This guide uses `my-project`.
 
-```bash
-? Project name: » my-project
-```
+  ```bash
+  ? Project name: » my-project
+  ```
 
 2. Select `Vue` as the framework to target Vue 3.
 
-```bash
-? Select a framework: » - Use arrow-keys. Return to submit.
-Vanilla
-> Vue
-  React
-  Preact
-  Lit
-  Svelte
-  Others
-```
+  ```bash
+  ? Select a framework: » - Use arrow-keys. Return to submit.
+  Vanilla
+  > Vue
+    React
+    Preact
+    Lit
+    Svelte
+    Others
+  ```
 
 3. Choose `JavaScript` as the variant to build the Vite project with JavaScript and Vue.
 
-```bash
-? Select a variant: » - Use arrow-keys. Return to submit.
-> JavaScript
-  TypeScript
-  Customize with create-vue ↗
-  Nuxt ↗
-```
+  ```bash
+  ? Select a variant: » - Use arrow-keys. Return to submit.
+  > JavaScript
+    TypeScript
+    Customize with create-vue ↗
+    Nuxt ↗
+  ```
 
 4. After the scaffold completes, install the project dependencies:
 
-```bash
-cd my-project
-npm install
-```
+  {% tabs %}
+  {% highlight bash tabtitle="npm" %}
+  cd my-project
+  npm install
+  {% endhighlight %}
 
-or
-
-```bash
-cd my-project
-yarn install
-```
+  {% highlight bash tabtitle="yarn" %}
+  cd my-project
+  yarn install
+  {% endhighlight %}
+  {% endtabs %}
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
 
 Install the `@syncfusion/ej2-vue-pdfviewer` package using npm or Yarn. This package includes the PDF Viewer component and all required dependencies:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
 npm install @syncfusion/ej2-vue-pdfviewer --save
-```
+{% endhighlight %}
 
-or
-
-```bash
+{% highlight bash tabtitle="yarn" %}
 yarn add @syncfusion/ej2-vue-pdfviewer
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
 Import the required theme CSS for the PDF Viewer component. Syncfusion offers multiple theme options (Material, Bootstrap, Fabric, Tailwind, etc.) available from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator), or [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). For full details, see the [themes documentation](https://ej2.syncfusion.com/vue/documentation/appearance/theme).
 
-This guide uses the Material theme. Import the required CSS into the `<style>` section of **src/App.vue**:
+This guide uses the Material theme. Import the required CSS into the `<style>` section of  `src/App.vue`:
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -122,79 +122,14 @@ This guide uses the Material theme. Import the required CSS into the `<style>` s
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Follow these steps to add the PDF Viewer component to your Vue 3 application:
+Add the PDF Viewer component to your Vue 3 application by following these instructions:
 
-### Step 1: Import the PDF Viewer and Modules
+### Import the PDF Viewer and Modules
 
-Import the PDF Viewer component and required modules in the `script` section of **src/App.vue**.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<script setup>
-import { PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
-         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
-         Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<script>
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
-         BookmarkView,ThumbnailView, Print,TextSelection, TextSearch,
-         Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
-
-}
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-### Step 2: Add the Component Template
-
-Add the PDF Viewer component markup to the `<template>` section of **src/App.vue**:
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-
-<template>
-  <div id="app">
-    <ejs-pdfviewer
-      id="pdfViewer"
-      :serviceUrl="serviceUrl"
-      :documentPath="documentPath"
-      :style="{ height: '800px', width: '1200px' }">
-    </ejs-pdfviewer>
-  </div>
-</template>
-
-{% endhighlight %}
-{% endtabs %}
-
-### Step 3: Configure Service and Document URLs
-
-**serviceUrl** – The backend endpoint for PDF processing. The Syncfusion-hosted URL provides evaluation capabilities. For production, replace with your deployed web service endpoint.
-
-**documentPath** – The URL or file path to the PDF document to display.
-
-### Complete App.vue Example
-
-Here is the complete code for **src/App.vue**:
+Import the PDF Viewer component and required modules in the `<script>` section of `src/App.vue`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<template>
-  <ejs-pdfviewer
-    ref="pdfViewer"
-    :serviceUrl="serviceUrl"
-    :documentPath="documentPath"
-    :style="{ height: '800px', width: '1200px' }">
-  </ejs-pdfviewer>
-</template>
-
-<script setup>
 
 import { provide } from 'vue';
 import { PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -206,36 +141,11 @@ const pdfViewer = null;
 
 provide('PdfViewer', [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
                        Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields]);
-</script>
-
-<style>
-
-  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css';
-
-</style>
 
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
-<template>
-  <ejs-pdfviewer
-    id="pdfViewer"
-    :serviceUrl="serviceUrl"
-    :documentPath="documentPath"
-    :style="{ height: '800px', width: '1200px' }">
-  </ejs-pdfviewer>
-</template>
-
-<script>
-  import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
            ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
 
   export default {
@@ -256,19 +166,22 @@ provide('PdfViewer', [ Toolbar, Magnification, Navigation, LinkAnnotation, Bookm
                    Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields ]
     }
   }
-</script>
 
-<style>
-  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css';
-</style>
+{% endhighlight %}
+{% endtabs %}
+
+**serviceUrl** – The backend endpoint for PDF processing. The Syncfusion-hosted URL provides evaluation capabilities. For production, replace with your deployed web service endpoint.
+
+**documentPath** – The URL or file path to the PDF document to display.
+
+### Add the Component Template
+
+Add the PDF Viewer component markup to the `<template>` section of `src/App.vue`:
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+<ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath">
+</ejs-pdfviewer>
 
 {% endhighlight %}
 {% endtabs %}
@@ -277,15 +190,15 @@ provide('PdfViewer', [ Toolbar, Magnification, Navigation, LinkAnnotation, Bookm
 
 Run the development server with one of the following commands:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
 npm run dev
-```
+{% endhighlight %}
 
-or
-
-```bash
+{% highlight bash tabtitle="yarn" %}
 yarn run dev
-```
+{% endhighlight %}
+{% endtabs %}
 
 The application renders the PDF Viewer as shown below:
 
