@@ -13,7 +13,7 @@ Manage how annotations appear at different stages of the document workflow. This
 
 ## Control annotation visibility on download
 
-**Step 1:** Follow the [Syncfusion ASP.NET Core PDF Viewer getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to set up a basic PDF Viewer sample.
+**Step 1:** Follow the [ASP.NET Core PDF Viewer getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to set up a basic PDF Viewer sample.
 
 **Step 2:** Add a download button and configure the viewer markup. The following example includes logic to update annotation flags before the file is saved:
 

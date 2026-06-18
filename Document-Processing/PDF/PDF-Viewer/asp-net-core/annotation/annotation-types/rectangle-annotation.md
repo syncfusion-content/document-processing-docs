@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Rectangle Annotation (Shape) in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to enable, apply, customize, and manage Rectangle annotations in the Syncfusion ASP.NET Core PDF Viewer.
+description: Learn how to enable, apply, customize, and manage Rectangle annotations in the ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

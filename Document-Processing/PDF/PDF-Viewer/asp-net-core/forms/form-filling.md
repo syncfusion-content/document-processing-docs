@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form filling in ASP.NET Core PDF Viewer Control | Syncfusion
-description: Learn to view, fill, export, and import PDF form fields in Syncfusion ASP.NET Core PDF Viewer, including disabling interaction and handling signatures.
+description: Learn to view, fill, export, and import PDF form fields in ASP.NET Core PDF Viewer, including disabling interaction and handling signatures.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Filling PDF Forms in ASP.NET Core PDF Viewer
 
-The Syncfusion PDF Viewer supports three form-filling methods:
+The ASP.NET Core PDF Viewer supports three form-filling methods:
 
 1. [Filling form fields programmatically](#fill-pdf-forms-programmatically)
 
@@ -110,7 +110,7 @@ For more details, see [Export Form Data](./import-export-form-fields/export-form
 
 ## How to Validate Form Fields using `validateFormFields` Event
 
-The [validateFormFields](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ValidateFormFields) event in the Syncfusion PDF Viewer is triggered when a user tries to download or submit a form while validation is enabled. You can use the [retrieveFormFields()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#retrieveformfields) API to get all the form fields and check them one by one to see if any form fields values are empty.
+The [validateFormFields](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ValidateFormFields) event in the ASP.NET Core PDF Viewer is triggered when a user tries to download or submit a form while validation is enabled. You can use the [retrieveFormFields()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#retrieveformfields) API to get all the form fields and check them one by one to see if any form fields values are empty.
 
 Validation applies to all form field types. A textbox is empty if no text is entered, a list box or dropdown is empty if no item is selected, a signature or initial field is empty if not signed, and radio buttons or checkboxes are empty if none are chosen.
 

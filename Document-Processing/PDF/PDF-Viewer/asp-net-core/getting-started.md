@@ -123,7 +123,7 @@ N> Add the script manager `<ejs-scripts>` at the end of the `<body>` element.
 
 ## Add ASP.NET Core PDF Viewer control
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer Tag Helper in `~/Pages/Index.cshtml`.
+Add the ASP.NET Core PDF Viewer Tag Helper in `~/Pages/Index.cshtml`.
 
 {% tabs %}
 {% highlight c# tabtitle="~/Index.cshtml" %}
@@ -147,7 +147,7 @@ N> The `documentPath` property specifies the PDF document to load in the viewer.
 
 ## Run the application
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer control will be rendered in the default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the ASP.NET Core PDF Viewer control will be rendered in the default web browser.
 
 ![ASP.NET Core PDF Viewer Control](Core_Images/pdfviewer-control.png)
 
@@ -159,6 +159,8 @@ To get started quickly with the ASP.NET Core PDF Viewer, you can watch this vide
 
 {% youtube "https://www.youtube.com/watch?v=cfWATpUjNgo&t=1s" %}
 
+N> Looking for the full ASP.NET Core PDF Viewer component overview, features, pricing, and documentation? Visit the [ASP.NET Core PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) page.
+
 ## See also
 
-* [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core using Server backed](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started-with-server-backed)
+* [Getting started with ASP.NET Core using Server backed](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started-with-server-backed)

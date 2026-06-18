@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotations Permission in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn here all about how to use annotation permissions in Syncfusion ASP.NET Core PDF Viewer using programmatic APIs.
+description: Learn here all about how to use annotation permissions in ASP.NET Core PDF Viewer using programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

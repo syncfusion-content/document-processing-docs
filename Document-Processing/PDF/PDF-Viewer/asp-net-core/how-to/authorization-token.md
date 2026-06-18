@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Authorization Token in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn here all about Authorization Token in Syncfusion ASP.NET Core PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Authorization Token in ASP.NET Core PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

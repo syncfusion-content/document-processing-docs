@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotations API in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn here all about how to read and configure annotations using APIs in the Syncfusion ASP.NET Core PDF Viewer.
+description: Learn here all about how to read and configure annotations using APIs in the ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

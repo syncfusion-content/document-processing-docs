@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Import form data in the ASP.NET Core PDF Viewer component | Syncfusion
-description: Learn how to import PDF form field data (FDF, XFDF, JSON, and from an object) using the Syncfusion ASP.NET Core PDF Viewer component.
+description: Learn how to import PDF form field data (FDF, XFDF, JSON, and from an object) using the ASP.NET Core PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

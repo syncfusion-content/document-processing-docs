@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Programmatic Page Organize in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn here all about Programmatic Support for Organize Pages in Syncfusion ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
+description: Learn here all about Programmatic Support for Organize Pages in ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 

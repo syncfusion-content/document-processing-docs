@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Resolve “Web service is not listening” error in ASP.NET Core PDF Viewer | Syncfusion
-description: Troubleshoot the “Web service is not listening” error in the Syncfusion ASP.NET Core PDF Viewer by validating network requests, cache configuration, and server availability.
+description: Troubleshoot the “Web service is not listening” error in the ASP.NET Core PDF Viewer by validating network requests, cache configuration, and server availability.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ![Browser showing the Web service is not listening error](../images/webservice.png)
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer displays the **Web service is not listening** message when the component cannot establish a connection with the backend service or the service encounters an unhandled exception. Follow these diagnostic steps to identify and resolve the issue.
+The ASP.NET Core PDF Viewer displays the **Web service is not listening** message when the component cannot establish a connection with the backend service or the service encounters an unhandled exception. Follow these diagnostic steps to identify and resolve the issue.
 
 ## Diagnose the service response
 

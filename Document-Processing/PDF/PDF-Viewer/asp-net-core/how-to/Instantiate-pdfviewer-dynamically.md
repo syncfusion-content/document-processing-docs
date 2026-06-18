@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dynamically instantiate the ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to instantiate the Syncfusion ASP.NET Core PDF Viewer at runtime and load PDF documents on demand.
+description: Learn how to instantiate the ASP.NET Core PDF Viewer at runtime and load PDF documents on demand.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Dynamically instantiate the ASP.NET Core PDF Viewer
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer can be instantiated at runtime rather than during the initial page load. This dynamic approach is useful when the document to be displayed depends on user interaction or must be retrieved from a secure backend service.
+The ASP.NET Core PDF Viewer can be instantiated at runtime rather than during the initial page load. This dynamic approach is useful when the document to be displayed depends on user interaction or must be retrieved from a secure backend service.
 
 Follow these steps to instantiate the viewer component programmatically:
 

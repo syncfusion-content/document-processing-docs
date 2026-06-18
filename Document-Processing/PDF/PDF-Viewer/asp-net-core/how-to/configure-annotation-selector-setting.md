@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotation Selector Settings in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to customize annotation selector settings in the Syncfusion ASP.NET Core PDF Viewer component for Essential JS 2.
+description: Learn how to customize annotation selector settings in the ASP.NET Core PDF Viewer component for Essential JS 2.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Handle pageRenderInitiate and pageRenderComplete events in ASP.NET Core PDF Viewer | Syncfusion
-description: Discover how to use the pageRenderInitiate and pageRenderComplete events in the Syncfusion ASP.NET Core PDF Viewer to monitor page rendering stages.
+description: Discover how to use the pageRenderInitiate and pageRenderComplete events in the ASP.NET Core PDF Viewer to monitor page rendering stages.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Page rendering events in ASP.NET Core PDF Viewer
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer provides the `pageRenderInitiate` and `pageRenderComplete` events to monitor and respond to each stage of the page rendering lifecycle. These events are essential for tracking progress, managing specialized UI overlays, or deferring computational tasks until a page is fully visible.
+The ASP.NET Core PDF Viewer provides the `pageRenderInitiate` and `pageRenderComplete` events to monitor and respond to each stage of the page rendering lifecycle. These events are essential for tracking progress, managing specialized UI overlays, or deferring computational tasks until a page is fully visible.
 
 ## pageRenderInitiate
 

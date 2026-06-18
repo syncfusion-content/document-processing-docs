@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Create form fields in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to create edit each form field using the PDF Viewer UI and how to create them programmatically in the Syncfusion ASP.NET Core PDF Viewer.
+description: Learn how to create edit each form field using the PDF Viewer UI and how to create them programmatically in the ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

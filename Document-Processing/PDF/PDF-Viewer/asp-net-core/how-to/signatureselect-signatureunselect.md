@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Handle signatureSelect and signatureUnselect events in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to respond to signatureSelect and signatureUnselect events in the Syncfusion ASP.NET Core PDF Viewer to track handwritten signature interactions.
+description: Learn how to respond to signatureSelect and signatureUnselect events in the ASP.NET Core PDF Viewer to track handwritten signature interactions.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Handle signatureSelect and signatureUnselect events
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer triggers the `signatureSelect` and `signatureUnselect` events when a handwritten signature annotation gains or loses focus. These events enable applications to log reviewer actions, update contextual UI elements, or validate signatures before finalizing the document.
+The ASP.NET Core PDF Viewer triggers the `signatureSelect` and `signatureUnselect` events when a handwritten signature annotation gains or loses focus. These events enable applications to log reviewer actions, update contextual UI elements, or validate signatures before finalizing the document.
 
 **signatureSelect**
 

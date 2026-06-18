@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Save the original document on the server in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to save the original PDF document on the server by calling a custom download action in the Syncfusion ASP.NET Core PDF Viewer.
+description: Learn how to save the original PDF document on the server by calling a custom download action in the ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Save original document at the server side
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer can persist the original PDF file on the server by redirecting the download action to a custom controller method. This approach is useful for audit trails, archival policies, or downstream processing that requires access to the unmodified document after the user views it.
+The ASP.NET Core PDF Viewer can persist the original PDF file on the server by redirecting the download action to a custom controller method. This approach is useful for audit trails, archival policies, or downstream processing that requires access to the unmodified document after the user views it.
 
 Follow these steps to enable server-side persistence:
 

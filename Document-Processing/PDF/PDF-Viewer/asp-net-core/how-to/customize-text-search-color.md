@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize text search color in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn here all about Customize text search color in Syncfusion ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
+description: Learn here all about Customize text search color in ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

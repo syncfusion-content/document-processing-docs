@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open PDF from Azure Active Directory in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to load and save PDFs using Azure Active Directory (AAD) with the Syncfusion ASP.NET Core PDF Viewer component.
+description: Learn how to load and save PDFs using Azure Active Directory (AAD) with the ASP.NET Core PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -205,7 +205,7 @@ string containerName = "your-container-name";
 
 6. Load PDF from AAD
     - Click the Load from AAD button.
-    - The server fetches the PDF from Azure Blob Storage and loads it into the Syncfusion PDF Viewer.
+    - The server fetches the PDF from Azure Blob Storage and loads it into the ASP.NET Core PDF Viewer.
 
 7. Save PDF to AAD
     - Click the Save to AAD button.

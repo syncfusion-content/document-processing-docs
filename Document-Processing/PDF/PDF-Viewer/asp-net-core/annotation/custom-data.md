@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom Data in annotations in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn here all about how to use add custom Data in annotation in Syncfusion ASP.NET Core PDF Viewer Component.
+description: Learn here all about how to use add custom Data in annotation in ASP.NET Core PDF Viewer Component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

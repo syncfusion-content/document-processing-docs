@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add Save Button in Toolbar ASP.NET Core | Syncfusion
-description: Learn here all about adding save button in built-in Toolbar in Syncfusion ASP.NET Core PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: Learn here all about adding save button in built-in Toolbar in ASP.NET Core PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -133,7 +133,7 @@ Sets the CSS class or icon to add as a prefix to the Save button content.
 
 The id property within a CustomToolbarItemModel is required and uniquely identifies each toolbar item for configuration and interaction.
 
-When defining or customizing toolbar items, assign a specific, descriptive id to each item. These properties are commonly used when defining custom toolbar items with `CustomToolbarItemModel` in the context of the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer. When configuring the toolbar using the `ToolbarSettings` property, include these properties to customize appearance and behavior.
+When defining or customizing toolbar items, assign a specific, descriptive id to each item. These properties are commonly used when defining custom toolbar items with `CustomToolbarItemModel` in the context of the ASP.NET Core PDF Viewer. When configuring the toolbar using the `ToolbarSettings` property, include these properties to customize appearance and behavior.
 
 N> You can use either text, icons, or both when customizing the save button based on your design requirements.
 

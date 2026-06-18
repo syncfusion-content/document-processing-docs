@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PDF form field flags in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to apply isReadOnly, isRequired, and isPrint flags to PDF form fields in the Syncfusion ASP.NET Core PDF Viewer.
+description: Learn how to apply isReadOnly, isRequired, and isPrint flags to PDF form fields in the ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # PDF Form Field Flags in ASP.NET Core PDF Viewer
 
-The Syncfusion ASP.NET Core PDF Viewer allows controlling how users interact with form fields and how those fields behave during validation and printing by applying form field flags. These flags define whether a form field can be modified, whether it is mandatory, and whether it appears in printed output.
+The ASP.NET Core PDF Viewer allows controlling how users interact with form fields and how those fields behave during validation and printing by applying form field flags. These flags define whether a form field can be modified, whether it is mandatory, and whether it appears in printed output.
 
 This topic explains:
 - [Supported form field flags](#supported-pdf-form-field-flags)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize annotations in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to customize PDF annotations in Syncfusion ASP.NET Core PDF Viewer using UI tools and programmatic settings (defaults and runtime edits).
+description: Learn how to customize PDF annotations in ASP.NET Core PDF Viewer using UI tools and programmatic settings (defaults and runtime edits).
 platform: document-processing
 control: PDF Viewer
 documentation: ug

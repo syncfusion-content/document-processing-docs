@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Save PDF files to AWS S3 in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to save PDF files to AWS S3 using the Syncfusion ASP.NET Core PDF Viewer component in standalone and server-backed configurations.
+description: Learn how to save PDF files to AWS S3 using the ASP.NET Core PDF Viewer component in standalone and server-backed configurations.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -21,7 +21,7 @@ To save a PDF file to AWS S3, follow these steps:
 
 **Step 2:** Create a PDF Viewer sample in ASP.NET Core
 
-Follow instructions provided in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer Getting Started [Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a simple PDF Viewer sample in ASP.NET Core.
+Follow instructions provided in the ASP.NET Core PDF Viewer Getting Started [Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a simple PDF Viewer sample in ASP.NET Core.
 
 **Step 3:** Modify the `~/Pages/Shared/_Layout.cshtml` file in the project
 
@@ -128,7 +128,7 @@ To save a PDF file to AWS S3, follow these steps:
 
 **Step 2:** Create a PDF Viewer sample in ASP.NET Core
 
-Follow instructions provided in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer Getting Started [Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started-with-server-backed) to create a simple PDF Viewer sample in ASP.NET Core.
+Follow instructions provided in the ASP.NET Core PDF Viewer Getting Started [Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started-with-server-backed) to create a simple PDF Viewer sample in ASP.NET Core.
 
 **Step 3:** Modify the `Index.cshtml.cs` file in the project
 

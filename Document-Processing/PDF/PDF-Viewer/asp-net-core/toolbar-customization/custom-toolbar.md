@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom Toolbar in ASP.NET Core PDF Viewer Component | Syncfusion
-description: Learn here all about custom toolbar in Syncfusion ASP.NET Core PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: Learn here all about custom toolbar in ASP.NET Core PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

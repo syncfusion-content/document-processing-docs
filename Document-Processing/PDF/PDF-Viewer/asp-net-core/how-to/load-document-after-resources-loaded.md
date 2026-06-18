@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Load document after resources Loaded Core PDF Viewer | Syncfusion
-description: Learn here how to load a PDF only after assets are ready in the Syncfusion ASP.NET Core PDF Viewer (Standalone) using the resourcesLoaded event.
+description: Learn here how to load a PDF only after assets are ready in the ASP.NET Core PDF Viewer (Standalone) using the resourcesLoaded event.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Defer document loading until PDFium resources are ready
 
-In Standalone mode, the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer downloads the required PDFium runtime assets (scripts and WebAssembly) from the location specified in the [`resourceUrl`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ResourceUrl) property. Attempting to load a document before these assets are fully initialized can lead to errors. Use the `resourcesLoaded` event to ensure the document is only loaded once the viewer's runtime is fully prepared.
+In Standalone mode, the ASP.NET Core PDF Viewer downloads the required PDFium runtime assets (scripts and WebAssembly) from the location specified in the [`resourceUrl`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ResourceUrl) property. Attempting to load a document before these assets are fully initialized can lead to errors. Use the `resourcesLoaded` event to ensure the document is only loaded once the viewer's runtime is fully prepared.
 
 ## When does resourcesLoaded trigger?
 

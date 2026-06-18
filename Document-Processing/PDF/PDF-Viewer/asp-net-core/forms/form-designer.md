@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form Designer and Toolbar Customization in ASP.NET Core | Syncfusion
-description: Learn here all about form designer and toolbar in Syncfusion ASP.NET Core PDF Viewer Component and more.
+description: Learn here all about form designer and toolbar in ASP.NET Core PDF Viewer Component and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Form Designer in ASP.NET Core PDF Viewer
 
-When **Form Designer mode** is enabled in the Syncfusion ASP.NET Core PDF Viewer, a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/asp-net-core/pdfviewer/formdesigner#/tailwind3) is displayed. This UI includes a built in toolbar for adding form fields such as text boxes, password fields, check boxes, radio buttons, drop down lists, list boxes, and signature and initial fields.
+When **Form Designer mode** is enabled in the ASP.NET Core PDF Viewer, a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/asp-net-core/pdfviewer/formdesigner#/tailwind3) is displayed. This UI includes a built in toolbar for adding form fields such as text boxes, password fields, check boxes, radio buttons, drop down lists, list boxes, and signature and initial fields.
 
 Form fields can be placed on the PDF, moved and resized, configured with field and widget properties, previewed, and removed as needed. The Form Designer toolbar can be shown, hidden, and customized to control available tools based on application requirements, enabling flexible and interactive form design directly within the viewer.
 
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 ## Form Designer UI
 
-When Form Designer mode is enabled in the Syncfusion ASP.NET Core PDF Viewer, a default [Form Designer UI](https://document.syncfusion.com/demos/pdf-viewer/asp-net-core/pdfviewer/formdesigner#/tailwind3) is displayed. This UI provides a built-in toolbar for adding common form fields such as text boxes, check boxes, radio buttons, drop-down lists, and signature fields. Fields can be placed on the PDF, selected, resized or moved, and configured using available editing options, enabling interactive form creation directly within the viewer.
+When Form Designer mode is enabled in the ASP.NET Core PDF Viewer, a default [Form Designer UI](https://document.syncfusion.com/demos/pdf-viewer/asp-net-core/pdfviewer/formdesigner#/tailwind3) is displayed. This UI provides a built-in toolbar for adding common form fields such as text boxes, check boxes, radio buttons, drop-down lists, and signature fields. Fields can be placed on the PDF, selected, resized or moved, and configured using available editing options, enabling interactive form creation directly within the viewer.
 
 ![FormDesigner](../../javascript-es6/images/FormDesigner.gif)
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Toggle annotation visibility in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to toggle annotation visibility in the Syncfusion ASP.NET Core PDF Viewer by exporting and restoring annotations with custom buttons.
+description: Learn how to toggle annotation visibility in the ASP.NET Core PDF Viewer by exporting and restoring annotations with custom buttons.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
