@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with SfPdfViewer in a WinForms App | Syncfusion
+title: Getting Started with SfPdfViewer in a WinForms App | Syncfusion
 description: Learn how to get started with the SfPdfViewer control in a WinForms Blazor Hybrid App to view, comment on, and fill PDF forms.
 platform: document-processing
 control: SfPdfViewer
@@ -9,7 +9,7 @@ documentation: ug
 
 # View PDF files using the PDF Viewer in a WinForms Blazor Hybrid App
 
-This article shows how to add the Syncfusion&reg; Blazor PDF Viewer to a WinForms Blazor Hybrid app using [Visual Studio](https://visualstudio.microsoft.com/vs/) or Visual Studio Code. The result is a desktop (WinForms) application that hosts Blazor UI inside a BlazorWebView control.
+This section explains how to add the Syncfusion&reg; Blazor PDF Viewer to a WinForms Blazor Hybrid app using [Visual Studio](https://visualstudio.microsoft.com/vs/) or Visual Studio Code. The result is a desktop (WinForms) application that hosts Blazor UI inside a BlazorWebView control.
 
 {% tabcontents %}
 
@@ -102,7 +102,7 @@ The WinForms project must target Windows and enable WinForms. A typical project 
 Create a **Component** folder, add an `_Imports.razor` file in it, and include the required component namespaces within that folder.
 
 {% tabs %}
-{% highlight razor tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="_Imports.razor" %}
 
 @using Microsoft.AspNetCore.Components.Web
 @using Syncfusion.Blazor.SfPdfViewer
@@ -200,7 +200,7 @@ Run the WinForms app. The Syncfusion&reg; Blazor PDF Viewer renders inside the W
 
 ![WinForms Blazor HybridApp SfPdfViewer rendering in browser](../images/blazor-hybrid-winforms-sfpdfviewer.png)
 
-N> [View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Getting%20Started/Blazor%20Hybrid%20-%20WinForms).
+> [View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Getting%20Started/Blazor%20Hybrid%20-%20WinForms).
 
 ## See also
 

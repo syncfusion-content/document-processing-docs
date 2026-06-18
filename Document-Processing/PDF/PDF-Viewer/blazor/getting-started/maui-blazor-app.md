@@ -44,7 +44,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 After the packages are installed, open the `~/_Imports.razor` file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.SfPdfViewer` namespaces.
 
 {% tabs %}
-{% highlight razor tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.SfPdfViewer
@@ -55,9 +55,9 @@ After the packages are installed, open the `~/_Imports.razor` file and import th
 Add the `Syncfusion.Blazor` namespace to the `MauiProgram.cs` file.
 
 {% tabs %}
-{% highlight razor tabtitle="~/Program.cs" %}
+{% highlight razor tabtitle="Program.cs" %}
 
-@using Syncfusion.Blazor
+using Syncfusion.Blazor;
 
 {% endhighlight %}
 {% endtabs %}
@@ -67,10 +67,11 @@ Add the `Syncfusion.Blazor` namespace to the `MauiProgram.cs` file.
 Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the `~/MauiProgram.cs` file after the **builder** is created.
 
 {% tabs %}
-{% highlight c# tabtitle="~/MauiProgram.cs" %}
+{% highlight c# tabtitle="MauiProgram.cs" %}
 
-// Register Syncfusion Blazor service
+// Enable memory caching
 builder.Services.AddMemoryCache();
+// Register Syncfusion Blazor service
 builder.Services.AddSyncfusionBlazor();
 
 {% endhighlight %}

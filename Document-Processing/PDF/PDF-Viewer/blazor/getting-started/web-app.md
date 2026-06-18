@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with the Blazor PDF Viewer in Web App
 
-This section briefly explains how to include the [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) component in a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/).
+This section explains how to include the [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) component in a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/).
 
 {% tabcontents %}
 
@@ -49,7 +49,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endtabs %}
 
 N> For **WebAssembly** or **Auto** render modes, install packages in the **client project**.
-N> Syncfusion&reg; uses [SkiaSharp.Views.Blazor version 3.119](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1), so ensure this version is referenced.
+N> Syncfusion&reg; uses [SkiaSharp.Views.Blazor version 3.119.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1), so ensure this version is referenced.
 
 {% endtabcontent %}
 
@@ -105,7 +105,7 @@ dotnet restore
 
 N> Syncfusion&reg; Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 N> For **WebAssembly** or **Auto** render modes, install packages in the **client project**.
-N> Syncfusion&reg; uses [SkiaSharp.Views.Blazor version 3.119](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1), so ensure this version is referenced.
+N> Syncfusion&reg; uses [SkiaSharp.Views.Blazor version 3.119.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1), so ensure this version is referenced.
 
 {% endtabcontent %}
 
@@ -166,7 +166,7 @@ dotnet restore
 {% endtabs %}
 
 N> For **WebAssembly** or **Auto** render modes, install packages in the **client project**.
-N> Syncfusion&reg; uses [SkiaSharp.Views.Blazor version 3.119](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1), so ensure this version is referenced.
+N> Syncfusion&reg; uses [SkiaSharp.Views.Blazor version 3.119.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1), so ensure this version is referenced.
 
 {% endtabcontent %}
 
@@ -177,7 +177,7 @@ N> Syncfusion&reg; uses [SkiaSharp.Views.Blazor version 3.119](https://www.nuget
 After the package is installed, open the `~/_Imports.razor` file from the client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.SfPdfViewer` namespaces.
 
 {% tabs %}
-{% highlight razor tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.SfPdfViewer
@@ -188,9 +188,9 @@ After the package is installed, open the `~/_Imports.razor` file from the client
 Add the `Syncfusion.Blazor` namespace to the `Program.cs` file.
 
 {% tabs %}
-{% highlight razor tabtitle="~/Program.cs" %}
+{% highlight razor tabtitle="Program.cs" %}
 
-@using Syncfusion.Blazor
+using Syncfusion.Blazor;
 
 {% endhighlight %}
 {% endtabs %}
@@ -200,28 +200,31 @@ Add the `Syncfusion.Blazor` namespace to the `Program.cs` file.
 Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the `~/Program.cs` file after the **builder** is created in the Blazor Web App.
 
 {% tabs %}
-{% highlight c# tabtitle="(~/Program.cs) Server" %}
+{% highlight c# tabtitle="(Program.cs) Server" %}
 
-// Register Syncfusion Blazor service
+// Configure SignalR (with increased message size) and enable memory caching
 builder.Services.AddSignalR(o => { o.MaximumReceiveMessageSize = 102400000; });
 builder.Services.AddMemoryCache();
+// Register Syncfusion Blazor service
 builder.Services.AddSyncfusionBlazor();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="(~/Program.cs) WebAssembly" %}
 
-// Register Syncfusion Blazor service
+// Enable memory caching
 builder.Services.AddMemoryCache();
+// Register Syncfusion Blazor service
 builder.Services.AddSyncfusionBlazor();
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="(~/Program.cs) Auto" %}
+{% highlight c# tabtitle="(Program.cs) Auto" %}
 
-// Register Syncfusion Blazor service
+// Configure SignalR (with increased message size) and enable memory caching
 builder.Services.AddSignalR(o => { o.MaximumReceiveMessageSize = 102400000; });
 builder.Services.AddMemoryCache();
+// Register Syncfusion Blazor service
 builder.Services.AddSyncfusionBlazor();
 
 {% endhighlight %}
@@ -270,7 +273,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer component in
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 @* desired render mode define here *@
-@rendermode InteractiveAuto
+@rendermode InteractiveServer
 
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
