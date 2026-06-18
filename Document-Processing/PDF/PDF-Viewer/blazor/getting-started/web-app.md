@@ -19,15 +19,17 @@ This section briefly explains how to include the [Blazor PDF Viewer](https://www
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-N> If using interactive render modes (WebAssembly or Auto), install the required .NET workloads for SkiaSharp: `dotnet workload install wasm-tools`
-* Installs the latest SDK workload (e.g., .NET 10)
-* For specific versions, use wasm-tools-net8 or wasm-tools-net9
+N> If using **WebAssembly** or **Auto** interactive render modes, install the required workload: 
+N> ```bash
+N> dotnet workload install wasm-tools
+N> ```
+N> For specific .NET versions, use:
+N> * `wasm-tools-net8` for .NET 8
+N> * `wasm-tools-net9` for .NET 9
 
 ## Create a new Blazor Web App in Visual Studio
 
-Create a Blazor Web App using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
-
-N> Configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) when creating a Blazor Web App.
+Create a Blazor Web App using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio), ensuring the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) are configured during creation.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SfPdfViewer and Themes NuGet Packages in the App
 
@@ -46,8 +48,8 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion&reg; Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details. Syncfusion&reg; uses SkiaSharp.Views.Blazor version 3.119.1. Ensure this version is referenced.
-* [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1)
+N> For **WebAssembly** or **Auto** render modes, install packages in the **client project**.
+N> Syncfusion&reg; requires SkiaSharp.Views.Blazor version 3.119.1. [View on NuGet](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1)
 
 {% endtabcontent %}
 
@@ -57,13 +59,17 @@ N> Syncfusion&reg; Blazor components are available in [nuget.org](https://www.nu
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-N> If using interactive render modes (WebAssembly or Auto), install the required .NET workloads for SkiaSharp: `dotnet workload install wasm-tools`
-* Installs the latest SDK workload (e.g., .NET 10)
-* For specific versions, use wasm-tools-net8 or wasm-tools-net9
+N> If using **WebAssembly** or **Auto** interactive render modes, install the required workload: 
+N> ```bash
+N> dotnet workload install wasm-tools
+N> ```
+N> For specific .NET versions, use:
+N> * `wasm-tools-net8` for .NET 8
+N> * `wasm-tools-net9` for .NET 9
 
 ## Create a new Blazor Web App in Visual Studio Code
 
-Create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+Create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), ensuring the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) are configured during creation.
 
 For example, in a Blazor Web App with the `Auto` interactive render mode, use the following commands in the integrated terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
@@ -76,8 +82,6 @@ cd BlazorWebApp.Client
 
 {% endhighlight %}
 {% endtabs %}
-
-N> Configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) when creating a Blazor Web App.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SfPdfViewer and Themes NuGet Packages in the App
 
@@ -100,17 +104,77 @@ dotnet restore
 {% endtabs %}
 
 N> Syncfusion&reg; Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> For **WebAssembly** or **Auto** render modes, install packages in the **client project**.
+N> Syncfusion&reg; requires SkiaSharp.Views.Blazor version 3.119.1. [View on NuGet](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1)
 
-N> Syncfusion&reg; uses SkiaSharp.Views.Blazor version 3.119.1. Ensure this version is referenced.
-* [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1)
+{% endtabcontent %}
+
+{% tabcontent .NET CLI %}
+
+## Prerequisites
+
+Install the latest version of [.NET SDK](https://dotnet.microsoft.com/en-us/download). If you previously installed the SDK, you can determine the installed version by executing the following command in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
+
+{% tabs %}
+{% highlight c# tabtitle=".NET CLI" %}
+
+dotnet --version
+
+{% endhighlight %}
+{% endtabs %}
+
+N> If using **WebAssembly** or **Auto** interactive render modes, install the required workload: 
+N> ```bash
+N> dotnet workload install wasm-tools
+N> ```
+N> For specific .NET versions, use:
+N> * `wasm-tools-net8` for .NET 8
+N> * `wasm-tools-net9` for .NET 9
+
+## Create a Blazor Web App using .NET CLI
+
+Run the following command to create a new Blazor Web App in a command prompt (Windows) or terminal (macOS) or command shell (Linux). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=.net-cli) documentation.
+
+For example, in a Blazor Web App with the `Auto` interactive render mode, use the following commands:
+
+{% tabs %}
+{% highlight c# tabtitle=".NET CLI" %}
+
+dotnet new blazor -o BlazorWebApp -int Auto
+cd BlazorWebApp
+cd BlazorWebApp.Client
+
+{% endhighlight %}
+{% endtabs %}
+
+## Install Syncfusion® Blazor SfPdfViewer and Themes NuGet in the App
+
+* Open a command prompt, terminal, or shell.
+* Ensure you’re in the project root directory where your `.csproj` file is located (or the Client project if applicable).
+* Run the following command to install a [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package and ensure all dependencies are installed.
+
+{% tabs %}
+
+{% highlight c# tabtitle="Package Manager" %}
+
+dotnet add package Syncfusion.Blazor.SfPdfViewer -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
+dotnet restore
+
+{% endhighlight %}
+
+{% endtabs %}
+
+N> For **WebAssembly** or **Auto** render modes, install packages in the **client project**.
+N> Syncfusion&reg; requires SkiaSharp.Views.Blazor version 3.119.1. [View on NuGet](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1)
 
 {% endtabcontent %}
 
 {% endtabcontents %}
 
-## Add import namespaces
+## Add import namespaces 
 
-After the package is installed, open the **~/_Imports.razor** file from the client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.SfPdfViewer` namespaces.
+After the package is installed, open the `~/_Imports.razor` file from the client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.SfPdfViewer` namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -121,72 +185,41 @@ After the package is installed, open the **~/_Imports.razor** file from the clie
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
-
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file of your Blazor Web App.
+Add the `Syncfusion.Blazor` namespace to the `Program.cs` file.
 
 {% tabs %}
-{% highlight c# tabtitle="(~/Program.cs) Server" hl_lines="2 9 11 13" %}
+{% highlight razor tabtitle="~/Program.cs" %}
 
-using BlazorWebAppServer.Components;
-using Syncfusion.Blazor;
+@using Syncfusion.Blazor
 
-var builder = WebApplication.CreateBuilder(args);
+{% endhighlight %}
+{% endtabs %}
 
-builder.Services.AddRazorComponents() 
-        .AddInteractiveServerComponents();
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
+
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file after the builder is created in the Blazor Web App.
+
+{% tabs %}
+{% highlight c# tabtitle="(~/Program.cs) Server" %}
 
 builder.Services.AddSignalR(o => { o.MaximumReceiveMessageSize = 102400000; });
-
 builder.Services.AddMemoryCache();
-//Add Syncfusion Blazor service to the container.
 builder.Services.AddSyncfusionBlazor();
-
-var app = builder.Build();
-
-....
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="(~/Program.cs) WebAssembly" hl_lines="3 9 11" %}
-
-using BlazorWebApp.Client.Pages;
-using BlazorWebApp.Components;
-using Syncfusion.Blazor;
-
-var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddRazorComponents()
-.AddInteractiveWebAssemblyComponents();
+{% highlight c# tabtitle="(~/Program.cs) WebAssembly" %}
 
 builder.Services.AddMemoryCache();
-//Add Syncfusion Blazor service to the container
 builder.Services.AddSyncfusionBlazor();
-
-var app = builder.Build();
-
-....
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="(~/Program.cs) Auto" hl_lines="3 9 11 13" %}
-
-using BlazorWebAppAuto.Client.Pages;
-using BlazorWebAppAuto.Components;
-using Syncfusion.Blazor;
-
-var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddRazorComponents()
-.AddInteractiveServerComponents() .AddInteractiveWebAssemblyComponents();
+{% highlight c# tabtitle="(~/Program.cs) Auto" %}
 
 builder.Services.AddSignalR(o => { o.MaximumReceiveMessageSize = 102400000; });
-
 builder.Services.AddMemoryCache();
-//Add Syncfusion Blazor service to the container
 builder.Services.AddSyncfusionBlazor();
-
-var app = builder.Build();
-
-....
 
 {% endhighlight %}
 {% endtabs %}
@@ -195,19 +228,33 @@ N> If the interactive render mode is set to WebAssembly or Auto, register the Sy
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the **~/Components/App.razor** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
+
+### Add stylesheet resource
+
+Add the stylesheet at the end of the `<head>` section in the `Components/App.razor` file to apply proper layout and theme styling.
 
 {% tabs %}
-{% highlight razor tabtitle="App.razor" hl_lines="3 7" %}
+{% highlight razor tabtitle="App.razor" %}
 
-<head>
-    <!-- Syncfusion Blazor PDF Viewer control's theme style sheet -->
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-</head>
-<body>
-    <!-- Syncfusion Blazor PDF Viewer control's scripts -->
-    <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
-</body>
+<!-- Syncfusion Blazor PDF Viewer control's theme style sheet -->
+<link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight razor tabtitle="App.razor" %}
+
+### Add script resource
+
+Add the required script at the end of the `<body>` section in the `Components/App.razor` file to enable component functionality.
+
+{% tabs %}
+{% highlight razor tabtitle="App.razor" %}
+
+<!-- Syncfusion Blazor PDF Viewer control's scripts -->
+<script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
 
 {% endhighlight %}
 {% endtabs %}
@@ -216,9 +263,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer component
 
-Add the Syncfusion Blazor PDF Viewer (Next-Gen) component in the **~/Components/Pages/*.razor** file. If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the `~/Pages/*.razor` file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
-
-N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
+Add the Syncfusion Blazor PDF Viewer (Next-Gen) component in the `~/Components/Pages/*.razor` file. If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the `~/Pages/*.razor` file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`). 
 
 {% tabs %}
 {% highlight razor %}
@@ -228,6 +273,8 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 {% endhighlight %}
 {% endtabs %}
+
+N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer component in **~/Pages/Home.razor**.
 
