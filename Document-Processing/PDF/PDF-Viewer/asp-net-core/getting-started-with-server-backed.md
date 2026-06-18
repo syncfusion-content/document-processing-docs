@@ -15,8 +15,8 @@ N> Starting with the 2026 Vol 2 main release (June 2026), no new features will b
 
 ## Prerequisites
 
-- **System Requirements**: [System requirements for ASP.NET Core controls](https://help.syncfusion.com/document-processing/system-requirements)
-- **License**: [ASP.NET Core licensing documentation](https://ej2.syncfusion.com/aspnetcore/documentation/licensing/overview)
+- [System requirements for ASP.NET Core controls](https://help.syncfusion.com/document-processing/system-requirements)
+- [ASP.NET Core licensing documentation](https://ej2.syncfusion.com/aspnetcore/documentation/licensing/overview)
 
 {% tabcontents %}
 
