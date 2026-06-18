@@ -29,7 +29,7 @@ The following code example shows how to convert a PowerPoint Presentation docume
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Open an existing Presentation document.
-using (IPresentation presentation = Presentation.Open("Input.pptx", FormatType.Docx))
+using (IPresentation presentation = Presentation.Open("Input.pptx"))
 {
     //Save the PowerPoint Presentation as a Markdown file.
     presentation.Save("PPTXtoMd.md");
@@ -40,7 +40,7 @@ using (IPresentation presentation = Presentation.Open("Input.pptx", FormatType.D
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
 //Open an existing Presentation document.
-using (IPresentation presentation = Presentation.Open("Input.pptx", FormatType.Docx))
+using (IPresentation presentation = Presentation.Open("Input.pptx"))
 {
     //Save the PowerPoint Presentation as a Markdown file.
     presentation.Save("PPTXtoMd.md");
@@ -50,7 +50,7 @@ using (IPresentation presentation = Presentation.Open("Input.pptx", FormatType.D
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 ' Open an existing Presentation document
-Using presentation As IPresentation = Presentation.Open("Input.pptx", FormatType.Docx)
+Using presentation As IPresentation = Presentation.Open("Input.pptx")
     ' Save the Presentation document as a Markdown file
     presentation.Save("PPTXtoMd.md")
 End Using
