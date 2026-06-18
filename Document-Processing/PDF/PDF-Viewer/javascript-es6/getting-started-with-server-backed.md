@@ -12,6 +12,8 @@ domainurl: ##DomainURL##
 
 This guide explains how to create and run the **TypeScript PDF Viewer in server-backed mode**. In this mode, PDF rendering and processing are performed on a server-side web service, while the TypeScript application acts as the client.
 
+N> Starting with the 2026 Vol 2 main release (June 2026), no new features will be added to the Server PDF Viewer, as almost all of the PDF Viewer functionalities are now available in the Standalone PDF Viewer. If you are currently using the server-backed PDF Viewer, please refer to the [migration documentation](./server-to-standalone) to transition to the Standalone PDF Viewer.
+
 ## Prerequisites
 
 To get started, ensure the following software is installed on your machine:
