@@ -240,7 +240,7 @@ Step 9(ii): Add the following code to the AndroidManifest.xml file located under
 
 N> If you deploy the application in Android 11 or later, include the following changes:
 
-* Enabled the androidLegacyExtranalStorage in the AndroidManifest.xml file.
+* Enabled the androidLegacyExternalStorage in the AndroidManifest.xml file.
 
 {% tabs %}
 {% highlight XML %}

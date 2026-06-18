@@ -5,9 +5,9 @@ platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Save PDF file to Google Drive
+# Save PDF document to Google Drive
 
-To save a PDF file to Google Drive, you can follow the steps below
+To save a PDF document to Google Drive, you can follow the steps below
 
 Step 1: Set up Google Drive API
 

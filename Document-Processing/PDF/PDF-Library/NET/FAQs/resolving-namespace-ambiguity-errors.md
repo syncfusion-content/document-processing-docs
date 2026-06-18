@@ -92,7 +92,7 @@ Here are a few examples of how to properly reference Syncfusion packages in your
 **Windows Forms Application (WinForms)**
 
 {% tabs %}
-{% highlight bash %} 
+{% highlight XML %}
 
 <!-- Windows Forms Application -->
 <ItemGroup>
@@ -107,7 +107,7 @@ Here are a few examples of how to properly reference Syncfusion packages in your
 **.NET 8 Web API (Headless Service)**
 
 {% tabs %}
-{% highlight bash %} 
+{% highlight XML %} 
 
 <!-- .NET 8 Web API -->
 <ItemGroup>
