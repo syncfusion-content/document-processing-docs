@@ -18,7 +18,8 @@ To get started quickly, you can also check out our video tutorial below.
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
 
 ## Install the Flutter PDF Viewer package
-Run the following command in your project’s terminal:
+Install the [Syncfusion<sup>&reg;</sup> Flutter PDF Viewer](https://pub.dev/packages/syncfusion_flutter_pdfviewer/versions) package to your project by run the following command in your project’s terminal:.
+
 {% tabs %}
 {% highlight yaml tabtitle="powershell" %}
 
@@ -42,19 +43,33 @@ assets:
 {% endtabs %}
 
 ## Add the script tags
-For the web platform, add the following script tags to your `web/index.html` file, either in the <head> or <body> section.
+For the web platform, we have used [PdfJs](https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js) for rendering the PDF pages, so the script file must be referred to in your `web/index.html` file.
 
+In your `web/index.html` file, add the following script tags, somewhere in the head or body of the document:
+
+For PdfJs library version 4.0 and above:
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
 
-<script type="module" async> 
-  import * as pdfjsLib from 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.min.mjs'; 
-  pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.worker.min.mjs"; 
+<script type="module" async>
+  import * as pdfjsLib from 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.min.mjs';
+  pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.worker.min.mjs";
 </script>
 
 {% endhighlight %}
 {% endtabs %}
 
+For PdfJs library versions below 4.0:
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+<script type="text/javascript">
+  pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js";
+</script>
+
+{% endhighlight %}
+{% endtabs %}
 
 N> A version above **2.11.338** is recommended for using annotation support. This will not flatten the unsupported annotations while rendering the pages.
 
