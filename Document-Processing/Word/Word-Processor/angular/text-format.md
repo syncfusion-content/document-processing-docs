@@ -188,9 +188,9 @@ let highlightColor : HighlightColor = documenteditor.selection.characterFormat.h
 documenteditor.selection.characterFormat.highlightColor= 'Pink';
 ```
 
-## Bidirectional (Bidi)
+## Bidirectional
 
-The Bidi property controls whether selected text is displayed as right-to-left (RTL) or left-to-right (LTR) for proper multilingual formatting. You can get or set this property using the following code example.
+The [bidi](https://ej2.syncfusion.com/angular/documentation/api/document-editor/characterformatproperties#bidi) property controls whether selected text is displayed as right-to-left (RTL) or left-to-right (LTR) for proper multilingual formatting. You can get or set this property using the following code example.
 
 ```typescript
 // Get Bidi value of selected text
