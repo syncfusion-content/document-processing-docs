@@ -22,7 +22,7 @@ Step 2: Install the [Syncfusion.Pdf.Net.Core ](https://www.nuget.org/packages/Sy
 Step 3: Include the following namespaces in the Program.cs file.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf;
@@ -37,7 +37,7 @@ using Amazon;
 Step 4: Add the below code example to create a simple PDF and save in AWS S3.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C#" %}
 
 // Create a new PDF document
 using (PdfDocument document = new PdfDocument())
