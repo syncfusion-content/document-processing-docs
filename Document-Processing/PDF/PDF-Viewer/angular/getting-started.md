@@ -139,7 +139,7 @@ After the application starts, open the localhost URL shown in the terminal to vi
 
 {% previewsample "/document-processing/samples/pdfviewer/angular/getting-started-cs1-standalone" %}
 
-[View Sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/Getting%20started%20-%20Standalone)
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/Getting%20started%20-%20Standalone)
 
 ## Video tutorial
 
