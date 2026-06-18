@@ -115,6 +115,37 @@ Note:
 
 Document Editor provides support to paste the system clipboard data with formatting. To enable clipboard paste with formatting options, set the `enableLocalPaste` property in Document Editor to false and use this .NET Standard library [`Syncfusion.EJ2.WordEditor.AspNet.Core`](<https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Core/>) for Core by the web API service implementation. This library helps you to paste the system clipboard data with formatting.
 
+
+### Paste with formatting architecture overview
+
+Paste with formatting allows copying content from external sources and pasting it with formatting options (Keep Source Formatting, Match Destination Formatting, Text Only) applied by the server.
+
+```
+User copies content from external source and triggers paste
+   ↓
+CLIENT: Retrieves clipboard data
+   ↓
+CLIENT: Sends clipboard data to paste formatting service
+   ↓
+HTTP Request (Clipboard data sent to server)
+   ↓
+SERVER: Receives request and parses clipboard content
+   ↓
+SERVER: Analyzes formatting and content structure
+   ↓
+HTTP Response (Processed content returned to client)
+   ↓
+CLIENT: Receives response and displays formatting options dialog to user
+   ↓
+User selects desired formatting option (Keep Source/Match Destination/Text Only)
+   ↓
+CLIENT: Applies selected formatting to content
+   ↓
+CLIENT: Inserts formatted content at cursor position
+   ↓
+USER: Views pasted content with selected formatting applied
+```
+
 You can paste your system clipboard data in the following ways:
 * **Keep Source Formatting** This option retains the character styles and direct formatting applied to the copied text. Direct formatting includes characteristics such as font size, italics, or other formatting that is not included in the paragraph style.
 * **Match Destination Formatting** This option discards most of the formatting applied directly to the copied text, but it retains the formatting applied for emphasis, such as bold and italic when it is applied to only a portion of the selection. The text takes on the style characteristics of the paragraph where it is pasted. The text also takes on any direct formatting or character style properties of text that immediately precedes the cursor when the text is pasted.

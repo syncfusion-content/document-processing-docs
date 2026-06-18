@@ -119,6 +119,49 @@ Collaborative editing is built using three main components:
 
 - Resolves conflicts between multiple users using the OT algorithm
 
+```
+CLIENT 1 (USER 1)              SERVER (SignalR + Redis)           CLIENT 2 (USER 2)
+════════════════               ═════════════════════════          ════════════════
+
+Step 1: User 1 edits
+document
+   │
+Step 2: contentChange
+event fires
+   │
+Step 3: Create
+operation Object
+   │
+Step 4: Send via
+SignalR ──────────────────→ Step 5: Receive operation
+                           in DocumentEditorHub
+                                │
+                           Step 6: Store in Redis
+                           cache (assign version)
+                                │
+                           Step 7: Check for
+                           concurrent edits
+                           (OT Algorithm)
+                                │
+                           Step 8: Transform
+                           Operation
+                                │
+        Step 9: Broadcast transformed operation via SignalR ──────────────→
+        (Confirmation)              ↓                              (Update)
+                              All Connected Users            Step 9: Receive
+   ↓                                                          transformed
+Step 10: User 1 sees                                          operation
+confirmation of edit                                              │
+                                                              Step 10: Apply
+                                                              remote action
+                                                                   │
+                                                              Step 11: User 2
+                                                              sees update
+                                                              in real-time
+```
+
+---
+
 ## Integrate collaborative editing in client side
 
 ### Step 1: Integrate Document Editor in React sample

@@ -84,21 +84,43 @@ For more information on configuring the spell check service, refer to the follow
 Spell check identifies misspelled words as the user types and provides suggestions through context menu and dialog by validating text against server-side dictionaries.
 
 ```
-User Types Text
+User Types Text in Document Editor
    ↓
-Document Editor Captures Input (enableSpellCheck enabled, text detected)
+CLIENT: enableSpellCheck property validates text is captured
    ↓
-Spell Check Service Request (Text sent to configured server URL with languageID)
+CLIENT: Document Editor extracts text content for validation
    ↓
-Server Validates Against Dictionary (Dictionary lookup, misspelled words identified)
+CLIENT: Spell Checker prepares HTTP request with languageID parameter
    ↓
-Returns Misspelled Words & Suggestions (JSON response with errors and suggestions)
+CLIENT: Sends text and language configuration to configured server URL
    ↓
-Client Marks Words with Underline (Squiggly line applied unless removeUnderline is true)
+HTTP Request (Text content + languageID sent to server)
    ↓
-User Right-Clicks → Context Menu or Opens Spell Check Dialog
+SERVER: Receives request and loads appropriate language dictionary
    ↓
-User Applies Correction (Change, Ignore, Ignore All, Add to Dictionary, Change All)
+SERVER: Compares each word against dictionary file
+   ↓
+SERVER: Identifies misspelled words not found in dictionary
+   ↓
+SERVER: Generates suggestions for each misspelled word
+   ↓
+SERVER: Returns JSON response with errors array and suggestions
+   ↓
+HTTP Response (Misspelled words and suggestions returned to client)
+   ↓
+CLIENT: Receives response data
+   ↓
+CLIENT: Applies squiggly underline to misspelled words (if removeUnderline is false)
+   ↓
+CLIENT: Document Editor displays marked words visually in document
+   ↓
+User Right-Clicks on Misspelled Word
+   ↓
+CLIENT: Context Menu displays suggestions from server response
+   ↓
+User Selects Action (Change, Ignore, Ignore All, Add to Dictionary, Change All)
+   ↓
+CLIENT: Updates document and re-triggers spell check if needed
 ```
 
 ## Spell check settings
