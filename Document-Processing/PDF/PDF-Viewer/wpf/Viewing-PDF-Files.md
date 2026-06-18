@@ -139,7 +139,7 @@ pdfViewer.ItemSource = pdfLoadedDocument;
 {% endhighlight %}
 {% endtabs %}
 
-## View PDF file using the ItemSource property with DataContext
+## View PDF file using ItemSource with DataContext
 
 The [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html)’s [ItemSource](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_ItemSource) property allows you to bind PDF documents in XAML. This property accepts a stream input that can be bounded to the viewer during initialization. The following steps explain how to display a PDF file using the [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html):
 
