@@ -9,7 +9,7 @@ documentation: ug
 
 # Undo redo in Vue Spreadsheet component
 
-`Undo` option helps you to undone the last action performed and `Redo` option helps you to do the same action which is reverted in the [Vue Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor). You can use the [`allowUndoRedo`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#allowundoredo) property to enable or disable undo redo functionality in spreadsheet.
+`Undo` option helps you to undone the last action performed and `Redo` option helps you to do the same action which is reverted in the [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor). You can use the [`allowUndoRedo`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#allowundoredo) property to enable or disable undo redo functionality in spreadsheet.
 
 > * The default value for `allowUndoRedo` property is `true`.
 
@@ -50,7 +50,7 @@ The following code example shows `How to update and customize your own actions f
 
 ## Note
 
-You can refer to our [Vue Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/vue/#/tailwind3/spreadsheet/default.html) to knows how to present and manipulate data.
+You can refer to our [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/vue/#/tailwind3/spreadsheet/default.html) to knows how to present and manipulate data.
 
 ## See Also
 

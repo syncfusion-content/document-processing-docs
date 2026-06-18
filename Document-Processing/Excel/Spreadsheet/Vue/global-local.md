@@ -11,7 +11,7 @@ documentation: ug
 
 ## Localization
 
-The [`Localization`](https://ej2.syncfusion.com/vue/documentation/common/localization) library allows you to localize the default text content of the [Vue Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor). The Spreadsheet has static text on some features (cell formatting, Merge, Data validation, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the
+The [`Localization`](https://ej2.syncfusion.com/vue/documentation/common/localization) library allows you to localize the default text content of the [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor). The Spreadsheet has static text on some features (cell formatting, Merge, Data validation, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the
 [`locale`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#locale) value and translation object.
 
 The following list of properties and their values are used in the Spreadsheet.
@@ -622,7 +622,7 @@ RTL provides an option to switch the text direction and layout of the Spreadshee
 
 ## Note
 
-You can refer to our [Vue Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/vue/#/tailwind3/spreadsheet/default.html) to knows how to present and manipulate data.
+You can refer to our [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/vue/#/tailwind3/spreadsheet/default.html) to knows how to present and manipulate data.
 
 ## See Also
 

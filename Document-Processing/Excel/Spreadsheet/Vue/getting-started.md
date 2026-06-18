@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with the Vue Spreadsheet Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project and integrating the [Vue Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor).
+This article provides a step-by-step guide for setting up a Vue 2 project and integrating the [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor).
 
 ## Prerequisites
 
@@ -36,7 +36,7 @@ N> When prompted during project creation, select **Default ([Vue 2] babel, eslin
 
 ## Install the Vue Spreadsheet package
 
-Install the [Vue Spreadsheet](https://www.npmjs.com/package/@syncfusion/ej2-vue-spreadsheet) package from npm using the following command:
+Install the [Vue Spreadsheet Editor](https://www.npmjs.com/package/@syncfusion/ej2-vue-spreadsheet) package from npm using the following command:
 
 ```
 npm install @syncfusion/ej2-vue-spreadsheet --save
@@ -68,7 +68,7 @@ N> Refer to the [Themes topic](https://ej2.syncfusion.com/vue/documentation/appe
 
 ## Add the Vue Spreadsheet component to the application
 
-Import and register the [Vue Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) component directives in the `script` section of **src/App.vue**. Then, define the component in the `template` section.
+Import and register the [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) component directives in the `script` section of **src/App.vue**. Then, define the component in the `template` section.
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
@@ -117,7 +117,7 @@ You can also explore the Spreadsheet interactively using the live sample below.
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-vue-spreadsheet-component).
 
-N> Looking for the full Vue Spreadsheet component overview, features, pricing, and documentation? Visit the [Vue Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) page.
+N> Looking for the full Vue Spreadsheet component overview, features, pricing, and documentation? Visit the [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) page.
 
 ## See also
 
