@@ -42,6 +42,15 @@ Create an **ASP.NET Core Web App** in Visual Studio Code using the following com
 {% highlight c# tabtitle="ASP.NET Core" %}
 
 dotnet new webapp -o WebApp
+
+{% endhighlight %}
+{% endtabs %}
+
+Move into the newly created project folder:
+
+{% tabs %}
+{% highlight c# tabtitle="ASP.NET Core" %}
+
 cd WebApp
 
 {% endhighlight %}
@@ -56,14 +65,21 @@ Install the Syncfusion&reg; ASP.NET Core component NuGet packages within the pro
 * Run the following command to install the [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core/) NuGet package.
 
 {% tabs %}
-
 {% highlight c# tabtitle="Package Manager" %}
 
 dotnet add package Syncfusion.EJ2.AspNet.Core -v {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
+* After adding the package, run the following command to restore all project dependencies.
+
+{% tabs %}
+{% highlight c# tabtitle="Package Manager" %}
+
 dotnet restore
 
 {% endhighlight %}
-
 {% endtabs %}
 
 {% endtabcontent %}
@@ -89,13 +105,11 @@ Reference the Syncfusion theme and JavaScript library using the CDN inside the `
 {% tabs %}
 {% highlight c# tabtitle="~/_Layout.cshtml" %}
 
-<head>
-    ...
-    <!-- Syncfusion ASP.NET Core controls styles -->
-    <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/fluent.css" />
-    <!-- Syncfusion ASP.NET Core controls scripts -->
-    <script src="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/dist/ej2.min.js"></script>
-</head>
+<!-- Syncfusion ASP.NET Core controls styles -->
+<link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/fluent.css" />
+
+<!-- Syncfusion ASP.NET Core controls scripts -->
+<script src="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/dist/ej2.min.js"></script>
 
 {% endhighlight %}
 {% endtabs %}
@@ -104,22 +118,16 @@ N> To learn other ways to load themes or scripts (such as [NPM packages](https:/
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Script Manager
 
-Open the `~/Pages/Shared/_Layout.cshtml` page and register the script manager. The script manager initializes Syncfusion components and manages their life cycle.
+Open the `~/Pages/Shared/_Layout.cshtml` page and register the script manager `<ejs-scripts>` at the end of the `<body>` element. The script manager initializes Syncfusion components and manages their life cycle.
 
 {% tabs %}
 {% highlight c# tabtitle="~/_Layout.cshtml" %}
 
-<body>
-    ....
-    ....
-    <!-- Syncfusion ASP.NET Core Script Manager -->
-    <ejs-scripts></ejs-scripts>
-</body>
+<!-- Syncfusion ASP.NET Core Script Manager -->
+<ejs-scripts></ejs-scripts>
 
 {% endhighlight %}
 {% endtabs %}
-
-N> Add the script manager `<ejs-scripts>` at the end of the `<body>` element.
 
 ## Add ASP.NET Core PDF Viewer control
 
@@ -128,17 +136,9 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer
 {% tabs %}
 {% highlight c# tabtitle="~/Index.cshtml" %}
 
-@page
-@model IndexModel
-@{
-    ViewData["Title"] = "Home page";
-}
-
-<div class="text-center">
-    <!-- documentPath specifies the PDF document to load -->
-    <ejs-pdfviewer id="pdfviewer" style="height:600px" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
-</div>
+<!-- documentPath specifies the PDF document to load -->
+<ejs-pdfviewer id="pdfviewer" style="height:600px" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
+</ejs-pdfviewer>
 
 {% endhighlight %}
 {% endtabs %}
