@@ -69,7 +69,7 @@ This component contains various UI controls (ColorPickerPalette and Numeric UpDo
  
 {% endtabcontents %}
 
-N> Starting with version 23.1.x, a reference to the Syncfusion.PdfToImageConverter.Base assembly is necessary for PdfViewer applications.
+N> Starting with version 23.1.x, Syncfusion PdfToImageConverter is necessary for PdfViewer applications.
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup>; assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to [this link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your Windows Forms application to use our components.
 
 
@@ -170,4 +170,4 @@ N>[View Sample in GitHub.](https://github.com/syncfusion/pdf-viewer-sdk-winforms
 
 ## See Also
 - [Viewing PDF files](/windowsforms/pdf-viewer/working-with-pdf-viewer#viewing-pdf-files)
-- [Initialize PdfDocumentView](./pdfdocumentview-getting-started)
+- [Working with PdfDocumentView](./working-with-pdfdocumentview)

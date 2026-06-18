@@ -78,8 +78,6 @@ Syncfusion.Shared.WPF.dll</td><td>
 This component contains various UI controls (ColorPickerPalette and Numeric UpDown) that are used in the PDF Viewer.</td></tr>
 </table>
 
-N> Starting with version 23.1.x, a reference to the Syncfusion.PdfToImageConverter.Base assembly is necessary for PdfViewer applications.
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup>; assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to [this link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your WPF application to use our components.
 
 
 Below are the additional DLLs required for applying themes and skinning to the WPF PdfViewer control:
@@ -91,6 +89,9 @@ N> You need to add these references to your project to use the skinning and them
 {% endtabcontent %}
  
 {% endtabcontents %}
+
+N> Starting with version 23.1.x, Syncfusion PdfToImageConverter is necessary for PdfViewer applications.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup>; assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to [this link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your WPF application to use our components.
 
 ## Add WPF PdfViewer component
 WPF PdfViewer control can be added to an application either through the designer (XAML) or programmatically using code. 

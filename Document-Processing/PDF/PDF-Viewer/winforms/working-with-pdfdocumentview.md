@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Initialize WinForms PDF Viewer with PdfDocumentView| Syncfusion&reg;
-description: Learn here about getting started with Syncfusion<sup>&reg;</sup>; Windows Forms PDF Viewer control, its elements and more details.
+title:  Working with WinForms PDF Viewer with PdfDocumentView| Syncfusion&reg;
+description: Learn here about working with Syncfusion<sup>&reg;</sup>; Windows Forms PDFDocumentView control, its elements and more details.
 platform: document-processing
 control: PdfViewerControl
 documentation: ug
@@ -94,5 +94,5 @@ Controls.Add(pdfDocumentView1)
 N> You can also explore our [WinForms PDF Viewer example](https://github.com/syncfusion/winforms-demos/tree/master/pdfviewer) that shows you how to render and configure the PDF Viewer.
 
 ## See Also
-- [Viewing PDF files](/windowsforms/pdf-viewer/working-with-pdf-viewer#viewing-pdf-files)
 - [Getting started] (./Getting-Started)
+- [Viewing PDF files](/windowsforms/pdf-viewer/working-with-pdf-viewer#viewing-pdf-files)
