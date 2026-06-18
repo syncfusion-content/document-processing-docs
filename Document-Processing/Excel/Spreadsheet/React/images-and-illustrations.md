@@ -28,6 +28,6 @@ The React Spreadsheet component also provides a range of features for working wi
 * Corner resizing option is not available in the image element.
 
 ## See Also
-* [Charts](./charts-and-visualizations.md)
+* [Charts](./charts-and-visualizations)
 * [Formatting](./formatting)
 * [Rows and columns](./rows-and-columns)
