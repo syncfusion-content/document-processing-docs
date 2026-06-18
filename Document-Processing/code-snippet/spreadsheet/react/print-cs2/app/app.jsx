@@ -9,7 +9,8 @@ function App() {
     const spreadsheetRef = React.useRef(null);
     const items = [
         { text: 'ActiveSheet' },
-        { text: 'Workbook' }
+        { text: 'Workbook' },
+        { text: 'PrintRange' }
     ];
     const handleItemSelect = (args) => {
         let spreadsheet = spreadsheetRef.current;
