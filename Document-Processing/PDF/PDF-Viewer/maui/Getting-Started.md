@@ -126,7 +126,7 @@ xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Ma
         public PdfViewerViewModel()
         {
             // Load the embedded PDF document stream.
-            // Update the resource path to match your project namespace (replace PdfViewerExample with your actual project name):
+            // Replace 'PdfViewerExample' with your project's namespace in resource path
             pdfDocumentStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf");
         }
     }
@@ -286,7 +286,7 @@ xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Ma
         public PdfViewerViewModel()
         {
             // Load the embedded PDF document stream.
-            // Update the resource path to match your project namespace (replace PdfViewerExample with your actual project name):
+            // Replace 'PdfViewerExample' with your project's namespace in resource path
             pdfDocumentStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf");
         }
     }
@@ -454,7 +454,7 @@ Open the `MainPage.xaml` file and follow the steps below.
         public PdfViewerViewModel()
         {
             // Load the embedded PDF document stream.
-            // Update the resource path to match your project namespace (replace PdfViewerExample with your actual project name)
+            // Replace 'PdfViewerExample' with your project's namespace in resource path
             pdfDocumentStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf");
         }
     }
