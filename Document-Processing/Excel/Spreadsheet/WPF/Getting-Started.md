@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Getting Started with WPF Spreadsheet control | Syncfusion®
+canonical_url: "https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor"
 description: Learn here about getting started with Syncfusion® WPF Spreadsheet (SfSpreadsheet) control, its elements and more.
 platform:  document-processing
 control: SfSpreadsheet
