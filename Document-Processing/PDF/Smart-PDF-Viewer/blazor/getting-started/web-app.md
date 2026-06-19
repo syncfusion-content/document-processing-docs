@@ -401,6 +401,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart PDF Viewer
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+@rendermode InteractiveServer
 
 <SfSmartPdfViewer Height="100%" Width="100%" DocumentPath="https://cdn.syncfusion.com/content/pdf/http-succinctly.pdf">
 </SfSmartPdfViewer>
