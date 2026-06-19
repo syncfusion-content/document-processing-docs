@@ -95,4 +95,4 @@ N> You can also explore our [WinForms PDF Viewer example](https://github.com/syn
 
 ## See Also
 - [Getting started](./Getting-Started)
-- [Viewing PDF files](/windowsforms/pdf-viewer/working-with-pdf-viewer#viewing-pdf-files)
+- [Working with PdfViewerControl](./working-with-pdf-viewer)
