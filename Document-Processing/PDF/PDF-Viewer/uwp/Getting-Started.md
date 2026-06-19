@@ -156,10 +156,10 @@ After adding the `SfPdfViewerControl`, you can load a PDF document using data bi
 
         public PdfReport()
         {
-            //Loads the stream from the embedded resource.
+            // Loads the stream from the embedded resource.
             Assembly assembly = typeof(MainPage).GetTypeInfo().Assembly;
 
-            // Update the resource path to match your project namespace (replace PdfViewerExample with your actual project name)
+            // Replace 'PdfViewerExample' with your project's namespace in resource path
             docStream = assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf");
         }
     }
