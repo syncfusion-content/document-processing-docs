@@ -190,9 +190,9 @@ documenteditor.selection.characterFormat.highlightColor = 'Pink';
 
 N> 1. Character scaling and spacing present in the input Word document will be preserved in the exported Word document. N> 2. Scaling is implemented using the letterSpacing property, which may present compatibility problems. For more information, please refer to this [link](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/letterSpacing#browser_compatibility)
 
-## Bidirectional (Bidi)
+## Bidirectional
 
-The Bidi property controls whether selected text is displayed as right-to-left (RTL) or left-to-right (LTR) for proper multilingual formatting. You can get or set this property using the following code example.
+The bidi property controls whether selected text is displayed as right-to-left (RTL) or left-to-right (LTR) for proper multilingual formatting. You can get or set this property using the following code example.
 
 ```ts
 // Get Bidi value of selected text
