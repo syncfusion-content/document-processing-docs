@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Setup for Server-Backed TypeScript PDF Viewer | Syncfusion
+title: Getting Started with Server-Backed TypeScript PDF Viewer | Syncfusion
 description: Learn how to set up and run the Syncfusion TypeScript PDF Viewer in server-backed mode using a PDF Viewer web service.
 platform: document-processing
 control: PDF Viewer
@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with TypeScript PDF Viewer (Server-Backed)
+# Getting Started with TypeScript PDF Viewer (Server-Backed)
 
-This guide explains how to create and run the **TypeScript PDF Viewer in server-backed mode**. In this mode, PDF rendering and processing are performed on a server-side web service, while the TypeScript application acts as the client.
+This section explains how to create and run the **TypeScript PDF Viewer in server-backed mode**. In this mode, PDF rendering and processing are performed on a server-side web service, while the TypeScript application acts as the client.
 
 N> Starting with the 2026 Vol 2 main release (June 2026), no new features will be added to the Server PDF Viewer, as almost all of the PDF Viewer functionalities are now available in the Standalone PDF Viewer. If you are currently using the server-backed PDF Viewer, please refer to the [migration documentation](./server-to-standalone) to transition to the Standalone PDF Viewer.
 
@@ -30,38 +30,52 @@ Create a simple TypeScript application using the Essential® JS 2 [quickstart](h
 
 **Step 1:** Open the command prompt from the required directory and clone the quickstart project from GitHub.
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="CLI" %}
+
 git clone https://github.com/SyncfusionExamples/ej2-quickstart-webpack ej2-quickstart
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 **Step 2:** Navigate to the `ej2-quickstart` folder.
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="CLI" %}
+
 cd ej2-quickstart
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 **Step 3:** By default, the `ej2-quickstart` repository is preconfigured with the [@syncfusion/ej2](https://www.npmjs.com/package/@syncfusion/ej2) package in `~/package.json`. This package installs all Syncfusion Essential JS 2 components, including the PDF Viewer and other EJ2 controls.
 
-To install **only the PDF Viewer component**, replace the dependency with [@syncfusion/ej2-pdfviewer](https://www.npmjs.com/package/@syncfusion/ej2-pdfviewer) in `package.json`:
+To install **only the PDF Viewer component**, replace the dependencies with [@syncfusion/ej2-pdfviewer](https://www.npmjs.com/package/@syncfusion/ej2-pdfviewer) in `package.json`:
 
-```json
-"dependencies": {
-  "@syncfusion/ej2-pdfviewer": "*"
-}
-```
+{% tabs %}
+{% highlight bash tabtitle="package.json" %}
+
+"@syncfusion/ej2-pdfviewer": "*"
+
+{% endhighlight %}
+{% endtabs %}
 
 **Step 4:** Install the dependent npm packages.
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 npm install
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Add CSS references
 
 Add the required Syncfusion styles to `src/styles/styles.css`:
 
 {% tabs %}
-{% highlight css tabtitle="~/src/styles/styles.css" %}
+{% highlight css tabtitle="styles.css" %}
 
 @import '../../node_modules/@syncfusion/ej2-base/styles/material.css';
 @import '../../node_modules/@syncfusion/ej2-buttons/styles/material.css';
@@ -85,7 +99,7 @@ To load and display a PDF in server-backed mode, configure the PDF Viewer with t
 Update `src/app.ts` as shown below:
 
 {% tabs %}
-{% highlight ts tabtitle="~/src/app.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 import { PdfViewer, Toolbar, Magnification, 
          Navigation, Annotation, LinkAnnotation,
          ThumbnailView, BookmarkView, TextSelection, 
@@ -120,17 +134,19 @@ Add a container element in `index.html`:
 
 ## Run the application
 
-Run the application using the following command:
+Run the following command to start the TypeScript application:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
 npm start
-```
+{% endhighlight %}
+{% endtabs %}
 
 The application will connect to the configured PDF Viewer web service and render the document in the browser. The image below shows how the PDF Viewer is rendered in the browser:
 
 ![Rendered PDF Viewer in browser](images/pdfviewer-control.png)
 
-[View Sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/Save%20and%20Load/Load%20PDF%20file%20from%20URL)
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/Save%20and%20Load/Load%20PDF%20file%20from%20URL)
 
 ## Run the PDF Viewer web service
 
@@ -141,12 +157,21 @@ To host your own PDF Viewer web service:
 2. Navigate to the appropriate folder based on your .NET version:
    - .NET 6.0 → [PdfViewerWebService_6.0](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices/tree/main/ASP.NET%20Core/PdfViewerWebService_6.0)
    - .NET 8.0 → [PdfViewerWebService_8.0](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices/tree/main/ASP.NET%20Core/PdfViewerWebService_8.0)
-3. Restore and run the service:
+3. Restore all project dependencies using the following command:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="CLI" %}
 dotnet restore
+{% endhighlight %}
+{% endtabs %}
+
+4. Run the Service Using the Following Code:
+
+{% tabs %}
+{% highlight bash tabtitle="CLI" %}
 dotnet run
-```
+{% endhighlight %}
+{% endtabs %}
 
 The service will run at:
 
