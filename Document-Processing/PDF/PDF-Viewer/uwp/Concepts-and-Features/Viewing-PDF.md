@@ -100,7 +100,9 @@ The [`SfPdfViewer`](https://help.syncfusion.com/cr/uwp/Syncfusion.Windows.PdfVie
 
 ### Creating a view model
 
-Create a class that exposes a stream property for binding.
+1. Add a PDF file to the project and set its **Build Action** to **Embedded Resource**.
+
+2. Create a simple class (`PdfReport.cs`) that provides the PDF stream property for binding.
 
 {% tabs %}
 {% highlight c# %}

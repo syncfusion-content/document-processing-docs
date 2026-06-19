@@ -128,10 +128,12 @@ After adding the `SfPdfViewerControl`, you can load a PDF document using data bi
 2. Create a simple class (`PdfReport.cs`) that provides the PDF stream.
 
 
-    {% tabs %}
+{% tabs %}
     {% highlight c# tabtitle="PdfReport.cs" %}
-    
-    class PdfReport
+    using System.Reflection;
+    using System.IO;
+
+    internal class PdfReport
     {
         private Stream docStream;
 
@@ -158,16 +160,52 @@ After adding the `SfPdfViewerControl`, you can load a PDF document using data bi
     }
 
     {% endhighlight %} 
+    
+{% highlight vbnet %}
+Class PdfReport
+    Private docStream As Stream
+
+    ''' <summary>
+    ''' Stream object to be bound to the ItemsSource of the PDF Viewer
+    ''' </summary>
+    Public Property DocumentStream As Stream
+        Get
+            Return docStream
+        End Get
+        Set
+            docStream = Value
+        End Set
+    End Property
+
+    Public Sub New()
+        'Loads the stream from the embedded resource.
+        Dim assembly As Assembly = GetType(MainPage).GetTypeInfo().Assembly
+        docStream = assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf")
+    End Sub
+
+End Class
+{% endhighlight %}
     {% endtabs %}
 
-3.  Open the `MainPage.xaml` file again and add the namespace `PdfViewerExample` as local.
+3.  Replace PdfViewerExample with your actual project namespace in the resource path::
+{% tabs %}
+{% highlight c# tabtitle="PdfViewerViewModel.cs" %}
+
+    doctStream = assembly.GetManifestResourceStream("YourProjectNamespace.Assets.PDF_Succinctly.pdf");
+{% endhighlight %} 
+{% highlight vbnet %}
+    docStream = assembly.GetManifestResourceStream("YourProjectNamespace.Assets.PDF_Succinctly.pdf")
+{% endhighlight %}
+{% endtabs %}
+
+4.  Open the `MainPage.xaml` file again and add the namespace `PdfViewerExample` as local.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
     xmlns:local="using:PdfViewerExample"
 {% endhighlight %} 
 {% endtabs %}
 
-4.  Set an instance of the `PdfReport` class as the `DataContext`. Bind the PDF viewer's [ItemSource] to the `DocumentStream` property of the `PdfReport` class.
+5.  Set an instance of the `PdfReport` class as the `DataContext`. Bind the PDF viewer's [ItemSource] to the `DocumentStream` property of the `PdfReport` class.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
     <Page.DataContext>
