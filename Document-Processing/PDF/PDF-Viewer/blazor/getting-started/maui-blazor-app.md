@@ -55,7 +55,7 @@ After the packages are installed, open the `~/_Imports.razor` file and import th
 Add the `Syncfusion.Blazor` namespace to the `MauiProgram.cs` file.
 
 {% tabs %}
-{% highlight razor tabtitle="Program.cs" %}
+{% highlight c# tabtitle="Program.cs" %}
 
 using Syncfusion.Blazor;
 

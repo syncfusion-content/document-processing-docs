@@ -186,7 +186,7 @@ After the package is installed, open the `~/_Imports.razor` file and import the 
 Add the `Syncfusion.Blazor` namespace to the `Program.cs` file.
 
 {% tabs %}
-{% highlight razor tabtitle="Program.cs" %}
+{% highlight c# tabtitle="Program.cs" %}
 
 using Syncfusion.Blazor;
 
@@ -198,7 +198,7 @@ using Syncfusion.Blazor;
 Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the `~/Program.cs` file after the **builder** is created in your Blazor WebAssembly App.
 
 {% tabs %}
-{% highlight C# tabtitle="Program.cs" %}
+{% highlight c# tabtitle="Program.cs" %}
 
 // Enable memory caching
 builder.Services.AddMemoryCache();

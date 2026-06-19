@@ -221,7 +221,7 @@ dotnet add package Microsoft.Extensions.AI.OpenAI --version 9.8.0-preview.1.2541
 Add the AI service namespace to the `Program.cs` file.
 
 {% tabs %}
-{% highlight C# tabtitle="Program.cs" %}
+{% highlight c# tabtitle="Program.cs" %}
 
 using Azure.AI.OpenAI;
 using Microsoft.Extensions.AI;
@@ -234,7 +234,7 @@ using System.ClientModel;
 To configure the AI service, add the following settings to the `~/Program.cs` file in the Blazor Server app.
 
 {% tabs %}
-{% highlight C# tabtitle="Program.cs" %}
+{% highlight c# tabtitle="Program.cs" %}
 
 // Azure OpenAI configuration values
 string azureOpenAiKey = "api-key";
@@ -300,7 +300,7 @@ dotnet add package OllamaSharp --version 5.3.6
 Add the ollama namespace to the `Program.cs` file.
 
 {% tabs %}
-{% highlight C# tabtitle="Program.cs" %}
+{% highlight c# tabtitle="Program.cs" %}
 
 using Microsoft.Extensions.AI;
 using OllamaSharp;
