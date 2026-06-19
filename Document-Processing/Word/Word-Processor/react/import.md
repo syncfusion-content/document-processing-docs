@@ -28,6 +28,34 @@ The following example shows how to open SFDT data in Document Editor.
         
 {% previewsample "/document-processing/code-snippet/document-editor/react/import-cs1" %}
 
+## SFDT Document Import architecture overview
+
+SFDT document import directly reads the native Syncfusion Document Text format file and opens it in the Document Editor without server-side processing.
+
+```
+User Selects SFDT File (.sfdt format)
+   ↓
+CLIENT: File picker dialog opens to select native SFDT format file
+   ↓
+CLIENT: Document Editor validates file extension is .sfdt
+   ↓
+CLIENT: FileReader API reads SFDT file content from local machine
+   ↓
+CLIENT: Parses file content as JSON string
+   ↓
+CLIENT: Validates SFDT JSON structure and content
+   ↓
+CLIENT: Calls documentEditor.open() method directly with SFDT data
+   ↓
+CLIENT: Document Editor deserializes SFDT JSON to internal document object
+   ↓
+CLIENT: Builds and renders document structure in viewport
+   ↓
+CLIENT: Applies styles, formatting, and content layout to document
+   ↓
+USER: Views SFDT document immediately displayed in Document Editor (no server communication required)
+```
+
 ## Import document from local machine
 
 The following example shows how to import document from local machine.
@@ -45,6 +73,52 @@ The following example shows how to import document from local machine.
 {% endtabs %}
         
 {% previewsample "/document-processing/code-snippet/document-editor/react/import-cs2" %}
+
+## Word Document Import architecture overview
+
+Word document and other format imports are sent to the server for conversion to SFDT before rendering in the Document Editor.
+
+```
+User Selects Word Document File (DOCX, DOC, DOTX, DOTM, RTF, TXT, XML)
+   ↓
+CLIENT: File picker dialog opens to select non-SFDT format file
+   ↓
+CLIENT: Document Editor validates file extension and type
+   ↓
+CLIENT: Reads selected file into memory using FileReader API or FormData
+   ↓
+CLIENT: Prepares XMLHttpRequest with file content and FormData
+   ↓
+CLIENT: Sends HTTP POST request to Import API endpoint with file
+   ↓
+HTTP Request (File uploaded to server with format type identified)
+   ↓
+SERVER: Receives file upload request at Import API endpoint
+   ↓
+SERVER: Detects document format type from file extension or content
+   ↓
+SERVER: Loads document using appropriate format type handler (DOCX, RTF, TXT, etc.)
+   ↓
+SERVER: Parses document structure, styles, content, and formatting
+   ↓
+SERVER: Converts document content to SFDT (Syncfusion Document Text) format
+   ↓
+SERVER: Serializes converted SFDT document to JSON string
+   ↓
+SERVER: Returns JSON response containing complete SFDT document data
+   ↓
+HTTP Response (SFDT JSON string sent back to client)
+   ↓
+CLIENT: Receives HTTP response with SFDT JSON data
+   ↓
+CLIENT: Parses JSON response to extract SFDT document object
+   ↓
+CLIENT: Calls documentEditor.open() method with converted SFDT data
+   ↓
+CLIENT: Document Editor loads and renders SFDT in viewport
+   ↓
+USER: Views imported document fully formatted in Document Editor
+```
 
 ## Convert word documents into SFDT
 

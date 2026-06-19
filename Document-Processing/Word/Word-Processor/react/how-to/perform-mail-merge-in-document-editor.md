@@ -18,6 +18,37 @@ You can perform mail merge in the React DOCX Editor (Document Editor) using the 
 
 3. Finally, view the merged document in the Document Editor.
 
+
+## Mail merge architecture overview
+
+Mail merge allows users to insert merge fields in a document template, provide data sources, and generate personalized documents by executing the merge operation on the server using DocIO.
+
+```
+User inserts merge fields in template
+   ↓
+CLIENT: Document Editor stores merge field codes
+   ↓
+CLIENT: Sends template document and data source to server
+   ↓
+HTTP Request (Template + data source sent to server)
+   ↓
+SERVER: Receives template and data source
+   ↓
+SERVER: DocIO loads and parses template document
+   ↓
+SERVER: Identifies merge field codes and iterates through data records
+   ↓
+SERVER: Maps data values to merge fields and replaces them
+   ↓
+SERVER: Maintains formatting and generates merged document
+   ↓
+HTTP Response (Merged document returned to client)
+   ↓
+CLIENT: Document Editor loads and displays merged document
+   ↓
+User views, edits, and exports personalized document
+```
+
 ## Insert merge field
 
 A field can be added to the document by using the [insertField](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#insertfield) method in the [Editor](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor) module.

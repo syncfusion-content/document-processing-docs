@@ -18,6 +18,32 @@ Document Editor supports server-side export of **Syncfusion Document Text (.sfdt
 * [Syncfusion.EJ2.WordEditor.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Mvc5)
 * [Syncfusion.EJ2.WordEditor.AspNet.Mvc4](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Mvc4)
 
+### SFDT to DOCX export architecture overview
+
+SFDT to DOCX export serializes the document content from the Document Editor and sends it to the server for format conversion and file generation.
+
+```text
+User clicks Save button
+   ↓
+CLIENT: Document Editor serializes document to SFDT format
+   ↓
+CLIENT: Sends SFDT content and target format to Export API endpoint
+   ↓
+HTTP Request (SFDT JSON payload sent to server)
+   ↓
+SERVER: Receives SFDT content at Export API endpoint
+   ↓
+SERVER: Deserializes SFDT to document object and converts to target format
+   ↓
+SERVER: Generates file stream and saves to storage
+   ↓
+HTTP Response (File path or download link returned to client)
+   ↓
+CLIENT: Receives response and initiates file download
+   ↓
+User downloads exported document file (DOCX/DOC/RTF/TXT/WordML/HTML)
+```
+
 Please refer the following code example.
 
 ```csharp

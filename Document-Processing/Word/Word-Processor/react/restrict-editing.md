@@ -228,6 +228,44 @@ container.documentEditor.editor.enforceProtection('password', true, true);
 {% endhighlight %}
 {% endtabs %}
 
+## Restrict Editing - Server Side architecture overview
+
+The server generates a secure hash from password and salt values, stores protection settings, and enforces restriction modes (ReadOnly, FormFieldsOnly, CommentsOnly, RevisionsOnly) for protected documents.
+
+```text
+User initiates protection with password and mode
+   ↓
+CLIENT: Calls enforceProtection() and sends password, salt, mode to server
+   ↓
+HTTP Request (Protection parameters sent to server)
+   ↓
+SERVER: Receives request and generates cryptographic hash from password and salt
+   ↓
+SERVER: Stores hash, salt, and protection mode with document
+   ↓
+HTTP Response (Protection confirmation sent to client)
+   ↓
+CLIENT: Receives confirmation and applies protection to document
+   ↓
+User attempts to modify protected document
+   ↓
+CLIENT: Captures modification event on protected content
+   ↓
+CLIENT: Sends modification request with user credentials to server
+   ↓
+HTTP Request (Modification attempt sent to server)
+   ↓
+SERVER: Verifies credentials against stored hash and checks restriction mode
+   ↓
+SERVER: Returns authorization decision (permit or deny)
+   ↓
+HTTP Response (Authorization result sent to client)
+   ↓
+CLIENT: Applies result and updates document state
+   ↓
+User sees modification allowed or denied based on protection rules
+```
+
 ## Configure on server side
 
 The above-mentioned hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service as shown below. 
