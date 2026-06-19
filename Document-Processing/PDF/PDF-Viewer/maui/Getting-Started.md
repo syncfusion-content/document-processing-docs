@@ -126,27 +126,22 @@ xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Ma
         public PdfViewerViewModel()
         {
             // Load the embedded PDF document stream.
+            // Update the resource path to match your project namespace (replace PdfViewerExample with your actual project name):
             pdfDocumentStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf");
         }
     }
 
     {% endhighlight %} 
     {% endtabs %}
-4.  Replace PdfViewerExample with your actual project namespace in the resource path:
-{% tabs %}
-{% highlight c# tabtitle="PdfViewerViewModel.cs" %}
 
-    pdfDocumentStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf");
-{% endhighlight %} 
-{% endtabs %}
-5.  Open the `MainPage.xaml` file again and add the namespace `PdfViewerExample` and name it as `local`.
+4.  Open the `MainPage.xaml` file again and add the namespace `PdfViewerExample` and name it as `local`.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
     xmlns:local="clr-namespace:PdfViewerExample"
 {% endhighlight %} 
 {% endtabs %}
 
-6.  Set an instance of the `PdfViewerViewModel` class as the `BindingContext`. Bind the PDF viewer's [DocumentSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) to the `PdfDocumentStream` property of the `PdfViewerViewModel` class.
+5.  Set an instance of the `PdfViewerViewModel` class as the `BindingContext`. Bind the PDF viewer's [DocumentSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) to the `PdfDocumentStream` property of the `PdfViewerViewModel` class.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
     <ContentPage.BindingContext>
@@ -291,6 +286,7 @@ xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Ma
         public PdfViewerViewModel()
         {
             // Load the embedded PDF document stream.
+            // Update the resource path to match your project namespace (replace PdfViewerExample with your actual project name):
             pdfDocumentStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf");
         }
     }
@@ -298,22 +294,15 @@ xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Ma
     {% endhighlight %} 
     {% endtabs %}
 
-4.  Replace PdfViewerExample with your actual project namespace in the resource path::
-{% tabs %}
-{% highlight c# tabtitle="PdfViewerViewModel.cs" %}
 
-    pdfDocumentStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf");
-{% endhighlight %} 
-{% endtabs %}
-
-5.  Open the `MainPage.xaml` file again and add the namespace `PdfViewerExample`and name it as `local`.
+4.  Open the `MainPage.xaml` file again and add the namespace `PdfViewerExample`and name it as `local`.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
     xmlns:local="clr-namespace:PdfViewerExample"
 {% endhighlight %} 
 {% endtabs %}
 
-6.  Set an instance of the `PdfViewerViewModel` class as the `BindingContext`. Bind the PDF viewer's [DocumentSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) to the `PdfDocumentStream` property of the `PdfViewerViewModel` class.
+5.  Set an instance of the `PdfViewerViewModel` class as the `BindingContext`. Bind the PDF viewer's [DocumentSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) to the `PdfDocumentStream` property of the `PdfViewerViewModel` class.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
     <ContentPage.BindingContext>
@@ -405,7 +394,7 @@ Open the `MainPage.xaml` file and follow the steps below.
 1.  Add the following namespace in your MainPage.xaml file.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Maui.PdfViewer"
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Maui.PdfViewer"
 {% endhighlight %} 
 {% endtabs %}
 
@@ -465,29 +454,22 @@ xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Ma
         public PdfViewerViewModel()
         {
             // Load the embedded PDF document stream.
+            // Update the resource path to match your project namespace (replace PdfViewerExample with your actual project name)
             pdfDocumentStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf");
         }
     }
 
-    {% endhighlight %} 
-    {% endtabs %}
-
-4.  Replace PdfViewerExample with your actual project namespace in the resource path::
-{% tabs %}
-{% highlight c# tabtitle="PdfViewerViewModel.cs" %}
-
-    pdfDocumentStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("YourProjectNamespace.Assets.PDF_Succinctly.pdf");
 {% endhighlight %} 
 {% endtabs %}
 
-5.  Open the `MainPage.xaml` file again and add the namespace `PdfViewerExample` and name it as `local`.
+4.  Open the `MainPage.xaml` file again and add the namespace `PdfViewerExample` and name it as `local`.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
  xmlns:local="clr-namespace:PdfViewerExample"
 {% endhighlight %} 
 {% endtabs %}
 
-6.  Set an instance of the `PdfViewerViewModel` class as the `BindingContext`. Bind the PDF viewer's [DocumentSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) to the `PdfDocumentStream` property of the `PdfViewerViewModel` class.
+5.  Set an instance of the `PdfViewerViewModel` class as the `BindingContext`. Bind the PDF viewer's [DocumentSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) to the `PdfDocumentStream` property of the `PdfViewerViewModel` class.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
     <ContentPage.BindingContext>

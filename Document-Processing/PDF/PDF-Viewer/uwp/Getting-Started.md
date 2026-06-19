@@ -88,6 +88,7 @@ UWP PdfViewer control can be added to an application either through the designer
 {% tabcontents %}
 
 {% tabcontent Via Designer %}
+
 1. Click and open the MainPage.xaml file.
 
 2. Open the Visual Studio **Tool** **box**. Navigate to "Syncfusion<sup>®</sup> Controls for UWP" tab and find the  SfPdfViewerControl toolbox items.
@@ -103,6 +104,7 @@ When you drag the SfPdfViewerControl toolbox item to the window, it automaticall
 {% tabcontent Via Coding %}
 
 The SfPdfViewerControl is available in the following namespace [_Syncfusion.Windows.PdfViewer_](https://help.syncfusion.com/cr/UWP/Syncfusion.Windows.PdfViewer.html) and it can be created using XAML or programmatically using C#.
+
 1. Add the Syncfusion PdfViewer namespace
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -153,8 +155,11 @@ After adding the `SfPdfViewerControl`, you can load a PDF document using data bi
         }
 
         public PdfReport()
-        { 
+        {
+            // Loads the stream from the embedded resource.
             Assembly assembly = typeof(MainPage).GetTypeInfo().Assembly;
+
+            // Update the resource path to match your project namespace (replace PdfViewerExample with your actual project name)
             docStream = assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf");
         }
     }
@@ -187,25 +192,16 @@ End Class
 {% endhighlight %}
     {% endtabs %}
 
-3.  Replace PdfViewerExample with your actual project namespace in the resource path::
-{% tabs %}
-{% highlight c# tabtitle="PdfViewerViewModel.cs" %}
 
-    doctStream = assembly.GetManifestResourceStream("YourProjectNamespace.Assets.PDF_Succinctly.pdf");
-{% endhighlight %} 
-{% highlight vbnet %}
-    docStream = assembly.GetManifestResourceStream("YourProjectNamespace.Assets.PDF_Succinctly.pdf")
-{% endhighlight %}
-{% endtabs %}
 
-4.  Open the `MainPage.xaml` file again and add the namespace `PdfViewerExample` as local.
+3.  Open the `MainPage.xaml` file again and add the namespace `PdfViewerExample` as local.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
     xmlns:local="using:PdfViewerExample"
 {% endhighlight %} 
 {% endtabs %}
 
-5.  Set an instance of the `PdfReport` class as the `DataContext`. Bind the PDF viewer's [ItemSource] to the `DocumentStream` property of the `PdfReport` class.
+4.  Set an instance of the `PdfReport` class as the `DataContext`. Bind the PDF viewer's [ItemSource] to the `DocumentStream` property of the `PdfReport` class.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
     <Page.DataContext>
