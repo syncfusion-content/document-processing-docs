@@ -94,5 +94,5 @@ Controls.Add(pdfDocumentView1)
 N> You can also explore our [WinForms PDF Viewer example](https://github.com/syncfusion/winforms-demos/tree/master/pdfviewer) that shows you how to render and configure the PDF Viewer.
 
 ## See Also
-- [Getting started] (./Getting-Started)
+- [Getting started](./Getting-Started)
 - [Viewing PDF files](/windowsforms/pdf-viewer/working-with-pdf-viewer#viewing-pdf-files)
