@@ -35,11 +35,13 @@ Or run this command in Package Manager Console:
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
 
-Install-Package Syncfusion.EJ2.PdfViewer.AspNet.Mvc5 -Version {{ site.releaseversion }}
-Install-Package Syncfusion.EJ2.MVC5 -Version {{ site.releaseversion }}
+Install-Package Syncfusion.EJ2.PdfViewer.AspNet.Mvc5 -Version {{ site.ej2version }}
+Install-Package Syncfusion.EJ2.MVC5 -Version {{ site.ej2version }}
 
 {% endhighlight %}
 {% endtabs %}
+
+> Make sure that the `Microsoft.AspNet.Mvc` package and its dependency packages are updated to the latest version.
 
 ## Add namespace
 
