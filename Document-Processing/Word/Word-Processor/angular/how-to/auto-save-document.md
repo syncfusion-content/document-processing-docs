@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Auto save document in Angular Document editor component | Syncfusion
+title: How to auto save document in Angular Document editor component | Syncfusion
 description: Learn here all about Auto save document in document editor in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Auto save document in document editor 
@@ -14,7 +14,7 @@ In this article, we are going to see how to auto save the document to server. Yo
 
 The following example illustrates how to auto save the document in server.
 
-* In the client-side, using content change event, we can automatically save the edited content in regular intervals of time. Based on `contentChanged` boolean, the document send as DOCX format to server-side using [`saveAsBlob`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#saveasblob) method.
+* In the client-side, using content change event, we can automatically save the edited content in regular intervals of time. Based on `contentChanged` boolean, the document send as DOCX format to server-side using [`saveAsBlob`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#saveasblob) method.
 
 ```typescript
 import { Component, OnInit, ViewChild } from '@angular/core';
