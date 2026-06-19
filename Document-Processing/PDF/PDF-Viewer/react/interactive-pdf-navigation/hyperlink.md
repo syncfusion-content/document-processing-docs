@@ -16,6 +16,10 @@ This guide shows how to configure hyperlink behavior in the React PDF Viewer: ta
 
 N> The table of contents pane and hyperlink interactions rely on the same navigation infrastructure. When these capabilities are enabled, the PDF Viewer automatically surfaces TOC entries and clickable links defined in the PDF.
 
+## Required modules
+
+Inject the following modules to enable navigation: `Toolbar`, `Magnification`, `Navigation`, `LinkAnnotation`, `BookmarkView`, `TextSelection`, `ThumbnailView`, and optionally `Annotation`.
+
 ## Table of contents navigation
 
 Navigate through PDF sections using the table of contents pane. The viewer displays bookmarks and outline entries defined in the PDF. Select an entry to jump to that destination. Empty pane indicates the PDF has no table of contents structure.
