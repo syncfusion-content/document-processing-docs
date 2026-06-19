@@ -43,10 +43,6 @@ Refer to the following code snippet to switch to highlight mode.
 {% endhighlight %}
 {% endtabs %}
 
-N> To set up the **server-backed PDF Viewer**,
-Add the below [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) in the `index.html` file
-`serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
-
 {% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/highlight-mode-cs1" %}
 
 Refer to the following code snippet to switch back to normal mode from highlight mode.
@@ -56,10 +52,6 @@ Refer to the following code snippet to switch back to normal mode from highlight
 {% include code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/highlight-normal-mode-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
-
-N> To set up the **server-backed PDF Viewer**,
-Add the below `serviceUrl` in the `index.html` file
-`serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
 {% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/highlight-normal-mode-cs1" %}
 
@@ -96,27 +88,6 @@ if (highlight) {
 }
 
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl : "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
-                });
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
-                              ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
-pdfviewer.appendTo('#PdfViewer');
-let highlight = document.getElementById('highlight');
-if (highlight) {
-    highlight.addEventListener('click', function () {
-        if (pdfviewer) {
-            pdfviewer.annotation.addAnnotation("Highlight", {
-                bounds: [{ x: 97, y: 110, width: 350, height: 14 }],
-                pageNumber: 1
-            });
-        }
-    });
-}
-{% endhighlight %}
 {% endtabs %}
 
 ## Underline text
@@ -148,10 +119,6 @@ Refer to the following code snippet to switch to underline mode.
 {% endhighlight %}
 {% endtabs %}
 
-N> To set up the **server-backed PDF Viewer**,
-Add the below `serviceUrl` in the `index.html` file
-`serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
-
 {% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/underline-mode-cs1" %}
 
 
@@ -162,10 +129,6 @@ Refer to the following code snippet to switch back to normal mode from underline
 {% include code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/underline-normal-mode-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
-
-N> To set up the **server-backed PDF Viewer**,
-Add the below `serviceUrl` in the `index.html` file
-`serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
 {% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/underline-normal-mode-cs1" %}
 
@@ -189,28 +152,6 @@ ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearc
                               ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
 pdfviewer.appendTo('#PdfViewer');
 
-let underline = document.getElementById('underline');
-if (underline) {
-    underline.addEventListener('click', function () {
-        if (pdfviewer) {
-            pdfviewer.annotation.addAnnotation("Underline", {
-                bounds: [{ x: 97, y: 110, width: 350, height: 14 }],
-                pageNumber: 1
-            });
-        }
-    });
-}
-
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl : "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
-                });
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
-                              ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
-pdfviewer.appendTo('#PdfViewer');
 let underline = document.getElementById('underline');
 if (underline) {
     underline.addEventListener('click', function () {
@@ -255,10 +196,6 @@ Refer to the following code snippet to switch to strikethrough mode.
 {% endhighlight %}
 {% endtabs %}
 
-N> To set up the **server-backed PDF Viewer**,
-Add the below `serviceUrl` in the `index.html` file
-`serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
-
 {% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/strikethrough-mode-cs1" %}
 
 Refer to the following code snippet to switch back to normal mode from strikethrough mode.
@@ -268,10 +205,6 @@ Refer to the following code snippet to switch back to normal mode from strikethr
 {% include code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/strikethrough-normal-mode-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
-
-N> To set up the **server-backed PDF Viewer**,
-Add the below `serviceUrl` in the `index.html` file
-`serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
 {% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/strikethrough-normal-mode-cs1" %}
 
@@ -308,27 +241,6 @@ if (strikethrough) {
 }
 
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl : "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
-                });
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
-                              ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
-pdfviewer.appendTo('#PdfViewer');
-let strikethrough = document.getElementById('strikethrough');
-if (strikethrough) {
-    strikethrough.addEventListener('click', function () {
-        if (pdfviewer) {
-            pdfviewer.annotation.addAnnotation("Strikethrough", {
-                bounds: [{ x: 97, y: 110, width: 350, height: 14 }],
-                pageNumber: 1
-            });
-        }
-    });
-}
-{% endhighlight %}
 {% endtabs %}
 
 ## Add squiggly to text
@@ -359,10 +271,6 @@ Refer to the following code snippet to switch to squiggly mode.
 {% endhighlight %}
 {% endtabs %}
 
-N> To set up the **server-backed PDF Viewer**,
-Add the below `serviceUrl` in the `index.html` file
-`serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
-
 {% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/squiggly-mode-cs1" %}
 
 Refer to the following code snippet to switch back to normal mode from squiggly mode.
@@ -372,10 +280,6 @@ Refer to the following code snippet to switch back to normal mode from squiggly 
 {% include code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/squiggly-normal-mode-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
-
-N> To set up the **server-backed PDF Viewer**,
-Add the below `serviceUrl` in the `index.html` file
-`serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
 {% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/squiggly-normal-mode-cs1" %}
 
@@ -412,27 +316,6 @@ if (squiggly) {
     });
 }
 
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl : "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
-                });
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
-                              ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
-pdfviewer.appendTo('#PdfViewer');
-let squiggly = document.getElementById('squiggly');
-if (squiggly) {
-    squiggly.addEventListener('click', function () {
-        if (pdfviewer) {
-            pdfviewer.annotation.addAnnotation("Squiggly", {
-                bounds: [{ x: 97, y: 110, width: 350, height: 14 }],
-                pageNumber: 1
-            });
-        }
-    });
-}
 {% endhighlight %}
 {% endtabs %}
 
@@ -488,20 +371,6 @@ ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, 
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"",
-    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer',
-    highlightSettings: {author: 'Guest User', subject: 'Important', color: '#ffff00', opacity: 0.9, modifiedDate: ''},
-    underlineSettings: {author: 'Guest User', subject: 'Points to be remembered', color: '#00ffff', opacity: 0.9, modifiedDate: ''},
-    strikethroughSettings: {author: 'Guest User', subject: 'Not Important', color: '#ff00ff', opacity: 0.9, modifiedDate: ''},
-    squigglySettings: {author: 'Guest User', subject: 'Spelling Error', color: '#ff0000', opacity: 0.9, modifiedDate: ''}
-});
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Perform undo and redo
@@ -527,10 +396,6 @@ Refer to the following code snippet to call undo and redo actions from the clien
 {% endhighlight %}
 {% endtabs %}
 
-N> To set up the **server-backed PDF Viewer**,
-Add the below `serviceUrl` in the `index.html` file
-`serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
-
 {% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/undo-redo-cs1" %}
 
 ## Save text markup annotations
@@ -551,17 +416,6 @@ Disable text markup annotations using the `enableTextMarkupAnnotation` property.
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     enableTextMarkupAnnotation: false,
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                });
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    enableTextMarkupAnnotation: false,
-                    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
 pdfviewer.appendTo('#PdfViewer');

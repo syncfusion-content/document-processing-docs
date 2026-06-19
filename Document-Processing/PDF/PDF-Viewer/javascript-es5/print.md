@@ -41,17 +41,7 @@ The following HTML and JavaScript examples render the PDF Viewer with printing e
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     enablePrint: true,
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                });
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    enablePrint: true,
-                    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
+                    resourceUrl: "https://cdn.syncfusion.com/ej2/33.2.13/dist/ej2-pdfviewer-lib"
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
 pdfviewer.appendTo('#PdfViewer');
@@ -76,22 +66,7 @@ To start printing from code, call the `print.print()` method after loading a doc
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     enablePrint: true,
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                });
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('print').addEventListener('click', function () {
-   pdfviewer.print.print();
-});
-
-
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    enablePrint: true,
-                    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
+                    resourceUrl: "https://cdn.syncfusion.com/ej2/33.2.13/dist/ej2-pdfviewer-lib"
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
 pdfviewer.appendTo('#PdfViewer');
@@ -118,19 +93,7 @@ The following example demonstrates how to update the scale factor before printin
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     enablePrint: true,
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    printScaleFactor: 0.5,
-                });
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
-//pdf with low quality. By changing values you can change the quality of the pdf.
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    enablePrint: true,
-                    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer',
+                    resourceUrl: "https://cdn.syncfusion.com/ej2/33.2.13/dist/ej2-pdfviewer-lib",
                     printScaleFactor: 0.5,
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
@@ -149,22 +112,7 @@ Set the `enablePrintRotation` property to control whether landscape pages are ro
 
 var viewer = new ej.pdfviewer.PdfViewer({
   documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-  enablePrintRotation: true
-});
-
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.BookmarkView,
-  ej.pdfviewer.ThumbnailView, ej.pdfviewer.TextSelection, ej.pdfviewer.Print, ej.pdfviewer.Navigation,
-  ej.pdfviewer.LinkAnnotation, ej.pdfviewer.Annotation
-);
-
-viewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-var viewer = new ej.pdfviewer.PdfViewer({
-  documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-  serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/',
+  resourceUrl: "https://cdn.syncfusion.com/ej2/33.2.13/dist/ej2-pdfviewer-lib"
   enablePrintRotation: true
 });
 
@@ -194,22 +142,7 @@ The following example shows how to set the print mode.
 
 var viewer = new ej.pdfviewer.PdfViewer({
   documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-  printMode: 'NewWindow'
-});
-
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.BookmarkView,
-  ej.pdfviewer.ThumbnailView, ej.pdfviewer.TextSelection, ej.pdfviewer.Print, ej.pdfviewer.Navigation,
-  ej.pdfviewer.LinkAnnotation, ej.pdfviewer.Annotation
-);
-
-viewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-var viewer = new ej.pdfviewer.PdfViewer({
-  documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-  serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/',
+  resourceUrl: "https://cdn.syncfusion.com/ej2/33.2.13/dist/ej2-pdfviewer-lib",
   printMode: 'NewWindow'
 });
 
@@ -247,24 +180,7 @@ The following example logs the file that is being printed and shows how to cance
 
 var viewer = new ej.pdfviewer.PdfViewer({
   documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-  printStart: function(args) {
-    console.log('Print action has started for file ' + args.fileName);
-  }
-});
-
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.BookmarkView,
-  ej.pdfviewer.ThumbnailView, ej.pdfviewer.TextSelection, ej.pdfviewer.Print, ej.pdfviewer.Navigation,
-  ej.pdfviewer.LinkAnnotation, ej.pdfviewer.Annotation
-);
-
-viewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-var viewer = new ej.pdfviewer.PdfViewer({
-  documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-  serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/',
+  resourceUrl: "https://cdn.syncfusion.com/ej2/33.2.13/dist/ej2-pdfviewer-lib",
   printStart: function(args) {
     console.log('Print action has started for file ' + args.fileName);
   }
@@ -293,24 +209,7 @@ The following example logs the printed file name.
 
 var viewer = new ej.pdfviewer.PdfViewer({
   documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-  printEnd: function(args) {
-    console.log('Printed File Name: ' + args.fileName);
-  }
-});
-
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.BookmarkView,
-  ej.pdfviewer.ThumbnailView, ej.pdfviewer.TextSelection, ej.pdfviewer.Print, ej.pdfviewer.Navigation,
-  ej.pdfviewer.LinkAnnotation, ej.pdfviewer.Annotation
-);
-
-viewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-var viewer = new ej.pdfviewer.PdfViewer({
-  documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-  serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/',
+  resourceUrl: "https://cdn.syncfusion.com/ej2/33.2.13/dist/ej2-pdfviewer-lib",
   printEnd: function(args) {
     console.log('Printed File Name: ' + args.fileName);
   }

@@ -52,20 +52,6 @@ let pdfviewer: PdfViewer = new PdfViewer({
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection} from '@syncfusion/ej2-pdfviewer';
-
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
-
-let pdfviewer: PdfViewer = new PdfViewer({
-        enableTextSelection: true,
-        documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-        serviceUrl : 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
-    });
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
 {% endtabs %}
 
 ![Alt text](./images/selection.png)
@@ -94,7 +80,7 @@ pdfviewer.appendTo('#PdfViewer');
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     interactionMode: 'Pan'
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
+                    resourceUrl: "https://cdn.syncfusion.com/ej2/33.2.13/dist/ej2-pdfviewer-lib"
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
 pdfviewer.appendTo('#PdfViewer');

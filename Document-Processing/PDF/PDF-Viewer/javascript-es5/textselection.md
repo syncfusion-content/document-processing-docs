@@ -63,7 +63,7 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     enableTextSelection: true // Defaults to true
 });
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
+pdfviewer.resourceUrl="https://cdn.syncfusion.com/ej2/33.2.13/dist/ej2-pdfviewer-lib";
 pdfviewer.appendTo('#PdfViewer');
 
 // Toggle on demand

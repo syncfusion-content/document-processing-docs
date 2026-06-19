@@ -51,25 +51,6 @@ if (addFreeTextAnnotationButton) {
 }
 
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
-                });
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
-                              ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
-pdfviewer.appendTo('#PdfViewer');
-let addFreeTextAnnotationButton = document.getElementById('addFreeTextAnnotation');
-if (addFreeTextAnnotationButton) {
-    addFreeTextAnnotationButton.addEventListener('click', function () {
-        if (pdfviewer) {
-            pdfviewer.annotationModule.setAnnotationMode("FreeText");
-        }
-    });
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Add a free text annotation programmatically to the PDF document
@@ -112,34 +93,6 @@ if (addFreeTextAnnotation) {
 }
 
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
-                });
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
-                              ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
-pdfviewer.appendTo('#PdfViewer');
-let addFreeTextAnnotation = document.getElementById('addFreeTextAnnotation');
-if (addFreeTextAnnotation) {
-    addFreeTextAnnotation.addEventListener('click', function () {
-        if (pdfviewer) {
-            pdfviewer.annotation.addAnnotation("FreeText", {
-                offset: { x: 120, y: 80 },
-                fontSize: 16,
-                fontFamily: "Helvetica",
-                pageNumber: 1,
-                width: 200,
-                height: 40,
-                isLock: false,
-                defaultText: "Syncfusion"
-            } );
-        }
-    });
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Change the content of an existing free text annotation programmatically
@@ -157,31 +110,6 @@ Here is an example of changing the content of a free text annotation using editA
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
                     resourceUrl : "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-                });
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
-                              ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
-pdfviewer.appendTo('#PdfViewer');
-
-let changeContent = document.getElementById('changeContent');
-if (changeContent) {
-    changeContent.addEventListener('click', function () {
-        if (pdfviewer) {
-            for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
-                if (pdfviewer.annotationCollection[i].subject === 'Text Box') {
-                  pdfviewer.annotationCollection[i].dynamicText = 'syncfusion';
-                  pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
-                }
-            }
-        }
-    });
-}
-
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
                               ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
@@ -276,18 +204,6 @@ After changing default values, the selected values are applied. The following ex
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
                     resourceUrl : "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
-                    freeTextSettings : { fillColor: 'green', borderColor: 'blue', fontColor: 'yellow' }
-                });
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
-                              ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer',
                     freeTextSettings : { fillColor: 'green', borderColor: 'blue', fontColor: 'yellow' }
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,

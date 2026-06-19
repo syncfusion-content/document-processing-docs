@@ -111,47 +111,6 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
 
 pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-ej.pdfviewer.PdfViewer.Inject(
-  ej.pdfviewer.Toolbar,
-  ej.pdfviewer.Magnification,
-  ej.pdfviewer.Navigation,
-  ej.pdfviewer.LinkAnnotation,
-  ej.pdfviewer.ThumbnailView,
-  ej.pdfviewer.BookmarkView,
-  ej.pdfviewer.TextSelection,
-  ej.pdfviewer.Annotation
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-  documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-
-  highlightSettings: { author: 'QA', subject: 'Review', color: '#ffff00', opacity: 0.6 },
-  strikethroughSettings: { author: 'QA', subject: 'Remove', color: '#ff0000', opacity: 0.6 },
-  underlineSettings: { author: 'Guest User', subject: 'Points to be remembered', color: '#00ffff', opacity: 0.9 },
-  squigglySettings: { author: 'Guest User', subject: 'Corrections', color: '#00ff00', opacity: 0.9 },
-
-  lineSettings: { strokeColor: '#0066ff', thickness: 2, opacity: 0.8 },
-  arrowSettings: { strokeColor: '#0066ff', thickness: 2, opacity: 0.8 },
-  rectangleSettings: { fillColor: '#ffffff00', strokeColor: '#222222', thickness: 1, opacity: 1 },
-  circleSettings: { fillColor: '#ffffff00', strokeColor: '#222222', thickness: 1, opacity: 1 },
-  polygonSettings: { fillColor: '#ffffff00', strokeColor: '#222222', thickness: 1, opacity: 1 },
-
-  distanceSettings: { strokeColor: '#0066ff', thickness: 2, opacity: 0.8 },
-  perimeterSettings: { strokeColor: '#0066ff', thickness: 2, opacity: 0.8 },
-  areaSettings: { strokeColor: '#0066ff', thickness: 2, opacity: 0.8, fillColor: '#ffffff00' },
-  radiusSettings: { strokeColor: '#0066ff', thickness: 2, opacity: 0.8, fillColor: '#ffffff00' },
-  volumeSettings: { strokeColor: '#0066ff', thickness: 2, opacity: 0.8, fillColor: '#ffffff00' },
-
-  freeTextSettings: { borderColor: '#222222', thickness: 1, opacity: 1 },
-  inkAnnotationSettings: { color: '#0000ff', thickness: 3, opacity: 0.8 },
-  stampSettings: { opacity: 0.9 },
-  stickyNotesSettings: { author: 'QA', subject: 'Review', color: '#ffcc00', opacity: 1 }
-});
-
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.appendTo('#PdfViewer');
-{% endhighlight %}
 {% endtabs %}
 
 N> After changing defaults using UI tools (for example, Edit color or Edit opacity), the updated values apply to subsequent annotations within the same session.

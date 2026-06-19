@@ -63,34 +63,6 @@ if (perimeterBtn) {
   });
 }
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-ej.pdfviewer.PdfViewer.Inject(
-  ej.pdfviewer.Toolbar,
-  ej.pdfviewer.Magnification,
-  ej.pdfviewer.Navigation,
-  ej.pdfviewer.Annotation,
-  ej.pdfviewer.LinkAnnotation,
-  ej.pdfviewer.ThumbnailView,
-  ej.pdfviewer.BookmarkView,
-  ej.pdfviewer.TextSelection,
-  ej.pdfviewer.TextSearch,
-  ej.pdfviewer.FormFields,
-  ej.pdfviewer.FormDesigner,
-  ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.appendTo('#PdfViewer');
-
-var perimeterBtn = document.getElementById('perimeterMode');
-if (perimeterBtn) {
-  perimeterBtn.addEventListener('click', function () {
-    pdfviewer.annotationModule.setAnnotationMode('Perimeter');
-  });
-}
-{% endhighlight %}
 {% endtabs %}
 
 ### Add a perimeter annotation programmatically
@@ -120,43 +92,6 @@ ej.pdfviewer.PdfViewer.Inject(
 var pdfviewer = new ej.pdfviewer.PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
-
-pdfviewer.appendTo('#PdfViewer');
-
-var addBtn = document.getElementById('addPerimeterAnnotation');
-if (addBtn) {
-  addBtn.addEventListener('click', function () {
-    pdfviewer.annotation.addAnnotation('Perimeter', {
-      offset: { x: 200, y: 350 },
-      pageNumber: 1,
-      vertexPoints: [
-        { x: 200, y: 350 },
-        { x: 285, y: 350 },
-        { x: 286, y: 412 }
-      ]
-    });
-  });
-}
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-ej.pdfviewer.PdfViewer.Inject(
-  ej.pdfviewer.Toolbar,
-  ej.pdfviewer.Magnification,
-  ej.pdfviewer.Navigation,
-  ej.pdfviewer.Annotation,
-  ej.pdfviewer.LinkAnnotation,
-  ej.pdfviewer.ThumbnailView,
-  ej.pdfviewer.BookmarkView,
-  ej.pdfviewer.TextSelection,
-  ej.pdfviewer.TextSearch,
-  ej.pdfviewer.FormFields,
-  ej.pdfviewer.FormDesigner,
-  ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer();
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 
 pdfviewer.appendTo('#PdfViewer');
 
@@ -266,46 +201,6 @@ if (editPerimeterAnnotation) {
 }
 
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-ej.pdfviewer.PdfViewer.Inject(
-  ej.pdfviewer.Toolbar,
-  ej.pdfviewer.Magnification,
-  ej.pdfviewer.Navigation,
-  ej.pdfviewer.Annotation,
-  ej.pdfviewer.LinkAnnotation,
-  ej.pdfviewer.ThumbnailView,
-  ej.pdfviewer.BookmarkView,
-  ej.pdfviewer.TextSelection,
-  ej.pdfviewer.TextSearch,
-  ej.pdfviewer.FormFields,
-  ej.pdfviewer.FormDesigner,
-  ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.appendTo('#PdfViewer');
-
-var editPerimeterAnnotation = document.getElementById('editPerimeterAnnotation');
-if (editPerimeterAnnotation) {
-  editPerimeterAnnotation.addEventListener('click', function () {
-    if (pdfviewer) {
-      for (var i = 0; i < pdfviewer.annotationCollection.length; i++) {
-        if (pdfviewer.annotationCollection[i].subject === "Perimeter calculation") {
-          pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle";
-          pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-          pdfviewer.annotationCollection[i].thickness = 2;
-          pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
-          pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
-        }
-      }
-    }
-  });
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Default perimeter settings during initialization
@@ -332,29 +227,6 @@ ej.pdfviewer.PdfViewer.Inject(
 var pdfviewer = new ej.pdfviewer.PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
-
-pdfviewer.perimeterSettings = { fillColor: 'green', opacity: 0.6, strokeColor: 'blue' };
-pdfviewer.appendTo('#PdfViewer');
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-ej.pdfviewer.PdfViewer.Inject(
-  ej.pdfviewer.Toolbar,
-  ej.pdfviewer.Magnification,
-  ej.pdfviewer.Navigation,
-  ej.pdfviewer.Annotation,
-  ej.pdfviewer.LinkAnnotation,
-  ej.pdfviewer.ThumbnailView,
-  ej.pdfviewer.BookmarkView,
-  ej.pdfviewer.TextSelection,
-  ej.pdfviewer.TextSearch,
-  ej.pdfviewer.FormFields,
-  ej.pdfviewer.FormDesigner,
-  ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 
 pdfviewer.perimeterSettings = { fillColor: 'green', opacity: 0.6, strokeColor: 'blue' };
 pdfviewer.appendTo('#PdfViewer');
@@ -392,37 +264,6 @@ ej.pdfviewer.PdfViewer.Inject(
 var pdfviewer = new ej.pdfviewer.PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
 pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
-pdfviewer.appendTo('#PdfViewer');
-
-//Apply Perimeter Settings while adding individual Annotation
-document.getElementById('Perimeter')?.addEventListener('click', function () {
-    pdfviewer.annotation.addAnnotation('Perimeter', {
-        offset: { x: 200, y: 350 },
-        pageNumber: 1,
-        vertexPoints: [{ x: 200, y: 350 }, { x: 285, y: 350 }, { x: 286, y: 412 }],
-        fillColor: 'green', opacity: 0.6, strokeColor: 'blue'
-    });
-});
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-=ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.FormFields,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer();
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
 
 //Apply Perimeter Settings while adding individual Annotation
@@ -479,30 +320,6 @@ ej.pdfviewer.PdfViewer.Inject(
 var pdfviewer = new ej.pdfviewer.PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
-pdfviewer.measurementSettings = { scaleRatio: 2, conversionUnit: 'cm', displayUnit: 'cm' };
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-ej.pdfviewer.PdfViewer.Inject(
-  ej.pdfviewer.Toolbar,
-  ej.pdfviewer.Magnification,
-  ej.pdfviewer.Navigation,
-  ej.pdfviewer.Annotation,
-  ej.pdfviewer.LinkAnnotation,
-  ej.pdfviewer.ThumbnailView,
-  ej.pdfviewer.BookmarkView,
-  ej.pdfviewer.TextSelection,
-  ej.pdfviewer.TextSearch,
-  ej.pdfviewer.FormFields,
-  ej.pdfviewer.FormDesigner,
-  ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.measurementSettings = { scaleRatio: 2, conversionUnit: 'cm', displayUnit: 'cm' };
 pdfviewer.appendTo('#PdfViewer');
 

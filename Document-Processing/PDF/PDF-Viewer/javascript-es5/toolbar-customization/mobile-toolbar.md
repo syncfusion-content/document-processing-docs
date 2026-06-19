@@ -75,23 +75,6 @@ ej.pdfviewer.PdfViewer.Inject(
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer',
-    enableDesktopMode : true
-});
-
-ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation,
-    ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer
-);
-
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Enable Scrolling in Desktop Mode with Touch Gestures
@@ -107,24 +90,6 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
     enableDesktopMode : true,
     enableTextSelection : false
 });
-ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation,
-    ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer
-);
-
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer',
-    enableDesktopMode : true,
-    enableTextSelection : false
-});
-
 ej.pdfviewer.PdfViewer.Inject(
     ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation,
     ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner,

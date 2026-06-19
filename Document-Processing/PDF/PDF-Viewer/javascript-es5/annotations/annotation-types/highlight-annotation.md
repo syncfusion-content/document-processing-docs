@@ -70,8 +70,6 @@ document.getElementById('set').addEventListener('click', function () {
 {% endhighlight %}
 {% endtabs %}
 
-N> To set up the **server-backed PDF Viewer**, add the below `serviceUrl` in the `index.ts` file: `pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
-
 {% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/text-markup-annotation/highlight-mode-cs1" %}
 
 To switch back to normal mode from highlight mode:
@@ -112,9 +110,6 @@ document.getElementById('setNone').addEventListener('click', function () {
 {% endhighlight %}
 {% endtabs %}
 
-N> To set up the **server-backed PDF Viewer**, add the below `serviceUrl` in the `index.ts` file:
-`pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
-
 {% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/text-markup-annotation/highlight-normal-mode-cs1" %}
 
 ### Add highlight annotation programmatically
@@ -145,34 +140,6 @@ ej.pdfviewer.PdfViewer.Inject(
 var pdfviewer = new ej.pdfviewer.PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('highlight').addEventListener('click', function () {
-    pdfviewer.annotation.addAnnotation('Highlight', {
-        bounds: [{ x: 97, y: 110, width: 350, height: 14 }],
-        pageNumber: 1
-    });
-});
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.FormFields,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 pdfviewer.appendTo('#PdfViewer');
 
 document.getElementById('highlight').addEventListener('click', function () {
@@ -250,39 +217,6 @@ document.getElementById('editHighlight').addEventListener('click', function () {
     }
 });
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.FormFields,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('editHighlight').addEventListener('click', function () {
-    for (var i = 0; i < pdfviewer.annotationCollection.length; i++) {
-        var annot = pdfviewer.annotationCollection[i];
-        if (annot.textMarkupAnnotationType === 'Highlight') {
-            annot.color = '#000fff';
-            annot.opacity = 0.8;
-            pdfviewer.annotation.editAnnotation(annot);
-            break;
-        }
-    }
-});
-{% endhighlight %}
 {% endtabs %}
 
 ## Set default properties during control initialization
@@ -309,25 +243,6 @@ ej.pdfviewer.PdfViewer.Inject(
 var pdfviewer = new ej.pdfviewer.PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
-pdfviewer.highlightSettings = { author: 'Guest User', subject: 'Important', color: '#ffff00', opacity: 0.9 };
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.Annotation
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 pdfviewer.highlightSettings = { author: 'Guest User', subject: 'Important', color: '#ffff00', opacity: 0.9 };
 pdfviewer.appendTo('#PdfViewer');
 
@@ -385,45 +300,6 @@ document.getElementById('highlight')?.addEventListener('click', function () {
     });
 });
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.FormFields,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer();
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.appendTo('#PdfViewer');
-//Apply Highlight Settings while adding individual Annotation
-document.getElementById('highlight')?.addEventListener('click', function () {
-    pdfviewer.annotation.addAnnotation('Highlight', {
-        bounds: [{ x: 97, y: 110, width: 350, height: 14 }],
-        pageNumber: 1,
-        author: 'User 1',
-        color: '#ffff00',
-        opacity: 0.9
-    });
-
-    pdfviewer.annotation.addAnnotation('Highlight', {
-        bounds: [{ x: 107, y: 220, width: 350, height: 14 }],
-        pageNumber: 1,
-        author: 'User 2',
-        color: '#ff1010ff',
-        opacity: 0.9
-    });
-});
-{% endhighlight %}
 {% endtabs %}
 
 ## Disable highlight annotation
@@ -446,25 +322,6 @@ ej.pdfviewer.PdfViewer.Inject(
 var pdfviewer = new ej.pdfviewer.PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
-pdfviewer.enableTextMarkupAnnotation = false;
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.Annotation
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 pdfviewer.enableTextMarkupAnnotation = false;
 pdfviewer.appendTo('#PdfViewer');
 
