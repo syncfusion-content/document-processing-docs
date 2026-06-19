@@ -1930,7 +1930,6 @@ using (OCRProcessor processor = new OCRProcessor())
 }
 {% endhighlight %}
 
-{% endhighlight %}
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using Syncfusion.OCRProcessor;
