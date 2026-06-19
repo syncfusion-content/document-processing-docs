@@ -138,6 +138,10 @@ You can also explore the Document Editor interactively using the live sample bel
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/JavaScript-ES5-DOCX-Editor-Examples/tree/master/getting-started).
 
+## Online Demo
+
+Explore how to create, edit, and print Word documents using the JavaScript (ES5) Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/default.html).
+
 ## Server-side dependencies
 
 The Document Editor component requires server-side interactions for the following operations:

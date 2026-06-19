@@ -168,5 +168,9 @@ export default {
       }
       ```
 
+## Online Demo
+
+Explore how to automatically save Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/material3/document-editor/auto-save.html).
+
 ## See Also
 * [Autosave document in DocumentEditor](../how-to/auto-save-document-in-document-editor)
