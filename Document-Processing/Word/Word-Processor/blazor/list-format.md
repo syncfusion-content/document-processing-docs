@@ -61,3 +61,7 @@ The Document Editor provides options for controlling the sequence of numbered li
 When working with numbered lists, you can choose to restart numbering at "1" or continue the sequence from a previous list. These options are available in the context menu when you right-click on a list number.
 
 ![Context menu in Blazor Document Editor showing options to restart or continue list numbering.](images/blazor-document-editor-list.jpeg)
+
+## Online Demo
+
+Explore how to apply bullets and numbering in Word documents using the Blazor Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/bullets-and-numbering?theme=fluent2).
