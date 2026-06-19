@@ -8,7 +8,7 @@ keywords: search,find,replace-text
 ---
 # Find and Replace in WPF RichTextBox (SfRichTextBoxAdv)
 
-The SfRichTextBoxAdv control supports searching text contents in the document. This when used in combination with selection becomes a powerful tool enabling scenarios like highlighting specific parts of the document, applying formatting such as bold or replacing text. You can extend your search by using regular expression to find particular pattern of text in the document. 
+The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) control supports searching text contents in the document. This when used in combination with selection becomes a powerful tool enabling scenarios like highlighting specific parts of the document, applying formatting such as bold or replacing text. You can extend your search by using regular expression to find particular pattern of text in the document. 
 The following code example explains how to find the first occurrence of a particular text in the document and apply bold formatting.
 {% tabs %}
 {% highlight c# %}
@@ -151,4 +151,4 @@ The following code example demonstrates how to show the options pane in SfRichTe
 {% endtabs %}
 ![WPF RichTextBox displays Find option](Find-and-Replace_images/wpf-richtextbox-find-option.jpeg)
 
-N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/wpf-controls/richtextbox) feature tour page for its groundbreaking feature representations.You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to knows how to render and configure the editing tools.
+N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations.You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to knows how to render and configure the editing tools.

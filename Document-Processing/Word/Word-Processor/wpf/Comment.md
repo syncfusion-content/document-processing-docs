@@ -8,7 +8,7 @@ keywords: comment
 ---
 # Comment in WPF RichTextBox (SfRichTextBoxAdv)
 
-A Comment is a note or annotation that an author or reviewer can add to the document. The SfRichTextBoxAdv control supports viewing and editing the comments in the document. It renders the comments present in the document in review pane, similar to the Microsoft Word.
+A Comment is a note or annotation that an author or reviewer can add to the document. The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) control supports viewing and editing the comments in the document. It renders the comments present in the document in review pane, similar to the Microsoft Word.
 ![WPF RichTextBox with Comment](Comment_images/wpf-richtextbox-comment.jpeg)
 
 N> Currently, the SfRichTextBoxAdv shows review pane only with Pages layout type.
@@ -135,4 +135,4 @@ Dim isCommentPaneVisible As Boolean = richTextBoxAdv.EditorSettings.IsCommentPan
 {% endhighlight %}
 {% endtabs %}
 
-N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/wpf-controls/richtextbox) feature tour page for its groundbreaking feature representations.You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to knows how to render and configure the editing tools.
+N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations.You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to knows how to render and configure the editing tools.
