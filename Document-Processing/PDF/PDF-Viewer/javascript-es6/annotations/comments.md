@@ -159,43 +159,6 @@ document.getElementById("addReply")?.addEventListener("click", function() {
        }
    });
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-import {
-  PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-  ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer
-} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(
-  Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-  ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer
-);
-
-const pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.appendTo('#PdfViewer');
-
-//for adding Comments programmatically
-document.getElementById("addComment")?.addEventListener("click", function() {
-       let annot = pdfviewer.annotationCollection[0];
-       if (annot) {
-           annot.commentType = "add";
-           annot.note = "New Comment";
-           pdfviewer.annotation.editAnnotation(annot);
-           console.log(pdfviewer.annotationCollection[0]);
-       }
-   });
-//for adding reply programmatically
-document.getElementById("addReply")?.addEventListener("click", function() {
-       let annot = pdfviewer.annotationCollection[0];
-       if (annot) {
-           annot.commentType = "add";
-           annot.replyComment = ["Reply Comment"];
-           pdfviewer.annotation.editAnnotation(annot);
-           console.log(pdfviewer.annotationCollection[0]);
-       }
-   });
-{% endhighlight %}
 {% endtabs %}
 
 ### How to Edit Comments programmatically
@@ -249,48 +212,7 @@ document.getElementById("editReply")?.addEventListener("click", function() {
    });
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-import {
-  PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-  ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer
-} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(
-  Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-  ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer
-);
-
-const pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.appendTo('#PdfViewer');
-
-//for Editing Comments programmatically
-document.getElementById("editComment")?.addEventListener("click", function() {
-       let annot = pdfviewer.annotationCollection[0];
-       if (annot) {
-           annot.commentType = "edit";
-           annot.note = "Edited Comment";
-           pdfviewer.annotation.editAnnotation(annot);
-           console.log(pdfviewer.annotationCollection[0]);
-       }
-   });
- 
-//for Editing reply programmatically
-document.getElementById("editReply")?.addEventListener("click", function() {
-       let annot = pdfviewer.annotationCollection[0];
-       if (annot) {
-           annot.commentType = "edit";
-           annot.replyComment = ["Edited Reply Comment"];
-           pdfviewer.annotation.editAnnotation(annot);
-           console.log(pdfviewer.annotationCollection[0]);
-       }
-   });
-
-{% endhighlight %}
 {% endtabs %}
-
-
 
 ### How to check the comments added by the user
 
@@ -312,19 +234,6 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
-pdfviewer.appendTo('#PdfViewer');
-
-
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}

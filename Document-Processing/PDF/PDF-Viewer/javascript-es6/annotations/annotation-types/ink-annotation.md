@@ -96,27 +96,6 @@ document.getElementById('addInkAnnotationProgram')?.addEventListener('click', fu
     } as InkAnnotationSettings);
 });
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, InkAnnotationSettings } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('addInkAnnotationProgram')?.addEventListener('click', function () {
-    pdfviewer.annotation.addAnnotation('Ink', {
-        offset: { x: 150, y: 100 },
-        pageNumber: 1,
-        width: 200,
-        height: 60,
-        path: '[{"command":"M","x":244.83,"y":982.00},{"command":"L","x":250.83,"y":953.33}]'
-    } as InkAnnotationSettings);
-});
-{% endhighlight %}
 {% endtabs %}
 
 ## Edit Ink Annotation
@@ -185,31 +164,6 @@ document.getElementById('editInkAnnotation')?.addEventListener('click', function
     }
 });
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('editInkAnnotation')?.addEventListener('click', function () {
-    for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
-        if (pdfviewer.annotationCollection[i].shapeAnnotationType === 'Ink') {
-            const width = pdfviewer.annotationCollection[i].bounds.width;
-            const height = pdfviewer.annotationCollection[i].bounds.height;
-            pdfviewer.annotationCollection[i].bounds = { x: 100, y: 100, width, height };
-            pdfviewer.annotationCollection[i].strokeColor = '#0000FF';
-            pdfviewer.annotationCollection[i].thickness = 2;
-            pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = 'Circle';
-            pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
-        }
-    }
-});
-{% endhighlight %}
 {% endtabs %}
 
 
@@ -230,20 +184,6 @@ let pdfviewer: PdfViewer = new PdfViewer({
   inkAnnotationSettings: { author: 'Syncfusion', strokeColor: 'green', thickness: 3, opacity: 0.6 }
 });
 
-pdfviewer.appendTo('#PdfViewer');
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
-
-let pdfviewer: PdfViewer = new PdfViewer({
-  documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-  serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/',
-  inkAnnotationSettings: { author: 'Syncfusion', strokeColor: 'green', thickness: 3, opacity: 0.6 }
-});
-
-pdfviewer.appendTo('#PdfViewer');
 pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
@@ -268,27 +208,6 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 const pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
 pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
-pdfviewer.appendTo('#PdfViewer');
-//Apply Ink Settings while adding individual Annotation
-document.getElementById('Ink')?.addEventListener('click', function () {
-     pdfviewer.annotation.addAnnotation('Ink', {
-        offset: { x: 150, y: 100 },
-        pageNumber: 1,
-        width: 200,
-        height: 60,
-        path: '[{"command":"M","x":244.83,"y":982.00},{"command":"L","x":250.83,"y":953.33}]',
-        author: 'Syncfusion', strokeColor: 'green', thickness: 3, opacity: 0.6 
-    } as InkAnnotationSettings);
-});
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, InkAnnotationSettings} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
-
-const pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
-pdfviewer.serviceUrl= 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/',
 pdfviewer.appendTo('#PdfViewer');
 //Apply Ink Settings while adding individual Annotation
 document.getElementById('Ink')?.addEventListener('click', function () {
