@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load N pages initially
+# Load N pages initially in React
 
 Control the number of pages the PDF Viewer renders on the initial load to improve perceived performance and reduce initial memory usage. Additional pages are rendered dynamically as the user scrolls through the document, allowing quick access to early pages without loading the entire file.
 

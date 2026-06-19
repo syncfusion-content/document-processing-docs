@@ -94,10 +94,6 @@ document.getElementById('set').addEventListener('click', function () {
 {% endhighlight %}
 {% endtabs %}
 
-N> To set up the **server-backed PDF Viewer**,
-Add the below `serviceUrl` in the `index.js` file
-`pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
-
 {% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/text-markup-annotation/strikethrough-mode-cs1" %}
 
 #### Exit strikethrough mode
@@ -163,10 +159,6 @@ document.getElementById('setNone').addEventListener('click', function () {
 {% endhighlight %}
 {% endtabs %}
 
-N> To set up the **server-backed PDF Viewer**,
-Add the below `serviceUrl` in the `index.js` file
-`pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
-
 {% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/text-markup-annotation/strikethrough-normal-mode-cs1" %}
 
 ### Add strikethrough annotations programmatically
@@ -200,38 +192,6 @@ PdfViewer.Inject(
 var pdfviewer = new PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
-pdfviewer.appendTo('#PdfViewer');
-
-var strikethrough = document.getElementById('strikethrough');
-if (strikethrough) {
-    strikethrough.addEventListener('click', function () {
-        pdfviewer.annotation.addAnnotation('Strikethrough', {
-            bounds: [{ x: 97, y: 110, width: 350, height: 14 }],
-            pageNumber: 1
-        });
-    });
-}
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-var PdfViewer = ej.pdfviewer.PdfViewer;
-PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.FormFields,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 pdfviewer.appendTo('#PdfViewer');
 
 var strikethrough = document.getElementById('strikethrough');
@@ -319,42 +279,6 @@ if (editStrikethroughAnnotation) {
     });
 }
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-var PdfViewer = ej.pdfviewer.PdfViewer;
-PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.FormFields,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-pdfviewer.appendTo('#PdfViewer');
-
-var editStrikethroughAnnotation = document.getElementById('editStrikethroughAnnotation');
-if (editStrikethroughAnnotation) {
-    editStrikethroughAnnotation.addEventListener('click', function () {
-        for (var i = 0; i < pdfviewer.annotationCollection.length; i++) {
-            if (pdfviewer.annotationCollection[i].textMarkupAnnotationType === 'Strikethrough') {
-                pdfviewer.annotationCollection[i].color = '#ff0000';
-                pdfviewer.annotationCollection[i].opacity = 0.8;
-                pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
-                break;
-            }
-        }
-    });
-}
-{% endhighlight %}
 {% endtabs %}
 
 ## Default strikethrough settings during initialization
@@ -382,25 +306,6 @@ PdfViewer.Inject(
 var pdfviewer = new PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
-pdfviewer.strikethroughSettings = { author: 'Guest User', subject: 'Not Important', color: '#ff00ff', opacity: 0.9 };
-pdfviewer.appendTo('#PdfViewer');
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-var PdfViewer = ej.pdfviewer.PdfViewer;
-PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.Annotation
-);
-
-var pdfviewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 pdfviewer.strikethroughSettings = { author: 'Guest User', subject: 'Not Important', color: '#ff00ff', opacity: 0.9 };
 pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
@@ -495,26 +400,6 @@ PdfViewer.Inject(
 var pdfviewer = new PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
-pdfviewer.enableTextMarkupAnnotation = false;
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-var PdfViewer = ej.pdfviewer.PdfViewer;
-PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.Annotation
-);
-
-var pdfviewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 pdfviewer.enableTextMarkupAnnotation = false;
 pdfviewer.appendTo('#PdfViewer');
 

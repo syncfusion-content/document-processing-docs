@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Convert PDF Library bounds to PDF Viewer bounds | Syncfusion
+title: Convert PDF Library bounds to PDF Viewer bounds Angular | Syncfusion
 description: Learn how to convert PDF Library bounds into PDF Viewer bounds when exporting annotations, ensuring accurate placement in the Angular PDF Viewer.
 platform: document-processing
 control: PDF Viewer
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Convert PDF Library bounds to PDF Viewer bounds
+# Convert PDF Library bounds to PDF Viewer bounds in Angular
 
 When exporting annotations from the PDF Library, convert the annotation bounds into the PDF Viewer coordinate system so exported annotations appear at the correct position and scale in the viewer.
 

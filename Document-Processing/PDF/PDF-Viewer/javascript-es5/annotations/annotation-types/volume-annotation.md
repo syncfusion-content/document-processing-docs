@@ -65,35 +65,6 @@ if (volumeModeBtn) {
     });
 }
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-var PdfViewer = ej.pdfviewer.PdfViewer;
-PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.FormFields,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-pdfviewer.appendTo('#PdfViewer');
-
-var volumeModeBtn = document.getElementById('volumeMode');
-if (volumeModeBtn) {
-    volumeModeBtn.addEventListener('click', function () {
-        pdfviewer.annotation.setAnnotationMode('Volume');
-    });
-}
-{% endhighlight %}
 {% endtabs %}
 
 #### Exit volume mode
@@ -142,41 +113,6 @@ PdfViewer.Inject(
 var pdfviewer = new PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
-pdfviewer.appendTo('#PdfViewer');
-
-var addVolBtn = document.getElementById('addVolumeAnnotation');
-if (addVolBtn) {
-    addVolBtn.addEventListener('click', function () {
-        pdfviewer.annotation.addAnnotation('Volume', {
-            offset: { x: 200, y: 810 },
-            pageNumber: 1,
-            vertexPoints: [
-                { x: 200, y: 810 }, { x: 200, y: 919 }, { x: 320, y: 919 }, { x: 320, y: 809 }, { x: 200, y: 810 }
-            ]
-        });
-    });
-}
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-var PdfViewer = ej.pdfviewer.PdfViewer;
-PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.FormFields,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 pdfviewer.appendTo('#PdfViewer');
 
 var addVolBtn = document.getElementById('addVolumeAnnotation');
@@ -277,42 +213,6 @@ if (editVolBtn) {
     });
 }
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-var PdfViewer = ej.pdfviewer.PdfViewer;
-PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.FormFields,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-pdfviewer.appendTo('#PdfViewer');
-
-var editVolBtn = document.getElementById('editVolumeAnnotation');
-if (editVolBtn) {
-    editVolBtn.addEventListener('click', function () {
-        for (var i = 0; i < pdfviewer.annotationCollection.length; i++) {
-            if (pdfviewer.annotationCollection[i].subject === 'Volume calculation') {
-                pdfviewer.annotationCollection[i].strokeColor = '#0000FF';
-                pdfviewer.annotationCollection[i].thickness = 2;
-                pdfviewer.annotationCollection[i].opacity = 0.8;
-                pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
-            }
-        }
-    });
-}
-{% endhighlight %}
 {% endtabs %}
 
 ## Default volume settings during initialization
@@ -340,29 +240,6 @@ PdfViewer.Inject(
 var pdfviewer = new PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
-pdfviewer.volumeSettings = { fillColor: 'pink', opacity: 0.6, strokeColor: 'yellow' };
-pdfviewer.appendTo('#PdfViewer');
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-var PdfViewer = ej.pdfviewer.PdfViewer;
-PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.FormFields,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 pdfviewer.volumeSettings = { fillColor: 'pink', opacity: 0.6, strokeColor: 'yellow' };
 pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
@@ -402,29 +279,6 @@ PdfViewer.Inject(
 var pdfviewer = new PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
-pdfviewer.measurementSettings = { scaleRatio: 2, conversionUnit: 'cm', displayUnit: 'cm' };
-pdfviewer.appendTo('#PdfViewer');
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-var PdfViewer = ej.pdfviewer.PdfViewer;
-PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.FormFields,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 pdfviewer.measurementSettings = { scaleRatio: 2, conversionUnit: 'cm', displayUnit: 'cm' };
 pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}

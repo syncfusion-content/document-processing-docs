@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Display custom stamp items in the custom stamp dropdown
+# Display custom stamp items in the custom stamp dropdown in React
 
 ### Overview
 

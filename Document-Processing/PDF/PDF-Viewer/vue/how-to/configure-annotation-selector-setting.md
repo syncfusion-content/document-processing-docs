@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Configure annotation selector settings
+# Configure annotation selector settings in Vue
 
 AnnotationSelectorSettingsModel
 

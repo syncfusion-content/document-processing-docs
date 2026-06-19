@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Page render initiate and complete events
 
-In the PDF Viewer, the `pageRenderInitiate` and `pageRenderComplete` events fire during the page rendering lifecycle:
+In the PDF Viewer, the `pageRenderInitiate` and `pageRenderComplete` events fire during the page rendering life cycle:
 
 - `pageRenderInitiate`: fired when the rendering of a page begins. Use this event to initialize resources, show loading indicators, or set up rendering parameters before the page content is drawn.
 - `pageRenderComplete`: fired when the rendering of a page finishes. Use this event to hide loading indicators, record render timing, or run post-render processing.
@@ -39,6 +39,6 @@ public pageRenderComplete(args: any): void {
 }
 ```
 
-The provided code demonstrates how to subscribe to the [pageRenderInitiate](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/pageRenderInitiateEventArgs/) and [pageRenderComplete](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/pageRenderCompleteEventArgs/) events in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer component.
+The provided code demonstrates how to subscribe to the [pageRenderInitiate](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/pageRenderInitiateEventArgs) and [pageRenderComplete](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/pageRenderCompleteEventArgs) events in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer component.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/How%20to/PageRenderStarted%20and%20PageRenderCompleted%20event)
