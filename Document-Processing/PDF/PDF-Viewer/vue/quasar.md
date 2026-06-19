@@ -124,7 +124,7 @@ Define the PDF Viewer component in the template section:
 
 ## Run the application
 
-Start the development server using the following command:
+Run the following command to start the Vue application:
 
 {% tabs %}
 {% highlight bash tabtitle="npm" %}

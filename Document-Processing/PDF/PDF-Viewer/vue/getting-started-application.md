@@ -188,7 +188,7 @@ Add the PDF Viewer component markup to the `<template>` section of `src/App.vue`
 
 ## Run the project
 
-Run the development server with one of the following commands:
+Run the following command to start the Vue application:
 
 {% tabs %}
 {% highlight bash tabtitle="npm" %}

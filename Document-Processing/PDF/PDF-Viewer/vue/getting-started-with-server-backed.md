@@ -135,7 +135,7 @@ N> The Web API hosted link https://document.syncfusion.com/web-services/pdf-view
 
 ## Run the project
 
-Run the following command to start the application.
+Run the following command to start the Vue application:
 
 {% tabs %}
 {% highlight bash tabtitle="npm" %}

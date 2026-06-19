@@ -134,7 +134,7 @@ N> To load PDF documents and resources from your local application instead of a 
 
 ## Run the project
 
-Run the following command to start the application.
+Run the following command to start the Vue application:
 
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
