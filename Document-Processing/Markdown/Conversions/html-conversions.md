@@ -6,7 +6,7 @@ control: Word
 documentation: UG
 ---
 
-# Markdown and HTML Conversions
+# Markdown to HTML and HTML to Markdown Conversions
 
 Markdown is a lightweight markup language that adds formatting elements to plain text documents. The .NET Word library supports the conversion of Markdown to HTML document and vice versa.
 
