@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Collaborative editing in React DOCX Editor
+# Collaborative Editing in React with Redis in ASP.NET Core
 
 Syncfusion® React DOCX Editor (Document Editor) supports collaborative editing which Allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made
 
@@ -127,7 +127,7 @@ Refer to the following documentation to get started with the [React Document Edi
 
 ### Step 2: Enable collaborative editing
 
-To enable collaborative editing, inject `CollaborativeEditingHandler` and set the `enableCollaborativeEditing` property to true in the Document Editor.
+To enable collaborative editing, inject [CollaborativeEditingHandler](https://ej2.syncfusion.com/documentation/api/document-editor/collaborativeeditinghandler) and set the [enableCollaborativeEditing](https://ej2.syncfusion.com/documentation/api/document-editor/index-default#enablecollaborativeediting) property to true in the Document Editor.
 
 The following code snippet demonstrates how to enable collaborative editing in the Document Editor.
 
@@ -137,46 +137,46 @@ The following code snippet demonstrates how to enable collaborative editing in t
 import { DocumentEditorContainerComponent, CollaborativeEditingHandler, DocumentEditorComponent } from '@syncfusion/ej2-react-documenteditor';
 
 // Inject collaborative editing module.
- DocumentEditorComponent.Inject(CollaborativeEditingHandler);
+DocumentEditorComponent.Inject(CollaborativeEditingHandler);
 
 // Add component intialization logics
 
 // initialization of variables
-public collaborativeEditingHandler?: CollaborativeEditingHandler;
+public collaborativeEditingHandler ?: CollaborativeEditingHandler;
 
- 
 public componentDidMount(): void {
     if (this.container) {
-      this.container.documentEditor.enableCollaborativeEditing = true;
+        this.container.documentEditor.enableCollaborativeEditing = true;
+        this.collaborativeEditingHandler = this.container.documentEditor.collaborativeEditingHandlerModule;
     }
     if (!this.connection) {
-      this.initializeSignalR();
-      this.loadDocumentFromServer();
+        this.initializeSignalR();
+        this.loadDocumentFromServer();
     }
 }
 
 // Other code snippets
 
- render() {
-    return (<div className='control-pane'>
-      <div>
-        <div id='documenteditor_titlebar' className="e-de-ctn-title"></div>
-        <div id="documenteditor_container_body">
-          <DocumentEditorContainerComponent id="container" created={this.onCreated.bind(this)} ref={(scope: DocumentEditorContainerComponent | null) => { this.container = scope; }} style={{ 'display': 'block' }}
-            height={'590px'} currentUser={this.currentUser} serviceUrl={this.serviceUrl + 'api/documenteditor'} enableToolbar={true} locale='en-US' >
-            <Inject services={[Toolbar]} />
-          </DocumentEditorContainerComponent>
-        </div>
+render() {
+  return (<div className='control-pane'>
+    <div>
+      <div id='documenteditor_titlebar' className="e-de-ctn-title"></div>
+      <div id="documenteditor_container_body">
+        <DocumentEditorContainerComponent id="container" created={this.onCreated.bind(this)} ref={(scope: DocumentEditorContainerComponent) => { this.container = scope; }}
+          height={'590px'} currentUser={this.currentUser} serviceUrl={this.serviceUrl + 'api/documenteditor'} enableToolbar={true} locale='en-US' >
+          <Inject services={[Toolbar]} />
+        </DocumentEditorContainerComponent>
       </div>
-    </div>);
-  }
+    </div>
+  </div>);
+}
 
 {% endhighlight %}
 {% endtabs %}
 
 ### Step 3: Configure SignalR to send and receive changes
 
-To broadcast changes and receive updates from remote users, install the "@microsoft/signalr" package in the React application. 
+To broadcast changes and receive updates from remote users, install the [Microsoft SignalR npm](https://www.npmjs.com/package/@microsoft/signalr) package in your React application.
 
 The following code snippet demonstrates how to configure SignalR in the Document Editor.
 
@@ -189,63 +189,63 @@ import { HubConnectionBuilder, HttpTransportType, HubConnectionState, HubConnect
 
 // Declare variables
 public connectionId: string = '';
-public connection?: HubConnection;
+public connection ?: HubConnection;
 
 public initializeSignalR = (): void => {
-    // SignalR connection
-    this.connection = new HubConnectionBuilder().withUrl(this.serviceUrl + 'documenteditorhub', {
-        skipNegotiation: true,
-        transport: HttpTransportType.WebSockets
-    }).withAutomaticReconnect().build();
-    // Event handler for signalR connection
-    this.connection.on('dataReceived', this.onDataRecived.bind(this));
+  // SignalR connection
+  this.connection = new HubConnectionBuilder().withUrl(this.serviceUrl + 'documenteditorhub', {
+    skipNegotiation: true,
+    transport: HttpTransportType.WebSockets
+  }).withAutomaticReconnect().build();
+  // Event handler for signalR connection
+  this.connection.on('dataReceived', this.onDataRecived.bind(this));
 
-    this.connection.onclose(async () => {
-        if (this.connection && this.connection.state === HubConnectionState.Disconnected) {
-            alert('Connection lost. Please relod the browser to continue.');
-        }
-    });
+  this.connection.onclose(async () => {
+    if (this.connection && this.connection.state === HubConnectionState.Disconnected) {
+      alert('Connection lost. Please relod the browser to continue.');
+    }
+  });
 }
 
 public onDataRecived(action: string, data: any) {
-    if (this.collaborativeEditingHandler) {
-        debugger;
-        if (action == 'connectionId') {
-            // Update the current connection id to track other users
-            this.connectionId = data;
-        } else if (this.connectionId != data.connectionId) {
-            if (this.titleBar) {
-                if (action == 'action' || action == 'addUser') {
-                    // Add the user to title bar when user joins the room
-                    this.titleBar.addUser(data);
-                } else if (action == 'removeUser') {
-                    // Remove the user from title bar when user leaves the room
-                    this.titleBar.removeUser(data);
-                }
-            }
+  if (this.collaborativeEditingHandler) {
+    debugger;
+    if (action == 'connectionId') {
+      // Update the current connection id to track other users
+      this.connectionId = data;
+    } else if (this.connectionId != data.connectionId) {
+      if (this.titleBar) {
+        if (action == 'action' || action == 'addUser') {
+          // Add the user to title bar when user joins the room
+          this.titleBar.addUser(data);
+        } else if (action == 'removeUser') {
+          // Remove the user from title bar when user leaves the room
+          this.titleBar.removeUser(data);
         }
-        // Apply the remote action in DocumentEditor
-        this.collaborativeEditingHandler.applyRemoteAction(action, data);
+      }
     }
+    // Apply the remote action in DocumentEditor
+    this.collaborativeEditingHandler.applyRemoteAction(action, data);
+  }
 }
 
 public connectToRoom(data: any) {
-    try {
+  try {
+    if (this.connection) {
+      // start the connection.
+      this.connection.start().then(() => {
+        // Join the room.
         if (this.connection) {
-            // start the connection.
-            this.connection.start().then(() => {
-                // Join the room.
-                if (this.connection) {
-                    this.connection.send('JoinGroup', { roomName: data.roomName, currentUser: data.currentUser });
-                }
-                console.log('server connected!!!');
-            });
+          this.connection.send('JoinGroup', { roomName: data.roomName, currentUser: data.currentUser });
         }
-    } catch (err) {
-        console.log(err);
-        // Attempting to reconnect in 5 seconds
-        setTimeout(this.connectToRoom, 5000);
+        console.log('server connected!!!');
+      });
     }
+  } catch (err) {
+    console.log(err);
+    // Attempting to reconnect in 5 seconds
+    setTimeout(this.connectToRoom, 5000);
+  }
 };
 
 //other code snippets
@@ -262,54 +262,54 @@ The following code snippet demonstrates how to generate a unique ID and open a d
 {% tabs %}
 {% highlight ts tabtitle="TS" %}
 
-   public loadDocumentFromServer() {
-        createSpinner({ target: document.body });
-        showSpinner(document.body);
-        const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-        let roomId = urlParams.get('id');
-        if (roomId == null) {
-            roomId = Math.random().toString(32).slice(2)
-            window.history.replaceState({}, "", `?id=` + roomId);
-        }
-        var httpRequest = new XMLHttpRequest();
-        httpRequest.open('Post', this.serviceUrl + 'api/CollaborativeEditing/ImportFile', true);
-        httpRequest.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-        httpRequest.onreadystatechange = () => {
-            if (httpRequest.readyState === 4) {
-                if (httpRequest.status === 200 || httpRequest.status === 304) {
-                    this.openDocument(httpRequest.responseText, roomId as string);
-                    hideSpinner(document.body);
-                }
-                else {
-                    hideSpinner(document.body);
-                    alert('Fail to load the document');
-                }
-            }
-        };
-        httpRequest.send(JSON.stringify({ "fileName": "Giant Panda.docx", "roomName": roomId }));
-   }
-
-   public openDocument(responseText: string, roomName: string): void {
-    showSpinner(document.getElementById('container') as HTMLElement);
-    let data = JSON.parse(responseText);
-    if (this.container) {
-        this.collaborativeEditingHandler = this.container.documentEditor.collaborativeEditingHandlerModule;
-        // Update the room and version information to collaborative editing handler.
-        this.collaborativeEditingHandler?.updateRoomInfo(roomName, data.version, this.serviceUrl + 'api/CollaborativeEditing/');
-
-        // Open the document
-        this.container.documentEditor.open(data.sfdt);
-
-        setTimeout(() => {
-            if (this.container) {
-                // connect to server using signalR
-                this.connectToRoom({ action: 'connect', roomName: roomName, currentUser: this.container.currentUser });
-            }
-        });
+public loadDocumentFromServer() {
+  createSpinner({ target: document.body });
+  showSpinner(document.body);
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  let roomId = urlParams.get('id');
+  if (roomId == null) {
+    roomId = Math.random().toString(32).slice(2)
+    window.history.replaceState({}, "", `?id=` + roomId);
+  }
+  var httpRequest = new XMLHttpRequest();
+  httpRequest.open('Post', this.serviceUrl + 'api/CollaborativeEditing/ImportFile', true);
+  httpRequest.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+  httpRequest.onreadystatechange = () => {
+    if (httpRequest.readyState === 4) {
+      if (httpRequest.status === 200 || httpRequest.status === 304) {
+        this.openDocument(httpRequest.responseText, roomId as string);
+        hideSpinner(document.body);
+      }
+      else {
+        hideSpinner(document.body);
+        alert('Fail to load the document');
+      }
     }
-    hideSpinner(document.getElementById('container') as HTMLElement);
-   }
+  };
+  httpRequest.send(JSON.stringify({ "fileName": "Giant Panda.docx", "roomName": roomId }));
+}
+
+public openDocument(responseText: string, roomName: string): void {
+  showSpinner(document.getElementById('container') as HTMLElement);
+  let data = JSON.parse(responseText);
+  if(this.container) {
+  this.collaborativeEditingHandler = this.container.documentEditor.collaborativeEditingHandlerModule;
+  // Update the room and version information to collaborative editing handler.
+  this.collaborativeEditingHandler?.updateRoomInfo(roomName, data.version, this.serviceUrl + 'api/CollaborativeEditing/');
+
+  // Open the document
+  this.container.documentEditor.open(data.sfdt);
+
+  setTimeout(() => {
+    if (this.container) {
+      // connect to server using signalR
+      this.connectToRoom({ action: 'connect', roomName: roomName, currentUser: this.container.currentUser });
+    }
+  });
+  }
+  hideSpinner(document.getElementById('container') as HTMLElement);
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -318,17 +318,17 @@ The following code snippet demonstrates how to generate a unique ID and open a d
 
 Changes made on the client side must be transmitted to the server to be broadcast to other connected users. 
 
-The following code snippet demonstrates how to send changes to the server using the `contentChange` event in the Document Editor.
+The following code snippet demonstrates how to send changes to the server using the [contentChange](https://ej2.syncfusion.com/documentation/api/document-editor/index-default#contentchange) event in the Document Editor.
 
 {% tabs %}
 {% highlight ts tabtitle="TS" %}
 
-   this.container.contentChange = (args: ContainerContentChangeEventArgs) => {
-		if (this.collaborativeEditingHandler) {
-			// Send the editing action to server
-			this.collaborativeEditingHandler.sendActionToServer(args.operations as Operation[])
-		}
-	}
+this.container.contentChange = (args: ContainerContentChangeEventArgs) => {
+  if (this.collaborativeEditingHandler) {
+    // Send the editing action to server
+    this.collaborativeEditingHandler.sendActionToServer(args.operations as Operation[])
+  }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -372,15 +372,15 @@ Microsoft SignalR is used to broadcast changes. Add the following configuration 
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
-    using Microsoft.Azure.SignalR;
- 
-    // other Services
- 
-     // Add signalR services to the container.
-    
-     builder.Services.AddSignalR().AddStackExchangeRedis(“Your Redis Connection String”);
- 
-    // other Services
+using Microsoft.Azure.SignalR;
+
+// other Services
+
+// Add signalR services to the container.
+
+builder.Services.AddSignalR().AddStackExchangeRedis(“Your Redis Connection String”);
+
+// other Services
 
 {% endhighlight %}
 {% endtabs %}
@@ -410,35 +410,34 @@ Add the following code to the file to manage SignalR groups using room names.
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
-        // Join group based on the room name and store the user details in Redis cache.
-        public async Task JoinGroup(ActionInfo info)
-        {
-            // Set the connection ID to info
-            info.ConnectionId = Context.ConnectionId;
-            // Add the connection ID to the group
-            await Groups.AddToGroupAsync(Context.ConnectionId, info.RoomName);
- 
-            //To ensure whether the room exixts in the Redis cache
-            bool roomExists = await _db.KeyExistsAsync(info.RoomName + CollaborativeEditingHelper.UserInfoSuffix);
-            if (roomExists)
-            {
-                // Fetch all connected users from Redis
-                var allUsers = await _db.HashGetAllAsync(info.RoomName + CollaborativeEditingHelper.UserInfoSuffix);
-                var userList = allUsers.Select(u => JsonConvert.DeserializeObject<ActionInfo>(u.Value)).ToList();
- 
-                //Send the exisiting user details to the newly joined user. 
-                await Clients.Caller.SendAsync("dataReceived", "addUser", userList);
-            }
- 
-            // Add user to Redis           
-            await _db.HashSetAsync(info.RoomName + CollaborativeEditingHelper.UserInfoSuffix, Context.ConnectionId, JsonConvert.SerializeObject(info));
- 
-            // Store the room name with the connection ID
-            await _db.HashSetAsync(CollaborativeEditingHelper.ConnectionIdRoomMappingKey, Context.ConnectionId, info.RoomName);
- 
-            // Notify all the exsisiting users in the group about the new user
-            await Clients.GroupExcept(info.RoomName, Context.ConnectionId).SendAsync("dataReceived", "addUser", info);
-        }
+// Join group based on the room name and store the user details in Redis cache.
+public async Task JoinGroup(ActionInfo info)
+{
+  // Set the connection ID to info
+  info.ConnectionId = Context.ConnectionId;
+  // Add the connection ID to the group
+  await Groups.AddToGroupAsync(Context.ConnectionId, info.RoomName);
+
+  //To ensure whether the room exixts in the Redis cache
+  bool roomExists = await _db.KeyExistsAsync(info.RoomName + CollaborativeEditingHelper.UserInfoSuffix);
+  if (roomExists) {
+    // Fetch all connected users from Redis
+    var allUsers = await _db.HashGetAllAsync(info.RoomName + CollaborativeEditingHelper.UserInfoSuffix);
+    var userList = allUsers.Select(u => JsonConvert.DeserializeObject<ActionInfo>(u.Value)).ToList();
+
+    //Send the exisiting user details to the newly joined user. 
+    await Clients.Caller.SendAsync("dataReceived", "addUser", userList);
+  }
+
+  // Add user to Redis           
+  await _db.HashSetAsync(info.RoomName + CollaborativeEditingHelper.UserInfoSuffix, Context.ConnectionId, JsonConvert.SerializeObject(info));
+
+  // Store the room name with the connection ID
+  await _db.HashSetAsync(CollaborativeEditingHelper.ConnectionIdRoomMappingKey, Context.ConnectionId, info.RoomName);
+
+  // Notify all the exsisiting users in the group about the new user
+  await Clients.GroupExcept(info.RoomName, Context.ConnectionId).SendAsync("dataReceived", "addUser", info);
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -450,49 +449,46 @@ The following code snippet demonstrates how to disconnect a connection using Sig
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
-        public override async Task OnDisconnectedAsync(Exception? e)
-        {
-            //Get the room name associated with the connection ID
-            string roomName = await _db.HashGetAsync(CollaborativeEditingHelper.ConnectionIdRoomMappingKey, Context.ConnectionId);
-            //  Remove user from Redis       
-            await _db.HashDeleteAsync(roomName + CollaborativeEditingHelper.UserInfoSuffix, Context.ConnectionId);
- 
-            //// Fetch all connected users from Redis
-            var allUsers = await _db.HashGetAllAsync(roomName + CollaborativeEditingHelper.UserInfoSuffix);
-            var userList = allUsers.Select(u => JsonConvert.DeserializeObject<ActionInfo>(u.Value)).ToList();
- 
-            // Remove connection to room name mapping
-            await _db.HashDeleteAsync(CollaborativeEditingHelper.ConnectionIdRoomMappingKey, Context.ConnectionId);
- 
-            if (userList.Count == 0)
-            {
-                // Auto save the pending operations to source document
-                RedisValue[] pendingOps = await _db.ListRangeAsync(roomName, 0, -1);
-                if (pendingOps.Length > 0)
-                {
-                    List<ActionInfo> actions = new List<ActionInfo>();
-                    // Prepare the message fir adding it in background service queue.
-                    foreach (var element in pendingOps)
-                    {
-                        actions.Add(JsonConvert.DeserializeObject<ActionInfo>(element.ToString()));
-                    }
-                    var message = new SaveInfo
-                    {
-                        Action = actions,
-                        PartialSave = false,
-                        RoomName = roomName,
+public override async Task OnDisconnectedAsync(Exception ? e)
+{
+  //Get the room name associated with the connection ID
+  string roomName = await _db.HashGetAsync(CollaborativeEditingHelper.ConnectionIdRoomMappingKey, Context.ConnectionId);
+  //  Remove user from Redis       
+  await _db.HashDeleteAsync(roomName + CollaborativeEditingHelper.UserInfoSuffix, Context.ConnectionId);
+
+  //// Fetch all connected users from Redis
+  var allUsers = await _db.HashGetAllAsync(roomName + CollaborativeEditingHelper.UserInfoSuffix);
+  var userList = allUsers.Select(u => JsonConvert.DeserializeObject<ActionInfo>(u.Value)).ToList();
+
+  // Remove connection to room name mapping
+  await _db.HashDeleteAsync(CollaborativeEditingHelper.ConnectionIdRoomMappingKey, Context.ConnectionId);
+
+  if (userList.Count == 0) {
+    // Auto save the pending operations to source document
+    RedisValue[] pendingOps = await _db.ListRangeAsync(roomName, 0, -1);
+    if (pendingOps.Length > 0) {
+      List < ActionInfo > actions = new List<ActionInfo>();
+      // Prepare the message fir adding it in background service queue.
+      foreach(var element in pendingOps)
+      {
+        actions.Add(JsonConvert.DeserializeObject<ActionInfo>(element.ToString()));
+      }
+      var message = new SaveInfo
+      {
+        Action = actions,
+          PartialSave = false,
+          RoomName = roomName,
                     };
-                    // Queue the message for background processing and save the operations to source document in background task
-                    _ = saveTaskQueue.QueueBackgroundWorkItemAsync(message);
-                }
-            }
-            else
-            {
-                // Notify remaining clients about the user disconnection              
-                await Clients.Group(roomName).SendAsync("dataReceived", "removeUser", Context.ConnectionId);
-            }
-            await base.OnDisconnectedAsync(e);
-        }
+      // Queue the message for background processing and save the operations to source document in background task
+      _ = saveTaskQueue.QueueBackgroundWorkItemAsync(message);
+    }
+  }
+  else {
+    // Notify remaining clients about the user disconnection              
+    await Clients.Group(roomName).SendAsync("dataReceived", "removeUser", Context.ConnectionId);
+  }
+  await base.OnDisconnectedAsync(e);
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -512,37 +508,34 @@ The following code snippet demonstrates how to open the document.
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
-        public async Task<string> ImportFile([FromBody] FileInfo param)
-        {
-            try
-            {
-                // Create a new instance of DocumentContent to hold the document data
-                DocumentContent content = new DocumentContent();
-                // Retrieve the source document to be edited
-                // In this case, 'Giant Panda.docx' file from the wwwroot folder is opened.
-                // We can modify the code to retrieve the document from a different location or source.
-                Syncfusion.EJ2.DocumentEditor.WordDocument document = GetSourceDocument();
-                // Get the list of pending operations for the document
-                List<ActionInfo> actions = await GetPendingOperations(param.fileName, 0, -1);
-                if (actions != null && actions.Count > 0)
-                {
-                    // If there are any pending actions, update the document with these actions
-                    document.UpdateActions(actions);
-                }
-                // Serialize the updated document to SFDT format
-                string sfdt = Newtonsoft.Json.JsonConvert.SerializeObject(document);
-                content.version = 0;
-                content.sfdt = sfdt;
-                // Dispose of the document to free resources
-                document.Dispose();
-                // Return the serialized content as a JSON string
-                return Newtonsoft.Json.JsonConvert.SerializeObject(content);
-            }
-            catch
-            {
-                return null;
-            }
-        }
+public async Task < string > ImportFile([FromBody] FileInfo param)
+{
+  try {
+    // Create a new instance of DocumentContent to hold the document data
+    DocumentContent content = new DocumentContent();
+    // Retrieve the source document to be edited
+    // In this case, 'Giant Panda.docx' file from the wwwroot folder is opened.
+    // We can modify the code to retrieve the document from a different location or source.
+    Syncfusion.EJ2.DocumentEditor.WordDocument document = GetSourceDocument();
+    // Get the list of pending operations for the document
+    List < ActionInfo > actions = await GetPendingOperations(param.fileName, 0, -1);
+    if (actions != null && actions.Count > 0) {
+      // If there are any pending actions, update the document with these actions
+      document.UpdateActions(actions);
+    }
+    // Serialize the updated document to SFDT format
+    string sfdt = Newtonsoft.Json.JsonConvert.SerializeObject(document);
+    content.version = 0;
+    content.sfdt = sfdt;
+    // Dispose of the document to free resources
+    document.Dispose();
+    // Return the serialized content as a JSON string
+    return Newtonsoft.Json.JsonConvert.SerializeObject(content);
+  }
+  catch {
+    return null;
+  }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -556,58 +549,55 @@ The following code snippet demonstrates how the operations are cached and update
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
-        public async Task<ActionInfo> UpdateAction([FromBody] ActionInfo param)
-        {
-            try
-            {
-                ActionInfo modifiedAction = await AddOperationsToCache(param);
-                //After transformation broadcast changes to all users in the gropu
-                await _hubContext.Clients.Group(param.RoomName).SendAsync("dataReceived", "action", modifiedAction);
-                return modifiedAction;
-            }
-            catch
-            {
-                return null;
-            }
-        }
+public async Task < ActionInfo > UpdateAction([FromBody] ActionInfo param)
+{
+  try {
+    ActionInfo modifiedAction = await AddOperationsToCache(param);
+    //After transformation broadcast changes to all users in the gropu
+    await _hubContext.Clients.Group(param.RoomName).SendAsync("dataReceived", "action", modifiedAction);
+    return modifiedAction;
+  }
+  catch {
+    return null;
+  }
+}
  
-        private async Task<ActionInfo> AddOperationsToCache(ActionInfo action)
-        {
-            int clientVersion = action.Version;
-            // Initialize the database connection
-            IDatabase database = _redisConnection.GetDatabase();
-            // Define the keys for Redis operations based on the action's room name
-            RedisKey[] keys = new RedisKey[] { action.RoomName + CollaborativeEditingHelper.VersionInfoSuffix, action.RoomName, action.RoomName + CollaborativeEditingHelper.RevisionInfoSuffix, action.RoomName + CollaborativeEditingHelper.ActionsToRemoveSuffix };
-            // Serialize the action and prepare values for the Redis script
-            RedisValue[] values = new RedisValue[] { JsonConvert.SerializeObject(action), clientVersion.ToString(), CollaborativeEditingHelper.SaveThreshold.ToString() };
-            // Execute the Lua script in Redis and store the results
-            RedisResult[] results = (RedisResult[])await database.ScriptEvaluateAsync(CollaborativeEditingHelper.InsertScript, keys, values);
- 
-            // Parse the version number from the script results
-            int version = int.Parse(results[0].ToString());
-            // Deserialize the list of previous operations from the script results
-            List<ActionInfo> previousOperations = ((RedisResult[])results[1]).Select(value => JsonConvert.DeserializeObject<ActionInfo>(value.ToString())).ToList();
- 
-            // Increment the version for each previous operation
-            previousOperations.ForEach(op => op.Version = ++clientVersion);
- 
-            // Check if there are multiple previous operations to determine if transformation is needed
-            if (previousOperations.Count > 1)
-            {
-                // Set the current action to the last operation in the list
-                action = previousOperations.Last();
-                // Transform operations that have not been transformed yet
-                previousOperations.Where(op => !op.IsTransformed).ToList().ForEach(op => CollaborativeEditingHandler.TransformOperation(op, previousOperations));
-            }
-            // Update the action's version and mark it as transformed
-            action.Version = version;
-            action.IsTransformed = true;
- 
-             //Other code snippets
- 
-            // Return the updated action
-            return action;
-        }
+private async Task < ActionInfo > AddOperationsToCache(ActionInfo action)
+{
+  int clientVersion = action.Version;
+  // Initialize the database connection
+  IDatabase database = _redisConnection.GetDatabase();
+  // Define the keys for Redis operations based on the action's room name
+  RedisKey[] keys = new RedisKey[] { action.RoomName + CollaborativeEditingHelper.VersionInfoSuffix, action.RoomName, action.RoomName + CollaborativeEditingHelper.RevisionInfoSuffix, action.RoomName + CollaborativeEditingHelper.ActionsToRemoveSuffix };
+  // Serialize the action and prepare values for the Redis script
+  RedisValue[] values = new RedisValue[] { JsonConvert.SerializeObject(action), clientVersion.ToString(), CollaborativeEditingHelper.SaveThreshold.ToString() };
+  // Execute the Lua script in Redis and store the results
+  RedisResult[] results = (RedisResult[])await database.ScriptEvaluateAsync(CollaborativeEditingHelper.InsertScript, keys, values);
+
+  // Parse the version number from the script results
+  int version = int.Parse(results[0].ToString());
+  // Deserialize the list of previous operations from the script results
+  List < ActionInfo > previousOperations = ((RedisResult[])results[1]).Select(value => JsonConvert.DeserializeObject<ActionInfo>(value.ToString())).ToList();
+
+  // Increment the version for each previous operation
+  previousOperations.ForEach(op => op.Version = ++clientVersion);
+
+  // Check if there are multiple previous operations to determine if transformation is needed
+  if (previousOperations.Count > 1) {
+    // Set the current action to the last operation in the list
+    action = previousOperations.Last();
+    // Transform operations that have not been transformed yet
+    previousOperations.Where(op => !op.IsTransformed).ToList().ForEach(op => CollaborativeEditingHandler.TransformOperation(op, previousOperations));
+  }
+  // Update the action's version and mark it as transformed
+  action.Version = version;
+  action.IsTransformed = true;
+
+  //Other code snippets
+
+  // Return the updated action
+  return action;
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -623,41 +613,39 @@ The following code snippet demonstrates how to track and retrieve pending operat
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
-        public async Task<string> GetActionsFromServer(ActionInfo param)
-        {
-            try
-            {
-                // Initialize necessary variables from the parameters and helper class
-                int saveThreshold = CollaborativeEditingHelper.SaveThreshold;
-                string roomName = param.RoomName;
-                int lastSyncedVersion = param.Version;
-                int clientVersion = param.Version;
- 
-                // Retrieve the database connection
-                IDatabase database = _redisConnection.GetDatabase();
- 
-                // Fetch actions that are effective and pending based on the last synced version
-                List<ActionInfo> actions = await GetEffectivePendingVersion(roomName, lastSyncedVersion, database);
- 
-                // Increment the version for each action sequentially
-                actions.ForEach(action => action.Version = ++clientVersion);
- 
-                // Filter actions to only include those that are newer than the client's last known version
-                actions = actions.Where(action => action.Version > lastSyncedVersion).ToList();
- 
-                // Transform actions that have not been transformed yet
-                actions.Where(action => !action.IsTransformed).ToList()
-                    .ForEach(action => CollaborativeEditingHandler.TransformOperation(action, actions));
- 
-                // Serialize the filtered and transformed actions to JSON and return
-                return Newtonsoft.Json.JsonConvert.SerializeObject(actions);
-            }
-            catch
-            {
-                // In case of an exception, return an empty JSON object
-                return "{}";
-            }
-        }
+public async Task < string > GetActionsFromServer(ActionInfo param)
+{
+  try {
+    // Initialize necessary variables from the parameters and helper class
+    int saveThreshold = CollaborativeEditingHelper.SaveThreshold;
+    string roomName = param.RoomName;
+    int lastSyncedVersion = param.Version;
+    int clientVersion = param.Version;
+
+    // Retrieve the database connection
+    IDatabase database = _redisConnection.GetDatabase();
+
+    // Fetch actions that are effective and pending based on the last synced version
+    List < ActionInfo > actions = await GetEffectivePendingVersion(roomName, lastSyncedVersion, database);
+
+    // Increment the version for each action sequentially
+    actions.ForEach(action => action.Version = ++clientVersion);
+
+    // Filter actions to only include those that are newer than the client's last known version
+    actions = actions.Where(action => action.Version > lastSyncedVersion).ToList();
+
+    // Transform actions that have not been transformed yet
+    actions.Where(action => !action.IsTransformed).ToList()
+      .ForEach(action => CollaborativeEditingHandler.TransformOperation(action, actions));
+
+    // Serialize the filtered and transformed actions to JSON and return
+    return Newtonsoft.Json.JsonConvert.SerializeObject(actions);
+  }
+  catch {
+    // In case of an exception, return an empty JSON object
+    return "{}";
+  }
+}
 
 {% endhighlight %}
 {% endtabs %}
