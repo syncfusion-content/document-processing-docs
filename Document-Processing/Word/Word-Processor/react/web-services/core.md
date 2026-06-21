@@ -321,11 +321,8 @@ public Startup(IConfiguration configuration, IWebHostEnvironment env)
 {% endhighlight %}
 {% endtabs %}
 
-#### Web API end points
 
-Document Editor provides options to perform spell checking word-by-word and page-by-page when loading documents.
-
-#### Word-by-word spell check
+### Web API for word-by-word spell check 
 
 This Web API performs spell checking word by word and returns a JSON response containing information about error words and suggestions, if any. By default, word-by-word spell checking is performed in the Document Editor when spell check is enabled on the client side.
 
@@ -363,7 +360,7 @@ public class SpellCheckJsonData
 {% endhighlight %}
 {% endtabs %}
 
-#### Page-by-page spell check
+### Web API for page-by-page spell check
 
 This Web API performs spell checking page by page and returns a JSON response containing information about error words and suggestions, if any. By [enabling optimized spell check](https://help.syncfusion.com/document-processing/word/word-processor/react/spell-check#optimized-spell-check) on the client side, you can perform page-by-page spell checking when loading documents.
 
@@ -402,7 +399,7 @@ public class SpellCheckJsonData
 {% endhighlight %}
 {% endtabs %}
 
-You can find the GitHub web service example or use the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) to host your own web service.
+>N You can find the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) then configure the dictionary set up  to make use for spell check or use the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) to host your own web service.
 
 ## Save as file formats other than SFDT and DOCX
 
@@ -562,4 +559,4 @@ The following example code illustrates how to write a Web API for export.
     }
 ```
 
->Note: Please refer the [ASP.NET Core Web API sample](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices/tree/master/ASP.NET%20Core).
+>N[View ASP.NET Core Web API sample in GitHub](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices/tree/master/ASP.NET%20Core).
