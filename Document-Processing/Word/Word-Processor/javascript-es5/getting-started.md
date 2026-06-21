@@ -14,7 +14,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript DOCX Editor (Documen
 
 ## Steps to create a DOCX Editor using JavaScript (ES5)
 
-Create a folder named `documenteditor-app` with `index.html` and `index.js` files. Your application structure should look like this:
+Create a folder named `documenteditor-app` with `index.html` and `index.js` files with the default structure. Your application structure should look like this:
 
  ```text
   documenteditor-app/
