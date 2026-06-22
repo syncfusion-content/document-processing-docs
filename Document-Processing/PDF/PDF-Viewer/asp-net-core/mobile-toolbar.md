@@ -66,16 +66,6 @@ The desktop toolbar can be enabled on mobile devices using the `enableDesktopMod
     </ejs-pdfviewer>
 </div>
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   enableDesktopMode="true">
-    </ejs-pdfviewer>
-</div>
-{% endhighlight %}
 {% endtabs %}
 
 ## Enable Scrolling in Desktop Mode with Touch Gestures
@@ -87,17 +77,6 @@ Smooth scrolling of PDF documents on mobile devices in desktop mode can be enabl
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   enableDesktopMode="true"
-                   enableTextSelection="false">
-    </ejs-pdfviewer>
-</div>
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
                    enableDesktopMode="true"
                    enableTextSelection="false">

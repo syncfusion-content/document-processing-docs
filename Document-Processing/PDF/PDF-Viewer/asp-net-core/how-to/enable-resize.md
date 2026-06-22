@@ -30,16 +30,4 @@ Set the **EnableTextMarkupResizer** property to `true` in the Razor view to disp
 </div>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
-                   serviceUrl="/api/PdfViewer"
-                   enableTextMarkupResizer="true">
-    </ejs-pdfviewer>
-</div>
-
-{% endhighlight %}
 {% endtabs %}

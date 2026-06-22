@@ -31,23 +31,4 @@ Use the [`downloadStart`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusi
     }
 </script>
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/Index"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   downloadStart="downloadStart">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function downloadStart(args) {
-        // Apply custom logic to allow or deny downloads
-        args.cancel = true; // Prevent download action
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}

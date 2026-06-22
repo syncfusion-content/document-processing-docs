@@ -26,18 +26,6 @@ Use the following example to disable the context menu in the PDF Viewer:
 </div>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
-                   serviceUrl="/api/PdfViewer"
-                   contextMenuOption="None">
-    </ejs-pdfviewer>
-</div>
-
-{% endhighlight %}
 {% endtabs %}
 
 This configuration hides the context menu entirely, preventing users from accessing it when right-clicking on the PDF document.

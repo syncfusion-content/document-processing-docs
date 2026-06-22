@@ -38,26 +38,6 @@ Remove specific annotations programmatically using the `deleteAnnotationById()` 
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button onclick="deleteAnnotationbyId()">deleteAnnotationbyId</button>
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer
-        id="pdfviewer"
-        serviceUrl='/Index'
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function deleteAnnotationbyId() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.annotationModule.deleteAnnotationById(viewer.annotationCollection[0].annotationId);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 [View sample on GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/Delete%20a%20specific%20annotation%20using%20deleteAnnotationById)

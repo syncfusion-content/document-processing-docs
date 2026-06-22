@@ -38,26 +38,6 @@ Follow these steps to implement bookmark pane toggling:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button type="button" onclick="openBookmark()">Open Bookmark Pane</button>
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/Index"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function openBookmark() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.bookmarkViewModule.openBookmarkPane();
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Close the bookmark pane
@@ -83,26 +63,6 @@ To hide the bookmark pane, call the `closeBookmarkPane()` method. Use the follow
         viewer.bookmarkViewModule.closeBookmarkPane();
     }
 </script>
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button type="button" onclick="closeBookmark()">Close Bookmark Pane</button>
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/Index"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function closeBookmark() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.bookmarkViewModule.closeBookmarkPane();
-    }
-</script>
-
 {% endhighlight %}
 {% endtabs %}
 

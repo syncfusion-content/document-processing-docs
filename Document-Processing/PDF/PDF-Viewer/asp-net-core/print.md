@@ -29,18 +29,6 @@ The print functionality can be controlled using the `enablePrint` property. Set 
 </div>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   enablePrint="true">
-    </ejs-pdfviewer>
-</div>
-
-{% endhighlight %}
 {% endtabs %}
 
 ![Print dialog in the PDF Viewer](../images/print.png)
@@ -55,25 +43,6 @@ In addition to the toolbar print button, the PDF Viewer provides the `print()` m
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   documentLoad="print">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function print() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.print.print();
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
                    documentLoad="print">
     </ejs-pdfviewer>
@@ -118,19 +87,6 @@ The `printScaleFactor` property controls the quality of printed output. Higher s
 </div>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   enablePrint="true"
-                   printScaleFactor=0.5>
-    </ejs-pdfviewer>
-</div>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Additional print options
@@ -159,19 +115,6 @@ The `enablePrintRotation` property controls whether landscape pages are automati
 </div>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   enablePrintRotation="true"
-                   printScaleFactor=0.5>
-    </ejs-pdfviewer>
-</div>
-
-{% endhighlight %}
 {% endtabs %}
 
 ### Controlling print window behavior
@@ -190,19 +133,6 @@ The `printMode` property controls how the print dialog is displayed when printin
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   printMode="NewWindow"
-                   printScaleFactor=0.5>
-    </ejs-pdfviewer>
-</div>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
                    printMode="NewWindow"
                    printScaleFactor=0.5>
@@ -254,26 +184,6 @@ See `PrintStartEventArgs` for details:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" 
-                   style="height:600px" 
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/annotations.pdf"
-                   printStart="printStarted">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function printStarted(args) {
-        console.log('Print action has started for file: ' + args.fileName);
-        // To cancel the print action
-        // args.cancel = true;
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ### Print end event
@@ -298,24 +208,6 @@ The `printEnd` event fires when a print action completes or is cancelled. This e
 <div class="text-center">
     <ejs-pdfviewer id="pdfviewer" 
                    style="height:600px" 
-                   documentPath="https://cdn.syncfusion.com/content/pdf/annotations.pdf"
-                   printEnd="printEnded">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function printEnded(args) {
-        console.log('Printed File Name: ' + args.fileName);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" 
-                   style="height:600px" 
-                   serviceUrl="/api/PdfViewer"
                    documentPath="https://cdn.syncfusion.com/content/pdf/annotations.pdf"
                    printEnd="printEnded">
     </ejs-pdfviewer>

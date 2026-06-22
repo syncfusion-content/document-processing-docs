@@ -66,30 +66,6 @@ Optimize zoom settings for mobile devices by updating the `minZoom` and `maxZoom
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function documentLoad() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        if (ej2_base_1.Browser.isDevice && !viewer.enableDesktopMode) {
-            viewer.maxZoom = 200;
-            viewer.minZoom = 10;
-        }
-       else {
-            viewer.zoomMode = 'Default';
-        }
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Best practices

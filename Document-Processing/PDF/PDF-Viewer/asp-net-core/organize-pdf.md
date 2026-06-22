@@ -153,16 +153,6 @@ Enables or disables the page organizer feature in the PDF Viewer. When disabled,
     </ejs-pdfviewer>
 </div>
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   enablePageOrganizer="true">
-    </ejs-pdfviewer>
-</div>
-{% endhighlight %}
 {% endtabs %}
 
 ### isPageOrganizerOpen
@@ -183,16 +173,6 @@ Determines whether the page organizer panel is displayed automatically when a do
     </ejs-pdfviewer>
 </div>
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   isPageOrganizerOpen="true">
-    </ejs-pdfviewer>
-</div>
-{% endhighlight %}
 {% endtabs %}
 
 ### pageOrganizerSettings
@@ -206,17 +186,6 @@ Provides granular control over page organizer features and thumbnail display. Th
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   pageOrganizerSettings= pageOrganizerSettings="@(new Syncfusion.EJ2.PdfViewer.PdfViewerPageOrganizerSettings
-                   {canDelete: true, canInsert: true, canRotate: true, canCopy: true, canRearrange: true, canImport: true, imageZoom: 1, showImageZoomingSlider: true, imageZoomMin: 1, imageZoomMax: 5 })">
-    </ejs-pdfviewer>
-</div>
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
                    pageOrganizerSettings= pageOrganizerSettings="@(new Syncfusion.EJ2.PdfViewer.PdfViewerPageOrganizerSettings
                    {canDelete: true, canInsert: true, canRotate: true, canCopy: true, canRearrange: true, canImport: true, imageZoom: 1, showImageZoomingSlider: true, imageZoomMin: 1, imageZoomMax: 5 })">
@@ -252,27 +221,6 @@ Programmatically opens the page organizer panel. Use this API to provide users w
     }
 </script>
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button type="button" onclick="closePageOrganizer()">Close PageOrganizer Pane</button>
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl='/Index'
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function openPageOrganizer() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        // Close Page Organizer panel.
-        pdfViewer.pageOrganizer.openPageOrganizer();
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
@@ -290,23 +238,6 @@ Programmatically opens the page organizer panel. Use this API to provide users w
         pdfViewer.pageOrganizer.openPageOrganizer();
     }
 </script>
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button type="button" onclick="openPageOrganizer()">Open PageOrganizer Pane</button>
-
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-</div>
-
-<script>
-    function openPageOrganizer() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        // Open Page Organizer panel.
-        pdfViewer.pageOrganizer.openPageOrganizer();
-    }
-</script>
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -336,27 +267,6 @@ Programmatically closes the page organizer panel. Use this API to dismiss the or
         pdfViewer.pageOrganizer.closePageOrganizer(););
     }
 </script>
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button type="button" onclick="closePageOrganizer()">Close PageOrganizer Pane</button>
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl='/Index'
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function closePageOrganizer() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        // Close Page Organizer panel.
-        pdfViewer.pageOrganizer.closePageOrganizer();
-    }
-</script>
-
 {% endhighlight %}
 {% endtabs %}
 

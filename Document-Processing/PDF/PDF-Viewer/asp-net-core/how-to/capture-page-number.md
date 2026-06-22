@@ -39,27 +39,6 @@ Follow these steps to capture the current page number on demand.
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button onclick="currentPage()">Get Current Page</button>
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer
-        id="pdfviewer"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="/Index">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function currentPage() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        var pageNumber = viewer.currentPageNumber;
-        alert('Current page number is ' + pageNumber);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 The script retrieves the PDF Viewer instance and accesses the `currentPageNumber` property to display the current page in an alert dialog when the button is clicked.

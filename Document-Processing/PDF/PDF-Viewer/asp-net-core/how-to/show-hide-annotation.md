@@ -57,6 +57,5 @@ ViewData["Title"] = "Home page";
 
 - The `exportAnnotationsAsObject()` method returns a promise containing serialized annotation data. Store this securely if it contains sensitive information.
 - The `resourceUrl` must match the application's PDF Viewer library version.
-- In server-backed scenarios, replace `resourceUrl` with `serviceUrl` pointing to the ASP.NET Core controller.
 
 [View sample on GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/ShowHideAnnotations)
