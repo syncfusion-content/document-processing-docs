@@ -30,7 +30,7 @@ Use the [`maxZoom`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.
 
 <div>
     <div style="height:100%; width: 100%;">
-        @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/Home/")).DocumentPath("PDF_Succinctly.pdf").MaxZoom(maxZoom).MinZoom(minZoom).Render()
+        @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/33.2.13/dist/ej2-pdfviewer-lib").DocumentPath("PDF_Succinctly.pdf").MaxZoom(maxZoom).MinZoom(minZoom).Render()
     </div>
 </div>
 ```
@@ -60,25 +60,6 @@ You can restrict zoom percentages on mobile devices by updating the `minZoom` an
     }
 </script>
 
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).DocumentLoad("documentLoad").DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-</div>
-
-<script>
-    function documentLoad() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        if (ej2_base_1.Browser.isDevice && !viewer.enableDesktopMode) {
-            viewer.maxZoom = 200;
-            viewer.minZoom = 10;
-        }
-       else {
-            viewer.zoomMode = 'Default';
-        }
-    }
-</script>
 {% endhighlight %}
 {% endtabs %}
 

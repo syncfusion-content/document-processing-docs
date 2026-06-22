@@ -28,17 +28,4 @@ Here is an example of how you can use the **annotationSelect** event to get the 
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationSelect("annotationSelected").Render()
-</div>
-
-<script>
-    function annotationSelected(args) {
-        console.log('Annotation selected with ID: ' + args.annotationCollection);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}

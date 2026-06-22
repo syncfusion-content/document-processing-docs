@@ -142,32 +142,4 @@ The following example logs comments in response to a button click.
 </script>
 
 {% endhighlight %}
-
-{% highlight html tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-</div>
-
-<script type="text/javascript">
-    function checkComments() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        var annotationCollections = viewer.annotationCollection;
-        for (var x = 0; x < annotationCollections.length; x++) {
-            //Prints the annotation id in the console window.
-            console.log("annotation Id : " + annotationCollections[x].annotationId);
-            var comments = annotationCollections[x].comments;
-            for (var y = 0; y < comments.length; y++) {
-                var comment = comments[y];
-                //Prints the PDF document's comments in the console window.
-                console.log("comment" + "[" + y + "] :" + comment.note);
-            }
-            var note = annotationCollections[x].note;
-            console.log("note : " + note);
-        }
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}

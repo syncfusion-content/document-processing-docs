@@ -42,27 +42,6 @@ Follow these steps to load a PDF from Base64 data:
     </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-```html
-
-<div>
-    <div style="height:500px;width:100%;">
-        <button type="button" onclick="LoadFromBase64()">Load From Base64</button>
-        @Html.EJS().PdfViewer("pdfViewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).Render()
-    </div>
-</div>
-
-    <script type="text/javascript">
-        //Load PDF document from base64 String
-        function LoadFromBase64() {
-            var viewer = document.getElementById('pdfViewer').ej2_instances[0];
-            //Enter Base64 Data
-            viewer.load('Enter Base64 Data',null);
-        }
-    </script>
-
-```
-{% endhighlight %}
 {% endtabs %}
 
 Replace the placeholder `Enter Base64 Data` with a valid PDF Base64 string. Ensure the resourceUrl version matches the viewer scripts.

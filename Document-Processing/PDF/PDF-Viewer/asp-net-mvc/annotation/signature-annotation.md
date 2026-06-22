@@ -20,12 +20,6 @@ The following example shows how to enable handwritten signatures in the PDF View
 
 ```
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-```html
-@Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).EnableHandwrittenSignature(false).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-
-```
-{% endhighlight %}
 {% endtabs %}
 
 ## Adding a handwritten signature to the PDF document
@@ -166,14 +160,6 @@ Use the following example to set default handwritten signature settings.
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").HandWrittenSignatureSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerHandWrittenSignatureSettings { Opacity = 1, Thickness = 2 }).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
 </div>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).HandWrittenSignatureSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerHandWrittenSignatureSettings { Opacity = 1, Thickness = 2 }).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-</div>
-
 
 {% endhighlight %}
 {% endtabs %}

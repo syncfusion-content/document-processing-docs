@@ -103,13 +103,6 @@ Safeguard your edits by utilizing the **Save As** feature. This enables you to d
     </div>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-    <div style="width:100%;height:600px">
-        @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).EnablePageOrganizer(true).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-    </div>
-
-{% endhighlight %}
 {% endtabs %}
 
 **isPageOrganizerOpen:** This API determines whether the page organizer dialog will be displayed automatically when a document is loaded into the PDF Viewer. By default, it is set to `false`, meaning the dialog is not displayed initially.
@@ -122,13 +115,6 @@ Safeguard your edits by utilizing the **Save As** feature. This enables you to d
     </div>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-    <div style="width:100%;height:600px">
-        @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).IsPageOrganizerOpen(true).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-    </div>
-
-{% endhighlight %}
 {% endtabs %}
 
 **pageOrganizerSettings:** This API allows control over various page management functionalities within the PDF Viewer. It includes options to enable or disable actions such as deleting, inserting, rotating, copying, importing and rearranging pages, as well as configuring thumbnail zoom settings. By default, all these actions are enabled and standard zoom settings are applied.
@@ -138,13 +124,6 @@ Safeguard your edits by utilizing the **Save As** feature. This enables you to d
 
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").PageOrganizerSettings(new Syncfusion.EJ2.PdfViewer.PageOrganizerSettings { canDelete: true, canInsert: true, canRotate: true, canCopy: true, canRearrange: true, canImport: true, imageZoom: 1, showImageZoomingSlider: true, imageZoomMin: 1, imageZoomMax: 5 }).Render()
-</div>
-
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").PageOrganizerSettings(new Syncfusion.EJ2.PdfViewer.PageOrganizerSettings { canDelete: true, canInsert: true, canRotate: true, canCopy: true, canRearrange: true, canImport: true, imageZoom: 1, showImageZoomingSlider: true, imageZoomMin: 1, imageZoomMax: 5 }).Render()
 </div>
 
 {% endhighlight %}
@@ -187,41 +166,6 @@ export class AppComponent implements OnInit {
 }
 
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
- import { Component, OnInit } from '@angular/core';
-import { LinkAnnotationService, BookmarkViewService,
-         MagnificationService, ThumbnailViewService, ToolbarService,
-         NavigationService, TextSearchService, TextSelectionService,
-         PrintService, FormDesignerService, FormFieldsService,
-         AnnotationService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
-
-@Component({
-  selector: 'app-root',
-  // specifies the template string for the PDF Viewer component
-  template: `<div class="content-wrapper">
-
-  <ejs-pdfviewer
-    id="pdfViewer"
-    [documentPath]='document'
-    [serviceUrl]='service'
-    [pageOrganizerSettings]="pageOrganizerSettings"
-    style="height:640px;display:block">
-  </ejs-pdfviewer>
-</div>`,
-  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
-               ThumbnailViewService, ToolbarService, NavigationService,
-               TextSearchService, TextSelectionService, PrintService,
-               AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService]
-})
-export class AppComponent implements OnInit {
-    public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-    public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
-    public pageOrganizerSettings = { canDelete: true, canInsert: true, canRotate: true, canCopy: true, canRearrange: true, imageZoom: 1, showImageZoomingSlider: true, imageZoomMin: 1, imageZoomMax: 5 };
-    ngOnInit(): void {
-    }
-}
-{% endhighlight %}
 {% endtabs %}
 
 **openPageOrganizer:** This API opens the page organizer dialog within the PDF Viewer, providing access to manage PDF pages.
@@ -242,23 +186,6 @@ export class AppComponent implements OnInit {
     }
 </script>
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button type="button" onclick="openPageOrganizer()">Open PageOrganizer Pane</button>
-
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-</div>
-
-<script>
-    function openPageOrganizer() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        // Open Page Organizer panel.
-        pdfViewer.pageOrganizer.openPageOrganizer();
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 **closePageOrganizer:** This API closes the currently open page organizer dialog within the PDF Viewer, if it is present. It allows users to dismiss the dialog when done with page organization tasks.
@@ -278,23 +205,6 @@ export class AppComponent implements OnInit {
         pdfViewer.pageOrganizer.closePageOrganizer();
     }
 </script>
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button type="button" onclick="closePageOrganizer()">Close PageOrganizer Pane</button>
-
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-</div>
-
-<script>
-    function closePageOrganizer() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        // Close Page Organizer panel.
-        pdfViewer.pageOrganizer.closePageOrganizer();
-    }
-</script>
-
 {% endhighlight %}
 {% endtabs %}
 

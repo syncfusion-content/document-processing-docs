@@ -49,13 +49,6 @@ The following example demonstrates how to disable hyperlink navigation:
 </div>
 ```
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-```html
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnableHyperlink(true).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-</div>
-```
-{% endhighlight %}
 {% endtabs %}
 
 > Note: Disabling hyperlinks only affects the viewer's behavior and does not alter the original PDF document.
@@ -76,13 +69,6 @@ The following example configures hyperlinks to open in a new tab:
 ```html
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").HyperlinkOpenState(Syncfusion.EJ2.PdfViewer.LinkTarget.NewTab).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-</div>
-```
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-```html
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).HyperlinkOpenState(Syncfusion.EJ2.PdfViewer.LinkTarget.NewTab).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
 </div>
 ```
 {% endhighlight %}
@@ -114,28 +100,6 @@ The following example demonstrates how to use these events:
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").HyperlinkClick("hyperlinkClicked").HyperlinkMouseOver("hyperlinkMouseOver").Render()
-</div>
-
-<script>
-    function hyperlinkClicked(args) {
-        // Log the URL of the clicked hyperlink
-        console.log('Hyperlink Clicked:', args.hyperlink);
-
-        // To prevent the default navigation behavior, set args.cancel to true
-        // args.cancel = true;
-    }
-
-    function hyperlinkMouseOver(args) {
-        // Log the URL of the hyperlink being hovered over
-        console.log('Hyperlink Mouse Over:', args.hyperlinkElement.href);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").HyperlinkClick("hyperlinkClicked").HyperlinkMouseOver("hyperlinkMouseOver").Render()
 </div>
 
 <script>

@@ -22,13 +22,6 @@ Here is an example of how you can use the **ContextMenuOption** to disable conte
 </div>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ContextMenuOption(Syncfusion.EJ2.PdfViewer.ContextMenuAction.None).Render()
-</div>
-
-{% endhighlight %}
 {% endtabs %}
 
 This will hide the context menu and prevent the user from right-clicking on the PDF viewer.

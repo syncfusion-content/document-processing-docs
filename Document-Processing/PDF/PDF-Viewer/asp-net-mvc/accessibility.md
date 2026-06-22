@@ -145,47 +145,6 @@ Additionally, we are introducing an `EventCallback` to the `keyboardCustomComman
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnablePrint(true).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").CommandManager("commandManager").Render()
-</div>
-
-<script>
-    function commandManager() {
-       keyboardCommand: [{
-            name: 'customCopy',
-            gesture: {
-                pdfKeys: PdfKeys.G,
-                modifierKeys: ModifierKeys.Shift | ModifierKeys.Alt
-               }
-            },
-            {
-            name: 'customPaste',
-            gesture: {
-                pdfKeys: PdfKeys.H,
-                modifierKeys: ModifierKeys.Shift | ModifierKeys.Alt
-               }
-            },
-            {
-            name: 'customCut',
-            gesture: {
-                pdfKeys: PdfKeys.Z,
-                modifierKeys: ModifierKeys.Control
-               }
-            },
-            {
-            name: 'customSelectAll',
-            gesture: {
-                pdfKeys: PdfKeys.E,
-                modifierKeys: ModifierKeys.Control
-               }
-            },
-        ]
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 Each `keyboardCommand` object consists of a name property, specifying the `name` of the `custom command`, and a `gesture property`, defining the key gesture associated with the command.

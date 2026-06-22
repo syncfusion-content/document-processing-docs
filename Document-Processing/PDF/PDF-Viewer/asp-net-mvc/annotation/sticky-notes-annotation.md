@@ -56,24 +56,6 @@ Here is an example showing how to add a sticky note annotation programmatically 
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button id="set" onclick="addAnnotation()">Add annotation programmatically</button>
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-</div>
-<script>
-  function addAnnotation() {
-    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-    viewer.annotation.addAnnotation("StickyNotes", {
-      offset: { x: 100, y: 200 },
-      pageNumber: 1,
-      isLock: false
-    });
-  }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Edit an existing sticky note annotation programmatically
@@ -88,28 +70,6 @@ Here is an example of using **editAnnotation()**:
 <button id="set" onclick="editAnnotation()">Edit annotation programmatically</button>
     <div style="width:100%;height:600px">
         @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-    </div>
-<script>
-  function editAnnotation() {
-    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-    for (let i = 0; i < viewer.annotationCollection.length; i++)
-    {
-      if (viewer.annotationCollection[i].shapeAnnotationType === "sticky") {
-        var width = viewer.annotationCollection[i].bounds.width;
-        var height = viewer.annotationCollection[i].bounds.height;
-        viewer.annotationCollection[i].bounds = {x : 100, y: 100, width: width, height: height };
-        viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
-      }
-    }
-  }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button id="set" onclick="editAnnotation()">Edit annotation programmatically</button>
-    <div style="width:100%;height:600px">
-        @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
     </div>
 <script>
   function editAnnotation() {
@@ -163,13 +123,6 @@ After changing default opacity using the Edit Opacity tool, the selected value i
     </div>
 ```
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-```html
-    <div style="width:100%;height:600px">
-        @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").StickyNotesSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerStickyNotesSettings { Author = "Syncfusion" }).Render()
-    </div>
-```
-{% endhighlight %}
 {% endtabs %}
 
 ## Disable sticky note annotations
@@ -181,13 +134,6 @@ The PDF Viewer control provides an option to disable sticky note annotations. Th
 ```html
     <div style="width:100%;height:600px">
         @Html.EJS().PdfViewer("pdfviewer").EnableStickyNotesAnnotation(false).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-    </div>
-```
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-```html
-    <div style="width:100%;height:600px">
-        @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).EnableStickyNotesAnnotation(false).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
     </div>
 ```
 {% endhighlight %}

@@ -41,21 +41,6 @@ The following example switches to ink annotation mode.
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-<!--Element to set ink annotation mode-->
-<button id="set" onclick="addAnnot()">Draw Ink</button>
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-</div>
-<script>
-    function addAnnot() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.annotation.setAnnotationMode('Ink');
-     }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Add an ink annotation programmatically to the PDF document
@@ -143,31 +128,6 @@ Here is an example of using **editAnnotation()**:
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-<button id="set" onclick="editAnnotation()">Edit annotation programmatically</button>
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-</div>
-<script>
-    function editAnnotation() {
-      var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-      for (let i = 0; i < viewer.annotationCollection.length; i++)
-      {
-        if (viewer.annotationCollection[i].shapeAnnotationType === "Ink") {
-          var width = viewer.annotationCollection[i].bounds.width;
-          var height = viewer.annotationCollection[i].bounds.height;
-          viewer.annotationCollection[i].bounds = {x : 100, y: 100, width: width, height: height };
-          viewer.annotationCollection[i].strokeColor = "#0000FF";
-          viewer.annotationCollection[i].thickness = 2 ;
-          viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
-          viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
-        }
-      }
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Edit the properties of ink annotations
@@ -204,13 +164,6 @@ Refer to the following code sample to set the default ink annotation settings.
 
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").InkAnnotationSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerInkAnnotationSettings { Author = "Syncfusion", StrokeColor = "green", Thickness = 3, Opacity = 0.6 }).Render()
-</div>
-
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").InkAnnotationSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerInkAnnotationSettings { Author = "Syncfusion", StrokeColor = "green", Thickness = 3, Opacity = 0.6 }).Render()
 </div>
 
 {% endhighlight %}

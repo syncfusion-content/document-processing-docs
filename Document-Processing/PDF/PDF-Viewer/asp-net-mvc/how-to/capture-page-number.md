@@ -36,23 +36,6 @@ The following steps outline how to capture the current page number.
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button onclick="currentPage()">currentpage</button>
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-</div>
-
-<script>
-    function currentPage() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        var pageNumber = viewer.currentPageNumber;
-        alert("current page number is" + pageNumber);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 The script retrieves the PDF Viewer instance from the page, reads the `currentPageNumber` property, and surfaces the value in an alert dialog when the button is clicked.
