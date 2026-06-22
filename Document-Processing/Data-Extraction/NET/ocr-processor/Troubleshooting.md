@@ -485,7 +485,7 @@ NuGet:  <a href="https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoD
 <table>
 <th style="font-size:14px" width="100px">Exception</th>
 <th style="font-size:14px">The application failed to load Tesseract OCR DLLs when hosted on IIS, resulting in the error:
-Could not find a part of the path 'C:\inetpub\wwwroot\VizarCore\x64'.</th>
+Could not find a part of the path 'C:\inetpub\wwwroot\YourApp\x64'.</th>
 <tr>
 <th style="font-size:14px" width="100px">Reason
 </th>
