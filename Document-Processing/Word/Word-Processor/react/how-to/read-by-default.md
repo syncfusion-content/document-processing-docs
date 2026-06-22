@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Read by default in React Document editor component
 
-In this article, we are going to see how to open a document in read only mode by default in [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) & Document  Editor Container.
+In this article, we are going to see how to open a document in read only mode by default in [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) & Document  Editor Container.
 
 ## Opening a document in read only mode by default in DocumentEditor
 

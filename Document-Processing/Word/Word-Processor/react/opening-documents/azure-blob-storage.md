@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Open document from Azure Blob Storage in React Document editor
 
-To load document from Azure Blob Storage in a [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor), you can follow the steps below
+To load document from Azure Blob Storage in a [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor), you can follow the steps below
 
 **Step 1:** Create a Simple Document Editor Sample in React
 

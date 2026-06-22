@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Web services in React Document editor component
 
-You can deploy web APIs for server-side dependencies of [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) component in the following platforms.
+You can deploy web APIs for server-side dependencies of [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) component in the following platforms.
 
 * [ASP.NET Core](./web-services/core)
 * [ASP.NET MVC](./web-services/mvc)

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Import in React Document editor component
 
-In [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor), the documents are stored in its own format called **Syncfusion Document Text (SFDT)**.
+In [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor), the documents are stored in its own format called **Syncfusion Document Text (SFDT)**.
 
 The following example shows how to open SFDT data in Document Editor.
 

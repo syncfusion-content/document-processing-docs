@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Retrieve the bookmark content as text in React Document editor component
 
-You can get the bookmark or whole document content from the [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) component as plain text and SFDT (rich text).
+You can get the bookmark or whole document content from the [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) component as plain text and SFDT (rich text).
 
 ## Get the bookmark content as plain text
 
