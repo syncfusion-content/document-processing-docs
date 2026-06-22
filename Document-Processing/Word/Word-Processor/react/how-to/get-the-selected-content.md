@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Get the selected content in React Document editor component
 
-You can get the selected content from the [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) component as plain text and SFDT (rich text).
+You can get the selected content from the [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) component as plain text and SFDT (rich text).
 
 ## Get the selected content as plain text
 

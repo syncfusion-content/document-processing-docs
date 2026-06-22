@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Set default format in document editor in React Document editor component
 
-You can set the default character format, paragraph format and section format in [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor).
+You can set the default character format, paragraph format and section format in [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor).
 
 ## Set the default character format
 

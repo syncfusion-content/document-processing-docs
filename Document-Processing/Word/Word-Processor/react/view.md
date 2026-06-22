@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Web Layout
 
-[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) Container component allows you to change the view to web layout and print using the [`layoutType`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container#layouttype) property with the supported [`LayoutType`](https://ej2.syncfusion.com/react/documentation/api/document-editor/layoutType/).
+[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) Container component allows you to change the view to web layout and print using the [`layoutType`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container#layouttype) property with the supported [`LayoutType`](https://ej2.syncfusion.com/react/documentation/api/document-editor/layoutType/).
 
 ```
 <DocumentEditorContainerComponent id="container" layoutType={'Continuous'} enableToolbar={true}/>

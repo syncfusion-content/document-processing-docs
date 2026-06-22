@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Insert text in current position in React Document editor component
 
-You can insert the text, paragraph and rich-text content in [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) component.
+You can insert the text, paragraph and rich-text content in [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) component.
 
 ## Insert text in current cursor position
 

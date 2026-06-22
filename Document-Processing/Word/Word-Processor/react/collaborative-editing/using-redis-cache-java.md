@@ -14,7 +14,7 @@ Allows multiple users to work on the same document simultaneously. This can be d
 
 ## Prerequisites
 
-The following are needed to enable collaborative editing in [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor).
+The following are needed to enable collaborative editing in [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor).
 
 - `SockJS`
 - `Redis`

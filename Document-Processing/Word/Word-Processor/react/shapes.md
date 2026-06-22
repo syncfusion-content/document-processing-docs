@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Shapes are drawing objects that include a text box, rectangles, lines, curves, circles, etc. It can be preset or custom geometry.
 
->Note: At present, [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) does not have support to insert shapes. however, if the document contains a shape while importing, it will be preserved properly.
+>Note: At present, [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) does not have support to insert shapes. however, if the document contains a shape while importing, it will be preserved properly.
 
 ## Supported shapes
 

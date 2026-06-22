@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Resize document editor in React Document editor component
 
-In this article, we are going to see how to change height and width of [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor).
+In this article, we are going to see how to change height and width of [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor).
 
 ## Change height of Document Editor
 

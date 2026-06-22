@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Comments in React Document editor component
 
-[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) allows you to add comments to documents. You can add, navigate and remove comments in code and from the UI.
+[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) allows you to add comments to documents. You can add, navigate and remove comments in code and from the UI.
 
 To know more about the comments in DocumentEditor component, you can check the video below.
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Disable optimized text measuring in React Document editor component
 
-Starting from v19.3.0.x, the accuracy of text size measurements in [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) is improved such as to match Microsoft Word pagination for most Word documents. This improvement is included as default behavior along with an optional API [`enableOptimizedTextMeasuring`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorSettingsModel#enableoptimizedtextmeasuring) in Document editor settings.  
+Starting from v19.3.0.x, the accuracy of text size measurements in [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) is improved such as to match Microsoft Word pagination for most Word documents. This improvement is included as default behavior along with an optional API [`enableOptimizedTextMeasuring`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorSettingsModel#enableoptimizedtextmeasuring) in Document editor settings.  
 
 If you want the Document editor component to retain the document pagination (display page-by-page) behavior like v19.2.0.x and older versions. Then you can disable this optimized text measuring improvement, by setting `false` to [`enableOptimizedTextMeasuring`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorSettingsModel#enableoptimizedtextmeasuring) property of  React Document Editor component.
 

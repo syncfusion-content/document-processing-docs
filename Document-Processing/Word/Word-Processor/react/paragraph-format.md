@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Paragraph format in React Document editor component
 
-[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
+[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
 
 ## Indentation
 

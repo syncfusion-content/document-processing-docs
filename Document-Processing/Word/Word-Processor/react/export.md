@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Export in React Document Editor Component
 
-[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) exports the document into various known file formats in client-side such as Microsoft Word document (.docx), Microsoft Word Template (.dotx), text document (.txt), and its own format called **Syncfusion<sup style="font-size:70%">&reg;</sup> Document Text (.sfdt)**.
+[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) exports the document into various known file formats in client-side such as Microsoft Word document (.docx), Microsoft Word Template (.dotx), text document (.txt), and its own format called **Syncfusion<sup style="font-size:70%">&reg;</sup> Document Text (.sfdt)**.
 
 We are providing two types of save APIs  as mentioned below.
 

@@ -14,7 +14,7 @@ In this article, we are going to see how to open a default document when Documen
 
 ## Opening a default document in DocumentEditor
 
-By default, [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) will open blank document. You can use [`open`](https://ej2.syncfusion.com/react/documentation/api/document-editor#open) API in Document Editor to open the sfdt content.
+By default, [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) will open blank document. You can use [`open`](https://ej2.syncfusion.com/react/documentation/api/document-editor#open) API in Document Editor to open the sfdt content.
 
 Document editor have [`created`](https://ej2.syncfusion.com/react/documentation/api/document-editor#created) event which gets triggered once Document editor control created. So, if you want to open the document by default, you can use [`open`](https://ej2.syncfusion.com/react/documentation/api/document-editor#open) and [`created`](https://ej2.syncfusion.com/react/documentation/api/document-editor#created) API.
 
