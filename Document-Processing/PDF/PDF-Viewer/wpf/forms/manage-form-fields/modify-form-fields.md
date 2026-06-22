@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Modify form fields values in the Syncfusion WPF PDF Viewer | Syncfusion
-description: Learn how to modify PDF form fields values using the UI and programmatically with APIs in the WPF PDF Viewer.
+title: Modify form fields values in the WPF PDF Viewer | Syncfusion
+description: Learn how to modify PDF form fields values using the UI and programmatically with APIs in the Syncfusion WPF PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

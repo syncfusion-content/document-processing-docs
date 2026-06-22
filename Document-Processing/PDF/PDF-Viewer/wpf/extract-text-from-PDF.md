@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Extract Text from PDF Files in Syncfusion WPF Pdf Viewer | Syncfusion®
+title: Extract Text from PDF Files in WPF Pdf Viewer | Syncfusion®
 description: Learn about Extract Text from PDF Files support in Syncfusion<sup>&reg;</sup>; WPF Pdf Viewer control, its elements and more.
 platform: document-processing
 control: PDF Viewer
