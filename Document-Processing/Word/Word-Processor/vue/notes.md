@@ -200,3 +200,7 @@ export default {
 You can update or edit the footnotes and endnotes using the built-in context menu shown up by right-clicking it. The footnote endnote dialog box popup and you can customize the number format and start at. Refer to the following screenshot.
 
 ![Update or edit footnotes and endnotes](images/notes-option.jpg)
+
+## Online Demo
+
+Explore how to add and manage notes in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/notes.html).
