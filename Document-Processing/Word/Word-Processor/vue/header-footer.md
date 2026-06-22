@@ -85,6 +85,10 @@ Move the selection to the document body from header or footer region by double c
 this.$refs.documenteditor.ej2Instances.selection.closeHeaderFooter()
 ```
 
+## Online Demo
+
+Explore how to add and customize headers and footers in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/headers-and-footers.html).
+
 ## See Also
 
 * [Working with Section Formatting](./section-format)

@@ -203,6 +203,10 @@ Document Editor expose API to get or set the table description of the selected i
 documenteditor.selection.tableFormat.description = 'Freight cost and shipping details';
 ```
 
+## Online Demo
+
+Explore how to format tables in Word documents using the JavaScript (ES5) Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/table-formatting.html).
+
 ## See Also
 
 * [Table properties dialog](./dialog#table-properties-dialog)

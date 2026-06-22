@@ -559,6 +559,10 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
+## Online Demo
+
+Explore how to customize the ribbon in the Vue Document Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/ribbon-customization.html).
+
 ## Related Links
 
 - [File menu Customization Demo](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/ribbon-customization)

@@ -21,6 +21,10 @@ DocumentEditor allows to change the view to web layout and print using the [`lay
 {% highlight c# tabtitle="Web-layout.cs" %}
 {% endhighlight %}{% endtabs %}
 
+### Online Demo
+
+Explore how to view Word documents in web layout using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/weblayout#/tailwind3).
+
 ## Ruler
 
 Using ruler we can refer to setting specific margins, tab stops, or indentations within a document to ensure consistent formatting in Document Editor.
@@ -37,6 +41,10 @@ The following example illustrates how to enable ruler in Document Editor
 {% endhighlight %}
 {% endtabs %}
 
+### Online Demo
+
+Explore how to use the ruler in the ASP.NET MVC Document Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/ruler#/tailwind3).
+
 ## Navigation Pane
 
 Using the heading navigation pane allows users to swiftly navigate documents by heading, enhancing their ability to move through the document efficiently.
@@ -52,3 +60,7 @@ The following example illustrates how to enable heading navigation pane in Docum
 {% include code-snippet/document-editor/asp-net-mvc/heading-navigation/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
+
+### Online Demo
+
+Explore how to navigate through headings in Word documents using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/headingnavigation#/tailwind3).

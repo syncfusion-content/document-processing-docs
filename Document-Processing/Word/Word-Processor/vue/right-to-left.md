@@ -22,3 +22,7 @@ domainurl: ##DomainURL##
 {% endtabs %}
         
 {% previewsample "/document-processing/code-snippet/document-editor/vue/right-to-left-cs1" %}
+
+## Online Demo
+
+Explore how to use right-to-left layout in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/right-to-left.html).

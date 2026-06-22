@@ -194,6 +194,10 @@ You can use the following keyboard shortcut to open the hyperlink dialog if the 
 | --------------- | ----------------------------------------------------------------- |
 | Ctrl + K        | Open hyperlink dialog that allows you to create or edit hyperlink |
 
+## Online Demo
+
+Explore how to insert and manage hyperlinks in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/links-and-bookmarks.html).
+
 ## See Also
 
 * [Feature modules](./feature-module)

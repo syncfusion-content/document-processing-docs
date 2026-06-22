@@ -350,3 +350,7 @@ export default {
 
 {% endhighlight %}
 {% endtabs %}
+
+## Online Demo
+
+Explore how to track and review changes in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/track-changes.html).
