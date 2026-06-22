@@ -69,8 +69,8 @@ This component contains various UI controls (ColorPickerPalette and Numeric UpDo
  
 {% endtabcontents %}
 
-N> Starting with version 23.1.x, Syncfusion PdfToImageConverter is necessary for PdfViewer applications.
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup>; assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to [this link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your Windows Forms application to use our components.
+N>* Starting with version 23.1.x, Syncfusion PdfToImageConverter is necessary for PdfViewer applications.
+N>* Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup>; assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to [this link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your Windows Forms application to use our components.
 
 
 ## Add Windows Forms PdfViewer component
@@ -88,16 +88,16 @@ WinForms PdfViewer control can be added to an application either through the des
 
    ![Windows forms pdfviewer displays properties window of control](Getting-Started_images/Getting-Started_img2.png)
  
-3. This will add the instance 'pdfViewerControl1' to the Designer cs file. The PDF can be loaded in the Form cs file using the [Load](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_Forms_PdfViewer_PdfViewerControl_Load_System_String_) method. 
+3. This will add the instance 'pdfViewerControl1' to the Designer cs file. The PDF can be loaded in the Form1.cs file using the [Load](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_Forms_PdfViewer_PdfViewerControl_Load_System_String_) method. 
 
 {% tabs %}
-{% highlight c# tabtitle="Form1.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 //Loading the document in the PdfViewerControl
 pdfViewerControl1.Load("Sample.pdf");
 
 {% endhighlight %}
-{% highlight vb tabtitle="Form1.cs" %}
+{% highlight vb tabtitle="VB.NET" %}
 
 'Loading the document in the PdfViewerControl
 pdfViewerControl1.Load("Sample.pdf")
@@ -110,16 +110,16 @@ pdfViewerControl1.Load("Sample.pdf")
 
 {% tabcontent Via Coding %}
 
-1. Add Syncfusion.Windows.Forms.PdfViewer namespace.
+1. Add Syncfusion.Windows.Forms.PdfViewer namespace in Form1.cs.
 
 
 {% tabs %}
-{% highlight c# tabtitle="Form1.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Windows.Forms.PdfViewer;
 
 {% endhighlight %}
-{% highlight vb tabtitle="Form1.cs" %}
+{% highlight vb tabtitle="VB.NET" %}
 
 Imports Syncfusion.Windows.Forms.PdfViewer
 
@@ -127,10 +127,10 @@ Imports Syncfusion.Windows.Forms.PdfViewer
 {% endtabs %}
 
 
-2. Create PdfViewerControl instance and load the PDF.
+2. Create PdfViewerControl instance and load the PDF in Form1.cs.
 
 {% tabs %}
-{% highlight c# tabtitle="Form1.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 //Initializing the PdfViewerControl
 PdfViewerControl pdfViewerControl1 = new PdfViewerControl();
@@ -144,7 +144,7 @@ pdfViewerControl1.Dock = DockStyle.Fill;
 pdfViewerControl1.Load("Sample.pdf");
 
 {% endhighlight %}
-{% highlight vb tabtitle="Form1.cs" %}
+{% highlight vb tabtitle="VB.NET" %}
 
 'Initializing the PdfViewerControl
 Dim pdfViewerControl1 As PdfViewerControl = New PdfViewerControl()
@@ -169,5 +169,5 @@ pdfViewerControl1.Load("Sample.pdf")
 N>[View Sample in GitHub.](https://github.com/syncfusion/pdf-viewer-sdk-winforms-demos/tree/master/pdfviewer/Getting%20Started/Pdf%20Viewer%20Demo)
 
 ## See Also
-- [Viewing PDF files](/windowsforms/pdf-viewer/working-with-pdf-viewer#viewing-pdf-files)
+- [Working with PdfViewerControl](./working-with-pdf-viewer)
 - [Working with PdfDocumentView](./working-with-pdfdocumentview)
