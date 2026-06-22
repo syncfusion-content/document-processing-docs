@@ -22,7 +22,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup>; assembl
 
 ### Adding from the installed location
 
-The [WinForms PDF Viewer](https://www.syncfusion.com/winforms-ui-controls/pdf-viewer) (PdfViewerControl) and dependent assemblies can be found from the below location in your machine. 
+The [WinForms PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/winforms-pdf-viewer) (PdfViewerControl) and dependent assemblies can be found from the below location in your machine. 
 
 system drive:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\precompiledassemblies\{{ site.releaseversion }}\
 

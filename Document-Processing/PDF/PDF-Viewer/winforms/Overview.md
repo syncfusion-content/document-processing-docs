@@ -9,7 +9,7 @@ documentation: ug
 
 # Windows Forms PDF Viewer (PdfViewerControl) Overview
 
-The [WinForms PDF Viewer](https://www.syncfusion.com/winforms-ui-controls/pdf-viewer) control supports viewing and printing PDF files in WinForms applications. The hyperlink and table of contents support provides easy navigation within and outside the PDF files.
+The [WinForms PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/winforms-pdf-viewer) control supports viewing and printing PDF files in WinForms applications. The hyperlink and table of contents support provides easy navigation within and outside the PDF files.
 
 ![Overview of PDF Viewer control](Overview_images/pdfviewer_overview.png)
 
