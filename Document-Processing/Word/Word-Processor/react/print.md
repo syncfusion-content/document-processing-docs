@@ -234,6 +234,10 @@ The following example shows how to customize layout options only for printing.
         
 {% previewsample "/document-processing/code-snippet/document-editor/react/print-cs3" %}
 
+## Online Demo
+
+Explore how to print Word documents using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/print).
+
 ## See Also
 
 * [Feature modules](./feature-module)
