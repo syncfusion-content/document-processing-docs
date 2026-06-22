@@ -396,6 +396,9 @@ const root = createRoot(document.getElementById('sample'));
 root.render(<Default />);
 ```
 
+## Online Demo
+
+Explore how to customize the ribbon in the React Document Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/ribbon-customization).
 
 ## Related Links
 

@@ -205,6 +205,10 @@ You can also explore the Document Editor interactively using the live sample bel
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/React-DOCX-Editor-Examples/tree/master/getting-started).
 
+## Online Demo
+
+Explore how to create, edit, and print Word documents using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/default).
+
 ## Video tutorial
 
 To get started quickly with Document Editor component, you can check the video below.

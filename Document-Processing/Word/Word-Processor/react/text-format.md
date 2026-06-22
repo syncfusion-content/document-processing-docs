@@ -345,6 +345,10 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
+## Online Demo
+
+Explore how to apply text formatting in Word documents using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/character-formatting).
+
 ## See Also
 
 * [Feature modules](./feature-module)

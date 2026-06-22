@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Smart PDF Viewer in a WinForms App | Syncfusion
+title: Getting Started with Smart PDF Viewer in a WinForms App | Syncfusion
 description: Learn how to get started with the Smart PDF Viewer control in a WinForms Blazor Hybrid App to view, comment on, and fill PDF forms.
 platform: document-processing
 control: SfSmartPdfViewer
@@ -9,7 +9,7 @@ documentation: ug
 
 # Using Smart PDF Viewer Component in the Windows Forms app 
 
-This article explains how to add the Syncfusion&reg; Blazor Smart PDF Viewer component to a WinForms Blazor Hybrid App using [Visual Studio](https://visualstudio.microsoft.com/vs/) or Visual Studio Code. The result is a desktop application (WinForms) that hosts Blazor UI inside a BlazorWebView control.
+This section explains how to add the Syncfusion&reg; Blazor Smart PDF Viewer component to a WinForms Blazor Hybrid App using [Visual Studio](https://visualstudio.microsoft.com/vs/) or Visual Studio Code. The result is a desktop application (WinForms) that hosts Blazor UI inside a BlazorWebView control.
 
 {% tabcontents %}
 
@@ -104,7 +104,7 @@ The WinForms project must target Windows and enable WinForms. A typical project 
 Create a `Component` folder, add an `_Imports.razor` file in it, and include the required component namespaces within that folder.
 
 {% tabs %}
-{% highlight razor tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="_Imports.razor" %}
 
 @using Microsoft.AspNetCore.Components.Web
 @using Syncfusion.Blazor.SmartPdfViewer
@@ -119,7 +119,7 @@ Create a `Component` folder, add an `_Imports.razor` file in it, and include the
 * Inside wwwroot, create an index.html host page for the Blazor UI. This host page is required by BlazorWebView to initialize the Blazor runtime and load static assets (themes and scripts). A basic index.html might look like the following:
 
 {% tabs %} 
-{% highlight html tabtitle="wwwroot/index.html" hl_lines="8 13" %}
+{% highlight html tabtitle="index.html" hl_lines="8 13" %}
 
 <!DOCTYPE html>
 <html>
@@ -170,12 +170,11 @@ dotnet add package Microsoft.Extensions.AI.OpenAI --version 9.8.0-preview.1.2541
 {% endhighlight %}
 {% endtabs %}
 
-Register Syncfusion Blazor services and BlazorWebView in **~/Form1.cs** so that the WinForms window can host Blazor components.
+Add the `Syncfusion.Blazor` namespace to the `~/Form1.cs` file.
 
 {% tabs %}
-{% highlight c# tabtitle="Form1.cs (WinForms host)" hl_lines="2 3 4 5 6 7 8 9 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 31" %}
+{% highlight c# tabtitle="Form1.cs (WinForms host)" %}
 
-namespace WinFormsBlazorHybridApp;
 using Microsoft.AspNetCore.Components.WebView.WindowsForms;
 using Microsoft.Extensions.DependencyInjection;
 using Azure.AI.OpenAI;
@@ -184,29 +183,35 @@ using Syncfusion.Blazor;
 using Syncfusion.Blazor.AI;
 using System.ClientModel;
 using WinFormsBlazorHybridApp.Components;
-....
-        InitializeComponent();
-        ServiceCollection services = new ServiceCollection();
-        services.AddWindowsFormsBlazorWebView();
-        services.AddMemoryCache();
-        services.AddSyncfusionBlazor();
-        string azureOpenAiKey = "api-key";
-        string azureOpenAiEndpoint = "endpoint URL";
-        string azureOpenAiModel = "deployment-name";
-        AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(new Uri(azureOpenAiEndpoint), new ApiKeyCredential(azureOpenAiKey));
-        IChatClient azureOpenAiChatClient = azureOpenAIClient.GetChatClient(azureOpenAiModel).AsIChatClient();
-        services.AddChatClient(azureOpenAiChatClient);
-        services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
-        BlazorWebView blazorWebView = new BlazorWebView()
-        {
-            HostPage = "wwwroot\\index.html",
-            Services = services.BuildServiceProvider(),
-            Dock = DockStyle.Fill
-        };
-        blazorWebView.RootComponents.Add<YourRazorFileName>("#app");
-        // Replace 'YourRazorFileName' with the actual Razor component class (e.g., Main) in your project's namespace
-        this.Controls.Add(blazorWebView);
-....
+
+{% endhighlight %}
+{% endtabs %}
+
+Register Syncfusion Blazor services and BlazorWebView in `~/Form1.cs` after component initialized so that the WinForms window can host Blazor components.
+
+{% tabs %}
+{% highlight c# tabtitle="Form1.cs (WinForms host)" %}
+
+ServiceCollection services = new ServiceCollection();
+services.AddWindowsFormsBlazorWebView();
+services.AddMemoryCache();
+services.AddSyncfusionBlazor();
+string azureOpenAiKey = "api-key";
+string azureOpenAiEndpoint = "endpoint URL";
+string azureOpenAiModel = "deployment-name";
+AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(new Uri(azureOpenAiEndpoint), new ApiKeyCredential(azureOpenAiKey));
+IChatClient azureOpenAiChatClient = azureOpenAIClient.GetChatClient(azureOpenAiModel).AsIChatClient();
+services.AddChatClient(azureOpenAiChatClient);
+services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
+BlazorWebView blazorWebView = new BlazorWebView()
+{
+    HostPage = "wwwroot\\index.html",
+    Services = services.BuildServiceProvider(),
+    Dock = DockStyle.Fill
+};
+blazorWebView.RootComponents.Add<YourRazorFileName>("#app");
+// Replace 'YourRazorFileName' with the actual Razor component class (e.g., Main) in your project's namespace
+this.Controls.Add(blazorWebView);
 
 {% endhighlight %}
 {% endtabs %}
@@ -232,7 +237,7 @@ Run the WinForms application. The Syncfusion&reg; Blazor Smart PDF Viewer render
 
 ![WinForms Blazor HybridApp Smart PDF Viewer rendering in browser](../images/blazor-hybrid-winforms-sfsmartpdfviewer.png)
 
->[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Getting%20Started/WinForms%20Blazor%20App).
+> [View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Getting%20Started/WinForms%20Blazor%20App).
 
 ## See also
 

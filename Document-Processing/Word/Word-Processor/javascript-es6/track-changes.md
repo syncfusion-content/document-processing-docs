@@ -259,3 +259,6 @@ function beforeAcceptRejectChanges(args : RevisionActionEventArgs) : void {
 }
 ```
 
+## Online Demo
+
+Explore how to track and review changes in Word documents using the JavaScript Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/track-changes.html).

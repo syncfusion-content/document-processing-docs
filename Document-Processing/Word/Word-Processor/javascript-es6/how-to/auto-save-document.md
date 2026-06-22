@@ -84,5 +84,9 @@ public string AutoSave()
 }
 ```
 
+## Online Demo
+
+Explore how to automatically save Word documents using the JavaScript Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/default.html).
+
 ## See Also
 * [Autosave document in DocumentEditor](../how-to/auto-save-document-in-document-editor)

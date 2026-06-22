@@ -38,7 +38,7 @@ For more information about Fields, refer this [page](https://help.syncfusion.com
 
 ## Perform mail merge 
 
-Once the necessary merge fields are inserted, the template is ready for mail merge. Perform the mail merge on the template using supported data sources on the server side with DocIO. After the mail merge operation is completed, the merged document can be loaded into the Document Editor for viewing. The Document Editor also supports exporting the mail-merged document to supported formats.
+Once the necessary merge fields are inserted, the template is ready for mail merge. Perform the mail merge on the template using supported data sources on the server side with DocIO. After the mail merge operation is completed, the merged document can be loaded into the Document Editor for viewing. The Document Editor also supports exporting the mail-merged document to [supported formats](../supported-fileformats).
 
 For detailed information about mail merge functionality in DocIO, refer to this [page](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-mail-merge).
 

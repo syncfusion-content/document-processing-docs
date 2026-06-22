@@ -130,6 +130,9 @@ export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));
 ```
 
+## Online Demo
+
+Explore how to insert and manage bookmarks in Word documents using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/links-and-bookmarks).
 
 ## See Also
 

@@ -135,3 +135,7 @@ var paragraphStyles = documentEditor.getStyles('Paragraph');
 //Get character styles
 var characterStyles = documentEditor.getStyles('Character');
 ```
+
+## Online Demo
+
+Explore how to apply and modify styles in Word documents using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/styles#/tailwind3).

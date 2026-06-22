@@ -50,3 +50,7 @@ The following chart types are supported in document editor
 * Line_Markers_Stacked_100
 * Line_Stacked
 * Line_Stacked_100
+
+## Online Demo
+
+Explore how to preserve charts in Word documents using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/chart).
