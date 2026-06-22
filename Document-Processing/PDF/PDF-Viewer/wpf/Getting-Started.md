@@ -126,10 +126,10 @@ N> Declare a name for the PdfViewer component as shown above for reference.
 {% tabs %}
 {% highlight xaml tabtitle="MainWindow.xaml" %}
 <Window x:Class="Namespace.MainWindow"
-		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-		xmlns:syncfusionskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
-		syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=Windows11Light}">
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:syncfusionskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+	syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=Windows11Light}">
 
 </Window>
 {% endhighlight %}
@@ -189,10 +189,10 @@ public MainWindow()
     HomeGrid.Children.Add(pdfViewer);
 
     //Apply the theme to PDFViewer.
-	SfSkinManager.ApplyThemeAsDefaultStyle = true;
+    SfSkinManager.ApplyThemeAsDefaultStyle = true;
     SfSkinManager.SetTheme(pdfViewer, new Theme() { ThemeName = "FluentDark" });
     pdfViewer.Load(@"../../PDF_Succinctly.pdf");           
-}         
+}        
 
 {% endhighlight %}
 
