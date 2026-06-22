@@ -659,7 +659,7 @@ End Using
 
 ## Performing OCR on rotated page of PDF document
 
-You can get the OCRed text from the rotated page of PDF document using the [PageSegment](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_PageSegment) property by specifying ``AutoOsd`` through [PageSegmentMode](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.PageSegmentMode.html) Enum. For more details, refer to the following code sample. 
+You can get the OCRed text from the rotated page of PDF document using the [PageSegment](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_PageSegment) property by specifying ``AutoOsd`` through [PageSegmentMode](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.PageSegMode.html) Enum. For more details, refer to the following code sample. 
 
 {% tabs %} 
 

@@ -481,15 +481,15 @@ NuGet:  <a href="https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoD
 </tr>
 </table>
 
-## IIS Fails to Load Tesseract OCR dlls
+## IIS Fails to Load Tesseract OCR DLLS
 <table>
 <th style="font-size:14px" width="100px">Exception</th>
-<th style="font-size:14px">The application failed to load Tesseract OCR dlls when hosted on IIS, resulting in the error:
+<th style="font-size:14px">The application failed to load Tesseract OCR DLLS when hosted on IIS, resulting in the error:
 Could not find a part of the path 'C:\inetpub\wwwroot\YourApp\x64'.</th>
 <tr>
 <th style="font-size:14px" width="100px">Reason
 </th>
-<td> * IIS couldn't load the required Tesseract and Leptonica dlls because some system components were missing.<br>
+<td> * IIS couldn't load the required Tesseract and Leptonica DLLS because some system components were missing.<br>
 * The Visual C++ Redistributables for VS2015-VS2022 (x86 and x64) were not installed.<br>
 * IIS on a 64-bit server needs both redistributables to load native libraries correctly.<br>
 * The application's folder paths and permissions were not properly set up for OCR binaries.<br>
