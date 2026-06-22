@@ -47,3 +47,7 @@ The following chart types are supported in Document Editor
 * Line_Markers_Stacked_100
 * Line_Stacked
 * Line_Stacked_100
+
+## Online Demo
+
+Explore how to preserve charts in Word documents using the JavaScript Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/chart.html).

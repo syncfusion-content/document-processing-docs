@@ -172,6 +172,10 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DocumentEditor).
 
+## Online Demo
+
+Explore how to create, edit, and print Word documents using the Blazor Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-wasm/document-editor/default-functionalities).
+
 ## See also
 
 - [Getting started in Blazor Web app](https://help.syncfusion.com/document-processing/word/word-processor/blazor/getting-started/web-app)

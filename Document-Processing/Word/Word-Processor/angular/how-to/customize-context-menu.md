@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## How to customize context menu in Document Editor
 
-Document Editor allows you to add custom option in context menu. It can be achieved by using the [`addCustomMenu()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/contextMenu/#addcustommenu) method and custom action is defined using the [`customContextMenuSelect`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/customContentMenuEventArgs/)
+Document Editor allows you to add custom option in context menu. It can be achieved by using the [`addCustomMenu()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/contextMenu#addcustommenu) method and custom action is defined using the [`customContextMenuSelect`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/customContentMenuEventArgs)
 
 ### Add Custom Option
 
@@ -93,7 +93,7 @@ Document Editor allows you to customize the added custom option and also to hide
 
 #### Hide default context menu items
 
-Using [`addCustomMenu()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/contextmenu/#addcustommenu) method, you can hide the default context menu. By setting second parameter as true.
+Using [`addCustomMenu()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/contextmenu#addcustommenu) method, you can hide the default context menu. By setting second parameter as true.
 
 The following code shows how to hide default context menu and add custom option in context menu.
 
@@ -148,7 +148,7 @@ export class AppComponent implements OnInit {
 
 #### Customize added context menu items
 
-The following code shows how to hide/show added custom option in context menu using the [`customContextMenuBeforeOpen`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/beforeOpenCloseCustomContentMenuEventArgs/).
+The following code shows how to hide/show added custom option in context menu using the [`customContextMenuBeforeOpen`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/beforeOpenCloseCustomContentMenuEventArgs).
 
 ```typescript
 @Component({
@@ -220,7 +220,7 @@ The following is the output of custom context menu with customization.
 
 #### Customize Context Menu with sub-menu items
 
-Document Editor allows you to customize the Context Menu with sub-menu items. It can be achieved by using the [`addCustomMenu()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/contextMenu/#addcustommenu) method.
+Document Editor allows you to customize the Context Menu with sub-menu items. It can be achieved by using the [`addCustomMenu()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/contextMenu#addcustommenu) method.
 
 The following code shows how to add a sub items in the custom option in context menu in Document Editor Container.
  
@@ -285,3 +285,7 @@ export class AppComponent implements OnInit {
 ```
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+
+### Online Demo
+
+Explore how to customize the context menu in the Angular Document Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/custom-context-menu).
