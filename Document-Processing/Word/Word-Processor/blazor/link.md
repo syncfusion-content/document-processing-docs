@@ -9,7 +9,7 @@ documentation: ug
 
 # Hyperlink in Blazor DocumentEditor Component
 
-A hyperlink is a reference in a document that links content to another location, such as a web page, an email address, or a bookmark within the same document. The [Blazor DOCX Editor ](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) provides comprehensive support for creating, editing, and customizing hyperlinks.
+A hyperlink is a reference in a document that links content to another location, such as a web page, an email address, or a bookmark within the same document. The [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) provides comprehensive support for creating, editing, and customizing hyperlinks.
 
 ## Navigate a hyperlink
 

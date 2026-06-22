@@ -9,7 +9,7 @@ documentation: ug
 
 # Undo and Redo in Blazor DocumentEditor Component
 
-The [Blazor DOCX Editor ](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) automatically tracks the history of all editing actions performed in a document. This history allows users to reverse (undo) their recent actions or re-apply (redo) actions that were undone.
+The [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) automatically tracks the history of all editing actions performed in a document. This history allows users to reverse (undo) their recent actions or re-apply (redo) actions that were undone.
 
 This functionality is enabled by default through the integrated `EditorHistoryModule`.
 

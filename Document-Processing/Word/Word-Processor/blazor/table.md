@@ -9,7 +9,7 @@ documentation: ug
 
 # Working with Tables in Blazor DocumentEditor Component
 
-Tables are an efficient way to present information. Document editor can display and edit the tables. You can select and edit tables through keyboard, mouse, or touch interactions. [Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) exposes a rich set of APIs to perform these operations programmatically.
+Tables are an efficient way to present information. Document editor can display and edit the tables. You can select and edit tables through keyboard, mouse, or touch interactions. [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) exposes a rich set of APIs to perform these operations programmatically.
 
 ## Create a table
 

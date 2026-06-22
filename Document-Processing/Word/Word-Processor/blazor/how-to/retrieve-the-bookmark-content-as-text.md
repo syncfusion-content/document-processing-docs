@@ -11,7 +11,7 @@ documentation: ug
 
 ## How to retrieve the whole document and bookmark content as text in Blazor Document Editor
 
-The [Blazor DOCX Editor ](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) component allows retrieving bookmark or whole document content as plain text and SFDT (rich text).
+The [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) component allows retrieving bookmark or whole document content as plain text and SFDT (rich text).
 
 ## Get the bookmark content as plain text
 

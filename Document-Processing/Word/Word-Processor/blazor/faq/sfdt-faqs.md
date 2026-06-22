@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # FAQs about SFDT in Blazor DOCX Editor
 
-The frequently asked questions about SFDT in [Blazor DOCX Editor ](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) is listed below:
+The frequently asked questions about SFDT in [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) is listed below:
 
 ## What is SFDT format?
 
