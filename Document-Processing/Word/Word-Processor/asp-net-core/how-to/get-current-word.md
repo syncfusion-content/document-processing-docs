@@ -9,7 +9,7 @@ documentation: ug
 
 # How to select and retrieve the word and paragraph in current cursor position in Document Editor component
 
-You can get the current word or paragraph content from the  [ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) component as plain text and SFDT (rich text).
+You can get the current word or paragraph content from the  [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) component as plain text and SFDT (rich text).
 
 ## Select and get the word in current cursor position
 

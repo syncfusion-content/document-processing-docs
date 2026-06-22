@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Open document from Dropbox cloud file storage in Document Editor
 
-To load a document from Dropbox cloud file storage in a [ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor)r, you can follow the steps below
+To load a document from Dropbox cloud file storage in a [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor), you can follow the steps below
 
 **Step 1:** Create a Dropbox API
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # How to insert text or image in table programmatically in  Document Editor component
 
-Using [ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) API's, you can insert [`text`] or [`image`] in [`table`] programmatically based on your requirement.
+Using [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) API's, you can insert [`text`] or [`image`] in [`table`] programmatically based on your requirement.
 
 Use [`selection`] API's to navigate between rows and cells.
 

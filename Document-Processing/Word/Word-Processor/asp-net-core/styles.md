@@ -10,7 +10,7 @@ documentation: ug
 
 # Styles in Document Editor Control
 
-Styles are useful for applying a set of formatting consistently throughout the document. In [ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor), styles are created and added to a document programmatically or via the built-in Styles dialog.
+Styles are useful for applying a set of formatting consistently throughout the document. In [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor), styles are created and added to a document programmatically or via the built-in Styles dialog.
 
 ## Styles definition overview
 

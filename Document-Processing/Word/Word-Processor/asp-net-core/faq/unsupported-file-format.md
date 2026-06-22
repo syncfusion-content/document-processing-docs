@@ -9,7 +9,7 @@ documentation: ug
 
 # Why does my ASP.NET Core show unsupported message for document?
 
-If you receive an "The file format you have selected isn't supported. Please choose valid format." message when opening a document in the [ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor), it typically indicates that the document format is not supported by the current version of the Document Editor. Here are some common reasons for this warning:
+If you receive an "The file format you have selected isn't supported. Please choose valid format." message when opening a document in the [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor), it typically indicates that the document format is not supported by the current version of the Document Editor. Here are some common reasons for this warning:
 1.	Unsupported File Format: The document you are trying to open might be in a format that the Document Editor does not support. Ensure you are using a supported format, such as SFDT.
 2.	Corrupted Document: The document file might be corrupted or improperly formatted. Try opening a different document to see if the issue persists.
 To avoid this warning, always use the recommended document formats and features supported by the Document Editor. 

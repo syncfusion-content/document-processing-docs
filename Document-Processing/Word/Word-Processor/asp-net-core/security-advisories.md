@@ -15,7 +15,7 @@ This document provides a description of the security updates available for Syncf
 
 ## Security Updates
 
-The following security updates are available for [ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) control and are listed based on the release version. 
+The following security updates are available for [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) control and are listed based on the release version. 
 
 ### 2024 Volume 2 (v26.2.4) - July 25, 2024
 

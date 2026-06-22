@@ -10,7 +10,7 @@ documentation: ug
 
 # Comments in ASP.NET Core in Document Editor Component
 
-[ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) allows to add comments to documents. You can add, navigate and remove comments in code and from the UI.
+[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) allows to add comments to documents. You can add, navigate and remove comments in code and from the UI.
 
 ## Add a new comment
 

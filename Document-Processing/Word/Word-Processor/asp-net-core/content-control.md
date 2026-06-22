@@ -10,7 +10,7 @@ documentation: ug
 
 # Content Control in ASP.NET Core in DocumentEditor
 
-[ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) provides support for inserting, editing content controls.
+[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) provides support for inserting, editing content controls.
 
 Content controls can be categorized based on its occurrence in a document as follows,
 

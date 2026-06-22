@@ -10,7 +10,7 @@ documentation: ug
 
 # Restrict Editing in Document Editor Component
 
-[ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) provides support to restrict editing. When the protected document includes range permission, then unique user or user group is only authorized to edit separate text area.
+[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) provides support to restrict editing. When the protected document includes range permission, then unique user or user group is only authorized to edit separate text area.
 
 ## Set current user
 

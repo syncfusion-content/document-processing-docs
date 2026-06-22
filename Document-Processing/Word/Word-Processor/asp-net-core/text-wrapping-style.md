@@ -10,7 +10,7 @@ documentation: ug
 
 # Text Wrapping Style in DocumentEditor
 
-Text wrapping refers to how images and shapes are fit with surrounding text in a document. Currently, [ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor)r has only preservation support for image and textbox shape with below wrapping styles.
+Text wrapping refers to how images and shapes are fit with surrounding text in a document. Currently, [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) has only preservation support for image and textbox shape with below wrapping styles.
 
 ## In-Line with Text
 
