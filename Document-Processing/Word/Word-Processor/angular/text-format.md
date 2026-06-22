@@ -188,9 +188,9 @@ let highlightColor : HighlightColor = documenteditor.selection.characterFormat.h
 documenteditor.selection.characterFormat.highlightColor= 'Pink';
 ```
 
-## Bidirectional (Bidi)
+## Bidirectional
 
-The Bidi property controls whether selected text is displayed as right-to-left (RTL) or left-to-right (LTR) for proper multilingual formatting. You can get or set this property using the following code example.
+The bidi property controls whether selected text is displayed as right-to-left (RTL) or left-to-right (LTR) for proper multilingual formatting. You can get or set this property using the following code example.
 
 ```typescript
 // Get Bidi value of selected text
@@ -399,6 +399,9 @@ export class AppComponent {
   }
 }
 ```
+## Online Demo
+
+Explore how to apply text formatting in Word documents using the Angular Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/character-formatting).
 
 ## See Also
 

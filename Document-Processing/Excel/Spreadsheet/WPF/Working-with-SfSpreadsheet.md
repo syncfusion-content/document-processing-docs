@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Working With Spreadsheet in WPF Spreadsheet control | Syncfusion®
+canonical_url: "https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor"
 description: Learn here all about Working With Spreadsheet support in Syncfusion® WPF Spreadsheet (SfSpreadsheet) control and more.
 platform: document-processing
 control: SfSpreadsheet

@@ -316,6 +316,7 @@
 								<ul>
 									<li><a href="/document-processing/pdf/pdf-viewer/asp-net-core/getting-started">with Standalone PDF Viewer</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/asp-net-core/getting-started-with-server-backed">with Server-Backed PDF Viewer</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/asp-net-core/server-to-standalone">Migrating from Server-Backed to Standalone</a></li>
 								</ul>
 							</li>
 							<li><a href="/document-processing/pdf/pdf-viewer/asp-net-core/feature-module">Feature Modules</a></li>
@@ -556,6 +557,7 @@
 								<ul>
 									<li><a href="/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started">with Standalone PDF Viewer</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started-with-server-backed">with Server-Backed PDF Viewer</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/asp-net-mvc/server-to-standalone">Migrating from Server-Backed to Standalone</a></li>
 								</ul>
 							</li>
 							<li><a href="/document-processing/pdf/pdf-viewer/asp-net-mvc/feature-module">Feature Modules</a></li>
@@ -761,6 +763,7 @@
 								<ul>
 									<li><a href="/document-processing/pdf/pdf-viewer/angular/getting-started">with Standalone PDF Viewer</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/angular/getting-started-with-server-backed">with Server-Backed PDF Viewer</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/angular/server-to-standalone">Migrating from Server-Backed to Standalone</a></li>
 								</ul>
 							</li>
 							<li><a href="/document-processing/pdf/pdf-viewer/angular/ui-builder-skill">Agentic UI Builder Skill</a></li>
@@ -1121,13 +1124,15 @@
 									<li><a href="/document-processing/pdf/pdf-viewer/blazor/document-handling/retrieve-viewer-instance">Retrieve the Viewer Instance </a></li>
 								</ul>
 							</li>
-							<li> <a href="/document-processing/pdf/pdf-viewer/blazor/toolbar-customization-overview">Toolbar Customization</a>
+							<li> <a href="/document-processing/pdf/pdf-viewer/blazor/toolbar/overview">Toolbar</a>
 								<ul>
-									<li><a href="/document-processing/pdf/pdf-viewer/blazor/toolbar-customization/primary-toolbar">Primary Toolbar</a></li>
-									<li><a href="/document-processing/pdf/pdf-viewer/blazor/toolbar-customization/annotation-toolbar">Annotation Toolbar</a></li>
-									<li><a href="/document-processing/pdf/pdf-viewer/blazor/toolbar-customization/form-designer-toolbar">Form Designer Toolbar</a></li>
-									<li><a href="/document-processing/pdf/pdf-viewer/blazor/toolbar-customization/redaction-toolbar">Redaction Toolbar</a></li>
-									<li><a href="/document-processing/pdf/pdf-viewer/blazor/toolbar-customization/mobile-toolbar">Mobile Toolbar</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/toolbar/primary-toolbar">Primary Toolbar</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/toolbar/annotation-toolbar">Annotation Toolbar</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/toolbar/form-designer-toolbar">Form Designer Toolbar</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/organize-pages/toolbar">Organize Pages Toolbar</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/toolbar/redaction-toolbar">Redaction Toolbar</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/toolbar/mobile-toolbar">Mobile Toolbar</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/toolbar/custom-toolbar">Custom Toolbar</a></li>
 								</ul>
 							</li>
 							<li> <a href="/document-processing/pdf/pdf-viewer/blazor/command-manager">Command Manager</a></li>
@@ -1142,7 +1147,18 @@
 								</ul>
 							</li>
 							<li> <a href="/document-processing/pdf/pdf-viewer/blazor/magnification">Magnification</a></li>
-							<li> <a href="/document-processing/pdf/pdf-viewer/blazor/text-search">Text Search</a></li>
+							<li><a href="/document-processing/pdf/pdf-viewer/blazor/text-search/overview">Text Search</a>
+								<ul>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/text-search/text-search-features">Text Search</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/text-search/text-search-events">Text Search Events</a></li>
+								</ul>
+							</li>
+							<li><a href="/document-processing/pdf/pdf-viewer/blazor/text-selection/overview">Text Selection</a>
+								<ul>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/text-selection/enable-text-selection">Toggle text selection</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/text-selection/text-selection-api-events">Text Selection API and Events</a></li>
+								</ul>
+							</li>
 							<li> <a href="/document-processing/pdf/pdf-viewer/blazor/interaction">Interaction Mode</a></li>
 							<li> <a href="/document-processing/pdf/pdf-viewer/blazor/hand-written-signature">Handwritten Signature</a></li>
 							<li>Annotations
@@ -1178,7 +1194,7 @@
 									<li><a href="/document-processing/pdf/pdf-viewer/blazor/annotation/sticky-notes-annotation">Sticky Notes</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/blazor/annotation/free-text-annotation">Free Text</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/blazor/annotation/ink-annotation">Ink</a></li>
-									<li><a href="/document-processing/pdf/pdf-viewer/blazor/toolbar-customization/annotation-toolbar">Toolbar</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/toolbar/annotation-toolbar">Toolbar</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/blazor/annotation/create-modify-annotation">Create and Modify Annotation</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/blazor/annotation/customize-annotation">Customize Annotation</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/blazor/annotation/delete-annotation">Remove Annotation</a></li>
@@ -1242,7 +1258,13 @@
 									<li><a href="/document-processing/pdf/pdf-viewer/blazor/organize-pages/events">Events</a></li>
 								</ul>
 							</li>
-							<li> <a href="/document-processing/pdf/pdf-viewer/blazor/print">Print</a></li>
+							<li><a href="/document-processing/pdf/pdf-viewer/blazor/print/overview">Print</a>
+								<ul>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/print/print-modes">Print Modes</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/print/enable-print-rotation">Print rotation</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/print/events">Events</a></li>
+								</ul>
+							</li>
 							<li> <a href="/document-processing/pdf/pdf-viewer/blazor/document-security-overview">Document security</a>
 								<ul>
 									<li><a href="/document-processing/pdf/pdf-viewer/blazor/document-security/password-protected">Password Protected</a></li>
@@ -1307,6 +1329,7 @@
 								<ul>
 									<li><a href="/document-processing/pdf/pdf-viewer/react/getting-started">with Standalone PDF Viewer</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/react/getting-started-with-server-backed">with Server-Backed PDF Viewer</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/react/server-to-standalone">Migrating from Server-Backed to Standalone</a></li>
 								</ul>
 							</li>
 							<li><a href="/document-processing/pdf/pdf-viewer/react/ui-builder-skill">Agentic UI Builder Skill</a></li>
@@ -1629,6 +1652,7 @@
 								<ul>
 									<li><a href="/document-processing/pdf/pdf-viewer/vue/getting-started">with Standalone PDF Viewer</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/vue/getting-started-with-server-backed">with Server-Backed PDF Viewer</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/vue/server-to-standalone">Migrating from Server-Backed to Standalone</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/vue/getting-started-application">Vue 3</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/vue/quasar">Quasar</a></li>
 								</ul>
@@ -1830,6 +1854,7 @@
 								<ul>
 									<li><a href="/document-processing/pdf/pdf-viewer/javascript-es5/getting-started">with Standalone PDF Viewer</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/javascript-es5/getting-started-with-server-backed">with Server-Backed PDF Viewer</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/javascript-es5/server-to-standalone">Migrating from Server-Backed to Standalone</a></li>
 								</ul>
 							</li>
 							<li><a href="/document-processing/pdf/pdf-viewer/javascript-es5/feature-module">Feature Modules</a></li>
@@ -2099,6 +2124,7 @@
 								<ul>
 									<li><a href="/document-processing/pdf/pdf-viewer/javascript-es6/getting-started">with Standalone PDF Viewer</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/javascript-es6/getting-started-with-server-backed">with Server-Backed PDF Viewer</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/javascript-es6/server-to-standalone">Migrating from Server-Backed to Standalone</a></li>
 								</ul>
 							</li>
 							<li><a href="/document-processing/pdf/pdf-viewer/javascript-es6/module-injection">Module Injection</a></li>
@@ -2677,6 +2703,9 @@
 							<li>
 								<a href="/document-processing/pdf/pdf-viewer/winforms/working-with-pdf-viewer">Working with PdfViewerControl</a>
 							</li>
+							<li>
+								<a href="/document-processing/pdf/pdf-viewer/winforms/working-with-pdfdocumentview">Working with PdfDocumentView</a>
+							</li>
 							<li><a href="/document-processing/pdf/pdf-viewer/winforms/saving-pdf-files">Saving PDF Files</a></li>
 							<li><a href="/document-processing/pdf/pdf-viewer/winforms/printing-pdf-files">Printing PDF Files</a></li>
 							<li><a href="/document-processing/pdf/pdf-viewer/winforms/extract-text-from-PDF">Extract Text from PDF Files</a></li>
@@ -2735,6 +2764,7 @@
 							<li><a href="/document-processing/pdf/pdf-viewer/wpf/password-protected-pdf-files">Viewing Password protected PDF Files</a></li>
 							<li><a href="/document-processing/pdf/pdf-viewer/wpf/printing-pdf-files">Printing PDF Files</a></li>
 							<li><a href="/document-processing/pdf/pdf-viewer/wpf/exporting-pdf">Exporting PDF pages</a></li>
+							<li><a href="/document-processing/pdf/pdf-viewer/wpf/Themes">Themes</a></li>
 							<li><a href="/document-processing/pdf/pdf-viewer/wpf/extract-text-from-PDF">Extract Text from PDF Files</a></li>
 							<li>Forms
 								<ul>
@@ -3787,6 +3817,7 @@
 							<li><a href="/document-processing/word/word-processor/asp-net-mvc/global-local">Globalization</a></li>
 							<li><a href="/document-processing/word/word-processor/asp-net-mvc/notes">Footnotes and Endnotes</a></li>
 							<li><a href="/document-processing/word/word-processor/asp-net-mvc/ribbon">Ribbon</a></li>
+							<li><a href="/document-processing/word/word-processor/asp-net-mvc/view">View</a></li>	
 							<li><a href="/document-processing/word/word-processor/asp-net-mvc/security-advisories">Security Advisories</a></li>
 							<li><a href="/document-processing/word/word-processor/asp-net-mvc/supported-fileformats">Supported File Formats</a></li>
 							<li><a href="/document-processing/word/word-processor/asp-net-mvc/unsupported-features">Unsupported Features</a></li>
@@ -3812,6 +3843,7 @@
 									<li><a href="/document-processing/word/word-processor/asp-net-mvc/how-to/customize-ribbon">Customize Ribbon</a></li>
 									<li><a href="/document-processing/word/word-processor/asp-net-mvc/how-to/customize-context-menu">Customize context menu</a></li>
 									<li><a href="/document-processing/word/word-processor/asp-net-mvc/how-to/customize-font-family-drop-down">Customize the font family drop down</a></li>
+									<li><a href="/document-processing/word/word-processor/asp-net-mvc/how-to/customize-color-picker">Customize Color Picker</a></li>
 									<li><a href="/document-processing/word/word-processor/asp-net-mvc/how-to/hide-tool-bar-and-properties-pane">Hide the toolbar and properties pane in Document editor</a></li>
 									<li><a href="/document-processing/word/word-processor/asp-net-mvc/how-to/override-the-keyboard-shortcuts">Override keyboard shortcuts</a></li>
 									<li><a href="/document-processing/word/word-processor/asp-net-mvc/how-to/disable-header-and-footer-edit-in-document-editor">Disable Header and Footer edit in Document</a></li>
@@ -4673,10 +4705,11 @@
 							<li>
 								FAQ Section
 								<ul>
-									<li><a href="/document-processing/Word/Word-Processor/uwp/faq-section/why-does-out-of-memory-exception-throw-on-opening-large-size-documents-in-sfrichtextboxadv">Why does out of memory exception throw on opening large size documents in SfRichTextBoxAdv</a></li>
-									<li><a href="/document-processing/Word/Word-Processor/uwp/faq-section/How-to-identify-whether-the-viewer-is-scrolled-to-the-bottom-of-the-SfRichTextBoxAdv">How to identify whether the viewer is scrolled to the bottom of the SfRichTextBoxAdv</a></li>
+								    <li><a href="/document-processing/Word/Word-Processor/uwp/faq-section/How-to-use-SfRichTextBoxAdv-as-a-standard-RichTextBox">How to use SfRichTextBoxAdv as a standard RichTextBox</a></li>
 									<li><a href="/document-processing/Word/Word-Processor/uwp/faq-section/How-to-paste-WordDocument-from-DocIO-in-SfRichTextBoxAdv">How to paste WordDocument from DocIO in the SfRichTextBoxAdv</a></li>
 									<li><a href="/document-processing/Word/Word-Processor/uwp/faq-section/How-to-export-the-inserted-image-as-an-Embedded-image-in-HTML-in-SfRichTextBoxAdv">How to export the inserted image as an Embedded image in HTML in SfRichTextBoxAdv</a></li>
+									<li><a href="/document-processing/Word/Word-Processor/uwp/faq-section/How-to-identify-whether-the-viewer-is-scrolled-to-the-bottom-of-the-SfRichTextBoxAdv">How to identify whether the viewer is scrolled to the bottom of the SfRichTextBoxAdv</a></li>
+									<li><a href="/document-processing/Word/Word-Processor/uwp/faq-section/why-does-out-of-memory-exception-throw-on-opening-large-size-documents-in-sfrichtextboxadv">Why does out of memory exception throw on opening large size documents in SfRichTextBoxAdv</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -4723,10 +4756,11 @@
 							<li>
 								FAQ Section
 								<ul>
-									<li><a href="/document-processing/Word/Word-Processor/wpf/faq-section/why-does-out-of-memory-exception-throw-on-opening-large-size-documents-in-sfrichtextboxadv">Why does out of memory exception throw on opening large size documents in SfRichTextBoxAdv</a></li>
-									<li><a href="/document-processing/Word/Word-Processor/wpf/faq-section/How-to-identify-whether-the-viewer-is-scrolled-to-the-bottom-of-the-SfRichTextBoxAdv">How to identify whether the viewer is scrolled to the bottom of the SfRichTextBoxAdv</a></li>
+									<li><a href="/document-processing/Word/Word-Processor/wpf/faq-section/How-to-use-SfRichTextBoxAdv-as-a-standard-RichTextBox">How to use SfRichTextBoxAdv as a standard RichTextBox</a></li>
 									<li><a href="/document-processing/Word/Word-Processor/wpf/faq-section/How-to-paste-WordDocument-from-DocIO-in-SfRichTextBoxAdv">How to paste WordDocument from DocIO in SfRichTextBoxAdv</a></li>
 									<li><a href="/document-processing/Word/Word-Processor/wpf/faq-section/How-to-export-the-inserted-image-as-an-Embedded-image-in-HTML-in-SfRichTextBoxAdv">How to export the inserted image as an Embedded image in HTML in SfRichTextBoxAdv</a></li>
+									<li><a href="/document-processing/Word/Word-Processor/wpf/faq-section/How-to-identify-whether-the-viewer-is-scrolled-to-the-bottom-of-the-SfRichTextBoxAdv">How to identify whether the viewer is scrolled to the bottom of the SfRichTextBoxAdv</a></li>
+									<li><a href="/document-processing/Word/Word-Processor/wpf/faq-section/why-does-out-of-memory-exception-throw-on-opening-large-size-documents-in-sfrichtextboxadv">Why does out of memory exception throw on opening large size documents in SfRichTextBoxAdv</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -5754,12 +5788,12 @@
 								</ul>
 							</li>
 							<li><a href="/document-processing/excel/spreadsheet/react/data-validation">Data Validation</a></li>
-							<li><a href="/document-processing/excel/spreadsheet/react/formatting">Formatting</a>
+							<li><a href="/document-processing/excel/spreadsheet/react/formatting-overview">Formatting</a>
 								<ul>
-									<li><a href="/document-processing/excel/spreadsheet/react/number-formatting">Number Formatting</a></li>
-									<li><a href="/document-processing/excel/spreadsheet/react/conditional-formatting">Conditional Formatting</a></li>
-									<li><a href="/document-processing/excel/spreadsheet/react/text-cell-formatting">Text Cell Formatting</a></li>
-									<li><a href="/document-processing/excel/spreadsheet/react/rich-text-formatting">Rich Text Formatting</a></li>
+									<li><a href="/document-processing/excel/spreadsheet/react/formatting/number-formatting">Number Formatting</a></li>
+									<li><a href="/document-processing/excel/spreadsheet/react/formatting/conditional-formatting">Conditional Formatting</a></li>
+									<li><a href="/document-processing/excel/spreadsheet/react/formatting/text-cell-formatting">Text Cell Formatting</a></li>
+									<li><a href="/document-processing/excel/spreadsheet/react/formatting/rich-text-formatting">Rich Text Formatting</a></li>
 								</ul>
 							</li>
 							<li><a href="/document-processing/excel/spreadsheet/react/rows-and-columns">Rows and Columns</a>
@@ -8132,10 +8166,10 @@
 						</ul>
 					</li>
 					<li>
-						<a href="/document-processing/powerpoint/conversions/powerpoint-to-markdown">PowerPoint to Markdown Conversion</a>
+						<a href="/document-processing/powerpoint/conversions/powerpoint-to-markdown">PowerPoint to Markdown</a>
 					</li>
 					<li>
-						<a href="/document-processing/powerpoint/conversions/markdown-to-powerpoint">Markdown to PowerPoint Conversion</a>
+						<a href="/document-processing/powerpoint/conversions/markdown-to-powerpoint">Markdown to PowerPoint</a>
 					</li>
 				</ul>
 			</li>
@@ -8191,7 +8225,38 @@
 							</li>
 						</ul>
 					</li>					
-					
+				</ul>
+			</li>
+			<li>
+				<a href="/document-processing/markdown/conversions/overview">Conversions</a>
+				<ul>
+					<li>
+						<a href="/document-processing/word/conversions/word-to-markdown-conversion">Word to Markdown</a>
+					</li>
+					<li>
+						<a href="/document-processing/word/conversions/markdown-to-word-conversion">Markdown to Word</a>
+					</li>
+					<li>
+						<a href="/document-processing/markdown/conversions/html-conversions">HTML conversion</a>
+					</li>
+					<li>
+						<a href="/document-processing/markdown/conversions/markdown-to-pdf">Markdown to PDF</a>
+					</li>
+					<li>
+						<a href="/document-processing/data-extraction/net/conversions/pdf-to-markdown">PDF to Markdown</a>
+					</li>
+					<li>
+						<a href="/document-processing/powerpoint/conversions/powerpoint-to-markdown">PowerPoint to Markdown</a>
+					</li>
+					<li>
+						<a href="/document-processing/powerpoint/conversions/markdown-to-powerpoint">Markdown to PowerPoint</a>
+					</li>
+					<li>
+						<a href="/document-processing/excel/conversions/excel-to-markdown/overview">Excel to Markdown</a>
+					</li>
+					<li>
+						<a href="/document-processing/excel/conversions/markdown-to-excel/overview">Markdown to Excel</a>
+					</li>
 				</ul>
 			</li>
 		</ul>

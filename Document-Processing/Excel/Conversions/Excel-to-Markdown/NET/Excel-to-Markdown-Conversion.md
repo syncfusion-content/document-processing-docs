@@ -199,30 +199,6 @@ exportOptions.PreserveEmptyRow = True
 {% endhighlight %}
 {% endtabs %}
 
-### LineSeparator
-
-This property sets the newline style in the Markdown file. For example, `"\r\n"` uses Windows line endings (CRLF) for better compatibility with editors like Notepad and VS Code.
-
-{% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-// Use Windows-style line endings
-MarkdownExportOptions exportOptions = new MarkdownExportOptions();
-exportOptions.LineSeparator = "\r\n";
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-// Use Windows-style line endings
-MarkdownExportOptions exportOptions = new MarkdownExportOptions();
-exportOptions.LineSeparator = "\r\n";
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-' Use Windows-style line endings
-Dim exportOptions As New MarkdownExportOptions()
-exportOptions.LineSeparator = vbCrLf
-{% endhighlight %}
-{% endtabs %}
-
 ### UseDisplayText
 
 This property exports the formatted display text of cells (e.g., dates or formatted numbers) instead of raw values, making the Markdown output more user‑friendly.
@@ -244,5 +220,119 @@ exportOptions.UseDisplayText = true;
 ' Export formatted display text
 Dim exportOptions As New MarkdownExportOptions()
 exportOptions.UseDisplayText = True
+{% endhighlight %}
+{% endtabs %}
+
+## Markdown save options
+
+The following code examples shows how to save the sheet as markdown file by providing file path directly.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+IWorksheet worksheet = workbook.Worksheets[0];
+MarkdownExportOptions exportOptions = new MarkdownExportOptions();
+exportOptions.UseDisplayText = true;
+
+worksheet.SaveAs("Output/ExcelToMarkdown.md", exportOptions);
+{% endhighlight %}
+
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+IWorksheet worksheet = workbook.Worksheets[0];
+MarkdownExportOptions exportOptions = new MarkdownExportOptions();
+exportOptions.UseDisplayText = true;
+
+worksheet.SaveAs("Output/ExcelToMarkdown.md", exportOptions);
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Dim worksheet As IWorksheet = workbook.Worksheets(0)
+Dim exportOptions As New MarkdownExportOptions()
+exportOptions.UseDisplayText = True
+
+worksheet.SaveAs("Output/ExcelToMarkdown.md", exportOptions)
+{% endhighlight %}
+{% endtabs %}
+
+The following code examples shows how to save the sheet as markdown file by providing file stream.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+IWorksheet worksheet = workbook.Worksheets[0];
+MarkdownExportOptions exportOptions = new MarkdownExportOptions();
+exportOptions.UseDisplayText = true;
+
+FileStream fileStream = new FileStream("Output/ExcelToMarkdown.md", FileMode.Create, FileAccess.Write);
+worksheet.SaveAs(fileStream, exportOptions);
+{% endhighlight %}
+
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+IWorksheet worksheet = workbook.Worksheets[0];
+MarkdownExportOptions exportOptions = new MarkdownExportOptions();
+exportOptions.UseDisplayText = true;
+
+FileStream fileStream = new FileStream("Output/ExcelToMarkdown.md", FileMode.Create, FileAccess.Write);
+worksheet.SaveAs(fileStream, exportOptions);
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Dim worksheet As IWorksheet = workbook.Worksheets(0)
+Dim exportOptions As New MarkdownExportOptions()
+exportOptions.UseDisplayText = True
+
+Dim fileStream As New FileStream("Output/ExcelToMarkdown.md", FileMode.Create, FileAccess.Write)
+worksheet.SaveAs(fileStream, exportOptions)
+{% endhighlight %}
+{% endtabs %}
+
+## Get MarkdownDocument object
+
+The following code examples shows how to get the `MarkdownDocument` object from the worksheet using `GetMarkdownDocument` method.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+IWorkbook workbook = application.Workbooks.Open("Data/Markdown.xlsx");
+IWorksheet worksheet = workbook.Worksheets[0];
+
+MarkdownDocument markdownDocument = worksheet.GetMarkdownDocument();
+{% endhighlight %}
+
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+IWorkbook workbook = application.Workbooks.Open("Data/Markdown.xlsx");
+IWorksheet worksheet = workbook.Worksheets[0];
+
+MarkdownDocument markdownDocument = worksheet.GetMarkdownDocument();
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Dim workbook As IWorkbook = application.Workbooks.Open("Data/Markdown.xlsx")
+Dim worksheet As IWorksheet = workbook.Worksheets(0)
+
+Dim markdownDocument As MarkdownDocument = worksheet.GetMarkdownDocument()
+{% endhighlight %}
+{% endtabs %}
+
+The following code examples shows how to get the `MarkdownDocument` object from the workbook using `GetMarkdownDocument` method.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+ IWorkbook workbook = application.Workbooks.Open("Data/Markdown.xlsx");
+
+ MarkdownDocument markdownDocument = workbook.GetMarkdownDocument();
+{% endhighlight %}
+
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+ IWorkbook workbook = application.Workbooks.Open("Data/Markdown.xlsx");
+
+ MarkdownDocument markdownDocument = workbook.GetMarkdownDocument();
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Dim workbook As IWorkbook = application.Workbooks.Open("Data/Markdown.xlsx")
+
+Dim markdownDocument As MarkdownDocument = workbook.GetMarkdownDocument()
 {% endhighlight %}
 {% endtabs %}
