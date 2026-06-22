@@ -9,7 +9,7 @@ documentation: ug
 
 # Capture the current page number in ASP.NET Core PDF Viewer
 
-Retrieve the page number of the currently displayed page using the [**currentPageNumber**](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#currentpagenumber) property. This is useful for tracking navigation or implementing custom page navigation logic.
+Retrieve the page number of the currently displayed page using the [**currentPageNumber**](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#currentpagenumber) property. This is useful for tracking navigation or implementing custom page navigation logic.
 
 Follow these steps to capture the current page number on demand.
 

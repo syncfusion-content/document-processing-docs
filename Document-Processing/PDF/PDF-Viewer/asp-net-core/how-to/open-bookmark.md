@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open or close the bookmark pane in ASP.NET Core PDF Viewer | Syncfusion
+title: Open or close the bookmark in ASP.NET Core PDF Viewer | Syncfusion
 description: Learn how to open or close the bookmark pane programmatically in the Syncfusion ASP.NET Core PDF Viewer by calling the bookmarkViewModule APIs.
 platform: document-processing
 control: PDF Viewer
