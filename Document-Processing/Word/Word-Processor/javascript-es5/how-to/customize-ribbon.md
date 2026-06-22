@@ -232,6 +232,9 @@ container.ribbon.addItem({ tabId: 'Home', index: 0 }, ribbonItem, 1);
 
 ```
 
+## Online Demo
+
+Explore how to customize the ribbon in the JavaScript (ES5) Document Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/ribbon-customization.html).
 
 ## Related Links
 

@@ -75,6 +75,10 @@ Document Editor restarts the numbering or continue numbering for a numbered list
 
 ![Image](images/list.png)
 
+## Online Demo
+
+Explore how to apply bullets and numbering in Word documents using the JavaScript (ES5) Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/bullets-and-numbering.html).
+
 ## See Also
 
 * [List dialog](./dialog#list-dialog)
