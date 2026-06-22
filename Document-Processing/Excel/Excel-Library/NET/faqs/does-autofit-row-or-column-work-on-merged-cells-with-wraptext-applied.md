@@ -1,5 +1,5 @@
 ---
-title: Does Autofit work on merged cells when WrapText is applied? | Syncfusion
+title: Autofit on merged cells with WrapText | Syncfusion 
 description: This page explains why autofit row or column does not work on merged cells when WrapText is applied in XlsIO, following Microsoft Excel's behavior.
 platform: document-processing
 control: XlsIO
