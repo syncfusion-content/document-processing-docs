@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Document management in Vue Document editor component
 
-[Vue Document Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) provides support to restrict editing. When the protected document includes range permission, then unique user or user group only authorized to edit separate text area.
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) provides support to restrict editing. When the protected document includes range permission, then unique user or user group only authorized to edit separate text area.
 
 ## Set current user
 

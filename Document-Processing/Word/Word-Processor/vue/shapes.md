@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Shapes in Vue Document editor component
 
-Shapes are drawing objects that include a text box, rectangles, lines, curves, circles, etc. It can be preset or custom geometry. 
+Shapes are drawing objects that include a text box, rectangles, lines, curves, circles, etc. It can be preset or custom geometry.
 
->Note: At present, [Vue Document Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) does not have support to insert shapes. however, if the document contains a shape while importing, it will be preserved properly.
+>Note: At present, [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) does not have support to insert shapes. however, if the document contains a shape while importing, it will be preserved properly.
 
 ## Supported shapes
 

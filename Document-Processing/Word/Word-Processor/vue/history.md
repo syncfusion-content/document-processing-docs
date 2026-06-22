@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # History in Vue Document editor component
 
-[Vue Document Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) tracks the history of all editing actions done in the document, which allows undo and redo functionality.
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) tracks the history of all editing actions done in the document, which allows undo and redo functionality.
 
 ## Enable or disable history
 

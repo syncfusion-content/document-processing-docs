@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Feature module in Vue Document editor component
 
-[Vue Document Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) features are segregated into individual feature-wise modules to enable selective referencing. By default, the Document Editor displays the document in read-only mode. The required modules should be injected to extend its functionality. The following are the selective modules of Document Editor that can be included as required:
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) features are segregated into individual feature-wise modules to enable selective referencing. By default, the Document Editor displays the document in read-only mode. The required modules should be injected to extend its functionality. The following are the selective modules of Document Editor that can be included as required:
 * **Print** - Prints the document.
 * **SfdtExport** - Exports the document as Vue Document Text (.SFDT) file.
 * **Selection** - Selects a portion of the document and copy it to the clipboard.

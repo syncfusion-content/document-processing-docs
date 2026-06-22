@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Web services in Vue Document editor component
 
-You can deploy web APIs for server-side dependencies of [Vue Document Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) component in the following platforms.
+You can deploy web APIs for server-side dependencies of [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) component in the following platforms.
 
 * [ASP.NET Core](./web-services/core)
 * [ASP.NET MVC](./web-services/mvc)

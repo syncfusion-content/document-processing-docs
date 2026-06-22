@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Open document from AWS S3 in Vue Document editor
 
-To load a document from AWS S3 in a [Vue Document Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor), you can follow the steps below
+To load a document from AWS S3 in a [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor), you can follow the steps below
 
 **Step 1:** Create a Simple Document Editor Sample in Vue
 

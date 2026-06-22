@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Section format in Vue Document editor component
 
-[Vue Document Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) supports various section formatting such as page size, page margins, and more.
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) supports various section formatting such as page size, page margins, and more.
 
 ## Page size
 

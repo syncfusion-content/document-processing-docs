@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Table in Vue Document editor component
 
-Tables are an efficient way to present information. [Vue Document Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) can display and edit the tables. You can select and edit tables through keyboard, mouse, or touch interactions. Document Editor exposes a rich set of APIs to perform these operations programmatically.
+Tables are an efficient way to present information. [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) can display and edit the tables. You can select and edit tables through keyboard, mouse, or touch interactions. Document Editor exposes a rich set of APIs to perform these operations programmatically.
 
 ## Create a table
 

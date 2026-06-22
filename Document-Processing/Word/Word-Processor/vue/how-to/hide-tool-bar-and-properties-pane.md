@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 **Document editor container** provides the main document view area along with the built-in toolbar and properties pane.
 
-**[Vue Document Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor)** provides just the main document view area. Here, the user can compose, view, and edit the Word documents. You may prefer to use this component when you want to design your own UI options for your application.
+**[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor)** provides just the main document view area. Here, the user can compose, view, and edit the Word documents. You may prefer to use this component when you want to design your own UI options for your application.
 
 ## Hide the properties pane
 

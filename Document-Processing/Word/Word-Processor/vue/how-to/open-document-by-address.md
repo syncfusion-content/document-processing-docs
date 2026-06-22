@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## How to open a document from URL in DocumentEditor
 
-In this article, we are going to see how to open a document from URL in [Vue Document Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor)
+In this article, we are going to see how to open a document from URL in [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor)
 
 please refer below example for client-side code
 

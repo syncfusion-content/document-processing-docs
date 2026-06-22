@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Comments in Vue Document editor component
 
-[Vue Document Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) allows you to add comments to documents. You can add, navigate and remove comments in code and from the UI.
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) allows you to add comments to documents. You can add, navigate and remove comments in code and from the UI.
 
 ## Add a new comment
 

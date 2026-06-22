@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to disable auto focus in Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Document Editor component
 
-[Vue Document Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) gets focused automatically when the page loads. If you want the Document editor not to be focused automatically it can be customized.
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) gets focused automatically when the page loads. If you want the Document editor not to be focused automatically it can be customized.
 
 The following example illustrates to disable the auto focus in DocumentEditorContainer.
 

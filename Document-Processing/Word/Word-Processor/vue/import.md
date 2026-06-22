@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Import in Vue Document editor component
 
-In [Vue Document Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor), the documents are stored in its own format called **Syncfusion Document Text (SFDT)**.
+In [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor), the documents are stored in its own format called **Syncfusion Document Text (SFDT)**.
 
 The following example shows how to open SFDT data in Document Editor.
 

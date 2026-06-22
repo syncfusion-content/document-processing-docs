@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Text wrapping style in Vue Document editor component
 
-Text wrapping refers to how images and shapes are fit with surrounding text in a document. Currently, [Vue Document Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) has only preservation support for image and textbox shape with below wrapping styles.
+Text wrapping refers to how images and shapes are fit with surrounding text in a document. Currently, [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) has only preservation support for image and textbox shape with below wrapping styles.
 
 ## In-Line with Text
 

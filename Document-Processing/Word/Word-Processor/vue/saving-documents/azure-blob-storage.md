@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 To save a document to Azure Blob Storage, you can follow the steps below
 
-**Step 1:** Create a Simple [Vue Document Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) sample in Vue
+**Step 1:** Create a Simple [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) sample in Vue
 
 Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in vue. This will give you a basic setup of the Document Editor component.
 

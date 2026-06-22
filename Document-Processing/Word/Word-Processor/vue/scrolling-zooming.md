@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Scrolling zooming in Vue Document editor component
 
-The [Vue Document Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) renders the document as page by page. You can scroll through the pages by mouse wheel or touch interactions. You can also scroll through the page by using ‘scrollToPage()’ method of Document Editor instance. Refer to the following code example.
+The [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) renders the document as page by page. You can scroll through the pages by mouse wheel or touch interactions. You can also scroll through the page by using ‘scrollToPage()’ method of Document Editor instance. Refer to the following code example.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
