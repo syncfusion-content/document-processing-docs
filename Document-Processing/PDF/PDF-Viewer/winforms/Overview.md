@@ -36,6 +36,4 @@ The [WinForms PDF Viewer](https://www.syncfusion.com/winforms-ui-controls/pdf-vi
 	* [custom toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/winforms/how-to/hide-or-disabling-toolbar-buttons) 
 * [Right to left (RTL)](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/winforms/right-to-left)
 
-N> You can also explore our [WinForms PDF Viewer example](https://github.com/syncfusion/winforms-demos/tree/master/pdfviewer) that shows you how to render and configure the PDF Viewer.
-
-N> Looking for the full WinForms PDF Viewer component overview, features, pricing, and documentation? Visit the [WinForms PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/winforms/overview) page
+N> You can also explore our [WinForms PDF Viewer example](https://github.com/syncfusion/winforms-demos/tree/master/pdfviewer) that shows you how to render and configure the PDF Viewer. Looking for the full WinForms PDF Viewer component overview, features, pricing, and documentation? Visit the [WinForms PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/winforms-pdf-viewer) page.
