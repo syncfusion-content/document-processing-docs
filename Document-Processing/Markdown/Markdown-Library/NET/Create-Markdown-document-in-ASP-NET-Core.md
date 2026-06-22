@@ -143,4 +143,4 @@ Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
 
 By executing the program, you will get the **Markdown document** as follows.
 
-![ASP.Net Core output Markdown document](ASP-NET-Core_images/GettingStartedOutput.jpg)
+![ASP.Net Core output Markdown document](GettingStarted_images/GettingStarted_Output1.png)
