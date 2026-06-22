@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Link in Angular Document editor component
 
-[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) supports hyperlink field. You can link a part of the document content to Internet or file location, mail address, or any text within the document.
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) supports hyperlink field. You can link a part of the document content to Internet or file location, mail address, or any text within the document.
 
 ## Navigate a hyperlink
 

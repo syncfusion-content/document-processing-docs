@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Web services in Angular Document editor component
 
-You can deploy web APIs for server-side dependencies of [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) component in the following platforms.
+You can deploy web APIs for server-side dependencies of [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) component in the following platforms.
 
 * [ASP.NET Core](./web-services/core)
 * [ASP.NET MVC](./web-services/mvc)
