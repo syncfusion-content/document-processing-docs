@@ -14,29 +14,34 @@ Step 3: Install the [Syncfusion.PDF.NET](https://www.nuget.org/packages/Syncfusi
 
 Step 4: Create a Razor file named `FetchData.razor` in the `Pages` folder. Then, add the required namespace to the `FetchData.razor` file.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight CSHTML %}
 
 @using Syncfusion.Pdf
-@using Syncfusion.Pdf.Grid;
-@using Syncfusion.Drawing;
-@using Syncfusion.Pdf.Graphics;
+@using Syncfusion.Pdf.Grid
+@using Syncfusion.Drawing
+@using Syncfusion.Pdf.Graphics
 @inject Microsoft.JSInterop.IJSRuntime JS
-@using System.IO;
+@using System.IO
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: Create a button in the `FetchData.razor` using the following code.
 
-{% highlight cshtml tabtitle="CSHTML" %}
+{% tabs %}
+{% highlight CSHTML %}
 
 <button class="btn btn-primary" @onclick="@CreatePDF">Create PDF document</button>
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: Implement `CreatePDF` method in `FetchData.razor`.
 
 Create a new `async` method named `CreatePDF` and include the following code example to create a PDF document in the Blazor WebAssembly Standalone app with PWA support.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 @functions {
@@ -87,9 +92,11 @@ Create a new `async` method named `CreatePDF` and include the following code exa
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 7: Create a class file with `FileUtil` name and add the following code to invoke the JavaScript action to download the file in the browser.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public static class FileUtil
@@ -102,35 +109,41 @@ public static class FileUtil
 } 
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 8: Add the following JavaScript function in the `index.html` available under the `wwwroot` folder.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-<script type="text/javascript">
+<script type = "text/javascript" >
    function saveAsFile(filename, bytesBase64) {
-           if (navigator.msSaveBlob) {
-               //Download document in Edge browser
-               var data = window.atob(bytesBase64);
-               var bytes = new Uint8Array(data.length);
-               for (var i = 0; i < data.length; i++) {
-                   bytes[i] = data.charCodeAt(i);
-               }
-               var blob = new Blob([bytes.buffer], { type: "application/octet-stream" });
-               navigator.msSaveBlob(blob, filename);
-           }
-           else {
-       var link = document.createElement('a');
-       link.download = filename;
-       link.href = "data:application/octet-stream;base64," + bytesBase64;
-       document.body.appendChild(link); // Needed for Firefox
-       link.click();
-       document.body.removeChild(link);
-   }
-       }
+    if (navigator.msSaveBlob)
+    {
+        //Download document in Edge browser
+        var data = window.atob(bytesBase64);
+        var bytes = new Uint8Array(data.length);
+        for (var i = 0; i < data.length; i++)
+        {
+            bytes[i] = data.charCodeAt(i);
+        }
+        var blob = new Blob([bytes.buffer], { type: "application/octet-stream" });
+        navigator.msSaveBlob(blob, filename);
+    }
+    else
+    {
+        var link = document.createElement('a');
+        link.download = filename;
+        link.href = "data:application/octet-stream;base64," + bytesBase64;
+        document.body.appendChild(link); // Needed for Firefox
+        link.click();
+        document.body.removeChild(link);
+    }
+}
 </script>
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 9: Build the project.
 

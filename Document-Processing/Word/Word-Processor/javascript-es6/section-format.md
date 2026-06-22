@@ -66,6 +66,9 @@ column.space = 36;
 container.documentEditor.selection.sectionFormat.columns = [column, column];
 container.documentEditor.selection.sectionFormat.lineBetweenColumns = true;
 ```
+### Online Demo
+
+Explore how to format Word documents with multiple columns using the JavaScript Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/multiple-columns.html).
 
 ## Breaks
 
@@ -90,6 +93,10 @@ The following code example illustrates how to insert a continuous section break.
 ```ts
 container.documentEditor.editor.insertSectionBreak(SectionBreakType.Continuous);
 ```
+
+## Online Demo
+
+Explore how to apply section formatting in Word documents using the JavaScript Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/section-formatting.html).
 
 ## See Also
 

@@ -43,7 +43,7 @@ Step 5: Add a new button in the Index.cshtml as shown in the following.
 
 {% tabs %}
 
-{% highlight HTML %}
+{% highlight CSHTML %}
 
 @{
     Html.BeginForm("OpenAndSaveDocument", "Home", FormMethod.Get);

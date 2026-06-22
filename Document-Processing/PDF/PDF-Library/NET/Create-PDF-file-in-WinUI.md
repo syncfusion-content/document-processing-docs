@@ -8,7 +8,7 @@ documentation: UG
 
 # Create PDF file in WinUI
 
-The Syncfusion<sup>&reg;</sup> [WinUI PDF library](https://www.syncfusion.com/document-processing/pdf-framework/winui/pdf-library) is used to create, read, and edit **PDF** documents. This library also includes functions for merging, splitting, stamping, working with forms, and securing PDF files and more. Using this library, you can create a PDF document in WinUI with just a few lines of code.
+The Syncfusion<sup>&reg;</sup> [WinUI PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit **PDF** documents. This library also includes functions for merging, splitting, stamping, working with forms, and securing PDF files and more. Using this library, you can create a PDF document in WinUI with just a few lines of code.
 
 **Prerequisites:**
 To use the WinUI 3 project templates, install the Windows App SDK extension for Visual Studio. For more details, refer [here](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/set-up-your-development-environment?tabs=cs-vs-community%2Ccpp-vs-community%2Cvs-2022-17-1-a%2Cvs-2022-17-1-b).
@@ -32,10 +32,8 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 
 Step 5: Add a new button to the **MainWindow.xaml** as shown below.
 
-{% capture codesnippet1 %}
 {% tabs %}
-
-{% highlight c# tabtitle="C#" %}
+{% highlight XAML %}
 
 <Window
     x:Class="CreatePdfDemoSample.MainWindow"
@@ -45,21 +43,16 @@ Step 5: Add a new button to the **MainWindow.xaml** as shown below.
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
         <Button x:Name="button" Click="createPdf_Click">Create PDF</Button>
     </StackPanel>
 </Window>
 
 {% endhighlight %}
-
 {% endtabs %}
-{% endcapture %}
-{{ codesnippet1 | OrderList_Indent_Level_1 }}
 
 Step 6: Include the following namespaces in the **MainWindow.xaml.cs** file.
 
-{% capture codesnippet2 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
@@ -73,14 +66,10 @@ using System.Xml.Linq;
 {% endhighlight %}
 
 {% endtabs %}
-{% endcapture %}
-{{ codesnippet2 | OrderList_Indent_Level_1 }}
 
 Step 7: Add a new action method *createPdf_Click* in *MainWindow.xaml.cs* and include the below code example to generate a PDF document using the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text to a PDF document and provides layout results that help prevent content overlapping. Load image stream from the local files on disk and draw the images through the [DrawImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawImage_Syncfusion_Pdf_Graphics_PdfImage_System_Single_System_Single_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create a table by entering data manually or from external data sources and include helper classes, methods and required files in the assets folder.
 
-{% capture codesnippet3 %}
 {% tabs %}
-
 {% highlight c# tabtitle="C#" %}
 
 //Create a new PDF document.
@@ -226,12 +215,8 @@ using (FileStream outputStream = new FileStream(filePath, FileMode.Create, FileA
     document.Close();
 }
 
-
 {% endhighlight %}
-
 {% endtabs %}
-{% endcapture %}
-{{ codesnippet3 | OrderList_Indent_Level_1 }}
 
 A complete working example of creating a PDF document in the WinUI Desktop app can be downloaded from this [link](https://www.syncfusion.com/downloads/support/directtrac/general/ze/CreatePdfDemoSample208256365).
 
@@ -240,6 +225,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 By executing the program, you will get the PDF document as follows.
 ![Output PDF image](WinUI_Images/GettingStartedOutput.png)
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/winui) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
+Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 
-An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind) in ASP.NET Core. 
+An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind). 

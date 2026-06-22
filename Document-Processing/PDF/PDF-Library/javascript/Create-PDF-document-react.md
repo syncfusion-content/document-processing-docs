@@ -10,7 +10,7 @@ keywords: javascript, pdf, script, react
 
 # Create or Generate PDF file in React
 
-The Syncfusion<sup>&reg;</sup> JavaScript PDF library is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, fill forms, and secure PDF files.
+The Syncfusion<sup>&reg;</sup> [JavaScript PDF library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, fill forms, and secure PDF files.
 
 This guide explains how to integrate the JavaScript PDF library into a React application.
 
@@ -18,7 +18,7 @@ This guide explains how to integrate the JavaScript PDF library into a React app
 
 All Syncfusion JS 2 packages are published in `npmjs.com` registry.
 
-* To install the PDF library, use the following command.
+Step1: To install the PDF library, use the following command.
 
 ```bash
 npm install @syncfusion/ej2-pdf --save
@@ -29,10 +29,10 @@ N> For image and data extraction features, you need to install the `@syncfusion/
 * Ensure your server serves .wasm files with the **Content-Type: application/wasm** MIME type.
 * This setup is not required for **basic PDF creation**.
 
-**Create a PDF document**: Add the script in `App.jsx` by creating a button and attaching a click event that uses the JavaScript PDF API to generate a PDF document.
+Step2: Add the script in `App.jsx` by creating a button and attaching a click event that uses the JavaScript PDF API to generate a PDF document.
 
 {% tabs %}
-{% highlight html tabtitle="~/App.jsx" %}
+{% highlight html tabtitle="App.jsx" %}
 import React from 'react';
 
 export default function App() {
@@ -66,9 +66,7 @@ export default function App() {
 {% endhighlight %}
 {% endtabs %}
 
-## Run the application
-
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+Step3: Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
 ```
 npm run dev
@@ -76,3 +74,7 @@ npm run dev
 By executing the program, you will get the PDF document as follows.
 
 ![Output PDF document](Getting_started_images/Output.png)
+
+Click [here](https://www.syncfusion.com/document-sdk/javascript-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
+
+An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/react/#/tailwind3/pdf/default) in React.

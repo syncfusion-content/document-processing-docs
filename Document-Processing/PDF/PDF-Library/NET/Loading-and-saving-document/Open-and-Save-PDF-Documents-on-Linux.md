@@ -97,8 +97,8 @@ Step 6: Add the following code example to **save the PDF document in .NET Core a
 //Create a FileStream to save the PDF document.
 using(FileStream outputStream = new FileStream("Result.pdf", FileMode.Create, FileAccess.ReadWrite))
 {
-//Save the PDF file.
-document.Save(outputStream);
+    //Save the PDF file.
+    document.Save(outputStream);
 }
 {% endhighlight %}
 
@@ -106,7 +106,7 @@ document.Save(outputStream);
 
 Step 7: Execute the following command to restore the NuGet packages.
 
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
 dotnet restore
 
@@ -115,7 +115,7 @@ dotnet restore
 ![Linux Build](Images/Linux_Build.png)
 
 Step 8: Execute the following command in terminal to run the application.
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
 dotnet run
 

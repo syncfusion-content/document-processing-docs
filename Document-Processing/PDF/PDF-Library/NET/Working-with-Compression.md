@@ -478,6 +478,25 @@ You can compress the existing PDF document by specifying the [PdfCompressionLeve
 
 {% tabs %}
 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+
+//Disable the incremental update
+loadedDocument.FileStructure.IncrementalUpdate = false;
+
+//Set the compression level
+loadedDocument.Compression = PdfCompressionLevel.Best;
+
+//Save and close the document
+loadedDocument.Save("Output.pdf");
+loadedDocument.Close(true);
+
+{% endhighlight %}
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using Syncfusion.Pdf;
@@ -527,7 +546,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 Essential<sup>&reg;</sup> PDF allows you to compress/change the quality of the image in the PDF document by assigning [Quality](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html#Syncfusion_Pdf_Graphics_PdfBitmap_Quality) property available in the [PdfBitmap](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html) class. 
 
 {% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
+//PDF doesn't support direct image compression in C#/.NET cross platforms.
+
+{% endhighlight %}
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using System.Drawing;
@@ -590,6 +613,11 @@ You can compress the images in an existing PDF document by extract the images us
 
 {% tabs %}
 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//PDF doesn't support direct image compression in C#/.NET cross platforms.
+
+{% endhighlight %}
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using System.Drawing;

@@ -227,6 +227,10 @@ function download(fileName, extension, buffer, downloadLink, hasDownloadAttribut
 }
 ```
 
+## Online Demo
+
+Explore how to export Word documents in various formats using the JavaScript (ES5) Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/advanced-exporting.html).
+
 ## See Also
 
 * [Feature modules](./feature-module)

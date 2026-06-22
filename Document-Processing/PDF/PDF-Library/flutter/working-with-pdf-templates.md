@@ -76,6 +76,52 @@ The below code illustrates how to create the template from an existing page and 
 {% endhighlight %}
 {% endtabs %}
 
+## Combining multiple PDF documents
+
+Essential<sup>&reg;</sup> PDF allows you to combine or merge multiple PDF documents using the [`CreateTemplate`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPage/createTemplate.html) method. You can load each PDF, create templates from their pages, and draw them into a new document. 
+
+The following code illustrates how to merge multiple PDF documents using the CreateTemplate method.
+
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
+
+// Merges multiple PDF documents into a single file
+Future<void> combinePDF() async {
+  List<String> files = ["Invoice.pdf", "Input.pdf"];
+  PdfDocument document = PdfDocument();
+  PdfSection? section;
+  for (String file in files) {
+    PdfDocument loadedDocument = PdfDocument(inputBytes: await _readData(file));
+    for (int index = 0; index < loadedDocument.pages.count; index++) {
+      PdfTemplate template = loadedDocument.pages[index].createTemplate();
+      if (section == null || section.pageSettings.size != template.size) {
+        section = document.sections!.add();
+        section.pageSettings.size = template.size;
+        section.pageSettings.margins.all = 0;
+      }
+
+      section.pages.add().graphics.drawPdfTemplate(
+        template,
+        const Offset(0, 0),
+      );
+    }
+    loadedDocument.dispose();
+  }
+  // Save the document.
+  List<int> bytes = await document.save();
+  File('Output.pdf').writeAsBytes(bytes);
+  document.dispose();
+}
+
+// Read the existing PDF file.
+Future<List<int>> _readData(String name) async {
+  final ByteData data = await rootBundle.load('assets/$name');
+  return data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Working with PdfPageTemplateElement
 
 The [`PdfPageTemplateElement`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageTemplateElement-class.html) is a template element that can be added to any part of the PDF page such as header, footer, and more.

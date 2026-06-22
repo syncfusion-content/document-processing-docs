@@ -16,7 +16,7 @@ The table of contents in a document is same as the list of chapters at the begin
 
 Document Editor exposes an API to insert table of contents at cursor position programmatically. You can specify the settings for table of contents explicitly. Otherwise, the default settings will be applied.
 
-[`TableOfContentsSettings`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/tableOfContentsSettings/) contain the following properties:
+[`TableOfContentsSettings`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/tableOfContentsSettings) contain the following properties:
 * **startLevel**: Specifies the start level for constructing table of contents.
 * **endLevel**: Specifies the end level for constructing table of contents.
 * **includeHyperlink**: Specifies whether the link for headings is included.
@@ -68,6 +68,10 @@ You can also do it programmatically by using the exposed API. Refer to the follo
 ```
 
 >Same method is used for inserting, updating, and editing table of contents. This will work based on the current element at cursor position and the optional settings parameter. If table of contents is present at cursor position, the update operation will be done based on the optional settings parameter. Otherwise, the insert operation will be done.
+
+## Online Demo
+
+Explore how to insert and update table of contents in Word documents using the Angular Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/table-of-contents).
 
 ## See Also
 

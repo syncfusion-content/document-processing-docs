@@ -9,7 +9,6 @@ documentation: UG
 
 To load a PDF file from Azure Blob Storage, follow these steps:
 
-
 Step 1: Create a simple console application
 
 ![Project configuration window](Open-PDF-Images/Console-Application.png)
@@ -23,7 +22,7 @@ Step 4: Include the following namespaces in the Program.cs file.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C#" %}
 
 using Microsoft.Azure.Storage;
 using Microsoft.Azure.Storage.Blob;
@@ -37,7 +36,7 @@ Step 5: Add the below code example to load a PDF from Azure blob storage.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C#" %}
 
 // Parse the connection string to your Azure Storage Account.
 CloudStorageAccount storageAccount = CloudStorageAccount.Parse(connectionString);
