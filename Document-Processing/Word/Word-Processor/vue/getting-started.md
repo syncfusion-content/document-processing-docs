@@ -134,6 +134,10 @@ After the application starts, open the localhost URL shown in the terminal. The 
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Vue-DOCX-Editor-Examples/tree/master/getting-started/vue_2).
 
+## Online Demo
+
+Explore how to create, edit, and print Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/material3/document-editor/default.html).
+
 ## Video tutorial
 
 To get started quickly with the Document Editor component using CLI, you can check the video below.

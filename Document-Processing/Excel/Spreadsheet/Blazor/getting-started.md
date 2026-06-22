@@ -176,7 +176,7 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
-Register the Syncfusion Blazor service in the **~/Program.cs** file of your Blazor WebAssembly App.
+Register the Syncfusion Blazor service in the **~/Program.cs** file of your Blazor WebAssembly App. After the builder is created.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
@@ -184,7 +184,7 @@ Register the Syncfusion Blazor service in the **~/Program.cs** file of your Blaz
 ....
 using Syncfusion.Blazor;
 ....
-
+// Register Syncfusion Blazor service
 builder.Services.AddSyncfusionBlazor();
 
 ....
@@ -194,16 +194,19 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the `<head>` section of the **~/index.html** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the <head> section and the script reference at the end of the <body> in the **~/index.html** file as shown below.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
 
 <head>
-    ....
+    <!-- Syncfusion Blazor components theme -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <script src="_content/Syncfusion.Blazor.Spreadsheet/scripts/syncfusion-blazor-spreadsheet.min.js" type="text/javascript"></script>
 </head>
+<body>
+    <!-- Syncfusion Blazor Spreadsheet Editor script -->
+    <script src="_content/Syncfusion.Blazor.Spreadsheet/scripts/syncfusion-blazor-spreadsheet.min.js" type="text/javascript"></script>
+</body>
 
 {% endhighlight %}
 {% endtabs %}
@@ -217,7 +220,6 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Spreadsheet comp
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
 <SfSpreadsheet>

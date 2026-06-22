@@ -67,6 +67,10 @@ documentEditor.selection.sectionFormat.columns = [column, column];
 documentEditor.selection.sectionFormat.lineBetweenColumns = true;
 ```
 
+### Online Demo
+
+Explore how to format Word documents with multiple columns using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/multiple-columns).
+
 ## Breaks
 
 You can insert Column break
@@ -92,6 +96,11 @@ The following code example illustrates how to insert a continuous section break
 ```typescript
 documentEditor.editor.insertSectionBreak(SectionBreakType.Continuous);
 ```
+
+## Online Demo
+
+Explore how to apply section formatting in Word documents using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/section-formatting).
+
 
 ## See Also
 

@@ -9,12 +9,12 @@ documentation: ug
 
 # Getting Started with Standalone ASP.NET Core PDF Viewer
 
-This article shows how to add the [Syncfusion® Standalone ASP.NET Core PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) to a ASP.NET Core Web application using Visual Studio or Visual Studio Code. A fully functional example project is available in the [GitHub repository](https://github.com/SyncfusionExamples/ASP-NET-Core-Getting-Started-Examples/tree/main/PDFViewer/ASP.NET%20Core%20Tag%20Helper%20Examples%20-%20Standalone%20PDF%20Viewer).
+This section explains how to add the [Syncfusion® Standalone ASP.NET Core PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) to a ASP.NET Core Web application using Visual Studio or Visual Studio Code. A fully functional example project is available in the [GitHub repository](https://github.com/SyncfusionExamples/ASP-NET-Core-Getting-Started-Examples/tree/main/PDFViewer/ASP.NET%20Core%20Tag%20Helper%20Examples%20-%20Standalone%20PDF%20Viewer).
 
 ## Prerequisites
 
-- **System Requirements**: [System requirements for ASP.NET Core controls](https://help.syncfusion.com/document-processing/system-requirements)
-- **License**: [ASP.NET Core licensing documentation](https://ej2.syncfusion.com/aspnetcore/documentation/licensing/overview)
+- [System requirements for ASP.NET Core controls](https://help.syncfusion.com/document-processing/system-requirements)
+- [ASP.NET Core licensing documentation](https://ej2.syncfusion.com/aspnetcore/documentation/licensing/overview)
 
 {% tabcontents %}
 
@@ -56,14 +56,12 @@ Install the Syncfusion&reg; ASP.NET Core component NuGet packages within the pro
 * Run the following command to install the [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core/) NuGet package.
 
 {% tabs %}
-
 {% highlight c# tabtitle="Package Manager" %}
 
 dotnet add package Syncfusion.EJ2.AspNet.Core -v {{ site.releaseversion }}
 dotnet restore
 
 {% endhighlight %}
-
 {% endtabs %}
 
 {% endtabcontent %}
@@ -89,13 +87,11 @@ Reference the Syncfusion theme and JavaScript library using the CDN inside the `
 {% tabs %}
 {% highlight c# tabtitle="~/_Layout.cshtml" %}
 
-<head>
-    ...
-    <!-- Syncfusion ASP.NET Core controls styles -->
-    <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/fluent.css" />
-    <!-- Syncfusion ASP.NET Core controls scripts -->
-    <script src="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/dist/ej2.min.js"></script>
-</head>
+<!-- Syncfusion ASP.NET Core controls styles -->
+<link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/fluent.css" />
+
+<!-- Syncfusion ASP.NET Core controls scripts -->
+<script src="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/dist/ej2.min.js"></script>
 
 {% endhighlight %}
 {% endtabs %}
@@ -104,22 +100,16 @@ N> To learn other ways to load themes or scripts (such as [NPM packages](https:/
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Script Manager
 
-Open the `~/Pages/Shared/_Layout.cshtml` page and register the script manager. The script manager initializes Syncfusion components and manages their life cycle.
+Open the `~/Pages/Shared/_Layout.cshtml` page and register the script manager `<ejs-scripts>` at the end of the `<body>` element. The script manager initializes Syncfusion components and manages their life cycle.
 
 {% tabs %}
 {% highlight c# tabtitle="~/_Layout.cshtml" %}
 
-<body>
-    ....
-    ....
-    <!-- Syncfusion ASP.NET Core Script Manager -->
-    <ejs-scripts></ejs-scripts>
-</body>
+<!-- Syncfusion ASP.NET Core Script Manager -->
+<ejs-scripts></ejs-scripts>
 
 {% endhighlight %}
 {% endtabs %}
-
-N> Add the script manager `<ejs-scripts>` at the end of the `<body>` element.
 
 ## Add ASP.NET Core PDF Viewer control
 
@@ -128,17 +118,9 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer
 {% tabs %}
 {% highlight c# tabtitle="~/Index.cshtml" %}
 
-@page
-@model IndexModel
-@{
-    ViewData["Title"] = "Home page";
-}
-
-<div class="text-center">
-    <!-- documentPath specifies the PDF document to load -->
-    <ejs-pdfviewer id="pdfviewer" style="height:600px" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
-</div>
+<!-- documentPath specifies the PDF document to load -->
+<ejs-pdfviewer id="pdfviewer" style="height:600px" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
+</ejs-pdfviewer>
 
 {% endhighlight %}
 {% endtabs %}
@@ -151,7 +133,7 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 ![ASP.NET Core PDF Viewer Control](Core_Images/pdfviewer-control.png)
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-Getting-Started-Examples/tree/main/PDFViewer/ASP.NET%20Core%20Tag%20Helper%20Examples%20-%20Standalone%20PDF%20Viewer)
+> [View sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-Getting-Started-Examples/tree/main/PDFViewer/ASP.NET%20Core%20Tag%20Helper%20Examples%20-%20Standalone%20PDF%20Viewer)
 
 ## Video tutorial
 

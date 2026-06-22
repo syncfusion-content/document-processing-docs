@@ -23,7 +23,7 @@ The following assemblies need to be referenced in your application to use the Sy
 Windows Forms, WPF, ASP.NET MVC
 <br/><br/></td>
 <td>
-Syncfusion.Markdown.Base
+Syncfusion.Markdown
 <br/><br/></td>
 </tr>
 <tr>
@@ -31,7 +31,7 @@ Syncfusion.Markdown.Base
  ASP.NET Core, Blazor
 <br/><br/></td>
 <td>
-Syncfusion.Markdown.Portable
+Syncfusion.Markdown
 <br/><br/></td>
 </tr>
 </tbody>
