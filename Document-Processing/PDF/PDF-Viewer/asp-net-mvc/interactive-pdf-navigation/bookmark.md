@@ -73,23 +73,6 @@ Here is an example of how to use the getBookmarks method:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button id="getBookmarks" onclick="getBookmarks()">Retrieve Bookmark</button>
-
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-</div>
-
-<script>
-    function getBookmarks() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        var getBookmarks = pdfViewer.bookmark.getBookmarks();
-        console.log(getBookmarks);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## See also
