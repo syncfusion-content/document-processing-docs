@@ -20,14 +20,15 @@ The context menu is a right-click menu that displays relevant actions based on t
 
 The context menu in Blazor PDF Viewer supports the following:
 
-* **Enable or Disable**: Toggle the context menu availability using the `EnableContextMenu` property.
+* **Enable or Disable**: Toggle the context menu availability using the [EnableContextMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerContextMenuSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerContextMenuSettings_EnableContextMenu) property.
 * **Trigger Action**: Choose between right-click or mouse-up actions to display the menu.
 * **Customize Menu Items**: Select which menu items should appear in the context menu.
 * **Default Items**: Support for standard actions like Copy, Cut, Paste, Delete, Comment, and annotation markup options (Highlight, Underline, Strikethrough, Squiggly).
 
 ### Available Context Menu Items
 
-The EJ2 PDF Viewer context menu includes the following item options:
+The Blazor PDF Viewer context menu supports the following built-in items, which are defined using the [`ContextMenuItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ContextMenuItem.html) enum.
+
 
 | Item | Description |
 | :--- | :--- |
@@ -63,11 +64,11 @@ The context menu adapts its items based on the selected element. The following s
 
 ## Enable or Disable the Context Menu
 
-By default, the context menu is enabled in the Blazor PDF Viewer. You can control its availability using the `EnableContextMenu` property within `PdfViewerContextMenuSettings`.
+By default, the context menu is enabled in the Blazor PDF Viewer. You can control its availability using the [EnableContextMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerContextMenuSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerContextMenuSettings_EnableContextMenu)  property within [PdfViewerContextMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerContextMenuSettings.html).
 
 ### Basic Configuration
 
-To display the context menu with default settings, add the `PdfViewerContextMenuSettings` component to your PDF Viewer:
+To display the context menu with default settings, add the [PdfViewerContextMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerContextMenuSettings.html) component to your PDF Viewer:
 
 {% tabs %}
 {% highlight razor %}
@@ -88,7 +89,7 @@ To display the context menu with default settings, add the `PdfViewerContextMenu
 
 ## Customize Context Menu Items
 
-You can control which menu items appear in the context menu by specifying a list of `ContextMenuItem` values in the `ContextMenuItems` property.
+You can control which menu items appear in the context menu by specifying a list of `ContextMenuItem` values in the [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerContextMenuSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerContextMenuSettings_ContextMenuItems) property.
 
 ### Show Only Specific Menu Items
 
@@ -121,7 +122,7 @@ The following example displays only Copy and Paste options in the context menu:
 
 ## Change the Context Menu Trigger Action
 
-By default, the context menu appears on a right-click action. You can change this behavior using the `ContextMenuAction` property to trigger the menu on mouse-up or disable it entirely.
+By default, the context menu appears on a right-click action. You can change this behavior using the [ContextMenuAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerContextMenuSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerContextMenuSettings_ContextMenuAction) property to trigger the menu on mouse-up or disable it entirely.
 
 ### Trigger on Mouse-Up Instead of Right-Click
 
@@ -129,7 +130,6 @@ The following example configures the context menu to appear on mouse-up:
 
 {% tabs %}
 {% highlight razor %}
-@page "/pdfviewer-context-menu-mouseup"
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.SfPdfViewer
 
@@ -145,11 +145,10 @@ The following example configures the context menu to appear on mouse-up:
 
 ## Disable the Context Menu Entirely
 
-To prevent the context menu from appearing, set `ContextMenuAction` to `None`:
+To prevent the context menu from appearing, set [ContextMenuAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerContextMenuSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerContextMenuSettings_ContextMenuAction) to `None`:
 
 {% tabs %}
 {% highlight razor%}
-@page "/pdfviewer-context-menu-disabled"
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.SfPdfViewer
 
@@ -165,7 +164,11 @@ To prevent the context menu from appearing, set `ContextMenuAction` to `None`:
 
 ## Complete Context Menu Configuration Example
 
-The following example demonstrates a fully configured context menu with custom items and mouse-up trigger:
+The following example demonstrates how to configure the context menu using the 
+[`PdfViewerContextMenuSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerContextMenuSettings.html) API, including 
+[`EnableContextMenu`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerContextMenuSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerContextMenuSettings_EnableContextMenu), 
+[`ContextMenuAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerContextMenuSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerContextMenuSettings_ContextMenuAction), and 
+[`ContextMenuItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerContextMenuSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerContextMenuSettings_ContextMenuItems) properties
 
 {% tabs %}
 {% highlight razor %}
