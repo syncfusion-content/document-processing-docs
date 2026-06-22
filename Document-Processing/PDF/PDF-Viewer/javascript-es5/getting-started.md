@@ -8,15 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with Standalone JavaScript PDF Viewer
+# Getting Started with Standalone JavaScript PDF Viewer
 
-This guide explains how to create and run a **JavaScript (ES5) PDF Viewer** application using Syncfusion Essential JS 2 in **standalone mode**.
+This section explains how to create and run a **JavaScript (ES5) PDF Viewer** application using Syncfusion Essential JS 2 in **standalone mode**.
 
-## Setup the development environment
-
-This example uses a simple HTML-based setup with CDN links for Syncfusion components.
-
-### Create application folder
+## Create application folder
 
 Create an app folder `pdf-viewer-app` for the Essential JS 2 JavaScript components.
 
@@ -28,7 +24,7 @@ pdf-viewer-app/
 ├── index.js
 ```
 
-### Add style and script references
+## Add Syncfusion® PDF Viewer resources
 
 Add the required Syncfusion® PDF Viewer style and script references to the `index.html` file using one of the following methods:
 
@@ -50,13 +46,17 @@ To use local scripts and styles for the Syncfusion® PDF Viewer, follow these st
 >
 > Styles: `C:/Program Files (x86)/Syncfusion/Essential Studio/JavaScript - EJ2/19.3.53/Web(Essential JS 2)/JavaScript/ej2-js-es5/styles/material.css`
 
-Alternatively, clone the [`Essential JS 2 quickstart`](https://github.com/syncfusion/ej2-quickstart.git) project and install the required packages by running the following commands.
+Alternatively, Run the following command to clone the [`Essential JS 2 quickstart`](https://github.com/syncfusion/ej2-quickstart.git) project from GitHub and install the required packages.
 
-```
+{% tabs %}
+{% highlight bash tabtitle="CLI" %}
+
 git clone https://github.com/syncfusion/ej2-quickstart.git quickstart
 cd quickstart
 npm install
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 2. Download the `pdfium.js` and `pdfium.wasm` files from the following links:
 
@@ -77,36 +77,29 @@ npm install
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
 
-<head>
-    <title>EJ2 PDF Viewer</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="JavaScript PDF Viewer Control">
-    <meta name="author" content="Syncfusion">
-    <!-- PDF Viewer dependency styles -->
-    <link href="resources/ej2-base/styles/material.css" rel="stylesheet" type="text/css" />
-    <link href="resources/ej2-buttons/styles/material.css" rel="stylesheet" type="text/css" />
-    <link href="resources/ej2-popups/styles/material.css" rel="stylesheet" type="text/css" />
-    <link href="resources/ej2-navigations/styles/material.css" rel="stylesheet" type="text/css" />
-    <link href="resources/ej2-dropdowns/styles/material.css" rel="stylesheet" type="text/css" />
-    <link href="resources/ej2-lists/styles/material.css" rel="stylesheet" type="text/css" />
-    <link href="resources/ej2-inputs/styles/material.css" rel="stylesheet" type="text/css" />
-    <link href="resources/ej2-splitbuttons/styles/material.css" rel="stylesheet" type="text/css" />
-    <link href="resources/ej2-notifications/styles/material.css" rel="stylesheet" type="text/css" />
-    <!-- PDF Viewer styles -->
-    <link href="resources/ej2-pdfviewer/styles/material.css" rel="stylesheet" type="text/css" />
-    <!-- PDF Viewer dependency scripts -->
-    <script src="resources/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
-    <script src="resources/ej2-buttons/dist/global/ej2-buttons.min.js" type="text/javascript"></script>
-    <script src="resources/ej2-popups/dist/global/ej2-popups.min.js" type="text/javascript"></script>
-    <script src="resources/ej2-splitbuttons/dist/global/ej2-splitbuttons.min.js" type="text/javascript"></script>
-    <script src="resources/ej2-inputs/dist/global/ej2-inputs.min.js" type="text/javascript"></script>
-    <script src="resources/ej2-lists/dist/global/ej2-lists.min.js" type="text/javascript"></script>
-    <script src="resources/ej2-dropdowns/dist/global/ej2-dropdowns.min.js" type="text/javascript"></script>
-    <script src="resources/ej2-navigations/dist/global/ej2-navigations.min.js" type="text/javascript"></script>
-    <!-- PDF Viewer scripts -->
-    <script src="resources/ej2-pdfviewer/dist/global/ej2-pdfviewer.min.js" type="text/javascript"></script>
-</head>
+<!-- PDF Viewer dependency styles -->
+<link href="resources/ej2-base/styles/material.css" rel="stylesheet" type="text/css" />
+<link href="resources/ej2-buttons/styles/material.css" rel="stylesheet" type="text/css" />
+<link href="resources/ej2-popups/styles/material.css" rel="stylesheet" type="text/css" />
+<link href="resources/ej2-navigations/styles/material.css" rel="stylesheet" type="text/css" />
+<link href="resources/ej2-dropdowns/styles/material.css" rel="stylesheet" type="text/css" />
+<link href="resources/ej2-lists/styles/material.css" rel="stylesheet" type="text/css" />
+<link href="resources/ej2-inputs/styles/material.css" rel="stylesheet" type="text/css" />
+<link href="resources/ej2-splitbuttons/styles/material.css" rel="stylesheet" type="text/css" />
+<link href="resources/ej2-notifications/styles/material.css" rel="stylesheet" type="text/css" />
+<!-- PDF Viewer styles -->
+<link href="resources/ej2-pdfviewer/styles/material.css" rel="stylesheet" type="text/css" />
+<!-- PDF Viewer dependency scripts -->
+<script src="resources/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
+<script src="resources/ej2-buttons/dist/global/ej2-buttons.min.js" type="text/javascript"></script>
+<script src="resources/ej2-popups/dist/global/ej2-popups.min.js" type="text/javascript"></script>
+<script src="resources/ej2-splitbuttons/dist/global/ej2-splitbuttons.min.js" type="text/javascript"></script>
+<script src="resources/ej2-inputs/dist/global/ej2-inputs.min.js" type="text/javascript"></script>
+<script src="resources/ej2-lists/dist/global/ej2-lists.min.js" type="text/javascript"></script>
+<script src="resources/ej2-dropdowns/dist/global/ej2-dropdowns.min.js" type="text/javascript"></script>
+<script src="resources/ej2-navigations/dist/global/ej2-navigations.min.js" type="text/javascript"></script>
+<!-- PDF Viewer scripts -->
+<script src="resources/ej2-pdfviewer/dist/global/ej2-pdfviewer.min.js" type="text/javascript"></script>
 
 {% endhighlight %}
 {% endtabs %}
@@ -115,38 +108,23 @@ npm install
 
 {% tabcontent Using CDN Links %}
 
-Reference the scripts and styles directly from the CDN.
-
-```text
-Script: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/dist/global/{PACKAGE_NAME}.min.js
-Style: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/styles/{THEME_NAME}.css
-```
-
-Create an HTML page (index.html) in `pdf-viewer-app` location and add the CDN link references.
+Create an HTML page (index.html) in `pdf-viewer-app` location and add the CDN link references inside the `<head>` section of your `index.html` file.
 
 {% tabs %}
-{% highlight html tabtitle="index.html" hl_lines="8 9 10 11 12 13 14 15 16 17 19" %}
+{% highlight html tabtitle="index.html" %}
 
-<head>
-    <title>EJ2 PDF Viewer</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="JavaScript PDF Viewer Control">
-    <meta name="author" content="Syncfusion">
-    <link href="index.css" rel="stylesheet">
-    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-base/styles/material.css" rel="stylesheet">    
-    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-buttons/styles/material.css" rel="stylesheet">
-    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-popups/styles/material.css" rel="stylesheet">
-    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-navigations/styles/material.css" rel="stylesheet">
-    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-dropdowns/styles/material.css" rel="stylesheet">
-    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-lists/styles/material.css" rel="stylesheet">
-    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-inputs/styles/material.css" rel="stylesheet">    
-    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-splitbuttons/styles/material.css" rel="stylesheet">
-    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-notifications/styles/material.css" rel="stylesheet">
-    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-pdfviewer/styles/material.css" rel="stylesheet">
-    <!-- Essential JS 2 PDF Viewer's script --> 
-    <script src="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/dist/ej2.min.js" type="text/javascript"></script>
-</head>
+<link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-base/styles/material.css" rel="stylesheet">    
+<link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-buttons/styles/material.css" rel="stylesheet">
+<link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-popups/styles/material.css" rel="stylesheet">
+<link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-navigations/styles/material.css" rel="stylesheet">
+<link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-dropdowns/styles/material.css" rel="stylesheet">
+<link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-lists/styles/material.css" rel="stylesheet">
+<link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-inputs/styles/material.css" rel="stylesheet">    
+<link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-splitbuttons/styles/material.css" rel="stylesheet">
+<link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-notifications/styles/material.css" rel="stylesheet">
+<link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-pdfviewer/styles/material.css" rel="stylesheet">
+<!-- Essential JS 2 PDF Viewer's script --> 
+<script src="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/dist/ej2.min.js" type="text/javascript"></script>
 
 {% endhighlight %}
 {% endtabs %}
@@ -155,27 +133,15 @@ Create an HTML page (index.html) in `pdf-viewer-app` location and add the CDN li
 
 {% endtabcontents %}
 
-## Adding the PDF Viewer component
+## Add the Syncfusion® PDF Viewer component
 
-Add a container element for the PDF Viewer control in the `index.html` file and then initialize the control.
+Add a container element for the PDF Viewer control in the `index.html` file and then initialize the control inside the `<body>` section of your `index.html` file.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
 
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title>EJ2 PDF Viewer</title>
-    <!-- Add your style references here -->
-</head>
-<body>
-    <!-- Element which will render as PDF Viewer -->
-    <div id="container">
-        <div id="PdfViewer" style="height:500px;width:100%;"></div>
-    </div>
-    <script src="index.js" type="text/javascript"></script>
-</body>
-</html>
+<!-- Element which will render as PDF Viewer -->
+<div id="PdfViewer" style="height:500px;width:100%;"></div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -228,11 +194,15 @@ N> The `documentPath` property is used to set the path of the PDF file to be loa
 
 ## Run the application
 
-Now run the following command in the console to start the development server. This command serves the application locally on your machine:
+Run the following command to start the JavaScript application:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 npx serve .
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 After the application starts, open the localhost URL displayed in the terminal in your web browser. The PDF document will be rendered in the browser. The output will appear as follows:
 
@@ -242,7 +212,7 @@ You can also explore the PDF Viewer interactively using the live sample below.
 
 {% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/es5-getting-started-cs2" %}
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/How%20to/Refer%20resource%20url%20locally)
+> [View sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/How%20to/Refer%20resource%20url%20locally)
 
 ## See also
 
