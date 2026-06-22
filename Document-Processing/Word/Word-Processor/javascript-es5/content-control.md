@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Content control in JavaScript (ES5) Document editor control
 
-[JavaScript Document Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) provides support for inserting, editing content controls
+[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) provides support for inserting, editing content controls
 
 Content controls can be categorized based on its occurrence in a document as follows,
 

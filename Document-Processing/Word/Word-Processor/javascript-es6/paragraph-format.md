@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Paragraph format in JavaScript (ES6) Document editor control
 
-[TypeScript Document Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
+[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
 
 ## Indentation
 

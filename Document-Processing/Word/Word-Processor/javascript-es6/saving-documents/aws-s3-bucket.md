@@ -16,7 +16,7 @@ To save a document to AWS S3, you can follow the steps below
 
 **Step 1:** Create a Simple Document Editor sample in TypeScript
 
-Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in Typescript. This will give you a basic setup of the [TypeScript Document Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) component.
+Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in Typescript. This will give you a basic setup of the [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) component.
 
 **Step 2:** Modify the `DocumentEditorController.cs` File in the Web Service Project
 

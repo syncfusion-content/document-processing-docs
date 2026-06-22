@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Section format in JavaScript (ES6) Document editor control
 
-[TypeScript Document Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) supports various section formatting such as page size, page margins, and more.
+[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) supports various section formatting such as page size, page margins, and more.
 
 ## Page size
 

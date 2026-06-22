@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 ## Web layout
 
-[JavaScript Document Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) allows you to change the view to web layout and print using the [`layoutType`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#layouttype) property with the supported [`LayoutType`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/layoutType/).
+[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) allows you to change the view to web layout and print using the [`layoutType`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#layouttype) property with the supported [`LayoutType`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/layoutType/).
 
 ```ts
 let docEdit: DocumentEditor = new DocumentEditor({ layoutType: 'Continuous'});

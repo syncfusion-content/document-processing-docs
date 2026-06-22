@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Retrieve the bookmark content as text in JavaScript (ES6) Document editor control
 
-You can get the bookmark or whole document content from the [TypeScript Document Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) component as plain text and SFDT (rich text).
+You can get the bookmark or whole document content from the [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) component as plain text and SFDT (rich text).
 
 ## Get the bookmark content as plain text
 

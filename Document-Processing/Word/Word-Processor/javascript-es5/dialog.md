@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Dialog in JavaScript (ES5) Document editor control
 
-[JavaScript Document Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) provides dialog support to major operations such as insert or edit hyperlink, formatting text, paragraph, style, list and table properties.
+[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) provides dialog support to major operations such as insert or edit hyperlink, formatting text, paragraph, style, list and table properties.
 
 ## Font Dialog
 

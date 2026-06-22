@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Form fields in JavaScript (ES6) Document editor control
 
-[TypeScript Document Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) Container component provide support for inserting Text, CheckBox, DropDown form fields through in-built toolbar.
+[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) Container component provide support for inserting Text, CheckBox, DropDown form fields through in-built toolbar.
 
 ![Form Fields](images/toolbar-form-fields.png)
 

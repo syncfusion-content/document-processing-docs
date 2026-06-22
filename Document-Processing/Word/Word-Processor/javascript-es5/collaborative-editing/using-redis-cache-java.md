@@ -15,7 +15,7 @@ Allows multiple users to work on the same document simultaneously. This can be d
 
 ## Prerequisites
 
-The following are needed to enable collaborative editing in [JavaScript Document Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor).
+The following are needed to enable collaborative editing in [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor).
 
 - `SockJS`
 - `Redis`

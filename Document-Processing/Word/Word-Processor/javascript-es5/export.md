@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Export in JavaScript (ES5) Document editor control
 
-[JavaScript Document Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) exports the document into various known file formats in client-side such as Microsoft Word document (.docx), Word template (.dotx), text document (.txt), and its own format called **Syncfusion Document Text (.sfdt)**.
+[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) exports the document into various known file formats in client-side such as Microsoft Word document (.docx), Word template (.dotx), text document (.txt), and its own format called **Syncfusion Document Text (.sfdt)**.
 
 We are providing two types of save APIs as mentioned below.
 

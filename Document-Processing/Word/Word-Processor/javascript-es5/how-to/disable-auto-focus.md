@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Disable auto focus in JavaScript (ES5) Document editor control
 
-[JavaScript Document Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) gets focused automatically when the page loads. If you want the Document editor not to be focused automatically it can be customized.
+[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) gets focused automatically when the page loads. If you want the Document editor not to be focused automatically it can be customized.
 
 The following example illustrates to disable the auto focus in DocumentEditorContainer.
 

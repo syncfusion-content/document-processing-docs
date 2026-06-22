@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Insert text in current position in JavaScript (ES6) Document editor
 
-You can insert the text, paragraph and rich-text content in [TypeScript Document Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) component.
+You can insert the text, paragraph and rich-text content in [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) component.
 
 ## Insert text in current cursor position
 

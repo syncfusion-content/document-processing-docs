@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Open document from Dropbox cloud file storage in JavaScript (ES6) Document editor
 
-To load a document from Dropbox cloud file storage in a [TypeScript Document Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor), you can follow the steps below
+To load a document from Dropbox cloud file storage in a [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor), you can follow the steps below
 
 **Step 1:** Create a Dropbox API
 

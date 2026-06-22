@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Insert page number and navigate to page in JavaScript (ES5) Document editor control
 
-You can insert page number and navigate to specific page in [JavaScript Document Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) component by following ways.
+You can insert page number and navigate to specific page in [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) component by following ways.
 
 ## Insert page number
 

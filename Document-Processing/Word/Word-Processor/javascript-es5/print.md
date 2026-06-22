@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Print in JavaScript (ES5) Document editor control
 
-To print the document, use the [`print`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#print) method from [JavaScript Document Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) instance.
+To print the document, use the [`print`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#print) method from [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) instance.
 
 Refer to the following example for showing a document and print it.
 

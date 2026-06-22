@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility in JavaScript (ES5) Document editor component
 
-The accessibility compliance for the [JavaScript Document Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) component is outlined below.
+The accessibility compliance for the [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Image in JavaScript (ES6) Document editor control
 
-[TypeScript Document Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) supports common raster format images like PNG, BMP, JPEG, SVG and GIF. You can insert an image file or online image in the document using the [`insertImage()`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#insertimage) method. Refer to the following sample code.
+[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) supports common raster format images like PNG, BMP, JPEG, SVG and GIF. You can insert an image file or online image in the document using the [`insertImage()`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#insertimage) method. Refer to the following sample code.
 
  
 
