@@ -41,12 +41,28 @@ using Syncfusion.HtmlConverter;
 Step 4: Add a new button in MainWindow.xaml to convert HTML to PDF document as follows.
 
 {% tabs %}
-{% highlight CSHTML %}
+{% highlight XAML %}
 
-<Grid HorizontalAlignment="Left" Margin="0,0,0,-0.333" Width="793">
-<Button Content="Convert Html to PDF" HorizontalAlignment="Left" Margin="318,210,0,0" VerticalAlignment="Top" Width="166" Click=" btnCreate_Click " Height="19"/>
-<TextBlock HorizontalAlignment="Left" Margin="222,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="17"/>
-<TextBlock HorizontalAlignment="Left" Margin="291,175,0,0" TextWrapping="Wrap" Text="Click the button to convert Html to PDF." VerticalAlignment="Top"/>
+<Grid HorizontalAlignment="Left"
+      Margin="0,0,0,-0.333"
+      Width="793">
+    <Button Content="Convert Html to PDF"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="318,210,0,0"
+            Width="166"
+            Height="19"
+            Click=" btnCreate_Click " />
+    <TextBlock HorizontalAlignment="Left"
+               VerticalAlignment="Top"
+               Margin="222,177,0,0"
+               Height="17"
+               TextWrapping="Wrap" />
+    <TextBlock HorizontalAlignment="Left"
+               VerticalAlignment="Top"
+               Margin="291,175,0,0"
+               TextWrapping="Wrap"
+               Text="Click the button to convert Html to PDF." />
 </Grid>
 
 {% endhighlight %}
