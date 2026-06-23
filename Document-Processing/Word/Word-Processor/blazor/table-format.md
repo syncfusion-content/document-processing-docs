@@ -176,4 +176,6 @@ Document Editor expose API to get or set the table description of the selected i
 await documentEditor.Selection.TableFormat.SetDescriptionAsync("Freight cost and shipping details");
 ```
 
-You can also explore our [Blazor Word Processor](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities) example to know how to render and configure the document editor.
+## Online Demo
+
+Explore how to format tables in Word documents using the Blazor Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/table-format?theme=fluent2).

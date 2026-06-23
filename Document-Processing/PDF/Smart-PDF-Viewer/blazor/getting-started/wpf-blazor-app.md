@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Smart PDF Viewer in a WPF App | Syncfusion
+title: Getting Started with Smart PDF Viewer in a WPF App | Syncfusion
 description: Learn how to get started with the Smart PDF Viewer control in a WPF Blazor Hybrid App to view, comment on, and fill PDF forms.
 platform: document-processing
 control: SfSmartPdfViewer
@@ -9,7 +9,7 @@ documentation: ug
 
 # Using Smart PDF Viewer Component in the WPF app 
 
-This article explains how to add the Syncfusion&reg; Blazor Smart PDF Viewer component to a WPF Blazor Hybrid App using [Visual Studio](https://visualstudio.microsoft.com/vs/) or Visual Studio Code. The result is a desktop application (WPF) that hosts Blazor UI inside a BlazorWebView control.
+This section explains how to add the Syncfusion&reg; Blazor Smart PDF Viewer component to a WPF Blazor Hybrid App using [Visual Studio](https://visualstudio.microsoft.com/vs/) or Visual Studio Code. The result is a desktop application (WPF) that hosts Blazor UI inside a BlazorWebView control.
 
 {% tabcontents %}
 
@@ -103,7 +103,7 @@ The WPF project must target Windows and enable WPF. A typical project file looks
 Create an `_Imports.razor` and add the component namespace
 
 {% tabs %}
-{% highlight razor tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="_Imports.razor" %}
 
 @using Microsoft.AspNetCore.Components.Web
 @using Syncfusion.Blazor.SmartPdfViewer
@@ -139,33 +139,38 @@ dotnet add package Microsoft.Extensions.AI.OpenAI --version 9.8.0-preview.1.2541
 {% endhighlight %}
 {% endtabs %}
 
-Register Syncfusion Blazor services, AI services and BlazorWebView in **~/MainWindow.xaml.cs** so that the WPF window can host Blazor components.
+Add the `Syncfusion.Blazor` namespace to the `~/MainWindow.xaml.cs` file.
 
 {% tabs %}
-{% highlight c# tabtitle="MainWindow.xaml.cs (WPF host)" hl_lines="2 3 4 5 6 7 10 11 12 13 14 15 16 17 18 19 20 21" %}
+{% highlight c# tabtitle="MainWindow.xaml.cs (WPF host)" %}
 
-....
 using Microsoft.Extensions.DependencyInjection;
 using Azure.AI.OpenAI;
 using Microsoft.Extensions.AI;
 using Syncfusion.Blazor;
 using Syncfusion.Blazor.AI;
 using System.ClientModel;
-....
-            InitializeComponent();
-            ServiceCollection serviceCollection = new ServiceCollection();
-            serviceCollection.AddWpfBlazorWebView();
-            serviceCollection.AddMemoryCache();
-            serviceCollection.AddSyncfusionBlazor();
-            string azureOpenAiKey = "api-key";
-            string azureOpenAiEndpoint = "endpoint URL";
-            string azureOpenAiModel = "deployment-name";
-            AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(new Uri(azureOpenAiEndpoint), new ApiKeyCredential(azureOpenAiKey));
-            IChatClient azureOpenAiChatClient = azureOpenAIClient.GetChatClient(azureOpenAiModel).AsIChatClient();
-            serviceCollection.AddChatClient(azureOpenAiChatClient);
-            serviceCollection.AddSingleton<IChatInferenceService, SyncfusionAIService>();
-            Resources.Add("services", serviceCollection.BuildServiceProvider());
-....
+
+{% endhighlight %}
+{% endtabs %}
+
+Register Syncfusion Blazor services, AI services and BlazorWebView in `~/MainWindow.xaml.cs` after component initialized so that the WPF window can host Blazor components.
+
+{% tabs %}
+{% highlight c# tabtitle="MainWindow.xaml.cs (WPF host)" %}
+
+ServiceCollection serviceCollection = new ServiceCollection();
+serviceCollection.AddWpfBlazorWebView();
+serviceCollection.AddMemoryCache();
+serviceCollection.AddSyncfusionBlazor();
+string azureOpenAiKey = "api-key";
+string azureOpenAiEndpoint = "endpoint URL";
+string azureOpenAiModel = "deployment-name";
+AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(new Uri(azureOpenAiEndpoint), new ApiKeyCredential(azureOpenAiKey));
+IChatClient azureOpenAiChatClient = azureOpenAIClient.GetChatClient(azureOpenAiModel).AsIChatClient();
+serviceCollection.AddChatClient(azureOpenAiChatClient);
+serviceCollection.AddSingleton<IChatInferenceService, SyncfusionAIService>();
+Resources.Add("services", serviceCollection.BuildServiceProvider());
 
 {% endhighlight %}
 {% endtabs %}
@@ -255,7 +260,7 @@ Run the WPF application. The Syncfusion&reg; Blazor Smart PDF Viewer renders ins
 
 ![WPF Blazor HybridApp Smart PDF Viewer rendering in browser](../images/blazor-hybrid-wpf-sfsmartpdfviewer.png)
 
->[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Getting%20Started/WPF%20Blazor%20App).
+> [View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Getting%20Started/WPF%20Blazor%20App).
 
 ## See also
 

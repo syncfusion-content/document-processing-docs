@@ -23,3 +23,7 @@ Document Editor provides RTL (right-to-left) support. This can be enabled using 
 {% endtabs %}
   
 {% previewsample "/document-processing/samples/document-editor/angular/rtl-cs1" %}
+
+## Online Demo
+
+Explore how to enable right-to-left layout in Word documents using the Angular Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/right-to-left).
