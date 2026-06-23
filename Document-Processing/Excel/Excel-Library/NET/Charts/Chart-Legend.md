@@ -1,6 +1,6 @@
 ---
 title: Chart Legend | Excel library | Syncfusion
-description: In this section, you can learn about chart legend in an Excel document using .NET Excel library.
+description: In this section, you can learn about the chart legend in an Excel document using the .NET Excel library with clear guidance and practical examples.
 platform: document-processing
 control: XlsIO
 documentation: UG

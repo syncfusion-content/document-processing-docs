@@ -6,6 +6,6 @@ control: XlsIO
 documentation: UG
 ---
 
-# Does XlsIO library support watermark and background image in Excel to Pdf conversion?
+# Does XlsIO support watermark and background images in Excel to PDF?
 
 No, The watermark or background image in Excel does not preserved in Excel to PDF conversion. The same behavior is followed by XlsIO.
