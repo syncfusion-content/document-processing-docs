@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Create or Generate PDF file in JavaScript | Syncfusion
+canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: Learn how to create a PDF file in JavaScript with easy steps using JavaScript PDF Library without depending on Adobe
 platform: document-processing
 control: PDF
