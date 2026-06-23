@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Working With Spreadsheet in WinForms Spreadsheet | Syncfusion®
+canonical_url: "https://www.syncfusion.com/spreadsheet-editor-sdk/winforms-spreadsheet-editor"
 description: Learn about Working With Spreadsheet support in Syncfusion® Windows Forms Spreadsheet control and more details.
 platform: document-processing
 control: Spreadsheet

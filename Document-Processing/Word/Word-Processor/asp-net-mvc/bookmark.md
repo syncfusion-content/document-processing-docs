@@ -66,7 +66,9 @@ The following example shows how to open bookmark dialog in Document Editor.
 {% endtabs %}
 
 
+## Online Demo
 
+Explore how to insert and manage bookmarks in Word documents using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/hyperlinksandbookmarks#/tailwind3).
 
 ## See Also
 

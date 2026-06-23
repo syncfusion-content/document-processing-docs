@@ -18,7 +18,7 @@ To get started quickly, you can also check out our video tutorial below.
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
 
 ## Install the Flutter PDF Viewer package
-Install the [Syncfusion<sup>&reg;</sup> Flutter PDF Viewer](https://pub.dev/packages/syncfusion_flutter_pdfviewer/versions) package to your project by run the following command in your project’s terminal:.
+Install the [Syncfusion<sup>&reg;</sup> Flutter PDF Viewer](https://pub.dev/packages/syncfusion_flutter_pdfviewer/versions) package to your project by run the following command in your project’s terminal:
 
 {% tabs %}
 {% highlight yaml tabtitle="powershell" %}
@@ -90,7 +90,7 @@ import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 In the `main.dart` file, replace the build method with the following code to display the PDF using SfPdfViewer
 
 {% tabs %}
-{% highlight dart hl_lines="5" %}
+{% highlight dart hl_lines="4" %}
 
 @override
 Widget build(BuildContext context) {

@@ -149,42 +149,42 @@ N> From v16.3.0x onwards, PDF Viewer uses PDFium as a default rendering engine t
 
 {% tabs %}
 {% highlight c# tabtitle="PdfReport.cs" %}
-	using System.ComponentModel;
-	using System.IO;
+using System.ComponentModel;
+using System.IO;
 
-	namespace PdfViewerDemo
+namespace PdfViewerDemo
+{
+	public class PdfReport : INotifyPropertyChanged
 	{
-		public class PdfReport : INotifyPropertyChanged
+		private Stream docStream;
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		public Stream DocumentStream
 		{
-			private Stream docStream;
-			public event PropertyChangedEventHandler PropertyChanged;
-			
-			public Stream DocumentStream
+			get
 			{
-				get
-				{
-					return docStream;
-				}
-				set
-				{
-					docStream = value;
-					OnPropertyChanged(new PropertyChangedEventArgs("DocumentStream"));
-				}
+				return docStream;
 			}
-
-			public PdfReport()
+			set
 			{
-				//Load the stream from the local system.
-				docStream = new FileStream(@"../../Data/HTTP Succinctly.pdf", FileMode.OpenOrCreate);
-			}
-
-			public void OnPropertyChanged(PropertyChangedEventArgs e)
-			{
-				if (PropertyChanged != null)
-					PropertyChanged(this, e);
+				docStream = value;
+				OnPropertyChanged(new PropertyChangedEventArgs("DocumentStream"));
 			}
 		}
+
+		public PdfReport()
+		{
+			//Load the stream from the local system.
+			docStream = new FileStream(@"../../Data/HTTP Succinctly.pdf", FileMode.OpenOrCreate);
+		}
+
+		public void OnPropertyChanged(PropertyChangedEventArgs e)
+		{
+			if (PropertyChanged != null)
+				PropertyChanged(this, e);
+		}
 	}
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -192,9 +192,9 @@ N> From v16.3.0x onwards, PDF Viewer uses PDFium as a default rendering engine t
 
 {% tabs %}
 {% highlight xaml tabtitle="MainWindow.xaml" %}
-	<Window.DataContext>
-		<pdfviewerdemo:PdfReport/>
-	</Window.DataContext>
+<Window.DataContext>
+	<pdfviewerdemo:PdfReport/>
+</Window.DataContext>
 {% endhighlight %}
 {% endtabs %}
 
