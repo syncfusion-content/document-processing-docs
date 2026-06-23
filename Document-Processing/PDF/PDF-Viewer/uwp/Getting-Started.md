@@ -135,9 +135,11 @@ After adding the `SfPdfViewerControl`, you can load a PDF document using data bi
     using System.Reflection;
     using System.IO;
 
-    internal class PdfReport
+    internal class PdfReport : INotifyPropertyChanged
     {
         private Stream docStream;
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
         /// Stream object to be bound to the ItemsSource of the PDF Viewer
@@ -151,6 +153,7 @@ After adding the `SfPdfViewerControl`, you can load a PDF document using data bi
             set
             {
                 docStream = value;
+                OnPropertyChanged(new PropertyChangedEventArgs("DocumentStream"));
             }
         }
 
@@ -162,13 +165,22 @@ After adding the `SfPdfViewerControl`, you can load a PDF document using data bi
             // Replace 'PdfViewerExample' with your project's namespace in resource path
             docStream = assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf");
         }
+
+        public void OnPropertyChanged(PropertyChangedEventArgs e)
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, e);
+        }        
     }
 
     {% endhighlight %} 
     
 {% highlight vbnet %}
 Class PdfReport
+    Implements INotifyPropertyChanged
+
     Private docStream As Stream
+    Private Event PropertyChanged As PropertyChangedEventHandler Implements INotifyPropertyChanged.PropertyChanged
 
     ''' <summary>
     ''' Stream object to be bound to the ItemsSource of the PDF Viewer
@@ -179,6 +191,7 @@ Class PdfReport
         End Get
         Set
             docStream = Value
+            OnPropertyChanged(New PropertyChangedEventArgs("DocumentStream"))
         End Set
     End Property
 
@@ -186,6 +199,10 @@ Class PdfReport
         'Loads the stream from the embedded resource.
         Dim assembly As Assembly = GetType(MainPage).GetTypeInfo().Assembly
         docStream = assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf")
+    End Sub
+
+    Public Sub OnPropertyChanged(e As PropertyChangedEventArgs)
+        RaiseEvent PropertyChanged(Me, e)
     End Sub
 
 End Class
