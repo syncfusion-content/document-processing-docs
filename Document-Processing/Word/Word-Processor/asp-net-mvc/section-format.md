@@ -52,6 +52,10 @@ You can define the distance of footer content from the bottom of the page by usi
 documenteditor.selection.sectionFormat.footerDistance = 72;
 ```
 
+## Online Demo
+
+Explore how to apply section formatting in Word documents using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/sectionformatting#/tailwind3).
+
 ## See Also
 
 * [Pagesetup dialog](./dialog#page-setup-dialog)

@@ -35,7 +35,7 @@ Add the following AI Assist dependent style references to the `src/index.css` fi
 
 Inject the `AIAssist` module into the React Spreadsheet. This registers the AI Assist feature and makes it available in your application.
 
-```tsx
+```ts
 import * as React from 'react';
 import { Spreadsheet, AIAssist } from '@syncfusion/ej2-react-spreadsheet';
 
@@ -46,7 +46,7 @@ Spreadsheet.Inject(AIAssist);
 
 To enable `AIAssist` in the Spreadsheet component, set the [`enableAIAssist`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#enableaiassist) property to `true`.
 
-```tsx
+```ts
 import * as React from 'react';
 import { Spreadsheet, SpreadsheetComponent, AIAssist } from '@syncfusion/ej2-react-spreadsheet';
 
@@ -63,7 +63,7 @@ This enables the AI Assist into the spreadsheet.
 
 Use the [`aiAssistSettings`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#aiassistsettings) property to connect spreadsheet to the backend server and customize the AI Assist.
 
-```tsx
+```ts
 import * as React from 'react';
 import { Spreadsheet, SpreadsheetComponent, AIAssist, AIAssistSettingsModel } from '@syncfusion/ej2-react-spreadsheet';
 
@@ -102,7 +102,7 @@ All actions performed by AI Assist are recorded in the spreadsheet's undo/redo h
 
 Use the [`promptRequest`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#promptrequest) event to add custom data — such as a user ID or session token — to the request before it reaches your server.
 
-```tsx
+```ts
 import * as React from 'react';
 import { Spreadsheet, SpreadsheetComponent, AIAssist, AIAssistSettingsModel, PromptRequestEventArgs } from '@syncfusion/ej2-react-spreadsheet';
 
@@ -131,7 +131,7 @@ You can also prevent the request entirely by setting `args.cancel = true`.
 
 Use the [`promptResponse`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#promptresponse) event to run custom logic after the AI completes its task — for example, logging results or showing a notification.
 
-```tsx
+```ts
 import * as React from 'react';
 import { Spreadsheet, SpreadsheetComponent, AIAssist, AIAssistSettingsModel, PromptResponseEventArgs } from '@syncfusion/ej2-react-spreadsheet';
 

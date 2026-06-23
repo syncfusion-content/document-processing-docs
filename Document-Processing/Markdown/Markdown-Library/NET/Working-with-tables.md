@@ -106,7 +106,7 @@ The following code example demonstrates how to create a table
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 N> Column alignment is set at the table level using the `ColumnAlignments` property and applies to the entire column, not individual cells.
 
@@ -184,7 +184,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ## Removing tables
 
@@ -242,4 +242,4 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
