@@ -8,12 +8,12 @@ documentation: ug
 ---
 
 # Viewing PDF in UWP PDF Viewer (SfPdfViewer)
-The [`SfPdfViewer`](https://help.syncfusion.com/cr/uwp/Syncfusion.Windows.PdfViewer.SfPdfViewerControl.html) allows you to load the PDF documents from the [`stream`](https://learn.microsoft.com/en-us/dotnet/api/system.io.stream?view=net-5.0), [`storageFile`](https://learn.microsoft.com/en-us/uwp/api/windows.storage.storagefile?view=winrt-19041), and [`PdfLoadedDocument`](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) object.
+The [`SfPdfViewer`](https://help.syncfusion.com/cr/uwp/Syncfusion.Windows.PdfViewer.SfPdfViewerControl.html) allows you to load the PDF documents from the [`stream`](https://learn.microsoft.com/en-us/dotnet/api/system.io.stream?view=net-5.0), [`storageFile`](https://learn.microsoft.com/en-us/uwp/api/windows.storage.storagefile?view=winrt-19041), and [`PdfLoadedDocument`](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) object.
 
 ## Loading a PDF using PdfLoadedDocument object
 The [`SfPdfViewer`](https://help.syncfusion.com/cr/uwp/Syncfusion.Windows.PdfViewer.SfPdfViewerControl.html) allows you to load the PDF document synchronously and asynchronously from the specified pdfLoadedDocument object using the `LoadDocument` and  `LoadDocumentAsync` methods respectively.
 
-The following code explains how to load the document synchronously using a [`PdfLoadedDocument`](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) object that was created from the PDF in the Assets folder of the application.
+The following code explains how to load the document synchronously using a [`PdfLoadedDocument`](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) object that was created from the PDF in the Assets folder of the application.
 
 {% tabs %}
 {% highlight c# %}
@@ -33,7 +33,7 @@ pdfViewer.LoadDocument(loadedDocument)
 {% endhighlight %}
 {% endtabs %}
 
-The following code explains how to load the document asynchronously using the [`PdfLoadedDocument`](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) object that was created from the PDF in the Assets folder of the application.
+The following code explains how to load the document asynchronously using the [`PdfLoadedDocument`](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) object that was created from the PDF in the Assets folder of the application.
 
 {% tabs %}
 {% highlight c# %}
