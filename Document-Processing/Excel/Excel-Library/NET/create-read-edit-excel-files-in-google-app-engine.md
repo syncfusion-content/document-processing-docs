@@ -1,6 +1,6 @@
 ---
 title: Create, read, and edit Excel files in GCP | Syncfusion
-description: This page explains how to create, read, and edit Excel files in Google App Engine using the Syncfusion .NET Excel library (XlsIO).
+description: This page explains how to create, read, and edit Excel files in Google App Engine using the .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG

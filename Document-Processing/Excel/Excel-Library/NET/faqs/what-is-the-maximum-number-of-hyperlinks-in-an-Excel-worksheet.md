@@ -1,6 +1,6 @@
 ---
 title: Maximum number of hyperlinks in Excel worksheet | Syncfusion
-description: Learn about the maximum number of hyperlinks supported in an Excel worksheet using Syncfusion .NET Excel library (XlsIO).
+description: Learn about the maximum number of hyperlinks supported in an Excel worksheet using .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
