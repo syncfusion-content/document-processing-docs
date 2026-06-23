@@ -22,7 +22,7 @@ The ASP.NET Core PDF Viewer supports three form-filling methods:
 
 3. [Importing form field data](#fill-pdf-forms-through-import-data)
 
-  The PDF Viewer supports importing form field data into an existing document to prefill forms from external data sources.
+  The PDF Viewer supports importing form field data into an existing document to fill forms from external data sources.
 
 ## Fill PDF forms programmatically 
 

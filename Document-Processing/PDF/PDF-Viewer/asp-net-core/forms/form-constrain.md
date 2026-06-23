@@ -35,7 +35,7 @@ The following flags are supported in the PDF Viewer:
 
 ### Make Fields Read Only
 
-The **isReadOnly** property prevents users from modifying a form field through the UI. This is useful for displaying prefilled or calculated values that should not be changed.
+The **isReadOnly** property prevents users from modifying a form field through the UI. This is useful for displaying prefixed or calculated values that should not be changed.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
