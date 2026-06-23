@@ -77,7 +77,7 @@ RemoveHandler pdfviewer.HyperlinkClicked, AddressOf PdfViewerControl_HyperlinkCl
 
 ## How to retrieve the clicked URI from PDF viewer
 
-You can acquire the details of the hyperlink, which is clicked in the PDF file using the [HyperlinkClickedEventArgs](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.HyperlinkClickedEventArgs.html) in the [HyperlinkClicked](https://help.syncfusion.com/cr/windowsforms) event. 
+You can acquire the details of the hyperlink, which is clicked in the PDF file using the [HyperlinkClickedEventArgs](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.HyperlinkClickedEventArgs.html) in the [HyperlinkClicked](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_HyperlinkClicked) event. 
 Please refer to the following example for more details.
 
 {% tabs %}
