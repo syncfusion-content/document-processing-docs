@@ -11,10 +11,6 @@ documentation: ug
 
 Syncfusion<sup>&reg;</sup> Document Processing MCP Server provides AI-powered assistance for building document processing solutions. This guide will help you install and configure the MCP server in your development environment.
 
-## Available Modes
-
-The Syncfusion Document Processing MCP Server offers two modes:
-
 - **AI Document Assistant** - Provides contextual document processing APIs, code snippets, and configuration examples to accelerate development and reduce documentation lookups.
 
 ## Prerequisites
