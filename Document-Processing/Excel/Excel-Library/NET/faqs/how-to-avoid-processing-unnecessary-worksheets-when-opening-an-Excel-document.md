@@ -1,6 +1,6 @@
 ---
 title: Avoid loading unused worksheets when opening Excel | Syncfusion
-description: Code example to avoid processing unnecessary worksheets when opening an Excel document using Syncfusion .NET Excel library (XlsIO).
+description: Code example to avoid processing unnecessary worksheets when opening an Excel document using .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG

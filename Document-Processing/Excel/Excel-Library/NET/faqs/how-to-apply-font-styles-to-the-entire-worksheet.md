@@ -1,6 +1,6 @@
 ---
 title: How to apply styles to an Entire Excel Worksheet | Syncfusion 
-description: Learn how to apply font settings and fill color to an entire Excel worksheet using the Syncfusion .NET Excel library (XlsIO) in C# and VB.NET.
+description: Learn how to apply font settings and fill color to an entire Excel worksheet using the .NET Excel library (XlsIO) in C# and VB.NET.
 platform: document-processing 
 control: XlsIO 
 documentation: UG

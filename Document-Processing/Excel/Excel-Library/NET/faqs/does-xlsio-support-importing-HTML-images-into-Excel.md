@@ -1,6 +1,6 @@
 ---
 title: XlsIO support for importing HTML images into Excel | Syncfusion
-description: Learn whether Syncfusion XlsIO supports importing HTML images into Excel using the Syncfusion .NET Excel library (XlsIO).
+description: Learn whether Syncfusion XlsIO supports importing HTML images into Excel using the .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG

@@ -1,6 +1,6 @@
 ---
 title: How to define discontinuous ranges | XlsIO | Syncfusion
-description: This page explains with an example to define discontinuous ranges using Syncfusion .NET Excel library (XlsIO).
+description: This page explains with an example to define discontinuous ranges using .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG

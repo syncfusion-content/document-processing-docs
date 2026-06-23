@@ -1,6 +1,6 @@
 ---
 title: How to check whether the given range is valid or not | Syncfusion
-description: This page tells how to check whether given range is valid or not using Syncfusion .NET Excel library (XlsIO).
+description: This page tells how to check whether given range is valid or not using .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG

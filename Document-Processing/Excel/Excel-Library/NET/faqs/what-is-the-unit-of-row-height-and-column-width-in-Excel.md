@@ -1,6 +1,6 @@
 --- 
 title: Unit of row height and column width in Excel | Syncfusion 
-description: This page explains about the default unit of measurement for row height and column width in Excel using Syncfusion .NET Excel library (XlsIO).
+description: This page explains about the default unit of measurement for row height and column width in Excel using .NET Excel library (XlsIO).
 platform: document-processing 
 control: XlsIO 
 documentation: UG 

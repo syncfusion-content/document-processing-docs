@@ -1,6 +1,6 @@
 ---
 title: Row and column autofit with images in XlsIO | Syncfusion 
-description: This page explains whether Syncfusion XlsIO supports autofitting row height and column width based on images using Syncfusion .NET Excel library (XlsIO).
+description: This page explains whether Syncfusion XlsIO supports autofitting row height and column width based on images using .NET Excel library (XlsIO).
 platform: document-processing 
 control: XlsIO 
 documentation: UG

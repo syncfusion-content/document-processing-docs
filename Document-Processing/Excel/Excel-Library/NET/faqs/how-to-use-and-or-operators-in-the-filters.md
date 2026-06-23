@@ -1,6 +1,6 @@
 ---
 title: How to use AND and OR operators in the filter | Syncfusion
-description: Code example to use AND and OR operators in the filter using Syncfusion .NET Excel library (XlsIO).
+description: Code example to use AND and OR operators in the filter using .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG

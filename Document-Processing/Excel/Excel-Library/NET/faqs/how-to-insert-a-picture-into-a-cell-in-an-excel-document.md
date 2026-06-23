@@ -1,6 +1,6 @@
 ---
 title: How to insert a picture into a cell in an Excel document | Syncfusion
-description: This page shows how to insert a picture into a cell in an Excel document using Syncfusion .NET Excel library (XlsIO).
+description: This page shows how to insert a picture into a cell in an Excel document using .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG

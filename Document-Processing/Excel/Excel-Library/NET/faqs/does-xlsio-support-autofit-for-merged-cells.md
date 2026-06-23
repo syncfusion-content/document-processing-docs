@@ -1,6 +1,6 @@
 ---
 title: Autofit support for merged cells | Syncfusion
-description: Learn whether Syncfusion XlsIO supports autofit for merged cells in Excel using Syncfusion .NET Excel library (XlsIO).
+description: Learn whether Syncfusion XlsIO supports autofit for merged cells in Excel using .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG

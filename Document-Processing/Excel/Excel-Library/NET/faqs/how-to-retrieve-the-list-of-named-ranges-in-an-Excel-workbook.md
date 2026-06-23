@@ -1,6 +1,6 @@
 ---
 title: Retrieve the list of named ranges in an Excel workbook | Syncfusion
-description: Code example to retrieve the list of named ranges in an Excel workbook using Syncfusion .NET Excel library (XlsIO).
+description: Code example to retrieve the list of named ranges in an Excel workbook using .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
