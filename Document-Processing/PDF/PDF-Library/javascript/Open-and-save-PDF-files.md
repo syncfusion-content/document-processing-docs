@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open and save PDF files using JavaScript PDF Library | Syncfusion
-description: Learn to load and save PDFs in JavaScript PDF Library using data as base64 strings or byte arrays.
+description: Learn how to load and save PDFs in the JavaScript PDF Library using base64 strings or byte arrays as data sources.
 platform: document-processing
 control: PDF
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of the JavaScript PDF Library Component | Syncfusion
-description: Learn about the JavaScript PDF Library component, its key capabilities, and supported platforms.
+description: Learn about the JavaScript PDF Library component, including its key capabilities and the platforms it supports.
 platform: document-processing
 control: PDF
 documentation: ug
