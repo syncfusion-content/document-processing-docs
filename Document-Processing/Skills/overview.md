@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview | AI Tools | Syncfusion
-description: Learn about the Syncfusion Document SDK AI Tools - a powerful toolkit for automated document processing, manipulation, and integration.
+description: Syncfusion Document SDK AI Tools simplify document processing, editing, and integration, helping you to build smarter applications easily.
 platform: document-processing
 control: AI Tools
 documentation: ug
@@ -21,6 +21,14 @@ The solution is straightforward: give AI access to Syncfusion documentation and 
 
 ## AI Solutions
 
+The following AI tools are available to help you process documents efficiently.
+
+### 🧠 Agent Skills
+
+Enhance your AI assistant (GitHub Copilot, Cursor, Claude, and more) with real Syncfusion API knowledge-eliminating hallucinated methods. Install once using npx skills add syncfusion/document-sdk-skills and generate accurate, production-ready document code directly within your IDE.
+
+[Learn more](https://help.syncfusion.com/document-processing/skills/document-sdk).
+
 ### 🤖 AI Agent Tools
 
 Enable AI agents to autonomously handle document tasks at runtime-such as creating reports, converting files, and extracting form data-without requiring you to write complex processing logic. Simply add the [Syncfusion.DocumentSDK.AI.AgentTools](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools) NuGet package and let your agent manage document workflows seamlessly.
@@ -32,12 +40,6 @@ Enable AI agents to autonomously handle document tasks at runtime-such as creati
 Integrates with Visual Studio, VS Code, and JetBrains Rider to accelerate development. Ask how to implement any feature and instantly receive documentation-backed, copy‑paste‑ready C# code tailored to Syncfusion APIs.
 
 [Learn more](https://help.syncfusion.com/document-processing/mcp-server/ai-coding-assistant/overview).
-
-### 🧠 Agent Skills
-
-Enhance your AI assistant (GitHub Copilot, Cursor, Claude, and more) with real Syncfusion API knowledge-eliminating hallucinated methods. Install once using npx skills add syncfusion/document-sdk-skills and generate accurate, production-ready document code directly within your IDE.
-
-[Learn more](https://help.syncfusion.com/document-processing/skills/document-sdk).
 
 ## Three Ways to Use AI with Syncfusion Document Processing
 
@@ -111,7 +113,7 @@ Choose one of these two options:
 
 | Approach | Benefit | How It Works |
 |----------|---------|--------------|
-| **MCP Server (recommended)** | Gives your IDE real-time access to Syncfusion documentation | Real-time suggestions, live API updates, instant context |
+| **MCP Server** | Gives your IDE real-time access to Syncfusion documentation | Real-time suggestions, live API updates, instant context |
 | **Agent Skills** | Stores Syncfusion patterns in your project for any AI to read | Teams, offline work, consistent patterns |
 
 **Option 1: Install MCP Server**
