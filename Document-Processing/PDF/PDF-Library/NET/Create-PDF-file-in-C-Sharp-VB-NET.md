@@ -1579,3 +1579,5 @@ return File(stream, contentType, fileName);
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/.NET/Merge_PDF_documents_NET).
 
 N> You can also explore our [.NET PDF framework](https://www.syncfusion.com/demos/fileformats/pdf-library) demo that shows how to create and modify PDF files from C# with just five lines of code on different platforms.
+
+N> Looking for the full .NET PDF Library overview, features, pricing, and documentation? Visit the [.NET PDF Library](https://www.syncfusion.com/document-sdk/net-pdf-library) page.
