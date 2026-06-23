@@ -9,7 +9,7 @@ documentation: ug
 
 # Printing PDF Files in WPF Pdf Viewer
 
-PDF Viewer allows printing loaded PDFs using the Print button in the toolbar. The following Print dialog opens upon triggering the Print button.
+[WPF PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/wpf-pdf-viewer) allows printing loaded PDFs using the Print button in the toolbar. The following Print dialog opens upon triggering the Print button.
 
 ![WPF PDF Viewer PrintDialog Window](Concept-and-Features_images/wpf-pdf-viewer-print-dialog-window.png)
 

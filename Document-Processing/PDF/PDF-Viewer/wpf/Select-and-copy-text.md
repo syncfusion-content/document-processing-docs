@@ -9,7 +9,7 @@ documentation: ug
 
 # Select and Copy Text in PDF files using WPF PDF Viewer
 
-In PDF Viewer, text can be selected by clicking the mouse left button and dragging the mouse pointer over the text in any direction.
+In [WPF PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/wpf-pdf-viewer), text can be selected by clicking the mouse left button and dragging the mouse pointer over the text in any direction.
 
 N> From version 19.4.0.48, we have updated our default text extraction engine to PDFium for extracting text information from PDF documents. Based on the text information, we select text in the PDF documents. Please refer to the [link](https://help.syncfusion.com/wpf/pdf-viewer/text-extraction-engines) for more details.
 

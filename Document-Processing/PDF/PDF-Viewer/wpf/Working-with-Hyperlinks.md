@@ -9,7 +9,7 @@ documentation: ug
 
 # Hyperlink Navigation in WPF Pdf Viewer
 
-The WPF PDF Viewer supports URI annotations (hyperlinks) in the PDF document that enables the URI available in the PDF document to be opened in the default browser just by clicking on it. This also supports a few events that are listed in the following table.
+The [WPF PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/wpf-pdf-viewer) supports URI annotations (hyperlinks) in the PDF document that enables the URI available in the PDF document to be opened in the default browser just by clicking on it. This also supports a few events that are listed in the following table.
 
 ### Events Table
 

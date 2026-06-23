@@ -9,7 +9,7 @@ documentation: ug
 
 # Page Navigation in WPF Pdf Viewer
 
-PDF Viewer allows you to navigate through the pages of the PDF document using the [GotoPage](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_GotoPage_System_Int32_) method. The following code example illustrates the navigation to page 2 of the PDF document.
+[WPF PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/wpf-pdf-viewer) allows you to navigate through the pages of the PDF document using the [GotoPage](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_GotoPage_System_Int32_) method. The following code example illustrates the navigation to page 2 of the PDF document.
 
 {% tabs %}
 {% highlight C# %}

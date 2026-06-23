@@ -9,7 +9,7 @@ documentation: ug
 
 # Enable and Disable Notification bar in WPF Pdf Viewer
 
-Notification bar is a part of the PDF Viewer that is used to display when an unexpected error occurs in the PDF Viewer control. You can suppress the display of the Notification bar by setting the [EnableNotificationBar](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_EnableNotificationBar) property to false. The following code example illustrate the same.
+Notification bar is a part of the [WPF PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/wpf-pdf-viewer) that is used to display when an unexpected error occurs in the PDF Viewer control. You can suppress the display of the Notification bar by setting the [EnableNotificationBar](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_EnableNotificationBar) property to false. The following code example illustrate the same.
 
 {% tabs %}
 {% highlight C# %}
