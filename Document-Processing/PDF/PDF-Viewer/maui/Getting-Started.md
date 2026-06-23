@@ -53,19 +53,19 @@ using Syncfusion.Maui.Core.Hosting;
 {% tabs %}
 {% highlight c# tabtitle="MauiProgram.cs" hl_lines="12" %}
 
-    public static MauiApp CreateMauiApp()
-    {
-        var builder = MauiApp.CreateBuilder();
-        builder
-            .UseMauiApp<App>()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
+public static MauiApp CreateMauiApp()
+{
+    var builder = MauiApp.CreateBuilder();
+    builder
+        .UseMauiApp<App>()
+        .ConfigureFonts(fonts =>
+        {
+            fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+        });
 
-       builder.ConfigureSyncfusionCore();
-       return builder.Build();
-    }
+    builder.ConfigureSyncfusionCore();
+    return builder.Build();
+}
 
 {% endhighlight %} 
 {% endtabs %}
@@ -86,7 +86,7 @@ xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Ma
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-    <syncfusion:SfPdfViewer x:Name="pdfViewer"></syncfusion:SfPdfViewer>
+<syncfusion:SfPdfViewer x:Name="pdfViewer"></syncfusion:SfPdfViewer>
 {% endhighlight %} 
 {% endtabs %}
 
@@ -99,53 +99,53 @@ xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Ma
     {% tabs %}
     {% highlight c# tabtitle="PdfViewerViewModel.cs" %}
 
-    using System.ComponentModel;
-    using System.Reflection;
+using System.ComponentModel;
+using System.Reflection;
     
-    internal class PdfViewerViewModel : INotifyPropertyChanged
+internal class PdfViewerViewModel : INotifyPropertyChanged
+{
+    private Stream pdfDocumentStream;
+
+    /// <summary>
+    /// Occurs when a property value changes.
+    /// </summary>
+    public event PropertyChangedEventHandler? PropertyChanged;
+
+    /// <summary>
+    /// Gets or sets the stream of the currently loaded PDF document.
+    /// </summary>
+    public Stream PdfDocumentStream
     {
-        private Stream pdfDocumentStream;
-
-        /// <summary>
-        /// Occurs when a property value changes.
-        /// </summary>
-        public event PropertyChangedEventHandler? PropertyChanged;
-
-        /// <summary>
-        /// Gets or sets the stream of the currently loaded PDF document.
-        /// </summary>
-        public Stream PdfDocumentStream
+        get
         {
-            get
-            {
-                return pdfDocumentStream;
-            }
-            set
-            {
-                pdfDocumentStream = value;
-                OnPropertyChanged(nameof(PdfDocumentStream));
-            }
+            return pdfDocumentStream;
         }
-            
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PdfViewerViewModel"/> class.
-        /// </summary>
-        public PdfViewerViewModel()
+        set
         {
-            // Load the embedded PDF document stream.
-            // Replace 'PdfViewerExample' with your project's namespace in resource path
-            pdfDocumentStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf");
+            pdfDocumentStream = value;
+            OnPropertyChanged(nameof(PdfDocumentStream));
         }
-
-        /// <summary>
-        /// Raises the <see cref="PropertyChanged"/> event for the specified property name.
-        /// </summary>
-        /// <param name="name">The name of the property that changed.</param>
-        public void OnPropertyChanged(string name)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-        } 
     }
+            
+    /// <summary>
+    /// Initializes a new instance of the <see cref="PdfViewerViewModel"/> class.
+    /// </summary>
+    public PdfViewerViewModel()
+    {
+        // Load the embedded PDF document stream.
+        // Replace 'PdfViewerExample' with your project's namespace in resource path
+        pdfDocumentStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf");
+    }
+
+    /// <summary>
+    /// Raises the <see cref="PropertyChanged"/> event for the specified property name.
+    /// </summary>
+    /// <param name="name">The name of the property that changed.</param>
+    public void OnPropertyChanged(string name)
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+    } 
+}
 
     {% endhighlight %} 
     {% endtabs %}
@@ -153,18 +153,18 @@ xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Ma
 4.  Open the `MainPage.xaml` file again and add the namespace `PdfViewerExample` and name it as `local`.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-    xmlns:local="clr-namespace:PdfViewerExample"
+xmlns:local="clr-namespace:PdfViewerExample"
 {% endhighlight %} 
 {% endtabs %}
 
 5.  Set an instance of the `PdfViewerViewModel` class as the `BindingContext`. Bind the PDF viewer's [DocumentSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) to the `PdfDocumentStream` property of the `PdfViewerViewModel` class.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-    <ContentPage.BindingContext>
-        <local:PdfViewerViewModel x:Name="viewModel" />
-    </ContentPage.BindingContext>
+<ContentPage.BindingContext>
+    <local:PdfViewerViewModel x:Name="viewModel" />
+</ContentPage.BindingContext>
 
-    <syncfusion:SfPdfViewer x:Name="pdfViewer" DocumentSource="{Binding PdfDocumentStream}"/>
+<syncfusion:SfPdfViewer x:Name="pdfViewer" DocumentSource="{Binding PdfDocumentStream}"/>
 
 {% endhighlight %} 
 {% endtabs %}
@@ -217,19 +217,19 @@ using Syncfusion.Maui.Core.Hosting;
 {% tabs %}
 {% highlight c# tabtitle="MauiProgram.cs" hl_lines="12" %}
 
-    public static MauiApp CreateMauiApp()
-    {
-        var builder = MauiApp.CreateBuilder();
-        builder
-            .UseMauiApp<App>()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
+public static MauiApp CreateMauiApp()
+{
+    var builder = MauiApp.CreateBuilder();
+    builder
+        .UseMauiApp<App>()
+        .ConfigureFonts(fonts =>
+        {
+            fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+        });
 
-       builder.ConfigureSyncfusionCore();
-       return builder.Build();
-    }
+   builder.ConfigureSyncfusionCore();
+   return builder.Build();
+}
 
 {% endhighlight %} 
 {% endtabs %}
@@ -251,7 +251,7 @@ xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Ma
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-    <syncfusion:SfPdfViewer x:Name="pdfViewer"></syncfusion:SfPdfViewer>
+<syncfusion:SfPdfViewer x:Name="pdfViewer"></syncfusion:SfPdfViewer>
 
 {% endhighlight %} 
 {% endtabs %}
@@ -275,72 +275,71 @@ xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Ma
     {% tabs %}
     {% highlight c# tabtitle="PdfViewerViewModel.cs" %}
     
-    using System.Reflection;
+using System.Reflection;
     
-    internal class PdfViewerViewModel : INotifyPropertyChanged
+internal class PdfViewerViewModel : INotifyPropertyChanged
+{
+    private Stream pdfDocumentStream;
+
+    /// <summary>
+    /// Occurs when a property value changes.
+    /// </summary>
+    public event PropertyChangedEventHandler? PropertyChanged;
+
+    /// <summary>
+    /// Gets or sets the stream of the currently loaded PDF document.
+    /// </summary>
+    public Stream PdfDocumentStream
     {
-        private Stream pdfDocumentStream;
-
-        /// <summary>
-        /// Occurs when a property value changes.
-        /// </summary>
-        public event PropertyChangedEventHandler? PropertyChanged;
-
-        /// <summary>
-        /// Gets or sets the stream of the currently loaded PDF document.
-        /// </summary>
-        public Stream PdfDocumentStream
+        get
         {
-            get
-            {
-                return pdfDocumentStream;
-            }
-            set
-            {
-                pdfDocumentStream = value;
-                OnPropertyChanged(nameof(PdfDocumentStream));
-            }
+            return pdfDocumentStream;
         }
-            
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PdfViewerViewModel"/> class.
-        /// </summary>
-        public PdfViewerViewModel()
+        set
         {
-            // Load the embedded PDF document stream.
-            // Replace 'PdfViewerExample' with your project's namespace in resource path
-            pdfDocumentStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf");
+            pdfDocumentStream = value;
+            OnPropertyChanged(nameof(PdfDocumentStream));
         }
-
-        /// <summary>
-        /// Raises the <see cref="PropertyChanged"/> event for the specified property name.
-        /// </summary>
-        /// <param name="name">The name of the property that changed.</param>
-        public void OnPropertyChanged(string name)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-        } 
     }
 
-    {% endhighlight %} 
-    {% endtabs %}
+    /// <summary>
+    /// Initializes a new instance of the <see cref="PdfViewerViewModel"/> class.
+    /// </summary>
+    public PdfViewerViewModel()
+    {
+        // Load the embedded PDF document stream.
+        // Replace 'PdfViewerExample' with your project's namespace in resource path
+        pdfDocumentStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf");
+    }
 
+    /// <summary>
+    /// Raises the <see cref="PropertyChanged"/> event for the specified property name.
+    /// </summary>
+    /// <param name="name">The name of the property that changed.</param>
+    public void OnPropertyChanged(string name)
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+    } 
+}
+
+{% endhighlight %} 
+{% endtabs %}
 
 4.  Open the `MainPage.xaml` file again and add the namespace `PdfViewerExample`and name it as `local`.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-    xmlns:local="clr-namespace:PdfViewerExample"
+xmlns:local="clr-namespace:PdfViewerExample"
 {% endhighlight %} 
 {% endtabs %}
 
 5.  Set an instance of the `PdfViewerViewModel` class as the `BindingContext`. Bind the PDF viewer's [DocumentSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) to the `PdfDocumentStream` property of the `PdfViewerViewModel` class.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-    <ContentPage.BindingContext>
-        <local:PdfViewerViewModel x:Name="viewModel" />
-    </ContentPage.BindingContext>
+<ContentPage.BindingContext>
+    <local:PdfViewerViewModel x:Name="viewModel" />
+</ContentPage.BindingContext>
 
-    <syncfusion:SfPdfViewer x:Name="pdfViewer" DocumentSource="{Binding PdfDocumentStream}"/>
+<syncfusion:SfPdfViewer x:Name="pdfViewer" DocumentSource="{Binding PdfDocumentStream}"/>
     
 {% endhighlight %} 
 {% endtabs %}
@@ -401,19 +400,19 @@ using Syncfusion.Maui.Core.Hosting;
 {% tabs %}
 {% highlight c# tabtitle="MauiProgram.cs" hl_lines="12" %}
 
-    public static MauiApp CreateMauiApp()
-    {
-        var builder = MauiApp.CreateBuilder();
-        builder
-            .UseMauiApp<App>()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
+public static MauiApp CreateMauiApp()
+{
+    var builder = MauiApp.CreateBuilder();
+    builder
+        .UseMauiApp<App>()
+        .ConfigureFonts(fonts =>
+        {
+            fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+        });
 
-       builder.ConfigureSyncfusionCore();
-       return builder.Build();
-    }
+    builder.ConfigureSyncfusionCore();
+    return builder.Build();
+}
 
 {% endhighlight %} 
 {% endtabs %}
@@ -457,53 +456,54 @@ Open the `MainPage.xaml` file and follow the steps below.
 
     {% tabs %}
     {% highlight c# tabtitle="PdfViewerViewModel.cs" %}
-    
-    using System.Reflection;
-    
-    internal class PdfViewerViewModel : INotifyPropertyChanged
+
+using System.ComponentModel;
+using System.Reflection;
+
+internal class PdfViewerViewModel : INotifyPropertyChanged
+{
+    private Stream pdfDocumentStream;
+
+    /// <summary>
+    /// Occurs when a property value changes.
+    /// </summary>
+    public event PropertyChangedEventHandler? PropertyChanged;
+
+    /// <summary>
+    /// Gets or sets the stream of the currently loaded PDF document.
+    /// </summary>
+    public Stream PdfDocumentStream
     {
-        private Stream pdfDocumentStream;
-
-        /// <summary>
-        /// Occurs when a property value changes.
-        /// </summary>
-        public event PropertyChangedEventHandler? PropertyChanged;
-
-        /// <summary>
-        /// Gets or sets the stream of the currently loaded PDF document.
-        /// </summary>
-        public Stream PdfDocumentStream
+        get
         {
-            get
-            {
-                return pdfDocumentStream;
-            }
-            set
-            {
-                pdfDocumentStream = value;
-                OnPropertyChanged(nameof(PdfDocumentStream));
-            }
+            return pdfDocumentStream;
         }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PdfViewerViewModel"/> class.
-        /// </summary>
-        public PdfViewerViewModel()
+        set
         {
-            // Load the embedded PDF document stream.
-            // Replace 'PdfViewerExample' with your project's namespace in resource path
-            pdfDocumentStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf");
+            pdfDocumentStream = value;
+            OnPropertyChanged(nameof(PdfDocumentStream));
         }
-
-        /// <summary>
-        /// Raises the <see cref="PropertyChanged"/> event for the specified property name.
-        /// </summary>
-        /// <param name="name">The name of the property that changed.</param>
-        public void OnPropertyChanged(string name)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-        } 
     }
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="PdfViewerViewModel"/> class.
+    /// </summary>
+    public PdfViewerViewModel()
+    {
+        // Load the embedded PDF document stream.
+        // Replace 'PdfViewerExample' with your project's namespace in resource path
+        pdfDocumentStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf");
+    }
+
+    /// <summary>
+    /// Raises the <see cref="PropertyChanged"/> event for the specified property name.
+    /// </summary>
+    /// <param name="name">The name of the property that changed.</param>
+    public void OnPropertyChanged(string name)
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+    } 
+}
 
 {% endhighlight %} 
 {% endtabs %}
@@ -511,18 +511,18 @@ Open the `MainPage.xaml` file and follow the steps below.
 4.  Open the `MainPage.xaml` file again and add the namespace `PdfViewerExample` and name it as `local`.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
- xmlns:local="clr-namespace:PdfViewerExample"
+xmlns:local="clr-namespace:PdfViewerExample"
 {% endhighlight %} 
 {% endtabs %}
 
 5.  Set an instance of the `PdfViewerViewModel` class as the `BindingContext`. Bind the PDF viewer's [DocumentSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) to the `PdfDocumentStream` property of the `PdfViewerViewModel` class.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-    <ContentPage.BindingContext>
-        <local:PdfViewerViewModel x:Name="viewModel" />
-    </ContentPage.BindingContext>
+<ContentPage.BindingContext>
+    <local:PdfViewerViewModel x:Name="viewModel" />
+</ContentPage.BindingContext>
 
-    <syncfusion:SfPdfViewer x:Name="pdfViewer" DocumentSource="{Binding PdfDocumentStream}"/>
+<syncfusion:SfPdfViewer x:Name="pdfViewer" DocumentSource="{Binding PdfDocumentStream}"/>
 
 {% endhighlight %} 
 {% endtabs %}

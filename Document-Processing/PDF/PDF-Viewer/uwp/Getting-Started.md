@@ -108,14 +108,14 @@ The SfPdfViewerControl is available in the following namespace [_Syncfusion.Wind
 1. Add the Syncfusion PdfViewer namespace
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-    xmlns:syncfusion="using:Syncfusion.Windows.PdfViewer"
+xmlns:syncfusion="using:Syncfusion.Windows.PdfViewer"
 {% endhighlight %}
 {% endtabs %}
 
 2. Add SfPdfViewerControl
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-    <syncfusion:SfPdfViewerControl Name="pdfViewer"> </syncfusion:SfPdfViewerControl>
+<syncfusion:SfPdfViewerControl Name="pdfViewer"> </syncfusion:SfPdfViewerControl>
 {% endhighlight %}
 {% endtabs %}
 
@@ -132,46 +132,46 @@ After adding the `SfPdfViewerControl`, you can load a PDF document using data bi
 
 {% tabs %}
     {% highlight c# tabtitle="PdfReport.cs" %}
-    using System.Reflection;
-    using System.IO;
+using System.Reflection;
+using System.IO;
 
-    internal class PdfReport : INotifyPropertyChanged
+internal class PdfReport : INotifyPropertyChanged
+{
+    private Stream docStream;
+
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    /// <summary>
+    /// Stream object to be bound to the ItemsSource of the PDF Viewer
+    /// </summary>
+    public Stream DocumentStream
     {
-        private Stream docStream;
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        /// <summary>
-        /// Stream object to be bound to the ItemsSource of the PDF Viewer
-        /// </summary>
-        public Stream DocumentStream
+        get
         {
-            get
-            {
-                return docStream;
-            }
-            set
-            {
-                docStream = value;
-                OnPropertyChanged(new PropertyChangedEventArgs("DocumentStream"));
-            }
+            return docStream;
         }
-
-        public PdfReport()
+        set
         {
-            // Loads the stream from the embedded resource.
-            Assembly assembly = typeof(MainPage).GetTypeInfo().Assembly;
-
-            // Replace 'PdfViewerExample' with your project's namespace in resource path
-            docStream = assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf");
+            docStream = value;
+            OnPropertyChanged(new PropertyChangedEventArgs("DocumentStream"));
         }
-
-        public void OnPropertyChanged(PropertyChangedEventArgs e)
-        {
-            if (PropertyChanged != null)
-                PropertyChanged(this, e);
-        }        
     }
+
+    public PdfReport()
+    {
+        // Loads the stream from the embedded resource.
+        Assembly assembly = typeof(MainPage).GetTypeInfo().Assembly;
+
+        // Replace 'PdfViewerExample' with your project's namespace in resource path
+        docStream = assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf");
+    }
+
+    public void OnPropertyChanged(PropertyChangedEventArgs e)
+    {
+        if (PropertyChanged != null)
+            PropertyChanged(this, e);
+    }        
+}
 
     {% endhighlight %} 
     
@@ -221,12 +221,12 @@ End Class
 4.  Set an instance of the `PdfReport` class as the `DataContext`. Bind the PDF viewer's [ItemSource] to the `DocumentStream` property of the `PdfReport` class.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-    <Page.DataContext>
-        <local:PdfReport/>
-    </Page.DataContext>
-    <Grid>
-       <syncfusion:SfPdfViewerControl Name="pdfViewer" ItemsSource="{Binding DocumentStream}"></syncfusion:SfPdfViewerControl>
-    </Grid>
+<Page.DataContext>
+    <local:PdfReport/>
+</Page.DataContext>
+<Grid>
+   <syncfusion:SfPdfViewerControl Name="pdfViewer" ItemsSource="{Binding DocumentStream}"></syncfusion:SfPdfViewerControl>
+</Grid>
 {% endhighlight %} 
 {% endtabs %}
 
