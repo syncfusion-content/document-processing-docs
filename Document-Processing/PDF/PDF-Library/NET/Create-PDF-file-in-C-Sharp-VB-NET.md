@@ -889,16 +889,16 @@ PdfGridLayoutFormat layoutFormat = new PdfGridLayoutFormat();
 layoutFormat.Layout = PdfLayoutType.Paginate;
 //Draws the grid to the PDF page
 PdfGridLayoutResult gridResult = grid.Draw(page, new RectangleF(new PointF(0, result.Bounds.Bottom + 40), new SizeF(g.ClientSize.Width, g.ClientSize.Height - 100)), layoutFormat);
-float pos = 0.0f;
+float position = 0.0f;
 for (int i = 0; i < grid.Columns.Count - 1; i++)
-pos += grid.Columns[i].Width;
+position += grid.Columns[i].Width;
 
 PdfFont font = new PdfStandardFont(PdfFontFamily.TimesRoman, 14f);
 
-gridResult.Page.Graphics.DrawString("Total Due", font, new PdfSolidBrush(new PdfColor(126, 151, 173)), new RectangleF(new PointF(pos, gridResult.Bounds.Bottom + 20), new SizeF(grid.Columns[3].Width - pos, 20)), new PdfStringFormat(PdfTextAlignment.Right));
-gridResult.Page.Graphics.DrawString("Thank you for your business!", new PdfStandardFont(PdfFontFamily.TimesRoman, 12), new PdfSolidBrush(new PdfColor(89, 89, 93)), new PointF(pos - 55, gridResult.Bounds.Bottom + 60));
-pos += grid.Columns[4].Width;
-gridResult.Page.Graphics.DrawString(total.ToString("C"), font, new PdfSolidBrush(new PdfColor(131, 130, 136)), new RectangleF(new PointF(pos, gridResult.Bounds.Bottom + 20), new SizeF(grid.Columns[4].Width - pos, 20)), new PdfStringFormat(PdfTextAlignment.Right));
+gridResult.Page.Graphics.DrawString("Total Due", font, new PdfSolidBrush(new PdfColor(126, 151, 173)), new RectangleF(new PointF(position, gridResult.Bounds.Bottom + 20), new SizeF(grid.Columns[3].Width - position, 20)), new PdfStringFormat(PdfTextAlignment.Right));
+gridResult.Page.Graphics.DrawString("Thank you for your business!", new PdfStandardFont(PdfFontFamily.TimesRoman, 12), new PdfSolidBrush(new PdfColor(89, 89, 93)), new PointF(position - 55, gridResult.Bounds.Bottom + 60));
+position += grid.Columns[4].Width;
+gridResult.Page.Graphics.DrawString(total.ToString("C"), font, new PdfSolidBrush(new PdfColor(131, 130, 136)), new RectangleF(new PointF(position, gridResult.Bounds.Bottom + 20), new SizeF(grid.Columns[4].Width - position, 20)), new PdfStringFormat(PdfTextAlignment.Right));
 
 {% endhighlight %}
 
@@ -963,16 +963,16 @@ PdfGridLayoutFormat layoutFormat = new PdfGridLayoutFormat();
 layoutFormat.Layout = PdfLayoutType.Paginate;
 //Draws the grid to the PDF page
 PdfGridLayoutResult gridResult = grid.Draw(page, new RectangleF(new PointF(0, result.Bounds.Bottom + 40), new SizeF(g.ClientSize.Width, g.ClientSize.Height - 100)), layoutFormat);
-float pos = 0.0f;
+float position = 0.0f;
 for (int i = 0; i < grid.Columns.Count - 1; i++)
-pos += grid.Columns[i].Width;
+position += grid.Columns[i].Width;
 
 PdfFont font = new PdfStandardFont(PdfFontFamily.TimesRoman, 14f);
 
-gridResult.Page.Graphics.DrawString("Total Due", font, new PdfSolidBrush(new PdfColor(126, 151, 173)), new RectangleF(new PointF(pos, gridResult.Bounds.Bottom + 20), new SizeF(grid.Columns[3].Width - pos, 20)), new PdfStringFormat(PdfTextAlignment.Right));
-gridResult.Page.Graphics.DrawString("Thank you for your business!", new PdfStandardFont(PdfFontFamily.TimesRoman, 12), new PdfSolidBrush(new PdfColor(89, 89, 93)), new PointF(pos - 55, gridResult.Bounds.Bottom + 60));
-pos += grid.Columns[4].Width;
-gridResult.Page.Graphics.DrawString(total.ToString("C"), font, new PdfSolidBrush(new PdfColor(131, 130, 136)), new RectangleF(new PointF(pos, gridResult.Bounds.Bottom + 20), new SizeF(grid.Columns[4].Width - pos, 20)), new PdfStringFormat(PdfTextAlignment.Right));
+gridResult.Page.Graphics.DrawString("Total Due", font, new PdfSolidBrush(new PdfColor(126, 151, 173)), new RectangleF(new PointF(position, gridResult.Bounds.Bottom + 20), new SizeF(grid.Columns[3].Width - position, 20)), new PdfStringFormat(PdfTextAlignment.Right));
+gridResult.Page.Graphics.DrawString("Thank you for your business!", new PdfStandardFont(PdfFontFamily.TimesRoman, 12), new PdfSolidBrush(new PdfColor(89, 89, 93)), new PointF(position - 55, gridResult.Bounds.Bottom + 60));
+position += grid.Columns[4].Width;
+gridResult.Page.Graphics.DrawString(total.ToString("C"), font, new PdfSolidBrush(new PdfColor(131, 130, 136)), new RectangleF(new PointF(position, gridResult.Bounds.Bottom + 20), new SizeF(grid.Columns[4].Width - position, 20)), new PdfStringFormat(PdfTextAlignment.Right));
 
 {% endhighlight %}
 
@@ -1037,16 +1037,16 @@ PdfGridLayoutFormat layoutFormat = new PdfGridLayoutFormat();
 layoutFormat.Layout = PdfLayoutType.Paginate;
 //Draws the grid to the PDF page
 PdfGridLayoutResult gridResult = grid.Draw(page, new RectangleF(new PointF(0, result.Bounds.Bottom + 40), new SizeF(g.ClientSize.Width, g.ClientSize.Height - 100)), layoutFormat);
-float pos = 0.0f;
+float position = 0.0f;
 for (int i = 0; i < grid.Columns.Count - 1; i++)
-pos += grid.Columns[i].Width;
+position += grid.Columns[i].Width;
 
 PdfFont font = new PdfStandardFont(PdfFontFamily.TimesRoman, 14f);
 
-gridResult.Page.Graphics.DrawString("Total Due", font, new PdfSolidBrush(new PdfColor(126, 151, 173)), new RectangleF(new PointF(pos, gridResult.Bounds.Bottom + 20), new SizeF(grid.Columns[3].Width - pos, 20)), new PdfStringFormat(PdfTextAlignment.Right));
-gridResult.Page.Graphics.DrawString("Thank you for your business!", new PdfStandardFont(PdfFontFamily.TimesRoman, 12), new PdfSolidBrush(new PdfColor(89, 89, 93)), new PointF(pos - 55, gridResult.Bounds.Bottom + 60));
-pos += grid.Columns[4].Width;
-gridResult.Page.Graphics.DrawString(total.ToString("C"), font, new PdfSolidBrush(new PdfColor(131, 130, 136)), new RectangleF(new PointF(pos, gridResult.Bounds.Bottom + 20), new SizeF(grid.Columns[4].Width - pos, 20)), new PdfStringFormat(PdfTextAlignment.Right));
+gridResult.Page.Graphics.DrawString("Total Due", font, new PdfSolidBrush(new PdfColor(126, 151, 173)), new RectangleF(new PointF(position, gridResult.Bounds.Bottom + 20), new SizeF(grid.Columns[3].Width - position, 20)), new PdfStringFormat(PdfTextAlignment.Right));
+gridResult.Page.Graphics.DrawString("Thank you for your business!", new PdfStandardFont(PdfFontFamily.TimesRoman, 12), new PdfSolidBrush(new PdfColor(89, 89, 93)), new PointF(position - 55, gridResult.Bounds.Bottom + 60));
+position += grid.Columns[4].Width;
+gridResult.Page.Graphics.DrawString(total.ToString("C"), font, new PdfSolidBrush(new PdfColor(131, 130, 136)), new RectangleF(new PointF(position, gridResult.Bounds.Bottom + 20), new SizeF(grid.Columns[4].Width - position, 20)), new PdfStringFormat(PdfTextAlignment.Right));
 
 {% endhighlight %}
 
@@ -1143,7 +1143,7 @@ PdfLoadedForm form = loadedDocument.Form;
 (form.Fields[0] as PdfLoadedTextBoxField).Text = "John";
 //Fills the textbox fields by using field name
 (form.Fields["LastName"] as PdfLoadedTextBoxField).Text = "Doe";
-(form.Fields["Address"] as PdfLoadedTextBoxField).Text = " John Doe \n 123 Main St \n Anytown, USA";
+(form.Fields["Address"] as PdfLoadedTextBoxField).Text = " John Doe \n 123 Main St \n Any town, USA";
 //Loads the radio button group
 PdfLoadedRadioButtonItemCollection radioButtonCollection = (form.Fields["Gender"] as PdfLoadedRadioButtonListField).Items;
 //Checks the 'Male' option
@@ -1168,7 +1168,7 @@ Dim form As PdfLoadedForm = loadedDocument.Form
 TryCast(form.Fields(0), PdfLoadedTextBoxField).Text = "John"
 'Fills the textbox fields by using field name
 TryCast(form.Fields("LastName"), PdfLoadedTextBoxField).Text = "Doe"
-TryCast(form.Fields("Address"), PdfLoadedTextBoxField).Text = " John Doe " & vbLf & " 123 Main St " & vbLf & " Anytown, USA"
+TryCast(form.Fields("Address"), PdfLoadedTextBoxField).Text = " John Doe " & vbLf & " 123 Main St " & vbLf & " Any town, USA"
 'Load the radio button group
 Dim radioButtonCollection As PdfLoadedRadioButtonItemCollection = TryCast(form.Fields("Gender"), PdfLoadedRadioButtonListField).Items
 'Checks the 'Male' option
@@ -1200,7 +1200,7 @@ PdfLoadedForm form = loadedDocument.Form;
 (form.Fields[0] as PdfLoadedTextBoxField).Text = "John";
 //Fills the textbox fields by using field name
 (form.Fields["LastName"] as PdfLoadedTextBoxField).Text = "Doe";
-(form.Fields["Address"] as PdfLoadedTextBoxField).Text = " John Doe \n 123 Main St \n Anytown, USA";
+(form.Fields["Address"] as PdfLoadedTextBoxField).Text = " John Doe \n 123 Main St \n Any town, USA";
 //Loads the radio button group
 PdfLoadedRadioButtonItemCollection radioButtonCollection = (form.Fields["Gender"] as PdfLoadedRadioButtonListField).Items;
 //Checks the 'Male' option
@@ -1230,7 +1230,7 @@ PdfLoadedForm form = loadedDocument.Form;
 (form.Fields[0] as PdfLoadedTextBoxField).Text = "John";
 //Fills the textbox fields by using field name
 (form.Fields["LastName"] as PdfLoadedTextBoxField).Text = "Doe";
-(form.Fields["Address"] as PdfLoadedTextBoxField).Text = " John Doe \n 123 Main St \n Anytown, USA";
+(form.Fields["Address"] as PdfLoadedTextBoxField).Text = " John Doe \n 123 Main St \n Any town, USA";
 //Loads the radio button group
 PdfLoadedRadioButtonItemCollection radioButtonCollection = (form.Fields["Gender"] as PdfLoadedRadioButtonListField).Items;
 //Checks the 'Male' option
@@ -1266,7 +1266,7 @@ PdfLoadedForm form = loadedDocument.Form;
 (form.Fields[0] as PdfLoadedTextBoxField).Text = "John";
 //Fills the textbox fields by using field name
 (form.Fields["LastName"] as PdfLoadedTextBoxField).Text = "Doe";
-(form.Fields["Address"] as PdfLoadedTextBoxField).Text = " John Doe \n 123 Main St \n Anytown, USA";
+(form.Fields["Address"] as PdfLoadedTextBoxField).Text = " John Doe \n 123 Main St \n Any town, USA";
 //Loads the radio button group
 PdfLoadedRadioButtonItemCollection radioButtonCollection = (form.Fields["Gender"] as PdfLoadedRadioButtonListField).Items;
 //Checks the 'Male' option
