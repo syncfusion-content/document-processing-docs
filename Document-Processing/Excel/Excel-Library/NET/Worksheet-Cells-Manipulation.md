@@ -1,6 +1,6 @@
 ---
 title: Worksheet Cells Manipulation in .NET XlsIO | Syncfusion
-description: This section illustrates about cells manipulation in Excel worksheet using .NET Excel library.
+description: In this section, you can learn about cell manipulation in an Excel worksheet using the .NET Excel library with clear explanations and practical examples.
 platform: document-processing
 control: XlsIO
 documentation: UG

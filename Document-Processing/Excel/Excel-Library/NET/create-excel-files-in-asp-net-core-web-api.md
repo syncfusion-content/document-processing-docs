@@ -1,6 +1,6 @@
 ---
 title: Create Excel files in ASP.NET Core Web API | Syncfusion
-description: Explains how to create Excel files in ASP.NET Core Web API applications using Syncfusion XlsIO.
+description: This page Explains how to create Excel files in ASP.NET Core Web API applications using Syncfusion XlsIO.
 platform: document-processing
 control: XlsIO
 documentation: UG

@@ -1,6 +1,6 @@
 ---
-title: XlsIO support for multi threading | Syncfusion
-description: This page explains whether the .NET Excel library (XlsIO) provides support for multi threading.
+title: Multi threading support in XlsIO | Syncfusion
+description: This page explains whether the .NET Excel library (XlsIO) supports multi-threading and how it handles conversion process efficiently.
 platform: document-processing
 control: XlsIO
 documentation: UG
