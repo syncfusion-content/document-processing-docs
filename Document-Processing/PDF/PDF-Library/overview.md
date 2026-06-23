@@ -1,5 +1,6 @@
 ---
 title: PDF Document Processing Library | Syncfusion
+canonical_url: "https://www.syncfusion.com/document-sdk/net-pdf-library"
 description:  Syncfusion PDF document processing library allows you create, read and write PDF files through code in .NET and Flutter applications without Adobe dependencies.
 platform: document-processing
 control: general

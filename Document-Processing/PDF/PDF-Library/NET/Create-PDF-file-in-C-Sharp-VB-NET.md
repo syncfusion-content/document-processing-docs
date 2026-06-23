@@ -1,5 +1,6 @@
 ---
 title: Create or Generate PDF file in C# and VB.NET | Syncfusion
+canonical_url: "https://www.syncfusion.com/document-sdk/net-pdf-library"
 description: Learn how to create or generate a PDF file in C# and VB.NET with elements like text, image and table using Syncfusion .NET PDF library without Adobe. 
 platform: document-processing
 control: PDF
