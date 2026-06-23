@@ -1,12 +1,12 @@
 ---
-title: Lists in JavaScript PDF library | Syncfusion
-description: This section explains how to work with lists in a PDF document using the JavaScript PDF library to display and manage items in a structured format
+title: Lists in JavaScript PDF Library | Syncfusion
+description: This section explains how to work with lists in a PDF document using the JavaScript PDF Library to display and manage items in a structured format
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Lists in JavaScript PDF library
+# Lists in JavaScript PDF Library
 
 The PDF allows you list the content in ordered and unordered list. The ordered list can be number or alphabets and the unordered list can be bullets, circles, and images.
 
