@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open a PDF from a Base64 String in .NET MAUI PDF Viewer | Syncfusion
-description: Learn how to open a PDF document from a Base64 string in the .NET MAUI PDF Viewer (SfPdfViewer) control.
+description: Learn how to open a PDF document from a Base64 string in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

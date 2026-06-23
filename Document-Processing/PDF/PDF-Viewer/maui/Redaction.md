@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Redaction in .NET MAUI PDF Viewer | Syncfusion
-description: Learn how to redact sensitive content in a PDF document using the .NET MAUI PDF Viewer (SfPdfViewer) control.
+description: Learn how to redact sensitive content in a PDF document using the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

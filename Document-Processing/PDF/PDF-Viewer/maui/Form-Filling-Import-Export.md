@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Import and Export Form Data in .NET MAUI PDF Viewer | Syncfusion
-description: Learn how to import and export PDF form data using the .NET MAUI PDF Viewer (SfPdfViewer) control.
+description: Learn how to import and export PDF form data using the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

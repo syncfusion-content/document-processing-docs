@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 title: Working with the Toolbar in .NET MAUI PDF Viewer | Syncfusion
-description: Learn how to use, customize, and extend the built-in toolbar in the .NET MAUI PDF Viewer (SfPdfViewer) control.
+description: Learn how to use, customize, and extend the built-in toolbar in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

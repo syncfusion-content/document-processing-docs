@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 title: Coordinate Conversion in .NET MAUI PDF Viewer | Syncfusion
-description: Learn how to convert between PDF page coordinates and viewer coordinates in the .NET MAUI PDF Viewer (SfPdfViewer) control.
+description: Learn how to convert between PDF page coordinates and viewer coordinates in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -10,7 +10,7 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 # Working with PDF coordinate systems in .NET MAUI PDF Viewer
 
-PDF Viewer allows users to obtain the PDF page coordinates relative to the PDF Viewer’s client coordinates and vice versa. It also allows you to obtain the scroll point relative to the PDF page coordinates and bring the given region into view.
+[.NET MAUI PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/net-maui-pdf-viewer) allows users to obtain the PDF page coordinates relative to the PDF Viewer’s client coordinates and vice versa. It also allows you to obtain the scroll point relative to the PDF page coordinates and bring the given region into view.
 
 ## Client rectangle
 

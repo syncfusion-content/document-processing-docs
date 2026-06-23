@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Comments in .NET MAUI PDF Viewer | Syncfusion
-description: Learn how to add and manage comments or replies on annotations in the .NET MAUI PDF Viewer (SfPdfViewer) control.
+description: Learn how to add and manage comments or replies on annotations in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,7 +9,7 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 ---
 
 # Comments in .NET MAUI PDF Viewer (SfPdfViewer)
-The PDF Viewer control provides options to add, edit, and delete comments for the following annotations in PDF documents:
+The [.NET MAUI PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/net-maui-pdf-viewer) control provides options to add, edit, and delete comments for the following annotations in PDF documents:
 1. Ink annotation
 2. Shape annotation
 3. Stamp annotation

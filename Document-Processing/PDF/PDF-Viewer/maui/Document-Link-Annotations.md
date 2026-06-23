@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Document Link Navigation in .NET MAUI PDF Viewer | Syncfusion
-description: Learn how to navigate using document link annotations in the .NET MAUI PDF Viewer (SfPdfViewer) control.
+description: Learn how to navigate using document link annotations in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -10,7 +10,7 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 # Document Link Navigation in .NET MAUI PDF Viewer (SfPdfViewer)
 
-The PDF viewer allows navigating from one part of the PDF document to another using document link annotations. When a document link annotation is tapped, the PDF viewer scrolls to the destination page or location defined by that annotation. This type of annotation is most commonly used to make a PDF's table of contents interactive — each entry links directly to the corresponding page in the document.
+The [.NET MAUI PDF viewer](https://www.syncfusion.com/pdf-viewer-sdk/net-maui-pdf-viewer) allows navigating from one part of the PDF document to another using document link annotations. When a document link annotation is tapped, the PDF viewer scrolls to the destination page or location defined by that annotation. This type of annotation is most commonly used to make a PDF's table of contents interactive — each entry links directly to the corresponding page in the document.
 
 ![TOC Navigation](Images/TOCNavigation.gif)
 
