@@ -178,7 +178,7 @@ export default {
 
 ### Step 3: Configure SignalR to send and receive changes
 
-To broadcast changes and receive updates from remote users, install the "@microsoft/signalr" package in the Vue application. 
+To broadcast changes and receive updates from remote users, install the [Microsoft SignalR npm](https://www.npmjs.com/package/@microsoft/signalr) package in the Vue application. 
 
 The following code snippet demonstrates how to configure SignalR in the Document Editor.
 
