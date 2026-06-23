@@ -5,7 +5,7 @@ platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Working with Find and Replace
+# Working with Find and Replace in Word Library
 
 You can search a particular text you like to change and replace it with another text or part of the document.
 

@@ -1118,7 +1118,7 @@ N> 2. [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing
 
 ## Online Demo
 
-* Explore how to create a simple Word document with text, an image, and a table using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/helloworld#/bootstrap5).
+* Explore how to create a simple Word document with text, an image, and a table using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/helloworld#/tailwind).
 
 ## See Also
 
