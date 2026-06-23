@@ -86,6 +86,10 @@ container.documentEditor.selection.sectionFormat.evenPageFooter.linkToPrevious =
 
 >Note: When there is more than one section in the document, the Link to Previous option becomes available. By default, this feature is disabled state in UI and set to return false for the first section.
 
+## Online Demo
+
+Explore how to add and customize headers and footers in Word documents using the JavaScript Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/headers-and-footers.html).
+
 ## See Also
 
 * [Working with Section Formatting](./section-format)

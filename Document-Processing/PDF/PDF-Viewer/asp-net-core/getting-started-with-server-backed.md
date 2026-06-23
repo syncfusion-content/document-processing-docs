@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Server-Backed ASP.NET Core PDF Viewer | Syncfusion
+title: Getting Started with Server-Backed PDF Viewer | Syncfusion
 description: Learn how to integrate the server-backed PDF Viewer control in an ASP.NET Core application. View and annotate with server-side rendering.
 platform: document-processing
 control: PDF Viewer
@@ -9,12 +9,14 @@ documentation: ug
 
 # Getting Started with Server-Backed ASP.NET Core PDF Viewer
 
-This article shows how to add the [Syncfusion® Server-backed ASP.NET Core PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) to a ASP.NET Core Web application using Visual Studio or Visual Studio Code. A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-Getting-Started-Examples/tree/main/PDFViewer/ASP.NET%20Core%20Tag%20Helper%20Examples).
+This section explains how to add the [Syncfusion® Server-backed ASP.NET Core PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) to a ASP.NET Core Web application using Visual Studio or Visual Studio Code. A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-Getting-Started-Examples/tree/main/PDFViewer/ASP.NET%20Core%20Tag%20Helper%20Examples).
+
+N> Starting with the 2026 Vol 2 main release (June 2026), no new features will be added to the Server PDF Viewer, as almost all of the PDF Viewer functionalities are now available in the Standalone PDF Viewer. If you are currently using the server-backed PDF Viewer, please refer to the [migration documentation](./server-to-standalone) to transition to the Standalone PDF Viewer.
 
 ## Prerequisites
 
-- **System Requirements**: [System requirements for ASP.NET Core controls](https://help.syncfusion.com/document-processing/system-requirements)
-- **License**: [ASP.NET Core licensing documentation](https://ej2.syncfusion.com/aspnetcore/documentation/licensing/overview)
+- [System requirements for ASP.NET Core controls](https://help.syncfusion.com/document-processing/system-requirements)
+- [ASP.NET Core licensing documentation](https://ej2.syncfusion.com/aspnetcore/documentation/licensing/overview)
 
 {% tabcontents %}
 
@@ -57,7 +59,6 @@ Install the Syncfusion&reg; ASP.NET Core component NuGet packages within the pro
 * Run the following commands to install the [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core/) and [Syncfusion.EJ2.PdfViewer.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.PdfViewer.AspNet.Core/) NuGet packages.
 
 {% tabs %}
-
 {% highlight c# tabtitle="Package Manager" %}
 
 dotnet add package Syncfusion.EJ2.AspNet.Core -v {{ site.releaseversion }}
@@ -65,7 +66,6 @@ dotnet add package Syncfusion.EJ2.PdfViewer.AspNet.Core -v {{ site.releaseversio
 dotnet restore
 
 {% endhighlight %}
-
 {% endtabs %}
 
 {% endtabcontent %}
@@ -91,13 +91,11 @@ Reference the Syncfusion theme and JavaScript library using the CDN inside the `
 {% tabs %}
 {% highlight c# tabtitle="~/_Layout.cshtml" %}
 
-<head>
-    ...
-    <!-- Syncfusion ASP.NET Core controls styles -->
-    <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/fluent.css" />
-    <!-- Syncfusion ASP.NET Core controls scripts -->
-    <script src="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/dist/ej2.min.js"></script>
-</head>
+<!-- Syncfusion ASP.NET Core controls styles -->
+<link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/fluent.css" />
+
+<!-- Syncfusion ASP.NET Core controls scripts -->
+<script src="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/dist/ej2.min.js"></script>
 
 {% endhighlight %}
 {% endtabs %}
@@ -106,22 +104,16 @@ N> To learn other ways to load themes or scripts (such as [NPM packages](https:/
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Script Manager
 
-Open `~/Pages/Shared/_Layout.cshtml` and register the script manager. The script manager initializes Syncfusion components and manages their life cycle.
+Open the `~/Pages/Shared/_Layout.cshtml` page and register the script manager `<ejs-scripts>` at the end of the `<body>` element. The script manager initializes Syncfusion components and manages their life cycle.
 
 {% tabs %}
 {% highlight c# tabtitle="~/_Layout.cshtml" %}
 
-<body>
-    ....
-    ....
-    <!-- Syncfusion ASP.NET Core Script Manager -->
-    <ejs-scripts></ejs-scripts>
-</body>
+<!-- Syncfusion ASP.NET Core Script Manager -->
+<ejs-scripts></ejs-scripts>
 
 {% endhighlight %}
 {% endtabs %}
-
-N> Add the script manager `<ejs-scripts>` at the end of the `<body>` element.
 
 ## Add ASP.NET Core PDF Viewer control
 
@@ -130,16 +122,9 @@ Add the ASP.NET Core PDF Viewer tag helper in `~/Pages/Index.cshtml`. The `servi
 {% tabs %}
 {% highlight c# tabtitle="~/Index.cshtml" %}
 
-@page "{handler?}"
-@model IndexModel
-@{
-    ViewData["Title"] = "Home page";
-}
-
-<div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" style="height:600px" serviceUrl="/Index" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
-</div>
+<!-- documentPath specifies the PDF document to load -->
+<ejs-pdfviewer id="pdfviewer" style="height:600px" serviceUrl="/Index" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
+</ejs-pdfviewer>
 
 {% endhighlight %}
 {% endtabs %}
@@ -156,7 +141,7 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 ![ASP.NET Core PDF Viewer control in action](Core_Images/pdfviewer-control.png)
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-Getting-Started-Examples/tree/main/PDFViewer/ASP.NET%20Core%20Tag%20Helper%20Examples)
+> [View sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-Getting-Started-Examples/tree/main/PDFViewer/ASP.NET%20Core%20Tag%20Helper%20Examples)
 
 ## Deployment notes
 
@@ -175,14 +160,19 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 - The `serviceUrl` can be updated dynamically at runtime. After updating the value, invoke `pdfViewer.dataBind()` to apply the change and then load the document. This feature is supported in version 23.1.36 or later.
 
-```javascript
+{% tabs %}
+{% highlight c# tabtitle="~/Index.cshtml" %}
+
 function load() {
     var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
     pdfViewer.serviceUrl = "/Index";
     pdfViewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
     pdfViewer.dataBind();
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 N> Looking for the full [ASP.NET Core PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/asp-net-core-pdf-viewer) component overview, features, pricing, and documentation? Visit the ASP.NET Core PDF Viewer page.
 
 ## See also

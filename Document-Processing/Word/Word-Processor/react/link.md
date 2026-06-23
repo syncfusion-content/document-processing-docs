@@ -167,6 +167,10 @@ You can use the following keyboard shortcut to open the hyperlink dialog if the 
 |-----------------|-------------|
 |Ctrl + K | Open hyperlink dialog that allows you to create or edit hyperlink|
 
+## Online Demo
+
+Explore how to insert and manage hyperlinks in Word documents using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/links-and-bookmarks).
+
 ## See Also
 
 * [Feature modules](./feature-module)

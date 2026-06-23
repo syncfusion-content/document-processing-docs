@@ -9,7 +9,7 @@ documentation: ug
 
 # Using Smart PDF Viewer Component in the Blazor MAUI app 
 
-This article describes how to add the Syncfusion&reg; Blazor Smart PDF Viewer component to a .NET MAUI Blazor app and run it on Windows and Android.
+This section explains how to add the Syncfusion&reg; Blazor Smart PDF Viewer component to a .NET MAUI Blazor app and run it on Windows and Android.
 
 ## Prerequisites
 
@@ -36,10 +36,10 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
-* In the **~/_Imports.razor** file, add the following namespaces:
+* In the `~/_Imports.razor` file, add the following namespaces:
 
 {% tabs %}
-{% highlight razor tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="_Imports.razor" %}
 
 @using Syncfusion.Blazor 
 @using Syncfusion.Blazor.SmartPdfViewer
@@ -47,48 +47,31 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-* Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/MauiProgram.cs** file.
+* Add the `Syncfusion.Blazor` namespace to the `Program.cs` file.
 
 {% tabs %}
-{% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="3 20 28" %}
+{% highlight c# tabtitle="MauiProgram.cs" %}
 
-using Microsoft.Extensions.Logging;
-using MauiBlazorWindow.Data;
 using Syncfusion.Blazor;
-
-namespace MauiBlazorWindow;
-
-public static class MauiProgram
-{
-    public static MauiApp CreateMauiApp()
-    {
-        var builder = MauiApp.CreateBuilder();
-        builder
-            .UseMauiApp<App>()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-        builder.Services.AddMauiBlazorWebView();
-        builder.Services.AddMemoryCache();
-
-#if DEBUG
-        builder.Services.AddBlazorWebViewDeveloperTools();
-        builder.Logging.AddDebug();
-#endif
-
-        builder.Services.AddSingleton<WeatherForecastService>();
-        builder.Services.AddSyncfusionBlazor();
-        
-        return builder.Build();
-    }
-}
 
 {% endhighlight %}
 {% endtabs %}
 
-N> Ensure the Syncfusion license is registered in the application before using Syncfusion components.
+
+* Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the `~/MauiProgram.cs` file.
+
+{% tabs %}
+{% highlight c# tabtitle="MauiProgram.cs" %}
+
+// Enable memory cachin
+builder.Services.AddMemoryCache();
+// Register Syncfusion Blazor service
+builder.Services.AddSyncfusionBlazor();
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Ensure the Syncfusion<sup style="font-size:70%">&reg;</sup> license is registered in the application before using Syncfusion<sup style="font-size:70%">&reg;</sup> components.
 
 ## To Configure Azure OpenAI Service
 
@@ -118,31 +101,33 @@ dotnet add package Microsoft.Extensions.AI.OpenAI --version 9.8.0-preview.1.2541
 {% endhighlight %}
 {% endtabs %}
 
-To configure the AI service, add the following settings to the **~/MauiProgram.cs** file in your Blazor Server app. 
+Add the AI namespace to the `Program.cs` file.
 
 {% tabs %}
-{% highlight c# tabtitle="Blazor Server App" hl_lines="10 11 12 13 14 15 17" %}
+{% highlight c# tabtitle="Blazor Server App" %}
 
 using Azure.AI.OpenAI;
 using Microsoft.Extensions.AI;
-using Sample.Components;
-using Syncfusion.Blazor;
 using Syncfusion.Blazor.AI;
 using System.ClientModel;
 
-var builder = WebApplication.CreateBuilder(args);
+{% endhighlight %}
+{% endtabs %}
 
+To configure the AI service, add the following settings to the *`~/MauiProgram.cs` file in your Blazor Server app.
+
+{% tabs %}
+{% highlight c# tabtitle="Blazor Server App" %}
+
+// Azure OpenAI configuration values
 string azureOpenAiKey = "api-key";
 string azureOpenAiEndpoint = "endpoint URL";
 string azureOpenAiModel = "deployment-name";
+// Configure Azure OpenAI client and register chat with Syncfusion AI services
 AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(new Uri(azureOpenAiEndpoint), new ApiKeyCredential(azureOpenAiKey));
 IChatClient azureOpenAiChatClient = azureOpenAIClient.GetChatClient(azureOpenAiModel).AsIChatClient();
 builder.Services.AddChatClient(azureOpenAiChatClient);
-
 builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
-
-var app = builder.Build();
-....
 
 {% endhighlight %}
 {% endtabs %}
@@ -156,21 +141,31 @@ For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](
 
 ## Adding stylesheet and script
 
-Add the following stylesheet and script to the head section of the **~/wwwroot/index.html** file.
+Add the following stylesheet and script to the head section of the `~/wwwroot/index.html` file.
+
+### Add stylesheet resource
+
+Include the stylesheet reference in the `<head>` section in the `~/wwwroot/index.html` file.
 
 {% tabs %}
-{% highlight html hl_lines="4 9" %}
+{% highlight html %}
 
-<head>
-    ....
-    <!-- Syncfusion Blazor Smart PDF Viewer control's theme style sheet -->
-    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-</head>
-<body>
-    ....
-    <!-- Syncfusion Blazor Smart PDF Viewer control's scripts -->
-    <script src="_content/Syncfusion.Blazor.SfSmartPdfViewer/scripts/syncfusion-blazor-sfsmartpdfviewer.min.js" type="text/javascript"></script>
-</body>
+<!-- Syncfusion Blazor Smart PDF Viewer control's theme style sheet -->
+<link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+
+{% endhighlight %}
+{% endtabs %}
+
+
+### Add script resource
+
+Add script reference at the end of the `<body>` in the `~/wwwroot/index.html` file as shown below.
+
+{% tabs %}
+{% highlight html %}
+
+<!-- Syncfusion Blazor Smart PDF Viewer control's scripts -->
+<script src="_content/Syncfusion.Blazor.SfSmartPdfViewer/scripts/syncfusion-blazor-sfsmartpdfviewer.min.js" type="text/javascript"></script>
 
 {% endhighlight %}
 {% endtabs %}
@@ -181,8 +176,6 @@ Add the Syncfusion Blazor Smart PDF Viewer component in the **~/Pages/Index.razo
 
 {% tabs %}
 {% highlight razor %}
-
-@page "/"
 
 <SfSmartPdfViewer Height="100%" Width="100%" DocumentPath="https://cdn.syncfusion.com/content/pdf/http-succinctly.pdf">
 </SfSmartPdfViewer>
@@ -209,16 +202,22 @@ To run the PDF Viewer in a Blazor Android MAUI application using the Android emu
 	
 2. Right-click the added files and set Properties → Build Action to AndroidAsset.
 3. Add the following entries to the project .csproj file:
-```
-<ItemGroup>
-	<AndroidAsset Include="Platforms\Android\Assets\model.onnx" />
-	<AndroidAsset Include="Platforms\Android\Assets\vocab.txt" />
-</ItemGroup>
-```
-4. Add the following code in **MauiProgram.cs**:
+
+    {% tabs %} 
+    {% highlight xml tabtitle="project .csproj file" %}
+
+    <ItemGroup>
+        <AndroidAsset Include="Platforms\Android\Assets\model.onnx" />
+        <AndroidAsset Include="Platforms\Android\Assets\vocab.txt" />
+    </ItemGroup>
+
+    {% endhighlight %} 
+    {% endtabs %}
+
+4. Add the following code in `MauiProgram.cs`:
 
 {% tabs %}
-{% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="7 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25" %}
+{% highlight c# tabtitle="MauiProgram.cs" hl_lines="7 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25" %}
 
 public static class MauiProgram
 {
@@ -259,7 +258,7 @@ N> If any errors occur while using the Android Emulator, see [Troubleshooting th
 
 ![Blazor Smart PDF Viewer rendered on Android emulator](gettingstarted-images/android-emulator.png)
 
->[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Getting%20Started/MAUI%20Blazor%20App).
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Getting%20Started/MAUI%20Blazor%20App).
 
 ## See also
 
