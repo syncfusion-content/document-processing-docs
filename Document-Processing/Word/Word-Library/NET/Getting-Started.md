@@ -1,5 +1,6 @@
 ---
 title: Create a simple Word document in C#, VB.NET | Syncfusion
+canonical_url: "https://www.syncfusion.com/document-sdk/net-word-library"
 description: Learn how to use .NET Word (DocIO) library to create Word documents from scratch with basic elements and perform mail merge without Microsoft Word.
 platform: document-processing
 control: DocIO
@@ -1117,7 +1118,7 @@ N> 2. [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing
 
 ## Online Demo
 
-* Explore how to create a simple Word document with text, an image, and a table using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/helloworld#/bootstrap5).
+* Explore how to create a simple Word document with text, an image, and a table using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/helloworld#/bootstrap5).
 
 ## See Also
 
@@ -1134,3 +1135,6 @@ N> 2. [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing
 * [Create Word document in Linux](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-linux)
 * [Create Word document in Docker](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-linux-docker)
 * [Create Word document in Mac OS](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-mac)
+
+
+N> Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.

@@ -1130,8 +1130,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to insert bookmarks into the Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/bookmarks#/tailwind).  
-* See how to navigate between the bookmarks in a Word document and edit its content using bookmark navigation functionality using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/bookmarknavigation#/tailwind).
+* Explore how to insert bookmarks into the Word document using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/bookmarks#/tailwind).  
+* See how to navigate between the bookmarks in a Word document and edit its content using bookmark navigation functionality using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/bookmarknavigation#/tailwind).
 
 ## See Also
 

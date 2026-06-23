@@ -1926,9 +1926,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to find a specific text pattern using regular expression and highlight it in an existing Word document using find functionality using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/findandhighlight#/tailwind).
-* See how to replace a specific text in the Word document with another text using the find and replace functionality using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/simplereplace#/tailwind).
-* See how to replace a specific content in the Word document with another document using the find and replace functionality using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/advancedreplace#/tailwind).
+* Explore how to find a specific text pattern using regular expression and highlight it in an existing Word document using find functionality using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/findandhighlight#/tailwind).
+* See how to replace a specific text in the Word document with another text using the find and replace functionality using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/simplereplace#/tailwind).
+* See how to replace a specific content in the Word document with another document using the find and replace functionality using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/advancedreplace#/tailwind).
 
 ## See Also
 
