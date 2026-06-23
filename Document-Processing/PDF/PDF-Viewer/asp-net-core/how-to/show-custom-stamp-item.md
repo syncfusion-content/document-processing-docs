@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Display custom stamp items in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to configure custom stamp settings in the ASP.NET Core PDF Viewer so users can apply personalized stamps from the custom stamp dropdown.
+description: Learn how to configure custom stamp settings in the Syncfusion ASP.NET Core PDF Viewer so users can apply personalized stamps from the custom stamp dropdown.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

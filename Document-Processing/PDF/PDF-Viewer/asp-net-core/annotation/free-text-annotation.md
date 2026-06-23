@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Free text annotation in ASP.NET Core PDF Viewer control"
-description: "Learn about free text annotations in the ASP.NET Core PDF Viewer (Essential JS 2): add, edit, delete, and default settings."
+description: "Learn about free text annotations in the Syncfusion ASP.NET Core PDF Viewer (Essential JS 2): add, edit, delete, and default settings."
 platform: document-processing
 control: PDF Viewer
 documentation: ug

@@ -9,7 +9,7 @@ documentation: ug
 
 # Overview of Forms in ASP.NET Core PDF Viewer
 
-The ASP.NET Core PDF Viewer provides a complete, easy-to-use PDF forms experience. Form fields can be read, filled, added, edited, and deleted directly within PDF documents through the intuitive UI and powerful programmatic APIs. The viewer includes smooth import and export support for form data, enabling effortless integration. Developers gain extensive API control while end users enjoy a clean interface for seamless form-filling.
+The Syncfusion PDF Viewer provides a complete, easy-to-use PDF forms experience. Form fields can be read, filled, added, edited, and deleted directly within PDF documents through the intuitive UI and powerful programmatic APIs. The viewer includes smooth import and export support for form data, enabling effortless integration. Developers gain extensive API control while end users enjoy a clean interface for seamless form-filling.
 
 ## Filling PDF Forms
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form validation in the ASP.NET Core PDF Viewer component | Syncfusion
-description: Learn how to enable built in form field validation and validate missing required fields in the ASP.NET Core PDF Viewer.
+description: Learn how to enable built in form field validation and validate missing required fields in the Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

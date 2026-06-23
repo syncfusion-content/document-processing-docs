@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add Radius Annotation in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to enable, draw, customize, and manage Radius measurement annotations in the ASP.NET Core PDF Viewer.
+description: Learn how to enable, draw, customize, and manage Radius measurement annotations in the Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

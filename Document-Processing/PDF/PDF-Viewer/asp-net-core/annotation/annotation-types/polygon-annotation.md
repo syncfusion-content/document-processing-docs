@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Polygon Annotation (Shape) in ASP.NET Core PDF Viewer \ Syncfusion
-description: Learn how to enable, apply, customize, and manage Polygon annotations in the ASP.NET Core PDF Viewer.
+description: Learn how to enable, apply, customize, and manage Polygon annotations in the Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mobile Toolbar in ASP.NET Core PDF Viewer control | Syncfusion
-description: Learn All About the Mobile Toolbar Interface in ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
+description: Learn All About the Mobile Toolbar Interface in Syncfusion ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

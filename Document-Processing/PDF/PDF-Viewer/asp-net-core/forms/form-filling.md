@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form filling in ASP.NET Core PDF Viewer Control | Syncfusion
-description: Learn to view, fill, export, and import PDF form fields in ASP.NET Core PDF Viewer, including disabling interaction and handling signatures.
+description: Learn to view, fill, export, and import PDF form fields in Syncfusion ASP.NET Core PDF Viewer, including disabling interaction and handling signatures.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

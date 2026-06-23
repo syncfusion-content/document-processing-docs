@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Get page info in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to retrieve page height, width, and rotation using getPageInfo in the ASP.NET Core PDF Viewer.
+description: Learn how to retrieve page height, width, and rotation using getPageInfo in the Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

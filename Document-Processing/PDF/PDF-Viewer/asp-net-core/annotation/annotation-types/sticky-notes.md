@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add Sticky Notes Annotations in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to enable, add, customize, and manage Sticky Notes annotations in the ASP.NET Core PDF Viewer.
+description: Learn how to enable, add, customize, and manage Sticky Notes annotations in the Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

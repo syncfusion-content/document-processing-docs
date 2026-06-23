@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Load PDF from Base64 string in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to load a PDF document from a Base64 string in the ASP.NET Core PDF Viewer using the load method in a standalone setup.
+description: Learn how to load a PDF document from a Base64 string in the Syncfusion ASP.NET Core PDF Viewer using the load method in a standalone setup.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

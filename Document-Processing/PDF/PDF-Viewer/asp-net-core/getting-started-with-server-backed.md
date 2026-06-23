@@ -183,7 +183,7 @@ function load() {
     pdfViewer.dataBind();
 }
 ```
-N> Looking for the full ASP.NET Core PDF Viewer component overview, features, pricing, and documentation? Visit the [ASP.NET Core PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started-with-server-backed) page.
+N> Looking for the full [ASP.NET Core PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/asp-net-core-pdf-viewer) component overview, features, pricing, and documentation? Visit the ASP.NET Core PDF Viewer page.
 
 ## See also
 

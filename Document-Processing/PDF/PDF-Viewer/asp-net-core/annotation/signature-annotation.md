@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Handwritten signature ASP.NET Core PDF Viewer | Syncfusion
-description: "Learn about handwritten signatures in the ASP.NET Core PDF Viewer (Essential JS 2): add, enable or disable, and edit properties."
+description: "Learn about handwritten signatures in the Syncfusion ASP.NET Core PDF Viewer (Essential JS 2): add, enable or disable, and edit properties."
 control: PDF Viewer
 platform: document-processing
 documentation: ug

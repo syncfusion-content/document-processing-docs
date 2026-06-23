@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom annotation tools in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to build a custom toolbar for ASP.NET Core PDF Viewer and switch annotation tools programmatically using setAnnotationMode.
+description: Learn how to build a custom toolbar for Syncfusion ASP.NET Core PDF Viewer and switch annotation tools programmatically using setAnnotationMode.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Comments in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to add, reply to, edit, set status for, delete, and read comments for annotations in the ASP.NET Core PDF Viewer.
+description: Learn how to add, reply to, edit, set status for, delete, and read comments for annotations in the Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Stamp Annotation in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to enable, apply, customize, and manage Stamp annotations (Dynamic, Sign Here, Standard Business, Custom) in the ASP.NET Core PDF Viewer.
+description: Learn how to enable, apply, customize, and manage Stamp annotations (Dynamic, Sign Here, Standard Business, Custom) in the Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

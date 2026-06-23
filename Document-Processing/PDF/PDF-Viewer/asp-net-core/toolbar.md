@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Toolbar in ASP.NET Core PDF Viewer Component | Customize & Configure | Syncfusion
-description: Learn the toolbar in ASP.NET Core PDF Viewer.
+description: Learn the toolbar in Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
 control: Toolbar
 documentation: ug

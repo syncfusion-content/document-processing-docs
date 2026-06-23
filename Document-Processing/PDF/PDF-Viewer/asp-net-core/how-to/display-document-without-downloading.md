@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Display PDF without download in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to display PDF documents without triggering downloads by using the ASP.NET Core PDF Viewer.
+description: Learn how to display PDF documents without triggering downloads by using the Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

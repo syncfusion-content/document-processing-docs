@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Flatten Annotations in the ASP.NET Core PDF Viewer
-description: Learn how all about how to flatten annotations and formfields before saving a PDF in the ASP.NET Core PDF Viewer.
+title: Flatten Annotations in the Syncfusion ASP.NET Core PDF Viewer
+description: Learn how all about how to flatten annotations and formfields before saving a PDF in the Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

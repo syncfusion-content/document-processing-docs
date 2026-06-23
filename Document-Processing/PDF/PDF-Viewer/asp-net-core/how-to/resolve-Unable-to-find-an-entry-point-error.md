@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Resolve “Unable to find an entry point named FPDFText_GetCharAngle” error in ASP.NET Core PDF Viewer | Syncfusion
-description: Resolve the “Unable to find an entry point named FPDFText_GetCharAngle” error in the ASP.NET Core PDF Viewer by updating the PDFium assemblies and republishing the service.
+description: Resolve the “Unable to find an entry point named FPDFText_GetCharAngle” error in the Syncfusion ASP.NET Core PDF Viewer by updating the PDFium assemblies and republishing the service.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

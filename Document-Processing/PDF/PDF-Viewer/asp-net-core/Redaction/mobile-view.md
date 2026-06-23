@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Redaction in mobile view in Core PDF Viewer | Syncfusion
-description: Learn how to apply redactions in mobile view using the ASP.NET Core PDF Viewer with a complete toolbar setup and redaction workflow.
+description: Learn how to apply redactions in mobile view using the Syncfusion ASP.NET Core PDF Viewer with a complete toolbar setup and redaction workflow.
 platform: document-processing
 control: PdfViewer
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Configure retryTimeout in the ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to configure retryTimeout and retryCount in the ASP.NET Core PDF Viewer to improve reliability when network requests fail.
+description: Learn how to configure retryTimeout and retryCount in the Syncfusion ASP.NET Core PDF Viewer to improve reliability when network requests fail.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

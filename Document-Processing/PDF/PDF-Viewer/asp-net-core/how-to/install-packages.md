@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Install packages for ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to install the ASP.NET Core PDF Viewer NuGet package and restore the required dependencies.
+description: Learn how to install the Syncfusion ASP.NET Core PDF Viewer NuGet package and restore the required dependencies.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

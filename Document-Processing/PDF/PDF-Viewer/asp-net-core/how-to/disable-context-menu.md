@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Disable context menu in ASP.NET Core PDF Viewer control | Syncfusion
-description: Learn here all about Disable context menu in ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
+description: Learn here all about Disable context menu in Syncfusion ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
