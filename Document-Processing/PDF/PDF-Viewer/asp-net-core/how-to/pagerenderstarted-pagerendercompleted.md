@@ -83,4 +83,4 @@ The following example demonstrates how to subscribe to these events in both stan
 {% endhighlight %}
 {% endtabs %}
 
-By leveraging these rendering events, developers can maintain granular control over the viewer's lifecycle and provide a more interactive documentation experience.
+By leveraging these rendering events, developers can maintain granular control over the viewer's life cycle and provide a more interactive documentation experience.
