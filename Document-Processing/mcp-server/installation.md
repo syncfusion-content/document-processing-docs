@@ -85,7 +85,7 @@ Configure the Syncfusion Document Processing MCP Server globally to make it avai
 
 **VS Code**
 
-1. Click [here](https://insiders.vscode.dev/redirect/mcp/install?name=syncfusionDocumentSDKAssistant&config=%7B%22type%22%3A%22stdio%22%2C%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22%40syncfusion%2Ftypescript-assistant%40latest%22%5D%2C%22env%22%3A%7B%22Syncfusion_API_Key%22%3A%22YOUR_API_KEY%22%7D%7D) to open the installation link.
+1. Click <a href="https://insiders.vscode.dev/redirect/mcp/install?name=syncfusionDocumentSDKAssistant&config=%7B%22type%22%3A%22stdio%22%2C%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22%40syncfusion%2Ftypescript-assistant%40latest%22%5D%2C%22env%22%3A%7B%22Syncfusion_API_Key%22%3A%22YOUR_API_KEY%22%7D%7D">here</a> to open the installation link.
 2. Replace `YOUR_API_KEY` with your actual Syncfusion API key.
 3. Follow the prompts to complete the installation.
 
