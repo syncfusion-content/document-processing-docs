@@ -47,18 +47,16 @@ Open `~/Pages/_ViewImports.cshtml` file and import the `Syncfusion.EJ2` TagHelpe
 
 ## Add stylesheet and script resources
 
-Add the stylesheet and script references to the `<head>` section of the `~/Pages/Shared/_Layout.cshtml` file, as shown in the following example.
+Add the stylesheet and script references at the end of the **\<head\>** section in the `~/Pages/Shared/_Layout.cshtml` file, as shown in the following example.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/_Layout.cshtml" %}
 
-<head>
-    ...
-    <!-- Syncfusion ASP.NET Core controls styles -->
-    <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/fluent.css" />
-    <!-- Syncfusion ASP.NET Core controls scripts -->
-    <script src="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/dist/ej2.min.js"></script>
-</head>
+<!-- Syncfusion ASP.NET Core controls styles -->
+<link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}fluent.css" />
+
+<!-- Syncfusion ASP.NET Core controls scripts -->
+<script src="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/dist/ej2.min.js"><script>
 
 {% endhighlight %}
 {% endtabs %}
@@ -66,16 +64,13 @@ Add the stylesheet and script references to the `<head>` section of the `~/Pages
 N> To learn other ways to load themes or scripts (such as NPM packages or [CRG](https://ej2.syncfusion.com/aspnetcore/documentation/common/custom-resource-generator)), see the [Themes topic](https://ej2.syncfusion.com/aspnetcore/documentation/appearance/theme) and [Adding Script Reference](https://ej2.syncfusion.com/aspnetcore/documentation/common/adding-script-references) documentation.
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Script Manager
-Register the script manager `<ejs-scripts>` at the end of the `<body>` element in the ASP.NET Core application, as shown in the following example.
+Register the script manager **\<ejs-scripts\>** at the end of the **\<body\>** section in the ASP.NET Core application, as shown in the following example.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/_Layout.cshtml" %}
 
-<body>
-    ...
-    <!-- Syncfusion ASP.NET Core Script Manager -->
-    <ejs-scripts></ejs-scripts>
-</body>
+<!-- Syncfusion ASP.NET Core Script Manager -->
+<ejs-scripts></ejs-scripts>
 
 {% endhighlight %}
 {% endtabs %}
