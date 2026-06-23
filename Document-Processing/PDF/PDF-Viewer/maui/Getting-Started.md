@@ -274,7 +274,8 @@ xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Ma
 
     {% tabs %}
     {% highlight c# tabtitle="PdfViewerViewModel.cs" %}
-    
+
+using System.ComponentModel;
 using System.Reflection;
     
 internal class PdfViewerViewModel : INotifyPropertyChanged
