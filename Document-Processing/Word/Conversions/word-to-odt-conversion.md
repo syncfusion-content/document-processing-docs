@@ -12,7 +12,7 @@ The [OpenDocument format (ODF)](http://en.wikipedia.org/wiki/OpenDocument#) is a
 
 ## Assemblies and NuGet packages required
 
-Refer to the following links for assemblies and NuGet packages required based on platforms to convert a Word document to ODT file using the .NET Word Library (DocIO).
+Refer to the following links for assemblies and NuGet packages required based on platforms to convert a Word document to ODT file using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO).
 
 * [Word to ODT conversion assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required)
 * [Word to ODT conversion NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
@@ -758,4 +758,4 @@ Yes<br/><br/></td>
 
 ## Online Demo
 
-* Explore how to convert the Word document to ODT using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/doctoodt#/tailwind).
+* Explore how to convert the Word document to ODT using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/doctoodt#/tailwind).
