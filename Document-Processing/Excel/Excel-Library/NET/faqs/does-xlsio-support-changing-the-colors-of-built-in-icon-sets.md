@@ -1,6 +1,6 @@
 ---
 title: Support for changing icon set colors in Excel | Syncfusion
-description: This page explains whether Syncfusion XlsIO supports changing the colors of built-in icon sets in Excel using the .NET Excel library (XlsIO).
+description: This page explains whether Syncfusion XlsIO supports changing the colors of built-in icon sets in Excel using the .NET Excel library.
 platform: document-processing
 control: XlsIO
 documentation: UG

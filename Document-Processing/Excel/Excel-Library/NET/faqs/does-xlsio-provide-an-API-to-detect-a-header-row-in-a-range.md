@@ -1,6 +1,6 @@
 ---
 title: API to detect header row in a range in XlsIO | Syncfusion
-description: This page tells whether the .NET Excel library (XlsIO) provides API to detect a header row in a range.
+description: This page tells whether the .NET Excel library provides API to detect a header row in a range.
 platform: document-processing
 control: XlsIO
 documentation: UG

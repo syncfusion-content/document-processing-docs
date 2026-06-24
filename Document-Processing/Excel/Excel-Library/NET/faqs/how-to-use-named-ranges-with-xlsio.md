@@ -1,6 +1,6 @@
 ---
 title: How to use Named Ranges with XlsIO | Syncfusion
-description: This page demonstrates with an example on how to use named ranges in .NET Excel library (XlsIO).
+description: This page demonstrates with an example on how to use named ranges in .NET Excel library.
 platform: document-processing
 control: XlsIO
 documentation: UG

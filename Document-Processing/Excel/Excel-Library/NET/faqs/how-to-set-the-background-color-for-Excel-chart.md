@@ -1,6 +1,6 @@
 ---
 title: How to set the background color for Excel Chart in C# | Syncfusion
-description: This page explains how to set the background color for the chart using .NET Excel library (XlsIO).
+description: This page explains how to set the background color for the chart using .NET Excel library.
 platform: document-processing
 control: XlsIO
 documentation: UG

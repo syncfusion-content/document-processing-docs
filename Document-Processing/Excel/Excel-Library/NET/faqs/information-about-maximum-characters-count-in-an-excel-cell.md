@@ -1,6 +1,6 @@
 ---
 title: Maximum characters count in an Excel cell | XlsIO | Syncfusion
-description: This page has information of maximum characters count in an Excel cell in .NET Excel library (XlsIO).
+description: This page has information of maximum characters count in an Excel cell in .NET Excel library.
 platform: document-processing
 control: XlsIO
 documentation: UG

@@ -1,6 +1,6 @@
 ---
 title: How to open an Excel 2013 Macro Enabled Template | XlsIO | Syncfusion
-description: Code example to open an Excel 2013 Macro Enabled Template using .NET Excel library (XlsIO).
+description: Code example to open an Excel 2013 Macro Enabled Template using .NET Excel library.
 platform: document-processing
 control: XlsIO
 documentation: UG

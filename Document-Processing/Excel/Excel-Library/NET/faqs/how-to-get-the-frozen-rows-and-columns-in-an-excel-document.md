@@ -1,6 +1,6 @@
 ---
 title: How to get the frozen rows and columns in an Excel | Syncfusion.
-description: This page explains how to get the frozen rows and columns in an Excel document using .NET Excel library (XlsIO).
+description: This page explains how to get the frozen rows and columns in an Excel document using .NET Excel library.
 platform: document-processing
 control: XlsIO
 documentation: UG

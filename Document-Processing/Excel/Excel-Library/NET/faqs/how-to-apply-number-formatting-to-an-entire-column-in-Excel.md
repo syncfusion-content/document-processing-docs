@@ -1,6 +1,6 @@
 ---
 title: Apply number formatting to an entire column in Excel | Syncfusion
-description: Code example to apply number formatting to an entire column in Excel using .NET Excel library (XlsIO).
+description: Code example to apply number formatting to an entire column in Excel using .NET Excel library.
 platform: document-processing
 control: XlsIO
 documentation: UG

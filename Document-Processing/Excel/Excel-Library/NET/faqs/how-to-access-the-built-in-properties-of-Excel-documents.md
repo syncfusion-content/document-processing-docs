@@ -1,6 +1,6 @@
 ---
 title: How to access the built-in properties of Excel documents | Syncfusion
-description: This page shows how to access the built-in properties of Excel documents using .NET Excel library (XlsIO).
+description: This page shows how to access the built-in properties of Excel documents using .NET Excel library.
 platform: document-processing
 control: XlsIO
 documentation: UG

@@ -1,6 +1,6 @@
 ---
 title: How to add Barcode in Excel document using C# | Syncfusion
-description: Code example to add barcode images to an Excel document using .NET Excel library (XlsIO).
+description: Code example to add barcode images to an Excel document using .NET Excel library.
 platform: document-processing
 control: XlsIO
 documentation: UG

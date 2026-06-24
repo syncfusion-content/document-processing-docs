@@ -1,6 +1,6 @@
 ---
 title: How to freeze pivot table header in Excel workbook? | Syncfusion
-description: Code example to freeze the header row/column of a PivotTable using .NET Excel library (XlsIO).
+description: Code example to freeze the header row/column of a PivotTable using .NET Excel library.
 platform: document-processing
 control: XlsIO
 documentation: UG

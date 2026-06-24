@@ -1,6 +1,6 @@
 ---
 title: How to add and remove page breaks in a worksheet | Syncfusion
-description: This page shows how to add and remove page breaks in a worksheet using the .NET Excel library (XlsIO).
+description: This page shows how to add and remove page breaks in a worksheet using the .NET Excel library.
 platform: document-processing
 control: XlsIO
 documentation: UG

@@ -1,6 +1,6 @@
 ---
 title: Find and Replace text in Hyperlinks | Syncfusion
-description: This page shows how to find and replace text in hyperlinks using the .NET Excel library (XlsIO).
+description: This page shows how to find and replace text in hyperlinks using the .NET Excel library.
 platform: document-processing
 control: XlsIO
 documentation: UG

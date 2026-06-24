@@ -1,6 +1,6 @@
 ---
 title: Prevent ParseException when updating formulas | Syncfusion
-description: This page explains how to prevent ParseException when modifying formulas with undefined named ranges in .NET Excel library (XlsIO).
+description: This page explains how to prevent ParseException when modifying formulas with undefined named ranges in .NET Excel library.
 platform: document-processing
 control: XlsIO
 documentation: UG

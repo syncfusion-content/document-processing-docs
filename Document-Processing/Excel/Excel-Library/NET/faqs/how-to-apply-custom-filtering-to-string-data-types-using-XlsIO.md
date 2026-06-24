@@ -1,6 +1,6 @@
 ---
 title: Apply custom filtering to string data types using XlsIO | Syncfusion
-description: Code example to apply custom filtering to string data types using .NET Excel library (XlsIO).
+description: Code example to apply custom filtering to string data types using .NET Excel library.
 platform: document-processing
 control: XlsIO
 documentation: UG

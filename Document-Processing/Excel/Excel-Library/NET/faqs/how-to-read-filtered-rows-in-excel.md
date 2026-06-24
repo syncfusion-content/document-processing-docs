@@ -1,6 +1,6 @@
 ---
 title: How to read filtered rows in Excel? |Syncfusion
-description: This page shows how to read the filtered data from the Excel file using .NET Excel library (XlsIO).
+description: This page shows how to read the filtered data from the Excel file using .NET Excel library.
 platform: document-processing
 control: XlsIO
 documentation: UG

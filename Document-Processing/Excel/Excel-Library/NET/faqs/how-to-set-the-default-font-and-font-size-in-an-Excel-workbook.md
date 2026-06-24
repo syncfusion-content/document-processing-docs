@@ -1,6 +1,6 @@
 ---
 title: How to set the default font and font size in Excel files | Syncfusion
-description: Learn how to set the default font and font size in an Excel Workbook using .NET Excel library (XlsIO).
+description: Learn how to set the default font and font size in an Excel Workbook using .NET Excel library.
 platform: document-processing
 control: XlsIO
 documentation: UG

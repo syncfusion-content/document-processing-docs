@@ -1,6 +1,6 @@
 ---
 title: How to save the edited changes in the same Excel | Syncfusion.
-description: This page explains how to save the edited changes in the same Excel document using .NET Excel library (XlsIO).
+description: This page explains how to save the edited changes in the same Excel document using .NET Excel library.
 platform: document-processing
 control: XlsIO
 documentation: UG
