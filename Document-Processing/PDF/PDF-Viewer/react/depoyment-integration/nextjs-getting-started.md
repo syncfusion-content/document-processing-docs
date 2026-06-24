@@ -127,7 +127,7 @@ Where to add the imports:
 
 N> To learn more about built-in themes and CSS references for individual components, see the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation.
 
-## Add the React component
+## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
 Follow these steps to add the React PDF Viewer component to the Next.js project:
 
@@ -180,7 +180,7 @@ yarn run dev
 
 ## Adding Next.js Configuration
 
-When deploying the React PDF Viewer component in a Next.js application, you may need to add the following configuration to ensure smooth deployment:
+When deploying the PDF Viewer component in a Next.js application, you may need to add the following configuration to ensure smooth deployment:
 
 Create a next.config.js file in the root of your project, and add the following code to the file:
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Annotations mobileView in React PDF Viewer | Syncfusion
+title: Annotations mobileView in Syncfusion React PDF Viewer | Syncfusion
 description: Learn here all about how to use annotations in mobile view with the Syncfusion React PDF Viewer Component.
 platform: document-processing
 control: PDF Viewer
@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 # Annotations in mobile view in React PDF Viewer
 
-This article describes how to use annotation tools in the React PDF Viewer on touch-enabled devices. It covers enabling the annotation toolbar; adding sticky notes, text markups, shapes, measurements, stamps, signatures, and ink; adjusting annotation properties before and after placement; using comments; and removing annotations.
+This article describes how to use annotation tools in the [React PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/react-pdf-viewer) on touch-enabled devices. It covers enabling the annotation toolbar; adding sticky notes, text markups, shapes, measurements, stamps, signatures, and ink; adjusting annotation properties before and after placement; using comments; and removing annotations.
 
 ## Open the annotation toolbar
 

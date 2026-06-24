@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React PDF Viewer components React
+# Accessibility in PDF Viewer components React
 
 The PDF Viewer component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and the WCAG ARIA roles specified by WAI-ARIA. The component's accessibility compliance is outlined below.
 

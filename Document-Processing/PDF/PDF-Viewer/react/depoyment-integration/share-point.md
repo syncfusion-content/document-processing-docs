@@ -164,7 +164,7 @@ gulp bundle --ship
 gulp package-solution --ship
 ```
 
-N> Looking for the full React PDF Viewer component overview, features, pricing, and documentation? Visit the [React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/depoyment-integration/share-point) page.
+N> Looking for the full React PDF Viewer component overview, features, pricing, and documentation? Visit the [React PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/react-pdf-viewer) page.
 
 ## See also
 
