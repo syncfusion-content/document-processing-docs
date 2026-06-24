@@ -45,7 +45,7 @@ using System.IO;
 
 Step 5: A default action method named Index will be present in HomeController.cs. Right click on Index method and select Go To View where you will be directed to its associated view page Index.cshtml. Add a new button in the Index.cshtml as shown below.
 {% tabs %}
-{% highlight HTML %}
+{% highlight CSHTML %}
 
 @{
     Html.BeginForm("CreateDocument", "Home", FormMethod.Get);

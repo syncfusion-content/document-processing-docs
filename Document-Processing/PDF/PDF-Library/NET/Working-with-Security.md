@@ -1201,7 +1201,7 @@ document.Close(true);
 //Provide the user password in event. 
 void Document_OnPdfPassword(object sender, OnPdfPasswordEventArgs args)
 {
-    args.UserPassword = "syncfusion";
+  args.UserPassword = "syncfusion";
 }
 
 {% endhighlight %}
@@ -1764,15 +1764,15 @@ using Syncfusion.Pdf.Parsing;
 
 try
 {
-  //Load the PDF document
-  PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+    //Load the PDF document
+    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 }
 catch (PdfDocumentException exception)
 {
-  if (exception.Message == "Can't open an encrypted document. The password is invalid.")
-	{
-		MessageBox.Show("Cannot open an encrypted document without password");
-	}
+    if (exception.Message == "Can't open an encrypted document. The password is invalid.")
+    {
+        MessageBox.Show("Cannot open an encrypted document without password");
+    }
 }
 
 {% endhighlight %}
@@ -1784,15 +1784,15 @@ using Syncfusion.Pdf.Parsing;
 
 try
 {
-	//Load the password protected PDF document without user password
-	PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Output.pdf");
+    //Load the PDF document
+    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 }
 catch (PdfDocumentException exception)
 {
-	if (exception.Message == "Can't open an encrypted document. The password is invalid.")
-	{
-		MessageBox.Show("Cannot open an encrypted document without password");
-	}
+    if (exception.Message == "Can't open an encrypted document. The password is invalid.")
+    {
+        MessageBox.Show("Cannot open an encrypted document without password");
+    }
 }
 
 {% endhighlight %}
@@ -1804,7 +1804,7 @@ Imports Syncfusion.Pdf.Parsing
 
 Try
 	'Load the password protected PDF document without user password
-	Dim loadedDocument As New PdfLoadedDocument("Output.pdf")
+	Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 Catch exception As PdfDocumentException
 	If exception.Message = "Can't open an encrypted document. The password is invalid." Then
 		MessageBox.Show("Cannot open an encrypted document without password")

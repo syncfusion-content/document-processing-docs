@@ -97,7 +97,6 @@ Dim works As IEnumerable(Of Integer) = Enumerable.Range(0, 100)
     document.Save(name + ".pdf")
     'Close the document.
     document.Close(True)
-
 End Sub
 {% endhighlight %}
 {% endtabs %}
