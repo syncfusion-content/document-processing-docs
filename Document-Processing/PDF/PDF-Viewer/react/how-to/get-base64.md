@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Retrieve Base64 from a PDF in PDF Viewer
+# Retrieve Base64 from a PDF in React PDF Viewer
 
 ### Overview
 
