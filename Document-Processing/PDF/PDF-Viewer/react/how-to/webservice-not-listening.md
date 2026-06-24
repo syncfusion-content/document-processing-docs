@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ![Alt text](../images/webservice.png)
 
-If the React PDF Viewer reports a "Web-service is not listening" error, use the browser's developer tools to diagnose the request and the server behaviour. The steps below guide the most common troubleshooting paths and remediation actions.
+If the React PDF Viewer reports a "Web-service is not listening" error, use the browser's developer tools to diagnose the request and the server behavior. The steps below guide the most common troubleshooting paths and remediation actions.
 
 **Step 1:** Open the browser's developer tools by right-clicking on the page and selecting `Inspect` from the dropdown menu. Then Navigate to the `Network` tab. This will show you all of the requests that are being made by the page.
 
