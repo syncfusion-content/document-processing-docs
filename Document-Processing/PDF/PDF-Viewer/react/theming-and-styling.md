@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Theming and styling in React PDF Viewer component | Syncfusion
-description: Learn how to apply built-in themes, configure dark mode, and customize the UI styles of the React PDF Viewer component.
+description: Learn how to apply built-in themes, configure dark mode, and customize the UI styles of the Syncfusion React PDF Viewer component.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

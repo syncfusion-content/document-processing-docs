@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Context Menu in React PDF Viewer | Syncfusion
-description: Learn about the contextual menu options in the React PDF Viewer, including default behavior and customization possibilities.
+description: Learn about the contextual menu options in the Syncfusion React PDF Viewer, including default behavior and customization possibilities.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

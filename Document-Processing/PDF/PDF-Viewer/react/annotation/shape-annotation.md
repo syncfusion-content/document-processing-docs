@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Shape annotation in React PDF Viewer control | Syncfusion
-description: Learn about shape annotations in the React PDF Viewer (Essential JS 2), including add, edit, delete, and default settings.
+description: Learn about shape annotations in the Syncfusion React PDF Viewer (Essential JS 2), including add, edit, delete, and default settings.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

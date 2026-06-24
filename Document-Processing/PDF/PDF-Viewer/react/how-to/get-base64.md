@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Get Base64 from loaded PDF in React PDF Viewer | Syncfusion
-description: Learn how to retrieve the Base64 value of a loaded PDF in the React PDF Viewer using saveAsBlob and FileReader.
+description: Learn how to retrieve the Base64 value of a loaded PDF in the Syncfusion React PDF Viewer using saveAsBlob and FileReader.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

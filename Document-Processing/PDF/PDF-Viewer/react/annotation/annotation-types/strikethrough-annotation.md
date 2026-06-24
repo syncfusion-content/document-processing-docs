@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Strikethrough Text in React PDF Viewer | Syncfusion
-description: Learn how to enable, apply, customize, and manage Strikethrough annotations in the React PDF Viewer.
+description: Learn how to enable, apply, customize, and manage Strikethrough annotations in the Syncfusion React PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

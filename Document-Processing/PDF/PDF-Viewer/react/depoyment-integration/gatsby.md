@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with React PDF Viewer in Gatsby | Syncfusion
-description: How to integrate the React PDF Viewer into a Gatsby site (quickstart, how-to, reference, explanation).
+description: How to integrate the Syncfusion React PDF Viewer into a Gatsby site (quickstart, how-to, reference, explanation).
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -117,7 +117,7 @@ export default function PdfViewerPage() {
   return (
     <main>
       <h1 style={{ padding: "10px 20px", background: "#f5f5f5" }}>
-        React PDF Viewer in Gatsby
+        Syncfusion PDF Viewer in Gatsby
       </h1>
       <PdfViewer />
     </main>

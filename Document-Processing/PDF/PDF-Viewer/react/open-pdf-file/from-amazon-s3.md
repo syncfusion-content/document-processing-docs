@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open PDF from AWS S3 in React PDF Viewer | Syncfusion
-description: Learn how to load PDFs from AWS S3 in the React PDF Viewer component using standalone and server-backed approaches.
+description: Learn how to load PDFs from AWS S3 in the Syncfusion React PDF Viewer component using standalone and server-backed approaches.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Remove annotations in React PDF Viewer | Syncfusion
-description: Learn how to remove/delete PDF annotations in React PDF Viewer using UI options (context menu, toolbar, Delete key) and programmatic APIs.
+description: Learn how to remove/delete PDF annotations in Syncfusion React PDF Viewer using UI options (context menu, toolbar, Delete key) and programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

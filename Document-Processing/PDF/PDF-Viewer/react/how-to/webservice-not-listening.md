@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to clear the "Web-service is not listening" to error| Syncfusion
-description: Learn here all about How to clear the "Web-service is not listening" to error in React Pdfviewer component of Syncfusion Essential JS 2 and more.
+description: Learn here all about How to clear the "Web-service is not listening" to error in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
 control: How to clear the "Web-service is not listening" to error
 platform: document-processing
 documentation: ug
@@ -68,4 +68,4 @@ To clear this error in the React PDF Viewer, you can try the following steps:
 
 ## Internal server error
 
-Server-side exceptions happen for various use cases. We can't just define them if they are document-specific, provide the document, or you may need to contact support for further assistance.
+Server-side exceptions happen for various use cases. We can't just define them if they are document-specific, provide the document, or you may need to contact Syncfusion<sup style="font-size:70%">&reg;</sup> support for further assistance.

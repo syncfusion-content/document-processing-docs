@@ -1,6 +1,6 @@
 ---
 title: Annotations Events in React Pdfviewer control | Syncfusion
-description: Learn here all about Annotations Events in React Pdfviewer component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Annotations Events in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

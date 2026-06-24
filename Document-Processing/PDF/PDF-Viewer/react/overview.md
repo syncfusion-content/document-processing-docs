@@ -1,6 +1,6 @@
 ---
 title: Overview of React PDF Viewer Component | Syncfusion
-description: Learn here all about the React PDF Viewer, features, its capabilities, and supported platforms.
+description: Learn here all about the Syncfusion React PDF Viewer, features, its capabilities, and supported platforms.
 platform: document-processing
 control: PDF Viewer
 documentation: UG

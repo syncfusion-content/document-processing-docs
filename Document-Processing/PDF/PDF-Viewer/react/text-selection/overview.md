@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Text selection in React PDF Viewer | Syncfusion
-description: Learn the text selection concepts, copy behavior, and interaction capabilities of the React PDF Viewer.
+description: Learn the text selection concepts, copy behavior, and interaction capabilities of the Syncfusion React PDF Viewer.
 platform: document-processing
 control: Text selection
 documentation: ug

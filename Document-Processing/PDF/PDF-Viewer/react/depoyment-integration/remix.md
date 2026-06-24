@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with React PDF Viewer with React Router
-description: Short quickstart for integrating the React PDF Viewer into a React application using React Router v7 (standalone/client-only rendering).
+title: Getting started with Syncfusion React PDF Viewer with React Router
+description: Short quickstart for integrating the Syncfusion React PDF Viewer into a React application using React Router v7 (standalone/client-only rendering).
 control: PDF Viewer
 platform: document-processing
 documentation: ug

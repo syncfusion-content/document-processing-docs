@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Handle signatureSelect and signatureUnselect events | Syncfusion
-description: Learn how to handle signatureSelect and signatureUnselect events in the React PDF Viewer to manage handwritten signature selection state.
+description: Learn how to handle signatureSelect and signatureUnselect events in the Syncfusion React PDF Viewer to manage handwritten signature selection state.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

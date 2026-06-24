@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Document Handling in React Pdfviewer component | Syncfusion
-description: This page helps you to learn about how to Open PDF from URL, Base64, Blob, Stream, Cloud storage in React Pdfviewer component.
+description: This page helps you to learn about how to Open PDF from URL, Base64, Blob, Stream, Cloud storage in Syncfusion React Pdfviewer component.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

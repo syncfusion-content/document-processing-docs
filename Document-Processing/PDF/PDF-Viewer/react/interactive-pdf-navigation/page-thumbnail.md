@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Page Thumbnail Navigation in React PDF Viewer | Syncfusion
-description: Learn how to enable and use the page thumbnail navigation in the React PDF Viewer component.
+description: Learn how to enable and use the page thumbnail navigation in the Syncfusion React PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

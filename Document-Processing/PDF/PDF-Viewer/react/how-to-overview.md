@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How-to overview for PDF Viewer
 
-The following how-to articles and frequently asked questions for the React PDF Viewer are listed below.
+The following how-to articles and frequently asked questions for the Syncfusion PDF Viewer are listed below.
 
 * [How to add annotation in text search in react?](./how-to/add-annotation-in-text-search-ts)
 * [How to add custom header to the PDF Viewer ajax request?](./how-to/add-header-value)

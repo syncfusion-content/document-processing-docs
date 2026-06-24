@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Lock annotation in React Pdfviewer component | Syncfusion
-description: Learn here all about Lock annotation in React Pdfviewer component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Lock annotation in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
 control: Lock annotation
 platform: document-processing
 documentation: ug

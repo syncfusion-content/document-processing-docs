@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migrating from Nutrient.io (PSPDFKit) to React PDF Viewer | Syncfusion
-description: Learn here all about how to migrate from Nutrient.io (PSPDFKit) to React PDF Viewer and Component
+description: Learn here all about how to migrate from Nutrient.io (PSPDFKit) to Syncfusion React PDF Viewer and Component
 platform: document-processing
 documentation: ug
 control: PDF Viewer

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open PDF from Azure Blob Storage in React Pdfviewer | Syncfusion
-description: Learn about how to load PDF files from Azure Blob Storage in React Pdfviewer component of Syncfusion Essential JS 2 and more.
+description: Learn about how to load PDF files from Azure Blob Storage in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
 control: Open PDF files from Azure Blob Storage
 platform: document-processing
 documentation: ug

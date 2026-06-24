@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Set a New Language in React PDF Viewer | Syncfusion
-description: Learn how to localize the React PDF Viewer with culture codes using L10n.load and the locale property.
+description: Learn how to localize the Syncfusion React PDF Viewer with culture codes using L10n.load and the locale property.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add Free Text Annotations in React PDF Viewer | Syncfusion
-description: Learn how to enable, add, customize, and manage Free Text (text box) annotations in the React PDF Viewer.
+description: Learn how to enable, add, customize, and manage Free Text (text box) annotations in the Syncfusion React PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

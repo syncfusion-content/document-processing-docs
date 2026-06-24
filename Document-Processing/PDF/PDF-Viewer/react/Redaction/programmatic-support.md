@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Redaction Programmatic support in React PDF Viewer | Syncfusion
-description: Learn how to add, delete, update, and apply redaction annotations programmatically in the React PDF Viewer.
+description: Learn how to add, delete, update, and apply redaction annotations programmatically in the Syncfusion React PDF Viewer.
 platform: document-processing
 control: PdfViewer
 documentation: ug

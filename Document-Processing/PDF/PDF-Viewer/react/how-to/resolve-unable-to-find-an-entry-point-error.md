@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Resolve “unable to find an entry point” error | Syncfusion
-description: Learn how to resolve the “unable to find an entry point” error after upgrading the Pdfium package in the React PDF Viewer.
+description: Learn how to resolve the “unable to find an entry point” error after upgrading the Pdfium package in the Syncfusion React PDF Viewer.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with React PDF Viewer component| Syncfusion
-description: Learn here all about Getting started with React PDF Viewer component of Syncfusion Essential JS 2 and more details.
+title: Getting started with Syncfusion React PDF Viewer component| Syncfusion
+description: Learn here all about Getting started with Syncfusion React PDF Viewer component of Syncfusion Essential JS 2 and more details.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -28,7 +28,7 @@ This page is intentionally a short introduction — choose a path and follow its
 - [Form designer](./forms/form-designer)
 - [Organize pages](./organize-pages/overview)
 
-N> Looking for the full React PDF Viewer component overview, features, pricing, and documentation? Visit the React PDF Viewer page.
+N> Looking for the full [React PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/react-pdf-viewer) component overview, features, pricing, and documentation? Visit the React PDF Viewer page.
 
 **See also**
 

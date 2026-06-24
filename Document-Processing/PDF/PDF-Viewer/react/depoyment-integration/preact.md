@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with React PDF Viewer in Preact Application
-description: Provides a short overview and essential task links for integrating and using the React PDF Viewer within Preact.
+title: Getting started with Syncfusion React PDF Viewer in Preact Application
+description: Provides a short overview and essential task links for integrating and using the Syncfusion React PDF Viewer within Preact.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

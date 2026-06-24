@@ -152,7 +152,7 @@ Sets the CSS class or icon to display before the Save button text.
 
 The id property within a CustomToolbarItemModel is required and uniquely identifies each toolbar item for configuration and interaction.
 
-When defining or customizing toolbar items, assign a specific, descriptive id to each item. These properties are commonly used when defining custom toolbar items with `CustomToolbarItemModel` in the context of React PDF Viewer. When configuring the toolbar using the `ToolbarSettings` property, include these properties to customize appearance and behavior.
+When defining or customizing toolbar items, assign a specific, descriptive id to each item. These properties are commonly used when defining custom toolbar items with `CustomToolbarItemModel` in the context of Syncfusion PDF Viewer. When configuring the toolbar using the `ToolbarSettings` property, include these properties to customize appearance and behavior.
 
 
 N> When customizing the Save button, icons or text can be used based on design preference.

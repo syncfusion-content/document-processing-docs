@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print PDF in React PDF Viewer | Syncfusion
-description: Enable and customize printing, configure print events, cancel print, and monitor printing in the React PDF Viewer component.
+description: Enable and customize printing, configure print events, cancel print, and monitor printing in the Syncfusion React PDF Viewer component.
 platform: document-processing
 control: Print
 documentation: ug
@@ -18,7 +18,7 @@ Select **Print** in the built-in toolbar to open the browser print dialog.
 
 ## Enable or Disable Print in React PDF Viewer
 
-The React PDF Viewer component lets users print a loaded PDF document through the built-in toolbar or programmatic calls. Control whether printing is available by setting the [`enablePrint`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enableprint) property (`true` enables printing; `false` disables it).
+The Syncfusion React PDF Viewer component lets users print a loaded PDF document through the built-in toolbar or programmatic calls. Control whether printing is available by setting the [`enablePrint`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enableprint) property (`true` enables printing; `false` disables it).
 
 The following React examples render the PDF Viewer with printing disabled.
 

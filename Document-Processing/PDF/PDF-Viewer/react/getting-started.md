@@ -151,8 +151,6 @@ To get started quickly with React PDF Viewer, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=VJibluQFWns" %}
 
-N> Looking for the full React PDF Viewer component overview, features, pricing, and documentation? Visit the [React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) page.
-
 ## See also
 
 - [Getting started with Server-Backed React PDF Viewer](./getting-started-with-server-backed)

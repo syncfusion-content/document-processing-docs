@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form constraints in the React PDF Viewer component | Syncfusion
-description: Learn how to configure form field constraints such as isReadOnly, isRequired, and isPrint in the React PDF Viewer.
+description: Learn how to configure form field constraints such as isReadOnly, isRequired, and isPrint in the Syncfusion React PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Export annotations in React PDF Viewer | Syncfusion
-description: Learn how to Export annotations in React PDF Viewer using UI options and programmatic APIs.
+description: Learn how to Export annotations in Syncfusion React PDF Viewer using UI options and programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

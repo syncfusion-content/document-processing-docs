@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Add Annotations via Text Search in React PDF Viewer
-description: Learn how to add annotations via text search events in the React PDF Viewer for a seamless mobile experience.
+title: Add Annotations via Text Search in Syncfusion React PDF Viewer
+description: Learn how to add annotations via text search events in the Syncfusion React PDF Viewer for a seamless mobile experience.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

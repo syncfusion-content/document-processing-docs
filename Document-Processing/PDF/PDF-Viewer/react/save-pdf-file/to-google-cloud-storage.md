@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Save PDF files to Google Cloud Storage in React PDF Viewer | Syncfusion
-description: Learn how to save PDF files to Google Cloud Storage using the React PDF Viewer component with a server-backed web service.
+description: Learn how to save PDF files to Google Cloud Storage using the Syncfusion React PDF Viewer component with a server-backed web service.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

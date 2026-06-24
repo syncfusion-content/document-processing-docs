@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React getting started with Next.js | Syncfusion
-description: Check out and learn here all about how to use the React PDF Viewer in the Next.js project.
+description: Check out and learn here all about how to use the Syncfusion React PDF Viewer in the Next.js project.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

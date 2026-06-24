@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Table of contents navigation in PDF Viewer | Syncfusion
-description: Learn how to navigate PDFs using the table of contents in the React PDF Viewer control for React.
+description: Learn how to navigate PDFs using the table of contents in the Syncfusion PDF Viewer control for React.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

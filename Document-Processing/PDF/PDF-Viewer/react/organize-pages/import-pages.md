@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Import pages in Organize Pages in React PDF Viewer | Syncfusion
-description: How to import pages from another PDF into the current document using the Organize Pages UI in the React PDF Viewer.
+description: How to import pages from another PDF into the current document using the Organize Pages UI in the Syncfusion React PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

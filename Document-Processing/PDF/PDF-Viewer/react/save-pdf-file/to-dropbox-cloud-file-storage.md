@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Save PDF files to Dropbox in React PDF Viewer | Syncfusion
-description: Learn how to save PDF files to Dropbox using the React PDF Viewer component in standalone and server-backed configurations.
+description: Learn how to save PDF files to Dropbox using the Syncfusion React PDF Viewer component in standalone and server-backed configurations.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

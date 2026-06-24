@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Download edited PDF in React PDF Viewer | Syncfusion
-description: Learn here all about Download in React Pdfviewer component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Download in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
