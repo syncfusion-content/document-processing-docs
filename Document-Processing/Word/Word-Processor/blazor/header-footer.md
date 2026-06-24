@@ -58,4 +58,6 @@ Move the selection to the document body from header or footer region by double c
 await container.DocumentEditor.Selection.CloseHeaderFooterAsync();
 ```
 
-You can also explore our [Blazor Word Processor](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities) example to know how to render and configure the document editor.
+## Online Demo
+
+Explore how to add and customize headers and footers in Word documents using the Blazor Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/headers-and-footers?theme=fluent2).

@@ -52,4 +52,6 @@ You can define the distance of footer content from the bottom of the page by usi
 await documentEditor.Selection.SectionFormat.SetFooterDistanceAsync(72);
 ```
 
-You can also explore our [Blazor Word Processor](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities) example to know how to render and configure the document editor.
+## Online Demo
+
+Explore how to apply section formatting in Word documents using the Blazor Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/section-format?theme=fluent2).

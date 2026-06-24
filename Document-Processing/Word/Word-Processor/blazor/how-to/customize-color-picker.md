@@ -37,3 +37,7 @@ The following table illustrates all the possible properties for the color picker
 | Mode | It is used to render the ColorPicker with the specified mode. Defaults to ‘Picker’ | 
 | ModeSwitcher | It is used to show / hide the mode switcher button of ColorPicker component. Defaults to true | 
 | ShowButtons | It is used to show / hide the control buttons (apply / cancel) of ColorPicker component. Defaults to true |
+
+## Online Demo
+
+Explore how to customize the color picker in the Blazor Document Editor for Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/color-picker-customization?theme=fluent2).

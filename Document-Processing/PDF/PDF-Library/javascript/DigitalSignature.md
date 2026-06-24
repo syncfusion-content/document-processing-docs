@@ -1,11 +1,11 @@
 ---
-title: Digital Signature in JavaScript PDF library | Syncfusion
-description: This section explains how to create a digital signature in the PDF document by using JavaScript PDF library
+title: Digital Signature in JavaScript PDF Library | Syncfusion
+description: This section explains how to create a digital signature in the PDF document by using JavaScript PDF Library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Digital Signature in JavaScript PDF library
+# Digital Signature in JavaScript PDF Library
 
 The PDF provides support to create, validate, and manage digital signatures in PDF documents, ensuring authenticity, integrity, and security.
 
@@ -149,7 +149,7 @@ document.destroy();
 
 ## Create PDF Signature with External Signing
 
-Syncfusion<sup>&reg;</sup> PDF provides support to create a new PDF signature using a callback function for external signing, enabling secure and flexible digital signature workflows.
+[JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) provides support to create a new PDF signature using a callback function for external signing, enabling secure and flexible digital signature workflows.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -226,7 +226,7 @@ document.destroy();
 
 ## Create Signature with Public Certificates for External Signing
 
-This example demonstrates how to create a new PDF signature using the [PdfSignature](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature) class with public certificates for external signing. External signing allows you to implement custom signing logic outside the PDF library while maintaining compliance with cryptographic standards.
+This example demonstrates how to create a new PDF signature using the [PdfSignature](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature) class with public certificates for external signing. External signing allows you to implement custom signing logic outside the [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) while maintaining compliance with cryptographic standards.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -356,7 +356,7 @@ document.destroy();
 
 ## Lock Signature
 
-This example shows how to add a signature field to a PDF, create a digital signature using certificate data and a password, lock the document after signing, and save the result in PDF library.
+This example shows how to add a signature field to a PDF, create a digital signature using certificate data and a password, lock the document after signing, and save the result in [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library).
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -952,7 +952,7 @@ document.destroy();
 
 ## Sign existing signature field
 
-This section explains how to sign an existing unsigned signature field in a PDF using the [JavaScript PDF library](https://www.syncfusion.com/document-sdk/javascript-pdf-library). You can locate predefined signature fields and apply a digital signature directly by calling [setSignature()](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignaturefield#setsignature) method of the [PdfSignatureField](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignaturefield) class, without altering the document layout. This is ideal for templates where signature placeholders already exist, allowing you to add digital signatures to the field using a certificate and signature settings.
+This section explains how to sign an existing unsigned signature field in a PDF using the [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library). You can locate predefined signature fields and apply a digital signature directly by calling [setSignature()](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignaturefield#setsignature) method of the [PdfSignatureField](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignaturefield) class, without altering the document layout. This is ideal for templates where signature placeholders already exist, allowing you to add digital signatures to the field using a certificate and signature settings.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

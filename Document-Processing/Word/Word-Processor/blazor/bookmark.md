@@ -52,3 +52,7 @@ await container.DocumentEditor.Selection.GetBookmarksAsync(true);
 ```
 
 N> The boolean parameter of `GetBookmarksAsync` specifies whether to include hidden bookmarks in the result. If `false`, hidden bookmarks are excluded.
+
+## Online Demo
+
+Explore how to insert and manage bookmarks in Word documents using the Blazor Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/hyperlinks-and-bookmarks?theme=fluent2).

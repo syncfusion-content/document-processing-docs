@@ -41,4 +41,6 @@ Also, at some situations, you might need to allow changes for a certain portion 
 
 ![Enabling Restrict Editing in Blazor DocumentEditor](./images/blazor-document-editor-enable-edit-restriction.png)
 
-You can also explore our [Blazor Word Processor](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities) example to know how to render and configure the document editor.
+## Online Demo
+
+Explore how to restrict editing and protect Word documents using the Blazor Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/document-protection?theme=fluent2).
