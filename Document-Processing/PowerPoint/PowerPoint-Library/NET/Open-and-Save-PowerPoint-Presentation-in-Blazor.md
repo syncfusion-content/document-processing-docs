@@ -237,7 +237,7 @@ Upon executing the program, the **PowerPoint document** will be generated as fol
 
 ![Blazor Web App Server output PowerPoint document](Workingwith-Core/Open-and-Save-output-image.png)
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features.
+Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/blazor) to explore the rich set of [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) features.
 
 ## WASM Standalone Application
 
@@ -415,4 +415,4 @@ N> While the PowerPoint library works in WASM Standalone app, server-side deploy
 
 Kindly explore the [supported and unsupported features of PowerPoint library in Blazor](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/supported-and-unsupported-features).
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features.
+Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/blazor) to explore the rich set of [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) features.

@@ -177,7 +177,7 @@ By executing the program, you will get the **PDF** as follows.
 
 ![Converted PDF from PowerPoint in Xamarin](PPTXtoPDF_images/Output_PowerPoint_Presentation_to-PDF.png)
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/xamarin) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
+Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/xamarin) to explore the rich set of [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) features. 
 
 An online sample link to [convert PowerPoint Presentation to PDF](https://document.syncfusion.com/demos/powerpoint/pptxtopdf#/tailwind) in ASP.NET Core. 
 

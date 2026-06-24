@@ -133,4 +133,4 @@ By executing the program, you will get the **PowerPoint document** as follows.
 
 ![Open and save in AWS Elastic Beanstalk](Workingwith-Core/Open-and-Save-output-image.png)
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
+Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) features. 
