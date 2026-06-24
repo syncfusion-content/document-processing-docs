@@ -9,7 +9,7 @@ documentation: ug
 
 # Overview of Forms in WPF PDF Viewer
 
-The PDF Viewer delivers a complete,easy‑to‑use PDF forms experience. It allows form fields to be filled and edited directly within PDF documents. These actions are supported through either user interface or programmatic APIs. The form fields can be added and deleted through programmatic APIs alone.
+The WPF PDF Viewer delivers a complete,easy‑to‑use PDF forms experience. It allows form fields to be filled and edited directly within PDF documents. These actions are supported through either user interface or programmatic APIs. The form fields can be added and deleted through programmatic APIs alone.
 
 The PDF Viewer also includes smooth import and export support for form data, making integration effortless. Developers have fine-grained API control while end users interact with a streamlined form-filling interface.
 
