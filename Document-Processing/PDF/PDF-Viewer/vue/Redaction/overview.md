@@ -136,7 +136,7 @@ After adding redaction annotations, permanently apply them to the document using
 
 ![Toolbar showing the Apply Redaction button](redaction-annotations-images/redact-button-icon.png)
 
-A confirmation dialog appears before applying redaction to ensure acknowledgement of the irreversible action.
+A confirmation dialog appears before applying redaction to ensure acknowledgment of the irreversible action.
 
 ![Confirmation dialog for applying redaction](redaction-annotations-images/apply-redaction-dialog.png)
 

@@ -14,9 +14,9 @@ This guide demonstrates how to create a Vue 3 application with Vite and integrat
 
 ## API Approaches
 
-**Composition API** – A modern approach to organizing component logic by composing smaller, reusable functions. This method offers better code organization and reusability for complex components.
+**Composition API** – A modern approach to organizing component logic by composing smaller, reusable functions. This method offers better code organization and reusable for complex components.
 
-**Options API** – The traditional Vue approach that organizes component logic into a series of options (data, methods, computed properties, watchers, lifecycle hooks, etc.).
+**Options API** – The traditional Vue approach that organizes component logic into a series of options (data, methods, computed properties, watchers, life cycle hooks, etc.).
 
 
 ## Prerequisites
@@ -174,7 +174,7 @@ Add the PDF Viewer component markup to the `<template>` section of **src/App.vue
 
 ### Step 3: Configure Service and Document URLs
 
-**serviceUrl** – The backend endpoint for PDF processing. The Syncfusion-hosted URL provides evaluation capabilities. For production, replace with your deployed web service endpoint.
+**serviceUrl** – The back end endpoint for PDF processing. The Syncfusion-hosted URL provides evaluation capabilities. For production, replace with your deployed web service endpoint.
 
 **documentPath** – The URL or file path to the PDF document to display.
 
