@@ -20,7 +20,7 @@ Step 3: Install the [Google.Cloud.Storage.V1](https://www.nuget.org/packages/Goo
 Step 4: Include the following namespaces in the Program.cs file.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C#" %}
 
 using Google.Cloud.Storage.V1;
 using Google.Apis.Auth.OAuth2;
@@ -31,7 +31,7 @@ using Google.Apis.Auth.OAuth2;
 Step 5: Add the below code example to create a simple PDF and save in Google cloud storage.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C#" %}
 
 // Create a byte array
 byte[] pdfBytes;

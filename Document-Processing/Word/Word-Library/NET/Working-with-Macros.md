@@ -104,4 +104,4 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to preserve the macros in macro-enabled documents using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/macropreservation#/tailwind).
+* Explore how to preserve the macros in macro-enabled documents using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/macropreservation#/tailwind).

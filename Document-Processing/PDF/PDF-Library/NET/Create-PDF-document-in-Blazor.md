@@ -181,7 +181,7 @@ N> Android introduced a new runtime permission model for SDK version 23 and abov
 1.	Create a new XML file with the name of `file_paths.xml` under the Android project Resources/xml folder and add the following code in it.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight XML %}
 
 <?xml version="1.0" encoding="utf-8"?>
 <paths xmlns:android="http://schemas.android.com/apk/res/android">
@@ -208,7 +208,7 @@ N> Android introduced a new runtime permission model for SDK version 23 and abov
 2.	Add the following code to the `AndroidManifest.xml` file located under Properties/AndroidManifest.xml.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight XML %}
 
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">

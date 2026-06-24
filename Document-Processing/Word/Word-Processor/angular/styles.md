@@ -186,7 +186,7 @@ let paragraphStyles = this.documentEditor.getStyles('Character');
 
 ## Modify an existing style
 
-You can modify a existing style with the specified style properties using [`createStyle`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#createStyle) method. If modifyExistingStyle parameter is set to `true` the style properties is updated to the existing style.
+You can modify a existing style with the specified style properties using [`createStyle`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#createStyle) method. If modifyExistingStyle parameter is set to `true` the style properties is updated to the existing style.
 
 The following illustrate to modify an existing style.
 
@@ -205,3 +205,7 @@ this.documentEditor.editor.createStyle(styleName, true);
 > If modifyExistingStyle parameter is set to true and a style already exists with same name, it modifies the specified properties in the existing style.
 > If modifyExistingStyle parameter is set to false and a style already exists with same name, it creates a new style with unique name by appending ‘_1’. Hence, the newly style will not have the specified name.
 > If no style exists with same name, it creates a new style.
+
+## Online Demo
+
+Explore how to apply and modify styles in Word documents using the Angular Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/styles).
