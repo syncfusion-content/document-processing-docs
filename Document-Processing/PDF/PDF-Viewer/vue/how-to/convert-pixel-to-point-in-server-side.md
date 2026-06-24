@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Convert pixel to point in server side in Vue PDF Viewer component | Syncfusion
+title: Convert pixel to point in server side | Syncfusion
 description: Learn here all about Convert pixel to point in server side in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
 control: Convert pixel to point in server side
 platform: document-processing

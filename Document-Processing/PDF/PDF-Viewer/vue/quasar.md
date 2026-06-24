@@ -55,7 +55,7 @@ npm install @syncfusion/ej2-vue-pdfviewer --save
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-Vue components support multiple theme options. Refer to the [themes documentation](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) for details about built-in themes and different import approaches.
+Vue components support multiple theme options. Refer to the [themes documentation](https://ej2.syncfusion.com/vue/documentation/appearance/theme) for details about built-in themes and different import approaches.
 
 In this example, the `Material 3` theme is applied using CSS styles from the installed packages. Import the required Material 3 CSS styles for the PDF Viewer and its dependencies into the `<style>` section of the **src/app.vue** file:
 
