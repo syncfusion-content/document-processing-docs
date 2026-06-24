@@ -155,4 +155,4 @@ N> Install the following NuGet packages in the web service application when requ
 - `Microsoft.Extensions.Configuration.FileExtensions`
 - `Microsoft.Extensions.Configuration.Json`
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-onedrive)
+[View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-one-drive)
