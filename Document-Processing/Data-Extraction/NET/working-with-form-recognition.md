@@ -19,8 +19,8 @@ To recognize form data from a PDF or image and get the output as a JSON string u
 Example (synchronous):
 
 {% tabs %}
-{% highlight c# tabtitle="C#" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/refs/heads/master/Data-Extraction/Smart-Form-Recognizer/Recognize-forms-using-JSON/.NET/Recognize-forms-using-JSON/Program.cs" %}
 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/refs/heads/master/Data-Extraction/Smart-Form-Recognizer/Recognize-forms-using-JSON/.NET/Recognize-forms-using-JSON/Program.cs" %}
 
 using Syncfusion.SmartFormRecognizer;
 
@@ -36,6 +36,41 @@ using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileA
 }
 
 {% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.SmartFormRecognizer;
+
+// Open the input PDF file as a stream.
+using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.ReadWrite))
+{
+	// Initialize the Form Recognizer.
+	FormRecognizer recognizer = new FormRecognizer();
+	// Recognize the form and get the output as a JSON string.
+	string outputJson = recognizer.RecognizeFormAsJson(inputStream);
+	// Save the extracted JSON data into an output file.
+	File.WriteAllText("result.json", outputJson);
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports Syncfusion.SmartFormRecognizer
+
+' Open the input PDF file as a stream.
+Using inputStream As New FileStream("Input.pdf", FileMode.Open, FileAccess.ReadWrite)
+	' Initialize the Form Recognizer.
+	Dim recognizer As New FormRecognizer()
+	' Recognize the form and get the output as a JSON string.
+	Dim outputJson As String = recognizer.RecognizeFormAsJson(inputStream)
+	' Save the extracted JSON data into an output file.
+	File.WriteAllText("result.json", outputJson)
+End Using
+
+{% endhighlight %}
+
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Form-Recognizer/Recognize-forms-using-JSON/.NET).
@@ -43,7 +78,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 Example (asynchronous):
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 using Syncfusion.SmartFormRecognizer;
 
@@ -59,6 +94,41 @@ using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileA
 }
 
 {% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.SmartFormRecognizer;
+
+// Open the input PDF file as a stream.
+using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.ReadWrite))
+{
+	// Initialize the Form Recognizer.
+	FormRecognizer recognizer = new FormRecognizer();
+	// Recognize the form asynchronously and get the output as a JSON string.
+	string outputJson = await recognizer.RecognizeFormAsJsonAsync(inputStream);
+	// Save the extracted JSON data into an output file.
+	File.WriteAllText("result.json", outputJson);
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports Syncfusion.SmartFormRecognizer
+
+' Open the input PDF file as a stream.
+Using inputStream As New FileStream("Input.pdf", FileMode.Open, FileAccess.ReadWrite)
+	' Initialize the Form Recognizer.
+	Dim recognizer As New FormRecognizer()
+	' Recognize the form asynchronously and get the output as a JSON string.
+	Dim outputJson As String = Await recognizer.RecognizeFormAsJsonAsync(inputStream)
+	' Save the extracted JSON data into an output file.
+	File.WriteAllText("result.json", outputJson)
+End Using
+
+{% endhighlight %}
+
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Form-Recognizer/Recognize-forms-using-JSON-async/.NET).
@@ -73,7 +143,7 @@ To recognize form data from a PDF or image and get the output as a `PdfLoadedDoc
 Example (synchronous):
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 using Syncfusion.SmartFormRecognizer;
 using Syncfusion.Pdf.Parsing;
@@ -92,6 +162,47 @@ using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileA
 }
 
 {% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.SmartFormRecognizer;
+using Syncfusion.Pdf.Parsing;
+
+// Open the input PDF file as a stream.
+using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.ReadWrite))
+{
+	// Initialize the Form Recognizer.
+	FormRecognizer recognizer = new FormRecognizer();
+	// Recognize the form and get the output as a PDF document.
+	PdfLoadedDocument document = recognizer.RecognizeFormAsPdfDocument(inputStream);
+	// Save the recognized document.
+	document.Save("Output.pdf");
+	// Close the document.
+	document.Close();
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports Syncfusion.SmartFormRecognizer
+Imports Syncfusion.Pdf.Parsing
+
+' Open the input PDF file as a stream.
+Using inputStream As New FileStream("Input.pdf", FileMode.Open, FileAccess.ReadWrite)
+	' Initialize the Form Recognizer.
+	Dim recognizer As New FormRecognizer()
+	' Recognize the form and get the output as a PDF document.
+	Dim document As PdfLoadedDocument = recognizer.RecognizeFormAsPdfDocument(inputStream)
+	' Save the recognized document.
+	document.Save("Output.pdf")
+	' Close the document.
+	document.Close()
+End Using
+
+{% endhighlight %}
+
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Form-Recognizer/Recognize-forms-using-Pdf/.NET).
@@ -99,7 +210,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 Example (asynchronous):
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 using Syncfusion.Pdf.Parsing;
 using Syncfusion.SmartFormRecognizer;
@@ -117,8 +228,48 @@ using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileA
 	document.Close();
 }
 
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.SmartFormRecognizer;
+
+// Open the input PDF file as a stream.
+using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.ReadWrite))
+{
+	// Initialize the Form Recognizer.
+	FormRecognizer recognizer = new FormRecognizer();
+	// Recognize the form asynchronously and get the output as a PDF document.
+	PdfLoadedDocument document = await recognizer.RecognizeFormAsPdfDocumentAsync(inputStream);
+	// Save the recognized document.
+	document.Save("Output.pdf");
+	// Close the document.
+	document.Close();
+}
 
 {% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.SmartFormRecognizer
+
+' Open the input PDF file as a stream.
+Using inputStream As New FileStream("Input.pdf", FileMode.Open, FileAccess.ReadWrite)
+    ' Initialize the Form Recognizer.
+    Dim recognizer As New FormRecognizer()
+    ' Recognize the form asynchronously and get the output as a PDF document.
+    Dim document As PdfLoadedDocument = Await recognizer.RecognizeFormAsPdfDocumentAsync(inputStream)
+    ' Save the recognized document.
+    document.Save("Output.pdf")
+    ' Close the document.
+    document.Close()
+End Using
+
+{% endhighlight %}
+
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Form-Recognizer/Recognize-forms-using-Pdf-async/.NET).
@@ -130,7 +281,7 @@ To recognize form data from a PDF or image and get the output as a `Stream` usin
 Example (synchronous):
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 using Syncfusion.SmartFormRecognizer;
 
@@ -152,6 +303,52 @@ using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileA
 }
 
 {% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.SmartFormRecognizer;
+
+// Open the input PDF file as a stream.
+using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.ReadWrite))
+{
+	// Initialize the Form Recognizer.
+	FormRecognizer recognizer = new FormRecognizer();
+	// Recognize the form and get the output as a PDF stream.
+	using (Stream outputStream = recognizer.RecognizeFormAsPdfStream(inputStream))
+	{
+		// Save the output PDF stream to a file.
+		using (FileStream fileStream = File.Create("Output.pdf"))
+		{
+			outputStream.Seek(0, SeekOrigin.Begin);
+			outputStream.CopyTo(fileStream);
+		}
+	}
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports Syncfusion.SmartFormRecognizer
+
+' Open the input PDF file as a stream.
+Using inputStream As New FileStream("D:/Input.pdf", FileMode.Open, FileAccess.ReadWrite)
+	' Initialize the Form Recognizer.
+	Dim recognizer As New FormRecognizer()
+
+	' Recognize the form and get the output as a PDF stream.
+	Using outputStream As Stream = recognizer.RecognizeFormAsPdfStream(inputStream)
+		' Save the output PDF stream to a file.
+		Using fileStream As FileStream = File.Create("D:/Output.pdf")
+			outputStream.Seek(0, SeekOrigin.Begin)
+			outputStream.CopyTo(fileStream)
+		End Using
+	End Using
+End Using
+
+{% endhighlight %}
+
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Form-Recognizer/Recognize-forms-using-Stream/.NET).
@@ -159,7 +356,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 Example (asynchronous):
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 using Syncfusion.SmartFormRecognizer;
 
@@ -180,8 +377,54 @@ using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileA
     }
 }
 
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.SmartFormRecognizer;
+
+// Open the input PDF file as a stream.
+using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.ReadWrite))
+{
+    // Initialize the Form Recognizer.
+    FormRecognizer recognizer = new FormRecognizer();
+    // Recognize the form asynchronously and get the output as a PDF stream.
+    using (Stream outputStream = await recognizer.RecognizeFormAsPdfStreamAsync(inputStream))
+    {
+        // Save the output PDF stream to a file.
+        using (FileStream fileStream = File.Create("Output.pdf"))
+        {
+            outputStream.Seek(0, SeekOrigin.Begin);
+            outputStream.CopyTo(fileStream);
+        }
+    }
+}
 
 {% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports Syncfusion.SmartFormRecognizer
+
+' Open the input PDF file as a stream.
+Using inputStream As New FileStream("Input.pdf", FileMode.Open, FileAccess.ReadWrite)
+    ' Initialize the Form Recognizer.
+    Dim recognizer As New FormRecognizer()
+
+    ' Recognize the form asynchronously and get the output as a PDF stream.
+    Using outputStream As Stream = Await recognizer.RecognizeFormAsPdfStreamAsync(inputStream)
+        ' Save the output PDF stream to a file.
+        Using fileStream As FileStream = File.Create("Output.pdf")
+            outputStream.Seek(0, SeekOrigin.Begin)
+            outputStream.CopyTo(fileStream)
+        End Using
+    End Using
+End Using
+
+
+{% endhighlight %}
+
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Form-Recognizer/Recognize-forms-using-Stream-async/.NET).
@@ -194,7 +437,7 @@ To recognize form data asynchronously with cancellation support using the [Recog
 Example with cancellation token (PDF stream):
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 using Syncfusion.SmartFormRecognizer;
 
@@ -212,6 +455,53 @@ using FileStream fileStream = File.Create(Path.GetFullPath("Output.pdf"));
 await resultStream.CopyToAsync(fileStream, token);
 
 {% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.SmartFormRecognizer;
+
+// Open the input PDF file as a stream.
+using FileStream inputStream = new FileStream(Path.GetFullPath("Input.pdf"), FileMode.Open, FileAccess.Read);
+// Initialize the Form Recognizer.
+FormRecognizer recognizer = new FormRecognizer();
+// Create a cancellation token that cancels after 5 seconds.
+using CancellationTokenSource cts = new CancellationTokenSource(TimeSpan.FromSeconds(5));
+CancellationToken token = cts.Token;
+// Recognize the form asynchronously and get the output as a PDF stream.
+using Stream resultStream = await recognizer.RecognizeFormAsPdfStreamAsync(inputStream, token);
+// Save the output PDF stream to a file.
+using FileStream fileStream = File.Create(Path.GetFullPath("Output.pdf"));
+await resultStream.CopyToAsync(fileStream, token);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports System.Threading
+Imports Syncfusion.SmartFormRecognizer
+
+' Open the input PDF file as a stream.
+Using inputStream As New FileStream(Path.GetFullPath("Input.pdf"), FileMode.Open, FileAccess.Read)
+	' Initialize the Form Recognizer.
+	Dim recognizer As New FormRecognizer()
+
+	' Create a cancellation token that cancels after 5 seconds.
+	Using cts As New CancellationTokenSource(TimeSpan.FromSeconds(5))
+		Dim token As CancellationToken = cts.Token
+
+		' Recognize the form asynchronously and get the output as a PDF stream.
+		Using resultStream As Stream = Await recognizer.RecognizeFormAsPdfStreamAsync(inputStream, token)
+	' Save the output PDF stream to a file.
+	Using fileStream As FileStream = File.Create(Path.GetFullPath("Output.pdf"))
+				Await resultStream.CopyToAsync(fileStream, token)
+	End Using
+		End Using
+	End Using
+End Using
+
+{% endhighlight %}
+
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Form-Recognizer/Asyncvariants-with-CancellationToken/.NET).
@@ -227,52 +517,124 @@ Additionally, it supports restricting processing to specific pages through an op
 To disable textbox field detection in the [FormRecognizeOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizer.html#Syncfusion_SmartFormRecognizer_FormRecognizer_FormRecognizeOptions) of the [FormRecognizer](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizer.html) class, refer to the following code example.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 FormRecognizer recognizer = new FormRecognizer();
 // Disable textbox detection
 recognizer.FormRecognizeOptions.DetectTextboxes = false;
 
 {% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+FormRecognizer recognizer = new FormRecognizer();
+// Disable textbox detection
+recognizer.FormRecognizeOptions.DetectTextboxes = false;
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Initialize the Form Recognizer.
+Dim recognizer As New FormRecognizer()
+' Disable textbox detection.
+recognizer.FormRecognizeOptions.DetectTextboxes = False
+
+{% endhighlight %}
+
 {% endtabs %}
 
 ### Disable Checkbox Detection
 To disable checkbox detection in the [FormRecognizeOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizer.html#Syncfusion_SmartFormRecognizer_FormRecognizer_FormRecognizeOptions) of the [FormRecognizer](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizer.html) class, refer to the following code example.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 FormRecognizer recognizer = new FormRecognizer();
 // Disable checkbox detection
 recognizer.FormRecognizeOptions.DetectCheckboxes = false;
 
 {% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+FormRecognizer recognizer = new FormRecognizer();
+// Disable checkbox detection
+recognizer.FormRecognizeOptions.DetectCheckboxes = false;
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Initialize the Form Recognizer.
+Dim recognizer As New FormRecognizer()
+' Disable checkbox detection.
+recognizer.FormRecognizeOptions.DetectCheckboxes = False
+
+{% endhighlight %}
+
 {% endtabs %}
 
 ### Disable RadioButtons Detection
 To disable radio button detection in the [FormRecognizeOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizer.html#Syncfusion_SmartFormRecognizer_FormRecognizer_FormRecognizeOptions) of the [FormRecognizer](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizer.html) class, refer to the following code example.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 FormRecognizer recognizer = new FormRecognizer();
 // Disable radio button detection
 recognizer.FormRecognizeOptions.DetectRadioButtons = false;
 
 {% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+FormRecognizer recognizer = new FormRecognizer();
+// Disable radio button detection
+recognizer.FormRecognizeOptions.DetectRadioButtons = false;
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Initialize the Form Recognizer.
+Dim recognizer As New FormRecognizer()
+' Disable radio button detection.
+recognizer.FormRecognizeOptions.DetectRadioButtons = False
+
+{% endhighlight %}
+
 {% endtabs %}
 
 ### Disable Signature Detection
 To disable signature field detection in the [FormRecognizeOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizer.html#Syncfusion_SmartFormRecognizer_FormRecognizer_FormRecognizeOptions) of the [FormRecognizer](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizer.html) class, refer to the following code example.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 FormRecognizer recognizer = new FormRecognizer();
 // Disable signature detection
 recognizer.FormRecognizeOptions.DetectSignatures = false;
 
 {% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+FormRecognizer recognizer = new FormRecognizer();
+// Disable signature detection
+recognizer.FormRecognizeOptions.DetectSignatures = false;
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Initialize the Form Recognizer.
+Dim recognizer As New FormRecognizer()
+' Disable signature detection.
+recognizer.FormRecognizeOptions.DetectSignatures = False
+
+{% endhighlight %}
+
 {% endtabs %}
 
 ### Set Confidence Threshold
@@ -280,13 +642,31 @@ recognizer.FormRecognizeOptions.DetectSignatures = false;
 To set a minimum confidence score for detected form elements using the [ConfidenceThreshold](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizeOptions.html#Syncfusion_SmartFormRecognizer_FormRecognizeOptions_ConfidenceThreshold) in the [FormRecognizeOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizer.html#Syncfusion_SmartFormRecognizer_FormRecognizer_FormRecognizeOptions) of the [FormRecognizer](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizer.html) class, refer to the following code example.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 FormRecognizer recognizer = new FormRecognizer();
 // Set a ConfidenceThreshold
 recognizer.FormRecognizeOptions.ConfidenceThreshold = 0.9;
 
 {% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+FormRecognizer recognizer = new FormRecognizer();
+// Set a ConfidenceThreshold
+recognizer.FormRecognizeOptions.ConfidenceThreshold = 0.9;
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Initialize the Form Recognizer.
+Dim recognizer As New FormRecognizer()
+' Set a ConfidenceThreshold.
+recognizer.FormRecognizeOptions.ConfidenceThreshold = 0.9
+
+{% endhighlight %}
+
 {% endtabs %}
 
 ### Set Page Range
@@ -294,7 +674,7 @@ recognizer.FormRecognizeOptions.ConfidenceThreshold = 0.9;
 To specify which pages to process using the **PageRange** in the [FormRecognizeOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizer.html#Syncfusion_SmartFormRecognizer_FormRecognizer_FormRecognizeOptions) of the [FormRecognizer](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizer.html) class, refer to the following code example.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 FormRecognizer recognizer = new FormRecognizer();
 // Set a single page range – detects only the specified page
@@ -304,4 +684,27 @@ recognizer.FormRecognizeOptions.PageRange = new int[,] { { 3 }, { 8 } };
 recognizer.FormRecognizeOptions.PageRange = new int[,] { { 3, 8 } };
 
 {% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+FormRecognizer recognizer = new FormRecognizer();
+// Set a single page range – detects only the specified page
+recognizer.FormRecognizeOptions.PageRange = new int[,] { { 3 }, { 8 } };
+
+// Set a page range – detects content between the specified start and end page
+recognizer.FormRecognizeOptions.PageRange = new int[,] { { 3, 8 } };
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Initialize the Form Recognizer.
+Dim recognizer As New FormRecognizer()
+' Set a single page range – detects only the specified page.
+recognizer.FormRecognizeOptions.PageRange = New Integer(,) {{3}, {8}}
+' Set a page range – detects content between the specified start and end page.
+recognizer.FormRecognizeOptions.PageRange = New Integer(,) {{3, 8}}
+
+{% endhighlight %}
+
 {% endtabs %}

@@ -18,7 +18,7 @@ The Syncfusion<sup>&reg;</sup> Smart Data Extractor is a .NET library used to ex
 **Prerequisites**:
 
 * Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-* Install Visual Studio: Download and install Visual Studio from the [official website](https://code.visualstudio.com/download).
+* Install Visual Studio: Download and install Visual Studio from the [official website](https://code.visualstudio.com/download?_exp_download=fb315fc982).
 
 Step 1: Create a new C# Console Application project.
 ![Console sample creation](GettingStarted_images/ConsoleCreation.png)
@@ -30,7 +30,7 @@ Step 3: Install the [Syncfusion.SmartDataExtractor.Net.Core](https://www.nuget.o
 ![NET Core NuGet package](GettingStarted_images/ConsoleCoreNuget.png)
 
 Step 4: Include the following namespaces in the *Program.cs* file.
-
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using System.IO;
@@ -38,12 +38,12 @@ using Syncfusion.Pdf.Parsing;
 using Syncfusion.SmartDataExtractor;
 
 {% endhighlight %}
-
+{% endtabs %}
 Step 5: Include the following code snippet in *Program.cs* to Extract data from an PDF file.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C#" %}
  
 //Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
@@ -74,7 +74,7 @@ Click the Start button (green arrow) or press F5 to run the app.
 **Prerequisites**:
 
 * Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-* Install Visual Studio Code: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
+* Install Visual Studio Code: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download?_exp_download=fb315fc982).
 * Install C# Extension for VS Code: Open Visual Studio Code, go to the Extensions view (Ctrl+Shift+X), and search for 'C#'. Install the official [C# extension provided by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
 
 
@@ -98,7 +98,7 @@ dotnet add package Syncfusion.SmartDataExtractor.Net.Core
 ```
 
 Step 5: Include the following namespaces in the *Program.cs* file.
-
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using System.IO;
@@ -106,9 +106,9 @@ using Syncfusion.Pdf.Parsing;
 using Syncfusion.SmartDataExtractor;
 
 {% endhighlight %}
-
+{% endtabs %}
 Step 6: Include the following code snippet in *Program.cs* to Extract data from an PDF file.
-
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
  
 //Open the input PDF file as a stream.
@@ -123,7 +123,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 }
 
 {% endhighlight %}
-
+{% endtabs %}
 Step 7: Build the project.
 
 Run the following command in terminal to build the project.
@@ -156,7 +156,7 @@ The following steps illustrates Extracting Data from PDF document in console app
 **Prerequisites**:
 
 * Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-* Install Visual Studio: Download and install Visual Studio from the [official website](https://code.visualstudio.com/download).
+* Install Visual Studio: Download and install Visual Studio from the [official website](https://code.visualstudio.com/download?_exp_download=fb315fc982).
 
 **Steps to Extract Data from PDF using .NET Framework**
 
@@ -170,7 +170,7 @@ Step 3: Install the [Syncfusion.SmartDataExtractor.WinForms](https://www.nuget.o
 ![NET Framework NuGet package](GettingStarted_images/ConsoleNuget_DataExtractor.png)
 
 Step 4: Include the following namespaces in the *Program.cs*.
-
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using System.IO;
@@ -178,9 +178,9 @@ using Syncfusion.Pdf.Parsing;
 using Syncfusion.SmartDataExtractor;
 
 {% endhighlight %}
-
+{% endtabs %}
 Step 5: Include the following code sample in *Program.cs* to Extract data from an PDF file.
-
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Open the input PDF file as a stream.
@@ -195,7 +195,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 }
 
 {% endhighlight %}
-
+{% endtabs %}
 Step 6: Build the project.
 
 Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
