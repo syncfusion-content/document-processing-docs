@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to clear the "Web-service is not listening" to error | Syncfusion
+title: How to resolve the "Web-service is not listening" to error | Syncfusion
 description: Learn here all about How to clear the "Web-service is not listening" to error in React Pdfviewer component of Syncfusion Essential JS 2 and more.
 control: How to clear the "Web-service is not listening" to error
 platform: document-processing
