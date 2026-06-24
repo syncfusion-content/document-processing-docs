@@ -167,5 +167,5 @@ Upon executing the program, the **PowerPoint Presentation** will be generated as
 
 ![ASP .NET Core WEB API output PPTX](ASP-NET-Core-WEB-API-images/ASP-NET-Core-Web-API-Output-Open-save.png)
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) features. 
+Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) features. 
 
