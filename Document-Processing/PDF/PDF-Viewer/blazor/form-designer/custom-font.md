@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom Font Support for Form Designer in SfPdfViewer | Syncfusion
-description: Learn how to integrate the custom font collection for form fields in the Blazor SfPdfViewer component.
+description: Learn how to integrate the custom font collection for form fields in the Syncfusion Blazor SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

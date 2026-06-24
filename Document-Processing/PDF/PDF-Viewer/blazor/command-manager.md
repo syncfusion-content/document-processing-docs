@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Command Manager in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to configure the Command Manager to add custom keyboard shortcuts and handle command execution in the Blazor PDF Viewer.
+description: Learn how to configure the Command Manager to add custom keyboard shortcuts and handle command execution in the Syncfusion Blazor PDF Viewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

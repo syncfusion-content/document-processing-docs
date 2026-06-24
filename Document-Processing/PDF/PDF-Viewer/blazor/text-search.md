@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Text Search in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to search text in the Blazor SfPdfViewer, enable or disable the search, and perform programmatic search operations.
+description: Learn how to search text in the Syncfusion Blazor SfPdfViewer, enable or disable the search, and perform programmatic search operations.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

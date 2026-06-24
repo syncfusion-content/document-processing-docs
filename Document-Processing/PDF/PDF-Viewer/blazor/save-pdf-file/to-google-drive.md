@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Save PDF files to Google Drive in Blazor SfPdfViewer | Syncfusion
-description: Learn how to save PDF files to Google Drive using the Blazor SfPdfViewer, including required setup, and a working example.
+description: Learn how to save PDF files to Google Drive using the Syncfusion Blazor SfPdfViewer, including required setup, and a working example.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

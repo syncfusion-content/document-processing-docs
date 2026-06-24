@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Perform print in same window using SfPdfViewer | Syncfusion
-description: Learn how to print in the same window in the Blazor SfPdfViewer using PrintMode, with notes on browser behavior and pop-up blockers.
+description: Learn how to print in the same window in the Syncfusion Blazor SfPdfViewer using PrintMode, with notes on browser behavior and pop-up blockers.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

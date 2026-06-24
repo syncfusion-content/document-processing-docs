@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form designer in mobile view in SfPdfViewer | Syncfusion
-description: Learn how to Design and edit PDF form fields in mobile view in the Blazor SfPdfViewer component.
+description: Learn how to Design and edit PDF form fields in mobile view in the Syncfusion Blazor SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

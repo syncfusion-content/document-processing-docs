@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Save PDF files to Box storage in SfPdfViewer Component | Syncfusion
-description: Learn how to save PDF files to Box cloud file storage using the Blazor SfPdfViewer component, including setup, and upload workflow.
+description: Learn how to save PDF files to Box cloud file storage using the Syncfusion Blazor SfPdfViewer component, including setup, and upload workflow.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

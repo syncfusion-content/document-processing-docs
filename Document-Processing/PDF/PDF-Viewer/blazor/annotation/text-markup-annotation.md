@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Text markup annotations in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to add, edit, and delete text markup annotations—highlight, underline, strikethrough, and squiggly—in the Blazor SfPdfViewer component.
+description: Learn how to add, edit, and delete text markup annotations—highlight, underline, strikethrough, and squiggly—in the Syncfusion Blazor SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
