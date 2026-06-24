@@ -1,6 +1,6 @@
 ---
 title: Improving Performance | Syncfusion
-description: This section illustrates about improving the performance in Syncfusion Excel Library (Essential XlsIO).
+description: This section illustrates about improving the performance in .NET Excel Library (Essential XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -540,4 +540,5 @@ validation.IsListInFormula = False
 validation.EndUpdate()
 {% endhighlight %}
 {% endtabs %}  
+
 
