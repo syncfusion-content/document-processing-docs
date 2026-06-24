@@ -9,7 +9,7 @@ documentation: ug
 
 # Working with Styles in Blazor DocumentEditor Component
 
-Styles are useful for applying a set of formatting consistently throughout the document. In [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor), styles are created and added to a document programmatically or via the built-in Styles dialog.
+Styles are useful for applying a set of formatting consistently throughout the document. In document editor, styles are created and added to a document programmatically or via the built-in Styles dialog.
 
 ## Styles definition overview
 
@@ -156,4 +156,4 @@ object paragraphStyles = await container.DocumentEditor.GetStylesAsync(StyleType
 object characterStyles = await container.DocumentEditor.GetStylesAsync(StyleType.Character);
 ```
 
-You can refer to our [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Word Processor example](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities) to know how to render and configure the document editor.
+You can refer to our [Blazor Word Processor](https://www.syncfusion.com/blazor-components/blazor-word-processor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Word Processor example](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities) to know how to render and configure the document editor.
