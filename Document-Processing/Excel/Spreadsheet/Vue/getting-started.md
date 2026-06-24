@@ -44,22 +44,20 @@ npm install @syncfusion/ej2-vue-spreadsheet --save
 
 ## Add CSS references
 
-Add the following Spreadsheet and dependent component style references.
+Add the following Spreadsheet and dependent component CSS styles in the **\<style\>** section.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
-<style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-vue-spreadsheet/styles/tailwind3.css";
-</style>
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-spreadsheet/styles/tailwind3.css";
 
 {% endhighlight %}
 {% endtabs %}

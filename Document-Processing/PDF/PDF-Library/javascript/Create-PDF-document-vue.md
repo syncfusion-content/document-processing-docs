@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create or Generate PDF file in Vue | Syncfusion
-description: Learn how to create a PDF file in Vue with easy steps using Syncfusion JavaScript PDF library without depending on Adobe
+description: Learn how to create a PDF file in Vue with easy steps using JavaScript PDF Library without depending on Adobe
 control: PDF
 platform: document-processing
 documentation: ug
@@ -10,9 +10,9 @@ keywords: pdf, script, vue, javascript
 
 # Create or Generate PDF file in Vue application
 
-The Syncfusion<sup>&reg;</sup> JavaScript PDF library is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, fill forms, and secure PDF files.
+The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) is used to create, read, and edit PDF documents. The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) also offers functionality to merge, split, stamp, fill forms, and secure PDF files.
 
-This guide explains how to integrate the JavaScript PDF library into an Vue application.
+This guide explains how to integrate the [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) into an Vue application.
 
 ## Setting up the Vue 2 project
 
@@ -38,11 +38,11 @@ When creating a new project, choose the option `Default ([Vue 2] babel, es-lint)
 
 Once the `quick start` project is set up with default settings, proceed to add Syncfusion<sup>&reg;</sup> components to the project.
 
-* **Installing Syncfusion<sup>&reg;</sup> JavaScript PDF package**
+* **Installing JavaScript PDF package**
 
 All Syncfusion JS 2 packages are published in `npmjs.com` registry.
 
-* To install the PDF library, use the following command.
+* To install the [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library), use the following command.
 
 ```bash
 npm install @syncfusion/ej2-pdf --save
