@@ -39,15 +39,15 @@ Add the following Spreadsheet and dependent component style references.
 {% tabs %}
 {% highlight html tabtitle="~/src/style.css" %}
 
-  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-vue-spreadsheet/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-spreadsheet/styles/tailwind3.css";
 
 {% endhighlight %}
 {% endtabs %}
@@ -101,7 +101,7 @@ Add the Spreadsheet Editor component to the **\<template\>** section in the `src
 
 {% tabs %}
 
-{% highlight vue %}
+{% highlight vue tabtitle="~/src/App.vue" %}
 
 <ejs-spreadsheet :openUrl="openUrl" :saveUrl="saveUrl"></ejs-spreadsheet>
 

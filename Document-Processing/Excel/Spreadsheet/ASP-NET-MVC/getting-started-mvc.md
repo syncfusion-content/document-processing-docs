@@ -40,9 +40,13 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC controls are ava
 
 Add **Syncfusion.EJ2** namespace reference to the **\<namespaces\>** section in the `~/Views/Web.config` file.
 
-```
+{% tabs %}
+{% highlight xml tabtitle="~/Views/Web.config" %}
+
 <add namespace="Syncfusion.EJ2"/>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Add stylesheet and script resources
 

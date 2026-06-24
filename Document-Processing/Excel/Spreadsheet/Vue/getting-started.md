@@ -70,7 +70,7 @@ In the `src/App.vue` file, update the **\<script\>** section to import the Sprea
 
 {% tabs %}
 
-{% highlight vue %}
+{% highlight vue tabtitle="~/src/App.vue" %}
 
 import { SpreadsheetComponent } from "@syncfusion/ej2-vue-spreadsheet";
 
@@ -97,7 +97,7 @@ Add the Spreadsheet Editor component to the **\<template\>** section in the `src
 
 {% tabs %}
 
-{% highlight vue %}
+{% highlight vue tabtitle="~/src/App.vue" %}
 
 <ejs-spreadsheet :openUrl="openUrl" :saveUrl="saveUrl"></ejs-spreadsheet>
 

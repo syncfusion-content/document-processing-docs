@@ -52,7 +52,9 @@ npm install @syncfusion/ej2-angular-spreadsheet@ngcc --save
 
 Add the following Spreadsheet and dependent component style references to the `[src/styles.css]` file.
 
-```css
+{% tabs %}
+{% highlight css tabtitle="styles.css" %}
+
 @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
 @import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
 @import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
@@ -63,7 +65,9 @@ Add the following Spreadsheet and dependent component style references to the `[
 @import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
 @import '../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css';
 @import '../node_modules/@syncfusion/ej2-angular-spreadsheet/styles/tailwind3.css';
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 > **Note:** Refer to the [Themes topic](https://ej2.syncfusion.com/angular/documentation/appearance/overview) to learn more about built-in themes and different ways to refer to themes in an Angular project.
 
