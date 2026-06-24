@@ -10,7 +10,7 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 # Working with PDF coordinate systems in .NET MAUI PDF Viewer
 
-[.NET MAUI PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/net-maui-pdf-viewer) allows users to obtain the PDF page coordinates relative to the PDF Viewer’s client coordinates and vice versa. It also allows you to obtain the scroll point relative to the PDF page coordinates and bring the given region into view.
+PDF Viewer allows users to obtain the PDF page coordinates relative to the PDF Viewer’s client coordinates and vice versa. It also allows you to obtain the scroll point relative to the PDF page coordinates and bring the given region into view.
 
 ## Client rectangle
 
