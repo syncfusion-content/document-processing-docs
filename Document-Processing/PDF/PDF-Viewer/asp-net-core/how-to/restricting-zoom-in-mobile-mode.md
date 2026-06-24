@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Restrict zoom percentage on mobile devices in ASP.NET Core | Syncfusion
+title: Restriction of zoom percentage on mobile devices | Syncfusion
 description: Learn how to limit the maxZoom and minZoom values in the Syncfusion ASP.NET Core PDF Viewer to control zoom levels on mobile devices.
 platform: document-processing
 control: PDF Viewer
