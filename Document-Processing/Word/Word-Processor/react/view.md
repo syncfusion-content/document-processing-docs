@@ -20,6 +20,10 @@ Document Editor Container component allows you to change the view to web layout 
 
 >Note: Default value of [`layoutType`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container#layouttype) in Document Editor Container component is [`Pages`](https://ej2.syncfusion.com/react/documentation/api/document-editor/layoutType/).
 
+### Online Demo
+
+Explore how to view Word documents in web layout using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/web-layout).
+
 ## Ruler
 
 Using ruler we can refer to setting specific margins, tab stops, or indentations within a document to ensure consistent formatting in Document Editor.
@@ -41,6 +45,10 @@ The following example illustrates how to enable ruler in Document Editor
 {% previewsample "/document-processing/code-snippet/document-editor/react/ruler-cs1" %}
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+
+### Online Demo
+
+Explore how to use the ruler in the React Document Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/ruler).
 
 ## Heading Navigation Pane 
 
@@ -74,3 +82,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 ```
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+
+### Online Demo
+
+Explore how to navigate through headings in Word documents using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/heading-navigation).

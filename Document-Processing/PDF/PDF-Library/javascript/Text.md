@@ -1,11 +1,11 @@
 ---
-title: Text in JavaScript PDF library | Syncfusion
-description: This section explains how to add text to a PDF by using different types of fonts, including TrueType fonts and standard fonts, with the JavaScript PDF library
+title: Text in JavaScript PDF Library | Syncfusion
+description: This section explains how to add text to a PDF by using different types of fonts, including TrueType fonts and standard fonts, with the JavaScript PDF Library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Text in JavaScript PDF library
+# Text in JavaScript PDF Library
 
 The PDF provides support to add and format text in PDF documents using various font types, including TrueType and standard fonts, enabling precise control over text appearance and layout.
 
@@ -280,7 +280,7 @@ format.characterSpacing = 1;               // Set character spacing
 // Set font
 let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
 // Draw text
-page.graphics.drawString('Syncfusion JavaScript PDF library', font, { x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
+page.graphics.drawString('JavaScript PDF Library', font, { x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -298,7 +298,7 @@ format.characterSpacing = 1; // Set character spacing
 // Set font
 var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular);
 // Draw text
-page.graphics.drawString('Syncfusion JavaScript PDF library', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }), format);
+page.graphics.drawString('JavaScript PDF Library', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }), format);
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -411,7 +411,7 @@ document.destroy();
 
 ## Embedded font
 
-This example shows how to embed fonts using [embedFont()](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument#embedfont) method of the [PdfDocument](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument) to ensure consistent text rendering across all platforms. The library supports embedding [PdfStandardFont](https://ej2.syncfusion.com/documentation/api/pdf/pdfstandardfont), [PdfCjkStandardFont](https://ej2.syncfusion.com/documentation/api/pdf/pdfcjkstandardfont), and [PdfTrueTypeFont](https://ej2.syncfusion.com/documentation/api/pdf/pdftruetypefont) for reliable Unicode text display. Additionally, using embedded fonts helps reduce overall PDF size, since the font dictionary is not duplicated for each usage—ensuring cleaner and more efficient output.
+This example shows how to embed fonts using [embedFont()](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument#embedfont) method of the [PdfDocument](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument) to ensure consistent text rendering across all platforms. The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) supports embedding [PdfStandardFont](https://ej2.syncfusion.com/documentation/api/pdf/pdfstandardfont), [PdfCjkStandardFont](https://ej2.syncfusion.com/documentation/api/pdf/pdfcjkstandardfont), and [PdfTrueTypeFont](https://ej2.syncfusion.com/documentation/api/pdf/pdftruetypefont) for reliable Unicode text display. Additionally, using embedded fonts helps reduce overall PDF size, since the font dictionary is not duplicated for each usage—ensuring cleaner and more efficient output.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
