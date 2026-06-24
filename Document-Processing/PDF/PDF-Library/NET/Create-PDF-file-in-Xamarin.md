@@ -148,30 +148,43 @@ Step 9(i): Create a new XML file with the name of provider_paths.xml under the A
 Eg: Resources/xml/provider_paths.xml
 
 {% tabs %}
-{% highlight XAML %}
-<?xml version="1.0" encoding="UTF-8" ?>
+{% highlight XML %}
+
+<?xml version="1.0" encoding="UTF-8"?>
 <paths xmlns:android="http://schemas.android.com/apk/res/android">
-<external-path name="external_files" path="."/>
+    <external-path
+        name="external_files"
+        path="." />
 </paths>
+
 {% endhighlight %}
 {% endtabs %}
 
 Step 9(ii): Add the following code to the AndroidManifest.xml file located under Properties/AndroidManifest.xml.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight XML %}
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname. GettingStarted ">
-<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="27" />
-<application android:label=" GettingStarted.Android" android:requestLegacyExternalStorage="true">
-<provider android:name="android.support.v4.content.FileProvider"
-android:authorities="${applicationId}.provider"
-android:exported="false"
-android:grantUriPermissions="true">
-<meta-data android:name="android.support.FILE_PROVIDER_PATHS"
-android:resource="@xml/provider_paths" />
-</provider>
-</application>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          android:versionCode="1"
+          android:versionName="1.0"
+          package="com.companyname. GettingStarted ">
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="27" />
+    <application
+        android:label=" GettingStarted.Android"
+        android:requestLegacyExternalStorage="true">
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
 </manifest>
 {% endhighlight %}
 {% endtabs %}
@@ -181,7 +194,7 @@ android:resource="@xml/provider_paths" />
 * Enable the `android:requestLegacyExternalStorage` attribute in the AndroidManifest.xml file when required.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight XML %}
 
 <application android:label=" PDFXamarinSample.Android" android:requestLegacyExternalStorage="true">
 
@@ -191,7 +204,7 @@ android:resource="@xml/provider_paths" />
 * User permission for read or write external storage.Add the following code to the AndroidManifest.xml file located under Properties/AndroidManifest.xml.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight XML %}
 
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
 </uses-permission>

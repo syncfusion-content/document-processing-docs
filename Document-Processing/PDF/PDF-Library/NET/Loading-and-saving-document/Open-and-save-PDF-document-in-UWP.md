@@ -25,7 +25,7 @@ Step 3: Create button in `MainPage.Xaml` page using below code example and creat
 
 {% tabs %}
 
-{% highlight XML %}
+{% highlight XAML %}
 
 <Grid>
     <Button Content="OpenAndSavePDF" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="150" Height="100" Click="Button_Click" />

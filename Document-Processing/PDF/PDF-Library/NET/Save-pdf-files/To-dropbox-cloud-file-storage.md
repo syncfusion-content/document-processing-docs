@@ -24,7 +24,7 @@ Step 3: Install the [Syncfusion.Pdf.Net.Core ](https://www.nuget.org/packages/Sy
 Step 4: Include the following namespaces in the Program.cs file.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf;
@@ -38,7 +38,7 @@ using Syncfusion.Drawing;
 Step 5: Add the below code example to create a simple PDF and save in Dropbox Cloud Storage.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C#" %}
 
 // Create a new PDF document.
 PdfDocument doc = new PdfDocument();

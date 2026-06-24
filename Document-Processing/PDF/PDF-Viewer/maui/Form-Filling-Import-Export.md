@@ -23,7 +23,7 @@ The following formats are supported for both import and export:
 | JSON | Custom format, compatible with Syncfusion PDF Viewers (WPF, Flutter, JavaScript, etc.). |
 | XML | Custom format, compatible with Syncfusion PDF Viewers (WPF, Flutter, JavaScript, etc.). |
 
-The required format can be selected from the [DataFormat](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.DataFormat.html) enumeration.
+The required format can be selected from the [DataFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.DataFormat.html) enumeration.
 
 N> XFDF and FDF are standard formats compatible with global PDF viewers. JSON and XML are Syncfusion-specific formats for cross-platform use within Syncfusion products only.
 

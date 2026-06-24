@@ -15,7 +15,7 @@ To quickly start converting a Word document to Markdown and vice versa, please c
 
 ## Assemblies and NuGet packages required
 
-Refer to the following links for assemblies and NuGet packages required based on platforms to convert a Word document to a Markdown file using the .NET Word Library (DocIO).
+Refer to the following links for assemblies and NuGet packages required based on platforms to convert a Word document to a Markdown file using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO).
 
 * [Word to Markdown conversion assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required)
 * [Word to Markdown conversion NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
@@ -670,4 +670,4 @@ The following table shows the list of Word document elements supported in Word t
 
 ## Online Demo
 
-* Explore how to convert the Word document to Markdown using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/wordtomarkdown#/tailwind).
+* Explore how to convert the Word document to Markdown using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/wordtomarkdown#/tailwind).
