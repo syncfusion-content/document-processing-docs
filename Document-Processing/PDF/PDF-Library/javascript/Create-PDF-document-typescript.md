@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create or Generate PDF file in TypeScript | Syncfusion
-description: Learn how to create a PDF file in TypeScript with easy steps using Syncfusion TypeScript PDF library without depending on Adobe
+description: Learn how to create a PDF file in TypeScript with easy steps using JavaScript PDF Library without depending on Adobe
 platform: document-processing
 control: PDF
 documentation: ug
@@ -10,15 +10,15 @@ keywords: pdf, script, typescript
 
 # Create or Generate PDF file in TypeScript
 
-The Syncfusion<sup>&reg;</sup> [TypeScript PDF library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, fill forms, and secure PDF files.
+The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) is used to create, read, and edit PDF documents. The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) also offers functionality to merge, split, stamp, fill forms, and secure PDF files.
 
-This guide explains how to integrate the TypeScript PDF library into an TypeScript application.
+This guide explains how to integrate the [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) into an TypeScript application.
 
 ## Installing the Syncfusion TypeScript PDF package
 
 All Syncfusion JS 2 packages are published in `npmjs.com` registry.
 
-Step1: To install the PDF library, use the following command.
+* To install the [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library), use the following command.
 
 ```bash
 npm install @syncfusion/ej2-pdf --save
@@ -26,14 +26,18 @@ npm install @syncfusion/ej2-pdf --save
 N> For image and data extraction features, you need to install the `@syncfusion/ej2-pdf-data-extract` package as an add-on.
 Ensure that your application includes an `ej2-pdf-lib` folder within a publicly accessible static directory (such as wwwroot, public, or dist). This folder must contain the required `.js` and `.wasm` files needed for image and data extraction. This setup is not required for **basic PDF creation**.
 
-Step2: The following list of dependencies are required to use the `TypeScript PDF library` component in your application.
+## Dependencies
+
+The following list of dependencies are required to use the [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) component in your application.
 
 ```bash
 |-- @syncfusion/ej2-compression
 |-- @syncfusion/ej2-base
 ```
 
-Step3: Add a simple button to `index.html` and attach a click handler that uses the TypeScript PDF API to create a new PDF document.
+## Create a PDF document using TypeScript
+
+* Add a simple button to `index.html` and attach a click handler that uses the TypeScript PDF API to create a new PDF document.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -85,7 +89,9 @@ document.getElementById('normalButton').onclick = (): void => {
 {% endhighlight %}
 {% endtabs %}
 
-Step4: The quickstart project is configured to compile and run in the browser. Use the following command to start the application:
+* **Run the application**
+
+The quickstart project is configured to compile and run in the browser. Use the following command to start the application:
 
 ```bash
 npm start
@@ -94,7 +100,3 @@ npm start
 By executing the program, you will get the PDF document as follows.
 
 ![Output PDF document](Getting_started_images/Output.png)
-
-Click [here](https://www.syncfusion.com/document-sdk/javascript-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
-
-An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/javascript-es5/#/tailwind3/pdf/default.html) in Typescript.

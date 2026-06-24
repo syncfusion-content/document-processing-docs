@@ -246,6 +246,9 @@ You can use the `addItem` API in the Document Editor ribbon to add a new item. A
 
 ```
 
+## Online Demo
+
+Explore how to customize the ribbon in the ASP.NET MVC Document Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/ribboncustomization#/tailwind3).
 
 ## Related Links
 

@@ -40,7 +40,7 @@ SFDT is suitable in the following scenarios:
 
 ## Can SFDT be converted back to DOCX?
 
-Yes. You can easily convert SFDT back to DOCX or other [supported formats](../supported-fileformats.md) in the Document Editor.
+Yes. You can easily convert SFDT back to DOCX or other [supported formats](../supported-fileformats) in the Document Editor.
 
 ## Are any features unavailable when using SFDT?
 

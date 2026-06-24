@@ -41,7 +41,7 @@ this.documentEditor.selection.goToFooter();
 
 Link to previous is enabled by default when document has more than one section. If you're using different headers and footers such as different first page or different odd and even pages, they can't be linked together because they're all separate.
 
-Before setting or getting the link to previous value, use the ['goToHeader'](https://ej2.syncfusion.com/angular/documentation/api/document-editor/selection/#gotoheader) or ['goToFooter'](https://ej2.syncfusion.com/angular/documentation/api/document-editor/selection/#gotofooter) API to move the current selection to the header or footer region.
+Before setting or getting the link to previous value, use the ['goToHeader'](https://ej2.syncfusion.com/angular/documentation/api/document-editor/selection#gotoheader) or ['goToFooter'](https://ej2.syncfusion.com/angular/documentation/api/document-editor/selection#gotofooter) API to move the current selection to the header or footer region.
 
 You can get or set the default header footer link to previous value of a section at cursor position by using the following sample code.
 
@@ -84,6 +84,10 @@ Move the selection to the document body from header or footer region by double c
 ```typescript
 this.documentEditor.selection.closeHeaderFooter();
 ```
+
+## Online Demo
+
+Explore how to add and customize headers and footers in Word documents using the Angular Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/headers-footers).
 
 ## See Also
 
