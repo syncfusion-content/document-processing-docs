@@ -177,8 +177,6 @@ dotnet run
 {% endhighlight %}
 {% endtabs %}
 
-N> Looking for the full JavaScript PDF Viewer component overview, features, pricing, and documentation? Visit the [JavaScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started-with-server-backed) page.
-
 ## See also
 
 - [Getting started with Standalone JavaScript PDF Viewer](./getting-started)

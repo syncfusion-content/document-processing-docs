@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Configure extractTextOption in JavaScript PDF Viewer | Syncfusion
-description: Learn how to use the extractTextOption property in the JavaScript PDF Viewer to control text extraction and memory usage.
+description: Learn how to use the extractTextOption property in the Syncfusion JavaScript PDF Viewer to control text extraction and memory usage.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Use findTextAsync in JavaScript PDF Viewer | Syncfusion
-description: Learn how to search text asynchronously with findTextAsync in the JavaScript PDF Viewer and retrieve match bounds.
+description: Learn how to search text asynchronously with findTextAsync in the Syncfusion JavaScript PDF Viewer and retrieve match bounds.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

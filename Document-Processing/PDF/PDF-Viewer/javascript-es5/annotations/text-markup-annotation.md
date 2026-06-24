@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Text markup annotation in JavaScript PDF Viewer | Syncfusion
-description: Learn to add, edit, delete, and customize text markup annotations like highlight, underline, and squiggly in JavaScript PDF Viewer.
+description: Learn to add, edit, delete, and customize text markup annotations like highlight, underline, and squiggly in Syncfusion JavaScript PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

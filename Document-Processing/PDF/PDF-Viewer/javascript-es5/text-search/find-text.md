@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Find Text in JavaScript PDF Viewer control | Syncfusion
-description: Learn how to configure text search using find text and run programmatic searches in the JavaScript PDF Viewer.
+description: Learn how to configure text search using find text and run programmatic searches in the Syncfusion JavaScript PDF Viewer.
 platform: document-processing
 control: Text search
 documentation: ug

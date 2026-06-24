@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Page Navigation in JavaScript PDF Viewer control | Syncfusion
-description: Explore how to navigate pages in the JavaScript PDF Viewer control using built-in options for seamless document viewing.
+description: Explore how to navigate pages in the Syncfusion JavaScript PDF Viewer control using built-in options for seamless document viewing.
 platform: document-processing
 control: PDF Viewer
 documentation: ##DomainURL##

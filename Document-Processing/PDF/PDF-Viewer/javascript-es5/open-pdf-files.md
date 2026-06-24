@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open PDF files in JavaScript PDF Viewer | Syncfusion
-description: Learn how to load PDF files in the JavaScript PDF Viewer from URLs, base64 strings, and databases by configuring the required server-backed services.
+description: Learn how to load PDF files in the Syncfusion JavaScript PDF Viewer from URLs, base64 strings, and databases by configuring the required server-backed services.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

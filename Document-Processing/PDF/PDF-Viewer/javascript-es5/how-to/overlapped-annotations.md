@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Get overlapped annotations on click in JavaScript PDF Viewer | Syncfusion
-description: Learn how to get overlapped annotations on click using the annotationSelect event in the JavaScript PDF Viewer.
+description: Learn how to get overlapped annotations on click using the annotationSelect event in the Syncfusion JavaScript PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

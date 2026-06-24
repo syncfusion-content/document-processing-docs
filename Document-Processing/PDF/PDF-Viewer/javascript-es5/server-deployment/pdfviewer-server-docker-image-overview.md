@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PDF Viewer server Docker image overview in JavaScript | Syncfusion
-description: Learn how to run and connect to the Javascript PDF Viewer server Docker image, set the license key, and configure Redis cache in a JavaScript application.
+description: Learn how to run and connect to the Syncfusion PDF Viewer server Docker image, set the license key, and configure Redis cache in a JavaScript application.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

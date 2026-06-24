@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Primary Toolbar in JavaScript PDF Viewer Component | Syncfusion
-description: Learn here all about primary toolbar customization in JavaScript PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: Learn here all about primary toolbar customization in Syncfusion JavaScript PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

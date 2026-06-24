@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Enable Print Rotation in JavaScript PDF Viewer | Syncfusion
-description: Learn how to enable print rotation for landscape documents in the JavaScript PDF Viewer component.
+description: Learn how to enable print rotation for landscape documents in the Syncfusion JavaScript PDF Viewer component.
 platform: document-processing
 control: Print
 documentation: ug

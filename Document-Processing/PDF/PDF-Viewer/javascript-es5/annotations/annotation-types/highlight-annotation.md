@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Highlight annotation in JavaScript PDF Viewer | Syncfusion
-description: Learn to add, edit, delete, and customize Highlight text markup annotations in JavaScript PDF Viewer, with UI and programmatic examples.
+description: Learn to add, edit, delete, and customize Highlight text markup annotations in Syncfusion JavaScript PDF Viewer, with UI and programmatic examples.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

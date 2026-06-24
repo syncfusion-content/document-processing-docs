@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PDF form field flags in the JavaScript PDF Viewer | Syncfusion
-description: Learn how to apply isReadOnly, isRequired, and isPrint flags to PDF form fields in the JavaScript PDF Viewer.
+description: Learn how to apply isReadOnly, isRequired, and isPrint flags to PDF form fields in the Syncfusion JavaScript PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

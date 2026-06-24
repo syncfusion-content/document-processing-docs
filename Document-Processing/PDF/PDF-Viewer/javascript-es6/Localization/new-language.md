@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Update New Language in JavaScript ES6 PDF Viewer | Syncfusion
-description: Learn how to set and configure new language culture and localization in JavaScript ES6 PDF Viewer component.
+description: Learn how to set and configure new language culture and localization in Syncfusion JavaScript ES6 PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

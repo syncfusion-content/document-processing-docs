@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Download document on window closing in JavaScript PDF Viewer control | Syncfusion
-description: Learn how to download a PDF document when the browser window closes or refreshes in the JavaScript PDF Viewer control by handling the onbeforeunload event.
+description: Learn how to download a PDF document when the browser window closes or refreshes in the Syncfusion JavaScript PDF Viewer control by handling the onbeforeunload event.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

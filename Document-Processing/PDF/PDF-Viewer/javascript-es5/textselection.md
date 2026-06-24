@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Text selection in JavaScript PDF Viewer control | Syncfusion
-description: Learn how to configure text selection, react to selection events, and manage copy workflows in the JavaScript PDF Viewer.
+description: Learn how to configure text selection, react to selection events, and manage copy workflows in the Syncfusion JavaScript PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

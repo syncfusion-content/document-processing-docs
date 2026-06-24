@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Annotation in JavaScript PDF Viewer control | Syncfusion
-description: Learn about overview of annotations in the JavaScript PDF Viewer.
+description: Learn about overview of annotations in the Syncfusion JavaScript PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

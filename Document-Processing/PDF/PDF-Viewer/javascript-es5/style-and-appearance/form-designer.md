@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize form designer icons in JavaScript PDF Viewer | Syncfusion
-description: Learn how to customize form designer toolbar icons and property window styles in the JavaScript PDF Viewer by applying targeted CSS.
+description: Learn how to customize form designer toolbar icons and property window styles in the Syncfusion JavaScript PDF Viewer by applying targeted CSS.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

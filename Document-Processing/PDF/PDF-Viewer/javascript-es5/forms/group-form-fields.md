@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Group form fields in the JavaScript PDF Viewer component | Syncfusion
-description: Learn how to group PDF form fields in the JavaScript PDF Viewer by assigning the same name to multiple widgets.
+description: Learn how to group PDF form fields in the Syncfusion JavaScript PDF Viewer by assigning the same name to multiple widgets.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

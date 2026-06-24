@@ -142,8 +142,6 @@ The image below shows how the PDF Viewer is rendered in the browser:
 
 > [View Sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/Save%20and%20Load)
 
-N> Looking for the full JavaScript PDF Viewer component overview, features, pricing, and documentation? Visit the [JavaScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) page.
-
 ## See also
 
 - [Getting started with Server-Backed TypeScript PDF Viewer](./getting-started-with-server-backed)

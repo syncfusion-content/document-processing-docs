@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotations Permission in JavaScript PDF Viewer | Syncfusion
-description: Learn how to use annotation permissions in JavaScript PDF Viewer using programmatic APIs.
+description: Learn how to use annotation permissions in Syncfusion JavaScript PDF Viewer using programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

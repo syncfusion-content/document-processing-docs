@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Get Base64 from loaded PDF in JavaScript PDF Viewer | Syncfusion
-description: Learn how to retrieve the Base64 value of a loaded PDF in the JavaScript PDF Viewer using saveAsBlob and FileReader.
+description: Learn how to retrieve the Base64 value of a loaded PDF in the Syncfusion JavaScript PDF Viewer using saveAsBlob and FileReader.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

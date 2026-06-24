@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom Data in annotations in JavaScript PDF Viewer | Syncfusion
-description: Learn how to use add custom Data in annotation in JavaScript PDF Viewer
+description: Learn how to use add custom Data in annotation in Syncfusion JavaScript PDF Viewer
 platform: document-processing
 control: PDF Viewer
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open PDF from Dropbox cloud storage in JavaScript PDF Viewer | Syncfusion
-description: Learn how to load PDFs from Dropbox cloud storage in the JavaScript PDF Viewer component using standalone and server-backed approaches.
+description: Learn how to load PDFs from Dropbox cloud storage in the Syncfusion JavaScript PDF Viewer component using standalone and server-backed approaches.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

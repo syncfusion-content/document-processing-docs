@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Distance annotation in JavaScript PDF Viewer | Syncfusion
-description: Learn to add, edit, and customize Distance measurement annotations in JavaScript PDF Viewer with UI and programmatic examples.
+description: Learn to add, edit, and customize Distance measurement annotations in Syncfusion JavaScript PDF Viewer with UI and programmatic examples.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

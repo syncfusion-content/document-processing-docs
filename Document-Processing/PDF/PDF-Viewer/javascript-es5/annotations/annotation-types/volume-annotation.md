@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Volume annotation in JavaScript PDF Viewer | Syncfusion
-description: Learn to add, edit, and customize Volume measurement annotations in JavaScript PDF Viewer with UI and programmatic examples.
+description: Learn to add, edit, and customize Volume measurement annotations in Syncfusion JavaScript PDF Viewer with UI and programmatic examples.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

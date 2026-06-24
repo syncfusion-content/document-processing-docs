@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ink (freehand) annotation in JavaScript PDF Viewer | Syncfusion
-description: Learn to add, edit, delete, and set defaults for Ink (freehand) annotations in JavaScript PDF Viewer with UI and programmatic examples.
+description: Learn to add, edit, delete, and set defaults for Ink (freehand) annotations in Syncfusion JavaScript PDF Viewer with UI and programmatic examples.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Handle signatureSelect and signatureUnselect events in JavaScript PDF Viewer | Syncfusion
-description: Learn how to handle signatureSelect and signatureUnselect events in the JavaScript PDF Viewer to manage handwritten signature selection state.
+description: Learn how to handle signatureSelect and signatureUnselect events in the Syncfusion JavaScript PDF Viewer to manage handwritten signature selection state.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize annotations in JavaScript PDF Viewer | Syncfusion
-description: Learn how to customize PDF annotations in JavaScript PDF Viewer using UI tools and programmatic settings (defaults and runtime edits).
+description: Learn how to customize PDF annotations in Syncfusion JavaScript PDF Viewer using UI tools and programmatic settings (defaults and runtime edits).
 platform: document-processing
 control: PDF Viewer
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Stamp annotation in JavaScript PDF Viewer | Syncfusion
-description: Learn to add, edit, delete, rotate, and customize Stamp annotations in JavaScript PDF Viewer, with UI and programmatic examples.
+description: Learn to add, edit, delete, rotate, and customize Stamp annotations in Syncfusion JavaScript PDF Viewer, with UI and programmatic examples.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

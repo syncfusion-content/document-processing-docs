@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form Fields API in JavaScript PDF Viewer | Syncfusion
-description:  Learn how to use Form Fields API to enable, update, retrieve and clear in the JavaScript PDF Viewer.
+description:  Learn how to use Form Fields API to enable, update, retrieve and clear in the Syncfusion JavaScript PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

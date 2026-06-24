@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Save PDF files to OneDrive in JavaScript PDF Viewer | Syncfusion
-description: Learn how to save PDF files to OneDrive using the JavaScript PDF Viewer component with a server-backed web service.
+description: Learn how to save PDF files to OneDrive using the Syncfusion JavaScript PDF Viewer component with a server-backed web service.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
