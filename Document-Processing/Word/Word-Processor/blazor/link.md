@@ -113,7 +113,6 @@ You can use the following keyboard shortcut to open the hyperlink dialog if the 
 |-----------------|-------------|
 |Ctrl + K | Open hyperlink dialog that allows you to create or edit hyperlink|
 
+## Online Demo
 
-
-
-
+Explore how to insert and manage hyperlinks in Word documents using the Blazor Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/hyperlinks-and-bookmarks?theme=fluent2).

@@ -123,7 +123,7 @@ private void LastPageButton_Clicked(object sender, EventArgs e)
 
 The example project with the page navigation functionalities can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples).
 
-### Page Navigation via Scroll Head(Mobile Platform)
+## Page Navigation via Scroll Head(Mobile Platform)
 
 On Android and iOS platforms, the scroll head offers a quick way to move through pages.Tap the scroll head to open a page navigation dialog. Enter a valid page number and tap **OK** to jump directly to that page.
 

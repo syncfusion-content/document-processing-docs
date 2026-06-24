@@ -190,3 +190,7 @@ container.appendTo('#DocumentEditor');
 
 
 ```
+
+### Online Demo
+
+Explore how to customize the context menu in the JavaScript Document Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/custom-context-menu.html).

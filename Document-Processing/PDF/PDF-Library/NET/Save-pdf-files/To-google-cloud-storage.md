@@ -21,7 +21,7 @@ Step 3: Install the [Syncfusion.Pdf.Net.Core ](https://www.nuget.org/packages/Sy
 Step 4: Include the following namespaces in the Program.cs file.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Pdf;
 using Google.Cloud.Storage.V1;
@@ -36,7 +36,7 @@ using System.IO;
 Step 5: Add the below code example to create a simple PDF and save in Google Cloud Storage.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C#" %}
 
 // Step 1: Create a PDF document
 PdfDocument document = new PdfDocument();

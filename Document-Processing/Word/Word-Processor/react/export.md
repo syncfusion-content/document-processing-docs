@@ -297,6 +297,10 @@ In client-side, you can consume this web service and save the document as Rich T
     }
 ```
 
+## Online Demo
+
+Explore how to export Word documents in various formats using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/advanced-exporting).
+
 ## See Also
 
 * [Feature modules](./feature-module)

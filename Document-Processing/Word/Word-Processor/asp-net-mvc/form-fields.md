@@ -116,3 +116,7 @@ Document editor provides an option to protect and unprotect document using `enfo
 
 
 N> In enforce Protection method, first parameter denotes password and second parameter denotes protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly |CommentsOnly`. In stop protection method, parameter denotes the password.
+
+## Online Demo
+
+Explore how to insert and manage form fields in Word documents using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/formfields#/tailwind3).

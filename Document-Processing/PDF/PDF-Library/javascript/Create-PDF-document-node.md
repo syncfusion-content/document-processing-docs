@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Create or Generate PDF file in Node | Syncfusion
-description: Learn how to create a PDF file in Node.js server with easy steps using Syncfusion TypeScript PDF library without depending on Adobe
+title: Create or Generate PDF file in Node.js | Syncfusion
+description: Learn how to create a PDF file in Node.js server with easy steps using JavaScript PDF Library without depending on Adobe
 platform: document-processing
 control: PDF
 documentation: ug
@@ -10,13 +10,15 @@ keywords: pdf, script, express, node
 
 # Create or Generate a PDF File in a Node.js Server Environment
 
-The Syncfusion<sup>&reg;</sup> [TypeScript PDF library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, fill forms, and secure PDF files.
+The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) is used to create, read, and edit PDF documents. The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) also offers functionality to merge, split, stamp, fill forms, and secure PDF files.
 
-This guide explains how to integrate the Syncfusion TypeScript PDF library into an application with **Node.js server environment**.
+This guide explains how to integrate the [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) into an application with **Node.js server environment**.
 
-## Integrate the PDF library into a Node.js Server Environment
+## Installing the JavaScript PDF Library package
 
-Step1: All Syncfusion JS 2 packages are published in `npmjs.com` registry.To install the PDF library, use the following command.
+All Syncfusion JS 2 packages are published in `npmjs.com` registry.
+
+* To install the [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library), use the following command.
 
 ```bash
 npm install @syncfusion/ej2-pdf --save
@@ -25,14 +27,18 @@ npm install @syncfusion/ej2-pdf --save
 N> For data extraction features, you need to install the `@syncfusion/ej2-pdf-data-extract` package as an add-on.
 Image extraction and image‑based redaction features are optimized for browser environments where visual rendering is available. These features rely on browser technologies such as DOM APIs, Canvas, and client‑side rendering, and therefore are not supported in pure Node.js server environments.
 
-Step2: The following list of dependencies are required to use the `TypeScript PDF library` component in your application.
+## Dependencies
+
+The following list of dependencies are required to use the [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) component in your application.
 
 ```bash
 |-- @syncfusion/ej2-compression
 |-- @syncfusion/ej2-base
 ```
 
-Step3: Add a simple button to `index.html` and attach a click handler that uses the TypeScript PDF API to create a new PDF document.
+## Create a Node.js Server Application to Generate a PDF Document
+
+* Add a simple button to `index.html` and attach a click handler that uses the TypeScript PDF API to create a new PDF document.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -135,6 +141,8 @@ app.listen(PORT, () => {
 {% endhighlight %}
 {% endtabs %}
 
+* **Run the application**
+
 Run the following command to start the Node.js server:
 
 ```bash
@@ -146,5 +154,3 @@ This command starts the server and allows you to generate and download the PDF f
 By executing the program, you will get the PDF document as follows.
 
 ![Output PDF document](Getting_started_images/Output.png)
-
-Click [here](https://www.syncfusion.com/document-sdk/javascript-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
