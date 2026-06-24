@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Primary Toolbar Customization in Vue PDF Viewer Component | Syncfusion
-description: Learn how to show or hide the built-in primary toolbar and customize it in the Vue PDF Viewer component.
+description: Learn how to show or hide the built-in primary toolbar and customize it in the Syncfusion Vue PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

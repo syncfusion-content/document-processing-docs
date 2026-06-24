@@ -1,7 +1,7 @@
 ---
 layout: post
 title: UI Interactions for Organizing Pages in Vue PDF Viewer component | Syncfusion
-description: Learn about the UI interactions for organizing pages in the Vue PDF Viewer component, including rotating, rearranging, inserting, deleting, and copying pages.
+description: Learn about the UI interactions for organizing pages in the Syncfusion Vue PDF Viewer component, including rotating, rearranging, inserting, deleting, and copying pages.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

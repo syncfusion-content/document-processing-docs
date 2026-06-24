@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Change the font family for type signatures in Vue
 
-Change the font family in the type signature of the Vue PDF Viewer by adding a custom CSS stylesheet to the document and applying the desired font family to the type signature element. Include the Google Fonts link in the HTML head section to apply the font.
+Change the font family in the type signature of the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer by adding a custom CSS stylesheet to the document and applying the desired font family to the type signature element. Include the Google Fonts link in the HTML head section to apply the font.
 
 ### Signature field property
 

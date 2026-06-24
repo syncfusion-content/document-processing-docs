@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Save PDF files to Box cloud storage in Vue PDF Viewer | Syncfusion
-description: Learn how to save PDF files to Box cloud storage using the Vue PDF Viewer component with a server-backed web service.
+description: Learn how to save PDF files to Box cloud storage using the Syncfusion Vue PDF Viewer component with a server-backed web service.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

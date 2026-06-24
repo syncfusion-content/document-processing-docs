@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form Designer and Toolbar Customization in Vue | Syncfusion
-description: Learn here all about form designer and toolbar in the Vue PDF Viewer and how to customize the form designer UI and toolbar.
+description: Learn here all about form designer and toolbar in the Syncfusion Vue PDF Viewer and how to customize the form designer UI and toolbar.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

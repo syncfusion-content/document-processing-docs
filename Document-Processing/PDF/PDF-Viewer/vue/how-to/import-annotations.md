@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Import annotations in Vue PDF Viewer | Syncfusion
-description: Learn how to import annotations in the Vue PDF Viewer using the importAnnotations method.
+description: Learn how to import annotations in the Syncfusion Vue PDF Viewer using the importAnnotations method.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

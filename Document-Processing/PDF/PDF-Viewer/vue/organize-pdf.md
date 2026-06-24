@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Organize Pages in Vue PDF Viewer component | Syncfusion
-description: Learn here all about Organize Pages in Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Organize Pages in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

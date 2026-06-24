@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Use extractText in Vue PDF Viewer | Syncfusion
-description: Learn how to use the extractText method in the Vue PDF Viewer to extract text and bounds from one or more pages.
+description: Learn how to use the extractText method in the Syncfusion Vue PDF Viewer to extract text and bounds from one or more pages.
 control: Extract Text
 platform: document-processing
 documentation: ug
@@ -22,7 +22,7 @@ The `extractText` method retrieves text content and, optionally, positional data
 - `textData` — Array of objects describing extracted text items, including bounds and page-level text.
 - `pageText` — Concatenated plain text for the specified page(s).
 
-### Usage of extractText in Vue PdfViewer Control
+### Usage of extractText in Syncfusion<sup style="font-size:70%">&reg;</sup> PdfViewer Control
 
 Here is an example that demonstrates how to use the extractText method:
 

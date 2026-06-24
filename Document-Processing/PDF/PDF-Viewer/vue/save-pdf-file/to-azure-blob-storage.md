@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Save PDF files to Azure Blob Storage in Vue PDF Viewer | Syncfusion
-description: Learn how to save PDF files to Azure Blob Storage using the Vue PDF Viewer component in standalone and server-backed configurations.
+description: Learn how to save PDF files to Azure Blob Storage using the Syncfusion Vue PDF Viewer component in standalone and server-backed configurations.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Load document after resources Loaded Vue PDF Viewer | Syncfusion
-description: Learn how to load a PDF only after assets are ready in the Vue PDF Viewer (Standalone) using the resourcesLoaded event.
+description: Learn how to load a PDF only after assets are ready in the Syncfusion Vue PDF Viewer (Standalone) using the resourcesLoaded event.
 platform: document-processing
 control: PDF Viewer 
 documentation: ug

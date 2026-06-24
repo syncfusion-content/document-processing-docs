@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open PDF from AWS S3 in Vue PDF Viewer | Syncfusion
-description: Learn how to load PDFs from AWS S3 in the Vue PDF Viewer component using standalone and server-backed approaches.
+description: Learn how to load PDFs from AWS S3 in the Syncfusion Vue PDF Viewer component using standalone and server-backed approaches.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -52,7 +52,7 @@ N> Replace the placeholder values with valid values when testing. Do not embed p
 {% endhighlight %}
 {% endtabs %}
 
-3. Set parameters for fetching the PDF document from S3, including the bucket name and file key. Use S3.getObject to retrieve the document, convert it to a Base64 string, and pass it to viewer.load in the Vue PDF Viewer.
+3. Set parameters for fetching the PDF document from S3, including the bucket name and file key. Use S3.getObject to retrieve the document, convert it to a Base64 string, and pass it to viewer.load in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer.
 
 N> Replace **Your Bucket Name** and **Your Key** with the target S3 bucket name and object key when testing.
 

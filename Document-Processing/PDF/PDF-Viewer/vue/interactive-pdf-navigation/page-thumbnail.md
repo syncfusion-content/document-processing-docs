@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Page thumbnail navigation in Vue PDF Viewer | Syncfusion
-description: Learn how to configure page thumbnail navigation in the Vue PDF Viewer using toolbar commands and custom UI.
+description: Learn how to configure page thumbnail navigation in the Syncfusion Vue PDF Viewer using toolbar commands and custom UI.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

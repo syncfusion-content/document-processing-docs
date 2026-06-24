@@ -157,7 +157,7 @@ To get started quickly with Vue PDF Viewer, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=wCGPrGahcJg" %}
 
-N> Looking for the full Vue PDF Viewer component overview, features, pricing, and documentation? Visit the [Vue PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) page.
+N> Looking for the full Vue PDF Viewer component overview, features, pricing, and documentation? Visit the [Vue PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/vue-pdf-viewer) page.
 
 ## See also
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Toolbar in Vue PDF Viewer component | Syncfusion
-description: Learn how to customize the PDF Viewer toolbar, add custom items, manage visibility, and respond to toolbar actions in the Vue PDF Viewer component.
+description: Learn how to customize the PDF Viewer toolbar, add custom items, manage visibility, and respond to toolbar actions in the Syncfusion Vue PDF Viewer component.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

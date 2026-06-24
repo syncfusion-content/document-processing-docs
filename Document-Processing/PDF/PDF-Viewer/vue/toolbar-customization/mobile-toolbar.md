@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mobile Toolbar Interface in Vue PDF Viewer component | Syncfusion
-description: Learn all about the mobile toolbar interface in Vue PDF Viewer component of Essential JS 2 and more.
+description: Learn all about the mobile toolbar interface in Syncfusion Vue PDF Viewer component of Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

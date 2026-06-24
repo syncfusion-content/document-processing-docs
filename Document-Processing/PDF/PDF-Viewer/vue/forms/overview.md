@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Forms in Vue PDF Viewer Control | Syncfusion
-description: Learn what the Form Designer in Vue PDF Viewer offers, supported field types, and how the topics are organized.
+description: Learn what the Form Designer in Syncfusion Vue PDF Viewer offers, supported field types, and how the topics are organized.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

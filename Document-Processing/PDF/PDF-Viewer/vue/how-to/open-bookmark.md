@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open or close the Bookmark pane programmatically | Syncfusion
-description: Learn how to open and close the Bookmark pane programmatically in the Vue PDF Viewer using openBookmarkPane and closeBookmarkPane.
+description: Learn how to open and close the Bookmark pane programmatically in the Syncfusion Vue PDF Viewer using openBookmarkPane and closeBookmarkPane.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

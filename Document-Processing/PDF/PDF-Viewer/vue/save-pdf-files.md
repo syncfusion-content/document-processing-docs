@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Save PDF files in Vue PDF Viewer component | Syncfusion
-description: Learn how to save edited or annotated PDFs to a server, database, or local file system using the Vue PDF Viewer with server-backed architecture.
+description: Learn how to save edited or annotated PDFs to a server, database, or local file system using the Syncfusion Vue PDF Viewer with server-backed architecture.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
