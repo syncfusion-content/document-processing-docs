@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Handle pageRenderInitiate and pageRenderComplete events
 
-In the Javascript PDF Viewer, the [pageRenderInitiate](https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerenderinitiate) and [pageRenderComplete](https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerendercomplete) events occur during page rendering.
+In the PDF Viewer, the [pageRenderInitiate](https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerenderinitiate) and [pageRenderComplete](https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerendercomplete) events occur during page rendering.
 
 **pageRenderInitiate**
 
@@ -34,6 +34,6 @@ pdfviewer.pageRenderComplete = args => {
 };
 ```
 
-The provided code demonstrates how to subscribe to these events in the Javascript PDF Viewer component.
+The provided code demonstrates how to subscribe to these events in the PDF Viewer component.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/How%20to/PageRenderStarted%20and%20PageRenderCompleted%20event)

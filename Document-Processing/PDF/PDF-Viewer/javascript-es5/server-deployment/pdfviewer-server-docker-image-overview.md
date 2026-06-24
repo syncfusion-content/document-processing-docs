@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 # PDF Viewer server Docker image overview
 
-The Javascript PDF Viewer component enables viewing, printing, form filling, and annotating PDF files in web applications. The client component requires a server-side Web API to process and render PDF content.
+The PDF Viewer component enables viewing, printing, form filling, and annotating PDF files in web applications. The client component requires a server-side Web API to process and render PDF content.
 
 This Docker image provides a preconfigured container for the PDF Viewer server backend and can be deployed quickly in most environments.
 

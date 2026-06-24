@@ -121,6 +121,6 @@ Implement a function that updates annotation visibility flags for the document.
 }
 ```
 
-Following these steps ensures annotations are visible in the Javascript PDF Viewer while controlling their visibility in the downloaded PDF.
+Following these steps ensures annotations are visible in the PDF Viewer while controlling their visibility in the downloaded PDF.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/How%20to)

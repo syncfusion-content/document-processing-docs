@@ -18,7 +18,7 @@ Create a Microsoft Graph API application, and obtain the application (client) ID
 
 **Step 2:** Create a PDF Viewer sample in JavaScript
 
-Create a simple PDF Viewer sample in JavaScript by following the Javascript PDF Viewer for JavaScript [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) guide. This establishes the application structure required for the integration.
+Create a simple PDF Viewer sample in JavaScript by following the PDF Viewer for JavaScript [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) guide. This establishes the application structure required for the integration.
 
 **Step 3:** Modify the `PdfViewerController.cs` file in the web service project
 
