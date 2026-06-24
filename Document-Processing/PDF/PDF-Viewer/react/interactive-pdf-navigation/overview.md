@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Navigation in React PDF Viewer
 
-The React PDF Viewer provides multiple navigation options to help users move through PDF documents efficiently. This section covers all available navigation features.
+The [React PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/react-pdf-viewer) provides multiple navigation options to help users move through PDF documents efficiently. This section covers all available navigation features.
 
 ## Overview
 

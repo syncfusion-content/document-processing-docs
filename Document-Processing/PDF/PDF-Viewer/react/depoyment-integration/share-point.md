@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Overview
 
-This quickstart shows how to integrate the React PDF Viewer into a SharePoint Framework (SPFx) React web part. It covers creating the web part, installing the `@syncfusion/ej2-react-pdfviewer` package, adding the required CSS, supplying runtime assets either from the Syncfusion CDN or from Site Assets, and a minimal TypeScript component that renders a PDF in the browser (client‑only).
+This quickstart shows how to integrate the [React PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/react-pdf-viewer) into a SharePoint Framework (SPFx) React web part. It covers creating the web part, installing the `@syncfusion/ej2-react-pdfviewer` package, adding the required CSS, supplying runtime assets either from the Syncfusion CDN or from Site Assets, and a minimal TypeScript component that renders a PDF in the browser (client‑only).
 
 ## Prerequisites
 

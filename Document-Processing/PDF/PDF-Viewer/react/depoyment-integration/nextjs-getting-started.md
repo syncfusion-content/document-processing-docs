@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Creating a Next.js application using React PDF Viewer
 
-This guide shows how to set up a Next.js application and integrate the React PDF Viewer component.
+This guide shows how to set up a Next.js application and integrate the [React PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/react-pdf-viewer) component.
 
 ## What is Next.js?
 

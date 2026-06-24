@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Load Large PDF Files in React PDF Viewer
 
-This article explains how to efficiently load and view large PDF files using the React PDF Viewer. It includes recommended best practices and performance tips for documents ranging from **50 MB to 2 GB**.
+This article explains how to efficiently load and view large PDF files using the [React PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/react-pdf-viewer). It includes recommended best practices and performance tips for documents ranging from **50 MB to 2 GB**.
 
 ## Why Large PDFs Need Special Handling
 
