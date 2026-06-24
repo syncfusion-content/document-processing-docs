@@ -10,7 +10,7 @@ documentation: UG
 
 The [Syncfusion<sup>&reg;</sup> .NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **create PDF document in AKS Environment**.
 
-**Steps to create PDF document in AKS Environment**
+## Steps to create PDF document in AKS Environment
 
 Step 1: Create a new ASP.NET Core Web App (Model-View-Controller).
 ![Create a ASP.NET Core Web App project](AKS_images/Create_net_core_web_app.png)

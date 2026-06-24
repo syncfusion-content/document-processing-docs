@@ -122,7 +122,7 @@ N> The hosted Web API URL is for demo and evaluation purposes only. For producti
 
 ## Get all tracked revisions
 
-Retrieves all tracked revisions from the current document using the revisions collection in the Document Editor.
+Retrieves all tracked revisions from the current document using the [revisions collection](https://ej2.syncfusion.com/documentation/api/document-editor/revisioncollection) in the Document Editor.
 
 The following example demonstrates how to get all tracked revisions from the current document.
 
@@ -308,6 +308,10 @@ createRoot(document.getElementById('sample')).render(<App />);
 In the Document Editor, a built-in review panel is available that supports filtering changes based on the user.
 
 ![Filter changes by user in review panel](./images/filter-changes-by-user.png)
+
+## Online Demo
+
+Explore how to track and review changes in Word documents using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/track-changes).
 
 ## Video tutorial 
 

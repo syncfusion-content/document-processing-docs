@@ -197,3 +197,6 @@ To demonstrate a specific use case, let’s consider an example where we want to
 {% endhighlight %}
 {% endtabs %}
 
+## Online Demo
+
+Explore how to add, view, and manage comments in Word documents using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/comments#/tailwind3).

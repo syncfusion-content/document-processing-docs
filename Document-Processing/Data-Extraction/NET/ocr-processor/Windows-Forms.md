@@ -25,6 +25,7 @@ N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assem
 
 Step 3: Add a new button in Form1.Designer.cs file. 
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 private System.Windows.Forms.Button button1;
@@ -56,18 +57,22 @@ private void InitializeComponent()
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 4: Include the following namespaces in the Form1.cs file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.OCRProcessor;
 using Syncfusion.Pdf.Parsing;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: Create the btnCreate_Click event and add the following code to perform OCR on the entire PDF document using [PerformOCR](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html#Syncfusion_OCRProcessor_OCRProcessor_PerformOCR_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_String_) method of the [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html) class. 
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Initialize the OCR processor.
@@ -87,6 +92,7 @@ using (OCRProcessor processor = new OCRProcessor())
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 By executing the program, you will get a PDF document as follows.
 ![OCR output](OCR-Images/Output.png)

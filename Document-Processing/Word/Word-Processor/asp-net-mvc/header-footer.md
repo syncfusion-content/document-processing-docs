@@ -85,6 +85,10 @@ Move the selection to the document body from header or footer region by double c
 documenteditor.selection.closeHeaderFooter()
 ```
 
+## Online Demo
+
+Explore how to add and customize headers and footers in Word documents using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/headersandfooters#/tailwind3).
+
 ## See Also
 
 * [Working with Section Formatting](./section-format)

@@ -1,5 +1,6 @@
 ---
 title: Overview of .NET Word (DocIO) library | Syncfusion
+canonical_url: "https://www.syncfusion.com/document-sdk/net-word-library"
 description: .NET Word (DocIO) library to create, read, edit, and convert Word documents in C#, VB.NET without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
@@ -47,3 +48,5 @@ T> If you encounter issues while using the .NET Word library in ASP.NET Core, re
 * [Supported file formats](https://help.syncfusion.com/document-processing/word/word-library/net/support-file-formats)
 * [Assemblies required](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required)
 * [NuGet packages required](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
+
+N> Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.

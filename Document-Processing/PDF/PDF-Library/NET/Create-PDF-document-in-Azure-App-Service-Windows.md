@@ -13,7 +13,7 @@ The [Syncfusion<sup>&reg;</sup> .NET Core PDF library](https://www.syncfusion.co
 Check the following video to learn how to create a PDF document and publish it as an Azure App Service on Windows using the .NET PDF Library.
 {% youtube "https://www.youtube.com/watch?v=PU8pVAHV_88" %}
 
-**Steps to create PDF document in Azure App Service on Windows**
+## Steps to create PDF document in Azure App Service on Windows
 
 Step 1: Create a new ASP.NET Core Web App (Model-View-Controller).
 ![Create a ASP.NET Core Web App project](Azure_images/Azure-app-service-windows/Create-net-core-web-app.png)

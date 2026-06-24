@@ -959,7 +959,7 @@ class ExternalSigner : IPdfExternalSigner
         {       
             System.Security.Cryptography.RSAOpenSsl rsa = (System.Security.Cryptography.RSAOpenSsl)digitalID.PrivateKey;
             return rsa.SignData(message, System.Security.Cryptography.HashAlgorithmName.SHA1, RSASignaturePadding.Pkcs1);
-           }
+        }
         return null;
     }
 }
@@ -1094,6 +1094,8 @@ End Class
 {% endhighlight %}
 
 {% endtabs %}
+
+N> When implementing `IPdfExternalSigner`, ensure that the hashing and signing algorithm used in the `Sign` method matches the `DigestAlgorithm` specified in `PdfSignature.Settings`; otherwise, the generated signature may be invalid or fail validation.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Digital%20Signature/Externally-sign-the-PDF-document-using-IPdfExternalSigner/).
 

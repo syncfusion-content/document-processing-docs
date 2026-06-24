@@ -12,7 +12,7 @@ The Syncfusion<sup>&reg;</sup> [.NET PDF library](https://www.syncfusion.com/doc
 
 To include the .NET PDF library into your ASP.NET MVC application, please refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) documentation. 
 
-**Steps to create PDF document in ASP.NET MVC**
+## Steps to create PDF document in ASP.NET MVC
 
 Step 1: Create a new C# ASP.NET Web Application (.NET Framework) project.
 ![Create ASP.NET MVC Web application in Visual Studio](MVC_images/Creation1.png)

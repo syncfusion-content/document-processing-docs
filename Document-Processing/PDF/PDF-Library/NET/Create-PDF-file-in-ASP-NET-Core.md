@@ -15,7 +15,7 @@ To integrate the .NET PDF library into your ASP.NET Core application, refer to t
 
 N> Beginning with our Volume 2, 2023 release, we have eliminated the dependency on the System.Drawing.Common package from our Syncfusion.Pdf.Imaging.Net.Core package. Instead, we have introduced SkiaSharp as the alternative library.
 
-**Steps to create PDF document in ASP.NET Core**
+## Steps to create PDF document in ASP.NET Core
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

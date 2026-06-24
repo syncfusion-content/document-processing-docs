@@ -1865,7 +1865,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Limitations
 
-The .NET Word Library (DocIO) has the following limitations when creating SmartArt programmatically or processing SmartArt from an existing Word document.
+The [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) has the following limitations when creating SmartArt programmatically or processing SmartArt from an existing Word document.
 
 **Document Processing Functionalities**
 
@@ -2027,5 +2027,5 @@ SmartArt typically contains graphic properties, including bounds information for
 
 ## Online Demo
 
-* Explore how to create a Word document with SmartArt using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/createsmartart#/tailwind).
-* Explore how to edit a Word document with SmartArt using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/editsmartart#/tailwind).
+* Explore how to create a Word document with SmartArt using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/createsmartart#/tailwind).
+* Explore how to edit a Word document with SmartArt using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/editsmartart#/tailwind).

@@ -14,7 +14,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript DOCX Editor (Documen
 
 ## Steps to create a DOCX Editor using JavaScript (ES5)
 
-Create a folder named `documenteditor-app` with `index.html` and `index.js` files. Your application structure should look like this:
+Create a folder named `documenteditor-app` with `index.html` and `index.js` files with the default structure. Your application structure should look like this:
 
  ```text
   documenteditor-app/
@@ -134,6 +134,10 @@ You can also explore the Document Editor interactively using the live sample bel
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/es5-getting-started-cs2" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/JavaScript-ES5-DOCX-Editor-Examples/tree/master/getting-started).
+
+## Online Demo
+
+Explore how to create, edit, and print Word documents using the JavaScript (ES5) Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/default.html).
 
 ## Server-side dependencies
 

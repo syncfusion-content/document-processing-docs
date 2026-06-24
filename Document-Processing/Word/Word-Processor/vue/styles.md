@@ -205,3 +205,7 @@ this.$refs.documenteditor.ej2Instances.documentEditor.editor.createStyle(styleNa
 > If modifyExistingStyle parameter is set to false and a style already exists with same name, it creates a new style with unique name by appending ‘_1’. Hence, the newly style will not have the specified name.
 > If no style exists with same name, it creates a new style.
 Footer
+
+## Online Demo
+
+Explore how to apply and modify styles in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/styles.html).

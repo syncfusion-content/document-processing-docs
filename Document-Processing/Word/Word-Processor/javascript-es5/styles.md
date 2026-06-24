@@ -225,3 +225,7 @@ documentEditor.editor.createStyle(styleName, true);
 > If modifyExistingStyle parameter is set to true and a style already exists with same name, it modifies the specified properties in the existing style.
 > If modifyExistingStyle parameter is set to false and a style already exists with same name, it creates a new style with unique name by appending ‘_1’. Hence, the newly style will not have the specified name.
 > If no style exists with same name, it creates a new style.
+
+## Online Demo
+
+Explore how to apply and modify styles in Word documents using the JavaScript (ES5) Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/styles.html).

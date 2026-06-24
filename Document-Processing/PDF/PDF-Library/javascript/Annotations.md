@@ -1,13 +1,13 @@
 ---
-title: Annotation in JavaScript PDF library | Syncfusion
-description: This section explains how to create, modify or remove different type of interactive Annotation by using JavaScript PDF library
+title: Annotation in JavaScript PDF Library | Syncfusion
+description: This section explains how to create, modify or remove different type of interactive Annotation by using JavaScript PDF Library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Annotation in JavaScript PDF library
+# Annotation in JavaScript PDF Library
 
-The PDF library provides support for interactive annotations. You can add, delete and modify the annotation from the PDF documents.
+The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) provides support for interactive annotations. You can add, delete and modify the annotation from the PDF documents.
 
 ## Adding annotations to a PDF document
 

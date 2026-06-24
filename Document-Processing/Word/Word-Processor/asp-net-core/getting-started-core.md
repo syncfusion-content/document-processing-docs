@@ -47,7 +47,7 @@ N> This package includes dependencies such as  [Newtonsoft.Json](https://www.nug
 
 ### Add Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Tag Helper
 
-Open `~/Views/_ViewImports.cshtml` file and import the `Syncfusion.EJ2` TagHelper.
+Open `~/Pages/_ViewImports.cshtml` file and import the `Syncfusion.EJ2` TagHelper.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_ViewImports.cshtml" %}
@@ -59,7 +59,7 @@ Open `~/Views/_ViewImports.cshtml` file and import the `Syncfusion.EJ2` TagHelpe
 
 ### Add Themes and Script References
 
-Include the required stylesheet and script references in the `<head>` section  of `~/Views/Shared/_Layout.cshtml` file to apply proper layout and theme styling.
+Include the required stylesheet and script references in the `<head>` section  of `~/Pages/Shared/_Layout.cshtml` file to apply proper layout and theme styling.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/_Layout.cshtml" %}
@@ -76,7 +76,7 @@ N> Refer the [Themes topic](https://ej2.syncfusion.com/aspnetcore/documentation/
 
 ### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Script Manager
 
-Also, register the script manager `<ejs-scripts>` at the end of `<body>` in the `~/Views/Shared/_Layout.cshtml` file as follows.
+Also, register the script manager `<ejs-scripts>` at the end of `<body>` in the `~/Pages/Shared/_Layout.cshtml` file as follows.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/_Layout.cshtml" %}
@@ -89,7 +89,7 @@ Also, register the script manager `<ejs-scripts>` at the end of `<body>` in the 
 
 ### Add the Document Editor component
 
-Add the Document Editor tag helper in `~/Views/Home/Index.cshtml` page.
+Add the Document Editor control in `~/Pages/Index.cshtml` page.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/Index.cshtml" %}
@@ -106,6 +106,10 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 ![Output of ASP.NET Core DOCX Editor](./images/aspnetcore-docx-editor.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-DOCX-Editor-Examples/tree/master/getting-started).
+
+## Online Demo
+
+Explore how to create, edit, and print Word documents using the ASP.NET Core Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/default#/tailwind3).
 
 ## See also
 

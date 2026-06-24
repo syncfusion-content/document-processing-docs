@@ -30,7 +30,8 @@ N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assem
 
 Step 4: Add a new button in index.cshtml as follows.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight CSHTML %}
 
 @{
     Html.BeginForm("PerformOCR", "Home", FormMethod.Get);
@@ -44,9 +45,11 @@ Step 4: Add a new button in index.cshtml as follows.
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: Include the following namespaces in the HomeController.cs file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.OCRProcessor;
@@ -54,9 +57,11 @@ using Syncfusion.Pdf.Parsing;
 using Microsoft.AspNetCore.Hosting.IHostingEnvironment;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: Add the code samples for performing OCR on the entire PDF document using [PerformOCR](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html#Syncfusion_OCRProcessor_OCRProcessor_PerformOCR_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_String_) method of the [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html) class. 
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public IActionResult PerformOCR()
@@ -76,6 +81,7 @@ public IActionResult PerformOCR()
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 7: Now, check the OCR creation in the local machine.
 
@@ -137,6 +143,7 @@ Step 5: Then, set Copy to output directory to give copy always the tessdata fold
 
 Step 6: Include the following namespaces in the **Function1.cs** file to perform OCR for a PDF document using C#.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using System;
@@ -154,9 +161,11 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 7: Add the following code sample in the Function1 class to perform OCR for a PDF document using [PerformOCR](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html#Syncfusion_OCRProcessor_OCRProcessor_PerformOCR_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_String_) method of the [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html) class in Azure Functions.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 [FunctionName("Function1")]
@@ -203,6 +212,7 @@ public static async Task<HttpResponseMessage> Run([HttpTrigger(AuthorizationLeve
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 8: Now, check the OCR creation in the local machine.
 
