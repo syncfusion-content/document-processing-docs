@@ -173,8 +173,6 @@ Create a configuration file in your project folder to install the server for you
 
 **Verify Installation:** Check your editor's MCP Server list for `syncfusion-documentsdk-assistant` with "Connected" status to confirm successful installation.
 
-For global configuration, refer to this [guide](../../installation#global-configuration).
-
 ## Usage
 
 To activate the SyncfusionDocumentSDKAssistant MCP server:

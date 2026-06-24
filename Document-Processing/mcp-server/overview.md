@@ -35,8 +35,6 @@ Syncfusion MCP Servers are delivered as .NET-based Model Context Protocol (MCP) 
 * SyncfusionSpreadsheetEditorSDKAssistant
 * SyncfusionPDFViewerSDKAssistant
 
-For detailed setup instructions, see the [Installation Guide](/installation).
-
 ## Unlimited Access
 
 Syncfusion provides unlimited access to the MCP server with no restrictions on:
