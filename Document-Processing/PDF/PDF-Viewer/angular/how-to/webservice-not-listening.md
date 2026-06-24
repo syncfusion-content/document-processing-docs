@@ -32,7 +32,7 @@ N> Make sure you are connected to the internet and that your connection is stabl
 
 ## File not found
 
-If you are encountering an error message stating that the web service is not listening due to a file not being found in the Angular PDF viewer, you can try the following steps to resolve the issue:
+If you are encountering an error message stating that the web service is not listening due to a file not being found in the PDF viewer, you can try the following steps to resolve the issue:
 
 ### Check the file path
 
@@ -40,11 +40,11 @@ Ensure that the file path you use to access the PDF file is correct and that the
 
 ## Document cache not found
 
-The `Document cache not found` exception in Angular PDF Viewer typically occurs when the cache used to store the rendered pages of a PDF document is not found or has been deleted. This can happen if the cache directory is changed or deleted or if the application is running in a different environment than it was previously.
+The `Document cache not found` exception in PDF Viewer typically occurs when the cache used to store the rendered pages of a PDF document is not found or has been deleted. This can happen if the cache directory is changed or deleted or if the application is running in a different environment than it was previously.
 
 ### Check for multiple instances
 
-It's possible that you have multiple instances of the Angular PDF Viewer running simultaneously, which can cause issues with the document cache. To check for this, open the Task Manager on your computer and look for any instances of the Angular PDF Viewer running. If you find multiple instances, try closing them all and reopening the viewer.
+It's possible that you have multiple instances of the PDF Viewer running simultaneously, which can cause issues with the document cache. To check for this, open the Task Manager on your computer and look for any instances of the PDF Viewer running. If you find multiple instances, try closing them all and reopening the viewer.
 
 We can use Redis cache and distributive cache for this issue.
 
@@ -54,7 +54,7 @@ Ensure that your network connection is stable and strong enough to support the w
 
 ## The document pointer does not exist in the cache.
 
-The `Document pointer does not exist in the cache` exception in the Angular PDF Viewer usually occurs when there is an issue with loading or caching the PDF document. This error can be caused by a variety of reasons, including:
+The `Document pointer does not exist in the cache` exception in the PDF Viewer usually occurs when there is an issue with loading or caching the PDF document. This error can be caused by a variety of reasons, including:
 
 To clear this error in the Angular PDF Viewer, you can try the following steps:
 
@@ -66,4 +66,4 @@ To clear this error in the Angular PDF Viewer, you can try the following steps:
 
 ## Internal server error
 
-Server-side exceptions happen for various use cases. We can't just define them if they are document-specific, provide the document, or you may need to contact Angular support for further assistance.
+Server-side exceptions happen for various use cases. We can't just define them if they are document-specific, provide the document, or you may need to contact support for further assistance.

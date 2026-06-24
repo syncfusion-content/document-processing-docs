@@ -62,4 +62,4 @@ the PDF document bytes.
     }
 ```
 
-Once Redis is configured, the Angular PDF Viewer application will automatically use Redis cache for improved performance and scalability.
+Once Redis is configured, the PDF Viewer application will automatically use Redis cache for improved performance and scalability.
