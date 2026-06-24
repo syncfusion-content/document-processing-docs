@@ -309,3 +309,7 @@ The following code shows Restrict Editing Pane. To unprotect the document, use p
 {% previewsample "/document-processing/code-snippet/document-editor/react/base-cs6" %}
 
 N> The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
+
+## Online Demo
+
+Explore how to restrict editing and protect Word documents using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/document-protection).

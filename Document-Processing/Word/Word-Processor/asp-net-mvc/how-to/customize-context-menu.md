@@ -69,3 +69,7 @@ The following code shows how to add a sub items in the custom option in context 
 {% endhighlight %}
 {% highlight c# tabtitle="Customize-sub-context-menu" %}
 {% endhighlight %}{% endtabs %}
+
+## Online Demo
+
+Explore how to customize the context menu in the ASP.NET MVC Document Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/customcontextmenu#/tailwind3).

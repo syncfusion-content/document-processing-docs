@@ -126,7 +126,7 @@ Step 7: Inject ``ExportService`` in-to ``FetchData.razor`` using the following c
 
 @inject ExportToFileService exportService
 @inject Microsoft.JSInterop.IJSRuntime JS
-@using  System.IO;
+@using  System.IO
 
 {% endhighlight %}
 {% endtabs %}
@@ -177,24 +177,27 @@ public static class FileUtil
 {% endhighlight %}
 {% endtabs %}
 
-Step 9: Add the following JavaScript function in the  ``_Host.cshtml`` available under the ``Pages`` folder.
+Step 9: Add the following JavaScript function in the  ``App.razor`` available under the ``Components`` folder.
 
 {% tabs %}
 {% highlight HTML %}
 
-<script type="text/javascript">
+<script type = "text/javascript" >
     function saveAsFile(filename, bytesBase64) {
-            if (navigator.msSaveBlob) {
-                //Download document in Edge browser
-                var data = window.atob(bytesBase64);
-                var bytes = new Uint8Array(data.length);
-                for (var i = 0; i < data.length; i++) {
-                    bytes[i] = data.charCodeAt(i);
-                }
-                var blob = new Blob([bytes.buffer], { type: "application/octet-stream" });
-                navigator.msSaveBlob(blob, filename);
-            }
-            else {
+    if (navigator.msSaveBlob)
+    {
+        //Download document in Edge browser
+        var data = window.atob(bytesBase64);
+        var bytes = new Uint8Array(data.length);
+        for (var i = 0; i < data.length; i++)
+        {
+            bytes[i] = data.charCodeAt(i);
+        }
+        var blob = new Blob([bytes.buffer], { type: "application/octet-stream" });
+        navigator.msSaveBlob(blob, filename);
+    }
+    else
+    {
         var link = document.createElement('a');
         link.download = filename;
         link.href = "data:application/octet-stream;base64," + bytesBase64;
@@ -202,7 +205,7 @@ Step 9: Add the following JavaScript function in the  ``_Host.cshtml`` available
         link.click();
         document.body.removeChild(link);
     }
-        }
+}
 </script>
 
 {% endhighlight %}

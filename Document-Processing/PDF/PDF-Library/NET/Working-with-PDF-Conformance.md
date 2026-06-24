@@ -1395,44 +1395,42 @@ To convert an existing PDF document to the PDFA document in .NET Core, you need 
 
 static void LoadedDocument_SubstituteFont(object sender, PdfFontEventArgs args)
 {
-     //get the font name
-     string fontName = args.FontName.Split(',')[0];
-     //get the font style
-     PdfFontStyle fontStyle = args.FontStyle;
-     SKFontStyle sKFontStyle = SKFontStyle.Normal;
-
-     if (fontStyle != PdfFontStyle.Regular)
-     {
-         if (fontStyle == PdfFontStyle.Bold)
-         {
+    //get the font name 
+    string fontName = args.FontName.Split(',')[0];
+    //get the font style 
+    PdfFontStyle fontStyle = args.FontStyle;
+    SKFontStyle sKFontStyle = SKFontStyle.Normal;
+    if (fontStyle != PdfFontStyle.Regular)
+    {
+        if (fontStyle == PdfFontStyle.Bold)
+        {
             sKFontStyle = SKFontStyle.Bold;
-         }
-         else if (fontStyle == PdfFontStyle.Italic)
-         {
+        }
+        else if (fontStyle == PdfFontStyle.Italic)
+        {
             sKFontStyle = SKFontStyle.Italic;
-         }
-         else if (fontStyle == (PdfFontStyle.Italic | PdfFontStyle.Bold))
-         {
+        }
+        else if (fontStyle == (PdfFontStyle.Italic | PdfFontStyle.Bold))
+        {
             sKFontStyle = SKFontStyle.BoldItalic;
-         }
+        }
     }
-	
     SKTypeface typeface = SKTypeface.FromFamilyName(fontName, sKFontStyle);
     SKStreamAsset typeFaceStream = typeface.OpenStream();
     MemoryStream memoryStream = null;
     if (typeFaceStream != null && typeFaceStream.Length > 0)
     {
-      //Create the fontData from the type face stream.	 
-      byte[] fontData = new byte[typeFaceStream.Length - 1];	 
-      typeFaceStream.Read(fontData, typeFaceStream.Length);	 
-      typeFaceStream.Dispose();	 
-      //Create the new memory stream from the font data.	 
-      memoryStream = new MemoryStream(fontData);
-    }	
-    //set the font stream to the event args.	
+        //Create the fontData from the type face stream.	  
+        byte[] fontData = new byte[typeFaceStream.Length];
+        typeFaceStream.Read(fontData, typeFaceStream.Length);
+        typeFaceStream.Dispose();
+
+        //Create the new memory stream from the font data.	  
+        memoryStream = new MemoryStream(fontData);
+    }
+    //set the font stream to the event args.	 
     args.FontStream = memoryStream;
 }
-
 {% endhighlight %}
 
 {% endtabs %}  
@@ -1549,48 +1547,43 @@ To convert an existing PDF document to the PDFA document in .NET Core, you need 
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}	
 
-static void LoadedDocument_SubstituteFont(object sender, PdfFontEventArgs args) 
+static void LoadedDocument_SubstituteFont(object sender, PdfFontEventArgs args)
+{
+    //get the font name 
+    string fontName = args.FontName.Split(',')[0];
+    //get the font style 
+    PdfFontStyle fontStyle = args.FontStyle;
+    SKFontStyle sKFontStyle = SKFontStyle.Normal;
+    if (fontStyle != PdfFontStyle.Regular)
+    {
+        if (fontStyle == PdfFontStyle.Bold)
+        {
+            sKFontStyle = SKFontStyle.Bold;
+        }
+        else if (fontStyle == PdfFontStyle.Italic)
+        {
+            sKFontStyle = SKFontStyle.Italic;
+        }
+        else if (fontStyle == (PdfFontStyle.Italic | PdfFontStyle.Bold))
+        {
+            sKFontStyle = SKFontStyle.BoldItalic;
+        }
+    }
+    SKTypeface typeface = SKTypeface.FromFamilyName(fontName, sKFontStyle);
+    SKStreamAsset typeFaceStream = typeface.OpenStream();
+    MemoryStream memoryStream = null;
+    if (typeFaceStream != null && typeFaceStream.Length > 0)
+    {
+        //Create the fontData from the type face stream.	  
+        byte[] fontData = new byte[typeFaceStream.Length];
+        typeFaceStream.Read(fontData, typeFaceStream.Length);
+        typeFaceStream.Dispose();
 
-{ 
-     //get the font name 
-     string fontName = args.FontName.Split(',')[0]; 
-
-     //get the font style 
-     PdfFontStyle fontStyle = args.FontStyle; 
-     SKFontStyle sKFontStyle = SKFontStyle.Normal; 
-
-     if (fontStyle != PdfFontStyle.Regular) 
-     { 
-         if (fontStyle == PdfFontStyle.Bold) 
-         { 
-            sKFontStyle = SKFontStyle.Bold; 
-         } 
-         else if (fontStyle == PdfFontStyle.Italic) 
-         { 
-            sKFontStyle = SKFontStyle.Italic; 
-         } 
-         else if (fontStyle == (PdfFontStyle.Italic | PdfFontStyle.Bold)) 
-         { 
-            sKFontStyle = SKFontStyle.BoldItalic; 
-         } 
-     } 
-
-    SKTypeface typeface = SKTypeface.FromFamilyName(fontName, sKFontStyle); 
-    SKStreamAsset typeFaceStream = typeface.OpenStream(); 
-    MemoryStream memoryStream = null; 
-    if (typeFaceStream != null && typeFaceStream.Length > 0) 
-    { 
-      //Create the fontData from the type face stream.	  
-      byte[] fontData = new byte[typeFaceStream.Length];	  
-      typeFaceStream.Read(fontData, typeFaceStream.Length);	  
-      typeFaceStream.Dispose();	  
-
-      //Create the new memory stream from the font data.	  
-      memoryStream = new MemoryStream(fontData); 
-    }	 
-
+        //Create the new memory stream from the font data.	  
+        memoryStream = new MemoryStream(fontData);
+    }
     //set the font stream to the event args.	 
-    args.FontStream = memoryStream; 
+    args.FontStream = memoryStream;
 }
 
 {% endhighlight %}

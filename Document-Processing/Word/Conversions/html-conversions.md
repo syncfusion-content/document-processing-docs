@@ -12,7 +12,7 @@ The Essential<sup>&reg;</sup> DocIO converts the HTML file into Word document an
 
 ## Assemblies and NuGet packages required
 
-Refer to the following links for assemblies and NuGet packages required based on platforms to convert the HTML file into Word document and vice versa using the .NET Word Library (DocIO).
+Refer to the following links for assemblies and NuGet packages required based on platforms to convert the HTML file into Word document and vice versa using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO).
 
 * [HTML conversions assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
 * [HTML conversions NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
@@ -150,7 +150,7 @@ N> 1. Inserting XHTML string is not supported in Silverlight, Windows Phone, and
 N> 2. XHTML validation against XHTML 1.0 Strict and Transitional schema is not supported in Windows Store applications.
 N> 3. [XHTMLValidationType.None](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.XHTMLValidationType.html): Default validation while importing HTML file.
 N> 4. [XHTMLValidationType.None](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.XHTMLValidationType.html): Validates the HTML file against XHTML format and it doesn't perform any schema validation.
-N> 5. From version 27.X.X, the .NET Word Library supports opening HTML even if it contains improper closing tags when validation is set to None.
+N> 5. From version 27.X.X, the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) supports opening HTML even if it contains improper closing tags when validation is set to None.
 
 ### Customize image data
 
@@ -1350,8 +1350,8 @@ Underline types and colors are ignored.
 
 ## Online Demo
 
-* Explore how to convert a Word document to HTML using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/wordtohtml#/tailwind).
-* See how to convert HTML to a Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/htmltoword#/tailwind).
+* Explore how to convert a Word document to HTML using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/wordtohtml#/tailwind).
+* See how to convert HTML to a Word document using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/htmltoword#/tailwind).
 
 ## See Also
 

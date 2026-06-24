@@ -1,13 +1,13 @@
 ---
-title: Redaction in JavaScript PDF library |Syncfusion
-description: This section explains how to redact content from an existing PDF document by using the JavaScript PDF library
+title: Redaction in JavaScript PDF Library |Syncfusion
+description: This section explains how to redact content from an existing PDF document by using the JavaScript PDF Library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Redaction in JavaScript PDF library
+# Redaction in JavaScript PDF Library
 
-Redacting a PDF is the process of permanently removing sensitive or confidential information from PDF documents. Syncfusion<sup>&reg;</sup> PDF library provides an easy way to redact PDF documents. 
+Redacting a PDF is the process of permanently removing sensitive or confidential information from PDF documents. [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) provides an easy way to redact PDF documents. 
 
 N> For redaction features, you need to install the `@syncfusion/ej2-pdf-data-extract` package as an add-on.
 

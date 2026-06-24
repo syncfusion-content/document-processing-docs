@@ -1818,7 +1818,7 @@ N>  For more information about the fields supported by Essential<sup>&reg;</sup>
 
 ## Online Demo
 
-* Explore how to update fields in a Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/updatefields#/tailwind).
+* Explore how to update fields in a Word document using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/updatefields#/tailwind).
 
 ## See Also
 
