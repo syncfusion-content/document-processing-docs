@@ -1,16 +1,16 @@
 ---
-title: Layers in JavaScript PDF library | Syncfusion
-description: This section explains how to add a layer in a PDF document using the JavaScript PDF library to organize content and enhance document structure
+title: Layers in JavaScript PDF Library | Syncfusion
+description: This section explains how to add a layer in a PDF document using the JavaScript PDF Library to organize content and enhance document structure
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Layers in JavaScript PDF library
+# Layers in JavaScript PDF Library
 
 Layers, also known as Option Content refers to sections of content in a PDF document that can be selectively viewed or hidden by document authors or consumers.
 
-JavaScript PDF provides support to create, add and merge the layers into PDF document.
+[JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) provides support to create, add and merge the layers into PDF document.
 
 ## Adding layers in a PDF document
 

@@ -1,13 +1,13 @@
 ---
-title: Document in JavaScript PDF library | Syncfusion
-description: This section explains how to set document settings and properties in a PDF file by using the JavaScript PDF library
+title: Document in JavaScript PDF Library | Syncfusion
+description: This section explains how to set document settings and properties in a PDF file by using the JavaScript PDF Library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Document in JavaScript PDF library
+# Document in JavaScript PDF Library
 
-The PDF library provides support to create, read, and manipulate PDF documents, allowing you to generate high-quality, secure, and feature-rich PDF files programmatically.
+The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) provides support to create, read, and manipulate PDF documents, allowing you to generate high-quality, secure, and feature-rich PDF files programmatically.
 
 ## Adding the document settings
 
