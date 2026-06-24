@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Annotations mobileView in Syncfusion React PDF Viewer | Syncfusion
+title: Annotations mobileView in React PDF Viewer | Syncfusion
 description: Learn here all about how to use annotations in mobile view with the Syncfusion React PDF Viewer Component.
 platform: document-processing
 control: PDF Viewer

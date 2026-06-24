@@ -9,7 +9,7 @@ documentation: ug
 
 # Save PDF files to Google Drive
 
-This article describes how to save a PDF file to Google Drive from the React PDF Viewer using a server-side web service. Follow the steps below.
+This article describes how to save a PDF file to Google Drive from the PDF Viewer using a server-side web service. Follow the steps below.
 
 **Step 1:** Set up the Google Drive API
 
@@ -17,7 +17,7 @@ Create a Google Cloud project, enable the Google Drive API, and obtain OAuth 2.0
 
 **Step 2:** Create a PDF Viewer sample in React
 
-Create a simple PDF Viewer sample in React by following the React PDF Viewer for React [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) guide. This establishes the basic application structure required for the integration.
+Create a simple PDF Viewer sample in React by following the PDF Viewer for React [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) guide. This establishes the basic application structure required for the integration.
 
 **Step 3:** Modify the `PdfViewerController.cs` file in the web service project
 
