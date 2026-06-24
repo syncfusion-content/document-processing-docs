@@ -18,7 +18,7 @@ Create a Google Cloud project, enable the Google Drive API, and obtain OAuth 2.0
 
 **Step 2:** Create a PDF Viewer sample in Vue
 
-Create a simple PDF Viewer sample in Vue by following the Vue PDF Viewer [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) guide. This establishes the basic application structure required for the integration.
+Create a simple PDF Viewer sample in Vue by following the PDF Viewer for Vue [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) guide. This establishes the basic application structure required for the integration.
 
 **Step 3:** Modify the `PdfViewerController.cs` file in the web service project
 

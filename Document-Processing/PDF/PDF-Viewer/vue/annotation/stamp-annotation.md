@@ -528,7 +528,7 @@ export default {
 
 ## Edit the existing stamp annotation programmatically
 
-To modify an existing stamp annotation in the Vue PDF Viewer programmatically, use the **editAnnotation()** method.
+To modify an existing stamp annotation in the PDF Viewer programmatically, use the **editAnnotation()** method.
 
 Here is an example of using editAnnotation():
 

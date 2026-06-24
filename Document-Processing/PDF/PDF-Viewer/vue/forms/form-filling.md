@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Filling PDF Forms in Vue PDF Viewer
 
-The Vue PDF Viewer supports three form-filling approaches:
+The PDF Viewer supports three form-filling approaches:
 
 1.	[Filling Form Fields Programmatically](#fill-pdf-forms-programmatically)
 

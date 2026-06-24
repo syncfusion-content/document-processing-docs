@@ -85,7 +85,7 @@ This article explains how to load and save PDF files from Azure Active Directory
 ### Step 6: Client-side configuration
 
 1. **Run the Vue sample**:
-   - Start the Vue sample that includes the Vue PDF Viewer component.
+   - Start the Vue sample that includes the PDF Viewer component.
 
 2. **Load a PDF from AAD**:
    - When the user selects **Load From AAD**, the Vue client sends an HTTP request to the server-side API to fetch the PDF from Azure Blob Storage.
