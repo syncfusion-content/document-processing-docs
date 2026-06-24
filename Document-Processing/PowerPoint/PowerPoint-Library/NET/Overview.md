@@ -1,5 +1,6 @@
 ---
 title: Create and edit PowerPoint files in CSharp |Syncfusion<sup>&reg;</sup>|
+canonical_url: "https://www.syncfusion.com/document-sdk/net-powerpoint-library"
 description: Essential<sup>&reg;</sup> Presentation is a .NET PowerPoint library to create, read, edit, & convert PowerPoint files in WinForms, WPF, UWP, ASP.NET Core & Xamarin applications
 platform: document-processing
 control: Presentation
@@ -46,3 +47,5 @@ N> 2. The current version of Essential<sup>&reg;</sup> Presentation does not sup
 
 * [Assemblies required](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/assemblies-required)
 * [NuGet packages required](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/nuget-packages-required)
+
+N> Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page.

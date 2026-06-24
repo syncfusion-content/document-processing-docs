@@ -1,12 +1,12 @@
 ---
-title: Assemblies Required for PowerPoint Presentation | Syncfusion
-description: This section explains about how to assemblies required to convert powerpoint presentation to PDF for various platforms and frameworks.
+title: Assemblies Required for PPTX to Image Conversion | Syncfusion
+description: This section explains about how to assemblies required to convert powerpoint presentation to Image for various platforms and frameworks.
 platform: document-processing
 control: Presentation
 documentation: UG
 keywords: Assemblies
 ---
-# Assemblies Required for PowerPoint Presentation
+# Assemblies Required for PowerPoint to Image Conversion
 
 ## Converting PowerPoint Presentation to Image
 
