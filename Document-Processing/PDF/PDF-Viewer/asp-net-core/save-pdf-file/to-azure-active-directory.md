@@ -81,7 +81,7 @@ The ASP.NET Core PDF Viewer component supports loading and saving PDF files with
 ### **Client-side configuration**
 
 1. **Run the ASP.NET Core sample**:
-   - Start the ASP.NET Core (Razor) sample that includes the ASP.NET Core PDF Viewer.
+   - Start the ASP.NET Core (Razor) sample that includes the PDF Viewer.
 
 2. **Load a PDF from AAD**:
    - When the user clicks the **Load from AAD** button, the client-side JavaScript will make an HTTP request to the server-side API to fetch the PDF from Azure Blob Storage.

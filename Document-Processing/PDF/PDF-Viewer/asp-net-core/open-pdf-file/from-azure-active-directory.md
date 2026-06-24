@@ -205,7 +205,7 @@ string containerName = "your-container-name";
 
 6. Load PDF from AAD
     - Click the Load from AAD button.
-    - The server fetches the PDF from Azure Blob Storage and loads it into the ASP.NET Core PDF Viewer.
+    - The server fetches the PDF from Azure Blob Storage and loads it into the PDF Viewer.
 
 7. Save PDF to AAD
     - Click the Save to AAD button.

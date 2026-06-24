@@ -72,4 +72,4 @@ Custom fonts are supported for [TextBox](../forms/manage-form-fields/create-form
 ## Important considerations
 
 - **Font Size:** Ensure the chosen font size fits within the form field bounds to prevent rendering issues in third-party viewers.
-- **Layout Integrity:** If text rendered with a custom font exceeds the field bounds, the downloaded PDF might display incorrectly in some external viewers, though it will render perfectly within the ASP.NET Core PDF Viewer.
+- **Layout Integrity:** If text rendered with a custom font exceeds the field bounds, the downloaded PDF might display incorrectly in some external viewers, though it will render perfectly within the PDF Viewer.

@@ -17,7 +17,7 @@ Open the Google Cloud Console. Navigate to `IAM & Admin` > `Service accounts`. C
 
 **Step 2:** Create a PDF Viewer sample in ASP.NET Core
 
-Follow instructions provided in the ASP.NET Core PDF Viewer Getting Started [Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started-with-server-backed) to create a simple PDF Viewer sample in ASP.NET Core
+Follow instructions provided in the PDF Viewer Getting Started [Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started-with-server-backed) to create a simple PDF Viewer sample in ASP.NET Core
 
 **Step 3:** Modify the `Index.cshtml.cs` file in the project
 
