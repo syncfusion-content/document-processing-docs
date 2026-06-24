@@ -1,6 +1,6 @@
 ---
 title: How to remove autofilter from an Excel worksheet | Syncfusion
-description: This page shows how to remove autofilter from an Excel worksheet .NET Excel library.
+description: This page shows how to remove autofilter from an Excel worksheet .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

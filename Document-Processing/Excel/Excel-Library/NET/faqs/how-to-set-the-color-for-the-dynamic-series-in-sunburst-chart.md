@@ -1,6 +1,6 @@
 ---
 title: Set Dynamic Series Colors in a Sunburst Chart | Syncfusion
-description: Learn how to apply custom colors to each data point in a Sunburst chart dynamically with the .NET Excel library using C# and VB.NET.
+description: Learn how to apply custom colors to each data point in a Sunburst chart dynamically with the .NET Excel Library using C# and VB.NET.
 platform: document-processing
 control: XlsIO
 documentation: UG

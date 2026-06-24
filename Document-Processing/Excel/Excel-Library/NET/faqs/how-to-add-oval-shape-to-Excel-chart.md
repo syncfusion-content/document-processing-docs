@@ -1,6 +1,6 @@
 ---
 title: How to add Oval shape to Excel chart using XlsIO | Syncfusion
-description: This page explains how to add Oval shape to Excel chart in C# (cross-platform and Windows-specific) and VB.NET using .NET Excel library.
+description: This page explains how to add Oval shape to Excel chart in C# (cross-platform and Windows-specific) and VB.NET using .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

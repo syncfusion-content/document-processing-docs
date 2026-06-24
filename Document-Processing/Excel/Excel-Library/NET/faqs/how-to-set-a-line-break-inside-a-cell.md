@@ -1,6 +1,6 @@
 ---
 title: How to set a line break inside a cell | XlsIO | Syncfusion
-description: This page illustrates on how to set a line break inside a cell using .NET Excel library.
+description: This page illustrates on how to set a line break inside a cell using .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

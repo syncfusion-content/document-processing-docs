@@ -1,13 +1,13 @@
 ---
 title: Loading and Saving Excel in Azure App Service on Windows | Syncfusion
-description: Explains how to load and save an Excel files in Azure App Service on Windows using Syncfusion Excel library.
+description: Explains how to load and save an Excel files in Azure App Service on Windows using Syncfusion Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 # Loading and Saving Excel files in Azure App Service on Windows
 
-[Syncfusion Excel library for ASP.NET Core platform](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) can be used to create, read, edit Excel files in Azure App Service on Windows.
+[Syncfusion Excel Library for ASP.NET Core platform](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) can be used to create, read, edit Excel files in Azure App Service on Windows.
 
 ## Steps to Load and Save an Excel document in Azure App Service on Windows
 

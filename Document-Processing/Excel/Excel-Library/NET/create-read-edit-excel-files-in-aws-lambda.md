@@ -1,6 +1,6 @@
 ---
 title: Create, read, and edit Excel files in AWS Lambda | Syncfusion
-description: This page explains how to create, read, and edit Excel files in AWS Lambda using the .NET Excel library.
+description: This page explains how to create, read, and edit Excel files in AWS Lambda using the .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

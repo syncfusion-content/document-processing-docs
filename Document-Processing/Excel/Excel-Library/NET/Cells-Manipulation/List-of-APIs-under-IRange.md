@@ -1,6 +1,6 @@
 ---
 title: List of APIs under IRange | Excel library | Syncfusion
-description: In this section, you can learn about the list of APIs under IRange for Excel document using .NET Excel library.
+description: In this section, you can learn about the list of APIs under IRange for Excel document using .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

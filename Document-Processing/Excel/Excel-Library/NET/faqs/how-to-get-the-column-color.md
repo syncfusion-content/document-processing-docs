@@ -1,6 +1,6 @@
 ---
 title: How to get the column color | Syncfusion.
-description: This page explains how to get the styled column color when column cells have different colors in an Excel document using .NET Excel library.
+description: This page explains how to get the styled column color when column cells have different colors in an Excel document using .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

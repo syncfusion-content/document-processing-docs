@@ -1,6 +1,6 @@
 ---
 title: How to ignore print areas set in a worksheet | XlsIO | Syncfusion
-description: This page shows how to ignore print areas set in a worksheet using .NET Excel library.
+description: This page shows how to ignore print areas set in a worksheet using .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

@@ -1,6 +1,6 @@
 ---
 title: Fix “Can't open PivotTable source file” error in XlsIO | Syncfusion
-description: This page explains how to resolve the "Can't open Pivottable source file" error using .NET Excel library.
+description: This page explains how to resolve the "Can't open Pivottable source file" error using .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

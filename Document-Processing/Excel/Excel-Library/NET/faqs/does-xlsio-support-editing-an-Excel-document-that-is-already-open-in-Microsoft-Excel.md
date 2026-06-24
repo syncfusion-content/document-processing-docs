@@ -1,6 +1,6 @@
 ---
 title: Does XlsIO support editing an Excel document that is already open in Microsoft Excel? | XlsIO | Syncfusion
-description: This page explains whether the .NET Excel library supports editing an Excel document that is already open in Microsoft Excel.
+description: This page explains whether the .NET Excel Library supports editing an Excel document that is already open in Microsoft Excel.
 platform: document-processing
 control: XlsIO
 documentation: UG

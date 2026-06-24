@@ -1,6 +1,6 @@
 ---
 title: Support for sensitivity labels in XlsIO | Syncfusion
-description: Learn whether the .NET Excel library supports Microsoft sensitivity labels or not.
+description: Learn whether the .NET Excel Library supports Microsoft sensitivity labels or not.
 platform: document-processing
 control: XlsIO
 documentation: UG

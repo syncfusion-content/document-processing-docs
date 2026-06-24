@@ -1,6 +1,6 @@
 ---
 title: How to resolve LibSkiaSharp not found exception | Syncfusion
-description: This page explains how to resolve LibSkiaSharp not found exception using .NET Excel library.
+description: This page explains how to resolve LibSkiaSharp not found exception using .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

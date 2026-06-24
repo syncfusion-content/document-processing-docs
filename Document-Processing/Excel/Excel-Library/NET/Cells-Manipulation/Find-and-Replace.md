@@ -1,6 +1,6 @@
 ---
 title: Find and Replace | Excel library | Syncfusion
-description: In this section, you can learn about how to find and replace in an Excel document using .NET Excel library.
+description: In this section, you can learn about how to find and replace in an Excel document using .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

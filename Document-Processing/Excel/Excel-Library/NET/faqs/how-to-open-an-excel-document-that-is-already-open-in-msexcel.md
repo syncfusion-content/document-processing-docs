@@ -1,6 +1,6 @@
 ---
 title: Open an Excel document that is already open in MS-Excel | Syncfusion
-description: This page tells how to open an Excel document that is already open in Microsoft Excel in .NET Excel library.
+description: This page tells how to open an Excel document that is already open in Microsoft Excel in .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

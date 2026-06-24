@@ -1,6 +1,6 @@
 ---
 title: How to retain cell values after removing formula in Excel | Syncfusion
-description: This page shows how to retain cell values after removing formulas in Excel using the .NET Excel library.
+description: This page shows how to retain cell values after removing formulas in Excel using the .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

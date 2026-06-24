@@ -1,6 +1,6 @@
 ---
 title: Font settings for shape text | Syncfusion
-description: This page explains the font settings for the shape text using the .NET Excel library.
+description: This page explains the font settings for the shape text using the .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

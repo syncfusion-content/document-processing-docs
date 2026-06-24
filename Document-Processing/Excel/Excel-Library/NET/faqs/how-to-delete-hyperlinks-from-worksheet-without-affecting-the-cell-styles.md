@@ -1,6 +1,6 @@
 ---
 title: How to delete hyperlinks without removing styles in Excel | Syncfusion
-description: Code example to remove hyperlinks in an Excel document without removing cell formatting using .NET Excel library.
+description: Code example to remove hyperlinks in an Excel document without removing cell formatting using .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

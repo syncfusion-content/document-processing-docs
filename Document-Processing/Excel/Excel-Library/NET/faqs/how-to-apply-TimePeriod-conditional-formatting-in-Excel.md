@@ -1,6 +1,6 @@
 ---
 title: How to apply TimePeriod conditional formatting in Excel | Syncfusion 
-description: Code example to apply TimePeriod-based conditional formatting in an Excel document using .NET Excel library. 
+description: Code example to apply TimePeriod-based conditional formatting in an Excel document using .NET Excel Library. 
 platform: document-processing 
 control: XlsIO 
 documentation: UG

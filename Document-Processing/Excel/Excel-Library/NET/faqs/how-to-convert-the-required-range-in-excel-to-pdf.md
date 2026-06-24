@@ -1,6 +1,6 @@
 ---
 title: Convert the required range in Excel to PDF | Syncfusion
-description: This page shows how to convert the required range of Excel to PDF using the .NET Excel library.
+description: This page shows how to convert the required range of Excel to PDF using the .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

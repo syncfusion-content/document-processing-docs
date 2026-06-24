@@ -1,6 +1,6 @@
 ---
 title: How to create a sparkline from a named range | XlsIO | Syncfusion
-description: This page demonstrates to create a sparkline from a named range using .NET Excel library.
+description: This page demonstrates to create a sparkline from a named range using .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

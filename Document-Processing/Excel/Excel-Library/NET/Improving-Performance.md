@@ -1,6 +1,6 @@
 ---
 title: Improving Performance | Syncfusion
-description: This section illustrates about improving the performance in Syncfusion Excel library (Essential XlsIO).
+description: This section illustrates about improving the performance in Syncfusion Excel Library (Essential XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG

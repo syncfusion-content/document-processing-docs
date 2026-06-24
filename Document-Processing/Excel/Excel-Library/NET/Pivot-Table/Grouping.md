@@ -1,6 +1,6 @@
 ---
 title: Grouping of Pivot Tables | Excel library | Syncfusion
-description: In this section, you can learn how to group a pivot table in an Excel document using the .NET Excel library with clear steps and examples.
+description: In this section, you can learn how to group a pivot table in an Excel document using the .NET Excel Library with clear steps and examples.
 platform: document-processing
 control: XlsIO
 documentation: UG

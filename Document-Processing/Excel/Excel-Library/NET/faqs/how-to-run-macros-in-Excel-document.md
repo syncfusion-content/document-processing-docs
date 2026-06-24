@@ -1,6 +1,6 @@
 ---
 title: How to run macros in Excel document | XlsIO | Syncfusion
-description: Learn about macro support in Excel document using .NET Excel library.
+description: Learn about macro support in Excel document using .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

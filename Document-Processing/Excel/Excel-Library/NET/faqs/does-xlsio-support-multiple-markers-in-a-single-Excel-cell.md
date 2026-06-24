@@ -1,6 +1,6 @@
 ---
 title: XlsIO support for multiple markers in a single cell | Syncfusion
-description: Learn whether Syncfusion XlsIO supports multiple markers in a single Excel cell using the .NET Excel library.
+description: Learn whether Syncfusion XlsIO supports multiple markers in a single Excel cell using the .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

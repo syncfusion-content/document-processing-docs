@@ -8,7 +8,7 @@ documentation: UG
 
 # Create an Excel file using ASP.NET Core Web API
 
-[.NET Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) can be used to create, read, and edit Excel documents using a Web API.
+[.NET Excel Library](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) can be used to create, read, and edit Excel documents using a Web API.
 
 ## Create a simple Excel report
 

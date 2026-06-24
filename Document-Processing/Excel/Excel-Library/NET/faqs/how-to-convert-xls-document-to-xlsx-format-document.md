@@ -1,6 +1,6 @@
 ---
 title: How to convert xls document to xlsx format document |Syncfusion.
-description: This page explains how to convert xls document to xlsx format document using .NET Excel library.
+description: This page explains how to convert xls document to xlsx format document using .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
