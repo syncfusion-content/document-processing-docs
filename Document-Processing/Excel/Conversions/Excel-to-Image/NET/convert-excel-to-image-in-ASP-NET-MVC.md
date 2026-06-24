@@ -1,6 +1,6 @@
 ---
 title: Convert an Excel document to Image in ASP.NET MVC | Syncfusion
-description: Convert an Excel document to Image in ASP.NET MVC using Sycfusion .NET Excel library without Microsoft Excel or interop dependencies.
+description: Convert an Excel document to Image in ASP.NET MVC using .NET Excel Library without Microsoft Excel or interop dependencies.
 platform: document-processing
 control: XlsIO
 documentation: UG
