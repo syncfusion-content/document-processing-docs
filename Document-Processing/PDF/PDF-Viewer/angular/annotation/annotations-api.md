@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotations API in Angular PDF Viewer | Syncfusion
-description: Learn here all about how to read and configure annotations using APIs in the Angular PDF Viewer.
+description: Learn here all about how to read and configure annotations using APIs in the Syncfusion Angular PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

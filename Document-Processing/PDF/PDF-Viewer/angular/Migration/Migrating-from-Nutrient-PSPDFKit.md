@@ -1,21 +1,21 @@
 ---
 layout: post
 title: Migrating from Nutrient (PSPDFKit) to Angular PDF Viewer | Syncfusion
-description: Learn here all about how to migrate from Nutrient.io (PSPDFKit) Web SDK to Angular PDF Viewer.
+description: Learn here all about how to migrate from Nutrient.io (PSPDFKit) Web SDK to Syncfusion Angular PDF Viewer.
 platform: document-processing
 documentation: ug
 control: PDF Viewer
 ---
 
-# Migrating from Nutrient Web SDK to Angular PDF Viewer
+# Migrating from Nutrient Web SDK to Syncfusion Angular PDF Viewer
 
-This guide helps you migrate an Angular application built using **Nutrient Web SDK (formerly PSPDFKit Web SDK)** to the **Angular PDF Viewer**. It mirrors the React migration guide but is tailored specifically for **Angular architecture, modules, and component life cycle**.
+This guide helps you migrate an Angular application built using **Nutrient Web SDK (formerly PSPDFKit Web SDK)** to the **Syncfusion Angular PDF Viewer**. It mirrors the React migration guide but is tailored specifically for **Angular architecture, modules, and component life cycle**.
 
 The objective is to replace the **imperative SDK-based initialization** used by Nutrient with the **declarative Angular component model** provided by Syncfusion.
 
 ## Overview
 
-| Aspect | Nutrient Web SDK | Angular PDF Viewer |
+| Aspect | Nutrient Web SDK | Syncfusion Angular PDF Viewer |
 |-------|------------------|------------------------------|
 | Integration style | SDK initialization via `load()` | Declarative Angular component |
 | Framework pattern | Framework-agnostic | Native Angular component |
@@ -30,7 +30,7 @@ The objective is to replace the **imperative SDK-based initialization** used by 
 - Manual life cycle handling (`load`, `unload`)
 - SDK-managed UI and events
 
-### Angular PDF Viewer
+### Syncfusion Angular PDF Viewer
 - Viewer rendered using `<ejs-pdfviewer>` component
 - Life cycle managed by Angular
 - Features enabled via service injection
@@ -47,7 +47,7 @@ npm install @nutrient-sdk/viewer
 Or include the SDK via CDN in `index.html`.
 
 
-### Angular PDF Viewer
+### Syncfusion Angular PDF Viewer
 
 ```bash
 npm install @syncfusion/ej2-angular-pdfviewer
@@ -101,7 +101,7 @@ export class OldViewerComponent implements AfterViewInit {
 }
 ```
 
-### Angular PDF Viewer
+### Syncfusion Angular PDF Viewer
 
 ```html
 <ejs-pdfviewer id="pdfViewer"
@@ -196,10 +196,8 @@ onPageChange(args: any): void {
 - [extractText(pageIndex: number, options?: any)](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#extracttext): — extract text and coordinates.
 - [Events](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#events): [documentLoad](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#documentload), [pageRenderComplete](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#pagerendercomplete), [pageChange](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#pagechange), [annotationAdd](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#annotationadd), [annotationRemove](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#annotationremove), [toolbarClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#toolbarclick).
 
-N> Looking for the full Angular PDF Viewer component overview, features, pricing, and documentation? Visit the [Angular PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/migration/migrating-from-nutrient-pspdfkit) page.
-
 ## See Also
 
 - [Nutrient Web SDK (PSPDFKit) getting started](https://www.nutrient.io/sdk/web/getting-started/other-frameworks/angular)
-- [Angular PDF Viewer Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started)
-- [Angular PDF Viewer API](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer)
+- [Syncfusion Angular PDF Viewer Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started)
+- [Syncfusion Angular PDF Viewer API](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer)

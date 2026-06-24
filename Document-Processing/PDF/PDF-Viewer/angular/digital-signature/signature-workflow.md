@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Digital Signature Workflows in Angular PDF Viewer | Syncfusion
-description: Learn how to add signature fields and apply digital (PKI) signatures in the Angular PDF Viewer.
+description: Learn how to add signature fields and apply digital (PKI) signatures in the Syncfusion Angular PDF Viewer.
 platform: document-processing
 control: PdfViewer
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mobile Toolbar Interface in Angular PDF Viewer control | Syncfusion
-description: Learn All About the Mobile Toolbar Interface in Angular PDF Viewer control of Syncfusion Essential JS 2 and more.
+description: Learn All About the Mobile Toolbar Interface in Syncfusion Angular PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 ## Overview
 
-This how-to explains how to enable the desktop toolbar on mobile devices running the Angular PDF Viewer, and how to preserve touch scrolling when the desktop toolbar is used.
+This how-to explains how to enable the desktop toolbar on mobile devices running the Syncfusion Angular PDF Viewer, and how to preserve touch scrolling when the desktop toolbar is used.
 
 ## Prerequisites
 

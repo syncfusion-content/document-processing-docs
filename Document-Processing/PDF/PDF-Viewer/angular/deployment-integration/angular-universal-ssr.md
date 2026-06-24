@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Angular PDF Viewer in Angular Universal SSR | Syncfusion
-description: A quick guide to integrate Angular PDF Viewer with Angular Universal Server-Side Rendering.
+title: Syncfusion Angular PDF Viewer in Angular Universal SSR | Syncfusion
+description: A quick guide to integrate Syncfusion Angular PDF Viewer with Angular Universal Server-Side Rendering.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Annotation in Angular PDF Viewer | Syncfusion
-description: Learn about Annotations and how to add, edit, delete, and configure Annotations in the Angular PDF Viewer.
+description: Learn about Annotations and how to add, edit, delete, and configure Annotations in the Syncfusion Angular PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

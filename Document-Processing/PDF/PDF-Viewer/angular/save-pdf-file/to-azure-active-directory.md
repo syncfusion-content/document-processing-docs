@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Save PDF To AAD in Angular PDF Viewer Component | Syncfusion
-description: Learn how to Save PDF To AAD in Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: Learn how to Save PDF To AAD in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Load PDF From AAD
 documentation: ug
@@ -94,7 +94,7 @@ The Angular PDF Viewer component supports loading and saving PDF files using Azu
 ### Step 6: Client-Side Configuration
 
 1. Run the Angular Sample:
-   - Start the Angular sample that includes the Angular PDF Viewer.
+   - Start the Angular sample that includes the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer.
 
 2. Load PDF from AAD:
    - When the user clicks the **Load from AAD** button, the Angular client will make an HTTP request to the server-side API to fetch the PDF from Azure Blob Storage.

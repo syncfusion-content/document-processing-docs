@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bookmark Navigation in Angular PDF Viewer | Syncfusion
-description: Use bookmarks to navigate quickly within PDF documents in the Angular PDF Viewer for Angular.
+description: Use bookmarks to navigate quickly within PDF documents in the Syncfusion Angular PDF Viewer for Angular.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

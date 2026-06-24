@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create form fields in the Angular PDF Viewer | Syncfusion
-description: Learn how to add each PDF form field using the PDF Viewer UI and how to create them programmatically in the Angular PDF Viewer.
+description: Learn how to add each PDF form field using the PDF Viewer UI and how to create them programmatically in the Syncfusion Angular PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

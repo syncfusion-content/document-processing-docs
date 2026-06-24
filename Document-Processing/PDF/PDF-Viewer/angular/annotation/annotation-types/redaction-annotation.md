@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PDF Redaction in Angular PDF Viewer | Syncfusion
-description: Learn to add, edit, delete, and apply redaction annotations in Angular PDF Viewer with UI and programmatic examples.
+description: Learn to add, edit, delete, and apply redaction annotations in Syncfusion Angular PDF Viewer with UI and programmatic examples.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

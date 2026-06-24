@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Load Password Protected PDFs in Angular PDF Viewer | Syncfusion
-description: Learn how to open password-protected PDF files in the Angular PDF Viewer by providing the password in the documentPath object.
+description: Learn how to open password-protected PDF files in the Syncfusion Angular PDF Viewer by providing the password in the documentPath object.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

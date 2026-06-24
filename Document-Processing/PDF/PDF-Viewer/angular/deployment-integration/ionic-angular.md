@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Angular PDF Viewer with Ionic | Syncfusion
-description: Short quickstart for integrating the Angular PDF Viewer into an Ionic Angular application for mobile and web deployment documentation.
+title: Syncfusion Angular PDF Viewer with Ionic | Syncfusion
+description: Short quickstart for integrating the Syncfusion Angular PDF Viewer into an Ionic Angular application for mobile and web deployment documentation.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -43,7 +43,7 @@ ionic serve
 
 ### Step 3: Install Package
 
-Add the Angular PDF Viewer and its dependencies:
+Add the Syncfusion Angular PDF Viewer and its dependencies:
 
 ```bash
 npm install @syncfusion/ej2-angular-pdfviewer

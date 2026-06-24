@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Search text and redact in Angular PDF Viewer | Syncfusion
-description: Learn how to find text and add redaction annotations programmatically in the Angular PDF Viewer.
+description: Learn how to find text and add redaction annotations programmatically in the Syncfusion Angular PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

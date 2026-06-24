@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Highlight Text in Angular PDF Viewer | Syncfusion
-description: Learn how to enable, apply, customize, and manage Highlight annotations in the Angular PDF Viewer.
+description: Learn how to enable, apply, customize, and manage Highlight annotations in the Syncfusion Angular PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

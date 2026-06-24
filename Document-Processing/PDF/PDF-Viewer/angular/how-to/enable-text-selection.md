@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Enable or disable text selection in Angular PDF Viewer
 
-This guide explains how to enable or disable text selection in the Angular PDF Viewer using both initialization-time settings and runtime toggling.
+This guide explains how to enable or disable text selection in the Syncfusion Angular PDF Viewer using both initialization-time settings and runtime toggling.
 
 **Outcome:** By the end of this guide, you will be able to control whether users can select text in the PDF Viewer.
 

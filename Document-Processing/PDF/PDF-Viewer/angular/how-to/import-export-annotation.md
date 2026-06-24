@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Import & Export Annotations in Angular PDF Viewer | Syncfusion
-description: Explore how to handle PDF annotations with import and export features in Angular PDF Viewer component.
+description: Explore how to handle PDF annotations with import and export features in Syncfusion Angular PDF Viewer component.
 platform: document-processing
 control: Import export annotation
 documentation: ug

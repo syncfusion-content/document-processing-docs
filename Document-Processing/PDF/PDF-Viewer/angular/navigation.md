@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Navigation in Angular PDF Viewer component | Syncfusion
-description: Learn here all about Navigation in Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Navigation in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Navigation
 documentation: ug
@@ -370,7 +370,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 
 ## Keyboard navigation with Tab and Shift+Tab keys
 
-The Angular PDF Viewer supports keyboard navigation across form fields using the `Tab` and `Shift+Tab` keys, allowing users to move focus forward and backward through form fields when filling forms.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer supports keyboard navigation across form fields using the `Tab` and `Shift+Tab` keys, allowing users to move focus forward and backward through form fields when filling forms.
 
 Pressing `Tab` moves focus to the next form field in document order.
 

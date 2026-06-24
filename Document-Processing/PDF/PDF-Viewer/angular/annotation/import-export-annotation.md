@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Import export annotation in Angular PDF Viewer component | Syncfusion
-description: Learn here all about Import export annotation in Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Import export annotation in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Import export annotation
 documentation: ug
@@ -627,7 +627,7 @@ import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService,
 
 ## Importing Annotation Using Base64 Data
 
-You can import annotations into the Angular PDF Viewer by decoding Base64-encoded JSON annotation data at runtime and passing the parsed object to the importAnnotation API, as shown in the following code snippet.
+You can import annotations into the Syncfusion Angular PDF Viewer by decoding Base64-encoded JSON annotation data at runtime and passing the parsed object to the importAnnotation API, as shown in the following code snippet.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}

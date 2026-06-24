@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Line angle constraints in Angular PDF Viewer | Syncfusion
-description: Learn how to enable and configure line angle constraints for line-type annotations in the Angular PDF Viewer.
+description: Learn how to enable and configure line angle constraints for line-type annotations in the Syncfusion Angular PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

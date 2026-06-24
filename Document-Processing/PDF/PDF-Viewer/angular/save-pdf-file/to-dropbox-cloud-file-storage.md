@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Save PDF to Dropbox cloud storage in Angular PDF Viewer | Syncfusion
-description: Learn here all about how to save PDF files to Dropbox cloud file storage in Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: Learn here all about how to save PDF files to Dropbox cloud file storage in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Save PDF files to Dropbox cloud file storage
 documentation: ug

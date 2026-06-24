@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Restrict Zoom Percentage in Angular PDF Viewer component | Syncfusion
-description: Learn here all how to restrict zoom percentage in Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: Learn here all how to restrict zoom percentage in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

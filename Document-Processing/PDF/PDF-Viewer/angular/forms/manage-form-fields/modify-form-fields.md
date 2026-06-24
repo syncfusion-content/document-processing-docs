@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Modify form fields in the Angular PDF Viewer | Syncfusion
-description: Learn how to modify PDF form fields using the UI and programmatically with APIs in the Angular PDF Viewer.
+description: Learn how to modify PDF form fields using the UI and programmatically with APIs in the Syncfusion Angular PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotations Events in Angular Pdfviewer Control | Syncfusion
-description: Learn here all about annotation events in Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: Learn here all about annotation events in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

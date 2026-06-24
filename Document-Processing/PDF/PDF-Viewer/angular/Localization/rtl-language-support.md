@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RTL Localization in Angular PDF Viewer | Syncfusion
-description: Learn about the Localization and Right to Left Lanugage Support in Angular PDF Viewer component.
+description: Learn about the Localization and Right to Left Lanugage Support in Syncfusion Angular PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

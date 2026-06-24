@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form Designer Toolbar in Angular PDF Viewer Component | Syncfusion
-description: Learn here all about form designer toolbar customization in Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: Learn here all about form designer toolbar customization in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

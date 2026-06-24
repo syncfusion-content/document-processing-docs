@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add Freehand Draw (Ink) Annotation in Angular PDF Viewer | Syncfusion
-description: Learn how to enable, draw, customize, and manage Ink (freehand) annotations in the Angular PDF Viewer.
+description: Learn how to enable, draw, customize, and manage Ink (freehand) annotations in the Syncfusion Angular PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

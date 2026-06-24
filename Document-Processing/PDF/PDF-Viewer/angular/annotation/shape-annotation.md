@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Shape annotation in Angular PDF Viewer control | Syncfusion
-description: Learn about shape annotations in the Angular PDF Viewer (Essential JS 2), including add, edit, delete, and default settings.
+description: Learn about shape annotations in the Syncfusion Angular PDF Viewer (Essential JS 2), including add, edit, delete, and default settings.
 platform: document-processing
 control: Shape annotation
 documentation: ug

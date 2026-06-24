@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Rotate pages in Organize Pages (Angular PDF Viewer) | Syncfusion
-description: Learn how to rotate one or more pages using the Organize Pages UI in the Angular PDF Viewer and more.
+description: Learn how to rotate one or more pages using the Organize Pages UI in the Syncfusion Angular PDF Viewer and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

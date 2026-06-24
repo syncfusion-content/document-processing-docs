@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Toolbar in Angular PDF Viewer component | Syncfusion
-description: Learn here all about Toolbar in Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Toolbar in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Toolbar
 documentation: ug
@@ -457,7 +457,7 @@ The `prefixIcon` property sets an icon CSS class to display before the toolbar i
 
 The `id` property of a `CustomToolbarItemModel` is required and provides a unique identifier for each toolbar item. Use descriptive `id` values so handlers and API calls can reference items reliably.
 
-These properties are used when defining custom toolbar items for the Angular PDF Viewer. Include them in `ToolbarSettings` to adjust appearance and behavior.
+These properties are used when defining custom toolbar items for the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer. Include them in `ToolbarSettings` to adjust appearance and behavior.
 
 N> Custom toolbar items may display either icons or text depending on the design preference.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Page Navigation in Angular PDF Viewer | Syncfusion
-description: Explore how to navigate pages in the Angular PDF Viewer control using built-in options for seamless document viewing.
+description: Explore how to navigate pages in the Syncfusion Angular PDF Viewer control using built-in options for seamless document viewing.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
