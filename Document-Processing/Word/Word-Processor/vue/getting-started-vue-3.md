@@ -21,16 +21,61 @@ This article provides a step-by-step guide for setting up a [Vite](https://vitej
 
 ### Create a Vue application
 
-To create a new Vue application, run the following command.
+Use [Vite](https://vitejs.dev/) to quickly scaffold a Vue 3 project. Run one of the following commands to create a new project:
 
 ```bash
-npm create vite@latest documenteditor-app -- --template vue
+npm create vite@latest
 ```
 
-Next, you will be prompted with "Install with npm and start now?". Select **Yes**. Move into the created project using the following command:
+or
 
 ```bash
-cd documenteditor-app  
+yarn create vite
+```
+
+After running the command, follow the interactive prompts shown below to configure the project:
+
+Step 1: Define the project name: Specify the project name directly. This guide uses `documenteditor-app`.
+
+```bash
+? Project name: » documenteditor-app
+```
+
+Step 2: Select `Vue` as the framework to target Vue 3.
+
+```bash
+? Select a framework: » - Use arrow-keys. Return to submit.
+Vanilla
+> Vue
+  React
+  Preact
+  Lit
+  Svelte
+  Others
+```
+
+Step 3: Choose `JavaScript` as the variant to build the Vite project with JavaScript and Vue.
+
+```bash
+? Select a variant: » - Use arrow-keys. Return to submit.
+> JavaScript
+  TypeScript
+  Customize with create-vue ↗
+  Nuxt ↗
+```
+
+Step 4: After the scaffold completes, install the project dependencies:
+
+```bash
+cd documenteditor-app
+npm install
+```
+
+or
+
+```bash
+cd documenteditor-app
+yarn install
 ```
 
 ### Install the Document Editor packages
@@ -45,12 +90,11 @@ To install the Document Editor component, use the following command:
 
 ### Add CSS reference
 
-Add the following Document Editor and dependent component style references to the `<style>` section of the `src/App.vue` file.
+Add the following Document Editor and dependent component style definitions to the `src/style.css` file.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="~/src/style.css" %}
 
-<style>
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
@@ -60,7 +104,6 @@ Add the following Document Editor and dependent component style references to th
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css';
-</style>
 
 {% endhighlight %}
 {% endtabs %}
