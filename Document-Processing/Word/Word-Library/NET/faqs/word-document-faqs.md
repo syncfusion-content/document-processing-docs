@@ -204,7 +204,7 @@ Essential<sup>&reg;</sup> DocIO library uses Points for measurement properties i
 
 ## How to convert Units (cm, mm, or inches) to Points for DocIO?
 
-Syncfusion<sup>®</sup> .NET Word Library (DocIO) uses points as the default unit for various measurements, such as margins, indentation, and spacing. If you have measurements in centimeters (cm), millimeters (mm), or inches, you'll need to convert them to points before using them in DocIO code.
+[.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) uses points as the default unit for various measurements, such as margins, indentation, and spacing. If you have measurements in centimeters (cm), millimeters (mm), or inches, you'll need to convert them to points before using them in DocIO code.
 
 ### Conversion Formulas for Units to Points
 
@@ -555,7 +555,7 @@ In DocIO, if the structure is incorrect, an exception is thrown. Otherwise, DocI
 
 ## Is custom chart templates (.crtx) supported in Word Library?
 
-No, the .NET Word Library does not support custom chart templates (.crtx files).
+No, the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) does not support custom chart templates (.crtx files).
 
 These templates are part of Microsoft Excel's UI and are stored outside the document. Since the Word Library works programmatically and doesn't rely on external UI-based templates, applying .crtx files isn't supported.
 
@@ -606,7 +606,7 @@ For more information on working with Bookmark, refer to the documentation [here]
 
 ## How to preserve formatting of source document while inserting in a bookmark location in another document?
 
-When inserting a source document into a destination document at a specific bookmark location using the .NET Word Library DocIO, the formatting from the source document may not be preserved by default. This occurs because the destination document can override styles during the import process.
+When inserting a source document into a destination document at a specific bookmark location using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) DocIO, the formatting from the source document may not be preserved by default. This occurs because the destination document can override styles during the import process.
 
 To retain the original formatting of the source document, the [ImportOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.ImportOptions.html) property should be set to [ImportOptions.KeepSourceFormatting](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.ImportOptions.html#Syncfusion_DocIO_DLS_ImportOptions_KeepSourceFormatting) before performing the insertion. This ensures that all styles, fonts, and formatting from the source document are preserved in the destination document.
 
