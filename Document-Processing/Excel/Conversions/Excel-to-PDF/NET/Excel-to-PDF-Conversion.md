@@ -1534,7 +1534,7 @@ A complete working example for Modify the existing fallback fonts in C# is prese
 
 ### Supported script types
 
-The following table illustrates the supported script types by the .NET Excel library (XlsIO) in Excel to PDF conversion.
+The following table illustrates the supported script types by the .NET Excel Library in Excel to PDF conversion.
 
 <table>
 <thead> 
