@@ -9,7 +9,7 @@ documentation: ug
 
 # Bookmark Navigation in WPF Pdf Viewer
 
-[WPF PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/wpf-pdf-viewer) control allows users to navigate to the bookmarks present in the loaded PDF document at UI level. 
+PDF Viewer control allows users to navigate to the bookmarks present in the loaded PDF document at UI level. 
 
 ## Steps to perform bookmark navigation in PdfViewerControl.
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Change the text displayed in the loading indicator in WPF Pdf Viewer
 
-[WPF PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/wpf-pdf-viewer) allows you to change the text displayed in the loading indicator. The following code example illustrates the same.
+PDF Viewer allows you to change the text displayed in the loading indicator. The following code example illustrates the same.
 
 {% tabs %}
 {% highlight C# %}

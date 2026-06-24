@@ -9,7 +9,7 @@ documentation: ug
 
 # Extract Text from PDF Files in WPF Pdf Viewer
 
-[WPF PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/wpf-pdf-viewer) allows you to extract the text from a particular page or from the entire PDF file using the [ExtractText](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfDocumentView.html#Syncfusion_Windows_PdfViewer_PdfDocumentView_ExtractText_System_Int32_Syncfusion_Pdf_TextLines__) methods of [PdfDocumentView](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfDocumentView.html). 
+PDF Viewer allows you to extract the text from a particular page or from the entire PDF file using the [ExtractText](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfDocumentView.html#Syncfusion_Windows_PdfViewer_PdfDocumentView_ExtractText_System_Int32_Syncfusion_Pdf_TextLines__) methods of [PdfDocumentView](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfDocumentView.html). 
 
 N> PDF Viewer uses PDFium as a default rendering engine to extract text from PDF files. Refer to this [link](https://help.syncfusion.com/wpf/pdf-viewer/pdf-rendering-engines) for more details about the PDF rendering engines.
 

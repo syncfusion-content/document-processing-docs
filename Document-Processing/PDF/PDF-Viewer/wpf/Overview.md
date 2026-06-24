@@ -9,7 +9,7 @@ documentation: ug
 
 # WPF Pdf Viewer Overview
 
-The [WPF PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/wpf-pdf-viewer) control supports viewing, reviewing, and printing PDF files in the WPF applications. The thumbnail, bookmark, hyperlink, and table of contents support provide easy navigation within and outside the PDF files. The form-filling support provides a platform to fill, flatten, save, and print PDF files with AcroForm. The PDF files can be reviewed with the abundantly available annotation tools.
+The PDF Viewer control supports viewing, reviewing, and printing PDF files in the WPF applications. The thumbnail, bookmark, hyperlink, and table of contents support provide easy navigation within and outside the PDF files. The form-filling support provides a platform to fill, flatten, save, and print PDF files with AcroForm. The PDF files can be reviewed with the abundantly available annotation tools.
 
 ![WPF PDF Viewer Overview](overview_images/wpf-pdf-viewer-overview.png)
 

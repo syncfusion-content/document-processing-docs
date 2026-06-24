@@ -9,7 +9,7 @@ documentation: ug
 
 # Handwritten Signature in WPF Pdf Viewer
 
-[WPF PDF viewer](https://www.syncfusion.com/pdf-viewer-sdk/wpf-pdf-viewer) allows the user to include handwritten signature in the PDF document and provides options to edit or remove the included handwritten signature in the PDF document.
+PDF viewer allows the user to include handwritten signature in the PDF document and provides options to edit or remove the included handwritten signature in the PDF document.
 
 The following code shows how to switch to handwritten signature mode in code behind.
 

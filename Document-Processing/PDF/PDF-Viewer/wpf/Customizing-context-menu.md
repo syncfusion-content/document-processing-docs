@@ -9,7 +9,7 @@ documentation: ug
 
 # Customization support for context menu in WPF PdfViewer
 
-[WPF PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/wpf-pdf-viewer) now supports customization of the default context menu items. This gives users more options to adjust the viewer to fit their application's requirements. Previously, the context menus for Annotation, Text Selection, Redaction, and Signature Field did not allow modifications. With this enhancement, users can add, remove, and hide the default menu items with the help of events.
+PDF Viewer now supports customization of the default context menu items. This gives users more options to adjust the viewer to fit their application's requirements. Previously, the context menus for Annotation, Text Selection, Redaction, and Signature Field did not allow modifications. With this enhancement, users can add, remove, and hide the default menu items with the help of events.
 
 ### Events 
 

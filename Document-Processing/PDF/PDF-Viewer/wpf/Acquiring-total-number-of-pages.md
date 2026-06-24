@@ -9,7 +9,7 @@ documentation: ug
 
 # Acquire total number of pages in WPF Pdf Viewer
 
-[WPF PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/wpf-pdf-viewer) provides the total number of the pages in the PDF document that is being loaded into the PDF Viewer. This value can be acquired with the help of [PageCount](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_PageCount) property in the PDF Viewer control, the following code example illustrates the same.
+PDF Viewer provides the total number of the pages in the PDF document that is being loaded into the PDF Viewer. This value can be acquired with the help of [PageCount](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_PageCount) property in the PDF Viewer control, the following code example illustrates the same.
 
 {% tabs %}
 {% highlight C# %}

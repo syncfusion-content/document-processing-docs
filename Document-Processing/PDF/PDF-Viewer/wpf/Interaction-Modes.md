@@ -9,7 +9,7 @@ documentation: UG
 
 # Interaction Modes in WPF Pdf Viewer
 
-The [WPF PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/wpf-pdf-viewer) supports following cursor modes for easy interaction with the PDF documents: 
+The PDF Viewer supports following cursor modes for easy interaction with the PDF documents: 
 
 * Selection mode 
 * Panning mode
