@@ -9,7 +9,7 @@ documentation: ug
 
 # Redaction toolbar customization in JavaScript
 
-The redaction toolbar in the JavaScript PDF Viewer can be customized by rearranging items, hiding default items, or adding custom items. Custom items can be inserted at specific index positions within the existing toolbar.
+The redaction toolbar in the [JavaScript PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/javascript-pdf-viewer) can be customized by rearranging items, hiding default items, or adding custom items. Custom items can be inserted at specific index positions within the existing toolbar.
 
 ## Enable the redaction toolbar
 

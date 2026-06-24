@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Save PDF files to OneDrive
 
-This article describes how to save a PDF file to OneDrive from the JavaScript PDF Viewer using a server-side web service. Follow the steps below.
+This article describes how to save a PDF file to OneDrive from the [JavaScript PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/javascript-pdf-viewer) using a server-side web service. Follow the steps below.
 
 **Step 1:** Create a Microsoft Graph API application
 

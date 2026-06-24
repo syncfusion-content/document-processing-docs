@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Print Overview in JavaScript PDF Viewer Control
 
-The JavaScript PDF Viewer includes built-in printing via the toolbar and APIs so users can control how documents are printed and monitor the process.
+The [JavaScript PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/javascript-pdf-viewer) includes built-in printing via the toolbar and APIs so users can control how documents are printed and monitor the process.
 
 Select **Print** in the built-in toolbar to open the browser print dialog.
 
