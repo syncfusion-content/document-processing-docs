@@ -150,5 +150,5 @@ The table below describes each event and its role in the editing process:
 
 ## See Also
 
-* [Editing](./editing.md)
-* [Clipboard](./clipboard.md)
+* [Editing](./cell-ranges-and-operations/editing)
+* [Clipboard](./cell-ranges-and-operations/clipboard)

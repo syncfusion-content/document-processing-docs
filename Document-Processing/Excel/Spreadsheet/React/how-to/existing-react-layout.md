@@ -32,7 +32,7 @@ The following sample shows how to render the Spreadsheet inside the Tab componen
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/integrate-into-layouts-cs1" %}
 
-### Use spreadsheet inside Dialog
+### Use Spreadsheet inside Dialog
 
 If the Spreadsheet is placed inside a dialog (for example, a Syncfusion Dialog), render or initialize the Spreadsheet only within the dialog’s open event. The parent container must be visible in the DOM for the Spreadsheet to correctly measure and compute its layout.
 

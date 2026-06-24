@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with Vue PDF Viewer component | Syncfusion
-description: Checkout and learn about Getting started with Vue PDF Viewer component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Vue PDF Viewer component | Syncfusion
+description: Checkout and learn about Getting Started with Vue PDF Viewer component of Syncfusion Essential JS 2 and more details.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with server-backed Vue PDF Viewer Component in Vue 2
+# Getting Started with server-backed Vue PDF Viewer Component in Vue 2
 
 This section explains how to create the **PDF Viewer** component and configure its functionalities in a Vue 2 application using Vue CLI with a server-backed architecture. In this mode, PDF rendering and processing are handled by a web service.
 
@@ -20,7 +20,7 @@ N> Starting with the 2026 Vol 2 main release (June 2026), no new features will b
 
 ## Create a Vue Application
 
-Create a Vue application using Vue CLI.
+Create a Vue application using [Vue CLI](https://cli.vuejs.org/#getting-started).
 
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
@@ -61,7 +61,7 @@ Add the required CSS styles for the PDF Viewer component and its dependencies to
 In this example, the `Material` theme is applied using CSS styles available in the installed packages. The required `Material` CSS styles are imported into the `<style>` section of the **src/App.vue** file.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="App.vue" %}
 
 <style>
   @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
@@ -78,56 +78,19 @@ In this example, the `Material` theme is applied using CSS styles available in t
 {% endhighlight %}
 {% endtabs %}
 
-N> You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator), or [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to the [Themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Vue project.
+N> Refer to the [Themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Vue project.
 
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue PDF Viewer component
 
-Import and register the PDF Viewer component directives in the `script` section of **src/App.vue**. Then, define the component in the `template` section.
+Add the PDF Viewer component to your Vue application by following these instructions:
+
+### Import and register the PDF Viewer
+
+Import and register the PDF Viewer component directives in the `<script>` section of `src/App.vue`.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API App.vue" %}
 
-<template>
-  <ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath">
-  </ejs-pdfviewer>
-</template>
-
-<script setup>
-import { provide } from "vue";
-import {
-  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-  ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, PageOrganizer
-} from '@syncfusion/ej2-vue-pdfviewer';
-
-const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
-const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-
-provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-  Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, PageOrganizer]);
-
-</script>
-
-<style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css';
-</style>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API ~/src/App.vue" %}
-
-<template>
-  <ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath">
-  </ejs-pdfviewer>
-</template>
-
-<script>
 import {
   PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
   ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, PageOrganizer
@@ -140,14 +103,7 @@ export default {
   },
   data() {
     return {
-       <!--
-          Specifies the backend service URL that processes and streams PDF data
-      --> 
-      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
-      <!--
-          Defines the source of the PDF to load in the PDF Viewer.
-          Accepts either a public URL or a Base64-encoded PDF string.
-      --> 
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer", 
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
@@ -156,19 +112,19 @@ export default {
       Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, PageOrganizer]
   }
 }
-</script>
 
-<style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css';
-</style>
+{% endhighlight %}
+{% endtabs %}
+
+### Initialize the PDF Viewer
+
+Add the **Syncfusion Vue PDF Viewer** component to the `<template>` section in the `src/App.vue` file.
+
+{% tabs %}
+{% highlight html tabtitle="App.vue" %}
+
+<ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath">
+</ejs-pdfviewer>
 
 {% endhighlight %}
 {% endtabs %}
@@ -179,7 +135,7 @@ N> The Web API hosted link https://document.syncfusion.com/web-services/pdf-view
 
 ## Run the project
 
-Run the following command to start the application.
+Run the following command to start the Vue application:
 
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
@@ -201,7 +157,7 @@ You can also explore the PDF Viewer interactively using the live sample below.
 
 N> When configuring the server-backed PDF Viewer, there is no need to include the `pdfium.js` and `pdfium.wasm` files. Unlike the standalone PDF Viewer, which relies on these files for local rendering, the server-backed PDF Viewer fetches and renders PDFs directly from the server. Consequently, these files are not required for deployment, and you can exclude the copy command for the deployment process.
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/Getting%20Started%20-%20server-back).
+> [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/Getting%20Started%20-%20server-back).
 
 N> For hosting the web service on Linux, ensure you include the [SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1) package. Additionally, for AWS environments, use the following packages:
 
@@ -212,6 +168,6 @@ N> For hosting the web service on Linux, ensure you include the [SkiaSharp.Nativ
 
 ## See also
 
-- [Getting started Vue PDF Viewer](./getting-started)
+- [Getting Started Vue PDF Viewer](./getting-started)
 - [Open PDF Files](./open-pdf-files)
 - [Save PDF Files](./save-pdf-files)

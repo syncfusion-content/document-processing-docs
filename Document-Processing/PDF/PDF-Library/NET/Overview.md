@@ -1,5 +1,6 @@
 ---
 title: Create, read, edit, convert PDF files in .NET | Syncfusion
+canonical_url: "https://www.syncfusion.com/document-sdk/net-pdf-library"
 description: Essential PDF is a .NET PDF library to convert PDF files in Windows Forms, WPF, UWP, ASP.NET Core, ASP.NET MVC, Xamarin, Flutter applications
 platform: document-processing
 control: PDF
@@ -17,7 +18,7 @@ The following list shows the key features available in the Essential<sup>&reg;</
 * Support to [create PDF files](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-c-sharp-vb-net) from scratch.
 * Support to add [text](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-text), various formats of [images](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-images), [tables](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-tables) and [shapes](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-shapes).
 * Support for [creation](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-forms#creating-a-new-pdf-form), [filling](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-forms#filling-form-fields-in-an-existing-pdf-document) and [flattening](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-forms#removing-editing-capability-of-form-fields) forms (AcroForms and XFA).  
-* [Open](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/open-and-save-pdf-file-in-c-sharp-vb-net), modify and [save](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/open-and-save-pdf-file-in-c-sharp-vb-net) existing PDF files.
+* [Open](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/open-pdf-file), modify and [save](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/save-pdf-file) existing PDF files.
 * Support to [compress](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-compression) existing PDF files.
 * Ability to [merge](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/merge-documents) and [split](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/split-documents) PDF files.
 * Support for [Optical Character Recognition](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-ocr/working-with-ocr) by using Tesseract engine. 
@@ -52,3 +53,5 @@ The following list shows the key features available in the Essential<sup>&reg;</
 * Support for .NET Standard 2.0 onwards.
 
 N> 1. Starting with v20.1.0.x, if you reference Syncfusion<sup>&reg;</sup> HTML converter or OCR processor assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+
+N> Looking for the full .NET PDF Library overview, features, pricing, and documentation? Visit the [.NET PDF Library](https://www.syncfusion.com/document-sdk/net-pdf-library) page.
