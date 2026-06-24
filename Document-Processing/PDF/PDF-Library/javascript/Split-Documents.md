@@ -1,18 +1,18 @@
 ---
-title: Split in JavaScript PDF library | Syncfusion
-description:  This section explains how to split large PDF documents into smaller ones, each containing single or multiple pages, using the JavaScript PDF library
+title: Split in JavaScript PDF Library | Syncfusion
+description:  This section explains how to split large PDF documents into smaller ones, each containing single or multiple pages, using the JavaScript PDF Library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Split in JavaScript PDF library
+# Split in JavaScript PDF Library
 
-The PDF library supports splitting PDF file into single-page or multiple-page PDF documents.
+The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) supports splitting PDF file into single-page or multiple-page PDF documents.
 
 ## Splitting a PDF file into individual 
 
-The PDF library allows splitting the pages of an existing PDF document into multiple individual PDF documents using [split](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument#split) method of the [PdfDocument](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument) class.
+The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) allows splitting the pages of an existing PDF document into multiple individual PDF documents using [split](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument#split) method of the [PdfDocument](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument) class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -51,7 +51,7 @@ document.destroy();
 
 ## Split a range of pages into a separate PDF document
 
-The PDF library allows splitting a certain range of pages into a separate PDF document using the [splitByPageRanges](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument#splitbypageranges) method of the [PdfDocument](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument) class.
+The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) allows splitting a certain range of pages into a separate PDF document using the [splitByPageRanges](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument#splitbypageranges) method of the [PdfDocument](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument) class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -90,7 +90,7 @@ document.destroy();
 
 ## Split by a fixed number of pages into a PDF document
 
-The PDF library allows splitting by fixed number of pages of an existing PDF document using the [splitByFixedNumber](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument#splitbyfixednumber) method of the [PdfDocument](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument) class.
+The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) allows splitting by fixed number of pages of an existing PDF document using the [splitByFixedNumber](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument#splitbyfixednumber) method of the [PdfDocument](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument) class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

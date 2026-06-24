@@ -41,3 +41,7 @@ Text wrapping refers to how shapes fit with surrounding text in a document. Plea
 ## Positioning the shape
 
 DocumentEditor preserves the position properties of the shape and displays the shape based on position properties. It does not support modifying the position properties. Whereas the shape will be automatically moved along with text edited if it is positioned relative to the line or paragraph.
+
+## Online Demo
+
+Explore how to preserve autoshapes and grouped shapes in Word documents using the Angular Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/autoshapes).

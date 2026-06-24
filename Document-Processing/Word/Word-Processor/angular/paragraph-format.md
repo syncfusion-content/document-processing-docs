@@ -162,6 +162,10 @@ The following sample demonstrates the paragraph formatting options using a toolb
   
 {% previewsample "/document-processing/samples/document-editor/angular/paragraph-formatting-cs1" %}
 
+## Online Demo
+
+Explore how to apply paragraph formatting in Word documents using the Angular Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/paragraph-formatting).
+
 ## See Also
 
 * [Feature modules](./feature-module)

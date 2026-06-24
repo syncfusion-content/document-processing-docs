@@ -159,6 +159,10 @@ Document Editor expose API to get or set the table description of the selected i
 this.documenteditor.selection.tableFormat.description = 'Freight cost and shipping details';
 ```
 
+## Online Demo
+
+Explore how to format tables in Word documents using the Angular Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/table-formatting).
+
 ## See Also
 
 * [Table properties dialog](./dialog#table-properties-dialog)

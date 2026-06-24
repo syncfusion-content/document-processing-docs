@@ -25,3 +25,6 @@ Document Editor provides RTL (right-to-left) support. This can be enabled using 
         
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/rtl-cs1" %}
 
+## Online Demo
+
+Explore how to use right-to-left layout in Word documents using the JavaScript Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/right-to-left.html).
