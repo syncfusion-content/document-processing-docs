@@ -171,6 +171,10 @@ The following sample demonstrates the paragraph formatting options using a toolb
 
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/paragraph-format-cs1" %}
 
+## Online Demo
+
+Explore how to apply paragraph formatting in Word documents using the JavaScript (ES5) Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/paragraph-formatting.html).
+
 ## See Also
 
 * [Feature modules](./feature-module)

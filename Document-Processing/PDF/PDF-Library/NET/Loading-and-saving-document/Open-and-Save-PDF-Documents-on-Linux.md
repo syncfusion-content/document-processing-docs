@@ -106,7 +106,7 @@ using(FileStream outputStream = new FileStream("Result.pdf", FileMode.Create, Fi
 
 Step 7: Execute the following command to restore the NuGet packages.
 
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
 dotnet restore
 
@@ -115,7 +115,7 @@ dotnet restore
 ![Linux Build](Images/Linux_Build.png)
 
 Step 8: Execute the following command in terminal to run the application.
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
 dotnet run
 

@@ -32,7 +32,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 Step 5: A default action method named Index will be present in `HomeController.cs`. Right-click on this Index method and select Go To View where you will be directed to its associated view page `Index.cshtml`. Add a new button in the `Index.cshtml` as follows.
 
 {% tabs %}
-{% highlight HTML %}
+{% highlight CSHTML %}
 
 @{Html.BeginForm("CreatePDFDocument", "Home", FormMethod.Get);
     {

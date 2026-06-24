@@ -22,6 +22,10 @@ This topic describes view-related options in the Document Editor, including layo
 
 N> The Default value of [`LayoutType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.LayoutType.html?_ga=2.86979928.1792501268.1670214760-93590999.1630704258) in the DocumentEditorContainer component is [`Pages`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.LayoutType.html#Syncfusion_Blazor_DocumentEditor_LayoutType_Pages).
 
+### Online Demo
+
+Explore how to view Word documents in web layout using the Blazor Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/web-layout?theme=fluent2).
+
 ## Show Ruler
 
 The ruler helps set margins, tab stops, and indentations to maintain consistent formatting in the Document Editor Container.
@@ -40,6 +44,10 @@ The following example illustrates how to the enable ruler in the Document Editor
 }
 ```
 
+### Online Demo
+
+Explore how to use the ruler in the Blazor Document Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/ruler?theme=fluent2).
+
 ## Heading Navigation Pane  
 
 Using the heading navigation pane allows users to swiftly navigate documents by heading, enhancing their ability to move through the document efficiently. 
@@ -55,3 +63,7 @@ The following example demonstrates how to enable the heading navigation pane in 
     DocumentEditorSettingsModel settings = new DocumentEditorSettingsModel() { ShowNavigationPane = true};
 }
 ```
+
+### Online Demo
+
+Explore how to navigate through headings in Word documents using the Blazor Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/heading-navigation?theme=fluent2).

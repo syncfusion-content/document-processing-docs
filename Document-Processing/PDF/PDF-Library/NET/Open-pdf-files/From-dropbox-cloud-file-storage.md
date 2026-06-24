@@ -23,7 +23,7 @@ Step 3: Install the and [Dropbox.Api](https://www.nuget.org/packages/Dropbox.Api
 Step 4: Include the following namespaces in the Program.cs file.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C#" %}
 
 using Dropbox.Api;
 
@@ -33,7 +33,7 @@ using Dropbox.Api;
 Step 5: Add the below code example to load a PDF from Dropbox cloud file storage.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C#" %}
 
 // Define the access token for authentication with the Dropbox API
 // Replace with your actual access token

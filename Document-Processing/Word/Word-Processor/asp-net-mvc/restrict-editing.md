@@ -43,6 +43,10 @@ Restrict Editing Pane provides the following options to manage the document:
 * To apply the chosen editing restrictions, click the **YES,START ENFORCING PROTECTION** button. A dialog box displays asking for a password to protect.
 * To stop protection, select **STOP PROTECTION** button. A dialog box displays asking for a password to stop protection.
 
+## Online Demo
+
+Explore how to restrict editing and protect Word documents using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/documentprotection#/tailwind3).
+
 * [How to protect the document in form filling mode](./form-fields#protect-the-document-in-form-filling-mode)
 * [How to protect the document in comments only mode](./comments#protect-the-document-in-comments-only-mode)
 * [How to protect the document in track changes only mode](./track-changes#protect-the-document-in-track-changes-only-mode)
