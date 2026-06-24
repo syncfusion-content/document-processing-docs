@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 The PDF Viewer component enables viewing, printing, form filling, and annotating PDF files in web applications. The client component requires a server-side Web API to process and render PDF content.
 
-This Docker image provides a preconfigured container for the PDF Viewer server backend and can be deployed quickly in most environments.
+This Docker image provides a preconfigured container for the PDF Viewer server back end and can be deployed quickly in most environments.
 
 PDF Viewer is a commercial product and requires a valid license in production environments. [Request a license or trial key](https://help.syncfusion.com/common/essential-studio/licensing/licensing-faq/where-can-i-get-a-license-key) from the Syncfusion licensing portal
 

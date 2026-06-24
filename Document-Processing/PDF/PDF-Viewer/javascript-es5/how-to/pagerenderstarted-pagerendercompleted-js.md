@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Page rendering events in JavaScript PDF Viewer
 
-In the PDF Viewer, the [pageRenderInitiate](https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerenderinitiate) and [pageRenderComplete](https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerendercomplete) events occur during page rendering.
+In the PDF Viewer, the [pageRenderInitiate](https://ej2.syncfusion.com/documentation/api/pdfviewer#pagerenderinitiate) and [pageRenderComplete](https://ej2.syncfusion.com/documentation/api/pdfviewer#pagerendercomplete) events occur during page rendering.
 
 **pageRenderInitiate**
 
