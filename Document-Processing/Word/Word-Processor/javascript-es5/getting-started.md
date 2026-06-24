@@ -37,7 +37,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential JS 2 components' 
 
   ```text
   Script: https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/dist/global/ej2-base.min.js 
-  Style: https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/styles/material.css
+  Style: https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/styles/tailwind3.css
   ```
 
 Add the following CDN references inside the `<head>` section of your `index.html` file, as shown below.
