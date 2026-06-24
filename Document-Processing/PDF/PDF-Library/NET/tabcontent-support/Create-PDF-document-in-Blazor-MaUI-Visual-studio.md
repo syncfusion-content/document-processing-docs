@@ -12,12 +12,12 @@ Step 2: Install the [Syncfusion.PDF.NET](https://www.nuget.org/packages/Syncfusi
 Step 3: Next, include the following namespaces in the ``_Imports.razor`` file.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight CSHTML %}
 
-@using Syncfusion.Pdf;
-@using Syncfusion.Pdf.Graphics;
-@using Syncfusion.Pdf.Grid;
-@using Syncfusion.Drawing;
+@using Syncfusion.Pdf
+@using Syncfusion.Pdf.Graphics
+@using Syncfusion.Pdf.Grid
+@using Syncfusion.Drawing
 @using BlazorMauiAppCreatePdfSample.Services
 
 {% endhighlight %}
@@ -86,6 +86,7 @@ The [PdfDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Pdf
             service.SaveAndView("Output.pdf", "application/pdf", ms);
         }
     }
+}
 
 {% endhighlight %}
 {% endtabs %}

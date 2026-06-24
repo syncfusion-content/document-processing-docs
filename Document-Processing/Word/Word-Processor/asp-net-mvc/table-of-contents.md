@@ -66,6 +66,10 @@ documenteditor.editorModule.insertTableOfContents(tocSettings);
 
 N>Same method is used for inserting, updating, and editing table of contents. This will work based on the current element at cursor position and the optional settings parameter. If table of contents is present at cursor position, the update operation will be done based on the optional settings parameter. Otherwise, the insert operation will be done.
 
+## Online Demo
+
+Explore how to insert and update table of contents in Word documents using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/tableofcontents#/tailwind3).
+
 ## See Also
 
 * [Table of contents dialog](./dialog#table-of-contents-dialog)

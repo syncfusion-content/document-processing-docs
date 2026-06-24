@@ -18,7 +18,7 @@ To quickly start converting a Word document to RTF and vice versa, please check 
 
 ## Assemblies and NuGet packages required
 
-Refer to the following links for assemblies and NuGet packages required based on platforms to convert the RTF document into Word document and vice versa using the .NET Word Library (DocIO).
+Refer to the following links for assemblies and NuGet packages required based on platforms to convert the RTF document into Word document and vice versa using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO).
 
 * [RTF conversions assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required)
 * [RTF conversions NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
@@ -108,8 +108,8 @@ The supported and unsupported features of DocIO based on file formats can be ref
 
 ## Online Demo
 
-* Explore how to convert the RTF file to Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/rtftodoc#/tailwind).
-* See how to convert a Word document to an RTF file using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/wordtortf#/tailwind).
+* Explore how to convert the RTF file to Word document using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/rtftodoc#/tailwind).
+* See how to convert a Word document to an RTF file using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/wordtortf#/tailwind).
 
 ## See Also
 
