@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Extract text option in the JavaScript PDF Viewer
+# Extract text in the JavaScript PDF Viewer
 
 The `extractText` method extracts text from one or more pages and can return plain text or text with bounds for each element.
 

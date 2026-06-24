@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Control annotation visibility in PDF Viewer
+# Control annotation visibility in JavaScript PDF Viewer
 
 ### Overview
 
@@ -16,7 +16,7 @@ This guide explains how to control the visibility of PDF annotations in document
 
 ### Steps to control annotation visibility
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) to create a simple PDF Viewer sample.
 
 **Step 2:** Add buttons for annotation modification and downloading
 

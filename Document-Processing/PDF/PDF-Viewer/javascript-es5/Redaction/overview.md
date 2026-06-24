@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Redaction annotation in Javascript PDF Viewer | Syncfusion
+title: Redaction in Javascript PDF Viewer | Syncfusion
 description: Learn how to hide sensitive information with interactive and programmatic redaction using the Syncfusion JavaScript(ES5) PDF Viewer.
 platform: document-processing
 control: PDF Viewer

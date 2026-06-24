@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF files to Google Drive
+# Save PDF files to Google Drive in JavaScript PDF Viewer
 
 This article describes how to save a PDF file to Google Drive from the JavaScript PDF Viewer using a server-side web service. Follow the steps below.
 

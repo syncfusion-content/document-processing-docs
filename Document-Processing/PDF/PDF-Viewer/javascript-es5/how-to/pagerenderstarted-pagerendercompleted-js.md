@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Handle pageRenderInitiate and pageRenderComplete in JavaScript PDF Viewer | Syncfusion
+title: Page rendering events in JavaScript PDF Viewer | Syncfusion
 description: Learn how to use the pageRenderInitiate and pageRenderComplete events in the Syncfusion JavaScript PDF Viewer during page rendering.
 platform: document-processing
 control: PDF Viewer
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Handle pageRenderInitiate and pageRenderComplete events
+# Page rendering events in JavaScript PDF Viewer
 
 In the PDF Viewer, the [pageRenderInitiate](https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerenderinitiate) and [pageRenderComplete](https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerendercomplete) events occur during page rendering.
 

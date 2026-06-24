@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF files to OneDrive
+# Save PDF files to OneDrive in JavaScript PDF Viewer
 
 This article describes how to save a PDF file to OneDrive from the [JavaScript PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/javascript-pdf-viewer) using a server-side web service. Follow the steps below.
 
@@ -155,4 +155,4 @@ N> Install the following NuGet packages in the web service application when requ
 - `Microsoft.Extensions.Configuration.FileExtensions`
 - `Microsoft.Extensions.Configuration.Json`
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-one-drive)
+[View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-onedrive)

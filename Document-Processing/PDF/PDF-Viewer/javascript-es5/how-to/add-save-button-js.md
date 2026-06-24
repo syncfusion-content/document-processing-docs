@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 The PDF Viewer supports customizing toolbar items, including adding, showing, hiding, enabling, and disabling items.
 
-- Save button: The Save button can be defined using [CustomToolbarItemModel](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/customToolbarItem/) and included alongside existing items via [ToolbarSettings](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarSettings/). Handle the click action using [`toolbarclick`](https://ej2.syncfusion.com/javascript/documentation/api/toolbar/clickEventArgs/).
+- Save button: The Save button can be defined using [CustomToolbarItemModel](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/customToolbarItem) and included alongside existing items via [ToolbarSettings](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarSettings). Handle the click action using [`toolbarclick`](https://ej2.syncfusion.com/javascript/documentation/api/toolbar/clickEventArgs).
 
-- Show or hide: The Save button can be shown or hidden using [ToolbarSettings](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarSettings/). Predefined items are listed under [`ToolbarItem`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarItem/).
+- Show or hide: The Save button can be shown or hidden using [ToolbarSettings](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarSettings). Predefined items are listed under [`ToolbarItem`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarItem).
 
 - Enable or disable: The Save button can be enabled or disabled using `enableToolbarItem` (see the API reference linked for the toolbar).
 
