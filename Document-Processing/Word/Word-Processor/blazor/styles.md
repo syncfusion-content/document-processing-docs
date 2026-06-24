@@ -9,7 +9,7 @@ documentation: ug
 
 # Working with Styles in Blazor DocumentEditor Component
 
-Styles are useful for applying a set of formatting consistently throughout the document. In document editor, styles are created and added to a document programmatically or via the built-in Styles dialog.
+Styles are useful for applying a set of formatting consistently throughout the document. In [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor), styles are created and added to a document programmatically or via the built-in Styles dialog.
 
 ## Styles definition overview
 
