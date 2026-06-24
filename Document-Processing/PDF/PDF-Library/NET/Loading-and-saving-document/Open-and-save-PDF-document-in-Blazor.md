@@ -43,7 +43,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 Step 5:  Inject ExportService into `FetchData.razor` using the following code.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight CSHTML %}
 
 @inject ExportService service
 @inject Microsoft.JSInterop.IJSRuntime JS
@@ -198,10 +198,9 @@ public static class FileUtil
 
 {% endtabs %}
 
-Step 14: Add the following JavaScript function in the `_Host.cshtml` available under the `Pages` folder.
+Step 14: Add the following JavaScript function in the  ``App.razor`` available under the ``Components`` folder.
 
 {% tabs %}
-
 {% highlight HTML %}
 
 <script type="text/javascript">

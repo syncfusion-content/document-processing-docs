@@ -21,7 +21,7 @@ Step 3: Install the [AWSSDK.S3](https://www.nuget.org/packages/AWSSDK.S3) NuGet 
 Step 4: Include the following namespaces in the Program.cs file.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C#" %}
 
 using Amazon;
 using Amazon.S3;
@@ -33,7 +33,7 @@ using Amazon.S3.Transfer;
 Step 5: Add the below code example to load a PDF from AWS S3.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C#" %}
 
 // Set your AWS credentials and region
 string accessKey = "YOUR_ACCESS_KEY";

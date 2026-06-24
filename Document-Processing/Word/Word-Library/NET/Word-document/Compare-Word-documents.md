@@ -21,7 +21,7 @@ To quickly start comparing two Word documents, please check out this video:
 
 ## Assemblies and NuGet packages required
 
-Refer to the following links for assemblies and NuGet packages required based on platforms for comparing Word documents using the .NET Word Library (DocIO).
+Refer to the following links for assemblies and NuGet packages required based on platforms for comparing Word documents using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO).
 
 * [Compare Word documents assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required)
 * [Compare Word documents NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
@@ -246,7 +246,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to compare Word documents using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/comparedocuments#/tailwind).
+* Explore how to compare Word documents using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/comparedocuments#/tailwind).
 
 ## See Also
 

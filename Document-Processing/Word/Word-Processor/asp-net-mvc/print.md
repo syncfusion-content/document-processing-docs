@@ -99,7 +99,9 @@ By customizing margins, papers, and layouts, the layout of the document will be 
 {% endhighlight %}
 {% endtabs %}
 
+## Online Demo
 
+Explore how to print Word documents using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/print#/tailwind3).
 
 ## See Also
 

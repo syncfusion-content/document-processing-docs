@@ -122,6 +122,10 @@ The following example shows how to customize layout options only for printing.
         
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/print-cs3" %}
 
+## Online Demo
+
+Explore how to print Word documents using the JavaScript Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/print.html).
+
 ## See Also
 
 * [Feature modules](./feature-module)

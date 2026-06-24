@@ -143,7 +143,7 @@ By executing the program, you will get the output PDF as follows.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF).
 
-T> For troubleshooting issues in the .NET Word Library (DocIO), refer [this](https://support.syncfusion.com/kb/article/16012/troubleshooting-guide-for-syncfusion-word-docio-library-issues?isInternalRefresh=False) article that provides comprehensive guidance on resolving common problems.
+T> For troubleshooting issues in the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO), refer [this](https://support.syncfusion.com/kb/article/16012/troubleshooting-guide-for-syncfusion-word-docio-library-issues?isInternalRefresh=False) article that provides comprehensive guidance on resolving common problems.
 
 N> 1. For .NET Framework, creating an instance of the [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) class is mandatory to convert the charts present in the Word to PDF. Otherwise, the charts are not preserved in the converted PDF. Whereas this is not necessary for .NET Core, as ChartToImageConverter is initialized internally in Syncfusion.DocIORenderer.Portable assembly.
 N> 2. Total number of pages in the converted PDF may vary based on unsupported elements in the input Word document.
@@ -152,7 +152,7 @@ N> 4. Font-related issues during Word to PDF or image conversion can arise due t
 
 ## Supported File formats
 
-The .NET Word Library (DocIO) supports below formats to convert into PDF. 
+The [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) supports below formats to convert into PDF. 
 
 * DOC, DOCX, Word Processing XML (2003 & 2007), DOT, DOTX, DOCM, and DOTM
 * RTF 
@@ -264,9 +264,9 @@ When converting a Word document to a PDF, the presence of unsupported elements i
 
 ## Online Demo
 
-* Explore how to convert a Word document to PDF using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/wordtopdf#/tailwind).
-* See how to convert a Word document to PDF/UA using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/wordtopdfua#/tailwind).
-* See how to convert a Word document to PDF/A using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/wordtopdfa#/tailwind).
+* Explore how to convert a Word document to PDF using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/wordtopdf#/tailwind).
+* See how to convert a Word document to PDF/UA using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/wordtopdfua#/tailwind).
+* See how to convert a Word document to PDF/A using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/wordtopdfa#/tailwind).
 
 ## See Also
 
