@@ -1,6 +1,6 @@
 ---
 title: Word library Performance benchmark results | Syncfusion
-description: Know about the performance benchmark results of Syncfusion® .NET Word library with different document sizes
+description: Know about the performance benchmark results of the .NET Word library with different document sizes
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -8,7 +8,7 @@ documentation: UG
 
 # .NET Word library performance benchmarks
 
-The Syncfusion<sup>&reg;</sup> .NET Word library (DocIO) provides high-performance APIs to create, read, edit, and convert Word documents programmatically. This performance benchmark report highlights the speed and efficiency of key operations, demonstrating how DocIO handles large-scale document processing in real-world scenarios.
+The [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) provides high-performance APIs to create, read, edit, and convert Word documents programmatically. This performance benchmark report highlights the speed and efficiency of key operations, demonstrating how DocIO handles large-scale document processing in real-world scenarios.
 
 ## Environment
 

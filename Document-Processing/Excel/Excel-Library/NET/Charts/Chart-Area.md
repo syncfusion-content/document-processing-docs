@@ -1,6 +1,6 @@
 ---
 title: Chart Area | Excel library | Syncfusion
-description: In this section, you can learn about chart area in an Excel document using Syncfusion .NET Excel library.
+description: In this section, you can learn about the chart area in an Excel document using the .NET Excel Library with clear explanations and examples.
 platform: document-processing
 control: XlsIO
 documentation: UG

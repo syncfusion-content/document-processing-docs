@@ -44,6 +44,6 @@ N> This method is available from 12.4 version onwards.
 ## See Also
 
 * [How to resolve Excel cannot open the file filename.xlsx... error?](how-to-resolve-excel-cannot-open-the-file-because-the-file-format-for-the-file-extension-is-not-valid)
-* [What are the known exceptions of XlsIO?](https://help.syncfusion.com/file-formats/xlsio/known-exceptions)
+* [What are the known exceptions of XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/known-exceptions)
 * [How to open an Excel file from stream?](how-to-open-an-excel-file-from-stream)
 * [How to save a file to stream?](how-to-save-a-file-to-stream)

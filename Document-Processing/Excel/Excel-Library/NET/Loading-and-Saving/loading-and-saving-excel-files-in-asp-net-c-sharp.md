@@ -1,6 +1,6 @@
 ---
 title: Loading and saving workbook in ASP.NET | Syncfusion
-description: Explains how to load and save Excel files in ASP.NET applications using Syncfusion Excel library.
+description: Explains how to load and save Excel files in ASP.NET applications using .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
