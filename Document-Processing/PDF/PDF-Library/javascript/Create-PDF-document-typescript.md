@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create or Generate PDF file in TypeScript | Syncfusion
-description: Learn how to create a PDF file in TypeScript with easy steps using Syncfusion TypeScript PDF library without depending on Adobe
+description: Learn how to create a PDF file in TypeScript with easy steps using JavaScript PDF Library without depending on Adobe
 platform: document-processing
 control: PDF
 documentation: ug
@@ -10,15 +10,15 @@ keywords: pdf, script, typescript
 
 # Create or Generate PDF file in TypeScript
 
-The Syncfusion<sup>&reg;</sup> TypeScript PDF library is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, fill forms, and secure PDF files.
+The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) is used to create, read, and edit PDF documents. The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) also offers functionality to merge, split, stamp, fill forms, and secure PDF files.
 
-This guide explains how to integrate the TypeScript PDF library into an TypeScript application.
+This guide explains how to integrate the [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) into an TypeScript application.
 
 ## Installing the Syncfusion TypeScript PDF package
 
 All Syncfusion JS 2 packages are published in `npmjs.com` registry.
 
-* To install the PDF library, use the following command.
+* To install the [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library), use the following command.
 
 ```bash
 npm install @syncfusion/ej2-pdf --save
@@ -28,7 +28,7 @@ Ensure that your application includes an `ej2-pdf-lib` folder within a publicly 
 
 ## Dependencies
 
-The following list of dependencies are required to use the `TypeScript PDF library` component in your application.
+The following list of dependencies are required to use the [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) component in your application.
 
 ```bash
 |-- @syncfusion/ej2-compression

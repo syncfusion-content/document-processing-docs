@@ -1,12 +1,12 @@
 ---
-title: Header and footer support in JavaScript PDF library | Syncfusion
-description: This section explains how to create and apply header and footer templates with automatic fields in the JavaScript PDF library.
+title: Header and footer support in JavaScript PDF Library | Syncfusion
+description: This section explains how to create and apply header and footer templates with automatic fields in the JavaScript PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Header and footer support in JavaScript PDF library
+# Header and footer support in JavaScript PDF Library
 
 Header and footer support enables adding reusable content across all pages in a PDF document. It ensures layout-safe rendering by reserving space and preventing overlap with page content. 
 
