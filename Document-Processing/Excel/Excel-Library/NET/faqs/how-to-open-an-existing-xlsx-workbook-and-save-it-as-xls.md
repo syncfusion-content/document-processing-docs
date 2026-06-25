@@ -65,5 +65,5 @@ N> Workbook must be saved in appropriate version, failing in this leads to file 
 * [How to create and open Excel Template files by using XlsIO?](how-to-create-and-open-excel-template-files-by-using-xlsio)
 * [How to save a file to stream?](how-to-save-a-file-to-stream)
 * [How to merge excel files from more than one workbook to a single file?](how-to-merge-excel-files-from-more-than-one-workbook-to-a-single-file)
-* [How to opening an existing workbook?](https://help.syncfusion.com/file-formats/xlsio/loading-and-saving-workbook#opening-an-existing-workbook)
-* [How to save an Excel workbook to file system?](https://help.syncfusion.com/file-formats/xlsio/loading-and-saving-workbook#saving-a-excel-workbook-to-file-system)
+* [How to opening an existing workbook?](https://help.syncfusion.com/document-processing/excel/excel-library/net/loading-and-saving-workbook#opening-an-existing-workbook)
+* [How to save an Excel workbook to file system?](https://help.syncfusion.com/document-processing/excel/excel-library/net/loading-and-saving-workbook#saving-a-excel-workbook-to-file-system)

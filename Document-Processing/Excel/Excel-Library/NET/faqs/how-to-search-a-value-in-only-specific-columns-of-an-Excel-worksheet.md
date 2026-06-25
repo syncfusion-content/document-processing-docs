@@ -7,7 +7,7 @@ documentation: UG
 ---
 
 # How to search a value in only specific columns of an Excel worksheet?
-XlsIO allows searching for a value in different columns in an Excel worksheet through the [FindAll](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_FindAll_System_String_Syncfusion_XlsIO_ExcelFindType_) method. The following code illustrates this.
+XlsIO allows searching for a value in different columns in an Excel worksheet through the [FindAll](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_FindAll_System_String_Syncfusion_XlsIO_ExcelFindType_) method. The following code illustrates this.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -70,10 +70,10 @@ End Using
 
 ## See Also
 
-* [How to perform Find and Replace?](https://help.syncfusion.com/file-formats/xlsio/worksheet-cells-manipulation#find-and-replace)
-* [How to get entire column of the particular range?](https://help.syncfusion.com/file-formats/xlsio/worksheet-cells-manipulation#entire-column)
-* [How to define discontinuous ranges?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-define-discontinuous-ranges)
+* [How to perform Find and Replace?](https://help.syncfusion.com/document-processing/excel/excel-library/net/worksheet-cells-manipulation#find-and-replace)
+* [How to get entire column of the particular range?](https://help.syncfusion.com/document-processing/excel/excel-library/net/worksheet-cells-manipulation#entire-column)
+* [How to define discontinuous ranges?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-define-discontinuous-ranges)
 * [How to create and open Excel Template files by using XlsIO?](how-to-create-and-open-excel-template-files-by-using-xlsio)
 * [How to copy a range from one workbook to another?](how-to-copy-a-range-from-one-workbook-to-another)
 * [Does XlsIO support Excel files with macros that are digitally signed?](does-xlsio-support-excel-files-with-macros-that-are-digitally-signed)
-* [How to move or copy a worksheet?](https://help.syncfusion.com/file-formats/xlsio/working-with-excel-worksheet#move-or-copy-a-worksheet)
+* [How to move or copy a worksheet?](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-excel-worksheet#move-or-copy-a-worksheet)
