@@ -1,6 +1,6 @@
 ---
 title: Chart Series | Excel library | Syncfusion
-description: In this section, you can learn about chart series in an Excel document using Syncfusion .NET Excel library (XlsIO).
+description: In this section, you can learn about chart series in an Excel document using .NET Excel Library with clear guidance and practical examples.
 platform: document-processing
 control: XlsIO
 documentation: UG

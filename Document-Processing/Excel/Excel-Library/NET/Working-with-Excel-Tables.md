@@ -1,6 +1,6 @@
 ---
 title: Working with Tables | Excel library | Syncfusion
-description: This section illustrates about Excel Tables and its various features in Syncfusion XlsIO (a .NET Excel library).
+description: This section illustrates about Excel Tables and its various features in Syncfusion XlsIO (a .NET Excel Library).
 platform: document-processing
 control: XlsIO
 documentation: UG
