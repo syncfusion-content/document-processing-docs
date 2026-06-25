@@ -729,6 +729,42 @@ The following code example demonstrates saving the spreadsheet as PDF with diffe
 {% endhighlight %}
 {% endtabs %}
 
+
+### Preserve fonts when saving PDF (Blazor WebAssembly)
+
+In Blazor WebAssembly, to preserve fonts in exported PDF use the `CustomFont` property of the SfSpreadsheet component. Provide local TrueType font (.ttf) files from wwwroot and reference them via the component.
+
+#### How to use
+- Place .ttf files under wwwroot (for example: wwwroot/Arial.ttf).
+- Mark each .ttf as Content so it is published to wwwroot.
+- Set the SfSpreadsheet.CustomFonts list with paths relative to wwwroot (for example: `"Arial.ttf"`).
+- Only local .ttf files are supported for WASM PDF export — do not use remote URLs.
+- Verify file name casing; paths are effectively case-sensitive on some hosts.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Spreadsheet
+     
+<SfSpreadsheet @ref="SpreadsheetRef" CustomFonts="@CustomFonts">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+    public List<string> CustomFonts = new List<string>
+    {
+        "Arial.ttf",
+        "Calibri.ttf",
+        "Courier New.ttf",
+        "Georgia.ttf"
+    };
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Only local TrueType (.ttf) files referenced in `CustomFonts` are fetched and embedded by the WASM PDF exporter. If a font used in the sheet is not provided, a fallback font will be used and the appearance may change. 
+
 ## New
 To create a new, blank workbook through the UI, select **File > New** from the **Ribbon**. This action initializes a blank spreadsheet component, ready for data entry or formatting. If unsaved changes are present, a confirmation dialog will appear, indicating that these changes will be lost. The dialog presents options to proceed with creating the new workbook by selecting **OK**, or to cancel the operation by selecting **Cancel**.
 
