@@ -164,6 +164,6 @@ Upon executing the program, the **PDF** will be generated as follows.
 
 ![ASP .NET Core WEB API output PDF](ASP-NET-Core-WEB-API-images/ASP-NET-Core-Web-API-Output.png)
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
+Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) features. 
 
 An online sample link to [convert PowerPoint Presentation to PDF](https://document.syncfusion.com/demos/powerpoint/pptxtopdf#/tailwind) in ASP.NET Core. 

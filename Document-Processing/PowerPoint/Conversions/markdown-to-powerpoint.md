@@ -8,19 +8,19 @@ documentation: UG
 
 # Markdown to PowerPoint Conversion
 
-Markdown is a lightweight markup language that adds formatting elements to plain text documents. The .NET PowerPoint library supports the conversion of Markdown to PowerPoint Presentation document  (.PPTX, .PPTM, .POTX, .POTM) and vice versa, which mostly follows the CommonMark specification and GitHub-flavored syntax.
+Markdown is a lightweight markup language that adds formatting elements to plain text documents. The [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) supports the conversion of Markdown to PowerPoint Presentation document  (.PPTX, .PPTM, .POTX, .POTM) and vice versa, which mostly follows the CommonMark specification and GitHub-flavored syntax.
 
 
 ## Assemblies and NuGet packages required
 
-Refer to the following links for assemblies and NuGet packages required based on platforms to convert a Markdown file to a PowerPoint Presentation document using the .NET PowerPoint Library.
+Refer to the following links for assemblies and NuGet packages required based on platforms to convert a Markdown file to a PowerPoint Presentation document using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library).
 
 * [Markdown to PowerPoint assemblies](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/assemblies-required)
 * [Markdown to PowerPoint NuGet packages](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/nuget-packages-required)
 
 ## Convert Markdown to PowerPoint
 
-Convert an existing markdown file to a PowerPoint Presentation document using the .NET PowerPoint library.
+Convert an existing markdown file to a PowerPoint Presentation document using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library).
 
 The following code example shows how to convert Markdown to PowerPoint Presentation document.
 
@@ -63,11 +63,11 @@ N> 2. In Markdown to PowerPoint Presentation conversion, invalid images are repl
 
 ## Load Options
 
-When opening an existing Markdown document, the .NET PowerPoint library provides custom import settings through the **LoadOptions** class. This allows you to customize how the Markdown content is parsed and imported into a PowerPoint Presentation.
+When opening an existing Markdown document, the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) provides custom import settings through the **LoadOptions** class. This allows you to customize how the Markdown content is parsed and imported into a PowerPoint Presentation.
 
 ### Customize image data
 
-The .NET PowerPoint library provides an `ImageNodeVisited` event, which customizes image data while importing a Markdown file. Implement the logic to customize the image data by using this `ImageNodeVisited` event.
+The [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) provides an `ImageNodeVisited` event, which customizes image data while importing a Markdown file. Implement the logic to customize the image data by using this `ImageNodeVisited` event.
 
 The following code example shows how to load image data based on the image source path when importing the Markdown files.
 
@@ -196,7 +196,7 @@ N> Hook the event handler before opening a PowerPoint Presentation as per the ab
  
 ### Encoding
 
-The .NET PowerPoint library provides an `Encoding` property to specify the character encoding to use when opening a Markdown file. This property is useful when you need to open Markdown files that are saved with specific character encodings such as UTF-8, UTF-16, ASCII, or other encodings.
+The [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) provides an `Encoding` property to specify the character encoding to use when opening a Markdown file. This property is useful when you need to open Markdown files that are saved with specific character encodings such as UTF-8, UTF-16, ASCII, or other encodings.
 
 The following code example shows how to open a Markdown file with a specific encoding.
 
@@ -258,7 +258,7 @@ N> Provide the encoding values before opening a PowerPoint Presentation as per t
 
 ### Use Thematic Break As ContentBreak
 
-The .NET PowerPoint library provides a `UseThematicBreakAsContentBreak` property to control how thematic breaks (horizontal lines) in Markdown are handled during conversion. When set to `true`, each thematic break is treated as a content boundary that splits the Markdown content into separate slides in the PowerPoint Presentation.
+The [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) provides a `UseThematicBreakAsContentBreak` property to control how thematic breaks (horizontal lines) in Markdown are handled during conversion. When set to `true`, each thematic break is treated as a content boundary that splits the Markdown content into separate slides in the PowerPoint Presentation.
 
 The following code example shows how to use thematic breaks to split content into multiple slides.
 
