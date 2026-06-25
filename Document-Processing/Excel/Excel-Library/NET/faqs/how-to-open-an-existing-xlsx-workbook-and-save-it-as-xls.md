@@ -1,6 +1,6 @@
 ---
 title: How to open an existing XLSX workbook and save it as XLS | Syncfusion
-description: Code example to open an existing XLSX workbook and save it as XLS using .NET Excel Library.
+description: This page illustrates how to open an existing XLSX workbook and save it as XLS using .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
