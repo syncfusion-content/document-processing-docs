@@ -302,7 +302,7 @@ By executing the program, you will get the **Word document** as follows.
 
 ![WinUI Desktop output Word document](WinUI_Images/GettingStartedOutput.jpg)
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/winui) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 
+Click [here](https://www.syncfusion.com/document-processing/word-framework/winui) to explore the rich set of the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) features. 
 
 An online sample link to [create a Word document](https://document.syncfusion.com/demos/word/helloworld#/tailwind) in ASP.NET Core.
 
@@ -649,6 +649,6 @@ async void Save(MemoryStream streams, string filename)
 
 {% endtabs %}
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/winui) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 
+Click [here](https://www.syncfusion.com/document-processing/word-framework/winui) to explore the rich set of the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) features. 
 
 An online sample link to [create a Word document](https://document.syncfusion.com/demos/word/helloworld#/tailwind) in ASP.NET Core.

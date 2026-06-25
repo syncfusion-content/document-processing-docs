@@ -1,6 +1,6 @@
 ---
 title: Sorting | Excel library | Syncfusion
-description: In this section, you can learn about how to sort data in an Excel document using Syncfusion .NET Excel library.
+description: In this section, you can learn about how to sort data in an Excel document using .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
