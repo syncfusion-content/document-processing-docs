@@ -178,7 +178,7 @@ export default {
 
 ### textSelectionStart
 
-Triggered when the user begins selecting text. The [textSelectionStart](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#textselectionstart) event fires when a user begins selecting text. Use it to track selection initiation, disable conflicting UI controls, or log analytics about user interaction patterns.
+Triggered when the user begins selecting text. The [textSelectionStart](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#textselectionstart) event fires when a user begins selecting text. Use it to track selection initiation, disable conflicting UI controls, or log analytics about user interaction patterns.
 
 Event arguments (`TextSelectionStartEventArgs`):
 - `pageNumber`: Page where the selection started (1-based indexing)
@@ -249,7 +249,7 @@ export default {
 
 ### textSelectionEnd
 
-Triggered when the selection operation completes. The [textSelectionEnd](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#textselectionend) event triggers after the user completes a text selection. Use it to capture the selected text content, enable context-sensitive options, or send selection data to your application backend for processing.
+Triggered when the selection operation completes. The [textSelectionEnd](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#textselectionend) event triggers after the user completes a text selection. Use it to capture the selected text content, enable context-sensitive options, or send selection data to your application backend for processing.
 
 Event arguments (`TextSelectionEndEventArgs`):
 - `pageNumber`: Page where the selection ended (1-based indexing)

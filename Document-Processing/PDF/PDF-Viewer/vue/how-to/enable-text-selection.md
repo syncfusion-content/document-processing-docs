@@ -81,7 +81,7 @@ export default {
 
 **Set `enableTextSelection` to false**
 
-Use the [`enableTextSelection`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#enabletextselection) property during initialization to disable or enable text selection. The following example disables text selection during initialization:
+Use the [`enableTextSelection`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#enabletextselection) property during initialization to disable or enable text selection. The following example disables text selection during initialization:
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
@@ -142,7 +142,7 @@ export default {
 
 ### 2. Toggle text selection at runtime
 
-The [`enableTextSelection`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#enabletextselection) property can also be used to toggle text selection at runtime.
+The [`enableTextSelection`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#enabletextselection) property can also be used to toggle text selection at runtime.
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
@@ -228,7 +228,7 @@ N> Text selection is enabled by default. Set `enableTextSelection` to `false` to
 
 ## Troubleshooting
 
-If text selection remains active, ensure that the [`TextSelection`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textselection) is removed in `provide` or [`enableTextSelection`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#enabletextselection) is set to `false`.
+If text selection remains active, ensure that the [`TextSelection`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textselection) is removed in `provide` or [`enableTextSelection`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#enabletextselection) is set to `false`.
 
 ## See also
 
