@@ -12,7 +12,7 @@ The frequently asked questions regarding multithreading and thread-safety suppor
 
 ## Does the PowerPoint library support multithreading and thread-safety?
 
-Yes, the Syncfusion<sup>&reg;</sup> PowerPoint library is thread-safe, allowing you to create multiple instances of the [Presentation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.html) class to load the same file as multiple copies or different PowerPoint files and save them using multithreading in C#.
+Yes, the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) is thread-safe, allowing you to create multiple instances of the [Presentation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.html) class to load the same file as multiple copies or different PowerPoint files and save them using multithreading in C#.
 
 ### Multithreading PowerPoint reading using tasks
 

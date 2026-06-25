@@ -1,6 +1,6 @@
 ---
 title: Loading and saving workbook in WinUI | Syncfusion
-description: Explains how to load and save Excel files in WinUI applications using Syncfusion Excel Library.
+description: Explains how to load and save Excel files in WinUI applications using .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

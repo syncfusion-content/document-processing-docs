@@ -242,7 +242,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Supported script types
 
-The following table illustrates the supported script types by the .NET PowerPoint library (Presentation) in Presentation to Image conversion.
+The following table illustrates the supported script types by the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) in Presentation to Image conversion.
 
 <table>
 <thead> 
@@ -559,4 +559,4 @@ Malgun Gothic, Batang
 </tr>
 </table>
 
-N> The .NET PowerPoint Library (Presentation) uses System.Drawing functionalities for PowerPoint to image conversion conversion in .NET Framework applications. And System.Drawing itself uses a fallback font to preserve the Unicode text while drawing the text in the image. So, these Fallback fonts APIs are **not supported in .NET Framework**.
+N> The [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) uses System.Drawing functionalities for PowerPoint to image conversion conversion in .NET Framework applications. And System.Drawing itself uses a fallback font to preserve the Unicode text while drawing the text in the image. So, these Fallback fonts APIs are **not supported in .NET Framework**.
