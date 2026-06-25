@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Text search in Vue PDF Viewer component | Syncfusion
-description: Learn how to configure text search and run programmatic searches in the Syncfusion Vue PDF Viewer.
+description:  Learn here all about how to configure text search and run programmatic searches in the Syncfusion Vue PDF Viewer.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
