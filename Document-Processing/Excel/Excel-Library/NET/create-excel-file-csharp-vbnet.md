@@ -1,5 +1,6 @@
 ---
 title: Create Excel file in C#, VB.NET | Getting started | Syncfusion
+canonical_url: "https://www.syncfusion.com/document-sdk/net-excel-library"
 description: Learn how to create an Excel file from data source or scratch; export & import Excel data; create formatted excel report by filling data like Mail merge.
 platform: document-processing
 control: XlsIO
@@ -11,6 +12,8 @@ keywords: c#, vb.net, excel, create excel, new excel , open excel, read excel, e
 
 To quickly get started on creating an Excel document, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=oLkSFvDLlEk" %}
+
+N> Looking for the full .NET Excel Library component overview, features, pricing, and documentation? Visit the [.NET Excel Library](https://www.syncfusion.com/document-sdk/net-excel-library) page.
 
 This section explains how to create a simple Excel file in C# and VB.NET using XlsIO. The following assemblies must be referred in your application to create and manipulate the Excel document.
 
@@ -859,195 +862,6 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim fileName As String = "Output.xlsx"
   workbook.SaveAs(fileName)
 End Using
-{% endhighlight %}
-
-{% highlight c# tabtitle="UWP" %}
-//XlsIO supports exporting of data from worksheet to data table from .NET Standard 2.0 along with Windows Forms, WPF, ASP.NET and ASP.NET MVC platforms alone.
-
-//Exporting data from worksheet can be achieved using List as illustrated below.
-
-//To know more about exporting data from worksheet to various collection objects, please refer xlsio/working-with-data section.
-using (ExcelEngine excelEngine = new ExcelEngine())
-{
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-
-  //Instantiates the File Picker
-  FileOpenPicker openPicker = new FileOpenPicker();
-  openPicker.SuggestedStartLocation = PickerLocationId.Desktop;
-  openPicker.FileTypeFilter.Add(".xlsx");
-  openPicker.FileTypeFilter.Add(".xls");
-  StorageFile openFile = await openPicker.PickSingleFileAsync();
-
-  //Opens the workbook
-  IWorkbook workbook = await application.Workbooks.OpenAsync(openFile);
-  IWorksheet worksheet = workbook.Worksheets[0];
-
-  //Export data
-  List<Sales> data = worksheet.ExportData<Sales>(1, 1, 41, 4);
-
-  //Initializes FileSavePicker
-  FileSavePicker savePicker = new FileSavePicker();
-  savePicker.SuggestedStartLocation = PickerLocationId.Desktop;
-  savePicker.SuggestedFileName = "Output";
-  savePicker.FileTypeChoices.Add("Excel Files", new List<string>() { ".xlsx" });
-
-  //Creates a storage file from FileSavePicker
-  StorageFile storageFile = await savePicker.PickSaveFileAsync();
-
-  //Saves changes to the specified storage file
-  await workbook.SaveAsAsync(storageFile);
-}
-
-//Sales details
-public class Sales
-{
-  private string salesPerson;
-  private int salesJanJune;
-  private int salesJulyDec;
-  private int change;
-
-  public string SalesPerson
-  {
-    get
-    {
-      return salesPerson;
-    }
-    set
-    {
-      salesPerson = value;
-    }
-  }
-
-  public int SalesJanJune
-  {
-    get
-    {
-      return salesJanJune;
-    }
-    set
-    {
-      salesJanJune = value;
-    }
-  }
-
-  public int SalesJulyDec
-  {
-    get
-    {
-      return salesJulyDec;
-    }
-    set
-    {
-      salesJulyDec = value;
-    }
-  }
-
-  public int Change
-  {
-    get
-    {
-      return change;
-    }
-    set
-    {
-      change = value;
-    }
-  }
-}
-{% endhighlight %}
-
-{% highlight c# tabtitle="Xamarin" %}
-//XlsIO supports exporting of data from worksheet to data table from .NET Standard 2.0 along with Windows Forms, WPF, ASP.NET and ASP.NET MVC platforms alone.
-
-//Exporting data from worksheet can be achieved using List as illustrated below.
-
-//To know more about exporting data from worksheet to various collection objects, please refer xlsio/working-with-data section.
-
-using (ExcelEngine excelEngine = new ExcelEngine())
-{
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  Assembly assembly = typeof(App).GetTypeInfo().Assembly;
-  Stream fileStream = assembly.GetManifestResourceStream("ExportData.WorkbookWithData.xlsx");
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet sheet = workbook.Worksheets[0];
-
-  List<Sales> data = sheet.ExportData<Sales>(1, 1, 41, 4);
-
-  MemoryStream stream = new MemoryStream();
-  workbook.SaveAs(stream);
-
-  stream.Position = 0;
-
-  //Save the document as file and view the saved document
-  //The operation in SaveAndView under Xamarin varies between Windows Phone, Android and iOS platforms. Please refer xlsio/xamarin section for respective code samples.
-  if (Device.OS == TargetPlatform.WinPhone || Device.OS == TargetPlatform.Windows)
-  {
-    Xamarin.Forms.DependencyService.Get<ISaveWindowsPhone>().SaveAndView("Output.xlsx", "application/msexcel", stream);
-  }
-  else
-  {
-    Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView("Output.xlsx", "application/msexcel", stream);
-  }
-}
-
-//Sales details
-public class Sales
-{
-  private string salesPerson;
-  private int salesJanJune;
-  private int salesJulyDec;
-  private int change;
-
-  public string SalesPerson
-  {
-    get
-    {
-      return salesPerson;
-    }
-    set
-    {
-      salesPerson = value;
-    }
-  }
-
-  public int SalesJanJune
-  {
-    get
-    {
-      return salesJanJune;
-    }
-    set
-    {
-      salesJanJune = value;
-    }
-  }
-
-  public int SalesJulyDec
-  {
-    get
-    {
-      return salesJulyDec;
-    }
-    set
-    {
-      salesJulyDec = value;
-    }
-  }
-
-  public int Change
-  {
-    get
-    {
-      return change;
-    }
-    set
-    {
-      change = value;
-    }
-  }
-}
 {% endhighlight %}
 {% endtabs %}  
 

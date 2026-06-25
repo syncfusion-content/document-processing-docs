@@ -69,8 +69,6 @@ To quickly start create and update a table of contents in Word document, please 
 
 The following code example shows how to add a table of contents (TOC) in Word document.
 
-N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
-
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Table-Of-Contents/Add-table-of-contents/.NET/Add-table-of-contents/Program.cs" %}
@@ -216,6 +214,10 @@ document.Save("Sample.docx", FormatType.Docx)
 document.Close()
 {% endhighlight %}
 
+{% highlight c# tabtitle="UWP" %}
+//DocIO supports Table of contents in WPF, Windows Forms platforms alone
+{% endhighlight %}
+
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Table-Of-Contents/Add-table-of-contents).
@@ -226,7 +228,7 @@ You can also update or re-build the TOC in an existing document or document crea
 
 N>  1. Updating of TOC is not supported in Silverlight, WinRT, Universal and Windows Phone applications. 
 N>  2. Updating TOC makes use of the Word to PDF layout engine that may lead to update incorrect page number due to its limitations.
-N>  3. In ASP.NET Core, Blazor, and UWP platforms, to update TOC in a Word document we recommend you to use Word to PDF [assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required#converting-word-document-to-pdf) or [NuGet](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#converting-word-document-to-pdf) as a reference in your application.
+N>  3. In ASP.NET Core, Blazor, and Xamarin platforms, to update TOC in a Word document we recommend you to use Word to PDF [assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required#converting-word-document-to-pdf) or [NuGet](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#converting-word-document-to-pdf) as a reference in your application.
 
 The following code example shows how to update a TOC in an existing word document. 
 
@@ -263,6 +265,13 @@ document.UpdateTableOfContents()
 ‘Saves and closes the Word document instance.
 document.Save("Sample.docx", FormatType.Docx)
 document.Close()
+{% endhighlight %}
+
+{% highlight c# tabtitle="UWP" %}
+//DocIO supports Table of contents in WPF, Windows Forms platforms alone
+
+//Please download the helper files from the below link to save the stream as file and open the file for viewing in Xamarin platform
+//https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-xamarin#helper-files-for-xamarin
 {% endhighlight %}
 
 {% endtabs %}  
@@ -440,6 +449,10 @@ document.UpdateTableOfContents()
 ‘Saves and closes the Word document instance
 document.Save("Sample.docx", FormatType.Docx)
 document.Close()
+{% endhighlight %}
+
+{% highlight c# tabtitle="UWP" %}
+//DocIO supports Table of contents in WPF, Windows Forms platforms alone
 {% endhighlight %}
 
 {% endtabs %}
@@ -696,6 +709,10 @@ Using document As WordDocument = New WordDocument()
 End Using
 {% endhighlight %}
 
+{% highlight c# tabtitle="UWP" %}
+//DocIO doesn't support updating table of contents in UWP platform.
+{% endhighlight %}
+
 {% endtabs %}
 
 ## Removing table of contents
@@ -744,6 +761,10 @@ Using document As WordDocument = New WordDocument
     'Saves the file in the given path
     document.Save("Sample.docx", FormatType.Docx)
 End Using
+{% endhighlight %}
+
+{% highlight c# tabtitle="UWP" %}
+//DocIO does not support a table of contents directly in the UWP platform. You can achieve this by using the Syncfusion.DocIORenderer.Net.Core NuGet package in UWP.
 {% endhighlight %}
 
 {% endtabs %}
@@ -1065,6 +1086,8 @@ N> Update the SEQ fields in the Word document by calling the [UpdateDocumentFiel
 
 The following code example illustrates how to add a Table of Figures in a Word document using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO).
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Table-Of-Contents/Table_of_figures/.NET/Table_of_figures/Program.cs" %}
 
@@ -1325,6 +1348,10 @@ Using document As New WordDocument("Input.docx", FormatType.Docx)
     document.Save("Output.docx")
 End Using
 
+{% endhighlight %}
+
+{% highlight c# tabtitle="UWP" %}
+//DocIO does not support a table of figures directly in the UWP platform. You can achieve this by using the Syncfusion.DocIORenderer.Net.Core NuGet package in UWP.
 {% endhighlight %}
 
 {% endtabs %}
@@ -1614,7 +1641,6 @@ Using document As New WordDocument("Input.docx", FormatType.Docx)
 End Using
 
 {% endhighlight %}
-
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Table-Of-Contents/Exclude_caption_label_numbers).

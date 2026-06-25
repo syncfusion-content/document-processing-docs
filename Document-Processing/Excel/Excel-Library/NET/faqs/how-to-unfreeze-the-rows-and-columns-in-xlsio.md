@@ -1,6 +1,6 @@
 ---
 title: How to unfreeze the rows and columns in XlsIO | XlsIO | Syncfusion
-description: This page demonstrates with an example to unfreeze the rows and columns using Syncfusion .NET Excel library (XlsIO).
+description: This page demonstrates with an example to unfreeze the rows and columns using .NET Excel library.
 platform: document-processing
 control: XlsIO
 documentation: UG

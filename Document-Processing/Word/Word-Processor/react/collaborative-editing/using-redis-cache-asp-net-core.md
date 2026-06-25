@@ -144,6 +144,7 @@ DocumentEditorComponent.Inject(CollaborativeEditingHandler);
 // initialization of variables
 public collaborativeEditingHandler ?: CollaborativeEditingHandler;
 
+ 
 public componentDidMount(): void {
     if (this.container) {
         this.container.documentEditor.enableCollaborativeEditing = true;

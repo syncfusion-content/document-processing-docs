@@ -101,7 +101,6 @@ document.Close()
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/XFA/Add-a-new-page-in-a-PDF-XFA-document).
 
 N> XFA documents are created based on the flow layout, so the pages are sequentially added if the doesn’t have space to fit the field it will automatically move on the next page, so we can’t specify the page and page numbers.
-
 N> PDF supports XFA forms only in Windows Forms, WPF, ASP.NET, ASP.NET MVC, UWP platforms, Xamarin (.NETStandard 2.0 and above), and ASP.NET Core (.NETStandard 2.0 and above).
 
 ### Adding the XFA document settings
@@ -876,7 +875,7 @@ document.Close();
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports System.Drawing
-Imports Syncfusion.Pdf.
+Imports Syncfusion.Pdf.Xfa
 
 'Create a new PDF XFA document.
 Dim document As New PdfXfaDocument()
@@ -1262,6 +1261,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add a new XFA page
@@ -1461,6 +1461,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add a new XFA page
@@ -1564,7 +1565,7 @@ loadedForm.Fields.Add(checkBoxField)
 'Save the document
 loadedDocument.Save("XfaForm.pdf")
 'Close the document
-loadedDocument.Close()
+loadedDocument.Close(True)
 
 {% endhighlight %}
 
@@ -1656,6 +1657,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add a new XFA page
@@ -1729,7 +1731,7 @@ loadedDocument.Close();
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Windows-specific]" %} 
 
 using Syncfusion.Drawing;
 using Syncfusion.Pdf.Xfa;
@@ -1868,6 +1870,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add a new XFA page
@@ -1891,7 +1894,7 @@ document.Save("XfaForm.pdf",PdfXfaType.Dynamic)
 'Close the document
 document.Close()
 
-{% endhighlight %}s
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -2048,6 +2051,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add a new XFA page
@@ -2221,6 +2225,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add a new XFA page
@@ -2393,6 +2398,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add a new XFA page
@@ -2565,6 +2571,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add a new XFA page
@@ -2737,6 +2744,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add a new XFA page
@@ -2907,6 +2915,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add a new XFA page
@@ -3097,6 +3106,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add new XFA page
@@ -3177,7 +3187,7 @@ document.Close();
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using System.Drawing;
-using Syncfusion.Pdf.Xfa;                                                                                            
+using Syncfusion.Pdf.Xfa;                                                                      
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -3214,6 +3224,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add new XFA page
@@ -3323,6 +3334,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add new XFA page
@@ -3428,6 +3440,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add new XFA page
@@ -3491,15 +3504,15 @@ mainForm.Fields.Add(numericField);
 document.XfaForm = mainForm;
 
 //Save the document.
-document.Save("XfaForm.pdf",PdfXfaType.Dynamic);
+document.Save("XfaForm.pdf", PdfXfaType.Dynamic);
 //Close the document.
 document.Close();
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using Syncfusion.Drawing;
+using System.Drawing;
 using Syncfusion.Pdf.Xfa;
 
 //Create a new PDF XFA document.
@@ -3527,7 +3540,10 @@ document.Close();
 
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
@@ -3650,6 +3666,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add new XFA page
@@ -3703,6 +3720,9 @@ You can add the horizontal alignments in XFA form fields through [HorizontalAlig
 {% tabs %}  
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-horizontal-alignments-in-XFA-form-fields/.NET/Add-the-horizontal-alignments-in-XFA-form-fields/Program.cs" %} 
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -3763,6 +3783,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add new XFA page
@@ -3862,6 +3883,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add new XFA page
@@ -3963,6 +3985,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add new XFA page
@@ -4063,6 +4086,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add new XFA page
@@ -4164,6 +4188,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add new XFA page
@@ -4252,6 +4277,7 @@ loadedDocument.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedXfaDocument("input.pdf")
 'Load the existing XFA form
@@ -4327,6 +4353,7 @@ loadedDocument.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedXfaDocument("input.pdf")
 'Load the existing XFA form
@@ -4402,6 +4429,7 @@ loadedDocument.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedXfaDocument("input.pdf")
 'Load the existing XFA form
@@ -4481,6 +4509,7 @@ loadedDocument.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedXfaDocument("Input.pdf")
 'Load the existing XFA form
@@ -4559,6 +4588,7 @@ loadedDocument.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedXfaDocument("input.pdf")
 'Load the existing XFA form
@@ -4632,6 +4662,7 @@ loadedDocument.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedXfaDocument("input.pdf")
 'Load the existing XFA form
@@ -4707,6 +4738,7 @@ loadedDocument.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedXfaDocument("input.pdf")
 'Load the existing XFA form
@@ -4782,6 +4814,7 @@ loadedDocument.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedXfaDocument("input.pdf")
 'Load the existing XFA form
@@ -4861,6 +4894,7 @@ loadedDocument.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedXfaDocument("input.pdf")
 'Load the existing XFA form
@@ -4956,6 +4990,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add new XFA page
@@ -5031,6 +5066,7 @@ loadedDocument.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Load the existing PDF document 
 Dim loadedDocument As New PdfLoadedXfaDocument("input.pdf")
 'Load the existing XFA form
@@ -5084,6 +5120,7 @@ ldoc.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Load the existing document
 Dim ldoc As New PdfLoadedXfaDocument("input.pdf")
 'Set flatten
@@ -5154,6 +5191,7 @@ loadedDocument.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Load the existing PDF document 
 Dim loadedDocument As New PdfLoadedXfaDocument("input.pdf")
 'Load the existing XFA form
@@ -5235,6 +5273,7 @@ loadedDocument.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Load the existing PDF document 
 Dim loadedDocument As New PdfLoadedXfaDocument("input.pdf")
 'Load the existing XFA form
@@ -5307,7 +5346,9 @@ loadedXfaDocument.Close();
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports System.Drawing
-Imports Syncfusion.Pdf.Xfa'Load the existing XFA PDF document
+Imports Syncfusion.Pdf.Xfa
+
+'Load the existing XFA PDF document
 Dim loadedXfaDocument As PdfLoadedXfaDocument = New PdfLoadedXfaDocument("input.pdf")
 'Get the date time field
 Dim dateTimeField As PdfLoadedXfaDateTimeField = TryCast(loadedXfaDocument.XfaForm.TryGetFieldByCompleteName("form[0].subform[0].dateTime[0]"), PdfLoadedXfaDateTimeField)

@@ -3,8 +3,6 @@
 * Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
 * Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
 
-
-
 Step 1: Create a new .NET Core console application project.
 ![Mac OS console application](GettingStarted_images/Mac_OS_Console.png)
 
@@ -26,13 +24,11 @@ using Syncfusion.Drawing;
 using System.IO;
 
 {% endhighlight %}
-
 {% endtabs %}
 
 Step 5: Add the following code sample to the *Program.cs* file to **create PDF document in .NET Core application on Mac OS**.
 
 {% tabs %}
-
 {% highlight c# tabtitle="C#" %}
 
 //Create a new PDF document.
@@ -87,12 +83,12 @@ using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"Output.pd
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
 Step 6: Build the project.
 
-Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
+Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
 Step 7: Run the project.
-   Click the Start button (green arrow) or press F5 to run the app.
+
+Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.

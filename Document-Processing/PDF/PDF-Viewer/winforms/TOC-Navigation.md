@@ -13,5 +13,4 @@ Table of contents navigation support in PDF Viewer control allows users to navig
 
 ![WinForms PDF Viewer Table of contents ](images/Table-of-contents-navigation.png)
 
-
 N> You can refer to our [WinForms PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/winforms-pdf-viewer) feature tour page for its groundbreaking feature representations.
