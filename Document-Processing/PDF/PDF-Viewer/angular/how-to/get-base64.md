@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Retrieve Base64 from a PDF in PDF Viewer
+# Retrieve Base64 from a PDF in Angular PDF Viewer
 
 ### Overview
 
