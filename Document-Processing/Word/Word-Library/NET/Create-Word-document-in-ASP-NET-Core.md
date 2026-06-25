@@ -8,7 +8,7 @@ documentation: UG
 
 # Create Word document in ASP.NET Core
 
-Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net-core/word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in ASP.NET Core**.
+Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in ASP.NET Core**.
 
 To quickly create a Word document in ASP.NET Core, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=ptbMtxIv3CY" %}
@@ -947,6 +947,6 @@ By executing the program, you will get the **Word document** as follows.
 
 {% endtabcontents %}
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/net-core) to explore the rich set of the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) features. 
+Click [here](https://www.syncfusion.com/document-sdk/net-word-library-core) to explore the rich set of the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) features. 
 
 An online sample link to [create a Word document](https://document.syncfusion.com/demos/word/helloworld#/tailwind) in ASP.NET Core.  

@@ -8,7 +8,7 @@ documentation: UG
 
 # Create Word Document in Blazor
 
-Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net-core/word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, a **create a Word document in Blazor**.
+Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, a **create a Word document in Blazor**.
 
 To quickly get started with creating a Word document in Blazor, watch this video:
 
