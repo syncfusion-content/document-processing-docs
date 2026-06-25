@@ -25,9 +25,10 @@ The Blazor Spreadsheet component also provides a range of features for working w
 
 * **Position Images**: Select one or multiple images for further actions or deselect them as needed.
 
-![Image Manipulation](./images/image-feature.gif)
+![Images in Blazor Spreadsheet](./images/image-feature.gif)
 
 ## Limitations of Image
 
 * Corner resizing option is not available in the image element.
 * Copy and paste of external images.
+* Programmatic operations for image manipulation are currently not available.
