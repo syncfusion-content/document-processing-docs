@@ -77,7 +77,7 @@ The PDF Viewer internally uses background workers for text processing, thumbnail
 
 Modules:
 - [`Text Search`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/text-search)
-- [`Text Selection`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/text-selection)
+- [`Text Selection`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/textSelection)
 
 These features require **continuous background text extraction and indexing**.
 
