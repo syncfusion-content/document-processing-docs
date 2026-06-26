@@ -8,7 +8,7 @@ documentation: UG
 
 # Open and save Word document in Google App Engine
 
-Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net-core/word-library) that allows you to create, read, edit, and convert Word documents programmatically, without the need for **Microsoft Word** or interop dependencies. Using this library, you can **open and save Word document in Google App Engine**.
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) that allows you to create, read, edit, and convert Word documents programmatically, without the need for **Microsoft Word** or interop dependencies. Using this library, you can **open and save Word document in Google App Engine**.
 
 ## Set up App Engine
 
@@ -268,4 +268,4 @@ By executing the program, you will get the **Word document** as follows. The out
 
 ![Open and Save Word document in Google App Engine](ASP-NET-Core_images/GettingStartedOutput.jpg)
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/net-core) to explore the rich set of the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) features.
+Click [here](https://www.syncfusion.com/document-sdk/net-word-library-core) to explore the rich set of the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) features.
