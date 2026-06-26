@@ -1,6 +1,6 @@
 ---
 title: Create, read, and edit Excel files in WPF | Syncfusion
-description: Learn here how to create, read, and edit Excel files in WPF applications using .NET Excel Library.
+description: This page explains how to create, read, and edit Excel files in WPF applications using the .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
