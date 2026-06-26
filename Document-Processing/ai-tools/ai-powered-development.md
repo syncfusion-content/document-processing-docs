@@ -22,7 +22,7 @@ The following AI tools are available to help you process documents efficiently.
 
 ### Agent Skills
 
-Enhance your AI assistant (GitHub Copilot, Cursor, Claude, and more) with real Syncfusion API knowledge-eliminating hallucinated methods. Install once using npx skills add syncfusion/document-sdk-skills and generate accurate, production-ready document code directly within your IDE.
+Enhance your AI assistant (GitHub Copilot, Cursor, Claude, and more) with real Syncfusion API knowledge-eliminating hallucinated methods. Install one with pre-built document and code skills and generate accurate, production-ready document code directly within your IDE. It also allows executing document operations directly via CSX scripts.
 
 Learn more about:
 
