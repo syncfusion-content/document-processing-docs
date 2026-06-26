@@ -5,7 +5,7 @@ platform: document-processing
 control: PDF
 documentation: UG
 ---
-## NuGet Packages Required for OCR Processor
+# NuGet Packages Required for OCR Processor
 
 To work with the OCR Processor, the following NuGet packages need to be installed in your application from [nuget.org](https://www.nuget.org/).
 
