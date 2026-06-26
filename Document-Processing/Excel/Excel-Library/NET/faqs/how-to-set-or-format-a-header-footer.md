@@ -1,6 +1,6 @@
 ---
 title: How to set or format a Header/Footer | XlsIO | Syncfusion
-description: This page explains with an example to set or format a Header/Footer using Syncfusion .NET Excel library (XlsIO).
+description: This page explains with an example to set or format a Header/Footer using .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -64,4 +64,4 @@ N> Go to “ View -> Page Layout” option to view the header and footer in Micr
 * [What are page setup settings?](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-excel-worksheet#page-setup-settings)
 * [How to set a line break inside a cell?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-set-a-line-break-inside-a-cell)
 * [How to set print titles?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-set-print-titles)
-* [How to format text within a cell?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-format-text-within-a-cel)
+* [How to format text within a cell?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-format-text-within-a-cell)

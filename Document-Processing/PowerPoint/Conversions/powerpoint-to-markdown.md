@@ -8,19 +8,19 @@ documentation: UG
 
 # PowerPoint to Markdown Conversion
 
-Markdown is a lightweight markup language that adds formatting elements to plain text documents. The .NET PowerPoint library supports the conversion of a PowerPoint Presentation to a Markdown file, which mostly follows the CommonMark specification and GitHub-flavored syntax.
+Markdown is a lightweight markup language that adds formatting elements to plain text documents. The [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) supports the conversion of a PowerPoint Presentation to a Markdown file, which mostly follows the CommonMark specification and GitHub-flavored syntax.
 
 
 ## Assemblies and NuGet packages required
 
-Refer to the following links for assemblies and NuGet packages required based on platforms to convert a PowerPoint Presentation document to a Markdown file using the .NET PowerPoint Library.
+Refer to the following links for assemblies and NuGet packages required based on platforms to convert a PowerPoint Presentation document to a Markdown file using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library).
 
 * [Markdown to PowerPoint assemblies](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/assemblies-required)
 * [Markdown to PowerPoint NuGet packages](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/nuget-packages-required)
 
 ## Convert PowerPoint to Markdown
 
-Convert an existing PowerPoint Presentation document that is created from scratch into a Markdown file using the .NET PowerPoint library.
+Convert an existing PowerPoint Presentation document that is created from scratch into a Markdown file using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library).
 
 The following code example shows how to convert a PowerPoint Presentation document to a Markdown.
 
@@ -115,17 +115,17 @@ async void Save(MemoryStream streams, string filename)
 
 ## Save Options
 
-When converting a PowerPoint Presentation to Markdown, the .NET PowerPoint library provides various save options to customize the output Markdown file. These options allow you to customize image paths, set character encoding, and other export behaviors.
+When converting a PowerPoint Presentation to Markdown, the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) provides various save options to customize the output Markdown file. These options allow you to customize image paths, set character encoding, and other export behaviors.
 
 When converting a PowerPoint Presentation to a Markdown using the [Save(fileName)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IPresentation.html#Syncfusion_Presentation_IPresentation_Save_System_String_) overloads, the library creates a new folder parallel to the output file name and exports all the images into it as default.
 
 When converting a PowerPoint Presentation to a Markdown using the [Save(Stream)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IPresentation.html#Syncfusion_Presentation_IPresentation_Save_System_IO_Stream_) overloads, the library preserves the images as base64 format in the output Markdown file as default.
 
-You can customize the above default behaviors using the following options in the .NET PowerPoint library.
+You can customize the above default behaviors using the following options in the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library).
 
 ### Customize the image path
 
-The .NET PowerPoint library provides an `ImageNodeVisited` event, which is used to customize the image path to set in the output Markdown file and save images externally while converting a PowerPoint Presentation to a Markdown.
+The [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) provides an `ImageNodeVisited` event, which is used to customize the image path to set in the output Markdown file and save images externally while converting a PowerPoint Presentation to a Markdown.
 
 The following code example illustrates how to save image files during a PowerPoint to Markdown conversion.
 
@@ -217,7 +217,7 @@ End Sub
 
 ### Encoding
 
-The .NET PowerPoint library provides an `Encoding` property to specify the character encoding to use when saving the Markdown file. This property is useful when you need to save the output Markdown file with specific character encodings such as UTF-8, UTF-16, ASCII, or other encodings.
+The [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) provides an `Encoding` property to specify the character encoding to use when saving the Markdown file. This property is useful when you need to save the output Markdown file with specific character encodings such as UTF-8, UTF-16, ASCII, or other encodings.
 
 The following code example shows how to save a Markdown file with a specific encoding.
 

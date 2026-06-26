@@ -20,7 +20,7 @@ The [Syncfusion<sup>&reg;</sup> .NET OCR library](https://www.syncfusion.com/doc
 **Prerequisites**:
 
 * Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-* Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
+* Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download?_exp_download=d53503e735).
 
 Step 1: Create a new .NET Core console application project.
 ![Mac OS console application](OCR-Images/Mac_OS_Console.png)
@@ -37,7 +37,6 @@ Step 4: Include the following Namespaces in the Program.cs file.
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.OCRProcessor;
-
 using Syncfusion.Pdf.Parsing;
 
 {% endhighlight %}
@@ -91,7 +90,7 @@ Click the Start button (green arrow) or press F5 to run the app.
 **Prerequisites**:
 
 * Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-* Install Visual Studio Code: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
+* Install Visual Studio Code: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download?_exp_download=d53503e735).
 * Install C# Extension for VS Code: Open Visual Studio Code, go to the Extensions view (Ctrl+Shift+X), and search for 'C#'. Install the official [C# extension provided by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
 
 Step 1: Open the terminal (Ctrl+` ) and run the following command to create a new .NET Core console application project.
@@ -99,7 +98,7 @@ Step 1: Open the terminal (Ctrl+` ) and run the following command to create a ne
 ```
 dotnet new console -n CreatePdfMacOSApp
 ```
-Step 2: Replace ****CreatePdfMacOSApp** with your desired project name.
+Step 2: Replace **CreatePdfMacOSApp** with your desired project name.
 
 Step 3: Navigate to the project directory using the following command
 
@@ -118,7 +117,6 @@ Step 5: Include the following Namespaces in the Program.cs file.
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.OCRProcessor;
-
 using Syncfusion.Pdf.Parsing;
 
 {% endhighlight %}
@@ -182,4 +180,3 @@ By executing the program, you will get a PDF document as follows.
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/OCR-csharp-examples/tree/master/Mac).
 
 Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
-

@@ -30,7 +30,8 @@ N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assem
 
 Step 4: Add a new button in index.cshtml as follows.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight CSHTML %}
 
 @{
     Html.BeginForm("PerformOCR", "Home", FormMethod.Get);
@@ -44,9 +45,11 @@ Step 4: Add a new button in index.cshtml as follows.
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: Include the following namespaces in the HomeController.cs file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.OCRProcessor;
@@ -54,9 +57,11 @@ using Syncfusion.Pdf.Parsing;
 using Microsoft.AspNetCore.Hosting.IHostingEnvironment;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: Add the code samples for performing OCR on the entire PDF document using [PerformOCR](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html#Syncfusion_OCRProcessor_OCRProcessor_PerformOCR_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_String_) method of the [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html) class. 
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public IActionResult PerformOCR()
@@ -76,6 +81,7 @@ public IActionResult PerformOCR()
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 7: Now, check the OCR creation in the local machine.
 
@@ -137,6 +143,7 @@ Step 5: Then, set Copy to output directory to give copy always the tessdata fold
 
 Step 6: Include the following namespaces in the **Function1.cs** file to perform OCR for a PDF document using C#.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using System;
@@ -154,9 +161,11 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 7: Add the following code sample in the Function1 class to perform OCR for a PDF document using [PerformOCR](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html#Syncfusion_OCRProcessor_OCRProcessor_PerformOCR_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_String_) method of the [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html) class in Azure Functions.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 [FunctionName("Function1")]
@@ -203,6 +212,7 @@ public static async Task<HttpResponseMessage> Run([HttpTrigger(AuthorizationLeve
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 8: Now, check the OCR creation in the local machine.
 
@@ -213,29 +223,29 @@ Step 1: Right-click the project and click Publish. Then, create a new profile in
 ![OCR Azure Functions publish2](OCR-Images/azure_step6.png)
 ![OCR Azure Functions publish3](OCR-Images/AzureFunctions7.png)
 
-Step 4: To create a new app service, click **Create new** option.
+Step 2: To create a new app service, click **Create new** option.
 ![Click create new option](OCR-Images/AzureFunctions8.png)
 
-Step 5: Click the **Create** button to proceed with **App Service** creation.
+Step 3: Click the **Create** button to proceed with **App Service** creation.
 ![Click the create button](OCR-Images/AzureFunctions9.png)
 
-Step 6: Click the **Finish** button to finalize the **App Service** creation.
+Step 4: Click the **Finish** button to finalize the **App Service** creation.
 ![Click the finish button](OCR-Images/AzureFunctions10.png)
 
-Step 7: Click deployment type.
+Step 5: Click deployment type.
 ![Create a Deployment type](OCR-Images/Deployment_type.png)
 
-Step 8: Click **Close** button.
+Step 6: Click **Close** button.
 ![Create a ASP.NET Core Project](OCR-Images/AzureFunctions11.png)
 
-Step 9: Click the **Publish** button.
+Step 7: Click the **Publish** button.
 ![Click the Publish button](OCR-Images/AzureFunctions12.png)
 
-Step 10: Now, Publish has been succeeded.
+Step 8: Now, Publish has been succeeded.
 ![Publish has been succeeded](OCR-Images/AzureFunctions13.png)
  
 
-Step 11: Now, go to the Azure portal and select the Functions Apps. After running the service, click Get function URL > Copy. Include the URL as a query string in the URL. Then, paste it into the new browser tab. You will get a PDF document as follows.
+Step 9: Now, go to the Azure portal and select the Functions Apps. After running the service, click Get function URL > Copy. Include the URL as a query string in the URL. Then, paste it into the new browser tab. You will get a PDF document as follows.
 ![Output PDF document](OCR-Images/OCR-output-image.png)
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/OCR-csharp-examples/tree/master/Azure/Azure%20Function).

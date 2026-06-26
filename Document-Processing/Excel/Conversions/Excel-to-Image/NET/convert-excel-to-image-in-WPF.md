@@ -1,6 +1,6 @@
 ---
 title: Convert an Excel document to Image in WPF | Syncfusion
-description: Convert an Excel document to Image in WPF using Sycfusion .NET Excel library (XlsIO) without Microsoft Excel or interop dependencies.
+description: Convert an Excel document to Image in WPF using Sycfusion .NET Excel Library without Microsoft Excel or interop dependencies.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert an Excel document to Image in WPF
 
-Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Excel library](https://www.syncfusion.com/document-processing/excel-framework/net/excel-library) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to Image in WPF**.
+Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Excel Library](https://www.syncfusion.com/document-processing/excel-framework/net/excel-library) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to Image in WPF**.
 
 ## Steps to convert an Excel document to Image in WPF
 

@@ -50,17 +50,6 @@ Install-Package Syncfusion.ExcelToPdfConverter.Wpf
 </tr>
 <tr>
 <td>
-.NET Framework 3.5 or 4.0 Client Profile
-</td>
-<td>
-Syncfusion.ExcelToPdfConverter.ClientProfile.nupkg
-</td>
-<td>
-Install-Package Syncfusion.ExcelToPdfConverter.ClientProfile
-</td>
-</tr>
-<tr>
-<td>
 {{'[ASP.NET MVC4](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/convert-excel-to-pdf-in-asp-net-mvc)'|  markdownify }}
 </td>
 <td>

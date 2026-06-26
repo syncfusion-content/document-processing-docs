@@ -9,7 +9,7 @@ keywords: PowerPoint, Presentation, slide, SDK, Automation, API, create, convert
 
 > With the 2025 Volume 1 release, we will discontinue support for .NET 6.0 and 7.0 in WinForms, WPF, WinUI, and Document Processing Libraries. Please plan to upgrade to .NET 8.0 or higher.
 
-# Welcome to Syncfusion® PowerPoint Presentation Processing Framework
+# Welcome to Syncfusion<sup>&reg;</sup> PowerPoint Presentation Processing Framework
 
 Syncfusion<sup>&reg;</sup> PowerPoint Presentation Processing Framework is a collection of PowerPoint Presentation processing library, and PowerPoint converters that works without Microsoft Office dependencies. It eases the developers, as they can just integrate and achieve the required PowerPoint Presentation processing functionalities and concentrate on core logics of their application.
 

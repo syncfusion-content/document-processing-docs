@@ -15,7 +15,53 @@ The following code shows how to auto filter Excel data with specific conditions 
 ## Interop
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+ private void FilterData()
+ {
+     //Instantiate the application object
+     var excelApp = new Microsoft.Office.Interop.Excel.Application();
+
+     //Add a workbook
+     Workbook workbook = excelApp.Workbooks.Add(System.Reflection.Missing.Value);
+
+     //Get the first sheet
+     Worksheet sheet = (Worksheet)workbook.Sheets["Sheet1"];
+
+     //Add data into A1 and B1 cells as headers
+     sheet.Cells[1, 1] = "Product ID";
+     sheet.Cells[1, 2] = "Product Name";
+
+     //Add data into cells
+     sheet.Cells[2, 1] = 1;
+     sheet.Cells[3, 1] = 2;
+     sheet.Cells[4, 1] = 3;
+     sheet.Cells[5, 1] = 4;
+     sheet.Cells[2, 2] = "Apples";
+     sheet.Cells[3, 2] = "Bananas";
+     sheet.Cells[4, 2] = "Grapes";
+     sheet.Cells[5, 2] = "Oranges";
+
+     //Enable auto-filter
+     sheet.EnableAutoFilter = true;
+
+     //Create the range
+     Range range = sheet.get_Range("A1", "B5");
+
+     //Auto filter the range
+     range.AutoFilter("1", "<>", XlAutoFilterOperator.xlOr, "", true);
+
+     //Auto fit the second column
+     sheet.get_Range("B1", "B5").EntireColumn.AutoFit();
+
+     //Save the Excel file
+     workbook.SaveCopyAs("InteropOutput_AutoFilter.xlsx");
+
+     //Quit the application
+     excelApp.Quit();
+ }
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 private void FilterData()
 {
   //Instantiate the application object
@@ -61,7 +107,7 @@ private void FilterData()
 }
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Private Sub FilterData()
   'Instantiate the application object
   Dim excelApp = New Microsoft.Office.Interop.Excel.Application()
@@ -110,7 +156,7 @@ End Sub
 ## XlsIO
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 private void FilterData()
 {
   using (ExcelEngine excelEngine = new ExcelEngine())
@@ -158,7 +204,55 @@ private void FilterData()
 }
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+private void FilterData()
+{
+  using (ExcelEngine excelEngine = new ExcelEngine())
+  {
+    //Instantiate the application object
+    IApplication application = excelEngine.Excel;
+
+    //Create a workbook
+    IWorkbook workbook = application.Workbooks.Create(1);
+
+    //Get the first sheet
+    IWorksheet worksheet = workbook.Worksheets[0];
+
+    //Add data into A1 and B1 cells as headers
+    worksheet.SetValue(1, 1, "Product ID");
+    worksheet.SetValue(1, 2, "Product Name");
+
+    //Add data into cells
+    worksheet[2, 1].Value2 = 1;
+    worksheet[3, 1].Value2 = 2;
+    worksheet[4, 1].Value2 = 3;
+    worksheet[5, 1].Value2 = 4;
+    worksheet.SetValue(2, 2, "Apples");
+    worksheet.SetValue(3, 2, "Bananas");
+    worksheet.SetValue(4, 2, "Grapes");
+    worksheet.SetValue(5, 2, "Oranges");
+
+    //Create an auto-filter in the first worksheet and specify the filter range
+    worksheet.AutoFilters.FilterRange = worksheet.Range["A1:B5"];
+
+    //Column index to which auto-filter must be applied
+    IAutoFilter filter = worksheet.AutoFilters[0];
+
+    //Specify first condition
+    IAutoFilterCondition firstCondition = filter.FirstCondition;
+    firstCondition.ConditionOperator = ExcelFilterCondition.Contains;
+    firstCondition.String = "";
+
+    //Auto fit the second column
+    worksheet.Range["B1:B5"].EntireColumn.AutofitColumns();
+
+    //Save the workbook
+    workbook.SaveAs("XlsIOOutput_AutoFilter.xlsx");
+  }
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Private Sub FilterData()
   Using excelEngine As ExcelEngine = New ExcelEngine()
     'Instantiate the application object
