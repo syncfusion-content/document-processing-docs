@@ -11,6 +11,29 @@ documentation: UG
 The following complete code snippet explains how to unprotect the zip file.
 
 {% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+using Syncfusion.Compression.Zip;
+using System.IO;
+
+class Program
+{
+  static void Main(string[] args)
+  {
+    //Initailize ZipArchive
+    ZipArchive zipArchive = new ZipArchive();
+
+    //Load the zip file into ZipArchive
+    zipArchive.Open(new FileStream("../../Data/Protected.zip", FileMode.Open), false, "password");
+
+    //Unprotect the ZipArchive
+    zipArchive.UnProtect();
+
+    //Save the ZipArchive
+    zipArchive.Save("WithOutPassword.zip");
+  }
+}
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 using Syncfusion.Compression.Zip;
 using System.IO;

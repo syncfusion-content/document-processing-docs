@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Getting Started with WinForms Spreadsheet control | Syncfusion®
+canonical_url: "https://www.syncfusion.com/spreadsheet-editor-sdk/winforms-spreadsheet-editor"
 description: Learn here about getting started with Syncfusion® Windows Forms Spreadsheet control, its elements and more details.
 platform:  document-processing
 control: Spreadsheet

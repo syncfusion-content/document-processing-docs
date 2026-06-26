@@ -20,7 +20,7 @@ The Syncfusion<sup>&reg;</sup> [HTML to PDF converter](https://www.syncfusion.co
 **Prerequisites**:
 
 * Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-* Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
+* Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download?_exp_download=d53503e735).
 
 Step 1: Create a new C# ASP.NET Core Web Application project.
 ![Create ASP.NET Core Web application](htmlconversion_images/mac_step1.png)  
@@ -38,6 +38,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 
 Step 5: A default controller with name HomeController.cs gets added on creation of ASP.NET MVC project. Include the following namespaces in that HomeController.cs file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Pdf;
@@ -46,10 +47,12 @@ using System.IO;
 using Microsoft.AspNetCore.Hosting;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: A default action method named Index will be present in HomeController.cs. Right click on Index method and select Go To View where you will be directed to its associated view page Index.cshtml. Add a new button in the Index.cshtml as shown below.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight CSHTML %}
 
 @{Html.BeginForm("ExportToPDF", "Home", FormMethod.Post);
     {
@@ -61,9 +64,11 @@ Step 6: A default action method named Index will be present in HomeController.cs
  }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 7: Add a new action method ExportToPDF in HomeController.cs and include the below code example to convert HTML to PDF file using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public IActionResult ExportToPDF()
@@ -79,11 +84,12 @@ public IActionResult ExportToPDF()
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 8: Right click the project and select Build.
 ![Build project](htmlconversion_images/mac_step5.png)
 
-N> Once the build succeeded, unzip the chromium.app file in bin folder (bin-> Debug-> net6.0-> runtimes-> osx-> native-> Chromium.app)`
+N> Once the build succeeded, unzip the chromium.app file in bin folder `(bin-> Debug-> net8.0-> runtimes-> osx-> native-> Chromium.app)`
 
 Step 9: Run the application.
 ![Run application](htmlconversion_images/mac_step6.png)
@@ -95,7 +101,7 @@ Step 9: Run the application.
 **Prerequisites**:
 
 * Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-* Install Visual Studio Code: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
+* Install Visual Studio Code: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download?_exp_download=d53503e735).
 * Install C# Extension for VS Code: Open Visual Studio Code, go to the Extensions view (Ctrl+Shift+X), and search for 'C#'. Install the official [C# extension provided by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
 
 Step 1: Open the terminal (Ctrl+` ) and run the following command to create a new ASP.NET Core Web Application project.
@@ -119,6 +125,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 
 Step 5: A default controller with name HomeController.cs gets added on creation of ASP.NET MVC project. Include the following namespaces in that HomeController.cs file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Pdf;
@@ -127,10 +134,12 @@ using System.IO;
 using Microsoft.AspNetCore.Hosting;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: A default action method named Index will be present in HomeController.cs. Right click on Index method and select Go To View where you will be directed to its associated view page Index.cshtml. Add a new button in the Index.cshtml as shown below.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight CSHTML %}
 
 @{Html.BeginForm("ExportToPDF", "Home", FormMethod.Post);
     {
@@ -142,9 +151,11 @@ Step 6: A default action method named Index will be present in HomeController.cs
  }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 7: Add a new action method ExportToPDF in HomeController.cs and include the below code example to convert HTML to PDF file using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public IActionResult ExportToPDF()
@@ -160,6 +171,7 @@ public IActionResult ExportToPDF()
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 8: Build the project.
 

@@ -75,3 +75,7 @@ The following example illustrates how to auto save the document in server.
     }
 }
 ```
+
+## Online Demo
+
+Explore how to automatically save Word documents using the Blazor Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities).

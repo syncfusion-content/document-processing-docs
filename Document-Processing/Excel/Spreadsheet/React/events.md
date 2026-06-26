@@ -2,7 +2,7 @@
 layout: post
 title: Events in React Spreadsheet component | Syncfusion
 description: Learn here all about the events in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
-control: Events
+control: Events 
 platform: document-processing
 documentation: ug
 ---
@@ -150,5 +150,5 @@ The table below describes each event and its role in the editing process:
 
 ## See Also
 
-* [Editing](./editing.md)
-* [Clipboard](./clipboard.md)
+* [Editing](./editing)
+* [Clipboard](./clipboard)

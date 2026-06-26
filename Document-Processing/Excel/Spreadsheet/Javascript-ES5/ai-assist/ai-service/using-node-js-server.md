@@ -28,7 +28,7 @@ You must have an Azure OpenAI resource. Collect these values from the [Azure Por
 
 These values correspond to the configuration used in the application:
 
-```
+```js
 const azureOpenAIApiKey     = 'Your_Azure_OpenAI_API_Key';
 const azureOpenAIEndpoint   = 'Your_Azure_OpenAI_Endpoint';
 const azureOpenAIApiVersion = 'Your_Azure_OpenAI_API_Version';
@@ -44,7 +44,7 @@ const azureDeploymentName   = 'Your_Deployment_Name';
 
 Run the following command in your server project:
 
-```
+```bash
 npm install express cors dotenv openai date-fns
 ```
 
@@ -80,7 +80,7 @@ Ensure your `package.json` includes `"type": "module"` to support ES module impo
 
 Create a `.env` file in the project root and add your Azure OpenAI credentials:
 
-```dotenv
+```csharp
 apiKey      = Your_Azure_OpenAI_API_Key
 endpoint    = https://your-resource.openai.azure.com/
 deployment  = Your_Deployment_Name
@@ -93,7 +93,7 @@ apiVersion  = Your_Azure_OpenAI_API_Version
 
 Create `ai-model.js` to initialize the Azure OpenAI client using the credentials from `.env`:
 
-```javascript
+```js
 import { AzureOpenAI } from "openai";
 import dotenv from 'dotenv';
 
@@ -128,7 +128,7 @@ export async function getAzureChatAIRequest(options) {
 
 Create `server.js` to expose the AI Assist API:
 
-```javascript
+```js
 import express from 'express';
 import cors from 'cors';
 import { getAzureChatAIRequest } from './ai-model.js';
@@ -159,7 +159,7 @@ app.listen(PORT, () => {
 
 Run the following command to start the server:
 
-```
+```bash
 npm start
 ```
 
@@ -225,7 +225,7 @@ And returns:
 
 A Node.js server sample project is available for quick setup. Extract the archive, update the Azure OpenAI credentials in the `.env` file, and start the server using the following command
 
-```
+```bash
 npm start
 ```
 

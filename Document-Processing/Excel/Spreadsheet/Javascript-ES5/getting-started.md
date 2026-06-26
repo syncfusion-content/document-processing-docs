@@ -43,48 +43,43 @@ To use local scripts and styles for the Syncfusion® Spreadsheet, follow these s
 <Install path>/Syncfusion/Essential Studio/Spreadsheet Editor SDK/{VERSION}/Web (Essential JS 2)/JavaScript
 ```
 
-4. After copying the files, add the Spreadsheet and its dependent control style and script references inside the `<head>` section of your `index.html` file, as shown below.
+4. After copying the files, add the Spreadsheet and its dependent control style and script references at the end of the **\<head\>** section in the `index.html` file.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
 
-...
-<head>
-...
-    <!-- Spreadsheet dependency styles -->
-    <link href="resources/ej2-base/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-    <link href="resources/ej2-inputs/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-    <link href="resources/ej2-buttons/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-    <link href="resources/ej2-splitbuttons/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-    <link href="resources/ej2-lists/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-    <link href="resources/ej2-navigations/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-    <link href="resources/ej2-popups/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-    <link href="resources/ej2-dropdowns/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-    <link href="resources/ej2-grids/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-    <!-- Spreadsheet styles -->
-    <link href="resources/ej2-spreadsheet/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-    <!-- Spreadsheet dependency scripts -->
-    <script src="resources/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
-    <script src="resources/ej2-buttons/dist/global/ej2-buttons.min.js" type="text/javascript"></script>
-    <script src="resources/ej2-popups/dist/global/ej2-popups.min.js" type="text/javascript"></script>
-    <script src="resources/ej2-splitbuttons/dist/global/ej2-splitbuttons.min.js" type="text/javascript"></script>
-    <script src="resources/ej2-inputs/dist/global/ej2-inputs.min.js" type="text/javascript"></script>
-    <script src="resources/ej2-lists/dist/global/ej2-lists.min.js" type="text/javascript"></script>
-    <script src="resources/ej2-data/dist/global/ej2-data.min.js" type="text/javascript"></script>
-    <script src="resources/ej2-dropdowns/dist/global/ej2-dropdowns.min.js" type="text/javascript"></script>
-    <script src="resources/ej2-navigations/dist/global/ej2-navigations.min.js" type="text/javascript"></script>
-    <script src="resources/ej2-excel-export/dist/global/ej2-excel-export.min.js" type="text/javascript"></script>
-    <script src="resources/ej2-pdf-export/dist/global/ej2-pdf-export.min.js" type="text/javascript"></script>
-    <script src="resources/ej2-calendars/dist/global/ej2-calendars.min.js" type="text/javascript"></script>
-    <script src="resources/ej2-compression/dist/global/ej2-compression.min.js" type="text/javascript"></script>
-    <script src="resources/ej2-file-utils/dist/global/ej2-file-utils.min.js" type="text/javascript"></script>
-    <script src="resources/ej2-grids/dist/global/ej2-grids.min.js" type="text/javascript"></script>
-    <script src="resources/ej2-svg-base/dist/global/ej2-svg-base.min.js" type="text/javascript"></script>
-    <script src="resources/ej2-charts/dist/global/ej2-charts.min.js" type="text/javascript"></script>
-    <!-- Spreadsheet scripts -->
-    <script src="resources/ej2-spreadsheet/dist/global/ej2-spreadsheet.min.js" type="text/javascript"></script>
-</head>
-...
+<!-- Spreadsheet dependency styles -->
+<link href="resources/ej2-base/styles/tailwind3.css" rel="stylesheet" type="textcss" />
+<link href="resources/ej2-inputs/styles/tailwind3.css" rel="stylesheet" type="textcss" />
+<link href="resources/ej2-buttons/styles/tailwind3.css" rel="stylesheet" type="textcss" />
+<link href="resources/ej2-splitbuttons/styles/tailwind3.css" rel="stylesheet"type="text/css" />
+<link href="resources/ej2-lists/styles/tailwind3.css" rel="stylesheet" type="textcss" />
+<link href="resources/ej2-navigations/styles/tailwind3.css" rel="stylesheet"type="text/css" />
+<link href="resources/ej2-popups/styles/tailwind3.css" rel="stylesheet" type="textcss" />
+<link href="resources/ej2-dropdowns/styles/tailwind3.css" rel="stylesheet" type="textcss" />
+<link href="resources/ej2-grids/styles/tailwind3.css" rel="stylesheet" type="textcss" />
+<!-- Spreadsheet styles -->
+<link href="resources/ej2-spreadsheet/styles/tailwind3.css" rel="stylesheet"type="text/css" />
+<!-- Spreadsheet dependency scripts -->
+<script src="resources/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"><script>
+<script src="resources/ej2-buttons/dist/global/ej2-buttons.min.js" type="textjavascript"></script>
+<script src="resources/ej2-popups/dist/global/ej2-popups.min.js" type="textjavascript"></script>
+<script src="resources/ej2-splitbuttons/dist/global/ej2-splitbuttons.min.js"type="text/javascript"></script>
+<script src="resources/ej2-inputs/dist/global/ej2-inputs.min.js" type="textjavascript"></script>
+<script src="resources/ej2-lists/dist/global/ej2-lists.min.js" type="textjavascript"></script>
+<script src="resources/ej2-data/dist/global/ej2-data.min.js" type="text/javascript"><script>
+<script src="resources/ej2-dropdowns/dist/global/ej2-dropdowns.min.js" type="textjavascript"></script>
+<script src="resources/ej2-navigations/dist/global/ej2-navigations.min.js" type="textjavascript"></script>
+<script src="resources/ej2-excel-export/dist/global/ej2-excel-export.min.js"type="text/javascript"></script>
+<script src="resources/ej2-pdf-export/dist/global/ej2-pdf-export.min.js" type="textjavascript"></script>
+<script src="resources/ej2-calendars/dist/global/ej2-calendars.min.js" type="textjavascript"></script>
+<script src="resources/ej2-compression/dist/global/ej2-compression.min.js" type="textjavascript"></script>
+<script src="resources/ej2-file-utils/dist/global/ej2-file-utils.min.js" type="textjavascript"></script>
+<script src="resources/ej2-grids/dist/global/ej2-grids.min.js" type="textjavascript"></script>
+<script src="resources/ej2-svg-base/dist/global/ej2-svg-base.min.js" type="textjavascript"></script>
+<script src="resources/ej2-charts/dist/global/ej2-charts.min.js" type="textjavascript"></script>
+<!-- Spreadsheet scripts -->
+<script src="resources/ej2-spreadsheet/dist/global/ej2-spreadsheet.min.js" type="textjavascript"></script>
 
 {% endhighlight %}
 {% endtabs %}
@@ -93,7 +88,7 @@ To use local scripts and styles for the Syncfusion® Spreadsheet, follow these s
 
 {% tabcontent Using CDN Links %}
 
-Reference the scripts and styles directly from the CDN.
+Reference the scripts and styles directly from the CDN and add at the end of the **\<head\>** section in the `index.html` file.
 
 ```text
 Script: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/dist/global/{PACKAGE_NAME}.min.js
@@ -103,43 +98,38 @@ Style: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/styles/{THEME_NAM
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
 
-...
-<head>
-...
-    <!-- Spreadsheet dependency styles -->
-    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-inputs/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-buttons/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-splitbuttons/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-lists/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-navigations/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-popups/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-dropdowns/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-grids/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-    <!-- Spreadsheet styles -->
-    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-spreadsheet/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-    <!-- Spreadsheet dependency scripts -->
-    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-buttons/dist/global/ej2-buttons.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-popups/dist/global/ej2-popups.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-splitbuttons/dist/global/ej2-splitbuttons.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-inputs/dist/global/ej2-inputs.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-lists/dist/global/ej2-lists.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-data/dist/global/ej2-data.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-dropdowns/dist/global/ej2-dropdowns.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-navigations/dist/global/ej2-navigations.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-excel-export/dist/global/ej2-excel-export.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-pdf-export/dist/global/ej2-pdf-export.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-calendars/dist/global/ej2-calendars.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-compression/dist/global/ej2-compression.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-file-utils/dist/global/ej2-file-utils.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-grids/dist/global/ej2-grids.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-svg-base/dist/global/ej2-svg-base.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-charts/dist/global/ej2-charts.min.js" type="text/javascript"></script>
-    <!-- Spreadsheet scripts -->
-    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-spreadsheet/dist/global/ej2-spreadsheet.min.js" type="text/javascript"></script>
-</head>
-...
+<!-- Spreadsheet dependency styles -->
+<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/styles/tailwind3.css"rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-inputs/styles/tailwind3.css"rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-buttons/styles/tailwind3.css"rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-splitbuttons/styles/tailwind3css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-lists/styles/tailwind3.css"rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-navigations/styles/tailwind3css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-popups/styles/tailwind3.css"rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-dropdowns/styles/tailwind3.css"rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-grids/styles/tailwind3.css"rel="stylesheet" type="text/css" />
+<!-- Spreadsheet styles -->
+<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-spreadsheet/styles/tailwind3css" rel="stylesheet" type="text/css" />
+<!-- Spreadsheet dependency scripts -->
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/dist/global/ej2-base.minjs" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-buttons/dist/globalej2-buttons.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-popups/dist/global/ej2-popupsmin.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-splitbuttons/dist/globalej2-splitbuttons.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-inputs/dist/global/ej2-inputsmin.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-lists/dist/global/ej2-listsmin.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-data/dist/global/ej2-data.minjs" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-dropdowns/dist/globalej2-dropdowns.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-navigations/dist/globalej2-navigations.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-excel-export/dist/globalej2-excel-export.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-pdf-export/dist/globalej2-pdf-export.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-calendars/dist/globalej2-calendars.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-compression/dist/globalej2-compression.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-file-utils/dist/globalej2-file-utils.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-grids/dist/global/ej2-gridsmin.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-svg-base/dist/globalej2-svg-base.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-charts/dist/global/ej2-chartsmin.js" type="text/javascript"></script>
+<!-- Spreadsheet scripts -->
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-spreadsheet/dist/globalej2-spreadsheet.min.js" type="text/javascript"></script>
 
 {% endhighlight %}
 {% endtabs %}

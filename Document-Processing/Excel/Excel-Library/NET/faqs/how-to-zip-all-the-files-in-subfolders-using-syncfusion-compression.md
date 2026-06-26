@@ -11,6 +11,195 @@ documentation: UG
 You can compress and decompress the files with our Compression library. The following code example illustrates this. Additionally, it shows how to delete the source files from the given path after compression.
 
 {% tabs %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+using System;
+using System.Collections.Generic;
+using System.IO;
+using Syncfusion.Compression.Zip;
+
+class Program
+{
+    private static List<DirectoryInfo> arrOfItems = new List<DirectoryInfo>();
+    private static ZipArchive zipArchive = new ZipArchive();
+
+    // Enter the folder path
+    private static string folderPath = "Your_folder_path";
+    private static List<Stream> arrOfStreamItems = new List<Stream>();
+
+    private static void SubFoldersFiles(string path)
+    {
+        DirectoryInfo dInfo = new DirectoryInfo(path);
+        foreach (DirectoryInfo d in dInfo.GetDirectories())
+        {
+            SubFoldersFiles(d.FullName);
+            arrOfItems.Add(d);
+        }
+    }
+
+    // Zip and save the file.
+    private static void ZipAndSave()
+    {
+        SubFoldersFiles(folderPath);
+        if (Directory.Exists(folderPath))
+        {
+            AddRootFiles();
+            AddSubFoldersFiles();
+
+            // Saving zipped file.
+            zipArchive.Save("../../Output/CompressedFile.zip");
+            zipArchive.Close();
+
+            Console.WriteLine("Files Zipped successfully!");
+
+            // Delete the source files
+            DeleteFolderContents(folderPath);
+        }
+    }
+
+    private static void AddRootFiles()
+    {
+        string fileName = "";
+        foreach (string rootFiles in Directory.GetFiles(folderPath))
+        {
+            // Creating the stream from file
+            FileStream filestream = new FileStream(rootFiles, FileMode.Open, FileAccess.ReadWrite);
+
+            // Getting the File Name alone and ignoring the directory path
+            fileName = Path.GetFileName(rootFiles);
+
+            FileAttributes attribute = (FileAttributes)File.GetAttributes(rootFiles);
+            zipArchive.AddItem(fileName, filestream, false, attribute);
+
+            // Adding the file stream to the list for later disposal
+            arrOfStreamItems.Add(filestream);
+        }
+    }
+
+    private static void AddSubFoldersFiles()
+    {
+        foreach (DirectoryInfo dInfo in arrOfItems)
+        {
+            FileInfo[] fInfo = dInfo.GetFiles();
+            string mainDirectoryPath = Path.GetFullPath(folderPath);
+            foreach (FileInfo file in fInfo)
+            {
+                // Get the File name with its current folder and ignoring the Main Directory
+                string fileName = file.FullName.Replace(mainDirectoryPath + "\\", "");
+
+                // Read the file stream by its Full name
+                FileStream folderStream = new FileStream(file.FullName, FileMode.Open, FileAccess.ReadWrite);
+                FileAttributes attributes = (FileAttributes)File.GetAttributes(file.FullName);
+
+                // Add the item to the zip Archive
+                zipArchive.AddItem(fileName, folderStream, true, attributes);
+
+                // Adding the folder stream to the list for later disposal
+                arrOfStreamItems.Add(folderStream);
+            }
+        }
+    }
+
+    // Unzipping the Folder
+    private static void UnZipFiles()
+    {
+        ZipArchive zip = new ZipArchive();
+        string path = "../../Output/UnZippedFile";
+        zip.Open("../../Output/CompressedFile.zip");
+        if (!Directory.Exists(path))
+        {
+            Directory.CreateDirectory(path);
+        }
+
+        // Saving the contents of zip file to disk.
+        for (int i = 0; i < zip.Count; i++)
+        {
+            ZipArchiveItem item = zip[i];
+            string itemName = path + item.ItemName;
+
+            // checking whether the item is root file
+            if (itemName.Contains("/"))
+            {
+                itemName = itemName.Replace("/", "\\");
+            }
+
+            // Check whether the Directory is present or not
+            if (!Directory.Exists(itemName) || itemName.Contains("\\"))
+            {
+                int index = itemName.LastIndexOf("\\");
+                if (index >= 0)
+                {
+                    string directoryPath = itemName.Remove(index, itemName.Length - index);
+                    Directory.CreateDirectory(directoryPath);
+                }
+            }
+
+            using (FileStream fileStream = new FileStream(itemName, FileMode.OpenOrCreate, FileAccess.ReadWrite))
+            {
+                MemoryStream memoryStream = item.DataStream as MemoryStream;
+                memoryStream.WriteTo(fileStream);
+                fileStream.Flush();
+            }
+        }
+        Console.WriteLine("File has been Unzipped");
+    }
+
+    // Delete the source folder files
+    private static void DeleteFolderContents(string path)
+    {
+        foreach (Stream stream in arrOfStreamItems)
+        {
+            stream.Dispose();
+        }
+
+        if (path != null && Directory.Exists(path))
+        {
+            // Delete all files within the directory
+            foreach (string file in Directory.GetFiles(path))
+            {
+                File.Delete(file);
+            }
+
+            // Delete all subdirectories and their contents recursively
+            foreach (string directory in Directory.GetDirectories(path))
+            {
+                DeleteFolder(directory);
+            }
+
+            Console.WriteLine("Folder contents deleted successfully!");
+        }
+    }
+
+    private static void DeleteFolder(string path)
+    {
+        if (path != null && Directory.Exists(path))
+        {
+            // Delete all files within the directory
+            foreach (string file in Directory.GetFiles(path))
+            {
+                File.Delete(file);
+            }
+
+            // Delete all subdirectories and their contents recursively
+            foreach (string directory in Directory.GetDirectories(path))
+            {
+                DeleteFolder(directory);
+            }
+
+            // Finally, delete the directory itself
+            Directory.Delete(path);
+            Console.WriteLine("Folder deleted successfully!");
+        }
+    }
+
+    static void Main(string[] args)
+    {
+        ZipAndSave();
+        UnZipFiles();
+    }
+}
+
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 using System;
 using System.Collections.Generic;
