@@ -17,7 +17,7 @@ To use the WinUI 3 project templates, install the Windows App SDK extension for 
 
 Step 1: Create a new C# WinUI Desktop app. Select Blank App, Packaged (WinUI 3 in Desktop) project.
 
-!["Create a WinUI Desktop application in visual studio](WinUI_images\WinUI_images_img6.png)
+![Create a WinUI Desktop application in visual studio](WinUI_images\WinUI_images_img6.png)
 
 Step 2: Install the [Syncfusion.XlsIORenderer.Net](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.NET) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 
