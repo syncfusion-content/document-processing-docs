@@ -1,6 +1,6 @@
 ---
 title: Create, read, and edit Excel files in .NET MAUI | Syncfusion
-description: Explains how to create, read, and edit Excel documents in .NET MAUI applications using Syncfusion Excel Library.
+description: Explains how to create, read, and edit Excel documents in .NET MAUI applications using .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -935,3 +935,4 @@ A complete working example of how to read and edit an Excel file in the .NET MAU
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/maui) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
 An online sample link to [create an Excel document](https://ej2.syncfusion.com/aspnetcore/Excel/Create#/material3) in ASP.NET Core.
+

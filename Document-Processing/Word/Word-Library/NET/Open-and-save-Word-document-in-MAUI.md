@@ -198,4 +198,4 @@ By executing the program, you will get the **Word document** as follows.
 
 ![MAUI open and save output Word document](MAUI_Images/OpenAndSaveOutput.png)
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/maui) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 
+Click [here](https://www.syncfusion.com/document-processing/word-framework/maui) to explore the rich set of the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) features. 

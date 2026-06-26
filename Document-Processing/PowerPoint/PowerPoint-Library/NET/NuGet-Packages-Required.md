@@ -74,7 +74,7 @@ To work with PowerPoint Presentations, install the following NuGet packages in y
 </tr>
 </table>
 
-T> If you encounter issues while using the .NET PowerPoint library in ASP.NET Core, refer to the [troubleshooting guide](https://support.syncfusion.com/kb/article/16010/how-to-use-troubleshooting-guide-for-aspnet-core-powerpoint-library-issues) for recommended checks and solutions.
+T> If you encounter issues while using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) in ASP.NET Core, refer to the [troubleshooting guide](https://support.syncfusion.com/kb/article/16010/how-to-use-troubleshooting-guide-for-aspnet-core-powerpoint-library-issues) for recommended checks and solutions.
 
 #### Retired Platforms
 

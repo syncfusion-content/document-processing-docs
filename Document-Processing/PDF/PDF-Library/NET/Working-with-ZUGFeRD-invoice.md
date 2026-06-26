@@ -149,9 +149,7 @@ document.Attachments.Add(attachment)
 {% endtabs %}  
 
 N> **XML Naming Guidelines** 
-
 N> As per the ZUGFeRD standard guidelines, the XML file name must follow the specified format: 
-
 N> 1. **ZUGFeRD 1.0**: The file name should be "ZUGFeRD-invoice.xml". 
 N> 2. **ZUGFeRD 2.0**: The file name should be "zugferd-invoice.xml". 
 N> 3. **Factur-X**: The file name should be "factur-x.xml", except for **XRechnung**, where the file name must be "xrechnung.xml".
@@ -282,7 +280,7 @@ PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A3B);
 document.ZugferdConformanceLevel = ZugferdConformanceLevel.Basic;
 
 //Creates an attachment 
-FileStream fontStream = new FileStream("../../ Data / ZUGFeRD - invoice.xml", FileMode.Open, FileAccess.Read);
+FileStream fontStream = new FileStream("ZUGFeRD - invoice.xml", FileMode.Open, FileAccess.Read);
 PdfAttachment attachment = new PdfAttachment("ZUGFeRD-invoice.xml",invoiceStream);
 attachment.Relationship = PdfAttachmentRelationship.Alternative;
 attachment.ModificationDate = DateTime.Now;
@@ -309,7 +307,7 @@ PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A3B);
 document.ZugferdConformanceLevel = ZugferdConformanceLevel.Basic;
 
 //Creates an attachment 
-FileStream invoiceStream = new FileStream("../../ Data / ZUGFeRD - invoice.xml", FileMode.Open, FileAccess.Read);
+FileStream invoiceStream = new FileStream("ZUGFeRD - invoice.xml", FileMode.Open, FileAccess.Read);
 PdfAttachment attachment = new PdfAttachment("ZUGFeRD-invoice.xml",invoiceStream);
 attachment.Relationship = PdfAttachmentRelationship.Alternative;
 attachment.ModificationDate = DateTime.Now;
@@ -335,7 +333,7 @@ Dim document As PdfDocument = New PdfDocument(PdfConformanceLevel.Pdf_A3B)
 document.ZugferdConformanceLevel = ZugferdConformanceLevel.Basic
 
 'Creates an attachment
-Dim invoiceStream As FileStream = New FileStream("../../ Data / ZUGFeRD - invoice.xml", FileMode.Open, FileAccess.Read)
+Dim invoiceStream As FileStream = New FileStream("ZUGFeRD - invoice.xml", FileMode.Open, FileAccess.Read)
 Dim attachment As PdfAttachment = New PdfAttachment("ZUGFeRD-invoice.xml",invoiceStream)
 attachment.Relationship = PdfAttachmentRelationship.Alternative
 attachment.ModificationDate = DateTime.Now
@@ -371,10 +369,10 @@ PdfLoadedDocument document = new PdfLoadedDocument("Sample.pdf");
 //Iterates the attachments
 foreach (PdfAttachment attachment in document.Attachments)
 {
-//Extracts the ZUGFeRD invoice attachment and saves it to the disk
-FileStream s = new FileStream(attachment.FileName, FileMode.Create);
-s.Write(attachment.Data, 0, attachment.Data.Length);
-s.Dispose();
+    //Extracts the ZUGFeRD invoice attachment and saves it to the disk
+    FileStream s = new FileStream(attachment.FileName, FileMode.Create);
+    s.Write(attachment.Data, 0, attachment.Data.Length);
+    s.Dispose();
 }
 
 //Saves and closes the document
@@ -394,10 +392,10 @@ PdfLoadedDocument document = new PdfLoadedDocument("Sample.pdf");
 //Iterates the attachments
 foreach (PdfAttachment attachment in document.Attachments)
 {
-//Extracts the ZUGFeRD invoice attachment and saves it to the disk
-FileStream s = new FileStream(attachment.FileName, FileMode.Create);
-s.Write(attachment.Data, 0, attachment.Data.Length);
-s.Dispose();
+    //Extracts the ZUGFeRD invoice attachment and saves it to the disk
+    FileStream s = new FileStream(attachment.FileName, FileMode.Create);
+    s.Write(attachment.Data, 0, attachment.Data.Length);
+    s.Dispose();
 }
 
 //Saves and closes the document
@@ -416,10 +414,10 @@ Dim document As New PdfLoadedDocument("Sample.pdf")
 
 'Iterates the attachments
 For Each attachment As PdfAttachment In document.Attachments
-'Extracts the attachment and saves it to the disk
-Dim s As New FileStream(attachment.FileName, FileMode.Create)
-s.Write(attachment.Data, 0, attachment.Data.Length)
-s.Dispose()
+    'Extracts the attachment and saves it to the disk
+    Dim s As New FileStream(attachment.FileName, FileMode.Create)
+    s.Write(attachment.Data, 0, attachment.Data.Length)
+    s.Dispose()
 Next
 
 'Saves and closes the document

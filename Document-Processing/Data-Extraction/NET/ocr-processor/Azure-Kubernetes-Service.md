@@ -30,7 +30,8 @@ N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assem
 
 Step 5: Include the following commands in the Docker file to install the dependent packages in the docker container.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight bash %}
 
 RUN apt-get update && \
 apt-get install -yq --no-install-recommends libgdiplus libc6-dev libleptonica-dev libjpeg62 && \
@@ -38,6 +39,7 @@ ln -s /usr/lib/x86_64-linux-gnu/libtiff.so.6 /usr/lib/x86_64-linux-gnu/libtiff.s
 ln -s /lib/x86_64-linux-gnu/libdl.so.2 /usr/lib/x86_64-linux-gnu/libdl.so
 
 {% endhighlight %}
+{% endtabs %}
 
 ![OCR commends in docker file](OCR-Images/OCR-Command-aks.png) 
 
@@ -45,7 +47,8 @@ Step 6: A default action method named Index will be present in the *HomeControll
 
 Step 7: Add a new button in the *index.cshtml* as follows.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight CSHTML %}
 
 @{Html.BeginForm("PerformOCR", "Home", FormMethod.Get);
     {
@@ -57,20 +60,24 @@ Step 7: Add a new button in the *index.cshtml* as follows.
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Action method file image](OCR-Images/OCRDocker6.png) 
 
 Step 8: A default controller with the name *HomeController.cs* gets added to the creation of the ASP.NET Core project. Include the following namespaces in that HomeController.cs file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.OCRProcessor;
 using Syncfusion.Pdf.Parsing;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 9: Add a new action method PerformOCR in the *HomeController.cs*, and include the code sample to perform OCR on the entire PDF document using `PerformOCR` method of the `OCRProcessor` class. 
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public ActionResult PerformOCR()
@@ -101,6 +108,7 @@ public ActionResult PerformOCR()
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Deploying an Application to Kubernetes
 
@@ -121,11 +129,13 @@ Tagging a Docker image is an essential step in Docker container management. It a
 
 2.Run the tag command. Use the following syntax to tag your Docker image:
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight bash %}
 
-    docker tag <source-image> <repository>:<tag>
+docker tag <source-image> <repository>:<tag>
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Tag commends in docker file](OCR-Images/Tag-docker-image.png) 
 
@@ -133,11 +143,13 @@ Step 2: Push the Docker Image
 
 Pushing uploads your tagged image to a Docker repository, making it accessible for deployment.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight bash %}
 
 docker push <source-image> <repository>:<tag>
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Push commends in docker file](OCR-Images/Push-docker-aks.png) 
 
@@ -145,11 +157,14 @@ Step 3: Apply the deployment configuration
 
 This step creates or updates your application's deployment configuration in your Kubernetes cluster.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight bash %}
 
 kubectl apply -f deployment.yaml
 
 {% endhighlight %}
+{% endtabs %}
+
 
 ![Deploy commends in docker file](OCR-Images/Deploy-docker-aks.png) 
 
@@ -157,11 +172,13 @@ Step 4: Apply the service configuration
 
 Creating a service configuration exposes your application to the network, allowing external access.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight bash %}
 
 kubectl apply -f service.yaml
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Apply commends in docker file](OCR-Images/Apply-docker-aks.png) 
 
@@ -169,11 +186,13 @@ Step 5: Viewing service details
 
 Using **kubectl get service** allows you to check the services running in your Kubernetes cluster, ensuring they are correctly configured and accessible. You can copy the external IP and paste it into a browser like Chrome to view your application's output.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight bash %}
 
 kubectl get service
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Service commends in docker file](OCR-Images/Service-docker-aks.png) 
 
@@ -188,8 +207,3 @@ kubectl get service
  You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/OCR-csharp-examples/tree/master/Docker).
 
  Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-core) to explore the rich set of Syncfusion® PDF library features.
-
-
-
-
-

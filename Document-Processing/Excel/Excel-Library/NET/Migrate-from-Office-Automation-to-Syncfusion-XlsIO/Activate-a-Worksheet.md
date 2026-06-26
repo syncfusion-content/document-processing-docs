@@ -15,7 +15,7 @@ The following code shows how to activate a worksheet in workbook containing thre
 ## Interop
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 private void ActivateWorksheet()
 {
   //Instantiate the application object
@@ -38,7 +38,7 @@ private void ActivateWorksheet()
 }
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Private Sub ActivateWorksheet()
   'Instantiate the application object
   Dim excelApp = New Microsoft.Office.Interop.Excel.Application()
@@ -64,7 +64,7 @@ End Sub
 ## XlsIO
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 private void ActivateWorksheet()
 {
   using (ExcelEngine excelEngine = new ExcelEngine())
@@ -88,7 +88,31 @@ private void ActivateWorksheet()
 }
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+private void ActivateWorksheet()
+{
+  using (ExcelEngine excelEngine = new ExcelEngine())
+  {
+    //Instantiate the application object
+    IApplication application = excelEngine.Excel;
+
+    //Specify the template Excel file path
+    string myPath = "Sample.xlsx";
+
+    //Instantiate a new workbook
+    //Open the Excel file
+    IWorkbook workbook = application.Workbooks.Open(myPath);
+
+    //Activate the first worksheet by default
+    workbook.Worksheets[0].Activate();
+
+    //Save as Excel file
+    workbook.SaveAs("XlsIOOutput_ActivateWorksheet.xlsx");
+  }
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Private Sub ActivateWorksheet()
   Using excelEngine As ExcelEngine = New ExcelEngine()
     'Instantiate the application object

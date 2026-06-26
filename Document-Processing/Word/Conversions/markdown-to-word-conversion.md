@@ -15,7 +15,7 @@ To quickly start converting a Word document to Markdown and vice versa, please c
 
 ## Assemblies and NuGet packages required
 
-Refer to the following links for assemblies and NuGet packages required based on platforms to convert a Markdown file to a Word document using the .NET Word Library (DocIO).
+Refer to the following links for assemblies and NuGet packages required based on platforms to convert a Markdown file to a Word document using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO).
 
 * [Markdown to Word conversion assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required)
 * [Markdown to Word conversion NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
@@ -512,7 +512,7 @@ N> Provide the encoding values before opening a Word document as per the above c
 
 ## Online Demo
 
-* Explore how to convert the Markdown file to Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/markdowntoword#/tailwind).
+* Explore how to convert the Markdown file to Word document using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/markdowntoword#/tailwind).
 
 ## See Also
 

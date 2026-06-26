@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create or Generate PDF file in Node.js | Syncfusion
-description: Learn how to create a PDF file in Node.js server with easy steps using Syncfusion TypeScript PDF library without depending on Adobe
+description: Learn how to create a PDF file in Node.js server with easy steps using JavaScript PDF Library without depending on Adobe
 platform: document-processing
 control: PDF
 documentation: ug
@@ -10,15 +10,15 @@ keywords: pdf, script, express, node
 
 # Create or Generate a PDF File in a Node.js Server Environment
 
-The Syncfusion<sup>&reg;</sup> TypeScript PDF library is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, fill forms, and secure PDF files.
+The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) is used to create, read, and edit PDF documents. The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) also offers functionality to merge, split, stamp, fill forms, and secure PDF files.
 
-This guide explains how to integrate the Syncfusion TypeScript PDF library into an application with **Node.js server environment**.
+This guide explains how to integrate the [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) into an application with **Node.js server environment**.
 
-## Installing the Syncfusion TypeScript PDF package
+## Installing the JavaScript PDF Library package
 
 All Syncfusion JS 2 packages are published in `npmjs.com` registry.
 
-* To install the PDF library, use the following command.
+* To install the [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library), use the following command.
 
 ```bash
 npm install @syncfusion/ej2-pdf --save
@@ -29,7 +29,7 @@ Image extraction and image‑based redaction features are optimized for browser 
 
 ## Dependencies
 
-The following list of dependencies are required to use the `TypeScript PDF library` component in your application.
+The following list of dependencies are required to use the [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) component in your application.
 
 ```bash
 |-- @syncfusion/ej2-compression

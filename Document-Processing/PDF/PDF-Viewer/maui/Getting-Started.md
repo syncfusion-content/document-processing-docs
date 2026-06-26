@@ -51,7 +51,7 @@ using Syncfusion.Maui.Core.Hosting;
 
 2. Register the Syncfusion core handler in your `MauiProgram.cs` file to use Syncfusion controls.
 {% tabs %}
-{% highlight c# tabtitle="MauiProgram.cs" hl_lines="12" %}
+{% highlight c# tabtitle="MauiProgram.cs" hl_lines="11" %}
 
 public static MauiApp CreateMauiApp()
 {
@@ -215,7 +215,7 @@ using Syncfusion.Maui.Core.Hosting;
 
 2. Register the Syncfusion core handler in your `MauiProgram.cs` file to use Syncfusion controls.
 {% tabs %}
-{% highlight c# tabtitle="MauiProgram.cs" hl_lines="12" %}
+{% highlight c# tabtitle="MauiProgram.cs" hl_lines="11" %}
 
 public static MauiApp CreateMauiApp()
 {
@@ -399,7 +399,7 @@ using Syncfusion.Maui.Core.Hosting;
 
 2. Register the Syncfusion core handler in your `MauiProgram.cs` file to use Syncfusion controls.
 {% tabs %}
-{% highlight c# tabtitle="MauiProgram.cs" hl_lines="12" %}
+{% highlight c# tabtitle="MauiProgram.cs" hl_lines="11" %}
 
 public static MauiApp CreateMauiApp()
 {
