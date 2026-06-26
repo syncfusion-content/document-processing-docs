@@ -43,7 +43,7 @@ Learn more about:
 
 ### AI Agent Tools
 
-Enable AI agents to autonomously handle document tasks at runtime-such as creating reports, converting files, and extracting form data-without requiring you to write complex processing logic. Simply add the [Syncfusion.DocumentSDK.AI.AgentTools](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools) NuGet package while building your application with AI Agent Tools to manage document workflows seamlessly.
+Enable AI agents to autonomously handle document tasks at runtime-such as creating reports, converting files, and extracting form data-without requiring you to write complex processing logic. When building an application with AI agents, simply add the [Syncfusion.DocumentSDK.AI.AgentTools](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools) NuGet package and let your agent manage document workflows seamlessly.
 
 [Learn more](https://help.syncfusion.com/document-processing/ai-agent-tools/overview).
 
