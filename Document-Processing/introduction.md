@@ -104,7 +104,7 @@ Transforms natural-language prompts into production-ready UIs using real Syncfus
 </tr>
 
 <tr>
-<td>AI Agent Tools</td>
+<td>AI Agent Tools (Document SDK)</td>
 <td>
 Enables AI agents to autonomously execute document tasks at runtime - generate reports, convert files, and extract form data - without requiring manual processing logic. Integrate the <a href="https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools">Syncfusion.DocumentSDK.AIAgentTools</a> NuGet package to extend your agent’s document processing capabilities.
 <br><br>Learn more about <a href="https://help.syncfusion.com/document-processing/ai-agent-tools/overview">AI Agent Tools</a>.
@@ -112,10 +112,10 @@ Enables AI agents to autonomously execute document tasks at runtime - generate r
 </tr>
 
 <tr>
-<td>MCP Server</td>
+<td>AI Coding Assistant (MCP Server)</td>
 <td>
 Integrates with Visual Studio, VS Code, and JetBrains Rider through MCP Server. Describe your document processing requirement and receive documentation-backed, production-ready C# code instantly.
-<br><br>Learn more about <a href="https://help.syncfusion.com/document-processing/mcp-server/overview">MCP Server</a>.
+<br><br>Learn more about <a href="https://help.syncfusion.com/document-processing/mcp-server/ai-coding-assistant/overview">AI Coding Assistant</a>.
 </td>
 </tr>
 
