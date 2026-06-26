@@ -1,6 +1,6 @@
 ---
 title: Extract Data in Console Application | Syncfusion
-description: Learn how to extract data in a Console Application by using the Syncfusion Smart Data Extractor efficiently.
+description: Learn how to extract data in a Console Application by using the .NET Smart Data Extractor Library efficiently.
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG
