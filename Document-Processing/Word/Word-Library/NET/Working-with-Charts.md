@@ -876,7 +876,7 @@ Customize the **chart axes** by changing the title, border, font, rotation angle
 
 ## Add Data Table
 
-To add a data table to a chart, enable the [HasDataTable](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WChart.html#Syncfusion_DocIO_DLS_WChart_HasDataTable) property of the [WChart](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WChart.html) class. By default, it is false, hiding the data table. Setting this property to true displays the data table beneath the chart.
+To add a data table to a chart, enable the [HasDataTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WChart.html#Syncfusion_DocIO_DLS_WChart_HasDataTable) property of the [WChart](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WChart.html) class. By default, it is false, hiding the data table. Setting this property to true displays the data table beneath the chart.
 
 The following code example illustrates how to add data table for chart.
 

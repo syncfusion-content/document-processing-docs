@@ -8,7 +8,7 @@ documentation: UG
 
 # Create PowerPoint Document in Blazor
 
-Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) used to create, read, and edit **PowerPoint** documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, a **create a PowerPoint document in Blazor**.
+Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, and edit **PowerPoint** documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, a **create a PowerPoint document in Blazor**.
 
 ## Blazor Web App Server Application
 
@@ -786,7 +786,7 @@ Upon executing the program, the **PowerPoint document** will be generated as fol
 
 {% endtabcontents %}
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/blazor) to explore the rich set of the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) features.
+Click [here](https://www.syncfusion.com/document-sdk/net-powerpoint-library) to explore the rich set of the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) features.
 
 An online sample link to [create a PowerPoint Presentation](https://document.syncfusion.com/demos/powerpoint/default#/tailwind) in ASP.NET Core. 
 
@@ -1412,6 +1412,6 @@ N> While the PowerPoint library works in WASM Standalone app, server-side deploy
 
 Kindly explore the [supported and unsupported features of PowerPoint library in Blazor](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/supported-and-unsupported-features).
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/blazor) to explore the rich set of the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) features. 
+Click [here](https://www.syncfusion.com/document-sdk/net-powerpoint-library) to explore the rich set of the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) features. 
 
 An online sample link to [create a PowerPoint Presentation](https://document.syncfusion.com/demos/powerpoint/default#/tailwind) in ASP.NET Core.

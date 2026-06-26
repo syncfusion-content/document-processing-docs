@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert PowerPoint to Image in WinUI
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [WinUI PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/winui/powerpoint-library) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to image in WinUI**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [WinUI PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to image in WinUI**.
 
 ## Prerequisites
 To use the WinUI 3 project templates, install the Windows App SDK extension for Visual Studio. For more details, refer [here](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/set-up-your-development-environment?tabs=cs-vs-community%2Ccpp-vs-community%2Cvs-2022-17-1-a%2Cvs-2022-17-1-b).
@@ -158,6 +158,6 @@ By executing the program, you will get the **image** as follows.
 
 ![PowerPoint to Image in WinUI Desktop](PPTXtoPDF_images/Output_PowerPoint_Presentation_to-Image.png)
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/winui) to explore the rich set of the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) features. 
+Click [here](https://www.syncfusion.com/document-sdk/net-powerpoint-library) to explore the rich set of the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) features. 
 
 An online sample link to [convert PowerPoint Presentation to image](https://document.syncfusion.com/demos/powerpoint/pptxtoimage#/tailwind) in ASP.NET Core. 

@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert Word document to PDF in .NET MAUI
 
-Syncfusion<sup>&reg;</sup> DocIO is a [.NET MAUI Word library](https://www.syncfusion.com/document-processing/word-framework/maui/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to PDF in .NET MAUI**.
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to PDF in .NET MAUI**.
 
 ## Steps to convert Word document to PDF in .NET MAUI
 
@@ -586,6 +586,6 @@ By executing the program, you will get the **PDF document** as follows.
 
 {% endtabcontents %}
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/maui) to explore the rich set of the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) features. 
+Click [here](https://www.syncfusion.com/document-sdk/net-word-library) to explore the rich set of the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) features. 
 
 An online sample link to [convert Word document to PDF](https://document.syncfusion.com/demos/word/wordtopdf#/tailwind) in ASP.NET Core.

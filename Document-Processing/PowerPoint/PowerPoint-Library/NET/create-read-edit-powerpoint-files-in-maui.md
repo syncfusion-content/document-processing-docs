@@ -1,13 +1,13 @@
 ---
 title: Create and edit PowerPoint files in .NET MAUI |Syncfusion|
-description: A .NET MAUI PowerPoint library to create, read and edit PowerPoint files in .NET MAUI applications. Supports text, shape, chart, table and combine PowerPoints.
+description: A .NET PowerPoint library to create, read and edit PowerPoint files in .NET MAUI applications. Supports text, shape, chart, table and combine PowerPoints.
 platform: document-processing
 control: PowerPoint
 documentation: UG
 ---
 # Create, read and edit a PowerPoint file in .NET MAUI 
 
-Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> Presentation is a [.NET MAUI PowerPoint library](https://www.syncfusion.com/powerpoint-framework/maui/powerpoint-library) used to create, read, and edit PowerPoint documents programmatically without Microsoft PowerPoint or interop dependencies. Using this library, you can create a PowerPoint document in .NET MAUI.
+Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> Presentation is a [.NET PowerPoint library](https://www.syncfusion.com/powerpoint-framework/maui/powerpoint-library) used to create, read, and edit PowerPoint documents programmatically without Microsoft PowerPoint or interop dependencies. Using this library, you can create a PowerPoint document in .NET MAUI.
 
 ## Steps to create PowerPoint file in .NET MAUI
 
@@ -709,6 +709,6 @@ saveService.SaveAndView("Output.pptx", "application/vnd.openxmlformats-officedoc
 
 {% endtabs %}
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/maui) to explore the rich set of the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) features. 
+Click [here](https://www.syncfusion.com/document-sdk/net-powerpoint-library) to explore the rich set of the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) features. 
 
 An online sample link to [create a PowerPoint Presentation](https://document.syncfusion.com/demos/powerpoint/default#/tailwind) in ASP.NET Core. 
