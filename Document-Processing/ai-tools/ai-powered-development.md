@@ -56,9 +56,9 @@ Integrates with Visual Studio, VS Code, and JetBrains Rider and more to accelera
 ## When to Use
 
 
-| AI Tool | When to Choose / Best Scenario |
+| **AI Tool** | **When to Choose / Best Scenario** |
 |--------|---------------------------------|
-| Agent Skills | When you want accurate, IDE‑level code generation using Syncfusion APIs with minimal setup. |
-| Agentic UI Builder | When you want to quickly generate production-ready UIs for document workflows from prompts. |
-| AI Agent Tools | When building applications where AI agents must automate document workflows at runtime. |
-| MCP Server | When you need instant, documentation-backed code guidance directly within your development environment. |
+| **Agent Skills** | Best for **offline coding** - accurate, IDE-level code generation with Syncfusion APIs. Great for local support, minimal setup, and automating repetitive coding tasks. |
+| **Agentic UI Builder** | Perfect for **fast UI creation** - turns natural-language prompts into production-ready, responsive designs, saving time on front-end work. |
+| **AI Agent Tools** | Designed for **AI-driven document processing** - AI agents use prebuilt tools to actively read, edit, and transform **Word**, **Excel**, **PDF**, **PowerPoint**, and **Markdown files** at runtime. This makes it easy to build intelligent workflows where documents are processed directly by the agent. |
+| **MCP Server** | Best for **online guidance** - provides instant documentation, contextual help, and troubleshooting directly inside your IDE, helping you understand and refine your code. |
