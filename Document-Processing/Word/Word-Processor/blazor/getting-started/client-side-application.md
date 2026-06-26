@@ -41,8 +41,8 @@ Alternatively, you can utilize the following package manager command to achieve 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
 
-Install-Package Syncfusion.Blazor.WordProcessor -Version {{ site.releaseversion }}
-Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.WordProcessor
+Install-Package Syncfusion.Blazor.Themes
 
 {% endhighlight %}
 {% endtabs %}
@@ -86,8 +86,8 @@ cd BlazorApp
 
 {% highlight c# tabtitle="Package Manager" %}
 
-dotnet add package Syncfusion.Blazor.WordProcessor -v {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.WordProcessor
+dotnet add package Syncfusion.Blazor.Themes
 dotnet restore
 
 {% endhighlight %}
@@ -129,7 +129,6 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 
 builder.Services.AddSyncfusionBlazor();
 await builder.Build().RunAsync();
-.... 
 
 {% endhighlight %}
 {% endtabs %}
@@ -141,11 +140,10 @@ Add the following stylesheet and script to the head section of **~/index.html** 
 {% tabs %}
 {% highlight html tabtitle="~/index.html" %}
 
-<head>
-    ....
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <script src="_content/Syncfusion.Blazor.WordProcessor/scripts/syncfusion-blazor-documenteditor.min.js" type="text/javascript"></script>
-</head>
+<!-- Add Syncfusion theme -->
+<link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+<!-- Add the DOCX Editor script -->
+<script src="_content/Syncfusion.Blazor.WordProcessor/scripts/syncfusion-blazor-documenteditor.min.js" type="text/javascript"></script>
 
 {% endhighlight %}
 {% endtabs %}

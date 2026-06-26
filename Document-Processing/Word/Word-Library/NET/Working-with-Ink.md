@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Working with Ink Elements
 
-An Ink annotation is a freehand drawing or handwritten input composed of stroke points that conveys signatures, notes, or sketches directly on a page. You can add and modify Ink in Word documents using Syncfusion<sup>&reg;</sup> Word library (DocIO).
+An Ink annotation is a freehand drawing or handwritten input composed of stroke points that conveys signatures, notes, or sketches directly on a page. You can add and modify Ink in Word documents using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO).
 
 N> DocIO supports Ink only in DOCX format documents.
 
@@ -744,7 +744,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 																																						  
 ## Limitations
 
-The .NET Word Library (DocIO) has the following limitations when creating Ink programmatically or processing Ink from an existing Word document.
+The [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) has the following limitations when creating Ink programmatically or processing Ink from an existing Word document.
 
 **Document Processing Functionalities**
 
@@ -772,5 +772,5 @@ During Word-to-PDF and Word-to-Image conversions, Syncfusion Word Library uses f
 
 ## Online Demo
 
-* Explore how to create a Word document with Ink using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/createink#/tailwind). 
-* Explore how to edit a Word document with Ink using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/editink#/tailwind).
+* Explore how to create a Word document with Ink using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/createink#/tailwind). 
+* Explore how to edit a Word document with Ink using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/editink#/tailwind).

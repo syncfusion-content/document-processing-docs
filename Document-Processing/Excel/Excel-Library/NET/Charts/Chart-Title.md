@@ -1,6 +1,6 @@
 ---
 title: Chart Title | Excel library | Syncfusion
-description: In this section, you can learn about chart title in an Excel document using Syncfusion .NET Excel library.
+description: In this section, you can learn about the chart title in an Excel document using the .NET Excel Library with clear explanations and practical examples.
 platform: document-processing
 control: XlsIO
 documentation: UG

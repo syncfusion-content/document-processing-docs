@@ -1,17 +1,17 @@
 ---
-title: Form Fields in JavaScript PDF library | Syncfusion
-description: This section explains how to create a digital signature in the PDF document by using the JavaScript PDF library
+title: Form Fields in JavaScript PDF Library | Syncfusion
+description: This section explains how to create a digital signature in the PDF document by using the JavaScript PDF Library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Form Fields in JavaScript PDF library
+# Form Fields in JavaScript PDF Library
 
 An interactive form, sometimes referred to as an AcroForm, is a collection of fields for gathering information. A PDF document can contain any number of fields appearing on any combination of pages, all of which make a single, globally interactive form spanning the entire document.
 
 ## Creating a new PDF form
 
-Syncfusion<sup>&reg;</sup> PDF allows you to create and manage form in PDF document by using [PdfForm](https://ej2.syncfusion.com/documentation/api/pdf/pdfform) class. The [PdfForm](https://ej2.syncfusion.com/documentation/api/pdf/pdfform) class represents the entire field collection of the form.
+[JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) allows you to create and manage form in PDF document by using [PdfForm](https://ej2.syncfusion.com/documentation/api/pdf/pdfform) class. The [PdfForm](https://ej2.syncfusion.com/documentation/api/pdf/pdfform) class represents the entire field collection of the form.
 
 ### Adding the text box field 
 
@@ -503,7 +503,7 @@ document.destroy();
 
 ## Filling form fields in an existing PDF Document
 
-Syncfusion<sup>&reg;</sup> PDF allows you to fill the form fields using PdfField class. 
+[JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) allows you to fill the form fields using PdfField class. 
 
 ### Filling the text box field
 
@@ -853,7 +853,7 @@ document. Destroy();
 
 ## Add a date field to a PDF form
 
-This section shows how to add a date field to a PDF form, allowing users to enter or select a date within the document. The JavaScript PDF library lets you configure the date field’s appearance, format, and behavior. You can also attach actions that run custom scripts or validations whenever the field is focused, changed, or submitted.
+This section shows how to add a date field to a PDF form, allowing users to enter or select a date within the document. The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) lets you configure the date field’s appearance, format, and behavior. You can also attach actions that run custom scripts or validations whenever the field is focused, changed, or submitted.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

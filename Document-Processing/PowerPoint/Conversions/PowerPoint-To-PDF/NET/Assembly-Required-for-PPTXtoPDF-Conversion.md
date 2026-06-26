@@ -59,7 +59,7 @@ Syncfusion.OfficeChart.NET<br/>Syncfusion.PresentationRenderer.NET<br/>Syncfusio
 </tr>
 </table>
 
-T> 1. If you encounter issues while using the .NET PowerPoint library in ASP.NET Core, refer to the [troubleshooting guide](https://support.syncfusion.com/kb/article/16010/how-to-use-troubleshooting-guide-for-aspnet-core-powerpoint-library-issues) for recommended checks and solutions.
+T> 1. If you encounter issues while using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) in ASP.NET Core, refer to the [troubleshooting guide](https://support.syncfusion.com/kb/article/16010/how-to-use-troubleshooting-guide-for-aspnet-core-powerpoint-library-issues) for recommended checks and solutions.
 T> 2. Switch to NuGet packages for a seamless experience:
 T>    * Get frequent bug fixes every week.
 T>    * Upgrade quickly with no manual effort.
