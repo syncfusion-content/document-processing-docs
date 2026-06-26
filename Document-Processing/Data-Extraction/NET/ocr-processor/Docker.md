@@ -28,7 +28,8 @@ N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assem
 
 Step 5: Include the following commands in the Docker file to install the dependent packages in the docker container.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight bash %}
 
 RUN apt-get update && \
 apt-get install -yq --no-install-recommends \
@@ -37,6 +38,7 @@ RUN ln -s /usr/lib/x86_64-linux-gnu/libtiff.so.6 /usr/lib/x86_64-linux-gnu/libti
 RUN ln -s /lib/x86_64-linux-gnu/libdl.so.2 /usr/lib/x86_64-linux-gnu/libdl.so
 
 {% endhighlight %}
+{% endtabs %}
 
 ![OCR commends in docker file](OCR-Images/Docker_file_commends.png) 
 
@@ -44,7 +46,8 @@ Step 6: A default action method named Index will be present in the *HomeControll
 
 Step 7: Add a new button in the *index.cshtml* as follows.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight CSHTML %}
 
 @{Html.BeginForm("PerformOCR", "Home", FormMethod.Get);
     {
@@ -56,20 +59,24 @@ Step 7: Add a new button in the *index.cshtml* as follows.
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Action method file image](OCR-Images/OCRDocker6.png) 
 
 Step 8: A default controller with the name *HomeController.cs* gets added to the creation of the ASP.NET Core project. Include the following namespaces in that HomeController.cs file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.OCRProcessor;
 using Syncfusion.Pdf.Parsing;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 9: Add a new action method PerformOCR in the *HomeController.cs*, and include the code sample to perform OCR on the entire PDF document using [PerformOCR](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html#Syncfusion_OCRProcessor_OCRProcessor_PerformOCR_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_String_) method of the [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html) class. 
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public ActionResult PerformOCR()
@@ -100,6 +107,7 @@ public ActionResult PerformOCR()
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 10: Build and run the sample in Docker. It will pull the Linux Docker image from the Docker hub and run the project. Now, the webpage will open in the browser. Click the button to convert the webpage to a PDF.
 

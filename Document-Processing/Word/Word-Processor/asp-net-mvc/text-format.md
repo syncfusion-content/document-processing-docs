@@ -159,9 +159,9 @@ The highlight color of the selected text can be get or set using the following s
 documenteditor.selection.characterFormat.highlightColor= 'Pink';
 ```
 
-## Bidirectional (Bidi)
+## Bidirectional
 
-The Bidi property controls whether selected text is displayed as right-to-left (RTL) or left-to-right (LTR) for proper multilingual formatting. You can get or set this property using the following code example.
+The bidi property controls whether selected text is displayed as right-to-left (RTL) or left-to-right (LTR) for proper multilingual formatting. You can get or set this property using the following code example.
 
 ```typescript
 // Get Bidi value of selected text
@@ -183,7 +183,9 @@ documenteditor.selection.characterFormat.bidi= true;
 {% endhighlight %}
 {% endtabs %}
 
+## Online Demo
 
+Explore how to apply text formatting in Word documents using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/characterformatting#/tailwind3).
 
 ## See Also
 

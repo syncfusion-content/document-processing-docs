@@ -1,6 +1,6 @@
 ---
 title: XlsIO support for setting row height for individual cells | Syncfusion
-description: Learn whether Syncfusion XlsIO supports setting row height for individual cells in Excel using Syncfusion .NET Excel library (XlsIO).
+description: Learn whether Syncfusion XlsIO supports setting row height for individual cells in Excel using .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

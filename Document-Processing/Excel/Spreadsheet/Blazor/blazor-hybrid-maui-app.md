@@ -52,7 +52,7 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/MauiProgram.cs** file. After the builder is created.
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/MauiProgram.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="MauiProgram.cs" %}
@@ -66,8 +66,9 @@ public static class MauiProgram
 {
     public static MauiApp CreateMauiApp()
     {
-        // Register Syncfusion Blazor service
+        ....
         builder.Services.AddSyncfusionBlazor();
+        ....
     }
 }
 
@@ -82,12 +83,12 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% highlight html tabtitle="index.html" %}
 
 <head>
-    <!-- Syncfusion Blazor components theme -->
+    ....
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 </head>
 
 <body>
-    <!-- Syncfusion Blazor Spreadsheet Editor script -->
+    ....
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </body>
 {% endhighlight %}
@@ -102,6 +103,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Spreadsheet comp
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
 <SfSpreadsheet>

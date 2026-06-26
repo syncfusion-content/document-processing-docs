@@ -1,22 +1,40 @@
 ---
 layout: post
-title: Table of contents navigation in PDF Viewer | Syncfusion
-description: Learn how to navigate PDFs using the table of contents in the Syncfusion PDF Viewer control for React.
+title: Hyperlink navigation in React PDF Viewer | Syncfusion
+description: Learn how to configure hyperlink navigation, including table-of-contents entries, in the Syncfusion PDF Viewer control for React.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Table of contents navigation in PDF Viewer
+# Hyperlink navigation in React PDF Viewer
 
-## Overview:
+## Overview
 
-This guide shows how to configure hyperlink behavior in the React PDF Viewer: enable/disable links, control how links open, and handle hyperlink events.
+This guide shows how to configure hyperlink behavior in the React PDF Viewer: table of contents navigation, enable/disable links, control how links open, and handle hyperlink events.
 
-## Steps
+N> The table of contents pane and hyperlink interactions rely on the same navigation infrastructure. When these capabilities are enabled, the PDF Viewer automatically surfaces TOC entries and clickable links defined in the PDF.
 
-### 1. Enable or disable hyperlink interaction
+## Required modules
+
+Inject the following modules to enable navigation: `Toolbar`, `Magnification`, `Navigation`, `LinkAnnotation`, `BookmarkView`, `TextSelection`, `ThumbnailView`, and optionally `Annotation`.
+
+## Table of contents navigation
+
+Navigate through PDF sections using the table of contents pane. The viewer displays bookmarks and outline entries defined in the PDF. Select an entry to jump to that destination. Empty pane indicates the PDF has no table of contents structure.
+
+![Table of contents pane in PDF Viewer](../images/toc.png)
+
+## Hyperlink navigation
+
+Configure how the PDF Viewer handles embedded links pointing to external websites or in-document destinations. Control link activation, behavior, and events.
+
+![Hyperlink navigation example in PDF Viewer showing clickable links](../images/link.png)
+
+## How to configure hyperlinks
+
+### Enable or disable hyperlinks
 
 By default hyperlinks are enabled. Set the [`enableHyperlink`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enablehyperlink) property to `false` to make links non-interactive.
 
@@ -56,9 +74,9 @@ export default function App() {
 {% endhighlight %}
 {% endtabs %}
 
-### 2. Control how links open
+### Control how links open
 
-Use the [`hyperlinkOpenState`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#hyperlinkopenstate) property to choose whether external links open in the current tab or a new tab or in a whole new window.
+Use the [`hyperlinkOpenState`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#hyperlinkopenstate) property to choose whether external links open in the current tab or a new tab:
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -96,9 +114,9 @@ export default function App() {
 {% endhighlight %}
 {% endtabs %}
 
-### 3. Handle hyperlink events
+### Handle hyperlink events
 
-Use the [`hyperlinkClick`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#hyperlinkclick) and [`hyperlinkMouseOver`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#hyperlinkmouseover) events to intercept clicks or show custom tooltips. The examples below show how to log the hyperlink and optionally cancel navigation.
+Use the [`hyperlinkClick`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#hyperlinkclick) and [`hyperlinkMouseOver`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#hyperlinkmouseover) events to intercept clicks or show custom tooltips:
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -147,8 +165,9 @@ export default function App() {
 
 ## Troubleshooting
 
-- If links still open when [`enableHyperlink={false}`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enablehyperlink), ensure the page uses the correct [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl)/[`serviceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#serviceurl) and that `LinkAnnotation` is not being re-enabled elsewhere.
+- If links still open when [`enableHyperlink={false}`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enablehyperlink), ensure the page uses the correct [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl) and that `LinkAnnotation` is not being re-enabled elsewhere. Disabling hyperlinks only affects the viewer's behavior and does not alter the original PDF document.
 - If events do not fire, verify that `Inject` includes `LinkAnnotation` and any other services shown in the examples.
+- For TOC navigation, ensure the PDF document contains bookmarks or an outline structure. If the pane appears empty, the document may not have a table of contents defined.
 
 ## See also
 

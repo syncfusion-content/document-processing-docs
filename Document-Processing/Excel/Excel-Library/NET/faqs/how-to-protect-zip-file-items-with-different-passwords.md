@@ -13,6 +13,34 @@ Syncfusion.Compression allows users to set a unique password for each item when 
 The following complete code snippet explains how to protect a zip file and its items with passwords using the ZipCrypto encryption algorithm.
 
 {% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+using Syncfusion.Compression;
+using Syncfusion.Compression.Zip;
+class Program
+{
+  static void Main(string[] args)
+  {
+        //Initialize ZipArchive
+        ZipArchive zipArchive = new ZipArchive();
+        zipArchive.DefaultCompressionLevel = CompressionLevel.Best;
+
+        //Add the file without password you want to zip.
+        zipArchive.AddFile(@"../../Data/InputTemplate1.xlsx");
+
+        //Add the file with password you want to zip
+        zipArchive.AddFile(@"../../Data/InputTemplate2.xlsx", "password2");
+        zipArchive.AddFile(@"../../Data/InputTemplate3.xlsx", "password3");
+
+        //Protect the ZipArchive with password
+        zipArchive.Protect("password", EncryptionAlgorithm.ZipCrypto);
+
+        //Save the ZipArchive
+        zipArchive.Save(@"../../Output/Output.zip");
+        zipArchive.Close();
+    }
+}
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 using Syncfusion.Compression;
 using Syncfusion.Compression.Zip;

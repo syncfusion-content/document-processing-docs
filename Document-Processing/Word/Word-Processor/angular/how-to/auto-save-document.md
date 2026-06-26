@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Auto save document in Angular Document editor component | Syncfusion
+title: Auto save to server in Angular Document editor | Syncfusion
 description: Learn here all about Auto save document in document editor in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Auto save document in document editor 
@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Auto save document in Angular Document editor component
+# Auto save document to server in Angular Document editor component
 
 In this article, we are going to see how to auto save the document to server. You can automatically save the edited content in regular intervals of time. It helps reduce the risk of data loss by saving an open document automatically at customized intervals.
 
 The following example illustrates how to auto save the document in server.
 
-* In the client-side, using content change event, we can automatically save the edited content in regular intervals of time. Based on `contentChanged` boolean, the document send as DOCX format to server-side using [`saveAsBlob`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#saveasblob) method.
+* In the client-side, using content change event, we can automatically save the edited content in regular intervals of time. Based on `contentChanged` boolean, the document send as DOCX format to server-side using [`saveAsBlob`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#saveasblob) method.
 
 ```typescript
 import { Component, OnInit, ViewChild } from '@angular/core';
@@ -106,6 +106,10 @@ public string AutoSave()
     return "Sucess";
 }
 ```
+
+## Online Demo
+
+Explore how to automatically save Word documents in the Angular Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/auto-save).
 
 ## See Also
 * [AutoSave document in DocumentEditor](..//how-to/auto-save-document-in-document-editor)

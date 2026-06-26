@@ -9,7 +9,7 @@ keywords: maui os save pdf, maui os load pdf, c# save pdf, c# load pdf
 
 # Open and Save PDF documents in .NET MAUI
 
-The Syncfusion<sup>&reg;</sup> [.NET MAUI PDF library](https://www.syncfusion.com/document-processing/pdf-framework/maui/pdf-library) is used to create, read, and edit PDF documents programatically without the dependency on Adobe Acrobat. Using this library, you can **open and save a PDF document in .NET MAUI**.
+The Syncfusion<sup>&reg;</sup> [.NET MAUI PDF library](https://www.syncfusion.com/document-processing/pdf-framework/maui/pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency on Adobe Acrobat. Using this library, you can **open and save a PDF document in .NET MAUI**.
 
 **Prerequisites:**
 To create .NET Multi-platform App UI (.NET MAUI) apps, you need the latest versions of Visual Studio 2022 and .NET 6. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin).
@@ -34,21 +34,20 @@ Step 4: Add a new button to the **MainPage.xaml** as shown in the following.
 
 {% tabs %}
 
-{% highlight XML %}
+{% highlight XAML %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Load_and_Save_PDF_MAUI.MainPage">
-
-    <ScrollView>
-        <Button
-                x:Name="Btn"
-                Text="Create PDF"
-                FontAttributes="Bold"
-                Grid.Row="3"
-                Clicked="ButtonClick"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"/>
-    </ScrollView>
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="Load_and_Save_PDF_MAUI.MainPage">
+  <ScrollView>
+      <Button
+              x:Name="Btn"
+              Text="Create PDF"
+              FontAttributes="Bold"
+              Grid.Row="3"
+              Clicked="ButtonClick"
+              HorizontalOptions="Center"
+              VerticalOptions="Center"/>
+  </ScrollView>
 
 </ContentPage>
 {% endhighlight %}
@@ -134,7 +133,7 @@ saveService.SaveAndView("Result.pdf", "application/pdf", ms);
 
 {% endtabs %}
 
-A complete working sample can be downloaded from [Github](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Open%20and%20Save%20PDF%20document/.NET%20MAUI/Load_and_Save_PDF_MAUI).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Open%20and%20Save%20PDF%20document/.NET%20MAUI/Load_and_Save_PDF_MAUI).
 
 By executing the program, you will get the **PDF document** as follows.
 ![.NET MAUI output PDF document](Images/Open_and_save_output.png)

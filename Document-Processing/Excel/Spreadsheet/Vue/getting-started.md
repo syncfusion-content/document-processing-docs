@@ -44,40 +44,34 @@ npm install @syncfusion/ej2-vue-spreadsheet --save
 
 ## Add CSS references
 
-Add the following Spreadsheet and dependent component style references.
+Add the following Spreadsheet and dependent component CSS styles in the **\<style\>** section.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
-<style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-vue-spreadsheet/styles/tailwind3.css";
-</style>
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-spreadsheet/styles/tailwind3.css";
 
 {% endhighlight %}
 {% endtabs %}
 
 > **Note:** Refer to the [Themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Vue project.
 
-## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Spreadsheet component to the application
+## Import and register the Spreadsheet Editor
 
-Import and register the Spreadsheet component directives in the `script` section of **src/App.vue**. Then, define the component in the `template` section.
+In the `src/App.vue` file, update the **\<script\>** section to import the Spreadsheet Editor component and register it with the required properties.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
 
-<template>
-  <ejs-spreadsheet :openUrl="openUrl" :saveUrl="saveUrl"></ejs-spreadsheet>
-</template>
+{% highlight vue tabtitle="~/src/App.vue" %}
 
-<script>
 import { SpreadsheetComponent } from "@syncfusion/ej2-vue-spreadsheet";
 
 export default {
@@ -92,9 +86,23 @@ export default {
     }
   }
 }
-</script>
 
 {% endhighlight %}
+
+{% endtabs %}
+
+## Initialize the Spreadsheet Editor
+
+Add the Spreadsheet Editor component to the **\<template\>** section in the `src/App.vue` file.
+
+{% tabs %}
+
+{% highlight vue tabtitle="~/src/App.vue" %}
+
+<ejs-spreadsheet :openUrl="openUrl" :saveUrl="saveUrl"></ejs-spreadsheet>
+
+{% endhighlight %}
+
 {% endtabs %}
 
 > **Note:** The [`openUrl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#openurl) and [`saveUrl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#saveurl) endpoints used in this example are provided only for demonstration purposes. For development and production use, we strongly recommend configuring your own local or hosted web service for the Open and Save actions instead of relying on the online demo service. For more information, refer to the [`link`](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services).
@@ -114,6 +122,8 @@ After the application starts, open the localhost URL shown in the terminal to vi
 You can also explore the Spreadsheet interactively using the live sample below.
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/vue/getting-started-cs1" %}
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-vue-spreadsheet-component).
 
 ## See also
 

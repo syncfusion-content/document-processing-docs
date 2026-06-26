@@ -67,6 +67,10 @@ this.$refs.documenteditor.ej2Instances.selection.sectionFormat.columns = [column
 this.$refs.documenteditor.ej2Instances.selection.sectionFormat.lineBetweenColumns = true;
 ```
 
+### Online Demo
+
+Explore how to format Word documents with multiple columns using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/multiple-columns.html).
+
 ## Breaks
 
 You can insert Column break. The following code indicate that the text following the column break will begin in the next column.
@@ -90,6 +94,10 @@ The following code example illustrates how to insert a continuous section break
 ```javascript
 this.$refs.documentEditor.ej2Instances.editor.insertSectionBreak(SectionBreakType.Continuous);
 ```
+
+## Online Demo
+
+Explore how to apply section formatting in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/section-formatting.html).
 
 ## See Also
 

@@ -1,6 +1,6 @@
 ---
 title: How to set Logarithmic axis for chart in Excel document | Syncfusion
-description: Code example to set Logarithmic axis for chart in Excel document using Syncfusion .NET Excel library (XlsIO).
+description: Code example to set Logarithmic axis for chart in Excel document using .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

@@ -1,6 +1,6 @@
 ---
 title: Convert an Excel document to PDF in WinUI | Syncfusion
-description: Convert an Excel document to PDF in WinUI using Sycfusion .NET Excel library (XlsIO) without Microsoft Excel or interop dependencies.
+description: Convert an Excel document to PDF in WinUI using .NET Excel Library without Microsoft Excel or interop dependencies.
 platform: document-processing
 control: XlsIO
 documentation: UG
