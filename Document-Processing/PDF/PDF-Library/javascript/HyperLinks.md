@@ -1,11 +1,11 @@
 ---
-title: Hyperlinks in JavaScript PDF library | Syncfusion
-description: This section explains how to add a hyperlink in a new or existing PDF document by using the JavaScript PDF library
+title: Hyperlinks in JavaScript PDF Library | Syncfusion
+description: This section explains how to add a hyperlink in a new or existing PDF document by using the JavaScript PDF Library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Hyperlinks in JavaScript PDF library
+# Hyperlinks in JavaScript PDF Library
 
 In PDF, hyperlinks can be added to allow the users to navigate to another part of PDF file, web page or any other external content.
 
@@ -171,7 +171,7 @@ document.destroy();
 
 ## Modifying or updating existing hyperlinks
 
-This example shows how to update hyperlink annotations in a PDF using Syncfusion’s JavaScript PDF Library. Link annotations retrieved from a page can have their URL or bounding region updated as needed. This makes it easy to refresh outdated links or adjust navigation behavior whenever the document changes.
+This example shows how to update hyperlink annotations in a PDF using [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library). Link annotations retrieved from a page can have their URL or bounding region updated as needed. This makes it easy to refresh outdated links or adjust navigation behavior whenever the document changes.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -215,7 +215,7 @@ document.destroy();
 
 ## Removing hyperlinks
 
-This example demonstrates how to remove hyperlink annotations from a PDF using Syncfusion’s JavaScript PDF Library. By reviewing each annotation and checking whether it represents a hyperlink, you can remove it using either [remove()](https://ej2.syncfusion.com/documentation/api/pdf/pdfannotationcollection#remove) or [removeAt()](https://ej2.syncfusion.com/documentation/api/pdf/pdfannotationcollection#removeat) methods. This helps clean up outdated or unwanted links while keeping the rest of the document content intact.
+This example demonstrates how to remove hyperlink annotations from a PDF using [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library). By reviewing each annotation and checking whether it represents a hyperlink, you can remove it using either [remove()](https://ej2.syncfusion.com/documentation/api/pdf/pdfannotationcollection#remove) or [removeAt()](https://ej2.syncfusion.com/documentation/api/pdf/pdfannotationcollection#removeat) methods. This helps clean up outdated or unwanted links while keeping the rest of the document content intact.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

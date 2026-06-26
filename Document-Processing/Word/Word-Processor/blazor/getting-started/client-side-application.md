@@ -41,8 +41,8 @@ Alternatively, you can utilize the following package manager command to achieve 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
 
-Install-Package Syncfusion.Blazor.WordProcessor -Version {{ site.releaseversion }}
-Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.WordProcessor
+Install-Package Syncfusion.Blazor.Themes
 
 {% endhighlight %}
 {% endtabs %}
@@ -86,8 +86,8 @@ cd BlazorApp
 
 {% highlight c# tabtitle="Package Manager" %}
 
-dotnet add package Syncfusion.Blazor.WordProcessor -v {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.WordProcessor
+dotnet add package Syncfusion.Blazor.Themes
 dotnet restore
 
 {% endhighlight %}
@@ -129,7 +129,6 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 
 builder.Services.AddSyncfusionBlazor();
 await builder.Build().RunAsync();
-.... 
 
 {% endhighlight %}
 {% endtabs %}
@@ -141,11 +140,10 @@ Add the following stylesheet and script to the head section of **~/index.html** 
 {% tabs %}
 {% highlight html tabtitle="~/index.html" %}
 
-<head>
-    ....
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <script src="_content/Syncfusion.Blazor.WordProcessor/scripts/syncfusion-blazor-documenteditor.min.js" type="text/javascript"></script>
-</head>
+<!-- Add Syncfusion theme -->
+<link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+<!-- Add the DOCX Editor script -->
+<script src="_content/Syncfusion.Blazor.WordProcessor/scripts/syncfusion-blazor-documenteditor.min.js" type="text/javascript"></script>
 
 {% endhighlight %}
 {% endtabs %}
@@ -171,6 +169,10 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 ![Blazor DOCX Editor in WASM](../images/blazor-docx-editor.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DocumentEditor).
+
+## Online Demo
+
+Explore how to create, edit, and print Word documents using the Blazor Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-wasm/document-editor/default-functionalities).
 
 ## See also
 

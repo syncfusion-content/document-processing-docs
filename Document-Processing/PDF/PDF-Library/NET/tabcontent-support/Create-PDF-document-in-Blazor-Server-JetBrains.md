@@ -107,6 +107,7 @@ Register your service in the ``ConfigureServices`` method available in the ``Sta
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
+
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddRazorPages();
@@ -114,6 +115,7 @@ public void ConfigureServices(IServiceCollection services)
     services.AddSingleton<WeatherForecastService>();
     services.AddSingleton<ExportService>();
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -124,7 +126,7 @@ Step 7: Inject ``ExportService`` in-to ``FetchData.razor`` using the following c
 
 @inject ExportToFileService exportService
 @inject Microsoft.JSInterop.IJSRuntime JS
-@using  System.IO;
+@using  System.IO
 
 {% endhighlight %}
 {% endtabs %}
@@ -133,7 +135,9 @@ Create a button in the ``FetchData.razor`` using the following code.
 
 {% tabs %}
 {% highlight CSHTML %}
-<button class="btn btn-primary" @onclick="@ExportToPdf">Export to PDF</button>
+
+<button class="btn btn-primary" @onclick="@ExportToPdf">Export PDF</button>
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -141,6 +145,7 @@ Add the ``ExportToPdf`` method in ``FetchData.razor`` page to call the export se
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
+
 @functions
 {
     protected async Task ExportToPdf()
@@ -151,13 +156,13 @@ Add the ``ExportToPdf`` method in ``FetchData.razor`` page to call the export se
         }
     }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
 Step 8: Create a class file with  ``FileUtil`` name and add the following code to invoke the JavaScript action to download the file in the browser.
 
 {% tabs %}
-
 {% highlight c# tabtitle="C#" %}
 
 public static class FileUtil
@@ -170,28 +175,29 @@ public static class FileUtil
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
-Step 9: Add the following JavaScript function in the  ``_Host.cshtml`` available under the ``Pages`` folder.
+Step 9: Add the following JavaScript function in the  ``App.razor`` available under the ``Components`` folder.
 
 {% tabs %}
-
 {% highlight HTML %}
 
-<script type="text/javascript">
+<script type = "text/javascript" >
     function saveAsFile(filename, bytesBase64) {
-            if (navigator.msSaveBlob) {
-                //Download document in Edge browser
-                var data = window.atob(bytesBase64);
-                var bytes = new Uint8Array(data.length);
-                for (var i = 0; i < data.length; i++) {
-                    bytes[i] = data.charCodeAt(i);
-                }
-                var blob = new Blob([bytes.buffer], { type: "application/octet-stream" });
-                navigator.msSaveBlob(blob, filename);
-            }
-            else {
+    if (navigator.msSaveBlob)
+    {
+        //Download document in Edge browser
+        var data = window.atob(bytesBase64);
+        var bytes = new Uint8Array(data.length);
+        for (var i = 0; i < data.length; i++)
+        {
+            bytes[i] = data.charCodeAt(i);
+        }
+        var blob = new Blob([bytes.buffer], { type: "application/octet-stream" });
+        navigator.msSaveBlob(blob, filename);
+    }
+    else
+    {
         var link = document.createElement('a');
         link.download = filename;
         link.href = "data:application/octet-stream;base64," + bytesBase64;
@@ -199,11 +205,10 @@ Step 9: Add the following JavaScript function in the  ``_Host.cshtml`` available
         link.click();
         document.body.removeChild(link);
     }
-        }
+}
 </script>
 
 {% endhighlight %}
-
 {% endtabs %}
 
 Step 10: Build the project.

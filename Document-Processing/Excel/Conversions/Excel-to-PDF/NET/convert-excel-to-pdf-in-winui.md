@@ -1,6 +1,6 @@
 ---
 title: Convert an Excel document to PDF in WinUI | Syncfusion
-description: Convert an Excel document to PDF in WinUI using Sycfusion .NET Excel library (XlsIO) without Microsoft Excel or interop dependencies.
+description: Convert an Excel document to PDF in WinUI using .NET Excel Library without Microsoft Excel or interop dependencies.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -17,7 +17,7 @@ To use the WinUI 3 project templates, install the Windows App SDK extension for 
 
 Step 1: Create a new C# WinUI Desktop app. Select Blank App, Packaged (WinUI 3 in Desktop) project.
 
-!["Create a WinUI Desktop application in visual studio](WinUI_images\WinUI_images_img6.png)
+![Create a WinUI Desktop application in visual studio](WinUI_images\WinUI_images_img6.png)
 
 Step 2: Name the project and click **Create** button.
 

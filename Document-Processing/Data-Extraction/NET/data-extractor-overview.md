@@ -9,20 +9,4 @@ keywords: Assemblies
 
 # Welcome to Syncfusion Smart Data Extractor Library
 
-{% doccards %}
-
-{% doccard text="Blazor" link="/document-processing/data-extraction/net/Extract-Data-in-Blazor" icon="/document-processing/data-extraction/net/images/Blazor.svg" %}
-
-{% doccard text="ASP.NET Core" link="/document-processing/data-extraction/net/Extract-Data-in-ASP-NET-Core" icon="/document-processing/data-extraction/net/images/ASP.NET-Core.png" %}
-
-{% doccard text="ASP.NET MVC" link="/document-processing/data-extraction/net/Extract-Data-in-ASP-NET-MVC" icon="/document-processing/data-extraction/net/images/ASP.NET-Mvc.svg" %}
-
-{% doccard text=".NET MAUI" link="/document-processing/data-extraction/net/Extract-Data-in-MAUI" icon="/document-processing/data-extraction/net/images/MAUI.svg" %}
-
-{% doccard text="WPF" link="/document-processing/data-extraction/net/Extract-Data-in-WPF" icon="/document-processing/data-extraction/net/images/WPF.svg" %}
-
-{% doccard text="Windows Forms" link="/document-processing/data-extraction/net/Extract-Data-in-Windows-Forms" icon="/document-processing/data-extraction/net/images/Windows-Forms.svg" %}
-
-{% enddoccards %}
-
 Syncfusion® **Smart Data Extractor** is a robust, deterministic C# library built to capture complete document structures from PDFs and images. Optimized for .NET workflows, it interprets visual layout patterns—lines, boxes, labels, and alignment—to accurately identify and extract *tables, text blocks, images, headers, footers, and form fields*. Each extracted element includes per‑field confidence scores, enabling precise validation, seamless export, and smooth integration into applications.

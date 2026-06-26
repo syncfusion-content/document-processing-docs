@@ -38,30 +38,24 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC controls are ava
 
 ## Add namespace
 
-Add **Syncfusion.EJ2** namespace reference in `~/Views/Web.config` file, as shown in the following example.
+Add **Syncfusion.EJ2** namespace reference to the **\<namespaces\>** section in the `~/Views/Web.config` file.
 
 ```
-...
-<namespaces>
-    ...
-    <add namespace="Syncfusion.EJ2"/>
-</namespaces>
+<add namespace="Syncfusion.EJ2"/>
 ```
 
 ## Add stylesheet and script resources
 
-Add the stylesheet and script references to the `<head>` section of `~/Views/Shared/_Layout.cshtml` file, as shown in the following example.
+Add the stylesheet and script references at the end of the **\<head\>** section in the `~/Views/Shared/_Layout.cshtml` file, as shown in the following example.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/_Layout.cshtml" %}
 
-<head>
-    ...
-    <!-- Syncfusion ASP.NET MVC controls styles -->
-    <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/fluent.css" />
-    <!-- Syncfusion ASP.NET MVC controls scripts -->
-    <script src="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/dist/ej2.min.js"></script>
-</head>
+<!-- Syncfusion ASP.NET MVC controls styles -->
+<link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}fluent.css" />
+
+<!-- Syncfusion ASP.NET MVC controls scripts -->
+<script src="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/dist/ej2.min.js"><script>
 
 {% endhighlight %}
 {% endtabs %}
@@ -70,16 +64,13 @@ N> To learn other ways to load themes or scripts (such as NPM packages or [CRG](
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> script manager
 
-Register the script manager `EJS().ScriptManager()` at the end of the `<body>` element in the `~/Views/Shared/_Layout.cshtml` file, as shown in the following example.
+Register the script manager `EJS().ScriptManager()` at the end of the **\<body\>** section in the `~/Views/Shared/_Layout.cshtml` file, as shown in the following example.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/_Layout.cshtml" %}
 
-<body>
-...
-    <!-- Syncfusion ASP.NET MVC Script Manager -->
-    @Html.EJS().ScriptManager()
-</body>
+<!-- Syncfusion ASP.NET MVC Script Manager -->
+@Html.EJS().ScriptManager()
 
 {% endhighlight %}
 {% endtabs %}

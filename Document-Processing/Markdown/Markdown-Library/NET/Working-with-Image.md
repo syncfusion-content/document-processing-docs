@@ -10,6 +10,12 @@ documentation: UG
 
 Images are essential elements of Markdown documents that enhance visual communication and documentation. The Syncfusion<sup>&reg;</sup> Markdown library facilitates adding, modifying, and managing images in a Markdown document. Images in Markdown are represented by the `MdPicture` class, which is an inline element that can be added to a `MdParagraph`. The library supports both URL-based and byte array-based images, allowing you to reference external image files or embed images directly into the document.
 
+When saving a Markdown document using the `Save(fileName)` overloads, the library creates a new folder parallel to the output file name and exports all the images into it as default. 
+
+When using the `Save(Stream)` overloads, the library preserves the images as base64 format in the output Markdown file as default. 
+
+If the image contains both a URL and stream values, or contains only a URL, the URL will be used in the output document.
+
 ## Adding image from URL
 
 An image can be added to a paragraph in a Markdown document by creating an instance of the `MdPicture` class and adding it to the paragraph's inline collection.
@@ -58,59 +64,9 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+## Adding image from file path
 
-## Adding image from relative path
-
-Images can also be add images using relative file paths, which is useful for organizing documentation with local image resources. The following code example demonstrates how to add an image from a relative path.
-
-{% tabs %}
-
-{% highlight c# tabtitle="C#" %}
-
-// Creates a new MarkdownDocument instance
-MarkdownDocument markdownDocument = new MarkdownDocument();
-// Adds a new paragraph to the document
-MdParagraph paragraph = markdownDocument.AddParagraph();
-// Creates a new picture instance
-MdPicture image = new MdPicture();
-// Adds the image to the paragraph
-paragraph.Inlines.Add(image);
-// Sets the relative path to the image
-image.Url = "./Data/Adventure Cycle.png";
-// Saves the Markdown document to the file system
-markdownDocument.Save("Output.md");
-// Disposes the document
-markdownDocument.Dispose();
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET" %}
-
- ' Creates a new MarkdownDocument instance
- Dim markdownDocument As New MarkdownDocument()
- ' Adds a new paragraph to the document
- Dim paragraph As MdParagraph = markdownDocument.AddParagraph()
- ' Creates a new picture instance
- Dim image As New MdPicture()
- ' Adds the image to the paragraph
- paragraph.Inlines.Add(image)
- ' Sets the relative path to the image
- image.Url = "./Data/Adventure Cycle.png"
- ' Saves the Markdown document to the file system
- markdownDocument.Save("Output.md")
- ' Disposes the document
- markdownDocument.Dispose()
-
-{% endhighlight %}
-
-{% endtabs %}
-
-A complete working sample is available on GitHub.
-
-## Adding image from local file path
-
-The Syncfusion Markdown library supports adding images from absolute local file paths. The following code example demonstrates how to add an image from a local file path.
+The Syncfusion Markdown library supports adding images from file paths. The following code example demonstrates how to add an image from a file path.
 
 {% tabs %}
 
@@ -153,8 +109,6 @@ markdownDocument.Dispose()
 {% endhighlight %}
 
 {% endtabs %}
-
-A complete working sample is available on GitHub.
 
 ## Adding image from image bytes
 
@@ -208,7 +162,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ## Replacing images
 
@@ -279,7 +233,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ## Removing images
 
@@ -344,7 +298,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 
 ## Working with alternative text
@@ -399,7 +353,7 @@ markdownDocument.Dispose();
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 
 

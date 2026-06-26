@@ -1,6 +1,6 @@
 ---
 title: Add and edit images in PowerPoint slides|C# PowerPoint| Syncfusion
-description: Learn how to add, edit, and remove the images in C# using Syncfusion .NET PowerPoint library without Microsoft PowerPoint or interop dependencies.
+description: Learn how to add, edit, and remove the images in C# using .NET PowerPoint library without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: Presentation
 documentation: UG
@@ -301,7 +301,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Crop Image
 
-Crop the images in an existing presentation or insert the cropped picture while creating a presentation from scratch by applying crop properties using the .NET PowerPoint Library.
+Crop the images in an existing presentation or insert the cropped picture while creating a presentation from scratch by applying crop properties using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library).
 
 The following code example demonstrates how to crop an image in a PowerPoint slide.
 
@@ -465,7 +465,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to add and format images in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/image#/tailwind).
+* Explore how to add and format images in a PowerPoint presentation using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/image#/tailwind).
 
 ## See Also
 * [How to crop an image in a Presentation using C#?](https://support.syncfusion.com/kb/article/15431/how-to-crop-an-image-in-a-presentation-using-c)

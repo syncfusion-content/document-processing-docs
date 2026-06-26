@@ -39,11 +39,13 @@ There are two ways to install the dependency packages to Azure server,
 
 * From the terminal window, you can install the dependency packages. Use the following single command to install all dependencies packages.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight dockerfile %}
 
 apt-get update && apt-get install -yq --no-install-recommends  libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 libnss3 libgbm1
 
 {% endhighlight %}
+{% endtabs %}
 
 **Running the commands from C#**
 
@@ -55,7 +57,8 @@ apt-get update && apt-get install -yq --no-install-recommends  libasound2 libatk
 
 Step 4: Add an Export to the PDF button in the index.cshtml.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight CSHTML %}
 
 <div class="btn">
     @{ Html.BeginForm("ExportToPDF", "Home", FormMethod.Post);
@@ -66,9 +69,11 @@ Step 4: Add an Export to the PDF button in the index.cshtml.
 </div>
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: Include the following namespaces.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.HtmlConverter;
@@ -76,9 +81,11 @@ using Syncfusion.Pdf;
 using System.IO;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: Add the code samples in the controller to convert HTML to PDF document using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class. The Blink command line arguments based on the given [CommandLineArguments](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_CommandLineArguments) property of [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class. .
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public ActionResult ExportToPDF()
@@ -128,6 +135,7 @@ private void InstallDependecies(string shellFilePath)
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 **Steps to publish as Azure App Linux**
 
@@ -169,7 +177,8 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 
 Step 4: Include the following commands in the docker file to install the dependent packages in the docker container.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight dockerfile %}
 
 RUN apt-get update && \
 apt-get install -yq --no-install-recommends \ 
@@ -180,12 +189,14 @@ libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss
 libnss3 libgbm1
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Convert HTMLToPDF Azure Docker Step4](htmlconversion_images/DockerStep4.png) 
 
 Step 5: Add a new button in the Index.cshtml file.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight CSHTML %}
 
 <div class="btn">
     @{ Html.BeginForm("ExportToPDF", "Home", FormMethod.Post);
@@ -196,11 +207,13 @@ Step 5: Add a new button in the Index.cshtml file.
  </div>
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Convert HTMLToPDF Azure Docker Step5](htmlconversion_images/DockerStep5.png)   
 
 Step 6: Include the following namespaces.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.HtmlConverter;
@@ -208,9 +221,11 @@ using Syncfusion.Pdf;
 using System.IO;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 7: Add the code samples in the controller to convert HTML to PDF document using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class. The Blink command line arguments based on the given [CommandLineArguments](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_CommandLineArguments) property of [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class.   
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public ActionResult ExportToPDF()
@@ -232,6 +247,7 @@ public ActionResult ExportToPDF()
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 8: Build and run the sample in docker, it will pull the Linux docker image from the docker hub and run the project. Now, the webpage will open in the browser and click the button to convert the Syncfusion<sup>&reg;</sup> webpage to a PDF.
 ![Convert HTMLToPDF Azure Docker Step6](htmlconversion_images/AzureDocker9.png) 
@@ -277,6 +293,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 
 Step 4: Include the following namespaces in Function1.cs file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.HtmlConverter;
@@ -284,97 +301,103 @@ using Syncfusion.Pdf;
 using System.Runtime.InteropServices;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: Add the following code example in the Function1 class to convert HTML to PDF document using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class. The Blink command line arguments based on the given [CommandLineArguments](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_CommandLineArguments) property of [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class. 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-    [FunctionName("Function1")]
-    public static async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req, ILogger log, ExecutionContext executionContext)
+[FunctionName("Function1")]
+public static async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req, ILogger log, ExecutionContext executionContext)
+{
+    string blinkBinariesPath = string.Empty;
+    try
     {
-        string blinkBinariesPath = string.Empty;
-        try
-        {
-            blinkBinariesPath = SetupBlinkBinaries(executionContext);
-        }
-        catch
-        {
-            throw new Exception("BlinkBinaries initialization failed");
-        }
-        string url = req.Query["url"];
-        //Initialize the HTML to PDF converter with the Blink rendering engine.
-        HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter(HtmlRenderingEngine.Blink);
-        BlinkConverterSettings settings = new BlinkConverterSettings();
-        //Set command line arguments to run without sandbox.
-        settings.CommandLineArguments.Add("--no-sandbox");
-        settings.CommandLineArguments.Add("--disable-setuid-sandbox");
-        settings.BlinkPath = blinkBinariesPath;
-        //Assign BlinkConverter settings to the HTML converter 
-        htmlConverter.ConverterSettings = settings;
-        //Convert URL to PDF
-        PdfDocument document = htmlConverter.Convert(url);
-        MemoryStream ms = new MemoryStream();
-        //Save and close the PDF document  
-        document.Save(ms);
-        document.Close();
-        ms.Position = 0;
-        return new FileStreamResult(ms, "application/pdf");
+        blinkBinariesPath = SetupBlinkBinaries(executionContext);
     }
+    catch
+    {
+        throw new Exception("BlinkBinaries initialization failed");
+    }
+    string url = req.Query["url"];
+    //Initialize the HTML to PDF converter with the Blink rendering engine.
+    HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter(HtmlRenderingEngine.Blink);
+    BlinkConverterSettings settings = new BlinkConverterSettings();
+    //Set command line arguments to run without sandbox.
+    settings.CommandLineArguments.Add("--no-sandbox");
+    settings.CommandLineArguments.Add("--disable-setuid-sandbox");
+    settings.BlinkPath = blinkBinariesPath;
+    //Assign BlinkConverter settings to the HTML converter 
+    htmlConverter.ConverterSettings = settings;
+    //Convert URL to PDF
+    PdfDocument document = htmlConverter.Convert(url);
+    MemoryStream ms = new MemoryStream();
+    //Save and close the PDF document  
+    document.Save(ms);
+    document.Close();
+    ms.Position = 0;
+    return new FileStreamResult(ms, "application/pdf");
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: Add the following helper methods to copy and set permission to the BlinkBinariesLinux folder.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-    private static string SetupBlinkBinaries(ExecutionContext executionContext)
+private static string SetupBlinkBinaries(ExecutionContext executionContext)
+{
+    string blinkAppDir = Path.Combine(executionContext.FunctionAppDirectory, "BlinkBinariesLinux");
+    string tempBlinkDir = Path.GetTempPath();
+    string chromePath = Path.Combine(tempBlinkDir, "chrome");
+    if (!File.Exists(chromePath))
     {
-        string blinkAppDir = Path.Combine(executionContext.FunctionAppDirectory, "BlinkBinariesLinux");
-        string tempBlinkDir = Path.GetTempPath();
-        string chromePath = Path.Combine(tempBlinkDir, "chrome");
-        if (!File.Exists(chromePath))
-        {
-            CopyFilesRecursively(blinkAppDir, tempBlinkDir);
-            SetExecutablePermission(tempBlinkDir);
-        }
-        return tempBlinkDir;
+        CopyFilesRecursively(blinkAppDir, tempBlinkDir);
+        SetExecutablePermission(tempBlinkDir);
     }
-    private static void CopyFilesRecursively(string sourcePath, string targetPath)
+    return tempBlinkDir;
+}
+private static void CopyFilesRecursively(string sourcePath, string targetPath)
+{
+    //Create all the directories from the source to the destination path.
+    foreach (string dirPath in Directory.GetDirectories(sourcePath, "*", SearchOption.AllDirectories))
     {
-        //Create all the directories from the source to the destination path.
-        foreach (string dirPath in Directory.GetDirectories(sourcePath, "*", SearchOption.AllDirectories))
-        {
-            Directory.CreateDirectory(dirPath.Replace(sourcePath, targetPath));
-        }
-        //Copy all the files from the source path to the destination path.
-        foreach (string newPath in Directory.GetFiles(sourcePath, "*.*", SearchOption.AllDirectories))
-        {
-            File.Copy(newPath, newPath.Replace(sourcePath, targetPath), true);
-        }
+        Directory.CreateDirectory(dirPath.Replace(sourcePath, targetPath));
     }
-    [DllImport("libc", SetLastError = true, EntryPoint = "chmod")]
-    internal static extern int Chmod(string path, FileAccessPermissions mode);
-    private static void SetExecutablePermission(string tempBlinkDir)
+    //Copy all the files from the source path to the destination path.
+    foreach (string newPath in Directory.GetFiles(sourcePath, "*.*", SearchOption.AllDirectories))
     {
-        FileAccessPermissions ExecutableFilePermissions = FileAccessPermissions.UserRead | FileAccessPermissions.UserWrite | FileAccessPermissions.UserExecute |
-        FileAccessPermissions.GroupRead | FileAccessPermissions.GroupExecute | FileAccessPermissions.OtherRead | FileAccessPermissions.OtherExecute;
-        string[] executableFiles = new string[] { "chrome", "chrome_sandbox" };
-        foreach (string executable in executableFiles)
+        File.Copy(newPath, newPath.Replace(sourcePath, targetPath), true);
+    }
+}
+[DllImport("libc", SetLastError = true, EntryPoint = "chmod")]
+internal static extern int Chmod(string path, FileAccessPermissions mode);
+private static void SetExecutablePermission(string tempBlinkDir)
+{
+    FileAccessPermissions ExecutableFilePermissions = FileAccessPermissions.UserRead | FileAccessPermissions.UserWrite | FileAccessPermissions.UserExecute |
+    FileAccessPermissions.GroupRead | FileAccessPermissions.GroupExecute | FileAccessPermissions.OtherRead | FileAccessPermissions.OtherExecute;
+    string[] executableFiles = new string[] { "chrome", "chrome_sandbox" };
+    foreach (string executable in executableFiles)
+    {
+        var execPath = Path.Combine(tempBlinkDir, executable);
+        if (File.Exists(execPath))
         {
-            var execPath = Path.Combine(tempBlinkDir, executable);
-            if (File.Exists(execPath))
+            var code = Function1.Chmod(execPath, ExecutableFilePermissions);
+            if (code != 0)
             {
-                var code = Function1.Chmod(execPath, ExecutableFilePermissions);
-                if (code != 0)
-                {
-                    throw new Exception("Chmod operation failed");
-                }
+                throw new Exception("Chmod operation failed");
             }
         }
     }
+}
 {% endhighlight %}
+{% endtabs %}
 
 Step 7: Include the below enum in the Function1.cs file. 
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 [Flags]
@@ -392,6 +415,7 @@ internal enum FileAccessPermissions : uint
 }       
 
 {% endhighlight %}
+{% endtabs %}
 
 **Publish to Azure Functions Linux**
 

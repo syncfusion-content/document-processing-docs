@@ -68,6 +68,10 @@ Document editor restarts the numbering or continue numbering for a numbered list
 
 ![Image](images/list.JPG)
 
+## Online Demo
+
+Explore how to apply bullets and numbering in Word documents using the ASP.NET Core Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/bulletsandnumbering#/tailwind3).
+
 ## See Also
 
 * [List dialog](../asp-net-core/dialog#list-dialog)

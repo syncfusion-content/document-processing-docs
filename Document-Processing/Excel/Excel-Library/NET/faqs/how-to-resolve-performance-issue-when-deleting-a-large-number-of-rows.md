@@ -1,6 +1,6 @@
 ---
 title: Resolve performance issue while deleting |Syncfusion.
-description: This page explains how to resolve performance issue when deleting a large number of rows using Syncfusion .NET Excel library (XlsIO).
+description: This page explains how to resolve performance issue when deleting a large number of rows using .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

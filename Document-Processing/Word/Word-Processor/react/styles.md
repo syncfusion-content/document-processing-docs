@@ -272,3 +272,7 @@ let paragraphStyles = documentEditor.getStyles('Paragraph');
 //Get character styles
 let characterStyles = documentEditor.getStyles('Character');
 ```
+
+## Online Demo
+
+Explore how to apply and modify styles in Word documents using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/styles).

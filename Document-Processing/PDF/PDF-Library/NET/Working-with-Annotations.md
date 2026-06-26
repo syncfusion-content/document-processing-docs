@@ -3005,27 +3005,27 @@ using Syncfusion.Pdf.Parsing;
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 foreach (PdfAnnotation annot in loadedDocument.Pages[0].Annotations)
 {
-//Check for the Redaction annotation
-if (annot is PdfLoadedRedactionAnnotation)
-{
-PdfLoadedRedactionAnnotation redactAnnot = annot as PdfLoadedRedactionAnnotation;
-//Assign the Bounds values
-redactAnnot.Bounds = new RectangleF(50, 50, 100, 100);
-//Assign the OverlayText
-redactAnnot.OverlayText = "Redaction";
-//Assign the InnerColor
-redactAnnot.InnerColor = Color.Yellow;
-//Assign the BorderColor
-redactAnnot.BorderColor = Color.Green;
-//Assign the TextColor
-redactAnnot.TextColor = Color.Red; 
-//Assign the TextAlignment
-redactAnnot.TextAlignment = PdfTextAlignment.Right;
-//Assign the RepeatText
-redactAnnot.RepeatText = true;
-//Flatten the annotations in the page
-redactAnnot.Flatten = true;
-}
+    //Check for the Redaction annotation
+    if (annot is PdfLoadedRedactionAnnotation)
+    {
+        PdfLoadedRedactionAnnotation redactAnnot = annot as PdfLoadedRedactionAnnotation;
+        //Assign the Bounds values
+        redactAnnot.Bounds = new RectangleF(50, 50, 100, 100);
+        //Assign the OverlayText
+        redactAnnot.OverlayText = "Redaction";
+        //Assign the InnerColor
+        redactAnnot.InnerColor = Color.Yellow;
+        //Assign the BorderColor
+        redactAnnot.BorderColor = Color.Green;
+        //Assign the TextColor
+        redactAnnot.TextColor = Color.Red; 
+        //Assign the TextAlignment
+        redactAnnot.TextAlignment = PdfTextAlignment.Right;
+        //Assign the RepeatText
+        redactAnnot.RepeatText = true;
+        //Flatten the annotations in the page
+        redactAnnot.Flatten = true;
+    }
 }
 loadedDocument.Redact();
 
@@ -3049,27 +3049,27 @@ PdfLoadedDocument ldoc = new PdfLoadedDocument("input.pdf");
 //Get the pages
 foreach (PdfAnnotation annot in ldoc.Pages[0].Annotations)
 {
-//Check for the Redaction annotation
-if (annot is PdfLoadedRedactionAnnotation)
-{
-PdfLoadedRedactionAnnotation redactAnnot = annot as PdfLoadedRedactionAnnotation;
-//Assign the Bounds values
-redactAnnot.Bounds = new RectangleF(50, 50, 100, 100);
-//Assign the OverlayText
-redactAnnot.OverlayText = "Redaction";
-//Assign the InnerColor
-redactAnnot.InnerColor = Color.Yellow;
-//Assign the BorderColor
-redactAnnot.BorderColor = Color.Green;
-//Assign the TextColor
-redactAnnot.TextColor = Color.Red;
-//Assign the TextAlignment
-redactAnnot.TextAlignment = PdfTextAlignment.Right;
-//Assign the RepeatText
-redactAnnot.RepeatText = true;
-//Flatten the annotations in the page
-redactAnnot.Flatten = true;  
-}
+    //Check for the Redaction annotation
+    if (annot is PdfLoadedRedactionAnnotation)
+    {
+        PdfLoadedRedactionAnnotation redactAnnot = annot as PdfLoadedRedactionAnnotation;
+        //Assign the Bounds values
+        redactAnnot.Bounds = new RectangleF(50, 50, 100, 100);
+        //Assign the OverlayText
+        redactAnnot.OverlayText = "Redaction";
+        //Assign the InnerColor
+        redactAnnot.InnerColor = Color.Yellow;
+        //Assign the BorderColor
+        redactAnnot.BorderColor = Color.Green;
+        //Assign the TextColor
+        redactAnnot.TextColor = Color.Red;
+        //Assign the TextAlignment
+        redactAnnot.TextAlignment = PdfTextAlignment.Right;
+        //Assign the RepeatText
+        redactAnnot.RepeatText = true;
+        //Flatten the annotations in the page
+        redactAnnot.Flatten = true;  
+    }
 }
 //save the document
 ldoc.Save("output.pdf");
@@ -3090,26 +3090,26 @@ Imports Syncfusion.Pdf.Parsing
 Dim ldoc As PdfLoadedDocument = New PdfLoadedDocument("output.pdf")	
 'Get the pages
 For Each annot As PdfAnnotation In ldoc.Pages(0).Annotations
-'Check for the Redaction annotation	
-If TypeOf annot Is PdfLoadedRedactionAnnotation Then	
-Dim redactAnnot As PdfLoadedRedactionAnnotation = TryCast(annot, PdfLoadedRedactionAnnotation)	
-'Assign the Bounds values			
-redactAnnot.Bounds = New RectangleF(50, 50, 100, 100)			
-'Assign the OverlayText				
-redactAnnot.OverlayText = "Redaction"		
-'Assign the InnerColor			
-redactAnnot.InnerColor = Color.Yellow			
-'Assign the BorderColor 			
-redactAnnot.BorderColor = Color.Green				
-'Assign the TextColor			
-redactAnnot.TextColor = Color.Red		
-'Assign the TextAlignment	
-redactAnnot.TextAlignment = PdfTextAlignment.Right		
-'Assign the RepeatText		
-redactAnnot.RepeatText = True			
-'Flatten the annotations in the page			
-redactAnnot.Flatten = True			
-End If		
+    'Check for the Redaction annotation	
+    If TypeOf annot Is PdfLoadedRedactionAnnotation Then	
+        Dim redactAnnot As PdfLoadedRedactionAnnotation = TryCast(annot, PdfLoadedRedactionAnnotation)	
+        'Assign the Bounds values			
+        redactAnnot.Bounds = New RectangleF(50, 50, 100, 100)			
+        'Assign the OverlayText				
+        redactAnnot.OverlayText = "Redaction"		
+        'Assign the InnerColor			
+        redactAnnot.InnerColor = Color.Yellow			
+        'Assign the BorderColor 			
+        redactAnnot.BorderColor = Color.Green				
+        'Assign the TextColor			
+        redactAnnot.TextColor = Color.Red		
+        'Assign the TextAlignment	
+        redactAnnot.TextAlignment = PdfTextAlignment.Right		
+        'Assign the RepeatText		
+        redactAnnot.RepeatText = True			
+        'Flatten the annotations in the page			
+        redactAnnot.Flatten = True			
+    End If		
 Next
 		
 'save the document
@@ -3627,16 +3627,16 @@ PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
 //Get all the pages
 foreach (PdfLoadedPage loadedPage in loadedDocument.Pages)
 {
-//Flatten all the annotations in the page
-foreach (PdfLoadedAnnotation annotation in loadedPage.Annotations)
-{
-//Check for the circle annotation
-if (annotation is PdfLoadedCircleAnnotation)
-{
-//Flatten the circle annotation
-annotation.Flatten = true;
-}
-}
+    //Flatten all the annotations in the page
+    foreach (PdfLoadedAnnotation annotation in loadedPage.Annotations)
+    {
+        //Check for the circle annotation
+        if (annotation is PdfLoadedCircleAnnotation)
+        {
+            //Flatten the circle annotation
+            annotation.Flatten = true;
+        }
+    }
 }
 //Save and close the PDF document instance
 loadedDocument.Save("Output.pdf");
@@ -4003,7 +4003,7 @@ using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"))
     // Specify the annotation types to flatten
     PdfLoadedAnnotationType[] pdfLoadedAnnotationTypes = new PdfLoadedAnnotationType[]
     {
-                PdfLoadedAnnotationType.PolygonAnnotation
+        PdfLoadedAnnotationType.PolygonAnnotation
     };
 
     // Flatten the selected annotations
@@ -4026,7 +4026,7 @@ using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"))
     // Specify the annotation types to flatten
     PdfLoadedAnnotationType[] pdfLoadedAnnotationTypes = new PdfLoadedAnnotationType[]
     {
-                PdfLoadedAnnotationType.PolygonAnnotation
+        PdfLoadedAnnotationType.PolygonAnnotation
     };
 
     // Flatten the selected annotations
@@ -7165,4 +7165,3 @@ lDoc.Close(True)
 </tr>
 
 </table>
-

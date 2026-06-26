@@ -1,12 +1,12 @@
 ---
-title: Assemblies Required for PowerPoint to Image conversion  | Syncfusion
-description: Learn about the assemblies required to convert PowerPoint to Image using the .NET PowerPoint (Presentation) library.
+title: Assemblies Required for PPTX to Image Conversion | Syncfusion
+description: This section explains about how to assemblies required to convert powerpoint presentation to Image for various platforms and frameworks.
 platform: document-processing
 control: Presentation
 documentation: UG
 keywords: Assemblies
 ---
-# Assemblies Required for PowerPoint to Image conversion
+# Assemblies Required for PowerPoint to Image Conversion
 
 ## Converting PowerPoint Presentation to Image
 
@@ -35,7 +35,7 @@ Syncfusion.SfChart.WPF<br/>
 </tr>
 <tr>
 <td>
-{{'[ASP.NET Core](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-asp-net-core)' | markdownify}} and {{'[Blazor](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-blazor)' | markdownify}}<br/></td><td>
+{{'[ASP.NET Core](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-asp-net-core)' | markdownify}}, {{'[Xamarin](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-xamarin)' | markdownify}} and {{'[Blazor](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-blazor)' | markdownify}}<br/></td><td>
 Syncfusion.Presentation.Portable<br/>
 Syncfusion.Compression.Portable<br/>
 Syncfusion.OfficeChart.Portable<br/>
@@ -65,7 +65,7 @@ Syncfusion.SfChart.UWP<br/>
 </tr>
 </table>
 
-T> 1. If you encounter issues while using the .NET PowerPoint library in ASP.NET Core, refer to the [troubleshooting guide](https://support.syncfusion.com/kb/article/16010/how-to-use-troubleshooting-guide-for-aspnet-core-powerpoint-library-issues) for recommended checks and solutions.
+T> 1. If you encounter issues while using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) in ASP.NET Core, refer to the [troubleshooting guide](https://support.syncfusion.com/kb/article/16010/how-to-use-troubleshooting-guide-for-aspnet-core-powerpoint-library-issues) for recommended checks and solutions.
 T> 2. Switch to NuGet packages for a seamless experience:
 T>    * Get frequent bug fixes every week.
 T>    * Upgrade quickly with no manual effort.
@@ -93,18 +93,6 @@ Syncfusion.Pdf.Base<br/>
 Syncfusion.PresentationToPDFConverter.Base<br/>
 Syncfusion.OfficeChartToImageConverter.WPF<br/>
 Syncfusion.SfChart.WPF<br/></td></tr>
-<tr>
-<td>
-{{'[Xamarin](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-xamarin)' | markdownify}}<br/></td><td>
-Syncfusion.Presentation.Portable<br/>
-Syncfusion.Compression.Portable<br/>
-Syncfusion.OfficeChart.Portable<br/>
-Syncfusion.Pdf.Portable<br/>
-Syncfusion.Pdf.Imaging.Portable<br/>
-Syncfusion.PresentationRenderer.Portable<br/>
-Syncfusion.MetafileRenderer.Portable<br/>
-Syncfusion.SkiaSharpHelper.Portable<br/>
-SkiaSharp<br/></td></tr>
 </table>
 
 N> 1. Starting with the v24.1.x, if you reference "Syncfusion.PresentationRenderer", you have to add the "Syncfusion.Pdf.Imaging" assembly reference in your projects to perform PowerPoint Presentation to Image conversion.

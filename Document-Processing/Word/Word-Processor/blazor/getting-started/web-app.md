@@ -40,8 +40,8 @@ Alternatively, you can utilize the following package manager command to achieve 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
 
-Install-Package Syncfusion.Blazor.WordProcessor -Version {{ site.releaseversion }}
-Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.WordProcessor
+Install-Package Syncfusion.Blazor.Themes
 
 {% endhighlight %}
 {% endtabs %}
@@ -88,8 +88,8 @@ If you utilize `WebAssembly` or `Auto` render modes in the Blazor Web App need t
 
 {% highlight c# tabtitle="Package Manager" %}
 
-dotnet add package Syncfusion.Blazor.WordProcessor -v {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.WordProcessor
+dotnet add package Syncfusion.Blazor.Themes
 dotnet restore
 
 {% endhighlight %}
@@ -126,13 +126,14 @@ Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
 
-....
-using Syncfusion.Blazor;
-....
+// Other code Snippet
 
+using Syncfusion.Blazor;
+
+// Register Syncfusion Blazor services along with other service registrations
 builder.Services.AddSyncfusionBlazor();
 
-....
+// Other code Snippet
 
 {% endhighlight %}
 {% endtabs %}
@@ -141,20 +142,26 @@ N> If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, registe
 
 ### Add Themes and Script References
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/Components/App.razor** file as shown below:
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). 
+
+Include the stylesheet reference in the `<head>` section of the **~/Components/App.razor** file as shown below:
 
 {% tabs %}
 {% highlight razor tabtitle="~/App.razor" %}
 
-<head>
-    ....
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-</head>
-....
-<body>
-    ....
-    <script src="_content/Syncfusion.Blazor.WordProcessor/scripts/syncfusion-blazor-documenteditor.min.js" type="text/javascript"></script>
-</body>
+<!-- Add Syncfusion theme -->
+<link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+
+{% endhighlight %}
+{% endtabs %}
+
+Include the script reference at the end of the `<body>` section in the **~/Components/App.razor**  file.
+
+{% tabs %}
+{% highlight razor tabtitle="~/App.razor" %}
+
+<!-- Add the DOCX Editor script -->
+<script src="_content/Syncfusion.Blazor.WordProcessor/scripts/syncfusion-blazor-documenteditor.min.js" type="text/javascript"></script>
 
 {% endhighlight %}
 {% endtabs %}
@@ -196,12 +203,12 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DocumentEditor).
 
+## Online Demo
+
+Explore how to create, edit, and print Word documents using the Blazor Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities).
+
 ## See also
 
 - [Getting started in Blazor WASM app](https://help.syncfusion.com/document-processing/word/word-processor/blazor/getting-started/client-side-application)
 - [Open a document](https://help.syncfusion.com/document-processing/word/word-processor/blazor/opening-a-document)
 - [Save a document](https://help.syncfusion.com/document-processing/word/word-processor/blazor/saving-document)
-
-
-
-
