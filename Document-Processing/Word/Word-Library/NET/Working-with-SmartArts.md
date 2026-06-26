@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Working with SmartArt
 
-A SmartArt diagram is a visual representation of information that helps effectively communicate ideas in documents. You can add and modify SmartArt diagrams in Word documents using the Syncfusion<sup>&reg;</sup> Word library (DocIO).
+A SmartArt diagram is a visual representation of information that helps effectively communicate ideas in documents. You can add and modify SmartArt diagrams in Word documents using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO).
 
 ## Create SmartArt 
 

@@ -1,6 +1,6 @@
 ---
 title: Chart axis auto-adjust in XlsIO | Syncfusion
-description: This page explains whether Syncfusion XlsIO supports auto adjustment of chart axis values using Syncfusion .NET Excel library (XlsIO).
+description: This page explains whether Syncfusion XlsIO supports auto adjustment of chart axis values using .NET Excel Library.
 platform: document-processing 
 control: XlsIO 
 documentation: UG
