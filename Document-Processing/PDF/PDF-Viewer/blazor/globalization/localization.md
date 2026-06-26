@@ -221,7 +221,7 @@ Run your application and verify that:
 
 ![Localization demo showing PDF Viewer in multiple languages](../images/localization-demo.png)
 
-[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Localization)
+[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples)
 
 ## Troubleshooting
 

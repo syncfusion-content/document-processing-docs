@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Enable Right-to-Left Support in Blazor PDF Viewer Component | Syncfusion
+title:  Enable RTL Support in Blazor PDF Viewer Component | Syncfusion
 description: Learn how to enable right-to-left (RTL) layout support in Syncfusion Blazor PDF Viewer for RTL languages.
 platform: document-processing
 control: SfPdfViewer
@@ -21,11 +21,10 @@ This guide shows you how to enable Right-to-Left (RTL) layout support for your B
 
 RTL layout reverses the text direction and UI element alignment for languages read from right to left. Blazor PDF Viewer uses the `EnableRtl` property to support RTL languages including:
 
-- Arabic (ar)
-- Hebrew (he)
-- Urdu (ur)
-- Persian/Farsi (fa)
-- Uyghur (ug)
+- Arabic 
+- Hebrew 
+- Urdu
+- Persian/Farsi
 
 When RTL is enabled:
 
@@ -116,7 +115,7 @@ For the complete list of supported languages, visit the [Syncfusion Blazor Local
 
 ![RTL support demo showing Arabic PDF Viewer interface](../images/rtl-support.png)
 
-[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/RTL)
+[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples)
 
 ## RTL Property Reference
 

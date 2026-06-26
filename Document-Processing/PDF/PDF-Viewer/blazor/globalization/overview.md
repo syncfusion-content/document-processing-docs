@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Overview of Globalization and Localization in Blazor PDF Viewer Component | Syncfusion
+title: Globalization in Blazor PDF Viewer Component | Syncfusion
 description: Learn about globalization and localization in Syncfusion Blazor PDF Viewer to support multiple languages and cultures.
 platform: document-processing
 control: SfPdfViewer
@@ -54,7 +54,7 @@ Load translations from external sources (databases, APIs, or cloud services) at 
 
 - Frequently updated translations
 - A large number of supported languages
-- User-contributed or crowdsourced content
+- User-contributed or crowd sourced content
 
 ## How Blazor PDF Viewer Supports Localization
 
