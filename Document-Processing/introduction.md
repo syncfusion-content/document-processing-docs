@@ -77,26 +77,16 @@ The <a href="https://help.syncfusion.com/document-processing/excel/spreadsheet/o
 </tr>
 
 <tr>
-<td>AI Agent Tools</td>
-<td>
-Enables AI agents to autonomously execute document tasks at runtime - generate reports, convert files, and extract form data - without requiring manual processing logic. Integrate the <a href="https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools">Syncfusion.DocumentSDK.AIAgentTools</a> NuGet package to extend your agent’s document processing capabilities.
-<br><br>Learn more about <a href="https://help.syncfusion.com/document-processing/ai-agent-tools/overview">AI Agent Tools</a>.
-</td>
-</tr>
-
-<tr>
-<td>AI Coding Assistant</td>
-<td>
-Integrates with Visual Studio, VS Code, and JetBrains Rider through MCP Server. Describe your document processing requirement and receive documentation-backed, production-ready C# code instantly.
-<br><br>Learn more about <a href="https://help.syncfusion.com/document-processing/mcp-server/ai-coding-assistant/overview">AI Coding Assistant</a>.
-</td>
-</tr>
-
-<tr>
 <td>Agent Skills</td>
 <td>
 Ground your AI coding assistant (GitHub Copilot, Cursor, Claude, and others) in verified Syncfusion APIs - eliminating hallucinated methods. Install one with pre-built document and code skills and generate production-ready document code without leaving your IDE. It also allows executing document operations directly via CSX scripts.
-<br><br>Learn more about <a href="https://help.syncfusion.com/document-processing/skills/document-sdk">Agent Skills</a>.
+<br><br>Learn more about:<br><br>
+<ul>
+<li><a href="https://help.syncfusion.com/document-processing/skills/document-sdk">Document SDK Skills</a></li>
+<li><a href="https://help.syncfusion.com/document-processing/skills/pdf-viewer-sdk/component-skills">PDF Viewer SDK Skills</a></li>
+<li><a href="https://help.syncfusion.com/document-processing/skills/docx-editor-sdk/component-skills">DOCX Editor SDK Skills</a></li>
+<li><a href="https://help.syncfusion.com/document-processing/skills/spreadsheet-editor-sdk/component-skills">Spreadsheet Editor SDK Skills</a></li>
+</ul>
 </td>
 </tr>
 
@@ -104,12 +94,28 @@ Ground your AI coding assistant (GitHub Copilot, Cursor, Claude, and others) in 
 <td>Agentic UI Builder </td>
 <td>
 Transforms natural-language prompts into production-ready UIs using real Syncfusion<sup>&reg;</sup> components. Generates structured, responsive layouts with maintainable architecture by default. Integrates with AI-powered IDEs to produce accurate code while following best practices, accessibility guidelines, and enterprise UI standards. Helps developers quickly move from idea to fully functional interfaces within their workflow.
-<br><br>Learn more about: 
+<br><br>Learn more about:<br><br>
 <ul>
 <li><a href="https://help.syncfusion.com/document-processing/skills/pdf-viewer-sdk/ui-builder-skills">PDF Viewer UI Builder</a></li>
 <li><a href="https://help.syncfusion.com/document-processing/skills/docx-editor-sdk/ui-builder-skills">DOCX Editor UI Builder</a></li>
 <li><a href="https://help.syncfusion.com/document-processing/skills/spreadsheet-editor-sdk/ui-builder-skills">Spreadsheet UI Builder</a></li>
 </ul>
+</td>
+</tr>
+
+<tr>
+<td>AI Agent Tools (Document SDK)</td>
+<td>
+Enables AI agents to autonomously execute document tasks at runtime - generate reports, convert files, and extract form data - without requiring manual processing logic. Integrate the <a href="https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools">Syncfusion.DocumentSDK.AIAgentTools</a> NuGet package to extend your agent’s document processing capabilities.
+<br><br>Learn more about <a href="https://help.syncfusion.com/document-processing/ai-agent-tools/overview">AI Agent Tools</a>.
+</td>
+</tr>
+
+<tr>
+<td>AI Coding Assistant (MCP Server)</td>
+<td>
+Integrates with Visual Studio, VS Code, and JetBrains Rider through MCP Server. Describe your document processing requirement and receive documentation-backed, production-ready C# code instantly.
+<br><br>Learn more about <a href="https://help.syncfusion.com/document-processing/mcp-server/ai-coding-assistant/overview">AI Coding Assistant</a>.
 </td>
 </tr>
 
