@@ -1,6 +1,6 @@
 ---
 title: Worksheet Cells Manipulation in .NET XlsIO | Syncfusion
-description: This section illustrates about cells manipulation in Excel worksheet using Syncfusion .NET Excel library.
+description: In this section, you can learn about cell manipulation in an Excel worksheet using the .NET Excel Library with clear explanations and practical examples.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -223,7 +223,7 @@ A complete working example to access relative range in an Excel worksheet in C# 
 
 ### Accessing Discontinuous Ranges
 
-It is possible to modify the contents or apply formatting to discontinuous range by accessing and adding them to the [RangesCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.Collections.RangesCollection.html).
+It is possible to modify the contents or apply formatting to discontinuous range by accessing and adding them to the [RangesCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRanges.html).
 
 The following code example illustrates how to access discontinuous range.
 

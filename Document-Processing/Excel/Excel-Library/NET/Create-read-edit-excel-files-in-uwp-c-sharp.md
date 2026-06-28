@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Create, read, and edit Excel files in UWP
 
-[Syncfusion Excel library for UWP platform](https://www.syncfusion.com/document-processing/excel-framework/uwp/excel-library) can be used to create, read, edit Excel files. This also convert Excel files to PDF.
+[.NET Excel Library for UWP platform](https://www.syncfusion.com/document-processing/excel-framework/uwp/excel-library) can be used to create, read, edit Excel files. This also convert Excel files to PDF.
 
 ## Create a simple Excel report
 
@@ -569,3 +569,4 @@ A complete working example of how to read and edit an Excel file in UWP in C# is
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/uwp) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
 An online sample link to [create an Excel document](https://ej2.syncfusion.com/aspnetcore/Excel/Create#/material3) in ASP.NET Core.
+

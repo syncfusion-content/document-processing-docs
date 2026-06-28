@@ -187,7 +187,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Get field code
 
-You can get the field code of a specific field using its [FieldCode](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WField.html#Syncfusion_DocIO_DLS_WField_FieldCode) property.
+You can get the field code of a specific field using its [FieldCode](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WField.html#Syncfusion_DocIO_DLS_WField_FieldCode) property.
 
 The following code example explains how to get the field code of a specific field in a Word document.
 
@@ -1818,7 +1818,7 @@ N>  For more information about the fields supported by Essential<sup>&reg;</sup>
 
 ## Online Demo
 
-* Explore how to update fields in a Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/updatefields#/tailwind).
+* Explore how to update fields in a Word document using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/updatefields#/tailwind).
 
 ## See Also
 

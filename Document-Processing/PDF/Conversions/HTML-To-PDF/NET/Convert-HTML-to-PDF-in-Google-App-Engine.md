@@ -21,7 +21,7 @@ Step 2: Click the **Cloud Shell Editor** button to view the **Workspace**.
 
 Step 3: Open **Cloud Shell Terminal**, and run the following **command** to confirm authentication.
 {% tabs %}
-{% highlight c# tabtitle="CLI" %}
+{% highlight bash %}
 
 gcloud auth list
 
@@ -43,7 +43,7 @@ Step 2: Install the [Syncfusion.HtmlToPdfConverter.Net.Linux](https://www.nuget.
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you also have to add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 5: Include the following namespaces in the **HomeController.cs** file.
+Step 3: Include the following namespaces in the **HomeController.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -55,12 +55,12 @@ using System.IO;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: A default action method named Index will be present in HomeController.cs. Right click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
+Step 4: A default action method named Index will be present in HomeController.cs. Right click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
 
-Step 7: Add a new button in the Index.cshtml as shown in the following.
+Step 5: Add a new button in the Index.cshtml as shown in the following.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight CSHTML %}
 
 @{Html.BeginForm("CreateDocument", "Home", FormMethod.Get);
     {
@@ -108,7 +108,7 @@ N> If you have your sample application in your local machine, drag and drop it i
 Step 3: Open the Cloud Shell Terminal and run the following **command** to view the files and directories within your **current Workspace**.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
 ls
 
@@ -120,7 +120,7 @@ This will show the list of files and folders in workspace. Navigate to which sam
 Step 4: Run the following **command** to navigate which sample you want to run.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
 cd HtmlToPDFSample
 
@@ -130,7 +130,7 @@ cd HtmlToPDFSample
 Step 5: To ensure that the sample is working correctly, please run the application using the following command.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
 dotnet run --urls=http://localhost:8080
 
@@ -156,7 +156,7 @@ Step 8: Close the preview page and return to the terminal then press **Ctrl+C** 
 Step 1: Run the following command in the **Cloud Shell Terminal** to publish the application.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
 dotnet publish -c Release
 
@@ -168,7 +168,7 @@ dotnet publish -c Release
 Step 2: Run the following command in the **Cloud Shell Terminal** to navigate to the publish folder.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
 cd bin/Release/net8.0/publish/
 
@@ -182,7 +182,7 @@ cd bin/Release/net8.0/publish/
 Step 1: Add the app.yaml file to the publish folder with the following contents.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
 cat <<EOT >> app.yaml
 env: flex
@@ -198,7 +198,7 @@ EOT
 Step 2: Add the Docker file to the publish folder with the following contents.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
 cat <<EOT >> Dockerfile
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
@@ -231,7 +231,7 @@ Step 3: You can ensure **Docker** and **app.yaml** files are added in **Workspac
 Step 1: To deploy the application to the App Engine, run the following command in Cloud Shell Terminal. Afterwards, retrieve the **URL** from the Cloud Shell Terminal.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
 gcloud app deploy --version v0
 
@@ -252,8 +252,3 @@ By executing the program, you will get the **PDF document** as follows. The outp
 ![Output PDF Document](htmlconversion_images/Output.png)
 
 Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library/html-to-pdf) to explore the rich set of Syncfusion<sup>&reg;</sup> HTML to PDF converter library features.
-
-
-
-
-

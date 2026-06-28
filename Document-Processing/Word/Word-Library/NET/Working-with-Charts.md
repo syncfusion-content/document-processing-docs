@@ -471,7 +471,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Creating a Chart from a Database
 
-Create a chart in a Word document using the .NET Word Library by utilizing the values retrieved from the database.
+Create a chart in a Word document using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) by utilizing the values retrieved from the database.
 
 The following code example illustrates how to create a chart in a Word document from a database.
 
@@ -1483,8 +1483,8 @@ N>These charts are supported only in Word 2016 and are not supported in the prev
 
 ## Online Demo
 
-* Explore how to insert a bar chart into the Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/barchart#/tailwind). 
-* See how to insert a pie chart into the Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/piechart#/tailwind). 
+* Explore how to insert a bar chart into the Word document using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/barchart#/tailwind). 
+* See how to insert a pie chart into the Word document using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/piechart#/tailwind). 
 
 ## See Also
 

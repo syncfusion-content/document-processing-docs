@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Compare Syncfusion Spreadsheet and Spreadsheet (Classic) control
-canonical_url: "https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor"
 description: Learn about the differences and feature enhancements of SfSpreadsheet over the classic Spreadsheet control in Syncfusion® WPF.
 platform: document-processing
 control: SfSpreadsheet
