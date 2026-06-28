@@ -8,7 +8,7 @@ keywords: Working with presentation library in Xamarin Platform
 ---
 # Create, read and edit a PowerPoint file in Xamarin
 
-You can create or edit a PowerPoint file with the Syncfusion<sup>&reg;</sup> [Xamarin PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/xamarin/powerpoint-library). The below are the steps.
+You can create or edit a PowerPoint file with the Syncfusion<sup>&reg;</sup> [Xamarin PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library). The below are the steps.
 
 ## Create a PowerPoint file in Xamarin
 
@@ -307,6 +307,6 @@ Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView("Output.pptx", "applica
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/Xamarin/Read-and-edit-PowerPoint-presentation).
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/xamarin) to explore the rich set of the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) features. 
+Click [here](https://www.syncfusion.com/document-sdk/net-powerpoint-library) to explore the rich set of the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) features. 
 
 An online sample link to [create a PowerPoint Presentation](https://document.syncfusion.com/demos/powerpoint/default#/tailwind) in ASP.NET Core. 
