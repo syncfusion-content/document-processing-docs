@@ -3,7 +3,7 @@ layout: post
 title: Clipboard in Angular Spreadsheet component | Syncfusion
 description: Learn here all about Clipboard in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Clipboard 
+control: Clipboard
 documentation: ug
 ---
 
