@@ -22,7 +22,7 @@ N> Currently, HTML to PDF converter is mainly supported in Blazor Server-Side, w
 **Prerequisites**:
 
 * Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-* Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
+* Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download?_exp_download=d53503e735).
 
 Step 1: Create a new C# Blazor Server application project. Select Blazor App from the template and click the Next button.
 ![Create Blazor application](htmlconversion_images/blazor_step1.png)  
@@ -90,12 +90,12 @@ public void ConfigureServices(IServiceCollection services)
 Step 6: Inject ExportService into FetchData.razor using the following code.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight CSHTML %}
 
 @inject ExportService exportService
 @inject Microsoft.JSInterop.IJSRuntime JS
 @inject NavigationManager NavigationManager
-@using  System.IO;
+@using  System.IO
 
 {% endhighlight %}
 {% endtabs %}
@@ -103,7 +103,7 @@ Step 6: Inject ExportService into FetchData.razor using the following code.
 Step 7: Create a button in the FetchData.razor using the following code.
 
 {% tabs %}
-{% highlight HTML %}
+{% highlight CSHTML %}
 
 <button class="btn btn-primary" @onclick="@ExportToPdf">Export to PDF</button>
 
@@ -164,7 +164,7 @@ public static class FileUtil
 Step 10: Add the following JavaScript function in the _Host.cshtml available under the Pages folder.
 
 {% tabs %}
-{% highlight HTML %}
+{% highlight CSHTML %}
 
 <script type="text/javascript">
     function saveAsFile(filename, bytesBase64)
@@ -198,11 +198,11 @@ Step 10: Add the following JavaScript function in the _Host.cshtml available und
 
 Step 11: Build the project.
 
-Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
+Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
 Step 12: Run the project.
 
-Click the Start button (green arrow) or press F5 to run the app.
+Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.
 
 {% endtabcontent %}
 
@@ -211,7 +211,7 @@ Click the Start button (green arrow) or press F5 to run the app.
 **Prerequisites**:
 
 * Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-* Install Visual Studio Code:  Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
+* Install Visual Studio Code:  Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download?_exp_download=d53503e735).
 * Install C# Extension for VS Code: Open Visual Studio Code, go to the Extensions view (Ctrl+Shift+X), and search for 'C#'. Install the official [C# extension provided by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
 
 Step 1: Open the terminal (Ctrl+` ) and run the following command to create a new Blazor Server application
@@ -288,12 +288,12 @@ public void ConfigureServices(IServiceCollection services)
 Step 8: Inject ExportService into FetchData.razor using the following code.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight CSHTML %}
 
 @inject ExportService exportService
 @inject Microsoft.JSInterop.IJSRuntime JS
 @inject NavigationManager NavigationManager
-@using  System.IO;
+@using  System.IO
 
 {% endhighlight %}
 {% endtabs %}
@@ -301,7 +301,7 @@ Step 8: Inject ExportService into FetchData.razor using the following code.
 Step 9: Create a button in the FetchData.razor using the following code.
 
 {% tabs %}
-{% highlight HTML %}
+{% highlight CSHTML %}
 
 <button class="btn btn-primary" @onclick="@ExportToPdf">Export to PDF</button>
 
@@ -362,7 +362,7 @@ public static class FileUtil
 Step 12: Add the following JavaScript function in the _Host.cshtml available under the Pages folder.
 
 {% tabs %}
-{% highlight HTML %}
+{% highlight CSHTML %}
 
 <script type="text/javascript">
     function saveAsFile(filename, bytesBase64)
@@ -501,12 +501,12 @@ public void ConfigureServices(IServiceCollection services)
 Step 6: Inject ExportService into FetchData.razor using the following code.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight CSHTML %}
 
 @inject ExportService exportService
 @inject Microsoft.JSInterop.IJSRuntime JS
 @inject NavigationManager NavigationManager
-@using  System.IO;
+@using  System.IO
 
 {% endhighlight %}
 {% endtabs %}
@@ -514,7 +514,7 @@ Step 6: Inject ExportService into FetchData.razor using the following code.
 Step 7: Create a button in the FetchData.razor using the following code.
 
 {% tabs %}
-{% highlight HTML %}
+{% highlight CSHTML %}
 
 <button class="btn btn-primary" @onclick="@ExportToPdf">Export to PDF</button>
 
@@ -575,7 +575,7 @@ public static class FileUtil
 Step 10: Add the following JavaScript function in the _Host.cshtml available under the Pages folder.
 
 {% tabs %}
-{% highlight HTML %}
+{% highlight CSHTML %}
 
 <script type="text/javascript">
     function saveAsFile(filename, bytesBase64)

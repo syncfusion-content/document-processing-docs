@@ -43,7 +43,7 @@ Step 2: Install the [Syncfusion.HtmlToPdfConverter.Net.Linux](https://www.nuget.
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you also have to add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 5: Include the following namespaces in the **HomeController.cs** file.
+Step 3: Include the following namespaces in the **HomeController.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -55,9 +55,9 @@ using System.IO;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: A default action method named Index will be present in HomeController.cs. Right click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
+Step 4: A default action method named Index will be present in HomeController.cs. Right click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
 
-Step 7: Add a new button in the Index.cshtml as shown in the following.
+Step 5: Add a new button in the Index.cshtml as shown in the following.
 
 {% tabs %}
 {% highlight CSHTML %}

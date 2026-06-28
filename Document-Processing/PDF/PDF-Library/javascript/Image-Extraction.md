@@ -1,11 +1,11 @@
 ---
-title: Image Extraction in JavaScript PDF library | Syncfusion
-description: This section explains how to extract images from PDF documents and retrieve their properties such as position and size using the JavaScript PDF library
+title: Image Extraction in JavaScript PDF Library | Syncfusion
+description: This section explains how to extract images from PDF documents and retrieve their properties such as position and size using the JavaScript PDF Library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Image Extraction in JavaScript PDF library
+# Image Extraction in JavaScript PDF Library
 
 The PDF provides support to extract images from PDF documents and retrieve their properties such as bounds, index and raw byte data.
 

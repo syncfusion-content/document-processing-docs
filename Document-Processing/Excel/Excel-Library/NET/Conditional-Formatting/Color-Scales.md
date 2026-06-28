@@ -10,7 +10,7 @@ documentation: UG
 
 Color Scales let you create visual effects in your data to see how the value of a cell is compared with the values in a range of cells. A color scale uses cell shading, as opposed to bars, to communicate relative values, beyond the relative size of the value of a cell.
 
-The following code example illustrates how to apply color scales using [IColorScale](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IColorScale.html) interface in XlsIO.
+The following code example illustrates how to apply color scales using [IColorScale](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IColorScale.html) interface in XlsIO.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Color%20Scales/.NET/Color%20Scales/Color%20Scales/Program.cs,180" %}

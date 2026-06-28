@@ -1,6 +1,6 @@
 ---
 title: Feature Matrix in .NET Word Library | Syncfusion
-description: Learn about the supported features of Syncfusion® .NET Word Library (DocIO) for Word 97–2003, Word 2007–2016, and RTF formats.
+description: Learn about the supported features of the .NET Word Library (DocIO) for Word 97–2003, Word 2007–2016, and RTF formats.
 platform: document-processing
 control: DocIO
 documentation: UG

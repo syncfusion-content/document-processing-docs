@@ -1,6 +1,6 @@
 ---
 title: Open and save Word document in ASP.NET MVC | Syncfusion
-description: Open and save Word document in ASP.NET MVC application using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library without Microsoft Word or interop dependencies.
+description: Open and save Word document in ASP.NET MVC application using Syncfusion® .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -8,7 +8,7 @@ documentation: UG
 
 # Open and Save Word document in ASP.NET MVC
 
-Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-processing/word-framework/net/word-library) used to **create, read, and edit Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **open and save a Word document in ASP.NET MVC**.
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to **create, read, and edit Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **open and save a Word document in ASP.NET MVC**.
 
 ## Steps to open and save Word document programmatically:
 
@@ -105,4 +105,4 @@ By executing the program, you will get the **Word document** as follows.
 
 ![ASP.Net MVC open and save Word document](ASP-NET-MVC_images/OpenAndSaveOutput.png)
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/net) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 
+Click [here](https://www.syncfusion.com/document-sdk/net-word-library) to explore the rich set of the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) features. 

@@ -135,6 +135,6 @@ By executing the program, you will get the **PDF document** as follows.
 
 ![PPTX to PDF in AWS Elastic Beanstalk](PPTXtoPDF_images/Output_PowerPoint_Presentation_to-PDF.png)
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
+Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) features. 
 
 An online sample link to [convert PowerPoint Presentation to PDF](https://document.syncfusion.com/demos/powerpoint/pptxtopdf#/tailwind) in ASP.NET Core.

@@ -36,8 +36,8 @@ Widget build(BuildContext context) {
 The `SfPdfViewer` [theming](https://help.syncfusion.com/flutter/themes) support provides a consistent and standardized appearance, as well as the ability to set the colors for all UI elements.
 
 The following APIs allow you to customize the colors of the following elements:
-* [searchTextHighlightColor](https://help.syncfusion.com/flutter/pdf-viewer/text-search#customize-the-search-text-highlight-color)
-* [selectionColor and selectionHandleColor](https://help.syncfusion.com/flutter/pdf-viewer/text-selection#customize-the-text-selection-and-its-handle-color)
+* [searchTextHighlightColor](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/flutter/text-search#customize-the-search-text-highlight-color)
+* [selectionColor and selectionHandleColor](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/flutter/text-selection#customize-the-text-selection-and-its-handle-color)
 
 ## Large Fonts
 

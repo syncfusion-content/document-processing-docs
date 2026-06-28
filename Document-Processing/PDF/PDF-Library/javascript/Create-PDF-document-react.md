@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create or Generate PDF file in React | Syncfusion
-description: Learn how to create a PDF file in React with easy steps using Syncfusion JavaScript PDF library without depending on Adobe
+description: Learn how to create a PDF file in React with easy steps using JavaScript PDF Library without depending on Adobe
 control: PDF
 platform: document-processing
 documentation: ug
@@ -10,15 +10,15 @@ keywords: javascript, pdf, script, react
 
 # Create or Generate PDF file in React
 
-The Syncfusion<sup>&reg;</sup> [JavaScript PDF library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, fill forms, and secure PDF files.
+The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) is used to create, read, and edit PDF documents. The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) also offers functionality to merge, split, stamp, fill forms, and secure PDF files.
 
-This guide explains how to integrate the JavaScript PDF library into a React application.
+This guide explains how to integrate the [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) into a React application.
 
-## Installing Syncfusion<sup>&reg;</sup> JavaScript PDF package
+## Installing JavaScript PDF package
 
 All Syncfusion JS 2 packages are published in `npmjs.com` registry.
 
-Step1: To install the PDF library, use the following command.
+* To install the [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library), use the following command.
 
 ```bash
 npm install @syncfusion/ej2-pdf --save
@@ -29,10 +29,10 @@ N> For image and data extraction features, you need to install the `@syncfusion/
 * Ensure your server serves .wasm files with the **Content-Type: application/wasm** MIME type.
 * This setup is not required for **basic PDF creation**.
 
-Step2: Add the script in `App.jsx` by creating a button and attaching a click event that uses the JavaScript PDF API to generate a PDF document.
+**Create a PDF document**: Add the script in `App.jsx` by creating a button and attaching a click event that uses the JavaScript PDF API to generate a PDF document.
 
 {% tabs %}
-{% highlight html tabtitle="App.jsx" %}
+{% highlight html tabtitle="~/App.jsx" %}
 import React from 'react';
 
 export default function App() {
@@ -66,7 +66,9 @@ export default function App() {
 {% endhighlight %}
 {% endtabs %}
 
-Step3: Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+## Run the application
+
+Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
 ```
 npm run dev
@@ -74,7 +76,3 @@ npm run dev
 By executing the program, you will get the PDF document as follows.
 
 ![Output PDF document](Getting_started_images/Output.png)
-
-Click [here](https://www.syncfusion.com/document-sdk/javascript-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
-
-An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/react/#/tailwind3/pdf/default) in React.

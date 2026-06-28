@@ -1,5 +1,6 @@
 ---
 title: Getting Started with PowerPoint Presentation library | Syncfusion
+canonical_url: "https://www.syncfusion.com/document-sdk/net-powerpoint-library"
 description: Getting started with Essential<sup>&reg;</sup> Presentation library; Creating a PowerPoint Presentation; Modifying the existing PowerPoint presentation
 platform: document-processing
 control: Presentation
@@ -9,7 +10,7 @@ documentation: UG
 
 ## Creating a simple PowerPoint Presentation with basic elements from scratch
 
-In this page, you can learn how to create a simple [.NET PowerPoint Presentation](https://www.syncfusion.com/document-processing/powerpoint-framework/net) by using Essential<sup>&reg;</sup> Presentation API.
+In this page, you can learn how to create a simple [.NET PowerPoint Presentation](https://www.syncfusion.com/document-sdk/net-powerpoint-library) by using Essential<sup>&reg;</sup> Presentation API.
 
 To quickly get started on creating a PowerPoint presentation, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=OSGwosNnN0o" %}
@@ -492,4 +493,6 @@ N> You can refer to our [.NET PowerPoint framework](https://www.syncfusion.com/d
 
 ## Online Demo
 
-* Explore how to create slides with simple text in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/default#/tailwind).
+* Explore how to create slides with simple text in a PowerPoint presentation using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/default#/tailwind).
+
+N> Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page.

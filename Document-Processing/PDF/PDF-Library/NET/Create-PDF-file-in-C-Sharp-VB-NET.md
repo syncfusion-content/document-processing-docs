@@ -1,5 +1,6 @@
 ---
 title: Create or Generate PDF file in C# and VB.NET | Syncfusion
+canonical_url: "https://www.syncfusion.com/document-sdk/net-pdf-library"
 description: Learn how to create or generate a PDF file in C# and VB.NET with elements like text, image and table using Syncfusion .NET PDF library without Adobe. 
 platform: document-processing
 control: PDF
@@ -291,6 +292,43 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Creating a simple PDF document with basic elements
 
+Include the following necessary namespaces to create a simple PDF document with basic elements.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Grid;
+using System.Data;
+using System.Xml.Linq;
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Grid;
+using System.Data;
+using System.Xml.Linq;
+
+{% endhighlight %}
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Data
+Imports System.Xml.Linq
+Imports Syncfusion.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Grid 
+
+{% endhighlight %}
+
+{% endtabs %}
+
 The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created. The following code example shows how to generate a PDF document and add a [PdfPage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPage.html) to it along with the [PdfPageSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageSettings.html).
 
 {% tabs %}
@@ -339,16 +377,19 @@ The following code example explains how to add an image from disk to a PDF docum
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-
+//Create PDF graphics for the page.
+PdfGraphics g = page.Graphics;
 //Loads the image from disk
-PdfImage image = PdfImage.FromFile("AdventureCycle.jpg");
+FileStream imageStream = new FileStream("AdventureCycle.jpg", FileMode.Open, FileAccess.Read);
+PdfImage image = PdfImage.FromStream(imageStream);
 //Draws the image to the PDF page
 page.Graphics.DrawImage(image, new RectangleF(176, 0, 390, 130));
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
+//Create PDF graphics for the page.
+PdfGraphics g = page.Graphics;
 //Loads the image from disk
 PdfImage image = PdfImage.FromFile("AdventureCycle.jpg");
 //Draws the image to the PDF page
@@ -357,7 +398,8 @@ page.Graphics.DrawImage(image, new RectangleF(176, 0, 390, 130));
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
+'Create PDF graphics for the page.
+PdfGraphics g = page.Graphics
 'Loads the image from disk 
 Dim image As PdfImage = PdfImage.FromFile("AdventureCycle.jpg")
 'Draws the image to the PDF page
@@ -980,4 +1022,6 @@ finalDoc.Close(True)
 
 {% endtabs %}
 
-N> You can also explore our [.NET PDF library](https://document.syncfusion.com/demos/pdf/default#/tailwind) demo that shows how to create and modify PDF files from C# with just five lines of code on different platforms.
+N> You can also explore our [.NET PDF library](https://document.syncfusion.com/demos/pdf/default#/tailwind) demo that shows how to create and modify PDF files from C# with just five lines of code.
+
+N> Looking for the full .NET PDF Library overview, features, pricing, and documentation? Visit the [.NET PDF Library](https://www.syncfusion.com/document-sdk/net-pdf-library) page.
