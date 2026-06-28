@@ -34,9 +34,9 @@ If the cell is in editable state, you can save the edited cell by one of the fol
 To cancel the editing without saving the changes, you can use one of the following ways,
 
 * Press `ESCAPE` key, this will remove the editable state and update the unchanged cell content.
-* Using the [`closeEdit`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#closeedit) method.
+* Using the [`cellEdit`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#cellEdit) event and cancelling the edit operation.
 
-The following sample shows how to prevent the editing and cell save. Here `E` column prevent the editing by using cancel argument as true in [`cellEdit`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#celledit) event. In `D` column, prevent saving the edited changes by using cancel argument as true in [`beforeCellSave`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#beforecellsave) and use [`closeEdit`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#closeedit) method in spreadsheet.
+The following sample shows how to prevent the editing and cell save. Here `E` column prevent the editing by using cancel argument as true in [`cellEdit`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#celledit) event. In `D` column, prevent saving the edited changes by using cancel argument as true in [`beforeCellSave`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#beforecellsave) event.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}

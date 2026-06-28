@@ -1,0 +1,15 @@
+/**
+ * Protect sheet data source
+ */
+export let dataSource: Object[] = [
+  { 'Project Name': 'Website Redesign', Manager: 'Anita', Department: 'Marketing', 'Start Date': '04/01/2026', 'End Date': '06/20/2026', Budget: 25000, Spent: 18000, Variance: 7000, Status: 'In Progress', Priority: 2 },
+  { 'Project Name': 'Mobile App Upgrade', Manager: 'David', Department: 'Engineering', 'Start Date': '04/05/2026', 'End Date': '07/15/2026', Budget: 42000, Spent: 26500, Variance: 15500, Status: 'In Progress', Priority: 1 },
+  { 'Project Name': 'CRM Migration', Manager: 'Priya', Department: 'Sales', 'Start Date': '03/18/2026', 'End Date': '08/10/2026', Budget: 38000, Spent: 31000, Variance: 7000, Status: 'On Hold', Priority: 2 },
+  { 'Project Name': 'HR Portal Refresh', Manager: 'Kumar', Department: 'HR', 'Start Date': '04/12/2026', 'End Date': '05/30/2026', Budget: 12000, Spent: 9500, Variance: 2500, Status: 'Completed', Priority: 3 },
+  { 'Project Name': 'Finance Dashboard', Manager: 'Meera', Department: 'Finance', 'Start Date': '05/01/2026', 'End Date': '07/28/2026', Budget: 30000, Spent: 14250, Variance: 15750, Status: 'In Progress', Priority: 1 },
+  { 'Project Name': 'Vendor Portal Integration', Manager: 'John', Department: 'Procurement', 'Start Date': '04/22/2026', 'End Date': '08/05/2026', Budget: 27000, Spent: 11000, Variance: 16000, Status: 'Not Started', Priority: 4 },
+  { 'Project Name': 'Security Audit Remediation', Manager: 'Sara', Department: 'IT', 'Start Date': '03/25/2026', 'End Date': '06/18/2026', Budget: 16000, Spent: 13200, Variance: 2800, Status: 'In Progress', Priority: 1 },
+  { 'Project Name': 'Customer Support Automation', Manager: 'Rahul', Department: 'Support', 'Start Date': '04/08/2026', 'End Date': '07/01/2026', Budget: 21000, Spent: 8000, Variance: 13000, Status: 'In Progress', Priority: 2 },
+  { 'Project Name': 'Inventory Sync Improvement', Manager: 'Latha', Department: 'Operations', 'Start Date': '05/10/2026', 'End Date': '08/22/2026', Budget: 19500, Spent: 6200, Variance: 13300, Status: 'Not Started', Priority: 3 },
+  { 'Project Name': 'Analytics Reporting Pack', Manager: 'Arun', Department: 'Business Intelligence', 'Start Date': '04/15/2026', 'End Date': '06/30/2026', Budget: 17500, Spent: 12400, Variance: 5100, Status: 'Completed', Priority: 2 }
+];
