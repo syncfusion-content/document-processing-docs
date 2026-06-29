@@ -14,7 +14,7 @@ Document Editor provides support to restrict editing. When the protected documen
 
 ## Set current user
 
-You can use the `currentUser` property to authorize the current document user by name, email, or user group name.
+You can use the `currentUser` property to authorize the current document user by name, email, or user group name. 
 
 The following code shows how to set currentUser
 
