@@ -149,6 +149,6 @@ By executing the program, you will get the **PowerPoint document** as follows.
 
 ![Create PowerPoint document in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Output-Create-PowerPoint-Presentation.png)
 
-Click [here](https://www.syncfusion.com/document-sdk/net-powerpoint-library) to explore the rich set of the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) features. 
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 
 
 An online sample link to [create a PowerPoint Presentation](https://document.syncfusion.com/demos/powerpoint/default#/tailwind) in ASP.NET Core. 

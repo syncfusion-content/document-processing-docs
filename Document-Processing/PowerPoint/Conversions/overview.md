@@ -15,6 +15,10 @@ keywords: PowerPoint, Presentation, Slide, SDK, Automation, API, convert
 
 {% doccard text="PowerPoint to Image" link="/document-processing/powerpoint/conversions/powerpoint-to-image/overview" icon="/document-processing/PowerPoint/conversions/images/PowerPoint to Image.svg" %}
 
+{% doccard text="Markdown to PowerPoint" link="/document-processing/powerpoint/conversions/markdown-to-powerpoint" icon="/document-processing/markdown/conversions/images/Markdown to PowerPoint.svg" %}
+
+{% doccard text="PowerPoint to Markdown" link="/document-processing/powerpoint/conversions/powerpoint-to-markdown" icon="/document-processing/markdown/conversions/images/PowerPoint to Markdown.svg" %}
+
 {% enddoccards %}
 
 Syncfusion<sup>&reg;</sup> PowerPoint Presentation Conversion Library converts PowerPoint presentations to several file formats like PDF, and image without Microsoft Office dependencies. It eases the developers, as they can just integrate this converter to achieve the required PowerPoint presentation conversions and concentrate on core logics of their application.
