@@ -12,7 +12,7 @@ Essential<sup>&reg;</sup> PDF provides support for Optical Character Recognition
 
 N> Starting with v20.1.0.x, if you reference Syncfusion<sup>&reg;</sup> OCR processor assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-To use the Syncfusion<sup>&reg;</sup> OCR processor library in your application, you need to add reference to the following set of assemblies.
+To use the .NET OCR processor library in your application, you need to add reference to the following set of assemblies.
 
 <b>Syncfusion assemblies</b>
 1. Syncfusion.Compression.Base.dll
