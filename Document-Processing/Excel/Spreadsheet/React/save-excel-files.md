@@ -9,7 +9,7 @@ documentation: ug
 
 # Save Excel Files in Syncfusion React Spreadsheet
 
-When exporting an Excel file from the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component, the process is handled through a streamlined server‑side workflow. The Spreadsheet content displayed in the browser is first serialized into a structured JSON workbook. This JSON includes all essential details—such as data, formulas, formatting, styles, and sheet configuration.
+When exporting an Excel file from the  React Spreadsheet component, the process is handled through a streamlined server‑side workflow. The Spreadsheet content displayed in the browser is first serialized into a structured JSON workbook. This JSON includes all essential details—such as data, formulas, formatting, styles, and sheet configuration.
 
 Once generated, this JSON workbook is sent to the server, where the [`Syncfusion.EJ2.Spreadsheet library`](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core) uses [`Syncfusion XlsIO`](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview) to convert the JSON data into a fully formatted Excel file. During this process, the JSON workbook is parsed and its contents are mapped to an XlsIO Workbook instance, ensuring that all data, styles, formulas, and other Spreadsheet features are accurately preserved.
 

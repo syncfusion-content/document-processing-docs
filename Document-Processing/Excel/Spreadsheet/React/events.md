@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in React Spreadsheet Component
 
-The [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component triggers events for creation, data binding, selection, editing, clipboard actions, sorting, filtering, formatting, row and column insertion or deletion, context menu and ribbon interactions, and import/export operations—enabling integration of custom logic into application workflows.
+The Spreadsheet component triggers events for creation, data binding, selection, editing, clipboard actions, sorting, filtering, formatting, row and column insertion or deletion, context menu and ribbon interactions, and import/export operations—enabling integration of custom logic into application workflows.
 
 ## Action Events
 
