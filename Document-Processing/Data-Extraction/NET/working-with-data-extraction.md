@@ -208,6 +208,47 @@ using (FileStream stream = new FileStream("Input.png", FileMode.Open, FileAccess
 
 {% endtabs %}
 
+### Extract Data as MarkdownDocument Instance
+
+To get a structured **MarkdownDocument** from a PDF or image using the **ExtractDataAsMarkdownDocument** method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class, refer to the following code example:
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using System.IO;
+using Syncfusion.SmartDataExtractor;
+using Syncfusion.Office.Markdown;
+
+// Open the input PDF file as a stream.
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    // Initialize the Data Extractor.
+    DataExtractor extractor = new DataExtractor();
+    // Extract data as MarkdownDocument.
+    MarkdownDocument markdownDocument = extractor.ExtractDataAsMarkdownDocument(stream);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.IO;
+using Syncfusion.SmartDataExtractor;
+using Syncfusion.Office.Markdown;
+
+// Open the input PDF file as a stream.
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    // Initialize the Data Extractor.
+    DataExtractor extractor = new DataExtractor();
+    // Extract data as MarkdownDocument.
+    MarkdownDocument markdownDocument = extractor.ExtractDataAsMarkdownDocument(stream);
+}
+
+{% endhighlight %}
+
+{% endtabs %}  
 
 ## Extract Data from PDF or Image and Save as Digital PDF
 
@@ -236,7 +277,7 @@ using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileA
     DataExtractor extractor = new DataExtractor();
     //Extract data and return as a loaded PDF document.
     PdfLoadedDocument document = extractor.ExtractDataAsPdfDocument(inputStream);
-    //Save the extracted output as a new PDF file.
+    //Save the extracted output as a new json file.
     document.Save("Output.pdf");
     //Close the document.
     document.Close(true);
@@ -710,6 +751,71 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Extract-data-within-specific-range/.NET).
 
+## Configure OCR Processing Settings
 
+To configure OCR settings in .NET using the **OCRProcessor** property of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class, use the following C# example to initialize the OCR processor, set language and Tesseract version, and extract structured data from a PDF document with the [ExtractDataAsPdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsPdfDocument_System_IO_Stream_) method.
+
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.OCRProcessor;
+using Syncfusion.SmartDataExtractor;
+
+//Open the input PDF file as a stream.
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    //Initialize the Data Extractor.
+    DataExtractor extractor = new DataExtractor();
+    //Initialize the OCR processor.
+    OCRProcessor processor = new OCRProcessor();
+    //Set OCR language.
+    processor.Settings.Language = Languages.English;
+    //Set Tesseract OCR engine version.
+    processor.Settings.TesseractVersion = TesseractVersion.Version5_0;
+    //Assign the configured OCR processor to the Data Extractor.
+    extractor.OCRProcessor = processor;
+    //Extract data and return as a loaded PDF document.
+    PdfLoadedDocument pdf = extractor.ExtractDataAsPdfDocument(stream);
+    //Save the extracted output as a new PDF file.
+    pdf.Save("Output.pdf");
+    //Close the document.
+    pdf.Close(true);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.OCRProcessor;
+using Syncfusion.SmartDataExtractor;
+
+//Open the input PDF file as a stream.
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    //Initialize the Data Extractor.
+    DataExtractor extractor = new DataExtractor();
+    //Initialize the OCR processor.
+    OCRProcessor processor = new OCRProcessor();
+    //Set OCR language.
+    processor.Settings.Language = Languages.English;
+    //Set Tesseract OCR engine version.
+    processor.Settings.TesseractVersion = TesseractVersion.Version5_0;
+    //Assign the configured OCR processor to the Data Extractor.
+    extractor.OCRProcessor = processor;
+    //Extract data and return as a loaded PDF document.
+    PdfLoadedDocument pdf = extractor.ExtractDataAsPdfDocument(stream);
+    //Save the extracted output as a new PDF file.
+    pdf.Save("Output.pdf");
+    //Close the document.
+    pdf.Close(true);
+}
+
+{% endhighlight %}
+
+{% endtabs %}  
 
 
