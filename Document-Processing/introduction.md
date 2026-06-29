@@ -68,7 +68,7 @@ The <a href="https://help.syncfusion.com/document-processing/excel/spreadsheet/o
 </table>
 
 
-## AI-Driven Solutions
+## AI Solutions
 
 <table>
 <tr>
