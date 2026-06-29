@@ -8,9 +8,9 @@ documentation: UG
 
 # Syncfusion<sup>&reg;</sup> Telemetry 
 
-Syncfusion<sup>&reg;</sup> Telemetry library collects anonymous usage data to improve product quality and user experience. This data helps us better understand product usage, feature adoption, usage trends, and make informed decisions about future product planning.
+Syncfusion<sup>&reg;</sup> Telemetry library collects **anonymous usage data** to improve product quality and user experience. This data helps us better understand product usage, feature adoption, usage trends, and make informed decisions about future product planning. 
 
-Telemetry is enabled by default. However, you can disable it at any time if required. 
+Telemetry is **enabled by default**. However, you can disable it at any time if required. 
 
 N> Telemetry is automatically disabled in production environments. No data is collected from deployed applications or end users.
 
@@ -20,7 +20,7 @@ We collect anonymous telemetry data to:
 
 * Understand feature adoption and usage trends 
 * Identify frequently used components and frameworks 
-* Prioritize future product planning and investments. 
+* Prioritize future product planning and investments.
 * Detect compatibility trends across:  
     * .NET versions 
     * Operating systems 
@@ -45,39 +45,39 @@ The following data fields are collected by the Syncfusion<sup>&reg;</sup> Teleme
 <td>System architecture information (e.g., x64, x86)</td>
 </tr>
 <tr>
-<td>ComponentName</td>
-<td>Name of the component</td>
+<td>Component Name</td>
+<td>Syncfusion component being used</td>
 </tr>
 <tr>
 <td>Assembly Name</td>
-<td>Assembly containing the telemetry module</td>
+<td>Syncfusion assembly or package in use</td>
 </tr>
 <tr>
-<td>SdkName</td>
-<td>Name of the SDK being used</td>
+<td>SDK Name</td>
+<td>Syncfusion SDK being used</td>
 </tr>
 <tr>
-<td>SdkVersion</td>
-<td>Version of the SDK</td>
+<td>SDK Version</td>
+<td>SDK version shipped with the product</td>
 </tr>
 <tr>
 <td>Framework</td>
-<td>Framework (e.g., .NET, .NET Core)</td>
+<td>Target development framework (e.g., .NET, .NET Core)</td>
 </tr>
 <tr>
-<td>FrameworkVersion</td>
-<td>Version of the framework (e.g., .NET 10.0.9)</td>
+<td>Framework Version</td>
+<td>Version of the target framework (e.g., .NET 10.0.9)</td>
 </tr>
 <tr>
-<td>OperatingSystem</td>
-<td>Target operating system</td>
+<td>Operating System</td>
+<td>Operating system used during development</td>
 </tr>
 <tr>
-<td>SessionID</td>
+<td>Session ID</td>
 <td>Unique session identifier (hashed value)</td>
 </tr>
 <tr>
-<td>EventName</td>
+<td>Event Name</td>
 <td>Anonymous product events</td>
 </tr>
 </tbody>
@@ -89,10 +89,10 @@ N> No user-generated content (e.g., code, files, or personal data) is collected.
 
 Telemetry applies only to the use of Syncfusion<sup>&reg;</sup> products during development. 
 
-* It is limited to developer environments 
-* It focuses on product and feature usage 
-* It does not apply to production applications 
-* It does not collect any data from end users 
+* It is limited to **developer environments** 
+* It focuses on **product and feature usage**
+* It does **not apply to production applications** 
+* It does **not collect any data from end users** 
 
 Telemetry is designed solely to help improve the development experience and product quality, without impacting productions applications or users. 
 
@@ -123,7 +123,7 @@ using Syncfusion.Telemetry;
 
 ### Step 2: Disable telemetry at application startup
 
-Call the Telemetry.Disable() method before initializing or using any Syncfusion<sup>&reg;</sup> product APIs. 
+Call the `Telemetry.Disable()` method before initializing or using any Syncfusion<sup>&reg;</sup> product APIs. 
 
 {% tabs %} 
 
@@ -139,7 +139,7 @@ Telemetry.Disable();
 
 Now, the telemetry is disabled, you can continue using Syncfusion<sup>&reg;</sup> .NET products based on your application requirements. The Syncfusion<sup>&reg;</sup> product will work normally, but telemetry data will not be collected or sent. 
 
-N> The Telemetry.Disable() API should be called, before creating or using any Syncfusion<sup>&reg;</sup> components, or document-processing library objects. 
+N> The `Telemetry.Disable()` API should be called, before creating or using any Syncfusion<sup>&reg;</sup> components, or document-processing library objects. 
 
 ## FAQs
 
