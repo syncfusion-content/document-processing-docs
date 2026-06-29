@@ -621,6 +621,6 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox
 
 ## See also
 
-- [Import and Export](./Import-and-Export)
-- [Selection](./Selection)
-- [Commands](./Commands)
+- [Import and Export](https://help.syncfusion.com/document-processing/word/word-processor/wpf/import-and-export)
+- [Selection](https://help.syncfusion.com/document-processing/word/word-processor/wpf/selection)
+- [Commands](https://help.syncfusion.com/document-processing/word/word-processor/wpf/commands)
