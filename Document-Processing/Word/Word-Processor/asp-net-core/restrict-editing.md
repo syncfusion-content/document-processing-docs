@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Restrict Editing in ASP.NET Core DOCX Editor | Syncfusion
-description: Learn how to enable Restrict Editing in the ASP.NET Core DOCX Editor to control document changes.
+description: Learn how to enable Restrict Editing in the ASP.NET Core DOCX Editor to control document changes effectively.
 platform: document-processing
 control: Restrict Editing
 documentation: ug
@@ -224,11 +224,11 @@ The Document Editor client requires a server-side API to generate a hash from th
 
 For more information on configuring restrict editing on the server side, refer to the following:
 
-- [Web Service for Restrict editing in ASP.NET Core](https://help.syncfusion.com/document-processing/word/word-processor/asp-net-core/web-services/core#restrict-editing)
+- [Web Service for Restrict editing in ASP.NET Core](https://help.syncfusion.com/document-processing/word/word-processor/asp-net-core/restrict-editing)
 
-- [Web Service for Restrict editing in ASP.NET MVC](https://help.syncfusion.com/document-processing/word/word-processor/asp-net-core/web-services/mvc#restrict-editing)
+- [Web Service for Restrict editing in ASP.NET MVC](https://help.syncfusion.com/document-processing/word/word-processor/asp-net-core/restrict-editing)
 
-- [Web Service for Restrict editing in Java](https://help.syncfusion.com/document-processing/word/word-processor/asp-net-core/web-services/java#restrict-editing)
+- [Web Service for Restrict editing in Java](https://help.syncfusion.com/document-processing/word/word-processor/asp-net-core/restrict-editing)
 
 ## Set current user
 
