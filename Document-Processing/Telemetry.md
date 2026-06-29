@@ -8,7 +8,7 @@ documentation: UG
 
 # Syncfusion<sup>&reg;</sup> Telemetry 
 
-Syncfusion<sup>&reg;</sup> Telemetry library collects anonymous usage data to improve product quality and user experience. This data helps us better understand product usage, feature adoption, usage trends, and make better product roadmap decisions. 
+Syncfusion<sup>&reg;</sup> Telemetry library collects anonymous usage data to improve product quality and user experience. This data helps us better understand product usage, feature adoption, usage trends, and make informed decisions about future product planning.
 
 Telemetry is enabled by default. However, you can disable it at any time if required. 
 
@@ -20,7 +20,7 @@ We collect anonymous telemetry data to:
 
 * Understand feature adoption and usage trends 
 * Identify frequently used components and frameworks 
-* Prioritize future product investments and roadmap decisions 
+* Prioritize future product planning and investments. 
 * Detect compatibility trends across:  
     * .NET versions 
     * Operating systems 
