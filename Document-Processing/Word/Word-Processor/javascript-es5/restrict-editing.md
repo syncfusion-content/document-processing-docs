@@ -424,7 +424,7 @@ For more information on configuring restrict editing on the server side, refer t
 
 ## Set current user
 
-The [`currentUser`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#currentuser) property can be used to authorize the current document user by name, email, or user group.
+The [`currentUser`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#currentuser) property can be used to authorize the current document user by name, email, or user group.
 
 The following code example demonstrates how to set the currentUser.
 
@@ -438,7 +438,7 @@ container.documentEditor.currentUser = 'engineer@mycompany.com';
 
 ## Highlighting the text area
 
-The [`userColor`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#usercolor) property can be used to highlight the editable region of the current user.
+The [`userColor`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#usercolor) property can be used to highlight the editable region of the current user.
 
 The following code example demonstrates how to set the userColor.
 
@@ -450,7 +450,7 @@ container.documentEditor.userColor = '#fff000';
 {% endhighlight %}
 {% endtabs %}
 
-The [`highlightEditableRanges`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/documentEditorSettings/#highlighteditableranges) property can be used to toggle the highlighting of editable regions.
+The [`highlightEditableRanges`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/documentEditorSettings#highlighteditableranges) property can be used to toggle the highlighting of editable regions.
 
 The following code example demonstrates how to enable or disable editable region highlighting.
 
