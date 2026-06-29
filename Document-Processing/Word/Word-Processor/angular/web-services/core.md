@@ -225,134 +225,178 @@ The following example code illustrates how to write a Web API for restrict editi
     [HttpPost]
     [EnableCors("AllowAllOrigins")]
     [Route("RestrictEditing")]
-    public string[] RestrictEditing([FromBody]CustomRestrictParameter param)
+    public string[] RestrictEditing([FromBody] CustomRestrictParameter param)
     {
-        if (param.passwordBase64 == "" && param.passwordBase64 == null)
+        if (param.passwordBase64 == "" || param.passwordBase64 == null)
             return null;
-        return WordDocument.ComputeHash(param.passwordBase64, param.saltBase64, param.spinCount);
+        return WordDocument.ComputeHash(param.passwordBase64, param.saltBase64, param.spinCount, param.algorithmSid);
     }
-
     public class CustomRestrictParameter
     {
         public string passwordBase64 { get; set; }
         public string saltBase64 { get; set; }
         public int spinCount { get; set; }
+        public string algorithmSid { get; set; }
     }
 ```
 
 ## Spell Check
 
-Document Editor supports performing spell checking for any input text. You can perform spell checking for the text in Document Editor and it will provide suggestions for the mis-spelled words through dialog and in context menu. Document editor client-side script requires this Web API to show error words and list suggestions in context menu. This Web API returns the json type of spell-checked word which contains details about error words if any and suggestions.
+Document Editor supports spell checking for input text. It identifies misspelled words and provides suggestions through a dialog and the context menu. The Document Editor client-side script requires this Web API to display error words and suggestions. This Web API returns a JSON response containing details about misspelled words and their suggestions.
 
-To know more about configure spell check, please check this [link](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices).
+### Dictionary setup
 
-In startup.cs file, you can configure the spell check files like below:
+The Document Editor performs spell checking using [Hunspell dictionary files](https://github.com/wooorm/dictionaries). These dictionaries can be obtained from their respective sources. 
 
-```csharp
-    public Startup(IConfiguration configuration, IHostingEnvironment env)
+To set up spell checking, place the required dictionary files, including the .dic, .aff, and JSON configuration file, inside the `App_Data` folder in your project. To support a personal dictionary, place an empty .dic file in the same `App_Data` folder.
+
+Refer to the following screenshot for the folder structure.
+
+![Dictionary setup in Angular DOCX Editor](../images/spellcheck-dictionary-setup.png)
+
+The JSON file should contain the configuration details in the following format:
+
+{% tabs %}
+{% highlight C# tabtitle="C#" %}
+
+[
+  {
+    "LanguadeID": 1033,
+    "DictionaryPath": "en_US.dic",
+    "AffixPath": "en_US.aff",
+    "PersonalDictPath": "customDict.dic"
+  }
+]
+
+{% endhighlight %}
+{% endtabs %}
+
+### Configure spell check service
+
+- Add the [Syncfusion.EJ2.SpellChecker.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.SpellChecker.AspNet.Core/) NuGet package to your project.
+
+- In the `Startup.cs` file, configure the spell check files as shown below:
+
+{% tabs %}
+{% highlight C# tabtitle="C#" %}
+
+public Startup(IConfiguration configuration, IWebHostEnvironment env)
+{
+    var builder = new ConfigurationBuilder()
+        .SetBasePath(env.ContentRootPath)
+        .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+        .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
+        .AddEnvironmentVariables();
+
+    Configuration = builder.Build();
+
+    path = Configuration["SPELLCHECK_DICTIONARY_PATH"];
+    string jsonFileName = Configuration["SPELLCHECK_JSON_FILENAME"];
+    //check the spell check dictionary path environment variable value and assign default data folder
+    //if it is null.
+    path = string.IsNullOrEmpty(path) ? Path.Combine(env.ContentRootPath, "App_Data") : Path.Combine(env.ContentRootPath, path);
+    //Set the default spellcheck.json file if the json filename is empty.
+    jsonFileName = string.IsNullOrEmpty(jsonFileName) ? Path.Combine(path, "spellcheck.json") : Path.Combine(path, jsonFileName);
+    if (File.Exists(jsonFileName))
     {
-        var builder = new ConfigurationBuilder()
-            .SetBasePath(env.ContentRootPath)
-            .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-            .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
-            .AddEnvironmentVariables();
-
-        Configuration = builder.Build();
-        _contentRootPath = env.ContentRootPath;
-
-        path = Configuration["SPELLCHECK_DICTIONARY_PATH"];
-        string jsonFileName = Configuration["SPELLCHECK_JSON_FILENAME"];
-        //check the spell check dictionary path environment variable value and assign default data folder
-        //if it is null.
-        path = string.IsNullOrEmpty(path) ? Path.Combine(env.ContentRootPath, "App_Data") : Path.Combine(env.ContentRootPath, path);
-        //Set the default spellcheck.json file if the json filename is empty.
-        jsonFileName = string.IsNullOrEmpty(jsonFileName) ? Path.Combine(path, "spellcheck.json") : Path.Combine(path, jsonFileName);
-        if (System.IO.File.Exists(jsonFileName))
+        string jsonImport = File.ReadAllText(jsonFileName);
+        List<DictionaryData> spellChecks = JsonConvert.DeserializeObject<List<DictionaryData>>(jsonImport);
+        List<DictionaryData> spellDictCollection = new List<DictionaryData>();
+        string personalDictPath = null;
+        //construct the dictionary file path using customer provided path and dictionary name
+        if (spellChecks != null)
         {
-            string jsonImport = System.IO.File.ReadAllText(jsonFileName);
-            List<DictionaryData> spellChecks = JsonConvert.DeserializeObject<List<DictionaryData>>(jsonImport);
-            spellDictCollection = new List<DictionaryData>();
-            //construct the dictionary file path using customer provided path and dictionary name
             foreach (var spellCheck in spellChecks)
             {
                 spellDictCollection.Add(new DictionaryData(spellCheck.LanguadeID, Path.Combine(path, spellCheck.DictionaryPath), Path.Combine(path, spellCheck.AffixPath)));
                 personalDictPath = Path.Combine(path, spellCheck.PersonalDictPath);
             }
         }
+        SpellChecker.InitializeDictionaries(spellDictCollection, personalDictPath, 3);
     }
-```
+}
 
-Document editor provides options to spell check word by word and spellcheck page by page when loading the documents.
+{% endhighlight %}
+{% endtabs %}
 
-### Spell check word by word
+### Web API for word-by-word spell check 
 
-This Web API performs the spell check word by word and return the json which contains information about error words and suggestions if any. By default, spell check word by word is performed in Document editor when enabling spell check in client-side.
+This Web API performs spell checking word by word and returns a JSON response containing information about error words and suggestions, if any. By default, word-by-word spell checking is performed in the Document Editor when spell check is enabled on the client side.
 
-The following example code illustrates how to write a Web API for spell check word by word.
+The following example code illustrates how to write a Web API for word-by-word spell checking.
 
-```csharp
-    [AcceptVerbs("Post")]
-    [HttpPost]
-    [EnableCors("AllowAllOrigins")]
-    [Route("SpellCheck")]
-    public string SpellCheck([FromBody] SpellCheckJsonData spellChecker)
-    {
+{% tabs %}
+{% highlight C# tabtitle="C#" %}
+
+[AcceptVerbs("Post")]
+[HttpPost]
+[EnableCors("AllowAllOrigins")]
+[Route("SpellCheck")]
+public string SpellCheck([FromBody] SpellCheckJsonData spellChecker)
+{
     try
-        {
-            SpellChecker spellCheck = new SpellChecker(spellDictionary, personalDictPath);
-            spellCheck.GetSuggestions(spellChecker.LanguageID, spellChecker.TexttoCheck, spellChecker.CheckSpelling, spellChecker.CheckSuggestion, spellChecker.AddWord);
-            return Newtonsoft.Json.JsonConvert.SerializeObject(spellCheck);
-        }
-        catch
-        {
-            return "{\"SpellCollection\":[],\"HasSpellingError\":false,\"Suggestions\":null}";
-        }
-    }
-
-    public class SpellCheckJsonData
     {
-        public int LanguageID { get; set; }
-        public string TexttoCheck { get; set; }
-        public bool CheckSpelling { get; set; }
-        public bool CheckSuggestion { get; set; }
-        public bool AddWord { get; set; }
+        SpellChecker spellCheck = new SpellChecker();
+        spellCheck.GetSuggestions(spellChecker.LanguageID, spellChecker.TexttoCheck, spellChecker.CheckSpelling, spellChecker.CheckSuggestion, spellChecker.AddWord);
+        return Newtonsoft.Json.JsonConvert.SerializeObject(spellCheck);
     }
-```
-
-### Spell check page by page
-
-This Web API performs the spell check page by page and return the json which contains information about error words and suggestions if any. By [enabling optimized spell check](../spell-check#enableoptimizedspellcheck) in client-side, you can perform spellcheck page by page when loading the documents.
-
-The following example code illustrates how to write a Web API for spell check page by page.
-
-```csharp
-    [AcceptVerbs("Post")]
-    [HttpPost]
-    [EnableCors("AllowAllOrigins")]
-    [Route("SpellCheckByPage")]
-    public string SpellCheckByPage([FromBody] SpellCheckJsonData spellChecker)
+    catch
     {
+        return "{\"SpellCollection\":[],\"HasSpellingError\":false,\"Suggestions\":null}";
+    }
+}
+public class SpellCheckJsonData
+{
+    public int LanguageID { get; set; }
+    public string TexttoCheck { get; set; }
+    public bool CheckSpelling { get; set; }
+    public bool CheckSuggestion { get; set; }
+    public bool AddWord { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Web API for page-by-page spell check
+
+This Web API performs spell checking page by page and returns a JSON response containing information about error words and suggestions, if any. By [enabling optimized spell check](https://help.syncfusion.com/document-processing/word/word-processor/angular/spell-check#optimized-spell-check) on the client side, you can perform page-by-page spell checking when loading documents.
+
+The following example code illustrates how to write a Web API for page-by-page spell checking.
+
+{% tabs %}
+{% highlight C# tabtitle="C#" %}
+
+[AcceptVerbs("Post")]
+[HttpPost]
+[EnableCors("AllowAllOrigins")]
+[Route("SpellCheckByPage")]
+public string SpellCheckByPage([FromBody] SpellCheckJsonData spellChecker)
+{
     try
-        {
-            SpellChecker spellCheck = new SpellChecker(spellDictionary, personalDictPath);
-            spellCheck.CheckSpelling(spellChecker.LanguageID, spellChecker.TexttoCheck);
-            return Newtonsoft.Json.JsonConvert.SerializeObject(spellCheck);
-        }
-        catch
-        {
-            return "{\"SpellCollection\":[],\"HasSpellingError\":false,\"Suggestions\":null}";
-        }
-    }
-
-    public class SpellCheckJsonData
     {
-        public int LanguageID { get; set; }
-        public string TexttoCheck { get; set; }
-        public bool CheckSpelling { get; set; }
-        public bool CheckSuggestion { get; set; }
-        public bool AddWord { get; set; }
+        SpellChecker spellCheck = new SpellChecker();
+        spellCheck.CheckSpelling(spellChecker.LanguageID, spellChecker.TexttoCheck);
+        return Newtonsoft.Json.JsonConvert.SerializeObject(spellCheck);
     }
-```
+    catch
+    {
+        return "{\"SpellCollection\":[],\"HasSpellingError\":false,\"Suggestions\":null}";
+    }
+}
+
+public class SpellCheckJsonData
+{
+    public int LanguageID { get; set; }
+    public string TexttoCheck { get; set; }
+    public bool CheckSpelling { get; set; }
+    public bool CheckSuggestion { get; set; }
+    public bool AddWord { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+>N You can find the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) then configure the dictionary set up  to make use for spell check or use the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) to host your own web service.
 
 ## Save as file formats other than SFDT and DOCX
 
