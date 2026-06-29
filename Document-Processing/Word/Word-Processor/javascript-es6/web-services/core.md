@@ -227,11 +227,11 @@ The following example code illustrates how to write a Web API for restrict editi
     [HttpPost]
     [EnableCors("AllowAllOrigins")]
     [Route("RestrictEditing")]
-    public string[] RestrictEditing([FromBody]CustomRestrictParameter param)
+    public string[] RestrictEditing([FromBody] CustomRestrictParameter param)
     {
-        if (param.passwordBase64 == "" && param.passwordBase64 == null)
+        if (param.passwordBase64 == "" || param.passwordBase64 == null)
             return null;
-        return WordDocument.ComputeHash(param.passwordBase64, param.saltBase64, param.spinCount);
+        return WordDocument.ComputeHash(param.passwordBase64, param.saltBase64, param.spinCount, param.algorithmSid);
     }
 
     public class CustomRestrictParameter
@@ -239,6 +239,7 @@ The following example code illustrates how to write a Web API for restrict editi
         public string passwordBase64 { get; set; }
         public string saltBase64 { get; set; }
         public int spinCount { get; set; }
+        public string algorithmSid { get; set;}
     }
 ```
 
