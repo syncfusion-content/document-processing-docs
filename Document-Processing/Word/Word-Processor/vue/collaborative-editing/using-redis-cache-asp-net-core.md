@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Collaborative editing in Vue DOCX Editor
+# Collaborative Editing in Vue with Redis in ASP.NET Core
 
 Syncfusion® Vue DOCX Editor (Document Editor) supports collaborative editing which Allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made
 
