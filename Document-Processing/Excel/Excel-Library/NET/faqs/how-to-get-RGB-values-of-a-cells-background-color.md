@@ -1,6 +1,6 @@
 ---
 title: Get RGB values of a cell's background color | Syncfusion 
-description: Code example to get RGB values of a cell's background color using Syncfusion .NET Excel library (XlsIO). 
+description: Code example to get RGB values of a cell's background color using .NET Excel Library. 
 platform: document-processing 
 control: XlsIO 
 documentation: UG
