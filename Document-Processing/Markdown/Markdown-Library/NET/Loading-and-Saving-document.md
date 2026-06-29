@@ -142,7 +142,6 @@ The following table describes the available properties in the `MdImportSettings`
 |**Property** |**Description**|
 |-------------|---------------|
 |Encoding|Gets or sets the text encoding to use when reading Markdown files. The default value is UTF8.|
-|UseThematicBreakAsContentBreak|Gets or sets a value that specifies whether thematic breaks (---) should be treated as content breaks during parsing. This option is typically used to split PPTX slides and Excel sheets based on thematic breaks.|
 |ImageNodeVisited|When an image node is encountered during import. Use this event to customize image loading by providing the image stream.|
 
 N> Hook the `ImageNodeVisited` event before opening the input Markdown document.

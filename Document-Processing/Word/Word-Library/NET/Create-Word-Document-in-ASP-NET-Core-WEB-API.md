@@ -220,6 +220,6 @@ Upon executing the program, the **Word document** will be generated as follows.
 
 ![ASP .NET Core WEB API output Word document](ASP-NET-Core-WEB-API-images/ASP-NET-Core-Web-API-Output.png)
 
-Click [here](https://www.syncfusion.com/document-sdk/net-word-library) to explore the rich set of the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) features.
+Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.
 
 An online sample link to [create a Word document](https://document.syncfusion.com/demos/word/helloworld#/tailwind) in ASP.NET Core. 
