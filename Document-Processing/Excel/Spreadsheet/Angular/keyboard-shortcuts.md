@@ -9,7 +9,7 @@ documentation: ug
 
 # Keyboard shortcuts in Angular Spreadsheet component
 
-The keyboard shortcuts supported in the [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) are,
+The keyboard shortcuts supported in the Spreadsheet are,
 
 | Shortcut | Description |
 |-------|---------|
