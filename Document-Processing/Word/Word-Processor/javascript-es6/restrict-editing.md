@@ -435,7 +435,7 @@ container.documentEditor.userColor = '#fff000';
 {% endhighlight %}
 {% endtabs %}
 
-The [`highlightEditableRanges`](https://ej2.syncfusion.com/documentation/api/document-editor/documentEditorSettings/#highlighteditableranges) property can be used to toggle the highlighting of editable regions.
+The [`highlightEditableRanges`](https://ej2.syncfusion.com/documentation/api/document-editor/documentEditorSettings#highlighteditableranges) property can be used to toggle the highlighting of editable regions.
 
 The following code example demonstrates how to enable or disable editable region highlighting.
 
