@@ -25,7 +25,7 @@ Step 3: Install [Syncfusion.SmartDataExtractor.AspNet.Mvc5](https://www.nuget.or
 ![NuGet package installation](GettingStarted_images/MVC_DataExtractorNuget.png)  
 
 Step 4: Include the following namespaces in the HomeController.cs file.
-
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using System.IO;
@@ -33,10 +33,10 @@ using System.Text;
 using Syncfusion.SmartDataExtractor;
 
 {% endhighlight %}
-
+{% endtabs %}
 Step 5: Add a new button in the Index.cshtml as shown below.
-
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight CSHTML %}
 
 @{
    ViewBag.Title = "Home Page";
@@ -50,9 +50,10 @@ Step 5: Add a new button in the Index.cshtml as shown below.
 </div>
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: Add a new action method named `ExtractData` in HomeController.cs and include the following code example to extract data from a PDF document using the [ExtractDataAsJson](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsJson_System_IO_Stream_) method in the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class. 
-
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 // Resolve the path to the input PDF file inside the App_Data folder.
@@ -74,6 +75,7 @@ using (FileStream stream = new FileStream(inputPath, FileMode.Open, FileAccess.R
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Getting-Started/ASP.NETMVC/Extract_Data).
 
