@@ -11,7 +11,7 @@ documentation: ug
 
 Syncfusion AI Tools accelerate development by generating accurate code, providing contextual guidance, automating document workflows, and creating production-ready UIs from natural-language prompts. By reducing research, coding, debugging, and manual effort, developers can build and deliver document-centric applications faster with greater efficiency.
 
-## AI-Driven Solutions
+## AI Solutions
 
 The following AI tools are available to help you process documents efficiently.
 
@@ -45,13 +45,13 @@ Learn more about:
 
 Enable AI agents to autonomously handle document tasks at runtime-such as creating reports, converting files, and extracting form data-without requiring you to write complex processing logic. When building an application with AI agents, simply add the [Syncfusion.DocumentSDK.AI.AgentTools](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools) NuGet package and let your agent manage document workflows seamlessly.
 
-[Learn more](https://help.syncfusion.com/document-processing/ai-agent-tools/overview).
+Learn more about [AI Agent Tools](https://help.syncfusion.com/document-processing/ai-agent-tools/overview).
 
 ### AI Coding Assistant
 
 Integrates with Visual Studio, VS Code, and JetBrains Rider and more to accelerate development. Ask how to implement any feature and instantly receive documentation-backed, copy‑paste‑ready C# code tailored to Syncfusion APIs.
 
-[Learn more](https://help.syncfusion.com/document-processing/mcp-server/ai-coding-assistant/overview).
+Learn more about [AI Coding Assistant](https://help.syncfusion.com/document-processing/mcp-server/ai-coding-assistant/overview).
 
 ## Choosing the Right AI Tool
 
