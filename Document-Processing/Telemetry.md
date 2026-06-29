@@ -1,10 +1,9 @@
 ---
-title: Collect anonymous usage data with Telemetry in .NET | Syncfusion
+title: Telemetry in .NET | Syncfusion
 description: Syncfusion® Telemetry collects anonymous usage data in .NET to improve product quality, track feature adoption, and guide product planning.
 platform: document‑processing
 control: Telemetry
 documentation: UG
-keywords: Assemblies
 ---
 
 # Overview 
@@ -14,7 +13,6 @@ Syncfusion Telemetry library collects anonymous usage data to improve product qu
 Telemetry is enabled by default. However, you can disable it at any time if required. 
 
 N> Telemetry is automatically disabled in production environments. No data is collected from deployed applications or end users.
-
 
 ## Why do we collect anonymous telemetry? 
 
@@ -27,7 +25,6 @@ We collect anonymous telemetry data to:
     * .NET versions 
     * Operating systems 
     * Development environments 
-
 
 ## What data is collected? 
 
@@ -118,9 +115,7 @@ Add the following namespace in the file where your application starts using Sync
 {% tabs %} 
 
 {% highlight c# tabtitle="C#" %}
-
 using Syncfusion.Telemetry;
-
 {% endhighlight %}
 
 ### Step 2: Disable telemetry at application startup
