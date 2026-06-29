@@ -8,7 +8,7 @@ documentation: UG
 
 # Open and Save Word Document in Blazor
 
-Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net-core/word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, a **open and save a Word document in Blazor**.
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, a **open and save a Word document in Blazor**.
 
 ## Blazor Web App Server Application
 

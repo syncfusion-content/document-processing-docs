@@ -1,5 +1,6 @@
 ---
 title: Extract data in ASP.NET Core | Syncfusion
+canonical_url: "https://www.syncfusioninternal.com/document-sdk/net-pdf-data-extraction"
 description: Learn how to extract data from PDF in ASP.NET Core with step‑by‑step guidance using Syncfusion .NET Core Data extraction library.
 platform: document-processing
 control: SmartDataExtractor
