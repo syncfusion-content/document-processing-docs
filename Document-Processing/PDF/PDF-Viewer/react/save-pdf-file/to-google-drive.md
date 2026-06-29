@@ -9,7 +9,7 @@ documentation: ug
 
 # Save PDF files to Google Drive
 
-This article describes how to save a PDF file to Google Drive from the PDF Viewer using a server-side web service. Follow the steps below.
+This article describes how to save a PDF file to Google Drive from the React PDF Viewer using a server-side web service. Follow the steps below.
 
 **Step 1:** Set up the Google Drive API
 
