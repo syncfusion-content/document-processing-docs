@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Restrict Editing in Angular DOCX Editor | Syncfusion
-description: Learn how to enable Restrict Editing in the Angular DOCX Editor to control document changes.
+description: Learn how to enable Restrict Editing in the Angular DOCX Editor to securely manage document access and control user modifications.
 platform: document-processing
 control: Restrict editing 
 documentation: ug
