@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert PowerPoint to Image in Amazon Linux EC2
 
-Syncfusion<sup>&reg;</sup> [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) (Presentation) is used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert PowerPoint to image in Amazon Linux EC2** within a few lines of code.
+Syncfusion<sup>&reg;</sup> [.NET Core PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) is used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert PowerPoint to image in Amazon Linux EC2** within a few lines of code.
 
 N> To run the sample without manually providing credentials, attach an IAM role with S3 access to your EC2 instance. The AWS SDK will automatically use this role, allowing secure access to S3 without storing access keys.
 
@@ -382,6 +382,6 @@ You can download samples demonstrating how to convert a PowerPoint presentation 
 * [Sample with credentials](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/AWS/AWS-EC2/PPTXtoImage_withCredentials/) – Requires access keys to authenticate the S3 bucket (for ex: the user must provide an access key and secret key).
 * [Sample without credentials](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/AWS/AWS-EC2/PPTXtoImage_withoutCredentials/) – Uses default account authentication (for ex: relying on IAM roles or AWS environment credentials).
  
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) features. 
+Click [here](https://www.syncfusion.com/document-sdk/net-powerpoint-library) to explore the rich set of the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) features. 
 
 An online sample link to [convert PowerPoint Presentation to image](https://document.syncfusion.com/demos/powerpoint/pptxtoimage#/tailwind) in ASP.NET Core. 

@@ -478,7 +478,7 @@ N> * The Essential Presentation Library supports PowerPoint presentation to PDF 
 
 [PresentationToPdfConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.PresentationToPdfConverter.PresentationToPdfConverterSettings.html) can be used to customize the conversion of Presentation to PDF document. [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) class can be further used to improve the quality of converted charts in the PDF/Image. For more information about this, see [Conversion](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/getting-started).
 
-N> You can refer to our [.NET PowerPoint framework](https://www.syncfusion.com/document-processing/powerpoint-framework/net) webpage to see the product’s groundbreaking features. You can also explore our [.NET PowerPoint framework demo](https://www.syncfusion.com/demos/fileformats/powerpoint-library) that shows how to create and modify PowerPoint files from C# with just five lines of code on different platforms.
+N> You can refer to our [.NET PowerPoint framework](https://www.syncfusion.com/document-sdk/net-powerpoint-library) webpage to see the product’s groundbreaking features. You can also explore our [.NET PowerPoint framework demo](https://www.syncfusion.com/demos/fileformats/powerpoint-library) that shows how to create and modify PowerPoint files from C# with just five lines of code on different platforms.
 
 ## Online Demo
 

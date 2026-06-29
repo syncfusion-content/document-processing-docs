@@ -1,5 +1,6 @@
 ---
 title: Intro to OCR Processor | Syncfusion
+canonical_url: "https://www.syncfusion.com/document-sdk/net-pdf-library/ocr-process"
 description: This page introduces the Syncfusion OCR Processor, highlighting its purpose, main features, and how to begin optical character recognition in .NET apps.
 platform: document-processing
 control: OCRProcessor
