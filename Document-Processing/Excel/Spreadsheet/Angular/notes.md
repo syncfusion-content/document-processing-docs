@@ -11,7 +11,7 @@ documentation: ug
 
 The **Notes** feature is used to insert comments, provide feedback, suggest changes, or leave remarks on specific cells while reviewing documents in the Spreadsheet. You can enable or disable the notes functionality using the [enableNotes](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#enablenotes) property, which defaults to **true**.
 
-When opening the Excel document with notes in the [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor), they will be displayed in the control. The cells containing notes will be indicated with a red colored triangle at the top-right corner. Hovering the mouse over these cells will display the content of the notes.
+When opening the Excel document with notes in the Spreadsheet, they will be displayed in the control. The cells containing notes will be indicated with a red colored triangle at the top-right corner. Hovering the mouse over these cells will display the content of the notes.
 
 ![Adding, editing, and deleting a note in Spreadsheet](./images/spreadsheet_add_edit_delete_note.gif)
 

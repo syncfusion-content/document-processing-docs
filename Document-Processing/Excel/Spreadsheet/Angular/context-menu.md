@@ -9,7 +9,7 @@ documentation: ug
 
 # Context menu in Angular Spreadsheet component
 
-Context Menu is used to improve user interaction with [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) using the popup menu. This will open when right-clicking on Cell/Column Header/Row Header/ Pager in the Spreadsheet. You can use [`enableContextMenu`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#enablecontextmenu) property to enable/disable context menu.
+Context Menu is used to improve user interaction with Spreadsheet using the popup menu. This will open when right-clicking on Cell/Column Header/Row Header/ Pager in the Spreadsheet. You can use [`enableContextMenu`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#enablecontextmenu) property to enable/disable context menu.
 
 > The default value for the `enableContextMenu` property is `true`.
 

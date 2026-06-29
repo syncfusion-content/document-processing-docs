@@ -9,7 +9,7 @@ documentation: ug
 
 # Filter in Angular Spreadsheet component
 
-Filtering helps you to view specific rows in the [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) by hiding the other rows. You can use the [`allowFiltering`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowfiltering) property to enable or disable filtering functionality.
+Filtering helps you to view specific rows in the Spreadsheet by hiding the other rows. You can use the [`allowFiltering`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowfiltering) property to enable or disable filtering functionality.
 
 > * The default value for `allowFiltering` property is `true`.
 

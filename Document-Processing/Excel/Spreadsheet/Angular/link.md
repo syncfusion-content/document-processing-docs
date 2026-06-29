@@ -9,7 +9,7 @@ documentation: ug
 
 # Link in Angular Spreadsheet component
 
-Hyperlink is used to navigate to web links or cell reference within the sheet or to other sheets in [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor). You can use the [`allowHyperlink`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowhyperlink) property to enable or disable hyperlink functionality.
+Hyperlink is used to navigate to web links or cell reference within the sheet or to other sheets in Spreadsheet. You can use the [`allowHyperlink`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowhyperlink) property to enable or disable hyperlink functionality.
 
 > * The default value for `allowHyperlink` property is `true`.
 
