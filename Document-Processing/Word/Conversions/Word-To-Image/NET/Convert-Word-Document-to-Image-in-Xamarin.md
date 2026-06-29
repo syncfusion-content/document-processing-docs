@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert Word Document to Image in Xamarin
 
-Syncfusion<sup>&reg;</sup> DocIO is a [Xamarin Word library](https://www.syncfusion.com/document-processing/word-framework/xamarin/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or **interop** dependencies. Using this library, you can **convert a Word document to image in Xamarin**.
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or **interop** dependencies. Using this library, you can **convert a Word document to image in Xamarin**.
 
 ## Steps to convert Word document to Image in Xamarin
 
@@ -186,6 +186,6 @@ By executing the program, you will get the **image** as follows.
 
 ![Word to Image in Xamarin](WordToPDF_images/Output-WordtoImage.png)      
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/xamarin) to explore the rich set of the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) features. 
+Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.
 
 An online sample link to [convert Word document to image](https://document.syncfusion.com/demos/word/wordtoimage#/tailwind) in ASP.NET Core. 
