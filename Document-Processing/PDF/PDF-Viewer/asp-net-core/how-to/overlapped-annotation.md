@@ -9,7 +9,7 @@ documentation: ug
 
 # Retrieve overlapped annotations in ASP.NET Core PDF Viewer
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer allows you to identify all annotations that occupy the same spatial coordinates when a user clicks or taps the document. This is particularly useful for managing stacked or closely grouped highlights, notes, or shapes.
+The ASP.NET Core PDF Viewer allows you to identify all annotations that occupy the same spatial coordinates when a user clicks or taps the document. This is particularly useful for managing stacked or closely grouped highlights, notes, or shapes.
 
 ## Accessing overlapped annotations
 

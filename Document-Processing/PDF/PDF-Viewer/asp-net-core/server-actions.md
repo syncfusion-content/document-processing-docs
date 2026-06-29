@@ -9,7 +9,7 @@ documentation: ug
 
 # Server Actions in ASP.NET Core PDF Viewer
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer is a client-server control that performs all heavy document processing on the server while sending incremental responses to the client for rendering and user interaction. This architecture ensures optimal performance, memory efficiency, and scalability by processing PDF documents on the backend and streaming only the necessary data to the browser.
+The PDF Viewer is a client-server control that performs all heavy document processing on the server while sending incremental responses to the client for rendering and user interaction. This architecture ensures optimal performance, memory efficiency, and scalability by processing PDF documents on the backend and streaming only the necessary data to the browser.
 
 **Key requirements for proper operation:**
 - ASP.NET Core controller routes must be properly registered

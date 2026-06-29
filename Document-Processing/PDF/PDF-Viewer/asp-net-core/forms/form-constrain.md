@@ -9,7 +9,7 @@ documentation: ug
 
 # PDF Form Field Flags in ASP.NET Core PDF Viewer
 
-The Syncfusion ASP.NET Core PDF Viewer allows controlling how users interact with form fields and how those fields behave during validation and printing by applying form field flags. These flags define whether a form field can be modified, whether it is mandatory, and whether it appears in printed output.
+The ASP.NET Core PDF Viewer allows controlling how users interact with form fields and how those fields behave during validation and printing by applying form field flags. These flags define whether a form field can be modified, whether it is mandatory, and whether it appears in printed output.
 
 This topic explains:
 - [Supported form field flags](#supported-pdf-form-field-flags)
@@ -35,7 +35,7 @@ The following flags are supported in the PDF Viewer:
 
 ### Make Fields Read Only
 
-The **isReadOnly** property prevents users from modifying a form field through the UI. This is useful for displaying prefilled or calculated values that should not be changed.
+The **isReadOnly** property prevents users from modifying a form field through the UI. This is useful for displaying prefixed or calculated values that should not be changed.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

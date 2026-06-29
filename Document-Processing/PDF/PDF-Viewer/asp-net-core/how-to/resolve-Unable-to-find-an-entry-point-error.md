@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Resolve “Unable to find an entry point named FPDFText_GetCharAngle” error in ASP.NET Core PDF Viewer | Syncfusion
-description: Resolve the “Unable to find an entry point named FPDFText_GetCharAngle” error in the Syncfusion ASP.NET Core PDF Viewer by updating the PDFium assemblies and republishing the service.
+title: Resolve entry point not found error in ASP.NET Core | Syncfusion
+description: This guide explains how to resolve the FPDFText_GetCharAngle entry point error by updating PDFium assemblies in the ASP.NET Core PDF Viewer.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 ---
 
-# Resolve "Unable to find an entry point named FPDFText_GetCharAngle" error
+# FPDFText_GetCharAngle entry point resolution in ASP.NET Core
 
-Effective with Essential Studio<sup style="font-size:70%">&reg;</sup> version 21.1.0.35 (2023 Volume 1), the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer includes an updated PDFium engine to enhance text search, selection, and overall rendering performance. If an application continues to reference legacy native PDFium binaries after upgrading NuGet packages, it may trigger the exception: **"Unable to find an entry point named FPDFText_GetCharAngle"**.
+Effective with Essential Studio<sup style="font-size:70%">&reg;</sup> version 21.1.0.35 (2023 Volume 1), the ASP.NET Core PDF Viewer includes an updated PDFium engine to enhance text search, selection, and overall rendering performance. If an application continues to reference legacy native PDFium binaries after upgrading NuGet packages, it may trigger the exception: **"Unable to find an entry point named FPDFText_GetCharAngle"**.
 
 This error typically results in the client displaying a **"Web-Service is not listening"** status. This can be confirmed by inspecting the **Network** tab in the browser developer tools, where the service response will indicate a failure due to missing or mismatched PDFium assemblies.
 
@@ -18,8 +18,8 @@ This error typically results in the client displaying a **"Web-Service is not li
 To resolve this issue, ensure the deployed environment contains the correct native libraries for the host operating system:
 
 * **Windows:** `pdfium.dll`
-* **Linux:** `libpdfium.so`
-* **macOS:** `libpdfium.dylib`
+* **Linux:** `lib pdfium.so`
+* **macOS:** `lib pdfium.dylib`
 
 ![Network tab error information](../images/ErrorinformationuintheNetworkTab.png)
 

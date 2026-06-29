@@ -17,7 +17,7 @@ You must set up a project in the Google Developers Console and enable the Google
 
 **Step 2:** Create a PDF Viewer sample in ASP.NET Core
 
-Follow instructions provided in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer Getting Started [Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started-with-server-backed) to create a simple PDF Viewer sample in ASP.NET Core.
+Follow instructions provided in the PDF Viewer Getting Started [Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started-with-server-backed) to create a simple PDF Viewer sample in ASP.NET Core.
 
 **Step 3:** Modify the `Index.cshtml.cs` file in the project
 

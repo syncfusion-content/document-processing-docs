@@ -15,7 +15,7 @@ Use the [**exportAnnotationsAsObject()**](https://ej2.syncfusion.com/documentati
 
 Follow these steps to implement annotation import and export functionality:
 
-**Step 1:** Follow the [Syncfusion ASP.NET Core PDF Viewer getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a basic PDF Viewer instance.
+**Step 1:** Follow the [ASP.NET Core PDF Viewer getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a basic PDF Viewer instance.
 
 **Step 2:** Use the following code snippets to implement annotation import and export functionality:
 

@@ -13,7 +13,7 @@ Highlight search results automatically by adding rectangle annotations at match 
 
 ## Add rectangle annotations on search result highlights
 
-**Step 1:** Follow the [Syncfusion PDF Viewer Getting Started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to set up a basic PDF Viewer sample.
+**Step 1:** Follow the [PDF Viewer Getting Started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to set up a basic PDF Viewer sample.
 
 **Step 2:** Configure the PDF Viewer to listen for the `textSearchHighlight` event and add annotations based on the provided bounds. Use the following code snippet in the Razor view:
 
