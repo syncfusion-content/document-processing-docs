@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert PowerPoint to Image in UWP
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [UWP PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/uwp/powerpoint-library) used to create, read, edit and **convert PowerPoint presentation** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to image in UWP**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [UWP PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and **convert PowerPoint presentation** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to image in UWP**.
 
 ## Steps to convert PowerPoint to Image programmatically
 
@@ -89,7 +89,7 @@ By executing the program, you will get the **Image** as follows.
 
 ![Converted Image from PowerPoint in UWP](PPTXtoPDF_images/Output_PowerPoint_Presentation_to-Image.png)
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/uwp) to explore the rich set of the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) features. 
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 
 
  An online sample link to [convert PowerPoint Presentation to image](https://document.syncfusion.com/demos/powerpoint/pptxtoimage#/tailwind) in ASP.NET Core. 
 
