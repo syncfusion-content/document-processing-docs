@@ -106,7 +106,7 @@ This ensures that telemetry does not affect your application users or production
 
 ## How to Disable Telemetry (Opt-out)? 
 
-You can disable telemetry in Syncfusion<sup>&reg;</sup> .NET products by calling the Telemetry.Disable() API before using any Syncfusion<sup>&reg;</sup> product APIs in your application. 
+You can disable telemetry in Syncfusion<sup>&reg;</sup> .NET products by calling the `Telemetry.Disable()` API before using any Syncfusion<sup>&reg;</sup> product APIs in your application. 
 
 ### Step 1: Add the telemetry namespace 
 
