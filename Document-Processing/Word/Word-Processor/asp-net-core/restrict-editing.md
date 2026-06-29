@@ -25,19 +25,6 @@ The following example code illustrates how to enforce or remove read-only protec
 {% tabs %}
 {% highlight ts tabtitle="CSHTML" %}
 
-@using Syncfusion.EJ2
-@addTagHelper *, Syncfusion.EJ2
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Document Editor</title>
-
-    <!-- Syncfusion styles -->
-    <link href="https://cdn.syncfusion.com/ej2/24.2.0/material.css" rel="stylesheet" />
-    <script src="https://cdn.syncfusion.com/ej2/24.2.0/dist/ej2.min.js"></script>
-</head>
-<body>
     <ejs-documenteditorcontainer 
         id="container"
         height="600px"
@@ -72,7 +59,6 @@ The following example code illustrates how to enforce or remove read-only protec
             container.documentEditor.editor.stopProtection('123');
         }
     </script>
-</html>
 
 {% endhighlight %}
 {% endtabs %}
@@ -86,19 +72,6 @@ The following example code illustrates how to enforce or remove form-filling res
 {% tabs %}
 {% highlight ts tabtitle="CSHTML" %}
 
-@using Syncfusion.EJ2
-@addTagHelper *, Syncfusion.EJ2
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Document Editor</title>
-
-    <!-- Syncfusion styles -->
-    <link href="https://cdn.syncfusion.com/ej2/24.2.0/material.css" rel="stylesheet" />
-    <script src="https://cdn.syncfusion.com/ej2/24.2.0/dist/ej2.min.js"></script>
-</head>
-<body>
     <ejs-documenteditorcontainer 
         id="container"
         height="600px"
@@ -133,7 +106,6 @@ The following example code illustrates how to enforce or remove form-filling res
             container.documentEditor.editor.stopProtection('123');
         }
     </script>
-</html>
 
 {% endhighlight %}
 {% endtabs %}
@@ -147,19 +119,6 @@ The following example code illustrates how to enforce and remove comments-only p
 {% tabs %}
 {% highlight ts tabtitle="CSHTML" %}
 
-@using Syncfusion.EJ2
-@addTagHelper *, Syncfusion.EJ2
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Document Editor</title>
-
-    <!-- Syncfusion styles -->
-    <link href="https://cdn.syncfusion.com/ej2/24.2.0/material.css" rel="stylesheet" />
-    <script src="https://cdn.syncfusion.com/ej2/24.2.0/dist/ej2.min.js"></script>
-</head>
-<body>
     <ejs-documenteditorcontainer 
         id="container"
         height="600px"
@@ -194,7 +153,6 @@ The following example code illustrates how to enforce and remove comments-only p
             container.documentEditor.editor.stopProtection('123');
         }
     </script>
-</html>
 
 {% endhighlight %}
 {% endtabs %}
@@ -208,19 +166,6 @@ The following example code illustrates how to enforce and remove revisions-only 
 {% tabs %}
 {% highlight ts tabtitle="CSHTML" %}
 
-@using Syncfusion.EJ2
-@addTagHelper *, Syncfusion.EJ2
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Document Editor</title>
-
-    <!-- Syncfusion styles -->
-    <link href="https://cdn.syncfusion.com/ej2/24.2.0/material.css" rel="stylesheet" />
-    <script src="https://cdn.syncfusion.com/ej2/24.2.0/dist/ej2.min.js"></script>
-</head>
-<body>
     <ejs-documenteditorcontainer 
         id="container"
         height="600px"
@@ -255,7 +200,6 @@ The following example code illustrates how to enforce and remove revisions-only 
             container.documentEditor.editor.stopProtection('123');
         }
     </script>
-</html>
 
 {% endhighlight %}
 {% endtabs %}
