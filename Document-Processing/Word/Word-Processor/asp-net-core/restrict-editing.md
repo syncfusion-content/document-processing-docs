@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Restrict Editing in ASP.NET Core DOCX Editor | Syncfusion
-description: Learn how to enable Restrict Editing in the ASP.NET Core DOCX Editor to control document changes effectively.
+description: Learn how to enable Restrict Editing in the ASP.NET Core DOCX Editor to securely manage document access and control user modifications.
 platform: document-processing
 control: Restrict Editing
 documentation: ug
