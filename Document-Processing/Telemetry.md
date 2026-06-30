@@ -14,9 +14,9 @@ Telemetry is **enabled by default**. However, you can disable it at any time if 
 
 N> Telemetry is automatically disabled in production environments. No data is collected from deployed applications or end users.
 
-## Why do we collect anonymous telemetry? 
+## Why do we collect telemetry? 
 
-We collect anonymous telemetry data to: 
+We collect telemetry data to: 
 
 * Understand feature adoption and usage trends 
 * Identify frequently used components and frameworks 
@@ -28,9 +28,7 @@ We collect anonymous telemetry data to:
 
 ## What data is collected? 
 
-Syncfusion<sup>&reg;</sup> collects only a limited set of anonymous usage data during development to understand product usage and improve product planning.  The following anonymous data is collected **only in development mode:** 
-
-The following data fields are collected by the Syncfusion<sup>&reg;</sup> Telemetry Library: 
+Syncfusion<sup>&reg;</sup> collects only a limited set of anonymous usage data during development to understand product usage and improve product planning.  The following data is collected **only in development mode:** 
 
 <table>
 <thead>
@@ -78,7 +76,7 @@ The following data fields are collected by the Syncfusion<sup>&reg;</sup> Teleme
 </tr>
 <tr>
 <td>Event Name</td>
-<td>Anonymous product events</td>
+<td>Product events name</td>
 </tr>
 </tbody>
 </table>
@@ -102,7 +100,23 @@ Telemetry is designed to run only in development environments.
 * Enabled by default during development 
 * Automatically disabled in production builds 
 * No data is collected from deployed applications 
+
 This ensures that telemetry does not affect your application users or production systems
+
+## What information is Not collected?
+
+Syncfusion does not collect:
+
+* Personal information (name, email address, customer ID, company information)
+* Source code
+* Documents or files
+* Application data
+* User-generated content
+* Business data
+* Prompts or AI conversations
+* Authentication credentials
+* License keys
+* Any information that can directly identify an individual
 
 ## How to Disable Telemetry (Opt-out)? 
 
@@ -143,16 +157,13 @@ N> The `Telemetry.Disable()` API should be called, before creating or using any 
 
 ## FAQs
 
+### Why am I getting "System.Net.Http.HttpRequestException
+
 <table>
-<thead>
+<th style="font-size:14px" width="100px">Exception</th>
+<th style="font-size:14px">Why am I getting "System.Net.Http.HttpRequestException - No such host is known" error?</th>
 <tr>
-<th><b>Exception</b></th>
-<th><b>Why am I getting "System.Net.Http.HttpRequestException - No such host is known" error? </b></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><b>Reason</b></td>
+<th style="font-size:14px" width="100px">Reason</th>
 <td>
 <p>This error may occur in the following scenarios: </p>
 <ul>
@@ -163,11 +174,10 @@ N> The `Telemetry.Disable()` API should be called, before creating or using any 
 </td>
 </tr>
 <tr>
-<td><b>Solution</b></td>
+<th style="font-size:14px" width="100px">Solution</th>
 <td>
 <p>To resolve this error and prevent the exception from being thrown, you can <a href="#how-to-disable-telemetry-opt-out">disable the telemetry</a> in your application. This will turn off telemetry data collection entirely.</p>
 </td>
 </tr>
-</tbody>
 </table>
 
