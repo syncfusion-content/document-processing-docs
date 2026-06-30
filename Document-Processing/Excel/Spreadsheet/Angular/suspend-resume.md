@@ -46,7 +46,7 @@ Execute the actions you want to apply. The Spreadsheet model is updated, but the
 
 Call `resumeRefresh` after all operations are complete. The Spreadsheet then renders all accumulated changes in a single refresh.
 
-#### Example pattern
+### Example pattern
 
 ```js
 let spreadsheet;

@@ -2,23 +2,29 @@
 layout: post
 title: Protect sheet in Angular Spreadsheet component | Syncfusion
 description: Learn here all about Protect sheet in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
-platform: document-processing
 control: Protect sheet 
+platform: document-processing
 documentation: ug
 ---
 
-# Protect sheet in Angular Spreadsheet component
+# Protection in Angular Spreadsheet component
 
-Sheet protection helps you to prevent the users from modifying the data in the spreadsheet.
+Sheet protection allows you to prevent users from modifying data in the Spreadsheet.  
+When a sheet is protected, editing actions such as typing, formatting, or deleting content are restricted, ensuring that important data remains secure.
 
-## Protect Sheet
+You can enable protection by using the [`protectSheet`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet#protectsheet) method.  
+This locks the sheet and restricts user actions based on the protection settings you configure.
 
-Protect sheet feature helps you to prevent the unknown users from accidentally changing, editing, moving, or deleting data in a spreadsheet. And you can also protect the sheet with password.
-You can use the [`isProtected`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#isprotected) property to enable or disable the Protecting functionality.
+## Sheet Protection
+
+### Protect Sheet
+
+Protect sheet feature helps you to prevent the unknown users from accidentally changing, editing, moving, or deleting data in a spreadsheet. And you can also protect the sheet with password. You can use the [`isProtected`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet#isprotected) property to enable or disable the Protecting functionality.
 
 > * The default value for `isProtected` property is `false`.
 
-By default in protected sheet, selecting, formatting, inserting, deleting functionalities are disabled. To enable some of the above said functionalities the `protectSettings` options are used in a protected spreadsheet.
+By default in protected sheet, selecting, formatting, inserting, deleting functionalities are disabled. To enable some of the above said functionalities
+the `protectSettings` options are used in a protected spreadsheet.
 
 The available `protectSettings` options in spreadsheet are,
 
@@ -40,9 +46,9 @@ In the active Spreadsheet, the sheet protection can be done by any of the follow
 
 * Select the Protect Sheet item in the Ribbon toolbar under the Data Tab, and then select your desired options.
 * Right-click the sheet tab, select the Protect Sheet item in the context menu, and then select your desired options.
-* Use the [`protectSheet()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#protectsheet) method programmatically.
+* Use the [`protectSheet`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet#protectsheet) method programmatically.
 
-The following example shows `Protect Sheet` functionality with password in the Spreadsheet control.
+The following example shows `Protect Sheet` functionality in the Spreadsheet control.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
@@ -56,13 +62,10 @@ The following example shows `Protect Sheet` functionality with password in the S
   
 {% previewsample "/document-processing/samples/spreadsheet/angular/protect-sheet-cs1" %}
 
-### Limitations of Protect sheet
+### Unprotect Sheet
 
-* Password encryption is not supported
-
-## Unprotect Sheet
-
-Unprotect sheet is used to enable all the functionalities that are already disabled in a protected spreadsheet.
+The **Unprotect Sheet** feature restores all functionalities that were disabled in a protected spreadsheet.  
+Once a sheet is unprotected, users can edit, format, insert, delete, and move data without restrictions.
 
 **User Interface**:
 
@@ -70,11 +73,11 @@ In the active Spreadsheet, the sheet Unprotection can be done by any of the foll
 
 * Select the `Unprotect Sheet` item in the Ribbon toolbar under the Data Tab.
 * Right-click the sheet tab, select the `Unprotect Sheet` item in the context menu.
-* Use the [`unprotectSheet()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#unprotectsheet) method programmatically.
+* Use the [`unprotectSheet`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet#unprotectsheet) method programmatically.
 
-## Unlock the particular cells in the protected sheet
+### Unlock the particular cells in the protected sheet
 
-In protected spreadsheet, to make some particular cell or range of cells are editable, you can use [`lockCells()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#lockcells) method, with the parameter `range` and `isLocked` property as false.
+In protected spreadsheet, to make some particular cell or range of cells are editable, you can use [`lockCells`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet#lockcells) method, with the parameter `range` and `isLocked` property as false.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
@@ -88,11 +91,15 @@ In protected spreadsheet, to make some particular cell or range of cells are edi
   
 {% previewsample "/document-processing/samples/spreadsheet/angular/lock-cells-cs1" %}
 
-## Make cells read-only without protecting worksheet
+## Read-only
 
-Previously, you could make cells read-only by protecting the entire sheet using the [protectSheet](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#protectsheet) method or through the UI option. Meanwhile, to make a specific range of cells editable within a protected sheet, you needed to use the [lockCells](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#lockcells) method, passing the `range` parameter and setting the `isLocked` property to **false**. 
+The read-only feature allows you to restrict editing for specific rows, columns, or cell ranges without protecting the entire worksheet. This provides flexibility to safeguard important data while still allowing users to interact with other parts of the sheet as needed.
 
-Now, you can make an entire row, an entire column, or a specific range of cells read-only using the [setRangeReadOnly](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#setrangereadonly) method without protecting the entire sheet. This method accepts three parameters, as detailed in the following table:
+### Make Cells Read-only Without Protecting the Worksheet
+
+Previously, you could make cells read-only by protecting the entire sheet using the [protectSheet](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet#protectsheet) method or through the UI option. Meanwhile, to make a specific range of cells editable within a protected sheet, you needed to use the [lockCells](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet#lockcells) method, passing the `range` parameter and setting the `isLocked` property to **false**. 
+
+Now, you can make an entire row, an entire column, or a specific range of cells read-only using the [setRangeReadOnly](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet#setrangereadonly) method without protecting the entire sheet. This method accepts three parameters, as detailed in the following table:
 
 | Parameter | Description |
 |-----|------|
@@ -152,11 +159,11 @@ The following example demonstrates how to make rows, columns, and cells read-onl
 
 {% previewsample "/document-processing/samples/spreadsheet/angular/readonly-cs1" %}
 
-## Protect Workbook
+## Workbook Protection
 
-Protect workbook feature helps you to protect the workbook so that users cannot insert, delete, rename, hide the sheets in the spreadsheet.
-You can use the [`password`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#password) property to protect workbook with password.
-You can use the [`isProtected`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#isprotected) property to protect or unprotect the workbook without the password.
+### Protect Workbook
+
+Protect workbook feature helps you to protect the workbook so that users cannot insert, delete, rename, hide the sheets in the spreadsheet. You can use the [`password`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet#password) property to protect workbook with password. You can use the [`isProtected`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet#isprotected) property to protect or unprotect the workbook without the password.
 
 > The default value for `isProtected` property is `false`.
 
@@ -164,7 +171,7 @@ You can use the [`isProtected`](https://ej2.syncfusion.com/angular/documentation
 
 In the active Spreadsheet, you can protect the worksheet by selecting the Data tab in the Ribbon toolbar and choosing the `Protect Workbook` item. Then, enter the password and confirm it and click on OK.
 
-The following example shows `Protect Workbook` by using the [`isProtected`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#isprotected) property in the Spreadsheet control.
+The following example shows `Protect Workbook` by using the [`isProtected`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet#isprotected) property in the Spreadsheet control.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
@@ -178,7 +185,7 @@ The following example shows `Protect Workbook` by using the [`isProtected`](http
   
 {% previewsample "/document-processing/samples/spreadsheet/angular/local-data-binding-cs4" %}
 
-The following example shows `Protect Workbook` by using the [`password`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#password) property in the Spreadsheet control. To unprotect the workbook, click the unprotect workbook button in the data tab and provide the password as syncfusion<sup style="font-size:70%">&reg;</sup> in the dialog box.
+The following example shows `Protect Workbook` by using the [`password`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet#password) property in the Spreadsheet control. To unprotect the workbook, click the unprotect workbook button in the data tab and provide the password as syncfusion<sup style="font-size:70%">&reg;</sup> in the dialog box.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
@@ -189,22 +196,22 @@ The following example shows `Protect Workbook` by using the [`password`](https:/
 {% include code-snippet/spreadsheet/angular/local-data-binding-cs5/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
-  
+
 {% previewsample "/document-processing/samples/spreadsheet/angular/local-data-binding-cs5" %}
 
-## Unprotect Workbook
+### Unprotect Workbook
 
-Unprotect Workbook is used to enable the insert, delete, rename, move, copy, hide or unhide sheets feature  in the spreadsheet.
+The **Unprotect Workbook** feature restores full access to workbook-level operations such as inserting, deleting, renaming, moving, copying, hiding and unhiding sheets that were restricted when the workbook was protected.
 
 **User Interface**:
 
-In the active Spreadsheet, the workbook Unprotect can be done in any of the following ways:
+In the active Spreadsheet, the workbook can be unprotected in any of the following ways:
 
 * Select the `Unprotect Workbook` item in the Ribbon toolbar under the Data Tab and provide the valid password in the dialog box.
 
 ## Note
 
-You can refer to our [Angular Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/angular/#/material3/spreadsheet/default) to knows how to present and manipulate data.
+You can refer to our [Angular Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) to knows how to present and manipulate data.
 
 ## See Also
 
