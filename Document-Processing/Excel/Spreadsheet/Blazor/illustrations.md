@@ -7,7 +7,7 @@ control: Spreadsheet
 documentation: ug
 ---
 
-# Images and Illustrations
+# Images and Illustrations in Blazor Spreadsheet Component
 
 Syncfusion Blazor Spreadsheet component allows you to insert images directly into worksheet to enhance visual presentation and provide additional context alongside data. Images such as logos, screenshots, diagrams, or illustrations can be placed within a sheet, positioned as needed, resized, selected, or removed.
 
