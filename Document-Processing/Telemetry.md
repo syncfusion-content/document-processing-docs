@@ -105,7 +105,7 @@ This ensures that telemetry does not affect your application users or production
 
 ## What information is Not collected?
 
-Syncfusion does not collect:
+Syncfusion<sup>&reg;</sup> does not collect:
 
 * Personal information (name, email address, customer ID, company information)
 * Source code
@@ -167,8 +167,8 @@ N> The `Telemetry.Disable()` API should be called, before creating or using any 
 <td>
 <p>This error may occur in the following scenarios: </p>
 <ul>
-<li>'Your application does not have internet connectivity'</li>
-<li>'All the Exception settings are enabled in your application'</li>
+<li>Your application does not have internet connectivity</li>
+<li>All the Exception settings are enabled in your application</li>
 </ul>
 <p>When exception handling is enabled and the application lacks internet access, the telemetry module attempts to send data to Azure Application Insights, which can trigger this exception.</p>
 </td>
