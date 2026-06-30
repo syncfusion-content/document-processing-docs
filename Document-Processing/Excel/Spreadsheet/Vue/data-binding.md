@@ -9,7 +9,7 @@ documentation: ug
 
 # Data binding in Vue Spreadsheet component
 
-The [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) uses [`DataManager`], which supports both RESTful JSON data services and local JavaScript object array binding to a range. The `dataSource` property can be assigned either with the instance of [`DataManager`] or JavaScript object array collection.
+The Spreadsheet uses [`DataManager`], which supports both RESTful JSON data services and local JavaScript object array binding to a range. The `dataSource` property can be assigned either with the instance of [`DataManager`] or JavaScript object array collection.
 
 > To bind data to a cell, use `cell data binding` support.
 

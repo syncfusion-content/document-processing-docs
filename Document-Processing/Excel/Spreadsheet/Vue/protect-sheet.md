@@ -9,7 +9,7 @@ documentation: ug
 
 # Protect sheet in Vue Spreadsheet component
 
-Sheet protection helps you to prevent the users from modifying the data in the [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor).
+Sheet protection helps you to prevent the users from modifying the data in the spreadsheet.
 
 ## Protect Sheet
 
