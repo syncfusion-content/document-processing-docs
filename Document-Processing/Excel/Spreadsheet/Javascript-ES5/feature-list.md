@@ -9,7 +9,7 @@ documentation: ug
 
 # Feature list in EJ2 Javascript Spreadsheet control
 
-The following table compares Excel functionality with the availability of EJ1 and EJ2 [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) features.
+The following table compares Excel functionality with the availability of EJ1 and EJ2 Spreadsheet features.
 
 | **Features** | **Available in EJ1 Spreadsheet** | **Available in EJ2 Spreadsheet** | **Comments** |
 | --- | --- | --- | --- |

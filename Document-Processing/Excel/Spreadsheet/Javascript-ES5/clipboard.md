@@ -9,7 +9,7 @@ documentation: ug
 
 # Clipboard in EJ2 Javascript Spreadsheet control
 
-The [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) provides support for the clipboard operations (cut, copy, and paste). Clipboard operations can be enabled or disabled by setting the [`enableClipboard`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#enableclipboard) property in Spreadsheet.
+The Spreadsheet provides support for the clipboard operations (cut, copy, and paste). Clipboard operations can be enabled or disabled by setting the [`enableClipboard`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#enableclipboard) property in Spreadsheet.
  
 > By default, the `enableClipboard` property is true.
 

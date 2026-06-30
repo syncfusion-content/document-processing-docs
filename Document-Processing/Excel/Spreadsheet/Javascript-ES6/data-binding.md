@@ -9,7 +9,7 @@ documentation: ug
 
 # Data binding in EJ2 TypeScript Spreadsheet control
 
-The [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) uses [`DataManager`](https://helpej2.syncfusion.com/documentation/data/), which supports both RESTful JSON data services and local JavaScript object array binding to a range. The `dataSource` property can be assigned either with the instance of [`DataManager`](https://helpej2.syncfusion.com/documentation/data/) or JavaScript object array collection.
+The Spreadsheet uses [`DataManager`](https://helpej2.syncfusion.com/documentation/data/), which supports both RESTful JSON data services and local JavaScript object array binding to a range. The `dataSource` property can be assigned either with the instance of [`DataManager`](https://helpej2.syncfusion.com/documentation/data/) or JavaScript object array collection.
 
 > To bind data to a cell, use `cell data binding` support.
 

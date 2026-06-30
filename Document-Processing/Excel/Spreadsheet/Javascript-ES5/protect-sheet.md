@@ -9,7 +9,7 @@ documentation: ug
 
 # Protect sheet in EJ2 Javascript Spreadsheet control
 
-Sheet protection helps you to prevent the users from modifying the data in the [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor).
+Sheet protection helps you to prevent the users from modifying the data in the spreadsheet.
 
 ## Protect Sheet
 

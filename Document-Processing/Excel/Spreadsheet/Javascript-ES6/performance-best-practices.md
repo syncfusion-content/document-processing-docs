@@ -9,7 +9,7 @@ documentation: ug
 
 # Performance Best Practices in EJ2 TypeScript Spreadsheet Control
 
-Performance optimization is crucial when working with large datasets in the [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor). This documentation outlines best practices to enhance data handling efficiency and ensure a smooth, responsive user experience during various spreadsheet operations.
+Performance optimization is crucial when working with large datasets in the [TypeScript Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor). This documentation outlines best practices to enhance data handling efficiency and ensure a smooth, responsive user experience during various spreadsheet operations.
 
 ## How to improve performance when opening Excel files in the Spreadsheet?
 
