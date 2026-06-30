@@ -70,7 +70,6 @@ The following code example demonstrates how to enable or disable editable region
 
 @code {
 
-  //Disables the highlighting of the editable ranges in Syncfusion Word Processor (Document editor)
   public DocumentEditorSettingsModel settings = new DocumentEditorSettingsModel() { HighlightEditableRanges = false };  
 } 
  
