@@ -436,29 +436,50 @@ container.documentEditor.currentUser = 'engineer@mycompany.com';
 {% endhighlight %}
 {% endtabs %}
 
-## Highlighting the text area
+## Protect document with editable region
+User can select a specific section and mark it as an editable region, allowing modification only in that part. The rest of the document remains protected from any changes.
 
-The [`userColor`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#usercolor) property can be used to highlight the editable region of the current user.
+### Insert editable region
+Use the [insertEditingRegion](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#inserteditingregion) API to mark specific paragraphs as editable.This allows you to control editing by giving access to all users or only selected users.
 
-The following code example demonstrates how to set the userColor.
-
+The following example shows how to insert an editable region.
 {% tabs %}
-{% highlight js tabtitle="index.js" %}
-
-container.documentEditor.userColor = '#fff000';
-
+{% highlight ts tabtitle="TS" %}
+ 
+// Allow editing for all users
+container.documentEditor.editor.insertEditingRegion();
+ 
+// pass a username to restrict access
+container.documentEditor.editor.insertEditingRegion("User Name");
+ 
 {% endhighlight %}
 {% endtabs %}
-
-The [`highlightEditableRanges`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/documentEditorSettings#highlighteditableranges) property can be used to toggle the highlighting of editable regions.
-
-The following code example demonstrates how to enable or disable editable region highlighting.
-
+ 
+### Highlight color for editable region
+ 
+The [userColor](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/index-default#usercolor) property can be used to highlight the editable region of the current user.
+ 
+The following code example demonstrates how to set the userColor.
+ 
 {% tabs %}
-{% highlight js tabtitle="index.js" %}
-
+{% highlight ts tabtitle="TS" %}
+ 
+container.documentEditor.userColor = '#fff000';
+ 
+{% endhighlight %}
+{% endtabs %}
+ 
+### Enable or disable editable region highlighting
+ 
+The [highlightEditableRanges](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/documenteditorsettingsmodel#highlighteditableranges) property can be used to toggle the highlighting of editable regions.
+ 
+The following code example demonstrates how to enable or disable editable region highlighting.
+ 
+{% tabs %}
+{% highlight ts tabtitle="TS" %}
+ 
 container.documentEditor.documentEditorSettings.highlightEditableRanges = true;
-
+ 
 {% endhighlight %}
 {% endtabs %}
 
