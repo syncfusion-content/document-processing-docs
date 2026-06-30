@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Create, read, and edit Excel files in ASP.NET Core
 
-[Syncfusion Excel library for ASP.NET Core platform](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) can be used to create, read, edit Excel files. This also convert Excel files to PDF.
+[.NET Excel Library for ASP.NET Core platform](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) can be used to create, read, edit Excel files. This also convert Excel files to PDF.
 
 To quickly get started on creating an Excel document in ASP.NET Core, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=oLkSFvDLlEk" %}

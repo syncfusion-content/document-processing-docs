@@ -1,6 +1,6 @@
 ---
 title: Find and highlight data in Excel | Syncfusion
-description: This page shows how to find and highlight data in Excel using the Syncfusion .NET Excel library (XlsIO).
+description: This page shows how to find and highlight data in Excel using the .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -13,9 +13,9 @@ XlsIO provides following options to perform find and replace for text and number
 * Search for data in formulas, values or comments.
 * Search for case-sensitive data and to match entire cell contents of the cell.
 
-To know more about these options, please refer the [ExcelFindType](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelFindType.html), [ExcelFindOptions](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelFindOptions.html) in the API documentation section.
+To know more about these options, please refer the [ExcelFindType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelFindType.html), [ExcelFindOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelFindOptions.html) in the API documentation section.
 
-All the occurrences of a text in Excel worksheet can be found through [FindAll](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_FindAll_System_String_Syncfusion_XlsIO_ExcelFindType_) method.
+All the occurrences of a text in Excel worksheet can be found through [FindAll](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_FindAll_System_String_Syncfusion_XlsIO_ExcelFindType_) method.
 
 The following code illustrates how to find all the occurrences of a value in a worksheet and highlight that data.
 

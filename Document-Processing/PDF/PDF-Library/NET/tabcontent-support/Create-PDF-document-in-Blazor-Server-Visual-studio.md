@@ -106,7 +106,7 @@ Step 7: Inject ``ExportService`` in-to ``Weather.razor`` using the following cod
 
 @inject ExportToFileService exportService
 @inject Microsoft.JSInterop.IJSRuntime JS
-@using  System.IO;
+@using  System.IO
 
 {% endhighlight %}
 {% endtabs %}
@@ -115,7 +115,7 @@ Create a button in the ``Weather.razor`` using the following code.
 
 {% tabs %}
 {% highlight CSHTML %}
-<button class="btn btn-primary" @onclick="@ExportToPdf">Export to PDF</button>
+<button class="btn btn-primary" @onclick="@ExportToPdf">Export PDF</button>
 {% endhighlight %}
 {% endtabs %}
 
@@ -139,7 +139,6 @@ Add the ``ExportToPdf`` method in ``Weather.razor`` page to call the export serv
 Step 8: Include the ``FileUtil`` class within the ``ExportService.cs`` file to enable file-related operations as part of the export functionality.
 
 {% tabs %}
-
 {% highlight c# tabtitle="C#" %}
 
 public static class FileUtil
@@ -152,28 +151,29 @@ public static class FileUtil
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
 Step 9: Add the following JavaScript function in the  ``App.razor`` available under the ``Components`` folder.
 
 {% tabs %}
-
 {% highlight HTML %}
 
-<script type="text/javascript">
+<script type = "text/javascript" >
     function saveAsFile(filename, bytesBase64) {
-            if (navigator.msSaveBlob) {
-                //Download document in Edge browser
-                var data = window.atob(bytesBase64);
-                var bytes = new Uint8Array(data.length);
-                for (var i = 0; i < data.length; i++) {
-                    bytes[i] = data.charCodeAt(i);
-                }
-                var blob = new Blob([bytes.buffer], { type: "application/octet-stream" });
-                navigator.msSaveBlob(blob, filename);
-            }
-            else {
+    if (navigator.msSaveBlob)
+    {
+        //Download document in Edge browser
+        var data = window.atob(bytesBase64);
+        var bytes = new Uint8Array(data.length);
+        for (var i = 0; i < data.length; i++)
+        {
+            bytes[i] = data.charCodeAt(i);
+        }
+        var blob = new Blob([bytes.buffer], { type: "application/octet-stream" });
+        navigator.msSaveBlob(blob, filename);
+    }
+    else
+    {
         var link = document.createElement('a');
         link.download = filename;
         link.href = "data:application/octet-stream;base64," + bytesBase64;
@@ -181,16 +181,15 @@ Step 9: Add the following JavaScript function in the  ``App.razor`` available un
         link.click();
         document.body.removeChild(link);
     }
-        }
+}
 </script>
 
 {% endhighlight %}
-
 {% endtabs %}
 
 Step 10: Build the project.
 
-Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
+Click on **Build** → **Build Solution** or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
 Step 11: Run the project.
 

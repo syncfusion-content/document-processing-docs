@@ -15,7 +15,7 @@ The following code shows how to delete a comment from a cell with Interop and Xl
 ## Interop
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 private void DeleteComment()
 {
   //Instantiate the application object
@@ -41,7 +41,33 @@ private void DeleteComment()
 }
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+private void DeleteComment()
+{
+  //Instantiate the application object
+  var excelApp = new Microsoft.Office.Interop.Excel.Application();
+
+  //Specify the template Excel file path
+  string myPath = "InteropOutput_AddComment.xlsx";
+
+  //Open the Excel file containing comment
+  Workbook workbook = excelApp.Workbooks.Open(myPath);
+
+  //Get the A1 cell
+  Range rng1 = excelApp.get_Range("A1", Missing.Value);
+
+  //Remove the comment
+  rng1.Comment.Delete();
+
+  //Save the file
+  workbook.SaveAs("InteropOutput_DeleteComment.xlsx");
+
+  //Quit the application
+  excelApp.Quit();
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Private Sub DeleteComment()
   'Instantiate the application object
   Dim excelApp = New Microsoft.Office.Interop.Excel.Application()
@@ -70,7 +96,7 @@ End Sub
 ## XlsIO
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 private void DeleteComment()
 {
   using (ExcelEngine excelEngine = new ExcelEngine())
@@ -91,7 +117,28 @@ private void DeleteComment()
 }
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+private void DeleteComment()
+{
+  using (ExcelEngine excelEngine = new ExcelEngine())
+  {
+    //Instantiate the application object
+    IApplication application = excelEngine.Excel;
+
+    //Open the Excel file containing comment
+    IWorkbook workbook = application.Workbooks.Open("XlsIOOutput_AddComment.xlsx");
+    IWorksheet worksheet = workbook.Worksheets[0];
+
+    //Remove the comment
+    worksheet.Range["A1"].Comment.Remove();
+
+    //Save the workbook
+    workbook.SaveAs("XlsIOOutput_DeleteComment.xlsx");
+  }
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Private Sub DeleteComment()
   Using excelEngine As ExcelEngine = New ExcelEngine()
     'Instantiate the application object

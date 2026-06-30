@@ -2208,8 +2208,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to format a table in a Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/formattable#/tailwind).
-* See how to apply built-in and custom styles to the tables of the Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/tablestyles#/tailwind). 
+* Explore how to format a table in a Word document using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/formattable#/tailwind).
+* See how to apply built-in and custom styles to the tables of the Word document using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/tablestyles#/tailwind). 
 
 ## See Also
 

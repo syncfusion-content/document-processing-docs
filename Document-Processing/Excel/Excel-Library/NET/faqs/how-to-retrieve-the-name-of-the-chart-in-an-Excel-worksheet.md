@@ -1,6 +1,6 @@
 ---
 title: Retrieve the name of the chart in an Excel worksheet | Syncfusion
-description: Code example to retrieve the name of the chart in an Excel worksheet using Syncfusion .NET Excel library (XlsIO).
+description: Code example to retrieve the name of the chart in an Excel worksheet using .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

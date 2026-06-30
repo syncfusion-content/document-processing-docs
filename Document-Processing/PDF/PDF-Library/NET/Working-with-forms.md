@@ -52,7 +52,7 @@ document.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using Syncfusion.Drawing;
+using System.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Interactive;
@@ -78,7 +78,7 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports Syncfusion.Drawing
+Imports System.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Graphics
 Imports Syncfusion.Pdf.Interactive
@@ -420,54 +420,54 @@ Use the [TextAlignment](https://help.syncfusion.com/cr/document-processing/Syncf
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Set-text-alignment-in-a-Combo-Box-field/.NET/Set-text-alignment-in-a-Combo-Box-field/Program.cs" %}
 
-    using Syncfusion.Pdf;
-    using Syncfusion.Pdf.Interactive;
-    using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
-    // Load an existing document.
-    PdfLoadedDocument doc = new PdfLoadedDocument("SourceForm.pdf");
-    // Load an existing combo box field by its name.
-    PdfLoadedComboBoxField comboField = doc.Form.Fields["EmployeeCombo"] as PdfLoadedComboBoxField;
-    // Set text alignment to center for the combo box field.
-    comboField.TextAlignment = PdfTextAlignment.Center;
-    // Save the updated document.
-    doc.Save("Form.pdf");
-    doc.Close(true);
+// Load an existing document.
+PdfLoadedDocument doc = new PdfLoadedDocument("SourceForm.pdf");
+// Load an existing combo box field by its name.
+PdfLoadedComboBoxField comboField = doc.Form.Fields["EmployeeCombo"] as PdfLoadedComboBoxField;
+// Set text alignment to center for the combo box field.
+comboField.TextAlignment = PdfTextAlignment.Center;
+// Save the updated document.
+doc.Save("Form.pdf");
+doc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-    using Syncfusion.Pdf;
-    using Syncfusion.Pdf.Interactive;
-    using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
-    // Load an existing document.
-    PdfLoadedDocument doc = new PdfLoadedDocument("SourceForm.pdf");
-    // Load an existing combo box field by its name.
-    PdfLoadedComboBoxField comboField = doc.Form.Fields["EmployeeCombo"] as PdfLoadedComboBoxField;
-    // Set text alignment to center for the combo box field.
-    comboField.TextAlignment = PdfTextAlignment.Center;
-    // Save the updated document.
-    doc.Save("Form.pdf");
-    doc.Close(true);
+// Load an existing document.
+PdfLoadedDocument doc = new PdfLoadedDocument("SourceForm.pdf");
+// Load an existing combo box field by its name.
+PdfLoadedComboBoxField comboField = doc.Form.Fields["EmployeeCombo"] as PdfLoadedComboBoxField;
+// Set text alignment to center for the combo box field.
+comboField.TextAlignment = PdfTextAlignment.Center;
+// Save the updated document.
+doc.Save("Form.pdf");
+doc.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-    Imports Syncfusion.Pdf
-    Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
 
-    'Load the PDF document.
-    Dim doc As New PdfLoadedDocument("SourceForm.pdf")
-    ' Load an existing combo box field by its name.
-    Dim comboField As PdfLoadedComboBoxField = TryCast(doc.Form.Fields("EmployeeCombo"), PdfLoadedComboBoxField)
-    ' Set text alignment to center for the combo box field.
-    comboField.TextAlignment = PdfTextAlignment.Center
-    ' Save the updated document.
-    doc.Save("Form.pdf")
-    doc.Close(True)
+'Load the PDF document.
+Dim doc As New PdfLoadedDocument("SourceForm.pdf")
+' Load an existing combo box field by its name.
+Dim comboField As PdfLoadedComboBoxField = TryCast(doc.Form.Fields("EmployeeCombo"), PdfLoadedComboBoxField)
+' Set text alignment to center for the combo box field.
+comboField.TextAlignment = PdfTextAlignment.Center
+' Save the updated document.
+doc.Save("Form.pdf")
+doc.Close(True)
 
 {% endhighlight %}
 
@@ -695,40 +695,40 @@ You can choose default value for radio button field using [SelectedIndex](https:
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/refs/heads/master/Forms/Default-value-for-radio-button-field/.NET/Default_Value_For_Radio_Button/Program.cs" %}
 
-    using Syncfusion.Pdf;
-    using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
 
-    // Create a new PDF document
-    PdfDocument document = new PdfDocument();
-    // Add a new page to the PDF document
-    PdfPage page = document.Pages.Add();
+// Create a new PDF document
+PdfDocument document = new PdfDocument();
+// Add a new page to the PDF document
+PdfPage page = document.Pages.Add();
 
-    // Create a new radio button list field named "employeesRadioList"
-    PdfRadioButtonListField employeesRadioList = new PdfRadioButtonListField(page, "employeesRadioList");
-    // Create a font
-    PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Regular);
+// Create a new radio button list field named "employeesRadioList"
+PdfRadioButtonListField employeesRadioList = new PdfRadioButtonListField(page, "employeesRadioList");
+// Create a font
+PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Regular);
 
-    // Create a new radio button item for "Male"
-    PdfRadioButtonListItem radioItem1 = new PdfRadioButtonListItem("Male");
-    // Set the bounds for the radio button
-    radioItem1.Bounds = new RectangleF(90, 203, 15, 15);
-    // Draw the label "Male"
-    page.Graphics.DrawString("Male", font, PdfBrushes.Black, new RectangleF(110, 204, 180, 20));
-    // Add the radio button item to the list
-    employeesRadioList.Items.Add(radioItem1);
+// Create a new radio button item for "Male"
+PdfRadioButtonListItem radioItem1 = new PdfRadioButtonListItem("Male");
+// Set the bounds for the radio button
+radioItem1.Bounds = new RectangleF(90, 203, 15, 15);
+// Draw the label "Male"
+page.Graphics.DrawString("Male", font, PdfBrushes.Black, new RectangleF(110, 204, 180, 20));
+// Add the radio button item to the list
+employeesRadioList.Items.Add(radioItem1);
 
-    // Create a new radio button item for "Female"
-    PdfRadioButtonListItem radioItem2 = new PdfRadioButtonListItem("Female");
-    // Set the bounds for the radio button
-    radioItem2.Bounds = new RectangleF(205, 203, 15, 15);
-    // Draw the label "Female"
-    page.Graphics.DrawString("Female", font, PdfBrushes.Black, new RectangleF(225, 204, 180, 20));
-    // Add the radio button item to the list
-    employeesRadioList.Items.Add(radioItem2);
+// Create a new radio button item for "Female"
+PdfRadioButtonListItem radioItem2 = new PdfRadioButtonListItem("Female");
+// Set the bounds for the radio button
+radioItem2.Bounds = new RectangleF(205, 203, 15, 15);
+// Draw the label "Female"
+page.Graphics.DrawString("Female", font, PdfBrushes.Black, new RectangleF(225, 204, 180, 20));
+// Add the radio button item to the list
+employeesRadioList.Items.Add(radioItem2);
 
-    employeesRadioList.SelectedIndex = 1;
-    // Add the radio button list to the form
-    document.Form.Fields.Add(employeesRadioList);
+employeesRadioList.SelectedIndex = 1;
+// Add the radio button list to the form
+document.Form.Fields.Add(employeesRadioList);
 
 //Save the document.
 document.Save("Form.pdf");
@@ -742,37 +742,37 @@ document.Close(true);
     using Syncfusion.Pdf;
     using Syncfusion.Pdf.Interactive;
 
-    // Create a new PDF document
-    PdfDocument document = new PdfDocument();
-    // Add a new page to the PDF document
-    PdfPage page = document.Pages.Add();
+// Create a new PDF document
+PdfDocument document = new PdfDocument();
+// Add a new page to the PDF document
+PdfPage page = document.Pages.Add();
 
-    // Create a new radio button list field named "employeesRadioList"
-    PdfRadioButtonListField employeesRadioList = new PdfRadioButtonListField(page, "employeesRadioList");
-    // Create a font
-    PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Regular);
+// Create a new radio button list field named "employeesRadioList"
+PdfRadioButtonListField employeesRadioList = new PdfRadioButtonListField(page, "employeesRadioList");
+// Create a font
+PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Regular);
 
-    // Create a new radio button item for "Male"
-    PdfRadioButtonListItem radioItem1 = new PdfRadioButtonListItem("Male");
-    // Set the bounds for the radio button
-    radioItem1.Bounds = new RectangleF(90, 203, 15, 15);
-    // Draw the label "Male"
-    page.Graphics.DrawString("Male", font, PdfBrushes.Black, new RectangleF(110, 204, 180, 20));
-    // Add the radio button item to the list
-    employeesRadioList.Items.Add(radioItem1);
+// Create a new radio button item for "Male"
+PdfRadioButtonListItem radioItem1 = new PdfRadioButtonListItem("Male");
+// Set the bounds for the radio button
+radioItem1.Bounds = new RectangleF(90, 203, 15, 15);
+// Draw the label "Male"
+page.Graphics.DrawString("Male", font, PdfBrushes.Black, new RectangleF(110, 204, 180, 20));
+// Add the radio button item to the list
+employeesRadioList.Items.Add(radioItem1);
 
-    // Create a new radio button item for "Female"
-    PdfRadioButtonListItem radioItem2 = new PdfRadioButtonListItem("Female");
-    // Set the bounds for the radio button
-    radioItem2.Bounds = new RectangleF(205, 203, 15, 15);
-    // Draw the label "Female"
-    page.Graphics.DrawString("Female", font, PdfBrushes.Black, new RectangleF(225, 204, 180, 20));
-    // Add the radio button item to the list
-    employeesRadioList.Items.Add(radioItem2);
+// Create a new radio button item for "Female"
+PdfRadioButtonListItem radioItem2 = new PdfRadioButtonListItem("Female");
+// Set the bounds for the radio button
+radioItem2.Bounds = new RectangleF(205, 203, 15, 15);
+// Draw the label "Female"
+page.Graphics.DrawString("Female", font, PdfBrushes.Black, new RectangleF(225, 204, 180, 20));
+// Add the radio button item to the list
+employeesRadioList.Items.Add(radioItem2);
 
-    employeesRadioList.SelectedIndex = 1;
-    // Add the radio button list to the form
-    document.Form.Fields.Add(employeesRadioList);
+employeesRadioList.SelectedIndex = 1;
+// Add the radio button list to the form
+document.Form.Fields.Add(employeesRadioList);
 
     //Save the document.
     document.Save("Output.pdf");
@@ -783,45 +783,45 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-    Imports Syncfusion.Pdf
-    Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
 
-    'Load the PDF document.
-    Dim document As New PdfDocument()
-    ' Add a new page to the PDF document
-    Dim page As PdfPage = document.Pages.Add()
+'Load the PDF document.
+Dim document As New PdfDocument()
+' Add a new page to the PDF document
+Dim page As PdfPage = document.Pages.Add()
 
-    ' Create a new radio button list field named "employeesRadioList"
-    Dim employeesRadioList As New PdfRadioButtonListField(page, "employeesRadioList")
-    ' Create a font
-    Dim font As PdfFont = New PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Regular)
+' Create a new radio button list field named "employeesRadioList"
+Dim employeesRadioList As New PdfRadioButtonListField(page, "employeesRadioList")
+' Create a font
+Dim font As PdfFont = New PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Regular)
 
-    ' Create a new radio button item for "Male"
-    Dim radioItem1 As New PdfRadioButtonListItem("Male")
-    ' Set the bounds for the radio button
-    radioItem1.Bounds = New RectangleF(90, 203, 15, 15)
-    ' Draw the label "Male"
-    page.Graphics.DrawString("Male", font, PdfBrushes.Black, New RectangleF(110, 204, 180, 20))
-    ' Add the radio button item to the list
-    employeesRadioList.Items.Add(radioItem1)
+' Create a new radio button item for "Male"
+Dim radioItem1 As New PdfRadioButtonListItem("Male")
+' Set the bounds for the radio button
+radioItem1.Bounds = New RectangleF(90, 203, 15, 15)
+' Draw the label "Male"
+page.Graphics.DrawString("Male", font, PdfBrushes.Black, New RectangleF(110, 204, 180, 20))
+' Add the radio button item to the list
+employeesRadioList.Items.Add(radioItem1)
 
-    ' Create a new radio button item for "Female"
-    Dim radioItem2 As New PdfRadioButtonListItem("Female")
-    ' Set the bounds for the radio button
-    radioItem2.Bounds = New RectangleF(205, 203, 15, 15)
-    ' Draw the label "Female"
-    page.Graphics.DrawString("Female", font, PdfBrushes.Black, New RectangleF(225, 204, 180, 20))
-    ' Add the radio button item to the list
-    employeesRadioList.Items.Add(radioItem2)
+' Create a new radio button item for "Female"
+Dim radioItem2 As New PdfRadioButtonListItem("Female")
+' Set the bounds for the radio button
+radioItem2.Bounds = New RectangleF(205, 203, 15, 15)
+' Draw the label "Female"
+page.Graphics.DrawString("Female", font, PdfBrushes.Black, New RectangleF(225, 204, 180, 20))
+' Add the radio button item to the list
+employeesRadioList.Items.Add(radioItem2)
 
-    employeesRadioList.SelectedIndex = 1
-    ' Add the radio button list to the form
-    document.Form.Fields.Add(employeesRadioList)
+employeesRadioList.SelectedIndex = 1
+' Add the radio button list to the form
+document.Form.Fields.Add(employeesRadioList)
 
-    ' Save the document
-    document.Save("Output.pdf")
-    ' Close the document
-    document.Close(True)
+' Save the document
+document.Save("Output.pdf")
+' Close the document
+document.Close(True)
 
 
 {% endhighlight %}
@@ -3333,15 +3333,15 @@ PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 // Check the values 
  if (foundValue && values is List<string> stringValues) 
  { 
-     foreach (string value in stringValues) 
-     { 
+    foreach (string value in stringValues) 
+    { 
         // Print the custom value to the console 
-         Console.WriteLine($"Found value: {value}"); 
-     } 
+        Console.WriteLine($"Found value: {value}"); 
+    } 
  } 
  else 
  { 
-     Console.WriteLine("not found "); 
+    Console.WriteLine("not found "); 
  } 
 // Close the document and release resources 
 loadedDocument.Close(true); 
@@ -3367,16 +3367,16 @@ PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 // Check the values 
  if (foundValue && values is List<string> stringValues) 
  { 
-     foreach (string value in stringValues) 
-     { 
+    foreach (string value in stringValues) 
+    { 
 
         // Print the custom value to the console 
-         Console.WriteLine($"Found value: {value}"); 
-     } 
+        Console.WriteLine($"Found value: {value}"); 
+    } 
  } 
  else 
  { 
-     Console.WriteLine("not found "); 
+    Console.WriteLine("not found "); 
  } 
 // Close the document and release resources 
 loadedDocument.Close(true); 
@@ -3443,7 +3443,7 @@ PdfLoadedField loadedField = null;
 //Get the field using TryGetField Method.
 if (fieldCollection.TryGetField("f1-1", out loadedField))
 {
-  (loadedField as PdfLoadedTextBoxField).Text = "1";
+    (loadedField as PdfLoadedTextBoxField).Text = "1";
 }
 
 //Save the document.
@@ -3470,7 +3470,7 @@ PdfLoadedField loadedField = null;
 //Get the field using TryGetField Method.
 if (fieldCollection.TryGetField("f1-1", out loadedField))
 {
-  (loadedField as PdfLoadedTextBoxField).Text = "1";
+    (loadedField as PdfLoadedTextBoxField).Text = "1";
 }
 
 //Save and close the modified document.
@@ -3600,40 +3600,40 @@ The below code illustrates get the pages of a form fields.
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-    using Syncfusion.Pdf;
-    using Syncfusion.Pdf.Interactive;
-    using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
-    // Load the PDF document from the stream.
-    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+// Load the PDF document from the stream.
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
-    // Get all the form fields in the PDF.
-    PdfLoadedForm loadedForm = document.Form;
-    PdfLoadedFormFieldCollection fieldCollection = loadedForm.Fields;
+// Get all the form fields in the PDF.
+PdfLoadedForm loadedForm = document.Form;
+PdfLoadedFormFieldCollection fieldCollection = loadedForm.Fields;
 
-    // Create a dictionary to map each page object to its respective page number.
-    Dictionary<PdfPageBase, int> pageNumberMapping = new Dictionary<PdfPageBase, int>();
+// Create a dictionary to map each page object to its respective page number.
+Dictionary<PdfPageBase, int> pageNumberMapping = new Dictionary<PdfPageBase, int>();
 
-    // Populate the pageNumberMapping dictionary with page objects and their corresponding page numbers.
-    for (int i = 0; i < document.Pages.Count; i++)
+// Populate the pageNumberMapping dictionary with page objects and their corresponding page numbers.
+for (int i = 0; i < document.Pages.Count; i++)
+{
+    // Page numbers are 1-based, so we add 1 to the index.
+    pageNumberMapping[document.Pages[i]] = i + 1;
+}
+
+// Iterate through each form field and find its page number using the dictionary.
+foreach (PdfLoadedField field in fieldCollection)
+{
+    // Check if the field is associated with a page.
+    if (field.Page != null && pageNumberMapping.TryGetValue(field.Page, out int pageNumber))
     {
-        // Page numbers are 1-based, so we add 1 to the index.
-        pageNumberMapping[document.Pages[i]] = i + 1;
+        // Output the field name and its associated page number.
+        Console.WriteLine($"{field.Name} - Page number: {pageNumber}");
     }
+}
 
-    // Iterate through each form field and find its page number using the dictionary.
-    foreach (PdfLoadedField field in fieldCollection)
-    {
-        // Check if the field is associated with a page.
-        if (field.Page != null && pageNumberMapping.TryGetValue(field.Page, out int pageNumber))
-        {
-            // Output the field name and its associated page number.
-            Console.WriteLine($"{field.Name} - Page number: {pageNumber}");
-        }
-    }
-
-    // Close the PDF document.
-    document.Close(true);
+// Close the PDF document.
+document.Close(true);
 
 {% endhighlight %}
 
@@ -3748,7 +3748,7 @@ loadedDocument.Close(true);
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Interactive;
@@ -4310,7 +4310,7 @@ loadedDocument.Close(true);
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Interactive;
@@ -4800,7 +4800,7 @@ PdfLoadedTextBoxField loadedTextBoxField = loadedForm.Fields[0] as PdfLoadedText
 loadedTextBoxField.Text ="text";
 
 //Save the document.
-loadedDocument.Save("flatten.pdf");
+loadedDocument.Save("Form.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
@@ -4989,40 +4989,40 @@ The following code example demonstrates how to modify these indicator colors pro
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Customize-indicator-colors/.NET/Customize-indicator-colors/Program.cs" %}
 
-    using Syncfusion.Pdf;
-    using Syncfusion.Pdf.Interactive;
-    using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
-    // Load the PDF document from the input stream.
-    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+// Load the PDF document from the input stream.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
-    // Access the existing form fields in the PDF.
-    PdfLoadedForm form = loadedDocument.Form;
+// Access the existing form fields in the PDF.
+PdfLoadedForm form = loadedDocument.Form;
 
-    // Iterate through all form fields to find checkboxes and radio button lists.
-    foreach (PdfLoadedField field in form.Fields)
+// Iterate through all form fields to find checkboxes and radio button lists.
+foreach (PdfLoadedField field in form.Fields)
+{
+    // If the field is a checkbox, change its check mark color using ForeColor.
+    if (field is PdfLoadedCheckBoxField checkBoxField)
     {
-        // If the field is a checkbox, change its check mark color using ForeColor.
-        if (field is PdfLoadedCheckBoxField checkBoxField)
+        checkBoxField.ForeColor = Color.Red; // Set desired checkbox color.
+    }
+    // If the field is a radio button list, change each item's dot color.
+    else if (field is PdfLoadedRadioButtonListField radioButtonField)
+    {
+        foreach (PdfLoadedRadioButtonItem item in radioButtonField.Items)
         {
-            checkBoxField.ForeColor = Color.Red; // Set desired checkbox color.
-        }
-        // If the field is a radio button list, change each item's dot color.
-        else if (field is PdfLoadedRadioButtonListField radioButtonField)
-        {
-            foreach (PdfLoadedRadioButtonItem item in radioButtonField.Items)
-            {
-                item.ForeColor = Color.Blue; // Set desired radio button color.
-            }
+            item.ForeColor = Color.Blue; // Set desired radio button color.
         }
     }
-    // Disable the default appearance to allow custom rendering of form fields.
-    form.SetDefaultAppearance(false);
-    
-    // Save the modified PDF document
-    loadedDocument.Save("Output.pdf");
-    // Close the PDF document.
-    loadedDocument.Close(true);
+}
+// Disable the default appearance to allow custom rendering of form fields.
+form.SetDefaultAppearance(false);
+
+// Save the modified PDF document
+loadedDocument.Save("Output.pdf");
+// Close the PDF document.
+loadedDocument.Close(true);
 
 {% endhighlight %}
 
