@@ -9,7 +9,7 @@ documentation: ug
 
 # Themes in WPF Spreadsheet (SfSpreadsheet)
 
-[WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor) supports the following built-in themes.
+SfSpreadsheet supports the following built-in themes.
 *	MaterialLight
 *	MaterialDark
 *	Office2019Colorful

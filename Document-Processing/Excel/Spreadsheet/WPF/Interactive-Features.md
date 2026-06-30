@@ -9,7 +9,7 @@ documentation: ug
 
 # Interactive Features in WPF Spreadsheet (SfSpreadsheet)
 
- This section explains about the interactive operations with [WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor)
+ This section explains about the interactive operations with SfSpreadsheet
 
 ## Clipboard Operations
 

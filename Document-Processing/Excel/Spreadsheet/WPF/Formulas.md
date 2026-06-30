@@ -9,7 +9,7 @@ documentation: ug
 
 # Formulas in WPF Spreadsheet (SfSpreadsheet)
 
-[WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor) calculation engine offers automated calculation over a formula, expression, or cross sheet references. SfSpreadsheet calculation engine is preloaded with 409 formulas covering a broad range of business functions.
+SfSpreadsheet calculation engine offers automated calculation over a formula, expression, or cross sheet references. SfSpreadsheet calculation engine is preloaded with 409 formulas covering a broad range of business functions.
 
 ## Adding Formula into cell
 

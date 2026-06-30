@@ -9,7 +9,7 @@ documentation: ug
 
 # Sorting and Filtering in WPF Spreadsheet (SfSpreadsheet)
 
-This section explains about sorting and filtering functionalities in the [WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor).
+This section explains about sorting and filtering functionalities in the SfSpreadsheet.
 
 ## Filtering
 

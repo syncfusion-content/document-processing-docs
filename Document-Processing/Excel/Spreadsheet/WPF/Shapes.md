@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Shapes in WPF Spreadsheet (SfSpreadsheet)
- This section explains how to import charts, sparklines, pictures and textboxes in [WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor).
+ This section explains how to import charts, sparklines, pictures and textboxes in SfSpreadsheet.
 
 ## Charts
 

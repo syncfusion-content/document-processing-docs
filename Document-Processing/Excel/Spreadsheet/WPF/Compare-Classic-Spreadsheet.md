@@ -10,7 +10,7 @@ documentation: ug
 
 ## Choose between SfSpreadsheet and Spreadsheet (Classic) control
 
-WPF suite contains **SfSpreadsheet** and **Spreadsheet (Classic)** control for viewing and editing the excel files. SfSpreadsheet is an alternate for [WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor) (Classic) control which is marked as classic control. Hence it is recommended to use SfSpreadsheet which provides better performance and rich set features over Spreadsheet (Classic) control. 
+WPF suite contains **SfSpreadsheet** and **Spreadsheet (Classic)** control for viewing and editing the excel files. SfSpreadsheet is an alternate for Spreadsheet (Classic) control which is marked as classic control. Hence it is recommended to use SfSpreadsheet which provides better performance and rich set features over Spreadsheet (Classic) control. 
 
 Below are the features that SfSpreadsheet have over Spreadsheet (Classic) control,
 

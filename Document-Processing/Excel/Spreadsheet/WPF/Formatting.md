@@ -9,7 +9,7 @@ documentation: ug
 
 # Formatting in WPF Spreadsheet (SfSpreadsheet)
 
-This section explains about the formatting options similar to excel in [WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor).
+This section explains about the formatting options similar to excel in SfSpreadsheet.
 
 Styles and formats defined in an Excel file are automatically imported. Users can also apply these settings to cells during run time. The following are the formatting attributes for the cell.
 

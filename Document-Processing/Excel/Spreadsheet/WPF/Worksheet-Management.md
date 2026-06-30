@@ -12,7 +12,7 @@ This section explains about the operations that are performed with the worksheet
 
 ## Insert and Delete worksheet
 
-[WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor) provides support to insert and delete the worksheets in a workbook.
+SfSpreadsheet provides support to insert and delete the worksheets in a workbook.
 
 {% tabs %}
 {% highlight c# %}

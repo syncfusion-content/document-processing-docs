@@ -12,7 +12,7 @@ This section explains about the operations related with rows and columns in SfSp
 
 ## Insert Rows and Columns
 
-[WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor) provides support for dynamically inserting rows and columns into a worksheet. 
+SfSpreadsheet provides support for dynamically inserting rows and columns into a worksheet. 
 
 {% tabs %}
 {% highlight c# %}

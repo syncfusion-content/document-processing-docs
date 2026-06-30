@@ -9,7 +9,7 @@ documentation: ug
 
 # Find and Replace in WPF Spreadsheet (SfSpreadsheet)
 
-This section explains about Find and Replace operations in [WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor). 
+This section explains about Find and Replace operations in SfSpreadsheet. 
 
 ## Find 
 

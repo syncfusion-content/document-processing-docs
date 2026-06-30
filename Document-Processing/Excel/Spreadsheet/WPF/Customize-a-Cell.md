@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize a Cell in WPF Spreadsheet Control
 
-[WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor) provides support to customize the cell with Data template. It allows to load any WPF control or custom control into the cell. 
+SfSpreadsheet provides support to customize the cell with Data template. It allows to load any WPF control or custom control into the cell. 
 
 In order to customize the cell, please follow the below steps
 

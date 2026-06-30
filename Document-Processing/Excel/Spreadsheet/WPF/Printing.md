@@ -9,7 +9,7 @@ documentation: ug
 
 # Printing in WPF Spreadsheet (SfSpreadsheet)
 
-[WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor) control allows you to print the data in the workbook with the help of PDF Conversion. To provide the printing support in SfSpreadsheet, you need to convert the workbook into PDF document using ExcelToPdfConverter.
+SfSpreadsheet control allows you to print the data in the workbook with the help of PDF Conversion. To provide the printing support in SfSpreadsheet, you need to convert the workbook into PDF document using ExcelToPdfConverter.
 
 For Conversion of Excel Workbook in SfSpreadsheet to PDF document, use [Convert](https://help.syncfusion.com/cr/wpf/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverter.html#Syncfusion_ExcelToPdfConverter_ExcelToPdfConverter_Convert) method of [ExcelToPdfConverter](http://help.syncfusion.com/cr/wpf/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverter.html).
 

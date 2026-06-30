@@ -9,7 +9,7 @@ documentation: ug
 
 # Editing in WPF Spreadsheet (SfSpreadsheet)
 
-This section explains about the Editing behavior, Data Validation and Hyperlinks in [WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor).
+This section explains about the Editing behavior, Data Validation and Hyperlinks in SfSpreadsheet.
 
 ## Editing
 
