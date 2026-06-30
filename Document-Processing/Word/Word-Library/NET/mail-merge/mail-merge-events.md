@@ -887,7 +887,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to format the mail merged data using mail merge events using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/mailmergeevent#/tailwind).
+* Explore how to format the mail merged data using mail merge events using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/mailmergeevent#/tailwind).
 
 ## See Also
 

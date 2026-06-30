@@ -20,7 +20,7 @@ The [Syncfusion<sup>&reg;</sup> .NET OCR library](https://www.syncfusion.com/doc
 **Prerequisites**:
 
 * Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-* Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
+* Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download?_exp_download=d53503e735).
 
 Step 1: Create a new C# Blazor Server application project. Select Blazor App from the template and click Next.
 ![Blazor server app creation](OCR-Images/blazor_server_app_creation.png)
@@ -36,6 +36,7 @@ N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assem
 
 Step 4: Create a new class file named *ExportService* under the Data folder and include the following namespaces in the file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.OCRProcessor;
@@ -43,9 +44,11 @@ using Syncfusion.Pdf.Parsing;
 using System.IO;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: Use the following code sample to perform OCR on the entire PDF document using [PerformOCR](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html#Syncfusion_OCRProcessor_OCRProcessor_PerformOCR_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_String_) method of the [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html) class in the **ExportService** file.  
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public MemoryStream CreatePdf()
@@ -69,9 +72,11 @@ public MemoryStream CreatePdf()
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: Register your service in the ConfigureServices method available in the *Startup.cs* class as follows.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public void ConfigureServices(IServiceCollection services)
@@ -83,27 +88,33 @@ public void ConfigureServices(IServiceCollection services)
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 7: Inject ExportService into *FetchData.razor* using the following code.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight CSHTML %}
 
 @inject ExportService exportService
 @inject Microsoft.JSInterop.IJSRuntime JS
-@using  System.IO;
+@using  System.IO
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 8: Create a button in the *FetchData.razor* using the following code.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight CSHTML %}
 
 <button class="btn btn-primary" @onclick="@PerformOCR">Perform OCR</button>
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 9: Add the PerformOCR method in *FetchData.razor* page to call the export service.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 @functions
@@ -119,9 +130,11 @@ Step 9: Add the PerformOCR method in *FetchData.razor* page to call the export s
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 10: Create a class file with the FileUtil name and add the following code to invoke the JavaScript action to download the file in the browser.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public static class FileUtil
@@ -134,10 +147,12 @@ public static class FileUtil
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 11: Add the following JavaScript function in the *_Host.cshtml* available under the Pages folder.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight CSHTML %}
 
 <script type="text/javascript">
     function saveAsFile(filename, bytesBase64) {
@@ -163,6 +178,7 @@ Step 11: Add the following JavaScript function in the *_Host.cshtml* available u
 </script>
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 12: Build the project.
 
@@ -179,7 +195,7 @@ Click the Start button (green arrow) or press F5 to run the app.
 **Prerequisites**:
 
 * Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-* Install Visual Studio Code:  Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
+* Install Visual Studio Code:  Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download?_exp_download=d53503e735).
 * Install C# Extension for VS Code: Open Visual Studio Code, go to the Extensions view (Ctrl+Shift+X), and search for 'C#'. Install the official [C# extension provided by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
 
 Step 1: Open the terminal (Ctrl+` ) and run the following command to create a new Blazor Server application
@@ -204,6 +220,7 @@ N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assem
 
 Step 5: Create a new class file named *ExportService* under the Data folder and include the following namespaces in the file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.OCRProcessor;
@@ -211,9 +228,11 @@ using Syncfusion.Pdf.Parsing;
 using System.IO;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: Use the following code sample to perform OCR on the entire PDF document using [PerformOCR](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html#Syncfusion_OCRProcessor_OCRProcessor_PerformOCR_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_String_) method of the [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html) class in the **ExportService** file.  
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public MemoryStream CreatePdf()
@@ -237,9 +256,11 @@ public MemoryStream CreatePdf()
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 7: Register your service in the ConfigureServices method available in the *Startup.cs* class as follows.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public void ConfigureServices(IServiceCollection services)
@@ -251,27 +272,33 @@ public void ConfigureServices(IServiceCollection services)
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 8: Inject ExportService into *FetchData.razor* using the following code.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight CSHTML %}
 
 @inject ExportService exportService
 @inject Microsoft.JSInterop.IJSRuntime JS
-@using  System.IO;
+@using  System.IO
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 9: Create a button in the *FetchData.razor* using the following code.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight CSHTML %}
 
 <button class="btn btn-primary" @onclick="@PerformOCR">Perform OCR</button>
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 10: Add the PerformOCR method in *FetchData.razor* page to call the export service.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 @functions
@@ -287,9 +314,11 @@ Step 10: Add the PerformOCR method in *FetchData.razor* page to call the export 
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 11: Create a class file with the FileUtil name and add the following code to invoke the JavaScript action to download the file in the browser.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public static class FileUtil
@@ -302,10 +331,12 @@ public static class FileUtil
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 12: Add the following JavaScript function in the *_Host.cshtml* available under the Pages folder.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight CSHTML %}
 
 <script type="text/javascript">
     function saveAsFile(filename, bytesBase64) {
@@ -331,6 +362,7 @@ Step 12: Add the following JavaScript function in the *_Host.cshtml* available u
 </script>
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 13: Build the project.
 
@@ -373,7 +405,7 @@ Step 1. Open JetBrains Rider and create a new Blazor server-side app project.
 Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 * Click the NuGet icon in the Rider toolbar and type [Syncfusion.PDF.OCR.Net.Core](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net.Core) in the search bar.
 * Ensure that "nuget.org" is selected as the package source.
-* Select the latest Syncfusion.HtmlToPdfConverter.Net.Windows NuGet package from the list.
+* Select the latest Syncfusion.PDF.OCR.Net.Core NuGet package from the list.
 * Click the + (Add) button to add the package.
 
 ![Select the Syncfusion.PDF.OCR.NET package](OCR-Images/JetBrains-Package.png)
@@ -387,6 +419,7 @@ N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assem
 
 Step 4: Create a new class file named *ExportService* under the Data folder and include the following namespaces in the file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.OCRProcessor;
@@ -394,9 +427,11 @@ using Syncfusion.Pdf.Parsing;
 using System.IO;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: Use the following code sample to perform OCR on the entire PDF document using [PerformOCR](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html#Syncfusion_OCRProcessor_OCRProcessor_PerformOCR_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_String_) method of the [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html) class in the **ExportService** file.  
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public MemoryStream CreatePdf()
@@ -420,9 +455,11 @@ public MemoryStream CreatePdf()
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: Register your service in the ConfigureServices method available in the *Startup.cs* class as follows.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public void ConfigureServices(IServiceCollection services)
@@ -434,27 +471,33 @@ public void ConfigureServices(IServiceCollection services)
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 7: Inject ExportService into *FetchData.razor* using the following code.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight CSHTML %}
 
 @inject ExportService exportService
 @inject Microsoft.JSInterop.IJSRuntime JS
 @using  System.IO;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 8: Create a button in the *FetchData.razor* using the following code.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight CSHTML %}
 
 <button class="btn btn-primary" @onclick="@PerformOCR">Perform OCR</button>
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 9: Add the PerformOCR method in *FetchData.razor* page to call the export service.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 @functions
@@ -470,9 +513,11 @@ Step 9: Add the PerformOCR method in *FetchData.razor* page to call the export s
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 10: Create a class file with the FileUtil name and add the following code to invoke the JavaScript action to download the file in the browser.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public static class FileUtil
@@ -485,10 +530,12 @@ public static class FileUtil
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 11: Add the following JavaScript function in the *_Host.cshtml* available under the Pages folder.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight CSHTML %}
 
 <script type="text/javascript">
     function saveAsFile(filename, bytesBase64) {
@@ -514,6 +561,7 @@ Step 11: Add the following JavaScript function in the *_Host.cshtml* available u
 </script>
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 12: Build the project.
 

@@ -321,7 +321,6 @@ public Startup(IConfiguration configuration, IWebHostEnvironment env)
 {% endhighlight %}
 {% endtabs %}
 
-
 ### Web API for word-by-word spell check 
 
 This Web API performs spell checking word by word and returns a JSON response containing information about error words and suggestions, if any. By default, word-by-word spell checking is performed in the Document Editor when spell check is enabled on the client side.

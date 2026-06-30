@@ -11,7 +11,7 @@ You can merge multiple Word documents into single Word document by using DocIOâ€
 
 ## Assemblies and NuGet packages required
 
-Refer to the following links for assemblies and NuGet packages required based on platforms to merge Word documents using the .NET Word Library (DocIO).
+Refer to the following links for assemblies and NuGet packages required based on platforms to merge Word documents using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO).
 
 * [Merge Word documents assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required)
 * [Merge Word documents NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)

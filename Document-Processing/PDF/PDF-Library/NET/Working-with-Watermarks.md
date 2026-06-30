@@ -492,84 +492,84 @@ You can remove the Watermark annotation from the annotation collection, represen
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Watermark/Removing-watermark-annotation-in-PDF-document/.NET/Remove-watermark-annotation-in-the-PDF-document/Program.cs" %} 
 
-    using Syncfusion.Pdf;
-    using Syncfusion.Pdf.Graphics;
-    using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
 
-    //Load the PDF document
-    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-    // Iterate through the annotations collection and remove PdfLoadedWatermark annotations
-    foreach (PdfPageBase page in loadedDocument.Pages)
+//Load the PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Iterate through the annotations collection and remove PdfLoadedWatermark annotations
+foreach (PdfPageBase page in loadedDocument.Pages)
+{
+    for (int i = page.Annotations.Count - 1; i >= 0; i--)
     {
-        for (int i = page.Annotations.Count - 1; i >= 0; i--)
+        // Check if the annotation is a PdfLoadedWatermarkAnnotation
+        if (page.Annotations[i] is PdfLoadedWatermarkAnnotation)
         {
-            // Check if the annotation is a PdfLoadedWatermarkAnnotation
-            if (page.Annotations[i] is PdfLoadedWatermarkAnnotation)
-            {
-                // Remove the PdfLoadedWatermarkAnnotation
-                page.Annotations.RemoveAt(i);
-            }
+            // Remove the PdfLoadedWatermarkAnnotation
+            page.Annotations.RemoveAt(i);
         }
     }
+}    
 
-    //Saves the document to disk. 
-    loadedDocument.Save("WatermarkAnnotation.pdf"); 
-    loadedDocument.Close(true);
+//Saves the document to disk. 
+loadedDocument.Save("WatermarkAnnotation.pdf"); 
+loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-    using Syncfusion.Pdf;
-    using Syncfusion.Pdf.Graphics;
-    using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
 
-    //Load the existing PDF document
-    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
-    // Iterate through the annotations collection and remove PdfLoadedWatermark annotations
-    foreach (PdfPageBase page in loadedDocument.Pages)
+//Load the existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
+// Iterate through the annotations collection and remove PdfLoadedWatermark annotations
+foreach (PdfPageBase page in loadedDocument.Pages)
+{
+    for (int i = page.Annotations.Count - 1; i >= 0; i--)
     {
-        for (int i = page.Annotations.Count - 1; i >= 0; i--)
+        // Check if the annotation is a PdfLoadedWatermarkAnnotation
+        if (page.Annotations[i] is PdfLoadedWatermarkAnnotation)
         {
-            // Check if the annotation is a PdfLoadedWatermarkAnnotation
-            if (page.Annotations[i] is PdfLoadedWatermarkAnnotation)
-            {
-                // Remove the PdfLoadedWatermarkAnnotation
-                page.Annotations.RemoveAt(i);
-            }
+            // Remove the PdfLoadedWatermarkAnnotation
+            page.Annotations.RemoveAt(i);
         }
-    } 
+    }
+}
 
-    //Saves the document to disk. 
-    loadedDocument.Save("WatermarkAnnotation.pdf"); 
-    loadedDocument.Close(true);
+//Saves the document to disk. 
+loadedDocument.Save("WatermarkAnnotation.pdf"); 
+loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-    Imports Syncfusion.Pdf
-    Imports Syncfusion.Pdf.Graphics
-    Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
 
-    'Load the existing PDF document
-    Dim loadedDocument As New PdfLoadedDocument("input.pdf")
-    ' Iterate through the annotations collection and remove PdfLoadedWatermark annotations
-    For Each page As PdfPageBase In loadedDocument.Pages
-        Dim i As Integer = page.Annotations.Count - 1
-        While i >= 0
-            ' Check if the annotation is a PdfLoadedWatermarkAnnotation
-            If TypeOf page.Annotations(i) Is PdfLoadedWatermarkAnnotation Then
-                ' Remove the PdfLoadedWatermarkAnnotation
-                page.Annotations.RemoveAt(i)
-            End If
-            i -= 1
-        End While
-    Next
+'Load the existing PDF document
+Dim loadedDocument As New PdfLoadedDocument("input.pdf")
+'Iterate through the annotations collection and remove PdfLoadedWatermark annotations
+For Each page As PdfPageBase In loadedDocument.Pages
+    Dim i As Integer = page.Annotations.Count - 1
+    While i >= 0
+        'Check if the annotation is a PdfLoadedWatermarkAnnotation
+        If TypeOf page.Annotations(i) Is PdfLoadedWatermarkAnnotation Then
+            'Remove the PdfLoadedWatermarkAnnotation
+            page.Annotations.RemoveAt(i)
+        End If
+        i -= 1
+    End While
+Next
 
-    'Saves the document to disk. 
-    loadedDocument.Save("WatermarkAnnotation.pdf")
-    loadedDocument.Close(True)
+'Saves the document to disk. 
+loadedDocument.Save("WatermarkAnnotation.pdf")
+loadedDocument.Close(True)
 
 {% endhighlight %}
 

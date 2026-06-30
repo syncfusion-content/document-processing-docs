@@ -26,6 +26,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 
 Step 3: Include the following namespaces in the MainWindow.xaml.cs file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using System;
@@ -35,21 +36,41 @@ using Syncfusion.Pdf;
 using Syncfusion.HtmlConverter;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 4: Add a new button in MainWindow.xaml to convert HTML to PDF document as follows.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight XAML %}
 
-<Grid HorizontalAlignment="Left" Margin="0,0,0,-0.333" Width="793">
-<Button Content="Convert Html to PDF" HorizontalAlignment="Left" Margin="318,210,0,0" VerticalAlignment="Top" Width="166" Click=" btnCreate_Click " Height="19"/>
-<TextBlock HorizontalAlignment="Left" Margin="222,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="17"/>
-<TextBlock HorizontalAlignment="Left" Margin="291,175,0,0" TextWrapping="Wrap" Text="Click the button to convert Html to PDF." VerticalAlignment="Top"/>
+<Grid HorizontalAlignment="Left"
+      Margin="0,0,0,-0.333"
+      Width="793">
+    <Button Content="Convert Html to PDF"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="318,210,0,0"
+            Width="166"
+            Height="19"
+            Click=" btnCreate_Click " />
+    <TextBlock HorizontalAlignment="Left"
+               VerticalAlignment="Top"
+               Margin="222,177,0,0"
+               Height="17"
+               TextWrapping="Wrap" />
+    <TextBlock HorizontalAlignment="Left"
+               VerticalAlignment="Top"
+               Margin="291,175,0,0"
+               TextWrapping="Wrap"
+               Text="Click the button to convert Html to PDF." />
 </Grid>
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: Add the following code in btnCreate_Click to convert HTML to PDF document using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class. The HTML content will be scaled based on the given [ViewPortSize](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_ViewPortSize) property of [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Initialize HTML to PDF converter.
@@ -72,6 +93,7 @@ document.Close();
 stream.Dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 By executing the program, you will get the PDF document as follows.
 ![Convert HTMLToPDF WPF output](htmlconversion_images/htmltopdfoutput.png) 

@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Split Word documents
 
-Syncfusion<sup>&reg;</sup> Word Library allows you to split the large Word document into number of smaller word documents by the sections, headings, bookmarks, and placeholder text in programmatically. 
+The [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) allows you to split the large Word document into number of smaller word documents by the sections, headings, bookmarks, and placeholder text in programmatically. 
 
 By using this feature, you can be able to split/extract the necessary parts from the original document for further processing.
 
@@ -18,7 +18,7 @@ To quickly start splitting Word documents, please check out this video:
 
 ## Assemblies and NuGet packages required
 
-Refer to the following links for assemblies and NuGet packages required based on platforms to split Word documents using the .NET Word Library (DocIO).
+Refer to the following links for assemblies and NuGet packages required based on platforms to split Word documents using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO).
 
 * [Split Word documents assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required)
 * [Split Word documents NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
@@ -641,7 +641,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to split a Word document by section using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/splitbysection#/tailwind).
-* See how to split a Word document by heading using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/splitbyheading#/tailwind).
-* See how to split a Word document by bookmark using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/splitbybookmark#/tailwind).
-* See how to split a Word document by placeholder using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/splitbyplaceholder#/tailwind).
+* Explore how to split a Word document by section using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/splitbysection#/tailwind).
+* See how to split a Word document by heading using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/splitbyheading#/tailwind).
+* See how to split a Word document by bookmark using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/splitbybookmark#/tailwind).
+* See how to split a Word document by placeholder using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/splitbyplaceholder#/tailwind).

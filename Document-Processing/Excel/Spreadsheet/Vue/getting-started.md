@@ -70,7 +70,7 @@ In the `src/App.vue` file, update the **\<script\>** section to import the Sprea
 
 {% tabs %}
 
-{% highlight vue tabtitle="~/src/App.vue" %}
+{% highlight js tabtitle="~/src/App.vue" %}
 
 import { SpreadsheetComponent } from "@syncfusion/ej2-vue-spreadsheet";
 
@@ -97,7 +97,7 @@ Add the Spreadsheet Editor component to the **\<template\>** section in the `src
 
 {% tabs %}
 
-{% highlight vue tabtitle="~/src/App.vue" %}
+{% highlight js tabtitle="~/src/App.vue" %}
 
 <ejs-spreadsheet :openUrl="openUrl" :saveUrl="saveUrl"></ejs-spreadsheet>
 
@@ -122,6 +122,8 @@ After the application starts, open the localhost URL shown in the terminal to vi
 You can also explore the Spreadsheet interactively using the live sample below.
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/vue/getting-started-cs1" %}
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-vue-spreadsheet-component).
 
 ## See also
 

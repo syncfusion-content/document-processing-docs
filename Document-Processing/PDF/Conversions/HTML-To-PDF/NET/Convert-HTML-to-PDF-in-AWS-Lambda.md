@@ -33,6 +33,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 
 Step 5: Using the following namespaces in the *Function.cs* file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.HtmlConverter;
@@ -40,9 +41,11 @@ using Syncfusion.Pdf;
 using System.IO;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: Add the following code snippet in Function.cs to convert HTML to PDF document using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Initialize HTML to PDF converter with Blink rendering engine.
@@ -57,6 +60,7 @@ document.Close(true);
 return Convert.ToBase64String(memoryStream.ToArray());
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 7: Right-click the project and select Publish to AWS Lambda. 
 ![Convert HTMLToPDF AWS Step5](htmlconversion_images/AWS5.png)
@@ -83,6 +87,7 @@ Step 3: Install the [AWSSDK.Core](https://www.nuget.org/packages/AWSSDK.Core), [
  
 Step 4: Include the following namespaces in Program.cs file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Amazon;
@@ -92,9 +97,11 @@ using Newtonsoft.Json;
 using System.IO;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: Add the following code snippet in Program class to invoke the published AWS Lambda function using the function name and access keys.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Create a new AmazonLambdaClient
@@ -122,6 +129,7 @@ writer.Close();
 System.Diagnostics.Process.Start("Sample.pdf");
 
 {% endhighlight %}
+{% endtabs %}
  
 By executing the program, you will get the PDF document as follows. 
 ![Convert HTMLToPDF AWS Step12](htmlconversion_images/AWS12.png)  

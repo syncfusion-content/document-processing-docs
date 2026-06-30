@@ -9,7 +9,7 @@ keywords: blazor save pdf, blazor load pdf, c# save pdf, c# load pdf
 
 # Open and save PDF document in Blazor
 
-The [Syncfusion<sup>&reg;</sup> Blazor PDF library](https://www.syncfusion.com/document-processing/pdf-framework/blazor) is used to create, read, and edit PDF documents programatically without the dependency of Adobe Acrobat. Using this library, you can **open and save PDF document in ASP.NET Core**. 
+The [Syncfusion<sup>&reg;</sup> Blazor PDF library](https://www.syncfusion.com/document-processing/pdf-framework/blazor) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **open and save PDF document in Blazor**. 
 
 **Prerequisites:**
 
@@ -43,7 +43,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 Step 5:  Inject ExportService into `FetchData.razor` using the following code.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight CSHTML %}
 
 @inject ExportService service
 @inject Microsoft.JSInterop.IJSRuntime JS
@@ -198,10 +198,9 @@ public static class FileUtil
 
 {% endtabs %}
 
-Step 14: Add the following JavaScript function in the `_Host.cshtml` available under the `Pages` folder.
+Step 14: Add the following JavaScript function in the  ``App.razor`` available under the ``Components`` folder.
 
 {% tabs %}
-
 {% highlight HTML %}
 
 <script type="text/javascript">
