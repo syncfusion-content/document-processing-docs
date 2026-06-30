@@ -19,29 +19,7 @@ Use the following example to display a notification after a successful export.
 
 <!--Render PDF Viewer component-->
 <ejs-pdfviewer id="pdfViewer"
-               [serviceUrl]="service"
-               [documentPath]="document"
-               (exportSuccess)="fireExportRequestSuccess()"
-               style="height:640px;display:block">
-</ejs-pdfviewer>
-
-//Method to notify popup once the form is submitted.
-public fireExportRequestSuccess() {
-  var pdfViewer = (<any>document.getElementById('pdfViewer'))
-    .ej2_instances[0];
-  //API to notify popup once the form is submitted.
-  pdfViewer.viewerBase.openImportExportNotificationPopup(
-    'Your form information has been saved. You can resume it at any times.Form Information Saved'
-  );
-}
-
-{% endhighlight %}
-
-{% highlight js tabtitle="Server-Backed" %}
-
-<!--Render PDF Viewer component-->
-<ejs-pdfviewer id="pdfViewer"
-               [serviceUrl]="service"
+               [resourceUrl]="resource"
                [documentPath]="document"
                (exportSuccess)="fireExportRequestSuccess()"
                style="height:640px;display:block">

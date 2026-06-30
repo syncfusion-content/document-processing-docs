@@ -100,42 +100,6 @@ export default {
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-<template>
-  <div id="app">
-      <ejs-pdfviewer
-          id="pdfViewer"
-          ref="pdfviewer"
-          :serviceUrl="serviceUrl"
-          :documentPath="documentPath"
-          :enableDesktopMode=true>
-      </ejs-pdfviewer>
-  </div>
-</template>
-
-<script>
-import Vue from 'vue';
-import {  PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation,
-          BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
-          TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
-
-export default {
-  name: 'app',
-  data () {
-    return {
-      serviceUrl:"https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-    };
-  },
-
-  provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer ]},
-
-}
-</script>
-{% endhighlight %}
 {% endtabs %}
 
 ## Optimize touch scrolling in desktop mode
@@ -181,43 +145,6 @@ export default {
 }
 </script>
 
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-<template>
-  <div id="app">
-      <ejs-pdfviewer
-          id="pdfViewer"
-          ref="pdfviewer"
-          :serviceUrl="serviceUrl"
-          :documentPath="documentPath"
-          :enableDesktopMode=true
-          :enableTextSelection=false>
-      </ejs-pdfviewer>
-  </div>
-</template>
-
-<script>
-import Vue from 'vue';
-import {  PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation,
-          BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
-          TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
-
-export default {
-  name: 'app',
-  data () {
-    return {
-      serviceUrl:"https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-    };
-  },
-
-  provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer ]},
-
-}
-</script>
 {% endhighlight %}
 {% endtabs %}
 

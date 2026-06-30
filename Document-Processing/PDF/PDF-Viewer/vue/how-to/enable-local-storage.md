@@ -17,7 +17,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer exposes the `ena
 Set `enableLocalStorage` to control whether the viewer preserves session data in an internal (in-memory) collection or uses browser session storage. When `enableLocalStorage` is `true`, the viewer keeps session data in memory for the current application session; when `false` (the default), session storage is used. Review memory implications before enabling in-memory storage for large documents or heavy interactive content.
 
 {% tabs %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight html tabtitle="Standalone" %}
 
 <template>
   <div id="app">
@@ -26,7 +26,7 @@ Set `enableLocalStorage` to control whether the viewer preserves session data in
       ref="pdfviewer"
       :documentPath="documentPath"
       :enableLocalStorage="true"
-      :serviceUrl="serviceUrl"
+      :resourceUrl="resourceUrl"
       style="height: 640px;"
     >
     </ejs-pdfviewer>
@@ -53,8 +53,8 @@ export default {
   },
   data() {
     return {
-        serviceUrl:"https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
-        documentPath:"PDF_Succinctly.pdf"
+        resourceUrl:"https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
+        documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
     };
   },
   provide: {

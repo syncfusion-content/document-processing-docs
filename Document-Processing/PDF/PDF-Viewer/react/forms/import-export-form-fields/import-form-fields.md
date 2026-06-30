@@ -17,7 +17,7 @@ This guide shows how to import form field values into an already loaded PDF in t
 
 2. Call [`importFormFields(data, format)`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#importformfields) where `format` is one of `FormFieldDataFormat.Fdf`, `FormFieldDataFormat.Xfdf`, or `FormFieldDataFormat.Json`. `data` may be a file path (for server/file-based imports) / base64 string or a JavaScript object mapping field names to values.
 
-3. Verify the form fields are populated after the import completes. For server-backed imports, ensure [`serviceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#serviceurl) is configured and the import file is accessible by the server.
+3. Verify the form fields are populated after the import completes.
 
 ## Example
 
@@ -64,9 +64,7 @@ export default function App() {
                 style={{ height: '680px', width: '100%' }}
                 ref={viewerRef}
                 documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
-                // For server-backed viewer uncomment and set your service URL
-                // serviceUrl="http://localhost:5262/pdfviewer"
-                resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+                resourceUrl="https://cn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
             >
                 <Inject services={
                     [ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,

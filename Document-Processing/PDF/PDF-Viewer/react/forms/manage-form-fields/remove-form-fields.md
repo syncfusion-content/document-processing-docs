@@ -81,7 +81,6 @@ export function App() {
           id="container"
           documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
           resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-          // serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/" // Optional server-backed
           documentLoad={onDocumentLoad}
           style={{ height: '680px' }}
         >

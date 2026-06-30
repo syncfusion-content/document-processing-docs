@@ -54,21 +54,6 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-  enableNavigation: true,
-  documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'
-});
-
-ej.pdfviewer.PdfViewer.Inject(
-  ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.Navigation, ej.pdfviewer.LinkAnnotation, ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection
-);
-
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
 {% endtabs %}
 
 ![Page navigation toolbar in PDF Viewer](../images/navigation.png)
@@ -129,44 +114,6 @@ document.getElementById('goToPage').addEventListener('click', () => {
 // Go To Previous Page
 document.getElementById('goToPreviousPage').addEventListener('click', () => {
   viewer.navigation.goToPreviousPage();
-});
-
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-var viewer = new ej.pdfviewer.PdfViewer ({
-    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-    resourceUrl:'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib'
-});
-
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.BookmarkView,
-  ej.pdfviewer.ThumbnailView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print,
-  ej.pdfviewer.Navigation, ej.pdfviewer.LinkAnnotation, ej.pdfviewer.Annotation,  ej.pdfviewer.FormFields,
-  ej.pdfviewer.FormDesigner, ej.pdfviewer.PageOrganizer
-);
-
-viewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
-viewer.appendTo('#pdfViewer');
-
-// Go To First Page
-document.getElementById('goToFirstPage').addEventListener('click', () => {
-viewer.navigation.goToFirstPage();
-});
-// Go To Last Page
-document.getElementById('goToLastPage').addEventListener('click', () => {
-viewer.navigation.goToLastPage();
-});
-// Go To Next Page
-document.getElementById('goToNextPage').addEventListener('click', () => {
-viewer.navigation.goToNextPage();
-});
-// Go To Page
-document.getElementById('goToPage').addEventListener('click', () => {
-viewer.navigation.goToPage(4);
-});
-// Go To Previous Page
-document.getElementById('goToPreviousPage').addEventListener('click', () => {
-viewer.navigation.goToPreviousPage();
 });
 
 {% endhighlight %}

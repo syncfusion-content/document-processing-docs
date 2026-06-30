@@ -228,6 +228,4 @@ The following is the output of the custom context menu with customization.
 {% endhighlight %}
 {% endtabs %}
 
-N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.TSX` or `index.JSX` file: **serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**.
-
 [View the sample in Stack blitz](https://stackblitz.com/edit/react-zmbkebwq?file=index.js)

@@ -54,36 +54,6 @@ root.render(<App />);
 
 {% endraw %}
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-{% raw %}
-
-import * as ReactDOM from 'react-dom';
-import * as React from 'react';
-import './index.css';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  return (<div>
-    <div className='control-section'>
-      <PdfViewerComponent
-        id="container"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        interactionMode="Pan"
-        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
-        style={{ 'height': '640px' }}>
-
-            <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                                ThumbnailView, Print, TextSelection, TextSearch ]} />
-      </PdfViewerComponent>
-    </div>
-  </div>);
-}
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-
-{% endraw %}
-{% endhighlight %}
 {% endtabs %}
 
 ## Switch between Pan and Text Selection
@@ -151,51 +121,6 @@ root.render(<App />);
 
 {% endraw %}
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-{% raw %}
-
-import * as ReactDOM from 'react-dom';
-import * as React from 'react';
-import './index.css';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  const pdfViewerRef = React.useRef(null);
-
-  const switchToPan = () => {
-    pdfViewerRef.current.interactionMode = 'Pan';
-  };
-
-  const switchToTextSelection = () => {
-    pdfViewerRef.current.interactionMode = 'TextSelection';
-  };
-
-  return (<div>
-    <div style={{ marginBottom: '10px' }}>
-      <button onClick={switchToPan}>Pan Mode</button>
-      <button onClick={switchToTextSelection}>Text Selection Mode</button>
-    </div>
-    <div className='control-section'>
-      <PdfViewerComponent
-        ref={pdfViewerRef}
-        id="container"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        interactionMode="Pan"
-        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
-        style={{ 'height': '640px' }}>
-
-            <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                                ThumbnailView, Print, TextSelection, TextSearch ]} />
-      </PdfViewerComponent>
-    </div>
-  </div>);
-}
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-
-{% endraw %}
-{% endhighlight %}
 {% endtabs %}
 
 ## Disable text selection (enable pan mode)
@@ -220,36 +145,6 @@ function App() {
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         enableTextSelection={false}
-        style={{ 'height': '640px' }}>
-
-            <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                                ThumbnailView, Print, TextSelection, TextSearch, Annotation ]} />
-      </PdfViewerComponent>
-    </div>
-  </div>);
-}
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-
-{% endraw %}
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-{% raw %}
-
-import * as ReactDOM from 'react-dom';
-import * as React from 'react';
-import './index.css';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  return (<div>
-    <div className='control-section'>
-      <PdfViewerComponent
-        id="container"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        enableTextSelection={false}
-        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
             <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -311,60 +206,6 @@ function App() {
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         interactionMode="Pan"
-        style={{ 'height': '640px' }}>
-
-            <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                                ThumbnailView, Print, TextSelection, TextSearch, Annotation ]} />
-      </PdfViewerComponent>
-    </div>
-  </div>);
-}
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-
-{% endraw %}
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-{% raw %}
-
-import * as ReactDOM from 'react-dom';
-import * as React from 'react';
-import './index.css';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  const pdfViewerRef = React.useRef(null);
-  const [isAnnotating, setIsAnnotating] = React.useState(false);
-
-  const handleOpenAnnotationTool = () => {
-    // Switch to TextSelection mode when opening annotation tool
-    pdfViewerRef.current.interactionMode = 'TextSelection';
-    setIsAnnotating(true);
-  };
-
-  const handleCloseAnnotationTool = () => {
-    // Switch back to Pan mode
-    pdfViewerRef.current.interactionMode = 'Pan';
-    setIsAnnotating(false);
-  };
-
-  return (<div>
-    <div style={{ marginBottom: '10px' }}>
-      <button onClick={handleOpenAnnotationTool} disabled={isAnnotating}>
-        Open Annotation Tool
-      </button>
-      <button onClick={handleCloseAnnotationTool} disabled={!isAnnotating}>
-        Close Annotation Tool
-      </button>
-    </div>
-    <div className='control-section'>
-      <PdfViewerComponent
-        ref={pdfViewerRef}
-        id="container"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        interactionMode="Pan"
-        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
             <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,

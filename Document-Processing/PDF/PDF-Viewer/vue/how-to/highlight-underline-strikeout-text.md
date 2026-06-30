@@ -28,7 +28,7 @@ Step 2: Add the following Vue component snippet to enable highlight, underline, 
     </div>
     <ejs-pdfviewer
       ref="pdfviewer"
-      :serviceUrl="serviceUrl"
+      :resourceUrl="resourceUrl"
       :documentPath="documentPath"
       style="height:650px;display:block;"
     />
@@ -43,7 +43,7 @@ export default {
   components: { 'ejs-pdfviewer': PdfViewerComponent },
   data() {
     return {
-      serviceUrl: 'https://services.syncfusion.com/js/development/api/pdfviewer',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
       documentPath: 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf'
     };
   },

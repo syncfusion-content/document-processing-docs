@@ -18,8 +18,6 @@ The **PDF Viewer** lets you import values into interactive form fields in the cu
 ## API to use
 - [importFormFields](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#importformfields)(sourceOrObject, format)
 
-N> If a **server-backed viewer** is used, set `serviceUrl` before importing.
-
 ### Import FDF
 
 The following Vue example imports FDF data into the currently loaded PDF.

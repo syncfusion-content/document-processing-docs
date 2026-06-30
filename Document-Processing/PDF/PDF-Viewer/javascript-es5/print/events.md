@@ -58,31 +58,6 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/',
-    printStart: function(args) {
-        console.log('Print action has started for file: ' + args.fileName);
-        // To cancel the print action
-        // args.cancel = true;
-    }
-});
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
 {% endtabs %}
 
 ## printEnd event
@@ -113,29 +88,6 @@ ej.pdfviewer.PdfViewer.Inject(
 var pdfviewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
-    printEnd: function(args) {
-        console.log('Printed File Name: ' + args.fileName);
-    }
-});
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/',
     printEnd: function(args) {
         console.log('Printed File Name: ' + args.fileName);
     }

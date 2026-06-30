@@ -86,38 +86,6 @@ root.render(<App />);
 
 {% endraw %}
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-{% raw %}
-
-
-import * as ReactDOM from 'react-dom';
-import * as React from 'react';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
-         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation,
-         FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
-let pdfviewer;
-
-function App() {
-  return (<div>
-    <div className='control-section'>
-      <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
-        id="container"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
-        enableDesktopMode={true}
-        style={{ 'height': '640px' }}>
-
-              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
-      </PdfViewerComponent>
-    </div>
-  </div>);
-}
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-
-{% endraw %}
-{% endhighlight %}
 {% endtabs %}
 
 ## Enable scrolling in desktop mode with touch gestures
@@ -142,39 +110,6 @@ function App() {
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-        enableDesktopMode={true}
-        enableTextSelection={false}
-        style={{ 'height': '640px' }}>
-
-              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
-      </PdfViewerComponent>
-    </div>
-  </div>);
-}
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-
-{% endraw %}
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-{% raw %}
-
-
-import * as ReactDOM from 'react-dom';
-import * as React from 'react';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
-         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation,
-         FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
-let pdfviewer;
-
-function App() {
-  return (<div>
-    <div className='control-section'>
-      <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
-        id="container"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
         enableDesktopMode={true}
         enableTextSelection={false}
         style={{ 'height': '640px' }}>

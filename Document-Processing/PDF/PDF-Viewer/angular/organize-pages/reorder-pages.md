@@ -58,7 +58,7 @@ To enable or disable the **Reorder pages** option in the Organize Pages, update 
 ## Troubleshooting
 
 - **Thumbnails won't move**: Confirm [`pageOrganizerSettings.canRearrange`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/pageorganizersettingsmodel#canrearrange) is is not set to `false`.
-- **Changes not saved**: Verify [`serviceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#serviceurl) (server) or [`resourceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#resourceurl) (standalone) is configured correctly.
+- **Changes not saved**: Verify [`resourceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#resourceurl) (standalone) is configured correctly.
 
 ## Related topics
 

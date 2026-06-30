@@ -73,48 +73,4 @@ export default {
 </script>
 ```
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-```html
-<template>
-  <ejs-pdfviewer
-    id="pdfViewer"
-    ref="viewer"
-    :serviceUrl="serviceUrl"
-    :documentPath="documentPath"
-    :annotationSettings="annotationSettings"
-    :freeTextSettings="freeTextSettings"
-    style="height: 640px; display: block;"
-  />
-</template>
-
-<script>
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, Print, Annotation, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
-
-export default {
-  name: 'App',
-  components: { PdfViewerComponent },
-  provide: { PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, Print, Annotation, FormFields] },
-  data() {
-    return {
-      serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/',
-      documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      annotationSettings: {
-        author: 'syncfusion',
-        minHeight: 30,
-        maxHeight: 500,
-        minWidth: 30,
-        maxWidth: 500,
-        isLock: false,
-        isPrint: true,
-        isDownload: true
-      },
-      freeTextSettings: {
-        allowTextOnly: true
-      }
-    };
-  }
-};
-</script>
-```
-{% endhighlight %}
 {% endtabs %}

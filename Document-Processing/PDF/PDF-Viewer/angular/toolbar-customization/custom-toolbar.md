@@ -33,19 +33,6 @@ Create a simple PDF Viewer sample by following the [getting started](https://ej2
 </ejs-pdfviewer>
 
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-<ejs-pdfviewer #pdfviewer id='pdfViewer'
-               [serviceUrl]='service'
-               [documentPath]='document'
-               [enableToolbar]=false
-               [enableNavigationToolbar]=false
-               (pageChange)='pageChanged($event)'
-               (documentLoad)='documentLoaded($event)'
-               style="height:640px; display: block">
-</ejs-pdfviewer>
-
-{% endhighlight %}
 {% endtabs %}
 
 **Step 3: Import and inject the necessary modules.**
@@ -86,21 +73,6 @@ Hide the default toolbar using `enableToolbar` and `enableThumbnail` properties:
   [enableThumbnail]="false"
   [documentPath]="'https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf'"
   [resourceUrl]="'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib'"
-  style="display: block; height: 640px;">
-</ejs-pdfviewer>
-
-{% endraw %}
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-{% raw %}
-
-<!-- app.html -->
-<ejs-pdfviewer
-  id="container"
-  [enableToolbar]="false"
-  [enableThumbnail]="false"
-  [documentPath]="'https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf'"
-  [serviceUrl]="'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'"
   style="display: block; height: 640px;">
 </ejs-pdfviewer>
 

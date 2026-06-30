@@ -35,22 +35,4 @@ function formFieldDoubleClick(args) {
 
 {% endraw %}
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-{% raw %}
-
-<PdfViewerComponent
-  id="container"
-  documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
-  formFieldDoubleClick={formFieldDoubleClick}
-  serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
-  style={{ height: '640px' }}>
-</PdfViewerComponent>
-
-function formFieldDoubleClick(args) {
-    //Prints the argument value in the console window
-    console.log(args);
-  }
-
-{% endraw %}
-{% endhighlight %}
 {% endtabs %}

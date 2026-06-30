@@ -17,7 +17,7 @@ This guide shows how to import form field values into an already loaded PDF in t
 
 2. Call [`importFormFields(data, format)`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#importformfields) where `format` is one of `FormFieldDataFormat.Fdf`, `FormFieldDataFormat.Xfdf`, or `FormFieldDataFormat.Json`. `data` may be a file path (for server/file-based imports) / base64 string or a JavaScript object mapping field names to values.
 
-3. Verify the form fields are populated after the import completes. For server-backed imports, ensure [`serviceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#serviceurl) is configured and the import file is accessible by the server.
+3. Verify the form fields are populated after the import completes.
 
 ## Example
 

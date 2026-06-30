@@ -44,27 +44,6 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-    enablePrint: true,
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/'
-});
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Print programmatically in JavaScript PDF Viewer
@@ -93,34 +72,6 @@ ej.pdfviewer.PdfViewer.Inject(
 var pdfviewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib'
-});
-pdfviewer.appendTo('#PdfViewer');
-//print on button click
-var printButton = document.getElementById('print');
-if (printButton) {
-    printButton.onclick = function () {
-        pdfviewer.print.print();
-    };
-}
-
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.Print,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.FormFields
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/'
 });
 pdfviewer.appendTo('#PdfViewer');
 //print on button click

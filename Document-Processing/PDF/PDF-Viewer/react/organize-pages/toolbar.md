@@ -45,34 +45,6 @@ root.render(<App />);
 
 {% endraw %}
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-{% raw %}
-
-import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  let pdfviewer;
-  return (
-    <PdfViewerComponent
-      id="PdfViewer"
-      ref={(scope) => { pdfviewer = scope; }}
-      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      serviceUrl='https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/'
-      pageOrganizerSettings={{ canInsert: false }}
-      style={{ height: '640px' }}
-    >
-      <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
-    </PdfViewerComponent>
-  );
-}
-
-const root = ReactDOM.createRoot(document.getElementById('PdfViewer'));
-root.render(<App />);
-
-{% endraw %}
-{% endhighlight %}
 {% endtabs %}
 
 ## Enable or disable the delete option
@@ -108,34 +80,6 @@ root.render(<App />);
 
 {% endraw %}
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-{% raw %}
-
-import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  let pdfviewer;
-  return (
-    <PdfViewerComponent
-      id="PdfViewer"
-      ref={(scope) => { pdfviewer = scope; }}
-      serviceUrl='https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/'
-      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      pageOrganizerSettings={{ canDelete: false }}
-      style={{ height: '640px' }}
-    >
-      <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
-    </PdfViewerComponent>
-  );
-}
-
-const root = ReactDOM.createRoot(document.getElementById('PdfViewer'));
-root.render(<App />);
-
-{% endraw %}
-{% endhighlight %}
 {% endtabs %}
 
 ## Enable or disable the rotate option
@@ -158,34 +102,6 @@ function App() {
       ref={(scope) => { pdfviewer = scope; }}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-      pageOrganizerSettings={{ canRotate: false }}
-      style={{ height: '640px' }}
-    >
-      <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
-    </PdfViewerComponent>
-  );
-}
-
-const root = ReactDOM.createRoot(document.getElementById('PdfViewer'));
-root.render(<App />);
-
-{% endraw %}
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-{% raw %}
-
-import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  let pdfviewer;
-  return (
-    <PdfViewerComponent
-      id="PdfViewer"
-      ref={(scope) => { pdfviewer = scope; }}
-      serviceUrl='https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/'
-      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       pageOrganizerSettings={{ canRotate: false }}
       style={{ height: '640px' }}
     >

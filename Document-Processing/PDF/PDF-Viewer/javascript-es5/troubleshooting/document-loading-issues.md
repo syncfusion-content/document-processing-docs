@@ -15,7 +15,7 @@ If a document does not render in the viewer when using version 23.1 or newer, fo
 
 ```javascript
 var viewer = new ej.pdfviewer.PdfViewer ({
-serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'});
+resourceUrl: "https://cdn.syncfusion.com/ej2/33.2.13/dist/ej2-pdfviewer-lib"});
 
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.BookmarkView, ej.pdfviewer.ThumbnailView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.LinkAnnotation, ej.pdfviewer.Annotation,  ej.pdfviewer.FormFields, ej.pdfviewer.FormDesigner);
 

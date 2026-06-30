@@ -65,43 +65,6 @@ root.render(<App />);
 
 {% endraw %}
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-{% raw %}
-
-import * as ReactDOM from 'react-dom';
-import * as React from 'react';
-import './index.css';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, Annotation, TextSearch, Inject } from '@syncfusion/ej2-react-pdfviewer';
-let pdfviewer;
-
-function App() {
-  function downloadClicked() {
-    var viewer = document.getElementById('container').ej2_instances[0];
-    viewer.download();
-  }
-  return (<div>
-    <div className='control-section'>
-     {/* Render the PDF Viewer */}
-     <button onClick={downloadClicked}>Download</button>
-      <PdfViewerComponent
-        ref={(scope) => { pdfviewer = scope; }}
-        id="container"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
-        style={{ 'height': '640px' }}>
-              <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation,
-                                  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch]} />
-      </PdfViewerComponent>
-    </div>
-  </div>
-  );
-}
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-
-{% endraw %}
-{% endhighlight %}
 {% endtabs %}
 
 ## Download a PDF with Flattened Annotations

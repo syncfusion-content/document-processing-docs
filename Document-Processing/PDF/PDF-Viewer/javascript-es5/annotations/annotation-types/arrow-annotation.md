@@ -60,31 +60,6 @@ document.getElementById('arrowMode').addEventListener('click', function() {
     pdfviewer.annotationModule.setAnnotationMode('Arrow');
 });
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.FormFields,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('arrowMode').addEventListener('click', function() {
-    pdfviewer.annotationModule.setAnnotationMode('Arrow');
-});
-{% endhighlight %}
 {% endtabs %}
 
 ### Add an arrow annotation programmatically
@@ -114,36 +89,6 @@ ej.pdfviewer.PdfViewer.Inject(
 var pdfviewer = new ej.pdfviewer.PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
-
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('addArrowAnnotation').addEventListener('click', function() {
-    pdfviewer.annotation.addAnnotation('Arrow', {
-        offset: { x: 200, y: 370 },
-        pageNumber: 1,
-        vertexPoints: [{ x: 200, y: 370 }, { x: 350, y: 370 }]
-    });
-});
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.FormFields,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer();
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 
 pdfviewer.appendTo('#PdfViewer');
 
@@ -245,39 +190,6 @@ document.getElementById('editArrowAnnotation').addEventListener('click', functio
     }
 });
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.FormFields,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('editArrowAnnotation').addEventListener('click', function() {
-    for (var i = 0; i < pdfviewer.annotationCollection.length; i++) {
-        if (pdfviewer.annotationCollection[i].subject === 'Arrow') {
-            pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = 'Circle';
-            pdfviewer.annotationCollection[i].strokeColor = '#0000FF';
-            pdfviewer.annotationCollection[i].thickness = 2;
-            pdfviewer.annotationCollection[i].fillColor = '#FFFF00';
-            pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
-        }
-    }
-});
-{% endhighlight %}
 {% endtabs %}
 
 ## Default arrow settings during initialization
@@ -304,29 +216,6 @@ ej.pdfviewer.PdfViewer.Inject(
 var pdfviewer = new ej.pdfviewer.PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
-
-pdfviewer.arrowSettings = { fillColor: 'green', opacity: 0.6, strokeColor: 'blue' };
-pdfviewer.appendTo('#PdfViewer');
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.FormFields,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 
 pdfviewer.arrowSettings = { fillColor: 'green', opacity: 0.6, strokeColor: 'blue' };
 pdfviewer.appendTo('#PdfViewer');
@@ -367,40 +256,6 @@ pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfview
 pdfviewer.appendTo('#PdfViewer');
 //Apply Arrow Settings while adding individual Annotation
 document.getElementById('arrow')?.addEventListener('click', function () {
-    pdfviewer.annotation.addAnnotation('Arrow', {
-        offset: { x: 200, y: 230 },
-        pageNumber: 1,
-        vertexPoints: [{ x: 200, y: 230 }, { x: 350, y: 230 }],
-        fillColor: '#ff1010ff',
-        strokeColor: '#fff000',
-        opacity: 0.9,
-        author: 'User 1',
-        thickness: 1
-    });
-});
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.FormFields,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer();
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
-pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
-pdfviewer.appendTo('#PdfViewer');
-//Apply Arrow Settings while adding individual Annotation
-document.getElementById('arrow').addEventListener('click', function () {
     pdfviewer.annotation.addAnnotation('Arrow', {
         offset: { x: 200, y: 230 },
         pageNumber: 1,

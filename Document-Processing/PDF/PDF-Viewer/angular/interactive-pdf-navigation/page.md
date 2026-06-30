@@ -84,36 +84,6 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
   }
 
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import { Component, OnInit } from '@angular/core';
-import { LinkAnnotationService, BookmarkViewService, MagnificationService,
-         ThumbnailViewService, ToolbarService, NavigationService,
-         TextSearchService, AnnotationService, TextSelectionService,
-         PrintService
-       } from '@syncfusion/ej2-angular-pdfviewer';
-@Component({
-  selector: 'app-container',
-  // specifies the template string for the PDF Viewer component
-  template: `<div class="content-wrapper">
-               <ejs-pdfviewer id="pdfViewer"
-                        [serviceUrl]='service'
-                        [enableNavigation]='true'
-                        [documentPath]='document'
-                        style="height:640px;display:block">
-               </ejs-pdfviewer>
-            </div>`,
-  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
-               ThumbnailViewService, ToolbarService, NavigationService,
-               AnnotationService, TextSearchService, TextSelectionService,
-               PrintService]
-  })
-  export class AppComponent {
-      public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
-      public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  }
-
-{% endhighlight %}
 {% endtabs %}
 
 ![PDF Viewer toolbar showing page navigation controls](../images/navigation.png)
@@ -196,59 +166,6 @@ import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService, Magnifi
       public goToPage(): void { this.pdfViewer.navigation.goToPage(4); }
       public goToPreviousPage(): void { this.pdfViewer.navigation.goToPreviousPage(); }
 }
-
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService, MagnificationService,
-         ThumbnailViewService, ToolbarService, NavigationService,
-         TextSearchService, AnnotationService, TextSelectionService,
-         PrintService
-       } from '@syncfusion/ej2-angular-pdfviewer';
-@Component({
-  selector: 'app-container',
-  // specifies the template string for the PDF Viewer component
-  template: `<div class="content-wrapper">
-               <div class="btn-group" style="margin-bottom:8px; display:flex; gap:8px; flex-wrap:wrap;">
-                 <button (click)="goToFirstPage()">Go To First Page</button>
-                 <button (click)="goToLastPage()">Go To Last Page</button>
-                 <button (click)="goToNextPage()">Go To Next Page</button>
-                 <button (click)="goToPage()">Go To Page</button>
-                 <button (click)="goToPreviousPage()">Go To Previous Page</button>
-               </div>
-               <ejs-pdfviewer #pdfViewer id="pdfViewer"
-                        [serviceUrl]='service'
-                        [documentPath]='document'                        
-                        style="height:640px;display:block">
-               </ejs-pdfviewer>
-            </div>`,
-  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
-               ThumbnailViewService, ToolbarService, NavigationService,
-               AnnotationService, TextSearchService, TextSelectionService,
-               PrintService]
-  })
-  export class AppComponent {
-      @ViewChild('pdfViewer') public pdfViewer: PdfViewerComponent;
-      public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
-      public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-
-      public goToFirstPage(): void {
-        this.pdfViewer.navigation.goToFirstPage();
-      }
-      public goToLastPage(): void {
-        this.pdfViewer.navigation.goToLastPage();
-      }
-      public goToNextPage(): void {
-        this.pdfViewer.navigation.goToNextPage();
-      }
-      public goToPage(): void {
-        this.pdfViewer.navigation.goToPage(4);
-      }
-      public goToPreviousPage(): void {
-        this.pdfViewer.navigation.goToPreviousPage();
-      }
-  }
 
 {% endhighlight %}
 {% endtabs %}

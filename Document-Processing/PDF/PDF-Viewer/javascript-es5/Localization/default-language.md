@@ -42,28 +42,6 @@ ej.pdfviewer.PdfViewer.Inject(
     });
     pdfviewer.appendTo('#pdfViewer');
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-ej.pdfviewer.PdfViewer.Inject(
-      ej.pdfviewer.TextSelection,
-      ej.pdfviewer.TextSearch,
-      ej.pdfviewer.Print,
-      ej.pdfviewer.Navigation,
-      ej.pdfviewer.Toolbar,
-      ej.pdfviewer.Magnification,
-      ej.pdfviewer.Annotation,
-      ej.pdfviewer.FormDesigner,
-      ej.pdfviewer.FormFields,
-      ej.pdfviewer.PageOrganizer
-    );
-
-    var pdfviewer = new ej.pdfviewer.PdfViewer({
-      documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/',
-     locale: 'ar-AE' //Using locale update culture (en-US by default)
-    });
-    pdfviewer.appendTo('#pdfViewer');
-{% endhighlight %}
 {% endtabs %}
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples)

@@ -25,7 +25,7 @@ let pdfviewer;
 function App() {
   function documentLoad() {
     var viewer = document.getElementById('container').ej2_instances[0];
-    viewer.serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
+    viewer.resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
     viewer.dataBind();
     viewer.load("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",null);
   }
@@ -53,10 +53,10 @@ root.render(<App />);
 Troubleshooting checklist (in order)
 
 1. Initialization order: call `dataBind()` before `load()` (required in v23.1+). If using React refs, ensure the ref is available before calling these methods.
-2. Verify the document source: confirm the `documentPath`, `serviceUrl`, or `resourceUrl` is correct and returns the expected content.
+2. Verify the document source: confirm the `documentPath`, or `resourceUrl` is correct and returns the expected content.
 3. Network connectivity: confirm the browser can reach the document URL (check network tab for failed requests).
 4. Console errors: inspect the browser console for CORS errors, 4xx/5xx responses, or runtime exceptions.
-5. CORS configuration: for cross-origin `serviceUrl` or document URLs, ensure the server sets `Access-Control-Allow-Origin` and allows the `Authorization` header if used.
+5. CORS configuration: for cross-origin document URLs, ensure the server sets `Access-Control-Allow-Origin` and allows the `Authorization` header if used.
 6. Content Security Policy: confirm CSP allows loading resources from the target origins (scripts, fonts, and media).
 7. Version and cache: update to the latest PDF Viewer release and clear caches (browser/Service Worker) to rule out stale assets.
 8. Server behavior: if the viewer uses a backend service, verify the service is running and returns correct responses for PDF requests.

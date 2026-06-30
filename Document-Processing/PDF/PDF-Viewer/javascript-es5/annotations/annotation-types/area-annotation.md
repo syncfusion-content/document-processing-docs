@@ -60,31 +60,6 @@ document.getElementById('areaMode').addEventListener('click', function () {
     pdfviewer.annotationModule.setAnnotationMode('Area');
 });
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.FormFields,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('areaMode').addEventListener('click', function () {
-    pdfviewer.annotationModule.setAnnotationMode('Area');
-});
-{% endhighlight %}
 {% endtabs %}
 
 ### Add an area annotation programmatically
@@ -114,38 +89,6 @@ ej.pdfviewer.PdfViewer.Inject(
 var pdfviewer = new ej.pdfviewer.PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
-
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('addAreaAnnotation').addEventListener('click', function () {
-    pdfviewer.annotation.addAnnotation('Area', {
-        offset: { x: 200, y: 500 },
-        pageNumber: 1,
-        vertexPoints: [
-            { x: 200, y: 500 }, { x: 288, y: 499 }, { x: 289, y: 553 }, { x: 200, y: 500 }
-        ]
-    });
-});
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.FormFields,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer();
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 
 pdfviewer.appendTo('#PdfViewer');
 
@@ -253,44 +196,6 @@ if (editAreaAnnotation) {
 }
 
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.FormFields,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.appendTo('#PdfViewer');
-
-var editAreaAnnotation = document.getElementById('editAreaAnnotation');
-if (editAreaAnnotation) {
-    editAreaAnnotation.addEventListener('click', function () {
-        for (var i = 0; i < pdfviewer.annotationCollection.length; i++) {
-            if (pdfviewer.annotationCollection[i].subject === "Area calculation") {
-                pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle";
-                pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-                pdfviewer.annotationCollection[i].thickness = 2;
-                pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
-                pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
-            }
-        }
-    });
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Default area settings during initialization
@@ -317,29 +222,6 @@ ej.pdfviewer.PdfViewer.Inject(
 var pdfviewer = new ej.pdfviewer.PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
-
-pdfviewer.areaSettings = { fillColor: 'yellow', opacity: 0.6, strokeColor: 'orange' };
-pdfviewer.appendTo('#PdfViewer');
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.FormFields,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 
 pdfviewer.areaSettings = { fillColor: 'yellow', opacity: 0.6, strokeColor: 'orange' };
 pdfviewer.appendTo('#PdfViewer');
@@ -377,40 +259,6 @@ ej.pdfviewer.PdfViewer.Inject(
 var pdfviewer = new ej.pdfviewer.PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
 pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
-pdfviewer.appendTo('#PdfViewer');
-// Apply Area settings while adding individual annotation
-document.getElementById('Area')?.addEventListener('click', function () {
-    pdfviewer.annotation.addAnnotation('Area', {
-        offset: { x: 200, y: 500 },
-        pageNumber: 1,
-        vertexPoints: [
-            { x: 200, y: 500 }, { x: 288, y: 499 }, { x: 289, y: 553 }, { x: 200, y: 500 }
-        ],
-        fillColor: 'yellow',
-        opacity: 0.6,
-        strokeColor: 'orange'
-    });
-});
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.FormFields,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
 pdfviewer.appendTo('#PdfViewer');
 // Apply Area settings while adding individual annotation
 document.getElementById('Area')?.addEventListener('click', function () {
@@ -470,30 +318,6 @@ ej.pdfviewer.PdfViewer.Inject(
 var pdfviewer = new ej.pdfviewer.PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
-pdfviewer.measurementSettings = { scaleRatio: 2, conversionUnit: 'cm', displayUnit: 'cm' };
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.FormFields,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.measurementSettings = { scaleRatio: 2, conversionUnit: 'cm', displayUnit: 'cm' };
 pdfviewer.appendTo('#PdfViewer');
 

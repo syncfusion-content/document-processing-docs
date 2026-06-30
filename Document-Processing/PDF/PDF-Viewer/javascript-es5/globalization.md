@@ -296,17 +296,7 @@ The different locale value for the PDF Viewer can be specified using the locale 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     locale: 'ar-AE',
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                });
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    locale: 'ar-AE',
-                    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
+                    resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
 pdfviewer.appendTo('#PdfViewer');

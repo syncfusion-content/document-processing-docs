@@ -59,25 +59,6 @@ if (distanceMode) {
 
 
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer',
-                });
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
-                              ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
-pdfviewer.appendTo('#PdfViewer');
-let distanceMode = document.getElementById('distanceMode');
-if (distanceMode) {
-    distanceMode.addEventListener('click', function () {
-        if (pdfviewer) {
-            pdfviewer.annotationModule.setAnnotationMode("Distance");
-        }
-    });
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Add a measurement annotation to the PDF document programmatically
@@ -100,83 +81,6 @@ Here is an example showing how to add measurement annotations programmatically u
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
                     resourceUrl : "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
-                });
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
-                              ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
-pdfviewer.appendTo('#PdfViewer');
-
-let addDistanceAnnotation = document.getElementById('addDistanceAnnotation');
-if (addDistanceAnnotation) {
-    addDistanceAnnotation.addEventListener('click', function () {
-        if (pdfviewer) {
-            pdfviewer.annotation.addAnnotation("Distance", {
-                offset: { x: 200, y: 230 },
-                pageNumber: 1,
-                vertexPoints: [{ x: 200, y: 230 }, { x: 350, y: 230 }]
-            });
-        }
-    });
-}
-
-let addPerimeterAnnotation = document.getElementById('addPerimeterAnnotation');
-if (addPerimeterAnnotation) {
-    addPerimeterAnnotation.addEventListener('click', function () {
-        if (pdfviewer) {
-            pdfviewer.annotation.addAnnotation("Perimeter", {
-                offset: { x: 200, y: 350 },
-                pageNumber: 1,
-                vertexPoints: [{ x: 200, y: 350 }, { x: 285, y: 350 }, { x: 286, y: 412 }]
-            });
-        }
-    });
-}
-
-let addAreaAnnotation = document.getElementById('addAreaAnnotation');
-if (addAreaAnnotation) {
-    addAreaAnnotation.addEventListener('click', function () {
-        if (pdfviewer) {
-            pdfviewer.annotation.addAnnotation("Area", {
-                offset: { x: 200, y: 500 },
-                pageNumber: 1,
-                vertexPoints: [{ x: 200, y: 500 }, { x: 288, y: 499 }, { x: 289, y: 553 }, { x: 200, y: 500 }]
-            });
-        }
-    });
-}
-
-let addRadiusAnnotation = document.getElementById('addRadiusAnnotation');
-if (addRadiusAnnotation) {
-    addRadiusAnnotation.addEventListener('click', function () {
-        if (pdfviewer) {
-            pdfviewer.annotation.addAnnotation("Radius", {
-                offset: { x: 200, y: 630 },
-                pageNumber: 1,
-                width: 90,
-                height: 90
-            });
-        }
-    });
-}
-
-let addVolumeAnnotation = document.getElementById('addVolumeAnnotation');
-if (addVolumeAnnotation) {
-    addVolumeAnnotation.addEventListener('click', function () {
-        if (pdfviewer) {
-            pdfviewer.annotation.addAnnotation("Volume", {
-                offset: { x: 200, y: 810 },
-                pageNumber: 1,
-                vertexPoints: [{ x: 200, y: 810 }, { x: 200, y: 919 }, { x: 320, y: 919 }, { x: 320, y: 809 }, { x: 200, y: 810 }]
-            });
-        }
-    });
-}
-
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl : "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
                               ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
@@ -361,101 +265,6 @@ if (editVolumeAnnotation) {
 }
 
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl : "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
-                });
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
-                              ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
-pdfviewer.appendTo('#PdfViewer');
-let editDistanceAnnotation = document.getElementById('editDistanceAnnotation');
-if (editDistanceAnnotation) {
-    editDistanceAnnotation.addEventListener('click', function () {
-        if (pdfviewer) {
-            for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
-                if (pdfviewer.annotationCollection[i].subject === "Distance calculation") {
-                    pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
-                    pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-                    pdfviewer.annotationCollection[i].thickness = 2;
-                    pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
-                    pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
-                }
-            }
-        }
-    });
-}
-
-let editPerimeterAnnotation = document.getElementById('editPerimeterAnnotation');
-if (editPerimeterAnnotation) {
-    editPerimeterAnnotation.addEventListener('click', function () {
-        if (pdfviewer) {
-            for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
-                if (pdfviewer.annotationCollection[i].subject === "Perimeter calculation") {
-                    pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
-                    pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-                    pdfviewer.annotationCollection[i].thickness = 2;
-                    pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
-                    pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
-                }
-            }
-        }
-    });
-}
-
-let editAreaAnnotation = document.getElementById('editAreaAnnotation');
-if (editAreaAnnotation) {
-    editAreaAnnotation.addEventListener('click', function () {
-        if (pdfviewer) {
-            for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
-                if (pdfviewer.annotationCollection[i].subject === "Area calculation") {
-                    pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
-                    pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-                    pdfviewer.annotationCollection[i].thickness = 2;
-                    pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
-                    pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
-                }
-            }
-        }
-    });
-}
-
-let editRadiusAnnotation = document.getElementById('editRadiusAnnotation');
-if (editRadiusAnnotation) {
-    editRadiusAnnotation.addEventListener('click', function () {
-        if (pdfviewer) {
-            for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
-                if (pdfviewer.annotationCollection[i].subject === "Radius calculation") {
-                    pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
-                    pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-                    pdfviewer.annotationCollection[i].thickness = 2;
-                    pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
-                    pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
-                }
-            }
-        }
-    });
-}
-
-let editVolumeAnnotation = document.getElementById('editVolumeAnnotation');
-if (editVolumeAnnotation) {
-    editVolumeAnnotation.addEventListener('click', function () {
-        if (pdfviewer) {
-            for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
-                if (pdfviewer.annotationCollection[i].subject === "Volume calculation") {
-                    pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
-                    pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-                    pdfviewer.annotationCollection[i].thickness = 2;
-                    pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
-                    pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
-                }
-            }
-        }
-    });
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Edit the properties of measurement annotations
@@ -515,22 +324,6 @@ ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearc
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer',
-                    distanceSettings : {fillColor: 'blue', opacity: 0.6, strokeColor: 'green'},
-                    perimeterSettings : {fillColor: 'green', opacity: 0.6, strokeColor: 'blue'},
-                    areaSettings :{fillColor: 'yellow', opacity: 0.6, strokeColor: 'orange'},
-                    radiusSettings : {fillColor: 'orange', opacity: 0.6, strokeColor: 'pink'},
-                    volumeSettings : {fillColor: 'pink', opacity: 0.6, strokeColor: 'yellow'},
-                });
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
-                              ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
 {% endtabs %}
 ## Editing scale ratio and unit of the measurement annotation
 
@@ -559,18 +352,6 @@ The properties of scale ratio for measurement annotation can be set before creat
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
                     resourceUrl : "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
-                    measurementSettings = {scaleRatio: 2, conversionUnit: 'cm', displayUnit: 'cm'},
-                });
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
-                              ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer',
                     measurementSettings = {scaleRatio: 2, conversionUnit: 'cm', displayUnit: 'cm'},
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,

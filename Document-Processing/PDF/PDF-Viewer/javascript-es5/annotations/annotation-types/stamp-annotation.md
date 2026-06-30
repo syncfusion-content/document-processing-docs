@@ -77,26 +77,6 @@ document.getElementById('customStamp') && document.getElementById('customStamp')
   });
 });
 {% endhighlight %}
-{% highlight javascript tabtitle="Server-Backed" %}
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.Navigation, ej.pdfviewer.Annotation, ej.pdfviewer.LinkAnnotation, ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.FormFields, ej.pdfviewer.FormDesigner, ej.pdfviewer.PageOrganizer);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('dynamicStamp') && document.getElementById('dynamicStamp').addEventListener('click', function () {
-  pdfviewer.annotationModule.setAnnotationMode('Stamp', ej.pdfviewer.DynamicStampItem.NotApproved);
-});
-
-document.getElementById('signStamp') && document.getElementById('signStamp').addEventListener('click', function () {
-  pdfviewer.annotationModule.setAnnotationMode('Stamp', undefined, ej.pdfviewer.SignStampItem.Witness);
-});
-
-document.getElementById('standardBusinessStamp') && document.getElementById('standardBusinessStamp').addEventListener('click', function () {
-  pdfviewer.annotationModule.setAnnotationMode('Stamp', undefined, undefined, ej.pdfviewer.StandardBusinessStampItem.Approved);
-});
-{% endhighlight %}
 {% endtabs %}
 
 ### Add Stamp annotations programmatically
@@ -117,40 +97,6 @@ ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, 
 var pdfviewer = new ej.pdfviewer.PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('addDynamic') && document.getElementById('addDynamic').addEventListener('click', function () {
-  pdfviewer.annotation.addAnnotation('Stamp', {
-    offset: { x: 200, y: 140 }, pageNumber: 1
-  }, ej.pdfviewer.DynamicStampItem.Approved);
-});
-
-document.getElementById('addSign') && document.getElementById('addSign').addEventListener('click', function () {
-  pdfviewer.annotation.addAnnotation('Stamp', {
-    offset: { x: 200, y: 240 }, pageNumber: 1
-  }, undefined, ej.pdfviewer.SignStampItem.Witness);
-});
-
-document.getElementById('addStandard') && document.getElementById('addStandard').addEventListener('click', function () {
-  pdfviewer.annotation.addAnnotation('Stamp', {
-    offset: { x: 200, y: 340 }, pageNumber: 1
-  }, undefined, undefined, ej.pdfviewer.StandardBusinessStampItem.Approved);
-});
-
-document.getElementById('addCustom') && document.getElementById('addCustom').addEventListener('click', function () {
-  pdfviewer.annotation.addAnnotation('Stamp', {
-    offset: { x: 100, y: 440 }, width: 46, height: 100, pageNumber: 1, isLock: true,
-    author: 'Guest',
-    customStamps: [{ customStampName: 'Image', customStampImageSource: 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD...' }]
-  });
-});
-{% endhighlight %}
-{% highlight javascript tabtitle="Server-Backed" %}
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.Navigation, ej.pdfviewer.Annotation, ej.pdfviewer.LinkAnnotation, ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.FormFields, ej.pdfviewer.FormDesigner, ej.pdfviewer.PageOrganizer);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 pdfviewer.appendTo('#PdfViewer');
 
 document.getElementById('addDynamic') && document.getElementById('addDynamic').addEventListener('click', function () {
@@ -225,27 +171,6 @@ document.getElementById('editStamp') && document.getElementById('editStamp').add
   }
 });
 {% endhighlight %}
-{% highlight javascript tabtitle="Server-Backed" %}
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.Navigation, ej.pdfviewer.Annotation, ej.pdfviewer.LinkAnnotation, ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.FormFields, ej.pdfviewer.FormDesigner, ej.pdfviewer.PageOrganizer);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('editStamp') && document.getElementById('editStamp').addEventListener('click', function () {
-  for (var i = 0; i < pdfviewer.annotationCollection.length; i++) {
-    if (pdfviewer.annotationCollection[i].shapeAnnotationType === 'stamp') {
-      var width = pdfviewer.annotationCollection[i].bounds.width;
-      var height = pdfviewer.annotationCollection[i].bounds.height;
-      pdfviewer.annotationCollection[i].bounds = { x: 100, y: 100, width: width, height: height };
-      pdfviewer.annotationCollection[i].annotationSettings.isLock = true;
-      pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
-    }
-  }
-});
-{% endhighlight %}
 {% endtabs %}
 
 ## Default stamp settings during initialization
@@ -259,15 +184,6 @@ ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, 
 var pdfviewer = new ej.pdfviewer.PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
-pdfviewer.stampSettings = { opacity: 0.3, author: 'Guest User' };
-pdfviewer.appendTo('#PdfViewer');
-{% endhighlight %}
-{% highlight javascript tabtitle="Server-Backed" %}
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.Navigation, ej.pdfviewer.Annotation, ej.pdfviewer.LinkAnnotation, ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.FormFields, ej.pdfviewer.FormDesigner, ej.pdfviewer.PageOrganizer);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 pdfviewer.stampSettings = { opacity: 0.3, author: 'Guest User' };
 pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
@@ -306,35 +222,6 @@ ej.pdfviewer.PdfViewer.Inject(
 var pdfviewer = new ej.pdfviewer.PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
 pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
-pdfviewer.appendTo('#PdfViewer');
-
-//Apply Stamp Settings while adding individual Annotation
-document.getElementById('Stamp')?.addEventListener('click', function () {
-     pdfviewer.annotation.addAnnotation('Stamp', {
-    offset: { x: 200, y: 140 }, pageNumber: 1,
-     opacity: 0.3, author: 'Guest User'
-  } ,'Approved');
-});
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.FormFields,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.PageOrganizer,
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer();
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
 
 //Apply Stamp Settings while adding individual Annotation

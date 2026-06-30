@@ -22,7 +22,7 @@ The following example shows how to enable text extraction and handle the complet
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
-  <ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath" :isExtractText="true"
+  <ejs-pdfviewer id="pdfViewer" :resourceUrl="resourceUrl" :documentPath="documentPath" :isExtractText="true"
     :extractTextCompleted="extractTextCompleted">
   </ejs-pdfviewer>
 </template>
@@ -35,8 +35,8 @@ import {
 } from '@syncfusion/ej2-vue-pdfviewer';
 import { provide } from 'vue';
 
-const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
-const documentPath = "PDF_Succinctly.pdf";
+const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 const extractTextCompleted = function (args) {
   // Extract the Complete text of load document
   console.log(args);
@@ -56,7 +56,7 @@ provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, Bookma
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
-  <ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath" :isExtractText="true"
+  <ejs-pdfviewer id="pdfViewer" :resourceUrl="resourceUrl" :documentPath="documentPath" :isExtractText="true"
     :extractTextCompleted="extractTextCompleted">
   </ejs-pdfviewer>
 </template>
@@ -75,8 +75,8 @@ export default {
   },
   data() {
     return {
-      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
-      documentPath: "PDF_Succinctly.pdf",
+      resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
       extractTextCompleted: function (args) {
         // Extract the Complete text of load document
         console.log(args);

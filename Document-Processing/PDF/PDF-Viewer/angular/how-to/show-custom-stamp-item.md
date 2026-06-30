@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Display custom stamp items in the custom stamp dropdown
+# Display custom stamp items in the custom stamp dropdown in Angular
 
 ### Overview
 
@@ -73,77 +73,6 @@ import {
 export class AppComponent implements OnInit {
   public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
   public resourceUrl: string = 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib';
-
-  public customStampSettings = {
-    isAddToMenu: true,
-    customStamps: [
-      {
-        customStampName: 'Image1',
-        customStampImageSource: 'data:image/png;base64,...' // Provide a valid base64 or URL for the image
-         },
-      {
-        customStampName: 'Image2',
-        customStampImageSource: 'data:image/png;base64,...' // Provide a valid base64 or URL for the image
-        }
-    ],
-    enableCustomStamp: true,
-    opacity: 1,
-  };
-
-  ngOnInit(): void {}
-
-}
-
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import { Component, OnInit } from '@angular/core';
-import {
-  LinkAnnotationService,
-  BookmarkViewService,
-  MagnificationService,
-  ThumbnailViewService,
-  ToolbarService,
-  NavigationService,
-  AnnotationService,
-  TextSearchService,
-  TextSelectionService,
-  FormFieldsService,
-  FormDesignerService,
-  PrintService,
-} from '@syncfusion/ej2-angular-pdfviewer';
-
-@Component({
-  selector: 'app-root',
-  template: `
-    <div class="content-wrapper">
-      <ejs-pdfviewer
-        id="pdfViewer"
-        [documentPath]="document"
-        [serviceUrl]="serviceUrl"
-        [customStampSettings]="customStampSettings"
-        style="height: 640px; display: block;">
-      </ejs-pdfviewer>
-    </div>
-  `,
-  providers: [
-    LinkAnnotationService,
-    BookmarkViewService,
-    MagnificationService,
-    ThumbnailViewService,
-    ToolbarService,
-    NavigationService,
-    AnnotationService,
-    TextSearchService,
-    TextSelectionService,
-    FormFieldsService,
-    FormDesignerService,
-    PrintService,
-  ],
-})
-export class AppComponent implements OnInit {
-  public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  public serviceUrl: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
 
   public customStampSettings = {
     isAddToMenu: true,

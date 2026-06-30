@@ -30,9 +30,8 @@ export function App() {
       <PdfViewerComponent
         id="container"
         documentPath="PDF_Succinctly.pdf"
-        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         style={{ 'height': '680px' }}
-        // Enable or disable pinch zoom.
         enableLocalStorage = "true"
       >
         <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,

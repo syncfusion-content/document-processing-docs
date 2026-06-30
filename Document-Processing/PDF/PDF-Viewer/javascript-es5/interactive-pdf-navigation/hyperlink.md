@@ -58,21 +58,6 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification,
-ej.pdfviewer.Navigation, ej.pdfviewer.Annotation, ej.pdfviewer.LinkAnnotation,
-ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-  documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-  enableHyperlink: false // Disables all hyperlinks
-});
-
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
 {% endtabs %}
 
 N> Disabling hyperlinks affects only the viewer's behavior and does not modify the original PDF document.
@@ -100,7 +85,7 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
   hyperlinkOpenState: 'NewTab' // Opens links in a new browser tab
 });
 
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
+pdfviewer.resourceUrl="https://cdn.syncfusion.com/ej2/33.2.13/dist/ej2-pdfviewer-lib"
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
@@ -150,37 +135,6 @@ ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelectio
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
   documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-  // Event handler for hyperlink click
-  hyperlinkClick: function (args) {
-    // Log the URL of the clicked hyperlink
-    console.log('Hyperlink Clicked:', args.hyperlink);
-
-    // To prevent the default navigation behavior, set args.cancel to true
-    // args.cancel = true;
-  },
-
-  // Event handler for mouse hover over a hyperlink
-  hyperlinkMouseOver: function (args) {
-    // Log the href of the hyperlink element when the mouse hovers over it
-    if (args && args.hyperlinkElement && args.hyperlinkElement.href) {
-      console.log('Mouse is over hyperlink:', args.hyperlinkElement.href);
-    }
-  }
-});
-
-// Append the PDF Viewer to the HTML element
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification,
-ej.pdfviewer.Navigation, ej.pdfviewer.Annotation, ej.pdfviewer.LinkAnnotation,
-ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-  documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-  serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/',
   // Event handler for hyperlink click
   hyperlinkClick: function (args) {
     // Log the URL of the clicked hyperlink

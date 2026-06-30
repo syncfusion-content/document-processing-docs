@@ -19,8 +19,7 @@ This guide explains how to rotate individual or multiple pages using the **Organ
 ## Prerequisites
 
 - EJ2 React PDF Viewer installed
-- PDF Viewer configured with [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl) (standalone) or [`serviceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#serviceurl) (server-backed)
-
+- PDF Viewer configured with [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl) (standalone)
 ## Steps
 
 1. Open the Organize Pages view
@@ -66,7 +65,7 @@ To enable or disable the **Rotate Pages** button in the Organize Pages toolbar, 
 ## Troubleshooting
 
 - **Rotate controls disabled**: Ensure [`pageOrganizerSettings.canRotate`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/pageorganizersettingsmodel#canrotate) is not set to `false`.
-- **Rotation not persisted**: Click **Save** after rotating. For server-backed setups ensure [`serviceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#serviceurl) is set so server-side save can persist changes.
+- **Rotation not persisted**: Click **Save** after rotating.
 
 ## Related topics
 

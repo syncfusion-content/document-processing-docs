@@ -67,30 +67,6 @@ if (stickyNote) {
 }
 
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl : "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
-                });
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
-                              ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
-pdfviewer.appendTo('#PdfViewer');
-
-let stickyNote = document.getElementById('stickyNote');
-if (stickyNote) {
-  stickyNote.addEventListener('click', function () {
-    if (pdfviewer) {
-      pdfviewer.annotation.addAnnotation("StickyNotes", {
-        offset: { x: 100, y: 200 },
-        pageNumber: 1,
-        isLock: false
-      });
-    }
-  });
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Edit an existing sticky note annotation programmatically
@@ -109,33 +85,6 @@ Here is an example of using editAnnotation():
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
                     resourceUrl : "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
-                });
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
-                              ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
-pdfviewer.appendTo('#PdfViewer');
-
-let stickyNote = document.getElementById('stickyNote');
-if (stickyNote) {
-  stickyNote.addEventListener('click', function () {
-    if (pdfviewer) {
-      for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
-        if (pdfviewer.annotationCollection[i].shapeAnnotationType === "sticky") {
-          var width = pdfviewer.annotationCollection[i].bounds.width;
-          var height = pdfviewer.annotationCollection[i].bounds.height;
-          pdfviewer.annotationCollection[i].bounds = { x: 100, y: 100, width: width, height: height };
-          pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
-        }
-      }
-    }
-  });
-}
-
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl : "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
                               ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
@@ -199,18 +148,6 @@ ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearc
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer',
-                    stickyNotesSettings : {author: 'Syncfusion'}
-                });
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
-                              ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Disable sticky note annotations
@@ -223,18 +160,6 @@ The PDF Viewer control provides an option to disable sticky note annotations. Th
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
                     resourceUrl : "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
-                    enableStickyNotesAnnotation : false
-                });
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
-                              ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer',
                     enableStickyNotesAnnotation : false
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,

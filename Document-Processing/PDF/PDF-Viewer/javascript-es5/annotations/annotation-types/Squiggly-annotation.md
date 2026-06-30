@@ -75,36 +75,6 @@ document.getElementById('setNone').addEventListener('click', function () {
     pdfviewer.annotation.setAnnotationMode('None');
 });
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-var PdfViewer = ej.pdfviewer.PdfViewer;
-PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.FormFields,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('squigglyMode').addEventListener('click', function () {
-    pdfviewer.annotation.setAnnotationMode('Squiggly');
-});
-
-document.getElementById('setNone').addEventListener('click', function () {
-    pdfviewer.annotation.setAnnotationMode('None');
-});
-{% endhighlight %}
 {% endtabs %}
 
 ### Add squiggly annotations programmatically
@@ -135,35 +105,6 @@ PdfViewer.Inject(
 var pdfviewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('addSquiggly').addEventListener('click', function () {
-    pdfviewer.annotation.addAnnotation('Squiggly', {
-        bounds: [{ x: 97, y: 110, width: 350, height: 14 }],
-        pageNumber: 1
-    });
-});
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-var PdfViewer = ej.pdfviewer.PdfViewer;
-PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.FormFields,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.appendTo('#PdfViewer');
 
 document.getElementById('addSquiggly').addEventListener('click', function () {
@@ -247,39 +188,6 @@ document.getElementById('editSquiggly').addEventListener('click', function () {
     }
 });
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-var PdfViewer = ej.pdfviewer.PdfViewer;
-PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.FormFields,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('editSquiggly').addEventListener('click', function () {
-    for (var i = 0; i < pdfviewer.annotationCollection.length; i++) {
-        var ann = pdfviewer.annotationCollection[i];
-        if (ann.author === 'Guest User' || ann.subject === 'Corrections') {
-            ann.color = '#ff0000';
-            ann.opacity = 0.8;
-            pdfviewer.annotation.editAnnotation(ann);
-        }
-    }
-});
-{% endhighlight %}
 {% endtabs %}
 
 ## Set default properties during control initialization
@@ -306,26 +214,6 @@ var pdfviewer = new PdfViewer({
   documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
   squigglySettings: { author: 'Guest User', subject: 'Corrections', color: '#00ff00', opacity: 0.9}
 });
-pdfviewer.appendTo('#PdfViewer');
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-var PdfViewer = ej.pdfviewer.PdfViewer;
-PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.Annotation
-);
-
-var pdfviewer = new PdfViewer({
-  documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-  squigglySettings: { author: 'Guest User', subject: 'Corrections', color: '#00ff00', opacity: 0.9}
-});
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
@@ -382,46 +270,6 @@ document.getElementById('squiggly')?.addEventListener('click', function () {
     });
 });
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.FormFields,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer();
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.appendTo('#PdfViewer');
-
-//Apply Squiggly Settings while adding individual Annotation
-document.getElementById('squiggly')?.addEventListener('click', function () {
-    pdfviewer.annotation.addAnnotation('Squiggly', {
-        bounds: [{ x: 97, y: 110, width: 350, height: 14 }],
-        pageNumber: 1,
-        author: 'User 1',
-        color: '#ffff00',
-        opacity: 0.9
-    });
-
-    pdfviewer.annotation.addAnnotation('Squiggly', {
-        bounds: [{ x: 107, y: 220, width: 350, height: 14 }],
-        pageNumber: 1,
-        author: 'User 2',
-        color: '#ff1010ff',
-        opacity: 0.9
-    });
-});
-{% endhighlight %}
 {% endtabs %}
 
 
@@ -444,23 +292,6 @@ PdfViewer.Inject(
 );
 
 var pdfviewer = new PdfViewer({ documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', enableTextMarkupAnnotation: false });
-pdfviewer.appendTo('#PdfViewer');
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-var PdfViewer = ej.pdfviewer.PdfViewer;
-PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.Annotation
-);
-
-var pdfviewer = new PdfViewer({ documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', enableTextMarkupAnnotation: false });
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}

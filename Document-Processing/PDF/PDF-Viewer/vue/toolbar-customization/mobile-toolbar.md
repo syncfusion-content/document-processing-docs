@@ -109,62 +109,6 @@ export default {
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Composition API (Server-Backed)" %}
-
-<template>
-  <div id="app">
-    <ejs-pdfviewer id="pdfViewer" :documentPath="documentPath" :serviceUrl="serviceUrl" :enableDesktopMode="true">
-    </ejs-pdfviewer>
-  </div>
-</template>
-
-<script setup>
-import {
-  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-  ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer
-} from '@syncfusion/ej2-vue-pdfviewer';
-import { provide } from 'vue';
-
-const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
-
-provide('PdfViewer', [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView,
-  TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]);
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (Server-Backed)" %}
-
-<template>
-  <div id="app">
-    <ejs-pdfviewer id="pdfViewer" :documentPath="documentPath" :serviceUrl="serviceUrl" :enableDesktopMode="true">
-    </ejs-pdfviewer>
-  </div>
-</template>
-
-<script>
-import {
-  PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-  ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer
-} from '@syncfusion/ej2-vue-pdfviewer';
-
-export default {
-  name: 'App',
-  components: { 'ejs-pdfviewer': PdfViewerComponent },
-  data() {
-    return {
-      documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
-    };
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView,
-      TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]
-  }
-}
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Enable scrolling in desktop mode with touch gestures
@@ -218,62 +162,6 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib'
-    };
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView,
-      TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]
-  }
-}
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Composition API (Server-Backed)" %}
-
-<template>
-  <div id="app">
-    <ejs-pdfviewer id="pdfViewer" :documentPath="documentPath" :serviceUrl="serviceUrl" :enableDesktopMode="true" :enableTextSelection="false">
-    </ejs-pdfviewer>
-  </div>
-</template>
-
-<script setup>
-import {
-  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-  ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer
-} from '@syncfusion/ej2-vue-pdfviewer';
-import { provide } from 'vue';
-
-const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
-
-provide('PdfViewer', [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView,
-  TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]);
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (Server-Backed)" %}
-
-<template>
-  <div id="app">
-    <ejs-pdfviewer id="pdfViewer" :documentPath="documentPath" :serviceUrl="serviceUrl" :enableDesktopMode="true" :enableTextSelection="false">
-    </ejs-pdfviewer>
-  </div>
-</template>
-
-<script>
-import {
-  PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-  ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer
-} from '@syncfusion/ej2-vue-pdfviewer';
-
-export default {
-  name: 'App',
-  components: { 'ejs-pdfviewer': PdfViewerComponent },
-  data() {
-    return {
-      documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
     };
   },
   provide: {

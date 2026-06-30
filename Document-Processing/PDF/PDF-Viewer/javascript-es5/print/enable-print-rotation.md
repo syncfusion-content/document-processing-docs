@@ -39,30 +39,6 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-// Inject required modules
-ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.Print,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.FormFields,
-    ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/',
-    enablePrintRotation: true
-});
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
 {% endtabs %}
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples)

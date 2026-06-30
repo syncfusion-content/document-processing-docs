@@ -18,7 +18,6 @@ This how-to explains how to enable the desktop toolbar on mobile devices running
 
 - EJ2 React PDF Viewer installed and imported in your React app.
 - For standalone mode: a valid [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl) hosting the PDF Viewer assets.
-- For server-backed mode: a working [`serviceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#serviceurl) endpoint.
 
 ## Steps
 
@@ -54,29 +53,6 @@ export default function App() {
 }
 {% endraw %}
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-{% raw %}
-import {
-    PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, Inject
-} from '@syncfusion/ej2-react-pdfviewer';
-export default function App() {
-    return (
-        <div>
-            <PdfViewerComponent
-                id="PdfViewer"
-                documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
-                enableDesktopMode={true}
-                enableTextSelection={false}
-                height="640px"
-            >
-                <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
-            </PdfViewerComponent>
-        </div>
-    );
-}
-{% endraw %}
-{% endhighlight %}
 {% endtabs %}
 
 ## Troubleshooting
@@ -84,7 +60,6 @@ export default function App() {
 - Print option not visible on mobile: set [`enableDesktopMode`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enabledesktopmode) to `true`; otherwise the mobile toolbar omits Print.
 - Touch scrolling is jerky after enabling desktop toolbar: set [`enableTextSelection`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enabletextselection) to `false` to avoid text-selection capturing touch events.
 - Missing assets or broken UI: confirm [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl) points to the correct version of the `ej2-pdfviewer-lib` and is reachable from the device.
-- Server errors in server-backed mode: verify [`serviceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#serviceurl) CORS configuration and that the back end is running.
 
 ## Related topics
 

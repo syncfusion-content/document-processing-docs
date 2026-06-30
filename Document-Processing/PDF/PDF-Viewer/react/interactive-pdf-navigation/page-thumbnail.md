@@ -108,7 +108,7 @@ export default function App() {
 ## Troubleshooting
 
 - **Thumbnail panel not appearing**: Ensure [`ThumbnailView`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/thumbnailview) is included in the `Inject` services array.
-- **WASM or service endpoint errors**: Verify that [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl) (for standalone) or [`serviceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#serviceurl) (for server-backed) is correctly configured and accessible.
+- **WASM or service endpoint errors**: Verify that [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl) (for standalone) is correctly configured and accessible.
 
 ## See Also
 

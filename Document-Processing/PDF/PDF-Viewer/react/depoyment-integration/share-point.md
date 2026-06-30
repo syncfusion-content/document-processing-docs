@@ -84,7 +84,6 @@ resourceUrl = "https://contoso.sharepoint.com/sites/YourSite/SiteAssets/ej2-pdfv
 Notes on rendering modes and SPFx:
 
 - Standalone (client-only): fully supported in SPFx — set `resourceUrl` as above and the viewer will render entirely in the browser. This is the recommended, simplest approach for SPFx web parts.
-- Server‑backed (optional): to use server-side rendering, set `serviceUrl` (pointing to your PDF rendering web service) instead of `resourceUrl`.
 
 Important: ensure any host you use serves `.wasm` files with Content-Type `application/wasm` and that tenant/content security policies permit fetching assets from the chosen host.
 

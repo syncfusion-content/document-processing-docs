@@ -98,10 +98,6 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-N> To set up the **server-backed PDF Viewer** in the app.vue file, include the following `serviceUrl`:
-**serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**
-Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
-
 {% previewsample "/document-processing/code-snippet/pdfviewer/vue/toolbar/toolbar-hide-cs1" %}
 
 ### Using the showToolbar() method
@@ -179,10 +175,6 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-N> To set up the **server-backed PDF Viewer** in the app.vue file, include the following `serviceUrl`:
-**serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**
-Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
-
 {% previewsample "/document-processing/code-snippet/pdfviewer/vue/toolbar/toolbar-method-cs1" %}
 
 ## Customize toolbar items
@@ -258,10 +250,6 @@ export default {
 
 {% endhighlight %}
 {% endtabs %}
-
-N> To set up the **server-backed PDF Viewer** in the app.vue file, include the following `serviceUrl`:
-**serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**
-Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
 
 {% previewsample "/document-processing/code-snippet/pdfviewer/vue/toolbar/toolbar-items-cs1" %}
 
@@ -345,10 +333,6 @@ export default {
 
 {% endhighlight %}
 {% endtabs %}
-
-N> To set up the **server-backed PDF Viewer** in the app.vue file, include the following `serviceUrl`:
-**serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**
-Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
 
   {% previewsample "/document-processing/code-snippet/pdfviewer/vue/toolbar/toolbar-items-method-cs1" %}
 
@@ -519,160 +503,6 @@ export default {
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Composition API (Server-Backed)" %}
-
-<template>
-  <div id="app">
-    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl"
-      :toolbarClick="toolbarClick" :OnCreateSearch="OnCreateSearch" :toolbarSettings="toolbarSettings">
-    </ejs-pdfviewer>
-  </div>
-</template>
-<script setup>
-
-import {
-  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
-  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
-  Annotation, FormDesigner, FormFields
-} from '@syncfusion/ej2-vue-pdfviewer';
-import { ComboBox } from "@syncfusion/ej2-dropdowns";
-import { TextBox } from "@syncfusion/ej2-inputs";
-import { provide, ref } from 'vue';
-
-const pdfviewer = ref(null);
-
-// Move the toolItem declaration inside the data function
-let toolItem1 = {
-  prefixIcon: 'e-icons e-paste',
-  id: 'print',
-  tooltipText: 'Custom toolbar item',
-  align: 'left'
-};
-let toolItem2 = {
-  id: 'download',
-  text: 'Save',
-  tooltipText: 'Custom toolbar item',
-  align: 'right'
-};
-let LanguageList = ['Typescript', 'Javascript', 'Angular', 'C#', 'C', 'Python'];
-let toolItem3 = {
-  type: 'Input',
-  tooltipText: 'Language List',
-  cssClass: 'percentage',
-  align: 'Left',
-  id: 'dropdown',
-  template: new ComboBox({ width: 100, value: 'TypeScript', dataSource: LanguageList, popupWidth: 85, showClearButton: false, readonly: false })
-};
-let toolItem4 = {
-  type: 'Input',
-  tooltipText: 'Text',
-  align: 'Right',
-  cssClass: 'find',
-  id: 'textbox',
-  template: new TextBox({ width: 125, placeholder: 'Type Here' })
-}
-
-const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
-const toolbarSettings = {
-  toolbarItems: [toolItem1, toolItem2, 'OpenOption', 'PageNavigationTool', 'MagnificationTool', toolItem3, 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption', 'UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', toolItem4, 'CommentTool', 'SubmitForm']
-}
-
-provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-  Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields]);
-
-const toolbarClick = function (args) {
-  if (args.item && args.item.id === 'print') {
-    this.$refs.pdfviewer.ej2Instances.printModule.print();
-  }
-  else if (args.item && args.item.id === 'download') {
-    this.$refs.pdfviewer.ej2Instances.download();
-  }
-}
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (Server-Backed)" %}
-
-<template>
-  <div id="app">
-    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl" :toolbarClick="toolbarClick" :OnCreateSearch="OnCreateSearch"
-      :toolbarSettings="toolbarSettings">
-    </ejs-pdfviewer>
-  </div>
-</template>
-<script>
-
-import {
-  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
-  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
-  Annotation, FormDesigner, FormFields
-} from '@syncfusion/ej2-vue-pdfviewer';
-import { ComboBox } from "@syncfusion/ej2-dropdowns";
-import { TextBox } from "@syncfusion/ej2-inputs";
-
-export default {
-  name: "App",
-  components: {
-    "ejs-pdfviewer": PdfViewerComponent
-  },
-  data() {
-    // Move the toolItem declaration inside the data function
-    let toolItem1 = {
-      prefixIcon: 'e-icons e-paste',
-      id: 'print',
-      tooltipText: 'Custom toolbar item',
-      align: 'left'
-    };
-    let toolItem2 = {
-      id: 'download',
-      text: 'Save',
-      tooltipText: 'Custom toolbar item',
-      align: 'right'
-    };
-    let LanguageList = ['Typescript', 'Javascript', 'Angular', 'C#', 'C', 'Python'];
-    let toolItem3 = {
-      type: 'Input',
-      tooltipText: 'Language List',
-      cssClass: 'percentage',
-      align: 'Left',
-      id: 'dropdown',
-      template: new ComboBox({ width: 100, value: 'TypeScript', dataSource: LanguageList, popupWidth: 85, showClearButton: false, readonly: false })
-    };
-    let toolItem4 = {
-      type: 'Input',
-      tooltipText: 'Text',
-      align: 'Right',
-      cssClass: 'find',
-      id: 'textbox',
-      template: new TextBox({ width: 125, placeholder: 'Type Here' })
-    }
-    return {
-      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
-      toolbarSettings: {
-        toolbarItems: [toolItem1, toolItem2, 'OpenOption', 'PageNavigationTool', 'MagnificationTool', toolItem3, 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption', 'UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', toolItem4, 'CommentTool', 'SubmitForm']
-      }
-    };
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-      Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields]
-  },
-  methods: {
-    toolbarClick: function (args) {
-      if (args.item && args.item.id === 'print') {
-        this.$refs.pdfviewer.ej2Instances.printModule.print();
-      }
-      else if (args.item && args.item.id === 'download') {
-        this.$refs.pdfviewer.ej2Instances.download();
-      }
-    },
-  }
-}
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 >Note : Default value of toolbar items is ['OpenOption', 'PageNavigationTool','MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption','UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']
@@ -748,47 +578,7 @@ The PDF Viewer provides API for user interactions options provided in it's built
         ref="pdfviewer"
         :pageChange="pageChange"
         :documentLoad="documentLoad"
-        :serviceUrl="serviceUrl"
-        :documentPath="documentPath"
-        :enableToolbar="enableToolbar">
-      </ejs-pdfviewer>
-    </div>
-  </div>
-</template>
-
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-<template>
-  <div>
-    <ejs-toolbar id="customToolbar" ref="toolbar">
-      <e-items>
-        <e-item prefixIcon='e-pv-open-document-icon' tooltipText='Open' :click="openClicked"></e-item>
-        <e-item prefixIcon='e-pv-previous-page-navigation-icon' id="previousPage" tooltipText='Previous Page' align='Center' :click="previousClicked"></e-item>
-        <e-item prefixIcon='e-pv-next-page-navigation-icon' id="nextPage" tooltipText='Next Page' align='Center' :click="nextClicked"></e-item>
-        <e-item :template='pageNoTemplate' tooltipText='Page Number' align='Center'></e-item>
-        <e-item :template='pageTextTemplate' tooltipText='Page Number' align='Center'></e-item>
-        <e-item prefixIcon='e-pv-print-document-icon' tooltipText='Print' align='Right' :click="printClicked"></e-item>
-        <e-item prefixIcon='e-pv-download-document-icon' tooltipText='Download' align='Right' :click="downloadClicked"></e-item>
-      </e-items>
-    </ejs-toolbar>
-
-    <ejs-toolbar id="magnificationToolbar">
-      <e-items>
-        <e-item prefixIcon='e-pv-fit-page-icon' id="fitPage" tooltipText='Fit to page' :click="pageFitClicked"></e-item>
-        <e-item prefixIcon='e-pv-zoom-in-icon' id="zoomIn" tooltipText='Zoom in' :click="zoomInClicked"></e-item>
-        <e-item prefixIcon='e-pv-zoom-out-icon' id="zoomOut" tooltipText='Zoom out' :click="zoomOutClicked"></e-item>
-      </e-items>
-    </ejs-toolbar>
-
-    <input type ="file" id="fileUpload" accept=".pdf" style="display:block;visibility:hidden;width:0;height:0;"></input>
-
-    <div class="control-section">
-      <ejs-pdfviewer
-        id="pdfviewer"
-        ref="pdfviewer"
-        :pageChange="pageChange"
-        :documentLoad="documentLoad"
+        :resourceUrl="resourceUrl"
         :documentPath="documentPath"
         :enableToolbar="enableToolbar">
       </ejs-pdfviewer>
@@ -837,7 +627,7 @@ export default Vue.extend({
 export default Vue.extend({
     data: function () {
         return {
-            serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
+            resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
             documentPath: "https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf",
             enableToolbar: false,
             pageNoTemplate: '<div class=""><input type="text" class="e-input-group e-pv-current-page-number" id="currentPage" /></div>',
@@ -1048,138 +838,7 @@ export default Vue.extend({
         data: function () {
             return {
                 documentPath: "https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf",
-                enableToolbar: false,
-                pageNoTemplate: '<div class=""><input type="text" class="e-input-group e-pv-current-page-number" id="currentPage" /></div>',
-                pageTextTemplate: '<div class=""><span class="e-pv-total-page-number" id="totalPage">of 0</span></div>'
-            }
-        },
-
-        PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
-                     ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
-
-        methods: {
-            openClicked: function (args) {
-                document.getElementById('fileUpload').click();
-            },
-            previousClicked: function (args) {
-                viewer.navigation.goToPreviousPage();
-            },
-            nextClicked: function (args) {
-                viewer.navigation.goToNextPage();
-            },
-            printClicked: function (args) {
-                viewer.print.print();
-            },
-            downloadClicked: function (args) {
-                viewer.download();
-            },
-            pageFitClicked: function (args) {
-                viewer.magnification.fitToPage();
-            },
-            zoomInClicked: function (args) {
-                viewer.magnification.zoomIn();
-            },
-            zoomOutClicked: function (args) {
-                viewer.magnification.zoomOut();
-            },
-            pageChange: function (args) {
-                currentPageBox = document.getElementById('currentPage');
-                currentPageBox.value = viewer.currentPageNumber.toString();
-                updatePageNavigation();
-            },
-            documentLoad: function (args) {
-                viewer = this.$refs.pdfviewer.ej2Instances;
-                toolbar = this.$refs.toolbar.ej2Instances;
-                currentPageBox = document.getElementById('currentPage');
-                currentPageBox.value = '1';
-                document.getElementById('totalPage').textContent = 'of ' + viewer.pageCount;
-                currentPageBox.addEventListener('keypress', onCurrentPageBoxKeypress);
-                currentPageBox.addEventListener('click', onCurrentPageBoxClicked);
-                document.getElementById('fileUpload').addEventListener('change', readFile, false);
-                updatePageNavigation();
-            }
-        }
-    });
-
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-    import Vue from "vue";
-    import { PdfViewerPlugin, Toolbar, Magnification, Navigation,
-         LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
-         Print, TextSelection, TextSearch, FormFields, FormDesigner } from "@syncfusion/ej2-vue-pdfviewer";
-    import { ToolbarPlugin } from "@syncfusion/ej2-vue-navigations";
-    import { CalendarPlugin } from '@syncfusion/ej2-vue-calendars';
-    Vue.use(CalendarPlugin);
-    Vue.use(PdfViewerPlugin);
-    Vue.use(ToolbarPlugin);
-    var toolbar;
-    var viewer;
-    var fileName;
-    var currentPageBox;
-
-    function updatePageNavigation() {
-        if (viewer.currentPageNumber === 1) {
-            toolbar.enableItems(document.getElementById('previousPage'), false);
-            toolbar.enableItems(document.getElementById('nextPage'), true);
-        }
-        else if (viewer.currentPageNumber === viewer.pageCount) {
-            toolbar.enableItems(document.getElementById('previousPage'), true);
-            toolbar.enableItems(document.getElementById('nextPage'), false);
-        }
-        else {
-            toolbar.enableItems(document.getElementById('previousPage'), true);
-            toolbar.enableItems(document.getElementById('nextPage'), true);
-        }
-    }
-
-    function onCurrentPageBoxKeypress(event) {
-        if ((event.which < 48 || event.which > 57) && event.which !== 8 && event.which !== 13) {
-            event.preventDefault();
-            return false;
-        }
-        else {
-            var currentPageNumber = parseInt(currentPageBox.value);
-            if (event.which === 13) {
-                if (currentPageNumber > 0 && currentPageNumber <= viewer.pageCount) {
-                    viewer.navigation.goToPage(currentPageNumber);
-                }
-                else {
-                    currentPageBox.value = viewer.currentPageNumber.toString();
-                }
-            }
-            return true;
-        }
-    }
-
-    function onCurrentPageBoxClicked() {
-        currentPageBox.select();
-    }
-
-    function readFile(args) {
-        // tslint:disable-next-line
-        let upoadedFiles = args.target.files;
-        if (args.target.files[0] !== null) {
-            let uploadedFile = upoadedFiles[0];
-            fileName = uploadedFile.name;
-            if (uploadedFile) {
-                let reader = new FileReader();
-                reader.readAsDataURL(uploadedFile);
-                // tslint:disable-next-line
-                reader.onload = function (e) {
-                    let uploadedFileUrl = e.currentTarget.result;
-                    viewer.load(uploadedFileUrl, null);
-                    viewer.fileName = fileName;
-                };
-            }
-        }
-    };
-
-    export default Vue.extend({
-        data: function () {
-            return {
-                serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
-                documentPath: "https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf",
+                resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
                 enableToolbar: false,
                 pageNoTemplate: '<div class=""><input type="text" class="e-input-group e-pv-current-page-number" id="currentPage" /></div>',
                 pageTextTemplate: '<div class=""><span class="e-pv-total-page-number" id="totalPage">of 0</span></div>'

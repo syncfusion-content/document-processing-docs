@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to enable and disable the delete button based on annotation selection and unselection events
+# How to enable and disable the delete button
 
 This article demonstrates how to enable and disable a toolbar delete button in response to annotation selection and unselection events using `annotationSelect` and `annotationUnSelect`.
 
@@ -19,19 +19,6 @@ Example:
 {% highlight html tabtitle="Standalone" %}
 
 <ejs-pdfviewer #pdfviewer id='pdfViewer'
-    [documentPath]='document'
-    [enableToolbar]=false
-    [enableNavigationToolbar]=false
-    (annotationSelect)="annotationSelect($event)"
-    (annotationUnSelect)="annotationUnSelect($event)"
-    style="height:640px; display: block">
-</ejs-pdfviewer>
-
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-<ejs-pdfviewer #pdfviewer id='pdfViewer'
-    [serviceUrl]='service'
     [documentPath]='document'
     [enableToolbar]=false
     [enableNavigationToolbar]=false

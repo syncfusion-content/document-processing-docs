@@ -33,7 +33,7 @@ The PDF Viewer supports changing fonts for Signature and Initial fields using th
 ```
 <template>
   <div id="app">
-<ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath" :signatureFieldSettings="signatureFieldSettings"> </ejs-pdfviewer>
+<ejs-pdfviewer id="pdfViewer" :resourceUrl="resourceUrl" :documentPath="documentPath" :signatureFieldSettings="signatureFieldSettings"> </ejs-pdfviewer>
   </div>
 </template>
 
@@ -43,6 +43,7 @@ export default {
   data () {
 return {
 	documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+  resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
 	signatureFieldSettings:{
     typeSignatureFonts:['Allura', 'Tangerine', 'Sacramento', 'Inspiration']
   }
@@ -73,7 +74,7 @@ Use the following code to apply custom fonts to the Initial field.
 ```
 <template>
   <div id="app">
-<ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath" :initialFieldSettings="initialFieldSettings"> </ejs-pdfviewer>
+<ejs-pdfviewer id="pdfViewer" :resourceUrl="resourceUrl" :documentPath="documentPath" :initialFieldSettings="initialFieldSettings"> </ejs-pdfviewer>
   </div>
 </template>
 
@@ -84,6 +85,7 @@ export default {
   data () {
 return {
 	documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+  resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
 	initialFieldSettings:{
     typeInitialFonts:['Allura', 'Tangerine', 'Sacramento', 'Inspiration']
   }

@@ -61,31 +61,6 @@ document.getElementById('rectangleMode') && document.getElementById('rectangleMo
     pdfviewer.annotationModule.setAnnotationMode('Rectangle');
 });
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.FormFields,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('rectangleMode') && document.getElementById('rectangleMode').addEventListener('click', function () {
-    pdfviewer.annotationModule.setAnnotationMode('Rectangle');
-});
-{% endhighlight %}
 {% endtabs %}
 
 #### Exit rectangle mode
@@ -130,36 +105,6 @@ ej.pdfviewer.PdfViewer.Inject(
 var pdfviewer = new ej.pdfviewer.PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('addRectangleAnnotation') && document.getElementById('addRectangleAnnotation').addEventListener('click', function () {
-    pdfviewer.annotation.addAnnotation('Rectangle', {
-        offset: { x: 200, y: 480 },
-        pageNumber: 1,
-        width: 150,
-        height: 75
-    });
-});
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.FormFields,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.appendTo('#PdfViewer');
 
 document.getElementById('addRectangleAnnotation') && document.getElementById('addRectangleAnnotation').addEventListener('click', function () {
@@ -256,39 +201,6 @@ document.getElementById('editRectangleAnnotation') && document.getElementById('e
     }
 });
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.FormFields,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('editRectangleAnnotation') && document.getElementById('editRectangleAnnotation').addEventListener('click', function () {
-    for (var i = 0; i < pdfviewer.annotationCollection.length; i++) {
-        if (pdfviewer.annotationCollection[i].subject === 'Rectangle') {
-            pdfviewer.annotationCollection[i].strokeColor = '#0000FF';
-            pdfviewer.annotationCollection[i].thickness = 2;
-            pdfviewer.annotationCollection[i].fillColor = '#FFFF00';
-            pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = 'Circle';
-            pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
-        }
-    }
-});
-{% endhighlight %}
 {% endtabs %}
 
 ## Default rectangle settings during initialization
@@ -315,28 +227,6 @@ ej.pdfviewer.PdfViewer.Inject(
 var pdfviewer = new ej.pdfviewer.PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
-pdfviewer.rectangleSettings = { fillColor: 'yellow', opacity: 0.6, strokeColor: 'orange' };
-pdfviewer.appendTo('#PdfViewer');
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.FormFields,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.rectangleSettings = { fillColor: 'yellow', opacity: 0.6, strokeColor: 'orange' };
 pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
@@ -387,29 +277,6 @@ document.getElementById('Rectangle')?.addEventListener('click', function () {
         fillColor: '#000fff#',
         author: 'User1'
     });
-});
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, RectangleSettings} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
-
-const pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.appendTo('#PdfViewer');
-//Apply Rectangle Settings while adding individual Annotation
-document.getElementById('Rectangle')?.addEventListener('click', function () {
-    pdfviewer.annotation.addAnnotation('Rectangle', {
-        offset: { x: 200, y: 480 },
-        pageNumber: 1,
-        width: 150,
-        height: 75,
-        opacity: 0.5,
-        strokeColor: '#FF0000',
-        fillColor: '#000fff#',
-        author: 'User1'
-    } as RectangleSettings);
 });
 {% endhighlight %}
 {% endtabs %}

@@ -29,19 +29,6 @@ Recommended steps
 </ejs-pdfviewer>
 
 {% endhighlight %}
-
-{% highlight html tabtitle="Server-Backed" %}
-
-<ejs-pdfviewer id="pdfViewer"
-               [serviceUrl]='service'
-               [documentPath]='document'
-               [freeTextSettings]="annotationsettings"
-               [rectangleSettings]="annotationsettings"
-               [stampSettings]="annotationsettings"
-               style="height:640px;display:block">
-</ejs-pdfviewer>
-
-{% endhighlight %}
 {% endtabs %}
 
 ```typescript

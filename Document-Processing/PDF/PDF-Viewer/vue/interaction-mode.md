@@ -78,67 +78,6 @@ export default {
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Composition API (Server-Backed)" %}
-
-<template>
-  <div id="app">
-    <ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath" :enableTextSelection="true">
-    </ejs-pdfviewer>
-  </div>
-</template>
-
-<script setup>
-import {
-  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation,
-  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
-  Print, TextSelection, TextSearch
-} from '@syncfusion/ej2-vue-pdfviewer';
-import { provide } from 'vue';
-
-const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
-const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-
-provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-  Annotation, ThumbnailView, Print, TextSelection, TextSearch])
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (Server-Backed)" %}
-
-<template>
-  <div id="app">
-    <ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath" :enableTextSelection="true">
-    </ejs-pdfviewer>
-  </div>
-</template>
-
-<script>
-
-import {
-  PdfViewerComponent, Toolbar, Magnification, Navigation,
-  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
-  Print, TextSelection, TextSearch
-} from '@syncfusion/ej2-vue-pdfviewer';
-
-export default {
-  name: "App",
-  components: {
-    "ejs-pdfviewer": PdfViewerComponent
-  },
-  data() {
-    return {
-      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
-      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-    };
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-      Annotation, ThumbnailView, Print, TextSelection, TextSearch]
-  }
-}
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ![PDF Viewer selection mode](./images/selection.png)
@@ -207,71 +146,6 @@ export default {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
       resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
-      interactionMode: "InteractionMode.Pan"
-    };
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-      Annotation, ThumbnailView, Print, TextSelection, TextSearch]
-  },
-}
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Composition API (Server-Backed)" %}
-
-<template>
-  <div id="app">
-    <ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath" :enableTextSelection="false"
-      :interactionMode="interactionMode">
-    </ejs-pdfviewer>
-  </div>
-</template>
-
-<script setup>
-import {
-  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation,
-  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
-  Print, TextSelection, TextSearch
-} from '@syncfusion/ej2-vue-pdfviewer';
-import { provide } from 'vue';
-
-const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
-const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const interactionMode = "InteractionMode.Pan"
-
-provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-  Annotation, ThumbnailView, Print, TextSelection, TextSearch])
-
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (Server-Backed)" %}
-
-<template>
-  <div id="app">
-    <ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath" :enableTextSelection="false"
-      :interactionMode="interactionMode">
-    </ejs-pdfviewer>
-  </div>
-</template>
-
-<script>
-import {
-  PdfViewerComponent, Toolbar, Magnification, Navigation,
-  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
-  Print, TextSelection, TextSearch
-} from '@syncfusion/ej2-vue-pdfviewer';
-
-export default {
-  name: "App",
-  components: {
-    "ejs-pdfviewer": PdfViewerComponent
-  },
-  data() {
-    return {
-      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
-      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
       interactionMode: "InteractionMode.Pan"
     };
   },

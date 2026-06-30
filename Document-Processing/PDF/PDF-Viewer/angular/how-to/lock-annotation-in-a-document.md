@@ -29,17 +29,6 @@ The following sample shows how to set `IsLocked` for custom stamp annotations wh
 </ejs-pdfviewer>
 
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-<!--Render PDF Viewer component-->
-<ejs-pdfviewer id="pdfViewer"
-               [serviceUrl]="service"
-               [documentPath]="document"
-               (ajaxRequestSuccess)="fireAjaxRequestSuccess($event, $event.data)"
-               style="height:640px;display:block">
-</ejs-pdfviewer>
-
-{% endhighlight %}
 {% endtabs %}
 
 ```typescript

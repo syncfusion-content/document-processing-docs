@@ -47,30 +47,6 @@ document.getElementById('textbounds').addEventListener('click', function () {
 });
 
 {% endhighlight %}
-{% highlight js tabtitle="Server-backed" %}
-
-ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.Print,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.FormFields
-);
-
-var viewer = new ej.pdfviewer.PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
-});
-viewer.appendTo('#pdfViewer');
-document.getElementById('textbounds').addEventListener('click', function () {
-    console.log(viewer.textSearch.findText('pdf', false));
-});
-
-{% endhighlight %}
 {% endtabs %}
 
 ### Find and get the bounds of a text on the desired page
@@ -99,30 +75,6 @@ ej.pdfviewer.PdfViewer.Inject(
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib'
-});
-viewer.appendTo('#pdfViewer');
-document.getElementById('textbounds').addEventListener('click', function () {
-    console.log(viewer.textSearch.findText('pdf', false, 7));
-});
-
-{% endhighlight %}
-{% highlight js tabtitle="Server-backed" %}
-
-ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.Print,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.FormFields
-);
-
-var viewer = new ej.pdfviewer.PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
 });
 viewer.appendTo('#pdfViewer');
 document.getElementById('textbounds').addEventListener('click', function () {
@@ -164,30 +116,6 @@ document.getElementById('textbounds').addEventListener('click', function () {
 });
 
 {% endhighlight %}
-{% highlight js tabtitle="Server-backed" %}
-
-ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.Print,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.FormFields
-);
-
-var viewer = new ej.pdfviewer.PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
-});
-viewer.appendTo('#pdfViewer');
-document.getElementById('textbounds').addEventListener('click', function () {
-    console.log(viewer.textSearch.findText(['adobe', 'pdf'], false));
-});
-
-{% endhighlight %}
 {% endtabs %}
 
 ### Find and get the bounds of the list of text on desired page
@@ -216,30 +144,6 @@ ej.pdfviewer.PdfViewer.Inject(
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib'
-});
-viewer.appendTo('#pdfViewer');
-document.getElementById('textbounds').addEventListener('click', function () {
-    console.log(viewer.textSearch.findText(['adobe', 'pdf'], false, 7));
-});
-
-{% endhighlight %}
-{% highlight js tabtitle="Server-backed" %}
-
-ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.Print,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.FormFields
-);
-
-var viewer = new ej.pdfviewer.PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
 });
 viewer.appendTo('#pdfViewer');
 document.getElementById('textbounds').addEventListener('click', function () {

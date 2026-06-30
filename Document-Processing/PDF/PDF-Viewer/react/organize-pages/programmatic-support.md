@@ -36,25 +36,6 @@ export default function App() {
 }
 
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import React from 'react';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-export default function App() {
-  return (
-    <PdfViewerComponent
-      id="PdfViewer"
-      serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
-      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      enablePageOrganizer={true}
-    >
-      <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
-    </PdfViewerComponent>
-  );
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Open the page organizer on document load
@@ -73,25 +54,6 @@ export default function App() {
       id="PdfViewer"
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-      isPageOrganizerOpen={true}
-    >
-      <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
-    </PdfViewerComponent>
-  );
-}
-
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import React from 'react';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-export default function App() {
-  return (
-    <PdfViewerComponent
-      id="PdfViewer"
-      serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
-      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       isPageOrganizerOpen={true}
     >
       <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
@@ -119,26 +81,6 @@ export default function App() {
       id="PdfViewer"
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-      pageOrganizerSettings={pageOrganizerSettings}
-    >
-      <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
-    </PdfViewerComponent>
-  );
-}
-
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import React from 'react';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-export default function App() {
-  const pageOrganizerSettings = { canDelete: true, canInsert: true, canRotate: true, canCopy: true, canRearrange: true, canImport: true, imageZoom: 1, showImageZoomingSlider: true, imageZoomMin: 1, imageZoomMax: 5 };
-  return (
-    <PdfViewerComponent
-      id="PdfViewer"
-      serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
-      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       pageOrganizerSettings={pageOrganizerSettings}
     >
       <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />

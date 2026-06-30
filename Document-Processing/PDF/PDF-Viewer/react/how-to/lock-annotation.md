@@ -37,7 +37,7 @@ The PDF Viewer supports locking annotations to prevent users from moving, resizi
      <PdfViewerComponent
       id="container"
        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-       serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
+       resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       // lock annotation
       rectangleSettings={{ isLock: true }}
       style={{ height: '640px' }}>

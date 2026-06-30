@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Configure annotation selector settings
+# Configure annotation selector settings in React
 
 Use the [annotationSelectorSettings](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationSelectorSettings/) property to customize the appearance and interaction behavior of the annotation selector in the react PDF Viewer UI.
 

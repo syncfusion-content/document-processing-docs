@@ -51,17 +51,7 @@ Enable or disable page navigation using the following configuration:
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     enableNavigation: true,
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                });
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    enableNavigation: true,
-                    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
+                    resourceUrl: "https://cdn.syncfusion.com/ej2/33.2.13/dist/ej2-pdfviewer-lib"
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
 pdfviewer.appendTo('#PdfViewer');
@@ -104,48 +94,7 @@ You can also perform page navigation programmatically:
 
 var viewer = new ej.pdfviewer.PdfViewer({
   documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-});
-ej.pdfviewer.PdfViewer.Inject(
-  ej.pdfviewer.Toolbar,
-  ej.pdfviewer.Magnification,
-  ej.pdfviewer.BookmarkView,
-  ej.pdfviewer.ThumbnailView,
-  ej.pdfviewer.TextSelection,
-  ej.pdfviewer.TextSearch,
-  ej.pdfviewer.Print,
-  ej.pdfviewer.Navigation,
-  ej.pdfviewer.LinkAnnotation,
-  ej.pdfviewer.Annotation,
-  ej.pdfviewer.FormFields
-);
-viewer.appendTo('#pdfViewer');
-// Go To First Page
-document.getElementById('goToFirstPage').addEventListener('click', () => {
-  viewer.navigation.goToFirstPage();
-});
-// Go To Last Page
-document.getElementById('goToLastPage').addEventListener('click', () => {
-  viewer.navigation.goToLastPage();
-});
-// Go To Next Page
-document.getElementById('goToNextPage').addEventListener('click', () => {
-  viewer.navigation.goToNextPage();
-});
-// Go To Page
-document.getElementById('goToPage').addEventListener('click', () => {
-  viewer.navigation.goToPage(4);
-});
-// Go To Previous Page
-document.getElementById('goToPreviousPage').addEventListener('click', () => {
-  viewer.navigation.goToPreviousPage();
-});
-
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-var viewer = new ej.pdfviewer.PdfViewer({
-  documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-  serviceUrl:'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
+  resourceUrl: "https://cdn.syncfusion.com/ej2/33.2.13/dist/ej2-pdfviewer-lib"
 });
 ej.pdfviewer.PdfViewer.Inject(
   ej.pdfviewer.Toolbar,
@@ -197,17 +146,7 @@ Bookmarks saved in PDF files provide quick navigation. Enable or disable bookmar
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     enableBookmark: true,
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                });
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    enableBookmark: true,
-                    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
+                    resourceUrl: "https://cdn.syncfusion.com/ej2/33.2.13/dist/ej2-pdfviewer-lib"
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
 pdfviewer.appendTo('#PdfViewer');
@@ -260,17 +199,7 @@ Thumbnails provide miniature representations of PDF pages for quick navigation. 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     enableThumbnail: true,
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                });
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    enableThumbnail: true,
-                    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
+                    resourceUrl: "https://cdn.syncfusion.com/ej2/33.2.13/dist/ej2-pdfviewer-lib"
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
 pdfviewer.appendTo('#PdfViewer');
@@ -298,17 +227,7 @@ Enable or disable table of contents navigation using the following configuration
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     enableHyperlink: true,
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                });
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    enableHyperlink: true,
-                    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
+                    resourceUrl: "https://cdn.syncfusion.com/ej2/33.2.13/dist/ej2-pdfviewer-lib"
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
 pdfviewer.appendTo('#PdfViewer');
@@ -324,19 +243,8 @@ Change the hyperlink open state using the following configuration:
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     enableHyperlink: true,
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+                    resourceUrl: "https://cdn.syncfusion.com/ej2/33.2.13/dist/ej2-pdfviewer-lib"
                     hyperlinkOpenState:'NewTab',
-                });
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    enableHyperlink: true,
-                    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    hyperlinkOpenState:'NewTab',
-                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
 pdfviewer.appendTo('#PdfViewer');

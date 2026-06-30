@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Convert PDF Library bounds to PDF Viewer bounds | Syncfusion
+title: Convert PDF Library bounds to PDF Viewer bounds in Vue | Syncfusion
 description: Learn how to convert PDF Library bounds into PDF Viewer bounds when exporting annotations, ensuring accurate placement in the Vue PDF Viewer.
 control: PDF Viewer
 platform: document-processing
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Convert PDF Library bounds to PDF Viewer bounds
+# Convert PDF Library bounds to PDF Viewer bounds in Vue
 
 ### Overview
 
@@ -37,7 +37,7 @@ Fetch the blob data and convert it into a JSON object.
       id="pdfViewer"
       ref="pdfviewer"
       :documentPath="documentPath"
-      :serviceUrl="serviceUrl"
+      :resourceUrl="resourceUrl"
       style="height: 640px;"
       @exportSuccess="handleExportSuccess"
     >
@@ -56,7 +56,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
+      resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
     };
   },
   provide: {

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Convert PDF Library bounds to PDF Viewer bounds | Syncfusion
+title: Convert PDF Library bounds to PDF Viewer bounds in React | Syncfusion
 description: Learn how to convert PDF Library bounds into PDF Viewer bounds when exporting annotations, ensuring accurate placement in the React PDF Viewer.
 control: PDF Viewer
 platform: document-processing
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Convert PDF Library bounds to PDF Viewer bounds
+# Convert PDF Library bounds to PDF Viewer bounds in React
 
 When exporting annotations from the PDF Library, convert the annotation bounds into the PDF Viewer coordinate system so exported annotations appear at the correct position and scale in the viewer.
 
@@ -124,7 +124,7 @@ class App extends React.Component {
                         ref={this.viewerRef}
                         id="PdfViewer"
                         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
+                        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
                         style={{ height: '640px' }}
                         exportSuccess={this.handleExportSuccess}
                     >

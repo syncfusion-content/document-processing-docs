@@ -75,58 +75,6 @@ export default {
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-<template>
-  <div id="app">
-    <ejs-pdfviewer
-      id="pdfViewer"
-      ref="pdfviewer"
-      :documentPath="documentPath"
-      :serviceUrl="serviceUrl"
-      :customStampSettings="customStampSettings"
-      style="height: 640px;"
-    >
-    </ejs-pdfviewer>
-  </div>
-</template>
-
-<script>
-import { PdfViewerComponent, Toolbar, Magnification, Navigation,
-         Annotation, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
-export default {
-  name: 'App',
-  components: {
-    'ejs-pdfviewer': PdfViewerComponent
-  },
-  data() {
-    return {
-      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
-      customStampSettings: {
-        isAddToMenu: true,
-        customStamps: [
-            {
-                customStampName: 'Image1',
-                customStampImageSource: 'data:image/png;base64,...' // Provide a valid base64 or URL for the image
-            },
-            {
-                customStampName: 'Image2',
-                customStampImageSource: 'data:image/png;base64,...' // Provide a valid base64 or URL for the image
-            }
-        ],
-        enableCustomStamp: true,
-        opacity: 1
-      }
-    };
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, Annotation, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]
-  },
-  }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 By following these steps, the Custom Stamp dropdown will display the configured items, allowing users to apply personalized stamps to documents.

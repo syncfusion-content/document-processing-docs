@@ -47,37 +47,6 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 }
 
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import { Component, OnInit } from '@angular/core';
-import { LinkAnnotationService, BookmarkViewService, MagnificationService,
-         ThumbnailViewService, ToolbarService, NavigationService,
-         TextSearchService, AnnotationService, TextSelectionService,
-         PrintService
-       } from '@syncfusion/ej2-angular-pdfviewer';
-@Component({
-  selector: 'app-container',
-  // specifies the template string for the PDF Viewer component
-  template: `<div class="content-wrapper">
-               <ejs-pdfviewer id="pdfViewer"
-                        [serviceUrl]='service'
-                        [enableThumbnail]='true'
-                        [documentPath]='document'
-                        style="height:640px;display:block">
-               </ejs-pdfviewer>
-            </div>`,
-  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
-               ThumbnailViewService, ToolbarService, NavigationService,
-               AnnotationService, TextSearchService, TextSelectionService,
-               PrintService]
-  })
-  export class AppComponent {
-      @ViewChild('pdfViewer') public pdfViewer: PdfViewerComponent;
-      public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
-      public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  }
-
-{% endhighlight %}
 {% endtabs %}
 
 ![Page thumbnails panel in PDF Viewer showing page previews](../images/thumbnail.png)

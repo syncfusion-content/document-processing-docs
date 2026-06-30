@@ -8,7 +8,7 @@ publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Restrict zoom percentage on mobile devices
+# Restrict zoom percentage on mobile devices in MVC
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC PDF Viewer allows developers tqo cap zoom ranges on phones and tablets by adjusting the `maxZoom` and `minZoom` properties after the `documentLoad` event fires. Setting device-specific limits prevents excessive pinch-zooming, keeps pages readable, and avoids stuttering caused by rendering at extreme scales.
 

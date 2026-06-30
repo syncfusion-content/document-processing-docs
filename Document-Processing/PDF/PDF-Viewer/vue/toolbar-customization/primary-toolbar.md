@@ -82,10 +82,6 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-N> To set up the server-backed PDF Viewer in the App.vue file, include the following serviceUrl:
-serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
-Within the template, configure the PDF Viewer by adding the :serviceUrl="serviceUrl" attribute.
-
 The following code snippet explains how to show or hide the toolbar using the showToolbar method.
 
 {% tabs %}
@@ -162,10 +158,6 @@ export default {
 
 {% endhighlight %}
 {% endtabs %}
-
-N> To set up the server-backed PDF Viewer in the App.vue file, include the following serviceUrl:
-serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
-Within the template, configure the PDF Viewer by adding the :serviceUrl="serviceUrl" attribute.
 
 ## See also
 

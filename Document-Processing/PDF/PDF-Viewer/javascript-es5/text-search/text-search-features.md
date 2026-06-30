@@ -106,29 +106,6 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-
-ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.Pdfviewer.TextSearch
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-    enableTextSearch: true,
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/'
-});
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
 {% endtabs %}
 
 ### Programmatic search with settings
@@ -224,71 +201,6 @@ ej.pdfviewer.PdfViewer.Inject(
 var viewer = new ej.pdfviewer.PdfViewer({
   documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
   resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib'
-});
-
-viewer.appendTo('#pdfViewer');
-
-// --- Programmatic Text Search API ---
-
-// Searches the target text in the PDF and highlights all matches.
-function searchText(query, matchCase) {
-  if (!query || !query.trim()) return;
-  viewer.textSearch.searchText(query, !!matchCase);
-}
-
-// Navigates to the next occurrence relative to the current active match.
-function searchNext() {
-  viewer.textSearch.searchNext();
-}
-
-// Navigates to the previous occurrence relative to the current active match.
-function searchPrevious() {
-  viewer.textSearch.searchPrevious();
-}
-
-// Cancels the current search and clears all highlights.
-function cancelTextSearch() {
-  viewer.textSearch.cancelTextSearch();
-}
-
-// Example: wire up to buttons/inputs
-var input = document.getElementById('searchBox');
-var btnSearch = document.getElementById('btnSearch');
-if (btnSearch) {
-  btnSearch.addEventListener('click', function () {
-    var val = input ? input.value : '';
-    searchText(val, false);
-  });
-}
-var btnNext = document.getElementById('btnNext');
-if (btnNext) {
-  btnNext.addEventListener('click', function () { searchNext(); });
-}
-var btnPrev = document.getElementById('btnPrev');
-if (btnPrev) {
-  btnPrev.addEventListener('click', function () { searchPrevious(); });
-}
-var btnCancel = document.getElementById('btnCancel');
-if (btnCancel) {
-  btnCancel.addEventListener('click', function () { cancelTextSearch(); });
-}
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-ej.pdfviewer.PdfViewer.Inject(
-  ej.pdfviewer.Toolbar,
-  ej.pdfviewer.Magnification,
-  ej.pdfviewer.Navigation,
-  ej.pdfviewer.Annotation,
-  ej.pdfviewer.LinkAnnotation,
-  ej.pdfviewer.ThumbnailView,
-  ej.pdfviewer.BookmarkView,
-  ej.pdfviewer.TextSelection,
-  ej.pdfviewer.TextSearch
-);
-
-var viewer = new ej.pdfviewer.PdfViewer({
-  documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/'
 });
 
 viewer.appendTo('#pdfViewer');
