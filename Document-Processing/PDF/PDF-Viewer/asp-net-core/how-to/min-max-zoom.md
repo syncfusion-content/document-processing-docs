@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Set min and max zoom levels in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to limit the minimum and maximum zoom percentages in the Syncfusion ASP.NET Core PDF Viewer by using the minZoom and maxZoom properties for responsive, consistent viewing.
+description: Learn how to limit the minimum and maximum zoom percentages in the Syncfusion ASP.NET Core PDF Viewer
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Minimum and maximum zoom properties
+# Minimum and maximum zoom properties in ASP.NET Core PDF Viewer
 
 Limit the zoom range in the PDF Viewer to ensure documents remain readable while maintaining consistent performance. Use the `minZoom` and `maxZoom` properties to define acceptable zoom boundaries for the application.
 
@@ -48,30 +48,6 @@ Optimize zoom settings for mobile devices by updating the `minZoom` and `maxZoom
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function documentLoad() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        if (ej2_base_1.Browser.isDevice && !viewer.enableDesktopMode) {
-            viewer.maxZoom = 200;
-            viewer.minZoom = 10;
-        }
-       else {
-            viewer.zoomMode = 'Default';
-        }
-    }
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
     </ejs-pdfviewer>
 </div>

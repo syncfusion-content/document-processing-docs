@@ -9,7 +9,7 @@ documentation: ug
 
 # Capture the current page number in ASP.NET Core PDF Viewer
 
-Retrieve the page number of the currently displayed page using the [**currentPageNumber**](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#currentpagenumber) property. This is useful for tracking navigation or implementing custom page navigation logic.
+Retrieve the page number of the currently displayed page using the [**currentPageNumber**](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#currentpagenumber) property. This is useful for tracking navigation or implementing custom page navigation logic.
 
 Follow these steps to capture the current page number on demand.
 
@@ -27,27 +27,6 @@ Follow these steps to capture the current page number on demand.
     <ejs-pdfviewer
         id="pdfviewer"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function currentPage() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        var pageNumber = viewer.currentPageNumber;
-        alert('Current page number is ' + pageNumber);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button onclick="currentPage()">Get Current Page</button>
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer
-        id="pdfviewer"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="/Index">
     </ejs-pdfviewer>
 </div>
 

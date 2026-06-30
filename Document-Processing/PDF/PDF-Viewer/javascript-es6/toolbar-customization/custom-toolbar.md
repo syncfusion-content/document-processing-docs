@@ -100,20 +100,6 @@ Hide the default toolbar using `enableToolbar` and `enableThumbnail` properties:
 
 ```
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-```ts
-
-  let viewer: PdfViewer = new PdfViewer({
-        enableToolbar: false,
-        enableThumbnail: false,
-        documentPath: 'https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf',
-        serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/'
-    });
-    viewer.appendTo('#pdfViewer');
-
-```
-{% endhighlight %}
 {% endtabs %}
 
 **Step 5: Add EJ2 Toolbar for primary actions.**

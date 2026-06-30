@@ -26,7 +26,7 @@ PdfViewer.Inject(TextSelection, TextSearch, Print, Navigation, Toolbar, Magnific
 
 const pdfviewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/'
+    resourceUrl: "https://cdn.syncfusion.com/ej2/33.2.13/dist/ej2-pdfviewer-lib"
 });
 
 // Append the PdfViewer to the DOM

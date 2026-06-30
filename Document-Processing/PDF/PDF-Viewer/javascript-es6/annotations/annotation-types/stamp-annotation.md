@@ -79,28 +79,6 @@ document.getElementById('customStamp')?.addEventListener('click', () => {
   } as unknown as StampSettings);
 });
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, SignStampItem, StandardBusinessStampItem, DynamicStampItem, StampSettings } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('dynamicStamp')?.addEventListener('click', () => {
-  pdfviewer.annotationModule.setAnnotationMode('Stamp', DynamicStampItem.NotApproved);
-});
-
-document.getElementById('signStamp')?.addEventListener('click', () => {
-  pdfviewer.annotationModule.setAnnotationMode('Stamp', undefined, SignStampItem.Witness);
-});
-
-document.getElementById('standardBusinessStamp')?.addEventListener('click', () => {
-  pdfviewer.annotationModule.setAnnotationMode('Stamp', undefined, undefined, StandardBusinessStampItem.Approved);
-});
-{% endhighlight %}
 {% endtabs %}
 
 ### Add Stamp annotations programmatically
@@ -151,42 +129,6 @@ document.getElementById('addCustom')?.addEventListener('click', () => {
   } as unknown as StampSettings);
 });
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, StampSettings, DynamicStampItem, SignStampItem, StandardBusinessStampItem } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('addDynamic')?.addEventListener('click', () => {
-  pdfviewer.annotation.addAnnotation('Stamp', {
-    offset: { x: 200, y: 140 }, pageNumber: 1
-  } as StampSettings, DynamicStampItem.Approved);
-});
-
-document.getElementById('addSign')?.addEventListener('click', () => {
-  pdfviewer.annotation.addAnnotation('Stamp', {
-    offset: { x: 200, y: 240 }, pageNumber: 1
-  } as StampSettings, undefined, SignStampItem.Witness);
-});
-
-document.getElementById('addStandard')?.addEventListener('click', () => {
-  pdfviewer.annotation.addAnnotation('Stamp', {
-    offset: { x: 200, y: 340 }, pageNumber: 1
-  } as StampSettings, undefined, undefined, StandardBusinessStampItem.Approved);
-});
-
-document.getElementById('addCustom')?.addEventListener('click', () => {
-  pdfviewer.annotation.addAnnotation('Stamp', {
-    offset: { x: 100, y: 440 }, width: 46, height: 100, pageNumber: 1, isLock: true,
-    author: 'Guest',
-    customStamps: [{ customStampName: 'Image', customStampImageSource: 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD...' }]
-  } as StampSettings);
-});
-{% endhighlight %}
 {% endtabs %}
 
 ## Edit Stamp Annotation
@@ -235,29 +177,6 @@ document.getElementById('editStamp')?.addEventListener('click', () => {
   }
 });
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('editStamp')?.addEventListener('click', () => {
-  for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
-    if (pdfviewer.annotationCollection[i].shapeAnnotationType === 'stamp') {
-      const width = pdfviewer.annotationCollection[i].bounds.width;
-      const height = pdfviewer.annotationCollection[i].bounds.height;
-      pdfviewer.annotationCollection[i].bounds = { x: 100, y: 100, width, height };
-      pdfviewer.annotationCollection[i].annotationSettings.isLock = true;
-      pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
-    }
-  }
-});
-{% endhighlight %}
 {% endtabs %}
 
 ## Default stamp settings during initialization
@@ -273,17 +192,6 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
-pdfviewer.stampSettings = { opacity: 0.3, author: 'Guest User' };
-pdfviewer.appendTo('#PdfViewer');
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 pdfviewer.stampSettings = { opacity: 0.3, author: 'Guest User' };
 pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
@@ -309,23 +217,6 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 const pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
 pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
-pdfviewer.appendTo('#PdfViewer');
-//Apply Stamp Settings while adding individual Annotation
-document.getElementById('Stamp')?.addEventListener('click', function () {
-     pdfviewer.annotation.addAnnotation('Stamp', {
-    offset: { x: 200, y: 140 }, pageNumber: 1,
-     opacity: 0.3, author: 'Guest User'
-  } as StampSettings, DynamicStampItem.Approved);
-});
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, DynamicStampItem, StampSettings} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
-
-const pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
 //Apply Stamp Settings while adding individual Annotation
 document.getElementById('Stamp')?.addEventListener('click', function () {

@@ -40,22 +40,4 @@ The following example demonstrates this implementation across standalone and ser
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
-                   serviceUrl="/api/PdfViewer">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    const viewer = document.getElementById("pdfviewer").ej2_instances[0];
-    viewer.annotationSelect = function annotationSelected(args) {
-        console.log(args.annotationAddMode);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}

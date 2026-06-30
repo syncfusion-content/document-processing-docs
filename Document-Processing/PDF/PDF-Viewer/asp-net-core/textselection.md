@@ -25,16 +25,6 @@ The **enableTextSelection** property enables or disables selecting text in the P
 </div>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                serviceUrl="/api/PdfViewer"
-                documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                enableTextSelection="false">
-    </ejs-pdfviewer>
-</div>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Text Selection Events
@@ -63,23 +53,6 @@ The **textSelectionStart** event triggers when selection is initiated. Typical u
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                serviceUrl="/api/PdfViewer"
-                documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                textSelectionStart="textSelectionStarted">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function textSelectionStarted(args) {
-        // args.pageNumber, args.bounds provide the starting context
-        console.log('Selection started', args);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ### textSelectionEnd
@@ -91,23 +64,6 @@ The **textSelectionEnd** event triggers when selection is completed. It is usefu
 
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
-                documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                textSelectionEnd="textSelectionEnded">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function textSelectionEnded(args) {
-        // For example, automatically copy or show a custom menu
-        console.log('Selection ended', args);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                serviceUrl="/api/PdfViewer"
                 documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
                 textSelectionEnd="textSelectionEnded">
     </ejs-pdfviewer>

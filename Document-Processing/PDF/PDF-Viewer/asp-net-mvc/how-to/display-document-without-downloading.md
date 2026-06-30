@@ -44,31 +44,4 @@ Use the following steps to display the document in the viewer without initiating
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button onclick="downloadDocument()">downloadDocument</button>
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-</div>
-
-<script>
-    function downloadDocument() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.saveAsBlob().then(function (value) {
-            var data = value;
-            var reader = new FileReader();
-            reader.readAsDataURL(data);
-            reader.onload = () => {
-                var base64data = reader.result;
-                console.log(base64data);
-                viewer.load(base64data, null);
-            };
-        });
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
-
-Both **Standalone** and **Server-Backed** examples share the same client logic; configure the `serviceUrl` in the server-backed scenario so the viewer can delegate processing to the ASP.NET MVC controller.

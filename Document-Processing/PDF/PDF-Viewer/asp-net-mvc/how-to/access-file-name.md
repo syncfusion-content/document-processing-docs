@@ -37,22 +37,6 @@ In the `DocumentLoad` or `DownloadEnd` event handler, you can access the origina
 
 ```
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-```html
-@Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentLoad("documentLoad").DownloadEnd("documentLoad").Render()
-
-<script>
-    function documentLoad(args) {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        args.fileName = "pdf-succinctly.pdf";
-        //Sets the name of the file to be downloaded
-        viewer.downloadFileName = "pdf-succinctly.pdf";
-        console.log(args);
-    }
-</script>
-```
-{% endhighlight %}
 {% endtabs %}
 
 Download the sample [how to access file name](https://www.syncfusion.com/downloads/support/directtrac/general/ze/MVC_SAMPLE-609765609)

@@ -37,22 +37,4 @@ function downloadStart(args) {
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-@{
-    ViewBag.Title = "Home Page";
-}
-
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").DownloadStart("downloadStart").Render()
-</div>
-
-<script>
-function downloadStart(args) {
-    // Your custom logic here
-    args.cancel = true; // Prevent download action
-};
-</script>
-
-{% endhighlight %}
 {% endtabs %}

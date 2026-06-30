@@ -25,13 +25,6 @@ In this mode, users can select and copy text in the loaded PDF document. Panning
 </div>
 ```
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-```html
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnableTextSelection(true).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-</div>
-```
-{% endhighlight %}
 {% endtabs %}
 
 ![Alt text](./images/selection.png)
@@ -50,14 +43,6 @@ Switch the interaction mode of the PDF Viewer using the following example:
 ```html
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").InteractionMode(Syncfusion.EJ2.PdfViewer.InteractionMode.Pan).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-</div>
-```
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-```html
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).InteractionMode(Syncfusion.EJ2.PdfViewer.InteractionMode.Pan).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
 </div>
 ```
 {% endhighlight %}

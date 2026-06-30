@@ -20,13 +20,6 @@ You can enable/disable bookmark navigation by using the following code snippet.,
 </div>
 ```
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-```html
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnableBookmark(true).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-</div>
-```
-{% endhighlight %}
 {% endtabs %}
 
 ![Alt text](../images/bookmark.png)
@@ -42,22 +35,6 @@ Here is an example of how to use the **goToBookmark** method:
 
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-</div>
-
-<script>
-    function gotobookmark() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.bookmark.goToBookmark(3, 2);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button id="gotobookmark" onclick="gotobookmark()">Specfic Page</button>
-
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
 </div>
 
 <script>
@@ -85,23 +62,6 @@ Here is an example of how to use the getBookmarks method:
 
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-</div>
-
-<script>
-    function getBookmarks() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        var getBookmarks = pdfViewer.bookmark.getBookmarks();
-        console.log(getBookmarks);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button id="getBookmarks" onclick="getBookmarks()">Retrieve Bookmark</button>
-
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
 </div>
 
 <script>

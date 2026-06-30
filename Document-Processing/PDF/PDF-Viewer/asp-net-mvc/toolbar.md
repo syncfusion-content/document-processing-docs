@@ -50,13 +50,6 @@ The PDF Viewer has an option to show or hide the complete built-in toolbar. You 
 </div>
 ```
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-```html
-    <div style="width:100%;height:600px">
-         @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnableToolbar(false).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-    </div>
-```
-{% endhighlight %}
 {% endtabs %}
 
 * **Show/Hide toolbar using showToolbar as in the following code snippet.**
@@ -86,22 +79,6 @@ The PDF Viewer has an option to show or hide these grouped items in the built-in
     @Html.EJS().PdfViewer("pdfviewer").EnableToolbar(true).ToolbarSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings { ShowTooltip = true, ToolbarItems = "OpenOption" }).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
 </div>
 
-<script>
-    function enableToolbarItem() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.toolbar.showToolbarItem(new Array("DownloadOption"), true);
-    }
-</script>
-```
-
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-```html
-<button id="viewer" onclick="enableToolbarItem()">EnableToolbarItem</button>
-<div style="width:100%;height:600px">
-     @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnableToolbar(false).ToolbarSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings{ ShowTooltip = true, ToolbarItem = "OpenOption" ).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-</div>
 <script>
     function enableToolbarItem() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
@@ -192,54 +169,6 @@ PDF Viewer allows you to customize(add, show, hide, enable, and disable) existin
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-@{
-    ViewBag.Title = "Home Page";
-}
-@using Syncfusion.EJ2.PdfViewer
-@using ToolbarCustomization.Controllers
-@{
-    var toolItem1 = new { id = "submit_form", text = "Submit Form", tooltipText = "Custom toolbar item", align = "Center", cssClass = "custom_button" };
-    CustomToolbarItems customToolbarItems = new CustomToolbarItems();
-    customToolbarItems.ToolbarItems = new List<object> { toolItem1, "OpenOption", "PageNavigationTool", "MagnificationTool", "PanTool", "SelectionTool", "SearchOption", "PrintOption", "DownloadOption", "UndoRedoTool", "AnnotationEditTool", "FormDesignerEditTool", "CommentTool" };
-    PdfViewerToolbarSettings toolbarSettings = new PdfViewerToolbarSettings()
-    {
-        ShowTooltip = true,
-        ToolbarItems = customToolbarItems.ToolbarItems
-    };
-}
-<div>
-    <div style="height:500px;width:1350px;">
-        <br /><br />
-        @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/Home/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/form-designer.pdf").ToolbarClick("toolbarClick").Created("onLoadedPage").DocumentLoad("documentLoaded").FormFieldAdd("formFieldAdd").ToolbarSettings(toolbarSettings).Render()
-    </div>
-</div>
-
-<script type="text/javascript">
-    function onLoadedPage(args) {
-        console.log(args);
-    }
-    function documentLoaded(args) {
-        console.log(args);
-    }
-    function formFieldAdd(args) {
-        console.log(args);
-    }
-    function toolbarClick(args) {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        if (args.item && args.item.id === 'submit_form') {
-            alert('Custom button clicked!');
-        }
-    }
-</script>
-
-<style>
-    .custom_button {
-        height: 100% !important;
-    }
-</style>
-{% endhighlight %}
 {% endtabs %}
 
 N> Default value of toolbar items is ['OpenOption', 'PageNavigationTool','MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption','UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']
@@ -304,16 +233,6 @@ new ToolbarItem { Type = ItemType.Button,  PrefixIcon = "e-pv-download-document-
 
 ```html
 @Html.EJS().PdfViewer("pdfviewer")
-.EnableToolbar(false).EnableThumbnail(false)
-.DocumentLoad("documentLoaded").PageChange("pageChanged")
-.DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-```
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-```html
-@Html.EJS().PdfViewer("pdfviewer")
-.ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/"))
 .EnableToolbar(false).EnableThumbnail(false)
 .DocumentLoad("documentLoaded").PageChange("pageChanged")
 .DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()

@@ -46,31 +46,6 @@ function pageRenderComplete(args) {
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-@{
-    ViewBag.Title = "Home Page";
-}
-
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").PageRenderInitiate("pageRenderInitiate").PageRenderComplete("pageRenderComplete").Render()
-</div>
-
-<script>
-function pageRenderInitiate(args) {
-   // This method is called when the page rendering starts
-    console.log('Rendering of pages started');
-    console.log(args);
-};
-
-function pageRenderComplete(args) {
-   // This method is called when the page rendering completes
-   console.log('Rendering of pages completed');
-   console.log(args);
-};
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 The provided code demonstrates how to subscribe to the `pageRenderInitiate` and `pageRenderComplete` events in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer component.

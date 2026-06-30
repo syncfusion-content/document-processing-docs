@@ -66,17 +66,6 @@ Enable desktop mode on mobile devices by setting the `enableDesktopMode` API to 
 </div>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   serviceUrl='/Index'
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   enableDesktopMode="true">
-    </ejs-pdfviewer>
-</div>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Enable Scrolling in Desktop Mode with Touch Gestures
@@ -88,17 +77,6 @@ To ensure smooth scrolling of PDF documents on a mobile device in desktop mode, 
 
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   enableTextSelection="false">
-    </ejs-pdfviewer>
-</div>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   serviceUrl='/Index'
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
                    enableTextSelection="false">
     </ejs-pdfviewer>

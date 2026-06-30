@@ -36,23 +36,6 @@ The following steps explain how to open the thumbnail pane.
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button type="button" onclick="openThumbnail()">Open Thumbnail Pane</button>
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-</div>
-
-<script>
-    function openThumbnail() {
-        var viewer = document.getElementById('pdfViewer').ej2_instances[0];
-        // Open Thumbnail Pane.
-        viewer.thumbnailViewModule.openThumbnailPane();
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 [how to open the thumbnail pane programmatically](https://www.syncfusion.com/downloads/support/directtrac/general/ze/EJ2MvcSample1928984973.zip)

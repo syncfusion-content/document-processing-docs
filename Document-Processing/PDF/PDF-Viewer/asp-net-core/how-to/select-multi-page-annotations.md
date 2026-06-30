@@ -28,15 +28,4 @@ The following example demonstrates how to configure the `enableMultiPageAnnotati
 </div>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   serviceUrl='/Index'
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   enableMultiPageAnnotation=true>
-    </ejs-pdfviewer>
-</div>
-
-{% endhighlight %}
 {% endtabs %}

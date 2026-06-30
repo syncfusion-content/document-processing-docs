@@ -54,18 +54,6 @@ const viewer: PdfViewer = new PdfViewer({
 });
 viewer.appendTo('#PdfViewer');
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection);
-
-const viewer: PdfViewer = new PdfViewer({
-  documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-  serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/',
-  enableHyperlink: false // Disables all hyperlinks
-});
-viewer.appendTo('#PdfViewer');
-{% endhighlight %}
 {% endtabs %}
 
 N> Disabling hyperlinks affects only the viewer's behavior and does not modify the original PDF document.
@@ -90,18 +78,6 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 
 const viewer: PdfViewer = new PdfViewer({
   documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-  hyperlinkOpenState: 'NewTab' // Opens links in a new browser tab
-});
-viewer.appendTo('#PdfViewer');
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection);
-
-const viewer: PdfViewer = new PdfViewer({
-  documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-  serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/',
   hyperlinkOpenState: 'NewTab' // Opens links in a new browser tab
 });
 viewer.appendTo('#PdfViewer');
@@ -137,35 +113,6 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 
 const viewer: PdfViewer = new PdfViewer({
   documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-  // Event handler for hyperlink click
-  hyperlinkClick: (args) => {
-    // Log the URL of the clicked hyperlink
-    console.log('Hyperlink Clicked:', args.hyperlink);
-
-    // To prevent the default navigation behavior, set args.cancel to true
-    // args.cancel = true;
-  },
-
-  // Event handler for mouse hover over a hyperlink
-  hyperlinkMouseOver: (args) => {
-    // Log the href of the hyperlink element when the mouse hovers over it
-    console.log('Mouse is over hyperlink:', args.hyperlinkElement.href);
-  }
-});
-
-// Append the PDF Viewer to the HTML element
-viewer.appendTo('#PdfViewer');
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection);
-
-const viewer: PdfViewer = new PdfViewer({
-  documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-  // Set the service URL for server-backed PDF processing
-  serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/',
-
   // Event handler for hyperlink click
   hyperlinkClick: (args) => {
     // Log the URL of the clicked hyperlink

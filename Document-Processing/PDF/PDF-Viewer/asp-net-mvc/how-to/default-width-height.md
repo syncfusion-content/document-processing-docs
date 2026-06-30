@@ -17,7 +17,7 @@ To change the width and height of the PDF Viewer, update the `Width` and `Height
 ```html
 <div>
     <div style="width:100%;height:600px">
-        @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/Home/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Height("1000px").Width("80%").Render()
+        @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/33.2.13/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Height("1000px").Width("80%").Render()
     </div>
 </div>
 ```

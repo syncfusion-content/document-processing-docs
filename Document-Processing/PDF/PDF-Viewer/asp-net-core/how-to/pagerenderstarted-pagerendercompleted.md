@@ -52,35 +52,6 @@ The following example demonstrates how to subscribe to these events in both stan
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-@{
-    ViewData["Title"] = "Home page";
-}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   serviceUrl="/Index"
-                   pageRenderInitiate="pageRenderInitiate"
-                   pageRenderComplete="pageRenderComplete">
-    </ejs-pdfviewer>
-</div>
-<script type="text/javascript">
-
-    function pageRenderInitiate(args) {
-        // This method is called when the page rendering starts
-        console.log('Rendering of pages started');
-        console.log(args);
-    }
-    function pageRenderComplete(args) {
-        // This method is called when the page rendering completes
-        console.log('Rendering of pages completed');
-        console.log(args);
-    };
-
-</script>
-{% endhighlight %}
 {% endtabs %}
 
 By leveraging these rendering events, developers can maintain granular control over the viewer's lifecycle and provide a more interactive documentation experience.

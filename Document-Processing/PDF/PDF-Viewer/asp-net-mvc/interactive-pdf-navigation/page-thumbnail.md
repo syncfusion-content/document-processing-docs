@@ -20,13 +20,6 @@ You can enable/disable thumbnail navigation by using the following code snippet.
 </div>
 ```
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-```html
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnableThumbnail(true).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-</div>
-```
-{% endhighlight %}
 {% endtabs %}
 
 ![Alt text](../images/thumbnail.png)

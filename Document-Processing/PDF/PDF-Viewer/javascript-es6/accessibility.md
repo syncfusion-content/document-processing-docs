@@ -189,66 +189,6 @@ pdfviewer.commandManager = {
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import {
-  PdfViewer,
-  Toolbar,
-  Magnification,
-  Navigation,
-  Annotation,
-  LinkAnnotation,
-  ThumbnailView,
-  BookmarkView,
-  TextSelection} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(
-  Toolbar,
-  Magnification,
-  Navigation,
-  Annotation,
-  LinkAnnotation,
-  ThumbnailView,
-  BookmarkView,
-  TextSelection);
-
-let pdfviewer: PdfViewer = new PdfViewer({
-documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'});
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.commandManager = {
-	keyboardCommand: [{
-	  name: 'customCopy',
-    gesture: {
-        pdfKeys: PdfKeys.G,
-	      modifierKeys: ModifierKeys.Shift | ModifierKeys.Alt
-	    }
-	  },
-	  {
-	    name: 'customPaste',
-	    gesture: {
-	      pdfKeys: PdfKeys.H,
-	      modifierKeys: ModifierKeys.Shift | ModifierKeys.Alt
-      }
-	  },
-    {
-      name: 'customCut',
-      gesture: {
-        pdfKeys: PdfKeys.Z,
-        modifierKeys: ModifierKeys.Control
-      }
-    },
-    {
-      name: 'customSelectAll',
-      gesture: {
-        pdfKeys: PdfKeys.E,
-        modifierKeys: ModifierKeys.Control
-      }
-    },
-  ]
-};
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
 {% endtabs %}
 
 Each `keyboardCommand` object consists of a `name` property for the custom command and a `gesture` property defining the key gesture associated with the command. For example, the `customCopy` command is associated with the G key and requires both the Shift and Alt modifier keys to be pressed simultaneously.

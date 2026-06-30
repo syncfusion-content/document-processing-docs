@@ -33,25 +33,6 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC PDF Viewer allo
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).DocumentLoad("documentLoad").DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-</div>
-
-<script>
-    function documentLoad() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        if (ej2_base_1.Browser.isDevice && !viewer.enableDesktopMode) {
-            viewer.maxZoom = 200;
-            viewer.minZoom = 10;
-        }
-       else {
-            viewer.zoomMode = 'Default';
-        }
-    }
-</script>
-{% endhighlight %}
 {% endtabs %}
 
 By enforcing these limits, mobile users can zoom between 10% and 200%, which avoids blurry rendering or performance drops caused by extreme zoom levels. Adjust the thresholds to suit the document content but keep `minZoom` less than or equal to `maxZoom` so the viewer maintains a valid range.

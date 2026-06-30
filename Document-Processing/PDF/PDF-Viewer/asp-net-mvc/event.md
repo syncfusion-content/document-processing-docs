@@ -88,18 +88,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").BookmarkClick("bookmarkClicked").Render()
-</div>
-
-<script>
-    function bookmarkClicked(args) {
-        console.log(`Bookmark clicked: ${args.name}`);
-    }
-</script>
-{% endhighlight %}
 {% endtabs %}
 
 ## toolbarClick
@@ -115,19 +103,6 @@ Example:
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ToolbarClick("ToolbarClicked").Render()
-</div>
-
-<script>
-    function ToolbarClicked(args) {
-        console.log(`Toolbar item clicked: ${args.name}`);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ToolbarClick("ToolbarClicked").Render()
 </div>
 
 <script>
@@ -172,22 +147,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ValidateFormFields("validateFormFields").EnableFormFieldsValidation(true).Render()
-</div>
-
-<script>
-    function validateFormFields(args) {
-        console.log('form field event name:', args.name);
-        console.log('form field document name:', args.documentName);
-        console.log('form field data:', args.formField);
-        console.log('non fillable form field details:', args.nonFillableFields);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 Tip
@@ -206,19 +165,6 @@ Example:
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ZoomChange("zoomChanged").Render()
-</div>
-
-<script>
-    function zoomChange(args) {
-        console.log(`Zoom changed to: ${args.zoomValue}%`);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ZoomChange("zoomChanged").Render()
 </div>
 
 <script>
@@ -252,19 +198,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ButtonFieldClick("buttonFieldClicked").Render()
-</div>
-
-<script>
-    function buttonFieldClicked(args) {
-        console.log(`Button field clicked. Name: ${args.name}`);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## commentAdd
@@ -280,19 +213,6 @@ Example:
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").CommentAdd("commentAdded").Render()
-</div>
-
-<script>
-    function commentAdded(args) {
-        console.log(`Comment added. Id: ${args.id}`);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").CommentAdd("commentAdded").Render()
 </div>
 
 <script>
@@ -326,19 +246,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").CommentDelete("commentDeleted").Render()
-</div>
-
-<script>
-    function commentDeleted(args) {
-        console.log(`Comment deleted. Id: ${args.id}`);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## commentEdit
@@ -354,19 +261,6 @@ Example:
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").CommentEdit("CommentEdited").Render()
-</div>
-
-<script>
-    function CommentEdited(args) {
-        console.log(`Comment edited. Id: ${args.id}`);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").CommentEdit("CommentEdited").Render()
 </div>
 
 <script>
@@ -400,19 +294,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").CommentSelect("commentSelected").Render()
-</div>
-
-<script>
-    function CommentEdited(args) {
-        console.log(`Comment selected. Id: ${args.id}`);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## commentStatusChanged
@@ -428,19 +309,6 @@ Example:
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").CommentStatusChanged("commentStatusChanged").Render()
-</div>
-
-<script>
-    function commentStatusChanged(args) {
-        console.log(`Comment status changed. Id: ${args.id}, Status: ${args.status}`);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").CommentStatusChanged("commentStatusChanged").Render()
 </div>
 
 <script>
@@ -474,19 +342,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Created("created").Render()
-</div>
-
-<script>
-    function created(args) {
-        console.log('PDF Viewer created');
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## customContextMenuBeforeOpen
@@ -504,19 +359,6 @@ Example:
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").CustomContextMenuBeforeOpen("customContextMenuBeforeOpened").Render()
-</div>
-
-<script>
-    function customContextMenuBeforeOpened(args) {
-        console.log(`Before open context menu at page ${args.name}`);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").CustomContextMenuBeforeOpen("customContextMenuBeforeOpened").Render()
 </div>
 
 <script>
@@ -553,19 +395,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").CustomContextMenuSelect("customContextMenuSelected").Render()
-</div>
-
-<script>
-    function customContextMenuSelected(args) {
-        console.log(`Before open context menu at page ${args.name}`);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## documentLoad
@@ -581,19 +410,6 @@ Example:
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").DocumentLoad("documentLoaded").Render()
-</div>
-
-<script>
-    function documentLoaded(args) {
-        console.log(`Document loaded: page count = ${args.pageData}`);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").DocumentLoad("documentLoaded").Render()
 </div>
 
 <script>
@@ -627,19 +443,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").DocumentLoadFailed("documentLoadFailed").Render()
-</div>
-
-<script>
-    function documentLoadFailed(args) {
-        console.log(`Load failed. Error: ${args.documentName}`);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## documentUnload
@@ -655,19 +458,6 @@ Example:
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").DocumentUnload("documentUnloaded").Render()
-</div>
-
-<script>
-    function documentUnloaded(args) {
-        console.log('Document unloaded');
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").DocumentUnload("documentUnloaded").Render()
 </div>
 
 <script>
@@ -701,19 +491,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").DownloadEnd("downloadEnded").Render()
-</div>
-
-<script>
-    function downloadEnded(args) {
-        console.log(`Download finished. File name: ${args.fileName}`);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## downloadStart
@@ -729,19 +506,6 @@ Example:
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").DownloadStart("downloadStarted").Render()
-</div>
-
-<script>
-    function downloadStarted(args) {
-        console.log('Download started');
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").DownloadStart("downloadStarted").Render()
 </div>
 
 <script>
@@ -775,19 +539,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ExportFailed("exportFailed").Render()
-</div>
-
-<script>
-    function exportFailed(args) {
-        console.log(`Export failed: ${args.name}`);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## exportStart
@@ -803,19 +554,6 @@ Example:
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ExportStart("exportStarted").Render()
-</div>
-
-<script>
-    function exportStarted(args) {
-        console.log('Export started');
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ExportStart("exportStarted").Render()
 </div>
 
 <script>
@@ -849,19 +587,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ExportSuccess("exportSuccess").Render()
-</div>
-
-<script>
-    function exportSuccess(args) {
-        console.log('Export success');
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## extractTextCompleted
@@ -877,19 +602,6 @@ Example:
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ExtractTextCompleted("extractTextCompleted").Render()
-</div>
-
-<script>
-    function extractTextCompleted(args) {
-        console.log(`Extracted text length: ${(args.documentTextCollection || '').length}`);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ExtractTextCompleted("extractTextCompleted").Render()
 </div>
 
 <script>
@@ -923,19 +635,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").HyperlinkClick("hyperlinkClicked").Render()
-</div>
-
-<script>
-    function hyperlinkClicked(args) {
-        console.log(`Hyperlink clicked: ${args.hyperlink}`);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## hyperlinkMouseOver
@@ -951,19 +650,6 @@ Example:
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").HyperlinkMouseOver("hyperlinkMouseOvered").Render()
-</div>
-
-<script>
-    function hyperlinkMouseOvered(args) {
-        console.log(`Hyperlink hover at page: ${args.name}`);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").HyperlinkMouseOver("hyperlinkMouseOvered").Render()
 </div>
 
 <script>
@@ -997,19 +683,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ImportFailed("importFailed").Render()
-</div>
-
-<script>
-    function importFailed(args) {
-        console.log(`Import failed: ${args.name}`);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## importStart
@@ -1034,19 +707,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ImportStart("importStarted").Render()
-</div>
-
-<script>
-    function importStarted(args) {
-        console.log('Import started');
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## importSuccess
@@ -1062,19 +722,6 @@ Example:
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ImportSuccess("importSuccess").Render()
-</div>
-
-<script>
-    function importSuccess(args) {
-        console.log('Import success');
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ImportSuccess("importSuccess").Render()
 </div>
 
 <script>
@@ -1115,19 +762,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").KeyboardCustomCommands("keyboardCustomCommands").Render()
-</div>
-
-<script>
-    function keyboardCustomCommands(args) {
-        console.log('Custom command triggered:', args);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## moveSignature
@@ -1143,19 +777,6 @@ Example:
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").MoveSignature("moveSignatured").Render()
-</div>
-
-<script>
-    function moveSignatured(args) {
-        console.log(`Signature moved on page ${args.id}`);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").MoveSignature("moveSignatured").Render()
 </div>
 
 <script>
@@ -1189,19 +810,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").PageChange("pageChanged").Render()
-</div>
-
-<script>
-    function pageChanged(args) {
-        console.log(`Page changed from ${args.previousPageNumber} to ${args.currentPageNumber}`);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## pageClick
@@ -1217,19 +825,6 @@ Example:
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").PageClick("pageClicked").Render()
-</div>
-
-<script>
-    function pageClicked(args) {
-        console.log(`Page ${args.pageNumber} clicked at (${args.x}, ${args.y})`);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").PageClick("pageClicked").Render()
 </div>
 
 <script>
@@ -1263,19 +858,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").PageMouseover("pageMouseover").Render()
-</div>
-
-<script>
-    function pageMouseover(args) {
-        console.log(`Mouse over page ${args.name}`);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## pageOrganizerSaveAs
@@ -1291,19 +873,6 @@ Example:
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").PageOrganizerSaveAs("pageOrganizerSaveAs").Render()
-</div>
-
-<script>
-    function pageOrganizerSaveAs(args) {
-        console.log(`Page organizer save triggered. File name: ${args.downloadDocument}`);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").PageOrganizerSaveAs("pageOrganizerSaveAs").Render()
 </div>
 
 <script>
@@ -1337,19 +906,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").PageRenderComplete("pageRenderCompleted").Render()
-</div>
-
-<script>
-    function pageRenderCompleted(args) {
-        console.log(`Page ${args.data} rendering completed.`);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## pageRenderInitiate
@@ -1374,19 +930,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").PageRenderInitiate("pageRenderInitiated").Render()
-</div>
-
-<script>
-    function pageRenderInitiated(args) {
-        console.log(`Page ${args.jsonData} rendering initiated.`);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## printEnd
@@ -1402,19 +945,6 @@ Example:
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").EnablePrint(true).PrintEnd("printEnded").Render()
-</div>
-
-<script>
-    function printEnded(args) {
-        console.log('Printed File Name: ' + args.fileName);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").EnablePrint(true).PrintEnd("printEnded").Render()
 </div>
 
 <script>
@@ -1450,21 +980,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").EnablePrint(true).PrintStart("printStarted").Render()
-</div>
-
-<script>
-    function printStarted(args) {
-        console.log('Print action has started for file: ' + args.fileName);
-        // To cancel the print action
-        // args.cancel = true;
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## removeSignature
@@ -1480,19 +995,6 @@ Example:
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").RemoveSignature("removeSignatured").Render()
-</div>
-
-<script>
-    function removeSignatured(args) {
-        console.log(`Signature removed from page ${args.bounds}`);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").RemoveSignature("removeSignatured").Render()
 </div>
 
 <script>
@@ -1527,20 +1029,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ResizeSignature("resizeSignature").Render()
-</div>
-
-<script>
-    function resizeSignature(args) {
-        console.log('Signature resized on page ' + args.pageIndex);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## resourcesLoaded
@@ -1556,19 +1044,6 @@ Example:
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ResourcesLoaded("resourcesLoaded").Render()
-</div>
-
-<script>
-    function resourcesLoaded(args) {
-        console.log('PDFium resources loaded.');
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ResourcesLoaded("resourcesLoaded").Render()
 </div>
 
 <script>
@@ -1603,20 +1078,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").SignaturePropertiesChange("signaturePropertiesChanged").Render()
-</div>
-
-<script>
-    function signaturePropertiesChanged(args) {
-        console.log('Signature properties changed on page ' + args.pageIndex);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## signatureSelect
@@ -1633,20 +1094,6 @@ Example:
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>
     @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").SignatureSelect("signatureSelected").Render()
-</div>
-
-<script>
-    function signatureSelected(args) {
-        console.log('Signature selected on page ' + args.pageIndex);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").SignatureSelect("signatureSelected").Render()
 </div>
 
 <script>
@@ -1681,20 +1128,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").SignatureUnselect("signatureUnselected").Render()
-</div>
-
-<script>
-    function signatureUnselected(args) {
-        console.log('Signature unselected on page ' + args.pageIndex);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## textSearchComplete
@@ -1720,20 +1153,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").TextSearchComplete("textSearchCompleted").Render()
-</div>
-
-<script>
-    function textSearchCompleted(args) {
-        // args.totalMatches may indicate how many results were found (when available)
-        console.log('Text search completed.', args);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## textSearchHighlight
@@ -1749,20 +1168,6 @@ Example:
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").TextSearchHighlight("textSearchHighlighted").Render()
-</div>
-
-<script>
-    function textSearchHighlighted(args) {
-        // args.bounds provides the rectangle(s) of the current match
-        console.log('Highlighted match bounds:', args.bounds);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").TextSearchHighlight("textSearchHighlighted").Render()
 </div>
 
 <script>
@@ -1799,21 +1204,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").TextSearchStart("textSearchStarted").Render()
-</div>
-
-<script>
-    function textSearchStarted(args) {
-        // args.searchText contains the term being searched
-        // args.cancel can be set to true to stop the default search
-        console.log(`Text search started for: "${args.searchText}"`);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## textSelectionEnd
@@ -1829,20 +1219,6 @@ Example:
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").TextSelectionEnd("textSelectionEnded").Render()
-</div>
-
-<script>
-    function textSelectionEnded(args) {
-        // For example, automatically copy or show a custom menu
-        console.log('Selection ended', args);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").TextSelectionEnd("textSelectionEnded").Render()
 </div>
 
 <script>
@@ -1878,20 +1254,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").TextSelectionStart("textSelectionStarted").Render()
-</div>
-
-<script>
-    function textSelectionStarted(args) {
-        // args.pageNumber, args.bounds provide the starting context
-        console.log('Selection started', args);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## thumbnailClick
@@ -1907,19 +1269,6 @@ Example:
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ThumbnailClick("thumbnailClicked").Render()
-</div>
-
-<script>
-    function thumbnailClicked(args) {
-        console.log(`Thumbnail clicked for page index ${args.pageNumber}.`);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ThumbnailClick("thumbnailClicked").Render()
 </div>
 
 <script>

@@ -38,27 +38,6 @@ Follow these steps to unload a PDF document programmatically:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button type="button" onclick="unload()">Unload Document</button>
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer
-        id="pdfviewer"
-        serviceUrl="/Index"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    // Unload the PDF document.
-    function unload() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.unload();
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 After calling `unload()`, the viewer clears the document, toolbar state, and cached data until a new PDF is loaded. This pattern works identically in both standalone and server-backed configurations, ensuring clean state management before loading different documents.

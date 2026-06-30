@@ -63,13 +63,6 @@ The desktop version of the toolbar can be enabled on mobile devices by using the
 </div>
 ```
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-```html
-    <div style="width:100%;height:600px">
-         @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnableDesktopMode(true).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-    </div>
-```
-{% endhighlight %}
 {% endtabs %}
 
 ## Enable Scrolling in Desktop Mode with Touch Gestures
@@ -82,13 +75,6 @@ To ensure smooth scrolling of PDF documents on a mobile device in desktop mode, 
 <div style="width:100%;height:600px">
      @Html.EJS().PdfViewer("pdfviewer").EnableTextSelection(false).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
 </div>
-```
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-```html
-    <div style="width:100%;height:600px">
-         @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnableTextSelection(false).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-    </div>
 ```
 {% endhighlight %}
 {% endtabs %}

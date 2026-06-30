@@ -33,22 +33,6 @@ Follow these steps to add the bookmark toggle buttons:
     }
 </script>
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button type="button" onclick="openBookmark()">Open Bookmark Pane</button>
-
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-</div>
-
-<script>
-    function openBookmark() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.bookmarkViewModule.openBookmarkPane();
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 To close the bookmark pane with a button click, reuse the same structure and call the close method in the handler.
@@ -68,23 +52,6 @@ To close the bookmark pane with a button click, reuse the same structure and cal
         pdfViewer.bookmarkViewModule.closeBookmarkPane();
     }
 </script>
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button type="button" onclick="closeBookmark()">Close Bookmark Pane</button>
-
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-</div>
-
-<script>
-    function closeBookmark() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        // close Bookmark pane
-        pdfViewer.bookmarkViewModule.closeBookmarkPane();
-    }
-</script>
-
 {% endhighlight %}
 {% endtabs %}
 

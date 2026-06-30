@@ -118,44 +118,6 @@ window.onload = function() {
 </script>
 {% endraw %}
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-{% raw %}
-<div>
-  <div style="display:flex;gap:8px;margin-bottom:12px">
-    <button id="addComment">Add Comments</button>
-    <button id="addReply">Add Reply</button>
-  </div>
-  <ejs-pdfviewer id="container" style="height:650px" resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" serviceUrl="YOUR_SERVICE_URL">
-  
-  </ejs-pdfviewer>
-</div>
-<script>
-window.onload = function() {
-  var viewer = document.getElementById('container').ej2_instances[0];
-  document.getElementById('addComment').onclick = function() {
-    if (!viewer) return;
-    var annot = (viewer.annotationCollection && viewer.annotationCollection[0]) || null;
-    if (annot) {
-      annot.commentType = 'add';
-      annot.note = 'New Comment';
-      viewer.annotation.editAnnotation(annot);
-      console.log(viewer.annotationCollection && viewer.annotationCollection[0]);
-    }
-  };
-  document.getElementById('addReply').onclick = function() {
-    if (!viewer) return;
-    var annot = (viewer.annotationCollection && viewer.annotationCollection[0]) || null;
-    if (annot) {
-      annot.commentType = 'add';
-      annot.replyComment = ['Reply Comment'];
-      viewer.annotation.editAnnotation(annot);
-      console.log(viewer.annotationCollection && viewer.annotationCollection[0]);
-    }
-  };
-};
-</script>
-{% endraw %}
-{% endhighlight %}
 {% endtabs %}
 
 ### Edit comments and replies programmatically
@@ -173,43 +135,6 @@ The following example Shows how to edit comments and reply in response to a butt
     <button id="editReply">Edit Reply</button>
   </div>
   <ejs-pdfviewer id="container" style="height:650px" resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"></ejs-pdfviewer>
-</div>
-<script>
-window.onload = function() {
-  var viewer = document.getElementById('container').ej2_instances[0];
-  document.getElementById('editComment').onclick = function() {
-    if (!viewer) return;
-    var annot = (viewer.annotationCollection && viewer.annotationCollection[0]) || null;
-    if (annot) {
-      annot.commentType = 'edit';
-      annot.note = 'Edited Comment';
-      viewer.annotation.editAnnotation(annot);
-      console.log(viewer.annotationCollection && viewer.annotationCollection[0]);
-    }
-  };
-  document.getElementById('editReply').onclick = function() {
-    if (!viewer) return;
-    var annot = (viewer.annotationCollection && viewer.annotationCollection[0]) || null;
-    if (annot) {
-      annot.commentType = 'edit';
-      annot.replyComment = ['Edited Reply Comment'];
-      viewer.annotation.editAnnotation(annot);
-      console.log(viewer.annotationCollection && viewer.annotationCollection[0]);
-    }
-  };
-};
-</script>
-{% endraw %}
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-{% raw %}
-<div>
-  <div style="display:flex;gap:8px;margin-bottom:12px">
-    <button id="editComment">Edit Comments</button>
-    <button id="editReply">Edit Reply</button>
-  </div>
-  <ejs-pdfviewer id="container" style="height:650px" resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" serviceUrl="YOUR_SERVICE_URL">
-  </ejs-pdfviewer>
 </div>
 <script>
 window.onload = function() {

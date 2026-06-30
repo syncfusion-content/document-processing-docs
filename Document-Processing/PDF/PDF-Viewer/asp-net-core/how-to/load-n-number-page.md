@@ -39,23 +39,6 @@ The following examples demonstrate how to set the `initialRenderPages` property 
 </div>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-@{
-    ViewData["Title"] = "Home page";
-    double InitialRenderPages = 5;
-}
-
-<div class="text-center">
-    <ejs-pdfviewer
-        id="pdfviewer"
-        style="height:600px"
-        serviceUrl="/Index"
-        initialRenderPages="@InitialRenderPages"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
-</div>
-{% endhighlight %}
 {% endtabs %}
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/Load%20N%20no%20of%20pages)

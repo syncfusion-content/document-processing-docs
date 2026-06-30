@@ -18,8 +18,6 @@ The **PDF Viewer** lets you import values into interactive form fields in the cu
 ## API to use
 - [importFormFields](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#importformfields)(sourceOrObject, format)
 
-N>If you’re using a **server-backed viewer**, set serviceUrl before importing.
-
 ### Import FDF
 
 {% tabs %}

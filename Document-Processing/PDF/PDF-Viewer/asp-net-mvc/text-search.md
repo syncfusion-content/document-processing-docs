@@ -19,12 +19,6 @@ The Text Search option in PDF Viewer is used to find and highlight the text cont
         @Html.EJS().PdfViewer("pdfviewer").EnableTextSearch(true).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
     </div>
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-    <div style="width:100%;height:600px">
-        @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnableTextSearch(true).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-    </div>
-{% endhighlight %}
 {% endtabs %}
 
 ![Alt text](./images/search.png)
@@ -89,21 +83,6 @@ To perform a case-sensitive search, set the `isMatchCase` parameter to `true`. T
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button type="button" onclick="searchText()">Search Text</button>
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnableTextSearch(true).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-</div>
-
-<script>
-    function searchText() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.textSearch.searchText('PDF', true);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 #### Match Whole Word
@@ -116,21 +95,6 @@ You can search for whole words by setting the `isMatchWholeWord` parameter to `t
 <button type="button" onclick="searchText()">Search Text</button>
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").EnableTextSearch(true).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-</div>
-
-<script>
-    function searchText() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.textSearch.searchText('pdf', false, true);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button type="button" onclick="searchText()">Search Text</button>
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnableTextSearch(true).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
 </div>
 
 <script>
@@ -176,21 +140,6 @@ Searches for the specified text within the document and returns the bounding rec
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-backed" %}
-
-<button type="button" onclick="findTextBounds()">FindTextBounds</button>
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-</div>
-
-<script>
-    function findTextBounds() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        console.log(viewer.textSearch.findText('pdf', false));
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ### Find and get the bounds of a text on the desired page
@@ -202,21 +151,6 @@ Searches for the specified text within the document and returns the bounding rec
 <button type="button" onclick="findTextBounds()">FindTextBounds</button>
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-</div>
-
-<script>
-    function findTextBounds() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        console.log(viewer.textSearch.findText('pdf', false, 7));
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-backed" %}
-
-<button type="button" onclick="findTextBounds()">FindTextBounds</button>
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
 </div>
 
 <script>
@@ -248,21 +182,6 @@ Searches for an array of strings within the document and returns the bounding re
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-backed" %}
-
-<button type="button" onclick="findTextBounds()">FindTextBounds</button>
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-</div>
-
-<script>
-    function findTextBounds() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        console.log(viewer.textSearch.findText(['pdf', 'adobe'], false));
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ### Find and get the bounds of the list of text on desired page
@@ -274,21 +193,6 @@ Searches for an array of strings within the document and returns the bounding re
 <button type="button" onclick="findTextBounds()">FindTextBounds</button>
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-</div>
-
-<script>
-    function findTextBounds() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        console.log(viewer.textSearch.findText(['pdf', 'adobe'], false, 7));
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-backed" %}
-
-<button type="button" onclick="findTextBounds()">FindTextBounds</button>
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
 </div>
 
 <script>
@@ -334,21 +238,6 @@ The [textSearchStart](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").TextSearchStart("textSearchStarted").Render()
-</div>
-
-<script>
-    function textSearchStarted(args) {
-        // args.searchText contains the term being searched
-        // args.cancel can be set to true to stop the default search
-        console.log(`Text search started for: "${args.searchText}"`);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ### textSearchHighlight
@@ -368,20 +257,6 @@ The [textSearchHighlight](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusio
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").TextSearchHighlight("textSearchHighlighted").Render()
-</div>
-
-<script>
-    function textSearchHighlighted(args) {
-        // args.bounds provides the rectangle(s) of the current match
-        console.log('Highlighted match bounds:', args.bounds);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").TextSearchHighlight("textSearchHighlighted").Render()
 </div>
 
 <script>
@@ -415,20 +290,6 @@ The [textSearchComplete](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").TextSearchComplete("textSearchCompleted").Render()
-</div>
-
-<script>
-    function textSearchCompleted(args) {
-        // args.totalMatches may indicate how many results were found (when available)
-        console.log('Text search completed.', args);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").TextSearchComplete("textSearchCompleted").Render()
 </div>
 
 <script>

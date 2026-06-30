@@ -42,16 +42,6 @@ new ToolbarItem { Type = ItemType.Button,  PrefixIcon = "e-pv-download-document-
 .DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
 ```
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-```html
-@Html.EJS().PdfViewer("pdfviewer")
-.ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/"))
-.EnableToolbar(false).EnableThumbnail(false)
-.DocumentLoad("documentLoaded").PageChange("pageChanged")
-.DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-```
-{% endhighlight %}
 {% endtabs %}
 
 **Step 4:** Add the following styles to achieve the custom toolbar styling:

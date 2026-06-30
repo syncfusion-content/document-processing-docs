@@ -50,21 +50,6 @@ The following example switches to distance annotation mode.
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-<!--Element to set measurement annotation mode-->
-<button id="set" onclick="addAnnot()">Distance</button>
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-</div>
-<script>
-    function addAnnot() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.annotation.setAnnotationMode('Distance');
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Add a measurement annotation to the PDF document programmatically
@@ -84,63 +69,6 @@ Here is an example showing how to add measurement annotations programmatically u
 
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-</div>
-
-<script>
-    function addDistanceAnnotation() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.annotation.addAnnotation("Distance", {
-            offset: { x: 200, y: 230 },
-            pageNumber: 1,
-            vertexPoints: [{ x: 200, y: 230 }, { x: 350, y: 230 }]
-        });
-    }
-    function addPerimeterAnnotation() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.annotation.addAnnotation("Perimeter", {
-            offset: { x: 200, y: 350 },
-            pageNumber: 1,
-            vertexPoints: [{ x: 200, y: 350 }, { x: 285, y: 350 }, { x: 286, y: 412 }]
-        });
-    }
-    function addAreaAnnotation() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.annotation.addAnnotation("Area", {
-            offset: { x: 200, y: 500 },
-            pageNumber: 1,
-            vertexPoints: [{ x: 200, y: 500 }, { x: 288, y: 499 }, { x: 289, y: 553 }, { x: 200, y: 500 }]
-        });
-    }
-    function addRadiusAnnotation() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.annotation.addAnnotation("Radius", {
-            offset: { x: 200, y: 630 },
-            pageNumber: 1,
-            width: 90,
-            height: 90
-        });
-    }
-    function addVolumeAnnotation() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.annotation.addAnnotation("Volume", {
-            offset: { x: 200, y: 810 },
-            pageNumber: 1,
-            vertexPoints: [{ x: 200, y: 810 }, { x: 200, y: 919 }, { x: 320, y: 919 }, { x: 320, y: 809 }, { x: 200, y: 810 }]
-        });
-    }
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-<button onclick="addDistanceAnnotation()">Add Distance Annotation programatically</button>
-<button onclick="addPerimeterAnnotation()">Add Perimeter Annotation programatically</button>
-<button onclick="addAreaAnnotation()">Add Area Annotation programatically</button>
-<button onclick="addRadiusAnnotation()">Add Radius Annotation programatically</button>
-<button onclick="addVolumeAnnotation()">Add Volume Annotation programatically</button>
-
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
 </div>
 
 <script>
@@ -273,82 +201,6 @@ Here is an example of using **editAnnotation()**:
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-<button onclick="editDistanceAnnotation()">edit Distance Annotation programatically</button>
-<button onclick="editPerimeterAnnotation()">edit Perimeter Annotation programatically</button>
-<button onclick="editAreaAnnotation()">edit Area Annotation programatically</button>
-<button onclick="editRadiusAnnotation()">edit Radius Annotation programatically</button>
-<button onclick="editVolumeAnnotation()">edit Volume Annotation programatically</button>
-
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-</div>
-
-<script>
-    function editDistanceAnnotation() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        for (let i = 0; i < viewer.annotationCollection.length; i++) {
-            if (viewer.annotationCollection[i].subject === "Distance calculation") {
-                viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
-                viewer.annotationCollection[i].strokeColor = "#0000FF";
-                viewer.annotationCollection[i].thickness = 2;
-                viewer.annotationCollection[i].fillColor = "#FFFF00";
-                viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
-            }
-        }
-    }
-    function editPerimeterAnnotation() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        for (let i = 0; i < viewer.annotationCollection.length; i++) {
-            if (viewer.annotationCollection[i].subject === "Perimeter calculation") {
-                viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
-                viewer.annotationCollection[i].strokeColor = "#0000FF";
-                viewer.annotationCollection[i].thickness = 2;
-                viewer.annotationCollection[i].fillColor = "#FFFF00";
-                viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
-            }
-        }
-    }
-    function editAreaAnnotation() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        for (let i = 0; i < viewer.annotationCollection.length; i++) {
-            if (viewer.annotationCollection[i].subject === "Area calculation") {
-                viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
-                viewer.annotationCollection[i].strokeColor = "#0000FF";
-                viewer.annotationCollection[i].thickness = 2;
-                viewer.annotationCollection[i].fillColor = "#FFFF00";
-                viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
-            }
-        }
-    }
-    function editRadiusAnnotation() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        for (let i = 0; i < viewer.annotationCollection.length; i++) {
-            if (viewer.annotationCollection[i].subject === "Radius calculation") {
-                viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
-                viewer.annotationCollection[i].strokeColor = "#0000FF";
-                viewer.annotationCollection[i].thickness = 2;
-                viewer.annotationCollection[i].fillColor = "#FFFF00";
-                viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
-            }
-        }
-    }
-    function editVolumeAnnotation() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        for (let i = 0; i < viewer.annotationCollection.length; i++) {
-            if (viewer.annotationCollection[i].subject === "Volume calculation") {
-                viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
-                viewer.annotationCollection[i].strokeColor = "#0000FF";
-                viewer.annotationCollection[i].thickness = 2;
-                viewer.annotationCollection[i].fillColor = "#FFFF00";
-                viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
-            }
-        }
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Edit the properties of measurement annotations
@@ -399,13 +251,6 @@ Refer to the following code sample to set the default annotation settings.
 </div>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").DistanceSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerDistanceSettings { FillColor = "blue", Opacity = 0.6, StrokeColor = "green" }).PerimeterSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerPerimeterSettings { FillColor = "green", Opacity = 0.6, StrokeColor = "blue" }).AreaSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerAreaSettings { FillColor = "yellow", Opacity = 0.6, StrokeColor = "orange" }).RadiusSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerRadiusSettings { FillColor = "orange", Opacity = 0.6, StrokeColor = "pink" }).VolumeSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerVolumeSettings { FillColor = "pink", Opacity = 0.6, StrokeColor = "yellow" }).Render()
-</div>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Edit scale ratio and unit of the measurement annotation
@@ -434,13 +279,6 @@ The properties of scale ratio for measurement annotation can be set before creat
 
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").MeasurementSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerMeasurementSettings { ScaleRatio = 2, ConversionUnit = Syncfusion.EJ2.PdfViewer.CalibrationUnit.Cm }).Render()
-</div>
-
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-     @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").MeasurementSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerMeasurementSettings { ScaleRatio = 2, ConversionUnit = Syncfusion.EJ2.PdfViewer.CalibrationUnit.Cm }).Render()
 </div>
 
 {% endhighlight %}
