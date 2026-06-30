@@ -22,23 +22,52 @@ The following code shows how to set currentUser
 this.$refs.doceditcontainer.ej2Instances.documentEditor.currentUser = 'engineer@mycompany.com';
 ```
 
-## Highlighting the text area
+## Protect document with editable region
+User can select a specific section and mark it as an editable region, allowing modification only in that part. The rest of the document remains protected from any changes.
 
-You can highlight the editable region of the current user using the `userColor` property.
+### Insert editable region
+Use the [insertEditingRegion](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#inserteditingregion) API to mark specific paragraphs as editable.This allows you to control editing by giving access to all users or only selected users.
 
-The following code shows how to set userColor.
-
-```javascript
-this.$refs.doceditcontainer.ej2Instances.documentEditor..userColor = '#fff000';
-```
-
-You can toggle the highlight the editable region value using the "highlightEditableRanges" property.
-
-The following code shows how to toggle the highlight editable region value.
-
-```javascript
-this.$refs.doceditcontainer.ej2Instances.documentEditor.documentEditorSettings.highlightEditableRanges = true; 
-```
+The following example shows how to insert an editable region.
+{% tabs %}
+{% highlight ts tabtitle="JS" %}
+ 
+// Allow editing for all users
+this.$refs.doceditcontainer.ej2Instances.documentEditor.editor.insertEditingRegion();
+ 
+// pass a username to restrict access
+this.$refs.doceditcontainer.ej2Instances.documentEditor.editor.insertEditingRegion("User Name");
+ 
+{% endhighlight %}
+{% endtabs %}
+ 
+### Highlight color for editable region
+ 
+The [userColor](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container/index-default#usercolor) property can be used to highlight the editable region of the current user.
+ 
+The following code example demonstrates how to set the userColor.
+ 
+{% tabs %}
+{% highlight ts tabtitle="JS" %}
+ 
+this.$refs.doceditcontainer.ej2Instances.documentEditor.userColor = '#fff000';
+ 
+{% endhighlight %}
+{% endtabs %}
+ 
+### Enable or disable editable region highlighting
+ 
+The [highlightEditableRanges](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container/documenteditorsettingsmodel#highlighteditableranges) property can be used to toggle the highlighting of editable regions.
+ 
+The following code example demonstrates how to enable or disable editable region highlighting.
+ 
+{% tabs %}
+{% highlight ts tabtitle="JS" %}
+ 
+this.$refs.doceditcontainer.ej2Instances.documentEditor.documentEditorSettings.highlightEditableRanges = true;
+ 
+{% endhighlight %}
+{% endtabs %}
 
 ## Restrict Editing Pane
 
