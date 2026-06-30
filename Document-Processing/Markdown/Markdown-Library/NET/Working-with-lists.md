@@ -15,6 +15,8 @@ The Syncfusion Markdown library supports two primary types of lists:
 * **Numbered lists (Ordered lists)**: Lists with sequential numbering such as 1., 2., 3., etc.
 * **Bulleted lists (Unordered lists)**: Lists with bullet markers such as -, *, or +.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C#*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, WinUI, WinForms and WPF; ***VB.NET*** for VB.NET applications.
+
 ## Creating bulleted list
 
 A bulleted list can be created by setting the `ListFormat` property of a paragraph and configuring it for an unordered list. 

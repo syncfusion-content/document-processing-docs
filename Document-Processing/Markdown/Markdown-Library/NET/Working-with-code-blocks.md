@@ -19,6 +19,8 @@ The Syncfusion Markdown library supports two primary types of code blocks:
 
 N> The `IsFencedCode` property controls the code block type. By default, code blocks are created as fenced code blocks.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C#*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, WinUI, WinForms and WPF; ***VB.NET*** for VB.NET applications.
+
 ## Creating fenced code blocks
 
 You can add a code block to a `MarkdownDocument` by using the `AddCodeBlock` method. The following code example demonstrates how to create a fenced code block explicitly.

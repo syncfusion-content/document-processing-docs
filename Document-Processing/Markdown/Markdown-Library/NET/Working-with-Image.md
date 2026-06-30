@@ -16,6 +16,8 @@ When using the `Save(Stream)` overloads, the library preserves the images as bas
 
 If the image contains both a URL and stream values, or contains only a URL, the URL will be used in the output document.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C#*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, WinUI, WinForms and WPF; ***VB.NET*** for VB.NET applications.
+
 ## Adding image from URL
 
 An image can be added to a paragraph in a Markdown document by creating an instance of the `MdPicture` class and adding it to the paragraph's inline collection.
