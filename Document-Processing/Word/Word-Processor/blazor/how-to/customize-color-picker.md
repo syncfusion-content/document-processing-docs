@@ -29,7 +29,8 @@ The following example code illustrates how to Customize the color picker in Docu
 }
 ```
 
-The following table illustrates all the possible properties for the color picker. 
+The following table illustrates all the possible properties for the color picker.
+ 
 | Property | Behavior | 
 |---|---| 
 | Columns | It is used to render the ColorPicker palette with specified columns. Defaults to 10 | 

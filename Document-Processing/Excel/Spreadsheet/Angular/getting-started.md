@@ -32,7 +32,7 @@ ng new spreadsheet-app
 cd spreadsheet-app
 ```
 
-N> When prompted during project creation, select the default options: **CSS** for stylesheet, **No** for SSR/SSG, and **None** for AI tools.
+> **Note:** When prompted during project creation, select the default options: **CSS** for stylesheet, **No** for SSR/SSG, and **None** for AI tools.
 
 ## Install the Syncfusion® Angular Spreadsheet package
 
@@ -52,9 +52,7 @@ npm install @syncfusion/ej2-angular-spreadsheet@ngcc --save
 
 Add the following Spreadsheet and dependent component style references to the `[src/styles.css]` file.
 
-{% tabs %}
-{% highlight css tabtitle="styles.css" %}
-
+```css
 @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
 @import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
 @import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
@@ -65,11 +63,9 @@ Add the following Spreadsheet and dependent component style references to the `[
 @import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
 @import '../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css';
 @import '../node_modules/@syncfusion/ej2-angular-spreadsheet/styles/tailwind3.css';
+```
 
-{% endhighlight %}
-{% endtabs %}
-
-N> Refer to the [Themes topic](https://ej2.syncfusion.com/angular/documentation/appearance/overview) to learn more about built-in themes and different ways to refer to themes in an Angular project.
+> **Note:** Refer to the [Themes topic](https://ej2.syncfusion.com/angular/documentation/appearance/overview) to learn more about built-in themes and different ways to refer to themes in an Angular project.
 
 ## Add the Syncfusion® Angular Spreadsheet component to the application
 
@@ -90,7 +86,7 @@ export class App { }
 {% endhighlight %}
 {% endtabs %}
 
-N> The [`openUrl`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#openurl) and [`saveUrl`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#saveurl) endpoints used in this example are provided only for demonstration purposes. For development and production use, we strongly recommend configuring your own local or hosted web service for the Open and Save actions instead of relying on the online demo service. For more information, refer to the [`link`](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services).
+> **Note:** The [`openUrl`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#openurl) and [`saveUrl`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#saveurl) endpoints used in this example are provided only for demonstration purposes. For development and production use, we strongly recommend configuring your own local or hosted web service for the Open and Save actions instead of relying on the online demo service. For more information, refer to the [`link`](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services).
 
 ## Run the application
 
@@ -107,7 +103,7 @@ You can also explore the Spreadsheet interactively using the live sample below.
  
 {% previewsample "/document-processing/samples/spreadsheet/angular/spreadsheet-cs1" %}
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-angular-spreadsheet-component).
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-angular-spreadsheet-component).
 
 ## Video tutorial
 

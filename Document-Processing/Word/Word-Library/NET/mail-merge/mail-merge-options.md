@@ -803,13 +803,11 @@ document.Save("Sample.docx")
 document.Close()
 {% endhighlight %}
 
-{% highlight c# tabtitle="UWP" %}
-//ADO.NET object is supported in Windows Forms, WPF, ASP.NET, ASP.NET MVC, ASP.NET Core, and Xamarin platforms alone.
-{% endhighlight %}
-
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Insert-as-new-row).
+
+N> The [ExecuteGroup(DataTable)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ExecuteGroup_System_Data_DataTable_) method is not supported on the UWP platform.
 
 ## Skip to merge image
 
@@ -2026,7 +2024,7 @@ N> This [StartAtNewPage](https://help.syncfusion.com/cr/document-processing/Sync
 
 ## Remove mail merge settings
 
-To **restore a Word mail merge main document to a normal Word document** using Microsoft Word application, you have to process the steps suggested in this [article](https://support.microsoft.com/en-us/topic/how-to-restore-a-mail-merge-main-document-to-a-normal-word-document-in-word-8c956d1d-3457-b728-adc1-0cc94da819fe) manually. You can achieve this programmatically in just 2 lines of code using Syncfusion<sup>&reg;</sup> Word library.
+To **restore a Word mail merge main document to a normal Word document** using Microsoft Word application, you have to process the steps suggested in this [article](https://support.microsoft.com/en-us/topic/how-to-restore-a-mail-merge-main-document-to-a-normal-word-document-in-word-8c956d1d-3457-b728-adc1-0cc94da819fe) manually. You can achieve this programmatically in just 2 lines of code using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library).
 
 For example, consider that you have a template Word document linked with the data source for mail merge process. When opening the document using Microsoft Word application, it prompts a window as shown. You can remove the mail merge settings (unlink the data source) to open it as a normal Word document without this pop-up.
 

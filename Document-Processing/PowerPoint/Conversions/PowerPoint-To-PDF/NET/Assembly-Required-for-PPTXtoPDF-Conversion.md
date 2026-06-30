@@ -36,7 +36,7 @@ Syncfusion.PresentationToPDFConverter.Base<br/>
 </tr>
 <tr>
 <td>
-{{'[ASP.NET Core](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-asp-net-core)' | markdownify}}, {{'[Xamarin](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-xamarin)' | markdownify}} and {{'[Blazor](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-blazor)' | markdownify}}<br/></td><td>
+{{'[ASP.NET Core](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-asp-net-core)' | markdownify}} and {{'[Blazor](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-blazor)' | markdownify}}<br/></td><td>
 	 
 	
 Syncfusion.Presentation.Portable<br/>
@@ -59,7 +59,7 @@ Syncfusion.OfficeChart.NET<br/>Syncfusion.PresentationRenderer.NET<br/>Syncfusio
 </tr>
 </table>
 
-T> 1. If you encounter issues while using the .NET PowerPoint library in ASP.NET Core, refer to the [troubleshooting guide](https://support.syncfusion.com/kb/article/16010/how-to-use-troubleshooting-guide-for-aspnet-core-powerpoint-library-issues) for recommended checks and solutions.
+T> 1. If you encounter issues while using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) in ASP.NET Core, refer to the [troubleshooting guide](https://support.syncfusion.com/kb/article/16010/how-to-use-troubleshooting-guide-for-aspnet-core-powerpoint-library-issues) for recommended checks and solutions.
 T> 2. Switch to NuGet packages for a seamless experience:
 T>    * Get frequent bug fixes every week.
 T>    * Upgrade quickly with no manual effort.
@@ -85,6 +85,18 @@ Syncfusion.Compression.Base<br/>
 Syncfusion.OfficeChart.Base<br/>
 Syncfusion.Pdf.Base<br/>
 Syncfusion.PresentationToPDFConverter.Base<br/></td></tr>
+<tr>
+<td>
+{{'[Xamarin](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-xamarin)' | markdownify}}<br/></td><td>
+Syncfusion.Presentation.Portable<br/>
+Syncfusion.Compression.Portable<br/>
+Syncfusion.OfficeChart.Portable<br/>
+Syncfusion.Pdf.Portable<br/>
+Syncfusion.PresentationRenderer.Portable<br/>
+Syncfusion.Pdf.Imaging.Portable<br/>
+Syncfusion.MetafileRenderer.Portable<br/>
+Syncfusion.SkiaSharpHelper.Portable<br/>
+SkiaSharp<br/></td></tr>
 </table>
 
 N> 1. Starting with the v24.1.x, if you reference "Syncfusion.PresentationRenderer", you have to add the "Syncfusion.Pdf.Imaging" assembly reference in your projects to perform PowerPoint Presentation to PDF conversion.

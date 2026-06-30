@@ -1,11 +1,11 @@
 ---
-title: Text in JavaScript PDF library | Syncfusion
-description: This section explains how to add text to a PDF by using different types of fonts, including TrueType fonts and standard fonts, with the JavaScript PDF library
+title: Text in JavaScript PDF Library | Syncfusion
+description: This section explains how to add text to a PDF by using different types of fonts, including TrueType fonts and standard fonts, with the JavaScript PDF Library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Text in JavaScript PDF library
+# Text in JavaScript PDF Library
 
 The PDF provides support to add and format text in PDF documents using various font types, including TrueType and standard fonts, enabling precise control over text appearance and layout.
 
@@ -280,7 +280,7 @@ format.characterSpacing = 1;               // Set character spacing
 // Set font
 let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
 // Draw text
-page.graphics.drawString('Syncfusion JavaScript PDF library', font, { x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
+page.graphics.drawString('JavaScript PDF Library', font, { x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -298,7 +298,7 @@ format.characterSpacing = 1; // Set character spacing
 // Set font
 var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular);
 // Draw text
-page.graphics.drawString('Syncfusion JavaScript PDF library', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }), format);
+page.graphics.drawString('JavaScript PDF Library', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }), format);
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -411,7 +411,7 @@ document.destroy();
 
 ## Embedded font
 
-This example shows how to embed fonts using [embedFont()](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument#embedfont) method of the [PdfDocument](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument) to ensure consistent text rendering across all platforms. The library supports embedding [PdfStandardFont](https://ej2.syncfusion.com/documentation/api/pdf/pdfstandardfont), [PdfCjkStandardFont](https://ej2.syncfusion.com/documentation/api/pdf/pdfcjkstandardfont), and [PdfTrueTypeFont](https://ej2.syncfusion.com/documentation/api/pdf/pdftruetypefont) for reliable Unicode text display. Additionally, using embedded fonts helps reduce overall PDF size, since the font dictionary is not duplicated for each usage—ensuring cleaner and more efficient output.
+This example shows how to embed fonts using [embedFont()](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument#embedfont) method of the [PdfDocument](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument) to ensure consistent text rendering across all platforms. The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) supports embedding [PdfStandardFont](https://ej2.syncfusion.com/documentation/api/pdf/pdfstandardfont), [PdfCjkStandardFont](https://ej2.syncfusion.com/documentation/api/pdf/pdfcjkstandardfont), and [PdfTrueTypeFont](https://ej2.syncfusion.com/documentation/api/pdf/pdftruetypefont) for reliable Unicode text display. Additionally, using embedded fonts helps reduce overall PDF size, since the font dictionary is not duplicated for each usage—ensuring cleaner and more efficient output.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -460,6 +460,124 @@ page.graphics.drawString('Cjkfont with bold', embedded4, {x: 200, y: 50, width: 
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+## Drawing Text with Pagination Using PdfTextElement
+
+The `PdfTextElement` provides a structured and flexible way to render text in PDF documents with layout-aware capabilities. It supports essential properties such as font, brush, pen, and formatting, enabling consistent and customizable text rendering. 
+
+With built-in features like automatic pagination, alignment, and formatting, `PdfTextElement` simplifies the process of creating well-structured, multi-page documents. Text can be drawn using coordinates or defined bounds, ensuring precise placement and predictable layout behavior. 
+
+When rendering large blocks of text, the content can seamlessly flow across multiple pages. The `PdfLayoutResult` plays a key role in returning layout information such as the rendered bounds and page details. This allows developers to accurately position subsequent elements without overlap, maintaining proper spacing and continuity throughout the document.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+
+import { PdfDocument, PdfPage, PdfStandardFont, PdfFontFamily, PdfBrush, PdfPen, PdfLayoutFormat, PdfStringFormat, PdfFont, PdfLayoutResult, PdfTextElement } from '@syncfusion/ej2-pdf'; 
+ 
+// Create a new PDF document 
+let document: PdfDocument = new PdfDocument(); 
+// Add a page to the document 
+let page: PdfPage = document.addPage(); 
+// Define font for text rendering 
+let font: PdfStandardFont = new PdfStandardFont(PdfFontFamily.Helvetica, 14); 
+// Define brush for text color (blue) 
+let brush: PdfBrush = new PdfBrush([0, 0, 255]); 
+// Define pen for text outline 
+let pen: PdfPen = new PdfPen([0, 0, 0], 1); 
+// Define string formatting (alignment) 
+let format: PdfStringFormat = new PdfStringFormat(); 
+format.alignment = 1; // Center alignment 
+// Define layout format for pagination 
+let layoutFormat: PdfLayoutFormat = new PdfLayoutFormat(); 
+// Enables layout and pagination 
+LayoutFormat.layout = PdfLayoutType.paginate; 
+// Create a text element with all supported properties 
+let element: PdfTextElement = { 
+    text: 'This is a large text block demonstrating layout-aware rendering. '.repeat(25), // Large text for pagination 
+    font: font, 
+    pen: pen, 
+    brush: brush, 
+    stringFormat: format, 
+    layoutFormat: layoutFormat 
+}; 
+// Draw the text element within specified bounds 
+// Width constraint enables automatic wrapping and multi-page flow 
+let result: PdfLayoutResult = page.drawTextElement( 
+    element, 
+    { x: 40, y: 60, width: 400 } 
+); 
+// Retrieve the last page from layout result 
+let nextPage: PdfPage = result.page; 
+// Create continuation text element 
+let continuation: PdfTextElement = { 
+    text: 'This is the continuation of the content on the second page.', 
+    font: font, 
+    brush: brush 
+}; 
+// Draw continuation text below the previous content using layout bounds 
+nextPage.drawTextElement(continuation, { 
+    x: 40, 
+    y: result.bounds.y + 10 // Offset to avoid overlap 
+}); 
+// Save the document 
+document.save('Output.pdf'); 
+// Destroy the document to release resources 
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Create a new PDF document 
+var document = new ej.pdf.PdfDocument(); 
+// Add a page to the document 
+var page = document.addPage(); 
+// Define font for text 
+var font = new ej.pdf.PdfStandardFont(ej.pdf.PdfFontFamily.Helvetica, 14); 
+// Define brush for text color (blue) 
+var brush = new ej.pdf.PdfBrush([0, 0, 255]); 
+// Define pen for text outline 
+var pen = new ej.pdf.PdfPen([0, 0, 0], 1); 
+// Define string format (alignment) 
+var format = new ej.pdf.PdfStringFormat(); 
+format.alignment = 1; 
+// Define layout format 
+Var layoutFormat = new ej.pdf.PdfLayoutFormat(); 
+// Enables layout and pagination 
+layoutFormat.layout = ej.pdf.PdfLayoutType.paginate; 
+// Create text element with all properties 
+var element = { 
+    text: 'This is a large text block demonstrating layout-aware rendering. '.repeat(25), // Large text 
+    font: font, 
+    pen: pen, 
+    brush: brush, 
+    stringFormat: format, 
+    layoutFormat: layoutFormat 
+}; 
+// Draw text with layout and wrapping 
+var result = page.drawTextElement( 
+    element, 
+    { x: 40, y: 60, width: 400 } 
+); 
+// Access last page from layout result 
+var nextPage = result.page; 
+// Create continuation text 
+var continuation = { 
+    text: 'This is the continuation of the content on the second page.', 
+    font: font, 
+    brush: brush 
+}; 
+// Draw continuation text below previous content 
+nextPage.drawTextElement(continuation, { 
+    x: 40, 
+    y: result.bounds.y + 10 // Prevent overlapping 
+}); 
+// Save the document 
+document.save('Output.pdf'); 
+// Destroy the document 
+document.destroy(); 
 
 {% endhighlight %}
 {% endtabs %}

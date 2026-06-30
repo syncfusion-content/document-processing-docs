@@ -9,6 +9,8 @@ documentation: UG
 
 Mail merge is a process of merging data from data source to a Word template document. The [WMergeField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WMergeField.html) class provides support to bind template document and data source. The [WMergeField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WMergeField.html) instance is replaced with the actual data retrieved from data source for the given merge field name in a template document.
 
+## Supported data sources
+
 The following data sources are supported by Essential<sup>&reg;</sup> DocIO for performing Mail merge:
 
 <table>
@@ -81,7 +83,7 @@ To quickly get started with performing a mail merge in a Word document, please c
 
 ## Assemblies and NuGet packages required
 
-Refer to the following links for assemblies and NuGet packages required based on platforms for performing mail merge using the .NET Word Library (DocIO).
+Refer to the following links for assemblies and NuGet packages required based on platforms for performing mail merge using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO).
 
 * [Mail merge assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required)
 * [Mail merge NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
@@ -292,7 +294,7 @@ You can restart the list numbering in a Word document during Mail merge. For fur
 
 ## Online Demo
 
-* Explore how to generate a letter using mail merge functionality using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/letterformat#/tailwind).
+* Explore how to generate a letter using mail merge functionality using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/letterformat#/tailwind).
 
 ## See Also
 

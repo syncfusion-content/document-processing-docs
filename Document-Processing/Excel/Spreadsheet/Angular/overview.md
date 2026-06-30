@@ -9,9 +9,9 @@ documentation: ug
 
 # Overview of the Angular Spreadsheet Component
 
-The [Syncfusion® Angular Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) is an user interactive component to organize and analyze data in tabular format with configuration options for customization. It will load data by importing an Excel/CSV file or from local and remote data sources such as JSON, RESTful services, OData services, and more. The populated data can be exported as Excel with XLSX, XLS, CSV and PDF formats.
+The [Angular Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) is an user interactive component to organize and analyze data in tabular format with configuration options for customization. It will load data by importing an Excel/CSV file or from local and remote data sources such as JSON, RESTful services, OData services, and more. The populated data can be exported as Excel with xlsx, xls, CSV and PDF formats.
 
-![Angular Spreadsheet Component](./images/overview-banner.png)
+![Angular Spreadsheet component](./images/overview-banner.png)
 
 ## Key features
 

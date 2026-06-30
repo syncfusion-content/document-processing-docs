@@ -15,7 +15,7 @@ To quickly start converting a Word document to Markdown and vice versa, please c
 
 ## Assemblies and NuGet packages required
 
-Refer to the following links for assemblies and NuGet packages required based on platforms to convert a Word document to a Markdown file using the .NET Word Library (DocIO).
+Refer to the following links for assemblies and NuGet packages required based on platforms to convert a Word document to a Markdown file using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO).
 
 * [Word to Markdown conversion assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required)
 * [Word to Markdown conversion NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
@@ -26,20 +26,17 @@ Convert an existing Word document or document that is created from scratch into 
 
 The following code example shows how to convert a Word document to a Markdown.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-Markdown-conversion/Convert-Word-to-Markdown/.NET/Convert-Word-to-Markdown/Program.cs" %}
-//Open the file as a Stream.
-using (FileStream docStream = new FileStream("Input.docx", FileMode.Open, FileAccess.Read))
+// Open an existing Word document.
+using (WordDocument document = new WordDocument(Path.GetFullPath(@"Data/Input.docx")))
 {
-    //Load the file stream into a Word document.
-    using (WordDocument document = new WordDocument(docStream, FormatType.Docx))
-    {
-        //Save as a Markdown file into the MemoryStream.
-        MemoryStream outputStream = new MemoryStream();
-        document.Save(outputStream, FormatType.Markdown);
-    }
-}
+    // Save the document as a Markdown file.
+    document.Save(Path.GetFullPath(@"Output/Output.md"));
+}  
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -57,56 +54,6 @@ Using document As WordDocument = New WordDocument("Input.docx", FormatType.Docx)
     'Save the document as a Markdown file.
     document.Save("WordtoMd.md", FormatType.Markdown)
 End Using
-{% endhighlight %}
-
-{% highlight c# tabtitle="UWP" %}
-//Open the file as Stream.
-using (Stream docStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("Sample.Assets.Input.docx"))
-{
-    //Load the file stream into a Word document.
-    using (WordDocument document = new WordDocument(docStream, FormatType.Docx))
-    {
-        //Save as a Markdown file into the MemoryStream.
-        MemoryStream stream = new MemoryStream();
-        await document.SaveAsync(stream, FormatType.Markdown);
-        //Save the stream as a Markdown file in the local machine.
-        Save(stream, "WordtoMd.md");
-    }
-}
-//Saves a Word document.
-async void Save(MemoryStream streams, string filename)
-{
-    streams.Position = 0;
-    StorageFile stFile;
-    if (!(Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Phone.UI.Input.HardwareButtons")))
-    {
-        FileSavePicker savePicker = new FileSavePicker();
-        savePicker.DefaultFileExtension = ".md";
-        savePicker.SuggestedFileName = filename;
-        savePicker.FileTypeChoices.Add("Word Documents", new List<string>() { ".md" });
-        stFile = await savePicker.PickSaveFileAsync();
-    }
-    else
-    {
-        StorageFolder local = Windows.Storage.ApplicationData.Current.LocalFolder;
-        stFile = await local.CreateFileAsync(filename, CreationCollisionOption.ReplaceExisting);
-    }
-    if (stFile != null)
-    {
-        using (IRandomAccessStream zipStream = await stFile.OpenAsync(FileAccessMode.ReadWrite))
-        {
-            //Write the compressed data from the memory to a file.
-            using (Stream outstream = zipStream.AsStreamForWrite())
-            {
-                byte[] buffer = streams.ToArray();
-                outstream.Write(buffer, 0, buffer.Length);
-                outstream.Flush();
-            }
-        }
-    }
-    //Launch the saved Word file.
-    await Windows.System.Launcher.LaunchFileAsync(stFile);
-}
 {% endhighlight %}
 
 {% endtabs %}
@@ -180,8 +127,6 @@ The Essential<sup>&reg;</sup> DocIO supports two types of code blocks in Word to
 
 The following code example shows how to create code blocks in a Word document using DocIO.
 
-N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
-
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-Markdown-conversion/Code-block-in-Markdown/.NET/Code-block-in-Markdown/Program.cs" %}
@@ -194,11 +139,11 @@ using (WordDocument document = new WordDocument())
     IWParagraph paragraph = section.AddParagraph();
     //Append text to the paragraph.
     IWTextRange textRange = paragraph.AppendText("Fenced Code");
-    /Add a new paragraph to the section.
+    //Add a new paragraph to the section.
     paragraph = section.AddParagraph();
     //Create a user-defined style as FencedCode.
     IWParagraphStyle style = document.AddParagraphStyle("FencedCode");
-    /Apply FencedCode style for the paragraph.
+    //Apply FencedCode style for the paragraph.
     paragraph.ApplyStyle("FencedCode");
     //Append text.
     textRange = paragraph.AppendText("class Hello\n{\n\tStatic void Main()\n\t{\n\t\tConsole.WriteLine(\"Fenced Code\")\n\t}\n}");
@@ -211,12 +156,9 @@ using (WordDocument document = new WordDocument())
     //Apply IndentedCode style for the paragraph.
     paragraph.ApplyStyle("IndentedCode");
     //Append text.
-    textRange = paragraph.AppendText("class Hello\n\t{\n\t\tStatic void Main()\n\t\t{\n\t\t\tConsole.WriteLine(\"Indented Code\")\n\t\t}\n\t}");
-    //Save as a Markdown file into the MemoryStream.
-    MemoryStream outputStream = new MemoryStream();
-    document.Save(outputStream, FormatType.Markdown);
-    outputStream.Position = 0;
-    return File(outputStream, "application/msword", "WordToMd.md");
+	textRange = paragraph.AppendText("class Hello\n\t{\n\t\tStatic void Main()\n\t\t{\n\t\t\tConsole.WriteLine(\"Indented Code\")\n\t\t}\n\t}");
+	//Save the document as a Markdown file.
+	document.Save(Path.GetFullPath(@"Output/Output.md"));
 }
 {% endhighlight %}
 
@@ -312,7 +254,7 @@ using (WordDocument document = new WordDocument())
     //Append text.
     IWTextRange textRange = paragraph.AppendText("Hello World");
     //Save the document as a Markdown file.
-    return File(outputStream, "application/msword", "WordToMd.md");
+	document.Save(Path.GetFullPath(@"Output/Output.md"));
 }
 {% endhighlight %}
 
@@ -357,7 +299,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 N> Nested block quotes are not supported in a Word to the Markdown conversion. To preserve nested block quotes, add the number of “>” characters at the beginning of the paragraph in a Word document as equivalent to the nth nested level of the block quote. For example, to insert the 2nd nested level block quote, add two “>” characters at the start of the sentence, and no need to apply the “Quote” style to the paragraph.
 
-## Customize image saving
+## Save Options
+
+When converting a Word document to Markdown, the .NET Word (DocIO) library provides various save options to customize the output Markdown file. These options allow you to control image export location, customize image paths, set character encoding, and other export behaviors.
 
 When converting a Word document to a Markdown using the [Save(fileName)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Save_System_String_) overloads, DocIO creates a new folder parallel to the output file name and exports all the images into it as default.
 
@@ -374,18 +318,13 @@ The following code example illustrates how set the images folder to export the i
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//Open the file as a Stream.
-using (FileStream docStream = new FileStream("Input.docx", FileMode.Open, FileAccess.Read))
+//Open an existing Word document.
+using (WordDocument document = new WordDocument(Path.GetFullPath(@"Data/Input.docx")))
 {
-    //Load the file stream into a Word document.
-    using (WordDocument document = new WordDocument(docStream, FormatType.Docx))
-    {
-        //Set images folder to export images. 
-        document.SaveOptions.MarkdownExportImagesFolder = "D:\\WordToMdConversion ";
-        //Save a Markdown file to the MemoryStream.
-        MemoryStream outputStream = new MemoryStream();
-        document.Save(outputStream, FormatType.Markdown);
-    }
+    //Set images folder to export images. 
+    document.SaveOptions.MarkdownExportImagesFolder = "D:\\WordToMdConversion";
+    //Save the document as a Markdown file.
+    document.Save(Path.GetFullPath(@"Output/Output.md"));  
 }
 {% endhighlight %}
 
@@ -402,20 +341,12 @@ using (WordDocument document = new WordDocument("Input.docx", FormatType.Docx))
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Open an existing Word document.
-Using document As WordDocument = New WordDocument("Input.docx", FormatType.Docx)
+Using document As WordDocument = New WordDocument("Input.docx")
     'Set images folder to export images. 
     document.SaveOptions.MarkdownExportImagesFolder = "D:\\WordToMdConversion ";
     'Save a document as a Markdown file.
-    document.Save("WordtoMd.md", FormatType.Markdown)
+    document.Save("WordtoMd.md")
 End Using
-{% endhighlight %}
-
-{% highlight c# tabtitle="Xamarin" %}
-//DocIO doesn’t support the MarkdownExportImagesFolder API in UWP and Xamarin platforms.
-{% endhighlight %}
-
-{% highlight c# tabtitle="UWP" %}
-//DocIO doesn’t support the MarkdownExportImagesFolder API in UWP and Xamarin platforms.
 {% endhighlight %}
 
 {% endtabs %}
@@ -424,32 +355,21 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Customize the image path
 
-DocIO provides an [ImageNodeVisited](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_ImageNodeVisited) event, which is used to customize the image path to set in the output Markdown file and save images externally while converting a Word document to a Markdown.
+DocIO provides an `ImageNodeVisited` event, which is used to customize the image path to set in the output Markdown file and save images externally while converting a Word document to a Markdown.
 
 The following code example illustrates how to save Image files during a Word to Markdown Conversion.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-Markdown-conversion/Customize-image-path/.NET/Customize-image-path/Program.cs" %}
-//Open the file as a Stream.
-using (FileStream docStream = new FileStream("Input.docx", FileMode.Open, FileAccess.Read))
-{
-    //Load the file stream into a Word document.
-    using (WordDocument document = new WordDocument(docStream, FormatType.Docx))
-    {
-        //Hook the event to customize the image. 
-        document.SaveOptions.ImageNodeVisited += SaveImage;
-        //Save a Markdown file to the MemoryStream.
-        MemoryStream outputStream = new MemoryStream();
-        document.Save(outputStream, FormatType.Markdown);
-        outputStream.Position = 0;
-        //Download as a Markdown file in the browser.
-        FileStream outStream = File.Create("WordToMd.md");
-        outputStream.CopyTo(outStream);
-        outputStream.Dispose();
-        outStream.Dispose();
-    }
-}
+ //Open an existing Word document.
+ using (WordDocument document = new WordDocument(Path.GetFullPath(@"Data/Input.docx")))
+ {
+     //Hook the event to customize the image. 
+     document.SaveOptions.MarkdownSaveOptions.ImageNodeVisited += SaveImage;
+     //Save the document as a Markdown file.
+     document.Save(Path.GetFullPath(@"Output/Output.md"));
+ }
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -457,7 +377,7 @@ using (FileStream docStream = new FileStream("Input.docx", FileMode.Open, FileAc
 using (WordDocument document = new WordDocument(@"Input.docx"))
 {
     //Hook the event to customize the image. 
-    document.SaveOptions.ImageNodeVisited += SaveImage;
+    document.SaveOptions.MarkdownSaveOptions.ImageNodeVisited += SaveImage;
     //Save a Word document as a Markdown file.
     document.Save("WordtoMd.md", FormatType.Markdown);
 }
@@ -467,34 +387,10 @@ using (WordDocument document = new WordDocument(@"Input.docx"))
 'Open an existing Word document. 
 Using document As WordDocument = New WordDocument("Input.docx")
     'Hook the event to customize the image. 
-    document.SaveOptions.ImageNodeVisited += SaveImage
+    document.SaveOptions.MarkdownSaveOptions.ImageNodeVisited += SaveImage
     'Save a Word document as a Markdown file.
     document.Save("WordtoMd.md", FormatType.Markdown)
 End Using
-{% endhighlight %}
-
-{% highlight c# tabtitle="Xamarin" %}
-//Open the file as a Stream.
-using (Stream docStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("Sample.Assets.Input.docx"))
-{
-    //Load the file stream into a Word document.
-    using (WordDocument document = new WordDocument(docStream, FormatType.Docx))
-    {
-        //Hook the event to customize the image. 
-        document.SaveOptions.ImageNodeVisited += SaveImage;
-        //Save a Markdown file to the MemoryStream.
-        MemoryStream outputStream = new MemoryStream();
-        document.Save(outputStream, FormatType.Markdown);
-        //Save the stream as a file in the device and invoke it for viewing. 
-        Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView("WordtoMd.md", "application/msword", outputStream);
-    }
-    //Please download the helper files from the following link to save the stream as a file and open the file for viewing in the Xamarin platform.
-    //https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-xamarin#helper-files-for-xamarin
-}
-{% endhighlight %}
-
-{% highlight c# tabtitle="UWP" %}
-//DocIO doesn’t support the ImageNodeVisitedEventArgs in UWP platform.
 {% endhighlight %}
 
 {% endtabs %}
@@ -504,7 +400,7 @@ The following code examples show the event handler to customize the image path a
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-static void SaveImage(object sender, ImageNodeVisitedEventArgs args)
+static void SaveImage(object sender, MdImageNodeVisitedEventArgs args)
 {
     string imagepath = @"D:\Temp\Image1.png";
     //Save the image stream as a file.
@@ -516,7 +412,7 @@ static void SaveImage(object sender, ImageNodeVisitedEventArgs args)
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-static void SaveImage(object sender, ImageNodeVisitedEventArgs args)
+static void SaveImage(object sender, MdImageNodeVisitedEventArgs args)
 {
     string imagepath = @"D:\Temp\Image1.png";
     //Save the image stream as a file. 
@@ -528,7 +424,7 @@ static void SaveImage(object sender, ImageNodeVisitedEventArgs args)
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Private Shared Sub SaveImage(ByVal sender As Object, ByVal args As ImageNodeVisitedEventArgs)
+Private Shared Sub SaveImage(ByVal sender As Object, ByVal args As MdImageNodeVisitedEventArgs)
     Dim imagepath = "D:\Temp\Image1.png"
     'Save the image stream as a file. 
     Using fileStreamOutput = File.Create(imagepath)
@@ -539,13 +435,55 @@ Private Shared Sub SaveImage(ByVal sender As Object, ByVal args As ImageNodeVisi
 End Sub
 {% endhighlight %}
 
-{% highlight c# tabtitle="UWP" %}
-//DocIO doesn’t support the ImageNodeVisitedEventArgs in UWP platform.
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Markdown-conversion/Customize-image-path).
+
+N> The `MarkdownExportImagesFolder`property and `MarkdownSaveOptions.ImageNodeVisited` event are not supported on the UWP platform.
+
+### Encoding
+
+The .NET Word (DocIO) library provides an `Encoding` property to specify the character encoding to use when saving the Markdown file. This property is useful when you need to save the output Markdown file with specific character encodings such as UTF-8, UTF-16, ASCII, or other encodings.
+
+The following code example shows how to save a Markdown file with a specific encoding.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Open an existing Word document.
+using (WordDocument document = new WordDocument(Path.GetFullPath(@"Data/Input.docx")))
+{
+    //Set the encoding values.
+    document.SaveOptions.MarkdownSaveOptions.Encoding = Encoding.ASCII;
+    //Save the document as a Markdown file.
+    document.Save(Path.GetFullPath(@"Output/Output.md"));
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Open an existing Word document.
+using (WordDocument document = new WordDocument("Input.docx", FormatType.Docx))
+{
+    //Set the encoding values.
+    document.SaveOptions.MarkdownSaveOptions.Encoding = Encoding.ASCII;
+    //Save the document as a Markdown file.
+    document.Save("WordtoMd.md", FormatType.Markdown);
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Open an existing Word document.
+Using document As WordDocument = New WordDocument("Input.docx", FormatType.Docx)
+    'Set the encoding values. 
+    document.SaveOptions.MarkdownSaveOptions.Encoding = Encoding.ASCII
+    'Save the document as a Markdown file.
+    document.Save("WordtoMd.md", FormatType.Markdown)
+End Using
 {% endhighlight %}
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Markdown-conversion/Customize-image-path).
+N> Set the encoding value before saving the document as per the above code example.
 
 ## Supported Word document elements
 
@@ -670,4 +608,4 @@ The following table shows the list of Word document elements supported in Word t
 
 ## Online Demo
 
-* Explore how to convert the Word document to Markdown using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/wordtomarkdown#/tailwind).
+* Explore how to convert the Word document to Markdown using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/wordtomarkdown#/tailwind).

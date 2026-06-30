@@ -837,61 +837,6 @@ stream.Close()
 pptxDoc.Close()
 {% endhighlight %}
 
-{% highlight c# tabtitle="UWP" %}
-//You can convert a chart to images in UWP using PresentationRenderer, by using cross-platform NuGets or assemblies in a UWP application.
-//Loads or open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open(assembly.GetManifestResourceStream("Convert_chart_to_image.Assets.Template.pptx"));
-//Initialize the PresentationRenderer
-pptxDoc.PresentationRenderer = new PresentationRenderer();
-//Gets the first instance of chart from slide
-IPresentationChart chart = pptxDoc.Slides[0].Charts[0];
-//Converts the chart to image.
-//Creates a stream instance to store the image
-MemoryStream stream = new MemoryStream();
-pptxDoc.PresentationRenderer.ConvertToImage(chart, stream);
-//Closes the presentation
-pptxDoc.Close();
-inputStream.Close();
-//Save the memory stream as file.
-Save(stream as MemoryStream, "ChartToImage.jpeg");
-/// <summary>
-/// Save the image.
-/// </summary>
-async void Save(MemoryStream streams, string filename)
-{
-    streams.Position = 0;
-    StorageFile stFile;
-    if (!(Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Phone.UI.Input.HardwareButtons")))
-    {
-        FileSavePicker savePicker = new FileSavePicker();
-        savePicker.DefaultFileExtension = ".jpeg";
-        savePicker.SuggestedFileName = filename;
-        savePicker.FileTypeChoices.Add("Image", new List<string>() { ".jpeg" });
-        stFile = await savePicker.PickSaveFileAsync();
-    }
-    else
-    {
-        StorageFolder local = Windows.Storage.ApplicationData.Current.LocalFolder;
-        stFile = await local.CreateFileAsync(filename, CreationCollisionOption.ReplaceExisting);
-    }
-    if (stFile != null)
-    {
-        using (Windows.Storage.Streams.IRandomAccessStream zipStream = await stFile.OpenAsync(FileAccessMode.ReadWrite))
-        {
-            //Write compressed data from memory to file.
-            using (Stream outstream = zipStream.AsStreamForWrite())
-            {
-                byte[] buffer = streams.ToArray();
-                outstream.Write(buffer, 0, buffer.Length);
-                outstream.Flush();
-            }
-        }
-    }
-    //Launch the saved image file.
-    await Windows.System.Launcher.LaunchFileAsync(stFile);
-}
-{% endhighlight %}
-
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Charts/Convert-chart-to-image).
@@ -2106,7 +2051,7 @@ The following Chart types are supported in Presentation.
 
 ## Online Demo
 
-* Explore how to create charts in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/chart#/tailwind).
+* Explore how to create charts in a PowerPoint presentation using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/chart#/tailwind).
 
 ## See Also
 * [How to set same number of intervals for Primary and Secondary ValueAxis?](https://support.syncfusion.com/kb/article/11366/how-to-set-same-number-of-intervals-for-primary-and-secondary-valueaxis-in-winforms-presentation)

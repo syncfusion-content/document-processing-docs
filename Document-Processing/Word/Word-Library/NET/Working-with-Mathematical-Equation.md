@@ -9,7 +9,7 @@ documentation: UG
 
 Equations in Word document are combination of mathematical symbols or text. For example, you can create a Fourier series equation in Word document.
 
-The .NET Word Library (DocIO) offers two ways to create and modify equations in Word document.
+The [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) offers two ways to create and modify equations in Word document.
 
 * [Using WMath DOM](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-mathematical-equation#types-of-equation).
 * [Using LaTeX](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-latex).
@@ -2103,8 +2103,8 @@ By executing the above code example, it generates output Word document as follow
 
 ## Online Demo
 
-* Explore how to create a Word document with mathematical equations using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/createequation#/tailwind).
-* See how to modify a mathematical equation in a Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/editequation#/tailwind).
+* Explore how to create a Word document with mathematical equations using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/createequation#/tailwind).
+* See how to modify a mathematical equation in a Word document using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/editequation#/tailwind).
 
 ## See Also
 

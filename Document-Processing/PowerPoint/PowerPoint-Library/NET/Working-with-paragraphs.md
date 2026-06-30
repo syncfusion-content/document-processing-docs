@@ -1,6 +1,6 @@
 ---
 title: Working with Paragraph in PowerPoint Presentation | Syncfusion
-description: This section illustrates how to work with Paragraphs and texts in Syncfusion<sup>&reg;</sup> PowerPoint Presentation
+description: This section illustrates how to work with Paragraphs and texts in .NET PowerPoint Presentation
 platform: document-processing
 control: Presentation
 documentation: UG
@@ -431,6 +431,10 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 In a PowerPoint slide, if you add a text more than a shape can hold, the text will overflow from the shape. But by using a Shrink text on overflow option, you can fit a large text within a shape. The following code example demonstrates how to enable this property.
 
 {% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//The Essential Presentation Library does not provides support to FitTextOption in C# [Cross-platform] platforms.
+{% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 // Create a new PowerPoint file.

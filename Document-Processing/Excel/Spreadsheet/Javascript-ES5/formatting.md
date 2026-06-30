@@ -13,6 +13,8 @@ Formatting options make your data easier to view and understand. The different t
 * Number Formatting
 * Text Formatting
 * Cell Formatting
+* Conditional Formatting
+* Rich Text Formatting
 
 ## Number Formatting
 
@@ -334,6 +336,73 @@ The following features have some limitations in Conditional Formatting:
 * Conditional formatting with formula support.
 * Copy and paste the conditional formatting applied cells.
 * Custom rule support.
+
+## Rich Text Formatting
+
+Rich text formatting allows you to apply different styles to specific portions of text within a single cell to improve readability and presentation. Currently, subscript and superscript formatting are supported, and other rich text font styles are not supported.
+
+In the **Syncfusion EJ2 JavaScript Spreadsheet**, rich text formatting is supported through the [`richText`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#cells) property of the cell model. This property lets you define multiple text segments inside a cell, where each segment can have its own style.
+
+Each `richText` segment contains:
+
+- `text` – Specifies the content of the segment  
+- `style` – Defines formatting using the cell style properties
+
+## Subscript and Superscript
+
+Subscript and superscript formatting are supported as part of rich text formatting and can be applied to specific portions of text within a cell.
+
+To apply these formats, use the `verticalAlign` property within the style of a rich text segment:
+
+Set `verticalAlign: 'super'` for superscript and `verticalAlign: 'sub'` for subscript.
+
+#### How to Apply Subscript and Superscript
+
+You can apply subscript and superscript formatting in following ways,
+
+1. Select the desired portion of text within a cell, then click the Subscript or Superscript option in the ribbon to apply the formatting.
+
+![Subscript and superscript in Spreadsheet](./images/spreadsheet_richtext.gif)
+
+2. You can define the [`richText`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#richtext) property directly while initializing the Spreadsheet. This is useful when you want the formatting to be applied when the data is loaded.
+
+```js
+cells: [
+    {
+        value: 'H2O',
+        richText: [
+            { text: 'H' },
+            { text: '2', style: { verticalAlign: 'sub' } },
+            { text: 'O' }
+        ]
+    }
+]
+```
+
+3. You can also apply subscript and superscript dynamically using the [`updateCell`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#updatecell) method.
+
+```js
+    spreadsheet.updateCell({ value: 'X2', richText: [
+                    { text: 'X' },
+                    { text: '2', style: { verticalAlign: 'super' } }
+                ] }, 'A5');
+```
+
+The following code example shows the subscript and superscript formatting in cells of the spreadsheet.
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/spreadsheet/javascript-es5/richtext-format-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/javascript-es5/richtext-format-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/richtext-format-cs1" %}
+
+## Limitations
+* **Limited formatting support:** Only subscript and superscript formatting are supported within rich text. Other formatting options such as font size, font color, and font weight are not supported.
+* **Edit mode requirement:** Formatting can be applied only while the cell is in edit mode. Selecting text outside of edit mode does not support subscript or superscript formatting.
 
 ## See Also
 
