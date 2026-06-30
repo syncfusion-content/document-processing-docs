@@ -10,7 +10,7 @@ documentation: ug
 
 # Comparison between EJ1 & EJ2 ASP.NET Core Spreadsheet features
 
-The following table compares Excel functionality with the availability of EJ1 and EJ2 [ASP.NET Core Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-core-spreadsheet-editor) features.
+The following table compares Excel functionality with the availability of EJ1 and EJ2 Spreadsheet features.
 
 | **Features** | **Available in EJ1 Spreadsheet** | **Available in EJ2 Spreadsheet** | **Comments** |
 | --- | --- | --- | --- |

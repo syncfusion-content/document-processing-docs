@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in EJ2 ASP.NET CORE Spreadsheet Control
 
-The [ASP.NET Core Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-core-spreadsheet-editor) control followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Spreadsheet control followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Spreadsheet control is outlined below.
 
