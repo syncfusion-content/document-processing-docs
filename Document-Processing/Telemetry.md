@@ -168,7 +168,7 @@ N> The `Telemetry.Disable()` API should be called, before creating or using any 
 <p>This error may occur in the following scenarios: </p>
 <ul>
 <li>'Your application does not have internet connectivity'</li>
-<li>'Exception settings are enabled in your application'</li>
+<li>'All the Exception settings are enabled in your application'</li>
 </ul>
 <p>When exception handling is enabled and the application lacks internet access, the telemetry module attempts to send data to Azure Application Insights, which can trigger this exception.</p>
 </td>
