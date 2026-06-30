@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Getting Started with Windows Forms Spreadsheet
-This section briefly explains how to include the [WinForms Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/winforms-spreadsheet-editor) component in Windows Forms App using Visual Studio.
+This section briefly explains how to include the [WinForms Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/winforms-spreadsheet-editor) component in Windows Forms App using Visual Studio.
 
 ## Prerequisites
 * [System requirements for WinForms components](https://help.syncfusion.com/windowsforms/system-requirements)

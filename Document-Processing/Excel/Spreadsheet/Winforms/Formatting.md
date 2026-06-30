@@ -9,7 +9,7 @@ documentation: ug
 
 # Formatting in Windows Forms Spreadsheet
 
-This section explains about the formatting options similar to excel in [Winforms Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/winforms-spreadsheet-editor).
+This section explains about the formatting options similar to excel in Spreadsheet.
 
 Styles and formats defined in an Excel file are automatically imported. Users can also apply these settings to cells during run time. The following are the formatting attributes for the cell.
 

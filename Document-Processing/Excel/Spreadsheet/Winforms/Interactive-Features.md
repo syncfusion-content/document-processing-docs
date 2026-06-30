@@ -13,7 +13,7 @@ documentation: ug
 
 ## Clipboard Operations
 
-[Winforms Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/winforms-spreadsheet-editor) provides support for all the clipboard operations to with all the format settings when copied within a workbook.  
+Spreadsheet provides support for all the clipboard operations to with all the format settings when copied within a workbook.  
 
 You can use the following shortcut keys for Clipboard operations like Excel
 <table>

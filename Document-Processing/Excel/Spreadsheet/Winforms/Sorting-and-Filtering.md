@@ -9,7 +9,7 @@ documentation: ug
 
 # Sorting And Filtering in Windows Forms Spreadsheet
 
-This section explains the features of sorting and filtering in the [Winforms Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/winforms-spreadsheet-editor).
+This section explains the features of sorting and filtering in the Spreadsheet.
 
 ## Filtering
 

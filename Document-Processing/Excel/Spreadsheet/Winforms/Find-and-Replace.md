@@ -9,7 +9,7 @@ documentation: ug
 
 # Find and Replace in Windows Forms Spreadsheet
 
-This section explains about Find and Replace operations in [Winforms Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/winforms-spreadsheet-editor). 
+This section explains about Find and Replace operations in Spreadsheet. 
 
 ## Find 
 

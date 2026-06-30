@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Shapes in Windows Forms Spreadsheet
- This section explains how to import charts, sparklines, pictures and textboxes in [Winforms Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/winforms-spreadsheet-editor).
+ This section explains how to import charts, sparklines, pictures and textboxes in Spreadsheet.
 
 ## Charts
 

@@ -12,7 +12,7 @@ This section explains about how to import and export the DataTable in `Spreadshe
 
 ## Import from DataTable
 
-[Winforms Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/winforms-spreadsheet-editor) provides support to import the data. The following list of data can be imported into the worksheet
+Spreadsheet provides support to import the data. The following list of data can be imported into the worksheet
 
 * Data Table
 * Data Column

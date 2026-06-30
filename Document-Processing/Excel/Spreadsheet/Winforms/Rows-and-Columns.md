@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Rows and Columns in Windows Forms Spreadsheet
-This section explains about the operations related with rows and columns in [Winforms Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/winforms-spreadsheet-editor)
+This section explains about the operations related with rows and columns in Spreadsheet
 
 ## Inserting rows and columns
 

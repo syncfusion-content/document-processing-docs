@@ -9,7 +9,7 @@ documentation: ug
 
 # Editing in Windows Forms Spreadsheet
 
-This section explains about the Editing behavior, Data Validation and Hyperlinks in [Winforms Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/winforms-spreadsheet-editor).
+This section explains about the Editing behavior, Data Validation and Hyperlinks in Spreadsheet.
 
 ## Cell Editing
 

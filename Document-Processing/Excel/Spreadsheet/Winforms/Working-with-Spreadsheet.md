@@ -12,7 +12,7 @@ documentation: ug
 
 ## Accessing the worksheet
 
-A __workbook__ is an excel document in the [Winforms Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/winforms-spreadsheet-editor). It is an object that exposes the [IWorkbook](https://help.syncfusion.com/cr/windowsforms/Syncfusion.XlsIO.IWorkbook.html) interface. Currently loaded workbook in the Spreadsheet can be accessed by using the [Workbook](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_Workbook) property of Spreadsheet.
+A __workbook__ is an excel document in the Spreadsheet. It is an object that exposes the [IWorkbook](https://help.syncfusion.com/cr/windowsforms/Syncfusion.XlsIO.IWorkbook.html) interface. Currently loaded workbook in the Spreadsheet can be accessed by using the [Workbook](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_Workbook) property of Spreadsheet.
 
 A workbook consists of one or more worksheets stored within the worksheet collection. Accessing the worksheets in the collection, can be done by the following ways,
 

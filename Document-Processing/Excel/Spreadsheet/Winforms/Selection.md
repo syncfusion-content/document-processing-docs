@@ -9,7 +9,7 @@ documentation: ug
 
 # Selection in Windows Forms Spreadsheet
 
-This section explains about the Selection behavior in [Winforms Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/winforms-spreadsheet-editor).
+This section explains about the Selection behavior in Spreadsheet.
 
 The Spreadsheet control provides support for selection in grid by using mouse, keyboard and touch interactions.
 
