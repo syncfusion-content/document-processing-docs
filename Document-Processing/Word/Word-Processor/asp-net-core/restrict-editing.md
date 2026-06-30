@@ -26,7 +26,7 @@ container.documentEditor.currentUser = 'engineer@mycompany.com';
 User can select a specific section and mark it as an editable region, allowing modification only in that part. The rest of the document remains protected from any changes.
 
 ### Insert editable region
-Use the `insertEditingRegion` API to mark specific paragraphs as editable.This allows you to control editing by giving access to all users or only selected users.
+Use the `insertEditingRegion` method to mark specific paragraphs as editable.This allows you to control editing by giving access to all users or only selected users.
 
 The following example shows how to insert an editable region.
 {% tabs %}
