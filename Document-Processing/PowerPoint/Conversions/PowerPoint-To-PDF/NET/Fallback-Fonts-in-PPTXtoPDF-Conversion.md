@@ -517,7 +517,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Supported script types
 
-The following table illustrates the supported script types by the .NET PowerPoint library (Presentation) in Presentation to PDF conversion.
+The following table illustrates the supported script types by the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) in Presentation to PDF conversion.
 
 <table>
 <thead> 
