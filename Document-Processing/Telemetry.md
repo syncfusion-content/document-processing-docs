@@ -28,7 +28,7 @@ We collect telemetry data to:
 
 ## What data is collected? 
 
-Syncfusion<sup>&reg;</sup> collects only a limited set of anonymous usage data during development to understand product usage and improve product planning.  The following data is collected **only in development mode:** 
+Syncfusion<sup>&reg;</sup> collects only a limited set of anonymous usage data during development to understand product usage and improve product planning. The following data is collected **only in development mode:** 
 
 <table>
 <thead>
@@ -157,7 +157,7 @@ N> The `Telemetry.Disable()` API should be called, before creating or using any 
 
 ## FAQs
 
-### Why am I getting "System.Net.Http.HttpRequestException
+### Why am I getting "System.Net.Http.HttpRequestException - No such host is known" error?
 
 <table>
 <th style="font-size:14px" width="100px">Exception</th>
