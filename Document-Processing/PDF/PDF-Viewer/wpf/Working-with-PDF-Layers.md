@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Working with PDF Layers in WPF Pdf Viewer control | Syncfusion<sup>&reg;</sup>;
+title: Working with PDF Layers in WPF Pdf Viewer control | Syncfusion
 description: Learn about Working with PDF Layers support in Syncfusion<sup>&reg;</sup>; Essential Studio&reg; WPF Pdf Viewer control, its elements and more.
 platform: document-processing
 control: PDF Viewer

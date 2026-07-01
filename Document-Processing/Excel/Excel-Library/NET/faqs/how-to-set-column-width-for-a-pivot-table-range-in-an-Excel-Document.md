@@ -1,6 +1,6 @@
 ---
 title: How to set column width for a pivot table range in Excel | Syncfusion
-description: Code example to set column width for a pivot table range in an Excel Document using Syncfusion .NET Excel library (XlsIO).
+description: Code example to set column width for a pivot table range in an Excel Document using .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

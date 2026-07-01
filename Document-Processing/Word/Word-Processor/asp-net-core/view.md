@@ -21,6 +21,9 @@ documentation: ug
 {% highlight c# tabtitle="Web-layout.cs" %}
 {% endhighlight %}{% endtabs %}
 
+### Online Demo
+
+Explore how to view Word documents in web layout using the ASP.NET Core Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/weblayout#/tailwind3).
 
 ## Ruler
 
@@ -38,6 +41,9 @@ The following example illustrates how to enable ruler in Document Editor
 {% endhighlight %}
 {% endtabs %}
 
+### Online Demo
+
+Explore how to use the ruler in the ASP.NET Core Document Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/ruler#/tailwind3).
 
 ## Navigation Pane
 
@@ -55,3 +61,6 @@ The following example illustrates how to enable heading navigation pane in Docum
 {% endhighlight %}
 {% endtabs %}
 
+### Online Demo
+
+Explore how to navigate through headings in Word documents using the ASP.NET Core Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/headingnavigation#/tailwind3).

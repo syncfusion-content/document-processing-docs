@@ -103,6 +103,10 @@ The following example shows how to open bookmark dialog in Document Editor.
 
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/dialog-cs1" %}
 
+## Online Demo
+
+Explore how to insert and manage bookmarks in Word documents using the JavaScript (ES5) Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/links-and-bookmarks.html).
+
 ## See Also
 
 * [Feature modules](./feature-module)

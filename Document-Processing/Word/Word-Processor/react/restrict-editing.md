@@ -256,31 +256,53 @@ container.documentEditor.currentUser = 'engineer@mycompany.com';
 {% endhighlight %}
 {% endtabs %}
 
-## Highlighting the text area
+## Protect document with editable region
+User can select a specific section and mark it as an editable region, allowing modification only in that part. The rest of the document remains protected from any changes.
 
+### Insert editable region
+Use the [insertEditingRegion](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#inserteditingregion) method to mark specific paragraphs as editable.This allows you to control editing by giving access to all users or only selected users.
+
+The following example shows how to insert an editable region.
+{% tabs %}
+{% highlight ts tabtitle="TS" %}
+ 
+// Allow editing for all users
+container.documentEditor.editor.insertEditingRegion();
+ 
+// pass a username to restrict access
+container.documentEditor.editor.insertEditingRegion("User Name");
+ 
+{% endhighlight %}
+{% endtabs %}
+ 
+### Highlight color for editable region
+ 
 The [userColor](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/index-default#usercolor) property can be used to highlight the editable region of the current user.
  
 The following code example demonstrates how to set the userColor.
-
+ 
 {% tabs %}
 {% highlight ts tabtitle="TS" %}
-
+ 
 container.documentEditor.userColor = '#fff000';
-
+ 
 {% endhighlight %}
 {% endtabs %}
-
-The [highlightEditableRanges](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/documenteditorsettingsmodel#highlighteditableranges) property can be used to toggle the highlighting of editable regions. 
-
+ 
+### Enable or disable editable region highlighting
+ 
+The [highlightEditableRanges](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/documenteditorsettingsmodel#highlighteditableranges) property can be used to toggle the highlighting of editable regions.
+ 
 The following code example demonstrates how to enable or disable editable region highlighting.
-
+ 
 {% tabs %}
 {% highlight ts tabtitle="TS" %}
-
+ 
 container.documentEditor.documentEditorSettings.highlightEditableRanges = true;
-
+ 
 {% endhighlight %}
 {% endtabs %}
+ 
 
 ## Restrict Editing Pane
 
@@ -309,3 +331,7 @@ The following code shows Restrict Editing Pane. To unprotect the document, use p
 {% previewsample "/document-processing/code-snippet/document-editor/react/base-cs6" %}
 
 N> The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
+
+## Online Demo
+
+Explore how to restrict editing and protect Word documents using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/document-protection).

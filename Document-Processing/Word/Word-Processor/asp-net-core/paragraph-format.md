@@ -156,6 +156,9 @@ documenteditor.documentEditorSettings.showHiddenMarks = true;
 {% endhighlight %}
 {% endtabs %}
 
+## Online Demo
+
+Explore how to apply paragraph formatting in Word documents using the ASP.NET Core Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/paragraphformat#/tailwind3).
 
 ## See Also
 

@@ -122,6 +122,10 @@ You can use the following keyboard shortcut to open the hyperlink dialog if the 
 |-----------------|-------------|
 |Ctrl + K | Open hyperlink dialog that allows you to create or edit hyperlink|
 
+## Online Demo
+
+Explore how to insert and manage hyperlinks in Word documents using the ASP.NET Core Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/hyperlinksandbookmarks#/tailwind3).
+
 ## See Also
 
 * [Feature modules](../asp-net-core/feature-module)
