@@ -17,8 +17,6 @@ Refer to the following links for assemblies and NuGet packages required based on
 * [Markdown conversions assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required)
 * [Markdown conversions NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
 
-N> Refer to the appropriate tabs in the code snippets section: ***C#*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, WinUI, WinForms and WPF; ***VB.NET*** for VB.NET applications.
-
 ## Convert Markdown to HTML
 
 Convert an existing markdown file to a HTML document using the .NET Word library.
