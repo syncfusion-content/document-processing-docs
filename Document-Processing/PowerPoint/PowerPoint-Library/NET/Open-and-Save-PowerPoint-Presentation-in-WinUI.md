@@ -38,7 +38,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 Step 5: Add a new button to the **MainWindow.xaml** as shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Window
     x:Class="Read_and_edit_PowerPoint_presentation.MainWindow"
@@ -145,7 +145,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 Step 5: Add a new button to the **MainPage.xaml** as shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Page
     x:Class="Read_and_edit_PowerPoint_presentation.MainPage"
