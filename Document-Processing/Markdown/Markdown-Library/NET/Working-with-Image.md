@@ -22,6 +22,8 @@ An image can be added to a paragraph in a Markdown document by creating an insta
 
 The following code example demonstrates how to add a new image to a Markdown document.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C#*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, WinUI, WinForms and WPF; ***VB.NET*** for VB.NET applications.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}

@@ -23,6 +23,8 @@ N> The `IsFencedCode` property controls the code block type. By default, code bl
 
 You can add a code block to a `MarkdownDocument` by using the `AddCodeBlock` method. The following code example demonstrates how to create a fenced code block explicitly.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C#*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, WinUI, WinForms and WPF; ***VB.NET*** for VB.NET applications.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}

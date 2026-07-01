@@ -14,10 +14,11 @@ A paragraph is the basic building block of a Markdown document. All textual cont
 - **Hyperlink**: Represented by an instance of `MdHyperlink`.
 - **Image**: Represented by an instance of `MdPicture`.
 
-
 ## Adding a paragraph
 
 The following code example demonstrates how to create a new paragraph in a Markdown document.
+
+N> Refer to the appropriate tabs in the code snippets section: ***C#*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, WinUI, WinForms and WPF; ***VB.NET*** for VB.NET applications.
 
 {% tabs %}
 
