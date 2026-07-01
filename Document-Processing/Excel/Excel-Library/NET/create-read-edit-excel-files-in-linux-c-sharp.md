@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Create, read, and edit Excel files on Linux
 
-[Syncfusion Excel library for ASP.NET Core platform](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) can be used to create, read, edit Excel files. This also convert Excel files to PDF.
+[.NET Excel Library for ASP.NET Core platform](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) can be used to create, read, edit Excel files. This also convert Excel files to PDF.
 
 ## Create a simple Excel report
 

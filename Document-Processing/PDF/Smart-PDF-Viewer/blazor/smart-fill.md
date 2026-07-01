@@ -12,6 +12,9 @@ This feature accelerates completion of PDF forms by using AI to detect fields an
 
 ![Smart Fill](images/smartfill_pdfviewer.gif)
 
+Check out the following video to learn how to implement Smart Filling in Blazor Smart PDF Viewer.
+{% youtube "https://www.youtube.com/watch?v=Diud64asuxs" %}
+
 ## Component Usage
 Add the following code in the **~Pages/Home.razor** file to enable and try the Smart Fill feature in Smart PDF Viewer.
 

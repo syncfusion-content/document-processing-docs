@@ -124,4 +124,4 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 ## JSON Output Structure and Attributes
 
-The JSON output from the extraction contains structured attributes. For more details on the extracted JSON structure and attributes, refer to the [JSON Attributes](https://help.syncfusion.com/document-processing/data-extraction/smart-data-extractor/net/overview#json-output-structure-and-attributes) documentation.
+The JSON output from the extraction contains structured attributes. For more details on the extracted JSON structure and attributes, refer to the [JSON Attributes](https://help.syncfusion.com/document-processing/data-extraction/net/overview#json-output-structure-and-attributes) documentation.
