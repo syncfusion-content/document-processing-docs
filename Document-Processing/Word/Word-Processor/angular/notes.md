@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Notes in Angular Document editor component
 
-DocumentEditorContainer component provides support for inserting footnotes and endnotes through the in-built toolbar. Refer to the following screenshot.
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) Container component provides support for inserting footnotes and endnotes through the in-built toolbar. Refer to the following screenshot.
 
 ![Insert footnote endnote](images/note-toolbar.jpg)
 
