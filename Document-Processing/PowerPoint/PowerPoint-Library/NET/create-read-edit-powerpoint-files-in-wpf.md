@@ -45,7 +45,7 @@ Step 4: Add a new button in the **MainWindow.xaml** as shown below.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Window x:Class="CreatePowerPointWPF.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"

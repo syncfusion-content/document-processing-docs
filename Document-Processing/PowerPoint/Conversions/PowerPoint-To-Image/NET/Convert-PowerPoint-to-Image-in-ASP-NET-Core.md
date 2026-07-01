@@ -49,7 +49,7 @@ Step 4: A default action method named Index will be present in **HomeController.
 Step 5: Add a new button in the **Index.cshtml** as shown below.
 
 {% tabs %}
-{% highlight HTML %}
+{% highlight cshtml tabtitle="CSHTML" %}
 
 @{
     Html.BeginForm("ConvertPPTXtoImage", "Home", FormMethod.Get);
@@ -148,7 +148,7 @@ Step 4: A default action method named Index will be present in **HomeController.
 Step 5: Add a new button in the **Index.cshtml** as shown below.
 
 {% tabs %}
-{% highlight HTML %}
+{% highlight cshtml tabtitle="CSHTML" %}
 
 @{
     Html.BeginForm("ConvertPPTXtoImage", "Home", FormMethod.Get);
@@ -263,7 +263,7 @@ Step 4: A default action method named Index will be present in **HomeController.
 Step 5: Add a new button in the **Index.cshtml** as shown below.
 
 {% tabs %}
-{% highlight HTML %}
+{% highlight cshtml tabtitle="CSHTML" %}
 
 @{
     Html.BeginForm("ConvertPPTXtoImage", "Home", FormMethod.Get);

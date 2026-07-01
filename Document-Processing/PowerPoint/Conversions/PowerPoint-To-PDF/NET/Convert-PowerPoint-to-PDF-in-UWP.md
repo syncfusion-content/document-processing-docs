@@ -25,7 +25,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 Step 3: Add a new button in the MainPage.xaml as shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Page
     x:Class="Convert_PowerPoint_Presentation_to_PDF.MainPage"

@@ -38,7 +38,7 @@ Step 5: Add a new button to the **MainWindow.xaml** as shown below.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Window
     x:Class="CreatePowerPoint.MainWindow"
@@ -180,7 +180,7 @@ Step 5: Add a new button to the **MainPage.xaml** as shown below.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Page
     x:Class="CreatePowerPoint.MainPage"

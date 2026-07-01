@@ -26,7 +26,7 @@ Step 3: Add a new button in the MainPage.xaml as shown below.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight xaml tabtitle="XAML" %}
 <Page
     x:Class="CreateUWPPowerPoint.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
