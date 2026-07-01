@@ -116,7 +116,7 @@ By executing the program, you will get the **PowerPoint document** as follows.
 
 ![WinUI Desktop app output PowerPoint document](Workingwith-Core/Open-and-Save-output-image.png)
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/winui) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 
 
 ## WinUI UWP app
 
@@ -264,4 +264,4 @@ By executing the program, you will get the **PowerPoint document** as follows.
 
 ![WinUI UWP app output PowerPoint document](Workingwith-Core/Open-and-Save-output-image.png)
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/winui) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features.
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page.

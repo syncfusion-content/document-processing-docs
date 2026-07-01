@@ -10,7 +10,7 @@ documentation: ug
 
 # Downloading Syncfusion<sup>&reg;</sup> PowerPoint offline installer
 
-[Presentation](https://www.syncfusion.com/document-processing/powerpoint-framework/net) controls will be included in the Syncfusion<sup>&reg;</sup> PowerPoint installer. You can either download the licensed installer or try our trial installer depending on your license. 
+[Presentation](https://www.syncfusion.com/document-sdk/net-powerpoint-library) controls will be included in the Syncfusion<sup>&reg;</sup> PowerPoint installer. You can either download the licensed installer or try our trial installer depending on your license. 
 
    -	Trial Installer
    -	Licensed Installer

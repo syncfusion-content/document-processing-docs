@@ -60,7 +60,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Create a slide with predefined LayoutSlide
 
-The Syncfusion<sup>&reg;</sup> PowerPoint library supports the following predefined slide layout types to create a slide as equivalent to Microsoft PowerPoint:
+The [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) supports the following predefined slide layout types to create a slide as equivalent to Microsoft PowerPoint:
 
 <ul>
 <li>Blank</li>
@@ -1208,7 +1208,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to create slides with simple text, table, and image in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/slide#/tailwind).
+* Explore how to create slides with simple text, table, and image in a PowerPoint presentation using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/slide#/tailwind).
 
 ## See Also
 

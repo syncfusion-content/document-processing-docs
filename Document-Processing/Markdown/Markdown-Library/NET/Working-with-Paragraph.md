@@ -14,10 +14,11 @@ A paragraph is the basic building block of a Markdown document. All textual cont
 - **Hyperlink**: Represented by an instance of `MdHyperlink`.
 - **Image**: Represented by an instance of `MdPicture`.
 
-
 ## Adding a paragraph
 
 The following code example demonstrates how to create a new paragraph in a Markdown document.
+
+N> Refer to the appropriate tabs in the code snippets section: ***C#*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, WinUI, WinForms and WPF; ***VB.NET*** for VB.NET applications.
 
 {% tabs %}
 
@@ -53,7 +54,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ## Modifying an existing paragraph
 	
@@ -121,7 +122,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ## Removing an existing paragraph
 	
@@ -173,7 +174,7 @@ markdownDocument.Dispose();
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ## Applying paragraph styles
 
@@ -270,7 +271,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ## Working with text
 
@@ -316,7 +317,7 @@ markdownDocument.Dispose();
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ## Appending a line break
 
@@ -370,7 +371,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ## Applying text formatting
 
@@ -498,7 +499,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 
 ## Working with hyperlinks
@@ -553,7 +554,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ### Link with screen tip
 
@@ -605,7 +606,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ### Applying formatting for the display text
 
@@ -657,7 +658,7 @@ markdownDocument.Dispose();
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ## Working with task lists
 
@@ -729,7 +730,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ## Adding a thematic break
 
@@ -779,4 +780,3 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.

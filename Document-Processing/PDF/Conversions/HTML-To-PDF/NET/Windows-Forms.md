@@ -11,7 +11,7 @@ keywords: Assemblies
 
 The Syncfusion<sup>&reg;</sup> HTML to PDF converter is a .NET library used to convert HTML or web pages to PDF document in Windows Forms application.
 
-## Steps to convert Html to PDF document in Windows Forms
+## Steps to convert HTML to PDF document in Windows Forms
 
 Step 1: Create a new Windows Forms application project.
 ![Create Windows Forms application](htmlconversion_images/Windows_Forms_step1.png)   
@@ -26,15 +26,18 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 
 Step 3: Add the following namespaces into Form1.Designer.cs file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using System;
 using System.Windows.Forms;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 4: Add a new button in Form1.Designer.cs to convert HTML to PDF document as follows.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 private Button btnCreate;
@@ -64,9 +67,11 @@ private void InitializeComponent()
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: Include the following namespaces in the Form1.cs file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.HtmlConverter;
@@ -74,9 +79,11 @@ using Syncfusion.Pdf;
 using System;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: Create the btnCreate_Click event and add the following code in btnCreate_Click to convert HTML to PDF document using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class. The HTML content will be scaled based on the given [ViewPortSize](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_ViewPortSize) property of [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Initialize HTML to PDF converter.
@@ -99,6 +106,7 @@ document.Close();
 stream.Dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 By executing the program, you will get the PDF document as follows.
 ![Convert HTMLToPDF Windows Forms output](htmlconversion_images/htmltopdfoutput.png)   

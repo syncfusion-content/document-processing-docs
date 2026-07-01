@@ -17,3 +17,5 @@ It is a non-UI component that provides a full-fledged document instance model to
 * Support to open, modify, and save existing Markdown documents.
 * Ability to create and edit headings, paragraphs, lists, tables, code blocks, blockquotes, hyperlinks, and images.
 * Support for inline formatting such as bold, italic, strikethrough, and inline code.
+* Support for converting Markdown documents to Word, HTML, PDF, PowerPoint, and Excel.
+* Support for converting Word, PDF, PowerPoint, HTML, and Excel documents to Markdown.

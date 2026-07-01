@@ -172,6 +172,9 @@ Document Editor expose API to get or set the table description of the selected i
 ```typescript
 documenteditor.selection.tableFormat.description = 'Freight cost and shipping details';
 ```
+## Online Demo
+
+Explore how to format tables in Word documents using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/tableformatting#/tailwind3).
 
 ## See Also
 

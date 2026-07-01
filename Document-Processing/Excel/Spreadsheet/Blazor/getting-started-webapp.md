@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with the Blazor Spreadsheet in Web App
 
-This section briefly explains how to include the [Syncfusion® Blazor Spreadsheet](https://www.syncfusion.com/blazor-components/blazor-spreadsheet) component in a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/) and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include the [Syncfusion® Blazor Spreadsheet](https://www.syncfusion.com/blazor-components/blazor-spreadsheet) component in a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -18,10 +18,6 @@ This section briefly explains how to include the [Syncfusion® Blazor Spreadshee
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-
-N> If using an interactive render mode such as **WebAssembly** or **Auto**, ensure the required .NET workloads are installed for SkiaSharp usage in a Blazor Web App. Run the following command:
-* `dotnet workload install wasm-tools`
-* The above command will only install the latest available workload on the machine, such as .NET 10. If you need to install a specific .NET version like .NET 9 or .NET 8, please use a command such as `dotnet workload install wasm-tools-net8` and `dotnet workload install wasm-tools-net9`.
 
 ## Create a New Blazor Web App in Visual Studio
 
@@ -49,9 +45,6 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion&reg; uses SkiaSharp.Views.Blazor version 3.119.1. Ensure this version is referenced.
-* [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1)
-
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
@@ -59,10 +52,6 @@ N> Syncfusion&reg; uses SkiaSharp.Views.Blazor version 3.119.1. Ensure this vers
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-
-N> If using an interactive render mode such as **WebAssembly** or **Auto**, ensure the required .NET workloads are installed for SkiaSharp usage in a Blazor Web App. Run the following command:
-* `dotnet workload install wasm-tools`
-* The above command will only install the latest available workload on the machine, such as .NET 10. If you need to install a specific .NET version like .NET 9 or .NET 8, please use a command such as `dotnet workload install wasm-tools-net8` and `dotnet workload install wasm-tools-net9`.
 
 ## Create a New Blazor Web App in Visual Studio Code
 
@@ -104,9 +93,6 @@ dotnet restore
 
 {% endtabs %}
 
-N> Syncfusion&reg; uses SkiaSharp.Views.Blazor version 3.119.1. Ensure this version is referenced.
-* [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1)
-
 {% endtabcontent %}
 
 {% tabcontent .NET CLI %}
@@ -114,10 +100,6 @@ N> Syncfusion&reg; uses SkiaSharp.Views.Blazor version 3.119.1. Ensure this vers
 ## Prerequisites
 
 Install the latest version of [.NET SDK](https://dotnet.microsoft.com/en-us/download). If you previously installed the SDK, you can determine the installed version by executing the following command in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
-
-N> If using an interactive render mode such as **WebAssembly** or **Auto**, ensure the required .NET workloads are installed for SkiaSharp usage in a Blazor Web App. Run the following command:
-* `dotnet workload install wasm-tools`
-* The above command will only install the latest available workload on the machine, such as .NET 10. If you need to install a specific .NET version like .NET 9 or .NET 8, please use a command such as `dotnet workload install wasm-tools-net8` and `dotnet workload install wasm-tools-net9`.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -162,9 +144,6 @@ dotnet restore
 {% endhighlight %}
 
 {% endtabs %}
-
-N> Syncfusion&reg; uses SkiaSharp.Views.Blazor version 3.119.1. Ensure this version is referenced.
-* [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1)
 
 {% endtabcontent %}
 
@@ -263,6 +242,12 @@ You can also experiment directly using the interactive playground below for a qu
 To learn how to open workbooks, bind data, or save files in the Spreadsheet component, see [Open and Save](open-and-save).
 
 N> [View Sample In GitHub.](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Spreadsheet).
+
+## Video tutorial
+
+To get started quickly with Blazor Spreadsheet, you can watch this video:
+
+{% youtube "https://www.youtube.com/watch?v=BrcM8AYWF8s" %}
 
 ## See Also
 

@@ -8,9 +8,9 @@ documentation: ug
 
 # Create, read and edit a PowerPoint file in ASP.NET
 
-You can create or edit a PowerPoint file in ASP.NET with Syncfusion<sup>&reg;</sup> PowerPoint library. The below are the steps.
+You can create or edit a PowerPoint file in ASP.NET with the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library). The below are the steps.
 
-N> This ASP.NET Web Form platform is deprecated, you can use the same product from ASP.NET Core platform. For more information on migrating the .NET PowerPoint library from .NET Framework to .NET Core, refer [here](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/faqs/migrate-from-net-framework-to-net-core).
+N> This ASP.NET Web Form platform is deprecated, you can use the same product from ASP.NET Core platform. For more information on migrating the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) from .NET Framework to .NET Core, refer [here](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/faqs/migrate-from-net-framework-to-net-core).
 
 ## Create a PowerPoint file in ASP.NET
 
@@ -193,6 +193,6 @@ pptxDoc.Close();
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/ASP.NET/Read-and-edit-PowerPoint-presentation).
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 
 
 An online sample link to [create a PowerPoint Presentation](https://document.syncfusion.com/demos/powerpoint/default#/tailwind) in ASP.NET Core. 

@@ -28,7 +28,7 @@ Package manager console command
 </thead>
 <tr>
 <td>
-Windows Forms / Console (.NET Framework) / WPF / ASP.NET MVC5 / ASP.NET Core / Console (.NET Core) / Blazor / WinUI / MAUI
+Windows Forms / Console (.NET Framework) / WPF / [ASP.NET MVC](/document-processing/markdown/markdown-library/net/Create-Markdown-document-in-ASP-NET-MVC) / [ASP.NET Core](/document-processing/markdown/markdown-library/net/Create-Markdown-document-in-ASP-NET-Core) / Console (.NET Core) / [Blazor](/document-processing/markdown/markdown-library/net/create-markdown-document-in-blazor) / WinUI / MAUI / UWP
 </td>
 <td>
 Syncfusion.Markdown.nupkg
@@ -40,6 +40,7 @@ Install-Package Syncfusion.Markdown
 </table>
 
 N> 1. Syncfusion<sup>&reg;</sup> components are available in [nuget.org](https://www.nuget.org/)
+N> 2. Starting with v34.x.x, if you reference Syncfusion® assemblies from trial setup or from the NuGet feed, you also have to add “Syncfusion.Licensing” assembly reference and include a license key in your projects. Please refer to this link to know about registering Syncfusion® license key in your application to use our components.
 
 ## NuGet Package Installation and Uninstallation
 

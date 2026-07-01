@@ -1,14 +1,15 @@
 ---
 title: Create, read, edit, convert PDF files in .NET | Syncfusion
+canonical_url: "https://www.syncfusion.com/document-sdk/net-pdf-library"
 description: Essential PDF is a .NET PDF library to convert PDF files in Windows Forms, WPF, UWP, ASP.NET Core, ASP.NET MVC, Xamarin, Flutter applications
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Overview of PDF Framework
+# Overview of PDF Library
 
-The PDF framework is a feature rich [.NET PDF class library](https://www.syncfusion.com/document-sdk/net-pdf-library) developed with 100% managed C# code that can be used to create, read and write PDF. The library can be used in [Windows Forms](https://www.syncfusion.com/document-sdk/net-pdf-library), [WPF](https://www.syncfusion.com/document-sdk/net-pdf-library), [ASP.NET Web Forms](https://www.syncfusion.com/document-sdk/net-pdf-library), [ASP.NET MVC](https://www.syncfusion.com/document-sdk/net-pdf-library), [ASP.NET Core](https://www.syncfusion.com/document-sdk/net-pdf-library), [Blazor](https://www.syncfusion.com/document-sdk/net-pdf-library), [UWP](https://www.syncfusion.com/document-sdk/net-pdf-library), [Xamarin](https://www.syncfusion.com/document-sdk/net-pdf-library), [Flutter](https://www.syncfusion.com/document-sdk/flutter-pdf-library), [WinUI](https://www.syncfusion.com/document-sdk/net-pdf-library) and [.NET MAUI](https://www.syncfusion.com/document-sdk/net-pdf-library) applications and Unity platform without the dependency of Adobe Acrobat. The creation of PDF follows the most popular PDF 1.7 (ISO 32000-1) and latest PDF 2.0 (ISO 32000-2) specifications.
+The PDF library is a feature-rich [.NET PDF class library](https://www.syncfusion.com/document-sdk/net-pdf-library) developed with 100% managed C# code that can be used to create, read and write PDF. The library can be used in [Windows Forms](https://www.syncfusion.com/document-sdk/net-pdf-library), [WPF](https://www.syncfusion.com/document-sdk/net-pdf-library), [ASP.NET Web Forms](https://www.syncfusion.com/document-sdk/net-pdf-library), [ASP.NET MVC](https://www.syncfusion.com/document-sdk/net-pdf-library), [ASP.NET Core](https://www.syncfusion.com/document-sdk/net-pdf-library), [Blazor](https://www.syncfusion.com/document-sdk/net-pdf-library), [UWP](https://www.syncfusion.com/document-sdk/net-pdf-library), [Flutter](https://www.syncfusion.com/document-sdk/flutter-pdf-library), [WinUI](https://www.syncfusion.com/document-sdk/net-pdf-library) and [.NET MAUI](https://www.syncfusion.com/document-sdk/net-pdf-library) applications and Unity platform without the dependency of Adobe Acrobat. The creation of PDF follows the most popular PDF 1.7 (ISO 32000-1) and the latest PDF 2.0 (ISO 32000-2) specifications.
 
 ## Key Features of Essential<sup>&reg;</sup> PDF
 
@@ -17,7 +18,7 @@ The following list shows the key features available in the Essential<sup>&reg;</
 * Support to [create PDF files](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-c-sharp-vb-net) from scratch.
 * Support to add [text](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-text), various formats of [images](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-images), [tables](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-tables) and [shapes](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-shapes).
 * Support for [creation](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-forms#creating-a-new-pdf-form), [filling](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-forms#filling-form-fields-in-an-existing-pdf-document) and [flattening](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-forms#removing-editing-capability-of-form-fields) forms (AcroForms and XFA).  
-* [Open](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/open-and-save-pdf-file-in-c-sharp-vb-net), modify and [save](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/open-and-save-pdf-file-in-c-sharp-vb-net) existing PDF files.
+* [Open](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/open-pdf-file), modify and [save](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/save-pdf-file) existing PDF files.
 * Support to [compress](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-compression) existing PDF files.
 * Ability to [merge](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/merge-documents) and [split](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/split-documents) PDF files.
 * Support for [Optical Character Recognition](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-ocr/working-with-ocr) by using Tesseract engine. 
@@ -35,7 +36,7 @@ The following list shows the key features available in the Essential<sup>&reg;</
 * Support to [text watermark](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-watermarks#adding-image-watermark-in-pdf-document), [image watermark](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-watermarks#adding-image-watermark-in-pdf-document), and [watermark annotation](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-watermarks#adding-watermark-annotation).
 * Support to [hyperlinks](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-hyperlinks) for web navigation and document navigation.
 * Support to [insert](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-bookmarks#inserting-bookmarks-in-an-existing-pdf), [remove](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-bookmarks#removing-bookmarks-from-an-existing-pdf), and [modify](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-bookmarks#modifying-the-bookmarks) bookmarks.
-* Support to layers. [Add](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-layers#adding-layers-in-a-pdf-document), [remove](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-layers#removing-layers-from-an-existing-pdf-document), and [flatten](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-layers#flattening-the-layers-in-an-existing-pdf-document) the layers.
+* Support to [Add](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-layers#adding-layers-in-a-pdf-document), [remove](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-layers#removing-layers-from-an-existing-pdf-document), and [flatten](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-layers#flattening-the-layers-in-an-existing-pdf-document) the layers.
 * Support to embed and manage [rich media content](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-annotations#rich-media-annotation) such as audio and video.
 * Support to embed and execute [JavaScript](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-javascript) within PDF documents.
 * Support to create and manage PDF [portfolios](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-portfolio).
@@ -52,3 +53,5 @@ The following list shows the key features available in the Essential<sup>&reg;</
 * Support for .NET Standard 2.0 onwards.
 
 N> 1. Starting with v20.1.0.x, if you reference Syncfusion<sup>&reg;</sup> HTML converter or OCR processor assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+
+N> Looking for the full .NET PDF Library overview, features, pricing, and documentation? Visit the [.NET PDF Library](https://www.syncfusion.com/document-sdk/net-pdf-library) page.

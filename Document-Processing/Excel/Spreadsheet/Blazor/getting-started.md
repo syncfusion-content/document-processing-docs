@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Spreadsheet Component in WASM | Syncfusion
+title: Getting Started with Blazor Spreadsheet Component in WASM| Syncfusion
 description: Checkout and learn about getting started with Blazor Spreadsheet component in Blazor WebAssembly Application.
 platform: document-processing
 control: Spreadsheet
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Spreadsheet Component
 
-This section briefly explains how to include [Syncfusion® Blazor Spreadsheet](https://www.syncfusion.com/blazor-components/blazor-spreadsheet) component in your Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/) and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include [Syncfusion® Blazor Spreadsheet](https://www.syncfusion.com/blazor-components/blazor-spreadsheet) component in your Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -18,10 +18,6 @@ This section briefly explains how to include [Syncfusion® Blazor Spreadsheet](h
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-
-N> For WebAssembly Application, to export as PDF, ensure the required .NET workloads are installed by running:
-* dotnet workload install wasm-tools
-* dotnet workload install wasm-tools-net8 (For .NET 8.0) or dotnet workload install wasm-tools-net9 (For .NET 9.0) or dotnet workload install wasm-tools (For .NET 10.0)
 
 ## Create a new Blazor App in Visual Studio
 
@@ -41,13 +37,9 @@ Alternatively, you can utilize the following package manager command to achieve 
 
 Install-Package Syncfusion.Blazor.Spreadsheet -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
-Install-Package SkiaSharp.Views.Blazor -Version 3.119.1
 
 {% endhighlight %}
 {% endtabs %}
-
-N> Syncfusion&reg; uses SkiaSharp.Views.Blazor version 3.119.1. Ensure this version is referenced.
-* [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1)
 
 {% endtabcontent %}
 
@@ -56,10 +48,6 @@ N> Syncfusion&reg; uses SkiaSharp.Views.Blazor version 3.119.1. Ensure this vers
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-
-N> For WebAssembly Application, to export as PDF, ensure the required .NET workloads are installed by running:
-* dotnet workload install wasm-tools
-* dotnet workload install wasm-tools-net8 (For .NET 8.0) or dotnet workload install wasm-tools-net9 (For .NET 9.0) or dotnet workload install wasm-tools (For .NET 10.0)
 
 ## Create a new Blazor App in Visual Studio Code
 
@@ -90,15 +78,11 @@ cd BlazorApp
 
 dotnet add package Syncfusion.Blazor.Spreadsheet -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
-dotnet add package SkiaSharp.Views.Blazor -v 3.119.1
 dotnet restore
 
 {% endhighlight %}
 
 {% endtabs %}
-
-N> Syncfusion&reg; uses SkiaSharp.Views.Blazor version 3.119.1. Ensure this version is referenced.
-* [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1)
 
 {% endtabcontent %}
 
@@ -107,10 +91,6 @@ N> Syncfusion&reg; uses SkiaSharp.Views.Blazor version 3.119.1. Ensure this vers
 ## Prerequisites
 
 Install the latest version of [.NET SDK](https://dotnet.microsoft.com/en-us/download). If the .NET SDK is already installed, determine the installed version by running the following command in a command prompt (Windows), terminal (macOS), or command shell (Linux).
-
-N> For WebAssembly Application, to export as PDF, ensure the required .NET workloads are installed by running:
-* dotnet workload install wasm-tools
-* dotnet workload install wasm-tools-net8 (For .NET 8.0) or dotnet workload install wasm-tools-net9 (For .NET 9.0) or dotnet workload install wasm-tools (For .NET 10.0)
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -147,15 +127,11 @@ After creating the Blazor WebAssembly App, install the required Syncfusion NuGet
 
 dotnet add package Syncfusion.Blazor.Spreadsheet -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
-dotnet add package SkiaSharp.Views.Blazor -v 3.119.1
 dotnet restore
 
 {% endhighlight %}
 
 {% endtabs %}
-
-N> Syncfusion&reg; uses SkiaSharp.Views.Blazor version 3.119.1. Ensure this version is referenced.
-* [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1)
 
 {% endtabcontent %}
 
@@ -243,3 +219,4 @@ N> [View Sample In GitHub.](https://github.com/SyncfusionExamples/Blazor-Getting
 
 - [Getting started with the Blazor Spreadsheet in a Blazor Web app Server app](./getting-started-webapp)
 - [Getting Started with .NET MAUI Blazor Hybrid App](./blazor-hybrid-maui-app)
+

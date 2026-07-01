@@ -22,6 +22,8 @@ You can add a table to a `MarkdownDocument` by using the `AddTable` method. The 
 
 The following code example demonstrates how to create a table 
 
+N> Refer to the appropriate tabs in the code snippets section: ***C#*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, WinUI, WinForms and WPF; ***VB.NET*** for VB.NET applications.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
@@ -106,7 +108,7 @@ The following code example demonstrates how to create a table
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 N> Column alignment is set at the table level using the `ColumnAlignments` property and applies to the entire column, not individual cells.
 
@@ -184,7 +186,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ## Removing tables
 
@@ -242,4 +244,4 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+

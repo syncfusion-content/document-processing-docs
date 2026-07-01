@@ -14,6 +14,8 @@ Blockquotes are used to highlight quoted text, notes, warnings, or other content
 
 The following code example demonstrates how to add a simple blockquote to a Markdown document.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C#*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, WinUI, WinForms and WPF; ***VB.NET*** for VB.NET applications.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
@@ -56,7 +58,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ## Applying Blockquote Style Using ApplyParagraphStyle
 
@@ -102,7 +104,7 @@ The following code example demonstrates how to create a blockquote using the `Ap
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ## Adding Leading Space
 
@@ -184,7 +186,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 
 ## Creating Nested Blockquotes
@@ -271,7 +273,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ## Applying Text Formatting in a Blockquote
 
@@ -389,7 +391,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ## Modifying an Existing Blockquote
 
@@ -471,7 +473,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ## Removing a Blockquote
 
@@ -496,6 +498,7 @@ The following code example demonstrates how to remove blockquote from paragraphs
              // Removes the blockquote.
              paragraph.HasBlockquote = false;
              paragraph.BlockQuoteLevel = 0;
+			 paragraph.ApplyParagraphStyle("");
              break;
          }                       
      }
@@ -521,6 +524,7 @@ For Each block As IMdBlock In markdownDocument.Blocks
             ' Removes the blockquote.
             paragraph.HasBlockquote = False
             paragraph.BlockQuoteLevel = 0
+			paragraph.ApplyParagraphStyle("")
             Exit For
         End If
     End If
@@ -534,4 +538,3 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.

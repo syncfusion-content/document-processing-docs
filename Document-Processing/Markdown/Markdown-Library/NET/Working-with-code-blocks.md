@@ -19,57 +19,11 @@ The Syncfusion Markdown library supports two primary types of code blocks:
 
 N> The `IsFencedCode` property controls the code block type. By default, code blocks are created as fenced code blocks.
 
-## Adding a code block
-
-You can add a code block to a `MarkdownDocument` by using the `AddCodeBlock` method. The following code example demonstrates how to add a simple code block to a Markdown document.
-
-{% tabs %}
-
-{% highlight c# tabtitle="C#" %}
-
-// Creates a new MarkdownDocument instance
-MarkdownDocument markdownDocument = new MarkdownDocument();
-// Adds a new code block to the document
-MdCodeBlock codeBlock = markdownDocument.AddCodeBlock();
-// Adds code lines to the code block
-codeBlock.Lines.Add("public class Person");
-codeBlock.Lines.Add("{");
-codeBlock.Lines.Add("    public string Name { get; set; }");
-codeBlock.Lines.Add("    public int Age { get; set; }");
-codeBlock.Lines.Add("}");
-// Saves the Markdown document to the file system
-markdownDocument.Save("Output.md");
-// Disposes the document
-markdownDocument.Dispose();
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET" %}
-
- ' Creates a new MarkdownDocument instance
- Dim markdownDocument As MarkdownDocument = New MarkdownDocument()
- ' Adds a new code block to the document
- Dim codeBlock As MdCodeBlock = markdownDocument.AddCodeBlock()
- ' Adds code lines to the code block
- codeBlock.Lines.Add("public class Person")
- codeBlock.Lines.Add("{")
- codeBlock.Lines.Add("    public string Name { get; set; }")
- codeBlock.Lines.Add("    public int Age { get; set; }")
- codeBlock.Lines.Add("}")
- ' Saves the Markdown document to the file system
- markdownDocument.Save("Output.md")
- ' Disposes the document
- markdownDocument.Dispose()
-
-{% endhighlight %}
-
-{% endtabs %}
-
-A complete working sample is available on GitHub.
-
 ## Creating fenced code blocks
 
-The following code example demonstrates how to create a fenced code block explicitly.
+You can add a code block to a `MarkdownDocument` by using the `AddCodeBlock` method. The following code example demonstrates how to create a fenced code block explicitly.
+
+N> Refer to the appropriate tabs in the code snippets section: ***C#*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, WinUI, WinForms and WPF; ***VB.NET*** for VB.NET applications.
 
 {% tabs %}
 
@@ -117,7 +71,7 @@ markdownDocument.Dispose();
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ## Creating indented code blocks
 
@@ -169,7 +123,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ## Modifying existing code blocks
 
@@ -227,6 +181,6 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create or Generate PDF file in ASP.NET Core MVC | Syncfusion
-description: Learn how to create a PDF file in ASP.NET Core MVC with easy steps using Syncfusion JavaScript PDF library without depending on Adobe
+description: Learn how to create a PDF file in ASP.NET Core MVC with easy steps using JavaScript PDF Library without depending on Adobe
 platform: document-processing
 control: PDF
 documentation: ug
@@ -10,11 +10,11 @@ keywords: MVC, javascript, pdf
 
 # Create or Generate PDF file in ASP.NET Core MVC
 
-The Syncfusion<sup>&reg;</sup> JavaScript PDF library is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, fill forms, and secure PDF files.
+The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) is used to create, read, and edit PDF documents. The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) also offers functionality to merge, split, stamp, fill forms, and secure PDF files.
 
-This guide explains how to integrate the JavaScript PDF library into an ASP.NET Core MVC application.
+This guide explains how to integrate the [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) into an ASP.NET Core MVC application.
 
-## Integrate PDF library into an ASP.NET Core MVC application
+## Integrate PDF Library into an ASP.NET Core MVC application
 
 Step 1: Start Visual Studio and select **Create a new project**.
 Step 2: Create a new ASP.NET MVC Web Application project.
@@ -30,13 +30,13 @@ Step 5: **Add script reference**: Add the required scripts using the CDN inside 
 {% highlight cshtml tabtitle="~/_Layout.cshtml" %}
 <head>
     ...
-    <!-- Syncfusion JavaScript PDF Library (CDN) -->
+    <!-- JavaScript PDF Library (CDN) -->
     <script src="https://cdn.syncfusion.com/ej2/31.2.15/dist/ej2.min.js"></script>
 </head>
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the following topics for including script references in an ASP.NET MVC application to enable PDF creation using the Syncfusion<sup>&reg;</sup> JavaScript PDF library:
+N> Check out the following topics for including script references in an ASP.NET MVC application to enable PDF creation using the [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library):
 *   [CDN](https://ej2.syncfusion.com/aspnetmvc/documentation/common/adding-script-references)
 *   [NPM Package](https://ej2.syncfusion.com/aspnetmvc/documentation/common/adding-script-references#node-package-manager-npm)
 *   [CRG](https://ej2.syncfusion.com/aspnetmvc/documentation/common/custom-resource-generator)

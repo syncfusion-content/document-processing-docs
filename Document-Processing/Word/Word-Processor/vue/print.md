@@ -192,3 +192,7 @@ The following example shows how to customize layout options only for printing.
 {% endtabs %}
         
 {% previewsample "/document-processing/code-snippet/document-editor/vue/print-cs3" %}
+
+## Online Demo
+
+Explore how to print Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/print.html).

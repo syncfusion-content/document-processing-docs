@@ -241,3 +241,7 @@ export class AppComponent implements OnInit {
   }
 }
 ```
+
+## Online Demo
+
+Explore how to track and review changes in Word documents using the Angular Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/track-changes).

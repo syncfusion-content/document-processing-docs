@@ -21,6 +21,8 @@ A bulleted list can be created by setting the `ListFormat` property of a paragra
 
 The following code example demonstrates how to create a simple bulleted list.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C#*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, WinUI, WinForms and WPF; ***VB.NET*** for VB.NET applications.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
@@ -95,7 +97,7 @@ markdownDocument.Dispose();
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 N> The `ListValue` property specifies the complete list prefix including the marker and spacing. For bulleted lists, typical values are "- ", "* ", or "+ ".
 
@@ -191,7 +193,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 N> The `ListValue` property contains the actual number and marker for each item.
 
@@ -327,7 +329,7 @@ The following code example demonstrates how to create a multilevel bulleted list
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 N> Each nesting level typically adds spaces of indentation. Level 0 has no indentation.
 
@@ -481,6 +483,6 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 N> Each nesting level typically adds spaces of indentation. Level 0 has no indentation.

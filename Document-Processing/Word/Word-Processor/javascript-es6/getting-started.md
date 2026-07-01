@@ -67,15 +67,15 @@ Add the following Document Editor and dependent component style references to `~
 {% tabs %}
 {% highlight css tabtitle="style.css" %}
 
-@import '../../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-lists/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-documenteditor/styles/material.css';
+@import '../../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-documenteditor/styles/tailwind3.css';
 
 {% endhighlight %}
 {% endtabs %}
@@ -152,6 +152,10 @@ You can also explore the Document Editor interactively using the live sample bel
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/getting-started-cs2" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/JavaScript-ES6-DOCX-Editor-Examples/tree/master/getting-started).
+
+## Online Demo
+
+Explore how to create, edit, and print Word documents using the JavaScript Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/default.html).
 
 ## Server-side dependencies
 

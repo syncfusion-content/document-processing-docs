@@ -1664,7 +1664,7 @@ The following table demonstrates the LaTeX equivalent to professional format Rig
 
 ### Apply style to characters
 
-Apply styles to characters, such as bold and bold-italic, for equations in a Word document using LaTeX with the .NET Word Library. Apply the following styles using LaTeX commands.
+Apply styles to characters, such as bold and bold-italic, for equations in a Word document using LaTeX with the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library). Apply the following styles using LaTeX commands.
 
 <table>
 <thead> 
@@ -1749,7 +1749,7 @@ document.Save("Result.docx", FormatType.Docx)
 
 ### Apply scripts to the equation
 
-Apply scripts, such as double-struck, fraktur, and more, to equations in a Word document using LaTeX with the .NET Word Library. Apply the following scripts using LaTeX commands.
+Apply scripts, such as double-struck, fraktur, and more, to equations in a Word document using LaTeX with the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library). Apply the following scripts using LaTeX commands.
 
 <table>
 <thead> 
@@ -1924,7 +1924,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Apply Math Justification
 
-Apply justification, such as Left, Right, and more to the equation in a Word document using the .NET Word Library.
+Apply justification, such as Left, Right, and more to the equation in a Word document using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library).
 
 The following code examples show how to apply the justification to equations in a Word document.
 
@@ -2064,8 +2064,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to create a Word document with mathematical equations using LaTeX and the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/createusinglatex#/tailwind).
-* See how to modify a mathematical equation using LaTeX in a Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/editusinglatex#/tailwind).
+* Explore how to create a Word document with mathematical equations using LaTeX and the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/createusinglatex#/tailwind).
+* See how to modify a mathematical equation using LaTeX in a Word document using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/editusinglatex#/tailwind).
 
 ## See Also
 

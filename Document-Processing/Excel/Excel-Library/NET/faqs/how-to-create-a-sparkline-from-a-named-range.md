@@ -1,6 +1,6 @@
 ---
 title: How to create a sparkline from a named range | XlsIO | Syncfusion
-description: This page demonstrates to create a sparkline from a named range using Syncfusion .NET Excel library (XlsIO).
+description: This page demonstrates to create a sparkline from a named range using .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -8,7 +8,7 @@ documentation: UG
 
 # How to create a sparkline from a named range?
 
-You can create a [sparkline](https://help.syncfusion.com/file-formats/xlsio/working-with-charts#sparkline) from a [named range](https://help.syncfusion.com/file-formats/xlsio/faq#how-to-use-named-ranges-with-xlsio) with the help of the following code.
+You can create a [sparkline](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-charts#sparkline) from a [named range](https://help.syncfusion.com/document-processing/excel/excel-library/net/faq#how-to-use-named-ranges-with-xlsio) with the help of the following code.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -137,7 +137,7 @@ End Using
 
 * [How to create a Chart with a discontinuous range?](how-to-create-a-chart-with-a-discontinuous-range)
 * [How to create and open Excel Template files by using XlsIO?](how-to-create-and-open-excel-template-files-by-using-xlsio)
-* [How to create sparkline?](https://help.syncfusion.com/file-formats/xlsio/working-with-charts#sparkline)
-* [How to create named range in Excel?](https://help.syncfusion.com/file-formats/xlsio/migrate-from-office-automation-to-syncfusion-xlsio/create-named-range-in-excel)
-* [How to define names?](https://help.syncfusion.com/file-formats/xlsio/working-with-formulas#defined-names)
-* [How to use named ranges in formulas?](https://help.syncfusion.com/file-formats/xlsio/working-with-formulas#named-ranges-in-formulas)
+* [How to create sparkline?](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-charts#sparkline)
+* [How to create named range in Excel?](https://help.syncfusion.com/document-processing/excel/excel-library/net/migrate-from-office-automation-to-syncfusion-xlsio/create-named-range-in-excel)
+* [How to define names?](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-formulas#defined-names)
+* [How to use named ranges in formulas?](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-formulas#named-ranges-in-formulas)

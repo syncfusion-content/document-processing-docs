@@ -20,7 +20,7 @@ N> The HTML to PDF converter library internally uses the Blink rendering engine 
 </tr>
 <tr>
 <td>
-Windows (.NET Core, .NET8, and .NET9)
+Windows (.NET Core, .NET8, .NET9 and .NET10)
 </td>
 <td>
 {{'[Syncfusion.HtmlToPdfConverter.Net.Windows.nupkg](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Windows/)'| markdownify }}
@@ -28,7 +28,7 @@ Windows (.NET Core, .NET8, and .NET9)
 </tr>
 <tr>
 <td>
-Linux (.NET Core, .NET8, and .NET9)
+Linux (.NET Core, .NET8, .NET9 and .NET10)
 </td>
 <td>
 {{'[Syncfusion.HtmlToPdfConverter.Net.Linux.nupkg](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Linux/)'| markdownify }}
@@ -36,7 +36,7 @@ Linux (.NET Core, .NET8, and .NET9)
 </tr>
 <tr>
 <td>
-Mac (.NET Core, .NET8, and .NET9)
+Mac (.NET Core, .NET8, .NET9 and .NET10)
 </td>
 <td>
 {{'[Syncfusion.HtmlToPdfConverter.Net.Mac.nupkg](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Mac/)'| markdownify }}
@@ -44,7 +44,7 @@ Mac (.NET Core, .NET8, and .NET9)
 </tr>
 <tr>
 <td>
-AWS (.NET Core, .NET8, and .NET9)
+AWS (.NET Core, .NET8, .NET9 and .NET10)
 </td>
 <td>
 {{'[Syncfusion.HtmlToPdfConverter.Net.Aws.nupkg](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Aws/)'| markdownify }}
