@@ -9,7 +9,7 @@ documentation: ug
 
 # Working with Lists in Blazor DocumentEditor Component
 
-Lists are a fundamental feature for organizing content in a document, making it easier for readers to follow step-by-step instructions or grasp key points. The [Blazor Word Processor](https://www.syncfusion.com/blazor-components/blazor-word-processor) provides comprehensive support for single-level and multilevel lists, which can be either ordered (numbered) or unordered (bulleted).
+Lists are a fundamental feature for organizing content in a document, making it easier for readers to follow step-by-step instructions or grasp key points. The [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) provides comprehensive support for single-level and multilevel lists, which can be either ordered (numbered) or unordered (bulleted).
 
 ## Create a Bulleted List
 

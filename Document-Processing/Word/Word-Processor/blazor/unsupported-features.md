@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Unsupported Features in Blazor DOCX Editor
 
-This section describes the unsupported elements in Syncfusion® Blazor DOCX Editor (Document Editor) 
+This section describes the unsupported elements in [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) 
 
 ## Document formatting
 
