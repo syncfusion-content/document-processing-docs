@@ -226,7 +226,7 @@ By executing the program, you will get the **PDF** as follows. The output will b
 
 {% endtabcontents %}
 
-Click [here](https://www.syncfusion.com/document-sdk/net-word-library) to explore the rich set of the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) features. 
+Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.
 
 An online sample link to [convert Word document to PDF](https://document.syncfusion.com/demos/word/wordtopdf#/tailwind) in ASP.NET Core. 
 
