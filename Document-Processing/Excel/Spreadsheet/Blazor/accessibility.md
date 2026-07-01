@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Spreadsheet
 
-The Syncfusion Blazor Spreadsheet follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WAI-ARIA](https://www.w3.org/TR/wai-aria#roles) roles that are commonly used to evaluate accessibility.
+The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WAI-ARIA](https://www.w3.org/TR/wai-aria#roles) roles that are commonly used to evaluate accessibility.
 <style>
     .post .post-content img {
         display: inline-block;

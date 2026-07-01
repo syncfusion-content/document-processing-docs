@@ -9,7 +9,7 @@ documentation: ug
 
 # Formatting in Blazor Spreadsheet Component
 
-Formatting options improve data readability and presentation. The Blazor Spreadsheet component provides various formatting options, which can be categorized into:
+Formatting options improve data readability and presentation. The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component provides various formatting options, which can be categorized into:
 
 * Number Formatting
 * Text Formatting
