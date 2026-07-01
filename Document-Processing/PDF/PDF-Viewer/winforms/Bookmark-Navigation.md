@@ -9,7 +9,7 @@ documentation: ug
 
 # Bookmark Navigation in Windows Forms PDF Viewer (PdfViewerControl)
 
-[WinForms PDF Viewer](https://www.syncfusion.com/winforms-ui-controls/pdf-viewer) control allows users to navigate to the bookmarks present in the loaded PDF document at the UI level. 
+[WinForms PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/winforms-pdf-viewer) control allows users to navigate to the bookmarks present in the loaded PDF document at the UI level. 
 
 ## Steps to perform bookmark navigation in PdfViewerControl.
 

@@ -89,4 +89,4 @@ The following example registers two custom keyboard commands (`FitToWidth` and `
 
 ## See also
 
-* [Keyboard Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer](./accessibility)
+* [Keyboard Accessibility in Blazor PDF Viewer](./accessibility)

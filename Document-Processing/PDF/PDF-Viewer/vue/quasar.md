@@ -12,13 +12,13 @@ domainurl: ##DomainURL##
 
 This section explains step-by-step instructions for integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue PDF Viewer component into a [Quasar Framework](https://quasar.dev/) project using the Composition API.
 
-Quasar is a Vue.js-based open-source framework that enables developers to create high-performance, responsive applications across web, mobile, and desktop platforms. The Syncfusion Vue PDF Viewer integrates seamlessly with Quasar's architecture, providing a complete PDF viewing and annotation solution.
+Quasar is a Vue.js-based open-source framework that enables developers to create high-performance, responsive applications across web, mobile, and desktop platforms. The Vue PDF Viewer integrates seamlessly with Quasar's architecture, providing a complete PDF viewing and annotation solution.
 
 ## Prerequisites
 
 Before you begin, ensure the following are in place:
 
-* [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](../system-requirements)
+* [System requirements for Vue UI components](../system-requirements)
 * Node.js v14.15.0 or later
 
 ## Set up the Quasar project
@@ -47,7 +47,7 @@ cd quasar-project
 {% endhighlight %}
 {% endtabs %}
 
-Your Quasar project is now ready. Proceed to add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue PDF Viewer component.
+Your Quasar project is now ready. Proceed to add the Vue PDF Viewer component.
 
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
 
@@ -62,6 +62,7 @@ npm install @syncfusion/ej2-vue-pdfviewer --save
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components support multiple theme options. In this example, the `Material 3` theme is applied using CSS styles from the installed packages. Import the required Material 3 CSS styles for the PDF Viewer and its dependencies into the `<style>` section of the `src/app.vue` file:
+
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -135,3 +136,5 @@ npm run dev
 The application will run at the specified Quasar dev server URL. The PDF Viewer displays the sample document with the complete toolbar interface, allowing users to interact with PDF features like zoom, search, annotations, and navigation.
 
 ![Quasar PDF Viewer output](./images/quasar.png)
+
+N> Looking for the full Vue PDF Viewer component overview, features, pricing, and documentation? Visit the [Vue PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/vue-pdf-viewer) page.
