@@ -21,7 +21,7 @@ This section explains how to create a Vue 3 application with Vite and integrate 
 
 ## Prerequisites
 
-Install Node.js (version 18 or later recommended) along with npm or Yarn before creating the project. Review the [system requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements) to confirm supported platforms.
+Install Node.js (version 18 or later recommended) along with npm or Yarn before creating the project. Review the [system requirements for Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements) to confirm supported platforms.
 
 ## Set up the Vite project
 
@@ -129,6 +129,7 @@ Add the PDF Viewer component to your Vue 3 application by following these instru
 Import the PDF Viewer component and required modules in the `<script>` section of `src/App.vue`.
 
 {% tabs %}
+
 {% highlight html tabtitle="Composition API (App.vue)" %}
 
 import { provide } from 'vue';
@@ -202,7 +203,9 @@ yarn run dev
 
 The application renders the PDF Viewer as shown below:
 
-![Syncfusion Vue PDF Viewer running in a Vite app](./images/Vue3-pdf-viewer-demo.png)
+![Vue PDF Viewer running in a Vite app](./images/Vue3-pdf-viewer-demo.png)
 
 > [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/Getting%20Started%20Vue-3%20-%20Standalone).
+
+N> Looking for the full Vue PDF Viewer component overview, features, pricing, and documentation? Visit the [Vue PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/vue-pdf-viewer) page.
 
