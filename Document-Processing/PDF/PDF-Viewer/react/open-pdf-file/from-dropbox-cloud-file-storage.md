@@ -9,7 +9,7 @@ documentation: ug
 
 # Open PDF from Dropbox cloud storage
 
-These instructions describe how to load PDF files stored in Dropbox into the Syncfusion React PDF Viewer, using either the standalone client approach or a server-backed web service.
+These instructions describe how to load PDF files stored in Dropbox into the React PDF Viewer, using either the standalone client approach or a server-backed web service.
 
 ## Using Standalone PDF Viewer
 
@@ -21,7 +21,7 @@ Create an API app in the Dropbox App Console. Follow the Dropbox tutorial for ap
 
 **Step 2:** Create a Simple PDF Viewer Sample in React
 
-Start by following the Syncfusion React PDF Viewer 'Getting started' guide to create a basic PDF viewer sample. This establishes the client-side component that will request document data either directly from Dropbox (standalone) or via the server-backed service.
+Start by following the React PDF Viewer 'Getting started' guide to create a basic PDF viewer sample. This establishes the client-side component that will request document data either directly from Dropbox (standalone) or via the server-backed service.
 
 **Step 3:** Modify the src/app/app.ts file in the React project
 
