@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Restrict Editing in JavaScript (ES5) Document Editor Control
 
-[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) provides support to restrict editing. When the protected document includes range permission, then unique user or user group only authorized to edit separate text area.
+Document Editor provides support to restrict editing. When the protected document includes range permission, then unique user or user group only authorized to edit separate text area.
 
 ## Set current user
 
