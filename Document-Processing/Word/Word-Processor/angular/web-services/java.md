@@ -20,7 +20,7 @@ This page illustrates how to create web service in Java for the server-side depe
 
 ## Supported Java versions
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Java library supports Java SE 8.0(1.8) or above versions.
+Java library supports Java SE 8.0(1.8) or above versions.
 
 ## External Jars Required
 

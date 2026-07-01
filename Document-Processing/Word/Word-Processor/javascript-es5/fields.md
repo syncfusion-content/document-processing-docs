@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Fields in JavaScript (ES5) Document editor control
 
-Document Editor has preservation support for all types of fields in an existing word document without any data loss.
+[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) has preservation support for all types of fields in an existing word document without any data loss.
 
 ## Adding Fields
 

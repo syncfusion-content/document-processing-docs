@@ -9,8 +9,11 @@ documentation: ug
 
 # Mobile responsiveness in EJ2 Javascript Spreadsheet control
 
-The Spreadsheet control rendered in desktop mode will be adaptive in all mobile devices where the layout gets adjusted based on their parent element’s dimensions to accommodate any resolution.
+The spreadsheet control rendered in desktop mode will be adaptive in all mobile devices where the layout gets adjusted based on their parent element’s dimensions to accommodate any resolution.
 
 You can see the overflowed items of ribbon header, ribbon content, and sheet tab using touch and swipe action. The right navigation arrow is added at the end of the ribbon content through which the user can navigate towards overflowed items. Once you reached the rightmost end of the ribbon content, the right navigation arrow will change to left navigation arrow through which you can navigate to the left of the ribbon content.
 
 ![Spreadsheet Adaptive Mode](./images/spreadsheet_adaptive_mode.gif)
+
+N> Looking for the full JavaScript Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) page.
+

@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Overview
 
-This how-to explains how to enable the desktop toolbar on mobile devices running the Syncfusion React PDF Viewer, and how to preserve touch scrolling when the desktop toolbar is used.
+This how-to explains how to enable the desktop toolbar on mobile devices running the React PDF Viewer, and how to preserve touch scrolling when the desktop toolbar is used.
 
 ## Prerequisites
 

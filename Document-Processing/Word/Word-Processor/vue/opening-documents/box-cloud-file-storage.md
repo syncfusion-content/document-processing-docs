@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Open document from Box cloud file storage in Vue Document editor
 
-To load a document from Box cloud file storage in a document Editor, you can follow the steps below
+To load a document from Box cloud file storage in a [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor), you can follow the steps below
 
 **Step 1** Set up a Box developer account and create a Box application
 

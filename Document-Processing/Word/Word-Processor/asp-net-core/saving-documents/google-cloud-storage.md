@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 To save a document to Google Cloud Storage, you can follow the steps below
 
-**Step 1:** Create a Simple Document Editor Sample in ASP.NET Core
+**Step 1:** Create a Simple [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) Sample in ASP.NET Core
 
 Start by following the steps provided in this [link](../../document-editor/getting-started-core) to create a simple Document Editor sample in ASP.NET Core. This will give you a basic setup of the Document Editor component. 
 

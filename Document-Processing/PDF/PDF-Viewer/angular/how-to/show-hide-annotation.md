@@ -99,6 +99,6 @@ export class AppComponent implements OnInit {
 
 ## Conclusion
 
-By implementing these steps in your Angular component, you can add functionality to show and hide annotations in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer. This allows for a better user experience when working with annotated PDF documents.
+By implementing these steps in your Angular component, you can add functionality to show and hide annotations in the PDF Viewer. This allows for a better user experience when working with annotated PDF documents.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/How%20to/Show%20and%20Hide%20Annotations)

@@ -14,7 +14,7 @@ The table of contents in a document is same as the list of chapters at the begin
 
 ## Inserting table of contents
 
-Document Editor exposes an API to insert table of contents at cursor position programmatically. You can specify the settings for table of contents explicitly. Otherwise, the default settings will be applied.
+[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) exposes an API to insert table of contents at cursor position programmatically. You can specify the settings for table of contents explicitly. Otherwise, the default settings will be applied.
 
 [`TableOfContentsSettings`](https://ej2.syncfusion.com/documentation/api/document-editor/tableOfContentsSettings/) contain the following properties:
 * **startLevel**: Specifies the start level for constructing table of contents.

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customize color picker in JavaScript (ES6) Document editor control
 
-Document editor provides an options to customize the color picker using [`colorPickerSettings`](https://ej2.syncfusion.com/documentation/api/document-editor/documentEditorSettingsModel#colorpickersettings) in Document editor settings. The color picker offers customization options for default appearance, by allowing selection between Picker or Palette mode, for font and border colors."
+[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) provides an options to customize the color picker using [`colorPickerSettings`](https://ej2.syncfusion.com/documentation/api/document-editor/documentEditorSettingsModel#colorpickersettings) in Document editor settings. The color picker offers customization for default appearance, by allowing selection between Picker or Palette mode, for font and border colors.
 
 Similarly, you can use [`documentEditorSettings`](https://ej2.syncfusion.com/documentation/api/document-editor#documenteditorsettings) property for DocumentEditor also.
 
