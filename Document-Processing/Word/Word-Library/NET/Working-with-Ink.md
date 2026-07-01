@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Working with Ink Elements
 
-An Ink annotation is a freehand drawing or handwritten input composed of stroke points that conveys signatures, notes, or sketches directly on a page. You can add and modify Ink in Word documents using Syncfusion<sup>&reg;</sup> Word library (DocIO).
+An Ink annotation is a freehand drawing or handwritten input composed of stroke points that conveys signatures, notes, or sketches directly on a page. You can add and modify Ink in Word documents using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO).
 
 N> DocIO supports Ink only in DOCX format documents.
 

@@ -1,6 +1,6 @@
 ---
 title: Working with Animations in PowerPoint presentation | Syncfusion
-description: Learn here all about working with animations of Syncfusion<sup>&reg;</sup> PowerPoint Presentation Library and more.
+description: Learn here all about working with animations of PowerPoint Presentation.NET  Library and more.
 platform: document-processing
 control: Essential<sup>&reg;</sup> Presentation
 documentation: UG
@@ -8,7 +8,7 @@ keywords: PowerPoint animation, slide animation, shape animation, pptx animation
 ---
 # Working with Animations in PowerPoint Library
 
-[Animations](https://www.syncfusion.com/document-processing/powerpoint-framework/net/powerpoint-library/powerpoint-animation) are visual effects for the objects in PowerPoint presentation and animation helps to make a PowerPoint presentation more dynamic. Animation effects can be grouped into four categories.,
+[Animations](https://www.syncfusion.com/document-sdk/net-powerpoint-library/powerpoint-animations-and-transitions) are visual effects for the objects in PowerPoint presentation and animation helps to make a PowerPoint presentation more dynamic. Animation effects can be grouped into four categories.,
 
 1. Entrance
 2. Emphasis
@@ -3790,5 +3790,5 @@ Yes
 
 ## Online Demo
 
-* Explore how to add different animation effects for shapes in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/createanimation#/tailwind).
-* See how to modify animation effects for shapes in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/modifyanimation#/tailwind).
+* Explore how to add different animation effects for shapes in a PowerPoint presentation using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/createanimation#/tailwind).
+* See how to modify animation effects for shapes in a PowerPoint presentation using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/modifyanimation#/tailwind).

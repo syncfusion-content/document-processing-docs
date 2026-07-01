@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Getting Started with React Server-Backed PDF Viewer Component
 
-This section explains how to create a simple React application and add the server-backed [Syncfusion® React PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/react-pdf-viewer) component with the minimum required setup.
+This section explains how to create a simple React application and add the server-backed [React PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/react-pdf-viewer) component with the minimum required setup.
 
 N> Starting with the 2026 Vol 2 main release (June 2026), no new features will be added to the Server PDF Viewer, as almost all of the PDF Viewer functionalities are now available in the Standalone PDF Viewer. If you are currently using the server-backed PDF Viewer, please refer to the [migration documentation](./server-to-standalone) to transition to the Standalone PDF Viewer.
 
 ## Prerequisites
 
-[System requirements for Syncfusion® React components](https://ej2.syncfusion.com/react/documentation/system-requirement)
+[System requirements for React components](https://ej2.syncfusion.com/react/documentation/system-requirement)
 
 ## Create a React application
 
@@ -70,9 +70,9 @@ Add the following PDF Viewer and dependent component style references to the `sr
 {% endhighlight %}
 {% endtabs %}
 
-## Add the Syncfusion® React PDF Viewer component to the application
+## Add the React PDF Viewer component to the application
 
-Add the **Syncfusion® React PDF Viewer** component to your `src/App.jsx` or `src/App.tsx` file.
+Add the **React PDF Viewer** component to your `src/App.jsx` or `src/App.tsx` file.
 
 {% tabs %}
 {% highlight js tabtitle="JSX" %}
@@ -105,7 +105,7 @@ export default function App() {
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
          ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner,
          PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
- 
+ 
 export default function App() {
   return (
     <PdfViewerComponent id="container"

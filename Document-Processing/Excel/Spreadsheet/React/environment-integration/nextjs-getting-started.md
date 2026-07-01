@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Creating a Spreadsheet Application in Next.js
-This section provides a step-by-step guide for setting up a Next.js application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Spreadsheet component.
+This section provides a step-by-step guide for setting up a Next.js application and integrating the React Spreadsheet component.
 
 ## What is Next.js?
 
@@ -101,7 +101,7 @@ yarn add @syncfusion/ej2-react-spreadsheet
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme), which are available in the installed packages. It’s easy to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to match the style of your application by referring to one of the built-in themes.
+ React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme), which are available in the installed packages. It’s easy to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to match the style of your application by referring to one of the built-in themes.
 
 Import the `Material` theme into the **src/app/globals.css** file and removed the existing styles in that file, as shown below:
 
@@ -126,7 +126,7 @@ Import the `Material` theme into the **src/app/globals.css** file and removed th
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
-Follow the below steps to add the React Spreadsheet component to the Next.js project:
+Follow the below steps to add the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component to the Next.js project:
 
 1.Before adding the Spreadsheet component to your markup, create a `datasource.tsx` file within the **src/app/** folder and add the Spreadsheet component data.
 
@@ -445,3 +445,5 @@ yarn run dev
 {% endtabs %}
 
 To learn more about the functionality of the Spreadsheet component, refer to the [documentation](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/feature-list).
+
+N> Looking for the full React Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) page.

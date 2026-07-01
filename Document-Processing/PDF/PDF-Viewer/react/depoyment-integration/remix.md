@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Overview
 
-N> Remix's framework features were merged into React Router v7 and later. This guide targets React Router v7's framework-mode and shows a client-only (standalone) integration of the Syncfusion React PDF Viewer. Keep the viewer client-only to avoid SSR/runtime errors.
+N> Remix's framework features were merged into React Router v7 and later. This guide targets React Router v7's framework-mode and shows a client-only (standalone) integration of the React PDF Viewer. Keep the viewer client-only to avoid SSR/runtime errors.
 
 ## Quickstart
 
@@ -218,4 +218,4 @@ npm run dev
 ## See also
 
 - [Getting started overview](../getting-started-overview)
-- [Creating a Next.js application using Syncfusion React PDF Viewer](./nextjs-getting-started)
+- [Creating a Next.js application using React PDF Viewer](./nextjs-getting-started)

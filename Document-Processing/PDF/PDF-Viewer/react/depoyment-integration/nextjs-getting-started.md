@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Creating a Next.js application using Syncfusion React PDF Viewer
+# Creating a Next.js application using React PDF Viewer
 
-This guide shows how to set up a Next.js application and integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React PDF Viewer component.
+This guide shows how to set up a Next.js application and integrate the [React PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/react-pdf-viewer) component.
 
 ## What is Next.js?
 
@@ -102,7 +102,7 @@ yarn add @syncfusion/ej2-react-pdfviewer
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React components include built-in themes. Import the PDF Viewer theme and base styles to match the look and feel of the application.
+React components include built-in themes. Import the PDF Viewer theme and base styles to match the look and feel of the application.
 
 Where to add the imports:
 
@@ -180,7 +180,7 @@ yarn run dev
 
 ## Adding Next.js Configuration
 
-When deploying the Syncfusion PDF Viewer component in a Next.js application, you may need to add the following configuration to ensure smooth deployment:
+When deploying the PDF Viewer component in a Next.js application, you may need to add the following configuration to ensure smooth deployment:
 
 Create a next.config.js file in the root of your project, and add the following code to the file:
 
@@ -197,6 +197,8 @@ module.exports = nextConfig;
 To learn more about the PDF Viewer component, see the [documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started#module-injection).
 
 N> [View the Next.js PDF Viewer sample in the GitHub repository](https://github.com/SyncfusionExamples/syncfusion-react-pdfviewer-component-in-nextjs)
+
+N> Looking for the full React PDF Viewer component overview, features, pricing, and documentation? Visit the [React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/depoyment-integration/nextjs-getting-started) page.
 
 **See also**
 

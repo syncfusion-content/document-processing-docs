@@ -22,15 +22,52 @@ The following code shows how to set currentUser
 container.documentEditor.currentUser = 'engineer@mycompany.com';
 ```
 
-## Highlighting the text area
+## Protect document with editable region
+User can select a specific section and mark it as an editable region, allowing modification only in that part. The rest of the document remains protected from any changes.
 
-You can highlight the editable region of the current user using the `userColor` property.
+### Insert editable region
+Use the `insertEditingRegion` method to mark specific paragraphs as editable.This allows you to control editing by giving access to all users or only selected users.
 
-The following code shows how to set userColor.
-
-```typescript
+The following example shows how to insert an editable region.
+{% tabs %}
+{% highlight ts tabtitle="TS" %}
+ 
+// Allow editing for all users
+container.documentEditor.editor.insertEditingRegion();
+ 
+// pass a username to restrict access
+container.documentEditor.editor.insertEditingRegion("User Name");
+ 
+{% endhighlight %}
+{% endtabs %}
+ 
+### Highlight color for editable region
+ 
+The `userColor` property can be used to highlight the editable region of the current user.
+ 
+The following code example demonstrates how to set the userColor.
+ 
+{% tabs %}
+{% highlight ts tabtitle="TS" %}
+ 
 container.documentEditor.userColor = '#fff000';
-```
+ 
+{% endhighlight %}
+{% endtabs %}
+ 
+### Enable or disable editable region highlighting
+ 
+The `highlightEditableRanges` property can be used to toggle the highlighting of editable regions.
+ 
+The following code example demonstrates how to enable or disable editable region highlighting.
+ 
+{% tabs %}
+{% highlight ts tabtitle="TS" %}
+ 
+container.documentEditor.documentEditorSettings.highlightEditableRanges = true;
+ 
+{% endhighlight %}
+{% endtabs %}
 
 ## Restrict Editing Pane
 

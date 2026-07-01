@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with TypeScript Spreadsheet control
 
-This section explains how to create a simple TypeScript application and add the [Syncfusion® TypeScript Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) control with the minimum required setup.
+This section explains how to create a simple TypeScript application and add the [TypeScript Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) control with the minimum required setup.
 
 ## Prerequisites
 
@@ -142,7 +142,8 @@ You can also explore the Spreadsheet interactively using the live sample below.
           
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/spreadsheet/getting-started-cs1" %}
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-javascript-spreadsheet-control).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-javascript-spreadsheet-control). Looking for the full JavaScript Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) page.
+
 
 ## See also
 
