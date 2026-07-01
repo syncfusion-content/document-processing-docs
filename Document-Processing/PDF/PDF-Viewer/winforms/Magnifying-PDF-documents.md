@@ -9,7 +9,7 @@ documentation: ug
 
 # Adjust magnification of PDF documents using WinForms PDF Viewer
 
-The WinForms PDF Viewer has predefined set of zoom tools in the built-in toolbar, that allows you to change magnifications of the PDF document that is being displayed.
+The [WinForms PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/winforms-pdf-viewer) has predefined set of zoom tools in the built-in toolbar, that allows you to change magnifications of the PDF document that is being displayed.
 
 ![Zoom tools of WinForms PDF Viewer](images/zoom tools.png)
 

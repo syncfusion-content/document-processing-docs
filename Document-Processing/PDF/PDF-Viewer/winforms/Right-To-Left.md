@@ -9,7 +9,7 @@ documentation: ug
 
 # Right to Left (RTL) in WinForms PDF Viewer
 
-The Syncfusion<sup>&reg;</sup> WinForms PDF Viewer control supports right-to-left (RTL) rendering. All user interface elements are displayed based on left-to-right (LTR) or right-to-left (RTL) direction, ensuring proper layout and alignment for RTL languages.
+The [WinForms PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/winforms-pdf-viewer) control supports right-to-left (RTL) rendering. All user interface elements are displayed based on left-to-right (LTR) or right-to-left (RTL) direction, ensuring proper layout and alignment for RTL languages.
 
 
 ## Code Changes for Enabling RTL
