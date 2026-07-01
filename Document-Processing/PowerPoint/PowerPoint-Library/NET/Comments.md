@@ -1,7 +1,7 @@
 ---
 
 title: Working with comments in PowerPoint presentation | Syncfusion
-description: Learn here all about Working with comments feature of Syncfusion<sup>&reg;</sup> PowerPoint Presentation Library and more.
+description: Learn here all about Working with comments feature of PowerPoint Presentation Library and more.
 platform: document-processing
 control: Presentation
 documentation: UG
@@ -337,4 +337,4 @@ N> [Modern comments](https://support.microsoft.com/en-us/office/modern-comments-
 
 ## Online Demo
 
-* Explore how to add comments to a PowerPoint presentation slide using the .NET PowerPoint Library (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/comment#/tailwind).
+* Explore how to add comments to a PowerPoint presentation slide using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/comment#/tailwind).

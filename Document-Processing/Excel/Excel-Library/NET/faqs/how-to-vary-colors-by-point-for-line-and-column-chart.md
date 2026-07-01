@@ -1,6 +1,6 @@
 ---
 title: Vary colors by point for line and column chart | Syncfusion
-description: This page shows how to vary colors by point for line and column chart using the Syncfusion .NET Excel library (XlsIO).
+description: This page shows how to vary colors by point for line and column chart using the .NET Excel library.
 platform: document-processing
 control: XlsIO
 documentation: UG

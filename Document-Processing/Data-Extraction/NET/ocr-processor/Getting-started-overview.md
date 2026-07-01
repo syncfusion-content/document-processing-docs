@@ -1,5 +1,6 @@
 ---
 title: Getting started with OCR processor | Syncfusion
+canonical_url: "https://www.syncfusion.com/document-sdk/net-pdf-library/ocr-process"
 description: This section provides an introduction to getting started with the OCR processor and explains the basic concepts and workflow involved 
 platform: document-processing
 control: PDF
@@ -7,7 +8,7 @@ documentation: UG
 ---
 # Getting started with OCR processor
 
-To quickly get started with extracting text from scanned PDF documents in .NET using the Syncfusion<sup>&reg;</sup> OCR processor Library, refer to this video tutorial:
+To quickly get started with extracting text from scanned PDF documents in .NET using the .NET OCR processor library, refer to this video tutorial:
 {% youtube "https://www.youtube.com/watch?v=VhN7ETn0vyA" %}
 
 ## Prerequisites
@@ -15,19 +16,24 @@ To quickly get started with extracting text from scanned PDF documents in .NET u
 The Syncfusion<sup>&reg;</sup> OCR processor internally uses Tesseract libraries to perform OCR, so please copy the necessary Tessdata and TesseractBinaries folders from the NuGet package folder to the project folder to use the OCR feature.
 
 ### Prerequisites for Windows
+
 Please refer to the following code sample for windows.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 OCRProcessor processor = new OCRProcessor();
 
 {% endhighlight %}
+{% endtabs %}
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 processor.PerformOCR(lDoc);
 
 {% endhighlight %}
+{% endtabs %}
 
 Download the language packages from the following link.
 [https://github.com/tesseract-ocr/tessdata](https://github.com/tesseract-ocr/tessdata)
@@ -39,27 +45,33 @@ N> From 16.1.0.24 OCR is not a part of Essential Studio<sup>&reg;</sup> and is a
 
 Install the "libgdiplus" and "libc6-dev" packages. Please refer to the following commands to install the packages.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight bash %}
 
 sudo apt-get update
 sudo apt-get install libgdiplus
 sudo apt-get install libc6-dev
 
 {% endhighlight %}
+{% endtabs %}
 
 Please refer to the following code snippet for Linux.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 OCRProcessor processor = new OCRProcessor();
 
 {% endhighlight %}
+{% endtabs %}
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 processor.PerformOCR(lDoc);
 
 {% endhighlight %}
+{% endtabs %}
 
 Download the language packages from the following link.    
 [https://github.com/tesseract-ocr/tessdata](https://github.com/tesseract-ocr/tessdata)
@@ -68,25 +80,31 @@ Download the language packages from the following link.
 
 Install the "libgdiplus" and "tesseract" packages in the Mac machine where the OCR operations occur. Please refer to the following commands to install this package.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight bash %}
 
 brew install mono-libgdiplus
 brew install tesseract
 {% endhighlight %}
+{% endtabs %}
 
 Please refer to the following code sample for Mac.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 OCRProcessor processor = new OCRProcessor();
 
 {% endhighlight %}
+{% endtabs %}
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 processor.PerformOCR(lDoc);
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Perform OCR using C# 
 
@@ -109,15 +127,18 @@ Step 3:Please use the OCR language data for other languages using the following 
 
 Step 4: Include the following namespace in your class file. 
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.OCRProcessor;
 using Syncfusion.Pdf.Parsing;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: Use the following code sample to perform OCR on the entire PDF document using PerformOCR method of the [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html) class in Program.cs file. 
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Initialize the OCR processor.
@@ -136,6 +157,7 @@ using (OCRProcessor processor = new OCRProcessor())
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 By executing the program, you will get the PDF document as follows.
 <img src="OCR-Images/Output.png" alt="Output screenshot" width="100%" Height="Auto"/>

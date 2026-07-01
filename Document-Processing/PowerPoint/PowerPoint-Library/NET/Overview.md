@@ -1,5 +1,6 @@
 ---
 title: Create and edit PowerPoint files in CSharp |Syncfusion<sup>&reg;</sup>|
+canonical_url: "https://www.syncfusion.com/document-sdk/net-powerpoint-library"
 description: Essential<sup>&reg;</sup> Presentation is a .NET PowerPoint library to create, read, edit, & convert PowerPoint files in WinForms, WPF, UWP, ASP.NET Core & Xamarin applications
 platform: document-processing
 control: Presentation
@@ -7,7 +8,7 @@ documentation: UG
 ---
 # Overview of PowerPoint Presentation
 
-The PowerPoint framework is a feature rich [.NET PowerPoint class library](https://www.syncfusion.com/document-processing/powerpoint-framework/net) that can be used by developers to create, read, and write Microsoft PowerPoint files by using C#, VB.NET, and managed C++ code. The library can be used in [Windows Forms](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-windows-forms), [WPF](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-wpf), [ASP.NET Web Forms](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-asp-net-web-forms), [ASP.NET MVC](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-asp-net-mvc), [ASP.NET Core](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-asp-net-core-c-sharp), [Blazor](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-blazor), [UWP](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-uwp), [Xamarin](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-xamarin), [WinUI](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-winui) and [.NET MAUI](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-maui) applications.
+The PowerPoint framework is a feature rich [.NET PowerPoint class library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) that can be used by developers to create, read, and write Microsoft PowerPoint files by using C#, VB.NET, and managed C++ code. The library can be used in [Windows Forms](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-windows-forms), [WPF](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-wpf), [ASP.NET Web Forms](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-asp-net-web-forms), [ASP.NET MVC](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-asp-net-mvc), [ASP.NET Core](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-asp-net-core-c-sharp), [Blazor](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-blazor), [UWP](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-uwp), [Xamarin](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-xamarin), [WinUI](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-winui) and [.NET MAUI](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-maui) applications.
 
 It is a non-UI component that provides a full-fledged PowerPoint presentation instance that facilitates accessing and manipulating the presentations without any dependency of Microsoft Office COM libraries and Microsoft Office.
 
@@ -37,7 +38,7 @@ It is a non-UI component that provides a full-fledged PowerPoint presentation in
 * Microsoft PowerPoint 2019
 * Microsoft 365
 
-T> If you encounter issues while using the .NET PowerPoint library in ASP.NET Core, refer to the [troubleshooting guide](https://support.syncfusion.com/kb/article/16010/how-to-use-troubleshooting-guide-for-aspnet-core-powerpoint-library-issues) for recommended checks and solutions.
+T> If you encounter issues while using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) in ASP.NET Core, refer to the [troubleshooting guide](https://support.syncfusion.com/kb/article/16010/how-to-use-troubleshooting-guide-for-aspnet-core-powerpoint-library-issues) for recommended checks and solutions.
 
 N> 1. The current version of Essential<sup>&reg;</sup> Presentation supports the .PPTX, .PPTM, .POTX, .POTM file formats only.
 N> 2. The current version of Essential<sup>&reg;</sup> Presentation does not support some features in Microsoft PowerPoint such as Word Art, creation and editing of Handouts, equations, create and edit audio and video content, built-in themes, and its variants.
@@ -46,3 +47,5 @@ N> 2. The current version of Essential<sup>&reg;</sup> Presentation does not sup
 
 * [Assemblies required](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/assemblies-required)
 * [NuGet packages required](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/nuget-packages-required)
+
+N> Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page.

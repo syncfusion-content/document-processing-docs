@@ -51,8 +51,8 @@ Step 6: Add the following code to create a new button.
 {% capture codesnippet2 %}
 {% tabs %}
 {% highlight CSHTML %}
-<h2>Syncfusion Excel library (Essential XlsIO)</h2>
-<p>Syncfusion Excel library (Essential XlsIO)  is a Blazor Excel library used to create, read, edit, and convert Excel files in your applications without Microsoft Office dependencies.</p>
+<h2>.NET Excel Library</h2>
+<p>.NET Excel Library is a Blazor Excel library used to create, read, edit, and convert Excel files in your applications without Microsoft Office dependencies.</p>
 <button class="btn btn-primary" @onclick="@ConvertExceltoImage">Convert Excel to Image</button>
 {% endhighlight %}
 {% endtabs %}

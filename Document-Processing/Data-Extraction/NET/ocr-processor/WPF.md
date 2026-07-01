@@ -28,7 +28,7 @@ N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assem
 Step 3: Add a new button in **MainWindow.xaml** to perform OCR as follows.
 
 {% tabs %}
-{% highlight CSHTML %}
+{% highlight XAML %}
 
 <Grid>
     <Button Content="Perform OCR" HorizontalAlignment="Left" Margin="279,178,0,0" VerticalAlignment="Top" Height="68" Width="203" Click="Button_Click"/>
