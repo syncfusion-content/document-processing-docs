@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 To save a document to Google Cloud Storage, you can follow the steps below
 
-**Step 1:** Create a Simple [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) sample in React
+**Step 1:** Create a Simple [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) sample in React
 
 Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in react. This will give you a basic setup of the Document Editor component.
 

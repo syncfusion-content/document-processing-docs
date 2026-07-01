@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # History in React Document editor component
 
-[Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) tracks the history of all editing actions done in the document, which allows undo and redo functionality.
+[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) tracks the history of all editing actions done in the document, which allows undo and redo functionality.
 
 ## Enable or disable history
 

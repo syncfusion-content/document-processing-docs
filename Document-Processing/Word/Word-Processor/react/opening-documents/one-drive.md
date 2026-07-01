@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Open document from One Drive in React Document editor
 
-To load a document from One Drive in a [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor), you can follow the steps below
+To load a document from One Drive in a [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor), you can follow the steps below
 
 **Step 1** Create the Microsoft graph API.
 

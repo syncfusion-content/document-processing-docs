@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Document editor component
 
-The accessibility compliance for the [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) component is outlined below.
+The accessibility compliance for the [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
