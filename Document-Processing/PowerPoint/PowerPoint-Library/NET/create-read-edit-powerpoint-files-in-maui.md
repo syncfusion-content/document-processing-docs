@@ -1,6 +1,6 @@
 ---
 title: Create and edit PowerPoint files in .NET MAUI |Syncfusion|
-description: A .NET MAUI PowerPoint library to create, read and edit PowerPoint files in .NET MAUI applications. Supports text, shape, chart, table and combine PowerPoints.
+description: A .NET PowerPoint library to create, read and edit PowerPoint files in .NET MAUI applications. Supports text, shape, chart, table and combine PowerPoints.
 platform: document-processing
 control: PowerPoint
 documentation: UG

@@ -101,7 +101,39 @@ To delete a Named Range:
 
 N> Deleting a Named Range used in formulas may cause formula errors. Ensure the Named Range is not referenced before deleting it.
 
-![Edit and Delete - Named Range](./images/edit-and-delete.png)
+## Aggregates
+
+The **Aggregates** feature provides instant statistical summaries of selected cell ranges without requiring formula creation. This functionality enables quick data analysis by automatically calculating statistics such as sum, average, count, minimum, and maximum values. Aggregate calculations appear in the footer at the bottom of the Spreadsheet component, providing at-a-glance insights into selected data. To control this functionality, use the `ShowAggregate` property, which enables or disables aggregate support in the Spreadsheet. The default value of the `ShowAggregate` property is true.
+
+### Supported Aggregate Functions
+
+The Blazor Spreadsheet component calculates five key aggregate statistics for numeric data in selected ranges. These functions are automatically computed based on the active selection and displayed in the footer.
+
+| Aggregate Function | Description |
+|---|---|
+| **Sum** | Calculates the total of all selected numeric values |
+| **Average** | Computes the arithmetic mean of all selected numeric values |
+| **Count** | Counts the number of cells containing numeric values in the selection |
+| **Min** | Identifies the smallest value in the selected range |
+| **Max** | Identifies the largest value in the selected range |
+
+N> Aggregate calculations only include numeric values. Cells containing text, logical values, or empty cells are excluded from sum and average calculations but are counted if the **Count** includes them based on their data type.
+
+### Aggregates and Selection Behavior
+
+**Multi-Range Selections:**
+When multiple non-contiguous ranges are selected, aggregates are calculated based on all selected cells combined.
+
+**Cross-Sheet References:**
+Aggregates only calculate values within the currently active worksheet. Cross-sheet selections do not contribute to aggregate calculations.
+
+**Dynamic Updates:**
+As selections are expanded, contracted, or changed, aggregate values update instantaneously to reflect the new selection.
+
+**Empty and Non-Numeric Handling:**
+Empty cells and cells containing text or formulas are excluded from Sum and Average calculations. The Count function may include or exclude these depending on the cell content type.
+
+![Aggregates](./images/aggregates-status-bar.png)
 
 ## Supported Formulas
 

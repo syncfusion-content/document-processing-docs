@@ -32,3 +32,5 @@ Step 5: Then navigate back to the `home\site\wwwroot` folder and ensure whether 
 Step 6: Finally, refresh the service page URL and then the application will be work as expected.
 
 N> If still the service is not working properly, stop and start the service again in the Azure portal. The `TypeInitializationException` will no longer be thrown.
+
+N> When running a PDFToImageConverter inside an Alpine-based Docker environment, you may encounter a runtime exception System.DllNotFoundException. `libdl.so` assembly is unavailable in Alpine Linux. Without the `libdl.so` file, we cannot read the Pdfium assembly. Therefore, it is not possible to use `PdfToImageConverter` in an Alpine Docker environment.

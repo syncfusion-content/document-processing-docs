@@ -377,10 +377,6 @@ Using document As WordDocument = New WordDocument("Template.docx", FormatType.Do
 End Using
 {% endhighlight %}
 
-{% highlight c# tabtitle="UWP" %}
-//DocIO supports updating word count in WPF, Windows Forms, ASP.NET and ASP.NET MVC, platforms alone.
-{% endhighlight %}
-
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-document/Update-words-count).
@@ -432,10 +428,6 @@ Using document As WordDocument = New WordDocument("Template.docx", FormatType.Do
 End Using
 {% endhighlight %}
 
-{% highlight c# tabtitle="UWP" %}
-//DocIO supports updating word count in WPF, Windows Forms, ASP.NET and ASP.NET MVC, platforms alone.
-{% endhighlight %}
-
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-document/Update-pages-count).
@@ -443,6 +435,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 N>  1. The word to PDF layout engine is used for updating the page count in word document. Due to its limitations, it may result in an incorrect page count and the execution of this process may take some time.
 N>  2. In ASP.NET Core and Xamarin platforms, to update page count in a Word document we recommend you to use Word to PDF [assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required#converting-word-document-to-pdf) or [NuGet](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#converting-word-document-to-pdf) as a reference in your application to update page count in a Word document.
 N>  3. DocIO uses the Word-to-PDF layout engine to update page count. If the required fonts are missing in the environment, alternate fonts are used, which may affect accuracy. [Ensure](https://support.syncfusion.com/kb/article/6821/check-whether-fonts-in-word-document-are-available-in-machine-for-pdf-or-image-conversion) all fonts used in the input document are available for a correct page count.
+N>  4. In UWP platform, to updates paragraph, word, and character counts in the document using the [UpdateWordCount()](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_UpdateWordCount) API.
 
 ### Adding Custom Document properties
 
@@ -874,50 +867,6 @@ document.Background.Picture = Image.FromFile("Image.png")
 document.Save("Sample.docx", FormatType.Docx)
 'Closes the document
 document.Close()
-{% endhighlight %}
-
-{% highlight c# tabtitle="Xamarin" %}
-//"App" is the class of Portable project
-Assembly assembly = typeof(App).GetTypeInfo().Assembly;
-using (WordDocument document = new WordDocument(assembly.GetManifestResourceStream("XamarinFormsApp1.Assets.Hello World.docx"), FormatType.Docx))
-{
-    document.Background.Type = BackgroundType.Picture;
-    //Opens the existing image 
-    Stream imageStream = assembly.GetManifestResourceStream("CreateWordSample.Assets.Picture.png");
-    MemoryStream memoryStream = new MemoryStream();
-    imageStream.CopyTo(memoryStream);
-    document.Background.Picture = memoryStream.ToArray();
-    MemoryStream stream = new MemoryStream();
-    document.Save(stream, FormatType.Docx);
-    //Save the stream as a file in the device and invoke it for viewing
-    Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView("WorkingWordDoc.docx", "application/msword", stream);
-    //Closes the document
-    document.Close();
-    //Please download the helper files from the below link to save the stream as file and open the file for viewing in Xamarin platform
-    //https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-xamarin#helper-files-for-xamarin
-}
-{% endhighlight %}
-
-{% highlight c# tabtitle="UWP" %}
-//"App" is the class of Portable project.
-Assembly assembly = typeof(App).GetTypeInfo().Assembly;
-using (WordDocument document = new WordDocument(assembly.GetManifestResourceStream("CreateWordSample.Assets.Test.docx"), FormatType.Docx))
-{
-    document.Background.Type = BackgroundType.Picture;
-    //Opens the existing image 
-    Stream imageStream = assembly.GetManifestResourceStream("CreateWordSample.Assets.Picture.png");
-    MemoryStream memoryStream = new MemoryStream();
-    imageStream.CopyTo(memoryStream);
-    document.Background.Picture = memoryStream.ToArray();
-    MemoryStream stream = new MemoryStream();
-    //Saves the Word file to MemoryStream
-    await document.SaveAsync(stream, FormatType.Docx);
-    //Saves the stream as Word file in local machine
-    Save(stream, "Result.docx");
-    //Please refer the below link to save Word document in UWP platform
-    //https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-uwp#save-word-document-in-uwp
-    document.Close();
-}
 {% endhighlight %}
 
 {% endtabs %}

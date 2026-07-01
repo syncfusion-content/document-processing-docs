@@ -97,14 +97,6 @@ document.Save("Sample.docx")
 document.Close()
 {% endhighlight %}
 
-{% highlight c# tabtitle="Xamarin" %}
-//OleDbConnection not supported in Xamarin platform.
-{% endhighlight %}
-
-{% highlight c# tabtitle="UWP" %}
-//OleDbConnection not supported in UWP platform.
-{% endhighlight %}
-
 {% endtabs %}
 
 The following code example shows GetCommands method which is used to get data for mail merge.
@@ -115,7 +107,7 @@ The following code example shows GetCommands method which is used to get data fo
 //OleDbConnection supported in ASP.NET Core platform from 3.0 Preview 8 only.
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 private ArrayList GetCommands()
 {
     //ArrayList contains the list of commands
@@ -148,14 +140,6 @@ Private Function GetCommands() As ArrayList
     commands.Add(entry)
     Return commands
 End Function
-{% endhighlight %}
-
-{% highlight c# tabtitle="Xamarin" %}
-//OleDbConnection not supported in Xamarin platform.
-{% endhighlight %}
-
-{% highlight c# tabtitle="UWP" %}
-//OleDbConnection not supported in UWP platform.
 {% endhighlight %}
 
 {% endtabs %}
@@ -249,42 +233,6 @@ document.Save("Sample.docx")
 document.Close()
 {% endhighlight %}
 
-{% highlight c# tabtitle="Xamarin" %}
-//Creating dynamic objects using dynamic keyword is not supported in Xamarin.iOS.
-//You can use IDictionary<string, object> collection to generate dynamic objects.
-{% endhighlight %}
-
-{% highlight c# tabtitle="UWP" %}
-Assembly assembly = typeof(App).GetTypeInfo().Assembly;
-WordDocument document = new WordDocument();
-document.Open(assembly.GetManifestResourceStream("Sample.Assets.Template.docx"), FormatType.Docx);
-//Creates an instance of the MailMergeDataSet
-MailMergeDataSet dataSet = new MailMergeDataSet();
-//Creates the mail merge data table in order to perform mail merge
-MailMergeDataTable dataTable = new MailMergeDataTable("Customers", GetCustomers());
-dataSet.Add(dataTable);
-dataTable = new MailMergeDataTable("Orders", GetOrders());
-dataSet.Add(dataTable);
-List<DictionaryEntry> commands = new List<DictionaryEntry>();
-//DictionaryEntry contain "Source table" (key) and "Command" (value)
-DictionaryEntry entry = new DictionaryEntry("Customers", string.Empty);
-commands.Add(entry);
-//Retrieves the customer details
-entry = new DictionaryEntry("Orders", "CustomerID = %Customers.CustomerID%");
-commands.Add(entry);
-//Performs the mail merge operation with the dynamic collection
-document.MailMerge.ExecuteNestedGroup(dataSet, commands);
-//Saves the Word file to MemoryStream
-MemoryStream stream = new MemoryStream();
-await document.SaveAsync(stream, FormatType.Docx);
-//Closes the Word document
-document.Close();
-//Saves the stream as Word file in local machine
-Save(stream, "Sample.docx");
-//Refer to the following link to save Word document in UWP platform.
-//https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-uwp#save-word-document-in-uwp
-{% endhighlight %}
-
 {% endtabs %}
 
 The following code example shows GetCustomers and GetOrders methods which are used to get data for mail merge.
@@ -346,30 +294,6 @@ Private Function GetOrders() As List(Of ExpandoObject)
 End Function
 {% endhighlight %}
 
-{% highlight c# tabtitle="Xamarin" %}
-//Creating dynamic objects using dynamic keyword is not supported in Xamarin.iOS.
-//You can use IDictionary<string, object> collection to generate dynamic objects.
-{% endhighlight %}
-
-{% highlight c# tabtitle="UWP" %}
-private List<ExpandoObject> GetCustomers()
-{
-    List<ExpandoObject> customers = new List<ExpandoObject>();
-    customers.Add(GetDynamicCustomer(100, "Robert", "Syncfusion"));
-    customers.Add(GetDynamicCustomer(102, "John", "Syncfusion"));
-    customers.Add(GetDynamicCustomer(110,"David","Syncfusion"));
-    return customers;
-}
-private List<ExpandoObject> GetOrders()
-{
-    List<ExpandoObject> orders = new List<ExpandoObject>();
-    orders.Add(GetDynamicOrder(1001, "MSWord", 100));
-    orders.Add(GetDynamicOrder(1002, "AdobeReader", 100));      
-    orders.Add(GetDynamicOrder(1003, "VisualStudio", 102));
-    return orders;
-}
-{% endhighlight %}
-
 {% endtabs %}
 
 The following code example shows GetDynamicCustomer and GetDynamicOrder methods, which are used to generate dynamic objects for mail merge.
@@ -429,30 +353,6 @@ Private Function GetDynamicOrder(orderID As Integer, orderName As String, custom
     dynamicOrder.CustomerID = customerID
     Return dynamicOrder
 End Function
-{% endhighlight %}
-
-{% highlight c# tabtitle="Xamarin" %}
-//Creating dynamic objects using dynamic keyword is not supported in Xamarin.iOS.
-//You can use IDictionary<string, object> collection to generate dynamic objects.
-{% endhighlight %}
-
-{% highlight c# tabtitle="UWP" %}
-private dynamic GetDynamicCustomer(int customerID,string customerName, string companyName)
-{
-    dynamic dynamicCustomer = new ExpandoObject();
-    dynamicCustomer.CustomerID = customerID;
-    dynamicCustomer.CustomerName = customerName;
-    dynamicCustomer.CompanyName = companyName;
-    return dynamicCustomer;
-}
-private dynamic GetDynamicOrder(int orderID, string orderName, int customerID)
-{
-    dynamic dynamicOrder = new ExpandoObject();
-    dynamicOrder.OrderID = orderID;
-    dynamicOrder.OrderName = orderName;
-    dynamicOrder.CustomerID = customerID;
-    return dynamicOrder;
-}
 {% endhighlight %}
 
 {% endtabs %}
