@@ -16,21 +16,13 @@ Step 1: Create a new ASP.NET Web Application Project.
 
 ![Create a ASP.NET Web App project in visual studio](ASP-NET-MVC_images\ASP-NET-MVC_images_img9.png)
 
-Step 2: Name the project, choose the framework and click **Create** button.
-
-![Name the project and choose the framework version](ASP-NET-MVC_images\ASP-NET-MVC_images_img10.png)
-
-Step 3: Select the MVC application.
-
-![Select the MVC App](ASP-NET-MVC_images\ASP-NET-MVC_images_img11.png)
-
-Step 4: Install the [Syncfusion.XlsIO.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.XlsIO.AspNet.Mvc5) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+Step 2: Install the [Syncfusion.XlsIO.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.XlsIO.AspNet.Mvc5) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 
 ![Install Syncfusion.XlsIO.AspNet.Mvc5 NuGet Package](ASP-NET-MVC_images\ASP-NET-MVC_images_img12.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
 
-Step 5: Add a new button in the **Index.cshtml** as shown below.
+Step 3: Add a new button in the **Index.cshtml** as shown below.
 {% tabs %}  
 {% highlight CSHTML %}
 @{Html.BeginForm("ConvertExceltoImage", "Home", FormMethod.Get);
@@ -44,14 +36,14 @@ Step 5: Add a new button in the **Index.cshtml** as shown below.
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the following namespaces in **HomeController.cs**.
+Step 4: Include the following namespaces in **HomeController.cs**.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 using Syncfusion.XlsIO;
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Include the below code snippet in **HomeController.cs** to **convert an Excel document to Image**. 
+Step 5: Include the below code snippet in **HomeController.cs** to **convert an Excel document to Image**. 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 public void ConvertExcelToImage()

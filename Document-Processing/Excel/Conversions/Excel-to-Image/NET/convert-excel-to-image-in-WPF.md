@@ -62,18 +62,21 @@ using Syncfusion.XlsIO;
 Step 6: Include the below code snippet in **btnConvert_Click** to **convert an Excel document to Image**.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
-using (ExcelEngine excelEngine = new ExcelEngine())
+private void btnConvert_Click(object sender, EventArgs e)
 {
-    IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
-	IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
-    IWorksheet worksheet = workbook.Worksheets[0];
+    using (ExcelEngine excelEngine = new ExcelEngine())
+    {
+        IApplication application = excelEngine.Excel;
+        application.DefaultVersion = ExcelVersion.Xlsx;
+        IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
+        IWorksheet worksheet = workbook.Worksheets[0];
 
-    //Convert the Excel to image
-    System.Drawing.Image image = worksheet.ConvertToImage(1, 1, 20, 4);
+        //Convert the Excel to image
+        System.Drawing.Image image = worksheet.ConvertToImage(1, 1, 20, 4);
 
-    //Save the image as jpeg
-    image.Save("Sample.Jpeg", ImageFormat.Jpeg);
+        //Save the image as jpeg
+        image.Save("Sample.Jpeg", ImageFormat.Jpeg);
+    }
 }
 {% endhighlight %}
 {% endtabs %}      
