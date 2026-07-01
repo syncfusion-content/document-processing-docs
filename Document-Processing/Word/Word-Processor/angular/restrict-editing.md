@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Restrict Editing in Angular DOCX Editor
 
-Syncfusion® Angular DOCX Editor (Document Editor) provides support for restricting editing within a document. It enables control over how and where content can be modified. This helps limit editing so only specific sections of the document can be changed.
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) provides support for restricting editing within a document. It enables control over how and where content can be modified. This helps limit editing so only specific sections of the document can be changed.
 
 ## Configure on client side
 
