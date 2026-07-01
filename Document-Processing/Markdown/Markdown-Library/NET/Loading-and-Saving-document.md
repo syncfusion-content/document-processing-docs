@@ -12,9 +12,9 @@ The Syncfusion<sup>&reg;</sup> Markdown library allows you to load an existing M
 
 ## Namespaces required
 
-N> Refer to the appropriate tabs in the code snippets section: ***C#*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, WinUI, WinForms and WPF; ***VB.NET*** for VB.NET applications.
-
 The following namespaces of Essential<sup>&reg;</sup> Markdown need to be included in your application to load and save the Markdown document.
+
+N> Refer to the appropriate tabs in the code snippets section: ***C#*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, WinUI, WinForms and WPF; ***VB.NET*** for VB.NET applications.
 
 {% tabs %}
 

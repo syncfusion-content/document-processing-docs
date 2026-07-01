@@ -20,11 +20,12 @@ The following assemblies need to be referenced in your application to use the .N
 <tbody>
 <tr>
 <td>
-WPF, Windows Forms, ASP.NET MVC, ASP.NET Core, Blazor, Universal Windows Platform, Windows UI Library (WinUI) and .NET Multi-platform App UI (.NET MAUI)
+WPF, Windows Forms, [ASP.NET MVC](/document-processing/markdown/markdown-library/net/Create-Markdown-document-in-ASP-NET-MVC), [ASP.NET Core](/document-processing/markdown/markdown-library/net/Create-Markdown-document-in-ASP-NET-Core), [Blazor](/document-processing/markdown/markdown-library/net/create-markdown-document-in-blazor), Universal Windows Platform, Windows UI Library (WinUI) and .NET Multi-platform App UI (.NET MAUI)
 <br/><br/></td>
 <td>
 Syncfusion.Markdown
 <br/><br/></td>
+</tr>
 </tbody>
 </table>
 
