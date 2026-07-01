@@ -187,7 +187,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Get field code
 
-You can get the field code of a specific field using its [FieldCode](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WField.html#Syncfusion_DocIO_DLS_WField_FieldCode) property.
+You can get the field code of a specific field using its [FieldCode](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WField.html#Syncfusion_DocIO_DLS_WField_FieldCode) property.
 
 The following code example explains how to get the field code of a specific field in a Word document.
 

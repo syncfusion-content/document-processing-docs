@@ -9,7 +9,7 @@ documentation: ug
 
 # Create the PDF Viewer in a Splitter component in Blazor
 
-The Syncfusion Blazor Splitter organizes content into resizable panes. The following example shows how to place the PDF Viewer inside a Splitter pane so users can view a document alongside other UI content.
+The Blazor Splitter organizes content into resizable panes. The following example shows how to place the PDF Viewer inside a Splitter pane so users can view a document alongside other UI content.
 
 ```cshtml
 

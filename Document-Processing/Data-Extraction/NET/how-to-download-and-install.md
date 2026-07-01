@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Installing Syncfusion Data Extraction - Syncfusion
-description: Learn how to install the Syncfusion Smart Data Extractor library for extracting structured data from PDFs and images in .NET applications.
+description: Learn how to install the .NET Smart Data Extractor Library for extracting structured data from PDFs and images in .NET applications.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug

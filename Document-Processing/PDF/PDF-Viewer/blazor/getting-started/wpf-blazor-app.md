@@ -9,7 +9,7 @@ documentation: ug
 
 # View PDF files using the PDF Viewer in a WPF Blazor Hybrid App
 
-This section explains how to add the Syncfusion&reg; Blazor PDF Viewer to a WPF Blazor Hybrid app using [Visual Studio](https://visualstudio.microsoft.com/vs/) or Visual Studio Code. The result is a desktop (WPF) application that hosts Blazor UI inside a BlazorWebView control.
+This section explains how to add the Blazor PDF Viewer to a WPF Blazor Hybrid app using [Visual Studio](https://visualstudio.microsoft.com/vs/) or Visual Studio Code. The result is a desktop (WPF) application that hosts Blazor UI inside a BlazorWebView control.
 
 {% tabcontents %}
 
@@ -215,11 +215,11 @@ N> If the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ## Run the app
 
-Run the WPF app. The Syncfusion® Blazor PDF Viewer renders inside the WPF window.
+Run the WPF app. The Blazor PDF Viewer renders inside the WPF window.
 
 ![WPF Blazor HybridApp SfPdfViewer rendering in browser](../images/blazor-hybrid-wpf-sfpdfviewer.png)
 
-> [View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Getting%20Started/Blazor%20Hybrid%20-%20WPF).
+N> [View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Getting%20Started/Blazor%20Hybrid%20-%20WPF). Looking for the full Blazor PDF Viewer component overview, features, pricing, and documentation? Visit the [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) page.
 
 ## See also
 

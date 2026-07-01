@@ -200,7 +200,6 @@ Ensure all required dependencies for the Chromium are installed on the system. T
 Here's how you can modify your Docker file:
 {% highlight dockerfile %}
 FROM your-base-image
-
 RUN apt-get update && apt-get install -yq --no-install-recommends \
     libasound2 \
     libatk1.0-0 \
@@ -264,9 +263,7 @@ Add the following code snippet to the <b>.pubxml</b> file to apply the necessary
 {% highlight C# tabtitle="C#" %}
 
 <PropertyGroup>
-
  <ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
-
 </PropertyGroup>
 
 {% endhighlight %}
@@ -275,15 +272,11 @@ Add the following code to the <b>.csproj</b> file to ensure the <b>locale</b> fo
 
 {% highlight C# tabtitle="C#" %}
 
-	<ItemGroup>
-
+<ItemGroup>
 	<None Include="bin\Release\net9.0\runtimes\linux\native\locales\**\*"
-
 		CopyToOutputDirectory="Always"
-
 		Link="runtimes/linux/native/locales/%(RecursiveDir)%(Filename)%(Extension)"/>
-
-	</ItemGroup>
+</ItemGroup>
 
 {% endhighlight %}
 
@@ -801,23 +794,14 @@ To resolve this issue, we can install the chromium using the docker file and set
 {% highlight C# tabtitle="C#" %}
 
 FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base 
-
 RUN apt-get update && apt-get install -y \ 
-
 libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 \ 
-
 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 \ 
-
 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 \ 
-
 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 \ 
-
 libnss3 libgbm1 chromium 
-
 WORKDIR /app 
-
 EXPOSE 80 
-
 EXPOSE 443 
 
 {% endhighlight %}
@@ -1012,12 +996,12 @@ If you are using Windows 7/8 or Windows Server 2008/2012, please use Chromium ve
 <br/><br/>
 
 Please refer to the below thread for more information,
-<a href="https://support.google.com/chrome/thread/185534985">https://support.google.com/chrome/thread/185534985</a>
+<a href="https://support.google.com/chrome/thread/185534985">Thread</a>
 
 <br/>
 
 Blink binaries (Version 109.0.5414.75),
-<a href="https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlinkBinaries_109.0.5414.7560606898">https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlinkBinaries_109.0.5414.7560606898</a>
+<a href="https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlinkBinaries_109.0.5414.7560606898">Blink Binaries</a>
 
 </td>
 </tr>
@@ -1086,7 +1070,7 @@ fileStream.Dispose();
 <td>We are internally using the Blink rendering engine to convert HTML to PDF document. Due to the sandbox GDI limitation on Azure App services and Function, custom fonts are not rendered (system-installed font is used instead) because of sandbox GDI API limitations that present even in VM-based Azure Apps plans. So, that the converter will automatically renders with default font.
 
 Refer below link for more information. This is a limitation of Azure cloud environment.
-<a href="https://github.com/projectkudu/kudu/wiki/Azure-Web-App-sandbox">https://github.com/projectkudu/kudu/wiki/Azure-Web-App-sandbox</a>
+<a href="https://github.com/projectkudu/kudu/wiki/Azure-Web-App-sandbox">Azure Web App sandbox</a>
 
 </td>
 </tr>
@@ -1095,7 +1079,7 @@ Refer below link for more information. This is a limitation of Azure cloud envir
 <td>
 we can overcome this issue by using Azure cloud service which has the elevated access permissions. If it is possible to use Azure cloud service API for converting HTML to PDF. Please refer below link for converting HTML to PDF in Azure cloud service. The custom font may work in Azure cloud service/Azure VM, we ensured this by creating simple sample in Azure VM and the font is working properly. If possible, kindly use the Azure cloud service with VM to resolve the reported issue. 
 
-KB: <a href="https://www.syncfusion.com/kb/10258/how-to-convert-html-to-pdf-in-azure-using-blink">https://www.syncfusion.com/kb/10258/how-to-convert-html-to-pdf-in-azure-using-blink</a>
+KB: <a href="https://www.syncfusion.com/kb/10258/how-to-convert-html-to-pdf-in-azure-using-blink">Convert HTML to PDF in Azure using Blink</a>
 </td>
 </tr>
 
@@ -1500,7 +1484,7 @@ The problem is limited to Azure Functions with premium plans in Net 8.0 version.
 
 <b>Prerequisites dependencies</b>:
 
-{% highlight C# %}
+{% highlight bash %}
 
 apt-get update && apt-get install -yq --no-install-recommends libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 libnss3 libgbm1
 
@@ -1508,15 +1492,15 @@ apt-get update && apt-get install -yq --no-install-recommends libasound2 libatk1
 
 N> We have option to exclude the default Blink binaries from the installation package. This will reduce the size of your deployment package in azure. Please refer to the code example below.
 
-{% highlight C# %}
+{% tabs %}
+{% highlight XAML %}
 
 <PackageReference Include="Syncfusion.HtmlToPdfConverter.Net.Linux" Version="25.1.35" >
-
-<ExcludeAssets>native</ExcludeAssets>
-
+	<ExcludeAssets>native</ExcludeAssets>
 </PackageReference>
 
 {% endhighlight %}
+{% endtabs %}
 
 ## How to Exclude BlinkBinaries or Runtime Files in Build or Deployment
 
@@ -1529,7 +1513,8 @@ You can prevent runtime files from being included by restricting the package to 
 
 Refer to the following package reference:
 
-{% highlight C# %}
+{% tabs %}
+{% highlight XAML %}
 
 <ItemGroup>
     <PackageReference Include="Syncfusion.HtmlToPdfConverter.Net.Windows" Version="32.1.21">
@@ -1538,6 +1523,7 @@ Refer to the following package reference:
 </ItemGroup>
 
 {% endhighlight %}
+{% endtabs %}
 
 By using <b>IncludeAssets="compile"</b>, only the required compile-time metadata is included, and all runtime dependencies (BlinkBinaries) are excluded from the final build or publish output.
 
@@ -1548,11 +1534,13 @@ N> If you exclude runtime files, you must manually place BlinkBinaries on the se
 For .NET Framework applications, Blink runtime files are included through a .targets file referenced in the project.
 To exclude BlinkBinaries, simply remove this import entry.
 
-{% highlight C# %}
+{% tabs %}
+{% highlight XAML %}
 
 <Import Project="packages\Syncfusion.HtmlToPdfConverter.AspNet.Mvc5.32.1.20\build\net462\Syncfusion.HtmlToPdfConverter.AspNet.Mvc5.targets" Condition="Exists('packages\Syncfusion.HtmlToPdfConverter.AspNet.Mvc5.32.1.20\build\net462\Syncfusion.HtmlToPdfConverter.AspNet.Mvc5.targets')" />
 
 {% endhighlight %}
+{% endtabs %}
 
 Removing this line prevents the Syncfusion<sup>&reg;</sup> build targets from copying BlinkBinaries and other runtime files into your bin folder during build or publish.
 

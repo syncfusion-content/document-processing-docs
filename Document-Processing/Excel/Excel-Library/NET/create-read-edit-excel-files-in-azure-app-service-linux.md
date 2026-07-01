@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Create, read, and edit Excel files in Azure App Service on Linux
 
-[Syncfusion Excel library for ASP.NET Core platform](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) can be used to create, read, edit Excel files in Azure App Service on Linux.
+[.NET Excel Library for ASP.NET Core platform](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) can be used to create, read, edit Excel files in Azure App Service on Linux.
 
 ## Create a simple Excel report
 

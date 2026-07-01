@@ -9,7 +9,7 @@ documentation: ug
 
 # Overview of Forms in Vue PDF Viewer
 
-The Syncfusion PDF Viewer provides a full-featured PDF forms experience for Vue applications. Users can read, fill, add, edit, and remove form fields in PDF documents using the viewer's UI or programmatic APIs.
+The PDF Viewer provides a full-featured PDF forms experience for Vue applications. Users can read, fill, add, edit, and remove form fields in PDF documents using the viewer's UI or programmatic APIs.
 
 Flexible import and export of form data simplifies integration in automated workflows or user-driven scenarios. APIs offer developers control over form behavior while the viewer presents a concise, accessible interface for end users.
 

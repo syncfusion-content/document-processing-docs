@@ -121,6 +121,8 @@ xmlns:syncfusion="using:Syncfusion.Windows.PdfViewer"
 
 {% endtabcontent %}
 
+{% endtabcontents %}
+
 ## Load a PDF document
 
 After adding the `SfPdfViewerControl`, you can load a PDF document using data binding.

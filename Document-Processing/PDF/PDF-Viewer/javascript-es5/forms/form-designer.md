@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Form designer in JavaScript PDF Viewer
 
-When **Form Designer mode** is enabled in the Syncfusion [JavaScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/overview), a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/javascript/#/tailwind3/pdfviewer/formdesigner.html) is displayed. This UI includes a built-in toolbar for adding form fields such as text boxes, password fields, check boxes, radio buttons, drop-down lists, list boxes, and signature and initial fields.
+When **Form Designer mode** is enabled in the [JavaScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/overview), a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/javascript/#/tailwind3/pdfviewer/formdesigner.html) is displayed. This UI includes a built-in toolbar for adding form fields such as text boxes, password fields, check boxes, radio buttons, drop-down lists, list boxes, and signature and initial fields.
 
 Using the Form Designer UI, users can place form fields on the PDF, move and resize them, configure field and widget properties, preview the designed form, and remove fields when required. The Form Designer toolbar can also be shown or hidden and customized to control the available tools based on application requirements, enabling flexible and interactive form design directly within the viewer.
 
@@ -73,7 +73,7 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Form designer UI
 
-When [Form Designer mode](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formdesigner) is enabled in the Syncfusion [JavaScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/overview), a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/javascript/#/tailwind3/pdfviewer/formdesigner.html) is displayed. This UI provides a built in toolbar for adding common form fields such as text boxes, check boxes, radio buttons, drop down lists, and signature fields. Users can place fields on the PDF, select them, resize or move them, and configure their properties using the available editing options, enabling interactive form creation directly within the viewer.
+When [Form Designer mode](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formdesigner) is enabled in the [JavaScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/overview), a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/javascript/#/tailwind3/pdfviewer/formdesigner.html) is displayed. This UI provides a built in toolbar for adding common form fields such as text boxes, check boxes, radio buttons, drop down lists, and signature fields. Users can place fields on the PDF, select them, resize or move them, and configure their properties using the available editing options, enabling interactive form creation directly within the viewer.
 
 ![FormDesigner](../../javascript-es6/images/FormDesigner.gif)
 

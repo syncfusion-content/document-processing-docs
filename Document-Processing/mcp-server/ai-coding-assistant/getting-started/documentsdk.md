@@ -43,19 +43,7 @@ Syncfusion<sup>&reg;</sup> offers unlimited access to this MCP server. There are
 
 This ensures users can fully leverage Syncfusion<sup>&reg;</sup> components to enhance their development experience without limitations.
 
-## Installation and setup
-
-Before you can invoke the ```SyncfusionDocumentSDKAssistant``` MCP server, you need to configure your MCP client with these core settings. The **Generic MCP Server Settings** shown below are identical across all clients:
-
-### Generic MCP Server Settings
-
-  *	**npm package name**: ```@syncfusion/documentsdk-assistant```
-  *	**Type**: stdio (standard input/output transport)
-  *	**Command**: npx
-  *	**Arguments**: -y
-  *	**Server name**: syncfusionDocumentSDKAssistant
-
-#### API Key Configuration		
+## API Key Configuration		
 
 Login to your [Syncfusion account](http://syncfusion.com/account/) and generate an API Key from the [API Key page](https://www.syncfusion.com/account/api-key). Replace `YOUR_API_KEY_FILE_PATH` or `YOUR_API_KEY` in the configuration files with your generated key.
     
@@ -84,21 +72,18 @@ There are two options:
 
 <a href="https://www.npmjs.com/package/@syncfusion/documentsdk-assistant">SyncfusionDocumentSDKAssistant</a> can be configured in various MCP clients. Below are setup instructions for popular environments:
 
-### Syncfusion<sup>&reg;</sup> Code Studio
+## Setting up in MCP Clients
 
-  *	In [Code Studio](https://www.syncfusion.com/code-studio/), open MCP Marketplace and navigate to the ```Custom Servers``` tab.
-  *	Enter the Server Name as ```documentsdk-mcp```, choose Server Type as npm package, and set the NPM Package name to ```@syncfusion/documentsdk-assistant```.
-  *	Add an environment variable as ```Syncfusion_API_Key``` and value as your [Syncfusion API key](https://syncfusion.com/account/api-key), then click **Install Server**.
-  *	Once installed, the server will appear in the User Installed Server list and will be added to the **config.yaml** file.
-  *	The server is now ready for use in Code Studio. For more details, refer to the Code Studio [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/mcp/customservers).
+Create a configuration file in your project folder to install the server for your workspace as shown below:
 
-For additional details, see the Code Studio [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/mcp/customservers).
+**Important:** Replace `YOUR_API_KEY_FILE_PATH` with the path to your API key file.
 
-### VS Code (GitHub Copilot MCP)
-  * To configure an MCP server for a specific workspace, you can create a ```.vscode/mcp.json``` file in your workspace folder.
+{% tabs %}
 
-~~~json
-  {
+{% highlight json tabtitle="VS Code" %}
+// Create a `.vscode/mcp.json` file in your workspace with the MCP server configuration:
+
+{
   "servers": {
    "syncfusion-documentsdk-assistant": {   
     "type": "stdio",
@@ -115,21 +100,34 @@ For additional details, see the Code Studio [documentation](https://help.syncfus
     }
    }
   }
-~~~ 
+{% endhighlight %}
 
-  * After updating the configuration in mcp.json, you’ll notice a “Start” option at the top of the config. This allows you to easily start the <a href ="https://www.npmjs.com/package/@syncfusion/documentsdk-assistant">SyncfusionDocumentSDKAssistant</a> server directly from the settings interface without additional commands.
+{% highlight json tabtitle="Syncfusion Code Studio" %}
+// Create a `.codestudio/mcp.json` file in your workspace with the MCP server configuration:
 
-  * Confirm that <a href ="https://www.npmjs.com/package/@syncfusion/documentsdk-assistant">SyncfusionDocumentSDKAssistant</a> is being used (this does not happen automatically). Look for a statement in the output, which is similar to:
+{
+  "servers": {
+   "syncfusion-documentsdk-assistant": {   
+    "type": "stdio",
+    "command": "npx",
+    "args": [
+     "-y",
+     "@syncfusion/documentsdk-assistant@latest" 
+    ],
+    "env": {
+     "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH",
+      // or
+     "Syncfusion_API_Key": "YOUR_API_KEY"
+     }
+    }
+   }
+  }
+{% endhighlight %}
 
-      * ```SyncfusionDocumentSDKAssistant is running...``` (in VS Code)
-  * For more details, refer to the official <a href = "https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022"> Visual Studio documentation</a>.
+{% highlight json tabtitle="Cursor" %}
+// Create a `.cursor/mcp.json` file in your workspace with the MCP server configuration:
 
-### Cursor
-
-To configure an MCP server for a specific workspace, you can create a .cursor/mcp.json file in your workspace folder.
-
-~~~json 
-  {
+{
    "mcpServers": {
     "syncfusion-documentsdk-assistant": {
      "type": "stdio",
@@ -146,17 +144,14 @@ To configure an MCP server for a specific workspace, you can create a .cursor/mc
     }
    }
   }
-~~~ 
-For more details, refer to the <a href = "https://docs.cursor.com/en/context/mcp#using-mcp-json">Cursor documentation</a>.
+{% endhighlight %}
 
-### JetBrains IDEs
+{% highlight json tabtitle="JetBrains IDEs" %}
+// Go to Settings -> Tools -> AI Assistant -> Model Context Protocol (MCP).
+// Click + Add to add a new MCP server configuration.
+// In the New MCP Server dialog, switch the dropdown as `As JSON` and add the following config:
 
-  * Go to Settings -> Tools -> AI Assistant -> Model Context Protocol (MCP).
-  * Click + Add to add a new MCP server configuration.
-  * In the New MCP Server dialog, switch the dropdown as ```As JSON``` and add the following config:
-
-~~~json
-  {
+{
    "mcpServers": {
     "syncfusion-documentsdk-assistant": {
      "command": "npx",
@@ -172,13 +167,11 @@ For more details, refer to the <a href = "https://docs.cursor.com/en/context/mcp
     }
    }
   }
-~~~
+{% endhighlight %}
 
-  * Click OK and Apply.
+{% endtabs %}
 
-For further assistance, see the <a href ="https://www.jetbrains.com/help/ai-assistant/mcp.html#connect-to-an-mcp-server">JetBrains documentation</a>.
-
-> For more detailed information about configuring MCP servers in various clients, refer to the official documentations, e.g., [Windsurf](https://docs.windsurf.com/windsurf/cascade/mcp#mcp-config-json)
+**Verify Installation:** Check your editor's MCP Server list for `syncfusion-documentsdk-assistant` with "Connected" status to confirm successful installation.
 
 ## Usage
 
@@ -198,7 +191,7 @@ To activate the SyncfusionDocumentSDKAssistant MCP server:
 
 ### Mode availability
 
-Syncfusion® MCP Servers provide full access to all AI interaction modes — Ask/Chat, Edit, and Agent — across supported MCP clients.
+Syncfusion® MCP Servers provide full access to all AI interaction modes - Ask/Chat, Edit, and Agent - across supported MCP clients.
 
 ### Best Practices for Effective Usage
 
@@ -219,21 +212,24 @@ Here are some effective ways to use <a href ="https://www.npmjs.com/package/@syn
 
 ## Troubleshooting
 
-If you encounter issues:
+If you encounter issues during installation or while using the MCP server, refer to the solutions below:
 
-  *	Verify your API key is correctly configured.
-  *	Ensure the MCP server is enabled in your client’s tools selection.
-  *	Check that you’re using a compatible MCP client version.
-  *	Try restarting your development environment.
+| Issue | Solution |
+|-------|----------|
+| Clear npm cache | Run `npx clear-npx-cache` and restart your IDE to resolve package caching issues |
+| Server failed to start | Update to Node.js 18+, verify JSON syntax in config file, and restart your IDE |
+| Invalid API key | Verify your key is active at [Syncfusion Account Page](https://syncfusion.com/account/api-key) |
+| Incorrect API key config | For the file path: Verify file location and content. For inline key: Check key is properly updated |
+| Wrong config file location | VS Code: `.vscode/mcp.json` <br/> Code Studio: `.codestudio/mcp.json` <br/> Cursor: `.cursor/mcp.json` <br/> JetBrains: Settings → Tools → AI Assistant → MCP in the workspace root |
+| Check IDE logs | VS Code/Code Studio: Output panel → "MCP" • Cursor: Developer Console for MCP errors • JetBrains: IDE logs |
 
 ## Support
 
 Product support is available through the following mediums.
 
-  * [Support ticket](https://support.syncfusion.com/support/tickets/create) - Guaranteed Response in 24 hours \| Unlimited tickets \| Holiday support
+  * [Support ticket](https://support.syncfusion.com/support/tickets/create)
   *	[Community forum](https://www.syncfusion.com/forums/document-sdk)
   *	[Request feature or report bug](https://www.syncfusion.com/feedback/document-sdk)
-  *	Live chat
 
 ## See also
   
