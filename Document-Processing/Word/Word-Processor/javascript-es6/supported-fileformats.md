@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Supported File Formats in TypeScript DOCX Editor
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> TypeScript DOCX Editor (Document Editor) supports a wide range of Microsoft Word and other document formats for opening and exporting, with both client-side and server-side capabilities.
+[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) supports a wide range of Microsoft Word and other document formats for opening and exporting, with both client-side and server-side capabilities.
 
 ## Supported File Formats
 

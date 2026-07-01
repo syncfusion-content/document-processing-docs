@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Unsupported Features in JavaScript (ES5) DOCX Editor
 
-This section describes the unsupported elements in Syncfusion® JavaScript (ES5) DOCX Editor (Document Editor) 
+This section describes the unsupported elements in [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) 
 
 ## Document formatting
 

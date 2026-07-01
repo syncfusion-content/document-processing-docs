@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Chart in JavaScript (ES5) Document Editor Control
 
-Document Editor provides chart preservation support. Using Document Editor, you can see the chart reports from your Word document.
+[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) provides chart preservation support. Using Document Editor, you can see the chart reports from your Word document.
 
 The following example shows chart preservation in Document Editor.
 
