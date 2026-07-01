@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Split Word documents
 
-Syncfusion<sup>&reg;</sup> Word Library allows you to split the large Word document into number of smaller word documents by the sections, headings, bookmarks, and placeholder text in programmatically. 
+The [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) allows you to split the large Word document into number of smaller word documents by the sections, headings, bookmarks, and placeholder text in programmatically. 
 
 By using this feature, you can be able to split/extract the necessary parts from the original document for further processing.
 

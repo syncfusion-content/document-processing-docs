@@ -1,6 +1,6 @@
 ---
 title: Working with SmartArt in PowerPoint Presentation | Syncfusion
-description: Learn how to create, edit, and format PowerPoint smartArt in C# using Syncfusion<sup>&reg;</sup> PowerPoint library without Microsoft PowerPoint or interop dependencies.
+description: Learn how to create, edit, and format PowerPoint smartArt in C# using .NET  PowerPoint library without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: Presentation
 documentation: UG
@@ -624,4 +624,4 @@ The modifications in a [SmartArt](https://help.syncfusion.com/cr/document-proces
 
 ## Online Demo
 
-* Explore how to create a SmartArt diagram in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/smartart#/tailwind).
+* Explore how to create a SmartArt diagram in a PowerPoint presentation using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/smartart#/tailwind).

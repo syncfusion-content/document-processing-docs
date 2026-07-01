@@ -8,7 +8,7 @@ documentation: UG
 
 # Fallback fonts in Word to Image conversion
 
-During Word to image conversions, if a glyph of the input text is unavailable in the specified font, the text will not be rendered properly. To address this, the Syncfusion<sup>&reg;</sup> Word (DocIO) library allows users to specify fallback fonts. When a glyph is missing, the library will use one of the fallback fonts to render the text correctly in the output image.
+During Word to image conversions, if a glyph of the input text is unavailable in the specified font, the text will not be rendered properly. To address this, the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) allows users to specify fallback fonts. When a glyph is missing, the library will use one of the fallback fonts to render the text correctly in the output image.
 
 Users can configure fallback fonts in the following ways:
 * Initialize default fallback fonts.
