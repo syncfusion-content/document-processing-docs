@@ -15,7 +15,7 @@ N> If a workbook is protected, worksheet operations like inserting, deleting, re
 
 ## Insert Sheet
 
-The Insert sheet feature in the Syncfusion Blazor Spreadsheet component allows adding new sheets to a workbook, enabling better organization of data across multiple sheets. This feature can be accessed through user interface (UI) or programmatically, offering flexibility based on the application's requirements.
+The Insert sheet feature in the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component allows adding new sheets to a workbook, enabling better organization of data across multiple sheets. This feature can be accessed through user interface (UI) or programmatically, offering flexibility based on the application's requirements.
 
 ### Insert Sheet via UI
 

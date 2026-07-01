@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with JavaScript Spreadsheet control
 
-This section explains the steps to create a simple [Syncfusion® JavaScript Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) control in a JavaScript application.
+This section explains the steps to create a simple [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) control in a JavaScript application.
 
 ## Create a JavaScript application
 
@@ -186,6 +186,9 @@ Open the `index.html` file in a web browser to launch the JavaScript Spreadsheet
 You can also explore the Spreadsheet interactively using the live sample below.
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/spreadsheet/es5-getting-started-cs1" %}
+
+N> Looking for the full JavaScript Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) page.
+
 
 ## See also
 

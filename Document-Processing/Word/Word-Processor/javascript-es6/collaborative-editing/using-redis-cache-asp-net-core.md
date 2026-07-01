@@ -14,7 +14,7 @@ Allows multiple users to work on the same document simultaneously. This can be d
 
 ## Prerequisites
 
-The following are needed to enable collaborative editing in Document Editor.
+The following are needed to enable collaborative editing in [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor).
 
 * `SignalR`
 * `Redis`

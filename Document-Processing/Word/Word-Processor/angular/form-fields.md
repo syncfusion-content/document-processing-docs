@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Form fields in Angular Document editor component
 
-DocumentEditorContainer component provide support for inserting Text, CheckBox, DropDown form fields through in-built toolbar.
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) Container component provide support for inserting Text, CheckBox, DropDown form fields through in-built toolbar.
 
 ![Form Fields](images/toolbar-form-fields.png)
 

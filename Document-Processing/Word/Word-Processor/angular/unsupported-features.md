@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Unsupported Features in Angular DOCX Editor
 
-This section describes the unsupported elements in Syncfusion® Angular DOCX Editor (Document Editor) 
+This section describes the unsupported elements in [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) 
 
 ## Document formatting
 

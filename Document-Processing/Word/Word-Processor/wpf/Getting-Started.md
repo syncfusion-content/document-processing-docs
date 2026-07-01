@@ -9,7 +9,7 @@ keywords: getting started
 
 # Getting started with Syncfusion<sup>&reg;</sup> WPF RichTextBox
 
-Syncfusion <sup style="font-size:70%">&reg;</sup> [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) enables you to create, edit, view, and print Word documents in WPF applications. This section guides you through the steps to get started and create a RichTextBox in a WPF application.
+[WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) enables you to create, edit, view, and print Word documents in WPF applications. This section guides you through the steps to get started and create a RichTextBox in a WPF application.
 
 ## Create a RichTextBox in WPF using SfRichTextBoxAdv
 
@@ -354,7 +354,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox
 
 ## Theme
 
-In this walkthrough, you will apply a theme to the Syncfusion® WPF **SfRichTextBoxAdv** and **SfRichTextRibbon** controls.
+In this walkthrough, you will apply a theme to the WPF **SfRichTextBoxAdv** and **SfRichTextRibbon** controls.
 
 The steps below outline the essential tasks required to configure and apply themes in a WPF application.
 

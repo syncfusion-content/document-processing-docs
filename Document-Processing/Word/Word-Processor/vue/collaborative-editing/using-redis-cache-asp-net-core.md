@@ -14,7 +14,7 @@ Syncfusion® Vue DOCX Editor (Document Editor) supports collaborative editing wh
 
 ## Prerequisites
 
-The following are needed to enable collaborative editing in Document Editor.
+The following are needed to enable collaborative editing in [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor).
 
 - SignalR
 - Redis

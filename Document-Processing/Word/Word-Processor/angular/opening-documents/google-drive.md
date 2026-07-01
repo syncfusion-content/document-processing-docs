@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Open document from Google Drive in Angular Document editor
 
-To load a document from Google Drive in a Document editor, you can follow the steps below
+To load a document from Google Drive in a [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor), you can follow the steps below
 
 **Step 1:** Set up Google Drive API
 

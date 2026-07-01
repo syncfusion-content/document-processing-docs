@@ -365,7 +365,7 @@ public class OpenOptions
 
 ### Open Base64-encoded Excel data
 
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet component, there is no direct option to open data as a `Base64` string. To achieve this, the `import()` function fetches the `Base64` string, converts it to a Blob, creates a File object from the Blob, and then opens it using the [open](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#open) method in the spreadsheet.
+In the Spreadsheet, there is no direct option to open data as a `Base64` string. To achieve this, the `import()` function fetches the `Base64` string, converts it to a Blob, creates a File object from the Blob, and then opens it using the [open](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#open) method in the spreadsheet.
 
 The following code example shows how to open the spreadsheet data as base64 string.
 

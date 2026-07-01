@@ -9,7 +9,7 @@ keywords: out-of-memory-exception
 
 # Opening large size documents in WPF SfRichTextBoxAdv control
 
-This page explains Why does out of memory exception throw on opening large size documents in WPF SfRichTextBoxAdv control and more details.
+This page explains Why does out of memory exception throw on opening large size documents in [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) control and more details.
 
 ## Why does out of memory exception throw on opening large size documents in WPF RichTextBox (SfRichTextBoxAdv)
 

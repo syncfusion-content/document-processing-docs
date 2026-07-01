@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Get the selected content in Angular Document editor component
 
-You can get the selected content from the Angular Document Editor component as plain text and SFDT (rich text).
+You can get the selected content from the [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) component as plain text and SFDT (rich text).
 
 ## Get the selected content as plain text
 

@@ -14,7 +14,7 @@ This section explains how to create the **PDF Viewer** component and configure i
 
 ## Prerequisites
 
-[System requirements for Syncfusion® Vue components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+[System requirements for Vue components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Create a Vue Application
 
@@ -161,6 +161,8 @@ You can also explore the PDF Viewer interactively using the live sample below.
 To get started quickly with Vue PDF Viewer, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=wCGPrGahcJg" %}
+
+N> Looking for the full Vue PDF Viewer component overview, features, pricing, and documentation? Visit the [Vue PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/vue-pdf-viewer) page.
 
 ## See also
 

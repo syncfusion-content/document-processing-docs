@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF files to Google Drive
+# Save PDF files to Google Drive in JavaScript PDF Viewer
 
-This article describes how to save a PDF file to Google Drive from the Syncfusion JavaScript PDF Viewer using a server-side web service. Follow the steps below.
+This article describes how to save a PDF file to Google Drive from the JavaScript PDF Viewer using a server-side web service. Follow the steps below.
 
 **Step 1:** Set up the Google Drive API
 
@@ -18,7 +18,7 @@ Create a Google Cloud project, enable the Google Drive API, and obtain OAuth 2.0
 
 **Step 2:** Create a PDF Viewer sample in JavaScript
 
-Create a simple PDF Viewer sample in JavaScript by following the Syncfusion PDF Viewer for JavaScript [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/JavaScript/getting-started) guide. This establishes the basic application structure required for the integration.
+Create a simple PDF Viewer sample in JavaScript by following the PDF Viewer for JavaScript [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/JavaScript/getting-started) guide. This establishes the basic application structure required for the integration.
 
 **Step 3:** Modify the `PdfViewerController.cs` file in the web service project
 

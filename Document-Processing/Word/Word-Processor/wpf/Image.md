@@ -8,7 +8,7 @@ keywords: image
 ---
 # Image in WPF RichTextBox (SfRichTextBoxAdv)
 
-The SfRichTextBoxAdv allows you to insert images of various formats such as bitmap images (.bmp), JPEG (.jpg, .jpeg), PNG (.png) except Metafile images.
+The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) allows you to insert images of various formats such as bitmap images (.bmp), JPEG (.jpg, .jpeg), PNG (.png) except Metafile images.
 The following code example illustrates how to insert picture into the SfRichTextBoxAdv document through UI Command.
 {% tabs %}
 {% highlight xaml %}
@@ -31,4 +31,4 @@ Text wrapping refers to how images are fit with surrounding text in a document. 
 Starting from v19.1.0.x, RichTextBox preserves the position properties of the image and displays the image based on position properties. It does not support modifying the position properties. Whereas the image will be automatically moved along with text edited if it is positioned relative to the line or paragraph.
 
 N> At present, the image with text wrapping style `In-Line with Text` can only be dragged and dropped anywhere in the document.
-You can refer to our [WPF RichTextBox](https://www.syncfusion.com/wpf-controls/richtextbox) feature tour page for its groundbreaking feature representations.You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to knows how to render and configure the editing tools.
+You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations.You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to knows how to render and configure the editing tools.
