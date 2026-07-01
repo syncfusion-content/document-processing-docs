@@ -9,7 +9,7 @@ documentation: ug
 
 # Text Wrapping Style in DocumentEditor
 
-Text wrapping refers to how images and shapes are fit with surrounding text in a document. Currently, DocumentEditor has only preservation support for image and textbox shape with below wrapping styles.
+Text wrapping refers to how images and shapes are fit with surrounding text in a document. Currently, [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) has only preservation support for image and textbox shape with below wrapping styles.
 
 ## In-Line with Text
 

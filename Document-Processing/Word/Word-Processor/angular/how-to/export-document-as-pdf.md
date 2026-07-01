@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 In this article, we are going to see how to export the document as PDF format. You can export the document as PDF in following ways:
 
-To quickly get started with exporting to PDF in Document Editor, please check out the video below.
+To quickly get started with exporting to PDF in [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor), please check out the video below.
 
 {% youtube "https://www.youtube.com/watch?v=JVRSc865Pa4" %}
 
@@ -120,7 +120,7 @@ export class AppComponent implements OnInit {
 
 ## Export document as pdf in server-side using Syncfusion DocIO
 
-With the help of [Syncfusion<sup style="font-size:70%">&reg;</sup> DocIO](https://help.syncfusion.com/file-formats/docio/word-to-pdf), you can export the document as PDF in server-side. Here, you can search the text.
+With the help of [DocIO](https://help.syncfusion.com/file-formats/docio/word-to-pdf), you can export the document as PDF in server-side. Here, you can search the text.
 
 The following way illustrates how to convert the document as PDF:
 

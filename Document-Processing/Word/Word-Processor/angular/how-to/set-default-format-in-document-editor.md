@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Set default format in document editor in Angular Document editor component
 
-You can set the default character format, paragraph format and section format in Document editor.
+You can set the default character format, paragraph format and section format in [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor).
 
 ## Set the default character format
 

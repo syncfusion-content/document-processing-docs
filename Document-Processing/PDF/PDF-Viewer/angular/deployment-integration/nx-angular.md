@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with Syncfusion Angular PDF Viewer in an Nx Workspace
+# Getting started with Angular PDF Viewer in an Nx Workspace
 
-This guide explains how to create an **Nx workspace**, scaffold an **Angular application**, and integrate the **Syncfusion Angular PDF Viewer** using modern **standalone Angular components**.
+This guide explains how to create an **Nx workspace**, scaffold an **Angular application**, and integrate the **Angular PDF Viewer** using modern **standalone Angular components**.
 
 ## Prerequisites
 
@@ -46,7 +46,7 @@ npx nx serve pdf-viewer-app
 
 ## Step 4: Install Syncfusion Angular PDF Viewer
 
-Install the Syncfusion Angular PDF Viewer package in your workspace:
+Install the Angular PDF Viewer package in your workspace:
 
 ```bash
 npm install @syncfusion/ej2-angular-pdfviewer --save
@@ -134,7 +134,7 @@ npx nx serve pdf-viewer-app
 
 ## See Also
 
-- [Syncfusion Angular PDF Viewer Documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/overview)
+- [Angular PDF Viewer Documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/overview)
 - [Nx Documentation](https://nx.dev/docs)
 - [Angular Standalone Components Guide](https://v17.angular.io/docs)
 - [Nx Angular Plugin](https://nx.dev/nx-api/angular)

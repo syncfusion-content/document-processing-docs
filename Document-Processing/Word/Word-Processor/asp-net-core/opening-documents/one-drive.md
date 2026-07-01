@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Open document from One Drive
 
-To load a document from One Drive in a Document editor, you can follow the steps below
+To load a document from One Drive in a [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor), you can follow the steps below
 
 **Step 1:** Create the Microsoft graph API.
 

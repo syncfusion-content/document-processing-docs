@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Web services in JavaScript (ES6) Document editor control
 
-You can deploy web APIs for server-side dependencies of Document Editor component in the following platforms.
+You can deploy web APIs for server-side dependencies of [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) component in the following platforms.
 
 * [ASP.NET Core](./web-services/core)
 * [ASP.NET MVC](./web-services/mvc)

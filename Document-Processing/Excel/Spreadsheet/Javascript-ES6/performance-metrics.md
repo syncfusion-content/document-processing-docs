@@ -9,7 +9,7 @@ documentation: ug
 
 # Performance Metrics for JavaScript Spreadsheet Control
 
-The [Syncfusion® Spreadsheet component](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) provides a powerful, Excel‑like experience for web applications, allowing users to create, edit, view, and manage spreadsheets with ease. It supports large datasets, formulas, and interactive features such as styling, validation, sorting, filtering, and file import/export while maintaining a smooth and responsive user experience.
+The [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) provides a powerful, Excel‑like experience for web applications, allowing users to create, edit, view, and manage spreadsheets with ease. It supports large datasets, formulas, and interactive features such as styling, validation, sorting, filtering, and file import/export while maintaining a smooth and responsive user experience.
 
 This document presents measured performance results for the Spreadsheet when working with large datasets and common operations such as rendering, styling, validation, and file import/export.
 

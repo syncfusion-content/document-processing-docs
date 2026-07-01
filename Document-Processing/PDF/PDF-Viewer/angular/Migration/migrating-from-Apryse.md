@@ -7,15 +7,15 @@ documentation: ug
 control: PDF Viewer
 ---
 
-# Migrating from Apryse Web Viewer to Syncfusion Angular PDF Viewer
+# Migrating from Apryse Web Viewer to Angular PDF Viewer
 
-This guide helps Angular developers migrate applications built using **Apryse Web Viewer** to the **Syncfusion Angular PDF Viewer**. It explains architectural differences, setup changes, feature mapping, and common API replacements specific to an Angular environment.
+This guide helps Angular developers migrate applications built using **Apryse Web Viewer** to the **Angular PDF Viewer**. It explains architectural differences, setup changes, feature mapping, and common API replacements specific to an Angular environment.
 
 ## Overview
 
 **Apryse Web Viewer** is an SDK-style viewer that is mounted imperatively into a DOM element and exposes a rich JavaScript API surface.
 
-**Syncfusion Angular PDF Viewer** provides a **fully declarative Angular component-based experience**, offering built-in UI, annotations, form fields, text search, and navigation through Angular modules and services—without requiring external runtime SDK initialization.
+**Angular PDF Viewer** provides a **fully declarative Angular component-based experience**, offering built-in UI, annotations, form fields, text search, and navigation through Angular modules and services—without requiring external runtime SDK initialization.
 
 Key migration benefits:
 - Native Angular component integration
@@ -25,7 +25,7 @@ Key migration benefits:
 
 ## Architecture Differences
 
-| Concept | Apryse Web Viewer | Syncfusion Angular PDF Viewer |
+| Concept | Apryse Web Viewer | Angular PDF Viewer |
 |--------|-----------------|-------------------------------|
 | Integration style | Imperative DOM-based SDK mount | Declarative Angular component |
 | Initialization | Web Viewer({...}, element) | `<ejs-pdfviewer>` component |
@@ -42,7 +42,7 @@ Migration generally involves **removing the Apryse SDK mount** and **replacing i
 npm install @pdftron/webviewer
 ```
 
-### Syncfusion Angular PDF Viewer
+### Angular PDF Viewer
 ```bash
 npm install @syncfusion/ej2-angular-pdfviewer
 ```
@@ -97,7 +97,7 @@ ngAfterViewInit() {
 }
 ```
 
-### Syncfusion Angular PDF Viewer
+### Angular PDF Viewer
 
 ```html
 <ejs-pdfviewer
@@ -178,7 +178,7 @@ this.pdfViewer.importAnnotation(annotationData);
 
 1. Create a migration branch
 2. Remove Apryse WebViewer SDK usage
-3. Install Syncfusion Angular PDF Viewer
+3. Install Angular PDF Viewer
 4. Add required styles and module imports
 5. Replace DOM-based viewer mount with Angular component
 6. Gradually enable features: navigation → search → annotation → forms
@@ -194,8 +194,10 @@ this.pdfViewer.importAnnotation(annotationData);
 - [extractText(pageIndex: number, options?: any)](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#extracttext): — extract text and coordinates.
 - [Events](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#events): [documentLoad](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#documentload), [pageRenderComplete](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#pagerendercomplete), [pageChange](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#pagechange), [annotationAdd](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#annotationadd), [annotationRemove](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#annotationremove), [toolbarClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#toolbarclick).
 
+N> Looking for the full Angular PDF Viewer component overview, features, pricing, and documentation? Visit the [Angular PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/angular-pdf-viewer) page.
+
 ## See Also
 
 - [Apryse Angular Web Viewer Getting Started](https://docs.apryse.com/web/guides/get-started/angular)
-- [Syncfusion Angular PDF Viewer Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started)
-- [Syncfusion Angular PDF Viewer API](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer)
+- [Angular PDF Viewer Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started)
+- [Angular PDF Viewer API](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer)

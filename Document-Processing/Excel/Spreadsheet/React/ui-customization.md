@@ -9,7 +9,7 @@ documentation: ug
 
 # User Interface Customization
 
-The Syncfusion React Spreadsheet component provides options to customize the user interface and control the behavior of its UI components.
+The [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component provides options to customize the user interface and control the behavior of its UI components.
 
 You can control the ribbon tabs, toolbar items, context menu, and overall appearance. Use these options to show, hide, or modify UI elements and attach custom behavior.
 
