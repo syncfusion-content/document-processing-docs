@@ -1,6 +1,6 @@
 ---
 layout: post
-title: About WPF Pdf Viewer control | Syncfusion<sup>&reg;</sup>;
+title: About WPF Pdf Viewer control | Syncfusion
 description: Learn here all about introduction of Syncfusion<sup>&reg;</sup>; Essential Studio&reg; WPF Pdf Viewer control, its elements and more.
 platform: document-processing
 control: PDF Viewer
