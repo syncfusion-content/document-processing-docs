@@ -1,5 +1,5 @@
 ---
-title: Open and save Word document in GCP | Syncfusion
+title: Open and save Word documents in GCP | Syncfusion 
 description: Open and save Word document in Google App Engine using .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
@@ -268,4 +268,4 @@ By executing the program, you will get the **Word document** as follows. The out
 
 ![Open and Save Word document in Google App Engine](ASP-NET-Core_images/GettingStartedOutput.jpg)
 
-Click [here](https://www.syncfusion.com/document-sdk/net-word-library-core) to explore the rich set of the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) features.
+Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.

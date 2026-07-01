@@ -245,7 +245,7 @@ Upon executing the program, the **Word document** will be generated as follows:
 
 ![Blazor Web App Server output Word document](Blazor_Images/Blazor_Output.png)
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/blazor) to explore the rich set of the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) features.
+Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.
 
 ## WASM Standalone Application
 
@@ -443,7 +443,7 @@ Upon executing the program, the **Word document** will be generated as follows:
 
 N> While the Word library functions in WASM Standalone, server-side deployment is recommended. WASM Standalone deployment increases the application payload size.
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/blazor) to explore the rich set of the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) features.
+Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.
 
 
 Kindly explore the [supported and unsupported features of Word library in Blazor](https://help.syncfusion.com/document-processing/word/word-library/net/supported-and-unsupported-features#blazor-supported-features)
