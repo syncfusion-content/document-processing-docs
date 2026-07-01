@@ -16,6 +16,8 @@ Tables are essential components in Markdown documents used to organize and prese
 
 The first row in a Markdown table is typically treated as the header row, followed by a separator row that defines column alignments, and then data rows.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C#*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, WinUI, WinForms and WPF; ***VB.NET*** for VB.NET applications.
+
 ## Adding a table
 
 You can add a table to a `MarkdownDocument` by using the `AddTable` method. The alignment for each column can be specified using the `ColumnAlignments` property. The supported alignment options are Left, Center, and Right.

@@ -191,5 +191,5 @@ By executing the program, you will get the **PowerPoint document** as follows.
 
 ![Xamarin output PowerPoint document](Workingwith-Core/Open-and-Save-output-image.png)      
 
-Click [here](https://www.syncfusion.com/document-sdk/net-powerpoint-library) to explore the rich set of the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) features. 
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 
 

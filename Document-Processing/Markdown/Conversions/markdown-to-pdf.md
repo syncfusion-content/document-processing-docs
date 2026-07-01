@@ -17,6 +17,8 @@ Refer to the following links for assemblies and NuGet packages required based on
 * [Markdown to PDF assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required)
 * [Markdown to PDF NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
 
+N> Refer to the appropriate tabs in the code snippets section: ***C#*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, WinUI, WinForms and WPF; ***VB.NET*** for VB.NET applications.
+
 ## Convert Markdown to PDF
 
 Convert an existing markdown file to a PDF document using the .NET Word library.
