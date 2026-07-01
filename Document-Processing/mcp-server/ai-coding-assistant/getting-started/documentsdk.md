@@ -227,10 +227,9 @@ If you encounter issues during installation or while using the MCP server, refer
 
 Product support is available through the following mediums.
 
-  * [Support ticket](https://support.syncfusion.com/support/tickets/create) - Guaranteed Response in 24 hours \| Unlimited tickets \| Holiday support
+  * [Support ticket](https://support.syncfusion.com/support/tickets/create)
   *	[Community forum](https://www.syncfusion.com/forums/document-sdk)
   *	[Request feature or report bug](https://www.syncfusion.com/feedback/document-sdk)
-  *	Live chat
 
 ## See also
   
