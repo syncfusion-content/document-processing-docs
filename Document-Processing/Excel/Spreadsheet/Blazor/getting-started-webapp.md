@@ -243,6 +243,12 @@ To learn how to open workbooks, bind data, or save files in the Spreadsheet comp
 
 N> [View Sample In GitHub.](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Spreadsheet).
 
+## Video tutorial
+
+To get started quickly with Blazor Spreadsheet, you can watch this video:
+
+{% youtube "https://www.youtube.com/watch?v=BrcM8AYWF8s" %}
+
 ## See Also
 
 - [Getting started with the Blazor Spreadsheet in a Blazor WebAssembly App](./getting-started)
