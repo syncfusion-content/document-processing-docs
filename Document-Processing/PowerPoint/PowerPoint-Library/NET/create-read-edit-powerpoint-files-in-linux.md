@@ -24,7 +24,7 @@ Step 1: Execute the following command in Linux terminal to create a new .NET Cor
 
 {% tabs %}
 
-{% highlight KCONFIG %}
+{% highlight bash tabtitle="CLI" %}
 
 dotnet new console
 
@@ -38,7 +38,7 @@ Step 2: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/pac
 
 {% tabs %}
 
-{% highlight KCONFIG %}
+{% highlight bash tabtitle="CLI" %}
 
 dotnet add package Syncfusion.Presentation.Net.Core -v 17.4.0.39 -s https://www.nuget.org/
 
@@ -117,7 +117,7 @@ Step 5: Execute the following command to restore the NuGet packages.
 
 {% tabs %}
 
-{% highlight KCONFIG %}
+{% highlight bash tabtitle="CLI" %}
 
 dotnet restore
 
@@ -131,7 +131,7 @@ Step 6: Execute the following command in terminal to run the application.
 
 {% tabs %}
 
-{% highlight KCONFIG %}
+{% highlight bash tabtitle="CLI" %}
 
 dotnet run
 
