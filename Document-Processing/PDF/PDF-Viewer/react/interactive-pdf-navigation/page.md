@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Page Navigation in React PDF Viewer
 
-This guide explains how to implement page navigation in the Syncfusion React PDF Viewer. You will learn how to enable toolbar navigation and programmatically navigate to specific pages using the PDF Viewer's navigation methods.
+This guide explains how to implement page navigation in the React PDF Viewer. You will learn how to enable toolbar navigation and programmatically navigate to specific pages using the PDF Viewer's navigation methods.
 
 ## Enable Page Navigation
 

@@ -106,7 +106,7 @@ export default function SubmitFormExample() {
 - **No form values returned**: Ensure the PDF has interactive fields and the viewer has finished loading before calling [`exportFormFieldsAsObject()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#exportformfieldsasobject).
 - **CORS errors**: Enable CORS on the server or serve both frontend and back end from the same origin during testing.
 - **Server rejects payload**: Confirm the server expects `application/json` and validates shape of the object.
-- **WASM or resource errors**: Ensure [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl) points to the correct Syncfusion PDF Viewer library files.
+- **WASM or resource errors**: Ensure [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl) points to the correct React PDF Viewer library files.
 
 ## Use cases
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting started with the React PDF Viewer in Gatsby
 
-How to integrate the Syncfusion React PDF Viewer into a Gatsby site. Use the Quickstart below to get a working viewer, then consult the How-to and Reference sections for configuration details (WASM, static assets, and SSR notes).
+How to integrate the [React PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/react-pdf-viewer) into a Gatsby site. Use the Quickstart below to get a working viewer, then consult the How-to and Reference sections for configuration details (WASM, static assets, and SSR notes).
 
 ## Quickstart for Gatsby
 
@@ -136,5 +136,5 @@ npm run develop
 ## See also
 
 - [Getting started overview](../getting-started-overview)
-- [Creating a Next.js application using Syncfusion React PDF Viewer](./nextjs-getting-started)
-- [Getting started with Syncfusion React PDF Viewer in Remix](./remix)
+- [Creating a Next.js application using React PDF Viewer](./nextjs-getting-started)
+- [Getting started with React PDF Viewer in Remix](./remix)
