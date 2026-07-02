@@ -263,3 +263,51 @@ End Using
 
 N> Set the encoding value before saving the document as per the above code example.
 
+## Get Markdown document
+
+Convert an existing PowerPoint Presentation to a `MarkdownDocument` instance using the `GetMarkdownDocument` API. This allows you to access and manipulate the Markdown DOM before saving or further processing.
+
+The following code example shows how to convert a PowerPoint Presentation to a Markdown document instance.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Open an existing Presentation document.
+using (IPresentation presentation = Presentation.Open(Path.GetFullPath("Data/Input.pptx")))
+{
+    //Convert the PowerPoint Presentation to Markdown.
+    MarkdownDocument markdownDocument = presentation.GetMarkdownDocument();
+    //Save or process the Markdown document as needed.
+    markdownDocument.Save(Path.GetFullPath("Output/Output.md"));
+    //Dispose the Markdown document.
+    markdownDocument.Dispose();
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Open an existing Presentation document.
+using (IPresentation presentation = Presentation.Open("Input.pptx"))
+{
+    //Convert the PowerPoint Presentation to Markdown.
+    MarkdownDocument markdownDocument = presentation.GetMarkdownDocument();
+    //Save or process the Markdown document as needed.
+    markdownDocument.Save("Output.md");
+    //Dispose the Markdown document.
+    markdownDocument.Dispose();
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Open an existing Presentation document.
+Using presentation As IPresentation = Presentation.Open("Input.pptx")
+    'Convert the PowerPoint Presentation to Markdown.
+    Dim markdownDocument As MarkdownDocument = presentation.GetMarkdownDocument()
+    'Save or process the Markdown document as needed.
+    markdownDocument.Save("Output.md")
+    'Dispose the Markdown document.
+    markdownDocument.Dispose()
+End Using
+{% endhighlight %}
+
+{% endtabs %}
+
