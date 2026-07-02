@@ -9,11 +9,11 @@ documentation: ug
 
 # Getting Started with the Vue Spreadsheet Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Spreadsheet component.
+This article provides a step-by-step guide for setting up a Vue 2 project and integrating the [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor).
 
 ## Prerequisites
 
-[System requirements for Syncfusion® Vue components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+[System requirements for Vue components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Create a Vue application
 
@@ -32,9 +32,9 @@ vue create quickstart
 cd quickstart
 ```
 
-> When prompted during project creation, select **Default ([Vue 2] babel, eslint)**.
+N> When prompted during project creation, select **Default ([Vue 2] babel, eslint)**.
 
-## Install the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Spreadsheet package
+## Install the Vue Spreadsheet package
 
 Install the [Vue Spreadsheet](https://www.npmjs.com/package/@syncfusion/ej2-vue-spreadsheet) package from npm using the following command:
 
@@ -62,7 +62,7 @@ Add the following Spreadsheet and dependent component CSS styles in the **\<styl
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** Refer to the [Themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Vue project.
+N> Refer to the [Themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Vue project.
 
 ## Import and register the Spreadsheet Editor
 
@@ -124,6 +124,8 @@ You can also explore the Spreadsheet interactively using the live sample below.
 {% previewsample "/document-processing/code-snippet/spreadsheet/vue/getting-started-cs1" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-vue-spreadsheet-component).
+
+N> Looking for the full Vue Spreadsheet component overview, features, pricing, and documentation? Visit the [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) page.
 
 ## See also
 
