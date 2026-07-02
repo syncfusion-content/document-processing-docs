@@ -70,8 +70,6 @@ export class AppComponent {
         // Prevent saving the edited changes in 4th(Rate) column.
         if (args.address.includes('D')) {
             args.cancel = true;
-            // Manually removes the editable state without saving the changes. Use `endEdit` method if you want to save the changes.
-            this.spreadsheetObj!.closeEdit();
         }
     }
 }
