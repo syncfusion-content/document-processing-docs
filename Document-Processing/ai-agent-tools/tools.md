@@ -113,7 +113,7 @@ Tools are organized into the following categories:
 </tr>
 <tr>
 <td>ExcelConversionAgentTools</td>
-<td>Convert worksheets and charts to image, HTML, JSON, and other file formats.</td>
+<td>Convert worksheets and charts to image, HTML, JSON, Markdown, and other file formats.</td>
 </tr>
 <tr>
 <td>ExcelDataValidationAgentTools</td>
@@ -130,7 +130,7 @@ Tools are organized into the following categories:
 </tr>
 <tr>
 <td>PresentationOperationsAgentTools</td>
-<td>Merge, split, and export slides as images from PowerPoint presentations.</td>
+<td>Merge, split, import and export Markdown, and export slides as images from PowerPoint presentations.</td>
 </tr>
 <tr>
 <td>PresentationSecurityAgentTools</td>
