@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Working With Spreadsheet in WPF Spreadsheet control | Syncfusion®
-canonical_url: "https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor"
 description: Learn here all about Working With Spreadsheet support in Syncfusion® WPF Spreadsheet (SfSpreadsheet) control and more.
 platform: document-processing
 control: SfSpreadsheet
@@ -328,4 +327,4 @@ void Spreadsheet_PropertyChanged(object sender, System.ComponentModel.PropertyCh
 {% endtabs %}
 
 
-N> You can refer to our [WPF Spreadsheet](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [WPF Spreadsheet example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the spreadsheet.
+N> You can refer to our [WPF Spreadsheet Editor](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [WPF Spreadsheet example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the spreadsheet.
