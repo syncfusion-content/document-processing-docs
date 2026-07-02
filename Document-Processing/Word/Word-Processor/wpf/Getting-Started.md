@@ -423,7 +423,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox
 
 ## Theme
 
-In this walkthrough, you will apply a theme to the Syncfusion® WPF **SfRichTextBoxAdv** and **SfRichTextRibbon** controls.
+In this walkthrough, you will apply a theme to the WPF **SfRichTextBoxAdv** and **SfRichTextRibbon** controls.
 
 The steps below outline the essential tasks required to configure and apply themes in a WPF application.
 
