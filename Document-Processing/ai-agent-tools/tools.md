@@ -9,7 +9,7 @@ documentation: ug
 
 # Syncfusion Document SDK AI Agent Tools
 
-[Agent Tools](https://learn.microsoft.com/en-us/agent-framework/get-started/add-tools?pivots=programming-language-csharp) are the callable functions exposed to the AI agent. Each tool class is initialized with the appropriate manager. You can find the available toots below.
+[Agent Tools](https://learn.microsoft.com/en-us/agent-framework/get-started/add-tools?pivots=programming-language-csharp) are the callable functions exposed to the AI agent. Each tool class is initialized with the appropriate manager. You can find the available tools below.
 
 ![Available tools](available-tools.png)
 
