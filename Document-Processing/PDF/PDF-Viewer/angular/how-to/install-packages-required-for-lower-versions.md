@@ -6,7 +6,7 @@ description: Learn here all about how to install the packages required for versi
 
 # Install packages required for versions below 12
 
-For Angular versions below 12, use the legacy (ngcc) package of the Syncfusion<sup style="font-size:70%">&reg;</sup> Angular components. To download the `ngcc` package, use the commands below.
+For Angular versions below 12, use the legacy (ngcc) package of the Angular components. To download the `ngcc` package, use the commands below.
 
 Add [`@syncfusion/ej2-angular-pdfviewer@ngcc`](https://www.npmjs.com/package/@syncfusion/ej2-angular-pdfviewer/v/20.2.38-ngcc) to the application:
 

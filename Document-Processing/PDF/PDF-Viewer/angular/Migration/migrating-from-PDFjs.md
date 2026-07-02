@@ -7,15 +7,15 @@ documentation: ug
 control: PDF Viewer
 ---
 
-# Migrating from PDF.js to Syncfusion Angular PDF Viewer
+# Migrating from PDF.js to Angular PDF Viewer
 
-This guide explains how to migrate an existing [PDF.js](https://mozilla.github.io/pdf.js/) implementation to the [Syncfusion Angular PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started). It covers architectural differences, feature mapping, and required code changes.
+This guide explains how to migrate an existing [PDF.js](https://mozilla.github.io/pdf.js/) implementation to the [Angular PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started). It covers architectural differences, feature mapping, and required code changes.
 
 ## Overview
 
 PDF.js is a low-level JavaScript library that focuses on rendering PDF pages using HTML canvas. Developers are responsible for building navigation, zooming, text selection, annotations, forms, and user interface components.
 
-Syncfusion Angular PDF Viewer is a **high-level Angular component** that provides complete PDF viewing and interaction capabilities out of the box, including UI, performance optimizations, and Angular-friendly APIs.
+Angular PDF Viewer is a **high-level Angular component** that provides complete PDF viewing and interaction capabilities out of the box, including UI, performance optimizations, and Angular-friendly APIs.
 
 ## Architecture Notes
 
@@ -34,7 +34,7 @@ Key migration considerations:
 npm install pdfjs-dist
 ```
 
-### Syncfusion Angular PDF Viewer
+### Angular PDF Viewer
 
 ```bash
 npm install @syncfusion/ej2-angular-pdfviewer
@@ -72,7 +72,7 @@ pdfjsLib.getDocument('sample.pdf').promise.then(pdf => {
 });
 ```
 
-### Syncfusion Angular PDF Viewer Example
+### Angular PDF Viewer Example
 
 ```html
 <ejs-pdfviewer
@@ -238,5 +238,5 @@ Use Syncfusion CDN or host locally:
 ## See Also
 
 - [PDF.js Getting Started](https://mozilla.github.io/pdf.js/getting_started/)
-- [Syncfusion Angular PDF Viewer Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started)
-- [Syncfusion Angular PDF Viewer API](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer)
+- [Angular PDF Viewer Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started)
+- [Angular PDF Viewer API](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer)
