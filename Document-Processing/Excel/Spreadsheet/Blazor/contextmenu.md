@@ -8,7 +8,7 @@ documentation: ug
 
 # Context Menu in Blazor Spreadsheet component
 
-The context menu enhances interaction with the Syncfusion Blazor Spreadsheet component by displaying a popup with relevant operations when a right-click is performed on elements such as **cells**, **column headers**, **row headers**, or **sheet tabs**. Its visibility can be controlled via the [`EnableContextMenu`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableContextMenu) property, which is set to **true** by default, enabling the context menu automatically.
+The context menu enhances interaction with the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component by displaying a popup with relevant operations when a right-click is performed on elements such as **cells**, **column headers**, **row headers**, or **sheet tabs**. Its visibility can be controlled via the [`EnableContextMenu`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableContextMenu) property, which is set to **true** by default, enabling the context menu automatically.
 
 N> When the [`EnableContextMenu`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableContextMenu) property is set to **false**, the context menu does not appear upon right-clicking any element in the component.
 
