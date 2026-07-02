@@ -30,7 +30,7 @@ N> 2. Starting with v34.x.x, if you reference Syncfusion® assemblies from trial
 
 Include the following namespace in your .cs or .vb code as shown below.
 
-N> Refer to the appropriate tabs in the code snippets section: ***C#*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, WinUI, WinForms and WPF; ***VB.NET*** for VB.NET applications.
+N> Refer to the appropriate tabs in the code snippets section: ***C#*** for ASP.NET Core, Blazor, ASP.NET MVC, UWP, .NET MAUI, WinUI, WinForms and WPF; ***VB.NET*** for VB.NET applications.
 
 {% tabs %}
 
