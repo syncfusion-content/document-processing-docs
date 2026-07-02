@@ -10,7 +10,7 @@ documentation: ug
 
 # Insert footnote endnote
 
-DocumentEditorContainer component provides support for inserting footnotes and endnotes through the in-built toolbar.
+[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) Container component provides support for inserting footnotes and endnotes through the in-built toolbar.
 
 ![Insert footnote endnote](images/note-toolbar.jpg)
 

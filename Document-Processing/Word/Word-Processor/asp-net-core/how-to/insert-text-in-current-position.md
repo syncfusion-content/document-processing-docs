@@ -9,7 +9,7 @@ documentation: ug
 
 # How to insert text, paragraph and rich-text content in Document Editor component
 
-You can insert the text, paragraph and rich-text content in Document Editor component.
+You can insert the text, paragraph and rich-text content in [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) component.
 
 ## Insert text in current cursor position
 
