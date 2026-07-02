@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ### Overview
 
-This article explains how to load and save PDF files from Azure Active Directory (AAD) into the Syncfusion Vue PDF Viewer using a secure server-side component. It covers application registration, storage configuration, server and client setup, common pitfalls, and recommended security practices.
+This article explains how to load and save PDF files from Azure Active Directory (AAD) into the Vue PDF Viewer using a secure server-side component. It covers application registration, storage configuration, server and client setup, common pitfalls, and recommended security practices.
 
 ---
 
@@ -85,7 +85,7 @@ This article explains how to load and save PDF files from Azure Active Directory
 ### Step 6: Client-side configuration
 
 1. **Run the Vue sample**:
-   - Start the Vue sample that includes the Syncfusion PDF Viewer component.
+   - Start the Vue sample that includes the PDF Viewer component.
 
 2. **Load a PDF from AAD**:
    - When the user selects **Load From AAD**, the Vue client sends an HTTP request to the server-side API to fetch the PDF from Azure Blob Storage.
