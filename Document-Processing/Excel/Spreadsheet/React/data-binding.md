@@ -196,7 +196,7 @@ The [updateRange](https://ej2.syncfusion.com/react/documentation/api/spreadsheet
 - Specify the starting cell using the [startCell](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/rangeModel#startcell) property in the `RangeDirective`.
 - Set the `sheetIndex` to target the appropriate sheet.
 
-The following code example demonstrates how to dynamically update data using the [updateRange](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#updaterange) method.
+The following code example demonstrates how to dynamically update data using the [updateRange](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#updaterange) method.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -217,7 +217,7 @@ The following code example demonstrates how to dynamically update data using the
 
 ## Note
 
-You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/react/#/tailwind3/spreadsheet/default) to knows how to present and manipulate data.
+You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/react/#/tailwind3/spreadsheet/default) to knows how to present and manipulate data.
 
 ## See Also
 

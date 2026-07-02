@@ -8,7 +8,7 @@ documentation: ug
 ---
 # Link in React Spreadsheet component
 
-Hyperlink is used to navigate to web links or cell reference within the sheet or to other sheets in Spreadsheet. You can use the [`allowHyperlink`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#allowhyperlink) property to enable or disable hyperlink functionality.
+Hyperlink is used to navigate to web links or cell reference within the sheet or to other sheets in Spreadsheet. You can use the [`allowHyperlink`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#allowhyperlink) property to enable or disable hyperlink functionality.
 
 > * The default value for `allowHyperlink` property is `true`.
 
@@ -72,7 +72,7 @@ There is an event named `beforeHyperlinkClick` which triggers only on clicking h
 
 ## Note
 
-You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
+You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
 
 ## See Also
 
