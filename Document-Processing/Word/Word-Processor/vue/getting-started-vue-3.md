@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with Vue DOCX Editor (Vue 3)
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/Vue-docx-editor) (Document Editor) component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with integrating the [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/Vue-docx-editor) (Document Editor) component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 
 ## Steps to create a DOCX Editor in Vue 3
@@ -198,6 +198,8 @@ The Document Editor component requires server-side interactions for the followin
 N> If you don't require the above functionalities, you can deploy the component as a pure client-side solution without any server-side interactions.
 
 For detailed information about server-side dependencies, refer to the [Web Services Overview](./web-services-overview) page.
+
+N> Looking for the full Vue DOCX Editor component overview, features, pricing, and documentation? Visit the [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) page.
 
 ## See also
 
