@@ -48,7 +48,7 @@ Step 3: Create a Razor file named `Presentation.razor` in the `Pages` folder, wh
 Add the following namespaces in the file.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight razor tabtitle="RAZOR" %}
 
 @rendermode InteractiveServer
 @page "/Presentation"
@@ -65,7 +65,7 @@ Step 4: Add a button to `Presentation.razor`.
 Include the following code to create a new button that triggers the PowerPoint to Image conversion:
 
 {% tabs %}
-{% highlight CSHTML %}
+{% highlight razor tabtitle="RAZOR" %}
 
 <h2> Syncfusion PowerPoint (Presentation) Library</h2>
 <p>The Syncfusion PowerPoint (Presentation) library is used to create, read, edit, and convert PowerPoint files in applications without Microsoft Office dependencies.</p>
@@ -79,7 +79,7 @@ Step 5: Implement the method in `Presentation.razor`.
 Add the following code to **convert PowerPoint to Image** and download the **image file**.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight razor tabtitle="RAZOR" %}
 
 @code {
     MemoryStream documentStream;
@@ -176,7 +176,7 @@ Step 10: Add the following JavaScript function to `App.razor`.
 Add this function in the `App.razor` file located in the `Pages` folder.
 
 {% tabs %}
-{% highlight HTML %}
+{% highlight razor tabtitle="RAZOR" %}
 
 <script type="text/javascript">
     function saveAsFile(filename, bytesBase64) 
@@ -213,7 +213,7 @@ Add the following code snippet to the Navigation menu's Razor file in the `Layou
 
 {% tabs %}
 
-{% highlight HTML %}
+{% highlight razor tabtitle="RAZOR" %}
 
  <div class="nav-item px-3">
     <NavLink class="nav-link" href="presentation">
@@ -273,7 +273,7 @@ Step 3: Create a Razor file named `Presentation.razor` in the `Pages` folder, wh
 Add the following namespaces in the file.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight razor tabtitle="RAZOR" %}
 
 @rendermode InteractiveServer
 @page "/Presentation"
@@ -290,7 +290,7 @@ Step 4: Add a button to `Presentation.razor`.
 Include the following code to create a new button that triggers the PowerPoint to Image conversion:
 
 {% tabs %}
-{% highlight CSHTML %}
+{% highlight razor tabtitle="RAZOR" %}
 
 <h2> Syncfusion PowerPoint (Presentation) Library</h2>
 <p>The Syncfusion PowerPoint (Presentation) library is used to create, read, edit, and convert PowerPoint files in applications without Microsoft Office dependencies.</p>
@@ -304,7 +304,7 @@ Step 5: Implement the method in `Presentation.razor`.
 Add the following code to **convert PowerPoint to Image** and download the **image file**.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight razor tabtitle="RAZOR" %}
 
 @code {
     MemoryStream documentStream;
@@ -401,7 +401,7 @@ Step 10: Add the following JavaScript function to `App.razor`.
 Add this function in the `App.razor` file located in the `Pages` folder.
 
 {% tabs %}
-{% highlight HTML %}
+{% highlight razor tabtitle="RAZOR" %}
 
 <script type="text/javascript">
     function saveAsFile(filename, bytesBase64) 
@@ -438,7 +438,7 @@ Add the following code snippet to the Navigation menu's Razor file in the `Layou
 
 {% tabs %}
 
-{% highlight HTML %}
+{% highlight razor tabtitle="RAZOR" %}
 
  <div class="nav-item px-3">
     <NavLink class="nav-link" href="presentation">
@@ -515,7 +515,7 @@ Step 3: Create a Razor file named `Presentation.razor` in the `Pages` folder, wh
 Add the following namespaces in the file.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight razor tabtitle="RAZOR" %}
 
 @rendermode InteractiveServer
 @page "/Presentation"
@@ -532,7 +532,7 @@ Step 4: Add a button to `Presentation.razor`.
 Include the following code to create a new button that triggers the PowerPoint to Image conversion:
 
 {% tabs %}
-{% highlight CSHTML %}
+{% highlight razor tabtitle="RAZOR" %}
 
 <h2> Syncfusion PowerPoint (Presentation) Library</h2>
 <p>The Syncfusion PowerPoint (Presentation) library is used to create, read, edit, and convert PowerPoint files in applications without Microsoft Office dependencies.</p>
@@ -546,7 +546,7 @@ Step 5: Implement the method in `Presentation.razor`.
 Add the following code to **convert PowerPoint to Image** and download the **image file**.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight razor tabtitle="RAZOR" %}
 
 @code {
     MemoryStream documentStream;
@@ -643,7 +643,7 @@ Step 10: Add the following JavaScript function to `App.razor`.
 Add this function in the `App.razor` file located in the `Pages` folder.
 
 {% tabs %}
-{% highlight HTML %}
+{% highlight razor tabtitle="RAZOR" %}
 
 <script type="text/javascript">
     function saveAsFile(filename, bytesBase64) 
@@ -680,7 +680,7 @@ Add the following code snippet to the Navigation menu's Razor file in the `Layou
 
 {% tabs %}
 
-{% highlight HTML %}
+{% highlight razor tabtitle="RAZOR" %}
 
  <div class="nav-item px-3">
     <NavLink class="nav-link" href="presentation">
@@ -755,7 +755,7 @@ Step 3: Create a Razor file named `Presentation.razor` in the `Pages` folder.
 Add the following namespaces in the file.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight razor tabtitle="RAZOR" %}
 
 @page "/presentation"
 @inject Microsoft.JSInterop.IJSRuntime JS
@@ -772,7 +772,7 @@ Step 4: Add a button to `Presentation.razor`.
 Include the following code to create a new button that triggers the PowerPoint to Image conversion:
 
 {% tabs %}
-{% highlight CSHTML %}
+{% highlight razor tabtitle="RAZOR" %}
 
 <h2>Syncfusion PowerPoint Library (Essential Presentation)</h2>
 <p>The Syncfusion Blazor PowerPoint library (Essential Presentation) used to create, read, edit, and convert PowerPoint files in applications without Microsoft Office dependencies.</p>
@@ -786,7 +786,7 @@ Step 5: Implement `PPTXToImage` method in `Presentation.razor`.
 Create a new `async` method named `PPTXToImage` and include the following code snippet to **convert a PowerPoint to image in Blazor WASM Standalone app**.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight razor tabtitle="RAZOR" %}
 
 //Input data file is inside the wwwroot folder.
 using (Stream inputStream = await client.GetStreamAsync("sample-data/Input.pptx"))
@@ -834,7 +834,7 @@ Step 7: Add the following JavaScript function to `index.html`.
 Add this function in the `index.html` file located in `wwwroot`.
 
 {% tabs %}
-{% highlight HTML %}
+{% highlight html tabtitle="HTML" %}
 
 <script type="text/javascript">
     function saveAsFile(filename, bytesBase64) {
@@ -868,7 +868,7 @@ Add the following code snippet to the Navigation menu's Razor file in the `Layou
 
 {% tabs %}
 
-{% highlight HTML %}
+{% highlight razor tabtitle="RAZOR" %}
 
  <div class="nav-item px-3">
     <NavLink class="nav-link" href="presentation">
@@ -937,7 +937,7 @@ Step 3: Create a Razor file named `Presentation.razor` in the `Pages` folder.
 Add the following namespaces in the file.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight razor tabtitle="RAZOR" %}
 
 @page "/presentation"
 @inject Microsoft.JSInterop.IJSRuntime JS
@@ -954,7 +954,7 @@ Step 4: Add a button to `Presentation.razor`.
 Include the following code to create a new button that triggers the PowerPoint to Image conversion:
 
 {% tabs %}
-{% highlight CSHTML %}
+{% highlight razor tabtitle="RAZOR" %}
 
 <h2>Syncfusion PowerPoint Library (Essential Presentation)</h2>
 <p>The Syncfusion Blazor PowerPoint library (Essential Presentation) used to create, read, edit, and convert PowerPoint files in applications without Microsoft Office dependencies.</p>
@@ -968,7 +968,7 @@ Step 5: Implement `PPTXToImage` method in `Presentation.razor`.
 Create a new `async` method named `PPTXToImage` and include the following code snippet to **convert a PowerPoint to image in Blazor WASM Standalone app**.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight razor tabtitle="RAZOR" %}
 
 //Input data file is inside the wwwroot folder.
 using (Stream inputStream = await client.GetStreamAsync("sample-data/Input.pptx"))
@@ -1016,7 +1016,7 @@ Step 7: Add the following JavaScript function to `index.html`.
 Add this function in the `index.html` file located in `wwwroot`.
 
 {% tabs %}
-{% highlight HTML %}
+{% highlight html tabtitle="HTML" %}
 
 <script type="text/javascript">
     function saveAsFile(filename, bytesBase64) {
@@ -1050,7 +1050,7 @@ Add the following code snippet to the Navigation menu's Razor file in the `Layou
 
 {% tabs %}
 
-{% highlight HTML %}
+{% highlight razor tabtitle="RAZOR" %}
 
  <div class="nav-item px-3">
     <NavLink class="nav-link" href="presentation">
@@ -1138,7 +1138,7 @@ Step 3: Create a Razor file named `Presentation.razor` in the `Pages` folder.
 Add the following namespaces in the file.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight razor tabtitle="RAZOR" %}
 
 @page "/presentation"
 @inject Microsoft.JSInterop.IJSRuntime JS
@@ -1155,7 +1155,7 @@ Step 4: Add a button to `Presentation.razor`.
 Include the following code to create a new button that triggers the PowerPoint to Image conversion:
 
 {% tabs %}
-{% highlight CSHTML %}
+{% highlight razor tabtitle="RAZOR" %}
 
 <h2>Syncfusion PowerPoint Library (Essential Presentation)</h2>
 <p>The Syncfusion Blazor PowerPoint library (Essential Presentation) used to create, read, edit, and convert PowerPoint files in applications without Microsoft Office dependencies.</p>
@@ -1169,7 +1169,7 @@ Step 5: Implement `PPTXToImage` method in `Presentation.razor`.
 Create a new `async` method named `PPTXToImage` and include the following code snippet to **convert a PowerPoint to image in Blazor WASM Standalone app**.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight razor tabtitle="RAZOR" %}
 
 //Input data file is inside the wwwroot folder.
 using (Stream inputStream = await client.GetStreamAsync("sample-data/Input.pptx"))
@@ -1217,7 +1217,7 @@ Step 7: Add the following JavaScript function to `index.html`.
 Add this function in the `index.html` file located in `wwwroot`.
 
 {% tabs %}
-{% highlight HTML %}
+{% highlight html tabtitle="HTML" %}
 
 <script type="text/javascript">
     function saveAsFile(filename, bytesBase64) {
@@ -1251,7 +1251,7 @@ Add the following code snippet to the Navigation menu's Razor file in the `Layou
 
 {% tabs %}
 
-{% highlight HTML %}
+{% highlight razor tabtitle="RAZOR" %}
 
  <div class="nav-item px-3">
     <NavLink class="nav-link" href="presentation">
