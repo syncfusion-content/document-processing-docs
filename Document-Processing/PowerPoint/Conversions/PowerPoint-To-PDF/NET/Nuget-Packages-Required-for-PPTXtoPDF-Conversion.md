@@ -60,14 +60,6 @@ UWP, ASP.NET Core, Console Application (Targeting .NET Core) and Blazor
 </tr>
 <tr>
 <td>
-Xamarin
-</td>
-<td>
-{{'[Syncfusion.Xamarin.PresentationRenderer.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.PresentationRenderer/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
 Windows UI Library (WinUI) and .NET Multi-platform App UI (.NET MAUI)
 </td>
 <td>
@@ -75,7 +67,7 @@ Windows UI Library (WinUI) and .NET Multi-platform App UI (.NET MAUI)
 </tr>
 </table>
 
-T> If you encounter issues while using the .NET PowerPoint library in ASP.NET Core, refer to the [troubleshooting guide](https://support.syncfusion.com/kb/article/16010/how-to-use-troubleshooting-guide-for-aspnet-core-powerpoint-library-issues) for recommended checks and solutions.
+T> If you encounter issues while using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) in ASP.NET Core, refer to the [troubleshooting guide](https://support.syncfusion.com/kb/article/16010/how-to-use-troubleshooting-guide-for-aspnet-core-powerpoint-library-issues) for recommended checks and solutions.
 
 #### Retired Platforms
 
@@ -93,6 +85,13 @@ The following NuGet packages need to be included in your application based on th
 {{'[ASP.NET](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-asp-net)' | markdownify}}<br/></td>
 <td>
 {{'[Syncfusion.PresentationToPDFConverter.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.AspNet)'|markdownify }}
+</td>
+</tr>
+<tr>
+<td>
+{{'[Xamarin](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-xamarin)' | markdownify}}<br/></td>
+<td>
+{{'[Syncfusion.Xamarin.PresentationRenderer.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.PresentationRenderer/)'| markdownify }}
 </td>
 </tr>
 </table>
@@ -200,14 +199,6 @@ ASP.NET Core, Console Application (Targeting .NET Core) and Blazor
 {{'[Syncfusion.PresentationRenderer.Net.Core.nupkg](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core/)'| markdownify }}
 </td>
 </tr>
-<tr>
-<td>
-Xamarin
-</td>
-<td>
-{{'[Syncfusion.Xamarin.PresentationRenderer.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.PresentationRenderer/)'| markdownify }}<br/>
-</td>
-</tr>
 </table>
 
 #### Retired Platforms
@@ -226,6 +217,13 @@ The following NuGet packages need to be included in your application based on th
 ASP.NET<br/></td>
 <td>
 {{'[Syncfusion.OfficeChartToImageConverter.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.AspNet)'|markdownify }}
+</td>
+</tr>
+<tr>
+<td>
+Xamarin<br/></td>
+<td>
+{{'[Syncfusion.Xamarin.PresentationRenderer.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.PresentationRenderer/)'| markdownify }}<br/>
 </td>
 </tr>
 </table>
@@ -318,17 +316,6 @@ ASP.NET Core and Blazor
 </td>
 <td>
 * Uninstall-package Syncfusion.PresentationRenderer.Net.Core - RemoveDependencies
-</td>
-</tr>
-<tr>
-<td>
-Xamarin
-</td>
-<td>
-* Install-package Syncfusion.Xamarin.PresentationRenderer
-</td>
-<td>
-* Uninstall-package Syncfusion.Xamarin.PresentationRenderer - RemoveDependencies
 </td>
 </tr>
 <tr>

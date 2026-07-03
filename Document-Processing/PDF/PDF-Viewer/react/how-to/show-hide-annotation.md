@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Show and hide annotations in PDF Viewer
+# Show and hide annotations in React PDF Viewer
 
 ## Overview
 

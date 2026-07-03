@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Get current word in JavaScript (ES6) Document editor control
 
-You can get the current word or paragraph content from the JavaScript Document Editor component as plain text and SFDT (rich text).
+You can get the current word or paragraph content from the [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) component as plain text and SFDT (rich text).
 
 ## Select and get the word in current cursor position
 

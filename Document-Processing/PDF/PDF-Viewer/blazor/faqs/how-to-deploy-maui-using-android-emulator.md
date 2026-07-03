@@ -15,7 +15,7 @@ To create the .NET MAUI project, see Create a [MAUI app](https://help.syncfusion
 
 ## Add the PDF Viewer component
 
-Add the Syncfusion Blazor PDF Viewer component in the **~/Pages/Index.razor** file.
+Add the Blazor PDF Viewer component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}

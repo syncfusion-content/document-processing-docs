@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Section format in Angular Document editor component
 
-Document Editor supports various section formatting such as page size, page margins, and more.
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) supports various section formatting such as page size, page margins, and more.
 
 ## Page size
 

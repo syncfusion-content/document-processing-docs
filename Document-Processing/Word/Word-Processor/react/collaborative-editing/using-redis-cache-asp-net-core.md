@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Collaborative Editing in React with Redis in ASP.NET Core
 
-Syncfusion® React DOCX Editor (Document Editor) supports collaborative editing which Allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made
+[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports collaborative editing which Allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made
 
 ## Prerequisites
 

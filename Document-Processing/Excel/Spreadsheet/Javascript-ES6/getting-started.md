@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with TypeScript Spreadsheet control
 
-This section explains how to create a simple TypeScript application and add the [Syncfusion® TypeScript Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) control with the minimum required setup.
+This section explains how to create a simple TypeScript application and add the [TypeScript Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) control with the minimum required setup.
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ To get started, ensure the following software is installed on your machine:
 
 Create a simple TypeScript application using the Essential<sup style="font-size:70%">&reg;</sup> JS 2 [quickstart](https://github.com/SyncfusionExamples/ej2-quickstart-webpack-) seed repository.
 
-N> This application is integrated with the `webpack.config.js` configuration and uses the latest version of the [webpack-cli](https://webpack.js.org/api/cli/#commands). For more information about webpack and its features, refer to the [webpack documentation](https://webpack.js.org/guides/getting-started/).
+> This application is integrated with the `webpack.config.js` configuration and uses the latest version of the [webpack-cli](https://webpack.js.org/api/cli/#commands). For more information about webpack and its features, refer to the [webpack documentation](https://webpack.js.org/guides/getting-started/).
 
 **Step 1:** Open the command prompt from the required directory and clone the quickstart project from GitHub.
 
@@ -40,15 +40,11 @@ cd ej2-quickstart
  
 To install only the Spreadsheet component, replace the dependency with [@syncfusion/ej2-spreadsheet](https://www.npmjs.com/package/@syncfusion/ej2-spreadsheet), as shown below:
 
-{% tabs %}
-{% highlight json tabtitle="package.json" %}
-
+```bash
 "dependencies": {
   "@syncfusion/ej2-spreadsheet": "*"
 }
-
-{% endhighlight %}
-{% endtabs %}
+```
 
 **Step 4:** Install the dependent npm packages.
 
@@ -61,7 +57,7 @@ npm install
 Add the following Spreadsheet and dependent component style references.
 
 {% tabs %}
-{% highlight css tabtitle="styles.css" %}
+{% highlight css tabtitle="~/src/styles/styles.css" %}
 
 @import '../../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
 @import '../../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
@@ -77,7 +73,7 @@ Add the following Spreadsheet and dependent component style references.
 {% endhighlight %}
 {% endtabs %}
 
-N> Refer to the [Themes topic](https://ej2.syncfusion.com/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a TypeScript project.
+> Refer to the [Themes topic](https://ej2.syncfusion.com/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a TypeScript project.
 
 ## Add the Syncfusion® Spreadsheet control to the application
 
@@ -120,7 +116,7 @@ spreadsheet.appendTo('#element');
 {% endhighlight %}
 {% endtabs %}
 
-N> The [openUrl](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#openurl) and [saveUrl](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#saveurl) properties are used to connect the Spreadsheet control to a server-side service for Excel import and export operations. For development and production use, we recommend configuring your own local or hosted service instead of relying on demo endpoints. For more information, refer to the [`link`](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services).
+> **Note:** The [openUrl](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#openurl) and [saveUrl](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#saveurl) properties are used to connect the Spreadsheet control to a server-side service for Excel import and export operations. For development and production use, we recommend configuring your own local or hosted service instead of relying on demo endpoints. For more information, refer to the [`link`](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services).
 
 ## Run the application
 
@@ -142,7 +138,8 @@ You can also explore the Spreadsheet interactively using the live sample below.
           
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/spreadsheet/getting-started-cs1" %}
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-javascript-spreadsheet-control).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-javascript-spreadsheet-control). Looking for the full JavaScript Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) page.
+
 
 ## See also
 

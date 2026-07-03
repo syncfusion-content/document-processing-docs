@@ -9,7 +9,7 @@ documentation: ug
 
 # PDF Rendering Engines in Windows Forms PDF Viewer (PdfViewerControl)
 
-Syncfusion<sup>&reg;</sup>; [WinForms PDF Viewer](https://www.syncfusion.com/winforms-ui-controls/pdf-viewer) renders the PDF pages through 2 different rendering engines.
+[WinForms PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/winforms-pdf-viewer) renders the PDF pages through 2 different rendering engines.
 
 * PDFium (Google Chrome’s PDF rendering engine)
 * SfPdf (Syncfusion’s Own PDF rendering engine)
@@ -20,7 +20,7 @@ PDFium is used in Google Chrome for rendering PDF files. It provides accurate an
 
 N>* From v16.3.0.x onwards, this PDFium rendering engine is the default rendering engine of Syncfusion<sup>&reg;</sup>; WinForms PDF Viewer.
 N>* From v20.4.0.x onwards, ARM64-based Pdfium assembly is generated for Syncfusion<sup>&reg;</sup>; WinForms PDF Viewer control in applications that target ARM64 architecture.
-N>* From v29.1.x onwards, Pdfium is upgraded to the new version which was built with the branch [chromium/6945](https://pdfium.googlesource.com/pdfium/+/refs/heads/chromium/6945).
+N>* From v34.1.x onwards, Pdfium is upgraded to the new version which was built with the branch [chromium/7814](https://pdfium.googlesource.com/pdfium/+/refs/heads/chromium/7814).
 
 ### How PDFium works with Syncfusion’s PDF Viewer
 

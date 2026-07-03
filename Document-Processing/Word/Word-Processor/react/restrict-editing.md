@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Restrict Editing in React DOCX Editor
 
-Syncfusion® React DOCX Editor (Document Editor) provides support for restricting editing within a document. It enables control over how and where content can be modified. This helps limit editing so only specific sections of the document can be changed.
+[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides support for restricting editing within a document. It enables control over how and where content can be modified. This helps limit editing so only specific sections of the document can be changed.
 
 ## Configure on client side
 
@@ -256,31 +256,53 @@ container.documentEditor.currentUser = 'engineer@mycompany.com';
 {% endhighlight %}
 {% endtabs %}
 
-## Highlighting the text area
+## Protect document with editable region
+User can select a specific section and mark it as an editable region, allowing modification only in that part. The rest of the document remains protected from any changes.
 
+### Insert editable region
+Use the [insertEditingRegion](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#inserteditingregion) method to mark specific paragraphs as editable.This allows you to control editing by giving access to all users or only selected users.
+
+The following example shows how to insert an editable region.
+{% tabs %}
+{% highlight ts tabtitle="TS" %}
+ 
+// Allow editing for all users
+container.documentEditor.editor.insertEditingRegion();
+ 
+// pass a username to restrict access
+container.documentEditor.editor.insertEditingRegion("User Name");
+ 
+{% endhighlight %}
+{% endtabs %}
+ 
+### Highlight color for editable region
+ 
 The [userColor](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/index-default#usercolor) property can be used to highlight the editable region of the current user.
  
 The following code example demonstrates how to set the userColor.
-
+ 
 {% tabs %}
 {% highlight ts tabtitle="TS" %}
-
+ 
 container.documentEditor.userColor = '#fff000';
-
+ 
 {% endhighlight %}
 {% endtabs %}
-
-The [highlightEditableRanges](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/documenteditorsettingsmodel#highlighteditableranges) property can be used to toggle the highlighting of editable regions. 
-
+ 
+### Enable or disable editable region highlighting
+ 
+The [highlightEditableRanges](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/documenteditorsettingsmodel#highlighteditableranges) property can be used to toggle the highlighting of editable regions.
+ 
 The following code example demonstrates how to enable or disable editable region highlighting.
-
+ 
 {% tabs %}
 {% highlight ts tabtitle="TS" %}
-
+ 
 container.documentEditor.documentEditorSettings.highlightEditableRanges = true;
-
+ 
 {% endhighlight %}
 {% endtabs %}
+ 
 
 ## Restrict Editing Pane
 

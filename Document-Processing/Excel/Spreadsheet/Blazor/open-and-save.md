@@ -12,7 +12,7 @@ documentation: ug
 The **Open** and **Save** functionalities in the Blazor Spreadsheet component allow for efficient management of Excel files. You can open existing Excel files for analysis and modification, and save new or modified spreadsheets in a compatible format.
 
 ## Open
-The Blazor Spreadsheet component preserves all data, cell styles, formatting, and other spreadsheet elements when opening Excel files. These files can be loaded through the user interface action or programmatic methods.
+The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component preserves all data, cell styles, formatting, and other spreadsheet elements when opening Excel files. These files can be loaded through the user interface action or programmatic methods.
 
 ### Open an Excel file via UI
 
@@ -514,7 +514,11 @@ To save the Spreadsheet content through the user interface, select the **File > 
 When a protected sheet or workbook is saved or downloaded, all associated settings - such as the protection password, unlocked cell ranges, and sheet options - are preserved in the Excel file. These settings remain active and are consistently maintained when the file is opened in other viewers like **Microsoft Excel** or **Google Sheets**, ensuring seamless protection across viewers. To know more about protection, refer [here](./protection#protect-sheet).
 
 ### Supported file formats
-The Spreadsheet component supports saving files in the Microsoft Excel (.xlsx) format.
+The Spreadsheet component supports saving files in the following formats:
+* Microsoft Excel (.xlsx)
+* Microsoft Excel 97-2003 (.xls)
+* Comma Separated Values (.csv)
+* Portable Document Format (.pdf)
 
 ### Save an Excel file programmatically
 
@@ -596,6 +600,170 @@ The [SaveAsStreamAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 }
 {% endhighlight %}
 {% endtabs %}
+
+### Save in different file formats
+
+The Blazor Spreadsheet component supports exporting spreadsheet data to multiple file formats, enabling flexibility in how data is shared and consumed. Each format has specific use cases and compatibility considerations, allowing developers to choose the optimal format based on downstream processing requirements or distribution needs.
+
+**Supported Save Formats:**
+
+| SaveType | File Extension | Description |
+|---|---|---|---|
+| `Xlsx` | `.xlsx` | Microsoft Excel 2007 and later format |
+| `Xls` | `.xls` | Microsoft Excel 97-2003 format |
+| `Csv` | `.csv` | Comma Separated Values format |
+| `Pdf` | `.pdf` | Portable Document Format |
+
+**Configuring File Format:**
+
+Specify the desired export format using the `SaveType` property within the [SaveOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SaveOptions.html) parameter. The format determines how the spreadsheet content is transformed and exported. Optional layout settings such as page orientation and scaling can be configured for PDF exports.
+
+The following code example demonstrates saving the spreadsheet in different formats:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Spreadsheet
+
+<button OnClick="SaveAsXlsx">Save as XLSX</button>
+<button OnClick="SaveAsCsv">Save as CSV</button>
+
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+    public byte[] DataSourceBytes { get; set; }
+    public SfSpreadsheet SpreadsheetInstance { get; set; }
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    // Save as Excel 2007 and later format (.xlsx)
+    public async Task SaveAsXlsx()
+    {
+        await SpreadsheetInstance.SaveAsync(new SaveOptions
+        {
+            SaveType = SaveType.Xlsx,
+            FileName = "Spreadsheet"
+        });
+    }
+
+    // Save as Comma Separated Values format (.csv)
+    public async Task SaveAsCsv()
+    {
+        await SpreadsheetInstance.SaveAsync(new SaveOptions
+        {
+            SaveType = SaveType.Csv,
+            FileName = "Spreadsheet"
+        });
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Save as PDF with layout settings
+
+PDF export from the Blazor Spreadsheet component supports customization of layout and presentation through the [PdfLayoutSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.PdfLayoutSettings.html) property. These settings control how spreadsheet content is rendered on PDF pages, including page orientation, scaling behavior, and content distribution. By default, PDF documents are created in portrait orientation with standard scaling.
+
+**Available PDF Layout Settings:**
+
+| Property | Type | Default | Description |
+|---|---|---|---|
+| `Orientation` | `PdfPageOrientation` | `Portrait` | Controls page orientation: `Portrait` (8.5" × 11") or `Landscape` (11" × 8.5"). Choose Portrait for standard letter-sized documents or Landscape for wide data ranges. |
+| `FitSheetOnOnePage` | `bool` | `false` | Determines content scaling behavior: `true` scales content proportionally to fit entire sheet on single page; `false` allows content to span multiple pages using normal printing pagination. |
+
+**Layout Configuration Guide:**
+
+**Orientation Selection:**
+- **Portrait**: Default orientation, ideal for documents with standard column counts. Maximizes vertical space for data rows.
+- **Landscape**: Recommended for spreadsheets with many columns or wide data ranges. Provides additional horizontal space.
+
+**Scaling Behavior:**
+- **FitSheetOnOnePage = true**: All spreadsheet content scales to fit on a single PDF page. Useful for summaries, executive reports, or when a one-page document is required. Text and content size may reduce.
+- **FitSheetOnOnePage = false**: Content uses standard print scaling and may span multiple pages. Preserves readability and data size at the cost of multiple pages.
+
+
+The following code example demonstrates saving the spreadsheet as PDF with different layout configurations:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Spreadsheet
+
+<button OnClick="SaveAsPdf">Save as PDF</button>
+
+<SfSpreadsheet @ref="SpreadsheetInstance" BeforeSave="OnBeforesave">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+    public SfSpreadsheet SpreadsheetInstance { get; set; }
+
+    public async Task SaveAsPdf()
+    {
+        await SpreadsheetInstance.SaveAsync(new SaveOptions
+        {
+            SaveType = SaveType.Pdf,
+            FileName = "Spreadsheet"
+        });
+    }
+
+    public void OnBeforesave(BeforeSaveEventArgs args)
+    {
+        if (args.SaveType == SaveType.Pdf)
+        {
+            args.PdfLayoutSettings = new PdfLayoutSettings
+            {
+                FitSheetOnOnePage = true,
+                Orientation = PdfPageOrientation.Landscape
+            };
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+
+### Preserve fonts when saving PDF (Blazor WebAssembly)
+
+In Blazor WebAssembly, to preserve fonts in exported PDF use the `CustomFont` property of the SfSpreadsheet component. Provide local TrueType font (.ttf) files from wwwroot and reference them via the component.
+
+#### How to use
+- Place .ttf files under wwwroot (for example: wwwroot/Arial.ttf).
+- Mark each .ttf as Content so it is published to wwwroot.
+- Set the SfSpreadsheet.CustomFonts list with paths relative to wwwroot (for example: `"Arial.ttf"`).
+- Only local .ttf files are supported for WASM PDF export — do not use remote URLs.
+- Verify file name casing; paths are effectively case-sensitive on some hosts.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Spreadsheet
+     
+<SfSpreadsheet @ref="SpreadsheetRef" CustomFonts="@CustomFonts">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+    public List<string> CustomFonts = new List<string>
+    {
+        "Arial.ttf",
+        "Calibri.ttf",
+        "Courier New.ttf",
+        "Georgia.ttf"
+    };
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Only local TrueType (.ttf) files referenced in `CustomFonts` are fetched and embedded by the WASM PDF exporter. If a font used in the sheet is not provided, a fallback font will be used and the appearance may change. 
 
 ## New
 To create a new, blank workbook through the UI, select **File > New** from the **Ribbon**. This action initializes a blank spreadsheet component, ready for data entry or formatting. If unsaved changes are present, a confirmation dialog will appear, indicating that these changes will be lost. The dialog presents options to proceed with creating the new workbook by selecting **OK**, or to cancel the operation by selecting **Cancel**.

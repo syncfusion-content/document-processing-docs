@@ -10,7 +10,7 @@ documentation: ug
 
 # How to set the default character, paragraph and section format in Document Editor component
 
-You can set the default character format, paragraph format and section format in Document editor.
+You can set the default character format, paragraph format and section format in [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor).
 
 ## Set the default character format
 

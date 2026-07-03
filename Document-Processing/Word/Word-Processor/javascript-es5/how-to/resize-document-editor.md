@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Resize document editor in JavaScript (ES5) Document editor control
 
-In this article, we are going to see how to change height and width of Document Editor.
+In this article, we are going to see how to change height and width of [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor).
 
 ## Change height of Document Editor
 

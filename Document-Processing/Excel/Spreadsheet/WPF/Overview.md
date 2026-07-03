@@ -9,7 +9,7 @@ documentation: ug
 
 # WPF Spreadsheet (SfSpreadsheet) Overview
 
-The [Syncfusion<sup>®</sup> WPF Spreadsheet (SfSpreadsheet)](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor) is excel inspired control that allows you to create, edit, view and format the Microsoft Excel files without excel installed. It provides absolute ease of use UI experience with integrated ribbon to cover any possible business scenario. SfSpreadsheet comes with built-in calculation engine with support for 400+ most widely used formulas. 
+The [WPF Spreadsheet (SfSpreadsheet)](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor) is excel inspired control that allows you to create, edit, view and format the Microsoft Excel files without excel installed. It provides absolute ease of use UI experience with integrated ribbon to cover any possible business scenario. SfSpreadsheet comes with built-in calculation engine with support for 400+ most widely used formulas. 
 
 
 ![SfSpreadsheet](Overview-image\wpf-spreadsheet-overview-image.png)
@@ -17,11 +17,11 @@ The [Syncfusion<sup>®</sup> WPF Spreadsheet (SfSpreadsheet)](https://www.syncfu
 
 ## Key Features
 
-* **[Ribbon](Ribbon-Customization)** – Ribbon integrated with organically enhanced UI experience.
+* **[Ribbon](ribbon-customization)** – Ribbon integrated with organically enhanced UI experience.
 
-* **[Editing](Editing)** **and** **[Selection](Selection)**- Interactive support for editing and cell selection in workbook.
+* **[Editing](editing)** **and** **[Selection](selection)**- Interactive support for editing and cell selection in workbook.
 
-* **[Formulas](Formulas)** - Provides support for 400+ most widely used formulas which any business user needs and allows you to add, remove and edit the formulas like in excel.
+* **[Formulas](formulas)** - Provides support for 400+ most widely used formulas which any business user needs and allows you to add, remove and edit the formulas like in excel.
 
 * **[Name Manager](https://help.syncfusion.com/document-processing/excel/spreadsheet/wpf/formulas#named-ranges)** – Supports the name ranges in the formulas. By using the name ranges, you can specify the name of the cell range, and then you can use it in the formula more easily without hassling of remembering cell locations.
 
@@ -31,7 +31,7 @@ The [Syncfusion<sup>®</sup> WPF Spreadsheet (SfSpreadsheet)](https://www.syncfu
 
 * **[Merge Cells](https://help.syncfusion.com/document-processing/excel/spreadsheet/wpf/formatting#merge-cells)** - Merge two or more adjacent cells into a single cell and display the contents of one cell in the merged cell.
 
-* **[Conditional Formatting](Conditional-Formatting)**- Provides support for excel compatible conditional formatting and allows you to apply formats to a cell or range of cells depending on the value of cells or formula that meet specific criteria. Also provides support to define and import the conditional formatting.  rules such as Data Bars, Icon Sets and Color Scales options which are used to visualize the data.
+* **[Conditional Formatting](conditional-formatting)**- Provides support for excel compatible conditional formatting and allows you to apply formats to a cell or range of cells depending on the value of cells or formula that meet specific criteria. Also provides support to define and import the conditional formatting.  rules such as Data Bars, Icon Sets and Color Scales options which are used to visualize the data.
 
 * **[Cell Comments](https://help.syncfusion.com/document-processing/excel/spreadsheet/wpf/interactive-features#cell-comments)**- Supports comments that provide additional information about a cell such as what the value represents. And it would be useful if you want the end users to understand the data in the cells more deeply.
 
@@ -47,24 +47,24 @@ The [Syncfusion<sup>®</sup> WPF Spreadsheet (SfSpreadsheet)](https://www.syncfu
 
 * **[Resizing and Hiding](https://help.syncfusion.com/document-processing/excel/spreadsheet/wpf/rows-and-columns#hide-rows-and-columns)** – Provides interactive support to resize or hide/unhide the rows and columns.
 
-* **[Charts, Pictures and Textboxes](Shapes)** - Provides support to import Charts, Pictures and Textboxes.
+* **[Charts, Pictures and Textboxes](shapes)** - Provides support to import Charts, Pictures and Textboxes.
 
 * **[Sparklines](https://help.syncfusion.com/document-processing/excel/spreadsheet/wpf/shapes#sparklines)** – Provides support to import Sparklines.
 
 * **[Outlines](Outline)** - Provides support to group or ungroup rows and columns.
 
-* **[Workbook and Worksheet Protection](Worksheet-Management)**- Provides support to protect the worksheet and also supports to lock-down the structure and window of workbook, which enables you to prevent workbook from any structural change or from any change in size.
+* **[Workbook and Worksheet Protection](worksheet-management)**- Provides support to protect the worksheet and also supports to lock-down the structure and window of workbook, which enables you to prevent workbook from any structural change or from any change in size.
 
-* **[Conversion](Conversion)** – Provides support to export the workbook to PDF, HTML, Image and CSV.
+* **[Conversion](conversion)** – Provides support to export the workbook to PDF, HTML, Image and CSV.
 
 * **[Zooming](https://help.syncfusion.com/document-processing/excel/spreadsheet/wpf/worksheet-management#zooming)** – Provides support to zoom in and zoom out of the worksheet view.
 
-* **[Localization](Localization)** - Provides support to localize all the static text in a Ribbon and all dialogs to any desired language.
+* **[Localization](localization)** - Provides support to localize all the static text in a Ribbon and all dialogs to any desired language.
 
 * **Supported file types** - Ability to import the different types of excel which are XLS, XLSX, XLSM, XLT, XLTX, CSV(Comma delimited) respectively.
 
 ## Related Link
-- [Getting Started](Getting-Started)
+- [Getting Started](getting-started)
 - [API Reference](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.html)
 - [Online Demos](https://github.com/syncfusion/spreadsheet-editor-sdk-wpf-demos)
 - [GitHub Samples](https://github.com/SyncfusionExamples/create-view-edit-excel-files-using-wpf-spreadsheet)

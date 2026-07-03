@@ -470,56 +470,134 @@ The following code example illustrates how to align text within a table.
 
 {% tabs %}
 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+private void AlignCellContentForTable(WTable table, HorizontalAlignment horizontalAlignment, VerticalAlignment verticalAlignment)
+{
+	//Iterates the row collection in a table.
+	foreach (WTableRow row in table.Rows)
+	{
+		//Iterates the cell collection in a table row.
+		foreach (WTableCell cell in row.Cells)
+		{
+			//Sets vertical alignment to the cell.
+			cell.CellFormat.VerticalAlignment = verticalAlignment;
+			//Iterate items in cell and set horizontal alignment.
+			AlignCellContentForTextBody(cell, horizontalAlignment, verticalAlignment);
+		}
+	}
+}
+private void AlignCellContentForTextBody(WTextBody textBody, HorizontalAlignment horizontalAlignment, VerticalAlignment verticalAlignment)
+{
+	for (int i = 0; i < textBody.ChildEntities.Count; i++)
+	{
+		//IEntity is the basic unit in DocIO DOM. 
+		//Accesses the body items as IEntity
+		IEntity bodyItemEntity = textBody.ChildEntities[i];
+		//A Text body has 3 types of elements - Paragraph, Table and Block Content Control.
+		//Decides the element type by using EntityType.
+		switch (bodyItemEntity.EntityType)
+		{
+			case EntityType.Paragraph:
+				WParagraph paragraph = bodyItemEntity as WParagraph;
+				//Sets horizontal alignment for paragraph.
+				paragraph.ParagraphFormat.HorizontalAlignment = horizontalAlignment;
+				break;
+			case EntityType.Table:
+				//Table is a collection of rows and cells.
+				//Iterates through table's DOM and set horizontal alignment.
+				AlignCellContentForTable(bodyItemEntity as WTable, horizontalAlignment, verticalAlignment);
+				break;
+			case EntityType.BlockContentControl:
+				BlockContentControl blockContentControl = bodyItemEntity as BlockContentControl;
+				//Iterates to the body items of Block Content Control and set horizontal alignment.
+				AlignCellContentForTextBody(blockContentControl.TextBody, horizontalAlignment, verticalAlignment);
+				break;
+		}
+	}
+}
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-private void AlignCellContent(WTableCell tableCell, VerticalAlignment verticalAlignment, HorizontalAlignment horizontalAlignment)
+private void AlignCellContentForTable(WTable table, HorizontalAlignment horizontalAlignment, VerticalAlignment verticalAlignment)
 {
-    //Sets vertical alignment to the cell.
-    tableCell.CellFormat.VerticalAlignment = verticalAlignment;
-    //Iterates body items in table cell and set horizontal alignment.
-    AlignCellContentForTextBody(tableCell, horizontalAlignment);
+	//Iterates the row collection in a table.
+	foreach (WTableRow row in table.Rows)
+	{
+		//Iterates the cell collection in a table row.
+		foreach (WTableCell cell in row.Cells)
+		{
+			//Sets vertical alignment to the cell.
+			cell.CellFormat.VerticalAlignment = verticalAlignment;
+			//Iterate items in cell and set horizontal alignment.
+			AlignCellContentForTextBody(cell, horizontalAlignment, verticalAlignment);
+		}
+	}
 }
-private void AlignCellContentForTextBody(WTextBody textBody, HorizontalAlignment horizontalAlignment)
+private void AlignCellContentForTextBody(WTextBody textBody, HorizontalAlignment horizontalAlignment, VerticalAlignment verticalAlignment)
 {
-    for (int i = 0; i < textBody.ChildEntities.Count; i++)
-    {
-        //IEntity is the basic unit in DocIO DOM. 
-        //Accesses the body items as IEntity
-        IEntity bodyItemEntity = textBody.ChildEntities[i];
-        //A Text body has 3 types of elements - Paragraph, Table and Block Content Control
-        //Decides the element type by using EntityType
-        switch (bodyItemEntity.EntityType)
-        {
-            case EntityType.Paragraph:
-                WParagraph paragraph = bodyItemEntity as WParagraph;
-                //Sets horizontal alignment for paragraph.
-                paragraph.ParagraphFormat.HorizontalAlignment = horizontalAlignment;
-                break;
-            case EntityType.Table:
-                //Table is a collection of rows and cells
-                //Iterates through table's DOM and set horizontal alignment.
-                AlignCellContentForTable(bodyItemEntity as WTable, horizontalAlignment);
-                break;
-            case EntityType.BlockContentControl:
-                BlockContentControl blockContentControl = bodyItemEntity as BlockContentControl;
-                //Iterates to the body items of Block Content Control and set horizontal alignment.
-                AlignCellContentForTextBody(blockContentControl.TextBody, horizontalAlignment);
-                break;
-        }
-    }
+	for (int i = 0; i < textBody.ChildEntities.Count; i++)
+	{
+		//IEntity is the basic unit in DocIO DOM. 
+		//Accesses the body items as IEntity
+		IEntity bodyItemEntity = textBody.ChildEntities[i];
+		//A Text body has 3 types of elements - Paragraph, Table and Block Content Control.
+		//Decides the element type by using EntityType.
+		switch (bodyItemEntity.EntityType)
+		{
+			case EntityType.Paragraph:
+				WParagraph paragraph = bodyItemEntity as WParagraph;
+				//Sets horizontal alignment for paragraph.
+				paragraph.ParagraphFormat.HorizontalAlignment = horizontalAlignment;
+				break;
+			case EntityType.Table:
+				//Table is a collection of rows and cells.
+				//Iterates through table's DOM and set horizontal alignment.
+				AlignCellContentForTable(bodyItemEntity as WTable, horizontalAlignment, verticalAlignment);
+				break;
+			case EntityType.BlockContentControl:
+				BlockContentControl blockContentControl = bodyItemEntity as BlockContentControl;
+				//Iterates to the body items of Block Content Control and set horizontal alignment.
+				AlignCellContentForTextBody(blockContentControl.TextBody, horizontalAlignment, verticalAlignment);
+				break;
+		}
+	}
 }
-private void AlignCellContentForTable(WTable table, Syncfusion.DocIO.DLS.HorizontalAlignment horizontalAlignment)
-{
-    //Iterates the row collection in a table
-    foreach (WTableRow row in table.Rows)
-    {
-        //Iterates the cell collection in a table row
-        foreach (WTableCell cell in row.Cells)
-        {
-            //Iterate items in cell and set horizontal alignment
-            AlignCellContentForTextBody(cell, horizontalAlignment);
-        }
-    }
-}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Private Sub AlignCellContentForTable(table As WTable, horizontalAlignment As HorizontalAlignment, verticalAlignment As VerticalAlignment)
+    ' Iterates the row collection in a table.
+    For Each row As WTableRow In table.Rows
+        ' Iterates the cell collection in a table row.
+        For Each cell As WTableCell In row.Cells
+            ' Sets vertical alignment to the cell.
+            cell.CellFormat.VerticalAlignment = verticalAlignment
+            ' Iterate items in cell and set horizontal alignment.
+            AlignCellContentForTextBody(cell, horizontalAlignment, verticalAlignment)
+        Next
+    Next
+End Sub
+
+Private Sub AlignCellContentForTextBody(textBody As WTextBody, horizontalAlignment As HorizontalAlignment, verticalAlignment As VerticalAlignment)
+    For i As Integer = 0 To textBody.ChildEntities.Count - 1
+        ' IEntity is the basic unit in DocIO DOM.
+        Dim bodyItemEntity As IEntity = textBody.ChildEntities(i)
+        ' A Text body has 3 types of elements - Paragraph, Table and Block Content Control.
+        Select Case bodyItemEntity.EntityType
+            Case EntityType.Paragraph
+                Dim paragraph As WParagraph = TryCast(bodyItemEntity, WParagraph)
+                ' Sets horizontal alignment for paragraph.
+                paragraph.ParagraphFormat.HorizontalAlignment = horizontalAlignment
+            Case EntityType.Table
+                ' Iterates through table's DOM and set alignment.
+                AlignCellContentForTable(TryCast(bodyItemEntity, WTable), horizontalAlignment, verticalAlignment)
+            Case EntityType.BlockContentControl
+                Dim blockContentControl As BlockContentControl = TryCast(bodyItemEntity, BlockContentControl)
+                ' Iterates to the body items of Block Content Control.
+                AlignCellContentForTextBody(blockContentControl.TextBody, horizontalAlignment, verticalAlignment)
+        End Select
+    Next
+End Sub
 {% endhighlight %}
 
 {% endtabs %}
@@ -2130,8 +2208,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to format a table in a Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/formattable#/tailwind).
-* See how to apply built-in and custom styles to the tables of the Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/tablestyles#/tailwind). 
+* Explore how to format a table in a Word document using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/formattable#/tailwind).
+* See how to apply built-in and custom styles to the tables of the Word document using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/tablestyles#/tailwind). 
 
 ## See Also
 

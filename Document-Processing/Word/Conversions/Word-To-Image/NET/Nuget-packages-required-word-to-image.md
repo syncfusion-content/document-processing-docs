@@ -97,17 +97,6 @@ Install-Package Syncfusion.DocIORenderer.Net.Core
 </tr>
 <tr>
 <td>
-Xamarin
-</td>
-<td>
-Syncfusion.Xamarin.DocIORenderer.nupkg
-</td>
-<td>
-Install-Package Syncfusion.Xamarin.DocIORenderer
-</td>
-</tr>
-<tr>
-<td>
 Windows UI Library (WinUI)<br/> .NET Multi-platform App UI (.NET MAUI)
 </td>
 <td>
@@ -148,6 +137,17 @@ Syncfusion.DocIO.AspNet.nupkg
 </td>
 <td>
 Install-Package Syncfusion.DocIO.AspNet
+</td>
+</tr>
+<tr>
+<td>
+{{'[Xamarin](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-xamarin)' | markdownify}}<br/>
+</td>
+<td>
+Syncfusion.Xamarin.DocIORenderer.nupkg
+</td>
+<td>
+Install-Package Syncfusion.Xamarin.DocIORenderer
 </td>
 </tr>
 </table>

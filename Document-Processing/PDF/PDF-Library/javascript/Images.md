@@ -1,12 +1,12 @@
 ---
-title: Images in JavaScript PDF library | Syncfusion
-description: This section explains how to add and replace images in a PDF document by using the JavaScript PDF library
+title: Images in JavaScript PDF Library | Syncfusion
+description: This section explains how to add and replace images in a PDF document by using the JavaScript PDF Library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Images in JavaScript PDF library
+# Images in JavaScript PDF Library
 
 The JavaScript PDF supports JPEG and PNG images.
 

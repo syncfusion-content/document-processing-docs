@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Import in JavaScript (ES6) Document editor control
 
-In Document Editor, the documents are stored in its own format called **Syncfusion Document Text (SFDT)**.
+In [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor), the documents are stored in its own format called **Syncfusion Document Text (SFDT)**.
 
 The following example shows how to open SFDT data in Document Editor.
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # User Interface Customization
 
-The Syncfusion React Spreadsheet component provides options to customize the user interface and control the behavior of its UI components.
+The [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component provides options to customize the user interface and control the behavior of its UI components.
 
 You can control the ribbon tabs, toolbar items, context menu, and overall appearance. Use these options to show, hide, or modify UI elements and attach custom behavior.
 
@@ -89,3 +89,16 @@ The following code sample shows how to enable or disable a ribbon tab and toolba
 {% endtabs %}
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/enable-or-disable-ribbon-items-cs1" %}
+
+## Note
+
+You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
+
+## See Also
+
+* [Worksheet](./worksheet)
+* [Rows and columns](./rows-and-columns)
+* [Cell templates](./user-interface-customization/custom-cell-templates)
+* [Context menu customization](./user-interface-customization/customize-context-menu)
+* [File menu customization](./user-interface-customization/customize-filemenu)
+* [Theming-and-styling](./user-interface-customization/theming-and-styling)

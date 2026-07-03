@@ -543,7 +543,7 @@ N> 2. If you are using multiple pages in your application, then make sure to unl
 
 The **Getting Started** example project for the .NET MAUI PDF Viewer can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples/tree/master/Getting%20Started). 
 
-N> You can refer to our [.NET MAUI PDF Viewer](https://www.syncfusion.com/maui-controls/maui-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI PDF Viewer Example](https://github.com/syncfusion/pdf-viewer-sdk-net-maui-demos/tree/master/PdfViewer) that shows you how to render the PDF Viewer in .NET MAUI.
+N> You can refer to our [.NET MAUI PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/net-maui-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI PDF Viewer Example](https://github.com/syncfusion/pdf-viewer-sdk-net-maui-demos/tree/master/PdfViewer) that shows you how to render the PDF Viewer in .NET MAUI.
 
 ## What to Do Next
 
@@ -560,3 +560,5 @@ Now that the PDF Viewer is running, you can explore the following features:
 | **Redact sensitive content** | Permanently remove confidential text or images before sharing. → [Redaction](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/redaction) |
 
 * For migration from Xamarin to .NET MAUI, please follow the [Migration Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/migration).
+
+N> Looking for the full .NET MAUI PDF Viewer component overview, features, pricing, and documentation? Visit the [.NET MAUI PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/net-maui-pdf-viewer) page

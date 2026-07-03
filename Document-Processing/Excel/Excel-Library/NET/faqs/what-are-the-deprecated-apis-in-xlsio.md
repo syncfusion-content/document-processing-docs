@@ -1,6 +1,6 @@
 ---
 title: What are the deprecated APIs in XlsIO | Syncfusion
-description: This page lists the deprecated APIs of Syncfusion .NET Excel library (XlsIO) and their respective new APIs.
+description: This page lists the deprecated APIs of .NET Excel library and their respective new APIs.
 platform: document-processing
 control: XlsIO
 documentation: UG

@@ -9,7 +9,7 @@ documentation: ug
 
 # Open PDF from Google Drive in SfPdfViewer
 
-This article shows how to load a PDF stored in Google Drive into the Syncfusion Blazor `SfPdfViewer` component.
+This article shows how to load a PDF stored in Google Drive into the Blazor `SfPdfViewer` component.
 
 ## Step 1 — Enable the Google Drive API
 

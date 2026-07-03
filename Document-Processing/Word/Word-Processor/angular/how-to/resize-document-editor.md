@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Resize document editor in Angular Document editor component
 
-In this article, we are going to see how to change height and width of Document Editor.
+In this article, we are going to see how to change height and width of [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor).
 
 ## Change height of Document Editor
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Styles in Angular Document editor component
 
-Styles are useful for applying a set of formatting consistently throughout the document. In document editor, styles are created and added to a document programmatically or via the built-in Styles dialog.
+Styles are useful for applying a set of formatting consistently throughout the document. In [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor), styles are created and added to a document programmatically or via the built-in Styles dialog.
 
 ## Styles definition overview
 

@@ -12,7 +12,7 @@ The Essential<sup>&reg;</sup> DocIO converts the HTML file into Word document an
 
 ## Assemblies and NuGet packages required
 
-Refer to the following links for assemblies and NuGet packages required based on platforms to convert the HTML file into Word document and vice versa using the .NET Word Library (DocIO).
+Refer to the following links for assemblies and NuGet packages required based on platforms to convert the HTML file into Word document and vice versa using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO).
 
 * [HTML conversions assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
 * [HTML conversions NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
@@ -103,6 +103,32 @@ The Essential<sup>&reg;</sup> DocIO provides settings while performing HTML to W
 The following code example shows how to customize the HTML to Word conversion.
 
 {% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+//Opens an existing document from file system through constructor of WordDocument class
+using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
+{
+    //Html string to be inserted
+    string htmlstring = "<p><b>This text is inserted as HTML string.</b></p>";
+    //Validates the Html string
+    bool isValidHtml = document.LastSection.Body.IsValidXHTML(htmlstring, XHTMLValidationType.Transitional);
+    //When the Html string passes validation, it is inserted to the document
+    if (isValidHtml)
+    {
+        //Appends Html string as first item of the second paragraph in the document
+        document.Sections[0].Body.InsertXHTML(htmlstring, 2, 0);
+        //Appends the Html string to first paragraph in the document
+        document.Sections[0].Body.Paragraphs[0].AppendHTML(htmlstring);
+    }
+    //Saves the Word document to MemoryStream
+    MemoryStream stream = new MemoryStream();
+    document.Save(stream, FormatType.Docx);
+    //Closes the Word document
+    document.Close();
+}
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads the template document
 WordDocument document = new WordDocument("Template.docx");
@@ -150,7 +176,7 @@ N> 1. Inserting XHTML string is not supported in Silverlight, Windows Phone, and
 N> 2. XHTML validation against XHTML 1.0 Strict and Transitional schema is not supported in Windows Store applications.
 N> 3. [XHTMLValidationType.None](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.XHTMLValidationType.html): Default validation while importing HTML file.
 N> 4. [XHTMLValidationType.None](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.XHTMLValidationType.html): Validates the HTML file against XHTML format and it doesn't perform any schema validation.
-N> 5. From version 27.X.X, the .NET Word Library supports opening HTML even if it contains improper closing tags when validation is set to None.
+N> 5. From version 27.X.X, the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) supports opening HTML even if it contains improper closing tags when validation is set to None.
 
 ### Customize image data
 
@@ -1350,8 +1376,8 @@ Underline types and colors are ignored.
 
 ## Online Demo
 
-* Explore how to convert a Word document to HTML using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/wordtohtml#/tailwind).
-* See how to convert HTML to a Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/htmltoword#/tailwind).
+* Explore how to convert a Word document to HTML using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/wordtohtml#/tailwind).
+* See how to convert HTML to a Word document using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/htmltoword#/tailwind).
 
 ## See Also
 

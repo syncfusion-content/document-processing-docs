@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Working With Spreadsheet in WinForms Spreadsheet | Syncfusion®
+canonical_url: "https://www.syncfusion.com/spreadsheet-editor-sdk/winforms-spreadsheet-editor"
 description: Learn about Working With Spreadsheet support in Syncfusion® Windows Forms Spreadsheet control and more details.
 platform: document-processing
 control: Spreadsheet
@@ -352,3 +353,6 @@ void Spreadsheet_PropertyChanged(object sender, System.ComponentModel.PropertyCh
 
 {% endhighlight %}
 {% endtabs %}
+
+
+N> Looking for the full Winforms Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [Winforms Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/winforms-spreadsheet-editor) page.

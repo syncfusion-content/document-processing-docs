@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Text Extraction Engines in WPF Pdf Viewer control | Syncfusion<sup>&reg;</sup>;
+title: Text Extraction Engines in WPF Pdf Viewer control | Syncfusion®;
 description: Learn about Text Extraction Engines supported in Syncfusion<sup>&reg;</sup>; Essential Studio&reg; WPF Pdf Viewer control, its elements and more.
 platform: document-processing
 control: PDF Viewer
@@ -9,7 +9,7 @@ documentation: ug
 
 # Text Extraction Engines in WPF Pdf Viewer
 
-Syncfusion&reg; WPF PDF Viewer extracts text information from PDF files through two different engines for performing text search, text selection, creating text markups and more.
+[WPF PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/wpf-pdf-viewer) extracts text information from PDF files through two different engines for performing text search, text selection, creating text markups and more.
 
 * PDFium (Google Chrome’s text extraction engine)
 * SfPdf (Syncfusion’s own text extraction engine)
@@ -26,4 +26,4 @@ pdfViewer.TextExtractionEngine = PdfTextExtractionEngine.SfPdf;
 {% endhighlight %}
 {% endtabs %}
 
-For additional information about the usage of the text extraction engine, please refer to the [text extraction](https://help.syncfusion.com/wpf/pdf-viewer/extract-text-from-pdf) functionalities.
+For additional information about the usage of the text extraction engine, please refer to the [text extraction](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/extract-text-from-pdf) functionalities.

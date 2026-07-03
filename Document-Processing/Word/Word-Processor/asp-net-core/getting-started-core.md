@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with ASP.NET Core DOCX Editor
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a ASP.NET Core application. 
+[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a ASP.NET Core application. enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a ASP.NET Core application. 
 
 ## Steps to create an ASP.NET Core DOCX Editor
 
@@ -38,7 +38,7 @@ Alternatively, you can utilize the following package manager command to achieve 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
 
-Install-Package Syncfusion.EJ2.AspNet.Core -Version {{ site.releaseversion }}
+Install-Package Syncfusion.EJ2.AspNet.Core
 
 {% endhighlight %}
 {% endtabs %}
@@ -59,18 +59,15 @@ Open `~/Pages/_ViewImports.cshtml` file and import the `Syncfusion.EJ2` TagHelpe
 
 ### Add Themes and Script References
 
-Here, the theme and scripts are referenced using CDN inside the `<head>` of `~/Pages/Shared/_Layout.cshtml` file as follows,
+Include the required stylesheet and script references in the `<head>` section  of `~/Pages/Shared/_Layout.cshtml` file to apply proper layout and theme styling.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/_Layout.cshtml" %}
 
-<head>
-    ...
-    <!-- Syncfusion ASP.NET Core controls styles -->
-    <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/fluent.css" />
-    <!-- Syncfusion ASP.NET Core controls scripts -->
-    <script src="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/dist/ej2.min.js"></script>
-</head>
+<!-- Syncfusion ASP.NET Core controls styles -->
+<link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/fluent.css" />
+<!-- Syncfusion ASP.NET Core controls scripts -->
+<script src="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/dist/ej2.min.js"></script>
 
 {% endhighlight %}
 {% endtabs %}
@@ -84,11 +81,8 @@ Also, register the script manager `<ejs-scripts>` at the end of `<body>` in the 
 {% tabs %}
 {% highlight cshtml tabtitle="~/_Layout.cshtml" %}
 
-<body>
-    ...
-    <!-- Syncfusion ASP.NET Core Script Manager -->
-    <ejs-scripts></ejs-scripts>
-</body>
+<!-- Syncfusion ASP.NET Core Script Manager -->
+<ejs-scripts></ejs-scripts>
 
 {% endhighlight %}
 {% endtabs %}
@@ -117,6 +111,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-DO
 
 Explore how to create, edit, and print Word documents using the ASP.NET Core Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/default#/tailwind3).
 
+N> Looking for the full ASP.NET Core DOCX Editor component overview, features, pricing, and documentation? Visit the [ASP.NET Core Docx Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) page.
 ## See also
 
 - [Open a document](./import)

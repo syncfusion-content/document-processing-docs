@@ -1,11 +1,11 @@
 ---
-title: Pages in JavaScript PDF library | Syncfusion
-description: This section explains how to add, rearrange, remove pages, and detect empty pages in a PDF file by using the JavaScript PDF library
+title: Pages in JavaScript PDF Library | Syncfusion
+description: This section explains how to add, rearrange, remove pages, and detect empty pages in a PDF file by using the JavaScript PDF Library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Pages in JavaScript PDF library
+# Pages in JavaScript PDF Library
 
 The PDF provides support to add, remove and rearrange pages in PDF documents, enabling complete control over page management for creating dynamic and customized PDFs.
 

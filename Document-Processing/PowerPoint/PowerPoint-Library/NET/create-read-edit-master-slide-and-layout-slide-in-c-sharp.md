@@ -1,6 +1,6 @@
 ---
 title: Create, read and edit Master and Layout slides in CSharp |Syncfusion<sup>&reg;</sup>|
-description: Create, read, and edit Master slides and Layout slides using Syncfusion<sup>&reg;</sup> PowerPoint library (Essential<sup>&reg;</sup> Presentation).
+description: Create, read, and edit Master slides and Layout slides using .NET PowerPoint library (Essential<sup>&reg;</sup> Presentation).
 platform: document-processing
 control: PowerPoint
 documentation: UG
@@ -25,6 +25,20 @@ In PowerPoint presentation, the [MasterSlide](https://help.syncfusion.com/cr/doc
 The following code example demonstrates how to access the [MasterSlide](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IMasterSlide.html) in a PowerPoint presentation.
 
 {% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Create a PowerPoint presentation
+IPresentation pptxDoc = Presentation.Create();
+//Access the first master slide in PowerPoint file
+IMasterSlide masterSlide = pptxDoc.Masters[0];
+//Get the first shape name from the master slide
+string shapeName = masterSlide.Shapes[0].ShapeName;
+//Save the PowerPoint Presentation to MemoryStream.
+MemoryStream outputStream = new MemoryStream();
+pptxDoc.Save(outputStream);
+//Close the Presentation instance
+pptxDoc.Close();
+{% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Create a PowerPoint presentation
@@ -126,11 +140,27 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Create a custom LayoutSlide
 
-The real-world scenarios always require more predefined templates. The Syncfusion<sup>&reg;</sup> PowerPoint library lets you build your own custom layout designs and use them to create individual slides.
+The real-world scenarios always require more predefined templates. The [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) lets you build your own custom layout designs and use them to create individual slides.
 
 The following code example demonstrates how to create new custom layout slide and access layout slide in Presentation.
 
 {% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Create a PowerPoint instance
+IPresentation pptxDoc = Presentation.Create();
+//Add a new LayoutSlide to the PowerPoint file
+ILayoutSlide layoutSlide = pptxDoc.Masters[0].LayoutSlides.Add(SlideLayoutType.Blank, "CustomLayout");
+//Add a shape to the LayoutSlide
+IShape shape = layoutSlide.Shapes.AddShape(AutoShapeType.Diamond, 30, 20, 400, 300);
+//Change the background color for LayoutSlide
+layoutSlide.Background.Fill.SolidFill.Color = ColorObject.FromArgb(78, 89, 90);
+//Save the PowerPoint Presentation to MemoryStream.
+MemoryStream outputStream = new MemoryStream();
+pptxDoc.Save(outputStream);
+//Close the Presentation instance
+pptxDoc.Close();
+{% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Create a PowerPoint instance

@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Create or Generate PDF file in JavaScript | Syncfusion
-description: Learn how to create a PDF file in JavaScript with easy steps using Syncfusion JavaScript PDF library without depending on Adobe
+canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
+description: Learn how to create a PDF file in JavaScript with easy steps using JavaScript PDF Library without depending on Adobe
 platform: document-processing
 control: PDF
 documentation: ug
@@ -10,7 +11,7 @@ keywords: javascript, pdf, script
 
 # Create or Generate PDF file in JavaScript
 
-Syncfusion<sup>&reg;</sup> JS 2 (global script) is an ES5-formatted [JavaScript PDF library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) that works directly in modern web browsers.
+Syncfusion<sup>&reg;</sup> JS 2 (global script) is an ES5-formatted [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) that works directly in modern web browsers.
 
 ## Component initialization with CDN links
 
@@ -22,15 +23,15 @@ Step 2: The JS 2 global scripts and styles are hosted on the CDN in the followin
 > Script: `https://cdn.syncfusion.com/ej2/{Version}/dist/{PACKAGE_NAME}.min.js`
 
 **Example:**
-> Script: [`https://cdn.syncfusion.com/ej2/33.2.12/dist/ej2.min.js`](https://cdn.syncfusion.com/ej2/33.2.12/dist/ej2.min.js)
+> Script: [`https://cdn.syncfusion.com/ej2/31.2.15/dist/ej2.min.js`](https://cdn.syncfusion.com/ej2/31.2.15/dist/ej2.min.js)
 
 Step 3: Create a HTML page (index.html) in `my-app` location and add the CDN link references.
 
 {% tabs %}
 {% highlight javascript tabtitle="index.html" %}
 <head>
-    <!-- Syncfusion JavaScript PDF Library (CDN) -->
-    <script src="https://cdn.syncfusion.com/ej2/33.2.12/dist/ej2.min.js"></script>
+    <!-- JavaScript PDF Library (CDN) -->
+    <script src="https://cdn.syncfusion.com/ej2/31.2.15/dist/ej2.min.js"></script>
 </head>
 {% endhighlight %}
 {% endtabs %}
@@ -75,7 +76,3 @@ Step 4: **Create a PDF document**: Add the script in `index.html` by creating a 
 By executing the program, you will get the PDF document as follows.
 
 ![Output PDF document](Getting_started_images/Output.png)
-
-Click [here](https://www.syncfusion.com/document-sdk/javascript-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
-
-An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default.html) in JavaScript.

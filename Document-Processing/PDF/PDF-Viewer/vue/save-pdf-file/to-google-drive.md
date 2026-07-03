@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF file to Google Drive
+# Save PDF file to Google Drive in Vue
 
-This article describes how to save a PDF file to Google Drive from the Syncfusion Vue PDF Viewer using a server-side web service. Follow the steps below.
+This article describes how to save a PDF file to Google Drive from the Vue PDF Viewer using a server-side web service. Follow the steps below.
 
 **Step 1:** Set up the Google Drive API
 
@@ -18,7 +18,7 @@ Create a Google Cloud project, enable the Google Drive API, and obtain OAuth 2.0
 
 **Step 2:** Create a PDF Viewer sample in Vue
 
-Create a simple PDF Viewer sample in Vue by following the Syncfusion PDF Viewer for Vue [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) guide. This establishes the basic application structure required for the integration.
+Create a simple PDF Viewer sample in Vue by following the PDF Viewer for Vue [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) guide. This establishes the basic application structure required for the integration.
 
 **Step 3:** Modify the `PdfViewerController.cs` file in the web service project
 
@@ -54,7 +54,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Download()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#download) method to save the downloaded PDF file to the configured Google Drive folder.
+5. Modify the [Download()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#download) method to save the downloaded PDF file to the configured Google Drive folder.
 
 ```csharp
 [HttpPost("Download")]
