@@ -221,8 +221,9 @@ End Sub
 {% endtabcontents %}
 
 
-N>[View Sample in GitHub.](https://github.com/SyncfusionExamples/WPF-PDFViewer-Examples/tree/master/GettingStarted)
+N>[View Sample in GitHub.](https://github.com/SyncfusionExamples/WPF-PDFViewer-Examples/tree/master/GettingStarted). Looking for the full WPF PDF Viewer component overview, features, pricing, and documentation? Visit the [WPF PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/wpf-pdf-viewer) page.
 
 ## See Also
 - [Viewing PDF Files](./viewing-pdf-files)
 - [Themes](./Themes)
+
