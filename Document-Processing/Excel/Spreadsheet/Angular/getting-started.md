@@ -36,7 +36,7 @@ cd spreadsheet-app
 
 ## Install the Syncfusion® Angular Spreadsheet package
 
-The [Angular Spreadsheet](https://www.npmjs.com/package/@syncfusion/ej2-angular-spreadsheet) package uses the [Ivy](https://docs.angular.lat/guide/ivy) library distribution [format](https://angular.dev/tools/libraries/angular-package-format) and is compatible with `Angular 12` and above. Use the following command to install the package:
+The [Angular Spreadsheet Editor](https://www.npmjs.com/package/@syncfusion/ej2-angular-spreadsheet) package uses the [Ivy](https://docs.angular.lat/guide/ivy) library distribution [format](https://angular.dev/tools/libraries/angular-package-format) and is compatible with `Angular 12` and above. Use the following command to install the package:
 
 ```
 npm install @syncfusion/ej2-angular-spreadsheet --save
@@ -110,6 +110,8 @@ You can also explore the Spreadsheet interactively using the live sample below.
 To get started quickly with Angular Spreadsheet, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=2Ozwe37X-7Q" %}
+
+N> Looking for the full Angular Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) page.
 
 ## See also
 
