@@ -11,7 +11,7 @@ documentation: ug
 
 ## Overview
 
-This guide explains how to use the Redaction UI in the Syncfusion React PDF Viewer: drawing redaction marks, customizing their appearance, deleting marks, redacting whole pages, and applying redaction. The page provides step-by-step UI instructions to redact a PDF.
+This guide explains how to use the Redaction UI in the React PDF Viewer: drawing redaction marks, customizing their appearance, deleting marks, redacting whole pages, and applying redaction. The page provides step-by-step UI instructions to redact a PDF.
 
 ## Prerequisites
 
