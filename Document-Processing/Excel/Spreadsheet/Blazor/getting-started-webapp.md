@@ -245,6 +245,11 @@ N> [View Sample In GitHub.](https://github.com/SyncfusionExamples/Blazor-Getting
 
 N> Looking for the full Blazor Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) page
 
+## Video tutorial
+
+To get started quickly with Blazor Spreadsheet, you can watch this video:
+
+{% youtube "https://www.youtube.com/watch?v=BrcM8AYWF8s" %}
 
 ## See Also
 
