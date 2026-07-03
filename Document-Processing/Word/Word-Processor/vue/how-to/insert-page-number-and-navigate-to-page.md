@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Insert page number and navigate to page in Vue Document editor component
 
-You can insert page number and navigate to specific page in Vue Document Editor component by following ways.
+You can insert page number and navigate to specific page in [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) component by following ways.
 
 ## Insert page number
 

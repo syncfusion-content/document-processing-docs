@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Resize document editor in Vue Document editor component
 
-In this article, we are going to see how to change height and width of Document Editor.
+In this article, we are going to see how to change height and width of [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor).
 
 ## Change height of Document Editor
 
