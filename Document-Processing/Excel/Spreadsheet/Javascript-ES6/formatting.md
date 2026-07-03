@@ -13,10 +13,12 @@ Formatting options make your data easier to view and understand. The different t
 * Number Formatting
 * Text Formatting
 * Cell Formatting
+* Conditional Formatting
+* Rich Text Formatting
 
 ## Number Formatting
 
-Number formatting provides a type for your data in the Spreadsheet. Use the [`allowNumberFormatting`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allownumberformatting) property to enable or disable the number formatting option in the Spreadsheet. The different types of number formatting supported in Spreadsheet are,
+Number formatting provides a type for your data in the Spreadsheet. Use the [`allowNumberFormatting`](https://ej2.syncfusion.com/documentation/api/spreadsheet#allownumberformatting) property to enable or disable the number formatting option in the Spreadsheet. The different types of number formatting supported in Spreadsheet are,
 
 | Types | Format Code | Format ID |
 |---------|---------|---------|
@@ -35,7 +37,7 @@ Number formatting provides a type for your data in the Spreadsheet. Use the [`al
 Number formatting can be applied in following ways,
 * Using the `format` property in `cell`, you can set the desired format to each cell at initial load.
 
-* Using the [`numberFormat`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#numberformat) method, you can set the number format to a cell or range of cells.
+* Using the [`numberFormat`](https://ej2.syncfusion.com/documentation/api/spreadsheet#numberformat) method, you can set the number format to a cell or range of cells.
 * Selecting the number format option from ribbon toolbar.
 
 ### Custom Number Formatting
@@ -85,7 +87,7 @@ The different types of custom number format populated in the custom number forma
 
 Custom Number formatting can be applied in following ways,
 
-* Using the [`numberFormat`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#numberformat) method, you can set your own custom number format to a cell or range of cells.
+* Using the [`numberFormat`](https://ej2.syncfusion.com/documentation/api/spreadsheet#numberformat) method, you can set your own custom number format to a cell or range of cells.
 
 * Selecting the custom number format option from custom number formats dialog or type your own format in dialog input and then click apply button. It will apply the custom format for selected cells.
 
@@ -158,9 +160,9 @@ The following code example demonstrates how to configure culture-based formats f
 
 ## Text and cell formatting
 
-Text and cell formatting enhances the look and feel of your cell. It helps to highlight a particular cell or range of cells from a whole workbook. You can apply formats like font size, font family, font color, text alignment, border etc. to a cell or range of cells. Use the [`allowCellFormatting`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowcellformatting) property to enable or disable the text and cell formatting option in Spreadsheet. You can set the formats in following ways,
+Text and cell formatting enhances the look and feel of your cell. It helps to highlight a particular cell or range of cells from a whole workbook. You can apply formats like font size, font family, font color, text alignment, border etc. to a cell or range of cells. Use the [`allowCellFormatting`](https://ej2.syncfusion.com/documentation/api/spreadsheet#allowcellformatting) property to enable or disable the text and cell formatting option in Spreadsheet. You can set the formats in following ways,
 * Using the `style` property, you can set formats to each cell at initial load.
-* Using the [`cellFormat`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#cellformat) method, you can set formats to a cell or range of cells.
+* Using the [`cellFormat`](https://ej2.syncfusion.com/documentation/api/spreadsheet#cellformat) method, you can set formats to a cell or range of cells.
 * You can also apply by clicking the desired format option from the ribbon toolbar.
 
 ### Fonts
@@ -235,7 +237,7 @@ The following features are not supported in Formatting:
 
 ## Conditional Formatting
 
-Conditional formatting helps you to format a cell or range of cells based on the conditions applied. You can enable or disable conditional formats by using the [`allowConditionalFormat`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowConditionalFormat) property.
+Conditional formatting helps you to format a cell or range of cells based on the conditions applied. You can enable or disable conditional formats by using the [`allowConditionalFormat`](https://ej2.syncfusion.com/documentation/api/spreadsheet#allowConditionalFormat) property.
 
 > The default value for the `allowConditionalFormat` property is `true`.
 
@@ -245,7 +247,7 @@ You can apply conditional formatting by using one of the following ways,
 
 * Select the conditional formatting icon in the Ribbon toolbar under the Home Tab.
 
-* Using the [`conditionalFormat()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#conditionalFormat) method to define the condition.
+* Using the [`conditionalFormat()`](https://ej2.syncfusion.com/documentation/api/spreadsheet#conditionalFormat) method to define the condition.
 
 * Using the `conditionalFormats` in sheets model.
 
@@ -313,7 +315,7 @@ You can clear the defined rules by using one of the following ways,
 
 * Using the “Clear Rules” option in the Conditional Formatting button of HOME Tab in the ribbon to clear the rule from selected cells.
 
-* Using the [`clearConditionalFormat()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#clearConditionalFormat) method to clear the defined rules.
+* Using the [`clearConditionalFormat()`](https://ej2.syncfusion.com/documentation/api/spreadsheet#clearConditionalFormat) method to clear the defined rules.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -334,6 +336,74 @@ The following features have some limitations in Conditional Formatting:
 * Conditional formatting with formula support.
 * Copy and paste the conditional formatting applied cells.
 * Custom rule support.
+
+## Rich Text Formatting
+
+Rich text formatting allows you to apply different styles to specific portions of text within a single cell to improve readability and presentation. Currently, subscript and superscript formatting are supported, and other rich text font styles are not supported.
+
+In the **Syncfusion EJ2 TypeScript Spreadsheet**, rich text formatting is supported through the [`richText`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#richtext) property of the cell model. This property lets you define multiple text segments inside a cell, where each segment can have its own style.
+
+Each `richText` segment contains:
+
+- `text` – Specifies the content of the segment  
+- `style` – Defines formatting using the cell style properties
+[`CellStyleModel`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel)
+
+## Subscript and Superscript
+
+Subscript and superscript formatting are supported as part of rich text formatting and can be applied to specific portions of text within a cell.
+
+To apply these formats, use the `verticalAlign` property within the style of a rich text segment:
+
+Set `verticalAlign: 'super'` for superscript and `verticalAlign: 'sub'` for subscript.
+
+#### How to Apply Subscript and Superscript
+
+You can apply subscript and superscript formatting in following ways:
+
+1. Select the desired portion of text within a cell, then click the Subscript or Superscript option in the ribbon to apply the formatting.
+
+![Subscript and superscript in Spreadsheet](./images/spreadsheet_richtext.gif)
+
+2. You can define the [`richText`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#richtext) property directly while initializing the Spreadsheet. This is useful when you want the formatting to be applied when the data is loaded.
+
+```javascript
+cells: [
+    {
+        value: 'H2O',
+        richText: [
+            { text: 'H' },
+            { text: '2', style: { verticalAlign: 'sub' } },
+            { text: 'O' }
+        ]
+    }
+]
+```
+3. You can also apply subscript and superscript dynamically using the [`updateCell`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#updatecell) method.
+
+```javascript
+    spreadsheet.updateCell({ value: 'X2', richText: [
+                    { text: 'X' },
+                    { text: '2', style: { verticalAlign: 'super' } }
+                ] }, 'A5');
+```
+
+The following code example shows the subscript and superscript formatting in cells of the spreadsheet.
+
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/spreadsheet/javascript-es6/richtext-format-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/javascript-es6/richtext-format-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/richtext-format-cs1" %}
+
+## Limitations
+* **Limited formatting support:** Only subscript and superscript formatting are supported within rich text. Other formatting options such as font size, font color, and font weight are not supported.
+* **Edit mode requirement:** Formatting can be applied only while the cell is in edit mode. Selecting text outside of edit mode does not support subscript or superscript formatting.
 
 ## See Also
 

@@ -103,6 +103,32 @@ The Essential<sup>&reg;</sup> DocIO provides settings while performing HTML to W
 The following code example shows how to customize the HTML to Word conversion.
 
 {% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+//Opens an existing document from file system through constructor of WordDocument class
+using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
+{
+    //Html string to be inserted
+    string htmlstring = "<p><b>This text is inserted as HTML string.</b></p>";
+    //Validates the Html string
+    bool isValidHtml = document.LastSection.Body.IsValidXHTML(htmlstring, XHTMLValidationType.Transitional);
+    //When the Html string passes validation, it is inserted to the document
+    if (isValidHtml)
+    {
+        //Appends Html string as first item of the second paragraph in the document
+        document.Sections[0].Body.InsertXHTML(htmlstring, 2, 0);
+        //Appends the Html string to first paragraph in the document
+        document.Sections[0].Body.Paragraphs[0].AppendHTML(htmlstring);
+    }
+    //Saves the Word document to MemoryStream
+    MemoryStream stream = new MemoryStream();
+    document.Save(stream, FormatType.Docx);
+    //Closes the Word document
+    document.Close();
+}
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads the template document
 WordDocument document = new WordDocument("Template.docx");

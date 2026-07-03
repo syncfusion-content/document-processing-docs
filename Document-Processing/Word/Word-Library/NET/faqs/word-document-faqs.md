@@ -13,7 +13,31 @@ The frequently asked questions about Word document manipulation using DocIO are 
 
 A document can be opened as stream by using HttpWebResponse. This stream does not support seek operation and so the contents should be read manually to get the position and length of the stream. The following code illustrates how to load the document from stream.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
 {% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Gets the document as stream
+HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://www.swiftview.com/tech/letterlegal5.doc");
+HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+Stream stream = response.GetResponseStream();
+//Converts it to byte array
+byte[] buffer = ReadFully(stream, 32768);
+//Stores bytes into the memory stream.
+MemoryStream ms = new MemoryStream();
+ms.Write(buffer, 0, buffer.Length);
+ms.Seek(0, SeekOrigin.Begin);
+stream.Close();
+//Creates a new document.
+WordDocument document = new WordDocument();
+//Opens the template document from the MemoryStream.
+document.Open(ms, FormatType.Doc);
+//Saves and closes the document
+MemoryStream mstream = new MemoryStream();
+document.Save(mstream, FormatType.Docx);
+document.Close();
+{% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Gets the document as stream
@@ -62,6 +86,40 @@ document.Close()
 The following code illustrates the method used to read the stream and convert the stream to bytes.
 
 {% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+public static byte[] ReadFully(Stream stream, int initialLength)
+{
+    //When an unhelpful initial length has been passed, just use 32K.
+    if (initialLength < 1)
+        initialLength = 32768;
+    byte[] buffer = new byte[initialLength];
+    int read = 0;
+    int chunk;
+    while ((chunk = stream.Read(buffer, read, buffer.Length - read)) > 0)
+    {
+        read += chunk;
+        //After reaching the end of the buffer, check and see whether you can find any information.
+        if (read == buffer.Length)
+        {
+            int nextByte = stream.ReadByte();
+            //End of stream? Then, you are done.
+            if (nextByte == -1)            
+                return buffer;
+            //Resize the buffer, put in the byte you have just read, and continue.
+            byte[] newBuffer = new byte[buffer.Length * 2];
+            Array.Copy(buffer, newBuffer, buffer.Length);
+            newBuffer[read] = (byte)nextByte;
+            buffer = newBuffer;
+            read++;
+        }
+    }
+    //Buffer is now too big. Shrink it.
+    byte[] ret = new byte[read];
+    Array.Copy(buffer, ret, read);
+    return ret;
+}
+{% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 public static byte[] ReadFully(Stream stream, int initialLength)
@@ -137,6 +195,20 @@ The following code illustrates how to set the template for the document.
 
 {% tabs %}  
 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Loads a source document
+FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+WordDocument document = new WordDocument(docStream, FormatType.Docx); 
+//Attaches the template document to the source document
+document.AttachedTemplate.Path = @"D:/Data/Template.docx";
+//Updates the styles of the document from the attached template each time the document is opened
+document.UpdateStylesOnOpen = true;
+//Saves and closes the document
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+document.Close();
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads a source document
 WordDocument document = new WordDocument("Template.docx"); 
@@ -170,6 +242,20 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 The [CompatibilityMode](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CompatibilityMode.html) of a Word document can also be determined. The following code example illustrates how to check the compatibility mode of the Word document.
 
 {% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Load an existing Word document.
+FileStream docStream = new FileStream("Input.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+using (WordDocument document = new WordDocument(docStream, FormatType.Docx))
+{
+    //Get the compatibility mode.
+    CompatibilityMode compatibilityMode = document.Settings.CompatibilityMode;
+    Console.WriteLine(compatibilityMode);
+    //Save a Word document.
+	MemoryStream stream = new MemoryStream();
+    document.Save(stream, FormatType.Docx);
+}
+{% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Load an existing Word document.
@@ -214,7 +300,7 @@ Essential<sup>&reg;</sup> DocIO library uses Points for measurement properties i
 
 {% tabs %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 // Assuming you have a margin value in centimeters
 float marginInCentimeter = 2f;
 // Convert cm to points
@@ -231,7 +317,24 @@ float marginInInches = 1f;
 float marginInPoints = marginInInches * 72f;
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+// Assuming you have a margin value in centimeters
+float marginInCentimeter = 2f;
+// Convert cm to points
+float marginInPoints = marginInCentimeter * 28.3465f;
+
+// Assuming you have a margin value in millimeters
+float marginInMillimeter = 20f;
+// Convert cm to points
+float marginInPoints = marginInMillimeter * 2.83465f;
+
+// Assuming you have a margin value in inches
+float marginInInches = 1f;
+// Convert cm to points
+float marginInPoints = marginInInches * 72f;
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 ' Assuming you have a margin value in centimeters
 Dim marginInCentimeter As Single = 2.0F
 ' Convert cm to points
@@ -266,14 +369,21 @@ The following code demonstrates how to use a *using* block to handle file stream
 
 {% tabs %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 using (FileStream stream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
 {
     // Use the file stream here (e.g., read data, write data)
 }
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using (FileStream stream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+{
+    // Use the file stream here (e.g., read data, write data)
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Using stream As New FileStream(filePath, FileMode.Open, FileAccess.Read)
     ' Use the file stream here (e.g., read data, write data)
 End Using
@@ -303,11 +413,15 @@ The following code illustrates how to get the current culture.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 CultureInfo currentCulture = CultureInfo.CurrentCulture;
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+CultureInfo currentCulture = CultureInfo.CurrentCulture;
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Dim currentCulture As CultureInfo = CultureInfo.CurrentCulture
 {% endhighlight %}
 
@@ -317,13 +431,19 @@ The following code illustrates how to set the culture.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 CultureInfo culture = new CultureInfo("fr-CA");
 CultureInfo.DefaultThreadCurrentCulture = culture;
 CultureInfo.DefaultThreadCurrentUICulture = culture;
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+CultureInfo culture = new CultureInfo("fr-CA");
+CultureInfo.DefaultThreadCurrentCulture = culture;
+CultureInfo.DefaultThreadCurrentUICulture = culture;
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Dim culture As New CultureInfo("fr-CA")
 CultureInfo.DefaultThreadCurrentCulture = culture
 CultureInfo.DefaultThreadCurrentUICulture = culture
@@ -531,7 +651,7 @@ As a workaround, keep the same section and page setup properties in both the sou
 The following code illustrates how to set the page properties to source document as same as the destination document.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 // Match page setup before importing
 IWSection sourceSection = sourceDoc.Sections[0];
 IWSection destSection = destinationDoc.Sections[0];
@@ -542,6 +662,32 @@ sourceSection.PageSetup.Orientation = destSection.PageSetup.Orientation;
 sourceSection.PageSetup.PageSize = destSection.PageSetup.PageSize;
 // Now import the section
 destinationDoc.Sections.Add(sourceDoc.Sections[0].Clone());
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+// Match page setup before importing
+IWSection sourceSection = sourceDoc.Sections[0];
+IWSection destSection = destinationDoc.Sections[0];
+//Sets the destination document page setup properties to the source document sections.
+sourceSection.PageSetup.DifferentFirstPage = destSecPageSetup.DifferentFirstPage;
+sourceSection.PageSetup.Margins.All = destSection.PageSetup.Margins.All;
+sourceSection.PageSetup.Orientation = destSection.PageSetup.Orientation;
+sourceSection.PageSetup.PageSize = destSection.PageSetup.PageSize;
+// Now import the section
+destinationDoc.Sections.Add(sourceDoc.Sections[0].Clone());
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+' Match page setup before importing
+Dim sourceSection As IWSection = sourceDoc.Sections(0)
+Dim destSection As IWSection = destinationDoc.Sections(0)
+' Sets the destination document page setup properties to the source document sections
+sourceSection.PageSetup.DifferentFirstPage = destSection.PageSetup.DifferentFirstPage
+sourceSection.PageSetup.Margins.All = destSection.PageSetup.Margins.All
+sourceSection.PageSetup.Orientation = destSection.PageSetup.Orientation
+sourceSection.PageSetup.PageSize = destSection.PageSetup.PageSize
+' Now import the section
+destinationDoc.Sections.Add(sourceDoc.Sections(0).Clone())
 {% endhighlight %}
 {% endtabs %}
 
@@ -614,30 +760,56 @@ The following code sample how to preserve the formatting of the source document 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C#" %}
- // Load the destination document
- WordDocument destinationDocument = new WordDocument("DestinationDocument.docx");
- // Load the source document
- WordDocument sourceDocument = new WordDocument("SourceDocument.docx");
- // Create a part of the source document for import
- WordDocumentPart sourceDoc = new WordDocumentPart(sourceDocument);
- // Set import options to keep source formatting
- destinationDocument.ImportOptions = ImportOptions.KeepSourceFormatting;
- // Create a bookmarks navigator for the destination document
- BookmarksNavigator bookmarksNavigator = new BookmarksNavigator(destinationDocument);
- // Move to the specified bookmark in the destination document
- bookmarksNavigator.MoveToBookmark("bkmk1");
- // Replace the content at the bookmark with the source document content
- bookmarksNavigator.ReplaceContent(sourceDoc);
- // Save the modified destination document to a new file
- destinationDocument.Save("Output.docx", FormatType.Docx);
- // Close the documents
- sourceDoc.Close();
- sourceDocument.Close();
- destinationDocument.Close();
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+// Load the destination document
+FileStream destDocStream = new FileStream("DestinationDocument.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+FileStream srcDocStream = new FileStream("SourceDocument.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+WordDocument destinationDocument = new WordDocument(destDocStream, FormatType.Docx);
+// Load the source document
+WordDocument sourceDocument = new WordDocument(srcDocStream, FormatType.Docx);
+// Create a part of the source document for import
+WordDocumentPart sourceDoc = new WordDocumentPart(sourceDocument);
+// Set import options to keep source formatting
+destinationDocument.ImportOptions = ImportOptions.KeepSourceFormatting;
+// Create a bookmarks navigator for the destination document
+BookmarksNavigator bookmarksNavigator = new BookmarksNavigator(destinationDocument);
+// Move to the specified bookmark in the destination document
+bookmarksNavigator.MoveToBookmark("bkmk1");
+// Replace the content at the bookmark with the source document content
+bookmarksNavigator.ReplaceContent(sourceDoc);
+// Save the modified destination document to a new file
+MemoryStream stream = new MemoryStream();
+destinationDocument.Save(stream, FormatType.Docx);
+// Close the documents
+sourceDoc.Close();
+sourceDocument.Close();
+destinationDocument.Close();
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+// Load the destination document
+WordDocument destinationDocument = new WordDocument("DestinationDocument.docx");
+// Load the source document
+WordDocument sourceDocument = new WordDocument("SourceDocument.docx");
+// Create a part of the source document for import
+WordDocumentPart sourceDoc = new WordDocumentPart(sourceDocument);
+// Set import options to keep source formatting
+destinationDocument.ImportOptions = ImportOptions.KeepSourceFormatting;
+// Create a bookmarks navigator for the destination document
+BookmarksNavigator bookmarksNavigator = new BookmarksNavigator(destinationDocument);
+// Move to the specified bookmark in the destination document
+bookmarksNavigator.MoveToBookmark("bkmk1");
+// Replace the content at the bookmark with the source document content
+bookmarksNavigator.ReplaceContent(sourceDoc);
+// Save the modified destination document to a new file
+destinationDocument.Save("Output.docx", FormatType.Docx);
+// Close the documents
+sourceDoc.Close();
+sourceDocument.Close();
+destinationDocument.Close();
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 ' Load the destination document
 Dim destinationDocument As New WordDocument("DestinationDocument.docx")
 ' Load the source document
@@ -680,3 +852,48 @@ If a document is encrypted due to its sensitivity label configuration, DocIO can
 
 ## Does the DocIO library support asynchronous methods for opening or saving Word documents?
 No, the Syncfusion DocIO library does not currently provide asynchronous APIs for opening or saving Word documents. However, the library is highly optimized for performance and is thread‑safe, allowing you to safely execute document processing operations.
+
+## Is font substitution supported for DOCX-to-DOCX operations in DocIO?
+No, DocIO does not support font substitution during DOCX‑to‑DOCX processing. Font substitution is available only when converting Word documents to PDF or images, where DocIO triggers the SubstituteFont event if a required font is missing.
+
+## How can I retrieve all merge fields in a Word document using DocIO library?
+The following code illustrates how to retrieve the all merge fields in a Word document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Open the Word document file stream.
+using (FileStream inputStream = new FileStream("Input.docx", FileMode.Open, FileAccess.Read))
+{
+    //Loads an existing Word document.
+    using (WordDocument wordDocument = new WordDocument(inputStream, FormatType.Automatic))
+    {
+        // Get list of merge fields
+        List<Entity> entity = wordDocument.FindAllItemsByProperty(EntityType.MergeField, null, null);
+    }
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Loads an existing Word document.
+using (WordDocument wordDocument = new WordDocument("Input.docx", FormatType.Automatic))
+{
+    // Get list of merge fields
+    List<Entity> entity = wordDocument.FindAllItemsByProperty(EntityType.MergeField, null, null);
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+' Loads an existing Word document.
+Using wordDocument As New WordDocument("Input.docx", FormatType.Automatic)
+    ' Get list of merge fields
+    Dim entity As List(Of Entity) = wordDocument.FindAllItemsByProperty(EntityType.MergeField, Nothing, Nothing)
+End Using
+{% endhighlight %}
+{% endtabs %}
+
+## Why is memory not cleared after completing the conversion process in ASP NET Core Web Application using DocIO?
+After the Word conversion operation is completed, the objects are freed, but .NET retains the reserved memory regions for future allocations. This behavior is expected and is part of the .NET runtime and GC design, not an issue with your code or DocIO library.
+
+## Why "This file format is not supported" exception thrown while trying to opening a .doc file using DocIO library?
+DocIO support the input file format from MSWord97 doc file format only not before MSWord97 doc file format. The input file format NFib value is 101. Here the NFib value specifies the version number of file format used and NFib value from 101 to 105 is not supported in our DocIO. To resolve the issue, use latest file format documents with DocIO library.

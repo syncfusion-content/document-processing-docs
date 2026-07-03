@@ -67,10 +67,6 @@ document.Save("Sample.docx")
 document.Close()
 {% endhighlight %}
 
-{% highlight c# tabtitle="UWP" %}
-//ADO.NET object is supported in Windows Forms, WPF, ASP.NET, ASP.NET MVC, ASP.NET Core, and Xamarin platforms alone.
-{% endhighlight %}
-
 {% endtabs %}
 
 The following code example shows how to set text color to the alternate Mail merge record by using [MergeFieldEventHandler](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MergeFieldEventHandler.html).
@@ -108,13 +104,10 @@ Private Sub ApplyAlternateRecordsTextColor(ByVal sender As Object, ByVal args As
 End Sub
 {% endhighlight %}
 
-{% highlight c# tabtitle="UWP" %}
-//ADO.NET object is supported in Windows Forms, WPF, ASP.NET, ASP.NET MVC, ASP.NET Core, and Xamarin platforms alone.
-{% endhighlight %}
-
 {% endtabs %}
 
-N> While executing mail merge, DocIO internally uses a copy of a particular region for populating the contents. Sometimes, unexpected problems may arise due to inserting multiple body items into the region through the mail merge process. So, to insert multiple body items using the merge field event handler, you are recommended to use this [approach](https://www.syncfusion.com/kb/11701/how-to-replace-merge-field-with-html-string-using-mail-merge) at your side.
+N>  1. While executing mail merge, DocIO internally uses a copy of a particular region for populating the contents. Sometimes, unexpected problems may arise due to inserting multiple body items into the region through the mail merge process. So, to insert multiple body items using the merge field event handler, you are recommended to use this [approach](https://www.syncfusion.com/kb/11701/how-to-replace-merge-field-with-html-string-using-mail-merge) at your side.
+N>  2. The [ExecuteGroup(DataTable)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ExecuteGroup_System_Data_DataTable_) method is not supported on the UWP platform.
 
 The following code example shows GetDataTable method which is used to get data for mail merge.
 
@@ -167,10 +160,6 @@ Private Function GetDataTable() As DataTable
     Next
     Return dataTable
 End Function
-{% endhighlight %}
-
-{% highlight c# tabtitle="UWP" %}
-//ADO.NET object is supported in Windows Forms, WPF, ASP.NET, ASP.NET MVC, ASP.NET Core, and Xamarin platforms alone.
 {% endhighlight %}
 
 {% endtabs %} 
@@ -351,10 +340,6 @@ document.Save("Sample.docx")
 document.Close()
 {% endhighlight %}
 
-{% highlight c# tabtitle="UWP" %}
-//ADO.NET object is supported in Windows Forms, WPF, ASP.NET, ASP.NET MVC, ASP.NET Core, and Xamarin platforms alone.
-{% endhighlight %}
-
 {% endtabs %}
 
 The following code example shows how to bind the data to unmerged fields during Mail merge process by using [BeforeClearFieldEventHandler](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BeforeClearFieldEventHandler.html).
@@ -435,10 +420,6 @@ Private Sub BeforeClearField(ByVal sender As Object, ByVal args As BeforeClearFi
         args.FieldValue = "Error! The value of MergeField " & unmergedFieldName & " is not found in the data source."
     End If
 End Sub
-{% endhighlight %}
-
-{% highlight c# tabtitle="UWP" %}
-//ADO.NET object is supported in Windows Forms, WPF, ASP.NET, ASP.NET MVC, ASP.NET Core, and Xamarin platforms alone.
 {% endhighlight %}
 
 {% endtabs %}
@@ -522,10 +503,6 @@ Private Function GetDataTable() As DataTable
     dataTable.Rows.Add(row)
     Return dataTable
 End Function
-{% endhighlight %}
-
-{% highlight c# tabtitle="UWP" %}
-//ADO.NET object is supported in Windows Forms, WPF, ASP.NET, ASP.NET MVC, ASP.NET Core, and Xamarin platforms alone.
 {% endhighlight %}
 
 {% endtabs %}
