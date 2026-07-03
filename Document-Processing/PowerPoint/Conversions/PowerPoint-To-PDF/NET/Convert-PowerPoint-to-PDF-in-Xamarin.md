@@ -144,7 +144,7 @@ Refer the below helper files and add them into the mentioned project. These help
     {{'[PreviewControllerDS.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-PDF-conversion/Convert-PowerPoint-presentation-to-PDF/Xamarin/Convert-PowerPoint-Presentation-to-PDF/Convert-PowerPoint-Presentation-to-PDF.iOS/PreviewControllerDS.cs)'| markdownify }}
   </td>
   <td>
-    Helper class for viewing the <b>PowerPoint Presenatation</b> in iOS device
+    Helper class for viewing the <b>PowerPoint Presentation</b> in iOS device
   </td>
   </tr>
   <tr>

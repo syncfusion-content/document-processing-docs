@@ -187,7 +187,7 @@ Refer the below helper files and add them into the mentioned project. These help
     {{'[PreviewControllerDS.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/.NET-MAUI/Read-and-edit-presentation/Platforms/iOS/PreviewControllerDS.cs)'| markdownify }}<br/>{{'[QLPreviewItemFileSystem.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/.NET-MAUI/Read-and-edit-presentation/Platforms/iOS/QLPreviewItemFileSystem.cs)'| markdownify }}
   </td>
   <td>
-    Helper classes for viewing the <b>PowerPoint Presenatation</b> in iOS device
+    Helper classes for viewing the <b>PowerPoint Presentation</b> in iOS device
   </td>
   </tr>
 </table>

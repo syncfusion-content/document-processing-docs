@@ -96,7 +96,7 @@ if (shape.TextBody.Text == "Company History")
 {% endhighlight %}
 {% endtabs %}
 
-Step 9: Add below code example to **save the PowerPoint Presentation in WinUI Desktop app**. Refer the helper class file to save the **Presentation document** in WinUI Desktop App from [here](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/WinUI/WinUI-Desktop-app/Read-and-edit-PowerPoint-presentation/Read-and-edit-PowerPoint-presentation/SaveHelper.cs).
+Step 9: Add below code example to **save the PowerPoint Presentation in WinUI Desktop app**. Refer the helper class file to save the **Presentation document** in WinUI Desktop App from [here](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/WinUI/WinUI-Desktop-app/Read-and-edit-PowerPoint-presentation/SaveHelper.cs).
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
