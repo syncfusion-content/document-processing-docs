@@ -9,7 +9,7 @@ documentation: ug
 
 # Selection in WPF Spreadsheet (SfSpreadsheet)
 
-This section explains about the Selection behavior in SfSpreadsheet.
+This section explains about the Selection behavior in [WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor).
 
 The SfSpreadsheet control provides support for selection in grid by using mouse, keyboard and touch interactions.
 
@@ -343,4 +343,4 @@ Extends the selection up in a worksheet.</td></tr>
 </table>
 
 
-N> You can refer to our [WPF Spreadsheet](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [WPF Spreadsheet example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the spreadsheet.
+N> You can refer to our [WPF Spreadsheet Editor](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [WPF Spreadsheet example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the spreadsheet.
