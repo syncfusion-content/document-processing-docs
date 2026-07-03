@@ -14,7 +14,7 @@ Syncfusion® Angular DOCX Editor (Document Editor) supports collaborative editin
 
 ## Prerequisites
 
-The following are needed to enable collaborative editing in Document Editor.
+The following are needed to enable collaborative editing in [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor).
 
 - SignalR
 - Redis
