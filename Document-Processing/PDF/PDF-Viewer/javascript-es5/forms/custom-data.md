@@ -9,7 +9,7 @@ documentation: ug
 
 # Add custom data to PDF form fields in JavaScript PDF Viewer
 
-The Syncfusion JavaScript PDF Viewer allows attaching application-specific data to form fields using the `customData` property. This enables associating business identifiers, tags, validation hints, or workflow metadata with form fields.
+The JavaScript PDF Viewer allows attaching application-specific data to form fields using the `customData` property. This enables associating business identifiers, tags, validation hints, or workflow metadata with form fields.
 
 Custom data remains linked to the form field throughout the viewer session and can be accessed or updated whenever the field is queried or modified.
 

@@ -16,7 +16,7 @@ To save a document to Google Cloud Storage, you can follow the steps below
 
 **Step 1:** Create a Simple Document Editor sample in TypeScript
 
-Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in Typescript. This will give you a basic setup of the Document Editor component.
+Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in Typescript. This will give you a basic setup of the [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) component.
 
 **Step 2:** Create the `DocumentEditorController.cs` File in the Web Service Project
 

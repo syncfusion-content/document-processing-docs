@@ -9,7 +9,7 @@ documentation: ug
 
 # Working with PdfViewerControl in Windows Forms PDF Viewer
 
-Essential&reg; [WinForms PDF Viewer](https://www.syncfusion.com/winforms-ui-controls/pdf-viewer) can display and print PDF files and export the pages as raster images and meta files.
+Essential&reg; [WinForms PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/winforms-pdf-viewer) can display and print PDF files and export the pages as raster images and meta files.
 
 ## Viewing PDF Files 
 

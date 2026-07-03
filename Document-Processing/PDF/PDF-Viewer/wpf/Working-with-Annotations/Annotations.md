@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Annotations in WPF Pdf Viewer control | Syncfusion<sup>&reg;</sup>;
+title: Annotations in WPF Pdf Viewer control | Syncfusion
 description: Learn about annotations supported by Syncfusion<sup>&reg;</sup>; WPF Pdf Viewer control, its functionalities and more.
 platform: document-processing
 control: PDF Viewer

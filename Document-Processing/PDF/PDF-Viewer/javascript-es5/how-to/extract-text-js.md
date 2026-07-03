@@ -35,7 +35,7 @@ Returns a Promise with:
 - textData: An array of TextDataSettingsModel with details including bounds and page text.
 - pageText: A concatenated string of plain text from the specified page(s).
 
-### Usage of extractText in Syncfusion PDF Viewer Control
+### Usage of extractText in PDF Viewer control
 
 Here is an example that demonstrates how to use the extractText method along with event handling:
 

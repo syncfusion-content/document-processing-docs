@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Open default document in Angular Document editor component
 
-In this article, we are going to see how to open a default document when Document Editor & Document Editor Container is initialized.
+In this article, we are going to see how to open a default document when [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) & Document Editor Container is initialized.
 
 ## Opening a default document in DocumentEditor
 

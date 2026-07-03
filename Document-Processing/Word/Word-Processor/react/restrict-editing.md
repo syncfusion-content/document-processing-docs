@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Restrict Editing in React DOCX Editor
 
-Syncfusion® React DOCX Editor (Document Editor) provides support for restricting editing within a document. It enables control over how and where content can be modified. This helps limit editing so only specific sections of the document can be changed.
+[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides support for restricting editing within a document. It enables control over how and where content can be modified. This helps limit editing so only specific sections of the document can be changed.
 
 ## Configure on client side
 

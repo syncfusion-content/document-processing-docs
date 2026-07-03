@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # History in JavaScript (ES5) Document editor control
 
-Document Editor tracks the history of all editing actions done in the document, which allows undo and redo functionality.
+[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) tracks the history of all editing actions done in the document, which allows undo and redo functionality.
 
 ## Enable or disable history
 

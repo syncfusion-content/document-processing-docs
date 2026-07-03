@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Redact sensitive content in React PDF Viewer
 
-Redaction annotations hide confidential or sensitive information in a PDF. The Syncfusion React PDF Viewer (EJ2) enables marking areas or entire pages for redaction, customizing appearance, and applying changes permanently.
+Redaction annotations hide confidential or sensitive information in a PDF. The React PDF Viewer (EJ2) enables marking areas or entire pages for redaction, customizing appearance, and applying changes permanently.
 
 Check out the following video to learn how to Redact PDF Content in the React PDF Viewer.
 {% youtube "https://www.youtube.com/watch?v=ZW9DswdpA7Q" %}

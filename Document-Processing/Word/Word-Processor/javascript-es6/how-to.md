@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to in JavaScript (ES6) Document editor control
 
-Document Editor triggers the [`keyDown`](https://ej2.syncfusion.com/documentation/api/document-editor/documentEditorKeyDownEventArgs/) event every time when any key is entered and provides an instance of `DocumentEditorKeyDownEventArgs`. You can use the `isHandled` property to override the keyboard shortcut behavior.
+[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) triggers the [`keyDown`](https://ej2.syncfusion.com/documentation/api/document-editor/documentEditorKeyDownEventArgs/) event every time when any key is entered and provides an instance of `DocumentEditorKeyDownEventArgs`. You can use the `isHandled` property to override the keyboard shortcut behavior.
 
 ## Preventing default keyboard shortcut
 
