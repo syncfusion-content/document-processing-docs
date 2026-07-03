@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # R t l in JavaScript (ES6) Document editor control
 
-Document Editor provides RTL (right-to-left) support. This can be enabled using the “enableRtl” property.
+[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) provides RTL (right-to-left) support. This can be enabled using the "enableRtl" property.
 
  
 

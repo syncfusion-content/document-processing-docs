@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Clipboard in JavaScript (ES6) Document editor control
 
-Document Editor takes advantage of system clipboard and allows you to copy or move a portion of the document into it in HTML format, so that it can be pasted in any application that supports clipboard.
+[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) takes advantage of system clipboard and allows you to copy or move a portion of the document into it in HTML format, so that it can be pasted in any application that supports clipboard.
 
 ## Copy
 
