@@ -6,7 +6,7 @@ control: general
 documentation: UG
 ---
 
-# Syncfusion<sup>&reg;</sup> Telemetry  
+# Syncfusion<sup>&reg;</sup> Telemetry 
 
 Syncfusion<sup>&reg;</sup> Telemetry library collects **anonymous usage data** to improve product quality and user experience. This data helps us better understand product usage, feature adoption, usage trends, and make informed decisions about future product planning. 
 
