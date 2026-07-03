@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to in React Document editor component
 
-Document Editor triggers the [`keyDown`](./api-documentEditorKeyDownEventArgs.html) event every time when any key is entered and provides an instance of `DocumentEditorKeyDownEventArgs`. You can use the `isHandled` property to override the keyboard shortcut behavior.
+[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) triggers the [`keyDown`](./api-documentEditorKeyDownEventArgs.html) event every time when any key is entered and provides an instance of `DocumentEditorKeyDownEventArgs`. You can use the `isHandled` property to override the keyboard shortcut behavior.
 
 ## Preventing default keyboard shortcut
 
