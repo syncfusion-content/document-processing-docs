@@ -9,7 +9,7 @@ documentation: ug
 
 # Insert Text and Rich-Text Content in Blazor DocumentEditor
 
-The Blazor Document Editor component supports inserting text, paragraphs, and rich-text content.
+The [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) component supports inserting text, paragraphs, and rich-text content.
 
 ## Insert text in current cursor position
 
