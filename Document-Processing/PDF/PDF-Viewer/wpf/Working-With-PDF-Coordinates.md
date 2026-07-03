@@ -9,7 +9,7 @@ documentation: ug
 
 # Working With PDF Coordinates in the WPF PDF Viewer
 
-The WPF PDF Viewer allows users to obtain the PDF page coordinates relative to the PDF Viewer's client coordinates and vice versa. It also allows you to get the scroll point relative to the PDF page coordinates and bring a specific region into view.
+The [WPF PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/wpf-pdf-viewer) allows users to obtain the PDF page coordinates relative to the PDF Viewer's client coordinates and vice versa. It also allows you to get the scroll point relative to the PDF page coordinates and bring a specific region into view.
 
 ## Client coordinates
 

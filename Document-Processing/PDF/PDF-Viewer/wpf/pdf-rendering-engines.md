@@ -9,7 +9,7 @@ documentation: ug
 
 # PDF Rendering Engines in WPF Pdf Viewer
 
-Syncfusion&reg; WPF PDF Viewer renders the PDF pages through 2 different rendering engines.
+WPF PDF Viewer renders the PDF pages through 2 different rendering engines.
 
 * PDFium (Google Chrome’s PDF rendering engine)
 * SfPdf (Syncfusion’s Own PDF rendering engine)
