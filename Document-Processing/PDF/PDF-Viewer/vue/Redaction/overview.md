@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Redaction in Vue PdfViewer
 
-Redaction annotations hide confidential or sensitive information in a PDF. The Syncfusion Vue PDF Viewer (EJ2) enables marking regions or entire pages for redaction, customizing appearance, and permanently applying redaction with a single action.
+Redaction annotations hide confidential or sensitive information in a PDF. The Vue PDF Viewer (EJ2) enables marking regions or entire pages for redaction, customizing appearance, and permanently applying redaction with a single action.
 
 ## Enable the redaction toolbar
 

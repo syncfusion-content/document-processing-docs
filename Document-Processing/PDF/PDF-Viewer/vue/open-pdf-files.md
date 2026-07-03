@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Open PDF files
 
-This article explains how to open and display PDF files in the Syncfusion Vue PDF Viewer from various sources. In this section, you can find the information about how to open PDF files from URL, database, local file system, and as base64 string.
+This article explains how to open and display PDF files in the Vue PDF Viewer from various sources. In this section, you can find the information about how to open PDF files from URL, database, local file system, and as base64 string.
 
 N> Ensure that the web service is running and reachable before loading documents in the Vue PDF Viewer component.
 
