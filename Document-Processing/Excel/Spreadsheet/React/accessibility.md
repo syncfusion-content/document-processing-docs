@@ -115,4 +115,4 @@ The accessibility compliance of the Spreadsheet component is shown in the follow
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> React components](https://ej2.syncfusion.com/react/documentation/common/accessibility)
+* [Accessibility in React components](https://ej2.syncfusion.com/react/documentation/common/accessibility)

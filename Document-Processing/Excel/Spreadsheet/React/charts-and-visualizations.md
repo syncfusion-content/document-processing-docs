@@ -11,7 +11,7 @@ documentation: ug
 
 ## Understanding Charts
 
-The Syncfusion React Spreadsheet component supports built-in charts, allowing you to turn cell ranges into clear visual representations directly inside your worksheet. Charts help you identify trends, compare values, and communicate data insights at a glance.
+The [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component supports built-in charts, allowing you to turn cell ranges into clear visual representations directly inside your worksheet. Charts help you identify trends, compare values, and communicate data insights at a glance.
 
 ## Supported Chart Types
 

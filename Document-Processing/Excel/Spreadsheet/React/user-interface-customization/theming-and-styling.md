@@ -9,13 +9,13 @@ documentation: ug
 
 # Built in Themes in React Spreadsheet
 
-Our Syncfusion React Spreadsheet component provides a comprehensive set of built-in themes to deliver a consistent, modern, and visually appealing appearance across applications. Applying a theme loads the corresponding CSS file and updates the component’s appearance throughout the UI.
+Our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component provides a comprehensive set of built-in themes to deliver a consistent, modern, and visually appealing appearance across applications. Applying a theme loads the corresponding CSS file and updates the component’s appearance throughout the UI.
 
 For more information about the built-in themes in Syncfusion, please refer to the [documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
 
 ## Customizing Theme Color
 
-The Syncfusion React Spreadsheet component supports many themes and lets you apply custom styles. You can customize theme colors using Theme Studio. Theme Studio lets you pick a theme, modify colors, and download a ready‑to‑use CSS file for your project.
+The React Spreadsheet Editor supports many themes and lets you apply custom styles. You can customize theme colors using Theme Studio. Theme Studio lets you pick a theme, modify colors, and download a ready‑to‑use CSS file for your project.
 
 For more information on customizing the theme color via theme studio, please refer this [documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio)
 

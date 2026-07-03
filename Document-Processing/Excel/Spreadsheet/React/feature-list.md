@@ -9,7 +9,7 @@ documentation: ug
 
 # Feature list in React Spreadsheet component
 
-The following table shows the features available in our Syncfusion EJ2 Spreadsheet.
+The following table shows the features available in our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component.
 
 | **Features** | **Available in EJ2 Spreadsheet** | **Comments** |
 | --- | --- | --- |
