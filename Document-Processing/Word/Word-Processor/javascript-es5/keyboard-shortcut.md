@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Text formatting
 
-The following table lists the default keyboard shortcuts in Document Editor for formatting text:
+The following table lists the default keyboard shortcuts in [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) for formatting text:
 
 | Key combination | Description |
 |-----------------|-------------|
