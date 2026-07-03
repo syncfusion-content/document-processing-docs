@@ -14,7 +14,7 @@ This article explains how to open a default document when DocumentEditor & Docum
 
 ## Opening a default document in DocumentEditor
 
-Using `open` method in Document editor allows to open the Document in sfdt format. To open the document by default, call the open method in the `created` event of Document editor which gets triggered once the control is created.
+Using `open` method in [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) allows to open the Document in sfdt format. To open the document by default, call the open method in the `created` event of Document editor which gets triggered once the control is created.
 
 
 {% tabs %}

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Supported File Formats in ASP.NET Core DOCX Editor
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core DOCX Editor (Document Editor) supports a wide range of Microsoft Word and other document formats for opening and exporting.
+[ASP.NET Core Doccx Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) supports a wide range of Microsoft Word and other document formats for opening and exporting.
 
 ## Supported File Formats 
 
