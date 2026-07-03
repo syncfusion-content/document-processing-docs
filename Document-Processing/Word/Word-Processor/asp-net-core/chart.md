@@ -10,7 +10,7 @@ documentation: ug
 
 # Chart in Document Editor Component
 
-Document Editor provides chart preservation support. Using Document Editor, you can see the chart reports from your Word document.
+[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) provides chart preservation support. Using Document Editor, you can see the chart reports from your Word document.
 
 
 {% tabs %}

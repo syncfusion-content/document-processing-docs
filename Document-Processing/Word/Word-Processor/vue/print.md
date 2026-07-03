@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Print in Vue Document editor component
 
-To print the document, use the [`print`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#print) method from Document Editor instance.
+To print the document, use the [`print`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#print) method from [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) instance.
 
 Refer to the following example for showing a document and print it.
 

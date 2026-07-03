@@ -10,9 +10,9 @@ keywords: Angular UI Builder, Skills, AI Assistants, DOCX Editor, Agent Skills
 
 # Angular UI Builder Skill with DOCX Editor for AI Assistants
 
-**Syncfusion® Angular UI Builder Skill** is an AI-powered agent skill that accelerates Angular DOCX Editor development by transforming natural-language UI requirements into production-ready code using Syncfusion® Angular components.
+**Syncfusion® Angular UI Builder Skill** is an AI-powered agent skill that accelerates [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) development by transforming natural-language UI requirements into production-ready code using Syncfusion® Angular components.
 
-Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® DOCX Editor** and other Angular components to deliver accurate and ready-to-use code.
+Integrated with your AI-powered IDE, it leverages deep knowledge of **Angular DOCX Editor** and other Angular components to deliver accurate and ready-to-use code.
 By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, Angular UI Builder helps you rapidly build scalable Document editing applications and user interfaces without leaving your development workflow.
 
 ## Prerequisites
@@ -105,7 +105,7 @@ Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targe
 
 1. **Intent Analysis:** Parse the user's prompt to identify component types and high-level layout intent.
 2. **Project Detection:** Automatically detects project framework, package manager, existing themes, and DOCX Editor configuration.
-3. **Component Mapping:** Map intent to Syncfusion® DOCX Editor and Angular components, including required modules.
+3. **Component Mapping:** Map intent to Angular DOCX Editor and Angular components, including required modules.
 4. **Theming & Design System**  
    Load required theming guidelines and confirm key design choices:
    - CSS framework (Tailwind, Bootstrap, Material, or Greenfield(custom theme)). If no themes detected in the existing project, Greenfield and Syncfusion Tailwind3 theme are shown as the default option, which can be used as is or changed based on preference.

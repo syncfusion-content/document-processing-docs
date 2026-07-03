@@ -9,7 +9,7 @@ documentation: ug
 
 # Frequently Asked Questions in Blazor SfPdfViewer Component
 
-Common questions and answers for using the Syncfusion Blazor SfPdfViewer component.
+Common questions and answers for using the Blazor SfPdfViewer component.
 
 * [How to Load PDF from URL to server-side PDF viewer?](./faqs/how-to-load-PDF-from-URL-to-server-side-PDF-viewer)
 * [How to Create a SfPdfViewer within a popup window in Blazor?](./faqs/how-to-create-sfpdfviewer-in-a-popup-window)

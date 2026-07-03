@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 ## How to enable ruler in React Document Editor component
 
-Using ruler we can refer to setting specific margins, tab stops, or indentations within a document to ensure consistent formatting in Document Editor.
+Using ruler we can refer to setting specific margins, tab stops, or indentations within a document to ensure consistent formatting in [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor).
 
 The following example illustrates how to enable ruler in Document Editor
 

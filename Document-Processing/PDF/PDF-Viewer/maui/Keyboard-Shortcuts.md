@@ -10,7 +10,7 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 # Keyboard shortcuts in .NET MAUI PDF Viewer (SfPdfViewer)
 
-The [.NET MAUI PDF viewer](https://www.syncfusion.com/maui-controls/maui-pdf-viewer) allows the users to perform certain operations such as page navigation using keyboard shortcuts in Windows and macOS platforms. The below table lists the available shortcuts and the corresponding operations.
+The [.NET MAUI PDF viewer](https://www.syncfusion.com/pdf-viewer-sdk/net-maui-pdf-viewer) allows the users to perform certain operations such as page navigation using keyboard shortcuts in Windows and macOS platforms. The below table lists the available shortcuts and the corresponding operations.
 
 <table>
 <tr>

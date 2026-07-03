@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting started with the Blazor PDF Viewer in WSL mode
 
-Use the following steps to run the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer (Next-Gen) component in WSL (Windows Subsystem for Linux) mode:
+Use the following steps to run the Blazor PDF Viewer (Next-Gen) component in WSL (Windows Subsystem for Linux) mode:
 
 **Step 1:** Enable Windows Subsystem for Linux and Virtual Machine Platform.
 

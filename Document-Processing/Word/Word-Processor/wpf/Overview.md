@@ -8,7 +8,7 @@ keywords: overview, richtextboxadv, sfrichtextboxadv
 ---
 # Overview of the Syncfusion<sup>&reg;</sup> WPF RichTextBox
 
-The Syncfusion <sup style="font-size:70%">&reg;</sup> [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) is a feature-rich, user-interactive control that enables viewing, editing, and printing rich text content with advanced formatting and layout capabilities, supporting elements such as text, images, tables, paragraphs, and comments. 
+The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) is a feature-rich, user-interactive control that enables viewing, editing, and printing rich text content with advanced formatting and layout capabilities, supporting elements such as text, images, tables, paragraphs, and comments. 
 
 ![Output of WPF RichTextBox](./Overview_images/wpf-richtextbox.png)
 

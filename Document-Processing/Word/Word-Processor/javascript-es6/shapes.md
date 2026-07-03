@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Shapes in JavaScript (ES6) Document editor control
 
-Shapes are drawing objects that include a text box, rectangles, lines, curves, circles, etc. It can be preset or custom geometry. At present, DocumentEditor does not have support to insert shapes. however, if the document contains a shape while importing, it will be preserved properly.
+Shapes are drawing objects that include a text box, rectangles, lines, curves, circles, etc. It can be preset or custom geometry. At present, [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) does not have support to insert shapes. however, if the document contains a shape while importing, it will be preserved properly.
 
 ## Supported shapes
 

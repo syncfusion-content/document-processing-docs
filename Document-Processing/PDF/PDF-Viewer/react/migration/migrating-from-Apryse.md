@@ -7,19 +7,19 @@ documentation: ug
 control: PDF Viewer
 ---
 
-# Migrating from Apryse WebViewer to Syncfusion React PDF Viewer
+# Migrating from Apryse WebViewer to React PDF Viewer
 
-This guide assists developers in migrating applications built with [Apryse WebViewer](https://docs.apryse.com/web/guides/get-started/react) to the [Syncfusion React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started). It focuses on architectural differences, feature mapping, and required changes in a React environment.
+This guide assists developers in migrating applications built with [Apryse WebViewer](https://docs.apryse.com/web/guides/get-started/react) to the [React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started). It focuses on architectural differences, feature mapping, and required changes in a React environment.
 
 ## Overview
 
 Apryse WebViewer is a feature-rich PDF SDK that relies on a modular JavaScript API.
 
-Syncfusion React PDF Viewer provides a **native React component-based PDF viewing experience** with built-in UI, annotations, forms, and performance optimizations, using an optimized JavaScript rendering engine and without external runtime dependencies.
+React PDF Viewer provides a **native React component-based PDF viewing experience** with built-in UI, annotations, forms, and performance optimizations, using an optimized JavaScript rendering engine and without external runtime dependencies.
 
 ## Architecture notes
 
-This guide focuses on replacing an Apryse WebViewer integration with a Syncfusion React PDF Viewer component. Key considerations when migrating include the integration pattern (imperative SDK mounts vs. a declarative React component), how UI/tooling is provided (hosted JS modules vs. injected services), and enable feature  and persistence for annotations and form fields. The instructions below are framed to help migrate code, event handlers, and persistence workflows to the `PdfViewerComponent`.
+This guide focuses on replacing an Apryse WebViewer integration with a React PDF Viewer component. Key considerations when migrating include the integration pattern (imperative SDK mounts vs. a declarative React component), how UI/tooling is provided (hosted JS modules vs. injected services), and enable feature  and persistence for annotations and form fields. The instructions below are framed to help migrate code, event handlers, and persistence workflows to the `PdfViewerComponent`.
 
 ## Installation
 
@@ -29,7 +29,7 @@ This guide focuses on replacing an Apryse WebViewer integration with a Syncfusio
 npm install @pdftron/webviewer
 ```
 
-### Syncfusion React PDF Viewer
+### React PDF Viewer
 
 ```bash
 npm install @syncfusion/ej2-react-pdfviewer
@@ -69,7 +69,7 @@ function App() {
 export default App;
 ```
 
-### Syncfusion React PDF Viewer
+### React PDF Viewer
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -125,7 +125,7 @@ documentViewer.addEventListener('documentLoaded', () => {
 
 ### Syncfusion
 
-Check [Syncfusion Events Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/events#documentload) to know more about event handling in Syncfusion React PDF Viewer.
+Check [Syncfusion Events Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/events#documentload) to know more about event handling in React PDF Viewer.
 
 ```js
 <PdfViewerComponent
@@ -147,7 +147,7 @@ Follow these concise steps to replace an Apryse WebViewer integration with `PdfV
 1) Prepare the project
 
 - Keep a working branch and add simple checks for current behavior (open document, navigate pages, annotation toggle).
-- Install Syncfusion React PDF Viewer:
+- Install React PDF Viewer:
 
 ```bash
 npm install @syncfusion/ej2-react-pdfviewer
@@ -227,7 +227,7 @@ export default function PdfViewer() {
 
 ## API mapping: Apryse WebViewer → Syncfusion equivalents
 
-| Apryse WebViewer | Syncfusion React PDF Viewer |
+| Apryse WebViewer | React PDF Viewer |
 |---|---|
 | `WebViewer({ path, initialDoc }, element)` | Use `<PdfViewerComponent documentPath="..." resourceUrl="..." />` and [load()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#load) for programmatic loads. |
 | `instance.Core.documentViewer` (page events) | [pageRenderInitiate](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#pagerenderinitiate), [pageRenderComplete](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#pagerendercomplete), [pageChange](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#pagechange), [documentLoad](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#documentload) events. |
@@ -269,4 +269,4 @@ export default function PdfViewer() {
 ## See Also
 
 - [Apryse WebViewer Getting Started](https://docs.apryse.com/web)
-- [Syncfusion React PDF Viewer Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started)
+- [React PDF Viewer Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started)

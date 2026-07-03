@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Export in Vue Document editor component
 
-Document Editor exports the document into various known file formats in client-side such as Microsoft Word document (.docx), text document (.txt), and its own format called **Syncfusion Document Text (.sfdt)**.
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) exports the document into various known file formats in client-side such as Microsoft Word document (.docx), text document (.txt), and its own format called **Syncfusion Document Text (.sfdt)**.
 
 We are providing two types of save APIs  as mentioned below.
 
@@ -48,7 +48,7 @@ The following example shows how to export documents in Document Editor as Syncfu
 
 The following example shows how to export the document as Word document (.docx).
 
->Note: The Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
+>Note: The Vue Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
