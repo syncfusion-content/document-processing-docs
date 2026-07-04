@@ -15,7 +15,7 @@ Cells that contain a comment show a small indicator. Hovering over the cell open
 ![Spreadsheet showing a comment](./images/spreadsheet_comment.png)
 
 ## Author identity
-The Syncfusion Spreadsheet does not automatically track author details. To assign an author name to new comments and replies, set the [`author`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#author) property when initializing the Spreadsheet.  
+The Spreadsheet does not automatically track author details. To assign an author name to new comments and replies, set the [`author`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#author) property when initializing the Spreadsheet.  
 
 If the [`author`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#author) property is not defined, the default value will be **Guest User**.
 

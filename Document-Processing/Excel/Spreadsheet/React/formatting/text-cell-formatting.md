@@ -18,7 +18,7 @@ You can set formats in the following ways:
 
 ## Fonts
 
-The Syncfusion React Spreadsheet component provides comprehensive font formatting options to customize text appearance in cells. These options help improve readability and establish a clear visual hierarchy in your data.
+The React Spreadsheet Editor provides comprehensive font formatting options to customize text appearance in cells. These options help improve readability and establish a clear visual hierarchy in your data.
 
 The Spreadsheet supports the following font formatting options:
 
@@ -69,7 +69,7 @@ The following code example shows the style formatting in text and cells of the s
 
 ## Borders
 
-The Syncfusion React Spreadsheet component allows you to apply borders to a cell or a range of cells. Borders help you separate sections, highlight data, or format tables clearly in your worksheet. You can apply borders in different styles, sizes, and colors based on your needs.
+The React Spreadsheet Editor allows you to apply borders to a cell or a range of cells. Borders help you separate sections, highlight data, or format tables clearly in your worksheet. You can apply borders in different styles, sizes, and colors based on your needs.
 
 ### Border Types
 
@@ -136,7 +136,7 @@ The following features are not supported in Formatting:
 
 ## Note
 
-You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for feature highlights. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to learn how to present and manipulate data.
+You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for feature highlights. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to learn how to present and manipulate data.
 
 ## See Also
 

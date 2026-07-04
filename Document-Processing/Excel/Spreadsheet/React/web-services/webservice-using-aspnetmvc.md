@@ -9,7 +9,7 @@ documentation: ug
 
 # Connecting Web Services for Spreadsheet Open and Save in ASP.NET MVC
 
-This guide explains how to set up and connect local web services for open and save operations in the Syncfusion Spreadsheet component using **ASP.NET MVC**.
+This guide explains how to set up and connect local web services for open and save operations in the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component using **ASP.NET MVC**.
 
 ## Create a Local ASP.NET MVC Web Service
 
