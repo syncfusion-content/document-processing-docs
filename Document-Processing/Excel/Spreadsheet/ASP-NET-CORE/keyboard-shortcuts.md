@@ -10,7 +10,7 @@ documentation: ug
 
 # Keyboard Shortcuts And Navigation in ASP.NET Core Spreadsheet Control
 
-The keyboard shortcuts supported in the spreadsheet are,
+The keyboard shortcuts supported in the Spreadsheet are,
 
 | Shortcut | Description |
 |-------|---------|
