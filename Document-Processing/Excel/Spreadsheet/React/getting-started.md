@@ -36,9 +36,9 @@ cd spreadsheet-app
 {% endhighlight %}
 {% endtabs %}
 
-## Install the React Spreadsheet Editor package
+## Install the Syncfusion® React Spreadsheet package
 
-Install the [React Spreadsheet](https://www.npmjs.com/package/@syncfusion/ej2-react-spreadsheet) package from npm using the following command:
+Install the [Syncfusion® React Spreadsheet](https://www.npmjs.com/package/@syncfusion/ej2-react-spreadsheet) package from npm using the following command:
 
 ```
 npm install @syncfusion/ej2-react-spreadsheet --save
@@ -61,7 +61,7 @@ Add the following Spreadsheet and dependent component style references to the `s
 @import '../node_modules/@syncfusion/ej2-react-spreadsheet/styles/tailwind3.css';
 ```
 
-## Add the React Spreadsheet Editor component to the application
+## Add the Syncfusion® React Spreadsheet component to the application
 
 Now, import the `SpreadsheetComponent` into your `src/App.jsx` or `src/App.tsx` file and render it.
 
@@ -110,13 +110,15 @@ You can also explore the Spreadsheet interactively using the live sample below.
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/getting-started-cs1" %}
 
-> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-react-spreadsheet-component) to explore the complete source code. You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/react-components/react-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/react/#/tailwind3/spreadsheet/default) that shows you how to present and manipulate data.
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-react-spreadsheet-component) to explore the complete source code. You can also explore our [React Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/react/#/tailwind3/spreadsheet/default) that shows you how to present and manipulate data.
 
 ## Video tutorial
 
 To get started quickly with React Spreadsheet, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=3Cx9AnKAHdY" %}
+
+N> Looking for the full React Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) page.
 
 ## See also
 
