@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with TypeScript Spreadsheet control
 
-This section explains how to create a simple TypeScript application and add the [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) control with the minimum required setup.
+This section explains how to create a simple TypeScript application and add the [TypeScript Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) control with the minimum required setup.
 
 ## Prerequisites
 
