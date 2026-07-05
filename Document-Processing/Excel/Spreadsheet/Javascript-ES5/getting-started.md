@@ -189,7 +189,6 @@ You can also explore the Spreadsheet interactively using the live sample below.
 
 N> Looking for the full JavaScript Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) page.
 
-
 ## See also
 
 * [Data Binding](./data-binding)

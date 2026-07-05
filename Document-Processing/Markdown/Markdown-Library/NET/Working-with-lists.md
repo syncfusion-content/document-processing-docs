@@ -21,6 +21,8 @@ A bulleted list can be created by setting the `ListFormat` property of a paragra
 
 The following code example demonstrates how to create a simple bulleted list.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C#*** for ASP.NET Core, Blazor, ASP.NET MVC, UWP, .NET MAUI, WinUI, WinForms and WPF; ***VB.NET*** for VB.NET applications.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}

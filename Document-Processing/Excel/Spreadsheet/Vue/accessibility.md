@@ -116,4 +116,3 @@ The accessibility compliance of the Spreadsheet component is shown in the follow
 ## See also
 
 * [Accessibility in Vue components](https://ej2.syncfusion.com/vue/documentation/common/accessibility)
-

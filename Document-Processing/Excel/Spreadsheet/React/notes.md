@@ -67,7 +67,7 @@ The note will be removed from the cell, and the red triangle indicator will be r
 
 ## Navigating Between Notes
 
-The Syncfusion Spreadsheet provides intuitive navigation to quickly move between cells containing notes in your worksheet. These options are accessible through the **Notes** dropdown in the **Review** tab.
+The Spreadsheet provides intuitive navigation to quickly move between cells containing notes in your worksheet. These options are accessible through the **Notes** dropdown in the **Review** tab.
 
 ![Navigating between notes in Spreadsheet](./images/spreadsheet_next_previous_note.gif)
 

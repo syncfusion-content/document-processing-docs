@@ -78,5 +78,5 @@ this.documentEditor.editor.setFieldInfo(fieldInfo);
 
 ## See Also
 
-[Mail merge using Word library (DocIO)](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-mail-merge)
+[Mail merge using Word library (DocIO)](https://help.syncfusion.com/file-formats/docio/working-with-mail-merge)
 [Mail merge demo](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices)

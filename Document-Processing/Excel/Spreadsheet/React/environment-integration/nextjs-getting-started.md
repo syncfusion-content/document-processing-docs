@@ -101,7 +101,7 @@ yarn add @syncfusion/ej2-react-spreadsheet
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
- React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme), which are available in the installed packages. It’s easy to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to match the style of your application by referring to one of the built-in themes.
+React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme), which are available in the installed packages. It’s easy to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to match the style of your application by referring to one of the built-in themes.
 
 Import the `Material` theme into the **src/app/globals.css** file and removed the existing styles in that file, as shown below:
 
@@ -392,7 +392,7 @@ export default function Home(this: any) {
 
   return (
     <>
-      <h2>Syncfusion React Spreadsheet Component</h2>
+      <h2>React Spreadsheet Editor</h2>
       <SpreadsheetComponent openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open'
         saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'
         ref={(Obj) => { spreadsheet = Obj as SpreadsheetComponent }} created={onCreated.bind(this)} >

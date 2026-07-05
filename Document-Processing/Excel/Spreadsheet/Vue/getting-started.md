@@ -64,13 +64,13 @@ Add the following Spreadsheet and dependent component CSS styles in the **\<styl
 
 > **Note:** Refer to the [Themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Vue project.
 
-## Import and register the Spreadsheet Editor
+## Add the Vue Spreadsheet component to the application 
 
-In the `src/App.vue` file, update the **\<script\>** section to import the Spreadsheet Editor component and register it with the required properties.
+Import and register the [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) component directives in the `script` section of **src/App.vue**. Then, define the component in the `template` section.
 
 {% tabs %}
 
-{% highlight vue tabtitle="~/src/App.vue" %}
+{% highlight js tabtitle="~/src/App.vue" %}
 
 import { SpreadsheetComponent } from "@syncfusion/ej2-vue-spreadsheet";
 
@@ -97,7 +97,7 @@ Add the Spreadsheet Editor component to the **\<template\>** section in the `src
 
 {% tabs %}
 
-{% highlight vue tabtitle="~/src/App.vue" %}
+{% highlight js tabtitle="~/src/App.vue" %}
 
 <ejs-spreadsheet :openUrl="openUrl" :saveUrl="saveUrl"></ejs-spreadsheet>
 

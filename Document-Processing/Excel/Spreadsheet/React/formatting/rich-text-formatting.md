@@ -11,7 +11,7 @@ documentation: ug
 
 Rich text formatting allows you to apply different styles to specific portions of text within a single cell to improve readability and presentation. Currently, subscript and superscript formatting are supported, and other rich text font styles are not supported.
 
-In the **Syncfusion React Spreadsheet**, rich text formatting is supported through the [`richText`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#richtext) property of the cell model. This property lets you define multiple text segments inside a cell, where each segment can have its own style.
+In the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component, rich text formatting is supported through the [`richText`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#richtext) property of the cell model. This property lets you define multiple text segments inside a cell, where each segment can have its own style.
 
 Each `richText` segment contains:
 

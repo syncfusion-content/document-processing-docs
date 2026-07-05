@@ -7,14 +7,14 @@ platform: document-processing
 documentation: ug
 ---
 
-# Getting Started with Syncfusion Spreadsheet using Create React App
+# Getting Started with React Spreadsheet Editor using Create React App
 
-This article provides a step-by-step guide for setting up a React application using Create React App and integrating Syncfusion Spreadsheet.
+This article provides a step-by-step guide for setting up a React application using Create React App and integrating React Spreadsheet Editor.
 
 ## Prerequisites
 
 Ensure the following requirements are met before starting:
-[System requirements for Syncfusion React Spreadsheet](https://ej2.syncfusion.com/react/documentation/system-requirement)
+[System requirements for React Spreadsheet Editor](https://ej2.syncfusion.com/react/documentation/system-requirement)
 
 ## Create the React application
 
@@ -65,7 +65,7 @@ yarn add @syncfusion/ej2-react-spreadsheet
 
 ## Import CSS
 
-Syncfusion React Spreadsheet come with built-in [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme). Import the CSS styles for the Spreadsheet component and its dependent components in the `src/App.css` file. The example below demonstrates importing the `Tailwind 3` theme.
+The React Spreadsheet Editor come with built-in [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme). Import the CSS styles for the Spreadsheet component and its dependent components in the `src/App.css` file. The example below demonstrates importing the `Tailwind 3` theme.
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
