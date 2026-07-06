@@ -3,7 +3,8 @@ var documenteditor = new ej.documenteditor.DocumentEditor({
     enablePrint: true,
     enableEditor: true,
     enableSelection: true,
-    enableEditorHistory: true
+    enableEditorHistory: true,
+    height: '370px'
 });
 
 documenteditor.appendTo('#DocumentEditor');
