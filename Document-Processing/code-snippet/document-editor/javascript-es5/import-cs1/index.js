@@ -1,4 +1,4 @@
-var documenteditor = new ej.documenteditor.DocumentEditor({ });
+var documenteditor = new ej.documenteditor.DocumentEditor({height: '370px' });
 
 documenteditor.appendTo('#DocumentEditor');
 
