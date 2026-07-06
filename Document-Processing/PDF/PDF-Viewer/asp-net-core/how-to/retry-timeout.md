@@ -7,14 +7,14 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Configure retry timeout and retry count
+# Configure retry timeout and retry count in ASP.NET Core
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer provides the [`retryTimeout`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_RetryTimeout) and [`retryCount`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_RetryCount) properties to manage failed AJAX requests automatically. Configuring these settings improves application resilience by handling transient network fluctuations or temporary service unavailability without disrupting the user experience.
+The ASP.NET Core PDF Viewer provides the [`retryTimeout`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_RetryTimeout) and [`retryCount`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_RetryCount) properties to manage failed AJAX requests automatically. Configuring these settings improves application resilience by handling transient network fluctuations or temporary service unavailability without disrupting the user experience.
 
 * **retryTimeout:** Defines the duration (in seconds) the viewer waits for a response before aborting and retrying the request. The default value is `0`, which disables the retry delay.
 * **retryCount:** Specifies the maximum number of retry attempts the viewer should perform before reporting a definitive error. The default value is `0`, meaning no retries are attempted.
 
-Assigning positive values to both properties ensures the viewer proactively manages connection issues.
+Assigning positive values to both properties ensures the viewer pro actively manages connection issues.
 
 
 The following example demonstrates how to configure these properties in a server-backed PDF Viewer setup.

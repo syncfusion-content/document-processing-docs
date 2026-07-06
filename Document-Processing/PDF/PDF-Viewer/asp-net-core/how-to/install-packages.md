@@ -9,7 +9,7 @@ documentation: ug
 
 # Install PDF Viewer packages in ASP.NET Core
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer requires the [Syncfusion.EJ2.PdfViewer.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.PdfViewer.AspNet.Core/) NuGet package. This package contains all the necessary assemblies, managed wrappers, and server-side components to render and interact with PDF documents.
+The ASP.NET Core PDF Viewer requires the [Syncfusion.EJ2.PdfViewer.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.PdfViewer.AspNet.Core/) NuGet package. This package contains all the necessary assemblies, managed wrappers, and server-side components to render and interact with PDF documents.
 
 ## Installation methods
 

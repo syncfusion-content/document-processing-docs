@@ -117,7 +117,7 @@ Open the `~/Pages/Shared/_Layout.cshtml` page and register the script manager `<
 
 ## Add ASP.NET Core PDF Viewer control
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer tag helper in `~/Pages/Index.cshtml`. The `serviceUrl` property is essential for server-backed mode, as it specifies the server endpoint that handles all PDF processing operations.
+Add the ASP.NET Core PDF Viewer tag helper in `~/Pages/Index.cshtml`. The `serviceUrl` property is essential for server-backed mode, as it specifies the server endpoint that handles all PDF processing operations.
 
 {% tabs %}
 {% highlight c# tabtitle="~/Index.cshtml" %}
@@ -137,7 +137,7 @@ An implementation example can be found [here](https://github.com/SyncfusionExamp
 
 ## Run the application
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer control will be rendered in the default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the ASP.NET Core PDF Viewer control will be rendered in the default web browser.
 
 ![ASP.NET Core PDF Viewer control in action](Core_Images/pdfviewer-control.png)
 
@@ -173,6 +173,8 @@ function load() {
 {% endhighlight %}
 {% endtabs %}
 
+N> Looking for the full [ASP.NET Core PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/asp-net-core-pdf-viewer) component overview, features, pricing, and documentation? Visit the ASP.NET Core PDF Viewer page.
+
 ## See also
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core](https://ej2.syncfusion.com/aspnetcore/documentation/getting-started)
+* [Getting Started with ASP.NET Core](https://ej2.syncfusion.com/aspnetcore/documentation/getting-started)

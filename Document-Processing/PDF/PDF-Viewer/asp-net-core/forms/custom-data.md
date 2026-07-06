@@ -9,7 +9,7 @@ documentation: ug
 
 # Add Custom Data to PDF Form Fields in ASP.NET Core PDF Viewer
 
-The Syncfusion ASP.NET Core PDF Viewer allows attaching custom application-specific data to form fields using the **customData** property. This enables associating business identifiers, tags, validation hints, or workflow metadata with form fields.
+The ASP.NET Core PDF Viewer allows attaching custom application-specific data to form fields using the **customData** property. This enables associating business identifiers, tags, validation hints, or workflow metadata with form fields.
 
 Custom data remains linked to the form field throughout the viewer session and can be accessed or updated whenever the field is queried or modified.
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Identify annotation addition mode
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer allows you to verify how an annotation was added to the document. By inspecting the [`annotationAddMode`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AnnotationAdd) property within the [`annotationSelect`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AnnotationSelect) event, you can distinguish between annotations that were manually drawn by the user, imported from a data source, or pre-existing in the PDF file.
+The ASP.NET Core PDF Viewer allows you to verify how an annotation was added to the document. By inspecting the [`annotationAddMode`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AnnotationAdd) property within the [`annotationSelect`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AnnotationSelect) event, you can distinguish between annotations that were manually drawn by the user, imported from a data source, or pre-existing in the PDF file.
 
 ## Implementation guide
 

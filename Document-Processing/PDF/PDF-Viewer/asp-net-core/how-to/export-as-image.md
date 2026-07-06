@@ -7,9 +7,9 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Export PDF pages as images in ASP.NET Core PDF Viewer
+# Export PDF pages as images in ASP.NET Core
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer provides the `ExportAsImage` APIs to convert individual pages or a range of pages into raster images. These images can be saved to disk, processed in-memory, or served as downloads in your application.
+The ASP.NET Core PDF Viewer provides the `ExportAsImage` APIs to convert individual pages or a range of pages into raster images. These images can be saved to disk, processed in-memory, or served as downloads in your application.
 
 ## Steps to export pages as images
 

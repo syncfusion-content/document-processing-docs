@@ -9,7 +9,7 @@ documentation: ug
 
 # Group Form Fields in ASP.NET Core PDF Viewer
 
-The Syncfusion ASP.NET Core PDF Viewer allows grouping multiple form fields into a single logical field by assigning the same Name. Grouped fields share values and states automatically based on field type. Form field grouping can be done using the Form Designer UI or programmatically via APIs.
+The ASP.NET Core PDF Viewer allows grouping multiple form fields into a single logical field by assigning the same Name. Grouped fields share values and states automatically based on field type. Form field grouping can be done using the Form Designer UI or programmatically via APIs.
 
 This page covers:
 - [How form field grouping works](#how-grouping-works)

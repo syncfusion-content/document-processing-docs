@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Redaction in ASP.NET Core PdfViewer
 
-Redaction annotations hide confidential or sensitive information in a PDF. The Syncfusion ASP.NET Core PDF Viewer enables marking areas or entire pages for redaction, customizing their appearance, and permanently applying redactions.
+Redaction annotations hide confidential or sensitive information in a PDF. The ASP.NET Core PDF Viewer enables marking areas or entire pages for redaction, customizing their appearance, and permanently applying redactions.
 
 ## Enable the redaction toolbar
 

@@ -13,7 +13,7 @@ Switch between PDF documents or replace the currently displayed document after t
 
 ## Load PDF documents dynamically
 
-**Step 1:** Follow the [Syncfusion ASP.NET Core PDF Viewer getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to set up a basic PDF Viewer instance.
+**Step 1:** Follow the [ASP.NET Core PDF Viewer getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to set up a basic PDF Viewer instance.
 
 **Step 2:** Use the following code snippet to load a PDF from a Base64 string.
 

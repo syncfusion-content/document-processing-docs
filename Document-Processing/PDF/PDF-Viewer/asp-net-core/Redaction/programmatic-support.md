@@ -9,7 +9,7 @@ documentation: ug
 
 # Programmatic support for redaction in ASP.NET Core PdfViewer
 
-The Syncfusion ASP.NET Core PDF Viewer provides APIs to add, update, delete, and apply redaction annotations programmatically. The viewer also supports page redaction, configuration of default properties, and interaction with the redaction property panel.
+The ASP.NET Core PDF Viewer provides APIs to add, update, delete, and apply redaction annotations programmatically. The viewer also supports page redaction, configuration of default properties, and interaction with the redaction property panel.
 
 ## Enable the redaction toolbar
 

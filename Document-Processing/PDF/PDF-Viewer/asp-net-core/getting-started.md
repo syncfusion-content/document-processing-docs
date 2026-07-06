@@ -141,6 +141,8 @@ To get started quickly with the ASP.NET Core PDF Viewer, you can watch this vide
 
 {% youtube "https://www.youtube.com/watch?v=cfWATpUjNgo&t=1s" %}
 
+N> Looking for the full [ASP.NET Core PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/asp-net-core-pdf-viewer) component overview, features, pricing, and documentation? Visit the ASP.NET Core PDF Viewer page.
+
 ## See also
 
 * [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core using Server backed](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started-with-server-backed)
