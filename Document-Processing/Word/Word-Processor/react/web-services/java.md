@@ -364,7 +364,7 @@ The following example code illustrates how to write a Web API for restrict editi
         public void setSpinCount(int value) {
             spinCount= value;
         }
-        public void setAlgorithmSid(String) {
+        public void setAlgorithmSid(String value) {
             algorithmSid= value;
         }
     }
