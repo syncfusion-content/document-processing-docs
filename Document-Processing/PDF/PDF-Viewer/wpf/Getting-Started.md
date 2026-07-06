@@ -110,7 +110,10 @@ WPF PdfViewer control can be added to an application either through the designer
 
 {% tabs %}
 {% highlight xaml tabtitle="MainWindow.xaml" %}
-<Window 
+<Window  
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:PdfViewer="clr-namespace:Syncfusion.Windows.PdfViewer;assembly=Syncfusion.PdfViewer.WPF">
     <Grid x:Name="HomeGrid">
         <syncfusion:PdfViewerControl x:Name="pdfViewer"></syncfusion:PdfViewerControl>
     </Grid>
@@ -143,82 +146,84 @@ To add control manually from code, follow these steps,
 1.	Add the required assemblies as a reference to the project.
 2.	Add the following Syncfusion<sup>&reg;</sup>; namespace in MainWindow.xaml.cs.
 
-{% tabs %}
-{% highlight c# tabtitle="C#" %}
-using Syncfusion.Windows.PdfViewer;
-{% endhighlight %}
-{% endtabs %}
+	{% tabs %}
+	{% highlight c# tabtitle="C#" %}
+	using Syncfusion.Windows.PdfViewer;
+	{% endhighlight %}
+	{% endtabs %}
 
 3. Create a PdfViewerControl instance and add it to the main window.
 
-{% tabs %}
-{% highlight c# tabtitle="C#" %}
-using Syncfusion.Windows.PdfViewer;
-using System.Windows;
+	{% tabs %}
+	{% highlight c# tabtitle="C#" %}
+	using Syncfusion.Windows.PdfViewer;
+	using System.Windows;
 
-namespace PdfViewerDemo
-{
-    /// <summary>
-    /// Interaction logic for Window1.xaml
-    /// </summary>
-    public partial class MainWindow : Window
-    {
-        # region Constructor
-        public MainWindow()
-        {
-            InitializeComponent();
-            PdfViewerControl pdfViewer = new PdfViewerControl();
-            HomeGrid.Children.Add(pdfViewer);
-        }
-        #endregion
-    }
-}
-{% endhighlight %}
-{% endtabs %}
+	namespace PdfViewerDemo
+	{
+		/// <summary>
+		/// Interaction logic for Window1.xaml
+		/// </summary>
+		public partial class MainWindow : Window
+		{
+			# region Constructor
+			public MainWindow()
+			{
+				InitializeComponent();
+				PdfViewerControl pdfViewer = new PdfViewerControl();
+				HomeGrid.Children.Add(pdfViewer);
+			}
+			#endregion
+		}
+	}
+	{% endhighlight %}
+	{% endtabs %}
 
-4. The following example code demonstrate how to apply the FluentDark theme to PDF Viewer control in MainWindow.xaml.cs .
+4. The following example code demonstrate how to apply the FluentDark theme to PDF Viewer control in MainWindow.xaml.cs using SfSkinManager.
   
-{% tabs %}
-{% highlight c# tabtitle="C#" %}
+	{% tabs %}
+	{% highlight c# tabtitle="C#" %}
+	
+	using Syncfusion.Windows.PdfViewer;
+	using Syncfusion.SfSkinManager;
+	public MainWindow()
+	{
+		InitializeComponent();
+		//Initialize PDF Viewer.
+		PdfViewerControl pdfViewer = new PdfViewerControl();
+		HomeGrid.Children.Add(pdfViewer);
 
-public MainWindow()
-{
-    InitializeComponent();
-    //Initialize PDF Viewer.
-    PdfViewerControl pdfViewer1 = new PdfViewerControl();
-    HomeGrid.Children.Add(pdfViewer);
+		//Apply the theme to PDFViewer.
+		SfSkinManager.ApplyThemeAsDefaultStyle = true;
+		SfSkinManager.SetTheme(pdfViewer, new Theme() { ThemeName = "FluentDark" });
+		pdfViewer.Load(@"../../PDF_Succinctly.pdf");           
+	}        
 
-    //Apply the theme to PDFViewer.
-    SfSkinManager.ApplyThemeAsDefaultStyle = true;
-    SfSkinManager.SetTheme(pdfViewer, new Theme() { ThemeName = "FluentDark" });
-    pdfViewer.Load(@"../../PDF_Succinctly.pdf");           
-}        
+	{% endhighlight %}
 
-{% endhighlight %}
+	{% highlight vbnet tabtitle="VB.NET" %}
 
-{% highlight vbnet tabtitle="VB.NET" %}
+	Public Sub New()
+		InitializeComponent()
+		'Initialize PDF Viewer.
+		Dim pdfViewer As PdfViewerControl = New PdfViewerControl()
+		HomeGrid.Children.Add(pdfViewer)
 
-Public Sub New()
-    InitializeComponent()
-    'Initialize PDF Viewer.
-    Dim pdfViewer As PdfViewerControl = New PdfViewerControl()
-    HomeGrid.Children.Add(pdfViewer)
+		'Apply the theme to PDFViewer.
+		SfSkinManager.ApplyThemeAsDefaultStyle = True
+		SfSkinManager.SetTheme(pdfViewer, New Theme() With {
+			.ThemeName = "FluentDark"
+		})
+		pdfViewer.Load("../../PDF_Succinctly.pdf")
+	End Sub
 
-    'Apply the theme to PDFViewer.
-    SfSkinManager.ApplyThemeAsDefaultStyle = True
-    SfSkinManager.SetTheme(pdfViewer, New Theme() With {
-        .ThemeName = "FluentDark"
-    })
-    pdfViewer.Load("../../PDF_Succinctly.pdf")
-End Sub
-
-{% endhighlight %}
-{% endtabs %}
+	{% endhighlight %}
+	{% endtabs %}
 
 
-{% endtabcontent %}
- 
-{% endtabcontents %}
+	{% endtabcontent %}
+	 
+	{% endtabcontents %}
 
 
 N>[View Sample in GitHub.](https://github.com/SyncfusionExamples/WPF-PDFViewer-Examples/tree/master/GettingStarted). Looking for the full WPF PDF Viewer component overview, features, pricing, and documentation? Visit the [WPF PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/wpf-pdf-viewer) page.
