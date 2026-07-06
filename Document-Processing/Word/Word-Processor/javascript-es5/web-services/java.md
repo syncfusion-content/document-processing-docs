@@ -336,15 +336,16 @@ The following example code illustrates how to write a Web API for restrict editi
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/api/wordeditor/RestrictEditing")
     public String[] restrictEditing(@RequestBody CustomRestrictParameter param) throws Exception {
-        if (param.passwordBase64 == "" && param.passwordBase64 == null)
+        if (param.passwordBase64 == "" || param.passwordBase64 == null)
             return null;
-        return WordProcessorHelper.computeHash(param.passwordBase64, param.saltBase64, param.spinCount);
+        return WordProcessorHelper.computeHash(param.passwordBase64, param.saltBase64, param.spinCount, param.algorithmSid);
     }
 
     public class CustomRestrictParameter {
         public String passwordBase64;
         public String saltBase64;
         public int spinCount;
+        public String algorithmSid;
         public String getPasswordBase64() {
             return passwordBase64;
         }
@@ -354,6 +355,9 @@ The following example code illustrates how to write a Web API for restrict editi
         public int getSpinCount() {
             return spinCount;
         }
+        public String getAlgorithmSid() {
+            return algorithmSid;
+        }
         public void setPasswordBase64(String value) {
             passwordBase64= value;
         }
@@ -362,6 +366,9 @@ The following example code illustrates how to write a Web API for restrict editi
         }
         public void setSpinCount(int value) {
             spinCount= value;
+        }
+        public void setAlgorithmSid(String) {
+            algorithmSid= value;
         }
     }
 ```
