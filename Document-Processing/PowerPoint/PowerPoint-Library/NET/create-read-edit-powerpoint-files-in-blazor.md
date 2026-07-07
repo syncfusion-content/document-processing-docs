@@ -8,7 +8,7 @@ documentation: UG
 
 # Create PowerPoint Document in Blazor
 
-Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, and edit **PowerPoint** documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, a **create a PowerPoint document in Blazor**.
+Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) used to create, read, and edit **PowerPoint** documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, a **create a PowerPoint document in Blazor**.
 
 ## Blazor Web App Server Application
 
@@ -47,7 +47,7 @@ Step 3: Create a Razor file named `Presentation.razor` in the `Pages` folder, wh
 Include the following namespaces in the file:
 
 {% tabs %}
-{% highlight razor tabtitle="RAZOR" %}
+{% highlight c# tabtitle="C#" %}
 @rendermode InteractiveServer
 @page "/Presentation"
 @using System.IO;
@@ -63,7 +63,7 @@ Include the following code to create a new button that triggers the presentation
 
 {% tabs %}
 
-{% highlight razor tabtitle="RAZOR" %}
+{% highlight CSHTML %}
 
 <h2>Syncfusion Presentation Library (Essential Presentation)</h2>
 <p>The Syncfusion Blazor Presentation library (Essential Presentation) used to create, read, edit, and convert Presentation files in applications without Microsoft Office dependencies.</p>
@@ -79,7 +79,7 @@ Add the following code to create and download the PowerPoint document:
 
 {% tabs %}
 
-{% highlight razor tabtitle="RAZOR" %}
+{% highlight c# tabtitle="C#" %}
 @code {
     MemoryStream documentStream;
     /// <summary>
@@ -200,7 +200,7 @@ Add this function in the `App.razor` file located in the `Pages` folder.
 
 {% tabs %}
 
-{% highlight razor tabtitle="RAZOR" %}
+{% highlight HTML %}
 
 <script type="text/javascript">
     function saveAsFile(filename, bytesBase64) {
@@ -238,7 +238,7 @@ Add the following code snippet to the Navigation menu's Razor file in the `Layou
 
 {% tabs %}
 
-{% highlight razor tabtitle="RAZOR" %}
+{% highlight HTML %}
 
  <div class="nav-item px-3">
     <NavLink class="nav-link" href="presentation">
@@ -298,7 +298,7 @@ Step 3: Create a Razor file named `Presentation.razor` in the `Pages` folder, wh
 Include the following namespaces in the file:
 
 {% tabs %}
-{% highlight razor tabtitle="RAZOR" %}
+{% highlight c# tabtitle="C#" %}
 @rendermode InteractiveServer
 @page "/Presentation"
 @using System.IO;
@@ -314,7 +314,7 @@ Include the following code to create a new button that triggers the PowerPoint g
 
 {% tabs %}
 
-{% highlight razor tabtitle="RAZOR" %}
+{% highlight CSHTML %}
 
 <h2>Syncfusion Presentation Library (Essential Presentation)</h2>
 <p>The Syncfusion Blazor Presentation library (Essential Presentation) used to create, read, edit, and convert Presentation files in applications without Microsoft Office dependencies.</p>
@@ -330,7 +330,7 @@ Add the following code to create and download the PowerPoint document:
 
 {% tabs %}
 
-{% highlight razor tabtitle="RAZOR" %}
+{% highlight c# tabtitle="C#" %}
 @code {
     MemoryStream documentStream;
     /// <summary>
@@ -451,7 +451,7 @@ Add this function in the `App.razor` file located in the `Pages` folder.
 
 {% tabs %}
 
-{% highlight razor tabtitle="RAZOR" %}
+{% highlight HTML %}
 
 <script type="text/javascript">
     function saveAsFile(filename, bytesBase64) {
@@ -489,7 +489,7 @@ Add the following code snippet to the Navigation menu's Razor file in the `Layou
 
 {% tabs %}
 
-{% highlight razor tabtitle="RAZOR" %}
+{% highlight HTML %}
 
  <div class="nav-item px-3">
     <NavLink class="nav-link" href="presentation">
@@ -565,7 +565,7 @@ Step 3: Create a Razor file named `Presentation.razor` in the `Pages` folder, wh
 Include the following namespaces in the file:
 
 {% tabs %}
-{% highlight razor tabtitle="RAZOR" %}
+{% highlight c# tabtitle="C#" %}
 @rendermode InteractiveServer
 @page "/Presentation"
 @using System.IO;
@@ -581,7 +581,7 @@ Include the following code to create a new button that triggers the PowerPoint g
 
 {% tabs %}
 
-{% highlight razor tabtitle="RAZOR" %}
+{% highlight CSHTML %}
 
 <h2>Syncfusion Presentation Library (Essential Presentation)</h2>
 <p>The Syncfusion Blazor Presentation library (Essential Presentation) used to create, read, edit, and convert Presentation files in applications without Microsoft Office dependencies.</p>
@@ -597,7 +597,7 @@ Add the following code to create and download the PowerPoint document:
 
 {% tabs %}
 
-{% highlight razor tabtitle="RAZOR" %}
+{% highlight c# tabtitle="C#" %}
 @code {
     MemoryStream documentStream;
     /// <summary>
@@ -718,7 +718,7 @@ Add this function in the `App.razor` file located in the `Pages` folder.
 
 {% tabs %}
 
-{% highlight razor tabtitle="RAZOR" %}
+{% highlight HTML %}
 
 <script type="text/javascript">
     function saveAsFile(filename, bytesBase64) {
@@ -756,7 +756,7 @@ Add the following code snippet to the Navigation menu's Razor file in the `Layou
 
 {% tabs %}
 
-{% highlight razor tabtitle="RAZOR" %}
+{% highlight HTML %}
 
  <div class="nav-item px-3">
     <NavLink class="nav-link" href="presentation">
@@ -786,7 +786,7 @@ Upon executing the program, the **PowerPoint document** will be generated as fol
 
 {% endtabcontents %}
 
-Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page.
+Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features.
 
 An online sample link to [create a PowerPoint Presentation](https://document.syncfusion.com/demos/powerpoint/default#/tailwind) in ASP.NET Core. 
 
@@ -820,7 +820,7 @@ Step 3: Create a Razor file named `Presentation.razor` in the `Pages` folder.
 Add the following namespaces in the file.
 
 {% tabs %}
-{% highlight razor tabtitle="RAZOR" %}
+{% highlight c# tabtitle="C#" %}
 @page "/Presentation"
 @using Syncfusion.Presentation
 @using Syncfusion.OfficeChart
@@ -835,7 +835,7 @@ Add the following code to create a new button that triggers the PowerPoint gener
 
 {% tabs %}
 
-{% highlight razor tabtitle="RAZOR" %}
+{% highlight CSHTML %}
 
 <h2>Syncfusion Presentation Library (Essential Presentation)</h2>
 <p>The Syncfusion Blazor Presentation library (Essential Presentation) used to create, read, edit, and convert Presentation files in applications without Microsoft Office dependencies.</p>
@@ -851,7 +851,7 @@ Create a new `async` method named `CreatePowerPoint` and include the following c
 
 {% tabs %}
 
-{% highlight razor tabtitle="RAZOR" %}
+{% highlight c# tabtitle="C#" %}
 @functions {
     async void CreatePowerPoint()
     {
@@ -926,7 +926,7 @@ Add this function in the `index.html` file located in `wwwroot`.
 
 {% tabs %}
 
-{% highlight html tabtitle="HTML" %}
+{% highlight HTML %}
 
 <script type="text/javascript">
     function saveAsFile(filename, bytesBase64) {
@@ -960,7 +960,7 @@ Add the following code snippet to the Navigation menu's Razor file in the `Layou
 
 {% tabs %}
 
-{% highlight razor tabtitle="RAZOR" %}
+{% highlight HTML %}
 
  <div class="nav-item px-3">
     <NavLink class="nav-link" href="presentation">
@@ -1021,7 +1021,7 @@ Step 3: Create a Razor file named `Presentation.razor` in the `Pages` folder.
 Add the following namespaces in the file.
 
 {% tabs %}
-{% highlight razor tabtitle="RAZOR" %}
+{% highlight c# tabtitle="C#" %}
 @page "/Presentation"
 @using Syncfusion.Presentation
 @using Syncfusion.OfficeChart
@@ -1036,7 +1036,7 @@ Add the following code to create a new button that triggers the PowerPoint gener
 
 {% tabs %}
 
-{% highlight razor tabtitle="RAZOR" %}
+{% highlight CSHTML %}
 
 <h2>Syncfusion Presentation Library (Essential Presentation)</h2>
 <p>The Syncfusion Blazor Presentation library (Essential Presentation) used to create, read, edit, and convert Presentation files in applications without Microsoft Office dependencies.</p>
@@ -1052,7 +1052,7 @@ Create a new `async` method named `CreatePowerPoint` and include the following c
 
 {% tabs %}
 
-{% highlight razor tabtitle="RAZOR" %}
+{% highlight c# tabtitle="C#" %}
 @functions {
     async void CreatePowerPoint()
     {
@@ -1127,7 +1127,7 @@ Add this function in the `index.html` file located in `wwwroot`.
 
 {% tabs %}
 
-{% highlight html tabtitle="HTML" %}
+{% highlight HTML %}
 
 <script type="text/javascript">
     function saveAsFile(filename, bytesBase64) {
@@ -1161,7 +1161,7 @@ Add the following code snippet to the Navigation menu's Razor file in the `Layou
 
 {% tabs %}
 
-{% highlight razor tabtitle="RAZOR" %}
+{% highlight HTML %}
 
  <div class="nav-item px-3">
     <NavLink class="nav-link" href="presentation">
@@ -1239,7 +1239,7 @@ Step 3: Create a Razor file named `Presentation.razor` in the `Pages` folder.
 Add the following namespaces in the file.
 
 {% tabs %}
-{% highlight razor tabtitle="RAZOR" %}
+{% highlight c# tabtitle="C#" %}
 @page "/Presentation"
 @using Syncfusion.Presentation
 @using Syncfusion.OfficeChart
@@ -1254,7 +1254,7 @@ Add the following code to create a new button that triggers the PowerPoint gener
 
 {% tabs %}
 
-{% highlight razor tabtitle="RAZOR" %}
+{% highlight CSHTML %}
 
 <h2>Syncfusion Presentation Library (Essential Presentation)</h2>
 <p>The Syncfusion Blazor Presentation library (Essential Presentation) used to create, read, edit, and convert Presentation files in applications without Microsoft Office dependencies.</p>
@@ -1270,7 +1270,7 @@ Create a new `async` method named `CreatePowerPoint` and include the following c
 
 {% tabs %}
 
-{% highlight razor tabtitle="RAZOR" %}
+{% highlight c# tabtitle="C#" %}
 @functions {
     async void CreatePowerPoint()
     {
@@ -1345,7 +1345,7 @@ Add this function in the `index.html` file located in `wwwroot`.
 
 {% tabs %}
 
-{% highlight html tabtitle="HTML" %}
+{% highlight HTML %}
 
 <script type="text/javascript">
     function saveAsFile(filename, bytesBase64) {
@@ -1379,7 +1379,7 @@ Add the following code snippet to the Navigation menu's Razor file in the `Layou
 
 {% tabs %}
 
-{% highlight razor tabtitle="RAZOR" %}
+{% highlight HTML %}
 
  <div class="nav-item px-3">
     <NavLink class="nav-link" href="presentation">
@@ -1412,6 +1412,6 @@ N> While the PowerPoint library works in WASM Standalone app, server-side deploy
 
 Kindly explore the [supported and unsupported features of PowerPoint library in Blazor](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/supported-and-unsupported-features).
 
-Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 
+Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
 
 An online sample link to [create a PowerPoint Presentation](https://document.syncfusion.com/demos/powerpoint/default#/tailwind) in ASP.NET Core.
