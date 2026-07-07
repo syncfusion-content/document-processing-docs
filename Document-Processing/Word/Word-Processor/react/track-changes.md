@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Track Change in React DOCX Editor
+# Track Changes in React DOCX Editor
 
 [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports Track Changes functionality, which allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject these modifications. It is a useful tool for managing changes made by several reviewers to the same document. When the Track Changes option is enabled, all editing operations are preserved as revisions in the Document Editor.
 
@@ -48,7 +48,7 @@ createRoot(document.getElementById('sample')).render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-N> Track changes are document level settings. When opening a document, if the document does not have track changes enabled, then enableTrackChanges will be disabled even if we set enableTrackChanges: true in the initial rendering. If you want to enable track changes for all the documents, then we recommend enabling track changes in documentChange event. 
+N> Track changes are document level settings. When opening a document, if the document does not have track changes enabled, `enableTrackChanges` is reset to `false` even if you set it to `true` initially. If you want to enable track changes for all the documents, then we recommend enabling track changes in the `documentChange` event. 
 
 The following example demonstrates how to enable track changes for the all the document while opening.
 
@@ -262,7 +262,7 @@ N> When the document is exported as SFDT, the customData value is stored in the 
 
 ## Restrict accept or reject by author
 
-Accepting or rejecting changes can be restricted based on the author’s name.
+Accepting or rejecting changes can be restricted based on the author’s name. The `beforeAcceptRejectChanges` event is triggered before both accept and reject actions, so the same handler can be used to restrict either operation.
 
 The following example demonstrates how to restrict an author from accept or reject changes.
 
