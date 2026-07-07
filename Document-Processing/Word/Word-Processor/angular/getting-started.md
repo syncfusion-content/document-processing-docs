@@ -47,7 +47,7 @@ ng new documenteditor-app
   Less            [ http://lesscss.org                                             ]
 ```
 
-In this guide, CSS is selected as the stylesheet format.
+This guide selects CSS as the stylesheet format.
 
 **Step 3:** During project setup, when prompted for the server-side rendering (SSR) option, choose the appropriate configuration.
 
@@ -181,7 +181,7 @@ N> If you don't require the above functionalities, you can deploy the component 
 
 For detailed information about server-side dependencies, refer to the [Web Services Overview](./web-services-overview) page.
 
-N> Looking for the full Angular Docx Editor component overview, features, pricing, and documentation? Visit the [Angular Docx Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) page.
+N> Looking for the full Angular DOCX Editor component overview, features, pricing, and documentation? Visit the [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) page.
 ## See also
 
 - [Open a document](./import)
