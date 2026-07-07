@@ -1,33 +1,48 @@
 ---
 layout: post
 title: Managing Cell Ranges in the Blazor Spreadsheet Component | Syncfusion
-description: Check out and learn to manage cell range features such as formatting, autofill, and clear options in the Syncfusion Blazor Spreadsheet component and more.
+description: Learn how to manage cell range features such as formatting, autofill, and clear options in the Syncfusion Blazor Spreadsheet component and more.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Managing Cell Ranges in Blazor Spreadsheet component
+# Managing Cell Ranges in the Blazor Spreadsheet Component
+
 A cell range is a set of selected cells in a Spreadsheet, typically specified using A1 notation (for example, `A1:B10`). A range may be a single cell or a contiguous block of cells that can be manipulated or processed collectively.
 
 ## Cell formatting
 
-To know more about cell formatting, refer [here](./formatting#text-and-cell-formatting).
+The Spreadsheet component supports a wide range of cell-formatting operations—including text styling (font family, size, color, and weight), cell fill, borders, alignment, number formats, and conditional formatting—that can be applied to a single cell, a selected range, or the entire worksheet. For more details, refer to the [Text and Cell Formatting](./formatting#text-and-cell-formatting) documentation.
 
 ## Autofill
 
-Autofill is used to fill cells with data that follows a pattern or is based on data in other cells. It helps avoid entering repetitive data manually. The [AllowAutofill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowAutofill) property can be used to enable or disable this feature.
+Autofill fills cells with data that follows a pattern or is based on data in other cells. It helps avoid entering repetitive data manually. The [AllowAutofill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowAutofill) property can be used to enable or disable this feature.
 
 * The default value of the [AllowAutofill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowAutofill) property is **true**.
 
+To enable or disable autofill declaratively, set the `AllowAutofill` property on the `SfSpreadsheet` component. For example:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Spreadsheet
+
+<SfSpreadsheet AllowAutofill="true" DataSource="DataSourceBytes">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+{% endhighlight %}
+{% endtabs %}
+
 Autofill can be performed in one of the following ways:
 
-*   Drag and drop the cell using the fill handle element.
+*   Select the source cell or range, then drag and drop the selection using the fill handle element to extend the values to adjacent cells.
 *   Use the [AutofillAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AutofillAsync_System_String_System_String_) method programmatically.
 
 ### Autofill options
 
-Autofill supports multiple behaviors that control how adjacent cells are populated when using the fill handle. The available options are:
+Autofill supports multiple behaviors that control how adjacent cells are populated when using the fill handle. After dragging the fill handle, the **AutoFillOptions** menu appears as a small popup near the destination cells. You can also right-click the destination range and choose **AutoFillOptions** to access the same options. The available behaviors are:
 
 - Copy Cells
 - Fill Series
@@ -48,13 +63,13 @@ Applies only the source styling—number format, font, fill color, borders, and 
 
 #### Fill Without Formatting
 
-Continues the detected series into the destination range but retains the destination’s existing formatting. After dragging the fill handle, choose **Fill Without Formatting** from the **AutoFillOptions** menu to apply only the new values while keeping the target style intact.
+Continues the detected series into the destination range but retains the destination's existing formatting. After dragging the fill handle, choose **Fill Without Formatting** from the **AutoFillOptions** menu to apply only the new values while keeping the target style intact.
 
 The following illustration demonstrates the use of autofill in the Spreadsheet component.
 
 ![Autofill Illustration](images/autofill.gif)
 
-The [AutofillAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AutofillAsync_System_String_System_String_) method accepts string parameters in A1 notation for `fillRange` and `dataRange`. The available parameters are:
+The [AutofillAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AutofillAsync_System_String_System_String_) method fills values from a source data range to a destination fill range. It accepts the fill range and source data range as A1 notation strings, and a direction value of "Up", "Right", "Down", or "Left" to indicate the fill direction. The available parameters are:
 
 | Parameter | Type | Description |
 | -- | -- | -- |
@@ -67,6 +82,7 @@ The [AutofillAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Sp
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
+@page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
 <button @onclick="AutofillRangeHandler">Autofill</button>
@@ -94,7 +110,7 @@ The [AutofillAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Sp
 {% endhighlight %}
 {% endtabs %}
 
-## Events
+## Autofill Events
 
 The Blazor Spreadsheet provides events that are triggered during autofill operations, such as [AutofillActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.AutofillActionBeginEventArgs.html) and [AutofillActionEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.AutofillActionEndEventArgs.html). These events enable the execution of custom actions before and after an autofill operation, allowing for validation, customization, and response handling.
 
@@ -110,16 +126,17 @@ This event is useful for scenarios where autofill behavior needs to be controlle
 
 The event uses the [AutofillActionBeginEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.AutofillActionBeginEventArgs.html) class, which includes the following properties:
 
-| Event Arguments | Description |
-|----------------|-------------|
-| FillRange (read-only) | The address of the target range for the autofill operation (e.g., "Sheet1!A2:A5"). |
-| DataRange (read-only) | The source data range for the autofill operation (e.g., "Sheet1!A1:A1"). |
-| Direction (read-only) | The direction of the autofill operation ("Down", "Right", "Up", or "Left"). |
-| Cancel | A boolean value to cancel the autofill operation. |
+| Event Arguments | Type | Description |
+|------------------|------|-------------|
+| FillRange (read-only) | string | The address of the target range for the autofill operation (e.g., "Sheet1!A2:A5"). |
+| DataRange (read-only) | string | The source data range for the autofill operation (e.g., "Sheet1!A1:A1"). |
+| Direction (read-only) | string | The direction of the autofill operation ("Down", "Right", "Up", or "Left"). |
+| Cancel | bool | A boolean value to cancel the autofill operation. |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
+@page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
 <SfSpreadsheet DataSource="DataSourceBytes" AutofillActionBegin="OnAutofillActionBegin">
@@ -160,21 +177,22 @@ The [AutofillActionEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 **Purpose**
 
-This event is useful for scenarios where `post-autofill` actions are needed, such as logging the autofill operation, updating related data, or triggering additional UI updates.
+This event is useful for scenarios where actions after the autofill are needed, such as logging the autofill operation, updating related data, or triggering additional UI updates.
 
 **Event Arguments**
 
 The event uses the [AutofillActionEndEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.AutofillActionEndEventArgs.html) class, which includes the following properties:
 
-| Event Arguments | Description |
-|----------------|-------------|
-| FillRange (read-only) | The address of the target range where the autofill was applied (e.g., "Sheet1!A2:A5"). |
-| DataRange (read-only) | The source data range used for the autofill operation (e.g., "Sheet1!A1:A1"). |
-| Direction (read-only) | The direction of the autofill operation ("Down", "Right", "Up", or "Left"). |
+| Event Arguments | Type | Description |
+|------------------|------|-------------|
+| FillRange (read-only) | string | The address of the target range where the autofill was applied (e.g., "Sheet1!A2:A5"). |
+| DataRange (read-only) | string | The source data range used for the autofill operation (e.g., "Sheet1!A1:A1"). |
+| Direction (read-only) | string | The direction of the autofill operation ("Down", "Right", "Up", or "Left"). |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
+@page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
 <SfSpreadsheet DataSource="DataSourceBytes" AutofillActionEnd="OnAutofillActionEnd">
@@ -202,13 +220,11 @@ The event uses the [AutofillActionEndEventArgs](https://help.syncfusion.com/cr/b
 
 ## Clear
 
-The clear functionality helps remove cell contents (formulas and data), formats (including number formats), and hyperlinks from a selected range.
+The Clear functionality removes cell contents (formulas and data), formats (including number formats), and hyperlinks from a selected range.
 
 ### Applying the clear functionality
 
-The clear support can be applied using the following way:
-
-You can apply the clear functionality by selecting the **Clear** icon in the **Ribbon** under the **Home** tab.
+To apply the Clear functionality, first select a cell or a range of cells in the worksheet, then choose the **Clear** icon in the **Ribbon** under the **Home** tab. The clear options are applied to the current selection.
 
 | Option | Use |
 | -- | -- |
@@ -220,3 +236,55 @@ You can apply the clear functionality by selecting the **Clear** icon in the **R
 The following image displays the clear options available in the Ribbon toolbar under the **Home** tab of the Blazor Spreadsheet.
 
 ![Clear options in the Blazor Spreadsheet](images/clear-feature.png)
+
+### Clear programmatically
+
+The [ClearAsync(ClearOperationType, string)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ClearAsync_Syncfusion_Blazor_Spreadsheet_ClearOperationType_System_String_) method asynchronously clears contents, formatting, hyperlinks, or all aspects of the specified range or current selection in the spreadsheet. It returns a Task that represents the asynchronous clear operation.
+
+The available parameters are:
+
+| Parameter | Type | Description |
+| -- | -- | -- |
+| options | Enum | Specifies the type of clear operation to perform. The available values are: `ClearContents`, `ClearFormats`, `ClearHyperlinks`, and `ClearAll`|
+| range | string | The A1-style range to clear |
+
+**Remarks**
+
+* The method parses the provided `range` and resolves the target worksheet and range before performing the clear operation.
+* If `range` is `null` or empty, the operation is applied to the current selection.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@page "/"
+@using Syncfusion.Blazor.Spreadsheet
+@using System.IO
+
+<SfButton OnClick="ClearHandler" Content="Clear Cells"></SfButton>
+
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+    public byte[] DataSourceBytes { get; set; }
+    public SfSpreadsheet SpreadsheetInstance { get; set; }
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    public async Task ClearHandler()
+    {
+        // Clears only contents from range A1:A10 on Sheet1.
+        await SpreadsheetInstance.ClearAsync(ClearOperationType.ClearContents, "Sample!A1:A10");
+
+        // Clears only formats from the current selection.
+        await SpreadsheetInstance.ClearAsync(ClearOperationType.ClearFormats);
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
