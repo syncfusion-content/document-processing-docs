@@ -163,7 +163,9 @@ namespace DocumentEditor
 
 ### Run the Application
 
-1. Press **F5** or click  **Debug > Start Debugging** in Visual Studio.
+N> Ensure you have registered the Syncfusion® license key in `App.xaml.cs` before running — see the [licensing note](#add-sfrichtextboxadv-dependencies) earlier on this page.
+
+1. Press **F5** or click **Debug > Start Debugging** in Visual Studio.
 2. The application launches and displays the **SfRichTextBoxAdv** control.
 3. Press **Ctrl+O** to open an existing document. The selected document will be displayed within the SfRichTextBoxAdv control, as shown below.
 
@@ -222,11 +224,9 @@ The following assembly references are required to use the **SfRichTextRibbon** c
 
 To use the **SfRichTextRibbon** control in a WPF application, the application must use **Syncfusion® RibbonWindow** instead of the default **Window**.
 
-1. Import the **Syncfusion® WPF schema** `http://schemas.syncfusion.com/wpf` in the **MainWindow.xaml** file.
+1. In **MainWindow.xaml**, rename the root element from `<Window>` to `<syncfusion:RibbonWindow>` and, if not already present, add the Syncfusion® WPF schema declaration `xmlns:syncfusion="http://schemas.syncfusion.com/wpf"` to the root element.
 
-2. Replace the root element **Window** with **syncfusion:RibbonWindow** in the **MainWindow.xaml** file.
-
-3. Additionally, in the *MainWindow.xaml.cs* file, change the base class of `MainWindow` from **Window** to **RibbonWindow** to enable full support for the **SfRichTextRibbon** control.
+2. In *MainWindow.xaml.cs*, change the base class of `MainWindow` from **Window** to **RibbonWindow** to enable full support for the **SfRichTextRibbon** control.
 
 ### Add SfRichTextRibbon to the application
 
@@ -350,7 +350,7 @@ N> Prefer using `SfRichTextRibbon` within `RibbonWindow` — the ribbon's **back
 
 ### Run the Application with Ribbon UI
 
-1. Press **F5** or click  **Debug > Start Debugging** in Visual Studio.
+1. Press **F5** or click **Debug > Start Debugging** in Visual Studio.
 2. The application will launch with the **SfRichTextRibbon** and **SfRichTextBoxAdv** controls.  
 3. Press **Ctrl + O** or use the **Open** option in the **SfRichTextRibbon** to open a document, which will be displayed in the **SfRichTextBoxAdv** control, with ribbon options available for editing and formatting, as shown below
 
@@ -413,14 +413,14 @@ The following assemblies are required to enable theme support:
 
 ### Available Themes
 
-Syncfusion includes multiple built-in themes (for example, Fluent, Material, and Windows 11 variants).
+Syncfusion provides multiple built-in themes that can be applied based on application requirements.
 
 In this section, the **Windows 11 Light** theme is used as an example to demonstrate how to apply a theme to the **SfRichTextBoxAdv** and **SfRichTextRibbon** controls.  
 
 To explore the complete list of available themes and learn how to create custom themes, refer to:
 
   * [Apply theme using SfSkinManager](https://help.syncfusion.com/wpf/themes/skin-manager)
-	
+
   * [Create a custom theme using ThemeStudio](https://help.syncfusion.com/wpf/themes/theme-studio#creating-custom-theme)
 
 ### Apply Themes to SfRichTextBoxAdv and SfRichTextRibbon
@@ -549,7 +549,7 @@ namespace DocumentEditor
 
 ### Run the Application with Theme Applied
 
-1. Press **F5** or click  **Debug > Start Debugging** in Visual Studio.
+1. Press **F5** or click **Debug > Start Debugging** in Visual Studio.
 2. The application will launch with the **SfRichTextRibbon** and **SfRichTextBoxAdv** controls using the **Windows 11 Light theme**.  
 3. Press **Ctrl + O** or use the **Open** option in the **SfRichTextRibbon** to open a document.
 4. The document is displayed in the editor, along with the themed ribbon and editor interface, as shown below.
