@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor Spreadsheet Component in WASM| Syncfusion
-description: Checkout and learn about getting started with Blazor Spreadsheet component in Blazor WebAssembly Application.
+title: Getting Started with Blazor Spreadsheet Component in WASM | Syncfusion
+description: Check out and learn about getting started with Blazor Spreadsheet component in Blazor WebAssembly Application.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
@@ -41,6 +41,8 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
+N> The `{{ site.releaseversion }}` placeholder is replaced with the latest Syncfusion release version at documentation build time. You can also specify a particular released version (for example, `32.1.19`).
+
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
@@ -48,6 +50,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+* [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension for Visual Studio Code.
 
 ## Create a new Blazor App in Visual Studio Code
 
@@ -70,7 +73,7 @@ cd BlazorApp
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
 * Ensure you’re in the project root directory where your `.csproj` file is located.
-* Run the following command to install a [Syncfusion.Blazor.Spreadsheet](https://www.nuget.org/packages/Syncfusion.Blazor.Spreadsheet) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package and ensure all dependencies are installed.
+* Run the following command to install the [Syncfusion.Blazor.Spreadsheet](https://www.nuget.org/packages/Syncfusion.Blazor.Spreadsheet) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages and ensure all dependencies are installed.
 
 {% tabs %}
 
@@ -84,13 +87,17 @@ dotnet restore
 
 {% endtabs %}
 
+N> After running `dotnet restore`, ensure there are no error messages in the terminal. If restore fails, verify your NuGet source (`https://api.nuget.org/v3/index.json`) is configured, clear the local cache with `dotnet nuget locals all --clear`, and retry.
+
+N> The `{{ site.releaseversion }}` placeholder is replaced with the latest Syncfusion release version at documentation build time. You can also specify a particular released version (for example, `32.1.19`).
+
 {% endtabcontent %}
 
 {% tabcontent .NET CLI %}
 
 ## Prerequisites
 
-Install the latest version of [.NET SDK](https://dotnet.microsoft.com/en-us/download). If the .NET SDK is already installed, determine the installed version by running the following command in a command prompt (Windows), terminal (macOS), or command shell (Linux).
+Install the latest version of [.NET SDK](https://dotnet.microsoft.com/en-us/download). If the .NET SDK is already installed, determine the installed version by running the following command in a command prompt (Windows), terminal (macOS), or command shell (Linux). Also, review the [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements).
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -119,7 +126,7 @@ After creating the Blazor WebAssembly App, install the required Syncfusion NuGet
 
 * Open a command prompt, terminal, or shell.
 * Ensure you’re in the project root directory where your `.csproj` file is located.
-* Run the following command to install a [Syncfusion.Blazor.Spreadsheet](https://www.nuget.org/packages/Syncfusion.Blazor.Spreadsheet) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package and ensure all dependencies are installed.
+* Run the following command to install the [Syncfusion.Blazor.Spreadsheet](https://www.nuget.org/packages/Syncfusion.Blazor.Spreadsheet) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages and ensure all dependencies are installed.
 
 {% tabs %}
 
@@ -133,13 +140,17 @@ dotnet restore
 
 {% endtabs %}
 
+N> After running `dotnet restore`, ensure there are no error messages in the terminal. If restore fails, verify your NuGet source (`https://api.nuget.org/v3/index.json`) is configured, clear the local cache with `dotnet nuget locals all --clear`, and retry.
+
+N> The `{{ site.releaseversion }}` placeholder is replaced with the latest Syncfusion release version at documentation build time. You can also specify a particular released version (for example, `32.1.19`).
+
 {% endtabcontent %}
 
 {% endtabcontents %}
 
 ## Add import namespaces
 
-After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Spreadsheet` namespaces.
+After the packages are installed, open the **_Imports.razor** file (typically located at the project root in a Blazor WebAssembly App) and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Spreadsheet` namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="_Imports.razor" %}
@@ -152,7 +163,7 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 
 ## Register Blazor Service
 
-Register the Syncfusion Blazor service in the **~/Program.cs** file of your Blazor WebAssembly App.
+Register the Syncfusion Blazor service in the **Program.cs** file of your Blazor WebAssembly App. Place the registration after the host builder is created and before `await builder.Build().RunAsync();`.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
@@ -161,16 +172,21 @@ Register the Syncfusion Blazor service in the **~/Program.cs** file of your Blaz
 using Syncfusion.Blazor;
 ....
 
-builder.Services.AddSyncfusionBlazor();
-
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
 ....
+builder.Services.AddSyncfusionBlazor();
+....
+
+await builder.Build().RunAsync();
 
 {% endhighlight %}
 {% endtabs %}
 
+N> `AddSyncfusionBlazor()` accepts optional configuration options such as enabling script isolation. See the [Blazor service registration](https://blazor.syncfusion.com/documentation/aspnet-core-blazor/getting-started-blazor-service-registration) topic for available configuration options.
+
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the `<head>` section of the **~/index.html** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the `<head>` section of the **index.html** file (or in the `<head>` of **App.razor** for .NET 8 Blazor WebAssembly App templates that use `App.razor` instead of `index.html`).
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -184,11 +200,11 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to explore supported ways (such as static assets, CDN, and CRG) to apply themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
+N> `bootstrap5.css` is one of the available built-in themes. To use a different theme, replace `bootstrap5` with the desired theme name (for example, `tailwind3`, `fluent2`, `material3`). See the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to explore supported ways (such as static assets, CDN, and CRG) to apply themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Blazor Spreadsheet component
+## Add the Blazor Spreadsheet component
 
-Add the Blazor Spreadsheet component in the **~/Pages/Home.razor** file.
+Add the Blazor Spreadsheet component in the **Pages/Home.razor** file. Save the file and rebuild the solution before running the app.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -202,6 +218,8 @@ Add the Blazor Spreadsheet component in the **~/Pages/Home.razor** file.
 
 {% endhighlight %}
 {% endtabs %}
+
+N> `SpreadsheetRibbon` is the optional ribbon toolbar child component of `SfSpreadsheet`. Omit it if you want to render the spreadsheet without the ribbon UI.
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Spreadsheet in your default web browser. The output will appear as follows:
 
@@ -217,9 +235,22 @@ N> [View Sample In GitHub.](https://github.com/SyncfusionExamples/Blazor-Getting
 
 N> Looking for the full Blazor Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) page
 
+## Register Syncfusion License Key
+
+Register the Syncfusion license key in your application startup to avoid a license warning at runtime. Add the following line in the **Program.cs** file of your Blazor WebAssembly App, after the `AddSyncfusionBlazor()` call:
+
+{% tabs %}
+{% highlight c# tabtitle="Program.cs" %}
+
+// Register Syncfusion license key
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Replace `YOUR_LICENSE_KEY` with your actual Syncfusion license key. For details on generating and registering a license key, see [Licensing](https://blazor.syncfusion.com/documentation/licensing/).
 
 ## See Also
 
-- [Getting started with the Blazor Spreadsheet in a Blazor Web app Server app](./getting-started-webapp)
+- [Getting started with the Blazor Spreadsheet in a Blazor Web App (Server)](./getting-started-webapp)
 - [Getting Started with .NET MAUI Blazor Hybrid App](./blazor-hybrid-maui-app)
-
