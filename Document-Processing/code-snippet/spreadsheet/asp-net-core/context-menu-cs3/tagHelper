@@ -1,0 +1,12 @@
+<ejs-spreadsheet id="spreadsheet" contextMenuBeforeOpen="onContextMenuBeforeOpen"></ejs-spreadsheet>
+
+<script>
+    function onContextMenuBeforeOpen(args) {
+        // Get the Spreadsheet instance
+        let spreadsheet = document.getElementById('spreadsheet').ej2_instances[0];
+        //To enable / disable context menu items.
+        if (spreadsheet && args.element.id === spreadsheet.element.id + '_contextmenu') {
+            spreadsheet.enableContextMenuItems(['Rename'], false, false); // Contextmenu Items that needs to be enabled / disabled, Set true / false to enable / disable the menu items, Set true if the given text is a unique id.
+        }
+    }
+</script>

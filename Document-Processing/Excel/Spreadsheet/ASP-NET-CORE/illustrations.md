@@ -10,22 +10,22 @@ documentation: ug
 
 # Illustrations in ASP.NET Core Spreadsheet control
 
-Illustrations helps you to insert a image, shapes and graphic objects in the Essential JS 2 spreadsheet.
+Illustrations allow you to insert images, shapes, and graphic objects into the Essential<sup style="font-size:70%">&reg;</sup> JS 2 Spreadsheet. This feature helps to enhance the visual presentation of your worksheet by embedding graphical elements alongside your data.
 
 ## Image
 
-Adding images to a spreadsheet can enhance the visual appeal and help convey information more clearly.
+Adding images to a spreadsheet can enhance the visual appeal and help to convey information more clearly.
 
-N> * The default value for [`allowImage`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowImage) property is `true`.
+>* The default value for the [`allowImage`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowImage) property is `true`.
 
 ### Insert Image
 
-You can insert the image by using one of the following ways,
+You can insert an image by using one of the following ways:
 
-* Selecting the Insert tab in the Ribbon toolbar, and then choose the Image tab.
-* Use the `insertImage()` method programmatically.
+* Select the **Insert** tab in the Ribbon toolbar, and then choose the **Image** option.  
+* Use the `insertImage` method programmatically.
 
-The available parameters in `insertImage()` method are,
+The available parameters in the `insertImage` method are,
 
 | Parameter | Type | Description |
 |-----|------|----|
@@ -34,21 +34,22 @@ The available parameters in `insertImage()` method are,
 
 The available arguments in `ImageModel` are:
 
-* src: Specifies the image source.
-* id: Specifies image element id.
-* height: Specifies the height of the image.
-* width: Specifies the width of the image.
-* top: Specifies the height of the image.
-* left: Specifies the width of the image.
-
-N> * In spreadsheet, you can add many types of image files, including IMAGE, JPG, PNG, GIF and JPEG files.
+| Property | Description |
+|----------|-------------|
+| [src](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Image.html#Syncfusion_EJ2_Spreadsheet_Image_Src) | Specifies the image source. |
+| [id](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Image.html#Syncfusion_EJ2_Spreadsheet_Image_Src) | Specifies the image element id. |
+| [height](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Image.html#Syncfusion_EJ2_Spreadsheet_Image_Height) | Specifies the height of the image. |
+| [width](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Image.html#Syncfusion_EJ2_Spreadsheet_Image_Width) | Specifies the width of the image. |
+| [top](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Image.html#Syncfusion_EJ2_Spreadsheet_Image_Top) | Specifies the top position of the image. |
+| [left](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Image.html#Syncfusion_EJ2_Spreadsheet_Image_Left) | Specifies the left side of the image. |
+>* In a spreadsheet, you can add many types of image files, including IMAGE, JPG, PNG, GIF, and JPEG formats.
 
 ### Delete Image
 
-* If you want to delete the image, just select the image firstly, and then press the Delete key.
-* Use the `deleteImage()` method programmatically.
+* To delete an image, select the image and press the **Delete** key.  
+* You can also use the `deleteImage` method programmatically.  
 
-The available parameters in `deleteImage()` method are,
+The available parameters in the `deleteImage` method are:
 
 | Parameter | Type | Description |
 |-----|------|----|
@@ -57,17 +58,17 @@ The available parameters in `deleteImage()` method are,
 
 ### Image Customization
 
-Image feature allows you to view and insert a image in a spreadsheet and you can change the height and width of the image by resizing and move it to another position.
+The image feature allows you to view and insert an image in a spreadsheet. You can customize the image by resizing it to change the height and width, and by moving it to another position within the worksheet.
 
 #### Height and Width
 
 * You can change the height and width of the image by resizing.
-* Use the `height` and `width` property in the `insertImage()` method programmatically.
+* Use the `height` and `width` property in the `insertImage` method programmatically.
 
 #### Top and Left
 
 * You can change the position of the image by drag and drop.
-* Use the `top` and `left` property in the `insertImage()` method programmatically.
+* Use the `top` and `left` property in the `insertImage` method programmatically.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -77,8 +78,6 @@ Image feature allows you to view and insert a image in a spreadsheet and you can
 {% include code-snippet/spreadsheet/asp-net-core/image/imageController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-
 
 ### Limitations of Image
 
@@ -91,27 +90,27 @@ The following features have some limitations in Image:
 
 A chart is a graphical representation of data, that organizes and represents a set of numerical or qualitative data. It mostly displays the selected range of data in terms of `x`-axis and `y`-axis. You can use the [`allowChart`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowChart) property to enable or disable the chart functionality.
 
-N> * The default value for the [`allowChart`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowChart) property is `true`.
+>* The default value for the [`allowChart`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowChart) property is `true`.
 
 ### Types of chart
 
 The following types of charts are available in the Spreadsheet.
 
-N>* Column Chart
-<br/>* Bar Chart
-<br/>* Area Chart
-<br/>* Line Chart
-<br/>* Pie Chart
-<br/>* Scatter Chart
+>* Column Chart
+>* Bar Chart
+>* Area Chart
+>* Line Chart
+>* Pie Chart
+>* Scatter Chart
 
 ### Insert Chart
 
-You can insert the chart by using one of the following ways,
+You can insert a chart by using one of the following ways,
 
-* Select the chart icon in the Ribbon toolbar under the Insert Tab.
-* Use the `insertChart()`method programmatically.
+* Select the chart icon in the Ribbon toolbar under the **Insert** tab.
+* Use the [`insertChart`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#insertchart) method programmatically.
 
-The available parameter in the `insertChart()` method is,
+The available parameter in the [`insertChart`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#insertchart) method is,
 
 | Parameter | Type | Description |
 |-----|------|----|
@@ -119,12 +118,21 @@ The available parameter in the `insertChart()` method is,
 
 The available arguments in the `ChartModel` are:
 
-* type: Specifies the type of chart.
-* theme: Specifies the theme of a chart.
-* isSeriesInRows: Specifies to switch the row or a column.
-* range: Specifies the selected range or specified range.
-* id: Specifies the chart element id.
-* markerSettings: Specifies the marker settings. The marker is used to provide information about the data points in the series and is currently only applicable to the line chart.
+| Property | Type | Description |
+|----------|------|-------------|
+| [id](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Chart.html#Syncfusion_EJ2_Spreadsheet_Chart_Id) | `string` | Specifies the chart element id. |
+| [type](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Chart.html#Syncfusion_EJ2_Spreadsheet_Chart_Type) | `ChartType` | Specifies the type of chart. |
+| [theme](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Chart.html#Syncfusion_EJ2_Spreadsheet_Chart_Theme) | `ChartTheme` | Specifies the theme of the chart. |
+| [range](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Chart.html#Syncfusion_EJ2_Spreadsheet_Chart_Range) | `string` | Specifies the selected or specified data range for the chart. |
+| [isSeriesInRows](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Chart.html#Syncfusion_EJ2_Spreadsheet_Chart_IsSeriesInRows) | `boolean` | Specifies whether series are organized in rows (true) or columns (false). |
+| [title](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Chart.html#Syncfusion_EJ2_Spreadsheet_Chart_Title) | `string` | Specifies the title of the chart. |
+| [width](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Chart.html#Syncfusion_EJ2_Spreadsheet_Chart_Width) | `number` | Specifies the width of the chart. |
+| [height](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Chart.html#Syncfusion_EJ2_Spreadsheet_Chart_Height) | `number` | Specifies the height of the chart. |
+| [dataLabelSettings](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Chart.html#Syncfusion_EJ2_Spreadsheet_Chart_DataLabelSettings) | `DataLabelSettingsModel` | Specifies the data label settings for the series. |
+| [markerSettings](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Chart.html#Syncfusion_EJ2_Spreadsheet_Chart_MarkerSettings) | `MarkerSettingsModel` | Specifies the marker settings for the series (applicable to line charts). |
+| [legendSettings](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Chart.html#Syncfusion_EJ2_Spreadsheet_Chart_LegendSettings) | `LegendSettingsModel` | Specifies options for customizing the chart legend. |
+| [primaryXAxis](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Chart.html#Syncfusion_EJ2_Spreadsheet_Chart_PrimaryXAxis) | `AxisModel` | Specifies options to configure the horizontal axis. |
+| [primaryYAxis](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Chart.html#Syncfusion_EJ2_Spreadsheet_Chart_PrimaryYAxis) | `AxisModel` | Specifies options to configure the vertical axis. |
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -137,10 +145,10 @@ The available arguments in the `ChartModel` are:
 
 ### Delete Chart
 
-* If you want to delete the chart, just select the chart, and then press the Delete key.
-* Use the `deleteChart()`method programmatically.
+* To delete a chart, simply select the chart and press the **Delete** key.
+* You can also use the [`deleteChart`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#deletechart) method programmatically.
 
-The available parameter in the `deleteChart()` method is,
+The available parameter in the [`deleteChart`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#deletechart) method is,
 
 | Parameter | Type | Description |
 |-----|------|----|
@@ -148,11 +156,13 @@ The available parameter in the `deleteChart()` method is,
 
 ### Chart Customization
 
-Chart feature allows you to view and insert a chart in a spreadsheet, and you can change the height and width of the chart by resizing and moving it to another position.
+The chart feature allows you to insert and manage charts in a spreadsheet with flexible customization options. You can adjust both the size and position of charts to better fit your worksheet layout:
 
-* You can change the height and width of the chart by resizing.
+* **Resize** – Change the height and width of the chart by dragging its edges or corners.  
+* **Reposition** – Move the chart to a different location in the worksheet using drag-and-drop.  
 
-* You can change the position of the chart by drag and drop.
+These customization options make it easy to organize charts alongside your data for clearer visualization and presentation.
+
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -164,8 +174,14 @@ Chart feature allows you to view and insert a chart in a spreadsheet, and you ca
 {% endtabs %}
 
 #### Customization of line chart markers
+You can customize line chart markers to improve their appearance and readability. By using the [`actionBegin`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_ActionBegin) event, you can modify properties such as:
 
-Using the [`actionBegin`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_ActionBegin) event, you can change the shape, size, fill color, and border of the line chart marker. In the following example, you can see the modified marker appearance, such as shape and size, while creating the line chart with UI interaction.
+* **Shape** – Change the marker shape (e.g., circle, square, diamond).  
+* **Size** – Adjust the marker size for better visibility.  
+* **Fill Color** – Apply a custom fill color to highlight data points.  
+* **Border** – Customize the border style and color for distinction.  
+
+In the following example, the marker appearance (shape and size) is modified while creating the line chart through UI interaction, demonstrating how flexible customization can enhance chart visualization.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -183,6 +199,10 @@ The following features have some limitations in the Chart:
 * Insert row/delete row between the chart data source will not reflect the chart.
 * Copy/paste into the chart data source will not reflect the chart.
 * Corner resizing option in chart element.
+
+## Note
+
+You can refer to our [ASP.NET Core Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-core-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [ASP.NET Core Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-core-spreadsheet-editor) to knows how to present and manipulate data.
 
 ## See Also
 

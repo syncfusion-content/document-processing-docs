@@ -1,0 +1,69 @@
+<div style="padding: 12px;">
+    <ejs-spreadsheet id="spreadsheet" created="handleCreated" showFormulaBar="false" showSheetTabs="false" allowInsert="true" allowDelete="true" allowMerge="true">
+        <e-spreadsheet-sheets>
+            <e-spreadsheet-sheet>
+                <e-spreadsheet-columns>
+                    <e-spreadsheet-column width="120"></e-spreadsheet-column>
+                    <e-spreadsheet-column width="140"></e-spreadsheet-column>
+                    <e-spreadsheet-column width="140"></e-spreadsheet-column>
+                    <e-spreadsheet-column width="160"></e-spreadsheet-column>
+                </e-spreadsheet-columns>
+            </e-spreadsheet-sheet>
+        </e-spreadsheet-sheets>
+    </ejs-spreadsheet>
+</div>
+
+<script>
+    var spreadsheet;
+    var CUSTOM_IDS = {
+        quickNote: 'custom_quick_note',
+        highlight: 'custom_highlight',
+        clear: 'custom_clear',
+    };
+
+    function onQuickNote() {
+        if (!spreadsheet) return;
+        var sheet = spreadsheet.getActiveSheet();
+        var range = sheet.selectedRange || sheet.activeCell || 'A1';
+        spreadsheet.updateCell({ notes: { text: 'Note' } }, range);
+    }
+
+    function onHighlight() {
+        if (!spreadsheet) return;
+        var sheet = spreadsheet.getActiveSheet();
+        var range = sheet.selectedRange || sheet.activeCell || 'A1';
+        spreadsheet.cellFormat({ backgroundColor: '#FFF9C4', color: '#5D4037' }, range);
+    }
+
+    function onClear() {
+        if (!spreadsheet) return;
+        var sheet = spreadsheet.getActiveSheet();
+        var range = sheet.selectedRange || sheet.activeCell || 'A1';
+        spreadsheet.clear({ type: 'Clear All', range });
+    }
+
+    function handleCreated() {
+        spreadsheet = document.getElementById('spreadsheet').ej2_instances[0];
+        if (!spreadsheet) return;
+        spreadsheet.addToolbarItems('Home', [
+            {
+                id: CUSTOM_IDS.quickNote,
+                text: 'Quick Note',
+                tooltipText: 'Insert a short note in the current selection',
+                click: onQuickNote,
+            },
+            {
+                id: CUSTOM_IDS.highlight,
+                text: 'Highlight',
+                tooltipText: 'Highlight the current selection',
+                click: onHighlight,
+            },
+            {
+                id: CUSTOM_IDS.clear,
+                text: 'Clear',
+                tooltipText: 'Clear contents of the current selection',
+                click: onClear,
+            },
+        ]);
+    }
+</script>

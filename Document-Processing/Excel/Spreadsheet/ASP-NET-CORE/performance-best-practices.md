@@ -19,7 +19,7 @@ Virtual scrolling is an essential performance feature in the Spreadsheet that en
 
 This approach significantly reduces initial load time, DOM size, and memory usage — resulting in smoother rendering and interaction, especially when working with thousands of rows or columns.
 
-For more details, refer to the [virtual scrolling documentation](https://ej2.syncfusion.com/aspnetcore/documentation/spreadsheet/scrolling#virtual-scrolling).
+For more details, refer to the [virtual scrolling documentation](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/scrolling#virtual-scrolling).
 
 ### Chunk response processing
 
@@ -28,20 +28,20 @@ When opening large Excel files with extensive data and features, server response
 These chunks are combined on the client side to load the Excel data smoothly into the Spreadsheet. This approach avoids transmission failures due to memory constraints and ensures reliable and efficient loading of large files.
 
 To enable the chunk response processing feature, you can refer to the following UG section:
-* [Chunk Response Processing](https://ej2.syncfusion.com/aspnetcore/documentation/spreadsheet/open-save#chunk-response-processing)
+* [Chunk Response Processing](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/open-save#chunk-response-processing)
 
 ### Configure JSON serialization options during open
 
-Serialization options in the Spreadsheet allows you to exclude specific features—such as styles, formats, charts, images, wrap, etc.—from the `Workbook JSON object` when opening it in the Spreadsheet using the `openFromJson` method. By skipping unnecessary features, you can significantly improve performance, especially when working with large or complex workbooks.
+Serialization options in the Spreadsheet allow you to exclude specific features—such as styles, formats, charts, images, wrap, etc.—from the `Workbook JSON object` when opening it in the Spreadsheet using the [`openFromJson`](https://helpej2.syncfusion.com/javascript/documentation/api/spreadsheet/#openfromjson) method. By skipping unnecessary features, you can significantly improve performance, especially when working with large or complex workbooks.
 
 This is particularly useful when:
 * You need only the raw data without formatting.
-* You're opening the `Workbook JSON object` in the Spreadsheet using the `openFromJson` method.
+* You're opening the `Workbook JSON object` in the Spreadsheet using the [`openFromJson`](https://helpej2.syncfusion.com/javascript/documentation/api/spreadsheet/#openfromjson) method.
 * You want to minimize the size of the JSON payload and optimize processing speed.
 
 Refer to the following UG section to learn how to configure these options:
 
-* [Configure JSON serialization options during open](https://ej2.syncfusion.com/aspnetcore/documentation/spreadsheet/open-save#configure-json-deserialization-options)
+* [Configure JSON serialization options during open](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/open-save#configure-json-deserialization-options)
 
 ### Configuring threshold limits
 
@@ -80,7 +80,7 @@ public IActionResult Open(IFormCollection openRequest)
 To improve performance when opening large Excel files, use parsing options like `IgnoreStyle` and `IgnoreFormat` to skip unnecessary styles and formats. This reduces memory usage, speeds up loading, and minimizes JSON size—especially helpful for files with many styled but empty cells.
 
 To learn how to configure these parsing options, please refer to the UG section below.
-* [Configure Parsing Options](./open-save#improving-excel-file-open-performance-with-parsing-options)
+* [Configure Parsing Options](./open-excel-files#optimize-open-performance-with-parsing-options)
 
 ## How to improve performance on formula calculation in Spreadsheet?
 
@@ -96,7 +96,7 @@ Enabling manual mode is highly beneficial when:
 * Applying formulas dynamically to a large number of cells.
 * You want to postpone calculations until all content or changes are finalized.
 
-To learn more about Manual Calculation Mode and how to enable it, you can refer to the following [UG link](https://ej2.syncfusion.com/aspnetcore/documentation/spreadsheet/formulas#manual-mode).
+To learn more about Manual Calculation Mode and how to enable it, you can refer to the following [UG link](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/formulas#manual-mode).
 
 ## How to improve save performance in the Spreadsheet?
 
@@ -104,7 +104,7 @@ To learn more about Manual Calculation Mode and how to enable it, you can refer 
 
 When saving large Excel files with extensive data and features using **File → Save As** or the **save** method, the Spreadsheet triggers a server API call through a form submit operation. This can lead to performance issues such as timeouts or delays, particularly due to the size and complexity of the workbook.
 
-To mitigate these issues during the save operation, you can set the `isFullPost` property to **false** in the [`beforeSave`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_BeforeSave) event of the Spreadsheet.
+To mitigate these issues during the save operation, you can set the [`isFullPost`](https://helpej2.syncfusion.com/javascript/documentation/api/spreadsheet/beforeSaveEventArgs/#isfullpost) property to **false** in the [`beforeSave`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_BeforeSave) event of the Spreadsheet.
 
 The following code example shows how to set `isFullPost` to **false** in the Spreadsheet component:
 
@@ -125,18 +125,20 @@ The following code example shows how to set `isFullPost` to **false** in the Spr
 
 ### Configure JSON serialization options during save
 
-Serialization options in the Spreadsheet allows you to exclude specific features such as styles, formats, charts, images, wrap, etc. from the `Workbook JSON object` when saving it using the `saveAsJson` method in the Spreadsheet. By skipping unnecessary features, you can significantly improve performance, especially when working with large or complex workbooks.
+Serialization options in the Spreadsheet allow you to exclude specific features such as styles, formats, charts, images, wrap, etc. from the `Workbook JSON object` when saving it using the [`saveAsJson`](https://helpej2.syncfusion.com/javascript
+/documentation/api/spreadsheet/#saveasjson) method in the Spreadsheet. By skipping unnecessary features, you can significantly improve performance, especially when working with large or complex workbooks.
 
 This is particularly useful when:
 * You need only the raw data without formatting.
-* You're saving the `Workbook JSON object` using the `saveAsJson` method in the Spreadsheet.
+* You're saving the `Workbook JSON object` using the [`saveAsJson`](https://helpej2.syncfusion.com/javascript
+/documentation/api/spreadsheet/#saveasjson) method in the Spreadsheet.
 * You want to minimize the size of the JSON payload and optimize processing speed.
 
 Proper use of serialization options during save improves performance and reduces the time taken during the save process.
 
 Refer to the following UG section to learn how to configure these options:
 
-* [Configure JSON serialization options during save](https://ej2.syncfusion.com/aspnetcore/documentation/spreadsheet/open-save#configure-json-serialization-options)
+* [Configure JSON serialization options during save](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/open-save#configure-json-serialization-options)
 
 ## How to improve cell selection performance in Spreadsheet?
 
@@ -164,6 +166,6 @@ You can disable aggregate calculation using the following code example:
 
 ## See Also
 
-* [Open and Save](https://ej2.syncfusion.com/aspnetcore/documentation/spreadsheet/open-save)
-* [Docker Deployment](https://ej2.syncfusion.com/aspnetcore/documentation/spreadsheet/docker-deployment)
-* [Scrolling](https://ej2.syncfusion.com/aspnetcore/documentation/spreadsheet/scrolling)
+* [Open and Save](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/open-save)
+* [Docker Deployment](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/docker-deployment)
+* [Scrolling](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/scrolling)

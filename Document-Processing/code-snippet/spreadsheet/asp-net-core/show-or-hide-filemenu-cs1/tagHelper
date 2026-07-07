@@ -1,0 +1,36 @@
+
+<div style="padding: 12px">
+    <div style="display: flex; gap: 8px; margin-bottom: 12px;">
+        <button class="e-btn e-primary" onclick="handleShow()">Show</button>
+        <button class="e-btn e-primary" onclick="handleHide()">Hide</button>
+    </div>
+
+    <ejs-spreadsheet id="spreadsheet" fileMenuBeforeOpen="handleFileMenuBeforeOpen" openUrl="https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open" saveUrl="https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save"></ejs-spreadsheet>
+</div>
+
+<script>
+    // Toggle this to control visibility
+    let hideItems = true;
+
+    // File menu items are created dynamically; update visibility here
+    function handleFileMenuBeforeOpen() {
+        // Get the Spreadsheet instance
+        const spreadsheet = document.getElementById('spreadsheet').ej2_instances[0];
+        if (!spreadsheet) return;
+
+        if (hideItems) {
+            spreadsheet.hideFileMenuItems(['Open', 'Save As']);
+        } else {
+            // Show again (second arg: false)
+            spreadsheet.hideFileMenuItems(['Open', 'Save As'], false);
+        }
+    }
+
+    function handleShow() {
+        hideItems = false;
+    }
+
+    function handleHide() {
+        hideItems = true;
+    }
+</script>
