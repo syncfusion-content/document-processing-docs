@@ -28,15 +28,13 @@ import * as React from 'react';
 import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-react-documenteditor';
 
 DocumentEditorContainerComponent.Inject(Toolbar);
-let documenteditor;
+let documenteditor = useRef<DocumentEditorContainerComponent>(null);
 function App() {
     return (
         <DocumentEditorContainerComponent
             id="container"
             height="590px"
-            ref={(scope) => {
-                documenteditor = scope;
-            }}
+            ref={documenteditor}
             // Use the following service URL only for demo purposes
             serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
             enableToolbar={true}
@@ -89,8 +87,10 @@ function App() {
     let container = null;
 
     React.useEffect(() => {
-        container.documentEditor.showRevisions = true; // To show revisions pane
-        container.documentEditor.showRevisions = false; // To hide revisions pane
+        if (container) {
+            container.documentEditor.showRevisions = true; // To show revisions pane
+            container.documentEditor.showRevisions = false; // To hide revisions pane
+        }
     }, [container]); // Re-run the effect when the container is initialized
 
     return (
@@ -180,11 +180,15 @@ let revisions: RevisionCollection = documentEditor.revisions;
 /**
  * Accept specific changes
  */
-revisions.get(0).accept();
+if (revisions.length > 0) {
+    revisions.get(0).accept();
+}
 /**
  * Reject specific changes
  */
-revisions.get(1).reject();
+if (revisions.length > 1) {
+    revisions.get(1).reject();
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -219,7 +223,7 @@ The following example illustrates how to enable and update custom metadata for t
 {% tabs %}
 {% highlight ts tabtitle="TS" %}
 
-import * as ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import * as React from 'react';
 import {
     DocumentEditorContainerComponent,
@@ -237,14 +241,15 @@ function App() {
                 container = scope;
             }}
             height={'590px'}
-            serviceUrl="HostUrl"
+            // Use the following service URL only for demo purposes
+            serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
             enableTrackChanges={true}
             documentEditorSettings={settings}
         />
     );
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
+createRoot(document.getElementById('sample')).render(<App />);
 
 {% endhighlight %}
 {% endtabs %}
@@ -266,13 +271,14 @@ The following example demonstrates how to restrict an author from accept or reje
 
 import { createRoot } from 'react-dom/client';
 import * as React from 'react';
+import { useRef } from 'react';
 import {
     DocumentEditorContainerComponent,
     Toolbar,
 } from '@syncfusion/ej2-react-documenteditor';
 DocumentEditorContainerComponent.Inject(Toolbar);
 function App() {
-    let container = DocumentEditorContainerComponent;
+    const container = useRef<DocumentEditorContainerComponent>(null);
     // Event gets triggered before accepting/rejecting changes
     const beforeAcceptRejectChanges = (args) => {
         // Check the author of the revision
@@ -285,9 +291,7 @@ function App() {
         <div>
             <DocumentEditorContainerComponent
                 id="container"
-                ref={(scope) => {
-                    container = scope;
-                }}
+                ref={container}
                 height={'590px'}
                 serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
                 enableToolbar={true}
