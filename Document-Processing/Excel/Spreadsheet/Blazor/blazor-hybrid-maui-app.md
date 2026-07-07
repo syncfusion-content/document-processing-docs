@@ -108,8 +108,6 @@ The theme stylesheet can be accessed from NuGet through [Static Web Assets](http
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to explore supported ways (such as static assets, CDN, and CRG) to apply themes in your Blazor application.
-
 ## Add script resource
 
 The Spreadsheet Editor script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the script at the end of the `<body>` in the **wwwroot/index.html** file to enable component functionality.
@@ -124,7 +122,7 @@ The Spreadsheet Editor script can be accessed from NuGet through [Static Web Ass
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
+N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to explore supported ways (such as static assets, CDN, and CRG) to apply themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
 ## Add Blazor Spreadsheet component
 
@@ -149,7 +147,7 @@ N> .NET MAUI Blazor Hybrid apps run components natively on the device; no intera
 
 ## Run on Windows
 
-In the Visual Studio toolbar, click the **Windows Machine** button to build and run the app. Ensure the run profile is set to `Windows Machine` and that the target framework matches your installed .NET MAUI workload (for example, `net8.0-windows10.0.19041.0`) before starting the app.
+In the Visual Studio toolbar, click the **Windows Machine** to build and run the app. Ensure the run profile is set to `Windows Machine` before starting the app.
 
 ![Maui Tool](images/maui-build.png)
 

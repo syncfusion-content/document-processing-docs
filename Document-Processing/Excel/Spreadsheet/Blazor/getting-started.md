@@ -48,7 +48,6 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-* [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension for Visual Studio Code.
 
 ## Create a new Blazor App in Visual Studio Code
 
@@ -162,7 +161,6 @@ Register the Syncfusion Blazor service in the **Program.cs** file of your Blazor
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
 
-
 using Syncfusion.Blazor;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
@@ -194,7 +192,7 @@ N> Replace `YOUR_LICENSE_KEY` with your actual Syncfusion license key. For detai
 
 ## Add stylesheet resource
 
-The theme stylesheet can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the `<head>` section of the **index.html** file (or in the `<head>` of **App.razor** for .NET 8 Blazor WebAssembly App templates that use `App.razor` instead of `index.html`) to apply proper layout and theme styling.
+The theme stylesheet can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the `<head>` section of the **index.html** file.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -207,11 +205,9 @@ The theme stylesheet can be accessed from NuGet through [Static Web Assets](http
 {% endhighlight %}
 {% endtabs %}
 
-N> `bootstrap5.css` is one of the available built-in themes. To use a different theme, replace `bootstrap5` with the desired theme name (for example, `tailwind3`, `fluent2`, `material3`). See the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to explore supported ways (such as static assets, CDN, and CRG) to apply themes in your Blazor application.
-
 ## Add script resource
 
-The Spreadsheet Editor script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the script reference in the `<head>` section of the **index.html** file (or in the `<head>` of **App.razor** for .NET 8 Blazor WebAssembly App templates that use `App.razor` instead of `index.html`) to enable component functionality.
+The Spreadsheet Editor script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the script reference in the `<head>` section of the **index.html** file.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -224,11 +220,11 @@ The Spreadsheet Editor script can be accessed from NuGet through [Static Web Ass
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
+N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to explore supported ways (such as static assets, CDN, and CRG) to apply themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
 ## Add the Blazor Spreadsheet component
 
-Add the Blazor Spreadsheet component in the **Pages/Home.razor** file. Save the file and rebuild the solution before running the app.
+Add the Blazor Spreadsheet component in the **Pages/Home.razor** file.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}

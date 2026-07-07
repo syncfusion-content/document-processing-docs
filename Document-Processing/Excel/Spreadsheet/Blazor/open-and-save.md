@@ -83,7 +83,7 @@ An Excel file encoded as a Base64 string can be loaded into the Spreadsheet comp
 
 The Blazor Spreadsheet component accepts data only as a byte array through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DataSource) property. To load JSON data into the Spreadsheet, convert the JSON data into an Excel file format using [XlsIO](https://help.syncfusion.com/file-formats/xlsio/overview), then convert it to a byte array. This approach allows importing JSON data from a local file or a remote URL.
 
-N> To run the following examples, install the [Syncfusion.XlsIO.Net](https://www.nuget.org/packages/Syncfusion.XlsIO.Net) NuGet package in your project to access the XlsIO APIs used for converting JSON data to Excel format.
+N> To run the following examples, install the [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.core) NuGet package in your project to access the XlsIO APIs used for converting JSON data to Excel format.
 
 #### Load an Excel file from a local JSON file
 
@@ -695,7 +695,7 @@ The [BeforeSaveEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 | Property | Type | Description |
 |---|---|---|
 | `SaveType` | Enum | Gets the export format specified in the [SaveOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SaveOptions.html) during the save operation. Use this to apply conditional logic (for example, only configure PDF layout when `SaveType.Pdf` is detected). |
-| `PdfLayoutSettings` | [PdfLayoutSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.PdfLayoutSettings.html) | Gets or sets the PDF layout configuration (page orientation and scaling behavior). Assign a `PdfLayoutSettings` instance to apply custom layout before the PDF is generated. |
+| `PdfLayoutSettings` | Class | Gets or sets the PDF layout configuration (page orientation and scaling behavior). Assign a `PdfLayoutSettings` instance to apply custom layout before the PDF is generated. |
 
 **Layout Configuration Guide:**
 
