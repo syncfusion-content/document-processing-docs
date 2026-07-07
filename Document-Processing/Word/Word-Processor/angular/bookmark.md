@@ -48,7 +48,7 @@ this.container.documentEditor.editor.deleteBookmark("Bookmark1");
 You can get all the bookmarks in the document using [`getBookmarks`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#getbookmarks) method as shown in the following code snippet.
 
 ```typescript
-this.container.documentEditor.selection.getBookmarks(false);
+this.container.documentEditor.getBookmarks(false);
 ```
 
 >Note: Parameter denotes is include hidden bookmarks. If false, ignore hidden bookmark.
@@ -77,7 +77,7 @@ this.container.documentEditor.selection.selectBookmark("Bookmark1");
 this.container.documentEditor.editor.insertText('Hello World');
 ```
 
-## Show or Hide bookmark
+## Show or Hide bookmark markers
 
 You can show or hide the show square brackets around bookmarked items in Document editor component.
 
