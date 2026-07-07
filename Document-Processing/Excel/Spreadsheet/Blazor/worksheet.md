@@ -183,7 +183,7 @@ Each entry in the returned dictionary maps a cell address to a `CellData` object
 | DisplayText | string | The value formatted as text, suitable for display. |
 | NumberFormat | string | The number format string applied to the cell (for example, `0.00%` or `m/d/yyyy`). |
 | Hyperlink | string | The hyperlink configured on the cell, or null if no hyperlink is set. |
-| Wraptext | bool | Indicates whether text wrapping is enabled for the cell. |
+| WrapText | bool | Indicates whether text wrapping is enabled for the cell. |
 | isLocked | bool | Indicates whether the cell is locked when sheet protection is enabled. |
 | Style | object | The calculated cell style, including font, fill, border, and alignment information for the cell. |
 
@@ -351,7 +351,7 @@ Hiding sheets in the Spreadsheet component prevents unauthorized access or accid
 
 * Hidden sheets can still be referenced in formulas and calculations.
 
-* Access the sheet selection menu to view all sheets, including hidden ones. Hidden sheets appear in a greyed-out, disabled state within the sheet selection menu to clearly indicate that they are hidden.
+* Access the sheet selection menu to view all sheets, including hidden ones. Hidden sheets appear in a dimmed, disabled state within the sheet selection menu, clearly indicating that they are hidden.
 
 ![Hide sheet option](images/hide-sheet-option.png)
 
