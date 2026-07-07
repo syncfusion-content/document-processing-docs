@@ -24,7 +24,7 @@ Before getting started with the Next.js application, ensure the following prereq
 
 ### Create a Next.js application
 
-**Step 1:** To create a new `Next.js` application, use one of the commands that are specific to either NPM or Yarn.
+**Step 1:** To create a new `Next.js` application, use one of the commands that are specific to either NPM or Yarn. For more information, see the [Next.js official getting-started guide](https://nextjs.org/docs/app/getting-started/installation).
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -41,7 +41,7 @@ yarn create next-app
 
 Using one of the above commands will prompt you to configure additional settings for the project:
 
-**Step 2:** Specify the name of the project directly. In this example, the project is named `ej2-next js-documenteditor`:
+**Step 2:** Enter the project name when prompted. In this example, the project is named `ej2-nextjs-documenteditor`:
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -78,7 +78,7 @@ The application is ready to run with default settings. The next steps will add t
 
 ### Install Document Editor packages
 
-The Document Editor package is available at [npmjs.com](https://www.npmjs.com/package/@syncfusion/ej2-react-documenteditor).
+The Document Editor package is available on [npmjs.com](https://www.npmjs.com/package/@syncfusion/ej2-react-documenteditor).
 
 To install the Document Editor component, use the following command:
 
@@ -115,7 +115,7 @@ Add the Document Editor component and its dependent component styles available i
 {% endhighlight %}
 {% endtabs %}
 
-N> To learn more about built-in themes and CSS reference for individual components, refer to the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) section.
+N> Next.js supports `@import` of `node_modules` paths via PostCSS, so no additional bundler configuration is required. To learn more about built-in themes and CSS reference for individual components, refer to the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) section.
 
 
 ### Add the Document Editor component
@@ -147,6 +147,8 @@ export default function Home() {
 {% endtabs %}
 
 N> The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
+
+N> The `use client` directive is required at the top of this file because the Document Editor is a fully client-side component that relies on browser-only APIs (DOM, clipboard, etc.). Without it, Next.js will try to render the component on the server and fail.
 
 ### Run the application
 

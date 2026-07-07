@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with React DOCX Editor component | Syncfusion
-description: Learn how to create a DOCX Editor in a React application using the Syncfusion® Document Editor control to create, edit, and view Word documents.
+description: Learn how to create a DOCX Editor using React with the Syncfusion® Document Editor control to create, edit, and view Word documents.
 control: Getting started 
 platform: document-processing
 documentation: ug
@@ -61,6 +61,8 @@ Add the Document Editor component and its dependent component styles available i
 
 {% endhighlight %}
 {% endtabs %}
+
+N> Vite supports `@import` of `node_modules` paths natively, so no additional CSS preprocessor configuration is required. Ensure that `src/index.css` is imported from your entry file `src/main.tsx` so the component styles are included in the build output. The default Vite template already includes this import.
 
 ### Add the Document Editor component
 
@@ -153,6 +155,8 @@ Add the Document Editor component and its dependent component styles available i
 {% endhighlight %}
 {% endtabs %}
 
+N> Vite supports `@import` of `node_modules` paths natively, so no additional CSS preprocessor configuration is required. Ensure that `src/index.css` is imported from your entry file `src/main.jsx` so the component styles are included in the build output. The default Vite template already includes this import.
+
 ### Add the Document Editor component
 
 Add the Document Editor component to your application. In the `src/App.jsx` file, add the following code to initialize the component:
@@ -184,7 +188,7 @@ export default App;
 
 N> The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
 
-### Run the  application
+### Run the application
 
 Run the application using the following command:
 
@@ -197,7 +201,7 @@ npm run dev
 
 After the application starts, open the localhost URL shown in the terminal. The React Document Editor is rendered in the browser with a toolbar and an editable document area, as shown below.
 
-![Output of React Document Editor](./images/react_getting_started.png)
+![React Document Editor with toolbar and an empty editable area](./images/react_getting_started.png)
 
 You can also explore the Document Editor interactively using the live sample below.
         
@@ -235,4 +239,4 @@ N> Looking for the full React DOCX Editor component overview, features, pricing,
 
 - [Open a document](./import)
 - [Save a document](./export)
-- [Collaborative Editing](./collaborative-editing/overview)
+- [Collaborative editing](./collaborative-editing/overview)
