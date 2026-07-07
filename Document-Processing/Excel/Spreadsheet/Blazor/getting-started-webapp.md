@@ -7,7 +7,7 @@ control: Spreadsheet
 documentation: ug
 ---
 
-# Getting Started with the Blazor Spreadsheet in Web App
+# Getting Started with the Blazor Spreadsheet in Blazor Web App
 
 This section briefly explains how to include the [Blazor Spreadsheet Editor](https://www.syncfusion.com/blazor-components/blazor-spreadsheet) component in a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -27,7 +27,7 @@ N> Configure the appropriate [Interactive render mode](https://learn.microsoft.c
 
 ## Install Blazor Spreadsheet NuGet Packages
 
-If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Blazor components NuGet packages within the client project.
+If you utilize `WebAssembly` or `Auto` render modes in the Blazor Web App, you need to install the Blazor components NuGet packages within the client project.
 
 To add **Syncfusion Blazor Spreadsheet** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install:
 
@@ -44,6 +44,8 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
+
+N> The `{{ site.releaseversion }}` placeholder is replaced with the latest Syncfusion release version at documentation build time. You can also specify a particular released version (for example, `32.1.19`).
 
 {% endtabcontent %}
 
@@ -73,9 +75,11 @@ cd BlazorWebApp.Client
 
 N> For more information on creating a Blazor Web App with various interactive modes and locations, see [Render interactive modes](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code#render-interactive-modes).
 
+N> If you selected the `Server` interactive render mode (no client project is created), skip the `cd BlazorWebApp.Client` command and run package commands from the server project directory.
+
 ## Install Blazor Spreadsheet NuGet Packages
 
-If you utilize `WebAssembly` or `Auto` render modes in the Blazor Web App need to be install Blazor components NuGet packages within the client project.
+If you utilize `WebAssembly` or `Auto` render modes in the Blazor Web App, you need to install the Blazor components NuGet packages within the client project.
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
 * Ensure you’re in the project root directory where your `.csproj` file is located.
@@ -93,13 +97,17 @@ dotnet restore
 
 {% endtabs %}
 
+N> After running `dotnet restore`, ensure there are no error messages in the terminal. If restore fails, verify your NuGet source (`https://api.nuget.org/v3/index.json`) is configured, clear the local cache with `dotnet nuget locals all --clear`, and retry.
+
+N> The `{{ site.releaseversion }}` placeholder is replaced with the latest Syncfusion release version at documentation build time. You can also specify a particular released version (for example, `32.1.19`).
+
 {% endtabcontent %}
 
 {% tabcontent .NET CLI %}
 
 ## Prerequisites
 
-Install the latest version of [.NET SDK](https://dotnet.microsoft.com/en-us/download). If you previously installed the SDK, you can determine the installed version by executing the following command in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
+Install the latest version of [.NET SDK](https://dotnet.microsoft.com/en-us/download). If you previously installed the SDK, you can determine the installed version by executing the following command in a command prompt (Windows) or terminal (macOS) or command shell (Linux). Also, review the [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements).
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -125,9 +133,11 @@ cd BlazorWebApp.Client
 {% endhighlight %}
 {% endtabs %}
 
+N> If you selected the `Server` interactive render mode (no client project is created), skip the `cd BlazorWebApp.Client` command and run package commands from the server project directory.
+
 ## Install Syncfusion® Blazor Spreadsheet and Themes NuGet in the App
 
-If you utilize `WebAssembly` or `Auto` render modes in the Blazor Web App need to be install Blazor components NuGet packages within the client project.
+If you utilize `WebAssembly` or `Auto` render modes in the Blazor Web App, you need to install the Blazor components NuGet packages within the client project.
 
 * Open a command prompt, terminal, or shell.
 * Ensure you’re in the project root directory where your `.csproj` file is located (or the Client project if applicable).
@@ -145,13 +155,17 @@ dotnet restore
 
 {% endtabs %}
 
+N> After running `dotnet restore`, ensure there are no error messages in the terminal. If restore fails, verify your NuGet source (`https://api.nuget.org/v3/index.json`) is configured, clear the local cache with `dotnet nuget locals all --clear`, and retry.
+
+N> The `{{ site.releaseversion }}` placeholder is replaced with the latest Syncfusion release version at documentation build time. You can also specify a particular released version (for example, `32.1.19`).
+
 {% endtabcontent %}
 
 {% endtabcontents %}
 
 ## Add import namespaces
 
-After the packages are installed, open the **~/_Imports.razor** file in the client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Spreadsheet` namespaces.
+After the packages are installed, open the **_Imports.razor** file (typically located at `Components/_Imports.razor` in Blazor Web App templates; in older templates or WebAssembly apps it may be at the project root) and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Spreadsheet` namespaces.
 
 {% tabs %}
 {% highlight C# tabtitle="_Imports.razor" %}
@@ -180,11 +194,13 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
-N> If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
+N> If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App. For `Server` render mode, register it in the server project's **Program.cs** only.
+
+N> `AddSyncfusionBlazor()` accepts optional configuration options such as enabling script isolation. See the [Blazor service registration](https://blazor.syncfusion.com/documentation/aspnet-core-blazor/getting-started-blazor-service-registration) topic for available configuration options.
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the <head> section and the script reference at the end of the <body> in the **~/Components/App.razor** file as shown below.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the <head> section and the script reference at the end of the <body> in the **Components/App.razor** file as shown below.
 
 {% tabs %}
 {% highlight razor tabtitle="App.razor" %}
@@ -201,27 +217,23 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
+N> If your project uses `Routes.razor` instead of `App.razor`, add the `<link>` and `<script>` references inside the `<head>` and `<body>` sections defined within `Routes.razor`.
+
+N> Use the theme and script files that match the installed version of the `Syncfusion.Blazor.Themes` and `Syncfusion.Blazor.Spreadsheet` NuGet packages. Static Web Assets automatically serve the version bundled with the installed packages, so no manual version selection is required.
+
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to explore supported ways (such as static assets, CDN, and CRG) to apply themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
 ## Add Blazor Spreadsheet component
 
-Add the Syncfusion Blazor Spreadsheet component in the **~/Components/Pages/*.razor** file. If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the `~/Pages/*.razor` file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
+Add the Syncfusion Blazor Spreadsheet component in the **Components/Pages/Home.razor** file (the default page template). If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the `Components/Pages/Home.razor` file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
 
-N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
-
-{% tabs %}
-{% highlight razor %}
-
-@* desired render mode define here *@
-@rendermode InteractiveServer
-
-{% endhighlight %}
-{% endtabs %}
+N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default and does not need to be specified on the page.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
 @page "/"
+@rendermode InteractiveServer
 @using Syncfusion.Blazor.Spreadsheet
 
 <SfSpreadsheet>
@@ -230,6 +242,8 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 {% endhighlight %}
 {% endtabs %}
+
+N> `SpreadsheetRibbon` is the optional ribbon toolbar child component of `SfSpreadsheet`. Omit it if you want to render the spreadsheet without the ribbon UI.
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Spreadsheet in your default web browser. The output will appear as follows:
 
@@ -244,6 +258,21 @@ To learn how to open workbooks, bind data, or save files in the Spreadsheet comp
 N> [View Sample In GitHub.](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Spreadsheet).
 
 N> Looking for the full Blazor Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) page
+
+## Register Syncfusion License Key
+
+Register the Syncfusion license key in your application startup to avoid a license warning at runtime. Add the following line in the **Program.cs** file of your Blazor Web App (and in the client project's **Program.cs** for `WebAssembly`/`Auto` render modes), after the `AddSyncfusionBlazor()` call:
+
+{% tabs %}
+{% highlight c# tabtitle="Program.cs" %}
+
+// Register Syncfusion license key
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Replace `YOUR_LICENSE_KEY` with your actual Syncfusion license key. For details on generating and registering a license key, see [Licensing](https://blazor.syncfusion.com/documentation/licensing/).
 
 ## Video tutorial
 
