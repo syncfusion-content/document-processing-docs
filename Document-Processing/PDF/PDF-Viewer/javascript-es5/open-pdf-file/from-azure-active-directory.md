@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF from Azure Active Directory
+# Load PDF from Azure Active Directory in JavaScript PDF Viewer
 
 ### Overview
 

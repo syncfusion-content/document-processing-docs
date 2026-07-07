@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF files
+# Open PDF files in Vue PDF Viewer
 
 This article explains how to open and display PDF files in the Vue PDF Viewer from various sources. In this section, you can find the information about how to open PDF files from URL, database, local file system, and as base64 string.
 

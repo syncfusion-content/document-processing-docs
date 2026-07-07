@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF from Azure Active Directory
+# Open PDF from Azure Active Directory in Vue
 
 ### Overview
 
