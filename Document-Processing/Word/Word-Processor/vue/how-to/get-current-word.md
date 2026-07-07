@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Get current word in Vue Document editor component
 
-You can get the current word or paragraph content from the Vue Document Editor component as plain text and SFDT (rich text).
+You can get the current word or paragraph content from the [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) component as plain text and SFDT (rich text).
 
 ## Select and get the word in current cursor position
 

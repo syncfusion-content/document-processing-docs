@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Fields in Angular Document editor component
 
-Document Editor has preservation support for all types of fields in an existing word document without any data loss.
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) has preservation support for all types of fields in an existing word document without any data loss.
 
 ## Adding Fields
 
@@ -78,5 +78,5 @@ this.documentEditor.editor.setFieldInfo(fieldInfo);
 
 ## See Also
 
-[Mail merge using Word library (DocIO)](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-mail-merge)
+[Mail merge using Word library (DocIO)](https://help.syncfusion.com/file-formats/docio/working-with-mail-merge)
 [Mail merge demo](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices)

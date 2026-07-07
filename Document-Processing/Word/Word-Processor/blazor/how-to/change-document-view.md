@@ -9,7 +9,7 @@ documentation: ug
 
 # Change Document View in Blazor DocumentEditor
 
-The [Blazor Word Processor](https://www.syncfusion.com/blazor-components/blazor-word-processor) (Document Editor) provides two different layout options for viewing a document, controlled by the `LayoutType` property. This allows users to switch between a print-optimized view and a continuous web-based view.
+The [Blazor Word Processor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) provides two different layout options for viewing a document, controlled by the `LayoutType` property. This allows users to switch between a print-optimized view and a continuous web-based view.
 
 The two available layout types are:
 

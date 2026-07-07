@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 # Annotations in mobile view in Angular PDF Viewer
 
-This article describes how to use annotation tools in the Syncfusion Angular PDF Viewer on touch-enabled devices. It covers enabling the annotation toolbar; adding sticky notes, text markups, shapes, measurements, stamps, signatures, and ink; adjusting annotation properties before and after placement; using comments; and removing annotations.
+This article describes how to use annotation tools in the Angular PDF Viewer on touch-enabled devices. It covers enabling the annotation toolbar; adding sticky notes, text markups, shapes, measurements, stamps, signatures, and ink; adjusting annotation properties before and after placement; using comments; and removing annotations.
 
 ## Open the annotation toolbar
 

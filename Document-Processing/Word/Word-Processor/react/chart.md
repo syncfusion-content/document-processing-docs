@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Chart in React Document editor component
 
-Document Editor provides chart preservation support. Using Document Editor, you can see the chart reports from your Word document.
+[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides chart preservation support. Using Document Editor, you can see the chart reports from your Word document.
 
 The following example shows chart preservation in Document Editor.
 

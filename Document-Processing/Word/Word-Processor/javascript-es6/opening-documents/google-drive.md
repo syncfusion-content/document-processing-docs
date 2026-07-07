@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Open document from Google Drive in JavaScript (ES6) Document editor
 
-To load a document from Google Drive in a Document editor, you can follow the steps below
+To load a document from Google Drive in a [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor), you can follow the steps below
 
 **Step 1:** Set up Google Drive API
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # FAQs about SFDT in Angular DOCX Editor
 
-The frequently asked questions about SFDT in Document Editor is listed below:
+The frequently asked questions about SFDT in [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) is listed below:
 
 ## What is SFDT format?
 

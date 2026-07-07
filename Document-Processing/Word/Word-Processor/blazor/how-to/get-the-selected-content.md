@@ -9,7 +9,7 @@ documentation: ug
 
 # How to get the selected content in Blazor Document Editor component
 
-You can get the selected content from the Blazor Document Editor component as plain text and SFDT (rich text).
+You can get the selected content from the [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) component as plain text and SFDT (rich text).
 
 ## Get the selected content as plain text
 

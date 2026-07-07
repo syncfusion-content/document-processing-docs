@@ -9,7 +9,7 @@ documentation: ug
 
 # Check the status of annotations or comments in Blazor SfPdfViewer
 
-The Syncfusion Blazor SfPdfViewer component supports retrieving the review status of annotations and comments through the [Review](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.Review.html) property of the [PdfAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfAnnotation.html) class. This enables identifying the State (for example, Accepted, Rejected) and the StateModel (for example, Review, Comment) associated with each annotation.
+The Blazor SfPdfViewer component supports retrieving the review status of annotations and comments through the [Review](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.Review.html) property of the [PdfAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfAnnotation.html) class. This enables identifying the State (for example, Accepted, Rejected) and the StateModel (for example, Review, Comment) associated with each annotation.
 
 The following code example shows how to obtain the review status of each annotation and log it to the browser console.
 

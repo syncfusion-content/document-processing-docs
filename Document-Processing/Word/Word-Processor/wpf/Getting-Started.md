@@ -9,7 +9,7 @@ keywords: getting started
 
 # Getting started with Syncfusion<sup>&reg;</sup> WPF RichTextBox
 
-Syncfusion <sup style="font-size:70%">&reg;</sup> [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) enables you to create, edit, view, and print Word documents in WPF applications. This section guides you through the steps to get started and create a RichTextBox in a WPF application.
+[WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) enables you to create, edit, view, and print Word documents in WPF applications. This section guides you through the steps to get started and create a RichTextBox in a WPF application.
 
 ## Create a RichTextBox in WPF using SfRichTextBoxAdv
 
@@ -19,12 +19,22 @@ The steps below cover the essential tasks required to add and use the SfRichText
 
 ### Create a New WPF Project
 
-1. Open **Visual Studio**.
-2. Click **Create a new project**.
-3. Select **WPF App (.NET Framework)** or **WPF App (.NET Core)**.
-4. Click **Next**.
-5. Enter the **project name** and other required details.
-6. Click **Create**.
+- Open **Visual Studio**.  
+- Click **Create a new project**. 
+- In the **Create a new project** window, search for **WPF App**, and select a template based on your requirement:
+  - **WPF Application (.NET)**
+  - **WPF App (.NET Framework)**  
+- Click **Next**, and enter the following details:
+  - **Project name**: `DocumentEditor`
+  - **Location**: Choose your preferred location  
+  - **Solution name**: `DocumentEditor`
+
+N> The **project name** is used as the default namespace (for example, in `x:Class`). It is recommended to use **DocumentEditor** to match the code examples provided.
+
+- Select the **target framework**:
+  - For **.NET** → Click **Next** and choose the **latest supported .NET version**
+  - For **.NET Framework** → Select the required version in the same window  
+- Click **Create**
 
 ### Add SfRichTextBoxAdv dependencies
 
@@ -36,7 +46,7 @@ The steps below cover the essential tasks required to add and use the SfRichText
 
 1.	In Solution Explorer, right-click the project and choose **Manage NuGet Packages**.
 2.	Search for [Syncfusion.SfRichTextBoxAdv.Wpf](https://www.nuget.org/packages/Syncfusion.SfRichTextBoxAdv.WPF) and install the latest version.
-3.	Ensure the necessary dependencies are installed correctly, and the project is restored.
+3.	Ensure the [necessary dependencies](https://help.syncfusion.com/wpf/control-dependencies#sfrichtextboxadv) are installed correctly, and the project is restored.
 
 **Using Package Manager Console:** 
 
@@ -83,7 +93,7 @@ Open the Toolbox window and drag the **SfRichTextBoxAdv** control onto the Desig
 
 To add the control manually in XAML, follow these steps:
 
-1.	Import Syncfusion® WPF schema http://schemas.syncfusion.com/wpf or SfRichTextBoxAdv control namespace Syncfusion.Windows.Controls.RichTextBoxAdv in the XAML page.
+1. **Import** the **Syncfusion® WPF schema** `http://schemas.syncfusion.com/wpf` or the **SfRichTextBoxAdv** control namespace `Syncfusion.Windows.Controls.RichTextBoxAdv` in the **XAML page**.
 
 2.	Declare SfRichTextBoxAdv control in the XAML page.
 
@@ -108,24 +118,35 @@ To add the control manually in XAML, follow these steps:
 
 {% tabcontent Via C# %}
 
-To add the control manually in C#, add the following code in *.xaml.cs
+To add the control manually in C#, add the following code in MainWindow.xaml.cs
 
 {% tabs %}
 {% highlight c# tabtitle="MainWindow.xaml.cs" %}
 
 using Syncfusion.Windows.Controls.RichTextBoxAdv;
+using System.Windows;
+using System.Windows.Controls;
 
-public partial class MainWindow : Window
+namespace DocumentEditor
 {
-    public MainWindow()
+    public partial class MainWindow : Window
     {
-        InitializeComponent();
+        public MainWindow()
+        {
+            InitializeComponent();
 
-        // Create an instance of SfRichTextBoxAdv control
-        SfRichTextBoxAdv richTextBoxAdv = new SfRichTextBoxAdv();
+            // Create a Grid container to use as the layout root
+            Grid rootGrid = new Grid();
 
-        // Add the SfRichTextBoxAdv control to the container (Grid)
-        Root_Grid.Children.Add(richTextBoxAdv);
+            // Create an instance of the SfRichTextBoxAdv control
+            SfRichTextBoxAdv richTextBoxAdv = new SfRichTextBoxAdv();
+
+            // Add the SfRichTextBoxAdv control to the Grid
+            rootGrid.Children.Add(richTextBoxAdv);
+
+            // Set the Grid as the content of the Window
+            this.Content = rootGrid;
+        }
     }
 }
 {% endhighlight %}
@@ -136,7 +157,7 @@ public partial class MainWindow : Window
 
 ### Run the Application
 
-1. Press **F5** or click **Start** in Visual Studio.
+1. Press **F5** or click  **Debug → Start Debugging** in Visual Studio.
 2. The application launches and displays the **SfRichTextBoxAdv** control.
 3. Press Ctrl+O to open an existing document. The selected document will be displayed within the SfRichTextBoxAdv control, as shown below.
 
@@ -158,7 +179,7 @@ If you need a ribbon-based user interface, you can add **SfRichTextRibbon** with
 
 1.	In Solution Explorer, right-click the project and choose **Manage NuGet Packages**.
 2.	Search for [Syncfusion.SfRichTextRibbon.Wpf](https://www.nuget.org/packages/Syncfusion.SfRichTextRibbon.WPF) and install the latest version.
-3.	Ensure the necessary dependencies are installed correctly, and the project is restored.
+3.	Ensure the [necessary dependencies](https://help.syncfusion.com/wpf/control-dependencies#sfrichtextribbon) are installed correctly, and the project is restored.
 
 
 **Using Package Manager Console**
@@ -191,6 +212,16 @@ The following assembly references are required to use the **SfRichTextRibbon** c
 
 {% endtabcontents %}
 
+### Configure RibbonWindow for SfRichTextRibbon
+
+To use the **SfRichTextRibbon** control in a WPF application, the application must use **Syncfusion® RibbonWindow** instead of the default **Window**.
+
+1. Import the **Syncfusion® WPF schema** `http://schemas.syncfusion.com/wpf` in the **MainWindow.xaml** file.
+
+2. Replace the root element **Window** with **syncfusion:RibbonWindow** in the **MainWindow.xaml** file.
+
+3. Additionally, in the *MainWindow.xaml.cs* file, change the base class of `MainWindow` from **Window** to **RibbonWindow** to enable full support for the **SfRichTextRibbon** control.
+
 ### Add SfRichTextRibbon to the application
 
 {% tabcontents %}
@@ -206,10 +237,11 @@ Open the Toolbox window and drag the **SfRichTextRibbon** and **SfRichTextBoxAdv
 {% tabcontent Via XAML %}
 To add the control manually in XAML, follow these steps:
 
-1.	Import the Syncfusion® WPF schema http://schemas.syncfusion.com/wpf or SfRichTextRibbon control namespace Syncfusion.Windows.Controls.RichTextBoxAdv in XAML page.
-2.	To use the SfRichTextRibbon use the Syncfusion® RibbonWindow instead of Window.
-3.	Declare the SfRichTextRibbon and SfRichTextBoxAdv controls in XAML page.
-4.  To make an interaction between SfRichTextRibbon and SfRichTextBoxAdv, bind the SfRichTextBoxAdv as DataContext to the SfRichTextRibbon.
+1. Import the **Syncfusion® WPF schema** `http://schemas.syncfusion.com/wpf` or the **SfRichTextRibbon** control namespace `Syncfusion.Windows.Controls.RichTextBoxAdv` in the **XAML page**.
+
+2. Declare the **SfRichTextRibbon** and **SfRichTextBoxAdv** controls in the **XAML page**.
+
+3. To establish interaction between **SfRichTextRibbon** and **SfRichTextBoxAdv**, bind the **SfRichTextBoxAdv** as the **DataContext** to the **SfRichTextRibbon**.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainWindow.xaml" %}
@@ -236,63 +268,69 @@ To add the control manually in XAML, follow these steps:
 {% endtabcontent %}
 
 {% tabcontent Via C# %}
-To add the control manually in C#, add the below code in *.xaml.cs
+To add the control manually in C#, add the below code in MainWindow.xaml.cs
 
 {% tabs %}
 {% highlight c# tabtitle="MainWindow.xaml.cs" %}
 
 using Syncfusion.Windows.Controls.RichTextBoxAdv;
 using Syncfusion.Windows.Tools.Controls;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media;
 
-public partial class MainWindow : RibbonWindow
+namespace DocumentEditor
 {
-    public MainWindow()
+    public partial class MainWindow : RibbonWindow
     {
-        InitializeComponent();
+        public MainWindow()
+        {
+            InitializeComponent();
 
-        // Create the root Grid container for layout
-        Grid rootGrid = new Grid();
+            // Create the root Grid container for layout
+            Grid rootGrid = new Grid();
 
-        // Define the first row (auto-sized for ribbon)
-        RowDefinition row1 = new RowDefinition();
-        row1.Height = GridLength.Auto;
+            // Define the first row (auto-sized for ribbon)
+            RowDefinition row1 = new RowDefinition();
+            row1.Height = GridLength.Auto;
 
-        // Define the second row (fills remaining space for editor)
-        RowDefinition row2 = new RowDefinition();
-        row2.Height = new GridLength(1, GridUnitType.Star);
+            // Define the second row (fills remaining space for editor)
+            RowDefinition row2 = new RowDefinition();
+            row2.Height = new GridLength(1, GridUnitType.Star);
 
-        // Add row definitions to the grid
-        rootGrid.RowDefinitions.Add(row1);
-        rootGrid.RowDefinitions.Add(row2);
+            // Add row definitions to the grid
+            rootGrid.RowDefinitions.Add(row1);
+            rootGrid.RowDefinitions.Add(row2);
 
-        // Instantiate the rich text editor control
-        SfRichTextBoxAdv richTextBoxAdv = new SfRichTextBoxAdv();
+            // Instantiate the rich text editor control
+            SfRichTextBoxAdv richTextBoxAdv = new SfRichTextBoxAdv();
 
-        // Set background color for better UI appearance
-        richTextBoxAdv.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#F1F1F1"));
+            // Set background color for better UI appearance
+            richTextBoxAdv.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#F1F1F1"));
 
-        // Instantiate the ribbon control
-        SfRichTextRibbon richTextRibbon = new SfRichTextRibbon();
+            // Instantiate the ribbon control
+            SfRichTextRibbon richTextRibbon = new SfRichTextRibbon();
 
-        // Enable pixel snapping for sharper rendering
-        richTextRibbon.SnapsToDevicePixels = true;
+            // Enable pixel snapping for sharper rendering
+            richTextRibbon.SnapsToDevicePixels = true;
 
-        // Set the DataContext of the ribbon to the editor
-        // This allows the ribbon to interact with the editor (binding commands)
-        richTextRibbon.DataContext = richTextBoxAdv;
+            // Set the DataContext of the ribbon to the editor
+            // This allows the ribbon to interact with the editor (binding commands)
+            richTextRibbon.DataContext = richTextBoxAdv;
 
-        // Position the ribbon in the first row
-        Grid.SetRow(richTextRibbon, 0);
+            // Position the ribbon in the first row
+            Grid.SetRow(richTextRibbon, 0);
 
-        // Position the editor in the second row
-        Grid.SetRow(richTextBoxAdv, 1);
+            // Position the editor in the second row
+            Grid.SetRow(richTextBoxAdv, 1);
 
-        // Add controls to the grid
-        rootGrid.Children.Add(richTextRibbon);
-        rootGrid.Children.Add(richTextBoxAdv);
+            // Add controls to the grid
+            rootGrid.Children.Add(richTextRibbon);
+            rootGrid.Children.Add(richTextBoxAdv);
 
-        // Set the constructed grid as the content of the UserControl
-        this.Content = rootGrid;
+            // Set the constructed grid as the content of the UserControl
+            this.Content = rootGrid;
+        }
     }
 }
 
@@ -306,7 +344,7 @@ N> Prefer using `SfRichTextRibbon` within `RibbonWindow` in your application, si
 
 ### Run the Application with Ribbon UI
 
-1. Press **F5** or click **Start** in Visual Studio.  
+1. Press **F5** or click  **Debug → Start Debugging** in Visual Studio.
 2. The application will launch with the **SfRichTextRibbon** and **SfRichTextBoxAdv** controls.  
 3. Press **Ctrl + O** or use the **Open** option in the **SfRichTextRibbon** to open a document, which will be displayed in the **SfRichTextBoxAdv** control, with ribbon options available for editing and formatting, as shown below
 
@@ -314,116 +352,9 @@ N> Prefer using `SfRichTextRibbon` within `RibbonWindow` in your application, si
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/SfRichTextBoxAdv%20with%20SfRichTextRibbon).
 
-## Use SfRichTextBoxAdv as a standard RichTextBox
-
-Use the following code to configure the SfRichTextBoxAdv control as a standard RichTextBox with rich text formatting options.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainWindow.xaml" %}
-<Window x:Class="Standard_RichTextBox.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Standard_RichTextBox"
-        mc:Ignorable="d"
-        xmlns:RichTextBoxAdv="clr-namespace:Syncfusion.Windows.Controls.RichTextBoxAdv;assembly=Syncfusion.SfRichTextBoxAdv.Wpf"
-        Title="SfRichTextBoxAdv" Height="450" Width="800">
-   
-    <Window.Resources>
-        <RichTextBoxAdv:UnderlineToggleConverter x:Key="UnderlineToggleConverter"/>
-        <RichTextBoxAdv:LeftAlignmentToggleConverter x:Key="LeftAlignmentToggleConverter"/>
-        <RichTextBoxAdv:CenterAlignmentToggleConverter x:Key="CenterAlignmentToggleConverter"/>
-        <RichTextBoxAdv:RightAlignmentToggleConverter x:Key="RightAlignmentToggleConverter"/>
-        <RichTextBoxAdv:JustifyAlignmentToggleConverter x:Key="JustifyAlignmentToggleConverter"/>
-        <Style TargetType="Button">
-            <Setter Property="Background" Value="Transparent" />
-            <Setter Property="Margin" Value="12 4"/>
-        </Style>
-        <Style TargetType="ToggleButton">
-            <Setter Property="Background" Value="Transparent" />
-            <Setter Property="Margin" Value="12 4"/>
-        </Style>
-    </Window.Resources>
-
-
-    <Grid Background="#F1F1F1">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Grid>
-            <!-- Defines the data context as RichTextBoxAdv -->
-            <StackPanel Orientation="Horizontal" DataContext="{Binding ElementName=richTextBoxAdv}">
-                <!-- UI option to perform Undo/Redo using command binding -->
-                <StackPanel Orientation="Horizontal">
-                    <Button Command="RichTextBoxAdv:SfRichTextBoxAdv.UndoCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}" Focusable="False">
-                        <Image Source="\Images\Undo.png" Height="40" Width="40" />
-                    </Button>
-                    <Button Command="RichTextBoxAdv:SfRichTextBoxAdv.RedoCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}" Focusable="False">
-                        <Image Source="\Images\Redo.png" Height="40" Width="40" />
-                    </Button>
-                </StackPanel>
-                <!-- UI option to perform Clipboard operations using command binding -->
-                <Border Width="2" Height="46" Background="#1F1F1F"/>
-                <StackPanel Orientation="Horizontal">
-                    <Button Command="RichTextBoxAdv:SfRichTextBoxAdv.CutCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}" Focusable="False">
-                        <Image Source="\Images\Cut.png" Height="40" Width="40" />
-                    </Button>
-                    <Button Command="RichTextBoxAdv:SfRichTextBoxAdv.CopyCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}" Focusable="False">
-                        <Image Source="\Images\Copy.png" Height="40" Width="40" />
-                    </Button>
-                    <Button Command="RichTextBoxAdv:SfRichTextBoxAdv.PasteCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}" Focusable="False">
-                        <Image Source="\Images\Paste.png" Height="40" Width="40" />
-                    </Button>
-                </StackPanel>
-                <!-- UI option to apply character formatting using property binding -->
-                <Border Width="2" Height="46" Background="#1F1F1F"/>
-                <StackPanel Orientation="Horizontal">
-                    <ToggleButton IsChecked="{Binding Selection.CharacterFormat.Bold}" Focusable="False">
-                        <Image Source="\Images\Bold.png" Height="40" Width="40" />
-                    </ToggleButton>
-                    <ToggleButton IsChecked="{Binding Selection.CharacterFormat.Italic}" Focusable="False">
-                        <Image Source="\Images\Italic.png" Height="40" Width="40" />
-                    </ToggleButton>
-                    <ToggleButton IsChecked="{Binding Selection.CharacterFormat.Underline, Converter={StaticResource UnderlineToggleConverter}}" Focusable="False">
-                        <Image Source="\Images\Underline.png" Height="40" Width="40" />
-                    </ToggleButton>
-                </StackPanel>
-                <Border Width="2" Height="46" Background="#1F1F1F"/>
-                <!-- UI option to apply paragraph formatting using property binding -->
-                <StackPanel Orientation="Horizontal">
-                    <ToggleButton IsChecked="{Binding Selection.ParagraphFormat.TextAlignment, Converter={StaticResource LeftAlignmentToggleConverter}}" Focusable="False">
-                        <Image Source="\Images\Left.png" Height="40" Width="40" />
-                    </ToggleButton>
-                    <ToggleButton IsChecked="{Binding Selection.ParagraphFormat.TextAlignment, Converter={StaticResource CenterAlignmentToggleConverter}}" Focusable="False">
-                        <Image Source="\Images\Center.png" Height="40" Width="40" />
-                    </ToggleButton>
-                    <ToggleButton IsChecked="{Binding Selection.ParagraphFormat.TextAlignment, Converter={StaticResource RightAlignmentToggleConverter}}" Focusable="False">
-                        <Image Source="\Images\Right.png" Height="40" Width="40" />
-                    </ToggleButton>
-                    <ToggleButton IsChecked="{Binding Selection.ParagraphFormat.TextAlignment, Converter={StaticResource JustifyAlignmentToggleConverter}}" Focusable="False">
-                        <Image Source="\Images\Justify.png" Height="40" Width="40" />
-                    </ToggleButton>
-                </StackPanel>
-            </StackPanel>
-        </Grid>
-        <RichTextBoxAdv:SfRichTextBoxAdv x:Name="richTextBoxAdv" Grid.Row="1" LayoutType="Continuous"  />
-    </Grid>
-</Window>
-
-{% endhighlight %}
-
-{% endtabs %}
-
-When the application is executed, the standard RichTextBox control is displayed as illustrated below.
-![WPF Standard RichTextBox](Getting-Started_images/wpf-standard-sfrichtextboxadv.png)
-
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/Standard%20RichTextBox).
-
 ## Theme
 
-In this walkthrough, you will apply a theme to the Syncfusion® WPF **SfRichTextBoxAdv** and **SfRichTextRibbon** controls.
+In this walkthrough, you will apply a theme to the WPF **SfRichTextBoxAdv** and **SfRichTextRibbon** controls.
 
 The steps below outline the essential tasks required to configure and apply themes in a WPF application.
 
@@ -496,10 +427,9 @@ To add the controls and apply a theme manually in XAML, follow these steps:
 
 **Add SfRichTextBoxAdv and SfRichTextRibbon in XAML**
 
-1.	Import the Syncfusion® WPF schema http://schemas.syncfusion.com/wpf or SfRichTextBoxAdv control namespace Syncfusion.Windows.Controls.RichTextBoxAdv in XAML page.
-2.	To use the SfRichTextRibbon use the Syncfusion® RibbonWindow instead of Window.
-3.	Declare the SfRichTextRibbon and SfRichTextBoxAdv controls in XAML page.
-4.	To make an interaction between SfRichTextRibbon and SfRichTextBoxAdv, bind the SfRichTextBoxAdv as DataContext to SfRichTextRibbon.
+Refer to the following link for detailed instructions:
+
+[Add SfRichTextBoxAdv and SfRichTextRibbon in XAML](https://help.syncfusion.com/document-processing/word/word-processor/wpf/getting-started?tabcontent=via-xaml#add-ribbon-ui-to-sfrichtextboxadv)
 
 **Apply Theme in XAML**
 
@@ -514,7 +444,7 @@ To add the controls and apply a theme manually in XAML, follow these steps:
 <syncfusion:RibbonWindow xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                          xmlns:syncfusion="http://schemas.syncfusion.com/wpf" 
-                         x:Class="Theme.MainWindow"
+                         x:Class="DocumentEditor.MainWindow"
                          Title="MainWindow" Height="450" Width="800"
                          xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
                          syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=Windows11Light}">
@@ -538,67 +468,73 @@ N> - The applied theme is automatically inherited by all child controls.
 {% endtabcontent %}
 
 {% tabcontent Via C# %}
-To apply a theme programmatically in C#, add the below code in *.xaml.cs
+To apply a theme programmatically in C#, add the below code in MainWindow.xaml.cs
 
 {% tabs %}
 {% highlight c# tabtitle="MainWindow.xaml.cs" %}
 
+using Syncfusion.SfSkinManager;
 using Syncfusion.Windows.Controls.RichTextBoxAdv;
 using Syncfusion.Windows.Tools.Controls;
-using Syncfusion.SfSkinManager;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media;
 
-public partial class MainWindow : RibbonWindow
+namespace DocumentEditor
 {
-    public MainWindow()
+    public partial class MainWindow : RibbonWindow
     {
-        InitializeComponent();
+        public MainWindow()
+        {
+            InitializeComponent();
 
-        // Create the root Grid container for layout
-        Grid rootGrid = new Grid();
+            // Create the root Grid container for layout
+            Grid rootGrid = new Grid();
 
-        // Define the first row (auto-sized for ribbon)
-        RowDefinition row1 = new RowDefinition();
-        row1.Height = GridLength.Auto;
+            // Define the first row (auto-sized for ribbon)
+            RowDefinition row1 = new RowDefinition();
+            row1.Height = GridLength.Auto;
 
-        // Define the second row (fills remaining space for editor)
-        RowDefinition row2 = new RowDefinition();
-        row2.Height = new GridLength(1, GridUnitType.Star);
+            // Define the second row (fills remaining space for editor)
+            RowDefinition row2 = new RowDefinition();
+            row2.Height = new GridLength(1, GridUnitType.Star);
 
-        // Add row definitions to the grid
-        rootGrid.RowDefinitions.Add(row1);
-        rootGrid.RowDefinitions.Add(row2);
+            // Add row definitions to the grid
+            rootGrid.RowDefinitions.Add(row1);
+            rootGrid.RowDefinitions.Add(row2);
 
-        // Instantiate the rich text editor control
-        SfRichTextBoxAdv richTextBoxAdv = new SfRichTextBoxAdv();
+            // Instantiate the rich text editor control
+            SfRichTextBoxAdv richTextBoxAdv = new SfRichTextBoxAdv();
 
-        // Set background color for better UI appearance
-        richTextBoxAdv.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#F1F1F1"));
+            // Set background color for better UI appearance
+            richTextBoxAdv.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#F1F1F1"));
 
-        // Instantiate the ribbon control
-        SfRichTextRibbon richTextRibbon = new SfRichTextRibbon();
+            // Instantiate the ribbon control
+            SfRichTextRibbon richTextRibbon = new SfRichTextRibbon();
 
-        // Enable pixel snapping for sharper rendering
-        richTextRibbon.SnapsToDevicePixels = true;
+            // Enable pixel snapping for sharper rendering
+            richTextRibbon.SnapsToDevicePixels = true;
 
-        // Set the DataContext of the ribbon to the editor
-        // This allows the ribbon to interact with the editor (binding commands)
-        richTextRibbon.DataContext = richTextBoxAdv;
+            // Set the DataContext of the ribbon to the editor
+            // This allows the ribbon to interact with the editor (binding commands)
+            richTextRibbon.DataContext = richTextBoxAdv;
 
-        // Position the ribbon in the first row
-        Grid.SetRow(richTextRibbon, 0);
+            // Position the ribbon in the first row
+            Grid.SetRow(richTextRibbon, 0);
 
-        // Position the editor in the second row
-        Grid.SetRow(richTextBoxAdv, 1);
+            // Position the editor in the second row
+            Grid.SetRow(richTextBoxAdv, 1);
 
-        // Add controls to the grid
-        rootGrid.Children.Add(richTextRibbon);
-        rootGrid.Children.Add(richTextBoxAdv);
+            // Add controls to the grid
+            rootGrid.Children.Add(richTextRibbon);
+            rootGrid.Children.Add(richTextBoxAdv);
 
-        // Set the constructed grid as the content of the UserControl
-        this.Content = rootGrid;
+            // Set the constructed grid as the content of the UserControl
+            this.Content = rootGrid;
 
-        // Applies the Windows 11 Light theme to the window
-        SfSkinManager.SetTheme(this, new Theme() { ThemeName = "Windows11Light" });
+            // Applies the Windows 11 Light theme to the window
+            SfSkinManager.SetTheme(this, new Theme() { ThemeName = "Windows11Light" });
+        }
     }
 }
 
@@ -610,7 +546,7 @@ public partial class MainWindow : RibbonWindow
 
 ### Run the Application with Theme Applied
 
-1. Press **F5** or click **Start** in Visual Studio.  
+1. Press **F5** or click  **Debug → Start Debugging** in Visual Studio.
 2. The application will launch with the **SfRichTextRibbon** and **SfRichTextBoxAdv** controls using the **Windows 11 Light theme**.  
 3. Press **Ctrl + O** or use the **Open** option in the **SfRichTextRibbon** to open a document.
 4. The document is displayed in the editor, along with the themed ribbon and editor interface, as shown below.

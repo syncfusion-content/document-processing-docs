@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Unsupported Features in ASP.NET Core DOCX Editor
 
-This section describes the unsupported elements in Syncfusion® ASP.NET Core DOCX Editor (Document Editor) 
+This section describes the unsupported elements in [ASP.NET Core Docx Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) 
 
 ## Document formatting
 

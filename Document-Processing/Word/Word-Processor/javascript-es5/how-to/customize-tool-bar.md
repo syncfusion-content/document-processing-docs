@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## How to customize existing toolbar in DocumentEditorContainer
 
-DocumentEditorContainer allows you to customize(add, show, hide, enable, and disable) existing items in a toolbar.
+[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) Container allows you to customize(add, show, hide, enable, and disable) existing items in a toolbar.
 
 * Add - New items can defined by [`CustomToolbarItemModel`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/customToolbarItemModel) and with existing items in [`toolbarItems`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#toolbaritems) property. Newly added item click action can be defined in [`toolbarClick`](https://ej2.syncfusion.com/javascript/documentation/api/toolbar/clickEventArgs).
 
