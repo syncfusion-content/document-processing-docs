@@ -75,7 +75,7 @@ cd BlazorWebApp.Client
 
 N> For more information on creating a Blazor Web App with various interactive modes and locations, see [Render interactive modes](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code#render-interactive-modes).
 
-N> If you selected the `Server` interactive render mode (no client project is created), skip the `cd BlazorWebApp.Client` command and run package commands from the server project directory.
+N> If you selected the `Server` interactive render mode (no client project is created), skip the `cdn BlazorWebApp.Client` command and run package commands from the server project directory.
 
 ## Install Blazor Spreadsheet NuGet Packages
 
@@ -133,7 +133,7 @@ cd BlazorWebApp.Client
 {% endhighlight %}
 {% endtabs %}
 
-N> If you selected the `Server` interactive render mode (no client project is created), skip the `cd BlazorWebApp.Client` command and run package commands from the server project directory.
+N> If you selected the `Server` interactive render mode (no client project is created), skip the `cdn BlazorWebApp.Client` command and run package commands from the server project directory.
 
 ## Install Syncfusion® Blazor Spreadsheet and Themes NuGet in the App
 
@@ -176,6 +176,7 @@ After the packages are installed, open the **_Imports.razor** file (typically lo
 {% endhighlight %}
 {% endtabs %}
 
+
 ## Register Syncfusion® Blazor Service
 
 Register the Syncfusion Blazor service in the **Program.cs** file of your Blazor Web App.
@@ -183,13 +184,11 @@ Register the Syncfusion Blazor service in the **Program.cs** file of your Blazor
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
 
-....
 using Syncfusion.Blazor;
-....
 
+// Register Syncfusion Blazor service
 builder.Services.AddSyncfusionBlazor();
 
-....
 
 {% endhighlight %}
 {% endtabs %}
@@ -197,6 +196,21 @@ builder.Services.AddSyncfusionBlazor();
 N> If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App. For `Server` render mode, register it in the server project's **Program.cs** only.
 
 N> `AddSyncfusionBlazor()` accepts optional configuration options such as enabling script isolation. See the [Blazor service registration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html) topic for available configuration options.
+
+## Register Syncfusion License Key
+
+Register the Syncfusion license key in your application startup to avoid a license warning at runtime. Add the following line in the **Program.cs** file of your Blazor Web App (and in the client project's **Program.cs** for `WebAssembly`/`Auto` render modes), after the `AddSyncfusionBlazor()` call:
+
+{% tabs %}
+{% highlight c# tabtitle="Program.cs" %}
+
+// Register Syncfusion license key
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Replace `YOUR_LICENSE_KEY` with your actual Syncfusion license key. For details on generating and registering a license key, see [Licensing](https://blazor.syncfusion.com/documentation/licensing).
 
 ## Add stylesheet and script resources
 
@@ -206,11 +220,11 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% highlight razor tabtitle="App.razor" %}
 
 <head>
-    ....
+    <!-- Syncfusion Blazor components theme -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 </head>
 <body>
-    ....
+    <!-- Syncfusion Blazor Spreadsheet Editor script -->
     <script src="_content/Syncfusion.Blazor.Spreadsheet/scripts/syncfusion-blazor-spreadsheet.min.js" type="text/javascript"></script>
 </body>
 
@@ -258,21 +272,6 @@ To learn how to open workbooks, bind data, or save files in the Spreadsheet comp
 N> [View Sample In GitHub.](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Spreadsheet).
 
 N> Looking for the full Blazor Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) page
-
-## Register Syncfusion License Key
-
-Register the Syncfusion license key in your application startup to avoid a license warning at runtime. Add the following line in the **Program.cs** file of your Blazor Web App (and in the client project's **Program.cs** for `WebAssembly`/`Auto` render modes), after the `AddSyncfusionBlazor()` call:
-
-{% tabs %}
-{% highlight c# tabtitle="Program.cs" %}
-
-// Register Syncfusion license key
-Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
-
-{% endhighlight %}
-{% endtabs %}
-
-N> Replace `YOUR_LICENSE_KEY` with your actual Syncfusion license key. For details on generating and registering a license key, see [Licensing](https://blazor.syncfusion.com/documentation/licensing).
 
 ## Video tutorial
 
