@@ -690,11 +690,11 @@ PDF export from the Blazor Spreadsheet component supports customization of layou
 
 **Configuring PDF Layout Settings via BeforeSave Event:**
 
-The `BeforeSaveEventArgs` class provides properties that can be used to customize the PDF layout settings during the save operation.
+The [BeforeSaveEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.BeforeSaveEventArgs.html) class provides properties that can be used to customize the PDF layout settings during the save operation.
 
 | Property | Type | Description |
 |---|---|---|
-| `SaveType` | [SaveType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SaveType.html) | Gets the export format specified in the SaveOptions during the save operation. Use this to apply conditional logic (for example, only configure PDF layout when `SaveType.Pdf` is detected). |
+| `SaveType` | Enum | Gets the export format specified in the [SaveOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SaveOptions.html) during the save operation. Use this to apply conditional logic (for example, only configure PDF layout when `SaveType.Pdf` is detected). |
 | `PdfLayoutSettings` | [PdfLayoutSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.PdfLayoutSettings.html) | Gets or sets the PDF layout configuration (page orientation and scaling behavior). Assign a `PdfLayoutSettings` instance to apply custom layout before the PDF is generated. |
 
 **Layout Configuration Guide:**

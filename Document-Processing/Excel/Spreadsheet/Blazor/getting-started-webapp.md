@@ -45,8 +45,6 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> The `{{ site.releaseversion }}` placeholder is replaced with the latest Syncfusion release version at documentation build time. You can also specify a particular released version (for example, `32.1.19`).
-
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
@@ -157,8 +155,6 @@ dotnet restore
 
 N> After running `dotnet restore`, ensure there are no error messages in the terminal. If restore fails, verify your NuGet source (`https://api.nuget.org/v3/index.json`) is configured, clear the local cache with `dotnet nuget locals all --clear`, and retry.
 
-N> The `{{ site.releaseversion }}` placeholder is replaced with the latest Syncfusion release version at documentation build time. You can also specify a particular released version (for example, `32.1.19`).
-
 {% endtabcontent %}
 
 {% endtabcontents %}
@@ -212,30 +208,35 @@ Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY
 
 N> Replace `YOUR_LICENSE_KEY` with your actual Syncfusion license key. For details on generating and registering a license key, see [Licensing](https://blazor.syncfusion.com/documentation/licensing).
 
-## Add stylesheet and script resources
+## Add stylesheet resource
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the <head> section and the script reference at the end of the <body> in the **Components/App.razor** file as shown below.
+The theme stylesheet can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet at the end of the `<head>` section in the **Components/App.razor** file to apply proper layout and theme styling.
 
 {% tabs %}
 {% highlight razor tabtitle="App.razor" %}
 
-<head>
-    <!-- Syncfusion Blazor components theme -->
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-</head>
-<body>
-    <!-- Syncfusion Blazor Spreadsheet Editor script -->
-    <script src="_content/Syncfusion.Blazor.Spreadsheet/scripts/syncfusion-blazor-spreadsheet.min.js" type="text/javascript"></script>
-</body>
+<!-- Syncfusion Blazor components theme -->
+<link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 
 {% endhighlight %}
 {% endtabs %}
 
-N> If your project uses `Routes.razor` instead of `App.razor`, add the `<link>` and `<script>` references inside the `<head>` and `<body>` sections defined within `Routes.razor`.
+N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to explore supported ways (such as static assets, CDN, and CRG) to apply themes in your Blazor application.
 
-N> Use the theme and script files that match the installed version of the `Syncfusion.Blazor.Themes` and `Syncfusion.Blazor.Spreadsheet` NuGet packages. Static Web Assets automatically serve the version bundled with the installed packages, so no manual version selection is required.
+## Add script resource
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to explore supported ways (such as static assets, CDN, and CRG) to apply themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
+The Spreadsheet Editor script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the required script at the end of the `<body>` section in the **Components/App.razor** file to enable component functionality.
+
+{% tabs %}
+{% highlight razor tabtitle="App.razor" %}
+
+<!-- Syncfusion Blazor Spreadsheet Editor script -->
+<script src="_content/Syncfusion.Blazor.Spreadsheet/scripts/syncfusion-blazor-spreadsheet.min.js" type="text/javascript"></script>
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
 ## Add Blazor Spreadsheet component
 
@@ -247,7 +248,6 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% highlight razor tabtitle="Home.razor" %}
 
 @page "/"
-@rendermode InteractiveServer
 @using Syncfusion.Blazor.Spreadsheet
 
 <SfSpreadsheet>
