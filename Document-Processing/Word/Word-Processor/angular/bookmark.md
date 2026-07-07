@@ -21,15 +21,16 @@ Bookmark is a powerful tool that helps you to mark a place in the document to fi
 
 Using [`insertBookmark`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#insertbookmark) method, Bookmark can be added to the selected text.
 
-```csharp
+```typescript
 this.container.documentEditor.editor.insertBookmark("Bookmark1");
 ```
+>Note: If a bookmark with the same name already exists, it is replaced with the new selection.
 
 ## Select Bookmark
 
 You can select the bookmark in the document using [`selectBookmark`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/selection#selectbookmark) method by providing Bookmark name to select as shown in the following code snippet.
 
-```csharp
+```typescript
 container.documentEditor.selection.selectBookmark("Bookmark1", true);
 ```
 >Note: Second parameter is optional parameter and it denotes is exclude bookmark start and end from selection. If true, excludes bookmark start and end from selection.
@@ -38,7 +39,7 @@ container.documentEditor.selection.selectBookmark("Bookmark1", true);
 
 You can delete bookmark in the document using [`deleteBookmark`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#deletebookmark) method as shown in the following code snippet.
 
-```csharp
+```typescript
 this.container.documentEditor.editor.deleteBookmark("Bookmark1");
 ```
 
@@ -46,8 +47,8 @@ this.container.documentEditor.editor.deleteBookmark("Bookmark1");
 
 You can get all the bookmarks in the document using [`getBookmarks`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#getbookmarks) method as shown in the following code snippet.
 
-```csharp
-this.container.documentEditor.selection.getBookmarks(false);
+```typescript
+this.container.documentEditor.getBookmarks(false);
 ```
 
 >Note: Parameter denotes is include hidden bookmarks. If false, ignore hidden bookmark.
@@ -56,7 +57,7 @@ this.container.documentEditor.selection.getBookmarks(false);
 
 You can get bookmarks in current selection in the document using [`getBookmarks`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/selection#getbookmarks) method as shown in the following code snippet.
 
-```csharp
+```typescript
 this.container.documentEditor.selection.getBookmarks(false);
 ```
 
@@ -64,19 +65,19 @@ this.container.documentEditor.selection.getBookmarks(false);
 
 You can replace bookmark content without removing the bookmark start and end for backtracking the bookmark content.
 
-```csharp
+```typescript
 this.container.documentEditor.selection.selectBookmark("Bookmark1", true);
 this.container.documentEditor.editor.insertText('Hello World');
 ```
 
 You can replace content by removing the bookmark start and end, thus the bookmark content can't be tracked in future.
 
-```csharp
+```typescript
 this.container.documentEditor.selection.selectBookmark("Bookmark1");
 this.container.documentEditor.editor.insertText('Hello World');
 ```
 
-## Show or Hide bookmark
+## Show or Hide bookmark markers
 
 You can show or hide the show square brackets around bookmarked items in Document editor component.
 
