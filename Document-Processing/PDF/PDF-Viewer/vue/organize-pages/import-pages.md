@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Import pages using the Organize Pages tool
+# Import pages using the Organize Pages tool in Vue
 
 ## Overview
 
-This guide explains how to import pages from another PDF into the current document using the **Organize Pages** UI in the EJ2 Vue PDF Viewer. 
+This guide explains how to import another PDF document into the current document using the **Organize Pages** UI in the EJ2 Vue PDF Viewer. 
 
-**Outcome**: Imported pages appear as thumbnails and are merged into the original document when saved or exported.
+**Outcome**: Imported document appear as thumbnails and are merged into the original document when saved or exported.
 
 ## Prerequisites
 

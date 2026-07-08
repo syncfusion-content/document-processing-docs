@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Reorder pages using the Organize Pages view
+# Reorder pages using the Organize Pages view in Vue
 
 ## Overview
 

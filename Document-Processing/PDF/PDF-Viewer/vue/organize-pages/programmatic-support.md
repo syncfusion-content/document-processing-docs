@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Programmatic Support for Organize Pages in Vue PDF Viewer component | Syncfusion
+title:  Programmatic Support Organize Pages in Vue PDF Viewer | Syncfusion
 description: Learn here all about Programmatic Support for Organize Pages in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer

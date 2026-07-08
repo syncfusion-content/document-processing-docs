@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Organize Pages in vue Mobile View in Vue PDF Viewer component | Syncfusion
+title: Organize Pages Mobile View in Vue PDF Viewer component | Syncfusion
 description: Learn how to organize pages in the mobile view of the Vue PDF Viewer, including rotating, rearranging, inserting, deleting, and copying pages on mobile devices.
 platform: document-processing
 control: PDF Viewer
@@ -28,7 +28,7 @@ To perform actions on a page thumbnail, tap and hold (long-press) the thumbnail 
 *   **Select All**: Select all pages in the document.
 
 
-![Context menu displaying page operations (rotate, insert, copy, delete, select all)](../../Vue/images/Context-Menu-Page-Operations1.png)
+![Context menu displaying page operations](../../react/images/Context-Menu-Page-Operations1.png)
 
 ## Rearranging Pages on Mobile
 

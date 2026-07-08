@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Rotate pages using the Organize Pages view
+# Rotate pages using the Organize Pages view in Vue
 
 ## Overview
 

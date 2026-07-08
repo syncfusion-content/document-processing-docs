@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Insert blank pages in Organize Pages in Vue PDF Viewer | Syncfusion
-description: How to insert blank pages into a PDF using the Organize Pages UI in the Syncfusion Vue PDF Viewer.
+description: Learn here all about how to insert blank pages into a PDF using the Organize Pages UI in the Syncfusion Vue PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Insert blank pages using the Organize Pages tool
+# Insert blank pages using the Organize Pages tool in Vue
 
 ## Overview
 
