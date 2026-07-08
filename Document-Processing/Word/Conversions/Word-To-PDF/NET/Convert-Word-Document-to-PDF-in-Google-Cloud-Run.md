@@ -323,7 +323,7 @@ Step 6: Provide deployment details
 
 During deployment, provide the following:
 
-* **Container Path** – Enter `gcr.io/<your-project-id>/wordtopdf`.
+* **Container Path** – Enter ```gcr.io/<your-project-id>/wordtopdf```.
 * **Service Name** – Assign a name to your service.
 * **Select a Region** – Choose the deployment region when prompted.
 
