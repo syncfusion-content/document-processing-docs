@@ -205,7 +205,7 @@ The following example shows `Protect Workbook` by using the [`isProtected`](http
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/local-data-binding-cs3" %}
 
-The following example shows `Protect Workbook` by using the [`password`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#password) property in the Spreadsheet control. To unprotect the workbook, click the unprotect workbook button in the data tab and provide the password as syncfusion<sup style="font-size:70%">&reg;</sup> in the dialog box.
+The following example shows `Protect Workbook` by using the [`password`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#password) property in the Spreadsheet control. To unprotect the workbook, click the unprotect workbook button in the data tab and provide the password as syncfusion in the dialog box.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -236,7 +236,7 @@ In the active Spreadsheet, the workbook can be unprotected in any of the followi
 
 ## Note
 
-You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
+You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
 
 ## See Also
 

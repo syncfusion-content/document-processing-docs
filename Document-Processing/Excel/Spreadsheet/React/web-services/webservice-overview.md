@@ -9,11 +9,11 @@ documentation: ug
 
 # Connect Web Services for React Spreadsheet Open and Save
 
-Unlock advanced Excel file processing in your web applications by connecting the Syncfusion Spreadsheet component to your own back-end web services. This overview explains the purpose, benefits, and high-level process for enabling open and save operations using ASP.NET Core and ASP.NET MVC.
+Unlock advanced Excel file processing in your web applications by connecting the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component to your own back-end web services. This overview explains the purpose, benefits, and high-level process for enabling open and save operations using ASP.NET Core and ASP.NET MVC.
 
 ## What are Spreadsheet Open and Save Services?
 
-The Syncfusion Spreadsheet component allows users to import (open) and export (save) Excel files directly from the browser. These operations require secure, reliable back-end web services to process files and data.
+The React Spreadsheet Editor component allows users to import (open) and export (save) Excel files directly from the browser. These operations require secure, reliable back-end web services to process files and data.
 
 By default, demo endpoints hosted by Syncfusion are used. For production or development, it is strongly recommended to configure your own web services for:
 - **Security:** Keep files and data within your infrastructure.

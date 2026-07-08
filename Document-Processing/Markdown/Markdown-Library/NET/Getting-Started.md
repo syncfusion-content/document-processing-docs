@@ -25,7 +25,12 @@ This assembly contains the core features required for creating, reading, and man
 </tbody>
 </table>
 
+N> 1. Syncfusion<sup>&reg;</sup> components are available in [nuget.org](https://www.nuget.org/)
+N> 2. Starting with v34.x.x, if you reference Syncfusion® assemblies from trial setup or from the NuGet feed, you also have to add “Syncfusion.Licensing” assembly reference and include a license key in your projects. Please refer to this link to know about registering Syncfusion® license key in your application to use our components.
+
 Include the following namespace in your .cs or .vb code as shown below.
+
+N> Refer to the appropriate tabs in the code snippets section: ***C#*** for ASP.NET Core, Blazor, ASP.NET MVC, UWP, .NET MAUI, WinUI, WinForms and WPF; ***VB.NET*** for VB.NET applications.
 
 {% tabs %}
 
@@ -270,3 +275,5 @@ markdownDocument.Dispose()
 The resultant Markdown document looks as follows.
 
 ![Creating a new Word document from scratch with basic elements](GettingStarted_images/GettingStarted_Output1.png)
+
+N> Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the `.NET Markdown Library` page.

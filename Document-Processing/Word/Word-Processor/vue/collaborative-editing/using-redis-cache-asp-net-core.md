@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Collaborative editing in Vue DOCX Editor
 
-Syncfusion® Vue DOCX Editor (Document Editor) supports collaborative editing which Allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made
+Vue DOCX Editor (Document Editor) supports collaborative editing which Allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made
 
 ## Prerequisites
 
-The following are needed to enable collaborative editing in Document Editor.
+ [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor).
 
 - SignalR
 - Redis

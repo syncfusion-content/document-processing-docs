@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Change the cursor color in document editor in Angular Document editor component
 
-Document Editor default cursor color is black. The user can change the color by overriding the css property using class name. The Document editor cursor css have a class named `e-de-blink-cursor`.
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) default cursor color is black. The user can change the color by overriding the css property using class name. The Document editor cursor css have a class named `e-de-blink-cursor`.
 
 Please refer the below code snippet to change the cursor color to red.
 

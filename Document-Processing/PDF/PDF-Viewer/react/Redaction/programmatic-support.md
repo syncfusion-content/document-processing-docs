@@ -11,7 +11,7 @@ documentation: ug
 
 ## Overview
 
-This guide shows how to add, edit, delete, mark full pages, and apply redaction annotations programmatically in the Syncfusion React PDF Viewer. 
+This guide shows how to add, edit, delete, mark full pages, and apply redaction annotations programmatically in the React PDF Viewer. 
 
 **Outcome**: You will have working code to control redactions from UI buttons and to set default redaction properties.
 

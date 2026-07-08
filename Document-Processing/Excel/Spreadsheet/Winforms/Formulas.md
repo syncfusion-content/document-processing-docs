@@ -9,7 +9,7 @@ documentation: ug
 
 # Formulas in Windows Forms Spreadsheet
 
-Spreadsheet calculation engine offers automated calculation over a formula, expression, or cross sheet references. Spreadsheet calculation engine is preloaded with 409 formulas covering a broad range of business functions.
+[Winforms Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/winforms-spreadsheet-editor) calculation engine offers automated calculation over a formula, expression, or cross sheet references. Spreadsheet calculation engine is preloaded with 409 formulas covering a broad range of business functions.
 
 ## Adding formula into cell
 

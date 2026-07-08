@@ -9,7 +9,7 @@ documentation: ug
 
 # Formulas in React Spreadsheet component
 
-The Syncfusion React Spreadsheet component supports formulas, allowing you to perform calculations on worksheet data. Formulas can reference cells from the same sheet or from different sheets, enabling dynamic and flexible data analysis.
+The [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component supports formulas, allowing you to perform calculations on worksheet data. Formulas can reference cells from the same sheet or from different sheets, enabling dynamic and flexible data analysis.
 
 - **[Formula Property](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cell#formula)**: Set a formula or expression for a cell at initial load using the `formula` property.
 - **Data Binding**: Assign formulas or expressions to cells through data binding.
@@ -22,7 +22,7 @@ Formulas in the Spreadsheet component are automatically recalculated whenever re
 
 ## Formula Features Overview
 
-The React Spreadsheet component provides a variety of features for working with formulas and calculations. Below is a quick overview of each feature, with links to their respective documentation sections:
+The React Spreadsheet Editor component provides a variety of features for working with formulas and calculations. Below is a quick overview of each feature, with links to their respective documentation sections:
 
 - **[Built-in Formulas](./formula-and-calculation/built-in-formulas)**: Use a wide range of standard formulas for common calculations.
 - **[Custom Formula Creation](./formula-and-calculation/create-custom-formulas)**: Define your own formulas to meet specific calculation needs.
@@ -34,7 +34,7 @@ The React Spreadsheet component provides a variety of features for working with 
 
 ## Note
 
-You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
+You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
 
 ## See Also
 

@@ -321,7 +321,6 @@ public Startup(IConfiguration configuration, IWebHostEnvironment env)
 {% endhighlight %}
 {% endtabs %}
 
-
 ### Web API for word-by-word spell check 
 
 This Web API performs spell checking word by word and returns a JSON response containing information about error words and suggestions, if any. By default, word-by-word spell checking is performed in the Document Editor when spell check is enabled on the client side.
@@ -399,7 +398,7 @@ public class SpellCheckJsonData
 {% endhighlight %}
 {% endtabs %}
 
->N You can find the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) then configure the dictionary set up  to make use for spell check or use the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) to host your own web service.
+N> You can find the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) then configure the dictionary set up  to make use for spell check or use the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) to host your own web service.
 
 ## Save as file formats other than SFDT and DOCX
 
@@ -559,4 +558,4 @@ The following example code illustrates how to write a Web API for export.
     }
 ```
 
->N[View ASP.NET Core Web API sample in GitHub](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices/tree/master/ASP.NET%20Core).
+N> [View ASP.NET Core Web API sample in GitHub](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices/tree/master/ASP.NET%20Core).

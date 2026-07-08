@@ -9,7 +9,7 @@ documentation: ug
 
 # Why Do I Get the Unsupported File Warning When Opening a Document ?
 
-If the message “The file format you have selected isn’t supported. Please choose a valid format.” appears when opening a document in the Document Editor, it generally indicates that the file is not provided in a supported format for the current workflow. Here are some common reasons include:
+If the message “The file format you have selected isn’t supported. Please choose a valid format.” appears when opening a document in the [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor), it generally indicates that the file is not provided in a supported format for the current workflow. Here are some common reasons include:
 1.	Unsupported File Format: The document you are trying to open might be in a format that the Document Editor does not support. Ensure you are using a supported format, such as SFDT.
 2.	Corrupted Document: The document file might be corrupted or improperly formatted. Try opening a different document to see if the issue persists.
 To avoid this warning, always use the recommended document formats and features supported by the Document Editor. 

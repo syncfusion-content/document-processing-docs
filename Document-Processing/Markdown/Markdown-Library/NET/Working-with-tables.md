@@ -22,6 +22,8 @@ You can add a table to a `MarkdownDocument` by using the `AddTable` method. The 
 
 The following code example demonstrates how to create a table 
 
+N> Refer to the appropriate tabs in the code snippets section: ***C#*** for ASP.NET Core, Blazor, ASP.NET MVC, UWP, .NET MAUI, WinUI, WinForms and WPF; ***VB.NET*** for VB.NET applications.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}

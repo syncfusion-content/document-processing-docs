@@ -202,7 +202,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Editable ranges
 
-An **editable range** is a portion of a Word document that allows editing even when the document is protected. In the Syncfusion .NET Word library (DocIO), editable ranges are represented using the **EditableRange** class. You can define these ranges programmatically to allow user edits within protected documents.
+An **editable range** is a portion of a Word document that allows editing even when the document is protected. In the [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO), editable ranges are represented using the **EditableRange** class. You can define these ranges programmatically to allow user edits within protected documents.
 
 ### Add an editable range
 
@@ -849,5 +849,5 @@ N> 2. The **SingleUser** and **EditorGroup** properties cannot be set simultaneo
 
 ## Online Demo
 
-* Explore how to encrypt and decrypt the Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/encryptanddecrypt#/tailwind).  
-* See how to protect the Word document from editing using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/documentprotection#/tailwind).
+* Explore how to encrypt and decrypt the Word document using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/encryptanddecrypt#/tailwind).  
+* See how to protect the Word document from editing using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/documentprotection#/tailwind).

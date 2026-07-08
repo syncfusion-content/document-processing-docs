@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert PowerPoint to Image in ASP.NET MVC
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to image in ASP.NET MVC**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to image in ASP.NET MVC**.
 
 ## Steps to convert PowerPoint to Image programmatically
 
@@ -50,7 +50,7 @@ Step 5: A default action method named **Index** will be present in HomeControlle
 Step 6: Add a new button in the Index.cshtml as shown below.
 
 {% tabs %}
-{% highlight HTML %}
+{% highlight cshtml tabtitle="CSHTML" %}
 
 @{
     Html.BeginForm("ConvertPPTXtoImage", "Home", FormMethod.Get);
@@ -168,7 +168,7 @@ Step 4: A default action method named **Index** will be present in HomeControlle
 Step 5: Add a new button in the Index.cshtml as shown below.
 
 {% tabs %}
-{% highlight HTML %}
+{% highlight cshtml tabtitle="CSHTML" %}
 
 @{
     Html.BeginForm("ConvertPPTXtoImage", "Home", FormMethod.Get);
@@ -238,4 +238,4 @@ By executing the program, you will get the **image** as follows.
 
 {% endtabcontents %}
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 

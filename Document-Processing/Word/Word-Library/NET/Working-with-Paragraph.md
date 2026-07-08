@@ -1681,9 +1681,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to apply built-in and custom styles to the contents of the Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/styles#/tailwind).
-* See how to create a Word document with right-to-left language text using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/rtl#/tailwind).
-* See how to insert breaks to the Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/insertbreak#/tailwind).
+* Explore how to apply built-in and custom styles to the contents of the Word document using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/styles#/tailwind).
+* See how to create a Word document with right-to-left language text using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/rtl#/tailwind).
+* See how to insert breaks to the Word document using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/insertbreak#/tailwind).
 
 ## See Also
 

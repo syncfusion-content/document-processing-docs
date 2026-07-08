@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Workbook Operations in WPF Spreadsheet control | Syncfusion®
-canonical_url: "https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor"
 description: Learn how to create, open, and save Excel workbooks, as well as how to display charts and sparklines in Syncfusion® WPF Spreadsheet (SfSpreadsheet).
 platform: document-processing
 control: SfSpreadsheet
@@ -75,3 +74,5 @@ spreadsheet.SaveAs();
 {% endhighlight %}
 {% endtabs %}
 
+
+N> Looking for the full WPF Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor) page.

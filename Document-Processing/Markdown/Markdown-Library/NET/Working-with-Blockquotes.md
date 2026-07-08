@@ -14,6 +14,8 @@ Blockquotes are used to highlight quoted text, notes, warnings, or other content
 
 The following code example demonstrates how to add a simple blockquote to a Markdown document.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C#*** for ASP.NET Core, Blazor, ASP.NET MVC, UWP, .NET MAUI, WinUI, WinForms and WPF; ***VB.NET*** for VB.NET applications.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}

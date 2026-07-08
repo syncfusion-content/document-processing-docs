@@ -10,7 +10,7 @@ keywords: styles
 # Document Styles in WPF RichTextBox (SfRichTextBoxAdv)
 
 A style is a predefined set of table, numbering, paragraph, and character formatting properties that can be applied to regions within a document.
-In RichTextBoxAdv, styles are created and added to a document programmatically or using the built-in Styles dialog.
+In [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor), styles are created and added to a document programmatically or using the built-in Styles dialog.
 
 A style in a document should have the following properties:
 ### Name
@@ -133,4 +133,4 @@ The following code example explains how to clear the formatting of text through 
 {% endhighlight %}
 {% endtabs %}
 
-N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/wpf-controls/richtextbox) feature tour page for its groundbreaking feature representations.You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to knows how to render and configure the editing tools.
+N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations.You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to knows how to render and configure the editing tools.

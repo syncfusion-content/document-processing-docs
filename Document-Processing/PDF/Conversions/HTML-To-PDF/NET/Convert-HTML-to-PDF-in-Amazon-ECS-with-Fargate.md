@@ -25,7 +25,8 @@ Step 3: Install the [Syncfusion.HtmlToPdfConverter.Net.Linux](https://www.nuget.
 
 Step 4: Include the following commands in the Docker file to install the dependent packages in the docker container. 
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight dockerfile %}
 
 RUN apt-get update && \
 apt-get install -yq --no-install-recommends \ 
@@ -36,11 +37,13 @@ libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss
 libnss3 libgbm1
 
 {% endhighlight %}
+{% endtabs %}
 
 ![AWS ECS Step4](htmlconversion_images/AWS_ECS_5.png)
 
 Step 5: A default controller named **HomeController.cs** gets added to create the ASP.NET Core MVC project. Include the following namespaces in that HomeController.cs file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Pdf;
@@ -48,10 +51,12 @@ using Syncfusion.HtmlConverter;
 using System.IO;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: Add a new button in **index.cshtml** as follows.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight CSHTML %}
 
 @{
     Html.BeginForm("BlinkToPDF", "Home", FormMethod.Get);
@@ -68,9 +73,11 @@ Step 6: Add a new button in **index.cshtml** as follows.
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 7: Add a new action method named BlinkToPDF in HomeController.cs and include the following code example to convert HTML to PDF document using the Convert method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class. The HTML content will be scaled based on the given [ViewPortSize](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_ViewPortSize) property of the [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public IActionResult BlinkToPDF()
@@ -94,6 +101,7 @@ public IActionResult BlinkToPDF()
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 N> Starting from **version 29.2.4**, it is no longer necessary to manually add the following command-line arguments when using the Blink rendering engine:
 N> ```csharp

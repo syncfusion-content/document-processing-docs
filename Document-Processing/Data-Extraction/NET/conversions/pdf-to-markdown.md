@@ -267,7 +267,6 @@ static void SaveImage(object sender, MdImageNodeVisitedEventArgs args)
 
 {% endtabs %}
 
-
 ## PDF to Markdown Preservation Mapping
 
 This section explains how common PDF elements are converted and preserved in Markdown format, ensuring that document structure and formatting remain consistent during the PDF to Markdown conversion process.

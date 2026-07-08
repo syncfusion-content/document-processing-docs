@@ -10,7 +10,7 @@ documentation: UG
 
 Optical Character Recognition (OCR) is a technology that converts scanned paper documents from PDF files or images into searchable and editable data.
 
-The [Syncfusion OCR processor library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/ocr-process) has extended support to process OCR on scanned PDF documents and other scanned images in the .NET Core platform with the help of the [Tesseract](https://github.com/tesseract-ocr/tesseract) OCR engine. 
+The [.NET OCR processor library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/ocr-process) has extended support to process OCR on scanned PDF documents and other scanned images in the .NET Core platform with the help of the [Tesseract](https://github.com/tesseract-ocr/tesseract) OCR engine. 
 
 ## Steps to perform OCR on a PDF document programmatically
 

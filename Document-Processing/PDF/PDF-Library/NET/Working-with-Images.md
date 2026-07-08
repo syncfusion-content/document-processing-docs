@@ -710,36 +710,36 @@ Imports Syncfusion.Pdf.Graphics
 
 ' Create a new PDF document
 Using document As New PdfDocument()
-' Add a page to the document
-Dim page As PdfPage = document.Pages.Add()
+    ' Add a page to the document
+    Dim page As PdfPage = document.Pages.Add()
 
-' Get the graphics object for the page
-Dim graphics As PdfGraphics = page.Graphics
+    ' Get the graphics object for the page
+    Dim graphics As PdfGraphics = page.Graphics
 
-' Open the image file as a stream
-Using imageStream As New FileStream(Path.GetFullPath("Input.png"), FileMode.Open, FileAccess.Read)
-' Load the image from the stream
-Dim image As New PdfBitmap(imageStream)
+    ' Open the image file as a stream
+    Using imageStream As New FileStream(Path.GetFullPath("Input.png"), FileMode.Open, FileAccess.Read)
+    ' Load the image from the stream
+    Dim image As New PdfBitmap(imageStream)
 
-' Save the current graphics state (to restore later)
-Dim state As PdfGraphicsState = graphics.Save()
+    ' Save the current graphics state (to restore later)
+    Dim state As PdfGraphicsState = graphics.Save()
 
-' Define a rectangular clipping region
-Dim clipRect As New RectangleF(50, 50, 200, 100)
-graphics.SetClip(clipRect)
+    ' Define a rectangular clipping region
+    Dim clipRect As New RectangleF(50, 50, 200, 100)
+    graphics.SetClip(clipRect)
 
-' Draw the image — only the part within the clipping region will be visible
-graphics.DrawImage(image, New RectangleF(40, 60, 150, 80))
+    ' Draw the image — only the part within the clipping region will be visible
+    graphics.DrawImage(image, New RectangleF(40, 60, 150, 80))
 
-' Restore the graphics state to remove the clipping region
-graphics.Restore(state)
+    ' Restore the graphics state to remove the clipping region
+    graphics.Restore(state)
 
-' Draw the image again — this time the full image will be visible
-graphics.DrawImage(image, New RectangleF(60, 160, 150, 80))
-End Using
+    ' Draw the image again — this time the full image will be visible
+    graphics.DrawImage(image, New RectangleF(60, 160, 150, 80))
+    End Using
 
-' Save the PDF document
-document.Save("Output.pdf")
+    ' Save the PDF document
+    document.Save("Output.pdf")
 End Using
 
 {% endhighlight %}
@@ -1061,12 +1061,11 @@ int frameCount = tiffImage.FrameCount;
 //Access each frame and draw into the page
 for (int i = 0; i < frameCount; i++)
 {
-PdfPage page = document.Pages.Add();
-PdfGraphics graphics = page.Graphics;
-tiffImage.ActiveFrame = i;
-graphics.DrawImage(tiffImage, 0, 0, page.GetClientSize().Width, page.GetClientSize().Height);
+    PdfPage page = document.Pages.Add();
+    PdfGraphics graphics = page.Graphics;
+    tiffImage.ActiveFrame = i;
+    graphics.DrawImage(tiffImage, 0, 0, page.GetClientSize().Width, page.GetClientSize().Height);
 }
-
 //Save and close the document
 document.Save("Sample.pdf");
 document.Close(true);
