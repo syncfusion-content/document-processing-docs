@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## How to open a document from URL in Angular Document Editor
 
-In this article, we are going to see how to open a document from URL in DocumentEditor
+In this article, we are going to see how to open a document from URL in [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor).
 
 please refer below example for client-side code
 

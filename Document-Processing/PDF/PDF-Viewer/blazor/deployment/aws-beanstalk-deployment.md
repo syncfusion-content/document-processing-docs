@@ -72,11 +72,11 @@ Add the following stylesheet and script to the head section of the **~/Pages/_Ho
 {% highlight cshtml hl_lines="3 7" %}
 
 <head>
-    <!-- Syncfusion Blazor PDF Viewer control's theme style sheet -->
+    <!-- Blazor PDF Viewer control's theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 </head>
 <body>
-    <!-- Syncfusion Blazor PDF Viewer control's scripts -->
+    <!-- Blazor PDF Viewer control's scripts -->
     <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
 </body>
 
@@ -85,7 +85,7 @@ Add the following stylesheet and script to the head section of the **~/Pages/_Ho
 
 ## Adding Blazor PDF Viewer Component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer (Next-Gen) component in the **~/Pages/Index.razor** file.
+Add the Blazor PDF Viewer (Next-Gen) component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}

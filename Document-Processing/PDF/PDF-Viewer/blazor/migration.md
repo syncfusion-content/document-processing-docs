@@ -83,11 +83,11 @@ N> The same script file is used for both `Server application` and `WebAssembly a
 {% highlight html tabtitle="(~/Layout.cshtml/Host.cshtml)" hl_lines="7" %}
 
 <head>
-    <!-- Syncfusion Blazor PDF Viewer controls theme style sheet -->
+    <!-- Blazor PDF Viewer controls theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 </head>
 <body>
-    <!-- Syncfusion Blazor PDF Viewer controls scripts -->
+    <!-- Blazor PDF Viewer controls scripts -->
     <script src="_content/Syncfusion.Blazor.PdfViewer/scripts/syncfusion-blazor-pdfviewer.min.js" type="text/javascript"></script>
 </body>
 
@@ -104,11 +104,11 @@ N> The same script file is used for both `Server application` and `WebAssembly a
 {% highlight html tabtitle="(~/Layout.cshtml/Host.cshtml)" hl_lines="7" %}
 
 <head>
-    <!-- Syncfusion Blazor SfPdfViewer controls theme style sheet -->
+    <!-- Blazor SfPdfViewer controls theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 </head>
 <body>
-    <!-- Syncfusion Blazor SfPdfViewer controls scripts -->
+    <!-- Blazor SfPdfViewer controls scripts -->
     <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
 </body>
 

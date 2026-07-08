@@ -218,4 +218,4 @@ This section explains the rationale behind the recommendations and common pitfal
 
 ### Reference
 
-* [Theme Studio for Syncfusion<sup style="font-size:70%">&reg;</sup> React components](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio)
+* [Theme Studio for React components](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio)

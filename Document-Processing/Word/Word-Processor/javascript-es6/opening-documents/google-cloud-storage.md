@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Open document from Google Cloud Storage in JavaScript (ES6) Document editor
 
-To load a document from Google Cloud Storage in a Document editor, you can follow the steps below
+To load a document from Google Cloud Storage in a [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor), you can follow the steps below
 
  
 

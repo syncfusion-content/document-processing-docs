@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Unsupported Features in Vue DOCX Editor
 
-This section describes the unsupported elements in Syncfusion® Vue DOCX Editor (Document Editor) 
+This section describes the unsupported elements in [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) 
 
 ## Document formatting
 

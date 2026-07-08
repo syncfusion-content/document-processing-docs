@@ -78,6 +78,7 @@ You can quickly deploy it to your infrastructure via [NuGet](https://www.nuget.o
           <li>Conditional formatting</li>
           <li>Data validation</li>
           <li>Pivot tables</li>
+          <li>Markdown import or export</li>
           <li>Encryption &amp; protection</li>
           <li>Worksheet management</li>
           <li>Conversion to image, CSV, HTML and JSON</li>
@@ -93,6 +94,7 @@ You can quickly deploy it to your infrastructure via [NuGet](https://www.nuget.o
           <li>Text extraction</li>
           <li>Find &amp; replace</li>
           <li>Merge or split</li>
+          <li>Markdown import or export</li>
           <li>Encryption</li>
           <li>Write protection</li>
           <li>Export as image</li>

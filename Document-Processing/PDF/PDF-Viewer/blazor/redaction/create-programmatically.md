@@ -202,7 +202,7 @@ The following example shows how to set default properties for redaction annotati
 ```cshtml
 @* 
     This component demonstrates how to configure default redaction annotation settings 
-    in the Syncfusion Blazor PDF Viewer.
+    in the Blazor PDF Viewer.
 *@
 <SfPdfViewer2 @ref="SfPdfViewer2" DocumentPath="@DocumentPath" Height="800px" Width="100%">
     <PdfViewerRedactionSettings OverlayText="Confidential" 

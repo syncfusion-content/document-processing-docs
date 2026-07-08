@@ -9,7 +9,7 @@ documentation: ug
 
 # PDF form field flags in JavaScript PDF Viewer
 
-The Syncfusion **JavaScript PDF Viewer** allows you to control how users interact with form fields and how those fields behave during validation and printing by applying **form field flags**. These flags define whether a form field can be modified, whether it is mandatory, and whether it appears in printed output.
+The **JavaScript PDF Viewer** allows you to control how users interact with form fields and how those fields behave during validation and printing by applying **form field flags**. These flags define whether a form field can be modified, whether it is mandatory, and whether it appears in printed output.
 
 This topic explains:
 - [Supported form field flags](#supported-pdf-form-field-flags)

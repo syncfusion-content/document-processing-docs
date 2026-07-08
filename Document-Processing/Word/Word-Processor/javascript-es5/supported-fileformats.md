@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Supported File Formats in JavaScript (ES5) DOCX Editor
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript (ES5) DOCX Editor (Document Editor) supports a wide range of Microsoft Word and other document formats for opening and exporting, with both client-side and server-side capabilities.
+JavaScript (ES5) DOCX Editor (Document Editor) supports a wide range of Microsoft Word and other document formats for opening and exporting, with both client-side and server-side capabilities.
 
 ## Supported File Formats
 

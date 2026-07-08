@@ -7,19 +7,19 @@ documentation: ug
 control: PDF Viewer
 ---
 
-# Migrating from Nutrient Web SDK to Syncfusion React PDF Viewer
+# Migrating from Nutrient Web SDK to React PDF Viewer
 
-This guide helps you migrate applications built using [Nutrient Web SDK](https://www.nutrient.io/sdk/web/getting-started/react-vite/) (formerly PSPDFKit Web SDK) to the [Syncfusion React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started). It outlines architectural differences, feature mapping, and required changes in a React-based application.
+This guide helps you migrate applications built using [Nutrient Web SDK](https://www.nutrient.io/sdk/web/getting-started/react-vite/) (formerly PSPDFKit Web SDK) to the [React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started). It outlines architectural differences, feature mapping, and required changes in a React-based application.
 
 ## Overview
 
 Nutrient Web SDK (PSPDFKit) provides a powerful Web SDK for PDF viewing and editing, typically integrated via an SDK initialization model.
 
-Syncfusion React PDF Viewer offers a **declarative React component** with built-in UI, annotations, form handling, and optimized performance, without requiring external runtime dependencies or cloud services.
+React PDF Viewer offers a **declarative React component** with built-in UI, annotations, form handling, and optimized performance, without requiring external runtime dependencies or cloud services.
 
 ## Architecture notes
 
-This guide focuses on replacing a Nutrient/PSPDFKit SDK integration with a Syncfusion React PDF Viewer component. Important migration considerations include the integration pattern (imperative SDK mounts vs. declarative React component), how UI/tooling is provided (SDK-provided UI vs. injected services), and how annotations and form workflows are persisted and handled. The step-by-step instructions below are designed to help migrate code, event handlers, and persistence workflows to the `PdfViewerComponent`.
+This guide focuses on replacing a Nutrient/PSPDFKit SDK integration with a React PDF Viewer component. Important migration considerations include the integration pattern (imperative SDK mounts vs. declarative React component), how UI/tooling is provided (SDK-provided UI vs. injected services), and how annotations and form workflows are persisted and handled. The step-by-step instructions below are designed to help migrate code, event handlers, and persistence workflows to the `PdfViewerComponent`.
 
 ## Installation
 
@@ -35,7 +35,7 @@ The Nutrient Web SDK can be used via CDN or installed as a package. The CDN expo
 npm install @nutrient-sdk/viewer
 ```
 
-### Syncfusion React PDF Viewer
+### React PDF Viewer
 
 ```bash
 npm install @syncfusion/ej2-react-pdfviewer
@@ -81,7 +81,7 @@ export default App;
 {% endtabs %}
 
 
-### Syncfusion React PDF Viewer
+### React PDF Viewer
 
 {% tabs %}
 {% highlight js tabtitle="Syncfusion" %}
@@ -148,7 +148,7 @@ instance.addEventListener('documentLoaded', () => {
 
 ### Syncfusion Viewer
 
-Check [Syncfusion Events Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/events#documentload) to know more about event handling in Syncfusion React PDF Viewer.
+Check [Syncfusion Events Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/events#documentload) to know more about event handling in React PDF Viewer.
 
 ```js
 <PdfViewerComponent
@@ -239,7 +239,7 @@ root.render(<App />);
 
 ## API mapping: Nutrient → Syncfusion
 
-| Nutrient Web SDK | Syncfusion React PDF Viewer |
+| Nutrient Web SDK | React PDF Viewer |
 |---|---|
 | `NutrientViewer.load({ container, document })` | Use `<PdfViewerComponent documentPath="..." />` or `load()` for programmatic loads. |
 | `NutrientViewer.unload(container)` | `unload()` / component unmount; call `viewerRef.current.unload()` if using ref API. |
@@ -260,4 +260,4 @@ root.render(<App />);
 ## See Also
 
 - [Nutrient Web SDK (PSPDFKit) getting started](https://www.nutrient.io/sdk/web/getting-started/react-vite)
-- [Syncfusion React PDF Viewer overview & getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started-overview)
+- [React PDF Viewer overview & getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started-overview)

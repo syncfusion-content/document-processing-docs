@@ -16,7 +16,7 @@ Filling PDF Forms in WPF PDF Viewer enables efficient entry and updating of form
 
 ## Fill PDF forms through the User Interface
 
-The Syncfusion WPF PDF Viewer enables PDF form fields to be filled directly through the built‑in user interface without requiring any code. Form fields can be selected and populated by entering text or choosing values based on the field type, providing a smooth and interactive form‑filling experience.
+The WPF PDF Viewer enables PDF form fields to be filled directly through the built‑in user interface without requiring any code. Form fields can be selected and populated by entering text or choosing values based on the field type, providing a smooth and interactive form‑filling experience.
 
 ![Form Filling](./images/wpf-pdf-viewer-form-filling.png)
 

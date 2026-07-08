@@ -462,28 +462,76 @@ using (WordDocument document = new WordDocument(Path.GetFullPath(@"Data/Input.do
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Open an existing Word document.
-using (WordDocument document = new WordDocument("Input.docx", FormatType.Docx))
+using (WordDocument document = new WordDocument("Input.docx"))
 {
     //Set the encoding values.
     document.SaveOptions.MarkdownSaveOptions.Encoding = Encoding.ASCII;
     //Save the document as a Markdown file.
-    document.Save("WordtoMd.md", FormatType.Markdown);
+    document.Save("WordtoMd.md");
 }
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Open an existing Word document.
-Using document As WordDocument = New WordDocument("Input.docx", FormatType.Docx)
+Using document As WordDocument = New WordDocument("Input.docx")
     'Set the encoding values. 
     document.SaveOptions.MarkdownSaveOptions.Encoding = Encoding.ASCII
     'Save the document as a Markdown file.
-    document.Save("WordtoMd.md", FormatType.Markdown)
+    document.Save("WordtoMd.md")
 End Using
 {% endhighlight %}
 
 {% endtabs %}
 
 N> Set the encoding value before saving the document as per the above code example.
+
+## Get Markdown document
+
+Convert an existing Word document to a `MarkdownDocument` instance using the `GetMarkdownDocument` API. This allows you to access and manipulate the Markdown DOM before saving or further processing.
+
+The following code example shows how to convert a Word document to a Markdown document instance.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+// Open an existing Word document.
+using (WordDocument document = new WordDocument(Path.GetFullPath(@"Data/Input.docx")))
+{
+    // Convert the Word document to Markdown.
+    MarkdownDocument markdownDocument = document.GetMarkdownDocument();
+    // Save or process the Markdown document as needed.
+    markdownDocument.Save(Path.GetFullPath(@"Output/Output.md"));
+    // Dispose the Markdown document.
+    markdownDocument.Dispose();
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+// Open an existing Word document.
+using (WordDocument document = new WordDocument("Input.docx"))
+{
+    // Convert the Word document to Markdown.
+    MarkdownDocument markdownDocument = document.GetMarkdownDocument();
+    // Save or process the Markdown document as needed.
+    markdownDocument.Save("Output.md");
+    // Dispose the Markdown document.
+    markdownDocument.Dispose();
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Open an existing Word document.
+Using document As WordDocument = New WordDocument("Input.docx")
+    'Convert the Word document to Markdown.
+    Dim markdownDocument As MarkdownDocument = document.GetMarkdownDocument()
+    'Save or process the Markdown document as needed.
+    markdownDocument.Save("Output.md")
+    'Dispose the Markdown document.
+    markdownDocument.Dispose()
+End Using
+{% endhighlight %}
+
+{% endtabs %}
 
 ## Supported Word document elements
 

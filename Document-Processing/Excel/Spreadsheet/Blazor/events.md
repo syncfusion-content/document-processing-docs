@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor Spreadsheet Component
 
-The Blazor Spreadsheet component provides various events that allow you to interact with the component and customize its behavior.
+The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component provides various events that allow you to interact with the component and customize its behavior.
 
 | Event Name | Description |
 |---|---|

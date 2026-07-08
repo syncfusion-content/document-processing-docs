@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## How to change the document view in DocumentEditor component
 
-Document Editor allows you to change the view to web layout and print using the [`layoutType`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#layouttype) property with the supported [`LayoutType`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/layoutType/).
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) allows you to change the view to web layout and print using the [`layoutType`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#layouttype) property with the supported [`LayoutType`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/layoutType/).
 
 ```
 <ejs-documenteditor :layoutType='Continuous' id='container'></ejs-documenteditor>

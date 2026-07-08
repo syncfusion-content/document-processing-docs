@@ -13,7 +13,7 @@ Speed up your document automation using these example prompts for Syncfusion Doc
 
 ## Document Processing Prompts
 
-You can try the following prompts in this [demo](https://github.com/syncfusion/document-sdk-ai-agent-tools/tree/master/Examples/WPF).
+You can try the following prompts in this [demo](https://document.syncfusion.com/showcase/ai-agent-tools/).
 
 ### PDF
 

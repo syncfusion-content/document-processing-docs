@@ -8,7 +8,7 @@ keywords: spell-check
 ---
 # Spell Check in WPF RichTextBox (SfRichTextBoxAdv)
 
-The SfRichTextBoxAdv provides support for checking spelling mistakes in the rich text document content. It also supports enabling the following spell checking options.
+The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) provides support for checking spelling mistakes in the rich text document content. It also supports enabling the following spell checking options.
 
 * Ignore words in UPPERCASE.
 
@@ -119,4 +119,4 @@ The following code example demonstrates how to show the spelling pane in SfRichT
 ![WPF RichTextBox displays spellcheck option](SpellCheck_images/wpf-richtextbox-spellcheck-option.PNG)
 
 N> In order to enable spell checking functionality based on particular language, language pack for .NET Framework should be installed in the machine.
-You can refer to our [WPF RichTextBox](https://www.syncfusion.com/wpf-controls/richtextbox) feature tour page for its groundbreaking feature representations.You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to knows how to render and configure the editing tools.
+You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations.You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to knows how to render and configure the editing tools.
