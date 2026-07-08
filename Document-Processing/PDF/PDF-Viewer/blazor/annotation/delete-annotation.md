@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Remove annotations in Blazor PDF Viewer
+# Remove annotations in Blazor PDF Viewer Component
 
 You can remove annotations using the built-in UI or programmatically through the SfPdfViewer component. This page describes both approaches and applies to Blazor Server and Blazor WebAssembly hosts running on .NET 6.0 or later. The `SfPdfViewer2` component (introduced alongside `SfPdfViewer`) is used in the examples below.
 

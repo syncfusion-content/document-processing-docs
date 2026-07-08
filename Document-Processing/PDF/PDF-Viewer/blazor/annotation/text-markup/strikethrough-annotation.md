@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Strikethrough Annotation in Blazor SfPdfViewer2
+# Strikethrough Annotation in Blazor SfPdfViewer Component
 
 This guide explains how to **enable**, **apply**, **customize**, and **manage** *Strikethrough* text markup annotations in the Syncfusion **Blazor SfPdfViewer2** component.
 

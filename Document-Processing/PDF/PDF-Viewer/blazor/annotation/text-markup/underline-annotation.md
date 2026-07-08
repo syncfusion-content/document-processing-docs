@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Underline Annotation in Blazor SfPdfViewer2
+# Underline Annotation in Blazor SfPdfViewer Component
 
 This guide explains how to **enable**, **apply**, **customize**, and **manage** *Underline* text markup annotations in the Syncfusion **Blazor SfPdfViewer2** component.
 

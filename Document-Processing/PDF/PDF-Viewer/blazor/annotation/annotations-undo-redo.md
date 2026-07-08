@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Undo and Redo Annotations in Blazor SfPdfViewer2
+# Undo and Redo Annotations in Blazor SfPdfViewer Component
 
 The Blazor SfPdfViewer2 component supports undo and redo for annotations. Each annotation change is added to an internal history stack, and you can step backward and forward through that history using the keyboard, the built-in toolbar, or the component API. This feature is applies to all built-in annotations and form fields.
 

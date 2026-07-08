@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Annotation permissions in Blazor SfPdfViewer2
+# Annotation permissions in Blazor SfPdfViewer Component
 
 Use [PdfViewerAnnotationSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerAnnotationSettings.html) to configure default permission flags for all annotations in the Blazor SfPdfViewer2. Additionally, configure permissions for individual annotation types using their respective settings classes. These settings establish defaults for annotations created through the UI and programmatic flows.
 

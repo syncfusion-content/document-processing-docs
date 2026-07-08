@@ -7,7 +7,7 @@ control: SfPdfViewer2
 documentation: ug
 ---
 
-# Highlight Annotation in Blazor SfPdfViewer2
+# Highlight Annotation in Blazor SfPdfViewer Component
 
 This guide explains how to **enable**, **apply**, **customize**, and **manage** *Highlight* text markup annotations in the Syncfusion **Blazor SfPdfViewer2** component.
 

@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Custom data in annotations in Blazor SfPdfViewer2
+# Custom data in annotations in Blazor SfPdfViewer Component
 
 Annotations can include custom key-value data via the [`CustomData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerAnnotationSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerAnnotationSettings_CustomData) property. This is supported at two levels:
 

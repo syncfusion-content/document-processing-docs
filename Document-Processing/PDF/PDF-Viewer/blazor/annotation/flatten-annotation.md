@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Flatten annotations in Blazor SfPdfViewer2
+# Flatten annotations in Blazor SfPdfViewer Component
 
 Flattening takes the visual appearance of annotations and embeds them into each page's content stream. The visual result remains visible, but the annotation objects and interactive form field structures are removed, leaving only the rendered appearance. Once flattened, they can no longer be selected, edited, or filled.
 

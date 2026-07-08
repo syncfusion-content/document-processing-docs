@@ -7,13 +7,13 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Add area annotations in Blazor SfPdfViewer2 component
+# Add Area Annotations in Blazor SfPdfViewer Component
 
 Area is a measurement annotation used to calculate the surface of a closed region on a PDF page—ideal for engineering, construction, or design reviews.
 
 ![Area overview](../../images/blazor-pdfviewer-area-annotation.png)
 
-## Enable area measurement
+## Enable Area Measurement
 
 The SfPdfViewer component supports area measurement annotations by default. To enable the annotation toolbar and measurement functionality, simply add the SfPdfViewer component to your Blazor page:
 
@@ -70,7 +70,7 @@ Switch the viewer into Area mode from code by calling [`SetAnnotationModeAsync`]
 }
 ```
 
-#### Exit area mode
+#### Exit Area Mode
 
 Switch back to the default mode by calling [`SetAnnotationModeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SetAnnotationModeAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationType_) with annotation type `None`.
 
