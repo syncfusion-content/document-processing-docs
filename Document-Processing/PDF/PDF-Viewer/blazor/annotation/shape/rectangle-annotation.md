@@ -9,13 +9,28 @@ documentation: ug
 
 # Rectangle Annotation (Shape) in Blazor SfPdfViewer Component
 
-Rectangle annotations let users highlight regions, group content, or draw callout boxes on PDFs for reviews and markups. The Blazor SfPdfViewer allows you to add rectangles from the toolbar, customize appearance, edit/delete them in the UI, and export them with the document.
+Rectangle annotations let you highlight regions, group content, or draw callout boxes on PDFs for reviews and markups. The Blazor SfPdfViewer supports adding rectangles from the toolbar, customizing their appearance, editing or deleting them in the UI, and exporting them with the document.
 
 ![Rectangle overview](../../images/blazor-pdfviewer-rectangle-annot.png)
 
 ## Enable Rectangle Annotation in the Viewer
 
-Rectangle annotations are available by default in the Blazor SfPdfViewer component with the annotation toolbar enabled.
+Rectangle annotations are available by default in the Blazor SfPdfViewer component with the annotation toolbar enabled. The following example shows the minimum component setup:
+
+```cshtml
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfPdfViewer2 DocumentPath="@DocumentPath"
+              Width="100%"
+              Height="100%">
+</SfPdfViewer2>
+
+@code {
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+}
+```
+
+N> Ensure the sample PDF is placed in the `wwwroot/Data/` folder of your Blazor app, and that `SfPdfViewer2` is registered in `Program.cs`. Refer to the [Blazor getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started) for setup details.
 
 ## Add Rectangle Annotation
 
@@ -130,13 +145,11 @@ Configure default rectangle appearance (fill color, stroke color, thickness, opa
 - Drag any side/corner to resize; drag inside the shape to move it.
 - Edit **fill**, **stroke**, **thickness**, and **opacity** using the annotation toolbar.
 
-![Shape tools](../../images/blazor-pdfviewer-edit-fill-color.png)
-
-Use the annotation toolbar tools to modify:
-- **Edit fill Color** tool  
+Use the following annotation toolbar tools to modify:
+- **Edit Fill Color** tool  
 ![Edit fill color](../../images/blazor-pdfviewer-edit-fill-color.png)
 
-- **Edit stroke Color** tool
+- **Edit Stroke Color** tool
 ![Edit stroke color](../../images/blazor-pdfviewer-edit-shape-stroke-color.png)
 
 - **Edit Opacity** slider
@@ -189,7 +202,7 @@ See [**Delete Annotation**](../delete-annotation) for full behavior and workflow
 
 Use the [**Comments panel**](../comments) to add, view, and reply to threaded discussions linked to rectangle annotations. It provides a dedicated interface for collaboration and review within the PDF Viewer.
 
-## Set Properties While Adding Individual Annotations
+## Add Multiple Rectangle Annotations with Properties
 
 Set properties for individual rectangle annotations by passing values directly during [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_).
 
@@ -247,7 +260,21 @@ Set properties for individual rectangle annotations by passing values directly d
 
 ## Disable Rectangle Annotation
 
-Disable rectangle annotations programmatically or through component settings as needed by your application requirements.
+Disable rectangle annotations (along with all other shape annotations, such as Line, Arrow, Circle, and Polygon) using the [`EnableShapeAnnotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableShapeAnnotation) property.
+
+```cshtml
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfPdfViewer2 DocumentPath="@DocumentPath"
+              EnableShapeAnnotation="false"
+              Width="100%"
+              Height="100%">
+</SfPdfViewer2>
+
+@code {
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+}
+```
 
 ## Handle Rectangle Events
 

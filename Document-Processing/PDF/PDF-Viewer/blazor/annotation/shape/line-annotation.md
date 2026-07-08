@@ -9,7 +9,7 @@ documentation: ug
 
 # Line Annotation (Shape) in Blazor SfPdfViewer Component
 
-Line annotations allow users to draw straight connectors or callouts on PDFs for markup, review, diagrams, or measurement guides. They support customization of color, thickness, opacity, and arrowheads, and can be edited, resized, deleted, or exported along with the document.
+Line annotations let users draw straight connectors or callouts on PDFs for markup and review. They support customization of color, thickness, opacity, and arrowheads, and can be edited, resized, deleted, or exported along with the document.
 
 ![Line overview](../../images/blazor-pdfviewer-line-annot.png)
 
@@ -34,7 +34,7 @@ Line annotations are available by default in the Blazor SfPdfViewer component wi
 
 ### Add Line Annotation Using the Toolbar
 
-Line annotations can be added from the annotation toolbar:
+Add Line annotations from the annotation toolbar:
 
 1. Select **Edit Annotation** in the viewer toolbar to open the annotation toolbar.
 2. Select **Shape Annotation** to open the shape list.
@@ -108,7 +108,7 @@ Use the [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 ## Customize Line Appearance
 
-Configure default line appearance (stroke color, thickness, opacity) during control initialization using [LineSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_LineSettings). These settings apply when lines are created from the toolbar or programmatically.
+Configure default line appearance (stroke color, thickness, opacity, and arrowheads) during control initialization using [LineSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_LineSettings). These settings apply when lines are created from the toolbar or programmatically.
 
 ```cshtml
 @using Syncfusion.Blazor.SfPdfViewer
@@ -128,7 +128,9 @@ Configure default line appearance (stroke color, thickness, opacity) during cont
     {
         StrokeColor = "blue",
         Opacity = 0.6,
-        Thickness = 2
+        Thickness = 2,
+        LineHeadStart = LineHeadStyle.None,
+        LineHeadEnd = LineHeadStyle.Arrow
     };
 }
 ```
@@ -143,11 +145,8 @@ Configure default line appearance (stroke color, thickness, opacity) during cont
 - Drag endpoints to adjust length/angle.
 - Edit **stroke**, **thickness**, and **opacity** using the annotation toolbar.
 
-Use the annotation toolbar tools to modify:
-- **Edit fill Color** tool  
-![Edit fill color](../../images/blazor-pdfviewer-edit-fill-color.png)
-
-- **Edit stroke Color** tool
+Use the following annotation toolbar tools to modify:
+- **Edit Stroke Color** tool
 ![Edit stroke color](../../images/blazor-pdfviewer-edit-shape-stroke-color.png)
 
 - **Edit Opacity** slider
@@ -156,8 +155,10 @@ Use the annotation toolbar tools to modify:
 - **Edit Thickness** slider
 ![Edit thickness](../../images/blazor-pdfviewer-shape-thickness.png)
 
-- **Line Properties** dialog via **Right Click → Properties** to adjust line-specific properties.
+- **Line Properties** dialog via **Right Click → Properties** to adjust line-specific properties (for example, leader length, leader offset, and arrowhead styles).
 ![Line properties dialog](../../images/blazor-pdfviewer-edit-line-property.png)
+
+N> **Fill Color** is not available for Line annotations because lines do not render a fill.
 
 #### Edit Line Programmatically
 
@@ -255,7 +256,21 @@ Set properties for individual line annotations by passing values directly during
 
 ## Disable Line Annotation
 
-Disable line annotations programmatically or through component settings as needed by your application requirements.
+Disable line annotations (along with all other shape annotations, such as Rectangle, Arrow, Circle, and Polygon) using the [`EnableShapeAnnotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableShapeAnnotation) property.
+
+```cshtml
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfPdfViewer2 DocumentPath="@DocumentPath"
+              EnableShapeAnnotation="false"
+              Width="100%"
+              Height="100%">
+</SfPdfViewer2>
+
+@code {
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+}
+```
 
 ## Handle Line Events
 
@@ -266,7 +281,7 @@ For the full list of available events and their descriptions, see [**Annotation 
 
 The PDF Viewer supports exporting and importing annotations. For details on supported formats and workflows, see [**Export and Import annotations**](../import-export-annotation).
 
-## See also
+## See Also
 
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
 - [Comments Panel](../comments)

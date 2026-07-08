@@ -32,9 +32,10 @@ To enable Arrow annotations in the Blazor SfPdfViewer, configure the component w
 ## Add Arrow Annotation
 
 ### Add Arrow Annotation Using the Toolbar
-1. Open the **Annotation Toolbar**.
-2. Select **Shapes** → **Arrow**.
-3. Click and drag on the PDF page to draw the arrow.
+1. Click the **Edit Annotation** button in the SfPdfViewer toolbar. A secondary toolbar appears below it.
+2. Click the **Shapes Annotation** dropdown. A list of shape annotation types appears.
+3. Select **Arrow** to enter Arrow annotation mode.
+4. Click and drag on the PDF page to draw the arrow.
 
 ![Shape toolbar](../../images/blazor-pdfviewer-add-shape-in-toolbar.png)
 
@@ -93,7 +94,7 @@ Switch the viewer into arrow mode using `SetAnnotationModeAsync(AnnotationType.A
 ```
 
 ### Add Arrow Programmatically
-Use the [`AddAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) API to draw an arrow at a specific location (defined by two **VertexPoints**).
+Use the [`AddAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) API to draw an arrow at a specific location (defined by two **VertexPoints**). The arrowhead style can be configured with `LineHeadStart` and `LineHeadEnd`.
 
 ```cshtml
 
@@ -121,6 +122,8 @@ Use the [`AddAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.
         vertexPoints.Add(new VertexPoint() { X = 200, Y = 370 });
         vertexPoints.Add(new VertexPoint() { X = 350, Y = 370 });
         annotation.VertexPoints = vertexPoints;
+        annotation.LineHeadStart = LineHeadStyle.None;
+        annotation.LineHeadEnd = LineHeadStyle.Arrow;
         
         await viewer.AddAnnotationAsync(annotation);
     }
@@ -129,7 +132,7 @@ Use the [`AddAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.
 ```
 
 ## Customize Arrow Appearance
-Configure default arrow appearance (fill color, stroke color, thickness, opacity) using the [`ArrowSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ArrowSettings) property.
+Configure default arrow appearance (fill color, stroke color, thickness, opacity, and arrowheads) using the [`ArrowSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ArrowSettings) property.
 
 ```cshtml
 
@@ -151,7 +154,9 @@ Configure default arrow appearance (fill color, stroke color, thickness, opacity
         FillColor = "#ffff00",
         StrokeColor = "#0066ff",
         Thickness = 2,
-        Opacity = 0.9
+        Opacity = 0.9,
+        LineHeadStart = LineHeadStyle.None,
+        LineHeadEnd = LineHeadStyle.Arrow
     };
 }
 
@@ -225,13 +230,13 @@ Modify an existing Arrow programmatically using `EditAnnotationAsync()`.
 ### Delete Arrow
 
 The PDF Viewer supports deleting existing annotations through the UI and API.
-See [**Delete Annotation**](../delete-annotations) for full behavior and workflows.
+See [**Delete Annotation**](../delete-annotation) for full behavior and workflows.
 
 ### Comments
 
 Use the [**Comments panel**](../comments) to add, view, and reply to threaded discussions linked to arrow annotations. It provides a dedicated interface for collaboration and review within the PDF Viewer.
 
-## Set properties while adding Individual Annotation
+## Set Properties While Adding Individual Annotations
 
 Set properties for individual arrow annotations by passing values directly during [`AddAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_).
 
@@ -289,7 +294,7 @@ Set properties for individual arrow annotations by passing values directly durin
 
 ## Disable Arrow Annotation
 
-Disable shape annotations (Line, Arrow, Rectangle, Circle, Polygon) using the [`EnableShapeAnnotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableShapeAnnotation) property.
+Disable arrow annotations (along with all other shape annotations: Line, Rectangle, Circle, Polygon) using the [`EnableShapeAnnotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableShapeAnnotation) property.
 
 ```cshtml
 
@@ -313,7 +318,7 @@ The PDF viewer provides annotation life-cycle events that notify when Arrow anno
 For the full list of available events and their descriptions, see [**Annotation Events**](../events)
 
 ## Export and Import
-The PDF Viewer supports exporting and importing annotations. For details on supported formats and workflows, see [**Export and Import annotations**](../export-import-annotations).
+The PDF Viewer supports exporting and importing annotations. For details on supported formats and workflows, see [**Export and Import annotations**](../import-export-annotation).
 
 ## See Also
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)

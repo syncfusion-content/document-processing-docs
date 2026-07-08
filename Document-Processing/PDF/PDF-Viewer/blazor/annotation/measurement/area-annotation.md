@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Add Area Measurement Annotations in Blazor PDF Viewer | Syncfusion
-description: Learn how to enable, draw, customize, and manage Area measurement annotations in the Syncfusion Blazor SfPdfViewer.
+title: Add Area Annotations in Blazor PDF Viewer | Syncfusion
+description: Learn how to enable, draw, customize, and manage Area annotations in the Syncfusion Blazor SfPdfViewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Add Area Measurement Annotations in Blazor SfPdfViewer
+# Add area annotations in Blazor SfPdfViewer2 component
 
 Area is a measurement annotation used to calculate the surface of a closed region on a PDF page—ideal for engineering, construction, or design reviews.
 
 ![Area overview](../../images/blazor-pdfviewer-area-annotation.png)
 
-## Enable Area Measurement
+## Enable area measurement
 
 The SfPdfViewer component supports area measurement annotations by default. To enable the annotation toolbar and measurement functionality, simply add the SfPdfViewer component to your Blazor page:
 
@@ -34,18 +34,19 @@ The SfPdfViewer component supports area measurement annotations by default. To e
 
 ### Add Area Using the Toolbar
 
-1. Click the **Edit Annotation** button in the SfPdfViewer toolbar. A toolbar appears below it.
-2. Click the **measurement Annotation** dropdown button. A dropdown appears with measurement annotation types.
-3. Select **Area** to enable area measurement mode.
-4. Click points on the page to define the polygon; double-click to close and finalize the area.
+1. Click the **Edit Annotation** button in the SfPdfViewer toolbar. A secondary toolbar appears below it.
+2. Click the **Measurement Annotation** dropdown. A list of measurement annotation types appears.
+3. Select **Area** to enter Area measurement mode.
+4. Click on the page to place each vertex of the polygon.
+5. Double-click (or click the first vertex) to close and finalize the shape.
 
 ![Measurement Toolbar](../../images/blazor-pdfviewer-add-calibrate-in-toolbar.png)
 
 > **Tip:** If Pan mode is active, choosing a measurement tool switches the viewer into the appropriate interaction mode for a smoother workflow.
 
-### Enable Area Mode
+### Enable Area Mode Programmatically
 
-Programmatically switch the viewer into Area mode using `SetAnnotationModeAsync()`.
+Switch the viewer into Area mode from code by calling [`SetAnnotationModeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SetAnnotationModeAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationType_). The viewer must finish loading a document before this call returns successfully. Invoking the method before the [`DocumentLoaded`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentLoaded) event can throw or be ignored.
 
 ```cshtml
 @using Syncfusion.Blazor.SfPdfViewer
@@ -59,30 +60,34 @@ Programmatically switch the viewer into Area mode using `SetAnnotationModeAsync(
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async void OnClick(MouseEventArgs args)
+    private async Task OnClick(MouseEventArgs args)
     {
         await viewer.SetAnnotationModeAsync(AnnotationType.Area);
     }
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 ```
 
-#### Exit Area Mode
+#### Exit area mode
 
-Switch back to normal mode using:
+Switch back to the default mode by calling [`SetAnnotationModeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SetAnnotationModeAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationType_) with annotation type `None`.
 
 ```cshtml
-public async void ExitAreaMode()
-{
-    await viewer.SetAnnotationModeAsync(AnnotationType.None);
+@code {
+    private async Task ExitAreaMode()
+    {
+        await viewer.SetAnnotationModeAsync(AnnotationType.None);
+    }
 }
 ```
 
 ### Add Area Programmatically
 
-Use [`AddAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) to add an area measurement by providing **VertexPoints** for a closed region.
+Use [`AddAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) to add an Area measurement by providing **VertexPoints** for a closed region.
+
+A closed polygon must contain **at least three distinct vertices**, and the first and last points must match to close the shape.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -92,19 +97,22 @@ Use [`AddAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private SfPdfViewer2 Viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async void AddArea(MouseEventArgs args)
+    private async Task AddArea(MouseEventArgs args)
     {
         PdfAnnotation annotation = new PdfAnnotation();
         annotation.Type = AnnotationType.Area;
         annotation.PageNumber = 0;
-        List<VertexPoint> vertexPoints = new List<VertexPoint>();
-        vertexPoints.Add(new VertexPoint() { X = 200, Y = 500 });
-        vertexPoints.Add(new VertexPoint() { X = 288, Y = 499 });
-        vertexPoints.Add(new VertexPoint() { X = 289, Y = 553 });
-        vertexPoints.Add(new VertexPoint() { X = 200, Y = 500 });
+        List<VertexPoint> vertexPoints = new List<VertexPoint>
+        {
+            new VertexPoint() { X = 200, Y = 500 },
+            new VertexPoint() { X = 288, Y = 500 },
+            new VertexPoint() { X = 288, Y = 560 },
+            new VertexPoint() { X = 200, Y = 560 },
+            new VertexPoint() { X = 200, Y = 500 }
+        };
         annotation.VertexPoints = vertexPoints;
         await Viewer.AddAnnotationAsync(annotation);
     }
@@ -113,7 +121,7 @@ Use [`AddAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 ## Customize Area Appearance
 
-Configure default area settings such as **fill color**, **stroke color**, **thickness**, and **opacity** using [`AreaSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AreaSettings).
+Configure the default Area style — **fill color**, **stroke color**, **thickness**, and **opacity** — using the [`AreaSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AreaSettings) property.
 
 ```cshtml
 @using Syncfusion.Blazor.SfPdfViewer
@@ -126,47 +134,60 @@ Configure default area settings such as **fill color**, **stroke color**, **thic
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    PdfViewerAreaSettings AreaSettings = new PdfViewerAreaSettings
+    private PdfViewerAreaSettings AreaSettings = new PdfViewerAreaSettings
     {
         FillColor = "yellow",
         StrokeColor = "orange",
+        Thickness = 2,
         Opacity = 0.6
     };
 }
 ```
 
-## Manage Area (Move, Reshape, Edit, Delete)
+## Manage Area Annotations
 
-- **Move**: Drag inside the polygon to reposition it.
-- **Reshape**: Drag any vertex handle to adjust points and shape.
+### Move
+
+Drag inside the polygon to reposition the entire annotation on the page.
+
+### Reshape
+
+Drag any vertex handle to add, remove, or adjust the shape's points.
+
+```cshtml
+@code {
+    // Move an existing area annotation by updating its vertex coordinates.
+    private async Task MoveArea(PdfAnnotation annotation, int offsetX, int offsetY)
+    {
+        annotation.VertexPoints = annotation.VertexPoints
+            .Select(v => new VertexPoint { X = v.X + offsetX, Y = v.Y + offsetY })
+            .ToList();
+        await Viewer.EditAnnotationAsync(annotation);
+    }
+}
+```
 
 ### Edit Area
 
 #### Edit Area Appearance (UI)
 
-Use the annotation toolbar to modify:
-- **Fill Color** - Edit the fill color using the Edit Color tool
+Select the Area annotation first — the annotation toolbar appears below the main toolbar. Use it to change:
 
-![Editing Calibrate FillColor in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-fillcolor.png)
-
-- **Stroke Color** - Edit the stroke color using the Edit Stroke Color tool
-
-![Editing Calibrate StrokeColor in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-stroke-color.png)
-
-- **Thickness** - Edit the border thickness using the Edit Thickness tool
-
-![Editing Calibrate Thickness in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-thickness.png)
-
-- **Opacity** - Edit the opacity using the Edit Opacity tool
-
-![Editing Calibrate Opacity in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-opacity.png)
+- **Fill Color** — pick a new color with the Edit Color tool.
+  ![Editing Calibrate FillColor in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-fillcolor.png)
+- **Stroke Color** — change the border color with the Edit Stroke Color tool.
+  ![Editing Calibrate StrokeColor in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-stroke-color.png)
+- **Thickness** — adjust the border width with the Edit Thickness tool.
+  ![Editing Calibrate Thickness in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-thickness.png)
+- **Opacity** — change transparency with the Edit Opacity tool.
+  ![Editing Calibrate Opacity in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-opacity.png)
 
 #### Edit Area Programmatically
 
-Modify an existing area annotation programmatically using [`EditAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_).
+Modify an existing Area annotation programmatically using [`EditAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_). The example below expects `PDF_Succinctly.pdf` to already contain an Area annotation at index `0`; replace the document and index check with one that matches your data.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -176,61 +197,40 @@ Modify an existing area annotation programmatically using [`EditAnnotationAsync(
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/Area_Annotation.pdf";
+    private SfPdfViewer2 Viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async void EditArea(MouseEventArgs args)
+    private async Task EditArea(MouseEventArgs args)
     {
-        // Get annotation collection
+        // Get the annotations on the current document
         List<PdfAnnotation> annotationCollection = await Viewer.GetAnnotationsAsync();
-        // Select the annotation you want to edit
+
+        // Guard against an empty collection
+        if (annotationCollection == null || annotationCollection.Count == 0)
+        {
+            return;
+        }
+
+        // Select the first annotation (replace with your own selection logic)
         PdfAnnotation annotation = annotationCollection[0];
-        // Change the stroke color to blue
+
+        // Update the style
         annotation.StrokeColor = "#0000FF";
-        // Change the thickness to 2
         annotation.Thickness = 2;
-        // Change the fill color to yellow
         annotation.FillColor = "#FFFF00";
-        // Edit the area annotation
+        annotation.Opacity = 0.5;
+
+        // Apply the changes
         await Viewer.EditAnnotationAsync(annotation);
     }
 }
 ```
 
-### Delete Area Annotation
+For the full set of `PdfAnnotation` members, see the [PdfAnnotation API reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfAnnotation.html).
 
-The SfPdfViewer supports deleting existing annotations through both the UI and API. Use [`DeleteAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) to remove an annotation programmatically. For supported workflows and APIs, see [**Delete Annotation**](../delete-annotation).
+### Add Area Annotation Programmatically with Custom Properties
 
-## Set Default Properties During Initialization
-
-Apply defaults for Area using the [`AreaSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AreaSettings) property.
-
-```cshtml
-@using Syncfusion.Blazor.SfPdfViewer
-
-<SfPdfViewer2 @ref="@viewer"
-              DocumentPath="@DocumentPath"
-              AreaSettings="@AreaSettings"
-              Height="100%"
-              Width="100%">
-</SfPdfViewer2>
-
-@code {
-    SfPdfViewer2 viewer;
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-
-    PdfViewerAreaSettings AreaSettings = new PdfViewerAreaSettings
-    {
-        FillColor = "yellow",
-        StrokeColor = "orange",
-        Opacity = 0.6
-    };
-}
-```
-
-## Add Area Annotation with Custom Properties
-
-Set custom properties for individual area annotations when adding them programmatically:
+Override the default style for a single Area annotation by setting properties directly on the `PdfAnnotation` instance before adding it.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -240,20 +240,22 @@ Set custom properties for individual area annotations when adding them programma
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private SfPdfViewer2 Viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async void AddStyledArea(MouseEventArgs args)
+    private async Task AddStyledArea(MouseEventArgs args)
     {
         PdfAnnotation annotation = new PdfAnnotation();
         annotation.Type = AnnotationType.Area;
         annotation.PageNumber = 0;
-        List<VertexPoint> vertexPoints = new List<VertexPoint>();
-        vertexPoints.Add(new VertexPoint() { X = 210, Y = 510 });
-        vertexPoints.Add(new VertexPoint() { X = 300, Y = 510 });
-        vertexPoints.Add(new VertexPoint() { X = 305, Y = 560 });
-        vertexPoints.Add(new VertexPoint() { X = 210, Y = 510 });
-        annotation.VertexPoints = vertexPoints;
+        annotation.VertexPoints = new List<VertexPoint>
+        {
+            new VertexPoint() { X = 210, Y = 510 },
+            new VertexPoint() { X = 300, Y = 510 },
+            new VertexPoint() { X = 305, Y = 560 },
+            new VertexPoint() { X = 210, Y = 560 },
+            new VertexPoint() { X = 210, Y = 510 }
+        };
         annotation.StrokeColor = "#EA580C";
         annotation.FillColor = "#FEF3C7";
         annotation.Thickness = 2;
@@ -265,12 +267,22 @@ Set custom properties for individual area annotations when adding them programma
 
 ## Scale Ratio and Units
 
-- Use **Scale Ratio** from the context menu to set the actual-to-page scale.
-- Supported units include **Inch, Millimeter, Centimeter, Point, Pica, Feet**.
+The **Scale Ratio** controls how many page units equal one real-world unit. Open it from the **context menu** of any measurement annotation to recalibrate.
+
+**Supported `CalibrationUnit` values**
+
+| Value | Description |
+|-------|-------------|
+| `Inch` | Inches. |
+| `Millimeter` | Millimeters. |
+| `Centimeter` / `Cm` | Centimeters. |
+| `Point` | PostScript points (1/72 inch). |
+| `Pica` | Picas (1/6 inch). |
+| `Feet` | Feet. |
 
 ### Set Default Scale Ratio During Initialization
 
-Configure scale defaults using [`MeasurementSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerMeasurementSettings.html).
+Configure scale defaults using [`MeasurementSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerMeasurementSettings.html). The default `ScaleRatio` is `1` and the default `ConversionUnit` is `Point`; `ScaleRatio` values must be greater than `0`.
 
 ```cshtml
 @using Syncfusion.Blazor.SfPdfViewer
@@ -283,10 +295,10 @@ Configure scale defaults using [`MeasurementSettings`](https://help.syncfusion.c
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    PdfViewerMeasurementSettings MeasurementSettings = new PdfViewerMeasurementSettings
+    private PdfViewerMeasurementSettings MeasurementSettings = new PdfViewerMeasurementSettings
     {
         ScaleRatio = 2,
         ConversionUnit = CalibrationUnit.Cm
@@ -294,16 +306,86 @@ Configure scale defaults using [`MeasurementSettings`](https://help.syncfusion.c
 }
 ```
 
+
+### Delete Area Annotation
+
+Delete an Area annotation through the UI (right-click → **Delete**, click **Delete** on the annotation toolbar, or press the `Delete` key while the annotation is selected) or programmatically:
+
+```cshtml
+@code {
+    private async Task DeleteFirstArea()
+    {
+        List<PdfAnnotation> annotations = await Viewer.GetAnnotationsAsync();
+        PdfAnnotation target = annotations.FirstOrDefault(a => a.Type == AnnotationType.Area);
+        if (target != null)
+        {
+            await Viewer.DeleteAnnotationAsync(target);
+        }
+    }
+}
+```
+
+For more deletion patterns, see [**Delete Annotation**](../delete-annotation).
+
 ## Handle Area Events
 
-Listen to annotation life-cycle events (add/modify/select/remove). For the full list and parameters, see [**Annotation Events**](../events).
+Listen to the annotation life-cycle with the `Added`, `Modified`, `Selected`, and `Removed` events. The handler receives a `AnnotationEventArgs` payload that includes the affected `PdfAnnotation`, the page number, and the action that triggered the event.
+
+```cshtml
+<SfPdfViewer2 DocumentPath="@DocumentPath"
+              @ref="@viewer"
+              Added="@OnAdded"
+              Removed="@OnRemoved"
+              Width="100%"
+              Height="100%" />
+
+@code {
+    private SfPdfViewer2 viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+
+    private void OnAdded(AnnotationEventArgs args)
+    {
+        // args.Annotation contains the PdfAnnotation that was added
+    }
+
+    private void OnRemoved(AnnotationEventArgs args)
+    {
+        // args.Annotation contains the PdfAnnotation that was removed
+    }
+}
+```
+
+For the full list of events and their payloads, see [**Annotation Events**](../events).
 
 ## Export and Import
 
-Area measurements can be exported or imported with other annotations. For workflows and supported formats, see [**Export and Import Annotations**](../import-export-annotation).
+Area measurements are exported and imported with the rest of the annotations in **JSON** format. Use `ExportAnnotationsAsync()` to download a JSON blob, and `ImportAnnotationsAsync()` to load it back into the viewer.
+
+```cshtml
+@code {
+    private async Task Export()
+    {
+        // Exports all annotations (including Area) as a JSON string
+        string json = await Viewer.ExportAnnotationsAsync();
+        // Persist `json` to a file, database, or service as needed
+    }
+
+    private async Task Import(string json)
+    {
+        await Viewer.ImportAnnotationsAsync(json);
+    }
+}
+```
+
+For the full export/import workflow and additional formats, see [**Export and Import Annotations**](../import-export-annotation).
 
 ## See Also
 
 - [Annotation Events](../events)
 - [Export and Import Annotations](../import-export-annotation)
 - [Delete Annotations](../delete-annotation)
+- [Measurement Annotations Overview](distance-annotation#measurement-annotations)
+- [Add Distance Annotations](distance-annotation)
+- [Add Perimeter Annotations](perimeter-annotation)
+- [Add Radius Annotations](radius-annotation)
+- [Add Volume Annotations](volume-annotation)
