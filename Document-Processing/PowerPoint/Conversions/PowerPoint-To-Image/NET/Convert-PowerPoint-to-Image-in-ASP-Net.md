@@ -42,7 +42,7 @@ using Syncfusion.PresentationRenderer;
 Step 5: Add a new button in the **MainPage.aspx** as shown below.
 
 {% tabs %}
-{% highlight aspx tabtitle="ASPX" %}
+{% highlight HTML %}
 
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MainPage.aspx.cs" Inherits="Convert_PowerPoint_Presentation_to_Image.WebForm1" %>
 

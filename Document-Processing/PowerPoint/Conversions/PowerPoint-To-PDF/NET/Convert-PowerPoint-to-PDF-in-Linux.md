@@ -24,7 +24,7 @@ Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https:
 Step 1: Execute the following command in **Linux terminal** to create a new .NET Core Console application.
 
 {% tabs %}
-{% highlight KCONFIG %}
+{% highlight bash tabtitle="CLI" %}
 
 dotnet new console
 
@@ -40,7 +40,7 @@ Step 2: Install the following **Nuget packages** in your application from [Nuget
 * [HarfBuzzSharp.NativeAssets.Linux v8.3.1.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.1.2)
 
 {% tabs %}
-{% highlight KCONFIG %}
+{% highlight bash tabtitle="CLI" %}
 
 dotnet add package Syncfusion.PresentationRenderer.Net.Core -v 22.1.38 -s https://www.nuget.org/
 dotnet add package SkiaSharp.NativeAssets.Linux -v 3.119.1 -s https://www.nuget.org/
@@ -99,7 +99,7 @@ using (FileStream fileStreamInput = new FileStream(Path.GetFullPath(@"../../../D
 Step 5: Execute the following command to **restore** the NuGet packages.
 
 {% tabs %}
-{% highlight KCONFIG %}
+{% highlight bash tabtitle="CLI" %}
 
 dotnet restore
 
@@ -111,7 +111,7 @@ dotnet restore
 Step 6: Execute the following command in **terminal** to **run the application**.
 
 {% tabs %}
-{% highlight KCONFIG %}
+{% highlight bash tabtitle="CLI" %}
 
 dotnet run
 
