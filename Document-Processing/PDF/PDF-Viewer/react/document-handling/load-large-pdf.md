@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Load Large PDF Files in React PDF Viewer
 
-This article explains how to efficiently load and view large PDF files using the Syncfusion React PDF Viewer. It includes recommended best practices and performance tips for documents ranging from **50 MB to 2 GB**.
+This article explains how to efficiently load and view large PDF files using the [React PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/react-pdf-viewer). It includes recommended best practices and performance tips for documents ranging from **50 MB to 2 GB**.
 
 ## Why Large PDFs Need Special Handling
 
 Large PDF files often contain thousands of embedded objects such as images, compressed streams, digital signatures, form fields, annotations, vector graphics, and complex page structures. Rendering such heavy documents requires more processing time and memory.
 
-The **Syncfusion PDF Viewer is fully optimized for these heavy workloads**, and it delivers excellent performance even when working with very large files.
+The **React PDF Viewer is fully optimized for these heavy workloads**, and it delivers excellent performance even when working with very large files.
 
 ### Viewer Capability Highlights
 - **Smooth performance for PDFs up to 1 GB**
@@ -62,7 +62,7 @@ Blob loading is highly recommended for all PDFs above **200 MB**, especially whe
 
 ### 2. Viewer Performance Range
 
-The Syncfusion PDF Viewer is optimized to handle:
+The React PDF Viewer is optimized to handle:
 
 - **Up to 1 GB** → very smooth
 - **Up to ~2 GB**

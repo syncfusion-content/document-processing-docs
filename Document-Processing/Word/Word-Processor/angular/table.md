@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Table in Angular Document editor component
 
-Tables are an efficient way to present information. Document Editor can display and edit the tables. You can select and edit tables through keyboard, mouse, or touch interactions. Document Editor exposes a rich set of APIs to perform these operations programmatically.
+Tables are an efficient way to present information. [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) can display and edit the tables. You can select and edit tables through keyboard, mouse, or touch interactions. Document Editor exposes a rich set of APIs to perform these operations programmatically.
 
 ## Create a table
 

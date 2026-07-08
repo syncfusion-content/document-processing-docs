@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Section format in React Document editor component
 
-Document Editor supports various section formatting such as page size, page margins, and more.
+[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports various section formatting such as page size, page margins, and more.
 
 ## Page size
 

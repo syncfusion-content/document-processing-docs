@@ -10,7 +10,7 @@ documentation: ug
 
 # How to get the selected content in Document Editor component
 
-You can get the selected content from the React Document Editor component as plain text and SFDT (rich text).
+You can get the selected content from the [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) component as plain text and SFDT (rich text).
 
 ## Get the selected content as plain text
 

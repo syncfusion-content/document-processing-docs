@@ -14,7 +14,7 @@ Allows multiple users to work on the same document simultaneously. This can be d
 
 ## Prerequisites
 
-Following things are needed to enable collaborative editing in Document Editor
+Following things are needed to enable collaborative editing in [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor)
 
 - SignalR
 - Redis

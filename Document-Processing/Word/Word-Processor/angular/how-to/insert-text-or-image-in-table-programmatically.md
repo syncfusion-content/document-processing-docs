@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Insert Text or Image in Table in Angular Document Editor
 
-Using Document editor API's, you can insert [`text`](../how-to/insert-text-in-current-position#insert-text-in-current-cursor-position) or [`image`](../image#images) in [`table`](../table#create-a-table) programmatically based on your requirement.
+Using [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) API's, you can insert [`text`](../how-to/insert-text-in-current-position#insert-text-in-current-cursor-position) or [`image`](../image#images) in [`table`](../table#create-a-table) programmatically based on your requirement.
 
 Use [`selection`](../how-to/move-selection-to-specific-position#selects-content-based-on-start-and-end-hierarchical-index) API's to navigate between rows and cells.
 

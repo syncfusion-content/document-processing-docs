@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # History in Angular Document editor component
 
-Document Editor tracks the history of all editing actions done in the document, which allows undo and redo functionality.
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) tracks the history of all editing actions done in the document, which allows undo and redo functionality.
 
 ## Enable or disable history
 

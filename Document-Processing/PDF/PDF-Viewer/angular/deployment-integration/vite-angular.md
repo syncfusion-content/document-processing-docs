@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion Angular PDF Viewer using Vite
+# Getting Started with Angular PDF Viewer using Vite
 
 ## Overview
 
-This guide explains how to create an Angular application powered by the Vite build system and integrate the Syncfusion Angular PDF Viewer using standalone components.
+This guide explains how to create an Angular application powered by the Vite build system and integrate the Angular PDF Viewer using standalone components.
 
 ## Prerequisites
 
@@ -128,6 +128,6 @@ ng serve
 
 ## See Also
 
-- [Syncfusion Angular PDF Viewer Documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/overview)
+- [Angular PDF Viewer Documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/overview)
 - [Angular Standalone Components Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started)
 - [Angular CLI Application Builder (Vite)](https://angular.dev/tools/cli/build-system-migration)

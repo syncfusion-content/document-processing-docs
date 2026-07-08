@@ -28,7 +28,7 @@ Package manager console command
 </thead>
 <tr>
 <td>
-Windows Forms / Console (.NET Framework) / WPF / [ASP.NET MVC](/document-processing/markdown/markdown-library/net/Create-Markdown-document-in-ASP-NET-MVC) / [ASP.NET Core](/document-processing/markdown/markdown-library/net/Create-Markdown-document-in-ASP-NET-Core) / Console (.NET Core) / [Blazor](/document-processing/markdown/markdown-library/net/create-markdown-document-in-blazor) / WinUI / MAUI / UWP
+Windows Forms / Console (.NET Framework) / WPF / {{'[ASP.NET MVC](/document-processing/markdown/markdown-library/net/create-markdown-document-in-asp-net-mvc)' | markdownify}} / {{'[ASP.NET Core](/document-processing/markdown/markdown-library/net/create-markdown-document-in-asp-net-core)' | markdownify}} / Console (.NET Core) / {{'[Blazor](/document-processing/markdown/markdown-library/net/create-markdown-document-in-blazor)' | markdownify}} / WinUI / MAUI / UWP
 </td>
 <td>
 Syncfusion.Markdown.nupkg

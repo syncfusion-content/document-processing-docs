@@ -14,7 +14,7 @@ This guide shows how to set the PDF Viewer [`printMode`](https://ej2.syncfusion.
 
 ## Prerequisites
 
-- A React app with the Syncfusion PDF Viewer and [`Print`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/print) module injected.
+- A React app with the PDF Viewer and [`Print`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/print) module injected.
 
 ## Steps to set print mode
 

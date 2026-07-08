@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Supported File Formats in React DOCX Editor
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React DOCX Editor (Document Editor) supports a wide range of Microsoft Word and other document formats for opening and exporting, with both client-side and server-side capabilities.
+[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports a wide range of Microsoft Word and other document formats for opening and exporting, with both client-side and server-side capabilities.
 
 ## Supported File Formats
 

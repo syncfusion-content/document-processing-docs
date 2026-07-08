@@ -8,7 +8,7 @@ keywords: layout-types
 ---
 # Layout Types in WPF RichTextBox (SfRichTextBoxAdv)
 
-The SfRichTextBoxAdv control allows you to choose between the following layout types.
+The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) control allows you to choose between the following layout types.
 
 * Pages
 
@@ -107,4 +107,4 @@ richTextBoxAdv.LayoutType = LayoutType.Block
 
 ![WPF RichTextBox with Box Layout](Layout-Types_images/wpf-richtextbox-box-layout.jpeg)
 
-N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/wpf-controls/richtextbox) feature tour page for its groundbreaking feature representations.You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to knows how to render and configure the editing tools.
+N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations.You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to knows how to render and configure the editing tools.

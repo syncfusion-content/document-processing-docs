@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Content Security Policy (CSP) is a security feature implemented by web browsers that helps protect against attacks such as cross-site scripting (XSS) and data injection. It restricts the sources from which content can be loaded on a web page.
 
-When enabling strict [Content Security Policy (CSP)](https://csp.withgoogle.com/docs/strict-csp.html), certain browser features are disabled by default for enhanced security. To use the Syncfusion PDF Viewer control in strict CSP mode, specific directives must be configured in the CSP meta tag to allow the control's necessary resources.
+When enabling strict [Content Security Policy (CSP)](https://csp.withgoogle.com/docs/strict-csp.html), certain browser features are disabled by default for enhanced security. To use the PDF Viewer control in strict CSP mode, specific directives must be configured in the CSP meta tag to allow the control's necessary resources.
 
 ## CSP Directives Reference
 
@@ -97,13 +97,13 @@ The PDF Viewer uses WebAssembly and web workers for processing and rendering. Bo
 {% endhighlight %}
 {% endtabs %}
 
-N> In accordance with the latest security practices, the Syncfusion PDF Viewer control recommends using `wasm-unsafe-eval` in the Content Security Policy (CSP) settings to enable secure WebAssembly compilation. This directive allows WebAssembly to be compiled from JavaScript functions while maintaining a secure execution environment. Update your CSP meta tags to reflect this change for optimal security compliance.
+N> In accordance with the latest security practices, the PDF Viewer control recommends using `wasm-unsafe-eval` in the Content Security Policy (CSP) settings to enable secure WebAssembly compilation. This directive allows WebAssembly to be compiled from JavaScript functions while maintaining a secure execution environment. Update your CSP meta tags to reflect this change for optimal security compliance.
 
 ## Security Best Practices
 
 - Test CSP configurations thoroughly in development to identify blocked resources before deployment.
 - Monitor browser console for CSP violations that may indicate missing directives.
 - Use the most restrictive CSP possible while maintaining required functionality.
-- Regularly review CSP settings when upgrading the Syncfusion PDF Viewer to the latest version.
+- Regularly review CSP settings when upgrading the PDF Viewer to the latest version.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master)

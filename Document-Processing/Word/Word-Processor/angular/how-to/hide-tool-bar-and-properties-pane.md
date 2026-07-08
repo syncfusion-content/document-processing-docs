@@ -16,7 +16,7 @@ domainurl: ##DomainURL##
 
 ## Hide the properties pane
 
-By default, Document editor container has built-in properties pane which contains options for formatting text, table, image and header and footer. You can use [`showPropertiesPane`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/documentEditorContainerModel#showpropertiespane) API in [`DocumentEditorContainer`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/documentEditorContainerModel/) to hide the properties pane.
+By default, [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) container has built-in properties pane which contains options for formatting text, table, image and header and footer. You can use [`showPropertiesPane`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/documentEditorContainerModel#showpropertiespane) API in [`DocumentEditorContainer`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/documentEditorContainerModel/) to hide the properties pane.
 
 The following example code illustrates how to hide the properties pane.
 

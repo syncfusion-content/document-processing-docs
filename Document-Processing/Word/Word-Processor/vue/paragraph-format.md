@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Paragraph format in Vue Document editor component
 
-Document Editor supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
 
 ## Indentation
 
