@@ -288,7 +288,7 @@ Add the stylesheet at the end of the `<head>` section in the `~/Components/App.r
 {% tabs %}
 {% highlight razor tabtitle="App.razor (head)" %}
 
-<!-- Syncfusion Blazor PDF Viewer control's theme style sheet -->
+<!-- Blazor PDF Viewer control's theme style sheet -->
 <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 
 {% endhighlight %}
@@ -299,7 +299,7 @@ Add the required script at the end of the `<body>` section in the `~/Components/
 {% tabs %}
 {% highlight razor tabtitle="App.razor (body)" %}
 
-<!-- Syncfusion Blazor PDF Viewer control's scripts -->
+<!-- Blazor PDF Viewer control's scripts -->
 <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
 
 {% endhighlight %}
@@ -329,7 +329,7 @@ N> The [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Sf
 N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 N> If the `DocumentPath` property is not set, the PDF Viewer renders without loading a PDF. Use the **Open** toolbar option to browse and open a PDF.
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Syncfusion Blazor PDF Viewer will be displayed in your default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor PDF Viewer will be displayed in your default web browser.
 
 ![Blazor Web App SfPdfViewer rendering in browser](gettingstarted-images/blazor-pdfviewer.png)
 

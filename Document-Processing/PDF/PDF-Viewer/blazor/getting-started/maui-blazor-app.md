@@ -28,12 +28,10 @@ N> The PDF Viewer supports .NET 8.0 and later.
 
 ## Install Blazor SfPdfViewer NuGet Packages
 
-To add the **Syncfusion Blazor SfPdfViewer** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install:
+To add the **Blazor SfPdfViewer (Next-Gen)** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install:
 
 * [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer)
 * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
-
-The `Syncfusion.Blazor.SfPdfViewer` package brings in the required `Syncfusion.Blazor.SfPdfViewer.Native` native assets for Windows and Android targets automatically.
 
 Alternatively, you can use the following Package Manager command to install the same packages.
 
@@ -93,7 +91,7 @@ Add the stylesheet at the end of the `<head>` section in the `~/wwwroot/index.ht
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
 
-<!-- Syncfusion Blazor PDF Viewer control's theme stylesheet -->
+<!-- Blazor PDF Viewer control's theme stylesheet -->
 <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 
 {% endhighlight %}
@@ -104,7 +102,7 @@ Add the required script at the end of the `<body>` section in the `~/wwwroot/ind
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
 
-<!-- Syncfusion Blazor PDF Viewer control's script -->
+<!-- Blazor PDF Viewer control's script -->
 <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
 
 {% endhighlight %}
@@ -112,7 +110,7 @@ Add the required script at the end of the `<body>` section in the `~/wwwroot/ind
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to explore supported ways (such as static assets, CDN, and CRG) to apply themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add the Blazor PDF Viewer component
+## Add Blazor PDF Viewer component
 
 Add the Blazor PDF Viewer (Next-Gen) component to `~/Pages/Index.razor`.
 
@@ -129,7 +127,7 @@ Add the Blazor PDF Viewer (Next-Gen) component to `~/Pages/Index.razor`.
 {% endhighlight %}
 {% endtabs %}
 
-N> The sample `DocumentPath` points to a remote URL. The device running the app must have internet access for the PDF to load. For offline scenarios, bundle the PDF in the project and load it with `LoadAsync` from embedded resources, or use the **Open** toolbar option to pick a local file. For more information, see [Render a PDF document from an embedded source in the .NET MAUI Android app](../faqs/how-to-deploy-maui-using-android-emulator).
+N> The sample [`DocumentPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) points to a remote URL. The device running the app must have internet access for the PDF to load. For offline scenarios, bundle the PDF in the project and load it with `LoadAsync` from embedded resources, or use the **Open** toolbar option to pick a local file. For more information, see [Render a PDF document from an embedded source in the .NET MAUI Android app](../faqs/how-to-deploy-maui-using-android-emulator).
 N> If the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) property is not set, the PDF Viewer displays an empty viewer without a document. Use the **Open** toolbar option to browse and open a PDF.
 
 ## Run on Windows
@@ -155,13 +153,6 @@ For setup and usage, see [Android Emulator setup for .NET MAUI](https://learn.mi
 N> If any errors occur while using the Android Emulator, see [Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
 ![Blazor SfPdfViewer2 running in the Android emulator](gettingstarted-images/android-emulator.png)
-
-### Troubleshooting
-
-* If the emulator fails to start, ensure **Hyper-V** (Windows) or **HAXM** is enabled and the Android Emulator workload is installed.
-* If the PDF does not load, verify that the emulator has network connectivity and the remote `DocumentPath` is reachable.
-
-N> To learn how to open, view, or interact with PDF files in the PDF Viewer component, see [Open and Save PDF files](../opening-pdf-file). For a hands-on reference with working code examples, explore the sample projects on [GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Getting%20Started/Blazor%20Hybrid%20-%20.NET%20MAUI/MauiBlazorWindow). Looking for the full Blazor PDF Viewer component overview, features, pricing, and documentation? Visit the [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) page.
 
 ## See Also
 
