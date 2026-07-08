@@ -9,27 +9,30 @@ documentation: ug
 
 # Sticky notes annotations in Blazor SfPdfViewer Component
 
-The SfPdfViewer component provides options to add, edit, and delete sticky notes annotations in a PDF document.
+The SfPdfViewer2 component provides options to add, edit, and delete sticky notes annotations in a PDF document.
 
-![StickyNotes Annotation in Blazor SfPdfViewer](../images/blazor-pdfviewer-stickynotes-annotation.png)
+![Sticky Notes Annotation in Blazor SfPdfViewer](../images/blazor-pdfviewer-stickynotes-annotation.png)
 
 ## Adding a sticky note annotation to the PDF document
 
 Sticky notes annotations can be added using the annotation toolbar.
 
-* Click the **Comments** button in the SfPdfViewer toolbar to open the annotation toolbar.
+* Click the **Comments** button in the SfPdfViewer2 toolbar to open the annotation toolbar.
+* Click the **Sticky Note** tool in the annotation toolbar to enable Sticky Note mode.
 * Click the location on the page where the sticky note annotation should appear.
 * The sticky note annotation is added at the clicked position.
 
-![Adding StickyNotes in Blazor SfPdfViewer Toolbar](../images/blazor-pdfviewer-add-stickynotes-in-toolbar.png)
+![Adding Sticky Notes in Blazor SfPdfViewer Toolbar](../images/blazor-pdfviewer-add-stickynotes-in-toolbar.png)
 
-Annotation comments can be added using the Comment panel.
+## Adding a comment to a sticky note annotation
+
+Annotation comments can be added using the comment panel.
 
 * Select a sticky note annotation in the PDF document and right-click it.
-* Select the Comment option from the context menu.
-* Use the Comment panel to add Comments, Reply, and Status.
+* Select the **Comment** option from the context menu.
+* Use the comment panel to add comments, replies, and status.
 
-![Blazor SfPdfViewer with StickyNotes Comment](../images/blazor-pdfviewer-stickynotes-comment.png)
+![Blazor SfPdfViewer with Sticky Notes Comment](../images/blazor-pdfviewer-stickynotes-comment.png)
 
 ## Editing the properties of the sticky note annotation
 
@@ -37,25 +40,25 @@ Annotation comments can be added using the Comment panel.
 
 Adjust the annotation opacity using the range slider in the Edit Opacity tool.
 
-![StickyNotes Opacity in Blazor SfPdfViewer](../images/blazor-pdfviewer-stickynotes-opacity.png)
+![Sticky Notes Opacity in Blazor SfPdfViewer](../images/blazor-pdfviewer-stickynotes-opacity.png)
 
 ### Editing comments
 
-The comment, comment reply, and comment status of the annotation can be edited using the Comment panel.
+The comment, comment reply, and comment status of the annotation can be edited using the comment panel.
 
-- Open the Comment panel using the Comment Panel button in the annotation toolbar.
+- Click the **Comment Panel** button in the annotation toolbar to open the comment panel.
 
-![Editing StickyNotes Comment in Blazor SfPdfViewer](../images/blazor-pdfviewer-edit-sticknotes-comment.png)
+![Editing Sticky Notes Comment in Blazor SfPdfViewer](../images/blazor-pdfviewer-edit-sticknotes-comment.png)
 
-Use the menu in the Comment panel to modify or delete comments, replies, and their status.
+Use the menu in the comment panel to modify or delete comments, replies, and their status.
 
-![StickyNotes Editing in Blazor SfPdfViewer](../images/blazor-pdfviewer-editing-stickynotes.png)
+![Sticky Notes Editing in Blazor SfPdfViewer](../images/blazor-pdfviewer-editing-stickynotes.png)
 
 ## Setting default properties during control initialization
 
-Set default properties for sticky notes annotations before initializing the control using [StickyNotesSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_StickyNotesSettings).
+Set default properties for sticky notes annotations before initializing the SfPdfViewer2 control using the [StickyNotesSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_StickyNotesSettings) parameter. The bound `PdfViewerStickyNotesSettings` instance is read when the component renders, so update it in `OnInitialized` or earlier for the values to take effect.
 
-After changing the default opacity using the Edit Opacity tool, the values are updated to the selected settings.
+After changing the default opacity using the Edit Opacity tool, the values are updated to reflect the selected settings.
 
 ```cshtml
 
@@ -82,7 +85,7 @@ After changing the default opacity using the Edit Opacity tool, the values are u
 
 ## Disabling sticky note annotations
 
-The SfPdfViewer2 control provides an option to disable the sticky note annotations feature.
+The SfPdfViewer2 control provides an option to disable the sticky note annotations feature. When `EnableStickyNotesAnnotation` is set to `false`, the Sticky Note tool is removed from the annotation toolbar and existing sticky notes become read-only.
 
 ```cshtml
 
@@ -91,7 +94,7 @@ The SfPdfViewer2 control provides an option to disable the sticky note annotatio
 <SfPdfViewer2 DocumentPath="@DocumentPath"
               Height="100%"
               Width="100%"
-              EnableStickyNotesAnnotation=false>
+              EnableStickyNotesAnnotation="false">
 </SfPdfViewer2>
 
 @code{
@@ -102,37 +105,37 @@ The SfPdfViewer2 control provides an option to disable the sticky note annotatio
 
 ## Add sticky note annotation programmatically
 
-The Blazor SfPdfViewer supports adding sticky notes annotations programmatically using the [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
+The Blazor SfPdfViewer2 supports adding sticky notes annotations programmatically using the [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
 
 Below is an example demonstrating how to add a sticky note annotation to a PDF document:
 
 ```cshtml
 
-@using Syncfusion.Blazor.Navigations;
+@using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfButton OnClick="@AddStickyNoteAnnotationAsync">Add StickyNote Annotation</SfButton>
+<SfButton OnClick="@AddStickyNoteAnnotationAsync">Add Sticky Note Annotation</SfButton>
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
     SfPdfViewer2 Viewer;
     public string DocumentPath { get; set; } = "wwwroot/Data/Sticky_Notes_Annotation.pdf";
 
-    public async void AddStickyNoteAnnotationAsync(MouseEventArgs args)
+    public async Task AddStickyNoteAnnotationAsync(MouseEventArgs args)
     {
         PdfAnnotation annotation = new PdfAnnotation();
-        // Set the annotation type to sticky note
+        // Set the annotation type to sticky note.
         annotation.Type = AnnotationType.StickyNotes;
         // Page numbers start from 0. So, if set to 0 it represents page 1.
         annotation.PageNumber = 0;
 
-        // Bound of the sticky note annotation
+        // Bounds of the sticky note annotation.
         annotation.Bound = new Bound();
         annotation.Bound.X = 200;
         annotation.Bound.Y = 150;
         annotation.Bound.Width = 50;
         annotation.Bound.Height = 50;
-        // Add sticky note annotation
+        // Add the sticky note annotation to the loaded PDF document.
         await Viewer.AddAnnotationAsync(annotation);
     }
 }
@@ -156,35 +159,39 @@ Below is an example demonstrating how to edit a sticky note annotation programma
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfButton OnClick="@EditStickyNoteAnnotationAsync">Edit StickyNote Annotation</SfButton>
+<SfButton OnClick="@EditStickyNoteAnnotationAsync">Edit Sticky Note Annotation</SfButton>
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
     SfPdfViewer2 Viewer;
     public string DocumentPath { get; set; } = "wwwroot/Data/Sticky_Notes_Annotation.pdf";
 
-    public async void EditStickyNoteAnnotationAsync(MouseEventArgs args)
+    public async Task EditStickyNoteAnnotationAsync(MouseEventArgs args)
     {
-        // Get annotation collection
+        // Get the annotation collection for the loaded document.
         List<PdfAnnotation> annotationCollection = await Viewer.GetAnnotationsAsync();
-        // Select the annotation want to edit
+        if (annotationCollection is null || annotationCollection.Count == 0)
+        {
+            return;
+        }
+        // Select the annotation to edit.
         PdfAnnotation annotation = annotationCollection[0];
-        // Change the position of the sticky note annotation
+        // Change the position of the sticky note annotation.
         annotation.Bound.X = 125;
         annotation.Bound.Y = 125;
-        // Change the width and height of the sticky note annotation
+        // Change the width and height of the sticky note annotation.
         annotation.Bound.Width = 75;
         annotation.Bound.Height = 75;
-        // Change the Opacity (0 to 1) of sticky note annotation
+        // Change the Opacity (0 to 1) of the sticky note annotation.
         annotation.Opacity = 0.5;
-        // Edit the sticky note annotation
+        // Apply the changes to the sticky note annotation.
         await Viewer.EditAnnotationAsync(annotation);
     }
 }
 
 ```
 
-This code snippet edits a sticky note annotation programmatically within the SfPdfViewer control.
+This code snippet edits a sticky note annotation programmatically within the SfPdfViewer2 control.
 
 ![Programmatically Edit Sticky Note Annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-edit-stickynote-annotation.png)
 
@@ -192,4 +199,6 @@ This code snippet edits a sticky note annotation programmatically within the SfP
 
 ## See also
 
-* [How to delete the annotation programmatically](./text-markup-annotation#delete-annotation-programmatically)
+* [How to delete an annotation programmatically](./delete-annotation.md#delete-programmatically)
+* [Comments overview](./comments.md)
+* [Annotations overview](./overview.md)
