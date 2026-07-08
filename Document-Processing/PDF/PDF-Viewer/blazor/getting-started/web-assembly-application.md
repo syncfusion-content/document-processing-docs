@@ -291,7 +291,7 @@ N> If the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 ## Next steps
 
 * To learn how to open, save, or manage PDF documents in the PDF Viewer component, s[Open and Save PDF files](../opening-pdf-file).
-* To learn how to add and manage highlights, strike-throughs, free text, and shape annotations in the PDF Viewer component, see [Annotations](../annotation/overview).
+* To learn how to add and manage highlights, strike-through, free text, and shape annotations in the PDF Viewer component, see [Annotations](../annotation/overview).
 * To learn how to read, fill, and work with AcroForm fields in the PDF Viewer component, see [Form filling](../forms/form-filling).
 * To learn how to add, remove, and rearrange toolbar items in the PDF Viewer component, see [Toolbar customization](../toolbar/overview).
 

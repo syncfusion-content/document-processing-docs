@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Getting Started with the PDF Viewer (Next-Gen) in a .NET MAUI Blazor Hybrid App
+# Getting Started with the PDF Viewer in a .NET MAUI Blazor Hybrid App
 
 This section explains how to create and run a .NET MAUI Blazor Hybrid application using the [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) component.
 

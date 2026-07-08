@@ -113,7 +113,7 @@ N> When using the default Microsoft `dotnet new blazor` template, the `-int Auto
 If you utilize `WebAssembly` or `Auto` render modes in the Blazor Web App, you need to install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components NuGet packages within the client project.
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
-* For **WebAssembly** or **Auto** render modes, navigate to the client project directory (`cd BlazorWebApp.Client`).
+* For **WebAssembly** or **Auto** render modes, navigate to the client project directory.
 * For the **Server** render mode, ensure you are in the project root directory where your `.csproj` file is located.
 * Run the following commands to install the [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages and ensure all dependencies are installed.
 
@@ -191,7 +191,7 @@ N> When using the default Microsoft `dotnet new blazor` template, the `-int Auto
 ## Install Blazor SfPdfViewer and Themes NuGet Packages in the App
 
 * Open a command prompt, terminal, or shell.
-* For **WebAssembly** or **Auto** render modes, navigate to the client project directory (`cd BlazorWebApp.Client`).
+* For **WebAssembly** or **Auto** render modes, navigate to the client project directory.
 * For the **Server** render mode, ensure you are in the project root directory where your `.csproj` file is located.
 * Run the following commands to install the [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages and ensure all dependencies are installed.
 
@@ -336,7 +336,7 @@ N> If the `DocumentPath` property is not set, the PDF Viewer renders without loa
 ## Next steps
 
 * To learn how to open, save, or manage PDF documents in the PDF Viewer component, s[Open and Save PDF files](../opening-pdf-file).
-* To learn how to add and manage highlights, strike-throughs, free text, and shape annotations in the PDF Viewer component, see [Annotations](../annotation/overview).
+* To learn how to add and manage highlights, strike-through, free text, and shape annotations in the PDF Viewer component, see [Annotations](../annotation/overview).
 * To learn how to read, fill, and work with AcroForm fields in the PDF Viewer component, see [Form filling](../forms/form-filling).
 * To learn how to add, remove, and rearrange toolbar items in the PDF Viewer component, see [Toolbar customization](../toolbar/overview).
 
