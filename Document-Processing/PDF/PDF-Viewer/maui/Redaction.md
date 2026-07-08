@@ -12,22 +12,38 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 Before sharing a PDF externally, use redaction to permanently remove sensitive data — such as personal details, financial figures, or confidential text — from the document. Unlike simply covering content with a shape or annotation, redaction in [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) eliminates the underlying content entirely once the document is saved, making recovery impossible.
 
-## Types of Redactions
+## Types of redactions
 
 The PDF Viewer provides multiple methods to apply redaction, allowing you to securely conceal sensitive content based on different requirements. The available redaction types include:
 
--	**Text-based Redaction** : Allows you to manually select the texts on a page and apply redaction to hide the texts.
--	**Selected Area Redaction** : Allows you to manually select a rectangular area on a page and apply redaction to hide any content within that region.
--	**Page-based Redaction** : Enables you to redact entire pages of a PDF document, ensuring that all content on those pages is permanently removed.
+- **Text-based redaction**: Allows you to manually select the texts on a page and apply redaction to hide the texts.
+- **Selected area redaction**: Allows you to manually select a rectangular area on a page and apply redaction to hide any content within that region.
+- **Page-based redaction**: Enables you to redact entire pages of a PDF document, ensuring that all content on those pages is permanently removed.
 
+Text-based and selected-area redactions can be performed either with the built-in toolbar or with UI interaction using the `RedactionMode` property. Page-based redaction is available only programmatically via the `AddPageRedactionMarks` method.
 
-## Mark region to redact 
+## Customize the default redaction appearance
 
-You need to mark the region for redaction by using one of the available methods such as text-based, selected-area or page-based redaction.
+In redaction mode, the redaction is applied with a default appearance and behavior. You can modify these settings before marking regions on the pages. To define the appearance and behavior, customize the default settings using the [RedactionSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_RedactionSettings) property of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
+The following example demonstrates how to obtain the default redaction settings and modify their appearance properties. Similarly, you can modify other available properties.
 
-## Mark regions for redaction using toolbar
+{% tabs %}
+{% highlight c# %}
+void CustomizeDefaultRedactionSettings()
+{
+    // Access the default redaction settings from the SfPdfViewer instance and modify the default appearance properties.
+    PdfViewer.RedactionSettings.MarkerBorderColor = Colors.Blue; // Border color for the marked region.
+    PdfViewer.RedactionSettings.FillColor = Colors.Red; // Fill color after redaction is applied.
+    PdfViewer.RedactionSettings.FontColor = Colors.Black; // Font color for overlay text.
+    PdfViewer.RedactionSettings.OverlayText = "text"; // Text to display on the redacted area.
+    PdfViewer.RedactionSettings.IsRepeat = true; // Repeat overlay text across the redacted area.
+}
+{% endhighlight %}
+{% endtabs %}
 
-The built-in toolbar includes a redaction tool that allows you to redact text, specific areas, or entire pages by marking the desired region on the PDF document and clicking the Apply button. The toolbar also provides options to modify redaction properties, such as the color and the text to display in the redacted area.
+## Mark regions for redaction using the built-in toolbar
+
+You need to mark the region for redaction by using one of the available methods such as text-based, selected-area, or page-based redaction. The built-in toolbar includes a redaction tool that allows you to redact text, specific areas, or entire pages by marking the desired region on the PDF document and clicking the Apply button. The toolbar also provides options to modify redaction properties, such as the color and the text to display in the redacted area.
 
 The following image represents how to perform redactions using the toolbar on the desktop.
 
@@ -39,14 +55,14 @@ The following image represents how to perform redactions using the toolbar on mo
 
 ## Mark regions for redaction without using the toolbar
 
-You can mark the region for redaction in a PDF document with UI interaction using touch or mouse using the [RedactionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_RedactionMode) property in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). The following steps explain how to mark the region on a PDF. 
+You can mark the region for redaction in a PDF document with UI interaction (touch or mouse) by setting the [RedactionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_RedactionMode) property of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). The following steps explain how to mark the region on a PDF.
 
-1.	Set the [RedactionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_RedactionMode) property of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) to Text or Rect. It activates the text-based or selected-area Redaction mode on the control.
-2.	Place your finger (or mouse) on the text in the PDF document, where you want to start redaction.
+1.	Set the [RedactionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_RedactionMode) property of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) to Text or Rect. It activates the text-based or selected-area redaction mode on the control.
+2.	Place your finger (or mouse) over the text in the PDF document where you want to start redaction.
 3.	Drag the finger (or cursor) across the text to select.
 4.	Complete adding the region to the selected text or area by releasing the finger (or cursor).
-5.	Once you have done that, set the [RedactionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_RedactionMode) to None. It will disable the redaction mode and save the marked region for redaction.
-6.	You can later redact the marked regions using [RedactAsync](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_RedactAsync_System_Threading_CancellationToken_) method. 
+5.	Once you have finished marking regions, set the [RedactionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_RedactionMode) to None. It will disable the redaction mode. The marked regions will be retained for redaction.
+6.	You can later redact the marked regions using the [RedactAsync](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_RedactAsync_System_Threading_CancellationToken_) method.
 
 The following code explains how to enable the text-based redaction mode.
 
@@ -83,7 +99,7 @@ void DisableRedactionMode()
 
 ## How to perform redaction programmatically
 
-### Add redaction mark on the PDF
+### Add a redaction mark to the PDF
 
 You can mark regions for text or specific areas programmatically using the [AddRedactionMark](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddRedactionMark_Syncfusion_Maui_PdfViewer_RedactionMark_) method of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html), and redact entire pages using the [AddPageRedactionMarks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddPageRedactionMarks_System_Collections_Generic_List_System_Int32__) method. The following example demonstrates how to mark regions for redaction, such as a specific area and page in the PDF document.
 
@@ -102,17 +118,31 @@ void AddRedactionMarkOnSpecificRegionAndPages()
     PdfViewer.AddRedactionMark(redactionMark);
 
     // Add redaction marks to specific pages (pages 3, 5, and 1).
-    PdfViewer.AddPageRedactionMarks(new List<int>([3, 5, 1]));
+    PdfViewer.AddPageRedactionMarks(new List<int> { 3, 5, 1 });
  }
 {% endhighlight %}
 {% endtabs %}
 
-### Remove the selected redaction mark on the PDF
+### Redact the marked region
 
-You can remove a redaction mark for text, a specific area, or a page programmatically using the [SelectedRedactionMark](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_SelectedRedactionMark) property and the [RemoveRedactionMark](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_RemoveRedactionMark_Syncfusion_Maui_PdfViewer_RedactionMark_) method of SfPdfViewer. To remove a redaction mark, select the specific mark you want to delete and pass it to the [RemoveRedactionMark](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_RemoveRedactionMark_Syncfusion_Maui_PdfViewer_RedactionMark_) method. The following example demonstrates how to remove a selected redaction mark from the PDF document.
+After marking the regions, you can redact them by using the [RedactAsync](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_RedactAsync_System_Threading_CancellationToken_) method of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). This method redacts all marked regions and saves the document, making the changes irreversible. The following example demonstrates how to redact a marked region or page in a PDF document.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight c# %}
+private async void RedactMarkedRegion()
+{
+    // Apply redaction to all marked regions in the PDF document.
+    await PdfViewer.RedactAsync();
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Remove the selected redaction mark
+
+You can remove a redaction mark for text, a specific area, or a page programmatically using the [SelectedRedactionMark](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_SelectedRedactionMark) property and the [RemoveRedactionMark](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_RemoveRedactionMark_Syncfusion_Maui_PdfViewer_RedactionMark_) method of the SfPdfViewer. To remove a redaction mark, select the specific mark you want to delete and pass it to the [RemoveRedactionMark](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_RemoveRedactionMark_Syncfusion_Maui_PdfViewer_RedactionMark_) method. The following example demonstrates how to remove a selected redaction mark from the PDF document.
+
+{% tabs %}
+{% highlight c# %}
 void RemoveSelectedRedactionMark()
 {
     // Check if any redaction mark is currently selected.
@@ -125,12 +155,12 @@ void RemoveSelectedRedactionMark()
 {% endhighlight %}
 {% endtabs %}
 
-### Remove all the redaction marks in the PDF
+### Remove all redaction marks
 
 You can remove all redaction marks from a document programmatically by calling the [RemoveAllRedactionMarks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_RemoveAllRedactionMarks) method. The following example demonstrates how to remove all redaction marks from a PDF document.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight c# %}
 void RemoveAllRedactionMarksDrawn()
 {
     // Removes all the redaction marks from a PDF document using [RemoveAllRedactionMarks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_RemoveAllRedactionMarks) method of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
@@ -139,41 +169,12 @@ void RemoveAllRedactionMarksDrawn()
 {% endhighlight %}
 {% endtabs %}
 
-### Redact the marked region
-
-You can redact the marked regions by using the [RedactAsync](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_RedactAsync_System_Threading_CancellationToken_) method of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). This method redacts all marked regions and saves the document, making the changes irreversible. The following example demonstrates how to redact a marked region or page in a PDF document.
-
-{% tabs %}
-{% highlight C# %}
-private async void RedactMarkedRegion()
-{
-    // Apply redaction to all marked regions in the PDF document.
-    await PdfViewer.RedactAsync();
-}
-{% endhighlight %}
-{% endtabs %}
-
-## Customize the default redaction appearance
-
-In redaction mode, the redaction is applied with a default appearance and behavior. You can modify these settings before marking regions on the pages. To define the appearance and behavior, customize the default settings using the [RedactionSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_RedactionSettings) property of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
-The following example demonstrates how to obtain the default redaction settings and modify their appearance properties. Similarly, you can modify other available properties.
-
-{% tabs %}
-{% highlight C# %}
-void CustomizeDefaultRedactionSettings()
-{
-    // Access the default redaction settings from the SfPdfViewer instance and modify the default appearance properties.
-    PdfViewer.RedactionSettings.MarkerBorderColor = Colors.Blue; // Border color for the marked region.
-    PdfViewer.RedactionSettings.FillColor = Colors.Red; // Fill color after redaction is applied.
-    PdfViewer.RedactionSettings.FontColor = Colors.Black; // Font color for overlay text.
-    PdfViewer.RedactionSettings.OverlayText = "text"; // Text to display on the redacted area.
-    PdfViewer.RedactionSettings.IsRepeat = true; // Repeat overlay text across the redacted area.
-}
-{% endhighlight %}
-{% endtabs %}
-
 ## See Also
+
 - [Save a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/save-a-document)
 - [Text Search](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/text-search)
 - [Annotations Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-overview)
 - [Undo and Redo](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/undo-redo)
+- [Toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/toolbar)
+- [Open a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/open-a-document)
+- [Print a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/print-a-document)
