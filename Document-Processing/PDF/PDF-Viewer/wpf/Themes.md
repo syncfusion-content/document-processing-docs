@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Themes in WPF Pdf Viewer control | Syncfusion®
-description: Learn about theme support in Syncfusion® WPF Pdf Viewer, including available themes, UI elements, customization options, and usage details.
+description: Learn about the built-in themes supported by Syncfusion® WPF PDF Viewer and how to apply them.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -19,10 +19,10 @@ PdfViewerControl supports the following built-in themes.
 *	FluentDark
 *	SystemTheme
 
-Refer to the below links to apply themes for the PdfViewerControl,
+Refer to the following links to apply themes for the PdfViewerControl:
 
   * [Apply theme using SfSkinManager](https://help.syncfusion.com/wpf/themes/skin-manager)
-	
+    
   * [Create a custom theme using ThemeStudio](https://help.syncfusion.com/wpf/themes/theme-studio#creating-custom-theme)
 
   ![WPF PDF Viewer Theme](getting-started_images/wpf-pdf-viewer-theme.png)
