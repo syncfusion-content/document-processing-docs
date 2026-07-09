@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Clipboard in Blazor Spreadsheet component | Syncfusion
-description: Explore the clipboard functionalities in the Syncfusion Blazor Spreadsheet component, including cut, copy, and paste operations via UI and programmatic methods.
+description: Explore clipboard operations in the Syncfusion Blazor Spreadsheet component, including cut, copy, and paste operations via UI and programmatic methods.
 control: Spreadsheet
 documentation: ug
 ---
@@ -10,9 +10,39 @@ documentation: ug
 
 The Spreadsheet component supports clipboard operations such as **Cut**, **Copy**, and **Paste**. These operations can be managed using the [EnableClipboard](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableClipboard) property, which is set to **true** by default.
 
-The keyboard shortcuts are available to perform clipboard operations efficiently within the Spreadsheet component. `Ctrl+C` copies the selected cells, `Ctrl+X` cuts the selected cells, and `Ctrl+V` pastes the content from the clipboard.
+Use these keyboard shortcuts for clipboard operations: `Ctrl+C` copies the selected cells, `Ctrl+X` cuts the selected cells, and `Ctrl+V` pastes the content from the clipboard.
 
 When [EnableClipboard](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableClipboard) is set to **false**, the **Cut** and **Copy** options are removed from the Ribbon and Context Menu. Additionally, shortcut keys and API methods for clipboard operations are disabled. If a worksheet is protected, cut and paste operations are also disabled. For more details on worksheet protection, refer to the [Worksheet Protection](./protection#protect-sheet) topic.
+
+The clipboard is in-memory only: it is cleared when the page unloads and is not shared with other browser tabs. Switching the active sheet inside the workbook does not clear the clipboard, so pasted content is preserved across sheet navigation. The clipboard content is shared between the **Cut**, **Copy**, and **Paste** operations within the same workbook.
+
+## Disabling clipboard
+
+The example below shows how to disable clipboard support across the entire Spreadsheet:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@page "/"
+@using Syncfusion.Blazor.Spreadsheet
+@using System.IO
+
+<SfSpreadsheet EnableClipboard="false" DataSource="DataSourceBytes">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+    public byte[] DataSourceBytes { get; set; }
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Cut
 
@@ -45,16 +75,17 @@ The [CutCellAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Sprea
 
 **Cut active range**
 
-When [CutCellAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_CutCellAsync_System_String_) method is invoked without any parameters, the content is automatically cut from the most recently selected range, provided an active selection exists. If no range is currently selected, the method defaults to cutting the content from the active cell.
+When [CutCellAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_CutCellAsync_System_String_) is invoked without any parameters, the content is cut from the last selected range. If no range is selected, the content is cut from the active cell.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
+@page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
 <button @onclick="CutActiveCell">Cut Active Cell</button>
 
-<SfSpreadsheet @ref=SpreadsheetInstance DataSource="DataSourceBytes">
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
@@ -89,14 +120,15 @@ The available parameters in the [CutCellAsync](https://help.syncfusion.com/cr/bl
 | cellAddress | string (optional) | Specifies the target cell or range of cells to be cut. Accepts either a single cell reference (for example, **"A1"**) or a range (for example, **"A1:B5"**) from the active worksheet. If no parameter is provided, the currently selected cell or range will be used for the **Cut** operation. |
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
+@page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
 <button @onclick="CutCell">Cut Cell</button>
 <button @onclick="CutRange">Cut Range</button>
 
-<SfSpreadsheet @ref=SpreadsheetInstance DataSource="DataSourceBytes">
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
@@ -126,7 +158,7 @@ The available parameters in the [CutCellAsync](https://help.syncfusion.com/cr/bl
 {% endhighlight %}
 {% endtabs %}
 
-**Cut specific range in different sheet**
+**Cut specific range in another sheet**
 
 To cut content from a specific worksheet, the source sheet name must be included along with the cell reference in the parameter passed to the [CutCellAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_CutCellAsync_System_String_) method. When specifying a sheet name, an exclamation mark (**!**) must be used to separate the sheet name from the cell reference. Upon execution, the Spreadsheet component cuts the designated content and places it on the clipboard, making it available for pasting in another location.
 
@@ -137,14 +169,15 @@ The available parameters in the [CutCellAsync](https://help.syncfusion.com/cr/bl
 | cellAddress | string (optional) | Specifies the cell or range of cells to be cut. Accepts either a single cell reference (for example, **"Sheet1!A1"**) or a range (for example, **"Sheet2!A1:C5"**) from a specific worksheet. If no parameter is provided, the currently selected cell or range from the active worksheet will be used for the cut operation. |
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
+@page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
 <button @onclick="CutCellFromSpecificSheet">Cut Cell from Specific Sheet</button>
 <button @onclick="CutRangeFromSpecificSheet">Cut Range from Specific Sheet</button>
 
-<SfSpreadsheet @ref=SpreadsheetInstance DataSource="DataSourceBytes">
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
@@ -181,7 +214,7 @@ The **Copy** operation duplicates data from a selected range of cells, rows, or 
 
 ### Copy operations via UI
 
-The copy operation can be performed through the UI using one of the following methods:
+The **Copy** operation can be performed through the user interface (UI) using any of the following methods:
 
 **Using the Ribbon**
 
@@ -206,16 +239,17 @@ The [CopyCellAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spre
 
 **Copy active range**
 
-When [CopyCellAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_CopyCellAsync_System_String_) method is invoked without any parameters, the content is automatically copied from the most recently selected range, provided an active selection exists. If no range is selected, the method defaults to copying the content from the active cell.
+When [CopyCellAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet.SfSpreadsheet_CopyCellAsync_System_String_) is invoked without any parameters, the content is copied from the last selected range. If no range is selected, the content is copied from the active cell.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
+@page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
 <button @onclick="CopyActiveCell">Copy Active Cell</button>
 
-<SfSpreadsheet @ref=SpreadsheetInstance DataSource="DataSourceBytes">
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
@@ -250,14 +284,15 @@ The available parameters in the [CopyCellAsync](https://help.syncfusion.com/cr/b
 | cellAddress | string (optional) | Specifies the cell or range of cells to be copied. Accepts either a single cell reference from the active worksheet (for example, **"A1"**) or a range (for example, **"A1:B5"**). If no parameter is provided, the currently selected cell or range will be used for the copy operation. |
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
+@page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
 <button @onclick="CopyCell">Copy Cell</button>
-<button @onclick="CopyRange">Copy Range </button>
+<button @onclick="CopyRange">Copy Range</button>
 
-<SfSpreadsheet @ref=SpreadsheetInstance DataSource="DataSourceBytes">
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
@@ -287,7 +322,7 @@ The available parameters in the [CopyCellAsync](https://help.syncfusion.com/cr/b
 {% endhighlight %}
 {% endtabs %}
 
-**Copy specific range in different sheet**
+**Copy specific range in another sheet**
 
 To copy content from a specific worksheet, the source sheet name must be included along with the cell reference in the parameter passed to the [CopyCellAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_CopyCellAsync_System_String_) method. When specifying the sheet name, an exclamation mark (**!**) is used to separate it from the cell reference. The Spreadsheet component performs the copy operation and places the content on the clipboard, making it available for pasting into another location.
 
@@ -298,14 +333,15 @@ The available parameters in the [CopyCellAsync](https://help.syncfusion.com/cr/b
 | cellAddress | string (optional) | Specifies the cell or range of cells to be copied. Accepts either a single cell reference from a specific worksheet (for example, **"Sheet1!A1"**) or a range of cells (for example, **"Sheet2!A1:C5"**). If no value is provided, the currently selected cell or range from the active worksheet will be used for the copy operation. |
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
+@page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
 <button @onclick="CopyCellFromSpecificSheet">Copy Cell from Specific Sheet</button>
 <button @onclick="CopyRangeFromSpecificSheet">Copy Range from Specific Sheet</button>
 
-<SfSpreadsheet @ref=SpreadsheetInstance DataSource="DataSourceBytes">
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
@@ -337,13 +373,11 @@ The available parameters in the [CopyCellAsync](https://help.syncfusion.com/cr/b
 
 ## Paste
 
-The paste operation inserts data from the clipboard into a selected range of cells, rows, or columns, retaining all relevant details such as values, formats, and styles. When performing a **Cut** followed by **Paste**, the clipboard is cleared after the data is transferred. In contrast, with a **Copy** followed by **Paste**, the clipboard contents remain available for reuse. 
-
-**External clipboard** support allows pasting content from external sources like Google Sheets, Microsoft Excel, text files, and web pages.
+The paste operation inserts data from the clipboard into a selected range of cells, rows, or columns, retaining all relevant details such as values, formats, and styles. After Cut + Paste, the clipboard is cleared; after Copy + Paste, the clipboard content remains.
 
 ### Paste operations via UI
 
-The paste operation can be performed through the UI using one of the following methods:
+The **Paste** operation can be performed through the user interface (UI) using any of the following methods:
 
 **Using the Ribbon**
 
@@ -367,6 +401,8 @@ The paste operation can be performed through the UI using one of the following m
 
 The [PasteCellAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_PasteCellAsync_System_String_) method pastes clipboard content into a specified cell or range, preserving all properties (value, format, style, etc.). If the source range is larger than the target range, the paste operation extends beyond the target's boundaries to accommodate the full source content, overwriting any data in the expanded area.
 
+When a multi-cell source is pasted into a smaller target, the source content is automatically written into the smallest bounding range that can contain it. For example, a 3×3 source pasted into a single cell at `Sheet2!B2` overwrites the range `Sheet2!B2:D4`.
+
 **Example**
 - Source Range: **"Sheet1!A1:C3"** (3 rows × 3 columns)
 - Target Range: **"Sheet2!B2"** (single cell)
@@ -380,13 +416,14 @@ Pasting this content will overwrite the range **"Sheet2!B2:D4"** to match the 3�
 When [PasteCellAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_PasteCellAsync_System_String_) is invoked without parameters, the content is pasted into the last selected range. If no range is selected, the content is pasted into the active cell.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
+@page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
 <button @onclick="PasteActiveCell">Paste to Active Cell</button>
 
-<SfSpreadsheet @ref=SpreadsheetInstance DataSource="DataSourceBytes">
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
@@ -421,15 +458,16 @@ The available parameters in the [PasteCellAsync](https://help.syncfusion.com/cr/
 | cellAddress | string (optional) | Specifies the target cell or range of cells for pasting clipboard content. Accepts either a single cell reference (for example, **"A1"**) or a range of cells (for example, **"A1:B5"**) from the active worksheet. A valid cell selection must exist prior to executing the paste operation. If no parameter is provided, the currently selected cell or range will be used as the paste destination. |
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
+@page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
 <button @onclick="PasteCell">Paste Cell</button>
 <button @onclick="PasteRange">Paste Range</button>
 <button @onclick="CopyAndPasteOversizedRange">Copy and Paste Oversized Range</button>
 
-<SfSpreadsheet @ref=SpreadsheetInstance DataSource="DataSourceBytes">
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
@@ -469,7 +507,7 @@ The available parameters in the [PasteCellAsync](https://help.syncfusion.com/cr/
 {% endhighlight %}
 {% endtabs %}
 
-**Paste to specific range in different sheet**
+**Paste to specific range in another sheet**
 
 To paste content into a specific sheet, include the target sheet name along with the cell reference as a parameter to the [PasteCellAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_PasteCellAsync_System_String_) method. When specifying a sheet name, use an exclamation mark (**!**) to separate it from the cell reference.
 
@@ -482,11 +520,12 @@ The available parameters in the [PasteCellAsync](https://help.syncfusion.com/cr/
 {% tabs %}
 {% highlight razor %}
 
+@page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
 <button @onclick="PasteCellToTargetSheet">Paste</button>
 
-<SfSpreadsheet @ref=SpreadsheetInstance DataSource="DataSourceBytes">
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
@@ -510,12 +549,25 @@ The available parameters in the [PasteCellAsync](https://help.syncfusion.com/cr/
 {% endhighlight %}
 {% endtabs %}
 
+## Supported external sources
+
+The **Paste** operation accepts clipboard content from sources outside the workbook. The supported external sources are:
+
+* **Microsoft Excel** - Tables copied from Excel, including cell values, basic number formats, and merged-cell text.
+* **Google Sheets** - Tables copied from Google Sheets, with cell values and basic text formatting.
+* **Plain-text files** - Tab-separated or comma-separated text pasted from a `.txt` or `.csv` file.
+* **Web pages** - Tables copied from a rendered web page (for example, via the browser's copy-as-table action).
+
+The behavior of an external paste depends on the source format and the browser. Tab-separated content is interpreted as separate cells, comma-separated content is treated as a single cell, and HTML table content is converted to plain text per cell. Browsers that block clipboard access (for example, Safari without explicit user permission) may prevent an external paste from completing.
+
 ## Events
 
-The Blazor Spreadsheet provides events that trigger during clipboard actions: [CutCopyActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.CutCopyActionBeginEventArgs.html) and [Pasting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.PastingEventArgs.html). These events allow for validation, customization, and other custom actions before the clipboard operation is executed.
+The Blazor Spreadsheet provides events that trigger during clipboard actions. Use the table of contents below to jump to the event you need:
 
-* **CutCopyActionBegin** - [CutCopyActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.CutCopyActionBeginEventArgs.html) event is triggered before a cut or copy operation is initiated.
-* **Pasting** - [Pasting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.PastingEventArgs.html) event is triggered prior to the initiation of a paste operation.
+* [CutCopyActionBegin](#cutcopyactionbegin) - Triggered before a cut or copy operation is initiated.
+* [Pasting](#pasting) - Triggered prior to the initiation of a paste operation.
+
+The events are wired through attributes on the `SfSpreadsheet` element (for example, `CutCopyActionBegin="OnCutCopyActionBegin"` and `Pasting="OnPasting"`). No additional JS interop is required; Blazor's standard event binding invokes the handler at the appropriate stage of the clipboard lifecycle.
 
 ### CutCopyActionBegin
 
@@ -527,11 +579,11 @@ This event is useful for monitoring clipboard activities, preventing sensitive d
 
 **Event Arguments**
 
-[CutCopyActionBeginEventArgs]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.CutCopyActionBeginEventArgs.html)) includes the following properties:
+[CutCopyActionBeginEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.CutCopyActionBeginEventArgs.html) includes the following properties:
 
 | Event Arguments | Description |
 |----------------|-------------|
-| ClipboardAction | Specifies the type of clipboard operation in progress. Returns a value from the **ClipboardAction** enumeration, such as **ClipboardAction.Cut** or **ClipboardAction.Copy**. |
+| ClipboardAction | Specifies the type of clipboard operation in progress. Returns a value from the [ClipboardAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.ClipboardAction.html) enumeration, such as **ClipboardAction.Cut** or **ClipboardAction.Copy**. |
 | CopiedRange | Represents the full address of the cell range involved in the clipboard operation. Includes the worksheet name and range in A1 notation (e.g., **"Sheet1!A1:B5"**). |
 | Cancel | Indicates whether the clipboard operation should be cancelled. Set to **true** to prevent the cut or copy action from proceeding. |
 
@@ -587,7 +639,7 @@ This event is applicable in scenarios that require control over paste operations
  
 @using Syncfusion.Blazor.Spreadsheet
 
-<SfSpreadsheet DataSource="DataSourceBytes"Pasting="OnPasting">
+<SfSpreadsheet DataSource="DataSourceBytes" Pasting="OnPasting">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
  

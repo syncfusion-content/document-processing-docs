@@ -32,12 +32,12 @@ N> When [AllowMerge](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spr
 
 The Blazor Spreadsheet supports the following merge operations:
 
-| Operation       | API method | Description |
-| -- | -- | -- |
-| Merge cells     | [MergeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_MergeAsync_Syncfusion_Blazor_Spreadsheet_MergeType_System_String_) with `MergeType.Cells` | Combines all selected cells into one single cell. The value from the top-left cell is kept. |
-| Merge & center  | [MergeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_MergeAsync_Syncfusion_Blazor_Spreadsheet_MergeType_System_String_) with `MergeType.Center` | Combines all selected cells into one single cell and centers the content horizontally. The value from the top-left cell is kept. |
-| Merge across    | [MergeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_MergeAsync_Syncfusion_Blazor_Spreadsheet_MergeType_System_String_) with `MergeType.Across` | Merges cells row by row across columns in the selection. Each row keeps its first cell value. |
-| Unmerge cells   | [UnmergeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_UnmergeAsync_System_String_) | Reverses a merge and restores individual cells. The top-left cell value remains, and other cells are cleared. |
+| Operation       | Description |
+| -- | -- |
+| Merge cells     | Combines all selected cells into one single cell. The value from the top-left cell is kept. |
+| Merge & center  | Combines all selected cells into one single cell and centers the content horizontally. The value from the top-left cell is kept. |
+| Merge across    | Merges cells row by row across columns in the selection. Each row keeps its first cell value. |
+| Unmerge cells   | Reverses a merge and restores individual cells. The top-left cell value remains, and other cells are cleared. |
 
 N> The **Merge Cell** button is disabled when a single unmerged cell is selected. Merge options are also unavailable when the sheet is protected.
 

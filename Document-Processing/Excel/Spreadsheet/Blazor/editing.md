@@ -26,10 +26,6 @@ To disable cell editing, set the `AllowEditing` property on the `SfSpreadsheet` 
 {% endhighlight %}
 {% endtabs %}
 
-For step-by-step setup instructions (creating a Blazor project, installing NuGet packages, and registering Syncfusion), refer to the [Getting Started with Blazor Spreadsheet](./getting-started) documentation.
-
-> For additional keyboard shortcuts related to cell editing, refer to the [Keyboard Shortcuts](./accessibility#keyboard-shortcuts) documentation.
-
 ## Edit cell
 
 Cell editing can be initiated directly through the UI using any of the following options:
@@ -105,8 +101,6 @@ The supported `cellValue` types are: **string**, **number** (int, long, double, 
 To exit edit mode without saving changes, press the **ESCAPE** key. This action restores the original content of the cell and cancels any modifications made during editing.
 
 ![Animation showing a user canceling a cell edit in the Blazor Spreadsheet component.](./images/cell-editing.gif)
-
-N> This section documents general keyboard behavior supported by the Syncfusion Blazor Spreadsheet component. Custom key bindings that conflict with these defaults should be verified against the [Keyboard Shortcuts](./accessibility#keyboard-shortcuts) page.
 
 ## Events
 
