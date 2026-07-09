@@ -47,7 +47,7 @@ public App()
 Step 5: In the **MainXamlPage.xaml** add new button as shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -144,7 +144,7 @@ Refer the below helper files and add them into the mentioned project. These help
     {{'[PreviewControllerDS.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-PDF-conversion/Convert-PowerPoint-presentation-to-PDF/Xamarin/Convert-PowerPoint-Presentation-to-PDF/Convert-PowerPoint-Presentation-to-PDF.iOS/PreviewControllerDS.cs)'| markdownify }}
   </td>
   <td>
-    Helper class for viewing the <b>PowerPoint Presenatation</b> in iOS device
+    Helper class for viewing the <b>PowerPoint Presentation</b> in iOS device
   </td>
   </tr>
   <tr>
