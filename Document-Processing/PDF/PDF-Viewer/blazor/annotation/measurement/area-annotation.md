@@ -42,7 +42,7 @@ The SfPdfViewer component supports area measurement annotations by default. To e
 
 ![Measurement Toolbar](../../images/blazor-pdfviewer-add-calibrate-in-toolbar.png)
 
-> **Tip:** If Pan mode is active, choosing a measurement tool switches the viewer into the appropriate interaction mode for a smoother workflow.
+N> If Pan mode is active, choosing a measurement tool switches the viewer into the appropriate interaction mode for a smoother workflow.
 
 ### Enable Area Mode Programmatically
 
@@ -83,7 +83,7 @@ Switch back to the default mode by calling [`SetAnnotationModeAsync`](https://he
 }
 ```
 
-### Add Area Programmatically
+### Add Area Annotation Programmatically
 
 Use [`AddAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) to add an Area measurement by providing **VertexPoints** for a closed region.
 
@@ -226,11 +226,11 @@ Modify an existing Area annotation programmatically using [`EditAnnotationAsync(
 }
 ```
 
-For the full set of `PdfAnnotation` members, see the [PdfAnnotation API reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfAnnotation.html).
+N> For the full set of `PdfAnnotation` members, see the [PdfAnnotation API reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfAnnotation.html).
 
 ### Add Area Annotation Programmatically with Custom Properties
 
-Override the default style for a single Area annotation by setting properties directly on the `PdfAnnotation` instance before adding it.
+Override the default style for a single Area annotation by setting properties directly on the [`PdfAnnotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfAnnotation.html) instance before adding it.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -305,7 +305,6 @@ Configure scale defaults using [`MeasurementSettings`](https://help.syncfusion.c
     };
 }
 ```
-
 
 ### Delete Area Annotation
 
