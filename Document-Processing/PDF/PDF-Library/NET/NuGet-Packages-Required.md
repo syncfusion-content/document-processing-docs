@@ -161,7 +161,7 @@ For advanced PDF features like compression, redaction, PDF/A conversion, image e
 
 ### Converting XPS to PDF
 
-For converting XPS to PDF, the following NuGet packages need to to be installed in your .NET application from [nuget.org](https://www.nuget.org/). 
+To convert XPS documents to PDF, install the following required NuGet packages in your .NET application. 
 
 <table>
   <thead>
@@ -204,7 +204,6 @@ The following table illustrates the native assets NuGet package with their match
         Common Linux distributions such as Ubuntu, Alpine, CentOS, Debian, Fedora, and RHEL
         Azure App Service
         Google App Engine
-
       </td>
     </tr>
     <tr>
