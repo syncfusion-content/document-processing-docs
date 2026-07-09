@@ -38,7 +38,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 Step 5: Add a new button to the **MainWindow.xaml** as shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Window
     x:Class="Read_and_edit_PowerPoint_presentation.MainWindow"
@@ -96,7 +96,7 @@ if (shape.TextBody.Text == "Company History")
 {% endhighlight %}
 {% endtabs %}
 
-Step 9: Add below code example to **save the PowerPoint Presentation in WinUI Desktop app**. Refer the helper class file to save the **Presentation document** in WinUI Desktop App from [here](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/WinUI/WinUI-Desktop-app/Read-and-edit-PowerPoint-presentation/Read-and-edit-PowerPoint-presentation/SaveHelper.cs).
+Step 9: Add below code example to **save the PowerPoint Presentation in WinUI Desktop app**. Refer the helper class file to save the **Presentation document** in WinUI Desktop App from [here](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/WinUI/WinUI-Desktop-app/Read-and-edit-PowerPoint-presentation/SaveHelper.cs).
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -145,7 +145,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 Step 5: Add a new button to the **MainPage.xaml** as shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Page
     x:Class="Read_and_edit_PowerPoint_presentation.MainPage"
