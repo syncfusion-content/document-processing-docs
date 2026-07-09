@@ -18,11 +18,11 @@ To learn how to work with annotations, you can also check out our video tutorial
 
 <style>#MAUISfPdfViewerVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUISfPdfViewerVideoTutorial' src='https://www.youtube.com/embed/Vom4I_xt--I'></iframe>
 
-## Supported Annotation Types
+## Supported annotation types
 
 The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) supports the following annotation types, grouped by category.
 
-### Text Markup Annotations
+### Text markup annotations
 
 Use these annotations to mark up text content within the PDF document.
 
@@ -35,7 +35,7 @@ Use these annotations to mark up text content within the PDF document.
 
 For more information, see [Text Markup Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/text-markups).
 
-### Shape Annotations
+### Shape annotations
 
 Use these annotations to draw geometric shapes over PDF content.
 
@@ -50,7 +50,9 @@ Use these annotations to draw geometric shapes over PDF content.
 
 For more information, see [Shape Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/shapes).
 
-### Freehand and Rich Content Annotations
+### Freehand and rich content annotations
+
+Use these annotations to draw freehand strokes or add rich content such as text boxes, stamps, and notes over PDF content.
 
 | Annotation | Description |
 |---|---|
@@ -62,35 +64,24 @@ For more information, see [Shape Annotations](https://help.syncfusion.com/docume
 
 For more information, see [Ink Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/ink), [Free Text Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/free-text), [Stamps](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/stamps), and [Sticky Notes](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/sticky-notes).
 
-## In This Section
+## Common annotation operations
 
-### Annotation Types
-
-| Topic | Description |
-|---|---|
-| [Text Markup Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/text-markups) | Highlight, underline, strikeout, and squiggly annotations on selected text. |
-| [Shape Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/shapes) | Draw arrows, circles, lines, polygons, polylines, and rectangles over pages. |
-| [Ink Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/ink) | Draw freehand strokes over any page area. |
-| [Ink Eraser](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/ink-eraser) | Erase portions of existing ink annotations. |
-| [Free Text Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/free-text) | Place a text box directly on the page. |
-| [Stamps](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/stamps) | Apply predefined or custom image stamps on a page. |
-| [Sticky Notes](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/sticky-notes) | Attach pop-up notes to specific locations on a page. |
-
-### Common Annotation Operations
+The following topics describe common operations that apply across annotation types.
 
 | Topic | Description |
 |---|---|
-| [Add, Remove, and Modify Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/add-remove-modify-annotations) | Programmatically add, update, and delete any annotation type. |
+| [Add, Remove, and Edit Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/add-remove-modify-annotations) | Programmatically add, update, and delete any annotation type. |
 | [Annotation Collection](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotation-collection) | Access and iterate the full annotation collection. |
 | [Select and Deselect Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/select-deselect-annotations) | Select one or more annotations programmatically. |
 | [Lock and Unlock Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/lock-unlock) | Prevent annotations from being edited or deleted. |
 | [Show and Hide Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/show-hide) | Toggle visibility of annotations without removing them. |
 | [Import and Export Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/import-export-annotations) | Import/export annotation data in XFDF, FDF, JSON, and XML formats. |
 | [Undo and Redo](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/undo-redo) | Reverse or reapply recent annotation changes. |
-| [Annotation Comments](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-comment) | Add review comments and status to annotations. |
+| [Comments](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-comment) | Add review comments and replies to annotations. |
 
 ## See Also
-- [Add, Remove, and Modify Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/add-remove-modify-annotations)
-- [Import and Export Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/import-export-annotations)
+
 - [Save a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/save-a-document)
-- [Undo and Redo](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/undo-redo)
+- [Toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/toolbar)
+- [Keyboard Shortcuts](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/keyboard-shortcuts)
+- [UI Customization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/ui-customization)
