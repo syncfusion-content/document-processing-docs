@@ -10,63 +10,73 @@ domainurl: ##DomainURL##
 
 # Load a Password-Protected PDF in Blazor
 
-This article explains how to open password-protected PDF files in the Syncfusion Blazor PDF Viewer. The viewer supports both user‑interactive loading (Open File dialog) and programmatic loading using APIs.
+This article explains how to open password-protected PDF files in the Blazor PDF Viewer. The viewer supports both user-interactive loading (the built-in **Open File** dialog) and programmatic loading using APIs.
+
 
 ## 1. Opening a Password-Protected PDF Using the **Open File** Dialog
 
-When the user selects a password-protected PDF using the built‑in **Open File** option:
+When the user clicks the built-in **Open File** button in the PDF Viewer toolbar and selects a password-protected PDF:
 
-- The viewer detects that the document is encrypted
+- The viewer detects that the document is encrypted on the server side
 
-![Open PDF Document](../../react/images/open-pdf.png)
+![Open PDF Document](../images/open-pdf.png)
 
 - A **password input popup** is automatically displayed
 
-![Password Protected Pop-up](../../react/images/password-popup.png)
+![Password Protected Pop-up](../images/password-popup.png)
 
 - The user enters the password
-
 - The document is decrypted and loaded
 
-No additional configuration or code is required.
-
-This approach works for all password-protected PDFs opened locally by the user.
+No additional configuration or code is required. This approach works for all password-protected PDFs opened locally by the user.
 
 ## 2. Opening a Password-Protected PDF Programmatically
 
-If you load a password-protected PDF from a URL or through custom logic, the viewer provides two behaviors depending on how the file is loaded.
+Use the programmatic APIs when the password is known in advance or when the document is hosted on a server. The viewer supports both the `LoadAsync` overloads and the `DocumentPath` property.
 
-### 2.1 Load the Document Using `LoadAsync(byte[] bytes, string password = null)`
+### 2.1 Load the Document Using `LoadAsync`
 
-You can directly pass the password in the [`load`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_LoadAsync_System_Byte___System_String_) method:
+The [`LoadAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_LoadAsync_System_Byte___System_String_) method accepts a password parameter. The two supported overloads are:
+
+- `LoadAsync(byte[] bytes, string password = null)` — pass the PDF as a byte array
+- `LoadAsync(string document, string password = null)` — pass a URL or server-relative path
+
+**Example (byte array):**
 
 ```cs
-@using Syncfusion.Blazor.SfPdfViewer
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.SfPdfViewer
 
-<SfButton @onclick="clicked">Load Document</SfButton>
+<SfButton @onclick="Clicked">Load Document</SfButton>
 <SfPdfViewer2 Height="100%" Width="100%" @ref="Viewer">
 </SfPdfViewer2>
 
-@code{
+@code {
     SfPdfViewer2 Viewer;
 
-    public async void clicked()
+    private async Task Clicked()
     {
         await Viewer.LoadAsync("wwwroot/pdf-succinctly-password-protected.pdf", "password");
     }
 }
 ```
 
-- If the password is correct → the PDF loads immediately
-- If the password is incorrect → the viewer displays the incorrect password popup
-- If no password is provided → the password popup is shown automatically
+N> The password parameter is consumed for the current load operation only and is not cached across re-renders. If the document is reloaded, supply the password again.
 
-This is useful when the password is known beforehand.
+**Outcomes**
 
-### 2.2 Loading a Password-Protected Document's URL Using `documentPath`
+| Password state | Result |
+|---|---|
+| Correct | The PDF loads immediately |
+| Incorrect | The viewer displays the incorrect password popup |
+| Null or empty | The password popup is shown automatically |
 
-If the [`documentPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) points to a password-protected PDF:
+N> Handle incorrect-password events through the [`DocumentLoadFailed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.DocumentLoadFailedEventArgs.html) event to surface custom error messages.
+
+### 2.2 Loading a Password-Protected Document via `DocumentPath`
+
+When the [`DocumentPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) property points to a password-protected PDF, the viewer detects the encryption and prompts the user for the password automatically.
 
 ```cs
 @using Syncfusion.Blazor
@@ -78,18 +88,25 @@ If the [`documentPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 </SfPdfViewer2>
 
 @code {
-    //Load URL for Passwrod-Protected Document in DocumentPath
-    public string DocumentPath { get; set; } = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+    // URL for the password-protected sample document
+    public string DocumentPath { get; set; } = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly-password-protected.pdf";
 }
 ```
 
+N> Do not pass the password as a query string inside `DocumentPath`.
+
 The viewer will:
 
-- Detect encryption
+- Detect encryption on the server
 - Show the **password popup automatically**
 - Allow the user to enter the correct password
-- Then load the PDF
+- Decrypt and load the PDF
 
-![Password Protected Pop-up](../../react/images/password-popup.png)
+![Password Protected Pop-up](../images/password-popup.png)
 
-N> No password should be passed inside `documentPath`.
+N> Explore the sample projects available on [Load and View Password-Protected PDFs](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20View%20Password-Protected%20Files)
+
+## See Also
+
+- [Load Large PDF Files](./load-large-pdf)
+- [Getting started with SfPdfViewer in a Blazor Web App](../getting-started/web-app)
