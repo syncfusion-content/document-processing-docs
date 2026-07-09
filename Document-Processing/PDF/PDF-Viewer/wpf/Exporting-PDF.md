@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Exporting PDF pages in WPF Pdf Viewer control | Syncfusion&reg;
-description: Learn how to export PDF pages in the Syncfusion<sup>&reg;</sup> WPF Pdf Viewer control.
+description: Learn about Exporting PDF pages support in Syncfusion<sup>&reg;</sup>; WPF Pdf Viewer control, its elements and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
