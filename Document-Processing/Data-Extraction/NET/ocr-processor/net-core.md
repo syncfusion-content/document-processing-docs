@@ -69,27 +69,30 @@ Step 6: Add a new action method named PerformOCR in the HomeController.cs and us
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//Initialize the OCR processor.
-using (OCRProcessor processor = new OCRProcessor())
+public IActionResult PerformOCR()
 {
-   FileStream fileStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-   //Load a PDF document.
-   PdfLoadedDocument lDoc = new PdfLoadedDocument(fileStream);
-   //Set OCR language to process.
-   processor.Settings.Language = Languages.English;
-   //Process OCR by providing the PDF document.
-   processor.PerformOCR(lDoc);
-   //Create memory stream.
-   MemoryStream stream = new MemoryStream();
-   //Save the document to memory stream.
-   lDoc.Save(stream);
-   lDoc.Close();
-   //Set the position as '0'.
-   stream.Position = 0;
-   //Download the PDF document in the browser.
-   FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
-   fileStreamResult.FileDownloadName = "Sample.pdf";
-   return fileStreamResult;
+   //Initialize the OCR processor.
+   using (OCRProcessor processor = new OCRProcessor())
+   {
+      FileStream fileStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
+      //Load a PDF document.
+      PdfLoadedDocument lDoc = new PdfLoadedDocument(fileStream);
+      //Set OCR language to process.
+      processor.Settings.Language = Languages.English;
+      //Process OCR by providing the PDF document.
+      processor.PerformOCR(lDoc);
+      //Create memory stream.
+      MemoryStream stream = new MemoryStream();
+      //Save the document to memory stream.
+      lDoc.Save(stream);
+      lDoc.Close();
+      //Set the position as '0'.
+      stream.Position = 0;
+      //Download the PDF document in the browser.
+      FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
+      fileStreamResult.FileDownloadName = "Sample.pdf";
+      return fileStreamResult;
+   }
 }
 
 {% endhighlight %}
@@ -97,11 +100,11 @@ using (OCRProcessor processor = new OCRProcessor())
 
 Step 7: Build the project.
 
-Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
+Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
 Step 8: Run the project.
 
-Click the Start button (green arrow) or press F5 to run the app.
+Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.
 
 {% endtabcontent %}
 
@@ -166,27 +169,30 @@ Step 7: Add a new action method named PerformOCR in the HomeController.cs and us
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//Initialize the OCR processor.
-using (OCRProcessor processor = new OCRProcessor())
+public IActionResult PerformOCR()
 {
-   FileStream fileStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-   //Load a PDF document.
-   PdfLoadedDocument lDoc = new PdfLoadedDocument(fileStream);
-   //Set OCR language to process.
-   processor.Settings.Language = Languages.English;
-   //Process OCR by providing the PDF document.
-   processor.PerformOCR(lDoc);
-   //Create memory stream.
-   MemoryStream stream = new MemoryStream();
-   //Save the document to memory stream.
-   lDoc.Save(stream);
-   lDoc.Close();
-   //Set the position as '0'.
-   stream.Position = 0;
-   //Download the PDF document in the browser.
-   FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
-   fileStreamResult.FileDownloadName = "Sample.pdf";
-   return fileStreamResult;
+   //Initialize the OCR processor.
+   using (OCRProcessor processor = new OCRProcessor())
+   {
+      FileStream fileStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
+      //Load a PDF document.
+      PdfLoadedDocument lDoc = new PdfLoadedDocument(fileStream);
+      //Set OCR language to process.
+      processor.Settings.Language = Languages.English;
+      //Process OCR by providing the PDF document.
+      processor.PerformOCR(lDoc);
+      //Create memory stream.
+      MemoryStream stream = new MemoryStream();
+      //Save the document to memory stream.
+      lDoc.Save(stream);
+      lDoc.Close();
+      //Set the position as '0'.
+      stream.Position = 0;
+      //Download the PDF document in the browser.
+      FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
+      fileStreamResult.FileDownloadName = "Sample.pdf";
+      return fileStreamResult;
+   }
 }
 
 {% endhighlight %}
@@ -276,27 +282,30 @@ Step 6: Add a new action method named PerformOCR in the HomeController.cs and us
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//Initialize the OCR processor.
-using (OCRProcessor processor = new OCRProcessor())
+public IActionResult PerformOCR()
 {
-   FileStream fileStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-   //Load a PDF document.
-   PdfLoadedDocument lDoc = new PdfLoadedDocument(fileStream);
-   //Set OCR language to process.
-   processor.Settings.Language = Languages.English;
-   //Process OCR by providing the PDF document.
-   processor.PerformOCR(lDoc);
-   //Create memory stream.
-   MemoryStream stream = new MemoryStream();
-   //Save the document to memory stream.
-   lDoc.Save(stream);
-   lDoc.Close();
-   //Set the position as '0'.
-   stream.Position = 0;
-   //Download the PDF document in the browser.
-   FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
-   fileStreamResult.FileDownloadName = "Sample.pdf";
-   return fileStreamResult;
+   //Initialize the OCR processor.
+   using (OCRProcessor processor = new OCRProcessor())
+   {
+      FileStream fileStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
+      //Load a PDF document.
+      PdfLoadedDocument lDoc = new PdfLoadedDocument(fileStream);
+      //Set OCR language to process.
+      processor.Settings.Language = Languages.English;
+      //Process OCR by providing the PDF document.
+      processor.PerformOCR(lDoc);
+      //Create memory stream.
+      MemoryStream stream = new MemoryStream();
+      //Save the document to memory stream.
+      lDoc.Save(stream);
+      lDoc.Close();
+      //Set the position as '0'.
+      stream.Position = 0;
+      //Download the PDF document in the browser.
+      FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
+      fileStreamResult.FileDownloadName = "Sample.pdf";
+      return fileStreamResult;
+   }
 }
 
 {% endhighlight %}

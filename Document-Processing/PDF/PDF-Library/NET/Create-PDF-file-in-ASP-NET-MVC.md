@@ -60,19 +60,23 @@ Step 6: Add a new action method named `CreatePDFDocument` in `HomeController.cs`
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//Create an instance of PdfDocument.
-using (PdfDocument document = new PdfDocument())
+public ActionResult CreateDocument()
 {
-    //Add a page to the document.
-    PdfPage page = document.Pages.Add();
-    //Create PDF graphics for the page.
-    PdfGraphics graphics = page.Graphics;
-    //Set the standard font.
-    PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
-    //Draw the text.
-    graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
-    //Open the document in browser after saving it. 
-    document.Save("Output.pdf", HttpContext.ApplicationInstance.Response, HttpReadType.Save);
+    //Create an instance of PdfDocument.
+    using (PdfDocument document = new PdfDocument())
+    {
+        //Add a page to the document.
+        PdfPage page = document.Pages.Add();
+        //Create PDF graphics for the page.
+        PdfGraphics graphics = page.Graphics;
+        //Set the standard font.
+        PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
+        //Draw the text.
+        graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
+        //Open the document in browser after saving it. 
+        document.Save("Output.pdf", HttpContext.ApplicationInstance.Response, HttpReadType.Save);
+    }
+    return View();
 }
 
 {% endhighlight %}
