@@ -109,7 +109,7 @@ Click the Start button (green arrow) or press F5 to run the app.
 **Prerequisites**:
 
 * Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-* Install Visual Studio Code: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
+* Install Visual Studio Code: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download?_exp_download=d53503e735).
 * Install C# Extension for VS Code: Open Visual Studio Code, go to the Extensions view (Ctrl+Shift+X), and search for 'C#'. Install the official [C# extension provided by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
 
 Step 1: Open the terminal (Ctrl+` ) and run the following command to create a new ASP.NET Core Web Application project.
