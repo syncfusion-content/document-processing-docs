@@ -9,7 +9,7 @@ documentation: ug
 
 # Load Microsoft Office files in Blazor SfPdfViewer Component
 
-The SfPdfViewer component displays PDF documents. To load Microsoft Office or image files (Word, Excel, PowerPoint, and common image formats), upload the file, convert it to a PDF, and then load the resulting PDF in the viewer using the uploader success event.
+In the following example, a Word document is converted to a PDF and then loaded into the SfPdfViewer2 as a base64 data URL. The same approach is applied for PowerPoint, Excel, and image files.
 
 In the following example, a Word document is converted to a PDF and then loaded into the SfPdfViewer as a Base64 data URL. The same approach is applied for PowerPoint, Excel, and image files.
 
@@ -178,5 +178,4 @@ In the following example, a Word document is converted to a PDF and then loaded 
 ## See also
 
 * [How to load PDF documents dynamically in Blazor SfPdfViewer Component](./how-to-load-pdf-document-dynamically)
-
 * [How to unload the PDF document from Viewer](./how-to-unload-the-pdf-document-from-viewer)

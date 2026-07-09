@@ -43,7 +43,7 @@ The following example shows how to set the highlight color.
 
 In addition to `Color`, [PdfViewerHighlightSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerHighlightSettings.html) exposes additional properties such as `Opacity`, `IsLocked`, `Author`, `Subject`, and `ModifiedDate`. Refer to the [PdfViewerHighlightSettings API reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerHighlightSettings.html) for the full list.
 
-N> The value assigned to `Color` also sets the default selection in the highlight tool's color picker in the toolbar.
+The value assigned to `Color` also sets the default selection in the highlight tool's color picker in the toolbar.
 N> Highlight annotations rendered using the default color set by `PdfViewerHighlightSettings.Color`.
 
 ## See also

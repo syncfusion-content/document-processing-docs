@@ -9,7 +9,7 @@ documentation: ug
 
 # Render JS PDF Viewer inside Blazor SfPdfViewer Component
 
-The Syncfusion&reg; Blazor SfPdfViewer component supports rendering the EJ2 JavaScript PDF Viewer inside a Blazor page using JavaScript interop.
+The Blazor SfPdfViewer component supports rendering the EJ2 JavaScript PDF Viewer inside a Blazor page using JavaScript interop.
 
 The following steps show how to embed the JavaScript PDF Viewer in a Blazor component.
 

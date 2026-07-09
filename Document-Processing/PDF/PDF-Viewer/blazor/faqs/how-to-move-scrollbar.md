@@ -9,7 +9,7 @@ documentation: ug
 
 # Scroll to the Exact Annotation position Using Scrollbar
 
-Use the Syncfusion&reg; Blazor SfPdfViewer component to scroll to the location of an annotation in a loaded PDF by calling the [GoToBookmarkAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_GoToBookmarkAsync_System_Int32_System_Double_) method with the target page number and vertical offset (from the top of the page).
+Use the Blazor SfPdfViewer component to scroll to the location of an annotation in a loaded PDF by calling the [GoToBookmarkAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_GoToBookmarkAsync_System_Int32_System_Double_) method with the target page number and vertical offset (from the top of the page).
 
 The following example shows how to scroll to an annotation.
 

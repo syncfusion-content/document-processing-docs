@@ -13,7 +13,7 @@ DOCX files can be viewed in a Blazor application in two ways:
 
 **Option** **1:**
 
-Use the Syncfusion&reg; Word Processor component for Blazor to compose, view, and edit DOC, DOCX, RTF, and SFDT file formats.
+Use the Syncfusion<sup style="font-size:70%">&reg;</sup> Word Processor component for Blazor to compose, view, and edit DOC, DOCX, RTF, and SFDT file formats.
 
 For details, see the [Word Processor](https://www.syncfusion.com/blazor-components/blazor-word-processor) component product page and documentation.
 

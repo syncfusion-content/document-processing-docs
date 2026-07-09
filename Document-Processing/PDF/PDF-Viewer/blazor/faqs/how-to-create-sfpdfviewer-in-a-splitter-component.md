@@ -9,7 +9,7 @@ documentation: ug
 
 # Create the PDF Viewer in a Splitter component in Blazor
 
-The Blazor Splitter organizes content into resizable panes. The following example shows how to place the PDF Viewer inside a Splitter pane so users can view a document alongside other UI content.
+The Blazor Splitter organizes content into resizable, draggable panes. The following example shows how to place the PDF Viewer inside a Splitter pane so users can view a document alongside other UI content. The sample renders two panes a left pane with placeholder content and a right pane that hosts the SfPdfViewer2 loading the sample document.
 
 ```cshtml
 
@@ -32,7 +32,9 @@ The Blazor Splitter organizes content into resizable panes. The following exampl
 
                 <!--Build the PDF Viewer inside a splitter pane-->
                 <SfPdfViewer2 @ref="@viewer"
-                              DocumentPath="@DocumentPath">
+                              DocumentPath="@DocumentPath"
+                              Height="100%"
+                              Width="100%">
                 </SfPdfViewer2>
 
             </ContentTemplate>
@@ -46,7 +48,11 @@ The Blazor Splitter organizes content into resizable panes. The following exampl
     SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
-
 ```
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Render%20the%20PDF%20Viewer%20on%20Splitter).
+
+## See also
+
+* [How to preview the newly created PDF document](./how-to-create-sfpdfviewer)
+* [How to create a SfPdfViewer within a popup window in Blazor](./how-to-create-sfpdfviewer-in-a-popup-window)
