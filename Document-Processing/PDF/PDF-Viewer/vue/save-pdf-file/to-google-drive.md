@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF file to Google Drive
+# Save PDF file to Google Drive in Vue
 
 This article describes how to save a PDF file to Google Drive from the Vue PDF Viewer using a server-side web service. Follow the steps below.
 
