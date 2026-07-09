@@ -42,6 +42,8 @@ End Using
 
 {% endtabs %}
 
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Working-with-Markdown-document/Clone-whole-Markdown-document/.NET).
+
 You can also create a deep copy of Markdown document elements such as paragraphs, headings, blockquotes, code blocks, lists, tables, images, and more. The following code example illustrates how to clone blocks of a Markdown document and save each cloned blocks as a separate Markdown document.
 
 {% tabs %}
@@ -83,3 +85,4 @@ sourceDocument.Dispose()
 
 {% endtabs %}
 
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Working-with-Markdown-document/Split-by-blocks/.NET).
