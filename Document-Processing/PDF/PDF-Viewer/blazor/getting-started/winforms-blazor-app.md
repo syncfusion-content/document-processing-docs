@@ -7,15 +7,15 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# View PDF files using the SfPdfViewer2 in a WinForms Blazor Hybrid App
+# Getting Started with the PDF Viewer in a WinForms Blazor Hybrid App
 
-This section explains how to add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SfPdfViewer2 to a WinForms Blazor Hybrid App using [Visual Studio](https://visualstudio.microsoft.com/vs/) or Visual Studio Code. The result is a desktop (WinForms) application that hosts Blazor UI inside a BlazorWebView control.
+This section explains how to add the Blazor SfPdfViewer2 to a WinForms Blazor Hybrid App using [Visual Studio](https://visualstudio.microsoft.com/vs/) or Visual Studio Code. The result is a desktop (WinForms) application that hosts Blazor UI inside a BlazorWebView control.
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
-## Prerequisites for Blazor PDF Viewer
+## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 * .NET 8.0 SDK installed (required by the pinned `Microsoft.AspNetCore.Components.WebView.WindowsForms` 8.0.16 package).
@@ -47,7 +47,7 @@ N> Ensure the package `Microsoft.AspNetCore.Components.WebView.WindowsForms` is 
 
 {% tabcontent Visual Studio Code %}
 
-## Prerequisites for Blazor PDF Viewer
+## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
@@ -63,7 +63,7 @@ dotnet new winforms -n WinFormsBlazorHybridApp
 {% endhighlight %}
 {% endtabs %}
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SfPdfViewer and Themes NuGet packages in the app
+## Install Blazor SfPdfViewer and Themes NuGet packages in the app
 
 Install the required NuGet packages in the WinForms project that will host the Blazor UI.
 

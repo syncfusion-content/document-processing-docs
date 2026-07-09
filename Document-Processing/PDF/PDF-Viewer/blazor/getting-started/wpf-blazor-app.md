@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# View PDF files using the PDF Viewer in a WPF Blazor Hybrid App
+# Getting Started with the PDF Viewer in a WPF Blazor Hybrid App
 
 This section explains how to add the Blazor PDF Viewer to a WPF Blazor Hybrid app using [Visual Studio](https://visualstudio.microsoft.com/vs/) or [Visual Studio Code](https://code.visualstudio.com/). The result is a desktop (WPF) application that hosts Blazor UI inside a `BlazorWebView` control.
 

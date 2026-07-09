@@ -31,12 +31,6 @@ dotnet workload install wasm-tools
 {% endhighlight %} 
 {% endtabs %}
 
-For specific .NET versions, use the version-specific workload:
-
-* `dotnet workload install wasm-tools-net8` for .NET 8
-* `dotnet workload install wasm-tools-net9` for .NET 9
-* `dotnet workload install wasm-tools-net10` for .NET 10
-
 ## Create a new Blazor Web App in Visual Studio
 
 Use Visual Studio 2022 to create a Blazor Web App via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). During creation, ensure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) are configured.
@@ -83,12 +77,6 @@ dotnet workload install wasm-tools
 
 {% endhighlight %} 
 {% endtabs %}
-
-For specific .NET versions, use the version-specific workload:
-
-* `dotnet workload install wasm-tools-net8` for .NET 8
-* `dotnet workload install wasm-tools-net9` for .NET 9
-* `dotnet workload install wasm-tools-net10` for .NET 10
 
 ## Create a new Blazor Web App in Visual Studio Code
 
@@ -163,12 +151,6 @@ dotnet workload install wasm-tools
 
 {% endhighlight %} 
 {% endtabs %}
-
-For specific .NET versions, use the version-specific workload:
-
-* `dotnet workload install wasm-tools-net8` for .NET 8
-* `dotnet workload install wasm-tools-net9` for .NET 9
-* `dotnet workload install wasm-tools-net10` for .NET 10
 
 ## Create a Blazor Web App using .NET CLI
 

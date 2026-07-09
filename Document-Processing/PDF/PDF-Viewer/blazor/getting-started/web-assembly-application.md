@@ -31,17 +31,11 @@ dotnet workload install wasm-tools
 {% endhighlight %} 
 {% endtabs %}
 
-For specific .NET versions, use the version-specific workload:
-
-* `dotnet workload install wasm-tools-net8` for .NET 8
-* `dotnet workload install wasm-tools-net9` for .NET 9
-* `dotnet workload install wasm-tools-net10` for .NET 10
-
 ## Create a new Blazor App in Visual Studio
 
 You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SfPdfViewer and Themes NuGet Packages
+## Install Blazor SfPdfViewer and Themes NuGet Packages
 
 To add the **Blazor SfPdfViewer (Next-Gen)** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer), [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/), and [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/) (version `3.119.1`).
 
@@ -80,12 +74,6 @@ dotnet workload install wasm-tools
 {% endhighlight %} 
 {% endtabs %}
 
-For specific .NET versions, use the version-specific workload:
-
-* `dotnet workload install wasm-tools-net8` for .NET 8
-* `dotnet workload install wasm-tools-net9` for .NET 9
-* `dotnet workload install wasm-tools-net10` for .NET 10
-
 ## Create a new Blazor App in Visual Studio Code
 
 Create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
@@ -104,7 +92,7 @@ cd BlazorApp
 {% endtabs %}
 
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SfPdfViewer and Themes NuGet Packages
+## Install Blazor SfPdfViewer and Themes NuGet Packages
 
 Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
 
@@ -155,12 +143,6 @@ dotnet workload install wasm-tools
 {% endhighlight %} 
 {% endtabs %}
 
-For specific .NET versions, use the version-specific workload:
-
-* `dotnet workload install wasm-tools-net8` for .NET 8
-* `dotnet workload install wasm-tools-net9` for .NET 9
-* `dotnet workload install wasm-tools-net10` for .NET 10
-
 ## Create a Blazor WebAssembly App using .NET CLI
 
 Run the following command to create a new Blazor WebAssembly App in a command prompt (Windows), terminal (macOS), or command shell (Linux). For detailed instructions, refer to the [Blazor WASM App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app?tabcontent=.net-cli) documentation.
@@ -174,7 +156,7 @@ cd BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SfPdfViewer and Themes NuGet in the App
+## Install Blazor SfPdfViewer and Themes NuGet in the App
 
 After creating the Blazor WebAssembly App, install the required Syncfusion NuGet packages using the .NET CLI.
 
