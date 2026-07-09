@@ -36,7 +36,7 @@ The viewer handles the prompt as follows:
 
 ## Detect load errors
 
-Handle incorrect-password events through the [`DocumentLoadFailed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.DocumentLoadFailedEventArgs.html) event to surface custom error messages.
+Handle incorrect-password events through the [`DocumentLoadFailed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_DocumentLoadFailed) event to surface custom error messages.
 
 ## Supported permissions
 
@@ -98,4 +98,3 @@ N> The sample uses a `wwwroot/` path, which is appropriate for Blazor WebAssembl
 
 * [Permission-protected documents](./permission)
 * [Load a Password-Protected PDF in Blazor](../document-handling/load-password-pdf)
-* [SfPdfViewer2 API reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html)

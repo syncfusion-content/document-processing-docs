@@ -12,8 +12,7 @@ domainurl: ##DomainURL##
 
 This article explains how to open password-protected PDF files in the Blazor PDF Viewer. The viewer supports both user-interactive loading (the built-in **Open File** dialog) and programmatic loading using APIs.
 
-
-## 1. Opening a Password-Protected PDF Using the **Open File** Dialog
+## Opening a Password-Protected PDF Using the **Open File** Dialog
 
 When the user clicks the built-in **Open File** button in the PDF Viewer toolbar and selects a password-protected PDF:
 
@@ -30,11 +29,11 @@ When the user clicks the built-in **Open File** button in the PDF Viewer toolbar
 
 No additional configuration or code is required. This approach works for all password-protected PDFs opened locally by the user.
 
-## 2. Opening a Password-Protected PDF Programmatically
+## Opening a Password-Protected PDF Programmatically
 
 Use the programmatic APIs when the password is known in advance or when the document is hosted on a server. The viewer supports both the `LoadAsync` overloads and the `DocumentPath` property.
 
-### 2.1 Load the Document Using `LoadAsync`
+### Load the Document Using `LoadAsync`
 
 The [`LoadAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_LoadAsync_System_Byte___System_String_) method accepts a password parameter. The two supported overloads are:
 
@@ -72,9 +71,9 @@ N> The password parameter is consumed for the current load operation only and is
 | Incorrect | The viewer displays the incorrect password popup |
 | Null or empty | The password popup is shown automatically |
 
-N> Handle incorrect-password events through the [`DocumentLoadFailed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.DocumentLoadFailedEventArgs.html) event to surface custom error messages.
+N> Handle incorrect-password events through the [`DocumentLoadFailed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_DocumentLoadFailed) event to surface custom error messages.
 
-### 2.2 Loading a Password-Protected Document via `DocumentPath`
+### Loading a Password-Protected Document via `DocumentPath`
 
 When the [`DocumentPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) property points to a password-protected PDF, the viewer detects the encryption and prompts the user for the password automatically.
 
@@ -103,8 +102,6 @@ The viewer will:
 - Decrypt and load the PDF
 
 ![Password Protected Pop-up](../images/password-popup.png)
-
-N> Explore the sample projects available on [Load and View Password-Protected PDFs](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20View%20Password-Protected%20Files)
 
 ## See Also
 

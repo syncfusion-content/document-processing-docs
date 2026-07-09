@@ -43,7 +43,7 @@ Chunk-based processing is **mandatory** for loading large PDF files in the Blazo
 
 Refer to the following FAQ to configure chunk-based processing:
 
-- [How to process Large files using EnableChunkMessages](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-process-large-files-without-increasing-maximum-message-size)
+- [How to process Large files using EnableChunkMessages](../faqs/how-to-processing-large-files-without-increasing-maximum-message-size)
 
 Ensure that:
 
@@ -53,7 +53,7 @@ Ensure that:
 
 ### 2. Load Large PDFs Using DocumentPath
 
-For large documents, it is recommended to load the PDF using the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) property. The `DocumentPath` approach is preferred over base64 or byte-array inputs because the latter require the entire file to be held in client memory, which is impractical for files approaching 1 GB.
+For large documents, it is recommended to load the PDF using the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) property.
 
 Using `DocumentPath` helps:
 
@@ -65,7 +65,7 @@ This approach is suitable for PDFs hosted on servers, secured APIs, or cloud sto
 
 Example usage:
 
-```razor
+```cshtml
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 DocumentPath="https://your-server/large-file.pdf"
@@ -76,7 +76,7 @@ Example usage:
 
 ### 3. Optimize Network and Performance Configuration
 
-Proper network configuration plays a critical role in rendering large PDFs. The two most impactful settings are connection buffer size and CDN-hosted assets.
+Proper network configuration plays a critical role in rendering large PDFs.
 
 #### Increase Connection Buffer Size
 
@@ -102,10 +102,9 @@ For the best experience, follow these steps:
 4. Avoid opening multiple large PDFs at the same time.
 5. Verify that adequate system memory and CPU are available before loading the file.
 
-N> Explore the sample projects available on [Load and View large PDF files](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20View%20Large%20Files)
-
 
 ## See Also
 
 - [Load a Password-Protected PDF](./load-password-pdf)
 - [Getting started with SfPdfViewer in a Blazor Web App](../getting-started/web-app)
+- [Load and Save Sample](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save)
