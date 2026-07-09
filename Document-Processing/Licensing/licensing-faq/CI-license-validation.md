@@ -29,7 +29,7 @@ The following section shows how to validate the Syncfusion<sup>&reg;</sup> licen
 
 
 {% tabs %}
-{% highlight powershell tabtitle="PowerShell" %}
+{% highlight c# tabtitle="PowerShell" %}
 # Replace the parameters with the desired platform, version, and actual license key.
 
 $result = & $PSScriptRoot"\LicenseKeyValidatorConsole.exe" /platform:"FileFormats" /version:"26.2.4" /licensekey:"Your License Key"
@@ -56,7 +56,7 @@ Write-Host $result
 
 * Create a new [User-defined Variable](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch#user-defined-variables) named `LICENSE_VALIDATION` in the Azure Pipeline. Use the path of the LicenseKeyValidation.ps1 script file as the value (for example, `D:\LicenseKeyValidator\LicenseKeyValidation.ps1`).
 
-* Add a PowerShell task to the pipeline that runs the script. The script returns a non-zero exit code on failure, so add `failOnStderr: true` (or use the script's exit code) to fail the build when validation fails. The license key should be read from a secret variable (for example, `$(SYNCFUSION_LICENSE_KEY)`) and passed to the script.
+Integrate the PowerShell task in the pipeline and execute the script to validate the license key. 
 
 The following example shows the syntax for Windows build agents.
 
