@@ -197,7 +197,7 @@ namespace PdfViewerDemo
     <pdfviewerdemo:PdfReport/>
 </Window.DataContext>
 {% endhighlight %}
-
+{% endtabs %}
 
 3.	After setting the `DataContext`, bind the file stream property to the [ItemSource](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_ItemSource) dependency property of [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html) using the following code sample in XAML.
 
