@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Acquire the current page being displayed in WPF Pdf Viewer | Syncfusion®
-description: Learn about acquiring the current page being displayed support in Syncfusion<sup>&reg;</sup> WPF Pdf Viewer control and more.
+title: Acquire current page being displayed in WPF Pdf Viewer | Syncfusion®
+description: Learn about Exporting PDF pages support in Syncfusion<sup>&reg;</sup>; WPF Pdf Viewer control, its elements and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
