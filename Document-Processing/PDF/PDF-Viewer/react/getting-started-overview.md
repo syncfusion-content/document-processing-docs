@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 # Getting started with React PDF Viewer
 
 
-If you're starting to integrate the React PDF Viewer into your application, choose the path below that matches how you'll run the viewer in your app (client-only or via a web service) and follow the linked tutorial.
+If you're starting to integrate the React PDF Viewer into your application, choose the path below that matches how you'll run the viewer in your app (client-only or via a web service) and follow the linked tutorial. 
 
 ## Choose your setup
 
