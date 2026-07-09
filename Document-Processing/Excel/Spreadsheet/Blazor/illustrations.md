@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Illustrations in Blazor Spreadsheet component | Syncfusion
-description: Check out and learn about illustrations in the Syncfusion Blazor Spreadsheet component and more.
+description: Check out and learn about illustrations in the Syncfusion Blazor Spreadsheet component and enhance spreadsheets with visual content.
 platform: document-processing
 control: Spreadsheet
 documentation: ug

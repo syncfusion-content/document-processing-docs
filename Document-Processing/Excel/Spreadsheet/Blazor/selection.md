@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection in Blazor Spreadsheet Component | Syncfusion
-description: Learn about the selection functionality in the Syncfusion Blazor Spreadsheet component, including the programmatic SelectRangeAsync method and UI-driven selection options.
+description: Learn about selection features in the Syncfusion Blazor Spreadsheet component, including SelectRangeAsync and UI-based selection options.
 platform: document-processing
 control: Spreadsheet
 documentation: ug

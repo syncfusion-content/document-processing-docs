@@ -87,7 +87,7 @@ Hyperlinks can be added programmatically using the [`AddHyperlinkAsync`](https:/
 | displayText | string (optional) |  Specifies the text to display in the cell. If omitted, the hyperlink address is used as the display text. For cells with existing values, this parameter overrides the existing text. |
 
 {% tabs %}
-{% highlight razor tabname="Index.razor" %}
+{% highlight razor tabtitle="Index.razor" %}
 
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet

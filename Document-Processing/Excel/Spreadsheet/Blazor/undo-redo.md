@@ -40,7 +40,7 @@ N> The **Undo** button is automatically disabled when there are no reversible op
 The undo action can also be performed programmatically by calling the [`Undo`](https://help.syncfusion.com/cr/blazor/syncfusion.blazor.spreadsheet.sfspreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_Undo) method on the `SfSpreadsheet` instance.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet

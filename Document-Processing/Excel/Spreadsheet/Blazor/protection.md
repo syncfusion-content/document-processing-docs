@@ -139,7 +139,7 @@ The **Unprotect Sheet** support restores access to all actions that were previou
 
 ### Unprotecting a sheet via the UI
 
-In the active sheet, sheet unprotection can be performed using any of the following ways:
+In the active sheet, sheet unprotect can be performed using any of the following ways:
 
 * Select **Unprotect Sheet** from the **Review** tab in the Ribbon toolbar.
 * Right-click the sheet tab and select **Unprotect Sheet** from the context menu.
@@ -148,7 +148,7 @@ When the sheet is protected with a password, perform the following steps:
 
 1. Select **Unprotect Sheet** from the Ribbon or the context menu to open the **Unprotect Sheet** dialog.
 2. Enter the password that was set when the sheet was protected.
-3. Click **OK** to apply the unprotection.
+3. Click **OK** to unprotect.
 
 When the sheet is protected without a password, no password entry is required and the sheet is unprotected immediately.
 
