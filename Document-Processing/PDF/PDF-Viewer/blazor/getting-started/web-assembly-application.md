@@ -31,6 +31,8 @@ dotnet workload install wasm-tools
 {% endhighlight %} 
 {% endtabs %}
 
+The `wasm-tools` workload is installed for the active .NET SDK. When targeting a different .NET SDK version, ensure that the corresponding version-specific workload is installed.
+
 ## Create a new Blazor App in Visual Studio
 
 You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
@@ -73,6 +75,8 @@ dotnet workload install wasm-tools
 
 {% endhighlight %} 
 {% endtabs %}
+
+The `wasm-tools` workload is installed for the active .NET SDK. When targeting a different .NET SDK version, ensure that the corresponding version-specific workload is installed.
 
 ## Create a new Blazor App in Visual Studio Code
 
@@ -142,6 +146,8 @@ dotnet workload install wasm-tools
 
 {% endhighlight %} 
 {% endtabs %}
+
+The `wasm-tools` workload is installed for the active .NET SDK. When targeting a different .NET SDK version, ensure that the corresponding version-specific workload is installed.
 
 ## Create a Blazor WebAssembly App using .NET CLI
 
