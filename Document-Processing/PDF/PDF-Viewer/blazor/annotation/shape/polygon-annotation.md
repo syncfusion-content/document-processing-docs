@@ -48,7 +48,7 @@ Polygon annotations can be added from the annotation toolbar:
 
 N> When the viewer is in Pan mode and a shape drawing mode is activated, the viewer switches to Text Select mode.
 
-### Enable Polygon Mode
+### Enable Polygon Annotation Mode
 
 Switch the viewer into polygon drawing mode using [SetAnnotationModeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SetAnnotationModeAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationType_).
 
@@ -73,7 +73,7 @@ Switch the viewer into polygon drawing mode using [SetAnnotationModeAsync](https
 }
 ```
 
-### Add Polygon Programmatically
+### Add Polygon Annotation Programmatically
 
 Use the [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method to add a polygon annotation by specifying multiple vertex points. Ensure the document is loaded and the component reference is available before invoking this method.
 
@@ -140,11 +140,11 @@ Configure default polygon appearance (fill color, stroke color, thickness, opaci
 }
 ```
 
-## Manage Polygon (Edit, Move, Resize, Delete)
+## Manage Polygon Annotation (Edit, Move, Resize, Delete)
 
-### Edit Polygon
+### Edit Polygon Annotation
 
-#### Edit Polygon (UI)
+#### Edit Polygon Annotation (UI)
 
 - Select a polygon to view resize handles.
 - Drag any vertex to resize or reposition; drag inside the shape to move it.
@@ -200,7 +200,7 @@ Modify an existing polygon annotation programmatically using [EditAnnotationAsyn
 }
 ```
 
-### Delete Polygon
+### Delete Polygon Annotation
 
 The PDF Viewer supports deleting existing annotations through the UI and API.
 See [**Delete Annotation**](../delete-annotation) for full behavior and workflows.

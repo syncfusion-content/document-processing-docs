@@ -45,7 +45,7 @@ Add Line annotations from the annotation toolbar:
 
 N> When the viewer is in Pan mode and a shape drawing mode is activated, the viewer switches to Text Select mode.
 
-### Enable Line Mode
+### Enable Line Annotation Mode
 
 Switch the viewer into line drawing mode using [SetAnnotationModeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SetAnnotationModeAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationType_).
 
@@ -70,7 +70,7 @@ Switch the viewer into line drawing mode using [SetAnnotationModeAsync](https://
 }
 ```
 
-### Add Line Programmatically
+### Add Line Annotation Programmatically
 
 Use the [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method to add a line annotation at a specific location. Ensure the document is loaded and the component reference is available before invoking this method.
 
@@ -135,11 +135,11 @@ Configure default line appearance (stroke color, thickness, opacity, and arrowhe
 }
 ```
 
-## Manage Line (Edit, Move, Resize, Delete)
+## Manage Line Annotation (Edit, Move, Resize, Delete)
 
-### Edit Line
+### Edit Line Annotation
 
-#### Edit Line (UI)
+#### Edit Line Annotation (UI)
 
 - Select a line to view resize handles.
 - Drag endpoints to adjust length/angle.
@@ -160,7 +160,7 @@ Use the following annotation toolbar tools to modify:
 
 N> **Fill Color** is not available for Line annotations because lines do not render a fill.
 
-#### Edit Line Programmatically
+#### Edit Line Annotation Programmatically
 
 Modify an existing line annotation programmatically using [EditAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_). Retrieve the target annotation from [GetAnnotationsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_GetAnnotationsAsync) and update the desired properties before submitting the edit.
 
@@ -193,7 +193,7 @@ Modify an existing line annotation programmatically using [EditAnnotationAsync](
 }
 ```
 
-### Delete Line
+### Delete Line Annotation
 
 The PDF Viewer supports deleting existing annotations through the UI and API.
 See [**Delete Annotation**](../delete-annotation) for full behavior and workflows.

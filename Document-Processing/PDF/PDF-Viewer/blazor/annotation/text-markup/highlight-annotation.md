@@ -68,7 +68,7 @@ To disable all text markup annotations (including highlight) so they do not appe
 
 ### Enable Highlight Mode Programmatically
 
-Switch the viewer into highlight mode using `SetAnnotationModeAsync()`.
+Switch the viewer into highlight mode using [`SetAnnotationModeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SetAnnotationModeAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationType_).
 
 ```cshtml
 @page "/enable-highlight"
@@ -254,9 +254,9 @@ To delete programmatically, use [`DeleteAnnotationAsync()`](https://help.syncfus
 }
 ```
 
-## Add Multiple Highlights Programmatically
+## Add Multiple Highlights with Custom Properties
 
-To add several highlights with different colors and positions in one operation, call `AddAnnotationAsync()` for each `PdfAnnotation`. This is an extension of the [Add Highlight Programmatically](#add-highlight-programmatically) example.
+To add several highlights with different colors and positions in one operation, call [`AddAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) for each [`PdfAnnotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfAnnotation.html). This is an extension of the [Add Highlight Programmatically](#add-highlight-programmatically) example.
 
 ```cshtml
 @page "/add-multiple-highlights"

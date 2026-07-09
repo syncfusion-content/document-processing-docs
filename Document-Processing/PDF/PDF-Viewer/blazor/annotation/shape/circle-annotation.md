@@ -45,9 +45,9 @@ Circle annotations can be added from the annotation toolbar:
 
 N> When the viewer is in Pan mode and a shape drawing mode is activated, the viewer switches to Text Select mode.
 
-### Enable Circle Mode
+### Enable Circle Annotation Mode
 
-Switch the viewer into circle drawing mode using [SetAnnotationModeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SetAnnotationModeAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationType_).
+Switch the viewer into circle drawing mode using [`SetAnnotationModeAsync(AnnotationType.Circle)`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SetAnnotationModeAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationType_).
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -70,7 +70,7 @@ Switch the viewer into circle drawing mode using [SetAnnotationModeAsync](https:
 }
 ```
 
-### Add Circle Programmatically
+### Add Circle Annotation Programmatically
 
 Use the [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method to add a circle annotation at a specific location. Ensure the document is loaded and the component reference is available before invoking this method.
 
@@ -138,11 +138,11 @@ Configure the default circle appearance (fill color, stroke color, thickness, an
 }
 ```
 
-## Manage Circle (Edit, Move, Resize, Delete)
+## Manage Circle Annotation (Edit, Move, Resize, Delete)
 
-### Edit Circle
+### Edit Circle Annotation
 
-#### Edit Circle (UI)
+#### Edit Circle Annotation (UI)
 
 - Select a circle to view resize handles.
 - Drag any side/corner to resize; drag inside the shape to move it.
@@ -196,7 +196,7 @@ Modify an existing circle annotation programmatically using [EditAnnotationAsync
 }
 ```
 
-### Delete Circle
+### Delete Circle Annotation
 
 The PDF Viewer supports deleting existing annotations through the UI and API.
 See [**Delete Annotation**](../delete-annotation) for full behavior and workflows.

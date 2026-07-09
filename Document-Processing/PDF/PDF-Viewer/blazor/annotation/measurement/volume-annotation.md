@@ -12,8 +12,9 @@ Volume measurement annotations allow users to draw cubic regions and calculate t
 
 ![Volume overview](../../images/blazor-pdfviewer-volume-annotation.png)
 
-## Enable Volume Measurement
-To enable Volume annotations in the Blazor SfPdfViewer, configure the component with annotation support and ensure the annotation toolbar is enabled.
+## Enable Volume Annotation
+
+The `SfPdfViewer` component supports Volume measurement annotations by **default**. To enable the annotation toolbar and measurement functionality, simply add the `SfPdfViewer` component to your Blazor page:
 
 ```cshtml
 @using Syncfusion.Blazor.SfPdfViewer
@@ -31,7 +32,7 @@ To enable Volume annotations in the Blazor SfPdfViewer, configure the component 
 
 ## Add Volume Annotation
 
-### Draw Volume Using the Toolbar
+### Draw Volume Annotation Using the Toolbar
 1. Click the **Edit Annotation** button in the SfPdfViewer toolbar. A secondary toolbar appears below it.
 2. Click the **Measurement Annotation** dropdown. A list of measurement annotation types appears.
 3. Select **Volume** to enter Volume measurement mode.
@@ -39,9 +40,9 @@ To enable Volume annotations in the Blazor SfPdfViewer, configure the component 
 
 ![Measurement Toolbar](../../images/blazor-pdfviewer-add-calibrate-in-toolbar.png)
 
-> If **Pan** mode is active, selecting the Volume tool automatically switches the viewer into Volume drawing mode.
+N> If **Pan** mode is active, selecting the Volume tool automatically switches the viewer into Volume drawing mode.
 
-### Enable Volume Mode
+### Enable Volume Annotation Mode
 Programmatically switch the viewer into Volume mode using [`SetAnnotationModeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SetAnnotationModeAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationType_).
 
 ```cshtml
@@ -66,7 +67,7 @@ Programmatically switch the viewer into Volume mode using [`SetAnnotationModeAsy
 }
 ```
 
-#### Exit Volume Mode
+#### Exit Volume Annotation Mode
 
 Switch back to the default mode by calling [`SetAnnotationModeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SetAnnotationModeAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationType_) with annotation type `None`.
 
@@ -92,7 +93,7 @@ Switch back to the default mode by calling [`SetAnnotationModeAsync`](https://he
 }
 ```
 
-### Add Volume Programmatically
+### Add Volume Annotation Programmatically
 Use the [`AddAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) API to add a volume annotation.
 
 ```cshtml
@@ -160,17 +161,17 @@ Available `PdfViewerVolumeSettings` members include `FillColor`, `StrokeColor`, 
 }
 ```
 
-## Manage Volume Annotations
+## Manage Volume Annotation
 
-### Move
+### Move Annotation
 Drag inside the cube to reposition the entire annotation on the page.
 
-### Reshape
+### Reshape Annotation
 Drag any **edge handle** to adjust the volume dimensions (length, width, or depth depending on which edge is selected).
 
 ### Edit Volume Annotation
 
-#### Edit Volume (UI)
+#### Edit Volume Annotation (UI)
 Select the Volume annotation first — the annotation toolbar appears below the main toolbar. Use it to change:
 
 - **Fill Color** — pick a new color with the Edit Color tool.
@@ -327,62 +328,10 @@ Configure scale defaults using [`MeasurementSettings`](https://help.syncfusion.c
 ## Handle Volume Events
 Listen to annotation life-cycle events (`Added`, `Modified`, `Selected`, `Removed`) and use the `AnnotationEventArgs` payload — which includes the affected `PdfAnnotation`, the page number, and the action that triggered the event.
 
-```cshtml
-<SfPdfViewer2 DocumentPath="@DocumentPath"
-              @ref="@viewer"
-              Added="@OnAdded"
-              Modified="@OnModified"
-              Selected="@OnSelected"
-              Removed="@OnRemoved"
-              Width="100%"
-              Height="100%" />
-
-@code {
-    private SfPdfViewer2 viewer;
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-
-    private void OnAdded(AnnotationEventArgs args)
-    {
-        // args.Annotation contains the PdfAnnotation that was added
-    }
-
-    private void OnModified(AnnotationEventArgs args)
-    {
-        // args.Annotation contains the PdfAnnotation that was modified
-    }
-
-    private void OnSelected(AnnotationEventArgs args)
-    {
-        // args.Annotation contains the PdfAnnotation that was selected
-    }
-
-    private void OnRemoved(AnnotationEventArgs args)
-    {
-        // args.Annotation contains the PdfAnnotation that was removed
-    }
-}
-```
-
 For the full list of events and their payloads, see [**Annotation Events**](../events).
 
 ## Export and Import
-Volume measurements are exported and imported with the rest of the annotations in **JSON** format.
-
-```cshtml
-@code {
-    private async Task Export()
-    {
-        // Exports all annotations (including Volume) as a JSON string
-        string json = await viewer.ExportAnnotationsAsync();
-        // Persist `json` to a file, database, or service as needed
-    }
-
-    private async Task Import(string json)
-    {
-        await viewer.ImportAnnotationsAsync(json);
-    }
-}
-```
+Volume measurements are exported and imported with the rest of the annotations in **JSON** or **XFDF** format. You can programmatically export and import these annotations using the [`ExportAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ExportAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationDataFormat_) and [`ImportAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ImportAnnotationAsync_System_IO_Stream_Syncfusion_Blazor_SfPdfViewer_AnnotationDataFormat_) methods.
 
 For the full export/import workflow and additional formats, see [**Export and Import Annotations**](../import-export-annotation).
 

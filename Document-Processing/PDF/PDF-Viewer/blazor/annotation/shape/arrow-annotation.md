@@ -41,8 +41,8 @@ To enable Arrow annotations in the Blazor SfPdfViewer, configure the component w
 
 N> When in Pan mode, selecting a shape tool automatically switches the viewer to selection mode for smooth interaction.
 
-### Enable Arrow Mode
-Switch the viewer into arrow mode using `SetAnnotationModeAsync(AnnotationType.Arrow)`.
+### Enable Arrow Annotation Mode
+Switch the viewer into arrow mode using [`SetAnnotationModeAsync(AnnotationType.Arrow)`]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SetAnnotationModeAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationType_)).
 
 ```cshtml
 
@@ -68,32 +68,7 @@ Switch the viewer into arrow mode using `SetAnnotationModeAsync(AnnotationType.A
 
 ```
 
-#### Exit Arrow Mode
-```cshtml
-
-@using Syncfusion.Blazor.SfPdfViewer
-@using Syncfusion.Blazor.Buttons
-
-<SfButton OnClick="ExitArrowMode">Exit Arrow Mode</SfButton>
-<SfPdfViewer2 DocumentPath="@DocumentPath" 
-              @ref="viewer"
-              Width="100%" 
-              Height="100%">
-</SfPdfViewer2>
-
-@code {
-    SfPdfViewer2 viewer;
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-
-    public async void ExitArrowMode(MouseEventArgs args)
-    {
-        await viewer.SetAnnotationModeAsync(AnnotationType.None);
-    }
-}
-
-```
-
-### Add Arrow Programmatically
+### Add Arrow Annotation Programmatically
 Use the [`AddAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) API to draw an arrow at a specific location (defined by two **VertexPoints**). The arrowhead style can be configured with `LineHeadStart` and `LineHeadEnd`.
 
 ```cshtml
@@ -164,10 +139,10 @@ Configure default arrow appearance (fill color, stroke color, thickness, opacity
 
 N> For **Line** and **Arrow** annotations, **Fill Color** is available only when an arrowhead style is applied at the **Start** or **End**. If both are `None`, lines do not render fill and the Fill option remains disabled.
 
-## Manage Arrow (Edit, Move, Resize, Delete)
-### Edit Arrow 
+## Manage Arrow Annotation (Edit, Move, Resize, Delete)
+### Edit Arrow Annotation
 
-#### Edit Arrow (UI)
+#### Edit Arrow Annotation (UI)
 - Select an Arrow to view resize handles.
 - Drag endpoints to adjust length/angle.
 - Edit stroke color, opacity, and thickness using the annotation toolbar.
@@ -188,7 +163,7 @@ Open the Line Properties dialog via **Right Click → Properties**.
 
 ![Line properties dialog](../../images/blazor-pdfviewer-edit-line-property.png)
 
-#### Edit Arrow Programmatically
+#### Edit Arrow Annotation Programmatically
 
 Modify an existing Arrow programmatically using `EditAnnotationAsync()`.
 
@@ -227,7 +202,7 @@ Modify an existing Arrow programmatically using `EditAnnotationAsync()`.
 
 ```
 
-### Delete Arrow
+### Delete Arrow Annotation
 
 The PDF Viewer supports deleting existing annotations through the UI and API.
 See [**Delete Annotation**](../delete-annotation) for full behavior and workflows.

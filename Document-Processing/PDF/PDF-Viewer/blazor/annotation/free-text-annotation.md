@@ -259,8 +259,6 @@ This example updates the position, size, appearance, and content of the first fr
 
 ## Custom font support for free text annotation
 
-The Blazor SfPdfViewer supports loading, editing, and saving custom fonts in free text annotations using the [FallbackFontCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_FallbackFontCollection) and [FontFamilies](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_FontFamilies) properties. `FallbackFontCollection` ensures the font is preserved when the document is saved, while `FontFamilies` controls which fonts appear in the toolbar dropdown.
-
 The Blazor SfPdfViewer supports loading, editing, and saving custom fonts in FreeText annotations using the [FallbackFontCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_FallbackFontCollection) and [FontFamilies](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_FontFamilies) properties.
 
 ### Loading Custom Font Collection in SfPdfViewer

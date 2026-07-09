@@ -12,8 +12,9 @@ Radius measurement annotations allow users to draw circular regions and calculat
 
 ![Radius overview](../../images/blazor-pdfviewer-radius-annotation.png)
 
-## Enable Radius Measurement
-To enable Radius annotations in the Blazor SfPdfViewer, configure the component with annotation support and ensure the annotation toolbar is enabled.
+## Enable Radius Annotation
+
+The `SfPdfViewer` component supports Radius measurement annotations by **default**. To enable the annotation toolbar and measurement functionality, simply add the `SfPdfViewer` component to your Blazor page:
 
 ```cshtml
 @using Syncfusion.Blazor.SfPdfViewer
@@ -31,7 +32,7 @@ To enable Radius annotations in the Blazor SfPdfViewer, configure the component 
 
 ## Add Radius Annotation
 
-### Add Radius Using the Toolbar
+### Add Radius Annotation Using the Toolbar
 1. Click the **Edit Annotation** button in the SfPdfViewer toolbar. A secondary toolbar appears below it.
 2. Click the **Measurement Annotation** dropdown. A list of measurement annotation types appears.
 3. Select **Radius** to enter Radius measurement mode.
@@ -41,7 +42,7 @@ To enable Radius annotations in the Blazor SfPdfViewer, configure the component 
 
 N> If **Pan** mode is active, selecting the Radius tool automatically switches the viewer into Radius drawing mode.
 
-### Enable Radius Mode
+### Enable Radius Annotation Mode
 Programmatically switch the viewer into Radius mode using [`SetAnnotationModeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SetAnnotationModeAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationType_).
 
 ```cshtml
@@ -66,7 +67,7 @@ Programmatically switch the viewer into Radius mode using [`SetAnnotationModeAsy
 }
 ```
 
-#### Exit Radius Mode
+#### Exit Radius Annotation Mode
 
 Switch back to the default mode by calling [`SetAnnotationModeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SetAnnotationModeAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationType_) with annotation type `None`.
 
@@ -92,7 +93,7 @@ Switch back to the default mode by calling [`SetAnnotationModeAsync`](https://he
 }
 ```
 
-### Add Radius Programmatically
+### Add Radius Annotation Programmatically
 Use the [`AddAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) API to add a radius annotation.
 
 ```cshtml
@@ -160,17 +161,17 @@ Available `PdfViewerRadiusSettings` members include `FillColor`, `StrokeColor`, 
 }
 ```
 
-## Manage Radius Annotations
+## Manage Radius Annotation
 
-### Move
+### Move Annotation
 Drag inside the circle to reposition the entire annotation on the page.
 
-### Reshape
+### Reshape Annotation
 Drag the **edge handle** (the circumference) to adjust the radius size. The center point remains fixed.
 
 ### Edit Radius Annotation
 
-#### Edit Radius (UI)
+#### Edit Radius Annotation (UI)
 Select the Radius annotation first — the annotation toolbar appears below the main toolbar. Use it to change:
 
 - **Fill Color** — pick a new color with the Edit Color tool.
@@ -184,7 +185,7 @@ Select the Radius annotation first — the annotation toolbar appears below the 
 - **Line properties** — change the leader style (line only, with arrows, or full dimension lines) with the Edit Property tool.
   ![Editing Calibrate Property in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-property.png)
 
-#### Edit Radius Programmatically
+#### Edit Radius Annotation Programmatically
 Update properties and call [`EditAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_).
 
 ```cshtml
@@ -327,62 +328,10 @@ Configure scale defaults using [`MeasurementSettings`](https://help.syncfusion.c
 ## Handle Radius Events
 Listen to annotation life-cycle events (`Added`, `Modified`, `Selected`, `Removed`) and use the `AnnotationEventArgs` payload — which includes the affected `PdfAnnotation`, the page number, and the action that triggered the event.
 
-```cshtml
-<SfPdfViewer2 DocumentPath="@DocumentPath"
-              @ref="@viewer"
-              Added="@OnAdded"
-              Modified="@OnModified"
-              Selected="@OnSelected"
-              Removed="@OnRemoved"
-              Width="100%"
-              Height="100%" />
-
-@code {
-    private SfPdfViewer2 viewer;
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-
-    private void OnAdded(AnnotationEventArgs args)
-    {
-        // args.Annotation contains the PdfAnnotation that was added
-    }
-
-    private void OnModified(AnnotationEventArgs args)
-    {
-        // args.Annotation contains the PdfAnnotation that was modified
-    }
-
-    private void OnSelected(AnnotationEventArgs args)
-    {
-        // args.Annotation contains the PdfAnnotation that was selected
-    }
-
-    private void OnRemoved(AnnotationEventArgs args)
-    {
-        // args.Annotation contains the PdfAnnotation that was removed
-    }
-}
-```
-
 For the full list of events and their payloads, see [**Annotation Events**](../events).
 
 ## Export and Import
-Radius measurements are exported and imported with the rest of the annotations in **JSON** format.
-
-```cshtml
-@code {
-    private async Task Export()
-    {
-        // Exports all annotations (including Radius) as a JSON string
-        string json = await viewer.ExportAnnotationsAsync();
-        // Persist `json` to a file, database, or service as needed
-    }
-
-    private async Task Import(string json)
-    {
-        await viewer.ImportAnnotationsAsync(json);
-    }
-}
-```
+Radius measurements are exported and imported with the rest of the annotations in **JSON** or **XFDF** format. You can programmatically export and import these annotations using the [`ExportAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ExportAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationDataFormat_) and [`ImportAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ImportAnnotationAsync_System_IO_Stream_Syncfusion_Blazor_SfPdfViewer_AnnotationDataFormat_) methods.
 
 For the full export/import workflow and additional formats, see [**Export and Import Annotations**](../import-export-annotation).
 

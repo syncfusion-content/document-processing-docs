@@ -12,9 +12,9 @@ Perimeter is a measurement annotation used to calculate the length around a clos
 
 ![Perimeter overview](../../images/blazor-pdfviewer-perimeter-annotation.png)
 
-## Enable Perimeter Measurement
+## Enable Perimeter Annotation
 
-To enable Perimeter annotations in the Blazor SfPdfViewer, configure the component with annotation support.
+The `SfPdfViewer` component supports Perimeter measurement annotations by **default**. To enable the annotation toolbar and measurement functionality, simply add the `SfPdfViewer` component to your Blazor page:
 
 ```cshtml
 
@@ -45,7 +45,7 @@ To enable Perimeter annotations in the Blazor SfPdfViewer, configure the compone
 
 N> If Pan mode is active, choosing a measurement tool switches the viewer into the appropriate interaction mode for a smoother workflow.
 
-### Enable Perimeter Mode
+### Enable Perimeter Annotation Mode
 Switch the viewer into Perimeter mode from code by calling [`SetAnnotationModeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SetAnnotationModeAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationType_).
 
 ```cshtml
@@ -71,7 +71,7 @@ Switch the viewer into Perimeter mode from code by calling [`SetAnnotationModeAs
 
 ```
 
-#### Exit Perimeter Mode
+#### Exit Perimeter Annotation Mode
 
 Switch back to the default mode by calling [`SetAnnotationModeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SetAnnotationModeAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationType_) with annotation type `None`.
 
@@ -98,8 +98,7 @@ Switch back to the default mode by calling [`SetAnnotationModeAsync`](https://he
 }
 ```
 
-
-### Add Perimeter Programmatically
+### Add Perimeter Annotation Programmatically
 
 Use the [`AddAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) API to draw a perimeter by providing multiple **VertexPoints**.
 
@@ -163,30 +162,17 @@ Configure the default Perimeter style — **fill color**, **stroke color**, **th
 }
 ```
 
-## Manage Perimeter Annotations
+## Manage Perimeter Annotation
 
-### Move
+### Move Perimeter Annotation
 
 Drag inside the polyline to reposition the entire annotation on the page.
 
-```cshtml
-@code {
-    // Move an existing perimeter annotation by translating its vertices.
-    private async Task MovePerimeter(PdfAnnotation annotation, int offsetX, int offsetY)
-    {
-        annotation.VertexPoints = annotation.VertexPoints
-            .Select(v => new VertexPoint { X = v.X + offsetX, Y = v.Y + offsetY })
-            .ToList();
-        await viewer.EditAnnotationAsync(annotation);
-    }
-}
-```
+### Reshape Perimeter Annotation
 
-### Reshape
+Drag any vertex handle to adjust the shape's points.
 
-Drag any vertex handle to add, remove, or adjust the shape's points.
-
-### Edit Perimeter
+### Edit Perimeter Annotation
 
 #### Edit Perimeter Appearance (UI)
 
@@ -254,7 +240,52 @@ Update the properties of an existing Perimeter annotation and call [`EditAnnotat
 
 For the full set of `PdfAnnotation` members, see the [PdfAnnotation API reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfAnnotation.html).
 
-### Add Perimeter Annotation Programmatically with Custom Properties
+### Delete Perimeter Annotation
+
+Delete a Perimeter annotation through the UI (right-click → **Delete**, click **Delete** on the annotation toolbar, or press the `Delete` key while the annotation is selected) or programmatically:
+
+```cshtml
+@code {
+    private async Task DeleteFirstPerimeter()
+    {
+        List<PdfAnnotation> annotations = await viewer.GetAnnotationsAsync();
+        PdfAnnotation target = annotations.FirstOrDefault(a => a.Type == AnnotationType.Perimeter);
+        if (target != null)
+        {
+            await viewer.DeleteAnnotationAsync(target);
+        }
+    }
+}
+```
+
+## Set Default Properties During Initialization
+Apply defaults for Perimeter using the [`PerimeterSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_PerimeterSettings) property.
+
+```cshtml
+
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfPdfViewer2 @ref="@viewer"
+              DocumentPath="@DocumentPath"
+              Height="100%" Width="100%"
+              PerimeterSettings="@PerimeterSettings">
+</SfPdfViewer2>
+
+@code {
+    SfPdfViewer2 viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    
+    PdfViewerPerimeterSettings PerimeterSettings = new PdfViewerPerimeterSettings
+    {
+        FillColor = "green",
+        Opacity = 0.6,
+        StrokeColor = "blue"
+    };
+}
+
+```
+
+## Add Perimeter Annotation Programmatically with Custom Properties
 
 Override the default style for a single Perimeter annotation by setting properties directly on the `PdfAnnotation` instance before adding it.
 
@@ -328,24 +359,6 @@ Configure scale defaults using [`MeasurementSettings`](https://help.syncfusion.c
 }
 ```
 
-### Delete Perimeter Annotation
-
-Delete a Perimeter annotation through the UI (right-click → **Delete**, click **Delete** on the annotation toolbar, or press the `Delete` key while the annotation is selected) or programmatically:
-
-```cshtml
-@code {
-    private async Task DeleteFirstPerimeter()
-    {
-        List<PdfAnnotation> annotations = await viewer.GetAnnotationsAsync();
-        PdfAnnotation target = annotations.FirstOrDefault(a => a.Type == AnnotationType.Perimeter);
-        if (target != null)
-        {
-            await viewer.DeleteAnnotationAsync(target);
-        }
-    }
-}
-```
-
 For more deletion patterns, see [**Delete Annotation**](../delete-annotation).
 
 ## Handle Perimeter Events
@@ -380,23 +393,7 @@ For the full list of events and their payloads, see [**Annotation Events**](../e
 
 ## Export and Import
 
-Perimeter measurements are exported and imported with the rest of the annotations in **JSON** format. Use `ExportAnnotationsAsync()` to download a JSON blob, and `ImportAnnotationsAsync()` to load it back into the viewer.
-
-```cshtml
-@code {
-    private async Task Export()
-    {
-        // Exports all annotations (including Perimeter) as a JSON string
-        string json = await viewer.ExportAnnotationsAsync();
-        // Persist `json` to a file, database, or service as needed
-    }
-
-    private async Task Import(string json)
-    {
-        await viewer.ImportAnnotationsAsync(json);
-    }
-}
-```
+Perimeter measurements are exported and imported with the rest of the annotations in **JSON** or **XFDF** format. You can programmatically export and import these annotations using the [`ExportAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ExportAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationDataFormat_) and [`ImportAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ImportAnnotationAsync_System_IO_Stream_Syncfusion_Blazor_SfPdfViewer_AnnotationDataFormat_) methods.
 
 For the full export/import workflow and additional formats, see [**Export and Import Annotations**](../import-export-annotation).
 

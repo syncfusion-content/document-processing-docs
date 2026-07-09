@@ -11,13 +11,9 @@ documentation: ug
 
 Annotation events notify the application when annotations are added, selected, moved, resized, modified, or removed. Subscribe to these events by using the `PdfViewerEvents` tag inside the `SfPdfViewer2` component.
 
-The sample PDF referenced in the examples below (`wwwroot/Data/PDF_Succinctly.pdf`) is available in the [Syncfusion Blazor PDF Viewer examples](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples) repository. Drop the file into the `wwwroot/Data/` folder of your application, or change the `DocumentPath` to point to a PDF of your choice. The examples use the `Syncfusion.Blazor.SfPdfViewer` NuGet package, which targets both Blazor Server and Blazor WebAssembly.
-
-> To raise the events documented on this page, ensure annotations are enabled in the toolbar (`EnableAnnotationToolbar = true`) so the user can add, select, move, resize, modify, or remove annotations.
-
 ## Events list
 
-The table below lists every annotation and signature event exposed by the `PdfViewerEvents` tag. Use the in-page navigation to jump to a specific event.
+The table below lists every annotation and signature events in the `PdfViewerEvents` tag.
 
 |Name|Description|
 |---|---|
@@ -582,7 +578,7 @@ The [SignaturePropertiesChange](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 #### Event arguments
 
-See [SignaturePropertiesChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SignaturePropertiesChangeEventArgs.html) for details such as `Id` (string), `PageNumber` (int), and the changed property values. The class also exposes boolean change flags such as `IsStrokeColorChanged`, `IsFillColorChanged`, `IsOpacityChanged`, `IsThicknessChanged`, and `IsFontFamilyChanged` that you can inspect in the handler.
+See [SignaturePropertiesChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SignaturePropertiesChangeEventArgs.html) for details such as `Id` (string), `PageNumber` (int), and the changed property values.
 
 The following example illustrates handling the `SignaturePropertiesChange` event.
 

@@ -68,7 +68,7 @@ To disable all text markup annotations (including squiggly) so they do not appea
 
 ### Enable Squiggly Mode Programmatically
 
-Switch the viewer into squiggly mode using `SetAnnotationModeAsync()`.
+Switch the viewer into squiggly mode using [`SetAnnotationModeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SetAnnotationModeAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationType_).
 
 ```cshtml
 @using Syncfusion.Blazor.SfPdfViewer
@@ -252,9 +252,9 @@ To delete programmatically, use [`DeleteAnnotationAsync()`](https://help.syncfus
 }
 ```
 
-## Add Multiple Squiggly Annotations Programmatically
+## Add Multiple Squiggly Annotations with Custom Properties
 
-To add several squiggly annotations with different colors and positions in one operation, call `AddAnnotationAsync()` for each `PdfAnnotation`. This is an extension of the [Add Squiggly Programmatically](#add-squiggly-programmatically) example.
+To add several squiggly annotations with different colors and positions in one operation, call [`AddAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) for each [`PdfAnnotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfAnnotation.html). This is an extension of the [Add Squiggly Programmatically](#add-squiggly-programmatically) example.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
