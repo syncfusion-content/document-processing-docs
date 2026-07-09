@@ -9,7 +9,7 @@ documentation: ug
 
 # Working with annotation comments
 
-PDF viewer provides options to add, edit, and delete the comments to the following annotation in the PDF documents:
+PDF viewer provides options to add, edit, and delete the comments for the following annotations in the PDF documents:
 
 * Ink.
 * Text markups (Highlight, Underline, Squiggly and Strikethrough).
@@ -18,7 +18,7 @@ PDF viewer provides options to add, edit, and delete the comments to the followi
 * Text box (Text and Text Callout).
 * Sticky note.
 
-![Annotation Comments](Annotation-images\comments.png)
+![Annotation Comments](Annotation-images/comments.png)
 
 ## Expand/Collapse the comments pane
 
@@ -28,7 +28,7 @@ Refer to the following code example to expand the comments pane.
 {% tabs %}
 {% highlight c# %}
 
-Private void button_Click(object sender,RoutedEventArgs e)
+private void button_Click(object sender,RoutedEventArgs e)
 {
     //expand the comments pane
     pdfViewer.CommentSettings.IsExpanded = true;
@@ -55,7 +55,7 @@ Refer to the following code example to hide the comments button in the annotatio
 {% tabs %}
 {% highlight c# %}
 
-Private void button_Click(object sender,RoutedEventArgs e)
+private void button_Click(object sender,RoutedEventArgs e)
 {
     //hide the comments button in the annotation toolbar
     pdfViewer.CommentSettings.IsVisible = false;
@@ -74,13 +74,13 @@ End Sub
 
 ## Adding a comment to the annotation
 
-Annotation comment, comment replies, and status can be added to the PDF document using the comment panel.
+Annotation comments, comment replies, and status can be added to the PDF document using the comment panel.
 
 ### Adding comments
 
 Annotation comments can be added to the PDF using the comment panel. If the comment panel is expanded, you can select the annotations and add annotation comments using the comment panel. The initial comment of the annotation will be reflected in the popup note and vice versa.
 
-![Adding Comments](Annotation-images\add-comments.png)
+![Adding Comments](Annotation-images/add-comments.png)
 
 ### Adding Comment Replies
 
@@ -90,37 +90,37 @@ Annotation comments can be added to the PDF using the comment panel. If the comm
 ### Adding Comment or Reply Status
 
 * Select the Annotation Comments in the comment panel.
-* Click the more options button showing in the Comments or reply container.
+* Click the More options button shown in the Comments or reply container.
 * Select the Set Status option in the context menu that appears.
 * Select the status of the annotation comment in the context menu that appears.
 
-![Comment Status](Annotation-images\comment-status.png)
+![Comment Status](Annotation-images/comment-status.png)
 
-## Editing the comments and comments replies of the annotations
+## Editing the comments and comment replies of the annotations
 
 The comment, comment replies, and status of the annotation can be edited using the comment panel.
 
 ### Editing the Comment or Comment Replies
 
 * Select the Annotation Comments in the comment panel.
-* Click the More options button showing in the Comments or reply container.
+* Click the More options button shown in the Comments or reply container.
 * Select the Edit option in the context menu that appears.
 * Now, an editable text box appears. You can change the content of the annotation comment or comment reply.
 
-![Editing the Comments](Annotation-images\edit-comment.png)
+![Editing the Comments](Annotation-images/edit-comment.png)
 
 ### Editing Comment or Reply Status
 
 * Select the Annotation Comments in the comment panel.
-* Click the more options button showing in the Comments or reply container.
+* Click the More options button shown in the Comments or reply container.
 * Select the Set Status option in the context menu that appears.
 * Select the status of the annotation comment in the context menu that appears.
-* Status ‘None’ is the default state. If the status is set to ‘None,’ the comments or reply does not appear.
+* Status ‘None’ is the default state. If the status is set to ‘None,’ the comments or replies do not appear.
 
 ### Delete Comment or Comment Replies
 
 * Select the Annotation Comments in the comment panel.
-* Click the more options button shown in the Comments or reply container.
+* Click the More options button shown in the Comments or reply container.
 * Select the Delete option in the context menu that appears.
 
-![Deleteing the Comments](Annotation-images\delete-comment.png)
+![Deleting the Comments](Annotation-images/delete-comment.png)

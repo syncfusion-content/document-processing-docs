@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Change the Current user in PdfViewer | Syncfusion
-description: Learn about how to Change the CurrentUser in Syncfusion<sup>&reg;</sup>; WPF Pdf Viewer control using CurrentUser property.
+title: Change the CurrentUser in PdfViewer | Syncfusion
+description: Learn how to change the CurrentUser in Syncfusion<sup>&reg;</sup> WPF Pdf Viewer control using CurrentUser property.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -14,12 +14,14 @@ The PDF Viewer allows you to change the CurrentUser. If the CurrentUser property
 {% tabs %}
 {% highlight C# %}
 
+using Syncfusion.Windows.PdfViewer;
+
 //Initialize PDF Viewer.
 PdfViewerControl pdfViewer = new PdfViewerControl();
 //Load the PDF.
 pdfViewer.Load("Sample.pdf");
 
-//Changing the CurrentUser of document
+//Changing the CurrentUser of document.
 pdfViewer.CurrentUser = "set the name here";
 {% endhighlight %}
 
@@ -27,12 +29,14 @@ pdfViewer.CurrentUser = "set the name here";
 
 {% highlight vbnet %}
 
+Imports Syncfusion.Windows.PdfViewer
+
 'Initialize PDF Viewer.
 Private pdfViewer As New PdfViewerControl()
 'Load the PDF.
 pdfViewer.Load("Sample.pdf")
 
-'Changing the CurrentUser of document
+'Changing the CurrentUser of document.
 pdfViewer.CurrentUser = "set the name here";
 
 {% endhighlight %}
