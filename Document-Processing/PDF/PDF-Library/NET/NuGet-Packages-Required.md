@@ -108,7 +108,6 @@ N> 2. From the Essential Studio<sup>&reg;</sup> 2018 Volume 3 release(v16.3.0.21
 
 For advanced PDF features like compression, redaction, PDF/A conversion, image extraction, and OCR, include the corresponding Syncfusion<sup>&reg;</sup> imaging package in your .NET Core applications:
 
-
 <table>
   <thead>
     <tr>
@@ -155,6 +154,29 @@ For advanced PDF features like compression, redaction, PDF/A conversion, image e
       </td>
       <td>
         {{'[Syncfusion.Xamarin.Pdf.Imaging.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.Pdf.Imaging)'| markdownify }}
+      </td>
+    </tr>
+    </tbody>
+</table>
+
+### Converting XPS to PDF
+
+For converting XPS to PDF, the following NuGet packages need to to be installed in your .NET application from [nuget.org](https://www.nuget.org/). 
+
+<table>
+  <thead>
+    <tr>
+      <th>Platform(s)</th>
+      <th>NuGet Package</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        ASP.NET Core
+      </td>
+      <td>
+        {{'[Syncfusion.XpsToPdfConverter.Net.Core.nupkg](https://www.nuget.org/packages/Syncfusion.XpsToPdfConverter.Net.Core)'| markdownify }}
       </td>
     </tr>
     </tbody>
