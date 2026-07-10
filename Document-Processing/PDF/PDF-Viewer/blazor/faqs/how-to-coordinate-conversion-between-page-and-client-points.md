@@ -78,10 +78,10 @@ window.convertPagePointToClientPoint = function (pagePoint) {
         Point clientPoint = await JS.InvokeAsync<Point>("convertPagePointToClientPoint", pagePoint);
         Console.WriteLine($"PagePoint to ClientPoint: X: {clientPoint.x} Y: {clientPoint.y}");
     }
-    public class Point
+    private class Point
     {
-        public double x { get; set; }
-        public double y { get; set; }
+        private double x { get; set; }
+        private double y { get; set; }
     }
 }
 
@@ -150,10 +150,10 @@ window.convertClientPointToPagePoint = function (clientPoint) {
         Point pagePoint = await JS.InvokeAsync<Point>("convertClientPointToPagePoint", clientPoint);
         Console.WriteLine($"ClientPoint to PagePoint: X: {pagePoint.x} Y: {pagePoint.y}");
     }
-    public class Point
+    private class Point
     {
-        public double x { get; set; }
-        public double y { get; set; }
+        private double x { get; set; }
+        private double y { get; set; }
     }
 }
 ```

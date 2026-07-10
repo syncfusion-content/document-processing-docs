@@ -21,7 +21,7 @@ For details, see the [Word Processor](https://www.syncfusion.com/docx-editor-sdk
 
 ## Option 2: Convert to PDF and use the SfPdfViewer component
 
-Convert the Word document to PDF using the Syncfusion DocIO server-side library, then display the resulting PDF in the SfPdfViewer2 component. SfPdfViewer2 renders only PDF files.
+Convert the Word document to PDF using the Syncfusion DocIO server-side library, then display the resulting PDF in the `SfPdfViewer` component. PDF Viewer renders only PDF files.
 
 ## See also
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Check the status of the comments in Blazor SfPdfViewer | Syncfusion
-description: Learn how to retrieve the review status of comments using the Review property and GetAnnotationsAsync in the Syncfusion Blazor SfPdfViewer component.
+description: Learn how to retrieve the review status of comments using the Review property and GetAnnotationsAsync in the Blazor SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

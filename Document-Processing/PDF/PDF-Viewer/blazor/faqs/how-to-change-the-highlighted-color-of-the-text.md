@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Change highlight color of text in Blazor PDF Viewer | Syncfusion
-description: Learn how to change the highlight color of text markup highlights in the Syncfusion Blazor SfPdfViewer using the PdfViewerHighlightSettings.
+description: Learn how to change the highlight color of text markup highlights in the Blazor SfPdfViewer using the PdfViewerHighlightSettings.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -25,7 +25,7 @@ The following example shows how to set the highlight color.
 
 @code {
     // Reference to the PDF Viewer instance.
-    SfPdfViewer2 PDFViewer;
+    private SfPdfViewer2 PDFViewer;
 
     // Sets the PDF document path for initial loading.
     private string DocumentPath { get; set; } = "Data/PDF_Succinctly.pdf";

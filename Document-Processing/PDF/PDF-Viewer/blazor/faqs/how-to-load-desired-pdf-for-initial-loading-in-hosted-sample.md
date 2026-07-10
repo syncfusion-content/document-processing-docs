@@ -7,9 +7,9 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Load a specific PDF on initial load in Blazor SfPdfViewer2
+# Load a specific PDF on initial load in Blazor SfPdfViewer
 
-Load a specific PDF on initial display and change the document at runtime in the Blazor SfPdfViewer2 component. To set the initial document, assign the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SfPdfViewer2.html#Syncfusion_Blazor_SfPdfViewer_SfPdfViewer2_DocumentPath) property to a file path/URL or a data URI (base64). Updating the DocumentPath property reloads the viewer with the new document.
+Load a specific PDF on initial display and change the document at runtime in the Blazor SfPdfViewer component. To set the initial document, assign the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SfPdfViewer2.html#Syncfusion_Blazor_SfPdfViewer_SfPdfViewer2_DocumentPath) property to a file path/URL or a data URI (base64). Updating the DocumentPath property reloads the viewer with the new document.
 
 ```cshtml
 
@@ -27,7 +27,7 @@ Load a specific PDF on initial display and change the document at runtime in the
 
 @code
 {
-    public string DocumentPath = "Data/PDF_Succinctly.pdf";
+    private string DocumentPath = "Data/PDF_Succinctly.pdf";
 
     private async Task LoadAnotherDocument()
     {

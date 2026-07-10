@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create a PDF document in the SfPdfViewer Created event | Syncfusion
-description: Learn how to create a PDF document in the Created event of the Syncfusion Blazor SfPdfViewer component and load it into the viewer.
+description: Learn how to create a PDF document in the Created event of the Blazor SfPdfViewer component and load it into the viewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Create a PDF in the Created event of SfPdfViewer
 
-A PDF document can be created during the SfPdfViewer2 `Created` event and loaded in the viewer by converting it to a Base64 data URL and assigning it to `DocumentPath`.
+A PDF document can be created during the SfPdfViewer `Created` event and loaded in the viewer by converting it to a Base64 data URL and assigning it to `DocumentPath`.
 
 ```cshtml
 @using Syncfusion.Blazor.SfPdfViewer;

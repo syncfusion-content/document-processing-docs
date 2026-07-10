@@ -24,8 +24,8 @@ The following example shows how to enable chunk messaging:
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 PdfViewer;
-    public string DocumentPath { get; set; } = "wwwroot/data/PDF Succinctly.pdf";
+    private SfPdfViewer2 PdfViewer;
+    private string DocumentPath { get; set; } = "wwwroot/data/PDF Succinctly.pdf";
 }
 ```
 

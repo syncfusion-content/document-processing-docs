@@ -9,7 +9,7 @@ documentation: ug
 
 # Determine if SfPdfViewer has values in the undo and redo collections
 
-The Blazor SfPdfViewer exposes the [CanUndo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_CanUndo) and [CanRedo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_CanRedo) properties to indicate whether undo and redo history is available. In SfPdfViewer2, bind these properties to boolean fields to reflect availability in the UI.
+The Blazor SfPdfViewer exposes the [CanUndo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_CanUndo) and [CanRedo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_CanRedo) properties to indicate whether undo and redo history is available. In `SfPdfViewer`, bind these properties to boolean fields to reflect availability in the UI.
 
 The following example binds these properties and enables or disables the buttons as the undo and redo history changes.
 

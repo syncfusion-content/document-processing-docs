@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize the arrow annotation head in Blazor SfPdfViewer | Syncfusion
-description: Learn how to customize or remove the start and end arrow heads in the Syncfusion Blazor SfPdfViewer using ArrowSettings and LineHeadStyle.
+description: Learn how to customize or remove the start and end arrow heads in the Blazor SfPdfViewer using ArrowSettings and LineHeadStyle.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -26,7 +26,7 @@ The following example shows how to remove arrow heads from arrow annotations.
 
 @code
 {
-    public SfPdfViewer2 Viewer { get; set; }
+    private SfPdfViewer2 Viewer { get; set; }
 
     private string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
 
@@ -39,7 +39,7 @@ The following example shows how to remove arrow heads from arrow annotations.
     };
 
     //Invoked when the document is loaded in the PDF Viewer.
-    public void DocumentLoad(LoadEventArgs args)
+    private void DocumentLoad(LoadEventArgs args)
     {
         //Shows the AnnotationToolbar on initial loading.
         Viewer.ShowAnnotationToolbar(true);        

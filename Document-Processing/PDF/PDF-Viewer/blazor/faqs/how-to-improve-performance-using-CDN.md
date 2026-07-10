@@ -19,7 +19,7 @@ Add the theme stylesheet inside the `<head>` element.
 
 ```html
 <head>
-    <!-- Syncfusion Blazor PDF Viewer control's theme style sheet -->
+    <!-- Blazor PDF Viewer control's theme style sheet -->
     <link href="https://cdn.syncfusion.com/blazor/{{ site.releaseversion }}/styles/bootstrap5.css" rel="stylesheet" />
 </head>
 ```
@@ -28,7 +28,7 @@ Add the script reference at the end of the `<body>` element.
 
 ```html
 <body>
-    <!-- Syncfusion Blazor PDF Viewer control's scripts -->
+    <!-- Blazor PDF Viewer control's scripts -->
     <script src="https://cdn.syncfusion.com/blazor/{{ site.releaseversion }}/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
 </body>
 ```

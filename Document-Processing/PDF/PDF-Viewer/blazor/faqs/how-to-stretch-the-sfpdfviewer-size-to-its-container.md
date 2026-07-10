@@ -7,9 +7,9 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Resize the SfPdfViewer2 to fit its container in Blazor
+# Resize the SfPdfViewer to fit its container in Blazor
 
-Use the Splitter’s Resizing event to resize the PDF viewer with its container at runtime. In this example, the SfPdfViewer2 is placed inside a Splitter pane, and UpdateViewerContainerAsync is called during resizing to recalculate the layout. Ensure the container has an explicit height and width (for example, 100%) so the viewer can stretch to fill the available space.
+Use the Splitter’s Resizing event to resize the PDF viewer with its container at runtime. In this example, the `SfPdfViewer` is placed inside a Splitter pane, and UpdateViewerContainerAsync is called during resizing to recalculate the layout. Ensure the container has an explicit height and width (for example, 100%) so the viewer can stretch to fill the available space.
 
 ```cshtml
 
@@ -31,7 +31,7 @@ Use the Splitter’s Resizing event to resize the PDF viewer with its container 
         <SplitterPane Size="200px">
             <ContentTemplate>
 
-                <!--Build the SfPdfViewer2 inside a splitter pane-->
+                <!--Build the PDF Viewer inside a splitter pane-->
                 <SfPdfViewer2 @ref="@viewer"
                               DocumentPath="@DocumentPath">
                 </SfPdfViewer2>
@@ -44,7 +44,7 @@ Use the Splitter’s Resizing event to resize the PDF viewer with its container 
 
 @code
 {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
 
     //Sets the document path for initial loading.
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
@@ -52,7 +52,7 @@ Use the Splitter’s Resizing event to resize the PDF viewer with its container 
     //Triggered when the splitter is resized.
     private async Task onresize()
     {
-        //Recalculates the SfPdfViewer2 layout when the container size changes.
+        //Recalculates the PDF Viewer layout when the container size changes.
         await viewer.UpdateViewerContainerAsync();
     }
 }

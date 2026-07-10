@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Update form fields using a context menu in SfPdfViewer | Syncfusion
-description: Learn how to update PDF form fields at runtime using a context menu with the Syncfusion Blazor SfPdfViewer component, including event handling and updates.
+description: Learn how to update PDF form fields at runtime using a context menu with the Blazor SfPdfViewer component, including event handling and updates.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -46,8 +46,8 @@ Update PDF form fields at runtime by handling the [FormFieldClick event](https:/
 
     private class CustomItem
     {
-        public string Content { get; set; }
-        public string Id { get; set; }
+        private string Content { get; set; }
+        private string Id { get; set; }
     }
 
     //Sets the PDF document path for initial loading.

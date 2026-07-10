@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Load PDF documents dynamically in Blazor SfPdfViewer component| Syncfusion
-description: Learn here all about how to load PDF documents dynamically in Syncfusion Blazor SfPdfViewer component and more.
+description: Learn here all about how to load PDF documents dynamically in Blazor SfPdfViewer component and more.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -61,10 +61,10 @@ The following code example shows how to load a PDF document dynamically by speci
 </SfPdfViewer2>
 
 @code{
-    SfPdfViewer2 Viewer;
+    private SfPdfViewer2 Viewer;
     private string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
 
-    public async Task clicked()
+    private async Task clicked()
     {
         await Viewer.LoadAsync("wwwroot/data/Python_Succinctly.pdf", null);
     }

@@ -9,7 +9,7 @@ documentation: ug
 
 # Load a font collection in Blazor SfPdfViewer Component
 
-In addition to loading a single custom font, the Blazor SfPdfViewer2 supports adding multiple fonts to the [FallbackFontCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_FallbackFontCollection). This is useful when a PDF uses various fonts that are not embedded in the document or are not available by default. Configuring multiple fallback fonts helps preserve text shaping, special characters, and visual fidelity.
+In addition to loading a single custom font, the Blazor SfPdfViewer supports adding multiple fonts to the [FallbackFontCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_FallbackFontCollection). This is useful when a PDF uses various fonts that are not embedded in the document or are not available by default. Configuring multiple fallback fonts helps preserve text shaping, special characters, and visual fidelity.
 
 To use FallbackFontCollection, follow these steps:
 
