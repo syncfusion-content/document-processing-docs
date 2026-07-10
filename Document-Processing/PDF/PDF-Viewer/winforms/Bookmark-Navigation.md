@@ -11,12 +11,12 @@ documentation: ug
 
 [WinForms PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/winforms-pdf-viewer) control allows users to navigate to the bookmarks present in the loaded PDF document at the UI level. 
 
-## Steps to perform bookmark navigation in PdfViewerControl.
+## Steps to perform bookmark navigation in PdfViewerControl
 
-1.	Open the bookmarks contained PDF document to enable the bookmark button in [PdfViewerControl](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html).
+1.	Open a PDF document containing bookmarks to enable the bookmark button in [PdfViewerControl](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html).
 2.	Clicking on the bookmark button from the left pane will list the bookmarks present in the PDF document.
 3.	To jump to a specific section, click its name in the bookmark pane.
-4.	If the bookmark has some children, you can explore them by clicking on the “+” button to the left of it.
+4.	If the bookmark has child bookmarks, you can explore them by clicking on the “+” button to the left of it.
 
 ![Bookmark Button in WinForms PDF Viewer toolbar](Bookmark_Navigation_images/Bookmark_Navigation_images1.png)  
 
@@ -93,7 +93,7 @@ private void PdfViewer_DocumentLoaded(object sender, EventArgs args)
 {% endhighlight %}
 {% endtabs %}
 
-N> The sample project to perform the operation is available in the [GitHub](https://github.com/SyncfusionExamples/WinForms-PDFViewer-Examples/tree/master/Bookmarks Navigation/PDFBookmarks).
+N> The sample project to perform the operation is available in the [GitHub](https://github.com/SyncfusionExamples/WinForms-PDFViewer-Examples/tree/master/Bookmarks%20Navigation/PDFBookmarks).
 
 ## Enabling and disabling bookmark feature
 
@@ -127,6 +127,6 @@ pdfViewerControl.IsBookmarkEnabled = false
 {% endhighlight %}
 {% endtabs %}
 
-The following screenshot shown the Bookmark navigation in PDF Viewer.
+The following screenshot shows the Bookmark navigation in PDF Viewer.
 
 ![Bookmark Navigation](Bookmark_Navigation_images/Bookmark_Navigation_images2.png)
