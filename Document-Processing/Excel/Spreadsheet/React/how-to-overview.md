@@ -23,7 +23,7 @@ Explore practical solutions and tips for working with the [React Spreadsheet Edi
 - [How to identify which context menu was opened?](./how-to/identify-the-context-menu-opened)
 - [How to paste only values without formatting?](./how-to/paste-only-values-without-formatting)
 - [How to prevent actions without read-only or sheet protection?](./how-to/prevent-actions)
-- [How to Integrating Spreadsheet into Existing React Layouts?](./how-to/existing-react-layout)
+- [How to integrate the Spreadsheet into existing React layouts?](./how-to/existing-react-layout)
 
 ## See Also
 
