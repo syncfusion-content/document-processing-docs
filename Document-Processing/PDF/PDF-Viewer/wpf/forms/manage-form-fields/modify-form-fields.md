@@ -121,7 +121,7 @@ End Sub
 {% endtabs %}
 
 ### ListBox
-A ListBox form field value can be updated programmatically by accessing it from the loaded PDF document. Developers can retrieve the `PdfLoadedListBoxField` from the document’s form fields collection and set its selected items using the `SelectedIndices` property.
+A ListBox form field value can be updated programmatically by accessing it from the loaded PDF document. Developers can retrieve the `PdfLoadedListBoxField` from the document’s form fields collection and set its selected items using the `SelectedIndex` property.
 
 {% tabs %}
 {% highlight C# %}

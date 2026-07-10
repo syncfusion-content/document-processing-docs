@@ -17,23 +17,11 @@ The WPF PDF Viewer allows you to search and highlight the text in the PDF files.
 
 N> [PdfDocumentView](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfDocumentView.html) is used to view the PDF documents without the toolbar. So, make use of [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html) to search the text using search box.
 
-N> The code examples below use the following namespaces:
-```csharp
-using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Windows;
-using Syncfusion.Windows.PdfViewer;
-```
-Ensure a `PdfViewerControl` named `pdfViewer` is added to your view and that the document is loaded (for example, `pdfViewer.Load("sample.pdf")`).
-
 ## Search text in PDF programmatically
 
 The WPF PDF Viewer also allows a user to search for text in the PDF document programmatically using the following methods
 
 *  SearchText method
-*  SearchNextText method
-*  SearchPreviousText method
 *  FindText method
 
 ## Search Text method

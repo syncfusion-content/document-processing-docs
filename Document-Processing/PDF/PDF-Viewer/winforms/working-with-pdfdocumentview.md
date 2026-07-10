@@ -91,7 +91,7 @@ Controls.Add(pdfDocumentView1)
 {% endcapture %}
 {{ codesnippet3 | OrderList_Indent_Level_1 }}
 
-N> You can also explore our [WinForms PDF Viewer example](https://github.com/SyncfusionExamples/WinForms-PDFViewer-Examples) that shows you how to render and configure the PDF Viewer.
+N> You can also explore our [WinForms PDF Viewer example](https://github.com/syncfusion/pdf-viewer-sdk-winforms-demos) that shows you how to render and configure the PDF Viewer.
 
 ## See Also
 - [Getting started](./Getting-Started)
