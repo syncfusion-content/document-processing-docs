@@ -25,7 +25,7 @@ The following formats are supported for both import and export:
 
 The required format can be selected from the [DataFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Pdf.Parsing.DataFormat.html) enumeration.
 
-**Note:** XFDF and FDF are standard formats compatible with global PDF viewers. JSON and XML are Syncfusion-specific formats for cross-platform use within Syncfusion products only.
+N> XFDF and FDF are standard formats compatible with global PDF viewers. JSON and XML are Syncfusion-specific formats for cross-platform use within Syncfusion products only.
 
 ## Import form data
 
