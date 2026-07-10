@@ -23,7 +23,7 @@ RTL can be enabled in XAML by setting the `FlowDirection` property to `RightToLe
 {% tabs %}
 {% highlight xaml %}
 
- <Grid xmlns:PdfViewer="clr-namespace:Syncfusion.Windows.PdfViewer;assembly=Syncfusion.PdfViewer.WPF">
+ <Grid>
     <PdfViewer:PdfViewerControl x:Name="pdfViewer" FlowDirection="RightToLeft"/>
  </Grid>
 

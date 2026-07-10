@@ -18,7 +18,7 @@ PDF viewer provides options to add, edit, and delete the comments for the follow
 * Text box (Text and Text Callout).
 * Sticky note.
 
-![Annotation Comments](Annotation-images/comments.png)
+![Annotation Comments](Annotation-images\comments.png)
 
 ## Expand/Collapse the comments pane
 
@@ -80,7 +80,7 @@ Annotation comments, comment replies, and status can be added to the PDF documen
 
 Annotation comments can be added to the PDF using the comment panel. If the comment panel is expanded, you can select the annotations and add annotation comments using the comment panel. The initial comment of the annotation will be reflected in the popup note and vice versa.
 
-![Adding Comments](Annotation-images/add-comments.png)
+![Adding Comments](Annotation-images\add-comments.png)
 
 ### Adding Comment Replies
 
@@ -94,7 +94,7 @@ Annotation comments can be added to the PDF using the comment panel. If the comm
 * Select the Set Status option in the context menu that appears.
 * Select the status of the annotation comment in the context menu that appears.
 
-![Comment Status](Annotation-images/comment-status.png)
+![Comment Status](Annotation-images\comment-status.png)
 
 ## Editing the comments and comment replies of the annotations
 
@@ -107,7 +107,7 @@ The comment, comment replies, and status of the annotation can be edited using t
 * Select the Edit option in the context menu that appears.
 * Now, an editable text box appears. You can change the content of the annotation comment or comment reply.
 
-![Editing the Comments](Annotation-images/edit-comment.png)
+![Editing the Comments](Annotation-images\edit-comment.png)
 
 ### Editing Comment or Reply Status
 
@@ -123,4 +123,4 @@ The comment, comment replies, and status of the annotation can be edited using t
 * Click the More options button shown in the Comments or reply container.
 * Select the Delete option in the context menu that appears.
 
-![Deleting the Comments](Annotation-images/delete-comment.png)
+![Deleting the Comments](Annotation-images\delete-comment.png)
