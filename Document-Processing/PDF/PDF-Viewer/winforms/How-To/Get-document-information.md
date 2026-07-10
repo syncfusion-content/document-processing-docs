@@ -31,7 +31,7 @@ string fileName = pdfViewer.DocumentInformation.FileName;
 'Initialize the PDF Viewer 
 pdfViewer As New PdfViewerControl() 
 'Loads the PDF document in PDF Viewer 
-pdfViewer.Load("../../Data/Barcode.pdf")
+pdfViewer.Load("input.pdf")
 
 'Gets the filename of loaded PDF document
 Dim fileName As String = pdfViewer.DocumentInformation.FileName
@@ -60,7 +60,7 @@ string filePath = pdfViewer.DocumentInformation.FilePath;
 'Initialize the PDF Viewer 
 pdfViewer As New PdfViewerControl() 
 'Loads the PDF document in PDF Viewer 
-pdfViewer.Load("../../Data/Barcode.pdf")
+pdfViewer.Load("input.pdf")
 
 'Gets the file path of loaded PDF document
 Dim filePath As String = pdfViewer.DocumentInformation.FilePath
