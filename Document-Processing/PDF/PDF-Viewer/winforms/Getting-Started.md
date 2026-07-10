@@ -170,7 +170,7 @@ pdfViewerControl1.Load(@"../../Sample.pdf")
 
 N>[View Sample in GitHub.](https://github.com/syncfusion/pdf-viewer-sdk-winforms-demos/tree/master/pdfviewer/Getting%20Started/Pdf%20Viewer%20Demo)
 
-N> You can also explore our [WinForms PDF Viewer example](https://github.com/syncfusion/winforms-demos/tree/master/pdfviewer) that shows you how to render and configure the PDF Viewer. Looking for the full WinForms PDF Viewer component overview, features, pricing, and documentation? Visit the [WinForms PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/winforms-pdf-viewer) page.
+N> You can also explore our [WinForms PDF Viewer example](https://github.com/syncfusion/pdf-viewer-sdk-winforms-demos/tree/master/pdfviewer) that shows you how to render and configure the PDF Viewer. Looking for the full WinForms PDF Viewer component overview, features, pricing, and documentation? Visit the [WinForms PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/winforms-pdf-viewer) page.
 
 ## See Also
 - [Working with PdfViewerControl](./working-with-pdf-viewer)
