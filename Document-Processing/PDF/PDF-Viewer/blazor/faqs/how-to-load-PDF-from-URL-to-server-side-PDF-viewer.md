@@ -34,3 +34,9 @@ Syncfusion PDF Viewer supports loading PDF documents from remote URLs. For detai
 ```
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20PDF%20file%20from%20URL)
+
+## See also
+
+* [How to load Microsoft Office files in Blazor SfPdfViewer Component](./how-to-load-office-files)
+* [How to unload the PDF document from Viewer](./how-to-unload-the-pdf-document-from-viewer)
+* [How to show or hide the Component dynamically](./how-to-show-or-hide-sfpdfviewer-dynamically)
