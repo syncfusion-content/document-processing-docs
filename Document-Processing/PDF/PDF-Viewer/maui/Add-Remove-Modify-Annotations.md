@@ -24,12 +24,6 @@ To work with annotations, ensure the following namespaces are imported in your c
 
 {% tabs %}
 {% highlight c# %}
-using Syncfusion.Maui.PdfViewer;
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight c# %}
 void AddCircleAnnotation()
 {
     int pageNumber = 1;
