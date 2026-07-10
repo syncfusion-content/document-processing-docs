@@ -16,7 +16,7 @@ Check the following video to quickly get started with creating a Flutter PDF doc
 
 ## Steps to create PDF document in Flutter application
 
-Create a simple project using the instructions given in the [`Getting Started with your first Flutter app'](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
+Create a simple project using the instructions given in the [`Getting Started with your first Flutter app`](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
 
 **Add dependency**
 
@@ -38,9 +38,9 @@ N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter PDF`](ht
 Run the following command to get the required packages.
 
 {% tabs %}
-{% highlight dart tabtitle="dart" %}
+{% highlight powershell tabtitle="POWERSHELL" %}
 
-$ flutter pub get
+flutter pub get
 
 {% endhighlight %}
 {% endtabs %}
@@ -67,8 +67,8 @@ Widget build(BuildContext context) {
   return Scaffold(
     body: Center(
       child: TextButton(
-        onPressed: _createPDF, 
-        child: Text('Create PDF')
+        onPressed: _createPDF,
+        child: Text('Create PDF'),
       ),
     ),
   );
@@ -113,7 +113,7 @@ You can save and open a PDF document in desktop by using the following steps:
 Configure and enable the desktop support to run the app.
 
 {% tabs %}
-{% highlight dart tabtitle="dart" %} 
+{% highlight dart tabtitle="dart" %}
 
 flutter config --enable-<platform>-desktop
 
@@ -129,10 +129,10 @@ Here you can get more details about [`How to add desktop support in the app`](ht
 Add the following packages to your pub spec file.
 
 {% tabs %}
-{% highlight dart tabtitle="dart" %} 
+{% highlight dart tabtitle="dart" %}
 
-path_provider: ^1.6.5
-open_file: ^3.0.1
+path_provider: ^2.0.7
+open_file: ^3.2.1
 
 {% endhighlight %}
 {% endtabs %}
@@ -275,11 +275,11 @@ Add the following code in the header section of index.html file under the web fo
 
 ## Save and download a PDF document in WASM
 
-step 1:	Add the [web](https://pub.dev/packages/web) package as a dependency in your **pubspec.yaml** file.
+**Step 1:** Add the [web](https://pub.dev/packages/web) package as a dependency in your **pubspec.yaml** file.
 
-step 2:	Create a new Dart file called **save_file_wasm.dart**.
+**Step 2:** Create a new Dart file called **save_file_wasm.dart**.
 
-step 3:	Add the following code:
+**Step 3:** Add the following code:
 
 **Import package**
 
