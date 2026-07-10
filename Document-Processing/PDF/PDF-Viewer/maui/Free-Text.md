@@ -12,15 +12,6 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to add, remove, and modify free text annotations in the PDF document. This is useful for adding text notes, comments, or feedback to the PDF pages. This section explains the functions available in the PDF Viewer for working with free text annotations.
 
-To work with free text annotations in code, ensure the following namespaces are imported in your C# file:
-
-{% tabs %}
-{% highlight c# %}
-using Syncfusion.Maui.PdfViewer;
-using Microsoft.Maui.Graphics;
-{% endhighlight %}
-{% endtabs %}
-
 ## Add free text annotations
 
 This section explains how to add free text annotations to a PDF page using the built-in toolbar as well as programmatically.
