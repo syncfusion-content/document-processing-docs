@@ -73,20 +73,23 @@ Step 5: Create the btnCreate_Click event and add the below code sample in btnCre
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
- 
-//Create a new PDF document. 
-using (PdfDocument document = new PdfDocument())
+
+private void GeneratePDF(object sender, EventArgs e)
 {
-  //Add a page to the document.
-  PdfPage page = document.Pages.Add();
-  //Create PDF graphics for a page.
-  PdfGraphics graphics = page.Graphics;
-  //Set the standard font.
-  PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
-  //Draw the text.
-  graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
-  //Save the document.
-  document.Save("Output.pdf");
+  //Create a new PDF document. 
+  using (PdfDocument document = new PdfDocument())
+  {
+    //Add a page to the document.
+    PdfPage page = document.Pages.Add();
+    //Create PDF graphics for a page.
+    PdfGraphics graphics = page.Graphics;
+    //Set the standard font.
+    PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
+    //Draw the text.
+    graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
+    //Save the document.
+    document.Save("Output.pdf");
+  }
 }
 
 {% endhighlight %}

@@ -53,57 +53,60 @@ Add the following code sample in ``ExportService`` class which illustrates how t
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
- // Create a new PDF document.
- using (PdfDocument pdfDocument = new PdfDocument())
- {
-    int paragraphAfterSpacing = 8;
-    int cellMargin = 8;
-
-    // Add page to the PDF document.
-    PdfPage page = pdfDocument.Pages.Add();
-    // Create title and description.
-    PdfStandardFont font = new PdfStandardFont(PdfFontFamily.TimesRoman, 16);
-    PdfTextElement title = new PdfTextElement("Weather Forecast", font, PdfBrushes.Black);
-    PdfLayoutResult result = title.Draw(page, new PointF(0, 0));
-
-    PdfStandardFont contentFont = new PdfStandardFont(PdfFontFamily.TimesRoman, 12);
-    PdfTextElement content = new PdfTextElement(
-        "This component demonstrates fetching data from a service and exporting the data to a PDF document using Syncfusion .NET PDF library.",
-        contentFont,
-        PdfBrushes.Black);
-    PdfLayoutFormat format = new PdfLayoutFormat
+public ActionResult CreatePDF()
+{
+    // Create a new PDF document.
+    using (PdfDocument pdfDocument = new PdfDocument())
     {
-        Layout = PdfLayoutType.Paginate
-    };
-    result = content.Draw(
-        page,
-        new RectangleF(0, result.Bounds.Bottom + paragraphAfterSpacing, page.GetClientSize().Width, page.GetClientSize().Height),
-        format);
-    // Create and style the PDF grid.
-    PdfGrid pdfGrid = new PdfGrid();
-    pdfGrid.Style.CellPadding.Left = cellMargin;
-    pdfGrid.Style.CellPadding.Right = cellMargin;
-    pdfGrid.ApplyBuiltinStyle(PdfGridBuiltinStyle.GridTable4Accent1);
-    // Assign data source.
-    pdfGrid.DataSource = forecasts;
-    pdfGrid.Style.Font = contentFont;
-    // Draw PDF grid into the PDF page.
-    pdfGrid.Draw(page, new PointF(0, result.Bounds.Bottom + paragraphAfterSpacing));
-    using (MemoryStream stream = new MemoryStream())
-    {
-        // Save the PDF document into the stream.
-        pdfDocument.Save(stream);
+        int paragraphAfterSpacing = 8;
+        int cellMargin = 8;
 
-        return File(stream.ToArray(), "application/pdf", "Output.pdf");
+        // Add page to the PDF document.
+        PdfPage page = pdfDocument.Pages.Add();
+        // Create title and description.
+        PdfStandardFont font = new PdfStandardFont(PdfFontFamily.TimesRoman, 16);
+        PdfTextElement title = new PdfTextElement("Weather Forecast", font, PdfBrushes.Black);
+        PdfLayoutResult result = title.Draw(page, new PointF(0, 0));
+
+        PdfStandardFont contentFont = new PdfStandardFont(PdfFontFamily.TimesRoman, 12);
+        PdfTextElement content = new PdfTextElement(
+            "This component demonstrates fetching data from a service and exporting the data to a PDF document using Syncfusion .NET PDF library.",
+            contentFont,
+            PdfBrushes.Black);
+        PdfLayoutFormat format = new PdfLayoutFormat
+        {
+            Layout = PdfLayoutType.Paginate
+        };
+        result = content.Draw(
+            page,
+            new RectangleF(0, result.Bounds.Bottom + paragraphAfterSpacing, page.GetClientSize().Width, page.GetClientSize().Height),
+            format);
+        // Create and style the PDF grid.
+        PdfGrid pdfGrid = new PdfGrid();
+        pdfGrid.Style.CellPadding.Left = cellMargin;
+        pdfGrid.Style.CellPadding.Right = cellMargin;
+        pdfGrid.ApplyBuiltinStyle(PdfGridBuiltinStyle.GridTable4Accent1);
+        // Assign data source.
+        pdfGrid.DataSource = forecasts;
+        pdfGrid.Style.Font = contentFont;
+        // Draw PDF grid into the PDF page.
+        pdfGrid.Draw(page, new PointF(0, result.Bounds.Bottom + paragraphAfterSpacing));
+        using (MemoryStream stream = new MemoryStream())
+        {
+            // Save the PDF document into the stream.
+            pdfDocument.Save(stream);
+
+            return File(stream.ToArray(), "application/pdf", "Output.pdf");
+        }
     }
- }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
 Step 7: Build and run the sample in Docker. It will pull the Linux Docker image from the Docker hub and run the project. Now, the webpage will open in the browser. Click the button to convert the webpage to a PDF.
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Docker/Create-PDF-using-Docker).
 
 By executing the program, you will get a PDF document as follows.
 ![Docker Output](GettingStarted_images/Docker-Output.png)
@@ -111,8 +114,3 @@ By executing the program, you will get a PDF document as follows.
 Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 
 An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind). 
-
-
-
-
-
