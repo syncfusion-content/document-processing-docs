@@ -72,5 +72,5 @@ To enable or disable the **Rotate Pages** button in the Organize Pages toolbar, 
 
 ## Related topics
 
-- [Organize page toolbar customization](./toolbar.md)
+- [Organize page toolbar customization](./toolbar)
 - [Organize pages event reference](./events)
