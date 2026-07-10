@@ -1,5 +1,5 @@
 ---
-title: Run .NET 8.0/.NET 9.0 Linux application in Azure App Service | Syncfusion®
+title: Run .NET 8.0/.NET 9.0 in Azure App Service | Syncfusion®
 description: Learn about the steps to run the .NET 8.0/.NET 9.0 Linux application in Azure App Service with the PdfToImageConverter library.
 platform: document-processing
 control: PDF to image

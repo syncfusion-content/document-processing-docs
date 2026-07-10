@@ -5,7 +5,7 @@ platform: document-processing
 control: PDF to image
 documentation: UG
 ---
-# Load PDF file in C#
+# Load a PDF File Using C#
 
 User can load a PDF as a stream using PdfToImageConverter, and then we can convert the PDF pages into images.
 
