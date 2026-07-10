@@ -28,7 +28,7 @@ Watch the following video to quickly get started with converting PDF to image in
 Windows Forms
 </td>
 <td>
-{{'[Syncfusion.PdfToImageConverter.WinForms.nupkg](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.WinForms/)'| markdownify }}
+{{'[Syncfusion.PdfToImageConverter.WinForms](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.WinForms/)'|markdownify }}
 </td>
 </tr>
 <tr>
@@ -36,7 +36,7 @@ Windows Forms
 WPF
 </td>
 <td>
-{{'[Syncfusion.PdfToImageConverter.WPF.nupkg](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.WPF/)'| markdownify }}
+{{'[Syncfusion.PdfToImageConverter.WPF](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.WPF/)'|markdownify }}
 </td>
 </tr>
 <tr>
@@ -44,7 +44,7 @@ WPF
 ASP.NET Core Windows
 </td>
 <td>
-{{'[Syncfusion.PdfToImageConverter.Net.nupkg](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.Net/)'| markdownify }}
+{{'[Syncfusion.PdfToImageConverter.Net](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.Net/)'|markdownify }}
 </td>
 </tr>
 <tr>
@@ -52,8 +52,8 @@ ASP.NET Core Windows
 ASP.NET MVC Windows
 </td>
 <td>
-{{'[Syncfusion.PdfToImageConverter.AspNet.Mvc4.nupkg](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.AspNet.Mvc4/)'| markdownify }}<br/>
-{{'[Syncfusion.PdfToImageConverter.AspNet.Mvc5.nupkg](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.AspNet.Mvc5/)'| markdownify }}
+{{'[Syncfusion.PdfToImageConverter.AspNet.Mvc4](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.AspNet.Mvc4/)'|markdownify }}<br/>
+{{'[Syncfusion.PdfToImageConverter.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.AspNet.Mvc5/)'|markdownify }}
 </td>
 </tr>
 </table>
