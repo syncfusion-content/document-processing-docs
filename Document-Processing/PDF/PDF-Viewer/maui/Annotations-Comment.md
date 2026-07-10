@@ -20,6 +20,8 @@ The PDF Viewer control provides options to add, edit, and delete comments for th
 
 ## Showing or hiding the comment panel
 The built-in Comment Panel in the PDF Viewer displays annotation comments. You can show or hide this panel using the [IsCommentsPanelVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_IsCommentsPanelVisible) property. The default value of this property is false.
+{% tabs %}
+{% highlight c# %}
 
 // Show the comment panel in the PDF Viewer 
 PdfViewer.IsCommentsPanelVisible = true;
@@ -28,7 +30,7 @@ PdfViewer.IsCommentsPanelVisible = true;
 {% endtabs %}
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <syncfusion:SfPdfViewer x:Name="PdfViewer" IsCommentsPanelVisible = "True" > 
 </syncfusion:SfPdfViewer>
