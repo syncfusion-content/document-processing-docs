@@ -17,17 +17,17 @@ Images can be controlled using the [allowImage](https://ej2.syncfusion.com/react
 
 The React Spreadsheet component also provides a range of features for working with images and illustrations. Below is a quick overview of each feature, with links to their respective documentation sections:
 
-- **[Insert and Position Images](./images-and-illustrations/insert-and-position-images)**: Add images to your spreadsheet and place them at the desired location.
-- **[Resize Images](./images-and-illustrations/resize-images)**: Change the height and width of images to fit your needs.
-- **[Delete Images](./images-and-illustrations/delete-images)**: Remove images that are no longer required from your spreadsheet.
-- **[Select and Deselect Images](./images-and-illustrations/select-and-deselect-images)**: Select one or multiple images for further actions or deselect them as needed.
-- **[Image Customization](./images-and-illustrations/image-customization)**: Customize image properties such as size and position programmatically.
+- **[Insert and Position Images](./insert-and-position-images)**: Add images to your spreadsheet and place them at the desired location.
+- **[Resize Images](./resize-images)**: Change the height and width of images to fit your needs.
+- **[Delete Images](./delete-images)**: Remove images that are no longer required from your spreadsheet.
+- **[Select and Deselect Images](./select-and-deselect-images)**: Select one or multiple images for further actions or deselect them as needed.
+- **[Image Customization](./image-customization)**: Customize image properties such as size and position programmatically.
 
 ## Limitations of Image
 
 * Corner resizing option is not available in the image element.
 
 ## See Also
-* [Charts](./charts-and-visualizations)
+* [Charts](../charts-and-visualizations/charts-and-visualizations)
 * [Formatting](./formatting)
-* [Rows and columns](./rows-and-columns)
+* [Rows and columns](../rows-and-columns/rows-and-columns)

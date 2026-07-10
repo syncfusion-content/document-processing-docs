@@ -46,4 +46,4 @@ You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/sprea
 ## See Also
 
 * [Worksheet](./worksheet)
-* [Rows and columns](./rows-and-columns)
+* [Rows and columns](./rows-and-columns/rows-and-columns)

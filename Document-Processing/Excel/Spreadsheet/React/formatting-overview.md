@@ -11,10 +11,10 @@ documentation: ug
 
 Formatting options make your data easier to view and understand. The different types of formatting options in the Spreadsheet are:
 
-* [Number Formatting](./number-formatting)
-* [Text & Cell Formatting](./text-cell-formatting)
-* [Conditional Formatting](./conditional-formatting)
-* [Rich Text Formatting](./rich-text-formatting)
+* [Number Formatting](./formatting/number-formatting)
+* [Text & Cell Formatting](./formatting/text-cell-formatting)
+* [Conditional Formatting](./formatting/conditional-formatting)
+* [Rich Text Formatting](./formatting/rich-text-formatting)
 
 To get started quickly with Formatting, you can check this video:
 
@@ -26,7 +26,7 @@ You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/sprea
 
 ## See Also
 
-- [Rows and columns](./rows-and-columns)
+- [Rows and columns](./rows-and-columns/rows-and-columns)
 - [Hyperlink](./link)
 - [Sorting](./sort)
 - [Filtering](./filter)

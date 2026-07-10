@@ -38,6 +38,6 @@ You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/sprea
 ## See Also
 
 * [Sheet protection](./protect-sheet)
-* [Rows and columns](./rows-and-columns)
+* [Rows and columns](./rows-and-columns/rows-and-columns)
 * [Cell range](./cell-range)
 * [Formatting](./formatting)

@@ -64,4 +64,4 @@ You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/sprea
 
 * [Customize context menu](./user-interface-customization/customize-context-menu)
 * [Worksheet](./worksheet)
-* [Rows and columns](./rows-and-columns)
+* [Rows and columns](./rows-and-columns/rows-and-columns)
