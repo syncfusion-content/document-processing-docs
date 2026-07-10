@@ -12,21 +12,11 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 PDF Viewer allows users to obtain the PDF page coordinates relative to the PDF Viewer’s client coordinates and vice versa. It also allows you to obtain the scroll point relative to the PDF page coordinates and bring the given region into view.
 
-To work with coordinate conversions, ensure the following namespaces are imported in your code file:
-
-{% tabs %}
-{% highlight c# %}
-using Syncfusion.Maui.PdfViewer;
-using Microsoft.Maui.Graphics;
-using System.Collections.ObjectModel;
-{% endhighlight %}
-{% endtabs %}
-
 ## Client rectangle
 
 The [ClientRectangle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ClientRectangle) in the MAUI PdfViewer control is a rectangular area that represents the dimensions of the client area or viewport. The client area denotes the visible portion of the PDF document within the control. In the MAUI PDF Viewer, this client rectangle is illustrated by the red rectangle in the following figure.
 
-![Client rectangle in .NET MAUI PDF Viewer](Images/Coordinates-Conversion/Client-Rectangle.png)
+![Client rectangle in .NET MAUI PDF Viewer](Images\Coordinates-Conversion\Client-Coordinates.png)
 
 The client rectangle can be obtained by the [ClientRectangle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ClientRectangle) property of the PDF Viewer. The following code sample explains the same.
 
@@ -41,7 +31,7 @@ Rect clientRectangle = PdfViewer.ClientRectangle;
 
 The MAUI PDF Viewer specifies the position of points in the client area (viewport) using client coordinates. The upper-left corner of the client area (viewport) of the control is the origin for client coordinates. The client coordinates in the MAUI PDF Viewer are shown in the following figure.
 
-![Client coordinates in .NET MAUI PDF Viewer](Images/Coordinates-Conversion/Client-Coordinates.png)
+![Client coordinates in .NET MAUI PDF Viewer](Images\Coordinates-Conversion\Client-Coordinates.png)
 
 ### Get the page number from a client point
 
@@ -67,8 +57,7 @@ private void PdfViewer_Tapped(object sender, GestureEventArgs e)
 
 PDF page coordinates are represented in terms of a device-independent coordinate system called user space, which is independent of the output device that will be used for printing or display. The user space coordinates system is initialized to a default state for each page of a PDF document. The length of a unit is 1/72 inch, which is equivalent to one point (pt). As an example, the dimensions of a letter-sized paper in PDF page coordinates are shown in the diagram below.
 
-![Page coordinates in .NET MAUI PDF Viewer](Images/Coordinates-Conversion/Page-Coordinates.png)
-
+![Page coordinates in .NET MAUI PDF Viewer](Images\Coordinates-Conversion\Page-Coordinates.png)
 ## Scroll coordinates
 
 Scroll coordinates in the MAUI PDF Viewer denote pixel-based positions as pages are scrolled. They indicate precise locations within the entire document. The coordinate system originates from the top-left corner of the visible area.

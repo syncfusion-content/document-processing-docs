@@ -14,14 +14,6 @@ The .NET MAUI PDF Viewer [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncf
 
 The viewer supports saving filled forms, flattening form fields to make them non-editable, and importing or exporting form data in FDF, XFDF, JSON, and XML formats. These capabilities make the viewer ideal for capturing and handling form data efficiently within your application. For saving filled forms, see [Save a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/save-a-document).
 
-To work with form fields in code, ensure the following namespace is imported in your C# file:
-
-{% tabs %}
-{% highlight c# %}
-using Syncfusion.Maui.PdfViewer;
-{% endhighlight %}
-{% endtabs %}
-
 ## Supported form field types
 
 | Field Type | Description |

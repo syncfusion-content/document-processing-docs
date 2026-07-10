@@ -11,17 +11,6 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 # Annotation Collection in .NET MAUI PDF Viewer (SfPdfViewer)
 
 The existing annotations in a PDF document can be accessed using the [Annotations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_Annotations) property of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). This read-only property will have the annotation collection information as soon as the document is loaded into the PDF Viewer.
-
-To work with the annotation collection, ensure the following namespaces are imported in your code file:
-
-{% tabs %}
-{% highlight c# %}
-using Syncfusion.Maui.PdfViewer;
-using Microsoft.Maui.Graphics;
-using System.Collections.ObjectModel;
-{% endhighlight %}
-{% endtabs %}
-
 The following example explains how to use the property to obtain information about the first annotation in a specific document.
 
 {% tabs %}
@@ -54,7 +43,6 @@ private void OnDocumentLoaded(object sender, EventArgs e)
 {% endtabs %}
 
 ## AnnotationsLoaded event
-
 The [AnnotationsLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationsLoaded) event occurs after all annotations in the PDF have finished loading, either when the document is opened or when annotations are imported. The `AnnotationsLoaded` event fires after the [DocumentLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoaded) event, once all annotations are fully available in the viewer. You can use this event to perform actions once annotations are fully available in the viewer.
 The following example explains how to wire and handle the event.
 

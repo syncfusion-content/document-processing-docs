@@ -12,15 +12,6 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 The [SfPdfViewer.FormFields](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FormFields) property provides access to all form fields present in the loaded PDF document. The collection is available after the document finishes loading and can be accessed from the [DocumentLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoaded) event. For a broader overview of form-filling support, see [Form Filling Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-overview).
 
-To work with form fields in code, ensure the following namespaces are imported in your C# file:
-
-{% tabs %}
-{% highlight c# %}
-using Syncfusion.Maui.PdfViewer;
-using System.Linq;
-{% endhighlight %}
-{% endtabs %}
-
 ## Accessing the FormFields collection
 
 The following code snippet illustrates getting the total count of form fields in the PDF document. Call the `WireDocumentLoadedEvent` method from your page constructor or initialization logic so the `DocumentLoaded` handler is registered before a document is loaded.

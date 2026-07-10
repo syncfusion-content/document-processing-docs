@@ -12,32 +12,12 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 PDF documents can include custom bookmarks that allow the user to bookmark pages and navigate to them. The PDF viewer control displays these custom bookmarks in outline view.
 
-To work with custom bookmarks in code, ensure the following namespaces are imported in your C# file:
-
-{% tabs %}
-{% highlight c# %}
-using Syncfusion.Maui.PdfViewer;
-using System.Collections.ObjectModel;
-using System.Collections.Specialized;
-using System.ComponentModel;
-using System.Linq;
-{% endhighlight %}
-{% endtabs %}
-
-To use the `SfPdfViewer` control in XAML, add the following namespace declaration to your XAML page:
-
-{% tabs %}
-{% highlight xml %}
-xmlns:pdfViewer="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Maui.PdfViewer"
-{% endhighlight %}
-{% endtabs %}
-
 ## Showing or hiding the custom bookmarks pane
 
 The built-in custom bookmark view of the PDF Viewer displays the custom bookmarks and can be shown or hidden using the [IsOutlineViewVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_IsOutlineViewVisible) property. The default value of this property is `false`.
 
 {% tabs %}
-{% highlight xml %}
+{% highlight XAML %}
 
 <pdfViewer:SfPdfViewer x:Name="pdfViewer" IsOutlineViewVisible="{Binding OutlineViewVisible}" />
 
@@ -290,7 +270,7 @@ To navigate using the UI:
 
 ![Custom bookmark in .NET MAUI PDF Viewer](Images\custom-bookmark.png)
 
-**Note:** A custom bookmark currently stores only the target page information. It does not support storing or navigating to a specific position within the page, such as coordinates or a particular content region.
+N>A custom bookmark currently stores only the target page information. It does not support storing or navigating to a specific position within the page, such as coordinates or a particular content region.
 
 ### Navigate programmatically
 

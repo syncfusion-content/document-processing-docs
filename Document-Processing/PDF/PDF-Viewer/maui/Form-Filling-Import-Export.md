@@ -12,18 +12,6 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to import form data into a PDF document and export filled form data from it. This is useful for pre-populating forms, backing up responses, or transferring data between systems.
 
-To work with form data import and export in code, ensure the following namespaces are imported in your C# file:
-
-{% tabs %}
-{% highlight c# %}
-using Syncfusion.Maui.PdfViewer;
-using Syncfusion.Pdf.Parsing;
-using System.IO;
-{% endhighlight %}
-{% endtabs %}
-
-The `DataFormat` enumeration used for import and export is part of the `Syncfusion.Pdf.NET` package. Ensure this package is installed alongside `Syncfusion.Maui.PdfViewer`.
-
 ## Supported data formats
 
 The following formats are supported for both import and export:
@@ -37,7 +25,7 @@ The following formats are supported for both import and export:
 
 The required format can be selected from the [DataFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Pdf.Parsing.DataFormat.html) enumeration.
 
-**Note:** XFDF and FDF are standard formats compatible with global PDF viewers. JSON and XML are Syncfusion-specific formats for cross-platform use within Syncfusion products only.
+N> XFDF and FDF are standard formats compatible with global PDF viewers. JSON and XML are Syncfusion-specific formats for cross-platform use within Syncfusion products only.
 
 ## Import form data
 
@@ -81,25 +69,22 @@ First, wire the `DocumentLoaded` event after loading the document:
 
 {% tabs %}
 {% highlight c# %}
-// Load the PDF document and add the viewer to the visual tree.
+
+SfPdfViewer PdfViewer = new SfPdfViewer();
 PdfViewer.LoadDocumentAsync(PdfStream);
-myGrid.Children.Add(PdfViewer);
 
-// Subscribe to the DocumentLoaded event to export once the document is fully loaded.
+// Add the SfPdfViewer instance to the grid's children collection to ensure it's part of the visual tree.
+ myGrid.Children.Add(PdfViewer);
+ 
+// Subscribe to the DocumentLoaded event to handle operations once the PDF document is fully loaded.
 PdfViewer.DocumentLoaded += PdfViewer_DocumentLoaded;
-{% endhighlight %}
-{% endtabs %}
 
-Then, handle the event and export the form data:
-
-{% tabs %}
-{% highlight c# %}
-private void PdfViewer_DocumentLoaded(object sender, EventArgs e)
+private void PdfViewer_DocumentLoaded(object? sender, EventArgs? e)
 {
-    string fileName = Path.Combine(FileSystem.Current.AppDataDirectory, "SavedForm.xfdf");
-    using (var fileStream = File.Create(fileName))
+    using (var fileStream = File.Create("D://SavedForm.json"))
     {
-        PdfViewer.ExportFormData(fileStream, Syncfusion.Pdf.Parsing.DataFormat.XFdf);
+        if(sender is SfPdfViewer pdfViewer)
+            pdfViewer.ExportFormData(fileStream, Syncfusion.Pdf.Parsing.DataFormat.Json);
     }
 }
 {% endhighlight %}
