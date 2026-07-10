@@ -9,7 +9,7 @@ documentation: ug
 
 # Annotation Events in Blazor SfPdfViewer Component
 
-Annotation events notify the application when annotations are added, selected, moved, resized, modified, or removed. Subscribe to these events by using the `PdfViewerEvents` tag inside the `SfPdfViewer2` component.
+Annotation events notify the application when annotations are added, selected, moved, resized, modified, or removed. Subscribe to these events by using the `PdfViewerEvents` tag inside the `SfPdfViewer` component.
 
 ## Events list
 
@@ -60,7 +60,7 @@ The following example illustrates handling the `AddSignature` event.
 
 @code{ 
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    public async Task AddSignature(AddSignatureEventArgs args) 
+    private async Task AddSignature(AddSignatureEventArgs args) 
     {
         Console.WriteLine($"Added signature ID: {args.Id}");
     }	 
@@ -88,7 +88,7 @@ The following example illustrates handling the `AnnotationAdded` event.
 
 @code{ 
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    public async Task AnnotationAdded(AnnotationAddEventArgs args)
+    private async Task AnnotationAdded(AnnotationAddEventArgs args)
     {
         Console.WriteLine($"Added annotation ID: {args.AnnotationId}");
     }	 
@@ -116,7 +116,7 @@ The following example illustrates handling the `AnnotationMouseover` event.
 
 @code{ 
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    public async Task AnnotationMouseover(AnnotationMouseoverEventArgs args)
+    private async Task AnnotationMouseover(AnnotationMouseoverEventArgs args)
     {
         Console.WriteLine($"Annotation Mouseover X: {args.X} and Y: {args.Y}");
     }
@@ -144,7 +144,7 @@ The following example illustrates handling the `AnnotationMoved` event.
 
 @code{ 
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    public async Task AnnotationMoved(AnnotationMoveEventArgs args)
+    private async Task AnnotationMoved(AnnotationMoveEventArgs args)
     {
         Console.WriteLine($"Annotation current position: {args.CurrentPosition}");
     }	 
@@ -172,7 +172,7 @@ The following example illustrates handling the `AnnotationPropertiesChanged` eve
 
 @code{ 
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    public async Task AnnotationPropertiesChanged(AnnotationPropertiesChangeEventArgs args)
+    private async Task AnnotationPropertiesChanged(AnnotationPropertiesChangeEventArgs args)
     {
         Console.WriteLine($"Is annotation color changed: {args.IsColorChanged}");
     }	 
@@ -200,7 +200,7 @@ The following example illustrates handling the `AnnotationRemoved` event.
 
 @code{ 
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    public async Task AnnotationRemoved(AnnotationRemoveEventArgs args)
+    private async Task AnnotationRemoved(AnnotationRemoveEventArgs args)
     {
         Console.WriteLine($"Removed annotation ID: {args.AnnotationId}");
     }	 
@@ -228,7 +228,7 @@ The following example illustrates handling the `AnnotationResized` event.
 
 @code{ 
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    public async Task AnnotationResized(AnnotationResizeEventArgs args)
+    private async Task AnnotationResized(AnnotationResizeEventArgs args)
     {
         Console.WriteLine($"Resized annotation ID: {args.AnnotationId}");
     }	 
@@ -256,7 +256,7 @@ The following example illustrates handling the `AnnotationSelected` event.
 
 @code{ 
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    public async Task AnnotationSelected(AnnotationSelectEventArgs args)
+    private async Task AnnotationSelected(AnnotationSelectEventArgs args)
     {
         Console.WriteLine($"Selected annotation ID: {args.AnnotationId}");
     }	 
@@ -284,7 +284,7 @@ The following example illustrates handling the `AnnotationUnselected` event.
 
 @code{ 
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    public async Task AnnotationUnselected(AnnotationUnselectEventArgs args)
+    private async Task AnnotationUnselected(AnnotationUnselectEventArgs args)
     {
         Console.WriteLine($"Unselected Annotation ID: {args.AnnotationId}");
     }	 
@@ -312,7 +312,7 @@ The following example illustrates handling the `ExportFailed` event.
 
 @code{ 
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    public async Task ExportFailed(ExportFailureEventArgs args)
+    private async Task ExportFailed(ExportFailureEventArgs args)
     {
         Console.WriteLine($"Error details: {args.ErrorDetails}");
     }	 
@@ -340,7 +340,7 @@ The following example illustrates handling the `ExportStarted` event.
 
 @code{ 
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    public async Task ExportStarted(ExportStartEventArgs args)
+    private async Task ExportStarted(ExportStartEventArgs args)
     {
         Console.WriteLine("Export action started");
     }	 
@@ -368,7 +368,7 @@ The following example illustrates handling the `ExportSucceed` event.
 
 @code{ 
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    public async Task ExportSucceed(ExportSuccessEventArgs args)
+    private async Task ExportSucceed(ExportSuccessEventArgs args)
     {
         Console.WriteLine($"Exported File name: {args.FileName}");
     }	 
@@ -396,7 +396,7 @@ The following example illustrates handling the `ImportFailed` event.
 
 @code{ 
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    public async Task ImportFailed(ImportFailureEventArgs args)
+    private async Task ImportFailed(ImportFailureEventArgs args)
     {
         Console.WriteLine($"Error details: {args.ErrorDetails}");
     }	 
@@ -424,7 +424,7 @@ The following example illustrates handling the `ImportStarted` event.
 
 @code{ 
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    public async Task ImportStarted(ImportStartEventArgs args)
+    private async Task ImportStarted(ImportStartEventArgs args)
     {
         Console.WriteLine("Import annotation started");
     }	 
@@ -452,7 +452,7 @@ The following example illustrates handling the `ImportSucceed` event.
 
 @code{ 
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    public async Task ImportSucceed(ImportSuccessEventArgs args)
+    private async Task ImportSucceed(ImportSuccessEventArgs args)
     {
         Console.WriteLine("Annotation imported successfully");
     }	 
@@ -480,7 +480,7 @@ The following example illustrates handling the `MoveSignature` event.
 
 @code{ 
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    public async Task MoveSignature(MoveSignatureEventArgs args)
+    private async Task MoveSignature(MoveSignatureEventArgs args)
     {
         Console.WriteLine($"Moved Signature ID: {args.Id}");
     }	 
@@ -508,7 +508,7 @@ The following example illustrates handling the `OnAnnotationDoubleClick` event.
 
 @code{ 
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    public async Task OnAnnotationDoubleClick(AnnotationDoubleClickEventArgs args)
+    private async Task OnAnnotationDoubleClick(AnnotationDoubleClickEventArgs args)
     {
         Console.WriteLine($"Double-clicked annotation ID: {args.AnnotationId}");
     }	 
@@ -536,7 +536,7 @@ The following example illustrates handling the `RemoveSignature` event.
 
 @code{ 
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    public async Task RemoveSignature(RemoveSignatureEventArgs args)
+    private async Task RemoveSignature(RemoveSignatureEventArgs args)
     {
         Console.WriteLine($"Removed signature ID: {args.Id}");
     }	 
@@ -564,7 +564,7 @@ The following example illustrates handling the `ResizeSignature` event.
 
 @code{ 
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    public async Task ResizeSignature(ResizeSignatureEventArgs args)
+    private async Task ResizeSignature(ResizeSignatureEventArgs args)
     {
         Console.WriteLine($"Resized signature ID: {args.Id}");
     }	 
@@ -592,7 +592,7 @@ The following example illustrates handling the `SignaturePropertiesChange` event
 
 @code{ 
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    public async Task SignaturePropertiesChange(SignaturePropertiesChangeEventArgs args)
+    private async Task SignaturePropertiesChange(SignaturePropertiesChangeEventArgs args)
     {
         Console.WriteLine($"Is stroke color changed: {args.IsStrokeColorChanged}");
     }	 
@@ -620,7 +620,7 @@ The following example illustrates handling the `SignatureSelected` event.
 
 @code{ 
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    public async Task SignatureSelected(SignatureSelectEventArgs args)
+    private async Task SignatureSelected(SignatureSelectEventArgs args)
     {
         Console.WriteLine($"Selected Signature ID: {args.Id}");
     }	 
@@ -648,7 +648,7 @@ The following example illustrates handling the `SignatureUnselected` event.
 
 @code{ 
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    public async Task SignatureUnselected(SignatureSelectEventArgs args)
+    private async Task SignatureUnselected(SignatureSelectEventArgs args)
     {
         Console.WriteLine($"Unselected Signature ID: {args.Id}");
     }	 
@@ -660,9 +660,9 @@ The following example illustrates handling the `SignatureUnselected` event.
 
 ## See also
 
-* [Events in Blazor SfPdfViewer2 Component](../events)
-* [Hand-written signature in Blazor SfPdfViewer2](../hand-written-signature)
-* [Import and export annotations in Blazor SfPdfViewer2](./import-export-annotation)
-* [Annotation permissions in Blazor SfPdfViewer2](./annotation-permission)
-* [Annotations overview in Blazor SfPdfViewer2](./overview)
-* [Getting started with Blazor SfPdfViewer2](../getting-started/web-assembly-application)
+* [Events in Blazor SfPdfViewer Component](../events)
+* [Hand-written signature in Blazor SfPdfViewer](../hand-written-signature)
+* [Import and export annotations in Blazor SfPdfViewer](./import-export-annotation)
+* [Annotation permissions in Blazor SfPdfViewer](./annotation-permission)
+* [Annotations overview in Blazor SfPdfViewer](./overview)
+* [Getting started with Blazor SfPdfViewer](../getting-started/web-assembly-application)

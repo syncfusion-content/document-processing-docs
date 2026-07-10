@@ -159,7 +159,7 @@ Drag any vertex handle to adjust the shape's points.
 
 ### Edit Area Area Annotation
 
-#### Edit Area Appearance (UI)
+#### Edit Area Annotation Appearance (UI)
 
 Select the Area annotation first — the annotation toolbar appears below the main toolbar. Use it to change:
 
@@ -172,7 +172,7 @@ Select the Area annotation first — the annotation toolbar appears below the ma
 - **Opacity** — change transparency with the Edit Opacity tool.
   ![Editing Calibrate Opacity in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-opacity.png)
 
-#### Edit Area Programmatically
+#### Edit Area Annotation Programmatically
 
 Modify an existing Area annotation programmatically using [`EditAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_).
 
@@ -248,7 +248,7 @@ Apply defaults for Area using the [`AreaSettings`](https://help.syncfusion.com/c
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
     PdfViewerAreaSettings AreaSettings = new PdfViewerAreaSettings
@@ -340,7 +340,7 @@ Configure scale defaults using [`MeasurementSettings`](https://help.syncfusion.c
 
 For more deletion patterns, see [**Delete Annotation**](../delete-annotation).
 
-## Handle Area Events
+## Handle Area Annotation Events
 
 Listen to the annotation life-cycle with the `Added`, `Modified`, `Selected`, and `Removed` events. The handler receives a `AnnotationEventArgs` payload that includes the affected `PdfAnnotation`, the page number, and the action that triggered the event.
 

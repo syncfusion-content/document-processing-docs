@@ -30,7 +30,7 @@ Rectangle annotations are available by default in the Blazor SfPdfViewer compone
 }
 ```
 
-N> Ensure the sample PDF is placed in the `wwwroot/Data/` folder of your Blazor app, and that `SfPdfViewer2` is registered in `Program.cs`. Refer to the [Blazor getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started) for setup details.
+N> Ensure the sample PDF is placed in the `wwwroot/Data/` folder of your Blazor app, and that `SfPdfViewer` is registered in `Program.cs`. Refer to the [Blazor getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started) for setup details.
 
 ## Add Rectangle Annotation
 
@@ -63,8 +63,8 @@ Switch the viewer into rectangle drawing mode using [SetAnnotationModeAsync](htt
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
-    public async void OnClick(MouseEventArgs args)
+    private SfPdfViewer2 viewer;
+    private async void OnClick(MouseEventArgs args)
     {
         await viewer.SetAnnotationModeAsync(AnnotationType.Rectangle);
     }
@@ -84,10 +84,10 @@ Use the [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/Shape_Annotation.pdf";
+    private SfPdfViewer2 viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/Shape_Annotation.pdf";
 
-    public async void AddRectangleAsync(MouseEventArgs args)
+    private async void AddRectangleAsync(MouseEventArgs args)
     {
         PdfAnnotation annotation = new PdfAnnotation();
         // Set the Rectangle annotation type
@@ -107,7 +107,7 @@ Use the [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 }
 ```
 
-## Customize Rectangle Appearance
+## Customize Rectangle Annotation Appearance
 
 Configure default rectangle appearance (fill color, stroke color, thickness, opacity) during control initialization using [RectangleSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_RectangleSettings). These settings apply when rectangles are created from the toolbar or programmatically.
 
@@ -122,7 +122,7 @@ Configure default rectangle appearance (fill color, stroke color, thickness, opa
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
     PdfViewerRectangleSettings RectangleSettings = new PdfViewerRectangleSettings
@@ -158,7 +158,7 @@ Use the following annotation toolbar tools to modify:
 - **Edit Thickness** slider
 ![Edit thickness](../../images/blazor-pdfviewer-shape-thickness.png)
 
-#### Edit Rectangle Programmatically
+#### Edit Rectangle Annotation Programmatically
 
 Modify an existing rectangle annotation programmatically using [EditAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_). Retrieve the target annotation from [GetAnnotationsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_GetAnnotationsAsync) and update the desired properties before submitting the edit.
 
@@ -170,10 +170,10 @@ Modify an existing rectangle annotation programmatically using [EditAnnotationAs
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/Shape_Annotation.pdf";
+    private SfPdfViewer2 viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/Shape_Annotation.pdf";
 
-    public async void EditRectangleAsync(MouseEventArgs args)
+    private async void EditRectangleAsync(MouseEventArgs args)
     {
         // Get annotation collection
         List<PdfAnnotation> annotationCollection = await Viewer.GetAnnotationsAsync();
@@ -214,10 +214,10 @@ Set properties for individual rectangle annotations by passing values directly d
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/Shape_Annotation.pdf";
+    private SfPdfViewer2 viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/Shape_Annotation.pdf";
 
-    public async void AddMultipleRectanglesAsync(MouseEventArgs args)
+    private async void AddMultipleRectanglesAsync(MouseEventArgs args)
     {
         // Rectangle 1
         PdfAnnotation annotation1 = new PdfAnnotation();
@@ -276,7 +276,7 @@ Disable rectangle annotations (along with all other shape annotations, such as L
 }
 ```
 
-## Handle Rectangle Events
+## Handle Rectangle Annotation Events
 
 The PDF viewer provides annotation life-cycle events that notify when Rectangle annotations are added, modified, selected, or removed.
 For the full list of available events and their descriptions, see [**Annotation Events**](../events)

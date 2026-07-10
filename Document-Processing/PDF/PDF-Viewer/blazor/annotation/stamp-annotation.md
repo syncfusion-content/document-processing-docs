@@ -67,7 +67,7 @@ After changing the default opacity using the Edit Opacity tool, the currently se
 @code {
     //Sets the PDF document path for initial loading.
     private string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
 
     //Defines the settings of stamp annotation.
     PdfViewerStampSettings StampSettings = new PdfViewerStampSettings
@@ -130,11 +130,11 @@ The following example illustrates how to add an image as a stamp annotation in t
 
 @code
 {
-    SfPdfViewer2 viewer;
-    public List<PdfViewerCustomStamp> pdfViewerCustomStamps { get; set; }
+    private SfPdfViewer2 viewer;
+    private List<PdfViewerCustomStamp> pdfViewerCustomStamps { get; set; }
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public void stampClicked(ClickEventArgs args)
+    private void stampClicked(ClickEventArgs args)
     {
         pdfViewerCustomStamps = new List<PdfViewerCustomStamp>()
         {
@@ -149,19 +149,19 @@ The following example illustrates how to add an image as a stamp annotation in t
 
     }
 
-    public async void previousClicked(ClickEventArgs args)
+    private async void previousClicked(ClickEventArgs args)
     {
         //Navigate to previous page of the PDF document.
         await viewer.GoToPreviousPageAsync();
     }
 
-    public async void nextClicked(ClickEventArgs args)
+    private async void nextClicked(ClickEventArgs args)
     {
         //Navigate to next page of the PDF document loaded in the SfPdfViewer.
         await viewer.GoToNextPageAsync();
     }
 
-    public async void downloadDocument(ClickEventArgs args)
+    private async void downloadDocument(ClickEventArgs args)
     {
         //Downloads the PDF document being loaded in the SfPdfViewer.
         await viewer.DownloadAsync();
@@ -203,10 +203,10 @@ The example below demonstrates adding a stamp annotation to a PDF document.
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/Stamp_Annotation.pdf";
+    private SfPdfViewer2 viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/Stamp_Annotation.pdf";
 
-    public async Task AddStampAnnotationAsync(MouseEventArgs args)
+    private async Task AddStampAnnotationAsync(MouseEventArgs args)
     {
         PdfAnnotation annotation = new PdfAnnotation();
         // Set the annotation type stamp
@@ -254,10 +254,10 @@ The example below demonstrates how to edit a stamp annotation programmatically.
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/Stamp_Annotation.pdf";
+    private SfPdfViewer2 viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/Stamp_Annotation.pdf";
 
-    public async Task EditStampAnnotationAsync(MouseEventArgs args)
+    private async Task EditStampAnnotationAsync(MouseEventArgs args)
     {
         // Get annotation collection
         List<PdfAnnotation> annotationCollection = await Viewer.GetAnnotationsAsync();

@@ -9,7 +9,7 @@ documentation: ug
 
 # Annotation permissions in Blazor SfPdfViewer Component
 
-Use [PdfViewerAnnotationSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerAnnotationSettings.html) to configure default permission flags for all annotations in the Blazor SfPdfViewer2. Additionally, configure permissions for individual annotation types using their respective settings classes. These settings establish defaults for annotations created through the UI and programmatic flows.
+Use [PdfViewerAnnotationSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerAnnotationSettings.html) to configure default permission flags for all annotations in the Blazor SfPdfViewer. Additionally, configure permissions for individual annotation types using their respective settings classes. These settings establish defaults for annotations created through the UI and programmatic flows.
 
 ## Common permissions
 
@@ -19,7 +19,7 @@ Common permission properties that apply to all annotation types. These flags are
 - `IsPrint`: Control whether annotations participate in printing.
 - `SkipDownload`: Skip annotations from the exported/downloaded PDF.
 
-Example: Set common permissions using `PdfViewerAnnotationSettings` for all annotations in the SfPdfViewer2.
+Example: Set common permissions using `PdfViewerAnnotationSettings` for all annotations in the SfPdfViewer.
 
 ```cshtml
 @using Syncfusion.Blazor.SfPdfViewer

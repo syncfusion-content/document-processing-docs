@@ -35,7 +35,7 @@ When Free Text Annotation mode is enabled from Pan, the viewer automatically swi
     private SfPdfViewer2? viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async Task OnClick(MouseEventArgs args)
+    private async Task OnClick(MouseEventArgs args)
     {
         await viewer.SetAnnotationModeAsync(AnnotationType.FreeText);
     }
@@ -138,7 +138,7 @@ Autofit support for free text annotations can be enabled using the [AutoFit](htt
 
 @code {
     private SfPdfViewer2? Viewer;
-    public string DocumentPath { get; set; } = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+    private string DocumentPath { get; set; } = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 }
 
 ```
@@ -161,9 +161,9 @@ The following example demonstrates adding a free text annotation to a PDF docume
 
 @code {
     private SfPdfViewer2? Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/Free_Text_Annotation.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/Free_Text_Annotation.pdf";
 
-    public async Task AddFreeTextAnnotationAsync(MouseEventArgs args)
+    private async Task AddFreeTextAnnotationAsync(MouseEventArgs args)
     {
         PdfAnnotation annotation = new PdfAnnotation();
         // Set the annotation type of free text
@@ -209,9 +209,9 @@ The following example demonstrates editing a free text annotation programmatical
 
 @code {
     private SfPdfViewer2? Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/Free_Text_Annotation.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/Free_Text_Annotation.pdf";
 
-    public async Task EditFreeTextAnnotationAsync(MouseEventArgs args)
+    private async Task EditFreeTextAnnotationAsync(MouseEventArgs args)
     {
         // Get annotation collection
         List<PdfAnnotation> annotationCollection = await Viewer.GetAnnotationsAsync();
@@ -276,7 +276,7 @@ If a custom font is not installed on the system, use `FallbackFontCollection` to
     private SfPdfViewer2? pdfViewer;
     private string DocumentPath { get; set; } = "wwwroot/PDF/Arial Black.pdf";
 
-    public void Created()
+    private void Created()
     {
         // Use FallbackFontCollection to save the custom font
         // Maps the font family name to its corresponding TTF file as a memory stream  
@@ -330,7 +330,7 @@ The following example demonstrates loading, editing, and saving custom fonts in 
 
     private string DocumentPath { get; set; } = "wwwroot/PDF/Arial Black.pdf";
 
-    public void Created()
+    private void Created()
     {
         // Use FallbackFontCollection to save the custom font
         // Maps the font family name to its corresponding TTF file as a memory stream  

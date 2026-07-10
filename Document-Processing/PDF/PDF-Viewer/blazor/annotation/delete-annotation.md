@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Remove annotations in Blazor PDF Viewer Component
 
-You can remove annotations using the built-in UI or programmatically through the SfPdfViewer component. This page describes both approaches and applies to Blazor Server and Blazor WebAssembly hosts running on .NET 6.0 or later. The `SfPdfViewer2` component (introduced alongside `SfPdfViewer`) is used in the examples below.
+You can remove annotations using the built-in UI or programmatically through the SfPdfViewer component. This page describes both approaches and applies to Blazor Server and Blazor WebAssembly hosts running on .NET 6.0 or later. The `SfPdfViewer` component (introduced alongside `SfPdfViewer`) is used in the examples below.
 
 ## Delete via UI
 
@@ -28,7 +28,7 @@ A selected annotation can be deleted in any of the following ways:
 
 ## Delete programmatically
 
-You can delete annotations programmatically using the `DeleteAnnotationAsync` method on the `SfPdfViewer2` instance. The component exposes two overloads:
+You can delete annotations programmatically using the `DeleteAnnotationAsync` method on the `SfPdfViewer` instance. The component exposes two overloads:
 
 - `DeleteAnnotationAsync(PdfAnnotation annotation)` — removes the supplied annotation object.
 - `DeleteAnnotationAsync(string annotationId)` — removes the annotation whose `Id` matches the supplied value.
@@ -50,7 +50,7 @@ The following example deletes the first annotation in the loaded document. It us
 @code {
     private SfPdfViewer2 Viewer = default!;
     // Resolve the document path from the static web root so it works regardless of the app's base href.
-    public string DocumentPath { get; set; } = "Data/Annotation.pdf";
+    private string DocumentPath { get; set; } = "Data/Annotation.pdf";
 
     private async Task DeleteAnnotation(MouseEventArgs args)
     {

@@ -9,11 +9,11 @@ documentation: ug
 
 # Squiggly Annotation in Blazor SfPdfViewer Component
 
-This guide explains how to **enable**, **apply**, **customize**, and **manage** *Squiggly* text markup annotations in the Syncfusion **Blazor SfPdfViewer2** component.
+This guide explains how to **enable**, **apply**, **customize**, and **manage** *Squiggly* text markup annotations in the Syncfusion **Blazor SfPdfViewer** component.
 
-## Enable Squiggly in the Viewer
+## Enable Squiggly Annotation in the Viewer
 
-Squiggly is enabled by default. To use the annotation toolbar, add the `SfPdfViewer2` component to your Blazor page:
+Squiggly is enabled by default. To use the annotation toolbar, add the `SfPdfViewer` component to your Blazor page:
 
 ```cshtml
 @using Syncfusion.Blazor.SfPdfViewer
@@ -48,9 +48,9 @@ To disable all text markup annotations (including squiggly) so they do not appea
 
 ## Add Squiggly Annotation
 
-### Add Squiggly Using the Toolbar
+### Add Squiggly Annotation Using the Toolbar
 
-1. Click the **Edit Annotation** button in the SfPdfViewer2 toolbar. An annotation toolbar appears below the main toolbar.
+1. Click the **Edit Annotation** button in the SfPdfViewer toolbar. An annotation toolbar appears below the main toolbar.
 2. Select the **Squiggly** button in the annotation toolbar to enable squiggly mode.
 3. Select the text in the document to add the squiggly annotation.
    - Alternatively, select the text first and then click **Squiggly** to apply it.
@@ -58,7 +58,7 @@ To disable all text markup annotations (including squiggly) so they do not appea
 
 ![Squiggly tool](../../images/blazor-pdfviewer-squiggly-text.png)
 
-### Apply Squiggly Using the Context Menu
+### Apply Squiggly Annotation Using the Context Menu
 
 1. Select text in the document.
 2. Right-click the selected text region.
@@ -66,7 +66,7 @@ To disable all text markup annotations (including squiggly) so they do not appea
 
 ![Squiggly context](../../images/blazor-pdfviewer-squiggly-in-contextmenu.png)
 
-### Enable Squiggly Mode Programmatically
+### Enable Squiggly Annotation Mode Programmatically
 
 Switch the viewer into squiggly mode using [`SetAnnotationModeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SetAnnotationModeAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationType_).
 
@@ -92,7 +92,7 @@ Switch the viewer into squiggly mode using [`SetAnnotationModeAsync`](https://he
 }
 ```
 
-#### Exit Squiggly Mode
+#### Exit Squiggly Annotation Mode
 
 Switch back to normal mode using:
 
@@ -103,7 +103,7 @@ private async Task DisableSquigglyMode()
 }
 ```
 
-### Add Squiggly Programmatically
+### Add Squiggly Annotation Programmatically
 
 Use [`AddAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) to insert a squiggly at a specific location.
 
@@ -123,7 +123,7 @@ Use [`AddAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
         PdfAnnotation annotation = new PdfAnnotation
         {
             Type = AnnotationType.Squiggly,
-            // PageNumber is 0-based in the SfPdfViewer2 API
+            // PageNumber is 0-based in the SfPdfViewer API
             PageNumber = 0,
             Color = "#00ff00",
             Opacity = 0.9,
@@ -137,7 +137,7 @@ Use [`AddAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 }
 ```
 
-## Customize Squiggly Appearance
+## Customize Squiggly Annotation Appearance
 
 Configure default squiggly settings such as **color** and **opacity** using [`SquigglySettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SquigglySettings).
 
@@ -165,23 +165,23 @@ Configure default squiggly settings such as **color** and **opacity** using [`Sq
 
 N> After changing the default color and opacity using the **Edit Color** and **Edit Opacity** tools, those values become the new defaults for subsequent annotations.
 
-## Manage Squiggly (Edit, Delete)
+## Manage Squiggly Annotation (Edit, Delete)
 
-### Edit Squiggly
+### Edit Squiggly Annotation
 
-#### Edit Squiggly Appearance Using the UI
+#### Edit Squiggly Annotation Appearance Using the UI
 
 Use the annotation toolbar:
 
 - **Edit Color** tool to change the squiggly color.
 
-![Editing text markup color in Blazor SfPdfViewer2](../../images/blazor-pdfviewer-editing-text-color.png)
+![Editing text markup color in Blazor SfPdfViewer](../../images/blazor-pdfviewer-editing-text-color.png)
 
 - **Edit Opacity** slider to adjust the transparency.
 
-![Editing text markup Opacity in Blazor SfPdfViewer2](../../images/blazor-pdfviewer-edit-text-opacity.png)
+![Editing text markup Opacity in Blazor SfPdfViewer](../../images/blazor-pdfviewer-edit-text-opacity.png)
 
-#### Edit Squiggly Programmatically
+#### Edit Squiggly Annotation Programmatically
 
 Modify an existing squiggly programmatically using [`EditAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_).
 
@@ -217,9 +217,9 @@ Modify an existing squiggly programmatically using [`EditAnnotationAsync()`](htt
 }
 ```
 
-### Delete Squiggly
+### Delete Squiggly Annotation
 
-The SfPdfViewer2 supports deleting existing annotations through both the UI and the API. To delete from the UI, select the squiggly and press **Delete** or use the **Delete** tool on the annotation toolbar.
+The SfPdfViewer supports deleting existing annotations through both the UI and the API. To delete from the UI, select the squiggly and press **Delete** or use the **Delete** tool on the annotation toolbar.
 
 To delete programmatically, use [`DeleteAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_):
 
@@ -297,9 +297,9 @@ To add several squiggly annotations with different colors and positions in one o
 }
 ```
 
-## Handle Squiggly Events
+## Handle Squiggly Annotation Events
 
-The SfPdfViewer2 provides annotation life-cycle events that fire when squiggly annotations are added, modified, selected, or removed. Subscribe to events through the `PdfViewerEvents` tag.
+The SfPdfViewer provides annotation life-cycle events that fire when squiggly annotations are added, modified, selected, or removed. Subscribe to events through the `PdfViewerEvents` tag.
 
 ```cshtml
 @using Syncfusion.Blazor.SfPdfViewer
@@ -345,7 +345,7 @@ For the full list of available events and their descriptions, see [Annotation Ev
 
 ## Export and Import
 
-The SfPdfViewer2 supports exporting and importing annotations as **JSON** or **XFDF**, allowing you to save annotations as a separate file or load existing annotations back into the viewer. For full details on supported formats and steps to export or import annotations, see [Export and Import Annotations](../import-export-annotation).
+The SfPdfViewer supports exporting and importing annotations as **JSON** or **XFDF**, allowing you to save annotations as a separate file or load existing annotations back into the viewer. For full details on supported formats and steps to export or import annotations, see [Export and Import Annotations](../import-export-annotation).
 
 ## See Also
 

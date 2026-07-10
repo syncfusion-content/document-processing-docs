@@ -1,19 +1,19 @@
 ---
 layout: post
 title: Highlight Text in Blazor PDF Viewer | Syncfusion
-description: Learn how to enable, apply, customize, and manage Highlight annotations in the Syncfusion Blazor SfPdfViewer2.
+description: Learn how to enable, apply, customize, and manage Highlight annotations in the Syncfusion Blazor SfPdfViewer.
 platform: document-processing
-control: SfPdfViewer2
+control: SfPdfViewer
 documentation: ug
 ---
 
 # Highlight Annotation in Blazor SfPdfViewer Component
 
-This guide explains how to **enable**, **apply**, **customize**, and **manage** *Highlight* text markup annotations in the Syncfusion **Blazor SfPdfViewer2** component.
+This guide explains how to **enable**, **apply**, **customize**, and **manage** *Highlight* text markup annotations in the Syncfusion **Blazor SfPdfViewer** component.
 
-## Enable Highlight in the Viewer
+## Enable Highlight Annotation in the Viewer
 
-Highlight is enabled by default. To use the annotation toolbar, add the `SfPdfViewer2` component to your Blazor page:
+Highlight is enabled by default. To use the annotation toolbar, add the `SfPdfViewer` component to your Blazor page:
 
 ```cshtml
 @using Syncfusion.Blazor.SfPdfViewer
@@ -48,9 +48,9 @@ To disable all text markup annotations (including highlight) so they do not appe
 
 ## Add Highlight Annotation
 
-### Add Highlight Using the Toolbar
+### Add Highlight Annotation Using the Toolbar
 
-1. Click the **Edit Annotation** button in the SfPdfViewer2 toolbar. An annotation toolbar appears below the main toolbar.
+1. Click the **Edit Annotation** button in the SfPdfViewer toolbar. An annotation toolbar appears below the main toolbar.
 2. Select the **Highlight** button in the annotation toolbar to enable highlight mode.
 3. Select the text in the document to add the highlight annotation.
    - Alternatively, select the text first and then click **Highlight** to apply it.
@@ -58,7 +58,7 @@ To disable all text markup annotations (including highlight) so they do not appe
 
 ![Highlight tool](../../images/blazor-pdfviewer-highlight-text.png)
 
-### Apply Highlight Using the Context Menu
+### Apply Highlight Annotation Using the Context Menu
 
 1. Select text in the document.
 2. Right-click the selected text region.
@@ -66,7 +66,7 @@ To disable all text markup annotations (including highlight) so they do not appe
 
 ![Highlight Context](../../images/blazor-pdfviewer-highlight-context.png)
 
-### Enable Highlight Mode Programmatically
+### Enable Highlight Annotation Mode Programmatically
 
 Switch the viewer into highlight mode using [`SetAnnotationModeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SetAnnotationModeAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationType_).
 
@@ -93,7 +93,7 @@ Switch the viewer into highlight mode using [`SetAnnotationModeAsync`](https://h
 }
 ```
 
-#### Exit Highlight Mode
+#### Exit Highlight Annotation Mode
 
 Switch back to normal mode using:
 
@@ -104,7 +104,7 @@ private async Task DisableHighlightMode()
 }
 ```
 
-### Add Highlight Programmatically
+### Add Highlight Annotation Programmatically
 
 Use [`AddAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) to insert a highlight at a specific location.
 
@@ -125,7 +125,7 @@ Use [`AddAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
         PdfAnnotation annotation = new PdfAnnotation
         {
             Type = AnnotationType.Highlight,
-            // PageNumber is 0-based in the SfPdfViewer2 API
+            // PageNumber is 0-based in the SfPdfViewer API
             PageNumber = 0,
             Color = "#ffff00",
             Opacity = 0.9,
@@ -139,7 +139,7 @@ Use [`AddAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 }
 ```
 
-## Customize Highlight Appearance
+## Customize Highlight Annotation Appearance
 
 Configure default highlight settings such as **color** and **opacity** using [`HighlightSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_HighlightSettings).
 
@@ -167,23 +167,23 @@ Configure default highlight settings such as **color** and **opacity** using [`H
 
 N> After changing the default color and opacity using the **Edit Color** and **Edit Opacity** tools, those values become the new defaults for subsequent annotations.
 
-## Manage Highlight (Edit, Delete)
+## Manage Highlight Annotation (Edit, Delete)
 
-### Edit Highlight
+### Edit Highlight Annotation
 
-#### Edit Highlight Appearance Using the UI
+#### Edit Highlight Annotation Appearance Using the UI
 
 Use the annotation toolbar:
 
 - **Edit Color** tool to change the highlight color.
 
-![Editing text markup color in Blazor SfPdfViewer2](../../images/blazor-pdfviewer-editing-text-color.png)
+![Editing text markup color in Blazor SfPdfViewer](../../images/blazor-pdfviewer-editing-text-color.png)
 
 - **Edit Opacity** slider to adjust the transparency.
 
-![Editing text markup Opacity in Blazor SfPdfViewer2](../../images/blazor-pdfviewer-edit-text-opacity.png)
+![Editing text markup Opacity in Blazor SfPdfViewer](../../images/blazor-pdfviewer-edit-text-opacity.png)
 
-#### Edit Highlight Programmatically
+#### Edit Highlight Annotation Programmatically
 
 Modify an existing highlight programmatically using [`EditAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_).
 
@@ -219,9 +219,9 @@ Modify an existing highlight programmatically using [`EditAnnotationAsync()`](ht
 }
 ```
 
-### Delete Highlight
+### Delete Highlight Annotation
 
-The SfPdfViewer2 supports deleting existing annotations through both the UI and the API. To delete from the UI, select the highlight and press **Delete** or use the **Delete** tool on the annotation toolbar.
+The SfPdfViewer supports deleting existing annotations through both the UI and the API. To delete from the UI, select the highlight and press **Delete** or use the **Delete** tool on the annotation toolbar.
 
 To delete programmatically, use [`DeleteAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_):
 
@@ -254,7 +254,7 @@ To delete programmatically, use [`DeleteAnnotationAsync()`](https://help.syncfus
 }
 ```
 
-## Add Multiple Highlights with Custom Properties
+## Add Multiple Highlight Annotations with Custom Properties
 
 To add several highlights with different colors and positions in one operation, call [`AddAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) for each [`PdfAnnotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfAnnotation.html). This is an extension of the [Add Highlight Programmatically](#add-highlight-programmatically) example.
 
@@ -302,9 +302,9 @@ To add several highlights with different colors and positions in one operation, 
 }
 ```
 
-## Handle Highlight Events
+## Handle Highlight Annotation Events
 
-The SfPdfViewer2 provides annotation life-cycle events that fire when highlight annotations are added, modified, selected, or removed. Subscribe to events through the `PdfViewerEvents` tag.
+The SfPdfViewer provides annotation life-cycle events that fire when highlight annotations are added, modified, selected, or removed. Subscribe to events through the `PdfViewerEvents` tag.
 
 ```cshtml
 @page "/highlight-events"
@@ -351,7 +351,7 @@ For the full list of available events and their descriptions, see [Annotation Ev
 
 ## Export and Import
 
-The SfPdfViewer2 supports exporting and importing annotations as **JSON** or **XFDF**, allowing you to save annotations as a separate file or load existing annotations back into the viewer. For full details on supported formats and steps to export or import annotations, see [Export and Import Annotations](../import-export-annotation).
+The SfPdfViewer supports exporting and importing annotations as **JSON** or **XFDF**, allowing you to save annotations as a separate file or load existing annotations back into the viewer. For full details on supported formats and steps to export or import annotations, see [Export and Import Annotations](../import-export-annotation).
 
 ## See Also
 

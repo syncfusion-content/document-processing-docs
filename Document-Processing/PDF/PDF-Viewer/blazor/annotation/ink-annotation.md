@@ -31,10 +31,10 @@ Ink annotations can be added using the annotation toolbar.
 <SfPdfViewer2 @ref="Viewer" DocumentPath="@DocumentPath" Height="100%" Width="100%"></SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 Viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async Task OnClick(MouseEventArgs args)
+    private async Task OnClick(MouseEventArgs args)
     {
         await Viewer.SetAnnotationModeAsync(AnnotationType.Ink);
     }
@@ -79,7 +79,7 @@ Default properties for ink annotations can be configured before rendering the co
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 Viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
     PdfViewerInkAnnotationSettings InkAnnotationSettings = new PdfViewerInkAnnotationSettings
@@ -108,10 +108,10 @@ Below is an example demonstrating how to add an ink annotation to a PDF document
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/Ink_Annotation.pdf";
+    private SfPdfViewer2 viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/Ink_Annotation.pdf";
 
-    public async Task AddInkAnnotationAsync(MouseEventArgs args)
+    private async Task AddInkAnnotationAsync(MouseEventArgs args)
     {
         PdfAnnotation annotation = new PdfAnnotation();
         // Set the annotation type of Ink
@@ -155,10 +155,10 @@ Below is an example demonstrating how to edit an ink annotation programmatically
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/Ink_Annotation.pdf";
+    private SfPdfViewer2 viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/Ink_Annotation.pdf";
 
-    public async Task EditInkAnnotationAsync(MouseEventArgs args)
+    private async Task EditInkAnnotationAsync(MouseEventArgs args)
     {
         // Get annotation collection
         List<PdfAnnotation> annotationCollection = await Viewer.GetAnnotationsAsync();

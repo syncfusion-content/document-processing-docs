@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add Radius Annotations in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to enable, draw, customize, and manage Radius measurement annotations in the Syncfusion Blazor SfPdfViewer component.
+description: Learn how to enable, draw, customize, and manage Radius annotations in the Syncfusion Blazor SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -130,7 +130,7 @@ Use the [`AddAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.
 }
 ```
 
-## Customize Radius Appearance
+## Customize Radius Annotation Appearance
 Configure default properties — **fill color**, **stroke color**, **thickness**, **opacity**, and **measurement unit** — using the [`RadiusSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_RadiusSettings) property.
 
 > `RadiusSettings` is applied only at component initialization. To change defaults at runtime, update the bound object and re-render the viewer (for example, by toggling a render flag).
@@ -163,10 +163,10 @@ Available `PdfViewerRadiusSettings` members include `FillColor`, `StrokeColor`, 
 
 ## Manage Radius Annotation
 
-### Move Annotation
+### Move Radius Annotation
 Drag inside the circle to reposition the entire annotation on the page.
 
-### Reshape Annotation
+### Reshape Radius Annotation
 Drag the **edge handle** (the circumference) to adjust the radius size. The center point remains fixed.
 
 ### Edit Radius Annotation
@@ -325,7 +325,7 @@ Configure scale defaults using [`MeasurementSettings`](https://help.syncfusion.c
 }
 ```
 
-## Handle Radius Events
+## Handle Radius Annotation Events
 Listen to annotation life-cycle events (`Added`, `Modified`, `Selected`, `Removed`) and use the `AnnotationEventArgs` payload — which includes the affected `PdfAnnotation`, the page number, and the action that triggered the event.
 
 For the full list of events and their payloads, see [**Annotation Events**](../events).

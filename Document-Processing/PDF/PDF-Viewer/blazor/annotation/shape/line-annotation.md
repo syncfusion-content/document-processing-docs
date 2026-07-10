@@ -61,8 +61,8 @@ Switch the viewer into line drawing mode using [SetAnnotationModeAsync](https://
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
-    public async void OnClick(MouseEventArgs args)
+    private SfPdfViewer2 viewer;
+    private async void OnClick(MouseEventArgs args)
     {
         await viewer.SetAnnotationModeAsync(AnnotationType.Line);
     }
@@ -82,10 +82,10 @@ Use the [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/Line_Annotation.pdf";
+    private SfPdfViewer2 viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/Line_Annotation.pdf";
 
-    public async void AddLineAnnotationAsync(MouseEventArgs args)
+    private async void AddLineAnnotationAsync(MouseEventArgs args)
     {
         PdfAnnotation annotation = new PdfAnnotation();
         // Set the annotation type as Line
@@ -106,7 +106,7 @@ Use the [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 }
 ```
 
-## Customize Line Appearance
+## Customize Line Annotation Appearance
 
 Configure default line appearance (stroke color, thickness, opacity, and arrowheads) during control initialization using [LineSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_LineSettings). These settings apply when lines are created from the toolbar or programmatically.
 
@@ -121,7 +121,7 @@ Configure default line appearance (stroke color, thickness, opacity, and arrowhe
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
     PdfViewerLineSettings LineSettings = new PdfViewerLineSettings
@@ -172,10 +172,10 @@ Modify an existing line annotation programmatically using [EditAnnotationAsync](
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/Line_Annotation.pdf";
+    private SfPdfViewer2 viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/Line_Annotation.pdf";
 
-    public async void EditLineAnnotationAsync(MouseEventArgs args)
+    private async void EditLineAnnotationAsync(MouseEventArgs args)
     {
         // Get annotation collection
         List<PdfAnnotation> annotationCollection = await Viewer.GetAnnotationsAsync();
@@ -214,10 +214,10 @@ Set properties for individual line annotations by passing values directly during
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/Line_Annotation.pdf";
+    private SfPdfViewer2 viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/Line_Annotation.pdf";
 
-    public async void AddMultipleLinesAsync(MouseEventArgs args)
+    private async void AddMultipleLinesAsync(MouseEventArgs args)
     {
         // Line 1
         PdfAnnotation annotation1 = new PdfAnnotation();
@@ -272,7 +272,7 @@ Disable line annotations (along with all other shape annotations, such as Rectan
 }
 ```
 
-## Handle Line Events
+## Handle Line Annotation Events
 
 The PDF viewer provides annotation life-cycle events that notify when Line annotations are added, modified, selected, or removed.
 For the full list of available events and their descriptions, see [**Annotation Events**](../events)

@@ -142,7 +142,7 @@ The following code snippet demonstrates how to show or hide the comment panel de
 
 @code
 {
-    SfPdfViewer2 Viewer;
+    private SfPdfViewer2 viewer;
 
     // Sets the PDF document path for initial loading.
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
@@ -151,7 +151,7 @@ The following code snippet demonstrates how to show or hide the comment panel de
     private bool isOpen = true;
 
     // Toggles the visibility of the comment panel.
-    public void OnClick()
+    private void OnClick()
     {
         isOpen = !isOpen;
     }
@@ -176,10 +176,10 @@ The following example demonstrates how to add a line annotation with a comment a
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/Comment_and_Reply_Comment.pdf";
+    private SfPdfViewer2 viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/Comment_and_Reply_Comment.pdf";
 
-    public async void AddCommentandReplyCommentAsync(MouseEventArgs args)
+    private async void AddCommentandReplyCommentAsync(MouseEventArgs args)
     {
         PdfAnnotation annotation = new PdfAnnotation();
         // Set the annotation type to Line
@@ -264,10 +264,10 @@ The following example demonstrates how to edit the comment and replies programma
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/Comment_and_Reply_Comment.pdf";
+    private SfPdfViewer2 viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/Comment_and_Reply_Comment.pdf";
 
-    public async void EditCommentandReplyCommentAsync(MouseEventArgs args)
+    private async void EditCommentandReplyCommentAsync(MouseEventArgs args)
     {
         // Get the annotation collection
         List<PdfAnnotation> annotationCollection = await Viewer.GetAnnotationsAsync();

@@ -13,7 +13,7 @@ Annotation appearance and behavior (for example color, stroke color, thickness, 
 
 ## Customize via UI
 
-To open the annotation toolbar, click **Edit Annotation** in the SfPdfViewer2 toolbar. Once the toolbar is visible, select an annotation to use these tools:
+To open the annotation toolbar, click **Edit Annotation** in the SfPdfViewer toolbar. Once the toolbar is visible, select an annotation to use these tools:
 
 - **Edit color**: changes the annotation fill or text color.
 ![Edit color](../images/blazor-pdfviewer-edit-fill-color.png)
@@ -28,7 +28,7 @@ N> Type-specific options (for example, Line properties) are available from the c
 
 ## Set default properties during initialization
 
-Configure default properties such as author, subject, color, and opacity by setting the type-specific settings components (or their corresponding parameters) on the `SfPdfViewer2`. The examples below reference settings used on the annotation type pages.
+Configure default properties such as author, subject, color, and opacity by setting the type-specific settings components (or their corresponding parameters) on the `SfPdfViewer`. The examples below reference settings used on the annotation type pages.
 
 ### Per-type settings reference
 
@@ -66,7 +66,7 @@ The following example uses the parameter syntax to configure defaults for shape 
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
     // Shape annotation defaults
@@ -156,7 +156,7 @@ The same defaults can be expressed using child-component tags, which is helpful 
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
     PdfViewerAnnotationSettings AnnotationSettings = new PdfViewerAnnotationSettings
@@ -199,7 +199,7 @@ For detailed permission semantics, see [Annotation Permission](annotation-permis
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
     PdfViewerRectangleSettings RectangleSettings = new PdfViewerRectangleSettings
@@ -243,8 +243,8 @@ Use [EditAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private SfPdfViewer2 viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
     private async Task EditAnnotation(MouseEventArgs args)
     {
@@ -286,10 +286,10 @@ The following example updates every annotation that matches a filter. Wrap calls
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private SfPdfViewer2 viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async Task BulkUpdateAnnotations(MouseEventArgs args)
+    private async Task BulkUpdateAnnotations(MouseEventArgs args)
     {
         // async void is required for Blazor event handlers; wrap in try/catch to surface errors.
         try

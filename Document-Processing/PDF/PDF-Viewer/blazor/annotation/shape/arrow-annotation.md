@@ -57,10 +57,10 @@ Switch the viewer into arrow mode using [`SetAnnotationModeAsync(AnnotationType.
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async void EnableArrowMode(MouseEventArgs args)
+    private async void EnableArrowMode(MouseEventArgs args)
     {
         await viewer.SetAnnotationModeAsync(AnnotationType.Arrow);
     }
@@ -84,10 +84,10 @@ Use the [`AddAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async void AddArrow(MouseEventArgs args)
+    private async void AddArrow(MouseEventArgs args)
     {
         PdfAnnotation annotation = new PdfAnnotation();
         annotation.Type = AnnotationType.Arrow;
@@ -106,7 +106,7 @@ Use the [`AddAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 ```
 
-## Customize Arrow Appearance
+## Customize Arrow Annotation Appearance
 Configure default arrow appearance (fill color, stroke color, thickness, opacity, and arrowheads) using the [`ArrowSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ArrowSettings) property.
 
 ```cshtml
@@ -121,7 +121,7 @@ Configure default arrow appearance (fill color, stroke color, thickness, opacity
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
     PdfViewerArrowSettings ArrowSettings = new PdfViewerArrowSettings
@@ -180,10 +180,10 @@ Modify an existing Arrow programmatically using `EditAnnotationAsync()`.
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async void EditArrowProgrammatically(MouseEventArgs args)
+    private async void EditArrowProgrammatically(MouseEventArgs args)
     {
         List<PdfAnnotation> annotationCollection = await viewer.GetAnnotationsAsync();
         foreach (var annot in annotationCollection)
@@ -228,10 +228,10 @@ Set properties for individual arrow annotations by passing values directly durin
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async void AddMultipleArrows(MouseEventArgs args)
+    private async void AddMultipleArrows(MouseEventArgs args)
     {
         // Arrow 1
         PdfAnnotation annotation1 = new PdfAnnotation();
@@ -287,7 +287,7 @@ Disable arrow annotations (along with all other shape annotations: Line, Rectang
 
 ```
 
-## Handle Arrow Events
+## Handle Arrow Annotation Events
 
 The PDF viewer provides annotation life-cycle events that notify when Arrow annotations are added, modified, selected, or removed.
 For the full list of available events and their descriptions, see [**Annotation Events**](../events)

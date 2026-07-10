@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add Perimeter Annotations in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to enable, draw, customize, and manage Perimeter measurement annotations in the Syncfusion Blazor SfPdfViewer component.
+description: Learn how to enable, draw, customize, and manage Perimeter annotations in the Syncfusion Blazor SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -88,10 +88,10 @@ Switch back to the default mode by calling [`SetAnnotationModeAsync`](https://he
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async void ExitPerimeterMode(MouseEventArgs args)
+    private async void ExitPerimeterMode(MouseEventArgs args)
     {
         await viewer.SetAnnotationModeAsync(AnnotationType.None);
     }
@@ -134,7 +134,7 @@ Use the [`AddAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.
 }
 ```
 
-## Customize Perimeter Appearance
+## Customize Perimeter Annotation Appearance
 
 Configure the default Perimeter style — **fill color**, **stroke color**, **thickness**, and **opacity** — using the [`PerimeterSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_PerimeterSettings) property.
 
@@ -174,7 +174,7 @@ Drag any vertex handle to adjust the shape's points.
 
 ### Edit Perimeter Annotation
 
-#### Edit Perimeter Appearance (UI)
+#### Edit Perimeter Annotation Appearance (UI)
 
 Select the Perimeter annotation first — the annotation toolbar appears below the main toolbar. Use it to change:
 
@@ -189,7 +189,7 @@ Select the Perimeter annotation first — the annotation toolbar appears below t
 - **Line properties** — change the leader style (line only, with arrows, or full dimension lines) with the Edit Property tool.
   ![Editing Calibrate Property in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-property.png)
 
-#### Edit Perimeter Programmatically
+#### Edit Perimeter Annotation Programmatically
 
 Update the properties of an existing Perimeter annotation and call [`EditAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_). The example below expects `PDF_Succinctly.pdf` to already contain a Perimeter annotation; replace the filter with one that matches your data.
 
@@ -272,7 +272,7 @@ Apply defaults for Perimeter using the [`PerimeterSettings`](https://help.syncfu
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
     
     PdfViewerPerimeterSettings PerimeterSettings = new PdfViewerPerimeterSettings
@@ -361,7 +361,7 @@ Configure scale defaults using [`MeasurementSettings`](https://help.syncfusion.c
 
 For more deletion patterns, see [**Delete Annotation**](../delete-annotation).
 
-## Handle Perimeter Events
+## Handle Perimeter Annotation Events
 
 Listen to the annotation life-cycle with the `Added`, `Modified`, `Selected`, and `Removed` events. The handler receives an `AnnotationEventArgs` payload that includes the affected `PdfAnnotation`, the page number, and the action that triggered the event.
 

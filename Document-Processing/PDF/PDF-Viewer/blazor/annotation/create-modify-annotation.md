@@ -72,10 +72,10 @@ Example: creating a Rectangle annotation using [`AddAnnotationAsync`](https://he
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/Shape_Annotation.pdf";
+    private SfPdfViewer2 viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/Shape_Annotation.pdf";
 
-    public async Task AddShapeAnnotationAsync(MouseEventArgs args)
+    private async Task AddShapeAnnotationAsync(MouseEventArgs args)
     {
         // PdfAnnotation defines the annotation to add.
         // Bound specifies the rectangle on the page in points (1 point = 1/72 inch), measured from the page's top-left corner.
@@ -136,10 +136,10 @@ The following example edits a Rectangle (shape) annotation. For type-specific pr
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/Shape_Annotation.pdf";
+    private SfPdfViewer2 viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/Shape_Annotation.pdf";
 
-    public async Task EditShapeAnnotationAsync(MouseEventArgs args)
+    private async Task EditShapeAnnotationAsync(MouseEventArgs args)
     {
         // Get annotation collection
         List<PdfAnnotation> annotationCollection = await Viewer.GetAnnotationsAsync();

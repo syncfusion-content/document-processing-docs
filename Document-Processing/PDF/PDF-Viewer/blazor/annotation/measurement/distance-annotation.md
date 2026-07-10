@@ -114,7 +114,7 @@ A Distance annotation requires **exactly two vertices** — the first is the sta
 }
 ```
 
-## Customize Distance Appearance
+## Customize Distance Annotation Appearance
 
 Configure the default Distance style — **fill color**, **stroke color**, **thickness**, and **opacity** — using the [`DistanceSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DistanceSettings) property.
 
@@ -154,7 +154,7 @@ Drag the end handles to adjust the length, or change `VertexPoints` programmatic
 
 ### Edit Distance Annotation
 
-#### Edit Distance Appearance (UI)
+#### Edit Distance Annotation Appearance (UI)
 
 Select the Distance annotation first — the annotation toolbar appears below the main toolbar. Use it to change:
 
@@ -169,7 +169,7 @@ Select the Distance annotation first — the annotation toolbar appears below th
 - **Line properties** — change the leader style (line only, with arrows, or full dimension lines) with the Edit Property tool.
   ![Editing Calibrate Property in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-property.png)
 
-#### Edit Distance Programmatically
+#### Edit Distance Annotation Programmatically
 
 Modify an existing Distance annotation programmatically using [`EditAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_). The example below expects `PDF_Succinctly.pdf` to already contain a Distance annotation; replace the filter with one that matches your data.
 
@@ -254,7 +254,7 @@ Apply defaults for Distance using the [`DistanceSettings`](https://help.syncfusi
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
     PdfViewerDistanceSettings DistanceSettings = new PdfViewerDistanceSettings
@@ -330,7 +330,7 @@ Configure scale defaults using [`MeasurementSettings`](https://help.syncfusion.c
 }
 ```
 
-## Handle Distance Events
+## Handle Distance Annotation Events
 
 Listen to the annotation life-cycle with the `Added`, `Modified`, `Selected`, and `Removed` events. The handler receives an `AnnotationEventArgs` payload that includes the affected `PdfAnnotation`, the page number, and the action that triggered the event.
 

@@ -9,11 +9,11 @@ documentation: ug
 
 # Strikethrough Annotation in Blazor SfPdfViewer Component
 
-This guide explains how to **enable**, **apply**, **customize**, and **manage** *Strikethrough* text markup annotations in the Syncfusion **Blazor SfPdfViewer2** component.
+This guide explains how to **enable**, **apply**, **customize**, and **manage** *Strikethrough* text markup annotations in the Syncfusion **Blazor SfPdfViewer** component.
 
-## Enable Strikethrough in the Viewer
+## Enable Strikethrough Annotation in the Viewer
 
-Strikethrough is enabled by default. To use the annotation toolbar, add the `SfPdfViewer2` component to your Blazor page:
+Strikethrough is enabled by default. To use the annotation toolbar, add the `SfPdfViewer` component to your Blazor page:
 
 ```cshtml
 @using Syncfusion.Blazor.SfPdfViewer
@@ -48,9 +48,9 @@ To disable all text markup annotations (including strikethrough) so they do not 
 
 ## Add Strikethrough Annotation
 
-### Add Strikethrough Using the Toolbar
+### Add Strikethrough Annotation Using the Toolbar
 
-1. Click the **Edit Annotation** button in the SfPdfViewer2 toolbar. An annotation toolbar appears below the main toolbar.
+1. Click the **Edit Annotation** button in the SfPdfViewer toolbar. An annotation toolbar appears below the main toolbar.
 2. Select the **Strikethrough** button in the annotation toolbar to enable strikethrough mode.
 3. Select the text in the document to add the strikethrough annotation.
    - Alternatively, select the text first and then click **Strikethrough** to apply it.
@@ -58,7 +58,7 @@ To disable all text markup annotations (including strikethrough) so they do not 
 
 ![Strikethrough tool](../../images/blazor-pdfviewer-strike-through-text.png)
 
-### Apply Strikethrough Using the Context Menu
+### Apply Strikethrough Annotation Using the Context Menu
 
 1. Select text in the document.
 2. Right-click the selected text region.
@@ -66,7 +66,7 @@ To disable all text markup annotations (including strikethrough) so they do not 
 
 ![Strikethrough Context](../../images/blazor-pdfviewer-strike-through-in-contextmenu.png)
 
-### Enable Strikethrough Mode Programmatically
+### Enable Strikethrough Annotation Mode Programmatically
 
 Switch the viewer into strikethrough mode using [`SetAnnotationModeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SetAnnotationModeAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationType_).
 
@@ -92,7 +92,7 @@ Switch the viewer into strikethrough mode using [`SetAnnotationModeAsync`](https
 }
 ```
 
-#### Exit Strikethrough Mode
+#### Exit Strikethrough Annotation Mode
 
 Switch back to normal mode using:
 
@@ -103,7 +103,7 @@ private async Task DisableStrikethroughMode()
 }
 ```
 
-### Add Strikethrough Programmatically
+### Add Strikethrough Annotation Programmatically
 
 Use [`AddAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) to insert a strikethrough at a specific location.
 
@@ -123,7 +123,7 @@ Use [`AddAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
         PdfAnnotation annotation = new PdfAnnotation
         {
             Type = AnnotationType.Strikethrough,
-            // PageNumber is 0-based in the SfPdfViewer2 API
+            // PageNumber is 0-based in the SfPdfViewer API
             PageNumber = 0,
             Color = "#ff00ff",
             Opacity = 0.9,
@@ -137,7 +137,7 @@ Use [`AddAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 }
 ```
 
-## Customize Strikethrough Appearance
+## Customize Strikethrough Annotation Appearance
 
 Configure default strikethrough settings such as **color** and **opacity** using [`StrikethroughSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_StrikethroughSettings).
 
@@ -165,23 +165,23 @@ Configure default strikethrough settings such as **color** and **opacity** using
 
 N> After changing the default color and opacity using the **Edit Color** and **Edit Opacity** tools, those values become the new defaults for subsequent annotations.
 
-## Manage Strikethrough (Edit, Delete)
+## Manage Strikethrough Annotation (Edit, Delete)
 
-### Edit Strikethrough
+### Edit Strikethrough Annotation
 
-#### Edit Strikethrough Appearance Using the UI
+#### Edit Strikethrough Annotation Appearance Using the UI
 
 Use the annotation toolbar:
 
 - **Edit Color** tool to change the strikethrough color.
 
-![Editing text markup color in Blazor SfPdfViewer2](../../images/blazor-pdfviewer-editing-text-color.png)
+![Editing text markup color in Blazor SfPdfViewer](../../images/blazor-pdfviewer-editing-text-color.png)
 
 - **Edit Opacity** slider to adjust the transparency.
 
-![Editing text markup Opacity in Blazor SfPdfViewer2](../../images/blazor-pdfviewer-edit-text-opacity.png)
+![Editing text markup Opacity in Blazor SfPdfViewer](../../images/blazor-pdfviewer-edit-text-opacity.png)
 
-#### Edit Strikethrough Programmatically
+#### Edit Strikethrough Annotation Programmatically
 
 Modify an existing strikethrough programmatically using [`EditAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_).
 
@@ -217,9 +217,9 @@ Modify an existing strikethrough programmatically using [`EditAnnotationAsync()`
 }
 ```
 
-### Delete Strikethrough
+### Delete Strikethrough Annotation
 
-The SfPdfViewer2 supports deleting existing annotations through both the UI and the API. To delete from the UI, select the strikethrough and press **Delete** or use the **Delete** tool on the annotation toolbar.
+The SfPdfViewer supports deleting existing annotations through both the UI and the API. To delete from the UI, select the strikethrough and press **Delete** or use the **Delete** tool on the annotation toolbar.
 
 To delete programmatically, use [`DeleteAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_):
 
@@ -298,9 +298,9 @@ To add several strikethrough annotations with different colors and positions in 
 }
 ```
 
-## Handle Strikethrough Events
+## Handle Strikethrough Annotation Events
 
-The SfPdfViewer2 provides annotation life-cycle events that fire when strikethrough annotations are added, modified, selected, or removed. Subscribe to events through the `PdfViewerEvents` tag.
+The SfPdfViewer provides annotation life-cycle events that fire when strikethrough annotations are added, modified, selected, or removed. Subscribe to events through the `PdfViewerEvents` tag.
 
 ```cshtml
 @page "/strikethrough-events"
@@ -347,7 +347,7 @@ For the full list of available events and their descriptions, see [Annotation Ev
 
 ## Export and Import
 
-The SfPdfViewer2 supports exporting and importing annotations as **JSON** or **XFDF**, allowing you to save annotations as a separate file or load existing annotations back into the viewer. For full details on supported formats and steps to export or import annotations, see [Export and Import Annotations](../import-export-annotation).
+The SfPdfViewer supports exporting and importing annotations as **JSON** or **XFDF**, allowing you to save annotations as a separate file or load existing annotations back into the viewer. For full details on supported formats and steps to export or import annotations, see [Export and Import Annotations](../import-export-annotation).
 
 ## See Also
 

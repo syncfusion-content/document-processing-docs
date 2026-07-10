@@ -30,7 +30,7 @@ Polygon annotations are available by default in the Blazor SfPdfViewer component
 }
 ```
 
-N> Ensure the sample PDF is placed in the `wwwroot/Data/` folder of your Blazor app, and that `SfPdfViewer2` is registered in `Program.cs`. Refer to the [Blazor getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started) for setup details.
+N> Ensure the sample PDF is placed in the `wwwroot/Data/` folder of your Blazor app, and that `SfPdfViewer` is registered in `Program.cs`. Refer to the [Blazor getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started) for setup details.
 
 ## Add Polygon Annotation
 
@@ -64,8 +64,8 @@ Switch the viewer into polygon drawing mode using [SetAnnotationModeAsync](https
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
-    public async void OnClick(MouseEventArgs args)
+    private SfPdfViewer2 viewer;
+    private async void OnClick(MouseEventArgs args)
     {
         await viewer.SetAnnotationModeAsync(AnnotationType.Polygon);
     }
@@ -85,10 +85,10 @@ Use the [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/Shape_Annotation.pdf";
+    private SfPdfViewer2 viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/Shape_Annotation.pdf";
 
-    public async void AddPolygonAsync(MouseEventArgs args)
+    private async void AddPolygonAsync(MouseEventArgs args)
     {
         PdfAnnotation annotation = new PdfAnnotation();
         // Set the Polygon annotation type
@@ -112,7 +112,7 @@ Use the [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 }
 ```
 
-## Customize Polygon Appearance
+## Customize Polygon Annotation Appearance
 
 Configure default polygon appearance (fill color, stroke color, thickness, opacity) during control initialization using [PolygonSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_PolygonSettings). These settings apply when polygons are created from the toolbar or programmatically.
 
@@ -127,7 +127,7 @@ Configure default polygon appearance (fill color, stroke color, thickness, opaci
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
     PdfViewerPolygonSettings PolygonSettings = new PdfViewerPolygonSettings
@@ -165,7 +165,7 @@ Use the following annotation toolbar tools to modify:
 - **Edit Thickness** slider
 ![Edit thickness](../../images/blazor-pdfviewer-shape-thickness.png)
 
-#### Edit Polygon Programmatically
+#### Edit Polygon Annotation Programmatically
 
 Modify an existing polygon annotation programmatically using [EditAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_). Retrieve the target annotation from [GetAnnotationsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_GetAnnotationsAsync) and update the desired properties before submitting the edit.
 
@@ -177,10 +177,10 @@ Modify an existing polygon annotation programmatically using [EditAnnotationAsyn
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/Shape_Annotation.pdf";
+    private SfPdfViewer2 viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/Shape_Annotation.pdf";
 
-    public async void EditPolygonAsync(MouseEventArgs args)
+    private async void EditPolygonAsync(MouseEventArgs args)
     {
         // Get annotation collection
         List<PdfAnnotation> annotationCollection = await Viewer.GetAnnotationsAsync();
@@ -221,10 +221,10 @@ Configure per-annotation appearance while adding polygons using [AddAnnotationAs
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/Shape_Annotation.pdf";
+    private SfPdfViewer2 viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/Shape_Annotation.pdf";
 
-    public async void AddMultiplePolygonsAsync(MouseEventArgs args)
+    private async void AddMultiplePolygonsAsync(MouseEventArgs args)
     {
         // Polygon 1
         PdfAnnotation annotation1 = new PdfAnnotation();
@@ -287,7 +287,7 @@ Disable polygon annotations (along with all other shape annotations, such as Lin
 }
 ```
 
-## Handle Polygon Events
+## Handle Polygon Annotation Events
 
 The PDF viewer provides annotation life-cycle events that notify when Polygon annotations are added, modified, selected, or removed.
 For the full list of available events and their descriptions, see [**Annotation Events**](../events)
