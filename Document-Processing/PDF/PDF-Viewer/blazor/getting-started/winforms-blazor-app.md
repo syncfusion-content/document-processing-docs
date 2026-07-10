@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with the PDF Viewer in a WinForms Blazor Hybrid App
 
-This section explains how to add the Blazor SfPdfViewer2 to a WinForms Blazor Hybrid App using [Visual Studio](https://visualstudio.microsoft.com/vs/) or Visual Studio Code. The result is a desktop (WinForms) application that hosts Blazor UI inside a BlazorWebView control.
+This section explains how to add the Blazor SfPdfViewer to a WinForms Blazor Hybrid App using [Visual Studio](https://visualstudio.microsoft.com/vs/) or Visual Studio Code. The result is a desktop (WinForms) application that hosts Blazor UI inside a BlazorWebView control.
 
 {% tabcontents %}
 
@@ -220,7 +220,7 @@ N> `DocumentPath` can point to a remote URL (as shown), a relative URL to a file
 
 The Blazor PDF Viewer renders inside the WinForms window.
 
-![WinForms Blazor Hybrid App SfPdfViewer2 rendering in the WinForms window](../images/blazor-hybrid-winforms-sfpdfviewer.png)
+![WinForms Blazor Hybrid App SfPdfViewer rendering in the WinForms window](../images/blazor-hybrid-winforms-sfpdfviewer.png)
 
 
 N> [View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Getting%20Started/Blazor%20Hybrid%20-%20WinForms). Looking for the full Blazor PDF Viewer component overview, features, pricing, and documentation? Visit the [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) page.

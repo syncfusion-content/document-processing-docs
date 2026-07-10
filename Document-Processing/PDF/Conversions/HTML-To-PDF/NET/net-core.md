@@ -71,21 +71,25 @@ Step 6: Add a new action method named ExportToPDF in HomeController.cs and inclu
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//Initialize HTML to PDF converter.
-HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
-BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
-//Set Blink viewport size.
-blinkConverterSettings.ViewPortSize = new Syncfusion.Drawing.Size(1280, 0);
-//Assign Blink converter settings to HTML converter.
-htmlConverter.ConverterSettings = blinkConverterSettings;
-//Convert URL to PDF document.
-PdfDocument document = htmlConverter.Convert("https://www.syncfusion.com");
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save and close the document. 
-document.Save(stream);
-document.Close(); 
-return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "HTML-to-PDF.pdf");
+
+public IActionResult ExportToPDF()
+{ 
+    //Initialize HTML to PDF converter.
+    HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter(); 
+    BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings(); 
+    //Set Blink viewport size. 
+    blinkConverterSettings.ViewPortSize = new Syncfusion.Drawing.Size(1280, 0); 
+    //Assign Blink converter settings to HTML converter. 
+    htmlConverter.ConverterSettings = blinkConverterSettings; 
+    //Convert URL to PDF document. PdfDocument document = 
+    htmlConverter.Convert("https://www.syncfusion.com");
+    //Create memory stream.
+    MemoryStream stream = new MemoryStream(); 
+    //Save and close the document. 
+    document.Save(stream); 
+    document.Close(); 
+    return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "HTML-to-PDF.pdf"); 
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -105,7 +109,7 @@ Click the Start button (green arrow) or press F5 to run the app.
 **Prerequisites**:
 
 * Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-* Install Visual Studio Code: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
+* Install Visual Studio Code: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download?_exp_download=d53503e735).
 * Install C# Extension for VS Code: Open Visual Studio Code, go to the Extensions view (Ctrl+Shift+X), and search for 'C#'. Install the official [C# extension provided by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
 
 Step 1: Open the terminal (Ctrl+` ) and run the following command to create a new ASP.NET Core Web Application project.
@@ -161,21 +165,24 @@ Step 7: Add a new action method named ExportToPDF in HomeController.cs and inclu
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//Initialize HTML to PDF converter.
-HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
-BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
-//Set Blink viewport size.
-blinkConverterSettings.ViewPortSize = new Syncfusion.Drawing.Size(1280, 0);
-//Assign Blink converter settings to HTML converter.
-htmlConverter.ConverterSettings = blinkConverterSettings;
-//Convert URL to PDF document.
-PdfDocument document = htmlConverter.Convert("https://www.syncfusion.com");
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save and close the document. 
-document.Save(stream);
-document.Close(); 
-return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "HTML-to-PDF.pdf");
+public IActionResult ExportToPDF()
+{ 
+    //Initialize HTML to PDF converter.
+    HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter(); 
+    BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings(); 
+    //Set Blink viewport size. 
+    blinkConverterSettings.ViewPortSize = new Syncfusion.Drawing.Size(1280, 0); 
+    //Assign Blink converter settings to HTML converter. 
+    htmlConverter.ConverterSettings = blinkConverterSettings; 
+    //Convert URL to PDF document. PdfDocument document = 
+    htmlConverter.Convert("https://www.syncfusion.com");
+    //Create memory stream.
+    MemoryStream stream = new MemoryStream(); 
+    //Save and close the document. 
+    document.Save(stream); 
+    document.Close(); 
+    return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "HTML-to-PDF.pdf"); 
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -265,21 +272,24 @@ Step 6: Add a new action method named ExportToPDF in HomeController.cs and inclu
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//Initialize HTML to PDF converter.
-HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
-BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
-//Set Blink viewport size.
-blinkConverterSettings.ViewPortSize = new Syncfusion.Drawing.Size(1280, 0);
-//Assign Blink converter settings to HTML converter.
-htmlConverter.ConverterSettings = blinkConverterSettings;
-//Convert URL to PDF document.
-PdfDocument document = htmlConverter.Convert("https://www.syncfusion.com");
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save and close the document. 
-document.Save(stream);
-document.Close(); 
-return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "HTML-to-PDF.pdf");
+public IActionResult ExportToPDF()
+{ 
+    //Initialize HTML to PDF converter.
+    HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter(); 
+    BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings(); 
+    //Set Blink viewport size. 
+    blinkConverterSettings.ViewPortSize = new Syncfusion.Drawing.Size(1280, 0); 
+    //Assign Blink converter settings to HTML converter. 
+    htmlConverter.ConverterSettings = blinkConverterSettings; 
+    //Convert URL to PDF document. PdfDocument document = 
+    htmlConverter.Convert("https://www.syncfusion.com");
+    //Create memory stream.
+    MemoryStream stream = new MemoryStream(); 
+    //Save and close the document. 
+    document.Save(stream); 
+    document.Close(); 
+    return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "HTML-to-PDF.pdf"); 
+}
 
 {% endhighlight %}
 {% endtabs %}
