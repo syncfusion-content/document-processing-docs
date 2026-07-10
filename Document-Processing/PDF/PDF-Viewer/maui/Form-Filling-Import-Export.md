@@ -69,25 +69,22 @@ First, wire the `DocumentLoaded` event after loading the document:
 
 {% tabs %}
 {% highlight c# %}
-// Load the PDF document and add the viewer to the visual tree.
+
+SfPdfViewer PdfViewer = new SfPdfViewer();
 PdfViewer.LoadDocumentAsync(PdfStream);
-myGrid.Children.Add(PdfViewer);
 
-// Subscribe to the DocumentLoaded event to export once the document is fully loaded.
+// Add the SfPdfViewer instance to the grid's children collection to ensure it's part of the visual tree.
+ myGrid.Children.Add(PdfViewer);
+ 
+// Subscribe to the DocumentLoaded event to handle operations once the PDF document is fully loaded.
 PdfViewer.DocumentLoaded += PdfViewer_DocumentLoaded;
-{% endhighlight %}
-{% endtabs %}
 
-Then, handle the event and export the form data:
-
-{% tabs %}
-{% highlight c# %}
-private void PdfViewer_DocumentLoaded(object sender, EventArgs e)
+private void PdfViewer_DocumentLoaded(object? sender, EventArgs? e)
 {
-    string fileName = Path.Combine(FileSystem.Current.AppDataDirectory, "SavedForm.xfdf");
-    using (var fileStream = File.Create(fileName))
+    using (var fileStream = File.Create("D://SavedForm.json"))
     {
-        PdfViewer.ExportFormData(fileStream, Syncfusion.Pdf.Parsing.DataFormat.XFdf);
+        if(sender is SfPdfViewer pdfViewer)
+            pdfViewer.ExportFormData(fileStream, Syncfusion.Pdf.Parsing.DataFormat.Json);
     }
 }
 {% endhighlight %}
