@@ -11,6 +11,9 @@ documentation: ug
 
 The Syncfusion<sup>&reg;</sup> Flutter PDF is a library written natively in Dart for creating PDF documents from scratch. It can be used in Flutter Mobile and Web platforms without requiring Adobe Acrobat. The creation of PDF follows the most popular PDF 1.7 (ISO 32000-1) and the latest PDF 2.0 (ISO 32000-2) specifications.
 
+Check the following video for a quick overview of Syncfusion Flutter UI Widgets and File Format Packages.
+{% youtube "https://youtu.be/FwUSJtv-3NY?si=doGR-fOkvghf-UUa" %}
+
 ## Key features of Syncfusion<sup>&reg;</sup> Flutter PDF:
 
 * Creates PDF files from scratch.
