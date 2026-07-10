@@ -270,7 +270,7 @@ To navigate using the UI:
 
 ![Custom bookmark in .NET MAUI PDF Viewer](Images\custom-bookmark.png)
 
-**Note:** A custom bookmark currently stores only the target page information. It does not support storing or navigating to a specific position within the page, such as coordinates or a particular content region.
+N>A custom bookmark currently stores only the target page information. It does not support storing or navigating to a specific position within the page, such as coordinates or a particular content region.
 
 ### Navigate programmatically
 
