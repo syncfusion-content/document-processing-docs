@@ -117,7 +117,7 @@ private void PdfViewer_PropertyChanged(object sender,
 
 On Android and iOS platforms, the scroll head offers a quick way to move through pages. Users can drag the thumb indicator to scroll within the PDF document.
 
-![Scroll head](Images/ScrollHead.png)
+![Scroll head](Images\ScrollHead.png)
 
 ### Show or Hide the Scroll Head
 
