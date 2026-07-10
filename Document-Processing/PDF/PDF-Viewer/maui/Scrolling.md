@@ -136,9 +136,9 @@ N> The scroll head is available only on **mobile platforms**. It is not supporte
 
 When scrolling through large PDF documents, you may notice blank pages appearing temporarily while new pages are being rendered. This happens because the viewer renders pages on demand to optimize memory usage.
 
-To minimize this and provide a smoother scrolling experience, the SfPdfViewer control offers the `OverscanCount` property. This property defines how many pages should be pre-rendered and kept in memory on each side of the current viewport. Increasing this value reduces the chance of blank pages during fast scrolling but may increase memory usage. 
+To minimize this and provide a smoother scrolling experience, the SfPdfViewer control offers the [OverscanCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_OverscanCount)` property. This property defines how many pages should be pre-rendered and kept in memory on each side of the current viewport. Increasing this value reduces the chance of blank pages during fast scrolling but may increase memory usage. 
 
-The following example shows how to set the `OverscanCount` property:
+The following example shows how to set the [OverscanCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_OverscanCount) property:
 
 {% tabs %}
 {% highlight xaml %}
@@ -153,7 +153,7 @@ PdfViewer.OverscanCount = 15;
 {% endtabs %} 
 
 **Note:**
-* Use a reasonable `OverscanCount` value. Large values can cause memory spikes and app freezes.
+* Use a reasonable [OverscanCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_OverscanCount) value. Large values can cause memory spikes and app freezes.
 * Pages with very high resolution may still render slowly due to native rendering limitations.
 
 ## See Also
