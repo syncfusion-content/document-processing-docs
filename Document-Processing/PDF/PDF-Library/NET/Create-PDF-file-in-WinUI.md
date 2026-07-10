@@ -72,147 +72,150 @@ Step 7: Add a new action method *createPdf_Click* in *MainWindow.xaml.cs* and in
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//Create a new PDF document.
-PdfDocument document = new PdfDocument();
-//Set page orientation and margin. 
-document.PageSettings.Orientation = PdfPageOrientation.Landscape;
-document.PageSettings.Margins.All = 50;
-//Add a page to the document.
-PdfPage page = document.Pages.Add();
-//Create PDF graphics for the page.
-PdfGraphics graphics = page.Graphics;
-
-//Create a text element with the text and font.
-PdfTextElement element = new PdfTextElement("Northwind Traders\n67, rue des Cinquante Otages,\nElgin,\nUnites States.");
-element.Font = new PdfStandardFont(PdfFontFamily.TimesRoman, 12);
-element.Brush = new PdfSolidBrush(new PdfColor(89, 89, 93));
-PdfLayoutResult result = element.Draw(page, new RectangleF(0, 0, page.Graphics.ClientSize.Width / 2, 200));
-
-//Draw the image to a PDF page with the specified size
-Stream imgStream = typeof(MainWindow).GetTypeInfo().Assembly.GetManifestResourceStream("CreatePdfDemoSample.Assets.logo.jpg");
-PdfImage img = new PdfBitmap(imgStream);
-graphics.DrawImage(img, new RectangleF(graphics.ClientSize.Width - 200, result.Bounds.Y, 190, 45));
-PdfFont subHeadingFont = new PdfStandardFont(PdfFontFamily.TimesRoman, 14);
-graphics.DrawRectangle(new PdfSolidBrush(new PdfColor(126, 151, 173)), new RectangleF(0, result.Bounds.Bottom + 40, graphics.ClientSize.Width, 30));
-
-//Create a text element with the text and font.
-element = new PdfTextElement("INVOICE", subHeadingFont);
-element.Brush = PdfBrushes.White;
-result = element.Draw(page, new PointF(10, result.Bounds.Bottom + 48));
-string currentDate = "DATE " + DateTime.Now.ToString("MM/dd/yyyy");
-SizeF textSize = subHeadingFont.MeasureString(currentDate);
-graphics.DrawString(currentDate, subHeadingFont, element.Brush, new PointF(graphics.ClientSize.Width - textSize.Width - 10, result.Bounds.Y));
-
-//Create a text element and draw it to a PDF page.
-element = new PdfTextElement("BILL TO ", new PdfStandardFont(PdfFontFamily.TimesRoman, 10));
-element.Brush = new PdfSolidBrush(new PdfColor(126, 155, 203));
-result = element.Draw(page, new PointF(10, result.Bounds.Bottom + 25));
-graphics.DrawLine(new PdfPen(new PdfColor(126, 151, 173), 0.70f), new PointF(0, result.Bounds.Bottom + 3), new PointF(graphics.ClientSize.Width, result.Bounds.Bottom + 3));
-
-//Get products list to create invoice.
-IEnumerable<CustOrders> products = Orders.GetProducts();
-
-List<CustOrders> list = new List<CustOrders>();
-foreach (CustOrders cust in products)
+private void CreatePdf_Click(object sender, RoutedEventArgs e)
 {
-    list.Add(cust);
-}
-var reducedList = list.Select(f => new { f.ProductID, f.ProductName, f.Quantity, f.UnitPrice, f.Discount, f.Price }).ToList();
+    //Create a new PDF document.
+    PdfDocument document = new PdfDocument();
+    //Set page orientation and margin. 
+    document.PageSettings.Orientation = PdfPageOrientation.Landscape;
+    document.PageSettings.Margins.All = 50;
+    //Add a page to the document.
+    PdfPage page = document.Pages.Add();
+    //Create PDF graphics for the page.
+    PdfGraphics graphics = page.Graphics;
 
-//Get the shipping address details. 
-IEnumerable<ShipDetails> shipDetails = Orders.GetShipDetails();
-GetShipDetails(shipDetails);
+    //Create a text element with the text and font.
+    PdfTextElement element = new PdfTextElement("Northwind Traders\n67, rue des Cinquante Otages,\nElgin,\nUnites States.");
+    element.Font = new PdfStandardFont(PdfFontFamily.TimesRoman, 12);
+    element.Brush = new PdfSolidBrush(new PdfColor(89, 89, 93));
+    PdfLayoutResult result = element.Draw(page, new RectangleF(0, 0, page.Graphics.ClientSize.Width / 2, 200));
 
-//Create a text element and draw it to a PDF page.
-element = new PdfTextElement(shipName, new PdfStandardFont(PdfFontFamily.TimesRoman, 10));
-element.Brush = new PdfSolidBrush(new PdfColor(89, 89, 93));
-result = element.Draw(page, new RectangleF(10, result.Bounds.Bottom + 5, graphics.ClientSize.Width / 2, 100));
+    //Draw the image to a PDF page with the specified size
+    Stream imgStream = typeof(MainWindow).GetTypeInfo().Assembly.GetManifestResourceStream("CreatePdfDemoSample.Assets.logo.jpg");
+    PdfImage img = new PdfBitmap(imgStream);
+    graphics.DrawImage(img, new RectangleF(graphics.ClientSize.Width - 200, result.Bounds.Y, 190, 45));
+    PdfFont subHeadingFont = new PdfStandardFont(PdfFontFamily.TimesRoman, 14);
+    graphics.DrawRectangle(new PdfSolidBrush(new PdfColor(126, 151, 173)), new RectangleF(0, result.Bounds.Bottom + 40, graphics.ClientSize.Width, 30));
 
-//Create a text element and draw it to a PDF page.
-element = new PdfTextElement(string.Format("{0}, {1}, {2}", address, shipCity, shipCountry), new PdfStandardFont(PdfFontFamily.TimesRoman, 10));
-element.Brush = new PdfSolidBrush(new PdfColor(89, 89, 93));
-result = element.Draw(page, new RectangleF(10, result.Bounds.Bottom + 3, graphics.ClientSize.Width / 2, 100));
+    //Create a text element with the text and font.
+    element = new PdfTextElement("INVOICE", subHeadingFont);
+    element.Brush = PdfBrushes.White;
+    result = element.Draw(page, new PointF(10, result.Bounds.Bottom + 48));
+    string currentDate = "DATE " + DateTime.Now.ToString("MM/dd/yyyy");
+    SizeF textSize = subHeadingFont.MeasureString(currentDate);
+    graphics.DrawString(currentDate, subHeadingFont, element.Brush, new PointF(graphics.ClientSize.Width - textSize.Width - 10, result.Bounds.Y));
 
-//Create a PDF grid with the product details.
-PdfGrid grid = new PdfGrid();
-grid.DataSource = reducedList;
+    //Create a text element and draw it to a PDF page.
+    element = new PdfTextElement("BILL TO ", new PdfStandardFont(PdfFontFamily.TimesRoman, 10));
+    element.Brush = new PdfSolidBrush(new PdfColor(126, 155, 203));
+    result = element.Draw(page, new PointF(10, result.Bounds.Bottom + 25));
+    graphics.DrawLine(new PdfPen(new PdfColor(126, 151, 173), 0.70f), new PointF(0, result.Bounds.Bottom + 3), new PointF(graphics.ClientSize.Width, result.Bounds.Bottom + 3));
 
-//Initialize PdfGridCellStyle and set the border color.
-PdfGridCellStyle cellStyle = new PdfGridCellStyle();
-cellStyle.Borders.All = PdfPens.White;
-cellStyle.Borders.Bottom = new PdfPen(new PdfColor(217, 217, 217), 0.70f);
-cellStyle.Font = new PdfStandardFont(PdfFontFamily.TimesRoman, 12f);
-cellStyle.TextBrush = new PdfSolidBrush(new PdfColor(131, 130, 136));
+    //Get products list to create invoice.
+    IEnumerable<CustOrders> products = Orders.GetProducts();
 
-//Initialize PdfGridCellStyle and set the header style.
-PdfGridCellStyle headerStyle = new PdfGridCellStyle();
-headerStyle.Borders.All = new PdfPen(new PdfColor(126, 151, 173));
-headerStyle.BackgroundBrush = new PdfSolidBrush(new PdfColor(126, 151, 173));
-headerStyle.TextBrush = PdfBrushes.White;
-headerStyle.Font = new PdfStandardFont(PdfFontFamily.TimesRoman, 14f, PdfFontStyle.Regular);
-
-PdfGridRow header = grid.Headers[0];
-for (int i = 0; i < header.Cells.Count; i++)
-{
-    if (i == 0 || i == 1)
-        header.Cells[i].StringFormat = new PdfStringFormat(PdfTextAlignment.Left, PdfVerticalAlignment.Middle);
-    else
-        header.Cells[i].StringFormat = new PdfStringFormat(PdfTextAlignment.Right, PdfVerticalAlignment.Middle);
-}
-header.ApplyStyle(headerStyle);
-
-foreach (PdfGridRow row in grid.Rows)
-{
-    row.ApplyStyle(cellStyle);
-    for (int i = 0; i < row.Cells.Count; i++)
+    List<CustOrders> list = new List<CustOrders>();
+    foreach (CustOrders cust in products)
     {
-        //Create and customize the string formats
-        PdfGridCell cell = row.Cells[i];
-        if (i == 1)
-            cell.StringFormat = new PdfStringFormat(PdfTextAlignment.Left, PdfVerticalAlignment.Middle);
-        else if (i == 0)
-            cell.StringFormat = new PdfStringFormat(PdfTextAlignment.Center, PdfVerticalAlignment.Middle);
-        else
-            cell.StringFormat = new PdfStringFormat(PdfTextAlignment.Right, PdfVerticalAlignment.Middle);
+        list.Add(cust);
+    }
+    var reducedList = list.Select(f => new { f.ProductID, f.ProductName, f.Quantity, f.UnitPrice, f.Discount, f.Price }).ToList();
 
-        if (i > 2)
+    //Get the shipping address details. 
+    IEnumerable<ShipDetails> shipDetails = Orders.GetShipDetails();
+    GetShipDetails(shipDetails);
+
+    //Create a text element and draw it to a PDF page.
+    element = new PdfTextElement(shipName, new PdfStandardFont(PdfFontFamily.TimesRoman, 10));
+    element.Brush = new PdfSolidBrush(new PdfColor(89, 89, 93));
+    result = element.Draw(page, new RectangleF(10, result.Bounds.Bottom + 5, graphics.ClientSize.Width / 2, 100));
+
+    //Create a text element and draw it to a PDF page.
+    element = new PdfTextElement(string.Format("{0}, {1}, {2}", address, shipCity, shipCountry), new PdfStandardFont(PdfFontFamily.TimesRoman, 10));
+    element.Brush = new PdfSolidBrush(new PdfColor(89, 89, 93));
+    result = element.Draw(page, new RectangleF(10, result.Bounds.Bottom + 3, graphics.ClientSize.Width / 2, 100));
+
+    //Create a PDF grid with the product details.
+    PdfGrid grid = new PdfGrid();
+    grid.DataSource = reducedList;
+
+    //Initialize PdfGridCellStyle and set the border color.
+    PdfGridCellStyle cellStyle = new PdfGridCellStyle();
+    cellStyle.Borders.All = PdfPens.White;
+    cellStyle.Borders.Bottom = new PdfPen(new PdfColor(217, 217, 217), 0.70f);
+    cellStyle.Font = new PdfStandardFont(PdfFontFamily.TimesRoman, 12f);
+    cellStyle.TextBrush = new PdfSolidBrush(new PdfColor(131, 130, 136));
+
+    //Initialize PdfGridCellStyle and set the header style.
+    PdfGridCellStyle headerStyle = new PdfGridCellStyle();
+    headerStyle.Borders.All = new PdfPen(new PdfColor(126, 151, 173));
+    headerStyle.BackgroundBrush = new PdfSolidBrush(new PdfColor(126, 151, 173));
+    headerStyle.TextBrush = PdfBrushes.White;
+    headerStyle.Font = new PdfStandardFont(PdfFontFamily.TimesRoman, 14f, PdfFontStyle.Regular);
+
+    PdfGridRow header = grid.Headers[0];
+    for (int i = 0; i < header.Cells.Count; i++)
+    {
+        if (i == 0 || i == 1)
+            header.Cells[i].StringFormat = new PdfStringFormat(PdfTextAlignment.Left, PdfVerticalAlignment.Middle);
+        else
+            header.Cells[i].StringFormat = new PdfStringFormat(PdfTextAlignment.Right, PdfVerticalAlignment.Middle);
+    }
+    header.ApplyStyle(headerStyle);
+
+    foreach (PdfGridRow row in grid.Rows)
+    {
+        row.ApplyStyle(cellStyle);
+        for (int i = 0; i < row.Cells.Count; i++)
         {
-            float val = float.MinValue;
-            float.TryParse(cell.Value.ToString(), out val);
-            cell.Value = '$' + val.ToString("0.00");
+            //Create and customize the string formats
+            PdfGridCell cell = row.Cells[i];
+            if (i == 1)
+                cell.StringFormat = new PdfStringFormat(PdfTextAlignment.Left, PdfVerticalAlignment.Middle);
+            else if (i == 0)
+                cell.StringFormat = new PdfStringFormat(PdfTextAlignment.Center, PdfVerticalAlignment.Middle);
+            else
+                cell.StringFormat = new PdfStringFormat(PdfTextAlignment.Right, PdfVerticalAlignment.Middle);
+
+            if (i > 2)
+            {
+                float val = float.MinValue;
+                float.TryParse(cell.Value.ToString(), out val);
+                cell.Value = '$' + val.ToString("0.00");
+            }
         }
     }
-}
 
-grid.Columns[0].Width = 100;
-grid.Columns[1].Width = 200;
+    grid.Columns[0].Width = 100;
+    grid.Columns[1].Width = 200;
 
-//Set properties to paginate the grid.
-PdfGridLayoutFormat layoutFormat = new PdfGridLayoutFormat();
-layoutFormat.Layout = PdfLayoutType.Paginate;
+    //Set properties to paginate the grid.
+    PdfGridLayoutFormat layoutFormat = new PdfGridLayoutFormat();
+    layoutFormat.Layout = PdfLayoutType.Paginate;
 
-//Draw a grid on the page of the PDF document.
-PdfGridLayoutResult gridResult = grid.Draw(page, new RectangleF(new PointF(0, result.Bounds.Bottom + 40), new SizeF(graphics.ClientSize.Width, graphics.ClientSize.Height - 100)), layoutFormat);
-float pos = 0.0f;
-for (int i = 0; i < grid.Columns.Count - 1; i++)
-    pos += grid.Columns[i].Width;
+    //Draw a grid on the page of the PDF document.
+    PdfGridLayoutResult gridResult = grid.Draw(page, new RectangleF(new PointF(0, result.Bounds.Bottom + 40), new SizeF(graphics.ClientSize.Width, graphics.ClientSize.Height - 100)), layoutFormat);
+    float pos = 0.0f;
+    for (int i = 0; i < grid.Columns.Count - 1; i++)
+        pos += grid.Columns[i].Width;
 
-PdfFont font = new PdfStandardFont(PdfFontFamily.TimesRoman, 14f);
+    PdfFont font = new PdfStandardFont(PdfFontFamily.TimesRoman, 14f);
 
-GetTotalPrice(products);
+    GetTotalPrice(products);
 
-gridResult.Page.Graphics.DrawString("Total Due", font, new PdfSolidBrush(new PdfColor(126, 151, 173)), new RectangleF(new PointF(pos, gridResult.Bounds.Bottom + 20), new SizeF(grid.Columns[3].Width - pos, 20)), new PdfStringFormat(PdfTextAlignment.Right));
-gridResult.Page.Graphics.DrawString("Thank you for your business!", new PdfStandardFont(PdfFontFamily.TimesRoman, 12), new PdfSolidBrush(new PdfColor(89, 89, 93)), new PointF(pos - 55, gridResult.Bounds.Bottom + 60));
-pos += grid.Columns[4].Width;
-gridResult.Page.Graphics.DrawString('$' + string.Format("{0:N2}", total), font, new PdfSolidBrush(new PdfColor(131, 130, 136)), new RectangleF(new PointF(pos, gridResult.Bounds.Bottom + 20), new SizeF(grid.Columns[4].Width - pos, 20)), new PdfStringFormat(PdfTextAlignment.Right));
+    gridResult.Page.Graphics.DrawString("Total Due", font, new PdfSolidBrush(new PdfColor(126, 151, 173)), new RectangleF(new PointF(pos, gridResult.Bounds.Bottom + 20), new SizeF(grid.Columns[3].Width - pos, 20)), new PdfStringFormat(PdfTextAlignment.Right));
+    gridResult.Page.Graphics.DrawString("Thank you for your business!", new PdfStandardFont(PdfFontFamily.TimesRoman, 12), new PdfSolidBrush(new PdfColor(89, 89, 93)), new PointF(pos - 55, gridResult.Bounds.Bottom + 60));
+    pos += grid.Columns[4].Width;
+    gridResult.Page.Graphics.DrawString('$' + string.Format("{0:N2}", total), font, new PdfSolidBrush(new PdfColor(131, 130, 136)), new RectangleF(new PointF(pos, gridResult.Bounds.Bottom + 20), new SizeF(grid.Columns[4].Width - pos, 20)), new PdfStringFormat(PdfTextAlignment.Right));
 
-string filePath = Path.GetFullPath("Sample.pdf");
+    string filePath = Path.GetFullPath("Sample.pdf");
 
-//Save the PDF document to stream.
-using (FileStream outputStream = new FileStream(filePath, FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
-{
-    document.Save(outputStream);
-    document.Close();
+    //Save the PDF document to stream.
+    using (FileStream outputStream = new FileStream(filePath, FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
+    {
+        document.Save(outputStream);
+        document.Close();
+    }
 }
 
 {% endhighlight %}

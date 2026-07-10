@@ -58,22 +58,24 @@ Step 6: Add a new action method named PerformOCR in the HomeController.cs file a
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
-
-//Initialize the OCR processor.
-using (OCRProcessor processor = new OCRProcessor())
+public ActionResult PerformOCR()
 {
-   FileStream fileStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-   //Load a PDF document.
-   PdfLoadedDocument lDoc = new PdfLoadedDocument(fileStream);
-   //Set OCR language to process.
-   processor.Settings.Language = Languages.English;
-   processor.Settings.TesseractVersion = TesseractVersion.Version3_05;
-   //Process OCR by providing the PDF document.
-   processor.PerformOCR(lDoc);
-   //Open the document in browser after saving it.
-   lDoc.Save("Output.pdf", HttpContext.ApplicationInstance.Response, Syncfusion.Pdf.HttpReadType.Save);
-   //Close the document.
-   lDoc.Close(true);
+   //Initialize the OCR processor.
+   using (OCRProcessor processor = new OCRProcessor())
+   {
+      FileStream fileStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
+      //Load a PDF document.
+      PdfLoadedDocument lDoc = new PdfLoadedDocument(fileStream);
+      //Set OCR language to process.
+      processor.Settings.Language = Languages.English;
+      processor.Settings.TesseractVersion = TesseractVersion.Version3_05;
+      //Process OCR by providing the PDF document.
+      processor.PerformOCR(lDoc);
+      //Open the document in browser after saving it.
+      lDoc.Save("Output.pdf", HttpContext.ApplicationInstance.Response, Syncfusion.Pdf.HttpReadType.Save);
+      //Close the document.
+      lDoc.Close(true);
+   }
    return View();
 }
 
