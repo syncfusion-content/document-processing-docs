@@ -265,7 +265,7 @@ xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Ma
 {% highlight xml tabtitle="PdfViewerExample.csproj" %}
 
 <ItemGroup>
-	<EmbeddedResource Include="Assets/PDF_Succinctly.pdf" />
+	<EmbeddedResource Include="Assets\PDF_Succinctly.pdf" />
 </ItemGroup>
 
 {% endhighlight %} 
