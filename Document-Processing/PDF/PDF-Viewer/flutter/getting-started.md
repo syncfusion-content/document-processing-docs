@@ -18,7 +18,7 @@ To get started quickly, you can also check out our video tutorial below.
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
 
 ## Install the Flutter PDF Viewer package
-Install the [Syncfusion<sup>&reg;</sup> Flutter PDF Viewer](https://pub.dev/packages/syncfusion_flutter_pdfviewer/versions) package to your project by running the following command in your project’s terminal:
+Install the [Syncfusion<sup>&reg;</sup> Flutter PDF Viewer](https://pub.dev/packages/syncfusion_flutter_pdfviewer/versions) package to your project by running the following command in your project's terminal:
 
 {% tabs %}
 {% highlight tabtitle="powershell" %}
@@ -29,14 +29,14 @@ flutter pub add syncfusion_flutter_pdfviewer
 {% endtabs %}
 
 ## Specify Asset Path
-Create an assets folder in the project root, add a sample PDF file (for example, flutter-succinctly.pdf) to it, and specify the asset path in `pubspec.yaml` file under the flutter section.
+Create an assets folder in the project root, add a sample PDF file (for example, flutter-succinctly.pdf) to it, and specify the asset path in the `pubspec.yaml` file under the flutter section.
 
 {% tabs %}
 {% highlight yaml tabtitle="pubspec.yaml" %}
 
 flutter:
   assets:
-    - assets/
+    - assets/
 
 {% endhighlight %}
 {% endtabs %}
@@ -72,7 +72,7 @@ For PdfJs library versions below 4.0:
 
 N> A version above **2.11.338** is recommended for using annotation support. Unsupported annotations are preserved rather than flattened during rendering.
 
-## Import Package
+## Import the Package
 
 In the `main.dart` file, import the required package.
 
@@ -100,7 +100,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-N> You can refer to our [Flutter PDF Viewer](https://www.syncfusion.com/flutter-widgets/flutter-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter PDF Viewer example](https://flutter.syncfusion.com/#/pdf-viewer/getting-started), which shows you how to render and configure the PDF Viewer.
+N> You can refer to our [Flutter PDF Viewer](https://www.syncfusion.com/flutter-widgets/flutter-pdf-viewer) feature tour page for its groundbreaking features. You can also explore our [Flutter PDF Viewer example](https://flutter.syncfusion.com/#/pdf-viewer/getting-started), which shows you how to render and configure the PDF Viewer.
 
 ## See Also
 - [Open Document](./open-a-document)
