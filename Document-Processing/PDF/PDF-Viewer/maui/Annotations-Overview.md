@@ -64,6 +64,20 @@ Use these annotations to draw freehand strokes or add rich content such as text 
 
 For more information, see [Ink Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/ink), [Free Text Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/free-text), [Stamps](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/stamps), and [Sticky Notes](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/sticky-notes).
 
+## In This Section
+
+### Annotation Types
+
+| Topic | Description |
+|---|---|
+| [Text Markup Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/text-markups) | Highlight, underline, strikeout, and squiggly annotations on selected text. |
+| [Shape Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/shapes) | Draw arrows, circles, lines, polygons, polylines, and rectangles over pages. |
+| [Ink Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/ink) | Draw freehand strokes over any page area. |
+| [Ink Eraser](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/ink-eraser) | Erase portions of existing ink annotations. |
+| [Free Text Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/free-text) | Place a text box directly on the page. |
+| [Stamps](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/stamps) | Apply predefined or custom image stamps on a page. |
+| [Sticky Notes](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/sticky-notes) | Attach pop-up notes to specific locations on a page. |
+
 ## Common annotation operations
 
 The following topics describe common operations that apply across annotation types.

@@ -12,23 +12,6 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 A PDF document may optionally have a document outline (also called bookmarks) which allows the user to navigate from one part of the document to another. The PDF viewer control displays the document outline in a tree-structured hierarchy of outline elements.
 
-To work with the document outline in code, ensure the following namespaces are imported in your C# file:
-
-{% tabs %}
-{% highlight c# %}
-using Syncfusion.Maui.PdfViewer;
-using System.Linq;
-{% endhighlight %}
-{% endtabs %}
-
-To use the `SfPdfViewer` control in XAML, add the following namespace declaration to your XAML page:
-
-{% tabs %}
-{% highlight xml %}
-xmlns:pdfViewer="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Maui.PdfViewer"
-{% endhighlight %}
-{% endtabs %}
-
 ## Showing / hiding the outline view
 
 The PDF Viewer's built-in outline view, which displays the document outline in a tree-like structure, can be shown or hidden using the [IsOutlineViewVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_IsOutlineViewVisible) property. The default value of this property is `false`.
