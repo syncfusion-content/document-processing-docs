@@ -19,7 +19,7 @@ The following assemblies need to be referenced in your application based on the 
 </tr>
 <tr>
 <td>
-Windows Forms, WPF, ASP.NET MVC4, and ASP.NET MVC5
+Windows Forms, WPF and ASP.NET MVC5
 </td>
 <td>
 Syncfusion.PdfToImageConverter.Base

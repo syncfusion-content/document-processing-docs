@@ -52,7 +52,6 @@ ASP.NET Core Windows
 ASP.NET MVC Windows
 </td>
 <td>
-{{'[Syncfusion.PdfToImageConverter.AspNet.Mvc4](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.AspNet.Mvc4/)'|markdownify }}<br/>
 {{'[Syncfusion.PdfToImageConverter.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.AspNet.Mvc5/)'|markdownify }}
 </td>
 </tr>
