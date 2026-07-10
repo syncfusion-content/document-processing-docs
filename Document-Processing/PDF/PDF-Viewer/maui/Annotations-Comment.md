@@ -9,7 +9,6 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 ---
 
 # Comments in .NET MAUI PDF Viewer (SfPdfViewer)
-
 The PDF Viewer control provides options to add, edit, and delete comments for the following annotations in PDF documents:
 1. Ink annotation
 2. Shape annotation
@@ -58,7 +57,6 @@ PdfViewer.IsCommentsPanelVisible = true;
 
 
 ## Comment panel
-
 Annotation comments can be added to the PDF using the comment panel. The comment panel can be opened using the built-in toolbar. In the toolbar, you can find the Comments button in the primary toolbar for desktop and in the top toolbar for mobile. The comment panel displays all annotations in the document along with their comments and replies, allowing you to add comments to any annotation and reply to existing comments or annotations.
 The following image represents how to add the comments using the toolbar on the desktop.
 
@@ -69,7 +67,6 @@ The following image represents how to add comments using the toolbar on mobile.
 ![Annotations comments Built-in toolbar](Images/Annotations/mobile-comment.gif)
 
 ## Adding comments or replies
-
 Follow these steps to add comments or replies:
 1. Select the annotation in the PDF document and open the comment panel.
 2. The corresponding comment thread is highlighted in the comment panel.
@@ -78,7 +75,6 @@ Follow these steps to add comments or replies:
 5. Multiple replies can be added to a comment.
 
 ## Add comments or replies programmatically
-
 You can add comments or replies to existing annotations programmatically by accessing the specific annotation from the Annotations collection. This allows you to enhance collaboration and provide feedback directly within the PDF.
 The following example explains how to add comments or replies to a specific annotation in the PDF document.
 
@@ -99,7 +95,6 @@ annotation.Comments.Add(comment);
 {% endtabs %}
 
 ## Editing comments and replies
-
 Comments and replies can be edited through the context menu available under More Options in the Comment Panel. Follow the steps below:
 1. Select the annotation comment in the comment panel.
 2. Click More Options in the comment or reply container.
@@ -107,7 +102,6 @@ Comments and replies can be edited through the context menu available under More
 4. An editable text box appears. Change the content of the comment or reply.
 
 ## Deleting comments and replies
-
 Comments and replies can be deleted through the context menu available under More Options in the Comment Panel. Follow the steps below:
 1. Select the annotation comment in the comment panel.
 2. Click More Options in the comment or reply container.
