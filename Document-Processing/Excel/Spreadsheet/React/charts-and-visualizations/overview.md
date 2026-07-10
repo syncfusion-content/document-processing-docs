@@ -49,6 +49,6 @@ The following features have some limitations in the Chart:
 * Corner resizing option in chart element.
 
 ## See Also
-* [Images](../images-and-illustrations/images-and-illustrations)
+* [Images](../images-and-illustrations/overview)
 * [Formatting](./formatting)
-* [Rows and columns](../rows-and-columns/rows-and-columns)
+* [Rows and columns](../rows-and-columns/overview)

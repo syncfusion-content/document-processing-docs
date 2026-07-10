@@ -95,6 +95,6 @@ The following features have some limitations in Data Validation:
 ## See Also
 
 * [Formatting](./formatting)
-* [Rows and columns](./rows-and-columns/rows-and-columns)
+* [Rows and columns](./rows-and-columns/overview)
 * [Hyperlink](./link)
 * [Sorting](./sort)

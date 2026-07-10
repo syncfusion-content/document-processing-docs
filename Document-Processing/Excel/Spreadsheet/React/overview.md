@@ -42,8 +42,8 @@ The [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk
 * [Autofill](cell-ranges-and-operations/autofill): Provides the option to fill or copy a series or pattern of values and formats into adjacent cells in any direction.
 * [Clear](cell-ranges-and-operations/clear): Provides the option to clear the content, formats, and hyperlinks applied to a cell or range of cells in a Spreadsheet.
 * [Aggregates](formulas-and-calculations): Provides the option to check the sum, average, count, and more for the selected cells or range in the sheet.
-* [Picture](images-and-illustrations/images-and-illustrations): Allows you to view, insert, and modify a picture in a Spreadsheet with customizing options.
-* [Chart](charts-and-visualizations/charts-and-visualizations): Transforms your Spreadsheet data to an intuitive overview for better understanding and to make smart business decisions.
+* [Picture](images-and-illustrations/overview): Allows you to view, insert, and modify a picture in a Spreadsheet with customizing options.
+* [Chart](charts-and-visualizations/overview): Transforms your Spreadsheet data to an intuitive overview for better understanding and to make smart business decisions.
 * [Freeze panes](rows-and-columns/freeze-pane): Allows you to keep the specified rows and columns always visible at the top and left side of the sheet while scrolling through the sheet.
 * [Password protection](protect-sheet#protect-workbook): Allows you to protect the workbook with a password.
 * [Multi-line editing](cell-ranges-and-operations/editing): Allows you to insert a line break between paragraphs of the text within a cell in a Spreadsheet.
