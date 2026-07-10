@@ -9,7 +9,7 @@ documentation: ug
 
 # Check the status of annotations or comments in Blazor SfPdfViewer
 
-The Blazor SfPdfViewer component supports retrieving the review status of annotations and comments through the [Review](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.Review.html) property of the [PdfAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfAnnotation.html) class. This enables identifying the `State` (for example, `Accepted`, `Rejected`, `None`, `Completed`, `Cancelled`, `Marked`) and the `StateModel` (for example, `Review`, `Comment`) associated with each annotation.
+The Blazor SfPdfViewer component supports retrieving the review status of annotations and comments through the [Review](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.Review.html) property of the [PdfAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfAnnotation.html) class. This enables identifying the `State` and the `StateModel` associated with each annotation.
 
 The `PdfAnnotation` class represents a single annotation in the viewer. Its `Review` property exposes the review-tracking metadata. The [GetAnnotationsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_GetAnnotationsAsync) method returns a `List<PdfAnnotation>` containing all annotations (including text markup, free text, ink, stamp, and shape annotations) that exist on the currently loaded PDF document.
 

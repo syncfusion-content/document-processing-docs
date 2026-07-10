@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print the SfPdfViewer inside the Dialog component | Syncfusion
-description: Learn how to print the SfPdfViewer inside a Syncfusion Dialog in the Blazor SfPdfViewer component.
+description: Learn how to print the SfPdfViewer inside a Syncfusion Dialog in the SfPdfViewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
