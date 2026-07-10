@@ -46,7 +46,7 @@ private void PdfViewer_FormFieldValueChanged(object sender, FormFieldValueChange
 {% endhighlight %}
 {% endtabs %}
 
-**Note:** The `OldValue` and `NewValue` types vary by field type. For a checkbox, cast them to `bool` to read the checked state. For a combo box or radio button, cast them to `string`.
+N> The `OldValue` and `NewValue` types vary by field type. For a checkbox, cast them to `bool` to read the checked state. For a combo box or radio button, cast them to `string`.
 
 ## Detect focus changes
 
