@@ -12,18 +12,6 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to import form data into a PDF document and export filled form data from it. This is useful for pre-populating forms, backing up responses, or transferring data between systems.
 
-To work with form data import and export in code, ensure the following namespaces are imported in your C# file:
-
-{% tabs %}
-{% highlight c# %}
-using Syncfusion.Maui.PdfViewer;
-using Syncfusion.Pdf.Parsing;
-using System.IO;
-{% endhighlight %}
-{% endtabs %}
-
-The `DataFormat` enumeration used for import and export is part of the `Syncfusion.Pdf.NET` package. Ensure this package is installed alongside `Syncfusion.Maui.PdfViewer`.
-
 ## Supported data formats
 
 The following formats are supported for both import and export:
