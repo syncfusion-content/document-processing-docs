@@ -110,7 +110,7 @@ Hyperlinks can be added programmatically using the [AddHyperlinkAsync()](https:/
 The [AddHyperlinkAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AddHyperlinkAsync_System_String_System_String_System_String_) method is flexible and supports various scenarios beyond basic usage. The following are some special cases and behaviors to be aware of:
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 
 // Adds a web URL hyperlink to a single cell.
 await SpreadsheetInstance.AddHyperlinkAsync("A1", "https://www.syncfusion.com", "Syncfusion");
@@ -238,7 +238,7 @@ Hyperlinks can be removed programmatically by using the [RemoveHyperlinkAsync()]
 The [RemoveHyperlinkAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_RemoveHyperlinkAsync_System_String_) method is flexible and supports various scenarios beyond basic usage. The following are some special cases and behaviors to be aware of:
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 
 // Remove hyperlink from a single cell.
 await SpreadsheetInstance.RemoveHyperlinkAsync("A1");

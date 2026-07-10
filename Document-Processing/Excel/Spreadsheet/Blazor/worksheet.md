@@ -41,7 +41,7 @@ This method inserts one or more sheets at a specified position in the workbook. 
 | count | int (optional) | The number of sheets to add. Defaults to 1 if not specified. |
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet
@@ -440,7 +440,7 @@ This method creates a copy of the sheet at the specified index. If no index is p
 | index | int (optional) | The zero-based index of the sheet to duplicate. If no index is provided, the active sheet is duplicated. If the index is invalid (e.g., negative or beyond sheet count), no action occurs. |
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet
