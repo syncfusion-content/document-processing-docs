@@ -11,13 +11,13 @@ documentation: ug
 
 The WPF PDF Viewer allows the user to highlight text in PDF files and provides options to edit or remove the existing highlights. The highlight inclusion mode can be enabled via the toolbar UI or the API. Once the highlight inclusion mode is activated, you can highlight the required text by selecting it. To select the text, hold down the left mouse button and drag the mouse pointer over the text.
 
-To enable the mode from UI, click the below icon in the default toolbar of [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html).
+To enable the mode from the UI, click the below icon in the default toolbar of [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html).
 
 ![Highlight icon in the WPF PDF Viewer toolbar](Annotation-images\highlight-icon.png)
 
 N> From version 19.4.0.48, we have updated our default text extraction engine to PDFium for extracting text information from PDF documents. Based on the text information, we create text markup annotations in the PDF documents. Please refer to the [link](https://help.syncfusion.com/wpf/pdf-viewer/text-extraction-engines) for more details.
 
-If you are using [PdfDocumentView](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfDocumentView.html) control, or your own toolbar, or if you want enable the mode programmatically, change the [AnnotationMode](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_AnnotationMode) property of PDF Viewer to **Highlight**, as shown in the below code example.
+If you are using [PdfDocumentView](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfDocumentView.html) control, or your own toolbar, or if you want to enable the mode programmatically, change the [AnnotationMode](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_AnnotationMode) property of PDF Viewer to **Highlight**, as shown in the below code example.
 
 {% tabs %}
 {% highlight C# %}
@@ -114,7 +114,7 @@ End Sub
 
 ## Working with included/existing highlight annotations
 
-Highlight annotation supports adding notes along with it, also it allows editing its color and opacity. To use these options, select the included/existing highlight annotation and click right using mouse, over the selected annotation, a pop up context menu will appear with the following options,
+Highlight annotation supports adding notes along with it, also it allows editing its color and opacity. To use these options, select the included/existing highlight annotation and right-click using the mouse, over the selected annotation, a pop up context menu will appear with the following options,
 
 *	Open Pop-up note
 *	Properties
@@ -122,13 +122,13 @@ Highlight annotation supports adding notes along with it, also it allows editing
 
 ### Open Pop-up notes
 
-We can add notes to the highlight annotation choosing Open Pop-up note option from the context menu. The following image illustrates the notes added to the selected highlight annotation. The added notes will be saved along with the PDF document and if there is any existing notes, it will be displayed in here.
+We can add notes to the highlight annotation choosing Open Pop-up note option from the context menu. The following image illustrates the notes added to the selected highlight annotation. The added notes will be saved along with the PDF document and if there are any existing notes, they will be displayed here.
 
  ![highlight annotation](Annotation-images\Highlight-Annotation-2.png)
 
 ### Properties
 
-Selecting properties from the context menu will display the Highlight Properties window, which would consist of two tabs
+Selecting Properties from the context menu will display the Highlight Properties window, which would consist of two tabs
 
 *	Appearance
 *	General 
@@ -139,7 +139,7 @@ The color and opacity of the highlight annotation can be edited using Appearance
 
 ##### Editing color of the annotation
 
-The color of the selected highlight annotation will be displayed in the color row in the appearance tab. Selecting the Color would displays the color palette control, choosing a color from the color palette and clicking OK will apply the color to the highlight annotation.
+The color of the selected highlight annotation will be displayed in the color row in the appearance tab. Selecting the Color will display the color palette, choosing a color from the color palette and clicking OK will apply the color to the highlight annotation.
 
 The following image illustrates how to change the color of the highlight annotation included.
 
@@ -151,7 +151,7 @@ The following image illustrates the change in the color of the included highligh
 
 ##### Editing opacity of the annotation
 
-The slider displayed in the Appearance tab will allow us to modify the opacity of the selected highlight annotation. You can also modify the opacity of the selected highlight annotation by giving numeric value in the opacity text box.
+The slider displayed in the Appearance tab allows you to modify the opacity of the selected highlight annotation. You can also modify the opacity by entering a numeric value in the opacity text box.
 
 The following image illustrates how to change the opacity of the included highlight annotation.
 
@@ -171,7 +171,7 @@ The following image illustrates the change in Author and Subject of the included
 
 ### Deleting an annotation
 
-Selecting delete option from the context menu which will be displayed by right click on the selected annotation would delete the respective annotation from the PDF document.
+Selecting the Delete option from the context menu displayed by right-clicking on the selected annotation would delete the respective annotation from the PDF document.
 
 The following image illustrates how to delete the included annotation from the PDF document.
 
@@ -186,14 +186,8 @@ The following code shows how to wire and handle the event, and also how to chang
 {% tabs %}
 {% highlight C# %}
 
-//wire the text markup changed event.
+//Wire the text markup changed event.
 pdfViewer.TextMarkupAnnotationChanged += PdfViewer_TextMarkupAnnotationChanged;
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight C# %}
 
 private void PdfViewer_TextMarkupAnnotationChanged(object sender, TextMarkupAnnotationChangedEventArgs e)
 {

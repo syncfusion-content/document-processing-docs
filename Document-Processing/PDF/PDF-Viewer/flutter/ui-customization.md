@@ -11,9 +11,21 @@ documentation: ug
 
 This section walks you through the UI customization options supported in the [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) widget.
 
+## Prerequisites
+
+To use the `SfPdfViewer` widget, add the [`syncfusion_flutter_pdfviewer`](https://pub.dev/packages/syncfusion_flutter_pdfviewer) package to your `pubspec.yaml` file and import it in your code:
+
+{% tabs %}
+{% highlight dart %}
+
+import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Customize the Space Displayed Between the PDF Pages
 
-By default, the `SfPdfViewer` displays spacing between the PDF pages with a value of **4 pixels**. You can customize the space being displayed using the [pageSpacing](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/pageSpacing.html) property. The following code example explains the same.
+By default, the `SfPdfViewer` displays spacing between the PDF pages with a value of **4 pixels**. You can customize the space displayed using the [pageSpacing](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/pageSpacing.html) property. The following code example explains the same.
 
 {% tabs %}
 {% highlight dart hl_lines="6" %}

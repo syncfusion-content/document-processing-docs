@@ -5,7 +5,7 @@ platform: document-processing
 control: PDF to image
 documentation: UG
 ---
-# Load PDF file in C#
+# Load a PDF File Using C#
 
 User can load a PDF as a stream using PdfToImageConverter, and then we can convert the PDF pages into images.
 
@@ -44,7 +44,7 @@ imageConverter.Load(inputPDFStream);
 
 ## Loading an Encrypted PDF document using constructor
 
-You can load an existing encrypted document to PdfToImageConverter. When creating an instance of the PdfToImageConverter class, pass the PDF document as a stream and the password required to decrypt the provided PDF file. The following example shows how to load an existing enrypted document from a stream using the constructor.
+You can load an existing encrypted document to PdfToImageConverter. When creating an instance of the PdfToImageConverter class, pass the PDF document as a stream and the password required to decrypt the provided PDF file. The following example shows how to load an existing encrypted document from a stream using the constructor.
 
 {% tabs %}
 
@@ -60,13 +60,13 @@ PdfToImageConverter imageConverter = new PdfToImageConverter(inputPDFStream, "pa
 
 ## Loading an Encrypted PDF document using load method
 
-You can load an existing encrypted document into PdfToImageConverter.When using the 'load' method of the PdfToImageConverter class, pass the PDF document as a stream and the password required to decrypt the provided PDF file. The following example shows how to load an existing enrypted document from a stream using the 'load' method.
+You can load an existing encrypted document into PdfToImageConverter. When using the 'load' method of the PdfToImageConverter class, pass the PDF document as a stream and the password required to decrypt the provided PDF file. The following example shows how to load an existing encrypted document from a stream using the 'load' method.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
 
-//Load an encrypted PDF document from stream through constructor of `PdfToImageConverter` class.
+//Load an encrypted PDF document from stream through load method of `PdfToImageConverter` class.
 PdfToImageConverter imageConverter = new PdfToImageConverter();
 FileStream inputPDFStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 imageConverter.Load(inputPDFStream, "password");

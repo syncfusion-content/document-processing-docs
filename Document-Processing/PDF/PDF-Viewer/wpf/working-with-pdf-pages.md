@@ -17,7 +17,7 @@ N> This border customization applies only when viewing the PDF file in the PDF v
 
 ### Color
 
-The [Color](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PageBorder.html#Syncfusion_Windows_PdfViewer_PageBorder_Color) property of the [PageBorder](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_PageBorder) allows you to customize the border color of the pages that are being displayed in the PDF Viewer. The default border color of the pages is `Black`. Refer to the following code sample to set a different color to the border of the pages.
+The [Color](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PageBorder.html#Syncfusion_Windows_PdfViewer_PageBorder_Color) property of the [PageBorder](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PageBorder.html) allows you to customize the border color of the pages that are being displayed in the PDF Viewer. The default border color of the pages is `Black`. Refer to the following code sample to set a different color to the border of the pages.
 
 {% tabs %}
 {% highlight c# %}
@@ -27,7 +27,7 @@ using Syncfusion.Windows.PdfViewer;
 namespace PdfViewerDemo
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
@@ -39,7 +39,7 @@ namespace PdfViewerDemo
             PageBorder pageBorder = new PageBorder();
             //Set the `Color` property.
             pageBorder.Color = System.Drawing.Color.Red;
-            //Assign the 'PageBorder' propery of PDF Viewer.
+            //Assign the 'PageBorder' property of PDF Viewer.
             pdfViewer.PageBorder = pageBorder;
             //Load the PDF file.
             pdfViewer.Load(@"Sample.pdf");
@@ -62,7 +62,7 @@ using Syncfusion.Windows.PdfViewer;
 namespace PdfViewerDemo
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
@@ -74,7 +74,7 @@ namespace PdfViewerDemo
             PageBorder pageBorder = new PageBorder();
             //Set the `IsVisible` property as false to hide the page border.
             pageBorder.IsVisible = false;
-            //Assign the 'PageBorder' propery of PDF Viewer.
+            //Assign the 'PageBorder' property of PDF Viewer.
             pdfViewer.PageBorder = pageBorder;
             //Load the PDF file.
             pdfViewer.Load(@"Sample.pdf");
@@ -99,7 +99,7 @@ The [PageClicked](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewe
 using System.Windows;
 using Syncfusion.Windows.PdfViewer;
 
-namespace WPF_PDFViewer
+namespace PdfViewerDemo
 {
     public partial class MainWindow : Window
     {
@@ -130,14 +130,14 @@ namespace WPF_PDFViewer
 {% endtabs %}
 
 ### Page Mouse Move
-The [PageMouseMove](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_PageMouseMove) event occurs when a user move the mouse on a PDF page. It provides information about the page index and the position on the page where the mouse has moved. The following code shows how to wire the event in [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html).
+The [PageMouseMove](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_PageMouseMove) event occurs when a user moves the mouse on a PDF page. It provides information about the page index and the position on the page where the mouse has moved. The following code shows how to wire the event in [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html).
 
 {% tabs %}
 {% highlight c# %}
 using System.Windows;
 using Syncfusion.Windows.PdfViewer;
 
-namespace WPF_PDFViewer
+namespace PdfViewerDemo
 {
     public partial class MainWindow : Window
     {
@@ -155,9 +155,9 @@ namespace WPF_PDFViewer
         /// </summary>
         private void PdfViewer_PageMouseMove(object sender, PageMouseMoveEventArgs args)
         {
-            //Get the page index on the page where you clicked
+            //Get the page index on the page where the mouse has moved
             int pageIndex = args.PageIndex;
-            //Get the position on the page where you clicked
+            //Get the position on the page where the mouse has moved
             Point position = args.Position;
 
             //Insert Your code Here.

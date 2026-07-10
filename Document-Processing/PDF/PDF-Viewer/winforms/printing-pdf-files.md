@@ -9,7 +9,7 @@ documentation: ug
 
 # Printing PDF Files in Windows Forms PDF Viewer (PdfViewerControl)
 
-[WinForms Pdf Viewer](https://www.syncfusion.com/pdf-viewer-sdk/winforms-pdf-viewer) Control allows printing loaded PDFs using the Print button in the toolbar. The following Print dialog will be opened upon clicking the Print button.
+[WinForms Pdf Viewer](https://www.syncfusion.com/pdf-viewer-sdk/winforms-pdf-viewer) Control allows printing loaded PDFs using the Print button in the toolbar. The following Print dialog opens when you click the Print button.
 
 ![Windows Forms PDF Viewer Printing PDF Files](Working-with-PDF-Viewer_images/Working-with-PDF-Viewer_img1.png)
 
@@ -22,18 +22,18 @@ The [Print](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms
 
 pdfviewer1.Print(false);
 
-{%endhighlight%}
+{% endhighlight %}
 
 {% highlight vb %}
 
 pdfviewer1.Print(False)
 
-{%endhighlight%}
+{% endhighlight %}
 {% endtabs %}
 
 ## Customizing print size
 
-PdfViewerControl printer settings allows scaling PDF pages to shrink or enlarge while printing.
+PdfViewerControl printer settings allow scaling PDF pages to shrink or enlarge while printing.
 
 ### Actual Size
 
@@ -145,7 +145,7 @@ pdfViewerControl1.PrinterSettings.PageOrientation = PdfViewerPrintOrientation.Po
 
 ### Landscape
 
-Landscape option prints the PDF document in landscape orientation and it overrides the orientation settings provided in print dialog. The following code example illustrates the same.
+Landscape option prints the PDF document in landscape orientation and it overrides the orientation settings provided in the print dialog. The following code example illustrates the same.
 
 {% tabs %}
 {% highlight c# %}
@@ -199,7 +199,7 @@ namespace PrintEventsDemo
         {
             //Insert your code here
         }
-        # endregion
+        #endregion
     }
 }
 
@@ -240,10 +240,10 @@ namespace PrintEventsDemo
             int currentPage = e.PageIndex;
             //Find the total number of pages present in the file.
             int pageCount = e.PageCount;
-			
+            
             //Insert your code here
         }
-        # endregion
+        #endregion
     }
 }
 
@@ -252,7 +252,7 @@ namespace PrintEventsDemo
 
 ### After Print
 
-The [EndPrint](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_Forms_PdfViewer_PdfViewerControl_EndPrint)  event occurs when the last page of the document has printed. It also occurs if the printing process is canceled or an exception occurs during the printing process. The following code shows how to wire the event in [PdfViewerControl](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html).
+The [EndPrint](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_Forms_PdfViewer_PdfViewerControl_EndPrint) event occurs when the last page of the document has printed. It also occurs if the printing process is canceled or an exception occurs during the printing process. The following code shows how to wire the event in [PdfViewerControl](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html).
 
 {% tabs %}
 {% highlight c# %}
@@ -282,7 +282,7 @@ namespace PrintEventsDemo
         {
             //Insert your code here
         }
-        # endregion
+        #endregion
     }
 }
 
@@ -295,13 +295,13 @@ PDF Viewer allows you to hide the following print status dialog when printing th
 
 ![Windows Forms PDF Viewer Hide Print Status Dialog](Working-with-PDF-Viewer_images/Working-with-PDF-Viewer_img4.png)
 
-It will be helpful if no UI interactions are required when printing. The following code shows how to hide the print status dialog using the [ShowPrintStatusDialog](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.PdfViewer.PdfViewerPrinterSettings.html#Syncfusion_Windows_PdfViewer_PdfViewerPrinterSettings_ShowPrintStatusDialog) property.
+This is useful when no UI interactions are required during printing. The following code shows how to hide the print status dialog using the [ShowPrintStatusDialog](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.PdfViewer.PdfViewerPrinterSettings.html#Syncfusion_Windows_PdfViewer_PdfViewerPrinterSettings_ShowPrintStatusDialog) property.
 
 {% tabs %}
 {% highlight c# %}
 
 //Set ShowPrintStatusDialog property as false.
-pdfViewerControl1.PrinterSettings.ShowPrintStatusDialog = False;
+pdfViewerControl1.PrinterSettings.ShowPrintStatusDialog = false;
 
 {% endhighlight %}
 

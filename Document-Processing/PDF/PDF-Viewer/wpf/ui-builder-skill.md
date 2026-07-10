@@ -32,8 +32,8 @@ Before installing WPF UI Builder Skill with PDF Viewer, ensure the following:
 
 ### **AI-Driven UI Generation**
 - Transforms prompts into fully developed WPF components rather than just partial code snippets.
-- Automatically selects appropriate Syncfusion® components and features
-- Produces structured, maintainable code
+- Automatically selects appropriate Syncfusion® components and features.
+- Produces structured, maintainable code.
 
 ### **Control Usage & API Accuracy**
 - Uses correct Syncfusion® control APIs
