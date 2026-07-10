@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with React Standalone PDF Viewer Component | Syncfusion
+title: React Standalone PDF Viewer Getting Started | Syncfusion
 description: Learn all about Getting Started with the Standalone React PDF Viewer Component of Syncfusion Essential JS 2 and more details.
 control: PDF Viewer
 platform: document-processing
@@ -93,7 +93,7 @@ export default function App() {
         // Specifies the URL (for example, a file from the public folder) or a Base64-encoded PDF.
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         // Specifies the path to the PDFium resource files required for the PDF Viewer to function.
-        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib">
+        resourceUrl="https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib">
 
          <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
                              BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
@@ -117,7 +117,7 @@ export default function App() {
       // Specifies the URL (for example, a file from the public folder) or a Base64-encoded PDF.
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       // Specifies the path to the PDFium resource files required for the PDF Viewer to function.
-      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib">
+      resourceUrl="https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib">
       <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
                           BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
                           FormFields, FormDesigner, PageOrganizer ]}/>

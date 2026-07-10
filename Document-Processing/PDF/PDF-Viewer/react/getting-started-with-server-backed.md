@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with React Server-Backed PDF Viewer Component | Syncfusion
+title: React Server-Backed PDF Viewer Getting Started | Syncfusion
 description: Learn about Getting Started with the React Server-Backed PDF Viewer Component of Syncfusion Essential JS 2 and more details.
 control: PDF Viewer
 platform: document-processing
@@ -77,7 +77,7 @@ Add the **React PDF Viewer** component to your `src/App.jsx` or `src/App.tsx` fi
 The key props and services used in the following samples are:
 
 * `documentPath`: URL or Base64 string of the PDF to load.
-* `serviceUrl`: Backend web service URL that processes and streams PDF data to the viewer. See [How to Create and Run a Custom PDF Viewer Web Service](./how-to/create-and-run-custom-pdf-viewer-web-service).
+* `serviceUrl`: Back end web service URL that processes and streams PDF data to the viewer. See [How to Create and Run a Custom PDF Viewer Web Service](./how-to/create-and-run-custom-pdf-viewer-web-service).
 * `Inject services={[...]}`: Registers the optional modules (toolbar, navigation, annotations, search, form fields, etc.) you want to enable.
 
 {% tabs %}
