@@ -173,6 +173,7 @@ import 'package:x509/x509.dart' as x509;
 
 You can compute the signed message digest by using the x509 package with a corresponding private key of the public certificate.
 
+{% tabs %}
 {% highlight dart %}
 
 //Class for signing a PDF document externally.
