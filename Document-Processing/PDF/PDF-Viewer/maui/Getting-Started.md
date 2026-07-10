@@ -169,19 +169,8 @@ xmlns:local="clr-namespace:PdfViewerExample"
 {% endhighlight %} 
 {% endtabs %}
 
-**Note:** 1. While changing or opening different documents on the same page, the previously loaded document will be unloaded automatically by the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). 
-**Note:** 2. If you are using multiple pages in your application, then make sure to unload the document from the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) while leaving the page that has it to release the memory and resources consumed by the PDF document that is loaded.  The unloading of documents can be done by calling the [UnloadDocument](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_UnloadDocument) method. 
-
-{% tabs %}
-{% highlight c# %}
-// Call UnloadDocument when navigating away from the page to free resources.
-protected override void OnNavigatedFrom(NavigatedFromEventArgs args)
-{
-    PdfViewer.UnloadDocument();
-    base.OnNavigatedFrom(args);
-}
-{% endhighlight %}
-{% endtabs %}
+N> 1. While changing or opening different documents on the same page, the previously loaded document will be unloaded automatically by the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). 
+N> 2. If you are using multiple pages in your application, then make sure to unload the document from the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) while leaving the page that has it to release the memory and resources consumed by the PDF document that is loaded.  The unloading of documents can be done by calling the [UnloadDocument](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_UnloadDocument) method. 
 
 ## Step 6: Running the Application
 
@@ -462,7 +451,7 @@ xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Ma
 {% highlight xml tabtitle="PdfViewerExample.csproj" %}
 
 <ItemGroup>
-	<EmbeddedResource Include="Assets/PDF_Succinctly.pdf" />
+	<EmbeddedResource Include="Assets\PDF_Succinctly.pdf" />
 </ItemGroup>
 
 {% endhighlight %} 
