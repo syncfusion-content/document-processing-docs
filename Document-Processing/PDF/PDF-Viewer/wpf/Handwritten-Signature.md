@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Handwritten Signature in WPF Pdf Viewer control | Syncfusion&reg;
-description: Learn about Handwritten Signature support in Syncfusion<sup>&reg;</sup>; WPF Pdf Viewer control, its elements and more.
+title: Handwritten Signature in WPF PDF Viewer control | Syncfusion&reg;
+description: Learn about Handwritten Signature support in Syncfusion<sup>&reg;</sup>, WPF PDF Viewer control, its elements and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Handwritten Signature in WPF Pdf Viewer
+# Handwritten Signature in WPF PDF Viewer
 
-PDF viewer WPF allows the user to include handwritten signature in the PDF document and provides options to edit or remove the included handwritten signature in the PDF document.
+The WPF PDF Viewer allows users to include handwritten signatures in the PDF document and provides options to edit or remove the included handwritten signature in the PDF document.
 
-The following code shows how to switch to handwritten signature mode in code behind.
+The following code shows how to switch to handwritten signature mode in code-behind.
 
 {% tabs %}
 {% highlight C# %}
@@ -19,8 +19,8 @@ The following code shows how to switch to handwritten signature mode in code beh
 private void Window_Loaded(object sender, RoutedEventArgs e)
 {
     PdfLoadedDocument pdf = new PdfLoadedDocument("Input.pdf");
-    pdfviewer.Load(pdf);
-    pdfviewer.AnnotationMode = PdfDocumentView.PdfViewerAnnotationMode.HandwrittenSignature; 
+    pdfViewer.Load(pdf);
+    pdfViewer.AnnotationMode = PdfDocumentView.PdfViewerAnnotationMode.HandwrittenSignature; 
 }
 
 {% endhighlight %}
@@ -28,15 +28,15 @@ private void Window_Loaded(object sender, RoutedEventArgs e)
 {% highlight vbnet %}
 
 Private Sub Window_Loaded(sender As Object, e As RoutedEventArgs)
-    Dim pdf As New PdfLoadedDocument(“Input.pdf”)
+    Dim pdf As New PdfLoadedDocument("Input.pdf")
     pdfViewer.Load(pdf)
-    pdfviewer.AnnotationMode = PdfDocumentView.PdfViewerAnnotationMode.HandwrittenSignature
+    pdfViewer.AnnotationMode = PdfDocumentView.PdfViewerAnnotationMode.HandwrittenSignature
 End Sub
 
 {% endhighlight %}
 {% endtabs %}
 
-Moving to `HandwrittenSignature` mode will open the signature pad, requesting the user to draw the signature. Clicking on apply will add the signature in the PDF Document, this can then be resized and moved to appropriate location.
+Moving to `HandwrittenSignature` mode will open the signature pad, requesting the user to draw the signature. Clicking on **Apply** will add the signature in the PDF document, which can then be resized and moved to the appropriate location.
 
  ![WPF PDF Viewer Handwritten Signature](Handwritten-Signature_images\wpf-pdf-viewer-handwritten-signature.png)
 
@@ -50,8 +50,8 @@ The opacity of the handwritten signature can be customized at the time of inclus
 private void Window_Loaded(object sender, RoutedEventArgs e)
 {
     PdfLoadedDocument pdf = new PdfLoadedDocument("Input.pdf");
-    pdfviewer.Load(pdf);
-    pdfviewer.HandwrittenSignatureSettings.Opacity = 0.5F;
+    pdfViewer.Load(pdf);
+    pdfViewer.HandwrittenSignatureSettings.Opacity = 0.5F;
 }
 
 {% endhighlight %}
@@ -59,9 +59,9 @@ private void Window_Loaded(object sender, RoutedEventArgs e)
 {% highlight vbnet %}
 
 Private Sub Window_Loaded(sender As Object, e As RoutedEventArgs)
-    Dim pdf As New PdfLoadedDocument(“Input.pdf”)
+    Dim pdf As New PdfLoadedDocument("Input.pdf")
     pdfViewer.Load(pdf)
-    pdfviewer.HandwrittenSignatureSettings.Opacity = 0.5F
+    pdfViewer.HandwrittenSignatureSettings.Opacity = 0.5F
 End Sub
 
 {% endhighlight %}
@@ -77,8 +77,8 @@ The color of the handwritten signature can be customized at the time of inclusio
 private void Window_Loaded(object sender, RoutedEventArgs e)
 {
     PdfLoadedDocument pdf = new PdfLoadedDocument("Input.pdf");
-    pdfviewer.Load(pdf);
-    pdfviewer.HandwrittenSignatureSettings.Color = Colors.Green; 
+    pdfViewer.Load(pdf);
+    pdfViewer.HandwrittenSignatureSettings.Color = Colors.Green; 
 }
 
 {% endhighlight %}
@@ -86,9 +86,9 @@ private void Window_Loaded(object sender, RoutedEventArgs e)
 {% highlight vbnet %}
 
 Private Sub Window_Loaded(sender As Object, e As RoutedEventArgs)
-    Dim pdf As New PdfLoadedDocument(“Input.pdf”)
+    Dim pdf As New PdfLoadedDocument("Input.pdf")
     pdfViewer.Load(pdf)
-    pdfviewer.HandwrittenSignatureSettings.Color = Colors.Green
+    pdfViewer.HandwrittenSignatureSettings.Color = Colors.Green
 End Sub
 
 {% endhighlight %}
@@ -104,8 +104,8 @@ The included handwritten signature can be flattened in the PDF document when sav
 private void Window_Loaded(object sender, RoutedEventArgs e)
 {
     PdfLoadedDocument pdf = new PdfLoadedDocument("Input.pdf");
-    pdfviewer.Load(pdf);
-    pdfviewer.HandwrittenSignatureSettings.FlattenSignatureOnSave = true; 
+    pdfViewer.Load(pdf);
+    pdfViewer.HandwrittenSignatureSettings.FlattenSignatureOnSave = true; 
 }
 
 {% endhighlight %}
@@ -113,9 +113,9 @@ private void Window_Loaded(object sender, RoutedEventArgs e)
 {% highlight vbnet %}
 
 Private Sub Window_Loaded(sender As Object, e As RoutedEventArgs)
-    Dim pdf As New PdfLoadedDocument(“Input.pdf”)
+    Dim pdf As New PdfLoadedDocument("Input.pdf")
     pdfViewer.Load(pdf)
-    pdfviewer.HandwrittenSignatureSettings.FlattenSignatureOnSave = true
+    pdfViewer.HandwrittenSignatureSettings.FlattenSignatureOnSave = true
 End Sub
 
 {% endhighlight %}
@@ -125,22 +125,22 @@ N> If the handwritten signature is not flattened, it will be saved as ink annota
 
 ## Working with included handwritten signatures
 
-The PDF viewer allows editing the color and opacity of the Handwritten signature included in the document in the UI.. To perform this, select the included handwritten signature and click right using mouse, over the selected handwritten signature, a pop-up context menu will appear with the following options,
+The PDF viewer allows editing the color and opacity of the handwritten signature included in the document in the UI. To perform this, select the included handwritten signature and right-click using the mouse, over the selected handwritten signature, a pop-up context menu will appear with the following options,
 
 *	Properties
 *	Delete
 
 ### Properties
 
-Selecting properties from the context menu will display the Handwritten Signature Properties window, which would have Appearance tab.
+Selecting properties from the context menu will display the Handwritten Signature Properties window, which has the Appearance tab.
 
 #### Appearance tab
 
-The color, opacity of the handwritten signature can be edited using Appearance tab of Handwritten Signature Properties window. 
+The color and opacity of the handwritten signature can be edited using the Appearance tab of the Handwritten Signature Properties window. 
 
 ##### Editing color of the signature
 
-The color of the selected handwritten signature will be displayed in the color row in the appearance tab. Selecting the Color would displays the color palette, choosing a color from the color palette and clicking OK will apply the color to the handwritten signature.
+The color of the selected handwritten signature will be displayed in the color row in the appearance tab. Selecting the Color displays the color palette, choosing a color from the color palette and clicking OK will apply the color to the handwritten signature.
 
 The following image illustrates how to change the color of the handwritten signature.
 
@@ -148,30 +148,30 @@ The following image illustrates how to change the color of the handwritten signa
 
 ##### Editing opacity of the signature
 
-The slider displayed in the Appearance tab allows modifying opacity of the selected handwritten signature. You can also modify the opacity of the selected handwritten signature by giving numeric value in the opacity text box.
+The slider displayed in the Appearance tab allows modifying the opacity of the selected handwritten signature. You can also modify the opacity of the selected handwritten signature by giving numeric value in the opacity text box.
 
 ![WPF PDF Viewer Edit Opacity of the Signature](Handwritten-Signature_images\wpf-pdf-viewer-edit-opacity-of-the-signature.png)
 
 ### Deleting a signature
 
-Selecting delete option from the context menu which is displayed when clicking right on the selected signature would delete the respective signature from the PDF document.
+Selecting the delete option from the context menu which is displayed when right-clicking on the selected signature would delete the respective signature from the PDF document.
 
 ![WPF PDF Viewer Delete a Signature](Handwritten-Signature_images\wpf-pdf-viewer-delete-a-signature.png)
 
 ## Track the changes in a handwritten signature
 
-You can track the changes occurred in a handwritten signature such as add, select, deselect, move, resize, and remove. The `HandwrittenSignatureChanged` event indicates that a signature is changed in the current document and the `Action` property of the `HandwrittenSignatureChangedEventArgs` provides you the type of changes made in the signature. The following code shows how to wire the event in [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html).
+You can track the changes that occur in a handwritten signature such as add, select, deselect, move, resize, and remove. The `HandwrittenSignatureChanged` event indicates that a signature is changed in the current document and the `Action` property of the `HandwrittenSignatureChangedEventArgs` provides the type of change made in the signature. The following code shows how to subscribe to the event on the [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html).
 
 {% tabs %}
 {% highlight C# %}
 
 PdfViewerControl pdfViewer = new PdfViewerControl();
-pdfViewer.Load("Barcode.pdf");
+pdfViewer.Load("Input.pdf");
 pdfViewer.HandwrittenSignatureChanged += PdfViewer_HandwrittenSignatureChanged;
 
 private void PdfViewer_HandwrittenSignatureChanged(object sender, HandwrittenSignatureChangedEventArgs e)
 {
-	//Insert your code that does something
+    //Insert your code that does something
 }
 
 {% endhighlight %}
@@ -179,11 +179,11 @@ private void PdfViewer_HandwrittenSignatureChanged(object sender, HandwrittenSig
 {% highlight vbnet %}
 
 Dim pdfViewer As PdfViewerControl = New PdfViewerControl()
-pdfViewer.Load("Barcode.pdf")
+pdfViewer.Load("Input.pdf")
 AddHandler pdfViewer.HandwrittenSignatureChanged, AddressOf PdfViewer_HandwrittenSignatureChanged
 
 Private Sub PdfViewer_HandwrittenSignatureChanged(ByVal sender As Object, ByVal e As HandwrittenSignatureChangedEventArgs)
-'Insert your code that does something
+    'Insert your code that does something
 End Sub
 
 {% endhighlight %}
@@ -263,7 +263,6 @@ Private Sub PdfViewer_HandwrittenSignatureChanged(ByVal sender As Object, ByVal 
 End Sub
 
 {% endhighlight %}
-
 {% endtabs %}
 
 ### Track the details of the selected handwritten signature
@@ -306,21 +305,21 @@ End Sub
 
 ## Add handwritten signature from code
 
-PDF Viewer allows you to add a signature anywhere in the pages of a PDF document from code behind.
+PDF Viewer allows you to add a signature anywhere in the pages of a PDF document from code-behind.
 
 ### Add a handwritten signature in a single page
 
-You can add signature in a particular page as `System.Windows.Shapes.Path` by using the `AddHandwrittenSignature` with the page number and the bounds as parameters. The following code explains how to add a handwritten signature at the first page of the PDF document.
+You can add a signature in a particular page as `System.Windows.Shapes.Path` by using the `AddHandwrittenSignature` with the page number and the bounds as parameters. The following code explains how to add a handwritten signature at the first page of the PDF document.
 
 {% tabs %}
 {% highlight C# %}
 
 private void button_Click(object sender, RoutedEventArgs e)
 {
-	System.Windows.Shapes.Path signature = new System.Windows.Shapes.Path();
-	//Note: Set your signature appearance as Data for the path here.
-	//Add signature in the first page of the PDF document at the location: X= 450, Y=750 and with the size: Width=100, Height=100.
-	pdfViewer.AddHandwrittenSignature(signature, 1, new RectangleF(450, 750, 100, 100));
+    System.Windows.Shapes.Path signature = new System.Windows.Shapes.Path();
+    //Note: Set your signature appearance as Data for the path here.
+    //Add signature in the first page of the PDF document at the location: X= 450, Y=750 and with the size: Width=100, Height=100.
+    pdfViewer.AddHandwrittenSignature(signature, 1, new RectangleF(450, 750, 100, 100));
 }
 
 {% endhighlight %}
@@ -345,14 +344,14 @@ You can also add a signature in multiple pages of the PDF document at multiple p
 
 private void button_Click(object sender, RoutedEventArgs e)
 {
-	System.Windows.Shapes.Path signature = new System.Windows.Shapes.Path();
-	//Note: Set your signature appearance using `Data` property of the path here.
-	Dictionary<int, List<RectangleF>> bounds = new Dictionary<int, List<RectangleF>>();
-	//Add signature bounds for the first page as: X= 450, Y=750, Width=100, Height=100.
-	bounds.Add(1, new List<RectangleF>() { new RectangleF(450, 750, 100, 100) });
-	//Add signature bounds for the second page as: X= 350, Y=550, Width=200, Height=200
-	bounds.Add(2, new List<RectangleF>() { new RectangleF(350, 550, 200, 200) });
-	pdfViewer.AddHandwrittenSignature(signature, bounds);
+    System.Windows.Shapes.Path signature = new System.Windows.Shapes.Path();
+    //Note: Set your signature appearance using `Data` property of the path here.
+    Dictionary<int, List<RectangleF>> bounds = new Dictionary<int, List<RectangleF>>();
+    //Add signature bounds for the first page as: X= 450, Y=750, Width=100, Height=100.
+    bounds.Add(1, new List<RectangleF>() { new RectangleF(450, 750, 100, 100) });
+    //Add signature bounds for the second page as: X= 350, Y=550, Width=200, Height=200.
+    bounds.Add(2, new List<RectangleF>() { new RectangleF(350, 550, 200, 200) });
+    pdfViewer.AddHandwrittenSignature(signature, bounds);
 }
 
 {% endhighlight %}
@@ -360,13 +359,13 @@ private void button_Click(object sender, RoutedEventArgs e)
 
 Private Sub button_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
     Dim signature As System.Windows.Shapes.Path = New System.Windows.Shapes.Path()
-	'Note: Set your signature appearance using `Data` property of the path here.
+    'Note: Set your signature appearance using `Data` property of the path here.
     Dim bounds As Dictionary(Of Integer, List(Of RectangleF)) = New Dictionary(Of Integer, List(Of RectangleF))()
     'Add signature bounds for the first page as: X= 450, Y=750, Width=100, Height=100.
-	bounds.Add(1, New List(Of RectangleF)() From {
+    bounds.Add(1, New List(Of RectangleF)() From {
         New RectangleF(450, 750, 100, 100)
     })	
-	'Add signature bounds for the second page as: X= 350, Y=550, Width=200, Height=200.
+    'Add signature bounds for the second page as: X= 350, Y=550, Width=200, Height=200.
     bounds.Add(2, New List(Of RectangleF)() From {
         New RectangleF(350, 550, 200, 200)
     })
@@ -378,11 +377,11 @@ End Sub
 
 ## Keyboard shortcuts
 
-The below keyboard shortcuts are available to customize the handwritten signature in the PDF document.
+The following keyboard shortcuts are available to customize the handwritten signature in the PDF document.
 
 *	Delete key – Deletes the selected signature from the PDF document.
 *	Ctrl + Z – Performs undo functionality for recently performed operations.
 *	Ctrl + Y – Performs redo functionality for recently performed operations.
 
 
-N> You can refer to our [WPF PDF Viewer](https://www.syncfusion.com/wpf-controls/pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [WPF PDF Viewer example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the pdfviewer.
+N> You can refer to the [WPF PDF Viewer](https://www.syncfusion.com/wpf-controls/pdf-viewer) feature tour page for its feature representations. You can also explore the [WPF PDF Viewer example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the pdfviewer.

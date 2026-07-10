@@ -97,19 +97,22 @@ Step 5: Add the following code sample in `btnCreate_Click` to create or generate
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//Create a new PDF document. 
-using (PdfDocument document = new PdfDocument())
+private void GeneratePDF(object sender, RoutedEventArgs e)
 {
-  //Add a page to the document.
-  PdfPage page = document.Pages.Add();
-  //Create PDF graphics for a page.
-  PdfGraphics graphics = page.Graphics;
-  //Set the standard font.
-  PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
-  //Draw the text.
-  graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
-  //Save the document.
-  document.Save("Output.pdf");
+    //Create a new PDF document. 
+    using (PdfDocument document = new PdfDocument())
+    {
+    //Add a page to the document.
+    PdfPage page = document.Pages.Add();
+    //Create PDF graphics for a page.
+    PdfGraphics graphics = page.Graphics;
+    //Set the standard font.
+    PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
+    //Draw the text.
+    graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
+    //Save the document.
+    document.Save("Output.pdf");
+    }
 }
 
 {% endhighlight %}

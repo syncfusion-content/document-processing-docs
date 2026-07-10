@@ -30,7 +30,7 @@ The [SearchText](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer
 
 ### Search the initial occurrence of the text
 
-The [SearchText(String)](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_SearchText_System_String_) method finds the occurrences of the target text and highlights the first occurrence of the search in the UI. A user can also search the text with case sensitivity by passing the Boolean parameter as ‘true’ to the [SearchText(String, Boolean)](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_SearchText_System_String_System_Boolean_) method. The below code illustrates how to search a text in a PDF programmatically.
+The [SearchText(String)](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_SearchText_System_String_) method finds the occurrences of the target text and highlights the first occurrence of the search in the UI. A user can also search the text with case sensitivity by passing the Boolean parameter as ‘true’ to the [SearchText(String, Boolean)](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_SearchText_System_String_System_Boolean_) method. The following code example illustrates how to search a text in a PDF programmatically.
 
 {% tabs %}
 {% highlight c# %}
@@ -47,7 +47,7 @@ private void PdfViewer_DocumentLoaded(object sender, System.EventArgs args)
 
 ### Search the next occurrence of the text
 
-The [SearchNextText(String)](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_SearchNextText_System_String_) method highlights the next occurrence of the highlighted search in the UI. If there is no highlighted search, it will highlight the first occurrence of the search. A user can also search the text with case sensitivity by passing the Boolean parameter as ‘true’ to the [SearchNextText(String, Boolean)](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_SearchNextText_System_String_System_Boolean_) method. The below code snippet illustrates how to search the next occurrence of the text programmatically.
+The [SearchNextText(String)](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_SearchNextText_System_String_) method highlights the next occurrence of the highlighted search in the UI. If there is no highlighted search, it will highlight the first occurrence of the search. A user can also search the text with case sensitivity by passing the Boolean parameter as ‘true’ to the [SearchNextText(String, Boolean)](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_SearchNextText_System_String_System_Boolean_) method. The following code example illustrates how to search the next occurrence of the text programmatically.
 
 {% tabs %}
 {% highlight c# %}
@@ -63,14 +63,14 @@ private void SearchNext_Click(object sender, RoutedEventArgs e)
 
 ### Search the previous occurrence of the text
 
-The [SearchPreviousText(String)](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_SearchPreviousText_System_String_) method highlights the previous occurrence of the highlighted search in the UI. The user can also search the text with case sensitivity bypassing the Boolean parameter as ‘true’ to the [SearchPreviousText(String, Boolean)](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_SearchPreviousText_System_String_System_Boolean_) method. The below code snippet illustrates how to search the previous occurrence of the text programmatically.
+The [SearchPreviousText(String)](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_SearchPreviousText_System_String_) method highlights the previous occurrence of the highlighted search in the UI. The user can also search the text with case sensitivity by passing the Boolean parameter as ‘true’ to the [SearchPreviousText(String, Boolean)](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_SearchPreviousText_System_String_System_Boolean_) method. The following code example illustrates how to search the previous occurrence of the text programmatically.
 
 {% tabs %}
 {% highlight c# %}
  
 private void SearchPrevious_Click(object sender, RoutedEventArgs e)
 {
-    //Search and highlight the previuos occurrence of the target text
+    //Search and highlight the previous occurrence of the target text
     pdfViewer.SearchPreviousText("Target text");
 }
 
@@ -79,13 +79,13 @@ private void SearchPrevious_Click(object sender, RoutedEventArgs e)
 
 ## Find text method
 
-N> From version 27.1.x, we have used text extraction engine for find text from PDF documents. By default text extraction engine uses PDFium for extracting text information. Please refer to the [link](https://help.syncfusion.com/wpf/pdf-viewer/text-extraction-engines) for more details.
+N> From version 27.1.x, we have used the text extraction engine for finding text from PDF documents. By default, the text extraction engine uses PDFium for extracting text information. Please refer to the [link](https://help.syncfusion.com/wpf/pdf-viewer/text-extraction-engines) for more details.
 
 The [FindText](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_FindText_System_String_System_Collections_Generic_Dictionary_System_Int32_System_Collections_Generic_List_System_Drawing_RectangleF____) method allows the user to search a particular text and get its bounds after loading the document in the [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html). The [FindText](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_FindText_System_String_System_Collections_Generic_Dictionary_System_Int32_System_Collections_Generic_List_System_Drawing_RectangleF____) method returns ‘true’ when the given text is found in the document; else, it returns ‘false’.
 
 ### Find and get the bounds of a text
 
-The [FindText](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_FindText_System_String_System_Collections_Generic_Dictionary_System_Int32_System_Collections_Generic_List_System_Drawing_RectangleF____) method takes the input argument as the given text. It provides a dictionary that contains the page index and the list of rectangular coordinates(bounds) of the text found on that page. The below code snippet shows how to get the bounds of the given text:
+The [FindText](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_FindText_System_String_System_Collections_Generic_Dictionary_System_Int32_System_Collections_Generic_List_System_Drawing_RectangleF____) method takes the input argument as the given text. It provides a dictionary that contains the page index and the list of rectangular coordinates (bounds) of the text found on that page. The following code example illustrates how to get the bounds of the given text:
 
 {% tabs %}
 {% highlight c# %}
@@ -109,7 +109,7 @@ private void PdfViewer_DocumentLoaded(object sender, EventArgs args)
 
 ### Find and get the bounds of a text on the desired page
 
-The [FindText](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_FindText_System_String_System_Int32_System_Collections_Generic_List_System_Drawing_RectangleF___) method takes the input arguments as the text to be found along with the desired page index and provides a list of values that contains the rectangular coordinates(bounds) of the found text. The below code snippet shows how to get the bounds of the given text on a particular page:
+The [FindText](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_FindText_System_String_System_Int32_System_Collections_Generic_List_System_Drawing_RectangleF___) method takes the input arguments as the text to be found along with the desired page index and provides a list of values that contains the rectangular coordinates (bounds) of the found text. The following code example illustrates how to get the bounds of the given text on a particular page:
 
 {% tabs %}
 {% highlight c# %}
@@ -123,7 +123,7 @@ private void PdfViewer_DocumentLoaded(object sender, EventArgs args)
     bool isMatchFound = pdfViewer.FindText("FindText",0, out textSearch);
     if (isMatchFound)
     {
-        //Get the bounds of the first occurance in the particluar page
+        //Get the bounds of the first occurrence in the particular page
         RectangleF bounds = textSearch[0];
     }
 }
@@ -133,7 +133,7 @@ private void PdfViewer_DocumentLoaded(object sender, EventArgs args)
 
 ### Find and get the bounds of the list of text
 
-The [FindText](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_FindText_System_Collections_Generic_List_System_String__System_Collections_Generic_Dictionary_System_Int32_System_Collections_Generic_List_Syncfusion_Windows_PdfViewer_TextSearchResult____) method takes the input argument as the list of text that needs to be found. It provides a list of ‘TextSearchResult’, which contains the found text and its rectangular coordinates(bounds). The below code snippet shows how to get the bounds of the found text from the Text Search Result:
+The [FindText](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_FindText_System_Collections_Generic_List_System_String__System_Collections_Generic_Dictionary_System_Int32_System_Collections_Generic_List_Syncfusion_Windows_PdfViewer_TextSearchResult____) method takes the input argument as the list of text that needs to be found. It provides a `Dictionary` mapping each page index to a list of [TextSearchResult](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.TextSearchResult.html) objects, where each entry contains the found text and its rectangular coordinates (bounds). The following code example illustrates how to get the bounds of the found text from the TextSearchResult:
 
 {% tabs %}
 {% highlight c# %}
@@ -143,7 +143,7 @@ private void PdfViewer_DocumentLoaded(object sender, EventArgs args)
     //Get the occurrences of the target text and location.
     Dictionary<int, List<TextSearchResult>> searchResult = new Dictionary<int, List<TextSearchResult>>();
     //List of text need to be found
-    List<string> findText = new List<string>() {"Find","Text"};;
+    List<string> findText = new List<string>() {"Find","Text"};
 
     //Return true, if the given text is found in the particular page
     bool isMatchFound = pdfViewer.FindText(findText, out searchResult);
@@ -157,46 +157,9 @@ private void PdfViewer_DocumentLoaded(object sender, EventArgs args)
 {% endhighlight %}
 {% endtabs %}
 
-### Find and get the bounds of the list of text on multiple lines
-
-The [FindText](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html) method provides an overload with an `enableMultilineSearch` parameter that allows detection of matches spanning line breaks or multiple pages. When enabled, results are returned as line‑based TextSearchResult entries grouped by page, including the matched text and corresponding RectangleF bounds. The default value of enableMultilineSearch is false.
-
-{% tabs %}
-{% highlight c# %}
- 
-private void PdfViewer_DocumentLoaded(object sender, EventArgs args)
-{
-    //Get the occurrences of the target text and location.
-    Dictionary<int, List<TextSearchResult>> searchResult = new Dictionary<int, List<TextSearchResult>>();
-    //List of text need to be found
-    List<string> findText = new List<string>() {"Find the text that spans across multiple lines and pages"};
-
-    //Enable multiline search to detect line and page breaks and return line-wise results.
-    //Return true, if the given text is found across lines/pages
-    bool isMatchFound = pdfViewer.FindText(findText, out searchResult, true);
-    if (isMatchFound)
-    {
-        foreach (var Index in searchResult)
-        {
-            int pageIndex = Index.Key;
-            List<TextSearchResult> results = Index.Value;
-            foreach (TextSearchResult result in results)
-            {
-                //The Bounds contains the line-wise rectangle for the matched text.
-                RectangleF bounds = result.Bounds;
-                //The Text property contains the matched text for this line.
-                string matchedText = result.Text;
-            }
-        }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
 ### Find and get the bounds of the list of text on the desired page
 
-The [FindText](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_FindText_System_Collections_Generic_List_System_String__System_Int32_System_Collections_Generic_List_Syncfusion_Pdf_Parsing_MatchedItem___) method takes the input argument as the list of text to be found along with the desired page index and provides the list of [MatchedItem](https://help.syncfusion.com/cr/wpf/Syncfusion.Pdf.Parsing.MatchedItem.html), which contains the matched text, and its rectangular coordinates(bounds). The below code snippet illustrates how to get the bounds of the text from the matched item:
+The [FindText](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_FindText_System_Collections_Generic_List_System_String__System_Int32_System_Collections_Generic_List_Syncfusion_Pdf_Parsing_MatchedItem___) method takes the input argument as the list of text to be found along with the desired page index and provides the list of [MatchedItem](https://help.syncfusion.com/cr/wpf/Syncfusion.Pdf.Parsing.MatchedItem.html), which contains the matched text and its rectangular coordinates (bounds). The following code example illustrates how to get the bounds of the text from the matched item:
 
 {% tabs %}
 {% highlight c# %}
@@ -214,6 +177,43 @@ private void PdfViewer_DocumentLoaded(object sender, EventArgs args)
     {
         //Get the bounds of the first MatchedItem on the desired page
         RectangleF bounds = searchResult[0].Bounds;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Find and get the bounds of the list of text on multiple lines
+
+The [FindText](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_FindText_System_Collections_Generic_List_System_String__System_Collections_Generic_Dictionary_System_Int32_System_Collections_Generic_List_Syncfusion_Windows_PdfViewer_TextSearchResult___System_Boolean_) method provides an overload with an `enableMultilineSearch` parameter that allows detection of matches spanning line breaks or multiple pages. When enabled, results are returned as line-based TextSearchResult entries grouped by page, including the matched text and corresponding RectangleF bounds. The default value of `enableMultilineSearch` is `false`. Use this overload when the text to find may wrap across lines or pages.
+
+{% tabs %}
+{% highlight c# %}
+ 
+private void PdfViewer_DocumentLoaded(object sender, EventArgs args)
+{
+    //Get the occurrences of the target text and location.
+    Dictionary<int, List<TextSearchResult>> searchResult = new Dictionary<int, List<TextSearchResult>>();
+    //List of text need to be found
+    List<string> findText = new List<string>() {"Find the text that spans across multiple lines and pages"};
+
+    //Enable multiline search to detect line and page breaks and return line-wise results.
+    //Return true, if the given text is found across lines/pages
+    bool isMatchFound = pdfViewer.FindText(findText, out searchResult, true);
+    if (isMatchFound)
+    {
+        foreach (var entry in searchResult)
+        {
+            int pageIndex = entry.Key;
+            List<TextSearchResult> results = entry.Value;
+            foreach (TextSearchResult result in results)
+            {
+                //The Bounds contains the line-wise rectangle for the matched text.
+                RectangleF bounds = result.Bounds;
+                //The Text property contains the matched text for this line.
+                string matchedText = result.Text;
+            }
+        }
     }
 }
 
