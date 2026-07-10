@@ -159,7 +159,7 @@ N> When configuring the server-backed PDF viewer, it's essential to understand t
 
 > [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Getting%20Started).
 
-N> For hosting the web service on Linux, the server-side PDF rendering pipeline uses [SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)
+N> For hosting the web service on Linux, the server-side PDF rendering pipeline uses SkiaSharp, which requires platform-specific native assets. Include [SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1) for standard Linux hosts. Additionally, for AWS environments, utilize the following packages:
 
 | **Amazon Web Services (AWS)** |**NuGet package name** |
 | --- | --- |
