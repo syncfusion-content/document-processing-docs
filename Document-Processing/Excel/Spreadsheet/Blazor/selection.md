@@ -106,7 +106,7 @@ The Spreadsheet component supports programmatic selection for cells, rows, and c
 
 <SfButton OnClick="SelectRangeHandler" Content="Select Range"></SfButton>
 
-<SfSpreadsheet DataSource="DataSourceBytes" @ref="SpreadsheetRef">
+<SfSpreadsheet DataSource="DataSourceBytes" @ref="SpreadsheetInstance">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
@@ -114,7 +114,7 @@ The Spreadsheet component supports programmatic selection for cells, rows, and c
 
     public byte[] DataSourceBytes { get; set; }
 
-    public SfSpreadsheet SpreadsheetRef { get; set; }
+    public SfSpreadsheet SpreadsheetInstance { get; set; }
 
     protected override void OnInitialized()
     {
@@ -124,7 +124,7 @@ The Spreadsheet component supports programmatic selection for cells, rows, and c
 
     public async Task SelectRangeOnSheet()
     {
-        await SpreadsheetRef.SelectRangeAsync("A5:GR5");
+        await SpreadsheetInstance.SelectRangeAsync("A5:GR5");
     }
 }
 

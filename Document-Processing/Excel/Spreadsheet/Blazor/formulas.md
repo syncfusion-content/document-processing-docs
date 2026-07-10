@@ -15,15 +15,13 @@ documentation: ug
 
 The **Formula Bar** simplifies editing or entering cell data. The [ShowFormulaBar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ShowFormulaBar) property is used to enable or disable the **Formula Bar**. The default value of the [ShowFormulaBar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ShowFormulaBar) property is **true**.
 
-To disable the Formula Bar, set the `ShowFormulaBar` property on the `SfSpreadsheet` tag:
-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
-<SfSpreadsheet ShowFormulaBar="false" DataSource="DataSourceBytes">
+<SfSpreadsheet ShowFormulaBar="false">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
@@ -114,15 +112,13 @@ N> Deleting a Named Range used in formulas may cause formula errors. Ensure the 
 
 The **Aggregates** feature provides instant statistical summaries of selected cell ranges without requiring formula creation. This functionality enables quick data analysis by automatically calculating statistics such as sum, average, count, minimum, and maximum values. Aggregate calculations appear in the footer at the bottom of the Spreadsheet component, providing at-a-glance insights into selected data. To control this functionality, use the [ShowAggregate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ShowAggregate) property, which enables or disables aggregate support in the Spreadsheet. The default value of the `ShowAggregate` property is true.
 
-To disable aggregates, set the `ShowAggregate` property on the `SfSpreadsheet` tag:
-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
-<SfSpreadsheet ShowAggregate="false" DataSource="DataSourceBytes">
+<SfSpreadsheet ShowAggregate="false">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 

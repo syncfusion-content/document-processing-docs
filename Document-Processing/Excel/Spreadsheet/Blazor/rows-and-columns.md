@@ -22,7 +22,7 @@ You can insert rows or columns anywhere in a spreadsheet.
 
 You can insert rows in the following ways,
 
-* Using the [`InsertRowAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_InsertRowAsync_System_Int32_System_Int32_System_Object_Syncfusion_Blazor_Spreadsheet_RowPosition_) method, you can insert rows once the component is loaded.
+* Using the [InsertRowAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_InsertRowAsync_System_Int32_System_Int32_System_Object_Syncfusion_Blazor_Spreadsheet_RowPosition_) method, you can insert rows once the component is loaded.
 * Using context menu, insert the rows in the desired position.
 
 The following code example shows the options for inserting rows in the spreadsheet.
@@ -90,7 +90,7 @@ N> If the `sheet` parameter is `null` or omitted, the operation targets the acti
 
 You can insert columns in the following ways,
 
-* Using the [`InsertColumnAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_InsertColumnAsync_System_Int32_System_Int32_System_Object_Syncfusion_Blazor_Spreadsheet_ColumnPosition_) method, you can insert columns once the component is loaded.
+* Using the [InsertColumnAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_InsertColumnAsync_System_Int32_System_Int32_System_Object_Syncfusion_Blazor_Spreadsheet_ColumnPosition_) method, you can insert columns once the component is loaded.
 * Using context menu, insert the columns in the desired position.*
 
 The following code example shows the options for inserting columns in the spreadsheet.

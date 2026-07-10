@@ -26,24 +26,14 @@ The Blazor Spreadsheet component accepts the following image formats for inserti
 The example below shows how to disable image support across the Spreadsheet:
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
-<SfSpreadsheet AllowImage="false" DataSource="DataSourceBytes">
+<SfSpreadsheet AllowImage="false">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
-
-@code {
-    public byte[] DataSourceBytes { get; set; }
-
-    protected override void OnInitialized()
-    {
-        string filePath = "wwwroot/Sample.xlsx";
-        DataSourceBytes = File.ReadAllBytes(filePath);
-    }
-}
 
 {% endhighlight %}
 {% endtabs %}

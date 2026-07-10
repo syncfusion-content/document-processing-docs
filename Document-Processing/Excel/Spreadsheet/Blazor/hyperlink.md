@@ -24,21 +24,10 @@ The example below shows how to disable hyperlink support across the entire Sprea
 
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet
-@using System.IO
 
-<SfSpreadsheet AllowHyperlink="false" DataSource="DataSourceBytes">
+<SfSpreadsheet AllowHyperlink="false">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
-
-@code {
-    public byte[] DataSourceBytes { get; set; }
-
-    protected override void OnInitialized()
-    {
-        string filePath = "wwwroot/Sample.xlsx";
-        DataSourceBytes = File.ReadAllBytes(filePath);
-    }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -78,7 +67,7 @@ Hyperlinks can be inserted through the user interface (UI) using any of the foll
 
 ### Insert Hyperlink Programmatically
 
-Hyperlinks can be added programmatically using the [`AddHyperlinkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AddHyperlinkAsync_System_String_System_String_System_String_) method. This method allows hyperlinks to be added to a cell or range of cells without using the UI. The available parameters in the [`AddHyperlinkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AddHyperlinkAsync_System_String_System_String_System_String_) method are:
+Hyperlinks can be added programmatically using the [AddHyperlinkAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AddHyperlinkAsync_System_String_System_String_System_String_) method. This method allows hyperlinks to be added to a cell or range of cells without using the UI. The available parameters in the [AddHyperlinkAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AddHyperlinkAsync_System_String_System_String_System_String_) method are:
 
 | Parameter | Type | Description |
 | -- | -- | -- |
@@ -118,10 +107,10 @@ Hyperlinks can be added programmatically using the [`AddHyperlinkAsync`](https:/
 {% endhighlight %}
 {% endtabs %}
 
-The [`AddHyperlinkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AddHyperlinkAsync_System_String_System_String_System_String_) method is flexible and supports various scenarios beyond basic usage. The following are some special cases and behaviors to be aware of:
+The [AddHyperlinkAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AddHyperlinkAsync_System_String_System_String_System_String_) method is flexible and supports various scenarios beyond basic usage. The following are some special cases and behaviors to be aware of:
 
 {% tabs %}
-{% highlight razor%}
+{% highlight razor tabtitle="Index.razor"%}
 
 // Adds a web URL hyperlink to a single cell.
 await SpreadsheetInstance.AddHyperlinkAsync("A1", "https://www.syncfusion.com", "Syncfusion");
@@ -209,7 +198,7 @@ When dealing with multiple hyperlinks, selecting a range of cells - such as `A1`
 
 ### Remove Hyperlink Programmatically
 
-Hyperlinks can be removed programmatically by using the [`RemoveHyperlinkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_RemoveHyperlinkAsync_System_String_) method. This method eliminates hyperlink functionality from the specified cell or range of cells within a spreadsheet, allowing for efficient bulk removal through code. The available parameters in the [`RemoveHyperlinkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_RemoveHyperlinkAsync_System_String_) method are:
+Hyperlinks can be removed programmatically by using the [RemoveHyperlinkAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_RemoveHyperlinkAsync_System_String_) method. This method eliminates hyperlink functionality from the specified cell or range of cells within a spreadsheet, allowing for efficient bulk removal through code. The available parameters in the [RemoveHyperlinkAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_RemoveHyperlinkAsync_System_String_) method are:
 
 | Parameter | Type | Description |
 | -- | -- | -- |
@@ -246,10 +235,10 @@ Hyperlinks can be removed programmatically by using the [`RemoveHyperlinkAsync`]
 {% endhighlight %}
 {% endtabs %}
 
-The [`RemoveHyperlinkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_RemoveHyperlinkAsync_System_String_) method is flexible and supports various scenarios beyond basic usage. The following are some special cases and behaviors to be aware of:
+The [RemoveHyperlinkAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_RemoveHyperlinkAsync_System_String_) method is flexible and supports various scenarios beyond basic usage. The following are some special cases and behaviors to be aware of:
 
 {% tabs %}
-{% highlight razor%}
+{% highlight razor tabtitle="Index.razor"%}
 
 // Remove hyperlink from a single cell.
 await SpreadsheetInstance.RemoveHyperlinkAsync("A1");

@@ -8,33 +8,21 @@ documentation: ug
 
 # Context Menu in Blazor Spreadsheet component
 
-The context menu enhances interaction with the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component by displaying a popup with relevant operations when a right-click is performed on elements such as **cells**, **column headers**, **row headers**, or **sheet tabs**. Set [`EnableContextMenu`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableContextMenu) to control visibility. The default value is **true**.
-
-N> When [`EnableContextMenu`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableContextMenu) is set to **false**, the context menu does not appear upon right-clicking any element in the component. The context menu is also unavailable when the spreadsheet is rendered on platforms or browsers that do not support the pointer events used to trigger it.
+The context menu enhances interaction with the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component by displaying a popup with relevant operations when a right-click is performed on elements such as **cells**, **column headers**, **row headers**, or **sheet tabs**. Set [EnableContextMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableContextMenu) to control visibility. The default value is **true**.
 
 ## Disable the context menu
 
 The example below shows how to disable the context menu across the entire Spreadsheet:
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
-<SfSpreadsheet EnableContextMenu="false" DataSource="DataSourceBytes">
+<SfSpreadsheet EnableContextMenu="false">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
-
-@code {
-    public byte[] DataSourceBytes { get; set; }
-
-    protected override void OnInitialized()
-    {
-        string filePath = "wwwroot/Sample.xlsx";
-        DataSourceBytes = File.ReadAllBytes(filePath);
-    }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -117,11 +105,9 @@ When right-clicking on a sheet tab located at the bottom of the Spreadsheet, the
 
 ![Context menu options for sheet tab](./images/contextmenu-sheettab.png)
 
-When a sheet is protected, the **Protect Sheet** (or **Unprotect Sheet**) option in the sheet tab context menu is always available so the protection status can be toggled from the tab itself.
+When a sheet is protected, the **Protect Sheet** (or **Unprotect Sheet**) option in the sheet tab context menu remains available so the protection status can be toggled directly from the tab. When a workbook is protected, only the **Protect Sheet** (or **Unprotect Sheet**) option remains active, and all other options—**Insert**, **Delete**, **Rename**, **Move Right**, **Move Left**, **Hide**, and **Duplicate**—are disabled to preserve the workbook structure.
 
-Sheet tab context menu behavior is also controlled by workbook-level protection. In a protected workbook, only the **Protect Sheet** or **Unprotect Sheet** option remains active. All other options like **Insert**, **Delete**, **Rename**, **Move Right**, **Move Left**, **Hide**, and **Duplicate** are disabled to preserve workbook structure.
-
-## Properties that influence context menu options
+## Context menu configuration properties
 
 These properties control specific context menu functionality:
 
@@ -137,7 +123,7 @@ These properties control specific context menu functionality:
 ![Context menu options when disabling the properties](./images/contextmenu-propertyaffect.png)
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet

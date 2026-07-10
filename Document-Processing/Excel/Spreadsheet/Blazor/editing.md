@@ -11,15 +11,13 @@ documentation: ug
 
 Cell editing in the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component enables modification of cell content either directly within the spreadsheet or through the formula bar. This feature is enabled by default but can be disabled by setting the [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowEditing) property. To disable or enable cell editing, set the value of this property accordingly.
 
-To disable cell editing, set the `AllowEditing` property on the `SfSpreadsheet` tag:
-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
-<SfSpreadsheet AllowEditing="false" DataSource="DataSourceBytes">
+<SfSpreadsheet AllowEditing="false">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
@@ -46,11 +44,9 @@ When a cell is in an editable state, the updated content can be saved using one 
 
 ### Update cell programmatically
 
-Cell updates can be performed programmatically using the [UpdateCellAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_UpdateCellAsync_System_String_System_Object_) method, which supports values such as strings, numbers, booleans, and formulas. This method modifies the content of a designated cell and is suitable for tasks requiring precise changes, such as updating statuses or values in specific locations. The cell address must include the sheet name—for example, **Sheet1!A1**—to enable updates across different sheets within the same workbook.
+Cell updates can be performed programmatically using the [UpdateCellAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_UpdateCellAsync_System_String_System_Object_) method, which supports values such as strings, numbers, booleans, and formulas. This method modifies the content of a designated cell and is suitable for tasks requiring precise changes, such as updating statuses or values in specific locations. The cell address must include the sheet name—for example, **Sheet1!A1**—to enable updates across different sheets within the same workbook.
 
 If a cell address is incorrectly formatted, refers to a non-existent sheet, or lies outside the valid range, the update is skipped without triggering an error. When a range is specified, such as **A1:B5**, the method automatically assigns the provided value to each cell within that range, allowing efficient batch updates.
-
-The supported `cellValue` types are: **string**, **number** (int, long, double, decimal), **bool**, and **formula** (a string that begins with `=`, such as `=SUM(A1:B1)`).
 
 | Parameter     | Type   | Description |
 |---------------|--------|-------------|
@@ -65,14 +61,14 @@ The supported `cellValue` types are: **string**, **number** (int, long, double, 
 @inject HttpClient Http
 <button @onclick="UpdateCell">Update Cell</button>
 
-<SfSpreadsheet @ref="SpreadsheetRef" DataSource="DataSourceBytes">
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
 @code {
 
     public byte[] DataSourceBytes { get; set; }
-    public SfSpreadsheet SpreadsheetRef;
+    public SfSpreadsheet SpreadsheetInstance;
 
     protected override void OnInitialized()
     {
@@ -83,13 +79,13 @@ The supported `cellValue` types are: **string**, **number** (int, long, double, 
     private async Task UpdateCell()
     {
         // Updates cell A3 with a product name.
-        await SpreadsheetRef.UpdateCellAsync("Sheet1!A3", "Tablet");
+        await SpreadsheetInstance.UpdateCellAsync("Sheet1!A3", "Tablet");
 
         // Updates cell B3 with a numeric value.
-        await SpreadsheetRef.UpdateCellAsync("Sheet1!B3", 799);
+        await SpreadsheetInstance.UpdateCellAsync("Sheet1!B3", 799);
 
         // Updates cell C3 with a formula.
-        await SpreadsheetRef.UpdateCellAsync("Sheet1!C3", "=SUM(A3:B3)");
+        await SpreadsheetInstance.UpdateCellAsync("Sheet1!C3", "=SUM(A3:B3)");
     }
 }
 
@@ -159,7 +155,7 @@ The event uses the [CellEditingEventArgs](https://help.syncfusion.com/cr/blazor/
 
 ### CellSaved
 
-The [CellSaved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.CellSavedEventArgs.html) event is triggered after a cell's value has been successfully saved, providing details about the updated value and the [CellSaveAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.CellSaveAction.html) that caused the change (such as `Edit`, `Cut`, `Paste`, or `Autofill`).
+The [CellSaved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.CellSavedEventArgs.html) event is triggered after a cell’s value has been successfully saved, providing details about the updated value and the action that caused the change (such as Edit, Cut, Paste, or Autofill).
 
 **Purpose**
 

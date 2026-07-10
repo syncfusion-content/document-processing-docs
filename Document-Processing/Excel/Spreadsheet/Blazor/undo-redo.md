@@ -37,7 +37,7 @@ N> The **Undo** button is automatically disabled when there are no reversible op
 
 ### Undo Programmatically
 
-The undo action can also be performed programmatically by calling the [`Undo`](https://help.syncfusion.com/cr/blazor/syncfusion.blazor.spreadsheet.sfspreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_Undo) method on the `SfSpreadsheet` instance.
+The undo action can also be performed programmatically by calling the [Undo()](https://help.syncfusion.com/cr/blazor/syncfusion.blazor.spreadsheet.sfspreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_Undo) method on the `SfSpreadsheet` instance.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -48,13 +48,13 @@ The undo action can also be performed programmatically by calling the [`Undo`](h
 
 <SfButton OnClick="PerformUndo" Content="Undo"></SfButton>
 
-<SfSpreadsheet @ref="SpreadsheetRef" DataSource="DataSourceBytes">
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
 @code {
     public byte[] DataSourceBytes { get; set; }
-    public SfSpreadsheet SpreadsheetRef;
+    public SfSpreadsheet SpreadsheetInstance;
 
     protected override void OnInitialized()
     {
@@ -65,7 +65,7 @@ The undo action can also be performed programmatically by calling the [`Undo`](h
     public async Task PerformUndo()
     {
         // Reverses the most recent action in the active worksheet.
-        await SpreadsheetRef.Undo();
+        await SpreadsheetInstance.Undo();
     }
 }
 
@@ -87,7 +87,7 @@ N> In some browsers, **Ctrl + Y** opens the browser history. If the shortcut doe
 
 ### Redo Programmatically
 
-The redo action can also be performed programmatically by calling the [`Redo`](https://help.syncfusion.com/cr/blazor/syncfusion.blazor.spreadsheet.sfspreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_Redo) method on the `SfSpreadsheet` instance.
+The redo action can also be performed programmatically by calling the [Redo()](https://help.syncfusion.com/cr/blazor/syncfusion.blazor.spreadsheet.sfspreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_Redo) method on the `SfSpreadsheet` instance.
 
 
 {% tabs %}
@@ -99,13 +99,13 @@ The redo action can also be performed programmatically by calling the [`Redo`](h
 
 <SfButton OnClick="PerformRedo" Content="Redo"></SfButton>
 
-<SfSpreadsheet @ref="SpreadsheetRef" DataSource="DataSourceBytes">
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
 @code {
     public byte[] DataSourceBytes { get; set; }
-    public SfSpreadsheet SpreadsheetRef;
+    public SfSpreadsheet SpreadsheetInstance;
 
     protected override void OnInitialized()
     {
@@ -116,7 +116,7 @@ The redo action can also be performed programmatically by calling the [`Redo`](h
     public async Task PerformRedo()
     {
         // Reapplies the most recently undone action in the active worksheet.
-        await SpreadsheetRef.Redo();
+        await SpreadsheetInstance.Redo();
     }
 }
 

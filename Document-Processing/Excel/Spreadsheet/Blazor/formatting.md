@@ -52,7 +52,7 @@ Number formats can be applied through the UI using the following method:
 
 ### Applying Number Formats Programmatically
 
-Number formats can be applied programmatically to the current selection or a specified range using the [NumberFormatAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_NumberFormatAsync_System_String_System_String_) method. This method accepts a format string and an optional cell address.
+Number formats can be applied programmatically to the current selection or a specified range using the [NumberFormatAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_NumberFormatAsync_System_String_System_String_) method. This method accepts a format string and an optional cell address.
 
 | Parameter | Type | Description |
 | -- | -- | -- |
@@ -91,13 +91,11 @@ Number formats can be applied programmatically to the current selection or a spe
 {% endhighlight %}
 {% endtabs %}
 
-N> If the built-in formats do not meet specific requirements, custom patterns can be applied programmatically using the [NumberFormatAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_NumberFormatAsync_System_String_System_String_) method. Patterns must be compatible with Excel-style format strings.
+N> If the built-in formats do not meet specific requirements, custom patterns can be applied programmatically using the [NumberFormatAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_NumberFormatAsync_System_String_System_String_) method. Patterns must be compatible with Excel-style format strings.
 
 ## Text and Cell Formatting
 
 Text and cell formatting enhances the visual presentation of data by applying styles such as font changes, colors, borders, and alignment to individual cells or cell ranges. This helps organize content and emphasize important information for faster interpretation.
-
-All text and cell formatting options are accessible from the **Home** tab in the Ribbon, primarily under the **Font**, **Alignment**, and **Number** groups.
 
 ### Text Formatting
 
@@ -169,8 +167,6 @@ Border color, size, and style can also be customized. The supported sizes and st
 | Dotted | Creates a `dotted` border. |
 | Double | Creates a `double` border. |
 
-N> In the Blazor Spreadsheet API, both border weight and border pattern are exposed through the single [Syncfusion.XlsIO.ExcelLineStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.XlsIO.ExcelLineStyle.html) enum. Weight-based members such as `Thin`, `Medium`, and `Thick` correspond to the 1px/2px/3px sizes in the table above, while pattern-based members such as `Dashed`, `Dotted`, and `Double` control the line style. When you select a border in the UI, the **Size** dropdown maps to the weight-based members and the **Style** dropdown maps to the pattern-based members.
-
 ### Applying Borders via UI
 
 Borders can be applied through the UI using the following method:
@@ -183,7 +179,7 @@ Borders can be applied through the UI using the following method:
 
 ### Applying Borders Programmatically
 
-Borders can be applied programmatically to a specific cell or range of cells using the [SetBordersAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SetBordersAsync_Syncfusion_Blazor_Spreadsheet_BorderType_Syncfusion_XlsIO_ExcelLineStyle_System_String_System_String_) method. The available parameters in the [SetBordersAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SetBordersAsync_Syncfusion_Blazor_Spreadsheet_BorderType_Syncfusion_XlsIO_ExcelLineStyle_System_String_System_String_) method are:
+Borders can be applied programmatically to a specific cell or range of cells using the [SetBordersAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SetBordersAsync_Syncfusion_Blazor_Spreadsheet_BorderType_Syncfusion_XlsIO_ExcelLineStyle_System_String_System_String_) method. The available parameters in the [SetBordersAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SetBordersAsync_Syncfusion_Blazor_Spreadsheet_BorderType_Syncfusion_XlsIO_ExcelLineStyle_System_String_System_String_) method are:
 
 | Parameter | Type | Description |
 | -- | -- | -- |
@@ -223,16 +219,13 @@ Borders can be applied programmatically to a specific cell or range of cells usi
 
 Conditional formatting enables automatic visual formatting of cells based on specified conditions, helping to highlight data patterns, identify outliers, and improve data interpretation. The Blazor Spreadsheet component provides comprehensive conditional formatting capabilities including color scales, data bars, icon sets, and custom formatting rules. These formats are Excel-compatible, respect worksheet protection settings, and integrate seamlessly with undo/redo operations. To control this functionality, use the [AllowConditionalFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowConditionalFormat) property, which enables or disables conditional formatting support in the Spreadsheet. The default value of the [AllowConditionalFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowConditionalFormat) property is **true**.
 
-To disable conditional formatting, set the `AllowConditionalFormat` property on the `SfSpreadsheet` tag:
-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet
-@using System.IO
 
-<SfSpreadsheet AllowConditionalFormat="false" DataSource="DataSourceBytes">
+<SfSpreadsheet AllowConditionalFormat="false">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
@@ -253,7 +246,7 @@ To apply conditional formatting through the UI:
 
 ### Conditional formatting programmatically
 
-Apply conditional formatting using the [`ConditionalFormatAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ConditionalFormatAsync_Syncfusion_Blazor_Spreadsheet_ConditionalFormatRule_) method with a [ConditionalFormatRule](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.ConditionalFormatRule.html) object to define the condition, format type, range, and styling.
+Apply conditional formatting using the [ConditionalFormatAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ConditionalFormatAsync_Syncfusion_Blazor_Spreadsheet_ConditionalFormatRule_) method with a [ConditionalFormatRule](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.ConditionalFormatRule.html) object to define the condition, format type, range, and styling.
 
 The following table lists the commonly used properties of `ConditionalFormatRule`:
 
@@ -277,7 +270,7 @@ The following table lists the commonly used properties of `ConditionalFormatRule
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
-<button @onclick="HighlightHighScores">Highlight Scores > 80</button>
+<button @onclick="HighlightHighScores">Highlight Scores greater than 80</button>
 <SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
@@ -344,7 +337,7 @@ N> The [ConditionalFormatColor](https://help.syncfusion.com/cr/blazor/Syncfusion
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
-<button @onclick="HighlightHighScores">Highlight Scores > 80</button>
+<button @onclick="HighlightHighScores">Highlight Scores greater than 80</button>
 <SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
@@ -699,7 +692,7 @@ Conditional formatting can be cleared through the UI or programmatically.
 
 ### Clearing conditional format programmatically
 
-Use the [`ClearConditionalFormatsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ClearConditionalFormatsAsync_System_String_) method to remove conditional formatting rules from specific cells or ranges.
+Use the [ClearConditionalFormatsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ClearConditionalFormatsAsync_System_String_) method to remove conditional formatting rules from specific cells or ranges.
 
 | Parameter | Type | Description |
 | -- | -- | -- |

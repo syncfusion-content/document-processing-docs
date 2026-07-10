@@ -31,7 +31,7 @@ In the **Protect Sheet** dialog, perform the following steps:
 
 ### Protecting a sheet programmatically
 
-The Spreadsheet component supports protecting a specific worksheet through the [ProtectSheetAsync(string)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ProtectSheetAsync_System_String_) method. This method protects a named sheet using the default protection settings. No password is applied, so any user with access to the workbook can unprotect the sheet.
+The Spreadsheet component supports protecting a specific worksheet through the [ProtectSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ProtectSheetAsync_System_String_) method. This method protects a named sheet using the default protection settings. No password is applied, so any user with access to the workbook can unprotect the sheet.
 
 **Declaration**
 
@@ -53,11 +53,10 @@ The available parameters are:
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet
 @using Syncfusion.Blazor.Buttons
-@using System.IO
 
 <SfButton OnClick="ProtectHandler" Content="Protect"></SfButton>
 
-<SfSpreadsheet DataSource="DataSourceBytes" @ref="SpreadsheetRef">
+<SfSpreadsheet DataSource="DataSourceBytes" @ref="SpreadsheetInstance">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
@@ -65,7 +64,7 @@ The available parameters are:
 
     public byte[] DataSourceBytes { get; set; }
 
-    public SfSpreadsheet SpreadsheetRef { get; set; }
+    public SfSpreadsheet SpreadsheetInstance;
 
     protected override void OnInitialized()
     {
@@ -76,11 +75,11 @@ The available parameters are:
     public async Task ProtectHandler()
     {
         // Protect a specific sheet by name.
-        await SpreadsheetRef.ProtectSheetAsync("Sheet1");
+        await SpreadsheetInstance.ProtectSheetAsync("Sheet1");
 
         // Protect multiple sheets individually.
-        await SpreadsheetRef.ProtectSheetAsync("DataSheet");
-        await SpreadsheetRef.ProtectSheetAsync("Summary");
+        await SpreadsheetInstance.ProtectSheetAsync("DataSheet");
+        await SpreadsheetInstance.ProtectSheetAsync("Summary");
     }
 }
 
@@ -156,7 +155,7 @@ When the sheet is protected without a password, no password entry is required an
 
 ### Unprotecting a sheet programmatically
 
-The [UnprotectSheetAsync(string)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_UnprotectSheetAsync_System_String_) method removes protection from a specific worksheet.
+The [UnprotectSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_UnprotectSheetAsync_System_String_) method removes protection from a specific worksheet.
 
 **Declaration**
 
@@ -181,7 +180,7 @@ The available parameters are:
 
 <SfButton OnClick="UnprotectHandler" Content="Unprotect"></SfButton>
 
-<SfSpreadsheet DataSource="DataSourceBytes" @ref="SpreadsheetRef">
+<SfSpreadsheet DataSource="DataSourceBytes" @ref="SpreadsheetInstance">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
@@ -189,7 +188,7 @@ The available parameters are:
 
     public byte[] DataSourceBytes { get; set; }
 
-    public SfSpreadsheet SpreadsheetRef { get; set; }
+    public SfSpreadsheet SpreadsheetInstance;
 
     protected override void OnInitialized()
     {
@@ -200,11 +199,11 @@ The available parameters are:
     public async Task UnprotectHandler()
     {
         // Unprotect a specific sheet by name.
-        await SpreadsheetRef.UnprotectSheetAsync("Sheet1");
+        await SpreadsheetInstance.UnprotectSheetAsync("Sheet1");
 
         // Unprotect multiple sheets individually.
-        await SpreadsheetRef.UnprotectSheetAsync("DataSheet");
-        await SpreadsheetRef.UnprotectSheetAsync("Summary");
+        await SpreadsheetInstance.UnprotectSheetAsync("DataSheet");
+        await SpreadsheetInstance.UnprotectSheetAsync("Summary");
     }
 }
 
@@ -226,7 +225,7 @@ To protect the workbook:
 
 ### Protecting a workbook programmatically
 
-Workbook protection is applied through the same [ProtectSheetAsync(string)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ProtectSheetAsync_System_String_) method, called with a `null` or empty `sheetName` argument. When no sheet name is provided, the entire workbook (all sheets and the workbook structure) is protected using the default protection settings. No password is applied, so any user with access to the workbook can unprotect it.
+Workbook protection is applied through the same [ProtectSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ProtectSheetAsync_System_String_) method, called with a `null` or empty `sheetName` argument. When no sheet name is provided, the entire workbook (all sheets and the workbook structure) is protected using the default protection settings. No password is applied, so any user with access to the workbook can unprotect it.
 
 **Examples**
 
@@ -236,11 +235,10 @@ Workbook protection is applied through the same [ProtectSheetAsync(string)](http
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet
 @using Syncfusion.Blazor.Buttons
-@using System.IO
 
 <SfButton OnClick="ProtectWorkbookHandler" Content="Protect Workbook"></SfButton>
 
-<SfSpreadsheet DataSource="DataSourceBytes" @ref="SpreadsheetRef">
+<SfSpreadsheet DataSource="DataSourceBytes" @ref="SpreadsheetInstance">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
@@ -248,7 +246,7 @@ Workbook protection is applied through the same [ProtectSheetAsync(string)](http
 
     public byte[] DataSourceBytes { get; set; }
 
-    public SfSpreadsheet SpreadsheetRef { get; set; }
+    public SfSpreadsheet SpreadsheetInstance;
 
     protected override void OnInitialized()
     {
@@ -259,7 +257,7 @@ Workbook protection is applied through the same [ProtectSheetAsync(string)](http
     public async Task ProtectWorkbookHandler()
     {
         // Protects the entire workbook (structure and all sheets) using the default protection settings.
-        await SpreadsheetRef.ProtectSheetAsync();
+        await SpreadsheetInstance.ProtectSheetAsync();
     }
 }
 
@@ -284,7 +282,7 @@ To unprotect the workbook:
 
 ### Unprotecting a workbook programmatically
 
-Workbook unprotection is applied through the same [UnprotectSheetAsync(string)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_UnprotectSheetAsync_System_String_) method, called with a `null` or empty `sheetName` argument. When no sheet name is provided, all workbook structure protection is removed.
+Workbook unprotection is applied through the same [UnprotectSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_UnprotectSheetAsync_System_String_) method, called with a `null` or empty `sheetName` argument. When no sheet name is provided, all workbook structure protection is removed.
 
 **Examples**
 
@@ -297,7 +295,7 @@ Workbook unprotection is applied through the same [UnprotectSheetAsync(string)](
 
 <SfButton OnClick="UnprotectWorkbookHandler" Content="Unprotect Workbook"></SfButton>
 
-<SfSpreadsheet DataSource="DataSourceBytes" @ref="SpreadsheetRef">
+<SfSpreadsheet DataSource="DataSourceBytes" @ref="SpreadsheetInstance">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
@@ -305,7 +303,7 @@ Workbook unprotection is applied through the same [UnprotectSheetAsync(string)](
 
     public byte[] DataSourceBytes { get; set; }
 
-    public SfSpreadsheet SpreadsheetRef { get; set; }
+    public SfSpreadsheet SpreadsheetInstance;
 
     protected override void OnInitialized()
     {
@@ -316,7 +314,7 @@ Workbook unprotection is applied through the same [UnprotectSheetAsync(string)](
     public async Task UnprotectWorkbookHandler()
     {
         // Removes protection from the entire workbook (structure and all sheets).
-        await SpreadsheetRef.UnprotectSheetAsync();
+        await SpreadsheetInstance.UnprotectSheetAsync();
     }
 }
 

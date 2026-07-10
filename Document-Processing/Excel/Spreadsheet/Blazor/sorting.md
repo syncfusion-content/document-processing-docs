@@ -20,21 +20,10 @@ The example below shows how to disable sorting across the entire Spreadsheet:
 
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet
-@using System.IO
 
-<SfSpreadsheet AllowSorting="false" DataSource="DataSourceBytes">
+<SfSpreadsheet AllowSorting="false">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
-
-@code {
-    public byte[] DataSourceBytes { get; set; }
-
-    protected override void OnInitialized()
-    {
-        string filePath = "wwwroot/Sample.xlsx";
-        DataSourceBytes = File.ReadAllBytes(filePath);
-    }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -106,7 +95,7 @@ If the range **B2:D10** is selected and the active cell is in **Column D**, the 
 
 The programmatic API lets you trigger a sort from code, for example from a toolbar button, a context-menu action, or after data is loaded. Use the API when the sort order must be determined by application logic rather than direct user interaction.
 
-The [`SortRangeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SortRangeAsync_System_String_Syncfusion_Blazor_Spreadsheet_SortDirection_) method enables sorting of a specified range of cells based on the values in a specific column. This method provides a programmatic way to sort data without using the UI. The available parameters in the `SortRangeAsync` method are:
+The [SortRangeAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SortRangeAsync_System_String_Syncfusion_Blazor_Spreadsheet_SortDirection_) method enables sorting of a specified range of cells based on the values in a specific column. This method provides a programmatic way to sort data without using the UI. The available parameters in the `SortRangeAsync()` method are:
 
 | **Parameter**     | **Type**                   | **Description** |
 |-------------------|----------------------------|-----------------|

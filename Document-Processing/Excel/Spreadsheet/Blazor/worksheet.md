@@ -29,7 +29,7 @@ To add or insert a new sheet using the UI, follow these steps:
 
 ### Insert Sheet Programmatically
 
-Use the [InsertSheetAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_InsertSheetAsync_System_Nullable_System_Int32__System_Int32_) method to add one or more sheets to a workbook programmatically. It supports two main scenarios: adding multiple sheets with default names or adding a single sheet with a user-defined name. Below are the details for each scenario, including code examples and parameter information.
+Use the [InsertSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_InsertSheetAsync_System_Nullable_System_Int32__System_Int32_) method to add one or more sheets to a workbook programmatically. It supports two main scenarios: adding multiple sheets with default names or adding a single sheet with a user-defined name. Below are the details for each scenario, including code examples and parameter information.
 
 **Insert multiple sheets at a specific index**
 
@@ -41,20 +41,20 @@ This method inserts one or more sheets at a specified position in the workbook. 
 | count | int (optional) | The number of sheets to add. Defaults to 1 if not specified. |
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor"%}
 
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
 <button @onclick="InsertSheetHandler">Insert Sheet</button>
 
-<SfSpreadsheet @ref="SpreadsheetRef" DataSource="DataSourceBytes">
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
 @code {
     public byte[] DataSourceBytes { get; set; }
-    public SfSpreadsheet SpreadsheetRef;
+    public SfSpreadsheet SpreadsheetInstance;
 
     protected override void OnInitialized()
     {
@@ -65,7 +65,7 @@ This method inserts one or more sheets at a specified position in the workbook. 
     public async Task InsertSheetHandler()
     {
         // Insert 2 sheets at index 1.
-        await SpreadsheetRef.InsertSheetAsync(1, 2);
+        await SpreadsheetInstance.InsertSheetAsync(1, 2);
     }
 }
 
@@ -82,21 +82,20 @@ This method adds one sheet at a specific position with a user-defined name. Each
 | sheetName | string | The name for the new sheet. If the name already exists in the workbook, no action occurs. |
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet
-@using System.IO
 
 <button @onclick="InsertSheetHandler">Insert Sheet</button>
 
-<SfSpreadsheet @ref="SpreadsheetRef" DataSource="DataSourceBytes">
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
 @code {
     public byte[] DataSourceBytes { get; set; }
-    public SfSpreadsheet SpreadsheetRef;
+    public SfSpreadsheet SpreadsheetInstance;
 
     protected override void OnInitialized()
     {
@@ -107,7 +106,7 @@ This method adds one sheet at a specific position with a user-defined name. Each
     public async Task InsertSheetHandler()
     {
         // Insert a sheet at index 1 with a user-defined name.
-        await SpreadsheetRef.InsertSheetAsync(1, "Sales");
+        await SpreadsheetInstance.InsertSheetAsync(1, "Sales");
     }
 }
 
@@ -133,7 +132,7 @@ The method returns an object describing the active worksheet. The following prop
 | SelectedRange | string | The currently selected cell or range address in the active worksheet (for example, "A1" or "A2:B5"). |
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
@@ -188,10 +187,9 @@ Each entry in the returned dictionary maps a cell address to a `CellData` object
 | Style | object | The calculated cell style, including font, fill, border, and alignment information for the cell. |
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet
-@using System.IO
 
 <button @onclick="GetData">Get Data</button>
 <SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
@@ -235,7 +233,7 @@ To remove a sheet using the user interface (UI), follow these steps:
 
 ### Delete Sheet Programmatically
 
-Sheets can be deleted using the [DeleteSheetAsync(int?)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DeleteSheetAsync_System_Nullable_System_Int32__) method (by index) or the [DeleteSheetAsync(string)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DeleteSheetAsync_System_String_) overload (by name). Below are the details for each scenario, including code examples and parameter information.
+Sheets can be deleted using the [DeleteSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DeleteSheetAsync_System_Nullable_System_Int32__) method (by index) or the [DeleteSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DeleteSheetAsync_System_String_) overload (by name). Below are the details for each scenario, including code examples and parameter information.
 
 **Delete sheet by index**
 
@@ -246,20 +244,20 @@ This method removes a sheet at a specific index. It works best when the sheet lo
 | index | int (optional) | The zero-based index of the sheet to delete. If no index is provided, the active sheet is deleted. If the index is invalid (e.g., negative or beyond the workbook's sheet count) or the workbook has only one sheet, no action occurs. |
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
 <button @onclick="DeleteSheetHandler">Delete Sheet</button>
 
-<SfSpreadsheet @ref="SpreadsheetRef" DataSource="DataSourceBytes">
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
 @code {
     public byte[] DataSourceBytes { get; set; }
-    public SfSpreadsheet SpreadsheetRef;
+    public SfSpreadsheet SpreadsheetInstance;
 
     protected override void OnInitialized()
     {
@@ -270,7 +268,7 @@ This method removes a sheet at a specific index. It works best when the sheet lo
     public async Task DeleteSheetHandler()
     {
         // Remove sheet at index 0.
-        await SpreadsheetRef.DeleteSheetAsync(0);
+        await SpreadsheetInstance.DeleteSheetAsync(0);
     }
 }
 
@@ -286,20 +284,20 @@ This method removes a sheet that matches the given name. It helps when the exact
 | sheetName | string | The name of the sheet to delete. If the name does not exist or the workbook has only one sheet, no action occurs. |
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
 <button @onclick="DeleteSheetHandler">Delete Sheet</button>
 
-<SfSpreadsheet @ref="SpreadsheetRef" DataSource="DataSourceBytes">
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
 @code {
     public byte[] DataSourceBytes { get; set; }
-    public SfSpreadsheet SpreadsheetRef;
+    public SfSpreadsheet SpreadsheetInstance;
 
     protected override void OnInitialized()
     {
@@ -310,7 +308,7 @@ This method removes a sheet that matches the given name. It helps when the exact
     public async Task DeleteSheetHandler()
     {
         // Remove sheet named "Sales".
-        await SpreadsheetRef.DeleteSheetAsync("Sales");
+        await SpreadsheetInstance.DeleteSheetAsync("Sales");
     }
 }
 
@@ -380,7 +378,7 @@ N> **Move Right** is enabled only if a sheet exists to the right, and **Move Lef
 
 ### Move Sheet Programmatically
 
-The [MoveSheetAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_MoveSheetAsync_System_Nullable_System_Int32__System_Int32_) method moves a sheet from one index to another programmatically. This method requires two parameters: the current zero-based index of the sheet to move and the destination zero-based index where the sheet will be placed. If either index is invalid (negative or beyond the sheet count), the method will not perform any action.
+The [MoveSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_MoveSheetAsync_System_Nullable_System_Int32__System_Int32_) method moves a sheet from one index to another programmatically. This method requires two parameters: the current zero-based index of the sheet to move and the destination zero-based index where the sheet will be placed. If either index is invalid (negative or beyond the sheet count), the method will not perform any action.
 
 | Parameter | Type | Description |
 | -- | -- | -- |
@@ -388,20 +386,20 @@ The [MoveSheetAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spr
 | destinationIndex | int | The zero-based index where the sheet will be moved. If invalid, no action occurs. |
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
 <button @onclick="MoveSheetHandler">Move Sheet</button>
 
-<SfSpreadsheet @ref="SpreadsheetRef" DataSource="DataSourceBytes">
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
 @code {
     public byte[] DataSourceBytes { get; set; }
-    public SfSpreadsheet SpreadsheetRef;
+    public SfSpreadsheet SpreadsheetInstance;
 
     protected override void OnInitialized()
     {
@@ -412,7 +410,7 @@ The [MoveSheetAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spr
     public async Task MoveSheetHandler()
     {
         // Move sheet from index 0 to index 2.
-        await SpreadsheetRef.MoveSheetAsync(0, 2);
+        await SpreadsheetInstance.MoveSheetAsync(0, 2);
     }
 }
 
@@ -431,7 +429,7 @@ To duplicate a sheet using the user interface (UI), simply right-click on the de
 
 ### Duplicate Sheet Programmatically
 
-Use the [DuplicateSheetAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DuplicateSheetAsync_System_Nullable_System_Int32__) method to duplicate a worksheet programmatically by specifying its index or name. The duplicated sheet is inserted immediately after the original sheet. Below are details for duplicating a sheet by index or by name, including parameter information and code examples.
+Use the [DuplicateSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DuplicateSheetAsync_System_Nullable_System_Int32__) method to duplicate a worksheet programmatically by specifying its index or name. The duplicated sheet is inserted immediately after the original sheet. Below are details for duplicating a sheet by index or by name, including parameter information and code examples.
 
 **Duplicate sheet by index**
 
@@ -442,20 +440,20 @@ This method creates a copy of the sheet at the specified index. If no index is p
 | index | int (optional) | The zero-based index of the sheet to duplicate. If no index is provided, the active sheet is duplicated. If the index is invalid (e.g., negative or beyond sheet count), no action occurs. |
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor"%}
 
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
 <button @onclick="DuplicateSheetHandler">Duplicate Sheet</button>
 
-<SfSpreadsheet @ref="SpreadsheetRef" DataSource="DataSourceBytes">
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
 @code {
     public byte[] DataSourceBytes { get; set; }
-    public SfSpreadsheet SpreadsheetRef;
+    public SfSpreadsheet SpreadsheetInstance;
 
     protected override void OnInitialized()
     {
@@ -466,7 +464,7 @@ This method creates a copy of the sheet at the specified index. If no index is p
     public async Task DuplicateSheetHandler()
     {
         // Duplicate the sheet at index 0.
-        await SpreadsheetRef.DuplicateSheetAsync(0);
+        await SpreadsheetInstance.DuplicateSheetAsync(0);
     }
 }
 
@@ -482,20 +480,20 @@ This method creates a copy of the sheet with the specified name. The sheet name 
 | `sheetName` | `string` | The name of the sheet to duplicate. If the name does not exist, no action occurs. |
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
 <button @onclick="DuplicateSheetHandler">Duplicate Sheet</button>
 
-<SfSpreadsheet @ref="SpreadsheetRef" DataSource="DataSourceBytes">
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
 @code {
     public byte[] DataSourceBytes { get; set; }
-    public SfSpreadsheet SpreadsheetRef;
+    public SfSpreadsheet SpreadsheetInstance;
 
     protected override void OnInitialized()
     {
@@ -506,7 +504,7 @@ This method creates a copy of the sheet with the specified name. The sheet name 
     public async Task DuplicateSheetHandler()
     {
         // Duplicates the sheet named "Sheet1".
-        await SpreadsheetRef.DuplicateSheetAsync("Sheet1");
+        await SpreadsheetInstance.DuplicateSheetAsync("Sheet1");
     }
 }
 
