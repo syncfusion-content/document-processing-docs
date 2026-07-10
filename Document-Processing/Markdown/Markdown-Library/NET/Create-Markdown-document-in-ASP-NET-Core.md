@@ -141,6 +141,8 @@ Step 8: Run the project.
 
 Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
 
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/ASP.NET%20Core).
+
 By executing the program, you will get the **Markdown document** as follows.
 
 ![ASP.Net Core output Markdown document](GettingStarted_images/GettingStarted_Output1.png)

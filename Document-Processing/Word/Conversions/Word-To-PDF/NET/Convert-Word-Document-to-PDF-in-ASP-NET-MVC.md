@@ -56,7 +56,7 @@ Step 6: Add a new button in the Index.cshtml as shown below.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight cshtml tabtitle="CSHTML" %}
 
 @{Html.BeginForm("ConvertWordtoPDF", "Home", FormMethod.Get);
 {
@@ -177,7 +177,7 @@ Step 5: Add a new button in the Index.cshtml as shown below.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight cshtml tabtitle="CSHTML" %}
 
 @{Html.BeginForm("ConvertWordtoPDF", "Home", FormMethod.Get);
 {
