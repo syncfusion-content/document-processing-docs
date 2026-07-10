@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Prevent the PDF from scrolling | Syncfusion
-description: Learn how to prevent scrolling and remove the vertical scrollbar in the SfPdfViewer.
+description: Learn here all about how to prevent scrolling and remove the vertical scrollbar in the SfPdfViewer Component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print the SfPdfViewer inside the Dialog component | Syncfusion
-description: Learn how to print the SfPdfViewer inside a Syncfusion Dialog in the SfPdfViewer.
+description: Learn here all about how to print the SfPdfViewer inside a Syncfusion Dialog in the Blazor SfPdfViewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Print the SfPdfViewer inside the Dialog component in Blazor
 
-The SfPdfViewer supports printing the loaded PDF document by default. The following example hosts the viewer inside a Syncfusion Dialog (popup) and prints the document after the PDF finishes loading.
+The `SfPdfViewer` supports printing the loaded PDF document by default. The following example hosts the viewer inside a Syncfusion Dialog (popup) and prints the document after the PDF finishes loading.
 
 The following code illustrates how to perform a print action once the SfPdfViewer is loaded.
 

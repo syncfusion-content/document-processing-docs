@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create a SfPdfViewer within a popup window in Blazor | Syncfusion
-description: Learn everything about integrating the Blazor SfPdfViewer within a popup window.
+description: Learn here all about how to integrating the Blazor SfPdfViewer Component within a Dialog popup window.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
