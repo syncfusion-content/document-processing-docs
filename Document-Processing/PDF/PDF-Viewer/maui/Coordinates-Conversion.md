@@ -12,16 +12,6 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 PDF Viewer allows users to obtain the PDF page coordinates relative to the PDF Viewer’s client coordinates and vice versa. It also allows you to obtain the scroll point relative to the PDF page coordinates and bring the given region into view.
 
-To work with coordinate conversions, ensure the following namespaces are imported in your code file:
-
-{% tabs %}
-{% highlight c# %}
-using Syncfusion.Maui.PdfViewer;
-using Microsoft.Maui.Graphics;
-using System.Collections.ObjectModel;
-{% endhighlight %}
-{% endtabs %}
-
 ## Client rectangle
 
 The [ClientRectangle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ClientRectangle) in the MAUI PdfViewer control is a rectangular area that represents the dimensions of the client area or viewport. The client area denotes the visible portion of the PDF document within the control. In the MAUI PDF Viewer, this client rectangle is illustrated by the red rectangle in the following figure.
