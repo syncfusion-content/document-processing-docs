@@ -239,7 +239,7 @@ The following example shows how to set default properties for redaction annotati
                                 FontColor="#333333"
                                 FontSize="14"
                                 FontFamily="Symbol"
-                                TextAlignment="@TextAlignment.Right" />
+                                TextAlignment="TextAlignment.Right" />
         <PdfViewerToolbarSettings ToolbarItems="ToolbarItems" MobileToolbarItems="MobileToolbarItems"></PdfViewerToolbarSettings>
 </SfPdfViewer2>
 ```

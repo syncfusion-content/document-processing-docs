@@ -11,12 +11,12 @@ documentation: ug
 
 The built-in toolbar of SfPdfViewer includes the following zoom options:
 
-* **Zoom** **In**: Increases the zoom level (document magnification) by preset steps.
-* **Zoom** **Out**: Decreases the zoom level by preset steps.
-* **Zoom** **To**: Sets the zoom level to a specified value.
-* **Fit** **Page**: Fits the entire page within the available viewport.
-* **Fit** **Width**: Fits the page to the viewport width.
-* **Fit** **Height**: Fits the page to the viewport height.
+* **Zoom In**: Increases the zoom level (document magnification) by preset steps.
+* **Zoom Out**: Decreases the zoom level by preset steps.
+* **Zoom To**: Sets the zoom level to a specified value.
+* **Fit Page**: Fits the entire page within the available viewport.
+* **Fit Width**: Fits the page to the viewport width.
+* **Fit Height**: Fits the page to the viewport height.
 
 ![Zoom options in the Blazor SfPdfViewer](./images/magnification.png)
 
@@ -103,8 +103,10 @@ Zoom operations can also be performed programmatically using APIs such as [ZoomI
 
     public async void OnZoomClick(MouseEventArgs args)
     {
-        int zoomValue = int.Parse(TextBox.Value.ToString());
-        await Viewer.ZoomAsync(zoomValue);
+        if (int.TryParse(TextBox.Value, out int zoomValue))
+        {
+            await Viewer.ZoomAsync(zoomValue);
+        }
     }
 
     public async void OnFitWidthClick(MouseEventArgs args)
@@ -135,8 +137,6 @@ Configure minimum and maximum zoom levels using the [MinZoomValue](https://help.
 
 Specify the zoom limits during component initialization with integer values representing percentages.
 
-N> SfPdfViewer supports zoom values from 10% to 400%.
-
 ### Basic usage of Minimum and Maximum Zoom Values
 
 ```cshtml
@@ -156,7 +156,7 @@ N> SfPdfViewer supports zoom values from 10% to 400%.
 
 ```
 
-See the following image.
+The following image shows the viewer with the configured zoom limits.
 
 ![Viewer with minimum and maximum zoom](./images/minimum-and-maximum-zoom-values.png)
 
@@ -172,7 +172,7 @@ See the following image.
 SfPdfViewer handles invalid input values as follows:
 
 * **Values below 1**: Automatically fall back to the default minimum (10)
-* **MinZoomValue > MaxZoomValue**: MaxZoomValue is adjusted to match MinZoomValue
+* **When MinZoomValue exceeds MaxZoomValue**: MaxZoomValue is adjusted to match MinZoomValue
 
 ### Dynamic zoom value configuration
 
@@ -210,20 +210,22 @@ Minimum and maximum zoom values can be changed dynamically at runtime.
 
     public void SetValueBeyondLimit()
     {
-        maxZoom = 500; // Beyond default limit
-        minZoom = 2;   // Beyond default limit
+        // Values exceed the supported 10%–400% range to demonstrate invalid input handling.
+        maxZoom = 500;
+        minZoom = 2;
     }
 
     public void SwapMinMaxValue()
     {
-        maxZoom = 50;  // Less than minZoom
-        minZoom = 200; // Greater than maxZoom
+        // Intentionally assign an inverted range to demonstrate auto-correction behavior.
+        maxZoom = 50;
+        minZoom = 200;
     }
 }
 
 ```
 
-See the following image.
+The following image shows the dynamic runtime configuration in action.
 
 ![Dynamic runtime configuration of minimum and maximum zoom values](./images/dynamic-zoom-value-configuration.png)
 
@@ -238,9 +240,9 @@ The configured zoom limits apply to all zoom operations, including programmatic 
 
 <SfButton OnClick="OnZoomInClick">Zoom In</SfButton>
 <SfButton OnClick="OnZoomOutClick">Zoom Out</SfButton>
-<SfButton OnClick="OnFitPageClick">Fit Page</SfButton>
-<SfButton OnClick="OnFitWidthClick">Fit Width</SfButton>
-<SfButton OnClick="OnFitHeightClick">Fit Height</SfButton>
+<SfButton OnClick="OnFitPageClick">Fit To Page</SfButton>
+<SfButton OnClick="OnFitWidthClick">Fit To Width</SfButton>
+<SfButton OnClick="OnFitHeightClick">Fit To Height</SfButton>
 
 <SfPdfViewer2 @ref="viewer" 
               DocumentPath="@DocumentPath" 
@@ -282,7 +284,7 @@ The configured zoom limits apply to all zoom operations, including programmatic 
 
 ```
 
-See the following image.
+The following image shows zoom limits applied to the built-in zoom operations.
 
 ![Integration with Zoom Operations](./images/integration-with-zoom-operations.png)
 
@@ -352,7 +354,7 @@ Use the [RestrictZoomRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 ```
 
-See the following image.
+The following image shows the viewer with RestrictZoomRequest enabled.
 
 ![RestrictZoomRequest enabled for performance-optimized zooming](./images/RestrictZoomRequest-API.png)
 

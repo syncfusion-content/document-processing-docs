@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Opening PDF file in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to load PDF files from various locations like database, cloud and remote URL in the Syncfusion Blazor SfPdfViewer component.
+description: Learn how to load PDF files from various locations like database, cloud and remote URL in the Blazor SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -34,13 +34,15 @@ If a PDF file is hosted on the web, it can be opened in the viewer by providing 
 
 Open PDF files stored in cloud storage by converting the file to a Base64 string and assigning it to `DocumentPath`.
 
+### Azure Blob Storage
+
 The following code example shows how to open and load a PDF file stored in Azure Blob Storage.
 
 ```cshtml
 
 @using Azure.Storage.Blobs
 @using Azure.Storage.Blobs.Specialized
-@using System.IO;
+@using System.IO
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 DocumentPath="@DocumentPath"
@@ -70,9 +72,11 @@ The following code example shows how to open and load a PDF file stored in Azure
 
 N> The **Azure.Storage.Blobs** NuGet package must be installed in the application to use the previous code example. Configure credentials securely (for example, using configuration providers or managed identity) and ensure CORS is enabled on the storage account if the file is fetched from the browser.
 
+### Azure File Shares
+
 ```cshtml
 @using Azure.Storage.Files.Shares
-@using System.IO;
+@using System.IO
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 DocumentPath="@DocumentPath"
@@ -80,7 +84,7 @@ N> The **Azure.Storage.Blobs** NuGet package must be installed in the applicatio
               Height="100%" />
 
 @code {
-    public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
+    public string DocumentPath { get; set; }
     protected override void OnInitialized()
     {
         //Connection String of Storage Account
@@ -120,8 +124,9 @@ The following code example shows how to open a PDF file from a SQL Server databa
         string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Database.mdf;";
         System.Data.SqlClient.SqlConnection connection = new System.Data.SqlClient.SqlConnection(connectionString);
         //Searches for the PDF document from the database
-        string query = "select Data from Table where DocumentName = '" + documentID + "'";
+        string query = "select Data from Table where DocumentName = @documentID";
         System.Data.SqlClient.SqlCommand command = new System.Data.SqlClient.SqlCommand(query, connection);
+        command.Parameters.AddWithValue("@documentID", documentID);
         connection.Open();
         System.Data.SqlClient.SqlDataReader read = command.ExecuteReader();
         read.Read();
@@ -132,11 +137,11 @@ The following code example shows how to open a PDF file from a SQL Server databa
 }
 ```
 
-Note: The System.Data.SqlClient package must be installed in the application to use the previous code example. For production scenarios, use parameterized queries and dispose database objects properly. Store connection strings securely (for example, appsettings.json or user secrets).
+N> The System.Data.SqlClient package must be installed in the application to use the previous code example. For production scenarios, use parameterized queries and dispose database objects properly. Store connection strings securely (for example, appsettings.json or user secrets).
 
-## Opening a PDF from file system
+## Opening a PDF from the local file system
 
-The built-in toolbar includes an Open option that loads a PDF from the local file system. To replicate this behavior in a custom toolbar, the following example uses the Syncfusion Uploader component to obtain a file and then loads it in the viewer. Ensure the application processes the file content correctly (for example, reading the stream and converting to a Base64 data URL) before assigning it to the viewer.
+The built-in toolbar includes an Open option that loads a PDF from the local file system. The following example uses the Syncfusion Uploader component to obtain a file and then loads it in the viewer. The `LoadAsync` method accepts the file path as the first parameter and the password of a protected PDF as the second parameter.
 
 ```cshtml
 
@@ -144,8 +149,8 @@ The built-in toolbar includes an Open option that loads a PDF from the local fil
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfUploader ID="UploadFiles" AllowedExtensions=".pdf,.PDF">
-    <UploaderEvents OnUploadStart="onsuccess"></UploaderEvents>
-    <UploaderAsyncSettings SaveUrl="https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save" 
+    <UploaderEvents OnUploadStart="OnUploadStart"></UploaderEvents>
+    <UploaderAsyncSettings SaveUrl="https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save"
     RemoveUrl="https://aspnetmvc.syncfusion.com/services/api/uploadbox/Remove">
     </UploaderAsyncSettings>
 </SfUploader>
@@ -157,7 +162,7 @@ The built-in toolbar includes an Open option that loads a PDF from the local fil
 
 @code {
     SfPdfViewer2 Viewer;
-    public async void onsuccess(UploadingEventArgs action)
+    public async void OnUploadStart(UploadingEventArgs action)
     {
         string filePath = action.FileData.RawFile.ToString();
         await Viewer.LoadAsync(filePath, null);
@@ -166,7 +171,7 @@ The built-in toolbar includes an Open option that loads a PDF from the local fil
 
 ```
 
-## Opening a PDF from base64 data
+## Opening a PDF from a Base64 string
 
 The following code snippet shows how to load a PDF in SfPdfViewer using a Base64 string by assigning a data URL to DocumentPath. Large files encoded as Base64 increase memory usage; consider using a URL for very large documents.
 
@@ -181,18 +186,22 @@ The following code snippet shows how to load a PDF in SfPdfViewer using a Base64
 </SfPdfViewer2>
 
 @code {
-    static byte[] byteArray = System.IO.File.ReadAllBytes("wwwroot/Data/PDF_Succinctly.pdf");
-    static string base64String = Convert.ToBase64String(byteArray);
-    public string DocumentPath { get; set; } = "data:application/pdf;base64," + base64String;
+    public string DocumentPath { get; set; }
+    protected override void OnInitialized()
+    {
+        byte[] byteArray = System.IO.File.ReadAllBytes("wwwroot/Data/PDF_Succinctly.pdf");
+        string base64String = Convert.ToBase64String(byteArray);
+        DocumentPath = "data:application/pdf;base64," + base64String;
+    }
 }
 
 ```
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20a%20PDF%20file%20from%20base%2064%20string)
 
-## Opening a PDF from stream
+## Opening a PDF from a file stream
 
-Load a PDF from a stream by converting it to a Base64 string and assigning it to DocumentPath. This approach is useful when the file originates from an API or in-memory source.
+Load a PDF from a file stream by converting it to a Base64 string and assigning it to DocumentPath. This approach is useful when the file originates from a file system stream.
 
 ```cshtml
 
