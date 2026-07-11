@@ -32,7 +32,7 @@ You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/sprea
 
 ## See Also
 
-* [Rows and columns](./rows-and-columns)
+* [Rows and columns](./rows-and-columns/overview)
 * [Formatting](./formatting)
 * [Hyperlink](./link)
 * [Sorting](./sort)
