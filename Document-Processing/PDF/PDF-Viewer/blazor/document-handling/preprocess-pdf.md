@@ -2,7 +2,7 @@
 layout: post
 title: Preprocess PDF Document in Blazor PDF Viewer | Syncfusion
 description: Learn how to preprocess PDF documents using Syncfusion PDF Library before displaying them in the Blazor PDF Viewer.
-control: PDF Viewer
+control: SfPdfViewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##

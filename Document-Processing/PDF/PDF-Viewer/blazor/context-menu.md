@@ -3,7 +3,7 @@ layout: post
 title: Context Menu in Blazor PDF Viewer | Syncfusion
 description: Learn how to customize the context menu in the Syncfusion Blazor PDF Viewer, including default items and custom configuration options using ContextMenuSettings.
 platform: document-processing
-control: PDF Viewer
+control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
 ---

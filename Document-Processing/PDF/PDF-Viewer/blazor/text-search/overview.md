@@ -3,7 +3,7 @@ layout: post
 title: Text search and Extraction in Blazor PDF Viewer | Syncfusion
 description: Overview of text search capabilities, UI features, programmatic APIs, events and text extraction in the Syncfusion Blazor PDF Viewer.
 platform: document-processing
-control: Text search
+control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
 ---

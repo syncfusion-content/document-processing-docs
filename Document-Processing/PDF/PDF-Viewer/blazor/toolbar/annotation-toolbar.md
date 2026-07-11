@@ -3,7 +3,7 @@ layout: post
 title: Customize the Annotation Toolbar in Blazor PDF Viewer | Syncfusion
 description: Let here all about how to Show or hide and customize the annotation toolbar in the Blazor PDF Viewer with runnable examples.
 platform: document-processing
-control: PDF Viewer
+control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
 ---

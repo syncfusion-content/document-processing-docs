@@ -2,7 +2,7 @@
 layout: post
 title: Create a custom toolbar in Blazor PDF Viewer Component | Syncfusion
 description: Learn here all about custom toolbar in Syncfusion Blazor PDF Viewer component of Syncfusion and more.
-control: PDF Viewer
+control: SfPdfViewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
