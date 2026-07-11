@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Hide and show
+# Hide and show in React Spreadsheet component
 
 You can show or hide the rows and columns in the spreadsheet through property binding, method, and context menu.
 
