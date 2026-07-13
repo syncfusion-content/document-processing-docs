@@ -29,7 +29,15 @@ The following section shows how to validate the Syncfusion<sup>&reg;</sup> licen
 
 
 {% tabs %}
-{% highlight c# tabtitle="PowerShell" %}
+{% highlight c# tabtitle="v34.1.29 and later" %}
+# Replace the parameters with the desired platform, version, and actual license key.
+
+$result = & $PSScriptRoot"\LicenseKeyValidatorConsole.exe" /platform:"WordToPDF" /version:"34.1.29" /licensekey:"Your License Key"
+
+Write-Host $result
+{% endhighlight %}
+
+{% highlight c# tabtitle="Before v34.1.29" %}
 # Replace the parameters with the desired platform, version, and actual license key.
 
 $result = & $PSScriptRoot"\LicenseKeyValidatorConsole.exe" /platform:"FileFormats" /version:"26.2.4" /licensekey:"Your License Key"
@@ -38,11 +46,9 @@ Write-Host $result
 {% endhighlight %}
 {% endtabs %}
 
-![LicenseKeyValidation script](licensing-images/license-validation.png)
-
-* Update the parameters in the LicenseKeyValidation.ps1 script file as described below. 
-
-  **Platform:** Modify the value for `/platform:` to the platform you are using (for example, `FileFormats`).
+* Update the parameters in the script:
+  
+  **Platform:** Set /platform:"**WordToPDF**" for v34.1.29 and later, or /platform:"**FileFormats**" for earlier versions (use the relevant Syncfusion platform as needed).
 
   **Version:** Change the value for `/version:` to the required version (for example, `26.2.4`).
 
@@ -141,7 +147,7 @@ SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
 
 // Validate the registered license key.
 // The array overload allows validating against multiple platforms in a single call.
-bool isValid = SyncfusionLicenseProvider.ValidateLicense(new[] { Platform.FileFormats });
+bool isValid = SyncfusionLicenseProvider.ValidateLicense(new[] { Platform.WordToPDF });
 {% endhighlight %}
 
 {% highlight csharp tabtitle="v31.1.17 to v33.2.3" %}
@@ -151,7 +157,7 @@ using Syncfusion.Licensing;
 SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
 
 // Validate the registered license key
-bool isValid = SyncfusionLicenseProvider.ValidateLicense(Platform.FileFormats);
+bool isValid = SyncfusionLicenseProvider.ValidateLicense(Platform.WordToPDF);
 {% endhighlight %}
 
 {% highlight csharp tabtitle="Before v31.1.17" %}
@@ -165,14 +171,7 @@ bool isValid = SyncfusionLicenseProvider.ValidateLicense(Platform.FileFormats);
 {% endhighlight %}
 {% endtabs %}
 
-**v34.1.29 and later:**
-![License key validation - v34.1.29 and later](licensing-images/license-validation-method_v34.png)
-
-**v31.1.17 to v33.2.3:**
-![License key validation - v31.1.17 to v33.2.3](licensing-images/license-validation-method_v31.png)
-
-**Before v31.1.17:**
-![License key validation - Before v31.1.17](licensing-images/license-validation-method.png)
+N> Use the specific platform enum (`PDF`, `Word`, `Excel`, `PowerPoint`, `WordToPDF`, `ExcelToPDF`, `PowerPointToPDF`, `PDFViewer`, `WordEditor`, or `SpreadsheetEditor`) for license validation from v31.1.17 and later. `Platform.FileFormats` is not supported from v31.1.17 onwards.
 
 * If the `ValidateLicense()` method returns `true`, the registered license key is valid and the build can proceed with deployment.
 
@@ -198,9 +197,6 @@ N> Enclose the license key in double quotes. Also, ensure that `Syncfusion.Licen
 
 {% tabs %}
 {% highlight c# %}
-using NUnit.Framework;
-using Syncfusion.Licensing;
-
 public void TestSyncfusionFileFormatsLicense()
 {
 	var platform = Platform.FileFormats;
