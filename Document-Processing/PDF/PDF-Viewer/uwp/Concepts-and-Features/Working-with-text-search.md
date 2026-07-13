@@ -13,7 +13,7 @@ Text search can be done in two ways, by using the SearchText method or by using 
 
 In all code snippets found below, 'buffer' is the byte array read from the PDF file either using FileOpenPicker or from Assets folder, as illustrated in the [Viewing PDF](https://help.syncfusion.com/uwp/pdf-viewer/concepts-and-features/viewing-pdf) section. 
 
-**Using search methods**
+## Using Search Methods
 
 The following code shows how to initiate the text search using the method.
 {% tabs %}
@@ -26,7 +26,7 @@ private void Page_Loaded(object sender, RoutedEventArgs e)
 
 private void Button_Click(object sender, RoutedEventArgs e)
 {
-    //Searches for the text in the PDF Document.
+    // Searches for the text in the PDF document.
     pdfViewer.SearchText("the");
 }
 {% endhighlight %}
@@ -53,7 +53,7 @@ private void Page_Loaded(object sender, RoutedEventArgs e)
 
 private void Button_Click(object sender, RoutedEventArgs e)
 {
-    //Searches for the text in the PDF Document.
+    // Searches for the text in the PDF document.
     pdfViewer.SearchNextText("the");
 }
 {% endhighlight %}
@@ -80,7 +80,7 @@ private void Page_Loaded(object sender, RoutedEventArgs e)
 
 private void Button_Click(object sender, RoutedEventArgs e)
 {
-    //Searches for the text in the PDF Document.
+    // Searches for the text in the PDF document.
     pdfViewer.SearchPrevText("the");
 }
 {% endhighlight %}
@@ -97,9 +97,9 @@ End Sub
 {% endhighlight %}
 {% endtabs %}
 
-**Using search commands**
+## Using Search Commands
 
-The following code shows how to search for the next instance using SearchNextCommand.
+The following code shows how to search for the next instance using `SearchNextCommand`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -109,17 +109,19 @@ The following code shows how to search for the next instance using SearchNextCom
 </Grid>
 {% endhighlight %}
 {% endtabs %}
-The following code shows how to search for the previous instance using SearchPreviousCommand.
+
+The following code shows how to search for the previous instance using `SearchPreviousCommand`.
+
 {% tabs %}
 {% highlight xaml %}
 <Grid>
         <syncfusion:SfPdfViewerControl Name="pdfViewer"></syncfusion:SfPdfViewerControl>
-        <Button Content="Search Next" Command="{Binding ElementName=pdfViewer, Path=SearchPreviousCommand}" CommandParameter="{Binding Text, ElementName=PageSearchTxtBox}"></Button>
+        <Button Content="Search Previous" Command="{Binding ElementName=pdfViewer, Path=SearchPreviousCommand}" CommandParameter="{Binding Text, ElementName=PageSearchTxtBox}"></Button>
 </Grid>
 {% endhighlight %}
 {% endtabs %}
 
-**Using asynchronous search methods**
+## Using Asynchronous Search Methods
 
 The PDF viewer allows the users to perform text search asynchronously using the [SearchTextAsync](https://help.syncfusion.com/cr/uwp/Syncfusion.Windows.PdfViewer.SfPdfViewerControl.html#Syncfusion_Windows_PdfViewer_SfPdfViewerControl_SearchTextAsync_System_String_System_Threading_CancellationToken_) method. The user can also cancel the asynchronous text search when it is in progress.
 
@@ -135,7 +137,7 @@ private void Page_Loaded(object sender, RoutedEventArgs e)
 
 private void SearchButton_Click(object sender, RoutedEventArgs e)
 {
-    //Searches for the text in the PDF Document.
+    // Searches for the text in the PDF document.
     pdfViewer.SearchTextAsync(targetText, cts.Token);
 }
 
@@ -158,7 +160,7 @@ CancellationTokenSource cts = new CancellationTokenSource();
 
 private void SearchNextButton_Click(object sender, RoutedEventArgs e)
 {
-    //Searches for the next text instance in the PDF Document.
+    // Searches for the next text instance in the PDF document.
     pdfViewer.SearchNextTextAsync(targetText, cts.Token);
 }
 
@@ -179,7 +181,7 @@ CancellationTokenSource cts = new CancellationTokenSource();
 
 private void SearchPreviousButton_Click(object sender, RoutedEventArgs e)
 {
-    //Searches for the previous instance of the text in the PDF Document.
+    // Searches for the previous instance of the text in the PDF document.
     pdfViewer.SearchPreviousTextAsync(targetText, cts.Token);
 }
 
