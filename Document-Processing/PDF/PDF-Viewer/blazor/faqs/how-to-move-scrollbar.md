@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Move the scrollbar to the exact annotations location | Syncfusion
-description: Learn how to scroll the scrollbar precisely to the location of annotations in the Syncfusion Blazor SfPdfViewer component.
+description: Learn how to scroll the scrollbar precisely to the location of annotations in the Blazor SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Scroll to the Exact Annotation position Using Scrollbar
+# Scroll to an Annotation's Position
 
-Use the Syncfusion&reg; Blazor SfPdfViewer component to scroll to the location of an annotation in a loaded PDF by calling the [GoToBookmarkAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_GoToBookmarkAsync_System_Int32_System_Double_) method with the target page number and vertical offset (from the top of the page).
+Use the Blazor SfPdfViewer component to scroll to the location of an annotation in a loaded PDF by calling the [GoToBookmarkAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_GoToBookmarkAsync_System_Int32_System_Double_) method, inherited from `PdfViewerBase`, with the target page number and vertical offset (from the top of the page).
 
 The following example shows how to scroll to an annotation.
 
@@ -17,28 +17,29 @@ The following example shows how to scroll to an annotation.
 
 @using Syncfusion.Blazor.SfPdfViewer
 
-<button @onclick="navigate">Navigation</button>
+<button @onclick="ScrollToAnnotation">Scroll to Annotation</button>
 
 <SfPdfViewer2 @ref="PdfViewer" DocumentPath="@DocumentPath">
     <PdfViewerEvents DocumentLoaded="DocumentLoad"></PdfViewerEvents>
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 PdfViewer;
-    public string DocumentPath { get; set; } = "wwwroot/data/PDF Succinctly.pdf";
-    public Dictionary<int, System.Drawing.SizeF> pageSize { get; set; }
+    private SfPdfViewer2 PdfViewer;
+    private string DocumentPath { get; set; } = "wwwroot/data/PDF Succinctly.pdf";
+    private Dictionary<int, System.Drawing.SizeF> PageSize { get; set; }
 
     private void DocumentLoad(LoadEventArgs args)
     {
-        pageSize = args.PageData.PageSizes;
+        PageSize = args.PageData.PageSizes;
     }
 
-    private async void navigate()
+    private async Task ScrollToAnnotation()
     {
         var annotationCollection = await PdfViewer.GetAnnotationsAsync();
-        var pageNumber = (annotationCollection[0].PageNumber);
+        var pageNumber = annotationCollection[0].PageNumber;
+        // Bound.Top is measured from the top of the page in PDF coordinates; subtract from the page height to convert to the viewer's vertical offset.
         var Y = annotationCollection[0].Bound.Top;
-        await PdfViewer.GoToBookmarkAsync(pageNumber, (pageSize[pageNumber].Height - Y));
+        await PdfViewer.GoToBookmarkAsync(pageNumber, (PageSize[pageNumber].Height - Y));
     }
 
 }
@@ -46,3 +47,9 @@ The following example shows how to scroll to an annotation.
 ```
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Move%20scrollbar%20programmatically).
+
+## See also
+
+* [How to load Microsoft Office files in Blazor SfPdfViewer Component](./how-to-load-office-files)
+* [How to unload the PDF document from Viewer](./how-to-unload-the-pdf-document-from-viewer)
+* [How to show or hide the Component dynamically](./how-to-show-or-hide-sfpdfviewer-dynamically)

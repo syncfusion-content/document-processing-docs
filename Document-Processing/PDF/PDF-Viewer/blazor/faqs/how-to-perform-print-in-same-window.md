@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Perform print in same window using SfPdfViewer | Syncfusion
-description: Learn how to print in the same window in the Syncfusion Blazor SfPdfViewer using PrintMode, with notes on browser behavior and pop-up blockers.
+title: Perform print in the same window using SfPdfViewer | Syncfusion
+description: Learn here all about how to print in the same window in the Blazor SfPdfViewer Component using PrintMode.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Perform print in same window in Blazor SfPdfViewer Component
+# Perform print in the same window in Blazor SfPdfViewer Component
 
-Use the SfPdfViewer2 `PrintMode` enum to control whether printing occurs in the same window or a new window. Available values are `PrintMode.Default` and `PrintMode.NewWindow`.
+Use the `PrintMode` property on `SfPdfViewer2` to control whether printing occurs in the same window or a new window. The `PrintMode` enum supports the following values:
 
-* **Default** - Prints in the same window using `PrintMode.Default`.
-* **NewWindow** - Opens printing in a new browser window or tab (may be affected by pop-up blockers) using `PrintMode.NewWindow`.
+* **Default** - Prints from the same window.
+* **NewWindow** - Opens printing in a new browser window or tab (may be affected by pop-up blockers).
 
 ```cshtml
 @using Syncfusion.Blazor.SfPdfViewer
@@ -29,6 +29,5 @@ Use the SfPdfViewer2 `PrintMode` enum to control whether printing occurs in the 
 
 ## See also
 
-* [Printing options in Blazor SfPdfViewer](../print)
-
+* [Print in Blazor SfPdfViewer Component](../print)
 * [Print the SfPdfViewer inside a Dialog](./how-to-print-the-sfpdfiewer-inside-the-dialog-component)
