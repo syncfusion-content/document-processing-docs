@@ -73,4 +73,6 @@ Step 7: Navigate to the `Swagger UI`, expand the `GET /api/Pdf` API, click `Exec
 By executing the program, you will get the PDF document as follows.
 ![OCR output document](OCR-Images/OCR-output-image.png)
 
-A complete working sample can be downloaded from Github.
+A complete working sample can be downloaded from [Github](https://github.com/SyncfusionExamples/OCR-csharp-examples/tree/master/Web%20API).
+
+Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.

@@ -8,14 +8,14 @@ documentation: UG
 
 # Split PDF Documents using .NET PDF Library
 
-The Syncfusion<sup>&reg;</sup> .NET PDF library supports [Splitting PDF file](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/split-pdf) into single-page or multiple-page PDF documents.
+The .NET PDF library supports [Splitting PDF file](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/split-pdf) into single-page or multiple-page PDF documents.
 
 Check the following video to quickly get started with split PDF document in .NET using the PDF Library.
 {% youtube "https://www.youtube.com/watch?v=GfPY3wwAKF4" %}
 
 ## Splitting a PDF file into individual pages
 
-The Syncfusion<sup>&reg;</sup> .NET PDF library allows splitting the pages of an existing PDF document into multiple individual PDF documents using [Split](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Split_System_String_) method of the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.
+The .NET PDF library allows splitting the pages of an existing PDF document into multiple individual PDF documents using [Split](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Split_System_String_) method of the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.
 
 Refer to the following code example to split a PDF into individual pages.
 
@@ -75,7 +75,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Split a range of pages into a separate PDF document
 
-The Syncfusion<sup>&reg;</sup> .NET PDF library allows splitting a certain range of pages into a separate PDF document using the [SplitByRanges](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_SplitByRanges_System_String_System_Int32_0__0___) method of the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class. 
+The .NET PDF library allows splitting a certain range of pages into a separate PDF document using the [SplitByRanges](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_SplitByRanges_System_String_System_Int32_0__0___) method of the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class. 
 
 Refer to the following code example to split a range of pages.
 
@@ -144,7 +144,7 @@ Download a complete working sample from [GitHub](https://github.com/SyncfusionEx
 
 ## Split by a fixed number of pages into a PDF document
 
-The Syncfusion<sup>&reg;</sup> .NET PDF library allows splitting by fixed number of pages of an existing PDF document using the [SplitByFixedNumber](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_SplitByFixedNumber_System_String_System_Int32_) method of the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.
+The .NET PDF library allows splitting by fixed number of pages of an existing PDF document using the [SplitByFixedNumber](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_SplitByFixedNumber_System_String_System_Int32_) method of the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.
 Refer to the following code example to split by a fixed number of pages.
 
 {% tabs %}  
@@ -202,7 +202,7 @@ Download a complete working sample from [GitHub](https://github.com/SyncfusionEx
 
 ## Split a PDF document based on PDF bookmarks
 
-A PDF document may contain bookmarks that indicate different sections.The Syncfusion<sup>&reg;</sup> .NET PDF library allows splitting a PDF document into sections using the [PdfBookmark](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfBookmark.html) class.
+A PDF document may contain bookmarks that indicate different sections.The .NET PDF library allows splitting a PDF document into sections using the [PdfBookmark](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfBookmark.html) class.
 
 Refer to the following code example to split a PDF using bookmarks.
 
