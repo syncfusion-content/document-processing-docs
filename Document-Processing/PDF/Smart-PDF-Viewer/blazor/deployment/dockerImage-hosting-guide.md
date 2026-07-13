@@ -23,14 +23,14 @@ The following hardware requirements are necessary to run the document processing
 ### Software requirements
 The following software requirements are necessary to run the document processing API:
 
-- Container runtime: Rancher Desktop (with `dockerd` / `Moby` selected as the container runtime)
+- Container runtime: Rancher Desktop (with the container runtime)
 - Web browser: Microsoft Edge, Mozilla Firefox, or Google Chrome
 
 ## Steps to configure and run Docker container
 
 - **Step 1**: Install the Rancher Desktop application from the official release page: [Rancher Desktop](https://github.com/rancher-sandbox/rancher-desktop/releases).
 
-- **Step 2**: Open the Rancher Desktop application and select `dockerd (Moby)` as the container runtime.
+- **Step 2**: Open the Rancher Desktop application and select the container runtime.
 ![Docker engine selection in Rancher Desktop](../images/docker-moby.png)
 
 - **Step 3**: Create a Smart PDF Viewer web app sample by following the [Getting Started documentation](../getting-started/web-app).
