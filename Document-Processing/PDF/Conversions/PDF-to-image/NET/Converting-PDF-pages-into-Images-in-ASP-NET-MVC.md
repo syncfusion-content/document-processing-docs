@@ -10,7 +10,7 @@ documentation: UG
 
 PdfToImageConverter allows you to convert pages from a PDF document into images using the Convert method. You can convert either a single page or pages into images.
 
-## Converting a single page into image
+## Converting a single page into an image
 
 You can export a single page from a PDF file as an image by specifying the page index and setting the parameters `keepTransparency` and `isSkipAnnotations` in the Convert method. To preserve transparency in the output image, make sure to set the `keepTransparency` parameter to true. If you want to exclude annotations and form field elements from the output image, set the `isSkipAnnotations` parameter to true. Refer to the following code to export a single page of PDF into PNG image.
 
@@ -48,7 +48,7 @@ Stream[] outputStream = imageConverter.Convert(0, imageConverter.PageCount-1, fa
 
 ## Exporting with a custom image size
 
-You can export PDF pages as images with custom width and height by passing the required size and setting the parameters `keepTransparency` and `isSkipAnnotations` in the Convert method. To preserve transparency in the output images, make sure to set the `keepTransparency` parameter to true. If you want to exclude annotations and form field elements from the output images, set the `isSkipAnnotations` parameter to true. Refer to the following code to export the pages of PDF into PNG image. Refer to the following code to export the page at the index of 0 into PNG image with the width and the height of 1836 and 2372 in pixels respectively.
+You can export PDF pages as images with custom width and height by passing the required size and setting the parameters `keepTransparency`, `isSkipAnnotations`, and `keepAspectRatio` in the Convert method. To preserve transparency in the output images, make sure to set the `keepTransparency` parameter to true. To maintain the aspect ratio of the output images, set the `keepAspectRatio` parameter to true. If you want to exclude annotations and form field elements from the output images, set the `isSkipAnnotations` parameter to true. Refer to the following code to export the page at the index of 0 into PNG image with the width and the height of 1836 and 2372 in pixels respectively.
 
 {% tabs %}
 {% highlight C# %}
