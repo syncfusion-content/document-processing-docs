@@ -1,18 +1,15 @@
 ---
 layout: post
-title: Getting Started with Blazor Smart PDF Viewer Web Apps | Syncfusion
-description: Step-by-step guide to add and configure the SfSmartPdfViewer in a Blazor Web App, including AI interaction, smart redaction, and form filling.
+title: Getting Started with Blazor Smart PDF Viewer Web Apps using Ollama | Syncfusion
+description: Step-by-step guide to add and configure the SfSmartPdfViewer in a Blazor Web App with Ollama as the self-hosted AI provider, including smart redaction and form filling.
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
 ---
 
-# Getting Started with Smart PDF Viewer
+# Getting Started with Smart PDF Viewer using Ollama
 
-This section explains how to include [Blazor Smart PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-smart-pdf-viewer) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
-
-Check out the following video to learn how to get started with the Blazor Smart PDF Viewer.
-{% youtube "https://www.youtube.com/watch?v=rIFsvla4144" %}
+This section explains how to include the [Blazor Smart PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-smart-pdf-viewer) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code, and configure [Ollama](https://ollama.com/) as the self-hosted AI service that powers the document summarizer, smart redaction, and smart fill features.
 
 {% tabcontents %}
 
@@ -21,9 +18,9 @@ Check out the following video to learn how to get started with the Blazor Smart 
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-* [Azure OpenAI Account](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal)
+* [Ollama](https://ollama.com/) installed on the host machine
 
-N> Blazor Smart PDF Viewer component is compatible with both `OpenAI` and `Azure OpenAI`, and supports Server interactivity mode apps.
+N> The Blazor Smart PDF Viewer component supports Ollama as a self-hosted AI provider and works with Server interactivity mode apps.
 
 ## Create a new Blazor Web App in Visual Studio
 
@@ -53,9 +50,9 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-* [Azure OpenAI Account](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal)
+* [Ollama](https://ollama.com/) installed on the host machine
 
-N> Blazor Smart PDF Viewer component is compatible with both `OpenAI` and `Azure OpenAI`, and supports Server interactivity mode apps. Azure OpenAI is required only for AI-assisted features.
+N> The Blazor Smart PDF Viewer component supports Ollama as a self-hosted AI provider and works with Server interactivity mode apps.
 
 ## Create a new Blazor Web App in Visual Studio Code
 
@@ -127,7 +124,7 @@ cd BlazorWebApp
 {% endhighlight %}
 {% endtabs %}
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SfSmartPdfViewer and Themes NuGet in the App
+## Install Blazor SfSmartPdfViewer and Themes NuGet in the App
 
 * Open a command prompt, terminal, or shell.
 * Ensure you’re in the project root directory where your `.csproj` file is located (or the Client project if applicable).
@@ -192,73 +189,109 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
-## To Configure Azure OpenAI Service
+## To Configure Ollama for Self-Hosted AI Models
 
-In **Visual Studio**, Go to Tools → NuGet Package Manager → Package Manager Console. Run these commands one by one:
+### Download and install Ollama
+
+Install the Ollama application for your operating system from [Ollama’s official website](https://ollama.com/).
+
+### Install the desired model
+
+Explore the available models in the [Ollama Library](https://ollama.com/library) (for example, `llama2:13b`, `llama2:7b`, `mistral:7b`).
+
+To download and run a model (for example, `llama2:7b`), run the following command in a terminal or command prompt:
 
 {% tabs %}
-{% highlight c# tabtitle="Package Manager" %}
+{% highlight bash tabtitle="Command Line" %}
 
-Install-Package Azure.AI.OpenAI
-Install-Package Microsoft.Extensions.AI
-Install-Package Microsoft.Extensions.AI.OpenAI -Version 9.8.0-preview.1.25412.6
+ollama run llama2:7b
 
 {% endhighlight %}
 {% endtabs %}
 
-In **Visual Studio Code**, open the terminal in VS Code and run the following commands:
+### Install OllamaSharp NuGet package
+
+In **Visual Studio**, Go to Tools → NuGet Package Manager → Package Manager Console. Run this command:
 
 {% tabs %}
 {% highlight c# tabtitle="Package Manager" %}
 
-dotnet add package Azure.AI.OpenAI
-dotnet add package Microsoft.Extensions.AI
-dotnet add package Microsoft.Extensions.AI.OpenAI --version 9.8.0-preview.1.25412.6
+Install-Package OllamaSharp -Version 5.3.6
 
 {% endhighlight %}
 {% endtabs %}
 
-Add the AI service namespace to the `Program.cs` file.
+In **Visual Studio Code**, open the terminal in VS Code and run this command:
+
+{% tabs %}
+{% highlight c# tabtitle="Package Manager" %}
+
+dotnet add package OllamaSharp --version 5.3.6
+
+{% endhighlight %}
+{% endtabs %}
+
+### Add namespaces to Program.cs
+
+Add the Ollama and AI service namespaces to the `Program.cs` file.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
 
-using Azure.AI.OpenAI;
 using Microsoft.Extensions.AI;
+using OllamaSharp;
+using Syncfusion.Blazor;
 using Syncfusion.Blazor.AI;
-using System.ClientModel;
 
 {% endhighlight %}
 {% endtabs %}
 
-To configure the AI service, add the following settings to the `~/Program.cs` file in the Blazor Server app.
+### Configure Ollama in Program.cs
+
+Add the following settings to the `~/Program.cs` file in the Blazor Server app after the **builder** is created.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
 
-// Azure OpenAI configuration values
-string azureOpenAiKey = "api-key";
-string azureOpenAiEndpoint = "endpoint URL";
-string azureOpenAiModel = "deployment-name";
-// Configure Azure OpenAI client and register chat with Syncfusion AI services
-AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(new Uri(azureOpenAiEndpoint), new ApiKeyCredential(azureOpenAiKey));
-IChatClient azureOpenAiChatClient = azureOpenAIClient.GetChatClient(azureOpenAiModel).AsIChatClient();
-builder.Services.AddChatClient(azureOpenAiChatClient);
+// Define the name of the AI model to use from Ollama (e.g., llama2:13b, mistral:7b, etc.)
+string aiModel = "llama2:7b";
+
+// By default, Ollama runs on port 11434, you can also customize this port manually.
+HttpClient httpClient = new HttpClient
+{
+    BaseAddress = new Uri("http://localhost:11434"), // Ollama server address
+    Timeout = Timeout.InfiniteTimeSpan // Supports extended processing time for AI responses
+};
+
+// Initialize the chat client using the Ollama API and the specified model
+IChatClient chatClient = new OllamaApiClient(httpClient, aiModel);
+builder.Services.AddChatClient(chatClient);
 builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
 
 {% endhighlight %}
 {% endtabs %}
 
 Here,
-* **apiKey**: Azure OpenAI API key.
-* **deploymentName**: Azure OpenAI deployment name.
-* **endpoint**: Azure OpenAI deployment endpoint URL.
+* **aiModel**: Name of the Ollama model to use (for example, `llama2:7b`, `mistral:7b`).
+* **httpClient.BaseAddress**: Address of the local Ollama server. Defaults to `http://localhost:11434`.
 
-For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal); then the values for `apiKey`, `deploymentName`, and `endpoint` will be provided.
+N> Running Ollama locally may lead to slower response times due to system resource usage. To accommodate this, the Syncfusion Smart PDF Viewer can disable timeout for AI Assist view operations by setting the timeout to 0. [Learn more](https://help.syncfusion.com/document-processing/pdf/smart-pdf-viewer/blazor/document-summarizer#timeout)
+
+### Check the installed model and its details in Ollama
+
+To verify which models are currently installed and available on the local Ollama server (for example, running on port 11434), run the following command in a terminal or command prompt:
+
+{% tabs %}
+{% highlight bash tabtitle="Curl" %}
+
+curl http://localhost:11434/api/tags
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). 
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
 
 Include the stylesheet reference in the `<head>` section in the `~/Components/App.razor` file.
 
@@ -270,6 +303,7 @@ Include the stylesheet reference in the `<head>` section in the `~/Components/Ap
 
 {% endhighlight %}
 {% endtabs %}
+
 
 Add script reference at the end of the `<body>` in the `~/Components/App.razor` file as shown below.
 
@@ -315,10 +349,11 @@ Add the Blazor Smart PDF Viewer component in the `~Pages/Home.razor` file.
 
 ![Blazor Smart PDF Viewer rendering a PDF document](gettingstarted-images/smart-pdf-viewer.png)
 
-> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Getting%20Started/Blazor%20Web%20App).
+> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Getting%20Started).
 
 ## See also
 
+* [Getting Started with Blazor Smart PDF Viewer Web App](web-app)
 * [Custom AI Service Integration in Blazor Smart PDF Viewer](../custom-ai-service)
 * [Document Summarizer in Blazor Smart PDF Viewer](../document-summarizer)
 * [Smart Redaction in Blazor Smart PDF Viewer](../smart-redaction)
