@@ -19,7 +19,7 @@ Use RTL support to render the viewer interface for right-to-left languages.
 
 ## Example: enable RTL and provide Arabic localization
 
-The example below enables RTL for the React PDF Viewer and loads Arabic (`ar-AE`) translations through `L10n.load`.
+The example below enables RTL for the React PDF Viewer and loads Arabic translations through `L10n.load`.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}

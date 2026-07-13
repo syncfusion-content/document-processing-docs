@@ -24,7 +24,7 @@ Use the React PDF Viewer’s [locale](https://ej2.syncfusion.com/react/documenta
 
 ## Quick start (set German)
 1. **Load translations** with `L10n.load` at app start (only include the keys you want to change). The example below loads the full set; you can load only the keys you need.
-2. **Set the culture** by passing a `locale` value to `<PdfViewerComponent/>`. The code below uses `de`; replace it with any other supported culture code (for example, `'fr'`, `'es'`, `'ja'`, or a region-specific tag like `'de-DE'`).
+2. **Set the culture** by passing a `locale` value to `<PdfViewerComponent/>`.
 3. **Render the viewer** as usual. Missing keys automatically fall back to `en-US`.
 
 {% tabs %}
