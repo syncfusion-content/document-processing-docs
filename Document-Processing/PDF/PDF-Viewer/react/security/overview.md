@@ -28,7 +28,7 @@ This page provides a concise security overview and recommended controls when usi
 - Flatten form fields and sanitize form data when publishing public documents.
 - [Hide or disable viewer UI](./prevent-copy-and-print#3-hidedisable-ui-elements-in-the-viewer) elements for additional UX control.
 
-## Related documents
+## See also
 
 - [Secure PDf Viewing in React apps](./secure-pdf-viewing)
 - [Prevent copy/print](./prevent-copy-and-print)
