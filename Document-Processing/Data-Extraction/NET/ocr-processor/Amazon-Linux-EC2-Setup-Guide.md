@@ -9,7 +9,7 @@ keywords: Assemblies
 
 # Perform OCR with Tesseract on Amazon Linux EC2 using .NET application
 
-The [Syncfusion<sup>&reg;</sup> .NET OCR library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/ocr-process) is used to extract text from scanned PDFs and images in the Linux application with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.
+The [.NET OCR library](https://www.syncfusion.com/document-sdk/net-pdf-library/ocr-process) is used to extract text from scanned PDFs and images in the Linux application with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.
 
 This guide provides a detailed, step-by-step process for installing Tesseract OCR and its essential dependencies directly on an Amazon Linux 2023 (AL2023) EC2 instance. This approach allows you to deploy .NET applications that utilize OCR functionalities, such as those relying on Syncfusion PDF Processing with Tesseract, without the need for Docker containers.
 
@@ -213,6 +213,3 @@ By executing the program, you will get the PDF document as follows. The output w
 ![OCR Linux Output](OCR-Images/OCR-output-image.png)
 
 A complete working sample can be downloaded from [Github](https://github.com/SyncfusionExamples/OCR-csharp-examples/tree/master/Linux).
-
-
-
