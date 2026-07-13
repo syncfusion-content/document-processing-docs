@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Fix "cp is not recognized" on Windows for the React PDF Viewer
-description: Use Windows-friendly copy commands to replace Unix cp when copying ej2-pdfviewer-lib assets for the React PDF Viewer—examples for CMD (xcopy) and PowerShell (Copy-Item).
+title: Troubleshoot "'cp' is not recognized" on Windows for the React PDF Viewer
+description: Use these Windows-native alternatives to Unix `cp` when copying ej2-pdfviewer-lib assets for the React PDF Viewer: examples for CMD (xcopy) and PowerShell (Copy-Item).
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -29,3 +29,10 @@ Notes:
 - Ensure sufficient permissions to write to the destination folder.
 
 For cross-platform scripts in `package.json`, consider tools such as `shx` or `copyfiles` to avoid OS-specific commands.
+
+## See also
+
+- [Why manual copy from node_modules is required in the React PDF Viewer](./troubleshooting)
+- [Getting started with the React Standalone PDF Viewer](../getting-started)
+- [Troubleshoot OpenSSL errors on Windows](./openssl-error)
+- [Troubleshoot document loading issues](./document-loading-issues)
