@@ -13,13 +13,13 @@ Navigate to the desired bookmark topics using the default bookmark view or the c
 
 ## Open and Close the Built-in Bookmark View Programmatically
 
-The built-in bookmark view in the `SfPdfViewer` can be opened using the [openBookmarkView](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewerState/openBookmarkView.html) method, and it can be closed either by tapping the close icon or the device's back button. Also, we can close the bookmark programmatically by using the Navigator’s pop method.
+The built-in bookmark view in the `SfPdfViewer` can be opened using the [openBookmarkView](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewerState/openBookmarkView.html) method, and it can be closed either by tapping the close icon or the device's back button. Also, we can close the bookmark view programmatically by using the Navigator’s pop method.
 
 * You can use the [isBookmarkViewOpen](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewerState/isBookmarkViewOpen.html) property of the `SfPdfViewerState` class to know whether the built-in bookmark view is open or not.
 
 ![Bookmark view](images/bookmark-navigation/bookmark_view.png)
 
-The following code example explains the opening of the built-in bookmark view programmatically.
+The following code example shows how to open the built-in bookmark view programmatically.
 
 {% tabs %}
 {% highlight dart hl_lines="1 15" %}
@@ -65,7 +65,7 @@ Widget build(BuildContext context) {
 
 ## Navigate to the Desired Bookmark Topic Programmatically
 
-You can navigate to the desired bookmark topic programmatically using the [jumpToBookmark](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/jumpToBookmark.html) controller method. The following code example explains the same.
+You can navigate to the desired bookmark topic programmatically using the [jumpToBookmark](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/jumpToBookmark.html) controller method. The following code example explains this functionality.
 
 N> Import **'package:syncfusion_flutter_pdf/pdf.dart'** in the Dart code if you use the [PdfBookmark](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfBookmark-class.html) parameter.
 

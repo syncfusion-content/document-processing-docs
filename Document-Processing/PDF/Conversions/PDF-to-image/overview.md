@@ -28,7 +28,7 @@ Watch the following video to quickly get started with converting PDF to image in
 Windows Forms
 </td>
 <td>
-{{'[Syncfusion.PdfToImageConverter.WinForms.nupkg](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.WinForms/)'| markdownify }}
+{{'[Syncfusion.PdfToImageConverter.WinForms](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.WinForms/)'|markdownify }}
 </td>
 </tr>
 <tr>
@@ -36,7 +36,7 @@ Windows Forms
 WPF
 </td>
 <td>
-{{'[Syncfusion.PdfToImageConverter.WPF.nupkg](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.WPF/)'| markdownify }}
+{{'[Syncfusion.PdfToImageConverter.WPF](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.WPF/)'|markdownify }}
 </td>
 </tr>
 <tr>
@@ -44,7 +44,7 @@ WPF
 ASP.NET Core Windows
 </td>
 <td>
-{{'[Syncfusion.PdfToImageConverter.Net.nupkg](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.Net/)'| markdownify }}
+{{'[Syncfusion.PdfToImageConverter.Net](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.Net/)'|markdownify }}
 </td>
 </tr>
 <tr>
@@ -52,25 +52,27 @@ ASP.NET Core Windows
 ASP.NET MVC Windows
 </td>
 <td>
-{{'[Syncfusion.PdfToImageConverter.AspNet.Mvc4.nupkg](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.AspNet.Mvc4/)'| markdownify }}<br/>
-{{'[Syncfusion.PdfToImageConverter.AspNet.Mvc5.nupkg](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.AspNet.Mvc5/)'| markdownify }}
+{{'[Syncfusion.PdfToImageConverter.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.AspNet.Mvc5/)'|markdownify }}
 </td>
 </tr>
 </table>
 
 N> The above mentioned NuGet packages are available in [nuget.org](https://www.nuget.org/).
 
-The following code snippet illustrates how to convert PDF page into image using Convert method in PdfToImageConverter.
+The following code snippet illustrates how to convert a PDF page into an image using the `Convert` method in `PdfToImageConverter`. The `Convert` method accepts the page index, a flag to keep the original aspect ratio, and a flag to include annotations in the output image.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using System.IO;
+using Syncfusion.PdfToImageConverter;
 
 //Initialize PDF to Image converter.
 PdfToImageConverter imageConverter = new PdfToImageConverter();
 //Load the PDF document as a stream
 FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.ReadWrite);
 imageConverter.Load(inputStream);
-//Convert PDF to Image.
+//Convert PDF to Image. Parameters: pageIndex, keepAspectRatio, showAnnotations
 Stream outputStream = imageConverter.Convert(0, false, false);
 MemoryStream stream = outputStream as MemoryStream;
 return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Image.Jpeg, "sample.jpeg");
@@ -79,26 +81,35 @@ return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Image.Jpeg, "sample
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using System.IO;
+using System.Drawing;
+using System.Drawing.Imaging;
+using Syncfusion.PdfToImageConverter;
+
 //Initialize PDF to Image converter.
 PdfToImageConverter imageConverter = new PdfToImageConverter();
 //Load the PDF document as a stream
 FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.ReadWrite);
 imageConverter.Load(inputStream);
-//Convert PDF to Image.
+//Convert PDF to Image. Parameters: pageIndex, keepAspectRatio, showAnnotations
 Stream outputStream = imageConverter.Convert(0, false, false);
 Bitmap image = new Bitmap(outputStream);
 image.Save("sample.png");
 
-
 {% endhighlight %}
 {% highlight vb tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports System.Drawing
+Imports System.Drawing.Imaging
+Imports Syncfusion.PdfToImageConverter
 
 'Initialize PDF to Image converter.
 Dim imageConverter As PdfToImageConverter = New PdfToImageConverter()
 'Load the PDF document as a stream
 Dim inputStream As FileStream = New FileStream("Input.pdf", FileMode.Open, FileAccess.ReadWrite)
 imageConverter.Load(inputStream)
-'Convert PDF to Image.
+'Convert PDF to Image. Parameters: pageIndex, keepAspectRatio, showAnnotations
 Dim outputStream As Stream = imageConverter.Convert(0, False, False)
 Dim image As Bitmap = New Bitmap(outputStream)
 image.Save("sample.png")

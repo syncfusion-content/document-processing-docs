@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customizing context menu in WPF Pdf Viewer | Syncfusion&reg;
-description: Learn about Customizing context menu support in Syncfusion<sup>&reg;</sup>; WPF Pdf Viewer control, its elements and more.
+description: Learn about Customizing context menu support in Syncfusion<sup>&reg;</sup> WPF Pdf Viewer control, its elements and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -22,29 +22,30 @@ Arguments </th></tr>
 <tr>
 <td>
 ContextMenuOpening Event</td><td>
-This Triggered before the context menu is displayed,this event allows users to dynamically modify menu items.</td><td>
+This is triggered before the context menu is displayed, this event allows users to dynamically modify menu items.</td><td>
 ContextMenuOpeningEventArgs</td></tr>
 <tr>
 <td>
 ContextMenuItemClicked Event</td><td>
-This event is triggered when a menu item is clicked,this event enables users to handle menu actions programmatically.</td><td>
+This event is triggered when a menu item is clicked, this event enables users to handle menu actions programmatically.</td><td>
 ContextMenuItemClickedEventArgs</td></tr>
 </table>
 
 ## How to customize the context menu items before opening.
-The `ContextMenuOpening` Event allows users to customize and manage context menus dynamically,based on the source type where the context menu is triggered. This event provides the flexibility to modify, add, or suppress menu items based on the specific operation.
+The `ContextMenuOpening` Event allows users to customize and manage context menus dynamically, based on the source type where the context menu is triggered. This event provides the flexibility to modify, add, or suppress menu items based on the specific operation.
 
 {% tabs %}
 {% highlight c# %}
 
-//Wire the `ContextMenuOpening` event.
+//Wire the `ContextMenuOpening` event in the code-behind (for example, in the constructor or the Loaded event of the window).
 pdfViewer.ContextMenuOpening += PdfViewer_ContextMenuOpening;
 
 {% endhighlight %}
 {% endtabs %}
 
-Using the `ContextMenuOpeningEventArgs`, you can add,remove or hide context menu items.
+Using the `ContextMenuOpeningEventArgs`, you can add, remove or hide context menu items.
 Please refer to the following example for more details.
+
 ### Add the context menu item.
 You can enhance the existing default context menu by adding new menu items to it or inserting them at specific positions based on the source type that triggers the menu. This allows for dynamic customization to suit various use cases, such as adding custom options for annotations, redactions, text selection, or signature fields.
 {% tabs %}
@@ -53,7 +54,7 @@ You can enhance the existing default context menu by adding new menu items to it
   {
       if (e.Source == "Annotation")
       {
-	    e.MenuItems.Insert(0,(new ContextMenuItem { Content = "Lock Annotation" }));
+        e.MenuItems.Insert(0,(new ContextMenuItem { Content = "Lock Annotation" }));
         e.MenuItems.Add(new ContextMenuItem { Content = "New Menu Item" });
       }
       if (e.Source == "Redaction")
@@ -72,7 +73,7 @@ You can enhance the existing default context menu by adding new menu items to it
 
 {% endhighlight %}
 {% endtabs %}
-![Adding new menu item](Customized-ConetextMenu-Images\Customized-Context-Menu-1.png)
+![Adding new menu item](Customized-ContextMenu-Images\Customized-Context-Menu-1.png)
 
 ### Remove the context menu item.
 You can remove a menu item from the context menu based on the source type by identifying and matching the item's content. This helps you customize the menu to display only the necessary options.
@@ -83,10 +84,10 @@ You can remove a menu item from the context menu based on the source type by ide
       if (e.Source == "Annotation")
       {
         var itemToRemove = e.MenuItems.FirstOrDefault(item => item.Content == "Delete");
-		if (itemToRemove != null)
-		{
-		   e.MenuItems.Remove(itemToRemove);
-		}
+        if (itemToRemove != null)
+        {
+           e.MenuItems.Remove(itemToRemove);
+        }
       }
       if (e.Source == "Redaction")
       {
@@ -117,9 +118,10 @@ You can remove a menu item from the context menu based on the source type by ide
 {% endhighlight %}
 {% endtabs %}
 
-![Remove menu item](Customized-ConetextMenu-Images\Customized-Context-Menu-2.png)
-### Hide the context menu item.
-You can hide the context menu by setting the `Handled` property to `true` in the `ContextMenuOpening` event.This prevents the menu from being displayed,giving you control over whether the context menu should appear for source types.This helps you manage and customize the behavior of the context menu based on your application's requirements.
+![Remove menu item](Customized-ContextMenu-Images\Customized-Context-Menu-2.png)
+
+### Hide the context menu.
+You can hide the context menu by setting the `Handled` property to `true` in the `ContextMenuOpening` event. This prevents the menu from being displayed, giving you control over whether the context menu should appear for source types. This helps you manage and customize the behavior of the context menu based on your application's requirements.
 {% tabs %}
 {% highlight c# %}
   private void PdfViewer_ContextMenuOpening(object sender, ContextMenuOpeningEventArgs e)
@@ -144,8 +146,8 @@ You can hide the context menu by setting the `Handled` property to `true` in the
 
 {% endhighlight %}
 {% endtabs %}
-## How to customized the clicked event for context menu item.
-You can customized the context menu clicked event operations in the PDF Viewer control by setting the value of `Handled` to `true` in the `ContextMenuItemClickedEventArgs` parameter within the `ContextMenuItemClickedEvent` event.This allows you to control the behavior of the context menu and prevent any actions from being executed. 
+## How to customize the clicked event for context menu item.
+You can customize the context menu clicked event operations in the PDF Viewer control by setting the value of `Handled` to `true` in the `ContextMenuItemClickedEventArgs` parameter within the `ContextMenuItemClickedEvent` event. This allows you to control the behavior of the context menu and prevent any actions from being executed. 
 Please refer to the following example for more details.
 
 {% tabs %}
@@ -162,7 +164,7 @@ private void PdfViewer_ContextMenuItemClickedEvent(object sender, ContextMenuIte
 {% endhighlight %}
 {% endtabs %}
 
-You can also retrieve the details of the clicked context menu item, including its content and the source type,using the `ContextMenuItemClickedEventArgs` in the `ContextMenuItemClickedEvent` event.
+You can also retrieve the details of the clicked context menu item, including its content and the source type, using the `ContextMenuItemClickedEventArgs` in the `ContextMenuItemClickedEvent` event.
 Please refer to the following example for more details.
 {% tabs %}
 {% highlight c# %}

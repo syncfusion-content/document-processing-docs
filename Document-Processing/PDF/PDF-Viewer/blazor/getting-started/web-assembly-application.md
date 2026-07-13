@@ -19,7 +19,7 @@ This section explains how to include the [Blazor PDF Viewer](https://www.syncfus
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-### Install the required .NET workloads (Blazor WebAssembly / Auto render modes)
+### Install the required .NET workloads
 
 If using **WebAssembly** Application, install the required workload for SkiaSharp. Run the following command in a command prompt (Windows), terminal (macOS), or shell (Linux):
 
@@ -64,7 +64,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> uses [SkiaSharp.Views.Blazor
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-### Install the required .NET workloads (Blazor WebAssembly / Auto render modes)
+### Install the required .NET workloads
 
 If using **WebAssembly** Application, install the required workload for SkiaSharp. Run the following command in a command prompt (Windows), terminal (macOS), or shell (Linux):
 
@@ -135,7 +135,7 @@ dotnet --version
 {% endhighlight %}
 {% endtabs %}
 
-### Install the required .NET workloads (Blazor WebAssembly / Auto render modes)
+### Install the required .NET workloads
 
 If using **WebAssembly** Application, install the required workload for SkiaSharp. Run the following command in a command prompt (Windows), terminal (macOS), or shell (Linux):
 
@@ -278,7 +278,7 @@ N> If the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ## Next steps
 
-* To learn how to open, save, or manage PDF documents in the PDF Viewer component, s[Open and Save PDF files](../opening-pdf-file).
+* To learn how to open, save, or manage PDF documents in the PDF Viewer component, see [Open and Save PDF files](../opening-pdf-file).
 * To learn how to add and manage highlights, strike-through, free text, and shape annotations in the PDF Viewer component, see [Annotations](../annotation/overview).
 * To learn how to read, fill, and work with AcroForm fields in the PDF Viewer component, see [Form filling](../forms/form-filling).
 * To learn how to add, remove, and rearrange toolbar items in the PDF Viewer component, see [Toolbar customization](../toolbar/overview).

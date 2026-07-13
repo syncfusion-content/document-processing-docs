@@ -11,12 +11,12 @@ documentation: ug
 
 PDF Viewer control allows users to navigate to the bookmarks present in the loaded PDF document at UI level. 
 
-## Steps to perform bookmark navigation in PdfViewerControl.
+## Steps to perform bookmark navigation in PdfViewerControl
 
-1.	Open the bookmarks contained PDF document to enable the bookmark button in `PdfViewerControl`.
-2.	Clicking on the bookmark button from the left pane, will list the bookmarks present in the PDF document.
-3.	To jump to a specific section, click its name in the bookmark pane.
-4.	If the bookmark has some children, you can explore them by clicking on the “+” button to the left of it.
+1. Open the bookmarks contained PDF document to enable the bookmark button in `PdfViewerControl`.
+2. Click the bookmark button from the left pane to list the bookmarks present in the PDF document.
+3. To jump to a specific section, click its name in the bookmark pane.
+4. If the bookmark has some children, you can explore them by clicking on the "+" button to the left of it.
 
 ![WPF PDF Viewer Bookmark Button](Bookmark_Navigation_images/wpf-pdf-viewer-bookmark-button.png)  
 
@@ -92,7 +92,7 @@ private void PdfViewer_DocumentLoaded(object sender, System.EventArgs args)
 {% endhighlight %}
 {% endtabs %}
 
-N>You can also explore our [WPF PDF Viewer example](https://github.com/SyncfusionExamples/WPF-PDFViewer-Examples/tree/master/Navigation/Bookmark/Bookmark_Navigation) to know how to Programmatically navigate to a bookmark destination in  pdfviewer.
+N> You can also explore our [WPF PDF Viewer example](https://github.com/SyncfusionExamples/WPF-PDFViewer-Examples/tree/master/Navigation/Bookmark/Bookmark_Navigation) to know how to programmatically navigate to a bookmark destination in pdfviewer.
 
 ## Enabling and disabling bookmark feature
 
@@ -120,19 +120,19 @@ pdfViewerControl.IsBookmarkEnabled = false;
 {% endhighlight %}
 {% highlight VB %}
 
-'Bookmark feature is disabled
+//Bookmark feature is disabled
 pdfViewerControl.IsBookmarkEnabled = false
 
 {% endhighlight %}
 {% endtabs %}
 
-The following screenshot shown the Bookmark navigation in `PdfViewerControl`,
+The following screenshot shows the Bookmark navigation in `PdfViewerControl`,
 
 ![WPF PDF Viewer Enabling and Disabling Bookmark Feature](Bookmark_Navigation_images/wpf-pdf-viewer-enabling-and-disabling-bookmark-feature.png)
 
-## Expand bookmark panel Programmatically
+## Expand bookmark panel programmatically
 
-The bookmark are displayed by clicking the bookmark icon in the left panel.To display bookmark panel from code behind, use the following code example.
+The bookmarks are displayed by clicking the bookmark icon in the left panel. To display the bookmark panel from code behind, use the following code example.
 
 {% tabs %}
 {% highlight C# %}
@@ -140,9 +140,9 @@ The bookmark are displayed by clicking the bookmark icon in the left panel.To di
 private void Window_Loaded(object sender, RoutedEventArgs e)
 {
    PdfLoadedDocument pdf = new PdfLoadedDocument("Input.pdf");
-   pdfviewer.Load(pdf);
+   pdfViewer.Load(pdf);
    //By default, the bookmark panel IsExpanded is false. 
-   pdfviewer.BookMarkSettings.IsExpanded = true;
+   pdfViewer.BookMarkSettings.IsExpanded = true;
 }
 
 {% endhighlight %}
@@ -151,10 +151,10 @@ private void Window_Loaded(object sender, RoutedEventArgs e)
 {% highlight vbnet %}
 
 Private Sub Window_Loaded(sender As Object, e As RoutedEventArgs)
-    Dim pdf As New PdfLoadedDocument(“Input.pdf”)
+    Dim pdf As New PdfLoadedDocument("Input.pdf")
     pdfViewer.Load(pdf)
     'By default, the bookmark panel IsExpanded is false. 
-	pdfviewer.BookMarkSettings.IsExpanded = true
+    pdfViewer.BookMarkSettings.IsExpanded = true
 End Sub
 
 {% endhighlight %}
