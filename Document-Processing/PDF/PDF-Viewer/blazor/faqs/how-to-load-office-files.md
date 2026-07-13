@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Load Office files in Blazor SfPdfViewer | Syncfusion
-description: Learn how to load Microsoft Word, Excel, PowerPoint, and image files by converting into PDF and load into Syncfusion Blazor SfPdfViewer component.
+description: Learn how to load Microsoft Word, Excel, PowerPoint, and image files by converting into PDF and load into Blazor SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Load Microsoft Office files in Blazor SfPdfViewer Component
 
-The SfPdfViewer component displays PDF documents. To load Microsoft Office or image files (Word, Excel, PowerPoint, and common image formats), upload the file, convert it to a PDF, and then load the resulting PDF in the viewer using the uploader success event.
+In the following example, a Word document is converted to a PDF and then loaded into the SfPdfViewer as a base64 data URL. The same approach is applied for PowerPoint, Excel, and image files.
 
 In the following example, a Word document is converted to a PDF and then loaded into the SfPdfViewer as a Base64 data URL. The same approach is applied for PowerPoint, Excel, and image files.
 
@@ -48,9 +48,9 @@ In the following example, a Word document is converted to a PDF and then loaded 
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewerInstance;
+    private SfPdfViewer2 viewerInstance;
 
-    public PdfViewerToolbarSettings ToolbarSettings = new PdfViewerToolbarSettings()
+    private PdfViewerToolbarSettings ToolbarSettings = new PdfViewerToolbarSettings()
         {
             ToolbarItems = new List<ToolbarItem>()
             {
@@ -137,7 +137,7 @@ In the following example, a Word document is converted to a PDF and then loaded 
         }
     }
 
-    public async void loadPDFdocument(byte[] bytes)
+    private async void loadPDFdocument(byte[] bytes)
     {
         // Convert a PDF document into a base64 string.
         string base64String = Convert.ToBase64String(bytes);
@@ -145,7 +145,7 @@ In the following example, a Word document is converted to a PDF and then loaded 
         await viewerInstance.LoadAsync("data:application/pdf;base64," + base64String, null);
     }
 
-    public static WFormatType GetWFormatType(string format)
+    private static WFormatType GetWFormatType(string format)
     {
         if (string.IsNullOrEmpty(format))
             throw new NotSupportedException("EJ2 DocumentEditor does not support this file format.");
@@ -178,5 +178,4 @@ In the following example, a Word document is converted to a PDF and then loaded 
 ## See also
 
 * [How to load PDF documents dynamically in Blazor SfPdfViewer Component](./how-to-load-pdf-document-dynamically)
-
 * [How to unload the PDF document from Viewer](./how-to-unload-the-pdf-document-from-viewer)
