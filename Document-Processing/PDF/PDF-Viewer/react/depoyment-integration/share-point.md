@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Syncfusion React PDF Viewer in SharePoint
+# React PDF Viewer in SharePoint Framework
 
 ## Overview
 

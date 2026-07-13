@@ -27,8 +27,8 @@ Before installing the Syncfusion® React UI Builder Skill with PDF Viewer, ensur
   node -v
   ```
 
-- A React application (existing or new); see the [Syncfusion® React Quick Start](https://help.syncfusion.com/react/documentation/getting-started/quick-start).
-- A supported AI agent or IDE that integrates with Skills, such as [Visual Studio Code](https://code.visualstudio.com/), [Cursor](https://www.cursor.com/), or [Syncfusion® Code Studio](https://help.syncfusion.com/code-studio/overview).
+- A React application (existing or new); see the [Syncfusion® React Quick Start](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start)
+- A supported AI agent or IDE that integrates with the Skills (VS Code, Cursor, Syncfusion® Code Studio, etc.)
 - An active subscription for the selected agent (for example, a paid GitHub Copilot, Claude, or Cursor plan) where required by the agent.
 - Active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):  
   - [Commercial](https://www.syncfusion.com/sales/unlimitedlicense)  
