@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Working with Color Spaces in File Formats PDF library
 
-[Syncfusion<sup>&reg;</sup> .NET PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net) allows you to set color spaces in different ways.
+The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) allows you to set color spaces in different ways.
 
 * Document Color Space
 * Graphics Color Space
