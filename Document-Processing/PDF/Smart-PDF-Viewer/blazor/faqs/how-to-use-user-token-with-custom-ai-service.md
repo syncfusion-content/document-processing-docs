@@ -6,7 +6,7 @@ platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
 ---
-# Getting Started with Smart PDF Viewer Using a User Token with Azure OpenAI Service
+# Getting Started with Smart PDF Viewer Using a User Token
 
 This article provides step-by-step instructions for integrating and using Syncfusion Smart PDF Viewer with a user token and a custom Azure OpenAI service in a Blazor app.
 

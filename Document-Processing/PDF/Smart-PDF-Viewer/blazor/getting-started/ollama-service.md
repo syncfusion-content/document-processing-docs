@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor Smart PDF Viewer Web Apps using Ollama | Syncfusion
-description: Step-by-step guide to add and configure the SfSmartPdfViewer in a Blazor Web App with Ollama as the self-hosted AI provider, including smart redaction and form filling.
+title: Getting Started with Blazor Smart PDF Viewer using Ollama | Syncfusion
+description: Step-by-step guide to add and configure the SfSmartPdfViewer in a Blazor with Ollama as the self-hosted AI provider, including smart redaction and form filling.
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
