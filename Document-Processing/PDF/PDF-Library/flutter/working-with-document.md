@@ -18,7 +18,7 @@ You can choose the standard or custom page size when you add a page to the PDF d
 {% tabs %}
 {% highlight dart tabtitle="dart" %}
 
-//Create a new PDF documentation
+//Create a new PDF document
 PdfDocument document = PdfDocument();
 
 //Set the page size
@@ -33,7 +33,7 @@ document.pages.add().graphics.drawString(
 //Save and dispose the PDF document
 File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
-	
+    
 {% endhighlight %}
 {% endtabs %}
 
@@ -42,7 +42,7 @@ You can create a PDF document with custom page size by using the following code 
 {% tabs %}
 {% highlight dart tabtitle="dart" %}
 
-//Create a new PDF documentation
+//Create a new PDF document
 PdfDocument document = PdfDocument();
 
 //Set the page size
@@ -53,19 +53,19 @@ document.pages.add().graphics.drawString(
     'Hello World!!!', PdfStandardFont(PdfFontFamily.helvetica, 19),
     brush: PdfBrushes.mediumVioletRed);
 
-//Save and close the PDF document
+//Save and dispose the PDF document
 File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
-	
+    
 {% endhighlight %}
 {% endtabs %}
 
-You can change the page [`orientation`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageSettings/orientation.html) from [`portrait`] to landscape using the [`PdfPageOrientation`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageOrientation.html) enum by the following code snippet.
+You can change the page [`orientation`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageSettings/orientation.html) from portrait to landscape using the [`PdfPageOrientation`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageOrientation.html) enum by the following code snippet.
 
 {% tabs %}
 {% highlight dart tabtitle="dart" %}
 
-//Create a new PDF documentation
+//Create a new PDF document
 PdfDocument document = PdfDocument();
 
 //Set the page size
@@ -80,10 +80,10 @@ document.pages.add().graphics.drawString(
     brush: PdfBrushes.mediumVioletRed,
     bounds: const Rect.fromLTWH(170, 100, 0, 0));
 
-//Save and close the PDF document
+//Save and dispose the PDF document
 File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
-	
+    
 {% endhighlight %}
 {% endtabs %}
 
@@ -92,13 +92,13 @@ You can also change the [`orientation`](https://pub.dev/documentation/syncfusion
 {% tabs %}
 {% highlight dart tabtitle="dart" %}
 
-//Create a new PDF documentation
+//Create a new PDF document
 PdfDocument document = PdfDocument();
 
 //Set the page size
 document.pageSettings.size = PdfPageSize.a4;
 
-//Change the page orientation to 90 degree
+//Change the page orientation to 90 degrees
 document.pageSettings.rotate = PdfPageRotateAngle.rotateAngle90;
 
 //Draw the text by adding page to the document
@@ -107,10 +107,10 @@ document.pages.add().graphics.drawString(
     brush: PdfBrushes.mediumVioletRed,
     bounds: const Rect.fromLTWH(170, 100, 0, 0));
 
-//Save and close the PDF document
+//Save and dispose the PDF document
 File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
-	
+    
 {% endhighlight %}
 {% endtabs %}
 
@@ -121,22 +121,22 @@ PDF [`sections`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf
 {% tabs %}
 {% highlight dart tabtitle="dart" %}
 
-//Create a new PDF documentation
+//Create a new PDF document
 PdfDocument document = PdfDocument();
 
 //Add a section to PDF document
 PdfSection section = document.sections!.add();
 
-//Draw the text by section page graphics
+//Draw the text on the section page graphics
 section.pages.add().graphics.drawString(
     'Hello World!!!', PdfStandardFont(PdfFontFamily.helvetica, 27),
     brush: PdfBrushes.mediumVioletRed,
     bounds: const Rect.fromLTWH(170, 100, 0, 0));
 
-//Save and close the PDF document
+//Save and dispose the PDF document
 File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
-	
+    
 {% endhighlight %}
 {% endtabs %}
 
@@ -157,10 +157,10 @@ document.fileStructure.incrementalUpdate = false;
 //Set the compression level
 document.compressionLevel = PdfCompressionLevel.best;
 
-//Saves the document
+//Save the document
 File('output.pdf').writeAsBytes(await document.save());
 
-//Disposes the document
+//Dispose the document
 document.dispose();
 
 {% endhighlight %}

@@ -13,7 +13,7 @@ The [WPF PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/wpf-pdf-viewer) c
 
 ## Enabling RTL in WPF PDF Viewer
 
-RTL can be configured in the WPF PDF Viewer using the `FlowDirection` property. This can be set either in **XAML** or in the **code-behind (C#)**.
+RTL can be configured in the WPF PDF Viewer using the `FlowDirection` property. By default, the layout direction is `LeftToRight`; setting it to `RightToLeft` enables RTL. This can be set either in **XAML** or in the **code-behind (C#)**.
 
 ## Configuring RTL in XAML
 
@@ -33,10 +33,13 @@ RTL can be enabled in XAML by setting the `FlowDirection` property to `RightToLe
 
 ## Configuring RTL in Code-Behind (C#)
 
-RTL can also be configured programmatically by setting the `FlowDirection` property in the code-behind. Refer the following code snippet.
+RTL can also be configured programmatically by setting the `FlowDirection` property in the code-behind. Refer to the following code snippet.
 
 {% tabs %}
 {% highlight c# %}
+
+using System.Windows;
+using Syncfusion.Windows.PdfViewer;
 
 namespace RTLSample
 {

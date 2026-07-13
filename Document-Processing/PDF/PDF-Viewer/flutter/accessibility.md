@@ -14,16 +14,15 @@ documentation: ug
 The [`SfPdfViewer`](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) can be accessed by screen readers by wrapping the [`SfPdfViewer`](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) widget with the [`Semantics`](https://api.flutter.dev/flutter/widgets/Semantics-class.html) widget.
 
 {% tabs %}
-{% highlight dart hl_lines="4 5 6 7 8 9" %}
+{% highlight dart hl_lines="4 5 6 7 8" %}
 
 @override
 Widget build(BuildContext context) {
   return Scaffold(
     body: Semantics(
       label: 'Flutter PDF Viewer',
-      child:
-         SfPdfViewer.network(
-              'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf'),
+      child: SfPdfViewer.network(
+          'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf'),
     ),
   );
 }
@@ -37,11 +36,11 @@ The `SfPdfViewer` [theming](https://help.syncfusion.com/flutter/themes) support 
 
 The following APIs allow you to customize the colors of the following elements:
 * [searchTextHighlightColor](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/flutter/text-search#customize-the-search-text-highlight-color)
-* [selectionColor and selectionHandleColor](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/flutter/text-selection#customize-the-text-selection-and-its-handle-color)
+* [selectionColor and selectionHandleColor](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/flutter/text-selection#customate-the-text-selection-and-its-handle-color)
 
 ## Large Fonts
 
-The font size of the [`SfPdfViewer`](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) will be automatically scaled based on the device settings. 
+The font size of the [`SfPdfViewer`](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) UI elements will be automatically scaled based on the device settings. 
 
 Also, you can change the font size of the [`SfPdfViewer`](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) elements using the following APIs:
 
@@ -56,7 +55,7 @@ The `SfPdfViewer` supports the following keyboard interactions:
 
 <table>
   <tr>
-    <th style="text-align:left" colspan="1">Action</th>
+    <th style="text-align:left">Action</th>
     <th>Windows</th>
     <th>Macintosh</th>
     <th>Linux</th>
@@ -110,7 +109,7 @@ The `SfPdfViewer` supports the following keyboard interactions:
     <td>CONTROL + 0</td>
   </tr>
   <tr>
-    <th style="text-align:left" colspan="4">Shortcut for Text Search</th>
+    <th style="text-align:left" colspan="4">Shortcuts for Text Search</th>
   </tr>
   <tr>
     <td>Open the search toolbar</td>
@@ -119,7 +118,7 @@ The `SfPdfViewer` supports the following keyboard interactions:
     <td>CONTROL + F</td>
   </tr>
   <tr>
-    <th style="text-align:left" colspan="4">Shortcut for Text Selection</th>
+    <th style="text-align:left" colspan="4">Shortcuts for Text Selection</th>
   </tr>
   <tr>
     <td>Copy the selected text</td>
@@ -131,4 +130,4 @@ The `SfPdfViewer` supports the following keyboard interactions:
 
 ## Easier Touch Targets
 
-The [`SfPdfViewer`](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) has a touch target of 48 x 48, as per the standard for all elements.
+The [`SfPdfViewer`](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) has a touch target of 48 x 48, as per the Material Design standard.

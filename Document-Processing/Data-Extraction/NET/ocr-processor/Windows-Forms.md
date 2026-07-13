@@ -71,20 +71,23 @@ Step 5: Create the btnCreate_Click event and add the following code to perform O
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//Initialize the OCR processor.
-using (OCRProcessor processor = new OCRProcessor())
+private void btnCreate_Click(object sender, EventArgs e)
 {
-    //Load an existing PDF document.
-    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-    //Set the tesseract version 
-    processor.Settings.TesseractVersion = TesseractVersion.Version4_0;
-    //Set OCR language to process.
-    processor.Settings.Language = Languages.English;
-    //Process OCR by providing the PDF document.
-    processor.PerformOCR(loadedDocument);  
-    //Save the OCR processed PDF document in the disk.
-    loadedDocument.Save("OCR.pdf");
-    loadedDocument.Close(true);
+    //Initialize the OCR processor.
+    using (OCRProcessor processor = new OCRProcessor())
+    {
+        //Load an existing PDF document.
+        PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+        //Set the tesseract version 
+        processor.Settings.TesseractVersion = TesseractVersion.Version4_0;
+        //Set OCR language to process.
+        processor.Settings.Language = Languages.English;
+        //Process OCR by providing the PDF document.
+        processor.PerformOCR(loadedDocument);  
+        //Save the OCR processed PDF document in the disk.
+        loadedDocument.Save("OCR.pdf");
+        loadedDocument.Close(true);
+    }
 }
 
 {% endhighlight %}

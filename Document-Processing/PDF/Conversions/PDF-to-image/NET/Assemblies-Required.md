@@ -8,7 +8,7 @@ documentation: UG
 
 # Assemblies Required to work with PDFToImageConverter
 
-TThe following assemblies need to be referenced in your application based on the platform.
+The following assemblies need to be referenced in your application based on the target platform.
 
 <table>
 <tr>
@@ -26,8 +26,7 @@ Syncfusion.PdfToImageConverter.Base
 </td>
 </tr>
 <tr>
-<tr>
-<td rowspan="2">Blazor, .NET Core and .NET Platforms</td>
+<td rowspan="2">Blazor, .NET Core, and .NET Platforms</td>
 <td>
 Syncfusion.PdfToImageConverter.Portable<br />
 SkiaSharp<br />
@@ -42,4 +41,3 @@ Syncfusion.SkiaSharpHelper.NET
 </td>
 </tr>
 </table>
-

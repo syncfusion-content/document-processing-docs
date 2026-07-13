@@ -58,25 +58,28 @@ Step 7: Add a new action method named ``CreatePDFDocument`` in HomeController.cs
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//Create a new PDF document.
-PdfDocument document = new PdfDocument();
-//Add a page to the document.
-PdfPage page = document.Pages.Add();
-//Create PDF graphics for the page.
-PdfGraphics graphics = page.Graphics;
-//Set the standard font.
-PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
-//Draw the text.
-graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
-//Saving the PDF to the MemoryStream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-//Set the position as '0'.
-stream.Position = 0;
-//Download the PDF document in the browser.
-FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
-fileStreamResult.FileDownloadName = "Sample.pdf";
-return fileStreamResult;
+public IActionResult CreateDocument()
+{
+    //Create a new PDF document.
+    PdfDocument document = new PdfDocument();
+    //Add a page to the document.
+    PdfPage page = document.Pages.Add();
+    //Create PDF graphics for the page.
+    PdfGraphics graphics = page.Graphics;
+    //Set the standard font.
+    PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
+    //Draw the text.
+    graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
+    //Saving the PDF to the MemoryStream.
+    MemoryStream stream = new MemoryStream();
+    document.Save(stream);
+    //Set the position as '0'.
+    stream.Position = 0;
+    //Download the PDF document in the browser.
+    FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
+    fileStreamResult.FileDownloadName = "Sample.pdf";
+    return fileStreamResult;
+}
 
 {% endhighlight %}
 {% endtabs %}

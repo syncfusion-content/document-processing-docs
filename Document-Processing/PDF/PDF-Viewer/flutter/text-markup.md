@@ -27,7 +27,7 @@ This section will go through how to add text markup annotations to a PDF documen
 
 You can add text markup annotations to a PDF document by touching (or mouse down) and dragging using the [annotationMode](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/annotationMode.html) property of the PdfViewerController. The following steps explain how to add a text markup annotation on a text in a PDF:
 
-1. Set the [annotationMode](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/annotationMode.html) property of the SfPdfViewer to any text markups (e.g., `highlight`). It activates the highlight annotation mode on the control.
+1. Set the [annotationMode](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/annotationMode.html) property of the PdfViewerController to any text markups (e.g., `highlight`). It activates the highlight annotation mode on the control.
 2. Place your finger (or mouse) on the text in the PDF document where you want to start adding the text markup.
 3. Drag the finger (or cursor) across the text to select it.
 4. Complete adding the text markup to the selected text by releasing the finger (or cursor).
@@ -41,7 +41,7 @@ The following code explains how to enable the strikethrough annotation mode. Sim
 {% highlight dart %}
 
 void enableStrikethroughAnnotationMode() {
-  // Enable the strikeout annotation mode.
+  // Enable the strikethrough annotation mode.
   _pdfViewerController.annotationMode = PdfAnnotationMode.strikethrough;
 }
 
