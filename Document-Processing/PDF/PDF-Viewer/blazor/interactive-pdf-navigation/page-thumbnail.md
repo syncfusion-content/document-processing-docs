@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Page thumbnail navigation in Blazor SfPdfViewer2 | Syncfusion
+title: Page thumbnail navigation in Blazor SfPdfViewer | Syncfusion
 description: Learn how to use the thumbnail panel in the Blazor PDF Viewer to preview pages, navigate quickly, enable the feature, and control its initial visibility.
 platform: document-processing
-control: SfPdfViewer2
+control: SfPdfViewer
 documentation: ug
 ---
 
-# Page thumbnail navigation in Blazor SfPdfViewer2
+# Page thumbnail navigation in Blazor SfPdfViewer Component
 
 Use the thumbnail panel to preview pages and quickly navigate a PDF. Each thumbnail previews a page; selecting a thumbnail navigates the viewer to that page by default.
 
@@ -30,8 +30,7 @@ Show or hide the thumbnail panel by setting the [EnableThumbnailPanel](https://h
 </SfPdfViewer2>
 
 @code {
-
-    public SfPdfViewer2 SfPdfViewer { get; set; }
+    private SfPdfViewer2 SfPdfViewer { get; set; }
     //Sets the PDF document path for initial loading.
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
@@ -42,6 +41,6 @@ Show or hide the thumbnail panel by setting the [EnableThumbnailPanel](https://h
 
 ## See also
 
-* [Hyperlink navigation in Blazor SfPdfViewer2](./hyperlink)
-* [Bookmark navigation in Blazor SfPdfViewer2](./bookmark)
-* [Page navigation in Blazor SfPdfViewer2](./pages)
+* [Hyperlink navigation in Blazor SfPdfViewer](./hyperlink)
+* [Bookmark navigation in Blazor SfPdfViewer](./bookmark)
+* [Page navigation in Blazor SfPdfViewer](./pages)

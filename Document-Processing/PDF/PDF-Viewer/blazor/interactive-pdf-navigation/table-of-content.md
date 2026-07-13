@@ -21,7 +21,7 @@ Enable hyperlink navigation, which also enables click behavior on TOC links, by 
 <SfPdfViewer2 Height="100%" Width="100%" DocumentPath="@DocumentPath" EnableHyperlink="true" />
 
 @code{
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 
 ```
@@ -38,7 +38,7 @@ Control where external hyperlinks open using the [HyperlinkOpenState](https://he
               HyperlinkOpenState="LinkTarget.NewTab" />
 
 @code{
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 
 ```

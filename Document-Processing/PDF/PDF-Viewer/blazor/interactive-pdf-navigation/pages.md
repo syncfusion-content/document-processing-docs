@@ -33,7 +33,7 @@ These toolbar buttons are controlled by the [EnableNavigation](https://help.sync
               EnableNavigation="false" />
 
 @code{
-    public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
 }
 
 ```
@@ -75,31 +75,31 @@ N> `GoToPageAsync` expects a 1‑based page number.
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code{
-    SfPdfViewer2 Viewer;
+    private SfPdfViewer2 Viewer;
     SfTextBox TextBox;
-    public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
 
-    public async Task OnFirstPageClick(MouseEventArgs args)
+    private async Task OnFirstPageClick(MouseEventArgs args)
     {
         await Viewer.GoToFirstPageAsync();
     }
 
-    public async Task OnLastPageClick(MouseEventArgs args)
+    private async Task OnLastPageClick(MouseEventArgs args)
     {
         await Viewer.GoToLastPageAsync();
     }
 
-    public async Task OnNextPageClick(MouseEventArgs args)
+    private async Task OnNextPageClick(MouseEventArgs args)
     {
         await Viewer.GoToNextPageAsync();
     }
 
-    public async Task OnPageClick(MouseEventArgs args)
+    private async Task OnPageClick(MouseEventArgs args)
     {        // GoToPageAsync expects a 1-based page number.        int pageIndex =  int.Parse(TextBox.Value.ToString());
         await Viewer.GoToPageAsync(pageIndex);
     }
 
-    public async Task OnPreviousPageClick(MouseEventArgs args)
+    private async Task OnPreviousPageClick(MouseEventArgs args)
     {
         await Viewer.GoToPreviousPageAsync();
     }

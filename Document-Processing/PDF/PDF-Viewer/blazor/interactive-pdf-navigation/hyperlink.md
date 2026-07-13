@@ -23,7 +23,7 @@ Toggle hyperlink navigation by setting the [EnableHyperlink](https://help.syncfu
 <SfPdfViewer2 Height="100%" Width="100%" DocumentPath="@DocumentPath" EnableHyperlink="true" />
 
 @code{
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 ```
 
@@ -40,7 +40,7 @@ External links (HTTP/HTTPS, etc.) open in the browser according to browser setti
               HyperlinkOpenState="LinkTarget.NewTab" />
 
 @code{
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 ```
 

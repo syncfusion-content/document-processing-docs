@@ -18,7 +18,7 @@ A PDF document can be created during the SfPdfViewer [`Created`](https://help.sy
 @using System.IO;
 @using Syncfusion.Drawing;
 
-<SfPdfViewer2 DocumentPath="@DocumentPath" Height="100%" Width="100%">
+<SfPdfViewer2 @ref="PdfViewer" DocumentPath="@DocumentPath" Height="100%" Width="100%">
     <PdfViewerEvents Created="created"></PdfViewerEvents>
 </SfPdfViewer2>
 

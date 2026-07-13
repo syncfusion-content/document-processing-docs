@@ -26,7 +26,7 @@ Show or hide the bookmark panel by setting the [EnableBookmarkPanel](https://hel
 <SfPdfViewer2 Height="100%" Width="100%" DocumentPath="@DocumentPath" EnableBookmarkPanel="true" />
 
 @code{
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 
 ```

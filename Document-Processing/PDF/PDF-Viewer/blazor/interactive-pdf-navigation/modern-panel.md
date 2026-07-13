@@ -129,7 +129,7 @@ Example — add a custom item that renders a small interactive panel:
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 pdfViewer;
+    private SfPdfViewer2 pdfViewer;
     // List of standard toolbar items.
     List<ToolbarItem> ToolbarItems = new List<ToolbarItem>()
     {
