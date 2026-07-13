@@ -16,7 +16,7 @@ This accessible PDF reading feature supports two approaches:
 2. Windows Speech Synthesis API
 
 The following demo illustrates both supported approaches:
-- [Blazor PDF Viewer example - Accessible PDF Reading](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/pdf-viewer/accessible-pdf-reading?theme=fluent2)
+- [Blazor PDF Viewer example - Accessible PDF Reading](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/accessible-pdf-reading?theme=fluent2)
 
 ## Microsoft Edge’s Screen Reader
 
@@ -925,4 +925,4 @@ function clearAllHighlights() {
 
 ## See also
 
-- [Blazor PDF Viewer example - Accessible PDF Reading](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/pdf-viewer/accessible-pdf-reading?theme=fluent2)
+- [Blazor PDF Viewer example - Accessible PDF Reading](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/accessible-pdf-reading?theme=fluent2)

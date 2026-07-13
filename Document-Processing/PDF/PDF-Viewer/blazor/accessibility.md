@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Keyboard accessibility in Blazor SfPdfViewer Component | Syncfusion
-description: Checkout and learn here all about Keyboard accessibility in Blazor SfPdfViewer component and more.
+description: Check out this guide and learn here all about Keyboard accessibility in Blazor SfPdfViewer component and more.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

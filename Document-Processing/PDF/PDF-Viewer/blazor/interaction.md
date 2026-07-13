@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Interaction mode in Blazor SfPdfViewer Component | Syncfusion
-description: Checkout and learn here all about interaction mode in Blazor SfPdfViewer component and more.
+description: Learn how to use interaction modes in the Blazor SfPdfViewer component, including text selection, panning, and annotation locking.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
