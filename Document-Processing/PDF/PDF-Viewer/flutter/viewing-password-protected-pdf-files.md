@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Viewing password-protected PDFs in Flutter PDF Viewer | Syncfusion
-description: Learn here all about loading password-protected PDF feature of Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget and more.
+description: Learn here all about loading password-protected PDFs using the Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget and more.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Viewing Password-Protected PDFs in Flutter PDF Viewer (SfPdfViewer)
 
-To load a password-protected document without a password or with an invalid password in [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html), use the [password](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/password.html) property. The default password dialog will be displayed.
+To load a password-protected document, use the [password](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/password.html) property in [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html). When the password is not provided or is invalid, the default password dialog will be displayed.
 
 ![Password dialog](images/password-dialog/password-dialog.png)
 
@@ -84,9 +84,8 @@ class _CustomPasswordDialogState extends State<CustomPasswordDialog> {
         },
         onDocumentLoadFailed: (details) {
           if (details.description.contains('password')) {
-            if (details.description.contains('password') &&
-                _hasPasswordDialog) {
-              _errorText = "Invalid password !!";
+            if (_hasPasswordDialog) {
+              _errorText = "Invalid password!";
               _formKey.currentState?.validate();
               _textFieldController.clear();
               _passwordDialogFocusNode.requestFocus();

@@ -9,7 +9,7 @@ documentation: ug
 
 # Saving PDF Files in Windows Forms PDF Viewer (PdfViewerControl)
 
-The Save feature in the [PdfViewerControl](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html) helps you to keep the file up to date with any modifications and prevent your work from being lost by allowing you to save the file in the local disk.
+The Save feature in the [PdfViewerControl](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html) helps you to keep the file up to date with any modifications and prevent your work from being lost by allowing you to save the file to the local disk.
 
 ![Save option in Toolbar](Save_images/Save.png)
 
@@ -21,7 +21,7 @@ Save can be performed using the following steps.
 
 ## Programmatically Save the Loaded PDF Document
 
-WinForms PDFViewer allows a user to save the loaded PDF file to a specific location using the PDF Viewer [LoadedDocument](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_Forms_PdfViewer_PdfViewerControl_LoadedDocument) object. Refer to the following code sample.  
+WinForms PDF Viewer allows a user to save the loaded PDF file to a specific location using the PDF Viewer [LoadedDocument](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_Forms_PdfViewer_PdfViewerControl_LoadedDocument) object. Refer to the following code sample.  
 
 {% tabs %}
 {% highlight c# %}
@@ -104,4 +104,4 @@ namespace SaveEventsDemo
 {% endhighlight %}
 {% endtabs %}
 
-N> The complete sample project of the Save Events is available in the [GitHub](https://github.com/SyncfusionExamples/WinForms-PDFViewer-Examples/tree/master/Save/SaveEventsDemo).
+N> A complete sample project demonstrating the Save events is available in the [GitHub](https://github.com/SyncfusionExamples/WinForms-PDFViewer-Examples/tree/master/Save/SaveEventsDemo).

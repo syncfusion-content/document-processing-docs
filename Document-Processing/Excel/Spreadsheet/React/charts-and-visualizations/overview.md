@@ -36,9 +36,9 @@ By default, charts are enabled in the Spreadsheet (via the [allowChart](https://
 
 The React Spreadsheet component provides a variety of features for working with charts and visualizations. Below is a quick overview of each feature, with links to their respective documentation sections:
 
-- **[Insert Charts](./charts-and-visualizations/insert-charts)**: Add charts to your spreadsheet to visually represent your data.
-- **[Customize Chart Appearance](./charts-and-visualizations/customize-chart-appearance)**: Change the look and feel of your charts, including styles, colors, and chart types.
-- **[Remove Charts](./charts-and-visualizations/remove-charts)**: Delete charts that are no longer needed from your worksheet.
+- **[Insert Charts](./insert-charts)**: Add charts to your spreadsheet to visually represent your data.
+- **[Customize Chart Appearance](./customize-chart-appearance)**: Change the look and feel of your charts, including styles, colors, and chart types.
+- **[Remove Charts](./remove-charts)**: Delete charts that are no longer needed from your worksheet.
 
 ## Limitations of Chart
 
@@ -49,6 +49,6 @@ The following features have some limitations in the Chart:
 * Corner resizing option in chart element.
 
 ## See Also
-* [Images](./images-and-illustrations)
+* [Images](../images-and-illustrations/overview)
 * [Formatting](./formatting)
-* [Rows and columns](./rows-and-columns)
+* [Rows and columns](../rows-and-columns/overview)

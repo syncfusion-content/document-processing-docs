@@ -9,16 +9,16 @@ documentation: ug
 
 # Page Navigation in Flutter PDF Viewer (SfPdfViewer)
 
-Navigate to the desired pages instantly either by using the page navigation dialog or the controller methods programmatically. If the desired page doesn’t exist, then the navigation will not happen, and the older page will be retained.
+Navigate to the desired pages instantly either by using the page navigation dialog available in the built-in toolbar, or by using the controller methods programmatically. If the desired page doesn’t exist, then the navigation will not happen, and the current page will be retained.
 
 ![Page navigation dialog](images/page-navigation/page_navigation_dialog.png)
 
 ## Navigate to the Desired Page Programmatically
 
-The [jumpToPage](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/jumpToPage.html) controller method helps you to navigate to the specified page number in a PDF document. The following code example explains the same.
+The [jumpToPage](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/jumpToPage.html) controller method helps you to navigate to the specified page number in a PDF document. The page number is 1-based. The following code example explains the same.
 
 {% tabs %}
-{% highlight dart hl_lines="21" %}
+{% highlight dart hl_lines="22" %}
 
 late PdfViewerController _pdfViewerController;
 
@@ -159,7 +159,7 @@ Widget build(BuildContext context) {
 
 ## Navigate to the Desired Offset Programmatically
 
-The [jumpTo](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/jumpTo.html) controller method moves the scroll position of the `SfPdfViewer` to the specified horizontal and vertical offset. If the specified offset value is wrong, then the scroll will not happen, and the older position will be retained. 
+The [jumpTo](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/jumpTo.html) controller method moves the scroll position of the `SfPdfViewer` to the specified horizontal and vertical offset. Both `xOffset` and `yOffset` accept `double` values in logical pixels. If the specified offset value is wrong, then the scroll will not happen, and the current position will be retained. 
 
 N> Both the `xOffset` and `yOffset` are optional parameters and if the offset values are not provided, then the `SfPdfViewer` will be scrolled or moved to the default position (0, 0).
 
@@ -217,7 +217,7 @@ The [onPageChanged](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/l
 The [PdfPageChangedDetails](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfPageChangedDetails-class.html) will return the `oldPageNumber`, `newPageNumber`, `isFirstPage`, and `isLastPage` values. The following code example explains the same.
 
 {% tabs %}
-{% highlight dart hl_lines="6 7 8 9" %}
+{% highlight dart hl_lines="6 7 8 9 10" %}
 
 @override
 Widget build(BuildContext context) {
@@ -225,8 +225,10 @@ Widget build(BuildContext context) {
       body: SfPdfViewer.network(
     'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
     onPageChanged: (PdfPageChangedDetails details) {
+      print(details.oldPageNumber);
       print(details.newPageNumber);
       print(details.isFirstPage);
+      print(details.isLastPage);
     },
   ));
 }
