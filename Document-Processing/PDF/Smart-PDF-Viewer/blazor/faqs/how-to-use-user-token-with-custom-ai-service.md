@@ -23,7 +23,6 @@ After completing this setup, you can:
 
 * [Add Smart PDF Viewer to your Blazor pages](../getting-started/web-app)
 
----
 ## Step 1: Create User Token Service
 The `UserTokenService` is responsible for generating and managing per-user quotas. These tokens are used to authenticate and throttle requests to the custom Azure OpenAI service based on user identity.
 

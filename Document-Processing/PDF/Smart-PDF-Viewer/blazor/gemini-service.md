@@ -40,7 +40,7 @@ Open the NuGet Package Manager in Visual Studio (Tools → NuGet Package Manager
 
 ## Step 2: Create a Custom AI Service
 
-The Syncfusion Smart PDF Viewer is designed to work with different AI backends through the `IChatInferenceService` interface. This section explains how to create a custom implementation that connects the Smart PDF Viewer to the Gemini AI service.
+The Syncfusion Smart PDF Viewer is designed to work with different AI back-ends through the `IChatInferenceService` interface. This section explains how to create a custom implementation that connects the Smart PDF Viewer to the Gemini AI service.
 
 ### Understanding the Interface
 

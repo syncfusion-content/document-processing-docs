@@ -27,16 +27,12 @@ Before you begin, ensure you have:
 
 2. **DeepSeek Models**
 
-   For detailed specifications and pricing, visit the [DeepSeek Models Documentation](https://api-docs.deepseek.com/quick_start/pricing).
-
-
----
+   For detailed specifications and pricing, visit the [DeepSeek Models Documentation](https://api-docs.deepseek.com).
 
 ## Getting Started for DeepSeek AI with Smart PDF Viewer
 
 After completing this setup, see [Add Smart PDF Viewer to your Blazor pages](../blazor/getting-started/web-app) to render the component on a page.
 
----
 
 ## Step 1: Install the required NuGet packages
 
