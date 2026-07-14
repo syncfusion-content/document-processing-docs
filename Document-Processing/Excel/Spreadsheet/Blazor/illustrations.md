@@ -7,9 +7,9 @@ control: Spreadsheet
 documentation: ug
 ---
 
-# Images and Illustrations in Blazor Spreadsheet Component
+# Images in Blazor Spreadsheet Component
 
-The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component lets you insert images into a worksheet to enhance visual presentation and provide additional context alongside data. Images such as logos, screenshots, diagrams, or illustrations can be placed within a sheet, positioned as needed, resized, selected, or removed.
+The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component lets you insert images into a worksheet to enhance visual presentation and provide additional context alongside data. Images such as logos, screenshots, diagrams, can be placed within a sheet, positioned as needed, resized, selected, or removed.
 
 Image support is controlled by the [AllowImage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowImage) property, which is enabled by default.
 
@@ -30,45 +30,22 @@ The example below shows how to disable image support across the Spreadsheet:
 {% endhighlight %}
 {% endtabs %}
 
-## Working with image
+## Overview of Image Operations
 
-The Blazor Spreadsheet component provides a range of features for working with images and illustrations. Each subsection below describes how to perform the operation from the UI.
+The The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component also provides a range of features for working with images. Below is a quick overview of each feature.
 
-### Inserting images
+* **Insert and Position Images**: Add images to your spreadsheet and place them at the desired location.
 
-To insert an image into the active sheet:
+* **Resize Images**: Change the height and width of images to fit your needs.
 
-1.  Click a cell near where you want the image to appear.
-2.  Go to the **Insert** tab in the **Ribbon**.
-3.  Click **Image** to open the file picker.
-4.  Browse to and select an image file then click **Open**.
-5.  The image now inserted. Drag it to a new position if needed.
+* **Delete Images**: Remove images that are no longer required from your spreadsheet.
 
-### Resizing images
-
-To resize an image that is already inserted in the sheet:
-
-1.  Click the image to select it. Four selection handles appear at the center of each side.
-2.  Drag any **handle** to resize the image freely in width and height.
-
-### Deleting images
-
-To remove an image from the active sheet:
-
-1.  Click the image to select it.
-2.  Press **Delete** key to delete the image
-
-### Selecting images
-
-To select one or more images on the sheet:
-
-1.  Click an image to select it.
-2.  Click an empty area of the sheet to clear the selection.
+* **Position Images**: Select one or multiple images for further actions or deselect them as needed.
 
 
 ![Images in Blazor Spreadsheet](./images/image-feature.gif)
 
-## Known limitations
+## Limitations of Image
 
 The following limitations apply to the image support in the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor):
 

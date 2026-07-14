@@ -11,7 +11,7 @@ documentation: ug
 
 The selection feature in the  [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) enables interactive highlighting and manipulation of cells, rows, or columns for data analysis and editing operations. The component supports both mouse and keyboard interactions.
 
-The Blazor Spreadsheet provides the following selection options:
+The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) provides the following selection options:
 
 *  **Cell Selection**: Select individual cells or a range of cells.
 *  **Row Selection**: Select entire rows.
@@ -41,7 +41,7 @@ N> When the active worksheet is protected, selection is restricted to the cells 
 
 ## Cell Selection
 
-The Blazor Spreadsheet component allows selecting individual cells or ranges of cells for various data operations. Cell selection forms the foundation of most Spreadsheet interactions and is the basis for data entry and formatting.
+The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component allows selecting individual cells or ranges of cells for various data operations. Cell selection forms the foundation of most Spreadsheet interactions and is the basis for data entry and formatting.
 
 * **Single cell selection** focuses on a specific cell for data entry or formatting tasks.
 * **Range selection** enables multiple adjacent cells to be selected for batch operations such as formatting, data entry, or calculations.
@@ -84,7 +84,7 @@ The column selection operation can be performed using the following methods:
 
 ## Programmatic Selection
 
-The Spreadsheet component supports programmatic selection for cells, rows, and columns using the [SelectRangeAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SelectRangeAsync_System_String_) method. This method accepts various range formats and selection patterns.
+The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component supports programmatic selection for cells, rows, and columns using the [SelectRangeAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SelectRangeAsync_System_String_) method. This method accepts various range formats and selection patterns.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

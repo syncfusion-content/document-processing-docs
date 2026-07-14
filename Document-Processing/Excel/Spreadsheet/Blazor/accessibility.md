@@ -11,7 +11,6 @@ documentation: ug
 
 The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WAI-ARIA](https://www.w3.org/TR/wai-aria#roles) roles commonly used to evaluate accessibility.
 
-For setup prerequisites such as installing the Syncfusion NuGet package, registering services in `Program.cs`, and including theme/script references, refer to the [Getting Started with Blazor Spreadsheet](https://blazor.syncfusion.com/documentation/spreadsheet/getting-started) guide.
 <style>
     .post .post-content img {
         display: inline-block;
@@ -113,9 +112,8 @@ The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sd
 | <kbd>Ctrl</kbd> + <kbd>Click</kbd> | <kbd>⌘</kbd> + <kbd>Click</kbd> | Opens the link in the selected cell.|
 | <kbd>Ctrl</kbd> + <kbd>K</kbd> | <kbd>⌘</kbd> + <kbd>K</kbd> | Opens the hyperlink dialog to insert a new link or edit an existing one.|
 
-N> * On Mac, when key remapping is enabled, use <kbd>⌘</kbd> in place of <kbd>Ctrl</kbd> for the shortcuts listed above.
+N> The <kbd>Command</kbd> and <kbd>Control</kbd> keys on Mac devices can be interchanged. When this switch occurs, use the <kbd>Command</kbd> key in place of the <kbd>Control</kbd> key for the above listed key interactions with Mac devices.
 
 ## See also
 
 * [Accessibility in Syncfusion Blazor](https://blazor.syncfusion.com/documentation/common/accessibility)
-* [Editing in Blazor Spreadsheet](https://blazor.syncfusion.com/documentation/spreadsheet/editing)

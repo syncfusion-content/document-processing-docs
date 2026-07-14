@@ -24,16 +24,19 @@ You can insert rows in the following ways,
 
 #### Insert Rows via UI
 
-Using context menu, insert the rows in the desired position.
+To insert a row using the context menu:
+
+1.  Click the **row header** where the new row should appear.
+
+2.  **Right-click** the row header to open the context menu.
+
+3.  Select **Insert Rows Above** to insert the new row above the selected row, or **Insert Rows Below** to insert it below.
+
+4.  The new row is added to the worksheet, and formatting from the adjacent row is preserved.
 
 #### Insert rows programmatically
 
-Using the [InsertRowAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_InsertRowAsync_System_Int32_System_Int32_System_Object_Syncfusion_Blazor_Spreadsheet_RowPosition_) method, you can insert rows once the component is loaded.
-
-
-The following code example shows the options for inserting rows in the spreadsheet.
-
-#### InsertRowAsync parameters
+Using the [InsertRowAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_InsertRowAsync_System_Int32_System_Int32_System_Object_Syncfusion_Blazor_Spreadsheet_RowPosition_) method, you can insert rows once the component is loaded. The available parameters in the [InsertRowAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_InsertRowAsync_System_Int32_System_Int32_System_Object_Syncfusion_Blazor_Spreadsheet_RowPosition_) method are:
 
 | Parameter | Type | Description |
 | -- | -- | -- |
@@ -41,6 +44,8 @@ The following code example shows the options for inserting rows in the spreadshe
 | rowCount | int | The number of rows to insert. |
 | sheet | string | int (Optional) | The target sheet. Pass a `string` to use the sheet name or an `int` to use the sheet index. If omitted, the active sheet is used. |
 | position | Enum | The position relative to `startIndex`. Valid values are `Above` and `Below`. Default: `Above`. |
+
+**Example**
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -91,7 +96,15 @@ You can insert columns in the following ways,
 
 #### Insert Columns Via UI
 
-* Using context menu, insert the columns in the desired position.*
+To insert a column using the context menu:
+
+1.  Click the **column header** of the column where the new column should appear.
+
+2.  **Right-click** the column header to open the context menu.
+
+3.  Select **Insert Columns to the Left** to insert the new column to the left of the selected column, or **Insert Columns to the Right** to insert it to the right.
+
+4.  The new column is added to the worksheet, and formatting from the adjacent column is preserved.
 
 #### Insert Columns programmatically
 
@@ -104,7 +117,7 @@ You can insert columns in the following ways,
 | sheet | string | int (Optional) | The target sheet. Pass a `string` to use the sheet name or an `int` to use the sheet index. If omitted, the active sheet is used. |
 | position | Enum | The position relative to `startIndex`. Valid values are `Left` and `Right`. Default: `Right`. |
 
-#### Example
+**Example**
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -115,7 +128,7 @@ You can insert columns in the following ways,
 
 <SfButton OnClick="InsertColumnsHandler" Content="Insert Columns"></SfButton>
 <SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
-    <SpreadsheetRibbon></SpSpreadsheetRibbon>
+    <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
 @code {
@@ -146,20 +159,6 @@ You can insert columns in the following ways,
 
 {% endhighlight %}
 {% endtabs %}
-
-N> If the `sheet` parameter is `null` or omitted, the operation targets the active sheet. When the `sheet` parameter is an `int`, the value is treated as the zero-based sheet index (for example, `3` targets the fourth sheet in the workbook).
-
-### Inserting rows and columns via the context menu
-
-To insert rows or columns using the right-click context menu:
-
-1.  Right-click the row header (for rows) or column header (for columns) where the new row or column should appear.
-2.  From the context menu, select **Insert** and then choose the appropriate option:
-    - **Insert Rows Above** - Inserts a new row above the selected row.
-    - **Insert Rows Below** - Inserts a new row below the selected row.
-    - **Insert Columns to the Left** - Inserts a new column to the left of the selected column.
-    - **Insert Columns to the Right** - Inserts a new column to the right of the selected column.
-3.  The new row or column is inserted at the selected position, and the formatting from the adjacent cells is preserved.
 
 N> When the sheet is protected, **Insert Rows Above**, **Insert Rows Below**, **Insert Columns to the Left**, and **Insert Columns to the Right** are available only when the **Insert Rows** or **Insert Columns** permission is enabled in the **Protect Sheet** dialog.
 

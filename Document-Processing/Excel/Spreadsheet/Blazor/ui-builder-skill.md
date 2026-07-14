@@ -24,12 +24,10 @@ Before installing Blazor UI Builder Skill with Spreadsheet, ensure the following
 - Required [Node.js](https://nodejs.org/en) version ≥ 18
 - **Agent Package Manager** (APM) installed — follow [Installation Guidelines](https://microsoft.github.io/apm/quickstart/#1-install-apm)
 - A supported AI agent or IDE that integrates with the Skills (VS Code, Cursor, Syncfusion® Code Studio, etc.)
-- [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) and Themes NuGet packages referenced in your project (the skill can recommend dependencies, but they must be installed before running the app)
 - Active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):  
   - [Commercial](https://www.syncfusion.com/sales/unlimitedlicense)  
   - [Community License](https://www.syncfusion.com/products/communitylicense)  
   - [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials)
-- Syncfusion license key registered in your application. See [Licensing](https://blazor.syncfusion.com/documentation/licensing) for registration steps.
 
 ## Key Benefits
 
@@ -63,7 +61,7 @@ Before installing Blazor UI Builder Skill with Spreadsheet, ensure that APM (Age
 
 ### Verify APM Installation
 
-Run the following command to confirm APM is installed (skip this step if you already verified APM in the Prerequisites section):
+Run the following command to confirm APM is installed:
 
 ```bash
 apm --version
@@ -104,7 +102,7 @@ After installation, the following artifacts are added to your project for the Gi
 - `.agent/skills/` – contains the skill files
 - `.github/agents/` – contains the agent configuration
 
-For other targets (Cursor, Codex, Claude), skill and agent files are added to their respective agent configuration locations. Refer to the APM [targets documentation](https://microsoft.github.io/apm/reference/cli/targets/#detection-signals) for details about supported deployment targets.
+Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targets/#detection-signals) for details about supported deployment targets.
 
 N> For [Syncfusion® Code Studio](https://help.syncfusion.com/code-studio/reference/configure-properties/custom-agents#predefined-agents), use the Copilot command above to install the Blazor UI Builder.
 
@@ -117,7 +115,7 @@ After installing the skill, run `dotnet restore` to ensure all Syncfusion Blazor
 3. **Component Mapping** - Map intent to Syncfusion® Spreadsheet components and their required feature modules.
 4. **Theming & Design System**  
    Load required theming guidelines and confirm key design choices:
-   - CSS framework (Tailwind, Bootstrap, or Material). If no theme is detected in the existing project, use Greenfield (Syncfusion's custom-theme system) with the Syncfusion Tailwind3 theme as the default. Proceed with the default or change the theme as preferred.
+   - CSS framework (Tailwind, Bootstrap, Material, or Greenfield (custom theme)). If no themes detected in the existing project, Greenfield and Syncfusion Tailwind3 theme are shown as the default option—proceed with this or change the theme as preferred.
    - Syncfusion theme (Tailwind3, Bootstrap5, Material3, Fluent2)
    - Light and Dark Mode
    - Core design basics (colors, spacing, typography, responsiveness, accessibility)
@@ -149,8 +147,6 @@ To start using the skill:
 ![Set Agent](./images/blazor-ui-builder.png)
 3. Start prompting the agent with a clear description of your Spreadsheet UI requirements.
 
-N> Restart your IDE or reload the window if the newly installed agent does not appear in the Agent dropdown.
-
 N> For Syncfusion® Code Studio, if the UI Builder agent is not shown, ensure that the agent location is configured to use it in the chat, and refer to the [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/usersettings#agent-file-locations) to configure the agent location properly.
 
 **Example Prompts:**
@@ -171,7 +167,7 @@ Create an employee directory using the [Blazor Spreadsheet Editor](https://www.s
 Follow these guidelines to get the most out of UI Builder and ensure high-quality, production-ready results:
 
 - **Stay consistent** - Maintain consistent file organization, naming conventions, and coding standards throughout your project.
-- **Use advanced AI models** - For best results, use **Claude Sonnet 4.5 or higher** capability models to produce better code quality and more accurate implementations.
+- **Use advanced AI models** - For best results, use **Claude Sonnet 4.6 or higher** capability models to produce better code quality and more accurate implementations.
 - **Review all content and assets before production** - Validate the data sources, formulas, and logic. Ensure compatibility with your existing systems and data models before deployment. Test edge cases and large datasets.
 
 ## Troubleshooting
@@ -182,7 +178,7 @@ Follow these guidelines to get the most out of UI Builder and ensure high-qualit
 
 - **Component not rendering**: Retry generation using the specific component skill to resolve the issue, and ensure required Syncfusion® packages and themes are properly configured.
 
-- **Syncfusion license banner appears**: Register and validate your Syncfusion® license key in the application. See [Licensing](https://blazor.syncfusion.com/documentation/licensing) for detailed steps.
+- **Syncfusion license banner appears**: Use the licensing skill to correctly register and validate your Syncfusion® license key in the application.
 
 
 ## FAQ
@@ -203,5 +199,4 @@ The skill proposes changes and requires confirmation for insertion; automatic de
 
 - [Agent Skills Standards](https://agentskills.io/home)
 - [Agent Package Manager](https://microsoft.github.io/apm/getting-started/quick-start/)
-- [Syncfusion Blazor Licensing](https://blazor.syncfusion.com/documentation/licensing)
  

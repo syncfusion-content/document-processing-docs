@@ -9,7 +9,7 @@ documentation: ug
 
 # Hyperlinks in the Blazor Spreadsheet component
 
-Hyperlinks enable navigation within and outside the spreadsheet. This feature creates clickable links that connect to external web URLs, specific cells within the current worksheet, or cells in other worksheets. To control this functionality, use the [AllowHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowHyperlink) property.
+Hyperlinks in the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) enable interactive navigation both within and outside of spreadsheets. This feature creates clickable links that connect to external web URLs, specific cells within the current worksheet, or cells in other worksheets. To control this functionality, use the [AllowHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowHyperlink) property, which enables or disables hyperlink support in the Spreadsheet. The default value of the [AllowHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowHyperlink) property is **true**.
 
 The keyboard shortcut `Ctrl + K` can be used to quickly open the **Insert** or **Edit** hyperlink dialog for the active cell, without using the UI elements. This shortcut works regardless of whether the hyperlink functionality is accessed through the Ribbon or the Context Menu.
 
@@ -161,6 +161,8 @@ Hyperlinks can be edited through the user interface (UI) using any of the follow
 - Click **Update** to apply the changes.
 
 ![Edit hyperlink using Ribbon](images/edit-hyperlink-using-ribbon.gif)
+
+N> When editing hyperlinks to other sheets, ensure that the target sheet exists in the workbook. Links to non-existent sheets result in errors when clicked.
 
 **Using the Context Menu**
 

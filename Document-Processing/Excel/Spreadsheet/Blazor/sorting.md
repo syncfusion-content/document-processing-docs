@@ -27,7 +27,6 @@ The example below shows how to disable sorting across the entire Spreadsheet:
 
 @code {
     public byte[] DataSourceBytes { get; set; }
-    public SfSpreadsheet SpreadsheetInstance;
 
     protected override void OnInitialized()
     {

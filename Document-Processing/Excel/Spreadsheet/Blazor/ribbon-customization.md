@@ -329,7 +329,7 @@ Methods provide programmatic control over ribbon elements during the component l
 
 ### Showing and Hiding Tabs
 
-Tab visibility can be controlled using the [ShowRibbonTabs()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ShowRibbonTabs_System_Collections_Generic_List_System_String__) and [HideRibbonTabs()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_HideRibbonTabs_System_Collections_Generic_List_System_String__) methods. Both methods accept the **displayed tab name** (for example, `Home`, `Review`) in a `List<string>`.
+Tab visibility can be controlled using the [ShowRibbonTabs()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ShowRibbonTabs_System_Collections_Generic_List_System_String__) and [HideRibbonTabs()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_HideRibbonTabs_System_Collections_Generic_List_System_String__) methods.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -362,11 +362,11 @@ Tab visibility can be controlled using the [ShowRibbonTabs()](https://help.syncf
 {% endhighlight %}
 {% endtabs %}
 
-N> * If a tab name in the list does not match a built-in tab, the call is ignored and no error is raised.
+N> If a tab name in the list does not match a built-in tab, the call is ignored and no error is raised.
 
 ### Enabling and Disabling Tabs
 
-Tab interactivity can be controlled using the [EnableRibbonTabs()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableRibbonTabs_System_Collections_Generic_List_System_String__) and [DisableRibbonTabs()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DisableRibbonTabs_System_Collections_Generic_List_System_String__) methods. Both methods accept the **displayed tab name** in a `List<string>`. Disabled tabs remain visible but appear grayed out and cannot be selected.
+Tab interactivity can be controlled using the [EnableRibbonTabs()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableRibbonTabs_System_Collections_Generic_List_System_String__) and [DisableRibbonTabs()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DisableRibbonTabs_System_Collections_Generic_List_System_String__) methods.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -401,7 +401,7 @@ Tab interactivity can be controlled using the [EnableRibbonTabs()](https://help.
 
 ### Showing and Hiding Items
 
-Item visibility can be controlled using the [ShowRibbonItems()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ShowRibbonItems_System_Collections_Generic_List_System_String__) and [HideRibbonItems()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_HideRibbonItems_System_Collections_Generic_List_System_String__) methods. Both methods accept the **item ID** (for example, `cut`, `paste`) in a `List<string>`. Hidden items are completely removed from the ribbon interface.
+Item visibility can be controlled using the [ShowRibbonItems()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ShowRibbonItems_System_Collections_Generic_List_System_String__) and [HideRibbonItems()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_HideRibbonItems_System_Collections_Generic_List_System_String__) methods. Hidden items are completely removed from the ribbon interface.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -434,11 +434,11 @@ Item visibility can be controlled using the [ShowRibbonItems()](https://help.syn
 {% endhighlight %}
 {% endtabs %}
 
-N> * Item IDs are case-sensitive. An unknown item ID is silently ignored.
+N> Item IDs are case-sensitive. An unknown item ID is silently ignored.
 
 ### Enabling and Disabling Items
 
-Item interactivity can be controlled using the [EnableRibbonItems()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableRibbonItems_System_Collections_Generic_List_System_String__) and [DisableRibbonItems()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DisableRibbonItems_System_Collections_Generic_List_System_String__) methods. Both methods accept the **item ID** in a `List<string>`. Disabled items remain visible but appear grayed out and cannot be clicked.
+Item interactivity can be controlled using the [EnableRibbonItems()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableRibbonItems_System_Collections_Generic_List_System_String__) and [DisableRibbonItems()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DisableRibbonItems_System_Collections_Generic_List_System_String__) methods. Disabled items remain visible but appear grayed out and cannot be clicked.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -626,7 +626,7 @@ Custom menu items can be added to the File menu using the [AddFileMenuItems()](h
 
 ### Showing and Hiding File Menu Items
 
-Menu item visibility can be controlled using the [ShowFileMenuItems()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ShowFileMenuItems_System_Collections_Generic_List_System_String__) and [HideFileMenuItems()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_HideFileMenuItems_System_Collections_Generic_List_System_String__) methods. Both methods accept the **displayed menu item name** (for example, `Open`, `Save As`) in a `List<string>`.
+Menu item visibility can be controlled using the [ShowFileMenuItems()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ShowFileMenuItems_System_Collections_Generic_List_System_String__) and [HideFileMenuItems()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_HideFileMenuItems_System_Collections_Generic_List_System_String__) methods.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -663,7 +663,7 @@ Menu item visibility can be controlled using the [ShowFileMenuItems()](https://h
 
 ### Enabling and Disabling File Menu Items
 
-Menu item interactivity can be controlled using the [EnableFileMenuItems()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableFileMenuItems_System_Collections_Generic_List_System_String__) and [DisableFileMenuItems()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DisableFileMenuItems_System_Collections_Generic_List_System_String__) methods. Both methods accept the **displayed menu item name** in a `List<string>`. Disabled items remain visible but appear grayed out and cannot be selected.
+Menu item interactivity can be controlled using the [EnableFileMenuItems()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableFileMenuItems_System_Collections_Generic_List_System_String__) and [DisableFileMenuItems()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DisableFileMenuItems_System_Collections_Generic_List_System_String__) methods.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

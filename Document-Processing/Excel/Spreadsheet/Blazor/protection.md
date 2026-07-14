@@ -19,13 +19,15 @@ The **Protect Sheet** support helps prevent accidental changes such as editing, 
 
 The active sheet can be protected using any of the following ways:
 
-*   Navigate to the **Review** tab in the Ribbon and select **Protect Sheet**.
-*   Right-click the sheet's tab in the bottom bar and select **Protect Sheet** from the context menu.
+*   Go to the **Review** tab in the Ribbon and select **Protect Sheet**.
+
+*   Right-click the sheet's tab at the bottom of the workbook and select **Protect Sheet** from the context menu.
 
 In the **Protect Sheet** dialog, perform the following steps:
 
-1. Open the **Sheet Options** tab and select or deselect the actions that users are allowed to perform while the sheet is protected.
-2. Click **OK** to apply the protection.
+1.  Open the **Sheet Options** tab and select or deselect the actions that users are allowed to perform while the sheet is protected.
+
+2.  Click **OK** to apply the protection.
 
 ![Protected Sheet Dialog](./images/protect-sheet.gif)
 
@@ -48,54 +50,43 @@ The [ProtectSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 <SfButton OnClick="ProtectHandler" Content="ProtectSheet"></SfButton>
 
-<SfSpreadsheet DataSource="DataSourceBytes" @ref="SpreadsheetInstance">
+<SfSpreadsheet @ref="SpreadsheetInstance">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
 @code {
 
-    public byte[] DataSourceBytes { get; set; }
-
     public SfSpreadsheet SpreadsheetInstance;
-
-    protected override void OnInitialized()
-    {
-        string filePath = "wwwroot/Sample.xlsx";
-        DataSourceBytes = File.ReadAllBytes(filePath);
-    }
 
     public async Task ProtectHandler()
     {
         // Protect a specific sheet by name.
         await SpreadsheetInstance.ProtectSheetAsync("Sheet1");
-
-        // Protect multiple sheets individually.
-        await SpreadsheetInstance.ProtectSheetAsync("DataSheet");
-        await SpreadsheetInstance.ProtectSheetAsync("Summary");
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-### Unlocking specific cells or ranges in a protected sheet via the UI
+### Unlocking cells or ranges via the UI
 
 To allow editing of specific cells or ranges in a protected sheet:
 
-* Open the **Protect Sheet** dialog.
-* Navigate to the **Unlock Range** tab.
-* Select **New** to add an unlocked range, and perform the following steps:
-    1. Enter a unique **Range Name** for the unlocked range.
-    2. Enter the cell reference (for example, `B2:D5`) in the **Refers to** field, or select the range directly on the sheet.
-    3. Optionally, enter a password in the **Range Password** field to require authentication before the range can be edited. Re-enter the password to confirm.
-    4. Click **OK** to add the unlocked range to the protected sheet.
-* Select the desired unlocked range(s) in the dialog to keep them editable while the rest of the sheet remains restricted.
+1.  Open the **Protect Sheet** dialog from the **Review** tab in the Ribbon.
+
+2.  Select the **Unlock Range** tab.
+
+3.  Enter a unique **Range Name** in the corresponding field.
+
+4.  Enter the cell reference (for example, `B2:D5`) in the **Range Value** field.
+
+5.  Click **Add Range** to include the range in the unlocked-ranges list.
+
+6.  Optionally, repeat steps 3–5 to add additional unlocked ranges.
+
+7.  Click **OK** to apply the protection with the specified unlocked ranges. The selected ranges remain editable while the rest of the sheet stays protected.
 
 ![Unlocked Ranges - Protected Sheet UI](./images/unlocked-range.gif)
-
-### Unlocking specific cells or ranges programmatically
-
-Unlocked ranges for a protected sheet are configured through the protected-range APIs on the spreadsheet. Each unlocked range is associated with a name, a cell reference, and an optional password. 
 
 ### Protection settings in a protected sheet
 
@@ -104,8 +95,11 @@ By default, when a sheet is protected, the actions listed below are restricted w
 To enable specific functionalities while the sheet is protected:
 
 * Open the **Protect Sheet** dialog from the **Review** tab.
+
 * In the dialog, navigate to the **Sheet Options** tab to view available protection settings.
+
 * Select or deselect the desired options to allow or restrict specific actions.
+
 * Click **OK** to apply the protection settings.
 
 The available protection settings in the Spreadsheet are listed below. Each setting applies to the sheet that is currently protected; settings are not shared between sheets in a workbook.
@@ -132,13 +126,16 @@ The **Unprotect Sheet** support restores access to all actions that were previou
 
 In the active sheet, sheet unprotect can be performed using any of the following ways:
 
-* Select **Unprotect Sheet** from the **Review** tab in the Ribbon toolbar.
+* Select **Unprotect Sheet** from the **Review** tab in the Ribbon.
+
 * Right-click the sheet tab and select **Unprotect Sheet** from the context menu.
 
-When the sheet is protected with a password, perform the following steps:
+To unprotect a sheet that was protected with a password:
 
 1. Select **Unprotect Sheet** from the Ribbon or the context menu to open the **Unprotect Sheet** dialog.
+
 2. Enter the password that was set when the sheet was protected.
+
 3. Click **OK** to unprotect.
 
 When the sheet is protected without a password, no password entry is required and the sheet is unprotected immediately.
@@ -166,30 +163,18 @@ The available parameters are:
 
 <SfButton OnClick="UnprotectHandler" Content="Unprotect"></SfButton>
 
-<SfSpreadsheet DataSource="DataSourceBytes" @ref="SpreadsheetInstance">
+<SfSpreadsheet @ref="SpreadsheetInstance">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
 @code {
 
-    public byte[] DataSourceBytes { get; set; }
-
     public SfSpreadsheet SpreadsheetInstance;
-
-    protected override void OnInitialized()
-    {
-        string filePath = "wwwroot/Sample.xlsx";
-        DataSourceBytes = File.ReadAllBytes(filePath);
-    }
 
     public async Task UnprotectHandler()
     {
         // Unprotect a specific sheet by name.
         await SpreadsheetInstance.UnprotectSheetAsync("Sheet1");
-
-        // Unprotect multiple sheets individually.
-        await SpreadsheetInstance.UnprotectSheetAsync("DataSheet");
-        await SpreadsheetInstance.UnprotectSheetAsync("Summary");
     }
 }
 
@@ -229,8 +214,6 @@ The [ProtectSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 </SfSpreadsheet>
 
 @code {
-
-    public byte[] DataSourceBytes { get; set; }
 
     public SfSpreadsheet SpreadsheetInstance;
 
@@ -280,8 +263,6 @@ Workbook unprotection is applied through the same [UnprotectSheetAsync()](https:
 </SfSpreadsheet>
 
 @code {
-
-    public byte[] DataSourceBytes { get; set; }
 
     public SfSpreadsheet SpreadsheetInstance;
 

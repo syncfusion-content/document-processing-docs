@@ -115,7 +115,7 @@ This method adds one sheet at a specific position with a user-defined name. Each
 
 ## Get Active Worksheet
 
-The [GetActiveWorksheet](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_GetActiveWorksheet) method retrieves properties of the active worksheet. This method is useful when it is necessary to obtain details about the currently active sheet. If no worksheet is active, this method returns null.
+The [GetActiveWorksheet()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_GetActiveWorksheet) method retrieves properties of the active worksheet. This method is useful when it is necessary to obtain details about the currently active sheet. If no worksheet is active, this method returns null.
 
 **Retrieve the active worksheet**
 
@@ -162,7 +162,7 @@ The method returns an object describing the active worksheet. The following prop
 
 ## Get Worksheet Data
 
-The [GetData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_GetData_System_String_) method retrieves content from the worksheet. This method provides data as a dictionary, where each entry consists of a cell address and its associated `CellData` object. The returned data includes the actual value, number format, display text, wrap and lock status, hyperlinks, and calculated style of each cell in the target area. If the specified cell address is invalid or not set, the method returns null.
+The [GetData()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_GetData_System_String_) method retrieves content from the worksheet. This method provides data as a dictionary, where each entry consists of a cell address and its associated `CellData` object. The returned data includes the actual value, number format, display text, wrap and lock status, hyperlinks, and calculated style of each cell in the target area. If the specified cell address is invalid or not set, the method returns null.
 
 **Retrieve cell or range data from an active worksheet**
 
