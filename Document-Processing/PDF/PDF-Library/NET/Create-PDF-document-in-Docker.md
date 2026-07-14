@@ -9,7 +9,7 @@ keywords: docker getting started, docker sample project, container basics, docke
 
 # Create PDF Files in a Docker Environment 
 
-The Syncfusion<sup>&reg;</sup> [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is a powerful and versatile solution for creating, reading, and editing PDF documents in .NET applications. It also provides advanced features such as merging and splitting PDFs, adding stamps, working with form fields, and securing PDF files with encryption and permissions.
+The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is a powerful and versatile solution for creating, reading, and editing PDF documents in .NET applications. It also provides advanced features such as merging and splitting PDFs, adding stamps, working with form fields, and securing PDF files with encryption and permissions.
 
 To integrate the .NET PDF library into your Docker application, refer to the official documentation sections on [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) for step-by-step guidance.
 
