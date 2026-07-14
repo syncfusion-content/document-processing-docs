@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The `annotationSettings` API provides a central way to configure properties that apply to all annotations in the viewer.
 
-API name: annotationSettings
+API: `annotationSettings` — see the [API reference](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationsettingsmodel) for the full model.
 
 | Property Name | Data type & Default Value | Description |
 |---|---|---|
@@ -27,7 +27,7 @@ API name: annotationSettings
 | Free Text Settings |
 | allowOnlyTextInput | Boolean (false) | Specifies text-only mode for free text annotations. If true, moving or resizing is disabled. |
 
-Change the author name and other properties using the annotationSettings API as shown below.
+Change the author name and other properties using the `annotationSettings` API as shown below.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -56,3 +56,11 @@ viewer.appendTo("#pdfViewer");
 
 {% endhighlight %}
 {% endtabs %}
+
+## See also
+
+- [Annotation permissions in React](../annotation/annotation-permission)
+- [Free text annotation](../annotation/annotation-types/free-text-annotation)
+- [Customize annotation](../annotation/customize-annotation)
+- [Annotations API](../annotation/annotations-api)
+- [React PDF Viewer – Getting started](../getting-started)
