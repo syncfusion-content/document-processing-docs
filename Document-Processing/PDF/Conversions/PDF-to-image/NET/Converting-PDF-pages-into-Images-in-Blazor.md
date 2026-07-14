@@ -48,7 +48,7 @@ Stream[] outputStream = imageConverter.Convert(0, imageConverter.PageCount-1, fa
 
 ## Exporting with a custom image size
 
-You can export PDF pages as images with custom width and height by passing the required size and setting the parameters `keepTransparency` and `isSkipAnnotations` in the Convert method. To preserve transparency in the output images, make sure to set the `keepTransparency` parameter to true. If you want to exclude annotations from the output images, set the `isSkipAnnotations` parameter to true. Refer to the following code to export the pages of PDF into PNG image. Refer to the following code to export the page at the index of 0 into PNG image with the width and the height of 1836 and 2372 in pixels respectively.
+You can export PDF pages as images with custom width and height by passing the required size and setting the parameters `keepTransparency`, `isSkipAnnotations`, and `keepAspectRatio` in the Convert method. To preserve transparency in the output images, make sure to set the `keepTransparency` parameter to true. If you want to exclude annotations from the output images, set the `isSkipAnnotations` parameter to true. To maintain the aspect ratio of the output image, set the `keepAspectRatio` parameter to true. Refer to the following code to export the page at the index of 0 into PNG image with the width and the height of 1836 and 2372 in pixels respectively.
 
 {% tabs %}
 {% highlight C# %}
@@ -68,7 +68,7 @@ N> To maintain the aspect ratio of output images, you are required to pass the v
 
 ## Exporting with a custom image resolution
 
-You can export PDF pages as images with specific attributes, such as zoom factor, tile dimensions (x and y), and tile matrix co-ordinates (x and y), by passing the corresponding values as parameters to the Convert method. zoomFactor is used to specify the zoom level. The number of columns and rows will be calculated based on tileXCount and tileYCount (tile dimensions), while tile x and y co-ordinates determine which tile to use based on tileX and tileY. The ScaleFactor property scales the page to enhance image quality, and it can be set to positive floating-point values, with recommended values of 1 or 1.5f. Refer to the following code for exporting PDF pages into PNG images with the desired resolution.
+You can export PDF pages as images with specific attributes, such as zoom factor, tile dimensions (x and y), and tile matrix coordinates (x and y), by passing the corresponding values as parameters to the Convert method. zoomFactor is used to specify the zoom level. The number of columns and rows will be calculated based on tileXCount and tileYCount (tile dimensions), while tile x and y coordinates determine which tile to use based on tileX and tileY. The ScaleFactor property scales the page to enhance image quality, and it can be set to positive floating-point values, with recommended values of 1 or 1.5f. Refer to the following code for exporting PDF pages into PNG images with the desired resolution.
 
 {% tabs %}
 {% highlight C# %}

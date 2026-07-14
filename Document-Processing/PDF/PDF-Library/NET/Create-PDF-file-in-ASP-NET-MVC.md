@@ -8,7 +8,7 @@ keywords: mvc create pdf, mvc generate pdf, edit pdf, merge, pdf form, fill form
 ---
 # Create or Generate PDF file in ASP.NET MVC
 
-The Syncfusion<sup>&reg;</sup> [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, forms and secure PDF files. 
+The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, forms and secure PDF files. 
 
 To include the .NET PDF library into your ASP.NET MVC application, please refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) documentation. 
 
@@ -60,19 +60,23 @@ Step 6: Add a new action method named `CreatePDFDocument` in `HomeController.cs`
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//Create an instance of PdfDocument.
-using (PdfDocument document = new PdfDocument())
+public ActionResult CreateDocument()
 {
-    //Add a page to the document.
-    PdfPage page = document.Pages.Add();
-    //Create PDF graphics for the page.
-    PdfGraphics graphics = page.Graphics;
-    //Set the standard font.
-    PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
-    //Draw the text.
-    graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
-    //Open the document in browser after saving it. 
-    document.Save("Output.pdf", HttpContext.ApplicationInstance.Response, HttpReadType.Save);
+    //Create an instance of PdfDocument.
+    using (PdfDocument document = new PdfDocument())
+    {
+        //Add a page to the document.
+        PdfPage page = document.Pages.Add();
+        //Create PDF graphics for the page.
+        PdfGraphics graphics = page.Graphics;
+        //Set the standard font.
+        PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
+        //Draw the text.
+        graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
+        //Open the document in browser after saving it. 
+        document.Save("Output.pdf", HttpContext.ApplicationInstance.Response, HttpReadType.Save);
+    }
+    return View();
 }
 
 {% endhighlight %}

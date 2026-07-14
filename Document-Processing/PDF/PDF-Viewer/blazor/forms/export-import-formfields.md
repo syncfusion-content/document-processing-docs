@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Export and Import Form Fields Data SfPdfViewer in Blazor | Syncfusion
-description: Learn here all about How to Export and Import Form Fields Data in the Syncfusion Blazor SfPdfViewer.
+title: Export and Import Form Field Data in Blazor SfPdfViewer | Syncfusion
+description: Learn how to export and import form field data in the Blazor SfPdfViewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Export and import form field data in Blazor SfPdfViewer
 
-The `SfPdfViewer` control supports exporting and importing form field data in multiple formats. This enables saving, transferring, or restoring form field values using the following formats:
+The `SfPdfViewer` control supports exporting and importing form field data in the following formats:
 
 1. XML
 2. FDF
@@ -19,7 +19,7 @@ The `SfPdfViewer` control supports exporting and importing form field data in mu
 
 The [ExportFormFieldsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ExportFormFieldsAsync_Syncfusion_Blazor_SfPdfViewer_FormFieldDataFormat_) and [ImportFormFieldsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ImportFormFieldsAsync_System_IO_Stream_Syncfusion_Blazor_SfPdfViewer_FormFieldDataFormat_) methods export or import form field data as a stream, which can be applied to another PDF document.
 
-## Types of Form Fields Export and Import
+## Supported Export and Import Formats
 
 ### Export and import as XML
 
@@ -44,7 +44,7 @@ The following code shows how to export the form fields as an XML data stream and
 
 @code { 
     // Reference to the SfPdfViewer2 instance
-    SfPdfViewer2 PdfViewerInstance { get; set; }
+    private SfPdfViewer2 PdfViewerInstance { get; set; }
 
     // Stream to store exported XML form field data
     Stream XMLStream = new MemoryStream();
@@ -62,7 +62,7 @@ The following code shows how to export the form fields as an XML data stream and
             if (FormFields != null && FormFields.Count > 0)
             {
                 // Export data to XML format
-                XMLStream = await PdfViewerInstance.ExportFormFieldsAsync(FormFieldDataFormat.Xml); 
+                XMLStream = await PdfViewerInstance.ExportFormFieldsAsync(FormFieldDataFormat.Xml);
             }
         }
     }
@@ -72,8 +72,10 @@ The following code shows how to export the form fields as an XML data stream and
     {
         if (PdfViewerInstance != null && XMLStream != null)
         {
+            // Reset the stream position before importing
+            XMLStream.Position = 0;
             // Import XML data into the viewer
-            await PdfViewerInstance.ImportFormFieldsAsync(XMLStream, FormFieldDataFormat.Xml); 
+            await PdfViewerInstance.ImportFormFieldsAsync(XMLStream, FormFieldDataFormat.Xml);
         }
     }
 }
@@ -107,7 +109,7 @@ The following code demonstrates exporting form fields as FDF to a stream and imp
 
 @code { 
     // Reference to the SfPdfViewer2 instance
-    SfPdfViewer2 PdfViewerInstance { get; set; }
+    private SfPdfViewer2 PdfViewerInstance { get; set; }
 
     // Stream to store exported form field data in FDF format
     Stream FDFStream = new MemoryStream();
@@ -116,24 +118,29 @@ The following code demonstrates exporting form fields as FDF to a stream and imp
     List<FormFieldInfo> FormFields = new List<FormFieldInfo>();
 
     // Exports form field data from the PDF viewer in FDF format
-    private async void ExportFormFieldData()
+    private async Task ExportFormFieldData()
     {
-        // Retrieve form field information from the PDF viewer
-        FormFields = await PdfViewerInstance.GetFormFieldsAsync(); 
-        if (FormFields != null && FormFields.Count > 0)
+        if (PdfViewerInstance != null)
         {
-            // Export form fields as FDF data
-            FDFStream = await PdfViewerInstance.ExportFormFieldsAsync(FormFieldDataFormat.Fdf); 
+            // Retrieve form field information from the PDF viewer
+            FormFields = await PdfViewerInstance.GetFormFieldsAsync();
+            if (FormFields != null && FormFields.Count > 0)
+            {
+                // Export form fields as FDF data
+                FDFStream = await PdfViewerInstance.ExportFormFieldsAsync(FormFieldDataFormat.Fdf);
+            }
         }
     }
 
     // Imports form field data from FDF format into the PDF viewer
-    private async void ImportFormFieldData()
+    private async Task ImportFormFieldData()
     {
-        if (FDFStream != null)
+        if (PdfViewerInstance != null && FDFStream != null)
         {
+            // Reset the stream position before importing
+            FDFStream.Position = 0;
             // Import FDF data into the viewer
-            await PdfViewerInstance.ImportFormFieldsAsync(FDFStream, FormFieldDataFormat.Fdf); 
+            await PdfViewerInstance.ImportFormFieldsAsync(FDFStream, FormFieldDataFormat.Fdf);
         }
     }
 }
@@ -167,7 +174,7 @@ The following code shows how to export the form fields as an XFDF data stream an
 
 @code { 
     // Reference to the SfPdfViewer2 instance
-    SfPdfViewer2 PdfViewerInstance { get; set; }
+    private SfPdfViewer2 PdfViewerInstance { get; set; }
 
     // Stream to store exported XFDF form field data
     Stream XFDFStream = new MemoryStream();
@@ -176,23 +183,28 @@ The following code shows how to export the form fields as an XFDF data stream an
     List<FormFieldInfo> FormFields = new List<FormFieldInfo>();
 
     // Exports form field data from the PDF viewer to an XFDF stream
-    private async void ExportFormFieldData()
+    private async Task ExportFormFieldData()
     {
-        // Retrieve form field information from the PDF viewer
-        FormFields = await PdfViewerInstance.GetFormFieldsAsync(); 
-        if (FormFields != null && FormFields.Count > 0)
+        if (PdfViewerInstance != null)
         {
-            // Export data to XFDF format 
-            XFDFStream = await PdfViewerInstance.ExportFormFieldsAsync(FormFieldDataFormat.Xfdf); 
+            // Retrieve form field information from the PDF viewer
+            FormFields = await PdfViewerInstance.GetFormFieldsAsync();
+            if (FormFields != null && FormFields.Count > 0)
+            {
+                // Export data to XFDF format
+                XFDFStream = await PdfViewerInstance.ExportFormFieldsAsync(FormFieldDataFormat.Xfdf);
+            }
         }
     }
     // Imports form field data from the XFDF stream into the PDF viewer
-    private async void ImportFormFieldData()
+    private async Task ImportFormFieldData()
     {
-        if (XFDFStream != null)
+        if (PdfViewerInstance != null && XFDFStream != null)
         {
+            // Reset the stream position before importing
+            XFDFStream.Position = 0;
             // Import XFDF data into the viewer
-            await PdfViewerInstance.ImportFormFieldsAsync(XFDFStream, FormFieldDataFormat.Xfdf); 
+            await PdfViewerInstance.ImportFormFieldsAsync(XFDFStream, FormFieldDataFormat.Xfdf);
         }
     }
 }
@@ -226,7 +238,7 @@ The following code demonstrates exporting form fields as JSON to a stream and im
 
 @code { 
     // Reference to the SfPdfViewer2 instance
-    SfPdfViewer2 PdfViewerInstance { get; set; }
+    private SfPdfViewer2 PdfViewerInstance { get; set; }
 
     // Stream to store exported form field data in JSON format
     Stream JSONStream = new MemoryStream();
@@ -235,24 +247,29 @@ The following code demonstrates exporting form fields as JSON to a stream and im
     List<FormFieldInfo> FormFields = new List<FormFieldInfo>();
 
     // Exports form field data from the PDF viewer in JSON format
-    private async void ExportFormFieldData()
+    private async Task ExportFormFieldData()
     {
-        // Retrieve form field information from the PDF viewer
-        FormFields = await PdfViewerInstance.GetFormFieldsAsync(); 
-        if (FormFields != null && FormFields.Count > 0)
+        if (PdfViewerInstance != null)
         {
-            // Export form fields as JSON data
-            JSONStream = await PdfViewerInstance.ExportFormFieldsAsync(FormFieldDataFormat.Json); 
+            // Retrieve form field information from the PDF viewer
+            FormFields = await PdfViewerInstance.GetFormFieldsAsync();
+            if (FormFields != null && FormFields.Count > 0)
+            {
+                // Export form fields as JSON data
+                JSONStream = await PdfViewerInstance.ExportFormFieldsAsync(FormFieldDataFormat.Json);
+            }
         }
     }
 
     // Imports form field data from JSON format into the PDF viewer
-    private async void ImportFormFieldData()
+    private async Task ImportFormFieldData()
     {
-        if (JSONStream != null)
+        if (PdfViewerInstance != null && JSONStream != null)
         {
+            // Reset the stream position before importing
+            JSONStream.Position = 0;
             // Import JSON data into the viewer
-            await PdfViewerInstance.ImportFormFieldsAsync(JSONStream, FormFieldDataFormat.Json); 
+            await PdfViewerInstance.ImportFormFieldsAsync(JSONStream, FormFieldDataFormat.Json);
         }
     }
 }
@@ -265,7 +282,7 @@ The following code demonstrates exporting form fields as JSON to a stream and im
 
 ### Export and import as an object
 
-The Form fields can be exported and imported as an object, which is useful for in-memory processing and quick data manipulation.
+Form fields can be exported and imported as an object, which is useful for in-memory processing and quick data manipulation.
 
 The [ExportFormFieldsAsObjectAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ExportFormFieldsAsObjectAsync) and [ImportFormFieldsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ImportFormFieldsAsync_System_Collections_Generic_Dictionary_System_String_System_String__) methods allow you to export the form field data as an Object, which can later be used to import the saved data into another PDF document.
 
@@ -286,7 +303,7 @@ The following code shows how to export form fields as an object and import that 
 
 @code { 
     // Reference to the SfPdfViewer2 instance
-    SfPdfViewer2 PdfViewerInstance { get; set; }
+    private SfPdfViewer2 PdfViewerInstance { get; set; }
 
     // Dictionary to store exported form field data as key-value pairs
     Dictionary<string, string> FormFieldsObject = new Dictionary<string, string>();
@@ -295,21 +312,24 @@ The following code shows how to export form fields as an object and import that 
     List<FormFieldInfo> FormFields = new List<FormFieldInfo>();
 
     // Exports form field data from the PDF viewer as an object (key-value pairs)
-    private async void ExportFormFieldData()
+    private async Task ExportFormFieldData()
     {
-        // Retrieve form field information
-        FormFields = await PdfViewerInstance.GetFormFieldsAsync();
-        if (FormFields != null && FormFields.Count > 0)
+        if (PdfViewerInstance != null)
         {
-            // Export form fields as an object
-            FormFieldsObject = await PdfViewerInstance.ExportFormFieldsAsObjectAsync();
+            // Retrieve form field information
+            FormFields = await PdfViewerInstance.GetFormFieldsAsync();
+            if (FormFields != null && FormFields.Count > 0)
+            {
+                // Export form fields as an object
+                FormFieldsObject = await PdfViewerInstance.ExportFormFieldsAsObjectAsync();
+            }
         }
     }
 
     // Imports form field data from an object into the PDF viewer
-    private async void ImportFormFieldData()
+    private async Task ImportFormFieldData()
     {
-        if (FormFieldsObject != null)
+        if (PdfViewerInstance != null && FormFieldsObject != null && FormFieldsObject.Count > 0)
         {
             // Import object data into the viewer
             await PdfViewerInstance.ImportFormFieldsAsync(FormFieldsObject);
@@ -323,7 +343,7 @@ The following code shows how to export form fields as an object and import that 
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/ObjectFormat.razor).
 
-### Export Form Fields as a JSON File
+### Export as JSON file
 
 This method allows exporting the form field data and saving it as a JSON file, which can be stored or shared for future use.
 
@@ -343,25 +363,26 @@ N> If [ExportFormFieldsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 @code {
     // Reference to the SfPdfViewer2 instance
-    SfPdfViewer2 PdfViewerInstance { get; set; }
+    private SfPdfViewer2 PdfViewerInstance { get; set; }
 
     // Exports form field data from the PDF viewer into a JSON file
-    private async void ExportFormFieldData()
+    private async Task ExportFormFieldData()
     {
-        // Exports form fields and saves them as a JSON file
-        await PdfViewerInstance.ExportFormFieldsAsync(""); 
+        if (PdfViewerInstance != null)
+        {
+            // Exports form fields and saves them as a JSON file
+            await PdfViewerInstance.ExportFormFieldsAsync("FormData.json");
+        }
     }
 }
 {% endhighlight %}
 {% endtabs %}
 
-![Export and Import JSON File](form-designer-images/Export_JSON_File.png)
+![Export as JSON file](form-designer-images/Export_JSON_File.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/ExportJSONFile.razor).
 
-Additionally, the component provides a built-in Submit button that exports form field data as a JSON file directly from the PDF document. The following sections demonstrate multiple ways to export and import form field data.
-
-See the image below.
+Additionally, the component provides a built-in Submit button that exports form field data as a JSON file directly from the PDF document.
 
 ![Export form data using the Submit button](form-designer-images/Export_Submit_JSON.png)
 

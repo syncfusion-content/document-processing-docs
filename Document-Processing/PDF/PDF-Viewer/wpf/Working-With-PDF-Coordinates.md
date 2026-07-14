@@ -1,7 +1,7 @@
 ---
 layout: post
-title: PDF Coordinates in WPF Pdf Viewer control | Syncfusion&reg;
-description: Learn about PDF Coordinates support in Syncfusion&reg; Essential Studio&reg; WPF Pdf Viewer control, its elements and more.
+title: PDF Coordinates in WPF PDF Viewer control | Syncfusion&reg;
+description: Learn about PDF Coordinates support in Syncfusion&reg; Essential Studio&reg; WPF PDF Viewer control, its elements and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -13,9 +13,9 @@ The [WPF PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/wpf-pdf-viewer) a
 
 ## Client coordinates
 
-The WPF PDF Viewer specifies the position of points in the client area(viewport) using client coordinates. The upper-left corner of the client area (viewport) of the control is the origin for client coordinates. The dimensions of the client area(viewport) are also known as **client rectangle**, which is the bounds of the control without non-client elements such as toolbars and scroll bars. The client rectangle in the WPF PDF Viewer is represented by the red rectangle in the following figure.
+The WPF PDF Viewer specifies the position of points in the client area (viewport) using client coordinates. The upper-left corner of the client area (viewport) of the control is the origin for client coordinates. The dimensions of the client area (viewport) are also known as **client rectangle**, which is the bounds of the control without non-client elements such as toolbars and scroll bars. The client rectangle in the WPF PDF Viewer is represented by the red rectangle in the following figure.
 
-  	![WPF PDF Viewer Client Rectangle](PDF_Coordinates_Images/Client-Rectangle.png)
+      ![WPF PDF Viewer Client Rectangle](PDF_Coordinates_Images/Client-Rectangle.png)
 
 The client rectangle can be obtained by the [ClientRectangle](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_ClientRectangle) property of the PDF Viewer.
 
@@ -32,7 +32,7 @@ Rectangle clientRectangle = pdfViewerControl.ClientRectangle;
 
 PDF page coordinates are represented in terms of a device-independent coordinate system called user space, which is independent of the output device that will be used for printing or display. The user space coordinate system is initialized to its default state for each page of a PDF document. The length of a unit is 1/72 inches, which is approximately the same as a unit of **point(pt)**. As an example, the following figure shows the dimensions of a letter-sized paper in the PDF page coordinates with the WPF PDF Viewer.
 
-  	![WPF PDF Viewer Page Coordinates](PDF_Coordinates_Images/Page-Coordinates.png)
+      ![WPF PDF Viewer Page Coordinates](PDF_Coordinates_Images/Page-Coordinates.png)
 
 ## Get and set the scroll coordinates
 
@@ -64,7 +64,7 @@ private void PdfViewerControl_PageClicked(object sender, PageClickedEventArgs e)
     //Retrieve the clicked client area position
     Point clientPoint = e.Position;
     //Retrieve the page number that corresponds to the client point
-    int pageNumber = pdfViewerControl.GetPageNumberFromClientPoint(clientPoint)
+    int pageNumber = pdfViewerControl.GetPageNumberFromClientPoint(clientPoint);
  
     //Retrieve the page point
     Point pagePoint = pdfViewerControl.ConvertClientPointToPagePoint(clientPoint, pageNumber);
@@ -99,7 +99,7 @@ private void PdfViewer_ShapeAnnotationChanged(object sender, ShapeAnnotationChan
 
 ## Convert PDF page coordinates to scroll coordinates
 
-The user can obtain the scroll coordinates using the [ConvertPagePointToScrollPoint](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_ConvertPagePointToScrollingPoint_System_Windows_Point_System_Int32_) method by passing the page point and page number as input parameters. The following code example explains how to convert a shape annotation’s position in the page coordinates to a scroll point in the PDF Viewer.
+The user can obtain the scroll coordinates using the [ConvertPagePointToScrollPoint](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_ConvertPagePointToScrollPoint_System_Windows_Point_System_Int32_) method by passing the page point and page number as input parameters. The following code example explains how to convert a shape annotation's position in the page coordinates to a scroll point in the PDF Viewer.
 
 {% tabs %}
 {% highlight c# %}
@@ -128,13 +128,13 @@ The user can bring the given rectangular region into view and zoom in to the doc
 {% tabs %}
 {% highlight c# %}
 
-//Create a bound with respect to client area
-Rect bounds = new Rect(400 , 300, 200, 400)
-//Pass the converted rectangle in client coordinates to the ZoomToRect method. 
+//Create a bound with respect to page coordinates
+Rect bounds = new Rect(400 , 300, 200, 400);
+//Pass the converted rectangle in page coordinates to the ZoomToRect method. 
 pdfViewerControl.ZoomToRect(bounds);
 
 {% endhighlight %}
 {% endtabs %}
 
 
-N> You can refer to our [WPF PDF Viewer](https://www.syncfusion.com/wpf-controls/pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [WPF PDF Viewer example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the pdfviewer.
+N> You can refer to our [WPF PDF Viewer](https://www.syncfusion.com/wpf-controls/pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [WPF PDF Viewer example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the PDF viewer.

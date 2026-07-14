@@ -166,43 +166,43 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ### Perform OCR in Linux 
 
-The Syncfusion<sup>&reg;</sup> .NET OCR library supports performing OCR in Linux. Refer to [this](https://help.syncfusion.com/document-processing/data-extraction/ocr/net/linux) section for more information about performing OCR on an entire PDF document in Linux.  
+The .NET OCR library supports performing OCR in Linux. Refer to [this](https://help.syncfusion.com/document-processing/data-extraction/ocr/net/linux) section for more information about performing OCR on an entire PDF document in Linux.  
 
 ### Perform OCR in Docker 
 
-The Syncfusion<sup>&reg;</sup> .NET OCR library supports performing OCR in Docker. Refer to [this](https://help.syncfusion.com/document-processing/data-extraction/ocr/net/docker) section for more information about performing OCR on an entire PDF document in Docker.  
+The .NET OCR library supports performing OCR in Docker. Refer to [this](https://help.syncfusion.com/document-processing/data-extraction/ocr/net/docker) section for more information about performing OCR on an entire PDF document in Docker.  
 
 ### Perform OCR in Mac
 
-The Syncfusion<sup>&reg;</sup> .NET OCR library supports performing OCR on Mac. Refer to [this](https://help.syncfusion.com/document-processing/data-extraction/ocr/net/mac) section for more information about performing OCR on an entire PDF document on Mac.
+The .NET OCR library supports performing OCR on Mac. Refer to [this](https://help.syncfusion.com/document-processing/data-extraction/ocr/net/mac) section for more information about performing OCR on an entire PDF document on Mac.
 
 ### Perform OCR in ASP.NET Core 
 
-The Syncfusion<sup>&reg;</sup> .NET OCR library supports performing OCR in ASP.NET Core. Refer to [this](https://help.syncfusion.com/document-processing/data-extraction/ocr/net/net-core) section for more information about performing OCR on an entire PDF document in ASP.NET Core.  
+The .NET OCR library supports performing OCR in ASP.NET Core. Refer to [this](https://help.syncfusion.com/document-processing/data-extraction/ocr/net/net-core) section for more information about performing OCR on an entire PDF document in ASP.NET Core.  
 
 ### Perform OCR in ASP.NET MVC
 
-The Syncfusion<sup>&reg;</sup> .NET OCR library supports performing OCR in ASP.NET MVC. Refer to [this](https://help.syncfusion.com/document-processing/data-extraction/ocr/net/aspnet-mvc) section for more information about performing OCR on an entire PDF document in ASP.NET MVC. 
+The .NET OCR library supports performing OCR in ASP.NET MVC. Refer to [this](https://help.syncfusion.com/document-processing/data-extraction/ocr/net/aspnet-mvc) section for more information about performing OCR on an entire PDF document in ASP.NET MVC. 
 
 ### Perform OCR in Blazor
 
-The Syncfusion<sup>&reg;</sup> .NET OCR library supports performing OCR in Blazor. Refer to [this](https://help.syncfusion.com/document-processing/data-extraction/ocr/net/blazor) section for more information about performing OCR on an entire PDF document in Blazor.  
+The .NET OCR library supports performing OCR in Blazor. Refer to [this](https://help.syncfusion.com/document-processing/data-extraction/ocr/net/blazor) section for more information about performing OCR on an entire PDF document in Blazor.  
 
 ### Perform OCR in Azure
 
-The Syncfusion<sup>&reg;</sup> .NET OCR library supports performing OCR in Azure. Refer to [this](https://help.syncfusion.com/document-processing/data-extraction/ocr/net/azure) section for more information about performing OCR on an entire PDF document in Azure.  
+The .NET OCR library supports performing OCR in Azure. Refer to [this](https://help.syncfusion.com/document-processing/data-extraction/ocr/net/azure) section for more information about performing OCR on an entire PDF document in Azure.  
 
 ### Perform OCR in Azure Vision
 
-The Syncfusion<sup>&reg;</sup> .NET OCR library supports performing OCR with Azure Vision (external engine). Refer to [this](https://help.syncfusion.com/document-processing/data-extraction/ocr/net/azure-vision) section for more information about performing OCR on an entire PDF document.
+The .NET OCR library supports performing OCR with Azure Vision (external engine). Refer to [this](https://help.syncfusion.com/document-processing/data-extraction/ocr/net/azure-vision) section for more information about performing OCR on an entire PDF document.
 
 ## Perform OCR in Azure Kubernetes Service
 
-he Syncfusion<sup>&reg;</sup> .NET OCR library supports performing OCR with Azure Kubernetes Service. Refer to [this](https://help.syncfusion.com/document-processing/data-extraction/ocr/net/azure-kubernetes-service) section for more information about performing OCR on an entire PDF document.
+The .NET OCR library supports performing OCR with Azure Kubernetes Service. Refer to [this](https://help.syncfusion.com/document-processing/data-extraction/ocr/net/azure-kubernetes-service) section for more information about performing OCR on an entire PDF document.
 
 ### Perform OCR in AWS Textract
 
-The Syncfusion<sup>&reg;</sup> .NET OCR library supports performing OCR with AWS Textract. Refer to [this](https://help.syncfusion.com/document-processing/data-extraction/ocr/net/aws-textract) section for more information about performing OCR on an entire PDF document in AWS.  
+The .NET OCR library supports performing OCR with AWS Textract. Refer to [this](https://help.syncfusion.com/document-processing/data-extraction/ocr/net/aws-textract) section for more information about performing OCR on an entire PDF document in AWS.  
 
 ## Features 
 
