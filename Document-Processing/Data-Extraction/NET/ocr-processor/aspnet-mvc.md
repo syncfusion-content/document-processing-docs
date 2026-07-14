@@ -9,7 +9,7 @@ keywords: Assemblies
 
 # Perform OCR in ASP.NET MVC
 
-The [Syncfusion<sup>&reg;</sup> .NET OCR library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/ocr-process) is used to extract text from scanned PDFs and images in ASP.NET MVC application with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine. 
+The [.NET OCR library](https://www.syncfusion.com/document-sdk/net-pdf-library/ocr-process) is used to extract text from scanned PDFs and images in ASP.NET MVC application with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine. 
 
 ## Steps to perform OCR on entire PDF document in ASP.NET MVC
 
@@ -58,22 +58,24 @@ Step 6: Add a new action method named PerformOCR in the HomeController.cs file a
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
-
-//Initialize the OCR processor.
-using (OCRProcessor processor = new OCRProcessor())
+public ActionResult PerformOCR()
 {
-   FileStream fileStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-   //Load a PDF document.
-   PdfLoadedDocument lDoc = new PdfLoadedDocument(fileStream);
-   //Set OCR language to process.
-   processor.Settings.Language = Languages.English;
-   processor.Settings.TesseractVersion = TesseractVersion.Version3_05;
-   //Process OCR by providing the PDF document.
-   processor.PerformOCR(lDoc);
-   //Open the document in browser after saving it.
-   lDoc.Save("Output.pdf", HttpContext.ApplicationInstance.Response, Syncfusion.Pdf.HttpReadType.Save);
-   //Close the document.
-   lDoc.Close(true);
+   //Initialize the OCR processor.
+   using (OCRProcessor processor = new OCRProcessor())
+   {
+      FileStream fileStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
+      //Load a PDF document.
+      PdfLoadedDocument lDoc = new PdfLoadedDocument(fileStream);
+      //Set OCR language to process.
+      processor.Settings.Language = Languages.English;
+      processor.Settings.TesseractVersion = TesseractVersion.Version3_05;
+      //Process OCR by providing the PDF document.
+      processor.PerformOCR(lDoc);
+      //Open the document in browser after saving it.
+      lDoc.Save("Output.pdf", HttpContext.ApplicationInstance.Response, Syncfusion.Pdf.HttpReadType.Save);
+      //Close the document.
+      lDoc.Close(true);
+   }
    return View();
 }
 
@@ -85,5 +87,5 @@ By executing the program, you will get a PDF document as follows.
 
 A complete working sample can be downloaded from the [Github](https://github.com/SyncfusionExamples/OCR-csharp-examples/tree/master/ASP.NET%20MVC).
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
+Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
    

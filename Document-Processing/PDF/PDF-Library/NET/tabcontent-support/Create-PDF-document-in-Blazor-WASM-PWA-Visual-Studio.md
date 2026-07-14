@@ -1,7 +1,7 @@
 **Prerequisites**:
 
 * Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-* Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
+* Install Visual Studio: Download and install Visual Studio from the [official website](https://visualstudio.microsoft.com/downloads/).
 
 Step 1: Create a new `Blazor WebAssembly Standalone App` project.
 ![Blazor WASM PWA step1](Create-PDF-Blazor/Blazor-PWA-1.png)
