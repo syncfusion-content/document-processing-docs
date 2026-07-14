@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Convert pixel to point in React Pdfviewer component | Syncfusion
-description: Learn here all about Convert pixel to point in server side in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Convert pixel to point in server side
+title: Convert pixel to point in React PDF Viewer component | Syncfusion
+description: Learn how to convert pixel values to points on the server side in the Syncfusion React PDF Viewer component of Syncfusion Essential JS 2.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
@@ -14,9 +14,9 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> PDF viewer will get the bounds 
 
 ```ts
 
-X = x * 72 / 96
-Y = y * 72 / 96
-Width = width * 72 / 96
-Height = height * 72 / 96
+pointX    = pixelX * 72 / 96
+pointY    = pixelY * 72 / 96
+pointWidth  = pixelWidth * 72 / 96
+pointHeight = pixelHeight * 72 / 96
 
 ```
