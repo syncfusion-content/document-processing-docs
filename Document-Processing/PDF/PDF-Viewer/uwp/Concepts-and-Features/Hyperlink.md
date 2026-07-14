@@ -9,7 +9,7 @@ documentation: ug
 
 # Hyperlink in UWP PDF Viewer (SfPdfViewer)
 
-The PdfViewer control supports hyperlink navigation that detects document links and web links present in the PDF document pages. Tapping a table of contents (TOC) entry or hyperlink behaves as follows:
+The PDF Viewer control supports hyperlink navigation that detects document links and web links present in the PDF document pages. Tapping a table of contents (TOC) entry or hyperlink behaves as follows:
 
 1) If the tapped text contains a web link, the URI associated with the hyperlink is opened in the default browser.
 
