@@ -1,11 +1,10 @@
 ---
 layout: post
-title: Authorization token in React Pdfviewer component | Syncfusion
-description: Learn here all about Authorization token in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Authorization token
+title: Authorization token in React PDF Viewer component | Syncfusion
+description: Learn how to include an authorization token in the React PDF Viewer component.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 ## Authorization token in React PDF Viewer component
