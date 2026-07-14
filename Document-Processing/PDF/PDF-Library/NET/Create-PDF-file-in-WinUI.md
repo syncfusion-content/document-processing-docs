@@ -8,7 +8,7 @@ documentation: UG
 
 # Create PDF file in WinUI
 
-The Syncfusion<sup>&reg;</sup> [WinUI PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit **PDF** documents. This library also includes functions for merging, splitting, stamping, working with forms, and securing PDF files and more. Using this library, you can create a PDF document in WinUI with just a few lines of code.
+The [WinUI PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit **PDF** documents. This library also includes functions for merging, splitting, stamping, working with forms, and securing PDF files and more. Using this library, you can create a PDF document in WinUI with just a few lines of code.
 
 **Prerequisites:**
 To use the WinUI 3 project templates, install the Windows App SDK extension for Visual Studio. For more details, refer [here](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/set-up-your-development-environment?tabs=cs-vs-community%2Ccpp-vs-community%2Cvs-2022-17-1-a%2Cvs-2022-17-1-b).

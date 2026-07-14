@@ -92,80 +92,80 @@ WinForms PdfViewer control can be added to an application either through the Win
  
 3. This will add the instance 'pdfViewerControl1' to the Designer.cs file. The PDF can be loaded in the Form1.cs file using the [Load](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_Forms_PdfViewer_PdfViewerControl_Load_System_String_) method. 
 
-{% tabs %}
-{% highlight c# tabtitle="C#" %}
+	{% tabs %}
+	{% highlight c# tabtitle="C#" %}
 
-//Loading the document in the PdfViewerControl
-pdfViewerControl1.Load("Sample.pdf");
+	//Loading the document in the PdfViewerControl
+	pdfViewerControl1.Load("Sample.pdf");
 
-{% endhighlight %}
-{% highlight vb tabtitle="VB.NET" %}
+	{% endhighlight %}
+	{% highlight vb tabtitle="VB.NET" %}
 
-'Loading the document in the PdfViewerControl
-pdfViewerControl1.Load("Sample.pdf")
+	'Loading the document in the PdfViewerControl
+	pdfViewerControl1.Load("Sample.pdf")
 
-{% endhighlight %}
-{% endtabs %}
+	{% endhighlight %}
+	{% endtabs %}
 
 
-{% endtabcontent %}
+	{% endtabcontent %}
 
-{% tabcontent Via Coding %}
+	{% tabcontent Via Coding %}
 
 1. Add Syncfusion.Windows.Forms.PdfViewer namespace in Form1.cs.
 
 
-{% tabs %}
-{% highlight c# tabtitle="C#" %}
+	{% tabs %}
+	{% highlight c# tabtitle="C#" %}
 
-using Syncfusion.Windows.Forms.PdfViewer;
+	using Syncfusion.Windows.Forms.PdfViewer;
 
-{% endhighlight %}
-{% highlight vb tabtitle="VB.NET" %}
+	{% endhighlight %}
+	{% highlight vb tabtitle="VB.NET" %}
 
-Imports Syncfusion.Windows.Forms.PdfViewer
+	Imports Syncfusion.Windows.Forms.PdfViewer
 
-{% endhighlight %}
-{% endtabs %}
+	{% endhighlight %}
+	{% endtabs %}
 
 
 2. Create a PdfViewerControl instance and load the PDF inside Constructor in Form1.cs. Also place the sample PDF document in the project folder.
 
-{% tabs %}
-{% highlight c# tabtitle="C#" %}
+	{% tabs %}
+	{% highlight c# tabtitle="C#" %}
 
-//Initializing the PdfViewerControl
-PdfViewerControl pdfViewerControl1 = new PdfViewerControl();
+	//Initializing the PdfViewerControl
+	PdfViewerControl pdfViewerControl1 = new PdfViewerControl();
 
-//Add PdfViewerControl to the Form
-Controls.Add(pdfViewerControl1);
-//Docking the control to all edges of its containing control and sizing appropriately.
-pdfViewerControl1.Dock = DockStyle.Fill;
+	//Add PdfViewerControl to the Form
+	Controls.Add(pdfViewerControl1);
+	//Docking the control to all edges of its containing control and sizing appropriately.
+	pdfViewerControl1.Dock = DockStyle.Fill;
 
-//Loading the document in the PdfViewerControl
-pdfViewerControl1.Load(@"../../Sample.pdf");
+	//Loading the document in the PdfViewerControl
+	pdfViewerControl1.Load(@"../../Sample.pdf");
 
-{% endhighlight %}
-{% highlight vb tabtitle="VB.NET" %}
+	{% endhighlight %}
+	{% highlight vb tabtitle="VB.NET" %}
 
-'Initializing the PdfViewerControl
-Dim pdfViewerControl1 As PdfViewerControl = New PdfViewerControl()
+	'Initializing the PdfViewerControl
+	Dim pdfViewerControl1 As PdfViewerControl = New PdfViewerControl()
 
-'Add PdfViewerControl to the Form
-Controls.Add(pdfViewerControl1)
-'Docking the control to all edges of its containing control and sizing appropriately.
-pdfViewerControl1.Dock = DockStyle.Fill
+	'Add PdfViewerControl to the Form
+	Controls.Add(pdfViewerControl1)
+	'Docking the control to all edges of its containing control and sizing appropriately.
+	pdfViewerControl1.Dock = DockStyle.Fill
 
-'Loading the document in the PdfViewerControl
-pdfViewerControl1.Load(@"../../Sample.pdf")
+	'Loading the document in the PdfViewerControl
+	pdfViewerControl1.Load(@"../../Sample.pdf")
 
-{% endhighlight %}
-{% endtabs %}
+	{% endhighlight %}
+	{% endtabs %}
 
 
-{% endtabcontent %}
- 
-{% endtabcontents %}
+	{% endtabcontent %}
+	 
+	{% endtabcontents %}
 
 
 N>[View Sample in GitHub.](https://github.com/syncfusion/pdf-viewer-sdk-winforms-demos/tree/master/pdfviewer/Getting%20Started/Pdf%20Viewer%20Demo)

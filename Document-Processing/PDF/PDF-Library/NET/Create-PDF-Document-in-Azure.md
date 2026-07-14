@@ -8,7 +8,7 @@ documentation: UG
 
 # Create PDF document in Azure platform
 
-The [Syncfusion<sup>&reg;</sup> .NET PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net) is used to create, read, edit PDF documents programmatically without the dependency of **Adobe Acrobat**. Using this library, **create a PDF document in Azure services** within a few lines of code. 
+The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, edit PDF documents programmatically without the dependency of **Adobe Acrobat**. Using this library, **create a PDF document in Azure services** within a few lines of code. 
 
 N> If this is your first time working with Azure, please refer to the dedicated Azure development resources. This section explains how to create a PDF document in C# using the .NET PDF library in Azure. 
 
