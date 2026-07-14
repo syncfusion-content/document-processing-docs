@@ -17,7 +17,7 @@ The page organizer can be enabled or disabled using the `EnablePageOrganizer` pr
 
 {% tabs %}
 {% highlight razor %}
-@using Syncfusion.Blazor.PdfViewer
+@using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
@@ -38,7 +38,7 @@ Update the bound state variable in the `DocumentLoaded` event so the page organi
 
 {% tabs %}
 {% highlight razor %}
-@using Syncfusion.Blazor.PdfViewer
+@using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
@@ -64,7 +64,7 @@ Bind `PageOrganizerVisibility` with `@bind-` so that updates from the click hand
 
 {% tabs %}
 {% highlight razor %}
-@using Syncfusion.Blazor.PdfViewer
+@using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="OpenPageOrganizer">Open PageOrganizer Panel</SfButton>
@@ -96,7 +96,7 @@ The `PageOrganizerSettings` API customizes page-management capabilities. Use it 
 
 {% tabs %}
 {% highlight razor %}
-@using Syncfusion.Blazor.PdfViewer
+@using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"

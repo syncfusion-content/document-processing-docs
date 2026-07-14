@@ -48,7 +48,7 @@ Import the required namespaces at the top of the file:
     private SfPdfViewer2 viewer;
     private readonly string connectionString = "Your Connection string from Azure";
     private readonly string containerName = "Your container name in Azure";
-    private readonly string fileName = "FileName.pdf";
+    private readonly string fileName = "File Name to be loaded into Syncfusion SfPdfViewer";
 
     private async Task OnClick(MouseEventArgs args)
     {

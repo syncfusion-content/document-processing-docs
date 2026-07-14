@@ -55,7 +55,7 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
     private readonly string accessKey = "Your Access Key from AWS S3";
     private readonly string secretKey = "Your Secret Key from AWS S3";
     private readonly string bucketName = "Your Bucket name from AWS S3";
-    private readonly string fileName = "PDF_Succinctly.pdf";
+    private readonly string fileName = "File Name to be loaded into Syncfusion SfPdfViewer";
 
     private async Task OnClick(MouseEventArgs args)
     {
@@ -76,7 +76,7 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
                     ContentType = "application/pdf",
                 };
             // Upload the PDF document to AWS S3
-            var response = await s3Client.PutObjectAsync(request);
+            var response = s3Client.PutObjectAsync(request).Result;
         }
     }
 }
