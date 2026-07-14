@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-## Why do I have to manually copy files from node_modules into my app?
+# Why do I have to manually copy files from node_modules into my app?
 
 The PDF Viewer supports multiple build systems and can work without a bundler by referencing assets directly using HTML tags. To keep load times efficient, the library is split into smaller modules and uses lazy loading for certain assets.
 
