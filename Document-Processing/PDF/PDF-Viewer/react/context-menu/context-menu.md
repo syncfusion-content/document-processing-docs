@@ -22,7 +22,7 @@ The context menu supports several configurations:
 
 * **Default Behavior**: Provides standard actions such as cut, copy, and annotation management.
 * **Customization**: Allows adding new menu items, removing default ones, or reordering them to meet specific application requirements.
-* **Granular Control**: Developers can fully disable the menu or replace it with custom logic using events..
+* **Granular Control**: Developers can fully disable the menu or replace it with custom logic using events.
 
 ### Client-side Interaction
 
