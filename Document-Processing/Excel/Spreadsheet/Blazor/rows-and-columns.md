@@ -22,8 +22,14 @@ You can insert rows or columns anywhere in a spreadsheet.
 
 You can insert rows in the following ways,
 
-* Using the [InsertRowAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_InsertRowAsync_System_Int32_System_Int32_System_Object_Syncfusion_Blazor_Spreadsheet_RowPosition_) method, you can insert rows once the component is loaded.
-* Using context menu, insert the rows in the desired position.
+#### Insert Rows via UI
+
+Using context menu, insert the rows in the desired position.
+
+#### Insert rows programmatically
+
+Using the [InsertRowAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_InsertRowAsync_System_Int32_System_Int32_System_Object_Syncfusion_Blazor_Spreadsheet_RowPosition_) method, you can insert rows once the component is loaded.
+
 
 The following code example shows the options for inserting rows in the spreadsheet.
 
@@ -33,15 +39,8 @@ The following code example shows the options for inserting rows in the spreadshe
 | -- | -- | -- |
 | startIndex | int | The zero-based row index where the insertion begins. |
 | rowCount | int | The number of rows to insert. |
-| sheet | string \| int (Optional) | The target sheet. Pass a `string` to use the sheet name or an `int` to use the sheet index. If omitted, the active sheet is used. |
+| sheet | string | int (Optional) | The target sheet. Pass a `string` to use the sheet name or an `int` to use the sheet index. If omitted, the active sheet is used. |
 | position | Enum | The position relative to `startIndex`. Valid values are `Above` and `Below`. Default: `Above`. |
-
-#### RowPosition enum values
-
-| Member | Description |
-| -- | -- |
-| `Above` | Inserts the rows above the `startIndex` row. |
-| `Below` | Inserts the rows below the `startIndex` row. |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -90,26 +89,22 @@ N> If the `sheet` parameter is `null` or omitted, the operation targets the acti
 
 You can insert columns in the following ways,
 
-* Using the [InsertColumnAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_InsertColumnAsync_System_Int32_System_Int32_System_Object_Syncfusion_Blazor_Spreadsheet_ColumnPosition_) method, you can insert columns once the component is loaded.
+#### Insert Colums Via UI
+
 * Using context menu, insert the columns in the desired position.*
 
-The following code example shows the options for inserting columns in the spreadsheet.
+#### Insert Columns programmatically
 
-#### InsertColumnAsync parameters
+* Using the [InsertColumnAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_InsertColumnAsync_System_Int32_System_Int32_System_Object_Syncfusion_Blazor_Spreadsheet_ColumnPosition_) method, you can insert columns once the component is loaded. The available parameters in the [InsertColumnAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_InsertColumnAsync_System_Int32_System_Int32_System_Object_Syncfusion_Blazor_Spreadsheet_ColumnPosition_) method are:
 
 | Parameter | Type | Description |
 | -- | -- | -- |
 | startIndex | int | The zero-based column index where the insertion begins. |
 | columnCount | int | The number of columns to insert. |
-| sheet | string \| int (Optional) | The target sheet. Pass a `string` to use the sheet name or an `int` to use the sheet index. If omitted, the active sheet is used. |
+| sheet | string | int (Optional) | The target sheet. Pass a `string` to use the sheet name or an `int` to use the sheet index. If omitted, the active sheet is used. |
 | position | Enum | The position relative to `startIndex`. Valid values are `Left` and `Right`. Default: `Right`. |
 
-#### ColumnPosition enum values
-
-| Member | Description |
-| -- | -- |
-| `Left` | Inserts the columns to the left of the `startIndex` column. |
-| `Right` | Inserts the columns to the right of the `startIndex` column. |
+#### Example
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -158,11 +153,15 @@ N> If the `sheet` parameter is `null` or omitted, the operation targets the acti
 
 To insert rows or columns using the right-click context menu:
 
-1. Right-click the row header (for rows) or column header (for columns) at the position where the new row or column should appear.
-2. Choose **Insert Rows Above**, **Insert Rows Below**, **Insert Columns to the Left**, or **Insert Columns to the Right**, depending on the desired position.
-3. The new rows or columns are inserted at the selected position with formatting inherited from the adjacent cells.
+1.  Right-click the row header (for rows) or column header (for columns) where the new row or column should appear.
+2.  From the context menu, select **Insert** and then choose the appropriate option:
+    - **Insert Rows Above** - Inserts a new row above the selected row.
+    - **Insert Rows Below** - Inserts a new row below the selected row.
+    - **Insert Columns to the Left** - Inserts a new column to the left of the selected column.
+    - **Insert Columns to the Right** - Inserts a new column to the right of the selected column.
+3.  The new row or column is inserted at the selected position, and the formatting from the adjacent cells is preserved.
 
-N> When the sheet is protected, **Insert Rows Above**, **Insert Rows Below**, **Insert Columns to the Left**, and **Insert Columns to the Right** are available only when the **Insert Rows** or **Insert Columns** permission is enabled in the protection sheet option settings.
+N> When the sheet is protected, **Insert Rows Above**, **Insert Rows Below**, **Insert Columns to the Left**, and **Insert Columns to the Right** are available only when the **Insert Rows** or **Insert Columns** permission is enabled in the **Protect Sheet** dialog.
 
 ## Setting Row and Column Count
 
@@ -173,10 +172,14 @@ The Blazor Spreadsheet component enables you to define the initial number of row
 
 ### Rendering Behavior
 
-* **Without Data Source:** When no data is bound to the spreadsheet, the sheet renders empty cells up to the specified row and column counts.
-* **With Data Source (e.g., byte array or imported file):**
-  * If the data source contains fewer rows and columns than the specified row and column counts, the spreadsheet renders additional empty rows and columns to meet those counts.
-  * If the data source contains more rows and columns than the specified row and column counts, the spreadsheet extends beyond the counts to fit the data. These properties never truncate data.
+- **Without Data Source:** 
+
+  - When no data is bound to the spreadsheet, the sheet renders empty cells up to the specified row and column counts.
+
+- **With Data Source (e.g., byte array or imported file):**
+
+  - If the data source contains fewer rows and columns than the specified row and column counts, the spreadsheet renders additional empty rows and columns to meet those counts.
+  - If the data source contains more rows and columns than the specified row and column counts, the spreadsheet renders enough rows and columns to display all the data (i.e., it extends beyond those counts to fit the data). Your data is never truncated by these properties.
 
 You can set these properties as follows:
 
@@ -186,19 +189,9 @@ You can set these properties as follows:
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
-<SfSpreadsheet DataSource="DataSourceBytes" RowCount="1200" ColumnCount="300" >
+<SfSpreadsheet RowCount="1200" ColumnCount="300" >
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
-
-@code {
-    public byte[] DataSourceBytes { get; set; }
-
-    protected override void OnInitialized()
-    {
-        string filePath = "wwwroot/Sample.xlsx";
-        DataSourceBytes = File.ReadAllBytes(filePath);
-    }
-}
 
 {% endhighlight %}
 {% endtabs %}

@@ -95,15 +95,21 @@ N> Named Ranges can be defined only for cells or ranges that contain values.
 To edit a Named Range:
 
 1.  Open the **Name Manager** dialog.
+
 2.  Select the Named Range to be edited.
+
 3.  Click the **Edit** icon.
+
 4.  Modify the name, range, or scope as needed.
+
 5.  Click the **Update Range** button, then click **OK** to save changes.
 
 To delete a Named Range:
   
 1.  Open the **Name Manager** dialog.
+
 2.  Select the Named Range to be deleted.
+
 3.  Click the **Delete** icon, then click the **OK** button to confirm.
 
 N> Deleting a Named Range used in formulas may cause formula errors. Ensure the Named Range is not referenced before deleting it.
@@ -157,22 +163,7 @@ Empty cells and cells containing text or formulas are excluded from Sum and Aver
 
 ## Supported Formulas
 
-The Spreadsheet component supports a wide range of built-in formulas, enabling powerful data analysis and manipulation. The supported functions are grouped into the following categories:
-
-- **Math and Trigonometry** – ABS, ACOS, ACOSH, ASIN, ASINH, ATAN, ATAN2, ATANH, CEILING, COMBIN, COS, COSH, DEGREES, EVEN, EXP, FACT, FACTDOUBLE, FLOOR, GCD, INT, LCM, LN, LOG, LOG10, MDETERM, MINVERSE, MMULT, MOD, MROUND, MULTINOMIAL, ODD, PI, POWER, PRODUCT, QUOTIENT, RADIANS, RAND, RANDBETWEEN, ROMAN, ROUND, ROUNDDOWN, ROUNDUP, SIGN, SIN, SINH, SQRT, SQRTPI, SUM, SUMIF, SUMPRODUCT, SUMSQ, SUMX2MY2, SUMX2PY2, SUMXMY2, TAN, TANH, TRUNC.
-- **Statistical** – AVEDEV, AVERAGE, AVERAGEA, AVERAGEIF, AVERAGEIFS, BESSELI, BESSELJ, BESSELK, BESSELY, BINOMDIST, CHIDIST, CHIINV, CHITEST, CONFIDENCE, CORREL, COUNT, COUNTA, COUNTBLANK, COUNTIF, COVAR, CRITBINOM, DEVSQ, EXPONDIST, FDIST, FINV, FISHER, FISHERINV, FORECAST, GAMMADIST, GAMMAINV, GAMMALN, GEOMEAN, GROWTH, HARMEAN, INTERCEPT, KURT, LARGE, LOGEST, LOGINV, LOGNORMDIST, MAX, MAXA, MAXIFS, MEDIAN, MIN, MINA, MINIFS, MODE, NEGBINOMDIST, NORMDIST, NORMINV, NORMSDIST, NORMSINV, PEARSON, PERCENTILE, PERCENTRANK, PERMUT, POISSON, PROB, QUARTILE, RANK, RSQ, SKEW, SLOPE, SMALL, STANDARDIZE, STDEV, STDEVA, STDEVP, STDEVPA, STEYX, TRIMMEAN, VAR, VARA, VARP, VARPA, WEIBULL, ZTEST.
-- **Logical** – AND, FALSE, IF, IFERROR, IFS, NOT, OR, SWITCH, TRUE.
-- **Text** – ARRAYTOTEXT, ASC, CHAR, CLEAN, CODE, CONCAT, CONCATENATE, DOLLAR, EXACT, FIND, FINDB, FIXED, LEFT, LEFTB, LEN, LENB, LOWER, MID, MIDB, PROPER, REPLACE, REPLACEB, REPT, RIGHT, RIGHTB, SEARCH, SEARCHB, SUBSTITUTE, T, TEXT, TEXTBEFORE, TEXTJOIN, TEXTSPLIT, TRIM, UNIQUE, UPPER, VALUE, VALUETOTEXT.
-- **Date and Time** – DATE, DATEVALUE, DAY, DAYS360, EDATE, EOMONTH, HOUR, MINUTE, MONTH, NETWORKDAYS, NOW, SECOND, TIME, TIMEVALUE, TODAY, WEEKDAY, WEEKNUM, WORKDAY, YEAR, YEARFRAC.
-- **Lookup and Reference** – ADDRESS, AREAS, CHOOSE, CHOOSECOLS, CHOOSEROWS, COLUMN, COLUMNS, FORMULATEXT, GETPIVOTDATA, HLOOKUP, HYPERLINK, INDEX, INDIRECT, LOOKUP, MATCH, OFFSET, ROW, ROWS, TRANSPOSE, VLOOKUP, XLOOKUP, XMATCH.
-- **Information** – CELL, ERROR.TYPE, INFO, ISBLANK, ISERR, ISERROR, ISEVEN, ISLOGICAL, ISNA, ISNONTEXT, ISNUMBER, ISODD, ISREF, ISTEXT, N, NA, TYPE.
-- **Financial** – ACCRINT, ACCRINTM, AMORDEGRC, AMORLINC, COUPDAYBS, COUPDAYS, COUPDAYSNC, COUPNCD, COUPNUM, COUPPCD, CUMIPMT, CUMPRINC, DB, DDB, DISC, DOLLARDE, DOLLARFR, DURATION, EFFECT, FV, FVSCHEDULE, INTRATE, IPMT, IRR, MIRR, NPER, NPV, ODDFPRICE, ODDFYIELD, ODDLPRICE, ODDLYIELD, PMT, PPMT, PRICE, PRICEDISC, PRICEMAT, PV, RATE, RECEIVED, SLN, SYD, TBILLEQ, TBILLPRICE, TBILLYIELD, VDB, XIRR, XNPV, YIELD, YIELDDISC, YIELDMAT.
-- **Engineering** – BIN2DEC, BIN2HEX, BIN2OCT, COMPLEX, CONVERT, DEC2BIN, DEC2HEX, DEC2OCT, DELTA, ERF, ERFC, GESTEP, HEX2BIN, HEX2DEC, HEX2OCT, IMABS, IMAGINARY, IMARGUMENT, IMCONJUGATE, IMCOS, IMDIV, IMEXP, IMLN, IMLOG10, IMLOG2, IMPOWER, IMPRODUCT, IMREAL, IMSIN, IMSQRT, IMSUB, IMSUM, OCT2BIN, OCT2DEC, OCT2HEX.
-- **Dynamic Array** – BYCOL, BYROW, FILTER, LAMBDA, LET, SORT, SORTBY, TOCOL, TOROW.
-
-N> **About XlsIO:** Syncfusion **XlsIO** is the underlying library that powers the Spreadsheet's formula engine. The phrases "calculation of this formula result is not supported in XlsIO" and "Calculating this formula result is not supported in XlsIO" indicate that the function is parsed and exposed by the Spreadsheet UI, but its computed result is not persisted through XlsIO's calculation pipeline (for example, dynamic-array functions such as `LAMBDA`, `LET`, `UNIQUE`, `XLOOKUP`, and `XMATCH`).
-
-The complete list of supported formulas is provided below.
+The Spreadsheet component supports a wide range of built-in formulas, enabling powerful data analysis and manipulation. Below is the list of formulas supported in the Spreadsheet component:
 
 <table>
 <tr>

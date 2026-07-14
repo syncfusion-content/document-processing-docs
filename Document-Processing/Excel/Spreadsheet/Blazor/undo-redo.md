@@ -9,7 +9,7 @@ documentation: ug
 
 # Undo and Redo in Blazor Spreadsheet Component
 
-The **Undo** and **Redo** functionality in the Blazor Spreadsheet component allows users to reverse or reapply recent actions. It maintains a history of spreadsheet operations, encouraging experimentation while preserving the ability to restore previous states.
+The **Undo** and **Redo** functionality in the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component allows users to reverse or reapply recent actions. It maintains a history of spreadsheet operations, encouraging experimentation while preserving the ability to restore previous states.
 
 Undo and Redo are supported for most common operations, including:
 
@@ -20,7 +20,7 @@ Undo and Redo are supported for most common operations, including:
 
 The keyboard shortcuts **Ctrl + Z** for Undo and **Ctrl + Y** for Redo provide quick access without requiring interaction with the user interface.
 
-N> The undo and redo history is limited to the built-in history size to optimize memory usage; once this limit is reached, older actions are automatically discarded. Additionally, the history is cleared when [worksheet protection](./protection#protect-sheet) is enabled.
+N> The undo and redo history is limited to **25 operations** to optimize memory usage; once this limit is reached, older actions are automatically discarded. Additionally, the history is cleared when [worksheet protection](./protection#protect-sheet) is enabled.
 
 ## Undo
 
@@ -33,11 +33,9 @@ The **Undo** operation reverses the most recent action performed within the Spre
 
 N> The **Undo** button is automatically disabled when there are no reversible operations available.
 
-
-
 ### Undo Programmatically
 
-The undo action can also be performed programmatically by calling the [Undo()](https://help.syncfusion.com/cr/blazor/syncfusion.blazor.spreadsheet.sfspreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_Undo) method on the `SfSpreadsheet` instance.
+The undo action can also be performed programmatically by calling the [Undo()](https://help.syncfusion.com/cr/blazor/syncfusion.blazor.spreadsheet.sfspreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_Undo) method.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -87,7 +85,7 @@ N> In some browsers, **Ctrl + Y** opens the browser history. If the shortcut doe
 
 ### Redo Programmatically
 
-The redo action can also be performed programmatically by calling the [Redo()](https://help.syncfusion.com/cr/blazor/syncfusion.blazor.spreadsheet.sfspreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_Redo) method on the `SfSpreadsheet` instance.
+The redo action can also be performed programmatically by calling the [Redo()](https://help.syncfusion.com/cr/blazor/syncfusion.blazor.spreadsheet.sfspreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_Redo) method.
 
 
 {% tabs %}

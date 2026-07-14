@@ -9,7 +9,7 @@ documentation: ug
 
 # Sorting in Blazor Spreadsheet Component
 
-The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component provides built-in sorting functionality that enables users to organize worksheet data in either ascending or descending order. This feature helps improve readability and simplifies data analysis by arranging content according to selected columns. The sorting behavior is controlled by the [`AllowSorting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowSorting) property, which is set to **true** by default. When [`AllowSorting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowSorting) is set to **false**, all sorting options are removed from the interface, including the Ribbon and Context Menu, and related API methods become inactive. Additionally, sorting is disabled if the worksheet is protected. For more information on worksheet protection, refer to the [worksheet protection documentation](./protection#protect-sheet).
+The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component provides built-in sorting functionality that enables users to organize worksheet data in either ascending or descending order. This feature helps improve readability and simplifies data analysis by arranging content according to selected columns. The sorting behavior is controlled by the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowSorting) property, which is set to **true** by default. When [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowSorting) is set to **false**, all sorting options are removed from the interface, including the Ribbon and Context Menu, and related API methods become inactive. Additionally, sorting is disabled if the worksheet is protected. For more information on worksheet protection, refer to the [worksheet protection documentation](./protection#protect-sheet).
 
 ## Disabling sorting
 
@@ -21,9 +21,21 @@ The example below shows how to disable sorting across the entire Spreadsheet:
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
-<SfSpreadsheet AllowSorting="false">
+<SfSpreadsheet DataSource="DataSourceBytes" AllowSorting="false">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
+
+@code {
+    public byte[] DataSourceBytes { get; set; }
+    public SfSpreadsheet SpreadsheetInstance;
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+}
+
 
 {% endhighlight %}
 {% endtabs %}
@@ -69,10 +81,6 @@ If filtering is enabled, sorting can also be performed using the filter dialog. 
 
 ![Sort option via Filter Dialog](./images/filter-dialog-sort.gif)
 
-### Used range
-
-The **used range** is the rectangular block of cells that contain data (or formatting) in a worksheet. When a sort operation is performed without an explicitly selected range, the component automatically identifies the used range of the active worksheet and applies the sort across that range. If the active sheet is empty, sorting has no effect.
-
 ### Sort by active cell
 
 When a sort operation is performed through the UI without an explicitly selected range, the component automatically identifies the **used range** of the worksheet. Sorting is applied to this entire range using the column of the **active cell** as the sort key - the column whose values determine the order of the rows during sorting.
@@ -92,8 +100,6 @@ When a specific cell range is selected in the UI, the sort operation is restrict
 If the range **B2:D10** is selected and the active cell is in **Column D**, the component sorts only the rows within **B2:D10** based on the values in **Column D**.
 
 ### Sort programmatically
-
-The programmatic API lets you trigger a sort from code, for example from a toolbar button, a context-menu action, or after data is loaded. Use the API when the sort order must be determined by application logic rather than direct user interaction.
 
 The [SortRangeAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SortRangeAsync_System_String_Syncfusion_Blazor_Spreadsheet_SortDirection_) method enables sorting of a specified range of cells based on the values in a specific column. This method provides a programmatic way to sort data without using the UI. The available parameters in the `SortRangeAsync()` method are:
 

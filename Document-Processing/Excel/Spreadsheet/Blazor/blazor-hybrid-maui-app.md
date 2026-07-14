@@ -135,7 +135,7 @@ N> If any errors occur while using the Android Emulator, see [Troubleshooting An
 
 To learn how to open workbooks, bind data, or save files in the Spreadsheet component, see [Open and Save](open-and-save).
 
-N> [View Sample In GitHub.](https://github.com/SyncfusionExamples/syncfusion-maui-blazor-spreadsheet-integration). Looking for the full Blazor Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) page
+N> [View Sample In GitHub](https://github.com/SyncfusionExamples/syncfusion-maui-blazor-spreadsheet-integration). Looking for the full Blazor Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) page
 
 
 ## See Also

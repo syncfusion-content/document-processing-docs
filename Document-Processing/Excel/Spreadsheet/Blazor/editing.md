@@ -33,7 +33,7 @@ Cell editing can be initiated directly through the UI using any of the following
 - Use the **formula bar** to modify the cell's contents.  
 - Press **BACKSPACE** or **SPACE** to clear the cell and begin editing.
 
-> For additional keyboard shortcuts related to cell editing, refer to the [Keyboard Shortcuts](./accessibility#keyboard-shortcuts) documentation.
+N> For additional keyboard shortcuts related to cell editing, refer to the [Keyboard Shortcuts](./accessibility#keyboard-shortcuts) documentation.
 
 ## Update cell
 

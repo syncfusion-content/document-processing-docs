@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection in Blazor Spreadsheet Component | Syncfusion
-description: Learn about selection features in the Syncfusion Blazor Spreadsheet component, including SelectRangeAsync and UI-based selection options.
+description: Learn about selection features in the Syncfusion Blazor Spreadsheet component, including programmatic and UI-based selection options.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Selection in Blazor Spreadsheet Component
 
-The selection feature in the spreadsheet component enables interactive highlighting and manipulation of cells, rows, or columns for data analysis and editing operations. The component supports both mouse and keyboard interactions.
+The selection feature in the  [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) enables interactive highlighting and manipulation of cells, rows, or columns for data analysis and editing operations. The component supports both mouse and keyboard interactions.
 
 The Blazor Spreadsheet provides the following selection options:
 
@@ -28,27 +28,16 @@ In the active sheet, selection can be performed in any of the following ways.
     *   Click a column header to select that column.
     *   Click and drag across row headers to select adjacent rows.
     *   Click and drag across column headers to select adjacent columns.
-    *   Hold **Shift** and click a row or column header to extend the selection to that header.
     *   Hold **Ctrl** and click additional row or column headers to add non-adjacent rows or columns to the selection.
 
 * **Keyboard Navigation**:
    * Use **Arrow** keys to navigate between cells.
    * Use **Shift + Arrow** keys for range selection.
    * Use **Ctrl + Click** for non-adjacent cell selections.
-   * Use **Ctrl + Shift + Arrow** keys to extend a selection to the next non-empty cell in the direction of the arrow.
 
-* **Name Box**: Enter a cell reference (for example, `C5`) or a range (for example, `A1:E5`) in the Name Box and press **Enter** to select the specified range. The Name Box can be focused by clicking it directly; on most browsers, the cell reference can also be typed immediately after pressing **F2** in some spreadsheet-like applications.
+* **Name Box**: Enter a cell reference (for example, `C5`) or a range (for example, `A1:E5`) in the Name Box and press **Enter** to select the specified range.
 
-### Clearing a selection
-
-To clear an active selection:
-
-* Press any **Arrow** key to move the selection to a single cell.
-* Click a single cell outside the selected range.
-* Press **Escape** while a range is selected to revert the selection to the active cell.
-* Press **Ctrl + Shift + Space** to select the entire sheet.
-
-When the active worksheet is protected, selection is restricted to the cells that have been marked as selectable in the worksheet protection configuration. For more details, refer to the [Worksheet Protection](./protection#protect-sheet) documentation.
+N> When the active worksheet is protected, selection is restricted to the cells that have been marked as selectable in the worksheet protection configuration. For more details, refer to the [Worksheet Protection](./protection#protect-sheet) documentation.
 
 ## Cell Selection
 

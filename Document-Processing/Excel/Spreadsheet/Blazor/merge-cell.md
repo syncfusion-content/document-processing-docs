@@ -62,16 +62,12 @@ N> Clicking the **Merge Cells** button (not the drop-down) applies the default a
 
 ### Merge cells programmatically
 
-The [MergeAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_MergeAsync_Syncfusion_Blazor_Spreadsheet_MergeType_System_String_) method merges cells based on the specified [MergeType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.MergeType.html). If the **cellRange** parameter is not provided, the current selection is used. The available parameters are:
+The [MergeAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_MergeAsync_Syncfusion_Blazor_Spreadsheet_MergeType_System_String_) method merges cells based on the specified [MergeType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.MergeType.html).. If the **cellRange** parameter is not provided, the current selection is used. This method provides a programmatic way to merge cells without using the UI. The available parameters in the [MergeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_MergeAsync_Syncfusion_Blazor_Spreadsheet_MergeType_System_String_) method are:
 
-- **mergeType** (`MergeType`, required): Specifies the merge behavior.
-- **cellRange** (`string`, optional): Specifies the A1-style address of the range to merge (e.g., `"A1:D1"`). If not provided, the currently selected range will be merged.
-
-**Supported `MergeType` values**
-
-- `MergeType.Cells` (default): Merge the entire selection into one cell and preserve the top-left value.
-- `MergeType.Center`: Merge the entire selection, and horizontally center the resulting cell's content.
-- `MergeType.Across`: For each row in the selection, merge the cells across columns and preserve each row's first cell value.
+| Parameter | Type | Description |
+| -- | -- | -- |
+| mergeType | **MergeType** | Specifies the merge behavior.<br><br> The default **MergeType** is `MergeType.Cells`. Supported values:<br> • `MergeType.Cells` - Merge the entire selection into one cell and preserve the top-left value;<br> • `MergeType.Center`- Merge the entire selection and horizontally center the resulting cell’s content;<br> • `MergeType.Across` - For each row in the selection, merge the cells across columns and preserve each row’s first cell value. |
+| cellRange | string (optional) | Specifies the A1-style address of the range to unmerge (e.g., `"A1:D1"`). If not provided, the currently selected range will be unmerged. |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -134,7 +130,7 @@ To unmerge cells through the Ribbon UI, follow these steps:
 
 ### Unmerge cells programmatically
 
-The [UnmergeAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_UnmergeAsync_System_String_) method reverses a merge and restores individual cells. If the **cellRange** parameter is not provided, the current selection is unmerged. The available parameters are:
+The [UnmergeAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_UnmergeAsync_System_String_) method reverses a merge and restores individual cells. If the **cellRange** parameter is not provided, the current selection cell is unmerged. The available parameters in the [UnmergeAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_UnmergeAsync_System_String_) method are:
 
 | Parameter | Type | Description |
 | -- | -- | -- |
@@ -174,7 +170,7 @@ The [UnmergeAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spr
 
 ## Limitations of Merge
 
-The Blazor Spreadsheet enforces these merge constraints to ensure data integrity. In these cases, validation messages are displayed:
+The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) enforces these merge constraints to ensure data integrity. In these cases, validation messages are displayed:
 
 - **Sorting with merged cells** - When sorting a range that contains merged cells, a validation dialog appears to indicate that sorting cannot proceed unless all merged cells are consistent in size.
 

@@ -24,7 +24,7 @@ Before installing Blazor UI Builder Skill with Spreadsheet, ensure the following
 - Required [Node.js](https://nodejs.org/en) version ≥ 18
 - **Agent Package Manager** (APM) installed — follow [Installation Guidelines](https://microsoft.github.io/apm/quickstart/#1-install-apm)
 - A supported AI agent or IDE that integrates with the Skills (VS Code, Cursor, Syncfusion® Code Studio, etc.)
-- Syncfusion Blazor Spreadsheet and Themes NuGet packages referenced in your project (the skill can recommend dependencies, but they must be installed before running the app)
+- [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) and Themes NuGet packages referenced in your project (the skill can recommend dependencies, but they must be installed before running the app)
 - Active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):  
   - [Commercial](https://www.syncfusion.com/sales/unlimitedlicense)  
   - [Community License](https://www.syncfusion.com/products/communitylicense)  
@@ -33,27 +33,27 @@ Before installing Blazor UI Builder Skill with Spreadsheet, ensure the following
 
 ## Key Benefits
 
-### **AI-Driven UI Generation**
+### AI-Driven UI Generation
 - Converts prompts into complete Blazor components—not just snippets
 - Automatically selects appropriate Syncfusion® Spreadsheet features (formulas, formatting, data binding, etc.)
 - Produces structured, maintainable code
 
-### **Component Usage & API Accuracy**
+### Component Usage & API Accuracy
 - Uses correct Syncfusion® Spreadsheet APIs
 - Injects required feature modules (sorting, filtering, number formatting, etc.)
 - Avoids unsupported or deprecated patterns
 
-### **Patterns & Best Practices**
+### Patterns & Best Practices
 - Recommended component composition and Blazor lifecycle integration
 - Event handling aligned with Blazor standards
 - Secure and scalable coding patterns for data-driven applications
 
-### **Accessibility & Responsiveness**
+### Accessibility & Responsiveness
 - WCAG 2.1 AA–aligned output
 - Semantic HTML with ARIA support
 - Mobile-first responsive layouts
 
-### **Design-System Integration**
+### Design-System Integration
 - Supports Tailwind, Bootstrap, Material, or custom themes
 - Ensures consistent Syncfusion® styling and theme usage
 
@@ -69,7 +69,7 @@ Run the following command to confirm APM is installed (skip this step if you alr
 apm --version
 ```
 
-### Install the Skill using APM
+### Install the Syncfusion® Blazor UI Builder Skill with Spreadsheet package using APM
 
 Use the APM CLI to install the Blazor UI Builder Skill with Spreadsheet for your preferred environment:
 
@@ -106,7 +106,7 @@ After installation, the following artifacts are added to your project for the Gi
 
 For other targets (Cursor, Codex, Claude), skill and agent files are added to their respective agent configuration locations. Refer to the APM [targets documentation](https://microsoft.github.io/apm/reference/cli/targets/#detection-signals) for details about supported deployment targets.
 
-> For [Syncfusion® Code Studio](https://help.syncfusion.com/code-studio/reference/configure-properties/custom-agents#predefined-agents), use the Copilot command above to install the Blazor UI Builder.
+N> For [Syncfusion® Code Studio](https://help.syncfusion.com/code-studio/reference/configure-properties/custom-agents#predefined-agents), use the Copilot command above to install the Blazor UI Builder.
 
 After installing the skill, run `dotnet restore` to ensure all Syncfusion Blazor packages referenced by the generated components are available in your project.
 
@@ -133,7 +133,7 @@ Key enforcement points:
 - Generates semantic HTML with ARIA attributes and keyboard support
 - Avoids unsupported or deprecated API usages for Syncfusion® Spreadsheet
 
-> The assistant handles most stages automatically and may request confirmation where required.
+N> The assistant handles most stages automatically and may request confirmation where required.
 
 ## Using the AI Assistant
 
@@ -149,9 +149,9 @@ To start using the skill:
 ![Set Agent](./images/blazor-ui-builder.png)
 3. Start prompting the agent with a clear description of your Spreadsheet UI requirements.
 
-> Restart your IDE or reload the window if the newly installed agent does not appear in the Agent dropdown.
+N> Restart your IDE or reload the window if the newly installed agent does not appear in the Agent dropdown.
 
-> For Syncfusion® Code Studio, if the UI Builder agent is not shown, ensure that the agent location is configured to use it in the chat, and refer to the [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/usersettings#agent-file-locations) to configure the agent location properly.
+N> For Syncfusion® Code Studio, if the UI Builder agent is not shown, ensure that the agent location is configured to use it in the chat, and refer to the [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/usersettings#agent-file-locations) to configure the agent location properly.
 
 **Example Prompts:**
 
@@ -160,7 +160,7 @@ To start using the skill:
 Build a financial dashboard spreadsheet with quarterly revenue data. Add custom formulas for totals and growth percentages. Use a professional layout with clearly labeled headers.
 {% endpromptcard %}
 {% promptcard Employee Directory %}
-Create an employee directory using the Blazor Spreadsheet component with columns for Name, Department, and Email. Populate with realistic sample data across departments. Maintain a clean, organized tabular layout with proper formatting, aligned columns, and consistent spacing.
+Create an employee directory using the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component with columns for Name, Department, and Email. Populate with realistic sample data across departments. Maintain a clean, organized tabular layout with proper formatting, aligned columns, and consistent spacing.
 {% endpromptcard %}
 {% endpromptcards %}
 

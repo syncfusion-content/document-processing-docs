@@ -31,19 +31,11 @@ In the **Protect Sheet** dialog, perform the following steps:
 
 ### Protecting a sheet programmatically
 
-The Spreadsheet component supports protecting a specific worksheet through the [ProtectSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ProtectSheetAsync_System_String_) method. This method protects a named sheet using the default protection settings. No password is applied, so any user with access to the workbook can unprotect the sheet.
-
-**Declaration**
-
-```csharp
-public Task ProtectSheetAsync(string sheetName = null)
-```
-
-The available parameters are:
+The [ProtectSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ProtectSheetAsync_System_String_) method protects a specific worksheet using the default protection settings. This method provides a programmatic way to protect a sheet without using the UI. The available parameters in the [ProtectSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ProtectSheetAsync_System_String_) method are:
 
 | Parameter   | Type   | Description |
-|-------------|--------|-------------|
-| sheetName   | string (optional, default **null**) | Specifies the name of the sheet to protect. Sheet name comparison is case-insensitive. If **null** or empty, the entire workbook (all sheets and the workbook structure) is protected instead. |
+|---|---|---|
+| sheetName   | string (optional, default **null**) | Specifies the name of the sheet to protect. If **null** or empty, the entire workbook (all sheets and the workbook structure) is protected instead. |
 
 **Examples**
 
@@ -54,7 +46,7 @@ The available parameters are:
 @using Syncfusion.Blazor.Spreadsheet
 @using Syncfusion.Blazor.Buttons
 
-<SfButton OnClick="ProtectHandler" Content="Protect"></SfButton>
+<SfButton OnClick="ProtectHandler" Content="ProtectSheet"></SfButton>
 
 <SfSpreadsheet DataSource="DataSourceBytes" @ref="SpreadsheetInstance">
     <SpreadsheetRibbon></SpreadsheetRibbon>
@@ -157,17 +149,11 @@ When the sheet is protected without a password, no password entry is required an
 
 The [UnprotectSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_UnprotectSheetAsync_System_String_) method removes protection from a specific worksheet.
 
-**Declaration**
-
-```csharp
-public Task UnprotectSheetAsync(string sheetName = null)
-```
-
 The available parameters are:
 
 | Parameter   | Type   | Description |
-|-------------|--------|-------------|
-| sheetName   | string (optional, default **null**) | Specifies the name of the sheet to unprotect. Sheet name comparison is case-insensitive. If **null** or empty, the entire workbook protection (structure and all sheets) is removed instead. |
+|---|---|---|
+| sheetName   | string (optional, default **null**) | Specifies the name of the sheet to unprotect. If **null** or empty, the entire workbook protection (structure and all sheets) is removed instead. |
 
 **Examples**
 
@@ -225,7 +211,7 @@ To protect the workbook:
 
 ### Protecting a workbook programmatically
 
-Workbook protection is applied through the same [ProtectSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ProtectSheetAsync_System_String_) method, called with a `null` or empty `sheetName` argument. When no sheet name is provided, the entire workbook (all sheets and the workbook structure) is protected using the default protection settings. No password is applied, so any user with access to the workbook can unprotect it.
+The [ProtectSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ProtectSheetAsync_System_String_) method, when called with a `null` or empty `sheetName` argument, applies default protection settings to the entire workbook, including all sheets and the workbook structure. This method provides a programmatic way to protect a workbook without using the UI.
 
 **Examples**
 
@@ -238,7 +224,7 @@ Workbook protection is applied through the same [ProtectSheetAsync()](https://he
 
 <SfButton OnClick="ProtectWorkbookHandler" Content="Protect Workbook"></SfButton>
 
-<SfSpreadsheet DataSource="DataSourceBytes" @ref="SpreadsheetInstance">
+<SfSpreadsheet @ref="SpreadsheetInstance">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
@@ -247,12 +233,6 @@ Workbook protection is applied through the same [ProtectSheetAsync()](https://he
     public byte[] DataSourceBytes { get; set; }
 
     public SfSpreadsheet SpreadsheetInstance;
-
-    protected override void OnInitialized()
-    {
-        string filePath = "wwwroot/Sample.xlsx";
-        DataSourceBytes = File.ReadAllBytes(filePath);
-    }
 
     public async Task ProtectWorkbookHandler()
     {
@@ -295,7 +275,7 @@ Workbook unprotection is applied through the same [UnprotectSheetAsync()](https:
 
 <SfButton OnClick="UnprotectWorkbookHandler" Content="Unprotect Workbook"></SfButton>
 
-<SfSpreadsheet DataSource="DataSourceBytes" @ref="SpreadsheetInstance">
+<SfSpreadsheet @ref="SpreadsheetInstance">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
@@ -304,12 +284,6 @@ Workbook unprotection is applied through the same [UnprotectSheetAsync()](https:
     public byte[] DataSourceBytes { get; set; }
 
     public SfSpreadsheet SpreadsheetInstance;
-
-    protected override void OnInitialized()
-    {
-        string filePath = "wwwroot/Sample.xlsx";
-        DataSourceBytes = File.ReadAllBytes(filePath);
-    }
 
     public async Task UnprotectWorkbookHandler()
     {
