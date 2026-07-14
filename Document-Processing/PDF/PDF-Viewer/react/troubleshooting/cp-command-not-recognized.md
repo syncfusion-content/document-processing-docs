@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Troubleshoot the 'cp' Command Not Recognized Error in Syncfusion React PDF Viewer
+# Resolve 'cp' Command Error in Syncfusion React PDF Viewer
 
 The Unix `cp` command is not available in the Windows Command Prompt. Use one of the following Windows-native alternatives to copy the required `ej2-pdfviewer-lib` assets into a public or source folder used by the application.
 
