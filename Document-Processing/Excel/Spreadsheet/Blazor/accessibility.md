@@ -34,7 +34,7 @@ The accessibility compliance for the Spreadsheet component is outlined below. Th
 | [Axe-core Accessibility Validation](https://blazor.syncfusion.com/documentation/common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
 
 ## WAI-ARIA attributes
-The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) follows [WAI-ARIA](https://www.w3.org/WAI/ARIA/) patterns to meet accessibility standards. The following ARIA attributes are used in the Spreadsheet component:
+The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) follows [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet accessibility standards. The following ARIA attributes are used in the Spreadsheet component:
 
 | Attributes | Purpose |
 |---|---|
