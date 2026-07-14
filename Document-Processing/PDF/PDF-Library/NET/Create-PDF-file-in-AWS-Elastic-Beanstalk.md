@@ -9,7 +9,7 @@ keywords: aws elastic beanstalk create pdf, aws edit pdf, merge, pdf form, fill 
 
 # Create PDF document in AWS Elastic Beanstalk
 
-The [Syncfusion<sup>&reg;</sup> .NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, open and save PDF documents in AWS Elastic Beanstalk. 
+The [.NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, open and save PDF documents in AWS Elastic Beanstalk. 
 
 ## Steps to create a PDF document in AWS Elastic Beanstalk
 

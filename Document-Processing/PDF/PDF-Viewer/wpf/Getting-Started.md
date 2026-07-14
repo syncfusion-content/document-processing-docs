@@ -108,39 +108,39 @@ WPF PDF Viewer control can be added to an application either through the designe
     
 3. Use the `PdfViewerControl` in XAML by including the Syncfusion namespace.
 
-{% tabs %}
-{% highlight xaml tabtitle="MainWindow.xaml" %}
-<Window x:Class="Namespace.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:syncfusion="clr-namespace:Syncfusion.Windows.PdfViewer;assembly=Syncfusion.PdfViewer.WPF">
-    <Grid x:Name="HomeGrid">
-        <syncfusion:PdfViewerControl x:Name="pdfViewer"></syncfusion:PdfViewerControl>
-    </Grid>
-</Window>
-    
-{% endhighlight %}
-{% endtabs %}
+	{% tabs %}
+	{% highlight xaml tabtitle="MainWindow.xaml" %}
+	<Window x:Class="Namespace.MainWindow"
+			xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			xmlns:syncfusion="clr-namespace:Syncfusion.Windows.PdfViewer;assembly=Syncfusion.PdfViewer.WPF">
+		<Grid x:Name="HomeGrid">
+			<syncfusion:PdfViewerControl x:Name="pdfViewer"></syncfusion:PdfViewerControl>
+		</Grid>
+	</Window>
+		
+	{% endhighlight %}
+	{% endtabs %}
 
-N> Declare a name for the PDF Viewer component as shown above for reference.
+	N> Declare a name for the PDF Viewer component as shown above for reference.
 
 4. Add the [SfSkinManager](https://help.syncfusion.com/cr/wpf/Syncfusion.SfSkinManager.html) namespace to style the control correctly, and apply the desired theme.
 
-{% tabs %}
-{% highlight xaml tabtitle="MainWindow.xaml" %}
-<Window x:Class="Namespace.MainWindow"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:syncfusionskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
-    syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=Windows11Light}">
+	{% tabs %}
+	{% highlight xaml tabtitle="MainWindow.xaml" %}
+	<Window x:Class="Namespace.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:syncfusionskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+		syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=Windows11Light}">
 
-</Window>
-{% endhighlight %}
-{% endtabs %}
+	</Window>
+	{% endhighlight %}
+	{% endtabs %}
 
-{% endtabcontent %}
- 
-{% tabcontent Via Coding %}
+	{% endtabcontent %}
+	 
+	{% tabcontent Via Coding %}
 To add the control manually from code, follow these steps:
 
 1.	Add the required assemblies as a reference to the project.

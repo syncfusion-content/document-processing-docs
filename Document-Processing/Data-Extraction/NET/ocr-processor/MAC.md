@@ -9,7 +9,7 @@ keywords: Assemblies
 
 # Perform OCR on macOS
 
-The [Syncfusion<sup>&reg;</sup> .NET OCR library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/ocr-process) used to extract text from scanned PDFs and images in the Mac application.
+The [.NET OCR library](https://www.syncfusion.com/document-sdk/net-pdf-library/ocr-process) used to extract text from scanned PDFs and images in the Mac application.
 
 ## Steps to perform OCR on entire PDF document in Mac
 
@@ -179,4 +179,4 @@ By executing the program, you will get a PDF document as follows.
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/OCR-csharp-examples/tree/master/Mac).
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
+Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
