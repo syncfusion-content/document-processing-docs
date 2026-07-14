@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add Area Annotations in Blazor PDF Viewer | Syncfusion
-description: Learn how to enable, draw, customize, and manage Area annotations in the Blazor SfPdfViewer.
+description: Learn how to enable, draw, customize, and manage Area annotations in the Blazor SfPdfViewer Component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

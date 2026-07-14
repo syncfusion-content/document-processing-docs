@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add Distance Annotations in Blazor PDF Viewer | Syncfusion
-description: Learn how to enable, measure, customize, and manage Distance annotations in the Blazor SfPdfViewer.
+description: Learn how to enable, measure, customize, and manage Distance annotations in the Blazor SfPdfViewer Component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

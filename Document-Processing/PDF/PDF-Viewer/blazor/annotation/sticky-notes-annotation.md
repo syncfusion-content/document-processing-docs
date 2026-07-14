@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sticky notes annotations in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to add, edit, and manage sticky notes annotations in the Blazor SfPdfViewer component.
+description: Learn how to create, edit, and manage sticky note annotations in the Blazor SfPdfViewer component for effective PDF collaboration and review.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
