@@ -12,7 +12,7 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 Keep document navigation smooth and predictable by using the PDF Viewer's built-in scrolling features. This guide shows how to programmatically control scroll position, respond to scroll events, and implement performance-friendly patterns (for example, avoid nesting the viewer inside other scrollable containers).
 
-W> Since the PDF Viewer includes built-in scrolling, avoid placing it inside other scrollable containers like [ScrollView](https://learn.microsoft.com/en-us/dotnet/document-processing/user-interface/controls/scrollview?view=net-maui-8.0), as this may lead to unexpected behavior.
+W> Since the PDF Viewer includes built-in scrolling, avoid placing it inside other scrollable containers like [ScrollView](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/scrollview?view=net-maui-8.0), as this may lead to unexpected behavior.
 
 ## Programmatic scrolling
 
@@ -157,10 +157,10 @@ N> * Pages with very high resolution may still render slowly due to native rende
 
 ## See Also
 
-- [Page Navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/document-processing/page-navigation)
-- [Magnification](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/document-processing/magnification)
-- [Gesture Events](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/document-processing/gesture-events)
-- [Toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/document-processing/toolbar)
-- [UI Customization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/document-processing/ui-customization)
-- [Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/document-processing/getting-started)
-- [Coordinate Conversion](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/document-processing/coordinates-conversion)
+- [Page Navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/page-navigation)
+- [Magnification](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/magnification)
+- [Gesture Events](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/gesture-events)
+- [Toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/toolbar)
+- [UI Customization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/ui-customization)
+- [Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/getting-started)
+- [Coordinate Conversion](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/coordinates-conversion)
