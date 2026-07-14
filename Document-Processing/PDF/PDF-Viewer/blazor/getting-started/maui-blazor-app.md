@@ -139,7 +139,7 @@ N> If the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 After the application launches, the PDF Viewer displays the specified PDF document.
 
-![Blazor SfPdfViewer2 rendering the PDF document](gettingstarted-images/Windows-maui-output.png)
+![Blazor SfPdfViewer rendering the PDF document](gettingstarted-images/Windows-maui-output.png)
 
 ## Run on Android
 
@@ -152,7 +152,7 @@ For setup and usage, see [Android Emulator setup for .NET MAUI](https://learn.mi
 
 N> If any errors occur while using the Android Emulator, see [Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
-![Blazor SfPdfViewer2 running in the Android emulator](gettingstarted-images/android-emulator.png)
+![Blazor SfPdfViewer running in the Android emulator](gettingstarted-images/android-emulator.png)
 
 ## See Also
 

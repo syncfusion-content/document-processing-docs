@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Toggle visibility of the tool bar in WPF Pdf Viewer | Syncfusion
-description: Learn about Toggle visibility of the tool bar support in Syncfusion<sup>&reg;</sup>; WPF Pdf Viewer control and more.
+description: Learn how to toggle the visibility of the tool bar in Syncfusion<sup>&reg;</sup> WPF Pdf Viewer control and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Toggle visibility of the tool bar in WPF Pdf Viewer
 
-PDF Viewer supports showing and hiding toolbar, when you feel to customize the toolbar, you can hide the default toolbar of the PDF Viewer using the [ShowToolbar](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_ShowToolbar) property. The following code example hides the default toolbar in the PDF Viewer control.
+PDF Viewer supports showing and hiding the toolbar. To customize the toolbar, you can hide the default toolbar of the PDF Viewer using the [ShowToolbar](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_ShowToolbar) property. The following code example hides the default toolbar in the PDF Viewer control.
 
 {% tabs %}
 {% highlight c# %}
@@ -23,54 +23,54 @@ pdfViewer.ShowToolbar = False
 {% endhighlight %}
 {% endtabs %}
 
-## Expand the Annotation toolbar by programmatically.
+## Expand the annotation toolbar programmatically
 
-The annotation toolbar is a secondary toolbar of PDF Viewer control that contains a collection of annotation buttons. By default, this annotation toolbar will be collapsed. To expand annotation toolbar at runtime, the user can click show annotations button, which is present in the primary toolbar. In order to expand annotation toolbar at loading or by programmatically, the user can just enable the isChecked property in annotations button as true. The following code example shows how to expands the annotation toolbar by programmatically in the PDF Viewer control.
+The annotation toolbar is a secondary toolbar of the PDF Viewer control that contains a collection of annotation buttons. By default, this annotation toolbar will be collapsed. To expand the annotation toolbar at runtime, the user can click show annotations button, which is present in the primary toolbar. In order to expand the annotation toolbar at loading or programmatically, the user can just enable the isChecked property in the annotations button as true. The following code example shows how to expand the annotation toolbar programmatically in the PDF Viewer control.
 
 {% tabs %}
 {% highlight c# %}
 private void ExpandAnnotationToolbar() 
 { 
-	// Get the instance of the toolbar using its template name. 
-	DocumentToolbar toolbar = pdfViewer.Template.Findname("PART_Toolbar", pdfViewer) as DocumentToolbar;
-	// Get the instance of the annotation button using its template name. 
-	ToggleButton annotationButton = (ToggleButton)toolbar.Template.Findname("PART_Annotations", toolbar);
-	// Expand the annotation toolbar. 
-	annotationButton.IsChecked = true; 
+    // Get the instance of the toolbar using its template name. 
+    DocumentToolbar toolbar = pdfViewer.Template.FindName("PART_Toolbar", pdfViewer) as DocumentToolbar;
+    // Get the instance of the annotation button using its template name. 
+    ToggleButton annotationButton = (ToggleButton)toolbar.Template.FindName("PART_Annotations", toolbar);
+    // Expand the annotation toolbar. 
+    annotationButton.IsChecked = true; 
 }
 {% endhighlight %}
 {% highlight vbnet %}
 Private Sub ExpandAnnotationToolbar()
     ' Get the instance of the toolbar using its template name.
-    Dim toolbar As DocumentToolbar = TryCast(pdfViewer.Template.Findname("PART_Toolbar", pdfViewer), DocumentToolbar)
-	' Get the instance of the annotation button using its template name. 
-	Dim annotationButton As ToggleButton = CType(toolbar.Template.Findname("PART_Annotations", toolbar), ToggleButton)
-	' Expand the annotation toolbar. 
-	annotationButton.IsChecked = True
+    Dim toolbar As DocumentToolbar = TryCast(pdfViewer.Template.FindName("PART_Toolbar", pdfViewer), DocumentToolbar)
+    ' Get the instance of the annotation button using its template name. 
+    Dim annotationButton As ToggleButton = CType(toolbar.Template.FindName("PART_Annotations", toolbar), ToggleButton)
+    ' Expand the annotation toolbar. 
+    annotationButton.IsChecked = True
 End Sub
 {% endhighlight %}
 {% endtabs %}
 
 ## Hide the vertical toolbar
 
-You can hide the vertical toolbar which is present in the left side of PDF Viewer by disabling all the items present in the toolbar. Refer to the following code to hide the vertical toolbar.
+You can hide the vertical toolbar which is present on the left side of the PDF Viewer by disabling all the items in the toolbar. Refer to the following code to hide the vertical toolbar.
 
 {% tabs %}
 {% highlight c# %}
 private void HideVerticalToolbar() 
 { 
-	// Hides the thumbnail icon. 
-	pdfViewer.ThumbnailSettings.IsVisible = false; 
-	// Hides the bookmark icon. 
-	pdfViewer.IsBookmarkEnabled = false; 
-	// Hides the layer icon. 
-	pdfViewer.EnableLayers = false; 
-	// Hides the organize page icon. 
-	pdfViewer.PageOrganizerSettings.IsIconVisible = false; 
-	// Hides the redaction icon. 
-	pdfViewer.EnableRedactionTool = false;   
-	// Hides the form icon. 
-	pdfViewer.FormSettings.IsIconVisible = false;
+    // Hides the thumbnail icon. 
+    pdfViewer.ThumbnailSettings.IsVisible = false; 
+    // Hides the bookmark icon. 
+    pdfViewer.IsBookmarkEnabled = false; 
+    // Hides the layer icon. 
+    pdfViewer.EnableLayers = false; 
+    // Hides the organize page icon. 
+    pdfViewer.PageOrganizerSettings.IsIconVisible = false; 
+    // Hides the redaction icon. 
+    pdfViewer.EnableRedactionTool = false;   
+    // Hides the form icon. 
+    pdfViewer.FormSettings.IsIconVisible = false;
 }
 {% endhighlight %}
 {% highlight vbnet %}

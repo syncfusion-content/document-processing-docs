@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Forms in Blazor SfPdfViewer Component | Syncfusion
-description: Learn what the Form Designer in Syncfusion Blazor SfPdfViewer offers, supported field types, and how the topics are organized.
+description: Learn the Forms features in Blazor SfPdfViewer, including form filling, the Form Designer, supported field types, and how the topics are organized.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,17 +9,29 @@ documentation: ug
 
 # Overview of Forms in Blazor SfPdfViewer
 
-The Syncfusion Blazor SfPdfViewer delivers a complete, easy-to-use PDF forms experience. Users can read, fill, add, edit, and delete form fields directly within PDF documents through the viewer UI or programmatically via the Blazor APIs.
+The Blazor `SfPdfViewer` provides PDF forms capabilities that let users read, fill, add, edit, and delete form fields directly within PDF documents through the viewer UI or programmatically via the Blazor APIs.
 
-The viewer includes import and export support for form data, simplifying integration with backend systems. Developers have fine-grained API control while end users interact with a streamlined form-filling interface.
+The viewer includes import and export support for form data for backend integration. Developers have fine-grained API control while end users interact with a streamlined form-filling interface.
+
+## Supported form field types
+
+The Forms features support the following field types. Each link explains how to add the field using the Form Designer UI and programmatically.
+
+- [Textbox](./manage-form-fields/create-form-fields#textbox)
+- [Password](./manage-form-fields/create-form-fields#password)
+- [CheckBox](./manage-form-fields/create-form-fields#checkbox)
+- [RadioButton](./manage-form-fields/create-form-fields#radiobutton)
+- [ListBox](./manage-form-fields/create-form-fields#listbox)
+- [DropDown](./manage-form-fields/create-form-fields#dropdown)
+- [Signature field](./manage-form-fields/create-form-fields#signature-field)
 
 ## Filling PDF Forms
 
-Experience effortless PDF form filling through a clean, intuitive UI or automated workflows using powerful APIs. Flexible form data import and export support ensures smooth and efficient operations when working with PDF forms.
+Fill PDF forms through the viewer UI or programmatically using the Blazor APIs. The viewer also supports importing and exporting form data.
 
 See the [Filling PDF Forms](./form-filling) page for full details.
 
-Use the following code-snippet to configure form-filling in Blazor. Form-filling is enabled by default.
+Use the following code snippet to enable form filling in Blazor. Form filling is enabled by default.
 
 {% tabs %}
 {% highlight razor %}
@@ -27,11 +39,11 @@ Use the following code-snippet to configure form-filling in Blazor. Form-filling
 
 <SfPdfViewer2 Height="100%"
               Width="100%"
-              DocumentPath="@DocumentPath" 
-              EnableFormFields=true />
+              DocumentPath="@DocumentPath"
+              EnableFormFields="true" />
 
 @code{
-    public string DocumentPath { get; set; } = "wwwroot/Data/FormFillingDocument.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/FormFillingDocument.pdf";
 }
 {% endhighlight %}
 {% endtabs %}
@@ -44,11 +56,11 @@ Use the following code-snippet to configure form-filling in Blazor. Form-filling
 
 ## Form Designer
 
-A built in Form Designer lets you quickly add, edit, move, and delete form fields in the PDF documents. This viewer allows you to design fillable PDF forms interactively either using the built-in form designer tools or building your own customized form designer tools.
+A built-in Form Designer lets you quickly add, edit, move, and delete form fields in a PDF document. You can design fillable PDF forms interactively using the built-in form designer tools, or build your own customized form designer tools.
 
 See the [Form Designer](./form-designer) page for full details.
 
-Use the following code-snippet to configure form-designer in Blazor. Form-designer is enabled by default.
+Use the following code snippet to enable the Form Designer in Blazor. The Form Designer is enabled by default.
 
 {% tabs %}
 {% highlight razor %}
@@ -57,30 +69,30 @@ Use the following code-snippet to configure form-designer in Blazor. Form-design
 <SfPdfViewer2 Height="100%"
               Width="100%"
               DocumentPath="@DocumentPath"
-              EnableFormDesigner = "true" />
+              EnableFormDesigner="true" />
 
 @code{
-    public string DocumentPath { get; set; } = "wwwroot/Data/FormFillingDocument.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/FormFillingDocument.pdf";
 }
 {% endhighlight %}
 {% endtabs %}
 
-![Form Designer in Blazor SfPdfViewer](../images/blazor-form-deigner-toolbar.png)
+![Form Designer in Blazor SfPdfViewer](./form-designer-images/blazor-form-designer-toolbar.png)
 
 Create and customize interactive fields directly on the PDF page.
-- [Create](./manage-form-fields/create-form-fields), [edit](./manage-form-fields/modify-form-fields), or [remove](./manage-form-fields/remove-form-fields) forms
-- [Add a Signature Field](./manage-form-fields/create-form-fields#add-signature-field) 
-- [Edit Form Field](./manage-form-fields/modify-form-fields)
-- [Remove Form Field](./manage-form-fields/remove-form-fields) 
-- [Form Field Constraints](./form-constrain) 
+- [Create form fields](./manage-form-fields/create-form-fields)
+- [Edit form fields](./manage-form-fields/modify-form-fields)
+- [Remove form fields](./manage-form-fields/remove-form-fields)
+- [Move and resize form fields](./manage-form-fields/move-resize-form-fields)
+- [Set form field constraints](./form-constrain)
 
-## Supported form field types
+## See also
 
-- [Textbox](../forms/manage-form-fields/create-form-fields#add-textbox)
-- [Password](../forms/manage-form-fields/create-form-fields#add-password)
-- [CheckBox](../forms/manage-form-fields/create-form-fields#add-checkbox)
-- [RadioButton](../forms/manage-form-fields/create-form-fields#add-radiobutton)
-- [ListBox](../forms/manage-form-fields/create-form-fields#add-listbox)
-- [DropDown](../forms/manage-form-fields/create-form-fields#add-dropdown)
-- [Signature field](../forms/manage-form-fields/create-form-fields#add-signature-field)
-- [Initial field](../forms/manage-form-fields/create-form-fields#add-initial-field)
+- [Form field events](./form-field-events)
+- [Read form field values](./read-form-field-values)
+- [Import and export form data](./export-import-formfields)
+- [Flatten form fields](./flatten-form-fields)
+- [Group form fields](./group-form-fields)
+- [Custom data in form fields](./custom-data)
+- [Custom fonts in form fields](./custom-font)
+- [Form handling best practices](./form-handling-best-practices)

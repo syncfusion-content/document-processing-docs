@@ -230,7 +230,7 @@ Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to 
 {% endtabcontents %}
 
 By executing the program, you will get the PDF document as follows.
-![HTML to PDF output document](htmlconversion_images/IIS-Output.png)
+![HTML to PDF output document](htmlconversion_images/htmltopdfoutput.png)
  
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/html-to-pdf-csharp-examples/tree/master/Console).
 

@@ -1,7 +1,7 @@
 **Prerequisites**:
 
 * Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-* Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
+* Install Visual Studio: Download and install Visual Studio from the [official website](https://visualstudio.microsoft.com/downloads/).
 
 Step 1: Create a new project by choosing `.NET MAUI Blazor Hybrid and Web App` template in Visual Studio.
 ![Blazor client project creation step1](Create-PDF-Blazor/Maui-web-app.png)

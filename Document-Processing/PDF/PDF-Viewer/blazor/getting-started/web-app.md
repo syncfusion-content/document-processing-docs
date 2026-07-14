@@ -260,8 +260,6 @@ N> If the interactive render mode is set to WebAssembly or Auto, register the Sy
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
 
-N> For **WebAssembly** or **Auto** render modes, the `_content/` static assets are exposed by the client project. Add the `<link>` and `<script>` tags to the client project's `~/Components/App.razor` file, not the server project's.
-
 Add the stylesheet at the end of the `<head>` section in the `~/Components/App.razor` file to apply proper layout and theme styling:
 
 {% tabs %}
@@ -284,6 +282,7 @@ Add the required script at the end of the `<body>` section in the `~/Components/
 {% endhighlight %}
 {% endtabs %}
 
+N> For **WebAssembly** or **Auto** render modes, the `_content/` static assets are exposed by the client project. Add the `<link>` and `<script>` tags to the client project's `~/Components/App.razor` file, not the server project's.
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to explore supported ways (such as static assets, CDN, and CRG) to apply themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
 ## Add Blazor PDF Viewer component
@@ -303,18 +302,18 @@ The Blazor PDF Viewer (Next-Gen) component is added in the `~/Components/Pages/H
 {% endhighlight %}
 {% endtabs %}
 
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor PDF Viewer will be displayed in your default web browser.
+
+![Blazor Web App SfPdfViewer rendering in browser](gettingstarted-images/blazor-pdfviewer.png)
+
 N> The `Height="100%"` and `Width="100%"` values are relative to the parent container. Ensure the parent element (or the page body) has an explicit height, for example `style="height:100vh"`, otherwise the PDF Viewer may not render.
 N> The [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) property accepts an absolute URL (HTTP/HTTPS), a path relative to the app's `wwwroot` folder (for example, `"pdf/sample.pdf"`), or a base64-encoded PDF string.
 N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 N> If the `DocumentPath` property is not set, the PDF Viewer renders without loading a PDF. Use the **Open** toolbar option to browse and open a PDF.
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor PDF Viewer will be displayed in your default web browser.
-
-![Blazor Web App SfPdfViewer rendering in browser](gettingstarted-images/blazor-pdfviewer.png)
-
 ## Next steps
 
-* To learn how to open, save, or manage PDF documents in the PDF Viewer component, s[Open and Save PDF files](../opening-pdf-file).
+* To learn how to open, save, or manage PDF documents in the PDF Viewer component, see [Open and Save PDF files](../opening-pdf-file).
 * To learn how to add and manage highlights, strike-through, free text, and shape annotations in the PDF Viewer component, see [Annotations](../annotation/overview).
 * To learn how to read, fill, and work with AcroForm fields in the PDF Viewer component, see [Form filling](../forms/form-filling).
 * To learn how to add, remove, and rearrange toolbar items in the PDF Viewer component, see [Toolbar customization](../toolbar/overview).

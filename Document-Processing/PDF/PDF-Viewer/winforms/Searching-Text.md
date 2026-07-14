@@ -15,7 +15,7 @@ The Essential&reg; `PdfViewerControl` allows users to search a given text in the
 
 ## Search next instance of a text
 
-PDF Viewer allows you to search and highlight next instances of a text in the PDF document. The following code snippet illustrates how to search the next instance of a term “time” in the PDF document using the `PdfViewerControl` with respect to the current highlighted instance.
+PDF Viewer allows you to search and highlight the next instance of a text in the PDF document. The following code snippet illustrates how to search the next instance of the term "time" in the PDF document using the `PdfViewerControl` with respect to the current highlighted instance.
 
 {% tabs %}
 {% highlight c# %}
@@ -45,7 +45,7 @@ private void Next_Click(object sender, EventArgs e)
 {
     // search next instance of a term "time"
     if (!string.IsNullOrEmpty("time"))
-        pdfDocumentView.SearchNextText ("time");
+        pdfDocumentView.SearchNextText("time");
 }
 
 {% endhighlight %}
@@ -53,7 +53,7 @@ private void Next_Click(object sender, EventArgs e)
 
 ## Search previous instance of a text
 
-PDF Viewer allows you to search and highlight previous instances of a text in the PDF document. The following code snippet illustrates how to search the previous instance of a term “time” in the PDF document using the `PdfViewerControl` with respect to the current highlighted instance.
+PDF Viewer allows you to search and highlight the previous instance of a text in the PDF document. The following code snippet illustrates how to search the previous instance of the term "time" in the PDF document using the `PdfViewerControl` with respect to the current highlighted instance.
 
 {% tabs %}
 {% highlight c# %}
@@ -93,7 +93,7 @@ private void Previous_Click(object sender, EventArgs e)
 
 PDF Viewer allows you to enable or disable highlighting all the occurrences of the searched text instance in the PDF pages. 
 
-The following code example illustrates how to disable highlighting all the searched text instance.
+The following code example illustrates how to disable highlighting all the searched text instances.
 
 {% tabs %}
 {% highlight c# %}
@@ -170,9 +170,9 @@ IsMatchFound = pdfViewerControl1.FindText("targetText", textSearch)
 
 ## Find the total number of instances of a text in the PDF document
 
-PDF viewer allows you to find the total number of instances of a text in the PDF document using the [FindText](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_Forms_PdfViewer_PdfViewerControl_FindText_System_String_System_Collections_Generic_Dictionary_System_Int32_System_Collections_Generic_List_System_Drawing_RectangleF____) method.
+PDF Viewer allows you to find the total number of instances of a text in the PDF document using the [FindText](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_Forms_PdfViewer_PdfViewerControl_FindText_System_String_System_Collections_Generic_Dictionary_System_Int32_System_Collections_Generic_List_System_Drawing_RectangleF____) method.
 
-The following code snippet illustrates how to find the total number of instances of a term “time” present in the PDF document using `PdfViewerControl`.
+The following code snippet illustrates how to find the total number of instances of the term "time" present in the PDF document using `PdfViewerControl`.
 
 {% tabs %}
 {% highlight c# %}

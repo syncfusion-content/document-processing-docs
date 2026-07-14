@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Create or Generate PDF file in Xamarin
 
-The Syncfusion<sup>&reg;</sup> [Xamarin PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, work with forms, and secure PDF files.
+The [Xamarin PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, work with forms, and secure PDF files.
 
 To include the Syncfusion<sup>&reg;</sup> Xamarin PDF library into your Xamarin application, please refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) documentation.
 
@@ -77,23 +77,26 @@ Step 7: Include the following code example in the click event of the button in *
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//Create a new PDF document.
-PdfDocument document = new PdfDocument();
-//Add a page to the document.
-PdfPage page = document.Pages.Add();
-//Create PDF graphics for the page.
-PdfGraphics graphics = page.Graphics;
-//Set the standard font.
-PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
-//Draw the text.
-graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
-//Save the document to the stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-//Close the document.
-document.Close(true);
-//Save the stream as a file in the device and invoke it for viewing.
-Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView("Output.pdf", "application/pdf", stream);
+private void Button_Clicked(object sender, EventArgs e)
+{
+  //Create a new PDF document.
+  PdfDocument document = new PdfDocument();
+  //Add a page to the document.
+  PdfPage page = document.Pages.Add();
+  //Create PDF graphics for the page.
+  PdfGraphics graphics = page.Graphics;
+  //Set the standard font.
+  PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
+  //Draw the text.
+  graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
+  //Save the document to the stream.
+  MemoryStream stream = new MemoryStream();
+  document.Save(stream);
+  //Close the document.
+  document.Close(true);
+  //Save the stream as a file in the device and invoke it for viewing.
+  Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView("Output.pdf", "application/pdf", stream);
+}
 
 {% endhighlight %}
 {% endtabs %}
