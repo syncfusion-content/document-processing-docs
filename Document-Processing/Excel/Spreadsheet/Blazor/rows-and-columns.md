@@ -89,7 +89,7 @@ N> If the `sheet` parameter is `null` or omitted, the operation targets the acti
 
 You can insert columns in the following ways,
 
-#### Insert Colums Via UI
+#### Insert Columns Via UI
 
 * Using context menu, insert the columns in the desired position.*
 
