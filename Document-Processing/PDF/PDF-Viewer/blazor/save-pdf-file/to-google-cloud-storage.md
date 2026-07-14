@@ -51,7 +51,7 @@ Start by following the steps in this guide to create a [basic SfPdfViewer](https
     private readonly string bucketName = "YourBucketName";
     private readonly string fileName = "FileName.pdf";
 
-    public async Task OnClick(MouseEventArgs args)
+    private async Task OnClick(MouseEventArgs args)
     {
         byte[] data = await viewer.GetDocumentAsync();
         string result = Path.GetFileNameWithoutExtension(fileName);

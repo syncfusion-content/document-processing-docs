@@ -35,8 +35,8 @@ Configure the viewer toolbar to include redaction tools for both desktop and mob
     private SfPdfViewer2? SfPdfViewer2;
     private string DocumentPath { get; set; } = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
     
-    public List<ToolbarItem>? ToolbarItems { get; set; }
-    public List<MobileToolbarItem>? MobileToolbarItems { get; set; }
+    private List<ToolbarItem>? ToolbarItems { get; set; }
+    private List<MobileToolbarItem>? MobileToolbarItems { get; set; }
     
     protected override void OnInitialized()
     {

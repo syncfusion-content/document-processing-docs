@@ -23,7 +23,7 @@ The `SfPdfViewer` component supports printing the loaded PDF by default. Enable 
               EnablePrint="true" />
 
 @code{
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 
 ```
@@ -44,9 +44,9 @@ The `SfPdfViewer` component supports printing the loaded PDF by default. Enable 
               @ref="@Viewer" />
 
 @code{
-    SfPdfViewer2 Viewer;
-        public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    public async void OnClick(MouseEventArgs args)
+    private SfPdfViewer2 Viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private async void OnClick(MouseEventArgs args)
     {
         await Viewer.PrintAsync();
     }
@@ -68,7 +68,7 @@ The `SfPdfViewer` component supports printing the loaded PDF by default. Enable 
               EnablePrintRotation="true" />
 
 @code{
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 
 ```
@@ -90,7 +90,7 @@ The `SfPdfViewer` component supports printing the loaded PDF by default. Enable 
               PrintMode="PrintMode.NewWindow" />
 
 @code{
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 
 ```
@@ -109,7 +109,7 @@ The `SfPdfViewer` component supports printing the loaded PDF by default. Enable 
               PrintScaleFactor="2" />
 
 @code{
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 
 ```
@@ -140,7 +140,7 @@ The following example illustrates how to handle the `PrintStart` event.
 </SfPdfViewer2>
 @code{ 
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf"; 
-    public async Task PrintStart(PrintStartEventArgs args) 
+    private async Task PrintStart(PrintStartEventArgs args) 
     {
         Console.WriteLine($"Printed File Name: {args.FileName}");
         // args.Cancel = true; // Uncomment to cancel the print operation
@@ -163,7 +163,7 @@ The following example illustrates how to handle the `PrintEnd` event.
 </SfPdfViewer2>
 @code{ 
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf"; 
-    public async Task PrintEnd(PrintEndEventArgs args) 
+    private async Task PrintEnd(PrintEndEventArgs args) 
     {
         Console.WriteLine($"Printed File Name: {args.FileName}");
     }	 

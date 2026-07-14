@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Overview
 
-This guide explains how to customize the mobile toolbar in the Syncfusion Blazor PDF Viewer, enable the desktop toolbar on mobile devices, and ensure smooth touch interactions.
+This guide explains how to customize the mobile toolbar in the Blazor PDF Viewer, enable the desktop toolbar on mobile devices, and ensure smooth touch interactions.
 
 ## Primary toolbar in mobile mode
 
@@ -42,7 +42,7 @@ Use [`MobileToolbarItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 </SfPdfViewer2>
 
 @code {
-    public List<MobileToolbarItem> MobileToolbarItems { get; set; }
+    private List<MobileToolbarItem> MobileToolbarItems { get; set; }
     
     protected override void OnInitialized()
     {
@@ -262,7 +262,7 @@ To enable smooth scrolling of PDF documents on mobile while in desktop mode, dis
 
 The Print option is not available in mobile mode by default. To use printing on mobile, enable the desktop toolbar with the [`EnableDesktopMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableDesktopMode) API. Availability and behavior may vary by mobile browser.
 
-## Related topics
+## See also
 
 - [Annotations in mobile view](../annotation/annotations-in-mobile-view)
 - [Form designer in mobile view](../form-designer/form-designer-in-mobile-view)

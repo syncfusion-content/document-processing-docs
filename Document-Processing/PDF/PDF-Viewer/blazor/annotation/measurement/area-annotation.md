@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add Area Annotations in Blazor PDF Viewer | Syncfusion
-description: Learn how to enable, draw, customize, and manage Area annotations in the Syncfusion Blazor SfPdfViewer.
+description: Learn how to enable, draw, customize, and manage Area annotations in the Blazor SfPdfViewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -352,7 +352,7 @@ Area measurements can be exported and imported along with other annotations in *
 
 For the full export/import workflow and additional formats, see [**Export and Import Annotations**](../import-export-annotation).
 
-## See Also
+## See also
 
 - [Annotation Events](../events)
 - [Export and Import Annotations](../import-export-annotation)

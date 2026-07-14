@@ -32,10 +32,10 @@ The following example illustrates how to handle the SelectTextRegionAsync method
               @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2? Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private SfPdfViewer2? Viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async Task SelectTextRegion()
+    private async Task SelectTextRegion()
     {
         List<Bound> bounds = new List<Bound>() {
             new Bound() {              
@@ -70,10 +70,10 @@ The following example illustrates how to handle the ClearTextSelectionAsync meth
               @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2? Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private SfPdfViewer2? Viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async Task ClearTextSelection()
+    private async Task ClearTextSelection()
     {
         if(Viewer != null)
             await Viewer.ClearTextSelectionAsync();
@@ -105,7 +105,7 @@ The following example illustrates how to handle the OnTextSelectionStart event.
 </SfPdfViewer2>
 
 @code {
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
     private void OnTextSelectionStart(TextSelectionStartEventArgs args)
     {
@@ -139,7 +139,7 @@ The following example illustrates how to handle the OnTextSelectionEnd event.
 </SfPdfViewer2>
 
 @code {
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
     private void OnTextSelectionEnd(TextSelectionEndEventArgs args)
     {

@@ -90,7 +90,7 @@ The [`OnTextSearchComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 {% endhighlight %}
 {% endtabs %}
 
-## See Also
+## See also
 
 - [Text Search Features](./text-search-features)
 - [Text Selection](../text-selection/overview)

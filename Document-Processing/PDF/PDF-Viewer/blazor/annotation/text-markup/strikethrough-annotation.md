@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Strikethrough Text in Blazor PDF Viewer | Syncfusion
-description: Learn how to enable, apply, customize, and manage Strikethrough annotations in the Syncfusion Blazor SfPdfViewer.
+description: Learn how to enable, apply, customize, and manage Strikethrough annotations in the Blazor SfPdfViewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -349,7 +349,7 @@ For the full list of available events and their descriptions, see [Annotation Ev
 
 The SfPdfViewer supports exporting and importing annotations as **JSON** or **XFDF**, allowing you to save annotations as a separate file or load existing annotations back into the viewer. For full details on supported formats and steps to export or import annotations, see [Export and Import Annotations](../import-export-annotation).
 
-## See Also
+## See also
 
 - [Annotation Events](../events)
 - [Export and Import Annotations](../import-export-annotation)

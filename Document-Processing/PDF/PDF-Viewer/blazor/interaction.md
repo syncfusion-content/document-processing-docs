@@ -37,7 +37,7 @@ The following example enables text selection in the SfPdfViewer.
 </SfPdfViewer2>
 
 @code{
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 ```
 
@@ -59,7 +59,7 @@ The following example sets the SfPdfViewer to Panning mode.
               InteractionMode="InteractionMode.Pan">
 </SfPdfViewer2>
 @code{
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 
 ```
@@ -81,10 +81,10 @@ The following code illustrates how to lock annotation interactions.
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async Task LockAnnotations(MouseEventArgs args)
+    private async Task LockAnnotations(MouseEventArgs args)
     {
         //Gets the annotation collection of the SfPdfViewer.
         var allAnnots = await viewer.GetAnnotationsAsync();
@@ -97,7 +97,7 @@ The following code illustrates how to lock annotation interactions.
         }
     }
 
-    public async Task UnlockAnnotations(MouseEventArgs args)
+    private async Task UnlockAnnotations(MouseEventArgs args)
     {
         //Gets the annotation collection of the SfPdfViewer.
         var allAnnots = await viewer.GetAnnotationsAsync();

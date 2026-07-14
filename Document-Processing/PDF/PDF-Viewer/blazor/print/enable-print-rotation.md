@@ -38,7 +38,7 @@ The following example keeps the default behavior.
               EnablePrintRotation="true" />
 
 @code{
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 {% endhighlight %}
 {% endtabs %}
@@ -57,7 +57,7 @@ Set `EnablePrintRotation` to `false` to print pages in their original orientatio
               EnablePrintRotation="false" />
 
 @code{
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 {% endhighlight %}
 {% endtabs %}

@@ -48,7 +48,7 @@ Use the [`ShowToolbarAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 @code {
     private SfPdfViewer2 PdfViewer;
     
-    public async Task OnClick()
+    private async Task OnClick()
     {
         await PdfViewer.ShowToolbarAsync(false);
     }
@@ -142,9 +142,9 @@ Set [`ToolbarItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfP
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 Viewer;
+    private SfPdfViewer2 Viewer;
     
-    public List<PdfToolbarItem> CustomToolbarItems = new List<PdfToolbarItem>()
+    private List<PdfToolbarItem> CustomToolbarItems = new List<PdfToolbarItem>()
     {
         new PdfToolbarItem() { Index = 0, Template = GetTemplate("PreviousPage") },
         new PdfToolbarItem() { Index = 1, Template = GetTemplate("NextPage") },
@@ -195,7 +195,7 @@ Set [`ToolbarItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfP
         };
     }
 
-    public async void ClickAction(ClickEventArgs Item)
+    private async void ClickAction(ClickEventArgs Item)
     {
         if (Item.Item.Id == "previousPage")
         {
@@ -240,10 +240,10 @@ Combine default and custom items by using both [`ToolbarItems`](https://help.syn
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 Viewer;
+    private SfPdfViewer2 Viewer;
     MemoryStream stream;
 
-    public List<ToolbarItem> ToolbarItems = new List<ToolbarItem>()
+    private List<ToolbarItem> ToolbarItems = new List<ToolbarItem>()
     {
         ToolbarItem.OpenOption,
         ToolbarItem.SelectionTool,
@@ -251,7 +251,7 @@ Combine default and custom items by using both [`ToolbarItems`](https://help.syn
         ToolbarItem.PrintOption
     };
 
-    public List<PdfToolbarItem> CustomToolbarItems = new List<PdfToolbarItem>()
+    private List<PdfToolbarItem> CustomToolbarItems = new List<PdfToolbarItem>()
     {
         new PdfToolbarItem() { Index = 1, Template = GetTemplate("Save") },
         new PdfToolbarItem() { Index = 3, Template = GetTemplate("Download") }
@@ -282,7 +282,7 @@ Combine default and custom items by using both [`ToolbarItems`](https://help.syn
         };
     }
 
-    public async void ClickAction(ClickEventArgs Item)
+    private async void ClickAction(ClickEventArgs Item)
     {
         if (Item.Item.Id == "save")
         {
@@ -323,10 +323,10 @@ Customize the appearance of toolbar icons for custom toolbar items. The followin
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 Viewer;
+    private SfPdfViewer2 Viewer;
     MemoryStream stream;
 
-    public List<PdfToolbarItem> CustomToolbarItems = new List<PdfToolbarItem>()
+    private List<PdfToolbarItem> CustomToolbarItems = new List<PdfToolbarItem>()
     {
         new PdfToolbarItem() { Index = 1, Template = GetTemplate("PreviousPage") },
         new PdfToolbarItem() { Index = 2, Template = GetTemplate("NextPage") },
@@ -377,7 +377,7 @@ Customize the appearance of toolbar icons for custom toolbar items. The followin
         };
     }
 
-    public async void ClickAction(ClickEventArgs Item)
+    private async void ClickAction(ClickEventArgs Item)
     {
         if (Item.Item.Id == "previousPage")
         {
@@ -482,7 +482,7 @@ Control the sidebar that displays thumbnails using the [`EnableNavigationToolbar
 {% endhighlight %}
 {% endtabs %}
 
-## Related topics
+## See also
 
 - [Annotation toolbar customization](./annotation-toolbar)
 - [Form designer toolbar customization](./form-designer-toolbar)

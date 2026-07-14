@@ -72,26 +72,26 @@ Use the following code snippet to create a fully functional custom toolbar with 
 <SfToolbar>
     <ToolbarItems>
         <ToolbarItem PrefixIcon="e-icons e-chevron-up" TooltipText="Previous Page" id="previousPage"
-                     Align="@ItemAlign.Left" OnClick="@previousClicked"></ToolbarItem>
+                     Align="@Syncfusion.Blazor.Navigations.ItemAlign.Left" OnClick="@previousClicked"></ToolbarItem>
 
         <ToolbarItem PrefixIcon="e-icons e-chevron-down" TooltipText="Next Page" id="nextPage"
-                     Align="@ItemAlign.Left" OnClick="@nextClicked"></ToolbarItem>
+                     Align="@Syncfusion.Blazor.Navigations.ItemAlign.Left" OnClick="@nextClicked"></ToolbarItem>
 
         <ToolbarItem PrefixIcon="e-icons e-circle-add" TooltipText="Zoom in" id="zoomIn" OnClick="@zoomInClicked"></ToolbarItem>
 
         <ToolbarItem PrefixIcon="e-icons e-circle-remove" TooltipText="Zoom out" id="zoomOut" OnClick="@zoomoutClicked"></ToolbarItem>
 
         <ToolbarItem Text="Save" TooltipText="Save Document" id="save"
-                     Align="@ItemAlign.Right" OnClick="@save"></ToolbarItem>
+                     Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right" OnClick="@save"></ToolbarItem>
 
         <ToolbarItem Text="Edit Annotation" TooltipText="Annotation Toolbar" id="annotation"
-                     Align="@ItemAlign.Right" OnClick="@annotations"></ToolbarItem>
+                     Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right" OnClick="@annotations"></ToolbarItem>
 
         <ToolbarItem PrefixIcon="e-icons e-print" TooltipText="Print" id="print"
-                     Align="@ItemAlign.Right" OnClick="@print"></ToolbarItem>
+                     Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right" OnClick="@print"></ToolbarItem>
 
         <ToolbarItem PrefixIcon="e-icons e-download" TooltipText="Download" id="Download"
-                     Align="@ItemAlign.Right" OnClick="@download"></ToolbarItem>
+                     Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right" OnClick="@download"></ToolbarItem>
     </ToolbarItems>
 </SfToolbar>
 
@@ -99,17 +99,17 @@ Use the following code snippet to create a fully functional custom toolbar with 
 
 @code
 {
-    SfPdfViewer2 PDFViewer;
+    private SfPdfViewer2 PDFViewer;
 
     private string DocumentPath { get; set; } = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 
-    public void nextClicked(ClickEventArgs args)
+    private void nextClicked(ClickEventArgs args)
     {
         //Navigate to next page of the PDF document loaded in the SfPdfViewer.
         PDFViewer.GoToNextPageAsync();
     }
 
-    public void previousClicked(ClickEventArgs args)
+    private void previousClicked(ClickEventArgs args)
     {
         //Navigate to previous page of the PDF document.
         PDFViewer.GoToPreviousPageAsync();
@@ -117,7 +117,7 @@ Use the following code snippet to create a fully functional custom toolbar with 
 
     MemoryStream stream;
 
-    public async void save(ClickEventArgs args)
+    private async void save(ClickEventArgs args)
     {
         //Gets the loaded PDF document with the changes.
         byte[] data = await PDFViewer.GetDocumentAsync();
@@ -127,31 +127,31 @@ Use the following code snippet to create a fully functional custom toolbar with 
         await PDFViewer.LoadAsync(stream);
     }
 
-    public void annotations(ClickEventArgs args)
+    private void annotations(ClickEventArgs args)
     {
         //Shows or hides the annotation toolbar in the SfPdfViewer.
         PDFViewer.ShowAnnotationToolbar(true);
     }
 
-    public void print(ClickEventArgs args)
+    private void print(ClickEventArgs args)
     {
         //Print the PDF document being loaded in the SfPdfViewer.
         PDFViewer.PrintAsync();
     }
 
-    public void download(ClickEventArgs args)
+    private void download(ClickEventArgs args)
     {
         //Downloads the PDF document being loaded in the SfPdfViewer.
         PDFViewer.DownloadAsync();
     }
 
-    public void zoomInClicked(ClickEventArgs args)
+    private void zoomInClicked(ClickEventArgs args)
     {
         //Scale the page to the next value in the zoom drop down list.
         PDFViewer.ZoomInAsync();
     }
 
-    public void zoomoutClicked(ClickEventArgs args)
+    private void zoomoutClicked(ClickEventArgs args)
     {
         //Decreases the page to the previous value in the zoom drop down list.
         PDFViewer.ZoomOutAsync();

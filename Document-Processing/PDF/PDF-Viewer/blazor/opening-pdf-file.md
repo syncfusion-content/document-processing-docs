@@ -25,7 +25,7 @@ If a PDF file is hosted on the web, it can be opened in the viewer by providing 
 </SfPdfViewer2>
 
 @code {
-    public string DocumentPath { get; set; } = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+    private string DocumentPath { get; set; } = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 }
 
 ```
@@ -50,7 +50,7 @@ The following code example shows how to open and load a PDF file stored in Azure
               Width="100%"></SfPdfViewer2>
 
 @code {
-    public string DocumentPath { get; set; }
+    private string DocumentPath { get; set; }
     protected override void OnInitialized()
     {
         //Connection String of Storage Account
@@ -84,7 +84,7 @@ N> The **Azure.Storage.Blobs** NuGet package must be installed in the applicatio
               Height="100%" />
 
 @code {
-    public string DocumentPath { get; set; }
+    private string DocumentPath { get; set; }
     protected override void OnInitialized()
     {
         //Connection String of Storage Account
@@ -117,7 +117,7 @@ The following code example shows how to open a PDF file from a SQL Server databa
 <SfPdfViewer2 DocumentPath="@DocumentPath" Width="100%" Height="100%" />
 
 @code {
-    public string DocumentPath { get; set; }
+    private string DocumentPath { get; set; }
     protected override void OnInitialized()
     {
         string documentID = "PDF Succinctly";
@@ -161,8 +161,8 @@ The built-in toolbar includes an Open option that loads a PDF from the local fil
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 Viewer;
-    public async void OnUploadStart(UploadingEventArgs action)
+    private SfPdfViewer2 Viewer;
+    private async void OnUploadStart(UploadingEventArgs action)
     {
         string filePath = action.FileData.RawFile.ToString();
         await Viewer.LoadAsync(filePath, null);
@@ -186,7 +186,7 @@ The following code snippet shows how to load a PDF in SfPdfViewer using a Base64
 </SfPdfViewer2>
 
 @code {
-    public string DocumentPath { get; set; }
+    private string DocumentPath { get; set; }
     protected override void OnInitialized()
     {
         byte[] byteArray = System.IO.File.ReadAllBytes("wwwroot/Data/PDF_Succinctly.pdf");
@@ -216,7 +216,7 @@ Load a PDF from a file stream by converting it to a Base64 string and assigning 
 
 @code{
 
-    public string DocumentPath { get; set; }
+    private string DocumentPath { get; set; }
     protected override void OnInitialized()
     {
         string filePath = "wwwroot/Data/PDF_Succinctly.pdf";

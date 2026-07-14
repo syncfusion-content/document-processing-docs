@@ -45,7 +45,7 @@ The following example illustrates how to handle the `PrintStart` event.
 </SfPdfViewer2>
 @code{
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    public async Task PrintStart(PrintStartEventArgs args)
+    private async Task PrintStart(PrintStartEventArgs args)
     {
         Console.WriteLine($"Printed File Name: {args.FileName}");
     }
@@ -63,7 +63,7 @@ The following example shows how to cancel the print operation from the `PrintSta
 </SfPdfViewer2>
 @code{
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    public async Task PrintStart(PrintStartEventArgs args)
+    private async Task PrintStart(PrintStartEventArgs args)
     {
         args.Cancel = true;
         Console.WriteLine($"Print canceled for file: {args.FileName}");
@@ -94,7 +94,7 @@ The following example illustrates how to handle the `PrintEnd` event.
 </SfPdfViewer2>
 @code{
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    public async Task PrintEnd(PrintEndEventArgs args)
+    private async Task PrintEnd(PrintEndEventArgs args)
     {
         Console.WriteLine($"Printed File Name: {args.FileName}");
     }
@@ -112,11 +112,11 @@ The following example shows how to handle both `PrintStart` and `PrintEnd` toget
 </SfPdfViewer2>
 @code{
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    public async Task OnPrintStart(PrintStartEventArgs args)
+    private async Task OnPrintStart(PrintStartEventArgs args)
     {
         Console.WriteLine($"Print started: {args.FileName}");
     }
-    public async Task OnPrintEnd(PrintEndEventArgs args)
+    private async Task OnPrintEnd(PrintEndEventArgs args)
     {
         Console.WriteLine($"Print completed: {args.FileName}");
     }

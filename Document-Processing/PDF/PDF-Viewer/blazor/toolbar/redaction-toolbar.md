@@ -119,7 +119,7 @@ Control visibility through application logic by invoking the `ShowRedactionToolb
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private bool isRedactionToolbarVisible = true;
 
     private List<ToolbarItem> ToolbarItems = new List<ToolbarItem>();
@@ -170,7 +170,7 @@ The following is a complete, runnable example. It wires a toggle button and a vi
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private bool isRedactionToolbarVisible = true;
 
     private List<ToolbarItem> ToolbarItems = new List<ToolbarItem>();
@@ -216,7 +216,7 @@ The following is a complete, runnable example. It wires a toggle button and a vi
 {% endhighlight %}
 {% endtabs %}
 
-## Related topics
+## See also
 
 - [Customize primary toolbar](./primary-toolbar)
 - [Customize annotation toolbar](./annotation-toolbar)

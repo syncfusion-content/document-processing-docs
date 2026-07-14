@@ -45,13 +45,13 @@ The following example registers two custom keyboard commands (`FitToWidth` and `
 
 @code {
     // Reference to the Pdf viewer 
-    SfPdfViewer2 pdfViewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private SfPdfViewer2 pdfViewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
     /// <summary>
     /// Defines the list of custom commands
     /// </summary>
-    public List<KeyboardCommand> command = new List<KeyboardCommand>()
+    private List<KeyboardCommand> command = new List<KeyboardCommand>()
     {
         new KeyboardCommand()
         {
@@ -69,7 +69,7 @@ The following example registers two custom keyboard commands (`FitToWidth` and `
     /// Custom command execution.
     /// </summary>
 
-    public async Task CommandExecute(CommandExecutedEventArgs args)
+    private async Task CommandExecute(CommandExecutedEventArgs args)
     {
         if (args.Modifiers == PdfModifierKeys.Shift && args.Key == PdfKeys.W)
         {

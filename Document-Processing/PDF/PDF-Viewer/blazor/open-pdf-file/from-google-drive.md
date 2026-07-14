@@ -32,7 +32,7 @@ Follow the [getting started](../getting-started/web-app) guide to create a basic
 @using Syncfusion.Blazor.SfPdfViewer;
 ```
 
-## Step 4 — Example: Authorize, download, and load
+## Step 4 — Authorize, download, and load
 
 The example below authenticates with OAuth 2.0, lists PDF files in the configured folder, downloads the file whose name matches `FileName` into memory, converts it to a Base64 data URI, and assigns it to `DocumentPath`.
 

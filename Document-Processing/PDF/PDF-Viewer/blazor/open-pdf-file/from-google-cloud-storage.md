@@ -29,7 +29,7 @@ Follow the [getting started](https://help.syncfusion.com/document-processing/pdf
 @using Syncfusion.Blazor.SfPdfViewer;
 ```
 
-## Step 4 — Example: download an object and load into the viewer
+## Step 4 — Download an object and load into the viewer
 
 The example below loads a PDF object from a GCS bucket into memory, converts it to a Base64 data URI, and assigns it to `DocumentPath`.
 

@@ -120,10 +120,10 @@ The following example illustrates how to load a PDF document in the Created even
 
 @code 
 {
-    public string DocumentPath { get; set; }
+    private string DocumentPath { get; set; }
 
     //Triggers when the PDFViewer component is created.
-    public void Created()
+    private void Created()
     {
         string Link = "http://infolab.stanford.edu/pub/papers/google.pdf";
         System.Net.WebClient webClient = new System.Net.WebClient();
@@ -152,7 +152,7 @@ The following example illustrates how to handle the DocumentEdited event. The [E
 
 @code{ 
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    public async Task DocumentEdited(DocumentEditedEventArgs args) 
+    private async Task DocumentEdited(DocumentEditedEventArgs args) 
     {
         Console.WriteLine(args.EditingAction);
     }	 
@@ -162,7 +162,7 @@ The following example illustrates how to handle the DocumentEdited event. The [E
 
 [Load a PDF document using created event](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20a%20PDF%20document%20using%20created%20event)
 
-## See Also
+## See also
 
 * [Annotation Events in Blazor PDF Viewer](./annotation/events)
 * [Form Designer Events in Blazor PDF Viewer](./form-designer/events)

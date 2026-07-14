@@ -59,7 +59,7 @@ File to Google D
     private readonly string FileName = "File Name to be loaded into Syncfusion SfPdfViewer";
     private static readonly string[] Scopes = { DriveService.Scope.DriveFile, DriveService.Scope.DriveReadonly };
 
-    public async Task OnClick(MouseEventArgs args)
+    private async Task OnClick(MouseEventArgs args)
     {
         byte[] data = await viewer.GetDocumentAsync();
         string result = Path.GetFileNameWithoutExtension(FileName);

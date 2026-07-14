@@ -48,10 +48,10 @@ Use the [`IsDesignerMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private bool IsDesignerMode = false;
 
-    public void HideFormDesignerToolbar()
+    private void HideFormDesignerToolbar()
     {
         IsDesignerMode = !IsDesignerMode;
     }
@@ -76,7 +76,7 @@ Use [`PdfViewerToolbarSettings`](https://help.syncfusion.com/cr/blazor/Syncfusio
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 PdfViewerInstance;
+    private SfPdfViewer2 PdfViewerInstance;
 
     List<FormDesignerToolbarItem> FormDesignerToolbarItems = new List<FormDesignerToolbarItem>()
     {
@@ -123,7 +123,7 @@ The following is a complete, runnable example. It wires a toggle button and a vi
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private bool IsDesignerMode = false;
 
     List<FormDesignerToolbarItem> FormDesignerToolbarItems = new List<FormDesignerToolbarItem>()
@@ -137,7 +137,7 @@ The following is a complete, runnable example. It wires a toggle button and a vi
         FormDesignerToolbarItem.Delete
     };
 
-    public void HideFormDesignerToolbar()
+    private void HideFormDesignerToolbar()
     {
         IsDesignerMode = !IsDesignerMode;
     }
@@ -145,7 +145,7 @@ The following is a complete, runnable example. It wires a toggle button and a vi
 {% endhighlight %}
 {% endtabs %}
 
-## Related topics
+## See also
 
 - [Customize primary toolbar](./primary-toolbar)
 - [Customize annotation toolbar](./annotation-toolbar)

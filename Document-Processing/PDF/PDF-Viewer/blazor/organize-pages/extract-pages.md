@@ -48,7 +48,7 @@ You can extract pages programmatically using the Blazor PDF Viewer's `ExtractPag
     private SfPdfViewer2? Viewer;
 
     private async Task ExtractMethod() {
-        await Viewer?.ExtractPagesAsync(new List<int> { 1, 2 });
+        await Viewer?.ExtractPagesAsync([1,2]);
     }
 }
 {% endhighlight %}

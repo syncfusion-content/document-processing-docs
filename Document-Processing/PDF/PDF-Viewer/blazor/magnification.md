@@ -34,7 +34,7 @@ Enable or disable magnification in the default toolbar by setting the [EnableMag
               EnableMagnification="false" />
 
 @code{
-    public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
 }
 
 ```
@@ -82,26 +82,26 @@ Zoom operations can also be performed programmatically using APIs such as [ZoomI
               @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2 Viewer;
+    private SfPdfViewer2 Viewer;
     SfTextBox TextBox;
-    public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
 
-    public async void OnZoomInClick(MouseEventArgs args)
+    private async void OnZoomInClick(MouseEventArgs args)
     {
         await Viewer.ZoomInAsync();
     }
 
-    public async void OnZoomOutClick(MouseEventArgs args)
+    private async void OnZoomOutClick(MouseEventArgs args)
     {
         await Viewer.ZoomOutAsync();
     }
 
-    public async void OnFitPageClick(MouseEventArgs args)
+    private async void OnFitPageClick(MouseEventArgs args)
     {
         await Viewer.FitToPageAsync();
     }
 
-    public async void OnZoomClick(MouseEventArgs args)
+    private async void OnZoomClick(MouseEventArgs args)
     {
         if (int.TryParse(TextBox.Value, out int zoomValue))
         {
@@ -109,12 +109,12 @@ Zoom operations can also be performed programmatically using APIs such as [ZoomI
         }
     }
 
-    public async void OnFitWidthClick(MouseEventArgs args)
+    private async void OnFitWidthClick(MouseEventArgs args)
     {
         await Viewer.FitToWidthAsync();
     }
 
-    public async void OnFitHeightClick(MouseEventArgs args) 
+    private async void OnFitHeightClick(MouseEventArgs args) 
     { 
         await Viewer.FitToHeightAsync(); 
     } 
@@ -196,26 +196,26 @@ Minimum and maximum zoom values can be changed dynamically at runtime.
 </SfPdfViewer2>
 
 @code {
-    public SfPdfViewer2? viewer;
+    private SfPdfViewer2? viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public int maxZoom = 200;
-    public int minZoom = 50;
+    private int maxZoom = 200;
+    private int minZoom = 50;
 
-    public void SetDynamicValues()
+    private void SetDynamicValues()
     {
         maxZoom = 260;
         minZoom = 25;
     }
 
-    public void SetValueBeyondLimit()
+    private void SetValueBeyondLimit()
     {
         // Values exceed the supported 10%–400% range to demonstrate invalid input handling.
         maxZoom = 500;
         minZoom = 2;
     }
 
-    public void SwapMinMaxValue()
+    private void SwapMinMaxValue()
     {
         // Intentionally assign an inverted range to demonstrate auto-correction behavior.
         maxZoom = 50;
@@ -253,30 +253,30 @@ The configured zoom limits apply to all zoom operations, including programmatic 
 </SfPdfViewer2>
 
 @code {
-    public SfPdfViewer2? viewer;
+    private SfPdfViewer2? viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async void OnZoomInClick()
+    private async void OnZoomInClick()
     {
         await viewer.ZoomInAsync();
     }
 
-    public async void OnZoomOutClick()
+    private async void OnZoomOutClick()
     {
         await viewer.ZoomOutAsync();
     }
 
-    public async void OnFitPageClick()
+    private async void OnFitPageClick()
     {
         await viewer.FitToPageAsync();
     }
 
-    public async void OnFitWidthClick()
+    private async void OnFitWidthClick()
     {
         await viewer.FitToWidthAsync();
     }
 
-    public async void OnFitHeightClick() 
+    private async void OnFitHeightClick() 
     { 
         await viewer.FitToHeightAsync();
     } 
@@ -312,13 +312,13 @@ Zoom limits work with tile rendering to improve performance at higher zoom level
 </SfPdfViewer2>
 
 @code {
-    public SfPdfViewer2? viewer;
-    public bool enableTile = false;
-    public int xValue = 3;
-    public int yValue = 3;
+    private SfPdfViewer2? viewer;
+    private bool enableTile = false;
+    private int xValue = 3;
+    private int yValue = 3;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public void EnableTileRendering()
+    private void EnableTileRendering()
     {
         enableTile = true;
     }

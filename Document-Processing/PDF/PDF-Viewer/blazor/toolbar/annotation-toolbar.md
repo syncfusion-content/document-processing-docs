@@ -30,10 +30,10 @@ Use the [`ShowAnnotationToolbar`](https://help.syncfusion.com/cr/blazor/Syncfusi
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private bool show = true;
 
-    public void ToggleToolbar()
+    private void ToggleToolbar()
     {
         viewer.ShowAnnotationToolbar(show);
         show = !show;
@@ -62,7 +62,7 @@ Include the `CloseTool` so users can exit the annotation toolbar when needed.
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 PdfViewerInstance;
+    private SfPdfViewer2 PdfViewerInstance;
 
     List<AnnotationToolbarItem> AnnotationToolbarItems = new List<AnnotationToolbarItem>()
     {
@@ -93,7 +93,7 @@ N> Property tools (color, opacity, thickness, font, etc.) now appear only after 
 
 N> This change reduces clutter and shows options only when they're relevant to the selected annotation.
 
-## Related topics
+## See also
 
 - [Customize primary toolbar](./primary-toolbar)
 - [Customize form designer toolbar](./form-designer-toolbar)

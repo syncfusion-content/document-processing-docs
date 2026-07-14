@@ -173,7 +173,7 @@ Use [PdfViewerTextSearchColorSettings](https://help.syncfusion.com/cr/blazor/Syn
 </SfPdfViewer2>
 
 @code{
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 {% endhighlight %}
 {% endtabs %}

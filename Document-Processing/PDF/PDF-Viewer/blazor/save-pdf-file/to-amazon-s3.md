@@ -57,7 +57,7 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
     private readonly string bucketName = "Your Bucket name from AWS S3";
     private readonly string fileName = "PDF_Succinctly.pdf";
 
-    public async Task OnClick(MouseEventArgs args)
+    private async Task OnClick(MouseEventArgs args)
     {
         byte[] data = await viewer.GetDocumentAsync();
         string result = Path.GetFileNameWithoutExtension(fileName);

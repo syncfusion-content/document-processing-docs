@@ -26,7 +26,7 @@ Use the [EnableTextSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.B
               EnableTextSelection="false" />
 
 @code {
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 {% endhighlight %}
 {% endtabs %}
@@ -51,18 +51,18 @@ The [`EnableTextSelection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 @code {
     private SfPdfViewer2? Viewer;
-    public bool EnableTextSelection = true;
-    public InteractionMode InteractionMode = InteractionMode.TextSelection;
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private bool EnableTextSelection = true;
+    private InteractionMode InteractionMode = InteractionMode.TextSelection;
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async Task EnableTextSelections()
+    private async Task EnableTextSelections()
     {
         EnableTextSelection = true;
         InteractionMode = InteractionMode.TextSelection;
         await Viewer.LoadAsync(DocumentPath, null);
     }
 
-    public async Task DisableTextSelections()
+    private async Task DisableTextSelections()
     {
         EnableTextSelection = false;
         InteractionMode = InteractionMode.Pan;

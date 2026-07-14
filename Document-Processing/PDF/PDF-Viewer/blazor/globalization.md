@@ -31,7 +31,7 @@ Set the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPd
               EnableRtl="true" />
 
 @code {
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 ```
 

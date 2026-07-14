@@ -94,7 +94,7 @@ N> The sample uses a `wwwroot/` path, which is appropriate for Blazor WebAssembl
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20the%20Security%20Document).
 
-## See Also
+## See also
 
 * [Permission-protected documents](./permission)
 * [Load a Password-Protected PDF in Blazor](../document-handling/load-password-pdf)

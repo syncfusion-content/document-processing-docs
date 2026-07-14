@@ -32,7 +32,7 @@ You can configure the print mode during the initialization of the PDF Viewer com
               PrintMode="PrintMode.NewWindow" />
 
 @code {
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 
 {% endhighlight %}

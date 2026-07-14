@@ -27,10 +27,10 @@ Use this approach to persist the modified PDF to a server-side folder. Ensure th
               Width="100%"></SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async Task OnClick(MouseEventArgs args)
+    private async Task OnClick(MouseEventArgs args)
     {
         byte[] data = await viewer.GetDocumentAsync();
         //PDF document file stream
@@ -63,10 +63,10 @@ Use this method to update PDF content stored in a relational database when docum
 </SfPdfViewer2>
 
 @code{
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async Task OnClick(MouseEventArgs args)
+    private async Task OnClick(MouseEventArgs args)
     {
         string documentName = "PDF_Succinctly";
         byte[] data = await viewer.GetDocumentAsync();
@@ -102,7 +102,7 @@ The `SfPdfViewer` includes a built-in toolbar button to download the loaded or m
               DocumentPath="@DocumentPath"
               EnableDownload="true" />
 @code{
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 
 ```
@@ -123,9 +123,9 @@ Programmatic download can also be triggered from a button click handler by calli
               @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2 Viewer;
+    private SfPdfViewer2 Viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    public async Task OnClick(MouseEventArgs args)
+    private async Task OnClick(MouseEventArgs args)
     {
         await Viewer.DownloadAsync();
     }
@@ -179,7 +179,7 @@ Use the built-in toolbar option or the programmatic API to download a separate c
 @code{
     private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
-    public async Task OnClick(MouseEventArgs args)
+    private async Task OnClick(MouseEventArgs args)
     {
         await viewer.DownloadAsync();
     }

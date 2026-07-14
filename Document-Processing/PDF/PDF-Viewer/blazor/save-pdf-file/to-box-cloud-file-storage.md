@@ -53,7 +53,7 @@ Create a basic Blazor Web App Server application that hosts the SfPdfViewer comp
     private readonly string clientSecret = "Your Box Storage ClientSecret";
     private readonly string fileName = "File Name to be loaded into Syncfusion SfPdfViewer";
 
-    public async Task OnClick(MouseEventArgs args)
+    private async Task OnClick(MouseEventArgs args)
     {
         // Get the current PDF document from the SfPdfViewer as a byte array.
         byte[] data = await viewer.GetDocumentAsync();

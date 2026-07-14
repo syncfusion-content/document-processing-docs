@@ -887,7 +887,7 @@ function clearAllHighlights() {
 
     // Navigates to the next page
     [JSInvokable]
-    public async Task GoNextPage()
+    private async Task GoNextPage()
     {
         if (PdfViewer!.CurrentPageNumber == PdfViewer.PageCount)
         {
@@ -902,7 +902,7 @@ function clearAllHighlights() {
 
     // Navigates to the previous page
     [JSInvokable]
-    public async Task GoPreviousPage()
+    private async Task GoPreviousPage()
     {
         if (PdfViewer!.CurrentPageNumber == 1)
         {

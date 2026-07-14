@@ -32,7 +32,7 @@ The following Blazor example renders the PDF Viewer with printing disabled.
               EnablePrint="false" />
 
 @code{
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 {% endhighlight %}
 {% endtabs %}
@@ -57,9 +57,9 @@ To start printing from code, call the [PrintAsync()](https://help.syncfusion.com
 
 @code{
     private SfPdfViewer2? Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async Task OnClick(MouseEventArgs args)
+    private async Task OnClick(MouseEventArgs args)
     {
         await Viewer.PrintAsync();
     }
@@ -77,7 +77,7 @@ To start printing from code, call the [PrintAsync()](https://help.syncfusion.com
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Print)
 
-## See Also
+## See also
 
 - [Enable print rotation](./enable-print-rotation)
 - [Print modes](./print-modes)

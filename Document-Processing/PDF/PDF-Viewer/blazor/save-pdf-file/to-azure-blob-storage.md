@@ -50,7 +50,7 @@ Import the required namespaces at the top of the file:
     private readonly string containerName = "Your container name in Azure";
     private readonly string fileName = "FileName.pdf";
 
-    public async Task OnClick(MouseEventArgs args)
+    private async Task OnClick(MouseEventArgs args)
     {
         try
         {
@@ -89,6 +89,6 @@ N>
 
 ## See also
 
-* [Save PDF file to Amazon S3 in Blazor SfPdfViewer](to-amazon-s3.md)
-* [Save PDF file to Google Cloud Storage in Blazor SfPdfViewer](to-google-cloud-storage.md)
+* [Save PDF file to Amazon S3 in Blazor SfPdfViewer](to-amazon-s3)
+* [Save PDF file to Google Cloud Storage in Blazor SfPdfViewer](to-google-cloud-storage)
 * [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../faqs/how-to-processing-large-files-without-increasing-maximum-message-size)

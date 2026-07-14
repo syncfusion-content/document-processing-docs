@@ -54,9 +54,9 @@ Removes all form fields from the document using [DeleteFormFieldsAsync()](https:
 }
 {% endhighlight %}
 {% endtabs %}
-The following image illustrates deleting all form fields in Blazor SfPdfViewer2:  
+The following image illustrates deleting all form fields in Blazor SfPdfViewer:  
 
-![Delete all form fields in Blazor SfPdfViewer2](../form-designer-images/blazor-pdfviewer-form-designer-delete-all.png)
+![Delete all form fields in Blazor SfPdfViewer](../form-designer-images/blazor-pdfviewer-form-designer-delete-all.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/DeleteAllFields.razor).
 
@@ -90,9 +90,9 @@ Deletes only the currently selected form field using [DeleteFormFieldsAsync()](h
 }
 {% endhighlight %}
 {% endtabs %}
-The following image illustrates deleting a selected form field in Blazor SfPdfViewer2:  
+The following image illustrates deleting a selected form field in Blazor SfPdfViewer:  
 
-![Delete selected form field in Blazor SfPdfViewer2](../form-designer-images/blazor-pdfviewer-form-designer-delete-selected.png)
+![Delete selected form field in Blazor SfPdfViewer](../form-designer-images/blazor-pdfviewer-form-designer-delete-selected.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/DeleteSelectedField.razor).
 
