@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  Working with WinForms PDF Viewer with PdfDocumentView| Syncfusion&reg;
-description: Learn here about working with Syncfusion<sup>&reg;</sup>; Windows Forms PDFDocumentView control, its elements and more details.
+title: Working with WinForms PDF Viewer with PdfDocumentView| Syncfusion&reg;
+description: Learn here about working with Syncfusion<sup>&reg;</sup> Windows Forms PDFDocumentView control, its elements and more details.
 platform: document-processing
 control: PdfViewerControl
 documentation: ug
@@ -9,17 +9,17 @@ documentation: ug
 
 # Adding PdfDocumentView to an Application 
 
-The [PdfDocumentView](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfDocumentView.html) control allows you to view PDF files without a toolbar. Other features are similar to the PdfViewerControl.
+The [PdfDocumentView](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfDocumentView.html) control allows you to view PDF files without a toolbar. Other features are similar to the [PdfViewerControl](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html).
 
 ## Adding in designer
 
-1. Open your form in the designer. Add the Syncfusion<sup>&reg;</sup>; controls to your .NET toolbox in Visual Studio if you haven't done so already (the install would have automatically done this unless you selected not to complete toolbox integration during installation).
+1. Open your form in the designer. Add the Syncfusion<sup>&reg;</sup> controls to your .NET toolbox in Visual Studio if you haven't done so already (the install would have automatically done this unless you selected not to complete toolbox integration during installation).
    
-   ![Windows forms PdfDocumentView drag and drop from toolbox](Getting-Started_images/Getting-Started_img1.png)
+   ![Windows Forms PdfDocumentView drag-and-drop from toolbox](Getting-Started_images/Getting-Started_img1.png)
 
-2. Drag the PdfDocumentView from the toolbox onto the form. Appearance and behavior related aspects of the PdfDocumentView can be controlled by setting the appropriate properties through the properties grid. 
+2. Drag the PdfDocumentView from the toolbox onto the form. The appearance and behavior of the PdfDocumentView can be controlled by setting the appropriate properties in the properties grid. 
 
-   ![Windows forms PdfDocumentView displays properties window of control](Getting-Started_images/Getting-Started_img3.png)
+   ![Windows Forms PdfDocumentView displays the properties window of the control](Getting-Started_images/Getting-Started_img3.png)
  
 3. This will add the instance 'pdfDocumentView1' to the Designer cs file. The PDF can be loaded in the Form cs file using the [Load](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfDocumentView.html#Syncfusion_Windows_Forms_PdfViewer_PdfDocumentView_Load_System_String_) method. 
 
@@ -91,7 +91,7 @@ Controls.Add(pdfDocumentView1)
 {% endcapture %}
 {{ codesnippet3 | OrderList_Indent_Level_1 }}
 
-N> You can also explore our [WinForms PDF Viewer example](https://github.com/syncfusion/winforms-demos/tree/master/pdfviewer) that shows you how to render and configure the PDF Viewer.
+N> You can also explore our [WinForms PDF Viewer example](https://github.com/syncfusion/pdf-viewer-sdk-winforms-demos) that shows you how to render and configure the PDF Viewer.
 
 ## See Also
 - [Getting started](./Getting-Started)

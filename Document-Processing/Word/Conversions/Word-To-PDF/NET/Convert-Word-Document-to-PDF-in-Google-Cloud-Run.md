@@ -29,9 +29,11 @@ Step 3: Verify Authenticated Accounts
 
 In the Cloud Shell terminal, enter the following **command** to list authenticated accounts and verify your active account:
 
-```
+{% tabs %}
+{% highlight bash tabtitle="CLI" %}
 gcloud auth list
-```
+{% endhighlight %}
+{% endtabs %}
 
 ![Verify Authenticated Accounts](GCP_Images/GCR_Images/Verify-Authenticated-Accounts.png)
 
@@ -39,9 +41,11 @@ Step 4: Set Active Account
 
 If multiple accounts are listed, **set the desired account** as the active account using:
 
-```
+{% tabs %}
+{% highlight bash tabtitle="CLI" %}
 gcloud config set account <your-email@example.com>
-```
+{% endhighlight %}
+{% endtabs %}
 
 Replace <your-email@example.com> with your actual Google Cloud email.
 
@@ -49,9 +53,11 @@ Step 5: Enable Cloud Run API
 
 Enable the Cloud Run API using the following **command**:
 
-```
+{% tabs %}
+{% highlight bash tabtitle="CLI" %}
 gcloud services enable run.googleapis.com
-```
+{% endhighlight %}
+{% endtabs %}
 
 ![Enable Cloud Run API](GCP_Images/GCR_Images/Enable-Cloud-Run.png)
 
@@ -92,7 +98,7 @@ Step 5: Add a new button in the Index.cshtml as shown below.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight cshtml tabtitle="CSHTML" %}
 
 @{Html.BeginForm("ConvertWordtoPDF", "Home", FormMethod.Get);
 {
@@ -183,7 +189,9 @@ app.Run(url);
 
 Step 8: Create an docker file and add the following command.
 
-```
+{% tabs %}
+{% highlight Dockerfile %}
+
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 RUN apt-get update -y && apt-get install -y \
     fontconfig \
@@ -214,7 +222,9 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "Convert-Word-Document-to-PDF.dll"]
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Upload application to Cloud Shell Editor
 
@@ -234,9 +244,11 @@ Step 3: **Navigate** to the sample folder
 
 After uploading, open the terminal in Cloud Shell Editor and move to the sample folder using:
 
-```
+{% tabs %}
+{% highlight bash tabtitle="CLI" %}
 cd <sample-folder-name>
-```
+{% endhighlight %}
+{% endtabs %}
 
 Replace <sample-folder-name> with the actual folder name.
 
@@ -247,9 +259,11 @@ Step 1: Build and submit Docker image to **Google Container Registry (GCR)**
 
 Run the following command to build and submit the Docker image to Google Container Registry (GCR):
 
-```
+{% tabs %}
+{% highlight bash tabtitle="CLI" %}
 gcloud builds submit --tag gcr.io/<your-project-id>/wordtopdf
-```
+{% endhighlight %}
+{% endtabs %}
 
 Replace <your-project-id> with your actual Google Cloud project ID.
 
@@ -259,9 +273,11 @@ Step 2: List stored container images in **GCR**
 
 Verify the stored container images using:
 
-```
+{% tabs %}
+{% highlight bash tabtitle="CLI" %}
 gcloud container images list
-```
+{% endhighlight %}
+{% endtabs %}
 
 ![Stored container images in GCR](GCP_Images/GCR_Images/List-stored-container-images.png)
 
@@ -269,9 +285,11 @@ Step 3: **Build** the Docker image
 
 Enter the following command to build the application.
 
-```
+{% tabs %}
+{% highlight bash tabtitle="CLI" %}
 docker build . --tag gcr.io/<your-project-id>/wordtopdf
-```
+{% endhighlight %}
+{% endtabs %}
 
 ![Build the Docker image](GCP_Images/GCR_Images/Build.png)
 
@@ -279,9 +297,11 @@ Step 4: **Run** the sample locally
 
 Run the container locally on port 8080:
 
-```
+{% tabs %}
+{% highlight bash tabtitle="CLI" %}
 docker run -p 8080:8080 gcr.io/<your-project-id>/wordtopdf
-```
+{% endhighlight %}
+{% endtabs %}
 
 To close the preview page and return to the terminal then press **Ctrl+C** for which will typically stop the process.
 
@@ -291,9 +311,11 @@ Step 5: **Deploy** the sample to Cloud Run
 
 Deploy the container to Cloud Run using:
 
-```
+{% tabs %}
+{% highlight bash tabtitle="CLI" %}
 gcloud run deploy
-```
+{% endhighlight %}
+{% endtabs %}
 
 ![Deploy the sample to Cloud Run](GCP_Images/GCR_Images/Deploy.png)
 
@@ -301,7 +323,7 @@ Step 6: Provide deployment details
 
 During deployment, provide the following:
 
-* **Container Path** – Enter **gcr.io/<your-project-id>/wordtopdf**.
+* **Container Path** – Enter ```gcr.io/<your-project-id>/wordtopdf```.
 * **Service Name** – Assign a name to your service.
 * **Select a Region** – Choose the deployment region when prompted.
 

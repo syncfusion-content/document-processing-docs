@@ -8,7 +8,7 @@ documentation: UG
 
 # Create or Generate PDF file in UWP
 
-The Syncfusion<sup>&reg;</sup> [UWP PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, work with forms, and secure PDF files.
+The [UWP PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, work with forms, and secure PDF files.
 
 To include the Syncfusion<sup>&reg;</sup> UWP PDF library into your UWP application, please refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) documentation.
 
@@ -58,24 +58,27 @@ Step 5: Include the following code example in the click event of the button in *
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//Create a PDF document. 
-using (PdfDocument document = new PdfDocument())
+private void Button_Click(object sender, RoutedEventArgs e)
 {
-    //Add a page to the document.
-    PdfPage page = document.Pages.Add();
-    //Create PDF graphics for the page
-    PdfGraphics graphics = page.Graphics;
-    //Set the standard font.
-    PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
-    //Draw the text.
-    graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
-    //Create memory stream.
-    MemoryStream ms = new MemoryStream();
-    //Open the document in browser after saving it.
-    document.Save(ms);
-    //Close the document.
-    document.Close(true);
-    Save(ms, "Sample.pdf");
+    //Create a PDF document. 
+    using (PdfDocument document = new PdfDocument())
+    {
+        //Add a page to the document.
+        PdfPage page = document.Pages.Add();
+        //Create PDF graphics for the page
+        PdfGraphics graphics = page.Graphics;
+        //Set the standard font.
+        PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
+        //Draw the text.
+        graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
+        //Create memory stream.
+        MemoryStream ms = new MemoryStream();
+        //Open the document in browser after saving it.
+        document.Save(ms);
+        //Close the document.
+        document.Close(true);
+        Save(ms, "Sample.pdf");
+    }
 }
 
 {% endhighlight %}

@@ -100,14 +100,14 @@ GoToPageCommand allows you to navigate through the pages of the PDF document. Th
 {% highlight xaml %}
 
 	<Syncfusion:PdfViewerControl x:Name="pdfViewerControl" />
-    <Button Content="Go to page” Height="20" Width="60" Command="{Binding ElementName=pdfViewerControl, Path=GoToPageCommand, Mode= OneWay }" CommandParameter="2" />
+    <Button Content="Go to page" Height="20" Width="60" Command="{Binding ElementName=pdfViewerControl, Path=GoToPageCommand, Mode= OneWay }" CommandParameter="2" />
 {% endhighlight %}
 {% endtabs %}
 
 N>
 * If the command parameter is some other text or invalid page number, the GoToPageCommand does not have any effect.
 
-## Page Rotation commands
+## Page Rotation Commands
 
 The below list of commands helps to rotate the specific pages in a PDF document. 
 
@@ -154,7 +154,7 @@ The following C# code shows how to rotate the pages in a counterclockwise direct
 {% tabs %}
 {% highlight c# %}
 
-<!--The below code rotates teh 1 and 2 page to 90 degree in counter clockwise direction-->
+<!--The below code rotates the 1 and 2 page to 90 degree in counter clockwise direction-->
 pdfViewer.PageOrganizer.RotatePagesCounterclockwiseCommand.Execute(new int[] { 0, 1 });
 
 {% endhighlight %}
@@ -162,9 +162,9 @@ pdfViewer.PageOrganizer.RotatePagesCounterclockwiseCommand.Execute(new int[] { 0
 
 ## RemovePagesCommand
 
-Removing the specific pages can be achieved using the RemovePagesCommand. To achieve this functionality we have to define the code in the code-behind(i.e In a button click event
+Removing specific pages can be achieved using the RemovePagesCommand. To achieve this functionality we have to define the code in the code-behind (i.e., in a button click event).
 
-The following C# code shows how to remove pages using the [RemovePagesCommand](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PageOrganizer.html#Syncfusion_Windows_PdfViewer_PageOrganizer_RemovePagesCommand) that is bonded to the button click event
+The following C# code shows how to remove pages using the [RemovePagesCommand](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PageOrganizer.html#Syncfusion_Windows_PdfViewer_PageOrganizer_RemovePagesCommand) that is bound to the button click event
 
 {% tabs %}
 {% highlight c# %}
@@ -252,7 +252,7 @@ The following XAML code shows how to bind the SearchPreviousCommand to a button.
 {% endtabs %}
 
 N>
-* If the Searched text is not found a dialogue box will prompt which shows No matches were found
+* If the searched text is not found, a dialog box will appear stating that no matches were found.
 
 ## AnnotationCommand
 
@@ -271,7 +271,7 @@ The following list of AnnotationCommandParameter values to the AnnotationCommand
 
 N>
 *	If the AnnotationCommandParameter value of AnnotationCommand is not equivalent to above mentioned any one of the text, then the annotation mode is set as none. 
-*	The AnnotationCommandParameter is not a case sensitive.
+*	The AnnotationCommandParameter is not case-sensitive.
 
 ### Line Annotation
 
@@ -294,7 +294,7 @@ The following XAML code shows how to bind the annotation command for circle anno
 {% highlight xaml %}
 
 	<Syncfusion:PdfViewerControl x:Name="pdfViewerControl" />
-    <Button Content="Circle" Height="20" Width="60" CommandParameter="Circle " Command="{Binding ElementName=pdfViewerControl, Path=AnnotationCommand, Mode= OneWay }" />
+    <Button Content="Circle" Height="20" Width="60" CommandParameter="Circle" Command="{Binding ElementName=pdfViewerControl, Path=AnnotationCommand, Mode= OneWay }" />
 
 {% endhighlight %}
 {% endtabs %}
@@ -345,9 +345,9 @@ The following XAML code shows how to bind the annotation command for strikethrou
 {% tabs %}
 {% highlight xaml %}
 
-	<Syncfusion:PdfViewerControl x:Name="pdfViewerControl" />
+    <Syncfusion:PdfViewerControl x:Name="pdfViewerControl" />
     <Button Content="Strikethrough" Height="20" Width="60" CommandParameter="Strikethrough" Command="{Binding ElementName=pdfViewerControl, Path=AnnotationCommand, Mode= OneWay }" />
-	
+    
 {% endhighlight %}
 {% endtabs %}
 
@@ -444,7 +444,7 @@ pdfViewerControl.SaveDocumentCommand.Execute(@"C:\temp\Output.pdf");
 
 ## Unload Command
 
-Unloading a document in runtime can be easily achieved using the unload command
+Unloading a document at runtime can be easily achieved using the unload command.
 
 The following XAML code shows how to bind the [UnloadCommand](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_UnloadCommand) to a button
 

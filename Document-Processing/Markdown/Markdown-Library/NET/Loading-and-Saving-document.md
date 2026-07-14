@@ -81,6 +81,8 @@ Dim markdownDocument As New MarkdownDocument(Path.GetFullPath("Input.md"))
 
 {% endtabs %}
 
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Read-and-Save-document/Open-and-save-Markdown-document/.NET).
+
 ### Opening using Open Method
 
 The `MarkdownDocument` class also provides the `Open` method to open an existing Markdown document from a stream or string.
@@ -133,7 +135,7 @@ markdownDocument.Open("Input.md")
 
 {% endtabs %}
 
-
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Read-and-Save-document/Open-and-save-Markdown-document/.NET).
 
 ### Opening a document with import settings
 
@@ -262,7 +264,7 @@ End Sub
 
 {% endtabs %}
 
-
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Read-and-Save-document/Customize-open-markdown-document/.NET).
 
 ## Saving a Markdown Document
 
@@ -308,6 +310,8 @@ markdownDocument.Dispose();
 
 {% endtabs %}
 
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Read-and-Save-document/Open-and-save-Markdown-document/.NET).
+
 ### Saving a Markdown Document to stream
 
 You can also save the created or manipulated Markdown document to stream by using overloads of `Save` methods.
@@ -351,6 +355,8 @@ markdownDocument.Dispose();
 {% endhighlight %}
 
 {% endtabs %}
+
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Read-and-Save-document/Open-and-save-Markdown-document/.NET).
 
 ### Save Options
 
@@ -439,6 +445,7 @@ End Sub
 
 {% endtabs %}
 
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Read-and-Save-document/Customize-save-markdown-conversion/.NET).
 
 ### Getting Markdown document text
 
@@ -475,6 +482,8 @@ markdownDocument.Dispose()
 {% endhighlight %}
 
 {% endtabs %}
+
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Read-and-Save-document/Get-markdown-document-text/.NET).
 
 N> You can also retrieve the Markdown content with save options by passing the `SaveOptions` parameter to the `GetMarkdownText` method.
 
@@ -519,4 +528,5 @@ markdownDocument.Dispose()
 {% endhighlight %}
 {% endtabs %}
 
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Read-and-Save-document/Open-and-save-Markdown-document/.NET).
 

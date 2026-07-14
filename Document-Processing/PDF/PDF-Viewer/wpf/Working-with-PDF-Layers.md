@@ -9,7 +9,7 @@ documentation: UG
 
 # Working with PDF Layers in WPF Pdf Viewer
 
-The layer support in PDF viewer allows users to toggle the visibility of individual and group of layers in the PDF document to view, print, save, and export as image.
+The layer support in the PDF Viewer allows users to toggle the visibility of individual layers and groups of layers in the PDF document to view, print, save, and export them as images.
 
 ## Toggling the visibility of a PDF layer
 
@@ -25,7 +25,7 @@ To toggle the visibility of a group of PDF layers, click the eye icon associated
 
 ## Programmatically Toggle the Visibility of a PDF Layer
 
-The WPF PDFViewer allows the user to toggle the visibility of a PDF [Layer](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.Layer.html) using its [IsVisible](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.Layer.html#Syncfusion_Windows_PdfViewer_Layer_IsVisible) property. When this property is set to false, the layer becomes invisible, and when this property is set to true, the layer becomes visible. The following code sample explains how to use the [PdfDocumentView](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfDocumentView.html) to retrieve the [Layers](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfDocumentView.html#Syncfusion_Windows_PdfViewer_PdfDocumentView_Layers) collection and use the [Name](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.Layer.html#Syncfusion_Windows_PdfViewer_Layer_Name) of a PDF layer to toggle its visibility.
+The WPF PDF Viewer allows the user to toggle the visibility of a PDF [Layer](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.Layer.html) using its [IsVisible](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.Layer.html#Syncfusion_Windows_PdfViewer_Layer_IsVisible) property. When this property is set to false, the layer becomes invisible, and when this property is set to true, the layer becomes visible. The following code sample explains how to use the [PdfDocumentView](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfDocumentView.html) to retrieve the [Layers](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfDocumentView.html#Syncfusion_Windows_PdfViewer_PdfDocumentView_Layers) collection and use the [Name](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.Layer.html#Syncfusion_Windows_PdfViewer_Layer_Name) of a PDF layer to toggle its visibility.
 
 {% tabs %}
 {% highlight C# %}
@@ -93,7 +93,7 @@ private void Window_Loaded(object sender, RoutedEventArgs e)
 Private Sub Window_Loaded(sender As Object, e As RoutedEventArgs)
     Dim pdf As New PdfLoadedDocument("PdfLayers.pdf")
     pdfViewer.Load(pdf) 
-    pdfViewer.EnableLayers = false;
+    pdfViewer.EnableLayers = False
 End Sub
 
 {% endhighlight %}
@@ -109,7 +109,7 @@ You can also achieve the same in XAML using the DependencyProperty illustrated a
 
 {% endhighlight %}
 
-N> By default, the layer feature is enabled in PDF viewer.
+N> By default, the layer feature is enabled in the PDF Viewer.
 
 
 N> You can refer to our [WPF PDF Viewer](https://www.syncfusion.com/wpf-controls/pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [WPF PDF Viewer example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the pdfviewer.

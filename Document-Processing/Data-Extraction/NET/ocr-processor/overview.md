@@ -12,7 +12,7 @@ keywords: Assemblies
 
 Optical character recognition (OCR) is a technology used to convert scanned paper documents in the form of PDF files or images into searchable and editable data.  
 
-The [.NET OCR processor library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/ocr-process) has extended support to process OCR on scanned PDF documents and images with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.
+The [.NET OCR processor library](https://www.syncfusion.com/document-sdk/net-pdf-library/ocr-process) has extended support to process OCR on scanned PDF documents and images with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.
 
 An inbuilt `image preprocessor` has been added to the OCR to prepare images for optimal recognition. This step ensures cleaner input and reduces OCR errors. The preprocessor supports the following enhancements:
 

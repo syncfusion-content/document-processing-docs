@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bullets and Lists in Flutter PDF library | Syncfusion
-description: Learn here all about add ordered and unordered lists feature of Syncfusion Flutter PDF non-UI library and more.
+description: Learn here all about adding ordered and unordered lists features of Syncfusion Flutter PDF non-UI library and more.
 platform: document-processing
 control: PDF
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Bullets and Lists in Flutter PDF
 
-The Syncfusion<sup>&reg;</sup> Flutter PDF allows you list the content in ordered and unordered list. The ordered list can be number or alphabets and the unordered list can be bullets, circles, and images.
+The Syncfusion<sup>&reg;</sup> Flutter PDF allows you to list the content in ordered and unordered list. The ordered list can be number or alphabets and the unordered list can be bullets, circles, and images.
 
 ## Adding an ordered list
 
@@ -76,7 +76,7 @@ document.dispose();
 
 ## Adding a sub list
 
-The Syncfusion<sup>&reg;</sup> Flutter PDF also provides support to create a sub list to a [`PdfList`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfList-class.html). A sub list can be created under both [`PdfOrderedList`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfOrderedList-class.html) and [`PdfUnorderedList`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfUnorderedList-class.html). The following code snippet explains the same.
+The Syncfusion<sup>&reg;</sup> Flutter PDF also provides support to create a sub list in a [`PdfList`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfList-class.html). A sub list can be created under both [`PdfOrderedList`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfOrderedList-class.html) and [`PdfUnorderedList`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfUnorderedList-class.html). The following code snippet explains the same.
 
 {% tabs %}
 {% highlight dart tabtitle="dart" %}
