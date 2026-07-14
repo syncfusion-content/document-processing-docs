@@ -180,7 +180,7 @@ document.dispose();
 
 ### Arc
 
-You can draw an arc in PDF document by using the [`drawArc`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics-class.html) method of [`PdfGraphics`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics-class.html). The following code snippet explains how to draw an arc in the new PDF document.
+You can draw an arc in PDF document by using the [`drawArc`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics/drawArc.html) method of [`PdfGraphics`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics-class.html). The following code snippet explains how to draw an arc in the new PDF document.
 
 {% tabs %}
 {% highlight dart tabtitle="dart" %}
