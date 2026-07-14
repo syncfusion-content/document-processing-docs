@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Annotation in Blazor SfPdfViewer Component | Syncfusion
-description: Learn about Annotations and how to add, edit, delete, and configure Annotations in the Syncfusion Blazor SfPdfViewer.
+description: Learn about Annotations and how to add, edit, delete, and configure Annotations in the Blazor SfPdfViewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

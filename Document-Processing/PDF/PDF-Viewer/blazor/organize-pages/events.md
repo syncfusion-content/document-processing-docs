@@ -9,7 +9,7 @@ documentation: ug
 
 # Organize pages events
 
-Use the page organizer events to react to rotations, rearranges, inserts, deletes, and other page-manipulation actions performed in the page organizer.
+Use the page organizer events to react to rotations, rearrangements, inserts, deletes, and other page-manipulation actions performed in the page organizer.
 
 | Name | Description |
 |---|---|
@@ -19,7 +19,7 @@ Use the page organizer events to react to rotations, rearranges, inserts, delete
 
 ## PageOrganizerSaveRequested
 
-Raised when the user saves changes from the page organizer (for example, after clicking the **Save as** button). The event args include:
+Raised when the user saves changes from the page organizer (for example, after clicking the **Save** or **Save as** button). The event args include:
 
 - `FileName`: the current PDF file name.
 - `DownloadDocument`: a base64 string containing the modified PDF bytes.
@@ -48,7 +48,7 @@ Raised when the user saves changes from the page organizer (for example, after c
 
 Raised when the zoom slider in the page organizer changes value. Enable the slider by setting `PageOrganizerSettings.ShowImageZoomingSlider` to `true`.
 
-Event args:
+The event args include:
 
 - `PreviousZoom`: previous zoom value.
 - `CurrentZoom`: current zoom value.
@@ -76,6 +76,10 @@ Event args:
 
 Raised when the page organizer dialog is opened or closed.
 
+The event args include:
+
+- `IsVisible`: `true` when the dialog is opened, `false` when it is closed.
+
 {% tabs %}
 {% highlight razor %}
 
@@ -100,4 +104,4 @@ Raised when the page organizer dialog is opened or closed.
 
 - Overall viewer events: [Event](../events)
 - Annotation events: [Annotation events](../annotation/events)
-- Form designer events: [Form field events](../form-designer/events)
+- Form designer events: [Form field events](../forms/form-field-events)

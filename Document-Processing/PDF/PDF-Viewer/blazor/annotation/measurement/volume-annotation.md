@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add Volume Annotations in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to enable, draw, customize, and manage Volume annotations in the Syncfusion Blazor SfPdfViewer component.
+description: Learn how to enable, draw, customize, and manage Volume annotations in the Blazor SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -335,7 +335,7 @@ Volume measurements are exported and imported with the rest of the annotations i
 
 For the full export/import workflow and additional formats, see [**Export and Import Annotations**](../import-export-annotation).
 
-## See Also
+## See also
 
 - [Annotation Events](../events)
 - [Export and Import Annotations](../import-export-annotation)

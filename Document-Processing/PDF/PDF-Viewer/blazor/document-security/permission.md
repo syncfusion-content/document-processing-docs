@@ -58,7 +58,7 @@ Use the [`LoadAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Sf
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20the%20Security%20Document).
 
-## See Also
+## See also
 
 * [Password-protected documents](./password-protected)
 * [Getting started with SfPdfViewer2](../getting-started/web-app)

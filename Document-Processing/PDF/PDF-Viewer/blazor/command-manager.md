@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Command Manager in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to configure the Command Manager to add custom keyboard shortcuts and handle command execution in the Syncfusion Blazor PDF Viewer.
+description: Learn how to configure the Command Manager to add custom keyboard shortcuts and handle command execution in the Blazor PDF Viewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -45,42 +45,41 @@ The following example registers two custom keyboard commands (`FitToWidth` and `
 
 @code {
     // Reference to the Pdf viewer 
-    SfPdfViewer2 pdfViewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private SfPdfViewer2 pdfViewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    /// <summary> 
-    /// Defines the list of custom commands 
-    /// </summary> 
+    /// <summary>
+    /// Defines the list of custom commands
+    /// </summary>
+    private List<KeyboardCommand> command = new List<KeyboardCommand>()
+    {
+        new KeyboardCommand()
+        {
+            ActionName = "FitToWidth",
+            Gesture = new KeyGesture() { Key = PdfKeys.W, Modifiers = PdfModifierKeys.Shift }
+        },
+        new KeyboardCommand()
+        {
+            ActionName = "FitToPage",
+            Gesture = new KeyGesture() { Key = PdfKeys.P, Modifiers = PdfModifierKeys.Alt }
+        }
+    };
 
-    public List<KeyboardCommand> command = new List<KeyboardCommand>() 
-    { 
-        new KeyboardCommand() 
-        { 
-            ActionName = "FitToWidth", 
-            Gesture = new KeyGesture() { Key = PdfKeys.W, Modifiers = PdfModifierKeys.Shift } 
-        }, 
-        new KeyboardCommand() 
-        { 
-            ActionName = "FitToPage", 
-            Gesture = new KeyGesture() { Key = PdfKeys.P, Modifiers = PdfModifierKeys.Alt } 
-        } 
-    }; 
+    /// <summary>
+    /// Custom command execution.
+    /// </summary>
 
-    /// <summary> 
-    /// Custom command execution. 
-    /// </summary> 
-
-    public void CommandExecute(CommandExecutedEventArgs args) 
-    { 
-        if(args.Modifiers == PdfModifierKeys.Shift && args.Key == PdfKeys.W) 
-        { 
-            pdfViewer.FitToWidthAsync(); 
-        } 
-        else if (args.Modifiers == PdfModifierKeys.Alt && args.Key == PdfKeys.P) 
-        { 
-            pdfViewer.FitToPageAsync(); 
-        }  
-    } 
+    private async Task CommandExecute(CommandExecutedEventArgs args)
+    {
+        if (args.Modifiers == PdfModifierKeys.Shift && args.Key == PdfKeys.W)
+        {
+            await pdfViewer.FitToWidthAsync();
+        }
+        else if (args.Modifiers == PdfModifierKeys.Alt && args.Key == PdfKeys.P)
+        {
+            await pdfViewer.FitToPageAsync();
+        }
+    }
 } 
 
 ```

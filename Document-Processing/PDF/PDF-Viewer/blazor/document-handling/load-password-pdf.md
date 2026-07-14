@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Load Password Protected PDFs in Blazor PDF Viewer | Syncfusion
-description: Learn how to open password-protected PDF files in the Syncfusion Blazor PDF Viewer by providing the password in the documentPath object.
-control: PDF Viewer
+description: Learn how to open password-protected PDF files in the Blazor PDF Viewer by providing the password in the documentPath object.
+control: SfPdfViewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
@@ -52,7 +52,7 @@ The [`LoadAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfV
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 Viewer;
+    private SfPdfViewer2 Viewer;
 
     private async Task Clicked()
     {
@@ -88,7 +88,7 @@ When the [`DocumentPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 @code {
     // URL for the password-protected sample document
-    public string DocumentPath { get; set; } = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly-password-protected.pdf";
+    private string DocumentPath { get; set; } = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly-password-protected.pdf";
 }
 ```
 
@@ -103,7 +103,7 @@ The viewer will:
 
 ![Password Protected Pop-up](../images/password-popup.png)
 
-## See Also
+## See also
 
 - [Load Large PDF Files](./load-large-pdf)
 - [Getting started with SfPdfViewer in a Blazor Web App](../getting-started/web-app)
