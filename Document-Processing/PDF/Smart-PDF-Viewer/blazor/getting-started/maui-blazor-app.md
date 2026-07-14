@@ -83,7 +83,7 @@ In **Visual Studio**, Go to Tools → NuGet Package Manager → Package Manager 
 
 Install-Package Azure.AI.OpenAI
 Install-Package Microsoft.Extensions.AI
-Install-Package Microsoft.Extensions.AI.OpenAI -Version 9.8.0-preview.1.25412.6
+Install-Package Microsoft.Extensions.AI.OpenAI
 
 {% endhighlight %}
 {% endtabs %}
@@ -95,7 +95,7 @@ In **Visual Studio Code**, open the terminal and run these commands:
 
 dotnet add package Azure.AI.OpenAI
 dotnet add package Microsoft.Extensions.AI
-dotnet add package Microsoft.Extensions.AI.OpenAI --version 9.8.0-preview.1.25412.6
+dotnet add package Microsoft.Extensions.AI.OpenAI
 
 {% endhighlight %}
 {% endtabs %}
