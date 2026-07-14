@@ -10,13 +10,39 @@ domainurl: ##DomainURL##
 
 # Get page info in React PDF Viewer
 
-The `getPageInfo()` method returns metadata for a specified page in the viewer, such as `height`, `width`, and `rotation`. `pageIndex` is zero-based. Call `getPageInfo()` after the viewer is ready to ensure page data is available (for example, in `ngAfterViewInit` or after the document has been loaded).
+### Overview
+
+The `getPageInfo()` method returns metadata for a specified page in the React PDF Viewer, such as `height`, `width`, and `rotation`. Use it when you need to read the rendered size or orientation of a page, for example to align overlays, custom toolbars, or to validate the loaded document.
+
+**Parameter**
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| `pageIndex` | `number` | Zero-based index of the page. Must be in the range `0` to `pageCount - 1`. Passing an index outside this range returns `undefined`. |
+
+**Return value**
+
+The method returns a `PageInfo` object with the following fields:
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `height` | `number` | Page height in points (1 point = 1/72 inch). |
+| `width` | `number` | Page width in points. |
+| `rotation` | `number` | Page rotation in degrees. Valid values are `0`, `90`, `180`, and `270`. |
+
+Call `getPageInfo()` only after the document has finished loading (for example, inside the `documentLoaded` event handler) to ensure page data is available. Calling it before the document is loaded returns `undefined`.
+
+### How to retrieve page info
 
 The following example retrieves and logs the page dimensions and rotation for a specified page.
 
-**Step 1:** Follow the steps provided in the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create a simple PDF Viewer sample.
+**Step 1: Create the PDF Viewer sample**
 
-**Step 2:** The following code snippet implements retrieval of height, width, and rotation for a specified page in the viewer.
+Follow the [Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) guide for the React PDF Viewer.
+
+**Step 2: Set up the React component**
+
+Update the `src/index.js` (or `src/App.js`) template to include a button that retrieves and logs the page info for a specified page. The samples below show both standalone and server-backed viewer configurations.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -45,6 +71,7 @@ class App extends React.Component {
         this.viewerRef = React.createRef();
     }
 
+    // Retrieve and log the page information for the specified page
     retrievePageInfo = () => {
         // Set the page index for which info is required
         const pageIndex = 0;
@@ -103,6 +130,14 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-By following these steps, the page info API can be integrated and used in the EJ2 PDF Viewer.
+### Conclusion
 
-[View Sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to)
+By implementing these steps in the React component, you can retrieve the height, width, and rotation of any page loaded in the React PDF Viewer when a button is clicked or once the `documentLoaded` event fires. This enables inspection of page metadata for further client-side processing.
+
+### Troubleshooting
+
+- **`getPageInfo()` returns `undefined`** — Ensure the call is made after the `documentLoaded` event has fired, or invoke it from a user action that occurs after the viewer is ready.
+- **Invalid `pageIndex`** — Confirm the index is within the range `0` to `pageCount - 1`. Use the `pageCount` property to check the total number of pages.
+- **Resource loading errors (Standalone)** — Verify the `resourceUrl` matches the version of the `@syncfusion/ej2-react-pdfviewer` package installed in your project.
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to)
