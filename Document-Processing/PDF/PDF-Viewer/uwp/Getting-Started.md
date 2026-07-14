@@ -77,11 +77,11 @@ The assemblies do not all have to be in a single folder. Each assembly may live 
 
 This co-location matters only if you move assemblies out of their installed location. If you relocate an assembly, be sure to move its resource files with it and place them in the same folder as that assembly.
 
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>®</sup> assemblies from the trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to [this link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to register the Syncfusion<sup>®</sup> license key in your UWP application to use our components.
+
 {% endtabcontent %}
 
 {% endtabcontents %}
-
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>®</sup> assemblies from the trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to [this link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to register the Syncfusion<sup>®</sup> license key in your UWP application to use our components.
 
 ## Add UWP PDF Viewer component
 
