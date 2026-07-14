@@ -38,13 +38,13 @@ function OnCreateSearch() {
   this.addIcon('prepend', 'e-icons e-search');
 }
 
-  var toolItem1 = {
+  const toolItem1 = {
     prefixIcon: 'e-icons e-save',
     id: 'download',
     text: 'Save',
     tooltipText: 'Save button',
     align: 'Left'
-};
+  };
 
   function toolbarClick(args){
     if (args.item && args.item.id === 'download') {
@@ -90,16 +90,16 @@ function OnCreateSearch() {
   this.addIcon('prepend', 'e-icons e-search');
 }
 
-  var toolItem1 = {
+  const toolItem1 = {
     prefixIcon: 'e-icons e-save',
     id: 'download',
     text: 'Save',
     tooltipText: 'Save button',
     align: 'Left'
-};
+  };
 
   function toolbarClick(args){
-    var viewer = document.getElementById('container').ej2_instances[0];
+    const viewer = document.getElementById('container').ej2_instances[0];
     if (args.item && args.item.id === 'download') {
         viewer.download();
     }
@@ -131,7 +131,7 @@ N> Default toolbar items include: ['OpenOption', 'PageNavigationTool', 'Magnific
 
 ### Align property
 
-Specifies the alignment of the Save button within the toolbar:
+Specifies the alignment of the Save button within the toolbar. Valid values are:
 
 * Left: aligns the item to the left side of the toolbar.
 * Right: aligns the item to the right side of the toolbar.
@@ -144,17 +144,17 @@ Sets the tooltip text for the Save button; the tooltip appears on hover.
 
 Applies custom CSS classes to the Save button for styling.
 
-### Prefix property
+### prefixIcon property
 
 Sets the CSS class or icon to display before the Save button text.
 
 ### ID property
 
-The id property within a CustomToolbarItemModel is required and uniquely identifies each toolbar item for configuration and interaction.
+The `id` property within a `CustomToolbarItemModel` is required and uniquely identifies each toolbar item for configuration and interaction.
 
 When defining or customizing toolbar items, assign a specific, descriptive id to each item. These properties are commonly used when defining custom toolbar items with `CustomToolbarItemModel` in the context of Syncfusion PDF Viewer. When configuring the toolbar using the `ToolbarSettings` property, include these properties to customize appearance and behavior.
 
 
-N> When customizing the Save button, icons or text can be used based on design preference.
+N> When customizing the Save button, you can use an icon, text, or both, depending on your design preference.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to)
