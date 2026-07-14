@@ -1,6 +1,6 @@
 ---
 title: Markdown conversions Performance benchmark results | Syncfusion
-description: Explore the performance benchmark results of Markdown conversion
+description: Explore the performance benchmark results of Markdown conversion across documents of varying sizes and complexities
 platform: document-processing
 control: Markdown
 documentation: UG
@@ -63,7 +63,7 @@ The table below shows the performance results of various Markdown document opera
 </tr>
 <tr>
     <td>{{'[Excel to MD](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-markdown/overview)'| markdownify }}</td>
-    <td>Datatype - Text (1000 cells)</td>
+    <td>Data type - Text (1000 cells)</td>
     <td>0.04</td>
     <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Performance-metrices/Excel-to-MD/)'| markdownify }}</td>    
 </tr>
