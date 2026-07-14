@@ -44,9 +44,9 @@ export function App() {
 
 ![PDF Viewer in div](../images/react-layouts-div.png)
 
-### Place the viewer inside flex box
+### Place the viewer inside a flex box
 
-Use `min-height: 0` on the flex item containing the Viewer so it can shrink and grow properly. The flex container must have a defined height for the Viewer to fill it.
+Use `min-height: 0` on the flex item containing the PDF Viewer so it can shrink and grow properly. The flex container must have a defined height for the PDF Viewer to fill it.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -77,9 +77,9 @@ export function App() {
 
 ![PDF Viewer in Flex box](../images/react-layouts-flexbox.png)
 
-### Place the viewer inside CSS grid
+### Place the viewer inside a CSS grid
 
-Define row or column sizes in `grid-template-rows` or `grid-template-columns` so the grid track has a real height. The Viewer will then expand to fill its grid cell.
+Define explicit row or column track sizes in `grid-template-rows` or `grid-template-columns` so the grid track has a real height. The PDF Viewer will then expand to fill its grid cell.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -163,9 +163,9 @@ const styles: Record<string, React.CSSProperties> = {
 
 ![PDF Viewer in grid](../images/react-layouts-grid.png)
 
-### Use viewer inside Tab components
-	
-The react PDF Viewer are also supported inside Syncfusion tab components. 
+### Use the viewer inside Tab components
+
+The React PDF Viewer is also supported inside Syncfusion Tab components.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -241,7 +241,7 @@ export const App: React.FC = () => {
 
 ![PDF Viewer in tab](../images/react-layouts-tab.png)
 
-### Use viewer inside Dialog
+### Use the viewer inside a Dialog
 
 If the viewer sits inside a dialog, for example Syncfusion Dialog, render or initialize the viewer after the dialog open events. The DOM must be visible for the viewer to measure layout.
 
@@ -317,9 +317,9 @@ export const App: React.FC = () => {
 
 ![PDF Viewer in dialog](../images/react-layouts-dialog.png)
 
-### Use viewer inside Collapsible sections
+### Use the viewer inside Collapsible sections
 
-For accordions or collapsible containers, either render the viewer lazily when the section expands or dispatch the resize event after expansion so the viewer can recompute layout.
+Place the viewer inside an Accordion or other collapsible container. Either render the viewer lazily when the section expands, or dispatch the resize event after expansion so the viewer can recompute its layout.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -428,11 +428,11 @@ export const App: React.FC = () => {
 
 ## Why visibility and height matter
 
-- The PDF viewer measures its container to lay out pages. If the host element has no height (collapsed, display:none, or not yet mounted) measurements will be zero and rendering will fail or be clipped.
+- The PDF Viewer measures its container to lay out pages. If the host element has no height (collapsed, `display: none`, or not yet mounted) measurements will be zero and rendering will fail or be clipped.
 
 - Initialize or refresh the viewer when the host becomes visible (tab active, modal opened, accordion expanded) so internal layout code can compute sizes.
 
-## Resize & visibility tips
+## Resize and visibility tips
 
 - Dispatch a global resize right after the container becomes visible:
 
@@ -454,7 +454,7 @@ observer.observe(document.querySelector('#pdfViewer')!);
 
 - Use Dialogs for temporary previews or when you want an isolated view.
 - Use Tabs/Accordion patterns when documents are part of multi-pane UIs — ensure refresh on show.
-- Avoid placing the viewer in invisible containers without a resize/refresh strategy. 
+- Avoid placing the viewer in invisible containers without a resize/refresh strategy.
 
 ## See also
 
