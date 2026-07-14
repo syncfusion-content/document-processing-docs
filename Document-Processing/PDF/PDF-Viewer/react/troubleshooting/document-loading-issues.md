@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Fix document loading issues in v23.1 or newer for the React PDF Viewer component
-description: Resolve document rendering failures in v23.1 or newer by calling dataBind before load, verifying source URLs, confirming network connectivity, and checking CORS and CSP in the React PDF Viewer.
+title: Fix Document Loading Issues in Syncfusion React PDF Viewer
+description: Resolve document rendering failures in Syncfusion React PDF Viewer v23.1+ by using dataBind, validating URLs, and checking CORS and CSP.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Document loading issues in version 23.1 or newer
+# Resolve Document Loading Issues in Syncfusion Version 23.1 or Later
 
 If a PDF does not render in the viewer after upgrading to v23.1 or newer, use the checklist below to identify and resolve common causes. The most frequent fix is calling `dataBind()` before `load()` so data binding is initialized correctly in the newer lifecycle.
 

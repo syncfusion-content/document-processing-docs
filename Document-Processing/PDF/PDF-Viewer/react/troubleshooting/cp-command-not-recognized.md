@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Troubleshoot "'cp' is not recognized" on Windows for the React PDF Viewer
-description: Use these Windows-native alternatives to Unix `cp` when copying ej2-pdfviewer-lib assets for the React PDF Viewer: examples for CMD (xcopy) and PowerShell (Copy-Item).
+title: Troubleshoot 'cp' Not Recognized in Syncfusion React PDF Viewer
+description: Use Windows-native alternatives to Unix cp for copying React PDF Viewer assets, with examples using xcopy in CMD and Copy-Item in PowerShell.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -30,7 +30,7 @@ Notes:
 
 For cross-platform scripts in `package.json`, consider tools such as `shx` or `copyfiles` to avoid OS-specific commands.
 
-## See also
+# See also
 
 - [Why manual copy from node_modules is required in the React PDF Viewer](./troubleshooting)
 - [Getting started with the React Standalone PDF Viewer](../getting-started)

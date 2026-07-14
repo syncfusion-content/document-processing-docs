@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Why must files be manually copied from node_modules in the React PDF Viewer?
-description: Understand why certain lazy-loaded assets from ej2-pdfviewer-lib must be copied from node_modules when not using a bundler, and how to reference them from the PDF Viewer.
+title: Why Syncfusion React PDF Viewer Requires Manual File Copy
+description: Learn why ej2-pdfviewer-lib assets must be copied from node_modules without a bundler and how to reference them in Syncfusion React PDF Viewer.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
