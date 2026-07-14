@@ -28,14 +28,14 @@ function deleteAnnotations() {
 
 To remove a specific annotation, use the deleteAnnotationById method to target an annotation by its id.
 
-Example: Delete a specific annotation by id
+Example: Delete a specific annotation by ID
 
 ```html
-<button onclick="deleteAnnotationbyId()">Delete Annotation by ID</button>
+<button onclick="deleteAnnotationById()">Delete Annotation by ID</button>
 
 <script>
 // Delete an annotation by id
-function deleteAnnotationbyId() {
+function deleteAnnotationById() {
     var viewer = document.getElementById("container").ej2_instances[0];
     if (viewer.annotationCollection && viewer.annotationCollection.length > 0) {
         viewer.annotationModule.deleteAnnotationById(viewer.annotationCollection[0].annotationId);
