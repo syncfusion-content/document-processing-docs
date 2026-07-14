@@ -10,15 +10,15 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 # Edit Form Fields in .NET MAUI PDF Viewer (SfPdfViewer)
 
-The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to programmatically set, modify, and read values for all supported form field types. Use the [FormFields](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FormFields) collection to retrieve fields by name and cast them to the appropriate type before modifying.
+The [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to programmatically set, modify, and read values for all supported form field types. Use the [FormFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FormFields) collection to retrieve fields by name and cast them to the appropriate type before modifying.
 
 ## Editing form fields programmatically
 
-All form field edits shown below should be placed in your page's code-behind (`MainPage.xaml.cs`). The document must be fully loaded before accessing [FormFields](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FormFields) — call these from the [DocumentLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoaded) event handler or a button click handler after the document is open.
+All form field edits shown below should be placed in your page's code-behind (`MainPage.xaml.cs`). The document must be fully loaded before accessing [FormFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FormFields) — call these from the [DocumentLoaded](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoaded) event handler or a button click handler after the document is open.
 
 ### Editing text form fields
 
-A text form field can be modified using the [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TextFormField.html#Syncfusion_Maui_PdfViewer_TextFormField_Text) property. The following code snippet illustrates retrieving a text form field named "name" from the PDF Viewer.
+A text form field can be modified using the [Text](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.TextFormField.html#Syncfusion_Maui_PdfViewer_TextFormField_Text) property. The following code snippet illustrates retrieving a text form field named "name" from the PDF Viewer.
 
 {% tabs %}
 {% highlight C# tabtitle="MainPage.xaml.cs" %}
@@ -35,7 +35,7 @@ if (formField is TextFormField nameTextBox)
 
 ### Editing checkbox form fields
 
-By modifying the [IsChecked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.CheckboxFormField.html#Syncfusion_Maui_PdfViewer_CheckboxFormField_IsChecked) property, the checkbox field can be checked or unchecked programmatically. The following code snippet illustrates retrieving a checkbox form field named "newsletter" from the PDF Viewer. 
+By modifying the [IsChecked](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.CheckboxFormField.html#Syncfusion_Maui_PdfViewer_CheckboxFormField_IsChecked) property, the checkbox field can be checked or unchecked programmatically. The following code snippet illustrates retrieving a checkbox form field named "newsletter" from the PDF Viewer. 
 
 {% tabs %}
 {% highlight C# %}
@@ -53,7 +53,7 @@ if (formField is CheckboxFormField checkBox)
 
 ### Editing combo box form fields
 
-The [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ComboBoxFormField.html#Syncfusion_Maui_PdfViewer_ComboBoxFormField_SelectedItem) property can be used to programmatically choose an item from the combo box. The [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ComboBoxFormField.html#Syncfusion_Maui_PdfViewer_ComboBoxFormField_SelectedItem) should be one of the values from the [ComboBoxFormField.Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ComboBoxFormField.html#Syncfusion_Maui_PdfViewer_ComboBoxFormField_Items) array. The following code snippet illustrates retrieving a combobox form field named "state" from the PDF Viewer.  
+The [SelectedItem](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.ComboBoxFormField.html#Syncfusion_Maui_PdfViewer_ComboBoxFormField_SelectedItem) property can be used to programmatically choose an item from the combo box. The [SelectedItem](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.ComboBoxFormField.html#Syncfusion_Maui_PdfViewer_ComboBoxFormField_SelectedItem) should be one of the values from the [ComboBoxFormField.Items](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.ComboBoxFormField.html#Syncfusion_Maui_PdfViewer_ComboBoxFormField_Items) array. The following code snippet illustrates retrieving a combobox form field named "state" from the PDF Viewer.  
 
 {% tabs %}
 {% highlight C# %}
@@ -71,7 +71,7 @@ if (formField is ComboBoxFormField comboBox)
 
 ### Editing list box form fields
 
-The [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ListBoxFormField.html#Syncfusion_Maui_PdfViewer_ListBoxFormField_SelectedItems) property can be used to programmatically choose an item from the list box. The [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ListBoxFormField.html#Syncfusion_Maui_PdfViewer_ListBoxFormField_SelectedItems) should contain only the values from the [ListBoxFormFields.Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ListBoxFormField.html#Syncfusion_Maui_PdfViewer_ListBoxFormField_Items) array. One or more selections are supported by the list box. The below code snippet illustrates modifying a single-select list box form field named "courses" from the PDF Viewer.
+The [SelectedItems](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.ListBoxFormField.html#Syncfusion_Maui_PdfViewer_ListBoxFormField_SelectedItems) property can be used to programmatically choose an item from the list box. The [SelectedItems](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.ListBoxFormField.html#Syncfusion_Maui_PdfViewer_ListBoxFormField_SelectedItems) should contain only the values from the [ListBoxFormFields.Items](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.ListBoxFormField.html#Syncfusion_Maui_PdfViewer_ListBoxFormField_Items) array. One or more selections are supported by the list box. The below code snippet illustrates modifying a single-select list box form field named "courses" from the PDF Viewer.
 
 {% tabs %}
 {% highlight C# %}
@@ -106,7 +106,7 @@ if (formField is ListBoxFormField listBox)
 
 ### Editing radio button form fields
 
-Programmatically select an item from the radio buttons using the [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.RadioButtonFormField.html#Syncfusion_Maui_PdfViewer_RadioButtonFormField_SelectedItem) property. The [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.RadioButtonFormField.html#Syncfusion_Maui_PdfViewer_RadioButtonFormField_SelectedItem) should be one of the values from the [RadioButtonFormField.Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.RadioButtonFormField.html#Syncfusion_Maui_PdfViewer_RadioButtonFormField_Items) array. The following code snippet illustrates retrieving a radio button form field named "gender" from the PDF Viewer.
+Programmatically select an item from the radio buttons using the [SelectedItem](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.RadioButtonFormField.html#Syncfusion_Maui_PdfViewer_RadioButtonFormField_SelectedItem) property. The [SelectedItem](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.RadioButtonFormField.html#Syncfusion_Maui_PdfViewer_RadioButtonFormField_SelectedItem) should be one of the values from the [RadioButtonFormField.Items](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.RadioButtonFormField.html#Syncfusion_Maui_PdfViewer_RadioButtonFormField_Items) array. The following code snippet illustrates retrieving a radio button form field named "gender" from the PDF Viewer.
 
 {% tabs %}
 {% highlight C# %}
@@ -124,7 +124,7 @@ if (formField is RadioButtonFormField radioButton)
 
 ### Editing signature form fields
 
-You can programmatically add a signature to an unsigned signature field by creating and assigning an ink annotation to the [SignatureFormField.Signature](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SignatureFormField.html#Syncfusion_Maui_PdfViewer_SignatureFormField_Signature) property. The following code snippet illustrates retrieving a signature form field named "signature" from the PDF Viewer.
+You can programmatically add a signature to an unsigned signature field by creating and assigning an ink annotation to the [SignatureFormField.Signature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SignatureFormField.html#Syncfusion_Maui_PdfViewer_SignatureFormField_Signature) property. The following code snippet illustrates retrieving a signature form field named "signature" from the PDF Viewer.
 
 {% tabs %}
 {% highlight C# %}
@@ -143,11 +143,11 @@ if (signature != null)
 {% endhighlight %}
 {% endtabs %}
 
-The [Signature](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SignatureFormField.html#Syncfusion_Maui_PdfViewer_SignatureFormField_Signature) property is of type [InkAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.InkAnnotation.html) and it behaves like an ink annotation after signing. If the PDF document is saved, the signature will be preserved as an ink annotation in the saved document. 
+The [Signature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SignatureFormField.html#Syncfusion_Maui_PdfViewer_SignatureFormField_Signature) property is of type [InkAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.InkAnnotation.html) and it behaves like an ink annotation after signing. If the PDF document is saved, the signature will be preserved as an ink annotation in the saved document. 
 
 #### Suppressing the signature modal view
 
-The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to suppress the signature modal view and use your own UI in its place. This can be achieved by setting the `FormFieldModalViewAppearingEventArgs.Cancel` property to `true` in the [SignatureModalViewAppearing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_SignatureModalViewAppearing) event handler.
+The [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to suppress the signature modal view and use your own UI in its place. This can be achieved by setting the `FormFieldModalViewAppearingEventArgs.Cancel` property to `true` in the [SignatureModalViewAppearing](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_SignatureModalViewAppearing) event handler.
 
 The following code snippet illustrates suppressing the signature modal view and using a UI implemented in the app in its place. In this illustration, it is assumed that the signature is produced in the form of an image stream when the user completes drawing the signature in the custom dialog. When the signing is completed using the custom dialog, a stamp annotation is created and assigned as the signature of the form field.
 
@@ -186,7 +186,7 @@ Button form fields will be rendered in the PDF Viewer. The PDF Viewer supports o
 
 ## Flatten form fields only on save
 
-The [FlattenOnSave](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FormField.html#Syncfusion_Maui_PdfViewer_FormField_FlattenOnSave) property converts form fields into non-editable content only when the PDF document is saved. This means the form fields remain editable while the document is open, and are flattened (made part of the document content) during the save operation, preventing any further modification afterward.
+The [FlattenOnSave](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.FormField.html#Syncfusion_Maui_PdfViewer_FormField_FlattenOnSave) property converts form fields into non-editable content only when the PDF document is saved. This means the form fields remain editable while the document is open, and are flattened (made part of the document content) during the save operation, preventing any further modification afterward.
 
 ### Flatten specific form fields
 
@@ -248,18 +248,18 @@ This property supports dynamic changes at runtime, meaning you can enable or dis
 
 ## See Also
 
-- [Form Filling Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-overview)
-- [Form Fields Collection](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-collection)
-- [Show and Hide Form Fields](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-show-hide)
-- [Customize Form Fields](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-customization)
-- [Form Field Events](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-events)
-- [Import and Export Form Data](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-import-export)
-- [Electronic Signature](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/signature)
-- [Form Field Validation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-validation)
-- [Save a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/save-a-document)
-- [Form Fields Collection](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-collection)
-- [Show and Hide Form Fields](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-show-hide)
-- [Customize Form Fields](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-customization)
-- [Form Field Events](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-events)
-- [Import and Export Form Data](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-import-export)
-- [Electronic Signature](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/signature)
+- [Form Filling Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/document-processing/form-filling-overview)
+- [Form Fields Collection](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/document-processing/form-filling-collection)
+- [Show and Hide Form Fields](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/document-processing/form-filling-show-hide)
+- [Customize Form Fields](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/document-processing/form-filling-customization)
+- [Form Field Events](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/document-processing/form-filling-events)
+- [Import and Export Form Data](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/document-processing/form-filling-import-export)
+- [Electronic Signature](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/document-processing/signature)
+- [Form Field Validation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/document-processing/form-filling-validation)
+- [Save a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/document-processing/save-a-document)
+- [Form Fields Collection](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/document-processing/form-filling-collection)
+- [Show and Hide Form Fields](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/document-processing/form-filling-show-hide)
+- [Customize Form Fields](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/document-processing/form-filling-customization)
+- [Form Field Events](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/document-processing/form-filling-events)
+- [Import and Export Form Data](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/document-processing/form-filling-import-export)
+- [Electronic Signature](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/document-processing/signature)

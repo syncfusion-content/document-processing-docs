@@ -12,10 +12,9 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to customize the visual appearance of form fields by modifying properties on their [Widget](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Widget.html) objects. A form field can have one or more `Widget` instances (the visual representations of the field on the page). You can change the background color, foreground (text) color, border color, and border width.
 
-**Note:**
-* Appearance customizations support undo and redo.
-* Customizations cannot be applied when a form field is locked. For details, see [Lock and Unlock Form Fields](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/lock-unlock).
-* Customized colors and border width are preserved during import, export, printing, and saving. For more information, see [Import and Export Form Data](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-import-export) and [Save a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/save-a-document).
+N> * Appearance customizations support undo and redo.
+N> * Customizations cannot be applied when a form field is locked. For details, see [Lock and Unlock Form Fields](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/lock-unlock).
+N> * Customized colors and border width are preserved during import, export, printing, and saving. For more information, see [Import and Export Form Data](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-import-export) and [Save a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/save-a-document).
 
 ## Customize the background color
 
