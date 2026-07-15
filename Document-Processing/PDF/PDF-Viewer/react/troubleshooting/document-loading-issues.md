@@ -14,7 +14,7 @@ If a PDF does not render in the viewer after upgrading to v23.1 or newer, use th
 Example:
 
 {% raw %}
-```ts
+```tsx
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
