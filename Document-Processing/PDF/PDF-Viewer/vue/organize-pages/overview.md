@@ -27,8 +27,6 @@ The Organize pages panel supports the following actions:
 
 Select **Save** to overwrite the current document, or **Save As** to download a new copy with the updated page order. Changes are shown in the panel and are applied only when the user selects **Save** or **Save As**; unsaved edits are discarded if the panel is closed without saving.
 
-For a full guide to Organize pages in Vue, see the feature landing page: [Organize pages in Vue PDF Viewer](./organize-pdf).
-
 See also
 
 - [UI interactions for Organize Pages](./organize-pdf/ui-interactions-organize-page)
