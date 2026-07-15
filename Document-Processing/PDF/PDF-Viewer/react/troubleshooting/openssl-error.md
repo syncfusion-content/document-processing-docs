@@ -13,7 +13,7 @@ When running your React application with the PDF Viewer, you may encounter the *
 
 ## Solution
 
-To resolve this issue, run the following command in your terminal before starting your application:
+To resolve this issue, run the following command in the **same terminal session** in which you plan to start your application, then start the app from that same session:
 
 {% tabs %}
 {% highlight bash tabtitle="Windows (PowerShell)" %}
@@ -26,14 +26,14 @@ $env:NODE_OPTIONS = "--openssl-legacy-provider"
 set NODE_OPTIONS=--openssl-legacy-provider
 
 {% endhighlight %}
-{% highlight bash tabtitle="Mac/Linux" %}
+{% highlight bash tabtitle="macOS/Linux" %}
 
 export NODE_OPTIONS=--openssl-legacy-provider
 
 {% endhighlight %}
 {% endtabs %}
 
-After setting the environment variable, start your application:
+After setting the environment variable, start your application in the same terminal:
 
 ```bash
 npm run dev
