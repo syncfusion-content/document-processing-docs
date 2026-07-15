@@ -30,7 +30,7 @@ The **DocumentEditor** component provides a flexible foundation for creating, vi
 
 {% tabcontent TypeScript %}
 
-Add the DocumentEditor component to your application. In the `src/App.tsx` file, add the following code to initialize the component with the required services
+Add the Document Editor component to your application. In the `src/App.tsx` file, add the following code to initialize the component:
 
 ```ts
 import * as React from 'react';
@@ -143,7 +143,8 @@ N> The hosted Web API URL is for demo and evaluation purposes only. For producti
 
 {% tabcontent JavaScript %}
 
-Add the DocumentEditor component to your application. In the `src/App.jsx` file, add the following code to initialize the component with the required services
+Add the Document Editor component to your application. In the `src/App.jsx` file, add the following code to initialize the component:
+
 
 ```jsx
 import React from 'react';
