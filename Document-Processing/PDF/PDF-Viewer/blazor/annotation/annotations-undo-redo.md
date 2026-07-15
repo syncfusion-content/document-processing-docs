@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Undo and Redo Annotation in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to undo and redo annotation changes in the Syncfusion Blazor SfPdfViewer with UI and programmatic examples.
+description: Learn how to undo and redo annotation changes in the Blazor SfPdfViewer with UI and programmatic examples.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

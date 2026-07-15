@@ -146,7 +146,7 @@ This example shows how to use text inputs with buttons to interact with the load
     private SfPdfViewer2? Viewer;
     private SfTextBox? TextBox1;
     private SfTextBox? TextBox2;
-    public string DocumentPath { get; set; } = "wwwroot/pdf-succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/pdf-succinctly.pdf";
 
     private DocumentInfo Info = new();
 
@@ -208,7 +208,7 @@ This example shows how to use text inputs with buttons to interact with the load
 }
 ```
 
-## See Also
+## See also
 
 - [Blazor PDF Viewer – API Reference](https://help.syncfusion.com/cr/blazor/syncfusion.blazor.sfpdfviewer.sfpdfviewer2.html)
 - [Magnification (Zoom) in Blazor PDF Viewer](../magnification)

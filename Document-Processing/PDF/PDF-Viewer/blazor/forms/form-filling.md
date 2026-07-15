@@ -97,7 +97,7 @@ Use [`ImportFormFieldsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 @code { 
     // Reference to the SfPdfViewer2 instance
-    SfPdfViewer2 PdfViewerInstance { get; set; }
+    private SfPdfViewer2 PdfViewerInstance { get; set; }
 
     // Stream to store exported form field data in FDF format
     Stream FDFStream = new MemoryStream();

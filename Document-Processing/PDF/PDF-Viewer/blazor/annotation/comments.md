@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Comments in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to add, edit, and manage comments and replies in the Syncfusion Blazor SfPdfViewer component.
+description: Learn how to add, edit, and manage comments and replies efficiently within the Blazor SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

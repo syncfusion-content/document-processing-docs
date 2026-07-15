@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Free text annotations in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to add, edit, and delete free text annotations in the Syncfusion Blazor SfPdfViewer component, including default settings, APIs, and custom font.
+description: Learn how to add, edit, and delete free text annotations in the Blazor SfPdfViewer component, including default settings, APIs, and custom font.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

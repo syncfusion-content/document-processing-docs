@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor PDF Viewer Component in WASM | Syncfusion
-description: Learn how to get started with the Syncfusion Blazor SfPdfViewer component in a Blazor WebAssembly (WASM) app.
+description: Learn how to get started with the Blazor SfPdfViewer component in a Blazor WebAssembly (WASM) app.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

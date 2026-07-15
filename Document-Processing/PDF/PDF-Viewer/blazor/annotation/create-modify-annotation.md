@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Create and modify annotations in Blazor PDF Viewer | Syncfusion
-description: Learn how to create and modify annotations in Syncfusion Blazor PDF Viewer with UI and programmatic examples, plus quick links to all annotation types.
+description: Learn how to create and modify annotations in Blazor PDF Viewer with UI and programmatic examples, plus quick links to all annotation types.
 platform: document-processing
-control: PDF Viewer
+control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
 ---

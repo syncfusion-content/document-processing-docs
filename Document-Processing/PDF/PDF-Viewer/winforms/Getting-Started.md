@@ -82,15 +82,15 @@ WinForms PdfViewer control can be added to an application either through the Win
 {% tabcontents %}
 {% tabcontent Via Designer %}
 
-1. Open your form in the designer. Add the Syncfusion<sup>&reg;</sup>; controls to your .NET toolbox in Visual Studio if you haven't done so already (the install would have automatically done this unless you selected not to complete toolbox integration during installation).
+1.Open your form in the designer. Add the Syncfusion<sup>&reg;</sup>; controls to your .NET toolbox in Visual Studio if you haven't done so already (the install would have automatically done this unless you selected not to complete toolbox integration during installation).
    
    ![Windows forms pdfviewer drag and drop from toolbox](Getting-Started_images/Getting-Started_img1.png)
 
-2. Drag the PdfViewerControl from the toolbox onto the form. Appearance and behavior related aspects of the PdfViewerControl can be controlled by setting the appropriate properties through the properties grid. 
+2.Drag the PdfViewerControl from the toolbox onto the form. Appearance and behavior related aspects of the PdfViewerControl can be controlled by setting the appropriate properties through the properties grid. 
 
    ![Windows forms pdfviewer displays properties window of control](Getting-Started_images/Getting-Started_img2.png)
  
-3. This will add the instance 'pdfViewerControl1' to the Designer.cs file. The PDF can be loaded in the Form1.cs file using the [Load](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_Forms_PdfViewer_PdfViewerControl_Load_System_String_) method. 
+3.This will add the instance 'pdfViewerControl1' to the Designer.cs file. The PDF can be loaded in the Form1.cs file using the [Load](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_Forms_PdfViewer_PdfViewerControl_Load_System_String_) method. 
 
 	{% tabs %}
 	{% highlight c# tabtitle="C#" %}
@@ -112,7 +112,7 @@ WinForms PdfViewer control can be added to an application either through the Win
 
 	{% tabcontent Via Coding %}
 
-1. Add Syncfusion.Windows.Forms.PdfViewer namespace in Form1.cs.
+1.Add Syncfusion.Windows.Forms.PdfViewer namespace in Form1.cs.
 
 
 	{% tabs %}
@@ -129,7 +129,7 @@ WinForms PdfViewer control can be added to an application either through the Win
 	{% endtabs %}
 
 
-2. Create a PdfViewerControl instance and load the PDF inside Constructor in Form1.cs. Also place the sample PDF document in the project folder.
+2.Create a PdfViewerControl instance and load the PDF inside Constructor in Form1.cs. Also place the sample PDF document in the project folder.
 
 	{% tabs %}
 	{% highlight c# tabtitle="C#" %}
