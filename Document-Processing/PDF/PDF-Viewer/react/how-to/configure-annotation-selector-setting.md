@@ -20,33 +20,22 @@ Steps to configure annotation selector settings
 
 {% raw %}
 
-```jsx
-import {
-  PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner,
-  PageOrganizer, Inject
-} from '@syncfusion/ej2-react-pdfviewer';
-import { AnnotationResizerLocation, CursorType } from '@syncfusion/ej2-react-pdfviewer';
-
-export default function App() {
-  return (
-    <PdfViewerComponent id="container" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib" style={{ 'height': '640px' }}
-        annotationSelectorSettings={{
-          selectionBorderColor: 'blue',
-          resizerBorderColor: 'red',
-          resizerFillColor: '#4070ff',
-          resizerSize: 8,
-          selectionBorderThickness: 1,
-          resizerShape: 'Circle',
-          selectorLineDashArray: [5, 6],
-          resizerLocation: AnnotationResizerLocation.Corners | AnnotationResizerLocation.Edges,
-          resizerCursorType: CursorType.grab
-        }}>
-        <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]}/>
-    </PdfViewerComponent>
-  );
-}
+```javascript
+<PdfViewerComponent id="container" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib" style={{ 'height': '640px' }}
+    annotationSelectorSettings={{
+    selectionBorderColor: 'blue',
+    resizerBorderColor: 'red',
+    resizerFillColor: '#4070ff',
+    resizerSize: 8,
+    selectionBorderThickness: 1,
+    resizerShape: 'Circle',
+    selectorLineDashArray: [5, 6],
+    resizerLocation: AnnotationResizerLocation.Corners | AnnotationResizerLocation.Edges,
+    resizerCursorType: CursorType.grab
+    }}>
+    <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner,PageOrganizer]}/>
+</PdfViewerComponent>
 ```
 {% endraw %}
 
