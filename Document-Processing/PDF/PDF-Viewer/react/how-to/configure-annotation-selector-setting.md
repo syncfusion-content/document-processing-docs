@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Configure Annotation Selector Settings in Syncfusion React PDF Viewer
+# Personalize Annotation Selection Settings in Syncfusion React PDF Viewer
 
 Use the [annotationSelectorSettings](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationSelectorSettings) property to customize the appearance and interaction behavior of the annotation selector in the React PDF Viewer UI.
 
@@ -61,7 +61,7 @@ Key properties
 - selectionBorderThickness: Specifies the thickness of the selection border.
 - resizerShape: Sets the shape of the resizer handles (for example, Circle or Square).
 - selectorLineDashArray: Specifies the dash pattern for the selector line.
-- resizerLocation: Determines where the resizers appear relative to the annotation (for example, Corners or Edges).
+- resizerLocation: Determines where the resizer appear relative to the annotation (for example, Corners or Edges).
 - resizerCursorType: Sets the cursor style when hovering over a resizer.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to)

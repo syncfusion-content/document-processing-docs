@@ -20,7 +20,7 @@ Dynamic fonts are currently used in the following scenarios:
 
 ## How Custom Fonts Work
 The custom font workflow in the PDF Viewer is as follows:
-- Place the required font files (`.ttf`, `.ttc`, or `.otf`) in the resource directory used by the viewer.
+- Place the required **TrueType Font (TTF)** files in the resource directory used by the viewer.
 - Specify the font file paths using the `customFonts` property. Paths are resolved relative to the `resourceUrl` (for relative paths) or used as-is (for absolute URLs).
 - The specified fonts become available for:
   - Rendering form field content
@@ -37,7 +37,7 @@ The custom font workflow in the PDF Viewer is as follows:
      `calibri.ttf`  
      `fallback-fonts/calibri.ttf`
    - **Absolute URL**
-     Fonts can be hosted on a server and referenced using a fully qualified URL. Ensure that the hosting server has **CORS** enabled and serves the font files with the correct MIME type (`font/ttf`, `font/ttc`, or `font/otf`).
+     Fonts can be hosted on a server and referenced using a fully qualified URL. Ensure that the hosting server has **CORS** enabled.
 
 ### Configure Custom Fonts in the PDF Viewer
 Specify the required font file paths in the `customFonts` property.
