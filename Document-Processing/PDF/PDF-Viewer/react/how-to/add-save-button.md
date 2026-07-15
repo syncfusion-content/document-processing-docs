@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add Save Button to Toolbar in React PDF Viewer
+title: Add a Save Button to the Toolbar in Syncfusion React PDF Viewer
 description: Learn how to add, show, hide, enable, and disable a custom Save button in the built-in toolbar of the React PDF Viewer component.
 control: Toolbar
 platform: document-processing
@@ -12,11 +12,11 @@ domainurl: ##DomainURL##
 
 PDF Viewer supports customizing toolbar items, including adding, showing, hiding, enabling, and disabling items.
 
-* Save button: The Save button can be defined using [CustomToolbarItemModel](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/customToolbarItemModel/) and included alongside existing items via [ToolbarSettings](https://ej2.syncfusion.com//react/documentation/api/file-manager/toolbarSettings/). Handle the click action using [`toolbarclick`](https://ej2.syncfusion.com/react/documentation/api/file-manager/toolbarClickEventArgs/).
+* Save button: The Save button can be defined using [CustomToolbarItemModel](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/customToolbarItemModel) and included alongside existing items via [ToolbarSettings](https://ej2.syncfusion.com//react/documentation/api/file-manager/toolbarSettings). Handle the click action using [`toolbarclick`](https://ej2.syncfusion.com/react/documentation/api/file-manager/toolbarClickEventArgs).
 
-* Show or hide: The Save button can be shown or hidden using [ToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/file-manager/toolbarSettings/). Predefined items are listed under [`ToolbarItem`](https://ej2.syncfusion.com/react/documentation/api/chart/toolbarItems/).
+* Show or hide: The Save button can be shown or hidden using [ToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/file-manager/toolbarSettings). Predefined items are listed under [`ToolbarItem`](https://ej2.syncfusion.com/react/documentation/api/chart/toolbarItems).
 
-* Enable or disable: The Save button can be enabled or disabled using [`enabletoolbaritem`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbar/).
+* Enable or disable: The Save button can be enabled or disabled using [`enabletoolbaritem`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbar).
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}

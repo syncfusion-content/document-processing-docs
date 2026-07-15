@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Supported PDF conformance levels | Syncfusion
-description: Learn about the supported PDF/A and PDF/X conformance levels in the React PDF Viewer component.
+title: PDF Conformance Levels Supported by Syncfusion PDF Library
+description: Learn about the PDF/A and PDF/X conformance levels supported in Syncfusion PDF tools and understand compliance options for PDF standards.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

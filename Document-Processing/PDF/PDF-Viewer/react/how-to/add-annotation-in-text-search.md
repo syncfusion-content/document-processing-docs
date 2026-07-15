@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Add Annotations via Text Search in Syncfusion React PDF Viewer
+# Create Annotations from PDF Text Search Results
 
 A concise guide that demonstrates how to add rectangle and highlight annotations to text matched by a search in the Syncfusion React PDF Viewer. The guide explains where to wire the callback and the required services.
 

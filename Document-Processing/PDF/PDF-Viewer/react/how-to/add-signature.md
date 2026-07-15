@@ -14,7 +14,7 @@ The PDF Viewer library allows adding a signature to a signature field in a loade
 
 Follow these steps
 
-1. Follow the Syncfusion [getting-started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started/) guide for React PDF Viewer.
+1. Follow the Syncfusion [getting-started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) guide for React PDF Viewer.
 2. Add the following code snippet to handle signature field clicks and set or clear the signature value.
 
 {% tabs %}
