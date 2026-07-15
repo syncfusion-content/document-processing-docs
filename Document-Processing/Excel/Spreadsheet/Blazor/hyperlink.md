@@ -270,12 +270,12 @@ This event is useful for scenarios where hyperlink behavior needs to be controll
 
 The event uses the [HyperlinkCreatingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.HyperlinkCreatingEventArgs.html) class, which includes the following properties:
 
-| Event Arguments | Description |
-|----------------|-------------|
-| Uri | Represents the hyperlink destination, which can be a web URL or an internal sheet reference in the format **"SheetName!CellReference"**. This value can be modified to redirect the hyperlink to a different location. |
-| CellAddress | Specifies the cell location where the hyperlink will be inserted. The address must be specified using A1 notation (e.g., `A1`, `B5`). |
-| DisplayText | Defines the visible text shown in the cell for the hyperlink. This can be customized to provide a user-friendly label, distinct from the actual hyperlink destination. |
-| Cancel | Indicates whether the hyperlink creation should be aborted. Setting this property to **true** prevents the hyperlink from being added, allowing for conditional validation or restriction logic. |
+| Event Arguments | Type | Description |
+|---|---|---|
+| Uri | string | Represents the hyperlink destination, which can be a web URL or an internal sheet reference in the format **"SheetName!CellReference"**. This value can be modified to redirect the hyperlink to a different location. |
+| CellAddress | string | Specifies the cell location where the hyperlink will be inserted. The address must be specified using A1 notation (e.g., `A1`, `B5`). |
+| DisplayText | string | Defines the visible text shown in the cell for the hyperlink. This can be customized to provide a user-friendly label, distinct from the actual hyperlink destination. |
+| Cancel | bool | Indicates whether the hyperlink creation should be aborted. Setting this property to **true** prevents the hyperlink from being added, allowing for conditional validation or restriction logic. |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -333,11 +333,11 @@ This event is useful for scenarios where actions need to be taken after a hyperl
 
 The [HyperlinkCreatedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.HyperlinkCreatedEventArgs.html) includes the following properties:
 
-| Event Arguments | Description |
-|----------------|-------------|
-| Uri | Represents the hyperlink destination, which can be either an external web URL (e.g., `https://example.com`) or an internal sheet reference. This value is read-only and reflects the final destination of the hyperlink. |
-| CellAddress | Specifies the cell location where the hyperlink has been inserted. The address is provided in A1 notation (e.g., `A1`, `B5`), and indicates the exact position of the hyperlink in the worksheet. This value is read-only. |
-| DisplayText | Defines the visible text shown in the cell for the hyperlink. This user-friendly label may differ from the actual hyperlink address and is useful for providing descriptive or meaningful link text. This value is read-only. |
+| Event Arguments | Type | Description |
+|---|---|---|
+| Uri | string | Represents the hyperlink destination, which can be either an external web URL (e.g., `https://example.com`) or an internal sheet reference. This value is read-only and reflects the final destination of the hyperlink. |
+| CellAddress | string | Specifies the cell location where the hyperlink has been inserted. The address is provided in A1 notation (e.g., `A1`, `B5`), and indicates the exact position of the hyperlink in the worksheet. This value is read-only. |
+| DisplayText | string | Defines the visible text shown in the cell for the hyperlink. This user-friendly label may differ from the actual hyperlink address and is useful for providing descriptive or meaningful link text. This value is read-only. |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -381,11 +381,11 @@ This event is designed for observing hyperlink interactions and executing custom
 
 The [HyperlinkClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.HyperlinkClickEventArgs.html) includes the following properties:
 
-| Event Arguments | Description |
-|----------------|-------------|
-| Uri | Represents the hyperlink destination, which may be an external web URL (e.g., `https://example.com`) or an internal sheet reference. This value reflects the actual navigation target of the hyperlink. This value is read-only. |
-| CellAddress | Specifies the cell location where the hyperlink resides. The address is provided in A1 notation (e.g., `A1`, `B5`), indicating the exact position of the hyperlink in the worksheet. This value is read-only. |
-| DisplayText | Defines the visible text shown in the cell for the hyperlink. This user-friendly label may differ from the actual hyperlink address and is useful for identifying the link's purpose or context. This value is read-only. |
+| Event Arguments | Type | Description |
+|---|---|---|
+| Uri | string | Represents the hyperlink destination, which may be an external web URL (e.g., `https://example.com`) or an internal sheet reference. This value reflects the actual navigation target of the hyperlink. This value is read-only. |
+| CellAddress | string | Specifies the cell location where the hyperlink resides. The address is provided in A1 notation (e.g., `A1`, `B5`), indicating the exact position of the hyperlink in the worksheet. This value is read-only. |
+| DisplayText | string | Defines the visible text shown in the cell for the hyperlink. This user-friendly label may differ from the actual hyperlink address and is useful for identifying the link's purpose or context. This value is read-only. |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

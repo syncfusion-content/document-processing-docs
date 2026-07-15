@@ -549,11 +549,11 @@ This event is useful for monitoring clipboard activities, preventing sensitive d
 
 [CutCopyActionBeginEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.CutCopyActionBeginEventArgs.html) includes the following properties:
 
-| Event Arguments | Description |
-|----------------|-------------|
-| ClipboardAction | Specifies the type of clipboard operation in progress. Returns a value from the [ClipboardAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.ClipboardAction.html) enumeration, such as **ClipboardAction.Cut** or **ClipboardAction.Copy**. |
-| CopiedRange | Represents the full address of the cell range involved in the clipboard operation. Includes the worksheet name and range in A1 notation (e.g., **"Sheet1!A1:B5"**). |
-| Cancel | Indicates whether the clipboard operation should be cancelled. Set to **true** to prevent the cut or copy action from proceeding. |
+| Event Arguments | Type | Description |
+|---|---|---|
+| ClipboardAction | string | Represents the clipboard action type. Values can be `Copy` or `Cut`. |
+| CopiedRange | string | Represents the full address of the cell range involved in the clipboard operation. Includes the worksheet name and range in A1 notation (e.g., **"Sheet1!A1:B5"**). |
+| Cancel | bool | Indicates whether the clipboard operation should be cancelled. Set to **true** to prevent the cut or copy action from proceeding. |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -593,14 +593,14 @@ This event is applicable in scenarios that require control over paste operations
 
 **Event Arguments**
 
-[PastingEventArgs]([Pasting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.PastingEventArgs.html)) includes the following properties:
+[PastingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.PastingEventArgs.html) includes the following properties:
 
-| Event Arguments | Description |
-|----------------|-------------|
-| ExternalClipboardData | An array of strings containing raw text data from external sources (like Excel or Google Sheets), with each element representing a row of data. Set to **null** when copying from within the workbook. |
-| CopiedRange | A string in the format **"SheetName!Range"** (e.g., **"Sheet1!A1:A10"**) representing the source location of the copied or cut content. Set to **null** when pasting external content. |
-| PasteRange | A string in the format **"SheetName!Range"** specifying the target cell range where content will be pasted. |
-| Cancel | A boolean value that can be set to **true** to prevent the paste operation, allowing event handlers to control the paste behavior. The default value is **false**. |
+| Event Arguments | Type | Description |
+|---|---|---|
+| ExternalClipboardData | string array | An array of strings containing raw text data from external sources (like Excel or Google Sheets), with each element representing a row of data. Set to **null** when copying from within the workbook. |
+| CopiedRange | string | A string in the format **"SheetName!Range"** (e.g., **"Sheet1!A1:A10"**) representing the source location of the copied or cut content. Set to **null** when pasting external content. |
+| PasteRange | string | A string in the format **"SheetName!Range"** specifying the target cell range where content will be pasted. |
+| Cancel | bool | A boolean value that can be set to **true** to prevent the paste operation, allowing event handlers to control the paste behavior. The default value is **false**. |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
