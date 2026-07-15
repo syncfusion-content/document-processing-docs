@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Load document after resources Loaded React PDF Viewer | Syncfusion
+title: Load a document after resources are loaded in React PDF Viewer | Syncfusion
 description: Learn how to load a PDF only after assets are ready in the Syncfusion React PDF Viewer (Standalone) using the resourcesLoaded event.
 platform: document-processing
-control: PDF Viewer 
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
 # Load a PDF only after PDFium resources are ready
 
-When using the Standalone PDF Viewer, the component downloads the PDFium runtime assets (scripts/wasm) from the path specified in `resourceUrl`. Attempting to load a document before those assets are available can cause errors. Use the `resourcesLoaded` event to defer document loading until all required assets are ready.
+When using the Standalone PDF Viewer, the component downloads the PDFium runtime assets (scripts/wasm) from the path specified in `resourceUrl`. Calling `load()` before those assets are ready can fail with a "PDFium not initialized" error or silently leave the viewer blank. Use the `resourcesLoaded` event to defer document loading until all required assets are ready.
 
 ## When does resourcesLoaded trigger?
 
-The resourcesLoaded event fires once the viewer finishes loading all required PDFium assets. At this point, it is safe to call the load method to open a document (by URL or Base64).
+The `resourcesLoaded` event fires once the viewer finishes loading all required PDFium assets. At this point, it is safe to call the `load` method to open a document (by URL or Base64). The event fires for the viewer's asset-load life cycle, not for every document load, so you can call `load` again later (for example, in response to a user action) without waiting for the event.
 
 ## How to load a document after resourcesLoaded
 
@@ -44,10 +44,11 @@ import {
 } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
+  // viewerRef is a stable ref; it does not need to be a useCallback dependency.
   const viewerRef = useRef(null);
 
   const onResourcesLoaded = useCallback(() => {
-    // Choose ONE of the following load options:
+    // PDFium assets are ready; it is safe to call load() now.
 
     // 1) Load by URL (recommended for your case)
     viewerRef.current?.load(
@@ -55,10 +56,8 @@ function App() {
       ''
     );
 
-    // 2) Load by Base64 (uncomment if needed)
-    // supply your Base64 string
-    // const base64 ='data:application/pdf;base64,JVBERi0xLjMNCiXi48...';
-
+    // 2) Load by Base64 (uncomment to use).
+    // const base64 = 'data:application/pdf;base64,JVBERi0xLjMNCiXi48...';
     // if (base64) {
     //   viewerRef.current?.load(base64, '');
     // }
@@ -93,7 +92,7 @@ function App() {
   );
 }
 
-// Mount (make sure you have <div id="sample"></div> in index.html)
+// Mount the app (make sure you have <div id="sample"></div> in index.html).
 const container = document.getElementById('sample');
 const root = createRoot(container);
 root.render(<App />);
@@ -103,13 +102,13 @@ root.render(<App />);
 
 ## Notes and best practices
 
-- Always set a valid resourceUrl when using the Standalone PDF Viewer. If the path is incorrect or blocked by the network, the event cannot fire.
-- Load documents inside resourcesLoaded. This guarantees the PDFium runtime is ready and prevents intermittent errors on slower networks.
-- The event fires for the viewer’s asset load life cycle, not for every document load. After it fires once, you can safely call load again later (for example, in response to user actions) without waiting for the event.
+- Always set a valid `resourceUrl` when using the Standalone PDF Viewer. If the path is incorrect, the event will not fire and `load()` will fail.
+- If the assets CDN is blocked by the network, the event will not fire. Allowlist the asset host (and the document URL host, when applicable) in CORS and CSP settings.
+- Load documents inside `resourcesLoaded` to guarantee that the PDFium runtime is ready and to prevent intermittent errors on slower networks.
 
 ## See also
 
-- [Events in React PDF Viewer](../events#resourcesloaded)
-- [Open PDF files](../open-pdf-files)
-- [Save PDF files](../save-pdf-files)
-- [Getting started](../getting-started)
+- [Events in React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/events)
+- [Open PDF files](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/open-pdf-files)
+- [Save PDF files](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/save-pdf-files)
+- [Getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started)
