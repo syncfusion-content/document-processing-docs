@@ -43,7 +43,7 @@ The following is a complete, runnable React example that hides the Download and 
 import {
     PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
     ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner,
-    PageOrganizer, Inject, Print, DownloadStartEventArgs
+    PageOrganizer, Inject, Print, DownloadStartEventArgs, PrintStartEventArgs
 } from '@syncfusion/ej2-react-pdfviewer';
 
 export default function App() {
