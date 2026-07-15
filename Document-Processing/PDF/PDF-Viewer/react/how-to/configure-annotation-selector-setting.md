@@ -36,6 +36,7 @@ Steps to configure annotation selector settings
     }}>
     <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner,PageOrganizer]}/>
 </PdfViewerComponent>
+
 ```
 {% endraw %}
 
