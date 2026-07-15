@@ -189,7 +189,7 @@ To prevent rework, validate the PDF before enabling signatures:
   ![Signature Image](../images/handwritten-sign.png)
 - **Final Approver** – Verifies requirements, then [Lock Signature](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/digitalsignature#lock-signature) to make signatures permanent and restrict further edits.
 
-N> **Implementation tip:** Use the PDF Library’s `flattenFormFields` / `flattenAnnotations` helpers when saving to make form fields and annotations permanent before the last signature.
+N> **Implementation tip:** Use the PDF Library’s `flatten` when saving to make [annotations](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/annotations#flatten-annotation) and [form fields](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/formfields#flattening-form-fields-in-a-pdf) permanent before the last signature.
 
 ### Multi‑signer patterns and iterative approvals
 - Route the document through a defined **sequence of signers**.  
