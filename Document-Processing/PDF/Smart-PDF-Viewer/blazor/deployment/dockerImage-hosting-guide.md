@@ -43,11 +43,13 @@ The following software requirements are necessary to run the document processing
 {% tabs %}
 {% highlight Dockerfile tabtitle="Dockerfile" hl_lines="2 4 6" %}
 FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS base
-RUN ln -s /lib/x86_64-linux-gnu/libdl.so.2 /lib/x86_64-linux-gnu/libdl.so
+RUN ln -s /lib/x86_64-linux-gnu/libdl-2.24.so /lib/x86_64-linux-gnu/libdl.so
 
-RUN apt-get update && apt-get install -y libgdiplus libc6-dev libx11-dev
+RUN apt-get update && apt-get install -y --allow-unauthenticated libgdiplus libc6-dev libx11-dev
 
-RUN ln -s /usr/lib/libgdiplus.so /usr/lib/gdiplus.dll
+RUN ln -s libgdiplus.so gdiplus.dll
+
+USER root
 
 WORKDIR /app
 
