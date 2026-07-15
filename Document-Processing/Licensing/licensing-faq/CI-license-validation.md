@@ -179,7 +179,7 @@ bool isValid = SyncfusionLicenseProvider.ValidateLicense(Platform.FileFormats);
 {% endhighlight %}
 {% endtabs %}
 
-N> Use the specific platform enum (`PDF`, `Word`, `Excel`, `PowerPoint`, `WordToPDF`, `ExcelToPDF`, `PowerPointToPDF`, `PDFViewer`, `WordEditor`, or `SpreadsheetEditor`) for license validation from v31.1.17 and later. `Platform.FileFormats` is not supported from v31.1.17 onwards.
+N> Use the specific platform enum (`PDF`, `Word`, `Excel`, `PowerPoint`, `WordToPDF`, `ExcelToPDF`, or `PowerPointToPDF`) for license validation from v31.1.17 and later. `Platform.FileFormats` is not supported from v31.1.17 onwards.
 
 * If the `ValidateLicense()` method returns `true`, the registered license key is valid and the build can proceed with deployment.
 
