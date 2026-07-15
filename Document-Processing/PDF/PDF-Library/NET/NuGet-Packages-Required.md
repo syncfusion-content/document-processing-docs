@@ -138,6 +138,38 @@ For advanced PDF features like compression, redaction, PDF/A conversion, image e
   </tbody>
 </table>
 
+To convert XPS documents to PDF, install the following required NuGet packages in your .NET application. 
+
+<table>
+  <thead>
+    <tr>
+      <th>Platform(s)</th>
+      <th>NuGet Package</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        ASP.NET Core (Targeting NET Core)
+        Console Application (Targeting .NET Core)
+        Blazor
+      </td>
+      <td>
+        {{'[Syncfusion.XpsToPdfConverter.Net.Core.nupkg](https://www.nuget.org/packages/Syncfusion.XpsToPdfConverter.Net.Core)'| markdownify }}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Windows UI (WinUI)
+        .NET Multi-platform App UI (.NET MAUI)
+      </td>
+      <td>
+        {{'[Syncfusion.XpsToPdfConverter.NET.nupkg](https://www.nuget.org/packages/Syncfusion.XpsToPdfConverter.NET)'| markdownify }}
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 **RETIRED PRODUCTS**
 
 <table>
@@ -154,29 +186,6 @@ For advanced PDF features like compression, redaction, PDF/A conversion, image e
       </td>
       <td>
         {{'[Syncfusion.Xamarin.Pdf.Imaging.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.Pdf.Imaging)'| markdownify }}
-      </td>
-    </tr>
-    </tbody>
-</table>
-
-### Converting XPS to PDF
-
-To convert XPS documents to PDF, install the following required NuGet packages in your .NET application. 
-
-<table>
-  <thead>
-    <tr>
-      <th>Platform(s)</th>
-      <th>NuGet Package</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        ASP.NET Core
-      </td>
-      <td>
-        {{'[Syncfusion.XpsToPdfConverter.Net.Core.nupkg](https://www.nuget.org/packages/Syncfusion.XpsToPdfConverter.Net.Core)'| markdownify }}
       </td>
     </tr>
     </tbody>
