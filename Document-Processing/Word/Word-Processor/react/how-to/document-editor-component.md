@@ -1,14 +1,14 @@
 ---
 layout: post
-title: DocumentEditorContainer vs DocumentEditor in React DOCX Editor
-description: Learn the differences between DocumentEditorContainer and DocumentEditor in the Syncfusion React DOCX Editor and understand when and how to use the DocumentEditor component for custom document editing scenarios.
+title: DocumentEditorContainer vs DocumentEditor in React | Syncfusion
+description: Learn the differences between DocumentEditorContainer and DocumentEditor in the Syncfusion React DOCX Editor and learn when to use each component.
 platform: document-processing
 control: DocumentEditor
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## DocumentEditorContainer vs DocumentEditor in React DOCX Editor
+# DocumentEditorContainer vs DocumentEditor in React DOCX Editor
 
 In this article, we explain the differences between **DocumentEditorContainer** and **DocumentEditor**, and also describe how to use the **DocumentEditor** component in the React DOCX Editor.
 
