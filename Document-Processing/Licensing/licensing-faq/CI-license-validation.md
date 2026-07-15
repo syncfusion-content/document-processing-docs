@@ -37,7 +37,15 @@ $result = & $PSScriptRoot"\LicenseKeyValidatorConsole.exe" /platform:"WordToPDF"
 Write-Host $result
 {% endhighlight %}
 
-{% highlight c# tabtitle="Before v34.1.29" %}
+{% highlight c# tabtitle="v31.1.17 to v33.2.3" %}
+# Replace the parameters with the desired platform, version, and actual license key.
+
+$result = & $PSScriptRoot"\LicenseKeyValidatorConsole.exe" /platform:"WordToPDF" /version:"31.1.17" /licensekey:"Your License Key"
+
+Write-Host $result
+{% endhighlight %}
+
+{% highlight c# tabtitle="Before v31.1.17" %}
 # Replace the parameters with the desired platform, version, and actual license key.
 
 $result = & $PSScriptRoot"\LicenseKeyValidatorConsole.exe" /platform:"FileFormats" /version:"26.2.4" /licensekey:"Your License Key"
@@ -48,7 +56,7 @@ Write-Host $result
 
 * Update the parameters in the script:
   
-  **Platform:** Set /platform:"**WordToPDF**" for v34.1.29 and later, or /platform:"**FileFormats**" for earlier versions (use the relevant Syncfusion platform as needed).
+  **Platform:** Set /platform:"**WordToPDF**" for v34.1.29 and later and v31.1.17 to v33.2.3, or /platform:"**FileFormats**" for before v31.1.17 (use the relevant Syncfusion platform as needed).
 
   **Version:** Change the value for `/version:` to the required version (for example, `26.2.4`).
 
