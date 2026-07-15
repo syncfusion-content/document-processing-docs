@@ -7,7 +7,7 @@ control: PDF viewer
 documentation: ug
 ---
 
-# Working with annotations in UWP PDF Viewer
+# Working with Annotations in UWP PDF Viewer
 
 PDF Viewer allows user to include annotations in PDF files and provides options to modify or remove the existing annotations. The supported annotations are below. 
 
@@ -32,9 +32,9 @@ PDF viewer provides the following events.
 5. AnnotationRemoved
 6. AnnotationMovedOrResized
 
-The properties of the annotation involved in the event can be obtained from the `AnnotationProperties` property of the event args parameter of each event except AnnotationMovedOrResized. Since the annotation properties are obtained from the same `AnnotationProperties` instance for all events except AnnotationMovedOrResized, only the AnnotationAdded event is illustrated below. 
+The properties of the annotation involved in an event can be obtained from the `AnnotationProperties` property of the event args parameter. This pattern is shared by all events except `AnnotationMovedOrResized`, so only the `AnnotationAdded` event is illustrated below.
 
-The properties of the included annotation can be obtained by casting the `AnnotationAddedEventArgs` parameter's AnnotationProperties property to the property of corresponding annotation type.
+To obtain properties for a specific annotation type, cast `AnnotationProperties` to the corresponding type (for example, `TextMarkupProperties`).
 
 {% highlight c# %}
 
@@ -93,7 +93,7 @@ private void PdfViewer_AnnotationAdded(object sender, AnnotationMovedOrResizedEv
 
 ## Enable and disable selection of annotations
 
-By default, PdfViewer allows the user to select the annotations by tapping on it, this action is followed by the appearance of the selector around the selected annotation. The selection of annotations can be disabled by setting `IsReadOnly` property of `AnnotationSettings` class to true. The default value of this API will be false.
+By default, the SfPdfViewer control allows users to select annotations by tapping on them, and a selector appears around the selected annotation. The selection of annotations can be disabled by setting the `IsReadOnly` property of the `AnnotationSettings` class to `true`. The default value of this property is `false`.
 
 {% highlight c# %}
 
@@ -128,7 +128,7 @@ The PDF viewer supports removing a single annotation and all the annotations in 
 
 ### Remove a selected annotation
 
-The following code snippet illustrates removing a selected annotation from the PDF document.
+The following code snippet removes a selected annotation from the PDF document.
 
 {% tabs %}
 {% highlight xaml %}
@@ -158,7 +158,7 @@ private void deleteAnnotationButton_clicked(object sender, RoutedEventArgs e)
 
 ### Remove all annotations
 
-The following code snippet illustrates removing all annotations from the PDF.
+The following code snippet removes all annotations from the PDF.
 
 {% highlight c# %}
 
@@ -179,7 +179,7 @@ var annotations = pdfViewer.AnnotationCollection;
 
 ## How to show or hide the annotations present in the PDF?
 
-Use the [`AnnotationVisibility`](https://help.syncfusion.com/cr/uwp/Syncfusion.Windows.PdfViewer.SfPdfViewerControl.html#Syncfusion_Windows_PdfViewer_SfPdfViewerControl_AnnotationVisibility) property to change the visibility of the annotations present in a PDF document. By default, the visibility of the annotation is `Visibility.Visible`.
+Use the [`AnnotationVisibility`](https://help.syncfusion.com/cr/uwp/Syncfusion.Windows.PdfViewer.SfPdfViewerControl.html#Syncfusion_Windows_PdfViewer_SfPdfViewerControl_AnnotationVisibility) property to change the visibility of the annotations present in a PDF document. By default, the visibility of annotations is `Visibility.Visible`.
 
 {% highlight c# %}
 
