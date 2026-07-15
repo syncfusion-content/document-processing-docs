@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom AI Service Integration with Syncfusion Smart PDF Viewer
-description: Learn how to use IChatInferenceService to integrate custom AI services with Syncfusion Smart PDF Viewer
+description: Learn how to use the IChatInferenceService interface to integrate a custom AI service with Syncfusion Smart PDF Viewer
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
@@ -19,6 +19,8 @@ Syncfusion Smart PDF Viewer provides built-in support for OpenAI and Azure OpenA
 The `IChatInferenceService` interface defines a simple contract for AI service integration:
 
 ```csharp
+using Syncfusion.Blazor.AI;
+
 public interface IChatInferenceService
 {
     Task<string> GenerateResponseAsync(ChatParameters options);
@@ -50,21 +52,21 @@ using Syncfusion.Blazor.AI;
 builder.Services.AddSingleton<IChatInferenceService, YourCustomService>();
 ```
 
-## Handling Error in Custom AI Service
+## Handling Errors in a Custom AI Service
 
-Because a custom AI service operates independently of the built-in providers, error popups must be handled at the sample level. Capture errors with try-catch in the request/response flow, propagate the message to the Smart PDF Viewer component, and display it in a dialog to mirror the built-in behavior. For production scenarios, surface user-friendly messages while logging technical details.
+Because a custom AI service operates independently of the built-in providers, error popups must be handled at the sample level. Capture errors with try-catch in the request/response flow. Propagate the message to the Smart PDF Viewer component, and display it in a dialog to mirror the built-in behavior. For production scenarios, surface user-friendly messages while logging technical details.
 
-### Capture Error in CustomService
+### Capture Errors in the Custom Service
 
 Use try-catch to capture exceptions during request creation or response handling. Assign the message to the `DialogMessage` property and raise `OnDialogOpen` to notify listening components to render the dialog. Consider mapping low-level exceptions to localized, user-friendly text.
 
-## Step 1: Create a ErrorDialog Service
+## Step 1: Create an ErrorDialogService
 
-1. Create a new class file named ErrorDialogService.cs in the project.
+1. Create a new class file named `ErrorDialogService.cs` in the project's root folder.
 2. Add the following implementation:
 
-```cs
-public class ErrorDialogService 
+```csharp
+public class ErrorDialogService
 {
     public event Action OnDialogOpen;
 
@@ -76,7 +78,10 @@ public class ErrorDialogService
     }
 }
 ```
-## Step 2: Add the ErrorDialogService in MyCustomService class
+## Step 2: Add the ErrorDialogService to the MyCustomService class
+
+1. Open the `MyCustomService.cs` file that implements `IChatInferenceService`. If you do not have one yet, see the [Gemini](gemini-service) or [Groq](groq-service) examples for a full implementation.
+2. Add the `ErrorDialogService` dependency and update the `GenerateResponseAsync` method as shown:
 
 {% tabs %}
 {% highlight c# tabtitle="~/MyCustomService.cs" hl_lines="1 3 6 18 19 20" %}
@@ -108,7 +113,7 @@ public class ErrorDialogService
 {% endtabs %}
 
 
-### Step 3: Configure the Dialog Service
+## Step 3: Configure the Dialog Service
 
 Configure services in `Program.cs` to enable error display when a request or response to the custom AI service fails. This setup ensures any errors encountered during communication can be surfaced via a dialog component.
 
@@ -126,7 +131,9 @@ builder.Services.AddScoped<IChatInferenceService, MyCustomService>(sp =>
 {% endhighlight %}
 {% endtabs %}
 
-### step 4: Add the SfDialogProvider in the **~Pages/Home.razor** file.
+## Step 4: Add the SfDialogProvider in **~Pages/Home.razor** file.
+
+Add `@using Syncfusion.Blazor.Popups` to `~/_Imports.razor` so the dialog types resolve, then update `~/Pages/Home.razor`:
 
 {% tabs %}
 {% highlight razor tabtitle="~/Home.razor" %}
@@ -139,11 +146,11 @@ builder.Services.AddScoped<IChatInferenceService, MyCustomService>(sp =>
 {% endhighlight %}
 {% endtabs %}
 
-### Step 5: Show the Error Dialog
+## Step 5: Show the Error Dialog
 
-In Smart PDF Viewer, error messages are displayed using `SfDialogService`. The component subscribes to `OnDialogOpen` from the custom service and, when triggered, `OpenDialog` computes a dialog size based on message length and shows it. The subscription is disposed when the component is no longer in use.
+In the Smart PDF Viewer, error messages are displayed using `SfDialogService`. The page subscribes to `OnDialogOpen` from the custom service. When the event fires, the `OpenDialog` method computes a dialog size based on message length and shows the alert. The subscription is disposed when the component is no longer in use.
 
-1. Create a new class file named Home.razor.cs by right-clicking the Pages folder, then selecting Add → Class.
+1. Create a new class file named `Home.razor.cs` by right-clicking the `Pages` folder, then selecting **Add → Class**.
 2. Add the following implementation:
 
 {% tabs %}
@@ -206,5 +213,6 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pd
 
 ## See also
 
+* [DeepSeek AI Service in Blazor Smart PDF Viewer](./deepseek-service)
 * [Gemini AI Service in Blazor Smart PDF Viewer](./gemini-service)
 * [Groq AI Service in Blazor Smart PDF Viewer](./groq-service)

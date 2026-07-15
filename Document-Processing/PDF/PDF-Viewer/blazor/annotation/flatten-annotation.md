@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Flatten Annotations in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to flatten annotations and form fields before saving a PDF in the Syncfusion Blazor SfPdfViewer.
+description: Learn how to flatten PDF annotations and form fields before saving documents in the Blazor SfPdfViewer component for consistent output.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Polygon Annotation (Shape) in Blazor PDF Viewer | Syncfusion
-description: Learn how to add, edit, delete, and programmatically manage polygon annotations in the Syncfusion Blazor SfPdfViewer.
+description: Learn how to add, edit, delete, and programmatically manage polygon annotations in the Blazor SfPdfViewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -296,7 +296,7 @@ For the full list of available events and their descriptions, see [**Annotation 
 
 The PDF Viewer supports exporting and importing annotations. For details on supported formats and workflows, see [**Export and Import annotations**](../import-export-annotation).
 
-## See Also
+## See also
 
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
 - [Comments Panel](../comments)

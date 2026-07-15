@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Customize mobile Toolbar in Blazor PDF Viewer | Syncfusion
-description: Learn how to customize the toolbar for mobile devices in the Syncfusion Blazor PdfViewer and ensure smooth touch interactions.
+title: Customize mobile toolbar in Blazor PDF Viewer | Syncfusion
+description: Learn how to customize the toolbar for mobile devices in the Blazor PdfViewer and ensure smooth touch interactions.
 platform: document-processing
-control: PDF Viewer
+control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Overview
 
-This guide explains how to customize the mobile toolbar in the Syncfusion Blazor PDF Viewer, enable the desktop toolbar on mobile devices, and ensure smooth touch interactions.
+This guide explains how to customize the mobile toolbar in the Blazor PDF Viewer, enable the desktop toolbar on mobile devices, and ensure smooth touch interactions.
 
 ## Primary toolbar in mobile mode
 
@@ -29,20 +29,20 @@ The primary toolbar in mobile includes the following options:
 
 ### Reorder mobile toolbar items
 
-Use [MobileToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_MobileToolbarItems) to control the display order. The toolbar renders items in the order they appear in the collection.
+Use [`MobileToolbarItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_MobileToolbarItems) to control the display order. The toolbar renders items in the order they appear in the collection.
 
 {% tabs %}
-{% highlight razor tabtitle="Toolbar.razor" %}
+{% highlight razor tabtitle="MobileToolbar.razor" %}
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfPdfViewer2 Height="640px" 
-              Width="100%" 
+<SfPdfViewer2 Height="640px"
+              Width="100%"
               DocumentPath="wwwroot/Data/PDF_Succinctly.pdf">
     <PdfViewerToolbarSettings MobileToolbarItems="MobileToolbarItems"></PdfViewerToolbarSettings>
 </SfPdfViewer2>
 
 @code {
-    public List<MobileToolbarItem> MobileToolbarItems { get; set; }
+    private List<MobileToolbarItem> MobileToolbarItems { get; set; }
     
     protected override void OnInitialized()
     {
@@ -89,14 +89,14 @@ The annotation toolbar appears when annotation features are enabled and provides
 
 ### Customize annotation toolbar items in mobile
 
-Use [AnnotationToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_AnnotationToolbarItems) to configure which annotation tools are shown on mobile devices.
+Use [`AnnotationToolbarItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_AnnotationToolbarItems) to configure which annotation tools are shown on mobile devices.
 
 {% tabs %}
-{% highlight razor tabtitle="Toolbar.razor" %}
+{% highlight razor tabtitle="AnnotationToolbar.razor" %}
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfPdfViewer2 Height="640px" 
-              Width="100%" 
+<SfPdfViewer2 Height="640px"
+              Width="100%"
               DocumentPath="wwwroot/Data/PDF_Succinctly.pdf">
     <PdfViewerToolbarSettings AnnotationToolbarItems="AnnotationToolbarItems"></PdfViewerToolbarSettings>
 </SfPdfViewer2>
@@ -122,19 +122,19 @@ Use the form designer toolbar to add and configure interactive form fields in th
 * Edit helpers: Delete
 * Close
 
-![Blazor PDF Viewer primary toolbar with customized items](../images/form-designer-toolbar-mobile-view.png)
+![Blazor PDF Viewer form designer toolbar in mobile view](../images/form-designer-toolbar-mobile-view.png)
 
 ### Customize form designer toolbar items in mobile
 
-Use [FormDesignerToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_FormDesignerToolbarItems) to configure which form design tools are shown on mobile devices.
+Use [`FormDesignerToolbarItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_FormDesignerToolbarItems) to configure which form design tools are shown on mobile devices.
 
 {% tabs %}
-{% highlight razor tabtitle="Toolbar.razor" %}
+{% highlight razor tabtitle="FormDesignerToolbar.razor" %}
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 EnableFormDesigner="true"
-              Height="640px" 
-              Width="100%" 
+              Height="640px"
+              Width="100%"
               DocumentPath="wwwroot/Data/Form_Designer.pdf">
     <PdfViewerToolbarSettings FormDesignerToolbarItems="FormDesignerToolbarItems"></PdfViewerToolbarSettings>
 </SfPdfViewer2>
@@ -155,24 +155,25 @@ Use [FormDesignerToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 The redaction toolbar provides tools to mark and permanently remove sensitive content from the document. In mobile mode, it appears at the bottom of the viewer.
 
-* Redaction marks: Mark for redaction, Redact page
+* Mark for redaction
+* Redact page
 * Apply redactions: Permanently remove marked content
 * Properties: Redaction properties
 * Edit helpers: Delete
 * Close
 
-![Blazor PDF Viewer primary toolbar with customized items](../images/mobile-redaction-toolbar.png)
+![Blazor PDF Viewer redaction toolbar in mobile view](../images/mobile-redaction-toolbar.png)
 
 ### Enable redaction toolbar in mobile
 
-Show the redaction toolbar on mobile by configuring the [MobileToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_MobileToolbarItems) property.
+Show the redaction toolbar on mobile by configuring the [`MobileToolbarItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_MobileToolbarItems) property.
 
 {% tabs %}
-{% highlight razor tabtitle="Toolbar.razor" %}
+{% highlight razor tabtitle="RedactionToolbar.razor" %}
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfPdfViewer2 Height="640px" 
-              Width="100%" 
+<SfPdfViewer2 Height="640px"
+              Width="100%"
               DocumentPath="wwwroot/Data/PDF_Succinctly.pdf">
     <PdfViewerToolbarSettings MobileToolbarItems="MobileToolbarItems"></PdfViewerToolbarSettings>
 </SfPdfViewer2>
@@ -198,15 +199,15 @@ Show the redaction toolbar on mobile by configuring the [MobileToolbarItems](htt
 
 ## Enable desktop mode on mobile
 
-Enable the desktop toolbar on mobile devices with the [EnableDesktopMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableDesktopMode) API. This replaces the mobile toolbar with the desktop layout and provides access to additional actions and controls.
+Enable the desktop toolbar on mobile devices with the [`EnableDesktopMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableDesktopMode) API. This replaces the mobile toolbar with the desktop layout and provides access to additional actions and controls.
 
 {% tabs %}
-{% highlight razor tabtitle="Toolbar.razor" %}
+{% highlight razor tabtitle="DesktopMode.razor" %}
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 DocumentPath="wwwroot/Data/PDF_Succinctly.pdf"
               Height="100%"
-              Width="100%" 
+              Width="100%"
               EnableDesktopMode="true">
 </SfPdfViewer2>
 {% endhighlight %}
@@ -222,15 +223,15 @@ On mobile devices, the navigation toolbar collapses into a toggle menu to save s
 
 ## Enable modern navigation panel in mobile view
 
-On mobile devices, the navigation toolbar collapses into a toggle menu to save space. Enable the modern navigation panel by setting [EnableNavigationPanel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableNavigationPanel) to true.
+Enable the modern navigation panel by setting [`EnableNavigationPanel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableNavigationPanel) to true.
 
 {% tabs %}
-{% highlight razor tabtitle="Toolbar.razor" %}
+{% highlight razor tabtitle="NavigationPanel.razor" %}
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 DocumentPath="wwwroot/Data/PDF_Succinctly.pdf"
               Height="100%"
-              Width="100%" 
+              Width="100%"
               EnableNavigationPanel="true">
 </SfPdfViewer2>
 {% endhighlight %}
@@ -240,16 +241,16 @@ On mobile devices, the navigation toolbar collapses into a toggle menu to save s
 
 ## Enable scrolling in desktop mode with touch gestures
 
-To enable smooth scrolling of PDF documents on mobile while in desktop mode, disable text selection by setting [EnableTextSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableTextSelection) to false to allow touch panning.
+To enable smooth scrolling of PDF documents on mobile while in desktop mode, disable text selection by setting [`EnableTextSelection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableTextSelection) to false to allow touch panning.
 
 {% tabs %}
-{% highlight razor tabtitle="Toolbar.razor" %}
+{% highlight razor tabtitle="DesktopModeScrolling.razor" %}
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 DocumentPath="wwwroot/Data/PDF_Succinctly.pdf"
               Height="100%"
-              Width="100%" 
-              EnableDesktopMode="true" 
+              Width="100%"
+              EnableDesktopMode="true"
               EnableTextSelection="false">
 </SfPdfViewer2>
 {% endhighlight %}
@@ -259,9 +260,9 @@ To enable smooth scrolling of PDF documents on mobile while in desktop mode, dis
 
 ## Print option availability in mobile
 
-The Print option is not available in mobile mode by default. To use printing on mobile, enable the desktop toolbar with the [EnableDesktopMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableDesktopMode) API. Availability and behavior may vary by mobile browser.
+The Print option is not available in mobile mode by default. To use printing on mobile, enable the desktop toolbar with the [`EnableDesktopMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableDesktopMode) API. Availability and behavior may vary by mobile browser.
 
-## Related topics
+## See also
 
 - [Annotations in mobile view](../annotation/annotations-in-mobile-view)
 - [Form designer in mobile view](../form-designer/form-designer-in-mobile-view)

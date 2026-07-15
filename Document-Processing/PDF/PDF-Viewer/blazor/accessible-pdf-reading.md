@@ -16,7 +16,7 @@ This accessible PDF reading feature supports two approaches:
 2. Windows Speech Synthesis API
 
 The following demo illustrates both supported approaches:
-- [Blazor PDF Viewer example - Accessible PDF Reading](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/pdf-viewer/accessible-pdf-reading?theme=fluent2)
+- [Blazor PDF Viewer example - Accessible PDF Reading](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/accessible-pdf-reading?theme=fluent2)
 
 ## Microsoft Edge’s Screen Reader
 
@@ -27,9 +27,11 @@ Use Microsoft Edge’s built-in Read Aloud to listen to the PDF content.
 - To start from a specific page, navigate to that page and click anywhere; reading begins from the first readable text at that location.
 - To read only selected text, select the sentence or portion of text you want, then use Read Aloud to read just that selection.
 
+The following steps describe a custom Read Aloud implementation that is triggered when text is selected in the Blazor PDF Viewer.
+
 **Step 1:** Create and add a JavaScript file to the app and reference it in the head element.
 
-```cshtml
+```html
 
 <head>
     <script src="accessibility.js" type="text/javascript"></script>
@@ -217,7 +219,7 @@ function insertSrNode(div) {
     }
     return sr;
 }
-// Select SR text for screen reader - Mircosoft Reader
+// Select SR text for screen reader - Microsoft Edge’s Screen Reader
 function selectSrText(div) {
     const sr = insertSrNode(div);
     const selection = window.getSelection();
@@ -226,7 +228,7 @@ function selectSrText(div) {
     selection.removeAllRanges();
     selection.addRange(range);
 }
-// Move caret to first visible text node - Mircosoft Reader
+// Move caret to first visible text node - Microsoft Edge’s Screen Reader
 function collapseCaretToVisibleText(div) {
     const textLayer = div.querySelector('.e-pv-text-layer');
     if (textLayer) {
@@ -238,7 +240,7 @@ function collapseCaretToVisibleText(div) {
         selection.addRange(range);
     }
 }
-// Focus page for accessibility - Mircosoft Reader
+// Focus page for accessibility - Microsoft Edge’s Screen Reader
 function focusPageDiv(div) {
     if (!div) return;
     const textLayer = div.querySelector('.e-pv-text-layer');
@@ -251,7 +253,7 @@ function focusPageDiv(div) {
     selectSrText(div);
     collapseCaretToVisibleText(div);
 }
-// Wire accessibility handlers to page div - Mircosoft Reader
+// Wire accessibility handlers to page div - Microsoft Edge’s Screen Reader
 function wirePage(div) {
     if (!div || div.hasAttribute('data-a11y-init')) return;
     div.addEventListener('mousedown', () => focusPageDiv(div));
@@ -259,13 +261,13 @@ function wirePage(div) {
     div.setAttribute('data-a11y-init', 'true');
 }
 
-// Reader the selected text aloud - Mircosoft Reader
+// Read the selected text aloud - Microsoft Edge’s Screen Reader
  function readAloudText(text) {
     window.speechSynthesis.cancel();
      speakFromControls(text);
 }
 
-// Cancel speech and remove highlights - Mircosoft Reader
+// Cancel speech and remove highlights - Microsoft Edge’s Screen Reader
  function cancelReading() {
     if (window.speechSynthesis?.speaking) {
         window.speechSynthesis.cancel();
@@ -275,7 +277,7 @@ function wirePage(div) {
 {% endhighlight %}
 {% endtabs %}
 
-**Step 3:** Add the following code to the `Home.razor`
+**Step 3:** Add the following code to the `Home.razor` file.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Home.razor" %}
@@ -330,14 +332,14 @@ function wirePage(div) {
 ## Windows Speech Synthesis API
 
 Use the browser’s Windows Speech Synthesis API (speechSynthesis) to implement in-app Read Aloud functionality with custom controls. This approach:
-- Provides playback controls, including Play and Pause/Resume.
+- Provides playback controls, including Previous, Next, and Pause/Resume.
 - Reads content line by line and can continue across multiple pages.
 - Reads only the selected text when a selection is made.
 - Works on modern browsers and platforms that support the Speech Synthesis API.
 
 **Step 1:** Create and add a JavaScript file to the app and reference it in the head element.
 
-```cshtml
+```html
 
 <head>
     <script src="accessibility.js" type="text/javascript"></script>
@@ -737,7 +739,7 @@ function clearAllHighlights() {
     const speechSynth = window.speechSynthesis;
     isPaused ? speechSynth.resume() : speechSynth.pause();
 }
-// Cancel speech and remove highlights - Mircosoft Reader
+// Cancel speech and remove highlights - Windows Speech Synthesis API
  function cancelReading() {
     if (window.speechSynthesis?.speaking) {
         window.speechSynthesis.cancel();
@@ -748,7 +750,7 @@ function clearAllHighlights() {
 {% endhighlight %}
 {% endtabs %}
 
-**Step 3:** Add the following code to the `Home.razor`
+**Step 3:** Add the following code to the `Home.razor` file.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Home.razor" %}
@@ -885,7 +887,7 @@ function clearAllHighlights() {
 
     // Navigates to the next page
     [JSInvokable]
-    public async Task GoNextPage()
+    private async Task GoNextPage()
     {
         if (PdfViewer!.CurrentPageNumber == PdfViewer.PageCount)
         {
@@ -900,7 +902,7 @@ function clearAllHighlights() {
 
     // Navigates to the previous page
     [JSInvokable]
-    public async Task GoPreviousPage()
+    private async Task GoPreviousPage()
     {
         if (PdfViewer!.CurrentPageNumber == 1)
         {
@@ -923,4 +925,4 @@ function clearAllHighlights() {
 
 ## See also
 
-- [Blazor PDF Viewer example -Accessible PDF Reading](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/pdf-viewer/accessible-pdf-reading?theme=fluent2)
+- [Blazor PDF Viewer example - Accessible PDF Reading](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/accessible-pdf-reading?theme=fluent2)

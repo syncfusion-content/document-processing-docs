@@ -2,7 +2,7 @@
 layout: post
 title: Enable or disable text selection in Blazor PDF Viewer | Syncfusion
 description: Learn how to enable or disable text selection in the Blazor PDF Viewer using the EnableTextSelection property.
-control: PDF Viewer
+control: SfPdfViewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Enable or disable text selection in Blazor PDF Viewer
 
-This guide explains how to enable or disable text selection in the Syncfusion Blazor PDF Viewer using both initialization-time settings and runtime toggling.
+This guide explains how to enable or disable text selection in the Blazor PDF Viewer using both initialization-time settings and runtime toggling. Text selection is enabled by default; set `EnableTextSelection` to `false` to disable it.
 
-### Disable text selection at initialization
+## Disable or enable text selection at initialization
 
-Use the [EnableTextSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableTextSelection) property during initialization to disable or enable text selection. The following example disables the text selection during initialization.
+Use the [EnableTextSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableTextSelection) property during initialization to disable or enable text selection. The default value is `true`. The following example disables the text selection during initialization.
 
 {% tabs %}
 {% highlight razor %}
@@ -26,14 +26,14 @@ Use the [EnableTextSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.B
               EnableTextSelection="false" />
 
 @code {
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 {% endhighlight %}
 {% endtabs %}
 
-### Toggle text selection at runtime
+## Toggle text selection at runtime
 
-The [EnableTextSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableTextSelection) property can be toggled at runtime using buttons to enable or disable text selection dynamically. The following example demonstrates how to toggle text selection using button click events while also updating the [InteractionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_InteractionMode) and reloading the document.
+The [`EnableTextSelection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableTextSelection) property can be toggled at runtime using buttons to enable or disable text selection dynamically. The following example demonstrates how to toggle text selection using button click events while also updating the [`InteractionMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_InteractionMode) and reloading the document.
 
 {% tabs %}
 {% highlight razor %}
@@ -50,23 +50,23 @@ The [EnableTextSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
               @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2 Viewer;
-    public Boolean EnableTextSelection=true;
-    public InteractionMode InteractionMode=InteractionMode.TextSelection;
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private SfPdfViewer2? Viewer;
+    private bool EnableTextSelection = true;
+    private InteractionMode InteractionMode = InteractionMode.TextSelection;
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public void EnableTextSelections()
+    private async Task EnableTextSelections()
     {
-        EnableTextSelection=true;
-        InteractionMode=InteractionMode.TextSelection;
-        Viewer.LoadAsync(DocumentPath,null);
+        EnableTextSelection = true;
+        InteractionMode = InteractionMode.TextSelection;
+        await Viewer.LoadAsync(DocumentPath, null);
     }
 
-    public void DisableTextSelections()
+    private async Task DisableTextSelections()
     {
-        EnableTextSelection=false;
-         InteractionMode=InteractionMode.Pan;
-        Viewer.LoadAsync(DocumentPath,null);
+        EnableTextSelection = false;
+        InteractionMode = InteractionMode.Pan;
+        await Viewer.LoadAsync(DocumentPath, null);
     }
 }
 {% endhighlight %}

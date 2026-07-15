@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Extract Pages in Blazor PDF Viewer | Syncfusion
-description: Learn here all about Extract Pages in Organize Pages in Syncfusion Blazor PDF Viewer component and more.
+description: Learn all about extracting pages using the Organize Pages tool in the Blazor PDF Viewer component and more.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Extract pages in Blazor PDF Viewer
+# Extract Pages in Blazor PDF Viewer
 
 The Blazor PDF Viewer component provides an Extract Pages tool in the Organize Pages UI to export selected pages as a new PDF file. The Extract Pages tool is enabled by default.
 
@@ -19,7 +19,7 @@ To extract pages from the PDF document:
 1. Open the Organize Pages panel in the PDF Viewer toolbar.
 2. Select the pages you want to extract by clicking the checkboxes next to the page thumbnails.
 3. Click the **Extract Document** button in the Organize Pages toolbar.
-4. The selected pages will be downloaded as a new PDF document.
+4. The viewer downloads the selected pages as a new PDF document.
 
 ![Extract Document button](./images/Extract_Pages.gif)
 
@@ -27,7 +27,7 @@ To extract pages from the PDF document:
 
 ## Programmatic options and APIs
 
-You can control the Extract Pages experience via settings and invoke extraction through code.
+You can also extract pages through code using the following methods:
 
 ### Extract pages programmatically
 
@@ -35,6 +35,7 @@ You can extract pages programmatically using the Blazor PDF Viewer's `ExtractPag
 
 {% tabs %}
 {% highlight razor %}
+@using System.Collections.Generic
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="ExtractMethod">Extract</SfButton>
@@ -44,7 +45,7 @@ You can extract pages programmatically using the Blazor PDF Viewer's `ExtractPag
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2? Viewer;
+    private SfPdfViewer2? Viewer;
 
     private async Task ExtractMethod() {
         await Viewer?.ExtractPagesAsync([1,2]);
@@ -59,6 +60,7 @@ You can also extract pages and immediately load the extracted pages back into th
 
 {% tabs %}
 {% highlight razor %}
+@using System.Collections.Generic
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="ExtractMethodStream">Extract Stream</SfButton>
@@ -68,9 +70,9 @@ You can also extract pages and immediately load the extracted pages back into th
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2? Viewer;
-    Stream docStream;
-    
+    private SfPdfViewer2? Viewer;
+    Stream? docStream;
+
     private async Task ExtractMethodStream() {
         docStream = await Viewer?.ExtractPagesAsStreamAsync([1,2]);
         await Viewer?.LoadAsync(docStream, null);
