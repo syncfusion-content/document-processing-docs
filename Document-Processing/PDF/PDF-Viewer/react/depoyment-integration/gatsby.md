@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with React PDF Viewer in Gatsby | Syncfusion
-description: How to integrate the Syncfusion React PDF Viewer into a Gatsby site (quickstart, how-to, reference, explanation).
+description: Integrate the Syncfusion React PDF Viewer into a Gatsby site with setup, package installation, CSS imports, SSR-safe loading, and local hosting.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -63,7 +63,7 @@ Then import the stylesheet in `gatsby-browser.js` at your project root so it is 
 import './src/components/layout.css';
 ```
 
-- Use a client-only approach (Gatsby is server-side rendered). A simple and reliable pattern is to render the viewer after mount with a mounted flag. Create `src/components/pdfviewer.js` with the component below (the example also shows where to register a Syncfusion license if you have one):
+- Use a client-only approach (Gatsby is server-side rendered). A simple and reliable pattern is to render the viewer after mount with a mounted flag. Create `src/components/pdfviewer.js` with the component below. The example also shows where to register a Syncfusion license if you have one:
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -73,8 +73,8 @@ import React, { useEffect, useState } from 'react';
 import {
     PdfViewerComponent,
     Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-    BookmarkView, ThumbnailView, Print, TextSelection, TextSearch
-    , FormFields, FormDesigner, Inject
+    BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
+    FormFields, FormDesigner, Inject
 } from '@syncfusion/ej2-react-pdfviewer';
 
 export default function PdfViewer() {
@@ -95,7 +95,7 @@ export default function PdfViewer() {
                 <Inject services={[
                     Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
                     BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
-                    Magnification, FormFields, FormDesigner
+                    FormFields, FormDesigner
                 ]} />
             </PdfViewerComponent>
         </div>
