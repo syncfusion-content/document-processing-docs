@@ -124,7 +124,7 @@ WPF Spreadsheet control can be added to an application either through the design
  
 {% tabcontent Via Designer %}
 
-1. Add the theme and the [SfSkinManager](https://help.syncfusion.com/cr/wpf/Syncfusion.SfSkinManager.html) namespace to style the control correctly. Include the SfSkinManager namespace in the XAML code, declare a `Grid` root with two rows, and apply the desired theme.
+1. Add the theme and the [SfSkinManager](https://help.syncfusion.com/cr/wpf/Syncfusion.SfSkinManager.html) namespace to style the control correctly. Include the SfSkinManager namespace in the XAML code and apply the desired theme.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainWindow.xaml" %}

@@ -41,7 +41,7 @@ To add the **UWP Spreadsheet** component to the application, open the NuGet pack
 
 {% tabcontent Assemblies (.dll) %}
 
-### Add Syncfusion® UWP Spreadsheet Assemblies
+### Add Syncfusion<sup style="font-size:70%">&reg;</sup> UWP Spreadsheet Assemblies
 
 To manually add the assemblies:
 
