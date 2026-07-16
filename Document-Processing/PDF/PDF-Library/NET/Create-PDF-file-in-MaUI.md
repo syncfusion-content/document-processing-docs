@@ -8,7 +8,7 @@ documentation: UG
 
 # Create PDF file in .NET MAUI
 
-The Syncfusion<sup>&reg;</sup> [.NET MAUI PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit **PDF** documents. This library also includes functions for merging, splitting, stamping, working with forms, and securing PDF files and more. Using this library, you can create a PDF document in a .NET MAUI application.
+The [.NET MAUI PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit **PDF** documents. This library also includes functions for merging, splitting, stamping, working with forms, and securing PDF files and more. Using this library, you can create a PDF document in a .NET MAUI application.
 
 N> Our PDF library is currently supported in .NET MAUI applications on Android, iOS, and Windows platforms. It is not supported on the Mac Catalyst platform.
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Working with PdfViewerControl in Windows Forms PDF Viewer
 
-Essential&reg; [WinForms PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/winforms-pdf-viewer) can display and print PDF files and export the pages as raster images and meta files.
+Essential&reg; [WinForms PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/winforms-pdf-viewer) can display and print PDF files and export the pages as raster images and metafiles.
 
 ## Viewing PDF Files 
 
@@ -19,7 +19,7 @@ A PDF can be loaded into the WinForms PDF Viewer either through the open file bu
 {% highlight c# %}
 
 //Initialize PdfViewerControl.
-PdfViewerControl pdfViewerControl1 = new PdfViewerControl();
+PdfViewerControl pdfViewerControl1 = new PdfViewerControl();
 //Load the PDF.
 pdfViewerControl1.Load("Sample.pdf");
 
@@ -42,7 +42,7 @@ You can load an encrypted document by using the overload in the [Load](https://h
 {% highlight c# %}
 
 //Initialize PdfViewerControl.
-PdfViewerControl pdfViewerControl1 = new PdfViewerControl();
+PdfViewerControl pdfViewerControl1 = new PdfViewerControl();
 //Load the PDF.
 pdfViewerControl1.Load("Sample.pdf", "password");
 
@@ -62,7 +62,7 @@ pdfViewerControl1.Load("Sample.pdf", "password")
 
 ### Exporting pages of PDF document as raster images
 
-Essential<sup>&reg;</sup>; PdfViewerControl allows selected pages to be exported as raster images. Exporting can be done using the [ExportAsImage](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_Forms_PdfViewer_PdfViewerControl_ExportAsImage_System_Int32_) method. This option helps to convert a PDF into an image.
+Essential<sup>&reg;</sup> PdfViewerControl allows selected pages to be exported as raster images. Exporting can be done using the [ExportAsImage](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_Forms_PdfViewer_PdfViewerControl_ExportAsImage_System_Int32_) method. This option helps to convert a PDF into an image.
 
 {% tabs %}
 {% highlight c# %}
@@ -98,7 +98,7 @@ Dim image() As Bitmap = pdfViewerControl1.ExportAsImage(0, 3)
 {% endhighlight %}
 {% endtabs %}
 
-### Exporting pages of PDF document as Vector Images
+### Exporting pages of PDF document as vector images
 
 Exporting pages of PDF document as vector images can be done using the [ExportAsMetafile](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_Forms_PdfViewer_PdfViewerControl_ExportAsMetafile_System_Int32_) method. The following code sample demonstrates how a PDF document can be exported as a Metafile.
 
@@ -138,7 +138,7 @@ Dim image() As Metafile = pdfViewerControl1.ExportAsMetafile(0, 3)
 
 ## Text selection
 
-In PDF, text can be selected by clicking the mouse left button and dragging the mouse pointer over the text. 
+In a PDF, text can be selected by clicking the left mouse button and dragging the mouse pointer over the text. 
 
 ### Detecting the completion of text selection
 
@@ -161,7 +161,7 @@ private void PdfViewer_TextSelectionCompleted(object sender, TextSelectionComple
 
 ### Copying the selected text
 
-The selected text can be copied by clicking Copy from the context menu, which appears when clicking right mouse button after the text is selected.
+The selected text can be copied by clicking Copy from the context menu that appears when right-clicking after the text is selected.
 
 ![Copy Text](Working-with-PDF-Viewer_images/Working-with-PDF-Viewer_img3.png)
 

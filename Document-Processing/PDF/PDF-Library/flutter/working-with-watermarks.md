@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Watermarks in Flutter PDF library | Syncfusion
-description: Learn here all about add text and image Watermarks feature of Syncfusion Flutter PDF non-UI library and more.
+description: Learn all about adding text and image watermarks feature of Syncfusion Flutter PDF non-UI library and more.
 platform: document-processing
 control: PDF
 documentation: ug
@@ -13,7 +13,7 @@ The Syncfusion<sup>&reg;</sup> Flutter PDF provides support for adding watermark
 
 ## Adding text watermark to a PDF document
 
-The Syncfusion<sup>&reg;</sup> Flutter PDF allows you draw the text watermark to the PDF document using graphics elements.
+The Syncfusion<sup>&reg;</sup> Flutter PDF allows you to draw the text watermark to the PDF document using graphics elements.
 
 The following code example explains how to draw the text watermark to the PDF document.
 

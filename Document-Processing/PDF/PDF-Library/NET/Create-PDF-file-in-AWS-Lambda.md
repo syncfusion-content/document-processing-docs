@@ -9,7 +9,7 @@ keywords: aws lambda create pdf, aws edit pdf, merge, pdf form, fill form, digit
 
 # Create PDF document in AWS Lambda
 
-The [Syncfusion<sup>&reg;</sup> .NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, open and save PDF documents in AWS Lambda. 
+The [.NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, open and save PDF documents in AWS Lambda. 
 
 **Steps to create a PDF document in AWS Lambda**
 

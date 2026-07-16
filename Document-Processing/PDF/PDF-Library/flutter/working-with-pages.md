@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pages in Flutter PDF library | Syncfusion
-description: Learn here all about add, rotate pages and customize page settings feature of Syncfusion Flutter PDF non-UI library and more.
+description: Learn about adding and rotating pages and customizing page settings in the Syncfusion Flutter PDF non-UI library and more.
 platform: document-processing
 control: PDF
 documentation: ug
@@ -16,7 +16,7 @@ The following code sample explains how to add a [`PdfPage`](https://pub.dev/docu
 {% tabs %}
 {% highlight dart tabtitle="dart" %}
 
-//Create a new PDF documentation
+//Create a new PDF document
 PdfDocument document = PdfDocument();
 
 //Create a new PDF page and draw the text
@@ -46,7 +46,7 @@ PdfDocument document =
 document.pages.insert(0);
 
 //Saves the document
-File('output.pdf').writeAsBytes(await document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
@@ -62,7 +62,7 @@ You can add [`margin`](https://pub.dev/documentation/syncfusion_flutter_pdf/late
 {% tabs %}
 {% highlight dart tabtitle="dart" %}
 
-//Create a new PDF documentation
+//Create a new PDF document
 PdfDocument document = PdfDocument();
 
 //Set margin for all the pages
@@ -71,10 +71,11 @@ document.pageSettings.margins.all = 200;
 //Draw the text by adding page to the document
 document.pages.add().graphics.drawString(
     'Hello World!!!', PdfStandardFont(PdfFontFamily.helvetica, 27),
-    brush: PdfBrushes.darkBlue);
+    brush: PdfBrushes.darkBlue, bounds: const Rect.fromLTWH(170, 100, 0, 0));
 
 //Save and dispose the PDF document
-List<int> bytes =await document.save();
+List<int> bytes = await document.save();
+await File('Output.pdf').writeAsBytes(bytes);
 document.dispose();
 
 {% endhighlight %}
@@ -150,7 +151,7 @@ document.dispose();
 {% endhighlight %}
 {% endtabs %}
 
-## Get the number of pages from a PDF document
+## Getting the number of pages from a PDF document
 
 You can get the page count from the existing PDF document as shown in the following code sample.
 
@@ -232,7 +233,7 @@ document.pages.remove(page);
 document.pages.removeAt(0);
 
 //Saves the document
-File('output.pdf').writeAsBytes(await document.save());
+File('Output.pdf').writeAsBytes(await document.save());
 
 //Disposes the document
 document.dispose();
