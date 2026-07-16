@@ -8,14 +8,14 @@ documentation: UG
 
 # Create PDF document in Azure App Service on Linux
 
-The [.NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, edit PDF documents programmatically without the dependency on Adobe Acrobat. Using this library, you can **create a PDF document in Azure App Service on Linux**.
+The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, edit PDF documents programmatically without the dependency on Adobe Acrobat. Using this library, you can **create a PDF document in Azure App Service on Linux**.
 
 ## Prerequisites
 
 | Item | Details |
 | --- | --- |
 | **Development Environment** | Visual Studio 2022 or Visual Studio Code with C# extension |
-| **.NET Version** | .NET 6.0 or later |
+| **.NET Version** | .NET 8.0 or later |
 | **NuGet Package** | Syncfusion.Pdf.NET (latest version) |
 | **Azure Subscription** | Active Microsoft Azure account with resource group |
 | **Azure CLI** | Optional but recommended for deployment |
@@ -226,7 +226,9 @@ An online sample to [create a PDF document](https://document.syncfusion.com/demo
 * [Create a PDF document in .NET](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-core)
 * [Azure App Service on Linux documentation](https://learn.microsoft.com/azure/app-service/overview)
 * [Syncfusion.Pdf.Net.Core NuGet package](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/)
-* [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview) ## Next Steps
+* [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview) 
+
+## Next Steps
 
 Explore advanced PDF capabilities and Azure integration patterns:
 
