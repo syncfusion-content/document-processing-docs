@@ -60,7 +60,7 @@ my-pdf-app/
 
 ## Create a Vue 2 Project (Legacy)
 
-N> Vue 2 reached end-of-life on December 31, 2023. Use Vue 2 only for legacy projects. `@vue/cli` is in maintenance mode.
+N> Vue 2 reached end-of-life on December 31, 2023. Use Vue 2 only for legacy projects.
 
 To create a Vue 2 project using the legacy Vue CLI:
 
@@ -184,7 +184,7 @@ export default {
 
 N> This sample uses **named imports** from the npm package (`import { PdfDocument, ... } from '@syncfusion/ej2-pdf'`). The npm package does not expose a global `ej` namespace; using `ej.pdf.PdfDocument` without an import will throw `ReferenceError: ej is not defined` in a Vite or Vue CLI build. If you prefer the UMD-style global, load `ej2.min.js` from the Syncfusion CDN in `index.html` (or `public/index.html`) instead of importing the npm package.
 
-N> A click handler is used in this example, so no lifecycle hooks (`mounted`, `onMounted`) are required. The PDF classes load when the import runs at module evaluation time, which happens before any user interaction.
+N> A click handler is used in this example, so no ladditional setup is required. The PDF classes load when the import runs at module evaluation time, which happens before any user interaction.
 
 ## Code Explanation
 
@@ -223,7 +223,7 @@ Vue CLI serves the application at `http://localhost:8080`. Open this URL in a br
 
 The generated PDF contains a single page with the text "Hello World!!!" drawn at the top-left.
 
-![Vue PDF output](Getting_started_images/Vue-Output.png)
+![Vue PDF output](Getting_started_images/Output.png)
 
 ## Troubleshooting
 

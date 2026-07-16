@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create or Generate a PDF File in a Node.js Server Environment | Syncfusion
+title: Create or Generate a PDF File in a Node.js | Syncfusion
 description: Learn how to create a PDF file in a Node.js server with easy steps using the JavaScript PDF Library without depending on Adobe.
 platform: document-processing
 control: PDF
@@ -120,7 +120,7 @@ mkdir public
 {% endhighlight %}
 {% endtabs %}
 
-N> The `fetch` call uses a relative path (`/generate-pdf`) because the frontend is served by the same Express server. This avoids CORS configuration. If you host the frontend on a different origin, enable CORS in Express using the `cors` package and update the `fetch` URL to the full backend origin.
+N> The `fetch` call uses a relative path (`/generate-pdf`) because the frontend is served by the same Express server. This avoids CORS configuration. If you host the frontend on a different origin, enable CORS in Express using the `cors` package and update the `fetch` URL to the full server origin.
 
 * Include the following namespaces in `server.js`. This guide uses CommonJS (the default `npm init` setting). If you prefer ESM, add `"type": "module"` to `package.json` and use the imports shown in the **Module imports (ESM)** tab below.
 
@@ -202,7 +202,6 @@ app.listen(PORT, () => {
 - `addPage()` — appends a blank page and returns the page object.
 - `page.graphics` — exposes the `PdfGraphics` instance used to draw content.
 - `embedFont(family, size, style)` — embeds one of the standard PDF font families. Returns a `PdfFont` object.
-- `PdfFontFamily.helvetica` — selects the Helvetica standard font family.
 - `PdfFontStyle.regular` — selects the regular (non-bold, non-italic) style.
 - `new PdfBrush({ r, g, b })` — creates a solid color brush from an RGB object (each channel `0`-`255`).
 - `graphics.drawString(text, font, layoutRect, brush)` — draws the text inside the rectangle defined by `x`, `y`, `width`, and `height`.
@@ -227,7 +226,7 @@ N> If the port is already in use, stop the conflicting process or change `PORT` 
 
 Clicking **Create PDF** triggers the `fetch('/generate-pdf')` call. The server responds with the PDF bytes and the `Content-Disposition: attachment; filename=Output.pdf` header causes the browser to download the file as `Output.pdf`. The file contains a single page with the text "Hello from Frontend!" drawn at the top-left of the page.
 
-![Output PDF document](Getting_started_images/Node-Output.png)
+![Output PDF document](Getting_started_images/Output.png)
 
 N> The `Content-Disposition: inline` value can be used instead of `attachment` if you want the PDF to open in a browser tab rather than download.
 

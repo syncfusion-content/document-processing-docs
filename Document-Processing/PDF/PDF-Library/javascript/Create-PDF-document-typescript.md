@@ -23,7 +23,7 @@ Before you begin, make sure you have the following installed:
 - npm 9 or later, or Yarn 1.22 or later.
 - TypeScript 4.5 or later.
 - Code Studio, Visual Studio Code, or another code editor.
-- A browser-based bundler or dev server. This guide uses [Vite](https://vitejs.dev/), but Webpack, Parcel, or esbuild also work.
+- A browser-based bundler or dev server.
 
 To verify your Node.js and npm versions, run:
 
@@ -54,7 +54,7 @@ Initialize the TypeScript configuration:
 npx tsc --init
 ```
 
-When using Vite, the bundler handles compilation, so most `tsconfig.json` defaults are fine. The following minimal configuration is sufficient for this guide:
+The following minimal configuration is sufficient for this guide:
 
 ```json
 {
@@ -68,7 +68,7 @@ When using Vite, the bundler handles compilation, so most `tsconfig.json` defaul
 }
 ```
 
-N> Vite reads `tsconfig.json` for type-checking but performs its own bundling. The `outDir` setting is ignored by Vite; the bundled output is emitted to `dist/` automatically.
+N> The `outDir` setting is ignored by Vite; the bundled output is emitted to `dist/` automatically.
 
 ## Configure the Start Script
 
@@ -202,7 +202,7 @@ The generated PDF contains a single page with the text "Hello World!!!" drawn at
 
 By executing the program, you will get the PDF document as follows.
 
-![Output PDF document](Getting_started_images/TypeScript-Output.png)
+![Output PDF document](Getting_started_images/Output.png)
 
 N> The first run may take a few seconds while Vite optimizes dependencies. Subsequent runs are faster.
 

@@ -165,7 +165,7 @@ Vite serves the application at `http://localhost:5173`. Open this URL in a brows
 
 The generated PDF contains a single page with the text "Hello World!!!" drawn at the top-left.
 
-![Output PDF document](Getting_started_images/React-Output.png)
+![Output PDF document](Getting_started_images/Output.png)
 
 N> If you used Create-React-App instead of Vite, the run command is `npm start` and the default URL is `http://localhost:3000`.
 
