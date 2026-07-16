@@ -184,7 +184,7 @@ export default {
 
 N> This sample uses **named imports** from the npm package (`import { PdfDocument, ... } from '@syncfusion/ej2-pdf'`). The npm package does not expose a global `ej` namespace; using `ej.pdf.PdfDocument` without an import will throw `ReferenceError: ej is not defined` in a Vite or Vue CLI build. If you prefer the UMD-style global, load `ej2.min.js` from the Syncfusion CDN in `index.html` (or `public/index.html`) instead of importing the npm package.
 
-N> A click handler is used in this example, so no ladditional setup is required. The PDF classes load when the import runs at module evaluation time, which happens before any user interaction.
+N> A click handler is used in this example, so no additional setup is required. The PDF classes load when the import runs at module evaluation time, which happens before any user interaction.
 
 ## Code Explanation
 
