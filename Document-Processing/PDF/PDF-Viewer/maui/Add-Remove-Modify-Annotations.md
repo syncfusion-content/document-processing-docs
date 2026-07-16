@@ -10,15 +10,15 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 # Add, Remove, and Edit Annotations
 
-This section will review the various functions in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) for adding, removing, and  editing annotations in a PDF document. 
+This section explains the various functions in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) for adding, removing, and editing annotations in a PDF document.
 
 ## Add annotations to a PDF document
 
-This section will go through how to add annotations to a PDF document programmatically.
+This section explains how to add annotations to a PDF document programmatically.
 
 ### Add annotations programmatically 
 
-You can add a new annotation to the PDF document programmatically by creating an annotation instance and providing it as a parameter to the [AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method. The following example shows how to create an instance of a circle annotation and add it to the PDF document. Similarly, you can create and add other types of annotations. 
+You can add a new annotation to the PDF document programmatically by creating an annotation instance and providing it as a parameter to the [AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method. The following example shows how to create an instance of a circle annotation and add it to the PDF document. Similarly, you can create and add other types of annotations. For more information on the available annotation types, refer to the [Annotations Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-overview).
 
 {% tabs %}
 {% highlight c# %}
@@ -65,7 +65,7 @@ private void OnAnnotationAdded(object sender, AnnotationEventArgs e)
 
 ## Remove annotations from the PDF document
 
-This section will go through different methods of removing annotations from a PDF document.
+This section explains different methods of removing annotations from a PDF document.
 
 ### Remove a specific annotation
 
@@ -174,11 +174,11 @@ private void OnAnnotationEdited(object sender, AnnotationEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-### Adding custom information to an annotation
+## Adding custom information to an annotation
 
-The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to assign custom information to annotations. The [CustomData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_CustomData) property is utilized to store additional information about each annotation instance for reference. However, it's essential to note that these data are solely intended for reference purposes and will not be displayed in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) interface.
+The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to assign custom information to annotations. The [CustomData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_CustomData) property is utilized to store additional information about each annotation instance for reference. However, it's essential to note that this data is solely intended for reference purposes and will not be displayed in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) interface.
 
-The provided code sample illustrates how to set the [CustomData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_CustomData) property for an annotation. Within this code sample, we set the custom data to represent the creation date of the annotation.
+The provided code sample illustrates how to set the [CustomData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_CustomData) property for an annotation. In this code sample, the custom data is set to represent the creation date of the annotation.
 
 {% tabs %}
 {% highlight C# %}
@@ -196,3 +196,9 @@ private void OnAnnotationAdded(object sender, AnnotationEventArgs e)
 - [Select and Deselect Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/select-deselect-annotations)
 - [Import and Export Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/import-export-annotations)
 - [Undo and Redo](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/undo-redo)
+- [Shapes](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/shapes)
+- [Text Markups](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/text-markups)
+- [Ink](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/ink)
+- [Signature](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/signature)
+- [Stamps](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/stamps)
+- [Save a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/save-a-document)

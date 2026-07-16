@@ -9,7 +9,7 @@ keywords: Assemblies
 
 # Perform OCR with AWS Textract 
 
-The [Syncfusion<sup>&reg;</sup> .NET OCR library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/ocr-process) supports an external engine (AWS Textract) to process the OCR on image and PDF documents. 
+The [.NET OCR library](https://www.syncfusion.com/document-sdk/net-pdf-library/ocr-process) supports an external engine (AWS Textract) to process the OCR on image and PDF documents. 
 
 ## Steps to perform OCR with AWS Textract 
 
@@ -157,5 +157,3 @@ By executing the program, you will get a PDF document as follows.
 ![Output PDF](OCR-Images/Output.png)
 
 A complete working sample can be downloaded from [Github](https://github.com/SyncfusionExamples/OCR-csharp-examples/tree/master/AWS%20Textract).
-
-

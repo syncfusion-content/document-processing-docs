@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Working with PDF Redaction
 
-Redacting a PDF is the process of permanently removing sensitive or confidential information from PDF documents. Syncfusion's [.NET PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library) provides an easy way to redact PDF documents. 
+Redacting a PDF is the process of permanently removing sensitive or confidential information from PDF documents. Syncfusion's [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) provides an easy way to redact PDF documents. 
 
 N> 1.CJK text without TrueType font and complex script text cannot be redacted.
 N> 2.To redact the content from the existing PDF document in .NET Core, you need to add the [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) package from [NuGet.org](https://www.nuget.org/) as a reference in your project.

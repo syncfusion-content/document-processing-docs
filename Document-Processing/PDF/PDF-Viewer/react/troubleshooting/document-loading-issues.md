@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Fix document loading issues in v23.1+ for the React PDF Viewer component
-description: Resolve document rendering failures in v23.1 or newer by calling dataBind before load, verifying source URLs, checking CORS and CSP, and confirming network connectivity in the React PDF Viewer.
+title: Fix Document Loading Issues in Syncfusion React PDF Viewer
+description: Resolve document rendering failures in Syncfusion React PDF Viewer v23.1+ by using dataBind, validating URLs, and checking CORS and CSP.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Document loading issues in version 23.1 or newer
+# Resolve Document Loading Issues in Syncfusion Version 23.1 or Later
 
 If a PDF does not render in the viewer after upgrading to v23.1 or newer, use the checklist below to identify and resolve common causes. The most frequent fix is calling `dataBind()` before `load()` so data binding is initialized correctly in the newer lifecycle.
 
 Example:
 
 {% raw %}
-```ts
+```tsx
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
@@ -27,7 +27,8 @@ function App() {
     var viewer = document.getElementById('container').ej2_instances[0];
     viewer.serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
     viewer.dataBind();
-    viewer.load("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",null);
+    // load(url, password) - pass null for the password when the PDF is not password protected.
+    viewer.load('https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', null);
   }
   return (<div>
     <div className='control-section'>
@@ -37,13 +38,14 @@ function App() {
         ref={(scope) => { pdfviewer = scope; }}
         id="container"
         style={{ 'height': '640px' }}>
-            <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation,
-                                  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch]} />
+        <Inject services={[Toolbar, Magnification, Navigation, LinkAnnotation, Annotation,
+                           BookmarkView, ThumbnailView, Print, TextSelection, TextSearch]} />
       </PdfViewerComponent>
     </div>
   </div>
   );
 }
+
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 

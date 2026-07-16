@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create a SfPdfViewer within a popup window in Blazor | Syncfusion
-description: Learn everything about integrating the Syncfusion Blazor SfPdfViewer component within a popup window.
+description: Learn here all about how to integrating the Blazor SfPdfViewer Component within a Dialog popup window.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Create a SfPdfViewer within a popup window in Blazor
 
-For a quick preview experience, the PDF viewer can be hosted inside a dialog (popup) window. The following example demonstrates placing the SfPdfViewer component inside a Syncfusion&reg; Dialog in a Blazor application. Selecting the Open PDF Viewer button opens a modal dialog sized to its container, and the viewer loads the specified document in the Created event.
+The PDF viewer can be hosted inside a dialog (popup) window. The following example demonstrates placing the `SfPdfViewer` component inside a Syncfusion<sup style="font-size:70%">&reg;</sup> Dialog in a Blazor application. Selecting the **Open PDF Viewer** button opens a modal dialog that fills the target container, and the viewer loads the specified document in the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_Created) event.
 
 ```cshtml
 
@@ -21,7 +21,7 @@ For a quick preview experience, the PDF viewer can be hosted inside a dialog (po
 
     <SfButton @onclick="OnClick">Open PDF Viewer</SfButton>
 
-    <SfDialog @ref="@Dialog"
+    <SfDialog @ref="Dialog"
               Target="#target"
               Width="100%"
               Visible="false"
@@ -36,21 +36,21 @@ For a quick preview experience, the PDF viewer can be hosted inside a dialog (po
 </div>
 
 @code {
-    public SfPdfViewer2 Viewer { get; set; }
-    SfDialog Dialog;
+    private SfPdfViewer2 Viewer { get; set; }
+    private SfDialog Dialog = new SfDialog();
 
-    public async void OnClick(MouseEventArgs args)
+    private async Task OnClick(MouseEventArgs args)
     {
         await this.Dialog.ShowAsync();
     }
 
-    private async void Created()
+    private async Task Created()
     {
         await Viewer.LoadAsync(DocumentPath, null);
     }
 
-    public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
-    public string Header { get; set; } = "PDF Viewer";
+    private string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
+    private string Header { get; set; } = "PDF Viewer";
 }
 
 ```
@@ -60,5 +60,4 @@ For a quick preview experience, the PDF viewer can be hosted inside a dialog (po
 ## See also
 
 * [How to create SfPdfViewer Component in a Splitter Component](./how-to-create-sfpdfviewer-in-a-splitter-component)
-
-* [How to view the created PDF document](./how-to-create-sfpdfviewer)
+* [How to preview the newly created PDF document](./how-to-create-sfpdfviewer)

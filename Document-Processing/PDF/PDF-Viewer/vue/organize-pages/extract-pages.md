@@ -205,9 +205,8 @@ export default {
 
 ## See also
 
-- [Overview](../overview)
-- [UI interactions](../ui-interactions)
-- [Programmatic support](../programmatic-support)
-- [Toolbar](../toolbar)
-- [Events](../events)
-- [Mobile view](../mobile-view)
+- [Overview](./overview)
+- [Programmatic support](./programmatic-support)
+- [Toolbar](./toolbar)
+- [Events](./events)
+- [Mobile view](./mobile-view)

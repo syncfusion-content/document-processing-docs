@@ -34,6 +34,10 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Base64 string of the PDF document.
+    // Replace with the actual base64 string of your PDF.
+    const String base64 = 'YOUR_BASE64_STRING_HERE';
+
     // Pass the base64 string of the PDF document to the SyncfusionPDFViewer widget.
     return const SyncfusionPDFViewer(base64: base64);
   }
@@ -66,7 +70,7 @@ class _SyncfusionPDFViewerState extends State<SyncfusionPDFViewer> {
 
 ## Using Custom PDFSource
 
-To load a document from a base64 string, you can convert the base64 string to a [Uint8List](https://api.flutter.dev/flutter/dart-typed_data/Uint8List-class.html) using the [base64Decode](https://api.flutter.dev/flutter/dart-convert/base64Decode.html) method and pass it to the [SfPdfViewer.memory](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/SfPdfViewer.memory.html) constructor. The following code example explains the same.
+To load a document from a base64 string, you can convert the base64 string to a [Uint8List](https://api.flutter.dev/flutter/dart-typed_data/Uint8List-class.html) using the [base64Decode](https://api.flutter.dev/flutter/dart-convert/base64Decode.html) method and pass it to the SfPdfViewer constructor through a custom PDFSource implementation. The following code example explains the same.
 
 * Import the `dart:convert` package to use the [base64Decode](https://api.flutter.dev/flutter/dart-convert/base64Decode.html) method.
 
@@ -90,6 +94,10 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Base64 string of the PDF document.
+    // Replace with the actual base64 string of your PDF.
+    const String _base64 = 'YOUR_BASE64_STRING_HERE';
+
     // Pass the base64 string of the PDF document to the SyncfusionPDFViewer widget.
     return const SyncfusionPDFViewer(base64: _base64);
   }
@@ -117,7 +125,7 @@ class _SyncfusionPDFViewerState extends State<SyncfusionPDFViewer> {
 }
 
 /// Custom PDFSource implementation for loading PDF from base64 encoded string.
-class Base64PDFSource extends PDFSource {
+class Base64PDFSource extends PdfSource {
   /// Creates a new instance of Base64PDFSource with the provided base64 string.
   Base64PDFSource(this._base64);
 

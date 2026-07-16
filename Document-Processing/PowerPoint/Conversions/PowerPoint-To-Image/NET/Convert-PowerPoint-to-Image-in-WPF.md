@@ -34,7 +34,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 Step 3: Add a new button in the **MainWindow.xaml** as shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Window x:Class="Convert_PowerPoint_Presentation_to_Image.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -144,7 +144,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial se
 Step 3: Add a new button in the **MainWindow.xaml** as shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Window x:Class="Convert_PowerPoint_Presentation_to_Image.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"

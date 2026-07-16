@@ -9,7 +9,7 @@ keywords: Assemblies
 
 # Perform OCR in WPF (Windows Presentation Foundation)
 
-The [Syncfusion<sup>&reg;</sup> .NET OCR library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/ocr-process) used to extract text from scanned PDFs and images in the WPF application with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.
+The [.NET OCR library](https://www.syncfusion.com/document-sdk/net-pdf-library/ocr-process) used to extract text from scanned PDFs and images in the WPF application with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.
 
 ## Steps to perform OCR on entire PDF document in WPF
 
@@ -52,21 +52,23 @@ Step 4: Add the following code to a Button_Click to perform OCR on the entire PD
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
-
-//Initialize the OCR processor.
-using (OCRProcessor processor = new OCRProcessor())
+private void Button_Click(object sender, RoutedEventArgs e)
 {
-    //Load an existing PDF document.
-    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-    //Set the tesseract version.
-    processor.Settings.TesseractVersion = TesseractVersion.Version4_0;
-    //Set OCR language to process.
-    processor.Settings.Language = Languages.English;
-    //Process OCR by providing the PDF document.
-    processor.PerformOCR(loadedDocument);
-    //Save the OCR processed PDF document in the disk.
-    loadedDocument.Save("OCR.pdf");
-    loadedDocument.Close(true);
+    //Initialize the OCR processor.
+    using (OCRProcessor processor = new OCRProcessor())
+    {
+        //Load an existing PDF document.
+        PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+        //Set the tesseract version.
+        processor.Settings.TesseractVersion = TesseractVersion.Version4_0;
+        //Set OCR language to process.
+        processor.Settings.Language = Languages.English;
+        //Process OCR by providing the PDF document.
+        processor.PerformOCR(loadedDocument);
+        //Save the OCR processed PDF document in the disk.
+        loadedDocument.Save("OCR.pdf");
+        loadedDocument.Close(true);
+    }
 }
 
 {% endhighlight %}
@@ -77,4 +79,4 @@ By executing the program, you will get a PDF document as follows.
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/OCR-csharp-examples/tree/master/WPF).
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
+Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.

@@ -11,12 +11,12 @@ documentation: ug
 
 The built-in toolbar of SfPdfViewer includes the following zoom options:
 
-* **Zoom** **In**: Increases the zoom level (document magnification) by preset steps.
-* **Zoom** **Out**: Decreases the zoom level by preset steps.
-* **Zoom** **To**: Sets the zoom level to a specified value.
-* **Fit** **Page**: Fits the entire page within the available viewport.
-* **Fit** **Width**: Fits the page to the viewport width.
-* **Fit** **Height**: Fits the page to the viewport height.
+* **Zoom In**: Increases the zoom level (document magnification) by preset steps.
+* **Zoom Out**: Decreases the zoom level by preset steps.
+* **Zoom To**: Sets the zoom level to a specified value.
+* **Fit Page**: Fits the entire page within the available viewport.
+* **Fit Width**: Fits the page to the viewport width.
+* **Fit Height**: Fits the page to the viewport height.
 
 ![Zoom options in the Blazor SfPdfViewer](./images/magnification.png)
 
@@ -34,7 +34,7 @@ Enable or disable magnification in the default toolbar by setting the [EnableMag
               EnableMagnification="false" />
 
 @code{
-    public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
 }
 
 ```
@@ -82,37 +82,39 @@ Zoom operations can also be performed programmatically using APIs such as [ZoomI
               @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2 Viewer;
+    private SfPdfViewer2 Viewer;
     SfTextBox TextBox;
-    public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
 
-    public async void OnZoomInClick(MouseEventArgs args)
+    private async void OnZoomInClick(MouseEventArgs args)
     {
         await Viewer.ZoomInAsync();
     }
 
-    public async void OnZoomOutClick(MouseEventArgs args)
+    private async void OnZoomOutClick(MouseEventArgs args)
     {
         await Viewer.ZoomOutAsync();
     }
 
-    public async void OnFitPageClick(MouseEventArgs args)
+    private async void OnFitPageClick(MouseEventArgs args)
     {
         await Viewer.FitToPageAsync();
     }
 
-    public async void OnZoomClick(MouseEventArgs args)
+    private async void OnZoomClick(MouseEventArgs args)
     {
-        int zoomValue = int.Parse(TextBox.Value.ToString());
-        await Viewer.ZoomAsync(zoomValue);
+        if (int.TryParse(TextBox.Value, out int zoomValue))
+        {
+            await Viewer.ZoomAsync(zoomValue);
+        }
     }
 
-    public async void OnFitWidthClick(MouseEventArgs args)
+    private async void OnFitWidthClick(MouseEventArgs args)
     {
         await Viewer.FitToWidthAsync();
     }
 
-    public async void OnFitHeightClick(MouseEventArgs args) 
+    private async void OnFitHeightClick(MouseEventArgs args) 
     { 
         await Viewer.FitToHeightAsync(); 
     } 
@@ -135,8 +137,6 @@ Configure minimum and maximum zoom levels using the [MinZoomValue](https://help.
 
 Specify the zoom limits during component initialization with integer values representing percentages.
 
-N> SfPdfViewer supports zoom values from 10% to 400%.
-
 ### Basic usage of Minimum and Maximum Zoom Values
 
 ```cshtml
@@ -156,7 +156,7 @@ N> SfPdfViewer supports zoom values from 10% to 400%.
 
 ```
 
-See the following image.
+The following image shows the viewer with the configured zoom limits.
 
 ![Viewer with minimum and maximum zoom](./images/minimum-and-maximum-zoom-values.png)
 
@@ -172,7 +172,7 @@ See the following image.
 SfPdfViewer handles invalid input values as follows:
 
 * **Values below 1**: Automatically fall back to the default minimum (10)
-* **MinZoomValue > MaxZoomValue**: MaxZoomValue is adjusted to match MinZoomValue
+* **When MinZoomValue exceeds MaxZoomValue**: MaxZoomValue is adjusted to match MinZoomValue
 
 ### Dynamic zoom value configuration
 
@@ -196,34 +196,36 @@ Minimum and maximum zoom values can be changed dynamically at runtime.
 </SfPdfViewer2>
 
 @code {
-    public SfPdfViewer2? viewer;
+    private SfPdfViewer2? viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public int maxZoom = 200;
-    public int minZoom = 50;
+    private int maxZoom = 200;
+    private int minZoom = 50;
 
-    public void SetDynamicValues()
+    private void SetDynamicValues()
     {
         maxZoom = 260;
         minZoom = 25;
     }
 
-    public void SetValueBeyondLimit()
+    private void SetValueBeyondLimit()
     {
-        maxZoom = 500; // Beyond default limit
-        minZoom = 2;   // Beyond default limit
+        // Values exceed the supported 10%–400% range to demonstrate invalid input handling.
+        maxZoom = 500;
+        minZoom = 2;
     }
 
-    public void SwapMinMaxValue()
+    private void SwapMinMaxValue()
     {
-        maxZoom = 50;  // Less than minZoom
-        minZoom = 200; // Greater than maxZoom
+        // Intentionally assign an inverted range to demonstrate auto-correction behavior.
+        maxZoom = 50;
+        minZoom = 200;
     }
 }
 
 ```
 
-See the following image.
+The following image shows the dynamic runtime configuration in action.
 
 ![Dynamic runtime configuration of minimum and maximum zoom values](./images/dynamic-zoom-value-configuration.png)
 
@@ -238,9 +240,9 @@ The configured zoom limits apply to all zoom operations, including programmatic 
 
 <SfButton OnClick="OnZoomInClick">Zoom In</SfButton>
 <SfButton OnClick="OnZoomOutClick">Zoom Out</SfButton>
-<SfButton OnClick="OnFitPageClick">Fit Page</SfButton>
-<SfButton OnClick="OnFitWidthClick">Fit Width</SfButton>
-<SfButton OnClick="OnFitHeightClick">Fit Height</SfButton>
+<SfButton OnClick="OnFitPageClick">Fit To Page</SfButton>
+<SfButton OnClick="OnFitWidthClick">Fit To Width</SfButton>
+<SfButton OnClick="OnFitHeightClick">Fit To Height</SfButton>
 
 <SfPdfViewer2 @ref="viewer" 
               DocumentPath="@DocumentPath" 
@@ -251,30 +253,30 @@ The configured zoom limits apply to all zoom operations, including programmatic 
 </SfPdfViewer2>
 
 @code {
-    public SfPdfViewer2? viewer;
+    private SfPdfViewer2? viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async void OnZoomInClick()
+    private async void OnZoomInClick()
     {
         await viewer.ZoomInAsync();
     }
 
-    public async void OnZoomOutClick()
+    private async void OnZoomOutClick()
     {
         await viewer.ZoomOutAsync();
     }
 
-    public async void OnFitPageClick()
+    private async void OnFitPageClick()
     {
         await viewer.FitToPageAsync();
     }
 
-    public async void OnFitWidthClick()
+    private async void OnFitWidthClick()
     {
         await viewer.FitToWidthAsync();
     }
 
-    public async void OnFitHeightClick() 
+    private async void OnFitHeightClick() 
     { 
         await viewer.FitToHeightAsync();
     } 
@@ -282,7 +284,7 @@ The configured zoom limits apply to all zoom operations, including programmatic 
 
 ```
 
-See the following image.
+The following image shows zoom limits applied to the built-in zoom operations.
 
 ![Integration with Zoom Operations](./images/integration-with-zoom-operations.png)
 
@@ -310,13 +312,13 @@ Zoom limits work with tile rendering to improve performance at higher zoom level
 </SfPdfViewer2>
 
 @code {
-    public SfPdfViewer2? viewer;
-    public bool enableTile = false;
-    public int xValue = 3;
-    public int yValue = 3;
+    private SfPdfViewer2? viewer;
+    private bool enableTile = false;
+    private int xValue = 3;
+    private int yValue = 3;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public void EnableTileRendering()
+    private void EnableTileRendering()
     {
         enableTile = true;
     }
@@ -352,7 +354,7 @@ Use the [RestrictZoomRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 ```
 
-See the following image.
+The following image shows the viewer with RestrictZoomRequest enabled.
 
 ![RestrictZoomRequest enabled for performance-optimized zooming](./images/RestrictZoomRequest-API.png)
 

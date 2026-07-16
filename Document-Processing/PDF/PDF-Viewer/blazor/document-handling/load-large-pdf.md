@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Document Handling in Blazor PDF Viewer Component | Syncfusion
-description: Learn how to load and render large PDF files  in the Syncfusion Blazor PDF Viewer using chunk-based processing
-control: PDF Viewer
+description: Learn how to load and render large PDF files  in the Blazor PDF Viewer using chunk-based processing
+control: SfPdfViewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Load Large PDF Files in Blazor PDF Viewer
 
-This section explains how to load and render **large PDF files (up to approximately 1 GB)** efficiently using the Syncfusion Blazor PDF Viewer. It also covers the recommended configurations required to achieve stable and responsive performance while working with large documents.
+This section explains how to load and render **large PDF files (up to approximately 1 GB)** efficiently using the Blazor PDF Viewer. It also covers the recommended configurations required to achieve stable and responsive performance while working with large documents.
 
 ## Why Large PDFs Require Special Handling
 
@@ -35,8 +35,6 @@ With proper configuration, the Blazor PDF Viewer can:
 
 N> Large PDF support depends on enabling chunk-based processing (refer [EnableChunkMessages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableChunkMessages)) and proper server configuration. The actual supported size may vary based on browser memory limits, server settings, and system resources.
 
----
-
 ## Best Practices for Loading Large PDFs
 
 ### 1. Enable Chunk‑Based Processing
@@ -45,7 +43,7 @@ Chunk-based processing is **mandatory** for loading large PDF files in the Blazo
 
 Refer to the following FAQ to configure chunk-based processing:
 
-- [How to process Larges files using EnableChunkMessages](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-processing-large-files-without-increasing-maximum-message-size)
+- [How to process Large files using EnableChunkMessages](../faqs/how-to-processing-large-files-without-increasing-maximum-message-size)
 
 Ensure that:
 
@@ -53,19 +51,28 @@ Ensure that:
 - Chunk processing is enabled as documented
 - Connection buffer limits are configured correctly
 
-### 2. Load Large PDFs Using `DocumentPath`
+### 2. Load Large PDFs Using DocumentPath
 
 For large documents, it is recommended to load the PDF using the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) property.
 
 Using `DocumentPath` helps:
 
 - Initiate chunk-based requests immediately
-- Avoid loading the entire document into memory
+- Avoid buffering the entire file in client memory
 - Improve stability and loading behavior for large files
 
 This approach is suitable for PDFs hosted on servers, secured APIs, or cloud storage endpoints.
 
----
+Example usage:
+
+```cshtml
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfPdfViewer2 DocumentPath="https://your-server/large-file.pdf"
+              EnableChunkMessages="true"
+              Height="100%"
+              Width="100%" />
+```
 
 ### 3. Optimize Network and Performance Configuration
 
@@ -75,7 +82,7 @@ Proper network configuration plays a critical role in rendering large PDFs.
 
 Configuring a sufficient connection buffer size helps prevent interruptions while loading large documents:
 
-- [How to increase connection Buffer size](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-increase-connection-buffer-size)
+- [How to increase connection buffer size](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-increase-connection-buffer-size)
 
 #### Use CDN for Improved Performance
 
@@ -83,21 +90,21 @@ Using CDN resources reduces script download time and improves viewer initializat
 
 - [How to improve performance using CDN](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-improve-performance-using-cdn)
 
----
-
 ### 4. Reduce System Resource Load
 
 Rendering large PDF files also depends on available system resources.
 
-For the best experience:
+For the best experience, follow these steps:
 
-- Close unused applications
-- Minimize open browser tabs
-- Avoid running multiple heavy tasks in parallel
-- Do not open multiple large PDFs at the same time
+1. Close unused applications.
+2. Minimize open browser tabs.
+3. Avoid running multiple heavy tasks in parallel.
+4. Avoid opening multiple large PDFs at the same time.
+5. Verify that adequate system memory and CPU are available before loading the file.
 
-Ensuring adequate system memory and CPU availability helps maintain smooth rendering and interaction.
 
-## See Also
+## See also
 
+- [Load a Password-Protected PDF](./load-password-pdf)
+- [Getting started with SfPdfViewer in a Blazor Web App](../getting-started/web-app)
 - [Load and Save Sample](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save)

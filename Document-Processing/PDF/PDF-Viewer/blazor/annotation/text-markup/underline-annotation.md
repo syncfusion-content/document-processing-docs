@@ -1,19 +1,19 @@
 ---
 layout: post
 title: Underline Text in Blazor PDF Viewer | Syncfusion
-description: Learn how to enable, apply, customize, and manage Underline annotations in the Syncfusion Blazor SfPdfViewer.
+description: Learn how to enable, apply, customize, and manage Underline annotations in the Blazor SfPdfViewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Underline Annotation in Blazor SfPdfViewer
+# Underline Annotation in Blazor SfPdfViewer Component
 
-This guide explains how to **enable**, **apply**, **customize**, and **manage** *Underline* text markup annotations in the Syncfusion **Blazor SfPdfViewer**. You can underline text using the toolbar or context menu, programmatically invoke underline mode, customize default settings, handle events, and export the PDF with annotations.
+This guide explains how to **enable**, **apply**, **customize**, and **manage** *Underline* text markup annotations in the Syncfusion **Blazor SfPdfViewer** component.
 
-## Enable Underline in the Viewer
+## Enable Underline Annotation in the Viewer
 
-The SfPdfViewer component supports underlining text in PDF documents by default. To enable the annotation toolbar and underlining functionality, simply add the SfPdfViewer component to your Blazor page:
+Underline is enabled by default. To use the annotation toolbar, add the `SfPdfViewer` component to your Blazor page:
 
 ```cshtml
 @using Syncfusion.Blazor.SfPdfViewer
@@ -25,251 +25,12 @@ The SfPdfViewer component supports underlining text in PDF documents by default.
 
 @code {
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-}
-```
-
-## Add Underline Annotation
-
-### Add Underline Using the Toolbar
-
-1. Click the **Edit Annotation** button in the SfPdfViewer toolbar. A toolbar appears below it.
-2. Select the **Underline** button in the annotation toolbar to enable underline mode.
-3. Select the text to add the underline annotation.
-   - Alternatively, select the text first and then click **Underline** to apply it.
-   - If **Pan Mode** is active, the viewer automatically switches to **Text Selection** mode.
-
-![Underline tool](../../images/blazor-pdfviewer-underline-text.png)
-
-### Apply Underline Using Context Menu
-
-Right-click a selected text region → select **Underline**.
-
-![Underline Context](../../images/blazor-pdfviewer-underline-context-menu.png)
-
-### Enable Underline Mode
-
-Switch the viewer into underline mode using `SetAnnotationModeAsync()`.
-
-```cshtml
-@using Syncfusion.Blazor.SfPdfViewer
-@using Syncfusion.Blazor.Buttons
-
-<SfButton OnClick="OnClick">Underline</SfButton>
-<SfPdfViewer2 DocumentPath="@DocumentPath"
-              @ref="viewer"
-              Width="100%"
-              Height="100%">
-</SfPdfViewer2>
-
-@code {
-    SfPdfViewer2 viewer;
-
-    public async void OnClick(MouseEventArgs args)
-    {
-        await viewer.SetAnnotationModeAsync(AnnotationType.Underline);
-    }
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-}
-```
-
-#### Exit Underline Mode
-
-Switch back to normal mode using:
-
-```cshtml
-public async void DisableUnderlineMode()
-{
-    await viewer.SetAnnotationModeAsync(AnnotationType.None);
-}
-```
-
-### Add Underline Programmatically
-
-Use [`AddAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) to insert an underline at a specific location.
-
-```cshtml
-@using Syncfusion.Blazor.Buttons
-@using Syncfusion.Blazor.SfPdfViewer
-
-<SfButton OnClick="@AddUnderline">Add Underline</SfButton>
-<SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
-
-@code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-
-    public async void AddUnderline(MouseEventArgs args)
-    {
-        PdfAnnotation annotation = new PdfAnnotation();
-        annotation.Type = AnnotationType.Underline;
-        annotation.PageNumber = 0;
-        List<Bound> bounds = new List<Bound>();
-        Bound bound = new Bound();
-        bound.X = 97;
-        bound.Y = 110;
-        bound.Width = 350;
-        bound.Height = 14;
-        bounds.Add(bound);
-        annotation.Bounds = bounds;
-        await Viewer.AddAnnotationAsync(annotation);
-    }
-}
-```
-
-## Customize Underline Appearance
-
-Configure default underline settings such as **color** and **opacity** using [`UnderlineSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_UnderlineSettings).
-
-```cshtml
-@using Syncfusion.Blazor.SfPdfViewer
-
-<SfPdfViewer2 @ref="@viewer"
-              DocumentPath="@DocumentPath"
-              UnderlineSettings="@UnderlineSettings"
-              Height="100%"
-              Width="100%">
-</SfPdfViewer2>
-
-@code {
-    SfPdfViewer2 viewer;
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-
-    PdfViewerUnderlineSettings UnderlineSettings = new PdfViewerUnderlineSettings
-    {
-        Color = "#00aa00",
-        Opacity = 0.9
-    };
-}
-```
-
-N> After changing the default color and opacity using the **Edit Color** and **Edit Opacity** tools, those values become the new defaults for subsequent annotations.
-
-## Manage Underline (Edit, Delete)
-
-### Edit Underline
-
-#### Edit Underline Appearance (UI)
-
-Use the annotation toolbar:
-- **Edit Color** tool to change the underline color
-![Editing text markup color in Blazor SfPdfViewer](../../images/blazor-pdfviewer-editing-text-color.png)
-
-- **Edit Opacity** slider to adjust the transparency
-![Editing text markup Opacity in Blazor SfPdfViewer](../../images/blazor-pdfviewer-edit-text-opacity.png)
-
-#### Edit Underline Programmatically
-
-Modify an existing underline programmatically using [`EditAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_).
-
-```cshtml
-@using Syncfusion.Blazor.Buttons
-@using Syncfusion.Blazor.SfPdfViewer
-
-<SfButton OnClick="@EditUnderline">Edit Underline</SfButton>
-<SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
-
-@code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/Underline.pdf";
-
-    public async void EditUnderline(MouseEventArgs args)
-    {
-        // Get annotation collection
-        List<PdfAnnotation> annotationCollection = await Viewer.GetAnnotationsAsync();
-        // Select the annotation you want to edit
-        PdfAnnotation annotation = annotationCollection[0];
-        // Change the color of the underline annotation to blue
-        annotation.Color = "#0000ff";
-        // Change the opacity to 80% (0.8)
-        annotation.Opacity = 0.8;
-        await Viewer.EditAnnotationAsync(annotation);
-    }
-}
-```
-
-### Delete Underline
-
-The SfPdfViewer supports deleting existing annotations through both the UI and API.
-Use [`DeleteAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) to remove an annotation programmatically:
-
-```cshtml
-@using Syncfusion.Blazor.Buttons
-@using Syncfusion.Blazor.SfPdfViewer
-
-<SfButton OnClick="@DeleteUnderline">Delete Underline</SfButton>
-<SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
-
-@code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/Underline.pdf";
-
-    public async void DeleteUnderline(MouseEventArgs args)
-    {
-        // Get the annotation collection
-        List<PdfAnnotation> annotationCollection = await Viewer.GetAnnotationsAsync();
-        // Select the annotation you want to delete
-        PdfAnnotation annotation = annotationCollection[0];
-        // Delete the specified annotation
-        await Viewer.DeleteAnnotationAsync(annotation);
-    }
-}
-```
-
-## Add Multiple Underlines with Custom Properties
-
-Set custom properties for individual underlines when adding them programmatically:
-
-```cshtml
-@using Syncfusion.Blazor.Buttons
-@using Syncfusion.Blazor.SfPdfViewer
-
-<SfButton OnClick="@AddMultipleUnderlines">Add Multiple Underlines</SfButton>
-<SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
-
-@code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-
-    public async void AddMultipleUnderlines(MouseEventArgs args)
-    {
-        // Underline 1 - Yellow
-        PdfAnnotation annotation1 = new PdfAnnotation();
-        annotation1.Type = AnnotationType.Underline;
-        annotation1.PageNumber = 0;
-        List<Bound> bounds1 = new List<Bound>();
-        Bound bound1 = new Bound();
-        bound1.X = 100;
-        bound1.Y = 150;
-        bound1.Width = 320;
-        bound1.Height = 14;
-        bounds1.Add(bound1);
-        annotation1.Bounds = bounds1;
-        annotation1.Color = "#ffff00";
-        annotation1.Opacity = 0.9;
-        await Viewer.AddAnnotationAsync(annotation1);
-
-        // Underline 2 - Red
-        PdfAnnotation annotation2 = new PdfAnnotation();
-        annotation2.Type = AnnotationType.Underline;
-        annotation2.PageNumber = 0;
-        List<Bound> bounds2 = new List<Bound>();
-        Bound bound2 = new Bound();
-        bound2.X = 110;
-        bound2.Y = 220;
-        bound2.Width = 300;
-        bound2.Height = 14;
-        bounds2.Add(bound2);
-        annotation2.Bounds = bounds2;
-        annotation2.Color = "#ff1010";
-        annotation2.Opacity = 0.9;
-        await Viewer.AddAnnotationAsync(annotation2);
-    }
 }
 ```
 
 ## Disable TextMarkup Annotation
 
-Disable text markup annotations (including underline) using the `EnableTextMarkupAnnotation` property:
+To disable all text markup annotations (including underline) so they do not appear in the toolbar or context menu, set `EnableTextMarkupAnnotation="false"`:
 
 ```cshtml
 @using Syncfusion.Blazor.SfPdfViewer
@@ -285,15 +46,309 @@ Disable text markup annotations (including underline) using the `EnableTextMarku
 }
 ```
 
-## Handle Underline Events
+## Add Underline Annotation
 
-The SfPdfViewer provides annotation life-cycle events that notify when underline annotations are added, modified, selected, or removed. For the full list of available events and their descriptions, see [**Annotation Events**](../events).
+### Add Underline Annotation Using the Toolbar
+
+1. Click the **Edit Annotation** button in the SfPdfViewer toolbar. An annotation toolbar appears below the main toolbar.
+2. Select the **Underline** button in the annotation toolbar to enable underline mode.
+3. Select the text in the document to add the underline annotation.
+   - Alternatively, select the text first and then click **Underline** to apply it.
+   - If **Pan Mode** is active, the viewer automatically switches to **Text Selection** mode.
+
+![Underline tool](../../images/blazor-pdfviewer-underline-text.png)
+
+### Apply Underline Annotation Using the Context Menu
+
+1. Select text in the document.
+2. Right-click the selected text region.
+3. Choose **Underline** from the context menu.
+
+![Underline Context](../../images/blazor-pdfviewer-underline-context-menu.png)
+
+### Enable Underline Annotation Mode Programmatically
+
+Switch the viewer into underline mode using [`SetAnnotationModeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SetAnnotationModeAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationType_).
+
+```cshtml
+@using Syncfusion.Blazor.SfPdfViewer
+@using Syncfusion.Blazor.Buttons
+
+<SfButton OnClick="EnableUnderlineMode">Underline</SfButton>
+<SfPdfViewer2 DocumentPath="@DocumentPath"
+              @ref="Viewer"
+              Width="100%"
+              Height="100%">
+</SfPdfViewer2>
+
+@code {
+    private SfPdfViewer2 Viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+
+    private async Task EnableUnderlineMode(MouseEventArgs args)
+    {
+        await Viewer.SetAnnotationModeAsync(AnnotationType.Underline);
+    }
+}
+```
+
+#### Exit Underline Annotation Mode
+
+Switch back to normal mode using:
+
+```csharp
+private async Task DisableUnderlineMode()
+{
+    await Viewer.SetAnnotationModeAsync(AnnotationType.None);
+}
+```
+
+### Add Underline Annotation Programmatically
+
+Use [`AddAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) to insert an underline at a specific location.
+
+```cshtml
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfButton OnClick="@AddUnderline">Add Underline</SfButton>
+<SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
+
+@code {
+    private SfPdfViewer2 Viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+
+    private async Task AddUnderline(MouseEventArgs args)
+    {
+        PdfAnnotation annotation = new PdfAnnotation
+        {
+            Type = AnnotationType.Underline,
+            // PageNumber is 0-based in the SfPdfViewer API
+            PageNumber = 0,
+            Color = "#00aa00",
+            Opacity = 0.9,
+            Bounds = new List<Bound>
+            {
+                new Bound { X = 97, Y = 110, Width = 350, Height = 14 }
+            }
+        };
+        await Viewer.AddAnnotationAsync(annotation);
+    }
+}
+```
+
+## Customize Underline Annotation Appearance
+
+Configure default underline settings such as **color** and **opacity** using [`UnderlineSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_UnderlineSettings).
+
+```cshtml
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfPdfViewer2 @ref="@Viewer"
+              DocumentPath="@DocumentPath"
+              UnderlineSettings="@UnderlineSettingsModel"
+              Height="100%"
+              Width="100%">
+</SfPdfViewer2>
+
+@code {
+    private SfPdfViewer2 Viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+
+    private PdfViewerUnderlineSettings UnderlineSettingsModel = new PdfViewerUnderlineSettings
+    {
+        Color = "#00aa00",
+        Opacity = 0.9
+    };
+}
+```
+
+N> After changing the default color and opacity using the **Edit Color** and **Edit Opacity** tools, those values become the new defaults for subsequent annotations.
+
+## Manage Underline Annotation (Edit, Delete)
+
+### Edit Underline Annotation
+
+#### Edit Underline Annotation Appearance Using the UI
+
+Use the annotation toolbar:
+
+- **Edit Color** tool to change the underline color.
+
+![Editing text markup color in Blazor SfPdfViewer](../../images/blazor-pdfviewer-editing-text-color.png)
+
+- **Edit Opacity** slider to adjust the transparency.
+
+![Editing text markup Opacity in Blazor SfPdfViewer](../../images/blazor-pdfviewer-edit-text-opacity.png)
+
+#### Edit Underline Annotation Programmatically
+
+Modify an existing underline programmatically using [`EditAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_).
+
+```cshtml
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfButton OnClick="@EditUnderline">Edit Underline</SfButton>
+<SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
+
+@code {
+    private SfPdfViewer2 Viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+
+    private async Task EditUnderline(MouseEventArgs args)
+    {
+        // Get the annotation collection
+        List<PdfAnnotation> annotationCollection = await Viewer.GetAnnotationsAsync();
+        if (annotationCollection is null || annotationCollection.Count == 0)
+        {
+            return;
+        }
+        // Select the first underline annotation on the first page
+        PdfAnnotation annotation = annotationCollection
+            .FirstOrDefault(a => a.Type == AnnotationType.Underline && a.PageNumber == 0)
+            ?? annotationCollection[0];
+        // Change the color of the underline annotation to blue
+        annotation.Color = "#0000ff";
+        // Change the opacity to 80% (0.8)
+        annotation.Opacity = 0.8;
+        await Viewer.EditAnnotationAsync(annotation);
+    }
+}
+```
+
+### Delete Underline Annotation
+
+The SfPdfViewer supports deleting existing annotations through both the UI and the API. To delete from the UI, select the underline and press **Delete** or use the **Delete** tool on the annotation toolbar.
+
+To delete programmatically, use [`DeleteAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_):
+
+```cshtml
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfButton OnClick="@DeleteUnderline">Delete Underline</SfButton>
+<SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
+
+@code {
+    private SfPdfViewer2 Viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+
+    private async Task DeleteUnderline(MouseEventArgs args)
+    {
+        // Get the annotation collection
+        List<PdfAnnotation> annotationCollection = await Viewer.GetAnnotationsAsync();
+        if (annotationCollection is null || annotationCollection.Count == 0)
+        {
+            return;
+        }
+        // Select the first underline annotation on the first page
+        PdfAnnotation annotation = annotationCollection
+            .FirstOrDefault(a => a.Type == AnnotationType.Underline && a.PageNumber == 0)
+            ?? annotationCollection[0];
+        // Delete the specified annotation
+        await Viewer.DeleteAnnotationAsync(annotation);
+    }
+}
+```
+
+## Add Multiple Underline Annotations with Custom Properties
+
+To add several underlines with different colors and positions in one operation, call [`AddAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) for each [`PdfAnnotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfAnnotation.html). This is an extension of the [Add Underline Programmatically](#add-underline-programmatically) example.
+
+```cshtml
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfButton OnClick="@AddMultipleUnderlines">Add Multiple Underlines</SfButton>
+<SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
+
+@code {
+    private SfPdfViewer2 Viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+
+    private async Task AddMultipleUnderlines(MouseEventArgs args)
+    {
+        // Underline 1 - Yellow on the first page (index 0)
+        await Viewer.AddAnnotationAsync(new PdfAnnotation
+        {
+            Type = AnnotationType.Underline,
+            PageNumber = 0,
+            Color = "#ffff00",
+            Opacity = 0.9,
+            Bounds = new List<Bound>
+            {
+                new Bound { X = 100, Y = 150, Width = 320, Height = 14 }
+            }
+        });
+
+        // Underline 2 - Red on the first page (index 0)
+        await Viewer.AddAnnotationAsync(new PdfAnnotation
+        {
+            Type = AnnotationType.Underline,
+            PageNumber = 0,
+            Color = "#ff1010",
+            Opacity = 0.9,
+            Bounds = new List<Bound>
+            {
+                new Bound { X = 110, Y = 220, Width = 300, Height = 14 }
+            }
+        });
+    }
+}
+```
+
+## Handle Underline Annotation Events
+
+The SfPdfViewer provides annotation life-cycle events that fire when underline annotations are added, modified, selected, or removed. Subscribe to events through the `PdfViewerEvents` tag.
+
+```cshtml
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfPdfViewer2 DocumentPath="@DocumentPath"
+              Height="100%"
+              Width="100%">
+    <PdfViewerEvents AnnotationAdded="@OnAnnotationAdded"
+                     AnnotationRemoved="@OnAnnotationRemoved"
+                     AnnotationPropertiesChanged="@OnAnnotationPropertiesChanged" />
+</SfPdfViewer2>
+
+@code {
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+
+    private async Task OnAnnotationAdded(AnnotationAddEventArgs args)
+    {
+        if (args.AnnotationType == AnnotationType.Underline)
+        {
+            // Underline was added
+        }
+    }
+
+    private async Task OnAnnotationRemoved(AnnotationRemoveEventArgs args)
+    {
+        if (args.AnnotationType == AnnotationType.Underline)
+        {
+            // Underline was removed
+        }
+    }
+
+    private async Task OnAnnotationPropertiesChanged(AnnotationPropertiesChangeEventArgs args)
+    {
+        if (args.AnnotationType == AnnotationType.Underline)
+        {
+            // Underline color or opacity changed
+        }
+    }
+}
+```
+
+For the full list of available events and their descriptions, see [Annotation Events](../events).
 
 ## Export and Import
 
-The SfPdfViewer supports exporting and importing annotations, allowing you to save annotations as a separate file or load existing annotations back into the viewer. For full details on supported formats and steps to export or import annotations, see [**Export and Import Annotation**](../import-export-annotation)
+The SfPdfViewer supports exporting and importing annotations as **JSON** or **XFDF**, allowing you to save annotations as a separate file or load existing annotations back into the viewer. For full details on supported formats and steps to export or import annotations, see [Export and Import Annotations](../import-export-annotation).
 
-## See Also
+## See also
 
 - [Annotation Events](../events)
 - [Export and Import Annotations](../import-export-annotation)

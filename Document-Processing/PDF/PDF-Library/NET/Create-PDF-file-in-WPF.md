@@ -8,7 +8,7 @@ documentation: UG
 
 # Create or Generate PDF file in WPF
 
-The Syncfusion<sup>&reg;</sup> [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, work with forms, and secure PDF files. 
+The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, work with forms, and secure PDF files. 
 
 To include the .NET PDF library into your WPF application, please refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) documentation. 
 
@@ -97,19 +97,22 @@ Step 5: Add the following code sample in `btnCreate_Click` to create or generate
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//Create a new PDF document. 
-using (PdfDocument document = new PdfDocument())
+private void GeneratePDF(object sender, RoutedEventArgs e)
 {
-  //Add a page to the document.
-  PdfPage page = document.Pages.Add();
-  //Create PDF graphics for a page.
-  PdfGraphics graphics = page.Graphics;
-  //Set the standard font.
-  PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
-  //Draw the text.
-  graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
-  //Save the document.
-  document.Save("Output.pdf");
+    //Create a new PDF document. 
+    using (PdfDocument document = new PdfDocument())
+    {
+    //Add a page to the document.
+    PdfPage page = document.Pages.Add();
+    //Create PDF graphics for a page.
+    PdfGraphics graphics = page.Graphics;
+    //Set the standard font.
+    PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
+    //Draw the text.
+    graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
+    //Save the document.
+    document.Save("Output.pdf");
+    }
 }
 
 {% endhighlight %}
