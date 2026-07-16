@@ -234,37 +234,35 @@ Spreadsheet is available in the following namespace “_Syncfusion_._UI_._Xaml_.
 {% highlight c# tabtitle="MainWindow.xaml.cs" %}
 using Syncfusion.SfSkinManager;
 using Syncfusion.UI.Xaml.Spreadsheet;
+....
 
-public partial class MainWindow : Window
+public MainWindow()
 {
-	public MainWindow()
-	{
-	    InitializeComponent();
+    InitializeComponent();
 
-	    SfSkinManager.ApplyThemeAsDefaultStyle = true;
+    SfSkinManager.ApplyThemeAsDefaultStyle = true;
 
-	    SfSkinManager.SetTheme(this, new Theme("Windows11Light"));
+    SfSkinManager.SetTheme(this, new Theme("Windows11Light"));
 
-	    Grid grid = new Grid();
+    Grid grid = new Grid();
 
-	    grid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
+    grid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
 
-	    grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
+    grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
 
-	    SfSpreadsheet spreadsheet = new SfSpreadsheet();
+    SfSpreadsheet spreadsheet = new SfSpreadsheet();
 
-	    SfSpreadsheetRibbon ribbon = new SfSpreadsheetRibbon() { SfSpreadsheet = spreadsheet };
+    SfSpreadsheetRibbon ribbon = new SfSpreadsheetRibbon() { SfSpreadsheet = spreadsheet };
 
-	    Grid.SetRow(ribbon, 0);
+    Grid.SetRow(ribbon, 0);
 
-	    Grid.SetRow(spreadsheet, 1);
+    Grid.SetRow(spreadsheet, 1);
 
-	    grid.Children.Add(ribbon);
+    grid.Children.Add(ribbon);
 
-	    grid.Children.Add(spreadsheet);
+    grid.Children.Add(spreadsheet);
 
-	    this.Content = grid;
-	}
+    this.Content = grid;
 }
 {% endhighlight %}
 {% endtabs %}

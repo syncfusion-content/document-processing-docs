@@ -176,9 +176,6 @@ spreadsheetRibbon.Spreadsheet = spreadsheet;
 
 The `Spreadsheet` control is available in the [Syncfusion.Windows.Forms.Spreadsheet](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.html) namespace and can be created programmatically with the following code.
 
-{% tabs %}
-{% highlight c# tabtitle="Form1.cs %}
-
 _For_ _Spreadsheet_
 
 {% tabs %}
