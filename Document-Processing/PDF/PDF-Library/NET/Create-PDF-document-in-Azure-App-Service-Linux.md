@@ -224,7 +224,7 @@ An online sample to [create a PDF document](https://document.syncfusion.com/demo
 ## See also
 
 * [Create a PDF document in .NET](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-core)
-* [Azure App Service on Linux documentation](https://learn.microsoft.com/azure/app-service/overview)
+* [Azure App Service on Linux documentation](https://learn.microsoft.com/en-us/azure/app-service/overview)
 * [Syncfusion.Pdf.Net.Core NuGet package](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/)
 * [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview) 
 
