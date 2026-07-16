@@ -15,12 +15,12 @@ A spreadsheet is organized in a tabular format consisting of **rows** and **colu
 
 The React Spreadsheet component provides several features for managing rows and columns. Below is a quick overview of each operation, with links to their respective documentation sections:
 
-- **[Insert Rows and Columns](./row-and-column/insert-rows-and-columns)**: Add new rows or columns to the worksheet as needed.
-- **[Delete Rows and Columns](./row-and-column/delete-rows-and-columns)**: Remove existing rows or columns from the worksheet.
-- **[Show and Hide Rows and Columns](./row-and-column/show-hide-rows-and-columns)**: Control the visibility of rows and columns by hiding or unhiding them.
-- **[Change Text in Column Headers](./row-and-column/change-text-in-column-headers)**: Customize the text displayed in column headers.
-- **[Freeze Pane](./row-and-column/freeze-pane)**: Keep specific rows or columns visible while scrolling through the worksheet.
-- **[Size](./row-and-column/row-and-column-size)**: Adjust the height of rows and the width of columns to fit your data.
+- **[Insert Rows and Columns](./insert-rows-and-columns)**: Add new rows or columns to the worksheet as needed.
+- **[Delete Rows and Columns](./delete-rows-and-columns)**: Remove existing rows or columns from the worksheet.
+- **[Show and Hide Rows and Columns](./show-hide)**: Control the visibility of rows and columns by hiding or unhiding them.
+- **[Change Text in Column Headers](./change-text-in-column-headers)**: Customize the text displayed in column headers.
+- **[Freeze Pane](./freeze-pane)**: Keep specific rows or columns visible while scrolling through the worksheet.
+- **[Size](./row-and-column-size)**: Adjust the height of rows and the width of columns to fit your data.
 
 
 ## Note

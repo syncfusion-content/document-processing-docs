@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Deploy SfPdfViewer to Azure Container (Linux) | Syncfusion
-description: Containerize and deploy the Syncfusion Blazor PDF Viewer (Server and WebAssembly) to Azure using Azure Container Registry and App Service for Containers.
+description: Containerize and deploy the Blazor PDF Viewer (Server and WebAssembly) to Azure using Azure Container Registry and App Service for Containers.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -15,17 +15,21 @@ This article shows how to containerize and deploy a Blazor PDF Viewer applicatio
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-* An Azure subscription and permission to create resource groups, ACR instances, and App Services.
+* .NET 8, 9, or 10 SDK installed locally. For WebAssembly projects, install the `wasm-tools` workload: `dotnet workload install wasm-tools`.
+
+* Docker (Docker Desktop, or Rancher Desktop with the `docker` runtime selected) installed and running on the build machine.
+
+* An Azure subscription and permission to create resource groups, ACR instances, and App Services. Signing in with the Azure CLI (`az login`) is recommended if you prefer CLI steps over the portal.
 
 ## Create a simple SfPdfViewer sample
 
-Follow the steps in the Blazor Server [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app) guide for PDF Viewer to create a basic sample. This provides the required project setup and SfPdfViewer configuration.
+Follow the steps in the [Getting started with SfPdfViewer in a Blazor Web App](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app) guide to create a basic sample. This provides the required project setup, Program.cs Syncfusion service registration, and SfPdfViewer configuration.
 
-## Docker Web app (recommended for Server and Web assembly)
+## Docker for Blazor Web App (Server and Interactive WebAssembly)
 
-Right‑click the project to add Docker support to the Windows application, and then apply the required configuration changes provided to ensure it functions correctly across environments.
+Add Docker support to the project (in Visual Studio: right‑click the project → **Add** → **Container Support**; from the CLI run `dotnet new dockerfile` in the project folder). The Visual Studio‑generated Windows Dockerfile must be replaced with the Linux example below so the image runs on Azure App Service for Containers.
 
-Example `Dockerfile` for an Blazor Web Apps Server and Web assembly app:
+Example `Dockerfile` for a Blazor Web App (Server or Interactive WebAssembly):
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 10 & .NET 9 & .NET 8 (~/Program.cs) Server" %}
@@ -120,13 +124,13 @@ docker build -t pdfviewerwebservice:latest .
 docker run -d -p 6002:80 pdfviewerwebservice:latest
 ```
 
-If you see script errors or documents fail to load, verify the container image contains the `libgdiplus` installed [see Dockerfile notes](https://github.com/dotnet/dotnet-docker/discussions/4938).
+If you see script errors or documents fail to load, verify the container image contains `libgdiplus` installed. See the official Microsoft guidance on [using System.Drawing.Common on Linux](https://learn.microsoft.com/dotnet/core/compatibility/core-libraries/6.0/system-drawing-common-windows-only) and the [.NET Docker samples](https://github.com/dotnet/dotnet-docker/blob/main/samples/README.md) for the recommended `libgdiplus` install steps.
 
-## Docker standalone WebAssembly app
+## Docker for Blazor WebAssembly Standalone (hosted on nginx)
 
-If you have built a standalone WebAssembly sample, please add the Dockerfile and the necessary nginx configuration files to the project, and update the project’s .csproj entry inside the Dockerfile to match the correct assembly name.
+If you have built a standalone Blazor WebAssembly sample, add the Dockerfile and the required `nginx.conf` and `NuGet.Config` files to the project, and update the `.csproj` reference inside the Dockerfile to match your actual assembly name.
 
-![Formate to add files](../images/file_formate_need_to_add.png)
+![Format of files to add](../images/file_format_need_to_add.png)
 
 Example `Dockerfile` for standalone WebAssembly:
 
@@ -172,10 +176,12 @@ COPY --from=publish /app/publish/wwwroot .
 COPY nginx.conf /etc/nginx/nginx.conf
 ```
 
-Once the docker file was properly added into the Web assembly sample add the `Nuget` and the `nginx.conf` files with a empty folder named `package` into the main project folder of the Web assembly. [Get the files](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Azure%20Container/Web%20Assembly/WasmStandalone)
+After adding the Dockerfile, place the `NuGet.Config` and `nginx.conf` files and an empty folder named `package` at the project root of the WebAssembly app. The `package` folder is an offline NuGet feed used during restore. [Get the files](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Azure%20Container/Web%20Assembly/WasmStandalone)
 
 N>
-* Replace `YourServerApp.csproj` with your actual assembly name. Also make sure to add the docker code for to install the wasm-tools using the code `RUN dotnet workload install wasm-tools`
+* Replace `WasmStandalone.csproj` with your actual assembly name. Ensure the Dockerfile installs the wasm-tools workload with `RUN dotnet workload install wasm-tools`.
+* The `nginx.conf` must include MIME types for `.wasm` (`application/wasm`) and `.blat` (Blazor boot resource) and disable caching for those resources in development. See the [sample nginx.conf](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Azure%20Container/Web%20Assembly/WasmStandalone) referenced above.
+* The final stage uses the `nginx:alpine` base image, so the `EXPOSE 80` / `EXPOSE 443` directives on the build stage are not used at runtime—port mapping is controlled by the nginx config.
 
 Then run locally:
 
@@ -187,6 +193,8 @@ docker run -d -p 6003:80 pdfviewer-wasm:latest
 ```
 
 ## Push image to Azure Container Registry (ACR)
+
+Managed identity (recommended for production) or admin user (shown below for quick testing) can be used to authenticate. For production, enable the App Service managed identity and grant it the `AcrPull` role on the registry instead of using admin credentials.
 
 Follow these UI-driven steps in the Azure portal (or use the CLI steps below):
 
@@ -220,10 +228,6 @@ docker push <login-server>/pdfviewerwebservice:latest
 
 Follow these UI-focused steps in the Azure portal to create an App Service (Linux) and configure it to run your container image from ACR.
 
-## Create an App Service that runs your container
-
-Follow these UI-focused steps in the Azure portal to create an App Service (Linux) and configure it to run your container image from ACR.
-
 1. Create the App Service
     * In the Azure portal click **Create a resource** → search **Web App** → **Create**.
 
@@ -231,7 +235,7 @@ Follow these UI-focused steps in the Azure portal to create an App Service (Linu
 
     * Under **Basics**, set the **Subscription**, **Resource group** (use **Create new** if needed), and **Name** (this will form the app URL).
 
-    ![Update bascis details](../images/update_bascis_details.png)
+    ![Update bascis details](../images/update_basics_details.png)
 
     * For **Publish**, choose **Docker Container**. For **Runtime stack** choose **Linux**.
 
@@ -245,30 +249,38 @@ Follow these UI-focused steps in the Azure portal to create an App Service (Linu
     * Open the App Service you created, then go to **Deployment** → **Container settings** (or **Settings** → **Container settings** in some portal views).
     * For **Image source** select **Azure Container Registry**.
     * Select your **Subscription** and the **Registry** you created earlier.
-    * Under **Image and tag**, select the repository (for example `pdf_viewer_web_service`) and the tag (for example `latest`).
+    * Under **Image and tag**, select the repository (for example `pdfviewerwebservice` to match the tag/push step above) and the tag (for example `latest`).
+    * Set the **Container port** to `80` (or the port your container listens on).
 
-    ![udpate container configuration](../images/udpate_container_configuration.png)
+    ![Update container configuration](../images/update_container_configuration.png)
 
-N> troubleshooting <br />
-* Check container logs and the image locally if the app fails to start. <br />
-* Ensure the container listens on port 80 (or configure the App Service container port setting to match your container). <br />
-* Ensure native dependencies (SkiaSharp, `libgdiplus`) are present in the image; missing native libs commonly cause rendering/script errors. <br />
+3. Verify the deployment
+    * Open the App Service **Overview** and click the default domain (for example `https://<app-name>.azurewebsites.net`) to confirm the app starts.
+    * If the site fails to start, stream logs from **Monitoring** → **Log stream** or use `az webapp log tail -n <app-name> -g <resource-group>`.
+
+### Troubleshooting
+
+* Check container logs and the image locally if the app fails to start.
+* Ensure the container listens on port 80 (or configure the App Service container port setting to match your container).
+* Ensure native dependencies (SkiaSharp, `libgdiplus`) are present in the image; missing native libs commonly cause rendering/script errors.
 * For static WASM images served by nginx, confirm wasm MIME types and caching are working.
+* If the App Service reports `ImagePullFailure` or `Unauthorized`, ensure the App Service managed identity has the `AcrPull` role on the registry (or re‑check the admin user credentials).
 
-## Using Rancher Desktop / Docker on Windows
+### Configure TLS, custom domain, and monitoring
 
-* Rancher Desktop (with docker) can be used in place of Docker Desktop. If using Rancher Desktop, select the `docker` runtime so standard `docker` commands behave as expected.
-* If you encounter WSL or Rancher errors during installation, consult Rancher Desktop docs and community threads; a common issue and workaround is documented in the internal notes.
+* Enable a managed TLS certificate for the default `azurewebsites.net` domain from **TLS/SSL settings** → **Private Key Certificates (.pfx)** → **Create App Service Managed Certificate**.
+* Add custom domains and bindings under **Custom domains**.
+* Enable Application Insights from **Monitoring** → **Application Insights** to capture request, dependency, and exception telemetry.
 
-## Additional guidance
+## Related samples
 
 * If your project uses SkiaSharp.Views.Blazor on the server or client, double-check native runtime requirements and test rendering in the container.
-* For Server interactive scenarios, register Syncfusion services and ensure SignalR message size settings match large-file processing requirements (see Getting Started examples).
-* For WebAssembly interactive render modes, ensure `wasm-tools` workload is available when building locally or in CI: `dotnet workload install wasm-tools`.
+* For Server interactive scenarios, register Syncfusion services in `Program.cs` and ensure SignalR message size settings match large‑file processing requirements. See the SignalR [MessagePack HubOptions configuration](https://learn.microsoft.com/aspnet/core/signalr/messagepackhubprotocol#configure-messagepack-on-the-server) for tuning `MaximumReceiveMessageSize`.
+* For WebAssembly interactive render modes, ensure the `wasm-tools` workload is available when building locally or in CI: `dotnet workload install wasm-tools`.
 
 ![Published blazor server sample](../images/azure_container_published_blazor_webapps.png)
 
-N> [View the Blazor Web apps Sample](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Azure%20Container).
+N> [View the Blazor Web Apps Sample](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Azure%20Container).
 
 ## See also
 

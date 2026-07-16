@@ -66,6 +66,8 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Image/Add-image-from-URL/.NET).
+
 ## Adding image from file path
 
 The Syncfusion Markdown library supports adding images from file paths. The following code example demonstrates how to add an image from a file path.
@@ -111,6 +113,8 @@ markdownDocument.Dispose()
 {% endhighlight %}
 
 {% endtabs %}
+
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Image/Add-image-from-local-file-path/.NET).
 
 ## Adding image from image bytes
 
@@ -164,7 +168,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Image/Add-image-from-image-bytes/.NET).
 
 ## Replacing images
 
@@ -235,7 +239,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Image/Replacing-image/.NET).
 
 ## Removing images
 
@@ -301,7 +305,7 @@ markdownDocument.Dispose()
 {% endtabs %}
 
 
-
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Image/Removing-image/.NET).
 
 ## Working with alternative text
 
@@ -355,7 +359,7 @@ markdownDocument.Dispose();
 
 {% endtabs %}
 
-
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Image/Add-alternative-text/.NET).
 
 
 

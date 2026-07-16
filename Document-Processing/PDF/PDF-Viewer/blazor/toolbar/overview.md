@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Toolbar in Blazor PDF Viewer component | Syncfusion
-description: Check out and learn about the primary, annotation, form designer, and redaction toolbars in the Syncfusion Blazor SfPdfViewer component.
-control: PDF Viewer
+description: Check out and learn about the primary, annotation, form designer, and redaction toolbars in the Blazor SfPdfViewer component.
+control: SfPdfViewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Toolbar overview in Blazor PDF Viewer
+# Toolbar in Blazor PDF Viewer component
 
 This page provides a concise reference describing the toolbars available in the Blazor PDF Viewer component. It also explains what each toolbar is for and when it appears.
 
@@ -21,11 +21,11 @@ This page provides a concise reference describing the toolbars available in the 
 - [Redaction toolbar](#redaction-toolbar)
 - [Custom toolbar](./custom-toolbar)
 
-## Functional overview of each toolbar
+## Functional Overview of Each Toolbar
 
 ### Primary toolbar
 
-The primary toolbar provides quick access to common viewer actions and entry points to feature-specific toolbars. It adapts to available width and presents controls appropriate for the current device and layout.
+The primary toolbar provides quick access to common viewer actions and entry points to feature-specific toolbars. It adapts to the available width and shows controls appropriate for the current device and layout.
 
 Primary toolbar options include:
 
@@ -68,7 +68,7 @@ Annotation toolbar options include:
 
 ![annotation desktop toolbar](../images/blazor-annotation-toolbar.png)
 
-See [Annotation toolbar Customization](./annotation-toolbar) for configuration options and examples.
+See [Annotation toolbar customization](./annotation-toolbar) for configuration options and examples.
 
 ### Form Designer toolbar
 
@@ -82,17 +82,17 @@ Form designer toolbar options include:
 
 ![form designer toolbar](../images/blazor-form-deigner-toolbar.png)
 
-See [FormDesigner toolbar Customization](./form-designer-toolbar) for configuration options and examples.
+See [Form designer toolbar customization](./form-designer-toolbar) for configuration options and examples.
 
 ### Mobile toolbar
 
 - A compact toolbar layout optimized for small screens and touch interactions. It appears automatically on mobile-sized view ports and contains the most frequently used actions in a space-efficient arrangement.
 
-    ![mobile toolbar](../images/primary-toolbar-mobile-view.png)
+![mobile toolbar](../images/primary-toolbar-mobile-view.png)
 
 - Annotation toolbar in mobile mode appears at the bottom of the PDF Viewer component.
 
-    ![mobile annotation toolbar](../images/annotation-toolbar-mobile-view.png)
+![mobile annotation toolbar](../images/annotation-toolbar-mobile-view.png)
 
 ### Redaction toolbar
 
@@ -108,18 +108,18 @@ Redaction toolbar options include:
 
 ![redaction toolbar](../images/mobile-redaction-toolbar.png)
 
-See [Redaction toolbar Customization](./redaction-toolbar) for configuration options and examples.
+See [Redaction toolbar customization](./redaction-toolbar) for configuration options and examples.
 
-## Show or hide toolbar items
+## Customize toolbars
 
 The following quick links describe how to customize, show, or hide specific toolbar items. Each linked page defines custom toolbar configurations and examples.
 
-- [Show or hide primary toolbar items](./primary-toolbar#customize-the-default-toolbar-items)
+- [Show or hide primary toolbar items](./primary-toolbar#customize-the-primary-toolbar-in-blazor-pdf-viewer)
 - [Show or hide annotation toolbar items](./annotation-toolbar#customize-annotation-toolbar-items)
 - [Show or hide form designer toolbar items](./form-designer-toolbar#customize-form-designer-toolbar-items)
-- [Add a custom primary toolbar item](./primary-toolbar#disable-default-items-and-add-custom-items-in-the-primary-toolbar)
-- [Enable mobile toolbar](./mobile-toolbar#primary-toolbar-in-mobile-mode)
-- [Enable redaction toolbar](./primary-toolbar#enable-the-redaction-toolbar-on-desktop)
+- [Add a custom primary toolbar item](./primary-toolbar#customize-the-primary-toolbar-in-blazor-pdf-viewer)
+- [Enable mobile toolbar](./mobile-toolbar)
+- [Enable redaction toolbar](./redaction-toolbar)
 
 ## Further Reading
 

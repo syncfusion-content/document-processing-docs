@@ -54,7 +54,7 @@ Refer to the table below to choose the appropriate mode for your application and
 
 Documents are held as live objects in an in-memory dictionary. Each tool accesses and modifies the object directly without opening or saving files on each call. Unused documents are cleaned up automatically after a configurable timeout (default: 10 minutes).
 
-The example below uses the Microsoft Agents Framework with OpenAI. The same steps apply to any [provider](https://learn.microsoft.com/en-us/agent-framework/agents/providers/?pivots=programming-language-csharp) that implements `IChatClient`.
+The example below uses the Microsoft Agents Framework with OpenAI. The same steps apply to any [provider](https://learn.microsoft.com/en-us/agent-framework/agents/providers/?pivots=programming-language-csharp) that implements [IChatClient](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.ai.ichatclient?view=net-11.0-pp).
 
 ### Prerequisites
 
@@ -80,7 +80,7 @@ if (!string.IsNullOrEmpty(licenseKey))
 
 **Step 2: Create Managers and Collection**
 
-Create one document manager per document type. The `timeout` controls how long an unused document stays in memory. Register all managers in a `DocumentManagerCollection` so cross-format tools (such as `OfficeToPdfAgentTools`) can resolve the correct manager at runtime:
+Create one document manager per document type. The `timeout` controls how long an unused document stays in memory. Register all managers in a [DocumentManagerCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.Core.DocumentManagerCollection.html) so cross-format tools (such as [OfficeToPdfAgentTools](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.OfficeToPDF.OfficeToPdfAgentTools.html)) can resolve the correct manager at runtime:
 
 ```csharp
 using Syncfusion.AI.AgentTools.Core;
@@ -102,11 +102,11 @@ repoCollection.AddManager(DocumentType.PDF,        pdfManager);
 repoCollection.AddManager(DocumentType.PowerPoint, presentationManager);
 ```
 
-N> Tools that operate on a single document type are initialized directly with their own manager. Only cross-format tools like `OfficeToPdfAgentTools` require the `DocumentManagerCollection`.
+N> Tools that operate on a single document type are initialized directly with their own manager. Only cross-format tools like [OfficeToPdfAgentTools](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.OfficeToPDF.OfficeToPdfAgentTools.html) require the [DocumentManagerCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.Core.DocumentManagerCollection.html).
 
 **Step 3: Instantiate Tools**
 
-Initialize each tool class with its manager and call `GetTools()` to collect `AITool` objects:
+Initialize each tool class with its manager and call [GetTools()](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.Core.AgentToolBase.html#Syncfusion_AI_AgentTools_Core_AgentToolBase_GetTools) to collect [AITool](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.Core.AITool.html) objects:
 
 ```csharp
 using Syncfusion.AI.AgentTools.DataExtraction;
@@ -194,7 +194,7 @@ You can download a complete working sample from [GitHub](https://github.com/sync
 
 Documents are read from and written to storage (Azure Blob, S3, local disk, etc.) on each tool invocation. No in-memory objects are maintained between tool calls - each operation opens the document from storage, processes it, and saves it back. This mode is ideal for distributed systems, serverless architectures, and scenarios where document persistence is required.
 
-The example below uses Azure Blob Storage. The same pattern works with any storage back end by implementing the `IDocumentStorage` interface.
+The example below uses Azure Blob Storage. The same pattern works with any storage back end by implementing the [IDocumentStorage](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.Core.IDocumentStorage.html) interface.
 
 ### Prerequisites
 
@@ -221,7 +221,7 @@ if (!string.IsNullOrEmpty(licenseKey))
 
 **Step 2: Implement Storage**
 
-Implement `IDocumentStorage` for your storage back end. Below is the class signature and method placeholders for Azure Blob Storage - You can download a complete working sample from [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/ASP.NET-Core/AgentChatWeb/).
+Implement [IDocumentStorage](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.Core.IDocumentStorage.html) for your storage back end. Below is the class signature and method placeholders for Azure Blob Storage - You can download a complete working sample from [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/ASP.NET-Core/AgentChatWeb/).
 
 ```csharp
 using Azure.Storage.Blobs;
@@ -255,11 +255,11 @@ string containerName    = Environment.GetEnvironmentVariable("AZURE_BLOB_CONTAIN
 IDocumentStorage storage = new AzureBlobStorage(connectionString, containerName);
 ```
 
-N> For other storage providers (AWS S3, local disk, etc.), implement the same `IDocumentStorage` interface with the appropriate SDK or file system operations.
+N> For other storage providers (AWS S3, local disk, etc.), implement the same [IDocumentStorage](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.Core.IDocumentStorage.html) interface with the appropriate SDK or file system operations.
 
 **Step 3: Create DocumentStorageManager**
 
-Unlike In-Memory Mode which uses separate managers per document type, Storage Mode uses a single `DocumentStorageManager` for all document types:
+Unlike In-Memory Mode which uses separate managers per document type, Storage Mode uses a single [DocumentStorageManager](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.Core.DocumentStorageManager.html) for all document types:
 
 ```csharp
 using Syncfusion.AI.AgentTools.DocumentManagers;
@@ -269,7 +269,7 @@ var storageManager = new DocumentStorageManager(storage);
 
 **Step 4: Instantiate Tools**
 
-Initialize each tool class with the storage manager and collect [AITool](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.ai.aitool) objects:
+Initialize each tool class with the storage manager and collect [AITool](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.Core.AITool.html) objects:
 
 ```csharp
 using Syncfusion.AI.AgentTools.Word;
@@ -309,16 +309,16 @@ allTools.AddRange(new DataExtractionAgentTools().GetTools());
 ```
 
 N> 1. The following tool classes are not supported in Storage mode:
-N>    * WordDocumentAgentTools
-N>    * ExcelWorkbookAgentTools
-N>    * PdfDocumentAgentTools
-N>    * PresentationDocumentAgentTools   
+N>    * [WordDocumentAgentTools](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.Word.WordDocumentAgentTools.html)
+N>    * [ExcelWorkbookAgentTools](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.Excel.ExcelWorkbookAgentTools.html)
+N>    * [PdfDocumentAgentTools](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.PDF.PdfDocumentAgentTools.html)
+N>    * [PresentationDocumentAgentTools](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.PowerPoint.PresentationDocumentAgentTools.html)  
 N> 2. All other tool classes work identically in both modes.
 N> 3. Register only the tool classes your app needs. See the full list in the [Tools Reference](./tools).  
 
 **Step 5: Convert and Register Tools**
 
-Wrap each `AITool` into a framework-compatible function using `AIFunctionFactory.Create`:
+Wrap each [AITool](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.ai.aitool?view=net-11.0-pp) into a framework-compatible function using [AIFunctionFactory.Create](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.ai.aifunctionfactory.create?view=net-11.0-pp):
 
 ```csharp
 using Microsoft.Extensions.AI;

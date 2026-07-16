@@ -35,18 +35,18 @@ You can toggle the bold formatting based on existing value at selection. Refer t
 
 The Italic formatting for selected text can be get or set by using the following sample code.
 
-    ```ts
+ ```ts
     //Gets the value for italic formatting of selected text.
     let italic : boolean = documenteditor.selection.characterFormat.italic;
    //Sets italic formatting for selected text.
-    documenteditor.selection.characterFormat.italic= true|false;
-   ```
+   documenteditor.selection.characterFormat.italic= true|false;
+ ```
 
 You can toggle the Italic formatting based on existing value at selection. Refer to the following sample code.
 
-  ```ts
+```ts
    documenteditor.editor.toggleItalic();
-  ```
+```
 
 ## Underline property
 
@@ -78,43 +78,43 @@ The strikethrough style for selected text can be get or set by using the followi
 
 You can toggle the strikethrough style of selected text based on existing value at selection by specifying a value. Refer to the following sample code.
 
-    ```ts
-     documenteditor.editor.toggleStrikethrough();
-    ```
+  ```ts
+    documenteditor.editor.toggleStrikethrough();
+  ```
 
 ## Superscript property
 
 The selected text can be made superscript by using the following sample code.
 
-    ```ts
+```ts
     //Gets the value for baselineAlignment formatting of selected text.
      let baselineAlignment : BaselineAlignment = documenteditor.selection.characterFormat.baselineAlignment;
     //Sets baselineAlignment formatting for selected text.
      documenteditor.selection.characterFormat.baselineAlignment='Superscript';
-   ```
+```
 
 Toggle the selected text as superscript or normal using the following sample code.
 
-    ```ts
+ ```ts
       documenteditor.editor.toggleSuperscript();
-    ```
+```
 
 ## Subscript property
 
 The selected text can be made subscript by using the following sample code.
 
-    ```ts
+```ts
      //Gets the value for baselineAlignment formatting of selected text.
      let baselineAlignment : BaselineAlignment = documenteditor.selection.characterFormat.baselineAlignment;
     //Sets baselineAlignment formatting for selected text.
      documenteditor.selection.characterFormat.baselineAlignment='Subscript'; 
-   ```
+```
 
 Toggle the selected text as subscript or normal using the following sample code.
 
-   ```ts
+```ts
     documenteditor.editor.toggleSubscript();
-  ```
+```
 
 You can make a subscript or superscript text as normal using the following code.
 

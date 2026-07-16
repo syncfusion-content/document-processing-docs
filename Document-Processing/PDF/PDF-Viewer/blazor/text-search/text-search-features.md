@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Text search Features in Blazor PDF Viewer Component | Syncfusion
-description: Learn how to configure text search and run programmatic searches in the Syncfusion Blazor PDF Viewer.
+title: Text Search Features in Blazor PDF Viewer Component | Syncfusion
+description: Learn how to configure text search and run programmatic searches in the Blazor PDF Viewer.
 platform: document-processing
-control: Text search
+control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text search in Blazor PDF Viewer
+# Text search in Blazor PDF Viewer Component
 
-The text search feature in the Blazor PDF Viewer locates and highlights matching content within a document. Enable or disable this capability with the following configuration.
+The text search feature in the Blazor PDF Viewer locates and highlights matching content within a document. Enable or disable this capability using the following configuration.
 
 ![Text Search](../images/text-search.png)
 
@@ -24,22 +24,22 @@ Enable the Match Case checkbox to limit results to case-sensitive matches. Navig
 
 ![Text Search With Match Case](../images/text-search-matchcase.png)
 
-### Search text without Match Case
+### Search text without the Match Case option
 
 Leave the Match Case option cleared to highlight every occurrence of the query, regardless of capitalization, and navigate through each result.
 
 ![Text Search Without Match Case](../images/text-search-without-matchcase.png)
 
-## Programmatic text Search
+## Programmatic text search
 
-The Blazor PDF Viewer provides options to toggle text search feature and APIs to customize the text search behavior programmatically.
+The Blazor PDF Viewer provides options to toggle the text search feature and APIs to customize the text search behavior programmatically.
 
-### Enable or Disable Text Search 
+### Enable or disable text search
 
-Use the following snippet to enable or disable text search features
+Use the following snippet to enable text search.
 
 {% tabs %}
-{% highlight razor%}
+{% highlight razor %}
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 EnableTextSearch="true"
@@ -50,7 +50,21 @@ Use the following snippet to enable or disable text search features
 {% endhighlight %}
 {% endtabs %}
 
-### Programmatic text search
+Use the following snippet to disable text search.
+
+{% tabs %}
+{% highlight razor %}
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfPdfViewer2 EnableTextSearch="false"
+             DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+             Height="100%"
+             Width="100%">
+</SfPdfViewer2>
+{% endhighlight %}
+{% endtabs %}
+
+### Programmatic text search APIs
 
 While the PDF Viewer toolbar offers an interactive search experience, you can also trigger and customize searches programmatically by calling the following APIs.
 
@@ -70,9 +84,11 @@ Set the `isMatchCase` parameter to `true` to perform a case-sensitive search tha
 await pdfViewer.SearchTextAsync("PDF", true);
 ```
 
+If `SearchNextAsync` or `SearchPreviousAsync` is called before `SearchTextAsync`, no navigation occurs because there is no active search query.
+
 #### `SearchNextAsync`
 
-[`SearchNextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SfPdfViewer2.html#Syncfusion_Blazor_SfPdfViewer_SfPdfViewer2_SearchNextAsync) method searches the next occurrence of the current query from the active match.
+[`SearchNextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SfPdfViewer2.html#Syncfusion_Blazor_SfPdfViewer_SfPdfViewer2_SearchNextAsync) method searches for the next occurrence of the current query starting from the currently active match.
 
 ```cshtml
 // SearchNextAsync()
@@ -81,7 +97,7 @@ await pdfViewer.SearchNextAsync();
 
 #### `SearchPreviousAsync`
 
-[`SearchPreviousAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SfPdfViewer2.html#Syncfusion_Blazor_SfPdfViewer_SfPdfViewer2_SearchPreviousAsync) method searches the previous occurrence of the current query from the active match.
+[`SearchPreviousAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SfPdfViewer2.html#Syncfusion_Blazor_SfPdfViewer_PdfViewer2_SearchPreviousAsync) method searches for the previous occurrence of the current query starting from the currently active match.
 
 ```cshtml
 // SearchPreviousAsync()
@@ -90,19 +106,21 @@ await pdfViewer.SearchPreviousAsync();
 
 #### `CancelTextSearchAsync`
 
-[`CancelTextSearchAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SfPdfViewer2.html#Syncfusion_Blazor_SfPdfViewer_SfPdfViewer2_CancelTextSearchAsync) method cancels the current text search and removes the highlighted occurrences from the PDF Viewer.
+[`CancelTextSearchAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SfPdfViewer2.html#Syncfusion_Blazor_SfPdfViewer_PdfViewer2_CancelTextSearchAsync) method cancels the current text search and removes the highlighted occurrences from the PDF Viewer.
 
 ```cshtml
 // CancelTextSearchAsync()
 await pdfViewer.CancelTextSearchAsync();
 ```
 
-#### Complete Example
+#### Complete example
 
-Use the following code snippet to implement text search using SearchTextAsync API
+Use the following code snippet to implement text search using the `SearchTextAsync` API. Place the sample PDF in `wwwroot/Data` so the `DocumentPath` resolves at runtime.
 
 {% tabs %}
 {% highlight razor %}
+@using Syncfusion.Blazor.SfPdfViewer
+
 <button @onclick="SearchText">Search Text</button>
 <button @onclick="PreviousSearch">Previous Search</button>
 <button @onclick="NextSearch">Next Search</button>
@@ -119,7 +137,7 @@ Use the following code snippet to implement text search using SearchTextAsync AP
 
     private async Task SearchText()
     {
-        await pdfViewer.SearchTextAsync("pdf", false);
+        await pdfViewer.SearchTextAsync("search text", false);
     }
 
     private async Task PreviousSearch()
@@ -140,11 +158,11 @@ Use the following code snippet to implement text search using SearchTextAsync AP
 {% endhighlight %}
 {% endtabs %}
 
-**Expected result:** the viewer highlights occurrences of `pdf` and navigation commands jump between matches.
+**Expected result:** the viewer highlights occurrences of `search text` and navigation commands jump between matches.
 
-### Customize text search highlight colors
+## Customize text search highlight colors
 
-Use the [PdfViewerTextSearchColorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerTextSearchColorSettings.html) to customize the highlight appearance used for search results. Configure [SearchColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerTextSearchColorSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerTextSearchColorSettings_SearchColor) for other matches and [SearchHighlightColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerTextSearchColorSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerTextSearchColorSettings_SearchHighlightColor) for the current match. By default, distinct colors are applied for the current occurrence and other matches; adjust these to align with application theme and accessibility contrast requirements.
+Use [PdfViewerTextSearchColorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerTextSearchColorSettings.html) to customize the highlight appearance used for search results. Configure [SearchColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerTextSearchColorSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerTextSearchColorSettings_SearchColor) for other matches and [SearchHighlightColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerTextSearchColorSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerTextSearchColorSettings_SearchHighlightColor) for the current match. By default, distinct colors are applied for the current occurrence and other matches; adjust these to align with application theme and accessibility contrast requirements. The `SearchColor` and `SearchHighlightColor` properties accept CSS color values, such as named colors (`red`, `blue`) or hex codes (`#FF0000`).
 
 {% tabs %}
 {% highlight razor %}
@@ -155,7 +173,7 @@ Use the [PdfViewerTextSearchColorSettings](https://help.syncfusion.com/cr/blazor
 </SfPdfViewer2>
 
 @code{
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 {% endhighlight %}
 {% endtabs %}
@@ -166,5 +184,5 @@ Use the [PdfViewerTextSearchColorSettings](https://help.syncfusion.com/cr/blazor
 ## See also
 
 - [Text Search Events](./text-search-events)
-- [Text Selection](../text-selection/overview)
-- [Extract and Highlight Text in Blazor PDF Viewer Component](../faqs/how-to-extract-particular-text-and-highlight)
+- [Text Selection overview](../text-selection/overview)
+- [Extract and highlight text in Blazor PDF Viewer component](../faqs/how-to-extract-particular-text-and-highlight)
