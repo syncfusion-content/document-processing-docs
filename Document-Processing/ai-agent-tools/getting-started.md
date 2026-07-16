@@ -269,7 +269,7 @@ var storageManager = new DocumentStorageManager(storage);
 
 **Step 4: Instantiate Tools**
 
-Initialize each tool class with the storage manager and collect [AITool](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.ai.aitool) objects:
+Initialize each tool class with the storage manager and collect [AITool](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.Core.AITool.html) objects:
 
 ```csharp
 using Syncfusion.AI.AgentTools.Word;
