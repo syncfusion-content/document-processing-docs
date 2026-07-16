@@ -213,7 +213,6 @@ An online sample to [create a PDF document](https://document.syncfusion.com/demo
 |-------|----------|
 | **Image File Not Found** | Verify the image file exists at `wwwroot/images/AdventureCycle.jpg`. Check file permissions and case sensitivity on Linux (paths are case-sensitive). |
 | **Syncfusion.Pdf.NET Package Not Found** | Run `dotnet add package Syncfusion.Pdf.NET` or use NuGet Package Manager to install the latest version targeting .NET 6.0+. |
-| **PDF Generation Fails with "Access Denied"** | Ensure the web app has write permissions to temp directory. On Azure App Service Linux, use `/tmp` for temporary files. |
 | **"Could not find wwwroot folder"** | Verify the project structure includes a `wwwroot` folder. If missing, create it at the project root and add images to `wwwroot/images/` subdirectory. |
 | **Deployment Failed with Authentication Error** | Verify you are logged into Azure: `az login`. Check Azure subscription and ensure you have permissions to create resources. |
 | **Application Timeout on Startup** | If using a Free tier App Service, startup may be slow. Upgrade to B1 or higher tier for better performance. Check Application Insights logs for detailed errors. |
