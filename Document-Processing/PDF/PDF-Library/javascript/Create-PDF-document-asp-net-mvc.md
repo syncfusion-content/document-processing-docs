@@ -111,7 +111,7 @@ Step 6: Create a PDF document: open `~/Views/Home/Index.cshtml` and add a button
 
 ## Code Explanation
 
-- `ej.pdf.PdfDocument` — creates a new PDF document instance. All PDF types are namespaced under `ej.pdf` when loaded from the Syncfusion CDN.
+- `ej.pdf.PdfDocument` — creates a new PDF document instance.
 - `addPage()` — appends a blank page to the document and returns the `PdfPage` object.
 - `page.graphics` — returns the `PdfGraphics` drawing surface for the page.
 - `embedFont(family, size, style)` — embeds one of the standard PDF font families (here, Helvetica 36pt regular) and returns a `PdfStandardFont` object.

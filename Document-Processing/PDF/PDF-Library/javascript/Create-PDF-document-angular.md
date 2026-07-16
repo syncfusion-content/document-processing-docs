@@ -176,7 +176,6 @@ When you click **Create PDF document**, the PDF file is generated in the browser
 |---|---|---|
 | `TS2304: Cannot find name 'PdfDocument'` (or similar) | The import line is missing or the package is not installed | Confirm `npm install @syncfusion/ej2-pdf` ran successfully and that the import is in `app.component.ts` |
 | `Error: Cannot find module '@syncfusion/ej2-pdf'` | The package is not installed | Run `npm install @syncfusion/ej2-pdf --save` |
-| `ReferenceError: document is not defined` during build | The PDF code ran during server-side rendering | Move the PDF generation into a click handler or another browser-only lifecycle hook |
 | Button click does nothing | The button ID does not match the ID used in `getElementById` | Confirm the button's `id` is `normalButton` |
 | PDF file does not download | The browser blocks the download | Check the browser's download settings and the downloads folder |
 | Build fails with TypeScript errors | The Angular TypeScript version is incompatible with the PDF package | Update Angular to 20 or later and run `npm install` again |

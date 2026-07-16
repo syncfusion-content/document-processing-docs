@@ -72,10 +72,10 @@ Step 3: Create a complete `index.html` inside `my-app` with the following conten
     <div class="container py-4">
         <h1 class="h4 mb-3">Create PDF document</h1>
         <p class="text-muted">Click the button to generate and download a PDF.</p>
-        <button id="btnCreatePdf" class="btn btn-primary">Generate PDF document</button>
+        <button id="createPdf" class="btn btn-primary">Generate PDF document</button>
     </div>
     <script>
-        document.getElementById('btnCreatePdf').addEventListener('click', function () {
+        document.getElementById('createPdf').addEventListener('click', function () {
             // Create a new PDF document
             const pdf = new ej.pdf.PdfDocument();
             // Add a new page
@@ -108,11 +108,11 @@ Step 3: Create a complete `index.html` inside `my-app` with the following conten
 {% endhighlight %}
 {% endtabs %}
 
-N> The script tag is placed at the end of `<body>` so that `document.getElementById('btnCreatePdf')` finds the button. If you prefer to put the script in `<head>`, wrap the listener registration in a `DOMContentLoaded` event.
+N> The script tag is placed at the end of `<body>` so that `document.getElementById('createPdf')` finds the button. If you prefer to put the script in `<head>`, wrap the listener registration in a `DOMContentLoaded` event.
 
 ## Code Explanation
 
-- `ej.pdf.PdfDocument` — creates a new PDF document instance. All PDF types are namespaced under `ej.pdf` when loaded from the Syncfusion CDN.
+- `ej.pdf.PdfDocument` — creates a new PDF document instance.
 - `addPage()` — appends a blank page to the document and returns the `PdfPage` object.
 - `page.graphics` — returns the `PdfGraphics` drawing surface for the page.
 - `embedFont(family, size, style)` — embeds one of the standard PDF font families (here, Helvetica 36pt regular) and returns a `PdfStandardFont` object.
@@ -142,7 +142,7 @@ Step 5: Open the served URL in your browser. For `npx serve`, the default URL is
 
 Click **Generate PDF document**. The browser downloads `Output.pdf`, which contains a single page with the text "Hello World!!!" drawn at the top-left.
 
-![Output PDF document](Getting_started_images/JavaScript-Output.png)
+![Output PDF document](Getting_started_images/Output.png)
 
 ## Additional Configuration (Optional)
 
