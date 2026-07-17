@@ -26,7 +26,6 @@ Before you begin, make sure you have the following:
 Common static-server options include:
 
 - **Node.js** (recommended): `npx serve` (no install required)
-- **Python 3**: `python -m http.server 8000`
 - **VS Code**: the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension
 
 ## CDN Syntax
@@ -130,12 +129,6 @@ Using `npx serve` (no install required):
 
 ```bash
 npx serve
-```
-
-Or using Python 3:
-
-```bash
-python -m http.server 8000
 ```
 
 Step 5: Open the served URL in your browser. For `npx serve`, the default URL is `http://localhost:3000`. For Python, the default URL is `http://localhost:8000`.

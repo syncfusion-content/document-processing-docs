@@ -1,34 +1,28 @@
 ---
 layout: post
-title: Create or Generate a PDF File in ASP.NET Core MVC | Syncfusion
-description: Learn how to create a PDF file in an ASP.NET Core MVC application with easy steps using the JavaScript PDF Library without requiring Adobe Acrobat.
+title: Create or Generate a PDF File in ASP.NET MVC | Syncfusion
+description: Learn how to create a PDF file in an ASP.NET MVC application with easy steps using the JavaScript PDF Library without requiring Adobe Acrobat.
 platform: document-processing
 control: PDF
 documentation: ug
-keywords: mvc, asp.net core mvc, javascript, pdf
+keywords: mvc, asp.net mvc, javascript, pdf
 canonical_url: https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-asp-net-mvc
 ---
 
-# Create or Generate a PDF File in ASP.NET Core MVC
+# Create or Generate a PDF File in ASP.NET MVC
 
 The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) is used to create, read, and edit PDF documents. The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) also offers functionality to merge, split, stamp, fill forms, and secure PDF files.
 
-This guide explains how to integrate the [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) into an ASP.NET Core MVC application. The PDF is generated **client-side in the browser** using the Syncfusion JavaScript PDF Library loaded from a CDN; ASP.NET Core MVC is used to host the page that triggers the download.
+This guide explains how to integrate the [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) into an ASP.NET MVC application. The PDF is generated **client-side in the browser** using the Syncfusion JavaScript PDF Library loaded from a CDN; ASP.NET MVC is used to host the page that triggers the download.
 
 ## Prerequisites
 
 Before you begin, make sure you have the following installed:
 
-- Visual Studio 2022 (any edition) with the **ASP.NET and web development** workload.
-- .NET SDK 8.0 (LTS) or 9.0.
+- Visual Studio 2019 or later (Visual Studio 2022 recommended) with the **ASP.NET and web development** workload.
+- .NET SDK 8.0 (LTS) or later.
 - An active internet connection (the sample loads the JavaScript PDF Library from the Syncfusion CDN).
 - A supported browser such as the latest versions of Microsoft Edge, Google Chrome, or Mozilla Firefox.
-
-To verify your .NET SDK version, run:
-
-```bash
-dotnet --version
-```
 
 N> This guide uses the CDN distribution of the JavaScript PDF Library. No client-side `registerLicense` call is required when loading the library from the Syncfusion CDN; licensing is handled at the account level.
 
@@ -36,17 +30,17 @@ N> This guide uses the CDN distribution of the JavaScript PDF Library. No client
 
 Step 1: Start Visual Studio and select **Create a new project**.
 
-Step 2: In the **Create a new project** dialog, select **ASP.NET Core Web App (Model-View-Controller)**.
+Step 2: In the **Create a new project** dialog, select **ASP.NET MVC Web App (Model-View-Controller)**.
 
-![ASP.NET Core MVC PDF creation1](Getting_started_images/Asp-net-mvc-creation1.png)
+![ASP.NET MVC PDF creation1](Getting_started_images/Asp-net-mvc-creation1.png)
 
 Step 3: In the **Configure your new project** dialog, enter the project name, choose the target framework (for example, **.NET 8.0 (Long-term support)**), and select **Next**.
 
-![ASP.NET Core MVC PDF creation2](Getting_started_images/Asp-net-mvc-creation2.png)
+![ASP.NET MVC PDF creation2](Getting_started_images/Asp-net-mvc-creation2.png)
 
 Step 4: Confirm that **Web Application (Model-View-Controller)** is selected in the additional information dialog, and then select the **Create** button.
 
-![ASP.NET Core MVC PDF creation3](Getting_started_images/Asp-net-mvc-creation3.png)
+![ASP.NET MVC PDF creation3](Getting_started_images/Asp-net-mvc-creation3.png)
 
 ## Add the Script Reference
 
@@ -66,7 +60,7 @@ Step 5: Add the script reference: open `~/Views/Shared/_Layout.cshtml` and add t
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the following topics for including script references in an ASP.NET Core MVC application to enable PDF creation using the [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library):
+N> Check out the following topics for including script references in an ASP.NET MVC application to enable PDF creation using the [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library):
 - [CDN](https://ej2.syncfusion.com/aspnetmvc/documentation/common/adding-script-references)
 - [NPM Package](https://ej2.syncfusion.com/aspnetmvc/documentation/common/adding-script-references#node-package-manager-npm)
 - [CRG](https://ej2.syncfusion.com/aspnetmvc/documentation/common/custom-resource-generator)
@@ -129,7 +123,7 @@ Step 8: Run the project: click the **Start** button (green arrow) or press **F5*
 
 After running the application, click **Generate PDF document**. The browser downloads `output.pdf`, which contains a single page with the text "Hello World!!!" drawn at the top-left.
 
-![ASP.NET Core MVC PDF output](Getting_started_images/Output.png)
+![ASP.NET MVC PDF output](Getting_started_images/Output.png)
 
 ## Additional Configuration (Optional)
 
@@ -157,7 +151,7 @@ If you need image and data extraction, install the data-extraction add-on and co
 | `Failed to load resource: 404` on `ej2.min.js` | The CDN version path is incorrect or the network is restricted | Verify the CDN URL and internet access; switch to the [NPM](https://ej2.syncfusion.com/aspnetmvc/documentation/common/adding-script-references#node-package-manager-npm) or [CRG](https://ej2.syncfusion.com/aspnetmvc/documentation/common/custom-resource-generator) approach if the CDN is not reachable |
 | `output.pdf` does not download | The browser blocks the download | Check the browser's download settings and the downloads folder |
 | `WASM` or `.js` 404s for data extraction | The `ej2-pdf-lib` folder is not under `wwwroot/` | Copy the `ej2-pdf-lib` folder from the `@syncfusion/ej2-pdf-data-extract` package into `wwwroot/lib/` |
-| CORS errors when loading the data-extraction assets | The `ej2-pdf-lib` assets are served from a different origin | Serve the `ej2-pdf-lib` folder from the same ASP.NET Core MVC application under `wwwroot/` |
+| CORS errors when loading the data-extraction assets | The `ej2-pdf-lib` assets are served from a different origin | Serve the `ej2-pdf-lib` folder from the same ASP.NET MVC application under `wwwroot/` |
 
 ## See Also
 
