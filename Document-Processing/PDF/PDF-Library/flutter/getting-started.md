@@ -1,30 +1,20 @@
 ---
 layout: post
-title: Getting Started with Syncfusion Flutter PDF Library | Syncfusion
-description: Learn how to get started with Syncfusion Flutter PDF library, create PDF documents, and explore key features.
+title: Getting started with Flutter PDF library | Syncfusion
+description: Learn here about getting started with Syncfusion Flutter PDF non-UI library, its elements, and more.
 platform: document-processing
 control: PDF
 documentation: ug
 ---
 
-# Getting Started with Syncfusion Flutter PDF
+# Getting started with Flutter PDF
 
-This section explains the steps required to create a [Syncfusion Flutter PDF](https://www.syncfusion.com/document-processing/pdf-framework/flutter/pdf-library) document with a single button click. This section covers minimal features needed to get started with PDF generation.
+This section explains the steps required to create a [Flutter PDF library](https://www.syncfusion.com/document-processing/pdf-framework/flutter/pdf-library) document by a single button click. This section covers only the minimal features needed to learn to get started with the PDF.
 
 Check the following video to quickly get started with creating a Flutter PDF document.
 {% youtube "https://youtu.be/tMM9ty4Wfq0?si=b3EBPP0mjVpLKdBJ" %}
 
-## Prerequisites
-
-| Requirement | Version |
-|---|---|
-| **Flutter SDK** | 2.10 or later |
-| **Dart SDK** | 2.16 or later |
-| **IDE** | Android Studio, Xcode, or Visual Studio Code |
-| **Syncfusion Flutter PDF package** | Latest stable version |
-| **Supported Platforms** | Android, iOS, Web, Windows, macOS, Linux |
-
-## Steps to Create a PDF Document in Flutter
+## Steps to create PDF document in Flutter application
 
 Create a simple project using the instructions given in the [`Getting Started with your first Flutter app`](https://docs.flutter.dev/get-started/test-drive#choose-your-ide) documentation.
 
@@ -87,82 +77,67 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-Add the following code snippet in the button click event to create a simple PDF file:
+Include the following code snippet in the button click event to create a PDF file.
 
 {% tabs %}
 {% highlight dart tabtitle="dart" %}
 
 Future<void> _createPDF() async {
-  try {
-    //Create a new PDF document
-    PdfDocument document = PdfDocument();
+  //Create a new PDF document
+  PdfDocument document = PdfDocument();
 
-    //Add a new page and draw text
-    document.pages.add().graphics.drawString(
-      'Hello World!',
-      PdfStandardFont(PdfFontFamily.helvetica, 20),
-      brush: PdfSolidBrush(PdfColor(0, 0, 0)),
-      bounds: Rect.fromLTWH(0, 0, 500, 50),
-    );
+  //Add a new page and draw text
+  document.pages.add().graphics.drawString(
+    'Hello World!',
+    PdfStandardFont(PdfFontFamily.helvetica, 20),
+    brush: PdfSolidBrush(PdfColor(0, 0, 0)),
+    bounds: Rect.fromLTWH(0, 0, 500, 50),
+  );
 
-    //Save the document
-    List<int> bytes = await document.save();
+  //Save the document
+  List<int> bytes = await document.save();
 
-    //Dispose the document
-    document.dispose();
-    
-    // Now use platform-specific code to save/open the file
-    // See sections below for platform-specific implementations
-  } catch (e) {
-    print('Error creating PDF: $e');
-  }
+  //Dispose the document
+  document.dispose();
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-N> Always wrap document operations in try-catch blocks and ensure `document.dispose()` is called to free resources.
+## Save and open a PDF document in desktop
 
-## Save and Open a PDF Document on Desktop
+You can save and open a PDF document in desktop by using the following steps:
 
-You can save and open a PDF document on desktop (Windows, macOS, Linux) using the following steps:
+**Set up**
 
-**Step 1: Configure Desktop Support**
-
-Enable desktop support for your target platform:
+Configure and enable the desktop support to run the app.
 
 {% tabs %}
-{% highlight bash tabtitle="bash" %}
+{% highlight dart tabtitle="dart" %}
 
-# For Windows
-flutter config --enable-windows-desktop
-
-# For macOS
-flutter config --enable-macos-desktop
-
-# For Linux
-flutter config --enable-linux-desktop
+flutter config --enable-<platform>-desktop
 
 {% endhighlight %}
 {% endtabs %}
 
-N> You only need to run the `flutter config` command once. For details, see [`Adding desktop support to Flutter apps`](https://docs.flutter.dev/desktop).
+N> You only need to execute `flutter config --enable-<platform>-desktop` once. You can always check the status of your configuration using the no-argument flutter config command.
 
-**Step 2: Add Dependencies**
+Here you can get more details about [`How to add desktop support in the app`](https://docs.flutter.dev/desktop)
 
-Add the following packages to your **pubspec.yaml** file:
+**Add dependency**
+
+Add the following packages to your pub spec file.
 
 {% tabs %}
-{% highlight yaml tabtitle="yaml" %}
+{% highlight dart tabtitle="dart" %}
 
-dependencies:
-  path_provider: ^2.0.7
-  open_file: ^3.2.1
+path_provider: ^2.0.7
+open_file: ^3.2.1
 
 {% endhighlight %}
 {% endtabs %}
 
-**Step 3: Import Required Packages**
+**Import package**
 
 {% tabs %}
 {% highlight dart tabtitle="dart" %}
@@ -174,15 +149,13 @@ import 'package:path_provider/path_provider.dart';
 {% endhighlight %}
 {% endtabs %}
 
-**Step 4: Save and Open PDF on Desktop**
-
-Add the following code snippet in your `_createPDF` method to save and open the PDF document:
+Include the following code snippet in _createPDF method to open the PDF document in mobile after saving it.
 
 {% tabs %}
 {% highlight dart tabtitle="dart" %}
 
-//Get the documents directory (platform-specific)
-final directory = await getApplicationDocumentsDirectory();
+//Get external storage directory
+final directory = await getExternalStorageDirectory();
 
 //Get directory path
 final path = directory.path;
@@ -193,33 +166,30 @@ File file = File('$path/Output.pdf');
 //Write PDF data
 await file.writeAsBytes(bytes, flush: true);
 
-//Open the PDF document with the default viewer
+//Open the PDF document in mobile
 OpenFile.open('$path/Output.pdf');
 
 {% endhighlight %}
 {% endtabs %}
 
-N> `getApplicationDocumentsDirectory()` returns the standard documents folder on all desktop platforms. Alternatively, use `getDownloadsDirectory()` for the Downloads folder.
+## Save and open a PDF document in mobile
 
-## Save and Open a PDF Document on Mobile
+You can save and open a PDF document in mobile by using the following steps:
 
-You can save and open a PDF document on mobile platforms (Android and iOS) using the following steps:
+**Add dependency**
 
-**Step 1: Add Dependencies**
-
-Add the following packages to your **pubspec.yaml** file:
+Add the following packages to your pub spec file.
 
 {% tabs %}
-{% highlight yaml tabtitle="yaml" %}
+{% highlight dart tabtitle="dart" %}
 
-dependencies:
-  path_provider: ^2.0.7
-  open_file: ^3.2.1
+path_provider: ^2.0.7
+open_file: ^3.2.1
 
 {% endhighlight %}
 {% endtabs %}
 
-**Step 2: Import Required Packages**
+**Import package**
 
 {% tabs %}
 {% highlight dart tabtitle="dart" %}
@@ -231,14 +201,12 @@ import 'package:path_provider/path_provider.dart';
 {% endhighlight %}
 {% endtabs %}
 
-**Step 3: Save and Open PDF on Mobile**
-
-Add the following code snippet in your `_createPDF` method to save and open the PDF document:
+Include the following code snippet in _createPDF method to open the PDF document in mobile after saving it.
 
 {% tabs %}
 {% highlight dart tabtitle="dart" %}
 
-//Get application support directory (works on Android and iOS)
+//Get external storage directory
 final directory = await getApplicationSupportDirectory();
 
 //Get directory path
@@ -250,19 +218,17 @@ File file = File('$path/Output.pdf');
 //Write PDF data
 await file.writeAsBytes(bytes, flush: true);
 
-//Open the PDF document with the default viewer
-await OpenFile.open('$path/Output.pdf');
+//Open the PDF document in mobile
+OpenFile.open('$path/Output.pdf');
 
 {% endhighlight %}
 {% endtabs %}
 
-N> For Android 10 and above, ensure your app has the required permissions in `AndroidManifest.xml`. For iOS, add file sharing capabilities in `Info.plist`.
+## Save and download a PDF document in web
 
-## Save and Download a PDF Document on Web
+You can save and download a PDF document in web by using the following steps.
 
-You can save and download a PDF document in web applications using JavaScript interop. This approach works with Dart code targeting the web platform.
-
-**Step 1: Import Required Packages**
+**Import package**
 
 {% tabs %}
 {% highlight dart tabtitle="dart" %}
@@ -274,124 +240,82 @@ import 'dart:js' as js;
 {% endhighlight %}
 {% endtabs %}
 
-N> This uses the legacy `dart:js` API. For Dart 3.0+, consider using `dart:js_interop` package for better type safety and null safety support.
-
-**Step 2: Add Download Logic to _createPDF Method**
-
-Add the following code snippet in your `_createPDF` method to trigger the browser download:
+Include the following code snippet in _createPDF method to open the document in web after saving it.
 
 {% tabs %}
 {% highlight dart tabtitle="dart" %}
 
-try {
-  js.context['pdfData'] = base64.encode(bytes);
-  js.context['filename'] = 'Output.pdf';
-  Timer.run(() {
-    js.context.callMethod('download');
-  });
-} catch (e) {
-  print('Error downloading PDF: $e');
-}
+js.context['pdfData'] = base64.encode(bytes);
+js.context['filename'] = 'Output.pdf';
+Timer.run(() {
+  js.context.callMethod('download');
+});
 
 {% endhighlight %}
 {% endtabs %}
 
-**Step 3: Add JavaScript Download Function**
-
-Add the following code in the `<head>` section of **web/index.html**:
+Add the following code in the header section of index.html file under the web folder.
 
 {% tabs %}
-{% highlight html tabtitle="html" %}
+{% highlight dart tabtitle="dart" %}
 
 <script>
-    function download() {
-      try {
-        var pdfAsDataUri = "data:application/pdf;base64," + pdfData;
-        var link = document.createElement('a');
-        link.href = pdfAsDataUri;
-        link.download = filename;
-        link.type = 'application/pdf';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      } catch (e) {
-        console.error('Error downloading PDF:', e);
-      }
+    async function download() {
+      var pdfAsDataUri = "data:application/pdf;base64, " + pdfData;
+      var link = document.createElement('a');
+      link.download = filename;
+      link.href = pdfAsDataUri;
+      link.type = 'application/pdf';
+      link.click();
     }
 </script>
 
 {% endhighlight %}
 {% endtabs %}
 
-## Save and Download a PDF Document with WASM
+## Save and download a PDF document in WASM
 
-For Dart 3.0+ web apps, use the modern `dart:js_interop` API with WASM (WebAssembly) support instead of legacy JavaScript interop.
+**Step 1:** Add the [web](https://pub.dev/packages/web) package as a dependency in your **pubspec.yaml** file.
 
-**Step 1: Add Dependencies**
+**Step 2:** Create a new Dart file called **save_file_wasm.dart**.
 
-Add the [web](https://pub.dev/packages/web) package to your **pubspec.yaml**:
+**Step 3:** Add the following code:
 
-{% tabs %}
-{% highlight yaml tabtitle="yaml" %}
-
-dependencies:
-  web: ^0.5.0
-
-{% endhighlight %}
-{% endtabs %}
-
-**Step 2: Create Save Function**
-
-Create a new Dart file called **save_file_wasm.dart** with the following code:
+**Import package**
 
 {% tabs %}
 {% highlight dart tabtitle="dart" %}
 
 import 'dart:convert';
-import 'dart:typed_data';
 import 'package:web/web.dart' as web;
-
-/// Function to save and download a file in a WASM web environment
-Future<void> saveAndLaunchFile(Uint8List bytes, String fileName) async {
-  try {
-    final blob = web.Blob([bytes], 'application/pdf');
-    final url = web.URL.createObjectURL(blob);
-    
-    final anchor = web.document.createElement('a') as web.HTMLAnchorElement
-      ..href = url
-      ..download = fileName
-      ..style.display = 'none';
-    
-    // Add to DOM, click, and clean up
-    web.document.body!.appendChild(anchor);
-    anchor.click();
-    web.document.body!.removeChild(anchor);
-    
-    // Release object URL
-    web.URL.revokeObjectURL(url);
-  } catch (e) {
-    print('Error saving PDF: $e');
-  }
-}
 
 {% endhighlight %}
 {% endtabs %}
 
-**Step 3: Call from PDF Creation Method**
-
-Update your `_createPDF` method to call this function:
+To enable file saving and launching for download in a web environment, include the following code snippet within the **saveAndLaunchFile** method.
 
 {% tabs %}
 {% highlight dart tabtitle="dart" %}
 
-// In your _createPDF method, after creating the PDF:
-List<int> bytes = await document.save();
-await saveAndLaunchFile(Uint8List.fromList(bytes), 'Output.pdf');
+// Function to save and launch a file for download in a web environment
+Future<void> saveAndLaunchFile(List<int> bytes, String fileName) async {
+  final web.HTMLAnchorElement anchor =
+      web.document.createElement('a') as web.HTMLAnchorElement
+        ..href = "data:application/octet-stream;base64,${base64Encode(bytes)}"
+        ..style.display = 'none'
+        ..download = fileName;
+
+  // Insert the new element into the DOM
+  web.document.body!.appendChild(anchor);
+
+  // Initiate the download
+  anchor.click();
+  // Clean up the DOM by removing the anchor element
+  web.document.body!.removeChild(anchor);
+}
 
 {% endhighlight %}
 {% endtabs %}
-
-N> WASM approach is more efficient than JavaScript interop and provides better performance for large PDF files. It's the recommended approach for modern Flutter web apps.
 
 By executing the above code sample, you will get the PDF document as follows.
 
@@ -505,7 +429,7 @@ PdfGraphics graphics = page.graphics;
 * In PDF, all the elements are placed in absolute positions and has the possibility for content overlapping if misplaced.
 * Syncfusion<sup>&reg;</sup> PDF provides the rendered bounds for each and every element added through [`PdfLayoutResult`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfLayoutResult-class.html) objects. This can be used to add successive elements and prevent content overlap.
 
-The following code example demonstrates how to add an image from a base64 string to a PDF document by specifying the rectangle coordinates:
+The following code example explains how to add an image from base64 string to a PDF document, by providing the rectangle coordinates.
 
 {% tabs %}
 {% highlight dart tabtitle="dart" %}
@@ -805,17 +729,15 @@ The following screenshot shows the invoice PDF document created by the Syncfusio
 
 ![Invoice PDF](images/getting-started/invoice.jpg)
 
-N> You can also explore our [Syncfusion Flutter PDF library](https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/pdf) demo that shows how to create and modify PDF files from Dart with just a few lines of code.
+## Troubleshooting
 
-## Next Steps
+- If you encounter "permission denied" errors when saving or opening PDFs, ensure the app has the necessary storage permissions for the target platform.
+- For issues with package versions, verify that your Flutter and Dart SDK versions are compatible with the Syncfusion Flutter PDF package.
+- If the PDF does not open or save as expected, check for platform-specific implementation issues and review the official Syncfusion documentation.
 
-Explore advanced features and common use cases with the Syncfusion Flutter PDF library:
+## See also
 
-- [Merge PDF Documents](./merge-pdf-documents.md) - Combine multiple PDF files into a single document
-- [Split PDF Documents](./split-pdf-documents.md) - Extract pages or divide PDFs into separate files
-- [Add Watermarks](./add-watermark.md) - Apply text and image watermarks to PDFs
-- [Work with Forms](./fill-form-fields.md) - Create and fill interactive PDF forms
-- [Secure Documents](./encrypt-pdf.md) - Add passwords and encryption for PDF security
-- [Other Platforms](../../getting-started.md) - PDF generation guides for other platforms (ASP.NET Core, WPF, Android, iOS, and more)
-
-For more examples and complete API documentation, visit the [Syncfusion Flutter PDF documentation](https://help.syncfusion.com/flutter/pdf/overview).
+- [Syncfusion Flutter PDF documentation](https://help.syncfusion.com/flutter/pdf/overview)
+- [Syncfusion Flutter PDF package (pub.dev)](https://pub.dev/packages/syncfusion_flutter_pdf)
+- [Flutter platform setup guides](https://docs.flutter.dev/get-started/install)
+- [GitHub sample: Flutter PDF library](https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/pdf)

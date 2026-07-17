@@ -7,75 +7,43 @@ documentation: UG
 keywords: aws lambda create pdf, aws edit pdf, merge, pdf form, fill form, digital sign, table, c#, dotnet core pdf, asp generate pdf, aspx generate pdf
 ---
 
-# Create a PDF File in AWS Lambda
+# Create a PDF Document in AWS Lambda
 
-The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) enables you to create, read, and edit PDF documents programmatically in AWS Lambda without the dependency of Adobe Acrobat. This guide demonstrates how to generate and process PDF files in serverless AWS Lambda functions, allowing you to scale PDF operations without managing infrastructure.
+The [.NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) creates, reads, and edits PDF documents programmatically, with no dependency on Adobe Acrobat. You can use this library to create, read, and edit PDF documents in AWS Lambda.
 
 ## Prerequisites
 
-| Requirement | Details |
-|-------------|---------|
-| **IDE** | Visual Studio 2022 or Visual Studio Code |
-| **.NET Version** | .NET 6.0+, .NET 7.0, or .NET 8.0 |
-| **Lambda Runtime** | .NET 6 (supports x86_64 architecture) or newer |
-| **NuGet Package** | Syncfusion.Pdf.NET v16.2.0.x or later |
-| **AWS Account** | Active Amazon Web Services account with Lambda access |
-| **AWS Toolkit** | AWS Toolkit for Visual Studio or AWS CLI v2 with configured credentials |
-| **Licensing** | Syncfusion license key (required v16.2.0.x+) |
-| **IAM Permissions** | Lambda execution role with `logs:CreateLogGroup`, `logs:CreateLogStream`, `logs:PutLogEvents` for CloudWatch logging |
+- An active **Amazon Web Services (AWS) account**. If you don't have one, [create an account](https://aws.amazon.com/) before starting.
+- **.NET SDK 8.0** or later installed locally.
+- **Visual Studio 2022** with the **AWS Toolkit for Visual Studio** extension, installed from the [AWS Visual Studio download page](https://aws.amazon.com/visualstudio/) or from the **Extensions > Manage Extensions** dialog. Configure an AWS credential profile in **AWS Explorer** (or run `aws configure` from the AWS CLI) before proceeding.
+- A **Syncfusion<sup>&reg;</sup> license key** — register it in your application using `Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")`. For Lambda, store the key in an environment variable (for example, `SYNCFUSION_LICENSE_KEY`) and read it at function startup. For details, see the [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
+- The **[Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core)** NuGet package installed in the project. (`Syncfusion.Pdf.Imaging.Net.Core` is a smaller imaging-only package; for the full API surface used in this tutorial, use `Syncfusion.Pdf.Net.Core`.)
+- A sample input PDF named `Input.pdf` placed in the project's `Data/` folder with **Copy to Output Directory** set to **Copy if newer**.
 
-> **Note**: AWS Lambda provides serverless compute for PDF generation with automatic scaling. This guide covers local Lambda development and deployment. For request/response workflows, a client console application is also provided.
+## Step to create a PDF document in AWS Lambda
 
-## License Registration
+**Step 1:** In Visual Studio, create a new **AWS Lambda Project (.NET Core)**.
+![Create an AWS Lambda project in Visual Studio](GettingStarted_images/AWS_Project.png)
 
-Starting with Syncfusion v16.2.0.x, a license key is required for PDF operations. Add the following to your Lambda function initialization:
+**Step 2:** Select **Empty Function** as the blueprint, then click **Finish**.
+![Select Empty Function blueprint](GettingStarted_images/Blueprint_AWS.png)
 
-```csharp
-// In Function.cs - add before PDF operations
-static Function()
-{
-    Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
-}
-```
+**Step 3:** Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) NuGet package from [NuGet.org](https://www.nuget.org/). Use the latest stable version compatible with .NET 6 or later.
+![Install the Syncfusion.Pdf.Net.Core NuGet package](GettingStarted_images/NuGetPackageAWSLambda.png)
 
-> **Important**: Obtain a free community license from [Syncfusion Community License](https://help.syncfusion.com/common/essential-studio/licensing/community-license). For production Lambda functions, store the license key in [AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/) or [Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html), never hardcode in source. Refer to [licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details. 
+N> If you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or the NuGet feed, you must add a reference to the `Syncfusion.Licensing` assembly and include a valid license key in your project. See the [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details on registering the license key.
 
-## Steps to Create a PDF File in AWS Lambda
+**Step 4:** Create a folder named `Data`, copy the sample `Input.pdf` into it, and include the folder in the project. (`Input.pdf` is provided in the [GitHub sample](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/AWS/AWSLambdaProject).)
+![Create the Data folder](GettingStarted_images/Data-Folder.png)
 
-**Step 1**: Create a new AWS Lambda project using the AWS Toolkit for Visual Studio.
+**Step 5:** Select each data file in **Solution Explorer**, open the **Properties** window, and set **Copy to Output Directory** to **Copy if newer**.
+![Set Copy to Output Directory to Copy if newer](GettingStarted_images/Document-property-AWS-lambda.png)
 
-![AWS Lambda project](GettingStarted_images/AWS_Project.png)
-
-**Step 2**: Select **Blueprint as Empty Function** and click **Finish**.
-
-![Select Blueprint as Empty Function](GettingStarted_images/Blueprint_AWS.png)
-
-**Step 3**: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.NET) NuGet package. Use the Package Manager Console:
-
-```bash
-dotnet add package Syncfusion.Pdf.NET
-```
-
-![Install NuGet package](GettingStarted_images/NuGetPackageAWSLambda.png)
-
-**Step 4**: Create a `Data` folder in your Lambda project and add the input PDF file (`Input.pdf`). This file will be processed by the Lambda function.
-
-![Create a folder](GettingStarted_images/Data-Folder.png)
-
-**Step 5**: Right-click the PDF file in Solution Explorer → **Properties**. Set **Copy to Output Directory** to "Copy if newer" to ensure the file is included in the deployment package.
-
-![Property change for data files](GettingStarted_images/Document-property-AWS-lambda.png)
-
-**Step 6**: Open `Function.cs` and include the following namespaces:
+**Step 6:** Include the following namespaces in `Function.cs`. The `Syncfusion.Pdf.Parsing` namespace provides the `PdfLoadedDocument` and `PdfLoadedPage` types used to open and edit an existing PDF; `Syncfusion.Drawing` provides `RectangleF` on .NET Core.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Reflection;
-using Amazon.Lambda.Core;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Drawing;
@@ -83,295 +51,173 @@ using Syncfusion.Pdf.Parsing;
 using Syncfusion.Pdf.Grid;
 
 {% endhighlight %}
-
 {% endtabs %}
 
-**Step 7**: Add the following code to your `FunctionHandler` method in `Function.cs` to load a PDF, add a product table, and return the modified document as a Base64-encoded string:
+**Step 7:** In `Function.cs`, add the following code inside the `FunctionHandler` method to open `Data/Input.pdf`, draw a `PdfGrid` of sample data on the first page, and return the result as a base64 string. The `RectangleF(40, 400, page.Size.Width - 80, 0)` coordinates place the grid 40 px from the page edges and 400 px from the top.
 
 {% tabs %}
-
 {% highlight c# tabtitle="C#" %}
 
-public string FunctionHandler(ILambdaContext context)
+string filePath = Path.GetFullPath(@"Data/Input.pdf");
+//Open an existing PDF document.
+using (FileStream stream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
 {
-    try
-    {
-        // Get the path to the input PDF file in the Lambda deployment package
-        string dataPath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "Data", "Input.pdf");
-        
-        if (!System.IO.File.Exists(dataPath))
-        {
-            context.Logger.LogLine($"Error: Input PDF file not found at {dataPath}");
-            return "Error: Input PDF file not found";
-        }
+    PdfLoadedDocument document = new PdfLoadedDocument(stream);
 
-        // Open the input PDF with proper resource disposal
-        using (FileStream fileStream = new FileStream(dataPath, FileMode.Open, FileAccess.Read))
-        {
-            using (PdfLoadedDocument document = new PdfLoadedDocument(fileStream))
-            {
-                // Get the first page and its graphics context
-                PdfLoadedPage page = document.Pages[0] as PdfLoadedPage;
-                PdfGraphics graphics = page.Graphics;
+    //Get the first page from a document.
+    PdfLoadedPage page = document.Pages[0] as PdfLoadedPage;
 
-                // Create product data list
-                List<object> productData = new List<object>
-                {
-                    new { Product_ID = "1001", Product_Name = "Bicycle", Price = "$10,000" },
-                    new { Product_ID = "1002", Product_Name = "Head Light", Price = "$3,000" },
-                    new { Product_ID = "1003", Product_Name = "Brake Wire", Price = "$1,500" },
-                    new { Product_ID = "1004", Product_Name = "Pedal Set", Price = "$2,000" },
-                    new { Product_ID = "1005", Product_Name = "Chain", Price = "$500" }
-                };
+    //Create PDF graphics for the page.
+    PdfGraphics graphics = page.Graphics;
 
-                // Create and configure grid table
-                PdfGrid pdfGrid = new PdfGrid();
-                pdfGrid.DataSource = productData;
-                pdfGrid.ApplyBuiltinStyle(PdfGridBuiltinStyle.GridTable4Accent3);
+    //Create a PdfGrid.
+    PdfGrid pdfGrid = new PdfGrid();
+    //Add values to the list.
+    List<object> data = new List<object>();
+    data.Add(new { Product_ID = "1001", Product_Name = "Bicycle", Price = "10,000" });
+    data.Add(new { Product_ID = "1002", Product_Name = "Head Light", Price = "3,000" });
+    data.Add(new { Product_ID = "1003", Product_Name = "Break wire", Price = "1,500" });
+            
+    //Assign data source.
+    pdfGrid.DataSource = data;
 
-                // Draw table on the page
-                pdfGrid.Draw(graphics, new RectangleF(40, 400, page.Size.Width - 80, 0));
+    //Apply built-in table style.
+    pdfGrid.ApplyBuiltinStyle(PdfGridBuiltinStyle.GridTable4Accent3);
 
-                // Save to memory stream and return as Base64 string
-                using (MemoryStream memoryStream = new MemoryStream())
-                {
-                    document.Save(memoryStream);
-                    memoryStream.Position = 0;
-                    string base64Result = Convert.ToBase64String(memoryStream.ToArray());
-                    context.Logger.LogLine($"PDF generated successfully. Size: {memoryStream.Length} bytes");
-                    return base64Result;
-                }
-            }
-        }
-    }
-    catch (Exception ex)
-    {
-        context.Logger.LogLine($"Error generating PDF: {ex.Message}");
-        return $"Error: {ex.Message}";
-    }
+    //Draw the grid to the page of PDF document.
+    pdfGrid.Draw(graphics, new RectangleF(40, 400, page.Size.Width - 80, 0));
+
+    //Save the document into stream.
+    MemoryStream memoryStream = new MemoryStream();
+    document.Save(memoryStream);
+    //Close the document.
+    document.Close(true);
+    //return the stream as base64 string
+    return Convert.ToBase64String(memoryStream.ToArray());
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
-> **Important Notes**:
-> - All streams and documents are wrapped in `using` statements for guaranteed resource disposal in the Lambda environment
-> - `Assembly.GetExecutingAssembly().Location` correctly resolves the file path in Lambda deployment
-> - Error handling with `ILambdaContext.Logger` logs to CloudWatch for debugging
-> - The Base64 encoding allows the PDF to be transmitted via Lambda's text-based response
+**Step 8:** Right-click the project and choose **Publish to AWS Lambda**.
 
-## Deploying to AWS Lambda
+N> AWS Lambda runs on Amazon Linux 2. `Syncfusion.Pdf.Net.Core` depends on SkiaSharp native assets, so add the `SkiaSharp.NativeAssets.Linux` package (or a Lambda Layer) and install `libfontconfig` and `libgdiplus` in the deployment package. Without these, the function fails at runtime with `DllNotFoundException` or font-rendering errors.
 
-**Step 8**: Right-click your Lambda project in Visual Studio and select **Publish to AWS Lambda**.
+![Publish to AWS Lambda menu option](GettingStarted_images/Publish.png)
 
-![Publish to AWS Lambda](GettingStarted_images/Publish.png)
+**Step 9:** In the **Upload Lambda Function** window, select an existing AWS profile (or create one via **AWS Explorer**), then choose **Create new function** for a fresh deployment or **Re-deploy to the existing Lambda function** to update a running app. Click **Next** to continue.
+![Upload Lambda Function window](GettingStarted_images/Upload-Lampda.png)
 
-**Step 9**: In the "Upload Lambda Function" window:
-- Select or configure your AWS profile (with appropriate credentials)
-- Choose **Create new function** to deploy for the first time, or **Re-deploy to existing function** for updates
-- Click **Next** to proceed
+**Step 10:** On the **Advanced Function Details** screen, choose an existing IAM role or create a new one based on the `AWSLambdaBasicExecutionRole` AWS managed policy (required for CloudWatch Logs access). In the **Basic settings** section, set **Memory** to at least 512 MB and **Timeout** to at least 30 s. Click **Upload** to deploy.
+![Advanced Function Details window](GettingStarted_images/Advanced-AWS.png)
 
-![Upload Lambda Function](GettingStarted_images/Upload-Lampda.png)
-
-**Step 10**: In the "Advanced Function Details" window:
-- **Function Name**: Enter a descriptive name (e.g., `CreatePDFFunction`)
-- **IAM Role**: Select or create an execution role with CloudWatch Logs permissions
-- **Memory Size**: Set to 512 MB or higher (PDF operations are memory-intensive)
-- **Timeout**: Set to 60 seconds or higher to allow sufficient time for PDF processing
-- Click **Upload** to deploy your Lambda function
-
-![Advanced Function Details](GettingStarted_images/Advanced-AWS.png)
-
-**Step 11**: After deployment, verify the Lambda function was created successfully by checking the AWS Lambda Console.
-
-![Lambda Function Published](GettingStarted_images/AWS-Lambda-Function.png)
-
-## Testing the Lambda Function
-
-**Step 12**: Navigate to the AWS Lambda Console → select your function → open the **Test** tab. Create a test event and execute the function to verify PDF generation works correctly. Check CloudWatch Logs for output.
+**Step 11:** After deployment, open the function in the AWS console to verify the status, then create a test event (for example, with the payload `"\"Test\""`) and click **Test** to invoke it.
+![Published Lambda function in the AWS console](GettingStarted_images/AWS-Lambda-Function.png)
 
 
-## Creating a Console Client to Invoke the Lambda Function
+## Step to invoke the Lambda function from a console application
 
-Optionally, you can create a console application to invoke the Lambda function and retrieve the generated PDF. This demonstrates the full end-to-end workflow.
+**Step 1:** In Visual Studio, create a new .NET 6+ console project.
+![Create a console project in Visual Studio](GettingStarted_images/Console-APP.png)
 
-**Step 13**: Create a new .NET Console project.
+**Step 2:** Install the following NuGet packages from [NuGet.org](https://www.nuget.org/).
 
-![Create a console project](GettingStarted_images/Console-APP.png)
+* [AWSSDK.Core](https://www.nuget.org/packages/AWSSDK.Core/)
+* [AWSSDK.Lambda](https://www.nuget.org/packages/AWSSDK.Lambda/)
+* [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/) (optional on .NET 6+ if you prefer the built-in `System.Text.Json`)
 
-**Step 14**: Install the required NuGet packages:
+N> The AWS access keys are loaded from the default credential chain by leaving the `AmazonLambdaClient` constructor empty. Hard-coding credentials in source code is a security risk; prefer IAM roles, environment variables, or the AWS shared credentials file.
 
-```bash
-dotnet add package AWSSDK.Core
-dotnet add package AWSSDK.Lambda
-dotnet add package Newtonsoft.Json
-```
+![Install Nuget Package](GettingStarted_images/AWSSDKCore-nuget.png)
 
-![Install NuGet packages](GettingStarted_images/AWSSDKCore-nuget.png)
+![Install Nuget Package](GettingStarted_images/AWSSDKLambda-nuget.png)
 
-**Step 15**: Include the following namespaces in `Program.cs`:
+![Install Nuget Package](GettingStarted_images/NewtonsoftJson-nuget.png)
+
+Step 3: Include the following namespaces in Program.cs file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-using System;
-using System.IO;
-using System.Text.Json;
-using System.Threading.Tasks;
 using Amazon;
 using Amazon.Lambda;
 using Amazon.Lambda.Model;
 using Newtonsoft.Json;
+using System.IO;
 
 {% endhighlight %}
-
 {% endtabs %}
 
-**Step 16**: Add the following code to invoke the Lambda function securely. Use [AWS credential chain](https://docs.aws.amazon.com/sdk-for-net/latest/developer-guide/net-dg-config-creds.html) instead of hardcoded credentials:
+Step 4: Add the following code sample in Program.cs to invoke the published AWS Lambda function using the function name and access keys.
 
 {% tabs %}
-
 {% highlight c# tabtitle="C#" %}
 
-public static async Task Main(string[] args)
+//Create a new AmazonLambdaClient
+AmazonLambdaClient client = new AmazonLambdaClient("awsaccessKeyID", "awsSecreteAccessKey", RegionEndpoint.USEast1);
+//Create new InvokeRequest with published function name.
+InvokeRequest invoke = new InvokeRequest
 {
-    try
-    {
-        // Create Lambda client using default credential chain (IAM role, environment variables, shared credentials)
-        // Never hardcode access keys in source code
-        using (AmazonLambdaClient client = new AmazonLambdaClient(RegionEndpoint.USEast1))
-        {
-            // Invoke the Lambda function
-            InvokeRequest invokeRequest = new InvokeRequest
-            {
-                FunctionName = "CreatePDFFunction", // Replace with your Lambda function name
-                InvocationType = InvocationType.RequestResponse,
-                Payload = "\"Test\"" // Payload sent to Lambda
-            };
+    FunctionName = "MyNewFunction", //Add your lambda function name here
+    InvocationType = InvocationType.RequestResponse,
+    Payload = "\"Test\""
+};
+//Get the InvokeResponse from client InvokeRequest
+InvokeResponse response = await client.InvokeAsync(invoke);
+//Read the response stream
+var stream = new StreamReader(response.Payload);
+//Deserialize the response stream
+JsonReader reader = new JsonTextReader(stream);
+JsonSerializer serializer = new JsonSerializer();
+var responseText = serializer.Deserialize(reader);
 
-            Console.WriteLine("Invoking Lambda function...");
-            InvokeResponse response = await client.InvokeAsync(invokeRequest);
+//Convert Base64String into byte array
+byte[] bytes = Convert.FromBase64String(responseText.ToString());
 
-            // Read and parse the response
-            using (StreamReader streamReader = new StreamReader(response.Payload))
-            {
-                string responseText = await streamReader.ReadToEndAsync();
-                
-                // Remove quotes from JSON response
-                responseText = responseText.Trim('"');
+//Write the byte array into a file
+FileStream fileStream = new FileStream("Sample.pdf", FileMode.Create);
+fileStream.Write(bytes, 0, bytes.Length);
+fileStream.Flush();
+fileStream.Dispose();
 
-                if (response.FunctionError != null)
-                {
-                    Console.WriteLine($"Lambda function error: {responseText}");
-                    return;
-                }
-
-                // Convert Base64-encoded PDF back to binary
-                byte[] pdfBytes = Convert.FromBase64String(responseText);
-
-                // Save PDF to disk
-                string outputPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Output.pdf");
-                using (FileStream fileStream = new FileStream(outputPath, FileMode.Create))
-                {
-                    fileStream.Write(pdfBytes, 0, pdfBytes.Length);
-                }
-
-                Console.WriteLine($"PDF generated successfully and saved to: {outputPath}");
-
-                // Open the PDF file in default viewer
-                System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
-                {
-                    FileName = outputPath,
-                    UseShellExecute = true
-                });
-            }
-        }
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"Error invoking Lambda: {ex.Message}");
-    }
-}
+System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo() { FileName = "Sample.pdf", UseShellExecute = true });
 
 {% endhighlight %}
-
 {% endtabs %}
 
-> **Security Best Practices**:
-> - **Never hardcode AWS credentials** in source code. Use the AWS credential chain (IAM roles, environment variables, or shared credentials file)
-> - Use **AWS Secrets Manager** or **Parameter Store** to manage sensitive data like license keys
-> - Grant Lambda execution role only the minimum required permissions (principle of least privilege)
-> - Enable CloudWatch Logs for debugging without exposing sensitive information
-
-## Expected Output
-
-When you execute the Lambda function or console client, you will generate a PDF document containing:
-- The original input PDF document (loaded from `Data/Input.pdf`)
-- A formatted table of 5 product records added to the first page
-- Professional table styling applied with GridTable4Accent3 style
-- The file returned as Base64-encoded string (via Lambda) or saved as `Output.pdf` (via console client)
-
+Running the program produces the following PDF document.
 ![Output PDF document](GettingStarted_images/Output.png)
+
+Download the [console application sample](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/AWS/ConsoleApp) and the [AWS Lambda sample](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/AWS/AWSLambdaProject) from GitHub.
+
+Explore the [Syncfusion<sup>&reg;</sup> PDF library features](https://www.syncfusion.com/document-sdk/net-pdf-library) to learn more about merging, splitting, securing, and stamping PDF files.
+
+An online sample demonstrating how to [create a PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind) is also available.
 
 ## Troubleshooting
 
-| Issue | Solution |
-|-------|----------|
-| **License Key Not Registered** | Verify the static constructor in `Function.cs` calls `SyncfusionLicenseProvider.RegisterLicense()` before any PDF operations. The license must be registered at function initialization. |
-| **"Input PDF file not found" Error** | Ensure `Data/Input.pdf` exists in your Lambda project and **Copy to Output Directory** is set to "Copy if newer". The file must be included in the deployment package. |
-| **Syncfusion.Pdf.NET Package Not Found** | Run `dotnet add package Syncfusion.Pdf.NET` to install the latest version. Verify v16.2.0.x or later is installed via `dotnet list package`. |
-| **Lambda Function Timeout** | Increase the **Timeout** setting in Step 10 to 60+ seconds. PDF processing requires time proportional to file size and complexity. Check CloudWatch Logs for performance bottlenecks. |
-| **"Access Denied" or IAM Role Error** | The Lambda execution role must have `lambda:InvokeFunction` and `logs:*` permissions. Check IAM role policy in AWS Console → Lambda → Function → Configuration → Permissions. |
-| **OutOfMemoryException in Lambda** | Increase **Memory Size** in Step 10 to 512 MB or higher. Lambda allocates CPU proportionally to memory; larger PDFs need more resources. Monitor memory usage in CloudWatch Metrics. |
-| **Console Client Cannot Connect to AWS** | Configure AWS credentials via AWS CLI (`aws configure`) or set environment variables `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`. Never hardcode credentials in code. |
-| **Base64 Decoding Error in Console Client** | Verify the Lambda function returns a valid Base64 string. Check CloudWatch Logs to confirm the PDF was generated successfully before Base64 encoding. |
-| **"Build Failed" During Deployment** | Run `dotnet restore` to ensure all NuGet packages are installed. Check Visual Studio Output window for detailed build errors. Verify the project file (.csproj) references are correct. |
-| **Licensing Error After Deployment** | Development license keys may not work on AWS Lambda due to environment detection. Use a production license key or obtain a free community license from Syncfusion. For deployment questions, contact Support. |
+- **Watermark appears in the output PDF** — Your Syncfusion<sup>&reg;</sup> license key is not registered. Call `SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")` at function startup, or load the key from the `SYNCFUSION_LICENSE_KEY` environment variable configured in the Lambda function's **Configuration > Environment variables**.
+- **`Task timed out after X seconds`** — Increase the Lambda function **Timeout** (recommended: 30 s for typical PDF generation) and **Memory** (recommended: 512 MB minimum) in the **Basic settings** panel.
+- **`TypeInitializationException` or `DllNotFoundException` for SkiaSharp** — Add the `SkiaSharp.NativeAssets.Linux` NuGet package and deploy it together with the function. On Amazon Linux 2, also include `libfontconfig` and `libgdiplus` in a Lambda Layer.
+- **`Data/Input.pdf` not found at runtime** — Verify the file is in the project's `Data/` folder, included in the deployment package, and that **Copy to Output Directory** is set to **Copy if newer**.
+- **`AccessDeniedException` when calling the Lambda** — Attach an IAM role to the console caller with `lambda:InvokeFunction` permission on the target function.
+- **Cold start latency** — Enable [Provisioned Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/configuration-concurrency.html) for production workloads, or move to a container-based service (ECS / Fargate) for consistent startup times.
+- **AWS Toolkit does not detect credentials** — Run `aws configure` from the AWS CLI, or set the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables before opening Visual Studio.
+- **`System.Diagnostics.Process.Start` fails on Linux** — The `UseShellExecute` option is Windows-only. On Linux, write the PDF to a file and let the user open it manually, or use `xdg-open` via `Process.Start("xdg-open", filePath)`.
 
-## Next Steps
+## See also
 
-Explore advanced PDF capabilities and AWS Lambda integration patterns:
-
-### Advanced PDF Features
-- **[Merge Multiple PDFs](https://help.syncfusion.com/file-formats/pdf/working-with-documents/merge-documents)** — Combine multiple PDF documents into a single file
-- **[Split PDF Documents](https://help.syncfusion.com/file-formats/pdf/split-document)** — Extract specific pages from PDF files
-- **[Add Watermarks](https://help.syncfusion.com/file-formats/pdf/working-with-pages/add-watermark)** — Add company logos or confidentiality markers
-- **[Create Interactive Forms](https://help.syncfusion.com/file-formats/pdf/working-with-forms/overview)** — Build fillable PDF forms for data collection
-- **[Digital Signatures](https://help.syncfusion.com/file-formats/pdf/working-with-forms/create-digital-signatures)** — Sign PDFs programmatically for document compliance
-- **[PDF Encryption](https://help.syncfusion.com/file-formats/pdf/working-with-security/encrypt-pdf)** — Protect PDFs with passwords and permissions
-
-### AWS Lambda Integration Patterns
-- **[API Gateway Integration](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-lambda-proxy-integrations.html)** — Expose Lambda as HTTP endpoints for PDF generation
-- **[S3 Event Triggers](https://docs.aws.amazon.com/lambda/latest/dg/with-s3.html)** — Generate PDFs automatically when files are uploaded to S3
-- **[EventBridge Scheduled Rules](https://docs.aws.amazon.com/lambda/latest/dg/services-eventbridge-scheduled-rules.html)** — Schedule batch PDF generation jobs
-- **[Lambda Layers](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html)** — Package Syncfusion library as a reusable layer
-- **[Asynchronous Invocation](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html)** — Handle PDF generation asynchronously with queues (SQS/SNS)
-- **[DynamoDB Integration](https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html)** — Stream PDF metadata to DynamoDB for tracking/auditing
-
-### Deployment and Operations
-- **[AWS CloudFormation](https://aws.amazon.com/cloudformation/)** — Automate Lambda deployment as Infrastructure-as-Code
-- **[AWS SAM (Serverless Application Model)](https://aws.amazon.com/serverless/sam/)** — Deploy serverless applications with simplified templates
-- **[CloudWatch Monitoring](https://docs.aws.amazon.com/lambda/latest/dg/monitoring-cloudwatchlogs.html)** — Monitor function duration, memory usage, errors, and throughput
-- **[X-Ray Tracing](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html)** — Trace PDF generation across distributed services
-- **[Cost Optimization](https://aws.amazon.com/lambda/pricing/)** — Monitor invocations and memory to optimize Lambda costs
-
-## Resources
-
-**Sample Code:**
-- [Complete AWS Lambda example](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/AWS/AWSLambdaProject)
-- [Console client application](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/AWS/ConsoleApp)
-
-**Documentation:**
-- [Syncfusion .NET PDF Library Guide](https://help.syncfusion.com/file-formats/pdf/)
-- [AWS Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/)
-- [Deploying .NET Applications to AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/dotnet-handler.html)
-- [AWS Toolkit for Visual Studio](https://docs.aws.amazon.com/toolkit-for-visual-studio/)
-- [AWS SDK for .NET](https://docs.aws.amazon.com/sdk-for-net/)
-- [Licensing Overview](https://help.syncfusion.com/common/essential-studio/licensing/overview)
-
-**Try It Out:**
-- [Syncfusion PDF Online Demo](https://document.syncfusion.com/demos/pdf/default#/tailwind)
-- [Explore Syncfusion PDF Features](https://www.syncfusion.com/document-sdk/net-pdf-library)
-- [AWS Free Tier](https://aws.amazon.com/free/) — Includes free Lambda and CloudWatch usage
-- [AWS Lambda Free Tier](https://aws.amazon.com/lambda/pricing/) — 1 million free requests per month
+- [Create a PDF File on AWS](create-pdf-file-in-aws)
+- [Create a PDF File in AWS Elastic Beanstalk](create-pdf-file-in-aws-elastic-beanstalk)
+- [NuGet Packages Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required)
+- [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required)
+- [Syncfusion<sup>&reg;</sup> Licensing Overview](https://help.syncfusion.com/common/essential-studio/licensing/overview)
+- [Create a PDF file in ASP.NET Core](create-pdf-file-in-asp-net-core)
+- [Create a PDF file in Docker](create-pdf-document-in-docker)
+- [Open and read PDF files](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/open-pdf-files)
+- [Merge PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/merge-pdf-documents)
+- [Split PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/split-pdf-documents)
+- [Working with PDF forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-forms)
+- [Working with security and permissions](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-security)
+- [Working with stamps and watermarks](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-watermarks)
+- [Syncfusion<sup>&reg;</sup> PDF library — Demos](https://document.syncfusion.com/demos/pdf/default)

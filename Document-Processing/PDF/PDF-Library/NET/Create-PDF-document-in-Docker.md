@@ -1,50 +1,52 @@
 ---
-title: Create a PDF File in Docker | Syncfusion
-description: Learn how to create PDF files in a Docker container using Syncfusion and a containerized .NET Core application.
+title: Create PDF Files in a Docker Environment  | Syncfusion
+description: Learn how to create PDF files in a Docker environment using Syncfusion and a containerized .NET application.
 platform: document-processing
 control: PDF
 documentation: UG
-keywords: docker getting started, docker sample project, container basics, docker tutorial, docker setup, run docker app, containerized pdf
+keywords: docker getting started, docker sample project, container basics, docker tutorial, docker setup, run docker app, docker beginner guide
 ---
 
-# Create a PDF File in Docker
+# Create a PDF File in a Docker Environment
 
-The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is a powerful and versatile solution for creating, reading, and editing PDF documents in .NET applications. It also provides advanced features such as merging and splitting PDFs, adding stamps, working with form fields, and securing PDF files with encryption and permissions.
+The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) creates, reads, and edits PDF documents in .NET applications. It merges and splits PDFs, adds stamps, fills form fields, and secures PDF files with encryption and permissions.
+
+To integrate the .NET PDF library into your Docker application, refer to the official documentation sections on [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) for step-by-step guidance.
 
 ## Prerequisites
 
-| Item | Details |
+- **.NET SDK** 8.0 or later
+- **Docker Desktop** installed and running
+- **Visual Studio 2022** (with the ASP.NET and web development workload) or **Visual Studio Code** with the C# Dev Kit extension
+- A **Syncfusion<sup>&reg;</sup> license key** — register it in your application using `Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")`. For details, see the [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
+
+## Compatibility
+
+| Component | Minimum version |
 | --- | --- |
-| **Operating System** | Windows, macOS, or Linux (with Docker Desktop installed) |
-| **.NET Version** | .NET 5.0 or later (.NET 6.0+ recommended) |
-| **Development Environment** | Visual Studio 2022 or Visual Studio Code with C# extension |
-| **Docker** | Docker Desktop 3.0 or later (or Docker Engine 20.10+ on Linux) |
-| **NuGet Package** | Syncfusion.Pdf.NET (latest version) |
-| **License** | Syncfusion license key (required for production use) |
+| .NET SDK | 8.0 |
+| Docker Engine | 20.10 |
+| Base image | `mcr.microsoft.com/dotnet/aspnet:6.0` |
+| Syncfusion<sup>&reg;</sup> PDF library | 21.1.0.35 |
+| Syncfusion<sup>&reg;</sup> NuGet package | [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) |
 
-To integrate the .NET PDF library into your Docker application, ensure you have the Syncfusion NuGet package installed. Refer to the official documentation sections on [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) for additional guidance.
-
-## Steps to Create a PDF File in a Docker Container
+## Step to create a PDF file in a Docker container
 
 **Step 1:** Create a new ASP.NET Core MVC application.
+![Create ASP.NET Core MVC Web application in Visual Studio](GettingStarted_images/Docker-Image1.png)
 
-![Create ASP.NET MVC Web application in Visual Studio](GettingStarted_images/Docker-Image1.png)
+**Step 2:** In the project configuration window, name your project and select **Next**.
+![Project configuration window](GettingStarted_images/Docker-Image2.png)
 
-**Step 2:** In the project configuration window, name your project and select Next.
+**Step 3:** Enable Docker support with Linux as the target OS. Note the default URL (`http://localhost:5000`) and the exposed port so you can access the app after the container starts.
+![Docker support window](GettingStarted_images/Docker-Image3.png)
 
-![Configuration Window](GettingStarted_images/Docker-Image2.png)
+**Step 4:** Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) NuGet package into your project from [NuGet.org](https://www.nuget.org/). Use the latest stable version compatible with your target framework.
+![NuGet package manager](GettingStarted_images/Docker-Image4.png)
 
-**Step 3:** Enable Docker support with Linux as the target OS. This will automatically create a Dockerfile and docker-compose configuration files in your project.
+N> If you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or the NuGet feed, you must add a reference to the `Syncfusion.Licensing` assembly and include a valid license key in your project. See the [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details on registering the license key.
 
-![Docker Support Window](GettingStarted_images/Docker-Image3.png)
-
-**Step 4:** Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
-
-![NuGet Package](GettingStarted_images/Docker-Image4.png)
-
-**Step 5:** Register the Syncfusion license key in your `Program.cs` file. Starting with v16.2.0.x, Syncfusion assemblies require a license key for production use. Refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) for detailed instructions on registering your license key.
-
-**Step 6:** A default action method named Index will be present in `HomeController.cs`. Right-click on this Index method and select "Go To View" to open the associated view page `Index.cshtml`. Add a button to trigger PDF generation as follows:
+**Step 5:** In `HomeController.cs`, right-click the existing `Index` action and choose **Go To View**. In the resulting `Index.cshtml`, add the following button.
 
 {% tabs %}
 {% highlight CSHTML %}
@@ -61,86 +63,59 @@ To integrate the .NET PDF library into your Docker application, ensure you have 
 {% endhighlight %}
 {% endtabs %}
 
-**Step 7:** The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) adds text to a PDF document, and the [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) creates tables from data.
+**Step 6:** Create an `ExportService` class to host the PDF generation logic. The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents the PDF being created. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) adds text to a PDF document and returns a layout result that lets subsequent elements avoid overlapping content. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) creates a table from manually entered data or from an external data source.
 
-Add the following code to your `HomeController.cs` to create a PDF document with sample weather forecast data:
+Before you add the action method, declare a sample data source that the `PdfGrid` can bind to. Add a `forecasts` field to the controller and populate it as shown below.
+
+Add the following code to the `ExportService` class to create a simple PDF document using `PdfTextElement` and `PdfGrid`.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Drawing;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using Microsoft.AspNetCore.Mvc;
-
-public class HomeController : Controller
+public ActionResult CreatePDF()
 {
-    public IActionResult CreatePDF()
+    // Create a new PDF document.
+    using (PdfDocument pdfDocument = new PdfDocument())
     {
-        try
+        int paragraphAfterSpacing = 8;
+        int cellMargin = 8;
+
+        // Add page to the PDF document.
+        PdfPage page = pdfDocument.Pages.Add();
+        // Create title and description.
+        PdfStandardFont font = new PdfStandardFont(PdfFontFamily.TimesRoman, 16);
+        PdfTextElement title = new PdfTextElement("Weather Forecast", font, PdfBrushes.Black);
+        PdfLayoutResult result = title.Draw(page, new PointF(0, 0));
+
+        PdfStandardFont contentFont = new PdfStandardFont(PdfFontFamily.TimesRoman, 12);
+        PdfTextElement content = new PdfTextElement(
+            "This component demonstrates fetching data from a service and exporting the data to a PDF document using Syncfusion .NET PDF library.",
+            contentFont,
+            PdfBrushes.Black);
+        PdfLayoutFormat format = new PdfLayoutFormat
         {
-            // Create a new PDF document
-            using (PdfDocument pdfDocument = new PdfDocument())
-            {
-                int paragraphAfterSpacing = 8;
-                int cellMargin = 8;
-
-                // Add page to the PDF document
-                PdfPage page = pdfDocument.Pages.Add();
-                
-                // Create title
-                PdfStandardFont titleFont = new PdfStandardFont(PdfFontFamily.TimesRoman, 16);
-                PdfTextElement title = new PdfTextElement("Weather Forecast Report", titleFont, PdfBrushes.Black);
-                PdfLayoutResult result = title.Draw(page, new PointF(0, 0));
-
-                // Create description text
-                PdfStandardFont contentFont = new PdfStandardFont(PdfFontFamily.TimesRoman, 12);
-                PdfTextElement content = new PdfTextElement(
-                    "This report demonstrates creating a PDF document with sample weather forecast data using the Syncfusion .NET PDF library in a Docker containerized environment.",
-                    contentFont,
-                    PdfBrushes.Black);
-                PdfLayoutFormat format = new PdfLayoutFormat { Layout = PdfLayoutType.Paginate };
-                result = content.Draw(
-                    page,
-                    new RectangleF(0, result.Bounds.Bottom + paragraphAfterSpacing, page.GetClientSize().Width, page.GetClientSize().Height),
-                    format);
-
-                // Create sample weather forecast data
-                List<object> weatherData = new List<object>
-                {
-                    new { Date = "2026-07-16", Condition = "Sunny", Temperature = "85°F", Humidity = "45%" },
-                    new { Date = "2026-07-17", Condition = "Partly Cloudy", Temperature = "82°F", Humidity = "50%" },
-                    new { Date = "2026-07-18", Condition = "Rainy", Temperature = "75°F", Humidity = "70%" },
-                    new { Date = "2026-07-19", Condition = "Cloudy", Temperature = "78°F", Humidity = "60%" }
-                };
-
-                // Create and style the PDF grid
-                PdfGrid pdfGrid = new PdfGrid();
-                pdfGrid.Style.CellPadding.Left = cellMargin;
-                pdfGrid.Style.CellPadding.Right = cellMargin;
-                pdfGrid.ApplyBuiltinStyle(PdfGridBuiltinStyle.GridTable4Accent1);
-                pdfGrid.DataSource = weatherData;
-                pdfGrid.Style.Font = contentFont;
-
-                // Draw the grid on the page
-                pdfGrid.Draw(page, new PointF(0, result.Bounds.Bottom + paragraphAfterSpacing));
-
-                // Save the PDF to a memory stream
-                using (MemoryStream stream = new MemoryStream())
-                {
-                    pdfDocument.Save(stream);
-                    stream.Position = 0;
-                    return File(stream.ToArray(), "application/pdf", "WeatherForecast.pdf");
-                }
-            }
-        }
-        catch (Exception ex)
+            Layout = PdfLayoutType.Paginate
+        };
+        result = content.Draw(
+            page,
+            new RectangleF(0, result.Bounds.Bottom + paragraphAfterSpacing, page.GetClientSize().Width, page.GetClientSize().Height),
+            format);
+        // Create and style the PDF grid.
+        PdfGrid pdfGrid = new PdfGrid();
+        pdfGrid.Style.CellPadding.Left = cellMargin;
+        pdfGrid.Style.CellPadding.Right = cellMargin;
+        pdfGrid.ApplyBuiltinStyle(PdfGridBuiltinStyle.GridTable4Accent1);
+        // Assign data source.
+        pdfGrid.DataSource = forecasts;
+        pdfGrid.Style.Font = contentFont;
+        // Draw PDF grid into the PDF page.
+        pdfGrid.Draw(page, new PointF(0, result.Bounds.Bottom + paragraphAfterSpacing));
+        using (MemoryStream stream = new MemoryStream())
         {
-            Console.WriteLine($"Error creating PDF: {ex.Message}");
-            return BadRequest("Failed to generate PDF document");
+            // Save the PDF document into the stream.
+            pdfDocument.Save(stream);
+
+            return File(stream.ToArray(), "application/pdf", "Output.pdf");
         }
     }
 }
@@ -148,87 +123,32 @@ public class HomeController : Controller
 {% endhighlight %}
 {% endtabs %}
 
-**Step 8:** Build the Docker image and run the container. Use the following commands in the terminal/PowerShell from your project root directory:
+**Step 7:** Build and run the sample in Docker. Visual Studio pulls the Linux Docker image from Docker Hub and starts the container. After the container is running, open the app at `http://localhost:5000` in your browser and click the **Generate PDF Document** button to generate the PDF.
 
-{% tabs %}
-{% highlight bash tabtitle="Docker Commands" %}
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Docker/Create-PDF-using-Docker). The `Create-PDF-using-Docker` folder contains the complete solution, including the Dockerfile and `.dockerignore` files.
 
-# Build the Docker image
-docker build -t create-pdf-docker .
+Running the program produces a PDF document as follows.
+![Docker PDF output](GettingStarted_images/Docker-Output.png)
 
-# Run the container and map port 80
-docker run -d -p 8080:80 --name pdf-app create-pdf-docker
+Explore the [Syncfusion<sup>&reg;</sup> PDF library features](https://www.syncfusion.com/document-sdk/net-pdf-library) to learn more about merging, splitting, securing, and stamping PDF files.
 
-# Verify the container is running
-docker ps
-
-{% endhighlight %}
-{% endtabs %}
-
-**Step 9:** Access the application in your browser by navigating to `http://localhost:8080`. Click the "Generate PDF Document" button to create the weather forecast PDF. The PDF file will be downloaded to your computer.
-
-**Step 10:** To stop and remove the container when finished, use:
-
-{% tabs %}
-{% highlight bash %}
-
-docker stop pdf-app
-docker rm pdf-app
-
-{% endhighlight %}
-{% endtabs %}
-
-## Output
-
-Upon successful execution, you will receive a PDF document containing:
-- Title: "Weather Forecast Report"
-- Description paragraph about the PDF generation
-- A formatted data table with sample weather information (Date, Condition, Temperature, Humidity)
-- Professional styling applied via GridTable4Accent1 style
-
-![Docker Output](GettingStarted_images/Docker-Output.png)
-
-A complete working sample can be downloaded from the [GitHub repository](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Docker/Create-PDF-using-Docker).
-
-## Docker Architecture Overview
-
-When you enable Docker support in Visual Studio:
-1. A **Dockerfile** is created that defines the Docker image (OS, runtime, dependencies)
-2. The **.NET application** is built inside the container using the Dockerfile instructions
-3. The **container** runs the compiled application on Linux
-4. The **port mapping** (8080:80) allows your local machine to communicate with the containerized application
-
-The PDF generation happens inside the container, and the generated file is returned to your browser for download.
+An online sample demonstrating how to [create a PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind) is also available.
 
 ## Troubleshooting
 
-| Issue | Solution |
-| --- | --- |
-| "Docker daemon is not running" | Ensure Docker Desktop is installed and running on your machine |
-| "Failed to build image" or "Dockerfile not found" | Verify Docker support was enabled in Visual Studio (Step 3) and Dockerfile exists in project root |
-| "Port 8080 is already in use" | Change the port mapping: `docker run -d -p 8081:80 --name pdf-app create-pdf-docker` |
-| "Connection refused" when accessing localhost | Verify the container is running: `docker ps`. If not listed, check logs: `docker logs pdf-app` |
-| "License key is missing" or "License expired" | Register your Syncfusion license key in Program.cs (Step 5) before the application starts |
-| "Syncfusion.Pdf.NET not found" | Ensure NuGet package is installed in the project and restored: `dotnet restore` |
-| "PDF file not downloaded after clicking button" | Check browser console for errors and verify HomeController.CreatePDF() method returns successfully |
-| "Image file not found in container" | If using custom images, copy them to the project and verify they're included in the Docker build context |
-| Container exits immediately after start | Check logs for startup errors: `docker logs pdf-app`. Verify license registration in Program.cs |
-| "The network request failed" when running in container | Ensure port mapping is correct and firewall allows Docker network traffic |
+- **Watermark appears in the output PDF** — Your Syncfusion<sup>&reg;</sup> license key is not registered. Call `SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")` at application startup.
+- **libgdiplus / SkiaSharp errors in the container** — Add a `RUN apt-get update && apt-get install -y libgdiplus` step in the Dockerfile to install the native graphics dependency required by `Syncfusion.Pdf.Net.Core`.
+- **Container fails to start on port 5000** — Confirm the port mapping in `docker run -p 5000:80` matches the ASP.NET Core `ASPNETCORE_URLS` setting.
+- **PDF file is empty or truncated** — Ensure the `MemoryStream` is read back (for example, via `stream.ToArray()`) before the `using` block disposes it.
+- **NuGet restore fails inside the container** — Set the `NUGET_PACKAGES` environment variable or use a [NuGet package restore task](https://learn.microsoft.com/azure/devops/pipelines/tasks/package/nuget) in CI. 
 
 ## Next Steps
 
-Explore advanced features and deployment patterns with the Syncfusion .NET PDF library:
+Explore advanced PDF capabilities and Azure integration patterns:
 
-- [Merge PDF Documents](./merge-pdf-documents.md) - Combine multiple PDF files into one
-- [Split PDF Documents](./split-pdf-documents.md) - Extract or divide PDF pages
-- [Add Watermarks](./add-watermark.md) - Apply text and image watermarks to PDFs
-- [Work with Forms](./fill-form-fields.md) - Create and fill interactive PDF forms
-- [Add Digital Signatures](./digital-signatures.md) - Sign PDFs digitally
-- [Secure Documents](./encrypt-pdf.md) - Encrypt and password-protect PDFs
-- [Docker Best Practices](https://docs.docker.com/develop/dev-best-practices/) - Optimize Docker images and containers
-- [Kubernetes Deployment](./Create-PDF-document-in-AKS-Environment.md) - Scale PDF generation with Kubernetes
-- [Production Deployment](https://docs.microsoft.com/aspnet/core/host-and-deploy/docker/) - Deploy containerized .NET applications to production
-
-For additional examples and comprehensive API documentation, visit the [Syncfusion .NET PDF documentation](https://help.syncfusion.com/document-processing/pdf/overview).
-
-You can also explore our [interactive PDF demo](https://document.syncfusion.com/demos/pdf/default#/tailwind) to see the library in action. 
+### Advanced PDF Features
+- **[Merge Multiple PDFs](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/merge-documents)** — Combine multiple reports into a single document
+- **[Split PDF Documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/split-documents)** — Extract specific pages or create filtered PDFs
+- **[Add Watermarks](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-watermarks)** — Brand PDFs with company logos and confidentiality markers
+- **[Create Interactive Forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-forms)** — Build fillable PDF forms for data collection
+- **[Digital Signatures](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-digitalsignature)** — Sign PDFs programmatically for compliance

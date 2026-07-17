@@ -6,63 +6,32 @@ control: PDF
 documentation: UG
 --- 
 
-# Create a PDF File in WPF
+# Create or Generate a PDF File in WPF
 
-The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, work with forms, and secure PDF files.
+The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) creates, reads, and edits PDF documents. It merges, splits, stamps, fills forms, and secures PDF files.
+
+To include the .NET PDF library in your WPF application, refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) documentation.
 
 ## Prerequisites
 
-| Requirement | Version |
-|-------------|---------|
-| Visual Studio | 2019 or later (2022 recommended) |
-| .NET Framework | 4.5+ or .NET 5+ |
-| Syncfusion PDF NuGet Package | [Syncfusion.Pdf.Wpf](https://www.nuget.org/packages/Syncfusion.Pdf.Wpf/) (latest) |
-| Project Type | WPF Application (.NET Framework or .NET Core) |
+- **Visual Studio 2022** (17.8 or later) with the **.NET desktop development** workload installed.
+- A target framework of **.NET 8** or later
+- A **Syncfusion<sup>&reg;</sup> license key** — register it in your application using `Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")`. For details, see the [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
+- The appropriate Syncfusion NuGet package:
+  - **.NET 6+:** [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) (preferred cross-platform package)
+  - **.NET Framework 4.6+:** [Syncfusion.Pdf.Wpf](https://www.nuget.org/packages/Syncfusion.Pdf.Wpf/) (legacy .NET Framework package)
 
-To include the .NET PDF library into your WPF application, refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) documentation. 
+## Step to create a PDF document in WPF
 
-## Steps to create a PDF document in WPF
+**Step 1:** In Visual Studio, create a new **WPF Application** project (targeting .NET 6 or later) or a **WPF App (.NET Framework)** project (targeting .NET Framework 4.6 or later).
+![Create a WPF application in Visual Studio](WPF_images/WPF-creation-step1.png)
 
-### Step 1: Create a new WPF application project
+**Step 2:** Install the appropriate Syncfusion NuGet package from [NuGet.org](https://www.nuget.org/) using the **NuGet Package Manager** or the **Package Manager Console** (`Install-Package Syncfusion.Pdf.Wpf` for .NET Framework, or `Install-Package Syncfusion.Pdf.Net.Core` for .NET 6+). Use the latest stable version compatible with your target framework.
+![Install the Syncfusion NuGet package](WPF_images/NuGet-package.png)
 
-Create a new **WPF Application** project in Visual Studio.
+N> If you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or the NuGet feed, you must add a reference to the `Syncfusion.Licensing` assembly and include a valid license key in your project. See the [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details on registering the license key.
 
-![WPF sample creation](WPF_images/WPF-creation-step1.png)
-
-### Step 2: Install the Syncfusion.Pdf.Wpf NuGet package
-
-Install the [Syncfusion.Pdf.Wpf](https://www.nuget.org/packages/Syncfusion.Pdf.Wpf/) NuGet package as a reference to your WPF application from [NuGet.org](https://www.nuget.org/).
-
-![PDF WPF NuGet package installation](WPF_images/NuGet-package.png)
-
-You can also install via Package Manager Console:
-
-```powershell
-Install-Package Syncfusion.Pdf.Wpf
-```
-
-### Step 3: Register Syncfusion license
-
-Starting with v16.2.0.x, you must register a Syncfusion license key to use the library. Add the license key in your **App.xaml.cs** file:
-
-```csharp
-using Syncfusion.Licensing;
-
-public partial class App : Application
-{
-    public App()
-    {
-        // Register Syncfusion license
-        SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
-    }
-}
-```
-
-Refer to [Licensing Overview](https://help.syncfusion.com/common/essential-studio/licensing/overview) for license registration details.
-
-### Step 4: Add required namespaces
-
-Include the following namespaces in the **MainWindow.xaml.cs** file:
+**Step 3:** Add the following `using` directives to `MainWindow.xaml.cs`. The `System.ComponentModel` directive is included for `INotifyPropertyChanged` support if the sample is extended with data binding.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -70,17 +39,14 @@ Include the following namespaces in the **MainWindow.xaml.cs** file:
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 using System;
-using System.Diagnostics;
+using System.ComponentModel;
 using System.Drawing;
-using System.IO;
 using System.Windows;
 
 {% endhighlight %}
 {% endtabs %}
 
-### Step 5: Create the UI with a button
-
-Add a simple button in **MainWindow.xaml** to trigger PDF generation: 
+**Step 4:** In `MainWindow.xaml`, add the following `TextBlock` (instructional text) and `Button` (Create PDF) inside the default `Grid` of the window. The XAML below shows the equivalent of using the Visual Studio **Designer** view.
 
 {% tabs %}
 {% highlight XAML %}
@@ -102,7 +68,7 @@ Add a simple button in **MainWindow.xaml** to trigger PDF generation:
         Click the button to view PDF file generated by Essential PDF.
     </TextBlock.Text>
 </TextBlock>
-<Button Click="OnGenerateButtonClick"
+<Button Click="btnCreate_Click"
         Margin="0,0,10,12"
         VerticalAlignment="Bottom"
         HorizontalAlignment="Right"
@@ -135,14 +101,12 @@ Add a simple button in **MainWindow.xaml** to trigger PDF generation:
 {% endhighlight %}
 {% endtabs %}
 
-### Step 6: Implement PDF generation
-
-Add the following code to the `OnGenerateButtonClick` event handler to create a PDF document using the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class. The [DrawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) draws text on the page. The `PointF(0, 0)` parameter specifies the starting position (top-left corner) in points (1/72 inch).
+Step 5: Add the following code sample in `btnCreate_Click` to create or generate a PDF document using the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class. Then use the [DrawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) object to draw text on the PDF page and save or open the output in your application.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-private void OnGenerateButtonClick(object sender, RoutedEventArgs e)
+private void GeneratePDF(object sender, RoutedEventArgs e)
 {
     //Create a new PDF document. 
     using (PdfDocument document = new PdfDocument())
@@ -163,33 +127,37 @@ private void OnGenerateButtonClick(object sender, RoutedEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-### Step 7: Build and run the application
+You can download a complete working sample from the [`Create-a-new-PDF-document` folder on GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/WPF/Create-a-new-PDF-document).
 
-1. Build the WPF application (Build > Build Solution)
-2. Run the application (Debug > Start Debugging or F5)
-3. Click the **Generate PDF** button
-4. The PDF will be created in your Documents folder and automatically open
+Running the program and clicking the **Create PDF** button produces the following PDF document.
+![Output PDF document](GettingStarted_images/pdf-generation-output.png)
 
-**Expected output:** A file named `Output.pdf` containing "Hello World!!!" text.
+Explore the [Syncfusion<sup>&reg;</sup> PDF library features](https://www.syncfusion.com/document-sdk/net-pdf-library) to learn more about merging, splitting, securing, and stamping PDF files.
 
-![PDF generation output](GettingStarted_images/pdf-generation-output.png)
+An online sample demonstrating how to [create a PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind) is also available.
 
 ## Troubleshooting
 
-| Issue | Solution |
-|-------|----------|
-| "The type or namespace 'Syncfusion' could not be found" | Verify Syncfusion.Pdf.Wpf NuGet package is installed; restore NuGet packages (Tools > Manage NuGet Packages for Solution) |
-| "License key not registered" error at runtime | Register license in App.xaml.cs using SyncfusionLicenseProvider.RegisterLicense() before using PDF APIs |
-| "Access to the path is denied" when saving | Verify the Documents folder has write permissions; try saving to temp folder instead: `Path.GetTempFileName()` |
-| "File not found" after generation | Verify the output path exists; use full absolute path or Environment.SpecialFolder paths for reliability |
-| PDF doesn't open automatically | Install a PDF reader (Adobe Reader, Windows Reader, etc.); verify file was created successfully before attempting to open |
-| Application crashes after clicking button | Add try-catch error handling; check that all required using statements are included; verify license is registered |
-| "PointF not found" error | Ensure `using System.Drawing;` is included in namespaces |
-| Licensing validation error | Verify license key is correct; ensure license is registered in App.xaml.cs before any PDF operation |
+- **Watermark appears in the output PDF** — Your Syncfusion<sup>&reg;</sup> license key is not registered. Call `SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")` at application startup, before any Syncfusion API is called.
+- **`System.Drawing.Common` exceptions on .NET 6+ for non-Windows targets** — `System.Drawing` is restricted on .NET 6+ for non-Windows targets. Use the `Syncfusion.Drawing` namespace and the `Syncfusion.Pdf.Net.Core` package (or stay on the `Syncfusion.Pdf.Wpf` package which is .NET Framework only).
+- **GDI+ errors on Windows Server** — Ensure the **Server Core** optional feature for "Server-Gui-Shell" or the **Desktop Experience** is installed so the GDI+ subsystem is available.
+- **XAML compile error: `</Button.Background>` is not valid** — The closing tag in the sample should be `</LinearGradientBrush>`, not `</Button.Background>`. The full closing sequence is `</LinearGradientBrush>`, then `</StackPanel>`, then `</Button>`.
+- **PDF file is locked when trying to open it after saving** — Wrap the `document.Save(...)` call in a `using` block (as shown in the sample) and ensure the `PdfDocument` is disposed before opening the file with another reader.
+- **NuGet restore fails with "package not compatible"** — On .NET 6+, use `Syncfusion.Pdf.Net.Core` instead of `Syncfusion.Pdf.Wpf` (which targets .NET Framework only).
 
-## Next Steps
+## See also
 
-- **Download [Complete Working Sample](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/WPF/Create-a-new-PDF-document)** — Reference implementation with error handling and best practices
-- **Try [Online Demo](https://document.syncfusion.com/demos/pdf/default#/tailwind)** — Interactive examples and feature showcase
-- **Explore [PDF Library Features](https://www.syncfusion.com/document-sdk/net-pdf-library)** — Comprehensive API reference including tables, images, forms, and security features
-- **View [API Documentation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html)** — Full class and method reference for PdfDocument and related classes 
+- [Create a PDF File in Windows Forms](create-pdf-file-in-windows-forms)
+- [Create a PDF File in WinUI](create-pdf-file-in-winui)
+- [Create a PDF File in UWP](create-pdf-file-in-uwp)
+- [Create a PDF File in ASP.NET Core](create-pdf-file-in-asp-net-core)
+- [NuGet Packages Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required)
+- [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required)
+- [Syncfusion<sup>&reg;</sup> Licensing Overview](https://help.syncfusion.com/common/essential-studio/licensing/overview)
+- [Open and read PDF files](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/open-pdf-files)
+- [Merge PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/merge-pdf-documents)
+- [Split PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/split-pdf-documents)
+- [Working with PDF forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-forms)
+- [Working with security and permissions](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-security)
+- [Working with stamps and watermarks](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-watermarks)
+- [Syncfusion<sup>&reg;</sup> PDF library — Demos](https://document.syncfusion.com/demos/pdf/default) 

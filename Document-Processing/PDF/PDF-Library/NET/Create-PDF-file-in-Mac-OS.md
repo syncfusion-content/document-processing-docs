@@ -1,83 +1,70 @@
 ---
-title: Create a PDF File in macOS | Syncfusion
-description: Create a PDF file in .NET Core application on macOS using Syncfusion .NET PDF library without the dependency of Adobe Acrobat.
+title: Create PDF document on Mac OS | Syncfusion
+description: Create PDF document in ASP.NET Core application on Mac OS using Syncfusion .NET Core PDF library without the dependency of Adobe Acrobat.
 platform: document-processing
 control: PDF
 documentation: UG
-keywords: macos save pdf, macos load pdf, c# save pdf, c# load pdf
+keywords: mac os save pdf, mac os load pdf, c# save pdf, c# load pdf
 ---
 
-# Create a PDF File in macOS
+# Create a PDF Document on macOS
 
-The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency on Adobe Acrobat. Using this library, you can create a PDF file in a .NET Core application on macOS.
+The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) creates, reads, and edits PDF documents programmatically, with no dependency on Adobe Acrobat. You can use this library to create a PDF document in a .NET application on macOS.
 
 ## Prerequisites
 
-| Item | Details |
-| --- | --- |
-| **Operating System** | macOS 10.15 or later |
-| **.NET Version** | .NET 5.0 or later (.NET 6.0+ recommended) |
-| **Development Environment** | Visual Studio 2022 for Mac, Visual Studio Code with C# extension, or any text editor with .NET CLI |
-| **.NET Core SDK** | Latest stable version |
-| **NuGet Package** | Syncfusion.Pdf.NET (latest version) |
-| **License** | Syncfusion license key (required for production use) |
+- A **macOS** version that supports .NET 6 or later (for example, **macOS Big Sur 11**, **Monterey 12**, **Ventura 13**, **Sonoma 14**, or **Sequoia 15**).
+- **.NET SDK 8.0** or later installed. Verify with `dotnet --list-sdks`; install via the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download) or `brew install --cask dotnet-sdk`.
+- **Homebrew** (recommended) for installing native dependencies. Install from [brew.sh](https://brew.sh/).
+- **System font and graphics libraries** required by `Syncfusion.Pdf.Net.Core` (SkiaSharp): `brew install libfontconfig libgdiplus`.
+- A **Syncfusion<sup>&reg;</sup> license key** — register it in your application using `Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")`. For details, see the [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
+- The **[Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core)** NuGet package.
 
-## Steps to create a PDF file in .NET Core on macOS
+## Step to create a PDF document programmatically in a .NET application on macOS
 
-Select your preferred development environment below:
+The instructions below cover two IDE workflows. Select the tab that matches your development environment.
 
-### Visual Studio 2022 for Mac
-
+{% tabcontents %}
+{% tabcontent Visual Studio %}
 {% include_relative tabcontent-support/Create-PDF-document-in-Mac-OS-Visual-Studio.md %}
-
-### Visual Studio Code
-
+{% endtabcontent %}
+ 
+{% tabcontent Visual Studio Code %}
 {% include_relative tabcontent-support/Create-PDF-document-in-Mac-OS-VS-Code.md %}
+{% endtabcontent %}
+{% endtabcontents %}
 
-## License Registration
+Download a complete working sample from the [Mac folder on GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Mac).
 
-Starting with v16.2.0.x, Syncfusion assemblies require a license key. Refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) for detailed instructions on registering your license key in your application.
+Running the program produces the following PDF document.
+![Output PDF document on macOS](GettingStarted_images/Open_and_save_output.png)
 
-## Output
+Explore the [Syncfusion<sup>&reg;</sup> PDF library features](https://www.syncfusion.com/document-sdk/net-pdf-library) to learn more about merging, splitting, securing, and stamping PDF files.
 
-Upon successful execution, your application will generate a PDF file containing:
-- Header text and title information
-- Sample product images (if image file is provided)
-- Formatted text and paragraphs
-- Data grid with sample product information
-- Professional styling using built-in table styles
-
-The output PDF file will be saved in the current working directory with the filename specified in your code (typically `Output.pdf`).
-
-A complete working sample can be downloaded from the [GitHub repository](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Mac).
-
-![macOS output PDF document](GettingStarted_images/Open_and_save_output.png)
+An online sample demonstrating how to [create a PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind) is also available.
 
 ## Troubleshooting
 
-| Issue | Solution |
-| --- | --- |
-| "Image file not found" error | Ensure the image file (e.g., AdventureCycle.jpg) exists in the project directory or provide the full file path |
-| "System.IO.FileNotFoundException" | Check file permissions and verify working directory is set correctly |
-| "License key is missing" or "License key expired" | Register your Syncfusion license key in Program.cs before creating PDF objects |
-| PDF file not created | Verify that the output directory has write permissions and sufficient disk space is available |
-| Font rendering issues on macOS | Some fonts may not be available; use standard fonts (TimesRoman, Helvetica, Courier) for better compatibility |
-| "Syncfusion.Licensing" assembly not found | Ensure the Syncfusion.Pdf.NET NuGet package is installed correctly: `dotnet add package Syncfusion.Pdf.NET` |
-| Application crashes or hangs | Check console output for error messages; ensure all file paths are accessible and resources are properly disposed |
-| Broken image links in generated PDF | Verify image file paths are correct and use absolute paths or Path.GetFullPath() for reliability |
+- **Watermark appears in the output PDF** — Your Syncfusion<sup>&reg;</sup> license key is not registered. Call `SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")` at application startup.
+- **`Unable to load shared library 'libSkiaSharp'` or `libgdiplus` errors** — Install the native graphics dependencies: `brew install libfontconfig libgdiplus`. If you are on Apple Silicon, ensure the libraries are installed for the correct architecture (`brew install --arch=arm64 libfontconfig libgdiplus`).
+- **Font rendering issues (boxes instead of characters)** — Install `libfontconfig` and run `fc-cache -fv` to rebuild the font cache. Verify with `fc-list` that your expected fonts are listed.
+- **The generated PDF opens with a "needs to be repaired" warning in Preview** — Wrap `PdfDocument` in a `using` block (or call `document.Close(true)`) so the native buffers are flushed before the process exits.
+- **`.NET SDK not found` when running `dotnet` on Apple Silicon** — Install the .NET SDK for arm64 (not the x64 build) via `brew install --cask dotnet-sdk` or the .NET Downloads page.
 
-## Next Steps
+## See also
 
-Explore advanced features and capabilities with the Syncfusion .NET PDF library:
-
-- [Merge PDF Documents](./merge-pdf-documents.md) - Combine multiple PDF files into one
-- [Split PDF Documents](./split-pdf-documents.md) - Extract or divide PDF pages
-- [Add Watermarks](./add-watermark.md) - Apply text and image watermarks to PDFs
-- [Work with Forms](./fill-form-fields.md) - Create and fill interactive PDF forms
-- [Add Digital Signatures](./digital-signatures.md) - Sign PDFs digitally
-- [Secure Documents](./encrypt-pdf.md) - Encrypt and password-protect PDFs
-- [Other Platforms](../../getting-started.md) - PDF generation guides for other platforms and environments
-
-For additional examples and comprehensive API documentation, visit the [Syncfusion .NET PDF documentation](https://help.syncfusion.com/document-processing/pdf/overview).
-
-You can also explore our [interactive PDF demo](https://document.syncfusion.com/demos/pdf/default#/tailwind) to see the library in action.
+- [Create a PDF File in Linux](create-pdf-file-in-linux)
+- [Create a PDF File in Docker](create-pdf-document-in-docker)
+- [Create a PDF File in Console](create-pdf-file-in-console)
+- [NuGet Packages Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required)
+- [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required)
+- [Syncfusion<sup>&reg;</sup> Licensing Overview](https://help.syncfusion.com/common/essential-studio/licensing/overview)
+- [Create a PDF file in ASP.NET Core](create-pdf-file-in-asp-net-core)
+- [Create a PDF file in AWS Lambda](create-pdf-file-in-aws-lambda)
+- [Open and read PDF files](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/open-pdf-files)
+- [Merge PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/merge-pdf-documents)
+- [Split PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/split-pdf-documents)
+- [Working with PDF forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-forms)
+- [Working with security and permissions](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-security)
+- [Working with stamps and watermarks](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-watermarks)
+- [Syncfusion<sup>&reg;</sup> PDF library — Demos](https://document.syncfusion.com/demos/pdf/default)

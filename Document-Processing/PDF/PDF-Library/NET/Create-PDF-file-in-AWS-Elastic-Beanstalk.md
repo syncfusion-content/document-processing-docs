@@ -7,61 +7,38 @@ documentation: UG
 keywords: aws elastic beanstalk create pdf, aws edit pdf, merge, pdf form, fill form, digital sign, table, c#, dotnet core pdf, asp generate pdf, aspx generate pdf
 ---
 
-# Create a PDF File in AWS Elastic Beanstalk
+# Create a PDF Document in AWS Elastic Beanstalk
 
-The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) enables you to create, read, and edit PDF documents programmatically in AWS without the dependency of Adobe Acrobat. This guide demonstrates how to generate PDF files using ASP.NET Core applications deployed on AWS Elastic Beanstalk, allowing you to scale PDF operations across multiple instances.
+The [.NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) creates, reads, and edits PDF documents programmatically, with no dependency on Adobe Acrobat. You can use this library to create, read, and edit PDF documents in AWS Elastic Beanstalk.
 
 ## Prerequisites
 
-| Requirement | Details |
-|-------------|---------|
-| **IDE** | Visual Studio 2022 or Visual Studio Code |
-| **.NET Version** | .NET 6.0+, .NET 7.0, or .NET 8.0 |
-| **ASP.NET Core Version** | ASP.NET Core 6.0+ corresponding to your .NET version |
-| **NuGet Package** | Syncfusion.Pdf.NET v16.2.0.x or later |
-| **AWS Account** | Active Amazon Web Services account with Elastic Beanstalk access |
-| **AWS Tools** | AWS Toolkit for Visual Studio or AWS CLI v2 with configured credentials |
-| **Licensing** | Syncfusion license key (required v16.2.0.x+) |
-| **Git (optional)** | For CI/CD pipeline deployments to Elastic Beanstalk |
+- An active **Amazon Web Services (AWS) account**. If you don't have one, [create an account](https://aws.amazon.com/) before starting.
+- **.NET SDK 8.0** or later installed locally.
+- **Visual Studio 2022** with the **ASP.NET and web development** workload, or **Visual Studio Code** with the C# Dev Kit extension.
+- **AWS Toolkit for Visual Studio**, installed from the [AWS Visual Studio download page](https://aws.amazon.com/visualstudio/) or from the **Extensions > Manage Extensions** dialog. Configure an AWS credential profile in **AWS Explorer** (or run `aws configure` from the AWS CLI) before proceeding.
+- A **Syncfusion<sup>&reg;</sup> license key** — register it in your application using `Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")`. For Elastic Beanstalk, store the key in an environment variable (for example, `SYNCFUSION_LICENSE_KEY`) and read it at application startup. For details, see the [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
+- The **[Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core)** NuGet package installed in the project.
+- A sample input PDF named `Input.pdf` placed in the project's `Data/` folder with **Copy to Output Directory** set to **Copy if newer**.
 
-> **Note**: AWS Elastic Beanstalk provides managed platform-as-a-service (PaaS) for deploying ASP.NET Core applications with automatic scaling and load balancing. This differs from Lambda (serverless) or EC2 (infrastructure) deployments. 
+## Step to create a PDF document in AWS Elastic Beanstalk
 
-## License Registration
+**Step 1:** In Visual Studio, create a new **ASP.NET Core Web Application** project and choose the **MVC** template.
+![Create ASP.NET Core Web Application in Visual Studio](GettingStarted_images/Create-Project.png)
 
-Starting with Syncfusion v16.2.0.x, a license key is required for PDF operations. Register your license in the `Program.cs` file before building services:
+**Step 2:** In the configuration window, name your project and select **Next**. On the next screen, leave the default settings (Authentication: No Authentication, Configure for HTTPS: checked) and select **Create**.
+![Configure the project name](GettingStarted_images/AWS-Elastic-Beanstalk-Project.png)
 
-```csharp
-// In Program.cs - add this before var app = builder.Build();
-Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
-```
+![Select additional project settings](GettingStarted_images/AWS-Elastic-Beanstalk-Configuration.png)
 
-> **Important**: Obtain a free community license from [Syncfusion Community License](https://help.syncfusion.com/common/essential-studio/licensing/community-license). For production deployments, store the license key in AWS Secrets Manager or Parameter Store, not hardcoded in source. Refer to [licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details.
+**Step 3:** Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/) NuGet package from [NuGet.org](https://www.nuget.org/). Use the latest stable version compatible with .NET 6 or later.
+![Install the Syncfusion.Pdf.Net.Core NuGet package](GettingStarted_images/NuGet-Package-AWS-Elastic-Beanstalk.png)
 
-## Steps to Create a PDF File in AWS Elastic Beanstalk
-![ASP.NET Core project](GettingStarted_images/Create-Project.png)
-
-Step 2: In configuration windows, name your project and select Next.
-![Create a Project](GettingStarted_images/AWS-Elastic-Beanstalk-Project.png)
-
-![Configuration](GettingStarted_images/AWS-Elastic-Beanstalk-Configuration.png)
-
-Step 3: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.NET) NuGet package. Use the Package Manager Console or NuGet Package Manager UI:
-
-```bash
-dotnet add package Syncfusion.Pdf.NET
-```
-
-![Install NuGet package](GettingStarted_images/NuGet-Package-AWS-Elastic-Beanstalk.png)
-
-Step 4: In the ASP.NET Core MVC project, a default controller named `HomeController.cs` is created. Include the following namespaces in that file:
+**Step 4:** When you choose the MVC template, Visual Studio adds a default `HomeController.cs`. Include the following namespaces in that file. The `Syncfusion.Pdf.Parsing` namespace provides the `PdfLoadedDocument` and `PdfLoadedPage` types used to open and edit an existing PDF; `Syncfusion.Drawing` provides `RectangleF` on .NET Core.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-using System;
-using System.IO;
-using System.Collections.Generic;
-using Microsoft.AspNetCore.Mvc;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Grid;
@@ -69,215 +46,131 @@ using Syncfusion.Pdf.Parsing;
 using Syncfusion.Drawing;
 
 {% endhighlight %}
-
 {% endtabs %}
 
-Step 5: Add a button in `Index.cshtml` to trigger PDF generation. Update the default form to use POST method for file download operations:
+**Step 5:** In `Index.cshtml`, add the following button.
+
+N> The `Html.BeginForm` / `Html.EndForm` HTML helpers used below are the legacy syntax. Modern ASP.NET Core supports tag helpers; consider `<form asp-action="CreatePDF" asp-controller="Home" method="get">` for new projects.
 
 {% tabs %}
 {% highlight CSHTML %}
 
 @{
-    Html.BeginForm("CreatePDF", "Home", FormMethod.Post);
-    {
-        <div>
-            <input type="submit" value="Create PDF" style="width:150px;height:27px" />
-            <br />
-            <div class="text-danger">
-                @ViewBag.Message
-            </div>
+Html.BeginForm("CreatePDF", "Home", FormMethod.Get);
+{
+    <div>
+        <input type="submit" value="Create PDF" style="width:150px;height:27px" />
+        <br />
+        <div class="text-danger">
+            @ViewBag.Message
         </div>
-    }
-    Html.EndForm();
+    </div>
+}
+Html.EndForm();
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
-> **Note**: Use `FormMethod.Post` for operations that generate and download files. The GET method is inappropriate for file downloads and can cause caching issues.
-
-Step 6: Add a new action method named `CreatePDF` to the `HomeController.cs` file. This method loads an existing PDF, adds a product table to it, and returns the modified PDF for download:
+**Step 6:** In `HomeController.cs`, add a new action method named `CreatePDF` and include the following code. The action opens an existing PDF (`Data/Input.pdf`), draws a `PdfGrid` of sample data on the first page, and returns the result as a downloadable PDF. The `RectangleF(40, 400, page.Size.Width - 80, 0)` coordinates place the grid 40 px from the page edges and 400 px from the top.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-[HttpPost]
 public IActionResult CreatePDF()
 {
-    try
-    {
-        string inputPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Data", "Input.pdf");
-        
-        // Verify input file exists
-        if (!System.IO.File.Exists(inputPath))
-        {
-            ViewBag.Message = "Error: Input PDF file not found at " + inputPath;
-            return View("Index");
-        }
+    //Open an existing PDF document.
+    FileStream fileStream = new FileStream("Data/Input.pdf", FileMode.Open, FileAccess.Read);
+    PdfLoadedDocument document = new PdfLoadedDocument(fileStream);
 
-        // Open existing PDF document with proper resource disposal
-        using (FileStream fileStream = new FileStream(inputPath, FileMode.Open, FileAccess.Read))
-        {
-            using (PdfLoadedDocument document = new PdfLoadedDocument(fileStream))
-            {
-                // Get the first page from the document
-                PdfLoadedPage page = document.Pages[0] as PdfLoadedPage;
-                PdfGraphics graphics = page.Graphics;
+    //Get the first page from a document.
+    PdfLoadedPage page = document.Pages[0] as PdfLoadedPage;
 
-                // Create product data table
-                List<object> productData = new List<object>
-                {
-                    new { Product_ID = "1001", Product_Name = "Bicycle", Price = "$10,000" },
-                    new { Product_ID = "1002", Product_Name = "Head Light", Price = "$3,000" },
-                    new { Product_ID = "1003", Product_Name = "Brake Wire", Price = "$1,500" },
-                    new { Product_ID = "1004", Product_Name = "Pedal Set", Price = "$2,000" },
-                    new { Product_ID = "1005", Product_Name = "Chain", Price = "$500" }
-                };
+    //Create PDF graphics for the page.
+    PdfGraphics graphics = page.Graphics;
 
-                // Create and format table grid
-                PdfGrid pdfGrid = new PdfGrid();
-                pdfGrid.DataSource = productData;
-                pdfGrid.ApplyBuiltinStyle(PdfGridBuiltinStyle.GridTable4Accent3);
+    //Create a PdfGrid.
+    PdfGrid pdfGrid = new PdfGrid();
+    //Add values to the list.
+    List<object> data = new List<object>();
+    data.Add(new { Product_ID = "1001", Product_Name = "Bicycle", Price = "10,000" });
+    data.Add(new { Product_ID = "1002", Product_Name = "Head Light", Price = "3,000" });
+    data.Add(new { Product_ID = "1003", Product_Name = "Break wire", Price = "1,500" });
 
-                // Draw table on the page
-                pdfGrid.Draw(graphics, new RectangleF(40, 400, page.Size.Width - 80, 0));
+    //Assign data source.
+    pdfGrid.DataSource = data;
 
-                // Save to memory stream and return as download
-                using (MemoryStream stream = new MemoryStream())
-                {
-                    document.Save(stream);
-                    stream.Position = 0;
-                    return File(stream.ToArray(), "application/pdf", "Output.pdf");
-                }
-            }
-        }
-    }
-    catch (Exception ex)
-    {
-        ViewBag.Message = $"Error generating PDF: {ex.Message}";
-        return View("Index");
-    }
+    //Apply built-in table style.
+    pdfGrid.ApplyBuiltinStyle(PdfGridBuiltinStyle.GridTable4Accent3);
+
+    //Draw the grid to the page of PDF document.
+    pdfGrid.Draw(graphics, new RectangleF(40, 400, page.Size.Width - 80, 0));
+    //Create the memory stream.
+    MemoryStream stream = new MemoryStream();
+    //Save the document to the memory stream.
+    document.Save(stream);
+    //Close the document
+    document.Close(true); 
+    //Return the PDF file as a download
+    return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "Output.pdf");
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
-> **Important**: 
-> - The input PDF file must exist at `wwwroot/Data/Input.pdf` relative to your project root
-> - All streams and documents are wrapped in `using` statements for proper resource disposal
-> - Error handling ensures graceful failures with user-friendly messages
-> - The `[HttpPost]` attribute matches the form method from Step 5
+**Step 7:** Right-click the project and choose **Publish to AWS Elastic Beanstalk (Legacy)** to open the deployment wizard.
 
-### Preparing the Input PDF File
+N> AWS Elastic Beanstalk for .NET is in maintenance mode. For new projects, consider the [AWS Deploy Tool for .NET](https://docs.aws.amazon.com/sdk-for-net/latest/developer-guide/deploy-tool.html) (`dotnet aws deploy`), or [deploy as a container to Amazon ECS / Fargate](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker.html).
 
-Before running the application, you need to create the `wwwroot/Data/` directory and add an input PDF:
+![Publish to AWS Elastic Beanstalk menu option](GettingStarted_images/Publish-AWS-Elastic-Beanstalk.png)
 
-1. In Solution Explorer, create the folder structure: **wwwroot → Data**
-2. Add or create an `Input.pdf` file in the `Data` folder (sample PDF or your own document)
-3. Right-click the PDF file → **Properties**
-4. Set **Copy to Output Directory** to "Copy if newer" or "Always copy"
+**Step 8:** In the **Publish to AWS Elastic Beanstalk** window, select an existing AWS profile (or create one via **AWS Explorer**), then choose **Create a new application environment** for a fresh deployment or **Re-deploy to an existing environment** to update a running app. Click **Next** to continue.
+![Publish to AWS Elastic Beanstalk window](GettingStarted_images/Publish-to-AWS-Elastic-Beanstalk.png)
 
-The folder structure should look like:
-```
-your-project/
-├── wwwroot/
-│   ├── Data/
-│   │   └── Input.pdf
-│   └── css/
-├── Controllers/
-│   └── HomeController.cs
-└── Program.cs
-```
+**Step 9:** On the **Application Options** screen, verify the environment name, URL, and instance type, then click **Next**.
+![Application Options window](GettingStarted_images/Application-Options-Window.png)
 
-### Deploying to AWS Elastic Beanstalk
+**Step 10:** On the **Review** screen, verify the configuration, then click **Deploy** to upload and start the environment.
+![Deploy from the Review window](GettingStarted_images/Deploy-From-the-Review-Window.png)
 
-**Step 7**: Right-click the project in Visual Studio and select **Publish to AWS Elastic Beanstalk**.
+**Step 11:** After deployment, wait until the environment status changes to **Healthy**, then click the URL to launch the application.
+![Launch application window](GettingStarted_images/Launch-Application-Window.png)
 
-![Publish to AWS Elastic Beanstalk](GettingStarted_images/Publish-AWS-Elastic-Beanstalk.png)
+**Step 12:** The application opens in the browser. Click **Create PDF** to download the generated PDF document.
+![Console page of the deployed application](GettingStarted_images/Console-Page-AWS-Elastic-Beanstalk.png)
 
-**Step 8**: In the "Publish to AWS Elastic Beanstalk" window, select your AWS profile (or create one). Choose either **Create a new application environment** or **Re-deploy to existing environment**, then click **Next**.
-
-![Publish to AWS Elastic Beanstalk](GettingStarted_images/Publish-to-AWS-Elastic-Beanstalk.png)
-
-**Step 9**: Configure application options (application name, environment name, instance type). Click **Next** to proceed.
-
-![Application Options Window](GettingStarted_images/Application-Options-Window.png)
-
-**Step 10**: Review the deployment configuration and click **Deploy** to begin publishing.
-
-![Deploy From the Review Window](GettingStarted_images/Deploy-From-the-Review-Window.png)
-
-**Step 11**: Wait for the environment to be created and reach a healthy state (typically 5-10 minutes). Once complete, click the environment URL to launch your application.
-
-![Launch Application Window](GettingStarted_images/Launch-Application-Window.png)
-
-## Testing the Deployed Application
-
-**Step 12**: Your ASP.NET Core application opens in the browser. Click the **Create PDF** button to generate a PDF document from the input file.
-
-![Console Window](GettingStarted_images/Console-Page-AWS-Elastic-Beanstalk.png)
-
-**Step 13**: The browser automatically downloads the generated PDF file (`Output.pdf`) containing the modified document with the product table added.
-
-## Expected Output
-
-The application generates a PDF file that:
-- Loads the input PDF document from `wwwroot/Data/Input.pdf`
-- Adds a formatted product table to the first page
-- Contains 5 sample products with ID, Name, and Price
-- Uses professional table styling
-- Downloads to your browser as `Output.pdf`
-
+Running the program produces the following PDF document.
 ![Output PDF document](GettingStarted_images/Output.png)
+
+Download the [complete Elastic Beanstalk sample from GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/AWS/AWSElasticBeanstalk).
+
+Explore the [Syncfusion<sup>&reg;</sup> PDF library features](https://www.syncfusion.com/document-sdk/net-pdf-library) to learn more about merging, splitting, securing, and stamping PDF files.
+
+An online sample demonstrating how to [create a PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind) is also available.
 
 ## Troubleshooting
 
-| Issue | Solution |
-|-------|----------|
-| **License Key Not Registered** | Ensure `SyncfusionLicenseProvider.RegisterLicense()` is called in `Program.cs` before services are built. The license key must be set at application startup. |
-| **"Input PDF file not found" Error** | Verify the input PDF exists at `wwwroot/Data/Input.pdf`. Check that the file's **Copy to Output Directory** property is set to "Copy if newer" or "Always copy". |
-| **Syncfusion.Pdf.NET Package Not Found** | Run `dotnet add package Syncfusion.Pdf.NET` in your project directory. Verify the package version is v16.2.0.x or later for ASP.NET Core support. |
-| **Elastic Beanstalk Environment Timeout** | Environment creation can take 5-15 minutes. Check AWS Console → Elastic Beanstalk → Events tab for deployment progress. If fails, review logs and delete the environment to retry. |
-| **Application returns HTTP 500 Error** | Check Elastic Beanstalk logs: AWS Console → Elastic Beanstalk → Logs → Request the last 100 lines. Verify `Program.cs` registers license key correctly. |
-| **PDF Download Not Working** | Verify controller method has `[HttpPost]` attribute and form uses `FormMethod.Post`. Check browser developer tools Network tab for errors. |
-| **"Build Failed" During Deployment** | Ensure all NuGet packages are restored: run `dotnet restore` locally before publishing. Check build errors in Visual Studio Output window. |
-| **File Permissions Error on EC2 Instance** | Elastic Beanstalk EC2 instances run as `ec2-user`. Ensure application has write permissions for wwwroot folder. Check IAM instance role permissions. |
-| **Licensing Error After Deployment** | Development license key may not work on AWS instances. For production, use a production license key from Syncfusion or contact Support for deployment guidance. |
-| **Slow PDF Generation on Startup** | Elastic Beanstalk may use smaller instance types. Upgrade instance type in Environment Configuration → Instances → Change Instance Type to a larger size. |
+- **Watermark appears in the output PDF** — Your Syncfusion<sup>&reg;</sup> license key is not registered. Call `SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")` at application startup, or load the key from the `SYNCFUSION_LICENSE_KEY` environment variable configured in **Elastic Beanstalk > Configuration > Software > Environment properties**.
+- **Environment status is `Severe` / `Degraded`** — Open the **Logs** tab in the Elastic Beanstalk console to download the instance log bundle. Common causes: missing `libgdiplus` / `libfontconfig` on the Linux instance, or the Syncfusion license key not being read from the environment variable.
+- **Deployment fails with `dotnet publish` errors** — Ensure the project's target framework matches the Elastic Beanstalk platform version (for example, .NET 6 on **64-bit Amazon Linux 2** running .NET 6).
+- **`Data/Input.pdf` not found at runtime** — Verify the file is in the project's `Data/` folder and that **Copy to Output Directory** is set to **Copy if newer**.
+- **AWS Toolkit does not detect credentials** — Run `aws configure` from the AWS CLI, or set the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables before opening Visual Studio.
+- **Deployment succeeds but the application URL returns 502 / 504** — Increase the instance type in **Application Options** (for example, from `t3.micro` to `t3.small`) or enable [rolling deployments](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.rolling-version.html) to avoid downtime.
+- **`TypeInitializationException` for SkiaSharp** — Install the `SkiaSharp.NativeAssets.Linux` package alongside `Syncfusion.Pdf.Net.Core` so the native binaries are deployed to the Amazon Linux 2 instance.
 
-## Next Steps
+## See also
 
-Explore advanced PDF capabilities and AWS Elastic Beanstalk patterns:
-
-### Advanced PDF Features
-- **[Merge Multiple PDFs](https://help.syncfusion.com/file-formats/pdf/working-with-documents/merge-documents)** — Combine multiple PDF documents into a single file
-- **[Split PDF Documents](https://help.syncfusion.com/file-formats/pdf/split-document)** — Extract specific pages from PDF files
-- **[Add Watermarks](https://help.syncfusion.com/file-formats/pdf/working-with-pages/add-watermark)** — Add company logos or confidentiality markers to PDFs
-- **[Create Interactive Forms](https://help.syncfusion.com/file-formats/pdf/working-with-forms/overview)** — Build fillable PDF forms for data collection
-- **[Digital Signatures](https://help.syncfusion.com/file-formats/pdf/working-with-forms/create-digital-signatures)** — Sign PDFs programmatically for document compliance
-
-### AWS Elastic Beanstalk Patterns
-- **[Auto Scaling Configuration](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/autoscaling.html)** — Scale instances based on demand
-- **[Load Balancing](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/load-balancer.html)** — Distribute PDF generation requests across instances
-- **[Environment Variables](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environments-cfg-softwareconfiguration.html)** — Store license keys securely (better than hardcoding)
-- **[CI/CD Pipeline with CodePipeline](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/tutorials.html)** — Automate deployments on code changes
-- **[Monitoring with CloudWatch](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.cloudwatch.html)** — Track application health and PDF generation metrics
-
-## Resources
-
-**Sample Code:**
-- [Complete AWS Elastic Beanstalk example](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/AWS/AWSElasticBeanstalk)
-
-**Documentation:**
-- [Syncfusion .NET PDF Library Guide](https://help.syncfusion.com/file-formats/pdf/)
-- [AWS Elastic Beanstalk Documentation](https://docs.aws.amazon.com/elasticbeanstalk/)
-- [Deploying ASP.NET Core to Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-dotnet-core.html)
-- [AWS Toolkit for Visual Studio](https://docs.aws.amazon.com/toolkit-for-visual-studio/)
-- [Licensing Overview](https://help.syncfusion.com/common/essential-studio/licensing/overview)
-
-**Try It Out:**
-- [Syncfusion PDF Online Demo](https://document.syncfusion.com/demos/pdf/default#/tailwind)
-- [Explore Syncfusion PDF Features](https://www.syncfusion.com/document-sdk/net-pdf-library)
-- [AWS Free Tier](https://aws.amazon.com/free/) — Includes Elastic Beanstalk free usage tier
+- [Create a PDF File on AWS Lambda](create-pdf-file-in-aws-lambda)
+- [Create a PDF File on AWS](create-pdf-file-in-aws)
+- [NuGet Packages Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required)
+- [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required)
+- [Syncfusion<sup>&reg;</sup> Licensing Overview](https://help.syncfusion.com/common/essential-studio/licensing/overview)
+- [Create a PDF file in ASP.NET Core](create-pdf-file-in-asp-net-core)
+- [Create a PDF file in Docker](create-pdf-document-in-docker)
+- [Open and read PDF files](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/open-pdf-files)
+- [Merge PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/merge-pdf-documents)
+- [Split PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/split-pdf-documents)
+- [Working with PDF forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-forms)
+- [Working with security and permissions](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-security)
+- [Working with stamps and watermarks](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-watermarks)
+- [Syncfusion<sup>&reg;</sup> PDF library — Demos](https://document.syncfusion.com/demos/pdf/default)

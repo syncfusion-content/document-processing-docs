@@ -1,62 +1,60 @@
 ---
-title: Create a PDF File in ASP.NET Web Forms| Syncfusion
-description: Learn how to create a PDF file in ASP.NET Web Forms with easy steps using Syncfusion .NET PDF library without depending on Adobe.
+title: Create or Generate PDF file in ASP.NET Web Forms| Syncfusion
+description: Learn how to create or generate a PDF file in ASP.NET Web Forms with easy steps using Syncfusion .NET PDF library without depending on Adobe.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Create a PDF File in ASP.NET Web Forms
+# Create or Generate a PDF File in ASP.NET Web Forms
 
-> **⚠️ Deprecation Notice:** ASP.NET Web Forms is deprecated. For new projects, consider upgrading to [ASP.NET Core](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-core), which offers modern development practices and better performance.
+The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) creates, reads, and edits PDF documents. It also merges, splits, stamps, fills forms, and secures PDF files.
 
-The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) enables you to create, read, and edit PDF documents. It provides advanced features including merging, splitting, stamping documents, managing forms, and securing PDF files with encryption.
+To include the .NET PDF library in your ASP.NET Web Forms application, refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) documentation.
 
-**Requirements:**
-- ASP.NET Web Forms with .NET Framework 4.5 or later
-- Visual Studio 2012 or later
+### Platform note
 
-To include the .NET PDF library into your ASP.NET Web application, please refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) documentation.
-## Project Setup
+N> ASP.NET Web Forms is a legacy platform. Syncfusion continues to support existing Web Forms applications, but new development should target [ASP.NET Core](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-core). The same PDF features are available there via the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) NuGet package.
 
-### Step 1: Create a new ASP.NET Web application project
-![ASP.NET Web sample creation step1](Asp.Net_images/Creation1.png)
+## Prerequisites
 
-### Step 2: Select the Empty project template
-![Select the empty project](Asp.Net_images/Creation2.png)
+- **.NET Framework** 4.5 or later
+- **Visual Studio 2017 or later** with the **ASP.NET and web development** workload
+- A **Syncfusion<sup>&reg;</sup> license key** — register it in your application using `Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")`. For details, see the [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
+- The **[Syncfusion.Pdf.AspNet](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet/)** NuGet package installed in the project. This package is the Web Forms wrapper for `Syncfusion.Pdf.Base` and targets .NET Framework only.
 
-### Step 3: Install the Syncfusion.Pdf.AspNet NuGet package
+## Compatibility
 
-Install the [Syncfusion.Pdf.AspNet](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet/) NuGet package as a reference to your .NET Framework applications from [NuGet.org](https://www.nuget.org/).
+| Component | Minimum version |
+| --- | --- |
+| .NET Framework | 4.5 |
+| Visual Studio | 2017 |
+| IIS | 7.0 |
+| Syncfusion<sup>&reg;</sup> PDF library | 21.1.0.35 |
+| Syncfusion<sup>&reg;</sup> NuGet package | [Syncfusion.Pdf.AspNet](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet/) |
 
-![PDF ASP.NET NuGet package installation](Asp.Net_images/NuGet-package.png)
+## Step to create a PDF document in ASP.NET Web Forms
 
-**Via Package Manager Console:**
-```
-Install-Package Syncfusion.Pdf.AspNet
-```
+**Step 1:** Create a new **ASP.NET Web Application (.NET Framework)** project in Visual Studio.
+![Create ASP.NET Web Forms application in Visual Studio](Asp.Net_images/Creation1.png)
 
-### Step 3a: Configure Licensing (Required)
+**Step 2:** In the template selection dialog, choose **Web Forms** (not the Empty template) so the project includes `Default.aspx` and the Web Forms configuration.
+![Select the Web Forms template](Asp.Net_images/Creation2.png)
 
-Starting with v16.2.0.x and later, you must register a Syncfusion license key to use the components. Add the `Syncfusion.Licensing` assembly reference and configure your license key. Please refer to the [licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview) for step-by-step instructions.
+**Step 3:** Install the [Syncfusion.Pdf.AspNet](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet/) NuGet package from [NuGet.org](https://www.nuget.org/). Use the latest stable version compatible with .NET Framework 4.5 or later.
+![Install the Syncfusion.Pdf.AspNet NuGet package](Asp.Net_images/NuGet-package.png)
 
-N> Without a valid license key, your application will throw licensing errors at runtime.
+N> If you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or the NuGet feed, you must add a reference to the `Syncfusion.Licensing` assembly and include a valid license key in your project. See the [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details on registering the license key.
 
-## Create the Web Form
+**Step 4:** Right-click the project, choose **Add > New Item**, select **Web Form** from the list, and name it `MainPage`.
 
-### Step 4: Add a new Web Form to the project
-
-Right-click the project in Solution Explorer and select **Add > New Item**. Choose **Web Form** from the templates list and name it `MainPage`.
-
-### Step 5: Add a button control to the Web Form
-
-Add the following button to `MainPage.aspx`. The `OnClick="OnButtonClicked"` event handler must match the C# method name in the code-behind file (case-sensitive).
+**Step 5:** In `MainPage.aspx`, add the following button.
 
 {% tabs %}
 {% highlight HTML %}
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>PDF Creation Sample</title>
+    <title></title>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -70,89 +68,61 @@ Add the following button to `MainPage.aspx`. The `OnClick="OnButtonClicked"` eve
 {% endhighlight %}
 {% endtabs %}
 
-## Implement PDF Generation
+**Step 6:** Include the following namespaces in your `MainPage.aspx.cs` file. Note that `System.Web` must be referenced (it is added automatically in Web Forms projects, but verify it for class-library projects).
 
-### Step 6: Add required namespaces to the code-behind file
-
-Add the following namespaces to `MainPage.aspx.cs`:
-   
-{% tabs %}
-{% highlight c# tabtitle="C#" %}
-
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using System;
-using System.Drawing;
-using System.Web;
-
-{% endhighlight %}
-{% endtabs %}
-
-### Step 7: Add the button click event handler
-
-Add the following code to the `OnButtonClicked` event handler in `MainPage.aspx.cs`. This creates a PDF document using the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class and draws text using the [DrawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html).
+**Step 7:** Define the `OnButtonClicked` event handler in `MainPage.aspx.cs` and include the following code to generate a PDF document using the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class. The [DrawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) object draws text on the PDF page. The `HttpReadType.Save` enum value writes the PDF directly to the response so the browser downloads `Output.pdf`.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-protected void OnButtonClicked(object sender, EventArgs e)
+//Create a new PDF document. 
+using (PdfDocument document = new PdfDocument())
 {
-    try
-    {
-        //Create a new PDF document.
-        using (PdfDocument document = new PdfDocument())
-        {
-            //Add a page to the document.
-            PdfPage page = document.Pages.Add();
-            //Create PDF graphics for the page.
-            PdfGraphics graphics = page.Graphics;
-            //Set the standard font.
-            PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
-            //Draw the text. PointF(0, 0) represents the top-left corner in pixels.
-            graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
-            //Save and send the PDF to the browser for download.
-            //Use HttpReadType.Save for download dialog, HttpReadType.Open for inline display.
-            document.Save("Output.pdf", HttpContext.Current.Response, HttpReadType.Save);
-        }
-    }
-    catch (Exception ex)
-    {
-        Response.Write("Error generating PDF: " + ex.Message);
-    }
+  //Add a page to the document.
+  PdfPage page = document.Pages.Add();
+  //Create PDF graphics for the page.
+  PdfGraphics graphics = page.Graphics;
+  //Set the standard font.
+  PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
+  //Draw the text.
+  graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
+  //Open the document in browser after saving it.
+  document.Save("Output.pdf", HttpContext.Current.Response, HttpReadType.Save);
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-## Run and Verify
+You can download a complete working sample from the [`ASP.NET` folder on GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/ASP.NET).
 
-### Step 8: Run the application
+Running the program produces the following PDF document.
+![ASP.NET Web Forms output PDF document](GettingStarted_images/pdf-generation-output.png)
 
-Build and execute the application. Click the **Create Document** button to generate and download the PDF file to your local machine.
+Explore the [Syncfusion<sup>&reg;</sup> PDF library features](https://www.syncfusion.com/document-sdk/net-pdf-library) to learn more about merging, splitting, securing, and stamping PDF files.
 
-![ASP.NET Web Forms PDF Generation Output](GettingStarted_images/pdf-generation-output.png)
-
-## Available Parameters and Options
-
-**HttpReadType Options:**
-- `HttpReadType.Save` — Prompts the user to download the PDF file
-- `HttpReadType.Open` — Displays the PDF inline in the browser
-
-**PdfFont Options:**
-You can use different standard fonts: `Helvetica`, `Times New Roman`, `Courier`, `Symbol`, and `ZapfDingbats`
+An online sample demonstrating how to [create a PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind) is also available.
 
 ## Troubleshooting
 
-| Issue | Solution |
-|-------|----------|
-| NuGet package installation fails | Verify Visual Studio is up to date; check NuGet package source configuration in Tools > Options > NuGet Package Manager |
-| Licensing errors at runtime | Ensure Syncfusion.Licensing assembly is referenced and a valid license key is registered |
-| PDF file not downloading | Verify HttpContext.Current.Response is available; check browser's download settings and firewall restrictions |
-| "Handler 'OnButtonClicked' not found" error | Ensure the event handler method name in code-behind matches exactly (case-sensitive) with the button's OnClick attribute |
-| Empty or malformed PDF | Ensure page graphics operations occur before calling Save(); verify required fonts are installed on the system |
+- **Watermark appears in the output PDF** — Your Syncfusion<sup>&reg;</sup> license key is not registered. Call `SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")` at application startup.
+- **`Server cannot set content type after headers are sent` exception** — The `document.Save(..., Response, HttpReadType.Save)` overload writes the PDF directly to the response. Do not call `Response.End()` or write further content after the save; the response is finalized when the method returns.
+- **Package not found when targeting .NET Core** — The `Syncfusion.Pdf.AspNet` package only supports ASP.NET Web Forms on .NET Framework. For ASP.NET Core, use the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) package instead.
+- **GDI+ errors on Windows Server** — Ensure the **Server Core** optional feature for "Server-Gui-Shell" or the **Desktop Experience** is installed so the GDI+ subsystem is available to `System.Drawing`.
+- **PDF file opens in the browser instead of downloading** — Add `Response.AddHeader("content-disposition", "attachment; filename=Output.pdf");` or rely on the `HttpReadType.Save` overload, which sets the header automatically.
 
-## Next Steps
+## See also
 
-- **Download [Complete Working Sample](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/ASP.NET)** — Reference implementation with additional features
-- **Try [Online Demo](https://document.syncfusion.com/demos/pdf/default#/tailwind)** — Interactive example in your browser
-- **Explore [Syncfusion PDF Library Features](https://www.syncfusion.com/document-sdk/net-pdf-library)** — Complete API reference and advanced capabilities
+- [NuGet Packages Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required)
+- [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required)
+- [Syncfusion<sup>&reg;</sup> Licensing Overview](https://help.syncfusion.com/common/essential-studio/licensing/overview)
+- [Create a PDF file in ASP.NET Core](create-pdf-file-in-asp-net-core)
+- [Create a PDF file in ASP.NET Core Web API](create-pdf-document-in-web-api)
+- [Create a PDF file in Blazor](create-pdf-document-in-blazor)
+- [Create a PDF file in Docker](create-pdf-document-in-docker)
+- [Open and read PDF files](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/open-pdf-files)
+- [Merge PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/merge-pdf-documents)
+- [Split PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/split-pdf-documents)
+- [Working with PDF forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-forms)
+- [Working with security and permissions](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-security)
+- [Working with stamps and watermarks](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-watermarks)
+- [Syncfusion<sup>&reg;</sup> PDF library — Demos](https://document.syncfusion.com/demos/pdf/default)

@@ -1,45 +1,51 @@
 ---
-title: Create a PDF File in ASP.NET MVC | Syncfusion
-description: Learn how to create a PDF file in ASP.NET MVC with easy steps using Syncfusion .NET PDF library without depending on Adobe.
+title: Create or Generate PDF file in ASP.NET MVC | Syncfusion
+description: Learn how to create or generate a PDF file in ASP.NET MVC with easy steps using Syncfusion .NET PDF library without depending on Adobe.
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: mvc create pdf, mvc generate pdf, edit pdf, merge, pdf form, fill form, digital sign, table, c#, mvc generate pdf
 ---
-# Create a PDF File in ASP.NET MVC
+# Create or Generate a PDF File in ASP.NET MVC
 
-The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) enables you to create, read, and edit PDF documents in your .NET applications. It also provides advanced features such as merging, splitting, stamping documents, managing forms, and securing PDF files with encryption.
+The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) creates, reads, and edits PDF documents. It also merges, splits, stamps, fills forms, and secures PDF files.
 
-**Requirements:**
-- ASP.NET MVC 5 and .NET Framework 4.5 or later
-- Visual Studio 2012 or later
+To include the .NET PDF library in your ASP.NET MVC application, refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) documentation.
 
-To include the .NET PDF library into your ASP.NET MVC application, please refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) documentation. 
+N> This tutorial targets **ASP.NET MVC 5 on .NET Framework**. For ASP.NET Core, use the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) package and see [Create or Generate a PDF file in ASP.NET Core](create-pdf-file-in-asp-net-core).
 
-## Steps to create PDF document in ASP.NET MVC
+## Prerequisites
 
-Step 1: Create a new C# ASP.NET Web Application (.NET Framework) project.
+- **.NET Framework** 4.6.1 or later
+- **Visual Studio 2017 or later** with the **ASP.NET and web development** workload
+- A **Syncfusion<sup>&reg;</sup> license key** — register it in your application using `Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")`. For details, see the [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
+- The **[Syncfusion.Pdf.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet.Mvc5/)** NuGet package installed in the project. This package is the MVC 5 wrapper for `Syncfusion.Pdf.Net.Core`; for ASP.NET Core, use `Syncfusion.Pdf.Net.Core` directly.
+
+## Compatibility
+
+| Component | Minimum version |
+| --- | --- |
+| .NET Framework | 4.6.1 |
+| ASP.NET MVC | 5.2.7 |
+| Visual Studio | 2017 |
+| Syncfusion<sup>&reg;</sup> PDF library | 21.1.0.35 |
+| Syncfusion<sup>&reg;</sup> NuGet package | [Syncfusion.Pdf.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet.Mvc5/) |
+
+## Step to create a PDF document in ASP.NET MVC
+
+**Step 1:** Create a new C# **ASP.NET Web Application (.NET Framework)** project.
 ![Create ASP.NET MVC Web application in Visual Studio](MVC_images/Creation1.png)
 
-Step 2: In the project configuration windows, name your project and click Create.
+**Step 2:** In the project configuration window, name your project and click **Create**. Then select the **MVC** project template.
 ![Add the project name](MVC_images/Creation2.png)
-![Select the MVC](MVC_images/Creation3.png)
+![Select the MVC template](MVC_images/Creation3.png)
 
-Step 3: Install the [Syncfusion.Pdf.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet.Mvc5/) NuGet package as a reference to your ASP.NET MVC applications from [NuGet.org](https://www.nuget.org/).
+**Step 3:** Install the [Syncfusion.Pdf.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet.Mvc5/) NuGet package from [NuGet.org](https://www.nuget.org/). Use the latest stable version compatible with .NET Framework 4.6.1 or later.
 ![Install PDF MVC NuGet package](MVC_images/NuGet-package.png)
 
-**Via Package Manager Console:**
-```
-Install-Package Syncfusion.Pdf.AspNet.Mvc5
-```
+N> If you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or the NuGet feed, you must add a reference to the `Syncfusion.Licensing` assembly and include a valid license key in your project. See the [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details on registering the license key.
 
-Step 3a: **Licensing Setup (Required)**
-
-Starting with v16.2.0.x and later, you must register a Syncfusion license key in your application to use the components. Add the "Syncfusion.Licensing" assembly reference and configure your license key. Please refer to the [licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview) for step-by-step instructions.
-
-N> Without a valid license key, your application will throw licensing errors at runtime.
-
-Step 4: A default controller named `HomeController.cs` is created with the ASP.NET MVC project. Add the following namespaces to `HomeController.cs`:
+**Step 4:** On creation, ASP.NET MVC adds a default `HomeController.cs` controller. Include the following namespaces in that file.
  
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -51,7 +57,9 @@ using System.Drawing;
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: A default action method named `Index` exists in `HomeController.cs`. Open the associated view file `Index.cshtml` (either right-click the Index method and select **Go To View**, or navigate to `Views/Home/Index.cshtml` in Solution Explorer). Add the following button to the view:
+**Step 5:** Right-click the existing `Index` action in `HomeController.cs` and choose **Go To View** to open `Index.cshtml`. In `Index.cshtml`, add the following button.
+
+N> The `Html.BeginForm` / `Html.EndForm` HTML helpers used below are the legacy syntax. Modern ASP.NET MVC supports tag helpers; consider `<form asp-action="CreatePDFDocument" asp-controller="Home" method="get">` for new projects.
 
 {% tabs %}
 {% highlight CSHTML %}
@@ -68,66 +76,64 @@ Step 5: A default action method named `Index` exists in `HomeController.cs`. Ope
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Add a new action method named `CreatePDFDocument` in `HomeController.cs`. This method creates a PDF document using the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class and draws text using the [DrawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html), then downloads the PDF to the client.
+**Step 6:** Add a new action method named `CreatePDFDocument` in `HomeController.cs` (matching the `Html.BeginForm` action in Step 5) and include the code example below to generate a PDF document using the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class. The [DrawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) object draws text on the PDF page. The `HttpReadType.Save` enum value writes the PDF directly to the response stream so the browser downloads `Output.pdf`.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-public ActionResult CreatePDFDocument()
+public ActionResult CreateDocument()
 {
-    try
+    //Create an instance of PdfDocument.
+    using (PdfDocument document = new PdfDocument())
     {
-        //Create an instance of PdfDocument.
-        using (PdfDocument document = new PdfDocument())
-        {
-            //Add a page to the document.
-            PdfPage page = document.Pages.Add();
-            //Create PDF graphics for the page.
-            PdfGraphics graphics = page.Graphics;
-            //Set the standard font.
-            PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
-            //Draw the text. PointF(0, 0) represents the top-left corner in pixels.
-            graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
-            //Save and send the PDF to the browser for download.
-            document.Save("Output.pdf", HttpContext.ApplicationInstance.Response, HttpReadType.Save);
-        }
+        //Add a page to the document.
+        PdfPage page = document.Pages.Add();
+        //Create PDF graphics for the page.
+        PdfGraphics graphics = page.Graphics;
+        //Set the standard font.
+        PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
+        //Draw the text.
+        graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
+        //Open the document in browser after saving it. 
+        document.Save("Output.pdf", HttpContext.ApplicationInstance.Response, HttpReadType.Save);
     }
-    catch (Exception ex)
-    {
-        ViewBag.Message = "Error generating PDF: " + ex.Message;
-    }
-    return null;
+    return View();
 }
 
 {% endhighlight %}
 {% endtabs %} 
 
-## Run the Application
+Running the program produces the following PDF document.
+![ASP.NET MVC output PDF document](GettingStarted_images/pdf-generation-output.png)
 
-Execute the application and click the **Generate PDF Document** button to create and download the PDF file to your local machine.
+You can download a complete working sample from the [`Creating-a-new-PDF-document` folder on GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/ASP.NET%20MVC/Creating-a-new-PDF-document).
 
-![ASP.NET MVC PDF Generation Output](GettingStarted_images/pdf-generation-output.png)
+Explore the [Syncfusion<sup>&reg;</sup> PDF library features](https://www.syncfusion.com/document-sdk/net-pdf-library) to learn more about merging, splitting, securing, and stamping PDF files.
 
-## Available Parameters and Options
-
-**HttpReadType Options:**
-- `HttpReadType.Save` — Prompts the user to download the PDF file
-- `HttpReadType.Open` — Displays the PDF inline in the browser
-
-**PdfFont Options:**
-You can use different standard fonts: `Helvetica`, `Times New Roman`, `Courier`, `Symbol`, and `ZapfDingbats`
+An online sample demonstrating how to [create a PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind) is also available.
 
 ## Troubleshooting
 
-| Issue | Solution |
-|-------|----------|
-| NuGet package installation fails | Verify your Visual Studio is updated to latest version; check NuGet package source configuration |
-| Licensing errors at runtime | Ensure Syncfusion.Licensing assembly is referenced and a valid license key is registered |
-| PDF file not downloading | Verify HttpContext.ApplicationInstance.Response is available; check browser's download settings |
-| Empty or malformed PDF | Ensure page graphics operations occur before calling Save(); verify fonts are available on the system |
+- **Watermark appears in the output PDF** — Your Syncfusion<sup>&reg;</sup> license key is not registered. Call `SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")` at application startup.
+- **`Server cannot set content type after headers are sent` exception** — The `document.Save(..., Response, HttpReadType.Save)` overload writes the PDF directly to the response, so do not return a `View()` afterward. Return an empty result (for example, `return new EmptyResult();`) or switch to a `FileStreamResult`.
+- **Package not found when targeting .NET Core** — The `Syncfusion.Pdf.AspNet.Mvc5` package only supports ASP.NET MVC 5 on .NET Framework. For ASP.NET Core, use the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) package instead.
+- **GDI+ errors on Windows Server** — Ensure the **Server Core** optional feature for "Server-Gui-Shell" or the **Desktop Experience** is installed so the GDI+ subsystem is available.
+- **PDF file opens as plain text in the browser** — Add `Response.AddHeader("content-disposition", "attachment; filename=Output.pdf");` (or rely on the `HttpReadType.Save` overload) to force a download.
+- **`HttpContext.ApplicationInstance` is null in unit tests** — Use `HttpContext.Current` or inject `IHttpContextAccessor`; the controller property only works inside an MVC request pipeline.
 
-## Next Steps
+## See also
 
-- **Download [Complete Working Sample](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/ASP.NET%20MVC/Creating-a-new-PDF-document)** — Reference implementation with additional features
-- **Try [Online Demo](https://document.syncfusion.com/demos/pdf/default#/tailwind)** — Interactive example in your browser
-- **Explore [Syncfusion PDF Library Features](https://www.syncfusion.com/document-sdk/net-pdf-library)** — Full documentation and API reference
+- [NuGet Packages Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required)
+- [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required)
+- [Syncfusion<sup>&reg;</sup> Licensing Overview](https://help.syncfusion.com/common/essential-studio/licensing/overview)
+- [Create a PDF file in ASP.NET Core](create-pdf-file-in-asp-net-core)
+- [Create a PDF file in ASP.NET Core Web API](create-pdf-document-in-web-api)
+- [Create a PDF file in Blazor](create-pdf-document-in-blazor)
+- [Create a PDF file in Docker](create-pdf-document-in-docker)
+- [Open and read PDF files](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/open-pdf-files)
+- [Merge PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/merge-pdf-documents)
+- [Split PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/split-pdf-documents)
+- [Working with PDF forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-forms)
+- [Working with security and permissions](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-security)
+- [Working with stamps and watermarks](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-watermarks)
+- [Syncfusion<sup>&reg;</sup> PDF library — Demos](https://document.syncfusion.com/demos/pdf/default)

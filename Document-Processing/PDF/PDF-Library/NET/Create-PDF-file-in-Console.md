@@ -1,39 +1,28 @@
 ---
-title: Create a PDF File in Console Application | Syncfusion
-description: Learn how to create PDF files in a Console Application using the Syncfusion .NET PDF library.
+title: Create PDF file in Console Application | Syncfusion
+description: Discover how to generate a PDF in a Console Application by using the Syncfusion PDF library efficiently.
 platform: document-processing
 control: PDF
 documentation: UG
 --- 
 
-# Create a PDF File in a Console Application
+# Create or Generate a PDF File in a Console Application
 
-The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, work with forms, and secure PDF files.
+The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) creates, reads, and edits PDF documents. It also merges, splits, stamps, fills forms, and secures PDF files.
+
+To quickly get started with the .NET PDF library, watch this video:
+{% youtube "https://youtu.be/PvUdu1hpRLQ" %}
 
 ## Prerequisites
 
-| Item | .NET Core / .NET 5.0+ | .NET Framework 4.5+ |
-| --- | --- | --- |
-| **Development Environment** | Visual Studio 2022, Visual Studio Code, JetBrains Rider | Visual Studio 2022, Visual Studio 2019 |
-| **.NET Version** | .NET 5.0 or later (.NET 6.0+ recommended) | .NET Framework 4.5, 4.6, 4.7, 4.8 |
-| **NuGet Package** | Syncfusion.Pdf.NET (latest version) | Syncfusion.Pdf.WinForms (latest version)* |
-| **Additional** | .NET SDK installed from [.NET Downloads](https://dotnet.microsoft.com/en-us/download) | Visual Studio includes .NET Framework runtime |
-| **License** | Syncfusion license key (required for production use) | Syncfusion license key (required for production use) |
+- **.NET SDK 8.0** or later.
+- **Visual Studio 2022** with the **.NET desktop development** workload, or **Visual Studio Code** with the C# Dev Kit extension, or **JetBrains Rider**.
+- A **Syncfusion<sup>&reg;</sup> license key** — register it in your application using `Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")`. For details, see the [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
+- The **[Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core)** NuGet package (for .NET Core) or **[Syncfusion.Pdf.WinForms](https://www.nuget.org/packages/Syncfusion.Pdf.WinForms/)** (for .NET Framework).
 
-*Note: Syncfusion.Pdf.WinForms for .NET Framework console applications contains platform-independent PDF library assemblies (not Windows Forms-specific) and is suitable for console applications.
+## Step to create a PDF document in a .NET (Core) console application
 
-## Getting Started Video
-
-To quickly get started with the .NET PDF library, watch this video:
-{% youtube "https://youtu.be/PvUdu1hpRLQ?si=xFFjpsJZv3s8AonV" %}
-
----
-
-## Steps to Create a PDF File in .NET 5.0 or Later
-
-Select your preferred development environment:
-
-### Visual Studio 2022, Visual Studio Code, or JetBrains Rider
+The instructions below cover three IDE workflows. Select the tab that matches your development environment.
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -49,127 +38,101 @@ Select your preferred development environment:
 {% endtabcontent %}
 {% endtabcontents %}
 
-**License Registration:** Starting with v16.2.0.x, register your Syncfusion license key in `Program.cs` before creating PDF objects. Refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) for detailed instructions.
+You can download a complete working sample from the [Create_PDF folder on GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Console/.NET/Create_PDF).
 
-A complete working sample can be downloaded from the [GitHub repository](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Console/.NET/Create_PDF).
+Running the program produces the following PDF document.
+![.NET Core console output PDF document](GettingStarted_images/pdf-generation-output.png)
 
-**Output:** Upon successful execution, you will get the PDF document as follows:
-![Console output PDF document](GettingStarted_images/pdf-generation-output.png)
+## Step to create a PDF document in a .NET Framework console application
 
----
+The following steps illustrate creating a simple **Hello World** PDF document in a console application using .NET Framework.
 
-## Steps to Create a PDF File in .NET Framework 4.5 or Later
+### Prerequisites
 
-The following steps illustrate creating a simple "Hello World" PDF document in a console application using .NET Framework.
+- Install the **.NET Framework targeting pack** (4.6 or later) via the Visual Studio Installer. The .NET Framework runtime is included with Windows; the **argeting pack** adds the reference assemblies required to build the project.
+- Install **Visual Studio 2022** (or 2017) with the **.NET desktop development** workload from the [Visual Studio downloads page](https://visualstudio.microsoft.com/downloads/). The previous version's reference to "Visual Studio Code" was incorrect; this tutorial uses Visual Studio.
 
-**Step 1:** Create a new C# Console Application (.NET Framework) project.
+**Step 1:** Create a new **Console Application (.NET Framework)** project.
+![Console Application creation in Visual Studio](Console_images/console-app-sample-creation.png)
 
-![Console Application creation](Console_images/console-app-sample-creation.png)
-
-**Step 2:** Name the project.
-
+**Step 2:** Name the project (for example, `Create_PDF`) and click **OK** to create it.
 ![Name the application](Console_images/Name_project_Framework.png)
 
-**Step 3:** Install the [Syncfusion.Pdf.WinForms](https://www.nuget.org/packages/Syncfusion.Pdf.WinForms/) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org).
+**Step 3:** Install the [Syncfusion.Pdf.WinForms](https://www.nuget.org/packages/Syncfusion.Pdf.WinForms/) NuGet package from [NuGet.org](https://www.nuget.org) using the NuGet Package Manager or `Install-Package Syncfusion.Pdf.WinForms` in the Package Manager Console.
+![Install the Syncfusion.Pdf.WinForms NuGet package](Console_images/Nuget_package_Framework.png)
 
-![NET Framework NuGet package](Console_images/Nuget_package_Framework.png)
+N> The [Syncfusion.Pdf.WinForms](https://www.nuget.org/packages/Syncfusion.Pdf.WinForms/) NuGet package is a dependent package for Syncfusion<sup>&reg;</sup> Windows Forms GUI controls, so it is named with the suffix **WinForms**. It contains platform-independent .NET Framework (4.0, 4.5, 4.5.1, 4.6) assemblies of the PDF library and does **not** contain any Windows Forms references or code. We therefore recommend this package for .NET Framework console applications.
 
-> **Note:** The Syncfusion.Pdf.WinForms NuGet package contains platform-independent .NET Framework assemblies of the PDF library. Despite its name, it does not contain any Windows Forms-specific references and is appropriate for console applications.
-
-**Step 4:** Register your Syncfusion license key in the *Program.cs* file. Starting with v16.2.0.x, license registration is required. Refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) for instructions.
-
-**Step 5:** Include the following namespaces in *Program.cs*:
+**Step 4:** Include the following namespaces in `Program.cs`.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
-using System;
+using Syncfusion.Pdf;
 using System.Drawing;
 
 {% endhighlight %}
 {% endtabs %}
 
-**Step 6:** Add the following code to *Program.cs* to create a PDF file with error handling:
+**Step 5:** Include the following code in `Program.cs` to create a PDF file. The `document.Save("Output.pdf")` call writes the PDF to the current working directory, which is typically the project's output folder (for example, `bin\Debug\net48\`). Pass an absolute path if you need to control the location.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-try
+//Create a new PDF document. 
+using (PdfDocument document = new PdfDocument()) 
 {
-    // Create a new PDF document
-    using (PdfDocument document = new PdfDocument())
-    {
-        // Add a page to the document
-        PdfPage page = document.Pages.Add();
-        
-        // Create PDF graphics for the page
-        PdfGraphics graphics = page.Graphics;
-        
-        // Set the standard font
-        PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
-        
-        // Draw text on the page
-        graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
-        
-        // Save the document to the current directory
-        string outputPath = System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory(), "Output.pdf");
-        document.Save(outputPath);
-        
-        Console.WriteLine($"PDF created successfully at: {outputPath}");
-    }
-}
-catch (Exception ex)
-{
-    Console.WriteLine($"Error creating PDF: {ex.Message}");
+    //Add a page to the document.
+    PdfPage page = document.Pages.Add();
+    //Create PDF graphics for a page.
+    PdfGraphics graphics = page.Graphics;
+    //Set the standard font.
+    PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
+    //Draw the text.
+    graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
+    //Save the document.
+    document.Save("Output.pdf");
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-**Step 7:** Build the project by clicking Build > Build Solution or pressing Ctrl + Shift + B.
+**Step 6:** Build the project by choosing **Build > Build Solution** or pressing **Ctrl + Shift + B**. Verify the build succeeds in the **Output** window.
 
-**Step 8:** Run the project by clicking the Start button (green arrow) or pressing F5.
+**Step 7:** Run the project by choosing **Debug > Start Debugging** or pressing **F5**. The `Output.pdf` file is generated in the project's working directory (typically `bin\Debug\net48\`).
 
-Upon successful execution, the console will display the path where the PDF has been created. The output PDF file (`Output.pdf`) will be saved in the project's bin directory.
+You can download a complete working sample from the [Create PDF (.NET Framework) folder on GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Console/.NET%20Framework/Create%20PDF).
 
-A complete working sample can be downloaded from the [GitHub repository](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Console/.NET%20Framework/Create%20PDF).
+Running the program produces the following PDF document.
+![.NET Framework console output PDF document](GettingStarted_images/pdf-generation-output.png)
 
-**Output:** The executed program generates a PDF document with the text "Hello World!!!" formatted with Helvetica font:
+Explore the [Syncfusion<sup>&reg;</sup> PDF library features](https://www.syncfusion.com/document-sdk/net-pdf-library) to learn more about merging, splitting, securing, and stamping PDF files.
 
-![Console output PDF document](GettingStarted_images/pdf-generation-output.png)
+An online sample demonstrating how to [create a PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind) is also available.
 
 ## Troubleshooting
 
-| Issue | Solution |
-| --- | --- |
-| "Could not load file or assembly 'Syncfusion.Pdf'" | Ensure the Syncfusion NuGet package is installed correctly: `dotnet add package Syncfusion.Pdf.NET` (.NET Core) or `Install-Package Syncfusion.Pdf.WinForms` (.NET Framework) |
-| "License key is missing" or "License key expired" | Register your Syncfusion license key in Program.cs before creating PDF objects (Step 4 for .NET Framework, similar for .NET Core) |
-| "Output.pdf not created in expected location" | The file is saved in the current working directory (bin folder when run from IDE, project directory when run from terminal) |
-| "System.IO.FileNotFoundException" | Verify that the directory has write permissions and sufficient disk space is available |
-| "The type 'PdfDocument' is not defined" | Ensure all required using statements are included (Syncfusion.Pdf, Syncfusion.Pdf.Graphics) |
-| Application runs but PDF is empty or incomplete | Check that graphics.DrawString() is called before document.Save() and no exceptions occur |
-| "Cannot find the .NET SDK" (.NET Core) | Install .NET SDK from [.NET Downloads](https://dotnet.microsoft.com/en-us/download) and verify PATH environment variable |
-| File locked or cannot be overwritten | Close any open instances of Output.pdf before running the program again, or use a unique filename |
-| Different output between .NET Core and Framework | Both versions should produce identical PDFs; check Syncfusion package versions match |
-| NuGet package restore fails | Clear NuGet cache: `nuget locals all -clear` or use `dotnet nuget locals all --clear` |
+- **Watermark appears in the output PDF** — Your Syncfusion<sup>&reg;</sup> license key is not registered. Call `SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")` at the start of the console app's `Main` method.
+- **`Output.pdf` not generated** — The current working directory may be read-only (for example, when running from `Program Files`). Pass an absolute path to `document.Save(@"C:\Temp\Output.pdf")` or set `Environment.CurrentDirectory` before saving.
+- **`System.Drawing.Common` exceptions on Linux/macOS (.NET 6+)** — `System.Drawing` is Windows-only on .NET 6+; use the `Syncfusion.Drawing` namespace and the `Syncfusion.Pdf.Net.Core` package instead of `Syncfusion.Pdf.WinForms`.
+- **NuGet package version conflicts** — Ensure the `Syncfusion.Pdf.WinForms` (or `Syncfusion.Pdf.Net.Core`) version matches your target framework. Clear the NuGet cache with `dotnet nuget locals all --clear` and restore again.
+- **`TypeInitializationException` for SkiaSharp** — Install the matching `SkiaSharp.NativeAssets.*` package for your target platform (for example, `SkiaSharp.NativeAssets.Linux`).
+- **The console window closes immediately on double-click** — Run the executable from a command prompt, or add `Console.ReadKey()` at the end of `Main` to keep the window open.
+- **Build error: `Output.pdf` is in use** — Close any PDF viewer that has `Output.pdf` open, or write to a new file name on each run (for example, `Output-{DateTime.Now:yyyyMMddHHmmss}.pdf`).
 
-## Next Steps
+## See also
 
-Explore advanced features and capabilities with the Syncfusion .NET PDF library:
-
-- [Merge PDF Documents](./merge-pdf-documents.md) - Combine multiple PDF files into one
-- [Split PDF Documents](./split-pdf-documents.md) - Extract or divide PDF pages
-- [Add Watermarks](./add-watermark.md) - Apply text and image watermarks to PDFs
-- [Work with Forms](./fill-form-fields.md) - Create and fill interactive PDF forms
-- [Add Images to PDF](./Working-with-Images.md) - Insert and manipulate images in PDFs
-- [Add Digital Signatures](./digital-signatures.md) - Sign PDFs digitally
-- [Secure Documents](./encrypt-pdf.md) - Encrypt and password-protect PDFs
-- [Working with Tables and Grids](./Working-with-Tables.md) - Create formatted data tables
-- [ASP.NET Core Web Application](./Create-PDF-file-in-ASP-NET-Core.md) - Generate PDFs in web applications
-- [Other Platforms](../../getting-started.md) - PDF generation guides for other platforms (Docker, Linux, macOS, Cloud services)
-
-For additional examples and comprehensive API documentation, visit the [Syncfusion .NET PDF documentation](https://help.syncfusion.com/document-processing/pdf/overview).
-
-You can also explore our [interactive PDF demo](https://document.syncfusion.com/demos/pdf/default#/tailwind) and the [Syncfusion PDF library features](https://www.syncfusion.com/document-sdk/net-pdf-library).
+- [Create a PDF file in ASP.NET Core](create-pdf-file-in-asp-net-core)
+- [Create a PDF file in Docker](create-pdf-document-in-docker)
+- [Create a PDF file in AWS Lambda](create-pdf-file-in-aws-lambda)
+- [NuGet Packages Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required)
+- [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required)
+- [Syncfusion<sup>&reg;</sup> Licensing Overview](https://help.syncfusion.com/common/essential-studio/licensing/overview)
+- [Open and read PDF files](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/open-pdf-files)
+- [Merge PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/merge-pdf-documents)
+- [Split PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/split-pdf-documents)
+- [Working with PDF forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-forms)
+- [Working with security and permissions](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-security)
+- [Working with stamps and watermarks](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-watermarks)
+- [Syncfusion<sup>&reg;</sup> PDF library — Demos](https://document.syncfusion.com/demos/pdf/default)
