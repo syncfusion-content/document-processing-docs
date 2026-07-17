@@ -39,13 +39,13 @@ cd spreadsheet-app
 The [Angular Spreadsheet Editor](https://www.npmjs.com/package/@syncfusion/ej2-angular-spreadsheet) package uses the Ivy-based Angular library distribution [format](https://angular.dev/tools/libraries/angular-package-format) and is compatible with `Angular 12` and above. Use the following command to install the package:
 
 ```
-npm install @syncfusion/ej2-angular-spreadsheet --save
+npm install @syncfusion/ej2-angular-spreadsheet
 ```
 
 For `Angular versions below 12`, use the legacy `ngcc` package instead:
 
 ```
-npm install @syncfusion/ej2-angular-spreadsheet@ngcc --save
+npm install @syncfusion/ej2-angular-spreadsheet@ngcc
 ```
 
 ## Add CSS references
@@ -53,16 +53,16 @@ npm install @syncfusion/ej2-angular-spreadsheet@ngcc --save
 Add the following Spreadsheet and dependent component styles to `src/styles.css` file. Replace the existing content with the theme import code below. The following example uses the `Tailwind 3` theme.
 
 ```css
-@import '@syncfusion/ej2-base/styles/tailwind3.css';
-@import '@syncfusion/ej2-inputs/styles/tailwind3.css';
-@import '@syncfusion/ej2-buttons/styles/tailwind3.css';
-@import '@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
-@import '@syncfusion/ej2-lists/styles/tailwind3.css';
-@import '@syncfusion/ej2-navigations/styles/tailwind3.css';
-@import '@syncfusion/ej2-popups/styles/tailwind3.css';
-@import '@syncfusion/ej2-dropdowns/styles/tailwind3.css';
-@import '@syncfusion/ej2-grids/styles/tailwind3.css';
-@import '@syncfusion/ej2-angular-spreadsheet/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-angular-spreadsheet/styles/tailwind3.css';
 ```
 
 Syncfusion also ships additional built-in themes. To use a different theme, replace `tailwind3.css` with the theme of your choice (for example, `bootstrap5.css`, `fluent2.css`, etc.) in all `@import` statements.
@@ -71,7 +71,7 @@ Syncfusion also ships additional built-in themes. To use a different theme, repl
 
 ## Add the Syncfusion® Angular Spreadsheet component
 
-Import and render the `Spreadsheet` in `src/app.ts`. Replace the existing content with the following code.
+Import and render the `Spreadsheet` in `src/app/app.ts`. Replace the existing content with the following code.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
