@@ -58,7 +58,7 @@ Syncfusion also ships additional built-in themes. To use a different theme, repl
 
 ## Add the Vue Spreadsheet component to the application
 
-Import and register the [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) component directives in the `script` section of **src/App.vue** by replacing the existing code with the following code. If you use the `Composition API`, add the `setup` attribute to the `script` tag. Then, define the component in the `template` section.
+Import and register the [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) component directives in the `script` section of **src/App.vue**. If you use the `Composition API`, add the `setup` attribute to the `script` tag. Then, define the component in the `template` section.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (App.vue)" %}
@@ -122,7 +122,7 @@ After the application starts, open the localhost URL shown in the terminal to vi
 
 ![Output](images/vue3-spreadsheet.png)
 
-> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-vue-spreadsheet-component). Looking for the full Vue Spreadsheet component overview, features, pricing, and documentation? Visit the [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) page.
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-vue-spreadsheet-component).
 
 N> Looking for the full Vue Spreadsheet component overview, features, pricing, and documentation? Visit the [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) page.
 
