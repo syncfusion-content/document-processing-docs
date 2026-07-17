@@ -10,7 +10,7 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 # Open a PDF from Local Storage in .NET MAUI PDF Viewer (SfPdfViewer)
 
-A PDF document can be opened in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) from the local storage by reading the file as a `Stream` and assigning the obtained `Stream` to the [DocumentSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) property.
+A PDF document can be opened in the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) from the local storage by reading the file as a `Stream` and assigning the obtained `Stream` to the [DocumentSource](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) property.
 
 Just by making a few changes to the `MainPage.xaml` and `PdfViewerViewModel.cs` shared in the getting started example, you can easily open a document from the local storage with the help of [File Picker](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/storage/file-picker?view=net-maui-7.0&tabs=ios) as one of the options. 
 
@@ -50,7 +50,7 @@ In `MainPage.xaml`, add a new button to open a PDF document from the local stora
 {% endhighlight %} 
 {% endtabs %}
 
-In `PdfViewerViewModel.cs`, implement the functionalities of the `File picker` to choose a PDF document and read its stream, which can be assigned to the [DocumentSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) property of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) to view the document. Refer to the following code:
+In `PdfViewerViewModel.cs`, implement the functionalities of the `File picker` to choose a PDF document and read its stream, which can be assigned to the [DocumentSource](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) property of the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) to view the document. Refer to the following code:
 
 {% tabs %}
 {% highlight c# tabtitle="PdfViewerViewModel.cs" %}
