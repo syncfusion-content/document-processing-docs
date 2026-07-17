@@ -1,6 +1,5 @@
 ---
 title: Create PDF document in Microsoft Azure | Syncfusion
-description: Learn how to create a PDF document in Azure using the Syncfusion .NET PDF library in C#.
 description: Create, read, and edit PDF documents in Microsoft Azure using the Syncfusion .NET PDF library for C#. Includes setup and deployment steps.
 platform: document-processing
 control: PDF

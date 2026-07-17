@@ -149,7 +149,7 @@ Step 13: Publishing has succeeded.
 ![Publishing succeeded](Azure_images/Azure-Functions-V1/Successful_publish.png)
 
 Step 14: Open the **Azure portal**, navigate to the **Function App**, select the function, then click **Get function URL > Copy**. Paste the URL into a new browser tab. The PDF document downloads as follows.
-![Output PDF document](Azure_images/Azure-Functions-V1/Output_screenshot.png)
+![Output PDF document](Azure_images/Azure-Functions-V1/Final_output.png)
 
 N> If the function is not anonymous, the copied URL includes a `?code=…` query string parameter. Keep the parameter intact when pasting into the browser, or the request will return **401 Unauthorized**.
 
