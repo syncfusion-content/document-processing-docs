@@ -98,6 +98,7 @@ private void btnCreate_Click(object sender, EventArgs e)
         loadedDocument.Close(true);
     }
 }
+{% endhighlight %}
 {% endtabs %}
 
 By executing the program, you will get a PDF document as follows.
