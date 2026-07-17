@@ -46,6 +46,6 @@ The following keyboard shortcuts copy the selected text:
 
 These topics describe how selection interacts with other features or how copy behavior may be limited depending on viewer configuration or PDF security settings.
 
-- [Blazor PDF Viewer overview](../overview) — general introduction to the Blazor PDF Viewer component.
+- [Blazor PDF Viewer overview](../overview)
 - [Toggle text selection](./enable-text-selection)
 - [Text selection API and events](./text-selection-api-events)
