@@ -19,7 +19,7 @@ This section explains how to include the DOCX Editor component in your ASP.NET C
 
 * [System requirements for ASP.NET Core controls](https://ej2.syncfusion.com/aspnetcore/documentation/system-requirements)
 * Browser compatibility: Chrome (latest), Firefox (latest), Safari (latest), Edge (latest)
-* [Syncfusion license registration](https://help.syncfusion.com/document-processing/licensing/how-to-register) (required to use DOCX Editor in production; evaluation mode is available for development)
+* [Syncfusion license registration](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application) (required to use DOCX Editor in production; evaluation mode is available for development)
 
 ### Create ASP.NET Core web application with Razor pages
 
@@ -55,7 +55,7 @@ After installing the package, verify it was added successfully by checking the `
 N> This package includes dependencies such as [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/) for JSON serialization and [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing/) for license validation.
 
 **Configure Service URL (Optional)**
-The DOCX Editor requires backend services for advanced features (spell checking, collaborative editing, importing from URL). The default demo service is available at `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/`. 
+The DOCX Editor requires back end services for advanced features (spell checking, collaborative editing, importing from URL). The default demo service is available at `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/`. 
 
 For production deployments, [host your own service](./how-to-host-the-spell-check-service) to avoid latency and ensure data privacy. Configure the service URL in your component:
 
@@ -136,27 +136,6 @@ Add the DOCX Editor component in `~/Pages/Index.cshtml` page.
 {% endhighlight %}
 {% endtabs %}
 
-**What is the blank editor?**
-When the component first loads, it displays a blank document ready for editing. This is the default state. To load an existing Word document (.docx) from a file or URL, refer to the [opening a document](./import) documentation for implementation examples using the `DocumentEditor.open()` method.
-
-**Component Properties:**
-* `height` — Sets the height of the editor container. Default: `"620px"`. You can specify any CSS-valid value (px, %, em, etc.)
-* `width` — Sets the width of the editor container. Default: `"100%"`
-* `id` — Unique identifier for the component used in server-side code-behind and JavaScript interactions
-* `enable-toolbar` — Boolean property that shows/hides the toolbar. Default: `true`
-* `enable-spell-check` — Boolean property that enables spell checking. Default: `false`
-* `show-properties-pane` — Boolean property that displays the properties panel. Default: `false`
-
-**Example with additional properties:**
-```html
-<ejs-documenteditorcontainer id="container" 
-    height="620px" 
-    width="100%" 
-    enable-toolbar="true"
-    show-properties-pane="false">
-</ejs-documenteditorcontainer>
-```
-
 Refer to [API Reference - DocumentEditorContainer](./api-documenteditorcontainer) for the complete list of properties and methods.
 
 ### Run the application
@@ -167,7 +146,6 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-DOCX-Editor-Examples/tree/master/getting-started).
 
-### Troubleshooting Common Issues
 
 If you encounter issues when running the application, refer to these solutions:
 
@@ -181,7 +159,7 @@ If you encounter issues when running the application, refer to these solutions:
 - Clear browser cache and try again
 
 **Licensing errors at runtime**
-- Ensure you have [registered your Syncfusion license](https://help.syncfusion.com/document-processing/licensing/how-to-register) before deploying to production
+- Ensure you have [registered your Syncfusion license](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application) before deploying to production
 - For development, evaluation mode is available without registration
 
 **Component not rendering**
@@ -203,7 +181,7 @@ You now have a basic DOCX Editor running in your ASP.NET Core application. To ex
 
 Explore how to create, edit, and print Word documents using the ASP.NET Core DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/default#/tailwind3).
 
-N> Looking for the full ASP.NET Core DOCX Editor component overview, features, pricing, and documentation? Visit the [ASP.NET Core Docx Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) page.
+N> Looking for the full ASP.NET Core DOCX Editor component overview, features, pricing, and documentation? Visit the [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) page.
 ## See also
 
 - [Open a document](./import)

@@ -21,7 +21,7 @@ This section explains how to include the DOCX Editor component in your ASP.NET M
 * **.NET Framework versions**: 4.6.1 and above
 * **ASP.NET MVC versions**: MVC 5.0 and above
 * **Browser compatibility**: Chrome (latest), Firefox (latest), Safari (latest), Edge (latest)
-* [Syncfusion license registration](https://help.syncfusion.com/document-processing/licensing/how-to-register) (required for production; evaluation mode available for development)
+* [Syncfusion license registration](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application) (required for production; evaluation mode available for development)
 
 ### Create ASP.NET MVC application with HTML helper
 
@@ -70,7 +70,7 @@ Add the **Syncfusion.EJ2** namespace reference to the `<namespaces>` section in 
 
 ### Configure Service URL (Optional)
 
-The DOCX Editor requires backend services for advanced features (spell checking, collaborative editing, importing from URL). The default demo service is available at `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/`.
+The DOCX Editor requires back end services for advanced features (spell checking, collaborative editing, importing from URL). The default demo service is available at `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/`.
 
 For production deployments, [host your own service](./how-to-host-the-spell-check-service) to avoid latency and ensure data privacy. Configure the service URL in your component:
 
@@ -139,29 +139,7 @@ Add the DOCX Editor component in `~/Views/Home/Index.cshtml` page.
 {% endhighlight %}
 {% endtabs %}
 
-**HTML Helper Syntax:**
-The `DocumentEditorContainer` HTML helper uses a fluent API for configuration:
-* `DocumentEditorContainer("container")` — Creates the component with unique ID "container"
-* `.Height("590px")` — Sets the container height (default: "620px")
-* `.EnableToolbar(true)` — Shows/hides the toolbar (default: true)
-* `.ShowPropertiesPane(false)` — Shows/hides the properties panel (default: false)
-* `.Render()` — Renders the component to HTML
-
-**Example with additional properties:**
-```csharp
-@Html.EJS().DocumentEditorContainer("container")
-    .Height("620px")
-    .Width("100%")
-    .EnableToolbar(true)
-    .ShowPropertiesPane(false)
-    .Render()
-```
-
 Refer to [API Reference - DocumentEditorContainer](./api-documenteditorcontainer) for the complete list of available HTML helper methods.
-
-**What is the blank editor?**
-
-When the component first loads, it displays a blank document ready for editing. This is the default state. To load an existing Word document (.docx) from a file or URL, refer to the [opening a document](./import) documentation for implementation examples using the `DocumentEditor.open()` method.
 
 ### Run the application
 
@@ -171,7 +149,6 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-MVC-DOCX-Editor-Examples/tree/master/getting-started).
 
-### Troubleshooting Common Issues
 
 If you encounter issues when running the application, refer to these solutions:
 
@@ -181,7 +158,7 @@ If you encounter issues when running the application, refer to these solutions:
 - Ensure internet connectivity for CDN-hosted resources, or [use local NuGet packages](https://ej2.syncfusion.com/aspnetmvc/documentation/common/adding-script-references#using-npm-packages) instead
 
 **Licensing errors at runtime**
-- Ensure you have [registered your Syncfusion license](https://help.syncfusion.com/document-processing/licensing/how-to-register) before deploying to production
+- Ensure you have [registered your Syncfusion license](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application) before deploying to production
 - For development, evaluation mode is available without registration
 
 **Component not rendering**

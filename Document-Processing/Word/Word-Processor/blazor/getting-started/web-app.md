@@ -173,7 +173,7 @@ To configure the service URL in your component, set the `ServiceUrl` property on
 </SfDocumentEditorContainer>
 ```
 
-N> **Important**: The evaluation service URL has usage limits and is for development only. For production applications, you must [host your own Document Editor service backend](https://help.syncfusion.com/document-processing/word/word-processor/web-services/document-editor). Obtain a [Syncfusion license](https://www.syncfusion.com/products/licensing) to unlock production capabilities.
+N> **Important**: The evaluation service URL has usage limits and is for development only. For production applications, you must host your own Document Editor service backend. Obtain a [Syncfusion license](https://help.syncfusion.com/document-processing/licensing/) to unlock production capabilities.
 
 ### Add Themes and Script References
 

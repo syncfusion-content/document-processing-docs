@@ -70,8 +70,10 @@ Alternatively, create a WebAssembly application using the following terminal com
 
 {% highlight c# tabtitle="Blazor WASM App" %}
 
+```
 dotnet new blazorwasm -o BlazorApp
 cd BlazorApp
+```
 
 {% endhighlight %}
 
