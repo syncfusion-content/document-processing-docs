@@ -14,19 +14,19 @@ You can lock an annotation to prevent it from being edited. The annotation that 
 
 ## Lock all annotations in a document
 
-To lock all annotations in a document, set the [IsLocked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.BaseAnnotationSettings.html#Syncfusion_Maui_PdfViewer_BaseAnnotationSettings_IsLocked) property of the [AnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationSettings.html) to `true`. The following example explains how to lock all annotations in a document.
+To lock all annotations in a document, set the [IsLocked](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.BaseAnnotationSettings.html#Syncfusion_Maui_PdfViewer_BaseAnnotationSettings_IsLocked) property of the [AnnotationSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.AnnotationSettings.html) to `true`. The following example explains how to lock all annotations in a document.
 
 {% tabs %}
 {% highlight C# %}
 void LockAllAnnotations()
 {
-    // Lock all the annotations in a PDF document using the [AnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationSettings.html) property of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance.
+    // Lock all the annotations in a PDF document using the [AnnotationSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.AnnotationSettings.html) property of the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance.
     PdfViewer.AnnotationSettings.IsLocked = true;
 }
 {% endhighlight %}
 {% endtabs %}
 
-* Similarly, to unlock all the annotations, set the [IsLocked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.BaseAnnotationSettings.html#Syncfusion_Maui_PdfViewer_BaseAnnotationSettings_IsLocked) property value to `false`.
+* Similarly, to unlock all the annotations, set the [IsLocked](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.BaseAnnotationSettings.html#Syncfusion_Maui_PdfViewer_BaseAnnotationSettings_IsLocked) property value to `false`.
 
 N>Setting AnnotationSettings.IsLocked to true locks annotations from being edited or deleted, but it does not prevent users from adding new annotations.
 If an annotation read-only experience is required, hide the annotation buttons by using toolbar customization. When the annotation buttons are not available, users cannot add annotations through the built-in UI, and the PDF Viewer behaves like it is in annotation read-only mode.
@@ -34,13 +34,13 @@ For more details on customizing the built-in toolbar, refer to the toolbar [docu
 
 ## Lock specific annotation
 
-To lock a specific annotation in a document, access the annotation instance and set the [IsLocked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_IsLocked) property of the annotation to `true`. The following example explains how to lock the first annotation in a PDF document.
+To lock a specific annotation in a document, access the annotation instance and set the [IsLocked](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_IsLocked) property of the annotation to `true`. The following example explains how to lock the first annotation in a PDF document.
 
 {% tabs %}
 {% highlight C# %}
 void LockFirstAnnotation()
 {
-    // Obtain the annotation collection using the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance.
+    // Obtain the annotation collection using the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance.
     ReadOnlyObservableCollection<Annotation> annotations = PdfViewer.Annotations;
 
     // Obtain the first annotation in the annotation collection.
@@ -52,18 +52,18 @@ void LockFirstAnnotation()
 {% endhighlight %}
 {% endtabs %}
 
-* Similarly, to unlock the annotation, set the [IsLocked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_IsLocked) property value to `false`.
+* Similarly, to unlock the annotation, set the [IsLocked](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_IsLocked) property value to `false`.
 
 
 ## Lock specific annotation types
 
-You can also use the [AnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSettings) property to lock a specific annotation type in a document. The following example explains how to lock all the circle annotations in a document by accessing the circle annotation settings. Similarly, you can lock other types of annotations.
+You can also use the [AnnotationSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSettings) property to lock a specific annotation type in a document. The following example explains how to lock all the circle annotations in a document by accessing the circle annotation settings. Similarly, you can lock other types of annotations.
 
 {% tabs %}
 {% highlight C# %}
 void LockCircleAnnotations()
 {
-    // Obtain the default circle annotation settings using [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance.
+    // Obtain the default circle annotation settings using [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance.
     ShapeAnnotationSettings circleAnnotationSettings = PdfViewer.AnnotationSettings.Circle;
     
     // Lock all the circle annotations.
@@ -72,12 +72,12 @@ void LockCircleAnnotations()
 {% endhighlight %}
 {% endtabs %}
 
-* Similarly, to unlock the specific annotation types, set the [IsLocked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_IsLocked) property value to `false`.
+* Similarly, to unlock the specific annotation types, set the [IsLocked](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_IsLocked) property value to `false`.
 
 
 ## Lock the selected annotation
 
-To lock the selected annotation, access the selected annotation instance and set the [IsLocked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_IsLocked) property of the annotation to `true`. The selected annotation instance may be obtained from the [AnnotationSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSelected) event. The following example explains how to lock the selected annotation in a PDF document.
+To lock the selected annotation, access the selected annotation instance and set the [IsLocked](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_IsLocked) property of the annotation to `true`. The selected annotation instance may be obtained from the [AnnotationSelected](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSelected) event. The following example explains how to lock the selected annotation in a PDF document.
 
 {% tabs %}
 {% highlight C# %}
@@ -93,7 +93,7 @@ void LockSelectedAnnotation(Annotation selectedAnnotation)
 {% endhighlight %}
 {% endtabs %}
 
-* Similarly, to unlock the selected annotation, set the [IsLocked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_IsLocked) property value to `false`.
+* Similarly, to unlock the selected annotation, set the [IsLocked](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_IsLocked) property value to `false`.
 
 ## See Also
 - [Annotations Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-overview)
