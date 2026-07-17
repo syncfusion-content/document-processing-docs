@@ -1,34 +1,34 @@
 ---
 layout: post
 title: Getting started with TypeScript Spreadsheet control | Syncfusion
-description:  Checkout and learn about getting started with the Syncfusion TypeScript Spreadsheet control in the Spreadsheet Editor SDK and more details.
+description:  Check out and learn about getting started with the Syncfusion TypeScript Spreadsheet control in the Spreadsheet Editor SDK and more details.
 platform: document-processing
 control: Getting started 
 documentation: ug
 ---
 
-# Getting Started with TypeScript Spreadsheet control
+# Getting Started with the TypeScript Spreadsheet control
 
-This section explains how to create a simple TypeScript application and add the [TypeScript Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) control with the minimum required setup.
+This section explains how to create a TypeScript application and add the [TypeScript Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) with the minimum required configuration.
 
 ## Prerequisites
 
 To get started, ensure the following software is installed on your machine:
 
 - [Git](https://git-scm.com/downloads)
-- [Node.js (`v14.15.0` or later)](https://nodejs.org/en/)
+- [Node.js (`v22` or later)](https://nodejs.org/en/)
 - [Visual Studio Code](https://code.visualstudio.com/)
 
 ## Create a TypeScript application
 
-Create a simple TypeScript application using the Essential<sup style="font-size:70%">&reg;</sup> JS 2 [quickstart](https://github.com/SyncfusionExamples/ej2-quickstart-webpack-) seed repository.
+Create a simple TypeScript application using the Essential<sup style="font-size:70%">&reg;</sup> JS 2 [quickstart](https://github.com/SyncfusionExamples/ej2-quickstart-webpack) seed repository.
 
 > This application is integrated with the `webpack.config.js` configuration and uses the latest version of the [webpack-cli](https://webpack.js.org/api/cli/#commands). For more information about webpack and its features, refer to the [webpack documentation](https://webpack.js.org/guides/getting-started/).
 
 **Step 1:** Open the command prompt from the required directory and clone the quickstart project from GitHub.
 
 ```bash
-git clone https://github.com/SyncfusionExamples/ej2-quickstart-webpack- ej2-quickstart
+git clone https://github.com/SyncfusionExamples/ej2-quickstart-webpack ej2-quickstart
 ```
 
 **Step 2:** Navigate to the `ej2-quickstart` folder.
@@ -38,7 +38,7 @@ cd ej2-quickstart
 ```
 **Step 3:** By default, the `ej2‑quickstart` repository is preconfigured with the [@syncfusion/ej2](https://www.npmjs.com/package/@syncfusion/ej2) package in `~/package.json`. This package installs all Syncfusion Essential JS 2 components packages, including the Spreadsheet and other EJ2 controls.
  
-To install only the Spreadsheet component, replace the dependency with [@syncfusion/ej2-spreadsheet](https://www.npmjs.com/package/@syncfusion/ej2-spreadsheet), as shown below:
+To install only the Spreadsheet control, replace the existing dependency with [@syncfusion/ej2-spreadsheet](https://www.npmjs.com/package/@syncfusion/ej2), as shown below:
 
 ```bash
 "dependencies": {
@@ -52,9 +52,19 @@ To install only the Spreadsheet component, replace the dependency with [@syncfus
 npm install
 ```
 
+## Register Syncfusion License Key
+
+Register your Syncfusion license key before using Syncfusion components.
+
+```js
+import { registerLicense } from '@syncfusion/ej2-base';
+registerLicense('YOUR LICENSE KEY');
+```
+For more information about generating and registering a license key, refer to the [JavaScript ES6 and TypeScript license registration documentation](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#javascript-es6--typescript).
+
 ## Add CSS references
 
-Add the following Spreadsheet and dependent component style references.
+Add the following styles for the Spreadsheet control and its dependent controls.
 
 {% tabs %}
 {% highlight css tabtitle="~/src/styles/styles.css" %}
@@ -73,11 +83,11 @@ Add the following Spreadsheet and dependent component style references.
 {% endhighlight %}
 {% endtabs %}
 
-> Refer to the [Themes topic](https://ej2.syncfusion.com/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a TypeScript project.
+> The example uses the Tailwind 3 theme. To use a different built-in theme, replace the `tailwind3.css` references with the corresponding theme stylesheets. Refer to the https://ej2.syncfusion.com/documentation/appearance/theme for the available themes and the different ways to include theme styles in a TypeScript application.
 
 ## Add the Syncfusion® Spreadsheet control to the application
 
-Add a container element for the Spreadsheet control in the `index.html` file and then initialize the control in the `app.ts` file.
+Add a container element for the Spreadsheet control to the `index.html` file, and then initialize the control in the `app.ts` file.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -110,15 +120,15 @@ const spreadsheet: Spreadsheet = new Spreadsheet({
     saveUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'
 });
 
-// Render initialized Spreadsheet
+// Render the Spreadsheet control.
 spreadsheet.appendTo('#element');
 
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** The [openUrl](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#openurl) and [saveUrl](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#saveurl) properties are used to connect the Spreadsheet control to a server-side service for Excel import and export operations. For development and production use, we recommend configuring your own local or hosted service instead of relying on demo endpoints. For more information, refer to the [`link`](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services).
+> **Note:** The [openUrl](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#openurl) and [saveUrl](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#saveurl) properties are used to connect the Spreadsheet control to a server-side service for Excel import and export operations. For development and production use, we recommend configuring your own local or hosted service instead of relying on demo endpoints. For more information, refer to [`link`](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services).
 
-## Run the application
+## Run the Application
 
 The `quickstart` project is configured to compile and run the application in the browser. Use the following command to run the application.
 
@@ -130,17 +140,32 @@ npm start
 {% endhighlight %}
 {% endtabs %}
 
-The image below shows how the spreadsheet is rendered in the browser:
+After the development server starts, open the local URL displayed in the terminal. Verify that the Spreadsheet control is rendered with the ribbon, formula bar, sheets as shown below.
 
 ![Rendered spreadsheet in browser](./images/spreadsheet.png)
 
-You can also explore the Spreadsheet interactively using the live sample below.
-          
+You can also explore the Spreadsheet interactively using the live sample below. The sample demonstrates the initialized Spreadsheet control and allows you to create, edit, and analyze data using formulas and formatting, including support for large datasets.
+
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/spreadsheet/getting-started-cs1" %}
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-javascript-spreadsheet-control). Looking for the full JavaScript Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) page.
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-javascript-spreadsheet-control). 
+
+For information about features, pricing, and related resources, visit the [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) page.
+
+### Troubleshooting
+
+Common setup and runtime issues are listed below with their causes and resolutions.
+
+| Issue | Likely cause | Resolution |
+|---|---|---|
+| **The application does not start when running `npm start`.** | The dependencies were not installed successfully, the Node.js version is unsupported, or the webpack configuration contains an error. | Verify that a supported version of Node.js is installed. Run `npm install` to install the dependencies, and then run `npm start` again. If the issue persists, review the error displayed in the terminal for missing packages or webpack configuration errors. |
+| **`Cannot find module '@syncfusion/ej2-spreadsheet'`.** | The Spreadsheet package is not installed or is missing from the `dependencies` section of the `package.json` file. | Verify that `@syncfusion/ej2-spreadsheet` is included in the `dependencies` section of `package.json`. Run `npm install` and restart the application. |
+| **The Spreadsheet control is not displayed.** | The Spreadsheet container is missing, or its ID does not match the selector passed to the `appendTo` method. | Ensure that `index.html` contains an element with the ID `element` and that `app.ts` uses `spreadsheet.appendTo('#element')`. |
+| **CSS is not applied or the Spreadsheet control appears unstyled.** | The required theme stylesheets were not imported, or the stylesheet paths are incorrect. | Verify that the required Syncfusion CSS files are imported in `src/styles/styles.css` and that the paths resolve to the installed packages in the `node_modules` directory. Restart the development server after updating the CSS references. |
+| **A license warning or license banner is displayed at runtime.** | The Syncfusion license key was not registered or was registered after the Spreadsheet control was initialized. | Register the license key before initializing any Syncfusion component. Refer to the [JavaScript ES6 and TypeScript license registration documentation](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#javascript-es6--typescript). |
+| **Open or Save operations fail with network or CORS errors.** | The services configured using the `openUrl` or `saveUrl` properties are unavailable, incorrectly configured, or blocked by the browser's CORS policy. | Verify that the service endpoints are reachable and that CORS is enabled. For development and production environments, configure and host your own Spreadsheet open and save service instead of relying on the demonstration endpoints. |
 
 ## See also
 
-* [Data Binding](./data-binding)
-* [Open and Save](./open-save)
+* [Data Binding](./data-binding) - Learn how to bind local and remote data sources to the Spreadsheet control.
+* [Open and Save](./open-save) - Learn how to open and save Excel files using the Spreadsheet control.
