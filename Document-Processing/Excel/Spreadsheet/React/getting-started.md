@@ -41,7 +41,7 @@ cd spreadsheet-app
 Install the [Syncfusion® React Spreadsheet](https://www.npmjs.com/package/@syncfusion/ej2-react-spreadsheet) package from npm using the following command:
 
 ```
-npm install @syncfusion/ej2-react-spreadsheet --save
+npm install @syncfusion/ej2-react-spreadsheet
 ```
 
 ## Add CSS references
