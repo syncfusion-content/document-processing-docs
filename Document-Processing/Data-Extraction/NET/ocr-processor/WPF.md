@@ -38,14 +38,14 @@ public partial class App : Application
 Step 1: Create a new WPF application project. 
 ![WPF application creation](OCR-Images/OCR-WPF-app-creation.png)
 
-In the project configuration window, select your target framework (.NET Framework 4.7.2 or later), name your project, and select **Create**.
+In the project configuration window, select your target framework (.NET Framework 4.6.2 or later), name your project, and select **Create**.
 ![WPF project configuration window](OCR-Images/OCR-WPF-project-configuration.png)
 
 Step 2: Install the [Syncfusion.Pdf.OCR.Wpf](https://www.nuget.org/packages/Syncfusion.Pdf.OCR.Wpf) NuGet package into your WPF application from [nuget.org](https://www.nuget.org/).
 ![OCR NuGet package installation](OCR-Images/OCR-WPF-NuGet-package.png)
 
 **Version Compatibility:**
-- Syncfusion.Pdf.OCR.Wpf supports .NET Framework 4.7.2 and later, as well as .NET Core 3.1 and above.
+- Syncfusion.Pdf.OCR.WPF supports WPF applications targeting .NET Framework 4.6.2 and later, as well as .NET 8.0 for Windows and later versions
 
 **Supported Inputs:**
 - Single-page and multi-page PDF documents
