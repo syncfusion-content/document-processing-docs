@@ -1,32 +1,36 @@
 ---
 layout: post
-title: Preview the Generated PDF Document | Syncfusion
-description: Learn how to display a runtime-generated PDF in the Syncfusion Blazor SfPdfViewer using the Created event.
+title: Create a PDF document in the SfPdfViewer Created event | Syncfusion
+description: Learn how to create a PDF document in the Created event of the Blazor SfPdfViewer component and load it into the viewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Preview the newly created PDF file
+# Create a PDF in the Created event of SfPdfViewer
 
-Use the Syncfusion&reg; Blazor PDF Viewer to display a PDF that is generated at runtime when the viewer initializes using the [**Created**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_Created) event. The sample below targets the SfPdfViewer component and binds the generated document to the [**DocumentPath**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SfPdfViewer2.html#Syncfusion_Blazor_SfPdfViewer_SfPdfViewer2_DocumentPath) property via a data URI.
-
-The following example demonstrates generating a PDF in memory and rendering it as soon as the viewer is created.
+A PDF document can be created during the SfPdfViewer [`Created`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_Created) event and loaded in the viewer by converting it to a Base64 data URL and assigning it to the [`DocumentPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SfPdfViewer2.html#Syncfusion_Blazor_SfPdfViewer_SfPdfViewer2_DocumentPath) property.
 
 ```cshtml
+@using Syncfusion.Blazor.SfPdfViewer;
+@using Syncfusion.Pdf;
+@using Syncfusion.Pdf.Interactive;
+@using System.IO;
+@using Syncfusion.Drawing;
 
-<SfPdfViewer2 ID="pdfviewer" 
-              @ref="@PdfViewer" 
-              DocumentPath="@documentPath"
-              Height="100%"
-              Width="100%">
+<SfPdfViewer2 @ref="PdfViewer" DocumentPath="@DocumentPath" Height="100%" Width="100%">
     <PdfViewerEvents Created="created"></PdfViewerEvents>
 </SfPdfViewer2>
 
+
 @code{
 
-    public SfPdfViewer2 PdfViewer { get; set; }
-    public string documentPath { get; set; }
+    private SfPdfViewer2 PdfViewer { get; set; }
+
+    //Sets the PDF document path after the viewer is created.
+    private string DocumentPath { get; set; }
+
+    //This event triggers when the SfPdfViewer is created.
     private void created()
     {
         var document = new PdfDocument();
@@ -44,12 +48,12 @@ The following example demonstrates generating a PDF in memory and rendering it a
         document.Save(stream);
         bytes = stream.ToArray();
         string base64string = Convert.ToBase64String(bytes);
-        documentPath = "data:application/pdf;base64," + base64string;
-        //close the document
+        //Sets the document path as base64 string.
+        DocumentPath = "data:application/pdf;base64," + base64string;
+        //Close the document
         document.Close(true);
     }
 }
-
 ```
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Create%20PDF%20using%20base%20library)
@@ -57,7 +61,6 @@ The following example demonstrates generating a PDF in memory and rendering it a
 ## See also
 
 * [How to create SfPdfViewer Component in a Splitter Component](./how-to-create-sfpdfviewer-in-a-splitter-component)
-
 * [How to create a SfPdfViewer within a popup window in Blazor](./how-to-create-sfpdfviewer-in-a-popup-window)
-
 * [How to get PDF document's data](./how-to-get-data-from-sfpdfviewer)
+* [Events of SfPdfViewer Component](../events)

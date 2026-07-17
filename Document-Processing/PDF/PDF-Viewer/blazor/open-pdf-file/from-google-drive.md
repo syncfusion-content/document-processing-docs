@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open PDF files from Google Drive in Blazor SfPdfViewer | Syncfusion
-description: Learn how to open PDF files from Google Drive in the Syncfusion Blazor SfPdfViewer component, including setup, and a working example.
+description: Learn how to open PDF files from Google Drive in the Blazor SfPdfViewer component, including setup, and a working example.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -11,15 +11,15 @@ documentation: ug
 
 This article shows how to load a PDF stored in Google Drive into the Blazor `SfPdfViewer` component.
 
-## Step 1 — Enable the Google Drive API
+## Step 1: Enable the Google Drive API
 
 Create a project in Google Developers Console and enable the Google Drive API. Obtain the necessary credentials to access the API. For detailed guidance, see the [Google Drive documentation](https://developers.google.com/drive/api/guides/enable-sdk).
 
-## Step 2 — Create a minimal SfPdfViewer sample
+## Step 2: Create a minimal SfPdfViewer sample
 
-Follow the [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app) guide to create a basic Blazor application with the SfPdfViewer component.
+Follow the [getting started](../getting-started/web-app) guide to create a basic Blazor application with the SfPdfViewer component.
 
-## Step 3 — Add required namespaces
+## Step 3: Add required namespaces
 
 1. Import the required namespaces at the top of the file:
 
@@ -32,9 +32,9 @@ Follow the [getting started](https://help.syncfusion.com/document-processing/pdf
 @using Syncfusion.Blazor.SfPdfViewer;
 ```
 
-## Step 4 — Example: authorize, download, and load
+## Step 4: Authorize, download, and load
 
-The example below authenticates with OAuth 2.0, lists PDF files in a folder, downloads the selected file into memory, converts it to a Base64 data URI, and assigns it to `DocumentPath`.
+The example below authenticates with OAuth 2.0, lists PDF files in the configured folder, downloads the file whose name matches `FileName` into memory, converts it to a Base64 data URI, and assigns it to `DocumentPath`.
 
 ```csharp
 @page "/"
@@ -48,7 +48,7 @@ The example below authenticates with OAuth 2.0, lists PDF files in a folder, dow
     private string DocumentPath { get; set; }
 
     private readonly string FolderId = "Your Google Drive Folder ID";
-    private readonly string CredentialPath = "Your Path to the OAuth 2.0 Client IDs json file";
+    private readonly string CredentialPath = "Your Path to the OAuth 2.0 Client IDs JSON file";
     private readonly string ApplicationName = "Your Application name";
     private readonly string FileName = "File Name to be loaded into Syncfusion SfPdfViewer";
 
@@ -57,16 +57,14 @@ The example below authenticates with OAuth 2.0, lists PDF files in a folder, dow
     protected override async Task OnInitializedAsync()
     {
         UserCredential credential;
-        using (var stream1 = new FileStream(CredentialPath, FileMode.Open, FileAccess.Read))
-        {
-            string credPath = "token.json";
-            credential = await GoogleWebAuthorizationBroker.AuthorizeAsync(
-                GoogleClientSecrets.Load(stream1).Secrets,
-                Scopes,
-                "user",
-                CancellationToken.None,
-                new FileDataStore(credPath, true));
-        }
+        using var stream1 = new FileStream(CredentialPath, FileMode.Open, FileAccess.Read);
+        string credPath = "token.json";
+        credential = await GoogleWebAuthorizationBroker.AuthorizeAsync(
+            GoogleClientSecrets.Load(stream1).Secrets,
+            Scopes,
+            "user",
+            CancellationToken.None,
+            new FileDataStore(credPath, true));
 
         var service = new DriveService(new BaseClientService.Initializer()
         {
@@ -101,11 +99,10 @@ The example below authenticates with OAuth 2.0, lists PDF files in a folder, dow
 
 ```
 
-N> Replace the placeholders with real values: use the actual Google Drive folder ID for **Your Google Drive Folder ID**, the application display name for **Your Application name**, the exact PDF file name for **File Name to be loaded into Syncfusion SfPdfViewer**, and the full path to the OAuth 2.0 Client IDs JSON for **Your Path to the OAuth 2.0 Client IDs JSON file**.
-
-N> The **FolderId** is the unique identifier of the Drive folder. For example, for `https://drive.google.com/drive/folders/abc123xyz456`, the folder ID is `abc123xyz456`.
-
-N> Install the **Google.Apis.Drive.v3** NuGet package in the application to use the shown code.
+N>
+* Replace the placeholders in the code with real values: provide the actual Google Drive folder ID, the application display name, the exact PDF file name to load, and the full path to the OAuth 2.0 Client IDs JSON file.
+* The **FolderId** is the unique identifier of the Drive folder. For example, for `https://drive.google.com/drive/folders/abc123xyz456`, the folder ID is `abc123xyz456`.
+* Install the **Google.Apis.Drive.v3** NuGet package in the application to use the shown code.
 
 [View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Open%20and%20Save%20from%20Google%20Drive)
 

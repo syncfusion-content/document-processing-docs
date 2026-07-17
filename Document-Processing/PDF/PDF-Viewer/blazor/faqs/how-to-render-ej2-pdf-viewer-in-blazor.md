@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Render JavaScript PDF Viewer in Blazor SfPdfViewer | Syncfusion
-description: Learn how to render the EJ2 JavaScript PDF Viewer inside the Syncfusion Blazor SfPdfViewer using JavaScript interop, including setup and usage notes.
+title: Render the EJ2 JavaScript PDF Viewer in Blazor SfPdfViewer | Syncfusion
+description: Learn how to render the EJ2 JavaScript PDF Viewer inside a Blazor page using JavaScript interop, including setup and usage notes.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Render JS PDF Viewer inside Blazor SfPdfViewer Component
 
-The Syncfusion&reg; Blazor SfPdfViewer component supports rendering the EJ2 JavaScript PDF Viewer inside a Blazor page using JavaScript interop.
+The Blazor SfPdfViewer component supports rendering the EJ2 JavaScript PDF Viewer inside a Blazor page using JavaScript interop.
 
 The following steps show how to embed the JavaScript PDF Viewer in a Blazor component.
 
-N> Ensure that the EJ2 PDF Viewer scripts and styles are referenced in the application, and that the serviceUrl points to a reachable EJ2 PDF Viewer web service endpoint.
+N> Ensure that the EJ2 PDF Viewer scripts and styles are referenced in the application. The `serviceUrl` must point to a reachable EJ2 PDF Viewer web service endpoint.
 
 **Step 1:** Add a JavaScript file to the application and reference it in the head element.
 
@@ -30,11 +30,7 @@ N> Ensure that the EJ2 PDF Viewer scripts and styles are referenced in the appli
 ```javascript
 
 window.renderJsPdfViewer = (id) => {
-    // Render the PDF viewer control
-    var viewer = new ej.pdfviewer.PdfViewer({
-        documentPath: "PDF_Succinctly.pdf",
-        serviceUrl: 'https://ej2services.syncfusion.com/production/web-services/api/pdfviewer'
-    });
+    // Inject the required modules before creating the PdfViewer instance.
     ej.pdfviewer.PdfViewer.Inject(
         ej.pdfviewer.Toolbar, 
         ej.pdfviewer.Magnification,
@@ -48,6 +44,12 @@ window.renderJsPdfViewer = (id) => {
         ej.pdfviewer.Annotation,
         ej.pdfviewer.FormFields, 
         ej.pdfviewer.FormDesigner);
+
+    // Render the PDF viewer control. The `id` argument must match the id of the target container element.
+    var viewer = new ej.pdfviewer.PdfViewer({
+        documentPath: "PDF_Succinctly.pdf",
+        serviceUrl: 'https://ej2services.syncfusion.com/production/web-services/api/pdfviewer'
+    });
     viewer.appendTo('#' + id);
 };
 
@@ -73,6 +75,11 @@ window.renderJsPdfViewer = (id) => {
 
 ```
 
-N> The PDF Viewer is rendered as a JavaScript component. C# APIs on SfPdfViewer are not available in this approach; use JavaScript interop to call the PDF Viewer APIs.
+N> The PDF Viewer is rendered as a JavaScript component. Only the JavaScript PDF Viewer APIs are accessible; use JS interop to invoke them.
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Render%20JS%20PDF%20Viewer%20component%20in%20Blazor)
+
+## See also
+
+* [Blazor PDF Viewer overview](../overview)
+* [EJ2 Java Script PDF Viewer overview](../../javascript-es6/overview)

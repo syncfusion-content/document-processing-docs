@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Remove pages using Organize Pages in Blazor PDF Viewer | Syncfusion
-description: How to remove one or more pages from a PDF using the Organize Pages view in the Syncfusion Blazor PDF Viewer.
+description: How to remove one or more pages from a PDF using the Organize Pages view in the Blazor PDF Viewer.
 platform: document-processing
-control: PDF Viewer
+control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Remove pages using the Organize Pages tool in Blazor
+# Remove pages using the Organize Pages tool in Blazor PDF Viewer
 
 ## Overview
 
@@ -25,7 +25,7 @@ This guide shows how to delete single or multiple pages from a PDF using the **O
 
 1. Open the Organize Pages view
 
-   - Click the **Organize Pages** button in the viewer navigation toolbar to open the Organize Pages dialog.
+   - Click the **Organize Pages** button in the viewer toolbar to open the Organize Pages dialog.
 
 2. Select pages to remove
 
@@ -39,33 +39,24 @@ This guide shows how to delete single or multiple pages from a PDF using the **O
 
    ![Delete selected pages using the Organize Pages delete control](./images/organize-ui-delete.png)
 
-4. Multi-page deletion
-
-   - When multiple thumbnails are selected, the Delete action removes all selected pages at once.
-
-5. Undo or redo deletion
+4. Undo or redo deletion
 
     - Use **Undo** (Ctrl+Z) to revert the last deletion.
 
-    - Use **Redo** (Ctrl+Y) to revert the last undone deletion.
+    - Use **Redo** (Ctrl+Y) to reapply the last undone deletion.
 
     ![Redo Organize Pages toolbar](./images/organize-ui-redo.png)
 
-6. Save the PDF after deletion
+5. Save the PDF after deletion
 
    - Click **Save** to apply changes to the currently loaded document, or **Save As** / **Download** to download a copy with the removed pages permanently applied.
-
-## Expected result
-
-- Selected pages are removed from the document immediately in the Organize Pages dialog.
-- After clicking **Save** or **Save As**, the resulting PDF reflects the deletions.
 
 ## Enable or disable Remove Pages button
 
 To enable or disable the **Remove Pages** button in the Organize Pages toolbar, update the `PageOrganizerSettings`. The following code snippet demonstrates how to enable or disable the delete functionality:
 
 {% tabs %}
-{% highlight razor tabtitle="Standalone" %}
+{% highlight razor %}
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
@@ -81,11 +72,11 @@ To enable or disable the **Remove Pages** button in the Organize Pages toolbar, 
 You can delete pages programmatically using the `DeletePagesAsync` method. This method accepts an array of 0-based page indices to remove from the document.
 
 {% tabs %}
-{% highlight razor tabtitle="Standalone" %}
+{% highlight razor %}
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
 
-<SfButton OnClick="DeletePageAsync">Delete Pages</SfButton>
+<SfButton OnClick="DeletePagesAsync">Delete Pages</SfButton>
 
 <SfPdfViewer2 @ref="viewer"
               DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
@@ -95,9 +86,9 @@ You can delete pages programmatically using the `DeletePagesAsync` method. This 
 </SfPdfViewer2>
 
 @code {
-    private SfPdfViewer2 viewer;
+    private SfPdfViewer2? viewer;
 
-    private async Task DeletePageAsync()
+    private async Task DeletePagesAsync()
     {
         // Delete pages at indices 5 and 6 (0-based indexing)
         int[] pagesToDelete = { 5, 6 };
@@ -115,7 +106,8 @@ You can delete pages programmatically using the `DeletePagesAsync` method. This 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Page%20Organizer/Organize-API-Support/Components/Pages/Home.razor)
 
 
-## Related topics
+## See also
 
 - [Organize pages toolbar customization](./toolbar)
+- [Programmatic support for Organize Pages](./programmatic-support)
 - [Organize pages event reference](./events)
