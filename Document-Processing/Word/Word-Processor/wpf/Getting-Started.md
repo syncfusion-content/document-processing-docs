@@ -433,7 +433,9 @@ To add the controls and apply a theme manually in XAML, follow these steps:
 
 **Add SfRichTextBoxAdv and SfRichTextRibbon in XAML**
 
-The XAML snippet below assumes both `SfRichTextBoxAdv` and `SfRichTextRibbon` are already declared in `MainWindow.xaml`, with the `SfRichTextBoxAdv` set as the ribbon's `DataContext`. For the full declaration, see the **Add SfRichTextRibbon to the application → Via XAML** section of this page.
+The XAML snippet below assumes both `SfRichTextBoxAdv` and `SfRichTextRibbon` are already declared in `MainWindow.xaml`, with the `SfRichTextBoxAdv` set as the ribbon's `DataContext`. 
+
+For the full declaration, see the [**Add SfRichTextRibbon to the application → Via XAML**](https://help.syncfusion.com/document-processing/word/word-processor/wpf/getting-started?tabcontent=via-xaml#add-sfrichtextribbon-to-the-application) section of this page.
 
 **Apply Theme in XAML**
 
