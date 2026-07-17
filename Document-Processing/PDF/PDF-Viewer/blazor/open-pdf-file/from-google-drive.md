@@ -11,15 +11,15 @@ documentation: ug
 
 This article shows how to load a PDF stored in Google Drive into the Blazor `SfPdfViewer` component.
 
-## Step 1 — Enable the Google Drive API
+## Step 1: Enable the Google Drive API
 
 Create a project in Google Developers Console and enable the Google Drive API. Obtain the necessary credentials to access the API. For detailed guidance, see the [Google Drive documentation](https://developers.google.com/drive/api/guides/enable-sdk).
 
-## Step 2 — Create a minimal SfPdfViewer sample
+## Step 2: Create a minimal SfPdfViewer sample
 
 Follow the [getting started](../getting-started/web-app) guide to create a basic Blazor application with the SfPdfViewer component.
 
-## Step 3 — Add required namespaces
+## Step 3: Add required namespaces
 
 1. Import the required namespaces at the top of the file:
 
@@ -32,7 +32,7 @@ Follow the [getting started](../getting-started/web-app) guide to create a basic
 @using Syncfusion.Blazor.SfPdfViewer;
 ```
 
-## Step 4 — Authorize, download, and load
+## Step 4: Authorize, download, and load
 
 The example below authenticates with OAuth 2.0, lists PDF files in the configured folder, downloads the file whose name matches `FileName` into memory, converts it to a Base64 data URI, and assigns it to `DocumentPath`.
 
