@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Blazor Hybrid App
 
-This section explains how to create and run a .NET MAUI Blazor Hybrid application using the [Blazor Spreadsheet Editor](https://www.syncfusion.com/blazor-components/blazor-spreadsheet) component.
+This section explains how to create and run a .NET MAUI Blazor Hybrid application using the [Syncfusion® Blazor Spreadsheet](https://www.syncfusion.com/blazor-components/blazor-spreadsheet) component.
 
 ## Prerequisites
 
@@ -19,7 +19,7 @@ To use the .NET MAUI project templates, install the Mobile development with .NET
 
 Create a **Blazor MAUI App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui?view=aspnetcore-8.0).
 
-## Install Blazor Spreadsheet NuGet Packages
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Spreadsheet NuGet Packages
 
 To add **Syncfusion Blazor Spreadsheet** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install:
 
@@ -50,9 +50,9 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 {% endhighlight %}
 {% endtabs %}
 
-## Register Blazor Service
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
-Register the Blazor Service in the **~/MauiProgram.cs** file.
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/MauiProgram.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="MauiProgram.cs" %}
@@ -96,9 +96,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to explore supported ways (such as static assets, CDN, and CRG) to apply themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Blazor Spreadsheet component
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Spreadsheet component
 
-Add the Blazor Spreadsheet component in any Razor file. In this example, the Spreadsheet component is added to the **~/Home.razor** page under the **~/Components/Pages** folder.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Spreadsheet component in any Razor file. In this example, the Spreadsheet component is added to the **~/Home.razor** page under the **~/Components/Pages** folder.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -135,8 +135,7 @@ N> If any errors occur while using the Android Emulator, see [Troubleshooting An
 
 To learn how to open workbooks, bind data, or save files in the Spreadsheet component, see [Open and Save](open-and-save).
 
-N> [View Sample In GitHub.](https://github.com/SyncfusionExamples/syncfusion-maui-blazor-spreadsheet-integration). Looking for the full Blazor Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) page
-
+N> [View Sample In GitHub.](https://github.com/SyncfusionExamples/syncfusion-maui-blazor-spreadsheet-integration).
 
 ## See Also
 
