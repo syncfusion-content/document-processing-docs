@@ -59,7 +59,7 @@ To find the latest version, visit [Syncfusion CDN](https://cdn.syncfusion.com/ej
 To create a basic DOCX Editor, you must include:
 - `ej2-base.min.js` and `ej2-base.css` (required foundation)
 - `ej2-documenteditor.min.js` and `ej2-documenteditor.css` (core component)
-- **Optional but recommended**: All dependencies listed in the example below support full toolbar functionality (buttons, dropdowns, inputs, popups, etc.). Include them for a complete editor experience
+- **Optional but recommended**: All dependencies listed in the example below support full toolbar functionality (buttons, dropdowns, inputs, popups, etc.). Include them for a complete editor experience.
 
 Add the following CDN references inside the `<head>` section of your `index.html` file, as shown below:
 
