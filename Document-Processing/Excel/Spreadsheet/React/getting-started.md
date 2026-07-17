@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Getting Started with React Spreadsheet component
+# Getting Started with React Spreadsheet Component
 
 This section explains how to create a simple React application and add the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component with the minimum required setup.
 
