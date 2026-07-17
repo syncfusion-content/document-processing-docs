@@ -122,13 +122,9 @@ Import the `Material` theme into the **src/app/globals.css** file and remove the
 {% endhighlight %}
 {% endtabs %}
 
+Syncfusion also ships additional built-in themes. To use a different theme, replace `tailwind3.css` with the theme of your choice (for example, `bootstrap5.css`, `fluent2.css`, etc,..) in all `@import` statements.
+
 > To know more about built-in themes and CSS reference for individual components, refer to the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) section.
-
-## Register the Syncfusion License Key
-
-Syncfusion licensing is mandatory for production use. Register a valid Syncfusion license key in your application's entry point **before** rendering the `SpreadsheetComponent`.
-
-For step-by-step registration guidance, see [Licensing](../../../../Licensing/overview.md).
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
@@ -468,6 +464,5 @@ Common setup and runtime issues are listed below with their cause and a resoluti
 | **License warning or toolbar shows a license banner at runtime.** | Syncfusion license key not registered, or registered after the component renders. | Register the license key in the application entry point **before** rendering any Syncfusion component. See [Register the Syncfusion License Key](../../register-the-syncfusion-license-key) and [Licensing FAQ](../../../../Licensing/licensing-faq/). |
 | **Open/Save actions fail with network or CORS errors.** | The `openUrl` / `saveUrl` endpoints are unreachable from the browser, or in production the Syncfusion demo services are rate-limited / blocked. | Host your own Spreadsheet open/save web service and ensure CORS is enabled. Refer to the [Web Services](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/web-services/webservice-overview) section. |
 
-For additional questions, refer to the [FAQ](../../../../Frequently-asked-question.md) or contact [Syncfusion support](https://www.syncfusion.com/support).
 
 N> Looking for the full React Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) page.
