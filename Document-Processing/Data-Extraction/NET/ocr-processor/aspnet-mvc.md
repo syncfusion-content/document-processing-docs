@@ -15,7 +15,7 @@ The [.NET OCR library](https://www.syncfusion.com/document-sdk/net-pdf-library/o
 
 **Version Compatibility**
 
-- Syncfusion.Pdf.OCR.AspNet.Mvc5 supports Web applications targeting .NET Framework 4.6.2 and later, as well as .NET 8.0 for Windows and later versions
+- Syncfusion.Pdf.OCR.AspNet.Mvc5 supports Web applications targeting .NET Framework 4.6.2 and later.
 
 **Supported Inputs**
 
