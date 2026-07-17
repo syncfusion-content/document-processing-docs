@@ -20,7 +20,7 @@ This guide explains how to integrate the [JavaScript PDF Library](https://www.sy
 Before you begin, make sure you have the following installed:
 
 - Visual Studio 2019 or later (Visual Studio 2022 recommended) with the **ASP.NET and web development** workload.
-- .NET SDK 8.0 (LTS) or later.
+- .NET Framwork 4.6.2 or later.
 - An active internet connection (the sample loads the JavaScript PDF Library from the Syncfusion CDN).
 - A supported browser such as the latest versions of Microsoft Edge, Google Chrome, or Mozilla Firefox.
 
@@ -30,15 +30,15 @@ N> This guide uses the CDN distribution of the JavaScript PDF Library. No client
 
 Step 1: Start Visual Studio and select **Create a new project**.
 
-Step 2: In the **Create a new project** dialog, select **ASP.NET MVC Web App (Model-View-Controller)**.
+Step 2: In the **Create a new project** dialog, select **ASP.NET MVC Web Application project (.NET Framework)**.
 
 ![ASP.NET MVC PDF creation1](Getting_started_images/Asp-net-mvc-creation1.png)
 
-Step 3: In the **Configure your new project** dialog, enter the project name, choose the target framework (for example, **.NET 8.0 (Long-term support)**), and select **Next**.
+Step 3: In the **Configure your new project** dialog, enter the project name, choose the target framework (for example, **.NET Framework 4.7.2**).
 
 ![ASP.NET MVC PDF creation2](Getting_started_images/Asp-net-mvc-creation2.png)
 
-Step 4: Confirm that **Web Application (Model-View-Controller)** is selected in the additional information dialog, and then select the **Create** button.
+Step 4: Confirm that **Web Application pattern (Model-View-Controller)** is selected in the additional information dialog, and then select the **Create** button.
 
 ![ASP.NET MVC PDF creation3](Getting_started_images/Asp-net-mvc-creation3.png)
 
