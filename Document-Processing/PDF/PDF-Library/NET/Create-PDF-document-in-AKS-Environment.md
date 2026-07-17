@@ -305,7 +305,7 @@ Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore
 
 ## See also
 
-- [Syncfusion .NET PDF library documentation](https://help.syncfusion.com/file-formats/pdf/overview)
+- [Syncfusion .NET PDF library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/overview)
 - [Azure Kubernetes Service documentation](https://docs.microsoft.com/en-us/azure/aks/)
 - [Azure Container Registry documentation](https://docs.microsoft.com/en-us/azure/container-registry/)
 - [GitHub sample: Create PDF document in AKS environment](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Azure/Create%20PDF%20document%20in%20AKS%20environment/createpdfdocument)
