@@ -20,21 +20,13 @@ Step 1: Create a new C# Blazor Server app project.
 
 ![Create a Blazor Server App project in visual studio](Blazor_images\Blazor_images_Server_App.png)
 
-Step 2: Name the project.
-
-![Name the project](Blazor_images\Blazor_images_Server_App_ProjectName.png)
-
-Step 3: Select the framework and click **Create** button.
-
-![Framework version](Blazor_images\Blazor_images_Server_App_Framework.png)
-
-Step 4: Install the [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+Step 2: Install the [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 
 ![Install Syncfusion.XlsIORenderer.Net.Core NuGet Package](Blazor_images\Blazor_images_Server_App_Nuget.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components
 
-Step 5: Create a razor file with name as **XlsIO** under **Pages** folder and include the following namespaces in the file.
+Step 3: Create a razor file with name as **XlsIO** under **Pages** folder and include the following namespaces in the file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 @page "/xlsio"
@@ -44,7 +36,7 @@ Step 5: Create a razor file with name as **XlsIO** under **Pages** folder and in
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Add the following code in **XlsIO.razor** file to create a new button.
+Step 4: Add the following code in **XlsIO.razor** file to create a new button.
 {% tabs %}
 {% highlight CSHTML %}
 <h2>Syncfusion XlsIO library </h2>
@@ -53,7 +45,7 @@ Step 6: Add the following code in **XlsIO.razor** file to create a new button.
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Add the following code in **XlsIO.razor** file to create and download the **PDF document**.
+Step 5: Add the following code in **XlsIO.razor** file to create and download the **PDF document**.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 @code {
@@ -70,7 +62,7 @@ Step 7: Add the following code in **XlsIO.razor** file to create and download th
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Create a new cs file with name as **ExcelService** under Data folder and include the following namespaces in the file.
+Step 6: Create a new cs file with name as **ExcelService** under Data folder and include the following namespaces in the file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 using Syncfusion.XlsIO;
@@ -79,7 +71,7 @@ using Syncfusion.XlsIORenderer;
 {% endhighlight %}
 {% endtabs %}
 
-Step 9: Create a new MemoryStream method with name as **ConvertExceltoPDF** in **ExcelService** class and include the following code snippet to **convert an Excel document to Pdf** in Server app.
+Step 7: Create a new MemoryStream method with name as **ConvertExceltoPDF** in **ExcelService** class and include the following code snippet to **convert an Excel document to Pdf** in Server app.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
@@ -335,17 +327,9 @@ An online sample link to <a href="https://blazor.syncfusion.com/demos/excel/exce
 {% tabcontent Visual Studio %}
 Step 1: Create a new C# Blazor WASM app project.
 
-![Create a Blazor Wasm App project in visual studio](Blazor_images\Blazor_images_Client_App.png)
+![Create a Blazor Wasm App project in visual studio](Blazor_images\Blazor_images_Server_App.png)
 
-Step 2: Name the project.
-
-![Name the project](Blazor_images\Blazor_images_Client_ProjectName.png)
-
-Step 3: Select the framework and click **Create** button.
-
-![Framework version](Blazor_images\Blazor_images_Client_Framework.png)
-
-Step 4: Install the following **Nuget packages** in your application from [NuGet.org](https://www.nuget.org/).
+Step 2: Install the following **Nuget packages** in your application from [NuGet.org](https://www.nuget.org/).
 * [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core)
 * [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.views.Blazor)
 
@@ -354,7 +338,7 @@ Step 4: Install the following **Nuget packages** in your application from [NuGet
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 5: Add the following ItemGroup tag in the **Blazor WASM csproj** file.
+Step 3: Add the following ItemGroup tag in the **Blazor WASM csproj** file.
 {% tabs %}
 {% highlight XAML  %}
 <ItemGroup>
@@ -365,7 +349,7 @@ Step 5: Add the following ItemGroup tag in the **Blazor WASM csproj** file.
 
 N> Install this wasm-tools and wasm-tools-net6 by using the "dotnet workload install wasm-tools" and "dotnet workload install wasm-tools-net6" commands in your command prompt respectively if you are facing issues related to Skiasharp during runtime.
 
-Step 6: Enable the following property in the Blazor WASM csproj file.
+Step 4: Enable the following property in the Blazor WASM csproj file.
 
 {% tabs %}
 {% highlight XAML %}
@@ -375,7 +359,7 @@ Step 6: Enable the following property in the Blazor WASM csproj file.
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Create a razor file with name as **XlsIO** under **Pages** folder and include the following namespaces in the file.
+Step 5: Create a razor file with name as **XlsIO** under **Pages** folder and include the following namespaces in the file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 @page "/xlsio"
@@ -387,7 +371,7 @@ Step 7: Create a razor file with name as **XlsIO** under **Pages** folder and in
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Add the following code to create a new button.
+Step 6: Add the following code to create a new button.
 {% tabs %}
 {% highlight CSHTML %}
 <h2>Syncfusion XlsIO library</h2>
@@ -396,41 +380,46 @@ Step 8: Add the following code to create a new button.
 {% endhighlight %}
 {% endtabs %}
 
-Step 9: Create a new async method with name as **ExcelToPDF** and include the following code snippet to **create an Excel document in Blazor** WASM app.
+Step 7: Create a new async method with name as **ExcelToPDF** and include the following code snippet to **create an Excel document in Blazor** WASM app.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
-using (ExcelEngine excelEngine = new ExcelEngine())
-{
-    IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
-
-    //Load an existing file
-    using (Stream inputStream = await client.GetStreamAsync("Data/InputTemplate.xlsx"))
+@code {
+    async void ExcelToPDF()
     {
-        // Open the workbook.
-        IWorkbook workbook = application.Workbooks.Open(inputStream);
+        using (ExcelEngine excelEngine = new ExcelEngine())
+        {
+            IApplication application = excelEngine.Excel;
+            application.DefaultVersion = ExcelVersion.Xlsx;
 
-        // Instantiate the Excel to PDF renderer.
-        XlsIORenderer renderer = new XlsIORenderer();
+            //Load an existing file
+            using (Stream inputStream = await client.GetStreamAsync("Data/InputTemplate.xlsx"))
+            {
+                // Open the workbook.
+                IWorkbook workbook = application.Workbooks.Open(inputStream);
 
-        //Convert Excel document into PDF document
-        PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
+                // Instantiate the Excel to PDF renderer.
+                XlsIORenderer renderer = new XlsIORenderer();
 
-        //Create the MemoryStream to save the converted PDF.
-        MemoryStream pdfStream = new MemoryStream();
+                //Convert Excel document into PDF document
+                PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
 
-        //Save the converted PDF document to MemoryStream.
-        pdfDocument.Save(pdfStream);
-        pdfStream.Position = 0;
+                //Create the MemoryStream to save the converted PDF.
+                MemoryStream pdfStream = new MemoryStream();
 
-        //Download PDF file in the browser.
-        await JS.SaveAs("Output.pdf", pdfStream.ToArray());
+                //Save the converted PDF document to MemoryStream.
+                pdfDocument.Save(pdfStream);
+                pdfStream.Position = 0;
+
+                //Download PDF file in the browser.
+                await JS.SaveAs("Output.pdf", pdfStream.ToArray());
+            }
+        }
     }
 }
 {% endhighlight %}
 {% endtabs %}
 
-Step 10: Create a class file with **FileUtils** name and add the following code to invoke the JavaScript action to download the file in the browser.
+Step 8: Create a class file with **FileUtils** name and add the following code to invoke the JavaScript action to download the file in the browser.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 public static class FileUtils
@@ -444,7 +433,7 @@ public static class FileUtils
 {% endhighlight %}
 {% endtabs %}
 
-Step 11: Add the following JavaScript function in the **Index.html** file present under **wwwroot**.
+Step 9: Add the following JavaScript function in the **Index.html** file present under **wwwroot**.
 {% tabs %}
 {% highlight HTML %}
 <script type="text/javascript">
@@ -472,7 +461,7 @@ Step 11: Add the following JavaScript function in the **Index.html** file presen
 {% endhighlight %}
 {% endtabs %}
 
-Step 12: Add the following code snippet in the **NavMenu.razor** in the Shared folder
+Step 10: Add the following code snippet in the **NavMenu.razor** in the Layout folder
 {% tabs %}
 {% highlight CSHTML %}
 <li class="nav-item px-3">
@@ -558,32 +547,37 @@ Step 7: Add the following code to create a new button.
 Step 8: Create a new async method with name as **ExcelToPDF** and include the following code snippet to **create an Excel document in Blazor** WASM app.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
-using (ExcelEngine excelEngine = new ExcelEngine())
-{
-    IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
-
-    //Load an existing file
-    using (Stream inputStream = await client.GetStreamAsync("Data/InputTemplate.xlsx"))
+@code {
+    async void ExcelToPDF()
     {
-        // Open the workbook.
-        IWorkbook workbook = application.Workbooks.Open(inputStream);
+        using (ExcelEngine excelEngine = new ExcelEngine())
+        {
+            IApplication application = excelEngine.Excel;
+            application.DefaultVersion = ExcelVersion.Xlsx;
 
-        // Instantiate the Excel to PDF renderer.
-        XlsIORenderer renderer = new XlsIORenderer();
+            //Load an existing file
+            using (Stream inputStream = await client.GetStreamAsync("Data/InputTemplate.xlsx"))
+            {
+                // Open the workbook.
+                IWorkbook workbook = application.Workbooks.Open(inputStream);
 
-        //Convert Excel document into PDF document
-        PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
+                // Instantiate the Excel to PDF renderer.
+                XlsIORenderer renderer = new XlsIORenderer();
 
-        //Create the MemoryStream to save the converted PDF.
-        MemoryStream pdfStream = new MemoryStream();
+                //Convert Excel document into PDF document
+                PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
 
-        //Save the converted PDF document to MemoryStream.
-        pdfDocument.Save(pdfStream);
-        pdfStream.Position = 0;
+                //Create the MemoryStream to save the converted PDF.
+                MemoryStream pdfStream = new MemoryStream();
 
-        //Download PDF file in the browser.
-        await JS.SaveAs("Output.pdf", pdfStream.ToArray());
+                //Save the converted PDF document to MemoryStream.
+                pdfDocument.Save(pdfStream);
+                pdfStream.Position = 0;
+
+                //Download PDF file in the browser.
+                await JS.SaveAs("Output.pdf", pdfStream.ToArray());
+            }
+        }
     }
 }
 {% endhighlight %}
@@ -631,7 +625,7 @@ Step 10: Add the following JavaScript function in the **Index.html** file presen
 {% endhighlight %}
 {% endtabs %}
 
-Step 11: Add the following code snippet in the **NavMenu.razor** in the Shared folder
+Step 11: Add the following code snippet in the **NavMenu.razor** in the Layout folder
 {% tabs %}
 {% highlight CSHTML %}
 <li class="nav-item px-3">

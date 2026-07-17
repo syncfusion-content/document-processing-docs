@@ -19,17 +19,13 @@ Step 1: Create a new C# WinUI Desktop app. Select Blank App, Packaged (WinUI 3 i
 
 ![Create a WinUI Desktop application in visual studio](WinUI_images\WinUI_images_img6.png)
 
-Step 2: Name the project and click **Create** button.
-
-![Name the project](WinUI_images\WinUI_images_img7.png)
-
-Step 3: Install the [Syncfusion.XlsIORenderer.Net](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.NET) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+Step 2: Install the [Syncfusion.XlsIORenderer.Net](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.NET) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 
 ![Install Syncfusion.XlsIORenderer.Net NuGet Package](WinUI_images\WinUI_images_img8.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components.
 
-Step 4: Add a new button in **MainWindow.xaml** as shown below.
+Step 3: Add a new button in **MainWindow.xaml** as shown below.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 <Window
@@ -48,7 +44,7 @@ Step 4: Add a new button in **MainWindow.xaml** as shown below.
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Include the following namespaces in the **MainWindow.xaml.cs**.
+Step 4: Include the following namespaces in the **MainWindow.xaml.cs**.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 using Syncfusion.XlsIO;
@@ -57,7 +53,7 @@ using Syncfusion.XlsIORenderer;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the below code snippet in the new action method of **ConvertExceltoPDF** in **MainWindow.xaml.cs**  to **convert an Excel document to PDF**.
+Step 5: Include the below code snippet in the new action method of **ConvertExceltoPDF** in **MainWindow.xaml.cs**  to **convert an Excel document to PDF**.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
