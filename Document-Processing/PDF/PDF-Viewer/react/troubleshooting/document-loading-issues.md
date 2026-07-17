@@ -65,7 +65,7 @@ Troubleshooting checklist (in order)
 
 React-specific notes
 
-- Prefer using a React ref to access the `PdfViewerComponent` instance instead of `document.getElementById(...)` where possible: `const viewerRef = useRef(null);` then `<PdfViewerComponent ref={viewerRef} ... />` and call `viewerRef.current.dataBind()` / `viewerRef.current.load(...)` after the ref is initialized.
+- Prefer using a React ref to access the `PdfViewerComponent` instance instead of `document.getElementById(...)` where possible: `viewerRef = useRef(null);` then `<PdfViewerComponent ref={viewerRef} ... />` and call `viewerRef.current.dataBind()` / `viewerRef.current.load(...)` after the ref is initialized.
 - If calling `dataBind()` and `load()` from life cycle methods or hooks, ensure they run after the component mounts (for example in `useEffect` with the correct dependencies).
 
 Following this checklist typically resolves document loading issues encountered after upgrading to v23.1 or newer.
