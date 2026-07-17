@@ -20,7 +20,8 @@ This section explains how to include the DOCX Editor component in a Blazor WebAs
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 * Browser compatibility: Chrome (latest), Firefox (latest), Safari (latest), Edge (latest)
-* [Syncfusion license registration](https://help.syncfusion.com/document-processing/licensing/how-to-register) (required to use DOCX Editor in production; use evaluation mode for development)
+* [Syncfusion license registration](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application) (required to use DOCX Editor in production; use evaluation mode for development)
+* For local development: Use Visual Studio or Visual Studio Code with the .NET SDK to run the Blazor application (Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> to launch with debugging)
 
 {% tabcontents %}
 
@@ -70,7 +71,7 @@ Alternatively, create a WebAssembly application using the following terminal com
 
 {% highlight c# tabtitle="Blazor WASM App" %}
 
-```
+```bash
 dotnet new blazorwasm -o BlazorApp
 cd BlazorApp
 ```
@@ -82,7 +83,7 @@ cd BlazorApp
 ### Install Document Editor Nuget packages
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
-* Navigate to the project directory created in the previous step by running `cd BlazorApp` (if not already in the directory).
+* Navigate to the project directory created in the previous step.
 * Ensure you're in the project root directory where your `.csproj` file is located.
 * Run the following command to install the required packages:
     - [Syncfusion.Blazor.WordProcessor](https://www.nuget.org/packages/Syncfusion.Blazor.WordProcessor)
@@ -196,6 +197,5 @@ N> Looking for the full Blazor DOCX Editor component overview, features, pricing
 - [Getting started in Blazor Web app](https://help.syncfusion.com/document-processing/word/word-processor/blazor/getting-started/web-app)
 - [Open a document](https://help.syncfusion.com/document-processing/word/word-processor/blazor/opening-a-document)
 - [Save a document](https://help.syncfusion.com/document-processing/word/word-processor/blazor/saving-document)
-- [Edit documents](https://help.syncfusion.com/document-processing/word/word-processor/blazor/document-editor)
 - [Track changes](https://help.syncfusion.com/document-processing/word/word-processor/blazor/track-changes)
 - [Blazor DOCX Editor Features](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor)
