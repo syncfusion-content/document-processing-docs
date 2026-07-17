@@ -26,8 +26,8 @@ N>* From v29.1.x onwards, Pdfium is upgraded to the new version which was built 
 
 * On running your WPF application, Syncfusion&reg; PDF Viewer control generates a folder named `PDFium` in the application output path folder (for example: bin/release or bin/debug) at runtime. 
 * Syncfusion&reg; PDF Viewer control detects the architecture of the running machine automatically.
-* Next, it creates another subfolder named “x64”, “x86” or “arm64” based on the machine architecture.
-* Extracts the PDFium binary (PDFium.dll) into the subfolder (x64, x86 or arm64) and consumes it to render PDF files.
+* Next, it creates another subfolder named “x64”, “x86”, or “arm64” based on the machine architecture.
+* Extracts the PDFium binary (PDFium.dll) into the subfolder (x64, x86, or arm64) and consumes it to render PDF files.
 
 ![WPF PDF Viewer Folder Structure](pdf-rendering-engines_images/wpf-pdf-viewer-folder-structure.png)
 
@@ -35,13 +35,15 @@ N> PDFium rendering is not supported in Windows XP operating system.
 
 ### How to run PDFium in a restricted access environment
 
-If there is any access restriction applied to the application output folder, then the Syncfusion&reg; PDF Viewer  control cannot able to extract and consume the PDFium engine as mentioned above.
+If there is any access restriction applied to the application output folder, then the Syncfusion&reg; PDF Viewer control is unable to extract and consume the PDFium engine as mentioned above.
 
 In that situation, you need to add the following steps to consume the PDFium rendering engine.
 
-* Create a folder where your application can access, create & read files. For example, <b>"d:\ThirdPartyBinaries\"</b>.
+* Manually obtain the required PDFium assemblies (PDFium.dll) for the x64, x86, and arm64 architectures.
+* Create a folder where your application can access, create & read files. For example, <b>"d:\ThirdPartyBinaries\Pdfium\"</b>.
+* Place the obtained PDFium assemblies in the correct folder structure as shown below.
 * Update the path of this folder to the [ReferencePath](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_ReferencePath) property of PDF Viewer control, like shown in the following code sample.
-* If [ReferencePath](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_ReferencePath) is set, then PDF Viewer control extracts the PDFium binary inside that specified folder and consume the PDFium rendering engine.
+* If [ReferencePath](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_ReferencePath) is set, then PDF Viewer control extracts the PDFium binary inside that specified folder and consumes the PDFium rendering engine.
 
 {% tabs %}
 {% highlight c# %}
@@ -49,7 +51,7 @@ using System.Windows;
 namespace PdfViewerDemo
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
@@ -66,6 +68,7 @@ namespace PdfViewerDemo
 {% endhighlight %}
 {% endtabs %}
 
+N> Place the `Sample.pdf` file in the application's output folder (for example, bin/release or bin/debug) so that it can be loaded successfully.
 N>In the run time, the PDF viewer will check the custom folder path provided in the [ReferencePath](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_ReferencePath) property. If you already placed the Pdfium assemblies in the custom folder path, it will refer to the already available assemblies from the location. It won’t generate the assemblies in the folder again.
 N>You need to place the PDFium assembly in the correct folder structure as mentioned below.
 N>* ThirdPartyBinaries
@@ -79,7 +82,7 @@ N>			* Pdfium.dll
 
 ## SfPdf
 
-`SfPdf` is the Syncfusion’s own PDF rendering engine. Before v16.3.0.x, PDF Viewer control has used this rendering engine as default to rendering the PDF pages. If you wish to use `SfPdf` rendering engine or face any compatibility issues with `Pdfium` rendering engine in your environment, you may set the [RenderingEngine](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_RenderingEngine) property to `SfPdf` as shown in the following code sample.
+`SfPdf` is the Syncfusion’s own PDF rendering engine. Before v16.3.0.x, PDF Viewer control used this rendering engine as the default for rendering the PDF pages. If you face any compatibility issues with the `Pdfium` rendering engine or wish to use the `SfPdf` rendering engine in your environment, you may set the [RenderingEngine](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_RenderingEngine) property to `SfPdf` as shown in the following code sample.
 
 N> The recommended PDF rendering engine is PDFium.
 
@@ -91,7 +94,7 @@ using Syncfusion.Windows.PdfViewer;
 namespace PdfViewerDemo
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {

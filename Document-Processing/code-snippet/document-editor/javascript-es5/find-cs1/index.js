@@ -1,4 +1,4 @@
-var documenteditor = new ej.documenteditor.DocumentEditor({ enableSelection: true, enableSearch: true, enableEditor: true, isReadOnly: false, enableOptionsPane: true });
+var documenteditor = new ej.documenteditor.DocumentEditor({ enableSelection: true, enableSearch: true, enableEditor: true, isReadOnly: false, enableOptionsPane: true, height: '370px' });
 documenteditor.appendTo('#DocumentEditor');
 var sfdt = `{
     "sections": [

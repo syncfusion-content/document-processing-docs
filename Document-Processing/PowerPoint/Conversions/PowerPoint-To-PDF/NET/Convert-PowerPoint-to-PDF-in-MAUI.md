@@ -39,7 +39,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 Step 4: Add a new button to the **MainPage.xaml** as shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -184,7 +184,7 @@ Refer the below helper files and add them into the mentioned project. These help
     {{'[PreviewControllerDS.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-PDF-conversion/Convert-PowerPoint-presentation-to-PDF/.NET-MAUI/Convert-PowerPoint-Presentation-to-PDF/Platforms/iOS/PreviewControllerDS.cs)'| markdownify }}<br/>{{'[QLPreviewItemFileSystem.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-PDF-conversion/Convert-PowerPoint-presentation-to-PDF/.NET-MAUI/Convert-PowerPoint-Presentation-to-PDF/Platforms/iOS/QLPreviewItemFileSystem.cs)'| markdownify }}
   </td>
   <td>
-    Helper classes for viewing the <b>PowerPoint Presenatation</b> in iOS device
+    Helper classes for viewing the <b>PowerPoint Presentation</b> in iOS device
   </td>
   </tr>
 </table>
@@ -223,7 +223,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 Step 3: Add a new button to the **MainPage.xaml** as shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -368,7 +368,7 @@ Refer the below helper files and add them into the mentioned project. These help
     {{'[PreviewControllerDS.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-PDF-conversion/Convert-PowerPoint-presentation-to-PDF/.NET-MAUI/Convert-PowerPoint-Presentation-to-PDF/Platforms/iOS/PreviewControllerDS.cs)'| markdownify }}<br/>{{'[QLPreviewItemFileSystem.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-PDF-conversion/Convert-PowerPoint-presentation-to-PDF/.NET-MAUI/Convert-PowerPoint-Presentation-to-PDF/Platforms/iOS/QLPreviewItemFileSystem.cs)'| markdownify }}
   </td>
   <td>
-    Helper classes for viewing the <b>PowerPoint Presenatation</b> in iOS device
+    Helper classes for viewing the <b>PowerPoint Presentation</b> in iOS device
   </td>
   </tr>
 </table>
@@ -414,7 +414,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial se
 Step 3: Add a new button to the **MainPage.xaml** as shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -562,7 +562,7 @@ Refer the below helper files and add them into the mentioned project. These help
     {{'[PreviewControllerDS.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-PDF-conversion/Convert-PowerPoint-presentation-to-PDF/.NET-MAUI/Convert-PowerPoint-Presentation-to-PDF/Platforms/iOS/PreviewControllerDS.cs)'| markdownify }}<br/>{{'[QLPreviewItemFileSystem.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-PDF-conversion/Convert-PowerPoint-presentation-to-PDF/.NET-MAUI/Convert-PowerPoint-Presentation-to-PDF/Platforms/iOS/QLPreviewItemFileSystem.cs)'| markdownify }}
   </td>
   <td>
-    Helper classes for viewing the <b>PowerPoint Presenatation</b> in iOS device
+    Helper classes for viewing the <b>PowerPoint Presentation</b> in iOS device
   </td>
   </tr>
 </table>

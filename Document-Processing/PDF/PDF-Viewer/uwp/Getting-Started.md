@@ -19,14 +19,14 @@ You can create a **UWP Application** using Visual Studio via [Microsoft Template
 
 ## Assemblies Deployment
 
-You can add a UWP PdfViewer component to your application by installing it via NuGet packages (recommended) or by manually adding the required assemblies to the project.
+You can add a UWP PDF Viewer component to your application by installing it via NuGet packages (recommended) or by manually adding the required assemblies to the project.
 
 {% tabcontents %}
 
 {% tabcontent NuGet Package %}
-### Install Syncfusion<sup style="font-size:70%">&reg;</sup> UWP PdfViewer NuGet Package
+### Install Syncfusion<sup style="font-size:70%">&reg;</sup> UWP PDF Viewer NuGet Package
 
-To add **UWP PdfViewer** component in the application, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install:
+To add the **UWP PDF Viewer** component in the application, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install:
 
 •	[Syncfusion.SfPdfViewer.UWP](https://www.nuget.org/packages/Syncfusion.SfPdfViewer.UWP)
 
@@ -34,9 +34,9 @@ To add **UWP PdfViewer** component in the application, open the NuGet package ma
 
 {% tabcontent Assemblies (.dll) %}
 
-### Add Syncfusion® UWP PdfViewer Assemblies
+### Add Syncfusion® UWP PDF Viewer Assemblies
 
-Below table describes, list of assemblies required to be added in project when the UWP PdfViewer control is used in your application.
+The following table lists the assemblies required when the UWP PDF Viewer control is used in your application.
 
 <table>
 <tr>
@@ -69,21 +69,23 @@ Below table describes, list of assemblies required to be added in project when t
 </tr>
 </table>
 
-Each assembly must be placed together with its corresponding resource files (i.e., the resource files for an assembly should reside in the same folder as that assembly). The assemblies do not all have to be in a single folder — each assembly may live in its own folder so long as its resource files are kept alongside it. The screenshot shows only the SfPdfViewer assembly for brevity.
+Each assembly must be placed together with its corresponding resource files; that is, the resource files for an assembly should reside in the same folder as that assembly.
+
+The assemblies do not all have to be in a single folder. Each assembly may live in its own folder, as long as its resource files are kept alongside it. The screenshot shows only the SfPdfViewer assembly for brevity.
 
 ![Dependent assemblies needed for SfPdfViewerControl](Getting-Started_images/Getting-Started_img3.jpeg)
 
 This co-location matters only if you move assemblies out of their installed location. If you relocate an assembly, be sure to move its resource files with it and place them in the same folder as that assembly.
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>®</sup> assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to [this link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>®</sup> license key in your UWP application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>®</sup> assemblies from the trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to [this link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to register the Syncfusion<sup>®</sup> license key in your UWP application to use our components.
 
 {% endtabcontent %}
 
 {% endtabcontents %}
 
-## Add UWP PdfViewer component
+## Add UWP PDF Viewer component
 
-UWP PdfViewer control can be added to an application either through the designer (XAML) or programmatically using code.
+UWP PDF Viewer control can be added to an application either through the designer (XAML) or programmatically using code. Use the **Via Designer** tab if you prefer a drag-and-drop workflow; use the **Via Coding** tab if you want to add the control directly in XAML or C#.
 
 {% tabcontents %}
 
@@ -95,7 +97,7 @@ UWP PdfViewer control can be added to an application either through the designer
 
 ![SfPdfViewerControl in visual studio toolbox](Getting-Started_images/Getting-Started_img1.jpeg)
 
-3. Drag `SfPdfViewerControl`(https://help.syncfusion.com/cr/uwp/Syncfusion.Windows.PdfViewer.SfPdfViewerControl.html) and drop in to the Designer area from the Toolbox.
+3. Drag the [`SfPdfViewerControl`](https://help.syncfusion.com/cr/uwp/Syncfusion.Windows.PdfViewer.SfPdfViewerControl.html) and drop it into the Designer area from the Toolbox.
 
 When you drag the SfPdfViewerControl toolbox item to the window, it automatically adds the required assembly references to the current application.
 
@@ -103,9 +105,9 @@ When you drag the SfPdfViewerControl toolbox item to the window, it automaticall
 
 {% tabcontent Via Coding %}
 
-The SfPdfViewerControl is available in the following namespace [_Syncfusion.Windows.PdfViewer_](https://help.syncfusion.com/cr/UWP/Syncfusion.Windows.PdfViewer.html) and it can be created using XAML or programmatically using C#.
+The SfPdfViewerControl is available in the [`Syncfusion.Windows.PdfViewer`](https://help.syncfusion.com/cr/UWP/Syncfusion.Windows.PdfViewer.html) namespace and can be created using XAML or programmatically using C#.
 
-1. Add the Syncfusion PdfViewer namespace
+1. Add the Syncfusion PDF Viewer namespace.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 xmlns:syncfusion="using:Syncfusion.Windows.PdfViewer"
@@ -131,6 +133,7 @@ After adding the `SfPdfViewerControl`, you can load a PDF document using data bi
 
 2. Create a simple class (`PdfReport.cs`) that provides the PDF stream.
 
+N> Replace `PdfViewerExample` in the manifest resource path below with your project's default namespace.
 
 {% tabs %}
     {% highlight c# tabtitle="PdfReport.cs" %}
@@ -245,4 +248,6 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 - [Viewing PDF](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/viewing-pdf)
 - [UWP PDF Viewer Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/overview)
 - [Magnification](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-magnification)
+- [Page Navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-page-navigation)
+- [Text Search](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-text-search)
 

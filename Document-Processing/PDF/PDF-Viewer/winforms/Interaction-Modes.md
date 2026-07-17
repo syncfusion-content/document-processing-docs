@@ -9,7 +9,7 @@ documentation: UG
 
 # Working with Interaction Modes in Windows Forms PDF Viewer
 
-The [WinForms PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/winforms-pdf-viewer) supports following cursor modes for easy interaction with the PDF documents: 
+The [WinForms PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/winforms-pdf-viewer) supports the following cursor modes for easy interaction with the PDF documents:
 
 * Selection mode 
 * Panning mode
