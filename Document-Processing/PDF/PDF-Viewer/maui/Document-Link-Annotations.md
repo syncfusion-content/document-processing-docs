@@ -18,7 +18,7 @@ N> Document link annotations differ from hyperlink annotations. Document links n
 
 ## Enable or disable document link navigation
 
-The document link navigation can be turned on or off using the [EnableDocumentLinkNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_EnableDocumentLinkNavigation) property. The default value of this property is `true`. The code snippet below illustrates disabling the document link navigation.
+The document link navigation can be turned on or off using the [EnableDocumentLinkNavigation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_EnableDocumentLinkNavigation) property. The default value of this property is `true`. The code snippet below illustrates disabling the document link navigation.
 
 {% tabs %}
 {% highlight c# %}

@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains how to add the [Syncfusion® Server-backed ASP.NET Core PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) to a ASP.NET Core Web application using Visual Studio or Visual Studio Code. A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-Getting-Started-Examples/tree/main/PDFViewer/ASP.NET%20Core%20Tag%20Helper%20Examples).
 
-N> Starting with the 2026 Vol 2 main release (June 2026), no new features will be added to the Server PDF Viewer, as almost all of the PDF Viewer functionalities are now available in the Standalone PDF Viewer. If you are currently using the server-backed PDF Viewer, please refer to the [migration documentation](./server-to-standalone) to transition to the Standalone PDF Viewer.
+> **Deprecation notice:** Starting with the 2026 Vol 2 main release (July 6, 2026), no new features will be added to the Server PDF Viewer, as almost all PDF Viewer functionality is now available in the Standalone PDF Viewer. If you are currently using the server-backed PDF Viewer, please refer to the [migration documentation](./server-to-standalone) to transition to the Standalone PDF Viewer.
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ N> Starting with the 2026 Vol 2 main release (June 2026), no new features will b
 
 ## Create a new ASP.NET Core Web App in Visual Studio
 
-Create an ASP.NET Core Web App using Visual Studio 2022 by the following the instructions [here](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=visualstudio).
+Create an ASP.NET Core Web App using Visual Studio 2022 by following the instructions [here](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=visualstudio).
 
 ## ASP.NET Core PDF Viewer NuGet package installation
 
@@ -131,7 +131,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer
 
 ## Implement server-side handlers
 
-Add the server side code to `Index.cshtml.cs` in the `Pages` folder. The class should contain handler methods that process all PDF operations on the server, such as loading documents, rendering pages, handling annotations, and managing downloads.
+Add the server-side code to `Index.cshtml.cs` in the `Pages` folder. The class should contain handler methods that process all PDF operations on the server, such as loading documents, rendering pages, handling annotations, and managing downloads.
 
 An implementation example can be found [here](https://github.com/SyncfusionExamples/ASP-NET-Core-Getting-Started-Examples/blob/main/PDFViewer/ASP.NET%20Core%20Tag%20Helper%20Examples/Pages/Index.cshtml.cs).
 
@@ -176,3 +176,6 @@ function load() {
 ## See also
 
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core](https://ej2.syncfusion.com/aspnetcore/documentation/getting-started)
+* [Migrate from Server-Backed to Standalone PDF Viewer](./server-to-standalone)
+* [Getting Started with Standalone PDF Viewer](./getting-started)
+* [ASP.NET Core PDF Viewer How-To Guides](./how-to-overview)
