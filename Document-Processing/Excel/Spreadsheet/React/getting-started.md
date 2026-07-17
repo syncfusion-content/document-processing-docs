@@ -67,7 +67,7 @@ Syncfusion also ships additional built-in themes. To use a different theme, repl
 
 ## Add the Syncfusion® React Spreadsheet component
 
-Now, import the `SpreadsheetComponent` into your `src/App.jsx` or `src/App.tsx` file and render it. **Replace the contents of `src/App.jsx` or `src/App.tsx`** by removing all existing default codes and pasting the following spreadsheet component code.
+Now, import the `SpreadsheetComponent` into your `src/App.jsx` or `src/App.tsx` file and render it. **Replace the contents of `src/App.jsx` or `src/App.tsx`** by removing all existing default codes and pasting the following spreadsheet component codes.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -114,13 +114,13 @@ You can also explore the Spreadsheet interactively using the live sample below.
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/getting-started-cs1" %}
 
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-react-spreadsheet-component) to explore the complete source code. You can also explore our [React Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/react/#/tailwind3/spreadsheet/default) that shows you how to present and manipulate data.
+
 ## Video tutorial
 
 To get started quickly with React Spreadsheet, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=3Cx9AnKAHdY" %}
-
-> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-react-spreadsheet-component) to explore the complete source code. You can also explore our [React Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/react/#/tailwind3/spreadsheet/default) that shows you how to present and manipulate data.
 
 N> Looking for the full React Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) page.
 

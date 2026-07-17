@@ -88,7 +88,7 @@ Syncfusion also ships additional built-in themes. To use a different theme, repl
 
 ## Add the Syncfusion® React Spreadsheet Component
 
-Now, you can import the `SpreadsheetComponent` into your `src/App.js` file. **Replace the contents of `src/App.js`** by removing all existing default codes and pasting the following spreadsheet component code.
+Now, you can import the `SpreadsheetComponent` into your `src/App.js` file. **Replace the contents of `src/App.js`** by removing all existing default codes and pasting the following spreadsheet component codes.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
