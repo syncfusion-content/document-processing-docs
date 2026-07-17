@@ -36,7 +36,7 @@ N> The **project name** is used as the default namespace (for example, in `x:Cla
   - For **.NET Framework** → Select **4.6.2 or above** in the same window
 - Click **Create**
 
-N> The control supports **.NET 8, .NET 9, .NET 10** and **.NET Framework 4.6.2 and above**.
+N> The control supports **.NET 8, .NET 9, .NET 10**, as well as **.NET Framework 4.6.2 and above**.
 
 ### Add SfRichTextBoxAdv dependencies
 
