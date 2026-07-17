@@ -71,7 +71,7 @@ The following assembly references are required to use the **SfRichTextBoxAdv** c
 
 {% endtabcontents %}
 
-N> A valid Syncfusion&reg; license key is required from **v16.2.0.41 (2018 Vol 2)** onwards.
+N> A valid Syncfusion<sup>&reg;</sup> license key is required from **v16.2.0.41 (2018 Vol 2)** onwards.
 
   - The required `Syncfusion.Licensing` assembly is installed automatically as a NuGet dependency — no separate reference is needed.
   - If you are using the **Assemblies** installation, you must add a reference to `Syncfusion.Licensing.dll` in your project.
