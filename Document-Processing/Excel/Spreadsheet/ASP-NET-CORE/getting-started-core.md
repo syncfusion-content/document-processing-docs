@@ -100,17 +100,17 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-Ge
 If the Spreadsheet control does not render as expected, use the following checklist to resolve the most common setup and configuration issues.
 
 **1. Control not rendering (blank area where the Spreadsheet should appear)**
-- Verify the `<ejs-scripts>` tag is registered at the end of the `<body>` section in `~/Pages/Shared/_Layout.cshtml`. Without it, the client-side scripts do not initialize.
+- Ensure the `<ejs-scripts>` tag is included at the end of `<body>` section in `~/Pages/Shared/_Layout.cshtml` to initialize client-side scripts.
 
 **2. Tag helper not recognized (`ejs-spreadsheet` shows as plain text)**
-- Confirm `@addTagHelper *, Syncfusion.EJ2` is added to `~/Pages/_ViewImports.cshtml`.
-- Rebuild the solution after adding the `Syncfusion.EJ2.AspNet.Core` NuGet package so the Tag Helper assembly is restored.
+- Ensure `@addTagHelper *, Syncfusion.EJ2` is included in `~/Pages/_ViewImports.cshtml`.
+- Rebuild the project after installing the `Syncfusion.EJ2.AspNet.Core` NuGet package.
 
-**3. License warning in the console**
-- A license is required only for production/deployment scenarios. During development the control functions in evaluation mode. Refer to [Licensing overview](../../../Licensing/overview.md) and [how-to register in an application](../../../Licensing/how-to-register-in-an-application.md) to register a valid license key.
+**3. License warning**
+- A license key is required only for production deployments. Development environments run in evaluation mode. Refer to [Licensing](../../../Licensing/overview.md) and [how-to register in an application](../../../Licensing/how-to-register-in-an-application.md) to register a valid license key.
 
-**4. Open/Save requests fail with HTTP 404 or CORS errors**
-- The `openUrl` and `saveUrl` values used in the included sample point to the online demo service. For local development, host your own service or refer to the [Open and Save](./open-save) topic for a working backend configuration.
+**4. Open/Save requests fail**
+- The sample uses the online demo service for `openUrl` and `saveUrl`. For local development, configure your own backend service. Refer to [Open and Save](./open-save) for setup details.
 
 ## See also
 
