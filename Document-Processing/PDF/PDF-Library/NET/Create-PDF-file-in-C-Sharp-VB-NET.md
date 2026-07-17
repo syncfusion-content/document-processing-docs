@@ -1023,4 +1023,4 @@ finalDoc.Close(True)
 {% endtabs %}
 
 N> You can also explore our [.NET PDF library](https://document.syncfusion.com/demos/pdf/default#/tailwind) demo that shows how to create and modify PDF files from C# with just five lines of code.
-N> Looking for the full .NET PDF Library overview, features, pricing, and documentation? Visit the [.NET PDF Library](https://www.syncfusion.com/document-sdk/net-pdf-library) page.
+

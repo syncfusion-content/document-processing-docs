@@ -31,4 +31,7 @@ If you're starting to integrate the React PDF Viewer into your application, choo
 - [Troubleshooting](./troubleshooting/troubleshooting)
 - [Migration guides](./migration/migrating-from-PDFjs)
 
-Looking for the full [React PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/react-pdf-viewer) component overview, features, pricing, and documentation? Visit the React PDF Viewer page.
+
+**See also**
+
+- [PDF Viewer overview](../overview)

@@ -177,8 +177,6 @@ For detailed compatibility information, refer to the [Angular version support ma
 
 For older Angular versions, refer to the respective Angular PDF Viewer guides.
 
-N> Looking for the full Angular PDF Viewer component overview, features, pricing, and documentation? Visit the [Angular PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/angular-pdf-viewer) page.
-
 ## See also
 
 - [Getting started Angular PDF Viewer](./getting-started)

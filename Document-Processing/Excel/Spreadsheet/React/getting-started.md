@@ -127,7 +127,6 @@ To get started quickly with React Spreadsheet, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=3Cx9AnKAHdY" %}
 
-N> Looking for the full React Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) page.
 
 ## See also
 

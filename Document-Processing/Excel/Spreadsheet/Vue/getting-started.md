@@ -132,8 +132,6 @@ You can also explore the Spreadsheet interactively using the live sample below.
 
 > [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-vue-spreadsheet-component).
 
-N> Looking for the full Vue Spreadsheet component overview, features, pricing, and documentation? Visit the [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) page.
-
 ## See also
 
 * [Open and Save](./open-save)
