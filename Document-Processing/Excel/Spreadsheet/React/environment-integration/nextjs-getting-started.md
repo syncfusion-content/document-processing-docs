@@ -103,21 +103,21 @@ yarn add @syncfusion/ej2-react-spreadsheet
 
 React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme), which are available in the installed packages. It’s easy to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to match the style of your application by referring to one of the built-in themes.
 
-Import the `Material` theme into the **src/app/globals.css** file and remove the existing styles in that file, as shown below:
+Import the `Tailwind 3` theme into the **src/app/globals.css** file and remove the existing styles in that file, as shown below:
 
 {% tabs %}
 {% highlight css tabtitle="globals.css" %}
 
-@import '@syncfusion/ej2-base/styles/material.css';
-@import '@syncfusion/ej2-inputs/styles/material.css';
-@import '@syncfusion/ej2-buttons/styles/material.css';
-@import '@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '@syncfusion/ej2-lists/styles/material.css';
-@import '@syncfusion/ej2-navigations/styles/material.css';
-@import '@syncfusion/ej2-popups/styles/material.css';
-@import '@syncfusion/ej2-dropdowns/styles/material.css';
-@import '@syncfusion/ej2-grids/styles/material.css';
-@import '@syncfusion/ej2-react-spreadsheet/styles/material.css';
+@import '@syncfusion/ej2-base/styles/tailwind3.css';
+@import '@syncfusion/ej2-inputs/styles/tailwind3.css';
+@import '@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+@import '@syncfusion/ej2-lists/styles/tailwind3.css';
+@import '@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '@syncfusion/ej2-dropdowns/styles/tailwind3.css';
+@import '@syncfusion/ej2-grids/styles/tailwind3.css';
+@import '@syncfusion/ej2-react-spreadsheet/styles/tailwind3.css';
 
 {% endhighlight %}
 {% endtabs %}

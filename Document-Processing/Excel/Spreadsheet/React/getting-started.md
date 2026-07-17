@@ -46,7 +46,7 @@ npm install @syncfusion/ej2-react-spreadsheet
 
 ## Add CSS references
 
-Add the following Spreadsheet and dependent component style references to the `src/index.css` file. **Replace the contents of src/index.css** by removing all existing default styles and pasting the following theme import code. The example below demonstrates importing the `Tailwind 3` theme.
+Add the following Spreadsheet and dependent component styles to `src/index.css` file. Replace the existing content with the theme import code below. The following example uses the `Tailwind 3` theme.
 
 ```css
 @import '@syncfusion/ej2-base/styles/tailwind3.css';
@@ -67,7 +67,7 @@ Syncfusion also ships additional built-in themes. To use a different theme, repl
 
 ## Add the Syncfusion® React Spreadsheet component
 
-Now, import the `SpreadsheetComponent` into your `src/App.jsx` or `src/App.tsx` file and render it. **Replace the contents of `src/App.jsx` or `src/App.tsx`** by removing all existing default codes and pasting the following spreadsheet component codes.
+Import and render the `SpreadsheetComponent` in `src/App.jsx` or `src/App.tsx`. Replace the existing content with the following code.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

@@ -88,7 +88,7 @@ Syncfusion also ships additional built-in themes. To use a different theme, repl
 
 ## Add the Syncfusion® React Spreadsheet Component
 
-Now, you can import the `SpreadsheetComponent` into your `src/App.js` file. **Replace the contents of `src/App.js`** by removing all existing default codes and pasting the following spreadsheet component codes.
+Now, import the `SpreadsheetComponent` into `src/App.js` file and replace the existing code with the following:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -129,5 +129,4 @@ N> Looking for the full React Spreadsheet Editor component overview, features, p
 * [Getting Started with the React Spreadsheet Component in a Next.js Project](./nextjs-getting-started)
 * [Open Excel files](../open-excel-files)
 * [Save Excel files](../save-excel-files)
-* [Web Services](../web-services/webservice-overview)
 * [Data Binding](../data-binding)
