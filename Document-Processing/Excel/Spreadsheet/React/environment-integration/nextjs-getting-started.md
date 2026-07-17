@@ -101,9 +101,7 @@ yarn add @syncfusion/ej2-react-spreadsheet
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme), which are available in the installed packages. It’s easy to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to match the style of your application by referring to one of the built-in themes.
-
-Import the `Tailwind 3` theme into the **src/app/globals.css** file and remove the existing styles in that file, as shown below:
+Add the following Spreadsheet and dependent component style references to the `src/app/globals.css` file. Replace the existing content with the theme import code below. The following example uses the `Tailwind 3` theme.
 
 {% tabs %}
 {% highlight css tabtitle="globals.css" %}

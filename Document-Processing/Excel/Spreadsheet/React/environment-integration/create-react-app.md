@@ -67,7 +67,7 @@ yarn add @syncfusion/ej2-react-spreadsheet
 
 ## Add CSS references
 
-Add the following Spreadsheet and dependent component style references to the `src/App.css` file. **Replace the contents of src/App.css** by removing all existing default styles and pasting the following theme import code. The example below demonstrates importing the `Tailwind 3` theme.
+Add the following Spreadsheet and dependent component style references to the `src/App.css` file. Replace the existing content with the theme import code below. The following example uses the `Tailwind 3` theme.
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
