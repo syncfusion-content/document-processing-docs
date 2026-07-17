@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Create and run the **TypeScript PDF Viewer in server-backed mode**. In this mode, PDF rendering and processing are performed on a server-side web service, while the TypeScript application acts as the client.
 
-N> Starting with the 2026 Vol 2 main release (June 2026), no new features will be added to the Server PDF Viewer, as almost all of the PDF Viewer functionalities are now available in the Standalone PDF Viewer. If you are currently using the server-backed PDF Viewer, please refer to the [migration documentation](./server-to-standalone) to transition to the Standalone PDF Viewer.
+N> Starting with the 2026 Vol 2 main release (July 6, 2026), no new features will be added to the Server PDF Viewer, as almost all of the PDF Viewer functionalities are now available in the Standalone PDF Viewer. If you are currently using the server-backed PDF Viewer, please refer to the [migration documentation](./server-to-standalone) to transition to the Standalone PDF Viewer.
 
 ## Prerequisites
 
@@ -142,7 +142,7 @@ npm start
 {% endhighlight %}
 {% endtabs %}
 
-The application will connect to the configured PDF Viewer web service and render the document in the browser. By default, the dev server is available at `http://localhost:8080`. The image below shows the PDF Viewer rendered in the browser:
+The application will connect to the configured PDF Viewer web service and render the document in the browser. The image below shows how the PDF Viewer is rendered in the browser:
 
 *Rendered PDF Viewer in the browser*
 
