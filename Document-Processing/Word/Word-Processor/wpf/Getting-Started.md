@@ -47,7 +47,7 @@ N> The control supports **.NET 8, .NET 9, .NET 10** and **.NET Framework 4.6.2 a
 **Using NuGet Package Manager (UI):** 
 
 1.	In Solution Explorer, right-click the project and choose **Manage NuGet Packages**.
-2.	Search for [Syncfusion.SfRichTextBoxAdv.Wpf](https://www.nuget.org/packages/Syncfusion.SfRichTextBoxAdv.WPF) and install the latest version.
+2.	Search for [Syncfusion.SfRichTextBoxAdv.WPF](https://www.nuget.org/packages/Syncfusion.SfRichTextBoxAdv.WPF) and install the latest version.
 3.	Ensure the [necessary dependencies](https://help.syncfusion.com/wpf/control-dependencies#sfrichtextboxadv) are installed correctly, and the project is restored.
 
 **Using Package Manager Console:** 
@@ -374,7 +374,7 @@ The steps below outline the essential tasks required to configure and apply them
 
 1. In Solution Explorer, right-click the project and choose **Manage NuGet Packages**.
 2. In the **Browse** tab, search for and install the latest version of the following packages:
-   - [Syncfusion.SfRichTextBoxAdv.Wpf](https://www.nuget.org/packages/Syncfusion.SfRichTextBoxAdv.WPF) – Rich text editor control  
+   - [Syncfusion.SfRichTextBoxAdv.WPF](https://www.nuget.org/packages/Syncfusion.SfRichTextBoxAdv.WPF) – Rich text editor control  
    - [Syncfusion.SfRichTextRibbon.Wpf](https://www.nuget.org/packages/Syncfusion.SfRichTextRibbon.WPF) – Ribbon UI for the editor  
    - [Syncfusion.Themes.Windows11Light.WPF](https://www.nuget.org/packages/Syncfusion.Themes.Windows11Light.WPF) – Windows 11 Light theme
 3. Ensure all dependencies are installed successfully and the project is restored without errors.

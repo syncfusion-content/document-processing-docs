@@ -6,7 +6,7 @@ control: SfRichTextBoxAdv
 documentation: ug
 keywords: getting started, docx editor
 ---
-# Getting started with Syncfusion<sup>&reg;</sup> UWP RichTextBox
+# Getting Started with Syncfusion<sup>&reg;</sup> UWP RichTextBox
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> [UWP RichTextBox](https://www.syncfusion.com/docx-editor-sdk/uwp-docx-editor) (SfRichTextBoxAdv) enables you to create, edit, view, and print Word documents in UWP applications. This section guides you through the steps to get started and create a RichTextBox in a UWP application.
 
@@ -40,7 +40,7 @@ N> The **project name** is used as the default namespace (for example, in `x:Cla
 
  **Using NuGet Package Manager (UI):** 
 
-1.	In Solution Explorer, right-click the project and select **Manage NuGet Packages**.
+1.	In Solution Explorer, right-click the project and choose **Manage NuGet Packages**.
 2.	Search for [Syncfusion.SfRichTextBoxAdv.UWP](https://www.nuget.org/packages/Syncfusion.SfRichTextBoxAdv.UWP) and install the latest version.
 3.	Verify that all [required dependencies](https://help.syncfusion.com/uwp/control-dependencies#sfrichtextboxadv) are installed and the project is successfully restored.
 
@@ -162,8 +162,8 @@ namespace DocumentEditor
 ### Run the Application
 
 1. Press **F5** or click **Debug > Start Debugging** in Visual Studio.
-2. The UWP application is deployed and launched on the selected target device and displays the SfRichTextBoxAdv control
-3. Press Ctrl+O to open an existing document. The selected document will be displayed within the SfRichTextBoxAdv control, as shown below.
+2. The UWP application is deployed and launched on the selected target device and displays the SfRichTextBoxAdv control.
+3. Press **Ctrl+O** to open an existing document. The selected document will be displayed within the SfRichTextBoxAdv control, as shown below.
 
 ![UWP SfRichTextBoxAdv Control](Getting-Started_images/uwp-sfrichtextboxadv-control.png)
 
