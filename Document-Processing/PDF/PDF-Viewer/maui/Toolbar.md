@@ -10,15 +10,15 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 # Working with the Toolbar in .NET MAUI PDF Viewer (SfPdfViewer)
 
-The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) includes a built-in toolbar that enhances PDF viewing and editing capabilities, allowing you to perform operations such as adding and modifying annotations, searching for text, and more.
+The [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) includes a built-in toolbar that enhances PDF viewing and editing capabilities, allowing you to perform operations such as adding and modifying annotations, searching for text, and more.
 
 ## Toolbars structure 
 
-The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) features a built-in toolbar that utilizes multiple or multilevel toolbars. This design ensures that the user interface remains clean and accessible. We have incorporated multiple toolbars, such as top, bottom, and sub-toolbars for editing and choosing types, to ensure comprehensive functionality across various platforms. These toolbars are strategically organized based on the available screen space, adapting to different screen sizes on both mobile and desktop platforms. This approach ensures that tools are easily accessible, preventing the interface from cluttering.
+The [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) features a built-in toolbar that utilizes multiple or multilevel toolbars. This design ensures that the user interface remains clean and accessible. We have incorporated multiple toolbars, such as top, bottom, and sub-toolbars for editing and choosing types, to ensure comprehensive functionality across various platforms. These toolbars are strategically organized based on the available screen space, adapting to different screen sizes on both mobile and desktop platforms. This approach ensures that tools are easily accessible, preventing the interface from cluttering.
 
 ### Need for using multiple toolbars
 
-Depending on the available screen space, the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) organizes its tools into multiple or multilevel toolbars on mobile and desktop platforms. The use of multiple toolbars in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) is essential to maintain a user-friendly interface. By separating tools into different toolbars, users can quickly find and use the tools they need without the interface becoming cluttered.
+Depending on the available screen space, the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) organizes its tools into multiple or multilevel toolbars on mobile and desktop platforms. The use of multiple toolbars in the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) is essential to maintain a user-friendly interface. By separating tools into different toolbars, users can quickly find and use the tools they need without the interface becoming cluttered.
 
 The names of these toolbars and their description are listed in the following sections. 
 
@@ -200,7 +200,7 @@ For details on showing, hiding, adding, removing, and reordering toolbars and to
 
 ## Toolbar items
 
-In [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html), the user  can also manage the items within each toolbar of the PDF Viewer. This allows you to control which tools are available and how they are arranged, providing a tailored user experience that aligns with your application’s requirements.
+In [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html), the user  can also manage the items within each toolbar of the PDF Viewer. This allows you to control which tools are available and how they are arranged, providing a tailored user experience that aligns with your application’s requirements.
 
 The names of these toolbar items, along with their descriptions and availability in the toolbars, are listed in the following sections.
 

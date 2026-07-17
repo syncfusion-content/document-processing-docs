@@ -10,7 +10,7 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 # Save a Document in .NET MAUI PDF Viewer (SfPdfViewer)
 
-After annotating, filling forms, or applying redactions, use the PDF Viewer's save methods to persist all changes back to a file stream. You can save synchronously with [SaveDocument](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_SaveDocument_System_IO_Stream_) or asynchronously with [SaveDocumentAsync](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_SaveDocumentAsync_System_IO_Stream_System_Threading_CancellationToken_) — and optionally flatten annotations or form fields into static content at the same time. 
+After annotating, filling forms, or applying redactions, use the PDF Viewer's save methods to persist all changes back to a file stream. You can save synchronously with [SaveDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_SaveDocument_System_IO_Stream_) or asynchronously with [SaveDocumentAsync](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_SaveDocumentAsync_System_IO_Stream_System_Threading_CancellationToken_) — and optionally flatten annotations or form fields into static content at the same time. 
 
 The following example explains how to save the modified document if the document needs to be saved in the application’s data directory. 
 
@@ -36,7 +36,7 @@ private void SaveDocument()
 
 ## Save a document asynchronously
 
-To save a document without blocking the UI thread, use the [SaveDocumentAsync](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_SaveDocumentAsync_System_IO_Stream_System_Threading_CancellationToken_) method. This is the recommended approach for saving from event handlers or UI interactions. An optional [CancellationToken](https://learn.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken) can be passed to cancel the operation if needed.
+To save a document without blocking the UI thread, use the [SaveDocumentAsync](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_SaveDocumentAsync_System_IO_Stream_System_Threading_CancellationToken_) method. This is the recommended approach for saving from event handlers or UI interactions. An optional [CancellationToken](https://learn.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken) can be passed to cancel the operation if needed.
 
 {% tabs %}
 {% highlight c# %}
@@ -59,15 +59,15 @@ private async Task SaveDocumentAsync()
 
 ## Flatten annotations and form fields on save
 
-Flattening refers to the process of converting interactive elements, such as annotations and form fields, into a static, non-editable format within a PDF document. The SfPdfViewer allows you to save the annotations and form fields by flattening using the [FlattenOnSave](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_FlattenOnSave) API.
+Flattening refers to the process of converting interactive elements, such as annotations and form fields, into a static, non-editable format within a PDF document. The SfPdfViewer allows you to save the annotations and form fields by flattening using the [FlattenOnSave](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_FlattenOnSave) API.
 
 ### Flatten the annotation on save
 
-The [FlattenOnSave](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_FlattenOnSave) API helps you to flatten the specified annotation in a PDF document. The following code sample explains how to flatten the first annotation from the annotation collection.
+The [FlattenOnSave](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_FlattenOnSave) API helps you to flatten the specified annotation in a PDF document. The following code sample explains how to flatten the first annotation from the annotation collection.
 
 {% tabs %}
 {% highlight c# %}
-// Obtain the annotation collection using [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance.
+// Obtain the annotation collection using [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance.
 ReadOnlyObservableCollection<Annotation> annotations = PdfViewer.Annotations;
 // Obtain the first annotation in the annotation collection.
 Annotation annotation = annotations[0];
@@ -78,11 +78,11 @@ annotation.FlattenOnSave = true;
 
 ### Flatten form field on save
 
-The [FlattenOnSave](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_FlattenOnSave) API helps you to flatten the specified form field in a PDF document. The following code sample explains how to flatten the first form field from the form field collection.
+The [FlattenOnSave](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_FlattenOnSave) API helps you to flatten the specified form field in a PDF document. The following code sample explains how to flatten the first form field from the form field collection.
 
 {% tabs %}
 {% highlight c# %}
-// Obtain the form field collection using [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance.
+// Obtain the form field collection using [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance.
 ReadOnlyObservableCollection<FormField> formFields = PdfViewer.FormFields;
 // Obtain the first form field in the form fields collection.
 FormField formField = formFields[0];
@@ -93,7 +93,7 @@ formField.FlattenOnSave = true;
 
 ### Limitation
 
-Currently, when saving a document by flattening that contains sticky note annotations, the sticky note icon always appears as the default [comment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.StickyNoteIcon.html#Syncfusion_Maui_PdfViewer_StickyNoteIcon_Comment) icon appearance in the saved document.
+Currently, when saving a document by flattening that contains sticky note annotations, the sticky note icon always appears as the default [comment](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.StickyNoteIcon.html#Syncfusion_Maui_PdfViewer_StickyNoteIcon_Comment) icon appearance in the saved document.
 
 ## See Also
 - [Annotations Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-overview)

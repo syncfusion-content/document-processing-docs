@@ -10,7 +10,7 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 # Import and Export Form Data in .NET MAUI PDF Viewer (SfPdfViewer)
 
-The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to import form data into a PDF document and export filled form data from it. This is useful for pre-populating forms, backing up responses, or transferring data between systems.
+The [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to import form data into a PDF document and export filled form data from it. This is useful for pre-populating forms, backing up responses, or transferring data between systems.
 
 ## Supported data formats
 
@@ -23,13 +23,13 @@ The following formats are supported for both import and export:
 | JSON | Syncfusion-specific format for structured form data exchange across Syncfusion PDF viewers (WPF, Flutter, JavaScript, etc.). |
 | XML | Syncfusion-specific format for hierarchical form data exchange across Syncfusion PDF viewers (WPF, Flutter, JavaScript, etc.). |
 
-The required format can be selected from the [DataFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Pdf.Parsing.DataFormat.html) enumeration.
+The required format can be selected from the [DataFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.DataFormat.html) enumeration.
 
 N> XFDF and FDF are standard formats compatible with global PDF viewers. JSON and XML are Syncfusion-specific formats for cross-platform use within Syncfusion products only.
 
 ## Import form data
 
-Use the [ImportFormData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ImportFormData_System_IO_Stream_Syncfusion_Pdf_Parsing_DataFormat_System_Boolean_) method to populate form fields from an external data file. Pass the file stream and the data format as parameters.
+Use the [ImportFormData](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ImportFormData_System_IO_Stream_Syncfusion_Pdf_Parsing_DataFormat_System_Boolean_) method to populate form fields from an external data file. Pass the file stream and the data format as parameters.
 
 The following example imports form data from an XFDF file stored in the application's data directory.
 
@@ -61,9 +61,9 @@ void ImportFormDataWithOnError()
 
 ## Export form data
 
-Use the [ExportFormData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ExportFormData_System_IO_Stream_Syncfusion_Pdf_Parsing_DataFormat_) method to write the current form field values to a file. Pass an empty writable stream and the desired format.
+Use the [ExportFormData](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ExportFormData_System_IO_Stream_Syncfusion_Pdf_Parsing_DataFormat_) method to write the current form field values to a file. Pass an empty writable stream and the desired format.
 
-The following example exports form data to an XFDF file in the application's data directory. Ensure the PDF document is loaded before exporting — call `ExportFormData` from the [DocumentLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoaded) event handler.
+The following example exports form data to an XFDF file in the application's data directory. Ensure the PDF document is loaded before exporting — call `ExportFormData` from the [DocumentLoaded](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoaded) event handler.
 
 First, wire the `DocumentLoaded` event after loading the document:
 
