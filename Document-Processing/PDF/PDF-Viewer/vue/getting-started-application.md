@@ -16,7 +16,7 @@ This section explains how to create a Vue 3 application with Vite and integrate 
 
 **Composition API** – A modern approach to organizing component logic by composing smaller, reusable functions. This method offers better code organization and is more reusable for complex components.
 
-**Options API** – The traditional Vue approach that organizes component logic into a series of options (data, methods, computed properties, watchers, lifecycle hooks, etc.).
+**Options API** – The traditional Vue approach that organizes component logic into a series of options (data, methods, computed properties, watchers, life cycle hooks, etc.).
 
 ## Prerequisites
 
