@@ -82,7 +82,7 @@ Add the following Spreadsheet and dependent component style references to the `s
 @import '../node_modules/@syncfusion/ej2-react-spreadsheet/styles/tailwind3.css';
 ```
 
-Syncfusion also ships additional built-in themes. To use a different theme, replace `tailwind3.css` with the theme of your choice (for example, `bootstrap5.css`, `fluent2.css`, etc,.) in all `@import` statements.
+Syncfusion also ships additional built-in themes. To use a different theme, replace `tailwind3.css` with the theme of your choice (for example, `bootstrap5.css`, `fluent2.css`, etc.) in all `@import` statements.
 
 > To know more about built-in themes and CSS reference for individual components, refer to the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) section.
 
