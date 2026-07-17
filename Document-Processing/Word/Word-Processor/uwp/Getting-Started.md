@@ -1,10 +1,10 @@
 ---
 title: Getting Started with UWP RichTextBox control | Syncfusion
-description: Learn here about getting started with Syncfusion UWP RichTextBox (SfRichTextBoxAdv) control, its elements and more.
+description: Learn here all about getting started with Syncfusion UWP RichTextBox (SfRichTextBoxAdv) control and more.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: getting-started
+keywords: getting started, docx editor
 ---
 # Getting started with Syncfusion<sup>&reg;</sup> UWP RichTextBox
 
@@ -28,7 +28,7 @@ The steps below cover the essential tasks required to add and use the SfRichText
 
 N> The **project name** is used as the default namespace (for example, in `x:Class`). It is recommended to use **DocumentEditor** to match the code examples provided.
 
-- Select the **target version** and **minimum version** of Windows as required.
+- Select the **target version** and **minimum version** of Windows as required. See [Syncfusion® UWP system requirements](https://help.syncfusion.com/uwp/system-requirements) for tooling and supported Windows versions.
 - Click **Create**.
 
 
@@ -63,6 +63,7 @@ The following assembly references are required to use the **SfRichTextBoxAdv** c
 
 - Syncfusion.SfRichTextBoxAdv.UWP
 - Syncfusion.DocIO.UWP
+- Syncfusion.OfficeChart.UWP
 - Syncfusion.SfRadialMenu.UWP
 - Syncfusion.SfShared.UWP
 
@@ -70,7 +71,11 @@ The following assembly references are required to use the **SfRichTextBoxAdv** c
 
 {% endtabcontents %}
 
-N> 1. Starting with v16.2.0.41 (2018 Vol 2), if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your UWP application to use our components.
+N> A valid Syncfusion&reg; license key is required from **v16.2.0.41 (2018 Vol 2)** onwards.
+
+  - The required `Syncfusion.Licensing` assembly is installed automatically as a NuGet dependency — no separate reference is needed.
+  - If you are using the **Assemblies** installation, you must add a reference to `Syncfusion.Licensing.dll` in your project.
+  - Register the license key in the `App` constructor of `App.xaml.cs` before any Syncfusion control is initialized. For the exact `RegisterLicense` code, refer to [Register Syncfusion® License key in a UWP application](https://help.syncfusion.com/common/essential-studio/licensing/how-to-register-in-an-application#uwp).
 
 ### Add SfRichTextBoxAdv control
 
@@ -156,7 +161,7 @@ namespace DocumentEditor
 
 ### Run the Application
 
-1. Press **F5** or click  **Debug → Start Debugging** in Visual Studio.
+1. Press **F5** or click **Debug > Start Debugging** in Visual Studio.
 2. The UWP application is deployed and launched on the selected target device and displays the SfRichTextBoxAdv control
 3. Press Ctrl+O to open an existing document. The selected document will be displayed within the SfRichTextBoxAdv control, as shown below.
 
