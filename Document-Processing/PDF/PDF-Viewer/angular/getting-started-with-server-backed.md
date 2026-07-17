@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 This section explains how to create a simple Angular application and add the server-backed [Syncfusion® Angular PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/angular-pdf-viewer) component with the minimum required setup.
 
-N> As of the 2026 Vol 2 main release (June 2026), no new features will be added to the server-backed PDF Viewer, as almost all of the PDF Viewer functionalities are now available in the Standalone PDF Viewer. If you are currently using the server-backed PDF Viewer, refer to the [migration documentation](./server-to-standalone) to transition to the Standalone PDF Viewer.
+N> As of the 2026 Vol 2 main release (July 6, 2026), no new features will be added to the server-backed PDF Viewer, as almost all of the PDF Viewer functionalities are now available in the Standalone PDF Viewer. If you are currently using the server-backed PDF Viewer, refer to the [migration documentation](./server-to-standalone) to transition to the Standalone PDF Viewer.
 
 ## Prerequisites
 
