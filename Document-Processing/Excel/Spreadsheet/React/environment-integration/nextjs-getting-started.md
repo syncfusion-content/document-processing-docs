@@ -12,7 +12,7 @@ This section provides a step-by-step guide for setting up a Next.js application 
 
 ## What is Next.js?
 
-[Next.js](https://nextjs.org/) is a React framework that makes it easy to build fast, SEO-friendly, and user-friendly web applications. It provides features such as server-side rendering, automatic code splitting, routing, and API routes, making it an excellent choice for building modern web applications.
+[Next.js](https://nextjs.org) is a React framework that makes it easy to build fast, SEO-friendly, and user-friendly web applications. It provides features such as server-side rendering, automatic code splitting, routing, and API routes, making it an excellent choice for building modern web applications.
 
 ## Prerequisites
 
@@ -461,7 +461,7 @@ Common setup and runtime issues are listed below with their cause and a resoluti
 | **`use client` / hydration error**: `Text content did not match` or error referencing server-rendered HTML. | The Spreadsheet uses browser APIs (DOM, events) and cannot be server-rendered. | Ensure the `'use client'` directive is present at the top of `src/app/page.tsx`. If the component is imported into a Server Component, move it to a separate Client Component file. See [React Server and Client Components](https://react.dev/reference/rsc/use-client). |
 | **CSS not applied / unstyled component** (plain HTML layout, broken toolbar icons). | Theme stylesheets were not imported or imported with the wrong relative path. | Verify the `@import` blocks for all dependency CSS files (`ej2-base`, `ej2-inputs`, etc.) are present in `src/app/globals.css` and the paths resolve from the `src/app/` location. Restart the dev server after editing CSS. |
 | **`Cannot find module '@syncfusion/ej2...'` or peer dependency warnings during `npm install`.** | Package not installed, or React version mismatch. | Re-run `npm install @syncfusion/ej2-react-spreadsheet`. For peer dependency conflicts, ensure React is on a version supported by the package (see the [NuGet package / npm version](../../../../NuGet-Packages.md) notes) and use `--legacy-peer-deps` only as a temporary workaround. |
-| **License warning or toolbar shows a license banner at runtime.** | Syncfusion license key not registered, or registered after the component renders. | Register the license key in the application entry point **before** rendering any Syncfusion component. See [Register the Syncfusion License Key](../../register-the-syncfusion-license-key) and [Licensing FAQ](../../../../Licensing/licensing-faq/). |
+| **License warning or toolbar shows a license banner at runtime.** | Syncfusion license key not registered, or registered after the component renders. | Register the license key in the application entry point **before** rendering any Syncfusion component. See [Register the Syncfusion License Key](../../register-the-syncfusion-license-key) and [Licensing FAQ](../../../../Licensing/licensing-faq). |
 | **Open/Save actions fail with network or CORS errors.** | The `openUrl` / `saveUrl` endpoints are unreachable from the browser, or in production the Syncfusion demo services are rate-limited / blocked. | Host your own Spreadsheet open/save web service and ensure CORS is enabled. Refer to the [Web Services](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/web-services/webservice-overview) section. |
 
 

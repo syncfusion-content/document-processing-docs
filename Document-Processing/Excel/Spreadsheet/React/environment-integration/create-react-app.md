@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Getting Started with the React Spreadsheet Editor in a Create React App Project
+# Getting Started with the React Spreadsheet Editor in Create React App
 
 This article provides a step-by-step guide for setting up a React application using Create React App and integrating React Spreadsheet Editor.
 
