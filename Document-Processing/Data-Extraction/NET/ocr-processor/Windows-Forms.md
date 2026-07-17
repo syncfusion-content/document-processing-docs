@@ -9,7 +9,21 @@ keywords: Assemblies
 # Perform OCR in Windows Forms
 The [.NET OCR library](https://www.syncfusion.com/document-sdk/net-pdf-library/ocr-process) is used to extract text from scanned PDFs and images in Windows Forms applications with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.
 
-## Register the license key
+## Prerequisites
+
+**Version Compatibility**
+
+- Syncfusion.Pdf.OCR.WinForms supports .NET Framework 4.6.2 and later, as well as .NET 8.0 for Windows and later
+
+**Supported Inputs**
+
+The OCR processor supports the following input formats:
+
+- Single-page and multi-page PDF documents
+- Scanned images in common formats (JPEG, PNG, TIFF)
+- Recommended DPI: 200 DPI or higher for optimal OCR accuracy
+
+**Register the License Key**
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you must add the "Syncfusion.Licensing" assembly reference and register a license key in your application. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details on registering a Syncfusion<sup>&reg;</sup> license key.
 
@@ -29,6 +43,9 @@ public Form1()
 {% endhighlight %}
 {% endtabs %}
 
+N> 1. Beginning from version 21.1.x, the TesseractBinaries and Tesseract language data folders are now included by default; you no longer have to set these paths explicitly.
+N> 2. The current NuGet package includes Tesseract 5.0, which provides support for 100+ languages.
+
 ## Steps to perform OCR on an entire PDF document in Windows Forms 
 
 Step 1: Create a new Windows Forms application project. 
@@ -39,17 +56,6 @@ In the project configuration window, select your target framework (.NET Framewor
 
 Step 2: Install the [Syncfusion.Pdf.OCR.WinForms](https://www.nuget.org/packages/Syncfusion.Pdf.OCR.WinForms) NuGet package into your WinForms application from [nuget.org](https://www.nuget.org/).
 ![OCR NuGet package installation](OCR-Images/OCR-WF-NuGet-package.png)
-
-**Version Compatibility:**
-- Syncfusion.Pdf.OCR.WinForms supports .NET Framework 4.6.2 and later, as well as .NET 8.0 for Windows and later
-
-**Supported Inputs:**
-- Single-page and multi-page PDF documents
-- Scanned images in common formats (JPEG, PNG, TIFF)
-- Recommended DPI: 200 DPI or higher for optimal OCR accuracy
-
-N> 1. Beginning from version 21.1.x, the TesseractBinaries and Tesseract language data folders are now included by default; you no longer have to set these paths explicitly.
-N> 2. The current NuGet package includes Tesseract 5.0, which provides support for 100+ languages.
 
 Step 3: Add a new button in Form1.Designer.cs file. 
 
