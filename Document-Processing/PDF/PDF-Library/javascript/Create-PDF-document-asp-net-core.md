@@ -20,7 +20,7 @@ This guide explains how to integrate the [JavaScript PDF Library](https://www.sy
 Before you begin, make sure you have the following installed:
 
 - Visual Studio 2022 (any edition) with the **ASP.NET and web development** workload.
-- .NET SDK 8.0 (LTS) or 9.0.
+- .NET SDK 8.0 (LTS) or later.
 - An active internet connection (the sample loads the JavaScript PDF Library from the Syncfusion CDN).
 - A supported browser such as the latest versions of Microsoft Edge, Google Chrome, or Mozilla Firefox.
 
