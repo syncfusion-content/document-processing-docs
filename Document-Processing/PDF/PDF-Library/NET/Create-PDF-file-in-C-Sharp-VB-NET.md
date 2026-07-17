@@ -1,7 +1,7 @@
 ---
 title: Create or Generate PDF file in C# and VB.NET | Syncfusion
 canonical_url: "https://www.syncfusion.com/document-sdk/net-pdf-library"
-description: Learn how to create or generate a PDF file in C# and VB.NET with elements like text, image and table using Syncfusion .NET PDF library without Adobe. 
+description: Learn how to create or generate a PDF file in C# and VB.NET with elements like text, image, and table using Syncfusion .NET PDF library without Adobe. 
 platform: document-processing
 control: PDF
 documentation: UG
@@ -9,7 +9,7 @@ keywords: create pdf, edit pdf, write pdf, merge, pdf form, fill form, digital s
 ---
 # Create or Generate PDF file in C# and VB.NET
 
-The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) used to create PDF document from scratch and saving it to disk or stream. This library also offers functionality to merge, split, stamp, forms, and secure PDF files.
+The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create a PDF document from scratch and save it to disk or stream. This library also offers functionality to merge, split, stamp, work with forms, and secure PDF files.
 
 To include the .NET PDF library into your application, please refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) documentation.
 
@@ -282,7 +282,7 @@ pdfGrid.Draw(page, New PointF(10, 10))
 'Save the document
 doc.Save("Output.pdf")
 'Close the document
-doc.Close(true)
+doc.Close(True)
 
 {% endhighlight %}
 
