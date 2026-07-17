@@ -174,15 +174,15 @@ Drag the **edge handle** (the circumference) to adjust the radius size. The cent
 #### Edit Radius Annotation (UI)
 Select the Radius annotation first — the annotation toolbar appears below the main toolbar. Use it to change:
 
-- **Fill Color** — pick a new color with the Edit Color tool.
+- **Fill Color**: pick a new color with the Edit Color tool.
   ![Editing Calibrate FillColor in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-fillcolor.png)
-- **Stroke Color** — change the line color with the Edit Stroke Color tool.
+- **Stroke Color**: change the line color with the Edit Stroke Color tool.
   ![Editing Calibrate StrokeColor in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-stroke-color.png)
-- **Thickness** — adjust the line width with the Edit Thickness tool.
+- **Thickness**: adjust the line width with the Edit Thickness tool.
   ![Editing Calibrate Thickness in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-thickness.png)
-- **Opacity** — change transparency with the Edit Opacity tool.
+- **Opacity**: change transparency with the Edit Opacity tool.
   ![Editing Calibrate Opacity in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-opacity.png)
-- **Line properties** — change the leader style (line only, with arrows, or full dimension lines) with the Edit Property tool.
+- **Line properties**: change the leader style (line only, with arrows, or full dimension lines) with the Edit Property tool.
   ![Editing Calibrate Property in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-property.png)
 
 #### Edit Radius Annotation Programmatically

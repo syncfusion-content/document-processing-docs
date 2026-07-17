@@ -99,10 +99,11 @@ The following example shows:
 }
 ```
 
-N> Use `SfPdfViewer2` component with `@ref` to get direct access to the viewer instance.
-N> `Created` event triggers when the PDF Viewer component is rendered.
-N> `DocumentLoaded` event triggers when the document is successfully loaded. Use this event to access document name, page count, and other document-specific details.
-N> Always null-check the `Viewer` reference before calling any viewer API. Methods such as `Viewer.ZoomAsync()`, `Viewer.GoToPageAsync()`, `Viewer.PrintAsync()`, and `Viewer.DownloadAsync()` are safe to invoke only after the `DocumentLoaded` event has fired or from a user action that occurs after load.
+N>
+* Use `SfPdfViewer2` component with `@ref` to get direct access to the viewer instance.
+* `Created` event triggers when the PDF Viewer component is rendered.
+* `DocumentLoaded` event triggers when the document is successfully loaded. Use this event to access document name, page count, and other document-specific details.
+* Always null-check the `Viewer` reference before calling any viewer API. Methods such as `Viewer.ZoomAsync()`, `Viewer.GoToPageAsync()`, `Viewer.PrintAsync()`, and `Viewer.DownloadAsync()` are safe to invoke only after the `DocumentLoaded` event has fired or from a user action that occurs after load.
 
 ## End-to-End Example: Call Viewer APIs with TextBox Input
 
