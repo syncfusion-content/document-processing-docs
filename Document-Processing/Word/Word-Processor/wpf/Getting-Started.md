@@ -186,7 +186,7 @@ If you need a ribbon-based user interface, you can add **SfRichTextRibbon** with
 **Using NuGet Package Manager (UI)**
 
 1.	In Solution Explorer, right-click the project and choose **Manage NuGet Packages**.
-2.	Search for [Syncfusion.SfRichTextRibbon.Wpf](https://www.nuget.org/packages/Syncfusion.SfRichTextRibbon.WPF) and install the latest version.
+2.	Search for [Syncfusion.SfRichTextRibbon.WPF](https://www.nuget.org/packages/Syncfusion.SfRichTextRibbon.WPF) and install the latest version.
 3.	Ensure the [necessary dependencies](https://help.syncfusion.com/wpf/control-dependencies#sfrichtextribbon) are installed correctly, and the project is restored.
 
 
@@ -375,7 +375,7 @@ The steps below outline the essential tasks required to configure and apply them
 1. In Solution Explorer, right-click the project and choose **Manage NuGet Packages**.
 2. In the **Browse** tab, search for and install the latest version of the following packages:
    - [Syncfusion.SfRichTextBoxAdv.WPF](https://www.nuget.org/packages/Syncfusion.SfRichTextBoxAdv.WPF) – Rich text editor control  
-   - [Syncfusion.SfRichTextRibbon.Wpf](https://www.nuget.org/packages/Syncfusion.SfRichTextRibbon.WPF) – Ribbon UI for the editor  
+   - [Syncfusion.SfRichTextRibbon.WPF](https://www.nuget.org/packages/Syncfusion.SfRichTextRibbon.WPF) – Ribbon UI for the editor  
    - [Syncfusion.Themes.Windows11Light.WPF](https://www.nuget.org/packages/Syncfusion.Themes.Windows11Light.WPF) – Windows 11 Light theme
 3. Ensure all dependencies are installed successfully and the project is restored without errors.
 
@@ -435,7 +435,7 @@ To add the controls and apply a theme manually in XAML, follow these steps:
 
 The XAML snippet below assumes both `SfRichTextBoxAdv` and `SfRichTextRibbon` are already declared in `MainWindow.xaml`, with the `SfRichTextBoxAdv` set as the ribbon's `DataContext`. 
 
-For the full declaration, see the [**Add SfRichTextRibbon to the application → Via XAML**](https://help.syncfusion.com/document-processing/word/word-processor/wpf/getting-started?tabcontent=via-xaml#add-sfrichtextribbon-to-the-application) section of this page.
+For the full declaration, see the [**Add SfRichTextRibbon to the application → Via XAML**](https://help.syncfusion.com/document-processing/word/word-processor/wpf/getting-started#add-sfrichtextribbon-to-the-application) section of this page.
 
 **Apply Theme in XAML**
 
