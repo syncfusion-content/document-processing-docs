@@ -12,11 +12,15 @@ The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) 
 
 ## Prerequisites
 
-* An active **Microsoft Azure subscription**. If you don't have one, [create a free account](https://azure.microsoft.com/free/) before starting.
-* **Visual Studio 2022** with the **ASP.NET and web development** and **Azure development** workloads installed.
-* The **Azure SDK** and the latest **Azure App Service tools** for Visual Studio.
-* .NET 8.0 or later.
-* A valid Syncfusion license key. Refer to the [licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) to register the key in your application.
+| Item | Details |
+| --- | --- |
+| **Development Environment** | Visual Studio 2022 or Visual Studio Code with C# extension |
+| **.NET Version** | .NET 8.0 or later |
+| **NuGet Package** | Syncfusion.Pdf.NET (latest version) |
+| **Azure Subscription** | Active Microsoft Azure account with resource group |
+| **Azure CLI** | Optional but recommended for deployment |
+| **License** | Syncfusion license key (required for production deployments) |
+| **Image Assets** | Place sample images in `wwwroot/images/` folder |
 
 ## Steps to create PDF document in Azure App Service on Linux
 
@@ -205,14 +209,38 @@ An online sample to [create a PDF document](https://document.syncfusion.com/demo
 
 ## Troubleshooting
 
-* **Image not found (`AdventureCycle.jpg`)** — Confirm the image is placed at `wwwroot/Data/AdventureCycle.jpg` and is included in the project (set **Copy to Output Directory** to **Copy if newer**).
-* **500 error on Linux App Service** — Linux App Service paths are case-sensitive. Verify the file path matches exactly.
-* **PDF downloads as a blank or corrupted file** — Ensure the `MemoryStream` is reset (`stream.Position = 0`) before returning, as shown in the example.
-* **Deployment fails** — Open the **Output** window in Visual Studio for details. Common causes are missing NuGet packages or unsupported target framework on Linux.
+| Issue | Solution |
+|-------|----------|
+| **Image File Not Found** | Verify the image file exists at `wwwroot/images/AdventureCycle.jpg`. Check file permissions and case sensitivity on Linux (paths are case-sensitive). |
+| **Syncfusion.Pdf.NET Package Not Found** | Run `dotnet add package Syncfusion.Pdf.NET` or use NuGet Package Manager to install the latest version targeting .NET 6.0+. |
+| **"Could not find wwwroot folder"** | Verify the project structure includes a `wwwroot` folder. If missing, create it at the project root and add images to `wwwroot/images/` subdirectory. |
+| **Deployment Failed with Authentication Error** | Verify you are logged into Azure: `az login`. Check Azure subscription and ensure you have permissions to create resources. |
+| **Application Timeout on Startup** | If using a Free tier App Service, startup may be slow. Upgrade to B1 or higher tier for better performance. Check Application Insights logs for detailed errors. |
+| **PDF Download Not Working** | Verify the controller returns `File()` with correct content type (`application/pdf`). Check browser developer tools for network errors. |
+| **Missing Dependencies in Deployment** | Ensure all NuGet packages are restored during deployment. Check build output in Azure portal → Deployment Center → Logs. |
+| **Memory Issues Generating Large PDFs** | Use streaming instead of buffering. For very large PDFs, consider Azure Functions with higher memory allocation instead of App Service. |
 
 ## See also
 
 * [Create a PDF document in .NET](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-core)
-* [Azure App Service on Linux documentation](https://learn.microsoft.com/azure/app-service/overview)
+* [Azure App Service on Linux documentation](https://learn.microsoft.com/en-us/azure/app-service/overview)
 * [Syncfusion.Pdf.Net.Core NuGet package](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/)
 * [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview) 
+
+## Next Steps
+
+Explore advanced PDF capabilities and Azure integration patterns:
+
+### Advanced PDF Features
+- **[Merge Multiple PDFs](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/merge-documents)** — Combine multiple reports into a single document
+- **[Split PDF Documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/split-documents)** — Extract specific pages or create filtered PDFs
+- **[Add Watermarks](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-watermarks)** — Brand PDFs with company logos and confidentiality markers
+- **[Create Interactive Forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-forms)** — Build fillable PDF forms for data collection
+- **[Digital Signatures](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-digitalsignature)** — Sign PDFs programmatically for compliance
+
+
+### Azure Integration Patterns
+- **[Store PDFs in Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction)** — Scalable storage for generated documents
+- **[Monitor with Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview)** — Track PDF generation performance and errors
+- **[Auto-scaling Policies](https://learn.microsoft.com/en-us/azure/app-service/manage-scale-up)** — Scale based on demand
+- **[CI/CD with Azure Pipelines](https://learn.microsoft.com/en-us/azure/devops/pipelines/overview)** — Automate deployment updates

@@ -14,7 +14,7 @@ N> Our PDF library is supported in .NET MAUI applications on **Android**, **iOS*
 
 ## Prerequisites
 
-- **.NET SDK 8.0** (or 7.0) with the **.NET MAUI** workload installed. Verify with `dotnet workload list` and install with `dotnet workload install maui` if missing.
+- **.NET SDK 8.0** or later with the **.NET MAUI** workload installed. Verify with `dotnet workload list` and install with `dotnet workload install maui` if missing.
 - **Visual Studio 2022** (17.8 or later) with the **.NET Multi-platform App UI development** workload, or **Visual Studio Code** with the .NET MAUI extension, or **JetBrains Rider**.
 - The **[Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core)** NuGet package installed in the shared project and each platform-specific project.
 - A **Syncfusion<sup>&reg;</sup> license key** — register it in `MauiProgram.cs` using `Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")`. For details, see the [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
@@ -97,8 +97,8 @@ An online sample demonstrating how to [create a PDF document](https://document.s
 - [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required)
 - [Syncfusion<sup>&reg;</sup> Licensing Overview](https://help.syncfusion.com/common/essential-studio/licensing/overview)
 - [Open and read PDF files](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/open-pdf-files)
-- [Merge PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/merge-pdf-documents)
-- [Split PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/split-pdf-documents)
+- [Merge PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/merge-documents)
+- [Split PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/split-documents)
 - [Working with PDF forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-forms)
 - [Working with security and permissions](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-security)
 - [Working with stamps and watermarks](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-watermarks)

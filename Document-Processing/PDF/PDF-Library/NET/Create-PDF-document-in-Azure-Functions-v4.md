@@ -15,7 +15,7 @@ The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) 
 Before you begin, ensure the following are installed and configured:
 
 - **Visual Studio 2022** with the **Azure development** workload installed.
-- **.NET 8.0 SDK** (matching the function worker selected in Step 3).
+- **.NET 8.0 SDK** or later (matching the function worker selected in Step 3).
 - An active **Azure subscription**. If you do not have one, create a [free account](https://azure.microsoft.com/free/).
 - An **Azure Storage account** (required by Azure Functions for runtime operations such as triggers and logging).
 
@@ -27,7 +27,7 @@ Step 1: In Visual Studio 2022, create a new Azure Functions project.
 Step 2: Enter a project name, choose the location, and then click **Create**.
 ![Create a project name](Azure_Images/Azure-Functions-V4/Configuration_project.png)
 
-Step 3: Select function worker as **.NET 8.0**. 
+Step 3: Select function worker as **.NET 8.0** or later
 ![Select function worker](Azure_Images/Azure-Functions-V4/Additional_information.png)
 
 Step 4: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
@@ -180,7 +180,7 @@ An online sample link to [create a PDF document](https://document.syncfusion.com
 * **NuGet restore fails on .NET Framework** — `Syncfusion.Pdf.AspNet` is a legacy package; if it does not restore, pin a specific older version (for example, `Install-Package Syncfusion.Pdf.AspNet -Version 19.4.0.55`) compatible with your target framework.
 * **Functions v1 runtime not listed in Visual Studio** — Install the **Azure Functions v1 (.NET Framework)** template via the Visual Studio Installer under **Individual components**.
 
-> For additional help, see the Syncfusion [.NET PDF library FAQ](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/faq) or open a support ticket through the [Syncfusion support portal](https://www.syncfusion.com/support).
+> For additional help, see the Syncfusion [.NET PDF library FAQ](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/faqs/migrate-from-net-framework-to-net-core) or open a support ticket through the [Syncfusion support portal](https://www.syncfusion.com/support).
 
 ## Next Steps
 

@@ -49,7 +49,7 @@ The following steps illustrate creating a simple **Hello World** PDF document in
 
 ### Prerequisites
 
-- Install the **.NET Framework targeting pack** (4.6 or later) via the Visual Studio Installer. The .NET Framework runtime is included with Windows; the **argeting pack** adds the reference assemblies required to build the project.
+- Install the **.NET Framework targeting pack** (4.6.2 or later) via the Visual Studio Installer. The .NET Framework runtime is included with Windows; the **argeting pack** adds the reference assemblies required to build the project.
 - Install **Visual Studio 2022** (or 2017) with the **.NET desktop development** workload from the [Visual Studio downloads page](https://visualstudio.microsoft.com/downloads/). The previous version's reference to "Visual Studio Code" was incorrect; this tutorial uses Visual Studio.
 
 **Step 1:** Create a new **Console Application (.NET Framework)** project.
@@ -61,7 +61,7 @@ The following steps illustrate creating a simple **Hello World** PDF document in
 **Step 3:** Install the [Syncfusion.Pdf.WinForms](https://www.nuget.org/packages/Syncfusion.Pdf.WinForms/) NuGet package from [NuGet.org](https://www.nuget.org) using the NuGet Package Manager or `Install-Package Syncfusion.Pdf.WinForms` in the Package Manager Console.
 ![Install the Syncfusion.Pdf.WinForms NuGet package](Console_images/Nuget_package_Framework.png)
 
-N> The [Syncfusion.Pdf.WinForms](https://www.nuget.org/packages/Syncfusion.Pdf.WinForms/) NuGet package is a dependent package for Syncfusion<sup>&reg;</sup> Windows Forms GUI controls, so it is named with the suffix **WinForms**. It contains platform-independent .NET Framework (4.0, 4.5, 4.5.1, 4.6) assemblies of the PDF library and does **not** contain any Windows Forms references or code. We therefore recommend this package for .NET Framework console applications.
+N> The [Syncfusion.Pdf.WinForms](https://www.nuget.org/packages/Syncfusion.Pdf.WinForms/) NuGet package is a dependent package for Syncfusion<sup>&reg;</sup> Windows Forms GUI controls, so it is named with the suffix **WinForms**. It contains platform-independent .NET Framework (4.6.2 or later ) assemblies of the PDF library and does **not** contain any Windows Forms references or code. We therefore recommend this package for .NET Framework console applications.
 
 **Step 4:** Include the following namespaces in `Program.cs`.
 
@@ -130,8 +130,8 @@ An online sample demonstrating how to [create a PDF document](https://document.s
 - [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required)
 - [Syncfusion<sup>&reg;</sup> Licensing Overview](https://help.syncfusion.com/common/essential-studio/licensing/overview)
 - [Open and read PDF files](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/open-pdf-files)
-- [Merge PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/merge-pdf-documents)
-- [Split PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/split-pdf-documents)
+- [Merge PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/merge-documents)
+- [Split PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/split-documents)
 - [Working with PDF forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-forms)
 - [Working with security and permissions](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-security)
 - [Working with stamps and watermarks](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-watermarks)

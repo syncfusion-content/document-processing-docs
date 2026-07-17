@@ -23,9 +23,9 @@ To include the .NET PDF library in your ASP.NET Core Web API, refer to the [NuGe
 
 | Component | Minimum version |
 | --- | --- |
-| .NET SDK | 8.0 |
+| .NET SDK | 8.0 or later|
 | Swashbuckle (Swagger UI) | 6.5.0 or later |
-| Syncfusion<sup>&reg;</sup> PDF library | 21.1.0.35 |
+| Syncfusion<sup>&reg;</sup> PDF library | Latest version |
 | Syncfusion<sup>&reg;</sup> NuGet package | [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) |
 
 ## Step to create a PDF document in ASP.NET Core Web API
@@ -152,8 +152,8 @@ An online sample demonstrating how to [create a PDF document](https://document.s
 - [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required)
 - [Syncfusion<sup>&reg;</sup> Licensing Overview](https://help.syncfusion.com/common/essential-studio/licensing/overview)
 - [Open and read PDF files in ASP.NET Core](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/open-pdf-files)
-- [Merge PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/merge-pdf-documents)
-- [Split PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/split-pdf-documents)
+- [Merge PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/merge-documents)
+- [Split PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/split-documents)
 - [Working with PDF forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-forms)
 - [Working with security and permissions](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-security)
 - [Working with stamps and watermarks](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-watermarks)

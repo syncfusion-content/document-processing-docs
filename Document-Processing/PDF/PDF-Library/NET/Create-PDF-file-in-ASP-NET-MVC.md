@@ -16,7 +16,7 @@ N> This tutorial targets **ASP.NET MVC 5 on .NET Framework**. For ASP.NET Core, 
 
 ## Prerequisites
 
-- **.NET Framework** 4.6.1 or later
+- **.NET Framework** 4.6.2 or later
 - **Visual Studio 2017 or later** with the **ASP.NET and web development** workload
 - A **Syncfusion<sup>&reg;</sup> license key** — register it in your application using `Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")`. For details, see the [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 - The **[Syncfusion.Pdf.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet.Mvc5/)** NuGet package installed in the project. This package is the MVC 5 wrapper for `Syncfusion.Pdf.Net.Core`; for ASP.NET Core, use `Syncfusion.Pdf.Net.Core` directly.
@@ -25,10 +25,10 @@ N> This tutorial targets **ASP.NET MVC 5 on .NET Framework**. For ASP.NET Core, 
 
 | Component | Minimum version |
 | --- | --- |
-| .NET Framework | 4.6.1 |
+| .NET Framework | 4.6.2 or later |
 | ASP.NET MVC | 5.2.7 |
 | Visual Studio | 2017 |
-| Syncfusion<sup>&reg;</sup> PDF library | 21.1.0.35 |
+| Syncfusion<sup>&reg;</sup> PDF library | Latest version |
 | Syncfusion<sup>&reg;</sup> NuGet package | [Syncfusion.Pdf.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet.Mvc5/) |
 
 ## Step to create a PDF document in ASP.NET MVC
@@ -131,8 +131,8 @@ An online sample demonstrating how to [create a PDF document](https://document.s
 - [Create a PDF file in Blazor](create-pdf-document-in-blazor)
 - [Create a PDF file in Docker](create-pdf-document-in-docker)
 - [Open and read PDF files](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/open-pdf-files)
-- [Merge PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/merge-pdf-documents)
-- [Split PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/split-pdf-documents)
+- [Merge PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/merge-documents)
+- [Split PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/split-documents)
 - [Working with PDF forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-forms)
 - [Working with security and permissions](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-security)
 - [Working with stamps and watermarks](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-watermarks)

@@ -737,7 +737,7 @@ The following screenshot shows the invoice PDF document created by the Syncfusio
 
 ## See also
 
-- [Syncfusion Flutter PDF documentation](https://help.syncfusion.com/flutter/pdf/overview)
+- [Syncfusion Flutter PDF documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/flutter/overview)
 - [Syncfusion Flutter PDF package (pub.dev)](https://pub.dev/packages/syncfusion_flutter_pdf)
 - [Flutter platform setup guides](https://docs.flutter.dev/get-started/install)
 - [GitHub sample: Flutter PDF library](https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/pdf)

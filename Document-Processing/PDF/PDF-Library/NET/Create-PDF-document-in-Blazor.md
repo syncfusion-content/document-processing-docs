@@ -19,14 +19,12 @@ N> Register your Syncfusion license key at application startup using `Syncfusion
 To quickly get started with creating a PDF document in Blazor, check this video:
 {% youtube "https://www.youtube.com/watch?v=B5BOBwus0Jc&t=2s" %}
 
-> The YouTube link starts playback at 2 seconds, the point where the demo begins.
-
 ## Compatibility
 
 | Component | Minimum Version |
 | --- | --- |
-| .NET SDK | 6.0 |
-| Syncfusion<sup>&reg;</sup> PDF library | 21.1.0.35 |
+| .NET SDK | 8.0 or later |
+| Syncfusion<sup>&reg;</sup> PDF library | Latest version |
 | Blazor WebAssembly | 6.0 |
 
 ## Steps to create a PDF document in a Blazor Server application
@@ -485,7 +483,7 @@ An online sample demonstrating PDF creation is available on the [Syncfusion PDF 
 ## Troubleshooting
 
 - **Watermark appears in output PDF** — Your Syncfusion license key is not registered. Call `SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")` at application startup.
-- **NuGet restore failures** — Ensure the target framework is .NET 6.0 or later and the `Syncfusion.Pdf.Net.Core` package version is compatible.
+- **NuGet restore failures** — Ensure the target framework is .NET 8.0 or later and the `Syncfusion.Pdf.Net.Core` package version is compatible.
 - **File picker does not open on Windows** — Verify that the Windows App SDK is referenced in the MAUI Windows project and that `WinRT.Interop.InitializeWithWindow` receives a valid window handle.
 
 ## Next Steps

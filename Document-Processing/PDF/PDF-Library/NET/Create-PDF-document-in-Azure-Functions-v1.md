@@ -149,7 +149,7 @@ Step 13: Publishing has succeeded.
 ![Publishing succeeded](Azure_images/Azure-Functions-V1/Successful_publish.png)
 
 Step 14: Open the **Azure portal**, navigate to the **Function App**, select the function, then click **Get function URL > Copy**. Paste the URL into a new browser tab. The PDF document downloads as follows.
-![Output PDF document](Azure_images/Azure-Functions-V1/Final_output.png)
+![Output PDF document](Azure_images/Azure-Functions-V1/Output_screenshot.png)
 
 N> If the function is not anonymous, the copied URL includes a `?code=…` query string parameter. Keep the parameter intact when pasting into the browser, or the request will return **401 Unauthorized**.
 
@@ -171,7 +171,7 @@ An online sample to [create a PDF document](https://document.syncfusion.com/demo
 
 * [Create a PDF document in Azure Functions v4](create-pdf-document-in-azure-functions-v4.md) — recommended for new projects.
 * [Create a PDF document in .NET](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-core)
-* [Azure Functions v1 runtime deprecation announcement](https://learn.microsoft.com/azure/azure-functions/functions-versions)
+* [Azure Functions v1 runtime deprecation announcement](https://learn.microsoft.com/en-us/azure/azure-functions/functions-versions?tabs=isolated-process%2Cv4&pivots=programming-language-csharp)
 * [Syncfusion.Pdf.AspNet NuGet package](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet)
 * [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview)
 

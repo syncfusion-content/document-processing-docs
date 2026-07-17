@@ -1,6 +1,7 @@
 ---
 title: Create PDF document in Microsoft Azure | Syncfusion
 description: Learn how to create a PDF document in Azure using the Syncfusion .NET PDF library in C#.
+description: Create, read, and edit PDF documents in Microsoft Azure using the Syncfusion .NET PDF library for C#. Includes setup and deployment steps.
 platform: document-processing
 control: PDF
 documentation: UG
@@ -10,13 +11,13 @@ documentation: UG
 
 The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, edit PDF documents programmatically without the dependency on **Adobe Acrobat**. Using this library, you can create a PDF document in Azure within a few lines of code.
 
-N> If this is your first time working with Azure, refer to the [Azure development resources](https://learn.microsoft.com/azure/developer/) for setup guidance.
+N> If this is your first time working with Azure, refer to the [Azure development resources](https://learn.microsoft.com/en-us/azure/developer/) for setup guidance.
 
 ## Prerequisites
 
 * An active **Microsoft Azure subscription**. If you don't have one, [create a free account](https://azure.microsoft.com/free/) before starting.
 * **Visual Studio 2022** with the **Azure development** workload, or **Visual Studio Code** with the Azure extensions.
-* Install the required NuGet package: [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/). The library supports .NET 6, .NET 7, and .NET 8.
+* Install the required NuGet package: [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/). The library supports .NET 8, .NET 9, and .NET 10.
 * Register a valid Syncfusion license key in your application. Refer to the [licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details.
 * A basic understanding of creating PDF documents in .NET. See [Create a PDF document in .NET](create-pdf-document-in-net.md) for shared concepts.
 
@@ -82,20 +83,20 @@ The Syncfusion .NET PDF library works with the following Azure services.
 
 ### Azure App Service (Windows & Linux)
 
-* **Supported runtimes:** .NET 6, .NET 7, .NET 8
+* **Supported runtimes:** .NET 8, .NET 9, .NET 10
 * **Deployment:** Publish the ASP.NET Core Web App to Azure App Service using Visual Studio or the Azure CLI.
 * **Storage tip:** Use **Azure Blob Storage** for persistent file output.
 
 ### Azure Functions
 
-* **Supported runtimes:** .NET 6, .NET 7, .NET 8 (isolated worker model recommended)
+* **Supported runtimes:** .NET 8, .NET 9, .NET 10 (isolated worker model recommended)
 * **Hosting plans:** Consumption, Premium, and Dedicated (App Service) plans
 * **Trigger example:** Use an HTTP-triggered function to generate the PDF on demand and return it as a response or save it to Blob Storage.
 
 ### Azure Functions on AKS (Azure Kubernetes Service)
 
-* **Supported runtimes:** .NET 6, .NET 7, .NET 8
-* **Deployment:** Package the Azure Functions app as a container image and deploy it to an AKS-hosted Kubernetes cluster. Refer to the [Functions on Kubernetes](https://learn.microsoft.com/azure/azure-functions/functions-kubernetes-keda) documentation.
+* **Supported runtimes:** .NET 8, .NET 9, .NET 10
+* **Deployment:** Package the Azure Functions app as a container image and deploy it to an AKS-hosted Kubernetes cluster. Refer to the [Functions on Kubernetes](https://learn.microsoft.com/en-us/azure/azure-functions/functions-kubernetes-keda) documentation.
 * **Storage tip:** Use **Azure Files** or **Azure Blob Storage** mounted to the pod for persistent output.
 
 ## Troubleshooting
@@ -107,8 +108,8 @@ The Syncfusion .NET PDF library works with the following Azure services.
 
 ## See also
 
-* [Create a PDF document in .NET](create-pdf-document-in-net.md)
-* [Syncfusion.Pdf.NetCore NuGet package](https://www.nuget.org/packages/Syncfusion.Pdf.NetCore/)
-* [Azure App Service documentation](https://learn.microsoft.com/azure/app-service/)
-* [Azure Functions documentation](https://learn.microsoft.com/azure/azure-functions/)
-* [Functions on Kubernetes with KEDA](https://learn.microsoft.com/azure/azure-functions/functions-kubernetes-keda)
+* [Create a PDF document in .NET](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Azure)
+* [Syncfusion.Pdf.NetCore NuGet package](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core)
+* [Azure App Service documentation](https://learn.microsoft.com/en-us/azure/app-service/)
+* [Azure Functions documentation](https://learn.microsoft.com/en-us/azure/azure-functions/)
+* [Functions on Kubernetes with KEDA](https://learn.microsoft.com/en-us/azure/azure-functions/functions-kubernetes-keda)

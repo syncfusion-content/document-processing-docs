@@ -15,18 +15,18 @@ To include the .NET PDF library in your Windows Forms application, refer to the 
 ## Prerequisites
 
 - **Visual Studio 2022** (17.8 or later) with the **.NET desktop development** workload installed.
-- A target framework of **.NET 8** (or later) or **.NET Framework 4.6** (or later).
+- A target framework of **.NET 8** (or later) or **.NET Framework 4.6.2** (or later).
 - A **Syncfusion<sup>&reg;</sup> license key** — register it in your application using `Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")`. For details, see the [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 - The appropriate Syncfusion NuGet package:
-  - **.NET 6+:** [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.NetCore) (preferred cross-platform package)
-  - **.NET Framework 4.6+:** [Syncfusion.Pdf.WinForms](https://www.nuget.org/packages/Syncfusion.Pdf.WinForms/) (legacy .NET Framework package)
+  - **.NET 8+:** [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) (preferred cross-platform package)
+  - **.NET Framework 4.6.2+:** [Syncfusion.Pdf.WinForms](https://www.nuget.org/packages/Syncfusion.Pdf.WinForms/) (legacy .NET Framework package)
 
 ## Step to create a PDF document in Windows Forms
 
-**Step 1:** In Visual Studio, create a new **Windows Forms App** project (targeting .NET 6 or later) or a **Windows Forms App (.NET Framework)** project (targeting .NET Framework 4.6 or later).
+**Step 1:** In Visual Studio, create a new **Windows Forms App** project (targeting .NET 8 or later) or a **Windows Forms App (.NET Framework)** project (targeting .NET Framework 4.6.2 or later).
 ![Create a Windows Forms application in Visual Studio](GettingStarted_images/WF-sample-creation.png)
 
-**Step 2:** Install the appropriate Syncfusion NuGet package from [NuGet.org](https://www.nuget.org/) using the **NuGet Package Manager** or the **Package Manager Console** (`Install-Package Syncfusion.Pdf.WinForms` for .NET Framework, or `Install-Package Syncfusion.Pdf.Net.Core` for .NET 6+). Use the latest stable version compatible with your target framework.
+**Step 2:** Install the appropriate Syncfusion NuGet package from [NuGet.org](https://www.nuget.org/) using the **NuGet Package Manager** or the **Package Manager Console** (`Install-Package Syncfusion.Pdf.WinForms` for .NET Framework, or `Install-Package Syncfusion.Pdf.Net.Core` for .NET 8+). Use the latest stable version compatible with your target framework.
 ![Install the Syncfusion NuGet package](GettingStarted_images/WF-NuGet-package.png)
 
 N> If you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or the NuGet feed, you must add a reference to the `Syncfusion.Licensing` assembly and include a valid license key in your project. See the [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details on registering the license key.
@@ -132,8 +132,8 @@ An online sample demonstrating how to [create a PDF document](https://document.s
 - [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required)
 - [Syncfusion<sup>&reg;</sup> Licensing Overview](https://help.syncfusion.com/common/essential-studio/licensing/overview)
 - [Open and read PDF files](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/open-pdf-files)
-- [Merge PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/merge-pdf-documents)
-- [Split PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/split-pdf-documents)
+- [Merge PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/merge-documents)
+- [Split PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/split-documents)
 - [Working with PDF forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-forms)
 - [Working with security and permissions](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-security)
 - [Working with stamps and watermarks](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-watermarks)

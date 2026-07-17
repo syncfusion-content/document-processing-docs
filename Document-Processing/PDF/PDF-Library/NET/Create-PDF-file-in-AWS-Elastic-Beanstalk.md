@@ -120,7 +120,7 @@ public IActionResult CreatePDF()
 
 **Step 7:** Right-click the project and choose **Publish to AWS Elastic Beanstalk (Legacy)** to open the deployment wizard.
 
-N> AWS Elastic Beanstalk for .NET is in maintenance mode. For new projects, consider the [AWS Deploy Tool for .NET](https://docs.aws.amazon.com/sdk-for-net/latest/developer-guide/deploy-tool.html) (`dotnet aws deploy`), or [deploy as a container to Amazon ECS / Fargate](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker.html).
+N> AWS Elastic Beanstalk for .NET is in maintenance mode. For new projects, consider the [AWS Deploy Tool for .NET](https://docs.aws.amazon.com/sdk-for-net/v4/developer-guide/welcome.html) (`dotnet aws deploy`), or [deploy as a container to Amazon ECS / Fargate](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html).
 
 ![Publish to AWS Elastic Beanstalk menu option](GettingStarted_images/Publish-AWS-Elastic-Beanstalk.png)
 
@@ -155,7 +155,7 @@ An online sample demonstrating how to [create a PDF document](https://document.s
 - **Deployment fails with `dotnet publish` errors** — Ensure the project's target framework matches the Elastic Beanstalk platform version (for example, .NET 6 on **64-bit Amazon Linux 2** running .NET 6).
 - **`Data/Input.pdf` not found at runtime** — Verify the file is in the project's `Data/` folder and that **Copy to Output Directory** is set to **Copy if newer**.
 - **AWS Toolkit does not detect credentials** — Run `aws configure` from the AWS CLI, or set the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables before opening Visual Studio.
-- **Deployment succeeds but the application URL returns 502 / 504** — Increase the instance type in **Application Options** (for example, from `t3.micro` to `t3.small`) or enable [rolling deployments](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.rolling-version.html) to avoid downtime.
+- **Deployment succeeds but the application URL returns 502 / 504** — Increase the instance type in **Application Options** (for example, from `t3.micro` to `t3.small`) or enable [rolling deployments](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/Welcome.html) to avoid downtime.
 - **`TypeInitializationException` for SkiaSharp** — Install the `SkiaSharp.NativeAssets.Linux` package alongside `Syncfusion.Pdf.Net.Core` so the native binaries are deployed to the Amazon Linux 2 instance.
 
 ## See also
@@ -168,8 +168,8 @@ An online sample demonstrating how to [create a PDF document](https://document.s
 - [Create a PDF file in ASP.NET Core](create-pdf-file-in-asp-net-core)
 - [Create a PDF file in Docker](create-pdf-document-in-docker)
 - [Open and read PDF files](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/open-pdf-files)
-- [Merge PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/merge-pdf-documents)
-- [Split PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/split-pdf-documents)
+- [Merge PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/merge-documents)
+- [Split PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/split-documents)
 - [Working with PDF forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-forms)
 - [Working with security and permissions](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-security)
 - [Working with stamps and watermarks](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-watermarks)

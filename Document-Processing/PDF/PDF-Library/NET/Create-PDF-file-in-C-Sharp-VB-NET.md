@@ -25,9 +25,8 @@ To quickly get started with creating a PDF document in .NET, watch this video:
 - **Visual Studio 2022** with the appropriate workload (e.g., **.NET desktop development** for Windows targets)
 - A **Syncfusion<sup>&reg;</sup> license key** — register it in your application using `Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")`. For details, see the [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 - The appropriate Syncfusion NuGet package for your target platform:
-  - **Cross-platform (.NET 6+):** [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core)
-  - **Windows-specific (.NET Framework / .NET 6+ on Windows):** [Syncfusion.Pdf.AspNet](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet) or [Syncfusion.Pdf.WinForms](https://www.nuget.org/packages/Syncfusion.Pdf.WinForms)
-  - **HTML-to-PDF:** [Syncfusion.HtmlToPdfConverter.Net.Core](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Core) (cross-platform) or `Syncfusion.HtmlToPdfConverter.WinForms` (Windows-specific)
+  - **Cross-platform (.NET 8+):** [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core)
+  - **Windows-specific (.NET Framework / .NET 8+ on Windows):** [Syncfusion.Pdf.AspNet](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet) or [Syncfusion.Pdf.WinForms](https://www.nuget.org/packages/Syncfusion.Pdf.WinForms)
 
 ## Step to create a PDF document with simple text
 
@@ -781,7 +780,7 @@ The filled form is shown in Adobe Reader as follows.
 
 ## Step to convert HTML files to PDF
 
-The [HTML-to-PDF converter](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/converting-html-to-pdf) converts webpages, SVG, MHTML, and HTML files to PDF using C#. It uses the popular rendering engine [Blink](https://en.wikipedia.org/wiki/Blink_(browser_engine)) (Google Chrome) and preserves all graphics, images, text, fonts, and the layout of the original HTML document or webpage.
+The [HTML-to-PDF converter](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features) converts webpages, SVG, MHTML, and HTML files to PDF using C#. It uses the popular rendering engine [Blink](https://en.wikipedia.org/wiki/Blink_(browser_engine)) (Google Chrome) and preserves all graphics, images, text, fonts, and the layout of the original HTML document or webpage.
 
 The HTML-to-PDF converter supports the following platforms: [Azure App Services](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-app-service-linux), [Azure Functions](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-functions-linux), [AWS Lambda](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-aws-lambda), [Docker](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/docker), [WinForms](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/windows-forms), [WPF](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/wpf), [Blazor](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/blazor), [ASP.NET MVC](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/aspnet-mvc), and [ASP.NET Core](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/net-core) on [Windows](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/windows-forms), [Linux](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/linux), and [macOS](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/mac).
 

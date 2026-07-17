@@ -24,10 +24,10 @@ To integrate the .NET PDF library into your Docker application, refer to the off
 
 | Component | Minimum version |
 | --- | --- |
-| .NET SDK | 8.0 |
+| .NET SDK | 8.0 or later |
 | Docker Engine | 20.10 |
 | Base image | `mcr.microsoft.com/dotnet/aspnet:6.0` |
-| Syncfusion<sup>&reg;</sup> PDF library | 21.1.0.35 |
+| Syncfusion<sup>&reg;</sup> PDF library | Latest version |
 | Syncfusion<sup>&reg;</sup> NuGet package | [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) |
 
 ## Step to create a PDF file in a Docker container
@@ -140,7 +140,7 @@ An online sample demonstrating how to [create a PDF document](https://document.s
 - **libgdiplus / SkiaSharp errors in the container** — Add a `RUN apt-get update && apt-get install -y libgdiplus` step in the Dockerfile to install the native graphics dependency required by `Syncfusion.Pdf.Net.Core`.
 - **Container fails to start on port 5000** — Confirm the port mapping in `docker run -p 5000:80` matches the ASP.NET Core `ASPNETCORE_URLS` setting.
 - **PDF file is empty or truncated** — Ensure the `MemoryStream` is read back (for example, via `stream.ToArray()`) before the `using` block disposes it.
-- **NuGet restore fails inside the container** — Set the `NUGET_PACKAGES` environment variable or use a [NuGet package restore task](https://learn.microsoft.com/azure/devops/pipelines/tasks/package/nuget) in CI. 
+- **NuGet restore fails inside the container** — Set the `NUGET_PACKAGES` environment variable or use a [NuGet package restore task](https://learn.microsoft.com/en-us/azure/devops/pipelines/tasks/reference/nuget-command-v2?view=azure-pipelines&tabs=windows) in CI. 
 
 ## Next Steps
 

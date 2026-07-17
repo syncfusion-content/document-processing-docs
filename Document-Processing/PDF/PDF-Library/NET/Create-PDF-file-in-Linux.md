@@ -14,7 +14,7 @@ The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) 
 ## Prerequisites
 
 - A **Linux distribution** that supports .NET 6 or later (for example, **Ubuntu 20.04+**, **Debian 11+**, **RHEL 8+**, or **Fedora 36+**).
-- **.NET SDK 6.0** or later installed. Verify with `dotnet --list-sdks`; install from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download) or your distribution's package manager.
+- **.NET SDK 8.0** or later installed. Verify with `dotnet --list-sdks`; install from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download) or your distribution's package manager.
 - A **Syncfusion<sup>&reg;</sup> license key** — register it in your application using `Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")`. For details, see the [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 - The **[Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core)** NuGet package.
 
@@ -148,8 +148,8 @@ An online sample demonstrating how to [create a PDF document](https://document.s
 - [Create a PDF file in ASP.NET Core](create-pdf-file-in-asp-net-core)
 - [Create a PDF file in AWS Lambda](create-pdf-file-in-aws-lambda)
 - [Open and read PDF files](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/open-pdf-files)
-- [Merge PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/merge-pdf-documents)
-- [Split PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/split-pdf-documents)
+- [Merge PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/merge-documents)
+- [Split PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/split-documents)
 - [Working with PDF forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-forms)
 - [Working with security and permissions](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-security)
 - [Working with stamps and watermarks](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-watermarks)

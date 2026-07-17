@@ -24,9 +24,9 @@ To integrate the .NET PDF library into your ASP.NET Core application, refer to t
 
 | Component | Minimum version |
 | --- | --- |
-| .NET SDK | 8.0 |
+| .NET SDK | 8.0 or later |
 | ASP.NET Core | 6.0 |
-| Syncfusion<sup>&reg;</sup> PDF library | 21.1.0.35 |
+| Syncfusion<sup>&reg;</sup> PDF library | Latest version |
 | SkiaSharp (replacement for `System.Drawing.Common`) | 2.88.6 |
 | Syncfusion<sup>&reg;</sup> NuGet package | [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) |
 
@@ -79,8 +79,8 @@ An online sample demonstrating how to [create a PDF document in ASP.NET Core](ht
 - [Create a PDF file in Docker](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-document-in-docker)
 - [Create a PDF file in Blazor](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-document-in-blazor)
 - [Open and read PDF files in ASP.NET Core](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/open-pdf-files)
-- [Merge PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/merge-pdf-documents)
-- [Split PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/split-pdf-documents)
+- [Merge PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/merge-documents)
+- [Split PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/split-documents)
 - [Working with PDF forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-forms)
 - [Working with security and permissions](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-security)
 - [Working with stamps and watermarks](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-watermarks)
