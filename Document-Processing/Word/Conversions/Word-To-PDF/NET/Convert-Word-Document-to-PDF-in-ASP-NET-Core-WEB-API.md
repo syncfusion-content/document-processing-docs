@@ -10,9 +10,17 @@ documentation: UG
 
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to PDF in ASP.NET Core Web API**.
 
-## Steps to convert Word document to PDF in programmatically:
+## Prerequisites
 
-The below steps illustrate convert a simple Word document to PDF in ASP.NET Core Web API.
+- Visual Studio 2022 with the **ASP.NET and web development** workload installed.
+- .NET SDK 8.0 or later (the steps below target .NET 6/7/8; for older versions, the project layout will differ slightly — `Startup.cs` instead of top-level statements in `Program.cs`).
+- A development certificate for HTTPS. If you have not run the app before, run the following command once and trust the certificate when prompted:
+
+  ```bash
+  dotnet dev-certs https --trust
+  ```
+
+## Steps to convert a Word document to PDF in ASP.NET Core Web API programmatically
 
 Step 1: Create a new C# ASP.NET Core Web API project.
 
@@ -34,6 +42,8 @@ Step 4: Include the following namespaces in the **ValuesController.cs** file.
 
 {% highlight c# tabtitle="C#" %}
 
+using System;
+using System.IO;
 using Microsoft.AspNetCore.Mvc;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
@@ -44,7 +54,7 @@ using Syncfusion.Pdf;
 
 {% endtabs %}
 
-Step 5: Add a new action method ConvertWordToPdf in **ValuesController.cs** and include the below code snippet to Convert Word document to PDF and download it.
+Step 5: Add a new action method `ConvertWordToPdf` in **ValuesController.cs** and include the below code snippet to convert a Word document to PDF and download it.
 
 {% tabs %}
 
@@ -111,22 +121,32 @@ Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
 
 A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/ASP.NET-Core-Web-API/Convert-Word-Document-to-PDF).
 
-## Steps for accessing the Web API using HTTP requests
+## (Optional) Accessing the Web API from a Console client
 
-Step 1: Create a console application.
+Step 1: Create a new C# console application project in Visual Studio targeting the same .NET version as the Web API.
+
 ![Create a Console application in Visual Studio](ASP-NET-Core-WEB-API-images/Console-Template-Net-Core.png)
 
-N> Ensure your ASP.NET Core Web API is running on the specified port before running this client. Adjust the port number if your Web API runs on a different port (check the ASP.NET Core app's launch settings).
+N> Ensure your ASP.NET Core Web API is running on the specified port before running this client. Adjust the port number to match the one shown in the Web API's `launchSettings.json` (the file is located under **Properties** in the Web API project).
 
-Step 2: Add the below code snippet in the **Program.cs** file for accessing the Web API using HTTP requests. 
+Step 2: Replace the contents of **Program.cs** with the following code. This sends a GET request to the Web API endpoint, then saves the returned PDF to disk.
 
-This method sends a GET request to the Web API endpoint to retrieve and save the converted PDF document.
+Make sure the following `using` directives are present at the top of `Program.cs`:
+
+```csharp
+using System;
+using System.IO;
+using System.Net.Http;
+using System.Threading.Tasks;
+```
+
+Then add the following code to the `Program.cs` file:
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
 
-// Create an HttpClient instance
+// Create an HttpClient instance.
 using (HttpClient client = new HttpClient())
 {
     try

@@ -33,6 +33,7 @@ Step 3: Include the following namespaces in the HomeController.cs file.
 
 {% highlight c# tabtitle="C#" %}
 
+using System.IO;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.DocIORenderer;
@@ -42,15 +43,15 @@ using Syncfusion.Pdf;
 
 {% endtabs %}
 
-Step 4: A default action method named Index will be present in HomeController.cs. Right click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
+Step 4: A default action method named Index will be present in HomeController.cs. Right-click on the Index method and select **Go To View**, which will direct you to the associated view page **Index.cshtml**.
 
-Step 6: Add a new button in the Index.cshtml as shown below.
+Step 5: Add a new button in the Index.cshtml as shown below.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
 
-@{Html.BeginForm("ConvertWordtoPDF", "Home", FormMethod.Get);
+@{Html.BeginForm("ConvertWordDocumentToPdf", "Home", FormMethod.Get);
 {
 <div>
     <input type="submit" value="Convert Word Document to PDF" style="width:220px;height:27px" />
@@ -63,7 +64,9 @@ Html.EndForm();
 
 {% endtabs %}
 
-Step 5: Add a new action method **ConvertWordDocumentToPdf** in HomeController.cs and include the below code snippet to **convert the Word document to Pdf** and download it.
+Step 6: Add a new action method **ConvertWordDocumentToPdf** in HomeController.cs and include the below code snippet to **convert the Word document to PDF** and download it.
+
+N> Ensure that a sample Word document named **Template.docx** exists in a `Data` folder at the project root. The code reads from `Data/Template.docx` using a relative path resolved against the project root.
 
 {% tabs %}
 
@@ -96,11 +99,11 @@ using (FileStream docStream = new FileStream(Path.GetFullPath("Data/Template.doc
 
 {% endtabs %}
 
-Step 6: Build the project.
+Step 7: Build the project.
 
 Click on Build → Build Solution or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
-Step 7: Run the project.
+Step 8: Run the project.
 
 Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
 
@@ -145,6 +148,7 @@ Step 3: Include the following namespaces in the HomeController.cs file.
 
 {% highlight c# tabtitle="C#" %}
 
+using System.IO;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.DocIORenderer;
@@ -154,7 +158,7 @@ using Syncfusion.Pdf;
 
 {% endtabs %}
 
-Step 4: A default action method named Index will be present in HomeController.cs. Right click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
+Step 4: A default action method named Index is present in HomeController.cs. Open its associated view file **Index.cshtml** from the **Views/Home** folder in the Explorer.
 
 Step 5: Add a new button in the Index.cshtml as shown below.
 
@@ -162,7 +166,7 @@ Step 5: Add a new button in the Index.cshtml as shown below.
 
 {% highlight c# tabtitle="C#" %}
 
-@{Html.BeginForm("ConvertWordtoPDF", "Home", FormMethod.Get);
+@{Html.BeginForm("ConvertWordDocumentToPdf", "Home", FormMethod.Get);
 {
 <div>
     <input type="submit" value="Convert Word Document to PDF" style="width:220px;height:27px" />
@@ -175,7 +179,9 @@ Html.EndForm();
 
 {% endtabs %}
 
-Step 6: Add a new action method **ConvertWordDocumentToPdf** in HomeController.cs and include the below code snippet to **convert the Word document to Pdf** and download it.
+Step 6: Add a new action method **ConvertWordDocumentToPdf** in HomeController.cs and include the below code snippet to **convert the Word document to PDF** and download it.
+
+N> Ensure that a sample Word document named **Template.docx** exists in a `Data` folder at the project root. The code reads from `Data/Template.docx` using a relative path resolved against the project root.
 
 {% tabs %}
 
@@ -250,7 +256,7 @@ Step 1. Open JetBrains Rider and create a new ASP.NET Core Web application proje
 * Enter a project name and specify the location.
 * Click create.
 
-![Creating a new .NET Core console application in JetBrains Rider](ASP-NET-Core_images/Create-ASP.NET-Core-application.png)
+![Creating a new ASP.NET Core Web application in JetBrains Rider](ASP-NET-Core_images/Create-ASP.NET-Core-application.png)
 
 Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 * Click the NuGet icon in the Rider toolbar and type [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) in the search bar.
@@ -265,7 +271,7 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 ![Install the Syncfusion.DocIORenderer.Net.Core NuGet package](ASP-NET-Core_images/Install-Syncfusion.DocIORenderer.Net.Core-NuGet.png)
 
 N> 1. If you're deploying the application in a Linux environment, refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf#additional-nuget-packages-required-for-linux) for the required additional NuGet packages.
-N> 2. Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 3: Include the following namespaces in the HomeController.cs file.
 
@@ -273,6 +279,7 @@ Step 3: Include the following namespaces in the HomeController.cs file.
 
 {% highlight c# tabtitle="C#" %}
 
+using System.IO;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.DocIORenderer;
@@ -282,7 +289,7 @@ using Syncfusion.Pdf;
 
 {% endtabs %}
 
-Step 4: A default action method named Index will be present in HomeController.cs. Right click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
+Step 4: A default action method named Index is present in HomeController.cs. Open its associated view file **Index.cshtml** from the **Views/Home** folder in the Solution Explorer.
 
 Step 5: Add a new button in the Index.cshtml as shown below.
 
@@ -290,7 +297,7 @@ Step 5: Add a new button in the Index.cshtml as shown below.
 
 {% highlight c# tabtitle="C#" %}
 
-@{Html.BeginForm("ConvertWordtoPDF", "Home", FormMethod.Get);
+@{Html.BeginForm("ConvertWordDocumentToPdf", "Home", FormMethod.Get);
 {
 <div>
     <input type="submit" value="Convert Word Document to PDF" style="width:220px;height:27px" />
@@ -303,7 +310,9 @@ Html.EndForm();
 
 {% endtabs %}
 
-Step 6: Add a new action method **ConvertWordDocumentToPdf** in HomeController.cs and include the below code snippet to **convert the Word document to Pdf** and download it.
+Step 6: Add a new action method **ConvertWordDocumentToPdf** in HomeController.cs and include the below code snippet to **convert the Word document to PDF** and download it.
+
+N> Ensure that a sample Word document named **Template.docx** exists in a `Data` folder at the project root. The code reads from `Data/Template.docx` using a relative path resolved against the project root.
 
 {% tabs %}
 
@@ -356,4 +365,4 @@ By executing the program, you will get the **PDF document** as follows.
 
 Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.
 
-An online sample link to [convert Word document to PDF](https://document.syncfusion.com/demos/word/wordtopdf#/tailwind) in ASP.NET Core.
+View an [online sample to convert Word document to PDF](https://document.syncfusion.com/demos/word/wordtopdf#/tailwind) in ASP.NET Core.

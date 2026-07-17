@@ -11,7 +11,8 @@ documentation: UG
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert Word document to PDF in WinUI**.
 
 ## Prerequisites
-To use the WinUI 3 project templates, install the Windows App SDK extension for Visual Studio. For more details, refer [here](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/set-up-your-development-environment?tabs=cs-vs-community%2Ccpp-vs-community%2Cvs-2022-17-1-a%2Cvs-2022-17-1-b).
+- Install the Windows App SDK extension for Visual Studio. For more details, refer [here](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/set-up-your-development-environment?tabs=cs-vs-community%2Ccpp-vs-community%2Cvs-2022-17-1-a%2Cvs-2022-17-1-b).
+- Supported environment: Visual Studio 2022 (17.x) with the Windows App SDK 1.x workload on Windows 10 (build 17763 or later) or Windows 11.
 
 ## WinUI Desktop app
 
@@ -19,15 +20,17 @@ Step 1: Create a new C# WinUI Desktop app. Select Blank App, Packaged with WAP (
 
 ![Create the WinUI Desktop app in Visual Studio](WinUI_Images/Create-Project-WinUI-WordtoPDF.png)
 
-Step 2: Enter the project name and click **Create**.
+Step 2: Enter the project name and click **Create** button.
 
 ![Create a project name for your new project](WinUI_Images/Project-Name-WinUI-WordtoPDF.png)
 
-Step 3: Install [Syncfusion.DocIORenderer.NET](https://www.nuget.org/packages/Syncfusion.DocIORenderer.NET) NuGet package as a reference to your WinUI Desktop application from the [NuGet.org](https://www.nuget.org/).
+Step 3: Install [Syncfusion.DocIORenderer.NET](https://www.nuget.org/packages/Syncfusion.DocIORenderer.NET) and [Syncfusion.DocIO.NET](https://www.nuget.org/packages/Syncfusion.DocIO.NET) NuGet packages as references to your WinUI Desktop application from the [NuGet.org](https://www.nuget.org/).
 
 ![Syncfusion.DocIORenderer.NET NuGet package](WinUI_Images/Nuget-Package-WordtoPDF.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+
+Step 3a: Add the input Word document. In **Solution Explorer**, right-click the **Assets** folder, select **Add** > **Existing Item**, and add the `Input.docx` file. Select the file in **Solution Explorer** and set its **Build Action** to **Embedded Resource** in the **Properties** window so that the file can be loaded with `GetManifestResourceStream` in the next step.
 
 Step 4: Add a new button to the **MainWindow.xaml** as shown below.
 
@@ -57,6 +60,10 @@ Step 5: Include the following namespaces in the **MainWindow.xaml.cs** file.
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
+using System.IO;
+using System.Reflection;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.DocIO;
 using Syncfusion.DocIORenderer;
@@ -65,11 +72,11 @@ using Syncfusion.Pdf;
 
 {% endtabs %}
 
-Step 6: Add a new action method **ConvertWordtoPDF** in MainWindow.xaml.cs and include the below code snippet to **convert the Word document to PDF**.
+Step 6: Add a new async event handler **ConvertWordtoPDF** in **MainWindow.xaml.cs** and include the below code snippet to **convert the Word document to PDF**. The `SaveHelper.SaveAndLaunch` method used here is created in the next step.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="MainWindow.xaml.cs" %}
 //Loading an existing Word document
 Assembly assembly = typeof(App).GetTypeInfo().Assembly;
 using (WordDocument document = new WordDocument(assembly.GetManifestResourceStream("Convert_Word_Document_to_PDF.Assets.Input.docx"), FormatType.Docx))
@@ -165,7 +172,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 By executing the program, you will get the **PDF document** as follows.
 
-![Word to PDF in WinUI Desktop](WordToPDF_images/OutputImage.png)
+![Word to PDF in WinUI Desktop](WordToPDF_images/OutputImage.png) 
 
 Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.
 
