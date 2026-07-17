@@ -17,11 +17,11 @@ The Blazor `SfPdfViewer` allows grouping multiple form fields into a single logi
 
 ## Field behavior by type
 
-- **Textbox and Password** — Text entered in one widget appears in all widgets with the same name.  
-- **CheckBox** — Checking one widget sets the checked state for all checkboxes with the same name.  
-- **RadioButton** — Widgets with the same name form a radio group; only one option can be selected.  
-- **ListBox and DropDown** — The selected value is shared across widgets with the same name.  
-- **Signature field** — Applied signature/initial is mirrored across grouped widgets.
+- **Textbox and Password**: Text entered in one widget appears in all widgets with the same name.  
+- **CheckBox**: Checking one widget sets the checked state for all checkboxes with the same name.  
+- **RadioButton**: Widgets with the same name form a radio group; only one option can be selected.  
+- **ListBox and DropDown**: The selected value is shared across widgets with the same name.  
+- **Signature field**: Applied signature/initial is mirrored across grouped widgets.
 
 N> Form field grouping is controlled by the `Name` property. The position of each widget is determined by its `Bounds`; grouping is independent of location.
 
