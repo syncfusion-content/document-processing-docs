@@ -112,7 +112,6 @@ If the Spreadsheet control does not render as expected, use the following checkl
 **4. Open/Save requests fail with HTTP 404 or CORS errors**
 - The `openUrl` and `saveUrl` values used in the included sample point to the online demo service. For local development, host your own service or refer to the [Open and Save](./open-save) topic for a working backend configuration.
 
-
 ## See also
 
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core MVC using Tag Helper](https://ej2.syncfusion.com/aspnetcore/documentation/getting-started/aspnet-core-mvc-taghelper)
