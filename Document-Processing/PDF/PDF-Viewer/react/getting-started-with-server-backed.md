@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with React Server-Backed PDF Viewer | Syncfusion
-description: Checkout and learn about Getting started with React PDF Viewer component of Syncfusion Essential JS 2 and more details.
+title: React Server-Backed PDF Viewer Getting Started | Syncfusion
+description: Learn about Getting Started with the React Server-Backed PDF Viewer Component of Syncfusion Essential JS 2 and more details.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -16,11 +16,11 @@ N> Starting with the 2026 Vol 2 main release (June 2026), no new features will b
 
 ## Prerequisites
 
-[System requirements for React components](https://ej2.syncfusion.com/react/documentation/system-requirement)
+* [System requirements for Syncfusion® React components](https://ej2.syncfusion.com/react/documentation/system-requirement)
 
 ## Create a React application
 
-Use [`Vite`](https://vitejs.dev/guide/) to create a new React application, as it provides a faster development environment, smaller bundle sizes, and optimized production builds.
+Use [`Vite`](https://vitejs.dev/guide/) to create a new React application for a faster development environment, smaller bundle sizes, and optimized production builds.
 
 To create a new React application, run one of the following commands based on your preferred environment.
 
@@ -53,7 +53,7 @@ npm install @syncfusion/ej2-react-pdfviewer --save
 
 ## Add CSS references
 
-Add the following PDF Viewer and dependent component style references to the `src/index.css` file.
+The PDF Viewer depends on several Syncfusion base and helper components (such as buttons, inputs, and popups). Add the following style references to the `src/index.css` file. These stylesheet imports are required for the PDF Viewer and its dependent controls to render correctly.
 
 {% tabs %}
 {% highlight css tabtitle="src/index.css" %}
@@ -65,7 +65,7 @@ Add the following PDF Viewer and dependent component style references to the `sr
 @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css";
+@import '../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css';
 
 {% endhighlight %}
 {% endtabs %}
@@ -74,13 +74,19 @@ Add the following PDF Viewer and dependent component style references to the `sr
 
 Add the **React PDF Viewer** component to your `src/App.jsx` or `src/App.tsx` file.
 
+The key props and services used in the following samples are:
+
+* `documentPath`: URL or Base64 string of the PDF to load.
+* `serviceUrl`: Back end web service URL that processes and streams PDF data to the viewer. See [How to Create and Run a Custom PDF Viewer Web Service](./how-to/create-and-run-custom-pdf-viewer-web-service).
+* `Inject services={[...]}`: Registers the optional modules (toolbar, navigation, annotations, search, form fields, etc.) you want to enable.
+
 {% tabs %}
 {% highlight js tabtitle="JSX" %}
 {% raw %}
 
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
          ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner,
-         PageOrganizer, Inject} from '@syncfusion/ej2-react-pdfviewer';
+         PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 export default function App() {
     return (
@@ -109,7 +115,9 @@ import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
 export default function App() {
   return (
     <PdfViewerComponent id="container"
+      // Specifies the path or Base64 string of the PDF document to be loaded in the PDF Viewer.
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      // Specifies the backend service URL that processes and streams PDF data
       serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer">
       <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
                           BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
@@ -122,7 +130,7 @@ export default function App() {
 {% endhighlight %}
 {% endtabs %}
 
-N> The Web API hosted link https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer utilized in the PDF viewer's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/pdfviewer-server) for hosting your own web service and use for the serviceUrl property. **We strongly recommend using the standalone mode.**
+N> The Web API hosted link https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer utilized in the PDF viewer's `serviceUrl` property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/pdfviewer-server) for hosting your own web service to use as the `serviceUrl`. **We strongly recommend using the standalone mode.**
 
 [How to Create and Run a Custom PDF Viewer Web Service](./how-to/create-and-run-custom-pdf-viewer-web-service)
 
@@ -132,7 +140,7 @@ N> The Web API hosted link https://document.syncfusion.com/web-services/pdf-view
 Run the following command to start the React application:
 
 {% tabs %}
-{% highlight bash tabtitle="CLI" %}
+{% highlight bash tabtitle="Vite CLI" %}
 
 npm run dev
 
@@ -147,19 +155,19 @@ You can also explore the PDF Viewer interactively using the live sample below.
 
 {% previewsample "/document-processing/code-snippet/pdfviewer/react/base-cs1" %}
 
-N> When configuring the server-backed PDF viewer, it's Essential<sup style="font-size:70%">&reg;</sup> to understand that there is no need to include the pdfium.js and pdfium.wasm files. Unlike the standalone PDF viewer, which relies on these files for local rendering, the server-backed PDF viewer fetches and renders PDFs directly from the server. Consequently, you can exclude the copy command for deployment process, as they are not required to load and display PDFs in this context.
+N> When configuring the server-backed PDF viewer, it's essential to understand that there is no need to include the `pdfium.js` and `pdfium.wasm` files. Unlike the standalone PDF viewer, which relies on these files for local rendering, the server-backed PDF viewer fetches and renders PDFs directly from the server. As a result, you can skip the PDFium asset copy step described in the standalone deployment flow; these files are not required to load and display PDFs in this context.
 
 > [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Getting%20Started).
 
-N> For hosting the web service on the Linux platform, ensure to include the [SkiaSharp.NativeAssets.Linux v3.119.1](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1). Additionally, for AWS environments, utilize the following packages:
+N> For hosting the web service on Linux, the server-side PDF rendering pipeline uses Skia (via SkiaSharp), which requires platform-specific native assets. Include [SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1) for standard Linux hosts. Additionally, for AWS environments, utilize the following packages:
 
 | **Amazon Web Services (AWS)** |**NuGet package name** |
 | --- | --- |
-| AWS Lambda|[SkiaSharp.NativeAssets.Linux v3.119.1](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)|
+| AWS Lambda|[SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)|
 | AWS Elastic Beanstalk |[SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)|
 
 ## See also
 
-- [Getting started with Standalone React PDF Viewer](./getting-started-with-server-backed)
+- [Getting started with Standalone React PDF Viewer](./getting-started)
 - [Open PDF Files](./open-pdf-files)
 - [Save PDF Files](./save-pdf-files)
