@@ -16,7 +16,7 @@ This section explains how to create a TypeScript application and add the [TypeSc
 To get started, ensure the following software is installed on your machine:
 
 - [Git](https://git-scm.com/downloads)
-- [Node.js (`v22` or later)](https://nodejs.org/en/)
+- [Node.js (`v14.15.0` or later)](https://nodejs.org/en/)
 - [Visual Studio Code](https://code.visualstudio.com/)
 
 ## Create a TypeScript application
