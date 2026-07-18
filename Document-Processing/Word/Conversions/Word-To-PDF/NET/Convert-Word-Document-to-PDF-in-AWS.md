@@ -8,17 +8,20 @@ documentation: UG
 
 # Convert Word to PDF in Amazon Web Services (AWS)
 
-Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, **convert a Word document to PDF in Amazon Web Services (AWS)** within a few lines of code. 
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to PDF in Amazon Web Services (AWS)** in just a few lines of code.
 
-N> If this is your first time working with Amazon Web Services (AWS), please refer to the dedicated AWS resources. This section explains how to convert Word documents to PDF in C# using the .NET Core Word (DocIO) library in AWS. 
+N> If this is your first time working with Amazon Web Services (AWS), refer to the [AWS resources](https://aws.amazon.com/getting-started/). This page lists the supported AWS deployment targets for converting Word documents to PDF using the .NET Core Word (DocIO) library, and links to the full step-by-step walkthrough for each.
 
-## Prerequisites 
+## Prerequisites
 
-* An active **Amazon Web Services (AWS) account** is required. If you don’t have one, please [create an account](https://aws.amazon.com/) before starting.
+The following prerequisites apply to all AWS deployment targets listed below:
 
-* Download and install the **AWS Toolkit** for Visual Studio, you can download the AWS toolkit from this [link](https://aws.amazon.com/visualstudio/). The Toolkit can be installed from Tools/Extension and updates options in Visual Studio.
+- An active **AWS account**. If you don't have one, [create an account](https://aws.amazon.com/) before continuing.
+- **.NET 8 SDK or later** installed locally.
+- An **AWS Identity and Access Management (IAM) user** with permissions to create the chosen service (Lambda or Elastic Beanstalk), and a configured **AWS profile / credentials** in Visual Studio or the AWS CLI.
+- **Visual Studio 2022** (or later) with the [**AWS Toolkit for Visual Studio**](https://aws.amazon.com/visualstudio/) installed. You can install the Toolkit from **Extensions** → **Manage Extensions** in Visual Studio.
 
-## Amazon Web Services (AWS)
+## Supported AWS deployment targets
 
 <table>
 <thead>
