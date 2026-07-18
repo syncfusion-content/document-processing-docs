@@ -38,7 +38,7 @@ cd ej2-quickstart
 ```
 **Step 3:** By default, the `ej2‑quickstart` repository is preconfigured with the [@syncfusion/ej2](https://www.npmjs.com/package/@syncfusion/ej2) package in `~/package.json`. This package installs all Syncfusion Essential JS 2 components packages, including the Spreadsheet component and other EJ2 controls.
  
-To install only the Spreadsheet components, replace the existing dependency with [@syncfusion/ej2-spreadsheet](https://www.npmjs.com/package/@syncfusion/ej2), as shown below:
+To install only the Spreadsheet component, replace the existing dependency with [@syncfusion/ej2-spreadsheet](https://www.npmjs.com/package/@syncfusion/ej2), as shown below:
 
 ```json
 "dependencies": {
@@ -142,7 +142,7 @@ After the development server starts, open the local URL displayed in the termina
 
 ![Rendered spreadsheet in browser](./images/spreadsheet.png)
 
-You can also explore the Spreadsheet interactively using the live sample below. The sample demonstrates the initialized Spreadsheet component and allows you to create, edit, and analyze data using formulas and formatting, including support for large datasets.
+You can also explore the Spreadsheet component using the live sample below. The sample allows you to load an Excel file, analyze and modify its data, and save the updated data back to an Excel file.
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/spreadsheet/getting-started-cs1" %}
 
