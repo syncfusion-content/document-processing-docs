@@ -45,6 +45,13 @@ Open `~/Pages/_ViewImports.cshtml` file and import the `Syncfusion.EJ2` TagHelpe
 {% endhighlight %}
 {% endtabs %}
 
+## Register Syncfusion License Key
+
+Before initializing Syncfusion ASP.NET Core Spreadsheet control, generate a Syncfusion license key and register it in the application.
+
+- [Generate a Syncfusion License Key](https://help.syncfusion.com/document-processing/licensing/how-to-generate)
+- [Register a Syncfusion License Key in a ASP.NET Core Application](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#aspnet-core)
+
 ## Add stylesheet and script resources
 
 Add the stylesheet and script references at the end of the **\<head\>** section in the `~/Pages/Shared/_Layout.cshtml` file, as shown in the following example.
