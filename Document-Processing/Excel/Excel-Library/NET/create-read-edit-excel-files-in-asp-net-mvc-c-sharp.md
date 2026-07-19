@@ -7,23 +7,23 @@ documentation: UG
 ---
 # Create, read, and edit Excel files in ASP.NET MVC
 
-[.NET Excel Library for ASP.NET MVC platform](https://www.syncfusion.com/document-processing/excel-framework/net/excel-library) can be used to create, read, edit Excel files. This also convert Excel files to PDF.
+[.NET Excel Library for ASP.NET MVC platform](https://www.syncfusion.com/document-processing/excel-framework/net/excel-library) can be used to create, read, edit Excel files. These can also convert [Excel files to PDF](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/convert-excel-to-pdf-in-asp-net-mvc).
 
 ## Create a simple Excel report
 
-The below steps illustrates creating an simple Invoice formatted Excel document in ASP.NET MVC.
+The steps below illustrate creating an simple Invoice formatted Excel document in ASP.NET MVC.
 
 Step 1: Create a new ASP.NET MVC application project.
 
 ![Create ASP.NET MVC application in Visual Studio](ASP-NET-MVC_images/ASP-NET-MVC_images_img1.png)
 
-Step 2: Install the [Syncfusion.XlsIO.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.XlsIO.AspNet.Mvc5) NuGet package as reference to your .NET Framework application from [NuGet.org](https://www.nuget.org).
+Step 2: Install the [Syncfusion.XlsIO.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.XlsIO.AspNet.Mvc5) NuGet package with latest stable version as reference to your .NET Framework application from [NuGet.org](https://www.nuget.org).
 
 ![Install Syncfusion.XlsIO.AspNet.Mvc5 Nuget Package](ASP-NET-MVC_images/ASP-NET-MVC_images_img2.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
 
-Step 3: A default controller with named HomeController.cs gets added on creation of ASP.NET MVC project. Include the following namespaces in the HomeController.cs file.
+Step 3: A default controller named HomeController.cs gets added on creation of ASP.NET MVC project. Include the following namespaces in the top of HomeController.cs file.
 {% capture codesnippet1 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
@@ -37,7 +37,7 @@ Imports Syncfusion.XlsIO
 {% endcapture %}
 {{ codesnippet1 | OrderList_Indent_Level_1 }}
 
-Step 4: A default action method named Index will be present in HomeController.cs. Right click on this action method and select Go To View where you will be directed to its associated view page Index.cshtml
+Step 4: A default action method named Index will be present in HomeController.cs. right click on this action method and select Go To View where you will be directed to its associated view page, Index.cshtml
 
 Step 5: Add a new button in the Index.cshtml as shown below.
 {% capture codesnippet2 %}
@@ -56,7 +56,7 @@ Step 5: Add a new button in the Index.cshtml as shown below.
 {% endcapture %}
 {{ codesnippet2 | OrderList_Indent_Level_1 }}
 
-Step 6: Add a new action method CreateDocument in HomeController.cs and include the below code snippet to create an Excel file and download it.
+Step 6: Add a new action method CreateDocument in HomeController.cs and include the following code snippet to create and download an Excel file.
 {% capture codesnippet3 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
@@ -124,7 +124,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["D7:E7"].CellStyle.VerticalAlignment = ExcelVAlign.VAlignCenter;
   worksheet.Range["D6:E6"].CellStyle.VerticalAlignment = ExcelVAlign.VAlignTop;
   
-  //Enter value and applying formatting in the cell A7
+  //Enter a value and applying formatting in the cell A7
   worksheet.Range["A7"].Text = "  BILL TO";
   worksheet.Range["A7"].CellStyle.Color = Color.FromArgb(42, 118, 189);
   worksheet.Range["A7"].CellStyle.Font.Bold = true;
@@ -421,7 +421,9 @@ By executing the program, you will get the Excel file as below.
 
 ## Read and Edit Excel file
 
-The below code snippet illustrates how to read and edit an Excel file in ASP.NET MVC.
+The following code snippet illustrates how to read and edit an Excel file in ASP.NET MVC.
+
+Step 1: Add the `Sample.xlsx` file in the app data.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
