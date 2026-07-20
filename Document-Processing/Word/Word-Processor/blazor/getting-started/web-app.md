@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Web App DOCX Editor | Syncfusion
-description: Learn how to create a DOCX Editor in a Blazor Web App application using the Syncfusion® Docx Editor control to create, edit, and view Word documents.
+description: Learn how to create a DOCX Editor in a Blazor Web App application using the Syncfusion® DOCX Editor control to create, edit, and view Word documents.
 component: DocumentEditor
 documentation: ug
 ---
@@ -15,11 +15,8 @@ documentation: ug
 ### Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-* **.NET version**: .NET 8.0 SDK or later
-* **Syncfusion packages**: Syncfusion.Blazor.WordProcessor v24.1.0 or later
-* **Syncfusion license**: Free community license or commercial license (required for production use)
-
-This section explains about how to include the [Docx Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) component in a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
+* [Browser compatibility](https://blazor.syncfusion.com/documentation/browser-support)
+* [Syncfusion license registration](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application)
 
 {% tabcontents %}
 
@@ -31,9 +28,9 @@ You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Temp
 
 You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) while creating the Blazor Web App.
 
-### Install Docx Editor Nuget packages
+### Install DOCX Editor Nuget packages
 
-To add **Docx Editor** component in the application, follow the steps below.
+To add **DOCX Editor** component in the application, follow the steps below.
  - Open NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), 
  - Search and install the following packages
     - [Syncfusion.Blazor.WordProcessor](https://www.nuget.org/packages/Syncfusion.Blazor.WordProcessor)
@@ -74,9 +71,9 @@ cd BlazorWebApp.Client
 
 N> For more information on creating a **Blazor Web App** with various interactive modes and locations, refer to this [link](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code#render-interactive-modes).
 
-### Install Docx Editor Nuget packages
+### Install DOCX Editor Nuget packages
 
-If you utilize `WebAssembly` or `Auto` render modes in the Blazor Web App, you need to install Docx Editor NuGet packages within the client project.
+If you utilize `WebAssembly` or `Auto` render modes in the Blazor Web App, you need to install DOCX Editor NuGet packages within the client project.
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
 * Ensure the terminal is in the project root directory (where the `.csproj` file is located).
@@ -140,41 +137,6 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
-N> If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in **`Program.cs`** files of both the server and client projects in your Blazor Web App.
-
-#### About Render Modes and Program.cs
-
-When you use the `@rendermode` directive in a component (e.g., `@rendermode InteractiveAuto`), it overrides the global interactivity setting configured in `Program.cs`. 
-
-- If you set `@rendermode InteractiveWebAssembly`, the component will render client-side using WebAssembly, even if your app is configured for server-side rendering.
-- You must register Syncfusion services in **all** `Program.cs` files that correspond to your render modes (both server and client for Auto/WebAssembly modes).
-- For Global interactivity (no `@rendermode` on components), configure the render mode once in `Program.cs` and it applies to all components.
-
-### Licensing and Service Configuration
-
-The Docx Editor requires both a **valid Syncfusion license** and a **configured Docx Editor service URL**.
-
-#### Service URL Configuration
-
-The Docx Editor requires a backend service to handle document operations. You have two options:
-
-| Environment | Service URL | Usage |
-| --- | --- | --- |
-| Development/Evaluation | `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` | Free cloud-hosted service for testing (evaluation only) |
-| Production | Self-hosted service backend | Required for production applications |
-
-To configure the service URL in your component, set the `ServiceUrl` property on `SfDocumentEditorContainer`:
-
-```razor
-<SfDocumentEditorContainer 
-    ServiceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
-    EnableToolbar=true 
-    Height="590px">
-</SfDocumentEditorContainer>
-```
-
-N> **Important**: The evaluation service URL has usage limits and is for development only. For production applications, you must host your own Docx Editor service backend. Obtain a [Syncfusion license](https://help.syncfusion.com/document-processing/licensing) to unlock production capabilities.
-
 ### Add Themes and Script References
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). 
@@ -190,7 +152,7 @@ Include the stylesheet reference in the `<head>` section of the **`~/Components/
 {% endhighlight %}
 {% endtabs %}
 
-Include the script reference at the end of the `<body>` section in the **`~/Components/App.razor`** file. In the default Blazor Web App template, add it just before the closing `</body>` tag or after the `<Routes>` component definition.
+Include the script reference at the end of the `<body>` section in the **~/Components/App.razor**  file.
 
 {% tabs %}
 {% highlight razor tabtitle="~/App.razor" %}
@@ -203,11 +165,16 @@ Include the script reference at the end of the `<body>` section in the **`~/Comp
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-### Add the Docx Editor component
+### Add the Document Editor component
 
-Add the Docx Editor component to a new `.razor` file in the **`~/Components/Pages/`** folder (for example, `DocumentEditor.razor` or modify `Home.razor` if it exists in your project).
+Add the Document Editor component in the `~/Components/Pages/*.razor` file. If the interactivity location is set to `Per page/component`, define a render mode at the top of the component, as follows:
 
-**Choose your render mode based on your interactivity location:**
+| Interactivity location | RenderMode | Code |
+| --- | --- | --- |
+| Per page/component | Auto | @rendermode InteractiveAuto |
+|  | WebAssembly | @rendermode InteractiveWebAssembly |
+|  | Server | @rendermode InteractiveServer |
+|  | None | --- |
 
 N> If the interactivity location is set to **Global** in your Blazor Web App, you do not need to add a render mode directive. For detailed guidance, check out [Blazor Render Modes](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0).
 
@@ -219,12 +186,7 @@ N> If the interactivity location is set to **Global** in your Blazor Web App, yo
 
 @using Syncfusion.Blazor.DocumentEditor
 
-<SfDocumentEditorContainer 
-    @ref="documentEditor"
-    ServiceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
-    EnableToolbar=true 
-    Height="590px">
-</SfDocumentEditorContainer>
+<SfDocumentEditorContainer EnableToolbar=true Height="590px"></SfDocumentEditorContainer>
 
 @code {
     private SfDocumentEditorContainer documentEditor;
@@ -245,7 +207,7 @@ N> If the interactivity location is set to **Global** in your Blazor Web App, yo
 
 ### Run the application
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This launches the application and displays the Docx Editor in your default web browser. The output will appear as follows:
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This launches the application and displays the DOCX Editor in your default web browser. The output will appear as follows:
 
 ![Blazor DOCX Editor in Web app](../images/blazor-docx-editor.png)
 
@@ -253,7 +215,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## Online Demo
 
-Explore how to create, edit, and print Word documents using the Blazor Docx Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities).
+Explore how to create, edit, and print Word documents using the Blazor DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities).
 
 N> Looking for the full Blazor DOCX Editor component overview, features, pricing, and documentation? Visit the [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) page.
 
