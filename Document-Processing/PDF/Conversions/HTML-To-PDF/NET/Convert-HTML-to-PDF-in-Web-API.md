@@ -109,7 +109,7 @@ Step 7: Navigate to the **Swagger UI**, expand the **GET /api/Pdf** API endpoint
 ![Swagger UI](htmlconversion_images/Web-API-5.png)
 
 By executing the program, the Web API will generate and return the PDF document:
-![HTML to PDF output document](htmlconversion_images/IIS-Output.png)
+![HTML to PDF output document](htmlconversion_images/htmltopdfoutput.png)
 
 A complete working sample for converting HTML to PDF in ASP.NET Core Web API can be downloaded from [GitHub](https://github.com/SyncfusionExamples/html-to-pdf-csharp-examples/tree/master/Web%20API).
 
