@@ -1,26 +1,36 @@
 ---
 layout: post
 title: Undo and Redo Annotation in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to undo and redo annotation changes in the Syncfusion Blazor SfPdfViewer with UI and programmatic examples.
+description: Learn how to undo and redo annotation changes in the Blazor SfPdfViewer with UI and programmatic examples.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Undo and redo annotations in Blazor SfPdfViewer
+# Undo and Redo Annotations in Blazor SfPdfViewer Component
 
-The Blazor SfPdfViewer supports undo and redo for annotations.
+The Blazor SfPdfViewer component supports undo and redo for annotations. Each annotation change is added to an internal history stack, and you can step backward and forward through that history using the keyboard, the built-in toolbar, or the component API. This feature is applies to all built-in annotations and form fields.
 
-![Undo-redo](../images/annotation-undo-redo.png)
+![Undo and Redo](../images/annotation-undo-redo.png)
 
 Undo and redo actions can be performed by using either of the following methods:
 
-1. Using keyboard shortcuts (desktop):
-    After performing an annotation action, press `Ctrl+Z` to undo and `Ctrl+Y` to redo on Windows and Linux. On macOS, use `Command+Z` to undo and `Command+Shift+Z` to redo.
-2. Using the toolbar:
-    Use the **Undo** and **Redo** tools in the toolbar.
-3. Programmatically:
-    Call the [UndoAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_UndoAsync) and [RedoAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_RedoAsync) methods from the client side.
+1. **Using keyboard shortcuts (desktop):** After performing an annotation action and ensuring the viewer has focus, press `Ctrl+Z` to undo and `Ctrl+Y` to redo on Windows and Linux. On macOS, use `Command+Z` to undo and `Command+Shift+Z` to redo.
+2. **Using the toolbar:** Use the **Undo** and **Redo** tools in the toolbar.
+3. **Programmatically:** Call the [UndoAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_UndoAsync) and [RedoAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_RedoAsync) methods from your Blazor component code.
+
+## Keyboard Shortcut
+
+The keyboard shortcuts are enabled by default and require no additional configuration. The viewer must have focus to receive the shortcut — click inside the page area before pressing the shortcut.
+
+| Action | Windows / Linux | macOS |
+| --- | --- | --- |
+| Undo | `Ctrl+Z` | `Command+Z` |
+| Redo | `Ctrl+Y` | `Command+Shift+Z` |
+
+## Toolbar
+
+The **Undo** and **Redo** tools appear in the annotation toolbar (see the screenshot at the top of this page). The buttons are enabled only when the corresponding history stack is non-empty. If the buttons appear disabled, perform an annotation action first.
 
 ## Programmatic Undo and Redo
 
@@ -42,14 +52,14 @@ Refer to the following code snippet to call undo and redo actions programmatical
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
 
-    public async void UndoAnnotation(MouseEventArgs args)
+    private async Task UndoAnnotation(MouseEventArgs args)
     {
         await viewer.UndoAsync();
     }
 
-    public async void RedoAnnotation(MouseEventArgs args)
+    private async Task RedoAnnotation(MouseEventArgs args)
     {
         await viewer.RedoAsync();
     }
@@ -68,3 +78,4 @@ Refer to the following code snippet to call undo and redo actions programmatical
 - [Comments](./comments)
 - [Delete Annotation](./delete-annotation)
 - [Export and Import Annotation](./export-annotation)
+- [SfPdfViewer Getting Started](./../getting-started/web-app)

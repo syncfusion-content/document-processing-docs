@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Print PDF in Blazor PDF Viewer | Syncfusion
-description: Enable and customize printing, configure print events, cancel print, and monitor printing in the Syncfusion Blazor PDF Viewer component.
+description: Enable and customize printing, configure print events, cancel print, and monitor printing in the Blazor PDF Viewer component.
 platform: document-processing
-control: Print
+control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -18,7 +18,7 @@ Select **Print** in the built-in toolbar to open the browser print dialog.
 
 ## Enable or Disable Print in Blazor PDF Viewer
 
-The Syncfusion Blazor PDF Viewer component lets users print a loaded PDF document through the built-in toolbar or programmatic calls. Control whether printing is available by setting the [EnablePrint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnablePrint) property (`true` enables printing; `false` disables it).
+Control whether printing is available by setting the [EnablePrint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnablePrint) property (`true` enables printing; `false` disables it).
 
 The following Blazor example renders the PDF Viewer with printing disabled.
 
@@ -32,19 +32,22 @@ The following Blazor example renders the PDF Viewer with printing disabled.
               EnablePrint="false" />
 
 @code{
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 {% endhighlight %}
 {% endtabs %}
 
 ## Print programmatically in Blazor PDF Viewer
 
-To start printing from code, call the [PrintAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SfPdfViewer.html#Syncfusion_Blazor_SfPdfViewer_SfPdfViewer_PrintAsync) method after the document is fully loaded. This approach is useful when wiring up custom UI or initiating printing automatically; calling print before the document finishes loading can result in no output or an empty print dialog.
+To start printing from code, call the [PrintAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SfPdfViewer.html#Syncfusion_Blazor_SfPdfViewer_SfPdfViewer_PrintAsync) method after the document is fully loaded. This approach is useful when wiring up custom UI or initiating printing automatically.
+
+> If called before the document finishes loading, `PrintAsync()` produces no output or an empty print dialog.
 
 {% tabs %}
 {% highlight razor %}
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
+@using Microsoft.AspNetCore.Components.Web
 
 <SfButton OnClick="OnClick">Print</SfButton>
 <SfPdfViewer2 Width="100%"
@@ -53,10 +56,10 @@ To start printing from code, call the [PrintAsync()](https://help.syncfusion.com
               @ref="@Viewer" />
 
 @code{
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
+    private SfPdfViewer2? Viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async void OnClick(MouseEventArgs args)
+    private async Task OnClick(MouseEventArgs args)
     {
         await Viewer.PrintAsync();
     }
@@ -74,7 +77,7 @@ To start printing from code, call the [PrintAsync()](https://help.syncfusion.com
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Print)
 
-## See Also
+## See also
 
 - [Enable print rotation](./enable-print-rotation)
 - [Print modes](./print-modes)
