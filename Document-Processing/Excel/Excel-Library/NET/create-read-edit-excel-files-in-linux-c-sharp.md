@@ -14,7 +14,7 @@ documentation: UG
 The following steps illustrate creating a simple Invoice-formatted Excel document on Linux.
 
 **Prerequisites:**
-- .NET 6.0 SDK or later installed on Linux (refer to the [official installation guide](https://learn.microsoft.com/dotnet/core/install/linux)).
+- .NET 6.0 SDK or later installed on Linux.
 - A user account with write permissions to the project directory.
 - The `AdventureCycles-Logo.png` image placed in the project output directory (the same folder as `Program.cs`).
 
