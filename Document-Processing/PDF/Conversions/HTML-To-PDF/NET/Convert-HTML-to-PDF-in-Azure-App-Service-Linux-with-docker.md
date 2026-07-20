@@ -177,4 +177,4 @@ A complete working sample for converting HTML to PDF in Azure App Service with D
 
 Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library/html-to-pdf) to explore the rich set of Syncfusion<sup>&reg;</sup> HTML to PDF converter library features. 
 
-You can also view the online sample to [convert HTML to PDF documents](https://document.syncfusion.com/demos/pdf/default#/tailwind) in ASP.NET Core.
+You can also view the online sample to [convert HTML to PDF documents](https://document.syncfusion.com/demos/pdf/htmltopdf#/tailwind3) in ASP.NET Core.

@@ -125,4 +125,4 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net/html-to-pdf) to explore the rich set of Syncfusion<sup>&reg;</sup> HTML to PDF converter library features. 
 
-An online sample link to [convert HTML to PDF document](https://ej2.syncfusion.com/aspnetmvc/PDF/HelloWorld#/material3) in ASP.NET MVC. 
+An online sample link to [convert HTML to PDF document](https://document.syncfusion.com/demos/pdf/htmltopdf#/tailwind3) in ASP.NET MVC. 
