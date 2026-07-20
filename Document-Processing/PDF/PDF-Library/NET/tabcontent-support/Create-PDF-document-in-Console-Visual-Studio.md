@@ -19,6 +19,7 @@ Step 4: Include the following namespaces in the *Program.cs* file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using System.IO;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf;
 using Syncfusion.Drawing;
@@ -26,7 +27,7 @@ using Syncfusion.Drawing;
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Include the below code snippet in *Program.cs* to create an PDF file.
+Step 5: Include the below code snippet in *Program.cs* to create a PDF file.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Getting%20Started/Console/.NET/Create_PDF/Create_PDF/Program.cs" %}
