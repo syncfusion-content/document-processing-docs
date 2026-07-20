@@ -34,7 +34,6 @@ Step 4: Include the following namespaces in the **ValuesController.cs** file.
 
 {% highlight c# tabtitle="C#" %}
 
-using System.IO;
 using Microsoft.AspNetCore.Mvc;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
@@ -119,9 +118,6 @@ Step 2: Add the following code snippet in the **Program.cs** file to send a GET 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-
-using System.IO;
-using System.Net.Http;
 
 // Create an HttpClient instance
 using (HttpClient client = new HttpClient())
