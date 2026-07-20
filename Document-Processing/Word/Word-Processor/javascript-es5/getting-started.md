@@ -15,9 +15,8 @@ domainurl: ##DomainURL##
 ### Prerequisites
 
 * [Browser Compatibility](https://ej2.syncfusion.com/javascript/documentation/browser)
-* [Syncfusion license registration](https://ej2.syncfusion.com/javascript/documentation/licensing/license-key-registration)
 
-### Set up development environment
+## Create a JavaScript application
 
 Create a folder named `documenteditor-app` with `index.html` and `index.js` files with the default structure. Your application structure should look like this:
 
@@ -26,8 +25,28 @@ Create a folder named `documenteditor-app` with `index.html` and `index.js` file
   ├── index.html
   └── index.js
   ```
+### Install the JavaScript DOCX Editor npm package
 
-### Add the style and script references
+Install the **Syncfusion JavaScript DOCX Editor package using npm**.
+
+{% tabs %}
+{% highlight bash %}
+
+npm install @syncfusion/ej2-documenteditor
+
+{% endhighlight %}
+{% endtabs %}
+
+## Register a Syncfusion License Key
+
+Before initializing the Javascript (ES5) DOCX Editor control, generate a Syncfusion license key and register it in your application.
+
+- [Generate a Syncfusion License Key](https://ej2.syncfusion.com/javascript/documentation/licensing/license-key-generation)
+- [Register a Syncfusion License Key in Javascript ES5](https://ej2.syncfusion.com/javascript/documentation/licensing/license-key-registration)
+
+### Import the required CSS styles and add script references
+
+Import the required Syncfusion CSS files in `styles.css` to apply proper layout and theme styling.
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> EJ2 library global scripts and styles are available at the following CDN link formats.
 
@@ -85,7 +104,7 @@ Add the following CDN references inside the `<head>` section of your `index.html
 {% endhighlight %}
 {% endtabs %}
 
-### Add the Document Editor component
+### Initialize the DOCX Editor
 
 Add a container element for the Document Editor in the `index.html` file and then initialize the control in the `<script>` tag.
 

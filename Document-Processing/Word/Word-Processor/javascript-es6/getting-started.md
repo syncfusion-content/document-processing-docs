@@ -14,8 +14,7 @@ domainurl: ##DomainURL##
 
 ### Prerequisites
 
-* [Browser Compatibility](https://ej2.syncfusion.com/javascript/documentation/browser)
-* [Syncfusion license registration](https://ej2.syncfusion.com/javascript/documentation/licensing/license-key-registration)
+* [Browser Compatibility](https://ej2.syncfusion.com/documentation/browser)
 
 **Note:** The DOCX Editor requires ES2015 (ES6) support in the browser.
 
@@ -37,7 +36,7 @@ git clone https://github.com/SyncfusionExamples/ej2-quickstart-webpack ej2-quick
 cd ej2-quickstart
 ```
 
-### Install the Syncfusion® DOCX Editor packages
+### Install the JavaScript DOCX Editor npm package
 
 By default, the `ej2‑quickstart` repository is preconfigured with the [@syncfusion/ej2](https://www.npmjs.com/package/@syncfusion/ej2) package in `~/package.json`. This package installs all Syncfusion Essential JS 2 component packages, including the DOCX Editor and other EJ2 controls.
  
@@ -67,7 +66,14 @@ npm run build
 
 This command compiles your TypeScript files and prepares the application for development or production.
 
-### Add CSS reference
+## Register a Syncfusion License Key
+
+Before initializing the Javascript (ES6) DOCX Editor control, generate a Syncfusion license key and register it in your application.
+
+- [Generate a Syncfusion License Key](https://ej2.syncfusion.com/documentation/licensing/license-key-generation)
+- [Register a Syncfusion License Key in Javascript ES6](https://ej2.syncfusion.com/documentation/licensing/license-key-registration)
+
+### Import the required CSS styles
 
 Add the following DOCX Editor and dependent component style references to `~/src/styles/styles.css`:
 
@@ -88,7 +94,7 @@ Add the following DOCX Editor and dependent component style references to `~/src
 {% endtabs %}
 
 
-### Add the Document Editor component
+### Initialize the DOCX Editor
 
 Add an HTML `div` element to act as the DOCX Editor element in the `index.html` file:
 
