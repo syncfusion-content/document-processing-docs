@@ -9,7 +9,7 @@ documentation: ug
 
 # Migration from PDF Viewer (Classic) to SfPdfViewer
 
-## Why PDF Viewer (Classic) to PDF Viewer control
+## Why Migrate from PDF Viewer (Classic) to SfPdfViewer
 
 Migrating to SfPdfViewer delivers better performance and a simplified deployment model. Scrolling, page navigation, and printing are optimized for a smoother user experience. SfPdfViewer also removes the WebAssembly server service dependency required by the classic viewer, reducing app complexity and maintenance.
 
@@ -80,7 +80,7 @@ N> The same script file is used for both `Server application` and `WebAssembly a
 <tr>
 <td>
 {% tabs %}
-{% highlight html tabtitle="(~/Layout.cshtml/Host.cshtml)" hl_lines="7" %}
+{% highlight html tabtitle="~/Layout.cshtml/Host.cshtml" hl_lines="7" %}
 
 <head>
     <!-- Blazor PDF Viewer controls theme style sheet -->
@@ -101,7 +101,7 @@ N> The same script file is used for both `Server application` and `WebAssembly a
 <tr>
 <td>
 {% tabs %}
-{% highlight html tabtitle="(~/Layout.cshtml/Host.cshtml)" hl_lines="7" %}
+{% highlight html tabtitle="~/Layout.cshtml/Host.cshtml" hl_lines="7" %}
 
 <head>
     <!-- Blazor SfPdfViewer controls theme style sheet -->
@@ -197,7 +197,7 @@ To render the PDF Viewer component, add the following code in the **Index.razor*
 </tr>
 </table>
 
-### Project.cs
+### .csproj (WebAssembly)
 
 For WebAssembly applications, include the following properties in the project **.csproj** file to ensure proper functionality and compatibility.
 
@@ -208,7 +208,7 @@ For WebAssembly applications, include the following properties in the project **
 <tr>
 <td>
 {% tabs %}
-{% highlight C# tabtitle="csproj" hl_lines="2 6 7" %}
+{% highlight C# tabtitle=".csproj" hl_lines="2 6 7" %}
 <ItemGroup>
     <NativeFileReference Include="$(SkiaSharpStaticLibraryPath)\2.0.23\*.a" />
 </ItemGroup>
@@ -223,9 +223,9 @@ For WebAssembly applications, include the following properties in the project **
 </tr>
 </table>
 
-N> For WebAssembly applications, install the [SkiaSharp.NativeAssets.WebAssembly](https://www.nuget.org/packages/SkiaSharp.NativeAssets.WebAssembly) NuGet package.
-
-N> When hosting in certain environments (for example, Azure App Service), consider using [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor) instead of [SkiaSharp.NativeAssets.WebAssembly](https://www.nuget.org/packages/SkiaSharp.NativeAssets.WebAssembly). Align native asset versions in the project file with the installed package version.
+N>
+* For WebAssembly applications, install the [SkiaSharp.NativeAssets.WebAssembly](https://www.nuget.org/packages/SkiaSharp.NativeAssets.WebAssembly) NuGet package.
+* When hosting in certain environments (for example, Azure App Service), consider using [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor) instead of [SkiaSharp.NativeAssets.WebAssembly](https://www.nuget.org/packages/SkiaSharp.NativeAssets.WebAssembly). Align native asset versions in the project file with the installed package version.
 
 ## See also
 

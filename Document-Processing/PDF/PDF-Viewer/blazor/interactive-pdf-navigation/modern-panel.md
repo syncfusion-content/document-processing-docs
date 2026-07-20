@@ -13,22 +13,22 @@ The modern navigation panel consolidates thumbnails, bookmarks, comments, and cu
 
 Enable the modern navigation panel by setting the [EnableNavigationPanel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableNavigationPanel) property. You can toggle its visibility from the UI or programmatically.
 
-Example — enable the modern navigation panel:
+Example: enable the modern navigation panel:
 ```cshtml
 
-@using Syncfusion.Blazor.SfPdfViewer;
+@using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
-              Width="100%" 
+              Width="100%"
               EnableNavigationPanel="true">
 </SfPdfViewer2>
 
 ```
 
-![Enable the modern navigation panel in Blazor PDF Viewer](../../blazor-classic/images/enable_modern_navigation_panel.png)
+![Enable the modern navigation panel in Blazor PDF Viewer](../images/enable_modern_navigation_panel.png)
 
-## Default items in the navigation panel
+## Default items in the modern navigation panel
 
 The modern navigation panel contains the following built-in items:
 
@@ -36,19 +36,19 @@ The modern navigation panel contains the following built-in items:
 - Thumbnail panel
 - Bookmark panel
 
-## Rearrange default items in the navigation panel
+## Rearrange default items in the modern navigation panel
 
 Use the [BuiltInItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.NavigationToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_NavigationToolbarSettings_BuiltInItems) property, which accepts a list of [NavigationToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.NavigationToolbarItem.html) enums. The viewer renders the navigation icons in the exact sequence provided.
 
-Example — display Thumbnails first, followed by Bookmarks and the Comment panel.
+Example: display Thumbnails first, followed by Bookmarks and the CommentPanel item.
 
 ```cshtml
 
-@using Syncfusion.Blazor.SfPdfViewer;
+@using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
-              Width="100%" 
+              Width="100%"
               EnableNavigationPanel="true">
               <NavigationToolbarSettings BuiltInItems="navigationToolbarItems"></NavigationToolbarSettings>
 </SfPdfViewer2>
@@ -65,28 +65,28 @@ Example — display Thumbnails first, followed by Bookmarks and the Comment pane
 
 ```
 
-![Rearrange default items in the modern navigation panel](../../blazor-classic/images/rearrange_navigation_panel_items.png)
+![Rearrange default items in the modern navigation panel](../images/rearrange_navigation_panel_items.png)
 
 ## Open or close the navigation panel programmatically
 
 Open or close a navigation panel programmatically by calling the [ToggleItemByIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ToggleItemByIndex_System_Int32_) method. Indices are zero-based and apply to the combined sequence of built-in and custom items.
 
-Example — toggle the navigation panel item at index 1:
+Example: toggle the navigation panel item at index 1 (Bookmarks, with Thumbnails at index 0):
 ```cshtml
 
-@using Syncfusion.Blazor.SfPdfViewer;
+@using Syncfusion.Blazor.SfPdfViewer
 
-<button id="toggle-custom-panel-visibility-api-btn" @onclick="OpenCustomPanel">OpenCustomPanel</button>
+<button id="toggle-navigation-panel-item-btn" @onclick="ToggleBookmarksPanel">Toggle Bookmarks Panel</button>
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               @ref="pdfViewer"
               Height="100%"
-              Width="100%" 
+              Width="100%"
               EnableNavigationPanel="true">
 </SfPdfViewer2>
 
 @code {
-    private SfPdfViewer2? pdfViewer;
-    private async Task OpenCustomPanel()
+    private SfPdfViewer2 pdfViewer;
+    private async Task ToggleBookmarksPanel()
     {
         // Toggles the visibility of the navigation panel item at the specified index (1 in this case).
         await pdfViewer.ToggleItemByIndex(1);
@@ -95,14 +95,14 @@ Example — toggle the navigation panel item at index 1:
 
 ```
 
-![Toggle a navigation panel item by index](../../blazor-classic/images/navigation_panel_toggleitembyindex.png)   
+![Toggle a navigation panel item by index](../images/navigation_panel_toggleitembyindex.png)
 
-### Add custom items to the navigation panel
+## Add custom items to the navigation panel
 
-You can add custom items to the SfPdfViewer navigation toolbar by creating a list of [CustomNavigationToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.CustomNavigationToolbarItem.html) objects and assigning it to the [CustomItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.NavigationToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_NavigationToolbarSettings_CustomItems) property.
+You can add custom items to the SfPdfViewer modern navigation panel by creating a list of [CustomNavigationToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.CustomNavigationToolbarItem.html) objects and assigning it to the [CustomItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.NavigationToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_NavigationToolbarSettings_CustomItems) property.
 
 Each CustomNavigationToolbarItem object includes:
-- Index: Position of the item in the toolbar.
+- Index: Zero-based position of the item in the modern navigation panel. The position is relative to the combined sequence of built-in and custom items.
 - Name: Display name of the item.
 - TooltipText: Text shown on hover.
 - HeaderText: Header displayed at the top of the custom panel.
@@ -110,11 +110,11 @@ Each CustomNavigationToolbarItem object includes:
 - Template: Custom template for panel content.
 - ItemType: Item type, such as [NavigationToolbarItemType.Button](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.NavigationToolbarItemType.html#Syncfusion_Blazor_SfPdfViewer_NavigationToolbarItemType_Button) or [NavigationToolbarItemType.Separator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.NavigationToolbarItemType.html#Syncfusion_Blazor_SfPdfViewer_NavigationToolbarItemType_Separator).
 
-### Add a custom template for the navigation panel
+## Add a custom template for the navigation panel
 
 Define a custom UI for a navigation panel by assigning a RenderFragment to the `Template` property of a [CustomNavigationToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.CustomNavigationToolbarItem.html).
 
-Example — add a default toolbar with a custom item that contains a small interactive panel and customized UI:
+Example: add a custom item that renders a small interactive panel:
 
 ```cshtml
 
@@ -129,7 +129,7 @@ Example — add a default toolbar with a custom item that contains a small inter
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 pdfViewer;
+    private SfPdfViewer2 pdfViewer;
     // List of standard toolbar items.
     List<ToolbarItem> ToolbarItems = new List<ToolbarItem>()
     {
@@ -210,37 +210,37 @@ Example — add a default toolbar with a custom item that contains a small inter
 
 ```
 
-![Custom template in the modern navigation panel](../../blazor-classic/images/custom_navigation_panel_template.png)
+![Custom template in the modern navigation panel](../images/custom_navigation_panel_template.png)
 
-### Rendering strategies for the navigation panel
+## Rendering strategies for the navigation panel
 
-SfPdfViewer supports different loading strategies for navigation panel content to optimize performance:
+SfPdfViewer supports different loading strategies for modern navigation panel content to optimize performance:
 
 * **Dynamic**: Content for a panel is loaded into the DOM only when that panel is selected. Switching panels replaces the previous content.
 * **Init**: Content for all navigation panels is rendered during the initial load and remains in the DOM.
 * **Demand**: Content for a panel is loaded into the DOM the first time it is selected and then retained.
 
-Example — set the loading strategy to `Demand`:
+Example: set the loading strategy to `Demand`:
 
 ```cshtml
 
-@using Syncfusion.Blazor.SfPdfViewer;
-@using Syncfusion.Blazor.Navigations;
+@using Syncfusion.Blazor.SfPdfViewer
+@using Syncfusion.Blazor.Navigations
 
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
-              Width="100%" 
+              Width="100%"
               EnableNavigationPanel="true">
               <NavigationToolbarSettings LoadOn="ContentLoad.Demand"></NavigationToolbarSettings>
 </SfPdfViewer2>
 
 ```
 
-### Modern navigation panel in mobile view
+## Modern navigation panel in mobile view
 
-On mobile devices the navigation toolbar collapses into a toggle menu to save space. Custom items appear at the beginning of this menu.
+On mobile devices the modern navigation panel collapses into a toggle menu to save space. Custom items appear at the beginning of this menu.
 
-![Modern navigation panel in mobile view](../../blazor-classic/images/navigation_panel_mobile.png)
+![Modern navigation panel in mobile view](../images/navigation_panel_mobile.png)
 
 ## See also
 

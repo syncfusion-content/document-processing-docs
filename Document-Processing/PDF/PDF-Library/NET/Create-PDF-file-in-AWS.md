@@ -17,19 +17,37 @@ N> If this is your first time working with Amazon Web Services (AWS), please ref
 
 * An active **Amazon Web Services (AWS) account** is required. If you don’t have one, please [create an account](https://aws.amazon.com/) before starting.
 
-* Download and install the **AWS Toolkit** for Visual Studio, you can download the AWS toolkit from this [link](https://aws.amazon.com/visualstudio/). The Toolkit can be installed from Tools or Extension and updates options in Visual Studio.
+* Download and install the **AWS Toolkit** for Visual Studio from this [link](https://aws.amazon.com/visualstudio/). You can install the toolkit from the **Extensions > Manage Extensions** option in Visual Studio.
 
-## Amazon Web Services (AWS)
+* Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/) NuGet package in your project from [NuGet.org](https://www.nuget.org/).
+
+## Supported AWS services
+
+The following AWS services are supported for creating PDF documents using the Syncfusion .NET Core PDF library. For step-by-step instructions, refer to the linked documentation.
 
 <table>
 <thead>
 <tr>
 <th>
 Amazon Web Services (AWS)<br/></th><th>
-NuGet package name<br/></th></tr></thead>
+NuGet package name<br/></th><th>
+Documentation<br/></th></tr></thead>
 <tr>
 <td>
 AWS Lambda <br/></td><td>
-{{'[Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/)' | markdownify}}<br/> 
-</td></tr>
+[Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/)<br/> 
+</td>
+<td>
+[Create PDF document in AWS Lambda](Create-PDF-file-in-AWS-Lambda.md)<br/>
+</td>
+</tr>
+<tr>
+<td>
+AWS Elastic Beanstalk <br/></td><td>
+[Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/)<br/> 
+</td>
+<td>
+[Create PDF document in AWS Elastic Beanstalk](Create-PDF-file-in-AWS-Elastic-Beanstalk.md)<br/>
+</td>
+</tr>
 </table>

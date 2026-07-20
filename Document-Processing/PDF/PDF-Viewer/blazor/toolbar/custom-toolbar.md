@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Create a custom toolbar in Blazor PDF Viewer Component | Syncfusion
-description: Learn here all about custom toolbar in Syncfusion Blazor PDF Viewer component of Syncfusion and more.
-control: PDF Viewer
+description: Learn how to build a custom toolbar in the Blazor PDF Viewer component, including navigation, zoom, annotation, save, print, and download actions.
+control: SfPdfViewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
@@ -12,14 +12,14 @@ domainurl: ##DomainURL##
 
 ## Overview
 
-The Syncfusion Blazor PDF Viewer component provides extensive APIs for user interaction through its built-in toolbar. However, if you need a custom toolbar that matches your application's design and functionality requirements, you can hide the default toolbar and create your own using the Syncfusion Blazor Toolbar component.
+The Blazor PDF Viewer component provides extensive APIs for user interaction through its built-in toolbar. However, if you need a custom toolbar that matches your application's design and functionality requirements, you can hide the default toolbar and create your own using the Blazor Toolbar component.
 
 A custom toolbar allows you to:
 - Control which features are available to end users
 - Match your application's design language
 - Organize toolbar items according to your workflow
-- Add custom logic to toolbar actions
-- Implement conditional button visibility
+- Bind custom behavior to toolbar button clicks
+- Show or hide buttons based on application state
 
 ## Key Concepts
 
@@ -54,9 +54,9 @@ Common actions you can wire to custom toolbar buttons:
 | `ZoomOutAsync()` | Decrease zoom level | Yes |
 | `PrintAsync()` | Print the PDF document | Yes |
 | `DownloadAsync()` | Download the PDF document | Yes |
-| `GetDocumentAsync()` | Retrieve PDF as bytes (with changes) | Yes |
-| `LoadAsync()` | Load a PDF document | Yes |
-| `ShowAnnotationToolbar(bool)` | Show or hide annotation toolbar | No |
+| `GetDocumentAsync()` | Retrieve the current PDF as a byte array, including annotations and form-field changes | Yes |
+| `LoadAsync()` | Load a PDF document from a byte array, stream, or data URI | Yes |
+| `ShowAnnotationToolbar(bool)` | Show or hide the annotation toolbar | Sync (`void`) |
 
 ## Create Your First Custom Toolbar
 
@@ -72,26 +72,26 @@ Use the following code snippet to create a fully functional custom toolbar with 
 <SfToolbar>
     <ToolbarItems>
         <ToolbarItem PrefixIcon="e-icons e-chevron-up" TooltipText="Previous Page" id="previousPage"
-                     Align=@Syncfusion.Blazor.Navigations.ItemAlign.Left OnClick="@previousClicked"></ToolbarItem>
+                     Align="@Syncfusion.Blazor.Navigations.ItemAlign.Left" OnClick="@previousClicked"></ToolbarItem>
 
         <ToolbarItem PrefixIcon="e-icons e-chevron-down" TooltipText="Next Page" id="nextPage"
-                     Align=@Syncfusion.Blazor.Navigations.ItemAlign.Left OnClick="@nextClicked"></ToolbarItem>
+                     Align="@Syncfusion.Blazor.Navigations.ItemAlign.Left" OnClick="@nextClicked"></ToolbarItem>
 
         <ToolbarItem PrefixIcon="e-icons e-circle-add" TooltipText="Zoom in" id="zoomIn" OnClick="@zoomInClicked"></ToolbarItem>
 
         <ToolbarItem PrefixIcon="e-icons e-circle-remove" TooltipText="Zoom out" id="zoomOut" OnClick="@zoomoutClicked"></ToolbarItem>
 
         <ToolbarItem Text="Save" TooltipText="Save Document" id="save"
-                     Align=@Syncfusion.Blazor.Navigations.ItemAlign.Right OnClick="@save"></ToolbarItem>
+                     Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right" OnClick="@save"></ToolbarItem>
 
         <ToolbarItem Text="Edit Annotation" TooltipText="Annotation Toolbar" id="annotation"
-                     Align=@Syncfusion.Blazor.Navigations.ItemAlign.Right OnClick="@annotations"></ToolbarItem>
+                     Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right" OnClick="@annotations"></ToolbarItem>
 
         <ToolbarItem PrefixIcon="e-icons e-print" TooltipText="Print" id="print"
-                     Align=@Syncfusion.Blazor.Navigations.ItemAlign.Right OnClick="@print"></ToolbarItem>
+                     Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right" OnClick="@print"></ToolbarItem>
 
         <ToolbarItem PrefixIcon="e-icons e-download" TooltipText="Download" id="Download"
-                     Align=@Syncfusion.Blazor.Navigations.ItemAlign.Right OnClick="@download"></ToolbarItem>
+                     Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right" OnClick="@download"></ToolbarItem>
     </ToolbarItems>
 </SfToolbar>
 
@@ -99,17 +99,17 @@ Use the following code snippet to create a fully functional custom toolbar with 
 
 @code
 {
-    SfPdfViewer2 PDFViewer;
+    private SfPdfViewer2 PDFViewer;
 
     private string DocumentPath { get; set; } = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 
-    public void nextClicked(ClickEventArgs args)
+    private void nextClicked(ClickEventArgs args)
     {
         //Navigate to next page of the PDF document loaded in the SfPdfViewer.
         PDFViewer.GoToNextPageAsync();
     }
 
-    public void previousClicked(ClickEventArgs args)
+    private void previousClicked(ClickEventArgs args)
     {
         //Navigate to previous page of the PDF document.
         PDFViewer.GoToPreviousPageAsync();
@@ -117,7 +117,7 @@ Use the following code snippet to create a fully functional custom toolbar with 
 
     MemoryStream stream;
 
-    public async void save(ClickEventArgs args)
+    private async void save(ClickEventArgs args)
     {
         //Gets the loaded PDF document with the changes.
         byte[] data = await PDFViewer.GetDocumentAsync();
@@ -127,33 +127,33 @@ Use the following code snippet to create a fully functional custom toolbar with 
         await PDFViewer.LoadAsync(stream);
     }
 
-    public void annotations(ClickEventArgs args)
+    private void annotations(ClickEventArgs args)
     {
         //Shows or hides the annotation toolbar in the SfPdfViewer.
         PDFViewer.ShowAnnotationToolbar(true);
     }
 
-    public void print(ClickEventArgs args)
+    private void print(ClickEventArgs args)
     {
         //Print the PDF document being loaded in the SfPdfViewer.
         PDFViewer.PrintAsync();
     }
 
-    public void download(ClickEventArgs args)
+    private void download(ClickEventArgs args)
     {
         //Downloads the PDF document being loaded in the SfPdfViewer.
         PDFViewer.DownloadAsync();
     }
 
-    public void zoomInClicked(ClickEventArgs args)
+    private void zoomInClicked(ClickEventArgs args)
     {
         //Scale the page to the next value in the zoom drop down list.
         PDFViewer.ZoomInAsync();
     }
 
-    public void zoomoutClicked(ClickEventArgs args)
+    private void zoomoutClicked(ClickEventArgs args)
     {
-        //Magnifies the page to the previous value in the zoom drop down list.
+        //Decreases the page to the previous value in the zoom drop down list.
         PDFViewer.ZoomOutAsync();
     }
 }
@@ -192,7 +192,7 @@ Use the following code snippet to create a fully functional custom toolbar with 
 
 Refer to the image below for the Custom Toolbar.
 
-![Custom toolbar](../images/custom-toolbar.png)
+![Blazor PDF Viewer with a custom toolbar showing Previous Page, Next Page, Zoom In, Zoom Out, Save, Edit Annotation, Print, and Download buttons](../images/custom-toolbar.png)
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar)
 

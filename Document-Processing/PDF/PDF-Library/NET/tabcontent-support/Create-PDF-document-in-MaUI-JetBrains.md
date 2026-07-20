@@ -9,7 +9,7 @@ Step 1. Open JetBrains Rider and create a new C# .NET MAUI application project.
 
 ![Launch JetBrains Rider](JetBrains_Images/Launch-JetBrains-Rider.png)
 
-* In the new Solution dialog, select Project Type as Console.
+* In the new Solution dialog, select Project Type as **.NET MAUI App**.
 * Enter a project name and specify the location.
 * Select the target framework (e.g., .NET 8.0, .NET 9.0).
 * Click create.
@@ -17,9 +17,9 @@ Step 1. Open JetBrains Rider and create a new C# .NET MAUI application project.
 ![Creating a new .NET MAUI application in JetBrains Rider](JetBrains_Images/Maui-App.png)
 
 Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
-* Click the NuGet icon in the Rider toolbar and type [Syncfusion.Pdf.NET](https://www.nuget.org/packages/Syncfusion.Pdf.Net) in the search bar.
+* Click the NuGet icon in the Rider toolbar and type [Syncfusion.Pdf.NET](https://www.nuget.org/packages/Syncfusion.Pdf.NET) in the search bar.
 * Ensure that "nuget.org" is selected as the package source.
-* Select the latest Syncfusion.Pdf.Net NuGet package from the list.
+* Select the latest Syncfusion.Pdf.NET NuGet package from the list.
 * Click the + (Add) button to add the package.
 
 ![Select the Syncfusion.Pdf.NET package](JetBrains_Images/NET-Package.png)
@@ -30,7 +30,9 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: Add a new button to the *MainWindow.xaml* as shown below.
+Step 3: Add the required helper files and resources to the project. Download the helper files from this [link](https://www.syncfusion.com/downloads/support/directtrac/general/ze/Helper_files-1664336865) and add the **arial.ttf** font and **AdventureWork.png** image to the **Resources\Pdf** folder. Mark the font and image files as **Embedded Resource** in the file properties so they can be loaded using `GetManifestResourceStream`.
+
+Step 4: Add a new button to the *MainPage.xaml* as shown below.
 
 {% tabs %}
 {% highlight XAML %}
@@ -53,7 +55,7 @@ Step 4: Add a new button to the *MainWindow.xaml* as shown below.
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Include the following namespaces in the *MainWindow.xaml.cs* file.
+Step 5: Include the following namespaces in the *MainPage.xaml.cs* file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -64,12 +66,11 @@ using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Grid;
 using Syncfusion.Drawing;
 using System.Reflection;
-using System.Xml.Linq;
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Add a new action method *createPdf_Click* in *MainWindow.xaml.cs* and include the below code snippet to generate a PDF document using the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. Load image stream from the local files on disk and draw the images through the [DrawImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawImage_Syncfusion_Pdf_Graphics_PdfImage_System_Single_System_Single_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data sources and include helper classes, methods and required files in the assets folder.
+Step 6: Add a new action method *createPdf_Click* in *MainPage.xaml.cs* and include the below code snippet to generate a PDF document using the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and provides the layout result of the added text, which determines the location of the next element to prevent content overlap. Load the image stream from the local files on disk and draw the images through the [DrawImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawImage_Syncfusion_Pdf_Graphics_PdfImage_System_Single_System_Single_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create a table by entering data manually or from an external data source, and includes helper classes, methods, and the required files in the assets folder.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -164,15 +165,15 @@ public void createPdf_Click(object sender, EventArgs e)
 
     string title = "INVOICE";
 
-    //Specificy the bounds for total value. 
+    //Specify the bounds for total value.
     RectangleF headerTotalBounds = new(400, 0, pageWidth - 400, headerHeight);
 
-    //Measure the string size using font. 
+    //Measure the string size using font.
     SizeF textSize = headerFont.MeasureString(title);
     graphics.DrawString(title, headerFont, whiteBrush, new RectangleF(0, 0, textSize.Width + 50, headerHeight), format);
-    //Draw rectangle in PDF page. 
+    //Draw rectangle in PDF page.
     graphics.DrawRectangle(darkBlueBrush, headerTotalBounds);
-    //Draw the toal value to PDF page. 
+    //Draw the total value to PDF page.
     graphics.DrawString("$" + GetTotalAmount(grid).ToString(), arialRegularFont, whiteBrush, new RectangleF(400, 0, pageWidth - 400, headerHeight + 10), format);
     //Create font from font stream. 
     arialRegularFont = new PdfTrueTypeFont(fontStream, 9, PdfFontStyle.Regular);
@@ -354,7 +355,7 @@ void AddProducts(string productId, string productName, double price, int quantit
     row.Cells[4].Value = total.ToString();
 }
 /// <summary>
-/// Get the Total amount of purcharsed items.
+/// Get the Total amount of purchased items.
 /// </summary>
 private float GetTotalAmount(PdfGrid grid)
 {

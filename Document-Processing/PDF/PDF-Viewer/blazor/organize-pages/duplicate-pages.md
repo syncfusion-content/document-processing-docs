@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 This guide explains how to duplicate pages within the current PDF using the Organize Pages UI.
 
-**Outcome**: Copied pages are inserted adjacent to the selection and included in exported PDFs.
+**Outcome**: Duplicated pages are inserted adjacent to the selection and included in exported PDFs.
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ This guide explains how to duplicate pages within the current PDF using the Orga
 
 1. Open the Organize Pages view
 
-	- Click the **Organize Pages** button in the viewer toolbar to open the Organize Pages dialog.
+	- Click the **Organize Pages** button in the viewer toolbar to open it.
 
 2. Select pages to duplicate
 
@@ -33,27 +33,19 @@ This guide explains how to duplicate pages within the current PDF using the Orga
 
 3. Duplicate selected pages
 
-	- Click the **Duplicate Pages** button in the Organize Pages toolbar; duplicated pages are inserted to the right of the selected thumbnails.
+	- Click the **Duplicate Pages** button in the Organize Pages toolbar; duplicated pages are inserted to the right of the selected thumbnails. When multiple thumbnails are selected, the Duplicate action duplicates every selected page in order.
 
-4. Duplicate multiple pages at once
+	![Duplicate pages in organize view](./images/Duplicate_Pages.gif)
 
-	- When multiple thumbnails are selected, the Copy action duplicates every selected page in order.
-
-	![Copy pages in organize view](./images/Duplicate_Pages.gif)
-
-5. Undo or redo changes
+4. Undo or redo changes
 
 	- Use **Undo** (Ctrl+Z) or **Redo** to revert or reapply recent changes.
 
 	![Undo and redo Organize Pages toolbar](./images/organize-ui-undo.png)
 
-6. Persist duplicated pages
+5. Persist duplicated pages
 
 	- Click **Save** or **Save As** to include duplicated pages in the saved/downloaded PDF.
-
-## Expected result
-
-- Selected pages are duplicated and included in the saved PDF.
 
 ## Programmatic approach
 
@@ -71,7 +63,7 @@ You can also duplicate pages programmatically using the Blazor PDF Viewer's `Dup
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2? Viewer;
+    private SfPdfViewer2? Viewer;
 
     private async Task DuplicateMethod() {
         await Viewer?.DuplicatePagesAsync([1,2]);
@@ -88,9 +80,9 @@ To enable or disable the **Duplicate Pages** button in the Organize Pages toolba
 
 ## Troubleshooting
 
-- If duplicates are not created: verify that the changes are persisted using **Save**.
+- If duplicates are not created, verify that the changes are persisted by clicking **Save**.
 
-## Related topics
+## See also
 
 - [Organize pages toolbar customization](./toolbar)
 - [Organize pages event reference](./events)
