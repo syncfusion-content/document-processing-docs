@@ -1,141 +1,143 @@
 ---
 layout: post
-title: Add Radius Annotation in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to enable, draw, customize, and manage Radius measurement annotations in the Syncfusion Blazor SfPdfViewer component.
+title: Add Radius Annotations in Blazor SfPdfViewer Component | Syncfusion
+description: Learn how to enable, draw, customize, and manage Radius annotations in the Blazor SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Add Radius Measurement Annotations in Blazor SfPdfViewer Component
+# Add Radius Annotations in Blazor SfPdfViewer Component
 Radius measurement annotations allow users to draw circular regions and calculate the radius visually.
 
 ![Radius overview](../../images/blazor-pdfviewer-radius-annotation.png)
 
-## Enable Radius Measurement
+## Enable Radius Annotation
 
-To enable Radius annotations in the Blazor SfPdfViewer, configure the component with annotation support.
+The `SfPdfViewer` component supports Radius measurement annotations by **default**. To enable the annotation toolbar and measurement functionality, simply add the `SfPdfViewer` component to your Blazor page:
 
 ```cshtml
-
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfPdfViewer2 DocumentPath="@DocumentPath" 
-              Width="100%" 
+<SfPdfViewer2 DocumentPath="@DocumentPath"
+              EnableAnnotationToolbar="true"
+              Width="100%"
               Height="100%">
 </SfPdfViewer2>
 
 @code {
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
-
 ```
 
 ## Add Radius Annotation
 
-### Add Radius Using the Toolbar
-1. Open the **Annotation Toolbar**.
-2. Select **Measurement → Radius**.
-3. Click and drag on the page to draw the radius.
+### Add Radius Annotation Using the Toolbar
+1. Click the **Edit Annotation** button in the SfPdfViewer toolbar. A secondary toolbar appears below it.
+2. Click the **Measurement Annotation** dropdown. A list of measurement annotation types appears.
+3. Select **Radius** to enter Radius measurement mode.
+4. Click on the page to place the **center point** of the circle, then drag to set the **radius**, and release the mouse to finalize the shape.
 
 ![Measurement Toolbar](../../images/blazor-pdfviewer-add-calibrate-in-toolbar.png)
 
-N> If Pan mode is active, selecting the Radius tool automatically switches interaction mode.
+N> If **Pan** mode is active, selecting the Radius tool automatically switches the viewer into Radius drawing mode.
 
-### Enable Radius Mode
-Programmatically switch the viewer into Radius mode using `SetAnnotationModeAsync(AnnotationType.Radius)`.
+### Enable Radius Annotation Mode
+Programmatically switch the viewer into Radius mode using [`SetAnnotationModeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SetAnnotationModeAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationType_).
 
 ```cshtml
-
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="EnableRadiusMode">Enable Radius Mode</SfButton>
-<SfPdfViewer2 DocumentPath="@DocumentPath" 
+<SfPdfViewer2 DocumentPath="@DocumentPath"
               @ref="viewer"
-              Width="100%" 
+              Width="100%"
               Height="100%">
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async void EnableRadiusMode(MouseEventArgs args)
+    private async Task EnableRadiusMode(MouseEventArgs args)
     {
         await viewer.SetAnnotationModeAsync(AnnotationType.Radius);
     }
 }
-
 ```
 
-#### Exit Radius Mode
-```cshtml
+#### Exit Radius Annotation Mode
 
+Switch back to the default mode by calling [`SetAnnotationModeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SetAnnotationModeAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationType_) with annotation type `None`.
+
+```cshtml
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="ExitRadiusMode">Exit Radius Mode</SfButton>
-<SfPdfViewer2 DocumentPath="@DocumentPath" 
+<SfPdfViewer2 DocumentPath="@DocumentPath"
               @ref="viewer"
-              Width="100%" 
+              Width="100%"
               Height="100%">
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async void ExitRadiusMode(MouseEventArgs args)
+    private async Task ExitRadiusMode(MouseEventArgs args)
     {
         await viewer.SetAnnotationModeAsync(AnnotationType.None);
     }
 }
-
 ```
 
-### Add Radius Programmatically
+### Add Radius Annotation Programmatically
 Use the [`AddAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) API to add a radius annotation.
 
 ```cshtml
-
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="AddRadius">Add Radius</SfButton>
-<SfPdfViewer2 DocumentPath="@DocumentPath" 
+<SfPdfViewer2 DocumentPath="@DocumentPath"
               @ref="viewer"
-              Width="100%" 
+              Width="100%"
               Height="100%">
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async void AddRadius(MouseEventArgs args)
+    private async Task AddRadius(MouseEventArgs args)
     {
-        PdfAnnotation annotation = new PdfAnnotation();
-        annotation.Type = AnnotationType.Radius;
-        annotation.PageNumber = 0;
-        
-        annotation.Bound = new Bound();
-        annotation.Bound.X = 200;
-        annotation.Bound.Y = 630;
-        annotation.Bound.Width = 90;
-        annotation.Bound.Height = 90;
-        
+        PdfAnnotation annotation = new PdfAnnotation
+        {
+            Type = AnnotationType.Radius,
+            PageNumber = 1
+        };
+        annotation.Bound = new Bound
+        {
+            X = 200,
+            Y = 630,
+            Width = 90,
+            Height = 90
+        };
         await viewer.AddAnnotationAsync(annotation);
     }
 }
-
 ```
 
-## Customize Radius Appearance
-Configure default properties using the [`RadiusSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_RadiusSettings) property (for example, default **fill color**, **stroke color**, **opacity**).
+## Customize Radius Annotation Appearance
+Configure default properties — **fill color**, **stroke color**, **thickness**, **opacity**, and **measurement unit** — using the [`RadiusSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_RadiusSettings) property.
+
+> `RadiusSettings` is applied only at component initialization. To change defaults at runtime, update the bound object and re-render the viewer (for example, by toggling a render flag).
+
+Available `PdfViewerRadiusSettings` members include `FillColor`, `StrokeColor`, `Thickness`, `Opacity`, `MeasurementUnit`, and `LeaderLineStyle`.
 
 ```cshtml
-
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 DocumentPath="@DocumentPath"
@@ -146,165 +148,162 @@ Configure default properties using the [`RadiusSettings`](https://help.syncfusio
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    PdfViewerRadiusSettings RadiusSettings = new PdfViewerRadiusSettings
+    private PdfViewerRadiusSettings RadiusSettings = new PdfViewerRadiusSettings
     {
         FillColor = "yellow",
         StrokeColor = "orange",
-        Opacity = 0.6
+        Opacity = 0.6,
+        Thickness = 2
     };
 }
-
 ```
 
-## Manage Radius (Move, Reshape, Edit, Delete)
-- **Move**: Drag inside the circle to reposition it.
-- **Reshape**: Drag the edge handle to adjust the radius size.
+## Manage Radius Annotation
+
+### Move Radius Annotation
+Drag inside the circle to reposition the entire annotation on the page.
+
+### Reshape Radius Annotation
+Drag the **edge handle** (the circumference) to adjust the radius size. The center point remains fixed.
 
 ### Edit Radius Annotation
 
-#### Edit Radius (UI)
+#### Edit Radius Annotation (UI)
+Select the Radius annotation first — the annotation toolbar appears below the main toolbar. Use it to change:
 
-Use the annotation toolbar to modify:
-- **Fill Color** - Edit the fill color using the Edit Color tool
+- **Fill Color**: pick a new color with the Edit Color tool.
+  ![Editing Calibrate FillColor in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-fillcolor.png)
+- **Stroke Color**: change the line color with the Edit Stroke Color tool.
+  ![Editing Calibrate StrokeColor in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-stroke-color.png)
+- **Thickness**: adjust the line width with the Edit Thickness tool.
+  ![Editing Calibrate Thickness in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-thickness.png)
+- **Opacity**: change transparency with the Edit Opacity tool.
+  ![Editing Calibrate Opacity in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-opacity.png)
+- **Line properties**: change the leader style (line only, with arrows, or full dimension lines) with the Edit Property tool.
+  ![Editing Calibrate Property in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-property.png)
 
-![Editing Calibrate FillColor in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-fillcolor.png)
-
-- **Stroke Color** - Edit the stroke color using the Edit Stroke Color tool
-
-![Editing Calibrate StrokeColor in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-stroke-color.png)
-
-- **Thickness** - Edit the border thickness using the Edit Thickness tool
-
-![Editing Calibrate Thickness in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-thickness.png)
-
-- **Opacity** - Edit the opacity using the Edit Opacity tool
-
-![Editing Calibrate Opacity in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-opacity.png)
-
-#### Edit Radius Programmatically
-
-Update properties and call `EditAnnotationAsync()`.
+#### Edit Radius Annotation Programmatically
+Update properties and call [`EditAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_).
 
 ```cshtml
-
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="EditRadiusProgrammatically">Edit Radius</SfButton>
-<SfPdfViewer2 DocumentPath="@DocumentPath" 
+<SfPdfViewer2 DocumentPath="@DocumentPath"
               @ref="viewer"
-              Width="100%" 
+              Width="100%"
               Height="100%">
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async void EditRadiusProgrammatically(MouseEventArgs args)
+    private async Task EditRadiusProgrammatically(MouseEventArgs args)
     {
         List<PdfAnnotation> annotationCollection = await viewer.GetAnnotationsAsync();
-        foreach (var ann in annotationCollection)
+
+        if (annotationCollection == null || annotationCollection.Count == 0)
         {
-            if (ann.Type == AnnotationType.Radius)
-            {
-                ann.StrokeColor = "#0000FF";
-                ann.Thickness = 2;
-                ann.Opacity = 0.8;
-                await viewer.EditAnnotationAsync(ann);
-                break;
-            }
+            return;
         }
+
+        PdfAnnotation target = annotationCollection
+            .FirstOrDefault(a => a.Type == AnnotationType.Radius);
+
+        if (target == null)
+        {
+            return;
+        }
+
+        target.StrokeColor = "#0000FF";
+        target.Thickness = 2;
+        target.Opacity = 0.8;
+
+        await viewer.EditAnnotationAsync(target);
     }
 }
-
 ```
 
 ### Delete Radius Annotation
-
-Delete Radius Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../delete-annotation).
-
-## Set Default Properties During Initialization
-Apply defaults for Radius using the [`RadiusSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_RadiusSettings) property.
+Delete a Radius annotation through the UI (right-click → **Delete**, click **Delete** on the annotation toolbar, or press the `Delete` key while the annotation is selected) or programmatically:
 
 ```cshtml
-
-@using Syncfusion.Blazor.SfPdfViewer
-
-<SfPdfViewer2 @ref="@viewer"
-              DocumentPath="@DocumentPath"
-              Height="100%" Width="100%"
-              RadiusSettings="@RadiusSettings">
-</SfPdfViewer2>
-
 @code {
-    SfPdfViewer2 viewer;
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    
-    PdfViewerRadiusSettings RadiusSettings = new PdfViewerRadiusSettings
+    private async Task DeleteFirstRadius()
     {
-        FillColor = "orange",
-        Opacity = 0.6,
-        StrokeColor = "pink"
-    };
+        List<PdfAnnotation> annotations = await viewer.GetAnnotationsAsync();
+        PdfAnnotation target = annotations.FirstOrDefault(a => a.Type == AnnotationType.Radius);
+        if (target != null)
+        {
+            await viewer.DeleteAnnotationAsync(target);
+        }
+    }
 }
-
 ```
 
-## Set Properties While Adding Individual Annotation
-Pass per‑annotation values directly when calling [`AddAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_).
+For additional deletion patterns, see [**Delete Annotation**](../delete-annotation).
+
+## Set Properties While Adding an Individual Annotation
+Pass per-annotation values directly when calling [`AddAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_).
 
 ```cshtml
-
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="AddStyledRadius">Add Styled Radius</SfButton>
-<SfPdfViewer2 DocumentPath="@DocumentPath" 
+<SfPdfViewer2 DocumentPath="@DocumentPath"
               @ref="viewer"
-              Width="100%" 
+              Width="100%"
               Height="100%">
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async void AddStyledRadius(MouseEventArgs args)
+    private async Task AddStyledRadius(MouseEventArgs args)
     {
-        PdfAnnotation annotation = new PdfAnnotation();
-        annotation.Type = AnnotationType.Radius;
-        annotation.PageNumber = 0;
-        
-        annotation.Bound = new Bound();
-        annotation.Bound.X = 200;
-        annotation.Bound.Y = 630;
-        annotation.Bound.Width = 90;
-        annotation.Bound.Height = 90;
-        annotation.FillColor = "orange";
-        annotation.Opacity = 0.6;
-        annotation.StrokeColor = "pink";
-        
+        PdfAnnotation annotation = new PdfAnnotation
+        {
+            Type = AnnotationType.Radius,
+            PageNumber = 1,
+            FillColor = "orange",
+            Opacity = 0.6,
+            StrokeColor = "pink",
+            Thickness = 2
+        };
+        annotation.Bound = new Bound
+        {
+            X = 200,
+            Y = 630,
+            Width = 90,
+            Height = 90
+        };
         await viewer.AddAnnotationAsync(annotation);
     }
 }
-
 ```
 
-## Scale Ratio & Units
-- Use **Scale Ratio** from the context menu.  
-  ![Scale ratio](../../images/blazor-pdfviewer-calibrate-scaleratio.png)
-- Supported units: Inch, Millimeter, Centimeter, Point, Pica, Feet.  
-  ![Scale dialog](../../images/blazor-pdfviewer-calibrate-scale-dialog.png)
+## Scale Ratio and Units
+The **Scale Ratio** controls how many page units equal one real-world unit. Open it from the **context menu** of any measurement annotation to recalibrate.
+
+![Scale ratio](../../images/blazor-pdfviewer-calibrate-scaleratio.png)
+
+Supported `CalibrationUnit` values: `Inch`, `Millimeter`, `Centimeter` (`Cm`), `Point`, `Pica`, and `Feet`.
+
+![Scale dialog](../../images/blazor-pdfviewer-calibrate-scale-dialog.png)
+
+> `ScaleRatio` must be greater than `0`. The default value is `1`.
 
 ### Set Default Scale Ratio During Initialization
 Configure scale defaults using [`MeasurementSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerMeasurementSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerMeasurementSettings_ScaleRatio).
 
 ```cshtml
-
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 @ref="@viewer"
@@ -315,26 +314,31 @@ Configure scale defaults using [`MeasurementSettings`](https://help.syncfusion.c
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    PdfViewerMeasurementSettings MeasurementSettings = new PdfViewerMeasurementSettings 
-    { 
-        ScaleRatio = 2, 
-        ConversionUnit = CalibrationUnit.Cm 
+    private PdfViewerMeasurementSettings MeasurementSettings = new PdfViewerMeasurementSettings
+    {
+        ScaleRatio = 2,
+        ConversionUnit = CalibrationUnit.Cm
     };
 }
-
 ```
 
-## Handle Radius Events
-Listen to annotation life-cycle events (add/modify/select/remove). For the full list and parameters, see [**Annotation Events**](../events).
+## Handle Radius Annotation Events
+Listen to annotation life-cycle events (`Added`, `Modified`, `Selected`, `Removed`) and use the `AnnotationEventArgs` payload — which includes the affected `PdfAnnotation`, the page number, and the action that triggered the event.
+
+For the full list of events and their payloads, see [**Annotation Events**](../events).
 
 ## Export and Import
-Radius measurements can be exported or imported with other annotations. For workflows and supported formats, see [**Export and Import annotations**](../import-export-annotation).
+Radius measurements are exported and imported with the rest of the annotations in **JSON** or **XFDF** format. You can programmatically export and import these annotations using the [`ExportAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ExportAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationDataFormat_) and [`ImportAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ImportAnnotationAsync_System_IO_Stream_Syncfusion_Blazor_SfPdfViewer_AnnotationDataFormat_) methods.
 
-## See Also
+For the full export/import workflow and additional formats, see [**Export and Import Annotations**](../import-export-annotation).
+
+## See also
 
 - [Annotation Events](../events)
 - [Export and Import Annotations](../import-export-annotation)
 - [Delete Annotations](../delete-annotation)
+- [Measurement Annotations Overview](overview)
+- [Add Perimeter Annotations](perimeter-annotation)

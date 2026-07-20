@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Ink Annotation in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to add, edit, and programmatically manage ink annotations in the Syncfusion Blazor SfPdfViewer component.
+description: Learn how to add, edit, and programmatically manage ink annotations in the Blazor SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Ink annotation in the Blazor SfPdfViewer component
+# Ink Annotation in the Blazor SfPdfViewer Component
 
 The Blazor SfPdfViewer component supports adding, editing, and deleting ink annotations.
 
@@ -19,7 +19,7 @@ Ink annotations can be added using the annotation toolbar.
 
 * Select the **Edit Annotation** button in the SfPdfViewer toolbar to open the annotation toolbar.
 * Choose the **Draw Ink** button to enable ink mode.
-* Draw on any page of the loaded PDF document.
+* Navigate to the target page, then draw on the page of the loaded PDF document.
 
 ![Draw ink tool in annotation toolbar](../images/ink_tool.png)
 
@@ -27,16 +27,16 @@ Ink annotations can be added using the annotation toolbar.
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfButton OnClick="OnClick">Ink Annotation</SfButton>
-<SfPdfViewer2 @ref="viewer" DocumentPath=@DocumentPath Height="100%" Width="100%" ></SfPdfViewer2>
+<SfButton OnClick="@OnClick">Ink Annotation</SfButton>
+<SfPdfViewer2 @ref="Viewer" DocumentPath="@DocumentPath" Height="100%" Width="100%"></SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async void OnClick(MouseEventArgs args)
+    private async Task OnClick(MouseEventArgs args)
     {
-        await viewer.SetAnnotationModeAsync(AnnotationType.Ink);
+        await Viewer.SetAnnotationModeAsync(AnnotationType.Ink);
     }
 }
 ```
@@ -47,47 +47,47 @@ The stroke color, thickness, and opacity of an ink annotation can be modified us
 
 ### Editing stroke color
 
-Change the stroke color using the color palette available in the Edit Stroke Color tool.
+Change the stroke color using the color palette available in the **Edit Stroke Color** tool. The `StrokeColor` property accepts a named color (for example, `"red"`), a hex value (for example, `"#FF0000"`), or an `rgb(...)` expression.
 
 ![Change stroke color of ink annotation](../images/ink_strokecolor.png)
 
 ### Editing thickness
 
-Adjust the border thickness using the range slider in the Edit Thickness tool.
+Adjust the border thickness using the range slider in the **Edit Thickness** tool. Thickness is specified in pixels; the valid range is `0.5` to `10`.
 
 ![Change thickness of ink annotation](../images/ink_thickness.png)
 
 ### Editing opacity
 
-Control the transparency using the range slider in the Edit Opacity tool.
+Control the transparency using the range slider in the **Edit Opacity** tool. Opacity accepts a value in the inclusive range `0` (fully transparent) to `1` (fully opaque).
 
 ![Change opacity of ink annotation](../images/ink_opacity.png)
 
 ## Setting default properties during the control initialization
 
-Default properties for ink annotations can be configured before rendering the component using [InkAnnotationSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_InkAnnotationSettings). After interacting with the toolbar, subsequent annotations will use the most recently selected values.
+Default properties for ink annotations can be configured before rendering the component using [PdfViewerInkAnnotationSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerInkAnnotationSettings.html). After interacting with the toolbar, subsequent annotations will use the most recently selected values.
 
 ```cshtml
 
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfPdfViewer2 @ref="viewer"
-              DocumentPath=@DocumentPath
+<SfPdfViewer2 @ref="Viewer"
+              DocumentPath="@DocumentPath"
               Height="100%"
               Width="100%"
               InkAnnotationSettings="@InkAnnotationSettings">
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    PdfViewerInkAnnotationSettings InkAnnotationSettings = new PdfViewerInkAnnotationSettings 
-    { 
-        Author = "Syncfusion", 
-        StrokeColor = "green", 
-        Thickness = 3, 
-        Opacity = 0.6 
+    PdfViewerInkAnnotationSettings InkAnnotationSettings = new PdfViewerInkAnnotationSettings
+    {
+        Author = "Syncfusion",
+        StrokeColor = "green",
+        Thickness = 3,
+        Opacity = 0.6
     };
 }
 
@@ -108,10 +108,10 @@ Below is an example demonstrating how to add an ink annotation to a PDF document
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/Ink_Annotation.pdf";
+    private SfPdfViewer2 viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/Ink_Annotation.pdf";
 
-    public async void AddInkAnnotationAsync(MouseEventArgs args)
+    private async Task AddInkAnnotationAsync(MouseEventArgs args)
     {
         PdfAnnotation annotation = new PdfAnnotation();
         // Set the annotation type of Ink
@@ -119,7 +119,7 @@ Below is an example demonstrating how to add an ink annotation to a PDF document
         // Page numbers start from 0. So, if set to 0 it represents page 1.
         annotation.PageNumber = 0;
 
-        // Bound of the Ink annotation
+        // Bound of the Ink annotation (values in PDF page points; origin is top-left)
         annotation.Bound = new Bound();
         annotation.Bound.X = 200;
         annotation.Bound.Y = 150;
@@ -134,7 +134,7 @@ Below is an example demonstrating how to add an ink annotation to a PDF document
 
 ```
 
-This code adds an ink annotation to the first page of the PDF document (page indices are zero-based).
+This code adds an ink annotation to the first page of the PDF document (page indices are zero-based). A complete, runnable sample with the full path data is available on GitHub.
 
 ![Programmatically added ink annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-add-ink-annotation.png)
 
@@ -155,24 +155,29 @@ Below is an example demonstrating how to edit an ink annotation programmatically
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/Ink_Annotation.pdf";
+    private SfPdfViewer2 viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/Ink_Annotation.pdf";
 
-    public async void EditInkAnnotationAsync(MouseEventArgs args)
+    private async Task EditInkAnnotationAsync(MouseEventArgs args)
     {
         // Get annotation collection
         List<PdfAnnotation> annotationCollection = await Viewer.GetAnnotationsAsync();
-        // Select the annotation want to edit
+        // Guard against an empty annotation collection
+        if (annotationCollection is null || annotationCollection.Count == 0)
+        {
+            return;
+        }
+        // Select the annotation to edit
         PdfAnnotation annotation = annotationCollection[0];
-        // Change the position of the ink annotation
+        // Change the position of the ink annotation (values in PDF page points)
         annotation.Bound.X = 125;
         annotation.Bound.Y = 125;
         // Change the width and height of the ink annotation
         annotation.Bound.Width = 100;
         annotation.Bound.Height = 75;
-        // Change the stroke color of ink annotation
+        // Change the stroke color of the ink annotation (named color, hex, or rgb)
         annotation.StrokeColor = "#FFFF00";
-        // Change the opacity (0 to 1) of ink annotation
+        // Change the opacity (0 to 1) of the ink annotation
         annotation.Opacity = 0.5;
         // Edit the ink annotation
         await Viewer.EditAnnotationAsync(annotation);

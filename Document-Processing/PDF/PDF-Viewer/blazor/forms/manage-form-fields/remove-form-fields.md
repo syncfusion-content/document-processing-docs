@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Remove form fields in the Blazor SfPdfViewer component | Syncfusion
-description: Learn how to remove PDF form fields using the UI and programmatically in the Syncfusion Blazor SfPdfViewer component.
+description: Learn how to remove PDF form fields using the UI and programmatically in the Blazor SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -17,15 +17,15 @@ The Blazor SfPdfViewer supports removing form fields using the Form Designer UI 
 2. Select the form field.
 3. Click **Delete** in the toolbar or press the **Delete** key.
 
-![Form Designer toolbar showing Delete form field icon](../../../javascript-es6/images/ui-del-formfields.png)
+![Delete form field icon in the Blazor Form Designer toolbar](../form-designer-images/delete-formfields-formdesigner-sfpdfviewer.png)
 
 
 ## Remove Form Fields Programmatically
 
-The [DeleteFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteFormFieldsAsync_System_Boolean_) method removes form fields from the document, enabling efficient management of form structures.
+The [DeleteFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteFormFieldsAsync_System_Boolean_) method removes form fields from the loaded PDF document.
 
-### Delete All Form Fields  
-Removes all form fields from the document using [DeleteFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteFormFieldsAsync_System_Boolean_) , clearing all interactive elements at once.
+### Delete all form fields  
+Removes all form fields from the document using [DeleteFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteFormFieldsAsync_System_Boolean_) when called with `true`, clearing all interactive elements at once.
 
 {% tabs %}
 {% highlight razor %}
@@ -33,7 +33,7 @@ Removes all form fields from the document using [DeleteFormFieldsAsync()](https:
 @using Syncfusion.Blazor.Buttons
 
 <!-- Button to delete all form fields -->
-<SfButton onclick="@DeleteAllFormFields">Delete All Form Fields</SfButton>
+<SfButton OnClick="DeleteAllFormFields">Delete All Form Fields</SfButton>
 
 <!-- PDF Viewer component with reference binding and document loading -->
 <SfPdfViewer2 @ref="@viewer" Height="100%" Width="100%" DocumentPath="@DocumentPath">
@@ -56,12 +56,12 @@ Removes all form fields from the document using [DeleteFormFieldsAsync()](https:
 {% endtabs %}
 The following image illustrates deleting all form fields in Blazor SfPdfViewer:  
 
-![Delete All Form Fields in Blazor SfPdfViewer](../form-designer-images/blazor-pdfviewer-form-designer-delete-all.png)
+![Delete all form fields in Blazor SfPdfViewer](../form-designer-images/blazor-pdfviewer-form-designer-delete-all.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/DeleteAllFields.razor).
 
-### Delete Selected Form Fields  
-Deletes only the currently selected form field using [DeleteFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteFormFieldsAsync_System_Boolean_), enabling users to modify the document while keeping the rest of the form structure intact.
+### Delete selected form fields  
+Deletes only the currently selected form field using [DeleteFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteFormFieldsAsync_System_Boolean_) when called with `false`, leaving the rest of the form structure intact.
 
 {% tabs %}
 {% highlight razor %}
@@ -69,7 +69,7 @@ Deletes only the currently selected form field using [DeleteFormFieldsAsync()](h
 @using Syncfusion.Blazor.Buttons
 
 <!-- Button to delete the selected form fields -->
-<SfButton onclick="@DeleteSelectedFormField">Delete Selected Form Field</SfButton>
+<SfButton OnClick="DeleteSelectedFormField">Delete Selected Form Field</SfButton>
 
 <!-- PDF Viewer component with reference binding and document loading -->
 <SfPdfViewer2 @ref="@viewer" Height="100%" Width="100%" DocumentPath="@DocumentPath">
@@ -90,14 +90,14 @@ Deletes only the currently selected form field using [DeleteFormFieldsAsync()](h
 }
 {% endhighlight %}
 {% endtabs %}
-The following image illustrates deleting a selected password field in Blazor SfPdfViewer:  
+The following image illustrates deleting a selected form field in Blazor SfPdfViewer:  
 
-![Delete Selected Password Field in Blazor SfPdfViewer](../form-designer-images/blazor-pdfviewer-form-designer-delete-selected.png)
+![Delete selected form field in Blazor SfPdfViewer](../form-designer-images/blazor-pdfviewer-form-designer-delete-selected.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/DeleteSelectedField.razor).
 
-### Delete Form Fields by IDs  
-Removes specific form fields using [DeleteFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteFormFieldsAsync_System_Collections_Generic_List_System_String__) based on their unique identifiers, allowing precise control over which fields are deleted without affecting others. The example below deletes a single field by ID; pass multiple IDs to delete several fields at once.  
+### Delete form fields by IDs  
+Removes specific form fields using the [DeleteFormFieldsAsync(List<string>)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteFormFieldsAsync_System_Collections_Generic_List_System_String__) overload based on their unique identifiers, allowing precise control over which fields are deleted without affecting others. The following example deletes multiple fields by ID; pass a single ID in the list to delete one field.
 
 {% tabs %}
 {% highlight razor %}
@@ -122,14 +122,15 @@ Removes specific form fields using [DeleteFormFieldsAsync()](https://help.syncfu
     private async Task DeleteFormFields()
     {
         List<FormFieldInfo> formFields = await viewer.GetFormFieldsAsync();
-        await viewer.DeleteFormFieldsAsync(new List<string> {formFields[0].Id}); // Delete form fields by ID
+        // Delete the first two form fields by ID
+        await viewer.DeleteFormFieldsAsync(new List<string> { formFields[0].Id, formFields[1].Id });
     }
 }
 {% endhighlight %}
 {% endtabs %}
 The following image illustrates deleting form fields by their IDs in Blazor SfPdfViewer:  
  
-![Delete Form Fields by IDs in Blazor SfPdfViewer](../form-designer-images/blazor-pdfviewer-form-designer-delete-ids.png)
+![Delete form fields by IDs in Blazor SfPdfViewer](../form-designer-images/blazor-pdfviewer-form-designer-delete-ids.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/DeleteById.razor).
 
