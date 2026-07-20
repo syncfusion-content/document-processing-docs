@@ -16,7 +16,6 @@ documentation: ug
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 * [Browser compatibility](https://blazor.syncfusion.com/documentation/browser-support)
-* [Syncfusion license registration](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application)
 
 {% tabcontents %}
 
@@ -136,6 +135,13 @@ builder.Services.AddSyncfusionBlazor();
 
 {% endhighlight %}
 {% endtabs %}
+
+## Register a Syncfusion License Key
+
+Before initializing the ASP.NET Core DOCX Editor control, generate a Syncfusion license key and register it in your application.
+
+- [Generate a Syncfusion License Key](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-generate)
+- [Register a Syncfusion License Key in an ASP.NET Core Application](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application)
 
 ### Add Themes and Script References
 
