@@ -15,7 +15,7 @@ To include the .NET PDF library into your ASP.NET Core Web API, please refer to 
 
 ## Prerequisites
 
-- .NET 8.0 SDK or later ([Download .NET](https://dotnet.microsoft.com/download))
+- .NET 8.0 SDK or later.
 - Visual Studio 2022 or Visual Studio Code
 - A valid Syncfusion license key (required for production use; a free Community License is available)
 
