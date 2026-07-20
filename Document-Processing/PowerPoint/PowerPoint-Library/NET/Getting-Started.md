@@ -6,7 +6,7 @@ platform: document-processing
 control: Presentation
 documentation: UG
 ---
-# Getting started with Essential<sup>&reg;</sup> Presentation library
+# Getting Started with Essential<sup>&reg;</sup> Presentation Library
 
 ## Creating a simple PowerPoint Presentation with basic elements from scratch
 
@@ -15,7 +15,9 @@ In this page, you can learn how to create a simple [.NET PowerPoint Presentation
 To quickly get started on creating a PowerPoint presentation, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=OSGwosNnN0o" %}
 
-For creating and manipulating a PowerPoint Presentation, include the following assemblies in the application.
+To create a PowerPoint Presentation, start by creating a new .NET console application and installing the required NuGet package. For cross-platform projects, install the [`Syncfusion.Presentation.NET.Core`](https://www.nuget.org/packages/Syncfusion.Presentation.NET.Core) package. For Windows-specific projects targeting .NET Framework, reference the assemblies listed below instead.
+
+For creating and manipulating a PowerPoint Presentation, include the following assemblies in the .NET Framework (Windows-specific) application.
 
 <table>
     <thead>
@@ -58,6 +60,27 @@ For creating and manipulating a PowerPoint Presentation, include the following a
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components.
 
+Register the license key once per application before using any Syncfusion Presentation APIs. The following example shows how to register the license key at application startup.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Register the Syncfusion license key (place this in Program.cs before any Presentation API call)
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Register the Syncfusion license key (place this in Program.cs / Application_Start before any Presentation API call)
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Register the Syncfusion license key (place this in Application_Start before any Presentation API call)
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")
+{% endhighlight %}
+
+{% endtabs %}
+
 Include the following namespace in your .cs or .vb code as shown below
 
 {% tabs %}
@@ -99,7 +122,7 @@ Dim pptxDoc As IPresentation = Presentation.Create()
 
 {% endtabs %}
 
-[IPresentation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IPresentation.html) instance has a slide collection that represents the individual slides present within PowerPoint presentation. A slide may contain textual and other graphics contents like shapes, images, charts etc.
+[IPresentation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IPresentation.html) instance has a slide collection that represents the individual slides present within a PowerPoint presentation. A slide may contain textual and other graphics contents like shapes, images, charts etc.
 
 The following code example demonstrates how to add a blank slide to a PowerPoint Presentation.
 
@@ -122,7 +145,7 @@ Dim firstSlide As ISlide = pptxDoc.Slides.Add(SlideLayoutType.Blank)
 
 {% endtabs %}
 
-N> The 'Point' typographic units are used to add or manipulate any element in a Presentation. 
+N> The 'Point' typographic units are used to add or manipulate any element in a Presentation. Position and size values passed to methods such as `AddTextBox` and `AddPicture` are specified in points.
 
 All the textual contents in a Presentation document are represented by paragraphs. Within the paragraph, textual contents are grouped into one or more child elements as [TextParts](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ITextParts.html). Each [TextPart](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ITextParts.html) represents a region of text with a common set of formatted text.
 
@@ -174,7 +197,7 @@ textPart.Font.Bold = True
 
 {% endtabs %}
 
-Essential<sup>&reg;</sup> Presentation allows you to create simple and multi-level lists that make the content easier for reading. The following code example demonstrates how to add a bulleted list in a paragraph.
+Essential<sup>&reg;</sup> Presentation allows you to create simple and multi-level lists that make the content easier to read. The following code example demonstrates how to add a bulleted list in a paragraph.
 
 {% tabs %}
 
@@ -422,7 +445,7 @@ Imports Syncfusion.PresentationToPdfConverter
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//Open the existing PowerPoint presentation.
+//Opens an existing PowerPoint presentation from file path.
 string basePath = _hostingEnvironment.WebRootPath;
 FileStream fileStreamInput = new FileStream(basePath + @"/Presentation/ConversionTemplate.pptx", FileMode.Open, FileAccess.Read);
 IPresentation pptxDoc = Presentation.Open(fileStreamInput);
@@ -476,7 +499,7 @@ N> * Creating an instance of [ChartToImageConverter](https://help.syncfusion.com
 N> * [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) is supported from .NET Framework 4.0 onwards.
 N> * The Essential Presentation Library supports PowerPoint presentation to PDF conversion in UWP applications using PresentationRenderer. For further information, please refer [here](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-uwp).
 
-[PresentationToPdfConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.PresentationToPdfConverter.PresentationToPdfConverterSettings.html) can be used to customize the conversion of Presentation to PDF document. [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) class can be further used to improve the quality of converted charts in the PDF/Image. For more information about this, see [Conversion](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/getting-started).
+[PresentationToPdfConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.PresentationToPdfConverter.PresentationToPdfConverterSettings.html) can be used to customize the conversion of Presentation to PDF document. For more information about Presentation to PDF conversion settings and chart image quality options, see [PowerPoint to PDF conversion](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/).
 
 N> You can refer to our [.NET PowerPoint framework](https://www.syncfusion.com/document-sdk/net-powerpoint-library) webpage to see the product’s groundbreaking features. You can also explore our [.NET PowerPoint framework demo](https://www.syncfusion.com/demos/fileformats/powerpoint-library) that shows how to create and modify PowerPoint files from C# with just five lines of code on different platforms.
 
