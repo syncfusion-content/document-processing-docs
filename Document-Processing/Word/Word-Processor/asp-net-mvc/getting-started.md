@@ -15,7 +15,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> [ASP.NET MVC DOCX Editor](https
 
 * [System requirements for ASP.NET MVC controls](https://ej2.syncfusion.com/aspnetmvc/documentation/system-requirements)
 * [Browser compatibility](https://ej2.syncfusion.com/aspnetmvc/documentation/browser)
-* [ASP.NET MVC license registration](https://ej2.syncfusion.com/aspnetmvc/documentation/licensing/how-to-register-in-an-application)
+
 
 ## Create ASP.NET MVC application with HTML helper
 
@@ -56,7 +56,7 @@ Add the **Syncfusion.EJ2** namespace reference to the `<namespaces>` section in 
 
 ## Register a Syncfusion License Key
 
-Before initializing the MVC DOCX Editor control, generate a Syncfusion license key and register it in your application.
+Before initializing the ASP.NET MVC DOCX Editor control, generate a Syncfusion license key and register it in your application.
 
 - [Generate a Syncfusion License Key](https://help.syncfusion.com/document-processing/licensing/how-to-generate)
 - [Register a Syncfusion License Key in an ASP.NET Core Application](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#aspnet-mvc)
@@ -91,9 +91,9 @@ Register the Script Manager at the end of the `<body>` tag in the `~/Views/Share
 {% endhighlight %}
 {% endtabs %}
 
-## Add the Document Editor Component
+## Add the DOCX Editor Component
 
-Add the Document Editor component in `~/Views/Home/Index.cshtml` page.
+Add the DOCX Editor component in `~/Views/Home/Index.cshtml` page.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/Index.cshtml" %}
@@ -103,7 +103,7 @@ Add the Document Editor component in `~/Views/Home/Index.cshtml` page.
 
 ## Run the application
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. The DOCX Editor component will then be rendered in the default web browser as shown below.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> to run the app. The DOCX Editor component will then be rendered in the default web browser as shown below.
 
 ![Output of ASP.NET MVC DOCX Editor](./images/aspnetmvc-docx-editor.png)
 
@@ -117,7 +117,7 @@ If the DOCX Editor control does not render as expected, use the following checkl
 - Confirm that `@Html.EJS().ScriptManager()` is included before the closing `</body>` tag and check the browser console for JavaScript errors.
  
 **Licensing errors at runtime**
-- Ensure that you have registered your [Syncfusion license](https://ej2.syncfusion.com/aspnetmvc/documentation/licensing/how-to-register-in-an-application) before deploying the application to production.
+- Ensure that you have registered your [Syncfusion license](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#aspnet-mvc) before deploying the application to production.
 
 ## Online Demo
 
