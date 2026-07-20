@@ -1,5 +1,5 @@
 ---
-title: Create and edit PowerPoint files in Xamarin |Syncfusion<sup>&reg;</sup>|
+title: Create and edit PowerPoint files in Xamarin | Syncfusion
 description: Xamarin PowerPoint library to create, read, edit and convert PowerPoint files in Xamarin.Forms, Xamarin.Android and Xamarin.iOS platforms
 platform: document-processing
 control: PowerPoint
@@ -8,7 +8,7 @@ keywords: Working with presentation library in Xamarin Platform
 ---
 # Create, read and edit a PowerPoint file in Xamarin
 
-You can create or edit a PowerPoint file with the Syncfusion<sup>&reg;</sup> [Xamarin PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library). The below are the steps.
+You can create or edit a PowerPoint file with the Syncfusion<sup>&reg;</sup> [Xamarin PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library). The steps are as follows.
 
 ## Create a PowerPoint file in Xamarin
 
@@ -16,7 +16,7 @@ Step 1: Create a new C# **Xamarin.Forms** application project.
 
 ![Create Xamarin project](Workingwith-Xamarin/Project-Open-and-Save.png)
 
-Step 2: Select a project template and required platforms to deploy the application. In this application the portable assemblies to be shared across multiple platforms, the .NET Standard code sharing strategy has been selected. For more details about code sharing refer [here](https://learn.microsoft.com/en-us/xamarin/cross-platform/app-fundamentals/code-sharing).
+Step 2: Select a project template and required platforms to deploy the application. In this application, to share portable assemblies across multiple platforms, the .NET Standard code sharing strategy is selected. For more details about code sharing refer [here](https://learn.microsoft.com/en-us/xamarin/cross-platform/app-fundamentals/code-sharing).
 
 ![Create Xamarin CodeSharing Option](Workingwith-Xamarin/Template-Project-Open-and-Save.png)
 
@@ -26,7 +26,7 @@ Step 3: Install [Syncfusion.Xamarin.Presentation](https://www.nuget.org/packages
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: Add new Forms XAML page in portable project If there is no XAML page is defined in the App class. Otherwise proceed to the next step.
+Step 4: Add a new Forms XAML page in the portable project if no XAML page is defined in the App class. Otherwise proceed to the next step.
 <ul>
 <li>To add the new XAML page, right click on the project and select <b>Add > New Item</b> and add a Forms XAML Page from the list. Name it as MainXamlPage.</li>
 <li>In App class of <b>portable project</b> (App.cs), replace the existing constructor of App class with the code snippet given below which invokes the <b>MainXamlPage</b>.</li>
@@ -35,8 +35,13 @@ Step 4: Add new Forms XAML page in portable project If there is no XAML page is 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
+using Syncfusion.Licensing;
+
 public App()
 {
+    //Register Syncfusion license
+    SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+
     // The root page of your application
     MainPage = new MainXamlPage();
 }
@@ -44,11 +49,11 @@ public App()
 
 {% endtabs %}
 
-Step 5: In the MainXamlPage.xaml add new button as shown below.
+Step 5: In the MainXamlPage.xaml add a new button as shown below.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight xml tabtitle="XAML" %}
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="GettingStarted.MainXamlPage">
@@ -61,17 +66,19 @@ Step 5: In the MainXamlPage.xaml add new button as shown below.
 
 {% endtabs %}
 
-Step 6: Include the following namespace in the MainXamlPage.xaml.cs file.
+Step 6: Include the following namespaces in the MainXamlPage.xaml.cs file.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
 using Syncfusion.Presentation;
+using System.IO;
+using System.Reflection;
 {% endhighlight %}
 
 {% endtabs %}
 
-Step 7: Include the below code snippet in the click event of the button in MainXamlPage.xaml.cs, to create a PowerPoint file and save it in a stream.
+Step 7: Include the following code snippet in the click event of the button in MainXamlPage.xaml.cs, to create a PowerPoint file and save it in a stream.
 
 **Create Presentation instance:**
 
@@ -156,6 +163,8 @@ secondPara.FirstLineIndent = -35;
 
 **Add an image:**
 
+N> The image file must be added to the portable project as an **Embedded Resource** (Build Action = Embedded Resource) before using the below code.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
@@ -195,8 +204,9 @@ MemoryStream stream = new MemoryStream();
 powerpointDoc.Save(stream);
 //Close the PowerPoint presentation
 powerpointDoc.Close();
+stream.Position = 0;
 //Save the stream as a file in the device and invoke it for viewing
-Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView("GettingStared.pptx", "application/vnd.openxmlformats-officedocument.presentationml.presentation", stream);
+Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView("GettingStarted.pptx", "application/vnd.openxmlformats-officedocument.presentationml.presentation", stream);
 {% endhighlight %}
 
 {% endtabs %}
@@ -222,7 +232,7 @@ Step 8: Download the helper files from this [link](https://www.syncfusion.com/do
   <td>
     ISave.cs
   </td>
-  <td>Represent the base interface for save operation
+  <td>Represents the base interface for save operations
   </td>
   </tr>
   <tr>
@@ -266,7 +276,9 @@ Step 8: Download the helper files from this [link](https://www.syncfusion.com/do
   </tr>
 </table>
 
-Step 9: Compile and execute the application. 
+N> Xamarin.Forms UWP project support has been deprecated. For new projects, it is recommended to use .NET MAUI instead of Xamarin.Forms. For more details, refer to the [create, read and edit PowerPoint files in MAUI](create-read-edit-powerpoint-files-in-maui.md) topic.
+
+Step 9: Compile and execute the application.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/Xamarin/Create-PowerPoint-presentation).
 
@@ -276,7 +288,9 @@ The output of the above code example will generate the below PowerPoint slide.
 
 ## Read and edit a PowerPoint file in Xamarin
 
-You can edit an existing PowerPoint file using this library. The below code snippet demonstrates accessing a shape from a slide and changing the text within it.
+You can edit an existing PowerPoint file using this library. The following code snippet demonstrates accessing a shape from a slide and changing the text within it.
+
+N> The input file `Sample.pptx` must be added to the portable project as an **Embedded Resource** (Build Action = Embedded Resource) before running the below code.
 
 {% tabs %}
 

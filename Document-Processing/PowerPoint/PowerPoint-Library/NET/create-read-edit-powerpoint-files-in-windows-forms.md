@@ -1,14 +1,16 @@
 ---
-title: Create and edit PowerPoint files in Windows Forms |Syncfusion
+title: Create and edit PowerPoint files in Windows Forms | Syncfusion
 description: Windows Forms PowerPoint library to create, read, edit and convert PowerPoint files in Windows Forms applications.
 platform: document-processing
 control: PowerPoint
-documentation: ug
+documentation: UG
 ---
 
 # Create, read and edit a PowerPoint file in Windows Forms
 
 You can create or edit a PowerPoint file in Windows Forms with [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library). The below are the steps.
+
+The Syncfusion.Presentation.WinForms package supports .NET Framework 4.6.2 and later. The examples in this topic use the latest stable version of the package.
 
 ## Create a PowerPoint file in Windows Forms
 
@@ -19,29 +21,36 @@ You can create or edit a PowerPoint file in Windows Forms with [.NET PowerPoint 
 **Prerequisites:**
 
 * Visual Studio 2022.
-* Install **.NET desktop development** workload with necessary .NET Framework SDK.
+* Install **.NET desktop development** workload with the necessary .NET Framework SDK (4.6.2 or later).
 
 Step 1: Create a new C# Windows Forms application project.
 
 ![Create Windows Forms project](Workingwith-Windows/Project-Open-and-Save.png)
 
-Step 2: Install the [Syncfusion.Presentation.WinForms](https://www.nuget.org/packages/Syncfusion.Presentation.WinForms/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
+Step 2: Install the [Syncfusion.Presentation.WinForms](https://www.nuget.org/packages/Syncfusion.Presentation.WinForms/) NuGet package as a reference to your Windows Forms project from [NuGet.org](https://www.nuget.org/).
 
 ![Install Presentation Winforms Nuget](Workingwith-Windows/Nuget-Package-Open-and-Save.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 3: After installing the **Syncfusion.Presentation.WinForms** nuget package, the following assemblies were included in our project.
+Step 3: After installing the **Syncfusion.Presentation.WinForms** nuget package, the following assemblies are included in our project.
 <ul>
 <li>Syncfusion.Compression.Base</li>
 <li>Syncfusion.Licensing</li>
 <li>Syncfusion.OfficeChart.Base</li>
 <li>Syncfusion.Presentation.Base</li>
-<li>Syncfusion.Pdf.Base</li>
-<li>Syncfusion.PresentationToPdfConverter.Base</li>
 </ul>
 
-Step 4: The below code snippets demonstrate how to create a PowerPoint Presentation in Windows Forms platform.
+Step 4: The following code snippets demonstrate how to create a PowerPoint Presentation in Windows Forms platform. Place this code inside an event handler (for example, a button `Click` handler or the `Form1_Load` method). Add the following `using` statements at the top of the file:
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+using System.IO;
+using Syncfusion.Presentation;
+{% endhighlight %}
+
+{% endtabs %}
 
 **Create Presentation instance:**
 
@@ -96,7 +105,7 @@ titleShape.TextBody.AddParagraph("Company History").HorizontalAlignment = Horizo
 {% highlight c# tabtitle="C#" %}
 //Add description content to the slide by adding a new TextBox
 IShape descriptionShape = slide.AddTextBox(53.22, 141.73, 874.19, 77.70);
-descriptionShape.TextBody.Text = "IMN Solutions PVT LTD is the software company, established in 1987, by George Milton. The company has been listed as the trusted partner for many high-profile organizations since 1988 and got awards for quality products from reputed organizations.";
+descriptionShape.TextBody.Text = "IMN Solutions PVT LTD is the software company, established in 1987, by George Milton. The company has been listed as the trusted partner for many high-profile organizations since 1988 and received awards for quality products from reputed organizations.";
 {% endhighlight %}
 
 {% endtabs %}
@@ -129,9 +138,8 @@ secondPara.FirstLineIndent = -35;
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-//Gets a picture as stream.
+//Gets a picture as stream and adds it to a slide by specifying its size and position.
 Stream pictureStream = File.Open("Image.png", FileMode.Open);
-//Adds the picture to a slide by specifying its size and position.
 slide.Shapes.AddPicture(pictureStream, 499.79, 238.59, 364.54, 192.16);
 {% endhighlight %}
 
@@ -187,9 +195,9 @@ The output of the above code example will generate the below PowerPoint slide.
 **Prerequisites:**
 
 * JetBrains Rider.
-* Install .NET Framework Developer Pack.
+* Install the [.NET Framework Developer Pack](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks) (4.7.2 or later).
 
-Step 1. Open JetBrains Rider and create a new Windows Forms Application project.
+Step 1: Open JetBrains Rider and create a new Windows Forms Application project.
 * Launch JetBrains Rider.
 * Click **New Solution** on the welcome screen.
 
@@ -199,7 +207,7 @@ Step 1. Open JetBrains Rider and create a new Windows Forms Application project.
 * Enter a project name and specify the location.
 * Select the target framework as Full Framework and choose the desired version.
 * Select **Template** as **Windows Forms App**.
-* Click create.
+* Click **Create**.
 
 ![Creating a new Windows Forms App in JetBrains Rider](Workingwith-Windows/Create-WindowsForms-sample.png)
 
@@ -215,19 +223,26 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 ![Install the Syncfusion.Presentation.WinForms NuGet package](Workingwith-Windows/Install-Syncfusion.Presentation.WinForms-NuGet.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 3: After installing the **Syncfusion.Presentation.WinForms** nuget package, the following assemblies were included in our project.
+Step 3: After installing the **Syncfusion.Presentation.WinForms** nuget package, the following assemblies are included in our project.
 <ul>
 <li>Syncfusion.Compression.Base</li>
 <li>Syncfusion.Licensing</li>
 <li>Syncfusion.OfficeChart.Base</li>
 <li>Syncfusion.Presentation.Base</li>
-<li>Syncfusion.Pdf.Base</li>
-<li>Syncfusion.PresentationToPdfConverter.Base</li>
 </ul>
 
-Step 4: The below code snippets demonstrate how to create a PowerPoint Presentation in Windows Forms platform.
+Step 4: The following code snippets demonstrate how to create a PowerPoint Presentation in Windows Forms platform. Place this code inside an event handler (for example, a button `Click` handler or the `Form1_Load` method). Add the following `using` statements at the top of the file:
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+using System.IO;
+using Syncfusion.Presentation;
+{% endhighlight %}
+
+{% endtabs %}
 
 **Create Presentation instance:**
 
@@ -282,7 +297,7 @@ titleShape.TextBody.AddParagraph("Company History").HorizontalAlignment = Horizo
 {% highlight c# tabtitle="C#" %}
 //Add description content to the slide by adding a new TextBox
 IShape descriptionShape = slide.AddTextBox(53.22, 141.73, 874.19, 77.70);
-descriptionShape.TextBody.Text = "IMN Solutions PVT LTD is the software company, established in 1987, by George Milton. The company has been listed as the trusted partner for many high-profile organizations since 1988 and got awards for quality products from reputed organizations.";
+descriptionShape.TextBody.Text = "IMN Solutions PVT LTD is the software company, established in 1987, by George Milton. The company has been listed as the trusted partner for many high-profile organizations since 1988 and received awards for quality products from reputed organizations.";
 {% endhighlight %}
 
 {% endtabs %}
@@ -315,9 +330,8 @@ secondPara.FirstLineIndent = -35;
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-//Gets a picture as stream.
+//Gets a picture as stream and adds it to a slide by specifying its size and position.
 Stream pictureStream = File.Open("Image.png", FileMode.Open);
-//Adds the picture to a slide by specifying its size and position.
 slide.Shapes.AddPicture(pictureStream, 499.79, 238.59, 364.54, 192.16);
 {% endhighlight %}
 
@@ -372,7 +386,7 @@ The output of the above code example will generate the below PowerPoint slide.
 
 ## Read and edit a PowerPoint file in Windows Forms
 
-You can edit an existing PowerPoint file using this library. The below code snippet demonstrates accessing a shape from a slide and changing the text within it.
+You can edit an existing PowerPoint file using this library. This example assumes that an existing Sample.pptx file is present in the application's working/output directory. The following code snippet demonstrates accessing a shape from a slide and changing its text.
 
 {% tabs %}
 
@@ -396,7 +410,7 @@ pptxDoc.Close();
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/Windows%20Forms/Read-and-edit-PowerPoint-presentation).
 
-Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page.
 
 An online sample link to [create a PowerPoint Presentation](https://document.syncfusion.com/demos/powerpoint/default#/tailwind) in ASP.NET Core. 
 
