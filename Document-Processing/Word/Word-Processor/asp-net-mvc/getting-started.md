@@ -59,9 +59,9 @@ Add the **Syncfusion.EJ2** namespace reference to the `<namespaces>` section in 
 Before initializing the ASP.NET MVC DOCX Editor control, generate a Syncfusion license key and register it in your application.
 
 - [Generate a Syncfusion License Key](https://help.syncfusion.com/document-processing/licensing/how-to-generate)
-- [Register a Syncfusion License Key in an ASP.NET Core Application](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#aspnet-mvc)
+- [Register a Syncfusion License Key in an ASP.NET MVC Application](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#aspnet-mvc)
 
-## Add Themes and Script References
+## Add the stylesheet and script resources
 
 To render Syncfusion ASP.NET MVC controls with the expected appearance, reference the theme stylesheet and the control scripts via CDN inside the `<head>` of the `~/Views/Shared/_Layout.cshtml` file as follows,
 
@@ -78,7 +78,7 @@ To render Syncfusion ASP.NET MVC controls with the expected appearance, referenc
 
 N> Refer the [Themes topic](https://ej2.syncfusion.com/aspnetmvc/documentation/appearance/theme) to learn the different ways to include Syncfusion styles (using [CDN](https://ej2.syncfusion.com/aspnetmvc/documentation/common/adding-script-references#cdn-reference), [NPM package](https://ej2.syncfusion.com/aspnetmvc/documentation/common/adding-script-references#node-package-manager-npm), or [CRG](https://ej2.syncfusion.com/aspnetmvc/documentation/common/custom-resource-generator)) and ensure the expected appearance of Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC controls, and check the [Adding Script Reference](https://ej2.syncfusion.com/aspnetmvc/documentation/common/adding-script-references) documentation to understand the various approaches for adding required script references in your ASP.NET MVC application.
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> script manager
+## Register script manager
 
 Register the Script Manager at the end of the `<body>` tag in the `~/Views/Shared/_Layout.cshtml` file, as shown below.
 
