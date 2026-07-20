@@ -11,19 +11,25 @@ documentation: UG
 
 ## Create a simple Excel report
 
-The steps below illustrate creating an simple Invoice formatted Excel document in ASP.NET MVC.
+The following steps illustrate creating a simple invoice-formatted Excel document in ASP.NET MVC.
+
+**Prerequisites:**
+- Visual Studio 2017 or later with the **ASP.NET and web development** workload installed.
+- .NET Framework 4.5.2 or later.
+- A user account with write permissions to the project folder.
+- The `AdventureCycles-Logo.png` image placed in the project's `App_Data` folder.
 
 Step 1: Create a new ASP.NET MVC application project.
 
 ![Create ASP.NET MVC application in Visual Studio](ASP-NET-MVC_images/ASP-NET-MVC_images_img1.png)
 
-Step 2: Install the [Syncfusion.XlsIO.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.XlsIO.AspNet.Mvc5) NuGet package with latest stable version as reference to your .NET Framework application from [NuGet.org](https://www.nuget.org).
+Step 2: Install the [Syncfusion.XlsIO.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.XlsIO.AspNet.Mvc5) NuGet package with the latest stable version as a reference to your ASP.NET MVC application from [NuGet.org](https://www.nuget.org).
 
 ![Install Syncfusion.XlsIO.AspNet.Mvc5 Nuget Package](ASP-NET-MVC_images/ASP-NET-MVC_images_img2.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
 
-Step 3: A default controller named HomeController.cs gets added on creation of ASP.NET MVC project. Include the following namespaces in the top of HomeController.cs file.
+Step 3: A default controller named `HomeController.cs` is added on creation of the ASP.NET MVC project. Include the following namespaces at the top of the `HomeController.cs` file.
 {% capture codesnippet1 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
@@ -37,9 +43,9 @@ Imports Syncfusion.XlsIO
 {% endcapture %}
 {{ codesnippet1 | OrderList_Indent_Level_1 }}
 
-Step 4: A default action method named Index will be present in HomeController.cs. right click on this action method and select Go To View where you will be directed to its associated view page, Index.cshtml
+Step 4: A default action method named `Index` will be present in `HomeController.cs`. Right-click the `Index` method and select **Go To View**, where you will be directed to its associated view page, `Index.cshtml`.
 
-Step 5: Add a new button in the Index.cshtml as shown below.
+Step 5: Add a new button in the `Index.cshtml` view as shown below.
 {% capture codesnippet2 %}
 {% tabs %}  
 {% highlight HTML %}
@@ -56,7 +62,9 @@ Step 5: Add a new button in the Index.cshtml as shown below.
 {% endcapture %}
 {{ codesnippet2 | OrderList_Indent_Level_1 }}
 
-Step 6: Add a new action method CreateDocument in HomeController.cs and include the following code snippet to create and download an Excel file.
+Step 6: Add a new action method `CreateDocument` in `HomeController.cs` and include the following code snippet to create and download an Excel file.
+
+N> Ensure the `AdventureCycles-Logo.png` image is present in the `App_Data` folder of the project, since the code uses `Server.MapPath("App_Data/AdventureCycles-Logo.png")` to resolve the file path.
 {% capture codesnippet3 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
@@ -65,14 +73,14 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
-  
+
   //Create a workbook
   IWorkbook workbook = application.Workbooks.Create(1);
   IWorksheet worksheet = workbook.Worksheets[0];
-  
+
   //Add a picture
   IPictureShape shape = worksheet.Pictures.AddPicture(1, 1, Server.MapPath("App_Data/AdventureCycles-Logo.png"), 20, 20);
-  
+
   //Disable gridlines in the worksheet
   worksheet.IsGridLinesVisible = false;
   
@@ -423,7 +431,8 @@ By executing the program, you will get the Excel file as below.
 
 The following code snippet illustrates how to read and edit an Excel file in ASP.NET MVC.
 
-Step 1: Add the `Sample.xlsx` file in the app data.
+
+Step 1: Add the `Sample.xlsx` file in the `App_Data` folder.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -473,7 +482,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   worksheet.Range("A3").Text = "Hello World"
   
   'Access a cell value from Excel
-  Dim value As var = worksheet.Range("A1").Value
+  Dim value As Object = worksheet.Range("A1").Value
   
   'Save the Excel document
   workbook.SaveAs("Output.xlsx", HttpContext.ApplicationInstance.Response, ExcelDownloadType.Open)

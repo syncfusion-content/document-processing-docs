@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Getting started with Syncfusion React Spreadsheet in Remix
+# Getting started with Syncfusion® React Spreadsheet in Remix
 
 This guide provides a step-by-step workflow for integrating Syncfusion React Spreadsheet into a new Remix application.
 
@@ -37,7 +37,7 @@ To set up a basic Remix sample, run the following command:
 npx create-react-router@latest
 ```
 
-The `create-react-router@latest` command create a remix app using the latest package versions.
+The `create-react-router@latest` command creates a remix app using the latest package versions.
 
 When you run this command, you will be asked the following questions.
 
@@ -55,18 +55,18 @@ When you run this command, you will be asked the following questions.
          Yes
 ```
 
-Navigate into the project directory with the below command and install the `react-router` package:
+Navigate into the project directory using the following command.
 
 ```bash
 cd my-react-router-app
 ```
 
-## Adding Syncfusion Spreadsheet package
+## Adding Syncfusion® Spreadsheet package
 
 To include the React Spreadsheet component in your project, use the following command:
 
 ```bash
-npm install @syncfusion/ej2-react-spreadsheet --save
+npm install @syncfusion/ej2-react-spreadsheet
 ```
 
 ## Adding CSS reference
@@ -85,6 +85,8 @@ Import the Syncfusion® component themes in the `app.css` file as shown below:
 @import '../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css';
 @import '../node_modules/@syncfusion/ej2-react-spreadsheet/styles/tailwind3.css';
 ```
+
+> **Note:** This example uses the `Tailwind 3` theme. To use a different built-in theme, replace the `tailwind3.css` references with the corresponding theme stylesheets. Refer to the [Themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme) for information about the available themes and the different ways to include theme styles in a React application.
 
 ## Configure Server-Side Rendering (SSR)
 
@@ -132,7 +134,7 @@ Start your Remix application in development mode:
 npm run dev
 ```
 
-For deployment, build your app for production,
+For deployment, build your app for production.
 ```bash
 npm run build
 ```
@@ -142,8 +144,6 @@ Then run the app in production mode:
 ```bash
 npm run start
 ```
-
-N> Looking for the full React Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) page.
 
 ## See Also
 

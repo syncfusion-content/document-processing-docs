@@ -45,6 +45,13 @@ Open `~/Pages/_ViewImports.cshtml` file and import the `Syncfusion.EJ2` tag help
 {% endhighlight %}
 {% endtabs %}
 
+## Register a Syncfusion License Key
+
+Before initializing the Syncfusion ASP.NET Core Spreadsheet control, generate a Syncfusion license key and register it in your application.
+
+- [Generate a Syncfusion License Key](https://help.syncfusion.com/document-processing/licensing/how-to-generate)
+- [Register a Syncfusion License Key in an ASP.NET Core Application](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#aspnet-core)
+
 ## Add stylesheet and script resources
 
 Add the stylesheet and script references at the end of the **\<head\>** section in the `~/Pages/Shared/_Layout.cshtml` file, as shown in the following example.
@@ -106,10 +113,7 @@ If the Spreadsheet control does not render as expected, use the following checkl
 - Ensure `@addTagHelper *, Syncfusion.EJ2` is included in `~/Pages/_ViewImports.cshtml`.
 - Rebuild the project after installing the `Syncfusion.EJ2.AspNet.Core` NuGet package.
 
-**3. License warning**
-- A license key is required only for production deployments. Development environments run in evaluation mode. Refer to [Licensing](../../../Licensing/overview.md) and [how-to register in an application](../../../Licensing/how-to-register-in-an-application.md) to register a valid license key.
-
-**4. Open/Save requests fail**
+**3. Open/Save requests fail**
 - The sample uses the online demo service for `openUrl` and `saveUrl`. For local development, configure your own backend service. Refer to [Open and Save](./open-save) for setup details.
 
 ## See also

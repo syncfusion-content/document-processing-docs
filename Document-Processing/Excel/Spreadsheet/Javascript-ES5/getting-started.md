@@ -194,7 +194,6 @@ You can also explore the Spreadsheet Editor using the live sample below. The sam
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/spreadsheet/es5-getting-started-cs1" %}
 
-> For information about features, pricing, and related resources, visit the [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) page.
 
 ## See also
 

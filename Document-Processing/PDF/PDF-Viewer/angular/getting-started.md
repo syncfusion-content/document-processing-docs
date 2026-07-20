@@ -158,8 +158,6 @@ For older Angular versions, refer to the following guides:
 * [Create a Standalone PDF Viewer in Angular 17 and above without the --no-standalone flag](./how-to/create-a-standalone-pdf-viewer-in-angular-17-and-above-without-no-standalone-flag).
 * [Create a Standalone PDF Viewer in Angular 12](./how-to/create-a-standalone-pdf-viewer-in-angular-12)
 
-> Looking for the full Angular PDF Viewer component overview, features, pricing, and documentation? Visit the [Angular PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/angular-pdf-viewer) page.
-
 ## See also
 
 - [Getting started with Server-Backed Angular PDF Viewer](./getting-started-with-server-backed)

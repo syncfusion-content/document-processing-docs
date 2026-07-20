@@ -44,9 +44,16 @@ Install the [Syncfusion® React Spreadsheet](https://www.npmjs.com/package/@sync
 npm install @syncfusion/ej2-react-spreadsheet
 ```
 
+## Register a Syncfusion License Key
+
+Before initializing the Syncfusion React Spreadsheet component, generate a Syncfusion license key and register it in the application.
+
+- [Generate a Syncfusion License Key](https://help.syncfusion.com/document-processing/licensing/how-to-generate)
+- [Register a Syncfusion License Key in a React Application](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#reactjs)
+
 ## Add CSS references
 
-Add the following Spreadsheet and dependent component styles to `src/index.css` file. Replace the existing content with the theme import code below. The following example uses the `Tailwind 3` theme.
+Add the following Spreadsheet and dependent component styles to `src/index.css` file. Replace the existing content with the theme import code below.
 
 ```css
 @import '@syncfusion/ej2-base/styles/tailwind3.css';
@@ -61,9 +68,7 @@ Add the following Spreadsheet and dependent component styles to `src/index.css` 
 @import '@syncfusion/ej2-react-spreadsheet/styles/tailwind3.css';
 ```
 
-Syncfusion also ships additional built-in themes. To use a different theme, replace `tailwind3.css` with the theme of your choice (for example, `bootstrap5.css`, `fluent2.css`, etc.) in all `@import` statements.
-
-> To know more about built-in themes and CSS reference for individual components, refer to the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) section.
+> **Note:** This example uses the `Tailwind 3` theme. To use a different built-in theme, replace the `tailwind3.css` references with the corresponding theme stylesheets. Refer to the [Themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme) for information about the available themes and the different ways to include theme styles in a React application.
 
 ## Add the Syncfusion® React Spreadsheet component
 
@@ -122,7 +127,6 @@ To get started quickly with React Spreadsheet, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=3Cx9AnKAHdY" %}
 
-N> Looking for the full React Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) page.
 
 ## See also
 
