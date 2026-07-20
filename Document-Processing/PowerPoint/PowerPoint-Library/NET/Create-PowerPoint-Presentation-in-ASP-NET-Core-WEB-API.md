@@ -1,18 +1,18 @@
 ---
-title: Create and edit PowerPoint in ASP.NET Core Web API | Syncfusion
-description: Create a PowerPoint in ASP .NET Core Web API application using .NET PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
+title: Create a PowerPoint Presentation in ASP.NET Core Web API | Syncfusion
+description: Create a PowerPoint in an ASP.NET Core Web API application using the .NET PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
 documentation: UG
 ---
 
-# Create, read and edit a PowerPoint in ASP.NET Core Web API
+# Create a PowerPoint Presentation in ASP.NET Core Web API
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, and edit **PowerPoint presentation** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **create a PowerPoint in ASP.NET Core Web API**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, and edit **PowerPoint presentations** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **create a PowerPoint presentation in an ASP.NET Core Web API**.
 
-## Steps to Create a PowerPoint programmatically:
+## Steps to create a PowerPoint programmatically
 
-The below steps illustrate creating a simple PowerPoint Presentation in ASP.NET Core Web API.
+The below steps illustrate creating a simple PowerPoint presentation in an ASP.NET Core Web API.
 
 Step 1: Create a new C# ASP.NET Core Web API project.
 
@@ -22,9 +22,9 @@ Step 2: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/pac
 
 ![Install Syncfusion.Presentation.Net.Core NuGet Package](ASP-NET-Core-WEB-API-images/Nuget-Package-NET-Core.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you also have to install the `Syncfusion.Licensing.Net.Core` NuGet package and include a license key in your project. Refer to the [licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview) to register a Syncfusion<sup>&reg;</sup> license key in your application.
 
-Step 3: Add a new API controller empty file in the project.
+Step 3: Add a new API controller empty file to the project and name it `ValuesController.cs` (the controller-level route prefix `api/Values` used later in the client request URL is derived from this name).
 
 ![Add empty API controller to the project](ASP-NET-Core-WEB-API-images/Empty-API-Controller.png)
 
@@ -36,40 +36,47 @@ Step 4: Include the following namespaces in the **ValuesController.cs** file.
 
 using Microsoft.AspNetCore.Mvc;
 using Syncfusion.Presentation;
+using System;
+using System.IO;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-Step 5: Add a new action method CreatePresentation in **ValuesController.cs** and include the below code snippet to create an PowerPoint Presentation and download it.
+Step 5: Add a new action method `CreatePresentation` in **ValuesController.cs** and include the below code snippet to create a PowerPoint presentation and download it.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
 
-[HttpGet]
-[Route("api/PowerPoint")]
-public IActionResult CreatePresentation()
+[Route("api/Values")]
+[ApiController]
+public class ValuesController : ControllerBase
 {
-    try
+    [HttpGet]
+    [Route("api/PowerPoint")]
+    public IActionResult CreatePresentation()
     {
-        var fileDownloadName = "Output.pptx";
-        const string contentType = "application/vnd.openxmlformats-officedocument.presentationml.presentation";
-        var stream = GeneratePresentation();
-        stream.Position = 0;
-        return File(stream, contentType, fileDownloadName);
-    }
-    catch (Exception ex)
-    {
-        return BadRequest("Error occurred while creating PowerPoint file: " + ex.Message);
+        try
+        {
+            var fileDownloadName = "Output.pptx";
+            const string contentType = "application/vnd.openxmlformats-officedocument.presentationml.presentation";
+            var stream = GeneratePresentation();
+            stream.Position = 0;
+            return File(stream, contentType, fileDownloadName);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest("Error occurred while creating PowerPoint file: " + ex.Message);
+        }
     }
 }
- 
- {% endhighlight %}
+
+{% endhighlight %}
 
 {% endtabs %}
 
-Step 6: Implement the `GeneratePresentation` method in `ValuesController.cs`.
+Step 6: Implement the `GeneratePresentation` method inside the `ValuesController.cs`.
  
 {% tabs %}
 
@@ -84,10 +91,10 @@ Step 6: Implement the `GeneratePresentation` method in `ValuesController.cs`.
     // Specify the fill type and fill color for the slide background         
     slide.Background.Fill.FillType = FillType.Solid;
     slide.Background.Fill.SolidFill.Color = ColorObject.FromArgb(232, 241, 229);
-    // Add title content to the slide by accessing the title placeholder of the  TitleOnly layout-slide 
+    // Add title content to the slide by accessing the title placeholder of the TitleOnly layout slide
     IShape titleShape = slide.Shapes[0] as IShape;
     titleShape.TextBody.AddParagraph("Company History").HorizontalAlignment = HorizontalAlignmentType.Center;
-    // Add description content to the slide by adding a new TextBox IShape  
+    // Add description content to the slide by adding a new TextBox shape
     IShape descriptionShape = slide.AddTextBox(53.22, 141.73, 874.19, 77.70);
     descriptionShape.TextBody.Text = "IMN Solutions PVT LTD is the software company, established in 1987, by George Milton. The company has been listed as the trusted partner for many high-profile organizations since 1988 and got awards for quality products from reputed organizations.";
     // Add bullet points to the slide 
@@ -138,9 +145,9 @@ Step 1: Create a console application.
 
 N> Ensure your ASP.NET Core Web API is running on the specified port before running this client. Adjust the port number if your Web API runs on a different port (check the ASP.NET Core app's launch settings).
 
-Step 2: Add the below code snippet in the **Program.cs** file for accessing the Web API using HTTP requests. 
+Step 2: Add the below code snippet in the **Program.cs** file for accessing the Web API using HTTP requests.
 
-This method sends a GET request to the Web API endpoint to retrieve and save the generated PowerPoint Presentation.
+This method sends a GET request to the Web API endpoint to retrieve and save the generated PowerPoint presentation. Replace the port `7073` with the actual HTTPS port configured for your Web API in `Properties/launchSettings.json` (`applicationUrl`).
 
 {% tabs %}
 
@@ -187,10 +194,10 @@ Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
 
 A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/ASP.NET-Core-Web-API/Client-Application).
 
-Upon executing the program, the **PowerPoint Presentation** will be generated as follows.
+Upon executing the program, the **PowerPoint presentation** will be generated as follows.
 
-![ASP .NET Core WEB API output Word document](ASP-NET-Core-WEB-API-images/ASP-NET-Core-Web-API-Output.png)
+![ASP.NET Core Web API output PowerPoint presentation](ASP-NET-Core-WEB-API-images/ASP-NET-Core-Web-API-Output.png)
 
-Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page.
 
 An online sample link to [create a PowerPoint Presentation](https://document.syncfusion.com/demos/powerpoint/default#/tailwind) in ASP.NET Core.

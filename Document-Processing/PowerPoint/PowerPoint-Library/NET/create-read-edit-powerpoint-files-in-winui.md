@@ -337,8 +337,6 @@ using (IPresentation pptxDoc = Presentation.Open(assembly.GetManifestResourceStr
 
 The `Save` helper method called from the previous snippets writes the generated `MemoryStream` to a file using a `FileSavePicker` (or the local folder on phone devices) and launches the saved file. Implement it as follows:
 
-N> In a WinUI 3 Desktop app, a `FileSavePicker` must be initialized with the owner window handle before it is shown. Initialize the picker through the `IInitializeWithWindow` interface as shown in [Window handle hooks (WinUI 3)](https://learn.microsoft.com/en-us/windows/apps/develop/ui-input/display-ui-object-hooks/window-handle-hooks).
-
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
