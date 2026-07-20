@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert Word document to Image in AWS Elastic Beanstalk
 
-Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to image in AWS Elastic Beanstalk**.
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to image in AWS Elastic Beanstalk**.
 
 ## Steps to convert Word document to Image in AWS Elastic Beanstalk
 
@@ -16,7 +16,7 @@ Step 1: Create a new ASP.NET Core Web application (Model-View-Controller) projec
 
 ![Create ASP.NET Core Web application in Visual Studio](ASP-NET-Core_images/CreateProjectforConversion.png)
 
-Step 2: Install the following **Nuget packages** in your application from [Nuget.org](https://www.nuget.org/).
+Step 2: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/).
 
 * [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) 
 * [SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)
@@ -31,6 +31,7 @@ Step 3: Include the following namespaces in the **HomeController.cs** file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using Microsoft.AspNetCore.Mvc;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.DocIORenderer;
@@ -38,7 +39,7 @@ using Syncfusion.DocIORenderer;
 {% endhighlight %}
 {% endtabs %}
 
-Step 4: A default action method named Index will be present in HomeController.cs. Right click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
+Step 4: A default action method named `Index` will be present in `HomeController.cs`. Right-click on the `Index` method and select **Go To View**, which will take you to its associated view page `Index.cshtml`.
 
 Step 5: Add a new button in the **Index.cshtml** as shown below.
 
@@ -106,9 +107,9 @@ Step 1: Right-click the project and select **Publish to AWS Elastic Beanstalk (L
 ![Right-click the project and select the Publish option](AWS_Images/Elastic_Beanstalk_Images/Publish-Convert-WordtoImage.png)
 
 Step 2: Select the **Deployment Target** as **Create a new application environment** and click **Next** button.
-![Deployment Target in AWS Ealastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Deployment-Target-Convert-WordtoPDF.png)
+![Deployment Target in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Deployment-Target-Convert-WordtoPDF.png)
 
-Step 3: Choose the **Environment Name** in the dropdown list and the **URL** will be automatically assign and check the URL is available, if available click next otherwise change the **URL**. 
+Step 3: Choose the **Environment Name** from the dropdown list; the **URL** will be automatically assigned. Check that the URL is available, and if so, click **Next**; otherwise, change the **URL**. 
 ![Application Environment in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/URL-Availability-Convert-WordtoImage.png)
 
 Step 4: Select the instance type in **t3a.micro** from the dropdown list and click next.

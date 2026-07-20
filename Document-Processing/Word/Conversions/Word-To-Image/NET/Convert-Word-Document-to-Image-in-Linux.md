@@ -1,6 +1,6 @@
 ---
 title: Convert Word to Image in Linux | Syncfusion
-description: Convert Word to image in Linux using .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
+description: Convert Word to image in Linux using .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert Word document to Image in Linux
 
-Syncfusion DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to image in .NET Core application on Linux**.
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to image in .NET Core application on Linux**.
 
 ## Steps to convert a Word document to Image in .NET Core application on Linux
 
@@ -33,7 +33,7 @@ dotnet new console
 
 ![Create .NET Core console application on Linux](Linux-images/CreateNewProject1.png)
 
-Step 2: Install the following **Nuget packages** in your application from [Nuget.org](https://www.nuget.org/) by execute the following command.
+Step 2: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/) by execute the following command.
 
 * [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) 
 * [SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)
@@ -42,7 +42,7 @@ Step 2: Install the following **Nuget packages** in your application from [Nuget
 {% tabs %}
 {% highlight KCONFIG %}
 
-dotnet add package Syncfusion.DocIORenderer.Net.Core -v 22.1.34 -s https://www.nuget.org/
+dotnet add package Syncfusion.DocIORenderer.Net.Core -s https://www.nuget.org/
 dotnet add package SkiaSharp.NativeAssets.Linux -v 3.119.1 -s https://www.nuget.org/
 dotnet add package HarfBuzzSharp.NativeAssets.Linux -v 8.3.1.2 -s https://www.nuget.org/
 
@@ -52,7 +52,7 @@ dotnet add package HarfBuzzSharp.NativeAssets.Linux -v 8.3.1.2 -s https://www.nu
 N> 1. For other Linux environments, refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/nuget-packages-required-word-to-image#additional-nuget-packages-required-for-linux) for detailed information on the additional NuGet packages required. 
 N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components.
 
-Step 3: Add the following Namespaces in **Program.cs** file.
+Step 3: Add the following namespaces in **Program.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -116,7 +116,7 @@ dotnet run
 {% endhighlight %}
 {% endtabs %}
 
-![Run the Applcation](Linux-images/Run.png)
+![Run the Application](Linux-images/Run.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Convert-Word-to-image/Linux/Convert-Word-Document-to-Image).
 
@@ -161,7 +161,7 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 N> 1. For other Linux environments, refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/nuget-packages-required-word-to-image#additional-nuget-packages-required-for-linux) for detailed information on the additional NuGet packages required. 
 N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components.
 
-Step 3: Add the following Namespaces in **Program.cs** file.
+Step 3: Add the following namespaces in **Program.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}

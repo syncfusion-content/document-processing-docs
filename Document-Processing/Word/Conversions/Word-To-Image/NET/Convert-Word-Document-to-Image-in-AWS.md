@@ -8,11 +8,11 @@ documentation: UG
 
 # Convert Word to Image in Amazon Web Services (AWS)
 
-Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, **convert a Word document to image in Amazon Web Services (AWS)** within a few lines of code. 
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to image in Amazon Web Services (AWS)** within a few lines of code.
 
-N> If this is your first time working with Amazon Web Services (AWS), please refer to the dedicated AWS resources. This section explains how to convert Word documents to image in C# using the .NET Core Word (DocIO) library in AWS. 
+N> If this is your first time working with Amazon Web Services (AWS), please refer to the AWS-specific resources. This section explains how to convert Word documents to image in C# using the .NET Core Word (DocIO) library in AWS.
 
-## Prerequisites 
+## Prerequisites
 
 * An active **Amazon Web Services (AWS) account** is required. If you don’t have one, please [create an account](https://aws.amazon.com/) before starting.
 

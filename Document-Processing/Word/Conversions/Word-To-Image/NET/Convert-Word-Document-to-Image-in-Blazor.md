@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert Word Document to Image in Blazor
 
-Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, a **convert a Word document to image in Blazor**.
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to image in Blazor**.
 
 ## Word to Image in Blazor Web App Server Application
 
@@ -479,7 +479,7 @@ Upon executing the program, the **image** will be generated as follows.
 * JetBrains Rider.
 * Install .NET 8 SDK or later.
 
-Step 1. Open JetBrains Rider and create a new Blazor Web app project.
+Step 1: Open JetBrains Rider and create a new Blazor Web app project.
 * Launch JetBrains Rider.
 * Click new solution on the welcome screen.
 
@@ -491,7 +491,7 @@ Step 1. Open JetBrains Rider and create a new Blazor Web app project.
 * Enter a project name and specify the location.
 * Click create.
 
-![Creating a new .NET Core console application in JetBrains Rider](Blazor_Images/Create-Blazor-Server-application.png)
+![Creating a new Blazor Web App in JetBrains Rider](Blazor_Images/Create-Blazor-Server-application.png)
 
 Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 * Click the NuGet icon in the Rider toolbar and type [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) in the search bar.
@@ -1102,7 +1102,7 @@ N> To convert Word to image, it is necessary to access the font stream internall
 * JetBrains Rider.
 * Install .NET 8 SDK or later.
 
-Step 1. Open JetBrains Rider and create a new Blazor WASM Standalone app project.
+Step 1: Open JetBrains Rider and create a new Blazor WASM Standalone app project.
 * Launch JetBrains Rider.
 * Click new solution on the welcome screen.
 
@@ -1114,7 +1114,7 @@ Step 1. Open JetBrains Rider and create a new Blazor WASM Standalone app project
 * Enter a project name and specify the location.
 * Click create.
 
-![Creating a new .NET Core console application in JetBrains Rider](Blazor_Images/Create-Blazor-WASM-application.png)
+![Creating a new Blazor WASM Standalone App in JetBrains Rider](Blazor_Images/Create-Blazor-WASM-application.png)
 
 Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 * Click the NuGet icon in the Rider toolbar and type [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) in the search bar.

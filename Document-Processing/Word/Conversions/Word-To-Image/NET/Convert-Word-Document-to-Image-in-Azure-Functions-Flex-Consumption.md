@@ -1,6 +1,6 @@
 ---
 title: Convert Word to Image in Azure Functions Flex Consumption | Syncfusion
-description: Convert Word to Image in Azure Functions Flex Consumption using .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
+description: Convert Word to Image in Azure Functions Flex Consumption using .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert Word document to Image in Azure Functions (Flex Consumption)
 
-Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to image in Azure Functions deployed on Flex (Consumption) plan**.
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to an image in Azure Functions deployed on the Flex Consumption plan**.
 
 ## Steps to convert a Word document to Image in Azure Functions (Flex Consumption)
 
@@ -32,6 +32,10 @@ Step 5: Include the following namespaces in the **Function1.cs** file.
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Azure.Functions.Worker;
+using Microsoft.Extensions.Logging;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.DocIORenderer;

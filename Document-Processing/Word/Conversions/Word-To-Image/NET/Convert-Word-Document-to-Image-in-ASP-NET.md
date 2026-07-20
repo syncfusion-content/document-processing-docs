@@ -62,6 +62,8 @@ Step 6: Include the following namespace in your **MainPage.aspx.cs** file.
 
 {% highlight c# tabtitle="C#" %}
 
+using System.Drawing;
+using System.Drawing.Imaging;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 
