@@ -43,7 +43,7 @@ To use local scripts and styles for the Syncfusion® Spreadsheet, follow these s
 <Install path>/Syncfusion/Essential Studio/Spreadsheet Editor SDK/{VERSION}/Web (Essential JS 2)/JavaScript
 ```
 
-4. After copying the files, add the Spreadsheet and its dependent component style and script references at the end of the **\<head\>** section in the `index.html` file.
+4. After copying the files, add the Spreadsheet and its dependent control style and script references at the end of the **\<head\>** section in the `index.html` file.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -138,7 +138,7 @@ Style: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/styles/{THEME_NAM
 
 {% endtabcontents %}
 
-> **Note:** This example uses the `Tailwind 3` theme. To use a different built-in theme, replace the `tailwind3.css` references with the corresponding theme stylesheets. Refer to the [Themes documentation](https://ej2.syncfusion.com/documentation/appearance/theme) section. To generate customized resources, refer to the [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) documentation.
+> **Note:** This example uses the `Tailwind 3` theme. To use a different built-in theme, replace the `tailwind3.css` references with the corresponding theme stylesheets. Refer to the [Themes documentation](https://ej2.syncfusion.com/documentation/appearance/theme) for information about the available themes and the different ways to include theme styles in a JavaScript application. To generate customized resources, refer to the [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) documentation.
 
 ## Register Syncfusion License Key
 
@@ -149,7 +149,7 @@ Before initializing any Syncfusion components, generate a Syncfusion license key
 
 ## Add the Syncfusion® Spreadsheet Editor
 
-Add a container element for the Spreadsheet component in the `index.html` file and then initialize the component in the `index.js` file.
+Add a container element for the Spreadsheet control in the `index.html` file and then initialize the control in the `index.js` file.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -182,7 +182,7 @@ spreadsheet.appendTo('#element');
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** The [openUrl](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#openurl) and [saveUrl](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#saveurl) properties are used to connect the Spreadsheet component to a server-side service for Excel import and export operations. For development and production use, we recommend configuring your own local or hosted service instead of relying on demo endpoints. For more information, refer to the [`link`](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services).
+> **Note:** The [openUrl](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#openurl) and [saveUrl](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#saveurl) properties are used to connect the Spreadsheet control to a server-side service for Excel import and export operations. For development and production use, we recommend configuring your own local or hosted service instead of relying on demo endpoints. For more information, refer to the [`link`](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services).
 
 ## Run the application
 
