@@ -1,17 +1,17 @@
 ---
 title: Create, read, and edit Excel files in WPF | Syncfusion
-description: Learn here how to create, read, and edit Excel files in WPF applications using .NET Excel Library.
+description: Learn how to create, read, and edit Excel files in WPF applications using a .NET Excel library with simple and efficient examples.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 # Create, read, and edit Excel files in WPF
 
-[.NET Excel Library for WPF platform](https://www.syncfusion.com/document-processing/excel-framework/net/excel-library) can be used to create, read, edit Excel files. This also convert Excel files to PDF.
+[.NET Excel Library for WPF platform](https://www.syncfusion.com/document-processing/excel-framework/net/excel-library) can be used to create, read, edit Excel files. These can also convert Excel files to PDF.
 
 ## Create a simple Excel report
 
-The below steps illustrates creating a simple Invoice formatted Excel document in WPF.
+The steps below illustrate creating a simple Invoice formatted Excel document in WPF.
 
 Step 1: Create a new C# WPF Application project.
 
@@ -55,7 +55,7 @@ Imports System.Windows
 {% endcapture %}
 {{ codesnippet2 | OrderList_Indent_Level_1 }}
 
-Step 5: Include the following code snippet in btnCreate_Click, the click event of the button to create the Excel document.
+Step 5: Include the following code snippet in Button_Click, the click event of the button to create the Excel document.
 {% capture codesnippet3 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
@@ -69,7 +69,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IWorkbook workbook = application.Workbooks.Create(1);
   IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Adding a picture
+  //Add a picture
   FileStream imageStream = new FileStream("AdventureCycles-Logo.png", FileMode.Open, FileAccess.Read);
   IPictureShape shape = worksheet.Pictures.AddPicture(1, 1, imageStream, 20, 20);
 
@@ -107,7 +107,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["D8"].Number = 564;
   worksheet.Range["E8"].Text = "Due Upon Receipt";
 
-  //Apply RGB backcolor to the cells from D5 to E8
+  //Apply an RGB background color to the cells from D5 to E8
   worksheet.Range["D5:E5"].CellStyle.Color = Color.FromArgb(42, 118, 189);
   worksheet.Range["D7:E7"].CellStyle.Color = Color.FromArgb(42, 118, 189);
 
@@ -124,7 +124,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["D7:E7"].CellStyle.VerticalAlignment = ExcelVAlign.VAlignCenter;
   worksheet.Range["D6:E6"].CellStyle.VerticalAlignment = ExcelVAlign.VAlignTop;
 
-  //Enter value and applying formatting in the cell A7
+  //Enter a value and apply formatting in the cell A7
   worksheet.Range["A7"].Text = "  BILL TO";
   worksheet.Range["A7"].CellStyle.Color = Color.FromArgb(42, 118, 189);
   worksheet.Range["A7"].CellStyle.Font.Bold = true;
@@ -183,7 +183,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["D16:E22"].NumberFormat = "$0.00";
   worksheet.Range["E23"].NumberFormat = "$0.00";
 
-  //Apply incremental formula for column Amount by multiplying Qty and UnitPrice
+  //Enable automatic increment of cell references when assigning a formula to a range
   application.EnableIncrementalFormula = true;
   worksheet.Range["E16:E20"].Formula = "=C16*D16";
 
@@ -232,6 +232,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
   //Save the Excel document
   workbook.SaveAs("Output.xlsx");
+  workbook.Close();
+  imageStream.Dispose();
 }
 {% endhighlight %}
 
@@ -245,7 +247,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim workbook As IWorkbook = application.Workbooks.Create(1)
   Dim worksheet As IWorksheet = workbook.Worksheets(0)
 
-  'Adding a picture
+  'Add a picture
   Dim imageStream As FileStream = New FileStream("AdventureCycles-Logo.png", FileMode.Open, FileAccess.Read)
   Dim shape As IPictureShape = worksheet.Pictures.AddPicture(1, 1, imageStream, 20, 20)
 
@@ -300,7 +302,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   worksheet.Range("D7:E7").CellStyle.VerticalAlignment = ExcelVAlign.VAlignCenter
   worksheet.Range("D6:E6").CellStyle.VerticalAlignment = ExcelVAlign.VAlignTop
 
-  'Enter value and applying formatting in the cell A7
+  'Enter a value and apply formatting in the cell A7
   worksheet.Range("A7").Text = "  BILL TO"
   worksheet.Range("A7").CellStyle.Color = Color.FromArgb(42, 118, 189)
   worksheet.Range("A7").CellStyle.Font.Bold = True
@@ -359,7 +361,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   worksheet.Range("D16:E22").NumberFormat = "$0.00"
   worksheet.Range("E23").NumberFormat = "$0.00"
 
-  'Apply incremental formula for column Amount by multiplying Qty and UnitPrice
+  'Enable automatic increment of cell references when assigning a formula to a range
   application.EnableIncrementalFormula = True
   worksheet.Range("E16:E20").Formula = "=C16*D16"
 

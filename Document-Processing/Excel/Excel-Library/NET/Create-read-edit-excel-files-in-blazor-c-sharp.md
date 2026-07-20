@@ -7,11 +7,11 @@ documentation: UG
 ---
 # Create, read, and edit Excel files in Blazor
 
-[.NET Excel Library for Blazor platform](https://www.syncfusion.com/document-processing/excel-framework/blazor/excel-library) can be used to create, read, edit Excel files. This also convert Excel files to PDF.
+[.NET Excel Library for Blazor platform](https://www.syncfusion.com/document-processing/excel-framework/blazor/excel-library) can be used to create, read, edit Excel files. These can also convert Excel files to PDF.
 
 ## Create a simple Excel report in Blazor Server application
 
-The below steps illustrates the creation of a simple Invoice formatted Excel document in Blazor Server application.
+The steps below illustrate the creation of a simple Invoice formatted Excel document in Blazor Server application.
 
 {% tabcontents %}
 
@@ -25,7 +25,7 @@ Step 2: Now, the project configuration window will popup. Click Create button to
 
 ![Create Blazor Server Side application in Visual Studio](Blazor_images/Blazor_images_Server_ProjectName.png)
 
-Step 3: Choose Blazor Server App and click Create button to create a new Blazor Server application for .NET Core 3.0.0-preview9.
+Step 3: Choose Blazor Server App and click Create button to create a new Blazor Server application for .NET Core.
 
 ![Create Blazor Server Side application in Visual Studio](Blazor_images/Blazor_images_Blazor_Server_App.png)
 
@@ -71,7 +71,7 @@ Step 7: Add the following code in ``Excel.razor`` file to create and download th
     /// <summary>
     /// Create and download the Excel document
     /// </summary>
-    protected async void CreateExcel()
+    protected async Task CreateExcel()
     {
         excelStream = service.CreateDocument();
         await JS.SaveAs("CreateExcel.xlsx", excelStream.ToArray());
@@ -94,7 +94,7 @@ Step 8: Create a new cs file with name as ``CreateExcel`` under ``Data`` folder 
 {% endcapture %}
 {{ codesnippet4 | OrderList_Indent_Level_1 }}
 
-Step 9: Create a new MemoryStream method with name as ``CreateDocument`` and include the following code snippet to create a simple Invoice formatted Excel document in Blazor Server application.
+Step 9: Create a new method named ``CreateDocument`` that returns a MemoryStream and include the following code snippet and add the `AdventureCycle.png` file on the project folder to create a simple Invoice formatted Excel document in Blazor Server application.
 {% capture codesnippet5 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -147,7 +147,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["D8"].Number = 564;
   worksheet.Range["E8"].Text = "Due Upon Receipt";
   
-  //Apply RGB backcolor to the cells from D5 to E8
+  //Apply an RGB background color to the cells from D5 to E8
   worksheet.Range["D5:E5"].CellStyle.Color = Color.FromArgb(42, 118, 189);
   worksheet.Range["D7:E7"].CellStyle.Color = Color.FromArgb(42, 118, 189);
   
@@ -164,7 +164,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["D7:E7"].CellStyle.VerticalAlignment = ExcelVAlign.VAlignCenter;
   worksheet.Range["D6:E6"].CellStyle.VerticalAlignment = ExcelVAlign.VAlignTop;
   
-  //Enter value and applying formatting in the cell A7
+  //Enter a value and apply formatting in the cell A7
   worksheet.Range["A7"].Text = "  BILL TO";
   worksheet.Range["A7"].CellStyle.Color = Color.FromArgb(42, 118, 189);
   worksheet.Range["A7"].CellStyle.Font.Bold = true;
@@ -223,7 +223,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["D16:E22"].NumberFormat = "$0.00";
   worksheet.Range["E23"].NumberFormat = "$0.00";
   
-  //Apply incremental formula for column Amount by multiplying Qty and UnitPrice
+  //Enable automatic increment of cell references when assigning a formula to a range
   application.EnableIncrementalFormula = true;
   worksheet.Range["E16:E20"].Formula = "=C16*D16";
   
@@ -270,7 +270,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["A9:A14"].RowHeight = 15;
   worksheet.Range["A15:A23"].RowHeight = 18;
   
-  //Save the document as a stream and retrun the stream.
+  //Save the document as a stream and return the stream.
   using (MemoryStream stream = new MemoryStream())
   {
     //Save the created Excel document to MemoryStream
@@ -363,7 +363,7 @@ Step 1: Create a new C# Blazor Server app project using Create .NET Project opti
 
 ![Create Blazor Server Side application in Visual Studio](Blazor_images/Blazor_VSimages_Blazor_App.png)
 
-Step 2:  Name the project and create the project.
+Step 2:  Specify a project name and create the project.
 
 ![Create Blazor Server Side application in Visual Studio](Blazor_images/Blazor_VSimages_Server_ProjectName.png)
 
@@ -444,7 +444,7 @@ Step 7: Create a new cs file with name as ``CreateExcel`` under ``Data`` folder 
 {% endcapture %}
 {{ codesnippet4 | OrderList_Indent_Level_1 }}
 
-Step 8: Create a new MemoryStream method with name as ``CreateDocument`` and include the following code snippet to create a simple Invoice formatted Excel document in Blazor Server application.
+Step 8: Create a new method named ``CreateDocument`` that returns a MemoryStream and include the following code snippet and add the `AdventureCycle.png` file on the project folder to create a simple Invoice formatted Excel document in Blazor Server application.
 {% capture codesnippet5 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -497,7 +497,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["D8"].Number = 564;
   worksheet.Range["E8"].Text = "Due Upon Receipt";
   
-  //Apply RGB backcolor to the cells from D5 to E8
+  //Apply an RGB background color to the cells from D5 to E8
   worksheet.Range["D5:E5"].CellStyle.Color = Color.FromArgb(42, 118, 189);
   worksheet.Range["D7:E7"].CellStyle.Color = Color.FromArgb(42, 118, 189);
   
@@ -514,7 +514,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["D7:E7"].CellStyle.VerticalAlignment = ExcelVAlign.VAlignCenter;
   worksheet.Range["D6:E6"].CellStyle.VerticalAlignment = ExcelVAlign.VAlignTop;
   
-  //Enter value and applying formatting in the cell A7
+  //Enter a value and apply formatting in the cell A7
   worksheet.Range["A7"].Text = "  BILL TO";
   worksheet.Range["A7"].CellStyle.Color = Color.FromArgb(42, 118, 189);
   worksheet.Range["A7"].CellStyle.Font.Bold = true;
@@ -573,7 +573,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["D16:E22"].NumberFormat = "$0.00";
   worksheet.Range["E23"].NumberFormat = "$0.00";
   
-  //Apply incremental formula for column Amount by multiplying Qty and UnitPrice
+  //Enable automatic increment of cell references when assigning a formula to a range
   application.EnableIncrementalFormula = true;
   worksheet.Range["E16:E20"].Formula = "=C16*D16";
   
@@ -620,7 +620,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["A9:A14"].RowHeight = 15;
   worksheet.Range["A15:A23"].RowHeight = 18;
   
-  //Save the document as a stream and retrun the stream.
+  //Save the document as a stream and return the stream.
   using (MemoryStream stream = new MemoryStream())
   {
     //Save the created Excel document to MemoryStream
@@ -718,6 +718,8 @@ By executing the program, you will get the Excel file as below.
 
 The below code snippet illustrates how to read and edit an Excel file in Blazor Server application.
 
+Step 1: Add the `sample.xlsx` file on the project folder.
+
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 //Create an instance of ExcelEngine
@@ -741,7 +743,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Access a cell value from Excel
   var value = worksheet.Range["A1"].Value;
   
-  //Save the document as a stream and retrun the stream.
+  //Save the document as a stream and return the stream.
   using (MemoryStream stream = new MemoryStream())
   {
     //Save the created Excel document to MemoryStream.
@@ -757,7 +759,7 @@ A complete working example of how to read and edit an Excel file in Blazor Serve
 
 ## Create a simple Excel report in Blazor WASM application
 
-The below steps illustrates the creation of a simple Invoice formatted Excel document in Blazor WASM application.
+The steps below illustrate the creation of a simple Invoice formatted Excel document in Blazor WASM application.
 
 {% tabcontents %}
 
@@ -771,7 +773,7 @@ Step 2: Now, the project configuration window will popup. Click Create button to
 
 ![Create Blazor Client Side application in Visual Studio](Blazor_images/Blazor_image_Client_ProjectName.png)
 
-Step 3: Choose Blazor WebAssembly App and click Create button to create a new Blazor WASM application for .NET Core 3.0.0-preview9.
+Step 3: Choose Blazor WebAssembly App and click Create button to create a new Blazor WASM application for .NET Core.
 
 ![Create Blazor Client Side application in Visual Studio](Blazor_images/Blazor_image_Blazor_Client_App.png)
 
@@ -855,7 +857,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["D8"].Number = 564;
   worksheet.Range["E8"].Text = "Due Upon Receipt";
   
-  //Apply RGB backcolor to the cells from D5 to E8
+  //Apply an RGB background color to the cells from D5 to E8
   worksheet.Range["D5:E5"].CellStyle.Color = Color.FromArgb(42, 118, 189);
   worksheet.Range["D7:E7"].CellStyle.Color = Color.FromArgb(42, 118, 189);
   
@@ -872,7 +874,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["D7:E7"].CellStyle.VerticalAlignment = ExcelVAlign.VAlignCenter;
   worksheet.Range["D6:E6"].CellStyle.VerticalAlignment = ExcelVAlign.VAlignTop;
   
-  //Enter value and applying formatting in the cell A7
+  //Enter a value and apply formatting in the cell A7
   worksheet.Range["A7"].Text = "  BILL TO";
   worksheet.Range["A7"].CellStyle.Color = Color.FromArgb(42, 118, 189);
   worksheet.Range["A7"].CellStyle.Font.Bold = true;
@@ -931,7 +933,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["D16:E22"].NumberFormat = "$0.00";
   worksheet.Range["E23"].NumberFormat = "$0.00";
   
-  //Apply incremental formula for column Amount by multiplying Qty and UnitPrice
+  //Enable automatic increment of cell references when assigning a formula to a range
   application.EnableIncrementalFormula = true;
   worksheet.Range["E16:E20"].Formula = "=C16*D16";
   
@@ -978,7 +980,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["A9:A14"].RowHeight = 15;
   worksheet.Range["A15:A23"].RowHeight = 18;
   
-  //Save the document as a stream and retrun the stream.
+  //Save the document as a stream and return the stream.
   using (MemoryStream stream = new MemoryStream())
   {
     //Save the created Excel document to MemoryStream
@@ -1065,7 +1067,7 @@ Step 1: Create a new C# Blazor WASM application project using Create .NET Projec
 
 ![Create Blazor Client Side application in Visual Studio](Blazor_images/Blazor_VSimages_Blazor_Client_App.png)
 
-Step 2: Name the project and create the project.
+Step 2: Specify a project name and create the project.
 
 ![Create Blazor Client Side application in Visual Studio](Blazor_images/Blazor_VSimages_Server_ProjectName.png)
 
@@ -1160,7 +1162,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["D8"].Number = 564;
   worksheet.Range["E8"].Text = "Due Upon Receipt";
   
-  //Apply RGB backcolor to the cells from D5 to E8
+  //Apply an RGB background color to the cells from D5 to E8
   worksheet.Range["D5:E5"].CellStyle.Color = Color.FromArgb(42, 118, 189);
   worksheet.Range["D7:E7"].CellStyle.Color = Color.FromArgb(42, 118, 189);
   
@@ -1177,7 +1179,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["D7:E7"].CellStyle.VerticalAlignment = ExcelVAlign.VAlignCenter;
   worksheet.Range["D6:E6"].CellStyle.VerticalAlignment = ExcelVAlign.VAlignTop;
   
-  //Enter value and applying formatting in the cell A7
+  //Enter a value and apply formatting in the cell A7
   worksheet.Range["A7"].Text = "  BILL TO";
   worksheet.Range["A7"].CellStyle.Color = Color.FromArgb(42, 118, 189);
   worksheet.Range["A7"].CellStyle.Font.Bold = true;
@@ -1236,7 +1238,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["D16:E22"].NumberFormat = "$0.00";
   worksheet.Range["E23"].NumberFormat = "$0.00";
   
-  //Apply incremental formula for column Amount by multiplying Qty and UnitPrice
+  //Enable automatic increment of cell references when assigning a formula to a range
   application.EnableIncrementalFormula = true;
   worksheet.Range["E16:E20"].Formula = "=C16*D16";
   
@@ -1283,7 +1285,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["A9:A14"].RowHeight = 15;
   worksheet.Range["A15:A23"].RowHeight = 18;
   
-  //Save the document as a stream and retrun the stream.
+  //Save the document as a stream and return the stream.
   using (MemoryStream stream = new MemoryStream())
   {
     //Save the created Excel document to MemoryStream
@@ -1400,7 +1402,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Access a cell value from Excel
   var value = worksheet.Range["A1"].Value;
 
-  //Save the document as a stream and retrun the stream.
+  //Save the document as a stream and return the stream.
   using (MemoryStream stream = new MemoryStream())
   {
     //Save the created Excel document to MemoryStream
@@ -1695,7 +1697,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 
 ## Create a simple Excel report in Blazor Server Web application
 
-The below steps illustrates the creation of a simple Invoice formatted Excel document in Blazor Server web application.
+The steps below illustrate the creation of a simple Invoice formatted Excel document in Blazor Server web application.
 
 {% tabcontents %}
 
@@ -1705,7 +1707,7 @@ Step 1: Create a new C# Blazor Web application project.
 
 ![Create Blazor Server Side web application in Visual Studio](Blazor_images/Blazor_images_Server_Web_App.png)
 
-Step 2: Name the project.
+Step 2: Specify a project name.
 
 ![Name the Blazor Web Server Side application in Visual Studio](Blazor_images/Blazor_images_Server_Web_ProjectName.png)
 
@@ -1835,7 +1837,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["D8"].Number = 564;
   worksheet.Range["E8"].Text = "Due Upon Receipt";
   
-  //Apply RGB backcolor to the cells from D5 to E8
+  //Apply an RGB background color to the cells from D5 to E8
   worksheet.Range["D5:E5"].CellStyle.Color = Color.FromArgb(42, 118, 189);
   worksheet.Range["D7:E7"].CellStyle.Color = Color.FromArgb(42, 118, 189);
   
@@ -1852,7 +1854,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["D7:E7"].CellStyle.VerticalAlignment = ExcelVAlign.VAlignCenter;
   worksheet.Range["D6:E6"].CellStyle.VerticalAlignment = ExcelVAlign.VAlignTop;
   
-  //Enter value and applying formatting in the cell A7
+  //Enter a value and apply formatting in the cell A7
   worksheet.Range["A7"].Text = "  BILL TO";
   worksheet.Range["A7"].CellStyle.Color = Color.FromArgb(42, 118, 189);
   worksheet.Range["A7"].CellStyle.Font.Bold = true;
@@ -1911,7 +1913,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["D16:E22"].NumberFormat = "$0.00";
   worksheet.Range["E23"].NumberFormat = "$0.00";
   
-  //Apply incremental formula for column Amount by multiplying Qty and UnitPrice
+  //Enable automatic increment of cell references when assigning a formula to a range
   application.EnableIncrementalFormula = true;
   worksheet.Range["E16:E20"].Formula = "=C16*D16";
   
@@ -1958,7 +1960,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["A9:A14"].RowHeight = 15;
   worksheet.Range["A15:A23"].RowHeight = 18;
   
-  //Save the document as a stream and retrun the stream.
+  //Save the document as a stream and return the stream.
   using (MemoryStream stream = new MemoryStream())
   {
     //Save the created Excel document to MemoryStream
@@ -2052,7 +2054,7 @@ Step 1: Create a new C# Blazor Web application project using Create .NET Project
 
 ![Create Blazor Server Side web application in Visual Studio](Blazor_images/Blazor_VSimages_Web_App.png)
 
-Step 2: Name the project and create the project.
+Step 2: Specify a project name and create the project.
 
 ![Name the Blazor Web Server Side application in Visual Studio](Blazor_images/Blazor_VSimages_Server_ProjectName.png)
 
@@ -2189,7 +2191,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["D8"].Number = 564;
   worksheet.Range["E8"].Text = "Due Upon Receipt";
   
-  //Apply RGB backcolor to the cells from D5 to E8
+  //Apply an RGB background color to the cells from D5 to E8
   worksheet.Range["D5:E5"].CellStyle.Color = Color.FromArgb(42, 118, 189);
   worksheet.Range["D7:E7"].CellStyle.Color = Color.FromArgb(42, 118, 189);
   
@@ -2206,7 +2208,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["D7:E7"].CellStyle.VerticalAlignment = ExcelVAlign.VAlignCenter;
   worksheet.Range["D6:E6"].CellStyle.VerticalAlignment = ExcelVAlign.VAlignTop;
   
-  //Enter value and applying formatting in the cell A7
+  //Enter a value and apply formatting in the cell A7
   worksheet.Range["A7"].Text = "  BILL TO";
   worksheet.Range["A7"].CellStyle.Color = Color.FromArgb(42, 118, 189);
   worksheet.Range["A7"].CellStyle.Font.Bold = true;
@@ -2265,7 +2267,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["D16:E22"].NumberFormat = "$0.00";
   worksheet.Range["E23"].NumberFormat = "$0.00";
   
-  //Apply incremental formula for column Amount by multiplying Qty and UnitPrice
+  //Enable automatic increment of cell references when assigning a formula to a range
   application.EnableIncrementalFormula = true;
   worksheet.Range["E16:E20"].Formula = "=C16*D16";
   
@@ -2312,7 +2314,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["A9:A14"].RowHeight = 15;
   worksheet.Range["A15:A23"].RowHeight = 18;
   
-  //Save the document as a stream and retrun the stream.
+  //Save the document as a stream and return the stream.
   using (MemoryStream stream = new MemoryStream())
   {
     //Save the created Excel document to MemoryStream
@@ -2434,7 +2436,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Access a cell value from Excel
   var value = worksheet.Range["A1"].Value;
   
-  //Save the document as a stream and retrun the stream.
+  //Save the document as a stream and return the stream.
   using (MemoryStream stream = new MemoryStream())
   {
     //Save the created Excel document to MemoryStream.
