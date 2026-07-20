@@ -60,7 +60,7 @@ Step 7: Include the below code snippet in **HomeController.cs** to **create a Wo
 
 N> The sample code reads image files from the `wwwroot/Data/` folder (`AdventureCycle.jpg` and `Mountain-200.jpg`). Place these images in that folder, or update the paths in the code to match your project. You can download the sample assets from the [GitHub sample](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Azure/Azure_App_Service) referenced at the end of this page.
 
-N> Register the Syncfusion license key before creating the `WordDocument`. See [Registering a Syncfusion license in your application](../../Licensing/how-to-register-in-an-application.md) for details.
+N> Register the Syncfusion license key before creating the `WordDocument`. See [Registering a Syncfusion license in your application](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application) for details.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}

@@ -10,15 +10,12 @@ documentation: UG
 
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit and convert Word documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in Azure Functions v1**.
 
-N> Azure Functions v1 runtime is out of support. This topic is retained for legacy reference. For new projects, use Azure Functions with the latest supported .NET version.
-
 ## Prerequisites
 
 * An active Azure subscription.
 * Visual Studio with the **Azure development** workload installed.
 * .NET Framework (version supported by the Syncfusion.DocIO.AspNet package referenced in Step 4).
 * The following image files, added to a **Data** folder in the project with **Build Action** set to **Embedded Resource**: `AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, and `Road-550-W.jpg`.
-* A Syncfusion license key. Refer to [Registering a Syncfusion license key](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details.
 
 ## Steps to create a Word document in Azure Functions v1
 
@@ -33,6 +30,8 @@ Step 3: Select the function worker as **.NET Framework**.
 
 Step 4: Install the [Syncfusion.DocIO.AspNet](https://www.nuget.org/packages/Syncfusion.DocIO.AspNet) NuGet package (v16.2.0.x or later) as a reference to your project from [NuGet.org](https://www.nuget.org/).
 ![Install Syncfusion.DocIO.AspNet NuGet package](ASP-NET_images/Install_Nuget.jpg)
+
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 5: Include the following namespaces in the **Function1.cs** file.
 
@@ -374,14 +373,6 @@ catch (Exception ex)
 
 {% endhighlight %}
 {% endtabs %}
-
-N> If the function is secured with an authorization level other than `Anonymous`, append the function key to the URL (for example, `?code=<your_function_key>`). An HTTP 500 typically indicates a missing Syncfusion license key or a missing embedded resource; verify both in the Azure portal Application Settings.
-
-### Troubleshooting
-
-* **HTTP 500 from the function**: Ensure the Syncfusion license key is registered and the image files are embedded as resources in the deployed assembly.
-* **HTTP 401 / 403**: Append the function authorization key to the request URL or header.
-* **Timeout or no response**: Confirm the App Service plan is running and the function is started in the Azure portal.
 
 From GitHub, you can download the [console application](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Azure/Azure_Functions/Console_Application) and [Azure Functions v1](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Azure/Azure_Functions/Azure_Functions_v1).
 

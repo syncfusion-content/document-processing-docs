@@ -14,7 +14,6 @@ Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncf
 
 * Visual Studio 2022 with the "ASP.NET and web development" workload.
 * An active Azure subscription with permission to create an App Service and App Service plan.
-* A Syncfusion license key — generate one as described in [registering a Syncfusion license key in an application](https://help.syncfusion.com/common/essential-studio/licensing/how-to-register-in-an-application) before you build the project. The `Syncfusion.DocIO.Net.Core` package (v16.2.0.x and later) requires it; without it the trial warning is appended to the generated document.
 * [.NET 6.0 SDK or later](https://dotnet.microsoft.com/download).
 
 ## Steps to create Word document in Azure App Service on Linux
@@ -43,7 +42,7 @@ The code in Step 8 reads these images from `wwwroot/Data/` at runtime. You can o
 Step 6: Add a new button in **Index.cshtml** as shown below.
 
 {% tabs %}
-{% highlight cshtml tabtitle="Index.cshtml" %}
+{% highlight c# tabtitle="C#" %}
 
 @{
     Html.BeginForm("CreateWordDocument", "Home", FormMethod.Get);

@@ -304,8 +304,6 @@ By executing the program, you will get the **Word document** as follows.
 
 ![ASP.Net Web output Word document](ASP-NET_images/GettingStartedOutput.jpg)
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/ASP.NET).
-
 Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.
 
 You can also explore the online sample to [create a Word document](https://document.syncfusion.com/demos/word/helloworld#/tailwind) in ASP.NET Core. 

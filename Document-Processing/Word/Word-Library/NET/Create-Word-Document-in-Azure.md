@@ -15,11 +15,10 @@ This page is an index of the supported Azure services. Select a service below to
 ## Prerequisites 
 
 * An active **Microsoft Azure subscription** is required. If you don't have one, create a free account before starting.
-* The [.NET SDK](https://dotnet.microsoft.com/download) supported by DocIO (see [System Requirements](../System-Requirements.md) for supported .NET versions).
 * An IDE such as Visual Studio 2022 or later, or Visual Studio Code.
-* A Syncfusion license key — see [Registering a Syncfusion license in your application](../../Licensing/how-to-register-in-an-application.md). DocIO requires license registration before any Syncfusion control or library is initialized.
+* A Syncfusion license key — see [Registering a Syncfusion license in your application](https://help.syncfusion.com/common/essential-studio/licensing/how-to-register-in-an-application). DocIO requires license registration before any Syncfusion control or library is initialized.
 
-For troubleshooting common installation and runtime issues, see [Installation errors](../../installation/Installation-errors.md), [Licensing errors](../../Licensing/licensing-errors.md), and the [Word Library FAQ](FAQ.md).
+For troubleshooting common installation and runtime issues, see [Installation errors](https://help.syncfusion.com/common/essential-studio/installation/installation-errors), [Licensing errors](https://help.syncfusion.com/common/essential-studio/licensing/licensing-errors), and the [Word Library FAQ](https://help.syncfusion.com/document-processing/word/word-library/net/faq).
 
 ## Azure Services
 
