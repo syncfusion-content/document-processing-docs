@@ -10,13 +10,13 @@ keywords: .net maui pdf viewer, customize toolbar, show hide toolbar, add toolba
 
 # Toolbar Customization in .NET MAUI PDF Viewer (SfPdfViewer)
 
-The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to fully customize its built-in toolbars — including showing or hiding entire toolbars, and adding, removing, or reordering individual toolbar items. This flexibility lets you tailor the viewer's interface to match your application's workflow.
+The [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to fully customize its built-in toolbars — including showing or hiding entire toolbars, and adding, removing, or reordering individual toolbar items. This flexibility lets you tailor the viewer's interface to match your application's workflow.
 
 For the list of toolbar names and toolbar item names, see [Toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/toolbar).
 
 ## Show and hide all toolbars
 
-The built-in toolbars are visible by default. In certain scenarios, you might want to hide all the toolbars in the PDF Viewer to display the document in full view or to use customized toolbars based on your application needs. You can do this by setting the [ShowToolbars](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ShowToolbars) property to `false`. Set it back to `true` to restore the built-in toolbars.
+The built-in toolbars are visible by default. In certain scenarios, you might want to hide all the toolbars in the PDF Viewer to display the document in full view or to use customized toolbars based on your application needs. You can do this by setting the [ShowToolbars](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ShowToolbars) property to `false`. Set it back to `true` to restore the built-in toolbars.
 
 {% tabs %}
 {% highlight C# %}
@@ -70,7 +70,7 @@ if (pdfViewer?.Toolbars?.Count > 1)
 
 ### Hide specific toolbars by name
 
-By using the [GetByName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ToolbarItemCollection.html#Syncfusion_Maui_PdfViewer_ToolbarItemCollection_GetByName_System_String) method with a specified toolbar name, you can access and modify that toolbar's properties. The following example retrieves the `BottomToolbar` by name and hides it.
+By using the [GetByName](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.ToolbarItemCollection.html#Syncfusion_Maui_PdfViewer_ToolbarItemCollection_GetByName_System_String) method with a specified toolbar name, you can access and modify that toolbar's properties. The following example retrieves the `BottomToolbar` by name and hides it.
 
 {% tabs %}
 {% highlight C# %}
@@ -122,7 +122,7 @@ pdfViewer.Toolbars?.GetByName("PrimaryToolbar")?.Items?.Add(
 
 ### Add a toolbar item at a specific index
 
-To add an item at a specific index, use the [Insert](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ToolbarItemCollection.html#Syncfusion_Maui_PdfViewer_ToolbarItemCollection_Insert_System_Int32_Syncfusion_Maui_PdfViewer_ToolbarItem) method. Use the [Index](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ToolbarItem.html#Syncfusion_Maui_PdfViewer_ToolbarItem_Index) property to get the current index of an existing item, then insert the new item relative to it. The following example inserts a save button right after the `Print` button in the `PrimaryToolbar`.
+To add an item at a specific index, use the [Insert](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.ToolbarItemCollection.html#Syncfusion_Maui_PdfViewer_ToolbarItemCollection_Insert_System_Int32_Syncfusion_Maui_PdfViewer_ToolbarItem) method. Use the [Index](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.ToolbarItem.html#Syncfusion_Maui_PdfViewer_ToolbarItem_Index) property to get the current index of an existing item, then insert the new item relative to it. The following example inserts a save button right after the `Print` button in the `PrimaryToolbar`.
 
 {% tabs %}
 {% highlight C# %}
@@ -175,7 +175,7 @@ if (topToolbar != null)
 
 ### Remove a toolbar item by name
 
-Use the [GetByName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ToolbarItemCollection.html#Syncfusion_Maui_PdfViewer_ToolbarItemCollection_GetByName_System_String) method to access a specific item and then call [Remove](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ToolbarItemCollection.html#Syncfusion_Maui_PdfViewer_ToolbarItemCollection_Remove_Syncfusion_Maui_PdfViewer_ToolbarItem) to remove it. The following example removes the `Outline` item from the `PrimaryToolbar`.
+Use the [GetByName](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.ToolbarItemCollection.html#Syncfusion_Maui_PdfViewer_ToolbarItemCollection_GetByName_System_String) method to access a specific item and then call [Remove](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.ToolbarItemCollection.html#Syncfusion_Maui_PdfViewer_ToolbarItemCollection_Remove_Syncfusion_Maui_PdfViewer_ToolbarItem) to remove it. The following example removes the `Outline` item from the `PrimaryToolbar`.
 
 {% tabs %}
 {% highlight C# %}
@@ -190,7 +190,7 @@ if (item != null)
 
 ### Remove an item from all toolbars
 
-Each toolbar in [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) operates independently — removing an item from one toolbar does not affect others. To remove an item from all toolbars, iterate through the `Toolbars` collection and remove the item from each. The following example removes the `StickyNote` item from all toolbars.
+Each toolbar in [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) operates independently — removing an item from one toolbar does not affect others. To remove an item from all toolbars, iterate through the `Toolbars` collection and remove the item from each. The following example removes the `StickyNote` item from all toolbars.
 
 {% tabs %}
 {% highlight C# %}
@@ -210,7 +210,7 @@ You can find the sample project for removing an item from the desktop toolbar us
 
 ### Hide a toolbar item by index
 
-To hide a toolbar item by its index, access the item in the `Items` collection and set its [IsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ToolbarItem.html#Syncfusion_Maui_PdfViewer_ToolbarItem_IsVisible) property to `false`.
+To hide a toolbar item by its index, access the item in the `Items` collection and set its [IsVisible](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.ToolbarItem.html#Syncfusion_Maui_PdfViewer_ToolbarItem_IsVisible) property to `false`.
 
 {% tabs %}
 {% highlight C# %}
@@ -227,7 +227,7 @@ if (toolbar != null && indexToHide >= 0 && indexToHide < toolbar.Items?.Count)
 
 ### Hide a toolbar item by name
 
-Use the [GetByName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ToolbarItemCollection.html#Syncfusion_Maui_PdfViewer_ToolbarItemCollection_GetByName_System_String) method to access a specific item, then set its [IsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ToolbarItem.html#Syncfusion_Maui_PdfViewer_ToolbarItem_IsVisible) property to `false`. The following example hides the `Search` item in the `PrimaryToolbar`.
+Use the [GetByName](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.ToolbarItemCollection.html#Syncfusion_Maui_PdfViewer_ToolbarItemCollection_GetByName_System_String) method to access a specific item, then set its [IsVisible](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.ToolbarItem.html#Syncfusion_Maui_PdfViewer_ToolbarItem_IsVisible) property to `false`. The following example hides the `Search` item in the `PrimaryToolbar`.
 
 {% tabs %}
 {% highlight C# %}

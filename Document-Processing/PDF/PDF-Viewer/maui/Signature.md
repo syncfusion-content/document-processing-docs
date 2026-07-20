@@ -10,7 +10,7 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 # Electronic Signature in .NET MAUI PDF Viewer (SfPdfViewer)
 
-The electronic signature feature of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to add, remove signatures in the PDF document. This section will go through the various types and functions available in PDF Viewer for working with signature. 
+The electronic signature feature of [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to add, remove signatures in the PDF document. This section will go through the various types and functions available in PDF Viewer for working with signature. 
 
 You can also watch our video tutorial below to learn about working with electronic signatures.
 
@@ -30,21 +30,21 @@ This section will go through how to add a signature by UI interaction to a PDF d
 
 You can add a signature to a PDF document with UI interaction using the signature dialog. The following steps explain how to add signature on a PDF.
 
-1. Set the AnnotationMode property of the SfPdfViewer to [Signature](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_Signature). It activates the signature mode on the control and signature dialog box will be open.
+1. Set the AnnotationMode property of the SfPdfViewer to [Signature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_Signature). It activates the signature mode on the control and signature dialog box will be open.
 2. Create a signature in any one of the types.
 3. You can customize the color of the signature for handwritten and text signature types.
 4. Tap on the page to add the created signatures.
 5. After creating the signature or closing the dialog, the signature mode will be disabled, and the AnnotationMode will be changed to None.
 6. You can later move, resize, or delete the signature.
 
-The following code explains how to enable the [Signature](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_Signature) annotation mode.
+The following code explains how to enable the [Signature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_Signature) annotation mode.
 
 {% tabs %}
 {% highlight c# %}
 // Enable or activate the signature mode.
 void EnableSignatureMode()
 {
-    // Set the annotation mode to signature using the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance.
+    // Set the annotation mode to signature using the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance.
     PdfViewer.AnnotationMode = AnnotationMode.Signature;
 }
 {% endhighlight %}
@@ -57,7 +57,7 @@ Similarly, refer to the following code to disable the signature mode.
 // Disable or deactivate the signature mode.
 void DisableSignatureMode()
 {
-    // Set the annotation mode to none using the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance.
+    // Set the annotation mode to none using the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance.
     PdfViewer.AnnotationMode = AnnotationMode.None;
 }
 {% endhighlight %}
@@ -69,7 +69,7 @@ This section will go through how to add a signature programmatically to a PDF do
 
 ### Add a handwritten signature 
 
-To add a handwritten signature, you can create and add an ink annotation to a PDF document programmatically using the AddAnnotation method of the SfPdfViewer. Additionally, in the case of a signature, you should set the [IsSignature](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.InkAnnotation.html#Syncfusion_Maui_PdfViewer_InkAnnotation_IsSignature) API of the ink annotation to true. The following example explains how to create an ink annotation and add it as a signature to the first page of a PDF document.
+To add a handwritten signature, you can create and add an ink annotation to a PDF document programmatically using the AddAnnotation method of the SfPdfViewer. Additionally, in the case of a signature, you should set the [IsSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.InkAnnotation.html#Syncfusion_Maui_PdfViewer_InkAnnotation_IsSignature) API of the ink annotation to true. The following example explains how to create an ink annotation and add it as a signature to the first page of a PDF document.
 
 {% tabs %}
 {% highlight c# %}
@@ -84,7 +84,7 @@ List<List<float>> pointsCollection = new List<List<float>>()
 // Create an ink annotation.
 InkAnnotation annotation = new InkAnnotation(pointsCollection, pageNumber);
 
-// Set [IsSignature](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.InkAnnotation.html#Syncfusion_Maui_PdfViewer_InkAnnotation_IsSignature) as true
+// Set [IsSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.InkAnnotation.html#Syncfusion_Maui_PdfViewer_InkAnnotation_IsSignature) as true
 annotation.IsSignature = true;
 
 // Add the ink annotation to the PDF page as a signature
@@ -94,7 +94,7 @@ PdfViewer.AddAnnotation(annotation);
 
 ### Add image signature
 
-To add an image signature, you can create and add a custom stamp annotation to a PDF document programmatically using the AddAnnotation method of the SfPdfViewer. Additionally, in the case of a signature, you should set the [IsSignature](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.InkAnnotation.html#Syncfusion_Maui_PdfViewer_InkAnnotation_IsSignature) API of the stamp annotation to true. The following example explains how to create a custom stamp annotation and add it as a signature to the first page of a PDF document
+To add an image signature, you can create and add a custom stamp annotation to a PDF document programmatically using the AddAnnotation method of the SfPdfViewer. Additionally, in the case of a signature, you should set the [IsSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.InkAnnotation.html#Syncfusion_Maui_PdfViewer_InkAnnotation_IsSignature) API of the stamp annotation to true. The following example explains how to create a custom stamp annotation and add it as a signature to the first page of a PDF document
 
 {% tabs %}
 {% highlight c# %}
@@ -109,7 +109,7 @@ Stream imageStream = this.GetType().Assembly.GetManifestResourceStream("Annotati
 // Create a custom stamp annotation using the image stream.
 StampAnnotation customStamp = new StampAnnotation(imageStream,pageNumber,bounds);
 
-// Set [IsSignature](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.InkAnnotation.html#Syncfusion_Maui_PdfViewer_InkAnnotation_IsSignature) as true
+// Set [IsSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.InkAnnotation.html#Syncfusion_Maui_PdfViewer_InkAnnotation_IsSignature) as true
 customStamp.IsSignature = true;
 
 // Add the stamp annotation to the PDF page as a signature
@@ -121,7 +121,7 @@ N> To add a text signature, you can use an image containing the signature text .
 
 ## Signature modal view
 
-The signature modal view appears when a signature needs to be created. The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) notifies when the modal view is appearing and disappearing through events. The events help you in hiding and showing elements that are part of the app UI that are not necessary as long as the modal view is visible.
+The signature modal view appears when a signature needs to be created. The [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) notifies when the modal view is appearing and disappearing through events. The events help you in hiding and showing elements that are part of the app UI that are not necessary as long as the modal view is visible.
 
 **Mobile:**
 ![Signature pad modal view mobile](Images/Annotations/signature-pad-modal-view-mobile.png)
@@ -161,7 +161,7 @@ Private void PdfViewer_SignatureModalViewDisappearing(object? Sender, EventArgs 
 
 ### Suppressing the signature modal view and implement your own UI
 
-The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to suppress the signature modal view and use your own UI in its place. This can be achieved by setting the `FormFieldModalViewAppearingEventArgs.Cancel` property to `true` in the `SignatureModalViewAppearing` event handler. 
+The [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to suppress the signature modal view and use your own UI in its place. This can be achieved by setting the `FormFieldModalViewAppearingEventArgs.Cancel` property to `true` in the `SignatureModalViewAppearing` event handler. 
 
 The below code snippet illustrates suppressing the signature modal view and using a UI implemented in the app in its place. In this illustration, it is assumed that the signature is produced in the form of an image stream when the user completes drawing the signature in the custom dialog. When the PDF viewer is tapped, the created signature is added as a stamp annotation.  
 
@@ -198,9 +198,9 @@ private void PdfViewer_Tapped(object sender, GestureEventArgs e)
 
 ## Signature Created Event
 
-The [SignatureCreated](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_SignatureCreated) event in the .NET MAUI PDF Viewer provides a way to access and customize the properties of a handwritten signature immediately after it is created using built-in signature dialog. This is especially helpful when you want to apply consistent styling such as stroke color, border width, or opacity to all handwritten signatures.
+The [SignatureCreated](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_SignatureCreated) event in the .NET MAUI PDF Viewer provides a way to access and customize the properties of a handwritten signature immediately after it is created using built-in signature dialog. This is especially helpful when you want to apply consistent styling such as stroke color, border width, or opacity to all handwritten signatures.
 
-To customize the signature, check whether the [e.Signature](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SignatureCreatedEventArgs.html#Syncfusion_Maui_PdfViewer_SignatureCreatedEventArgs_Signature) object is of type [InkAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.InkAnnotation.html), which represents a handwritten ink-based signature. If it is, you can modify its properties as needed.
+To customize the signature, check whether the [e.Signature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SignatureCreatedEventArgs.html#Syncfusion_Maui_PdfViewer_SignatureCreatedEventArgs_Signature) object is of type [InkAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.InkAnnotation.html), which represents a handwritten ink-based signature. If it is, you can modify its properties as needed.
 
 The following example demonstrates how to handle the SignatureCreated event and apply custom styling to a handwritten signature:
 

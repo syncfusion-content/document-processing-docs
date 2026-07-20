@@ -22,7 +22,7 @@ Step 2: Install the [Syncfusion.Pdf.UWP](https://www.nuget.org/packages/Syncfusi
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add the `Syncfusion.Licensing` assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 3: Create button in *MainPage.Xaml* page using below code example and create *Button_Click* event.
+Step 3: Add a button to the *MainPage.xaml* page using the following code example and wire up a *Button_Click* event handler.
 {% tabs %}
 {% highlight XAML %}
 

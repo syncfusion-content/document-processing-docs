@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Create, read, and edit Excel files in ASP.NET
 
-[.NET Excel Library for ASP.NET platform](https://www.syncfusion.com/document-processing/excel-framework/net/excel-library) can be used to create, read, edit Excel files. This also convert Excel files to PDF.
+[.NET Excel Library for ASP.NET platform](https://www.syncfusion.com/document-processing/excel-framework/net/excel-library) can be used to create, read, edit Excel files. These can also convert Excel files to PDF.
 
 ## Create a simple Excel report
 
@@ -62,7 +62,7 @@ Imports System.Drawing
 {% endcapture %}
 {{ codesnippet2 | OrderList_Indent_Level_1 }}
 
-Step 6: Include the below code snippet in the click event of the button in MainPage.aspx.cs, to create an Excel file and download it
+Step 6: Include the below code snippet in the click event of the button in MainPage.aspx.cs and also include `AdventureCycles-Logo.png` image file on app data folder, to create an Excel file and download it
 {% capture codesnippet3 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
