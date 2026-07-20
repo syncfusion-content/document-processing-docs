@@ -8,9 +8,9 @@ documentation: UG
 
 # Create Markdown Document in Blazor
 
-Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> Markdown is a `.NET Core Markdown library` used to create, read, and edit **Markdown** documents programmatically without external dependencies. Using this library, you can **create a Markdown document in Blazor**.
+Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> Markdown is a `.NET Markdown library` used to create, read, and edit **Markdown** documents programmatically without external dependencies. Using this library, you can **create a Markdown document in Blazor**.
 
-## Blazor Web App Server Application
+## Blazor Web App (Server)
 
 **Prerequisites:**
 
@@ -30,13 +30,15 @@ Step 1: Create a new C# Blazor Web app project.
 
 ![Select the framework in Blazor Web App Server in Visual Studio](Blazor_Images/Blazor_image_Server_Web_Additional_Information.png)
 
+N> Ensure the **Interactive render mode** is set to **Server** and **Interactivity location** is set to **Per page/component** during project creation so the `@rendermode InteractiveServer` directive works correctly.
+
 Step 2: Install the `Syncfusion.Markdown` NuGet package.
 
 To **create a Markdown document in a Blazor Web App Server**, install [Syncfusion.Markdown](https://www.nuget.org/packages/Syncfusion.Markdown) into the Blazor project.
 
 ![Install Syncfusion.Markdown NuGet Package](ASP-NET-Core_images/Install_Nuget.png)
 
-N> Starting with v34.x.x, if Syncfusion<sup>&reg;</sup> assemblies are referenced from trial setup or from the NuGet feed, the "Syncfusion.Licensing" assembly reference must also be added and a license key included in projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
+N> If you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or the NuGet feed (v34.x.x and later), install the `Syncfusion.Licensing` NuGet package and register the license key in `Program.cs` by calling `Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")` before any Syncfusion type is used. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
 
 Step 3: Create a Razor file named `Markdown.razor` in the `Pages` folder, which is located inside the `Components` folder.
 
@@ -44,8 +46,8 @@ Include the following namespaces in the file:
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
-@rendermode InteractiveServer
 @page "/Markdown"
+@rendermode InteractiveServer
 @using System.IO;
 @using Create_Markdown_Document;
 @inject Create_Markdown_Document.Data.MarkdownService service
@@ -80,12 +82,15 @@ Add the following code to create and download the Markdown document:
     {
         documentStream = service.CreateMarkdown();
         await JS.SaveAs("Sample.md", documentStream.ToArray());
+        documentStream.Dispose();
     }
 }
 {% endhighlight %}
 {% endtabs %}
 
 Step 6: Create a new cs file `MarkdownService.cs` in the `Data` folder.
+
+N> Create the `Data` folder inside the project root if it does not already exist.
 
 Include the following namespaces in the file:
 
@@ -208,7 +213,7 @@ public static class FileUtils
 
 Step 10: Add JavaScript function to `App.razor`.
 
-Add the following JavaScript function in the `App.razor` file located in the `Pages` folder.
+Add the following JavaScript function in the `App.razor` file located in the `Components` folder.
 
 {% tabs %}
 
@@ -243,7 +248,7 @@ Add the following JavaScript function in the `App.razor` file located in the `Pa
 
 Step 11: Add navigation link.
 
-Add the following code snippet to the Navigation menu's Razor file in the `Layout` folder.
+Add the following code snippet to the `Components/Layout/NavMenu.razor` file.
 
 {% tabs %}
 
@@ -273,7 +278,7 @@ By executing the program, you will get the **Markdown document** as follows.
 
 ![Blazor Web App Server output Markdown document](GettingStarted_images/GettingStarted_Output1.png)
 
-## WASM Standalone Application
+## Blazor WebAssembly Standalone App
 
 **Prerequisites:**
 
@@ -286,13 +291,15 @@ Select "Blazor WebAssembly Standalone App" from the template and click **Next**.
 
 ![Create Blazor WebAssembly Standalone application in Visual Studio](Blazor_Images/Blazor_WASM_Standalone.png)
 
+*   Name the project and click **Create**.
+
 Step 2: Install the `Syncfusion.Markdown` NuGet package.
 
 To **create a Markdown document in a Blazor WASM Standalone app**, install [Syncfusion.Markdown](https://www.nuget.org/packages/Syncfusion.Markdown) into the Blazor project.
 
 ![Install Syncfusion.Markdown NuGet Package](ASP-NET-Core_images/Install_Nuget.png)
 
-N> Starting with v34.x.x, if Syncfusion<sup>&reg;</sup> assemblies are referenced from trial setup or from the NuGet feed, the "Syncfusion.Licensing" assembly reference must also be added and a license key included in projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
+N> If you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or the NuGet feed (v34.x.x and later), install the `Syncfusion.Licensing` NuGet package and register the license key in `Program.cs` by calling `Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")` before any Syncfusion type is used. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
 
 Step 3: Create a Razor file named `Markdown.razor` in the `Pages` folder.
 
@@ -318,7 +325,7 @@ Add the following code to create a new button that triggers document creation:
 {% highlight CSHTML %}
 
 <h2>Syncfusion Markdown Library</h2>
-<p>The Syncfusion Blazor Markdown library is used to create, read, and edit Markdown files in applications without external dependencies.</p>
+<p>The Syncfusion Markdown library is used to create, read, and edit Markdown files in applications without external dependencies.</p>
 <button class="btn btn-primary" @onclick="@CreateMarkdown">Create Markdown</button>
 
 {% endhighlight %}
@@ -333,7 +340,7 @@ Create a new `async` method named `CreateMarkdown` and include the following cod
 
 {% highlight c# tabtitle="C#" %}
 
-@functions {
+@code {
     async void CreateMarkdown()
     {
         // Creates a new instance of MarkdownDocument.
@@ -396,6 +403,7 @@ Create a new `async` method named `CreateMarkdown` and include the following cod
 		// Disposes the document
 		markdownDocument.Dispose();
         await JS.SaveAs("Sample.md", stream.ToArray());
+        stream.Dispose();
     }
 }
 {% endhighlight %}
@@ -404,7 +412,7 @@ Create a new `async` method named `CreateMarkdown` and include the following cod
 
 Step 6: Create `FileUtils.cs` for JavaScript interoperability.
 
-Create a class file named `FileUtils` and add the following code to invoke the JavaScript action for file download in the browser.
+Create a new class file named `FileUtils` and add the following code to invoke the JavaScript action for file download in the browser.
 
 {% tabs %}
 
@@ -460,7 +468,7 @@ Add the following JavaScript function in the `index.html` file present under `ww
 
 Step 8: Add navigation link.
 
-Add the following code snippet to the Navigation menu's Razor file in the `Layout` folder.
+Add the following code snippet to the `Shared/NavMenu.razor` file.
 
 {% tabs %}
 
@@ -490,5 +498,5 @@ By executing the program, you will get the **Markdown document** as follows.
 
 ![Blazor WASM Standalone output Markdown document](GettingStarted_images/GettingStarted_Output1.png)
 
-N> While the Markdown library functions in WASM Standalone, server-side deployment is recommended. WASM Standalone deployment increases the application payload size.
+N> While the Markdown library functions in WASM Standalone, server-side deployment is recommended. Running the Markdown library client-side in WASM Standalone increases the application payload size because the library assemblies are downloaded to the browser.
 
