@@ -9,20 +9,23 @@ documentation: ug
 
 # Getting Started with Blazor DOCX Editor in Blazor WASM
 
-[Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a Blazor WebAssembly (WASM) application. 
+[Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a Blazor WebAssembly (WASM) application. 
 
 
 ## Steps to create a Blazor WASM DOCX Editor
 
-This section explains how to include the [Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) component in a Blazor WebAssembly (WASM) application using Visual Studio and Visual Studio Code.
-
-{% tabcontents %}
-
-{% tabcontent Visual Studio %}
+This section explains how to include the DOCX Editor component in a Blazor WebAssembly (WASM) application using Visual Studio and Visual Studio Code.
 
 ### Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+* Browser compatibility: Chrome (latest), Firefox (latest), Safari (latest), Edge (latest)
+* [Syncfusion license registration](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application) (required to use DOCX Editor in production; use evaluation mode for development)
+* For local development: Use Visual Studio or Visual Studio Code with the .NET SDK to run the Blazor application (Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> to launch with debugging)
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
 
 ### Create a Blazor WASM App in Visual Studio
 
@@ -31,8 +34,8 @@ You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft T
 ### Install Document Editor Nuget packages
 
 To add **Document Editor** component in the application, follow the steps below.
- - open NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), 
- - search and install the following packages
+ - Open NuGet Package Manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution).
+ - Search and install the following packages
     - [Syncfusion.Blazor.WordProcessor](https://www.nuget.org/packages/Syncfusion.Blazor.WordProcessor)
     - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
     
@@ -47,15 +50,16 @@ Install-Package Syncfusion.Blazor.Themes
 {% endhighlight %}
 {% endtabs %}
 
-N> Document Editor are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the complete list of packages and component details.
+**Package Compatibility:**
+* Syncfusion.Blazor.WordProcessor: v24.1.0 and above
+* Syncfusion.Blazor.Themes: v24.1.0 and above
+* .NET versions supported: .NET 6.0, .NET 7.0, .NET 8.0 and above
+
+N> The DOCX Editor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the complete list of packages and component details.
 
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
-
-### Prerequisites
-
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 ### Create a new Blazor WASM App in Visual Studio Code
 
@@ -67,8 +71,10 @@ Alternatively, create a WebAssembly application using the following terminal com
 
 {% highlight c# tabtitle="Blazor WASM App" %}
 
+```bash
 dotnet new blazorwasm -o BlazorApp
 cd BlazorApp
+```
 
 {% endhighlight %}
 
@@ -77,8 +83,9 @@ cd BlazorApp
 ### Install Document Editor Nuget packages
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
-* Ensure you’re in the project root directory where your `.csproj` file is located.
-* Run the following command to install 
+* Navigate to the project directory created in the previous step.
+* Ensure you're in the project root directory where your `.csproj` file is located.
+* Run the following command to install the required packages:
     - [Syncfusion.Blazor.WordProcessor](https://www.nuget.org/packages/Syncfusion.Blazor.WordProcessor)
     - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
 
@@ -93,7 +100,7 @@ dotnet restore
 {% endhighlight %}
 {% endtabs %}
 
-N> Document Editor are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> The DOCX Editor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
 {% endtabcontent %}
 
@@ -150,9 +157,9 @@ Add the following stylesheet and script to the head section of **~/index.html** 
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-### Add the Document Editor component
+### Add the DOCX Editor Component
 
-Add the Document Editor component in the **~/Pages/Home.razor** file.
+Add the DOCX Editor component in the **~/Pages/Home.razor** file.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Home.razor" %}
@@ -164,15 +171,24 @@ Add the Document Editor component in the **~/Pages/Home.razor** file.
 
 ### Run the application
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Document Editor component in your default web browser. The output will appear as follows:
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the DOCX Editor component in your default web browser. The output will appear as follows:
 
 ![Blazor DOCX Editor in WASM](../images/blazor-docx-editor.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DocumentEditor).
 
+### Next Steps
+
+You now have a basic DOCX Editor running in your Blazor WASM application. To extend its functionality, explore the following:
+
+- **Load Documents** — Learn how to [open existing Word documents](https://help.syncfusion.com/document-processing/word/word-processor/blazor/opening-a-document) in the editor
+- **Save Documents** — Implement [document saving functionality](https://help.syncfusion.com/document-processing/word/word-processor/blazor/saving-document) to persist changes
+- **Track Changes** — Enable [track changes and revisions](https://help.syncfusion.com/document-processing/word/word-processor/blazor/track-changes) for collaborative editing
+- **Available Features** — Explore the [complete DOCX Editor feature set](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor)
+
 ## Online Demo
 
-Explore how to create, edit, and print Word documents using the Blazor Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-wasm/document-editor/default-functionalities).
+Explore how to create, edit, and print Word documents using the Blazor DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-wasm/document-editor/default-functionalities).
 
 N> Looking for the full Blazor DOCX Editor component overview, features, pricing, and documentation? Visit the [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) page.
 
@@ -181,3 +197,5 @@ N> Looking for the full Blazor DOCX Editor component overview, features, pricing
 - [Getting started in Blazor Web app](https://help.syncfusion.com/document-processing/word/word-processor/blazor/getting-started/web-app)
 - [Open a document](https://help.syncfusion.com/document-processing/word/word-processor/blazor/opening-a-document)
 - [Save a document](https://help.syncfusion.com/document-processing/word/word-processor/blazor/saving-document)
+- [Track changes](https://help.syncfusion.com/document-processing/word/word-processor/blazor/track-changes)
+- [Blazor DOCX Editor Features](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor)
