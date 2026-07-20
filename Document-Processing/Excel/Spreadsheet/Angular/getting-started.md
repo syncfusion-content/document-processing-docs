@@ -48,9 +48,16 @@ For `Angular versions below 12`, use the legacy `ngcc` package instead:
 npm install @syncfusion/ej2-angular-spreadsheet@ngcc
 ```
 
+## Register a Syncfusion License Key
+
+Before initializing the Syncfusion Angular Spreadsheet component, generate a Syncfusion license key and register it in the application.
+
+- [Generate a Syncfusion License Key](https://help.syncfusion.com/document-processing/licensing/how-to-generate)
+- [Register a Syncfusion License Key in an Angular Application](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#angular)
+
 ## Add CSS references
 
-Add the following Spreadsheet and dependent component styles to `src/styles.css` file. Replace the existing content with the theme import code below. The following example uses the `Tailwind 3` theme.
+Add the following Spreadsheet and dependent component styles to `src/styles.css` file. Replace the existing content with the theme import code below.
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
@@ -65,9 +72,7 @@ Add the following Spreadsheet and dependent component styles to `src/styles.css`
 @import '../node_modules/@syncfusion/ej2-angular-spreadsheet/styles/tailwind3.css';
 ```
 
-Syncfusion also ships additional built-in themes. To use a different theme, replace `tailwind3.css` with the theme of your choice (for example, `bootstrap5.css`, `fluent2.css`, etc.) in all `@import` statements.
-
-> To know more about built-in themes and CSS reference for individual components, refer to the [themes](https://ej2.syncfusion.com/angular/documentation/appearance/overview) section.
+> **Note:** This example uses the `Tailwind 3` theme. To use a different built-in theme, replace the `tailwind3.css` references with the corresponding theme stylesheets. Refer to the [Themes documentation](https://ej2.syncfusion.com/angular/documentation/appearance/overview) for information about the available themes and the different ways to include theme styles in an Angular application.
 
 ## Add the Syncfusion® Angular Spreadsheet component
 
