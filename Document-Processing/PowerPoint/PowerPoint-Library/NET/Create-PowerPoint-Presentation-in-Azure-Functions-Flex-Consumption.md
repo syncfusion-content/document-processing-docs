@@ -71,7 +71,7 @@ public class Function1
     }
 
      [Function("CreatePowerPointPresentation")]
-    public IActionResult Run([HttpTrigger(AuthorizationLevel.Function, "post")] HttpRequest req)
+    public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "post")] HttpRequest req)
     {
         try
         {
