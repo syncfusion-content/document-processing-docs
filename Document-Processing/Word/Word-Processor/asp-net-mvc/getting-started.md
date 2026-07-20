@@ -105,6 +105,10 @@ Add the Document Editor component in `~/Views/Home/Index.cshtml` page.
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. The DOCX Editor component will then be rendered in the default web browser as shown below.
 
+![Output of ASP.NET MVC DOCX Editor](./images/aspnetmvc-docx-editor.png)
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-MVC-DOCX-Editor-Examples/tree/master/getting-started).
+
 ## Troubleshooting
 
 If the DOCX Editor control does not render as expected, use the following checklist to resolve the most common setup and configuration issues.
@@ -114,10 +118,6 @@ If the DOCX Editor control does not render as expected, use the following checkl
  
 **Licensing errors at runtime**
 - Ensure that you have registered your [Syncfusion license](https://ej2.syncfusion.com/aspnetmvc/documentation/licensing/how-to-register-in-an-application) before deploying the application to production.
-
-![Output of ASP.NET MVC DOCX Editor](./images/aspnetmvc-docx-editor.png)
-
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-MVC-DOCX-Editor-Examples/tree/master/getting-started).
 
 ## Online Demo
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with React DOCX Editor component | Syncfusion
-description: Learn how to create a DOCX Editor in a React application using the Syncfusion® Docx Editor control to create, edit, and view Word documents.
+description: Learn how to create a DOCX Editor in a React application using the Syncfusion® DOCX Editor control to create, edit, and view Word documents.
 control: Getting started 
 platform: document-processing
 documentation: ug
@@ -20,7 +20,7 @@ domainurl: ##DomainURL##
 
 ### Prerequisites
 
-[System requirements for Docx Editor](https://ej2.syncfusion.com/react/documentation/system-requirement)
+[System requirements for DOCX Editor](https://ej2.syncfusion.com/react/documentation/system-requirement)
 
 ### Create a new React application
 
@@ -31,12 +31,12 @@ npm create vite@latest documenteditor-app -- --template react-ts
 cd documenteditor-app
 ```
 
-### Install the Docx Editor packages
+### Install the DOCX Editor packages
 
-The Docx Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-react-documenteditor).
+The DOCX Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-react-documenteditor).
 
 
-To install the Docx Editor component, use the following command:
+To install the DOCX Editor component, use the following command:
 
 ```bash
 npm install @syncfusion/ej2-react-documenteditor --save
@@ -44,7 +44,7 @@ npm install @syncfusion/ej2-react-documenteditor --save
 
 ### Add CSS reference
 
-Add the Docx Editor component and its dependent component styles available in the `node_modules/@syncfusion` package folder. Reference these styles in the `src/index.css` file.
+Add the DOCX Editor component and its dependent component styles available in the `node_modules/@syncfusion` package folder. Reference these styles in the `src/index.css` file.
 
 {% tabs %}
 {% highlight css tabtitle="index.css" %}
@@ -62,9 +62,9 @@ Add the Docx Editor component and its dependent component styles available in th
 {% endhighlight %}
 {% endtabs %}
 
-### Add the Docx Editor component
+### Add the DOCX Editor component
 
-Add the Docx Editor component to your application. In the `src/App.tsx` file, add the following code to initialize the component:
+Add the DOCX Editor component to your application. In the `src/App.tsx` file, add the following code to initialize the component:
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -111,7 +111,7 @@ npm run dev
 
 ### Prerequisites
 
-[System requirements for Docx Editor](https://ej2.syncfusion.com/react/documentation/system-requirement)
+[System requirements for DOCX Editor](https://ej2.syncfusion.com/react/documentation/system-requirement)
 
 ### Create a new React application
 
@@ -122,12 +122,12 @@ npm create vite@latest documenteditor-app -- --template react
 cd documenteditor-app
 ```
 
-### Install the Docx Editor packages
+### Install the DOCX Editor packages
 
-The Docx Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-react-documenteditor).
+The DOCX Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-react-documenteditor).
 
 
-To install the Docx Editor component, use the following command:
+To install the DOCX Editor component, use the following command:
 
 ```bash
 npm install @syncfusion/ej2-react-documenteditor --save
@@ -135,7 +135,7 @@ npm install @syncfusion/ej2-react-documenteditor --save
 
 ### Add CSS reference
 
-Add the Docx Editor component and its dependent component styles available in the `node_modules/@syncfusion` package folder. Reference these styles in the `src/index.css` file:
+Add the DOCX Editor component and its dependent component styles available in the `node_modules/@syncfusion` package folder. Reference these styles in the `src/index.css` file:
 
 {% tabs %}
 {% highlight css tabtitle="index.css" %}
@@ -153,9 +153,9 @@ Add the Docx Editor component and its dependent component styles available in th
 {% endhighlight %}
 {% endtabs %}
 
-### Add the Docx Editor component
+### Add the DOCX Editor component
 
-Add the Docx Editor component to your application. In the `src/App.jsx` file, add the following code to initialize the component:
+Add the DOCX Editor component to your application. In the `src/App.jsx` file, add the following code to initialize the component:
 
 
 {% tabs %}
@@ -195,11 +195,11 @@ npm run dev
 
 {% endtabcontents %}
 
-After the application starts, open the localhost URL shown in the terminal. The React Docx Editor is rendered in the browser with a toolbar and an editable document area, as shown below.
+After the application starts, open the localhost URL shown in the terminal. The React DOCX Editor is rendered in the browser with a toolbar and an editable document area, as shown below.
 
-![Output of React Docx Editor](./images/react_getting_started.png)
+![Output of React DOCX Editor](./images/react_getting_started.png)
 
-You can also explore the Docx Editor interactively using the live sample below.
+You can also explore the DOCX Editor interactively using the live sample below.
         
 {% previewsample "/document-processing/code-snippet/document-editor/react/base-cs3" %}
 
@@ -207,17 +207,17 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/React-DOCX-Edit
 
 ## Online Demo
 
-Explore how to create, edit, and print Word documents using the React Docx Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/default).
+Explore how to create, edit, and print Word documents using the React DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/default).
 
 ## Video tutorial
 
-To get started quickly with Docx Editor component, you can check the video below.
+To get started quickly with DOCX Editor component, you can check the video below.
 
 {% youtube "https://www.youtube.com/watch?v=tgJgvbnxdBA" %}
 
 ## Server-side dependencies
 
-The Docx Editor component requires server-side interactions for the following operations:
+The DOCX Editor component requires server-side interactions for the following operations:
 
 * Open file formats other than SFDT
 * Paste with formatting

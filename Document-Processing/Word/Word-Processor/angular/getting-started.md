@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Angular DOCX Editor | Syncfusion
-description: Learn how to create a DOCX Editor in an Angular application using the Syncfusion® Docx Editor control to create, edit, and view Word documents.
+description: Learn how to create a DOCX Editor in an Angular application using the Syncfusion® DOCX Editor control to create, edit, and view Word documents.
 platform: document-processing
 control: Getting started 
 documentation: ug
@@ -16,7 +16,7 @@ domainurl: ##DomainURL##
 
 ### Prerequisites
 
-[System requirements for Docx Editor](https://ej2.syncfusion.com/angular/documentation/system-requirement)
+[System requirements for DOCX Editor](https://ej2.syncfusion.com/angular/documentation/system-requirement)
 
 ### Setup Angular environment
 
@@ -72,11 +72,11 @@ In this guide, CSS is selected as the stylesheet format.
 cd documenteditor-app
 ```
 
-### Install the Docx Editor packages
+### Install the DOCX Editor packages
 
-The Docx Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-angular-documenteditor).
+The DOCX Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-angular-documenteditor).
 
-To install the Docx Editor component, use the following command:
+To install the DOCX Editor component, use the following command:
 
 ```bash
 npm install @syncfusion/ej2-angular-documenteditor --save
@@ -102,9 +102,9 @@ The following CSS files are available in the `node_modules/@syncfusion` package 
 {% endhighlight %}
 {% endtabs %}
 
-### Add the Docx Editor component
+### Add the DOCX Editor component
 
-Modify `src/app/app.ts` to render the Docx Editor component by adding the Angular Docx Editor selector in its template section.
+Modify `src/app/app.ts` to render the DOCX Editor component by adding the Angular DOCX Editor selector in its template section.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
@@ -145,11 +145,11 @@ Run the application using the following command:
 ng serve --open
 ```
 
-After the application starts, open the localhost URL shown in the terminal. The Docx Editor is rendered in the browser with a toolbar and an editable document area, as shown below.
+After the application starts, open the localhost URL shown in the terminal. The DOCX Editor is rendered in the browser with a toolbar and an editable document area, as shown below.
 
-![Output of Angular Docx Editor](./images/angular_getting_started.png)
+![Output of Angular DOCX Editor](./images/angular_getting_started.png)
 
-You can also explore the Docx Editor interactively using the live sample below.
+You can also explore the DOCX Editor interactively using the live sample below.
 
 {% previewsample "/document-processing/samples/document-editor/angular/document-editor-container-cs2" %}
 
@@ -157,17 +157,17 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Angular-DOCX-Ed
 
 ## Online Demo
 
-Explore how to create, edit, and print Word documents in the Angular Docx Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/default).
+Explore how to create, edit, and print Word documents in the Angular DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/default).
 
 ## Video tutorial
 
-To get started quickly with the Docx Editor component using the Angular CLI, you can check the video below.
+To get started quickly with the DOCX Editor component using the Angular CLI, you can check the video below.
 
 {% youtube "https://www.youtube.com/watch?v=UHdjjR_BbQY" %}
 
 ## Server-side dependencies
 
-The Docx Editor component requires server-side interactions for the following operations:
+The DOCX Editor component requires server-side interactions for the following operations:
 
 * Open file formats other than SFDT
 * Paste with formatting
@@ -179,7 +179,7 @@ N> If you don't require the above functionalities, you can deploy the component 
 
 For detailed information about server-side dependencies, refer to the [Web Services Overview](./web-services-overview) page.
 
-N> Looking for the full Angular Docx Editor component overview, features, pricing, and documentation? Visit the [Angular Docx Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Docx Editor) page.
+N> Looking for the full Angular DOCX Editor component overview, features, pricing, and documentation? Visit the [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (DOCX Editor) page.
 ## See also
 
 - [Open a document](./import)
