@@ -116,7 +116,7 @@ End Sub
 
 Step 5: Include the following code in the `btnCreate_Click` event handler to create the Excel document.
 
-N> Before running, place the `AdventureCycles-Logo.png` image in the project output directory (typically `bin/Debug/<framework>/`) so the `FileStream` can load it.
+N> Before running, place the `AdventureCycles-Logo.png` image in the project output directory (typically `bin/Debug/<framework>/`) so the `FileStream` can load it
 {% capture codesnippet3 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}

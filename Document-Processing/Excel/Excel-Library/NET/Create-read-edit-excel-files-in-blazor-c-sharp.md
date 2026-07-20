@@ -724,8 +724,8 @@ By executing the program, you will get the Excel file as below.
 
 The following code snippet illustrates how to read and edit an Excel file in the Blazor Server application.
 
-Step 1: Add the `sample.xlsx` file to the project folder.
 
+Step 1: Add the `sample.xlsx` file to the project folder.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 //Create an instance of ExcelEngine

@@ -35,13 +35,10 @@ Step 2: Select the framework for the project
 ![Select the framework](ASP-NET-Core_images/ASP-NET-Core_images_img2.png)
 
 Step 3: Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package with the latest stable version as a reference to your ASP.NET Core application from [NuGet.org](https://www.nuget.org).
-
 ![Add XlsIO reference to the project](ASP-NET-Core_images/ASP-NET-Core_images_img3.png)
 
 For CLI users, use this command to install the NuGet package:
-`dotnet add package Syncfusion.XlsIO.Net.Core`
-
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
+`dotnet add package Syncfusion.XlsIO.Net.Core`N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
 
 Step 4: A default controller named `HomeController.cs` is added on creation of an ASP.NET Core project. Include the following namespaces at the top of the `HomeController.cs` file.
 {% capture codesnippet1 %}
@@ -919,10 +916,10 @@ By executing the program, you will get the Excel file as below.
 
 The following code snippet illustrates how to read and edit an Excel file in ASP.NET Core.
 
+
 N> Add the `Sample.xlsx` file to the project folder (or `wwwroot`) and configure the project to copy it to the output directory by setting **Copy to Output Directory** to **Copy if newer** in the file properties.
 
 Step 1: Add the `Sample.xlsx` file in the project folder.
-
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 //New instance of ExcelEngine is created 
@@ -943,7 +940,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Access first worksheet from the workbook.
   IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Set the text in cell A3.
+//Set the text in cell A3.
   worksheet.Range["A3"].Text = "Hello World";
 
   //Access a cell value from Excel
@@ -967,7 +964,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   workbook.Close();
   excelEngine.Dispose();
 
-  //Creates a FileStreamResult object by using the file contents, content type, and file name.
+//Creates a FileStreamResult object by using the file contents, content type, and file name.
   return File(stream, ContentType, fileName);
 }
 {% endhighlight %}
