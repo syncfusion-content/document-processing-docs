@@ -12,16 +12,12 @@ domainurl: ##DomainURL##
 
 [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a JavaScript (ES5) application.
 
-## Steps to create a DOCX Editor using JavaScript (ES5)
-
 ### Prerequisites
 
-* **Browser**:  [Browser Compatibility](https://ej2.syncfusion.com/javascript/documentation/browser)
-* **License**: [Syncfusion license registration](https://ej2.syncfusion.com/javascript/documentation/licensing/license-key-registration)
+* [Browser Compatibility](https://ej2.syncfusion.com/javascript/documentation/browser)
+* [Syncfusion license registration](https://ej2.syncfusion.com/javascript/documentation/licensing/license-key-registration)
 
-**Important - Server-side dependencies:**
-The DOCX Editor requires server-side services for advanced features: opening non-SFDT formats, paste with formatting, restrict editing, spell check, and saving to formats other than SFDT/DOCX. If you don't require these features, you can deploy as a pure client-side solution. See [Server-side dependencies](#server-side-dependencies) section below for details.
-
+### Set up development environment
 
 Create a folder named `documenteditor-app` with `index.html` and `index.js` files with the default structure. Your application structure should look like this:
 
@@ -49,30 +45,24 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> EJ2 library global scripts 
   Style: https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/styles/tailwind3.css
   ```
 
-**Minimum Required References:**
-To create a basic DOCX Editor, you must include:
-- `ej2-base.min.js` and `ej2-base.css` (required foundation)
-- `ej2-documenteditor.min.js` and `ej2-documenteditor.css` (core component)
-- **Optional but recommended**: All dependencies listed in the example below support full toolbar functionality (buttons, dropdowns, inputs, popups, etc.). Include them for a complete editor experience.
-
 Add the following CDN references inside the `<head>` section of your `index.html` file, as shown below:
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
 
-<title>Syncfusion JavaScript Docx Editor</title>
-<!-- EJ2 Docx Editor dependent theme -->
-<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/styles/tailwind3.css" rel="stylesheet" type="text/css" rel='nofollow' />
-<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-buttons/styles/tailwind3.css" rel="stylesheet" type="text/css" rel='nofollow' />
-<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-inputs/styles/tailwind3.css" rel="stylesheet" type="text/css" rel='nofollow' />
-<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-popups/styles/tailwind3.css" rel="stylesheet" type="text/css" rel='nofollow' />
-<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-lists/styles/tailwind3.css" rel="stylesheet" type="text/css" rel='nofollow' />
-<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-navigations/styles/tailwind3.css" rel="stylesheet" type="text/css" rel='nofollow' />
-<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-splitbuttons/styles/tailwind3.css" rel="stylesheet" type="text/css" rel='nofollow' />
-<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-dropdowns/styles/tailwind3.css" rel="stylesheet" type="text/css" rel='nofollow' />
-<!-- EJ2 Docx Editor theme -->
-<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-documenteditor/styles/tailwind3.css" rel="stylesheet" type="text/css" rel='nofollow' />
-<!-- EJ2 Docx Editor dependent scripts -->
+<title>Syncfusion JavaScript DOCX Editor</title>
+<!-- EJ2 DOCX Editor dependent theme -->
+<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-buttons/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-inputs/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-popups/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-lists/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-navigations/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-splitbuttons/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-dropdowns/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<!-- EJ2 DOCX Editor theme -->
+<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-documenteditor/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<!-- EJ2 DOCX Editor dependent scripts -->
 <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
 <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-data/dist/global/ej2-data.min.js" type="text/javascript"></script>
 <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-svg-base/dist/global/ej2-svg-base.min.js" type="text/javascript"></script>
@@ -89,15 +79,15 @@ Add the following CDN references inside the `<head>` section of your `index.html
 <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-calendars/dist/global/ej2-calendars.min.js" type="text/javascript"></script>
 <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-charts/dist/global/ej2-charts.min.js" type="text/javascript"></script>
 <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-office-chart/dist/global/ej2-office-chart.min.js" type="text/javascript"></script>
-<!-- EJ2 Docx Editor script -->
+<!-- EJ2 DOCX Editor script -->
 <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-documenteditor/dist/global/ej2-documenteditor.min.js" type="text/javascript"></script>
 
 {% endhighlight %}
 {% endtabs %}
 
-### Add the DOCX Editor component
+### Add the Document Editor component
 
-Add a container element for the DOCX Editor in the `index.html` file and then initialize the control in the `<script>` tag.
+Add a container element for the Document Editor in the `index.html` file and then initialize the control in the `<script>` tag.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -105,11 +95,11 @@ Add a container element for the DOCX Editor in the `index.html` file and then in
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Syncfusion JavaScript Docx Editor</title>
+    <title>Syncfusion JavaScript DOCX Editor</title>
     <!-- Add your style references here -->
 </head>
 <body>
-    <!-- Element that renders the Docx Editor -->
+    <!-- Element that renders the DOCX Editor -->
     <div id='DocumentEditor'></div>
     <script src="index.js" type="text/javascript"></script>
 </body>
@@ -121,16 +111,14 @@ Add a container element for the DOCX Editor in the `index.html` file and then in
 // Register toolbar module - This loads the toolbar module
 ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
 
-// Initialize Docx Editor Container component
+// Initialize Document Editor Container component
 // For complete API reference and all available properties, see: https://ej2.syncfusion.com/javascript/api/document-editor-container/
 var documenteditorContainer = new ej.documenteditor.DocumentEditorContainer({ 
-    enableToolbar: true,  // Set to true to show the toolbar; false to hide it
+    enableToolbar: true,
     height: '590px'
-
 });
 
-// Use the following service URL only for demo purposes (rate-limited, for evaluation only)
-// For production, host your own service using: https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices
+// Use the following service URL only for demo purposes
 documenteditorContainer.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 // Render the DocumentEditorContainer control
 documenteditorContainer.appendTo('#DocumentEditor');
@@ -146,13 +134,11 @@ Open the `index.html` file in a web browser. The JavaScript (ES5) DOCX Editor is
 
 ![Output of JavaScript ES5 DOCX Editor](./images/javascript_es5_getting_started.png)
 
-**Verify the setup:**
-- Open the browser's Developer Tools (<kbd>F12</kbd>) and check the Console tab for any errors
-- Type or paste content to confirm the editor is responsive
-
 You can also explore the DOCX Editor interactively using the live sample below.
 
-N> For an interactive code sample, view the [JavaScript ES5 Getting Started Example](https://github.com/SyncfusionExamples/JavaScript-ES5-DOCX-Editor-Examples/tree/master/getting-started) on GitHub.
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/es5-getting-started-cs2" %}
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/JavaScript-ES5-DOCX-Editor-Examples/tree/master/getting-started) on GitHub.
 
 ## Online Demo
 

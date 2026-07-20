@@ -54,12 +54,14 @@ You can create a **Blazor WebAssembly App** using Visual Studio Code via [Micros
 
 Alternatively, create a WebAssembly application using the following terminal commands (<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
+{% tabs %}
 {% highlight bash tabtitle="Blazor WASM App" %}
 
 dotnet new blazorwasm -o BlazorApp
 cd BlazorApp
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Install DOCX Editor Nuget packages
 
