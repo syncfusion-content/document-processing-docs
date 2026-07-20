@@ -19,8 +19,6 @@ Before you begin, ensure the following are available:
 - **Visual Studio 2017 or later** installed on a Windows machine.
 - **.NET Framework 4.5.2 or later** (required by the `Syncfusion.DocIO.AspNet` NuGet package, starting with v16.2.0.x).
 - **Syncfusion.DocIO.AspNet** NuGet package (install in Step 3).
-- **Syncfusion.Licensing** assembly reference and a registered Syncfusion license key (see Step 3 note).
-- The following image assets placed in the project root (set **Build Action** to **Content**, **Copy to Output Directory** to **Copy if newer**): `AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, `Road-550-W.jpg`.
 
 ## Steps to create Word document programmatically:
 
@@ -44,7 +42,7 @@ Step 5: Add a new button in the **MainPage.aspx** as shown below.
 
 {% tabs %}
 
-{% highlight aspx tabtitle="ASPX" %}
+{% highlight c# tabtitle="C#" %}
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -78,7 +76,7 @@ using System.Web;
 
 {% endtabs %}
 
-Step 7: Include the below code snippet in the click event of the button in **MainPage.aspx.cs** (in the same `MainPage` partial class), to **create a Word document** and download it.
+Step 7: Include the below code snippet in the click event of the button in **MainPage.aspx.cs**, to **create a Word document** and download it.
 
 {% tabs %}
 

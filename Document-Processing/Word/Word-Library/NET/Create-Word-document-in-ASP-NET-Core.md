@@ -658,7 +658,7 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 * Click the NuGet icon in the Rider toolbar and type [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) in the search bar.
 * Ensure that "nuget.org" is selected as the package source.
 * Select the latest Syncfusion.DocIO.Net.Core NuGet package from the list.
-* Click the + (Add) button to add the package. Also add the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) package the same way.
+* Click the + (Add) button to add the package.
 
 ![Select the Syncfusion.DocIO.Net.Core NuGet package](ASP-NET-Core_images/Select-Syncfusion.DocIO.NETCore-NuGet.png)
 

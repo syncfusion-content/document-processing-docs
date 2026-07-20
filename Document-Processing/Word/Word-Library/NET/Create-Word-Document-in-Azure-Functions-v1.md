@@ -15,7 +15,6 @@ Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion
 * An active Azure subscription.
 * Visual Studio with the **Azure development** workload installed.
 * .NET Framework (version supported by the Syncfusion.DocIO.AspNet package referenced in Step 4).
-* The following image files, added to a **Data** folder in the project with **Build Action** set to **Embedded Resource**: `AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, and `Road-550-W.jpg`.
 
 ## Steps to create a Word document in Azure Functions v1
 
