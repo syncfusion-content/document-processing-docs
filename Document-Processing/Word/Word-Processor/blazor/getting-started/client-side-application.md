@@ -121,7 +121,7 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 {% endtabs %}
 
-## Register a Syncfusion License Key
+### Register a Syncfusion License Key
 
 Before initializing the Blazor DOCX Editor control, generate a Syncfusion license key and register it in your application.
 

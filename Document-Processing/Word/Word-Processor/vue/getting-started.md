@@ -51,7 +51,7 @@ To install the DOCX Editor component, use the following command:
 npm install @syncfusion/ej2-vue-documenteditor --save
 ```
 
-## Register a Syncfusion License Key
+### Register a Syncfusion License Key
 
 Before initializing the Vue DOCX Editor control, generate a Syncfusion license key and register it in your application.
 
@@ -79,6 +79,8 @@ Add the following DOCX Editor and dependent component style references to the `<
 {% endtabs %}
 
 N> Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
+
+### Initialize the DOCX Editor
 
 Modify the `src/App.vue` file to render the DOCX Editor. Add the DOCX Editor component in the `<template>` section using the `<ejs-documenteditorcontainer>` selector and configure it in the `<script>` section.
 

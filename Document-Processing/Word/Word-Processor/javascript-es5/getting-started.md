@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a JavaScript (ES5) application.
 
-### Prerequisites
+## Prerequisites
 
 * [Browser Compatibility](https://ej2.syncfusion.com/javascript/documentation/browser)
 
@@ -37,7 +37,7 @@ npm install @syncfusion/ej2-documenteditor
 {% endhighlight %}
 {% endtabs %}
 
-## Register a Syncfusion License Key
+### Register a Syncfusion License Key
 
 Before initializing the Javascript (ES5) DOCX Editor control, generate a Syncfusion license key and register it in your application.
 
