@@ -16,6 +16,8 @@ domainurl: ##DomainURL##
 
 ### Prerequisites
 
+Refer to the link below for the supported Node.js, Angular CLI, and browser versions before you begin.
+
 [System requirements for Document Editor](https://ej2.syncfusion.com/angular/documentation/system-requirement)
 
 ### Setup Angular environment
@@ -34,7 +36,7 @@ npm install -g @angular/cli
 ng new documenteditor-app
 ```
 
-**Step 2:** This command will prompt you to configure settings like enabling Angular routing and choosing a stylesheet format.
+**Step 2:** The command prompts you to configure settings like enabling Angular routing and choosing a stylesheet format.
 
 ```text
 ? Which stylesheet system would you like to use?
@@ -45,7 +47,7 @@ ng new documenteditor-app
   Less            [ http://lesscss.org                                             ]
 ```
 
-In this guide, CSS is selected as the stylesheet format.
+This guide selects CSS as the stylesheet format.
 
 **Step 3:** During project setup, when prompted for the server-side rendering (SSR) option, choose the appropriate configuration.
 
@@ -104,7 +106,7 @@ The following CSS files are available in the `node_modules/@syncfusion` package 
 
 ### Add the Document Editor component
 
-Modify `src/app/app.ts` to render the Document Editor component by adding the Angular Document Editor selector in its template section.
+Update `src/app/app.ts` to render the Document Editor component by adding the selector to its template.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
@@ -147,9 +149,9 @@ ng serve --open
 
 After the application starts, open the localhost URL shown in the terminal. The Document Editor is rendered in the browser with a toolbar and an editable document area, as shown below.
 
-![Output of Angular Document Editor](./images/angular_getting_started.png)
+![Angular Document Editor with toolbar and an empty editable area](./images/angular_getting_started.png)
 
-You can also explore the Document Editor interactively using the live sample below.
+You can also explore the Document Editor interactively using the live sample.
 
 {% previewsample "/document-processing/samples/document-editor/angular/document-editor-container-cs2" %}
 
@@ -179,9 +181,9 @@ N> If you don't require the above functionalities, you can deploy the component 
 
 For detailed information about server-side dependencies, refer to the [Web Services Overview](./web-services-overview) page.
 
-N> Looking for the full Angular Docx Editor component overview, features, pricing, and documentation? Visit the [Angular Docx Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) page.
+N> Looking for the full Angular DOCX Editor component overview, features, pricing, and documentation? Visit the [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) page.
 ## See also
 
 - [Open a document](./import)
 - [Save a document](./export)
-- [Collaborative Editing](./collaborative-editing/overview)
+- [Collaborative editing](./collaborative-editing/overview)
