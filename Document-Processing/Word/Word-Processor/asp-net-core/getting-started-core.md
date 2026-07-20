@@ -14,6 +14,7 @@ documentation: ug
 ## Prerequisites
 
 * [System requirements for ASP.NET Core controls](https://ej2.syncfusion.com/aspnetcore/documentation/system-requirements)
+* [Browser compatiblity](https://ej2.syncfusion.com/aspnetcore/documentation/browser)
 * [ASP.NET Core license registration](https://ej2.syncfusion.com/aspnetcore/documentation/licensing/overview)
 
 {% tabcontents %}
