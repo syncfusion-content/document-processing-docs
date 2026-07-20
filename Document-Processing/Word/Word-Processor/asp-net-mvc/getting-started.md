@@ -109,6 +109,13 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> to run the app. The DOCX Editor component wi
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-MVC-DOCX-Editor-Examples/tree/master/getting-started).
 
+
+## Online Demo
+
+Explore how to create, edit, and print Word documents using the ASP.NET MVC DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/defaultfunctionalities#/tailwind3).
+
+N> Looking for the full ASP.NET MVC DOCX Editor component overview, features, pricing, and documentation? Visit the [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) page.
+
 ## Troubleshooting
 
 If the DOCX Editor control does not render as expected, use the following checklist to resolve the most common setup and configuration issues.
@@ -118,12 +125,6 @@ If the DOCX Editor control does not render as expected, use the following checkl
  
 **Licensing errors at runtime**
 - Ensure that you have registered your [Syncfusion license](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#aspnet-mvc) before deploying the application to production.
-
-## Online Demo
-
-Explore how to create, edit, and print Word documents using the ASP.NET MVC DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/defaultfunctionalities#/tailwind3).
-
-N> Looking for the full ASP.NET MVC DOCX Editor component overview, features, pricing, and documentation? Visit the [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) page.
 
 ## See also
 
