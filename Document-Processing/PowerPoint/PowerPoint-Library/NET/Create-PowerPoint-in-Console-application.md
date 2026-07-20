@@ -471,7 +471,7 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 * Select the latest Syncfusion.Presentation.WinForms NuGet package from the list.
 * Click the + (Add) button to add the package.
 
-![Select the Syncfusion.Presentation.WinForms NuGet package](Console-Images/NET-FrameWork/Search-Syncfusion.Presentation.WinForms-NuGet.png)
+![Select the Syncfusion.Presentation.WinForms NuGet package](Workingwith-Windows/Install_Nuget.png)
 
 * Click the Install button to complete the installation.
 
