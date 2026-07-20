@@ -14,7 +14,7 @@ Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncf
 
 * Visual Studio 2022 with the "ASP.NET and web development" workload.
 * An active Azure subscription with permission to create an App Service and App Service plan.
-* [.NET 6.0 SDK or later](https://dotnet.microsoft.com/download).
+* .NET 6.0 SDK or later.
 
 ## Steps to create Word document in Azure App Service on Linux
 

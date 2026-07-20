@@ -718,8 +718,6 @@ Step 6: Add the following images as **EmbeddedResource** to a `Resources/DocIO` 
 * `Mountain-300.jpg`
 * `Road-550-W.jpg`
 
-For more details on storing and retrieving embedded resources in .NET MAUI, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/storage/file-system?view=net-maui-9.0#load-a-file-embedded-in-the-app-bundle).
-
 Step 7: Add the platform-specific helper files listed in the [Helper files for .NET MAUI](#helper-files-for-net-maui) section to your project. These files are required for the `SaveService.SaveAndView` method used in the code to compile and run.
 
 Step 8: Run the application.
@@ -1128,8 +1126,6 @@ Step 6: Add the following images as **EmbeddedResource** to a `Resources/DocIO` 
 * `Mountain-200.jpg`
 * `Mountain-300.jpg`
 * `Road-550-W.jpg`
-
-For more details on storing and retrieving embedded resources in .NET MAUI, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/storage/file-system?view=net-maui-9.0#load-a-file-embedded-in-the-app-bundle).
 
 Step 7: Add the platform-specific helper files listed in the [Helper files for .NET MAUI](#helper-files-for-net-maui) section to your project. These files are required for the `SaveService.SaveAndView` method used in the code to compile and run.
 

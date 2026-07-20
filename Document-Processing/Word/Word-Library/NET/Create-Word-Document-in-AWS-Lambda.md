@@ -14,9 +14,9 @@ Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncf
 
 Before you begin, ensure the following are in place:
 
-* Install the **AWS Toolkit for Visual Studio** extension. Refer to the [AWS Toolkit installation guide](https://docs.aws.amazon.com/toolkit-for-visual-studio/latest/user-guide/setup-keys.html).
+* Install the **AWS Toolkit for Visual Studio** extension.
 * An active **AWS account** with permission to create and invoke Lambda functions (IAM role with the `AWSLambdaBasicExecutionRole` managed policy).
-* **AWS access key ID** and **secret access key** for the console client. Refer to [AWS access keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/security-creds-access-keys.html).
+* **AWS access key ID** and **secret access key** for the console client.
 * A supported .NET target framework: **.NET 8 or later**.
 
 ## Steps to create Word document in AWS Lambda
@@ -38,7 +38,7 @@ Step 4: Create a folder named `Data` in the project root and copy the following 
 * `Mountain-300.jpg`
 * `Road-550-W.jpg`
 
-You can obtain these images from the [DocIO examples repository](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/AWS/AWS_Lambda/Data).
+You can obtain these images from the [DocIO examples repository](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/AWS/AWS_Lambda/Create-Word-Document/Data).
 ![Create a folder](AWS_Images/Lambda_Images/Data-Folder-WordtoPDF.png)
 
 Step 5: Open the properties of each data file and set **Copy to Output Directory** to **Copy if newer**.
