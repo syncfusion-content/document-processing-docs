@@ -125,7 +125,7 @@ await builder.Build().RunAsync();
 
 Before initializing the Blazor DOCX Editor control, generate a Syncfusion license key and register it in your application.
 
-- [Generate a Syncfusion License Key](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-generate)
+- [Generate a Syncfusion License Key](https://help.syncfusion.com/document-processing/licensing/how-to-generate)
 - [Register a Syncfusion License Key in Blazor WASM Application](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-syncfusion-license-securely-in-blazor-wasm-app)
 
 ## Add stylesheet
@@ -195,7 +195,7 @@ If the DOCX Editor control does not render as expected, use the following checkl
 - Confirm that the script reference is included inside the `<head>` section of the **index.html**.
 
 **2. Licensing errors at runtime**
-- Ensure that you have registered your [Syncfusion license](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#blazor).
+- Ensure that you have registered your [Syncfusion license](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application).
 
 ## See also
 

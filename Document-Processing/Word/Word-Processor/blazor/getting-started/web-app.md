@@ -118,7 +118,7 @@ Add the following import statement to the **`~/_Imports.razor`** file:
 
 Before initializing the Blazor DOCX Editor control, generate a Syncfusion license key and register it in your application.
 
-- [Generate a Syncfusion License Key](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-generate)
+- [Generate a Syncfusion License Key](https://help.syncfusion.com/document-processing/licensing/how-to-generate)
 - [Register a Syncfusion License Key in Blazor Web Application](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application)
 
 
@@ -220,7 +220,7 @@ If the DOCX Editor control does not render as expected, use the following checkl
 - Verify a render mode directive (`@rendermode InteractiveAuto`, `InteractiveWebAssembly`, or `InteractiveServer`) is present at the top of the page when interactivity location is set to `Per page/component`.
 
 **3. Licensing errors at runtime**
-- Ensure you have generated and registered your [Syncfusion license key](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application) before initializing the DOCX Editor control.
+- Ensure you have generated and registered your [Syncfusion license key](https://help.syncfusion.com/document-processing/licensing/how-to-generate) before initializing the DOCX Editor control.
 
 
 ## See also
