@@ -10,13 +10,13 @@ documentation: UG
 
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to a PDF in Google Cloud Platform (GCP)** in just a few lines of code.
 
-N> If this is your first time using Google Cloud Platform (GCP), refer to the [GCP getting-started documentation](https://console.cloud.google.com/getting-started) before continuing.
+N> If this is your first time using Google Cloud Platform (GCP), refer to the [GCP getting-started documentation](https://cloud.google.com/cloud-console?nodebwarning=true) before continuing.
 
 ## Prerequisites
 
 Before you begin, make sure you have the following:
 
-* A [Google Cloud Platform (GCP)](https://console.cloud.google.com/getting-started) account with billing enabled.
+* A [Google Cloud Platform (GCP)](https://cloud.google.com/cloud-console?nodebwarning=true) account with billing enabled.
 * The [Google Cloud CLI (`gcloud`)](https://cloud.google.com/sdk/docs/install) installed locally.
 * **.NET SDK 8.0** (or later) installed (the samples target `net8.0`).
 * A valid Syncfusion<sup>&reg;</sup> license key. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering the Syncfusion<sup>&reg;</sup> license key in your application.
