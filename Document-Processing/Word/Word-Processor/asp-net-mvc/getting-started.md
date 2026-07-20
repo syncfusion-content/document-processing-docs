@@ -120,10 +120,10 @@ N> Looking for the full ASP.NET MVC DOCX Editor component overview, features, pr
 
 If the DOCX Editor control does not render as expected, use the following checklist to resolve the most common setup and configuration issues.
  
-**DOCX Editor not rendering**
+**1. DOCX Editor not rendering**
 - Confirm that `@Html.EJS().ScriptManager()` is included before the closing `</body>` tag and check the browser console for JavaScript errors.
  
-**Licensing errors at runtime**
+**2. Licensing errors at runtime**
 - Ensure that you have registered your [Syncfusion license](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#aspnet-mvc) before deploying the application to production.
 
 ## See also
