@@ -81,7 +81,7 @@ dotnet restore
 {% endhighlight %}
 {% endtabs %}
 
-N> The DOCX Editor packages are available on [NuGet.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/NuGet-packages) topic for available NuGet packages list with component details.
+N> The DOCX Editor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
 {% endtabcontent %}
 
@@ -192,7 +192,7 @@ N> Looking for the full Blazor DOCX Editor component overview, features, pricing
 If the DOCX Editor control does not render as expected, use the following checklist to resolve the most common setup and configuration issues.
 
 **1. DOCX Editor not rendering**
-- Confirm that the  script reference is included inside the `<head>` section of the **index.html**.
+- Confirm that the script reference is included inside the `<head>` section of the **index.html**.
 
 **2. Licensing errors at runtime**
 - Ensure that you have registered your [Syncfusion license](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#blazor).
