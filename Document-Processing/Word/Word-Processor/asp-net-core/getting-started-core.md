@@ -15,7 +15,6 @@ documentation: ug
 
 * [System requirements for ASP.NET Core controls](https://ej2.syncfusion.com/aspnetcore/documentation/system-requirements)
 * [Browser compatibility](https://ej2.syncfusion.com/aspnetcore/documentation/browser)
-* [ASP.NET Core license registration](https://ej2.syncfusion.com/aspnetcore/documentation/licensing/how-to-register-in-an-application)
 
 {% tabcontents %}
 
@@ -25,7 +24,7 @@ documentation: ug
 
 Create an ASP.NET Core Web App using Visual Studio 2022 by following the instructions [here](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=visualstudio).
 
-## ASP.NET Core DOCX Editor NuGet package installation
+## Install ASP.NET Core DOCX Editor NuGet package
 
 To add the ASP.NET Core DOCX Editor component, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search for and install:
 
@@ -50,7 +49,7 @@ cd WebApp
 {% endhighlight %}
 {% endtabs %}
 
-## ASP.NET Core DOCX Editor NuGet package installation
+## Install ASP.NET Core DOCX Editor NuGet package
 
 Install the Syncfusion&reg; ASP.NET Core component NuGet packages within the project.
 
@@ -85,7 +84,14 @@ Open `~/Pages/_ViewImports.cshtml` file and import the `Syncfusion.EJ2` TagHelpe
 {% endhighlight %}
 {% endtabs %}
 
-## Add Themes and Script References
+## Register a Syncfusion License Key
+
+Before initializing the ASP.NET Core DOCX Editor control, generate a Syncfusion license key and register it in your application.
+
+- [Generate a Syncfusion License Key](https://help.syncfusion.com/document-processing/licensing/how-to-generate)
+- [Register a Syncfusion License Key in an ASP.NET Core Application](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#aspnet-core)
+
+## Add stylesheet and script resources
 
 Reference the Syncfusion theme and JavaScript library using the CDN inside the `<head>` of `~/Pages/Shared/_Layout.cshtml`. The stylesheet provides styling for all Syncfusion components including the DOCX Editor, and the script provides the client-side functionality.
 
@@ -99,6 +105,8 @@ Reference the Syncfusion theme and JavaScript library using the CDN inside the `
 
 {% endhighlight %}
 {% endtabs %}
+
+To use a different theme, replace `fluent.css` with the theme of your choice (for example, `tailwind3.css`, `bootstrap5.css`, etc.) in the above code.
 
 N> Refer the [Themes topic](https://ej2.syncfusion.com/aspnetcore/documentation/appearance/theme) to learn the different ways to include Syncfusion styles (using [CDN](https://ej2.syncfusion.com/aspnetcore/documentation/common/adding-script-references#cdn-reference), [NPM package](https://ej2.syncfusion.com/aspnetcore/documentation/common/adding-script-references#node-package-manager-npm), or [CRG](https://ej2.syncfusion.com/aspnetcore/documentation/common/custom-resource-generator)) and ensure the expected appearance of Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core controls, and check the [Adding Script Reference](https://ej2.syncfusion.com/aspnetcore/documentation/common/adding-script-references) documentation to understand the various approaches for adding required script references in your ASP.NET Core application.
 
@@ -115,9 +123,9 @@ Also, register the script manager `<ejs-scripts>` at the end of `<body>` in the 
 {% endhighlight %}
 {% endtabs %}
 
-## Add the Document Editor Component
+## Add the DOCX Editor component
 
-Add the Document Editor component in `~/Pages/Index.cshtml` page.
+Add the DOCX Editor component in `~/Pages/Index.cshtml` page.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/Pages/Index.cshtml" %}
@@ -135,7 +143,20 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-DOCX-Editor-Examples/tree/master/getting-started).
 
-## Online Demo
+
+## Troubleshooting
+
+If the DOCX Editor control does not render as expected, use the following checklist to resolve the most common setup and configuration issues.
+
+**1. Control not rendering (blank area where the DOCX Editor should appear)**
+- Ensure the `<ejs-scripts>` tag is included at the end of `<body>` section in `~/Pages/Shared/_Layout.cshtml` to initialize client-side scripts.
+
+**2. Tag helper not recognized**
+- Ensure `@addTagHelper *, Syncfusion.EJ2` is included in `~/Pages/_ViewImports.cshtml`.
+- Rebuild the project after installing the `Syncfusion.EJ2.AspNet.Core` NuGet package.
+
+
+## Online demo
 Explore the live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/default#/tailwind3) to see how to create, edit, and print Word documents using the ASP.NET Core DOCX Editor.
 
 N> Looking for the full ASP.NET Core DOCX Editor component overview, features, pricing, and documentation? Visit the [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) page.
