@@ -66,7 +66,7 @@ npm run build
 
 This command compiles your TypeScript files and prepares the application for development or production.
 
-## Register a Syncfusion License Key
+### Register a Syncfusion License Key
 
 Before initializing the Javascript (ES6) DOCX Editor control, generate a Syncfusion license key and register it in your application.
 

@@ -12,11 +12,10 @@ domainurl: ##DomainURL##
 
 [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in an Angular application. 
 
-## Steps to create an Angular DOCX Editor
-
 ### Prerequisites
 
-[System requirements for DOCX Editor](https://ej2.syncfusion.com/angular/documentation/system-requirement)
+* [System requirements for DOCX Editor](https://ej2.syncfusion.com/angular/documentation/system-requirement)
+* [Browser Compatibility](https://ej2.syncfusion.com/angular/documentation/browser)
 
 ### Setup Angular environment
 
@@ -82,7 +81,14 @@ To install the DOCX Editor component, use the following command:
 npm install @syncfusion/ej2-angular-documenteditor --save
 ```
 
-### Add CSS reference
+### Register a Syncfusion License Key
+
+Before initializing the Angular DOCX Editor control, generate a Syncfusion license key and register it in your application.
+
+- [Generate a Syncfusion License Key](https://ej2.syncfusion.com/angular/documentation/licensing/license-key-generation)
+- [Register a Syncfusion License Key in Angular](https://ej2.syncfusion.com/angular/documentation/licensing/license-key-registration)
+
+### Import the required CSS styles
 
 The following CSS files are available in the `node_modules/@syncfusion` package folder. Reference these styles in the `src/styles.css` file using the following code:
 
@@ -102,7 +108,7 @@ The following CSS files are available in the `node_modules/@syncfusion` package 
 {% endhighlight %}
 {% endtabs %}
 
-### Add the DOCX Editor component
+### Initialize the DOCX Editor
 
 Modify `src/app/app.ts` to render the DOCX Editor component by adding the Angular DOCX Editor selector in its template section.
 
@@ -159,9 +165,9 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Angular-DOCX-Ed
 
 Explore how to create, edit, and print Word documents in the Angular DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/default).
 
-## Video tutorial
+## Getting Started Video
 
-To get started quickly with the DOCX Editor component using the Angular CLI, you can check the video below.
+Follow this quick walkthrough to install, configure, and start using the Angular DOCX Editor in your application.
 
 {% youtube "https://www.youtube.com/watch?v=UHdjjR_BbQY" %}
 

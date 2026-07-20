@@ -10,8 +10,6 @@ documentation: ug
 
 [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a Blazor WebAssembly (WASM) application.
 
-## Steps to create a Blazor Web App DOCX Editor
-
 ### Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
@@ -137,7 +135,7 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 {% endtabs %}
 
-## Register a Syncfusion License Key
+### Register a Syncfusion License Key
 
 Before initializing the Blazor DOCX Editor control, generate a Syncfusion license key and register it in your application.
 
