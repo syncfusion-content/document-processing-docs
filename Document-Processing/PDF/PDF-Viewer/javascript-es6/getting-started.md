@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Setup for Local Development – TypeScript PDF Viewer | Syncfusion
+title: Getting Started with the TypeScript PDF Viewer | Syncfusion
 description: Learn how to set up and run the Syncfusion TypeScript PDF Viewer in standalone mode using Essential JS 2.
 platform: document-processing
 control: PDF Viewer
@@ -26,7 +26,7 @@ Create a simple TypeScript application using the Essential® JS 2 [quickstart](h
 
 > This application is integrated with the `webpack.config.js` configuration and uses the latest version of the [webpack-cli](https://webpack.js.org/api/cli/#commands). For more information about webpack and its features, refer to the [webpack documentation](https://webpack.js.org/guides/getting-started/).
 
-**Step 1:** Open the command prompt from the required directory and clone the quickstart project from GitHub.
+**Step 1:** Open a terminal (command prompt on Windows, or Terminal on macOS/Linux) in the directory where you want the project to live, and clone the quickstart project from GitHub.
 
 {% tabs %}
 {% highlight bash tabtitle="CLI" %}
@@ -42,7 +42,7 @@ cd ej2-quickstart
 {% endhighlight %}
 {% endtabs %}
 
-**Step 3:** By default, the `ej2-quickstart` repository is preconfigured with the [@syncfusion/ej2](https://www.npmjs.com/package/@syncfusion/ej2) package in `~/package.json`. This package installs all Syncfusion Essential JS 2 components, including the PDF Viewer and other EJ2 controls.
+**Step 3:** By default, the `ej2-quickstart` repository is preconfigured with the [@syncfusion/ej2](https://www.npmjs.com/package/@syncfusion/ej2) package in `./package.json`. This package installs all Syncfusion Essential JS 2 components, including the PDF Viewer and other EJ2 controls.
 
 To install **only the PDF Viewer component**, replace the dependencies with [@syncfusion/ej2-pdfviewer](https://www.npmjs.com/package/@syncfusion/ej2-pdfviewer) in `package.json`:
 
@@ -89,28 +89,28 @@ Import the PDF Viewer and inject only the required modules. Update `src/app.ts` 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
 
-import { PdfViewer, Toolbar, Magnification, Navigation, 
+import { PdfViewer, Toolbar, Magnification, Navigation,
          Annotation, LinkAnnotation, ThumbnailView,
          BookmarkView, TextSelection, TextSearch,
          FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
 
-   PdfViewer.Inject(Toolbar, Magnification, Navigation,
-                  Annotation, LinkAnnotation, ThumbnailView,
-                  BookmarkView, TextSelection, TextSearch,
-                  FormFields, FormDesigner);
+PdfViewer.Inject(Toolbar, Magnification, Navigation,
+                 Annotation, LinkAnnotation, ThumbnailView,
+                 BookmarkView, TextSelection, TextSearch,
+                 FormFields, FormDesigner);
 
-    let pdfviewer: PdfViewer = new PdfViewer();
-    // Specifies the URL or path of the PDF document to be loaded.
-    // You can provide a remote URL or a local PDF file path.
-    pdfviewer.documentPath =
-    'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+let pdfviewer: PdfViewer = new PdfViewer();
 
-    // Specifies the URL of the PDFium resource files required by the PDF Viewer.
-    // This should point to the ej2-pdfviewer-lib folder, either from a CDN
-    // or a locally hosted location.
-    pdfviewer.resourceUrl =
-    'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
-   pdfviewer.appendTo('#PdfViewer');
+// Specifies the URL or path of the PDF document to be loaded.
+// You can provide a remote URL or a local PDF file path.
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+
+// Specifies the URL of the PDFium resource files required by the PDF Viewer.
+// This should point to the ej2-pdfviewer-lib folder, either from a CDN
+// or a locally hosted location.
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+
+pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
 {% endtabs %}
