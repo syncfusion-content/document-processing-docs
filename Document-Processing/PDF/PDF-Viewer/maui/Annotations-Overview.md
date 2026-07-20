@@ -10,7 +10,7 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 # Annotations in .NET MAUI PDF Viewer (SfPdfViewer)
 
-The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to add, remove, and modify annotations in PDF documents. Annotations are useful for marking up document content — for example, highlighting important text, drawing shapes to indicate areas of interest, adding sticky notes for reviewer comments, or stamping a document with a status indicator.
+The [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to add, remove, and modify annotations in PDF documents. Annotations are useful for marking up document content — for example, highlighting important text, drawing shapes to indicate areas of interest, adding sticky notes for reviewer comments, or stamping a document with a status indicator.
 
 This section covers the annotation types and common functionalities available in the PDF Viewer. For detailed instructions on each annotation type, refer to the individual sections listed below.
 
@@ -20,7 +20,7 @@ To learn how to work with annotations, you can also check out our video tutorial
 
 ## Supported annotation types
 
-The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) supports the following annotation types, grouped by category.
+The [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) supports the following annotation types, grouped by category.
 
 ### Text markup annotations
 

@@ -14,7 +14,7 @@ PDF documents can include custom bookmarks that allow the user to bookmark pages
 
 ## Showing or hiding the custom bookmarks pane
 
-The built-in custom bookmark view of the PDF Viewer displays the custom bookmarks and can be shown or hidden using the [IsOutlineViewVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_IsOutlineViewVisible) property. The default value of this property is `false`.
+The built-in custom bookmark view of the PDF Viewer displays the custom bookmarks and can be shown or hidden using the [IsOutlineViewVisible](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_IsOutlineViewVisible) property. The default value of this property is `false`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -31,7 +31,7 @@ pdfViewer.IsOutlineViewVisible = true;
 
 ## Accessing the Custom Bookmarks Collection
 
-To retrieve the list of custom bookmarks in a PDF document, use the [CustomBookmarks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_CustomBookmarks) property.
+To retrieve the list of custom bookmarks in a PDF document, use the [CustomBookmarks](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_CustomBookmarks) property.
 
 {% tabs %}
 {% highlight c# %}
@@ -43,7 +43,7 @@ var customBookmarks = pdfViewer.CustomBookmarks;
 
 ## Add, rename, and remove custom bookmarks
 
-You can manage custom bookmarks in the PDF viewer using the [CustomBookmarks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_CustomBookmarks) collection. This property allows you to add, rename, or remove bookmarks that appear in the viewer's bookmark pane.
+You can manage custom bookmarks in the PDF viewer using the [CustomBookmarks](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_CustomBookmarks) collection. This property allows you to add, rename, or remove bookmarks that appear in the viewer's bookmark pane.
 
 ### Add custom bookmarks
 
@@ -57,7 +57,7 @@ Use the floating action button in the bookmark pane to add a custom bookmark.
 
 #### Add Programmatically
 
-Create a new instance of the Bookmark class and add it to the [CustomBookmarks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_CustomBookmarks) collection:
+Create a new instance of the Bookmark class and add it to the [CustomBookmarks](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_CustomBookmarks) collection:
 
 {% tabs %}
 {% highlight c# %}
@@ -75,7 +75,7 @@ pdfViewer.CustomBookmarks.Add(newBookmark);
 
 #### Track Bookmark Additions
 
-To track when a custom bookmark is added, subscribe to the [CollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1.collectionchanged?view=net-9.0) event of the [CustomBookmarks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_CustomBookmarks) collection inside the [DocumentLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoaded) event handler. 
+To track when a custom bookmark is added, subscribe to the [CollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1.collectionchanged?view=net-9.0) event of the [CustomBookmarks](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_CustomBookmarks) collection inside the [DocumentLoaded](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoaded) event handler. 
 Within the [CollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1.collectionchanged?view=net-9.0) event handler, use the [NotifyCollectionChangedAction](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.notifycollectionchangedaction?view=net-9.0) enumeration to determine the type of change. If the action is `Add`, iterate through `e.NewItems` to access the newly added bookmarks and perform any necessary tracking or logging.
 
 {% tabs %}
@@ -123,7 +123,7 @@ To rename a custom bookmark from the UI:
 
 #### Rename Programmatically
 
-To rename an existing custom bookmark, retrieve it from the [CustomBookmarks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_CustomBookmarks) collection and update its Name property:
+To rename an existing custom bookmark, retrieve it from the [CustomBookmarks](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_CustomBookmarks) collection and update its Name property:
 
 {% tabs %}
 {% highlight c# %}
@@ -177,7 +177,7 @@ private void Bookmark_PropertyChanged(object? sender, PropertyChangedEventArgs e
 
 ##### For Existing Bookmarks
 
-To track rename changes for bookmarks that already exist when the document is loaded, wire the [PropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged.propertychanged?view=net-9.0#system-componentmodel-inotifypropertychanged-propertychanged) event for each bookmark in the [DocumentLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoaded) event handler:
+To track rename changes for bookmarks that already exist when the document is loaded, wire the [PropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged.propertychanged?view=net-9.0#system-componentmodel-inotifypropertychanged-propertychanged) event for each bookmark in the [DocumentLoaded](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoaded) event handler:
 
 {% tabs %}
 {% highlight c# %}
@@ -220,7 +220,7 @@ To remove a custom bookmark from the UI:
 
 #### Remove Programmatically
 
-To remove a custom bookmark programmatically, retrieve it from the [CustomBookmarks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_CustomBookmarks) collection and remove it:
+To remove a custom bookmark programmatically, retrieve it from the [CustomBookmarks](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_CustomBookmarks) collection and remove it:
 
 {% tabs %}
 {% highlight c# %}
@@ -236,7 +236,7 @@ if (bookmarkToRemove != null)
 
 #### Track Bookmark Removal
 
-To track when a custom bookmark is removed, handle the [CollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1.collectionchanged?view=net-9.0) event of the [CustomBookmarks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_CustomBookmarks) collection. Use the [NotifyCollectionChangedAction](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.notifycollectionchangedaction?view=net-9.0) enum to check if the action is `Remove`. If so, iterate through `e.OldItems` to access the removed bookmarks:
+To track when a custom bookmark is removed, handle the [CollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1.collectionchanged?view=net-9.0) event of the [CustomBookmarks](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_CustomBookmarks) collection. Use the [NotifyCollectionChangedAction](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.notifycollectionchangedaction?view=net-9.0) enum to check if the action is `Remove`. If so, iterate through `e.OldItems` to access the removed bookmarks:
 
 {% tabs %}
 {% highlight c# %}
@@ -265,7 +265,7 @@ You can navigate to custom bookmarks either through the UI or programmatically u
 ### Navigate using UI
 
 To navigate using the UI:
-1. Ensure the outline view is visible by setting the [IsOutlineViewVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_IsOutlineViewVisible) property to `true`.
+1. Ensure the outline view is visible by setting the [IsOutlineViewVisible](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_IsOutlineViewVisible) property to `true`.
 2. Once the outline view is displayed, tap on any custom bookmark to navigate to the corresponding page. 
 
 ![Custom bookmark in .NET MAUI PDF Viewer](Images\custom-bookmark.png)
@@ -274,7 +274,7 @@ N>A custom bookmark currently stores only the target page information. It does n
 
 ### Navigate programmatically
 
-To navigate to a custom bookmark programmatically, use the [GoToBookmark](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_GoToBookmark_Syncfusion_Maui_PdfViewer_Bookmark_) method. This method accepts a `Bookmark` object and navigates to the page associated with it.
+To navigate to a custom bookmark programmatically, use the [GoToBookmark](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_GoToBookmark_Syncfusion_Maui_PdfViewer_Bookmark_) method. This method accepts a `Bookmark` object and navigates to the page associated with it.
 
 {% tabs %}
 {% highlight c# %}

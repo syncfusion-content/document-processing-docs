@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Server-Backed JavaScript PDF Viewer | Syncfusion
-description: Learn how to set up and use the Syncfusion JavaScript PDF Viewer in server-backed mode using CDN resources, injecting modules and web service configuration.
+description: Learn how to set up and use the Syncfusion JavaScript PDF Viewer in server-backed mode using CDN resources and web service configuration.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 This section explains how to create the PDF Viewer component and configure its features in JavaScript (global script) using CDN-hosted resources in **server-backed mode**.
 
-N> Starting with the 2026 Vol 2 main release (June 2026), no new features will be added to the Server PDF Viewer, as almost all of the PDF Viewer functionalities are now available in the Standalone PDF Viewer. If you are currently using the server-backed PDF Viewer, please refer to the [migration documentation](./server-to-standalone) to transition to the Standalone PDF Viewer.
+N> Starting with the 2026 Vol 2 main release (July 6, 2026), no new features will be added to the Server PDF Viewer. This is because almost all PDF Viewer functionalities are now available in the Standalone PDF Viewer. If you are currently using the server-backed PDF Viewer, please refer to the [migration documentation](./server-to-standalone) to transition to the Standalone PDF Viewer.
 
 > Ensure that the same version is used for all script and style references to avoid compatibility issues.
 
@@ -64,7 +64,7 @@ Add a container element for the PDF Viewer control in the `index.html` file and 
 {% endhighlight %}
 {% endtabs %}
 
-Now, initialize the PDF Viewer component in the `index.js` file:
+Now, initialize the Syncfusion® PDF Viewer component in the `index.js` file:
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -72,6 +72,7 @@ Now, initialize the PDF Viewer component in the `index.js` file:
 // Initialize PDF Viewer component
 var pdfviewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    // Demo service URL for evaluation only. For production, host your own web service.
     serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
 });
 
@@ -80,6 +81,8 @@ pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
 {% endtabs %}
+
+The `documentPath` property sets the URL of the PDF file to load in the viewer and accepts HTTP/HTTPS URLs or relative paths. The `serviceUrl` property must point to a PDF Viewer web service that exposes the required APIs; the web service and the client page must be served from origins that satisfy CORS requirements, and the service must be reachable from the client.
 
 To configure PDF Viewer with local resources for script and style references, and the `documentPath` property, refer to the instructions [here](./how-to/use-local-script-and-style-references).
 
@@ -137,7 +140,7 @@ document.getElementById('load').addEventListener('click', function () {
 
 ## Run a locally hosted PDF Viewer web service
 
-1. Download the sample from the [Web service sample in GitHub](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices).
+1. Download or clone the sample from the [Web service sample in GitHub](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) (for example, `git clone https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices.git`).
 2. Navigate to the `ASP.NET Core` folder and open it in the command prompt.
 3. Navigate to the appropriate subfolder based on your .NET version:
 
@@ -169,7 +172,7 @@ dotnet run
 {% tabs %}
 {% highlight bash tabtitle="CLI" %}
 
-   var pdfviewer = new ej.pdfviewer.PdfViewer({
+   var pdfViewer = new ej.pdfviewer.PdfViewer({
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
       serviceUrl: 'https://localhost:7255/pdfviewer'
    });

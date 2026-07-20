@@ -112,7 +112,7 @@ Then import the stylesheet according to your starter:
 
 create-react-router (`app/root.tsx`):
 
-```tsx
+```ts
 // app/root.tsx
 import './app.css';
 ```
