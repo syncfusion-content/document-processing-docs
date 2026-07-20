@@ -86,7 +86,7 @@ Import the Syncfusion® component themes in the `app.css` file as shown below:
 @import '../node_modules/@syncfusion/ej2-react-spreadsheet/styles/tailwind3.css';
 ```
 
-> The example uses the **Tailwind 3** theme. To use a different built-in theme, replace the `tailwind3.css` references with the theme of your choice (for example, `bootstrap5.css`, `fluent2.css`, etc.) in all `@import` statements. Refer to the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) section.
+> **Note:** This example uses the `Tailwind 3` theme. To use a different built-in theme, replace the `tailwind3.css` references with the corresponding theme stylesheets. Refer to the [Themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme) for information about the available themes and the different ways to include theme styles in a React application.
 
 ## Configure Server-Side Rendering (SSR)
 
