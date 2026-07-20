@@ -52,9 +52,6 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> EJ2 library global scripts 
   Style: https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/styles/tailwind3.css
   ```
 
-**Version Information:**
-To find the latest version, visit [Syncfusion CDN](https://cdn.syncfusion.com/ej2/).
-
 **Minimum Required References:**
 To create a basic DOCX Editor, you must include:
 - `ej2-base.min.js` and `ej2-base.css` (required foundation)

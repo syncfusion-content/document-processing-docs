@@ -19,7 +19,7 @@ This section explains how to include the DOCX Editor component in a Blazor WebAs
 ### Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-* Browser compatibility: Chrome (latest), Firefox (latest), Safari (latest), Edge (latest)
+* [Browser compatibility for Blazor components](https://blazor.syncfusion.com/documentation/browser-support)
 * [Syncfusion license registration](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application) (required to use DOCX Editor in production; use evaluation mode for development)
 * For local development: Use Visual Studio or Visual Studio Code with the .NET SDK to run the Blazor application (Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> to launch with debugging)
 
@@ -177,15 +177,6 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DocumentEditor).
 
-### Next Steps
-
-You now have a basic DOCX Editor running in your Blazor WASM application. To extend its functionality, explore the following:
-
-- **Load Documents** — Learn how to [open existing Word documents](https://help.syncfusion.com/document-processing/word/word-processor/blazor/opening-a-document) in the editor
-- **Save Documents** — Implement [document saving functionality](https://help.syncfusion.com/document-processing/word/word-processor/blazor/saving-document) to persist changes
-- **Track Changes** — Enable [track changes and revisions](https://help.syncfusion.com/document-processing/word/word-processor/blazor/track-changes) for collaborative editing
-- **Available Features** — Explore the [complete DOCX Editor feature set](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor)
-
 ## Online Demo
 
 Explore how to create, edit, and print Word documents using the Blazor DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-wasm/document-editor/default-functionalities).
@@ -197,5 +188,3 @@ N> Looking for the full Blazor DOCX Editor component overview, features, pricing
 - [Getting started in Blazor Web app](https://help.syncfusion.com/document-processing/word/word-processor/blazor/getting-started/web-app)
 - [Open a document](https://help.syncfusion.com/document-processing/word/word-processor/blazor/opening-a-document)
 - [Save a document](https://help.syncfusion.com/document-processing/word/word-processor/blazor/saving-document)
-- [Track changes](https://help.syncfusion.com/document-processing/word/word-processor/blazor/track-changes)
-- [Blazor DOCX Editor Features](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor)

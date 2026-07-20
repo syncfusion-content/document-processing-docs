@@ -54,21 +54,6 @@ Add the **Syncfusion.EJ2** namespace reference to the `<namespaces>` section in 
 {% endhighlight %}
 {% endtabs %}
 
-## Configure Service URL (Optional)
-
-The DOCX Editor requires back end services for advanced features (spell checking, collaborative editing, importing from URL). The default demo service is available at `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/`.
-
-For production deployments, [host your own service](./how-to-host-the-spell-check-service) to avoid latency and ensure data privacy. Configure the service URL in your component:
-
-```csharp
-@Html.EJS().DocumentEditorContainer("container")
-    .Height("620px")
-    .ServiceUrl("https://your-service-url/api/documenteditor/")
-    .Render()
-```
-
-N> The demo service URL is for evaluation only. For production applications, you must host your own service instance.
-
 ## Add Themes and Script References
 
 To render Syncfusion ASP.NET MVC controls with the expected appearance, reference the theme stylesheet and the control scripts via CDN inside the `<head>` of the `~/Views/Shared/_Layout.cshtml` file as follows,
