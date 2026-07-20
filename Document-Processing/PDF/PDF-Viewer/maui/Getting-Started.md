@@ -564,4 +564,3 @@ Now that the PDF Viewer is running, you can explore the following features:
 
 * For migration from Xamarin to .NET MAUI, please follow the [Migration Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/migration).
 
-N> Looking for the full .NET MAUI PDF Viewer component overview, features, pricing, and documentation? Visit the [.NET MAUI PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/net-maui-pdf-viewer) page

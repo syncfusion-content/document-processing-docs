@@ -213,5 +213,3 @@ After the application starts, open the URL shown in the terminal (typically `htt
 - [Open PDF Files](./open-pdf-files)
 - [Save PDF Files](./save-pdf-files)
 
-N> Looking for the full Vue PDF Viewer component overview, features, pricing, and documentation? Visit the [Vue PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/vue-pdf-viewer) page.
-

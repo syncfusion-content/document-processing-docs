@@ -163,8 +163,9 @@ N> For hosting the web service on Linux, ensure you include the [SkiaSharp.Nativ
 
 | **Amazon Web Services (AWS)** |**NuGet package name** |
 | --- | --- |
-| AWS Lambda|[SkiaSharp.NativeAssets.Linux 3.119.1](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)|
-| AWS Elastic Beanstalk |[SkiaSharp.NativeAssets.Linux.NoDependencies 3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)|
+| AWS Lambda|[SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)|
+| AWS Elastic Beanstalk |[SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)|
+
 
 ## See also
 

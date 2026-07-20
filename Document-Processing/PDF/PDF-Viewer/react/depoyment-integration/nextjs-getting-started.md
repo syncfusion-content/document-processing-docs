@@ -198,7 +198,6 @@ To learn more about the PDF Viewer component, see the [documentation](https://he
 
 N> [View the Next.js PDF Viewer sample in the GitHub repository](https://github.com/SyncfusionExamples/syncfusion-react-pdfviewer-component-in-nextjs)
 
-N> Looking for the full React PDF Viewer component overview, features, pricing, and documentation? Visit the [React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/depoyment-integration/nextjs-getting-started) page.
 
 **See also**
 

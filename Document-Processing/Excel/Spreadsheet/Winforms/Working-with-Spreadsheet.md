@@ -354,5 +354,3 @@ void Spreadsheet_PropertyChanged(object sender, System.ComponentModel.PropertyCh
 {% endhighlight %}
 {% endtabs %}
 
-
-N> Looking for the full Winforms Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [Winforms Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/winforms-spreadsheet-editor) page.
