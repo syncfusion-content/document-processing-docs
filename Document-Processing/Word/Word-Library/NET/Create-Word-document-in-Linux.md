@@ -58,24 +58,12 @@ Step 3: Add the following Namespaces in Program.cs file.
 {% highlight c# tabtitle="C#" %}
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
-using Syncfusion.Drawing;
 using System.IO;
 {% endhighlight %}
 
 {% endtabs %}
 
 Step 4: Add the following code snippet in Program.cs file. If you are using a licensed or trial Syncfusion package, register the license key at the start of the program:
-
-{% tabs %}
-
-{% highlight c# tabtitle="C#" %}
-// Register Syncfusion license (required from v16.2.0.x).
-Syncfusion.Licensing.LicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
-{% endhighlight %}
-
-{% endtabs %}
-
-Then add the following code to create the Word document.
 
 {% tabs %}
 
@@ -382,24 +370,12 @@ Step 3: Add the following Namespaces in Program.cs file.
 {% highlight c# tabtitle="C#" %}
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
-using Syncfusion.Drawing;
 using System.IO;
 {% endhighlight %}
 
 {% endtabs %}
 
 Step 4: Add the following code snippet in Program.cs file. If you are using a licensed or trial Syncfusion package, register the license key at the start of the program:
-
-{% tabs %}
-
-{% highlight c# tabtitle="C#" %}
-// Register Syncfusion license (required from v16.2.0.x).
-Syncfusion.Licensing.LicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
-{% endhighlight %}
-
-{% endtabs %}
-
-Then add the following code to create the Word document.
 
 {% tabs %}
 

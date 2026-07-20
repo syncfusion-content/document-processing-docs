@@ -46,8 +46,8 @@ Include the following namespaces in the file:
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
-@page "/Markdown"
 @rendermode InteractiveServer
+@page "/Markdown"
 @using System.IO;
 @using Create_Markdown_Document;
 @inject Create_Markdown_Document.Data.MarkdownService service
@@ -291,15 +291,13 @@ Select "Blazor WebAssembly Standalone App" from the template and click **Next**.
 
 ![Create Blazor WebAssembly Standalone application in Visual Studio](Blazor_Images/Blazor_WASM_Standalone.png)
 
-*   Name the project and click **Create**.
-
 Step 2: Install the `Syncfusion.Markdown` NuGet package.
 
 To **create a Markdown document in a Blazor WASM Standalone app**, install [Syncfusion.Markdown](https://www.nuget.org/packages/Syncfusion.Markdown) into the Blazor project.
 
 ![Install Syncfusion.Markdown NuGet Package](ASP-NET-Core_images/Install_Nuget.png)
 
-N> If you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or the NuGet feed (v34.x.x and later), install the `Syncfusion.Licensing` NuGet package and register the license key in `Program.cs` by calling `Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")` before any Syncfusion type is used. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
+N> Starting with v34.x.x, if Syncfusion<sup>&reg;</sup> assemblies are referenced from trial setup or from the NuGet feed, the "Syncfusion.Licensing" assembly reference must also be added and a license key included in projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
 
 Step 3: Create a Razor file named `Markdown.razor` in the `Pages` folder.
 
@@ -340,7 +338,7 @@ Create a new `async` method named `CreateMarkdown` and include the following cod
 
 {% highlight c# tabtitle="C#" %}
 
-@code {
+@functions {
     async void CreateMarkdown()
     {
         // Creates a new instance of MarkdownDocument.
@@ -468,7 +466,7 @@ Add the following JavaScript function in the `index.html` file present under `ww
 
 Step 8: Add navigation link.
 
-Add the following code snippet to the `Shared/NavMenu.razor` file.
+Add the following code snippet to the `Layout/NavMenu.razor` file.
 
 {% tabs %}
 

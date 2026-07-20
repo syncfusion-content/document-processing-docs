@@ -83,13 +83,10 @@ Step 7: Add a new button in the Index.cshtml as shown below.
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Add a new action method **CreateDocument** in HomeController.cs, register the Syncfusion license key, and include the below code snippet to **create Word document** and download it. Ensure the `Data/` folder (containing `AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, and `Road-550-W.jpg`) is copied to the project's output directory so the image paths resolve at runtime.
+Step 8: Add a new action method **CreateDocument** in HomeController.cs and include the below code snippet to **create Word document** and download it.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
-
-//Register the Syncfusion license key (replace the placeholder with your own key).
-Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
 
 //Create a new document.
 using (WordDocument document = new WordDocument())
@@ -462,8 +459,6 @@ By executing the program, you will get the **Word document** as follows. The out
 
 ![Create Word document in Google App Engine](ASP-NET-Core_images/GettingStartedOutput.jpg)
 
-## See Also
-
-Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.
+Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page. 
 
 An online sample link to [create a Word document](https://document.syncfusion.com/demos/word/helloworld#/tailwind) in ASP.NET Core.  

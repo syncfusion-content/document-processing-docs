@@ -897,7 +897,7 @@ Step 2: Install [Syncfusion.DocIO.WinForms](https://www.nuget.org/packages/Syncf
 
 ![Install Syncfusion.DocIO.WinForms NuGet package](Console-Images/NET-FrameWork/Nuget-Package-NET-FrameWork.png)
 
-N> 1. The [Syncfusion.DocIO.WinForms](https://www.nuget.org/packages/Syncfusion.DocIO.WinForms/) package contains platform-independent .NET Framework assemblies (compatible with versions 4.0, 4.5, 4.5.1, 4.6, 4.6.1, 4.7, and 4.8) for the Word library. Although the package name ends with "WinForms" (because it is a dependency for Syncfusion<sup>&reg;</sup> Windows Forms GUI controls), it does not include any Windows Forms-related references or code. Therefore, we recommend using this package for .NET Framework Console applications.
+N> 1. The [Syncfusion.DocIO.WinForms](https://www.nuget.org/packages/Syncfusion.DocIO.WinForms/) is a dependency for Syncfusion<sup>&reg;</sup> Windows Forms GUI controls and is named with the suffix "WinForms". It contains platform-independent .NET Framework assemblies (compatible with versions 4.0, 4.5, 4.5.1, and 4.6) for the Word library and does not include any Windows Forms-related references or code. Therefore, we recommend using this package for .NET Framework Console applications.
 N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 3: Include the following namespaces in **Program.cs** file.
@@ -907,7 +907,6 @@ Step 3: Include the following namespaces in **Program.cs** file.
 
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
-using System.Drawing;
 using System.Windows.Forms;
 
 {% endhighlight %}
@@ -1191,7 +1190,6 @@ Step 3: Include the following namespaces in **Program.cs** file.
 
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
-using System.Drawing;
 using System.Windows.Forms;
 
 {% endhighlight %}

@@ -27,7 +27,7 @@ Step 1: Create a new C# .NET MAUI app. Select **.NET MAUI App** from the templat
 
 ![Create the MAUI app in Visual Studio](MAUI_Images/Create_Project.png)
 
-Step 2: Enter the project name, select the target framework (e.g., .NET 8.0), and click **Create**.
+Step 2: Enter the project name, select the target framework (e.g., .NET 8.0 and later), and click **Create**.
 
 ![Create a project name for your new project](MAUI_Images/Configure.png)
 
@@ -70,7 +70,6 @@ Step 5: Include the following namespaces in the **MainPage.xaml.cs** file.
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-using Syncfusion.Drawing;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 using System.IO;
@@ -318,8 +317,6 @@ Step 7: Add the following images as **EmbeddedResource** to a `Resources/DocIO` 
 * `Mountain-300.jpg`
 * `Road-550-W.jpg`
 
-For more details on storing and retrieving embedded resources in .NET MAUI, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/storage/file-system?view=net-maui-9.0#load-a-file-embedded-in-the-app-bundle).
-
 Step 8: Add the platform-specific helper files listed in the [Helper files for .NET MAUI](#helper-files-for-net-maui) section to your project. These files are required for the `SaveService.SaveAndView` method used in the code to compile and run.
 
 Step 9: Run the application.
@@ -474,7 +471,6 @@ Step 4: Include the following namespaces in the **MainPage.xaml.cs** file.
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-using Syncfusion.Drawing;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 using System.IO;
@@ -886,7 +882,6 @@ Step 4: Include the following namespaces in the **MainPage.xaml.cs** file.
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-using Syncfusion.Drawing;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 using System.IO;

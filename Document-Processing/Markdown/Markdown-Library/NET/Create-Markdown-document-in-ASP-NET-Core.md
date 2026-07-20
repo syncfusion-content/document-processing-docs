@@ -17,11 +17,11 @@ Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> Markdown is a `.NET Core Ma
 
 ## Steps to create Markdown document programmatically:
 
-Step 1: Create a new ASP.NET Core Web application (Model-View-Controller) project. Select **.NET 8.0 (Long Term Support)** as the target framework and name the project (for example, `MarkdownDemo`).
+Step 1: Create a new ASP.NET Core Web application (Model-View-Controller) project. Select latest as the target framework and name the project (for example, `MarkdownDemo`).
 
 ![Create ASP.NET Core Web application in Visual Studio](ASP-NET-Core_images/CreateProjectforConversion.png)
 
-Step 2: Install the [Syncfusion.Markdown](https://www.nuget.org/packages/Syncfusion.Markdown) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/). Install the latest v34.x.x (or later) release of the package.
+Step 2: Install the [Syncfusion.Markdown](https://www.nuget.org/packages/Syncfusion.Markdown) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/). Install the latest release of the package.
 
 ![Install Syncfusion.Markdown NuGet package](ASP-NET-Core_images/Install_Nuget.png)
 
@@ -58,7 +58,7 @@ Step 5: Add a new button in the Index.cshtml as shown below.
 
 {% tabs %}
 
-{% highlight c# tabtitle="Index.cshtml" %}
+{% highlight c# tabtitle="C#" %}
 
 @using (Html.BeginForm("CreateDocument", "Home", FormMethod.Get))
 {

@@ -17,8 +17,7 @@ Before you begin, ensure the following are in place:
 * Install the **AWS Toolkit for Visual Studio** extension. Refer to the [AWS Toolkit installation guide](https://docs.aws.amazon.com/toolkit-for-visual-studio/latest/user-guide/setup-keys.html).
 * An active **AWS account** with permission to create and invoke Lambda functions (IAM role with the `AWSLambdaBasicExecutionRole` managed policy).
 * **AWS access key ID** and **secret access key** for the console client. Refer to [AWS access keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/security-creds-access-keys.html).
-* A supported .NET target framework: **.NET Core 3.1, .NET 6, or .NET 8**.
-* A valid **Syncfusion license key**. Refer to [registering a Syncfusion license key](https://help.syncfusion.com/document-processing/word/licensing/overview) to generate one.
+* A supported .NET target framework: **.NET 8 or later**.
 
 ## Steps to create Word document in AWS Lambda
 
@@ -28,7 +27,7 @@ Step 1: Create a new **AWS Lambda project** as follows.
 Step 2: Select Blueprint as Empty Function and click **Finish**.
 ![Select Blueprint as Empty Function](AWS_Images/Lambda_Images/Blueprint-AWS-WordtoPDF.png)
 
-Step 3: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/). Also install the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) package if you want to register the Syncfusion license key.
+Step 3: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 
 ![Install Syncfusion.DocIO.Net.Core NuGet package](ASP-NET-Core_images/Install_Nuget.png)
 
@@ -50,28 +49,19 @@ Step 6: Include the following namespaces in **Function.cs** file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-using System;
-using System.IO;
-using Amazon.Lambda.Core;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
-using Syncfusion.Licensing;
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Add the following code snippet in **Function.cs** to **create a Word document**. Register the Syncfusion license key at the start of the handler, and use the `AppContext.BaseDirectory` path to locate the bundled data files inside the Lambda environment.
+step 7: Add the following code snippet in **Function.cs** to **create a Word document**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-public string FunctionHandler(string input, ILambdaContext context)
-{
-    //Register the Syncfusion license key (replace with your own key).
-    SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
-
-    // Creating a new document.
-    using WordDocument document = new WordDocument();
+// Creating a new document.
+WordDocument document = new WordDocument();
 //Adding a new section to the document.
 WSection section = document.AddSection() as WSection;
 //Set Margin of the section
@@ -100,8 +90,7 @@ style.ParagraphFormat.OutlineLevel = OutlineLevel.Level1;
 
 IWParagraph paragraph = section.HeadersFooters.Header.AddParagraph();
 // Gets the image stream.
-string dataPath = Path.Combine(AppContext.BaseDirectory, "Data");
-string filePath = Path.Combine(dataPath, "AdventureCycle.jpg");
+string filePath = Path.GetFullPath(@"Data/AdventureCycle.jpg");
 FileStream imageStream = new FileStream(filePath, FileMode.Open, FileAccess.Read);
 IWPicture picture = paragraph.AppendPicture(imageStream);
 picture.TextWrappingStyle = TextWrappingStyle.InFrontOfText;
@@ -158,7 +147,7 @@ paragraph = table[0, 0].AddParagraph();
 paragraph.ParagraphFormat.AfterSpacing = 0;
 paragraph.BreakCharacterFormat.FontSize = 12f;
 //Appends picture to the paragraph.
-string filePath1 = Path.Combine(dataPath, "Mountain-200.jpg");
+string filePath1 = Path.GetFullPath(@"Data/Mountain-200.jpg");
 FileStream image1 = new FileStream(filePath1, FileMode.Open, FileAccess.Read);
 picture = paragraph.AppendPicture(image1);
 picture.TextWrappingStyle = TextWrappingStyle.TopAndBottom;
@@ -234,7 +223,7 @@ paragraph = table[1, 1].AddParagraph();
 paragraph.ApplyStyle("Heading 1");
 paragraph.ParagraphFormat.LineSpacing = 12f;
 //Appends picture to the paragraph.
-string filePath2 = Path.Combine(dataPath, "Mountain-300.jpg");
+string filePath2 = Path.GetFullPath(@"Data/Mountain-300.jpg");
 FileStream image2 = new FileStream(filePath2, FileMode.Open, FileAccess.Read);
 picture = paragraph.AppendPicture(image2);
 picture.TextWrappingStyle = TextWrappingStyle.TopAndBottom;
@@ -250,7 +239,7 @@ paragraph = table[2, 0].AddParagraph();
 paragraph.ApplyStyle("Heading 1");
 paragraph.ParagraphFormat.LineSpacing = 12f;
 //Appends picture to the paragraph.
-string filePath3 = Path.Combine(dataPath, "Road-550-W.jpg");
+string filePath3 = Path.GetFullPath(@"Data/Road-550-W.jpg");
 FileStream image3 = new FileStream(filePath3, FileMode.Open, FileAccess.Read);
 picture = paragraph.AppendPicture(image3);
 picture.TextWrappingStyle = TextWrappingStyle.TopAndBottom;
@@ -309,7 +298,7 @@ Step 10: In the Advanced Function Details window, specify the **Role Name** as b
 Step 11: After deploying the application, you can see the published Lambda function in **the AWS console**.
 ![After deploying the application](AWS_Images/Lambda_Images/Function-WordtoPDF.png)
 
-Step 12: Set the **Memory size** and **Timeout** to the maximum allowed values in the General configuration of the AWS Lambda function. For DocIO workloads, a memory size of **1024 MB** (or more) and a timeout of at least **30 seconds** are recommended.
+Step 12: Edit Memory size and Timeout as maximum in General configuration of the AWS Lambda function.
 ![AWS Lambda Function](AWS_Images/Lambda_Images/General-configuration-WordtoPDF.png)
 
 ## Steps to invoke the AWS Lambda function from a console app
@@ -331,9 +320,6 @@ Step 3: Include the following namespaces in **Program.cs** file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-using System;
-using System.IO;
-using System.Diagnostics;
 using Amazon;
 using Amazon.Lambda;
 using Amazon.Lambda.Model;
@@ -365,15 +351,12 @@ var stream = new StreamReader(response.Payload);
 JsonReader reader = new JsonTextReader(stream);
 var serializer = new JsonSerializer();
 var responseText = serializer.Deserialize(reader)?.ToString();
-if (string.IsNullOrEmpty(responseText))
-    throw new InvalidOperationException("Empty response from Lambda function.");
 //Convert Base64String into Word document
 byte[] bytes = Convert.FromBase64String(responseText);
 using FileStream fileStream = new FileStream("Sample.docx", FileMode.Create);
 using BinaryWriter writer = new BinaryWriter(fileStream);
 writer.Write(bytes, 0, bytes.Length);
-//Open the generated Word document (UseShellExecute is required on .NET Core / .NET 5+).
-Process.Start(new ProcessStartInfo("Sample.docx") { UseShellExecute = true });
+System.Diagnostics.Process.Start("Sample.docx");
 
 {% endhighlight %}
 {% endtabs %}
@@ -381,8 +364,6 @@ Process.Start(new ProcessStartInfo("Sample.docx") { UseShellExecute = true });
 By executing the program, you will get the **Word document** as follows.
 
 ![Create a Word document in AWS Lambda](ASP-NET-Core_images/GettingStartedOutput.jpg)
-
-## Resources
 
 From GitHub, you can download the [console application](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/AWS/Console_Application) and [AWS Lambda](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/AWS/AWS_Lambda) project.
 

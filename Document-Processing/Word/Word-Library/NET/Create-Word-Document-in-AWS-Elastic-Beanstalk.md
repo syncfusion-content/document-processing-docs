@@ -10,18 +10,12 @@ documentation: UG
 
 Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and convert Word documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in AWS Elastic Beanstalk**.
 
-This sample walks through creating an ASP.NET Core MVC application that generates an Adventure Works Cycles product catalog Word document and publishing it to an AWS Elastic Beanstalk environment.
-
 ## Prerequisites
 
 * An active **AWS account** with permissions to manage Elastic Beanstalk environments and EC2 instances.
 * **AWS Toolkit for Visual Studio** installed and signed in with a configured AWS credentials profile. Refer to the [AWS Toolkit for Visual Studio setup guide](https://docs.aws.amazon.com/toolkit-for-visual-studio/latest/user-guide/welcome.html).
 * **Visual Studio 2022** (or later) with the **ASP.NET and web development** workload.
 * **.NET 8.0** (or later) SDK installed. Target the project against a .NET version that Elastic Beanstalk supports; see the [AWS Elastic Beanstalk platform support matrix](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html).
-
-## Licensing
-
-Starting with v16.2.0.x, you must also add the **Syncfusion.Licensing** assembly reference and include a license key in your projects. Refer to [how to generate a Syncfusion license key](https://help.syncfusion.com/common/essential-studio/licensing/overview) and [how to register the license key in an application](https://help.syncfusion.com/common/essential-studio/licensing/how-to-register-in-an-application) to use our components.
 
 ## Steps to create a Word document in AWS Elastic Beanstalk
 
@@ -33,12 +27,13 @@ Step 2: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/S
 
 ![Install Syncfusion.DocIO.Net.Core NuGet package](ASP-NET-Core_images/Install_Nuget.png)
 
-Step 3: Include the following namespaces in the **HomeController.cs** file. The snippet also uses `System.IO` (for `FileStream`, `MemoryStream`, `Path`) and `Syncfusion.Drawing` (for `Color`/`SizeF` types provided by DocIO, not `System.Drawing`).
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+
+Step 3: Include the following namespaces in the **HomeController.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-using System.IO;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 
@@ -65,28 +60,20 @@ Step 5: Add a new button in the **Index.cshtml** as shown below. Because the act
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Add the image assets used by the document to the **wwwroot/Data** folder. The required files are: `AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, and `Road-550-W.jpg`. You can obtain these images from the [GitHub sample](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/AWS/AWS_Elastic_Beanstalk).
-
-Step 7: Add a new action method **CreateWordDocument** in HomeController.cs and decorate it with `[HttpGet]`. Then include the below code snippet to **create a Word document** and download it.
-
-N>* `MemoryStream` is intentionally **not** disposed inside the action; ASP.NET Core disposes the stream after the response has been flushed. Disposing it before the response completes will cause the download to fail.
-* If an image is not found at runtime (for example, on a Linux Beanstalk deployment with a case-sensitive file system), ensure the file names in `wwwroot/Data` match the casing used in the code.
+Step 6: Add a new action method **CreateWordDocument** in HomeController.cs and include the below code snippet to **create a Word document** and download it.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-[HttpGet]
-public IActionResult CreateWordDocument()
+//Creating a new document.
+using (WordDocument document = new WordDocument())
 {
-    //Creating a new document.
-    using (WordDocument document = new WordDocument())
-    {
-        //Adding a new section to the document.
-        WSection section = document.AddSection() as WSection;
-        //Set Margin of the section.
-        section.PageSetup.Margins.All = 72;
-        //Set page size of the section.
-        section.PageSetup.PageSize = new Syncfusion.Drawing.SizeF(612, 792);
+    //Adding a new section to the document.
+    WSection section = document.AddSection() as WSection;
+    //Set Margin of the section.
+    section.PageSetup.Margins.All = 72;
+    //Set page size of the section.
+    section.PageSetup.PageSize = new Syncfusion.Drawing.SizeF(612, 792);
 
     //Create Paragraph styles.
     WParagraphStyle style = document.AddParagraphStyle("Normal") as WParagraphStyle;
@@ -298,7 +285,7 @@ public IActionResult CreateWordDocument()
     document.Save(stream, FormatType.Docx);
 
     //Download Word document in the browser.
-    return File(stream, "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "Sample.docx");
+    return File(stream, "application/msword", "Sample.docx");
 }
 
 {% endhighlight %}
