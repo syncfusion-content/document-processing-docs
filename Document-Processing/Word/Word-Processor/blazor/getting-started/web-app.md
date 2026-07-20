@@ -106,13 +106,12 @@ Open the **`~/_Imports.razor`** file based on your interactive render mode and a
 | WebAssembly or Auto | `~/_Imports.razor` in the **client project** |
 | Server | `~/_Imports.razor` in the **`Components`** folder |
 
-Add the following import statements to the **`~/_Imports.razor`** file:
+Add the following import statement to the **`~/_Imports.razor`** file:
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
-@using Syncfusion.Blazor.DocumentEditor
 
 {% endhighlight %}
 {% endtabs %}
@@ -138,33 +137,37 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Register a Syncfusion License Key
 
-Before initializing the ASP.NET Core DOCX Editor control, generate a Syncfusion license key and register it in your application.
+Before initializing the Blazor DOCX Editor control, generate a Syncfusion license key and register it in your application.
 
 - [Generate a Syncfusion License Key](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-generate)
-- [Register a Syncfusion License Key in an ASP.NET Core Application](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application)
+- [Register a Syncfusion License Key in Blazor Web Application](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application)
 
-### Add Themes and Script References
+### Add stylesheet
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). 
-
-Include the stylesheet reference in the `<head>` section of the **`~/Components/App.razor`** file as shown below:
+The theme stylesheet can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the `<head>` section of your `Components/App.razor` file.
 
 {% tabs %}
-{% highlight razor tabtitle="~/App.razor" %}
+{% highlight razor tabtitle="Components/App.razor" % }
 
-<!-- Add Syncfusion theme -->
-<link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+<head>
+    <!-- Add Syncfusion theme -->
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
 
 {% endhighlight %}
 {% endtabs %}
 
+### Add Script Resources
+
 Include the script reference at the end of the `<body>` section in the **~/Components/App.razor**  file.
 
 {% tabs %}
-{% highlight razor tabtitle="~/App.razor" %}
+{% highlight razor tabtitle="~/Components/App.razor" %}
 
-<!-- Add the DOCX Editor script -->
-<script src="_content/Syncfusion.Blazor.WordProcessor/scripts/syncfusion-blazor-documenteditor.min.js" type="text/javascript"></script>
+<head>
+    <!-- Add the DOCX Editor script -->
+    <script src="_content/Syncfusion.Blazor.WordProcessor/scripts/syncfusion-blazor-documenteditor.min.js" type="text/javascript"></script>
+</head>
 
 {% endhighlight %}
 {% endtabs %}
@@ -194,22 +197,8 @@ N> If the interactivity location is set to **Global** in your Blazor Web App, yo
 
 <SfDocumentEditorContainer EnableToolbar=true Height="590px"></SfDocumentEditorContainer>
 
-@code {
-    private SfDocumentEditorContainer documentEditor;
-
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        if (firstRender && documentEditor != null)
-        {
-            // Load a sample document
-            await documentEditor.OpenAsync(new byte[] { /* DOCX file bytes */ });
-        }
-    }
-}
-
 {% endhighlight %}
 {% endtabs %}
-
 
 ### Run the application
 
@@ -230,5 +219,3 @@ N> Looking for the full Blazor DOCX Editor component overview, features, pricing
 - [Getting started in Blazor WASM app](https://help.syncfusion.com/document-processing/word/word-processor/blazor/getting-started/client-side-application)
 - [Open a document](https://help.syncfusion.com/document-processing/word/word-processor/blazor/opening-a-document)
 - [Save a document](https://help.syncfusion.com/document-processing/word/word-processor/blazor/saving-document)
-
-
