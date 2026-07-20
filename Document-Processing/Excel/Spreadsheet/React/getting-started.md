@@ -46,7 +46,7 @@ npm install @syncfusion/ej2-react-spreadsheet
 
 ## Register Syncfusion License Key
 
-Before initializing Syncfusion React Spreadsheet control, generate a Syncfusion license key and register it in the application.
+Before initializing Syncfusion React Spreadsheet component, generate a Syncfusion license key and register it in the application.
 
 - [Generate a Syncfusion License Key](https://help.syncfusion.com/document-processing/licensing/how-to-generate)
 - [Register a Syncfusion License Key in a React Application](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#reactjs)
@@ -68,7 +68,7 @@ Add the following Spreadsheet and dependent component styles to `src/index.css` 
 @import '@syncfusion/ej2-react-spreadsheet/styles/tailwind3.css';
 ```
 
-> The example uses the **Tailwind 3** theme. To use a different built-in theme, replace the `tailwind3.css` references with the theme of your choice (for example, `bootstrap5.css`, `fluent2.css`, etc.) in all `@import` statements. Refer to the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) for the available themes and the different ways to include theme styles in a React application.
+> The example uses the **Tailwind 3** theme. To use a different built-in theme, replace the `tailwind3.css` references with the theme of your choice (for example, `bootstrap5.css`, `fluent2.css`, etc.) in all `@import` statements. Refer to the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) section.
 
 ## Add the Syncfusion® React Spreadsheet component
 
