@@ -12,10 +12,8 @@ Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [WinUI Word libr
 
 **Prerequisites:**
 - Visual Studio 2022 version 17.x or later with the **.NET desktop development** and **Universal Windows Platform development** workloads installed.
-- Windows App SDK extension for Visual Studio (for WinUI 3 project templates). Download from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ProjectReunion.MicrosoftProjectReunion) or refer [here](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/set-up-your-development-environment?tabs=cs-vs-community%2Ccpp-vs-community%2Cvs-2022-17-1-a%2Cvs-2022-17-1-b).
 
-N> The samples in this topic target Windows App SDK 1.x on Windows 10, version 1809 (build 17763) or later.
-
+N> The samples in this topic target Windows App SDK 1.x on Windows 10, version 1809 or later.
 
 ## WinUI Desktop app
 
@@ -66,30 +64,12 @@ Step 6: Include the following namespaces in the **MainWindow.xaml.cs** file.
 {% highlight c# tabtitle="C#" %}
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
-using Syncfusion.Licensing;
 using System.IO;
-using System.Reflection;
-using Windows.Storage;
-using Windows.Storage.Pickers;
-using Windows.Storage.Streams;
 {% endhighlight %}
 
 {% endtabs %}
 
-Step 7: Register the Syncfusion license key at application startup (e.g., in the `App` constructor or the `CreateDocument` method) before using any DocIO APIs.
-
-{% tabs %}
-
-{% highlight c# tabtitle="C#" %}
-//Register the Syncfusion license key (replace with your actual key).
-SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
-{% endhighlight %}
-
-{% endtabs %}
-
-Step 8: Add the required image assets to the project. Add an **Assets** folder to the project, copy `AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, and `Road-550-W.jpg` into it, and set each file's **Build Action** to **Embedded Resource** in the Properties window.
-
-Step 9: Add a new action method **CreateDocument** in MainWindow.xaml.cs and include the below code snippet to **create a Word document**.
+Step 7: Add a new action method **CreateDocument** in MainWindow.xaml.cs and include the below code snippet to **create a Word document**.
 
 {% tabs %}
 
@@ -323,29 +303,6 @@ By executing the program, you will get the **Word document** as follows.
 
 ![WinUI Desktop output Word document](WinUI_Images/GettingStartedOutput.jpg)
 
-### Save Word document in WinUI Desktop
-
-{% tabs %}
-
-{% highlight c# tabtitle="C#" %}
-async void Save(MemoryStream streams, string filename)
-{
-    streams.Position = 0;
-    //Save the stream as a Word document file in the local machine.
-    string path = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments), filename);
-    using (Stream outstream = File.Create(path))
-    {
-        byte[] buffer = streams.ToArray();
-        outstream.Write(buffer, 0, buffer.Length);
-        outstream.Flush();
-    }
-    //Launch the saved Word file.
-    await Windows.System.Launcher.LaunchUriAsync(new System.Uri("file:///" + path));
-}
-{% endhighlight %}
-
-{% endtabs %}
-
 Click [here](https://www.syncfusion.com/document-processing/word-framework/winui) to explore the rich set of the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) features. 
 
 An online sample link to [create a Word document](https://document.syncfusion.com/demos/word/helloworld#/tailwind) in ASP.NET Core.
@@ -406,7 +363,6 @@ Step 6: Include the following namespaces in the **MainPage.xaml.cs** file.
 using System.Reflection;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.DocIO;
-using Syncfusion.Licensing;
 using Windows.Storage;
 using Windows.Storage.Streams;
 using Windows.Storage.Pickers;
@@ -420,20 +376,7 @@ Step 7: Register the Syncfusion license key at application startup (e.g., in the
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-//Register the Syncfusion license key (replace with your actual key).
-SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
-{% endhighlight %}
-
-{% endtabs %}
-
-Step 8: Add the required image assets to the project. Add an **Assets** folder to the project, copy `AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, and `Road-550-W.jpg` into it, and set each file's **Build Action** to **Embedded Resource** in the Properties window.
-
-Step 9: Add a new action method **CreateDocument** in MainPage.xaml.cs and include the below code snippet to **create a Word document**.
-
-{% tabs %}
-
-{% highlight c# tabtitle="C#" %}
-//"App" is the application class of the WinUI project.
+//"App" is the class of Portable project.
 Assembly assembly = typeof(App).GetTypeInfo().Assembly;
 //Create a new document.
 using (WordDocument document = new WordDocument())

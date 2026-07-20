@@ -39,7 +39,6 @@ Step 3: Include the following namespaces in the MainWindow.xaml.cs file.
 using Syncfusion.DocIO.DLS;
 using System;
 using System.ComponentModel;
-using System.Drawing;
 using System.Windows;
 {% endhighlight %}
 
@@ -350,7 +349,6 @@ Step 3: Include the following namespaces in the MainWindow.xaml.cs file.
 using Syncfusion.DocIO.DLS;
 using System;
 using System.ComponentModel;
-using System.Drawing;
 using System.Windows;
 {% endhighlight %}
 

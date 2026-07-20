@@ -41,7 +41,6 @@ Step 3: Add the following `using` directives to the top of **Form1.cs** (the Syn
 
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
-using Syncfusion.Licensing;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -307,7 +306,6 @@ document.Save("Sample.docx");
 
 N> The image bitmaps (`AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, `Road-550-W.jpg`) are loaded from the working directory at runtime. Copy these images to the application's output (`bin\Debug` / `bin\Release`) directory, or use absolute paths based on `Application.StartupPath` to avoid file-not-found exceptions.
 
-N> If you are using a licensed build, register the Syncfusion license key once at application startup (for example in `Program.cs`): `Syncfusion.Licensing.LicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");`. See [Registering a license key](https://help.syncfusion.com/common/essential-studio/licensing/how-to-register-in-an-application) for details. The generated `Sample.docx` is written to the application's working (bin) directory.
 
 Step 6: Build the project.
 
@@ -369,7 +367,6 @@ Step 3: Add the following `using` directives to the top of **Form1.cs** (the Syn
 
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
-using Syncfusion.Licensing;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -635,7 +632,6 @@ document.Save("Sample.docx");
 
 N> The image bitmaps (`AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, `Road-550-W.jpg`) are loaded from the working directory at runtime. Copy these images to the application's output (`bin\Debug` / `bin\Release`) directory, or use absolute paths based on `Application.StartupPath` to avoid file-not-found exceptions.
 
-N> If you are using a licensed build, register the Syncfusion license key once at application startup (for example in `Program.cs`): `Syncfusion.Licensing.LicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");`. See [Registering a license key](https://help.syncfusion.com/common/essential-studio/licensing/how-to-register-in-an-application) for details. The generated `Sample.docx` is written to the application's working (bin) directory.
 
 Step 6: Build the project.
 
@@ -658,10 +654,3 @@ By executing the program, you will get the **Word document** as follows.
 Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.
 
 An online sample demonstrating how to [create a Word document](https://document.syncfusion.com/demos/word/helloworld#/tailwind) is also available (hosted as an ASP.NET Core demo that uses the same DocIO APIs shown here).
-
-### See also
-
-* [Create a Word document in ASP.NET Core](https://help.syncfusion.com/document-processing/word/word-library/getting-started/asp.net-core)
-* [Edit a Word document](https://help.syncfusion.com/document-processing/word/word-library/editing/edit-a-word-document)
-* [Convert Word to PDF](https://help.syncfusion.com/document-processing/word/word-library/conversions/word-to-pdf)
-* [Mail merge](https://help.syncfusion.com/document-processing/word/word-library/mail-merge)

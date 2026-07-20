@@ -27,7 +27,7 @@ Step 1: Create a new .NET Core console application project.
 
 Step 2: Select the project version as .NET 8.0 or later.
 
-![Select Project version](Mac-images/selectprojectversion.png)
+![Select Project version](Mac-images/selectprojectverion.png)
 
 Step 3: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) and [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) NuGet packages as references to your project from [NuGet.org](https://www.nuget.org/).
 
@@ -293,7 +293,7 @@ outputStream.Dispose();
 
 Step 7: Build the project.
 
-Click on Build → Build Solution or press <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> (macOS) to build the project.
+Click on Build → Build Solution or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
 Step 8: Run the project.
 
@@ -315,7 +315,7 @@ By executing the program, you will get the **Word document** as follows. The out
 
 * Visual Studio Code.
 * Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
-* Open Visual Studio Code and install the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension from the Extensions Marketplace.
+* Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
 
 Step 1: Create a new .NET Core console application project.
 * Open the command palette by pressing <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (macOS) and type **.NET: New Project** and press Enter.
@@ -351,7 +351,7 @@ Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY
 
 {% endtabs %}
 
-N> Replace `"YOUR_LICENSE_KEY"` with your actual Syncfusion license key. Refer to this [link](https://help.syncfusion.com/common/licensing/how-to-generate) to generate a license key.
+N> Replace `"YOUR_LICENSE_KEY"` with your actual Syncfusion license key. Refer to this [link](https://help.syncfusion.com/document-processing/licensing/how-to-generate) to generate a license key.
 
 Step 4: Include the following Namespaces in the Program.cs file.
 
@@ -654,7 +654,7 @@ Step 2: Install the NuGet packages from [NuGet.org](https://www.nuget.org/).
 
 ![Install the Syncfusion.DocIO.Net.Core NuGet package](Mac-images/Install-Syncfusion.DocIO.Net.Core-NuGet.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/licensing/overview) to know about registering the Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering the Syncfusion license key in your application to use our components.
 
 Step 3: Register the Syncfusion license key in the `Program.cs` file by adding the following line before utilizing any Syncfusion components.
 
@@ -667,7 +667,7 @@ Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY
 
 {% endtabs %}
 
-N> Replace `"YOUR_LICENSE_KEY"` with your actual Syncfusion license key. Refer to this [link](https://help.syncfusion.com/common/licensing/how-to-generate) to generate a license key.
+N> Replace `"YOUR_LICENSE_KEY"` with your actual Syncfusion license key. Refer to this [link](https://help.syncfusion.com/document-processing/licensing/how-to-generate) to generate a license key.
 
 Step 4: Include the following Namespaces in the Program.cs file.
 
@@ -913,7 +913,7 @@ outputStream.Dispose();
 
 Step 6: Build the project.
 
-Click the **Build** button in the toolbar or press <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> (macOS) to build the project.
+Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
 Step 7: Run the project.
 
