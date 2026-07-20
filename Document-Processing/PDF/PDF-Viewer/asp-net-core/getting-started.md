@@ -70,7 +70,7 @@ dotnet restore
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Tag Helper
 
-Open `~/Pages/_ViewImports.cshtml` and add the Syncfusion EJ2 Tag Helper import. This makes all Syncfusion tag helpers available throughout the application.
+Open `~/Pages/_ViewImports.cshtml` and add the Syncfusion EJ2 Tag Helper imports. This makes all Syncfusion tag helpers (including the PDF Viewer) available throughout the application.
 
 {% tabs %}
 {% highlight c# tabtitle="~/_ViewImports.cshtml" %}
@@ -90,7 +90,7 @@ Reference the Syncfusion theme and JavaScript library using the CDN inside the `
 <!-- Syncfusion ASP.NET Core controls styles -->
 <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/fluent.css" />
 
-<!-- Syncfusion ASP.NET Core controls scripts -->
+<!-- Syncfusion ASP.NET Core controls script -->
 <script src="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/dist/ej2.min.js"></script>
 
 {% endhighlight %}
@@ -111,7 +111,7 @@ Open the `~/Pages/Shared/_Layout.cshtml` page and register the script manager `<
 {% endhighlight %}
 {% endtabs %}
 
-## Add ASP.NET Core PDF Viewer control
+## Add ASP.NET Core PDF Viewer Tag Helper
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer Tag Helper in `~/Pages/Index.cshtml`.
 
@@ -125,7 +125,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer
 {% endhighlight %}
 {% endtabs %}
 
-N> The `documentPath` property specifies the PDF document to load in the viewer. To use the `resourceUrl` and `documentPath` with locally available PDF documents and resources, follow these [instructions](./how-to/local-resources#configuring-pdf-viewer-for-locally-available-pdf-documents-and-local-resources).
+N> The `documentPath` property can point to a remote URL (as shown above) or to a local PDF file. To use the `resourceUrl` and `documentPath` with locally available PDF documents and resources, follow these [Instructions](./how-to/local-resources#configuring-pdf-viewer-for-locally-available-pdf-documents-and-local-resources). For the full list of PDF Viewer properties such as `enableDownload`, `enablePrint`, and `resourceUrl`, see the [PDF Viewer API reference](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html).
 
 ## Run the application
 
