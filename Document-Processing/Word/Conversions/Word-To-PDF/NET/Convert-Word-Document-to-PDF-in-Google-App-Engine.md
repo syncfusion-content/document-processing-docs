@@ -14,8 +14,8 @@ Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncf
 
 Before you begin, make sure you have the following:
 
-* A [Google Cloud Platform (GCP)](https://console.cloud.google.com/getting-started) account with billing enabled and access to the App Engine service.
-* **.NET SDK 8.0** installed locally (the sample targets `net8.0`).
+* A [Google Cloud Platform (GCP)](https://cloud.google.com/cloud-console?nodebwarning=true) account with billing enabled and access to the App Engine service.
+* [**.NET SDK 8.0** or later](https://dotnet.microsoft.com/en-us/download/dotnet) installed locally (the sample targets `net8.0`).
 
 ## Set up App Engine
 
@@ -63,7 +63,7 @@ Step 4: Install the following **NuGet packages** in your application from [Nuget
 
  ![Install Syncfusion.DocIORenderer.Net.Core Nuget Package](Azure-Images/App-Service-Linux/Syncfusion_Nuget_Package_WordtoPDF.png)
  ![Install SkiaSharp.NativeAssets.Linux Nuget Package](Azure-Images/App-Service-Linux/SkiaSharp_Nuget-Package_WordtoPDF.png)
- ![Install HarfBuzzSharp.NativeAssets.Linux Nuget Package](Azure-Images/App-Service-Linux/HarfBuzz-Nuget-WordtoImage.png)
+ ![Install HarfBuzzSharp.NativeAssets.Linux Nuget Package](Azure-Images/App-Service-Linux/HarfBuzz-Nuget-WordtoPDF.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 

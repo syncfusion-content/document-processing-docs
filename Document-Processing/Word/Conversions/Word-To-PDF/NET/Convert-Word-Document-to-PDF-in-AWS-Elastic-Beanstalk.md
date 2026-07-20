@@ -121,7 +121,7 @@ private static void FontSettings_SubstituteFont(object sender, SubstituteFontEve
 
 ## Steps to publish as AWS Elastic Beanstalk
 
-N> This walkthrough uses the **Publish to AWS Elastic Beanstalk (Legacy)** option in the AWS Toolkit for Visual Studio. AWS is deprecating the legacy publish flow in newer Toolkit versions; if you do not see the legacy option, use the **AWS Elastic Beanstalk** publish profile or the EB CLI. See the [AWS Toolkit for Visual Studio documentation](https://docs.aws.amazon.com/toolkit-for-visual-studio/latest/user-guide/elastic-beanstalk.html) for the current recommended approach.
+N> This walkthrough uses the **Publish to AWS Elastic Beanstalk (Legacy)** option in the AWS Toolkit for Visual Studio. AWS is deprecating the legacy publish flow in newer Toolkit versions; if you do not see the legacy option, use the **AWS Elastic Beanstalk** publish profile or the EB CLI. See the [AWS Toolkit for Visual Studio documentation](https://docs.aws.amazon.com/toolkit-for-visual-studio/latest/user-guide/welcome.html) for the current recommended approach.
 
 Step 1: Right-click the project and select **Publish to AWS Elastic Beanstalk (Legacy)** option.
 ![Right-click the project and select the Publish option](AWS_Images/Elastic_Beanstalk_Images/Publish-Convert-WordtoPDF.png)

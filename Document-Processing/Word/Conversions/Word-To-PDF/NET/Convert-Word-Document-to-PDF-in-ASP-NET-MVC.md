@@ -126,7 +126,7 @@ By executing the program, you will get the **PDF document** as follows.
 **Prerequisites:**
 
 * JetBrains Rider (2022.3 or later).
-* Install the [.NET Framework 4.5 or later Developer Pack](https://dotnet.microsoft.com/download/dotnet-framework).
+* Install the [.NET Framework 4.5 or later Developer Pack](https://dotnet.microsoft.com/en-us/download/dotnet-framework).
 
 Step 1: Open JetBrains Rider and create a new ASP.NET MVC web application project.
 * Launch JetBrains Rider.

@@ -19,7 +19,7 @@ Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncf
 **Prerequisites:**
 
 * Visual Studio 2022.
-* Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
+* Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet) or later.
 
 Step 1: Execute the following command in the **Linux terminal** to create a new .NET Core Console application.
 

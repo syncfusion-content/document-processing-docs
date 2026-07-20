@@ -140,7 +140,7 @@ By executing the program, you will get the **PDF document** as follows.
 **Prerequisites:**
 
 * JetBrains Rider (latest stable version).
-* Install the [.NET Framework Developer Pack](https://dotnet.microsoft.com/download/dotnet-framework) (**4.6.2** or later).
+* Install the [.NET Framework Developer Pack](https://dotnet.microsoft.com/en-us/download/dotnet-framework) (**4.6.2** or later).
 * An `Input.docx` file placed in a `Data` folder at the project root, with **Copy to Output Directory** set to **Copy always**.
 
 Step 1: Open JetBrains Rider and create a new Windows Forms Application project.

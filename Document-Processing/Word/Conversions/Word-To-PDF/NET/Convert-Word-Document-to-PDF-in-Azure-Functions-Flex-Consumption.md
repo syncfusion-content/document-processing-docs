@@ -14,8 +14,8 @@ Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncf
 
 - An active Azure subscription.
 - Visual Studio 2022 (or later) with the **Azure Development** workload installed.
-- [Azure Functions Tools](https://learn.microsoft.com/azure/azure-functions/functions-develop-local) for Visual Studio.
-- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) (the Flex Consumption plan supports only the **.NET 8 isolated worker** model).
+- [Azure Functions Tools](https://learn.microsoft.com/en-us/azure/azure-functions/functions-develop-local?pivots=programming-language-csharp) for Visual Studio.
+- [.NET 8 SDK or later](https://dotnet.microsoft.com/en-us/download/dotnet) (the Flex Consumption plan supports only the **.NET 8 isolated worker** model).
 - A Syncfusion license key. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering the Syncfusion<sup>&reg;</sup> license key in your application.
 
 ## Steps to convert a Word document to PDF in Azure Functions (Flex Consumption)

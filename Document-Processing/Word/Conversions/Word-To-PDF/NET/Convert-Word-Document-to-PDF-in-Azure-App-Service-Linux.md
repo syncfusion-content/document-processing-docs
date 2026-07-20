@@ -33,7 +33,7 @@ Step 4: Install the following **NuGet packages** in your application from [NuGet
 * [SkiaSharp.NativeAssets.Linux 3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1) (use `SkiaSharp.NativeAssets.Linux.NoDependencies` for ARM64 environments)
 * [HarfBuzzSharp.NativeAssets.Linux 8.3.1.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.1.2)
 
-> **Note:** The SkiaSharp and HarfBuzzSharp versions are pinned to match the native assets bundled with the current `Syncfusion.DocIORenderer.Net.Core` release. If you upgrade the Syncfusion package, verify the matching native-asset versions in the [release notes](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/nuget-packages-required-word-to-pdf).
+> **Note:** The SkiaSharp and HarfBuzzSharp versions are pinned to match the native assets bundled with the current `Syncfusion.DocIORenderer.Net.Core` release. If you upgrade the Syncfusion package, verify the matching native-asset versions in the [NuGet Packages Required to Convert Word to PDF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf).
 
 After installing the packages, build the project to verify that all packages restore successfully.
 
