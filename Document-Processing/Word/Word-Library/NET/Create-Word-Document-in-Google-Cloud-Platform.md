@@ -8,21 +8,25 @@ documentation: UG
 
 # Create Word document in Google Cloud Platform (GCP)
 
-Syncfusion DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net-core/word-library) used to create, read, edit, and convert Word documents programmatically without **Microsoft Word** or interop dependencies. Using this library, **create a Word document in Google Cloud Platform (GCP)** within a few lines of code. 
+Syncfusion DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net-core/word-library) used to create, read, edit, and convert Word documents programmatically without **Microsoft Word** or interop dependencies. Using this library, **create a Word document in Google Cloud Platform (GCP)** in a few lines of code.
 
-N> If this is your first time working with Google Cloud Platform (GCP), please refer to the dedicated GCP resources. This section explains how to create a Word document in C# using the .NET Core Word (DocIO) library in GCP. 
+N> If this is your first time working with Google Cloud Platform (GCP), refer to the Google Cloud [getting started guide](https://console.cloud.google.com/getting-started) before you begin. This section explains how to create a Word document in C# using the .NET Core Word (DocIO) library in GCP.
 
-## Prerequisites 
+## Prerequisites
 
 * A [Google Cloud Platform (GCP)](https://console.cloud.google.com/getting-started) account with access to the App Engine service.
+* The [.NET Core SDK](https://dotnet.microsoft.com/download) installed on your development machine (DocIO requires .NET Core 2.0 or later).
+* The `Syncfusion.DocIO.Net.Core` NuGet package added to your project. If you are new to licensing, see [registering a Syncfusion license key](https://help.syncfusion.com/common/essential-studio/licensing/overview) in your application.
 
 ## Google Cloud Platform (GCP)
+
+The following GCP compute service is supported for creating Word documents with the DocIO library.
 
 <table>
 <thead>
 <tr>
 <th>
-Google Cloud Platform<br/></th><th>
+GCP service<br/></th><th>
 NuGet package name<br/></th></tr></thead>
 <tr>
 <td>
@@ -30,3 +34,9 @@ NuGet package name<br/></th></tr></thead>
 {{'[Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core)' | markdownify}}<br/>
 </td></tr>
 </table>
+
+## Next steps
+
+* Follow the step-by-step guide to [create a Word document in Google App Engine](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-google-app-engine).
+* Learn how to [install the DocIO NuGet package](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) in your project.
+* Review [DocIO licensing and registration](https://help.syncfusion.com/common/essential-studio/licensing/overview) for production deployments.

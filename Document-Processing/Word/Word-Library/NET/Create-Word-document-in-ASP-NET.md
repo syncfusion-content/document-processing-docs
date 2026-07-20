@@ -10,11 +10,17 @@ documentation: UG
 
 Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in ASP.NET Web Forms**.
 
+N> This ASP.NET Web Forms platform is deprecated. You can use the same product from the ASP.NET Core platform. For more information on migrating the .NET Word library from .NET Framework to .NET Core, refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/migrate-from-net-framework-to-net-core).
+
 ## Prerequisites
 
-* Visual Studio 2017 or later.
-* .NET Framework 4.6.1 or later.
-* The images referenced in the sample (`AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, `Road-550-W.jpg`) must be added to the project root and set to **Copy to Output Directory — Copy always** so they are found at runtime.
+Before you begin, ensure the following are available:
+
+- **Visual Studio 2017 or later** installed on a Windows machine.
+- **.NET Framework 4.5.2 or later** (required by the `Syncfusion.DocIO.AspNet` NuGet package, starting with v16.2.0.x).
+- **Syncfusion.DocIO.AspNet** NuGet package (install in Step 3).
+- **Syncfusion.Licensing** assembly reference and a registered Syncfusion license key (see Step 3 note).
+- The following image assets placed in the project root (set **Build Action** to **Content**, **Copy to Output Directory** to **Copy if newer**): `AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, `Road-550-W.jpg`.
 
 ## Steps to create Word document programmatically:
 
@@ -26,19 +32,19 @@ Step 2: Select the Empty project.
 
 ![Select Empty project in Visual Studio](ASP-NET_images/ASPNET.png)
 
-Step 3: Install the [Syncfusion.DocIO.AspNet](https://www.nuget.org/packages/Syncfusion.DocIO.AspNet) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/). Use v27.x.x.x or later for .NET Framework 4.6.1+.
+Step 3: Install the [Syncfusion.DocIO.AspNet](https://www.nuget.org/packages/Syncfusion.DocIO.AspNet) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 
 ![Install DocIO ASP.NET NuGet package](ASP-NET_images/Install_Nuget.jpg)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add the `Syncfusion.Licensing` NuGet package and register a license key in your application. Please refer to [registering a Syncfusion license key](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application) for details, then call `Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("<your license key>")` in `Application_Start` (Global.asax) before using DocIO.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you must also add the "Syncfusion.Licensing" assembly reference and include a license key in your project. To register the Syncfusion license key in your application, add `SyncfusionLicenseProvider.RegisterLicense("<Your License Key>");` in the `Application_Start` event of `Global.asax`. For more details, see [Licensing Overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
-Step 4: Add a new Web Form in your project. Right click on the project and select **Add > New Item** and add a Web Form from the list. Name it as MainPage.
+Step 4: Add a new Web Form in your project. Right click on the project and select **Add > New Item** and add a **Web Form (C#)** from the list. Name it as MainPage.
 
 Step 5: Add a new button in the **MainPage.aspx** as shown below.
 
 {% tabs %}
 
-{% highlight html tabtitle="ASPX" %}
+{% highlight aspx tabtitle="ASPX" %}
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -57,7 +63,7 @@ Step 5: Add a new button in the **MainPage.aspx** as shown below.
 
 {% endtabs %}
 
-Step 6: Include the following namespaces in your **MainPage.aspx.cs** file.
+Step 6: Include the following namespaces in your **MainPage.aspx.cs** file. These namespaces belong to the `Syncfusion.DocIO.AspNet` NuGet package installed in Step 3, except `System.Web` which provides `HttpContext` used for downloading the document.
 
 {% tabs %}
 
@@ -65,30 +71,28 @@ Step 6: Include the following namespaces in your **MainPage.aspx.cs** file.
 
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
-using System.IO;
 using System.Drawing;
+using System.Web;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-Step 7: Include the below code snippet in the click event of the button in **MainPage.aspx.cs**, to **create a Word document** and download it.
+Step 7: Include the below code snippet in the click event of the button in **MainPage.aspx.cs** (in the same `MainPage` partial class), to **create a Word document** and download it.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-protected void OnButtonClicked(object sender, EventArgs e)
-{
-// Creates a new document.
+// Creating a new document.
 WordDocument document = new WordDocument();
-//Adds a new section to the document.
+//Adding a new section to the document.
 WSection section = document.AddSection() as WSection;
-//Sets the margin of the section.
+//Set Margin of the section
 section.PageSetup.Margins.All = 72;
-//Sets the page size of the section.
+//Set page size of the section
 section.PageSetup.PageSize = new System.Drawing.SizeF(612, 792);
 
-//Creates paragraph styles.
+//Create Paragraph styles
 WParagraphStyle style = document.AddParagraphStyle("Normal") as WParagraphStyle;
 style.CharacterFormat.FontName = "Calibri";
 style.CharacterFormat.FontSize = 11f;
@@ -108,7 +112,7 @@ style.ParagraphFormat.KeepFollow = true;
 style.ParagraphFormat.OutlineLevel = OutlineLevel.Level1;
 
 IWParagraph paragraph = section.HeadersFooters.Header.AddParagraph();
-//Gets the image stream.
+// Gets the image stream.
 IWPicture picture = paragraph.AppendPicture(new Bitmap("AdventureCycle.jpg")) as WPicture;
 picture.TextWrappingStyle = TextWrappingStyle.InFrontOfText;
 picture.VerticalOrigin = VerticalOrigin.Margin;
@@ -144,7 +148,7 @@ textRange.CharacterFormat.FontSize = 12f;
 paragraph = section.AddParagraph();
 paragraph.ParagraphFormat.FirstLineIndent = 36;
 paragraph.BreakCharacterFormat.FontSize = 12f;
-textRange = paragraph.AppendText("In 2000, Adventure Works Cycles bought a small manufacturing plant, Importadores Neptuno, located in Mexico. Importadores Neptuno manufactures several critical subcomponents for the Adventure Works Cycles product line. These subcomponents are shipped to the Bothell location for final product assembly. In 2001, Importadores Neptuno, became the sole manufacturer and distributor of the touring bicycle product group.") as WTextRange;
+textRange = paragraph.AppendText("In 2000, AdventureWorks Cycles bought a small manufacturing plant, Importadores Neptuno, located in Mexico. Importadores Neptuno manufactures several critical subcomponents for the AdventureWorks Cycles product line. These subcomponents are shipped to the Bothell location for final product assembly. In 2001, Importadores Neptuno, became the sole manufacturer and distributor of the touring bicycle product group.") as WTextRange;
 textRange.CharacterFormat.FontSize = 12f;
 
 paragraph = section.AddParagraph();
@@ -288,34 +292,20 @@ textRange.CharacterFormat.FontName = "Times New Roman";
 //Appends paragraph.
 section.AddParagraph();
 
-//Saves the Word document to the HTTP response for download in DOCX format.
-//  filename = "Sample.docx"
-//  format   = FormatType.Docx (Word 2007+ .docx)
-//  response = HttpContext.Current.Response (streams the file to the browser)
-//  disposition = HttpContentDisposition.Attachment (prompts a download)
+//Saves the Word document to disk in DOCX format
 document.Save("Sample.docx", FormatType.Docx, HttpContext.Current.Response, HttpContentDisposition.Attachment);
-}
 {% endhighlight %}
 
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/ASP.NET).
 
-## Run the application
-
-Build and run the ASP.NET Web Forms application in Visual Studio (press **F5**). Open **MainPage.aspx** in the browser, then click the **Create Document** button to generate and download `Sample.docx`.
-
 By executing the program, you will get the **Word document** as follows.
 
 ![ASP.Net Web output Word document](ASP-NET_images/GettingStartedOutput.jpg)
 
-## Troubleshooting
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/ASP.NET).
 
-* **FileNotFoundException for images** — Ensure each image file (`AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, `Road-550-W.jpg`) is in the application's run-time output folder; set **Copy to Output Directory — Copy always** on each file.
-* **License warning in output** — Register the Syncfusion license key via `SyncfusionLicenseProvider.RegisterLicense(...)` in `Application_Start` (Global.asax) before instantiating `WordDocument`.
+Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.
 
-## Related links
-
-* [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) — Overview, features, pricing, and documentation.
-* This platform (ASP.NET Web Forms) is deprecated for new projects; for new development use the ASP.NET Core guide. To migrate the .NET Word library from .NET Framework to .NET Core, refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/migrate-from-net-framework-to-net-core).
-* Online sample to [create a Word document](https://document.syncfusion.com/demos/word/helloworld#/tailwind) (hosted on ASP.NET Core). 
+You can also explore the online sample to [create a Word document](https://document.syncfusion.com/demos/word/helloworld#/tailwind) in ASP.NET Core. 
