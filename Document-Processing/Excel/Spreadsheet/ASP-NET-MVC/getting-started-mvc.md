@@ -44,12 +44,12 @@ Add **Syncfusion.EJ2** namespace reference to the **\<namespaces\>** section in 
 <add namespace="Syncfusion.EJ2"/>
 ```
 
-## Register Syncfusion License Key
+## Register a Syncfusion License Key
 
-Before initializing Syncfusion ASP.NET MVC Spreadsheet control, generate a Syncfusion license key and register it in the application.
+Before initializing the Syncfusion ASP.NET MVC Spreadsheet control, generate a Syncfusion license key and register it in the application.
 
 - [Generate a Syncfusion License Key](https://help.syncfusion.com/document-processing/licensing/how-to-generate)
-- [Register a Syncfusion License Key in a ASP.NET MVC Application](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#aspnet-mvc)
+- [Register a Syncfusion License Key in an ASP.NET MVC Application](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#aspnet-mvc)
 
 ## Add stylesheet and script resources
 
