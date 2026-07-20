@@ -313,8 +313,6 @@ Step 1: Create a new C# WinUI UWP app. Select **Blank App (WinUI 3 in UWP)** fro
 
 ![Create the WinUI UWP app in Visual Studio](WinUI_Images/Create_UWP_Project.png)
 
-N> To get the UWP Experimental project templates and build UWP apps with WinUI 3, you should download the [Windows App SDK Experimental Extension](https://marketplace.visualstudio.com/items?itemName=ProjectReunion.MicrosoftProjectReunionPreview) for Visual Studio.
-
 Step 2: Enter the project name and click **Create**.
 
 ![Create a project name for your new project](WinUI_Images/UWP_Configure.png)
