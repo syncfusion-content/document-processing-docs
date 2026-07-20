@@ -11,17 +11,19 @@ Syncfusion<sup>&reg;</sup> Excel library for .NET MAUI platform can be used to c
 
 **Prerequisites:**
 
-To use the MAUI project templates, install the Mobile development with .NET extension for Visual Studio. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin).
+To use the .NET MAUI project templates, install the **Mobile development with .NET** workload for Visual Studio. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?tabs=vswin).
+
+The supported development environment is Visual Studio 2022 (17.3 or later) on Windows with the .NET MAUI workload installed, and .NET 7 or later.
 
 ## Create a simple Excel report
 
-The below steps illustrates creating a simple Invoice formatted Excel document in .NET MAUI.
+The following steps illustrate creating a simple Invoice-formatted Excel document in a .NET MAUI application.
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
-Step 1: Create a new project in VS2022, select the .NET MAUI App (Preview) template, and click the **Next** button.
+Step 1: Create a new project in Visual Studio 2022, select the **.NET MAUI App** template, and click the **Next** button.
 
 ![Create .NET MAUI application in Visual Studio](MAUI_images/MAUI_images_img1.png)
 
@@ -29,13 +31,13 @@ Step 2: Enter the project name and click **Create**.
 
 ![Name the project](MAUI_images/MAUI_images_img2.png)
 
-Step 3: Install the [Syncfusion.XlsIO.NET](https://www.nuget.org/packages/Syncfusion.XlsIO.NET/) NuGet package as reference to your .NET MAUI application from [NuGet.org](https://www.nuget.org).
+Step 3: Install the [Syncfusion.XlsIO.NET](https://www.nuget.org/packages/Syncfusion.XlsIO.NET/) NuGet package as a reference to your .NET MAUI application from [NuGet.org](https://www.nuget.org).
 
 ![Install Syncfusion.XlsIO.NET Nuget Package](MAUI_images/MAUI_images_img3.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
 
-Step 4: Add a new button to the **MainPage.xaml** as shown below.
+Open **MainPage.xaml** and add a new button. Also add a matching createExcel_Click event handler in **MainPage.xaml.cs**, as shown below.
 {% capture codesnippet1 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -70,7 +72,9 @@ using System.Reflection;
 {% endcapture %}
 {{ codesnippet2 | OrderList_Indent_Level_1 }}
 
-Step 6: Add a new action method **createExcel_Click** in MainPage.xaml.cs and include the below code snippet to **create an Excel document**.
+Implement the createExcel_Click event handler in **MainPage.xaml.cs** and include the following code snippet to **create an Excel document**.
+
+N> Before proceeding, add the AdventureCycles-Logo.png image to the project and set its **Build Action** to **Embedded Resource** in the file properties so it can be loaded using GetManifestResourceStream.
 {% capture codesnippet3 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
@@ -281,7 +285,7 @@ dotnet new maui -o MAUISample
 cd MAUISample
 ```
 
-Step 3: To **convert an Excel document to PDF in .NET MAUI app**,run the following command to  install[Syncfusion.XlsIO.NET](https://www.nuget.org/packages/Syncfusion.XlsIO.NET/) package.
+Step 3: To create and edit Excel documents in the .NET MAUI app, run the following command to install the [Syncfusion.XlsIO.NET](https://www.nuget.org/packages/Syncfusion.XlsIO.NET/) package.
 
 ```
 dotnet add package Syncfusion.XlsIO.NET
@@ -291,7 +295,7 @@ dotnet add package Syncfusion.XlsIO.NET
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
 
-Step 4: Add a new button to the **MainPage.xaml** as shown below.
+Open **MainPage.xaml** and add a new button. Also add a matching createExcel_Click event handler in **MainPage.xaml.cs**, as shown below.
 {% capture codesnippet1 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -326,7 +330,9 @@ using System.Reflection;
 {% endcapture %}
 {{ codesnippet2 | OrderList_Indent_Level_1 }}
 
-Step 6: Add a new action method **createExcel_Click** in MainPage.xaml.cs and include the below code snippet to **create an Excel document**.
+Implement the createExcel_Click event handler in **MainPage.xaml.cs** and include the following code snippet to **create an Excel document**.
+
+N> Before proceeding, add the AdventureCycles-Logo.png image to the project and set its **Build Action** to **Embedded Resource** in the file properties so it can be loaded using GetManifestResourceStream.
 {% capture codesnippet3 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
@@ -524,7 +530,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 ## Save Service class in portable project
 
-Add the new class file with name as **SaveService** to the **Project** and add below code in it. This is the helper class used to save and view the Excel file in windows, android, iOS and MAC devices.
+Add a new class file named **SaveService** to the shared project and add the following code in it. This is the helper class used to save and view the Excel file on Windows, Android, iOS, and Mac Catalyst devices.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -539,9 +545,9 @@ namespace MAUISample.Services
 {% endhighlight %}
 {% endtabs %}
 
-## Save and View the Excel document in windows
+## Save and View the Excel document in Windows
 
-Add the new class file with name **SaveWindows** file under **Project-> Platforms-> Windows** directory to save and view the Excel document in the windows machine and use the below code in it.
+Add a new class file named **SaveWindows** under the **Platforms -> Windows** directory to save and view the Excel document on a Windows machine, and use the following code in it.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -613,7 +619,7 @@ namespace MAUISample.Services
 
 ## Save and View the Excel document in Android
 
-Add the new class file with name **SaveAndroid** file under **Project-> Platforms-> Android** directory to save and view the Excel document in the Android Device and use the below code in it.
+Add a new class file named **SaveAndroid** under the **Platforms -> Android** directory to save and view the Excel document on an Android device, and use the following code in it.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -688,7 +694,7 @@ namespace MAUISample.Services
 {% endhighlight %}
 {% endtabs %}
 
-N> Introduced a new runtime permission model for the Android SDK version 23 and above. So, include the following code for enabling the Android file provider to save and view the generated PDF document.
+N> A new runtime permission model was introduced for Android SDK version 23 and above. Include the following configuration to enable the Android file provider so the generated Excel document can be saved and viewed.
 
 Create a new XML file with the name of **provider_path.xml** under the **Resources-> xml** folder of **Android project** and add the following code in it. Eg: Resources/xml/provider_path.xml
 
@@ -723,7 +729,7 @@ Add the following code to the **AndroidManifest.xml** file located under **Prope
 
 ## Save and View the Excel document in iOS
 
-Add the new class file with name **SaveIOS** file under **Project-> Platforms-> iOS** directory to save and view the Excel document in the iOS Device and use the below code in it.
+Add a new class file named **SaveIOS** under the **Platforms -> iOS** directory to save and view the Excel document on an iOS device, and use the following code in it.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -772,7 +778,7 @@ namespace MAUISample.Services
 
 ## Save and View the Excel document in MacCatalyst
 
-Add the new class file with name **SaveMAC** file under **Project-> Platforms-> MacCatalyst** directory to save and view the Excel document in the MAC Device and use the below code in it.
+Add a new class file named **SaveMAC** under the **Platforms -> MacCatalyst** directory to save and view the Excel document on a Mac device, and use the following code in it.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -894,7 +900,9 @@ By executing the program in windows, you will get the **Excel document** as foll
 
 ## Read and Edit Excel file
 
-The below code snippet illustrates how to read and edit an Excel file in .NET MAUI.
+The following code snippet illustrates how to read and edit an Excel file in .NET MAUI.
+
+N> Add the `Sample.xlsx` file to the project and set its **Build Action** to **Embedded Resource** before running this example.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}

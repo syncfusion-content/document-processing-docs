@@ -7,23 +7,26 @@ documentation: UG
 ---
 # Create, read, and edit Excel files in WPF
 
-[.NET Excel Library for WPF platform](https://www.syncfusion.com/document-processing/excel-framework/net/excel-library) can be used to create, read, edit Excel files. These can also convert Excel files to PDF.
+[.NET Excel Library for WPF platform](https://www.syncfusion.com/document-processing/excel-framework/net/excel-library) can be used to create, read, and edit Excel files. It can also convert Excel files to PDF.
+
+N> This article uses the `Syncfusion.XlsIO.Wpf` NuGet package, which targets the **.NET Framework** WPF platform. For .NET Core / .NET 5+ / .NET 6+ / .NET 8+ WPF apps, use the `Syncfusion.XlsIO.Net.Core` package instead.
 
 ## Create a simple Excel report
 
-The steps below illustrate creating a simple Invoice formatted Excel document in WPF.
+The following steps show how to create a simple invoice-formatted Excel document in WPF.
+
 
 Step 1: Create a new C# WPF Application project.
 
 ![Create WPF application in Visual Studio](Wpf_images/Wpf_images_img1.png)
 
-Step 2: Install the [Syncfusion.XlsIO.Wpf](https://www.nuget.org/packages/Syncfusion.XlsIO.Wpf) NuGet package as reference to your .NET Framework applications from [NuGet.org](https://www.nuget.org).
+Step 2: Install the [Syncfusion.XlsIO.Wpf](https://www.nuget.org/packages/Syncfusion.XlsIO.Wpf) NuGet package as a reference to your .NET Framework applications from [NuGet.org](https://www.nuget.org). The package requires .NET Framework 4.5 or later.
 
 ![Install Syncfusion.XlsIO.Wpf Nuget Package](Wpf_images/Wpf_images_img2.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
 
-Step 3: Include the following code snippet in Add a new button in MainWindow.xaml file to add a button for the creation of Excel document.
+Step 3: Add the following code to the **MainWindow.xaml** file to add a button for generating the Excel document.
 {% capture codesnippet1 %}
 {% tabs %}
 {% highlight XAML %}
@@ -35,7 +38,7 @@ Step 3: Include the following code snippet in Add a new button in MainWindow.xam
 {% endcapture %}
 {{ codesnippet1 | OrderList_Indent_Level_1 }}
 
-Step 4: Include the following namespaces in MainWindow.xaml.cs file.
+Step 4: Add the following namespaces in the **MainWindow.xaml.cs** file.
 {% capture codesnippet2 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
@@ -49,13 +52,12 @@ using System.Windows;
 Imports Syncfusion.XlsIO
 Imports System.Drawing
 Imports System.IO
-Imports System.Windows
 {% endhighlight %}
 {% endtabs %}
 {% endcapture %}
 {{ codesnippet2 | OrderList_Indent_Level_1 }}
 
-Step 5: Include the following code snippet in Button_Click, the click event of the button to create the Excel document.
+Step 5: Add the following code in the **Button_Click** event handler to create the Excel document.
 {% capture codesnippet3 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
@@ -107,7 +109,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["D8"].Number = 564;
   worksheet.Range["E8"].Text = "Due Upon Receipt";
 
-  //Apply an RGB background color to the cells from D5 to E8
+  //Apply RGB fill color to the cells from D5 to E8
   worksheet.Range["D5:E5"].CellStyle.Color = Color.FromArgb(42, 118, 189);
   worksheet.Range["D7:E7"].CellStyle.Color = Color.FromArgb(42, 118, 189);
 
@@ -115,7 +117,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["D5:E5"].CellStyle.Font.Color = ExcelKnownColors.White;
   worksheet.Range["D7:E7"].CellStyle.Font.Color = ExcelKnownColors.White;
 
-  //Make the text as bold from D5 to E8
+  //Make the text bold from D5 to E8
   worksheet.Range["D5:E8"].CellStyle.Font.Bold = true;
 
   //Apply alignment to the cells from D5 to E8
@@ -124,7 +126,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["D7:E7"].CellStyle.VerticalAlignment = ExcelVAlign.VAlignCenter;
   worksheet.Range["D6:E6"].CellStyle.VerticalAlignment = ExcelVAlign.VAlignTop;
 
-  //Enter a value and apply formatting in the cell A7
+  //Enter a value in cell A7 and apply formatting
   worksheet.Range["A7"].Text = "  BILL TO";
   worksheet.Range["A7"].CellStyle.Color = Color.FromArgb(42, 118, 189);
   worksheet.Range["A7"].CellStyle.Font.Bold = true;
@@ -187,7 +189,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   application.EnableIncrementalFormula = true;
   worksheet.Range["E16:E20"].Formula = "=C16*D16";
 
-  //Formula for Sum the total
+  //Formula to sum the total
   worksheet.Range["E23"].Formula = "=SUM(E16:E22)";
 
   //Apply borders
@@ -285,7 +287,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   worksheet.Range("D8").Number = 564
   worksheet.Range("E8").Text = "Due Upon Receipt"
 
-  'Apply RGB back color to the cells from D5 to E8
+  'Apply RGB fill color to the cells from D5 to E8
   worksheet.Range("D5:E5").CellStyle.Color = Color.FromArgb(42, 118, 189)
   worksheet.Range("D7:E7").CellStyle.Color = Color.FromArgb(42, 118, 189)
 
@@ -293,7 +295,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   worksheet.Range("D5:E5").CellStyle.Font.Color = ExcelKnownColors.White
   worksheet.Range("D7:E7").CellStyle.Font.Color = ExcelKnownColors.White
 
-  'Make the text as bold from D5 to E8
+  'Make the text bold from D5 to E8
   worksheet.Range("D5:E8").CellStyle.Font.Bold = True
 
   'Apply alignment to the cells from D5 to E8
@@ -302,7 +304,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   worksheet.Range("D7:E7").CellStyle.VerticalAlignment = ExcelVAlign.VAlignCenter
   worksheet.Range("D6:E6").CellStyle.VerticalAlignment = ExcelVAlign.VAlignTop
 
-  'Enter a value and apply formatting in the cell A7
+  'Enter a value in cell A7 and apply formatting
   worksheet.Range("A7").Text = "  BILL TO"
   worksheet.Range("A7").CellStyle.Color = Color.FromArgb(42, 118, 189)
   worksheet.Range("A7").CellStyle.Font.Bold = True
@@ -365,7 +367,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   application.EnableIncrementalFormula = True
   worksheet.Range("E16:E20").Formula = "=C16*D16"
 
-  'Formula for Sum the total
+  'Formula to sum the total
   worksheet.Range("E23").Formula = "=SUM(E16:E22)"
 
   'Apply borders
@@ -423,7 +425,7 @@ By executing the program, you will get the Excel file as below.
 
 ## Read and Edit Excel file
 
-The below code snippet illustrates how to read and edit an Excel file in WPF.
+The following code snippet illustrates how to read and edit an Excel file in WPF. Make sure a file named `Sample.xlsx` exists in the project's `bin\Debug` folder (set its **Copy to Output Directory** property to **Copy if newer** in the Visual Studio project).
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -450,17 +452,18 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
   //Save the Excel document
   workbook.SaveAs("Output.xlsx");
+  workbook.Close();
 }
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET" %}
 'Create an instance of ExcelEngine
 Using excelEngine As ExcelEngine = New ExcelEngine()
-  'Instantiate the excel application object
+  'Instantiate the Excel application object
   Dim application As IApplication = excelEngine.Excel
 
   'Set the default application version
-  application.DefaultVersion = ExcelVersion.Excel2016
+  application.DefaultVersion = ExcelVersion.Xlsx
 
   'Load the existing Excel workbook into IWorkbook
   Dim workbook As IWorkbook = application.Workbooks.Open("Sample.xlsx")
@@ -472,10 +475,11 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   worksheet.Range("A3").Text = "Hello World"
 
   'Access a cell value from Excel
-  Dim value As var = worksheet.Range("A1").Value
+  Dim cellValue As Object = worksheet.Range("A1").Value
 
   'Save the Excel document
   workbook.SaveAs("Output.xlsx")
+  workbook.Close()
 End Using
 {% endhighlight %}
 {% endtabs %}

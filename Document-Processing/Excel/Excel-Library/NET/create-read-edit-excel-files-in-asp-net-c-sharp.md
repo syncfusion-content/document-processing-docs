@@ -11,21 +11,27 @@ documentation: UG
 
 ## Create a simple Excel report
 
-The below steps illustrates creating an simple Invoice formatted Excel document in ASP.NET.
+The following steps illustrate creating a simple invoice-formatted Excel document in ASP.NET Web Forms.
+
+**Prerequisites:**
+- Visual Studio 2017 or later with the **ASP.NET and web development** workload installed.
+- .NET Framework 4.5 or later.
+- A user account with write permissions to the project folder.
+- The `AdventureCycles-Logo.png` image placed in the project's `App_Data` folder.
 
 Step 1: Create a new ASP.NET Web application project.
 
 ![Create ASP.NET application in Visual Studio](ASP-NET_images/ASP-NET_images_img1.png)
 
-Step 2: Install the [Syncfusion.XlsIO.AspNet](https://www.nuget.org/packages/Syncfusion.XlsIO.AspNet) NuGet package as reference to your .NET Framework application from [NuGet.org](https://www.nuget.org).
+Step 2: Install the [Syncfusion.XlsIO.AspNet](https://www.nuget.org/packages/Syncfusion.XlsIO.AspNet) NuGet package as a reference to your ASP.NET Web Forms application from [NuGet.org](https://www.nuget.org).
 
 ![Install Syncfusion.XlsIO.AspNet Nuget Package](ASP-NET_images/ASP-NET_images_img2.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
 
-Step 3: Add a new Web Form in ASP .NET project. Right click on the project and select Add > New Item and add a Web Form from the list. Name it as MainPage.
+Step 3: Add a new Web Form to the ASP.NET project. Right-click the project, select **Add > New Item**, and add a **Web Form** from the list. Name it `MainPage`.
 
-Step 4: Add a new button in the MainPage.aspx as shown below.
+Step 4: Add a new button in the `MainPage.aspx` file as shown below.
 {% capture codesnippet1 %}
 {% tabs %} 
 {% highlight HTML %}
@@ -46,7 +52,7 @@ Step 4: Add a new button in the MainPage.aspx as shown below.
 {% endcapture %}
 {{ codesnippet1 | OrderList_Indent_Level_1 }}
 
-Step 5: Include the following namespace in your MainPage.aspx.cs file.
+Step 5: Include the following namespaces in your `MainPage.aspx.cs` file.
 {% capture codesnippet2 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
@@ -62,7 +68,9 @@ Imports System.Drawing
 {% endcapture %}
 {{ codesnippet2 | OrderList_Indent_Level_1 }}
 
-Step 6: Include the below code snippet in the click event of the button in MainPage.aspx.cs and also include `AdventureCycles-Logo.png` image file on app data folder, to create an Excel file and download it
+Step 6: Include the following code snippet in the click event of the button in `MainPage.aspx.cs`, and also place the `AdventureCycles-Logo.png` image in the `App_Data` folder, to create an Excel file and download it.
+
+N> Ensure the `AdventureCycles-Logo.png` image is present in the `App_Data` folder of the project, since the code uses `Server.MapPath("App_Data/AdventureCycles-Logo.png")` to resolve the file path.
 {% capture codesnippet3 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
@@ -426,7 +434,9 @@ By executing the program, you will get the Excel file as below.
 
 ## Read and Edit Excel file
 
-The below code snippet illustrates how to read and edit an Excel file in ASP.NET Web Forms.
+The following code snippet illustrates how to read and edit an Excel file in ASP.NET Web Forms.
+
+N> Place `Sample.xlsx` in the `App_Data` folder of the project.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -476,7 +486,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   worksheet.Range("A3").Text = "Hello World"
   
   'Access a cell value from Excel
-  Dim value As var = worksheet.Range("A1").Value
+  Dim value As Object = worksheet.Range("A1").Value
   
   'Save the Excel document
   workbook.SaveAs("Output.xlsx", Response, ExcelDownloadType.PromptDialog, ExcelHttpContentType.Excel2016)

@@ -11,19 +11,25 @@ documentation: UG
 
 ## Create a simple Excel report
 
-The steps below illustrate creating a simple Invoice formatted Excel document in Windows Forms.
+The following steps illustrate creating a simple invoice-formatted Excel document in Windows Forms.
+
+**Prerequisites:**
+- Visual Studio 2017 or later with the **.NET desktop development** workload installed.
+- .NET Framework 4.5 or later.
+- A user account with write permissions to the project output directory.
+- The `AdventureCycles-Logo.png` image placed in the project output directory (typically `bin/Debug/net*/`).
 
 Step 1: Create a new C# Windows Forms Application project.
 
 ![Create Windows Forms application in Visual Studio](Windows-Forms_images/Windows-Forms_images_img1.png)
 
-Step 2: Install the [Syncfusion.XlsIO.WinForms](https://www.nuget.org/packages/Syncfusion.XlsIO.WinForms) NuGet package as reference to your .NET Framework applications from [NuGet.org](https://www.nuget.org).
+Step 2: Install the [Syncfusion.XlsIO.WinForms](https://www.nuget.org/packages/Syncfusion.XlsIO.WinForms) NuGet package as a reference to your Windows Forms application from [NuGet.org](https://www.nuget.org).
 
 ![Install Syncfusion.XlsIO.WinForms Nuget Package](Windows-Forms_images/Windows-Forms_images_img2.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
 
-Step 3: Include the following namespaces in the Form1.Designer.cs file.
+Step 3: Include the following namespaces in the `Form1.Designer.cs` file.
 {% capture codesnippet1 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
@@ -38,14 +44,14 @@ using System.Windows.Forms;
 Imports System.IO
 Imports Syncfusion.XlsIO
 Imports System
-Imports Syste.Drawing
+Imports System.Drawing
 Imports System.Windows.Forms
 {% endhighlight %}
 {% endtabs %} 
 {% endcapture %}
 {{ codesnippet1 | OrderList_Indent_Level_1 }} 
 
-Step 4: Add a new button in the Form1.Designer.cs file to create an Excel document as shown below.
+Step 4: Add a new button in the `Form1.Designer.cs` file to create an Excel document as shown below.
 {% capture codesnippet2 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
@@ -109,6 +115,8 @@ End Sub
 {{ codesnippet2 | OrderList_Indent_Level_1 }} 
 
 Step 5: Include the following code in the `btnCreate_Click` event handler to create the Excel document.
+
+N> Before running, place the `AdventureCycles-Logo.png` image in the project output directory (typically `bin/Debug/<framework>/`) so the `FileStream` can load it
 {% capture codesnippet3 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
@@ -476,7 +484,9 @@ By executing the program, you will get the Excel file as below.
 
 ## Read and Edit Excel file
 
-The below code snippet illustrates how to read and edit an Excel file in Windows Forms.
+The following code snippet illustrates how to read and edit an Excel file in Windows Forms.
+
+N> Place `Sample.xlsx` in the project output directory before running this example.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
