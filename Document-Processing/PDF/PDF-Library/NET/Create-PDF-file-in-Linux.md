@@ -11,6 +11,10 @@ Keywords: linux os save pdf, linux os load pdf, c# save pdf, c# load pdf
 
 The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency on Adobe Acrobat. Using this library, you can create a PDF document in a .NET Core application on Linux.
 
+## Prerequisites
+
+* Install the .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
+
 ## Steps to create PDF document programmatically
 
 Step 1: Execute the following command in the Linux terminal to create a new .NET Core Console application project.
@@ -23,7 +27,17 @@ dotnet new console
 {% endhighlight %}
 {% endtabs %}
 
-Step 2: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/) by executing the following command.
+Step 2: Navigate to the newly created project directory.
+
+{% tabs %}
+{% highlight bash %}
+
+cd ConsoleApp
+
+{% endhighlight %}
+{% endtabs %}
+
+Step 3: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/) by executing the following command.
 
 {% tabs %}
 {% highlight bash %}
@@ -35,7 +49,7 @@ dotnet add package Syncfusion.Pdf.Net.Core -v xx.x.x.xx -s https://www.nuget.org
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you also have to add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 3: Include the following namespaces in the *Program.cs* file.
+Step 4: Include the following namespaces in the *Program.cs* file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -44,11 +58,12 @@ using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Drawing;
 using System.IO;
+using System.Collections.Generic;
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 4: Add the following code sample to the *Program.cs* file to **create a PDF document in the .NET Core application on Linux**.
+Step 5: Add the following code sample to the *Program.cs* file to **create a PDF document in the .NET Core application on Linux**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -103,11 +118,13 @@ using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"Output.pd
     //Save the PDF document to file stream.
     document.Save(outputFileStream);
 }
+//Close the PDF document.
+document.Close(true);
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Execute the following command to restore the NuGet packages.
+Step 6: Execute the following command to restore the NuGet packages.
 
 {% tabs %}
 {% highlight bash %}
@@ -119,7 +136,7 @@ dotnet restore
 
 ![Linux Build](GettingStarted_images/Linux_Build.png)
 
-Step 6: Execute the following command in terminal to run the application.
+Step 7: Execute the following command in terminal to run the application.
 {% tabs %}
 {% highlight bash %}
 
