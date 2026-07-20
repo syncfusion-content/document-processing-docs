@@ -9,14 +9,15 @@ documentation: ug
 
 # Customize the appearance of PDF Form Fields in Blazor SfPdfViewer
 
-**Styling** customizes appearance only (font, color, alignment, border, background, indicator text).
+**Styling** customizes the appearance of form fields: font, color, alignment, border, and background. For check box and radio button fields, you can also set indicator text.
 
 ## Customize appearance of form fields using the UI
 Use the **Properties** panel to adjust:
 - Font family and size, text color, and alignment
 - Border color and thickness
 - Background color
-![Textbox style from UI showing font, color, and border settings](../../../javascript-es6/images/ui-textbox-style.png)
+
+![Textbox style from UI showing font, color, and border settings](../form-designer-images/ui-textbox-style.png)
 
 ## Customize appearance of form fields programmatically
 Use [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_UpdateFormFieldsAsync_System_Collections_Generic_List_Syncfusion_Blazor_SfPdfViewer_FormFieldInfo__) to apply styles:
@@ -87,7 +88,7 @@ Define defaults so fields added from the toolbar inherit styles:
 {% endhighlight %}
 {% endtabs %}
 
-[View Sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples)
+For a hands-on reference with working code examples, explore the sample projects available on [GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Form%20Designer/Components/Pages).
 
 ## See also
 

@@ -1,22 +1,24 @@
 ---
 layout: post
 title: React Spreadsheet getting started with Create React App | Syncfusion
-description: Checkout and learn how to use the React Spreadsheet component of Syncfusion Essential JS 2 in a Create React App project.
+description: Check out and learn how to use the React Spreadsheet component of Syncfusion Essential JS 2 in a Create React App project.
 control: Spreadsheet
 platform: document-processing
 documentation: ug
 ---
 
-# Getting Started with React Spreadsheet Editor using Create React App
+# Getting Started with the React Spreadsheet Editor in Create React App
 
 This article provides a step-by-step guide for setting up a React application using Create React App and integrating React Spreadsheet Editor.
+
+> **Note:** Create React App (CRA) is no longer actively maintained, and the React team recommends modern build tools such as [Vite](https://vitejs.dev/) or [Next.js](https://nextjs.org/) for new projects. This guide remains available for existing CRA-based projects. To start a new project with Next.js, see [Getting Started with the React Spreadsheet Component in a Next.js Project](./nextjs-getting-started.md).
 
 ## Prerequisites
 
 Ensure the following requirements are met before starting:
 [System requirements for React Spreadsheet Editor](https://ej2.syncfusion.com/react/documentation/system-requirement)
 
-## Create the React application
+## Create the React Application
 
 The recommended approach is to use the [`Create React App`](https://github.com/facebook/create-react-app) tool for initializing your project. This tool sets up a development environment and optimizes the build for production.
 
@@ -41,7 +43,7 @@ npx create-react-app my-app --template typescript
 cd my-app
 ```
 
-Besides using the `npx` package runner tool, also create an application from the `npm init`. To begin with the `npm init`, upgrade the `npm` version to `npm 6`+.
+You can also initialize a project with `npm init react-app` instead of `npx`. This requires `npm 6` or later (npm 10+ is recommended, bundled with current Node.js LTS).
 
 ```bash
 npm init react-app my-app
@@ -63,9 +65,9 @@ or
 yarn add @syncfusion/ej2-react-spreadsheet
 ```
 
-## Import CSS
+## Add CSS references
 
-The React Spreadsheet Editor come with built-in [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme). Import the CSS styles for the Spreadsheet component and its dependent components in the `src/App.css` file. The example below demonstrates importing the `Tailwind 3` theme.
+Add the following Spreadsheet and dependent component style references to the `src/App.css` file. Replace the existing content with the theme import code below.
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
@@ -80,11 +82,11 @@ The React Spreadsheet Editor come with built-in [themes](https://ej2.syncfusion.
 @import '../node_modules/@syncfusion/ej2-react-spreadsheet/styles/tailwind3.css';
 ```
 
-For more details on built-in themes and usage, refer to the [Themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme).
+> **Note:** This example uses the `Tailwind 3` theme. To use a different built-in theme, replace the `tailwind3.css` references with the corresponding theme stylesheets. Refer to the [Themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme) for information about the available themes and the different ways to include theme styles in a React application.
 
-## Adding Spreadsheet component
+## Add the Syncfusion® React Spreadsheet Component
 
-Now, you can import the spreadsheet component into your `src/App.js` file.
+Now, import the `SpreadsheetComponent` into `src/App.js` file and replace the existing code with the following:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -92,7 +94,7 @@ import * as React from 'react';
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 import './App.css';
 export default function App() {
-    return  (<SpreadsheetComponent/>);
+    return (<SpreadsheetComponent/>);
 }
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
@@ -100,13 +102,13 @@ import * as React from 'react';
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 import './App.css';
 export default function App() {
-    return  (<SpreadsheetComponent/>);
+    return (<SpreadsheetComponent/>);
 }
 {% endhighlight %}
 {% endtabs %}
 
-## Run the application
-Run the app using the following commands:
+## Run the Application
+Run the app using the following command:
 
 ```bash
 npm start
@@ -117,7 +119,10 @@ or
 ```bash
 yarn start
 ```
-N> Looking for the full React Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) page.
 
 ## See Also
 * [Getting Started with React Spreadsheet](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/getting-started)
+* [Getting Started with the React Spreadsheet Component in a Next.js Project](./nextjs-getting-started)
+* [Open Excel files](../open-excel-files)
+* [Save Excel files](../save-excel-files)
+* [Data Binding](../data-binding)

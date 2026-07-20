@@ -1,8 +1,7 @@
 ---
 layout: post
-title: Form Field Events in WPF Pdfviewer control | Syncfusion
+title: Form Field Events in WPF PDF Viewer control | Syncfusion
 description: Learn about the different form field events supported in the Syncfusion WPF PDF Viewer and how they help manage user interactions and enhance form workflows.
-control: Form Field Events
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
@@ -13,7 +12,7 @@ domainurl: ##DomainURL##
 The Syncfusion [WPF PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/overview) supports form field click events, allowing applications to detect when a user clicks on a form field. These events can be used to trigger application‑specific actions or handle basic interactions when a form field is selected.
 
 ## Retrieve the form field details 
-[WPF PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/overview) allows form field details to be retrieved through the [FormFieldClicked](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_FormFieldClicked) event of [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html) when a form field is clicked in the PDF document. The [FormField](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.FormFieldClickedEventArgs.html#Syncfusion_Windows_PdfViewer_FormFieldClickedEventArgs_FormField) property available in [FormFieldClickedEventArgs](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.FormFieldClickedEventArgs.html) must be typecast to the appropriate form field type to access specific details.
+[WPF PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/overview) allows form field details to be retrieved through the [FormFieldClicked](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_FormFieldClicked) event of [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html) when a form field is clicked in the PDF document. The [FormField](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.FormFieldClickedEventArgs.html#Syncfusion_Windows_PdfViewer_FormFieldClickedEventArgs_FormField) property available in [FormFieldClickedEventArgs](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.FormFieldClickedEventArgs.html) must be cast to the appropriate form field type to access specific details.
 
 The following code snippet demonstrates how to retrieve details for all supported form fields using the FormFieldClicked event.
 
@@ -68,7 +67,7 @@ private void PdfViewer_FormFieldClicked(object sender, FormFieldClickedEventArgs
 {% endtabs %}
 
 
-**Common Use Cases**
+## Common Use Cases
 
 Form field events can be used to:
 - Track user interaction with form fields
@@ -78,10 +77,10 @@ Form field events can be used to:
 
 ## See also
 
--  [Overview](./overview)
+- [Overview](./overview)
 - [Import form fields](./import-export-form-fields/import-form-fields)
 - [Export form fields](./import-export-form-fields/export-form-fields)
 - [Add form fields](./manage-form-fields/add-form-fields)
 - [Modify form fields](./manage-form-fields/modify-form-fields)
-- [Remove form fields](./manage-form-fields/remove-form-fields) 
+- [Remove form fields](./manage-form-fields/remove-form-fields)
 - [Form fields API](./form-fields-api)

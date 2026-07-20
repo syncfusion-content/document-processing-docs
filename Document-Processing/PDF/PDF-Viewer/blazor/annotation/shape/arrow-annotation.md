@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Arrow Annotation (Shape) in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to enable, apply, customize, and manage Arrow annotations in the Syncfusion Blazor SfPdfViewer component.
+description: Learn how to enable, apply, customize, and manage Arrow annotations in the Blazor SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -32,16 +32,17 @@ To enable Arrow annotations in the Blazor SfPdfViewer, configure the component w
 ## Add Arrow Annotation
 
 ### Add Arrow Annotation Using the Toolbar
-1. Open the **Annotation Toolbar**.
-2. Select **Shapes** → **Arrow**.
-3. Click and drag on the PDF page to draw the arrow.
+1. Click the **Edit Annotation** button in the SfPdfViewer toolbar. A secondary toolbar appears below it.
+2. Click the **Shapes Annotation** dropdown. A list of shape annotation types appears.
+3. Select **Arrow** to enter Arrow annotation mode.
+4. Click and drag on the PDF page to draw the arrow.
 
 ![Shape toolbar](../../images/blazor-pdfviewer-add-shape-in-toolbar.png)
 
 N> When in Pan mode, selecting a shape tool automatically switches the viewer to selection mode for smooth interaction.
 
-### Enable Arrow Mode
-Switch the viewer into arrow mode using `SetAnnotationModeAsync(AnnotationType.Arrow)`.
+### Enable Arrow Annotation Mode
+Switch the viewer into arrow mode using [`SetAnnotationModeAsync(AnnotationType.Arrow)`]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SetAnnotationModeAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationType_)).
 
 ```cshtml
 
@@ -56,10 +57,10 @@ Switch the viewer into arrow mode using `SetAnnotationModeAsync(AnnotationType.A
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async void EnableArrowMode(MouseEventArgs args)
+    private async void EnableArrowMode(MouseEventArgs args)
     {
         await viewer.SetAnnotationModeAsync(AnnotationType.Arrow);
     }
@@ -67,33 +68,8 @@ Switch the viewer into arrow mode using `SetAnnotationModeAsync(AnnotationType.A
 
 ```
 
-#### Exit Arrow Mode
-```cshtml
-
-@using Syncfusion.Blazor.SfPdfViewer
-@using Syncfusion.Blazor.Buttons
-
-<SfButton OnClick="ExitArrowMode">Exit Arrow Mode</SfButton>
-<SfPdfViewer2 DocumentPath="@DocumentPath" 
-              @ref="viewer"
-              Width="100%" 
-              Height="100%">
-</SfPdfViewer2>
-
-@code {
-    SfPdfViewer2 viewer;
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-
-    public async void ExitArrowMode(MouseEventArgs args)
-    {
-        await viewer.SetAnnotationModeAsync(AnnotationType.None);
-    }
-}
-
-```
-
-### Add Arrow Programmatically
-Use the [`AddAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) API to draw an arrow at a specific location (defined by two **VertexPoints**).
+### Add Arrow Annotation Programmatically
+Use the [`AddAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) API to draw an arrow at a specific location (defined by two **VertexPoints**). The arrowhead style can be configured with `LineHeadStart` and `LineHeadEnd`.
 
 ```cshtml
 
@@ -108,10 +84,10 @@ Use the [`AddAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async void AddArrow(MouseEventArgs args)
+    private async void AddArrow(MouseEventArgs args)
     {
         PdfAnnotation annotation = new PdfAnnotation();
         annotation.Type = AnnotationType.Arrow;
@@ -121,6 +97,8 @@ Use the [`AddAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.
         vertexPoints.Add(new VertexPoint() { X = 200, Y = 370 });
         vertexPoints.Add(new VertexPoint() { X = 350, Y = 370 });
         annotation.VertexPoints = vertexPoints;
+        annotation.LineHeadStart = LineHeadStyle.None;
+        annotation.LineHeadEnd = LineHeadStyle.Arrow;
         
         await viewer.AddAnnotationAsync(annotation);
     }
@@ -128,8 +106,8 @@ Use the [`AddAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 ```
 
-## Customize Arrow Appearance
-Configure default arrow appearance (fill color, stroke color, thickness, opacity) using the [`ArrowSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ArrowSettings) property.
+## Customize Arrow Annotation Appearance
+Configure default arrow appearance (fill color, stroke color, thickness, opacity, and arrowheads) using the [`ArrowSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ArrowSettings) property.
 
 ```cshtml
 
@@ -143,7 +121,7 @@ Configure default arrow appearance (fill color, stroke color, thickness, opacity
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
     PdfViewerArrowSettings ArrowSettings = new PdfViewerArrowSettings
@@ -151,7 +129,9 @@ Configure default arrow appearance (fill color, stroke color, thickness, opacity
         FillColor = "#ffff00",
         StrokeColor = "#0066ff",
         Thickness = 2,
-        Opacity = 0.9
+        Opacity = 0.9,
+        LineHeadStart = LineHeadStyle.None,
+        LineHeadEnd = LineHeadStyle.Arrow
     };
 }
 
@@ -159,10 +139,10 @@ Configure default arrow appearance (fill color, stroke color, thickness, opacity
 
 N> For **Line** and **Arrow** annotations, **Fill Color** is available only when an arrowhead style is applied at the **Start** or **End**. If both are `None`, lines do not render fill and the Fill option remains disabled.
 
-## Manage Arrow (Edit, Move, Resize, Delete)
-### Edit Arrow 
+## Manage Arrow Annotation (Edit, Move, Resize, Delete)
+### Edit Arrow Annotation
 
-#### Edit Arrow (UI)
+#### Edit Arrow Annotation (UI)
 - Select an Arrow to view resize handles.
 - Drag endpoints to adjust length/angle.
 - Edit stroke color, opacity, and thickness using the annotation toolbar.
@@ -183,7 +163,7 @@ Open the Line Properties dialog via **Right Click → Properties**.
 
 ![Line properties dialog](../../images/blazor-pdfviewer-edit-line-property.png)
 
-#### Edit Arrow Programmatically
+#### Edit Arrow Annotation Programmatically
 
 Modify an existing Arrow programmatically using `EditAnnotationAsync()`.
 
@@ -200,10 +180,10 @@ Modify an existing Arrow programmatically using `EditAnnotationAsync()`.
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async void EditArrowProgrammatically(MouseEventArgs args)
+    private async void EditArrowProgrammatically(MouseEventArgs args)
     {
         List<PdfAnnotation> annotationCollection = await viewer.GetAnnotationsAsync();
         foreach (var annot in annotationCollection)
@@ -222,16 +202,16 @@ Modify an existing Arrow programmatically using `EditAnnotationAsync()`.
 
 ```
 
-### Delete Arrow
+### Delete Arrow Annotation
 
 The PDF Viewer supports deleting existing annotations through the UI and API.
-See [**Delete Annotation**](../delete-annotations) for full behavior and workflows.
+See [**Delete Annotation**](../delete-annotation) for full behavior and workflows.
 
 ### Comments
 
 Use the [**Comments panel**](../comments) to add, view, and reply to threaded discussions linked to arrow annotations. It provides a dedicated interface for collaboration and review within the PDF Viewer.
 
-## Set properties while adding Individual Annotation
+## Set Properties While Adding Individual Annotations
 
 Set properties for individual arrow annotations by passing values directly during [`AddAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_).
 
@@ -248,10 +228,10 @@ Set properties for individual arrow annotations by passing values directly durin
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async void AddMultipleArrows(MouseEventArgs args)
+    private async void AddMultipleArrows(MouseEventArgs args)
     {
         // Arrow 1
         PdfAnnotation annotation1 = new PdfAnnotation();
@@ -289,7 +269,7 @@ Set properties for individual arrow annotations by passing values directly durin
 
 ## Disable Arrow Annotation
 
-Disable shape annotations (Line, Arrow, Rectangle, Circle, Polygon) using the [`EnableShapeAnnotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableShapeAnnotation) property.
+Disable arrow annotations (along with all other shape annotations: Line, Rectangle, Circle, Polygon) using the [`EnableShapeAnnotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableShapeAnnotation) property.
 
 ```cshtml
 
@@ -307,15 +287,15 @@ Disable shape annotations (Line, Arrow, Rectangle, Circle, Polygon) using the [`
 
 ```
 
-## Handle Arrow Events
+## Handle Arrow Annotation Events
 
 The PDF viewer provides annotation life-cycle events that notify when Arrow annotations are added, modified, selected, or removed.
 For the full list of available events and their descriptions, see [**Annotation Events**](../events)
 
 ## Export and Import
-The PDF Viewer supports exporting and importing annotations. For details on supported formats and workflows, see [**Export and Import annotations**](../export-import-annotations).
+The PDF Viewer supports exporting and importing annotations. For details on supported formats and workflows, see [**Export and Import annotations**](../import-export-annotation).
 
-## See Also
+## See also
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
 - [Comments Panel](../comments)
 - [Annotation Events](../events)

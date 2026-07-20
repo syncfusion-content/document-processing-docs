@@ -17,6 +17,10 @@ You can export a single page from a PDF file as an image by specifying the page 
 {% tabs %}
 {% highlight C# %}
 
+using Syncfusion.PdfToImageConverter;
+using System.IO;
+using System.Drawing;
+
 //Initialize PDF to Image converter.
 PdfToImageConverter imageConverter = new PdfToImageConverter();
 //Load the PDF document as a stream
@@ -24,6 +28,13 @@ FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.R
 imageConverter.Load(inputStream);
 //Convert PDF to Image.
 Stream outputStream = imageConverter.Convert(0, false, false);
+//Save the image to disk.
+using (FileStream fileStream = new FileStream("Output.png", FileMode.Create, FileAccess.Write))
+{
+    outputStream.CopyTo(fileStream);
+}
+outputStream.Dispose();
+inputStream.Dispose();
 
 {% endhighlight %}
 {% endtabs %}
@@ -35,23 +46,41 @@ You can export a specific range of PDF pages into images by specifying the start
 {% tabs %}
 {% highlight C# %}
 
+using Syncfusion.PdfToImageConverter;
+using System.IO;
+using System.Drawing;
+
 //Initialize PDF to Image converter.
 PdfToImageConverter imageConverter = new PdfToImageConverter();
 //Load the PDF document as a stream
 FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.ReadWrite);
 imageConverter.Load(inputStream);
 //Convert PDF to Image.
-Stream[] outputStream = imageConverter.Convert(0, imageConverter.PageCount-1, false, false);
+Stream[] outputStreams = imageConverter.Convert(0, imageConverter.PageCount-1, false, false);
+//Save the images to disk.
+for (int i = 0; i < outputStreams.Length; i++)
+{
+    using (FileStream fileStream = new FileStream("Output_" + i + ".png", FileMode.Create, FileAccess.Write))
+    {
+        outputStreams[i].CopyTo(fileStream);
+    }
+    outputStreams[i].Dispose();
+}
+inputStream.Dispose();
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Exporting with a custom image size
 
-You can export PDF pages as images with custom width and height by passing the required size and setting the parameters `keepTransparency` and `isSkipAnnotations` in the Convert method. To preserve transparency in the output images, make sure to set the `keepTransparency` parameter to true. If you want to exclude annotations and form field elements from the output images, set the `isSkipAnnotations` parameter to true. Refer to the following code to export the pages of PDF into PNG image. Refer to the following code to export the page at the index of 0 into PNG image with the width and the height of 1836 and 2372 in pixels respectively.
+You can export PDF pages as images with custom width and height by passing the required size and setting the parameters `keepTransparency` and `isSkipAnnotations` in the Convert method. To preserve transparency in the output images, make sure to set the `keepTransparency` parameter to true. If you want to exclude annotations and form field elements from the output images, set the `isSkipAnnotations` parameter to true. Refer to the following code to export the page at the index of 0 into PNG image with the width and the height of 1836 and 2372 in pixels respectively.
 
 {% tabs %}
 {% highlight C# %}
+
+using Syncfusion.PdfToImageConverter;
+using System.IO;
+using System.Drawing;
 
 //Initialize PDF to Image converter.
 PdfToImageConverter imageConverter = new PdfToImageConverter();
@@ -60,6 +89,13 @@ FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.R
 imageConverter.Load(inputStream);
 //Convert PDF to Image.
 Stream outputStream = imageConverter.Convert(0, new SizeF(1836, 2372), false, false, false);
+//Save the image to disk.
+using (FileStream fileStream = new FileStream("Output.png", FileMode.Create, FileAccess.Write))
+{
+    outputStream.CopyTo(fileStream);
+}
+outputStream.Dispose();
+inputStream.Dispose();
 
 {% endhighlight %}
 {% endtabs %}
@@ -88,6 +124,13 @@ FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.R
 imageConverter.Load(inputStream);
 //Convert PDF to Image.
 Stream outputStream = imageConverter.Convert(0, zoomFactor, tileXCount, tileYCount, tileX, tileY);
+//Save the image to disk.
+using (FileStream fileStream = new FileStream("Output.png", FileMode.Create, FileAccess.Write))
+{
+    outputStream.CopyTo(fileStream);
+}
+outputStream.Dispose();
+inputStream.Dispose();
 
 {% endhighlight %}
 {% endtabs %}

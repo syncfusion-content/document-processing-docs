@@ -18,16 +18,16 @@ You can open a PDF file from the toolbar by browsing it from the local disk. You
 1. Add the [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html) in the MainWindow.xaml and run the project.
 
    ~~~xaml
-	<Window 
-		x:Class="PdfViewerDemo.MainWindow"
-		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-		WindowState="Maximized"
-		xmlns:syncfusion="clr-namespace:Syncfusion.Windows.PdfViewer;assembly=Syncfusion.PdfViewer.WPF">
-		<Grid>
-			<syncfusion:PdfViewerControl x:Name="pdfViewer"></syncfusion:PdfViewerControl>
-		</Grid>
-	</Window>
+    <Window 
+        x:Class="PdfViewerDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowState="Maximized"
+        xmlns:syncfusion="clr-namespace:Syncfusion.Windows.PdfViewer;assembly=Syncfusion.PdfViewer.WPF">
+        <Grid>
+            <syncfusion:PdfViewerControl x:Name="pdfViewer"></syncfusion:PdfViewerControl>
+        </Grid>
+    </Window>
    ~~~
    
 2. Click the <b>Open</b> button in the toolbar, as shown in the following picture. ![WPF PDF Viewer Open PDF file](view-pdf-file-images/wpf-pdf-viewer-open-file.png)
@@ -48,7 +48,7 @@ namespace PdfViewerDemo
     /// </summary>
     public partial class MainWindow : Window
     {
-        # region Constructor
+        #region Constructor
         public MainWindow()
         {
             InitializeComponent();
@@ -64,7 +64,7 @@ namespace PdfViewerDemo
 
 ## View PDF file from stream
 
-You can view the PDF file from code behind, by passing the [Stream](https://learn.microsoft.com/en-us/dotnet/api/system.io.stream?redirectedfrom=MSDN&view=netcore-3.1) as a parameter to the Load method of [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html). Refer to the following code to perform the same.
+You can view the PDF file from code behind, by passing the [Stream](https://learn.microsoft.com/en-us/dotnet/api/system.io.stream) as a parameter to the Load method of [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html). Refer to the following code to perform the same.
 
 {% tabs %}
 {% highlight c# %}
@@ -78,7 +78,7 @@ namespace PdfViewerDemo
     /// </summary>
     public partial class MainWindow : Window
     {
-        # region Constructor
+        #region Constructor
         public MainWindow()
         {
             InitializeComponent();
@@ -95,7 +95,7 @@ namespace PdfViewerDemo
 
 ## View PDF file using the ItemSource property
 
-You can also view a PDF file using the [ItemSource](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_ItemSource) property of [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html). The property accepts a string file path, a [Stream](https://learn.microsoft.com/en-us/dotnet/api/system.io.stream?view=net-7.0&redirectedfrom=MSDN), and a [PdfLoadedDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) object.
+You can also view a PDF file using the [ItemSource](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_ItemSource) property of [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html). The property accepts a string file path, a [Stream](https://learn.microsoft.com/en-us/dotnet/api/system.io.stream), and a [PdfLoadedDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) object.
 
 {% tabs %}
 {% highlight c# %}
@@ -108,7 +108,7 @@ namespace PdfViewerDemo
     /// </summary>
     public partial class MainWindow : Window
     {
-        # region Constructor
+        #region Constructor
         public MainWindow()
         {
             InitializeComponent();
@@ -122,7 +122,8 @@ namespace PdfViewerDemo
 {% endhighlight %}
 {% endtabs %}
 
-Refer the below code snippet to load a [Stream](https://learn.microsoft.com/en-us/dotnet/api/system.io.stream?view=net-7.0&redirectedfrom=MSDN) using the [ItemSource](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_ItemSource) property
+Refer to the following code snippet to load a [Stream](https://learn.microsoft.com/en-us/dotnet/api/system.io.stream) using the [ItemSource](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_ItemSource) property.
+
 {% tabs %}
 {% highlight c# %}
 //Load PDF file as Stream using the `ItemSource` property.
@@ -141,11 +142,11 @@ pdfViewer.ItemSource = pdfLoadedDocument;
 
 ## View PDF file using ItemSource with DataContext
 
-The [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html)’s [ItemSource](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_ItemSource) property allows you to bind PDF documents in XAML. This property accepts a stream input that can be bounded to the viewer during initialization. The following steps explain how to display a PDF file using the [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html):
+The [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html)’s [ItemSource](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_ItemSource) property allows you to bind PDF documents in XAML. This property accepts a stream input that can be bound to the viewer during initialization. The following steps explain how to display a PDF file using the [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html):
 
 N> From v16.3.0x onwards, PDF Viewer uses PDFium as a default rendering engine to render the PDF pages, which is a more robust and promising rendering engine. Refer to this [link](https://help.syncfusion.com/wpf/pdf-viewer/pdf-rendering-engines) for more details.
 
-1.	Create a simple class in the application that implements [INotifyPropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netcore-3.1) and declare a file stream property in the class as shown in the following code sample.
+1.	Create a simple class in the application that implements [INotifyPropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged) and declare a file stream property in the class as shown in the following code sample.
 
 {% tabs %}
 {% highlight c# tabtitle="PdfReport.cs" %}
@@ -188,27 +189,32 @@ namespace PdfViewerDemo
 {% endhighlight %}
 {% endtabs %}
 
-2. Set the [DataContext](https://learn.microsoft.com/en-us/dotnet/api/system.windows.frameworkelement.datacontext?view=windowsdesktop-8.0&viewFallbackFrom=netcore-3.1) to the Window for data binding. To add the `DataContext` in XAML, use the following code example.
+2. Set the [DataContext](https://learn.microsoft.com/en-us/dotnet/api/system.windows.frameworkelement.datacontext) to the Window for data binding. To add the `DataContext` in XAML, use the following code example.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainWindow.xaml" %}
 <Window.DataContext>
-	<pdfviewerdemo:PdfReport/>
+    <pdfviewerdemo:PdfReport/>
 </Window.DataContext>
 {% endhighlight %}
 {% endtabs %}
-
 
 3.	After setting the `DataContext`, bind the file stream property to the [ItemSource](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_ItemSource) dependency property of [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html) using the following code sample in XAML.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainWindow.xaml" %}
-﻿<Window 
+<Window 
+    x:Class="PdfViewerDemo.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    WindowState="Maximized"
+    xmlns:syncfusion="clr-namespace:Syncfusion.Windows.PdfViewer;assembly=Syncfusion.PdfViewer.WPF"
+    xmlns:pdfviewerdemo="clr-namespace:PdfViewerDemo">
     <Grid x:Name="HomeGrid">
         <syncfusion:PdfViewerControl x:Name="pdfViewer" ItemSource="{Binding DocumentStream}"></syncfusion:PdfViewerControl>
     </Grid>
 </Window>
-	
+    
 {% endhighlight %}
 {% endtabs %}
 
@@ -222,16 +228,16 @@ The [PdfDocumentView](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfV
 1. Add the [PdfDocumentView](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfDocumentView.html) control in the MainWindow.xaml.
 
    ~~~xaml
-	<Window 
-		x:Class="PdfViewerDemo.MainWindow"
-		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-		WindowState="Maximized"
-		xmlns:syncfusion="clr-namespace:Syncfusion.Windows.PdfViewer;assembly=Syncfusion.PdfViewer.WPF">
-		<Grid>
-			<syncfusion:PdfDocumentView x:Name="pdfViewer"></syncfusion:PdfDocumentView>
-		</Grid>
-	</Window>
+    <Window 
+        x:Class="PdfViewerDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowState="Maximized"
+        xmlns:syncfusion="clr-namespace:Syncfusion.Windows.PdfViewer;assembly=Syncfusion.PdfViewer.WPF">
+        <Grid>
+            <syncfusion:PdfDocumentView x:Name="pdfViewer"></syncfusion:PdfDocumentView>
+        </Grid>
+    </Window>
    ~~~
    
 2. Load the file using the [Load](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_Load_System_String_) method as mentioned in the following code snippet in MainWindow.xaml.cs.
@@ -261,7 +267,7 @@ The [PdfDocumentView](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfV
    
 3. Run the project.
 
-The following picture illustrates how the PDF file being displayed in [PdfDocumentView](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfDocumentView.html) control. ![WPF PDF Viewer File in PdfDocumentView](view-pdf-file-images/wpf-pdf-viewer-file-in-pdfdocumentview.png)
+The following picture illustrates how the PDF file is being displayed in [PdfDocumentView](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfDocumentView.html) control. ![WPF PDF Viewer File in PdfDocumentView](view-pdf-file-images/wpf-pdf-viewer-file-in-pdfdocumentview.png)
 
 ## Avoid exception while loading PDF Document
 
@@ -284,7 +290,7 @@ For instance, when attempting to open a document through a button click event, u
 
 ## Obtain the PDF file information
 
-You can get the information on the PDF file that is being displayed in the control using the [DocumentInfo](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_DocumentInfo) property of [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html). This property provides you the information such as file name and the folder name from that the PDF file is opened using the [FileName](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.DocumentInfo.html#Syncfusion_Windows_PdfViewer_DocumentInfo_FileName) and [FilePath](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.DocumentInfo.html#Syncfusion_Windows_PdfViewer_DocumentInfo_FilePath) properties respectively.
+You can get the information on the PDF file that is being displayed in the control using the [DocumentInfo](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_DocumentInfo) property of [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html). This property provides you the information such as file name and the folder name from which the PDF file is opened using the [FileName](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.DocumentInfo.html#Syncfusion_Windows_PdfViewer_DocumentInfo_FileName) and [FilePath](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.DocumentInfo.html#Syncfusion_Windows_PdfViewer_DocumentInfo_FilePath) properties respectively.
 
 Refer to the following code to obtain the document information using the [DocumentInfo](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_DocumentInfo) property.
 
@@ -296,11 +302,11 @@ using System.Windows;
 namespace PdfViewerDemo
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        # region Constructor
+        #region Constructor
         public MainWindow()
         {
             InitializeComponent();
@@ -327,11 +333,11 @@ using System.Windows;
 namespace PdfViewerDemo
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        # region Constructor
+        #region Constructor
         public MainWindow()
         {
             InitializeComponent();

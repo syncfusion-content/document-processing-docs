@@ -1,23 +1,25 @@
 ---
 layout: post
 title: Move and Resize form fields in the Blazor SfPdfViewer | Syncfusion
-description: Learn how to move and resize PDF form fields using the UI and programmatically with APIs in the Syncfusion Blazor SfPdfViewer.
+description: Learn how to move and resize PDF form fields using the UI and programmatically with APIs in the Blazor SfPdfViewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Move and Resize PDF Form Fields in Blazor
+# Move and Resize Form Fields in the Blazor SfPdfViewer
 The PDF Viewer supports moving and resizing form fields.
 
 - **Move**: drag the form field to reposition it.
+![Moving a form field using the Form Designer UI](../form-designer-images/drag-formfields-formdesigner-sfpdfviewer.gif)
+
 - **Resize**: use the resize handles to change width and height.
 
-![Moving and resizing a form field using the Form Designer UI](../../../javascript-es6/images/move-resize-forms.gif)
+![Resizing a form field using the Form Designer UI](../form-designer-images/resize-formfields-formdesigner-sfpdfviewer.gif)
 
-## Move and resize fields programmatically
+## Move and Resize Form Fields Programmatically
 
-The API supports setting absolute bounds or moving fields by a delta.
+The API supports setting absolute bounds on a form field.
 
 ### Set absolute bounds
 
@@ -28,7 +30,7 @@ The API supports setting absolute bounds or moving fields by a delta.
 @using Syncfusion.Blazor.Buttons
 
 <SfButton @onclick="OnAddFormFields">Add Form Fields</SfButton>
-<SfButton @onclick="OnResizeAndMove">Resize and Move "First Name"</SfButton>
+<SfButton @onclick="OnResizeAndMove">Resize and Move FirstName</SfButton>
 
 <SfPdfViewer2 @ref="@viewer" Height="100%" Width="100%" DocumentPath="@DocumentPath">
 </SfPdfViewer2>
@@ -96,7 +98,7 @@ N> For a hands-on reference with working code examples, explore the sample proje
 - [Form Designer overview](../overview)
 - [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)
 - [Create form fields](./create-form-fields)
-- [Remove form Fields](./remove-form-fields)
+- [Remove form fields](./remove-form-fields)
 - [Customize form fields](./customize-form-fields)
 - [Group form fields](../group-form-fields)
 - [Form validation](../form-validation)

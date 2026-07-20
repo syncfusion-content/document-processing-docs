@@ -8,22 +8,22 @@ documentation: UG
 
 # How to perform multithreading in the PdfToImageConverter library
 
-To perform multithreading and thread-safety support in opening PDF documents and saving image file are listed below.
+The steps to perform multithreading and ensure thread-safety when opening PDF documents and saving image files are listed below.
 
 ## Does the PdfToImageConverter library support multithreading and thread-safety?
 
-Yes, the Syncfusion<sup>&reg;</sup> PdfToImageConverter library is thread-safe, allowing you to create multiple instances of the [PdfToImageConverter]() class to load the same file as multiple copies or different PDF documents and save the images using multithreading in C#.
+Yes, the Syncfusion<sup>&reg;</sup> PdfToImageConverter library is thread-safe, allowing you to create multiple instances of the PdfToImageConverter class to load the same file as multiple copies or different PDF documents and save the images using multithreading in C#.
 
 ### Multithreading PDF document reading using tasks
 
-The following code example illustrates how to use multithreading to open PDF documents and and saving image file by creating multiple tasks in C#.
+The following code example illustrates how to use multithreading to open PDF documents and save image files by creating multiple tasks in C#.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 class MultiThreading
 {
-    //Indicates the number of threads to be create.
+    //Indicates the number of threads to be created.
     private const int TaskCount = 1000;
     public static async Task Main()
     {
@@ -65,7 +65,7 @@ class MultiThreading
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 class MultiThreading
 {
-    //Indicates the number of threads to be create.
+    //Indicates the number of threads to be created.
     private const int TaskCount = 1000;
     public static async Task Main()
     {
@@ -106,7 +106,7 @@ class MultiThreading
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Module MultiThreading
-    'Indicates the number of threads to be create.
+    'Indicates the number of threads to be created.
     Private Const TaskCount As Integer = 1000
     Public Sub Main()
         'Create an array of tasks based on the TaskCount.
@@ -152,13 +152,13 @@ class MultiThreading
 {
     static void Main(string[] args)
     {
-        //Indicates the number of threads to be create.
+        //Indicates the number of threads to be created.
         int limit = 50;
         Console.WriteLine("Parallel For Loop");
         Parallel.For(0, limit, count =>
         {
             Console.WriteLine("Task {0} started", count);
-            //Create multiple PDF document, one document on each thread.
+            //Create multiple PDF documents, one document on each thread.
             ConvertPdfToImage(count);
             Console.WriteLine("Task {0} is done", count);
         });
@@ -193,13 +193,13 @@ class MultiThreading
 {
     static void Main(string[] args)
     {
-        //Indicates the number of threads to be create.
+        //Indicates the number of threads to be created.
         int limit = 50;
         Console.WriteLine("Parallel For Loop");
         Parallel.For(0, limit, count =>
         {
             Console.WriteLine("Task {0} started", count);
-            //Create multiple PDF document, one document on each thread.
+            //Create multiple PDF documents, one document on each thread.
             ConvertPdfToImage(count);
             Console.WriteLine("Task {0} is done", count);
         });
@@ -233,12 +233,12 @@ class MultiThreading
 Module MultiThreading
     Public Sub Main(args As String())
         'Indicates the number of threads to be created.
-        Dim limit As Integer = 5
+        Dim limit As Integer = 50
         Console.WriteLine("Parallel For Loop")
         'Parallel For Loop
         Parallel.For(0, limit, Sub(count)
                                    Console.WriteLine("Task {0} started", count)
-                                   'Create multiple PDF document, one document on each thread.
+                                   'Create multiple PDF documents, one document on each thread.
                                    ConvertPdfToImage(count)
                                    Console.WriteLine("Task {0} is done", count)
                                End Sub)

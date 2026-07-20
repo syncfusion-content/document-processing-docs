@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Printing PDF Files in WPF Pdf Viewer control | Syncfusion
-description: Learn about Printing PDF Files support in Syncfusion<sup>&reg;</sup>; Essential Studio&reg; WPF Pdf Viewer control, its elements and more.
+title: Printing PDF Files in WPF PDF Viewer control | Syncfusion
+description: Learn about Printing PDF Files support in Syncfusion<sup>&reg;</sup>; Essential Studio&reg; WPF PDF Viewer control, its elements and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Printing PDF Files in WPF Pdf Viewer
+# Printing PDF Files in WPF PDF Viewer
 
 PDF Viewer allows printing loaded PDFs using the Print button in the toolbar. The following Print dialog opens upon triggering the Print button.
 
@@ -55,7 +55,7 @@ pdfviewer1.Print(printerName)
 
 ## Customizing print size
 
-PDF viewer printer settings allows scaling PDF pages to shrink or enlarge while printing.
+PDF Viewer printer settings allow scaling PDF pages to shrink or enlarge while printing.
 
 ### Actual Size
 
@@ -133,7 +133,7 @@ pdfviewer1.PrinterSettings.ScalePercentage = 120
 
 ## Printing PDF document with orientation settings
 
-PDF Viewer printer settings allows the user to print the document with a custom orientation.
+PDF Viewer printer settings allow the user to print the document with a custom orientation.
 
 ### Auto Portrait/Landscape
 
@@ -159,7 +159,7 @@ pdfviewer1.PrinterSettings.PageOrientation = PdfViewerPrintOrientation.Auto
 
 ### Portrait
 
-Portrait option prints the PDF document in portrait orientation and it overrides the orientation settings provided in the print dialog. The following code example illustrates the same.
+Portrait option prints the PDF document in portrait orientation, and it overrides the orientation settings provided in the print dialog. The following code example illustrates the same.
 
 {% tabs %}
 {% highlight c# %}
@@ -181,7 +181,7 @@ pdfviewer1.PrinterSettings.PageOrientation = PdfViewerPrintOrientation.Portrait
 
 ### Landscape
 
-Landscape option prints the PDF document in landscape orientation and it overrides the orientation settings provided in print dialog. The following code example illustrates the same.
+Landscape option prints the PDF document in landscape orientation, and it overrides the orientation settings provided in the print dialog. The following code example illustrates the same.
 
 {% tabs %}
 {% highlight c# %}

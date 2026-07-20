@@ -38,18 +38,19 @@ namespace PdfViewerDemo
 
 ## View password protected PDF files in run time
 
-When opening a password protected PDF file in run time using the Open button available in the toolbar, the following built-in password dialog window helps to to view the file contents, requesting the correct password from the user. In the password textbox, enter the correct password and click `OK`.
+When opening a password protected PDF file in run time using the Open button available in the toolbar, the following built-in password dialog window helps to view the file contents, requesting the correct password from the user. In the password textbox, enter the correct password and click `OK`.
 
 ![WPF PDF Viewer Password Dialog Window](password-images/wpf-pdf-viewer-password-dialog-window.png)
 
 ## Hide the built-in password dialog
 
-PDF Viewer helps to hide the built-in password using the `GetDocumentPassword` and gets the password using the `Password` property of the `GetDocumentPasswordEventArgs`. The event `GetDocumentPassword` occurs every time when you try to open a password protected PDF file in run-time. By setting the `Handled` property of `GetDocumentPasswordEventArgs` to true, the built-in password dialog will not appear. Refer to the following code to hide the password dialog and to provide password to open the file by wiring the event.
+PDF Viewer helps to hide the built-in password dialog by handling the `GetDocumentPassword` event. The password is supplied through the `Password` property of the `GetDocumentPasswordEventArgs`. The event occurs every time when you try to open a password protected PDF file in run-time. By setting the `Handled` property of `GetDocumentPasswordEventArgs` to true, the built-in password dialog will not appear. Refer to the following code to hide the password dialog and to provide password to open the file by wiring the event.
 
 {% tabs %}
 {% highlight c# %}
 using Syncfusion.Windows.PdfViewer;
 using System.Collections.Generic;
+using System.IO;
 using System.Windows;
 
 namespace PasswordPDFDemo
@@ -59,7 +60,7 @@ namespace PasswordPDFDemo
         public MainWindow()
         {
             InitializeComponent();
-            pdfViewerControl. GetDocumentPassword += PdfViewer_GetDocumentPassword;
+            pdfViewerControl.GetDocumentPassword += PdfViewer_GetDocumentPassword;
             string filePath = Path.GetFullPath(@"../../Data/syncfusion.pdf");
             pdfViewerControl.Load(filePath);
         }

@@ -107,7 +107,7 @@ The [onZoomLevelChanged](https://pub.dev/documentation/syncfusion_flutter_pdfvie
 • When the double-tap zoom is performed.
 • When the `zoomLevel` property is changed.
 
-The [PdfZoomDetails](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfZoomDetails-class.html) will return the `oldZoomLevel` title and `newZoomLevel` values. The following code example explains the same.
+The [PdfZoomDetails](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfZoomDetails-class.html) will return the `oldZoomLevel` and `newZoomLevel` values. The following code example explains the same.
 
 {% tabs %}
 {% highlight dart hl_lines="6 7 8" %}

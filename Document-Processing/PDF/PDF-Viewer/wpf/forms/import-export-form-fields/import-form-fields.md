@@ -9,17 +9,17 @@ documentation: ug
 
 # Import PDF Form Data 
 
-The WPF PDF Viewer supports importing values into interactive form fields of the currently loaded PDF document. Form data can be imported from the following supported formats:
+The WPF PDF Viewer supports importing values into interactive form fields of the currently loaded PDF document. The PDF must already contain `AcroForm` fields; the import operation only populates existing fields. Form data can be imported from the following supported formats:
 
-- [FDF](#import-as-fdf)
+- [FDF](#import-fdf)
 - [XFDF](#import-xfdf)
 - [JSON](#import-json)
 - [XML](#import-xml)
 
-Follow the below steps to import data to PDF document with `AcroForm`.
+Follow the steps below to import data into a PDF document that contains `AcroForm` fields.
 
-1.	Click the form data tool button in the left pane, the form data toolbar will appear as a secondary toolbar in the [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html).
-2.	Select **Import** option in form data toolbar to import the PDF form data.
+1.	Click the form data tool button in the left pane. The form data toolbar will appear as a secondary toolbar in the [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html).
+2.	Select the **Import** option in the form data toolbar to import the PDF form data.
 
 ![WPF PDF Viewer Import Form Data](../images/wpf-pdf-viewer-import-form-data.png)  
 
@@ -36,7 +36,7 @@ The following example imports form field data as FDF.
 private void button1_Click(object sender, RoutedEventArgs e)
 {
     //Import PDF form data
-    pdfviewer.ImportFormData("Import.fdf", Syncfusion.Pdf.Parsing.DataFormat.Fdf);
+    pdfViewer.ImportFormData("Import.fdf", Syncfusion.Pdf.Parsing.DataFormat.Fdf);
 }
 
 {% endhighlight %}
@@ -44,7 +44,7 @@ private void button1_Click(object sender, RoutedEventArgs e)
 
 Private Sub button1_Click(sender As Object, e As RoutedEventArgs)
     'Import PDF form data
-    pdfviewer.ImportFormData("Import.fdf", Syncfusion.Pdf.Parsing.DataFormat.Fdf)
+    pdfViewer.ImportFormData("Import.fdf", Syncfusion.Pdf.Parsing.DataFormat.Fdf)
 End Sub
 
 {% endhighlight %}
@@ -96,7 +96,7 @@ End Sub
 {% endhighlight %}
 {% endtabs %}
 
-## Import XML
+### Import XML
 The following example imports form field data as XML.
 
 {% tabs %}

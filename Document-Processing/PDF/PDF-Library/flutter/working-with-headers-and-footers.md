@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Headers and Footers in Flutter PDF library | Syncfusion
-description: Learn here all about drawing Headers and Footers feature of Syncfusion Flutter PDF non-UI library and more.
+description: Learn all about drawing Headers and Footers feature of Syncfusion Flutter PDF non-UI library and more.
 platform: document-processing
 control: PDF
 documentation: ug
@@ -9,13 +9,13 @@ documentation: ug
 
 # Headers and Footers in Flutter PDF
 
-The Flutter PDF supports drawing the header and footer in PDF document using [`PdfPageTemplateElement`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageTemplateElement-class.html) class. The header and footer contain the graphics support and automatic field support to perform their operations.
+The Flutter PDF supports drawing the header and footer in a PDF document using [`PdfPageTemplateElement`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageTemplateElement-class.html) class. The header and footer support graphics and automatic fields to perform various operations.
 
-## Adding graphics and automatic fields to header and footer
+## Adding graphics and automatic fields to the header and footer
 
-This package supports to add page count, page numbers, date and time using automatic fields such as [`PdfPageCountField`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageCountField-class.html), [`PdfPageNumberField`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageNumberField-class.html) and [`PdfDateTimeField`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDateTimeField-class.html), and more.
+This package supports adding page count, page numbers, date and time using automatic fields such as [`PdfPageCountField`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageCountField-class.html), [`PdfPageNumberField`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageNumberField-class.html) and [`PdfDateTimeField`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDateTimeField-class.html), and more.
 
-The following code snippet explains how to use the graphics and automatic fields in header and footer.
+The following code snippet explains how to use the graphics and automatic fields in the header and footer.
 
 {% tabs %}
 {% highlight dart tabtitle="dart" %}
@@ -34,7 +34,7 @@ PdfDateTimeField dateAndTimeField = PdfDateTimeField(
 dateAndTimeField.date = DateTime(2020, 2, 10, 13, 13, 13, 13, 13);
 dateAndTimeField.dateFormatString = 'E, MM.dd.yyyy';
 
-//Create the composite field with date field
+//Create the composite field with a date field
 PdfCompositeField compositefields = PdfCompositeField(
     font: PdfStandardFont(PdfFontFamily.timesRoman, 19),
     brush: PdfSolidBrush(PdfColor(0, 0, 0)),
@@ -65,7 +65,7 @@ PdfPageCountField count = PdfPageCountField(
     font: PdfStandardFont(PdfFontFamily.timesRoman, 19),
     brush: PdfSolidBrush(PdfColor(0, 0, 0)));
 
-//set the number style for page count
+//Set the number style for page count
 count.numberStyle = PdfNumberStyle.upperRoman;
 
 //Create the date and time field
@@ -79,7 +79,7 @@ dateTimeField.date = DateTime(2020, 2, 10, 13, 13, 13, 13, 13);
 //Sets the date and time format
 dateTimeField.dateFormatString = 'hh\':\'mm\':\'ss';
 
-//Create the composite field with page number page count
+//Create the composite field with page number and page count
 PdfCompositeField compositeField = PdfCompositeField(
     font: PdfStandardFont(PdfFontFamily.timesRoman, 19),
     brush: PdfSolidBrush(PdfColor(0, 0, 0)),
@@ -110,6 +110,6 @@ document.dispose();
 {% endhighlight %}
 {% endtabs %}
 
-By executing the above code sample, you will get the PDF document as follows.
+By executing the above code sample, you will get the PDF document as shown below.
 
 ![Header and Footer PDF](images/working-with-headers-and-footers/header-and-footer.png)

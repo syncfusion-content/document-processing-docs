@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Images in Flutter PDF library | Syncfusion
-description: Learn here all about draw raster images and applying transparency and rotation to the images feature of Syncfusion Flutter PDF non-UI library and more.
+description: Learn how to draw raster images and apply transparency and rotation using the Syncfusion Flutter PDF non-UI library.
 platform: document-processing
 control: PDF
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Images in Flutter PDF
 
-Images are supported through the [`PdfImage`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfImage-class.html) class, which is an abstract base class that provides functionality for [`PdfBitmap`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfBitmap-class.html) class.
+Images are supported through the [`PdfImage`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfImage-class.html) class, which is an abstract base class that provides functionality for the [`PdfBitmap`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfBitmap-class.html) class.
 
-## Inserting an image in PDF document
+## Inserting an image in a PDF document
 
 The following raster images are supported in Flutter PDF:
 
@@ -62,7 +62,7 @@ PdfPage page = document.pages.add();
 //Save the current graphics state
 PdfGraphicsState state = page.graphics.save();
 
-//Translate the coordinate system to the  required position
+//Translate the coordinate system to the required position
 page.graphics.translateTransform(20, 100);
 
 //Apply transparency
@@ -89,9 +89,9 @@ document.dispose();
 {% endhighlight %}
 {% endtabs %}
 
-## Inserting image to PDF using a web URL
+## Inserting an image to a PDF using a web URL
 
-The ['PdfBitmap'](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfBitmap-class.html) API accepts List<int> and base64 string as  inputs, so you can retrieve the image from the web URL as base64 or List<int> and assign it to the bitmap class. 
+The [`PdfBitmap`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfBitmap-class.html) API accepts `List<int>` and base64 string as inputs, so you can retrieve the image from the web URL as `List<int>` (or base64) and assign it to the bitmap class.
 
 Steps to insert an image to the PDF using Web URL:
  1.	Add **http** package to the dependencies section of the **pubspec.yaml** file

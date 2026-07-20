@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Templates in Flutter PDF library | Syncfusion
-description: Learn here all about add headers and footers and stamp by Templates feature of Syncfusion Flutter PDF non-UI library and more.
+description: Learn here all about adding headers, footers, and stamps using the Templates feature of the Syncfusion Flutter PDF non-UI library and more.
 platform: document-processing
 control: PDF
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Templates in Flutter PDF
 
-A PDF template is a drawing surface, where contents can be added. All the elements that can be added to a [`PdfPage`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPage-class.html) is supported in [`PdfTemplate`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfTemplate-class.html) as well. The template in turn can be drawn over the page or can be positioned at any part of the page.
+A PDF template is a drawing surface, where contents can be added. All the elements that can be added to a [`PdfPage`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPage-class.html) are supported in [`PdfTemplate`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfTemplate-class.html) as well. The template in turn can be drawn over the page or can be positioned at any part of the page.
 
 ## Creating a new PDF template
 
-The [`PdfTemplate`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfTemplate-class.html) class can be used to create a new PDF template. You can add contents to the template using [`graphics`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPage/graphics.html) property of the [`PdfTemplate`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfTemplate-class.html) object.
+The [`PdfTemplate`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfTemplate-class.html) class can be used to create a new PDF template. You can add contents to the template using [`graphics`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfTemplate/graphics.html) property of the [`PdfTemplate`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfTemplate-class.html) object.
 
 The following code example explains how to add contents to the [`PdfTemplate`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfTemplate-class.html) and render into the new PDF page.
 
@@ -49,7 +49,7 @@ document.dispose();
 
 Essential<sup>&reg;</sup> PDF supports template creation using the [`CreateTemplate`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPage/createTemplate.html) method, enabling users to extract content from an existing PDF page and seamlessly incorporate it into a new PDF document.
 
-The below code illustrates how to create the template from an existing page and draw it in a new PDF document.
+The following code illustrates how to create the template from an existing page and draw it in a new PDF document.
 
 {% tabs %}
 {% highlight dart tabtitle="dart" %}
@@ -69,6 +69,8 @@ The below code illustrates how to create the template from an existing page and 
     PdfGraphics graphics = page.graphics;
     //Draw the template.
     graphics.drawPdfTemplate(template, Offset(0, 0));
+    //Dispose the loaded PDF document.
+    loadedDocument.dispose();
     //Save and dispose of the PDF document.
     File('Output.pdf').writeAsBytes(await document.save());
     document.dispose();
@@ -185,7 +187,7 @@ document.dispose();
 
 ## Adding stamp to the PDF document
 
-The Syncfusion<sup>&reg;</sup> Flutter PDF allows you add stamp to the PDF document using PDF templates.
+The Syncfusion<sup>&reg;</sup> Flutter PDF allows you to add a stamp to the PDF document using PDF templates.
 
 The following code example explains how to draw text as a stamp to the PDF document.
 

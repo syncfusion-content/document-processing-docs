@@ -30,14 +30,14 @@ BitmapSource image = pdfViewer.ExportAsImage(0);
 string output = @"..\..\Output\Image";
 if (image != null)
 {
-	//Initialize the new Jpeg bitmap encoder
-	BitmapEncoder encoder = new JpegBitmapEncoder();
-	//Create the bitmap frame using the bitmap source and add it to the encoder
-	encoder.Frames.Add(BitmapFrame.Create(image));
-	//Create the file stream for the output in the desired image format
-	FileStream stream = new FileStream(output + ".Jpeg", FileMode.Create);
-	//Save the stream, so that the image will be generated in the output location
-	encoder.Save(stream);
+    //Initialize the new Jpeg bitmap encoder
+    BitmapEncoder encoder = new JpegBitmapEncoder();
+    //Create the bitmap frame using the bitmap source and add it to the encoder
+    encoder.Frames.Add(BitmapFrame.Create(image));
+    //Create the file stream for the output in the desired image format
+    FileStream stream = new FileStream(output + ".Jpeg", FileMode.Create);
+    //Save the stream, so that the image will be generated in the output location
+    encoder.Save(stream);
 }
 //Dispose the document
 loadedDocument.Dispose();
@@ -58,14 +58,14 @@ Dim image As BitmapSource = pdfViewer.ExportAsImage(0)
 'Set up the output path
 Dim output As String = "..\..\Output\Image"
 If image IsNot Nothing Then
-	'Initialize the new Jpeg bitmap encoder
-	Dim encoder As BitmapEncoder = New JpegBitmapEncoder()
-	'Create the bitmap frame using the bitmap source and add it to the encoder.
-	encoder.Frames.Add(BitmapFrame.Create(image))
-	'Create the file stream for the output in the desired image format
-	Dim stream As FileStream = New FileStream(output & ".Jpeg", FileMode.Create)
-	'Save the stream, so that the image will be generated in the output location
-	encoder.Save(stream)
+    'Initialize the new Jpeg bitmap encoder
+    Dim encoder As BitmapEncoder = New JpegBitmapEncoder()
+    'Create the bitmap frame using the bitmap source and add it to the encoder
+    encoder.Frames.Add(BitmapFrame.Create(image))
+    'Create the file stream for the output in the desired image format
+    Dim stream As FileStream = New FileStream(output & ".Jpeg", FileMode.Create)
+    'Save the stream, so that the image will be generated in the output location
+    encoder.Save(stream)
 End If
 'Dispose the document
 loadedDocument.Dispose()
@@ -94,17 +94,17 @@ BitmapSource[] image = pdfViewer.ExportAsImage(0, loadedDocument.Pages.Count - 1
 string output = @"..\..\Output\Image";
 if (image != null)
 {
-	for (int i = 0; i < image.Length; i++)
-	{
-		//Initialize the new Jpeg bitmap encoder
-		BitmapEncoder encoder = new JpegBitmapEncoder();
-		//Create the bitmap frame using the bitmap source and add it to the encoder
-		encoder.Frames.Add(BitmapFrame.Create(image[i]));
-		//Create the file stream for the output in the desired image format
-		FileStream stream = new FileStream(output + i.ToString() + ".Jpeg", FileMode.Create);
-		//Save the stream, so that the image will be generated in the output location
-		encoder.Save(stream);
-	}
+    for (int i = 0; i < image.Length; i++)
+    {
+        //Initialize the new Jpeg bitmap encoder
+        BitmapEncoder encoder = new JpegBitmapEncoder();
+        //Create the bitmap frame using the bitmap source and add it to the encoder
+        encoder.Frames.Add(BitmapFrame.Create(image[i]));
+        //Create the file stream for the output in the desired image format
+        FileStream stream = new FileStream(output + i.ToString() + ".Jpeg", FileMode.Create);
+        //Save the stream, so that the image will be generated in the output location
+        encoder.Save(stream);
+    }
 }
 //Dispose the document
 loadedDocument.Dispose();
@@ -124,16 +124,16 @@ Dim image As BitmapSource() = pdfViewer.ExportAsImage(0, loadedDocument.Pages.Co
 'Set up the output path
 Dim output As String = "..\..\Output\Image"
 If image IsNot Nothing Then
-	For i As Integer = 0 To image.Length - 1
-		'Initialize the new Jpeg bitmap encoder
-		Dim encoder As BitmapEncoder = New JpegBitmapEncoder()
-		'Create the bitmap frame using the bitmap source and add it to the encoder
-		encoder.Frames.Add(BitmapFrame.Create(image(i)))
-		'Create the file stream for the output in the desired image format
-		Dim stream As FileStream = New FileStream(output & i.ToString() & ".Jpeg", FileMode.Create)
-		'Save the stream, so that the image will be generated in the output location
-		encoder.Save(stream)
-	Next
+    For i As Integer = 0 To image.Length - 1
+        'Initialize the new Jpeg bitmap encoder
+        Dim encoder As BitmapEncoder = New JpegBitmapEncoder()
+        'Create the bitmap frame using the bitmap source and add it to the encoder
+        encoder.Frames.Add(BitmapFrame.Create(image(i)))
+        'Create the file stream for the output in the desired image format
+        Dim stream As FileStream = New FileStream(output & i.ToString() & ".Jpeg", FileMode.Create)
+        'Save the stream, so that the image will be generated in the output location
+        encoder.Save(stream)
+    Next
 End If
 'Dispose the document
 loadedDocument.Dispose()
@@ -144,25 +144,25 @@ loadedDocument = Nothing
 
 ## Exporting with a custom image size
 
-You can export PDF pages as images with custom width and height by passing the required size as a parameter of the [ExportAsImage](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_ExportAsImage_System_Int32_System_Drawing_SizeF_System_Boolean_) method. Refer to the following code to export the pages of PDF into JPEG images. Refer to the following code to export the page at the index of 0 into JPEG image with the width and the height of 1836 and 2372 in pixels respectively.
+You can export PDF pages as images with custom width and height by passing the required size as a parameter of the [ExportAsImage](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_ExportAsImage_System_Int32_System_Drawing_SizeF_System_Boolean_) method. Refer to the following code to export the page at the index of 0 into JPEG image with the width and the height of 1836 and 2372 in pixels respectively.
 
 {% tabs %}
 {% highlight C# %}
 
 //Export the particular PDF page as image at the page index of 0
-BitmapSource image = pdfViewerControl.ExportAsImage(0, new SizeF(1836, 2372), false);
+BitmapSource image = pdfViewer.ExportAsImage(0, new SizeF(1836, 2372), false);
 //Set up the output path
 string output = @"..\..\Output\Image";
 if (image != null)
 {
-	//Initialize the new Jpeg bitmap encoder
-	BitmapEncoder encoder = new JpegBitmapEncoder();
-	//Create the bitmap frame using the bitmap source and add it to the encoder
-	encoder.Frames.Add(BitmapFrame.Create(image));
-	//Create the file stream for the output in the desired image format
-	FileStream stream = new FileStream(output + ".Jpeg", FileMode.Create);
-	//Save the stream, so that the image will be generated in the output location
-	encoder.Save(stream);
+    //Initialize the new Jpeg bitmap encoder
+    BitmapEncoder encoder = new JpegBitmapEncoder();
+    //Create the bitmap frame using the bitmap source and add it to the encoder
+    encoder.Frames.Add(BitmapFrame.Create(image));
+    //Create the file stream for the output in the desired image format
+    FileStream stream = new FileStream(output + ".Jpeg", FileMode.Create);
+    //Save the stream, so that the image will be generated in the output location
+    encoder.Save(stream);
 }
 
 {% endhighlight %}
@@ -182,22 +182,22 @@ int endPageIndex = 3;
 float dpiX=200;
 float dpiY=200;
 
-BitmapSource[] images = pdfViewerControl.ExportAsImage(startPageIndex, endPageIndex, dpiX, dpiY);
+BitmapSource[] images = pdfViewer.ExportAsImage(startPageIndex, endPageIndex, dpiX, dpiY);
 //Set up the output path
 string output = @"..\..\Output\Image";
 if (images != null)
 {
-	for (int i = 0; i < images.Length; i++)
-	{
-		//Initialize the new Jpeg bitmap encoder
-		BitmapEncoder encoder = new JpegBitmapEncoder();
-		//Create the bitmap frame using the bitmap source and add it to the encoder
-		encoder.Frames.Add(BitmapFrame.Create(images[i]));
-		//Create the file stream for the output in the desired image format
-		FileStream stream = new FileStream(output + i.ToString() + ".Jpeg", FileMode.Create);
-		//Save the stream, so that the image will be generated in the output location
-		encoder.Save(stream);
-	}
+    for (int i = 0; i < images.Length; i++)
+    {
+        //Initialize the new Jpeg bitmap encoder
+        BitmapEncoder encoder = new JpegBitmapEncoder();
+        //Create the bitmap frame using the bitmap source and add it to the encoder
+        encoder.Frames.Add(BitmapFrame.Create(images[i]));
+        //Create the file stream for the output in the desired image format
+        FileStream stream = new FileStream(output + i.ToString() + ".Jpeg", FileMode.Create);
+        //Save the stream, so that the image will be generated in the output location
+        encoder.Save(stream);
+    }
 }
 
 {% endhighlight %}

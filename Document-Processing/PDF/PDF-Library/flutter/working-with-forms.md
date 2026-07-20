@@ -9,7 +9,7 @@ documentation: UG
 
 # Forms in Flutter PDF
 
-An interactive form sometimes referred to as an AcroForm is a collection of fields for gathering information. A PDF document can contain any number of fields appearing on any combination of pages, all that makes a single, globally interactive form spanning the entire document.
+An interactive form sometimes referred to as an AcroForm is a collection of fields for gathering information. A PDF document can contain any number of fields appearing on any combination of pages, all of which makes a single, globally interactive form spanning the entire document.
 
 ## Creating a new PDF form
 
@@ -299,7 +299,7 @@ File('output.pdf').writeAsBytesSync(await document.save());
 {% endhighlight %}
 {% endtabs %}
 
-### Adding the check Box field
+### Adding the check box field
 
 You can create the check box field in PDF forms using the PdfCheckBoxField class.
 
@@ -340,7 +340,7 @@ final PdfDocument document =
 
 // Create a check box form field and add it to the existing document.
 document.form.fields.add(PdfCheckBoxField(
-    document.pages.add(), 'CheckBox', Rect.fromLTWH(100, 200, 70, 45),
+    document.pages[0], 'CheckBox', Rect.fromLTWH(100, 200, 70, 45),
     highlightMode: PdfHighlightMode.push,
     borderStyle: PdfBorderStyle.dot,
     borderColor: PdfColor(230, 0, 172),
@@ -373,7 +373,7 @@ document.form.fields.add(PdfSignatureField(document.pages.add(), 'Sign',
     bounds: Rect.fromLTWH(100, 100, 100, 50)));
 
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 {% endtabs %}
@@ -456,9 +456,9 @@ File('output.pdf').writeAsBytesSync(await document.save());
 {% endhighlight %}
 {% endtabs %}
 
-## Set appearance to the PDF form fields
+## Setting appearance to the PDF form fields
 
-After filling the form fields in the PDF document, it may appear empty due to the absence of the appearance dictionary. By setting the setDefaultAppearance method in PdfForm class to false, you can create the appearance dictionary. By this, the text will be visible in all PDF Viewers. 
+After filling the form fields in the PDF document, it may appear empty due to the absence of the appearance dictionary. By setting the setDefaultAppearance method in PdfForm class to true, you can create the appearance dictionary. By this, the text will be visible in all PDF Viewers. 
 
 The following code sample explains how to set appearance to the PDF form fields.
 
@@ -511,7 +511,7 @@ File('output.pdf').writeAsBytesSync(await document.save());
 {% endhighlight %}
 {% endtabs %}
 
-Retrieving or Modifying the fore, border, and back color of an existing form field
+### Retrieving or modifying the fore, border, and back color of an existing form field
 
 You can retrieve or modify the fore, border, and background color of existing form fields in a PDF document by using the foreColor, borderColor, and backColor properties of the respective form fields. The following code sample explains this.
 
@@ -653,7 +653,7 @@ File('output.pdf').writeAsBytesSync(await document.save());
 {% endhighlight %}
 {% endtabs %}
 
-### Enumerate the form fields
+### Enumerating the form fields
 
 All the form fields are maintained in the PdfFormFieldCollection class. You can enumerate the fields from this form field collection and fill them.
 
@@ -703,7 +703,7 @@ document.form.fields.add(PdfTextBoxField(
     text: 'toType', isPassword: true, spellCheck: true));
 
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 {% endtabs %}
@@ -748,7 +748,7 @@ document.form.fields.add(PdfTextBoxField(
     text: 'toType', isPassword: true, spellCheck: true));
 
 //Save the PDF document.
-File('output.pdf').writeAsBytesSync(document.save());
+File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
 {% endtabs %}
@@ -801,9 +801,9 @@ File('output.pdf').writeAsBytesSync(await document.save());
 
 Flutter PDF supports auto naming of form fields in a PDF document while creating form fields with the same name. The fieldAutoNaming property of PdfForm is used to enable or disable auto naming of a form field.
 
-While enabling this property, the field names are auto naming. If the fields are created using the same or common name, the created fields will act as an individual.
+While enabling this property, the field names are auto-named. If the fields are created using the same or common name, the created fields will act as an individual.
 
-While disabling this property, the field names are not auto naming, and the created fields are saved in a single group. The same value will be referred in all the same name fields.
+While disabling this property, the field names are not auto-named, and the created fields are saved in a single group. The same value will be referred in all the same name fields.
 
 By default, the value is set to true. This is explained in the following code sample.
 
@@ -935,7 +935,7 @@ File('output.pdf').writeAsBytesSync(await document.save());
 
 ## Importing XML file to PDF
 
-XML stands for an extensible markup language. The XML file is used to save the form data that can be imported into a PDF document. You can import the JSON file to PDF using the importData method available in the ['PdfForm'](#) class.
+XML stands for an extensible markup language. The XML file is used to save the form data that can be imported into a PDF document. You can import the XML file to PDF using the importData method available in the ['PdfForm'](#) class.
 
 The following code sample explains how to import XML files to PDF.
 
@@ -1044,7 +1044,7 @@ document.dispose();
 
 Sometimes, Form fields may appear empty in an adobe reader due to the absence of the appearance dictionary. To resolve this, you need to enable the Adobe Reader default appearance by using the setDefaultAppearance method in PdfForm class.
 
-The following code explains how to enable the default appearance in a new PDF document. 
+The following code explains how to enable the default appearance in an existing PDF document. 
 
 {% tabs %}
 {% highlight dart tabtitle="dart" %}

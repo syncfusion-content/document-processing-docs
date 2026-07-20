@@ -14,7 +14,7 @@ The Blazor SfPdfViewer allows you to read the values of interactive PDF form fie
 
 This guide shows common patterns with concise code snippets you can copy into your Blazor components.
 
-## Access the Form Field Collection3
+## Access the Form Field Collection
 
 Get all available form field data by using the [GetFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_GetFormFieldsAsync) method.
 
@@ -76,7 +76,7 @@ Find the text field by name and read its value property.
 
 ## Read Checkbox / Radio Button Values
 
-Check whether a checkbox or radio button is selected by reading its `IsChecked` property.
+Check whether a checkbox or radio button is selected by reading its `IsChecked` or `IsSelected` property.
 
 {% tabs %}
 {% highlight razor %}
@@ -106,7 +106,7 @@ Check whether a checkbox or radio button is selected by reading its `IsChecked` 
 {% endhighlight %}
 {% endtabs %}
 
-## Read Dropdown values
+## Read Dropdown Values
 
 Read the dropdown's selected option by accessing the `Value` property.
 
@@ -296,11 +296,10 @@ N> For a hands-on reference with working code examples, explore the sample proje
 
 ## Troubleshooting
 
-- Use the exact field names defined in the PDF when searching through the `formFieldCollections`.
+- Use the exact field names defined in the PDF when searching through the `formFields` collection.
 - If a field might be missing in some documents, add null checks.
 
 ## See also
 
-- [GetFormFieldsAsync API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_GetFormFieldsAsync)
 - [Programmatic Support for Form Designer](./create-programmatically)
 - [Form Designer Events](./events)

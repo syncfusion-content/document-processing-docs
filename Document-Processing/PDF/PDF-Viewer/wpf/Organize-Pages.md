@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Organize Pages in WPF Pdf Viewer control | Syncfusion
-description: Learn about Organize Pages support in Syncfusion<sup>&reg;</sup>; Essential Studio&reg; WPF Pdf Viewer control, its elements and more.
+description: Learn about Organize Pages support in Syncfusion<sup>&reg;</sup> Essential Studio&reg; WPF Pdf Viewer control, its elements and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -15,23 +15,23 @@ Use the following steps to organize the PDF page(s) in [PdfViewerControl](https:
 
 1. Click the organize page button in the left pane, this displays the organize pages pane in the [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html).
 
-2. You can rotate or delete a specific page using context menu that appears when hovering the mouse over the pages.
+2. You can rotate or delete a specific page using the context menu that appears when hovering the mouse over the pages.
 
-	![WPF PDF Viewer Page Toolbar](OrganizePages_Images/wpf-pdf-viewer-page-toolbar.png)
+    ![WPF PDF Viewer Page Toolbar](OrganizePages_Images/wpf-pdf-viewer-page-toolbar.png)
 
 3. You can rotate or delete multiple pages using the organize pages toolbar.
 
-	![WPF PDF Viewer Organize Pages Toolbar](OrganizePages_Images/wpf-pdf-viewer-organize-pages-toolbar.png)
+    ![WPF PDF Viewer Organize Pages Toolbar](OrganizePages_Images/wpf-pdf-viewer-organize-pages-toolbar.png)
 
-	N> You can use Ctrl/Shift keys to select multiple pages. Also, you can select all pages using Ctrl+A shortcut key. You cannot delete all the pages from the document. 
+    N> You can use Ctrl/Shift keys to select multiple pages. Also, you can select all pages using Ctrl+A shortcut key. You cannot delete all the pages from the document. 
 
 4. You can rearrange the page(s) by dragging and dropping them.
 
-	![WPF PDF Viewer Rearrange Pages](OrganizePages_Images/wpf-pdf-viewer-rearrange-pages.png)
-	
+    ![WPF PDF Viewer Rearrange Pages](OrganizePages_Images/wpf-pdf-viewer-rearrange-pages.png)
+    
 5. You can insert a blank page or any PDF page(s) using the Organize Pages toolbar.
     ![WPF PDF Viewer insert Pages](OrganizePages_Images/wpf-pdf-viewer-insert-pages-toolbar.png)
-6.You can insert a blank page or any PDF page(s),and perform clipboard actions like Cut, Copy, and Paste using the more option in the context menu that appears when hovering over a pages.
+6. You can insert a blank page or any PDF page(s), and perform clipboard actions like Cut, Copy, and Paste using the more option in the context menu that appears when hovering over a page.
    ![WPF PDF Viewer insert Pages option button](OrganizePages_Images/wpf-pdf-viewer-Option-button.png)
     ![WPF PDF Viewer option button context menu](OrganizePages_Images/wpf-pdf-viewer-Option-button-contextmenu.png)
 
@@ -190,7 +190,7 @@ N> If any of the already existing page index is not present in rearranged array,
 ## Removing PDF page(s)
 
 You can remove the PDF page(s) from the PDF document using the RemoveAt method in PageOrganizer.
-To remove the page at specific index from PDF document, refer to the following code example. 
+To remove the page at a specific index from the PDF document, refer to the following code example. 
 
 {% tabs %}
 {% highlight c# %}
@@ -212,7 +212,7 @@ End Sub
 {% endhighlight %}
 {% endtabs %}
 
-To remove the set of pages from PDF document, refer to the following code example.
+To remove the set of pages from the PDF document, refer to the following code example.
 
 {% tabs %}
 {% highlight c# %}
@@ -247,20 +247,21 @@ pdfViewerControl.PageOrganizer.RemovePagesCommand.Execute(new int[] { 0, 1 });
 {% endtabs %}
 
 ## Insert Page(s) Customization
-Insert page feature allows users to choose where to add pages using the **Insert Pages** window.Users can access this via from either the Organize Pages toolbar or the context menu that appears when hovering over a pages.
-In the window, there are three options **First**, **Last**, and **Page**. Selecting **First** inserts pages at the document's beginning, while **Last** adds them at the end. The **Page** option lets users specify a position using **Location** **Before** adds pages before the selected page, and **After** inserts them after.
+
+Insert page feature allows users to choose where to add pages using the **Insert Pages** window. Users can access this from either the Organize Pages toolbar or the context menu that appears when hovering over a page.
+In the window, there are three options: **First**, **Last**, and **Page**. Selecting **First** inserts pages at the document's beginning, while **Last** adds them at the end. The **Page** option lets users specify a position using **Location**; **Before** adds pages before the selected page, and **After** inserts them after.
 
 N> The **Location** is accessible only when the **Page** radio button is selected.
 
 ### From file 
 When users want to insert pages using the **From File** option, a browser window will open to select a PDF. Once selected, all pages from the PDF are inserted into the document based on the customization in the **Insert Pages** window.
 
-![WPF PDF Viewer insert page window ](OrganizePages_Images/wpf-pdf-viewer-insert-page-window.png)
-	 
+![WPF PDF Viewer insert page window](OrganizePages_Images/wpf-pdf-viewer-insert-page-window.png)
+     
 ### Blank page 
-When users want to insert page a page using the **Blank Page** option, a single blank page will be added to the document as per the Customization in the **Insert Pages** window.
+When users want to insert a page using the **Blank Page** option, a single blank page will be added to the document as per the customization in the **Insert Pages** window.
 
-![WPF PDF Viewer insert page window blank page ](OrganizePages_Images/wpf-pdf-viewer-insert-page-window-blank-page.png)	
+![WPF PDF Viewer insert page window blank page](OrganizePages_Images/wpf-pdf-viewer-insert-page-window-blank-page.png)	
 
 ## Get the selected page indexes
 
@@ -273,9 +274,9 @@ You can get the selected page indexes of the PDF document in the organizing page
 pdfViewer.PageSelected += PdfViewer_PageSelected;  
 private void PdfViewer_PageSelected(object sender, PageSelectedEventArgs e)  
 {  
-	// Get the selected pages. 
-	if (e.SelectedPages.Length != 0) 
-		selectedPages = e.SelectedPages; 
+    // Get the selected pages. 
+    if (e.SelectedPages.Length != 0) 
+        selectedPages = e.SelectedPages; 
 }  
 
 {% endhighlight %}
@@ -283,8 +284,8 @@ private void PdfViewer_PageSelected(object sender, PageSelectedEventArgs e)
 
 ## Disabling page organizer
 
-You can remove the page organizer icon from left pane of the ‘PdfViewerControl’ by setting the ‘PageOrganizerSettings.IsIconVisible’ property to false. 
-Refer to the following code example to disable the organize page.
+You can remove the page organizer icon from the left pane of the ‘PdfViewerControl’ by setting the ‘PageOrganizerSettings.IsIconVisible’ property to false. 
+Refer to the following code example to disable the page organizer.
 
 {% tabs %}
 {% highlight c# %}
@@ -316,7 +317,7 @@ Refer to the following code example to show the annotations and form fields in p
 {% tabs %}
 {% highlight c# %}
 
-Private void button_Click(object sender,RoutedEventArgs e)
+private void button_Click(object sender, RoutedEventArgs e)
 {
     //show the annotations in page organizer.
     pdfViewer.PageOrganizerSettings.ShowAnnotations = true;

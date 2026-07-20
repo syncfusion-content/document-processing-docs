@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Magnifying PDF documents in WPF Pdf Viewer control | Syncfusion®;
-description: Learn about Magnifying PDF documents support in Syncfusion<sup>&reg;</sup>; WPF Pdf Viewer control, its elements and more.
+title: Magnifying PDF documents in WPF Pdf Viewer control | Syncfusion®
+description: Learn about Magnifying PDF documents support in Syncfusion<sup>&reg;</sup> WPF Pdf Viewer control, its elements and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -13,7 +13,7 @@ The [WPF PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/wpf-pdf-viewer) h
 
 ![Zoom tools of WPF PDF Viewer](images/zoom tools.png)
 
-1.	**Combo box**: It allows you to select a zoom percentage from the pre-defined set of values listed in the dropdown. Since it is editable, you can also provide your zoom values by double editing the text area.
+1.	**Combo box**: It allows you to select a zoom percentage from the pre-defined set of values listed in the dropdown. Since it is editable, you can also provide your zoom values by directly editing the text area.
 2.	**Zoom out button**: It allows you to reduce the zoom value by 25% from the current zoom percentage.
 3.	**Zoom in button**: It allows you to increase the zoom value by 25% from the current zoom percentage.
 4.	**Fit to width button**: It allows you to fit the document to the width of the control.
@@ -71,7 +71,7 @@ pdfViewer.ZoomMode = ZoomMode.FitWidth;
 
 The default minimum and maximum zoom percentage of the PDF Viewer is 50 and 400 respectively. However, the PDF Viewer allows you to customize the minimum and maximum zoom percentage values based on your requirement.
 
-You can customize the minimum zoom percentage of the PDF viewer using the [MinimumZoomPercentage](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_MinimumZoomPercentage) property. Its default value is 50. Refer to the following code sample to set the property and apply the customized minimum zoom percent to the PDF Viewer
+You can customize the minimum zoom percentage of the PDF viewer using the [MinimumZoomPercentage](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_MinimumZoomPercentage) property. Its default value is 50. Refer to the following code sample to set the property and apply the customized minimum zoom percent to the PDF Viewer.
 
 N> The allowed value of this property ranges from 10 to the value of the [MaximumZoomPercentage](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_MaximumZoomPercentage) of PDF Viewer.
 
@@ -82,7 +82,7 @@ pdfViewer.Load(@"../../Data/Barcode.pdf");
 //Set the minimum zoom percentage.
 pdfViewer.MinimumZoomPercentage = 20;
 //Magnify the document to minimum zoom percentage.
-pdfViewer.ZoomTo(pdfviewer.MinimumZoomPercentage);
+pdfViewer.ZoomTo(pdfViewer.MinimumZoomPercentage);
 {% endhighlight %}
 {% endtabs %}
 
@@ -93,11 +93,11 @@ N> The allowed value of this property ranges from the value of [MinimumZoomPerce
 {% tabs %}
 {% highlight c# %}
 // Load PDF document.
-pdfviewer.Load(@"../../Data/Barcode.pdf");
+pdfViewer.Load(@"../../Data/Barcode.pdf");
 //Set the maximum zoom percentage.
-pdfviewer.MaximumZoomPercentage = 600;
+pdfViewer.MaximumZoomPercentage = 600;
 //Magnify the document to maximum zoom percentage.
-pdfviewer.ZoomTo(pdfviewer.MaximumZoomPercentage);
+pdfViewer.ZoomTo(pdfViewer.MaximumZoomPercentage);
 {% endhighlight %}
 {% endtabs %}
 
@@ -119,11 +119,11 @@ private void PdfViewer_ZoomChanged(object sender, ZoomEventArgs args)
 {% endhighlight %}
 {% endtabs %}
 
-## Active view port rendering at higher zoom percentages
+## Active viewport rendering at higher zoom percentages
 
-From the 19.3 version, the [MaximumZoomPercentage](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_MaximumZoomPercentage) of the PDF Viewer can be extended up to 6400% with the support of active view port rendering at higher zoom percentages. It renders only the part of the PDF file that is visible on-screen and ignoring the parts that are outside the viewport. The mode is automatically enabled when the page size or zoom increased beyond a specified limit on the zooming.  This approach will be helpful to open the large-size pages containing PDF documents at higher zoom levels.
+From the 19.3 version, the [MaximumZoomPercentage](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_MaximumZoomPercentage) of the PDF Viewer can be extended up to 6400% with the support of active viewport rendering at higher zoom percentages. It renders only the part of the PDF file that is visible on-screen and ignoring the parts that are outside the viewport. The mode is automatically enabled when the page size or zoom increased beyond a specified limit on the zooming.  This approach will be helpful to open the large-size pages containing PDF documents at higher zoom levels.
 
-N> Active view port rendering is supported only for the PDFium (default) rendering engine.
+N> Active viewport rendering is supported only for the PDFium (default) rendering engine.
 
 You need to set the [MaximumZoomPercentage](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_MaximumZoomPercentage) and call [ZoomTo](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_ZoomTo_System_Int32_) method to achieve it from the application level as shown in the following code example. 
 
@@ -131,17 +131,17 @@ You need to set the [MaximumZoomPercentage](https://help.syncfusion.com/cr/wpf/S
 {% highlight c# %}
 
 //Set the maximum zoom percentage.
-pdfviewer.MaximumZoomPercentage = 6400;
+pdfViewer.MaximumZoomPercentage = 6400;
 //Magnify the document to the zoom percentage you needed (less than or equal to 6400).
 //In the below example, control will magnify to 1200% zoom.
-pdfviewer.ZoomTo(1200);
+pdfViewer.ZoomTo(1200);
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Pinch to zoom
 
-The WPF PDF Viewer supports pinch-to-zoom, allows users to magnify using touch gestures when working on a device with a touch screen. To use pinch-to-zoom, place two fingers on the control and move them apart to zoom in (or together to zoom out).
+The WPF PDF Viewer supports pinch-to-zoom, which allows users to magnify using touch gestures when working on a device with a touch screen. To use pinch-to-zoom, place two fingers on the control and move them apart to zoom in (or together to zoom out).
 
 ## Mouse and keyboard shortcuts
 

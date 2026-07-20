@@ -65,7 +65,7 @@ File('output.pdf').writeAsBytes(await document.save());
 {% endhighlight %}
 {% endtabs %}
 
-The following code shows how to add the multiple layers in an existing PDF document.
+The following code shows how to add a layer to an existing PDF document.
 
 {% tabs %}
 {% highlight dart tabtitle="dart" %}
@@ -101,7 +101,7 @@ File('output.pdf').writeAsBytes(await document.save());
 
 ## Toggling the visibility of layers
 
-The visibility of a layer can be mentioned while creating a new page layer.
+The visibility of a layer can be specified while creating a new page layer.
 
 The following code shows how to toggle the visibility of layers in a new PDF document.
 
@@ -136,7 +136,7 @@ File('output.pdf').writeAsBytes(await document.save());
 
 ## Removing layers from an existing PDF document
 
-You can remove the layers from the layer collection represented by the [`PdfPageLayerCollection`](#) of the loaded page. This is showed in the following code sample.
+You can remove the layers from the layer collection represented by the [`PdfPageLayerCollection`](#) of the loaded page. This is shown in the following code sample.
 
 {% tabs %}
 {% highlight dart tabtitle="dart" %}

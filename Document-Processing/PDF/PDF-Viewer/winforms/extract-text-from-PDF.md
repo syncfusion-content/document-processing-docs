@@ -107,7 +107,7 @@ namespace TextExtractionDemo
             TextLines textLines = new TextLines();
             //Pass the `TextLines` as a parameter to the `ExtractText` method.
             pdfDocumentView.ExtractText(0, out textLines);
-            //Gets specific line from the collection through the index.
+            //Get a specific line from the collection through the index.
             TextLine line = textLines[0];
             //Get text in the line.
             string text = line.Text;
@@ -146,7 +146,7 @@ namespace TextExtractionDemo
             TextLines textLines = new TextLines();
             //Pass the `TextLines` as a parameter to the `ExtractText` method.
             pdfDocumentView.ExtractText(0, out textLines);
-            //Gets specific line from the collection through the index.
+            //Get a specific line from the collection through the index.
             TextLine line = textLines[0];
             //Get the word collection in a line.
             List<TextWord> wordCollection = line.WordCollection;

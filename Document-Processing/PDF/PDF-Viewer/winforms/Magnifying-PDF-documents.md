@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Magnifying PDF documents | Windows Forms | Syncfusion®
-description: Learn about Magnifying PDF documents support in Syncfusion<sup>&reg;</sup>;WinForms Pdf Viewer control, its elements and more.
+description: Learn about Magnifying PDF documents support in Syncfusion<sup>&reg;</sup> WinForms Pdf Viewer control, its elements and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Adjust magnification of PDF documents using WinForms PDF Viewer
 
-The [WinForms PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/winforms-pdf-viewer) has predefined set of zoom tools in the built-in toolbar, that allows you to change magnifications of the PDF document that is being displayed.
+The [WinForms PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/winforms-pdf-viewer) has a predefined set of zoom tools in the built-in toolbar that allows you to change the magnification of the PDF document that is being displayed.
 
 ![Zoom tools of WinForms PDF Viewer](images/zoom tools.png)
 
-1.	**Combo box**: It allows you to select a zoom percentage from the pre-defined set of values listed in the dropdown. Since it is editable, you can also provide your zoom values by double editing the text area.
+1.	**Combo box**: It allows you to select a zoom percentage from the pre-defined set of values listed in the dropdown. Since it is editable, you can also provide your zoom values by double-clicking the text area.
 2.	**Zoom out button**: It allows you to reduce the zoom value by 25% from the current zoom percentage.
 3.	**Zoom in button**: It allows you to increase the zoom value by 25% from the current zoom percentage.
 4.	**Fit to width button**: It allows you to fit the document to the width of the control.
@@ -21,7 +21,7 @@ The [WinForms PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/winforms-pdf
 
 ### Magnify the document to a given zoom percentage
 
-You can magnify the document to a given zoom percentage by using the [ZoomTo](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_Forms_PdfViewer_PdfViewerControl_ZoomTo_System_Int32_) function of the PDF Viewer. Refer to the following code sample to apply the specific zoom percentage based on the page contents.
+You can magnify the document to a given zoom percentage by using the [ZoomTo](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_Forms_PdfViewer_PdfViewerControl_ZoomTo_System_Int32_) function of the PDF Viewer. Refer to the following code sample to set a specific zoom percentage.
 
 {% tabs %}
 {% highlight c# %}
@@ -54,5 +54,7 @@ pdfViewer.ZoomMode = ZoomMode.FitWidth;
 
 ## Mouse and keyboard shortcuts
 
-**Ctrl (key) + Scroll the mouse wheel up** - To perform zoom in.
-**Ctrl (key) + Scroll the mouse wheel down** - To perform zoom out.
+You can use the following mouse and keyboard shortcuts to zoom in and out of the PDF document.
+
+**Ctrl + Scroll the mouse wheel up** - To perform zoom in.
+**Ctrl + Scroll the mouse wheel down** - To perform zoom out.

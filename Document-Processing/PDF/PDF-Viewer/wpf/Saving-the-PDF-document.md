@@ -20,7 +20,7 @@ You can also call the [Save](https://help.syncfusion.com/cr/wpf/Syncfusion.Windo
 {% tabs %}
 {% highlight c# %}
 
-Private void SavePDF()
+private void SavePDF()
 {
     //Save the PDF file to a specific file path after doing any modifications by passing the file name as a parameter to the `Save` method.
     pdfViewer.Save("Saved.pdf");
@@ -75,9 +75,9 @@ namespace SaveEvents
 {% endhighlight %}
 {% endtabs %}
 
-### Canceling save in Save events 
+### Canceling a save operation
 
-The [BeginSave](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_BeginSave) event occurs before initiating the save operation of the PDF file. It also allows you to cancel the save operation using the [Cancel](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.BeginSaveEventArgs.html#Syncfusion_Windows_PdfViewer_BeginSaveEventArgs_Cancel) property of [BeginSaveEventArgs](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.BeginSaveEventArgs.html). The following code shows how to wire the event in the [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html).
+You can cancel the save operation by setting the [Cancel](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.BeginSaveEventArgs.html#Syncfusion_Windows_PdfViewer_BeginSaveEventArgs_Cancel) property of [BeginSaveEventArgs](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.BeginSaveEventArgs.html) to `true` within the [BeginSave](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_BeginSave) event handler. The following code shows how to cancel the save operation in the [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html).
 
 {% tabs %}
 {% highlight c# %}

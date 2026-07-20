@@ -20,7 +20,7 @@ The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/lat
 
 ### Continuous Page Layout Mode
 
-By default, the `continuous` page layout mode is enabled, which scrolls the PDF pages vertically and horizontally. To enable the `continuous` page layout mode in `SfPdfViewer`, use the following code sample.
+By default, the `continuous` page layout mode is enabled, which displays all the PDF pages in a continuous flow. The scroll direction can be configured using the `scrollDirection` property. To set the page layout mode to `continuous` in `SfPdfViewer`, use the following code sample.
 
 {% tabs %}
 {% highlight dart hl_lines="6" %}
@@ -38,7 +38,7 @@ Widget build(BuildContext context) {
 
 ### Single Page Layout Mode
 
-In `Single` page layout mode, PDFs will be displayed page by page horizontally. To enable the `Single` page layout mode in `SfPdfViewer`, use the following code sample.
+In `Single` page layout mode, the PDF pages are displayed one at a time, with horizontal scrolling by default. To set the page layout mode to `Single` in `SfPdfViewer`, use the following code sample.
 
 {% tabs %}
 {% highlight dart hl_lines="6" %}
@@ -67,7 +67,7 @@ If the scroll direction is not specified, continuous page layout mode defaults t
 
 ### Vertical Scrolling
 
-By default, `Vertical` scrolling is enabled, which moves the PDF pages from up to down. To enable the `Vertical` scrolling in `SfPdfViewer`, use the following code sample.
+By default, `Vertical` scrolling is enabled, which scrolls the PDF pages from top to bottom. To set the scroll direction to `Vertical` in `SfPdfViewer`, use the following code sample.
 
 {% tabs %}
 {% highlight dart hl_lines="6" %}
@@ -85,7 +85,7 @@ Widget build(BuildContext context) {
 
 ### Horizontal Scrolling
 
-In `Horizontal` scrolling, PDF pages can be scrolled from left to right. To enable the `Horizontal` scrolling in `SfPdfViewer`, use the following code sample.
+In `Horizontal` scrolling, PDF pages are scrolled from left to right. To set the scroll direction to `Horizontal` in `SfPdfViewer`, use the following code sample.
 
 {% tabs %}
 {% highlight dart hl_lines="6" %}

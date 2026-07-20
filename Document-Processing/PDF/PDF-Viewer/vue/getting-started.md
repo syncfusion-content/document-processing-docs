@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with standalone Vue PDF Viewer Component in Vue 2
 
-This section explains how to create the **PDF Viewer** component and configure its available functionalities in a Vue 2 application using [Vue CLI](https://cli.vuejs.org/) with client-side rendering. The standalone PDF Viewer renders PDFs locally in the browser without requiring a server.
+This section explains how to create the **PDF Viewer** component and configure the PDF Viewer in a Vue 2 application using [Vue CLI](https://cli.vuejs.org/). The standalone PDF Viewer renders PDFs locally in the browser without requiring a server.
 
 ## Prerequisites
 
@@ -34,11 +34,11 @@ cd quickstart
 {% endhighlight %}
 {% endtabs %}
 
-When prompted, select **Default ([Vue 2] babel, eslint)**.
+When prompted, select the **Default ([Vue 2] babel, eslint)** option.
 
 > For Vue 3 application setup, see [Create a Vue 3 app](./getting-started-application).
 
-## Install the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue PDF Viewer packages
+## Install the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue PDF Viewer package
 
 Install the [Vue PDF Viewer](https://www.npmjs.com/package/@syncfusion/ej2-vue-pdfviewer) package from npm using the following command:
 
@@ -115,7 +115,7 @@ export default {
 
 **serviceUrl** – The back-end endpoint for PDF processing. The Syncfusion-hosted URL provides evaluation capabilities. For production, replace with your deployed web service endpoint.
 
-**documentPath** – The URL or file path to the PDF document to display.
+**documentPath** – The URL or file path to the PDF document to display. You can provide a remote URL, a Base64 string, or a local file path.
 
 ### Initialize the PDF Viewer
 
@@ -146,7 +146,7 @@ yarn serve
 {% endhighlight %}
 {% endtabs %}
 
-After the application starts, open the localhost URL shown in the terminal to view the Vue PDF Viewer in the browser. The output will appear as follows:
+After the application starts, open the URL displayed in the terminal (typically `http://localhost:8080`) to view the Vue PDF Viewer in the browser. The output will appear as follows:
 
 ![Vue PDF Viewer control](images/pdfviewer-control.png)
 
@@ -162,10 +162,10 @@ To get started quickly with Vue PDF Viewer, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=wCGPrGahcJg" %}
 
-N> Looking for the full Vue PDF Viewer component overview, features, pricing, and documentation? Visit the [Vue PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/vue-pdf-viewer) page.
-
 ## See also
 
 - [Getting started with Server-Backed Vue PDF Viewer](./getting-started-with-server-backed)
 - [Open PDF Files](./open-pdf-files)
 - [Save PDF Files](./save-pdf-files)
+
+N> Looking for the full Vue PDF Viewer component overview, features, pricing, and documentation? Visit the [Vue PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/vue-pdf-viewer) page.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Attachments in Flutter PDF library | Syncfusion
-description: Learn here all about add, remove, and load the properties of file Attachments feature of Syncfusion Flutter PDF non-UI library and more.
+description: Learn here all about add, remove, and extract the properties of file Attachments feature of Syncfusion Flutter PDF non-UI library and more.
 platform: document-processing
 control: PDF
 documentation: ug
@@ -111,7 +111,7 @@ document.dispose();
 {% endhighlight %}
 {% endtabs %}
 
-## Extracting and saving an attachment to the disc
+## Extracting and saving an attachment to the disk
 
 The Syncfusion<sup>&reg;</sup> Flutter PDF provides support for extracting the attachments and saving them to the disk. The following code example explains how to extract and save an attachment.
 

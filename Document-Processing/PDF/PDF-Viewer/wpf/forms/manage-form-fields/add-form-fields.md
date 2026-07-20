@@ -12,9 +12,9 @@ documentation: ug
 The [WPF PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/overview) allows developers to add form fields using code. By accessing the loaded PDF document through the viewer’s API, developers can create and insert form fields directly into the document.
 
 ### Textbox
-[PdfTextBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfTextBoxField.html) Instance is used to create a text box field in PDF forms. 
+The [PdfTextBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfTextBoxField.html) instance is used to create a text box field in PDF forms. 
 
-The below code snippet illustrates how to add a textbox field to a LoadedDocument
+The following code snippet illustrates how to add a textbox field to a LoadedDocument.
 {% tabs %}
 {% highlight C# %}
 
@@ -37,10 +37,10 @@ private void AddTextbox_Click(object sender, RoutedEventArgs e)
 Private Sub AddTextbox_Click(sender As Object, e As RoutedEventArgs)
     If pdfViewer.LoadedDocument.Form IsNot Nothing Then
         Dim page As PdfLoadedPage = TryCast(pdfViewer.LoadedDocument.Pages(0), PdfLoadedPage)
-        `Create a textbox field and add the properties.
+        'Create a textbox field and add the properties.
         Dim textBoxField As PdfTextBoxField = New PdfTextBoxField(page, "FirstName")
         textBoxField.Bounds = New RectangleF(0, 0, 100, 20)
-        `Add the form field to the document.
+        'Add the form field to the document.
         pdfViewer.LoadedDocument.Form.Fields.Add(textBoxField)
     End If
 End Sub
@@ -50,7 +50,7 @@ End Sub
 
 
 ### Password
-[PdfTextBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfTextBoxField.html) Instance is used to create a text box field in PDF forms. This field allows users to enter text input into the document. It also supports password functionality by setting the Password property to true.
+The [PdfTextBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfTextBoxField.html) instance is used to create a text box field in PDF forms. This field allows users to enter text input into the document. It also supports password functionality by setting the Password property to true.
 
 {% tabs %}
 {% highlight C# %}
@@ -85,9 +85,9 @@ End Sub
 {% endtabs %}
 
 ### CheckBox
-A check box field in PDF forms can be created using the [PdfCheckBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfCheckBoxField.html) Instance.
+A check box field in PDF forms can be created using the [PdfCheckBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfCheckBoxField.html) instance.
 
-Please refer the below code snippet for adding the check box field in LoadedDocument.
+Please refer to the following code snippet for adding a check box field to the LoadedDocument.
 
 {% tabs %}
 {% highlight C# %}
@@ -127,9 +127,9 @@ End Sub
 {% endtabs %}
 
 ### RadioButton
-Radio buttons in PDF forms can be created using the [PdfRadioButtonListField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRadioButtonListField.html) Instance. Individual radio button items within the group can be created using the [PdfRadioButtonListItem](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRadioButtonListItem.html) Instance.
+Radio buttons in PDF forms can be created using the [PdfRadioButtonListField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRadioButtonListField.html) instance. Individual radio button items within the group can be created using the [PdfRadioButtonListItem](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRadioButtonListItem.html) instance.
 
-Please refer the below code snippet for adding the radio button in LoadedDocument.
+Please refer to the following code snippet for adding a radio button to the LoadedDocument.
 
 {% tabs %}
 {% highlight C# %}
@@ -178,9 +178,9 @@ End Sub
 {% endtabs %}
 
 ### ListBox
-A list box form field in PDF documents can be created using the [PdfListBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfListBoxField.html) Instance. Individual listBox item added by using [PdfListFieldItem](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfListFieldItem.html) Instance.
+A list box form field in PDF documents can be created using the [PdfListBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfListBoxField.html) instance. Individual list box items are added by using the [PdfListFieldItem](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfListFieldItem.html) instance.
 
-Please refer the below code snippet for adding the list box field in LoadedDocument.
+Please refer to the following code snippet for adding a list box field to the LoadedDocument.
 
 {% tabs %}
 {% highlight C# %}
@@ -234,9 +234,9 @@ End Sub
 {% endtabs %}
 
 ### ComboBox
-The [PdfComboBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfComboBoxField.html) Instance is used to create a combo box field in PDF forms. A list of selectable items can be added to the combo box by using the [PdfListFieldItem](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfListFieldItem.html) class.
+The [PdfComboBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfComboBoxField.html) instance is used to create a combo box field in PDF forms. A list of selectable items can be added to the combo box by using the [PdfListFieldItem](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfListFieldItem.html) instance.
 
-Please refer the below code snippet for adding the combo box in LoadedDocument.
+Please refer to the following code snippet for adding a combo box to the LoadedDocument.
 
 {% tabs %}
 {% highlight C# %}

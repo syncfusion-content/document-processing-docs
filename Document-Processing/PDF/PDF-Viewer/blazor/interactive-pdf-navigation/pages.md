@@ -19,9 +19,9 @@ SfPdfViewer's toolbar includes these page navigation tools:
 * **Last page**: Navigate to the last page.
 * **Go to page**: Jump to a specified page number.
 
-![Page navigation tools in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-page-navigation.png)
+![Page navigation tools in Blazor SfPdfViewer](../images/blazor-pdfviewer-page-navigation.png)
 
-These toolbar buttons are controlled by the [EnableNavigation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableNavigation) property. Programmatic navigation APIs remain available regardless.
+These toolbar buttons are controlled by the [EnableNavigation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableNavigation) property. The programmatic navigation APIs remain available even when the toolbar buttons are hidden.
 
 ```cshtml
 
@@ -33,7 +33,7 @@ These toolbar buttons are controlled by the [EnableNavigation](https://help.sync
               EnableNavigation="false" />
 
 @code{
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
 }
 
 ```
@@ -53,11 +53,15 @@ N> `GoToPageAsync` expects a 1‑based page number.
 </div>
 
 <div style="display:inline-block">
-    <SfButton OnClick="OnLastPageClick">Go To Last Page</SfButton>
+    <SfButton OnClick="OnPreviousPageClick">Go To Previous Page</SfButton>
 </div>
 
 <div style="display:inline-block">
     <SfButton OnClick="OnNextPageClick">Go To Next Page</SfButton>
+</div>
+
+<div style="display:inline-block">
+    <SfButton OnClick="OnLastPageClick">Go To Last Page</SfButton>
 </div>
 
 <div style="display:inline-block">
@@ -68,39 +72,34 @@ N> `GoToPageAsync` expects a 1‑based page number.
     <SfButton OnClick="OnPageClick">Go To Page</SfButton>
 </div>
 
-<div style="display:inline-block">
-    <SfButton OnClick="OnPreviousPageClick">Go To Previous Page</SfButton>
-</div>
-
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code{
-    SfPdfViewer2 Viewer;
+    private SfPdfViewer2 Viewer;
     SfTextBox TextBox;
-    public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
 
-    public async void OnFirstPageClick(MouseEventArgs args)
+    private async Task OnFirstPageClick(MouseEventArgs args)
     {
         await Viewer.GoToFirstPageAsync();
     }
 
-    public async void OnLastPageClick(MouseEventArgs args)
+    private async Task OnLastPageClick(MouseEventArgs args)
     {
         await Viewer.GoToLastPageAsync();
     }
 
-    public async void OnNextPageClick(MouseEventArgs args)
+    private async Task OnNextPageClick(MouseEventArgs args)
     {
         await Viewer.GoToNextPageAsync();
     }
 
-    public async void OnPageClick(MouseEventArgs args)
-    {
-        int pageIndex =  int.Parse(TextBox.Value.ToString());
+    private async Task OnPageClick(MouseEventArgs args)
+    {        // GoToPageAsync expects a 1-based page number.        int pageIndex =  int.Parse(TextBox.Value.ToString());
         await Viewer.GoToPageAsync(pageIndex);
     }
 
-    public async void OnPreviousPageClick(MouseEventArgs args)
+    private async Task OnPreviousPageClick(MouseEventArgs args)
     {
         await Viewer.GoToPreviousPageAsync();
     }
@@ -110,6 +109,7 @@ N> `GoToPageAsync` expects a 1‑based page number.
 
 ## See also
 
-* [Magnification in Blazor SfPdfViewer](../magnification)
-
+* [Hyperlink navigation in Blazor SfPdfViewer](./hyperlink)
 * [Bookmark navigation in Blazor SfPdfViewer](./bookmark)
+* [Page thumbnail navigation in Blazor SfPdfViewer](./page-thumbnail)
+* [Magnification in Blazor SfPdfViewer](../magnification)

@@ -6,23 +6,24 @@ control: PDF to image
 documentation: UG
 ---
 
-# NuGet Packages Required 
+# NuGet Packages Required
 
-To work with PDF to image converter library, the following NuGet packages need to be installed in your application.
+To work with the PDFToImageConverter library, the following NuGet packages need to be installed in your application.
 
 <table>
-<tr>
 <thead>
+<tr>
 <th><b>Platform(s)</b></th>
 <th><b>NuGet Package</b></th>
-</thead>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td>
 Windows Forms
 </td>
 <td>
-{{'[Syncfusion.PdfToImageConverter.WinForms.nupkg](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.WinForms/)'| markdownify }}
+{{'[Syncfusion.PdfToImageConverter.WinForms](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.WinForms/)'|markdownify }}
 </td>
 </tr>
 <tr>
@@ -30,18 +31,18 @@ Windows Forms
 WPF
 </td>
 <td>
-{{'[Syncfusion.PdfToImageConverter.WPF.nupkg](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.WPF/)'| markdownify }}
+{{'[Syncfusion.PdfToImageConverter.WPF](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.WPF/)'|markdownify }}
 </td>
 </tr>
 <tr>
 <td rowspan="2">Blazor, .NET Core and .NET Platforms</td>
 <td>
-{{'[Syncfusion.PdfToImageConverter.Net.nupkg](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.Net/)'| markdownify }}
+{{'[Syncfusion.PdfToImageConverter.Net](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.Net/)'|markdownify }}
 </td>
 </tr>
 <tr>
 <td>
-{{'[Syncfusion.PdfToImageConverter.Net.Core.nupkg](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.Net.Core/)'| markdownify }}
+{{'[Syncfusion.PdfToImageConverter.Net.Core](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.Net.Core/)'|markdownify }}
 </td>
 </tr>
 <tr>
@@ -49,9 +50,10 @@ WPF
 ASP.NET MVC5
 </td>
 <td>
-{{'[Syncfusion.PdfToImageConverter.AspNet.Mvc5.nupkg](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.AspNet.Mvc5/)'| markdownify }}
+{{'[Syncfusion.PdfToImageConverter.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.AspNet.Mvc5/)'|markdownify }}
 </td>
 </tr>
+</tbody>
 </table>
 
-N> The above mentioned NuGet packages are available in [nuget.org](https://www.nuget.org/).
+N> The above-mentioned NuGet packages are available in [nuget.org](https://www.nuget.org/).

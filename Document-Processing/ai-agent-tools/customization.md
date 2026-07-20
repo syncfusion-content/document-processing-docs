@@ -25,7 +25,7 @@ cd Document-SDK-AI-Agent-Tools
 
 **Step 2: Create the tool class**
 
-Open the `Syncfusion.DocumentSDK.AI.AgentTools` library project. Create a new class inside the `Tools` folder. The example below adds a watermark tool for Word documents:
+Open the [Syncfusion.DocumentSDK.AI.AgentTools](https://github.com/syncfusion/document-sdk-ai-agent-tools/tree/master/Syncfusion.DocumentSDK.AI.AgentTools) library project. Create a new class inside the [Tools](https://github.com/syncfusion/document-sdk-ai-agent-tools/tree/master/Syncfusion.DocumentSDK.AI.AgentTools/Tools) folder. The example below adds a watermark tool for Word documents:
 
 ```csharp
 using Syncfusion.AI.AgentTools.Core;

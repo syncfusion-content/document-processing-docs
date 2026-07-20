@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Thumbnail Navigation in WPF Pdf Viewer control | Syncfusion<sup>&reg;</sup>;
-description: Learn about Thumbnail Navigation support in Syncfusion<sup>&reg;</sup>; Essential Studio&reg; WPF Pdf Viewer control, its elements and more.
+title: Thumbnail Navigation in WPF Pdf Viewer control | Syncfusion<sup>&reg;</sup>
+description: Learn about Thumbnail Navigation support in Syncfusion<sup>&reg;</sup>; Essential Studio<sup>&reg;</sup> WPF Pdf Viewer control, its elements and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Thumbnail Navigation in WPF Pdf Viewer
+# Thumbnail Navigation in WPF PDF Viewer
 
-The thumbnail navigation support in PDF viewer allows users to view a miniature preview of the PDF pages for fast scrolling and easy navigation purpose.
+The thumbnail navigation support in PDF viewer allows users to view a miniature preview of the PDF pages for fast scrolling and easy navigation.
 
 ![WPF PDF Viewer Thumbnail Navigation](Thumbnail_images\wpf-pdf-viewer-thumbnail-navigation.png)
 
@@ -33,7 +33,7 @@ private void Window_Loaded(object sender, RoutedEventArgs e)
 {% highlight vbnet %}
 
 Private Sub Window_Loaded(sender As Object, e As RoutedEventArgs)
-    Dim pdf As New PdfLoadedDocument(“Input.pdf”)
+    Dim pdf As New PdfLoadedDocument("Input.pdf")
     pdfViewer.Load(pdf)
 	pdfviewer.ThumbnailSettings.IsExpanded = true
 End Sub
@@ -67,7 +67,7 @@ private void Window_Loaded(object sender, RoutedEventArgs e)
 {% highlight vbnet %}
 
 Private Sub Window_Loaded(sender As Object, e As RoutedEventArgs)
-    Dim pdf As New PdfLoadedDocument(“Input.pdf”)
+    Dim pdf As New PdfLoadedDocument("Input.pdf")
     pdfViewer.Load(pdf)
 	pdfviewer.ThumbnailSettings.IsVisible = false
 End Sub

@@ -254,8 +254,8 @@ PdfPage page = document.pages.add();
 //Creates a new document link annotation
 PdfDocumentLinkAnnotation documentLinkAnnotation =
     PdfDocumentLinkAnnotation(Rect.fromLTWH(10, 40, 30, 30),
-    setAppearance: true,
-    PdfDestination(document.pages.add(), Offset(10, 0)));
+    PdfDestination(document.pages.add(), Offset(10, 0)),
+    setAppearance: true);
 
 //Adds this annotation the page.
 page.annotations.add(documentLinkAnnotation);
@@ -305,7 +305,7 @@ document.dispose();
 
 This annotation is used to navigate to a particular web URI while clicking on the link text.
 
-The following code example explains how to add the Text Web Link annotation in a PDF document using the PdfTextWebLinkAnnotation.
+The following code example explains how to add the Text Web Link annotation in a PDF document using the PdfTextWebLink.
 {% tabs %}
 {% highlight dart tabtitle="dart" %}
 
@@ -415,7 +415,7 @@ Pop-up annotation displays text in a pop-up window for entry and editing.
 
 It typically does not appear alone but is associated with markup annotation, its parent annotation.
 
-PdfPopupAnnotation is used to add pop-up annotation in a PDF document.
+PdfPopupAnnotation is used to add a pop-up annotation in a PDF document.
 
 {% tabs %}
 {% highlight dart tabtitle="dart" %}
@@ -471,9 +471,9 @@ document.dispose();
 
 ## Flatten annotation
 
-Annotations can be flattened by removing the existing annotation and replacing it with the graphics objects that would resemble the annotation and it cannot be edited.
+Annotations can be flattened by removing the existing annotation and replacing it with graphics objects that resemble the annotation, making it non-editable.
 
-This can be achieved by enabling the flattenAllAnnotations method . Please refer to the sample for flattening all the annotations in the PDF document.
+This can be achieved by calling the flattenAllAnnotations method. Please refer to the sample for flattening all the annotations in the PDF document.
 
 {% tabs %}
 {% highlight dart tabtitle="dart" %}
@@ -571,7 +571,7 @@ annotation.innerColor = PdfColor(0, 255, 0);
 annotation.text = 'Modified Annotation';
 annotation.author = 'Syncfusion';
 annotation.modifiedDate = DateTime.now();
-annotation.setAppearance: true;
+annotation.setAppearance = true;
 
 //Saves the document
 File('output.pdf').writeAsBytes(await document.save());
@@ -652,7 +652,7 @@ If set, do not display the annotation on the screens or allow the user to intera
 <tr>
 <td>
 readOnly<br/><br/></td><td>
-If set, do not allow the user to interact with annotation.<br/><br/></td></tr>
+If set, do not allow the user to interact with the annotation.<br/><br/></td></tr>
 <tr>
 <td>
 locked<br/><br/></td><td>
@@ -660,7 +660,7 @@ If set, do not allow the annotation to be deleted or its properties to be modifi
 <tr>
 <td>
 toggleNoView<br/><br/></td><td>
-If set, invert the interpretation of the noView flat for certain events.<br/><br/></td></tr>
+If set, invert the interpretation of the noView flag for certain events.<br/><br/></td></tr>
 </tbody>
 </table>
 
@@ -793,11 +793,11 @@ To export annotation data to the FDF file from the PDF document, you can use the
     //Load an existing PDF document.
     PdfDocument document =
         PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
-    //Export the annotations to FDF file format
+    //Export the annotations to FDF file format.
     List<int> bytes = document.exportAnnotation(PdfAnnotationDataFormat.fdf);
     //Save the FDF file.
     File('export.fdf').writeAsBytesSync(bytes);
-    //Dispose the document
+    //Dispose the document.
     document.dispose();
 
 {% endhighlight %}
@@ -815,7 +815,7 @@ To export annotation data to the XFDF file from the PDF document, you can use th
         PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
     //Export the annotations to XFDF file format.
     List<int> bytes = document.exportAnnotation(PdfAnnotationDataFormat.xfdf);
-    //Save the FDF file.
+    //Save the XFDF file.
     File('export.xfdf').writeAsBytesSync(bytes);
     //Dispose the document.
     document.dispose();
@@ -835,7 +835,7 @@ To export annotation data to the JSON file from the PDF document, you can use th
         PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
     //Export the annotations to JSON file format.
     List<int> bytes = document.exportAnnotation(PdfAnnotationDataFormat.json);
-    //Save the FDF file.
+    //Save the JSON file.
     File('export.json').writeAsBytesSync(bytes);
     //Dispose the document.
     document.dispose();

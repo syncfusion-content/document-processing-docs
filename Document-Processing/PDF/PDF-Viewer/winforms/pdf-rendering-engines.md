@@ -9,10 +9,10 @@ documentation: ug
 
 # PDF Rendering Engines in Windows Forms PDF Viewer (PdfViewerControl)
 
-[WinForms PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/winforms-pdf-viewer) renders the PDF pages through 2 different rendering engines.
+[WinForms PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/winforms-pdf-viewer) renders the PDF pages through two different rendering engines.
 
 * PDFium (Google Chrome’s PDF rendering engine)
-* SfPdf (Syncfusion’s Own PDF rendering engine)
+* SfPdf (Syncfusion’s own PDF rendering engine)
 
 ## PDFium
 
@@ -31,17 +31,17 @@ N>* From v34.1.x onwards, Pdfium is upgraded to the new version which was built 
 
 ![Pdfium Folder Structure](pdf-rendering-engines_images/pdfium folder structure.png)
 
-N> PDFium rendering is not supported in Windows XP operating system.
+N> PDFium rendering is not supported in Windows XP.
 
 ### How to run PDFium in a restricted access environment
 
-If there is any access restriction applied to the application output folder, then the Syncfusion<sup>&reg;</sup>; PDF Viewer  control cannot able to extract and consume the PDFium engine as mentioned above.
+If there is any access restriction applied to the application output folder, then the Syncfusion<sup>&reg;</sup>; PDF Viewer control is not able to extract and consume the PDFium engine as mentioned above.
 
 In that situation, you need to add the following steps to consume the PDFium rendering engine.
 
-* Create a folder where your application can access, create & read files. For example, <b>"d:\ThirdPartyBinaries\"</b>.
+* Create a folder that your application can access to create and read files. For example, <b>"d:\ThirdPartyBinaries\"</b>.
 * Update the path of this folder to the [ReferencePath](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_Forms_PdfViewer_PdfViewerControl_ReferencePath) property of PDF Viewer control, like shown in the following code sample.
-* If [ReferencePath](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_Forms_PdfViewer_PdfViewerControl_ReferencePath) is set, then PDF Viewer control extracts the PDFium binary inside that specified folder and consume the PDFium rendering engine.
+* If [ReferencePath](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_Forms_PdfViewer_PdfViewerControl_ReferencePath) is set, then PDF Viewer control extracts the PDFium binary inside that specified folder and consumes the PDFium rendering engine.
 
 {% tabs %}
 {% highlight c# %}
@@ -64,7 +64,7 @@ namespace PdfViewerDemo
 {% endhighlight %}
 {% endtabs %}
 
-N>In the run time, the PDF viewer will check the custom folder path provided in the [ReferencePath](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_Forms_PdfViewer_PdfViewerControl_ReferencePath) property. If you already placed the Pdfium assemblies in the custom folder path, it will refer to the already available assemblies from the location. It won’t generate the assemblies in the folder again. 
+N>At run time, the PDF viewer will check the custom folder path provided in the [ReferencePath](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_Forms_PdfViewer_PdfViewerControl_ReferencePath) property. If you already placed the Pdfium assemblies in the custom folder path, it will refer to the already available assemblies from the location. It won’t generate the assemblies in the folder again. 
 N>You need to place the PDFium assembly in the correct folder structure as mentioned below.
 N>* ThirdPartyBinaries
 N>	* Pdfium
@@ -77,7 +77,7 @@ N>			* Pdfium.dll
 
 ## SfPdf
 
-`SfPdf` is the Syncfusion’s own PDF rendering engine. Before v16.3.0.x, PDF Viewer control has used this rendering engine as default to rendering the PDF pages. If you wish to use `SfPdf` rendering engine or face any compatibility issues with `Pdfium` rendering engine in your environment, you may set the [RenderingEngine](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_Forms_PdfViewer_PdfViewerControl_RenderingEngine) property to `SfPdf` as shown in the following code sample.
+`SfPdf` is Syncfusion's own PDF rendering engine. Before v16.3.0.x, the PDF Viewer control used this rendering engine as the default for rendering the PDF pages. If you wish to use `SfPdf` rendering engine or face any compatibility issues with `Pdfium` rendering engine in your environment, you may set the [RenderingEngine](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_Forms_PdfViewer_PdfViewerControl_RenderingEngine) property to `SfPdf` as shown in the following code sample.
 
 N> The recommended PDF rendering engine is PDFium.
 

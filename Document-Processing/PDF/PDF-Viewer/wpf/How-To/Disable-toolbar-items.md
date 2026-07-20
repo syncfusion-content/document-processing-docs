@@ -13,7 +13,7 @@ To remove the default toolbar completely, use the [PdfDocumentView](https://help
 
 However, an individual toolbar item can also be removed from the default toolbar of the PDF Viewer using the toolbar template.
 
-N> When disabling the toolbar items using the toolbar template, the toolbar template should be accessed either in the **PdfViewerControl's Loaded event** or **Windows loaded event** as the toolbar items will be initialized when the PdfViewer is loaded. Accessing the toolbar items using its template before the PdfViewer is loaded will result in a null reference exception
+N> When disabling the toolbar items using the toolbar template, the toolbar template should be accessed either in the **PdfViewerControl's Loaded event** or **Windows loaded event** as the toolbar items will be initialized when the PdfViewer is loaded. Accessing the toolbar items using its template before the PdfViewer is loaded will result in a null reference exception.
 
 The following code sample explains disabling the text search tool from the default toolbar.
 
@@ -33,7 +33,7 @@ private void pdfViewer_Loaded(object sender, RoutedEventArgs e)
 {
     //Get the instance of the toolbar using its template name.
     DocumentToolbar toolbar = pdfViewer.Template.FindName("PART_Toolbar", pdfViewer) as DocumentToolbar;
-    //Get the instance of the open file button using its template name.
+    //Get the instance of the text search button using its template name.
     Button textSearchButton = (Button)toolbar.Template.FindName("PART_ButtonTextSearch", toolbar);
     //Set the visibility of the button to collapsed.
     textSearchButton.Visibility = System.Windows.Visibility.Collapsed;
@@ -42,7 +42,7 @@ private void pdfViewer_Loaded(object sender, RoutedEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-N> Apply the changes of hiding toolbar items, only after when the application window is loaded.
+N> Apply the changes for hiding toolbar items only after the application window is loaded.
 N> The sample project for disabling toolbar item is available in the [GitHub](https://github.com/SyncfusionExamples/WPF-PDFViewer-Examples/tree/master/Toolbar/HideToolbarItems).
 
 Similarly, other toolbar items also can be disabled. The following table lists the template names of the rest of the toolbar items along with their respective types in the order they appear in the toolbar.
@@ -193,7 +193,7 @@ Similarly, other toolbar items also can be disabled. The following table lists t
 N> From the v18.4.0.x onwards, the file menu items such as Open, Save, Save As, and Print are not directly present in the toolbar and they are present in the context menu of the File tools toggle button.
 N> From the v21.1.0.x onwards, the PDFViewer toolbar design is changed for a better user interface and visual.
 
-Due to the changes in the toolbar design, there were some changes for a few tool templates. They are listed as follows.
+Due to the toolbar design changes, a few tool templates have been modified. They are listed as follows.
 
 ## Before v21.1.0.x (Old Toolbar)
 
@@ -384,4 +384,4 @@ Similarly, other file menu items can be disabled. The following table lists the 
 </tr>
 </table>
 
-N> The present UI design is subject to change, based on the inclusion of new features, enhancements, and user convenience.
+N> The current UI design is subject to change based on the inclusion of new features, enhancements, and user convenience.

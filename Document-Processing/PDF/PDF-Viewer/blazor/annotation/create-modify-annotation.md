@@ -1,20 +1,20 @@
 ---
 layout: post
 title: Create and modify annotations in Blazor PDF Viewer | Syncfusion
-description: Learn how to create and modify annotations in Syncfusion Blazor PDF Viewer with UI and programmatic examples, plus quick links to all annotation types.
+description: Learn how to create and modify annotations in Blazor PDF Viewer with UI and programmatic examples, plus quick links to all annotation types.
 platform: document-processing
-control: PDF Viewer
+control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
 # Create and modify annotations in Blazor PDF Viewer
 
-The PDF Viewer annotation tools add, edit, and manage markups across documents. This page provides an overview with quick navigation to each annotation type and common creation and modification workflows.
+The PDF Viewer annotation tools let you add, edit, and manage markups across documents. This page provides an overview. It includes quick navigation to each annotation type and describes the common creation and modification workflows.
 
 ## Quick navigation to annotation types
 
-Jump directly to a specific annotation type for detailed usage and examples:
+The following pages describe each annotation type in detail, with both UI steps and code examples.
 
 **Text Markup annotations:**
 - Highlight: [Highlight annotation](./text-markup/highlight-annotation)
@@ -56,7 +56,7 @@ N> Each annotation type page includes both UI steps and programmatic examples sp
 
 **Note:**
 - When pan mode is active and a shape or stamp tool is selected, the viewer switches to text select mode automatically.
-- Property pickers in the annotation toolbar let users choose color, stroke color, thickness, and opacity while drawing
+- Property pickers in the annotation toolbar let users choose color, stroke color, thickness, and opacity while drawing.
 
 ### Create programmatically
 
@@ -72,13 +72,15 @@ Example: creating a Rectangle annotation using [`AddAnnotationAsync`](https://he
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/Shape_Annotation.pdf";
+    private SfPdfViewer2 viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/Shape_Annotation.pdf";
 
-    public async void AddShapeAnnotationAsync(MouseEventArgs args)
+    private async Task AddShapeAnnotationAsync(MouseEventArgs args)
     {
+        // PdfAnnotation defines the annotation to add.
+        // Bound specifies the rectangle on the page in points (1 point = 1/72 inch), measured from the page's top-left corner.
         PdfAnnotation annotation = new PdfAnnotation();
-        // Set the Shape annotation type like Rectangle, Line, Arrow, Circle, Polygon.
+        // Set the shape annotation type. Supported values include Rectangle, Line, Arrow, Circle, and Polygon.
         annotation.Type = AnnotationType.Rectangle;
         // Page numbers start from 0. So, if set to 0 it represents page 1.
         annotation.PageNumber = 0;
@@ -95,37 +97,36 @@ Example: creating a Rectangle annotation using [`AddAnnotationAsync`](https://he
 }
 ```
 
-Refer to the individual annotation pages for enabling draw modes from UI buttons and other type-specific creation samples.
+Refer to the individual annotation pages for enabling draw modes from UI buttons and other type-specific creation samples (text markup, free text, ink, stamp, sticky notes, and measurement annotations).
 
 ## Modify annotations
 
 ### Modify via UI
 
-Use the annotation toolbar after selecting an annotation:
-- Edit color: change the fill or text color (when applicable)
+Use the annotation toolbar after selecting an annotation. The available properties vary by annotation type.
+- **Edit color:** change the fill or text color (where applicable).
 
-![Edit color](../images/blazor-pdfviewer-edit-fill-color.png)
+    ![Edit color](../images/blazor-pdfviewer-edit-fill-color.png)
+- **Edit stroke color:** change the border or line color (shape and line types).
 
-- Edit stroke color: change the border or line color (shape and line types)
+    ![Edit stroke color](../images/blazor-pdfviewer-edit-shape-stroke-color.png)
+- **Edit thickness:** change the border or line thickness.
 
-![Edit stroke color](../images/blazor-pdfviewer-edit-shape-stroke-color.png)
+    ![Edit thickness](../images/blazor-pdfviewer-shape-thickness.png)
+- **Edit opacity:** change transparency (0 fully transparent to 1 fully opaque).
 
-- Edit thickness: adjust the border or line thickness
+    ![Edit opacity](../images/blazor-pdfviewer-shape-opacity.png)
 
-![Edit thickness](../images/blazor-pdfviewer-shape-thickness.png)
-
-- Edit opacity: change transparency
-
-![Edit opacity](../images/blazor-pdfviewer-shape-opacity.png)
-
-Additional options such as Line Properties (for line/arrow) are available from the context menu (right-click > Properties) where supported.
+Additional options, such as Line Properties for line and arrow annotations, are available from the right-click context menu (**Properties**), where supported.
 
 ### Modify programmatically
 
 Use `EditAnnotationAsync` to apply changes to an existing annotation. Common flow:
-- Locate the target annotation from `GetAnnotationsAsync()`.
-- Update the desired properties.
-- Call `EditAnnotationAsync` with the modified object.
+- Locate the target annotation from `GetAnnotationsAsync()`. For a single page, use the overload `GetAnnotationsOnPageAsync(pageNumber)`.
+- Update the desired properties (`FillColor`, `StrokeColor`, `Thickness`, `Opacity`).
+- Call `EditAnnotationAsync` with the modified object. If the annotation is not found on the current document, the call returns without applying changes.
+
+The following example edits a Rectangle (shape) annotation. For type-specific properties (line endings, stamp position, sticky note bounds, etc.), see the corresponding annotation type page.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -135,20 +136,25 @@ Use `EditAnnotationAsync` to apply changes to an existing annotation. Common flo
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/Shape_Annotation.pdf";
+    private SfPdfViewer2 viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/Shape_Annotation.pdf";
 
-    public async void EditShapeAnnotationAsync(MouseEventArgs args)
+    private async Task EditShapeAnnotationAsync(MouseEventArgs args)
     {
         // Get annotation collection
         List<PdfAnnotation> annotationCollection = await Viewer.GetAnnotationsAsync();
-        // Select the annotation want to edit
+        if (annotationCollection == null || annotationCollection.Count == 0)
+        {
+            // No annotations to edit. Exit early.
+            return;
+        }
+        // Select the annotation to edit
         PdfAnnotation annotation = annotationCollection[0];
-        // Change the fill color of rectangle annotation
+        // Change the fill color of rectangle annotation (hex string, e.g., "#FFFF00")
         annotation.FillColor = "#FFFF00";
-        // Change the stroke color of rectangle annotation
+        // Change the stroke color of rectangle annotation (hex string, e.g., "#0000FF")
         annotation.StrokeColor = "#0000FF";
-        // Change the thickness of rectangle annotation
+        // Change the thickness of rectangle annotation (border or line width in points)
         annotation.Thickness = 3;
         // Change the Opacity (0 to 1) of rectangle annotation
         annotation.Opacity = 0.5;
@@ -163,15 +169,17 @@ N> For type-specific creation and edit examples (for example, editing line endin
 ## See also
 
 - [Annotation Overview](./overview)
+- [Comments](./comments)
+- [Annotation Permission](./annotation-permission)
+- [Undo and Redo](./annotations-undo-redo)
+- [Delete Annotation](./delete-annotation)
+- [Export and Import Annotation](./export-annotation)
 - [Text Markup Annotation](./text-markup/highlight-annotation)
 - [Shape Annotation](./shape/line-annotation)
 - [Measurement Annotation](./measurement/distance-annotation)
 - [Free Text Annotation](./free-text-annotation)
 - [Ink Annotation](./ink-annotation)
 - [Stamp Annotation](./stamp-annotation)
-- [Comments](./comments)
 - [Redaction](./redaction-annotation)
-- [Annotation Permission](./annotation-permission)
-- [Undo and Redo](./annotations-undo-redo)
-- [Delete Annotation](./delete-annotation)
-- [Export and Import Annotation](./export-annotation)
+- [Getting Started](../getting-started)
+- [Quick navigation](#quick-navigation-to-annotation-types)

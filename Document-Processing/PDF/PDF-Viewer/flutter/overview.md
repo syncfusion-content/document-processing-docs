@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About Flutter PDF Viewer widget | Syncfusion
-description: Learn here all about introduction of Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget, its features, and more.
+description: Learn all about the Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget, its features, and more.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

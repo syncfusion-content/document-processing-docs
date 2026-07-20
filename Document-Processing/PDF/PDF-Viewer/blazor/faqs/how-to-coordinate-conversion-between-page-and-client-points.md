@@ -21,7 +21,7 @@ Use JavaScript interop helper functions to translate between the document page c
 
 ## Converting page coordinates to client coordinates
 
-- ConvertPagePointToClientPoint translates a point from the document page coordinate system to the browser client (viewport) coordinate system.
+- `convertPagePointToClientPoint` translates a point from the document page coordinate system to the browser client (viewport) coordinate system.
 
 The following example shows how to convert page coordinates to client coordinates in a Blazor component.
 
@@ -40,7 +40,7 @@ The following example shows how to convert page coordinates to client coordinate
 ```javascript
 
 window.convertPagePointToClientPoint = function (pagePoint) {
-    const pagediv = document.getElementsByClassName('e-pv-page-div')[pageIndex];
+    const pagediv = document.getElementsByClassName('e-pv-page-div')[0];
     const rect = pagediv.getBoundingClientRect();
     return {
         x: pagePoint.x + rect.left,
@@ -72,16 +72,16 @@ window.convertPagePointToClientPoint = function (pagePoint) {
 @code {
     private SfPdfViewer2 SfPdfViewer2;
 
-    private async void OnPageClick(PageClickEventArgs args)
+    private async Task OnPageClick(PageClickEventArgs args)
     {
         Point pagePoint = new Point { x = args.PageX, y = args.PageY };
         Point clientPoint = await JS.InvokeAsync<Point>("convertPagePointToClientPoint", pagePoint);
-        Console.WriteLine($"PagePoint to ClientPoint : X: {clientPoint.x} Y: {clientPoint.y} ");
+        Console.WriteLine($"PagePoint to ClientPoint: X: {clientPoint.x} Y: {clientPoint.y}");
     }
-    public class Point
+    private class Point
     {
-        public double x { get; set; }
-        public double y { get; set; }
+        private double x { get; set; }
+        private double y { get; set; }
     }
 }
 
@@ -90,7 +90,7 @@ window.convertPagePointToClientPoint = function (pagePoint) {
 
 ## Converting client coordinates to page coordinates
 
-- ConvertClientPointToPagePoint translates a point from the browser client (viewport) coordinate system to the document page coordinate system.
+- `convertClientPointToPagePoint` translates a point from the browser client (viewport) coordinate system to the document page coordinate system.
 
 The following example shows how to convert client coordinates to page coordinates in a Blazor component.
 
@@ -142,19 +142,20 @@ window.convertClientPointToPagePoint = function (clientPoint) {
     private int currentClientX;
     private int currentClientY;
 
-    private async void HandleMouseDown(MouseEventArgs e)
+    private async Task HandleMouseDown(MouseEventArgs e)
     {
         currentClientX = (int)e.ClientX;
         currentClientY = (int)e.ClientY;
         Point clientPoint = new Point { x = currentClientX, y = currentClientY };
         Point pagePoint = await JS.InvokeAsync<Point>("convertClientPointToPagePoint", clientPoint);
-        Console.WriteLine($"ClientPoint to PagePoint : X: {pagePoint.x} Y: {pagePoint.y} ");
+        Console.WriteLine($"ClientPoint to PagePoint: X: {pagePoint.x} Y: {pagePoint.y}");
     }
-    public class Point
+    private class Point
     {
-        public double x { get; set; }
-        public double y { get; set; }
+        private double x { get; set; }
+        private double y { get; set; }
     }
 }
 ```
+
 [View the coordinate conversion sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Coordinate%20Conversion%20Between%20Page%20and%20Client%20Points)

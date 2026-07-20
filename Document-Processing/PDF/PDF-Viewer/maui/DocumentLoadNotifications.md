@@ -10,11 +10,11 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 # Document Load Events in .NET MAUI PDF Viewer (SfPdfViewer)
 
-The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) supports the [DocumentLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoaded) and [DocumentLoadFailed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoadFailed) events to notify whether the document has been opened and displayed in the view or not.
+The [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) supports the [DocumentLoaded](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoaded) and [DocumentLoadFailed](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoadFailed) events to notify whether the document has been opened and displayed in the view or not.
 
 ## Document loaded event
 
-The [DocumentLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoaded) event triggers after the document is loaded in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). Refer to the following code example:
+The [DocumentLoaded](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoaded) event triggers after the document is loaded in the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). Refer to the following code example:
 
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
@@ -24,7 +24,7 @@ The [DocumentLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfView
 		DocumentLoaded="PdfViewer_DocumentLoaded"/>
 
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# %}
 
 	private void PdfViewer_DocumentLoaded(object sender, EventArgs e)
 	{
@@ -37,11 +37,11 @@ The [DocumentLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfView
 If you want to perform any operation immediately after the document has loaded, you can handle the operations in this event. For example, if you want to initially open a document with a specific page number or zoom factor, then call the respective APIs in this event handler. The following code example explains opening a document with a specified page number of 4.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight c# %}
 
 private void PdfViewer_DocumentLoaded(object sender, EventArgs e) 
 { 
-	pdfViewer.GoToPage(4); 
+	PdfViewer.GoToPage(4); 
 }
 
 {% endhighlight %}
@@ -49,18 +49,18 @@ private void PdfViewer_DocumentLoaded(object sender, EventArgs e)
 
 ## Document load failures
 
-When a document fails to load in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html), users are notified with a context-specific error message via the [DocumentLoadFailed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoadFailed) event. This event helps developers identify the cause of the failure and implement custom error handling for a smoother user experience.
+When a document fails to load in the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html), the [DocumentLoadFailed](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoadFailed) event notifies the application with a context-specific error message. This event helps developers identify the cause of the failure and implement custom error handling for a smoother user experience.
 
 ### Document load failed event
 
-The [DocumentLoadFailed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoadFailed) event alerts users when a document fails to load in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) due to one of the following conditions:
+The [DocumentLoadFailed](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoadFailed) event alerts users when a document fails to load in the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) due to one of the following conditions:
 * A corrupted document is loaded.
 * A password-protected document is provided with an invalid or empty password.
-* A non-PDF file is attempted to be loaded.
+* A non-PDF file is loaded.
 * The document contains an XFA form, which is currently unsupported.
 * Exceptions occur during PDF loading or page rendering due to limitations or issues in platform-specific native PDF renderers.
 
-The [DocumentLoadFailedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.DocumentLoadFailedEventArgs.html) will return the error [Message](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.DocumentLoadFailedEventArgs.html#Syncfusion_Maui_PdfViewer_DocumentLoadFailedEventArgs_Message) and [Exception](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.DocumentLoadFailedEventArgs.html#Syncfusion_Maui_PdfViewer_DocumentLoadFailedEventArgs_Exception) details for the failure. The following code example explains the same.
+The [DocumentLoadFailedEventArgs](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.DocumentLoadFailedEventArgs.html) returns the error [Message](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.DocumentLoadFailedEventArgs.html#Syncfusion_Maui_PdfViewer_DocumentLoadFailedEventArgs_Message) and [Exception](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.DocumentLoadFailedEventArgs.html#Syncfusion_Maui_PdfViewer_DocumentLoadFailedEventArgs_Exception) details for the failure. The following code example explains how to handle the event.
 
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
@@ -70,7 +70,7 @@ The [DocumentLoadFailedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion
 	DocumentLoadFailed="PdfViewer_DocumentLoadFailed"/>
 	
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# %}
 
 private void PdfViewer_DocumentLoadFailed(object sender, DocumentLoadFailedEventArgs e)
 {
@@ -82,7 +82,7 @@ private void PdfViewer_DocumentLoadFailed(object sender, DocumentLoadFailedEvent
 
 ### Handling document load failures
 
-The [DocumentLoadFailed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoadFailed) event allows you to handle the load failures at the application level in your own way. Set the [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.DocumentLoadFailedEventArgs.html#Syncfusion_Maui_PdfViewer_DocumentLoadFailedEventArgs_Handled) property of the [DocumentLoadFailedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.DocumentLoadFailedEventArgs.html) to `true` to disable the control’s default error messages and handle your logic with the error information.
+By default, the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) displays its own error message when a document fails to load. If you prefer to handle the failure at the application level with custom logic instead, set the [Handled](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.DocumentLoadFailedEventArgs.html#Syncfusion_Maui_PdfViewer_DocumentLoadFailedEventArgs_Handled) property of the [DocumentLoadFailedEventArgs](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.DocumentLoadFailedEventArgs.html) to `true` to suppress the control's default error messages and implement your own handling using the error information.
 
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
@@ -92,7 +92,7 @@ The [DocumentLoadFailed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Pdf
 	DocumentLoadFailed="PdfDocumentLoadFailed"/>
 			
 {% endhighlight %}
-{% highlight C# hl_lines="4" %}
+{% highlight c# hl_lines="4" %}
 
 public MainPage()
 {
@@ -110,6 +110,10 @@ private void PdfDocumentLoadFailed(object sender, DocumentLoadFailedEventArgs e)
 {% endtabs %}
 
 ## See Also
+
 - [Open a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/open-a-document)
+- [Open a Password Protected Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/open-a-password-protected-document)
 - [Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/getting-started)
 - [Save a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/save-a-document)
+- [Page Navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/page-navigation)
+- [Magnification](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/magnification)

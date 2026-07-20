@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Extract Text from PDF Files in WPF Pdf Viewer | Syncfusion®
-description: Learn about Extract Text from PDF Files support in Syncfusion<sup>&reg;</sup>; WPF Pdf Viewer control, its elements and more.
+description: Learn about Extract Text from PDF Files support in Syncfusion<sup>&reg;</sup> WPF Pdf Viewer control, its elements and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -72,12 +72,12 @@ namespace TextExtractionDemo
         public MainWindow()
         {
             InitializeComponent();
-		    //Initialize the `PdfDocumentView` control.
+            //Initialize the `PdfDocumentView` control.
             PdfDocumentView pdfDocumentView = new PdfDocumentView();
-		    //Load the PDF file.
+            //Load the PDF file.
             pdfDocumentView.Load(@"Sample.pdf");
-			
-		    //Extract text from the file.
+
+            //Extract text from the file.
             TextLines textLines = new TextLines();
             string extractedText = string.Empty;
             for (int i = 0; i < pdfDocumentView.PageCount; i++)
@@ -87,7 +87,7 @@ namespace TextExtractionDemo
         }
         #endregion
     }
-}			
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -95,10 +95,10 @@ namespace TextExtractionDemo
 
 ### Extract lines
 
-You can get the text line by line along with the bounds using the [TextLines](https://help.syncfusion.com/cr/wpf/Syncfusion.Pdf.TextLines.html) property from the [ExtractText](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfDocumentView.html#Syncfusion_Windows_PdfViewer_PdfDocumentView_ExtractText_System_Int32_Syncfusion_Pdf_TextLines__) method. Refer to the following code sample to perform the same.
+You can get the text line by line along with the bounds using the [TextLines](https://help.syncfusion.com/cr/wpf/Syncfusion.Pdf.TextLines.html) property from the [ExtractText](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfDocumentView.html#Syncfusion_Windows_PdfViewer_PdfDocumentView_ExtractText_System_Int32_Syncfusion_Pdf_TextLines__) method. Refer to the following code sample.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight c# %}
 using System.Drawing;
 using System.Windows;
 using Syncfusion.Pdf;
@@ -121,7 +121,7 @@ namespace TextExtractionDemo
             pdfDocumentView.Load(@"Sample.pdf");
             //Initialize the `TextLines`
             TextLines textLines = new TextLines();
-			
+            
             //Pass the `TextLines` as a parameter to the `ExtractText` method.
             pdfDocumentView.ExtractText(0, out textLines);
             //Gets specific line from the collection through the index.
@@ -139,10 +139,10 @@ namespace TextExtractionDemo
 
 ### Extract words
  
-You can get the words in a line along with the bounds using the [WordCollection](https://help.syncfusion.com/cr/wpf/Syncfusion.Pdf.TextLine.html#Syncfusion_Pdf_TextLine_WordCollection) property of the [TextLine](https://help.syncfusion.com/cr/wpf/Syncfusion.Pdf.TextLine.html) using [ExtractText](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfDocumentView.html#Syncfusion_Windows_PdfViewer_PdfDocumentView_ExtractText_System_Int32_Syncfusion_Pdf_TextLines__) method. Refer to the following code sample to perform the same.
+You can get the words in a line along with the bounds using the [WordCollection](https://help.syncfusion.com/cr/wpf/Syncfusion.Pdf.TextLine.html#Syncfusion_Pdf_TextLine_WordCollection) property of the [TextLine](https://help.syncfusion.com/cr/wpf/Syncfusion.Pdf.TextLine.html) using [ExtractText](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfDocumentView.html#Syncfusion_Windows_PdfViewer_PdfDocumentView_ExtractText_System_Int32_Syncfusion_Pdf_TextLines__) method. Refer to the following code sample.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight c# %}
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows;

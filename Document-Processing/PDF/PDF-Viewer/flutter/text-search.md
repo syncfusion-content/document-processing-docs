@@ -15,6 +15,8 @@ The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/lat
 
 The [searchText](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/searchText.html) controller method is used to initiate the text search and it takes the text to be searched and [TextSearchOption](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/TextSearchOption.html) as parameters. This method searches for the text, highlights all the instances of the text in the document, and returns the [PdfTextSearchResult](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult-class.html) object holding the result values such as total instance count, current highlighted instance index, and more. The [PdfTextSearchResult](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult-class.html) object will also help you navigate to the different searched text instances available and cancel the search operation.
 
+You can use the [hasResult](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/hasResult.html) property to check whether the search has produced any matches and the [isSearchCompleted](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/isSearchCompleted.html) property to know whether the search operation has finished on all the pages.
+
 On mobile and desktop platforms, the search will be performed asynchronously, so the results will be returned periodically on a page-by-page basis, which can be retrieved using the `PdfTextSearchResult.addListener` method in the application.
 
 Whereas on the web platform, the search will be performed synchronously, so the result will be returned only after completing the search on all the pages. This is because `isolate` is not supported for the web platform yet.
@@ -23,8 +25,15 @@ To differentiate the highlighted texts, the current text instance highlight colo
 
 N> Import **'package:syncfusion_flutter_pdf/pdf.dart'** in the Dart code if you use the [TextSearchOption](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/TextSearchOption.html) parameter.
 
+The `TextSearchOption` enum supports the following values: `caseSensitive` to perform a case-sensitive search and `none` to perform a case-insensitive search.
+
 {% tabs %}
 {% highlight dart hl_lines="23 24 25 26 27 28 29 30 31 32 33 34 35 36" %}
+
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
+import 'package:syncfusion_flutter_pdf/pdf.dart';
 
 late PdfViewerController _pdfViewerController;
 late PdfTextSearchResult _searchResult;
@@ -218,7 +227,7 @@ Widget build(BuildContext context) {
 
 ## Customize the Search Text Highlight Color
 
-The colors in which the current instance and other instances are highlighted can be customized with the help of [currentSearchTextHighlightColor](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/currentSearchTextHighlightColor.html) and [otherSearchTextHighlightColor](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/otherSearchTextHighlightColor.html) property. The default highlight color is **Orange** [Color(0xFFE56E00)] and the current instance highlight color opacity (with respect to this property) will be higher than the other instances. By default, the current instance highlight color opacity will be 60% and the other instances color opacity will be 30%.
+The colors in which the current instance and other instances are highlighted can be customized with the help of [currentSearchTextHighlightColor](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/currentSearchTextHighlightColor.html) and [otherSearchTextHighlightColor](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/otherSearchTextHighlightColor.html) properties. The default highlight color is **Orange** [Color(0xFFE56E00)] and the current instance highlight color opacity (with respect to this property) will be higher than the other instances. By default, the current instance highlight color opacity will be 60% and the other instances' color opacity will be 30%.
 
 The following code example explains how to customize the search text highlight color.
 
@@ -273,7 +282,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## How to Identify if There is No Instance Found for the Text Being Searched?
+## How to Identify if No Instance is Found for the Searched Text?
 
 The [totalInstanceCount](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/totalInstanceCount.html) property in the [PdfTextSearchResult](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult-class.html) object can be used to identify if no instance of the searched text is found in the PDF document. That is, if [totalInstanceCount](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult/totalInstanceCount.html) returns value 0, then there is no matching instance found for the searched text. The following code explains the same.
 

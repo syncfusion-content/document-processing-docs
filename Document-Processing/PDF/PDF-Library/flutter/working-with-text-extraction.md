@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Text extraction in Flutter PDF library | Syncfusion
-description: Learn here all about different types of fonts and draw Text feature of Syncfusion Flutter PDF non-UI library and more.
+description: Learn how to extract or find text from PDF pages using the Syncfusion Flutter PDF library with simple, practical code examples and more.
 platform: document-processing
 control: PDF
 documentation: ug
@@ -15,7 +15,7 @@ The Syncfusion<sup>&reg;</sup> Flutter PDF allows you to extract or find the tex
 
 You can extract the text from pages using the extractText method in the PdfTextExtractor class.
 
-The following code explains how to extract the text from the entire PDF document:
+The following code sample explains how to extract the text from the entire PDF document:
 
 {% tabs %}
 {% highlight dart tabtitle="dart" %}
@@ -33,7 +33,7 @@ document.dispose();
 {% endhighlight %}
 {% endtabs %}
 
-The following code sample explains how to extract the texts from a  specific page:
+The following code sample explains how to extract the text from a specific page:
 
 {% tabs %}
 {% highlight dart tabtitle="dart" %}
@@ -51,7 +51,7 @@ document.dispose();
 {% endhighlight %}
 {% endtabs %}
 
-The following code sample explains how to extract the texts from a particular page range:
+The following code sample explains how to extract the text from a particular page range:
 
 {% tabs %}
 {% highlight dart tabtitle="dart" %}
@@ -114,7 +114,7 @@ document.dispose();
 {% endhighlight %}
 {% endtabs %}
 
-### Working with words
+### Working with Words
 
 You can get a single word and its properties by using the TextWord. Refer to the following code sample.
 
@@ -162,7 +162,7 @@ document.dispose();
 {% endhighlight %}
 {% endtabs %}
 
-### Working with characters
+### Working with Characters
 
 You can get a single character and its properties by using the TextGlyph. Refer to the following code sample.
 
@@ -213,7 +213,7 @@ document.dispose();
 {% endhighlight %}
 {% endtabs %}
 
-## Working with find text
+## Working with Find Text
 
 You can find a collection of text from pages using the findText method in the PdfTextExtractor class. You can get the text and its properties using the MatchedItem.
 

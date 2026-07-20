@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Form Fields API in WPF PDF Viewer
 
-The PDF Viewer provides comprehensive APIs to Add, edit, Remove, import,Export and manage form fields programmatically. The following APIs are available:
+The PDF Viewer provides comprehensive APIs to Add, edit, remove, import, export, and manage form fields programmatically. The following APIs are available:
 
 | API | Description |
 |---|---|
-| [ImportFormData](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_ImportFormData_System_String_Syncfusion_Pdf_Parsing_DataFormat_) | Import form field data as in different format (Fdf,xfdf,Json,xml).|
-| [ExportFormData](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_ExportFormData_System_String_Syncfusion_Pdf_Parsing_DataFormat_System_String_) | Export form field data as in different format (Fdf,xfdf,Json,xml)as a downloadable file.|
-| LoadedDocument.Form.Fields | By accessing the LoadedDocument form fileds we can perform add, remove and modify the form fileds in code behind.|
+| [ImportFormData](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_ImportFormData_System_String_Syncfusion_Pdf_Parsing_DataFormat_) | Import form field data in different formats (FDF, XFDF, JSON, XML).|
+| [ExportFormData](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_ExportFormData_System_String_Syncfusion_Pdf_Parsing_DataFormat_System_String_) | Export form field data in different formats (FDF, XFDF, JSON, XML) as a downloadable file.|
+| LoadedDocument.Form.Fields | By accessing the LoadedDocument form fields, we can add, remove, and modify the form fields in code behind.|
 
 ## ImportFormData
 The following example imports form field data as FDF.
@@ -65,7 +65,7 @@ End Sub
 {% endtabs %}
 
 ## LoadedDocument Form field
-The below code snippet illustrates how to add a textbox field to a LoadedDocument
+The below code snippet illustrates how to add a textbox field in a LoadedDocument
 {% tabs %}
 {% highlight C# %}
 
@@ -88,10 +88,10 @@ private void AddTextbox_Click(object sender, RoutedEventArgs e)
 Private Sub AddTextbox_Click(sender As Object, e As RoutedEventArgs)
     If pdfViewer.LoadedDocument.Form IsNot Nothing Then
         Dim page As PdfLoadedPage = TryCast(pdfViewer.LoadedDocument.Pages(0), PdfLoadedPage)
-        `Create a textbox field and add the properties.
+        'Create a textbox field and add the properties.
         Dim textBoxField As PdfTextBoxField = New PdfTextBoxField(page, "FirstName")
         textBoxField.Bounds = New RectangleF(0, 0, 100, 20)
-        `Add the form field to the document.
+        'Add the form field to the document.
         pdfViewer.LoadedDocument.Form.Fields.Add(textBoxField)
     End If
 End Sub
@@ -99,7 +99,7 @@ End Sub
 {% endhighlight %}
 {% endtabs %}
 
-The below code snippet illustrates how to modify a textbox field to a LoadedDocument
+The below code snippet illustrates how to modify a textbox field in a LoadedDocument
 
 {% tabs %}
 {% highlight C# %}
@@ -135,7 +135,7 @@ End Sub
 {% endhighlight %}
 {% endtabs %}
 
-The below code snippet illustrates how to Remove a Form field to a LoadedDocument
+The below code snippet illustrates how to remove a form field from a LoadedDocument
 {% tabs %}
 {% highlight C# %}
 

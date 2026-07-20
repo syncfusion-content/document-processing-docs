@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting started with Javascript Spreadsheet control | Syncfusion
-description:  Checkout and learn about getting started with the Syncfusion JavaScript Spreadsheet control in the Spreadsheet Editor SDK and more details.
+title: Getting started with JavaScript Spreadsheet control | Syncfusion
+description:  Check out and learn about getting started with the Syncfusion JavaScript Spreadsheet control in the Spreadsheet Editor SDK and more details.
 platform: document-processing
 control: Getting started 
 documentation: ug
 ---
 
-# Getting Started with JavaScript Spreadsheet control
+# Getting Started with the JavaScript Spreadsheet Editor
 
-This section explains the steps to create a simple [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) control in a JavaScript application.
+This section explains how to create a JavaScript application and add the [JavaScript Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) with the minimum required configuration.
 
 ## Create a JavaScript application
 
@@ -39,7 +39,7 @@ To use local scripts and styles for the Syncfusion® Spreadsheet, follow these s
 
 3. From the installed SDK location, copy the required packages from the following folder into the `resources` folder:
 
-```
+```text
 <Install path>/Syncfusion/Essential Studio/Spreadsheet Editor SDK/{VERSION}/Web (Essential JS 2)/JavaScript
 ```
 
@@ -138,9 +138,16 @@ Style: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/styles/{THEME_NAM
 
 {% endtabcontents %}
 
-> **Note:** To learn more about other ways to load themes or scripts, see the [Themes topic](https://ej2.syncfusion.com/javascript/documentation/appearance/theme) and [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) documentation.
+> **Note:** This example uses the `Tailwind 3` theme. To use a different built-in theme, replace the `tailwind3.css` references with the corresponding theme stylesheets. Refer to the [Themes documentation](https://ej2.syncfusion.com/documentation/appearance/theme) for information about the available themes and the different ways to include theme styles in a JavaScript application. To generate customized resources, refer to the [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) documentation.
 
-## Add the Syncfusion® Spreadsheet control
+## Register Syncfusion License Key
+
+Before initializing any Syncfusion components, generate a Syncfusion license key and register it in the application.
+
+- [Generate a Syncfusion License Key](https://help.syncfusion.com/document-processing/licensing/how-to-generate)
+- [Register a Syncfusion License Key in a JavaScript-ES5 Application](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#javascript-es5)
+
+## Add the Syncfusion® Spreadsheet Editor
 
 Add a container element for the Spreadsheet control in the `index.html` file and then initialize the control in the `index.js` file.
 
@@ -163,13 +170,13 @@ Add a container element for the Spreadsheet control in the `index.html` file and
 {% endhighlight %}
 {% highlight js tabtitle="index.js" %}
 
-// Initialize the Spreadsheet control
+// Initialize the Spreadsheet Editor
 var spreadsheet = new ej.spreadsheet.Spreadsheet({
     openUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
     saveUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'
 });
 
-// Render the initialized Spreadsheet
+// Render the Spreadsheet Editor
 spreadsheet.appendTo('#element');
 
 {% endhighlight %}
@@ -179,15 +186,14 @@ spreadsheet.appendTo('#element');
 
 ## Run the application
 
-Open the `index.html` file in a web browser to launch the JavaScript Spreadsheet editor. The image below shows how the spreadsheet is rendered in the browser:
+Open the `index.html` file in a web browser to launch the JavaScript Spreadsheet Editor. Verify that the Spreadsheet Editor is rendered correctly, as shown in the following image.
 
 ![Rendered spreadsheet in browser](./images/spreadsheet.png)
 
-You can also explore the Spreadsheet interactively using the live sample below.
+You can also explore the Spreadsheet Editor using the live sample below. The sample allows you to load an Excel file, analyze and modify its data, and save the updated data back to an Excel file.
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/spreadsheet/es5-getting-started-cs1" %}
 
-N> Looking for the full JavaScript Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) page.
 
 ## See also
 

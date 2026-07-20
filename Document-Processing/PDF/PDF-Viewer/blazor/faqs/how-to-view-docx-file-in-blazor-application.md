@@ -1,27 +1,27 @@
 ---
 layout: post
-title: View DOCX in Blazor using SfPdfViewer | Syncfusion
+title: View a DOCX File in a Blazor Application | Syncfusion
 description: Learn how to view DOCX in a Blazor application using the Word Processor component or using the SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# View DOCX file in Blazor application
+# View a DOCX File in a Blazor Application
 
 DOCX files can be viewed in a Blazor application in two ways:
 
-**Option** **1:**
+N> For an overview of capabilities, see the [Blazor SfPdfViewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) feature tour. Explore the [online demo](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/default) to review core features.
 
-Use the Syncfusion&reg; Word Processor component for Blazor to compose, view, and edit DOC, DOCX, RTF, and SFDT file formats.
+## Option 1: Use the Word Processor component
 
-For details, see the [Word Processor](https://www.syncfusion.com/blazor-components/blazor-word-processor) component product page and documentation.
+Use the Syncfusion<sup style="font-size:70%">&reg;</sup> Word Processor component for Blazor to compose, view, and edit DOC, DOCX, RTF, and SFDT file formats.
 
-**Option** **2:**
+For details, see the [Word Processor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) component product page.
 
-Convert the Word document to PDF using the Syncfusion Word (DocIO) server-side library, then display the resulting PDF in the SfPdfViewer component. SfPdfViewer renders only PDF files.
+## Option 2: Convert to PDF and use the SfPdfViewer component
 
-N> For an overview of capabilities, see the [Blazor SfPdfViewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) feature tour. Explore the [online demo](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/pdf-viewer/default-functionalities?theme=bootstrap4) to review core features.
+Convert the Word document to PDF using the Syncfusion DocIO server-side library, then display the resulting PDF in the `SfPdfViewer` component. PDF Viewer renders only PDF files.
 
 ## See also
 

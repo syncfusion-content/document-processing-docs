@@ -12,7 +12,7 @@ Filling PDF Forms in WPF PDF Viewer enables efficient entry and updating of form
 
 1. [Form Filling Through User Interface](#fill-pdf-forms-through-the-user-interface)
 2. [Filling Form Fields Programmatically](#fill-pdf-forms-programmatically)
-3. [Importing Form Field Data](#fill-pdf-forms-through-export-and-import-data)
+3. [Filling PDF Forms through Export and Import Data](#fill-pdf-forms-through-export-and-import-data)
 
 ## Fill PDF forms through the User Interface
 
@@ -21,7 +21,7 @@ The WPF PDF Viewer enables PDF form fields to be filled directly through the bui
 ![Form Filling](./images/wpf-pdf-viewer-form-filling.png)
 
 
-## Fill PDF forms programmatically 
+## Fill PDF forms programmatically
 
 WPF PDF Viewer allows PDF form fields to be filled or updated programmatically by accessing existing form fields and assigning values through APIs. This approach is useful when form data needs to be populated dynamically based on application logic or automated workflows.
 
@@ -102,7 +102,7 @@ End Sub
 {% endhighlight %}
 {% endtabs %}
 
-## Fill PDF forms through Export and Import Data 
+## Fill PDF forms through Export and Import Data
 
 In WPF PDF Viewer, exporting and importing form data simplifies working with PDF forms through both programmatic APIs and the built‑in user interface. Filled form data can be exported programmatically or through UI actions and stored in a database or file storage, preserving all entered values for later use. This capability helps save progress, share data between applications, and restore form states when needed.
 
@@ -110,12 +110,12 @@ The same exported data can be imported back into an existing PDF document using 
 
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 
 private void button1_Click(object sender, RoutedEventArgs e)
 {
     //Import PDF form data
-    pdfviewer.ImportFormData("Import.fdf", Syncfusion.Pdf.Parsing.DataFormat.Fdf);
+    pdfViewer.ImportFormData("Import.fdf", Syncfusion.Pdf.Parsing.DataFormat.Fdf);
 }
 
 {% endhighlight %}
@@ -123,20 +123,19 @@ private void button1_Click(object sender, RoutedEventArgs e)
 
 Private Sub button1_Click(sender As Object, e As RoutedEventArgs)
     'Import PDF form data
-    pdfviewer.ImportFormData("Import.fdf", Syncfusion.Pdf.Parsing.DataFormat.Fdf)
+    pdfViewer.ImportFormData("Import.fdf", Syncfusion.Pdf.Parsing.DataFormat.Fdf)
 End Sub
 
 {% endhighlight %}
 {% endtabs %}
 
-For more details, see [Import Form Data](./import-export-form-fields/import-form-fields).
-For more details, see [Export Form Data](./import-export-form-fields/export-form-fields).
+For more details, see [Import Form Data](./import-export-form-fields/import-form-fields) and [Export Form Data](./import-export-form-fields/export-form-fields).
 
 
 ## See also
 
 -  [Overview](./overview)
 -  [Add form fields](./manage-form-fields/add-form-fields)
--  [Modify form fields values](./manage-form-fields/modify-form-fields) 
--  [Remove form fields](./manage-form-fields/remove-form-fields) 
+-  [Modify form fields values](./manage-form-fields/modify-form-fields)
+-  [Remove form fields](./manage-form-fields/remove-form-fields)
 -  [Form fields API](./form-fields-api)

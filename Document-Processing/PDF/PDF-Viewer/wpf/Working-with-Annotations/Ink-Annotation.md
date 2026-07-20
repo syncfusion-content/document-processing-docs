@@ -9,7 +9,7 @@ documentation: ug
 
 # Ink Annotation in WPF Pdf Viewer
 
-PDF viewer WPF allows the user to include ink annotation in the PDF document and provides options to edit or remove the existing ink annotation in the PDF document. 
+WPF PDF Viewer allows the user to include ink annotation in the PDF document and provides options to edit or remove the existing ink annotation in the PDF document.
 
 The following code shows how to switch to ink annotation mode in code behind.
 
@@ -121,7 +121,7 @@ End Sub
 
 ## How to set the author and subject of the ink annotation?
 
-The author and subject fields of the ink annotation can be added for the ink annotation to be added to the PDF document. The follow code shows how to set the author and subject field of the ink annotation to be included.
+The author and subject fields of the ink annotation can be added for the ink annotation to be added to the PDF document. The following code shows how to set the author and subject field of the ink annotation to be included.
 
 {% tabs %}
 {% highlight C# %}
@@ -149,7 +149,7 @@ End Sub
 
 ## Working with included/existing ink annotations
 
-Ink annotation supports adding notes along with it, also it allows editing its color, opacity and thickness. To use these options, select the included/existing ink annotation and click right using mouse, over the selected annotation, a pop up context menu will appear with the following options,
+Ink annotation supports adding notes along with it, also it allows editing its color, opacity and thickness. To use these options, select the included/existing ink annotation and right-click using the mouse, over the selected annotation, a pop-up context menu will appear with the following options,
 
 *	Open Pop-up note
 *	Properties
@@ -157,7 +157,7 @@ Ink annotation supports adding notes along with it, also it allows editing its c
 
 ### Open Pop-up notes
 
-We can add notes to the ink annotation choosing Open Pop-up note option from the context menu. The following image illustrates the notes added to the selected ink annotation. The added notes will be saved along with the PDF document and if there is any existing notes, it will be displayed in here.
+We can add notes to the ink annotation choosing Open Pop-up note option from the context menu. The following image illustrates the notes added to the selected ink annotation. The added notes will be saved along with the PDF document and if there are any existing notes, it will be displayed in here.
 
 ![Popup note](Annotation-images\Ink-Annotation-2.png)
 
@@ -166,7 +166,7 @@ We can add notes to the ink annotation choosing Open Pop-up note option from the
 Selecting properties from the context menu will display the Ink Properties window, which would consist of two tabs
 
 *	Appearance
-*	General 
+*	General
 
 ### Appearance tab
 
@@ -184,9 +184,9 @@ The following image illustrates the change in thickness of the selected ink anno
 
 ![Modified ink thickness](Annotation-images\Ink-Annotation-4.png)
 
-#### Editing color of the annotation
+#### Editing the color of the ink annotation
 
-The color of the selected ink annotation will be displayed in the color row in the appearance tab. Selecting the Color would displays the color palette control, choosing a color from the color palette and clicking OK will apply the color to the ink annotation.
+The color of the selected ink annotation will be displayed in the color row in the appearance tab. Selecting the Color displays the color palette control, choosing a color from the color palette and clicking OK will apply the color to the ink annotation.
 
 The following image illustrates how to change the color of the ink annotation included.
 
@@ -196,7 +196,7 @@ The following image illustrates the change in the color of the ink annotation.
 
 ![Modified ink color](Annotation-images\Ink-Annotation-6.png)
 
-#### Editing opacity of the annotation
+#### Editing the opacity of the ink annotation
 
 The slider control displayed in the Appearance tab will allow us to modify the opacity of the selected ink annotation. You can also modify the opacity of the selected ink annotation by giving numeric value in the opacity text box.
 
@@ -246,16 +246,18 @@ N> This tool can be used to erase the ink annotation only and not applicable for
 
 ## Events
 
-The [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html) notifies through events, when [AnnotationChangedAction](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.AnnotationChangedAction.html) such us adding, deleting, select, deselect, moving and resizing made in annotations. It also provides the annotations common information such as annotation name, page index, bounds and action type performed in respective annotation. 
+The [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html) notifies through events, when [AnnotationChangedAction](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.AnnotationChangedAction.html) such as adding, deleting, select, deselect, moving and resizing made in annotations. It also provides the annotations common information such as annotation name, page index, bounds and action type performed in respective annotation.
 
 ### InkAnnotationChanged Event
 
 The [InkAnnotationChanged](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_InkAnnotationChanged) event occurs when the [Action](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.AnnotationChangedEventArgs.html#Syncfusion_Windows_PdfViewer_AnnotationChangedEventArgs_Action) performed in ink annotation. It provides the common information and annotation properties which are available in `Settings` through the [InkAnnotationChangedEventArgs](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.InkAnnotationChangedEventArgs.html). The user can modify the annotation properties through [Settings](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.InkAnnotationChangedEventArgs.html#Syncfusion_Windows_PdfViewer_InkAnnotationChangedEventArgs_Settings).
 
-The following code shows how to write the `InkAnnotationChanged` event in `PdfViewerControl`
+The following code shows how to subscribe and write the `InkAnnotationChanged` event in `PdfViewerControl`.
 
 {% tabs %}
 {% highlight C# %}
+
+pdfviewer.InkAnnotationChanged += PdfViewer_InkAnnotationChanged;
 
 private void PdfViewer_InkAnnotationChanged(object sender, InkAnnotationChangedEventArgs e)
 {

@@ -280,7 +280,7 @@ Widget build(BuildContext context) {
 
 ## Customize the visibility of built-in Signature pad
 
-By default, the `SfPdfViewer` displays the signature pad when tapped on the signature form field. You can customize its visibility using the [canShowSignaturePad](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/canShowSignaturePadDialog.html) property. The following code example explains this.
+By default, the `SfPdfViewer` displays the signature pad when tapped on the signature form field. You can customize its visibility using the [canShowSignaturePadDialog](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/canShowSignaturePadDialog.html) property. The following code example explains this.
 
 {% tabs %}
 {% highlight dart hl_lines="9" %}
@@ -579,7 +579,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## Importing and Exporting form data 
+## Importing and Exporting form data
 
 The Flutter PDF viewer allows users to import and export form data to and from PDF documents. The import and export of form data support the following extensions: 
 
@@ -590,7 +590,7 @@ The Flutter PDF viewer allows users to import and export form data to and from P
 
 The required file type can be chosen from the [DataFormat](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/DataFormat.html) enumeration. In the following sections, only the `xfdf` file type is explained for brevity. 
 
-N> Import ‘package:syncfusion_flutter_pdf/pdf.dart’ in the Dart code to use the [DartFormat](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/DataFormat.html) parameter.
+N> Import ‘package:syncfusion_flutter_pdf/pdf.dart’ in the Dart code to use the [DataFormat](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/DataFormat.html) parameter.
 
 ### Exporting form data 
 
@@ -745,7 +745,7 @@ N> This `undoController` is common for annotations and form fields. You do not n
 
 ## Callbacks
 
-The `SfPdfViewer` supports the [PdfFormFieldFocusChangeCallback](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfFormFieldFocusChangeCallback.html) to notify the interaction with the form fields and the [PdfFormFieldValueChangedCallback](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfFormFieldValueChangedCallback.html) to notify the values changes in the form fields.
+The `SfPdfViewer` supports the [PdfFormFieldFocusChangeCallback](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfFormFieldFocusChangeCallback.html) to notify the interaction with the form fields and the [PdfFormFieldValueChangedCallback](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfFormFieldValueChangedCallback.html) to notify the value changes in the form fields.
 
 ### Form field focus change callback
 
@@ -776,7 +776,7 @@ N> The `PdfFormFieldFocusChangeCallback` only triggers for text boxes and signat
 
 ### Form field value changed callback
 
-The [onFormFieldValueChanged](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onFormFieldValueChanged.html) callback triggers when the value is changed in the form field. The [PdfFormFieldValueChangedDetails](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfFormFieldValueChangedDetails-class.html) the `formField` instance along with its `oldValue` and `newValue`. The following code example explains this.
+The [onFormFieldValueChanged](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onFormFieldValueChanged.html) callback triggers when the value is changed in the form field. The [PdfFormFieldValueChangedDetails](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfFormFieldValueChangedDetails-class.html) returns the `formField` instance along with its `oldValue` and `newValue`. The following code example explains this.
 
 {% tabs %}
 {% highlight dart hl_lines="9 10 11 12" %}
@@ -1038,7 +1038,7 @@ Future<void> _validateAndSaveForm() async {
         if (formField.text == null || formField.text.isEmpty) {
           errors.add('Name is required.');
         } else if (formField.text.length < 3) {
-          errors.add('Name should have atleast 3 characters.');
+          errors.add('Name should have at least 3 characters.');
         } else if (formField.text.length > 30) {
           errors.add('Name should not exceed 30 characters.');
         } else if (formField.text.contains(RegExp(r'[0-9]'))) {
@@ -1065,7 +1065,7 @@ Future<void> _validateAndSaveForm() async {
     } else if (formField is PdfListBoxFormField) {
       if (formField.selectedItems == null ||
           formField.selectedItems!.isEmpty) {
-        errors.add('Please select atleast one course.');
+        errors.add('Please select at least one course.');
       }
     } else if (formField is PdfSignatureFormField) {
       if (formField.signature == null) {

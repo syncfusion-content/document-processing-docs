@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotation Events in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to subscribe to and handle annotations and signature annotation events in the Syncfusion Blazor SfPdfViewer.
+description: Learn how to subscribe to and handle annotations and signature annotation events in the Blazor SfPdfViewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,32 +9,36 @@ documentation: ug
 
 # Annotation Events in Blazor SfPdfViewer Component
 
-Annotation events notify the application when annotations are added, selected, moved, resized, modified, or removed. Subscribe to these events by using the PdfViewerEvents tag inside the SfPdfViewer component.
+Annotation events notify the application when annotations are added, selected, moved, resized, modified, or removed. Subscribe to these events by using the `PdfViewerEvents` tag inside the `SfPdfViewer` component.
+
+## Events list
+
+The table below lists every annotation and signature events in the `PdfViewerEvents` tag.
 
 |Name|Description|
 |---|---|
-|AddSignature|Triggers when a signature is added to a page.| 
-|AnnotationAdded|Triggers when an annotation is added to a page.| 
-|AnnotationMouseover|Triggers when the mouse pointer moves over an annotation.| 
-|AnnotationMoved|Triggers when an annotation is moved on a page.| 
-|AnnotationPropertiesChanged|Triggers when annotation properties are modified.| 
-|AnnotationRemoved|Triggers when an annotation is removed from a page.| 
-|AnnotationResized|Triggers when an annotation is resized on a page.| 
-|AnnotationSelected|Triggers when an annotation is selected on a page.| 
-|AnnotationUnselected|Triggers when an annotation is unselected on a page.| 
-|ExportFailed|Triggers when an annotation export fails.| 
-|ExportStarted|Triggers when annotation export starts.| 
-|ExportSucceed|Triggers when annotation export succeeds.| 
-|ImportFailed|Triggers when an annotation import fails.| 
-|ImportStarted|Triggers when annotation import starts.| 
-|ImportSucceed|Triggers when annotation import succeeds.| 
-|MoveSignature|Triggers when a signature is moved on a page.| 
-|OnAnnotationDoubleClick|Triggers when an annotation is double-clicked.| 
-|RemoveSignature|Triggers when a signature is removed from a page.| 
-|ResizeSignature|Triggers when a signature is resized on a page.| 
-|SignaturePropertiesChange|Triggers when signature properties are changed on a page.| 
-|SignatureSelected|Triggers when a signature is selected on a page.| 
-|SignatureUnselected|Triggers when a signature is unselected on a page.| 
+|AddSignature|Triggers when a signature is added to a page.|
+|AnnotationAdded|Triggers when an annotation is added to a page.|
+|AnnotationMouseover|Triggers when the mouse pointer moves over an annotation.|
+|AnnotationMoved|Triggers when an annotation is moved on a page.|
+|AnnotationPropertiesChanged|Triggers when annotation properties are modified.|
+|AnnotationRemoved|Triggers when an annotation is removed from a page.|
+|AnnotationResized|Triggers when an annotation is resized on a page.|
+|AnnotationSelected|Triggers when an annotation is selected on a page.|
+|AnnotationUnselected|Triggers when an annotation is unselected on a page.|
+|ExportFailed|Triggers when an annotation export fails.|
+|ExportStarted|Triggers when annotation export starts.|
+|ExportSucceed|Triggers when annotation export succeeds.|
+|ImportFailed|Triggers when an annotation import fails.|
+|ImportStarted|Triggers when annotation import starts.|
+|ImportSucceed|Triggers when annotation import succeeds.|
+|MoveSignature|Triggers when a signature is moved on a page.|
+|OnAnnotationDoubleClick|Triggers when an annotation is double-clicked.|
+|RemoveSignature|Triggers when a signature is removed from a page.|
+|ResizeSignature|Triggers when a signature is resized on a page.|
+|SignaturePropertiesChange|Triggers when signature properties are changed on a page.|
+|SignatureSelected|Triggers when a signature is selected on a page.|
+|SignatureUnselected|Triggers when a signature is unselected on a page.|
 
 ## AddSignature event
 
@@ -42,7 +46,7 @@ The [AddSignature](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdf
 
 #### Event arguments
 
-See [AddSignatureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AddSignatureEventArgs.html) for properties such as `Id`, `PageNumber`, and `Bounds`.
+See [AddSignatureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AddSignatureEventArgs.html) for properties such as `Id` (string), `PageNumber` (int), and `Bounds` (`PdfBounds` – the rectangle of the added signature in page coordinates).
 
 The following example illustrates handling the `AddSignature` event.
 
@@ -55,10 +59,10 @@ The following example illustrates handling the `AddSignature` event.
 </SfPdfViewer2>
 
 @code{ 
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
-    public async Task AddSignature(AddSignatureEventArgs args) 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private async Task AddSignature(AddSignatureEventArgs args) 
     {
-        Console.WriteLine($"Added Signature ID: {args.Id}");
+        Console.WriteLine($"Added signature ID: {args.Id}");
     }	 
 }
 
@@ -70,7 +74,7 @@ The [AnnotationAdded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Sf
 
 #### Event arguments
 
-See [AnnotationAddedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationAddedEventArgs.html) for details such as `AnnotationId`, `AnnotationType`, `PageNumber`, and `Bounds`.
+See [AnnotationAddedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationAddedEventArgs.html) for details such as `AnnotationId` (string), `AnnotationType` (`PdfAnnotationType`), `PageNumber` (int), and `Bounds` (`PdfBounds`).
 
 The following example illustrates handling the `AnnotationAdded` event.
 
@@ -83,10 +87,10 @@ The following example illustrates handling the `AnnotationAdded` event.
 </SfPdfViewer2>
 
 @code{ 
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
-    public async Task AnnotationAdded(AnnotationAddEventArgs args) 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private async Task AnnotationAdded(AnnotationAddEventArgs args)
     {
-        Console.WriteLine($"Added Annotation ID: {args.AnnotationId}");
+        Console.WriteLine($"Added annotation ID: {args.AnnotationId}");
     }	 
 }
 
@@ -98,7 +102,7 @@ The [AnnotationMouseover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 #### Event arguments
 
-See [AnnotationMouseoverEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationMouseoverEventArgs.html) for details such as `AnnotationId`, `AnnotationType`, `PageNumber`, and cursor position.
+See [AnnotationMouseoverEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationMouseoverEventArgs.html) for details such as `AnnotationId` (string), `AnnotationType` (`PdfAnnotationType`), `PageNumber` (int), and the mouse cursor position via `X` and `Y` (double, in page coordinates).
 
 The following example illustrates handling the `AnnotationMouseover` event.
 
@@ -111,11 +115,11 @@ The following example illustrates handling the `AnnotationMouseover` event.
 </SfPdfViewer2>
 
 @code{ 
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
-    public async Task AnnotationMouseover(AnnotationMouseoverEventArgs args) 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private async Task AnnotationMouseover(AnnotationMouseoverEventArgs args)
     {
-        Console.WriteLine($"Annotation Mouseover X: {args.X} and y: {args.X}");
-    }	 
+        Console.WriteLine($"Annotation Mouseover X: {args.X} and Y: {args.Y}");
+    }
 }
 
 ```
@@ -126,7 +130,7 @@ The [AnnotationMoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Sf
 
 #### Event arguments
 
-See [AnnotationMovedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationMovedEventArgs.html) for details such as `AnnotationId`, `PageNumber`, `PreviousBounds`, and `Bounds`.
+See [AnnotationMovedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationMovedEventArgs.html) for details such as `AnnotationId` (string), `PageNumber` (int), `PreviousBounds` (`PdfBounds`), and `Bounds` (`PdfBounds`).
 
 The following example illustrates handling the `AnnotationMoved` event.
 
@@ -139,10 +143,10 @@ The following example illustrates handling the `AnnotationMoved` event.
 </SfPdfViewer2>
 
 @code{ 
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
-    public async Task AnnotationMoved(AnnotationMoveEventArgs args) 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private async Task AnnotationMoved(AnnotationMoveEventArgs args)
     {
-        Console.WriteLine($"Annotation Current Position: {args.CurrentPosition}");
+        Console.WriteLine($"Annotation current position: {args.CurrentPosition}");
     }	 
 }
 
@@ -154,7 +158,7 @@ The [AnnotationPropertiesChanged](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 #### Event arguments
 
-See [AnnotationPropertiesChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationPropertiesChangedEventArgs.html) for details such as `AnnotationId`, `PageNumber`, changed property names, and old/new values.
+See [AnnotationPropertiesChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationPropertiesChangedEventArgs.html) for details such as `AnnotationId` (string), `PageNumber` (int), the changed property names, and old/new values. The class also exposes boolean change flags such as `IsColorChanged`, `IsOpacityChanged`, `IsThicknessChanged`, `IsFontFamilyChanged`, `IsFontSizeChanged`, and `IsTextChanged` that you can inspect in the handler.
 
 The following example illustrates handling the `AnnotationPropertiesChanged` event.
 
@@ -167,10 +171,10 @@ The following example illustrates handling the `AnnotationPropertiesChanged` eve
 </SfPdfViewer2>
 
 @code{ 
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
-    public async Task AnnotationPropertiesChanged(AnnotationPropertiesChangeEventArgs args) 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private async Task AnnotationPropertiesChanged(AnnotationPropertiesChangeEventArgs args)
     {
-        Console.WriteLine($"Is Annotation Color Changed: {args.IsColorChanged}");
+        Console.WriteLine($"Is annotation color changed: {args.IsColorChanged}");
     }	 
 }
 
@@ -182,7 +186,7 @@ The [AnnotationRemoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 #### Event arguments
 
-See [AnnotationRemovedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationRemovedEventArgs.html) for details such as `AnnotationId`, `AnnotationType`, and `PageNumber`.
+See [AnnotationRemovedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationRemovedEventArgs.html) for details such as `AnnotationId` (string), `AnnotationType` (`PdfAnnotationType`), and `PageNumber` (int).
 
 The following example illustrates handling the `AnnotationRemoved` event.
 
@@ -195,10 +199,10 @@ The following example illustrates handling the `AnnotationRemoved` event.
 </SfPdfViewer2>
 
 @code{ 
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
-    public async Task AnnotationRemoved(AnnotationRemoveEventArgs args) 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private async Task AnnotationRemoved(AnnotationRemoveEventArgs args)
     {
-        Console.WriteLine($"Removed Annotation ID: {args.AnnotationId}");
+        Console.WriteLine($"Removed annotation ID: {args.AnnotationId}");
     }	 
 }
 
@@ -210,7 +214,7 @@ The [AnnotationResized](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 #### Event arguments
 
-See [AnnotationResizedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationResizedEventArgs.html) for details such as `AnnotationId`, `PageNumber`, `PreviousBounds`, and `Bounds`.
+See [AnnotationResizedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationResizedEventArgs.html) for details such as `AnnotationId` (string), `PageNumber` (int), `PreviousBounds` (`PdfBounds`), and `Bounds` (`PdfBounds`).
 
 The following example illustrates handling the `AnnotationResized` event.
 
@@ -223,10 +227,10 @@ The following example illustrates handling the `AnnotationResized` event.
 </SfPdfViewer2>
 
 @code{ 
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
-    public async Task AnnotationResized(AnnotationResizeEventArgs args) 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private async Task AnnotationResized(AnnotationResizeEventArgs args)
     {
-        Console.WriteLine($"Resized Annotation ID: {args.AnnotationId}");
+        Console.WriteLine($"Resized annotation ID: {args.AnnotationId}");
     }	 
 }
 
@@ -238,7 +242,7 @@ The [AnnotationSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 #### Event arguments
 
-See [AnnotationSelectedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationSelectedEventArgs.html) for details such as `AnnotationId`, `AnnotationType`, and `PageNumber`.
+See [AnnotationSelectedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationSelectedEventArgs.html) for details such as `AnnotationId` (string), `AnnotationType` (`PdfAnnotationType`), and `PageNumber` (int).
 
 The following example illustrates handling the `AnnotationSelected` event.
 
@@ -251,10 +255,10 @@ The following example illustrates handling the `AnnotationSelected` event.
 </SfPdfViewer2>
 
 @code{ 
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
-    public async Task AnnotationSelected(AnnotationSelectEventArgs args) 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private async Task AnnotationSelected(AnnotationSelectEventArgs args)
     {
-        Console.WriteLine($"Selected Annotation ID: {args.AnnotationId}");
+        Console.WriteLine($"Selected annotation ID: {args.AnnotationId}");
     }	 
 }
 
@@ -266,7 +270,7 @@ The [AnnotationUnselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 #### Event arguments
 
-See [AnnotationUnselectedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationUnselectedEventArgs.html) for details such as `AnnotationId`, `AnnotationType`, and `PageNumber`.
+See [AnnotationUnselectedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationUnselectedEventArgs.html) for details such as `AnnotationId` (string), `AnnotationType` (`PdfAnnotationType`), and `PageNumber` (int).
 
 The following example illustrates handling the `AnnotationUnselected` event.
 
@@ -279,10 +283,10 @@ The following example illustrates handling the `AnnotationUnselected` event.
 </SfPdfViewer2>
 
 @code{ 
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
-    public async Task AnnotationUnselected(AnnotationUnselectEventArgs args) 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private async Task AnnotationUnselected(AnnotationUnselectEventArgs args)
     {
-        Console.WriteLine($"UnSelected Annotation ID: {args.AnnotationId}");
+        Console.WriteLine($"Unselected Annotation ID: {args.AnnotationId}");
     }	 
 }
 
@@ -294,7 +298,7 @@ The [ExportFailed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdf
 
 #### Event arguments
 
-See [ExportFailureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ExportFailureEventArgs.html) for details such as `ErrorDetails`.
+See [ExportFailureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ExportFailureEventArgs.html) for the `ErrorDetails` (string) describing why the export failed.
 
 The following example illustrates handling the `ExportFailed` event.
 
@@ -307,8 +311,8 @@ The following example illustrates handling the `ExportFailed` event.
 </SfPdfViewer2>
 
 @code{ 
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
-    public async Task ExportFailed(ExportFailureEventArgs args) 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private async Task ExportFailed(ExportFailureEventArgs args)
     {
         Console.WriteLine($"Error details: {args.ErrorDetails}");
     }	 
@@ -322,7 +326,7 @@ The [ExportStarted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPd
 
 #### Event arguments
 
-See [ExportStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ExportStartEventArgs.html) for details about the export start event.
+See [ExportStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ExportStartEventArgs.html) for the `FileName` (string) of the file being exported. The export is triggered by the user's **Export annotations** action in the toolbar.
 
 The following example illustrates handling the `ExportStarted` event.
 
@@ -335,10 +339,10 @@ The following example illustrates handling the `ExportStarted` event.
 </SfPdfViewer2>
 
 @code{ 
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
-    public async Task ExportStarted(ExportStartEventArgs args) 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private async Task ExportStarted(ExportStartEventArgs args)
     {
-        Console.WriteLine("Export Action Started");
+        Console.WriteLine("Export action started");
     }	 
 }
 
@@ -350,7 +354,7 @@ The [ExportSucceed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPd
 
 #### Event arguments
 
-See [ExportSuccessEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ExportSuccessEventArgs.html) for details such as `FileName`.
+See [ExportSuccessEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ExportSuccessEventArgs.html) for details such as `FileName` (string, the name of the exported file) and the exported annotation data.
 
 The following example illustrates handling the `ExportSucceed` event.
 
@@ -363,10 +367,10 @@ The following example illustrates handling the `ExportSucceed` event.
 </SfPdfViewer2>
 
 @code{ 
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
-    public async Task ExportSucceed(ExportSuccessEventArgs args) 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private async Task ExportSucceed(ExportSuccessEventArgs args)
     {
-        Console.WriteLine($"Exported File name : {args.FileName }");
+        Console.WriteLine($"Exported File name: {args.FileName}");
     }	 
 }
 
@@ -378,7 +382,7 @@ The [ImportFailed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdf
 
 #### Event arguments
 
-See [ImportFailureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ImportFailureEventArgs.html) for details such as `ErrorDetails`.
+See [ImportFailureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ImportFailureEventArgs.html) for the `ErrorDetails` (string) describing why the import failed.
 
 The following example illustrates handling the `ImportFailed` event.
 
@@ -391,8 +395,8 @@ The following example illustrates handling the `ImportFailed` event.
 </SfPdfViewer2>
 
 @code{ 
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
-    public async Task ImportFailed(ImportFailureEventArgs args) 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private async Task ImportFailed(ImportFailureEventArgs args)
     {
         Console.WriteLine($"Error details: {args.ErrorDetails}");
     }	 
@@ -406,7 +410,7 @@ The [ImportStarted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPd
 
 #### Event arguments
 
-See [ImportStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ImportStartEventArgs.html) for details about the import start event.
+See [ImportStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ImportStartEventArgs.html) for the `FileName` (string) of the file being imported. The import is triggered by the user's **Import annotations** action in the toolbar.
 
 The following example illustrates handling the `ImportStarted` event.
 
@@ -419,10 +423,10 @@ The following example illustrates handling the `ImportStarted` event.
 </SfPdfViewer2>
 
 @code{ 
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
-    public async Task ImportStarted(ImportStartEventArgs args) 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private async Task ImportStarted(ImportStartEventArgs args)
     {
-        Console.WriteLine("Import Annotation Started");
+        Console.WriteLine("Import annotation started");
     }	 
 }
 
@@ -434,7 +438,7 @@ The [ImportSucceed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPd
 
 #### Event arguments
 
-See [ImportSuccessEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ImportSuccessEventArgs.html) for details about successful import.
+See [ImportSuccessEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ImportSuccessEventArgs.html) for the `FileName` (string) of the imported file.
 
 The following example illustrates handling the `ImportSucceed` event.
 
@@ -447,10 +451,10 @@ The following example illustrates handling the `ImportSucceed` event.
 </SfPdfViewer2>
 
 @code{ 
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
-    public async Task ImportSucceed(ImportSuccessEventArgs args) 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private async Task ImportSucceed(ImportSuccessEventArgs args)
     {
-        Console.WriteLine("Annotation Imported Successfully");
+        Console.WriteLine("Annotation imported successfully");
     }	 
 }
 
@@ -462,7 +466,7 @@ The [MoveSignature](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPd
 
 #### Event arguments
 
-See [MoveSignatureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.MoveSignatureEventArgs.html) for details such as `Id`, `PageNumber`, `PreviousBounds`, and `Bounds`.
+See [MoveSignatureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.MoveSignatureEventArgs.html) for details such as `Id` (string), `PageNumber` (int), `PreviousBounds` (`PdfBounds`), and `Bounds` (`PdfBounds`).
 
 The following example illustrates handling the `MoveSignature` event.
 
@@ -475,10 +479,10 @@ The following example illustrates handling the `MoveSignature` event.
 </SfPdfViewer2>
 
 @code{ 
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
-    public async Task MoveSignature(MoveSignatureEventArgs args) 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private async Task MoveSignature(MoveSignatureEventArgs args)
     {
-        Console.WriteLine($"Moved Signture ID: {args.Id}");
+        Console.WriteLine($"Moved Signature ID: {args.Id}");
     }	 
 }
 
@@ -490,7 +494,7 @@ The [OnAnnotationDoubleClick](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 #### Event arguments
 
-See [AnnotationDoubleClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationDoubleClickEventArgs.html) for details such as `AnnotationId`, `AnnotationType`, `PageNumber`, and mouse position.
+See [AnnotationDoubleClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationDoubleClickEventArgs.html) for details such as `AnnotationId` (string), `AnnotationType` (`PdfAnnotationType`), `PageNumber` (int), and the mouse position (`X`, `Y` – double, in page coordinates).
 
 The following example illustrates handling the `OnAnnotationDoubleClick` event.
 
@@ -503,10 +507,10 @@ The following example illustrates handling the `OnAnnotationDoubleClick` event.
 </SfPdfViewer2>
 
 @code{ 
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
-    public async Task OnAnnotationDoubleClick(AnnotationDoubleClickEventArgs args) 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private async Task OnAnnotationDoubleClick(AnnotationDoubleClickEventArgs args)
     {
-        Console.WriteLine($"Double Clicked Annotation ID: {args.AnnotationId}");
+        Console.WriteLine($"Double-clicked annotation ID: {args.AnnotationId}");
     }	 
 }
 
@@ -518,7 +522,7 @@ The [RemoveSignature](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Sf
 
 #### Event arguments
 
-See [RemoveSignatureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.RemoveSignatureEventArgs.html) for details such as `Id` and `PageNumber`.
+See [RemoveSignatureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.RemoveSignatureEventArgs.html) for details such as `Id` (string) and `PageNumber` (int).
 
 The following example illustrates handling the `RemoveSignature` event.
 
@@ -531,10 +535,10 @@ The following example illustrates handling the `RemoveSignature` event.
 </SfPdfViewer2>
 
 @code{ 
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
-    public async Task RemoveSignature(RemoveSignatureEventArgs args) 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private async Task RemoveSignature(RemoveSignatureEventArgs args)
     {
-        Console.WriteLine($"Removed Signature ID: {args.Id}");
+        Console.WriteLine($"Removed signature ID: {args.Id}");
     }	 
 }
 
@@ -546,7 +550,7 @@ The [ResizeSignature](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Sf
 
 #### Event arguments
 
-See [ResizeSignatureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ResizeSignatureEventArgs.html) for details such as `Id`, `PageNumber`, `PreviousBounds`, and `Bounds`.
+See [ResizeSignatureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ResizeSignatureEventArgs.html) for details such as `Id` (string), `PageNumber` (int), `PreviousBounds` (`PdfBounds`), and `Bounds` (`PdfBounds`).
 
 The following example illustrates handling the `ResizeSignature` event.
 
@@ -559,10 +563,10 @@ The following example illustrates handling the `ResizeSignature` event.
 </SfPdfViewer2>
 
 @code{ 
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
-    public async Task ResizeSignature(ResizeSignatureEventArgs args) 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private async Task ResizeSignature(ResizeSignatureEventArgs args)
     {
-        Console.WriteLine($"Resized Signature ID: {args.Id}");
+        Console.WriteLine($"Resized signature ID: {args.Id}");
     }	 
 }
 
@@ -574,7 +578,7 @@ The [SignaturePropertiesChange](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 #### Event arguments
 
-See [SignaturePropertiesChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SignaturePropertiesChangeEventArgs.html) for details such as `Id`, `PageNumber`, and changed property values.
+See [SignaturePropertiesChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SignaturePropertiesChangeEventArgs.html) for details such as `Id` (string), `PageNumber` (int), and the changed property values.
 
 The following example illustrates handling the `SignaturePropertiesChange` event.
 
@@ -587,10 +591,10 @@ The following example illustrates handling the `SignaturePropertiesChange` event
 </SfPdfViewer2>
 
 @code{ 
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
-    public async Task SignaturePropertiesChange(SignaturePropertiesChangeEventArgs args) 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private async Task SignaturePropertiesChange(SignaturePropertiesChangeEventArgs args)
     {
-        Console.WriteLine($"Is Stroke Color Changed: {args.IsStrokeColorChanged}");
+        Console.WriteLine($"Is stroke color changed: {args.IsStrokeColorChanged}");
     }	 
 }
 
@@ -602,7 +606,7 @@ The [SignatureSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 #### Event arguments
 
-See [SignatureSelectedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SignatureSelectedEventArgs.html) for details such as `Id` and `PageNumber`.
+See [SignatureSelectEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SignatureSelectEventArgs.html) for details such as `Id` (string) and `PageNumber` (int).
 
 The following example illustrates handling the `SignatureSelected` event.
 
@@ -615,10 +619,10 @@ The following example illustrates handling the `SignatureSelected` event.
 </SfPdfViewer2>
 
 @code{ 
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
-    public async Task SignatureSelected(SignatureSelectEventArgs args) 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private async Task SignatureSelected(SignatureSelectEventArgs args)
     {
-        Console.WriteLine($"Selected Signture ID: {args.Id}");
+        Console.WriteLine($"Selected Signature ID: {args.Id}");
     }	 
 }
 
@@ -630,7 +634,7 @@ The [SignatureUnselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 #### Event arguments
 
-See [SignatureUnselectedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SignatureUnselectedEventArgs.html) for details such as `Id` and `PageNumber`.
+See [SignatureSelectEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SignatureSelectEventArgs.html) for details such as `Id` (string) and `PageNumber` (int).
 
 The following example illustrates handling the `SignatureUnselected` event.
 
@@ -643,10 +647,10 @@ The following example illustrates handling the `SignatureUnselected` event.
 </SfPdfViewer2>
 
 @code{ 
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
-    public async Task SignatureUnselected(SignatureSelectEventArgs args) 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private async Task SignatureUnselected(SignatureSelectEventArgs args)
     {
-        Console.WriteLine($"UnSelected Signature ID: {args.Id}");
+        Console.WriteLine($"Unselected Signature ID: {args.Id}");
     }	 
 }
 
@@ -657,3 +661,8 @@ The following example illustrates handling the `SignatureUnselected` event.
 ## See also
 
 * [Events in Blazor SfPdfViewer Component](../events)
+* [Hand-written signature in Blazor SfPdfViewer](../hand-written-signature)
+* [Import and export annotations in Blazor SfPdfViewer](./import-export-annotation)
+* [Annotation permissions in Blazor SfPdfViewer](./annotation-permission)
+* [Annotations overview in Blazor SfPdfViewer](./overview)
+* [Getting started with Blazor SfPdfViewer](../getting-started/web-assembly-application)

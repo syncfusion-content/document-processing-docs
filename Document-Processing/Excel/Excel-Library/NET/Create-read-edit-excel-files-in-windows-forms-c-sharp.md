@@ -7,23 +7,29 @@ documentation: UG
 ---
 # Create, read, and edit Excel files in Windows Forms
 
-[.NET Excel Library for Windows Forms platform](https://www.syncfusion.com/document-processing/excel-framework/net/excel-library) can be used to create, read, edit Excel files. This also convert Excel files to PDF.
+[.NET Excel Library for Windows Forms platform](https://www.syncfusion.com/document-processing/excel-framework/net/excel-library) can be used to create, read, edit Excel files. These can also convert Excel files to PDF.
 
 ## Create a simple Excel report
 
-The below steps illustrates creating a simple Invoice formatted Excel document in Windows Forms.
+The following steps illustrate creating a simple invoice-formatted Excel document in Windows Forms.
+
+**Prerequisites:**
+- Visual Studio 2017 or later with the **.NET desktop development** workload installed.
+- .NET Framework 4.5 or later.
+- A user account with write permissions to the project output directory.
+- The `AdventureCycles-Logo.png` image placed in the project output directory (typically `bin/Debug/net*/`).
 
 Step 1: Create a new C# Windows Forms Application project.
 
 ![Create Windows Forms application in Visual Studio](Windows-Forms_images/Windows-Forms_images_img1.png)
 
-Step 2: Install the [Syncfusion.XlsIO.WinForms](https://www.nuget.org/packages/Syncfusion.XlsIO.WinForms) NuGet package as reference to your .NET Framework applications from [NuGet.org](https://www.nuget.org).
+Step 2: Install the [Syncfusion.XlsIO.WinForms](https://www.nuget.org/packages/Syncfusion.XlsIO.WinForms) NuGet package as a reference to your Windows Forms application from [NuGet.org](https://www.nuget.org).
 
 ![Install Syncfusion.XlsIO.WinForms Nuget Package](Windows-Forms_images/Windows-Forms_images_img2.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
 
-Step 3: Include the following namespaces in the Form1.Designer.cs file.
+Step 3: Include the following namespaces in the `Form1.Designer.cs` file.
 {% capture codesnippet1 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
@@ -38,14 +44,14 @@ using System.Windows.Forms;
 Imports System.IO
 Imports Syncfusion.XlsIO
 Imports System
-Imports Syste.Drawing
+Imports System.Drawing
 Imports System.Windows.Forms
 {% endhighlight %}
 {% endtabs %} 
 {% endcapture %}
 {{ codesnippet1 | OrderList_Indent_Level_1 }} 
 
-Step 4: Add a new button in the Form1.Designer.cs file to create an Excel document as shown below.
+Step 4: Add a new button in the `Form1.Designer.cs` file to create an Excel document as shown below.
 {% capture codesnippet2 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
@@ -108,7 +114,9 @@ End Sub
 {% endcapture %}
 {{ codesnippet2 | OrderList_Indent_Level_1 }} 
 
-Step 5: Include the following code snippet in btnCreate_Click, the click event of the button to create the Excel document.
+Step 5: Include the following code in the `btnCreate_Click` event handler to create the Excel document.
+
+N> Before running, place the `AdventureCycles-Logo.png` image in the project output directory (typically `bin/Debug/<framework>/`) so the `FileStream` can load it
 {% capture codesnippet3 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
@@ -122,7 +130,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IWorkbook workbook = application.Workbooks.Create(1);
   IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Adding a picture
+  //Add a picture
   FileStream imageStream = new FileStream("AdventureCycles-Logo.png", FileMode.Open, FileAccess.Read);
   IPictureShape shape = worksheet.Pictures.AddPicture(1, 1, imageStream, 20, 20);
 
@@ -160,7 +168,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["D8"].Number = 564;
   worksheet.Range["E8"].Text = "Due Upon Receipt";
 
-  //Apply RGB backcolor to the cells from D5 to E8
+  //Apply an RGB background color to the cells from D5 to E8
   worksheet.Range["D5:E5"].CellStyle.Color = Color.FromArgb(42, 118, 189);
   worksheet.Range["D7:E7"].CellStyle.Color = Color.FromArgb(42, 118, 189);
 
@@ -177,7 +185,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["D7:E7"].CellStyle.VerticalAlignment = ExcelVAlign.VAlignCenter;
   worksheet.Range["D6:E6"].CellStyle.VerticalAlignment = ExcelVAlign.VAlignTop;
 
-  //Enter value and applying formatting in the cell A7
+  //Enter a value and apply formatting in the cell A7
   worksheet.Range["A7"].Text = "  BILL TO";
   worksheet.Range["A7"].CellStyle.Color = Color.FromArgb(42, 118, 189);
   worksheet.Range["A7"].CellStyle.Font.Bold = true;
@@ -236,7 +244,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["D16:E22"].NumberFormat = "$0.00";
   worksheet.Range["E23"].NumberFormat = "$0.00";
 
-  //Apply incremental formula for column Amount by multiplying Qty and UnitPrice
+  //Enable automatic increment of cell references when assigning a formula to a range
   application.EnableIncrementalFormula = true;
   worksheet.Range["E16:E20"].Formula = "=C16*D16";
 
@@ -285,6 +293,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
   //Save the Excel document
   workbook.SaveAs("Output.xlsx");
+  workbook.Close();
+  imageStream.Dispose();
 }
 {% endhighlight %}
 
@@ -298,7 +308,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim workbook As IWorkbook = application.Workbooks.Create(1)
   Dim worksheet As IWorksheet = workbook.Worksheets(0)
 
-  'Adding a picture
+  'Add a picture
   Dim imageStream As FileStream = New FileStream("AdventureCycles-Logo.png", FileMode.Open, FileAccess.Read)
   Dim shape As IPictureShape = worksheet.Pictures.AddPicture(1, 1, imageStream, 20, 20)
 
@@ -353,7 +363,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   worksheet.Range("D7:E7").CellStyle.VerticalAlignment = ExcelVAlign.VAlignCenter
   worksheet.Range("D6:E6").CellStyle.VerticalAlignment = ExcelVAlign.VAlignTop
 
-  'Enter value and applying formatting in the cell A7
+  'Enter a value and apply formatting in the cell A7
   worksheet.Range("A7").Text = "  BILL TO"
   worksheet.Range("A7").CellStyle.Color = Color.FromArgb(42, 118, 189)
   worksheet.Range("A7").CellStyle.Font.Bold = True
@@ -412,7 +422,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   worksheet.Range("D16:E22").NumberFormat = "$0.00"
   worksheet.Range("E23").NumberFormat = "$0.00"
 
-  'Apply incremental formula for column Amount by multiplying Qty and UnitPrice
+  'Enable automatic increment of cell references when assigning a formula to a range
   application.EnableIncrementalFormula = True
   worksheet.Range("E16:E20").Formula = "=C16*D16"
 
@@ -474,7 +484,9 @@ By executing the program, you will get the Excel file as below.
 
 ## Read and Edit Excel file
 
-The below code snippet illustrates how to read and edit an Excel file in Windows Forms.
+The following code snippet illustrates how to read and edit an Excel file in Windows Forms.
+
+N> Place `Sample.xlsx` in the project output directory before running this example.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}

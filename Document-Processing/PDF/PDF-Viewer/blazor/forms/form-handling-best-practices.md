@@ -1,16 +1,16 @@
 ---
 layout: post
-title: PDF Form Handling Best Practices in React PDF Viewer | Syncfusion
-description: Learn the recommended best practices for naming, validating, grouping, importing, and designing form fields in the Syncfusion React PDF Viewer.
+title: PDF Form Handling Best Practices in Blazor PDF Viewer | Syncfusion
+description: Learn the recommended best practices for naming, validating, grouping, importing, and designing form fields in the Blazor PDF Viewer.
 platform: document-processing
-control: PDF Viewer
+control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# PDF Form Handling Best Practices in React PDF Viewer
+# PDF Form Handling Best Practices in Blazor PDF Viewer
 
-This guide provides a comprehensive overview of recommended practices for creating, organizing, validating, and automating PDF forms in the Syncfusion React PDF Viewer.
+This guide provides a comprehensive overview of recommended practices for creating, organizing, validating, and automating PDF forms in the Blazor PDF Viewer.
 
 It explains how to structure field names, ensure consistency, apply validation rules, group related fields, and streamline workflows through pre-filling and data import/export. By following these guidelines, you can build clean, reliable, and efficient form experiences that are easier to maintain and work seamlessly across different use cases.
 
@@ -22,21 +22,21 @@ Field names are critical for automation, data mapping, and debugging. Always:
 - Avoid generic names like `Textbox1` or `Field2`.
 - Ensure names are consistent across import/export workflows.
 
-![Forms Unique Field Name](../../javascript-es6/images/ui-textbox-edit.png)
+![Forms Unique Field Name](./form-designer-images/ui-textbox-edit.png)
 
-You can refer to [Create Form Fields](../forms/manage-form-fields/create-form-fields) in React PDF Viewer to know more about creating form fields.
+You can refer to [Create Form Fields](./manage-form-fields/create-form-fields) in Blazor PDF Viewer to know more about creating form fields.
 
 ## 2. Maintain Consistent Field Types
 
-Changing a field’s type (e.g., from textbox to dropdown) can break data mapping and validation. Best practices:
+Changing a field's type (e.g., from textbox to dropdown) can break data mapping and validation. Best practices:
 
-- Do not change a field’s type after creation.
+- Do not change a field's type after creation.
 - Fields with the same name must always have the same type.
 - Use the correct field type for the intended data (e.g., checkbox for boolean, textbox for free text).
 
-![Grouping Form Fields](../../javascript-es6/images/groupTextFileds.png)
+![Grouping Form Fields](./form-designer-images/groupTextFileds.png)
 
-You can refer to [Group Form Fields](../forms/group-form-fields) in React PDF Viewer to know more about grouping form fields.
+You can refer to [Group Form Fields](./group-form-fields) in Blazor PDF Viewer to know more about grouping form fields.
 
 ## 3. Validate Data Before Submission
 
@@ -47,8 +47,6 @@ Validation ensures data quality and prevents errors downstream. Always:
 - Use custom validation logic for business rules.
 - Prevent submission or export if validation fails.
 
-You can refer to [Form Validation](../forms/form-validation) in React PDF Viewer to know more about form fields Validation.
-
 ## 4. Pre-Fill Known Values
 
 Pre-filling fields improves user experience and reduces errors. For example:
@@ -56,9 +54,9 @@ Pre-filling fields improves user experience and reduces errors. For example:
 - Populate user profile data (name, email, address) automatically.
 - Use default values for common fields.
 
-![Form Filling](../../javascript-es6/images/FormFilled.png)
+![Form Filling](./form-designer-images/FormFilled.png)
 
-You can refer to [Form Filling](../forms/form-filling) in React PDF Viewer to know more about form filling.
+You can refer to [Form Filling](./form-filling) in Blazor PDF Viewer to know more about form filling.
 
 ## 5. Automate with Import/Export
 
@@ -69,7 +67,7 @@ Automate workflows by importing/exporting form data. Recommendations:
 - Use **XML** for legacy systems.
 - Ensure field names match exactly for successful mapping.
 
-You can refer to [Export/Import Form fields](../forms/import-export-form-fields/export-form-fields) in React PDF Viewer to know more about Export and Import form fields.
+You can refer to [Export/Import Form fields](./export-import-formfields) in Blazor PDF Viewer to know more about Export and Import form fields.
 
 ## 6. Group Related Fields for Complex Forms
 
@@ -85,9 +83,9 @@ Benefits:
 - Easier validation
 - Improved user experience
 
-![Grouping Form Fields](../../javascript-es6/images/groupTextFileds.png)
+![Grouping Form Fields](./form-designer-images/groupTextFileds.png)
 
-You can refer to [Group Form Fields](../forms/group-form-fields) in React PDF Viewer to know more about grouping form fields.
+You can refer to [Group Form Fields](./group-form-fields) in Blazor PDF Viewer to know more about grouping form fields.
 
 ## 7. Keep Form Design Clean and Accessible
 
@@ -98,16 +96,16 @@ Good design improves usability and accessibility. Tips:
 - Avoid clutter—don’t crowd too many fields in one area.
 - Use section headers to guide users.
 
-![Form Fields](../../javascript-es6/images/FormFill.png)
+![Form Fields](./form-designer-images/FormFilled.png)
 
-You can refer to [Group Form Fields](../forms/group-form-fields) in React PDF Viewer to know more about grouping form fields.
+You can refer to [Group Form Fields](./group-form-fields) in Blazor PDF Viewer to know more about grouping form fields.
 
-## See Also
+## See also
 
-- [Filling PDF Forms](../forms/form-filling)
-- [Create Form Fields](../forms/manage-form-fields/create-form-fields)
-- [Modify Form Fields](../forms/manage-form-fields/modify-form-fields)
-- [Style Form Fields](../forms/manage-form-fields/customize-form-fields)
-- [Remove Form Fields](../forms/manage-form-fields/remove-form-fields)
-- [Group Form Fields](../forms/group-form-fields)
-- [Import and Export Form Fields](../forms/import-export-form-fields/export-form-fields)
+- [Filling PDF Forms](./form-filling)
+- [Create Form Fields](./manage-form-fields/create-form-fields)
+- [Modify Form Fields](./manage-form-fields/modify-form-fields)
+- [Style Form Fields](./manage-form-fields/customize-form-fields)
+- [Remove Form Fields](./manage-form-fields/remove-form-fields)
+- [Group Form Fields](./group-form-fields)
+- [Import and Export Form Fields](./import-export-form-fields/export-form-fields)

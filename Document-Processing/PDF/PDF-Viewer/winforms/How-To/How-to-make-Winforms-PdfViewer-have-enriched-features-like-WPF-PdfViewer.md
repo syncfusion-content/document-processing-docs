@@ -8,15 +8,15 @@ documentation: ug
 ---
 # How to Add WPF PdfViewer Features to WinForms PdfViewer
 
-To leverage the advanced features offered by the WPF PdfViewer, such as adding annotations, form filling, signatures, stamps, sticky notes, and more, you can [integrate the WPF PdfViewer into the Windows Forms]( https://support.syncfusion.com/kb/article/7882/how-to-host-pdf-viewer-in-windows-forms-application ) and take advantage of its extensive feature sets.
+To leverage the advanced features offered by the WPF PdfViewer, such as adding annotations, form filling, signatures, stamps, sticky notes, and more, you can [integrate the WPF PdfViewer into the Windows Forms](https://support.syncfusion.com/kb/article/7882/how-to-host-pdf-viewer-in-windows-forms-application) and take advantage of its extensive feature sets.
 
-we can  host a WPF PdfViewer control within a Windows Forms application using an ElementHost. By embedding the WPF PdfViewer, you can access advanced features available in the WPF control while maintaining a Windows Forms interface.
+You can host a WPF PdfViewer control within a Windows Forms application using an ElementHost. By embedding the WPF PdfViewer, you can access advanced features available in the WPF control while maintaining a Windows Forms interface.
 
 ## Steps to host the WPF PdfViewer in the WinForms application
 
-1. Add an WPF UserControl and install the [Syncfusion.PdfViewer.WPF](https://www.nuget.org/packages/Syncfusion.PdfViewer.WPF) NuGet package to your WinForms application.
+1. Add a WPF UserControl and install the [Syncfusion.PdfViewer.WPF](https://www.nuget.org/packages/Syncfusion.PdfViewer.WPF) NuGet package to your WinForms application.
 
-2. Add the following Syncfusion&reg; namespace in XAML to make use of the WPF [PdfViewerControl.](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html)
+2. Add the following Syncfusion&reg; namespace in XAML to make use of the WPF [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html).
 
    ~~~xaml 
    <UserControl
@@ -36,13 +36,15 @@ we can  host a WPF PdfViewer control within a Windows Forms application using an
 
 {% tabs %}
 {% highlight c# %}
+using System.Windows;
+using System.Windows.Controls;
 
  /// <summary>
- /// Interaction logic for PdfViewer.xaml
+ /// Interaction logic for PdfViewerUserControl.xaml
  /// </summary>
  public partial class PdfViewerUserControl : UserControl
  {
-    public PdfViewer()
+    public PdfViewerUserControl()
     {
         InitializeComponent();
     }
@@ -56,7 +58,7 @@ we can  host a WPF PdfViewer control within a Windows Forms application using an
 {%endhighlight%}
 {% endtabs %}
 
-5. Add a panel to the form. Create an ElementHost object in the Form and add the created UserControl's object as child to the ElementHost object. Add the elementHost as a child to the panel as mentioned below.
+5. Add a panel to the form. Create an ElementHost object in the Form and add the created UserControl's instance as a child of the ElementHost object. Add the elementHost as a child of the panel as mentioned below.
 
 {% tabs %}
 {% highlight c# %}
@@ -104,4 +106,4 @@ namespace SampleWF
 {%endhighlight%}
 {% endtabs %}
 
-You can find the complete sample in the [Github](https://github.com/SyncfusionExamples/WinForms-PDFViewer-Examples/tree/master/How-to/Host-WPFPdfViewer-in-Winforms/HostedPdfViewer) for your reference.
+You can find the complete sample in the [GitHub](https://github.com/SyncfusionExamples/WinForms-PDFViewer-Examples/tree/master/How-to/Host-WPFPdfViewer-in-Winforms/HostedPdfViewer) for your reference.

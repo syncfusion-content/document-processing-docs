@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Export PDF Form Data 
+# Export PDF Form Data
 
 The WPF PDF Viewer supports exporting form field data in multiple formats, enabling easy storage and seamless integration with other systems. Supported formats:
 
@@ -16,16 +16,18 @@ The WPF PDF Viewer supports exporting form field data in multiple formats, enabl
 - [JSON](#export-as-json)
 - [XML](#export-as-xml)
 
-Follow the below steps to export data from PDF document in UI
+Follow the steps below to export data from a PDF document in the UI.
 1.	Click the form data tool button in the left pane, the form data toolbar will appear as a secondary toolbar in the [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html).
 2. Select **Export** option in form data toolbar to export the PDF form data.
 3. In `Export Form Data As` dialog box, you can select the desired format to save the form data (FDF, XFDF, XML, and JSON).
 
 N> If the PDF document is loaded as a stream, the [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html) will request for the form name when exporting.
 
-## How to export Programmatically
+## How to export programmatically
 
-[ExportFormData](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_ExportFormData_System_String_Syncfusion_Pdf_Parsing_DataFormat_System_String_) API is used to export the form fields data in code behind.This API allows the values filled in form fields to be extracted and saved in the required format, making it useful for storing form data, sharing it with external systems, or reusing it at a later stage without manual intervention.
+[ExportFormData](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_ExportFormData_System_String_Syncfusion_Pdf_Parsing_DataFormat_System_String_) API is used to export the form fields data in code-behind. This API allows the values filled in form fields to be extracted and saved in the required format, making it useful for storing form data, sharing it with external systems, or reusing it at a later stage without manual intervention.
+
+N> The PDF document must contain form fields, and the document must be loaded into the [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html) before exporting.
 
 ### Export as FDF
 The following example exports form field data as FDF.
@@ -36,7 +38,7 @@ The following example exports form field data as FDF.
 private void button1_Click(object sender, RoutedEventArgs e)
 {
     //Export PDF form data
-    pdfviewer.ExportFormData("Export.fdf", Syncfusion.Pdf.Parsing.DataFormat.Fdf, "SourceForm.pdf");
+    pdfViewer.ExportFormData("Export.fdf", Syncfusion.Pdf.Parsing.DataFormat.Fdf, "SourceForm.pdf");
 }
 
 {% endhighlight %}
@@ -44,7 +46,7 @@ private void button1_Click(object sender, RoutedEventArgs e)
 
 Private Sub button1_Click(sender As Object, e As RoutedEventArgs)
     'Export PDF form data
-    pdfviewer.ExportFormData("Export.fdf", Syncfusion.Pdf.Parsing.DataFormat.Fdf, "SourceForm.pdf")
+    pdfViewer.ExportFormData("Export.fdf", Syncfusion.Pdf.Parsing.DataFormat.Fdf, "SourceForm.pdf")
 End Sub
 
 {% endhighlight %}
@@ -105,7 +107,7 @@ The following example exports form field data as XML.
 private void button1_Click(object sender, RoutedEventArgs e)
 {
     //Export PDF form data
-     pdfViewer.ExportFormData("Export.xml", Syncfusion.Pdf.Parsing.DataFormat.Xml, "SourceForm.pdf");
+    pdfViewer.ExportFormData("Export.xml", Syncfusion.Pdf.Parsing.DataFormat.Xml, "SourceForm.pdf");
 }
 
 {% endhighlight %}
@@ -113,11 +115,17 @@ private void button1_Click(object sender, RoutedEventArgs e)
 
 Private Sub button1_Click(sender As Object, e As RoutedEventArgs)
     'Export PDF form data
-     pdfViewer.ExportFormData("Export.xml", Syncfusion.Pdf.Parsing.DataFormat.Xml, "SourceForm.pdf")
+    pdfViewer.ExportFormData("Export.xml", Syncfusion.Pdf.Parsing.DataFormat.Xml, "SourceForm.pdf")
 End Sub
 
 {% endhighlight %}
 {% endtabs %}
+
+### ExportFormData parameters
+
+- `fileName` — Path of the output file to which the exported form data is written. Example: `Export.fdf`.
+- `format` — Format of the exported data from the [DataFormat](https://help.syncfusion.com/cr/wpf/Syncfusion.Pdf.Parsing.DataFormat.html) enum: `Fdf`, `XFdf`, `Json`, or `Xml`.
+- `formName` — Name of the PDF document containing the form fields. When the document is loaded as a stream, this value is prompted in the UI.
 
 ## Common Use Cases
 - Save user-entered data to your server without altering the original PDF.
@@ -126,7 +134,7 @@ End Sub
 
 ## See also
 
--  [Overview](../overview)
+- [Overview](../overview)
 - [Import form fields](../import-form-fields)
 - [Add form fields](../manage-form-fields/add-form-fields)
 - [Modify form fields](../manage-form-fields/modify-form-fields)

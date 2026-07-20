@@ -7,9 +7,9 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Load custom fonts in the Blazor SfPdfViewer
+# Load custom fonts in the Blazor SfPdfViewer Component
 
-The Blazor SfPdfViewer uses Pdfium to extract text and render pages as images. Pdfium includes a limited set of built-in fonts. Use [CustomFonts](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_CustomFonts) to supply additional fonts when the required fonts are not available.
+The Blazor SfPdfViewer uses Pdfium to extract text and render pages as images. Pdfium includes a limited set of built-in fonts. Use [`CustomFonts`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_CustomFonts) to supply additional fonts when the required fonts are not available.
 
 To use CustomFonts, follow these steps:
 
@@ -25,14 +25,12 @@ The following example shows how to load custom fonts into the PDF Viewer.
 
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
-              Width="100%" CustomFonts="@customFonts">
+              Width="100%"
+              CustomFonts="@customFonts">
 </SfPdfViewer2>
- 
 
 @code {
-
-    public List<string> customFonts = new List<string> { "wwwroot/SIMSUN.TTC", "wwwroot/SIMSUNB.TTF"}
-
+    private List<string> customFonts = new List<string> { "wwwroot/SIMSUN.TTC", "wwwroot/SIMSUNB.TTF"};
 }
     
 ```
@@ -42,15 +40,21 @@ The following example shows how to load a custom font using a CDN link.
 
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
-              Width="100%" CustomFonts="@customFonts">
+              Width="100%"
+              CustomFonts="@customFonts">
 </SfPdfViewer2>
- 
 
 @code {
 
-     public List<string> customFonts = new List<string> { "https://cdn.jsdelivr.net/npm/arial-geo-bold@1.0.0/fonts/arial-geo-bold-webfont.ttf" };
+    private List<string> customFonts = new List<string> { "https://cdn.jsdelivr.net/npm/arial-geo-bold@1.0.0/fonts/arial-geo-bold-webfont.ttf" };
 
 }
     
 ```
+
 [View the custom fonts sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20custom%20fonts%20in%20PDF%20document).
+
+## See also
+
+* [SfPdfViewer getting started (Web App)](../getting-started/web-app)
+* [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](./how-to-processing-large-files-without-increasing-maximum-message-size)

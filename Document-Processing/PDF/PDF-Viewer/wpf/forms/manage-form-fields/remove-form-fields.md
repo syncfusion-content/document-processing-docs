@@ -12,7 +12,7 @@ documentation: ug
 The [WPF PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/overview) supports removing existing form fields from a PDF document exclusively through programmatic APIs. By accessing the loaded PDF document’s form fields collection, specific form fields can be identified and deleted as required.
 
 ## Remove Form Fields Programmatically
-The `PDF Viewer` form fields be removed using code by accessing the loaded PDF document. This makes it easy to delete unwanted form fields when updating or managing PDF files.
+The `PDF Viewer` form fields can be removed using code by accessing the loaded PDF document. This makes it easy to delete unwanted form fields when updating or managing PDF files.
 
 The following code sample explains how to remove the form field during runtime.
 
@@ -30,8 +30,8 @@ private void RemoveAt_Click(object sender, RoutedEventArgs e)
 {% highlight VB %}
 
 Private Sub RemoveAt_Click(sender As Object, e As RoutedEventArgs)
-	If pdfViewer.LoadedDocument.Form.Fields.Count > 0 Then
-		`Remove the field at index 0.
+    If pdfViewer.LoadedDocument.Form.Fields.Count > 0 Then
+        ' Remove the field at index 0.
         pdfViewer.LoadedDocument.Form.Fields.RemoveAt(0)
     End If
 End Sub

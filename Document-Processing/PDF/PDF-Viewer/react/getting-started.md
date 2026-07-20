@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with React Standalone PDF Viewer Component| Syncfusion
-description: Learn here all about Getting Started with Standalone React PDF Viewer Component of Syncfusion Essential JS 2 and more details.
+title: React Standalone PDF Viewer Getting Started | Syncfusion
+description: Learn all about Getting Started with the Standalone React PDF Viewer Component of Syncfusion Essential JS 2 and more details.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -18,7 +18,7 @@ This section explains how to create a simple React application and add the stand
 
 ## Create a React application
 
-Use [`Vite`](https://vitejs.dev/guide/) to create a new React application, as it provides a faster development environment, smaller bundle sizes, and optimized production builds.
+Use [`Vite`](https://vitejs.dev/guide/) to create a new React application for a faster development environment, smaller bundle sizes, and optimized production builds.
 
 To create a new React application, run one of the following commands based on your preferred environment.
 
@@ -64,7 +64,7 @@ Add the following PDF Viewer and dependent component style references to the `sr
 @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css";
+@import '../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css';
 
 {% endhighlight %}
 {% endtabs %}
@@ -73,13 +73,19 @@ Add the following PDF Viewer and dependent component style references to the `sr
 
 Add the **Syncfusion® React PDF Viewer** component to your `src/App.jsx` or `src/App.tsx` file.
 
+The key props and services used in the following samples are:
+
+* `documentPath`: URL or Base64 string of the PDF to load.
+* `resourceUrl`: Path to the PDFium (`pdfium.js` / `pdfium.wasm`) assets required for rendering.
+* `Inject services={[...]}`: Registers the optional modules (toolbar, navigation, annotations, search, form fields, etc.) you want to enable.
+
 {% tabs %}
 {% highlight js tabtitle="JSX" %}
 {% raw %}
 
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
          ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner,
-         PageOrganizer, Inject} from '@syncfusion/ej2-react-pdfviewer';
+         PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 export default function App() {
     return (
@@ -87,7 +93,7 @@ export default function App() {
         // Specifies the URL (for example, a file from the public folder) or a Base64-encoded PDF.
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         // Specifies the path to the PDFium resource files required for the PDF Viewer to function.
-        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib">
+        resourceUrl="https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib">
 
          <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
                              BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
@@ -104,12 +110,14 @@ export default function App() {
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
          ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner,
          PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
- 
+ 
 export default function App() {
   return (
     <PdfViewerComponent id="container"
+      // Specifies the URL (for example, a file from the public folder) or a Base64-encoded PDF.
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/dist/ej2-pdfviewer-lib">
+      // Specifies the path to the PDFium resource files required for the PDF Viewer to function.
+      resourceUrl="https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib">
       <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
                           BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
                           FormFields, FormDesigner, PageOrganizer ]}/>
@@ -128,7 +136,7 @@ N> To load PDF documents and resources from your local application instead of a 
 Run the following command to start the React application:
 
 {% tabs %}
-{% highlight bash tabtitle="CLI" %}
+{% highlight bash tabtitle="Vite CLI" %}
 
 npm run dev
 

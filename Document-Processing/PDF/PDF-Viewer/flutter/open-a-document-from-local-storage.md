@@ -9,7 +9,7 @@ documentation: ug
 
 # Open a PDF From Local Storage in Flutter PDF Viewer (SfPdfViewer)
 
-The [SfPdfViewer.file](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/SfPdfViewer.file.html) creates a widget that displays the PDF document obtained from a [`File`](https://api.flutter.dev/flutter/dart-io/File-class.html). The following code example explains the same.
+The [SfPdfViewer.file](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/SfPdfViewer.file.html) creates a widget that displays the PDF document obtained from a [`File`](https://api.flutter.dev/flutter/dart-io/File-class.html). The following code example demonstrates this.
 
 {% tabs %}
 {% highlight dart hl_lines="4 5" %}
@@ -24,6 +24,6 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-N> On Android, this may require the `android.permission.READ_EXTERNAL_STORAGE`.
+N> On Android, add the `android.permission.READ_EXTERNAL_STORAGE` permission in the `AndroidManifest.xml` file.
 
 N> Since the file system is not accessible from the browser, [SfPdfViewer.file](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/SfPdfViewer.file.html) is not supported on Flutter Web.

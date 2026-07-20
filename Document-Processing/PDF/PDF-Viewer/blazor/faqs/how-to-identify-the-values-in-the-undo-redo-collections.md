@@ -7,9 +7,9 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Determine if SfPdfViewer has values in the undo, redo collections
+# Determine if SfPdfViewer has values in the undo and redo collections
 
-The Blazor SfPdfViewer makes it possible to determine whether undo and redo history is available by using the [CanUndo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_CanUndo) and [CanRedo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_CanRedo). In SfPdfViewer2, bind these properties to boolean fields to reflect availability in the UI.
+The Blazor SfPdfViewer exposes the [CanUndo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_CanUndo) and [CanRedo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_CanRedo) properties to indicate whether undo and redo history is available. In `SfPdfViewer`, bind these properties to boolean fields to reflect availability in the UI.
 
 The following example binds these properties and enables or disables the buttons as the undo and redo history changes.
 
@@ -48,22 +48,22 @@ else
 
 @code
 {
-    SfPdfViewer2 viewer;
-    bool canUndo = true;
-    bool canRedo = true;
+    private SfPdfViewer2 viewer;
+    private bool canUndo = true;
+    private bool canRedo = true;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    // Event triggers on Undo button click.
+    // Triggered when the Undo button is clicked.
     private async Task undo()
     {
-        // API to perform Undo action.
+        // Performs the Undo action.
         await viewer.UndoAsync();
     }
 
-    // Event triggers on Redo button click.
+    // Triggered when the Redo button is clicked.
     private async Task redo()
     {
-        // API to perform Redo action.
+        // Performs the Redo action.
         await viewer.RedoAsync();
     }
 }
@@ -71,3 +71,8 @@ else
 ```
 
 [View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Identify%20the%20PdfViewer%20has%20Undo%2C%20Redo)
+
+## See also
+
+* [Annotations Undo and Redo](../annotation/annotations-undo-redo)
+* [Events in SfPdfViewer Component](../events)

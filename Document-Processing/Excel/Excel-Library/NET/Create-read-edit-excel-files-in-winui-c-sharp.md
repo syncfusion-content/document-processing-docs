@@ -11,9 +11,13 @@ Syncfusion<sup>&reg;</sup> Excel library for WinUI platform can be used to creat
 
 ## Create a simple Excel report
 
-The below steps illustrates creating a simple Invoice formatted Excel document in WinUI.
+The following steps illustrate creating a simple Invoice-formatted Excel document in a WinUI application.
 
-Step 1: Create a new C# WinUI Desktop app. Select Blank App, Packaged with WAP (WinUI 3 in Desktop) from the template and click the **Next** button.
+**Prerequisites:**
+- Visual Studio 2022 (17.0 or later) with the **.NET Desktop Development** workload and the **Windows App SDK** installed.
+- .NET 6 or later (WinUI 3 requires .NET 6+ for desktop apps).
+
+Step 1: Create a new C# WinUI Desktop app. Select **Blank App, Packaged with WAP (WinUI 3 in Desktop)** from the template and click the **Next** button.
 
 ![Create WinUI application in Visual Studio](WinUI_images/WinUI_images_img1.png)
 
@@ -25,13 +29,13 @@ Step 3: Select the target and minimum platform versions.
 
 ![Choose the target and platform](WinUI_images/WinUI_images_img3.png)
 
-Step 4: Install the [Syncfusion.XlsIO.NET](https://www.nuget.org/packages/Syncfusion.XlsIO.NET/) NuGet package as reference to your WinUI application from [NuGet.org](https://www.nuget.org).
+Step 4: Install the [Syncfusion.XlsIO.NET](https://www.nuget.org/packages/Syncfusion.XlsIO.NET/) NuGet package as a reference to your WinUI application from [NuGet.org](https://www.nuget.org).
 
 ![Install Syncfusion.XlsIO.NET Nuget Package](WinUI_images/WinUI_images_img4.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
 
-Step 5: Add a new button to the **MainWindow.xaml** as shown below.
+Step 5: Open **MainWindow.xaml** and add a new button. Also add a matching click handler named `CreateDocument` in `MainWindow.xaml.cs`, as shown below.
 {% capture codesnippet1 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -53,7 +57,7 @@ Step 5: Add a new button to the **MainWindow.xaml** as shown below.
 {% endcapture %}
 {{ codesnippet1 | OrderList_Indent_Level_1 }}
 
-Step 6: Include the following namespaces in MainPage.xaml.cs file.
+Step 6: Include the following namespaces in the **MainWindow.xaml.cs** file.
 {% capture codesnippet2 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
@@ -68,7 +72,9 @@ using System.IO;
 {% endcapture %}
 {{ codesnippet2 | OrderList_Indent_Level_1 }}
 
-Step 7: Include the below code snippet in button click event to create an Excel file and download it.
+N> Before proceeding, add the `AdventureCycles-Logo.png` image to the project and set its **Build Action** to **Embedded Resource** in the file properties so it can be loaded using `GetManifestResourceStream`.
+
+Step 7: Include the following code snippet in the button click event to create an Excel file and download it.
 {% capture codesnippet3 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
@@ -256,7 +262,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endcapture %}
 {{ codesnippet3 | OrderList_Indent_Level_1 }} 
 
-Step 8: Include this below helper Save method in **MainPage.xaml.cs** file.
+Step 8: Include the following helper `Save` method in the **MainWindow.xaml.cs** file.
 {% capture codesnippet4 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -291,8 +297,6 @@ async void Save(MemoryStream stream, string filename)
       }
     }
   }
-  //Launch the saved Excel file
-  await Windows.System.Launcher.LaunchFileAsync(stFile);
 }
 {% endhighlight %}
 {% endtabs %}
@@ -306,7 +310,9 @@ By executing the program, you will get the Excel file as below.
 
 ## Read and Edit Excel file
 
-The below code snippet illustrates how to read and edit an Excel file in WinUI.
+The following code snippet illustrates how to read and edit an Excel file in WinUI.
+
+N> Add the `Sample.xlsx` file to the project and set its **Build Action** to **Embedded Resource** before running this example.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}

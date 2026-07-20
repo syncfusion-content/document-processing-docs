@@ -63,14 +63,12 @@ Widget build(BuildContext context) {
 
 ### Customizing Selector Appearance
 
-The `annotationSettings` property of `PdfViewerController` allows you to customize the default selector color. The following example explains how to customize the selector color for locked and unlocked annotations.
+The `annotationSettings` property of `SfPdfViewer` allows you to customize the default selector color. The following example explains how to customize the selector color for locked and unlocked annotations.
 
 {% tabs %}
 {% highlight dart %}
 
-void customizeSelectorAppearance() {
-  PdfAnnotationSettings annotationSettings =
-      _pdfViewerController.annotationSettings;
+void customizeSelectorAppearance(PdfAnnotationSettings annotationSettings) {
   // For unlocked annotations.
   annotationSettings.selector.color = Colors.blue;
   // For locked annotations.
@@ -102,7 +100,7 @@ void deselectAnnotation(Annotation selectedAnnotation) {
 
 ### Annotation Deselected Callback
 
-The callback provided to the `onAnnotationDeselected` property is triggered when an annotation is deselected interactively or programmatically. The following code sample explains how to use this callback.
+The callback provided to the [onAnnotationDeselected](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onAnnotationDeselected.html) property is triggered when an annotation is deselected interactively or programmatically. The following code sample explains how to use this callback.
 
 {% tabs %}
 {% highlight dart hl_lines="7 8 9 10" %}
