@@ -157,7 +157,7 @@ The theme stylesheet can be accessed from NuGet through [Static Web Assets](http
 {% endhighlight %}
 {% endtabs %}
 
-## Add Script Resources
+## Add script resources
 
 Include the script reference at the end of the `<body>` section in the **~/Components/App.razor**  file.
 
