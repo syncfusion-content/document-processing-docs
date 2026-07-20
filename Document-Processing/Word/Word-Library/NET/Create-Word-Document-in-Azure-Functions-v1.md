@@ -10,23 +10,29 @@ documentation: UG
 
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit and convert Word documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in Azure Functions v1**.
 
+## Prerequisites
+
+* An active Azure subscription.
+* Visual Studio with the **Azure development** workload installed.
+* .NET Framework (version supported by the Syncfusion.DocIO.AspNet package referenced in Step 4).
+
 ## Steps to create a Word document in Azure Functions v1
 
-Step 1: Create a new Azure Functions project.
+Step 1: Create a new Azure Functions project. Select the **Azure Functions** template for **.NET Framework** in Visual Studio.
 ![Create a Azure Functions project](Azure-Images/Functions-v1/Azure_Function_WordtoPDF.png)
 
 Step 2: Create a project name and select the location.
 ![Create a project name](Azure-Images/Functions-v1/Configuration-Create-Word-Document.png)
 
-Step 3: Select function worker as **.NET Framework**. 
+Step 3: Select the function worker as **.NET Framework**.
 ![Select function worker](Azure-Images/Functions-v1/Additional_Information_WordtoPDF.png)
 
-Step 4: Install the [Syncfusion.DocIO.AspNet](https://www.nuget.org/packages/Syncfusion.DocIO.AspNet) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+Step 4: Install the [Syncfusion.DocIO.AspNet](https://www.nuget.org/packages/Syncfusion.DocIO.AspNet) NuGet package (v16.2.0.x or later) as a reference to your project from [NuGet.org](https://www.nuget.org/).
 ![Install Syncfusion.DocIO.AspNet NuGet package](ASP-NET_images/Install_Nuget.jpg)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: Include the following namespaces in the **Function1.cs** file.
+Step 5: Include the following namespaces in the **Function1.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -37,7 +43,25 @@ using Syncfusion.DocIO.DLS;
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Add the following code snippet in **Run** method of **Function1** class to perform **create a Word document** in Azure Functions and return the resultant **Word document** to client end.
+The code in Step 6 also requires the following namespaces:
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+using Microsoft.Azure.WebJobs;
+using Microsoft.Azure.WebJobs.Extensions.Http;
+using System;
+using System.Drawing;
+using System.IO;
+using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Reflection;
+
+{% endhighlight %}
+{% endtabs %}
+
+Step 6: Add the following code snippet in the **Run** method of the **Function1** class to create a Word document in Azure Functions and return the resulting **Word document** to the client.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -279,36 +303,36 @@ return response;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Right click the project and select **Publish**. Then, create a new profile in the Publish Window.
+Step 7: Right-click the project and select **Publish**. Then, create a new profile in the Publish Window.
 ![Create a new profile in the Publish Window](Azure-Images/Functions-v1/Publish-Create-Word-Document.png)
 
-Step 7: Select the target as **Azure** and click **Next** button.
+Step 8: Select the target as **Azure** and click the **Next** button.
 ![Select the target as Azure](Azure-Images/Functions-v1/Target_WordtoPDF.png)
 
-Step 8: Select the **Create new** button.
+Step 9: Select the **Create new** button.
 ![Configure Hosting Plan](Azure-Images/Functions-v1/Function_Instance_WordtoPDF.png)
 
-Step 9: Click **Create** button. 
+Step 10: Click the **Create** button.
 ![Select the plan type](Azure-Images/Functions-v1/Hosting-Create-Word-Document.png)
 
-Step 10: After creating app service then click **Finish** button. 
+Step 11: After creating the app service, click the **Finish** button.
 ![Creating app service](Azure-Images/Functions-v1/App-Create-Word-Document.png)
 
-Step 11: Click the **Publish** button.
+Step 12: Click the **Publish** button.
 ![Click Publish Button](Azure-Images/Functions-v1/Before-Publish-Create-Word-Document.png)
 
-Step 12: Publish has been succeed.
+Step 13: Publish has succeeded.
 ![Publish succeeded](Azure-Images/Functions-v1/After-Publish-Create-Word-Document.png)
 
-Step 13: Now, go to Azure portal and select the App Services. After running the service, click **Get function URL by copying it**. Then, paste it in the below client sample (which will request the Azure Functions, to perform **create a Word document** using the template Word document). You will get the output Word document as follows.
+Step 14: Go to the Azure portal and select **App Services**. Start the service and copy the **Get Function URL**. Paste it into the client sample in the next section, which requests the Azure Functions to create a Word document. You will receive the resulting Word document as shown below.
 
 ![Create a Word document in Azure Functions v1](ASP-NET-Core_images/GettingStartedOutput.jpg)
 
 ## Steps to post the request to Azure Functions
 
-Step 1: Create a console application to request the Azure Functions API.
+Step 1: Create a .NET console application to request the Azure Functions API. No Syncfusion NuGet package is required on the client side.
 
-Step 2: Add the following code snippet into **Main** method to post the request to Azure Functions with template Word document and get the resultant Word document.
+Step 2: Add the following code snippet into the **Main** method to send a request to the Azure Functions and save the resulting Word document.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -324,7 +348,7 @@ try
 {
     Console.WriteLine("Please enter your Azure Functions URL :");
     string functionURL = Console.ReadLine();
-    //Create HttpWebRequest with hosted azure functions URL.    
+    //Create HttpWebRequest with hosted azure functions URL.
     HttpWebRequest req = (HttpWebRequest)WebRequest.Create(functionURL);
     //Set request method as POST
     req.Method = "POST";
@@ -343,7 +367,7 @@ try
 }
 catch (Exception ex)
 {
-    throw;
+    Console.WriteLine("Error: " + ex.Message);
 }
 
 {% endhighlight %}
@@ -353,5 +377,5 @@ From GitHub, you can download the [console application](https://github.com/Syncf
 
 Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.
 
-An online sample link to [create a Word document](https://document.syncfusion.com/demos/word/helloworld#/tailwind) in ASP.NET Core. 
+An online sample link to [create a Word document](https://document.syncfusion.com/demos/word/helloworld#/tailwind). 
 

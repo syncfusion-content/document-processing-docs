@@ -8,7 +8,7 @@ documentation: UG
 
 # Create Word document in Azure App Service on Windows
 
-Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit and convert Word documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create Word document in Azure App Service on Windows**.
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and convert Word documents programmatically without Microsoft Word or interop dependencies. Using this library, you can **create a Word document in Azure App Service on Windows**.
 
 ## Steps to create Word document in Azure App Service on Windows
 
@@ -18,7 +18,7 @@ Step 1: Create a new ASP.NET Core Web App (Model-View-Controller).
 Step 2: Create a project name and select the location.
 ![Configure your new project](Azure-Images/App-Service-Windows/Configure_Your_Project_WordtoPDF.png)
 
-Step 3: Click **Create** button.
+Step 3: Click the **Create** button.
 ![Additional Information](Azure-Images/App-Service-Linux/Additional_Information_WordtoPDF.png)
 
 Step 4: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
@@ -56,7 +56,11 @@ using Syncfusion.DocIO.DLS;
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Include the below code snippet in **HomeController.cs** for **create a Word document**. 
+Step 7: Include the below code snippet in **HomeController.cs** to **create a Word document**.
+
+N> The sample code reads image files from the `wwwroot/Data/` folder (`AdventureCycle.jpg` and `Mountain-200.jpg`). Place these images in that folder, or update the paths in the code to match your project. You can download the sample assets from the [GitHub sample](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Azure/Azure_App_Service) referenced at the end of this page.
+
+N> Register the Syncfusion license key before creating the `WordDocument`. See [Registering a Syncfusion license in your application](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application) for details.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -294,7 +298,7 @@ public ActionResult CreateWordDocument()
         stream.Position = 0;
 
         //Download Word document in the browser.
-        return File(stream, "application/msword", "Sample.docx");
+        return File(stream, "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "Sample.docx");
     }
 }
 
@@ -303,7 +307,7 @@ public ActionResult CreateWordDocument()
 
 ## Steps to publish as Azure App Service on Windows
 
-Step 1: Right-click the project and select **Publish** option.
+Step 1: Right-click the project and select the **Publish** option.
 ![Right-click the project and select the Publish option](Azure-Images/App-Service-Windows/Publish-Create-Word-Document.png)
 
 Step 2: Click the **Add a Publish Profile** button.
@@ -315,7 +319,7 @@ Step 3: Select the publish target as **Azure**.
 Step 4: Select the Specific target as **Azure App Service (Windows)**.
 ![Select the publish target](Azure-Images/App-Service-Windows/Specific_Target_WordtoPDF.png)
 
-Step 5: To create a new app service, click **Create new** option.
+Step 5: To create a new app service, click the **Create new** option.
 ![Click create new option](Azure-Images/App-Service-Linux/Create_New_App_Service_WordtoPDF.png)
 
 Step 6: Click the **Create** button to proceed with **App Service** creation.
@@ -324,24 +328,22 @@ Step 6: Click the **Create** button to proceed with **App Service** creation.
 Step 7: Click the **Finish** button to finalize the **App Service** creation.
 ![Click the Finish button](Azure-Images/App-Service-Windows/App-Service-Create-Word-Document.png)
 
-Step 8: Click **Close** button.
-![Create a ASP.NET Core Project](Azure-Images/App-Service-Linux/Publish_Finish_WordtoPDF.png)
+Step 8: Click the **Close** button.
+![Click the Close button](Azure-Images/App-Service-Linux/Publish_Finish_WordtoPDF.png)
 
 Step 9: Click the **Publish** button.
 ![Click the Publish button](Azure-Images/App-Service-Windows/Before-Publish-Create-Word-Document.png)
 
-Step 10: Now, Publish has been succeeded.
+Step 10: The publish has now succeeded.
 ![Publish has been succeeded](Azure-Images/App-Service-Windows/After-Publish-Create-Word-Document.png)
 
-Step 11: Now, the published webpage will open in the browser. 
+Step 11: The published webpage will open in the browser.
 ![Browser will open after publish](Azure-Images/App-Service-Windows/Browser-Create-Word-Document.png)
 
-Step 12: Select the Word document and Click **Create Word document** to create a Word document.You will get the output **Word document** as follows.
+Step 12: On the published page, click **Create Word Document** to generate the document. You will get the output **Word document** as follows.
 
 ![Create Word document in Azure App Service on Windows](ASP-NET-Core_images/GettingStartedOutput.jpg)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Azure/Azure_App_Service).
 
 Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page. 
-
-An online sample link to [convert Word document to PDF](https://document.syncfusion.com/demos/word/helloworld#/tailwind) in ASP.NET Core. 

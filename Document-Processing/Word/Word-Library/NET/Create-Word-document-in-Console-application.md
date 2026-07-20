@@ -10,6 +10,8 @@ documentation: UG
 
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, and edit **Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in Console Application**.
 
+N> The code samples in this topic load images from a `Data` folder located at the root of the project. Download the images (`AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, and `Road-550-W.jpg`) from the [GitHub sample](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/.NET) and place them in a `Data` folder, or set the images to be copied to the output directory, before running the project.
+
 ## Create a Word document using .NET Core and Latest
 
 {% tabcontents %}
@@ -283,7 +285,7 @@ Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/.NET).
 
-By executing the program, you will get the **Word document** as follows.
+By running the project, you will get the following **Word document**.
 
 ![.NET Core output Word document](Mac-images/GettingStartedOutput.jpg)
 
@@ -298,7 +300,7 @@ By executing the program, you will get the **Word document** as follows.
 * Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
 
 Step 1: Create a new .NET Core console application project.
-* Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
+* Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>, type **.NET: New Project**, and press <kbd>Enter</kbd>.
 * Choose the **Console App** template.
 
 ![Choose Console app from template](Console-Images/NET/Console-app-template.png)
@@ -576,7 +578,7 @@ dotnet run
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/.NET).
 
-By executing the program, you will get the **Word document** as follows.
+By running the project, you will get the following **Word document**.
 
 ![.NET Core output Word document](Mac-images/GettingStartedOutput.jpg)
 
@@ -587,18 +589,18 @@ By executing the program, you will get the **Word document** as follows.
 **Prerequisites:**
 
 * JetBrains Rider.
-* Install .NET 8 SDK or later.
+* Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 
-Step 1. Open JetBrains Rider and create a new .NET Core console application project.
+Step 1: Open JetBrains Rider and create a new .NET Core console application project.
 * Launch JetBrains Rider.
-* Click new solution on the welcome screen.
+* Click **New Solution** on the welcome screen.
 
 ![Launch JetBrains Rider](Console-Images/NET/Launch-JetBrains-Rider.png)
 
 * In the new Solution dialog, select Project Type as Console.
 * Enter a project name and specify the location.
 * Select the target framework (e.g., .NET 8.0, .NET 9.0).
-* Click create.
+* Click **Create**.
 
 ![Creating a new .NET Core console application in JetBrains Rider](Console-Images/NET/Create-Console-NET-core-sample.png)
 
@@ -869,7 +871,7 @@ Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to 
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/.NET).
 
-By executing the program, you will get the **Word document** as follows.
+By running the project, you will get the following **Word document**.
 
 ![.NET Core output Word document](Mac-images/GettingStartedOutput.jpg)
 
@@ -1141,7 +1143,7 @@ Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/.NET-Framework).
 
-By executing the program, you will get the **Word document** as follows.
+By running the project, you will get the following **Word document**.
 
 ![.NET FrameWork output Word document](Mac-images/GettingStartedOutput.jpg)
 
@@ -1154,16 +1156,16 @@ By executing the program, you will get the **Word document** as follows.
 * JetBrains Rider.
 * Install .NET Framework Developer Pack.
 
-Step 1. Open JetBrains Rider and create a new .NET Framework console application project.
+Step 1: Open JetBrains Rider and create a new .NET Framework console application project.
 * Launch JetBrains Rider.
-* Click new solution on the welcome screen.
+* Click **New Solution** on the welcome screen.
 
 ![Launch JetBrains Rider](Console-Images/NET-FrameWork/Launch-JetBrains-Rider.png)
 
 * In the new Solution dialog, select Project Type as Console.
 * Enter a project name and specify the location.
 * Select the target framework as Full Framework and choose the desired version.
-* Click create.
+* Click **Create**.
 
 ![Creating a new .NET Framework console application in JetBrains Rider](Console-Images/NET-FrameWork/Create-Console-Framework-project.png)
 
@@ -1424,7 +1426,7 @@ Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to 
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/.NET-Framework).
 
-By executing the program, you will get the **Word document** as follows.
+By running the project, you will get the following **Word document**.
 
 ![.NET FrameWork output Word document](Mac-images/GettingStartedOutput.jpg)
 
