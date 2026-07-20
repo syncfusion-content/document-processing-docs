@@ -23,6 +23,7 @@ In the project configuration window, name your project and select Create.
 Step 2: Install the [Syncfusion.SmartDataExtractor.WPF](https://www.nuget.org/packages/Syncfusion.SmartDataExtractor.WPF) NuGet package as a reference to your WPF application [NuGet.org](https://www.nuget.org/).
 ![NuGet package installation](GettingStarted_images/WPF_DataExtractor_Nuget.png)
 
+Add the input PDF file named **Input.pdf** to the project folder before running the sample.
 
 Step 3: Include the following namespaces in the MainWindow.xaml.cs file.
 
@@ -50,7 +51,7 @@ Step 4: Add a new button in MainWindow.xaml to extract data from a PDF document 
 
 {% endhighlight %}
 
-Step 5: Add the following code in `ExtractButton_Click` to extract data from a PDF document using the **ExtractDataAsJson**  method in the **DataExtractor** class. The extracted content will be saved as a JSON file 
+Step 5: Add the following code in `ExtractButton_Click` to extract data from a PDF document using the [ExtractDataAsJson](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsJson_System_IO_Stream_) method in the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class. The extracted content will be saved as a JSON file.
 
 {% highlight c# tabtitle="C#" %}
 
@@ -72,4 +73,4 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 By executing the program, you will get the JSON file as follows.
 ![WPF output JSON document](GettingStarted_images/JSON_Output.png) 
  
- Click [here](https://www.syncfusion.com/document-sdk/net-pdf-data-extraction) to explore the rich set of Syncfusion<sup>&reg;</sup>Data Extraction library features.
+Click [here](https://www.syncfusion.com/document-sdk/net-pdf-data-extraction) to explore the rich set of Syncfusion<sup>&reg;</sup> Data Extraction library features.
