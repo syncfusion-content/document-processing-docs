@@ -1,14 +1,14 @@
----
+﻿---
 title: Convert an Excel document to Image in .NET MAUI | Syncfusion
-description: Convert an Excel document to Image in .NET MAUI using .NET MAUI Excel library (XlsIO) without Microsoft Excel or interop dependencies.
+description: Convert an Excel document to an image in .NET MAUI using the Syncfusion .NET MAUI Excel library (XlsIO) without Microsoft Excel or interop dependencies.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Convert Excel document to Image in .NET MAUI
+# Convert an Excel document to Image in .NET MAUI
 
-Syncfusion<sup>&reg;</sup> XlsIO is a [.NET MAUI Excel library](https://www.syncfusion.com/document-processing/excel-framework/maui/excel-library) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to Image in .NET MAUI**.
+Syncfusion<sup>&reg;</sup> XlsIO is a [.NET MAUI Excel library](https://www.syncfusion.com/document-processing/excel-framework/maui/excel-library) used to create, read, edit, and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to an image in .NET MAUI**.
 
 ## Prerequisites
 
@@ -16,13 +16,13 @@ Syncfusion<sup>&reg;</sup> XlsIO is a [.NET MAUI Excel library](https://www.sync
 
 {% tabcontent Visual Studio %}
 
-To create .NET Multi-platform App UI (.NET MAUI) apps, you need the latest versions of Visual Studio 2022 and .NET 8 or later. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin).
+To create .NET Multi-platform App UI (.NET MAUI) apps, you need the latest versions of Visual Studio 2022 and .NET 8 or later. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=vswin).
 
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
 
-To create .NET Multi-platform App UI (.NET MAUI) apps using Visual Studio Code, you need the latest versions of the .NET 8 SDK and additional tools configured for .NET MAUI development. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin).
+To create .NET Multi-platform App UI (.NET MAUI) apps using Visual Studio Code, you need the latest versions of the .NET 8 SDK, the MAUI workload (`dotnet workload install maui`), and additional tools configured for .NET MAUI development. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=vswin).
 
 {% endtabcontent %}
 
@@ -96,6 +96,10 @@ using Syncfusion.XlsIORenderer;
 {% endhighlight %}
 {% endtabs %}
 
+N> The `worksheet.ConvertToImage(IRange, Stream)` overload used below requires the `XlsIORenderer` to be assigned to ``application.XlsIORenderer`` (already shown in the code) and writes the image in **PNG** format to the supplied `MemoryStream`. Ensure a valid Syncfusion license key is registered before running, or an exception is thrown at runtime.
+
+Step 5a: Add a sample Excel file named **InputTemplate.xlsx** to the project's **Resources/Raw** folder, set its **Build Action** to **Embedded Resource**, and verify the resource name matches the namespace used in `GetManifestResourceStream` (e.g., `ConvertExcelToImage.InputTemplate.xlsx`).
+
 Step 6: Add a new action method **convertExceltoImage_Click** in MainPage.xaml.cs and include the below code snippet to **convert an Excel document to Image**.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -133,7 +137,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 Step 1: Create a new C# .NET MAUI application project using Create .NET Project option.
 
-![Create a .NET MAUI application in visual studio](MAUI_images\MAUI_images_img12.png)
+![Create a .NET MAUI application in Visual Studio Code](MAUI_images\MAUI_images_img12.png)
 
 Step 2: Name the project and create the project.
 
@@ -146,7 +150,7 @@ dotnet new maui -o ConvertExcelToImage
 cd ConvertExcelToImage
 ```
 
-Step 3:  To **convert an Excel document to Image in .NET MAUI app**,run the following command to  install [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) package.
+Step 3: To **convert an Excel document to an image in a .NET MAUI app**, run the following command to install the [Syncfusion.XlsIORenderer.NET.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.NET.Core) NuGet package.
 
 ```
 dotnet add package Syncfusion.XlsIORenderer.Net.Core
@@ -205,6 +209,10 @@ using Syncfusion.XlsIO;
 using Syncfusion.XlsIORenderer;
 {% endhighlight %}
 {% endtabs %}
+
+N> The `worksheet.ConvertToImage(IRange, Stream)` overload used below requires the `XlsIORenderer` to be assigned to ``application.XlsIORenderer`` (already shown in the code) and writes the image in **PNG** format to the supplied `MemoryStream`. Ensure a valid Syncfusion license key is registered before running, or an exception is thrown at runtime.
+
+Step 5a: Add a sample Excel file named **InputTemplate.xlsx** to the project's **Resources/Raw** folder, set its **Build Action** to **Embedded Resource**, and verify the resource name matches the namespace used in `GetManifestResourceStream` (e.g., `ConvertExcelToImage.InputTemplate.xlsx`).
 
 Step 6: Add a new action method **convertExceltoImage_Click** in MainPage.xaml.cs and include the below code snippet to **convert an Excel document to Image**.
 {% tabs %}
@@ -309,7 +317,7 @@ Refer the below helper files and add them into the mentioned project. These help
       <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/blob/master/Getting%20Started/.NET%20MAUI/ConvertExcelToImage/ConvertExcelToImage/Platforms/iOS/SaveIOS.cs" target="_blank">SaveIOS.cs</a>
     </td>
     <td>
-      Save implementation for iOS device.
+      Save implementation for the iOS device.
     </td>
   </tr>
   <tr>
@@ -318,7 +326,7 @@ Refer the below helper files and add them into the mentioned project. These help
       <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/blob/master/Getting%20Started/.NET%20MAUI/ConvertExcelToImage/ConvertExcelToImage/Platforms/iOS/QLPreviewItemFileSystem.cs" target="_blank">QLPreviewItemFileSystem.cs</a>
     </td>
     <td>
-      Helper classes for viewing the <strong>Excel document</strong> on iOS device.
+      Helper classes for viewing the <strong>Excel document</strong> on the iOS device.
     </td>
   </tr>
 </table>
