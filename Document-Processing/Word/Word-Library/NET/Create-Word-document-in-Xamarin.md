@@ -8,15 +8,26 @@ documentation: UG
 
 # Create Word document in Xamarin
 
-Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [Xamarin Word library](https://www.syncfusion.com/document-processing/word-framework/xamarin/word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or **interop** dependencies. Using this library, you can **create a Word document in Xamarin**.
+Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [Xamarin Word library](https://www.syncfusion.com/document-processing/word-framework/xamarin/word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop (Microsoft.Office.Interop.Word) dependencies. Using this library, you can **create a Word document in Xamarin**.
 
-## Steps to create Word document programmatically:
+N> Xamarin is deprecated as of May 2024. For new projects, consider using .NET MAUI. The DocIO library also supports .NET MAUI; see the [.NET MAUI Word Library](https://www.syncfusion.com/document-processing/word-framework/maui/word-library) for details.
+
+## Prerequisites
+
+Before you begin, ensure the following:
+
+- Visual Studio with the **Mobile development with .NET** workload installed (includes Xamarin.Forms templates).
+- A Syncfusion<sup>&reg;</sup> license key. Starting with v16.2.0.x, registering a license key is required; see the [licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
+- Supported target frameworks: .NET Standard 2.0 (recommended) or Portable Class Library (PCL). The `Syncfusion.Xamarin.DocIO` package targets `netstandard1.4` and `netstandard2.0`.
+- Images and helper files (see the [Helper files for Xamarin](#helper-files-for-xamarin) section) bundled per the platform-specific instructions described later in this topic.
+
+## Steps to Create Word Document Programmatically
 
 Step 1: Create a new Xamarin.Forms application project.
 
 ![Create Xamarin application in Visual Studio](Xamarin_images/Create-Project-WordtoPDF.png)
 
-Step 2: Select a project template and required platforms to deploy the application. In this application the portable assemblies to be shared across multiple platforms, the .NET Standard code sharing strategy has been selected. For more details about code sharing refer [here](https://learn.microsoft.com/en-us/xamarin/cross-platform/app-fundamentals/code-sharing).
+Step 2: Select a project template and required platforms to deploy the application. In this application, the portable assemblies are shared across multiple platforms; the .NET Standard code sharing strategy has been selected. For more details about code sharing refer [here](https://learn.microsoft.com/en-us/xamarin/cross-platform/app-fundamentals/code-sharing).
 
 N> If .NET Standard is not available in the code sharing strategy, the Portable Class Library (PCL) can be selected.
 
@@ -28,15 +39,10 @@ Step 3: Install [Syncfusion.Xamarin.DocIO](https://www.nuget.org/packages/Syncfu
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: Add new Forms XAML page in **portable project**. If there is no XAML page is defined in the App class. Otherwise proceed to the next step.
-<ul>
-<li>
-To add the new XAML page, right click on the project and select <b>Add > New Item</b> and add a Forms XAML Page from the list. Name it as MainXamlPage.
-</li>
-<li>
-In App class of <b>portable project</b> (App.cs), replace the existing constructor of App class with the code snippet given below which invokes the <b>MainXamlPage</b>.
-</li>
-</ul>
+Step 4: Add a new Forms XAML page in the **portable project**. If no XAML page is defined in the App class, add one; otherwise proceed to the next step.
+
+- To add the new XAML page, right-click the **portable project**, select **Add > New Item**, and add a **Forms XAML Page** from the list. Name it **MainXamlPage**.
+- In the App class of the **portable project** (`App.cs`), replace the existing constructor of the App class with the code snippet given below, which invokes **MainXamlPage**. Ensure the `MainXamlPage` class is accessible from `App.cs` (either via a `using` directive for your project's default namespace or by fully qualifying the type name).
 
 {% tabs %}
 
@@ -50,7 +56,7 @@ public App()
 
 {% endtabs %}
 
-Step 5: In the MainXamlPage.xaml add new button as shown below.
+Step 5: In the `MainXamlPage.xaml` add a new button as shown below.
 
 {% tabs %}
 
@@ -58,7 +64,7 @@ Step 5: In the MainXamlPage.xaml add new button as shown below.
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-        x:Class="GettingStarted. MainXamlPage">
+        x:Class="GettingStarted.MainXamlPage">
 
     <StackLayout VerticalOptions="Center">
         <Button Text="Generate Document" Clicked="OnButtonClicked" HorizontalOptions="Center"/>
@@ -69,20 +75,25 @@ Step 5: In the MainXamlPage.xaml add new button as shown below.
 
 {% endtabs %}
 
-Step 6: Include the following namespace in the MainXamlPage.xaml.cs file.
+Step 6: Include the following namespaces in the `MainXamlPage.xaml.cs` file. The `Syncfusion.Drawing` types (`Color`, `SizeF`) are provided by the `Syncfusion.Core.XForms` assembly, which is pulled in transitively by the `Syncfusion.Xamarin.DocIO` NuGet package.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
-using System.Reflection;
+using Syncfusion.Drawing;
+using System;
 using System.IO;
+using System.Reflection;
+using Xamarin.Forms;
 {% endhighlight %}
 
 {% endtabs %}
 
-Step 7: Include the below code snippet in the click event of the button in MainXamlPage.xaml.cs, to create Word document and save it in a stream.
+Step 7: Include the below code snippet in the click event of the button in `MainXamlPage.xaml.cs`, to create a Word document and save it in a stream.
+
+N> This step uses `Xamarin.Forms.DependencyService.Get<ISave>()`, which requires the [Helper files for Xamarin](#helper-files-for-xamarin) to be added to your platform projects first. It also references several images (`AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, `Road-550-W.jpg`) that you must add to a **Templates** folder in the **portable project** with **Build Action** set to **Embedded Resource**. Update the `GettingStarted` namespace prefix in each `GetManifestResourceStream` call to match your project's default namespace.
 
 {% tabs %}
 
@@ -90,10 +101,11 @@ Step 7: Include the below code snippet in the click event of the button in MainX
 
 void OnButtonClicked(object sender, EventArgs args)
 {
-    //"App" is the class of Portable project
+    //"GettingStarted" is the default namespace of the portable project.
     Assembly assembly = typeof(App).GetTypeInfo().Assembly;
     //Creating a new document
-    WordDocument document = new WordDocument();
+    using (WordDocument document = new WordDocument())
+    {
     //Adding a new section to the document
     WSection section = document.AddSection() as WSection;
     //Set Margin of the section
@@ -306,10 +318,13 @@ void OnButtonClicked(object sender, EventArgs args)
     section.AddParagraph();
 
     //Saves the Word document to MemoryStream
-    MemoryStream stream = new MemoryStream();
+    using (MemoryStream stream = new MemoryStream())
+    {
     document.Save(stream, FormatType.Docx);
     //Save the stream as a file in the device and invoke it for viewing
-    Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView("Sample.docx", "application/msword", stream);          
+    Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView("Sample.docx", "application/msword", stream);
+    }
+    } // disposes WordDocument
 }
 {% endhighlight %}
 
@@ -317,7 +332,16 @@ void OnButtonClicked(object sender, EventArgs args)
 
 ## Helper files for Xamarin
 
-Download the helper files from this [link](https://www.syncfusion.com/downloads/support/directtrac/general/HELPER~1-696201504.ZIP) and add them into the mentioned project. These helper files allow you to save the stream as a physical file and open the file for viewing.
+The Step 7 code relies on the helper files below. Add them to your projects **before** running Step 7. Download the helper files from this [link](https://www.syncfusion.com/downloads/support/directtrac/general/HELPER~1-696201504.ZIP) and add them into the mentioned project. These helper files allow you to save the stream as a physical file and open the file for viewing.
+
+The following interface defines the save operation contract. Add it to the **portable project** as `ISave.cs`:
+
+```csharp
+public interface ISave
+{
+    void SaveAndView(string filename, string contentType, MemoryStream stream);
+}
+```
 
 <table>
   <tr>
@@ -402,6 +426,8 @@ Download the helper files from this [link](https://www.syncfusion.com/downloads/
   </tr>
 </table>
 
+N> **Platform-specific permissions:** On Android, add the `WRITE_EXTERNAL_STORAGE` permission to the Android manifest and request runtime storage permission on Android 6.0+ (API 23+). On UWP, grant `broadFileSystemAccess` capability in the package manifest if you need to save outside the app's local folder. On iOS, no additional file-system permission is required for saving to the app sandbox and previewing via `QLPreviewController`.
+
 Compile and execute the application. Now this application **creates a Word document**.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Xamarin).
@@ -410,6 +436,11 @@ By executing the program, you will get the Word document as follows.
 
 ![Xamarin output Word document](Xamarin_images/GettingStartedOutput.jpg)
 
-Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page. 
+Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.
 
-An online sample link to [create a Word document](https://document.syncfusion.com/demos/word/helloworld#/tailwind) in ASP.NET Core. 
+## See also
+
+- [Edit Word document in Xamarin](https://help.syncfusion.com/document-processing/word/word-library/xamarin/edit-word-document)
+- [Convert Word document to PDF in Xamarin](https://help.syncfusion.com/document-processing/word/word-library/xamarin/word-to-pdf)
+- [Generate Word document from template in Xamarin](https://help.syncfusion.com/document-processing/word/word-library/xamarin/working-with-mail-merge)
+- [DocIO NuGet packages](https://www.syncfusion.com/document-processing/word/nuget-packages) 
