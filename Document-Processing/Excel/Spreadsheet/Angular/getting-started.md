@@ -48,9 +48,9 @@ For `Angular versions below 12`, use the legacy `ngcc` package instead:
 npm install @syncfusion/ej2-angular-spreadsheet@ngcc
 ```
 
-## Register Syncfusion License Key
+## Register a Syncfusion License Key
 
-Before initializing Syncfusion Angular Spreadsheet component, generate a Syncfusion license key and register it in the application.
+Before initializing the Syncfusion Angular Spreadsheet component, generate a Syncfusion license key and register it in the application.
 
 - [Generate a Syncfusion License Key](https://help.syncfusion.com/document-processing/licensing/how-to-generate)
 - [Register a Syncfusion License Key in an Angular Application](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#angular)

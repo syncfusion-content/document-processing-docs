@@ -42,9 +42,9 @@ Install the [Vue Spreadsheet Editor](https://www.npmjs.com/package/@syncfusion/e
 npm install @syncfusion/ej2-vue-spreadsheet
 ```
 
-## Register Syncfusion License Key
+## Register a Syncfusion License Key
 
-Before initializing Syncfusion Vue Spreadsheet control, generate a Syncfusion license key and register it in the application.
+Before initializing the Syncfusion Vue Spreadsheet control, generate a Syncfusion license key and register it in the application.
 
 - [Generate a Syncfusion License Key](https://help.syncfusion.com/document-processing/licensing/how-to-generate)
 - [Register a Syncfusion License Key in a Vue Application](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#vuejs)
