@@ -84,17 +84,15 @@ Register the Script Manager at the end of the `<body>` tag in the `~/Views/Share
 {% endhighlight %}
 {% endtabs %}
 
-## Add the DOCX Editor Component
+## Add the Document Editor Component
 
-Add the DOCX Editor component in `~/Views/Home/Index.cshtml` page.
+Add the Document Editor component in `~/Views/Home/Index.cshtml` page.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/Index.cshtml" %}
 @Html.EJS().DocumentEditorContainer("container").Height("590px").Render()
 {% endhighlight %}
 {% endtabs %}
-
-Refer to [API Reference - DocumentEditorContainer](./api-documenteditorcontainer) for the complete list of available HTML helper methods.
 
 ## Run the application
 

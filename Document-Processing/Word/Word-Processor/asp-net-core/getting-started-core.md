@@ -14,7 +14,7 @@ documentation: ug
 ## Prerequisites
 
 * [System requirements for ASP.NET Core controls](https://ej2.syncfusion.com/aspnetcore/documentation/system-requirements)
-* [Browser compatiblity](https://ej2.syncfusion.com/aspnetcore/documentation/browser)
+* [Browser compatibility](https://ej2.syncfusion.com/aspnetcore/documentation/browser)
 * [ASP.NET Core license registration](https://ej2.syncfusion.com/aspnetcore/documentation/licensing/overview)
 
 {% tabcontents %}
@@ -115,9 +115,9 @@ Also, register the script manager `<ejs-scripts>` at the end of `<body>` in the 
 {% endhighlight %}
 {% endtabs %}
 
-## Add the DOCX Editor Component
+## Add the Document Editor Component
 
-Add the DOCX Editor component in `~/Pages/Index.cshtml` page.
+Add the Document Editor component in `~/Pages/Index.cshtml` page.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/Pages/Index.cshtml" %}
@@ -138,7 +138,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-DO
 ## Online Demo
 Explore the live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/default#/tailwind3) to see how to create, edit, and print Word documents using the ASP.NET Core DOCX Editor.
 
-N> Looking for the full ASP.NET Core DOCX Editor component overview, features, pricing, and documentation? Visit the [ASP.NET Core Docx Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) page.
+N> Looking for the full ASP.NET Core DOCX Editor component overview, features, pricing, and documentation? Visit the [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) page.
 
 ## See also
 
