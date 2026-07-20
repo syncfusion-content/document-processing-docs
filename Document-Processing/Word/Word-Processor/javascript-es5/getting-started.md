@@ -127,7 +127,7 @@ Add a container element for the Document Editor in the `index.html` file and the
 {% endhighlight %}
 {% highlight js tabtitle="index.js" %}
 
-// Register toolbar module - This loads the toolbar module
+// Inject toolbar
 ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
 
 // Initialize Document Editor Container component

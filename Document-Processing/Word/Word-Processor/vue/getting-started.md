@@ -12,11 +12,10 @@ domainurl: ##DomainURL##
 
 [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/Vue-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a Vue application.
 
-## Steps to create a DOCX Editor in Vue 2
-
 ### Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+* [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+* [Browser Compatibility](https://ej2.syncfusion.com/vue/documentation/browser)
 
 
 ### Create a Vue application
@@ -52,12 +51,19 @@ To install the DOCX Editor component, use the following command:
 npm install @syncfusion/ej2-vue-documenteditor --save
 ```
 
-### Add CSS reference
+## Register a Syncfusion License Key
+
+Before initializing the Vue DOCX Editor control, generate a Syncfusion license key and register it in your application.
+
+- [Generate a Syncfusion License Key](https://ej2.syncfusion.com/vue/documentation/licensing/license-key-generation)
+- [Register a Syncfusion License Key in Vue](https://ej2.syncfusion.com/vue/documentation/licensing/license-key-registration)
+
+### Import the required CSS styles
 
 Add the following DOCX Editor and dependent component style references to the `<style>` section of `src/App.vue` file.
 
 {% tabs %}
-{% highlight html tabtitle="App.vue" %}
+{% highlight css tabtitle="App.vue" %}
 
 @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
 @import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
@@ -74,9 +80,7 @@ Add the following DOCX Editor and dependent component style references to the `<
 
 N> Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-### Add the Document Editor component
-
-Modify the `src/App.vue` file to render the Document Editor. Add the Document Editor component in the `<template>` section using the `<ejs-documenteditorcontainer>` selector and configure it in the `<script>` section.
+Modify the `src/App.vue` file to render the DOCX Editor. Add the DOCX Editor component in the `<template>` section using the `<ejs-documenteditorcontainer>` selector and configure it in the `<script>` section.
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
