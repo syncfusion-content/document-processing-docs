@@ -30,6 +30,17 @@ To add the ASP.NET Core DOCX Editor component, open the NuGet package manager in
 
 * [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core/)
 
+
+Alternatively, you can utilize the following package manager command to achieve the same.
+
+{% tabs %}
+{% highlight bash tabtitle="Package Manager" %}
+
+Install-Package Syncfusion.EJ2.AspNet.Core
+
+{% endhighlight %}
+{% endtabs %}
+
 N> This package includes dependencies such as [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/) for JSON serialization and [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing/) for license validation.
 
 {% endtabcontent %}
@@ -110,7 +121,7 @@ To use a different theme, replace `fluent.css` with the theme of your choice (fo
 
 N> Refer the [Themes topic](https://ej2.syncfusion.com/aspnetcore/documentation/appearance/theme) to learn the different ways to include Syncfusion styles (using [CDN](https://ej2.syncfusion.com/aspnetcore/documentation/common/adding-script-references#cdn-reference), [NPM package](https://ej2.syncfusion.com/aspnetcore/documentation/common/adding-script-references#node-package-manager-npm), or [CRG](https://ej2.syncfusion.com/aspnetcore/documentation/common/custom-resource-generator)) and ensure the expected appearance of Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core controls, and check the [Adding Script Reference](https://ej2.syncfusion.com/aspnetcore/documentation/common/adding-script-references) documentation to understand the various approaches for adding required script references in your ASP.NET Core application.
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Script Manager
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> script manager
 
 Also, register the script manager `<ejs-scripts>` at the end of `<body>` in the `~/Pages/Shared/_Layout.cshtml` file as follows.
 
