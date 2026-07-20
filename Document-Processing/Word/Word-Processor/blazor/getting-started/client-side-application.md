@@ -24,12 +24,12 @@ documentation: ug
 
 You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs).
 
-### Install DOCX Editor Nuget packages
+### Install DOCX Editor NuGet packages
 
 To add **Syncfusion Blazor DOCX Editor** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install:
 
-* [Syncfusion.Blazor.WordProcessor](https://www.nuget.org/packages/Syncfusion.Blazor.WordProcessor)
-* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
+* [Syncfusion.Blazor.WordProcessor](https://www.NuGet.org/packages/Syncfusion.Blazor.WordProcessor)
+* [Syncfusion.Blazor.Themes](https://www.NuGet.org/packages/Syncfusion.Blazor.Themes/)
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -61,14 +61,14 @@ cd BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-### Install DOCX Editor Nuget packages
+### Install DOCX Editor NuGet packages
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
 * Navigate to the project directory created in the previous step.
 * Ensure you're in the project root directory where your `.csproj` file is located.
 * Run the following command to install the required packages:
-    - [Syncfusion.Blazor.WordProcessor](https://www.nuget.org/packages/Syncfusion.Blazor.WordProcessor)
-    - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
+    - [Syncfusion.Blazor.WordProcessor](https://www.NuGet.org/packages/Syncfusion.Blazor.WordProcessor)
+    - [Syncfusion.Blazor.Themes](https://www.NuGet.org/packages/Syncfusion.Blazor.Themes/)
 
 {% tabs %}
 
@@ -81,7 +81,7 @@ dotnet restore
 {% endhighlight %}
 {% endtabs %}
 
-N> The DOCX Editor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> The DOCX Editor packages are available on [NuGet.org](https://www.NuGet.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/NuGet-packages) topic for available NuGet packages list with component details.
 
 {% endtabcontent %}
 
@@ -135,7 +135,7 @@ Before initializing the Blazor DOCX Editor control, generate a Syncfusion licens
 The theme stylesheet can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the `<head>` section of the **index.html** file.
 
 {% tabs %}
-{% highlight razor tabtitle="index.html" % %}
+{% highlight razor tabtitle="index.html" %}
 
 <head>
     <!-- Add Syncfusion theme -->
@@ -150,7 +150,7 @@ The theme stylesheet can be accessed from NuGet through [Static Web Assets](http
 Include the script reference in the `<head>` section of the **index.html** file.
 
 {% tabs %}
-{% highlight html tabtitle="~/index.html" %}
+{% highlight html tabtitle="index.html" %}
 
 <head>
     <!-- Add the DOCX Editor script -->

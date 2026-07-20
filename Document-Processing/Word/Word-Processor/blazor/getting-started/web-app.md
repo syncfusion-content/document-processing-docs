@@ -27,13 +27,12 @@ You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Temp
 
 You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) while creating the Blazor Web App.
 
-### Install DOCX Editor Nuget packages
+### Install DOCX Editor NuGet packages
 
-To add **DOCX Editor** component in the application, follow the steps below.
- - Open NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), 
- - Search and install the following packages
-    - [Syncfusion.Blazor.WordProcessor](https://www.nuget.org/packages/Syncfusion.Blazor.WordProcessor)
-    - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
+To add **Syncfusion Blazor DOCX Editor** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install:
+
+- [Syncfusion.Blazor.WordProcessor](https://www.NuGet.org/packages/Syncfusion.Blazor.WordProcessor)
+- [Syncfusion.Blazor.Themes](https://www.NuGet.org/packages/Syncfusion.Blazor.Themes/)
     
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -70,15 +69,15 @@ cd BlazorWebApp.Client
 
 N> For more information on creating a **Blazor Web App** with various interactive modes and locations, refer to this [link](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code#render-interactive-modes).
 
-### Install DOCX Editor Nuget packages
+### Install DOCX Editor NuGet packages
 
 If you utilize `WebAssembly` or `Auto` render modes in the Blazor Web App, you need to install DOCX Editor NuGet packages within the client project.
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
 * Ensure the terminal is in the project root directory (where the `.csproj` file is located).
 * Run the following command to install 
-    - [Syncfusion.Blazor.WordProcessor](https://www.nuget.org/packages/Syncfusion.Blazor.WordProcessor)
-    - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
+    - [Syncfusion.Blazor.WordProcessor](https://www.NuGet.org/packages/Syncfusion.Blazor.WordProcessor)
+    - [Syncfusion.Blazor.Themes](https://www.NuGet.org/packages/Syncfusion.Blazor.Themes/)
 
 {% tabs %}
 
@@ -118,7 +117,7 @@ Add the following import statement to the **`~/_Imports.razor`** file:
 
 ### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Services
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **`Program.cs`** file of your Blazor Web App.
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **`Program.cs`** file of your Blazor Web App. Place the registration after the host builder is created and before `await builder.Build().RunAsync();`.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
@@ -127,8 +126,11 @@ Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in 
 
 using Syncfusion.Blazor;
 
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
+
 // Register Syncfusion Blazor services along with other service registrations
 builder.Services.AddSyncfusionBlazor();
+await builder.Build().RunAsync();
 
 // Other code Snippet
 
