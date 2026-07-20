@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Group form fields in the Blazor SfPdfViewer component | Syncfusion
-description: Learn how to group PDF form fields in the Syncfusion Blazor SfPdfViewer by assigning the same name to multiple widgets.
+description: Learn how to group PDF form fields in the Blazor SfPdfViewer by assigning the same name to multiple widgets.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,43 +9,39 @@ documentation: ug
 
 # Group form fields in Blazor SfPdfViewer
 
-The **Syncfusion Blazor SfPdfViewer** allows grouping multiple form fields into a single logical field by assigning the same `Name` to them. Grouped form fields share their values and states automatically based on the field type. Use the Form Designer UI for manual grouping or the Form Designer APIs for programmatic grouping to keep related fields synchronized across the document.
-- [How form field grouping works](#how-grouping-works)
-- [Field behavior based on type](#field-behavior-by-type)
-- [How to group form fields using the UI](#group-using-the-form-designer-ui)
-- [How to group form fields programmatically](#group-pdf-form-fields-programmatically)
-- [Related references and samples](#example-scenarios)
+The Blazor `SfPdfViewer` allows grouping multiple form fields into a single logical field by assigning the same `Name` to them. Grouped form fields share their values and states automatically based on the field type. Use the Form Designer UI for manual grouping or the Form Designer APIs for programmatic grouping to keep related fields synchronized across the document.
 
-## How grouping works
-
-In a PDF form, multiple widgets can represent the same logical form field. When widgets share the same `Name`, they are treated as a group and remain synchronized.
+- [Field behavior by type](#field-behavior-by-type)
+- [Group form fields using the UI](#group-using-the-form-designer-ui)
+- [Group form fields programmatically](#group-pdf-form-fields-programmatically)
 
 ## Field behavior by type
 
-- **Textbox and Password** — Text entered in one widget appears in all widgets with the same name.  
-- **CheckBox** — Checking one widget sets the checked state for all checkboxes with the same name.  
-- **RadioButton** — Widgets with the same name form a radio group; only one option can be selected.  
-- **ListBox and DropDown** — The selected value is shared across widgets with the same name.  
-- **Signature and Initial fields** — Applied signature/initial is mirrored across grouped widgets.
+- **Textbox and Password**: Text entered in one widget appears in all widgets with the same name.  
+- **CheckBox**: Checking one widget sets the checked state for all checkboxes with the same name.  
+- **RadioButton**: Widgets with the same name form a radio group; only one option can be selected.  
+- **ListBox and DropDown**: The selected value is shared across widgets with the same name.  
+- **Signature field**: Applied signature/initial is mirrored across grouped widgets.
 
 N> Form field grouping is controlled by the `Name` property. The position of each widget is determined by its `Bounds`; grouping is independent of location.
 
 ## Group using the Form Designer UI
 
 **Steps**
-1. Enable the [Form Designer toolbar](../toolbar-customization/form-designer-toolbar).
+1. Enable the [Form Designer toolbar](../toolbar/form-designer-toolbar).
 2. Add the form fields you want to group.
-3. Select a form field, open **Properties**, and set the **Name** value.
-4. Assign the same **Name** to all PDF Form Field that belong to the group.
+3. Right-click a form field and open **Properties**, then set the **Name** value.
+4. Repeat for each field in the group, assigning the same **Name** to all PDF form fields that belong to the group.
 5. Apply the changes and verify that updates in one widget reflect in the others.
+6. To ungroup, rename one of the widgets to a unique **Name**.
 
-![Grouping textboxes with the same name](../../javascript-es6/images/groupTextFileds.png)
+![Grouping textboxes with the same name](./form-designer-images/groupTextFileds.png)
 
-![Grouping radio buttons with the same name](../../javascript-es6/images/groupRadiobutton.png)
+![Grouping radio buttons with the same name](./form-designer-images/groupRadiobutton.png)
 
 ## Group PDF Form Fields Programmatically
 
-You can also group form fields during creation by assigning the same **Name** through code using `AddFormFieldsAsync()`.
+You can group form fields by assigning the same **Name** through code using [`AddFormFieldsAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddFormFieldsAsync_System_Collections_Generic_List_Syncfusion_Blazor_SfPdfViewer_FormFieldInfo__).
 
 ### Example Scenarios
 - Two textboxes named **EmployeeId** share the same value.
@@ -125,7 +121,7 @@ N> For a hands-on reference with working code examples, explore the sample proje
 ## See also
 
 - [Form Designer overview](../overview)
-- [Form Designer Toolbar](../toolbar-customization/form-designer-toolbar)
+- [Form Designer Toolbar](../toolbar/form-designer-toolbar)
 - [Create form fields](./manage-form-fields/create-form-fields)
 - [Modify form fields](./manage-form-fields/modify-form-fields)
 - [Add custom data to form fields](./custom-data)

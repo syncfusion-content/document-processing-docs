@@ -1,5 +1,5 @@
 ---
-title:  Create or Generate PDF document in GCP | Syncfusion
+title: Create or Generate PDF document in GCP | Syncfusion
 description: Learn how to create or generate a PDF file in the Google Cloud Platform (GCP) using Syncfusion .NET Core PDF library without the dependency of Adobe Acrobat.
 platform: document-processing
 control: PDF
@@ -12,11 +12,11 @@ The [.NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-libr
 
 N> If this is your first time working with the Google Cloud Platform (GCP), please refer to the dedicated GCP resources. This section explains how to open and save a PDF document in C# using the .NET Core PDF library in GCP.
 
-## Prerequisites 
+## Prerequisites
 
 * A Google Cloud Platform (GCP) account with access to the App Engine service.
 
-## Google Cloud Platform (GCP)
+## Supported Platforms in GCP
 
 <table>
 <thead>
@@ -27,6 +27,10 @@ NuGet package name<br/></th></tr></thead>
 <tr>
 <td>
 App Engine<br/></td><td>
-{{'[Syncfusion.PDF.Net.Core](https://www.nuget.org/packages/Syncfusion.PDF.Net.Core)' | markdownify}}<br/>
+{{'[Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core)' | markdownify}}<br/>
 </td></tr>
 </table>
+
+## Create a PDF document in App Engine
+
+For a step-by-step walkthrough of creating and deploying an ASP.NET Core Web app that generates a PDF document on Google App Engine, refer to the [Create a PDF document in Google App Engine](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-google-app-engine) documentation.

@@ -26,7 +26,7 @@ Step 3: Install the [Syncfusion.Pdf.AspNet.Mvc5](https://www.nuget.org/packages/
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: A default controller with name `HomeController.cs` gets added on creation of ASP.NET MVC project. Include the following namespaces in that `HomeController.cs` file.
+Step 4: A default controller with name `HomeController.cs` gets added on creation of the ASP.NET MVC project. Include the following namespaces in that `HomeController.cs` file.
  
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -60,7 +60,7 @@ Step 6: Add a new action method named `CreatePDFDocument` in `HomeController.cs`
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-public ActionResult CreateDocument()
+public ActionResult CreatePDFDocument()
 {
     //Create an instance of PdfDocument.
     using (PdfDocument document = new PdfDocument())
@@ -83,7 +83,7 @@ public ActionResult CreateDocument()
 {% endtabs %} 
 
 By executing the program, you will get the PDF document as follows.
-![ASP.Net Core output PDF document](GettingStarted_images/pdf-generation-output.png)
+![ASP.NET MVC output PDF document](GettingStarted_images/pdf-generation-output.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/ASP.NET%20MVC/Creating-a-new-PDF-document).
 

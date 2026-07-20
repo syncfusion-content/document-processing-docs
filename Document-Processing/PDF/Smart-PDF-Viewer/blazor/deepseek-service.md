@@ -27,20 +27,14 @@ Before you begin, ensure you have:
 
 2. **DeepSeek Models**
 
-   For detailed specifications and pricing, visit the [DeepSeek Models Documentation](https://api-docs.deepseek.com/quick_start/pricing).
-
-
----
+   For detailed specifications and pricing, visit the [DeepSeek Models Documentation](https://api-docs.deepseek.com).
 
 ## Getting Started for DeepSeek AI with Smart PDF Viewer
 
-After completing this setup, you can:
+After completing this setup, see [Add Smart PDF Viewer to your Blazor pages](../blazor/getting-started/web-app) to render the component on a page.
 
-1. [Add Smart PDF Viewer to your Blazor pages](../blazor/getting-started/web-app.md)
 
----
-
-## Install the following NuGet packages to your project:
+## Step 1: Install the required NuGet packages
 
 Open the NuGet Package Manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), then search and install the following packages:
 
@@ -48,14 +42,9 @@ Open the NuGet Package Manager in Visual Studio (Tools → NuGet Package Manager
 2. [Microsoft.SemanticKernel](https://www.nuget.org/packages/Microsoft.SemanticKernel).
 3. [Microsoft.SemanticKernel.Connectors.AzureOpenAI](https://www.nuget.org/packages/Microsoft.SemanticKernel.Connectors.AzureOpenAI).
 
-## Step 1: Create a Custom AI Service
+## Step 2: Create a Custom AI Service
 
-To integrate DeepSeek with Syncfusion Smart PDF Viewer, we'll create a custom implementation of the `IChatInferenceService` interface. This interface acts as a bridge between Syncfusion Smart PDF Viewer and your AI service.
-
-The `IChatInferenceService` interface is the bridge between Syncfusion Smart PDF Viewer and AI services:
-
-1. Create a new file named `MyCustomService.cs`
-2. Add the following implementation:
+To integrate DeepSeek with Syncfusion Smart PDF Viewer, create a custom implementation of the `IChatInferenceService` interface, which is the bridge between Syncfusion Smart PDF Viewer and your AI service. Create a new file (e.g., `MyCustomService.cs`) with the implementation shown below:
 
 N> Ensure the project includes required using directives and valid XML documentation tags in custom code implementations.
 
@@ -79,7 +68,7 @@ public class MyCustomService : IChatInferenceService
      /// Also checks and updates token usage.
      /// </summary>
      /// <param name="options">Chat parameters including messages and settings.</param>
-     /// <returns>AI-generated response text.</returns
+     /// <returns>AI-generated response text.</returns>
      public async Task<string> GenerateResponseAsync(ChatParameters options)
      {
          ChatOptions completionRequest = new ChatOptions
@@ -112,7 +101,7 @@ public class MyCustomService : IChatInferenceService
 {% endhighlight %}
 {% endtabs %}
 
-## Step 2: Configure the Blazor App
+## Step 3: Configure the Blazor App
 
 Configure your Blazor application to use the DeepSeek AI service with Syncfusion Smart PDF Viewer. This involves registering necessary services and setting up the dependency injection container.
 
@@ -149,9 +138,9 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Custom%20Services/DeepseekService)
-
-N> Running the DeepSeek service may lead to slower response times due to system resource usage. To accommodate this, configure the Syncfusion Smart PDF Viewer to disable timeout for AI assist view operations by setting the timeout to 0. [Learn more](https://help.syncfusion.com/document-processing/pdf/smart-pdf-viewer/blazor/document-summarizer#timeout)
+N>
+* [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Custom%20Services/DeepseekService)
+* Running the DeepSeek service may lead to slower response times due to system resource usage. To accommodate this, configure the Syncfusion Smart PDF Viewer to disable timeout for AI assist view operations by setting the timeout to 0. [Learn more](https://help.syncfusion.com/document-processing/pdf/smart-pdf-viewer/blazor/document-summarizer#timeout)
 
 ## See also
 

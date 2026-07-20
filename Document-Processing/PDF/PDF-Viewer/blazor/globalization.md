@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization and RTL in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to localize UI text and enable RTL layout in the Syncfusion Blazor SfPdfViewer, including culture setup and API references.
+description: Learn how to localize UI text and enable RTL layout in the Blazor SfPdfViewer, including culture setup and API references.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -18,25 +18,21 @@ N>
 * Ensure the application culture (`CurrentCulture` and `CurrentUICulture`) is set before the component renders for correct resource lookup.
 * Localization applies to the viewer UI only; it does not translate PDF document content.
 
-## Right to Left
+## Right-to-Left (RTL)
 
-To enable right-to-left (RTL) rendering for the viewer UI, set the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableRtl) property to `true`. This mirrors the layout and aligns UI elements for RTL languages such as Arabic, Hebrew, Azerbaijani, Persian, and Urdu. The following code snippet demonstrates how to enable RTL rendering.
-
-When `EnableRtl` is `true`, the component adjusts its layout and appearance to align text, icons, and other elements from right to left, providing an optimized experience for RTL language users.
+Set the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableRtl) property to `true` to mirror the layout and align UI elements for RTL languages such as Arabic, Hebrew, Azerbaijani, Persian, and Urdu.
 
 ```cshtml
-
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfPdfViewer2 Height="100%"
+<SfPdfViewer2 DocumentPath="@DocumentPath"
+              Height="100%"
               Width="100%"
-              DocumentPath="@DocumentPath"
               EnableRtl="true" />
 
 @code {
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
-
 ```
 
 ## See also

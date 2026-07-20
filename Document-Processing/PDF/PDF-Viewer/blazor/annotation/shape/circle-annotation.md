@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Circle Annotation (Shape) in Blazor PDF Viewer | Syncfusion
-description: Learn how to add, edit, delete, and programmatically manage circle annotations in the Syncfusion Blazor SfPdfViewer.
+description: Learn how to add, edit, delete, and programmatically manage circle annotations in the Blazor SfPdfViewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Circle Annotation (Shape) in Blazor SfPdfViewer Component
 
-Circle annotations let users highlight circular regions or draw emphasis bubbles on PDFs for reviews and markups. The Blazor SfPdfViewer allows you to add circles from the toolbar, customize appearance, edit/delete them in the UI, and export them with the document.
+Circle annotations let you highlight circular regions or draw emphasis bubbles on PDFs for reviews and markups. The Blazor SfPdfViewer supports adding circles from the toolbar, customizing their appearance, editing or deleting them in the UI, and exporting them with the document.
 
 ![Circle overview](../../images/blazor-pdfviewer-circle-annot.png)
 
@@ -32,7 +32,7 @@ Circle annotations are available by default in the Blazor SfPdfViewer component 
 
 ## Add Circle Annotation
 
-### Apply Circle Annotation Using the Toolbar
+### Add Circle Annotation Using the Toolbar
 
 Circle annotations can be added from the annotation toolbar:
 
@@ -45,9 +45,9 @@ Circle annotations can be added from the annotation toolbar:
 
 N> When the viewer is in Pan mode and a shape drawing mode is activated, the viewer switches to Text Select mode.
 
-### Enable Circle Mode
+### Enable Circle Annotation Mode
 
-Switch the viewer into circle drawing mode using [SetAnnotationModeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SetAnnotationModeAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationType_).
+Switch the viewer into circle drawing mode using [`SetAnnotationModeAsync(AnnotationType.Circle)`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SetAnnotationModeAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationType_).
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -61,8 +61,8 @@ Switch the viewer into circle drawing mode using [SetAnnotationModeAsync](https:
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
-    public async void OnClick(MouseEventArgs args)
+    private SfPdfViewer2 viewer;
+    private async void OnClick(MouseEventArgs args)
     {
         await viewer.SetAnnotationModeAsync(AnnotationType.Circle);
     }
@@ -70,7 +70,7 @@ Switch the viewer into circle drawing mode using [SetAnnotationModeAsync](https:
 }
 ```
 
-### Add Circle Programmatically
+### Add Circle Annotation Programmatically
 
 Use the [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method to add a circle annotation at a specific location. Ensure the document is loaded and the component reference is available before invoking this method.
 
@@ -82,10 +82,10 @@ Use the [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/Shape_Annotation.pdf";
+    private SfPdfViewer2 viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/Shape_Annotation.pdf";
 
-    public async void AddCircleAsync(MouseEventArgs args)
+    private async void AddCircleAsync(MouseEventArgs args)
     {
         PdfAnnotation annotation = new PdfAnnotation();
         // Set the Circle annotation type
@@ -93,7 +93,8 @@ Use the [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
         // Page numbers start from 0. So, if set to 0 it represents page 1.
         annotation.PageNumber = 0;
 
-        // Bound of the circle annotation
+        // Bound of the circle annotation. The bounding box width and height
+        // define the rendered circle's diameter on the page.
         annotation.Bound = new Bound();
         annotation.Bound.X = 200;
         annotation.Bound.Y = 620;
@@ -101,13 +102,17 @@ Use the [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
         annotation.Bound.Height = 90;
         // Add circle annotation
         await Viewer.AddAnnotationAsync(annotation);
+
+        // Note: The sample file Shape_Annotation.pdf referenced here is shipped
+        // with Syncfusion's Blazor sample browser. Replace it with a PDF that
+        // exists in your wwwroot/Data/ folder.
     }
 }
 ```
 
-## Customize Circle Appearance
+## Customize Circle Annotation Appearance
 
-Configure default circle appearance (fill color, stroke color, thickness, opacity) during control initialization using [CircleSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_CircleSettings). These settings apply when circles are created from the toolbar or programmatically.
+Configure the default circle appearance (fill color, stroke color, thickness, and opacity) during component initialization using the [CircleSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_CircleSettings) property. These settings apply to circles created from the toolbar and programmatically.
 
 ```cshtml
 @using Syncfusion.Blazor.SfPdfViewer
@@ -120,7 +125,7 @@ Configure default circle appearance (fill color, stroke color, thickness, opacit
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
     PdfViewerCircleSettings CircleSettings = new PdfViewerCircleSettings
@@ -133,21 +138,21 @@ Configure default circle appearance (fill color, stroke color, thickness, opacit
 }
 ```
 
-## Manage Circle (Edit, Move, Resize, Delete)
+## Manage Circle Annotation (Edit, Move, Resize, Delete)
 
-### Edit Circle
+### Edit Circle Annotation
 
-#### Edit Circle (UI)
+#### Edit Circle Annotation (UI)
 
 - Select a circle to view resize handles.
 - Drag any side/corner to resize; drag inside the shape to move it.
 - Edit **fill**, **stroke**, **thickness**, and **opacity** using the annotation toolbar.
 
-Use the annotation toolbar tools to modify:
-- **Edit fill Color** tool  
+Use the following annotation toolbar tools to modify:
+- **Edit Fill Color** tool  
 ![Edit fill color](../../images/blazor-pdfviewer-edit-fill-color.png)
 
-- **Edit stroke Color** tool
+- **Edit Stroke Color** tool
 ![Edit stroke color](../../images/blazor-pdfviewer-edit-shape-stroke-color.png)
 
 - **Edit Opacity** slider
@@ -156,7 +161,7 @@ Use the annotation toolbar tools to modify:
 - **Edit Thickness** slider
 ![Edit thickness](../../images/blazor-pdfviewer-shape-thickness.png)
 
-#### Edit Circle Programmatically
+#### Edit Circle Annotation Programmatically
 
 Modify an existing circle annotation programmatically using [EditAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_). Retrieve the target annotation from [GetAnnotationsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_GetAnnotationsAsync) and update the desired properties before submitting the edit.
 
@@ -168,10 +173,10 @@ Modify an existing circle annotation programmatically using [EditAnnotationAsync
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/Shape_Annotation.pdf";
+    private SfPdfViewer2 viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/Shape_Annotation.pdf";
 
-    public async void EditCircleAsync(MouseEventArgs args)
+    private async void EditCircleAsync(MouseEventArgs args)
     {
         // Get annotation collection
         List<PdfAnnotation> annotationCollection = await Viewer.GetAnnotationsAsync();
@@ -191,7 +196,7 @@ Modify an existing circle annotation programmatically using [EditAnnotationAsync
 }
 ```
 
-### Delete Circle
+### Delete Circle Annotation
 
 The PDF Viewer supports deleting existing annotations through the UI and API.
 See [**Delete Annotation**](../delete-annotation) for full behavior and workflows.
@@ -212,10 +217,10 @@ Set properties for individual circle annotations by passing values directly duri
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/Shape_Annotation.pdf";
+    private SfPdfViewer2 viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/Shape_Annotation.pdf";
 
-    public async void AddMultipleCirclesAsync(MouseEventArgs args)
+    private async void AddMultipleCirclesAsync(MouseEventArgs args)
     {
         // Circle 1
         PdfAnnotation annotation1 = new PdfAnnotation();
@@ -258,9 +263,23 @@ Set properties for individual circle annotations by passing values directly duri
 
 ## Disable Circle Annotation
 
-Disable circle annotations programmatically or through component settings as needed by your application requirements.
+Disable circle annotations (along with all other shape annotations, such as Line, Arrow, Rectangle, and Polygon) using the [`EnableShapeAnnotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableShapeAnnotation) property.
 
-## Handle Circle Events
+```cshtml
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfPdfViewer2 DocumentPath="@DocumentPath"
+              EnableShapeAnnotation="false"
+              Width="100%"
+              Height="100%">
+</SfPdfViewer2>
+
+@code {
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+}
+```
+
+## Handle Circle Annotation Events
 
 The PDF viewer provides annotation life-cycle events that notify when Circle annotations are added, modified, selected, or removed.
 For the full list of available events and their descriptions, see [**Annotation Events**](../events)
@@ -269,7 +288,7 @@ For the full list of available events and their descriptions, see [**Annotation 
 
 The PDF Viewer supports exporting and importing annotations. For details on supported formats and workflows, see [**Export and Import annotations**](../import-export-annotation).
 
-## See Also
+## See also
 
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
 - [Comments Panel](../comments)

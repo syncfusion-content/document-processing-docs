@@ -23,13 +23,13 @@ Check out the following video to learn how to get started with the Blazor Smart 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 * [Azure OpenAI Account](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal)
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart PDF Viewer component is compatible with both `OpenAI` and `Azure OpenAI`, and supports Server interactivity mode apps.
+N> Blazor Smart PDF Viewer component is compatible with both `OpenAI` and `Azure OpenAI`, and supports Server interactivity mode apps.
 
 ## Create a new Blazor Web App in Visual Studio
 
 Create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart PDF Viewer and Themes NuGet in the App
+## Install Blazor Smart PDF Viewer and Themes NuGet in the App
 
 To add the **Blazor Smart PDF Viewer** component, open the NuGet Package Manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search for and install [Syncfusion.Blazor.SfSmartPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfSmartPdfViewer) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
@@ -55,7 +55,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 * [Azure OpenAI Account](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal)
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart PDF Viewer component is compatible with both `OpenAI` and `Azure OpenAI`, and supports Server interactivity mode apps. Azure OpenAI is required only for AI-assisted features.
+N> Blazor Smart PDF Viewer component is compatible with both `OpenAI` and `Azure OpenAI`, and supports Server interactivity mode apps. Azure OpenAI is required only for AI-assisted features.
 
 ## Create a new Blazor Web App in Visual Studio Code
 
@@ -76,7 +76,7 @@ cd BlazorWebApp
 
 N> For more information on creating a Blazor Web App with various interactive modes and locations, refer to this [guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code#render-interactive-modes).
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart PDF Viewer and Themes NuGet in the App
+## Install Blazor Smart PDF Viewer and Themes NuGet in the App
 
 When using the `Server` render mode in a Blazor Web App, install the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component packages in the server project where the components execute.
 
@@ -127,7 +127,7 @@ cd BlazorWebApp
 {% endhighlight %}
 {% endtabs %}
 
-## Install Syncfusion® Blazor SfPdfViewer and Themes NuGet in the App
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SfSmartPdfViewer and Themes NuGet in the App
 
 * Open a command prompt, terminal, or shell.
 * Ensure you’re in the project root directory where your `.csproj` file is located (or the Client project if applicable).
@@ -201,7 +201,7 @@ In **Visual Studio**, Go to Tools → NuGet Package Manager → Package Manager 
 
 Install-Package Azure.AI.OpenAI
 Install-Package Microsoft.Extensions.AI
-Install-Package Microsoft.Extensions.AI.OpenAI -Version 9.8.0-preview.1.25412.6
+Install-Package Microsoft.Extensions.AI.OpenAI
 
 {% endhighlight %}
 {% endtabs %}
@@ -209,11 +209,11 @@ Install-Package Microsoft.Extensions.AI.OpenAI -Version 9.8.0-preview.1.25412.6
 In **Visual Studio Code**, open the terminal in VS Code and run the following commands:
 
 {% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
+{% highlight c# tabtitle="Package Manager" %}
 
 dotnet add package Azure.AI.OpenAI
 dotnet add package Microsoft.Extensions.AI
-dotnet add package Microsoft.Extensions.AI.OpenAI --version 9.8.0-preview.1.25412.6
+dotnet add package Microsoft.Extensions.AI.OpenAI
 
 {% endhighlight %}
 {% endtabs %}
@@ -256,104 +256,9 @@ Here,
 
 For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal); then the values for `apiKey`, `deploymentName`, and `endpoint` will be provided.
 
-## To Configure Ollama for Self-Hosted AI Models
-
-To use Ollama for running self-hosted models:
-
-* **Download and install Ollama**  
-Install the application for your operating system from [Ollama’s official website](https://ollama.com/).
-
-* **Install the desired model from the Ollama library**  
-Explore available models in the [Ollama Library](https://ollama.com/library) (for example, llama2:13b, llama2:7b, mistral:7b).
-
-To download and run a model (for example, llama2:7b), run the following command:
-
-{% tabs %}
-{% highlight bash tabtitle="Command Line" %}
-
-ollama run llama2:7b
-
-{% endhighlight %}
-{% endtabs %}
-
-
-In **Visual Studio**, Go to Tools → NuGet Package Manager → Package Manager Console. Run this command:
-
-{% tabs %}
-{% highlight razor tabtitle="Package Manager" %}
-
-Install-Package OllamaSharp -Version 5.3.6
-
-{% endhighlight %}
-{% endtabs %}
-
-In **Visual Studio Code**, open the terminal in VS Code and run this command:
-
-{% tabs %}
-{% highlight razor tabtitle="Package Manager" %}
-
-dotnet add package OllamaSharp --version 5.3.6
-
-{% endhighlight %}
-{% endtabs %}
-
-Add the ollama namespace to the `Program.cs` file.
-
-{% tabs %}
-{% highlight c# tabtitle="Program.cs" %}
-
-using Microsoft.Extensions.AI;
-using OllamaSharp;
-using Syncfusion.Blazor;
-using Syncfusion.Blazor.AI;
-
-{% endhighlight %}
-{% endtabs %}
-
-Add the following settings to the `~/Program.cs` file in the Blazor Server app.
-
-{% tabs %}
-{% highlight c# tabtitle="Program.cs" %}
-
-// Define the name of the AI model to use from Ollama (e.g., llama2:13b, mistral:7b, etc.)
-string aiModel = "llama2:7b";
-
-// By default, Ollama runs on port 11434, you can also customize this port manually.
-HttpClient httpClient = new HttpClient
-{
-    BaseAddress = new Uri("http://localhost:11434"), // Ollama server address
-    Timeout = Timeout.InfiniteTimeSpan // Supports extended processing time for AI responses
-};
-
-// Initialize the chat client using the Ollama API and the specified model
-IChatClient chatClient = new OllamaApiClient(httpClient, aiModel);
-builder.Services.AddChatClient(chatClient);
-builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
-
-{% endhighlight %}
-{% endtabs %}
-
-N> Running Ollama locally may lead to slower response times due to system resource usage. To accommodate this, the Syncfusion Smart PDF Viewer can disable timeout for AI Assist view operations by setting the timeout to 0. [Learn more](https://help.syncfusion.com/document-processing/pdf/smart-pdf-viewer/blazor/document-summarizer#timeout)
-
-### To Check the Installed Model and Its Details in Ollama
-
-- To verify which models are currently installed and available on the local Ollama server (for example, running on port 11434), run the following command in a terminal or command prompt:
-
-{% tabs %}
-
-{% highlight c# tabtitle="Curl" %}
-
-curl http://localhost:11434/api/tags
-
-{% endhighlight %}
-
-{% endtabs %}
-
 ## Add stylesheet and script resources
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). 
-
-### Add stylesheet resource
 
 Include the stylesheet reference in the `<head>` section in the `~/Components/App.razor` file.
 
@@ -365,9 +270,6 @@ Include the stylesheet reference in the `<head>` section in the `~/Components/Ap
 
 {% endhighlight %}
 {% endtabs %}
-
-
-### Add script resource
 
 Add script reference at the end of the `<body>` in the `~/Components/App.razor` file as shown below.
 
@@ -382,9 +284,9 @@ Add script reference at the end of the `<body>` in the `~/Components/App.razor` 
 
 N> Review the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in a Blazor application. Also see [Adding script reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) for different approaches to include scripts.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart PDF Viewer component
+## Add Blazor Smart PDF Viewer component
 
-N> If the interactivity location is set to Global and the render mode is set to Auto, WebAssembly, or Server, the render mode is configured in the App.razor file by default.
+N> If the interactivity location is set to Global and the render mode is set to Auto, WebAssembly, or Server, the render mode is configured in the `App.razor` file by default.
 
 If the interactivity location is set to Per page/component, define a render mode at the top of the ~Pages/.razor component as follows:
 
@@ -397,7 +299,7 @@ If the interactivity location is set to Per page/component, define a render mode
 {% endhighlight %}
 {% endtabs %}
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart PDF Viewer component in the `~Pages/Home.razor` file.
+Add the Blazor Smart PDF Viewer component in the `~Pages/Home.razor` file.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -409,7 +311,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart PDF Viewer
 {% endhighlight %}
 {% endtabs %}
 
-* Press Ctrl+F5 (Windows) or ⌘+F5 (macOS) to launch the application. This renders the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart PDF Viewer component in the default web browser.
+* Press Ctrl+F5 (Windows) or ⌘+F5 (macOS) to launch the application. This renders the Blazor Smart PDF Viewer component in the default web browser.
 
 ![Blazor Smart PDF Viewer rendering a PDF document](gettingstarted-images/smart-pdf-viewer.png)
 
