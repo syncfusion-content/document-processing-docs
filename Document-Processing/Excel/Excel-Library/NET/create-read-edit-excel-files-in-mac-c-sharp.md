@@ -14,7 +14,7 @@ documentation: UG
 The following steps illustrate creating a simple Invoice-formatted Excel document on Mac OS.
 
 **Prerequisites:**
-- .NET 6.0 SDK or later installed on macOS (refer to the [official installation guide](https://learn.microsoft.com/dotnet/core/install/macos)).
+- .NET 6.0 SDK or later installed on macOS.
 - Visual Studio 2022 for Mac (17.0 or later) or Visual Studio Code with the C# extension.
 - A user account with write permissions to the project directory.
 - The `AdventureCycles-Logo.png` image added to the project and set to **Embedded Resource** (in Visual Studio) or placed in the project output directory (in Visual Studio Code / CLI).
