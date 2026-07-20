@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with TypeScript DOCX Editor | Syncfusion
-description: Learn how to create a DOCX Editor in a TypeScript application using the Syncfusion® Document Editor control to create, edit, and view Word documents.
+description: Learn how to create a DOCX Editor in a TypeScript application using the Syncfusion® Docx Editor control to create, edit, and view Word documents.
 platform: document-processing
 control: Getting started 
 documentation: ug
@@ -28,7 +28,7 @@ Ensure the following tools are installed on your machine:
 * Microsoft Edge (latest version)
 * Safari 13+ (macOS and iOS)
 
-**Note:** The Document Editor requires ES2015 (ES6) support in the browser.
+**Note:** The Docx Editor requires ES2015 (ES6) support in the browser.
 
 ### Register a Syncfusion License (Recommended)
 
@@ -74,11 +74,11 @@ git clone https://github.com/SyncfusionExamples/ej2-quickstart-webpack ej2-quick
 cd ej2-quickstart
 ```
 
-### Install the Syncfusion® Document Editor packages
+### Install the Syncfusion® Docx Editor packages
 
-By default, the `ej2‑quickstart` repository is preconfigured with the [@syncfusion/ej2](https://www.npmjs.com/package/@syncfusion/ej2) package in `~/package.json`. This package installs all Syncfusion Essential JS 2 component packages, including the Document Editor and other EJ2 controls.
+By default, the `ej2‑quickstart` repository is preconfigured with the [@syncfusion/ej2](https://www.npmjs.com/package/@syncfusion/ej2) package in `~/package.json`. This package installs all Syncfusion Essential JS 2 component packages, including the Docx Editor and other EJ2 controls.
  
-To install only the Document Editor component, replace the dependency with [@syncfusion/ej2-documenteditor](https://www.npmjs.com/package/@syncfusion/ej2-documenteditor), as shown below:
+To install only the Docx Editor component, replace the dependency with [@syncfusion/ej2-documenteditor](https://www.npmjs.com/package/@syncfusion/ej2-documenteditor), as shown below:
 
 {% tabs %}
 {% highlight json tabtitle="~/package.json" %}
@@ -106,7 +106,7 @@ This command compiles your TypeScript files and prepares the application for dev
 
 ### Add CSS reference
 
-Add the following Document Editor and dependent component style references to `~/src/styles/styles.css`:
+Add the following Docx Editor and dependent component style references to `~/src/styles/styles.css`:
 
 {% tabs %}
 {% highlight css tabtitle="style.css" %}
@@ -125,9 +125,9 @@ Add the following Document Editor and dependent component style references to `~
 {% endtabs %}
 
 
-### Add the Document Editor component
+### Add the Docx Editor component
 
-Add an HTML `div` element to act as the Document Editor element in the `index.html` file:
+Add an HTML `div` element to act as the Docx Editor element in the `index.html` file:
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -135,16 +135,16 @@ Add an HTML `div` element to act as the Document Editor element in the `index.ht
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Syncfusion TypeScript Document Editor</title>
+    <title>Syncfusion TypeScript Docx Editor</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-    <meta name="description" content="Syncfusion TypeScript Document Editor" />
+    <meta name="description" content="Syncfusion TypeScript Docx Editor" />
     <meta name="author" content="Syncfusion" />
     <link rel="shortcut icon" href="resources/favicon.ico" />
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
-    <!-- Element which will render as Document Editor -->
+    <!-- Element which will render as Docx Editor -->
     <div id="DocumentEditor"></div>
 </body>
 </html>
@@ -152,7 +152,7 @@ Add an HTML `div` element to act as the Document Editor element in the `index.ht
 {% endhighlight %}
 {% endtabs %}
 
-Add a container element for the Document Editor control in the `app.ts` file using the following code.
+Add a container element for the Docx Editor control in the `app.ts` file using the following code.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
@@ -175,7 +175,7 @@ documenteditor.appendTo('#DocumentEditor');
 
 The `serviceUrl` property is set to the demo endpoint (`https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/`). This is for demo and evaluation purposes only. For production environments, host your own web service.
 
-**The Document Editor requires server-side interactions for:**
+**The Docx Editor requires server-side interactions for:**
 
 * Opening file formats other than SFDT (DOC, DOCX, RTF, HTML, etc.)
 * Pasting with formatting
@@ -246,9 +246,9 @@ i ｢wds｣: Content not from webpack is served from .../ej2-quickstart
 
 The development server supports **live reload**. Any changes you make to your TypeScript or CSS files will automatically rebuild and refresh in the browser.
 
-After the application starts and loads in the browser, the TypeScript Document Editor is rendered with a toolbar and an editable document area, as shown below.
+After the application starts and loads in the browser, the TypeScript Docx Editor is rendered with a toolbar and an editable document area, as shown below.
 
-![Output of TypeScript Document Editor](./images/typescript_getting_started.png)
+![Output of TypeScript Docx Editor](./images/typescript_getting_started.png)
 
 **Understanding SFDT Format:**
 
@@ -282,7 +282,7 @@ Example SFDT structure:
 
 To work with other formats (DOCX, PDF, RTF), the service URL must be configured.
 
-You can also explore the Document Editor interactively using the live sample below.
+You can also explore the Docx Editor interactively using the live sample below.
 
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/getting-started-cs2" %}
 
@@ -290,7 +290,7 @@ You can also explore the Document Editor interactively using the live sample bel
 
 ## Online Demo
 
-Explore how to create, edit, and print Word documents using the JavaScript Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/default.html).
+Explore how to create, edit, and print Word documents using the JavaScript Docx Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/default.html).
 
 For detailed information about server-side web services, refer to the [Web Services Overview](./web-services-overview) page.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor WASM DOCX Editor | Syncfusion
-description: Learn how to create a DOCX Editor in a Blazor WASM application using the Syncfusion® Document Editor control to create, edit, and view Word documents.
+description: Learn how to create a DOCX Editor in a Blazor WASM application using the Syncfusion® Docx Editor control to create, edit, and view Word documents.
 platform: document-processing
 control: DocumentEditor
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor DOCX Editor in Blazor WASM
 
-[Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a Blazor WebAssembly (WASM) application. 
+[Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a Blazor WebAssembly (WASM) application. 
 
 
 ## Steps to create a Blazor WASM DOCX Editor
@@ -31,9 +31,9 @@ This section explains how to include the DOCX Editor component in a Blazor WebAs
 
 You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs).
 
-### Install Document Editor Nuget packages
+### Install Docx Editor Nuget packages
 
-To add **Document Editor** component in the application, follow the steps below.
+To add **Docx Editor** component in the application, follow the steps below.
  - Open NuGet Package Manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution).
  - Search and install the following packages
     - [Syncfusion.Blazor.WordProcessor](https://www.nuget.org/packages/Syncfusion.Blazor.WordProcessor)
@@ -80,7 +80,7 @@ cd BlazorApp
 
 {% endtabs %}
 
-### Install Document Editor Nuget packages
+### Install Docx Editor Nuget packages
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
 * Navigate to the project directory created in the previous step.

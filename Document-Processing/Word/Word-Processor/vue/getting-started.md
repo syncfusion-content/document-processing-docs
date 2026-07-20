@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Vue DOCX Editor | Syncfusion
-description: Learn how to create a DOCX Editor in a Vue application using the Syncfusion® Document Editor control to create, edit, and view Word documents.
+description: Learn how to create a DOCX Editor in a Vue application using the Syncfusion® Docx Editor control to create, edit, and view Word documents.
 platform: document-processing
 control: Getting started 
 documentation: ug
@@ -42,11 +42,11 @@ Move into the created project using the following command:
 ```bash
 cd quickstart
 ```
-### Install the Document Editor packages
+### Install the Docx Editor packages
 
-The Document Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-vue-documenteditor).
+The Docx Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-vue-documenteditor).
 
-To install the Document Editor component, use the following command:
+To install the Docx Editor component, use the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-documenteditor --save
@@ -54,7 +54,7 @@ npm install @syncfusion/ej2-vue-documenteditor --save
 
 ### Add CSS reference
 
-Add the following Document Editor and dependent component style references to the `<style>` section of `src/App.vue` file.
+Add the following Docx Editor and dependent component style references to the `<style>` section of `src/App.vue` file.
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
@@ -74,9 +74,9 @@ Add the following Document Editor and dependent component style references to th
 
 N> Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-### Add the Document Editor component
+### Add the Docx Editor component
 
-Modify the `src/App.vue` file to render the Document Editor. Add the Document Editor in the `<template>` section using the `<ejs-documenteditorcontainer>` selector and configure it in the `<script>` section.
+Modify the `src/App.vue` file to render the Docx Editor. Add the Docx Editor in the `<template>` section using the `<ejs-documenteditorcontainer>` selector and configure it in the `<script>` section.
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
@@ -128,25 +128,25 @@ Run the application using the following command:
 npm run serve
 ```
 
-After the application starts, open the localhost URL shown in the terminal. The Document Editor is rendered in the browser with a toolbar and an editable document area, as shown below.
+After the application starts, open the localhost URL shown in the terminal. The Docx Editor is rendered in the browser with a toolbar and an editable document area, as shown below.
 
-![Output of Vue Document Editor](./images/vue_2_getting_started.png)
+![Output of Vue Docx Editor](./images/vue_2_getting_started.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Vue-DOCX-Editor-Examples/tree/master/getting-started/vue_2).
 
 ## Online Demo
 
-Explore how to create, edit, and print Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/material3/document-editor/default.html).
+Explore how to create, edit, and print Word documents using the Vue Docx Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/material3/document-editor/default.html).
 
 ## Video tutorial
 
-To get started quickly with the Document Editor component using CLI, you can check the video below.
+To get started quickly with the Docx Editor component using CLI, you can check the video below.
 
 {% youtube "https://www.youtube.com/watch?v=UbmGFUXtzYg" %}
 
 ## Server-side dependencies
 
-The Document Editor component requires server-side interactions for the following operations:
+The Docx Editor component requires server-side interactions for the following operations:
 
 * Open file formats other than SFDT
 * Paste with formatting
