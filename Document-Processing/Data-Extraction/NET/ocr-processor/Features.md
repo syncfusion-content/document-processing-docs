@@ -85,7 +85,7 @@ You can downloaded a complete working sample from [GitHub](https://github.com/Sy
 
 ## Performing OCR for a region of the document
 
-To perform OCR on a particular region or several regions of a PDF page with the help of [PageRegion](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.html) class in [OCRSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html), refer to the following code sample. 
+To perform OCR on a particular region or several regions of a PDF page with the help of the [PageRegion](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.PageRegion.html) class in [OCRSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html), refer to the following code sample.
 
 {% tabs %} 
 
@@ -213,6 +213,8 @@ You can downloaded a complete working sample from [GitHub](https://github.com/Sy
 
 The [TesseractVersion](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_TesseractVersion) property is used to switch the tesseract version to 5.0. By default, OCR will be performed with tesseract version 5.0.
 
+N> The default `TesseractVersion` is `Version5_0` on all supported platforms. You only need to set this property if you want to use a different version (4.0, 3.05, or 3.02). The `TesseractVersion` property is not available on ASP.NET Core / .NET (cross-platform) for Tesseract 3.05 and 3.02 — only 4.0 and 5.0 are supported there.
+
 The following code sample explains the OCR processor with Tesseract version 5.0 for PDF documents.
  
 {% tabs %} 
@@ -298,7 +300,7 @@ End Using
 
 ## Performing OCR with Tesseract Version 4.0
 
-The [TesseractVersion](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_TesseractVersion) property is used to switch the tesseract version to 4.0. By default, OCR will be performed with tesseract version 5.0.
+The [TesseractVersion](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_TesseractVersion) property is used to switch the tesseract version to 4.0. The default version is 5.0; see [Performing OCR with Tesseract Version 5.0](#performing-ocr-with-tesseract-version-50) for the default-version note.
 
 The following code sample explains the OCR processor with Tesseract version 4.0 for PDF documents.
  
@@ -385,7 +387,7 @@ End Using
 
 ## Performing OCR with tesseract version 3.05
 
-The [TesseractVersion](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_TesseractVersion) property is used to switch the tesseract version between 3.02 and 3.05. By default, OCR works with tesseract version 5.0.
+The [TesseractVersion](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_TesseractVersion) property is used to switch the tesseract version between 3.02 and 3.05. The default version is 5.0; see [Performing OCR with Tesseract Version 5.0](#performing-ocr-with-tesseract-version-50).
 
 N> The starting supported version of tesseract in ASP.NET Core is 4.0. So the lower tesseract versions 3.02 and 3.05 are not supported and we don't have the property called ``TesseractVersion`` in ASP.NET Core platform.
 
@@ -621,8 +623,9 @@ using (OCRProcessor processor = new OCRProcessor())
     PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
     //Set OCR language.
     processor.Settings.Language = Languages.English;
-    //Perform OCR with input document, tessdata (Language packs) and enable isMemoryOptimized property.
-    processor.PerformOCR(document);
+    //Perform OCR with input document, tessdata (Language packs) and enable the isMemoryOptimized property.
+    // The third argument (isMemoryOptimized) must be true to enable memory optimization.
+    processor.PerformOCR(document, @"TessData\", true);
 
     //Save the PDF document.
     document.Save("Output.pdf");
@@ -834,7 +837,9 @@ End Using
 
 ## Layout result from OCR
 
-You can get the OCRed text and its bounds from a scanned PDF document by using the [OCRLayoutResult](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRLayoutResult.html) Class. Refer to the following code sample. 
+You can get the OCRed text and its bounds from a scanned PDF document by using the [OCRLayoutResult](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRLayoutResult.html) class. The `OCRLayoutResult` exposes a `Pages` collection, where each entry contains the [OCRLineCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRLineCollection.html) of detected [Line](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.Line.html) objects. Each `Line` provides the `Text` and the bounding `Rectangle`.
+
+Refer to the following code sample.
  
 {% tabs %} 
 
@@ -1482,9 +1487,9 @@ End Using
 
 N> The OCR Engine Mode is supported only in the Tesseract version 4.0 and above.
 
-## Performing OCR with different OCR Image Enhancement Mode
+## Performing OCR with Built-in Image Enhancement Modes
 
-The `ImageEnhancementMode` property is used to set the OCR image enhancement modes. By default, OCR works with the `EnhanceForRecognitionOnly` image enhancement mode. Kindly refer to the following code example to perform OCR with different OCR image enhancement segmentation mode.
+The `ImageEnhancementMode` property selects the built-in image enhancement pipeline that Syncfusion runs internally before OCR. By default, OCR uses the `EnhanceForRecognitionOnly` mode. To switch to a different mode, change the enum value in the `processor.ImageEnhancementMode` assignment — for example, set it to `OcrImageEnhancementMode.EnhanceAndIncludeInOutput` to also write the enhanced image to the output PDF, or to `OcrImageEnhancementMode.None` to disable enhancement entirely.
 
 The following table describes the available OCR image enhancement modes and their respective purposes.
 
@@ -1587,9 +1592,11 @@ End Using
 {% endhighlight %}
 {% endtabs %} 
 
-## Performing OCR with different OCR Image Enhancement options
+## Performing OCR with Built-in Image Enhancement Options
 
-The `ImageEnhancementMode` property is used to set the OCR image enhancement mode. Refer to the following code example to perform OCR with different image enhancement options.
+The `OcrImageEnhancementOptions` class lets you fine-tune Syncfusion's built-in image enhancement pipeline by enabling individual preprocessing steps (grayscale, deskew, denoise, contrast, binarize, and so on). These options are independent of the `ImageEnhancementMode` enum described above and are applied whenever the built-in pipeline is active.
+
+Refer to the following code example to perform OCR with different image enhancement options.
 
 The following table describes the available OCR image enhancement options and their respective purposes.
 
@@ -1615,7 +1622,7 @@ IsDenoiseEnabled<br/><br/></td><td>
 Removes speckles and artifacts that can interfere with character recognition.<br/><br/></td></tr>
 <tr>
 <td>
-IsConstrastEnabled<br/><br/></td><td>
+IsContrastEnabled<br/><br/></td><td>
 Enhances text visibility against the background.<br/><br/></td></tr>
 <tr>
 <td>
@@ -1642,6 +1649,8 @@ using (OCRProcessor processor = new OCRProcessor())
     OcrImageEnhancementOptions options = new OcrImageEnhancementOptions();
     // Enable grayscale conversion to improve OCR accuracy by reducing color noise.
     options.IsGrayscaleEnabled = true;
+    // Assign the options to the OCR processor so the settings take effect.
+    processor.ImageEnhancementOptions = options;
     // Perform OCR with input document and tessdata (Language packs)
     processor.PerformOCR(document);
     // Save the processed PDF document
@@ -1668,6 +1677,8 @@ using (OCRProcessor processor = new OCRProcessor())
     OcrImageEnhancementOptions options = new OcrImageEnhancementOptions();
     // Enable grayscale conversion to improve OCR accuracy by reducing color noise.
     options.IsGrayscaleEnabled = true;
+    // Assign the options to the OCR processor so the settings take effect.
+    processor.ImageEnhancementOptions = options;
     // Perform OCR with input document and tessdata (Language packs)
     processor.PerformOCR(document);
     // Save the processed PDF document
@@ -1693,6 +1704,8 @@ Using processor As New OCRProcessor()
     Dim options As New OcrImageEnhancementOptions()
     ' Enable grayscale conversion to improve OCR accuracy by reducing color noise.
     options.IsGrayscaleEnabled = True
+    ' Assign the options to the OCR processor so the settings take effect.
+    processor.ImageEnhancementOptions = options
     ' Perform OCR on the input document using tessdata (language packs).
     processor.PerformOCR(document)
     ' Save the processed PDF document.
@@ -1706,7 +1719,9 @@ End Using
 
 ## White List
 
-The [WhiteList](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_WhiteList) property specifies a list of characters that the OCR engine is only allowed to recognize. If a character is not on the white list, it will not be included in the output OCR results. For more information, refer to the following code sample. 
+The [WhiteList](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_WhiteList) property specifies a list of characters that the OCR engine is only allowed to recognize. If a character is not on the white list, it will not be included in the output OCR results.
+
+For more information, refer to the following code sample. 
 
 {% tabs %}
 
@@ -1800,7 +1815,9 @@ End Using
 
 ## Black List
 
-The [BlackList](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_BlackList) property specifies the characters that exclude from the character set used for recognition and the OCR will not return any of the characters you are specified in the list. For more information, refer to the following code sample.
+The [BlackList](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_BlackList) property specifies the characters to exclude from the character set used for recognition. The OCR engine will not return any of the characters specified in the list.
+
+For more information, refer to the following code sample.
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -1894,7 +1911,7 @@ End Using
 
 ## OCR an Image to PDF
 
-You can perform OCR on an image and convert it to a searchable PDF document. It is also possible to specify the conformance level through [PdfConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfConformanceLevel.html) Enum to the output PDF document using OCR processor settings. 
+You can perform OCR on an image and convert it to a searchable PDF document. It is also possible to specify the conformance level through [PdfConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfConformanceLevel.html) Enum to the output PDF document using OCR processor settings.
 
 N> This PDF conformance option only applies for image OCR to PDF documents.
 
@@ -2057,9 +2074,9 @@ For more details regarding quality improvement, refer to the following link.
 
 **You can set the different performance level to the OCRProcessor using [Performance](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.Performance.html) enumeration.**
 
-* Rapid - high speed OCR performance and provide normal OCR accuracy.
+* Rapid - high speed OCR performance and provides normal OCR accuracy.
 * Fast - provides moderate OCR processing speed and accuracy.
-* Slow - Slow OCR performance and provide best OCR accuracy.
+* Slow - Slow OCR performance and provides best OCR accuracy.
 
 Refer to the following code sample to set the performance of the OCR.
 
@@ -2180,7 +2197,7 @@ End Using
 
 ## Get image rotation angle from OCR processor
 
-To get the Image rotation angle, you can rotate the image with 4 angles (0,90,180, and 360) from the OCR Processor. This feature works in multiple Images and multiple pages. The following code sample illustrates support for the Image Rotation angle from the OCR Processor.
+To get the Image rotation angle, you can rotate the image with 4 angles (0, 90, 180, and 360) from the OCR Processor. This feature works in multiple Images and multiple pages. The following code sample illustrates support for the Image Rotation angle from the OCR Processor.
 
 {% tabs %}  
 
@@ -2189,15 +2206,14 @@ To get the Image rotation angle, you can rotate the image with 4 angles (0,90,18
 using Syncfusion.OCRProcessor;
 using Syncfusion.Pdf.Parsing;
 
-//Initialize the OCR processor.
+//Initialize the OCR processor with the tesseract binaries path.
 using (OCRProcessor processor = new OCRProcessor())
 {
     //Load an existing PDF document.
     PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
     //Set the OCR language.
     processor.Settings.Language = Languages.English;
-    //Set the Unicode font to preserve the Unicode characters in a PDF document.
-    processor.TesseractPath = @"D:\Tesseractbinaries_core\Windows\x64";
+    //Perform OCR and capture the layout result.
     processor.PerformOCR(document, 0, 0, @"D:\tessdata", out OCRLayoutResult result);
     float angle = 0;
     if (result != null)
@@ -2229,8 +2245,7 @@ using (OCRProcessor processor = new OCRProcessor())
     PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
     //Set the OCR language.
     processor.Settings.Language = Languages.English;
-    //Set the Unicode font to preserve the Unicode characters in a PDF document.
-    processor.TesseractPath = @"D:\Tesseractbinaries_core\Windows\x64";
+    //Perform OCR and capture the layout result.
     processor.PerformOCR(document, 0, 0, @"D:\tessdata", out OCRLayoutResult result);
     float angle = 0;
     if (result != null)
@@ -2260,25 +2275,23 @@ Using processor As OCRProcessor = New OCRProcessor()
     'Load an existing PDF document.. 
     Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf");
     'Set the OCR language.
-    processor.Settings.Language = Languages.English;
-    'Set the Unicode font to preserve the Unicode characters in a PDF document.
-    processor.TesseractPath = @"D:\Tesseractbinaries_core\Windows\x64";
+    processor.Settings.Language = Languages.English;   
     processor.PerformOCR(document, 0, 0, @"D:\tessdata", out OCRLayoutResult result);
     float angle = 0;
     If result IsNot Nothing Then
-    For Each page As var In result.Pages
-        angle = page.ImageRotation
-        If angle = 180 Then
-            document.Pages(0).Rotation = PdfPageRotateAngle.RotateAngle180
-        End If
-    Next
-	End If  
-    'Create file stream.
-     Using outputFileStream As FileStream = New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        'Save the PDF document to file stream.
+        For Each page As Object In result.Pages
+            angle = page.ImageRotation
+            If angle = 180 Then
+                document.Pages(0).Rotation = PdfPageRotateAngle.RotateAngle180
+            End If
+        Next
+    End If
+    'Create file stream
+    Using outputFileStream As FileStream = New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
+        'Save the PDF document to file stream
         document.Save(outputFileStream)
     End Using
-	'Close the document.
+    'Close the document
     document.Close(True)
 End Using
 
@@ -2288,9 +2301,15 @@ End Using
 
 You can downloaded a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/OCR/.NET/Get-image-rotation-angle-from-OCR).
 
-## Image Enhancement in OCR Processor library
+## Performing OCR with a Custom Image Processor
 
-We have support to improve the image quality while performing OCR for an image or PDF document. In this process, we can enhance the image quality by using binarization, grayscale, and resolution enhancement methods with third-party libraries. Please refer to the code snippet below.
+For full control over image preprocessing, Syncfusion's OCR Processor lets you plug in your **own** image enhancement implementation via the `OCRProcessor.ImageProcessor` property. This bypasses the built-in pipeline and is intended when you need to integrate image-processing algorithms from a third-party library of your choice.
+
+This is different from the [Built-in Image Enhancement Modes](#performing-ocr-with-built-in-image-enhancement-modes) and [Built-in Image Enhancement Options](#performing-ocr-with-built-in-image-enhancement-options) sections above, which cover the Syncfusion-provided pipeline.
+
+N> Install the `SixLabors.ImageSharp` NuGet package and the `Syncfusion.ImagePreProcessor.Base` (or `Syncfusion.ImagePreProcessor.Portable`) assembly before using the `ImageProcessor` class. Refer to the [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/ocr-processor/net/assemblies-required) page for the platform-specific package name.
+
+Please refer to the code snippet below.
 
 {% tabs %}  
 
@@ -2370,7 +2389,7 @@ End Using
 
 {% endtabs %}  
 
-N> Note: In this sample, we are using the SixLabors.ImageSharp library to improve the image quality. You can any image processing library as per your requirement.
+N> Note: In this sample, we are using the `SixLabors.ImageSharp` library to improve the image quality. You can use any image processing library as per your requirement.
 
 You can downloaded a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/OCR/.NET/Perform-OCR-ImageEnhancement).
 
@@ -2592,9 +2611,11 @@ The below code example illustrates how to perform OCR on Multi-frame TIFF images
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
 using Syncfusion.OCRProcessor;
+using System;
+using System.IO;
+using System.Text;
 using System.Drawing;
 using System.Drawing.Imaging;
-using System.Text;
 
 string filePath = "multipage_tiff_example.tif";
 
@@ -2747,3 +2768,5 @@ File.WriteAllText("Output.txt", output.ToString())
 {% endtabs %}  
 
 You can downloaded a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/OCR/.NET/Perform-OCR-on-tiff-image).
+
+For common errors and resolutions (missing tessdata, native DLL load failures, unsupported modes, garbage OCR output, etc.), see the dedicated [Troubleshooting](https://help.syncfusion.com/document-processing/pdf/ocr-processor/net/troubleshooting) page.
