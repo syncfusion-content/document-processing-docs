@@ -76,10 +76,10 @@ The following assembly references are required to use the **SfRichTextBoxAdv** c
 
 {% endtabcontents %}
 
-N> A valid Syncfusion&reg; license key is required from **v16.2.0.41 (2018 Vol 2)** onwards.
-N> * The required `Syncfusion.Licensing` assembly is installed automatically as a NuGet dependency — no separate reference is needed.
-N> * If you are using the **Assemblies** installation, you must add a reference to `Syncfusion.Licensing.dll` in your project.
-N> *  Register the license key in the `App` constructor of `App.xaml.cs` before any Syncfusion control is initialized. For the exact `RegisterLicense` code, refer to [Register Syncfusion® License key in a WPF application](https://help.syncfusion.com/common/essential-studio/licensing/how-to-register-in-an-application#wpf).
+N> 1. A valid Syncfusion&reg; license key is required from **v16.2.0.41 (2018 Vol 2)** onwards.
+N> 2. The required `Syncfusion.Licensing` assembly is installed automatically as a NuGet dependency — no separate reference is needed.
+N> 3. If you are using the **Assemblies** installation, you must add a reference to `Syncfusion.Licensing.dll` in your project.
+N> 4. Register the license key in the `App` constructor of `App.xaml.cs` before any Syncfusion control is initialized. For the exact `RegisterLicense` code, refer to [Register Syncfusion® License key in a WPF application](https://help.syncfusion.com/common/essential-studio/licensing/how-to-register-in-an-application#wpf).
 
 ### Add SfRichTextBoxAdv control
 
