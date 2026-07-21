@@ -1,4 +1,4 @@
----
+﻿---
 title: Create, read, edit Excel files in AWS Elastic Beanstalk | Syncfusion
 description: This page explains how to create, read, and edit Excel files in AWS Elastic Beanstalk using the .NET Excel Library.
 platform: document-processing
@@ -8,7 +8,16 @@ documentation: UG
 
 # Create, read, and edit Excel files in AWS Elastic Beanstalk
 
-Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) can be used to create, read, edit Excel files. This library supports manipulating Excel documents in AWS Elastic Beanstalk.
+Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) that can be used to create, read, and edit Excel files. This library supports manipulating Excel documents in AWS Elastic Beanstalk.
+
+## Prerequisites
+
+Before you begin, ensure the following:
+
+* An active **AWS account** with permissions to create Elastic Beanstalk applications, environments, and S3 buckets. If you do not have one, see [Create an AWS account](https://aws.amazon.com/free/).
+* **AWS CLI** installed and configured with your credentials â€” see [AWS CLI quick start](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-quickstart.html).
+* **Visual Studio 2022** with the **AWS Toolkit for Visual Studio** extension installed (required for the **Publish to AWS Elastic Beanstalk** menu option) â€” see [AWS Toolkit for Visual Studio](https://aws.amazon.com/visualstudio/).
+* A **Syncfusion license key**. Register it in `Program.cs` (see the snippet in Step 2a below) or store it in an **Elastic Beanstalk environment property** (for example, `SYNCFUSION_LICENSE_KEY`) and load it via `Environment.GetEnvironmentVariable` â€” see the [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 ## Steps to create an Excel document in AWS Elastic Beanstalk
 
@@ -22,17 +31,29 @@ Step 2: Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/S
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
+Step 2a: Register your Syncfusion license key in **Program.cs** (before `app.Run()`). Replace the placeholder with your actual key.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+{% endhighlight %}
+{% endtabs %}
+
+For production deployments to Elastic Beanstalk, store the key in an **environment property** (for example, `SYNCFUSION_LICENSE_KEY`) and read it via `Environment.GetEnvironmentVariable` so the key is not committed to source control.
+
 Step 3: Include the following namespaces in the **HomeController.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.XlsIO;
+using Syncfusion.Drawing;
+using System.IO;
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 4: A default action method named Index will be present in HomeController.cs. Right click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
+Step 4: A default action method named `Index` is present in **HomeController.cs**. Right-click the `Index` method and select **Go To View** to open the associated view page **Index.cshtml**.
 
 Step 5: Add a new button in the **Index.cshtml** as shown below.
 
@@ -52,7 +73,20 @@ Step 5: Add a new button in the **Index.cshtml** as shown below.
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Add a new action method **CreateExcelDocument** in HomeController.cs and include the below code snippet to **create an Excel document** and download it.
+Step 6: Add a new action method **CreateExcelDocument** in **HomeController.cs** and include the following code snippet to **create an Excel document** and download it.
+
+N> The code below assumes the following action method signature. Place the body inside the `CreateExcelDocument` method:
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+public FileContentResult CreateExcelDocument()
+{
+    // ... place the snippet below inside this method ...
+}
+{% endhighlight %}
+{% endtabs %}
+
+N> The image file (`AdventureCycles-Logo.png`) is read from the working directory. On AWS Elastic Beanstalk, the working directory is typically `/var/app/current/`. Add the file to the project's root or `wwwroot/` (set **Copy to Output Directory** to **Copy if newer**) so it is included in the deployment package.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -66,9 +100,11 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     IWorkbook workbook = application.Workbooks.Create(1);
     IWorksheet worksheet = workbook.Worksheets[0];
     
-    //Adding a picture
-    FileStream imageStream = new FileStream("AdventureCycles-Logo.png", FileMode.Open, FileAccess.Read);
-    IPictureShape shape = worksheet.Pictures.AddPicture(1, 1, imageStream, 20, 20);
+    //Adding a picture (wrap in using for proper disposal)
+    using (FileStream imageStream = new FileStream("AdventureCycles-Logo.png", FileMode.Open, FileAccess.Read))
+    {
+        IPictureShape shape = worksheet.Pictures.AddPicture(1, 1, imageStream, 20, 20);
+    }
     
     //Disable gridlines in the worksheet
     worksheet.IsGridLinesVisible = false;
@@ -244,12 +280,13 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 ## Steps to publish as AWS Elastic Beanstalk
 
 Step 1: Right-click the project and select **Publish to AWS Elastic Beanstalk (Legacy)** option.
+
 ![Right-click the project and select the Publish option](AWS_Images/Elastic_Beanstalk_Images/Elastic_Beanstalk_img3.png)
 
 Step 2: Select the **Deployment Target** as **Create a new application environment** and click **Next** button.
 ![Deployment Target in AWS Ealastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Elastic_Beanstalk_img4.png)
 
-Step 3: Choose the **Environment Name** in the dropdown list and the **URL** will be automatically assign and check the URL is available, if available click next otherwise change the **URL**. 
+Step 3: Choose the **Environment Name** from the dropdown list; the **URL** is automatically assigned. Check that the URL is available. If available, click **Next**; otherwise, change the **URL** and try again. 
 ![Application Environment in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Elastic_Beanstalk_img5.png)
 
 Step 4: Select the instance type in **t3a.micro** from the dropdown list and click next.
@@ -276,9 +313,20 @@ By executing the program, you will get the **Excel document** as follows.
 
 ![Output File](AWS_Images/Elastic_Beanstalk_Images/Elastic_Beanstalk_img12.png)
 
-## Read and Edit Excel file  
+## Read and Edit an Excel File
 
-The below code snippet illustrates how to read and edit an Excel file in AWS Elastic Beanstalk.
+The following code snippet illustrates how to read and edit an Excel file in AWS Elastic Beanstalk.
+
+The snippet below assumes the following action method signature. Place the body inside the `ReadAndEditExcel` method:
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+public FileContentResult ReadAndEditExcel()
+{
+    // ... place the snippet below inside this method ...
+}
+{% endhighlight %}
+{% endtabs %}
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -290,7 +338,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     //Assigns default application version
     application.DefaultVersion = ExcelVersion.Xlsx;
 
-    //A existing workbook is opened.             
+    //A existing workbook is opened.
     IWorkbook workbook = application.Workbooks.Open("Data/InputTemplate.xlsx");
 
     //Access first worksheet from the workbook.
@@ -298,19 +346,22 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
     //Set Text in cell A3.
     worksheet.Range["A3"].Text = "Hello World";
-    //Saving the Excel to the MemoryStream 
-    MemoryStream stream = new MemoryStream();
-    workbook.SaveAs(stream);
 
-    //Set the position as '0'.
-    stream.Position = 0;
+    //Saving the Excel to the MemoryStream (wrap in using for proper disposal)
+    using (MemoryStream stream = new MemoryStream())
+    {
+        workbook.SaveAs(stream);
 
-    //Download Excel document in the browser.
-    return File(stream.ToArray(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "Sample.xlsx");
+        //Set the position as '0'.
+        stream.Position = 0;
+
+        //Download Excel document in the browser.
+        return File(stream.ToArray(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "Sample.xlsx");
+    }
 }
 
 {% endhighlight %}
-{% endtabs %} 
+{% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/AWS/AWS%20Elastic%20Beanstalk/EditExcel).
 

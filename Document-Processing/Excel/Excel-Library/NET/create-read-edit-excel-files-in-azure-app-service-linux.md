@@ -1,4 +1,4 @@
----
+﻿---
 title: Create, read, edit Excel in Azure App Service on Linux | Syncfusion
 description: Explains how to create, read, and edit Excel files in Azure App Service on Linux using Syncfusion XlsIO.
 platform: document-processing
@@ -7,11 +7,20 @@ documentation: UG
 ---
 # Create, read, and edit Excel files in Azure App Service on Linux
 
-[.NET Excel Library for ASP.NET Core platform](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) can be used to create, read, edit Excel files in Azure App Service on Linux.
+[.NET Excel Library for ASP.NET Core platform](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) can be used to create, read, and edit Excel files in Azure App Service on Linux.
+
+## Prerequisites
+
+Before you begin, ensure the following:
+
+* An active **Azure subscription**. If you do not have one, see [Create an Azure account](https://azure.microsoft.com/free/).
+* **Visual Studio 2022** with the **ASP.NET and web development** and **Azure development** workloads installed.
+* A **Syncfusion license key**. Register it in `Program.cs` (see the snippet in Step 4a below) or via the `SyncfusionLicense.txt` file. In Azure App Service on Linux, the recommended approach is to store the key in an environment variable or application setting and load it at startup â€” see the [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
+
 
 ## Create a simple Excel report
 
-The below steps illustrates creating a simple Invoice formatted Excel document in Azure App Service Linux.
+The steps below illustrate creating a simple invoice-formatted Excel document in Azure App Service on Linux.
 
 Step 1: Create a new ASP.NET Core Web Application (Model-View-Controller).
 
@@ -21,15 +30,25 @@ Step 2: Name the project.
 
 ![Name the project](Azure-Images/App-Service-Linux/Name_the_Application_CreateExcel.png)
 
-Step 3: Select the framework and click **Create** button.
+Step 3: Select the framework and click the **Create** button.
 
 ![Framework version](Azure-Images/App-Service-Linux/Select_Framework.png)
 
-Step 4: Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org).
+Step 4: Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package as a reference to your .NET Standard application from [NuGet.org](https://www.nuget.org).
 
-![Install Syncfusion.XlsIO.Net.Core Nuget Package](Azure-Images/App-Service-Linux/Install_NuGet_CreateExcel.png)
+![Install Syncfusion.XlsIO.Net.Core NuGet Package](Azure-Images/App-Service-Linux/Install_NuGet_CreateExcel.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components.
+
+Step 4a: Register your Syncfusion license key in **Program.cs** (before `app.Run()`). Replace the placeholder with your actual key.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+{% endhighlight %}
+{% endtabs %}
+
+For production deployments to Azure App Service on Linux, store the key in an **App Service Application Setting** (for example, `SYNCFUSION_LICENSE_KEY`) and read it via `Environment.GetEnvironmentVariable` so the key is not committed to source control.
 
 Step 5: Include the following namespaces in **HomeController.cs**.
 {% capture codesnippet1 %}
@@ -49,6 +68,21 @@ Imports Syncfusion.Drawing
 {% endcapture %}
 {{ codesnippet1 | OrderList_Indent_Level_1 }}
 
+Step 5a: Inject `IWebHostEnvironment` into `HomeController` so the logo file path can be resolved at runtime. Add a constructor parameter and a private field:
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+private readonly IWebHostEnvironment _hostingEnvironment;
+
+public HomeController(IWebHostEnvironment hostingEnvironment)
+{
+    _hostingEnvironment = hostingEnvironment;
+}
+{% endhighlight %}
+{% endtabs %}
+
+The code below uses `_hostingEnvironment.WebRootPath` to resolve the logo path; if you prefer a different name, adjust the field accordingly.
+
 Step 6: Add a new button in the **Index.cshtml** as shown below.
 {% capture codesnippet2 %}
 {% tabs %}  
@@ -66,7 +100,7 @@ Step 6: Add a new button in the **Index.cshtml** as shown below.
 {% endcapture %}
 {{ codesnippet2 | OrderList_Indent_Level_1 }}
 
-Step 7: Include the below code snippet in **HomeController.cs** to **create an Excel file and download it**.
+Step 7: Add the following code snippet in **HomeController.cs** (the body of the CreateDocument action) to **create an Excel file and download it**.
 {% capture codesnippet3 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
@@ -79,10 +113,12 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Create a workbook
   IWorkbook workbook = application.Workbooks.Create(1);
   IWorksheet worksheet = workbook.Worksheets[0];
-  
-  //Adding a picture
-  FileStream imageStream = new FileStream("AdventureCycles-Logo.png", FileMode.Open, FileAccess.Read);
-  IPictureShape shape = worksheet.Pictures.AddPicture(1, 1, imageStream, 20, 20);
+
+  //Adding a picture (place AdventureCycles-Logo.png in wwwroot/ and resolve via IWebHostEnvironment.WebRootPath)
+  using (FileStream imageStream = new FileStream(Path.Combine(_hostingEnvironment.WebRootPath, "AdventureCycles-Logo.png"), FileMode.Open, FileAccess.Read))
+  {
+    IPictureShape shape = worksheet.Pictures.AddPicture(1, 1, imageStream, 20, 20);
+  }
   
   //Disable gridlines in the worksheet
   worksheet.IsGridLinesVisible = false;
@@ -249,7 +285,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   stream.Position = 0;
   
   //Download the Excel file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/excel");  
+  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");  
   fileStreamResult.FileDownloadName = "Output.xlsx";  
   return fileStreamResult;
 }
@@ -435,7 +471,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   stream.Position = 0
   
   'Download the Excel file in the browser
-  Dim fileStreamResult As FileStreamResult = New FileStreamResult(stream, "application/excel")
+  Dim fileStreamResult As FileStreamResult = New FileStreamResult(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
   fileStreamResult.FileDownloadName = "Output.xlsx"
   Return fileStreamResult
 End Using
@@ -444,11 +480,11 @@ End Using
 {% endcapture %}
 {{ codesnippet3 | OrderList_Indent_Level_1 }}
 
-## Steps to publish as Azure App Service on Linux
+## Steps to publish to Azure App Service on Linux
 
 Step 1: Right-click the project and select **Publish** option.
 
-![Publish](Azure_Images/App_Service_Windows/Publish_CreateExcel.png)
+![Publish](Azure-Images/App-Service-Windows/Publish_CreateExcel.png)
 
 Step 2: Select the publish target as **Azure**.
 
@@ -478,33 +514,36 @@ Step 8: Click the **Publish** button.
 
 ![Start publish](Azure-Images/App-Service-Linux/Start_Publish_CreateExcel.png)
 
-Step 9: Now, Publish has been succeeded.
+Step 9: The publish operation has succeeded.
 
 ![Publish has been succeeded](Azure-Images/App-Service-Linux/Publish_Success_CreateExcel.png)    
 
-Step 10: Now, the published webpage will open in the browser.
+Step 10: The published web page opens in the browser.
 
 ![Browser will open after publish](Azure-Images/App-Service-Linux/CreateDocument_Button_CreateExcel.png) 
 
-Step 11: Click **Create Document** to create a simple Excel document. You will get the output Excel document as follows.
+Step 11: Click **Create Document** to create a simple Excel document. The output Excel document is shown below.
 
 ![Output File](Azure-Images/App-Service-Linux/CreateExcel_AppService_Linux.png)
 
 A complete working example of how to create an Excel file in Azure App Service on Linux in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/ASP.NET%20Core/Create%20Excel).
 
-## Read and Edit Excel file
+## Read and Edit an Excel File
 
-The below code snippet illustrates how to read and edit an Excel file in Azure App Service on Linux.
+The following code snippet illustrates how to read and edit an Excel file in Azure App Service on Linux.
+
+Step 1: Add a sample Excel file named `Sample.xlsx` to the **`wwwroot/`** folder of the project (right-click **wwwroot** -> **Add** -> **New Item** -> **Excel Workbook**, or drag-and-drop the file). Set its **Build Action** to **Content** and **Copy to Output Directory** to **Copy if newer** so it is deployed with the App Service.
+
+N> The `application.Workbooks.Open("Sample.xlsx")` call below resolves the path relative to the app's content root. In Azure App Service on Linux, files under `wwwroot/` are served from `wwwroot/`, so the relative path works as long as the file is deployed. Alternatively, you can resolve the path via `Path.Combine(_hostingEnvironment.WebRootPath, "Sample.xlsx")` as shown in the Create section.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
-//New instance of ExcelEngine is created 
-//Equivalent to launching Microsoft Excel with no workbooks open
-//Instantiate the spreadsheet creation engine
-ExcelEngine excelEngine = new ExcelEngine();
-
-//Instantiate the Excel application object
-IApplication application = excelEngine.Excel;
+//New instance of ExcelEngine is created.
+//Equivalent to launching Microsoft Excel with no workbooks open.
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  //Instantiate the Excel application object
+  IApplication application = excelEngine.Excel;
 
 //Assigns default application version
 application.DefaultVersion = ExcelVersion.Xlsx;
@@ -522,7 +561,7 @@ worksheet.Range["A3"].Text ="Hello World";
 var value = worksheet.Range["A1"].Value;
 
 //Defining the ContentType for excel file.
-string ContentType = "Application/msexcel";
+string ContentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
 
 //Define the file name.
 string fileName = "Output.xlsx";
@@ -535,18 +574,14 @@ workbook.SaveAs(stream);
 
 stream.Position = 0;
 
-//Closing the workbook.
-workbook.Close();
-
-//Dispose the Excel engine
-excelEngine.Dispose();
-
+//The ExcelEngine is disposed automatically by the using block above.
 //Creates a FileContentResult object by using the file contents, content type, and file name.
 return File(stream, ContentType, fileName);
+}
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example of how to read and edit an Excel file in Azure App Service on sLinux in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/ASP.NET%20Core/Create%20Excel).
+A complete working example of how to read and edit an Excel file in Azure App Service on Linux in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/ASP.NET%20Core/Create%20Excel).
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 

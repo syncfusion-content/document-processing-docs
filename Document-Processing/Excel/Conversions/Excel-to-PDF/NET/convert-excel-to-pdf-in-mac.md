@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Convert an Excel document to PDF on Mac
 
-Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to PDF on Mac**.
+Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) used to create, read, edit, and convert Excel documents programmatically, without Microsoft Excel or interop dependencies.
 
 ## Steps to convert an Excel document to PDF on Mac
 
@@ -22,7 +22,7 @@ Step 2: Name the project.
 
 ![Name the project](Mac_images/MacOS_images_img2.png)
 
-Step 3: Select the framework and click **Create** button.
+Step 3: Select the framework and click **Create**.
 
 ![Framework version](Mac_images/MacOS_images_img3.png)
 
@@ -30,9 +30,12 @@ Step 4: Install the [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/pa
 
 ![Install Syncfusion.XlsIORenderer.Net.Core NuGet Package](Mac_images/MacOS_images_img4.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must also add the `Syncfusion.Licensing` reference and register a license key. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn how to register the Syncfusion<sup>&reg;</sup> license key. The simplest approach is to add the following call at the top of **Program.cs** before constructing the `ExcelEngine`:
+> ```csharp
+> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+> ```
 
-Step 5: Include the following Namespaces in the Program.cs file.
+Step 5: Add the following namespaces in **Program.cs**.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 using Syncfusion.XlsIO;
@@ -49,10 +52,10 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
 
-    //Load existing Excel file
-	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/Sample.xlsx"));
+    // Load the existing Excel file.
+    IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath("Data/Sample.xlsx"));
 
-    //Convert to PDF
+    // Convert the Excel document to a PDF document.
     XlsIORenderer renderer = new XlsIORenderer();
     PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
 
@@ -68,14 +71,14 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 {% tabcontent Visual Studio Code %}
 
-Step 1: Create a new C# .NET Core console application.
-![Create .NET Core console project in Visual Studio Code](Mac_images/MacOS_images_img5.png)
+Step 1: Create a new **Console App** project.
+![Create a .NET console project in Visual Studio Code](Mac_images/MacOS_images_img5.png)
 
 Step 2: Name the project and create the project.
 
 ![Name the project](Mac_images/MacOS_images_img6.png)
 
-Alternatively, create a ASP.NET Core console application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+Alternatively, create a .NET console application using the following command in the terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 ```
 dotnet new console -o Convert-Excel-to-PDF
@@ -89,9 +92,12 @@ Step 3: To **Convert an Excel document to PDF in .NET Core app**,run the followi
 dotnet add package Syncfusion.XlsIORenderer.Net.Core
 ```
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must also add the `Syncfusion.Licensing` reference and register a license key. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn how to register the Syncfusion<sup>&reg;</sup> license key. The simplest approach is to add the following call at the top of **Program.cs** before constructing the `ExcelEngine`:
+> ```csharp
+> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+> ```
 
-Step 4: Include the following Namespaces in the Program.cs file.
+Step 4: Add the following namespaces in **Program.cs**.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 using Syncfusion.XlsIO;
@@ -100,7 +106,7 @@ using Syncfusion.Pdf;
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Add the following code snippet in Program.cs file.
+Step 5: Add the following code in **Program.cs**. Create a `Data/Sample.xlsx` file in the project root (or set its **Copy to Output Directory** property to **Copy if newer**), and ensure an `Output/` directory exists for the converted PDF.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
@@ -108,10 +114,10 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
 
-    //Load existing Excel file
-	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/Sample.xlsx"));
+    // Load the existing Excel file.
+    IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath("Data/Sample.xlsx"));
 
-    //Convert to PDF
+    // Convert the Excel document to a PDF document.
     XlsIORenderer renderer = new XlsIORenderer();
     PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
 
@@ -129,7 +135,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 A complete working example of how to convert an Excel document to PDF on Mac is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Mac/Convert%20Excel%20to%20PDF).
 
-By executing the program, you will get the **PDF document** as follows.
+By executing the program, you will get the **PDF document** as shown below.
 
 ![Output File](ASP-NET-Core_images\ASP-NET-Core_images_img9.png)
 
