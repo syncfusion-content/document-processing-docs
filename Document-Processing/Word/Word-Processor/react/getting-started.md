@@ -46,7 +46,7 @@ npm install @syncfusion/ej2-react-documenteditor --save
 Before initializing the React DOCX Editor control, generate a Syncfusion license key and register it in your application.
 
 - [Generate a Syncfusion License Key](https://help.syncfusion.com/document-processing/licensing/how-to-generate)
-- [Register a Syncfusion License Key in React](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#reactjs)
+- [Register a Syncfusion License Key in React](https://ej2.syncfusion.com/react/documentation/licensing/license-key-registration)
 
 ## Import the required CSS styles
 
