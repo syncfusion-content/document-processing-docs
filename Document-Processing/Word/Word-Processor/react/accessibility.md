@@ -14,7 +14,7 @@ The accessibility compliance for the [React DOCX Editor](https://www.syncfusion.
 
 For keyboard accessibility, the Document Editor supports a range of [keyboard shortcuts](./keyboard-shortcut) for navigation and editing without a mouse, including tab navigation, cursor movement, and shortcut key combinations for common editing actions such as copy, paste, undo, and redo.
 
-The following accessibility compliance summary applies to the `@syncfusion/ej2-react-documenteditor` package. For the latest validated version, refer to the [release notes](https://ej2.syncfusion.com/react/documentation/release-notes).
+The following accessibility compliance summary applies to the `@syncfusion/ej2-react-documenteditor` package.
 
 | Accessibility Criteria | Conformance | Compatibility |
 | -- | -- | -- |
