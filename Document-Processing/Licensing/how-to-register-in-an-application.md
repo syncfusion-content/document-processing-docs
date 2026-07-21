@@ -11,9 +11,29 @@ documentation: ug
 
 The generated license key is just a string that needs to be registered before any Syncfusion<sup>&reg;</sup> control is initiated. The following code is used to register the license.
 
+**Registering a single license key**
+
 {% tabs %}
 {% highlight c# %}
 Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+{% endhighlight %}
+{% endtabs %}
+
+**Registering multiple license keys**
+
+You can register multiple license keys using either a comma (,) or a semicolon (;) as the separator between keys.
+
+{% tabs %}
+{% highlight c# %}
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY_1,YOUR LICENSE KEY_2,...");
+{% endhighlight %}
+{% endtabs %}
+
+or
+
+{% tabs %}
+{% highlight c# %}
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY_1;YOUR LICENSE KEY_2;...");
 {% endhighlight %}
 {% endtabs %}
 
@@ -22,11 +42,11 @@ N> * Place the license key between double quotes.  Also, ensure that Syncfusion.
 
 I> Syncfusion<sup>&reg;</sup> license keys can be validated during the Continuous Integration (CI) processes to ensure proper licensing and prevent licensing errors during deployment. Refer to the [CI License Validation](https://help.syncfusion.com/document-processing/licensing/licensing-faq/ci-license-validation) section for detailed instructions on how to implement it.
 
-Recommended place to register the license in the various platforms controls (ASP.NET Core, Xamarin, etc.) Which included in Document Processing platforms is covered in the following section.
+Recommended place to register the license in the various platform controls (ASP.NET Core, Xamarin, etc.) included in Document Processing platforms is covered in the following section.
 
 ## Windows Forms
 
-Register the licensing code in static void main method before calling **Application.Run()** method in C#. In Visual Basic, register the licensing code in **Application.designer.vb** file constructor.
+Register the licensing code in the `Main` method before calling **Application.Run()** in C#. In Visual Basic, register the licensing code in the **Application.Designer.vb** file constructor.
 
 {% tabs %}
 {% highlight c# %}
@@ -79,7 +99,7 @@ End Sub
 
 {% endtabs %}
 
-## ASP.NET	
+## ASP.NET
 
 Register the license key in Application_Start method of **Global.asax.cs/Global.asax**
 
@@ -143,7 +163,7 @@ End Sub
 
 ## ASP.NET Core
 
-Register the license key in Configure method of **Startup.cs**
+Register the license key in the `Configure` method of **Startup.cs**
 
 {% tabs %}
 {% highlight c# %}
@@ -211,14 +231,14 @@ public App()
 {% endhighlight %}
 {% endtabs %}
 
-N> If you are developing an application using Gorilla Player SDK, it is must to register the Syncfusion<sup>&reg;</sup> license key in Xamarin.Forms.Android, Xamarin.Forms.iOS, and Xamarin.Forms.UWP.
+N> If you are developing an application using Gorilla Player SDK, you must register the Syncfusion<sup>&reg;</sup> license key in Xamarin.Forms.Android, Xamarin.Forms.iOS, and Xamarin.Forms.UWP.
    Refer [this link](https://help.syncfusion.com/xamarin/licensing/how-to-register-in-an-application#xamarinformsandroid) to register Syncfusion<sup>&reg;</sup> license key in Xamarin.Forms.Android
    Refer [this link](https://help.syncfusion.com/xamarin/licensing/how-to-register-in-an-application#xamarinformsios) to register Syncfusion<sup>&reg;</sup> license key in Xamarin.Forms.iOS
    Refer [this link](https://help.syncfusion.com/xamarin/licensing/how-to-register-in-an-application#xamarinformsuwp) to register Syncfusion<sup>&reg;</sup> license key in Xamarin.Forms.UWP
 
 
 
-If you are using **Prism Framework** in your application, register the license key before InitializeComponent in OnInitialized method of **App.Xaml.cs**
+If you are using **Prism Framework** in your application, register the license key before InitializeComponent in the `OnInitialized` method of **App.xaml.cs**.
 
 {% tabs %}
 {% highlight c# %}

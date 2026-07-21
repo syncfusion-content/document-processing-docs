@@ -10,7 +10,7 @@ documentation: UG
 
 Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in ASP.NET MVC**.
 
-## Steps to create Word document programmatically:
+## Steps to create a Word document programmatically:
 
 {% tabcontents %}
 
@@ -19,7 +19,7 @@ Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Word libra
 **Prerequisites:**
 
 * Visual Studio 2022.
-* Install **.NET desktop development** workload with necessary .NET Framework SDK.
+* Install **.NET desktop development** workload with .NET Framework 4.5.1 or later SDK.
 
 Step 1: Create a new ASP.NET Web application project.
 
@@ -33,9 +33,9 @@ Step 3: Install the [Syncfusion.DocIO.AspNet.Mvc5](https://www.nuget.org/package
 
 ![Install DocIO ASP.NET MVC NuGet package](ASP-NET-MVC_images/Install_Nuget.jpg)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. To do so, also install the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) NuGet package and register the license key by calling `Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")` in your application startup. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn how to register the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: Include the following namespace in that HomeController.cs file.
+Step 4: Include the following namespaces in the HomeController.cs file.
 
 {% tabs %}
 
@@ -45,6 +45,7 @@ using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 using System.IO;
 using System.Drawing;
+using System.Web;
 
 {% endhighlight %}
 
@@ -52,7 +53,7 @@ using System.Drawing;
 
 Step 5: A default action method named **Index** will be present in HomeController.cs. Right click on this action method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
 
-Step 6: Add a new button in the Index.cshtml as shown below.
+Step 6: Add a new button to Index.cshtml, as shown below.
 
 {% tabs %}
 
@@ -71,7 +72,7 @@ Html.EndForm();
 
 {% endtabs %}
 
-Step 7: Add a new action method **CreateDocument** in HomeController.cs and include the below code snippet to **create Word document** and download it.
+Step 7: Add a new action method **CreateDocument** in HomeController.cs and include the below code snippet to **create a Word document** and download it.
 
 {% tabs %}
 
@@ -293,6 +294,8 @@ document.Save("Sample.docx", FormatType.Docx, HttpContext.ApplicationInstance.Re
 
 {% endtabs %}
 
+N> The code references image files (`AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, and `Road-550-W.jpg`). Place these images in the project's working directory (e.g., the project root or `bin` folder), or use `Server.MapPath` to resolve their absolute paths. You can also obtain these images from the [GitHub sample](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/ASP.NET-MVC).
+
 Step 8: Build the project.
 
 Click on Build → Build Solution or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
@@ -305,7 +308,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 By executing the program, you will get the Word document as follows.
 
-![ASP.Net MVC output Word document](ASP-NET-MVC_images/GettingStartedOutput.jpg)
+![ASP.NET MVC output Word document](ASP-NET-MVC_images/GettingStartedOutput.jpg)
 
 {% endtabcontent %}
 
@@ -314,9 +317,9 @@ By executing the program, you will get the Word document as follows.
 **Prerequisites:**
 
 * JetBrains Rider.
-* Install .NET Framework Developer Pack.
+* Install .NET Framework 4.5.1 or later Developer Pack.
 
-Step 1. Open JetBrains Rider and create a new ASP.NET MVC web application project.
+Step 1: Open JetBrains Rider and create a new ASP.NET MVC web application project.
 * Launch JetBrains Rider.
 * Click **New Solution** on the welcome screen.
 
@@ -326,7 +329,7 @@ Step 1. Open JetBrains Rider and create a new ASP.NET MVC web application projec
 * Enter a project name and specify the location.
 * Select the target framework as Full Framework and choose the desired version.
 * Select **Template** as **Web App**.
-* Click create.
+* Click Create.
 
 ![Creating a new ASP.NET MVC web application in JetBrains Rider](ASP-NET-MVC_images/Create-MVC-sample.png)
 
@@ -342,9 +345,9 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 ![Install the Syncfusion.DocIO.AspNet.Mvc5 NuGet package](ASP-NET-MVC_images/Install-Syncfusion.DocIO.AspNet.Mvc5-NuGet.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. To do so, also install the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) NuGet package and register the license key by calling `Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")` in your application startup. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn how to register the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 3: Include the following namespace in that HomeController.cs file.
+Step 3: Include the following namespaces in the HomeController.cs file.
 
 {% tabs %}
 
@@ -354,6 +357,7 @@ using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 using System.IO;
 using System.Drawing;
+using System.Web;
 
 {% endhighlight %}
 
@@ -361,7 +365,7 @@ using System.Drawing;
 
 Step 4: A default action method named **Index** will be present in HomeController.cs. Right click on this action method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
 
-Step 5: Add a new button in the Index.cshtml as shown below.
+Step 5: Add a new button to Index.cshtml, as shown below.
 
 {% tabs %}
 
@@ -380,7 +384,7 @@ Html.EndForm();
 
 {% endtabs %}
 
-Step 6: Add a new action method **CreateDocument** in HomeController.cs and include the below code snippet to **create Word document** and download it.
+Step 6: Add a new action method **CreateDocument** in HomeController.cs and include the below code snippet to **create a Word document** and download it.
 
 {% tabs %}
 
@@ -602,6 +606,8 @@ document.Save("Sample.docx", FormatType.Docx, HttpContext.ApplicationInstance.Re
 
 {% endtabs %}
 
+N> The code references image files (`AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, and `Road-550-W.jpg`). Place these images in the project's working directory (e.g., the project root or `bin` folder), or use `Server.MapPath` to resolve their absolute paths. You can also obtain these images from the [GitHub sample](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/ASP.NET-MVC).
+
 Step 7: Build the project.
 
 Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
@@ -614,7 +620,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 By executing the program, you will get the Word document as follows.
 
-![ASP.Net MVC output Word document](ASP-NET-MVC_images/GettingStartedOutput.jpg)
+![ASP.NET MVC output Word document](ASP-NET-MVC_images/GettingStartedOutput.jpg)
 
 {% endtabcontent %}
 

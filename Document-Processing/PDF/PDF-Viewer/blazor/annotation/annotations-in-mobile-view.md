@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotations in Mobile View using SfPdfViewer Component | Syncfusion
-description: Learn how to add, edit, and manage annotations in the mobile view of the Syncfusion Blazor SfPdfViewer component
+description: Learn how to add, edit, and manage annotations in the mobile view of the Blazor SfPdfViewer component
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -157,7 +157,7 @@ To close the comments panel, tap the **Close** icon within the panel.
 
 ![Comments panel displayed in Blazor SfPdfViewer](../images/open-comments-panel.png)
 
-## See Also
+## See also
 
 * [Annotation Toolbar in Mobile Mode](../toolbar-customization/mobile-toolbar)
 * [Customize Annotations](../customize-annotation)

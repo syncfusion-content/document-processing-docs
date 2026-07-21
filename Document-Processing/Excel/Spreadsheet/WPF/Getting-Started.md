@@ -9,7 +9,7 @@ documentation: ug
 ---
 
 # Getting Started with WPF Spreadsheet (SfSpreadsheet)
-This section briefly explains how to include the [WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor) component in WPF App using Visual Studio.
+This section briefly explains how to include the [WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor) component in a WPF application using Visual Studio.
 
 ## Prerequisites
 * [System requirements for WPF components](https://help.syncfusion.com/wpf/system-requirements)
@@ -20,7 +20,7 @@ You can create a **WPF Application** using Visual Studio via [Microsoft Template
 
 ## Assemblies Deployment
 
-To add a WPF spreadsheet component to your application by installing it via NuGet packages(Recommended) or by manually adding the required assemblies to the project.
+To add a WPF spreadsheet component to your application, install it via NuGet packages (Recommended) or manually add the required assemblies to the project.
 
 {% tabcontents %}
 
@@ -28,7 +28,7 @@ To add a WPF spreadsheet component to your application by installing it via NuGe
 
 ### Install Syncfusion<sup style="font-size:70%">&reg;</sup> WPF Spreadsheet NuGet packages
 
-To add **WPF Spreadsheet** component in the application, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install:
+To add the **WPF Spreadsheet** component to the application, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for and install:
 
 •	[Syncfusion.SfSpreadsheet.WPF](https://www.nuget.org/packages/Syncfusion.SfSpreadsheet.WPF)
 
@@ -42,7 +42,7 @@ To ensure the control is styled correctly, install the theme package:
 
 ### Add Syncfusion® WPF Spreadsheet Assemblies
 
-Below table describes, list of assemblies required to be added in project when the WPF Spreadsheet control is used in your application.
+The table below lists the assemblies required to be added to the project when the WPF Spreadsheet control is used in your application. All assemblies in this table are required.
 
 <table>
 <tr>
@@ -52,37 +52,38 @@ Description</th></tr>
 <tr>
 <td>
 Syncfusion.SfCellGrid.WPF.dll</td><td>
-Contains the base and fundamental classes which holds the underlying architecture for displaying cells with virtualized behavior and selection/interaction of cells.</td></tr>
+Contains the base and fundamental classes that hold the underlying architecture for displaying cells with virtualized behavior and cell selection/interaction.</td></tr>
 <tr>
 <td>
 Syncfusion.SfGridCommon.WPF.dll</td><td>
-Contains the classes which holds the properties and functions of scroll viewer and disposable elements</td></tr>
+Contains the classes that hold the properties and functions of the scroll viewer and disposable elements.</td></tr>
 <tr>
 <td>
 Syncfusion.SfSpreadsheet.WPF.dll</td><td>
-Contains the classes  that handles all the UI Operations of SfSpreadsheet such as importing of sheets, applying formulas/styles etc.</td></tr>
+Contains the classes that handle all the UI operations of SfSpreadsheet, such as importing sheets and applying formulas/styles.</td></tr>
 <tr>
 <td>
 Syncfusion.Shared.WPF.dll</td><td>
-Contains the classes which holds the controls like Color pickers,Chromeless window, ComboBoxAdv, DateTimeEdit etc.</td></tr>
+Contains the classes that hold controls like Color pickers, Chromeless window, ComboBoxAdv, DateTimeEdit, etc.</td></tr>
 <tr>
 <td>
 Syncfusion.Tools.WPF.dll</td><td>
-Contains the classes which holds the controls like TabControlExt, TabItemExt, Gallery, GroupBar, TabSplitter etc which are used in SfSpreadsheet</td></tr>
+Contains the classes that hold controls like TabControlExt, TabItemExt, Gallery, GroupBar, and TabSplitter, which are used in SfSpreadsheet.</td></tr>
 <tr>
 <td>
 Syncfusion.XlsIO.Base.dll</td><td>
-Contains the base classes which is responsible for read and write in Excel files, Worksheet Manipulations, Formula calculations etc.</td></tr>
+Contains the base classes that are responsible for reading and writing Excel files, worksheet manipulations, and formula calculations.</td></tr>
 </table>
 
 Below are the additional DLLs required for applying themes and skinning to the SfSpreadsheet control:
 
-<table> <tr> <th>Assembly</th> <th>Description</th> </tr> <tr> <td>Syncfusion.Themes.Windows11Light.WPF.dll</td> <td>Contains the Windows 11 Light theme style for Syncfusion WPF controls.</td> </tr> <tr> <td>Syncfusion.SfSkinManager.WPF.dll</td> <td>Contains the SfSkinManager which helps to apply different themes to Syncfusion WPF controls.</td> </tr> </table>
+<table> <tr> <th>Assembly</th> <th>Description</th> </tr> <tr> <td>Syncfusion.Themes.Windows11Light.WPF.dll</td> <td>Contains the Windows 11 Light theme style for Syncfusion WPF controls.</td> </tr> <tr> <td>Syncfusion.SfSkinManager.WPF.dll</td> <td>Contains the SfSkinManager that helps to apply different themes to Syncfusion WPF controls.</td> </tr> </table>
 
-N> You need to add these references to your project to use the skinning and theming capabilities of the SfSpreadsheet.
+N> Add these references to your project to use the skinning and theming capabilities of the SfSpreadsheet.
 
+### Optional Assemblies
 
-Below are the assemblies list that can be added when you want to enable certain features in SfSpreadsheet control. 
+The following optional assemblies enable additional features in the SfSpreadsheet control. Add only those required by your scenario. Each optional assembly is also available as a NuGet package with the same base name (for example, `Syncfusion.SfSpreadsheetHelper.WPF`).
 
 <table>
 <tr>
@@ -92,19 +93,19 @@ Description</th></tr>
 <tr>
 <td>
 Syncfusion.SfSpreadsheetHelper.WPF.dll</td><td>
-Contains the classes which is responsible for importing charts and sparklines into SfSpreadsheet.</td></tr>
+Contains the classes that are responsible for importing charts and sparklines into SfSpreadsheet.</td></tr>
 <tr>
 <td>
 Syncfusion.ExcelChartToImageConverter.WPF.dll</td><td>
-Contains the classes which is responsible for converting charts as image.</td></tr>
+Contains the classes that are responsible for converting charts as images.</td></tr>
 <tr>
 <td>
 Syncfusion.SfChart.WPF.dll</td><td>
-Contains the classes which is responsible for importing charts like Line charts, Pie charts, Sparklines etc.</td></tr>
+Contains the classes that are responsible for importing charts such as Line, Pie, Column, and Bar charts. Sparklines are handled by <code>Syncfusion.SfSpreadsheetHelper.WPF</code>, not by this assembly.</td></tr>
 <tr>
 <td>
 Syncfusion.ExcelToPDFConverter.Base.dll</td><td>
-Contains the base and fundamental classes which is responsible for converting excel to PDF.</td></tr>
+Contains the base and fundamental classes that are responsible for converting Excel to PDF.</td></tr>
 <tr>
 <td>
 Syncfusion.Pdf.Base.dll</td><td>
@@ -123,11 +124,11 @@ WPF Spreadsheet control can be added to an application either through the design
  
 {% tabcontent Via Designer %}
 
-1. Add the theme and the [SfSkinManager](https://help.syncfusion.com/cr/wpf/Syncfusion.SfSkinManager.html) namespace to style the control correctly. Then, include the SfSkinManager namespace in the XAML code and apply the desired theme.
+1. Add the theme and the [SfSkinManager](https://help.syncfusion.com/cr/wpf/Syncfusion.SfSkinManager.html) namespace to style the control correctly. Include the SfSkinManager namespace in the XAML code and apply the desired theme.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainWindow.xaml" %}
-<Window x:Class="Namespace.MainWindow"
+<Window x:Class="YourNamespace.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:syncfusionskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
@@ -137,11 +138,11 @@ WPF Spreadsheet control can be added to an application either through the design
 {% endhighlight %}
 {% endtabs %}
 
-2. Open the Visual Studio **Tool** **box**. Navigate to Syncfusion<sup>®</sup> Controls tab, and find the  SfSpreadsheet/SfSpreadsheetRibbon toolbox items.
+2. Open the Visual Studio **Toolbox**. Navigate to the Syncfusion<sup>®</sup> Controls tab and find the `SfSpreadsheet` and `SfSpreadsheetRibbon` toolbox items. (If the Syncfusion tab is missing, install the controls using the [Syncfusion<sup>®</sup> WinForms/WPF installer](https://help.syncfusion.com/wpf/visual-studio-integration/visual-studio-extensions/extensions) and restart Visual Studio.)
 
 ![WPF Spreadsheet Getting-Started](Getting-Started_images/wpf-spreadsheet-getting-started.jpeg)
 
-3. Drag `SfSpreadsheetRibbon` and drop in the Designer area from the Toolbox.
+3. Drag `SfSpreadsheet` and `SfSpreadsheetRibbon` from the Toolbox and drop them in the Designer area.
 
 ![WPF Spreadsheet Interaction with Ribbon](Getting-Started_images/wpf-spreadsheet-interaction-with-ribbon.jpeg)
 
@@ -178,7 +179,7 @@ WPF Spreadsheet control can be added to an application either through the design
 {% endhighlight %}
 {% endtabs %}
 
-N> Declare a name for the Spreadsheet component as shown above for reference.
+N> Declare a name for the Spreadsheet component (for example, `x:Name="spreadsheet"`) so that it can be referenced from the Ribbon.
 
 ![WPF Spreadsheet Drag and Drop](Getting-Started_images/wpf-spreadsheet-dragdrop.jpeg)
 
@@ -189,7 +190,7 @@ N> Declare a name for the Spreadsheet component as shown above for reference.
 <Window x:Class="YourNamespace.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-	xmlns:syncfusion="clr-namespace:Syncfusion.UI.Xaml.Spreadsheet;assembly=Syncfusion.SfSpreadsheet.WPF"
+        xmlns:syncfusion="clr-namespace:Syncfusion.UI.Xaml.Spreadsheet;assembly=Syncfusion.SfSpreadsheet.WPF"
         xmlns:syncfusionskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
         syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=Windows11Light}">
 
@@ -231,6 +232,10 @@ Spreadsheet is available in the following namespace “_Syncfusion_._UI_._Xaml_.
 {% endhighlight %}
 
 {% highlight c# tabtitle="MainWindow.xaml.cs" %}
+using Syncfusion.SfSkinManager;
+using Syncfusion.UI.Xaml.Spreadsheet;
+....
+
 public MainWindow()
 {
     InitializeComponent();
@@ -272,10 +277,15 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 ![WPF Spreadsheet Control](Getting-Started_images/wpf-spreadsheet-control.jpeg)
 
-To learn how to create, open, and save files in the WPF Spreadsheet Component, see [Workbook Operations.](Workbook-Operations)
+## Next steps
 
-N>[View Sample in GitHub.](https://github.com/SyncfusionExamples/create-view-edit-excel-files-using-wpf-spreadsheet). Looking for the full WPF Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor) page.
+To learn how to create, open, and save files in the WPF Spreadsheet Component, see [Workbook Operations](Workbook-Operations).
+
+[Find the complete WPF Spreadsheet sample on GitHub.](https://github.com/SyncfusionExamples/create-view-edit-excel-files-using-wpf-spreadsheet)
+
+For the full WPF Spreadsheet Editor component overview, features, pricing, and documentation, visit the [WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor) page.
 
 ## See Also
+- [Workbook Operations](Workbook-Operations)
 - [Data Management](Data-Management)
-- [Display Charts and Sparklines ](Shapes)
+- [Shapes](Shapes)

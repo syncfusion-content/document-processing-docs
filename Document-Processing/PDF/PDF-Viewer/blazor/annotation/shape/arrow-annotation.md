@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Arrow Annotation (Shape) in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to enable, apply, customize, and manage Arrow annotations in the Syncfusion Blazor SfPdfViewer component.
+description: Learn how to enable, apply, customize, and manage Arrow annotations in the Blazor SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -295,7 +295,7 @@ For the full list of available events and their descriptions, see [**Annotation 
 ## Export and Import
 The PDF Viewer supports exporting and importing annotations. For details on supported formats and workflows, see [**Export and Import annotations**](../import-export-annotation).
 
-## See Also
+## See also
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
 - [Comments Panel](../comments)
 - [Annotation Events](../events)

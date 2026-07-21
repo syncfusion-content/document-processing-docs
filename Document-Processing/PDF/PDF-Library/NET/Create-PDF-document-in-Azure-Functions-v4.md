@@ -22,11 +22,13 @@ Step 3: Select function worker as **.NET 8.0(Long-term support)**.
 ![Select function worker](Azure_Images/Azure-Functions-V4/Additional_information.png)
 
 Step 4: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
-![Install Syncfusion.Pdf.AspNet NuGet package](Azure_Images/Azure-Functions-V4/NuGet_package_reference.png)
+![Install Syncfusion.Pdf.Net.Core NuGet package](Azure_Images/Azure-Functions-V4/NuGet_package_reference.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: Include the following namespaces in the **Function1.cs** file.
+N> Add the sample image *AdventureCycle.jpg* as an embedded resource in the project so it can be loaded using `Assembly.GetManifestResourceStream` in the code sample.
+
+Step 5: Include the following namespaces in the **Function1.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -39,7 +41,7 @@ using Syncfusion.Drawing;
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Add the following code example in **Run** method of **Function1** class to perform **create a PDF document** in Azure Functions and return the resultant **PDF document**.
+Step 6: Add the following code example in **Run** method of **Function1** class to perform **create a PDF document** in Azure Functions and return the resultant **PDF document**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -109,31 +111,31 @@ return response;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Right click the project and select **Publish**. Then, create a new profile in the Publish Window.
+Step 7: Right-click the project and select **Publish**. Then, create a new profile in the Publish Window.
 ![Create a new profile in the Publish Window](Azure_Images/Azure-Functions-V4/Click_publish.png)
 
-Step 7: Select the target as **Azure** and click **Next** button.
+Step 8: Select the target as **Azure** and click **Next** button.
 ![Select the target as Azure](Azure_Images/Azure-Functions-V4/Set_Azure_target.png)
 
-Step 8: Select the **Azure Function App (Windows)** and click **Next**. 
+Step 9: Select the **Azure Function App (Windows)** and click **Next**. 
 ![Select Azure function app](Azure_Images/Azure-Functions-V4/Select_function_app.png)
 
-Step 9: Select the **Create new** button.
+Step 10: Select the **Create new** button.
 ![Configure Hosting Plan](Azure_Images/Azure-Functions-V4/Select_create_new_button.png)
 
-Step 10: Click **Create** button. 
+Step 11: Click **Create** button. 
 ![Select the plan type](Azure_Images/Azure-Functions-V4/Hosting_plan.png)
 
-Step 11: After creating app service then click **Finish** button. 
+Step 12: After creating app service then click **Finish** button. 
 ![Creating app service](Azure_Images/Azure-Functions-V4/Creating_app_service.png)
 
-Step 12: Click the **Close** button.
+Step 13: Click the **Close** button.
 ![Click close button](Azure_Images/Azure-Functions-V4/publish-profile-creation-progress.png)
 
-Step 13: Click the **Publish** button. 
+Step 14: Click the **Publish** button. 
 ![Click Publish button](Azure_Images/Azure-Functions-V4/successful_publish.png)
 
-Step 13: Now, go to Azure portal and select the App Services. After running the service, click **Get function URL > Copy**. Include the URL as a query string in the URL. Then, paste it into the new browser tab. You will get the PDF document as follows. 
+Step 15: Now, go to Azure portal and select the App Services. After running the service, click **Get function URL > Copy**. Include the URL as a query string in the URL. Then, paste it into the new browser tab. You will get the PDF document as follows. 
 ![Output document](Azure_Images/Azure-Functions-V4/Final_output.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Azure/Azure%20Function%20V4).

@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Reorder pages in Organize Pages in Blazor PDF Viewer | Syncfusion
-description: How to rearrange pages using drag-and-drop and programmatic methods in the Organize Pages UI of the Syncfusion Blazor PDF Viewer.
+description: How to rearrange pages using drag-and-drop in the Organize Pages UI of the Blazor PDF Viewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Reorder pages using the Organize Pages view in Blazor
+# Reorder pages using the Organize Pages view in Blazor PDF Viewer
 
 ## Overview
 
@@ -18,14 +18,14 @@ This guide describes how to rearrange pages in a PDF using the **Organize Pages*
 
 ## Prerequisites
 
-- Syncfusion Blazor PDF Viewer component installed
+- Blazor PDF Viewer component installed
 - `EnablePageOrganizer` property enabled in the viewer
 
 ## Steps
 
 1. Open the Organize Pages view
 
-	- Click the **Organize Pages** button in the navigation toolbar to open the page thumbnails panel.
+	- Click the **Organize Pages** button in the viewer toolbar to open the page thumbnails panel.
 
 2. Reorder a single page
 
@@ -39,7 +39,7 @@ This guide describes how to rearrange pages in a PDF using the **Organize Pages*
 
 4. Verify and undo
 
-	- Use **Undo** / **Redo** options to revert accidental changes.
+	- Use the **Undo** / **Redo** options in the Organize Pages toolbar to revert accidental changes.
 
     ![Undo and redo Organize Pages toolbar](./images/organize-ui-undo.png)
 
@@ -47,13 +47,9 @@ This guide describes how to rearrange pages in a PDF using the **Organize Pages*
 
 	- Click **Save** or download the document using **Save As** to persist the new page sequence.
 
-## Expected result
-
-- Thumbnails reflect the new page order immediately and saved / downloaded PDFs preserve the reordered sequence.
-
 ## Enable or disable reorder option
 
-To enable or disable the **Reorder pages** option in the Organize Pages, update the `PageOrganizerSettings.CanRearrange`. See [Organize pages toolbar customization](./toolbar#enable-or-disable-the-rearrange-option) for the guidelines
+To enable or disable the **Reorder pages** option in the Organize Pages, update the `PageOrganizerSettings.CanRearrange`. See [Organize pages toolbar customization](./toolbar#enable-or-disable-the-rearrange-option) for details
 
 ## Troubleshooting
 
@@ -64,7 +60,7 @@ To enable or disable the **Reorder pages** option in the Organize Pages, update 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Page%20Organizer/Page-Organizer-Settings)
 
 
-## Related topics
+## See also
 
 - [Organize pages toolbar customization](./toolbar)
 - [Organize pages event reference](./events)

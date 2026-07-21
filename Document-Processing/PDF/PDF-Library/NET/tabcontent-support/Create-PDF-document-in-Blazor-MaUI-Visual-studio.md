@@ -6,7 +6,7 @@
 Step 1: Create a new project by choosing `.NET MAUI Blazor Hybrid and Web App` template in Visual Studio.
 ![Blazor client project creation step1](Create-PDF-Blazor/Maui-web-app.png)
 
-Step 2: Install the [Syncfusion.PDF.NET](https://www.nuget.org/packages/Syncfusion.pdf.Net) NuGet package as a reference to your Blazor application from [NuGet.org](https://www.nuget.org).
+Step 2: Install the [Syncfusion.Pdf.NET](https://www.nuget.org/packages/Syncfusion.Pdf.Net) NuGet package as a reference to your Blazor application from [NuGet.org](https://www.nuget.org).
 ![Blazor WASM NuGet package installation](Create-PDF-Blazor/Blazor_server_NuGet_Net.png)
 
 Step 3: Next, include the following namespaces in the ``_Imports.razor`` file.
@@ -33,7 +33,7 @@ Step 4: Create a button in the ``Weather.razor`` using the following code.
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Define the ``@ExportToPdf`` click function on ``Weather.razor`` file.
+Step 5: Define the ``@ExportToPdf`` click function on the ``Weather.razor`` file.
 
 The [PdfDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created and add a [PdfPage](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfPage.html) to it. The [PdfTextElement](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data source.
 

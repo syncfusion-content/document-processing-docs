@@ -38,10 +38,11 @@ Include the following meta tag inside the `<head>` element to address CSP violat
 {% endhighlight %}
 {% endtabs %}
 
-N>The `SfPdfViewer` component requires specific Content Security Policy (CSP) directives to function properly in Blazor WebAssembly applications.
-- In **.NET 9.0**, include `'wasm-unsafe-eval'` in the `script-src` directive to support WebAssembly operations.
-- In **.NET 8.0**, include `'unsafe-eval'` in the `script-src` directive (in addition to `'wasm-unsafe-eval'`) to avoid runtime errors caused by restricted dynamic JavaScript execution.
-- Ensure the `worker-src` directive includes `'self'` and `blob:` to enable web worker functionality.
+N>
+* The `SfPdfViewer` component requires specific Content Security Policy (CSP) directives to function properly in Blazor WebAssembly applications.
+* In **.NET 9.0**, include `'wasm-unsafe-eval'` in the `script-src` directive to support WebAssembly operations.
+* In **.NET 8.0**, include `'unsafe-eval'` in the `script-src` directive (in addition to `'wasm-unsafe-eval'`) to avoid runtime errors caused by restricted dynamic JavaScript execution.
+* Ensure the `worker-src` directive includes `'self'` and `blob:` to enable web worker functionality.
 These directives are essential for correct behavior under strict CSP environments.
 
 ### Directive usage

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize annotations in Blazor PDF Viewer | Syncfusion
-description: Learn how to customize PDF annotations in Syncfusion Blazor SfPdfViewer using UI tools and programmatic settings (defaults and runtime edits).
+description: Learn how to customize PDF annotations in Blazor SfPdfViewer using UI tools and programmatic settings (defaults and runtime edits).
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

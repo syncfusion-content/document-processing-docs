@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Print PDF in React PDF Viewer
 
-The React PDF Viewer includes built-in printing via the toolbar and APIs so users can control how documents are printed and monitor the process.
+The React PDF Viewer includes built-in printing via the toolbar and APIs so users can control how documents are printed and monitor the printing process.
 
 Select **Print** in the built-in toolbar to open the browser print dialog.
 
@@ -18,9 +18,11 @@ Select **Print** in the built-in toolbar to open the browser print dialog.
 
 ## Enable or Disable Print in React PDF Viewer
 
-The Syncfusion React PDF Viewer component lets users print a loaded PDF document through the built-in toolbar or programmatic calls. Control whether printing is available by setting the [`enablePrint`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enableprint) property (`true` enables printing; `false` disables it).
+The Syncfusion React PDF Viewer component lets users print a loaded PDF document through the built-in toolbar or programmatic calls. Control whether printing is available by setting the [`enablePrint`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enableprint) property (`true` enables printing; `false` disables it; default is `true`).
 
-The following React examples render the PDF Viewer with printing disabled.
+The following React example renders the PDF Viewer with printing disabled.
+
+> The [`Print`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/print) module must be included in the `Inject` `services` array; otherwise the print toolbar button and `print.print()` API are not available.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -56,7 +58,7 @@ export default function App() {
 
 ## Print programmatically in React PDF Viewer
 
-To start printing from code, call the [`pdfviewer.print.print()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/print#print-1) method after the document is fully loaded. This approach is useful when wiring up custom UI or initiating printing automatically; calling print before the document finishes loading can result in no output or an empty print dialog.
+To start printing from code, call the [`pdfviewer.print.print()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/print#print-1) method after the document is fully loaded. This approach is useful when wiring up custom UI or initiating printing automatically; calling `print()` before the document finishes loading can result in no output or no printable content. The `print()` method takes no parameters and returns `void`.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -107,7 +109,7 @@ export default function App() {
 
 ## Troubleshooting
 
-- Ensure the [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl) value matches the deployed `ej2-pdfviewer-lib` version.
+- Ensure the [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl) value matches the installed `ej2-pdfviewer-lib` package version.
 - Calling [`print()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/print#print-1) launches the browser print dialog; behavior varies by browser and may be affected by popup blockers or browser settings.
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples)

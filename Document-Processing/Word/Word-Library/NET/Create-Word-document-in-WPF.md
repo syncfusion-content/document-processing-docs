@@ -1,5 +1,5 @@
 ---
-title: Create Word document in WPF | Syncfusion 
+title: Create Word document in WPF | Syncfusion
 description: Create Word document without Microsoft Word or interop dependencies in WPF application using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -19,17 +19,17 @@ Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Word libra
 **Prerequisites:**
 
 * Visual Studio 2022.
-* Install **.NET desktop development** workload with necessary .NET Framework SDK.
+* Install **.NET desktop development** workload with .NET Framework 4.6.2 or later SDK.
 
 Step 1: Create a new WPF application project.
 
 ![Create WPF application in Visual Studio](WPF_images/Create-WPF-Project-WordtoPDF.png)
 
-Step 2: Install the [Syncfusion.DocIO.Wpf](https://www.nuget.org/packages/Syncfusion.DocIO.Wpf) NuGet package as a reference to your WPF application from [NuGet.org](https://www.nuget.org/).
+Step 2: Install the [Syncfusion.DocIO.Wpf](https://www.nuget.org/packages/Syncfusion.DocIO.Wpf) NuGet package as a reference to your WPF application from [NuGet.org](https://www.nuget.org/). Select the latest stable version from the package list.
 
 ![Install DocIO WPF NuGet package](WPF_images/Install_NuGet.jpg)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add the "Syncfusion.Licensing" assembly reference and register a license key in your project. Refer to [registering a Syncfusion<sup>&reg;</sup> license key](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details.
 
 Step 3: Include the following namespaces in the MainWindow.xaml.cs file.
 
@@ -44,7 +44,7 @@ using System.Windows;
 
 {% endtabs %}
 
-Step 4: Add a new button in **MainWindow.xaml** to create Word file as follows.
+Step 4: Add a new button in **MainWindow.xaml** to create a Word file as follows.
 
 {% tabs %}
 
@@ -65,7 +65,7 @@ Step 4: Add a new button in **MainWindow.xaml** to create Word file as follows.
 
 {% endtabs %}
 
-Step 5: Add the following code in **btnCreate_Click** to **create Word document** with simple text.
+Step 5: Add the following code in the **btnCreate_Click** event handler to **create a Word document** with simple text.
 
 {% tabs %}
 
@@ -74,9 +74,9 @@ Step 5: Add the following code in **btnCreate_Click** to **create Word document*
 WordDocument document = new WordDocument();
 //Adding a new section to the document.
 WSection section = document.AddSection() as WSection;
-//Set Margin of the section
+//Set Margin of the section (in points; 72 points = 1 inch)
 section.PageSetup.Margins.All = 72;
-//Set page size of the section
+//Set page size of the section (US Letter in points: 612 x 792)
 section.PageSetup.PageSize = new SizeF(612, 792);
 
 //Create Paragraph styles
@@ -281,21 +281,25 @@ section.AddParagraph();
 
 //Saves the Word document
 document.Save("Sample.docx");
+//Disposes the document instance
+document.Dispose();
 {% endhighlight %}
 
 {% endtabs %}
 
+N> The code sample loads image files (`AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, and `Road-550-W.jpg`) from the application's working directory. Download these assets from the [GitHub sample](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/WPF) and ensure they are copied to the output folder, or provide absolute paths.
+
 Step 6: Build the project.
 
-Click on Build → Build Solution or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
+Click on **Build** → **Build Solution** or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
 Step 7: Run the project.
 
-Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
+Click the **Start** button (green arrow) or press <kbd>F5</kbd> to run the app.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/WPF).
 
-By executing the program, you will get the **Word document** as follows.
+By executing the program, you will get the **Word document** in the application's output directory (`bin` folder) as follows.
 
 ![WPF output Word document](WPF_images/GettingStartedOutput.jpg)
 
@@ -306,9 +310,10 @@ By executing the program, you will get the **Word document** as follows.
 **Prerequisites:**
 
 * JetBrains Rider.
-* Install .NET Framework Developer Pack.
+* Install the .NET Framework 4.6.2 or later Developer Pack and the corresponding MSBuild/SDK tooling.
 
-Step 1. Open JetBrains Rider and create a new WPF application project.
+Step 1: Open JetBrains Rider and create a new WPF application project.
+
 * Launch JetBrains Rider.
 * Click **New Solution** on the welcome screen.
 
@@ -316,25 +321,25 @@ Step 1. Open JetBrains Rider and create a new WPF application project.
 
 * In the New Solution dialog, select **Project Type** as **Desktop**.
 * Enter a project name and specify the location.
-* Select the target framework as **Full Framework** and choose the desired version.
+* Select the target framework as **Full Framework** and choose the desired version (4.6.2 or later).
 * Select **Template** as **WPF Application**.
-* Click create.
+* Click **Create**.
 
 ![Creating a new WPF application in JetBrains Rider](WPF_images/Create-WPF-sample.png)
 
-Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
-* Click the NuGet icon in the Rider toolbar and type [Syncfusion.DocIO.Wpf](https://www.nuget.org/packages/Syncfusion.DocIO.Wpf/) in the search bar.
+Step 2: Install the [Syncfusion.DocIO.Wpf](https://www.nuget.org/packages/Syncfusion.DocIO.Wpf) NuGet package from [NuGet.org](https://www.nuget.org/).
+* Click the NuGet icon in the Rider toolbar and type `Syncfusion.DocIO.Wpf` in the search bar.
 * Ensure that nuget.org is selected as the package source.
-* Select the latest Syncfusion.DocIO.Wpf NuGet package from the list.
+* Select the latest stable Syncfusion.DocIO.Wpf NuGet package from the list.
 * Click the + (Add) button to add the package.
 
 ![Select the Syncfusion.DocIO.Wpf NuGet package](WPF_images/Search-Syncfusion.DocIO.Wpf-NuGet.png)
 
-* Click the Install button to complete the installation.
+* Click the **Install** button to complete the installation.
 
 ![Install the Syncfusion.DocIO.Wpf NuGet package](WPF_images/Install-Syncfusion.DocIO.Wpf-NuGet.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add the "Syncfusion.Licensing" assembly reference and register a license key in your project. Refer to [registering a Syncfusion<sup>&reg;</sup> license key](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details.
 
 Step 3: Include the following namespaces in the MainWindow.xaml.cs file.
 
@@ -349,7 +354,7 @@ using System.Windows;
 
 {% endtabs %}
 
-Step 4: Add a new button in **MainWindow.xaml** to create Word file as follows.
+Step 4: Add a new button in **MainWindow.xaml** to create a Word file as follows.
 
 {% tabs %}
 
@@ -370,7 +375,7 @@ Step 4: Add a new button in **MainWindow.xaml** to create Word file as follows.
 
 {% endtabs %}
 
-Step 5: Add the following code in **btnCreate_Click** to **create Word document** with simple text.
+Step 5: Add the following code in the **btnCreate_Click** event handler to **create a Word document** with simple text.
 
 {% tabs %}
 
@@ -379,9 +384,9 @@ Step 5: Add the following code in **btnCreate_Click** to **create Word document*
 WordDocument document = new WordDocument();
 //Adding a new section to the document.
 WSection section = document.AddSection() as WSection;
-//Set Margin of the section
+//Set Margin of the section (in points; 72 points = 1 inch)
 section.PageSetup.Margins.All = 72;
-//Set page size of the section
+//Set page size of the section (US Letter in points: 612 x 792)
 section.PageSetup.PageSize = new SizeF(612, 792);
 
 //Create Paragraph styles
@@ -586,9 +591,13 @@ section.AddParagraph();
 
 //Saves the Word document
 document.Save("Sample.docx");
+//Disposes the document instance
+document.Dispose();
 {% endhighlight %}
 
 {% endtabs %}
+
+N> The code sample loads image files (`AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, and `Road-550-W.jpg`) from the application's working directory. Download these assets from the [GitHub sample](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/WPF) and ensure they are copied to the output folder, or provide absolute paths.
 
 Step 6: Build the project.
 
@@ -600,7 +609,7 @@ Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to 
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/WPF).
 
-By executing the program, you will get the **Word document** as follows.
+By executing the program, you will get the **Word document** in the application's output directory (`bin` folder) as follows.
 
 ![WPF output Word document](WPF_images/GettingStartedOutput.jpg)
 
@@ -610,4 +619,4 @@ By executing the program, you will get the **Word document** as follows.
 
 Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.
 
-An online sample link to [create a Word document](https://document.syncfusion.com/demos/word/helloworld#/tailwind) in ASP.NET Core.
+Explore an online demo to [create a Word document](https://document.syncfusion.com/demos/word/helloworld#/tailwind) (ASP.NET Core demo showing the same DocIO capabilities).

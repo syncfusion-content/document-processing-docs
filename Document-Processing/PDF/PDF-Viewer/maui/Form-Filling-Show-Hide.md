@@ -10,7 +10,7 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 # Show and Hide Form Fields in .NET MAUI PDF Viewer (SfPdfViewer)
 
-The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to control the visibility of form fields using the `IsHidden` property. This is useful when you need to hide fields containing confidential data before sharing or presenting a document, or to reduce visual clutter in forms with many fields.
+The [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to control the visibility of form fields using the `IsHidden` property. This is useful when you need to hide fields containing confidential data before sharing or presenting a document, or to reduce visual clutter in forms with many fields.
 
 N> * Hiding and showing form fields supports undo and redo.
 N> * A form field that is locked cannot be hidden.

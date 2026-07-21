@@ -11,12 +11,13 @@ documentation: UG
 Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [WinUI Word library](https://www.syncfusion.com/document-processing/word-framework/winui/word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in WinUI**.
 
 **Prerequisites:**
-To use the WinUI 3 project templates, install the Windows App SDK extension for Visual Studio. For more details, refer [here](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/set-up-your-development-environment?tabs=cs-vs-community%2Ccpp-vs-community%2Cvs-2022-17-1-a%2Cvs-2022-17-1-b).
+- Visual Studio 2022 version 17.x or later with the **.NET desktop development** and **Universal Windows Platform development** workloads installed.
 
+N> The samples in this topic target Windows App SDK 1.x on Windows 10, version 1809 or later.
 
 ## WinUI Desktop app
 
-Step 1: Create a new C# WinUI Desktop app. Select Blank App, Packaged with WAP (WinUI 3 in Desktop) from the template and click the **Next** button.
+Step 1: Create a new C# WinUI Desktop app. Select **Blank App, Packaged (WinUI 3 in Desktop)** from the template and click **Next**.
 
 ![Create the WinUI Desktop app in Visual Studio](WinUI_Images/Create_Desktop_Project.png)
 
@@ -32,7 +33,7 @@ Step 4: Install the Syncfusion.DocIO.NET NuGet package as a reference to your pr
 
 ![Install the DocIO .NET NuGet package](WinUI_Images/Install_Nuget.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or the NuGet feed, you also have to add the **Syncfusion.Licensing** assembly reference and register a license key in your project. See [Registering a Syncfusion license key](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details.
 
 Step 5: Add a new button to the **MainWindow.xaml** as shown below.
 
@@ -102,7 +103,7 @@ style.ParagraphFormat.KeepFollow = true;
 style.ParagraphFormat.OutlineLevel = OutlineLevel.Level1;
 
 IWParagraph paragraph = section.HeadersFooters.Header.AddParagraph();
-//"App" is the class of Portable project.
+//"App" is the application class of the WinUI project.
 Assembly assembly = typeof(App).GetTypeInfo().Assembly;
 //Get the image stream.
 Stream imageStream = assembly.GetManifestResourceStream("CreateWordSample.Assets.AdventureCycle.jpg");
@@ -308,11 +309,9 @@ An online sample link to [create a Word document](https://document.syncfusion.co
 
 ## WinUI UWP app
 
-Step 1: Create a new C# WinUI UWP app. Select Blank App (WinUI 3 in UWP)from the template and **click** the Next button.
+Step 1: Create a new C# WinUI UWP app. Select **Blank App (WinUI 3 in UWP)** from the template and click **Next**.
 
 ![Create the WinUI UWP app in Visual Studio](WinUI_Images/Create_UWP_Project.png)
-
-N> To get the UWP Experimental project templates and build UWP apps with WinUI 3, you should download the [Windows App SDK Experimental Extension](https://marketplace.visualstudio.com/items?itemName=ProjectReunion.MicrosoftProjectReunionPreview) for Visual Studio.
 
 Step 2: Enter the project name and click **Create**.
 
@@ -326,7 +325,7 @@ Step 4: Install the Syncfusion.DocIO.NET NuGet package as a reference to your pr
 
 ![Install the DocIO .NET NuGet package](WinUI_Images/Install_Nuget.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or the NuGet feed, you also have to add the **Syncfusion.Licensing** assembly reference and register a license key in your project. See [Registering a Syncfusion license key](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details.
 
 Step 5: Add a new button in the **MainPage.xaml** as shown below.
 
@@ -338,7 +337,7 @@ Step 5: Add a new button in the **MainPage.xaml** as shown below.
     x:Class="CreateWordSample.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:CreateWordSample1"
+    xmlns:local="using:CreateWordSample"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
@@ -370,7 +369,7 @@ using Windows.Storage.Pickers;
 
 {% endtabs %}
 
-Step 7: Add a new action method **CreateDocument** in MainPage.xaml.cs and include the below code snippet to **create a Word document**.
+Step 7: Register the Syncfusion license key at application startup (e.g., in the `App` constructor or the `CreateDocument` method) before using any DocIO APIs.
 
 {% tabs %}
 
