@@ -223,7 +223,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/React-DOCX-Edit
 
 Explore how to create, edit, and print Word documents using the React DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/default).
 
-## Getting Started Video
+## Video tutorial
 
 Follow this quick walkthrough to install, configure, and start using the React DOCX Editor in your application.
 
