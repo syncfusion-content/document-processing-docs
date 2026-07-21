@@ -68,6 +68,8 @@ Add the DOCX Editor component and its dependent component styles available in th
 {% endhighlight %}
 {% endtabs %}
 
+N> This example uses the `Tailwind 3` theme. To use a different built-in theme, replace the `tailwind3.css` references with the corresponding theme stylesheets. Refer to the [Themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme) for information about the available themes and the different ways to include theme styles in a React application.
+
 ## Initialize the DOCX Editor
 
 Add the DOCX Editor component to your application. In the `src/App.tsx` file, add the following code to initialize the component:
