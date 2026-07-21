@@ -6,7 +6,7 @@ control: DocIO
 documentation: UG
 ---
 
-# Create Word document in Microsoft Azure — overview
+# Create Word document in Microsoft Azure
 
 Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Word (DocIO) library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and convert Word documents programmatically without Microsoft Word or interop dependencies. Using this library, you can **create a Word document in Azure services** within a few lines of code.
 
@@ -49,8 +49,3 @@ NuGet package name<br/></th></tr></thead>
 {{'[Azure Functions v4](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-azure-functions-v4)' | markdownify}}<br/></td><td>
 {{'[Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core)' | markdownify}}<br/></td></tr>
 </table>
-
-## Package selection notes
-
-* `.Net.Core` packages target .NET Core / .NET (including .NET 6, 7, and 8) and are used by App Service (Windows), App Service (Linux), and Azure Functions v4.
-* `.AspNet` packages target the .NET Framework and are used by Azure Functions v1, which runs on the .NET Framework worker. For new serverless projects, use Azure Functions v4 with the `.Net.Core` package.

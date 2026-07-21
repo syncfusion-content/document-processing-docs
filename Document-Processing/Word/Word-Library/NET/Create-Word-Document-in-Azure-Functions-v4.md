@@ -31,19 +31,17 @@ Step 3: Select the function worker as **.NET 8.0 (Long Term Support)** and the *
 Step 4: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 ![Install Syncfusion.DocIO.Net.Core NuGet package](ASP-NET-Core_images/Install_Nuget.png)
 
-Step 5: To enforce Syncfusion licensing, also install the `Syncfusion.Licensing.Net.Core` NuGet package and register a license key. Refer to [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview) for how to obtain and register a key. Register the license at the start of your function, for example:
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the https://www.nuget.org/packages/Syncfusion.Licensing NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
-{% tabs %}
-{% highlight c# tabtitle="C#" %}
-
-Syncfusion.Licensing.LicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
-
-{% endhighlight %}
-{% endtabs %}
-
-Step 6: Add the image files (`AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, `Road-550-W.jpg`) to a `Data` folder in the project, set **Build Action** to **Embedded Resource**, and make sure the project's default namespace is **`Create_Word_Document`** so the `GetManifestResourceStream` calls in the next step resolve correctly.
-
-Step 7: Include the following namespaces in the **Function1.cs** file.
+Step 5: Include the following namespaces in the **Function1.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -60,7 +58,7 @@ using Syncfusion.DocIO.DLS;
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Add the following code snippet in the **Run** method of the **Function1** class to create a Word document in Azure Functions and return the resulting Word document to the client. The full method signature is shown below; the `[Function]` and `[HttpTrigger]` attributes define the HTTP trigger that the function responds to.
+Step 6: Add the following code snippet in the **Run** method of the **Function1** class to create a Word document in Azure Functions and return the resulting Word document to the client. The full method signature is shown below; the `[Function]` and `[HttpTrigger]` attributes define the HTTP trigger that the function responds to.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -302,28 +300,28 @@ return response;
 {% endhighlight %}
 {% endtabs %}
 
-Step 9: Right-click the project and select **Publish**. Then, create a new profile in the Publish window.
+Step 7: Right-click the project and select **Publish**. Then, create a new profile in the Publish window.
 ![Create a new profile in the Publish window](Azure-Images/Functions-v1/Publish-Create-Word-Document.png)
 
-Step 10: Select the target as **Azure** and click the **Next** button.
+Step 8: Select the target as **Azure** and click the **Next** button.
 ![Select the target as Azure](Azure-Images/Functions-v1/Target_WordtoPDF.png)
 
-Step 11: Select the **Create new** button.
+Step 9: Select the **Create new** button.
 ![Configure Hosting Plan](Azure-Images/Functions-v1/Function_Instance_WordtoPDF.png)
 
-Step 12: Click the **Create** button.
+Step 10: Click the **Create** button.
 ![Select the plan type](Azure-Images/Functions-v1/Hosting-Create-Word-Document.png)
 
-Step 13: After the app service is created, click the **Finish** button.
+Step 11: After the app service is created, click the **Finish** button.
 ![Creating app service](Azure-Images/Functions-v1/App-Create-Word-Document.png)
 
-Step 14: Click the **Publish** button.
+Step 12: Click the **Publish** button.
 ![Click Publish Button](Azure-Images/Functions-v1/Before-Publish-Create-Word-Document.png)
 
-Step 15: Publish succeeded.
+Step 13: Publish succeeded.
 ![Publish succeeded](Azure-Images/Functions-v1/After-Publish-Create-Word-Document.png)
 
-Step 16: Go to the Azure portal and select **App Services**. After running the service, click **Get Function URL** and copy it. Then, use it in the client sample below, which requests the Azure Functions to create a Word document. You will get the output Word document as follows.
+Step 14: Go to the Azure portal and select **App Services**. After running the service, click **Get Function URL** and copy it. Then, use it in the client sample below, which requests the Azure Functions to create a Word document. You will get the output Word document as follows.
 
 ![Create a Word document in Azure Functions v4](ASP-NET-Core_images/GettingStartedOutput.jpg)
 
@@ -374,18 +372,6 @@ try
     inputStream.Dispose();
     fileStream.Dispose();
 }
-catch (WebException webEx)
-{
-    Console.WriteLine($"Request failed: {webEx.Status}. Verify the function URL and that the function key is appended as ?code=...");
-    if (webEx.Response != null)
-    {
-        using (var errStream = webEx.Response.GetResponseStream())
-        using (var reader = new StreamReader(errStream))
-        {
-            Console.WriteLine(reader.ReadToEnd());
-        }
-    }
-}
 catch (Exception ex)
 {
     Console.WriteLine($"An error occurred: {ex.Message}");
@@ -394,9 +380,9 @@ catch (Exception ex)
 {% endhighlight %}
 {% endtabs %}
 
-T> If you receive HTTP 401 Unauthorized, append the function key to the URL as `?code=<your-key>`. If you receive HTTP 404 Not Found, confirm the function name in the URL matches the `Function("Function1")` attribute.
-
 From GitHub, you can download the [console application](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Azure/Azure_Functions/Console_Application) and [Azure Functions v4](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Azure/Azure_Functions/Azure_Functions_v4) samples.   
+
+N> The code sample references image files (AdventureCycle.jpg, Mountain-200.jpg, Mountain-300.jpg, Road-550-W.jpg). Download these assets from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Azure/Azure_Functions/Azure_Functions_v4/Create-Word-Document/Data) and add them to a `Data` folder in the Functions project with their **Build Action** set to **Embedded Resource** so the `GetManifestResourceStream` calls resolve correctly at runtime.
 
 Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page. 
 
