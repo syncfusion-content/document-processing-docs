@@ -25,86 +25,127 @@ Create a folder named `documenteditor-app` with `index.html` and `index.js` file
   ├── index.html
   └── index.js
   ```
-### Install the JavaScript DOCX Editor npm package
 
-Install the **Syncfusion JavaScript DOCX Editor package using npm**.
+## Add DOCX Editor resources
+
+Add the required DOCX Editor style and script references to the `index.html` file using one of the following methods:
+
+{% tabcontents %}
+
+{% tabcontent Using Local Resources %}
+
+To use local scripts and styles for the DOCX Editor, follow these steps:
+
+1. Download and install the [DOCX Editor SDK](https://www.syncfusion.com/account/manage-trials/start-trials).
+
+2. Create a `resources` folder in your application (for example, `docx-editor-app/resources`).
+
+3. From the installed SDK location, copy the required packages from the following folder into the `resources` folder:
+
+```text
+<Install path>/Syncfusion/Essential Studio/DOCX Editor SDK/{VERSION}/Web (Essential JS 2)/JavaScript
+```
+
+4. After copying the files, add the DOCX Editor and its dependent control style and script references at the end of the **\<head\>** section in the `index.html` file.
 
 {% tabs %}
-{% highlight bash %}
-
-npm install @syncfusion/ej2-documenteditor
+{% highlight html tabtitle="index.html" %}
+<!-- DOCX Editor dependent theme -->
+<link href="resources/ej2-base/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<link href="resources/ej2-buttons/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<link href="resources/ej2-inputs/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<link href="resources/ej2-popups/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<link href="resources/ej2-lists/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<link href="resources/ej2-navigations/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<link href="resources/ej2-splitbuttons/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<link href="resources/ej2-dropdowns/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<!-- DOCX Editor theme -->
+<link href="resources/ej2-documenteditor/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<!-- DOCX Editor dependent scripts -->
+<script src="resources/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
+<script src="resources/ej2-data/dist/global/ej2-data.min.js" type="text/javascript"></script>
+<script src="resources/ej2-svg-base/dist/global/ej2-svg-base.min.js" type="text/javascript"></script>
+<script src="resources/ej2-file-utils/dist/global/ej2-file-utils.min.js" type="text/javascript"></script>
+<script src="resources/ej2-compression/dist/global/ej2-compression.min.js" type="text/javascript"></script>
+<script src="resources/ej2-pdf-export/dist/global/ej2-pdf-export.min.js" type="text/javascript"></script>
+<script src="resources/ej2-buttons/dist/global/ej2-buttons.min.js" type="text/javascript"></script>
+<script src="resources/ej2-popups/dist/global/ej2-popups.min.js" type="text/javascript"></script>
+<script src="resources/ej2-splitbuttons/dist/global/ej2-splitbuttons.min.js" type="text/javascript"></script>
+<script src="resources/ej2-inputs/dist/global/ej2-inputs.min.js" type="text/javascript"></script>
+<script src="resources/ej2-lists/dist/global/ej2-lists.min.js" type="text/javascript"></script>
+<script src="resources/ej2-navigations/dist/global/ej2-navigations.min.js" type="text/javascript"></script>
+<script src="resources/ej2-dropdowns/dist/global/ej2-dropdowns.min.js" type="text/javascript"></script>
+<script src="resources/ej2-calendars/dist/global/ej2-calendars.min.js" type="text/javascript"></script>
+<script src="resources/ej2-charts/dist/global/ej2-charts.min.js" type="text/javascript"></script>
+<script src="resources/ej2-office-chart/dist/global/ej2-office-chart.min.js" type="text/javascript"></script>
+<!-- DOCX Editor script -->
+<script src="resources/ej2-documenteditor/dist/global/ej2-documenteditor.min.js" type="text/javascript"></script>
 
 {% endhighlight %}
 {% endtabs %}
 
-### Register a Syncfusion License Key
+{% endtabcontent %}
 
-Before initializing the Javascript (ES5) DOCX Editor control, generate a Syncfusion license key and register it in your application.
+{% tabcontent Using CDN Links %}
 
-- [Generate a Syncfusion License Key](https://ej2.syncfusion.com/javascript/documentation/licensing/license-key-generation)
-- [Register a Syncfusion License Key in Javascript ES5](https://ej2.syncfusion.com/javascript/documentation/licensing/license-key-registration)
+Reference the scripts and styles directly from the CDN and add at the end of the **\<head\>** section in the `index.html` file.
 
-### Import the required CSS styles and add script references
-
-Import the required Syncfusion CSS files in `styles.css` to apply proper layout and theme styling.
-
-The Syncfusion<sup style="font-size:70%">&reg;</sup> EJ2 library global scripts and styles are available at the following CDN link formats.
-
-**Syntax:**
-
-  ```text
-  Script: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/dist/global/{PACKAGE_NAME}.min.js
-  Style: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/styles/{THEME_NAME}.css
-  ```
-
-  **Example:**
-
-  ```text
-  Script: https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/dist/global/ej2-base.min.js 
-  Style: https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/styles/tailwind3.css
-  ```
-
-Add the following CDN references inside the `<head>` section of your `index.html` file, as shown below:
+```text
+Script: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/dist/global/{PACKAGE_NAME}.min.js
+Style: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/styles/{THEME_NAME}.css
+```
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
 
-<title>Syncfusion JavaScript DOCX Editor</title>
-<!-- EJ2 DOCX Editor dependent theme -->
-<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-buttons/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-inputs/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-popups/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-lists/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-navigations/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-splitbuttons/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-dropdowns/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-<!-- EJ2 DOCX Editor theme -->
-<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-documenteditor/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-<!-- EJ2 DOCX Editor dependent scripts -->
-<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-data/dist/global/ej2-data.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-svg-base/dist/global/ej2-svg-base.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-file-utils/dist/global/ej2-file-utils.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-compression/dist/global/ej2-compression.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-pdf-export/dist/global/ej2-pdf-export.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-buttons/dist/global/ej2-buttons.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-popups/dist/global/ej2-popups.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-splitbuttons/dist/global/ej2-splitbuttons.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-inputs/dist/global/ej2-inputs.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-lists/dist/global/ej2-lists.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-navigations/dist/global/ej2-navigations.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-dropdowns/dist/global/ej2-dropdowns.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-calendars/dist/global/ej2-calendars.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-charts/dist/global/ej2-charts.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-office-chart/dist/global/ej2-office-chart.min.js" type="text/javascript"></script>
-<!-- EJ2 DOCX Editor script -->
-<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-documenteditor/dist/global/ej2-documenteditor.min.js" type="text/javascript"></script>
+<!-- DOCX Editor dependent theme -->
+<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-base/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-buttons/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-inputs/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-popups/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-lists/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-navigations/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-splitbuttons/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-dropdowns/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<!-- DOCX Editor theme -->
+<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-documenteditor/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<!-- DOCX Editor dependent scripts -->
+<script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-data/dist/global/ej2-data.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-svg-base/dist/global/ej2-svg-base.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-file-utils/dist/global/ej2-file-utils.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-compression/dist/global/ej2-compression.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-pdf-export/dist/global/ej2-pdf-export.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-buttons/dist/global/ej2-buttons.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-popups/dist/global/ej2-popups.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-splitbuttons/dist/global/ej2-splitbuttons.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-inputs/dist/global/ej2-inputs.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-lists/dist/global/ej2-lists.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-navigations/dist/global/ej2-navigations.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-dropdowns/dist/global/ej2-dropdowns.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-calendars/dist/global/ej2-calendars.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-charts/dist/global/ej2-charts.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-office-chart/dist/global/ej2-office-chart.min.js" type="text/javascript"></script>
+<!-- DOCX Editor script -->
+<script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-documenteditor/dist/global/ej2-documenteditor.min.js" type="text/javascript"></script>
 
 {% endhighlight %}
 {% endtabs %}
 
-### Initialize the DOCX Editor
+{% endtabcontent %}
+
+{% endtabcontents %}
+
+> **Note:** This example uses the `Tailwind 3` theme. To use a different built-in theme, replace the `tailwind3.css` references with the corresponding theme stylesheets. Refer to the [Themes documentation](https://ej2.syncfusion.com/documentation/appearance/theme) for information about the available themes and the different ways to include theme styles in a JavaScript application. To generate customized resources, refer to the [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) documentation.
+
+## Register a Syncfusion License Key
+
+Before initializing the Javascript (ES5) DOCX Editor control, generate a Syncfusion license key and register it in your application.
+
+- [Generate a Syncfusion License Key](https://help.syncfusion.com/document-processing/licensing/how-to-generate)
+- [Register a Syncfusion License Key in Javascript ES5](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#javascript-es5)
+
+## Initialize the DOCX Editor
 
 Add a container element for the Document Editor in the `index.html` file and then initialize the control in the `<script>` tag.
 
@@ -131,7 +172,6 @@ Add a container element for the Document Editor in the `index.html` file and the
 ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
 
 // Initialize Document Editor Container component
-// For complete API reference and all available properties, see: https://ej2.syncfusion.com/javascript/api/document-editor-container/
 var documenteditorContainer = new ej.documenteditor.DocumentEditorContainer({ 
     enableToolbar: true,
     height: '590px'
@@ -139,7 +179,7 @@ var documenteditorContainer = new ej.documenteditor.DocumentEditorContainer({
 
 // Use the following service URL only for demo purposes
 documenteditorContainer.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
-// Render the DocumentEditorContainer control
+// Render the Document Editor Container
 documenteditorContainer.appendTo('#DocumentEditor');
 
 {% endhighlight %}
@@ -147,7 +187,7 @@ documenteditorContainer.appendTo('#DocumentEditor');
 
 N> The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
 
-### Run the application
+## Run the application
 
 Open the `index.html` file in a web browser. The JavaScript (ES5) DOCX Editor is rendered with a toolbar and an editable document area, as shown below.
 
@@ -182,3 +222,4 @@ For detailed information about server-side dependencies, refer to the [Web Servi
 - [Open a document](./import)
 - [Save a document](./export)
 - [Collaborative Editing](./collaborative-editing/overview)
+- [Troubleshooting](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es5/troubleshooting)
