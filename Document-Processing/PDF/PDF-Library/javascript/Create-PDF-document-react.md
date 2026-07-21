@@ -87,7 +87,8 @@ Replace `YOUR_LICENSE_KEY` with the key from your Syncfusion account. For more i
 Replace the contents of `App.jsx` with the following code. The file imports the PDF classes as named exports from `@syncfusion/ej2-pdf` and creates a one-page PDF with a click handler.
 
 {% tabs %}
-{% highlight javascript %}
+{% highlight js tabtitle="app.jsx" %}
+{% raw %}
 
 import React from 'react';
 import { registerLicense } from '@syncfusion/ej2-base';
@@ -135,6 +136,7 @@ export default function App() {
   );
 }
 
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
