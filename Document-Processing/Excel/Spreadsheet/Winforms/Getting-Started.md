@@ -112,63 +112,63 @@ WinForms Spreadsheet control can be added to an application either through the d
 
 1. Open the Visual Studio **Toolbox**. Navigate to the **Syncfusion<sup>®</sup> Controls** tab and find the `Spreadsheet` and `SpreadsheetRibbon` toolbox items.
 
-![Toolbox in WindowsForms Spreadsheet](getting-started_images/windowsforms-spreadsheet-toolbox.jpg)
+   ![Toolbox in WindowsForms Spreadsheet](getting-started_images/windowsforms-spreadsheet-toolbox.jpg)
 
 2. Drag `Spreadsheet` and `SpreadsheetRibbon` from the Toolbox onto the Designer area.
-{% tabs %}
-{% highlight c# tabtitle="Form1.Designer.cs" %}
-....
-partial class Form1
-{
-....
-private void InitializeComponent()
-{
-Spreadsheet spreadsheet = new Spreadsheet();
-}
-....
-}
-....
-{% endhighlight %}
-{% endtabs %}
+    {% tabs %}
+    {% highlight c# tabtitle="Form1.Designer.cs" %}
+    ....
+    partial class Form1
+    {
+    ....
+    private void InitializeComponent()
+    {
+    Spreadsheet spreadsheet = new Spreadsheet();
+    }
+    ....
+    }
+    ....
+    {% endhighlight %}
+    {% endtabs %}
 
 3. Ribbon can be added to the application by dragging `SpreadsheetRibbon` to the Designer area.
 
-{% tabs %}
-{% highlight c# tabtitle="Form1.Designer.cs" %}
-....
-partial class Form1
-{
-....
-private void InitializeComponent()
-{
-Spreadsheet spreadsheet = new Spreadsheet();
-SpreadsheetRibbon spreadsheetRibbon = new SpreadsheetRibbon();
-}
-....
-}
-....
-{% endhighlight %}
-{% endtabs %}
+    {% tabs %}
+    {% highlight c# tabtitle="Form1.Designer.cs" %}
+    ....
+    partial class Form1
+    {
+    ....
+    private void InitializeComponent()
+    {
+    Spreadsheet spreadsheet = new Spreadsheet();
+    SpreadsheetRibbon spreadsheetRibbon = new SpreadsheetRibbon();
+    }
+    ....
+    }
+    ....
+    {% endhighlight %}
+    {% endtabs %}
 
 4. To make an interaction between Ribbon items and `Spreadsheet`, bind the Spreadsheet as DataContext to the `SpreadsheetRibbon`.
 
-{% tabs %}
-{% highlight c# tabtitle="Form1.Designer.cs" %}
-....
-partial class Form1
-{
-....
-private void InitializeComponent()
-{
-Spreadsheet spreadsheet = new Spreadsheet();
-SpreadsheetRibbon spreadsheetRibbon = new SpreadsheetRibbon();
-spreadsheetRibbon.Spreadsheet = spreadsheet;
-}
-....
-}
-....
-{% endhighlight %}
-{% endtabs %}
+    {% tabs %}
+    {% highlight c# tabtitle="Form1.Designer.cs" %}
+    ....
+    partial class Form1
+    {
+    ....
+    private void InitializeComponent()
+    {
+    Spreadsheet spreadsheet = new Spreadsheet();
+    SpreadsheetRibbon spreadsheetRibbon = new SpreadsheetRibbon();
+    spreadsheetRibbon.Spreadsheet = spreadsheet;
+    }
+    ....
+    }
+    ....
+    {% endhighlight %}
+    {% endtabs %}
 
 {% endtabcontent %}
  
@@ -204,7 +204,7 @@ using Syncfusion.Windows.Forms.Spreadsheet;
 
 ## Run the Application
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) in Visual Studio to launch the application.The output will appear as follows:
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio to launch the application.The output will appear as follows:
 
 ![Adding control via coding in WindowsForms Spreadsheet](getting-started_images/windowsforms-spreadsheet-coding.png)
 
