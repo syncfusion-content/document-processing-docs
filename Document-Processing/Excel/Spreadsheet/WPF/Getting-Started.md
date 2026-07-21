@@ -36,7 +36,7 @@ To ensure the control is styled correctly, install the theme package:
 
 •	[Syncfusion.Themes.Windows11Light.WPF](https://www.nuget.org/packages/Syncfusion.Themes.Windows11Light.WPF)
 
-The following optional NuGet packages enable additional features in the SfSpreadsheet control. Add only those required by your scenario.
+The following table lists the optional NuGet packages that enable additional features in the SfSpreadsheet control.
 
 <table>
 <tr>
@@ -104,7 +104,7 @@ N> Add these references to your project to use the skinning and theming capabili
 
 ### Optional Assemblies
 
-The following optional assemblies enable additional features in the SfSpreadsheet control. Add only those required by your scenario.
+The following table lists the optional assemblies that enable additional features in the SfSpreadsheet control.
 
 <table>
 <tr>

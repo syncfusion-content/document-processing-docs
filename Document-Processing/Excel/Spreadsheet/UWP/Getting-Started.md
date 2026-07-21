@@ -37,7 +37,7 @@ To add the **UWP Spreadsheet** component to the application, open the NuGet pack
 
 •	[Syncfusion.SfSpreadsheet.UWP](https://www.nuget.org/packages/Syncfusion.SfSpreadsheet.UWP)
 
-The following optional NuGet packages enable additional features such as charts and sparklines:
+The following table lists the optional NuGet packages that enable additional features in the SfSpreadsheet control.
 
 <table>
 <tr>
