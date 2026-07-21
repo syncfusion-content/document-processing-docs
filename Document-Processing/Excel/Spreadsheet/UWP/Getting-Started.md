@@ -46,15 +46,15 @@ Optional NuGet Packages</th><th>
 Description</th></tr>
 <tr>
 <td>
-Syncfusion.SfSpreadsheetHelper.UWP</td><td>
+[Syncfusion.SfSpreadsheetHelper.UWP](https://www.nuget.org/packages/Syncfusion.SfSpreadsheetHelper.UWP)</td><td>
 Contains the classes responsible for importing charts and sparklines into SfSpreadsheet.</td></tr>
 <tr>
 <td>
-Syncfusion.ExcelChartToImageConverter.UWP</td><td>
+[Syncfusion.ExcelChartToImageConverter.UWP](https://www.nuget.org/packages/Syncfusion.ExcelChartToImageConverter.UWP)</td><td>
 Contains the classes responsible for converting charts to images.</td></tr>
 <tr>
 <td>
-Syncfusion.SfChart.UWP</td><td>
+[Syncfusion.SfChart.UWP](https://www.nuget.org/packages/Syncfusion.SfChart.UWP)</td><td>
 Contains the classes responsible for importing chart types such as line charts, pie charts, and sparklines.</td></tr>
 </table>
 
