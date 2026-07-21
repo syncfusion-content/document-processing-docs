@@ -141,13 +141,11 @@ return File(stream, "text/markdown", "Sample.md");
 
 {% endtabs %}
 
-Step 7: Add the image resource referenced in the table. Create a `Data` folder under the project's `wwwroot` directory (the default web root for ASP.NET Core) and add a `photo.jpg` file there. The `MdPicture.Url` value `"Data/photo.jpg"` is resolved relative to the rendered Markdown document's location, so place the image accordingly.
-
-Step 8: Build the project.
+Step 7: Build the project.
 
 Click on Build → Build Solution or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
-Step 9: Run the project.
+Step 8: Run the project.
 
 Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app. Open the browser, click the **Create Document** button on the Index page, and the `Sample.md` file will download.
 
