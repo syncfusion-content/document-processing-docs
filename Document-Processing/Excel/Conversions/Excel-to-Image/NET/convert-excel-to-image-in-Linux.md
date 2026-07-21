@@ -177,6 +177,6 @@ By executing the program, you will get the **Image** as follows.
 
 ![Output File](Linux_images/Linux_images_img6.png)
 
-Click [here](https://www.syncfusion.com/document-processing/excel-framework/net) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
+Click [here](https://www.syncfusion.com/document-sdk/net-excel-library) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
 An online sample link to [convert an Excel document to Image](https://ej2.syncfusion.com/aspnetcore/Excel/WorksheetToImage#/material3) in ASP.NET Core.
