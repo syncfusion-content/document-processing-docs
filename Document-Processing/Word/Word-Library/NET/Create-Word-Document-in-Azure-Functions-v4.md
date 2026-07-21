@@ -374,18 +374,6 @@ try
     inputStream.Dispose();
     fileStream.Dispose();
 }
-catch (WebException webEx)
-{
-    Console.WriteLine($"Request failed: {webEx.Status}. Verify the function URL and that the function key is appended as ?code=...");
-    if (webEx.Response != null)
-    {
-        using (var errStream = webEx.Response.GetResponseStream())
-        using (var reader = new StreamReader(errStream))
-        {
-            Console.WriteLine(reader.ReadToEnd());
-        }
-    }
-}
 catch (Exception ex)
 {
     Console.WriteLine($"An error occurred: {ex.Message}");
@@ -393,8 +381,6 @@ catch (Exception ex)
 
 {% endhighlight %}
 {% endtabs %}
-
-T> If you receive HTTP 401 Unauthorized, append the function key to the URL as `?code=<your-key>`. If you receive HTTP 404 Not Found, confirm the function name in the URL matches the `Function("Function1")` attribute.
 
 From GitHub, you can download the [console application](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Azure/Azure_Functions/Console_Application) and [Azure Functions v4](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Azure/Azure_Functions/Azure_Functions_v4) samples.   
 

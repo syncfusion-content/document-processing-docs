@@ -1,75 +1,108 @@
 ---
-title: Create Word document in UWP | Syncfusion
-description: Create Word document without Microsoft Word or interop dependencies in UWP application using Syncfusion<sup>&reg;</sup> UWP Word (DocIO) library.
+title: Create Word document in Xamarin | Syncfusion
+description: Create Word document without Microsoft Word or interop dependencies in Xamarin application using Syncfusion<sup>&reg;</sup> Xamarin Word (DocIO) library.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Create Word document in UWP
+# Create Word document in Xamarin
 
-Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [UWP Word library](https://www.syncfusion.com/document-processing/word-framework/uwp/word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in UWP**.
+Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [Xamarin Word library](https://www.syncfusion.com/document-processing/word-framework/xamarin/word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or **interop** dependencies. Using this library, you can **create a Word document in Xamarin**.
 
-## Steps to create Word document programmatically in UWP
+## Steps to create Word document programmatically
 
-Step 1: Create a new C# Blank App (Universal Windows) project.
+Step 1: Create a new Xamarin.Forms application project.
 
-![Create UWP application in Visual Studio](UWP_images/Create_Project.png)
+![Create Xamarin application in Visual Studio](Xamarin_images/Create-Project-WordtoPDF.png)
 
-Step 2: Install the [Syncfusion.DocIO.UWP](https://www.nuget.org/packages/Syncfusion.DocIO.UWP/) NuGet package as a reference to your UWP application from [NuGet.org](https://www.nuget.org/).
+## Prerequisites
 
-![Install DocIO UWP NuGet package](UWP_images/Install_NuGet.jpg)
+- Visual Studio with the **Mobile development with .NET** (Xamarin) workload installed.
+- For .NET 5+ targets, install the `Syncfusion.Xamarin.DocIO` NuGet package version that matches your target. The package is compatible with .NET Standard 2.0 and later.
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you also have to add a **Syncfusion.Licensing** assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+## License registration
 
-Step 3: Add a new button in the MainPage.xaml as shown below.
+Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a license key in your projects. For more information, see [registering the Syncfusion license key](https://help.syncfusion.com/common/essential-studio/licensing/overview).
+
+## Steps to create Word document programmatically
+
+Step 1: Create a new Xamarin.Forms application project.
+
+![Create Xamarin application in Visual Studio](Xamarin_images/Create-Project-WordtoPDF.png)
+
+Step 2: Select a project template and the required platforms to deploy the application. This sample uses the .NET Standard code sharing strategy so portable assemblies are shared across platforms. For more information about code sharing, see [Code sharing options](https://learn.microsoft.com/en-us/xamarin/cross-platform/app-fundamentals/code-sharing).
+
+![Create Xamarin CodeSharing Option](Xamarin_images/Template_WordtoPDF.png)
+
+Step 3: Install the [Syncfusion.Xamarin.DocIO](https://www.nuget.org/packages/Syncfusion.Xamarin.DocIO) NuGet package as a reference to the .NET Standard project in your application from [NuGet.org](https://www.nuget.org/). Also install the same package in each platform-specific project (iOS, Android, and UWP).
+
+![Install DocIO Xamarin NuGet package](Xamarin_images/Install_Nuget.png)
+
+Step 4: Add a new Forms XAML page in the **portable project**. If no XAML page is defined in the App class, complete the following sub-steps. Otherwise, proceed to the next step.
+<ul>
+<li>
+To add the new XAML page, right-click on the project, select <b>Add > New Item</b>, and add a Forms XAML Page from the list. Name it <b>MainXamlPage</b>.
+</li>
+<li>
+In the <b>App</b> class of the <b>portable project</b> (App.cs), replace the existing constructor of the <b>App</b> class with the code snippet given below, which invokes the <b>MainXamlPage</b>.
+</li>
+</ul>
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+public App()
+{
+    // The root page of your application
+    MainPage = new MainXamlPage();
+}
+{% endhighlight %}
+
+{% endtabs %}
+
+Step 5: In the MainXamlPage.xaml file, add a new button as shown in the following example.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
 
-<Page
-    x:Class="CreateWordSample.MainPage"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:CreateWordSample"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="GettingStarted.MainXamlPage">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button x:Name="button" Content="Create Document" Click="OnButtonClicked" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-    </Grid>
-</Page>
+    <StackLayout VerticalOptions="Center">
+        <Button Text="Generate Document" Clicked="OnButtonClicked" HorizontalOptions="Center"/>
+    </StackLayout>
+</ContentPage>
 
 {% endhighlight %}
 
 {% endtabs %}
 
-Step 4: Include the following namespaces in the MainPage.xaml.cs file.
+Step 6: Include the following namespace in the MainXamlPage.xaml.cs file.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
-using Windows.Storage.Pickers;
-using Windows.Storage;
-using Windows.Storage.Streams;
 using System.Reflection;
+using System.IO;
 {% endhighlight %}
 
 {% endtabs %}
 
-Step 5: Add the required image assets (`AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, and `Road-550-W.jpg`) to an `Assets` folder in your project, and set their **Build Action** to **Embedded Resource** so they can be loaded as manifest resources at runtime.
-
-Step 6: Include the below code snippet in the click event of the button in MainPage.xaml.cs to **create a Word document** and save it as a physical file. The file will be opened for viewing automatically.
+Step 7: Include the below code snippet in the click event of the button in MainXamlPage.xaml.cs, to create Word document and save it in a stream.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-private async void OnButtonClicked(object sender, RoutedEventArgs e)
+
+void OnButtonClicked(object sender, EventArgs args)
 {
+    //"App" is the class of Portable project
+    Assembly assembly = typeof(App).GetTypeInfo().Assembly;
     //Creating a new document
     WordDocument document = new WordDocument();
     //Adding a new section to the document
@@ -77,7 +110,7 @@ private async void OnButtonClicked(object sender, RoutedEventArgs e)
     //Set Margin of the section
     section.PageSetup.Margins.All = 72;
     //Set page size of the section
-    section.PageSetup.PageSize = new SizeF(612, 792);
+    section.PageSetup.PageSize = new Syncfusion.Drawing.SizeF(612, 792);
 
     //Create Paragraph styles
     WParagraphStyle style = document.AddParagraphStyle("Normal") as WParagraphStyle;
@@ -91,7 +124,7 @@ private async void OnButtonClicked(object sender, RoutedEventArgs e)
     style.ApplyBaseStyle("Normal");
     style.CharacterFormat.FontName = "Calibri Light";
     style.CharacterFormat.FontSize = 16f;
-    style.CharacterFormat.TextColor = Color.FromArgb(46, 116, 181);
+    style.CharacterFormat.TextColor = Syncfusion.Drawing.Color.FromArgb(46, 116, 181);
     style.ParagraphFormat.BeforeSpacing = 12;
     style.ParagraphFormat.AfterSpacing = 0;
     style.ParagraphFormat.Keep = true;
@@ -100,8 +133,8 @@ private async void OnButtonClicked(object sender, RoutedEventArgs e)
 
     IWParagraph paragraph = section.HeadersFooters.Header.AddParagraph();
     //Gets the image stream
-    Stream imageStream = typeof(MainPage).GetTypeInfo().Assembly.GetManifestResourceStream("CreateWordSample.Assets.AdventureCycle.jpg");
-    IWPicture picture = paragraph.AppendPicture(imageStream);
+    Stream imageStream1 = assembly.GetManifestResourceStream("GettingStarted.Templates.AdventureCycle.jpg");
+    IWPicture picture = paragraph.AppendPicture(imageStream1);
     picture.TextWrappingStyle = TextWrappingStyle.InFrontOfText;
     picture.VerticalOrigin = VerticalOrigin.Margin;
     picture.VerticalPosition = -45;
@@ -111,16 +144,16 @@ private async void OnButtonClicked(object sender, RoutedEventArgs e)
     picture.HeightScale = 15;
 
     paragraph.ApplyStyle("Normal");
-    paragraph.ParagraphFormat.HorizontalAlignment = Syncfusion.DocIO.DLS.HorizontalAlignment.Left;
+    paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Left;
     WTextRange textRange = paragraph.AppendText("Adventure Works Cycles") as WTextRange;
     textRange.CharacterFormat.FontSize = 12f;
     textRange.CharacterFormat.FontName = "Calibri";
-    textRange.CharacterFormat.TextColor = Color.Red;
+    textRange.CharacterFormat.TextColor = Syncfusion.Drawing.Color.Red;
 
     //Appends paragraph
     paragraph = section.AddParagraph();
     paragraph.ApplyStyle("Heading 1");
-    paragraph.ParagraphFormat.HorizontalAlignment = Syncfusion.DocIO.DLS.HorizontalAlignment.Center;
+    paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
     textRange = paragraph.AppendText("Adventure Works Cycles") as WTextRange;
     textRange.CharacterFormat.FontSize = 18f;
     textRange.CharacterFormat.FontName = "Calibri";
@@ -141,7 +174,7 @@ private async void OnButtonClicked(object sender, RoutedEventArgs e)
 
     paragraph = section.AddParagraph();
     paragraph.ApplyStyle("Heading 1");
-    paragraph.ParagraphFormat.HorizontalAlignment = Syncfusion.DocIO.DLS.HorizontalAlignment.Left;
+    paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Left;
     textRange = paragraph.AppendText("Product Overview") as WTextRange;
     textRange.CharacterFormat.FontSize = 16f;
     textRange.CharacterFormat.FontName = "Calibri";
@@ -156,8 +189,8 @@ private async void OnButtonClicked(object sender, RoutedEventArgs e)
     paragraph.ParagraphFormat.AfterSpacing = 0;
     paragraph.BreakCharacterFormat.FontSize = 12f;
     //Appends picture to the paragraph
-    imageStream = typeof(MainPage).GetTypeInfo().Assembly.GetManifestResourceStream("CreateWordSample.Assets.Mountain-200.jpg");
-    picture = paragraph.AppendPicture(imageStream);
+    Stream imageStream2 = assembly.GetManifestResourceStream("GettingStarted.Templates.Mountain-200.jpg");
+    picture = paragraph.AppendPicture(imageStream2);
     picture.TextWrappingStyle = TextWrappingStyle.TopAndBottom;
     picture.VerticalOrigin = VerticalOrigin.Paragraph;
     picture.VerticalPosition = 4.5f;
@@ -231,8 +264,8 @@ private async void OnButtonClicked(object sender, RoutedEventArgs e)
     paragraph.ApplyStyle("Heading 1");
     paragraph.ParagraphFormat.LineSpacing = 12f;
     //Appends picture to the paragraph
-    imageStream = typeof(MainPage).GetTypeInfo().Assembly.GetManifestResourceStream("CreateWordSample.Assets.Mountain-300.jpg");
-    picture = paragraph.AppendPicture(imageStream);
+    Stream imageStream3 = assembly.GetManifestResourceStream("GettingStarted.Templates.Mountain-300.jpg");
+    picture = paragraph.AppendPicture(imageStream3);
     picture.TextWrappingStyle = TextWrappingStyle.TopAndBottom;
     picture.VerticalOrigin = VerticalOrigin.Paragraph;
     picture.VerticalPosition = 8.2f;
@@ -246,8 +279,8 @@ private async void OnButtonClicked(object sender, RoutedEventArgs e)
     paragraph.ApplyStyle("Heading 1");
     paragraph.ParagraphFormat.LineSpacing = 12f;
     //Appends picture to the paragraph
-    imageStream = typeof(MainPage).GetTypeInfo().Assembly.GetManifestResourceStream("CreateWordSample.Assets.Road-550-W.jpg");
-    picture = paragraph.AppendPicture(imageStream);
+    Stream imageStream4 = assembly.GetManifestResourceStream("GettingStarted.Templates.Road-550-W.jpg");
+    picture = paragraph.AppendPicture(imageStream4);
     picture.TextWrappingStyle = TextWrappingStyle.TopAndBottom;
     picture.VerticalOrigin = VerticalOrigin.Paragraph;
     picture.VerticalPosition = 3.75f;
@@ -283,71 +316,112 @@ private async void OnButtonClicked(object sender, RoutedEventArgs e)
     //Appends paragraph
     section.AddParagraph();
 
-    MemoryStream stream = new MemoryStream();
     //Saves the Word document to MemoryStream
-    await document.SaveAsync(stream, FormatType.Docx);
-    //Saves the stream as Word document file in local machine
-    Save(stream, "Sample.docx");
-    //Disposes the Word document instance
-    document.Dispose();
+    MemoryStream stream = new MemoryStream();
+    document.Save(stream, FormatType.Docx);
+    //Save the stream as a file in the device and invoke it for viewing
+    Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView("Sample.docx", "application/msword", stream);          
 }
 {% endhighlight %}
 
 {% endtabs %}
 
-## Save Word document in UWP
+## Helper files for Xamarin
 
-{% tabs %}
+Download the helper files from this [link](https://www.syncfusion.com/downloads/support/directtrac/general/HELPER~1-696201504.ZIP) and add them into the mentioned project. These helper files allow you to save the stream as a physical file and open the file for viewing.
 
-{% highlight c# tabtitle="C#" %}
-//Saves the Word document
-async void Save(MemoryStream stream, string filename)
-{
-    stream.Position = 0;
-    StorageFile stFile;
-    if (!(Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Phone.UI.Input.HardwareButtons")))
-    {
-        FileSavePicker savePicker = new FileSavePicker();
-        savePicker.DefaultFileExtension = ".docx";
-        savePicker.SuggestedFileName = filename;
-        savePicker.FileTypeChoices.Add("Word Documents", new List<string>() { ".docx" });
-        stFile = await savePicker.PickSaveFileAsync();
-    }
-    else
-    {
-        StorageFolder local = Windows.Storage.ApplicationData.Current.LocalFolder;
-        stFile = await local.CreateFileAsync(filename, CreationCollisionOption.ReplaceExisting);
-    }
-    if (stFile != null)
-    {
-        using (IRandomAccessStream zipStream = await stFile.OpenAsync(FileAccessMode.ReadWrite))
-        {
-            //Write compressed data from memory to file
-            using (Stream outstream = zipStream.AsStreamForWrite())
-            {
-                byte[] buffer = stream.ToArray();
-                outstream.Write(buffer, 0, buffer.Length);
-                outstream.Flush();
-            }
-        }
-    //Launch the saved Word file
-        await Windows.System.Launcher.LaunchFileAsync(stFile);
-    }
-    //Disposes the MemoryStream
-    stream.Dispose();
-}
-{% endhighlight %}
+<table>
+  <tr>
+  <td>
+    <b>Project</b>
+  </td>
+  <td>
+    <b>File Name</b>
+  </td>
+  <td>
+    <b>Summary</b>
+  </td>
+  </tr>
+  <tr>
+  <td>
+    Portable project
+  </td>
+  <td>
+    ISave.cs
+  </td>
+  <td>Represent the base interface for save operation
+  </td>
+  </tr>
+  <tr>
+  <td rowspan="2">
+    iOS Project
+  </td>
+  <td>
+    SaveIOS.cs
+  </td>
+  <td>
+    Save implementation for iOS device
+  </td>
+  </tr>
+  <tr>
+  <td>
+    PreviewControllerDS.cs
+  </td>
+  <td>
+    Helper class for viewing the <b>Word document</b> in iOS device
+  </td>
+  </tr>
+  <tr>
+  <td>
+    Android project
+  </td>
+  <td>
+    SaveAndroid.cs
+  </td>
+  <td>Save implementation for Android device
+  </td>
+  </tr>
+  <tr>
+  <td>
+    WinPhone project
+  </td>
+  <td>
+    SaveWinPhone.cs
+  </td>
+  <td>Save implementation for Windows Phone device
+  </td>
+  </tr>
+  <tr>
+  <td>
+    UWP project
+  </td>
+  <td>
+    SaveWindows.cs
+  </td>
+  <td>Save implementation for UWP device.
+  </td>
+  </tr>
+  <tr>
+  <td>
+    Windows (8.1) project
+  </td>
+  <td>
+    SaveWindows81.cs
+  </td>
+  <td>Save implementation for WinRT device.
+  </td>
+  </tr>
+</table>
 
-{% endtabs %}
+Compile and execute the application. Now this application **creates a Word document**.
 
-Step 7: Build and run the UWP application. Click the **Create Document** button to generate and view the Word document.
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/UWP).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Xamarin).
 
 By executing the program, you will get the Word document as follows.
 
-![UWP output Word document](UWP_images/GettingStartedOutput.jpg)
+![Xamarin output Word document](Xamarin_images/GettingStartedOutput.jpg)
 
-Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.
+## See also
 
-An online sample link to [create a Word document](https://document.syncfusion.com/demos/word/helloworld#/tailwind) in ASP.NET Core. 
+- [Complete Xamarin working sample on GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Xamarin)
+- [.NET Word Library overview, features, and pricing](https://www.syncfusion.com/document-sdk/net-word-library) 

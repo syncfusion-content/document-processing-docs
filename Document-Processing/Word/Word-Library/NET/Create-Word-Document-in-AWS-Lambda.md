@@ -278,10 +278,9 @@ textRange.CharacterFormat.FontName = "Times New Roman";
 section.AddParagraph();
 
 //Save the Word document into stream
-using MemoryStream stream = new MemoryStream();
+MemoryStream stream = new MemoryStream();
 document.Save(stream, FormatType.Docx);
 return Convert.ToBase64String(stream.ToArray());
-}
 
 {% endhighlight %}
 {% endtabs %}

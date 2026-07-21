@@ -21,7 +21,6 @@ Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Word libra
 * Visual Studio 2022.
 * Install **.NET desktop development** workload with necessary .NET Framework SDK.
 * .NET Framework 4.6.2 or later (4.8 recommended). This sample targets .NET Framework (not .NET / .NET Core).
-* The following image files placed in the application's output (bin) directory (or a path resolvable from the working folder): `AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, and `Road-550-W.jpg`.
 
 Step 1: Create a new Windows Forms application project.
 

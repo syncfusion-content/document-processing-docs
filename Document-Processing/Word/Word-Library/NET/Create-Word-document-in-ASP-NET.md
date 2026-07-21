@@ -20,7 +20,7 @@ Before you begin, ensure the following are available:
 - **.NET Framework 4.5.2 or later** (required by the `Syncfusion.DocIO.AspNet` NuGet package, starting with v16.2.0.x).
 - **Syncfusion.DocIO.AspNet** NuGet package (install in Step 3).
 
-## Steps to create Word document programmatically:
+## Steps to create Word document programmatically
 
 Step 1: Create a new ASP.NET Web application project.
 

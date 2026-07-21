@@ -10,7 +10,7 @@ documentation: UG
 
 Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to **create**, read, and edit **Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in WPF**.
 
-## Steps to create Word document programmatically in WPF:
+## Steps to create Word document programmatically in WPF
 
 {% tabcontents %}
 
