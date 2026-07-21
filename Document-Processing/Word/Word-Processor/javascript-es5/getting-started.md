@@ -140,10 +140,10 @@ N> This example uses the `Tailwind 3` theme. To use a different built-in theme, 
 
 ## Register a Syncfusion License Key
 
-Before initializing the Javascript (ES5) DOCX Editor control, generate a Syncfusion license key and register it in your application.
+Before initializing the JavaScript (ES5) DOCX Editor control, generate a Syncfusion license key and register it in your application.
 
 - [Generate a Syncfusion License Key](https://help.syncfusion.com/document-processing/licensing/how-to-generate)
-- [Register a Syncfusion License Key in Javascript ES5](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#javascript-es5)
+- [Register a Syncfusion License Key in JavaScript ES5](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#javascript-es5)
 
 ## Initialize the DOCX Editor
 

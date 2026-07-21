@@ -183,4 +183,4 @@ For detailed information about server-side web services, refer to the [Web Servi
 * [Open a document](./import)
 * [Save a document](./export)
 * [Collaborative Editing](./collaborative-editing/overview)
-* [Troubleshooting](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es6/)
+* [Troubleshooting](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es6/troubleshooting)

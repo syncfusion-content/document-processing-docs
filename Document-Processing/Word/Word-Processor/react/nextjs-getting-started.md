@@ -37,7 +37,7 @@ yarn create next-app
 
 Using one of the above commands will prompt you to configure additional settings for the project:
 
-**Step 2:** Specify the name of the project directly. In this example, the project is named `ej2-nextjs-documenteditor`:
+**Step 2:** Specify the name of the project directly.
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}

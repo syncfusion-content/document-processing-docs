@@ -105,7 +105,7 @@ After the packages are installed, open the **_Imports.razor** file (typically lo
 Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor WebAssembly App. Place the registration after the host builder is created and before `await builder.Build().RunAsync();`.
 
 {% tabs %}
-{% highlight C# tabtitle="Program.cs" hl_lines="3 11"%}
+{% highlight C# tabtitle="Program.cs" hl_lines="3 11" %}
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Syncfusion.Blazor;
@@ -118,6 +118,7 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 
 builder.Services.AddSyncfusionBlazor();
 await builder.Build().RunAsync();
+
 {% endhighlight %}
 {% endtabs %}
 

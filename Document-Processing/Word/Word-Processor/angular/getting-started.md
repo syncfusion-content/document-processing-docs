@@ -194,4 +194,4 @@ Follow this quick walkthrough to install, configure, and start using the Angular
 - [Open a document](./import)
 - [Save a document](./export)
 - [Collaborative Editing](./collaborative-editing/overview)
-- [Troubleshooting](https://help.syncfusion.com/document-processing/word/word-processor/angular/troubleshooting/)
+- [Troubleshooting](https://help.syncfusion.com/document-processing/word/word-processor/angular/troubleshooting)

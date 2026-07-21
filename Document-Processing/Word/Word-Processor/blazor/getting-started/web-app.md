@@ -151,9 +151,11 @@ N> If you are using the **WebAssembly** or **Auto** interactive render mode in a
 The theme stylesheet can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the `<head>` section of your `Components/App.razor` file.
 
 {% tabs %}
-{% highlight razor tabtitle="Components/App.razor" % }
+{% highlight razor tabtitle="Components/App.razor" %}
+
 <!-- Add Syncfusion theme -->
 <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+
 {% endhighlight %}
 {% endtabs %}
 
