@@ -69,9 +69,7 @@ using System.Reflection;
 
 {% endtabs %}
 
-Step 5: Add the required image assets (`AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, and `Road-550-W.jpg`) to an `Assets` folder in your project, and set their **Build Action** to **Embedded Resource** so they can be loaded as manifest resources at runtime.
-
-Step 6: Include the below code snippet in the click event of the button in MainPage.xaml.cs to **create a Word document** and save it as a physical file. The file will be opened for viewing automatically.
+Step 5: Include the below code snippet in the click event of the button in MainPage.xaml.cs to **create a Word document** and save it as a physical file. The file will be opened for viewing automatically.
 
 {% tabs %}
 
@@ -348,7 +346,7 @@ async void Save(MemoryStream stream, string filename)
 
 {% endtabs %}
 
-Step 7: Build and run the UWP application. Click the **Create Document** button to generate and view the Word document.
+Step 6: Build and run the UWP application. Click the **Create Document** button to generate and view the Word document.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/UWP).
 

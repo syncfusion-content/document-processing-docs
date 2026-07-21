@@ -41,9 +41,7 @@ N> ```
 N>
 N> For more information about generating and registering a license key, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
-Step 5: Add the image files (`AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, `Road-550-W.jpg`) to a `Data` folder in the project, set **Build Action** to **Embedded Resource**, and make sure the project's default namespace is **`Create_Word_Document`** so the `GetManifestResourceStream` calls in the next step resolve correctly.
-
-Step 6: Include the following namespaces in the **Function1.cs** file.
+Step 5: Include the following namespaces in the **Function1.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -60,7 +58,7 @@ using Syncfusion.DocIO.DLS;
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Add the following code snippet in the **Run** method of the **Function1** class to create a Word document in Azure Functions and return the resulting Word document to the client. The full method signature is shown below; the `[Function]` and `[HttpTrigger]` attributes define the HTTP trigger that the function responds to.
+Step 6: Add the following code snippet in the **Run** method of the **Function1** class to create a Word document in Azure Functions and return the resulting Word document to the client. The full method signature is shown below; the `[Function]` and `[HttpTrigger]` attributes define the HTTP trigger that the function responds to.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -302,28 +300,28 @@ return response;
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Right-click the project and select **Publish**. Then, create a new profile in the Publish window.
+Step 7: Right-click the project and select **Publish**. Then, create a new profile in the Publish window.
 ![Create a new profile in the Publish window](Azure-Images/Functions-v1/Publish-Create-Word-Document.png)
 
-Step 9: Select the target as **Azure** and click the **Next** button.
+Step 8: Select the target as **Azure** and click the **Next** button.
 ![Select the target as Azure](Azure-Images/Functions-v1/Target_WordtoPDF.png)
 
-Step 10: Select the **Create new** button.
+Step 9: Select the **Create new** button.
 ![Configure Hosting Plan](Azure-Images/Functions-v1/Function_Instance_WordtoPDF.png)
 
-Step 11: Click the **Create** button.
+Step 10: Click the **Create** button.
 ![Select the plan type](Azure-Images/Functions-v1/Hosting-Create-Word-Document.png)
 
-Step 12: After the app service is created, click the **Finish** button.
+Step 11: After the app service is created, click the **Finish** button.
 ![Creating app service](Azure-Images/Functions-v1/App-Create-Word-Document.png)
 
-Step 13: Click the **Publish** button.
+Step 12: Click the **Publish** button.
 ![Click Publish Button](Azure-Images/Functions-v1/Before-Publish-Create-Word-Document.png)
 
-Step 14: Publish succeeded.
+Step 13: Publish succeeded.
 ![Publish succeeded](Azure-Images/Functions-v1/After-Publish-Create-Word-Document.png)
 
-Step 15: Go to the Azure portal and select **App Services**. After running the service, click **Get Function URL** and copy it. Then, use it in the client sample below, which requests the Azure Functions to create a Word document. You will get the output Word document as follows.
+Step 14: Go to the Azure portal and select **App Services**. After running the service, click **Get Function URL** and copy it. Then, use it in the client sample below, which requests the Azure Functions to create a Word document. You will get the output Word document as follows.
 
 ![Create a Word document in Azure Functions v4](ASP-NET-Core_images/GettingStartedOutput.jpg)
 

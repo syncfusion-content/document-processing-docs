@@ -336,7 +336,6 @@ By executing the program, you will get the **Word document** as follows.
 
 * JetBrains Rider.
 * Install the .NET Framework Developer Pack matching the target framework (e.g., .NET Framework 4.8 Developer Pack for a 4.8 target). This sample targets .NET Framework (not .NET / .NET Core).
-* The following image files placed in the application's output (bin) directory (or a path resolvable from the working folder): `AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, and `Road-550-W.jpg`.
 
 Step 1: Open JetBrains Rider and create a new Windows Forms Application project.
 * Launch JetBrains Rider.
