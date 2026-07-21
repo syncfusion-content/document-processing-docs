@@ -36,6 +36,27 @@ To ensure the control is styled correctly, install the theme package:
 
 •	[Syncfusion.Themes.Windows11Light.WPF](https://www.nuget.org/packages/Syncfusion.Themes.Windows11Light.WPF)
 
+The following table lists the optional NuGet packages that enable additional features in the SfSpreadsheet control.
+
+<table>
+<tr>
+<th>
+Optional NuGet Packages</th><th>
+Description</th></tr>
+<tr>
+<td>
+Syncfusion.SfSpreadsheetHelper.WPF</td><td>
+Contains the classes that are responsible for importing charts and sparklines into SfSpreadsheet.</td></tr>
+<tr>
+<td>
+Syncfusion.ExcelChartToImageConverter.WPF</td><td>
+Contains the classes that are responsible for converting charts as images.</td></tr>
+<tr>
+<td>
+Syncfusion.SfChart.WPF</td><td>
+Contains the classes that are responsible for importing charts such as Line, Pie, Column, and Bar charts. Sparklines are handled by <code>Syncfusion.SfSpreadsheetHelper.WPF</code>, not by this package.</td></tr>
+</table>
+
 {% endtabcontent %}
  
 {% tabcontent Assemblies (.dll) %}
@@ -83,7 +104,7 @@ N> Add these references to your project to use the skinning and theming capabili
 
 ### Optional Assemblies
 
-The following optional assemblies enable additional features in the SfSpreadsheet control. Add only those required by your scenario. Each optional assembly is also available as a NuGet package with the same base name (for example, `Syncfusion.SfSpreadsheetHelper.WPF`).
+The following table lists the optional assemblies that enable additional features in the SfSpreadsheet control.
 
 <table>
 <tr>

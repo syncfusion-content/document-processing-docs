@@ -32,6 +32,27 @@ To add the **Windows Forms Spreadsheet** component in the application, open the 
 
 •	[Syncfusion.Spreadsheet.Windows](https://www.nuget.org/packages/Syncfusion.Spreadsheet.Windows)
 
+The following table lists the optional NuGet packages that enable additional features in the Spreadsheet control.
+
+<table>
+<tr>
+<th>
+Optional NuGet Packages</th><th>
+Description</th></tr>
+<tr>
+<td>
+Syncfusion.SpreadsheetHelper.Windows</td><td>
+Contains the classes that import charts and sparklines into the Spreadsheet.</td></tr>
+<tr>
+<td>
+Syncfusion.ExcelChartToImageConverter.WPF</td><td>
+Contains the classes that convert charts to images.</td></tr>
+<tr>
+<td>
+Syncfusion.Chart.Windows</td><td>
+Contains the classes that create charts that hold axes, series, and legends.</td></tr>
+</table>
+
 {% endtabcontent %}
 
 {% tabcontent Manual (.dll) %}
