@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with UWP Spreadsheet (SfSpreadsheet)
 
-This section briefly explains how to include the [Syncfusion<sup>®</sup> UWP Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/uwp-spreadsheet-editor) component in UWP App using Visual Studio
+This section briefly explains how to include the [UWP Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/uwp-spreadsheet-editor) component in UWP App using Visual Studio
 
 ## Prerequisites
 * [System requirements for UWP components](https://help.syncfusion.com/uwp/system-requirements)
@@ -36,6 +36,27 @@ You can add a UWP spreadsheet component to your application by installing it via
 To add the **UWP Spreadsheet** component to the application, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install:
 
 •	[Syncfusion.SfSpreadsheet.UWP](https://www.nuget.org/packages/Syncfusion.SfSpreadsheet.UWP)
+
+The following table lists the optional NuGet packages that enable additional features in the SfSpreadsheet control.
+
+<table>
+<tr>
+<th>
+Optional NuGet Packages</th><th>
+Description</th></tr>
+<tr>
+<td>
+[Syncfusion.SfSpreadsheetHelper.UWP](https://www.nuget.org/packages/Syncfusion.SfSpreadsheetHelper.UWP)</td><td>
+Contains the classes responsible for importing charts and sparklines into SfSpreadsheet.</td></tr>
+<tr>
+<td>
+[Syncfusion.ExcelChartToImageConverter.UWP](https://www.nuget.org/packages/Syncfusion.ExcelChartToImageConverter.UWP)</td><td>
+Contains the classes responsible for converting charts to images.</td></tr>
+<tr>
+<td>
+[Syncfusion.SfChart.UWP](https://www.nuget.org/packages/Syncfusion.SfChart.UWP)</td><td>
+Contains the classes responsible for importing chart types such as line charts, pie charts, and sparklines.</td></tr>
+</table>
 
 {% endtabcontent %}
 
