@@ -60,7 +60,9 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
-Otherwise, you can disable clicking inside header or footer by using [`closeHeaderFooter`](https://ej2.syncfusion.com/react/documentation/api/document-editor/selection#closeheaderfooter) API in selection module.
+### Disable header and footer edit using closeHeaderFooter API
+
+As an alternative to `restrictEditing`, you can disable clicking inside Header or Footer by using [`closeHeaderFooter`](https://ej2.syncfusion.com/react/documentation/api/document-editor/selection#closeheaderfooter) API in selection module. This method closes the active header or footer region when the selection enters it, returning the selection to the document body and preventing header/footer modification.
 
 The following example code illustrates how to disable header and footer edit in `DocumentEditorContainer` instance.
 
