@@ -22,9 +22,9 @@ Follow these steps to open the thumbnail pane from application code.
 
     <script>
    function openThumbnail() {
-    var viewer = document.getElementById('container').ej2_instances[0];
-    // Open Thumbnail pane
-    viewer.thumbnailViewModule.openThumbnailPane();
+      var viewer = document.getElementById('container').ej2_instances[0];
+      // Open Thumbnail pane
+      viewer.thumbnailViewModule.openThumbnailPane();
    }
    </script>
    ```
