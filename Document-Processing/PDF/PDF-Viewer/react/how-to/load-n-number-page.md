@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Load N number of pages on initial loading | Syncfusion
-description: Learn how to Load N number of pages on initial loading in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Load N number of pages on initial loading
+title: Load N pages on initial load | Syncfusion
+description: Learn how to load N pages on initial load in the Syncfusion React PDF Viewer component and more.
+control: Load N pages on initial load
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
@@ -32,8 +32,8 @@ function App() {
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         style={{ 'height': '640px' }}
-        initialRenderPages = {10}>
-              <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation,
+        initialRenderPages={10}>
+              <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
                                   BookmarkView, ThumbnailView, Print, TextSelection, TextSearch]} />
       </PdfViewerComponent>
     </div>
@@ -62,8 +62,8 @@ function App() {
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
         style={{ 'height': '640px' }}
-        initialRenderPages = {10}>
-              <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation,
+        initialRenderPages={10}>
+              <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
                                   BookmarkView, ThumbnailView, Print, TextSelection, TextSearch]} />
       </PdfViewerComponent>
     </div>
