@@ -2,7 +2,7 @@
 layout: post
 title: Disable header and footer in React Document Editor using Syncfusion
 description: Learn here all about Disable header and footer edit in document editor in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
-control: Disable header and footer edit in document editor 
+control: Disable header and footer edit in document editor
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
@@ -14,9 +14,9 @@ domainurl: ##DomainURL##
 
 You can use [`restrictEditing`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container#restrictediting) property to disable header and footer editing based on selection context type.
 
-RestrictEditing allows you to restrict the document modification and makes the Document read only mode. So, by using this property, and if selection inside header or footer, you can set this property as true.
+The `restrictEditing` property restricts document modification, enabling read-only mode. Set this property to `true` when the selection is inside a header or footer.
 
-The following example code illustrates how to header and footer edit in `DocumentEditorContainer` instance.
+The following example code illustrates how to disable header and footer editing in a `DocumentEditorContainer` instance.
 
 ```ts
 import * as ReactDOM from 'react-dom';
@@ -30,11 +30,11 @@ DocumentEditorContainerComponent.Inject(Toolbar);
 function App() {
   let container: DocumentEditorContainerComponent;
   function selectionChanges() {
-    // Check whether selection is in header
+    // Check whether selection is in Header
     if (container.documentEditor.selection.contextType.indexOf('Header') > -1 ||
       // Check whether selection is in Footer
       container.documentEditor.selection.contextType.indexOf('Footer') > -1) {
-      // Change the document to read only mode
+      // Change the document to read-only mode
       container.restrictEditing = true;
     } else {
       // Change the document to editable mode
@@ -76,11 +76,11 @@ DocumentEditorContainerComponent.Inject(Toolbar);
 function App() {
   let container: DocumentEditorContainerComponent;
   function selectionChanges() {
-    // Check whether selection is in header
+    // Check whether selection is in Header
     if (container.documentEditor.selection.contextType.indexOf('Header') > -1 ||
       // Check whether selection is in Footer
       container.documentEditor.selection.contextType.indexOf('Footer') > -1) {
-      // Close header Footer
+      // Close Header and Footer
       container.documentEditor.selection.closeHeaderFooter();
     }
   };
@@ -105,9 +105,9 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ## Disable header and footer edit in DocumentEditor instance
 
-Like restrictEditing, you can use [`isReadOnly`](https://ej2.syncfusion.com/react/documentation/api/document-editor#isreadonly) property in Document editor to disable header and footer edit.
+Like restrictEditing, you can use the [`isReadOnly`](https://ej2.syncfusion.com/react/documentation/api/document-editor#isreadonly) property in the Document Editor to disable header and footer editing.
 
-The following example code illustrates how to header and footer edit in `DocumentEditor` instance.
+The following example code illustrates how to disable header and footer editing in a `DocumentEditor` instance.
 
 ```ts
 import * as ReactDOM from 'react-dom';
@@ -119,7 +119,7 @@ import {
 } from '@syncfusion/ej2-react-documenteditor';
 DocumentEditorComponent.Inject(Editor, Selection);
 function App() {
-  let documentEditor;
+  let documentEditor: DocumentEditorComponent;
   React.useEffect(() => {
     documentEditor.selectionChange = () => {
       setTimeout(() => {
@@ -129,13 +129,13 @@ function App() {
   }, []);
 
   function onSelectionChange() {
-    // Check whether selection is in header
+    // Check whether selection is in Header
     if (
       documentEditor.selection.contextType.indexOf('Header') > -1 ||
       // Check whether selection is in Footer
       documentEditor.selection.contextType.indexOf('Footer') > -1
     ) {
-      // Change the document to read only mode
+      // Change the document to read-only mode
       documentEditor.isReadOnly = true;
     } else {
       // Change the document to editable mode
