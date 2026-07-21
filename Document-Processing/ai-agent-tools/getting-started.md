@@ -64,7 +64,7 @@ The example below uses the Microsoft Agents Framework with OpenAI. The same step
 |---|---|
 | .NET SDK | .NET 8.0 or later|
 | AI Provider API Key | Required to authenticate requests to the AI provider. This page uses OpenAI.|
-| NuGet Packages | [Microsoft.Agents.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Agents.AI.OpenAI)|
+| NuGet Package | [Microsoft.Agents.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Agents.AI.OpenAI)|
 
 ### Integration
 
