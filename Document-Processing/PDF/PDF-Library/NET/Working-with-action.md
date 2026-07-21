@@ -50,7 +50,7 @@ PdfLaunchAction action = new PdfLaunchAction("logo.png");
 document.Actions.AfterOpen = action;
 
 //Save the document
-document.Save("LaunchAction.pdf");
+document.Save("Output.pdf");
 //Close the document
 document.Close(true);
 
@@ -69,7 +69,7 @@ Dim action As New PdfLaunchAction("logo.png")
 document.Actions.AfterOpen = action
 
 'Save the document
-document.Save("LaunchAction.pdf")
+document.Save("Output.pdf")
 document.Close(True)
 
 {% endhighlight %}
@@ -80,16 +80,17 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Supported action types
 
-Essential<sup>&reg;</sup> PDF supports the following types of actions.
+Essential<sup>&reg;</sup> PDF supports the following types of actions. See the sections below for detailed examples and usage:
 
-* [PdfSoundAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfSoundAction.html) that plays the music file
-* [PdfJavaScriptAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfJavaScriptAction.html) that executes PDF JavaScript code
-* [PdfUriAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfUriAction.html) that launches the URI
-* [PdfGoToAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfGoToAction.html) that goes to the specified page of the document
-* [PdfLaunchAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLaunchAction.html) that launches the application or opens the document
-* [PdfNamedAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfNamedAction.html) that goes to the named destination: next, previous, first or last page
-* [PdfSubmitAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfSubmitAction.html) that submits the data that is entered into the PDF form
-* [PdfResetAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfResetAction.html) that resets the fields of the PDF form
+* [PdfSoundAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfSoundAction.html)
+* [PdfJavaScriptAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfJavaScriptAction.html)
+* [PdfUriAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfUriAction.html)
+* [PdfGoToAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfGoToAction.html)
+* [PdfLaunchAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLaunchAction.html)
+* [PdfNamedAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfNamedAction.html)
+* [PdfSubmitAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfSubmitAction.html)
+* [PdfResetAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfResetAction.html)
+* [PdfRemoteGoToAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRemoteGoToAction.html)
 
 ### Sound action
 
@@ -182,7 +183,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### JavaScript action
 
-The [PdfJavaScriptAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfJavaScriptAction.html) allows execution of **JavaScript** code embedded in the PDF document.
+The [PdfJavaScriptAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfJavaScriptAction.html) executes **JavaScript** code embedded in the PDF document.
 
 {% tabs %}
 
@@ -257,12 +258,11 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Actions/Add-JavaScript-action-to-the-PDF-document/).
 
-N> You can refer more PDF JavaScript code in **PdfJavaScriptAction** from the below developer guide.
-N> [https://opensource.adobe.com/dc-acrobat-sdk-docs/library/jsdevguide/index.html](https://opensource.adobe.com/dc-acrobat-sdk-docs/library/jsdevguide/index.html)
+N> For more PDF JavaScript code examples, refer to the [Adobe JavaScript Developer Guide](https://opensource.adobe.com/dc-acrobat-sdk-docs/library/jsdevguide/index.html).
 
 ### URI action
 
-The [PdfUriAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfUriAction.html) allows you to create a hyperlink that can open web page in a web browser.
+The [PdfUriAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfUriAction.html) allows you to create a hyperlink that can open a web page in a web browser.
 
 {% tabs %}
 
@@ -332,7 +332,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### GoTo action
 
-The [PdfGoToAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfGoToAction.html) displays the specified page in the current document. The location can be specified for the destination page.
+The [PdfGoToAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfGoToAction.html) navigates to a specified page in the current document. You can also specify a location on the destination page.
 
 {% tabs %}
 
@@ -423,7 +423,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Launch action
 
-The [PdfLaunchAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLaunchAction.html) allows execution of an external file. The following code example explains how to add a launch action in PDF document. 
+The [PdfLaunchAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLaunchAction.html) launches an external file. The following code example demonstrates how to add a launch action to a PDF document.
 
 {% tabs %}
 
@@ -461,7 +461,7 @@ PdfLaunchAction action = new PdfLaunchAction("logo.png");
 document.Actions.AfterOpen = action;
 
 //Save and close the document
-document.Save("LaunchAction.pdf");
+document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}
@@ -481,23 +481,23 @@ Dim action As New PdfLaunchAction("logo.png")
 document.Actions.AfterOpen = action
 
 'Save and close the document
-document.Save("LaunchAction.pdf")
+document.Save("Output.pdf")
 document.Close(True)
 
 {% endhighlight %}
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Actions/Add-lauch-action-to-PDF-document).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Actions/Add-launch-action-to-PDF-document).
 
 ### Named action
 
-The [PdfNamedAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfNamedAction.html) allows execution of below predefined **PDF** actions using [PdfActionDestination](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfActionDestination.html) Enum. 
+The [PdfNamedAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfNamedAction.html) executes the following predefined **PDF** actions using the [PdfActionDestination](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfActionDestination.html) enum:
 
-* Go to next page
-* Go to previous page 
-* Go to first page and 
-* Go to last page
+* FirstPage
+* LastPage
+* NextPage
+* PreviousPage
 
 {% tabs %}
 
@@ -577,7 +577,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Submit action
 
-The [PdfSubmitAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfSubmitAction.html) allows submission of data that is entered in the PDF form using [PdfButtonField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfButtonField.html) form field. 
+The [PdfSubmitAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfSubmitAction.html) submits data entered in PDF forms using a [PdfButtonField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfButtonField.html) form field.
 
 {% tabs %}
 
@@ -659,7 +659,7 @@ submitButton.ToolTip = "Submit"
 document.Form.Fields.Add(submitButton)
 
 'Create a submit action. It submit the data of the form fields to the mentioned URL
-Dim submitAction As New PdfSubmitAction("http:// www.example.com/Submit.aspx")
+Dim submitAction As New PdfSubmitAction("http://www.example.com/Submit.aspx")
 submitAction.DataFormat = SubmitDataFormat.Html
 submitButton.Actions.GotFocus = submitAction
 
@@ -675,7 +675,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Reset action
 
-The [PdfResetAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfResetAction.html) allows execution of reset of all the form fields in the PDF document.
+The [PdfResetAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfResetAction.html) resets all form fields in the PDF document.
 
 {% tabs %}
 
@@ -708,6 +708,10 @@ clearButton.Bounds = new RectangleF(100, 60, 50, 20);
 clearButton.ToolTip = "Clear";
 //Add button field to the form
 document.Form.Fields.Add(clearButton);
+
+//Create an instance of reset action
+PdfResetAction resetAction = new PdfResetAction();
+clearButton.Actions.GotFocus = resetAction;
 
 //Save the document
 document.Save("Output.pdf");
@@ -800,9 +804,9 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Actions/Reset-form-fields-in-the-PDF-document).
 
-## Remote GoTo action:
+## Remote GoTo action
 
-The PdfRemoteGoToAction in a PDF document enables users to navigate to a specific destination within a remote PDF file. This feature seamlessly directs users to specific pages or locations in another PDF document.
+The [PdfRemoteGoToAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRemoteGoToAction.html) navigates to a specific destination within a remote PDF file.
 
 {% tabs %}
 
@@ -923,11 +927,11 @@ document.Close(true)
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub]
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Actions/Add-GoTo-action-to-the-PDF-document/.NET).
 
 ## Adding an action to the form field
 
-Essential<sup>&reg;</sup> PDF provides support to add various actions to the form fields. The following code example illustrates how to add actions to the form field in PDF document using [PdfFieldActions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfFieldActions.html) class. 
+Essential<sup>&reg;</sup> PDF supports adding actions to form fields. The following code example demonstrates how to add actions to form fields in a PDF document using the [PdfFieldActions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfFieldActions.html) class.
 
 {% tabs %}
 
@@ -991,7 +995,7 @@ submitButton.Actions.MouseDown = scriptAction;
 document.Form.Fields.Add(submitButton);
 
 //Save document to disk
-document.Save("fieldAction.pdf");
+document.Save("Output.pdf");
 //Close the document
 document.Close(true);
 
@@ -1025,7 +1029,7 @@ submitButton.Actions.MouseDown = scriptAction
 document.Form.Fields.Add(submitButton)
 
 'Save document to disk
-document.Save("fieldAction.pdf")
+document.Save("Output.pdf")
 'Close the document
 document.Close(True)
 
@@ -1037,7 +1041,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding an action to the bookmarks
 
-Essential<sup>&reg;</sup> PDF provides support to add the various actions to the [Bookmarks](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-bookmarks). The code snippet below shows how to add an URI action to bookmark.
+Essential<sup>&reg;</sup> PDF supports adding actions to [Bookmarks](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-bookmarks). The following code example demonstrates how to add a URI action to a bookmark.
 
 {% tabs %}
 
@@ -1072,7 +1076,7 @@ document.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using Syncfusion.Drawing;
+using System.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Interactive;
 
@@ -1100,8 +1104,8 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
 Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Graphics
 Imports Syncfusion.Pdf.Interactive
 
 'Create a new document
@@ -1132,7 +1136,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Add actions to the existing PDF document
 
-To add actions to an existing PDF document, use the following code example.
+Use the following code example to add actions to an existing PDF document.
 
 {% tabs %}
 
@@ -1173,7 +1177,7 @@ loadedDocument.Actions.AfterOpen = scriptAction;
            
 // Save and close the document.
 loadedDocument.Save("Output.pdf");
-loadedDocument.Close();
+loadedDocument.Close(true);
 
 {% endhighlight %}
 
@@ -1181,6 +1185,7 @@ loadedDocument.Close();
 
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
 
 'Create a new PDF document. 
 Dim document As New PdfLoadedDocument("input.pdf")
@@ -1192,7 +1197,7 @@ Dim scriptAction As New PdfJavaScriptAction("app.alert(""Hello World!!!"")")
  document.Actions.AfterOpen = scriptAction
 
 'Save the document to disk.
- document.Save("PopupAnnotation.pdf") 
+ document.Save("Output.pdf") 
 document.Close(True)
 
 {% endhighlight %}
@@ -1201,15 +1206,15 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Actions/Add-actions-to-the-existing-PDF-document).
 
-N> The action assigned to the bookmark works only when destination of bookmark is not set.
+N> The action assigned to a bookmark works only when the bookmark's destination is not set.
 
 ## Document-Level JavaScript Actions
 
-Document-level JavaScript actions allow you to embed interactivity into your PDF documents. Using the Essential<sup>&reg;</sup> PDF Library, you can easily add these actions to execute scripts when the document is opened.
+Document-level JavaScript actions enable you to embed interactivity into PDF documents. Using the Essential<sup>&reg;</sup> PDF Library, you can add these actions to execute scripts when the document is opened.
 
 ### Adding Document-Level JavaScript Actions
 
-The following example demonstrates how to add document-level JavaScript actions to a PDF document using the [PdfDocumentJavaScriptCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentJavaScriptCollection.html) class.
+The following example demonstrates how to add document-level JavaScript actions using the [PdfDocumentJavaScriptCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentJavaScriptCollection.html) class.
 
 {% tabs %}
 
