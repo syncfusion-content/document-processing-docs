@@ -31,6 +31,16 @@ Step 3: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/S
 
 ![Install Syncfusion.DocIO.Net.Core NuGet package](ASP-NET-Core_images/Install_Nuget.png)
 
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the https://www.nuget.org/packages/Syncfusion.Licensing NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
+
 Step 4: Create a folder named `Data` in the project root and copy the following required image files into it. Include the files in the project.
 
 * `AdventureCycle.jpg`
@@ -349,12 +359,13 @@ InvokeResponse response = client.Invoke(invoke);
 var stream = new StreamReader(response.Payload);
 JsonReader reader = new JsonTextReader(stream);
 var serializer = new JsonSerializer();
-var responseText = serializer.Deserialize(reader)?.ToString();
+var responseText = serializer.Deserialize(reader);
 //Convert Base64String into Word document
-byte[] bytes = Convert.FromBase64String(responseText);
-using FileStream fileStream = new FileStream("Sample.docx", FileMode.Create);
-using BinaryWriter writer = new BinaryWriter(fileStream);
+byte[] bytes = Convert.FromBase64String(responseText.ToString());
+FileStream fileStream = new FileStream("Sample.docx", FileMode.Create);
+BinaryWriter writer = new BinaryWriter(fileStream);
 writer.Write(bytes, 0, bytes.Length);
+writer.Close();
 System.Diagnostics.Process.Start("Sample.docx");
 
 {% endhighlight %}

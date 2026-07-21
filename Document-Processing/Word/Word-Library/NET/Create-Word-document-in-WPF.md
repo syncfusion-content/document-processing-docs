@@ -29,7 +29,15 @@ Step 2: Install the [Syncfusion.DocIO.Wpf](https://www.nuget.org/packages/Syncfu
 
 ![Install DocIO WPF NuGet package](WPF_images/Install_NuGet.jpg)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add the "Syncfusion.Licensing" assembly reference and register a license key in your project. Refer to [registering a Syncfusion<sup>&reg;</sup> license key](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details.
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the https://www.nuget.org/packages/Syncfusion.Licensing NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 3: Include the following namespaces in the MainWindow.xaml.cs file.
 
@@ -287,7 +295,7 @@ document.Dispose();
 
 {% endtabs %}
 
-N> The code sample loads image files (`AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, and `Road-550-W.jpg`) from the application's working directory. Download these assets from the [GitHub sample](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/WPF) and ensure they are copied to the output folder, or provide absolute paths.
+N> The code sample references image files (`AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, and `Road-550-W.jpg`). Download these assets from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/WPF/Create-Word-document/Data) and ensure they are present in the application's working directory (next to the `.csproj` file). The code sample loads these images from the application's working directory, so ensure they are copied to the output folder, or provide absolute paths.
 
 Step 6: Build the project.
 
@@ -339,7 +347,15 @@ Step 2: Install the [Syncfusion.DocIO.Wpf](https://www.nuget.org/packages/Syncfu
 
 ![Install the Syncfusion.DocIO.Wpf NuGet package](WPF_images/Install-Syncfusion.DocIO.Wpf-NuGet.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add the "Syncfusion.Licensing" assembly reference and register a license key in your project. Refer to [registering a Syncfusion<sup>&reg;</sup> license key](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details.
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the https://www.nuget.org/packages/Syncfusion.Licensing NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 3: Include the following namespaces in the MainWindow.xaml.cs file.
 
@@ -597,7 +613,7 @@ document.Dispose();
 
 {% endtabs %}
 
-N> The code sample loads image files (`AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, and `Road-550-W.jpg`) from the application's working directory. Download these assets from the [GitHub sample](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/WPF) and ensure they are copied to the output folder, or provide absolute paths.
+N> The code sample references image files (`AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, and `Road-550-W.jpg`). Download these assets from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/WPF/Create-Word-document/Data) and ensure they are present in the application's working directory (next to the `.csproj` file). The code sample loads these images from the application's working directory, so ensure they are copied to the output folder, or provide absolute paths.
 
 Step 6: Build the project.
 

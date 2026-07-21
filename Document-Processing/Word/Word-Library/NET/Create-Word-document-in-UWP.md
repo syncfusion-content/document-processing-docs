@@ -20,7 +20,15 @@ Step 2: Install the [Syncfusion.DocIO.UWP](https://www.nuget.org/packages/Syncfu
 
 ![Install DocIO UWP NuGet package](UWP_images/Install_NuGet.jpg)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you also have to add a **Syncfusion.Licensing** assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the https://www.nuget.org/packages/Syncfusion.Licensing NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 3: Add a new button in the MainPage.xaml as shown below.
 
@@ -343,6 +351,8 @@ async void Save(MemoryStream stream, string filename)
 Step 7: Build and run the UWP application. Click the **Create Document** button to generate and view the Word document.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/UWP).
+
+N> The code sample references image files (AdventureCycle.jpg, Mountain-200.jpg, Mountain-300.jpg, Road-550-W.jpg). Download these assets from the [GitHub sample folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/UWP/Create-Word-document/Assets) and add them to an `Assets` folder in your project with their **Build Action** set to **Embedded Resource**.
 
 By executing the program, you will get the Word document as follows.
 

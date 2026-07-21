@@ -10,20 +10,10 @@ documentation: UG
 
 Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [Xamarin Word library](https://www.syncfusion.com/document-processing/word-framework/xamarin/word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or **interop** dependencies. Using this library, you can **create a Word document in Xamarin**.
 
-## Steps to create Word document programmatically
-
-Step 1: Create a new Xamarin.Forms application project.
-
-![Create Xamarin application in Visual Studio](Xamarin_images/Create-Project-WordtoPDF.png)
-
 ## Prerequisites
 
 - Visual Studio with the **Mobile development with .NET** (Xamarin) workload installed.
 - For .NET 5+ targets, install the `Syncfusion.Xamarin.DocIO` NuGet package version that matches your target. The package is compatible with .NET Standard 2.0 and later.
-
-## License registration
-
-Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a license key in your projects. For more information, see [registering the Syncfusion license key](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 ## Steps to create Word document programmatically
 
@@ -33,9 +23,21 @@ Step 1: Create a new Xamarin.Forms application project.
 
 Step 2: Select a project template and the required platforms to deploy the application. This sample uses the .NET Standard code sharing strategy so portable assemblies are shared across platforms. For more information about code sharing, see [Code sharing options](https://learn.microsoft.com/en-us/xamarin/cross-platform/app-fundamentals/code-sharing).
 
+N> If .NET Standard is not available in the code sharing strategy, the Portable Class Library (PCL) can be selected.
+
 ![Create Xamarin CodeSharing Option](Xamarin_images/Template_WordtoPDF.png)
 
 Step 3: Install the [Syncfusion.Xamarin.DocIO](https://www.nuget.org/packages/Syncfusion.Xamarin.DocIO) NuGet package as a reference to the .NET Standard project in your application from [NuGet.org](https://www.nuget.org/). Also install the same package in each platform-specific project (iOS, Android, and UWP).
+
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the https://www.nuget.org/packages/Syncfusion.Licensing NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 ![Install DocIO Xamarin NuGet package](Xamarin_images/Install_Nuget.png)
 
@@ -416,6 +418,8 @@ Download the helper files from this [link](https://www.syncfusion.com/downloads/
 Compile and execute the application. Now this application **creates a Word document**.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Xamarin).
+
+N> The code sample references image files (AdventureCycle.jpg, Mountain-200.jpg, Mountain-300.jpg, Road-550-W.jpg). Download these assets from the [GitHub sample folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Xamarin/Create-Word-document/Create-Word-document/Templates) and add them to a `Templates` folder in the portable project with their **Build Action** set to **Embedded Resource**.
 
 By executing the program, you will get the Word document as follows.
 

@@ -34,7 +34,15 @@ Step 3: Install the [Syncfusion.DocIO.AspNet](https://www.nuget.org/packages/Syn
 
 ![Install DocIO ASP.NET NuGet package](ASP-NET_images/Install_Nuget.jpg)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you must also add the "Syncfusion.Licensing" assembly reference and include a license key in your project. To register the Syncfusion license key in your application, add `SyncfusionLicenseProvider.RegisterLicense("<Your License Key>");` in the `Application_Start` event of `Global.asax`. For more details, see [Licensing Overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the https://www.nuget.org/packages/Syncfusion.Licensing NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 4: Add a new Web Form in your project. Right click on the project and select **Add > New Item** and add a **Web Form (C#)** from the list. Name it as MainPage.
 
@@ -295,6 +303,8 @@ document.Save("Sample.docx", FormatType.Docx, HttpContext.Current.Response, Http
 {% endhighlight %}
 
 {% endtabs %}
+
+N> The code sample references image files (AdventureCycle.jpg, Mountain-200.jpg, Mountain-300.jpg, Road-550-W.jpg). Download these assets from the [GitHub sample folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/ASP.NET/Create-Word-document/App_Start) and ensure they are present in the application's working directory (next to the `.csproj` file).
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/ASP.NET).
 

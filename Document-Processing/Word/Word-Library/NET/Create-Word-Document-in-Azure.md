@@ -49,8 +49,3 @@ NuGet package name<br/></th></tr></thead>
 {{'[Azure Functions v4](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-azure-functions-v4)' | markdownify}}<br/></td><td>
 {{'[Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core)' | markdownify}}<br/></td></tr>
 </table>
-
-## Package selection notes
-
-* `.Net.Core` packages target .NET Core / .NET (including .NET 6, 7, and 8) and are used by App Service (Windows), App Service (Linux), and Azure Functions v4.
-* `.AspNet` packages target the .NET Framework and are used by Azure Functions v1, which runs on the .NET Framework worker. For new serverless projects, use Azure Functions v4 with the `.Net.Core` package.
