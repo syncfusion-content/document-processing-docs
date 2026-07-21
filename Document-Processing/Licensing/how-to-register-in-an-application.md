@@ -69,6 +69,30 @@ ReactDOM.render(
 {% endhighlight %}
 {% endtabs %}
 
+### Blazor
+
+* For .NET 8, .NET 9, and .NET 10, open the **~/Program.cs** file and register the Syncfusion<sup style="font-size:70%">&reg;</sup> license key.
+
+{% tabs %}
+
+{% highlight c# tabtitle=".NET 10, .NET 9 & .NET 8 (~/Program.cs)" hl_lines="2 3" %}
+
+var app = builder.Build();
+// Register the Syncfusion license
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Home/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ### Angular
 
 Register the license key in the **main.ts** file of the Angular project.
