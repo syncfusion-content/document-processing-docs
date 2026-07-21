@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with UWP Spreadsheet (SfSpreadsheet)
 
-This section briefly explains how to include the [Syncfusion<sup>®</sup> UWP Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/uwp-spreadsheet-editor) component in UWP App using Visual Studio
+This section briefly explains how to include the [UWP Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/uwp-spreadsheet-editor) component in UWP App using Visual Studio
 
 ## Prerequisites
 * [System requirements for UWP components](https://help.syncfusion.com/uwp/system-requirements)
@@ -36,6 +36,27 @@ You can add a UWP spreadsheet component to your application by installing it via
 To add the **UWP Spreadsheet** component to the application, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install:
 
 •	[Syncfusion.SfSpreadsheet.UWP](https://www.nuget.org/packages/Syncfusion.SfSpreadsheet.UWP)
+
+The following table lists the optional NuGet packages that enable additional features in the SfSpreadsheet control.
+
+<table>
+<tr>
+<th>
+Optional NuGet Packages</th><th>
+Description</th></tr>
+<tr>
+<td>
+Syncfusion.SfSpreadsheetHelper.UWP</td><td>
+Contains the classes responsible for importing charts and sparklines into SfSpreadsheet.</td></tr>
+<tr>
+<td>
+Syncfusion.ExcelChartToImageConverter.UWP</td><td>
+Contains the classes responsible for converting charts to images.</td></tr>
+<tr>
+<td>
+Syncfusion.SfChart.UWP</td><td>
+Contains the classes responsible for importing chart types such as line charts, pie charts, and sparklines.</td></tr>
+</table>
 
 {% endtabcontent %}
 
@@ -126,83 +147,83 @@ N> In all of the XAML snippets below, replace `YourNamespace` (in `xmlns:local="
 
 2. Open the Visual Studio **Toolbox**. Navigate to the **Syncfusion<sup>®</sup> Controls for UWP** tab and find the **SfSpreadsheet** / **SfSpreadsheetRibbon** toolbox items.
 
-![Getting-Started_img1](Getting-Started_images/Getting-Started_img1.jpg)
+   ![Getting-Started_img1](Getting-Started_images/Getting-Started_img1.jpg)
 
 3. Drag **SfSpreadsheet** from the Toolbox and drop it into the Designer area.
 
-**For Spreadsheet:**
+   **For Spreadsheet:**
 
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+   {% tabs %}
+   {% highlight xaml tabtitle="MainPage.xaml" %}
 
-    <Page
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:local="using:YourNamespace"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:Spreadsheet="using:Syncfusion.UI.Xaml.Spreadsheet"
-        x:Class="YourNamespace.MainPage"
-        mc:Ignorable="d"
-        Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+       <Page
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+           xmlns:local="using:YourNamespace"
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           xmlns:Spreadsheet="using:Syncfusion.UI.Xaml.Spreadsheet"
+           x:Class="YourNamespace.MainPage"
+           mc:Ignorable="d"
+           Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-        <Grid>
-            <Spreadsheet:SfSpreadsheet  x:Name="spreadsheet" />
-        </Grid>
-    </Page>
+           <Grid>
+               <Spreadsheet:SfSpreadsheet  x:Name="spreadsheet" />
+           </Grid>
+       </Page>
 
-{% endhighlight %}
-{% endtabs %}
+   {% endhighlight %}
+   {% endtabs %}
 
-N> Assign a name (for example, `spreadsheet`) so you can reference the control from code-behind.
+   N> Assign a name (for example, `spreadsheet`) so you can reference the control from code-behind.
 
 4. Drag **SfSpreadsheetRibbon** from the Toolbox and drop it into the Designer area.
 
-**For Ribbon:**
+   **For Ribbon:**
 
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+   {% tabs %}
+   {% highlight xaml tabtitle="MainPage.xaml" %}
 
-    <Page
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:local="using:YourNamespace"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:Spreadsheet="using:Syncfusion.UI.Xaml.Spreadsheet"
-        x:Class="YourNamespace.MainPage"
-        mc:Ignorable="d"
-        Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+       <Page
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+           xmlns:local="using:YourNamespace"
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           xmlns:Spreadsheet="using:Syncfusion.UI.Xaml.Spreadsheet"
+           x:Class="YourNamespace.MainPage"
+           mc:Ignorable="d"
+           Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-        <Grid>
-            <Spreadsheet:SfSpreadsheetRibbon />
-        </Grid>
-    </Page>
+           <Grid>
+               <Spreadsheet:SfSpreadsheetRibbon />
+           </Grid>
+       </Page>
 
-{% endhighlight %}
-{% endtabs %}
+   {% endhighlight %}
+   {% endtabs %}
 
 5.To make an interaction between Ribbon items and SfSpreadsheet, need to bind the `SfSpreadsheet` as DataContext to the `SfSpreadsheetRibbon`.
 
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+   {% tabs %}
+   {% highlight xaml tabtitle="MainPage.xaml" %}
 
-    <Page
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:local="using:YourNamespace"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:Spreadsheet="using:Syncfusion.UI.Xaml.Spreadsheet"
-        x:Class="YourNamespace.MainPage"
-        mc:Ignorable="d"
-        Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+       <Page
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+           xmlns:local="using:YourNamespace"
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           xmlns:Spreadsheet="using:Syncfusion.UI.Xaml.Spreadsheet"
+           x:Class="YourNamespace.MainPage"
+           mc:Ignorable="d"
+           Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-        <Grid>
-            <Spreadsheet:SfSpreadsheet  x:Name="spreadsheet" />
-            <Spreadsheet:SfSpreadsheetRibbon DataContext="{Binding ElementName=spreadsheet}" />
-        </Grid>
-    </Page>
+           <Grid>
+               <Spreadsheet:SfSpreadsheet  x:Name="spreadsheet" />
+               <Spreadsheet:SfSpreadsheetRibbon DataContext="{Binding ElementName=spreadsheet}" />
+           </Grid>
+       </Page>
 
 {% endhighlight %}
 {% endtabs %}
