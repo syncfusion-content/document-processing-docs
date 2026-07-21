@@ -32,6 +32,7 @@ using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx)
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+string fileName = "Template.docx";
 //Opens an existing document 
 WordDocument inputTemplateDoc = new WordDocument(fileName);
 //Creates a clone of Input Template 
@@ -40,10 +41,11 @@ WordDocument clonedDocument = inputTemplateDoc.Clone();
 clonedDocument.Save("ClonedDocument.docx");
 clonedDocument.Close();
 //Closes the input template document instance
-sourceDocument.Close();
+inputTemplateDoc.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Dim fileName As String = "Template.docx"
 'Opens an existing document 
 Dim inputTemplateDoc As New WordDocument(fileName)
 'Creates a clone of Input Template 
@@ -52,14 +54,14 @@ Dim clonedDocument As WordDocument = inputTemplateDoc.Clone()
 clonedDocument.Save("ClonedDocument.docx")
 clonedDocument.Close()
 'Closes the input template document instance
-sourceDocument.Close()
+inputTemplateDoc.Close()
 {% endhighlight %}
 
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-document/Clone-whole-Word-document).
 
-You can also create a deep copy of document elements such as sections, paragraphs, Tables, Text, Image, OleObject, Shapes, TextBoxes and etc., The following code example illustrates how to clone the section and save each cloned section as a Word document. 
+You can also create a deep copy of document elements such as sections, paragraphs, Tables, Text, Image, OleObject, Shapes, TextBoxes, etc. The following code example illustrates how to clone the section and save each cloned section as a Word document. 
 
 {% tabs %}
 
@@ -67,7 +69,7 @@ You can also create a deep copy of document elements such as sections, paragraph
 //Creates an instance of WordDocument class
 FileStream fileStreamPath = new FileStream("SourceDocument.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument sourceDocument = new WordDocument(fileStreamPath);
-//Processes the each section in the Word document
+//Processes each section in the Word document
 for (int i = 0; i < sourceDocument.Sections.Count;i++)
 {
     //Creates new WordDocument instance to add cloned section
@@ -86,7 +88,7 @@ sourceDocument.Close();
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Opens a source document
 WordDocument sourceDocument = new WordDocument("SourceDocument.docx");
-//Processes the each section in the Word document
+//Processes each section in the Word document
 for (int i = 0; i < sourceDocument.Sections.Count;i++)
 {
     //Creates new WordDocument instance to add cloned section
@@ -104,7 +106,7 @@ sourceDocument.Close();
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Opens a source document
 Dim sourceDocument As New WordDocument("SourceDocument.docx")
-'Processes the each section in the Word document
+'Processes each section in the Word document
 For i As Integer = 0 To sourceDocument.Sections.Count - 1
     'Creates new WordDocument instance to add cloned section
     Dim destinationDocument As New WordDocument()
@@ -122,9 +124,9 @@ sourceDocument.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-document/Split-by-section).
 
-### Link Paragraph and Character Style
+## Link Paragraph and Character Style
 
-You can link character styles with paragraph and vice versa in a Word document using [LinkedStyleName](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Style.html#Syncfusion_DocIO_DLS_Style_LinkedStyleName) property.
+You can link character styles with paragraph styles, and vice versa in a Word document using [LinkedStyleName](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Style.html#Syncfusion_DocIO_DLS_Style_LinkedStyleName) property.
 
 The following code example explains how to link character and paragraph style.
 
@@ -145,7 +147,7 @@ using (WordDocument document = new WordDocument())
     //Sets the formatting of the style
     charStyle.CharacterFormat.Bold = true;
     charStyle.CharacterFormat.Italic = true;
-    //Link both paragraph and character style
+    //Links both paragraph and character style
     paraStyle.LinkedStyleName = "CharacterStyle";
     //Appends the contents into the paragraph
     document.LastParagraph.AppendText("AdventureWorks Cycles");
@@ -178,8 +180,8 @@ using (WordDocument document = new WordDocument())
     //Sets the formatting of the style
     charStyle.CharacterFormat.Bold = true;
     charStyle.CharacterFormat.Italic = true;
-    //Link both paragraph and character style
-     paraStyle.LinkedStyleName = "CharacterStyle";
+    //Links both paragraph and character style
+    paraStyle.LinkedStyleName = "CharacterStyle";
     //Appends the contents into the paragraph
     document.LastParagraph.AppendText("AdventureWorks Cycles");
     //Applies the style to paragraph
@@ -196,7 +198,7 @@ using (WordDocument document = new WordDocument())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Opens an input Word template
+'Creates a new Word document
 Using document As WordDocument = New WordDocument()
     'This method adds a section and a paragraph in the document
     document.EnsureMinimal()
@@ -209,7 +211,7 @@ Using document As WordDocument = New WordDocument()
     'Sets the formatting of the style
     charStyle.CharacterFormat.Bold = True
     charStyle.CharacterFormat.Italic = True
-    'Link both paragraph and character style
+    'Links both paragraph and character style
     paraStyle.LinkedStyleName = "CharacterStyle"
     'Appends the content into the paragraph
     document.LastParagraph.AppendText("AdventureWorks Cycles")
@@ -231,7 +233,7 @@ End Using
 
 ## Working with Word document properties
 
-Document properties, also known as metadata, are details about a file that describe or identify it. You can also define the additional custom document properties for the documents by using DocIO Document properties that are classified as two categories. 
+Document properties, also known as metadata, are details about a file that describe or identify it. You can also define additional custom document properties by using DocIO document properties, which are classified into two categories:
 
 * Built-in document properties - includes details such as title, author name, subject, and keywords that identify the document's topic or contents.
 * Custom document properties - defines the user-defined document properties.
@@ -250,7 +252,7 @@ using (WordDocument document = new WordDocument(sourceStreamPath, FormatType.Aut
     //Accesses the built-in document properties
     Console.WriteLine("Title - {0}",document.BuiltinDocumentProperties.Title);
     Console.WriteLine("Author - {0}", document.BuiltinDocumentProperties.Author);
-    //Modifies or sets the Built-in document properties.
+    //Modifies or sets the built-in document properties.
     document.BuiltinDocumentProperties.Author = "Andrew";
     document.BuiltinDocumentProperties.LastAuthor = "Steven";
     document.BuiltinDocumentProperties.CreateDate = new DateTime(1900, 12, 31, 12, 0, 0);
@@ -275,7 +277,7 @@ WordDocument document = new WordDocument(inputFileName);
 //Accesses the built-in document properties
 Console.WriteLine("Title - {0}",document.BuiltinDocumentProperties.Title);
 Console.WriteLine("Author - {0}", document.BuiltinDocumentProperties.Author);
-//Modifies or sets the Built-in document properties.
+//Modifies or sets the built-in document properties.
 document.BuiltinDocumentProperties.Author = "Andrew";
 document.BuiltinDocumentProperties.LastAuthor = "Steven";
 document.BuiltinDocumentProperties.CreateDate = new DateTime(1900, 12, 31, 12, 0, 0);
@@ -437,7 +439,7 @@ N>  2. In ASP.NET Core and Xamarin platforms, to update page count in a Word doc
 N>  3. DocIO uses the Word-to-PDF layout engine to update page count. If the required fonts are missing in the environment, alternate fonts are used, which may affect accuracy. [Ensure](https://support.syncfusion.com/kb/article/6821/check-whether-fonts-in-word-document-are-available-in-machine-for-pdf-or-image-conversion) all fonts used in the input document are available for a correct page count.
 N>  4. In UWP platform, to updates paragraph, word, and character counts in the document using the [UpdateWordCount()](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_UpdateWordCount) API.
 
-### Adding Custom Document properties
+### Adding custom document properties
 
 You add a new custom document properties through [Add](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CustomDocumentProperties.html#Syncfusion_DocIO_DLS_CustomDocumentProperties_Add_System_String_System_Object_) method of [CustomProperties](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_CustomDocumentProperties) class. The following code example illustrates how to add a new custom document properties.
 
@@ -899,28 +901,30 @@ using (FileStream docStream = new FileStream("Input.docx", FileMode.Open, FileAc
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Load Word document.
-using (WordDocument document = new WordDocument(“Input.docx” FormatType.Docx))
+using (WordDocument document = new WordDocument("Input.docx", FormatType.Docx))
 {
     //Disable a flag to hide the background in print layout view.
     document.Settings.DisplayBackgrounds = false;
     //Save the Word document.
-    document.Save(“Sample.docx”), FormatType.Docx);
+    document.Save("Sample.docx", FormatType.Docx);
 }
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET [Windows-specific] " %}
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Load Word document.
-Using document As WordDocument = New WordDocument(“Input.docx"), FormatType.Docx)
+Using document As WordDocument = New WordDocument("Input.docx", FormatType.Docx)
     'Disable a flag to hide the background in the print layout view. 
     document.Settings.DisplayBackgrounds = False
     'Save the Word document.
-    document.Save(“Sample.docx"), FormatType.Docx)
+    document.Save("Sample.docx", FormatType.Docx)
 End Using
 {% endhighlight %}
 
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-document/Hide-backgrounds-in-print-layout-view).
+
+N> This setting affects only the Word client's print-layout view; it does not alter the background stored in the document.
 
 ## Remove background in a Word document
 
@@ -948,23 +952,23 @@ using (FileStream docStream = new FileStream("Input.docx", FileMode.Open, FileAc
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Load Word document.
-using (WordDocument document = new WordDocument(“Input.docx” FormatType.Docx))
+using (WordDocument document = new WordDocument("Input.docx", FormatType.Docx))
 {
     //Remove the existing background in the Word document.
     document.Background.Type = BackgroundType.NoBackground;
     //Save the Word document.
-    document.Save(“Sample.docx”), FormatType.Docx);
+    document.Save("Sample.docx", FormatType.Docx);
 }
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Load Word document.
-Using document As WordDocument = New WordDocument(“Input.docx"), FormatType.Docx)
+Using document As WordDocument = New WordDocument("Input.docx", FormatType.Docx)
     'Remove the existing background in the Word document.
-    document.Background.Type = BackgroundType.NoBackground;
+    document.Background.Type = BackgroundType.NoBackground
     'Save the Word document.
-    document.Save(“Sample.docx"), FormatType.Docx)
+    document.Save("Sample.docx", FormatType.Docx)
 End Using
 
 {% endhighlight %}

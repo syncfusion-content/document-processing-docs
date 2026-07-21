@@ -1,6 +1,6 @@
 ---
 title: Print Word documents in C# | DocIO | Syncfusion
-description: Learn how to print the Word documents into one using .NET Word (DocIO) library without Microsoft Word or interop dependencies.
+description: Learn how to print Word documents using the .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -9,7 +9,7 @@ documentation: UG
 
 You can print a Word document by utilizing DocIO’s capability to convert the document into images and .NET framework’s [PrintDocument](https://learn.microsoft.com/en-us/dotnet/api/system.drawing.printing.printdocument?view=dotnet-plat-ext-7.0&viewFallbackFrom=net-5.0) class
 
-Initially you have to render the pages as images as shown below
+Initially you have to render the pages of the Word document as images, as shown below.
 
 N> Refer to the appropriate tabs in the code snippets section: ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
@@ -20,7 +20,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Windows-sp
 WordDocument document = new WordDocument((string)this.textBox.Tag);
 //Renders the Word document as image
 Image[] images = document.RenderAsImages(ImageType.Metafile);
-//Closes the Word Document
+//Closes the Word document
 document.Close();
 {% endhighlight %}
 
@@ -29,15 +29,19 @@ document.Close();
 Dim document As New WordDocument(DirectCast(Me.textBox.Tag, String))
 'Renders the Word document as image
 Dim images As Image() = document.RenderAsImages(ImageType.Metafile)
-'Closes the Word Document
+'Closes the Word document
 document.Close()
 {% endhighlight %}
 
 {% endtabs %}
 
-You can specify the printer settings and page settings through the [PrintDocument](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.printing.printdocument?view=net-5.0) class. The [PrintDocument.PrintPage](https://learn.microsoft.com/en-us/dotnet/api/system.drawing.printing.printdocument?view=dotnet-plat-ext-7.0&viewFallbackFrom=net-5.0) event should be handled to layout the document for printing. 
+## Configuring print settings
 
-The following code example demonstrates how to print the Word document pages that have been rendered as an image:
+You can specify the printer settings and page settings through the [PrintDocument](https://learn.microsoft.com/dotnet/api/system.drawing.printing.printdocument) class. The [PrintDocument.PrintPage](https://learn.microsoft.com/dotnet/api/system.drawing.printing.printdocument.printpage) event should be handled to layout the document for printing. The following code example demonstrates how to print the Word document pages that have been rendered as an image, using the `images` array produced in the previous snippet.
+
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
+N> `startPageIndex` must be declared as a class-level integer field (initialize it to `0`). The snippet updates it based on the page range chosen in the print dialog.
 
 {% tabs %}
 
@@ -66,7 +70,7 @@ if (printDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
         endPageIndex = printDialog.PrinterSettings.ToPage;
         //Hooks the PrintPage event to handle the drawing pages for printing
         printDialog.Document.PrintPage += new PrintPageEventHandler(PrintPageMethod);
-        //Print the document
+        //Prints the document
         printDialog.Document.Print();
     }
 }
@@ -87,14 +91,14 @@ printDialog.PrinterSettings.FromPage = 1
 printDialog.PrinterSettings.ToPage = images.Length
 'Opens the print dialog box
 If printDialog.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
-    'Checks whether the selected page range is valid or not
+    'Checks whether the selected page range is valid
     If printDialog.PrinterSettings.FromPage > 0 AndAlso printDialog.PrinterSettings.ToPage <= images.Length Then
         'Updates the start page of the document to print
         startPageIndex = printDialog.PrinterSettings.FromPage - 1
         'Updates the end page of the document to print
         endPageIndex = printDialog.PrinterSettings.ToPage
         'Hooks the PrintPage event to handle the drawing pages for printing
-        printDialog.Document.PrintPage += New PrintPageEventHandler(PrintPageMethod)
+        AddHandler printDialog.Document.PrintPage, AddressOf PrintPageMethod
         'Prints the document
         printDialog.Document.Print()
     End If
@@ -184,6 +188,8 @@ End Sub
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-document/Print-Word-document).
 
+N> If `RenderAsImages` returns an empty array (for example, an empty document), skip printing and check the input document. Ensure the rendered array length is validated before configuring the page range.
+
 ## See Also
 
-* [How to do silent printing to print the Word document by rendering document pages as Image using Essential<sup>&reg;</sup> DocIO](https://support.syncfusion.com/kb/article/4546/how-to-do-silent-printing-to-print-the-word-document-by-rendering-document-pages-as-image)
+* [How to do silent printing to print the Word document by rendering document pages as image using DocIO](https://support.syncfusion.com/kb/article/4546/how-to-do-silent-printing-to-print-the-word-document-by-rendering-document-pages-as-image)

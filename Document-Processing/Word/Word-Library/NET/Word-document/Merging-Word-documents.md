@@ -7,11 +7,13 @@ documentation: UG
 ---
 # Merging Word documents
 
-You can merge multiple Word documents into single Word document by using DocIO’s capability of importing contents from one document to another. The imported contents are appended at the end of document.
+You can merge multiple Word documents into a single Word document by using DocIO’s capability of importing contents from one document to another. The imported contents are appended at the end of the document.
+
+By default, the imported contents start on a new page. You can also merge the contents on the same page by adjusting the source document’s first section break, as shown in the following sections.
 
 ## Assemblies and NuGet packages required
 
-Refer to the following links for assemblies and NuGet packages required based on platforms to merge Word documents using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO).
+Refer to the following links for the assemblies and NuGet packages required for each platform to merge Word documents using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO).
 
 * [Merge Word documents assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required)
 * [Merge Word documents NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
@@ -19,25 +21,25 @@ Refer to the following links for assemblies and NuGet packages required based on
 To quickly start merging Word documents, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=atOSwzidmdw" %}
 
-## Merge document in new page
+## Merging documents in a new page
 
-The following code example illustrates how to import the contents from source document into destination document where the contents are appended. 
+The following code example illustrates how to import the contents from a source document into a destination document where the contents are appended. 
 
 N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
 {% tabs %}
-{% highlight C# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Merge-documents-in-new-page/.NET/Merge-documents-in-new-page/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Merge-documents-in-new-page/.NET/Merge-documents-in-new-page/Program.cs" %}
 
 FileStream sourceStreamPath = new FileStream(sourceFileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 FileStream destinationStreamPath = new FileStream(destinationFileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-//Opens an source document from file system through constructor of WordDocument class
+//Opens a source document from file system through constructor of WordDocument class
 using (WordDocument document = new WordDocument(sourceStreamPath, FormatType.Automatic))
 {
     //Opens the destination document 
     WordDocument destinationDocument = new WordDocument(destinationStreamPath, FormatType.Docx);
     //Imports the contents of source document at the end of destination document
     destinationDocument.ImportContent(document, ImportOptions.UseDestinationStyles);
-    //Saves and closes the destination document to  MemoryStream
+    //Saves and closes the destination document to a MemoryStream
     MemoryStream stream = new MemoryStream();
     destinationDocument.Save(stream, FormatType.Docx);
     destinationDocument.Close();
@@ -54,7 +56,7 @@ WordDocument destinationDocument = new WordDocument(targetFileName);
 destinationDocument.ImportContent(sourceDocument, ImportOptions.UseDestinationStyles);
 //Saves the destination document
 destinationDocument.Save(outputFileName, FormatType.Docx);
-//closes the document instances
+//Closes the document instances
 sourceDocument.Close();
 destinationDocument.Close();
 {% endhighlight %}
@@ -68,7 +70,7 @@ Dim destinationDocument As New WordDocument(targetFileName)
 destinationDocument.ImportContent(sourceDocument, ImportOptions.UseDestinationStyles)
 'Saves the destination document
 destinationDocument.Save(outputFileName, FormatType.Docx)
-'closes the document instances
+'Closes the document instances
 sourceDocument.Close()
 destinationDocument.Close()
 {% endhighlight %} 
@@ -79,25 +81,29 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 In the resultant document, the imported contents start from a new page followed by existing contents in a destination document. This is the default behavior.
 
-## Merge document in same page
+## Merging documents on the same page
 
-When your requirement is to append the contents from the same page instead of starting from a new page, you need to set the break code of first section of Source document as [NoBreak](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SectionBreakCode.html). The following code example illustrates the importing contents from the same page.
+When your requirement is to append the contents on the same page instead of starting from a new page, you need to set the break code of the first section of the source document as [NoBreak](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SectionBreakCode.html). The following code example illustrates how to import the contents on the same page.
+
+N> For multi-section source documents, only the first section's break code controls the page break behavior of the imported content.
+
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Merge-documents-in-same-page/.NET/Merge-documents-in-same-page/Program.cs" %}
 
 FileStream sourceStreamPath = new FileStream(sourceFileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 FileStream destinationStreamPath = new FileStream(destinationFileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-//Opens an source document from file system through constructor of WordDocument class
+//Opens a source document from file system through constructor of WordDocument class
 using (WordDocument document = new WordDocument(sourceStreamPath, FormatType.Automatic))
 {
     //Opens the destination document 
     WordDocument destinationDocument = new WordDocument(destinationStreamPath, FormatType.Docx);
-    //Sets the break-code of First section of source document as NoBreak to avoid imported from a new page
+    //Sets the break code of the first section of the source document as NoBreak to avoid importing from a new page
     document.Sections[0].BreakCode = SectionBreakCode.NoBreak; 
     //Imports the contents of source document at the end of destination document
     destinationDocument.ImportContent(document, ImportOptions.UseDestinationStyles);
-    //Saves and closes the destination document to  MemoryStream
+    //Saves and closes the destination document to a MemoryStream
     MemoryStream stream = new MemoryStream();
     destinationDocument.Save(stream, FormatType.Docx);
     destinationDocument.Close();
@@ -110,7 +116,7 @@ using (WordDocument document = new WordDocument(sourceStreamPath, FormatType.Aut
 WordDocument sourceDocument = new WordDocument(sourceFileName);
 //Opens the destination document 
 WordDocument destinationDocument = new WordDocument(targetFileName);
-//Sets the break-code of First section of source document as NoBreak to avoid imported from a new page
+//Sets the break code of the first section of the source document as NoBreak to avoid importing from a new page
 sourceDocument.Sections[0].BreakCode = SectionBreakCode.NoBreak; 
 //Imports the contents of source document at the end of destination document
 destinationDocument.ImportContent(sourceDocument, ImportOptions.UseDestinationStyles);
@@ -126,7 +132,7 @@ destinationDocument.Close();
 Dim sourceDocument As New WordDocument(sourceFileName)
 'Opens the destination document 
 Dim destinationDocument As New WordDocument(targetFileName)
-'Sets the break-code of first section of source document as NoBreak to avoid imported from a new page
+'Sets the break code of the first section of the source document as NoBreak to avoid importing from a new page
 sourceDocument.Sections(0).BreakCode = SectionBreakCode.NoBreak
 'Imports the contents of source document at the end of destination document
 destinationDocument.ImportContent(sourceDocument, ImportOptions.UseDestinationStyles)
@@ -141,7 +147,7 @@ destinationDocument.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-document/Merge-documents-in-same-page).
 
-## Maintain Imported List style information
+## Maintain imported list style information
 
 The following code example shows how to maintain information about imported list styles in a Word document while cloning and merging multiple Word documents.
 
@@ -227,6 +233,10 @@ destinationDocument.Close()
 {% endhighlight %}
 
 {% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-document/Maintain-Imported-List-Style-Information).
+
+N> For production use, register a Syncfusion license before merging Word documents. Refer to the [licensing registration guide](https://help.syncfusion.com/document-processing/word/licensing/how-to-register-in-an-application) for details.
 
 ## See Also
 
