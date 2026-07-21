@@ -76,7 +76,7 @@ Step 7: Choose **Linux** so the application runs in a Linux Docker container.
 
 ![Choose Linux option](Docker_Images/docker_images_img6.png)
 
-Step 8: Open the **Dockerfile** to view the default Docker commands shown below. This default Dockerfile installs `fontconfig` and a basic TTF font so that PDF text renders correctly. It also copies `InputTemplate.xlsx` into the image.
+Step 8: Open the **Dockerfile** to view the default Docker commands shown below. This default Dockerfile installs `font config` and a basic TTF font so that PDF text renders correctly. It also copies `InputTemplate.xlsx` into the image.
 {% tabs %}
 {% highlight Dockerfile %}
 
@@ -114,7 +114,7 @@ By executing the program, you will get the **PDF document** as shown below.
 
 ## Dockerfile Examples
 
-The following examples demonstrate how the Dockerfile should be configured to convert an Excel document to PDF in different Linux distributions. All examples target **.NET 8** and install `fontconfig` plus a basic TTF font so that PDF text renders correctly. If your workbook contains CJK, Arabic, or other non-Latin text, install the appropriate `fonts-noto-*` package as well.
+The following examples demonstrate how the Dockerfile should be configured to convert an Excel document to PDF in different Linux distributions. All examples target **.NET 8** and install `font config` plus a basic TTF font so that PDF text renders correctly. If your workbook contains CJK, Arabic, or other non-Latin text, install the appropriate `fonts-noto-*` package as well.
 
 ## Alpine
 

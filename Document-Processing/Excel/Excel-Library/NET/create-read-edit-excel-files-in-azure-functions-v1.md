@@ -1,6 +1,6 @@
 ﻿---
 title: Create, read, and edit Excel files in Azure Functions v1 | Syncfusion
-description: Explains how to create, read, and edit Excel files in Azure Functions v1 using Syncfusion XlsIO.
+description: Explains how to create, read, and edit Excel files in Azure Functions v1 using Syncfusion XlsIO for easy spreadsheet automation.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -16,7 +16,6 @@ Before you begin, ensure the following:
 * An active **Azure subscription**. If you do not have one, see [Create an Azure account](https://azure.microsoft.com/free/).
 * **Visual Studio 2022** with the **ASP.NET and web development** and **Azure development** workloads installed.
 * **.NET Framework 4.7.2 or later** (required by the Azure Functions v1 runtime).
-* **Azure Functions Core Tools** (for local testing) â€” see [Get started with Azure Functions](https://learn.microsoft.com/azure/azure-functions/functions-run-local).
 * A **Syncfusion license key**. Register it in `Function1.cs` (see the snippet in Step 4a below) or via the `SyncfusionLicense.txt` file placed in the project output directory.
 
 ## Create a simple Excel report

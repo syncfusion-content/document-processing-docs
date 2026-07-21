@@ -281,8 +281,6 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 Step 1: Right-click the project and select **Publish to AWS Elastic Beanstalk (Legacy)** option.
 
-N> The **Publish to AWS Elastic Beanstalk (Legacy)** option uses the older deployment workflow. For new projects, Microsoft and AWS recommend the current **Publish to AWS Elastic Beanstalk** option (without "Legacy"), which uses the .NET 8 on Linux platform branch by default. If you choose the Linux platform, the working directory is `/var/app/current/`. If you choose the Windows Server platform, the working directory is `C:\inetpub\wwwroot\`.
-
 ![Right-click the project and select the Publish option](AWS_Images/Elastic_Beanstalk_Images/Elastic_Beanstalk_img3.png)
 
 Step 2: Select the **Deployment Target** as **Create a new application environment** and click **Next** button.
@@ -318,8 +316,6 @@ By executing the program, you will get the **Excel document** as follows.
 ## Read and Edit an Excel File
 
 The following code snippet illustrates how to read and edit an Excel file in AWS Elastic Beanstalk.
-
-N> The code below reads `Data/InputTemplate.xlsx` from the working directory. Add the file to the project's `Data/` folder (set **Copy to Output Directory** to **Copy if newer**) so it is included in the deployment package. On AWS Elastic Beanstalk, the working directory is typically `/var/app/current/` (Linux) or `C:\inetpub\wwwroot\` (Windows Server).
 
 The snippet below assumes the following action method signature. Place the body inside the `ReadAndEditExcel` method:
 

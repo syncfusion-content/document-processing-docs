@@ -16,7 +16,7 @@ Before you begin, ensure the following:
 * An active **Azure subscription**. If you do not have one, see [Create an Azure account](https://azure.microsoft.com/free/).
 * **Visual Studio 2022** with the **ASP.NET and web development** and **Azure development** workloads installed.
 * A **Syncfusion license key**. Register it in `Program.cs` (see the snippet in Step 4a below) or via the `SyncfusionLicense.txt` file. In Azure App Service on Linux, the recommended approach is to store the key in an environment variable or application setting and load it at startup â€” see the [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
-* For **local development on Linux**, the Syncfusion `XlsIORenderer` requires the `libfontconfig1`, `libfreetype6`, and `libgdiplus` native libraries. Install with `sudo apt-get install -y libfontconfig1 libfreetype6 libgdiplus` (Debian/Ubuntu) or the equivalent for your distribution. Azure App Service on Linux uses a managed container image that already includes these libraries.
+
 
 ## Create a simple Excel report
 
@@ -484,7 +484,7 @@ End Using
 
 Step 1: Right-click the project and select **Publish** option.
 
-![Publish](Azure_Images/App_Service_Windows/Publish_CreateExcel.png)
+![Publish](Azure-Images/App-Service-Windows/Publish_CreateExcel.png)
 
 Step 2: Select the publish target as **Azure**.
 

@@ -15,7 +15,6 @@ Before you begin, ensure the following:
 
 * An active **Azure subscription**. If you do not have one, see [Create an Azure account](https://azure.microsoft.com/free/).
 * **Visual Studio 2022** with the **ASP.NET and web development** and **Azure development** workloads installed.
-* **Azure Functions Core Tools** (for local testing) â€” see [Get started with Azure Functions](https://learn.microsoft.com/azure/azure-functions/functions-run-local).
 * A **Syncfusion license key**. Register it in `Function1.cs` (see the snippet in Step 4a below) or via the `SyncfusionLicense.txt` file placed in the project output directory.
 
 ## Create a simple Excel report

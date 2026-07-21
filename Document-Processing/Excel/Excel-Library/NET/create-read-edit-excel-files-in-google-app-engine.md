@@ -16,7 +16,6 @@ Before you begin, ensure the following:
 
 * An active **Google Cloud Platform (GCP) account**. If you do not have one, see [Create a GCP account](https://cloud.google.com/free).
 * A **GCP project** with **billing enabled** (required for App Engine) and the **App Engine Admin API** enabled â€” see [Enable billing for a project](https://cloud.google.com/billing/docs/how-to/modify-project) and [Enable the App Engine API](https://cloud.google.com/appengine/docs/standard/nodejs/create-app).
-* The **gcloud CLI** installed and initialized â€” see [Install the gcloud CLI](https://cloud.google.com/sdk/docs/install).
 * **Visual Studio 2022** with the **ASP.NET and web development** workload installed.
 * A **Syncfusion license key**. Register it in `Program.cs` (see the snippet in Step 4a below) or store it in the `app.yaml` `env_variables` section for production deployments.
 
