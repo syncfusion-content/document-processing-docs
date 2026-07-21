@@ -16,12 +16,12 @@ domainurl: ##DomainURL##
 
 {% tabcontent TypeScript %}
 
-### Prerequisites
+## Prerequisites
 
-* [System requirements for DOCX Editor](https://ej2.syncfusion.com/react/documentation/system-requirement)
+* [System requirements for React components](https://ej2.syncfusion.com/react/documentation/system-requirement)
 * [Browser Compatibility](https://ej2.syncfusion.com/react/documentation/browser)
 
-### Create a new React application
+## Create a new React application
 
 To set up a React application in a TypeScript environment, run the following commands:
 
@@ -30,7 +30,7 @@ npm create vite@latest documenteditor-app -- --template react-ts
 cd documenteditor-app
 ```
 
-### Install the React DOCX Editor npm package
+## Install the React DOCX Editor npm package
 
 The DOCX Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-react-documenteditor).
 
@@ -41,14 +41,14 @@ To install the DOCX Editor component, use the following command:
 npm install @syncfusion/ej2-react-documenteditor --save
 ```
 
-### Register a Syncfusion License Key
+## Register a Syncfusion License Key
 
 Before initializing the React DOCX Editor control, generate a Syncfusion license key and register it in your application.
 
-- [Generate a Syncfusion License Key](https://ej2.syncfusion.com/react/documentation/licensing/license-key-generation)
-- [Register a Syncfusion License Key in React](https://ej2.syncfusion.com/react/documentation/licensing/license-key-registration)
+- [Generate a Syncfusion License Key](https://help.syncfusion.com/document-processing/licensing/how-to-generate)
+- [Register a Syncfusion License Key in React](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#reactjs)
 
-### Import the required CSS styles
+## Import the required CSS styles
 
 Add the DOCX Editor component and its dependent component styles available in the `node_modules/@syncfusion` package folder. Reference these styles in the `src/index.css` file.
 
@@ -68,7 +68,7 @@ Add the DOCX Editor component and its dependent component styles available in th
 {% endhighlight %}
 {% endtabs %}
 
-### Initialize the DOCX Editor
+## Initialize the DOCX Editor
 
 Add the DOCX Editor component to your application. In the `src/App.tsx` file, add the following code to initialize the component:
 
@@ -102,7 +102,7 @@ export default App;
 
 N> The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
 
-### Run the application
+## Run the application
 
 Run the application using the following command:
 
@@ -114,12 +114,12 @@ npm run dev
 
 {% tabcontent JavaScript %}
 
-### Prerequisites
+## Prerequisites
 
 * [System requirements for DOCX Editor](https://ej2.syncfusion.com/react/documentation/system-requirement)
 * [Browser Compatibility](https://ej2.syncfusion.com/react/documentation/browser)
 
-### Create a new React application
+## Create a new React application
 
 To set up a React application in a JavaScript environment, run the following commands:
 
@@ -128,7 +128,7 @@ npm create vite@latest documenteditor-app -- --template react
 cd documenteditor-app
 ```
 
-### Install the React DOCX Editor npm package
+## Install the React DOCX Editor npm package
 
 The DOCX Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-react-documenteditor).
 
@@ -139,14 +139,14 @@ To install the DOCX Editor component, use the following command:
 npm install @syncfusion/ej2-react-documenteditor --save
 ```
 
-### Register a Syncfusion License Key
+## Register a Syncfusion License Key
 
 Before initializing the React DOCX Editor control, generate a Syncfusion license key and register it in your application.
 
-- [Generate a Syncfusion License Key](https://ej2.syncfusion.com/react/documentation/licensing/license-key-generation)
-- [Register a Syncfusion License Key in React](https://ej2.syncfusion.com/react/documentation/licensing/license-key-registration)
+- [Generate a Syncfusion License Key](https://help.syncfusion.com/document-processing/licensing/how-to-generate)
+- [Register a Syncfusion License Key in React](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#reactjs)
 
-### Import the required CSS styles
+## Import the required CSS styles
 
 Add the DOCX Editor component and its dependent component styles available in the `node_modules/@syncfusion` package folder. Reference these styles in the `src/index.css` file:
 
@@ -166,7 +166,7 @@ Add the DOCX Editor component and its dependent component styles available in th
 {% endhighlight %}
 {% endtabs %}
 
-### Initialize the DOCX Editor
+## Initialize the DOCX Editor
 
 Add the DOCX Editor component to your application. In the `src/App.jsx` file, add the following code to initialize the component:
 
@@ -196,7 +196,7 @@ export default App;
 
 N> The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
 
-### Run the application
+## Run the application
 
 Run the application using the following command:
 
@@ -248,3 +248,4 @@ N> Looking for the full React DOCX Editor component overview, features, pricing,
 - [Open a document](./import)
 - [Save a document](./export)
 - [Collaborative Editing](./collaborative-editing/overview)
+- [Troubleshooting](https://help.syncfusion.com/document-processing/word/word-processor/react/troubleshooting)
