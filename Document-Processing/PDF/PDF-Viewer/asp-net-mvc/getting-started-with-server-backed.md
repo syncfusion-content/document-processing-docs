@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains how to integrate the [ASP.NET MVC PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) into an ASP.NET MVC application using Visual Studio.
 
-N> Starting with the 2026 Vol 2 main release (June 2026), no new features will be added to the Server PDF Viewer, as almost all of the PDF Viewer functionalities are now available in the Standalone PDF Viewer. If you are currently using the server-backed PDF Viewer, please refer to the [migration documentation](./server-to-standalone) to transition to the Standalone PDF Viewer.
+N> Starting with the 2026 Volume 2 release (July 6, 2026), no new features will be added to the Server PDF Viewer, as almost all of the PDF Viewer functionalities are now available in the Standalone PDF Viewer. If you are currently using the server-backed PDF Viewer, please refer to the [migration documentation](./server-to-standalone) to transition to the Standalone PDF Viewer.
 
 ## Prerequisites
 
@@ -43,12 +43,12 @@ Install-Package Syncfusion.EJ2.MVC5 -Version {{ site.ej2version }}
 
 > Make sure that the `Microsoft.AspNet.Mvc` package and its dependency packages are updated to the latest version.
 
-## Add namespace
+## Add required namespaces
 
 Add **Syncfusion.EJ2** namespace reference in `Web.config` under `Views` folder.
 
 {% tabs %}
-{% highlight c# tabtitle="web.config" %}
+{% highlight C# tabtitle="web.config" %}
 <namespaces>
     <add namespace="Syncfusion.EJ2"/>
 </namespaces>
@@ -60,7 +60,7 @@ Add **Syncfusion.EJ2** namespace reference in `Web.config` under `Views` folder.
 Reference a theme and the required scripts from the CDN inside the `<head>` of `~/Views/Shared/_Layout.cshtml` as follows:
 
 {% tabs %}
-{% highlight c# tabtitle="_Layout.cshtml" %}
+{% highlight C# tabtitle="_Layout.cshtml" %}
 
 <!-- Syncfusion ASP.NET MVC controls styles -->
 <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/fluent.css" />
@@ -77,7 +77,7 @@ N> To learn other ways to load themes or scripts (such as [NPM packages](https:/
 Register the script manager at the end of the `<body>` element in the `~/Views/Shared/_Layout.cshtml` file.
 
 {% tabs %}
-{% highlight c# tabtitle="_Layout.cshtml" %}
+{% highlight C# tabtitle="_Layout.cshtml" %}
 
 <!-- Syncfusion ASP.NET MVC Script Manager -->
 @Html.EJS().ScriptManager()
@@ -90,12 +90,12 @@ Register the script manager at the end of the `<body>` element in the `~/Views/S
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC PDF Viewer control in `~/Views/Home/Index.cshtml`. Load a PDF by setting the `DocumentPath` property to a file name or URL, as shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="Index.cshtml" %}
+{% highlight C# tabtitle="Index.cshtml" %}
 
 <div>
     <div style="height:500px;width:100%;">
         <!-- DocumentPath specifies the PDF document to load -->
-        <!-- ServiceUrl specifies the controller endpoint that the viewer uses to communicate with the server -->
+        <!-- ServiceUrl specifies the controller action that the viewer uses to communicate with the server -->
         @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/Home/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
     </div>
 </div>
@@ -119,7 +119,8 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 ## Deployment notes
 
-- Unlike the standalone PDF Viewer which performs client-side rendering, the server-backed PDF Viewer processes and renders PDFs entirely on the server. As a result, the following files are **not required** and should be omitted during deployment:
+-Unlike the standalone PDF Viewer which performs client-side rendering, the server-backed PDF Viewer processes and renders PDFs entirely on the server. As a result, the following files are **not required** and should be omitted from any deployment bundle:
+
   - `pdfium.js`
   - `pdfium.wasm`
 
@@ -129,8 +130,8 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
   | **Amazon Web Services (AWS)** |**NuGet package name** |
   | --- | --- |
-  | AWS Lambda|[SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)|
-  | AWS Elastic Beanstalk |[SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)|
+  | AWS Lambda|[SkiaSharp.NativeAssets.Linux 3.119.1](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)|
+  | AWS Elastic Beanstalk |[SkiaSharp.NativeAssets.Linux.NoDependencies 3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)|
 
 - The `serviceUrl` can be updated dynamically at runtime. After updating the value, invoke `pdfViewer.dataBind()` to apply the change and then load the document. This feature is supported in version 23.1.36 or later.
 
@@ -140,6 +141,7 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 }
 <script>
     function load() {
+        // ej2_instances is the EJ2 framework's array of component instances attached to the rendered element.
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
         pdfViewer.serviceUrl = "@serviceUrl";
         pdfViewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
@@ -147,6 +149,13 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
     }
 </script>
 ```
+
+## Troubleshooting
+
+- **Blank viewer / no requests fired:** verify `ServiceUrl` points to a reachable controller action and that the script manager (`@Html.EJS().ScriptManager()`) is registered at the end of `<body>`.
+- **404 on `ServiceUrl` requests:** confirm the route is registered (default attribute routing applies) and the controller returns the `PdfViewerProcessor` response.
+- **Missing native assets on Linux:** confirm the `SkiaSharp.NativeAssets.Linux` package (3.119.1) is deployed alongside the app; check the host for `libskiasharp.so` load errors.
+- **License warnings in the browser console:** ensure `SyncfusionLicenseProvider.RegisterLicense` is called once at application start.
 
 ## See also
 

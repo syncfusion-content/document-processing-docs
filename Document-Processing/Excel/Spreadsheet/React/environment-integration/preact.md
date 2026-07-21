@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Getting started with Syncfusion React Spreadsheet in Preact
+# Getting started with Syncfusion® React Spreadsheet in Preact
 
 This article outlines the steps required to set up a [`Preact`](https://preactjs.com) project and integrate Syncfusion React Spreadsheet.
 
@@ -43,7 +43,7 @@ T  Preact - Fast 3kB alternative to React with the same modern API
 —
 ```
 
-**Step 2: Choose the project language** - Select JavaScript as the framework variant to build this Preact project using JavaScript.
+**Step 2: Choose the project language** - Select **JavaScript** as the project language to build this Preact project.
 
 ```bash
 T  Preact - Fast 3kB alternative to React with the same modern API
@@ -87,7 +87,7 @@ Ensure your HTML has a mount point for the app. For example, in `index.html` add
 
 Now that `my-project` is ready to run with default settings, let’s add Syncfusion components to the project.
 
-## Install Syncfusion React packages.
+## Install the Syncfusion® React Spreadsheet package
 
 To install the React Spreadsheet component package, use the following command:
 
@@ -100,9 +100,9 @@ or
 yarn add @syncfusion/ej2-react-spreadsheet
 ```
 
-## Adding CSS reference
+## Add CSS reference
 
-Import the Syncfusion® component themes in the `src/style.css` file as shown below:
+Add the following Spreadsheet and dependent component styles to `src/style.css` file.
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
@@ -116,6 +116,8 @@ Import the Syncfusion® component themes in the `src/style.css` file as shown be
 @import '../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css';
 @import '../node_modules/@syncfusion/ej2-react-spreadsheet/styles/tailwind3.css';
 ```
+
+> **Note:** This example uses the `Tailwind 3` theme. To use a different built-in theme, replace the `tailwind3.css` references with the corresponding theme stylesheets. Refer to the [Themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme) for information about the available themes and the different ways to include theme styles in a React application.
 
 ## Adding Spreadsheet component
 
@@ -142,7 +144,6 @@ or
 ```bash
 yarn run dev
 ```
-N> Looking for the full React Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) page.
 
 ## See also
 

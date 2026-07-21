@@ -483,5 +483,3 @@ N> You can refer to our [.NET PowerPoint framework](https://www.syncfusion.com/d
 ## Online Demo
 
 * Explore how to create slides with simple text in a PowerPoint presentation using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/default#/tailwind).
-
-N> Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page.

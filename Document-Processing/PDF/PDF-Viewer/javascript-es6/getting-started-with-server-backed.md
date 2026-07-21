@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with TypeScript PDF Viewer (Server-Backed)
+# Getting Started with Server-Backed TypeScript PDF Viewer
 
-This section explains how to create and run the **TypeScript PDF Viewer in server-backed mode**. In this mode, PDF rendering and processing are performed on a server-side web service, while the TypeScript application acts as the client.
+Create and run the **TypeScript PDF Viewer in server-backed mode**. In this mode, PDF rendering and processing are performed on a server-side web service, while the TypeScript application acts as the client.
 
-N> Starting with the 2026 Vol 2 main release (June 2026), no new features will be added to the Server PDF Viewer, as almost all of the PDF Viewer functionalities are now available in the Standalone PDF Viewer. If you are currently using the server-backed PDF Viewer, please refer to the [migration documentation](./server-to-standalone) to transition to the Standalone PDF Viewer.
+N> Starting with the 2026 Vol 2 main release (July 6, 2026), no new features will be added to the Server PDF Viewer, as almost all of the PDF Viewer functionalities are now available in the Standalone PDF Viewer. If you are currently using the server-backed PDF Viewer, please refer to the [migration documentation](./server-to-standalone) to transition to the Standalone PDF Viewer.
 
 ## Prerequisites
 
@@ -100,15 +100,15 @@ Update `src/app.ts` as shown below:
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-import { PdfViewer, Toolbar, Magnification, 
+import { PdfViewer, Toolbar, Magnification,
          Navigation, Annotation, LinkAnnotation,
-         ThumbnailView, BookmarkView, TextSelection, 
-         TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
+         ThumbnailView, BookmarkView, TextSelection,
+         TextSearch, FormFields } from '@syncfusion/ej2-pdfviewer';
 
 PdfViewer.Inject(Toolbar, Magnification, Navigation,
                Annotation, LinkAnnotation, ThumbnailView,
                BookmarkView, TextSelection, TextSearch,
-               FormFields, FormDesigner);
+               FormFields);
 
 const pdfviewer: PdfViewer = new PdfViewer({
   // Specifies the URL of the server-side PDF Viewer web service
@@ -143,6 +143,8 @@ npm start
 {% endtabs %}
 
 The application will connect to the configured PDF Viewer web service and render the document in the browser. The image below shows how the PDF Viewer is rendered in the browser:
+
+*Rendered PDF Viewer in the browser*
 
 ![Rendered PDF Viewer in browser](images/pdfviewer-control.png)
 
@@ -185,15 +187,16 @@ Configure this URL in the `serviceUrl` property of the PDF Viewer.
 
 N> For hosting the web service on Linux, include [SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1). For AWS environments, use the following packages:
 
-| **Amazon Web Services (AWS)** |**NuGet package name** |
+| **Amazon Web Services (AWS)** | **NuGet package name** |
 | --- | --- |
 | AWS Lambda|[SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)|
 | AWS Elastic Beanstalk |[SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)|
 
-N> Looking for the full JavaScript PDF Viewer component overview, features, pricing, and documentation? Visit the [JavaScript PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/javascript-pdf-viewer) page.
 
 ## See also
 
-- [Getting started in TypeScript PDF Viewer](./getting-started)
+Related resources for further exploration:
+
+- [Getting started with Standalone TypeScript PDF Viewer](./getting-started)
 - [Open PDF Files](./open-pdf-files)
 - [Save PDF Files](./save-pdf-files)

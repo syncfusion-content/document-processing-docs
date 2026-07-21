@@ -10,7 +10,7 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 # Form Filling in .NET MAUI PDF Viewer (SfPdfViewer)
 
-The .NET MAUI PDF Viewer [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) enables users to view and fill AcroForm-based PDF forms across mobile and desktop apps. It supports interactive form filling through the built-in UI, and developers can access and modify form data programmatically using the [FormFields](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FormFields) API.
+The .NET MAUI PDF Viewer [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) enables users to view and fill AcroForm-based PDF forms across mobile and desktop apps. It supports interactive form filling through the built-in UI, and developers can access and modify form data programmatically using the [FormFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FormFields) API.
 
 The viewer supports saving filled forms, flattening form fields to make them non-editable, and importing or exporting form data in FDF, XFDF, JSON, and XML formats. These capabilities make the viewer ideal for capturing and handling form data efficiently within your application. For saving filled forms, see [Save a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/save-a-document).
 
@@ -28,7 +28,7 @@ The viewer supports saving filled forms, flattening form fields to make them non
 
 ## XFA forms
 
-The PDF Viewer supports only AcroForms. PDF documents that contain an XFA form cannot be loaded in the PDF Viewer. When you attempt to load a PDF with an XFA form, the [DocumentLoadFailed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoadFailed) event is raised.
+The PDF Viewer supports only AcroForms. PDF documents that contain an XFA form cannot be loaded in the PDF Viewer. When you attempt to load a PDF with an XFA form, the [DocumentLoadFailed](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoadFailed) event is raised.
 
 {% tabs %}
 {% highlight c# %}

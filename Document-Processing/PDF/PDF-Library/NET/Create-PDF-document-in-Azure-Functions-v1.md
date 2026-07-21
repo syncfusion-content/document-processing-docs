@@ -26,7 +26,9 @@ Step 4: Install the [Syncfusion.PDF.AspNet](https://www.nuget.org/packages/Syncf
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: Include the following namespaces in the **Function1.cs** file.
+N> Add the sample image *AdventureCycle.jpg* as an embedded resource in the project so it can be loaded using `Assembly.GetManifestResourceStream` in the code sample.
+
+Step 5: Include the following namespaces in the **Function1.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -39,7 +41,7 @@ using System.Drawing;
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Add the following code example in **Run** method of **Function1** class to perform **create a PDF document** in Azure Functions and return the resultant **PDF document**.
+Step 6: Add the following code example in **Run** method of **Function1** class to perform **create a PDF document** in Azure Functions and return the resultant **PDF document**.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
@@ -106,25 +108,25 @@ return response;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Right click the project and select **Publish**. Then, create a new profile in the Publish Window.
+Step 7: Right-click the project and select **Publish**. Then, create a new profile in the Publish Window.
 ![Create a new profile in the Publish Window](Azure_images/Azure-Functions-V1/Publish_button.png)
 
-Step 7: Select the target as **Azure** and click **Next** button.
+Step 8: Select the target as **Azure** and click **Next** button.
 ![Select the target as Azure](Azure_images/Azure-Functions-V1/Set_Azure_target.png)
 
-Step 8: Select the **Create new** button.
+Step 9: Select the **Create new** button.
 ![Configure Hosting Plan](Azure_images/Azure-Functions-V1/Function_insane.png)
 
-Step 9: Click **Create** button. 
+Step 10: Click **Create** button. 
 ![Select the plan type](Azure_images/Azure-Functions-V1/Hosting_sample.png)
 
-Step 10: After creating app service then click **Finish** button. 
+Step 11: After creating app service then click **Finish** button. 
 ![Creating app service](Azure_images/Azure-Functions-V1/Finish_function.png)
 
-Step 11: Click the **Publish** button.
+Step 12: Click the **Publish** button.
 ![Click Publish Button](Azure_images/Azure-Functions-V1/Click_publish_button.png)
 
-Step 12: Publish has been succeed.
+Step 13: Publish has been succeeded.
 ![Publish succeeded](Azure_images/Azure-Functions-V1/Successful_publish.png)
 
 Step 13: Now, go to Azure portal and select the App Services. After running the service, click **Get function URL > Copy**. Include the URL as a query string in the URL. Then, paste it into the new browser tab. You will get the PDF document as follows. 
