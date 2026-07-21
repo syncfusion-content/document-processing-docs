@@ -8,14 +8,26 @@ documentation: UG
 
 # Create or Generate PDF file in Blazor
 
-The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, work with forms, and secure PDF files.
+The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, fill forms, and secure PDF files.
 
-To include the Syncfusion<sup>&reg;</sup> .NET PDF library into your Blazor application, please refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) documentation.
+To include the Syncfusion<sup>&reg;</sup> .NET PDF library in your Blazor application, refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) documentation.
+
+N> The Syncfusion .NET PDF library is available as the `Syncfusion.Pdf.Net.Core` NuGet package. Install it via the NuGet Package Manager or the `dotnet add package Syncfusion.Pdf.Net.Core` command before proceeding.
+
+N> Register your Syncfusion license key at application startup using `Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")`. Without a valid license, a watermark appears in the generated PDF.
 
 To quickly get started with creating a PDF document in Blazor, check this video:
 {% youtube "https://www.youtube.com/watch?v=B5BOBwus0Jc&t=2s" %}
 
-## Steps to create PDF document in Blazor Server application
+## Compatibility
+
+| Component | Minimum Version |
+| --- | --- |
+| .NET SDK | 8.0 or later |
+| Syncfusion<sup>&reg;</sup> PDF library | Latest version |
+| Blazor WebAssembly | 6.0 |
+
+## Steps to create a PDF document in a Blazor Server application
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -33,15 +45,15 @@ To quickly get started with creating a PDF document in Blazor, check this video:
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Blazor/ServerSideApplication).
 
-By executing the program, you will get the following output in the browser.
-![Blazor server side browser window](Create-PDF-Blazor/Blazor_browser_output.png)
+Running the program produces the following output in the browser.
+![Blazor Server browser window](Create-PDF-Blazor/Blazor_browser_output.png)
 
-Click the Export to PDF button, and you will get the PDF document with the following output.
-![Blazor server side output PDF document](Create-PDF-Blazor/Blazor_PDF_output.png)
+Click the `Export to PDF` button to generate the PDF document with the following output.
+![Blazor Server output PDF document](Create-PDF-Blazor/Blazor_PDF_output.png)
 
 N> We recommend using Blazor Server (server-side) applications to reduce payload and improve performance compared to Blazor WebAssembly (client-side).
 
-## Steps to create PDF document in Blazor WASM application
+## Steps to create a PDF document in a Blazor WASM application
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -59,13 +71,13 @@ N> We recommend using Blazor Server (server-side) applications to reduce payload
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Blazor/ClientSideApplication).
 
-By executing the program, you will get the following output in the browser.
-![Blazor client browser window](Create-PDF-Blazor/Blazor_Client_WebResult.png)
+Running the program produces the following output in the browser.
+![Blazor WebAssembly browser window](Create-PDF-Blazor/Blazor_Client_WebResult.png)
 
-Click the Export to PDF button and you will get the PDF document with the following output.
-![Blazor getting started output PDF document](Create-PDF-Blazor/Blazor_PDF_output.png)    
+Click the `Export to PDF` button to generate the PDF document with the following output.
+![Blazor WebAssembly output PDF document](Create-PDF-Blazor/Blazor_PDF_output.png)    
 
-## Steps to create PDF documents in .NET MAUI Blazor application
+## Steps to create a PDF document in a .NET MAUI Blazor application
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -83,15 +95,17 @@ Click the Export to PDF button and you will get the PDF document with the follow
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Blazor/BlazorMauiAppCreatePdfSample).
 
-By running the program, you will see the output in the browser when you click the "Weather" option in the left-side menu.
-![Blazor client browser window](Create-PDF-Blazor/Blazor_browser_output.png)
+Running the program produces the following output in the browser when you click the **Weather** option in the left-side menu. This option is part of the default .NET MAUI Blazor template, so the sample is created from that template.
+![MAUI Blazor browser window](Create-PDF-Blazor/Blazor_browser_output.png)
 
-Click the `Export to PDF` button to get the PDF document with the following output.
-![Blazor getting started output PDF document](Create-PDF-Blazor/Blazor_PDF_output.png)
+Click the `Export to PDF` button to generate the PDF document with the following output.
+![MAUI Blazor output PDF document](Create-PDF-Blazor/Blazor_PDF_output.png)
 
-**Save the PDF document on different platforms**
+## Save the PDF document on different platforms
 
 Create a folder named `Services`, then add a class called `SaveService.cs` within this folder, and insert the following code into it.
+
+N> Register `SaveService` in `MauiProgram.cs` with `builder.Services.AddSingleton<SaveService>();` so the platform-specific implementations resolve correctly.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -105,9 +119,9 @@ public partial class SaveService
 {% endhighlight %}
 {% endtabs %}
 
-Now, we need to implement platform-specific code to save the PDF document.
+Implement platform-specific code to save the PDF document.
 
-**Android**
+### Android
 
 Create a new class file named `SaveAndroid.cs` within the Android folder and add the following code to enable file saving on the Android platform.
 
@@ -176,9 +190,11 @@ public partial void SaveAndView(string filename, string contentType, MemoryStrea
 {% endhighlight %}
 {% endtabs %}
 
-N> Android introduced a new runtime permission model for SDK version 23 and above. Include the following code to enable the Android file provider to save and view the generated PDF document.
+N> Android introduced a new runtime permission model for SDK version 23 and above. Add the following code to enable the Android file provider to save and view the generated PDF document.
 
-1.	Create a new XML file with the name of `file_paths.xml` under the Android project Resources/xml folder and add the following code in it.
+### Android Manifest Configuration
+
+1.	Create an XML file named `file_paths.xml` in the Android project under `Resources/xml/`, and add the following code to it.
 
 {% tabs %}
 {% highlight XML %}
@@ -205,7 +221,7 @@ N> Android introduced a new runtime permission model for SDK version 23 and abov
 {% endhighlight %}
 {% endtabs %}
 
-2.	Add the following code to the `AndroidManifest.xml` file located under Properties/AndroidManifest.xml.
+2.	Add the following code to `AndroidManifest.xml`, located under `Properties/AndroidManifest.xml`.
 
 {% tabs %}
 {% highlight XML %}
@@ -230,9 +246,9 @@ N> Android introduced a new runtime permission model for SDK version 23 and abov
 {% endhighlight %}
 {% endtabs %}
 
-**iOS**
+### iOS
 
-Create a new class file named `SaveIOS.cs` within the iOS folder and include the following code to enable file saving on the iOS platform.
+Create a class file named `SaveIOS.cs` in the iOS folder (`Platforms/iOS/`) and include the following code to enable file saving on the iOS platform.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -270,9 +286,9 @@ public partial void SaveAndView(string filename, string contentType, MemoryStrea
 {% endhighlight %}
 {% endtabs %}
 
-**MacOS**
+### macOS
 
-Create a new class file named `SaveMac.cs` within the MacCatalyst folder and include the following code to enable file saving on the macOS platform.
+Create a class file named `SaveMac.cs` in the Mac Catalyst folder (`Platforms/MacCatalyst/`) and include the following code to enable file saving on the macOS platform.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -324,9 +340,9 @@ public UIWindow? GetKeyWindow()
 {% endhighlight %}
 {% endtabs %}
 
-**Windows**
+### Windows
 
-Create a new class file named `SaveWindows.cs` within the Windows folder and include the following code to enable file saving on the Windows platform.
+Create a class file named `SaveWindows.cs` in the Windows folder (`Platforms/Windows/`) and include the following code to enable file saving on the Windows platform.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -433,9 +449,9 @@ public async partial void SaveAndView(string filename, string contentType, Memor
 {% endhighlight %}
 {% endtabs %}
 
-The helper files mentioned above are available on [this](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui#helper-files-for-net-maui) page.
+The helper files mentioned above are available on the [Create or Generate PDF in .NET MAUI](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui#helper-files-for-net-maui) page.
 
-## Steps to create PDF documents in Blazor WebAssembly PWA
+## Steps to create a PDF document in a Blazor WebAssembly PWA
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -454,12 +470,30 @@ The helper files mentioned above are available on [this](https://help.syncfusion
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Blazor/BlazorWASMPWA).
 
-By executing the program, you will get the following output in the browser.
-![Blazor WASM PWA browser](Create-PDF-Blazor/Blazor-PWA-4.png)
+Running the program produces the following output in the browser.
+![Blazor WebAssembly PWA browser window](Create-PDF-Blazor/Blazor-PWA-4.png)
 
-Click the `Create PDF document` button, and you will get the PDF document with the following output.
-![Blazor getting started output PDF document](Create-PDF-Blazor/Blazor_PDF_output.png)
+Click the `Create PDF document` button to generate the PDF document with the following output.
+![Blazor WebAssembly PWA output PDF document](Create-PDF-Blazor/Blazor_PDF_output.png)
 
 Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 
-An online sample to get started with creating a PDF document is available [here](https://document.syncfusion.com/demos/pdf/default#/tailwind).
+An online sample demonstrating PDF creation is available on the [Syncfusion PDF Demos](https://document.syncfusion.com/demos/pdf/default#/tailwind) page.
+
+## Troubleshooting
+
+- **Watermark appears in output PDF** — Your Syncfusion license key is not registered. Call `SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")` at application startup.
+- **NuGet restore failures** — Ensure the target framework is .NET 8.0 or later and the `Syncfusion.Pdf.Net.Core` package version is compatible.
+- **File picker does not open on Windows** — Verify that the Windows App SDK is referenced in the MAUI Windows project and that `WinRT.Interop.InitializeWithWindow` receives a valid window handle.
+
+## Next Steps
+
+Explore advanced PDF capabilities and Azure integration patterns:
+
+### Advanced PDF Features
+- **[Merge Multiple PDFs](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/merge-documents)** — Combine multiple reports into a single document
+- **[Split PDF Documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/split-documents)** — Extract specific pages or create filtered PDFs
+- **[Add Watermarks](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-watermarks)** — Brand PDFs with company logos and confidentiality markers
+- **[Create Interactive Forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-forms)** — Build fillable PDF forms for data collection
+- **[Digital Signatures](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-digitalsignature)** — Sign PDFs programmatically for compliance
+

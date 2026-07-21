@@ -7,19 +7,28 @@ control: PDF
 documentation: UG
 keywords: create pdf, edit pdf, write pdf, merge, pdf form, fill form, digital sign, table, c#, vb.net, dotnet pdf
 ---
-# Create or Generate PDF file in C# and VB.NET
+# Create or Generate a PDF File in C# and VB.NET
 
-The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) used to create PDF document from scratch and saving it to disk or stream. This library also offers functionality to merge, split, stamp, forms, and secure PDF files.
+The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create a PDF document from scratch and save it to disk or a stream. The library also merges, splits, stamps, fills forms, and secures PDF files.
 
-To include the .NET PDF library into your application, please refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) documentation.
+To include the .NET PDF library in your application, refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) documentation.
 
-N> 1. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
-N> 2. Unlike System.Drawing APIs all the units are measured in point instead of pixel.
+N> 1. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or the NuGet feed, you must include a license key in your project. See the [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details on registering the license key.
+N> 2. Unlike the `System.Drawing` APIs, all units are measured in points, not pixels.
 
 To quickly get started with creating a PDF document in .NET, watch this video:
 {% youtube "https://www.youtube.com/watch?v=PvUdu1hpRLQ" %}
 
-## Creating a PDF document with simple text
+## Prerequisites
+
+- **.NET SDK 8.0** or later.
+- **Visual Studio 2022** with the appropriate workload (e.g., **.NET desktop development** for Windows targets)
+- A **Syncfusion<sup>&reg;</sup> license key** — register it in your application using `Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")`. For details, see the [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
+- The appropriate Syncfusion NuGet package for your target platform:
+  - **Cross-platform (.NET 8+):** [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core)
+  - **Windows-specific (.NET Framework / .NET 8+ on Windows):** [Syncfusion.Pdf.AspNet](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet) or [Syncfusion.Pdf.WinForms](https://www.nuget.org/packages/Syncfusion.Pdf.WinForms)
+
+## Step to create a PDF document with simple text
 
 The following code example shows how to create a PDF document with simple text using the [DrawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) object to draw the text on the PDF page.
 
@@ -97,9 +106,11 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/blob/master/Getting%20Started/.NET/Create_PDF_NET/Create_PDF_NET/Program.cs).
 
-## Creating a PDF document with image
+## Step to create a PDF document with an image
 
-The following code example shows how to generate a PDF document with an image using the [DrawImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawImage_Syncfusion_Pdf_Graphics_PdfImage_System_Single_System_Single_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class. 
+The following code example generates a PDF document with an image using the [DrawImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawImage_Syncfusion_Pdf_Graphics_PdfImage_System_Single_System_Single_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class. The cross-platform sample uses `PdfImage.FromStream` because `System.Drawing` is restricted on .NET 6+; the Windows-specific sample uses `PdfImage.FromFile` with a file path.
+
+N> Add the image file (for example, `Autumn Leaves.jpg`) to the project and set **Copy to Output Directory** to **Copy if newer** so the relative path resolves at runtime.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -170,9 +181,11 @@ doc.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/.NET/Create_PDF_with_image_NET).
 
-## Creating a PDF document with table
+## Step to create a PDF document with a table
 
-The following code example shows how to generate a PDF document with a simple table from a [DataSource](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html#Syncfusion_Pdf_Grid_PdfGrid_DataSource) using the [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) class. The [DataSource](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html#Syncfusion_Pdf_Grid_PdfGrid_DataSource) can be a data set, data table, arrays or an IEnumerable object.
+The following code example generates a PDF document with a simple table from a [DataSource](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html#Syncfusion_Pdf_Grid_PdfGrid_DataSource) using the [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) class. The [DataSource](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html#Syncfusion_Pdf_Grid_PdfGrid_DataSource) can be a `DataSet`, `DataTable`, array, or any `IEnumerable` object.
+
+N> For tables that may span multiple pages, use `PdfGridLayoutFormat` with `PdfLayoutType.Paginate` instead of the simple `Draw(page, PointF)` overload used in the sample below.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -290,7 +303,7 @@ doc.Close(true)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/.NET/Create_PDF_with_table_NET).
 
-## Creating a simple PDF document with basic elements
+## Step to create a simple PDF document with basic elements
 
 Include the following necessary namespaces to create a simple PDF document with basic elements.
 
@@ -368,12 +381,12 @@ Dim page As PdfPage = document.Pages.Add()
 
 {% endtabs %}
 
-1. Essential<sup>&reg;</sup> PDF has APIs similar to the .NET GDI plus which helps to draw elements to the PDF page just like 2D drawing in .NET. 
-2. Unlike System.Drawing APIs all the units are measured in point instead of pixel. 
-3. In PDF, all the elements are placed in absolute positions and has the possibility for content overlapping if misplaced. 
-4. Essential<sup>&reg;</sup> PDF provides the rendered bounds for each and every elements added, through [PdfLayoutResult](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutResult.html) objects. This can be used to add successive elements and prevent content overlap.
+1. Syncfusion<sup>&reg;</sup> PDF (formerly **Essential<sup>&reg;</sup> PDF**) has APIs similar to .NET GDI+ that let you draw elements to the PDF page much like 2D drawing in .NET.
+2. Unlike the `System.Drawing` APIs, all units are measured in points, not pixels.
+3. In a PDF, all elements are placed in absolute positions and may overlap if misplaced.
+4. Syncfusion<sup>&reg;</sup> PDF provides the rendered bounds for every element added through [PdfLayoutResult](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutResult.html) objects. You can use these to place successive elements and prevent content overlap.
 
-The following code example explains how to add an image from disk to a PDF document, by providing the rectangle coordinates. 
+The following code example adds an image from disk to a PDF document by providing the rectangle coordinates. The variable `g` (`PdfGraphics`) is the page's graphics object created in the previous snippet. Add the image file (for example, `AdventureCycle.jpg`) to the project with **Copy to Output Directory** set to **Copy if newer**.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -497,8 +510,7 @@ g.DrawLine(New PdfPen(New PdfColor(126, 151, 173), 0.7!), New PointF(0, (result.
 
 {% endtabs %}
 
-Essential<sup>&reg;</sup> PDF provides two types of table models. The difference between both the table models can be referred from the link 
-[Difference between PdfLightTable and PdfGrid](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-tables#difference-between-pdflighttable-and-pdfgrid)
+Syncfusion<sup>&reg;</sup> PDF provides two types of table models. The difference between both table models is described at [Difference between PdfLightTable and PdfGrid](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-tables#difference-between-pdflighttable-and-pdfgrid).
 
 Since the invoice document requires only simple cell customizations, the given code example explains how to create a simple invoice table by using [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html).
 
@@ -763,22 +775,24 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/.NET/Filling_forms_NET).
 
-The filled form is shown in adobe reader application as follows.
+The filled form is shown in Adobe Reader as follows.
 ![Filled PDF form output](GettingStarted_images/filled-form-in-pdf.jpeg)
 
-## Converting HTML files to PDF
+## Step to convert HTML files to PDF
 
-The [HTML-to-PDF converter](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/converting-html-to-pdf) is a .NET library for converting webpages, SVG, MHTML, and HTML files to PDF using C#. It uses the popular rendering engine [Blink](https://en.wikipedia.org/wiki/Blink_(browser_engine)) (Google Chrome) and the result preserves all graphics, images, text, fonts, and the layout of the original HTML document or webpage.  
+The [HTML-to-PDF converter](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features) converts webpages, SVG, MHTML, and HTML files to PDF using C#. It uses the popular rendering engine [Blink](https://en.wikipedia.org/wiki/Blink_(browser_engine)) (Google Chrome) and preserves all graphics, images, text, fonts, and the layout of the original HTML document or webpage.
 
-The HTML-to-PDF converter works seamlessly in various platforms: [Azure App Services](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-app-service-linux), [Azure Functions](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-functions-linux), [AWS Lambda](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-aws-lambda), [Docker](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/docker), [WinForms](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/windows-forms), [WPF](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/wpf), [Blazor](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/blazor), [ASP.NET MVC](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/aspnet-mvc), [ASP.NET Core](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/net-core) with [Windows](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/windows-forms), [Linux](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/linux), and [MacOS](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/mac).
+The HTML-to-PDF converter supports the following platforms: [Azure App Services](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-app-service-linux), [Azure Functions](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-functions-linux), [AWS Lambda](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-aws-lambda), [Docker](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/docker), [WinForms](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/windows-forms), [WPF](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/wpf), [Blazor](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/blazor), [ASP.NET MVC](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/aspnet-mvc), and [ASP.NET Core](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/net-core) on [Windows](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/windows-forms), [Linux](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/linux), and [macOS](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/mac).
 
-**Install HTML to PDF .NET library to your project**
+### Install the HTML-to-PDF .NET library
 
-To include the HTML to PDF .NET library into your application, please refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) documentation. 
+To include the HTML-to-PDF .NET library in your application, install the appropriate NuGet package for your target platform (see the **Prerequisites** section) and refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) documentation.
 
-**Convert website URL to PDF**  
+N> The HTML-to-PDF converter requires a one-time download of the Blink-based Chromium binaries on first run. Set the `BlinkPath` property (or the `SYNCFUSION_BLINK_PATH` environment variable) to point to a pre-installed Chromium directory for offline / air-gapped environments.
 
-To convert website URL or local HTML file to PDF document using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class, refer to the following code example.
+### Convert a website URL to PDF
+
+To convert a URL or local HTML file to a PDF document using the [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method of the [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class, see the following code example. Some sites (for example, `google.com`) block headless browsers; use a stable URL such as `https://example.com` for testing.
 
 {% tabs %}
 
@@ -831,16 +845,15 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/.NET/HTML_to_PDF_NET).
 
-**HTML String to PDF** 
+### Convert an HTML string to PDF
 
-The HTML to PDF converter provides support for converting HTML string to PDF. While converting HTML string to PDF, converter provides option to specify the base URL.
+The HTML-to-PDF converter also supports converting an HTML string to a PDF. When converting an HTML string, you can specify a base URL that the converter uses to resolve relative resources.
 
-<b>baseURL:</b> Path of the resources (images, style sheets, scripts.,) used in the input HTML string.
+**baseURL** — the path of the resources (images, style sheets, scripts, etc.) used in the input HTML string.
 
-For the following HTML string, the baseURL will be the path of the syncfusion_logo.gif image. For example, if the above image is in "C:/Temp/ HTMLFiles/syncfusion_logo.gif" location, then the baseURL will be as follows.
-*baseURL: C:/Temp/HTMLFiles/*
+For the following HTML string, the baseURL is the path of the `syncfusion_logo.gif` image. For example, if the image is in `C:/Temp/HTMLFiles/syncfusion_logo.gif`, then the baseURL is `C:/Temp/HTMLFiles/`.
 
-To convert the HTML string to PDF using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class, refer to the following code example.
+To convert the HTML string to PDF using the [Convert(string, string)](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_System_String_) method of the [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class, see the following code example.
 
 {% tabs %}
 

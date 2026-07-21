@@ -1,6 +1,6 @@
 ---
 title: Create PDF document in Azure App Service on Windows | Syncfusion
-description: Create PDF document in Azure App Service on Windows using .NET Core PDF library without the dependency of Adobe Acrobat.
+description: Create a PDF document in Azure App Service on Windows using the Syncfusion .NET PDF library without the dependency on Adobe Acrobat.
 platform: document-processing
 control: PDF
 documentation: UG
@@ -8,28 +8,41 @@ documentation: UG
 
 # Create PDF document in Azure App Service on Windows
 
-The [.NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **create PDF document in Azure App Service on Windows**.
+The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, edit PDF documents programmatically without the dependency on Adobe Acrobat. Using this library, you can **create a PDF document in Azure App Service on Windows**.
 
-Check the following video to learn how to create a PDF document and publish it as an Azure App Service on Windows using the .NET PDF Library.
+Watch the following video to learn how to create a PDF document and publish it as an Azure App Service on Windows using the Syncfusion .NET PDF library.
 {% youtube "https://www.youtube.com/watch?v=PU8pVAHV_88" %}
+
+## Prerequisites
+
+* An active **Microsoft Azure subscription**. If you don't have one, [create a free account](https://azure.microsoft.com/free/) before starting.
+* **Visual Studio 2022** with the **ASP.NET and web development** and **Azure development** workloads installed.
+* The **Azure SDK** and the latest **Azure App Service tools** for Visual Studio.
+* .NET SDK 8.0 or later 
+* A valid Syncfusion license key. Refer to the [licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn how to register a Syncfusion license key in your application.
 
 ## Steps to create PDF document in Azure App Service on Windows
 
-Step 1: Create a new ASP.NET Core Web App (Model-View-Controller).
-![Create a ASP.NET Core Web App project](Azure_images/Azure-app-service-windows/Create-net-core-web-app.png)
+Step 1: Create a new ASP.NET Core Web App (Model-View-Controller) in Visual Studio.
+![Create an ASP.NET Core Web App project](Azure_images/Azure-app-service-windows/Create-net-core-web-app.png)
 
-Step 2: Create a project name and select the location.
+Step 2: Set the project name and select the location.
 ![Configure your new project](Azure_images/Azure-app-service-windows/project_configuration.png)
 
-Step 3: Click **Create** button. 
+Step 3: Click the **Create** button. 
 ![Additional information](Azure_images/Azure-app-service-windows/Framework_selection.png)
 
-Step 4: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+Step 4: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/). You can also use the .NET CLI:
+
+```bash
+dotnet add package Syncfusion.Pdf.Net.Core
+```
+
 ![NuGet package installation](Azure_images/Azure-app-service-windows/NuGet_package.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from a trial setup or from the NuGet feed, you must also add the **Syncfusion.Licensing** assembly reference and include a license key in your project. Refer to the [licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details.
 
-Step 5: A default action method named Index will be present in *HomeController.cs*. Right click on Index method and select Go To View where you will be directed to its associated view page *Index.cshtml*. Add a new button in the *Index.cshtml* as shown below.
+Step 5: A default action method named `Index` is present in *HomeController.cs*. Right-click the `Index` method and select **Go To View** to open its associated view page *Index.cshtml*. Add a new button to *Index.cshtml* as shown below.
 
 {% tabs %}
 
@@ -49,12 +62,15 @@ Step 5: A default action method named Index will be present in *HomeController.c
 
 {% endtabs %}
 
-Step 6: Include the following namespaces in *HomeController.cs*.
+Step 6: Include the following namespaces in *HomeController.cs*. Add `System.IO` and `System.Collections.Generic` for the `FileStream`, `Path`, and `List` types used in the action method.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
 
+using System.IO;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Drawing;
 using Syncfusion.Pdf.Grid;
@@ -64,7 +80,7 @@ using Syncfusion.Pdf;
 
 {% endtabs %}
 
-Step 7: Add a new action method named CreatePDFDocument in HomeController.cs file and include the below code example to generate a PDF document in *HomeController.cs*. 
+Step 7: Add a new action method named `CreatePDFDocument` in the *HomeController.cs* file and include the following code to generate a PDF document. Before building, place the sample image at `wwwroot/Data/AdventureCycle.jpg` so the controller can read it at runtime.
 
 {% tabs %}
 
@@ -139,46 +155,75 @@ public IActionResult CreatePDFDocument()
 
 {% endtabs %}
 
-**Steps to publish as Azure App Service on Windows**
+**Verify locally before publishing**
 
-Step 1: Right-click the project and select **Publish** option.
+Run the project locally with `F5` in Visual Studio, then click the **Create PDF Document** button on the home page to confirm the PDF downloads successfully. If you see a license warning, ensure `Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")` is called at application startup (for example, in `Program.cs`).
+
+## Steps to publish as Azure App Service on Windows
+
+Step 1: Right-click the project and select the **Publish** option.
 ![Publish option Image](Azure_images/Azure-app-service-windows/Publish_button.png)
 
-Step 2: Click the **Add a Publish Profile** button.
+Step 2: Click the **Add a Publish Profile** button. Sign in to your Azure account if prompted.
 ![Add a publish profile](Azure_images/Azure-app-service-windows/Publish_profile.png)
 
 Step 3: Select the publish target as **Azure**.
 ![Select the publish target as Azure](Azure_images/Azure-app-service-windows/Select_target.png)
 
-Step 4: Select the Specific target as **Azure App Service (Windows)**.
+Step 4: Select the specific target as **Azure App Service (Windows)**.
 ![Select the publish target](Azure_images/Azure-app-service-windows/Select_azure-app-service-windows.png)
 
-Step 5: To create a new app service, click **Create new** option.
+Step 5: To create a new app service, click the **Create new** option.
 ![Click create new option](Azure_images/Azure-app-service-windows/Create_new_app_service.png)
 
-Step 6: Click the **Create** button to proceed with **App Service** creation.
+Step 6: Configure the **App Service name**, **Subscription**, **Resource Group**, and **App Service Plan**, then click the **Create** button to proceed with the App Service creation.
 ![Click the create button](Azure_images/Azure-app-service-windows/App_service_details.png)
 
 Step 7: Click the **Finish** button to finalize the **App Service** creation.
 ![Click the finish button](Azure_images/Azure-app-service-windows/Finish_app_service.png)
 
-Step 8: Click **Close** button.
-![Create a ASP.NET Core Project](Azure_images/Azure-app-service-windows/profile_creation_success.png)
+Step 8: Click the **Close** button.
+![Create an ASP.NET Core Project](Azure_images/Azure-app-service-windows/profile_creation_success.png)
 
 Step 9: Click the **Publish** button.
 ![Click the Publish button](Azure_images/Azure-app-service-windows/Publish_app_service.png)
 
-Step 10: Now, Publish has been succeeded.
+Step 10: Publishing has succeeded.
 ![Publish has been succeeded](Azure_images/Azure-app-service-windows/Publish_link.png)
 
-Step 11: Now, the published webpage will open in the browser. 
+Step 11: The published webpage opens in the browser. 
 ![Browser will open after publish](Azure_images/Azure-app-service-windows/WebView.png)
 
-Step 12: Select the PDF document and Click **Create PDF document** to create a PDF document.You will get the output PDF document as follows.
+Step 12: Click the **Create PDF document** button to generate the PDF document. The output PDF document appears as follows.
 ![Azure App Service on Windows](Azure_images/Azure-app-service-windows/Output.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Azure/Azure%20App%20Service).
 
-Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features. 
+Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion PDF library features. 
 
-An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind). 
+An online sample to [create a PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind) is also available.
+
+## Troubleshooting
+
+* **Image not found (`AdventureCycle.jpg`)** — Confirm the image is placed at `wwwroot/Data/AdventureCycle.jpg` and is included in the project (set **Copy to Output Directory** to **Copy if newer**).
+* **500 error after deployment** — Open the **Output** window in Visual Studio and the **App Service log stream** for stack traces. Common causes are missing NuGet packages or unsupported target framework.
+* **PDF downloads as a blank or corrupted file** — Ensure the `MemoryStream` is reset (`stream.Position = 0`) before returning, as shown in the example.
+* **Deployment fails** — Verify the selected **App Service Plan** supports the chosen .NET runtime. Windows plans support .NET Framework and modern .NET; Linux plans support modern .NET only.
+
+## See also
+
+* [Create a PDF document in .NET](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-core)
+* [Azure App Service on Windows documentation](https://learn.microsoft.com/en-us/azure/app-service/overview)
+* [Syncfusion.Pdf.Net.Core NuGet package](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/)
+* [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview) 
+
+## Next Steps
+
+Explore advanced PDF capabilities and Azure integration patterns:
+
+### Advanced PDF Features
+- **[Merge Multiple PDFs](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/merge-documents)** — Combine multiple reports into a single document
+- **[Split PDF Documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/split-documents)** — Extract specific pages or create filtered PDFs
+- **[Add Watermarks](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-watermarks)** — Brand PDFs with company logos and confidentiality markers
+- **[Create Interactive Forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-forms)** — Build fillable PDF forms for data collection
+- **[Digital Signatures](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-digitalsignature)** — Sign PDFs programmatically for compliance

@@ -729,4 +729,15 @@ The following screenshot shows the invoice PDF document created by the Syncfusio
 
 ![Invoice PDF](images/getting-started/invoice.jpg)
 
-N> You can also explore our [Flutter PDF library](https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/pdf) demo that shows how to create and modify PDF files from C# with just five lines of code.
+## Troubleshooting
+
+- If you encounter "permission denied" errors when saving or opening PDFs, ensure the app has the necessary storage permissions for the target platform.
+- For issues with package versions, verify that your Flutter and Dart SDK versions are compatible with the Syncfusion Flutter PDF package.
+- If the PDF does not open or save as expected, check for platform-specific implementation issues and review the official Syncfusion documentation.
+
+## See also
+
+- [Syncfusion Flutter PDF documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/flutter/overview)
+- [Syncfusion Flutter PDF package (pub.dev)](https://pub.dev/packages/syncfusion_flutter_pdf)
+- [Flutter platform setup guides](https://docs.flutter.dev/get-started/install)
+- [GitHub sample: Flutter PDF library](https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/pdf)

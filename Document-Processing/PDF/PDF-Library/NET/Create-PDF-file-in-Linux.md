@@ -7,35 +7,36 @@ documentation: UG
 Keywords: linux os save pdf, linux os load pdf, c# save pdf, c# load pdf
 ---
 
-# Create PDF document on Linux
+# Create a PDF Document on Linux
 
-The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency on Adobe Acrobat. Using this library, you can create a PDF document in a .NET Core application on Linux.
+The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) creates, reads, and edits PDF documents programmatically, with no dependency on Adobe Acrobat. You can use this library to create a PDF document in a .NET application on Linux.
 
-## Steps to create PDF document programmatically
+## Prerequisites
 
-Step 1: Execute the following command in the Linux terminal to create a new .NET Core Console application project.
+- A **Linux distribution** that supports .NET 6 or later (for example, **Ubuntu 20.04+**, **Debian 11+**, **RHEL 8+**, or **Fedora 36+**).
+- **.NET SDK 8.0** or later installed. Verify with `dotnet --list-sdks`; install from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download) or your distribution's package manager.
+- A **Syncfusion<sup>&reg;</sup> license key** — register it in your application using `Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")`. For details, see the [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
+- The **[Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core)** NuGet package.
 
-{% tabs %}
-{% highlight bash %}
 
-dotnet new console
 
-{% endhighlight %}
-{% endtabs %}
+## Step to create a PDF document programmatically
+
+**Step 1:** Run the following command in the Linux terminal to create a new .NET console application project. The project is created in the current directory.
 
 Step 2: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/) by executing the following command.
 
 {% tabs %}
 {% highlight bash %}
 
-dotnet add package Syncfusion.Pdf.Net.Core -v xx.x.x.xx -s https://www.nuget.org/
+dotnet add package Syncfusion.Pdf.Net.Core -v <version>
 
 {% endhighlight %}
 {% endtabs %}
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you also have to add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> If you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or the NuGet feed, you must add a reference to the `Syncfusion.Licensing` assembly and include a valid license key in your project. See the [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details on registering the license key.
 
-Step 3: Include the following namespaces in the *Program.cs* file.
+**Step 3:** Add the following `using` directives to `Program.cs`. The `System.Collections.Generic` directive is required for the `List<object>` data source used in the next step.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -48,7 +49,7 @@ using System.IO;
 {% endhighlight %}
 {% endtabs %}
 
-Step 4: Add the following code sample to the *Program.cs* file to **create a PDF document in the .NET Core application on Linux**.
+**Step 4:** Add the following code to `Program.cs` to create a PDF document in the .NET application on Linux.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -107,32 +108,49 @@ using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"Output.pd
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Execute the following command to restore the NuGet packages.
+**Step 5:** Run the following command to restore the NuGet packages. (`dotnet add package` already restores, so this step is optional unless you have a custom `NuGet.config`.)
 
-{% tabs %}
-{% highlight bash %}
+![Restore NuGet packages on Linux](GettingStarted_images/Linux_Build.png)
 
-dotnet restore
+**Step 6:** Run the following command in the terminal to build and run the application.
 
-{% endhighlight %}
-{% endtabs %}
+![Run the application on Linux](GettingStarted_images/Linux_Run.png)
 
-![Linux Build](GettingStarted_images/Linux_Build.png)
+After the run completes, verify that `Output.pdf` was generated in the project's working directory (typically the project root or `bin/Debug/<target-framework>/`).
 
-Step 6: Execute the following command in terminal to run the application.
-{% tabs %}
-{% highlight bash %}
+Download a complete working sample from the [Linux folder on GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Linux).
 
-dotnet run
+Running the program produces the following PDF document. The output is saved in the project's working directory.
+![Output PDF document on Linux](GettingStarted_images/Open_and_save_output.png)
 
-{% endhighlight %}
-{% endtabs %}
+Explore the [Syncfusion<sup>&reg;</sup> PDF library features](https://www.syncfusion.com/document-sdk/net-pdf-library) to learn more about merging, splitting, securing, and stamping PDF files.
 
-![Linux Run](GettingStarted_images/Linux_Run.png)
+An online sample demonstrating how to [create a PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind) is also available.
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Linux).
+## Troubleshooting
 
-By executing the program, you will get the PDF document as follows. The output will be saved alongside Program.cs.
-![Linux output PDF document](GettingStarted_images/Open_and_save_output.png)
+- **Watermark appears in the output PDF** — Your Syncfusion<sup>&reg;</sup> license key is not registered. Call `SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")` at the start of the `Main` method.
+- **`Unable to load shared library 'libSkiaSharp'` or `libgdiplus` errors** — Install the native graphics dependencies: `sudo apt-get install -y libfontconfig1 libgdiplus` (Debian/Ubuntu) or `sudo dnf install -y fontconfig libgdiplus` (RHEL/Fedora).
+- **Font rendering issues (boxes instead of characters)** — Install `libfontconfig1` and ensure the `FONTCONFIG_PATH` environment variable points to a valid font configuration (or run `fc-cache -fv` to rebuild the cache).
+- **`Output.pdf` is empty or zero bytes** — Wrap `PdfDocument` in a `using` block (or call `document.Close(true)`) so the native buffers are flushed before the process exits.
+- **NuGet restore fails on air-gapped systems** — Configure a local NuGet feed with `dotnet nuget add source <path>` and pass the source to `dotnet add package` via the `-s` flag.
+- **`Permission denied` writing `Output.pdf`** — The current working directory may be read-only. Change to a writable folder (`cd /tmp`) before running, or pass an absolute path to the `FileStream` constructor.
+- **`dotnet` command not found** — Install the .NET SDK from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download) or your distribution's package manager, then restart the terminal.
+- **`AdventureCycle.jpg` not found at runtime** — The relative path resolves against the current working directory. Copy the image to the project folder or pass an absolute path.
 
-Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
+## See also
+
+- [Create a PDF File in Docker](create-pdf-document-in-docker)
+- [Create a PDF File in Console](create-pdf-file-in-console)
+- [NuGet Packages Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required)
+- [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required)
+- [Syncfusion<sup>&reg;</sup> Licensing Overview](https://help.syncfusion.com/common/essential-studio/licensing/overview)
+- [Create a PDF file in ASP.NET Core](create-pdf-file-in-asp-net-core)
+- [Create a PDF file in AWS Lambda](create-pdf-file-in-aws-lambda)
+- [Open and read PDF files](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/open-pdf-files)
+- [Merge PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/merge-documents)
+- [Split PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/split-documents)
+- [Working with PDF forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-forms)
+- [Working with security and permissions](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-security)
+- [Working with stamps and watermarks](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-watermarks)
+- [Syncfusion<sup>&reg;</sup> PDF library — Demos](https://document.syncfusion.com/demos/pdf/default)

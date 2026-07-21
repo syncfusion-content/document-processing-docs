@@ -8,7 +8,7 @@ documentation: UG
 
 # Create PDF document in AKS Environment 
 
-The [.NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **create PDF document in AKS Environment**.
+The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **create PDF document in AKS Environment**.
 
 ## Steps to create PDF document in AKS Environment
 
@@ -297,4 +297,15 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features. 
 
-An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind). 
+## Troubleshooting
+
+- If you encounter authentication or permission errors during deployment, ensure your Azure CLI session is active and your account has the required roles for AKS and ACR.
+- For issues with missing images or files, verify all referenced resources exist in the correct paths.
+- If the PDF does not generate or download, check application logs for exceptions and ensure all dependencies are installed.
+
+## See also
+
+- [Syncfusion .NET PDF library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/overview)
+- [Azure Kubernetes Service documentation](https://docs.microsoft.com/en-us/azure/aks/)
+- [Azure Container Registry documentation](https://docs.microsoft.com/en-us/azure/container-registry/)
+- [GitHub sample: Create PDF document in AKS environment](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Azure/Create%20PDF%20document%20in%20AKS%20environment/createpdfdocument)

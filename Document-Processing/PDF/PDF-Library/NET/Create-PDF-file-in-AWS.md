@@ -7,11 +7,11 @@ documentation: UG
 keywords: aws create pdf, edit pdf, merge, pdf form, fill form, digital sign, table, c#, dotnet core pdf, asp generate pdf, aspx generate pdf
 ---
 
-# Create PDF document in Amazon Web Services (AWS)
+# Create a PDF Document on Amazon Web Services (AWS)
 
-The [.NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can open and save PDF documents in Amazon Web Services (AWS). 
+The [.NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) creates, reads, and edits PDF documents programmatically, with no dependency on Adobe Acrobat. You can use this library to create, read, and edit PDF documents on AWS.
 
-N> If this is your first time working with Amazon Web Services (AWS), please refer to the dedicated AWS resources. This section explains how to open and save a PDF document in C# using the .NET Core PDF library in AWS. 
+N> If this is your first time working with AWS, refer to the [AWS Getting Started](https://aws.amazon.com/getting-started/) resources. This page explains how to deploy a Syncfusion<sup>&reg;</sup> PDF generation workflow to AWS Lambda; for Elastic Beanstalk, see [Create a PDF File in AWS Elastic Beanstalk](create-pdf-file-in-aws-elastic-beanstalk).
 
 ## Prerequisites 
 

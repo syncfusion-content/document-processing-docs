@@ -25,7 +25,7 @@ N> If .NET Standard is not available in the code sharing strategy, the Portable 
 Step 3: Install the [Syncfusion.Xamarin.PDF](https://www.nuget.org/packages/Syncfusion.Xamarin.PDF/) NuGet package as a reference to your Xamarin.Forms applications from [NuGet.org](https://www.nuget.org/).
 ![Install Xamarin PDF NuGet package](Xamarin_images/NuGet_package.jpg)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add the `Syncfusion.Licensing` assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add the `Syncfusion.Licensing` assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 4: Add new Forms XAML page in portable project if there is no XAML page is defined in the App class. Otherwise, proceed to the next step.
 
@@ -225,4 +225,15 @@ By executing the program, you will get the PDF document as follows.
 
 Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 
-An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind).
+## Troubleshooting
+
+- If you encounter "permission denied" errors when saving or viewing the PDF on Android, ensure all required permissions are granted and the file provider is correctly configured.
+- For issues with license keys, verify that the Syncfusion license key is registered as described in the licensing documentation.
+- If the PDF does not open on certain devices, check for platform-specific implementation issues in the helper files.
+
+## See also
+
+- [Syncfusion Xamarin PDF documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/overview)
+- [Syncfusion PDF library features](https://www.syncfusion.com/document-sdk/net-pdf-library)
+- [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview)
+- [GitHub sample: Create PDF Document in Xamarin](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Xamarin/CreatePDFDocument)
