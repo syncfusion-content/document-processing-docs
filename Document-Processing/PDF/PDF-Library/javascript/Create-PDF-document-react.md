@@ -74,7 +74,7 @@ The following packages are included automatically by `@syncfusion/ej2-pdf` and d
 
 If your project requires a Syncfusion license, register the license key before using the PDF API. Add the following code at the top of `App.jsx`:
 
-```jsx
+```javascript
 import { registerLicense } from '@syncfusion/ej2-base';
 
 registerLicense('YOUR_LICENSE_KEY');
@@ -88,7 +88,7 @@ Replace the contents of `App.jsx` with the following code. The file imports the 
 
 {% raw %}
 {% tabs %}
-{% highlight html tabtitle="~/App.jsx" %}
+{% highlight javascript %}
 
 import React from 'react';
 import { registerLicense } from '@syncfusion/ej2-base';

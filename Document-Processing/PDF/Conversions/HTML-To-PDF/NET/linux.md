@@ -9,21 +9,57 @@ keywords: Assemblies
 
 # Convert HTML to PDF file in Linux
 
-The Syncfusion<sup>&reg;</sup> HTML to PDF converter is a .NET library that converts HTML or web pages to PDF document in Linux.
-## Pre-requisites
+The [HTML to PDF converter](https://www.syncfusion.com/document-sdk/net-pdf-library/html-to-pdf) is a .NET library that converts HTML or web pages to PDF documents in Linux.
 
-The following Linux dependencies should be installed where the conversion takes place. 
+## Prerequisites
+
+**Version Compatibility**
+
+The **Syncfusion.HtmlToPdfConverter.Net.Linux** NuGet package uses the Blink rendering engine for HTML to PDF conversion. This library is compatible with **.NET 8.0 and later** versions
+
+**Supported Inputs**
+
+The HTML to PDF converter supports the following input types:
+
+- HTML String: Direct HTML content.
+- URL: Web pages and online HTML content.
+- HTML Files: Local HTML files.
+- MHTML Files: Web archive (.mhtml/.mht) content.
+- Authenticated Web Pages: Pages that require cookies, form authentication, or HTTP authentication.
+- HTTP GET/POST Requests: HTML content accessed through GET or POST methods
+
+**Required Software**
+
+- .NET 8.0 or later
+- Visual Studio 2022 or later
+- Linux OS (Ubuntu, CentOS, or other distributions)
+
+**Register the license key**
+
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you must add the "Syncfusion.Licensing" assembly reference and register a license key in your application. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details on registering a Syncfusion<sup>&reg;</sup> license key.
+
+Include a license key in your **Program.cs** file before creating an **HtmlToPdfConverter** instance. Refer to the [Syncfusion License](https://help.syncfusion.com/common/essential-studio/licensing/overview) documentation to learn about registering the Syncfusion license key in your application.
 
 {% tabs %}
-{% highlight bash %}
+{% highlight c# tabtitle="C#" %}
 
-$ sudo apt-get update
+using Syncfusion.Licensing;
 
-$ sudo apt-get install libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 libnss3 libgbm1
+public class Program
+{
+    // Register the Syncfusion license
+    SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+}
 
 {% endhighlight %}
 {% endtabs %}
 
+N> Starting from **version 29.2.4**, it is no longer necessary to manually add the following command-line arguments when using the Blink rendering engine:
+N> ```csharp
+N> settings.CommandLineArguments.Add("--no-sandbox");
+N> settings.CommandLineArguments.Add("--disable-setuid-sandbox");
+N> ```
+N> These arguments are only required when using **older versions** of the library that depend on Blink in sandbox-restricted environments.
 
 ## Steps to convert HTML to PDF in .NET Core application on Linux
 
@@ -39,7 +75,7 @@ dotnet new console
 
 ![Convert HTMLToPDF Linux Step1](htmlconversion_images/LinuxStep1.png)  
 
-Step 2: Install the [Syncfusion.HtmlToPdfConverter.Net.Linux](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Linux/) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/) by executing the following command.
+Step 2: Install the [Syncfusion.HtmlToPdfConverter.Net.Linux](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Linux/) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/) by executing the following command:
 
 {% tabs %}
 {% highlight bash %}
@@ -49,50 +85,43 @@ dotnet add package Syncfusion.HtmlToPdfConverter.Net.Linux -v xx.x.x.xx -s https
 {% endhighlight %}
 {% endtabs %}
 
-![Convert HTMLToPDF Linux Step2](htmlconversion_images/LinuxStep2.png)  
+![Convert HTMLToPDF Linux Step2](htmlconversion_images/LinuxStep2.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
-
-Step 3: Include the following namespaces.
+Step 3: Add the following namespaces to your **Program.cs** file:
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.HtmlConverter;
 using Syncfusion.Pdf;
-using System.IO;
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 4:  Add code samples in Program.cs file to convert HTML to PDF document using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class.
+Step 4: Add code to the **Program.cs** file to convert HTML to PDF using the [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in the [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class:
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//Initialize HTML to PDF converter. 
+// Initialize HTML to PDF converter with Blink rendering engine
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+// Create Blink converter settings for output rendering
 BlinkConverterSettings settings = new BlinkConverterSettings();
-//Assign Blink settings to the HTML converter.
+// Assign Blink converter settings to HTML converter instance
 htmlConverter.ConverterSettings = settings;
-//Convert URL to PDF document. 
+// Convert URL to PDF document using Blink rendering
 PdfDocument document = htmlConverter.Convert("https://www.syncfusion.com");
+// Create file stream to write PDF output to disk
 FileStream fileStream = new FileStream("HTML-to-PDF.pdf", FileMode.CreateNew, FileAccess.ReadWrite);
-//Save and close a PDF document. 
+// Save the PDF document to file stream
 document.Save(fileStream);
+// Close the document and dispose resources
 document.Close(true);
 
 {% endhighlight %}
 {% endtabs %}
 
-N> Starting from **version 29.2.4**, it is no longer necessary to manually add the following command-line arguments when using the Blink rendering engine:
-N> ```csharp
-N> settings.CommandLineArguments.Add("--no-sandbox");
-N> settings.CommandLineArguments.Add("--disable-setuid-sandbox");
-N> ```
-N> These arguments are only required when using **older versions** of the library that depend on Blink in sandbox-restricted environments.
-
-Step 5: Execute the following command to restore the NuGet packages.
+Step 5: Execute the following command to restore the NuGet packages:
 
 {% tabs %}
 {% highlight bash %}
@@ -102,8 +131,9 @@ dotnet restore
 {% endhighlight %}
 {% endtabs %}
 
-![Convert HTMLToPDF Linux Step3](htmlconversion_images/LinuxStep3.png)  
-Step 6: Execute the following command in the terminal to run the application.
+![Convert HTMLToPDF Linux Step3](htmlconversion_images/LinuxStep3.png)
+
+Step 6: Execute the following command in the terminal to run the application:
 
 {% tabs %}
 {% highlight bash %}
@@ -113,13 +143,13 @@ dotnet run
 {% endhighlight %}
 {% endtabs %}
 
-![Convert HTMLToPDF Linux Step4](htmlconversion_images/LinuxStep4.png)  
+![Convert HTMLToPDF Linux Step4](htmlconversion_images/LinuxStep4.png)
 
-By executing the program, you will get the PDF document as follows. The output will be saved in parallel to the program.cs file.
-![Convert HTMLToPDF Linux Step5](htmlconversion_images/htmltopdfoutput.png)  
+By executing the program, the application will generate and save the PDF document in the same directory as the **Program.cs** file:
+![Convert HTMLToPDF Linux Step5](htmlconversion_images/htmltopdfoutput.png)
 
-A complete working sample can be downloaded from [Github.](https://github.com/SyncfusionExamples/html-to-pdf-csharp-examples/tree/master/Linux)
+A complete working sample for converting HTML to PDF in Linux can be downloaded from [GitHub](https://github.com/SyncfusionExamples/html-to-pdf-csharp-examples/tree/master/Linux).
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-core/html-to-pdf) to explore the rich set of Syncfusion<sup>&reg;</sup> HTML to PDF converter library features. 
+Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library/html-to-pdf) to explore the rich set of Syncfusion<sup>&reg;</sup> HTML to PDF converter library features. 
 
-An online sample link to [convert HTML to PDF document](https://ej2.syncfusion.com/aspnetcore/PDF/HtmltoPDF#/material3) in ASP.NET Core. 
+You can also view the online sample to [convert HTML to PDF documents](https://document.syncfusion.com/demos/pdf/htmltopdf#/tailwind3) in ASP.NET Core.
