@@ -21,7 +21,7 @@ Create a simple project using the instructions given in the [Getting Started wit
 Install the [Syncfusion<sup>&reg;</sup> Flutter PDF Viewer](https://pub.dev/packages/syncfusion_flutter_pdfviewer/versions) package to your project by running the following command in your project's terminal:
 
 {% tabs %}
-{% highlight tabtitle="powershell" %}
+{% highlight powershell tabtitle="powershell" %}
 
 flutter pub add syncfusion_flutter_pdfviewer
 
