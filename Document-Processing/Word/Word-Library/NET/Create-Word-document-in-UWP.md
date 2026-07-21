@@ -20,7 +20,7 @@ Step 2: Install the [Syncfusion.DocIO.UWP](https://www.nuget.org/packages/Syncfu
 
 ![Install DocIO UWP NuGet package](UWP_images/Install_NuGet.jpg)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you also have to add a **Syncfusion.Licensing** assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 3: Add a new button in the MainPage.xaml as shown below.
 
@@ -61,7 +61,9 @@ using System.Reflection;
 
 {% endtabs %}
 
-Step 5: Include the below code snippet in the click event of the button in MainPage.xaml.cs, to **create a Word document** and save the **Word** document as a physical file and open the file for viewing.
+Step 5: Add the required image assets (`AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, and `Road-550-W.jpg`) to an `Assets` folder in your project, and set their **Build Action** to **Embedded Resource** so they can be loaded as manifest resources at runtime.
+
+Step 6: Include the below code snippet in the click event of the button in MainPage.xaml.cs to **create a Word document** and save it as a physical file. The file will be opened for viewing automatically.
 
 {% tabs %}
 
@@ -286,6 +288,8 @@ private async void OnButtonClicked(object sender, RoutedEventArgs e)
     await document.SaveAsync(stream, FormatType.Docx);
     //Saves the stream as Word document file in local machine
     Save(stream, "Sample.docx");
+    //Disposes the Word document instance
+    document.Dispose();
 }
 {% endhighlight %}
 
@@ -297,9 +301,9 @@ private async void OnButtonClicked(object sender, RoutedEventArgs e)
 
 {% highlight c# tabtitle="C#" %}
 //Saves the Word document
-async void Save(MemoryStream streams, string filename)
+async void Save(MemoryStream stream, string filename)
 {
-    streams.Position = 0;
+    stream.Position = 0;
     StorageFile stFile;
     if (!(Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Phone.UI.Input.HardwareButtons")))
     {
@@ -321,18 +325,22 @@ async void Save(MemoryStream streams, string filename)
             //Write compressed data from memory to file
             using (Stream outstream = zipStream.AsStreamForWrite())
             {
-                byte[] buffer = streams.ToArray();
+                byte[] buffer = stream.ToArray();
                 outstream.Write(buffer, 0, buffer.Length);
                 outstream.Flush();
             }
         }
-    }
     //Launch the saved Word file
-    await Windows.System.Launcher.LaunchFileAsync(stFile);
+        await Windows.System.Launcher.LaunchFileAsync(stFile);
+    }
+    //Disposes the MemoryStream
+    stream.Dispose();
 }
 {% endhighlight %}
 
 {% endtabs %}
+
+Step 7: Build and run the UWP application. Click the **Create Document** button to generate and view the Word document.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/UWP).
 

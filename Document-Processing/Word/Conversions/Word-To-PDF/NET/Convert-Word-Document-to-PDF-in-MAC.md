@@ -1,14 +1,14 @@
 ---
 title: Convert Word to PDF on macOS | Syncfusion
-description: Convert Word to PDF in ASP.NET Core application on macOS using .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
+description: Convert Word documents to PDF in a .NET Core console app on macOS using the Syncfusion DocIO library without Microsoft Word or Office interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Convert Word document to PDF on macOS
+# Convert Word to PDF on macOS
 
-Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to PDF in .NET Core application on macOS**.
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to PDF in a .NET Core application on macOS**.
 
 ## Steps to convert Word document to PDF in .NET Core application on macOS
 
@@ -18,7 +18,7 @@ Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncf
 
 **Prerequisites:**
 
-* Visual Studio 2022.
+* Visual Studio for Mac (note: Visual Studio for Mac was retired in August 2024; for active development on macOS, consider Visual Studio Code or JetBrains Rider).
 * Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 
 Step 1: Create a new .NET Core console application project.
@@ -29,15 +29,19 @@ Step 2: Select the project version.
 
 ![Select Project version](Mac-images/selectprojectverion.png)
 
-Step 3: Install the [Syncfusion.DocIORenderer.Net.Core ](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core/) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).Install the Nuget Package on Mac please refer this [Link](https://learn.microsoft.com/en-us/visualstudio/mac/nuget-walkthrough?view=vsmac-2022).
+Step 3: Install the [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/). For installing NuGet packages on Mac, refer to this [link](https://learn.microsoft.com/en-us/visualstudio/mac/nuget-walkthrough?view=vsmac-2022).
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+
+N> Before running, ensure a `Data` folder exists at the project root with a sample `Template.docx` file.
 
 Step 4: Include the following Namespaces in the Program.cs file.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
+using System;
+using System.IO;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.DocIORenderer;
@@ -82,7 +86,7 @@ using (FileStream docStream = new FileStream(Path.GetFullPath(@"../../../Data/Te
 
 Step 6: Build the project.
 
-Click on Build → Build Solution or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
+Click on Build → Build Solution or press <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
 Step 7: Run the project.
 
@@ -90,7 +94,7 @@ Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/Mac).
 
-By executing the program, you will get the **PDF document** as follows. The output will be saved in bin folder.
+By executing the program, you will get the **PDF document** as follows. The output will be saved in the project output directory.
 
 ![Word to PDF in macOS](WordToPDF_images/OutputImage.png)
 
@@ -105,7 +109,7 @@ By executing the program, you will get the **PDF document** as follows. The outp
 * Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
 
 Step 1: Create a new .NET Core console application project.
-* Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
+* Open the command palette by pressing <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
 * Choose the **Console App** template.
 
 ![Choose Console app from template](Mac-images/Console-app-template.png)
@@ -113,20 +117,23 @@ Step 1: Create a new .NET Core console application project.
 * Select the project location, type the project name and press enter.
 * Then choose **Create project**.
 
-Step 2: To **convert a Word document to PDF in console app**, install [Syncfusion.DocIORenderer.Net.Core ](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core/) to the project.
-* Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
+Step 2: To **convert a Word document to PDF in console app**, install [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) to the project.
+* Press <kbd>Cmd</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 * Ensure you're in the project root directory where your .csproj file is located.
-* Run the command `dotnet add package Syncfusion.DocIORenderer.NET.Core` to install the NuGet package.
+* Run the command `dotnet add package Syncfusion.DocIORenderer.Net.Core` to install the NuGet package.
 
 ![Add Syncfusion.DocIORenderer.NET.Core NuGet package](Mac-images/Command-to-add-NuGet-package-console.png) 
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Before running, ensure a `Data` folder exists at the project root with a sample `Template.docx` file.
 
 Step 3: Include the following Namespaces in the Program.cs file.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
+using System;
+using System.IO;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.DocIORenderer;
@@ -187,7 +194,7 @@ dotnet run
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/Mac).
 
-By executing the program, you will get the **PDF document** as follows. The output will be saved in bin folder.
+By executing the program, you will get the **PDF document** as follows. The output will be saved in the project output directory.
 
 ![Word to PDF in macOS](WordToPDF_images/OutputImage.png)
 
@@ -198,20 +205,20 @@ By executing the program, you will get the **PDF document** as follows. The outp
 **Prerequisites:**
 
 * JetBrains Rider.
-* Install .NET 8 SDK or later.
+* Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 
-Step 1. Open JetBrains Rider and create a new .NET Core console application project.
+Step 1: Open JetBrains Rider and create a new .NET Core console application project.
 * Launch JetBrains Rider.
 * Click **New solution** on the welcome screen.
 
 ![Launch JetBrains Rider](Mac-images/Launch-JetBrains-Rider.png)
 
 * In the New Solution dialog, select **Project Type** as **Console**.
-* Select the target framework (e.g., .NET 8.0, .NET 9.0).
+* Select the target framework (recommended: **.NET 8.0**).
 * Enter a project name and specify the location.
-* Click create.
+* Click **Create**.
 
-![Creating a new .NET MAUI App in JetBrains Rider](Mac-images/Create-Console-NET-Core-sample-in-Mac.png)
+![Creating a new .NET Core Console App in JetBrains Rider](Mac-images/Create-Console-NET-Core-sample-in-Mac.png)
 
 Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 * Click the NuGet icon in the Rider toolbar and type [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) in the search bar.
@@ -225,13 +232,17 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 ![Install the Syncfusion.DocIORenderer.Net.Core NuGet package](Mac-images/Install-Syncfusion.DocIORenderer.Net.Core-NuGet.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+
+N> Before running, ensure a `Data` folder exists at the project root with a sample `Template.docx` file.
 
 Step 3: Include the following Namespaces in the Program.cs file.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
+using System;
+using System.IO;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.DocIORenderer;
@@ -276,7 +287,7 @@ using (FileStream docStream = new FileStream(Path.GetFullPath(@"../../../Data/Te
 
 Step 5: Build the project.
 
-Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
+Click the **Build** button in the toolbar or press <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
 Step 6: Run the project.
 
@@ -284,7 +295,7 @@ Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to 
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/Mac).
 
-By executing the program, you will get the **PDF document** as follows. The output will be saved in bin folder.
+By executing the program, you will get the **PDF document** as follows. The output will be saved in the project output directory.
 
 ![Word to PDF in macOS](WordToPDF_images/OutputImage.png)
 
@@ -294,4 +305,4 @@ By executing the program, you will get the **PDF document** as follows. The outp
 
 Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.
 
-An online sample link to [convert Word document to PDF](https://document.syncfusion.com/demos/word/wordtopdf#/tailwind) in ASP.NET Core. 
+An online sample link to [convert Word document to PDF](https://document.syncfusion.com/demos/word/wordtopdf#/tailwind) in a .NET Core application. 

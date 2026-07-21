@@ -10,22 +10,34 @@ documentation: UG
 
 Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> Markdown is a `.NET Core Markdown library` used to create, read, and edit **Markdown** documents programmatically without external dependencies. Using this library, you can **create a Markdown document in ASP.NET Core**.
 
-## Steps to create Markdown document programmatically:
+## Prerequisites
 
-**Prerequisites:**
-
-* Visual Studio 2022 or later.
+* Visual Studio 2022 (version 17.8 or later, required for .NET 8 support).
 * Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 
-Step 1: Create a new ASP.NET Core Web application (Model-View-Controller) project.
+## Steps to create Markdown document programmatically:
+
+Step 1: Create a new ASP.NET Core Web application (Model-View-Controller) project. Select latest as the target framework and name the project (for example, `MarkdownDemo`).
 
 ![Create ASP.NET Core Web application in Visual Studio](ASP-NET-Core_images/CreateProjectforConversion.png)
 
-Step 2: Install the [Syncfusion.Markdown](https://www.nuget.org/packages/Syncfusion.Markdown) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+Step 2: Install the [Syncfusion.Markdown](https://www.nuget.org/packages/Syncfusion.Markdown) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/). Install the latest release of the package.
 
 ![Install Syncfusion.Markdown NuGet package](ASP-NET-Core_images/Install_Nuget.png)
 
-N> Starting with v34.x.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v34.x.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your project. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+
+To register the license key, add a call to `SyncfusionLicenseProvider.RegisterLicense` in `Program.cs` before the application starts:
+
+{% tabs %}
+
+{% highlight c# tabtitle="Program.cs" %}
+
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+
+{% endhighlight %}
+
+{% endtabs %}
 
 Step 3: Include the following namespaces in the HomeController.cs file.
 
@@ -40,7 +52,7 @@ using System.IO;
 
 {% endtabs %}
 
-Step 4: A default action method named Index will be present in HomeController.cs. Right click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
+Step 4: A default action method named Index will be present in HomeController.cs. Right click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**. If the default MVC `HomeController` and `Index` view were not scaffolded (for example, when using an empty MVC template), add a controller named `HomeController` with an `Index` action and a corresponding `Index.cshtml` view under `Views/Home`.
 
 Step 5: Add a new button in the Index.cshtml as shown below.
 
@@ -48,13 +60,11 @@ Step 5: Add a new button in the Index.cshtml as shown below.
 
 {% highlight c# tabtitle="C#" %}
 
-@{Html.BeginForm("CreateDocument", "Home", FormMethod.Get);
+@using (Html.BeginForm("CreateDocument", "Home", FormMethod.Get))
 {
-<div>
-    <input type="submit" value="Create Document" style="width:150px;height:27px" />
-</div>
-}
-Html.EndForm();
+    <div>
+        <input type="submit" value="Create Document" style="width:150px;height:27px" />
+    </div>
 }
 
 {% endhighlight %}
@@ -124,22 +134,24 @@ cell2.Items.Add(new MdTextRange { Text = "AdventureWorks Cycles, the fictitious 
 MemoryStream stream = new MemoryStream();
 markdownDocument.Save(stream);
 stream.Position = 0;
-// Disposes the document
+// Disposes the document.
 markdownDocument.Dispose();
-//Download Markdown document in the browser
+// Downloads the Markdown document in the browser.
 return File(stream, "text/markdown", "Sample.md");
 
 {% endhighlight %}
 
 {% endtabs %}
 
-Step 7: Build the project.
+Step 7: Add the image resource referenced in the table. Create a `Data` folder under the project's `wwwroot` directory (the default web root for ASP.NET Core) and add a `photo.jpg` file there. The `MdPicture.Url` value `"Data/photo.jpg"` is resolved relative to the rendered Markdown document's location, so place the image accordingly.
+
+Step 8: Build the project.
 
 Click on Build → Build Solution or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
-Step 8: Run the project.
+Step 9: Run the project.
 
-Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
+Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app. Open the browser, click the **Create Document** button on the Index page, and the `Sample.md` file will download.
 
 A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/ASP.NET%20Core).
 

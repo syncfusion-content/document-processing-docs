@@ -1,9 +1,9 @@
 ---
-title: Create and edit PowerPoint files in WinUI |Syncfusion<sup>&reg;</sup>|
+title: Create and edit PowerPoint files in WinUI | Syncfusion<sup>&reg;</sup>
 description: A .NET Core PowerPoint library to create, read and edit PowerPoint files in WinUI applications. Supports text, shape, chart, table and combine PowerPoints.
 platform: document-processing
 control: PowerPoint
-documentation: UG
+documentation: ug
 ---
 # Create, read and edit a PowerPoint file in WinUI
 
@@ -28,7 +28,9 @@ Step 3: Set the Target version to Windows 10, version 2004 (build 19041) and the
 
 ![Set the target version](Workingwith-WinUI/Target_Version.png)
 
-Step 4: Install the Syncfusion.Presentation.NET NuGet package as a reference to your .NET Standard applications from the [NuGet.org](https://www.nuget.org/).
+Step 4: Install the [Syncfusion.Presentation.NET](https://www.nuget.org/packages/Syncfusion.Presentation.NET) NuGet package as a reference in your WinUI application from the [NuGet.org](https://www.nuget.org/). The examples in this topic use the latest stable version of the package.
+
+N> `Syncfusion.Presentation.NET` supports .NET 5 and later. Reference the package version that matches your installed Syncfusion Essential Studio version.
 
 ![Install the Presentation .NET Nuget](Workingwith-WinUI/Install_Nuget.png)
 
@@ -58,7 +60,7 @@ Step 5: Add a new button to the **MainWindow.xaml** as shown below.
 
 {% endtabs %}
 
-Step 6. Include the following namespaces in the **MainWindow.xaml.cs** file.
+Step 6: Include the following namespaces in the **MainWindow.xaml.cs** file.
 
 {% tabs %}
 
@@ -69,53 +71,62 @@ using System.IO;
 
 {% endtabs %}
 
-Step 7: Add a new action method **CreatePresentation** in MainPage.xaml.cs and include the below code snippet to **create a PowerPoint file**.
+Step 7: Add a new action method **CreatePresentation** in MainWindow.xaml.cs and include the below code snippet to **create a PowerPoint file**.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
 //Create a new instance of the PowerPoint Presentation file.
-using (IPresentation pptxDoc = Presentation.Create());
-//Add a new slide to the file and apply background color.
-ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.TitleOnly);
-//Specify the fill type and fill color for the slide background.
-slide.Background.Fill.FillType = FillType.Solid;
-slide.Background.Fill.SolidFill.Color = ColorObject.FromArgb(232, 241, 229);
-//Add title content to the slide by accessing the title placeholder of the TitleOnly layout-slide.
-IShape titleShape = slide.Shapes[0] as IShape;
-titleShape.TextBody.AddParagraph("Company History").HorizontalAlignment = HorizontalAlignmentType.Center;
-//Add description content to the slide by adding a new TextBox.
-IShape descriptionShape = slide.AddTextBox(53.22, 141.73, 874.19, 77.70);
-descriptionShape.TextBody.Text = "IMN Solutions PVT LTD is the software company, established in 1987, by George Milton. The company has been listed as the trusted partner for many high-profile organizations since 1988 and got awards for quality products from reputed organizations.";
-//Add bullet points to the slide.
-IShape bulletPointsShape = slide.AddTextBox(53.22, 270, 437.90, 116.32);
-//Add a paragraph for a bullet point.
-IParagraph firstPara = bulletPointsShape.TextBody.AddParagraph("The company acquired the MCY corporation for 20 billion dollars and became the top revenue maker for the year 2015.");
-//Format how the bullets should be displayed.
-firstPara.ListFormat.Type = ListType.Bulleted;
-firstPara.LeftIndent = 35;
-firstPara.FirstLineIndent = -35;
-//Add another paragraph for the next bullet point.
-IParagraph secondPara = bulletPointsShape.TextBody.AddParagraph("The company is participating in top open source projects in automation industry.");
-//Format how the bullets should be displayed.
-secondPara.ListFormat.Type = ListType.Bulleted;
-secondPara.LeftIndent = 35;
-secondPara.FirstLineIndent = -35;
-//Get a picture as stream.
-FileStream pictureStream = new FileStream("Image.png", FileMode.Open);
-//Add the picture to a slide by specifying its size and position.
-slide.Shapes.AddPicture(pictureStream, 499.79, 238.59, 364.54, 192.16);
-//Add an auto-shape to the slide.
-IShape stampShape = slide.Shapes.AddShape(AutoShapeType.Explosion1, 48.93, 430.71, 104.13, 80.54);
-//Format the auto-shape color by setting the fill type and text.
-stampShape.Fill.FillType = FillType.None;
-stampShape.TextBody.AddParagraph("IMN").HorizontalAlignment = HorizontalAlignmentType.Center;
-//Save the PowerPoint Presentation as a stream.
-using (FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create));
-pptxDoc.Save(outputStream);
+using (IPresentation pptxDoc = Presentation.Create())
+{
+    //Add a new slide to the file and apply background color.
+    ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.TitleOnly);
+    //Specify the fill type and fill color for the slide background.
+    slide.Background.Fill.FillType = FillType.Solid;
+    slide.Background.Fill.SolidFill.Color = ColorObject.FromArgb(232, 241, 229);
+    //Add title content to the slide by accessing the title placeholder of the TitleOnly layout-slide.
+    IShape titleShape = slide.Shapes[0] as IShape;
+    if (titleShape != null)
+    {
+        titleShape.TextBody.AddParagraph("Company History").HorizontalAlignment = HorizontalAlignmentType.Center;
+    }
+    //Add description content to the slide by adding a new TextBox.
+    IShape descriptionShape = slide.AddTextBox(53.22, 141.73, 874.19, 77.70);
+    descriptionShape.TextBody.Text = "IMN Solutions PVT LTD is the software company, established in 1987, by George Milton. The company has been listed as the trusted partner for many high-profile organizations since 1988 and got awards for quality products from reputed organizations.";
+    //Add bullet points to the slide.
+    IShape bulletPointsShape = slide.AddTextBox(53.22, 270, 437.90, 116.32);
+    //Add a paragraph for a bullet point.
+    IParagraph firstPara = bulletPointsShape.TextBody.AddParagraph("The company acquired the MCY corporation for 20 billion dollars and became the top revenue maker for the year 2015.");
+    //Format how the bullets should be displayed.
+    firstPara.ListFormat.Type = ListType.Bulleted;
+    firstPara.LeftIndent = 35;
+    firstPara.FirstLineIndent = -35;
+    //Add another paragraph for the next bullet point.
+    IParagraph secondPara = bulletPointsShape.TextBody.AddParagraph("The company is participating in top open source projects in automation industry.");
+    //Format how the bullets should be displayed.
+    secondPara.ListFormat.Type = ListType.Bulleted;
+    secondPara.LeftIndent = 35;
+    secondPara.FirstLineIndent = -35;
+    //Get a picture as stream.
+    FileStream pictureStream = new FileStream("Image.png", FileMode.Open);
+    //Add the picture to a slide by specifying its size and position.
+    slide.Shapes.AddPicture(pictureStream, 499.79, 238.59, 364.54, 192.16);
+    //Add an auto-shape to the slide.
+    IShape stampShape = slide.Shapes.AddShape(AutoShapeType.Explosion1, 48.93, 430.71, 104.13, 80.54);
+    //Format the auto-shape color by setting the fill type and text.
+    stampShape.Fill.FillType = FillType.None;
+    stampShape.TextBody.AddParagraph("IMN").HorizontalAlignment = HorizontalAlignmentType.Center;
+    //Save the PowerPoint Presentation as a stream.
+    using (FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create))
+    {
+        pptxDoc.Save(outputStream);
+    }
+}
 {% endhighlight %}
 
 {% endtabs %}
+
+N> The `Image.png` file used in `FileStream` must be available in the application's runtime output directory. To ensure it is available, add the image to your project, set its **Build Action** to **Content**, and set **Copy to Output Directory** to **Copy if newer** or **Copy always**.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/WinUI/WinUI-Desktop-app/Create-PowerPoint-presentation).
 
@@ -125,30 +136,36 @@ By executing the program, you will get the **PowerPoint slide** as follows.
 
 ### Read and edit a PowerPoint file in WinUI
 
-You can edit an existing PowerPoint file using this library. The below code snippet demonstrates accessing a shape from a slide and changing the text within it.
+You can edit an existing PowerPoint file using this library. This example assumes that an existing Sample.pptx file is present in the application's working/output directory. The following code snippet demonstrates accessing a shape from a slide and changing its text.
+
+N> The `Sample.pptx` file referenced in `Presentation.Open` must exist in the application's runtime output directory. Add the file to your project, set its **Build Action** to **Content**, and set **Copy to Output Directory** to **Copy if newer** or **Copy always**.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
 //Opens an existing PowerPoint presentation.
-using (IPresentation pptxDoc = Presentation.Open(new FileStream("Sample.pptx", FileMode.Open)));
-//Get the first slide from the PowerPoint presentation.
-ISlide slide = pptxDoc.Slides[0];
-//Get the first shape of the slide.
-IShape shape = slide.Shapes[0] as IShape;
-//Modify the text of the shape.
-if (shape.TextBody.Text == "Company History")
-    shape.TextBody.Text = "Company Profile";
-//Save the PowerPoint Presentation as a stream.
-using (FileStream outputStream = new FileStream("Output.pptx", FileMode.Create));
-pptxDoc.Save(outputStream);
+using (IPresentation pptxDoc = Presentation.Open(new FileStream("Sample.pptx", FileMode.Open)))
+{
+    //Get the first slide from the PowerPoint presentation.
+    ISlide slide = pptxDoc.Slides[0];
+    //Get the first shape of the slide.
+    IShape shape = slide.Shapes[0] as IShape;
+    //Modify the text of the shape.
+    if (shape.TextBody.Text == "Company History")
+        shape.TextBody.Text = "Company Profile";
+    //Save the PowerPoint Presentation as a stream.
+    using (FileStream outputStream = new FileStream("Output.pptx", FileMode.Create))
+    {
+        pptxDoc.Save(outputStream);
+    }
+}
 {% endhighlight %}
 
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/WinUI/WinUI-Desktop-app/Read-and-edit-PowerPoint-presentation).
 
-Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page.
 
 An online sample link to [create a PowerPoint Presentation](https://document.syncfusion.com/demos/powerpoint/default#/tailwind) in ASP.NET Core.
 
@@ -156,7 +173,7 @@ An online sample link to [create a PowerPoint Presentation](https://document.syn
 
 ### Create a PowerPoint file in WinUI
 
-Step 1: Create a new C# WinUI UWP app. Select Blank App (WinUI 3 in UWP)from the template and **click** the Next button.
+Step 1: Create a new C# WinUI UWP app. Select Blank App (WinUI 3 in UWP) from the template and **click** the Next button.
 
 ![Create the WinUI UWP app in Visual Studio](Workingwith-WinUI/Create_UWP_Project.png)
 
@@ -170,7 +187,7 @@ Step 3: Set the Target version to Windows 10, version 2004 (build 19041) and the
 
 ![Set the target version](Workingwith-WinUI/Target_Version.png)
 
-Step 4: Install the Syncfusion.Presentation.NET NuGet package as a reference to your .NET Standard applications from the [NuGet.org](https://www.nuget.org/).
+Step 4: Install the [Syncfusion.Presentation.NET](https://www.nuget.org/packages/Syncfusion.Presentation.NET) NuGet package as a reference in your WinUI UWP application from the [NuGet.org](https://www.nuget.org/). The examples in this topic use the latest stable version of the package.
 
 ![Install the Presentation .NET Nuget](Workingwith-WinUI/Install_Nuget.png)
 
@@ -193,7 +210,7 @@ Step 5: Add a new button to the **MainPage.xaml** as shown below.
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button x:Name="button" Click="CreatePresentaion">Create Presentaion</Button>
+        <Button x:Name="button" Click="CreatePresentation">Create Presentation</Button>
     </StackPanel>
 </Page>
 
@@ -207,10 +224,12 @@ Step 6: Include the following namespaces in the **MainPage.xaml.cs** file.
 
 {% highlight c# tabtitle="C#" %}
 using Syncfusion.Presentation;
+using System.IO;
 using Windows.Storage;
 using Windows.Storage.Streams;
 using Windows.Storage.Pickers;
 using System.Reflection;
+using System.Collections.Generic;
 {% endhighlight %}
 
 {% endtabs %}
@@ -230,7 +249,10 @@ using (IPresentation pptxDoc = Presentation.Create())
     slide.Background.Fill.SolidFill.Color = ColorObject.FromArgb(232, 241, 229);
     //Add title content to the slide by accessing the title placeholder of the TitleOnly layout-slide.
     IShape titleShape = slide.Shapes[0] as IShape;
-    titleShape.TextBody.AddParagraph("Company History").HorizontalAlignment = HorizontalAlignmentType.Center;
+    if (titleShape != null)
+    {
+        titleShape.TextBody.AddParagraph("Company History").HorizontalAlignment = HorizontalAlignmentType.Center;
+    }
     //Add description content to the slide by adding a new TextBox.
     IShape descriptionShape = slide.AddTextBox(53.22, 141.73, 874.19, 77.70);
     descriptionShape.TextBody.Text = "IMN Solutions PVT LTD is the software company, established in 1987, by George Milton. The company has been listed as the trusted partner for many high-profile organizations since 1988 and got awards for quality products from reputed organizations.";
@@ -270,6 +292,8 @@ using (IPresentation pptxDoc = Presentation.Create())
 
 {% endtabs %}
 
+N> The sample loads `Image.jpg` from an embedded resource whose manifest resource name is `CreatePowerPoint.Assets.Image.jpg`. Add the image to an `Assets` folder in the project and set its **Build Action** to **Embedded Resource**.
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/WinUI/WinUI-UWP-app/Create-PowerPoint-presentation).
 
 By executing the program, you will get the **PowerPoint slide** as follows.
@@ -278,7 +302,9 @@ By executing the program, you will get the **PowerPoint slide** as follows.
 
 ### Read and edit a PowerPoint file in WinUI
 
-You can edit an existing PowerPoint file using this library. The below code snippet demonstrates accessing a shape from a slide and changing the text within it.
+You can edit an existing PowerPoint file using this library. This example assumes that an existing Sample.pptx file is present in the application's working/output directory. The following code snippet demonstrates accessing a shape from a slide and changing its text.
+
+N> The sample opens `Sample.pptx` from an embedded resource whose manifest resource name is `CreatePowerPoint.Assets.Sample.pptx`. Add the file to an `Assets` folder in the project and set its **Build Action** to **Embedded Resource**.
 
 {% tabs %}
 
@@ -308,6 +334,8 @@ using (IPresentation pptxDoc = Presentation.Open(assembly.GetManifestResourceStr
 {% endtabs %}
 
 ### Save Presentation file in UWP
+
+The `Save` helper method called from the previous snippets writes the generated `MemoryStream` to a file using a `FileSavePicker` (or the local folder on phone devices) and launches the saved file. Implement it as follows:
 
 {% tabs %}
 
@@ -340,9 +368,9 @@ async void Save(MemoryStream stream)
                 outstream.Flush();
             }
         }
+        //Launch the saved PowerPoint file.
+        await Windows.System.Launcher.LaunchFileAsync(stFile);
     }
-    //Launch the saved PowerPoint file.
-    await Windows.System.Launcher.LaunchFileAsync(stFile);
 }
 {% endhighlight %}
 
@@ -350,6 +378,6 @@ async void Save(MemoryStream stream)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/WinUI/WinUI-UWP-app/Read-and-edit-PowerPoint-presentation).
 
-Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page.
 
-An online sample link to [create a PowerPoint Presentation](https://document.syncfusion.com/demos/powerpoint/default#/tailwind) in ASP.NET Core. 
+An online sample link to [create a PowerPoint Presentation](https://document.syncfusion.com/demos/powerpoint/default#/tailwind) in ASP.NET Core.

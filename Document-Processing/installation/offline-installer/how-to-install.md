@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Installing Syncfusion Document Processing offline installer-Syncfusion
+title: Installing Syncfusion Document Processing offline installer - Syncfusion
 description: Learn here about how to install Syncfusion Document Processing offline installer after downloading from our Syncfusion website.
 platform: document-processing
 control: Installation and Deployment
@@ -15,11 +15,11 @@ documentation: ug
 
 The steps below show how to install the Essential Studio<sup>&reg;</sup> Document Processing installer.
 
-1.	Open the Syncfusion<sup>&reg;</sup> Document Processing offline installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
+1. Open the Syncfusion<sup>&reg;</sup> Document Processing offline installer file from the downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 
     ![Installer extraction wizard](images/Step-by-Step-Installation_img1.png)
 
-    N> The Installer wizard extracts the syncfusionessentialfileformats_(version).exe dialog, which displays the package's unzip operation.
+    N> The Installer wizard extracts the `syncfusionessentialfileformats_(version).exe` dialog, which displays the package's unzip operation.
 
 2.	To unlock the Syncfusion<sup>&reg;</sup> offline installer, you have two options:
 
@@ -48,10 +48,9 @@ The steps below show how to install the Essential Studio<sup>&reg;</sup> Documen
     ![Product key](images/Step-by-Step-Installation_img3.png)   
 
 
-3.	After reading the License Terms and Privacy Policy, check the **“I agree to the License Terms and Privacy Policy”** check box. Click the Next button.
+3. After reading the License Terms and Privacy Policy, check the **"I agree to the License Terms and Privacy Policy"** check box. Click the **Next** button.
 
-
-4.	Change the install and sample locations here. You can also change the Additional settings. Click Next\Install to install with the default settings.
+4. Change the install and sample locations here. You can also change the additional settings. Click **Next** to install with the default settings.
 
 
     ![Advanced options](images/Step-by-Step-Installation_img4.png)
@@ -68,8 +67,7 @@ The steps below show how to install the Essential Studio<sup>&reg;</sup> Documen
 
 
 
-5.	If any previous versions of the current product is installed, the Uninstall Previous Version(s) wizard will be opened. Select **Uninstall** checkbox to uninstall the previous versions and then click the Proceed button.
-
+5. If any previous version of the current product is installed, the **Uninstall Previous Version(s)** wizard will open. Select the **Uninstall** checkbox for the versions you want to remove and then click the **Proceed** button.
 
     ![Advanced options](images/Step-by-Step-Installation_img7.png)
 	
@@ -91,14 +89,13 @@ The steps below show how to install the Essential Studio<sup>&reg;</sup> Documen
 	
 	![Installing wizard](images/Step-by-Step-Installation_img5.png)
 
-    N> The Completed screen is displayed once the Document Processing product is installed. If any version is selected to uninstall, The completed screen will display both install and uninstall status.
-	
+    N> The **Completed** screen is displayed once the Document Processing product is installed. If any version is selected to uninstall, the **Completed** screen will display both install and uninstall status.
+
 	![Completed wizard](images/Step-by-Step-Installation_img10.png)
-	
-7.  After installing, click the **Launch Control Panel** link to open the Syncfusion<sup>&reg;</sup> Control Panel.
 
+6. After installing, click the **Launch Control Panel** link to open the Syncfusion<sup>&reg;</sup> Control Panel.
 
-8.  Click the Finish button. Your system has been installed with the Syncfusion<sup>&reg;</sup> Essential Studio Document Processing product.
+7. Click the **Finish** button. The Syncfusion<sup>&reg;</sup> Essential Studio Document Processing product is now installed on your system.
 
 ## Installing in silent mode
 
@@ -108,12 +105,12 @@ The Syncfusion<sup>&reg;</sup> Essential Studio Document Processing Installer su
 
 To install through the Command Line in Silent mode, follow the steps below.
 
-1.	Run the Syncfusion<sup>&reg;</sup> Document Processing installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
-2.	The file syncfusionessentialfileformats_(version).exe file will be extracted into the Temp directory.
-3.	Run %temp%. The Temp folder will be opened. The syncfusionessentialfileformats_(version).exe file will be located in one of the folders.
-4.	Copy the extracted syncfusionessentialfileformats_(version).exe file in local drive.
-5.	Exit the Wizard.
-6.	Run Command Prompt in administrator mode and enter the following arguments.
+1. Run the Syncfusion<sup>&reg;</sup> Document Processing installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
+2. The `syncfusionessentialfileformats_(version).exe` file will be extracted into the Temp directory.
+3. Run `%temp%`. The Temp folder will be opened. The `syncfusionessentialfileformats_(version).exe` file will be located in one of the folders.
+4. Copy the extracted `syncfusionessentialfileformats_(version).exe` file to a local drive.
+5. Exit the Wizard.
+6. Run Command Prompt in administrator mode and enter the following arguments.
 
    
     **Arguments:** “installer file path\SyncfusionEssentialStudio(platform)_(version).exe” /Install silent /UNLOCKKEY:“(product unlock key)” [/log “{Log file path}”] [/InstallPath:{Location to install}] [/InstallSamples:{true/false}] [/InstallAssemblies:{true/false}] [/UninstallExistAssemblies:{true/false}] [/InstallToolbox:{true/false}]
@@ -145,6 +142,6 @@ Syncfusion<sup>&reg;</sup> Essential Document Processing can be uninstalled sile
     **Example:** “D:\Temp\syncfusionessentialfileformats_x.x.x.x.exe" /uninstall silent
 
 
-7.  Essential Studio<sup>&reg;</sup> for WPF is uninstalled.
+7. Essential Studio<sup>&reg;</sup> for Document Processing is uninstalled.
    
    
