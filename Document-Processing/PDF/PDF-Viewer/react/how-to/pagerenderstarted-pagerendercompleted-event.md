@@ -28,12 +28,12 @@ let pdfviewer;
 function App() {
 
     function pageRenderInitiate(args){
-        // This method is called when the page rendering starts
+        // This event handler is called when the page rendering starts
         console.log('Rendering of pages started');
         console.log(args);
     };
     function pageRenderComplete(args){
-      // This method is called when the page rendering completes
+      // This event handler is called when the page rendering completes
      console.log('Rendering of pages completed');
      console.log(args);
     };
@@ -73,12 +73,12 @@ let pdfviewer;
 function App() {
 
     function pageRenderInitiate(args){
-        // This method is called when the page rendering starts
+        // This event handler is called when the page rendering starts
         console.log('Rendering of pages started');
         console.log(args);
     };
     function pageRenderComplete(args){
-      // This method is called when the page rendering completes
+      // This event handler is called when the page rendering completes
      console.log('Rendering of pages completed');
      console.log(args);
     };
