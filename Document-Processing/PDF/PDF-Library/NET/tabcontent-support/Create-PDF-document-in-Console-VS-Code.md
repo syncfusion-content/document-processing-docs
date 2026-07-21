@@ -6,30 +6,31 @@
 
 
 
-Step 1: Open the terminal (Ctrl+` ) and run the following command to create a new .NET Core console application project.
+Step 1: Open the terminal (Ctrl+` ) and run the following command to create a new .NET console application project. Replace `CreatePdfConsoleApp` with your desired project name.
 
 ```
 dotnet new console -n CreatePdfConsoleApp
 ```
-Step 2: Replace ****CreatePdfConsoleApp** with your desired project name.
 
-Step 3: Navigate to the project directory using the following command
+Step 2: Navigate to the project directory using the following command.
 
 ```
 cd CreatePdfConsoleApp
 ```
-Step 4: Use the following command in the terminal to add the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) package to your project.
+
+Step 3: Use the following command in the terminal to add the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) package to your project.
 
 ```
 dotnet add package Syncfusion.Pdf.Net.Core
 ```
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 5: Include the following namespaces in the *Program.cs* file.
+Step 4: Include the following namespaces in the *Program.cs* file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using System.IO;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf;
 using Syncfusion.Drawing;
@@ -37,7 +38,7 @@ using Syncfusion.Drawing;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the below code snippet in *Program.cs* to create an PDF file.
+Step 5: Include the below code snippet in *Program.cs* to create a PDF file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -61,7 +62,7 @@ document.Close(true);
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Build the project.
+Step 6: Build the project.
 
 Run the following command in terminal to build the project.
 
@@ -69,9 +70,9 @@ Run the following command in terminal to build the project.
 dotnet build
 ```
 
-Step 8: Run the project.
+Step 7: Run the project.
 
-Run the following command in terminal to build the project.
+Run the following command in terminal to run the project.
 
 ```
 dotnet run
