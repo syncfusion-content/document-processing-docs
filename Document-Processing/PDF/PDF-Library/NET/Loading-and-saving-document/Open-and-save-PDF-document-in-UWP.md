@@ -9,7 +9,7 @@ keywords: save pdf in mvc, load pdf in mvc, c# save pdf, c# load pdf
 
 # Open and Save PDF document in UWP
 
-The [Syncfusion<sup>&reg;</sup> UWP PDF library](https://www.syncfusion.com/document-processing/pdf-framework/uwp) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **open and save PDF document in UWP**.
+The [UWP PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **open and save PDF document in UWP**.
 
 ## Steps to open and save PDF document programmatically:
 

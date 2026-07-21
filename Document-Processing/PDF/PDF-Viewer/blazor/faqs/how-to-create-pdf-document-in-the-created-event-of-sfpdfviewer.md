@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create a PDF document in the SfPdfViewer Created event | Syncfusion
-description: Learn how to create a PDF document in the Created event of the Syncfusion Blazor SfPdfViewer component and load it into the viewer.
+description: Learn how to create a PDF document in the Created event of the Blazor SfPdfViewer component and load it into the viewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,9 +9,7 @@ documentation: ug
 
 # Create a PDF in the Created event of SfPdfViewer
 
-A PDF document can be created during the SfPdfViewer `Created` event and immediately loaded in the viewer.
-
-The following example creates a PDF in memory using the Syncfusion PDF library, converts it to a Base64 data URL, and assigns it to `DocumentPath` to load it in the SfPdfViewer.
+A PDF document can be created during the SfPdfViewer `Created` event and loaded in the viewer by converting it to a Base64 data URL and assigning it to `DocumentPath`.
 
 ```cshtml
 @using Syncfusion.Blazor.SfPdfViewer;
@@ -27,10 +25,10 @@ The following example creates a PDF in memory using the Syncfusion PDF library, 
 
 @code{
 
-    public SfPdfViewer2 PdfViewer { get; set; }
+    private SfPdfViewer2 PdfViewer { get; set; }
 
-    //Sets the PDF document path for initial loading.
-    public string DocumentPath { get; set; }
+    //Sets the PDF document path after the viewer is created.
+    private string DocumentPath { get; set; }
 
     //This event triggers when the SfPdfViewer is created.
     private void created()
@@ -52,7 +50,7 @@ The following example creates a PDF in memory using the Syncfusion PDF library, 
         string base64string = Convert.ToBase64String(bytes);
         //Sets the document path as base64 string.
         DocumentPath = "data:application/pdf;base64," + base64string;
-        //close the document
+        //Close the document
         document.Close(true);
     }
 }

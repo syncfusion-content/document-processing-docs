@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to print PDF files in the Syncfusion Blazor SfPdfViewer component using the toolbar or programmatically.
+description: Learn how to print PDF files in the Blazor SfPdfViewer component using the toolbar or programmatically.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,7 +9,9 @@ documentation: ug
 
 # Print in Blazor SfPdfViewer Component
 
-The `SfPdfViewer` component supports printing the loaded PDF by default. Enable or disable the toolbar Print option by setting the [EnablePrint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnablePrint) property. Code examples in this topic use the local component reference name shown in the snippets (for example, `SfPdfViewer2`); the component class is `SfPdfViewer`.
+The `SfPdfViewer` component supports printing the loaded PDF by default. Enable or disable the toolbar Print option by setting the [EnablePrint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnablePrint) property. The component tag used in the examples is `SfPdfViewer2`; the component class is `SfPdfViewer`.
+
+## Toolbar print
 
 ```cshtml
 
@@ -21,12 +23,14 @@ The `SfPdfViewer` component supports printing the loaded PDF by default. Enable 
               EnablePrint="true" />
 
 @code{
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 
 ```
 
 ![Print a PDF using the SfPdfViewer](../blazor-classic/images/blazor-pdfviewer-print.png)
+
+## Programmatic print
 
 ```cshtml
 
@@ -40,10 +44,9 @@ The `SfPdfViewer` component supports printing the loaded PDF by default. Enable 
               @ref="@Viewer" />
 
 @code{
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
-
-    public async void OnClick(MouseEventArgs args)
+    private SfPdfViewer2 Viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private async void OnClick(MouseEventArgs args)
     {
         await Viewer.PrintAsync();
     }
@@ -53,7 +56,7 @@ The `SfPdfViewer` component supports printing the loaded PDF by default. Enable 
 
 ## EnablePrintRotation
 
-[EnablePrintRotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnablePrintRotation) controls whether landscape pages are auto-rotated to best fit when printing. Default: true. Set to false to preserve the original page orientation and suppress automatic rotation during print.
+[EnablePrintRotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnablePrintRotation) controls whether landscape pages are automatically rotated to best fit when printing. Default: true. Set to false to preserve the original page orientation and suppress automatic rotation during print.
 
 ```cshtml
 
@@ -65,17 +68,17 @@ The `SfPdfViewer` component supports printing the loaded PDF by default. Enable 
               EnablePrintRotation="true" />
 
 @code{
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 
 ```
 
 ## Print modes
 
-[PrintMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_PrintMode) specifies how the print dialog is opened. Default: PrintMode.Default (prints from the same window). Supported values:
+[PrintMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_PrintMode) specifies how the print dialog is opened. Default value: `PrintMode.Default` (prints from the same window). Supported values:
 
 - [PrintMode.Default](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PrintMode.html#Syncfusion_Blazor_SfPdfViewer_PrintMode_Default): Opens the print dialog in the same window.
-- [PrintMode.NewWindow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PrintMode.html#Syncfusion_Blazor_SfPdfViewer_PrintMode_NewWindow): Opens the print dialog from a new browser window/tab, which can be useful depending on browser popup policies.
+- [PrintMode.NewWindow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PrintMode.html#Syncfusion_Blazor_SfPdfViewer_PrintMode_NewWindow): Opens the print dialog from a new browser window/tab. Use this option when browser popup policies may block the same-window print dialog.
 
 ```cshtml
 
@@ -87,14 +90,14 @@ The `SfPdfViewer` component supports printing the loaded PDF by default. Enable 
               PrintMode="PrintMode.NewWindow" />
 
 @code{
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 
 ```
 
 ## PrintScaleFactor
 
-[PrintScaleFactor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_PrintScaleFactor) sets the scale used when rendering pages for printing. By default, `PrintScaleFactor` is `1.0` (prints at the on-screen scale). The valid range is `0.5` to `5.0`. Increasing the scale can improve clarity for documents with small page dimensions but may increase print processing time and memory usage.
+[PrintScaleFactor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_PrintScaleFactor) sets the scale used when rendering pages for printing. By default, `PrintScaleFactor` is `1.0` (prints at the on-screen scale). The valid range is `0.5` to `5.0`. Increasing the scale can improve clarity for documents with small page dimensions. Larger values may also increase print processing time and memory usage.
 
 ```cshtml
 
@@ -106,7 +109,7 @@ The `SfPdfViewer` component supports printing the loaded PDF by default. Enable 
               PrintScaleFactor="2" />
 
 @code{
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 
 ```
@@ -122,11 +125,7 @@ The following events are available for print in the SfPdfViewer component.
 
 ### PrintStart Event
 
-The [PrintStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_PrintStart) event triggers when a print action begins.
-
-#### Event arguments
-
-See [PrintStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PrintStartEventArgs.html) for details such as `FileName` and the `Cancel` option.
+The [PrintStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_PrintStart) event triggers when a print action begins. See [PrintStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PrintStartEventArgs.html) for details such as `FileName` and the `Cancel` option.
 
 - If the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PrintStartEventArgs.html#Syncfusion_Blazor_SfPdfViewer_PrintStartEventArgs_Cancel) property is set to `true` in the `PrintStart` event handler, the print operation is canceled and the print dialog does not open.
 - By default, `Cancel` is `false`.
@@ -140,10 +139,11 @@ The following example illustrates how to handle the `PrintStart` event.
     <PdfViewerEvents PrintStart="@PrintStart"></PdfViewerEvents>
 </SfPdfViewer2>
 @code{ 
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
-    public async Task PrintStart(PrintStartEventArgs args) 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf"; 
+    private async Task PrintStart(PrintStartEventArgs args) 
     {
         Console.WriteLine($"Printed File Name: {args.FileName}");
+        // args.Cancel = true; // Uncomment to cancel the print operation
     }	 
 }
 
@@ -151,11 +151,7 @@ The following example illustrates how to handle the `PrintStart` event.
 
 ### PrintEnd Event
 
-The [PrintEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_PrintEnd) event triggers when a print action completes.
-
-#### Event arguments
-
-See [PrintEndEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PrintEndEventArgs.html) for details such as `FileName`.
+The [PrintEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_PrintEnd) event triggers when a print action completes. See [PrintEndEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PrintEndEventArgs.html) for details such as `FileName`.
 
 The following example illustrates how to handle the `PrintEnd` event.
 
@@ -166,8 +162,8 @@ The following example illustrates how to handle the `PrintEnd` event.
     <PdfViewerEvents PrintEnd="@PrintEnd"></PdfViewerEvents>
 </SfPdfViewer2>
 @code{ 
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
-    public async Task PrintEnd(PrintEndEventArgs args) 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf"; 
+    private async Task PrintEnd(PrintEndEventArgs args) 
     {
         Console.WriteLine($"Printed File Name: {args.FileName}");
     }	 

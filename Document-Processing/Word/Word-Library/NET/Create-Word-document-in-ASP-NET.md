@@ -10,7 +10,15 @@ documentation: UG
 
 Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in ASP.NET Web Forms**.
 
-N> This ASP.NET Web Form platform is deprecated, you can use the same product from ASP.NET Core platform. For more information on migrating the .NET Word library from .NET Framework to .NET Core, refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/migrate-from-net-framework-to-net-core).
+N> This ASP.NET Web Forms platform is deprecated. You can use the same product from the ASP.NET Core platform. For more information on migrating the .NET Word library from .NET Framework to .NET Core, refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/migrate-from-net-framework-to-net-core).
+
+## Prerequisites
+
+Before you begin, ensure the following are available:
+
+- **Visual Studio 2017 or later** installed on a Windows machine.
+- **.NET Framework 4.5.2 or later** (required by the `Syncfusion.DocIO.AspNet` NuGet package, starting with v16.2.0.x).
+- **Syncfusion.DocIO.AspNet** NuGet package (install in Step 3).
 
 ## Steps to create Word document programmatically:
 
@@ -26,9 +34,9 @@ Step 3: Install the [Syncfusion.DocIO.AspNet](https://www.nuget.org/packages/Syn
 
 ![Install DocIO ASP.NET NuGet package](ASP-NET_images/Install_Nuget.jpg)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you must also add the "Syncfusion.Licensing" assembly reference and include a license key in your project. To register the Syncfusion license key in your application, add `SyncfusionLicenseProvider.RegisterLicense("<Your License Key>");` in the `Application_Start` event of `Global.asax`. For more details, see [Licensing Overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
-Step 4: Add a new Web Form in your project. Right click on the project and select **Add > New Item** and add a Web Form from the list. Name it as MainPage.
+Step 4: Add a new Web Form in your project. Right click on the project and select **Add > New Item** and add a **Web Form (C#)** from the list. Name it as MainPage.
 
 Step 5: Add a new button in the **MainPage.aspx** as shown below.
 
@@ -53,7 +61,7 @@ Step 5: Add a new button in the **MainPage.aspx** as shown below.
 
 {% endtabs %}
 
-Step 6. Include the following namespace in your **MainPage.aspx.cs** file.
+Step 6: Include the following namespaces in your **MainPage.aspx.cs** file. These namespaces belong to the `Syncfusion.DocIO.AspNet` NuGet package installed in Step 3, except `System.Web` which provides `HttpContext` used for downloading the document.
 
 {% tabs %}
 
@@ -61,14 +69,14 @@ Step 6. Include the following namespace in your **MainPage.aspx.cs** file.
 
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
-using System.IO;
 using System.Drawing;
+using System.Web;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-Step 7: Include the below code snippet in the click event of the button in **MainPage.aspx.cs**, to **create Word document** and download it.
+Step 7: Include the below code snippet in the click event of the button in **MainPage.aspx.cs**, to **create a Word document** and download it.
 
 {% tabs %}
 
@@ -296,4 +304,4 @@ By executing the program, you will get the **Word document** as follows.
 
 Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.
 
-An online sample link to [create a Word document](https://document.syncfusion.com/demos/word/helloworld#/tailwind) in ASP.NET Core. 
+You can also explore the online sample to [create a Word document](https://document.syncfusion.com/demos/word/helloworld#/tailwind) in ASP.NET Core. 

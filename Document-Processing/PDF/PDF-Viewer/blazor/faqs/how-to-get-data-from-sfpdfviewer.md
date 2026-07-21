@@ -7,9 +7,11 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Get PDF document data from Blazor SfPdfViewer2
+# Get PDF document data from Blazor SfPdfViewer Component
 
-Use the [GetDocumentAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SfPdfViewer2.html#Syncfusion_Blazor_SfPdfViewer_SfPdfViewer2_GetDocumentAsync) method of the SfPdfViewer2 component to retrieve the currently loaded PDF document as a byte array, including user edits, annotations, and form field data.
+Use the [GetDocumentAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SfPdfViewer2.html#Syncfusion_Blazor_SfPdfViewer_SfPdfViewer2_GetDocumentAsync) method of the SfPdfViewer component to retrieve the currently loaded PDF document as a byte array (`Task<byte[]>`), including user edits, annotations, and form field data. The byte array can be reloaded into the viewer using [LoadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SfPdfViewer2.html#Syncfusion_Blazor_SfPdfViewer_SfPdfViewer2_LoadAsync_System_String_System_String_), which accepts a data URI/base64 string and an optional document password.
+
+## Retrieve and reload the document
 
 The following example retrieves the current document data and then reloads the same document into the viewer.
 
@@ -20,7 +22,7 @@ The following example retrieves the current document data and then reloads the s
 
 <SfButton @onclick="retrieve">Retrieve Document</SfButton>
 
-<SfButton @onclick="load">ReloadRetrievedDocument</SfButton>
+<SfButton @onclick="load">Reload Retrieved Document</SfButton>
 
 <SfPdfViewer2 @ref="@viewer"
               DocumentPath="@DocumentPath"
@@ -30,22 +32,22 @@ The following example retrieves the current document data and then reloads the s
 
 @code
 {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    byte[]? save;
+    private byte[]? save;
 
-    public async void retrieve()
+    private async Task retrieve()
     {
         //Gets the loaded PDF document
         save = await viewer.GetDocumentAsync();
     }
 
-    public async void load()
+    private async Task load()
     {
         //Converts the byte array into base64 string.
         string base64String = Convert.ToBase64String(save);
-        //Loads the PDF document from the specified base64 string.
+        //Loads the PDF document from the specified base64 string. The second parameter is the document password (null for unprotected PDFs).
         await viewer.LoadAsync("data:application/pdf;base64," + base64String, null);
     }
 }
@@ -56,6 +58,6 @@ The following example retrieves the current document data and then reloads the s
 
 ## See also
 
+* [Events in SfPdfViewer Component](../events)
 * [How to create SfPdfViewer Component in a Splitter Component](./how-to-create-sfpdfviewer-in-a-splitter-component)
-
 * [How to create a SfPdfViewer within a popup window in Blazor](./how-to-create-sfpdfviewer-in-a-popup-window)

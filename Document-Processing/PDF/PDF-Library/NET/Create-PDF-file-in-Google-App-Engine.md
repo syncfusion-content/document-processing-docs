@@ -1,5 +1,5 @@
 ---
-title: Create or Generate PDF document in Google App Engine| Syncfusion
+title: Create or Generate PDF document in Google App Engine | Syncfusion
 description: Learn how to create or generate a PDF file in the Google App Engine using Syncfusion .NET Core PDF library without the dependency of Adobe Acrobat. 
 platform: document-processing
 control: PDF
@@ -9,7 +9,13 @@ keywords: google app engine save pdf, app engine load pdf, c# save pdf, c# load 
 
 # Create a PDF document in Google App Engine
 
-The [Syncfusion<sup>&reg;</sup> .NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency on Adobe Acrobat. Using this library, you can open and save PDF documents in Google App Engine.
+The [.NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency on Adobe Acrobat. Using this library, you can open and save PDF documents in Google App Engine.
+
+**Prerequisites**
+
+* A Google Cloud Platform (GCP) account with an active billing account.
+* The Google App Engine Admin API must be enabled in your GCP project. To enable it, navigate to **APIs & Services > Library**, search for **App Engine Admin API**, and click **Enable**.
+* A basic understanding of Google Cloud Shell and `gcloud` CLI commands.
 
 **Set up App Engine**
 
@@ -56,7 +62,10 @@ Step 5: Include the following namespaces in the **HomeController.cs** file.
 
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Grid;
 using Syncfusion.Drawing;
+using System;
+using System.Collections.Generic;
 using System.IO;
 
 {% endhighlight %}
@@ -80,6 +89,8 @@ Step 7: Add a new button in the Index.cshtml as shown in the following.
 {% endhighlight %}
 {% endtabs %}
 
+Step 7a: Add a sample **Input.pdf** file to the **Data** folder of your project. Right-click the **Data** folder, select **Add > New Item**, and choose an existing PDF file or create a new one. Then, set its **Copy to Output Directory** property to **Copy if newer** so the file is included in the publish output.
+
 Step 8: Add a new action method **CreateDocument** in HomeController.cs and include the following code sample to **create PDF document** and download it.
 
 {% tabs %}
@@ -97,35 +108,31 @@ public ActionResult CreateDocument()
     //Create PDF graphics for the page.
     PdfGraphics graphics = loadedPage.Graphics;
 
-    //Create a PdfGrid.
-    PdfGrid pdfGrid = new PdfGrid();
-    //Add values to the list.
-    List<object> data = new List<object>();
-    Object row1 = new { Product_ID = "1001", Product_Name = "Bicycle", Price = "10,000" };
-    Object row2 = new { Product_ID = "1002", Product_Name = "Head Light", Price = "3,000" };
-    Object row3 = new { Product_ID = "1003", Product_Name = "Break wire", Price = "1,500" };
-    data.Add(row1);
-    data.Add(row2);
-    data.Add(row3);
-    //Add list to IEnumerable.
-    IEnumerable<object> dataTable = data;
-    //Assign data source.
-    pdfGrid.DataSource = dataTable;
-    //Apply built-in table style.
-    pdfGrid.ApplyBuiltinStyle(PdfGridBuiltinStyle.GridTable4Accent3);
-    //Draw the grid to the page of PDF document.
-    pdfGrid.Draw(graphics, new RectangleF(40, 400, loadedPage.Size.Width - 80, 0));
+        //Create a PdfGrid.
+        PdfGrid pdfGrid = new PdfGrid();
+        //Add values to the list.
+        List<object> data = new List<object>();
+        data.Add(new { Product_ID = "1001", Product_Name = "Bicycle", Price = "10,000" });
+        data.Add(new { Product_ID = "1002", Product_Name = "Head Light", Price = "3,000" });
+        data.Add(new { Product_ID = "1003", Product_Name = "Break wire", Price = "1,500" });
+        //Assign data source.
+        pdfGrid.DataSource = data;
+        //Apply built-in table style.
+        pdfGrid.ApplyBuiltinStyle(PdfGridBuiltinStyle.GridTable4Accent3);
+        //Draw the grid to the page of PDF document.
+        pdfGrid.Draw(graphics, new RectangleF(40, 400, loadedPage.Size.Width - 80, 0));
 
-    //Create memory stream. 
-    MemoryStream stream = new MemoryStream();
-    //Save the PDF document to stream.
-    document.Save(stream);
-    //If the position is not set to '0' then the PDF will be empty.
-    stream.Position = 0;
-    //Close the document.
-    document.Close(true);
-    //Download PDF document in the browser.
-    return File(stream, "application/pdf", "Sample.pdf");
+        //Create memory stream.
+        MemoryStream stream = new MemoryStream();
+        //Save the PDF document to stream.
+        document.Save(stream);
+        //If the position is not set to '0' then the PDF will be empty.
+        stream.Position = 0;
+        //Close the document.
+        document.Close(true);
+        //Download PDF document in the browser.
+        return File(stream, "application/pdf", "Sample.pdf");
+    }
 }
 
 {% endhighlight %}
@@ -155,7 +162,7 @@ ls
 
 ![ls command](GettingStarted_images/ls_Command.png)
 
-Step 4: Run the following **command** to navigate which sample you want to run.
+Step 4: Run the following **command** to navigate to the sample you want to run.
 
 {% tabs %}
 {% highlight bash %}
@@ -187,7 +194,7 @@ Step 7: Now you can see the sample output on the preview page.
 
 ![Output Button](GettingStarted_images/Console_Page.png)
 
-Step 8: Close the preview page and return to the terminal then press **Ctrl+C** for which will typically stop the process.
+Step 8: Close the preview page and return to the terminal, then press **Ctrl+C** to stop the process.
 
 ![Work space](GettingStarted_images/Run_View.png)
 

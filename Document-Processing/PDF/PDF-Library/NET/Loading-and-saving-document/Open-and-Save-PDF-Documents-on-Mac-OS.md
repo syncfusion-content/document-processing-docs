@@ -9,7 +9,7 @@ keywords: mac os save pdf, mac os load pdf, c# save pdf, c# load pdf
 
 # Open and Save PDF document on macOS
 
-The [Syncfusion<sup>&reg;</sup> .NET Core PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net-core) is used to create, read, and edit PDF documents programmatically without the dependency on Adobe Acrobat. Using this library, you can **open and save PDF document on macOS**. 
+The [.NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency on Adobe Acrobat. Using this library, you can **open and save PDF document on macOS**. 
 
 ## Steps to open and save the PDF documents programmatically:
 

@@ -9,26 +9,61 @@ keywords: Assemblies
 
 # Perform OCR in Azure using C#
 
-The [Syncfusion<sup>&reg;</sup> .NET OCR library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/ocr-process) is used to extract text from scanned PDFs and images in Azure with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.
+The [.NET OCR library](https://www.syncfusion.com/document-sdk/net-pdf-library/ocr-process) is used to extract text from scanned PDFs and images in Azure with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.
+
+## Prerequisites
+
+**Version Compatibility**
+
+- Syncfusion.PDF.OCR.Net.Core supports .NET 8.0 and later versions.
+
+**Supported Inputs**
+
+The OCR processor supports the following input formats:
+
+- Single-page and multi-page PDF documents
+- Scanned images in common formats (JPEG, PNG, TIFF)
+- Recommended DPI: 200 DPI or higher for optimal OCR accuracy
+
+**Required Software**
+
+- .NET 8 SDK or later
+- Azure subscription with Azure App Service or Azure Functions
+
+**Register the License Key**
+
+N> Starting with v16.2.0.x, if you reference Syncfusion® assemblies from trial setup or from the NuGet feed, you must add the Syncfusion.Licensing assembly reference and register a license key in your application. For more information, see the licensing documentation.
+
+Include the following code in the **Program.cs** file to register the license key:
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+using Syncfusion.Licensing;
+
+// Register Syncfusion license at application startup
+SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+
+{% endhighlight %}
+{% endtabs %}
+
+N> 1. Beginning from version 21.1.x, the TesseractBinaries and Tesseract language data folders are now included by default; you no longer have to set these paths explicitly.
+N> 2. The current NuGet package includes Tesseract 5.0, which provides support for 100+ languages.
 
 ## Azure App Service Windows
 
-### Steps to perform OCR on entire PDF document in Azure App Service
+### Steps to perform OCR on an entire PDF document in Azure App Service
 
-Step 1: Create a new ASP.NET Core MVC application.
-![Create ASP.NET Core MVC application](OCR-Images/azure_step1.png) 
+Step 1: Create a new ASP.NET Core MVC application targeting **.NET 8 or later**:
+![Create ASP.NET Core MVC application](OCR-Images/azure_step1.png)
 
-Step 2: In configuration windows, name your project and click Next.
-![Configuration window1](OCR-Images/Azure_configuration_window1.png) 
-![Configuration window2](OCR-Images/azure_additional_information.png) 
+Step 2: In the configuration window, name your project and click **Next**:
+![Configuration window1](OCR-Images/Azure_configuration_window1.png)
+![Configuration window2](OCR-Images/azure_additional_information.png)
 
-Step 3:  Install the [Syncfusion.PDF.OCR.Net.Core](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net.Core) NuGet package as a reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).   
+Step 3: Install the [Syncfusion.PDF.OCR.Net.Core](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net.Core) NuGet package into your ASP.NET Core application from [nuget.org](https://www.nuget.org/):  
 ![PDF OCR ASP.NET Core NuGet package](OCR-Images/OCR-Core-NuGet-package.png)
 
-N> 1. Beginning from version 21.1.x, the default configuration includes the addition of the TesseractBinaries and Tesseract language data folder paths, eliminating the requirement to explicitly provide these paths.
-N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
-
-Step 4: Add a new button in index.cshtml as follows.
+Step 4: Add a new button in **Index.cshtml** to trigger the OCR process:
 
 {% tabs %}
 {% highlight CSHTML %}
@@ -47,34 +82,36 @@ Step 4: Add a new button in index.cshtml as follows.
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Include the following namespaces in the HomeController.cs file.
+Step 5: Include the following namespaces in **HomeController.cs**:
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.OCRProcessor;
 using Syncfusion.Pdf.Parsing;
-using Microsoft.AspNetCore.Hosting.IHostingEnvironment;
+using Microsoft.AspNetCore.Hosting;
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Add the code samples for performing OCR on the entire PDF document using [PerformOCR](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html#Syncfusion_OCRProcessor_OCRProcessor_PerformOCR_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_String_) method of the [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html) class. 
+Step 6: Add the code sample to perform OCR on the entire PDF document using the [PerformOCR](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html#Syncfusion_OCRProcessor_OCRProcessor_PerformOCR_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_String_) method of the [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html) class:
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public IActionResult PerformOCR()
 {
-    //Initialize the OCR processor.
+    // Initialize the OCR processor
     OCRProcessor processor = new OCRProcessor();
-    //Load a PDF document.
+    // Load a PDF document
     PdfLoadedDocument lDoc = new PdfLoadedDocument("Input.pdf");
-    //Set OCR language to process.
+    // Set OCR language
     processor.Settings.Language = Languages.English;
-    //Perform OCR with input document.
+    // Set Tesseract version (5.0 is bundled with v21.1.x+)
+    processor.Settings.TesseractVersion = TesseractVersion.Version5_0;
+    // Perform OCR on the document
     string ocr = processor.PerformOCR(lDoc);
-    //Save the document. 
+    // Save the processed document
     MemoryStream stream = new MemoryStream();
     lDoc.Save(stream);
     return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "OCR_Azure.pdf");
@@ -83,65 +120,65 @@ public IActionResult PerformOCR()
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Now, check the OCR creation in the local machine.
+Step 7: Test the OCR creation on your local machine.
 
-### Steps to publish as Azure App Service
+### Steps to publish to Azure App Service
 
-Step 1: Right-click the project and click Publish.
-![Click publish button](OCR-Images/azure_step5.png)   
+Step 1: Right-click the project and click **Publish**:
+![Click publish button](OCR-Images/azure_step5.png)
 
-Step 2: Create a new profile in the publish target window.
-![Create new profile1](OCR-Images/azure_step6.png)   
+Step 2: Create a new profile in the publish target window:
+![Create new profile1](OCR-Images/azure_step6.png)
 
-Step 3: Select the Specific target as **Azure App Service (Windows)**.
-![Create new profile2](OCR-Images/azure_step7.png)  
+Step 3: Select the specific target as **Azure App Service (Windows)**:
+![Create new profile2](OCR-Images/azure_step7.png)
 
-Step 4: To create a new app service, click **Create new** option.
+Step 4: To create a new App Service, click **Create new**:
 ![Click create new option](OCR-Images/azure_step8.png)
 
-Step 5: Click the **Create** button to proceed with **App Service** creation.
+Step 5: Click the **Create** button to proceed with **App Service** creation:
 ![Click the create button](OCR-Images/azure_step9.png)
 
-Step 6: Click the **Finish** button to finalize the **App Service** creation.
+Step 6: Click the **Finish** button to finalize the **App Service** creation:
 ![Click the finish button](OCR-Images/azure_step10.png)
 
-Step 7: Click **Close** button.
+Step 7: Click the **Close** button:
 ![Create a ASP.NET Core Project](OCR-Images/azure_step11.png)
 
-Step 8: Click the **Publish** button.
+Step 8: Click the **Publish** button:
 ![Click the Publish button](OCR-Images/azure_step12.png)
 
-Step 9: Now, Publish has been succeeded.
+Step 9: The publish operation has been completed successfully:
 ![Publish has been succeeded](OCR-Images/azure_step13.png)
 
-Now, the published webpage will open in the browser, then click the **Perform OCR** button then perform OCR on a PDF document.
-![Published webpage](OCR-Images/Output-genrate-webpage.png) 
-![OCR output document](OCR-Images/OCR-output-image.png) 
+The published webpage will open in the browser. Click the **Perform OCR** button to perform OCR on a PDF document:
+![Published webpage](OCR-Images/Output-genrate-webpage.png)
+![OCR output document](OCR-Images/OCR-output-image.png)
 
-A complete work sample for performing OCR on a PDF document in Azure App Service on Windows can be downloaded from [GitHub](https://github.com/SyncfusionExamples/OCR-csharp-examples/tree/master/Azure/Azure%20App%20Services).
+A complete working sample for performing OCR on a PDF document in Azure App Service on Windows can be downloaded from [GitHub](https://github.com/SyncfusionExamples/OCR-csharp-examples/tree/master/Azure/Azure%20App%20Services).
 
 ## Azure Functions
 
-### Steps to perform OCR on the entire PDF document in Azure Functions
+### Steps to perform OCR on an entire PDF document in Azure Functions
 
-Step 1: Create the Azure function project.
-![Create azure function project](OCR-Images/AzureFunctions1.png) 
+Step 1: Create the Azure Function project:
+![Create azure function project](OCR-Images/AzureFunctions1.png)
 
-Step 2: Select the framework to Azure Functions and select HTTP triggers as follows.
-![Configuration window1](OCR-Images/AzureFunctions2.png) 
-![Additional information](OCR-Images/AzureFunctions3.png) 
+Step 2: Select Azure Functions as the framework and configure HTTP trigger:
+![Configuration window1](OCR-Images/AzureFunctions2.png)
+![Additional information](OCR-Images/AzureFunctions3.png)
 
-Step 3:  Install the [Syncfusion.PDF.OCR.Net.Core](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net.Core) NuGet package as a reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).   
+Step 3: Install the [Syncfusion.PDF.OCR.Net.Core](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net.Core) NuGet package into your Azure Functions project from [nuget.org](https://www.nuget.org/):  
 ![NuGet package installation](OCR-Images/OCR-Core-NuGet-package.png)
 
-Step 4: Copy the tessdata folder from the **bin->Debug->net6.0->runtimes** and paste it into the folder that contains the project file.
-![OCR Azure Functions Tessdata Path](OCR-Images/Tessdata-path.png) 
-![OCR Azure Functions Tessdata Store](OCR-Images/Tessdata_Store.png) 
+Step 4: Copy the **tessdata** folder from **bin > Debug > net6.0 > runtimes** and paste it into the folder containing your project file:
+![OCR Azure Functions Tessdata Path](OCR-Images/Tessdata-path.png)
+![OCR Azure Functions Tessdata Store](OCR-Images/Tessdata_Store.png)
 
-Step 5: Then, set Copy to output directory to give copy always the tessdata folder.
+Step 5: Set the **tessdata** folder to **Copy Always** in the output directory:
 ![OCR Azure Functions Tessdata Store](OCR-Images/Set_Copy_Always.png)
 
-Step 6: Include the following namespaces in the **Function1.cs** file to perform OCR for a PDF document using C#.
+Step 6: Include the following namespaces in **Function1.cs** to perform OCR on a PDF document:
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -163,7 +200,7 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Add the following code sample in the Function1 class to perform OCR for a PDF document using [PerformOCR](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html#Syncfusion_OCRProcessor_OCRProcessor_PerformOCR_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_String_) method of the [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html) class in Azure Functions.
+Step 7: Add the following code sample in the **Function1** class to perform OCR on a PDF document using the [PerformOCR](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html#Syncfusion_OCRProcessor_OCRProcessor_PerformOCR_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_String_) method of the [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html) class:
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -174,31 +211,34 @@ public static async Task<HttpResponseMessage> Run([HttpTrigger(AuthorizationLeve
     MemoryStream ms = new MemoryStream();
     try
     {
+        // Initialize the OCR processor
         OCRProcessor processor = new OCRProcessor();
         FileStream stream = new FileStream(Path.Combine(executionContext.FunctionAppDirectory, "Data", "Input.pdf"), FileMode.Open);
-        //Load a PDF document.
+        // Load a PDF document
         PdfLoadedDocument lDoc = new PdfLoadedDocument(stream);
-        //Set OCR language to process.
+        // Set OCR language
         processor.Settings.Language = Languages.English;
-        //Perform OCR with input document.
-        string ocr = processor.PerformOCR(lDoc,Path.Combine(executionContext.FunctionAppDirectory, "tessdata"));            
-        //Save the PDF document.  
+        // Set Tesseract version (5.0 is bundled with v21.1.x+)
+        processor.Settings.TesseractVersion = TesseractVersion.Version5_0;
+        // Perform OCR on the document with tessdata path
+        string ocr = processor.PerformOCR(lDoc, Path.Combine(executionContext.FunctionAppDirectory, "tessdata"));            
+        // Save the processed PDF document
         lDoc.Save(ms);
         ms.Position = 0;
     }
     catch (Exception ex)
     {
-        //Add a page to the document.
+        // Create an error document with exception details
         PdfDocument document = new PdfDocument();
         PdfPage page = document.Pages.Add();
-        //Create PDF graphics for the page.
+        // Create PDF graphics for the page
         PdfGraphics graphics = page.Graphics;
-        //Set the standard font.
+        // Set the standard font
         PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 6);
-        //Draw the text.
+        // Draw the error message
         graphics.DrawString(ex.ToString(), font, PdfBrushes.Black, new Syncfusion.Drawing.PointF(0, 0));
         ms = new MemoryStream();
-        //Save the PDF document.  
+        // Save the error document
         document.Save(ms);
     }
     HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.OK);
@@ -214,40 +254,39 @@ public static async Task<HttpResponseMessage> Run([HttpTrigger(AuthorizationLeve
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Now, check the OCR creation in the local machine.
+Step 8: Test the OCR creation on your local machine.
 
-### Steps to publish as Azure Functions 
+### Steps to publish to Azure Functions
 
-Step 1: Right-click the project and click Publish. Then, create a new profile in the Publish Window. So, create the Azure Function App with a consumption plan.
+Step 1: Right-click the project and click **Publish**. Create a new profile in the Publish window to create the Azure Function App with a consumption plan:
 ![OCR Azure Functions publish1](OCR-Images/AzureFunctions5.png)
 ![OCR Azure Functions publish2](OCR-Images/azure_step6.png)
 ![OCR Azure Functions publish3](OCR-Images/AzureFunctions7.png)
 
-Step 2: To create a new app service, click **Create new** option.
+Step 2: To create a new Function App, click **Create new**:
 ![Click create new option](OCR-Images/AzureFunctions8.png)
 
-Step 3: Click the **Create** button to proceed with **App Service** creation.
+Step 3: Click the **Create** button to proceed with **Function App** creation:
 ![Click the create button](OCR-Images/AzureFunctions9.png)
 
-Step 4: Click the **Finish** button to finalize the **App Service** creation.
+Step 4: Click the **Finish** button to finalize the **Function App** creation:
 ![Click the finish button](OCR-Images/AzureFunctions10.png)
 
-Step 5: Click deployment type.
+Step 5: Select the deployment type:
 ![Create a Deployment type](OCR-Images/Deployment_type.png)
 
-Step 6: Click **Close** button.
+Step 6: Click the **Close** button:
 ![Create a ASP.NET Core Project](OCR-Images/AzureFunctions11.png)
 
-Step 7: Click the **Publish** button.
+Step 7: Click the **Publish** button:
 ![Click the Publish button](OCR-Images/AzureFunctions12.png)
 
-Step 8: Now, Publish has been succeeded.
+Step 8: The publish operation has been completed successfully:
 ![Publish has been succeeded](OCR-Images/AzureFunctions13.png)
- 
 
-Step 9: Now, go to the Azure portal and select the Functions Apps. After running the service, click Get function URL > Copy. Include the URL as a query string in the URL. Then, paste it into the new browser tab. You will get a PDF document as follows.
+Step 9: Go to the Azure portal and select **Function Apps**. After the service is running, click **Get function URL > Copy**. Include the URL as a query string and paste it into a new browser tab. You will obtain a PDF document as follows:
 ![Output PDF document](OCR-Images/OCR-output-image.png)
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/OCR-csharp-examples/tree/master/Azure/Azure%20Function).
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
+Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion® PDF library features.

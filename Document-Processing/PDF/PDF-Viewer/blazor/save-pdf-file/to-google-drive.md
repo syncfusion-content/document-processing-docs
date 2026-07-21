@@ -1,40 +1,44 @@
 ---
 layout: post
 title: Save PDF files to Google Drive in Blazor SfPdfViewer | Syncfusion
-description: Learn how to save PDF files to Google Drive using the Syncfusion Blazor SfPdfViewer, including required setup, and a working example.
+description: Learn how to save PDF files to Google Drive using the Blazor SfPdfViewer, including required setup, and a working example.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Save PDF files to Google Drive in Blazor SfPdfViewer
+# Save PDF files to Google Drive in Blazor SfPdfViewer Component
 
 Use the following steps to download the currently loaded PDF from the viewer and upload it to a specified Google Drive folder.
 
 **Step 1:** Set up the Google Drive API
 
-Create a project in Google Cloud Console and enable the Google Drive API. Obtain the necessary credentials to access the API. For detailed instructions, see Enable the [Google Drive API](https://developers.google.com/drive/api/guides/enable-sdk).
+Create a project in Google Cloud Console and enable the Google Drive API. Obtain the OAuth 2.0 Client ID credentials to access the API. For detailed instructions, see Enable the [Google Drive API](https://developers.google.com/drive/api/guides/enable-sdk).
 
 **Step 2:** Create a simple SfPdfViewer sample in Blazor
 
 Follow the [Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app) guide to create a basic Blazor application with the SfPdfViewer component.
 
-**Step 3:** Include the following namespaces in the `Index.razor` file.
+**Step 3:** Install the **Google.Apis.Drive.v3** NuGet package in the application to use the Google Drive client.
 
-Import the required namespaces at the top of the file:
+**Step 4:** Include the following namespaces at the top of the `Index.razor` file.
 
 ```csharp
 @using Google.Apis.Drive.v3;
 @using Google.Apis.Auth.OAuth2;
 @using Google.Apis.Services;
 @using Google.Apis.Util.Store;
+@using System.IO;
+@using System.Collections.Generic;
+@using System.Threading;
 @using System.Threading.Tasks;
+@using Microsoft.AspNetCore.Components.Web;
 @using Syncfusion.Blazor.SfPdfViewer;
 @using Syncfusion.Blazor.Buttons;
 ```
 
-**Step 4:** Add the following example to save the downloaded PDF file to `Google Drive`.
-
+**Step 5:** Add the following example to save the downloaded PDF file to `Google Drive`.
+File to Google D
 ```csharp
 
 @page "/"
@@ -55,7 +59,7 @@ Import the required namespaces at the top of the file:
     private readonly string FileName = "File Name to be loaded into Syncfusion SfPdfViewer";
     private static readonly string[] Scopes = { DriveService.Scope.DriveFile, DriveService.Scope.DriveReadonly };
 
-    public async void OnClick(MouseEventArgs args)
+    private async Task OnClick(MouseEventArgs args)
     {
         byte[] data = await viewer.GetDocumentAsync();
         string result = Path.GetFileNameWithoutExtension(FileName);
@@ -99,11 +103,9 @@ Import the required namespaces at the top of the file:
 
 ```
 
-N> Replace **Your Google Drive Folder ID** your actual Google Drive folder ID, **Your Application name** with the actual application name, **File Name to be loaded into Syncfusion<sup style="font-size:70%">&reg;</sup> SfPdfViewer** with the file to load into the viewer, and **Your Path to the OAuth 2.0 Client IDs JSON file** with the path to the downloaded OAuth client credentials JSON file.
-
-N> The **FolderId** is the unique identifier found in the folder URL. For example, for `https://drive.google.com/drive/folders/abc123xyz456`, the folder ID is `abc123xyz456`.
-
-N> Install the **Google.Apis.Drive.v3** NuGet package in the application to use the Google Drive client.
+N>
+* Replace **Your Google Drive Folder ID** with your actual Google Drive folder ID, **Your Application name** with the actual application name, **File Name to be loaded into Syncfusion<sup style="font-size:70%">&reg;</sup> SfPdfViewer** with the file to load into the viewer, and **Your Path to the OAuth 2.0 Client IDs JSON file** with the path to the downloaded OAuth 2.0 Client IDs JSON file.
+* The **FolderId** is the unique identifier found in the folder URL. For example, for `https://drive.google.com/drive/folders/abc123xyz456`, the folder ID is `abc123xyz456`.
 
 [View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Open%20and%20Save%20from%20Google%20Drive)
 

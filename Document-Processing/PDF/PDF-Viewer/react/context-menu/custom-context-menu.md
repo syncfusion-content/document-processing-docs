@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to Customize the context menu in PDF Viewer in React
+# How to Customize the Context Menu in the React PDF Viewer
 
-The PDF Viewer supports extensive customization of the context menu, including reaching specific goals like adding new items, hiding default options, and handling custom click events.
+The PDF Viewer supports extensive customization of the context menu, such as adding new items, hiding default options, and handling custom click events.
 
 ## Add Custom Context Menu Items
 
-You can add custom options to the context menu using the [addCustomMenu()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#addcustommenu) method. This is typically implemented during the [`documentLoad`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#documentload) event.
+You can add custom options to the context menu using the [addCustomMenu()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#addCustomMenu) method. The second argument controls whether the custom items replace the default context menu (`true`) or are appended to it (`false`). This is typically implemented during the [`documentLoad`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#documentload) event.
 
 ### Implementation Guide
 
@@ -111,6 +111,7 @@ function customContextMenuSelect(args) {
 }
 
 function lockAnnotations(args) {
+    var viewer = document.getElementById('container').ej2_instances[0];
     for (var i = 0; i < viewer.annotationCollection.length; i++) {
         if (viewer.annotationCollection[i].uniqueKey === viewer.selectedItems.annotations[0].id) {
             viewer.annotationCollection[i].annotationSettings.isLock = true;
@@ -122,6 +123,7 @@ function lockAnnotations(args) {
 }
 
 function unlockAnnotations(args) {
+    var viewer = document.getElementById('container').ej2_instances[0];
     for (var i = 0; i < viewer.annotationCollection.length; i++) {
         if (viewer.annotationCollection[i].uniqueKey === viewer.selectedItems.annotations[0].id) {
             viewer.annotationCollection[i].annotationSettings.isLock = false;
@@ -217,7 +219,7 @@ The context menu in the PDF Viewer can be fully disabled by setting the [`contex
 </PdfViewerComponent>
 ```
 
-The following is the output of the custom context menu with customization.
+The following is a complete runnable sample of the custom context menu with customization.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -228,6 +230,6 @@ The following is the output of the custom context menu with customization.
 {% endhighlight %}
 {% endtabs %}
 
-N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.TSX` or `index.JSX` file: **serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**.
+N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` to the `PdfViewerComponent` in either the `index.jsx` or `index.tsx` file: **serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**.
 
 [View the sample in Stack blitz](https://stackblitz.com/edit/react-zmbkebwq?file=index.js)

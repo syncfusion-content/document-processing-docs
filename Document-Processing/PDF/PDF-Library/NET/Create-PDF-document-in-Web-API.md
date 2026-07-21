@@ -1,35 +1,85 @@
 ---
-title: Create or Generate PDF file in ASP.NET Core Web API | Syncfusion
-description: Learn how to create a PDF file in ASP.NET Core Web API with easy steps using Syncfusion .NET PDF library without depending on Adobe
+title: Create or Generate PDF document in ASP.NET Core Web API | Syncfusion
+description: Learn how to create a PDF document in ASP.NET Core Web API with easy steps using Syncfusion .NET PDF library without depending on Adobe
 platform: document-processing
 control: PDF
 documentation: ug
 keywords: pdf, aspnet core, web api, csharp
 ---
 
-# Create or Generate PDF file in ASP.NET Core Web API
+# Create or Generate PDF document in ASP.NET Core Web API
 
-The Syncfusion<sup>&reg;</sup> [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, forms and secure PDF files. 
+The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, work with forms, and secure PDF documents.
 
-To include the .NET PDF library into your ASP.NET Core Web API, please refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) documentation. 
+To include the .NET PDF library into your ASP.NET Core Web API, please refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) documentation.
 
-## Steps to create PDF document in ASP.NET Core Web API
+## Prerequisites
+
+- .NET 8.0 SDK or later.
+- Visual Studio 2022 or Visual Studio Code
+- A valid Syncfusion license key (required for production use; a free Community License is available)
+
+## Steps to create a PDF document in ASP.NET Core Web API
 
 Step 1: Create a new C# ASP.NET Core Web API project.
 ![Create ASP.NET Core Web API in Visual Studio](MVC_images/Web-API-1.png)
 
-Step 2: In the project configuration windows, name your project and click Create.
+Step 2: In the project configuration window, name your project and click **Create**.
 ![Add the project name](MVC_images/Web-API-2.png)
 
-Step 3: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) NuGet package as a reference to your ASP.NET Core Web API applications from [NuGet.org](https://www.nuget.org/).
+Step 3: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) NuGet package as a reference to your ASP.NET Core Web API application from [NuGet.org](https://www.nuget.org/).
 ![Install PDF NuGet package](MVC_images/Web-API-3.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you must also add the "Syncfusion.Licensing" assembly reference and include a license key in your project. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: Add a new API controller empty file in the project.
+Step 4: Register the Syncfusion license key in `Program.cs` by adding the following code before building the application.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+// Register the Syncfusion license key
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+
+{% endhighlight %}
+{% endtabs %}
+
+Step 5: Ensure that Swagger and controller routing are enabled in `Program.cs`.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();
+
+{% endhighlight %}
+{% endtabs %}
+
+Step 6: Add a new empty API controller named `PdfController.cs` in the **Controllers** folder.
 ![Add new class](MVC_images/Web-API-4.png)
 
-Step 5: Include the following namespaces in that `PdfController.cs` file.
+Step 7: Include the following namespaces in the `PdfController.cs` file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -42,9 +92,9 @@ using Syncfusion.Pdf.Grid;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data sources. 
+Step 8: The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data sources. 
 
-Add the following code sample in ``PdfController`` class which illustrates how to create a simple PDF document using ``PdfTextElement`` and ``PdfGrid``. 
+Add the following code sample in the `PdfController` class which illustrates how to create a simple PDF document using `PdfTextElement` and `PdfGrid`.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -109,14 +159,24 @@ private MemoryStream ExportWeatherForecastToPdf()
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Navigate to the `Swagger UI`, expand the `GET /api/Pdf` API, click `Execute`, and then download the response output.
+Step 9: Navigate to the Swagger UI, expand the `GET /api/Pdf` API, click **Execute**, and then download the response output.
 ![Swagger UI](MVC_images/Web-API-5.png)
 
 By executing the program, you will get the PDF document as follows.
-![ASP.Net Core output PDF document](MVC_images/Output.png)
+![ASP.NET Core output PDF document](MVC_images/Output.png)
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Web-API/Web-API-Project).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Web-API/Web-API-Project/Web-API-Project).
+
+## Troubleshooting
+
+| Issue | Possible Cause | Solution |
+|-------|----------------|----------|
+| License key not registered exception | `SyncfusionLicenseProvider.RegisterLicense` not called | Add license registration in `Program.cs` before app build |
+| Swagger UI not visible | Swagger middleware not enabled | Ensure `app.UseSwagger()` and `app.UseSwaggerUI()` are configured |
+| `WeatherForecast` not found | Model class not added | Add the `WeatherForecast` model class shown in Step 8 |
+| 404 on API endpoint | Routing not configured | Confirm `app.MapControllers()` is called in `Program.cs` |
+| File download returns empty PDF | `MemoryStream` disposed before return | Ensure the `using` block does not dispose the returned stream |
 
 Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 
-An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind).
+An online sample link to [create a PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind).

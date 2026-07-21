@@ -80,7 +80,7 @@ private void HideAnnotationButton_Clicked(object sender, EventArgs e)
 * Similarly, to show the annotation, set the `Hidden` property value to `false`. 
 
 N> * On iOS and Mac, while printing a document containing hidden annotations, the hidden annotations will be visible in the print preview or the printed document. 
-N> * When a document containing hidden annotations is loaded, it will not only disappear in the UI but also will not be added to the [SfPdfViewer.Annotations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_Annotations) collection as well. 
+N> * When a document containing hidden annotations is loaded, it will not only disappear in the UI but also will not be added to the [SfPdfViewer.Annotations](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_Annotations) collection as well. 
 
 ## See Also
 - [Annotations Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-overview)

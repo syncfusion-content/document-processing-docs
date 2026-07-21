@@ -1,27 +1,29 @@
 ---
 layout: post
 title: Save PDF files to AWS S3 in SfPdfViewer Component | Syncfusion
-description: Learn here all about how to save PDF files to AWS S3 in Syncfusion Blazor SfPdfViewer component and much more details.
+description: Learn here all about how to save PDF files to AWS S3 in Blazor SfPdfViewer component and much more details.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Save PDF to AWS S3 in Blazor SfPdfViewer
+# Save PDF to AWS S3 in Blazor SfPdfViewer Component
 
-To save a PDF file to AWS S3, you can follow the steps below
+To save a PDF file to AWS S3, follow these steps:
 
-**Step 1:** Create AWS S3 account 
+**Step 1:** Create an AWS account and an S3 bucket
 
 Set up an AWS account and configure Amazon S3 by following the official guide: [AWS Management Console](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html). Create an S3 bucket, configure an IAM user or role with scoped permissions for S3 access, and generate access keys. Store credentials securely using environment variables.
 
-**Step 2:** Create a Simple SfPdfViewer Sample in blazor
+**Step 2:** Install the AWSSDK.S3 NuGet package
+
+Install the **AWSSDK.S3** NuGet package in your application to use the AWS S3 client APIs.
+
+**Step 3:** Create a Simple SfPdfViewer Sample in blazor
 
 Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app) to create a simple SfPdfViewer sample in blazor. This will give you a basic setup of the SfPdfViewer component.
 
-**Step 3:** Include the following namespaces in the **Index.razor** file.
-
-1. Import the required namespaces at the top of the file:
+**Step 4:** Include the following namespaces in the **Index.razor** file:
 
 ```csharp
 @using Amazon;
@@ -32,11 +34,13 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
 
 ```
 
-**Step 4:** Add the below code example to save the downloaded PDF files to AWS S3 bucket
+**Step 5:** Add the below code example to save the downloaded PDF files to an AWS S3 bucket
 
 ```csharp
 
 @page "/"
+@using System.IO
+
 <SfButton @onclick="OnClick">Save file to AWS S3 bucket</SfButton>
 <SfPdfViewer2 DocumentPath="@DocumentPath"
               @ref="viewer"
@@ -46,14 +50,14 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
 
 @code {
     private SfPdfViewer2 viewer;
-    private string DocumentPath { get; set; }
+    private string DocumentPath { get; set; } = "PDF_Succinctly.pdf";
 
     private readonly string accessKey = "Your Access Key from AWS S3";
     private readonly string secretKey = "Your Secret Key from AWS S3";
     private readonly string bucketName = "Your Bucket name from AWS S3";
     private readonly string fileName = "File Name to be loaded into Syncfusion SfPdfViewer";
 
-    public async void OnClick(MouseEventArgs args)
+    private async Task OnClick(MouseEventArgs args)
     {
         byte[] data = await viewer.GetDocumentAsync();
         string result = Path.GetFileNameWithoutExtension(fileName);
@@ -69,6 +73,7 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
                     BucketName = bucketName,
                     Key = result + "_downloaded.pdf",
                     InputStream = stream,
+                    ContentType = "application/pdf",
                 };
             // Upload the PDF document to AWS S3
             var response = s3Client.PutObjectAsync(request).Result;
@@ -77,11 +82,9 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
 }
 ```
 
-Replace the file name with the actual document name that you want to load from AWS S3 bucket. Make sure to pass the document name from the AWS S3 bucket to the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) property of the SfPdfViewer component.
+Replace the file name with the actual document name that you want to load from the AWS S3 bucket. Make sure to pass the document name from the AWS S3 bucket to the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) property of the SfPdfViewer component.
 
-N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and **Your Bucket name from AWS S3** with your actual AWS access key, secret key and bucket name.
-
-N> The **AWSSDK.S3** NuGet package must be installed in your application to use the previous code example.
+N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and **Your Bucket name from AWS S3** with your actual AWS access key, secret key, and bucket name.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Open%20and%20Save%20from%20AWS%20S3)
 

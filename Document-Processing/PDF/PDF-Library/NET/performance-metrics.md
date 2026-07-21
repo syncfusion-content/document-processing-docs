@@ -8,7 +8,7 @@ documentation: UG
 
 # Performance Metrics in PDF Library
 
-The Syncfusion<sup>&reg;</sup> [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) provides high-performance APIs to create, read, edit, and secure PDF documents programmatically. This performance benchmark report highlights the speed and efficiency of key operations, demonstrating how PDF library handles large-scale document processing in real-world scenarios.
+The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) provides high-performance APIs to create, read, edit, and secure PDF documents programmatically. This performance benchmark report highlights the speed and efficiency of key operations, demonstrating how PDF library handles large-scale document processing in real-world scenarios.
 
 ## Environment Details
 

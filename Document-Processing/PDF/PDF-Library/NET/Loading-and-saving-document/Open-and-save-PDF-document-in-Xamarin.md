@@ -9,7 +9,7 @@ keywords: c# save pdf, c# load pdf
 
 # Open and Save PDF document in Xamarin
 
-The [Syncfusion<sup>&reg;</sup> Xamarin PDF library](https://www.syncfusion.com/document-processing/pdf-framework/xamarin) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **open and save PDF document in Xamarin**.
+The [Xamarin PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **open and save PDF document in Xamarin**.
 
 ## Steps to open and save PDF document programmatically:
 

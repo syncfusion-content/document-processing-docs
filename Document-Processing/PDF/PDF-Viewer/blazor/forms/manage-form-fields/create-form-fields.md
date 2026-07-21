@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create form fields in the Blazor SfPdfViewer | Syncfusion
-description: Learn how to add each PDF form field using the PDF Viewer UI and how to create them programmatically in the Syncfusion Blazor SfPdfViewer.
+description: How to add PDF form fields in the Blazor SfPdfViewer using the Form Designer UI and the API.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,26 +9,22 @@ documentation: ug
 
 # Create PDF Form Fields in Blazor SfPdfViewer
 
-Create or add new form fields visually with the Form Designer UI or programmatically using the Blazor SfPdfViewer API. This guide explains both methods and shows field‑specific examples and a complete runnable example.
+Add new form fields visually with the Form Designer UI or programmatically using the Blazor SfPdfViewer API. This guide covers both methods and includes a runnable example and per‑field samples.
 
-**Outcome:**
+The guide covers the following:
+- Add fields with the Form Designer UI
+- Add and edit fields programmatically (API)
+- Add common field types: Textbox, Password, CheckBox, RadioButton, ListBox, DropDown, Signature
 
-The guide explains the following:
-- How to add fields with the Form Designer UI.
-- How to add and edit fields programmatically (API).
-- How to add common field types: Textbox, Password, CheckBox, RadioButton, ListBox, DropDown, Signature, Initial.
-
-## Steps
-
-### 1. Create form fields using Form Designer UI.
+### Create form fields using the Form Designer UI
 
 - Enable the Form Designer mode in the PDF Viewer. See [Form Designer overview](../overview).
 - Select a field type from the toolbar and click the PDF page to place it.
-- Move/resize the field and configure properties in the **Properties** panel.
+- Move or resize the field using the handles, and configure settings in the **Properties** panel.
 
 ![Adding a form field using the Form Designer UI](../form-designer-images/add-formfields-formdesigner-sfpdfviewer.gif)
 
-### 2. Create Form fields programmatically
+### Create form fields programmatically
 
 Use the [AddFormFieldsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddFormFieldsAsync_System_Collections_Generic_List_Syncfusion_Blazor_SfPdfViewer_FormFieldInfo__) method inside the viewer's [`DocumentLoaded`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_DocumentLoaded) event handler or in response to user actions.
 
@@ -82,11 +78,11 @@ Use this approach to generate form fields dynamically based on data or applicati
 
 ## Field‑specific instructions
 
-Below are concise UI steps and the programmatic examples for each common field type. The code samples below are complete per‑field examples you can reuse unchanged.
+The following sections provide UI steps and the programmatic equivalent for each common field type. Each code sample is a complete per‑field example that can be reused unchanged.
 
 ### Textbox
 
-**Add via UI**: Open Form Designer toolbar → select Textbox → click page → configure properties
+**Add via UI**: Open the Form Designer toolbar, select **Textbox**, click on the page to place it, then configure its properties.
 
 ![Add Textbox](../form-designer-images/blazor-pdfviewer-textbox.png)
 
@@ -126,7 +122,7 @@ Below are concise UI steps and the programmatic examples for each common field t
 
 ### Button
 
-**Add via UI**: Open form designer toolbar → Select Button → place → configure properties
+**Add via UI**: Open the Form Designer toolbar, select **Button**, place it on the page, then configure its properties.
 
 ![Add Button](../form-designer-images/blazor-pdfviewer-button.png)
 
@@ -164,7 +160,7 @@ Below are concise UI steps and the programmatic examples for each common field t
 
 ### Password
 
-**Add via UI**: Open form designer toolbar → Select Password → place → configure properties
+**Add via UI**: Open the Form Designer toolbar, select **Password**, place it on the page, then configure its properties.
 
 ![Add Password](../form-designer-images/blazor-pdfviewer-password.png)
 
@@ -204,7 +200,7 @@ Below are concise UI steps and the programmatic examples for each common field t
 
 ### CheckBox
 
-**Add via UI**: Open form designer toolbar → Select CheckBox → click to place → duplicate for options.
+**Add via UI**: Open the Form Designer toolbar, select **CheckBox**, click on the page to place it, then duplicate as needed for each option.
 
 ![Add CheckBox](../form-designer-images/blazor-pdfviewer-checkbox.png)
 
@@ -243,7 +239,7 @@ Below are concise UI steps and the programmatic examples for each common field t
 
 ### RadioButton
 
-**Add via UI**: Open form designer toolbar → Select RadioButton → place buttons using the same `name` to group them.
+**Add via UI**: Open the Form Designer toolbar, select **RadioButton**, and place each option on the page using the same `name` to group them.
 
 ![Add RadioButton](../form-designer-images/blazor-pdfviewer-radiobutton.png)
 
@@ -288,7 +284,7 @@ Below are concise UI steps and the programmatic examples for each common field t
 
 ### ListBox
 
-**Add via UI**: Open form designer toolbar → Select ListBox → place → add items in Properties.
+**Add via UI**: Open the Form Designer toolbar, select **ListBox**, place it on the page, then add items in the **Properties** panel.
 
 ![Add ListBox](../form-designer-images/blazor-pdfviewer-listbox.png)
 
@@ -334,7 +330,7 @@ Below are concise UI steps and the programmatic examples for each common field t
 
 ### DropDown
 
-**Add via UI**: Open form designer toolbar → Select DropDown → place → add items → set default value.
+**Add via UI**: Open the Form Designer toolbar, select **DropDown**, place it on the page, add items in the **Properties** panel, then set the default value.
 
 ![Add DropDown](../form-designer-images/blazor-pdfviewer-dropdown.png)
 
@@ -380,7 +376,7 @@ Below are concise UI steps and the programmatic examples for each common field t
 
 ### Signature Field
 
-**Add via UI**: Open form designer toolbar → select Signature Field → place where signing is required → configure indicator text/thickness/tooltip/isRequired.
+**Add via UI**: Open the Form Designer toolbar, select **Signature Field**, place it where signing is required, then configure the indicator text, thickness, tooltip, and **IsRequired** in the **Properties** panel.
 
 ![Add Signature](../form-designer-images/blazor-pdfviewer-signature.png)
 
@@ -406,7 +402,7 @@ Below are concise UI steps and the programmatic examples for each common field t
         {
             Name = "Sign",
             Bounds = new Bound() { X = 57, Y = 923, Width = 200, Height = 43 },
-            TooltipText = "sign Here",
+            TooltipText = "Sign here",
             IsRequired = true
         };
 
@@ -421,13 +417,37 @@ Below are concise UI steps and the programmatic examples for each common field t
 
 Use [`SetFormDrawingModeAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SetFormDrawingModeAsync_System_Nullable_Syncfusion_Blazor_SfPdfViewer_FormFieldType__) to switch the designer into a specific field mode and let users add fields on the fly.
 
-### Edit Form Fields in Blazor SfPdfViewer
+{% tabs %}
+{% highlight razor %}
 
-You can edit form fields using the UI or API.
+@using Syncfusion.Blazor.SfPdfViewer
+@using Syncfusion.Blazor.Buttons
 
-#### Edit Using the UI
-- Right click a field → **Properties** to update settings.
-- Drag to move; use handles to resize.
+<SfButton @onclick="EnablePasswordDrawing">Enable Password Drawing</SfButton>
+
+<SfPdfViewer2 @ref="@viewer" Height="100%" Width="100%" DocumentPath="@DocumentPath">
+</SfPdfViewer2>
+
+@code {
+    private SfPdfViewer2? viewer;
+    private string DocumentPath = "wwwroot/data/form-filling-document.pdf";
+
+    private async Task EnablePasswordDrawing()
+    {
+        // Set the designer to Password mode so users can draw password fields on the page
+        await viewer.SetFormDrawingModeAsync(FormFieldType.Password);
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+## Edit form fields in Blazor SfPdfViewer
+
+You can edit form fields using the UI or the API.
+
+### Edit using the UI
+- Right-click a field and choose **Properties** to update settings.
+- Drag to move, or use the handles to resize.
 - Use the toolbar to toggle field mode or add new fields.
 
 #### Edit Programmatically
@@ -439,7 +459,8 @@ You can edit form fields using the UI or API.
 @using Syncfusion.Blazor.Buttons
 
 <SfButton @onclick="EditTextBox">Edit TextBox</SfButton>
-<SfButton @onclick="AddPasswordField">Add Password Field</SfButton>
+<SfButton @onclick="EditButton">Edit Button</SfButton>
+<SfButton @onclick="EnablePasswordDrawing">Enable Password Drawing</SfButton>
 
 <SfPdfViewer2 @ref="@viewer" Height="100%" Width="100%" DocumentPath="@DocumentPath">
     <PdfViewerEvents DocumentLoaded="@AddSignatureFields"></PdfViewerEvents>
@@ -456,7 +477,7 @@ You can edit form fields using the UI or API.
         {
             Name = "Sign",
             Bounds = new Bound() { X = 57, Y = 923, Width = 200, Height = 43 },
-            TooltipText = "sign Here",
+            TooltipText = "Sign here",
             IsRequired = true
         };
 
@@ -467,21 +488,22 @@ You can edit form fields using the UI or API.
     {
         // Retrieve all form fields
         List<FormFieldInfo> fields = await viewer.GetFormFieldsAsync();
-        
+
         // Find and update the first name field
         FormFieldInfo? field = fields?.FirstOrDefault(f => f.Name == "FirstName");
-        if (field != null)
+        TextBoxField? textBox = field as TextBoxField;
+        if (textBox != null)
         {
-            (field as TextBoxField).Value = "John";
-            field.FontFamily = "Courier";
-            field.FontSize = 12;
-            field.Color = "black";
-            field.BackgroundColor = "white";
-            field.BorderColor = "black";
-            field.Thickness = 2;
-            field.TextAlignment = TextAlignment.Left;
-            
-            await viewer.UpdateFormFieldsAsync(new List<FormFieldInfo> { field });
+            textBox.Value = "John";
+            textBox.FontFamily = "Courier";
+            textBox.FontSize = 12;
+            textBox.Color = "black";
+            textBox.BackgroundColor = "white";
+            textBox.BorderColor = "black";
+            textBox.Thickness = 2;
+            textBox.TextAlignment = TextAlignment.Left;
+
+            await viewer.UpdateFormFieldsAsync(new List<FormFieldInfo> { textBox });
         }
     }
 
@@ -505,9 +527,9 @@ You can edit form fields using the UI or API.
         }
     }
 
-    private async Task AddPasswordField()
+    private async Task EnablePasswordDrawing()
     {
-        // Set form drawing mode to Password to allow users to draw password fields
+        // Set the designer to Password mode so users can draw password fields on the page
         await viewer.SetFormDrawingModeAsync(FormFieldType.Password);
     }
 }
@@ -518,12 +540,12 @@ N> For a hands-on reference with working code examples, explore the sample proje
 
 ## Troubleshooting
 
-- If fields do not appear, verify that the PDF document path is correct and the document loads successfully in the SfPdfViewer2 component.
+- If fields do not appear, verify that the PDF document path is correct and the document loads successfully in the `SfPdfViewer` component.
 - Ensure the form field types (TextBoxField, PasswordField, etc.) are properly imported from the Syncfusion.Blazor.SfPdfViewer namespace.
 - Check that the Bounds coordinates are within the PDF page dimensions to ensure fields are placed correctly.
 - If using async operations, ensure proper error handling and null checks on the viewer reference.
 
-## Related topics
+## See also
 
 - [Form Designer overview](../overview)
 - [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)

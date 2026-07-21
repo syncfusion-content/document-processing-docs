@@ -53,5 +53,4 @@ The following list shows the key features available in the Essential<sup>&reg;</
 * Support for .NET Standard 2.0 onwards.
 
 N> 1. Starting with v20.1.0.x, if you reference Syncfusion<sup>&reg;</sup> HTML converter or OCR processor assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
-
 N> Looking for the full .NET PDF Library overview, features, pricing, and documentation? Visit the [.NET PDF Library](https://www.syncfusion.com/document-sdk/net-pdf-library) page.

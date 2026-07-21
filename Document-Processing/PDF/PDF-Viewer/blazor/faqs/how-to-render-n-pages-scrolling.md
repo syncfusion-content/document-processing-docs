@@ -11,16 +11,24 @@ documentation: ug
 
 Use the [OverscanCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_OverscanCount) property to preload a specified number of pages before and after the current viewport, improving perceived performance while scrolling through a PDF document.
  
-To use this capability in the Blazor SfPdfViewer, set OverscanCount to the desired number of adjacent pages to render. This reduces wait time when navigating across pages. Tune the value based on device capability and document size.
+To use this capability in the Blazor SfPdfViewer, set OverscanCount to the desired number of adjacent pages to render. This reduces wait time when navigating between pages. Tune the value based on the device capability and document size.
 
 The following example shows how to set OverscanCount:
 
 ```cshtml
 
+@using Syncfusion.Blazor.SfPdfViewer
+
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
               Width="100%" OverscanCount="10">
 </SfPdfViewer2>
-    
+
 ```
 [View the OverscanCount sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Render%20N%20number%20pages%20on%20scrolling).
+
+## See also
+
+* [How to load Microsoft Office files in Blazor SfPdfViewer Component](./how-to-load-office-files)
+* [How to unload the PDF document from Viewer](./how-to-unload-the-pdf-document-from-viewer)
+* [How to show or hide the Component dynamically](./how-to-show-or-hide-sfpdfviewer-dynamically)

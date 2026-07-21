@@ -8,7 +8,7 @@ documentation: UG
 
 # Create or Generate a PDF file in a Console application
 
-The Syncfusion<sup>&reg;</sup> [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, work with forms, and secure PDF files.
+The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, work with forms, and secure PDF files.
 
 To quickly get started with the .NET PDF library, watch this video:
 {% youtube "https://youtu.be/PvUdu1hpRLQ?si=xFFjpsJZv3s8AonV" %}
@@ -36,12 +36,11 @@ By executing the program, you will get the PDF document as follows.
 
 ## Steps to Create a PDF Document in a .NET Framework Console App
 
-The following steps illustrates creating a simple Hello world PDF document in console application using .NET Framework.
+The following steps illustrate creating a simple Hello World PDF document in a console application using .NET Framework.
 
 **Prerequisites**:
 
-* Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-* Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
+* Install Visual Studio: Download and install Visual Studio (2017 or later) from the [official website](https://visualstudio.microsoft.com/downloads/). The **.NET desktop development** workload must be selected during installation.
 
 Step 1: Create a new C# Console Application (.NET Framework) project.
 ![Console Application creation](Console_images/console-app-sample-creation.png)
@@ -49,7 +48,7 @@ Step 1: Create a new C# Console Application (.NET Framework) project.
 Step 2: Name the project.
 ![Name the application](Console_images/Name_project_Framework.png)
 
-Step 3: Install the [Syncfusion.Pdf.WinForms](https://www.nuget.org/packages/Syncfusion.Pdf.WinForms/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org).
+Step 3: Install the [Syncfusion.Pdf.WinForms](https://www.nuget.org/packages/Syncfusion.Pdf.WinForms/) NuGet package as a reference to your .NET Framework applications from [NuGet.org](https://www.nuget.org).
 ![NET Framework NuGet package](Console_images/Nuget_package_Framework.png)
 
 N> The [Syncfusion.Pdf.WinForms](https://www.nuget.org/packages/Syncfusion.Pdf.WinForms/) NuGet package is a dependent package for Syncfusion<sup>&reg;</sup> Windows Forms GUI controls, so named with suffix "WinForms". It has platform-independent .NET Framework (4.0, 4.5, 4.5.1, 4.6) assemblies of the PDF library and doesn't contain any Windows Forms-related references or code. Hence, we recommend this package for the .NET Framework Console application.

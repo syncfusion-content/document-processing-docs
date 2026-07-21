@@ -9,12 +9,31 @@ documentation: ug
 
 # Reduce slowness when running Blazor WebAssembly in Visual Studio
 
-Performance issues may occur when running or debugging Blazor WebAssembly in Visual Studio. To improve execution speed, disable the .NET 9+ Mono WASM debugger, which can introduce overhead during debugging sessions.
+You may experience slow performance when running or debugging Blazor WebAssembly apps in Visual Studio. This is caused by the **Enable .NET 9+ Mono WASM debugger** option, which can introduce overhead during debugging sessions.
 
-![Visual Studio setting for the Mono WASM debugger](../images/mono_debugger.png)
+## Solution
 
-Disabling the Mono WASM debugger can provide a smoother experience while running or debugging WebAssembly projects. This change affects debugging behavior; re-enable it when full debugging features are required.
+1. In Visual Studio, open **Tools > Options**.
+2. Expand **Debugging** and select **General**.
+3. Clear (uncheck) the **Enable .NET 9+ Mono WASM debugger** option.
+4. Click **OK** to apply the change.
+5. Restart your debugging session for the change to take effect.
+
+![Visual Studio Options dialog showing the Enable .NET 9+ Mono WASM debugger option unchecked](../images/mono_debugger.png)
+
+Disabling this option reduces startup time and improves responsiveness. The setting is per-user and applies to all Blazor WebAssembly projects on the machine.
+
+## Impact of disabling
+
+When the option is disabled, managed-code stepping and watch-window evaluation during Blazor WebAssembly debugging are not available. To re-enable full debugging, repeat steps 1–3, check the **Enable .NET 9+ Mono WASM debugger** option, and click **OK**.
 
 For background details and guidance, see the following resources:
-  * [Performance Regression debugging Blazor WebAssembly with .NET 9](https://developercommunity.visualstudio.com/t/Performance-Regression-debugging-Blazor/10773897)
-  * [Performance Regression in Blazor WebAssembly with .NET 9](https://github.com/dotnet/aspnetcore/issues/58507)
+
+* [Performance Regression debugging Blazor WebAssembly with .NET 9](https://developercommunity.visualstudio.com/t/Performance-Regression-debugging-Blazor/10773897)
+* [Performance Regression in Blazor WebAssembly with .NET 9](https://github.com/dotnet/aspnetcore/issues/58507)
+
+## See also
+
+* [How to load Microsoft Office files in Blazor SfPdfViewer Component](./how-to-load-office-files)
+* [How to unload the PDF document from Viewer](./how-to-unload-the-pdf-document-from-viewer)
+* [How to show or hide the Component dynamically](./how-to-show-or-hide-sfpdfviewer-dynamically)

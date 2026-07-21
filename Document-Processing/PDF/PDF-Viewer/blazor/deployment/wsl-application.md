@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with SfPdfViewer in Blazor WSL | Syncfusion
-description: Learn how to run the Syncfusion Blazor SfPdfViewer control in a Blazor app using Windows Subsystem for Linux (WSL).
+description: Learn how to run the Blazor SfPdfViewer control in a Blazor app using Windows Subsystem for Linux (WSL).
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -15,8 +15,8 @@ Follow these steps to set up Windows Subsystem for Linux (WSL), install the .NET
 
 * Windows 10 version 2004+ (build 19041) or Windows 11.
 * Administrator rights on Windows (required to enable WSL features).
-* A Linux distribution supported by Syncfusion Blazor PDF Viewer: Ubuntu 22.04 LTS or Ubuntu 24.04 LTS.
-* The Syncfusion Blazor PDF Viewer (Next-Gen) NuGet package installed in your project, and a valid Syncfusion license key. For setup, see [Getting started with the Blazor PDF Viewer in a Blazor Web app Server app](../getting-started/server-side-application) or [Getting started with the Blazor PDF Viewer in a Blazor WebAssembly app](../getting-started/web-assembly-application).
+* A Linux distribution supported by Blazor PDF Viewer: Ubuntu 22.04 LTS or Ubuntu 24.04 LTS.
+* The Blazor PDF Viewer (Next-Gen) NuGet package installed in your project, and a valid Syncfusion license key. For setup, see [Getting started with the Blazor PDF Viewer in a Blazor Web app Server app](../getting-started/server-side-application) or [Getting started with the Blazor PDF Viewer in a Blazor WebAssembly app](../getting-started/web-assembly-application).
 
 ## Step 1: Enable Windows Subsystem for Linux and Virtual Machine Platform
 

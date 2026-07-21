@@ -92,8 +92,9 @@ dotnet restore
 
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) for package details.
-N> Ensure the package `Microsoft.AspNetCore.Components.WebView.Wpf` is at least version `8.0.16`.
+N>
+* Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) for package details.
+* Ensure the package `Microsoft.AspNetCore.Components.WebView.Wpf` is at least version `8.0.16`.
 
 {% endtabcontent %}
 

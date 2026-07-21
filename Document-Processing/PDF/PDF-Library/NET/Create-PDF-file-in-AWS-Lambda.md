@@ -9,7 +9,7 @@ keywords: aws lambda create pdf, aws edit pdf, merge, pdf form, fill form, digit
 
 # Create PDF document in AWS Lambda
 
-The [Syncfusion<sup>&reg;</sup> .NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, open and save PDF documents in AWS Lambda. 
+The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can open and save PDF documents in AWS Lambda. 
 
 **Steps to create a PDF document in AWS Lambda**
 
@@ -44,7 +44,7 @@ using Syncfusion.Pdf.Grid;
 {% endhighlight %}
 {% endtabs %}
 
-step 7: Add the following code in Function.cs to open the PDF document and update in AWS Lambda.
+Step 7: Add the following code in Function.cs to open the PDF document and update in AWS Lambda.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -90,6 +90,8 @@ using (FileStream stream = new FileStream(filePath, FileMode.Open, FileAccess.Re
 {% endhighlight %}
 {% endtabs %}
 
+N> The function returns the PDF as a base64-encoded string. When the Lambda is invoked synchronously, AWS wraps the return value in a JSON string, so the caller receives a JSON-quoted base64 string (e.g., `"JVBERi0xLjQK..."`). Strip the surrounding quotes before calling `Convert.FromBase64String` in the caller.
+
 Step 8: Right-click the project and select Publish to AWS Lambda.
 ![Publish to AWS Lambda](GettingStarted_images/Publish.png)
 
@@ -110,7 +112,7 @@ Follow these steps to submit a request to the AWS Lambda function.
 Step 1: Create a new console project.
 ![Create a console project](GettingStarted_images/Console-APP.png)
 
-step 2: Install the following NuGet packages in your application from [NuGet.org](https://www.nuget.org/).
+Step 2: Install the following NuGet packages in your application from [NuGet.org](https://www.nuget.org/).
 
 * [AWSSDK.Core](https://www.nuget.org/packages/AWSSDK.Core/)
 * [AWSSDK.Lambda](https://www.nuget.org/packages/AWSSDK.Lambda/)

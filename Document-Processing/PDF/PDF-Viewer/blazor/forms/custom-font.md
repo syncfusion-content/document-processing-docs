@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Custom Font Support for Form Designer in SfPdfViewer | Syncfusion
-description: Learn how to integrate the custom font collection for form fields in the Syncfusion Blazor SfPdfViewer component.
+title: Custom Font Support for Form Fields in SfPdfViewer | Syncfusion
+description: Learn how to integrate the custom font collection for form fields in the Blazor SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -24,14 +24,14 @@ To ensure correct rendering and saving of form fields that use custom fonts (esp
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2? pdfViewer;
+    private SfPdfViewer2? pdfViewer;
 
-    // Use the FontFamilies property to add custom font families to the Font Family dropdown in the annotation toolbar
-    internal string[] FontFamilies { get; set; } = { "Helvetica", "Courier", "Symbol", "Times New Roman", "Allura", "Playwrite CA", "Ojuju" };
+    // Use the FontFamilies property to add custom font families to the Font Family dropdown in the property dialog
+    private string[] FontFamilies { get; set; } = { "Helvetica", "Courier", "Symbol", "Times New Roman", "Allura", "Playwrite CA", "Ojuju" };
 
     private string DocumentPath { get; set; } = "https://cdn.syncfusion.com/content/pdf/form-designer.pdf";
 
-    public void Created()
+    private void Created()
     {
         // Use FallbackFontCollection to save the custom font
         // Maps the font family name to its corresponding TTF file as a memory stream
@@ -42,7 +42,7 @@ To ensure correct rendering and saving of form fields that use custom fonts (esp
 }
 {% endhighlight %}
 {% endtabs %}
-![Custom Font Support for Form Fields in Blazor SfPdfViewer](../forms/form-designer-images/custom_font_support_for_form_fields.png)
+![Custom Font Support for Form Fields in Blazor SfPdfViewer](./form-designer-images/custom_font_support_for_form_fields.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Custom%20Font%20Support%20For%20FormFields).
 
@@ -66,28 +66,30 @@ To ensure correct rendering and saving of signatures that use custom fonts (espe
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2? Viewer;
+    private SfPdfViewer2? Viewer;
 
     private string DocumentPath { get; set; } = "wwwroot/Data/With_Four_Signature_Fields.pdf";
 
-    // Use the FontFamilies property to add custom font families to the Font Family dropdown in the annotation toolbar
-    public string[] signatureFonts = { "Allura", "Tangerine", "Sacramento", "Inspiration" };
+    // Use the SignatureFonts property to add custom font families to the Font Family dropdown in the signature dialog
+    private string[] signatureFonts = { "Allura", "Tangerine", "Sacramento", "Inspiration" };
 
-    public void Created()
+    private void Created()
     {
         // Use FallbackFontCollection to save the custom font
         // Maps the font family name to its corresponding TTF file as a memory stream
-        pdfViewer!.FallbackFontCollection.Add("Allura", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Data/Allura-Regular.ttf")));
-        pdfViewer!.FallbackFontCollection.Add("Tangerine", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Data/Tangerine-Regular.ttf")));
-        pdfViewer!.FallbackFontCollection.Add("Sacramento", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Data/Sacramento-Regular.ttf")));
-        pdfViewer!.FallbackFontCollection.Add("Inspiration", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Data/Inspiration-Regular.ttf")));
+        Viewer!.FallbackFontCollection.Add("Allura", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Data/Allura-Regular.ttf")));
+        Viewer!.FallbackFontCollection.Add("Tangerine", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Data/Tangerine-Regular.ttf")));
+        Viewer!.FallbackFontCollection.Add("Sacramento", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Data/Sacramento-Regular.ttf")));
+        Viewer!.FallbackFontCollection.Add("Inspiration", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Data/Inspiration-Regular.ttf")));
     }
 }
 {% endhighlight %}
 {% endtabs %}
-![Custom Font Support for Signature Field in Blazor SfPdfViewer](../forms/form-designer-images/custom_font_support_signature_fields.png)
+![Custom Font Support for Signature Field in Blazor SfPdfViewer](./form-designer-images/custom_font_support_signature_fields.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Custom%20Font%20Support%20For%20Signature%20Field).
+
+## Custom Font Support for FreeText Annotations
 
 When using Google Fonts or other externally hosted fonts with the PDF Viewer, load the fonts in the application to ensure consistent rendering. This is required because FreeText annotations render directly onto the canvas and need the fonts available in the hosting environment.
 
@@ -97,13 +99,13 @@ The following example illustrates how to load custom fonts in FreeText annotatio
 {% highlight razor %}
 <script>
     window.addEventListener('DOMContentLoaded', () => {
-        var fontFamily = ["Allura, Tangerine, Sacramento, Inspiration"];
+        var fontFamily = ["Allura", "Tangerine", "Sacramento", "Inspiration"];
         for (var fontIndex=0; fontIndex<fontFamily.length; fontIndex++)
         {
             document.fonts.load(`16px ${fontFamily[fontIndex]}`).then(() => {
                 console.log(`Font "${fontFamily[fontIndex]}" loaded successfully.`);
             }).catch(err => {
-                console.error(`Failed to load font "${font}":`, err);
+                console.error(`Failed to load font "${fontFamily[fontIndex]}":`, err);
             });
         }
     });

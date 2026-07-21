@@ -6,7 +6,7 @@ control: DocIO
 documentation: UG
 ---
 
-# Create a Word document using ASP.NET Core Web API
+# Create Word documents in ASP.NET Core Web API
 
 Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in ASP.NET Core Web API**.
 
@@ -24,7 +24,7 @@ Step 2: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/S
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 3: Add a new API controller empty file in the project.
+Step 3: Add a new empty API controller file named **ValuesController.cs** to the project.
 
 ![Add empty API controller to the project](ASP-NET-Core-WEB-API-images/Empty-API-Controller.png)
 
@@ -107,6 +107,7 @@ Step 6: Implement the `GenerateWordDocument` method in `ValuesController.cs`.
      style.ParagraphFormat.KeepFollow = true;
      style.ParagraphFormat.OutlineLevel = OutlineLevel.Level1;
 
+     //Add the header paragraph
      IWParagraph paragraph = section.HeadersFooters.Header.AddParagraph();
      paragraph.ApplyStyle("Normal");
      paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Left;
@@ -137,7 +138,7 @@ Step 6: Implement the `GenerateWordDocument` method in `ValuesController.cs`.
      textRange = paragraph.AppendText("In 2000, AdventureWorks Cycles bought a small manufacturing plant, Importadores Neptuno, located in Mexico. Importadores Neptuno manufactures several critical subcomponents for the AdventureWorks Cycles product line. These subcomponents are shipped to the Bothell location for final product assembly. In 2001, Importadores Neptuno, became the sole manufacturer and distributor of the touring bicycle product group.") as WTextRange;
      textRange.CharacterFormat.FontSize = 12f;
 
-     //Saving the Word Document to the MemoryStream 
+     //Saving the Word Document to the MemoryStream
      MemoryStream stream = new MemoryStream();
      document.Save(stream, FormatType.Docx);
      document.Close();
@@ -165,9 +166,9 @@ A complete working sample is available on [GitHub](https://github.com/Syncfusion
 Step 1: Create a console application.
 ![Create a Console application in Visual Studio](ASP-NET-Core-WEB-API-images/Console-Template-Net-Core.png)
 
-N> Ensure your ASP.NET Core Web API is running on the specified port before running this client. Adjust the port number if your Web API runs on a different port (check the ASP.NET Core app's launch settings).
+N> Ensure your ASP.NET Core Web API is running on the specified port before running this client. The port number comes from the Web API's `launchSettings.json` adjust it to match your environment.
 
-Step 2: Add the below code snippet in the **Program.cs** file for accessing the Web API using HTTP requests. 
+Step 2: Add the below code snippet in the **Program.cs** file for accessing the Web API using HTTP requests. This example uses C# top-level statements with `await` (supported in .NET 6+ and later).
 
 This method sends a GET request to the Web API endpoint to retrieve and save the generated Word document.
 
