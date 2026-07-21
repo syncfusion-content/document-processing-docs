@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started React DOCX Editor in Next.js | Syncfusion
-description: Learn how to create a DOCX Editor in a Next.js application using the Syncfusion® Document Editor control to create, edit, and view Word documents.
+title: Getting started with React DOCX Editor in Next.js | Syncfusion
+description: Learn how to create a DOCX Editor in a Next.js application using the Syncfusion® DOCX Editor control to create, edit, and view Word documents.
 control: Next.js
 platform: document-processing
 documentation: ug
@@ -12,17 +12,13 @@ domainurl: ##DomainURL##
 
 This section provides a step-by-step guide for setting up a Next.js application and integrating the [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) component.
 
-## Steps to create a React DOCX Editor in Next.js
-
-### Prerequisites
-
-Before getting started with the Next.js application, ensure the following prerequisites are met:
+## Prerequisites
 
 * [Node.js 18.17.0](https://nodejs.org/en) or later (LTS recommended).
+* [System requirements](https://ej2.syncfusion.com/react/documentation/system-requirement)
+* [Browser Compatibility](https://ej2.syncfusion.com/react/documentation/browser)
 
-* The application is compatible with macOS, Windows, and Linux.
-
-### Create a Next.js application
+## Create a Next.js application
 
 **Step 1:** To create a new `Next.js` application, use one of the commands that are specific to either NPM or Yarn.
 
@@ -41,7 +37,7 @@ yarn create next-app
 
 Using one of the above commands will prompt you to configure additional settings for the project:
 
-**Step 2:** Specify the name of the project directly. In this example, the project is named `ej2-next js-documenteditor`:
+**Step 2:** Specify the name of the project directly.
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -74,13 +70,13 @@ cd ej2-nextjs-documenteditor
 {% endhighlight %}
 {% endtabs %}
 
-The application is ready to run with default settings. The next steps will add the Syncfusion Document Editor component to the project.
+The application is ready to run with default settings. The next steps will add the Syncfusion DOCX Editor component to the project.
 
-### Install Document Editor packages
+## Install DOCX Editor packages
 
-The Document Editor package is available at [npmjs.com](https://www.npmjs.com/package/@syncfusion/ej2-react-documenteditor).
+The DOCX Editor package is available at [npmjs.com](https://www.npmjs.com/package/@syncfusion/ej2-react-documenteditor).
 
-To install the Document Editor component, use the following command:
+To install the DOCX Editor component, use the following command:
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -95,9 +91,16 @@ yarn add @syncfusion/ej2-react-documenteditor
 {% endhighlight %}
 {% endtabs %}
 
-### Add CSS reference
+## Register a Syncfusion License Key
 
-Add the Document Editor component and its dependent component styles available in the `node_modules/@syncfusion` package folder. Reference these styles in the `app/globals.css` file.
+Before initializing the React DOCX Editor control in Next.js, generate a Syncfusion license key and register it in your application.
+
+- [Generate a Syncfusion License Key](https://help.syncfusion.com/document-processing/licensing/how-to-generate)
+- [Register a Syncfusion License Key](https://ej2.syncfusion.com/react/documentation/licensing/license-key-registration)
+
+## Import the required CSS styles
+
+Add the DOCX Editor component and its dependent component styles available in the `node_modules/@syncfusion` package folder. Reference these styles in the `app/globals.css` file.
 
 {% tabs %}
 {% highlight css tabtitle="globals.css" %}
@@ -118,9 +121,9 @@ Add the Document Editor component and its dependent component styles available i
 N> To learn more about built-in themes and CSS reference for individual components, refer to the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) section.
 
 
-### Add the Document Editor component
+## Initialize the DOCX Editor
 
-Add the Document Editor component to your application. In the `app/page.tsx` file, add the following code to initialize the component:
+Add the DOCX Editor component to your application. In the `app/page.tsx` file, add the following code to initialize the component:
 
 
 {% tabs %}
@@ -148,7 +151,7 @@ export default function Home() {
 
 N> The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
 
-### Run the application
+## Run the application
 
 Run the application using the following command:
 
@@ -165,15 +168,15 @@ yarn run dev
 {% endhighlight %}
 {% endtabs %}
 
-After the application starts, open the localhost URL shown in the terminal. The Document Editor is rendered in the browser with a toolbar and an editable document area, as shown below.
+After the application starts, open the localhost URL shown in the terminal. The DOCX Editor is rendered in the browser with a toolbar and an editable document area, as shown below.
 
-![Output of React Document Editor in Next.js](./images/react_getting_started.png)
+![Output of React DOCX Editor in Next.js](./images/react_getting_started.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/React-DOCX-Editor-Examples/tree/master/getting-started-nextjs).
 
 ## Server-side dependencies
 
-The Document Editor component requires server-side interactions for the following operations:
+The DOCX Editor component requires server-side interactions for the following operations:
 
 * Open file formats other than SFDT
 * Paste with formatting
@@ -184,3 +187,7 @@ The Document Editor component requires server-side interactions for the followin
 N> If you don't require the above functionalities, you can deploy the component as a pure client-side solution without any server-side interactions.
 
 For detailed information about server-side dependencies, refer to the [Web Services Overview](./web-services-overview) page.
+
+## See also
+
+- [Troubleshooting](https://help.syncfusion.com/document-processing/word/word-processor/react/troubleshooting)
