@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Load PDF Viewer with Local Resources in React | Syncfusion
-description: Learn how to configure the Syncfusion React PDF Viewer to load PDF documents and resources locally instead of from CDN.
-control: PDF Viewer
+description: Configure the Syncfusion React PDF Viewer to load PDF documents and library files from local resources.
+control: PdfViewer
 platform: document-processing
 documentation: ug
 ---
@@ -19,7 +19,7 @@ Follow the [getting started guide](../getting-started) to create a basic React P
 
 ### Step 1: Copy the Resource Files
 
-Copy the `ej2-pdfviewer-lib` folder to `public/assets/` using the following command:
+From the root directory of your React project, run one of the following commands to copy the `ej2-pdfviewer-lib` folder into `public/assets/`:
 
 {% tabs %}
 {% highlight bash tabtitle="Windows" %}
@@ -60,8 +60,9 @@ Configure the PDF Viewer to use local paths:
 import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import './index.css';
+import '@syncfusion/ej2-react-pdfviewer/styles/material.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
-        BookmarkView,ThumbnailView, Print, TextSelection, Annotation, TextSearch,
+        BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch,
         FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
@@ -69,13 +70,13 @@ function App() {
     <div className='control-section'>
       <PdfViewerComponent
         id="container"
-        // Path to your PDF document in the assets folder
+        // URL of the PDF document to load
         documentPath={window.location.origin + "/assets/pdfsuccinctly.pdf"}
-        // Path to the PDFium library files in the assets folder
+        // URL of the PDFium library folder
         resourceUrl={window.location.origin + "/assets/ej2-pdfviewer-lib"}
         style={{ 'height': '640px' }}>
 
-         <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]}/>
+         <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]}/>
 
       </PdfViewerComponent>
     </div>
@@ -92,8 +93,9 @@ root.render(<App />);
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import '@syncfusion/ej2-react-pdfviewer/styles/material.css';
 import  { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
-          BookmarkView,ThumbnailView, Print, TextSelection, Annotation, TextSearch,
+          BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch,
           FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
 
 export function App() {
@@ -101,13 +103,13 @@ export function App() {
     <div className='control-section'>
       <PdfViewerComponent
         id="container"
-        // Path to your PDF document in the assets folder
+        // URL of the PDF document to load
         documentPath={window.location.origin + "/assets/pdfsuccinctly.pdf"}
-        // Path to the PDFium library files in the assets folder
+        // URL of the PDFium library folder
         resourceUrl={window.location.origin + "/assets/ej2-pdfviewer-lib"}
         style={{ 'height': '640px' }}>
 
-         <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]}/>
+         <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]}/>
 
       </PdfViewerComponent>
     </div>
