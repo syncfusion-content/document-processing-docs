@@ -10,31 +10,39 @@ documentation: UG
 
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or **interop** dependencies. Using this library, you can **convert a Word document to PDF in Xamarin**.
 
+N> **Platform status:** Xamarin and Xamarin.Forms are in maintenance mode. Microsoft recommends migrating to [.NET MAUI](https://learn.microsoft.com/en-us/dotnet/maui/) for new development. For an equivalent guide for .NET MAUI, refer to [Convert Word Document to PDF in .NET MAUI](convert-word-document-to-pdf-in-maui.md).
+
+## Prerequisites
+
+- Visual Studio 2022 (or later) with the **Mobile development with .NET** workload installed.
+- Xamarin.Forms supported target platforms (iOS, Android, and/or UWP) configured in the Visual Studio installer.
+- A valid [Syncfusion license key](https://help.syncfusion.com/common/essential-studio/licensing/overview) registered in your application (required from Syncfusion<sup>&reg;</sup> v16.2.0.x onwards).
+
 ## Steps to convert Word document to PDF in Xamarin
 
 Step 1: Create a new Xamarin.Forms application project.
 
 ![Create Xamarin application in Visual Studio](Xamarin_images/Create-Project-WordtoPDF.png)
 
-Step 2: Select a project template and required platforms to deploy the application. In this application the portable assemblies to be shared across multiple platforms, the .NET Standard code sharing strategy has been selected. For more details about code sharing refer [here](https://learn.microsoft.com/en-us/xamarin/cross-platform/app-fundamentals/code-sharing).
+Step 2: Select a project template and the required platforms to deploy the application. In this application, the .NET Standard code-sharing strategy is selected so that the portable assemblies can be shared across multiple platforms. For more details about code sharing, refer [here](https://learn.microsoft.com/en-us/xamarin/cross-platform/app-fundamentals/code-sharing).
 
-N> If .NET Standard is not available in the code sharing strategy, the Portable Class Library (PCL) can be selected.
+N> If .NET Standard is not available in the code-sharing strategy, the Portable Class Library (PCL) can be selected.
 
 ![Select the Template](Xamarin_images/Template_WordtoPDF.png)
 
-Step 3: Install [Syncfusion.Xamarin.DocIORenderer ](https://www.nuget.org/packages/Syncfusion.Xamarin.DocIORenderer) NuGet package as a reference to the .NET Standard project in your application from [NuGet.org](https://www.nuget.org/).
+Step 3: Install the [Syncfusion.Xamarin.DocIORenderer](https://www.nuget.org/packages/Syncfusion.Xamarin.DocIORenderer) NuGet package as a reference to the .NET Standard project in your application from [NuGet.org](https://www.nuget.org/).
 
 ![Install Syncfusion.Xamarin.DocIORenderer NuGet package](Xamarin_images/Nuget-Package-WordtoPDF.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: Add new Forms XAML page in **portable project**. If there is no XAML page is defined in the App class. Otherwise proceed to the next step.
+Step 4: Add a new Forms XAML page in the **portable project**. If no XAML page is defined in the `App` class, follow these steps; otherwise, proceed to the next step.
 <ul>
 <li>
-To add the new XAML page, right click on the project and select <b>Add > New Item</b> and add a Forms XAML Page from the list. Name it as MainXamlPage.
+To add a new XAML page, right-click the project and select <b>Add > New Item</b>, then add a Forms XAML Page from the list. Name it <b>MainXamlPage</b>.
 </li>
 <li>
-In App class of <b>portable project</b> (App.cs), replace the existing constructor of App class with the code snippet given below which invokes the <b>MainXamlPage</b>.
+In the <code>App</code> class of the <b>portable project</b> (<code>App.cs</code>), replace the existing constructor of the <code>App</code> class with the code snippet given below, which invokes the <b>MainXamlPage</b>.
 </li>
 </ul>
 
@@ -58,7 +66,7 @@ Step 5: In the **MainXamlPage.xaml** add new button as shown below.
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Convert_Word_Document_to_PDF.MainPage">
+             x:Class="Convert_Word_Document_to_PDF.MainXamlPage">
 
     <StackLayout VerticalOptions="Center">
        <Button Text="Convert WordtoPDF" Clicked="OnButtonClicked" HorizontalOptions="Center"/>
@@ -69,11 +77,13 @@ Step 5: In the **MainXamlPage.xaml** add new button as shown below.
 
 {% endtabs %}
 
-Step 6: Include the following namespace in the **MainXamlPage.xaml.cs** file.
+Step 6: Include the following namespaces in the **MainXamlPage.xaml.cs** file.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
+using System.IO;
+using System.Reflection;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.DocIORenderer;
@@ -89,8 +99,7 @@ Step 7: Include the below code snippet in the click event of the button in MainX
 {% highlight c# tabtitle="C#" %}
 
 //Loading an existing Word document
-Assembly assembly = typeof(App).GetTypeInfo().Assembly;
-Stream streams = assembly.GetManifestResourceStream("Convert-Word-Document-to-PDF.Assets.Input.docx");
+Assembly assembly = typeof(MainXamlPage).GetTypeInfo().Assembly;
 using (WordDocument document = new WordDocument(assembly.GetManifestResourceStream("Convert-Word-Document-to-PDF.Template.Input.docx"), FormatType.Docx))
 {
     //Instantiation of DocIORenderer for Word to PDF conversion
@@ -106,10 +115,11 @@ using (WordDocument document = new WordDocument(assembly.GetManifestResourceStre
             //Save the stream as a file in the device and invoke it for viewing.
             Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView("Sample.pdf", "application/pdf", stream);
         }
-    }               
-}    
+    }
+}
 {% endhighlight %}
 
+N> **Embedded resource:** The input `Template.docx` must be added to the .NET Standard project and its **Build Action** set to **EmbeddedResource** in the Properties window. The file path used in `GetManifestResourceStream` (for example, `Convert-Word-Document-to-PDF.Template.Input.docx`) must match the project's default namespace followed by the folder and file name.
 {% endtabs %}
 
 ## Helper files for Xamarin
@@ -135,7 +145,7 @@ Refer the below helper files and add them into the mentioned project. These help
   <td>
     {{'[ISave.cs](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/Xamarin/Convert-Word-Document-to-PDF/Convert-Word-Document-to-PDF/ISave.cs)'| markdownify }}
   </td>
-  <td>Represent the base interface for save operation
+  <td>Represents the base interface for the save operation
   </td>
   </tr>
   <tr>
@@ -154,7 +164,7 @@ Refer the below helper files and add them into the mentioned project. These help
     {{'[PreviewControllerDS.cs](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/Xamarin/Convert-Word-Document-to-PDF/Convert-Word-Document-to-PDF.iOS/PreviewControllerDS.cs)'| markdownify }}
   </td>
   <td>
-    Helper class for viewing the <b>Word document</b> in iOS device
+    Helper class for viewing the <b>PDF document</b> on an iOS device
   </td>
   </tr>
   <tr>
@@ -174,12 +184,22 @@ Refer the below helper files and add them into the mentioned project. These help
   <td>
     {{'[SaveWindows.cs](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/Xamarin/Convert-Word-Document-to-PDF/Convert-Word-Document-to-PDF.UWP/SaveWindows.cs)'| markdownify }}
   </td>
-  <td>Save implementation for UWP device.
+  <td>Save implementation for UWP device (deprecated; UWP is no longer actively supported by Microsoft)
   </td>
   </tr>
 </table>
 
-Compile and execute the application. Now this application **convert a Word document to PDF**.
+N> **Registering the platform implementation:** Each `Save*` class must be registered with `DependencyService` by adding an assembly attribute in the corresponding platform project, for example: `[assembly: Dependency(typeof(SaveIOS))]` in `AssemblyInfo.cs` of the iOS project, and the equivalent for Android and UWP.
+
+Step 8: Build and run the application.
+
+* In Visual Studio, select the target platform (iOS, Android, or UWP) and the target device/emulator.
+* Press <kbd>F5</kbd> (or click **Run** ▶ **Start Debugging**) to build, deploy, and launch the app on the selected device.
+* Tap the **Convert Word to PDF** button. The app converts the embedded Word document to PDF and opens the output on the device.
+
+N> If you encounter a `MissingManifestResourceException`, verify that the input `.docx` is added as an **EmbeddedResource** and that the manifest path used in `GetManifestResourceStream` exactly matches the project's default namespace + folder + file name.
+
+Compile and execute the application. This application **converts a Word document to PDF**.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/Xamarin).
 
@@ -189,4 +209,4 @@ By executing the program, you will get the PDF document as follows.
 
 Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.
 
-An online sample link to [convert Word document to PDF](https://document.syncfusion.com/demos/word/wordtopdf#/tailwind) in ASP.NET Core. 
+For an online demo of converting a Word document to PDF, refer to the [Word-to-PDF online sample](https://document.syncfusion.com/demos/word/wordtopdf#/tailwind). 

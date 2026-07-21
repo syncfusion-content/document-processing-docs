@@ -7,6 +7,8 @@ documentation: UG
 ---
 # Create or Generate PDF file in Xamarin
 
+> **Note:** Xamarin reached end-of-life in May 2024 and is no longer supported by Microsoft. For new projects, use the [.NET MAUI](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui) equivalent of this guide.
+
 The [Xamarin PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, work with forms, and secure PDF files.
 
 To include the Syncfusion<sup>&reg;</sup> Xamarin PDF library into your Xamarin application, please refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) documentation.
@@ -27,7 +29,7 @@ Step 3: Install the [Syncfusion.Xamarin.PDF](https://www.nuget.org/packages/Sync
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add the `Syncfusion.Licensing` assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: Add new Forms XAML page in portable project if there is no XAML page is defined in the App class. Otherwise, proceed to the next step.
+Step 4: Add a new Forms XAML page in the portable project if no XAML page is defined in the App class. Otherwise, proceed to the next step.
 
 a. To add the new XAML page, right-click the project and select **Add > New Item** and add a Forms XAML Page from the list. Name it as **MainXamlPage**.
 
@@ -112,12 +114,12 @@ Step 8: Download the helper files from this [link](https://www.syncfusion.com/do
   <tr>
     <td>portable project</td>
     <td>ISave.cs </td>
-	<td>Represent the base interface for save operation</td>	
+	<td>Represents the base interface for the save operation</td>
   </tr>
   <tr>
     <td rowspan="2">iOS Project</td>
     <td>SaveIOS.cs</td>
-	<td>Represent the base interface for save operation</td>	
+	<td>Save implementation for iOS device</td>
   </tr>
    <tr>    
     <td>PreviewControllerDS.cs</td>
@@ -145,9 +147,9 @@ Step 8: Download the helper files from this [link](https://www.syncfusion.com/do
   </tr>     
 </table>
 
-N> Android introduced a new runtime permission model for SDK version 23 and above. Include the following code to enable the Android file provider to save and view the generated PDF document.
+Step 9: Configure the Android file provider so that the generated PDF document can be saved and viewed on devices running Android SDK 23 and above. Android introduced a new runtime permission model from SDK version 23 onwards.
 
-Step 9(i): Create a new XML file with the name of provider_paths.xml under the Android project Resources folder and add the following code in it.
+a. Create a new XML file named `provider_paths.xml` under the Android project `Resources` folder and add the following code in it.
 Eg: Resources/xml/provider_paths.xml
 
 {% tabs %}
@@ -163,7 +165,7 @@ Eg: Resources/xml/provider_paths.xml
 {% endhighlight %}
 {% endtabs %}
 
-Step 9(ii): Add the following code to the AndroidManifest.xml file located under Properties/AndroidManifest.xml.
+b. Add the following code to the `AndroidManifest.xml` file located under `Properties/AndroidManifest.xml`.
 
 {% tabs %}
 {% highlight XML %}
@@ -171,7 +173,7 @@ Step 9(ii): Add the following code to the AndroidManifest.xml file located under
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           android:versionCode="1"
           android:versionName="1.0"
-          package="com.companyname. GettingStarted ">
+          package="com.companyname.GettingStarted">
     <uses-sdk
         android:minSdkVersion="19"
         android:targetSdkVersion="27" />
@@ -192,26 +194,17 @@ Step 9(ii): Add the following code to the AndroidManifest.xml file located under
 {% endhighlight %}
 {% endtabs %}
 
-**Include the following changes when deploying the application on Android 11:**
+**Include the following changes when deploying the application on Android 11 and later:**
 
-* Enable the `android:requestLegacyExternalStorage` attribute in the AndroidManifest.xml file when required.
-
-{% tabs %}
-{% highlight XML %}
-
-<application android:label=" PDFXamarinSample.Android" android:requestLegacyExternalStorage="true">
-
-{% endhighlight %}
-{% endtabs %}
-
-* User permission for read or write external storage.Add the following code to the AndroidManifest.xml file located under Properties/AndroidManifest.xml.
+* Add the user permission for reading and writing external storage to the `AndroidManifest.xml` file. The `android:requestLegacyExternalStorage` attribute can be enabled on the `<application>` element when required, as shown below.
 
 {% tabs %}
 {% highlight XML %}
 
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
-</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+<application android:label="GettingStarted.Android" android:requestLegacyExternalStorage="true">
 
 {% endhighlight %}
 {% endtabs %}
