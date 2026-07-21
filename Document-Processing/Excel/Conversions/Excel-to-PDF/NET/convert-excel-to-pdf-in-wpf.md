@@ -8,15 +8,15 @@ documentation: UG
 
 # Convert an Excel document to PDF in WPF
 
-Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Excel Library](https://www.syncfusion.com/document-processing/excel-framework/net/excel-library) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to PDF in WPF**.
+Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Excel Library](https://www.syncfusion.com/document-processing/excel-framework/net/excel-library) used to create, read, edit, and convert Excel documents programmatically, without Microsoft Excel or interop dependencies.
 
 ## Steps to convert an Excel document to PDF in WPF
 
 Step 1: Create a new WPF application project.
 
-![Create a WPF application project in visual studio](Wpf_images/Wpf_images_img4.png)
+![Create a WPF application project in Visual Studio](Wpf_images/Wpf_images_img4.png)
 
-Step 2: Name the project, choose the framework and click **Create** button.
+Step 2: Name the project, choose the framework, and click **Create**.
 
 ![Name the project and choose the framework version](Wpf_images/Wpf_images_img5.png)
 
@@ -24,9 +24,12 @@ Step 3: Install the [Syncfusion.ExcelToPdfConverter.Wpf](https://www.nuget.org/p
 
 ![Install Syncfusion.ExcelToPdfConverter.Wpf NuGet Package](Wpf_images/Wpf_images_img6.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must also add the `Syncfusion.Licensing` reference and register a license key. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn how to register the Syncfusion<sup>&reg;</sup> license key. The simplest approach is to add the following call in `App.xaml.cs` (or in `Main` before `app.Run()`) before constructing the `ExcelEngine`:
+> ```csharp
+> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+> ```
 
-Step 4: Add a new button in **MainWindow.xaml** as shown below.
+Step 4: Add a new button to **MainWindow.xaml** (inside the existing `<Grid>`) as shown below.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 <Button Click="btnConvert_Click" Margin="0,0,10,12" VerticalAlignment="Bottom" Height="30" BorderBrush="LightBlue" HorizontalAlignment="Right" Width="180">
@@ -44,7 +47,7 @@ Step 4: Add a new button in **MainWindow.xaml** as shown below.
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Include the following namespaces in the **MainWindow.xaml.cs**.
+Step 5: Add the following namespaces in **MainWindow.xaml.cs**.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 using Syncfusion.XlsIO;
@@ -53,33 +56,44 @@ using Syncfusion.ExcelToPdfConverter;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the below code snippet in **btnConvert_Click** to **convert an Excel document to PDF**.
+Step 6: Add the following code in the **btnConvert_Click** handler in **MainWindow.xaml.cs** to convert an Excel document to PDF. Place a `Sample.xlsx` file in the project's `bin\Debug` folder (or set its **Copy to Output Directory** property to **Copy if newer**) so the relative path resolves.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
-using (ExcelEngine excelEngine = new ExcelEngine())
+private void btnConvert_Click(object sender, RoutedEventArgs e)
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
+    using (ExcelEngine excelEngine = new ExcelEngine())
+    {
+        IApplication application = excelEngine.Excel;
+        application.DefaultVersion = ExcelVersion.Xlsx;
 
-  //Initialize ExcelToPdfConverter
-  ExcelToPdfConverter converter = new ExcelToPdfConverter(workbook);
+        //Open the existing Excel workbook. Adjust the path as required.
+        IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
 
-  //Initialize PDF document
-  PdfDocument pdfDocument = new PdfDocument();
+        //Initialize the Excel-to-PDF converter
+        ExcelToPdfConverter converter = new ExcelToPdfConverter(workbook);
 
-  //Convert Excel document into PDF document
-  pdfDocument = converter.Convert();
+        //Convert the Excel document to a PDF document
+        PdfDocument pdfDocument = converter.Convert();
 
-  //Save the converted PDF document
-  pdfDocument.Save("Sample.pdf");
+        //Save the converted PDF document to the application's working directory
+        pdfDocument.Save("Sample.pdf");
+
+        //Close the workbook and the PDF document to release resources
+        workbook.Close();
+        pdfDocument.Close();
+
+        //Notify the user that the PDF was generated
+        MessageBox.Show("Sample.pdf has been saved to " + System.AppDomain.CurrentDomain.BaseDirectory);
+    }
 }
 {% endhighlight %}
 {% endtabs %}
 
+N> For additional control over page size, orientation, and font embedding, pass an `ExcelToPdfConverterSettings` instance when creating the `ExcelToPdfConverter` and call the `Convert(ExcelToPdfConverterSettings)` overload. See the [Excel-to-PDF conversion options](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/convert-excel-to-pdf-in-wpf#excel-to-pdf-conversion-options) for details.
+
 A complete working example of how to convert an Excel document to PDF in WPF is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/WPF/Convert%20Excel%20to%20PDF).
 
-By executing the program, you will get the **PDF document** as follows.
+By executing the program, you will get the **PDF document** as shown below.
 
 ![Output File](Wpf_images/Wpf_images_img7.png)
 

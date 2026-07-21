@@ -1,4 +1,4 @@
----
+﻿---
 title: Create, read, and edit Excel files in GCP | Syncfusion
 description: This page explains how to create, read, and edit Excel files in Google App Engine using the .NET Excel Library.
 platform: document-processing
@@ -8,7 +8,16 @@ documentation: UG
 
 # Create, read, and edit Excel files in Google App Engine
 
-Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) can be used to create, read, edit Excel files. This library supports manipulating Excel documents in Google App Engine.
+Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) that can be used to create, read, and edit Excel files. This library supports manipulating Excel documents in Google App Engine.
+
+## Prerequisites
+
+Before you begin, ensure the following:
+
+* An active **Google Cloud Platform (GCP) account**. If you do not have one, see [Create a GCP account](https://cloud.google.com/free).
+* A **GCP project** with **billing enabled** (required for App Engine) and the **App Engine Admin API** enabled â€” see [Enable billing for a project](https://cloud.google.com/billing/docs/how-to/modify-project) and [Enable the App Engine API](https://cloud.google.com/appengine/docs/standard/nodejs/create-app).
+* **Visual Studio 2022** with the **ASP.NET and web development** workload installed.
+* A **Syncfusion license key**. Register it in `Program.cs` (see the snippet in Step 4a below) or store it in the `app.yaml` `env_variables` section for production deployments.
 
 ## Steps to create Excel document in Google App Engine
 
@@ -58,6 +67,21 @@ Step 4: Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/S
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
+Step 4a: Register your Syncfusion license key in **Program.cs** (before `app.Run()`). Replace the placeholder with your actual key.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+{% endhighlight %}
+{% endtabs %}
+
+For production deployments to App Engine, store the key in the `app.yaml` `env_variables` section and read it via `Environment.GetEnvironmentVariable` so the key is not committed to source control. Example `app.yaml` snippet:
+
+```yaml
+env_variables:
+  SYNCFUSION_LICENSE_KEY: "your-license-key"
+```
+
 Step 5: Include the following namespaces in the **HomeController.cs** file.
 
 {% tabs %}
@@ -68,9 +92,9 @@ using Syncfusion.XlsIO;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: A default action method named Index will be present in HomeController.cs. Right click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
+Step 6: A default action method named `Index` is present in **HomeController.cs**. Right-click the `Index` method and select **Go To View** to open the associated view page **Index.cshtml**.
 
-Step 7: Add a new button in the Index.cshtml as shown below.
+Step 7: Add a new button in the **Index.cshtml** as shown below.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -103,9 +127,11 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IWorkbook workbook = application.Workbooks.Create(1);
   IWorksheet worksheet = workbook.Worksheets[0];
   
-  //Adding a picture
-  FileStream imageStream = new FileStream("AdventureCycles-Logo.png", FileMode.Open, FileAccess.Read);
-  IPictureShape shape = worksheet.Pictures.AddPicture(1, 1, imageStream, 20, 20);
+  //Adding a picture (wrap in using for proper disposal)
+  using (FileStream imageStream = new FileStream("AdventureCycles-Logo.png", FileMode.Open, FileAccess.Read))
+  {
+    IPictureShape shape = worksheet.Pictures.AddPicture(1, 1, imageStream, 20, 20);
+  }
   
   //Disable gridlines in the worksheet
   worksheet.IsGridLinesVisible = false;
@@ -272,7 +298,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   stream.Position = 0;
   
   //Download the Excel file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/excel");  
+  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");  
   fileStreamResult.FileDownloadName = "Output.xlsx";  
   return fileStreamResult;
 }
@@ -336,7 +362,7 @@ Step 7: Now you can see the sample output on the preview page.
 
 ![Sample output in browser](GCP_Images/Ensure_Sample_Create_Excel.png)
 
-Step 8: Close the preview page and return to the terminal then press **Ctrl+C** for which will typically stop the process.
+Step 8: Close the preview page, return to the terminal, and press **Ctrl+C** to stop the process.
 
 ![Press Ctrl+C in Cloud Shell Terminal](GCP_Images/Stop_Process_Create_Excel.png)
 
@@ -379,6 +405,13 @@ EOT
 
 {% endhighlight %}
 {% endtabs %}
+
+You can also add the Syncfusion license key as an environment variable in `app.yaml` so it is not committed to source control:
+
+```yaml
+env_variables:
+  SYNCFUSION_LICENSE_KEY: "your-license-key"
+```
 
 ![Add required files to publish folder](GCP_Images/Yaml_File_Create_Excel.png)
 
@@ -430,9 +463,9 @@ By executing the program, you will get the **Excel document** as follows. The ou
 
 ![Output File](GCP_Images/Output_Create_Excel.png)
 
-## Read and Edit Excel file
+## Read and Edit an Excel File
 
-The below code snippet illustrates how to read and edit an Excel file in GCP.
+The following code snippet illustrates how to read and edit an Excel file in Google App Engine.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -454,17 +487,19 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     //Set Text in cell A3.
     worksheet.Range["A3"].Text = "Hello World";
 
-    //Saving the Excel to the MemoryStream 
-    MemoryStream stream = new MemoryStream();
-    workbook.SaveAs(stream);
+    //Saving the Excel to the MemoryStream (wrap in using for proper disposal)
+    using (MemoryStream stream = new MemoryStream())
+    {
+        workbook.SaveAs(stream);
 
-    //Set the position as '0'.
-    stream.Position = 0;
+        //Set the position as '0'.
+        stream.Position = 0;
 
-    //Download the Excel file in the browser
-    FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/excel");
-    fileStreamResult.FileDownloadName = "EditExcel.xlsx";
-    return fileStreamResult;
+        //Download the Excel file in the browser
+        FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+        fileStreamResult.FileDownloadName = "EditExcel.xlsx";
+        return fileStreamResult;
+    }
 }
 
 {% endhighlight %}

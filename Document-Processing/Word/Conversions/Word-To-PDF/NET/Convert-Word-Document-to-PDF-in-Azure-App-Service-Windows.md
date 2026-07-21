@@ -10,6 +10,13 @@ documentation: UG
 
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to PDF in Azure App Service on Windows**.
 
+## Prerequisites
+
+- An active **Azure subscription**. If you do not have one, create a [free Azure account](https://azure.microsoft.com/free/) before you begin.
+- **Visual Studio 2022 or later** with the **ASP.NET and web development** workload installed.
+- **.NET 8 SDK** or a later supported version.
+- A valid Syncfusion<sup>&reg;</sup> license key. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to generate and register your license key.
+
 ## Steps to convert Word document to PDF in Azure App Service on Windows
 
 Step 1: Create a new ASP.NET Core Web App (Model-View-Controller).
@@ -27,7 +34,7 @@ Step 4: Install the [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/pa
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 5: Add a new button in the **Index.cshtml** as shown below.
+Step 5: Add a new button to **Index.cshtml** as shown below.
 
 {% tabs %}
 
@@ -74,6 +81,9 @@ Step 6: Include the following namespaces in **HomeController.cs**.
 
 {% highlight c# tabtitle="C#" %}
 
+using System.IO;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Hosting;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.DocIORenderer;
@@ -83,7 +93,7 @@ using Syncfusion.Pdf;
 
 {% endtabs %}
 
-Step 9: Include the below code snippet in **HomeController.cs** for **convert the Word document to Pdf**. 
+Step 7: Inject `IWebHostEnvironment` into the controller and include the below code snippet in **HomeController.cs** to **convert the Word document to PDF**.
 
 {% tabs %}
 
@@ -98,8 +108,8 @@ public HomeController(Microsoft.AspNetCore.Hosting.IHostingEnvironment env)
 /// <summary>
 /// Convert Word document to PDF
 /// </summary>
-/// <param name="button"></param>
-/// <returns></returns>
+/// <param name="button">Submit-button value sent from the form (non-null only after a POST).</param>
+/// <returns>Resulting PDF file or the Index view on validation failure.</returns>
 public IActionResult WordToPDF(string button)
 {
 
@@ -115,7 +125,7 @@ public IActionResult WordToPDF(string button)
         }
         // Gets the extension from file.
         string extension = Path.GetExtension(Request.Form.Files[0].FileName).ToLower();
-        // Compares extension with supported extensions.
+        // Compares extension with supported extensions. Only .docx is supported by this sample.
         if (extension == ".docx")
         {
             MemoryStream stream = new MemoryStream();
@@ -163,6 +173,8 @@ public IActionResult WordToPDF(string button)
 
 {% endtabs %}
 
+> The sample supports only the **.docx** Word format. To convert legacy **.doc** files, save them as .docx in Microsoft Word first, or use the Syncfusion Word library's FormatType.Automatic detection.
+
 ## Steps to publish as Azure App Service on Windows
 
 Step 1: Right-click the project and select **Publish** option.
@@ -209,3 +221,10 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.
 
 An online sample link to [convert Word document to PDF](https://document.syncfusion.com/demos/word/wordtopdf#/tailwind) in ASP.NET Core. 
+
+## See Also
+
+- [Convert Word to PDF in Azure App Service on Linux](convert-word-document-to-pdf-in-azure-app-service-linux.md)
+- [Convert Word to PDF in Azure App Service Windows (Console / SDK sample)](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/Azure/Azure_App_Service)
+- [Syncfusion<sup>&reg;</sup> licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview)
+- [DocIO NuGet packages required for Word to PDF conversion](nuget-packages-required-word-to-pdf.md)
