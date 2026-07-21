@@ -56,7 +56,7 @@ npm install @syncfusion/ej2-vue-documenteditor --save
 Before initializing the Vue DOCX Editor control, generate a Syncfusion license key and register it in your application.
 
 - [Generate a Syncfusion License Key](https://help.syncfusion.com/document-processing/licensing/how-to-generate)
-- [Register a Syncfusion License Key in Vue](https://ej2.syncfusion.com/vue/documentation/licensing/license-key-registration)
+- [Register a Syncfusion License Key in Vue](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#vuejs)
 
 ## Import the required CSS styles
 
@@ -171,3 +171,4 @@ N> Looking for the full Vue DOCX Editor component overview, features, pricing, a
 - [Open a document](./import)
 - [Save a document](./export)
 - [Collaborative Editing](./collaborative-editing/overview)
+- [Troubleshooting](https://help.syncfusion.com/document-processing/word/word-processor/vue/troubleshooting)

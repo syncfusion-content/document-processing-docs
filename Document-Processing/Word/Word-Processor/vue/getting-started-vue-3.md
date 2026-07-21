@@ -2,7 +2,7 @@
 layout: post
 title: Getting Started with Vue 3 DOCX Editor | Syncfusion
 description: Learn how to create a DOCX Editor in a Vue 3 application using the Syncfusion® DOCX Editor control to create, edit, and view Word documents.
-control: Getting started vue 3 
+control: Getting started vue 3
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
@@ -13,12 +13,12 @@ domainurl: ##DomainURL##
 This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with integrating the [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/Vue-docx-editor) (Document Editor) component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 
-### Prerequisites
+## Prerequisites
 
-* [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+* [System requirements for Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 * [Browser Compatibility](https://ej2.syncfusion.com/vue/documentation/browser)
 
-### Create a Vue application
+## Create a Vue application
 
 Use [Vite](https://vitejs.dev/) to quickly scaffold a Vue 3 project. Run one of the following commands to create a new project:
 
@@ -77,7 +77,7 @@ cd documenteditor-app
 yarn install
 ```
 
-### Install the DOCX Editor packages
+## Install the DOCX Editor packages
 
 The DOCX Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-vue-documenteditor).
 
@@ -87,14 +87,14 @@ To install the DOCX Editor component, use the following command:
 npm install @syncfusion/ej2-vue-documenteditor --save
 ```
 
-### Register a Syncfusion License Key
+## Register a Syncfusion License Key
 
 Before initializing the Vue DOCX Editor control, generate a Syncfusion license key and register it in your application.
 
-- [Generate a Syncfusion License Key](https://ej2.syncfusion.com/vue/documentation/licensing/license-key-generation)
-- [Register a Syncfusion License Key in Vue](https://ej2.syncfusion.com/vue/documentation/licensing/license-key-registration)
+- [Generate a Syncfusion License Key](https://help.syncfusion.com/document-processing/licensing/how-to-generate)
+- [Register a Syncfusion License Key in Vue](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#vuejs)
 
-### Import the required CSS styles
+## Import the required CSS styles
 
 Add the following DOCX Editor and dependent component style definitions to the `src/style.css` file.
 
@@ -116,7 +116,7 @@ Add the following DOCX Editor and dependent component style definitions to the `
 
 N> Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-### Initialize the DOCX Editor
+## Initialize the DOCX Editor
 
 Import and register the DOCX Editor component in the `<script>` section of `src/App.vue`. If you use the `Composition API`, add the `setup` attribute to the `<script>` tag. Then, define the component in the `<template>` section.
 
@@ -177,7 +177,7 @@ Import and register the DOCX Editor component in the `<script>` section of `src/
 
 N> The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
 
-### Run the application
+## Run the application
 
 Run the application using the following command:
 
@@ -201,7 +201,7 @@ The DOCX Editor component requires server-side interactions for the following op
 * Spell check
 * Save as file formats other than SFDT and DOCX
 
-N> If you don't require the above functionalities, you can deploy the component as a pure client-side solution without any server-side interactions.
+N> If you do not require the above functionalities, you can deploy the component as a pure client-side solution without any server-side interactions.
 
 For detailed information about server-side dependencies, refer to the [Web Services Overview](./web-services-overview) page.
 
@@ -212,3 +212,4 @@ N> Looking for the full Vue DOCX Editor component overview, features, pricing, a
 - [Open a document](./import)
 - [Save a document](./export)
 - [Collaborative Editing](./collaborative-editing/overview)
+- [Troubleshooting](https://help.syncfusion.com/document-processing/word/word-processor/vue/troubleshooting)
