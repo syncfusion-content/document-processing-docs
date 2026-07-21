@@ -7,17 +7,17 @@ platform: document-processing
 documentation: ug
 ---
 
-# Configure minZoom and maxZoom in the PDF Viewer
+# Configure minZoom and maxZoom in the React PDF Viewer
 
 The PDF Viewer exposes [minZoom](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#minzoom) and [maxZoom](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#maxzoom) to control the allowable zoom range for document viewing. Setting these properties helps maintain readability, performance, and a consistent experience across devices.
 
 ### minZoom
 
-`minZoom` sets the minimum zoom percentage the viewer supports. Use this to prevent users from zooming out to levels that make content unreadable or negatively affect layout.
+`minZoom` sets the minimum zoom percentage the viewer supports. The default value is `10` (10%). Values below 10 are automatically clamped to 10. Use this to prevent users from zooming out to levels that make content unreadable or negatively affect layout.
 
 ### maxZoom
 
-`maxZoom` sets the maximum zoom percentage the viewer supports. Restricting the maximum helps avoid excessive memory use and degraded rendering performance when users zoom in very far.
+`maxZoom` sets the maximum zoom percentage the viewer supports. The default value is `400` (400%). Values above 400 are automatically clamped to 400. Restricting the maximum helps avoid excessive memory use and degraded rendering performance when users zoom in very far.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -97,7 +97,7 @@ import * as React from 'react';
 import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
          BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation,
-         FormFields, FormDesigner, PageOrganizer Inject } from '@syncfusion/ej2-react-pdfviewer';
+         FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 import  {Browser} from '@syncfusion/ej2-base';
 
 function App() {
@@ -140,7 +140,7 @@ import * as React from 'react';
 import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
          BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation,
-         FormFields, FormDesigner, PageOrganizer Inject } from '@syncfusion/ej2-react-pdfviewer';
+         FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 import  {Browser} from '@syncfusion/ej2-base';
 
 function App() {
