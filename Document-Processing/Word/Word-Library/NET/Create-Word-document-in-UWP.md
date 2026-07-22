@@ -10,7 +10,7 @@ documentation: UG
 
 Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [UWP Word library](https://www.syncfusion.com/document-processing/word-framework/uwp/word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in UWP**.
 
-## Steps to create Word document programmatically in UWP:
+## Steps to create Word document programmatically in UWP
 
 Step 1: Create a new C# Blank App (Universal Windows) project.
 
@@ -20,7 +20,15 @@ Step 2: Install the [Syncfusion.DocIO.UWP](https://www.nuget.org/packages/Syncfu
 
 ![Install DocIO UWP NuGet package](UWP_images/Install_NuGet.jpg)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the https://www.nuget.org/packages/Syncfusion.Licensing NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 3: Add a new button in the MainPage.xaml as shown below.
 
@@ -61,7 +69,7 @@ using System.Reflection;
 
 {% endtabs %}
 
-Step 5: Include the below code snippet in the click event of the button in MainPage.xaml.cs, to **create a Word document** and save the **Word** document as a physical file and open the file for viewing.
+Step 5: Include the below code snippet in the click event of the button in MainPage.xaml.cs to **create a Word document** and save it as a physical file. The file will be opened for viewing automatically.
 
 {% tabs %}
 
@@ -286,6 +294,8 @@ private async void OnButtonClicked(object sender, RoutedEventArgs e)
     await document.SaveAsync(stream, FormatType.Docx);
     //Saves the stream as Word document file in local machine
     Save(stream, "Sample.docx");
+    //Disposes the Word document instance
+    document.Dispose();
 }
 {% endhighlight %}
 
@@ -297,9 +307,9 @@ private async void OnButtonClicked(object sender, RoutedEventArgs e)
 
 {% highlight c# tabtitle="C#" %}
 //Saves the Word document
-async void Save(MemoryStream streams, string filename)
+async void Save(MemoryStream stream, string filename)
 {
-    streams.Position = 0;
+    stream.Position = 0;
     StorageFile stFile;
     if (!(Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Phone.UI.Input.HardwareButtons")))
     {
@@ -321,20 +331,26 @@ async void Save(MemoryStream streams, string filename)
             //Write compressed data from memory to file
             using (Stream outstream = zipStream.AsStreamForWrite())
             {
-                byte[] buffer = streams.ToArray();
+                byte[] buffer = stream.ToArray();
                 outstream.Write(buffer, 0, buffer.Length);
                 outstream.Flush();
             }
         }
-    }
     //Launch the saved Word file
-    await Windows.System.Launcher.LaunchFileAsync(stFile);
+        await Windows.System.Launcher.LaunchFileAsync(stFile);
+    }
+    //Disposes the MemoryStream
+    stream.Dispose();
 }
 {% endhighlight %}
 
 {% endtabs %}
 
+Step 6: Build and run the UWP application. Click the **Create Document** button to generate and view the Word document.
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/UWP).
+
+N> The code sample references image files (AdventureCycle.jpg, Mountain-200.jpg, Mountain-300.jpg, Road-550-W.jpg). Download these assets from the [GitHub sample folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/UWP/Create-Word-document/Assets) and add them to an `Assets` folder in your project with their **Build Action** set to **Embedded Resource**.
 
 By executing the program, you will get the Word document as follows.
 
