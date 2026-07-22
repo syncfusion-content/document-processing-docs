@@ -107,7 +107,7 @@ The following example code illustrates how to use find in Document Editor.
 documenteditor.search.find('Some text', 'None');
 ```
 
->Note: Second parameter is optional parameter and it denotes find Options. Possible values of find options are `'None' |'WholeWord' |'CaseSensitive'| 'CaseSensitiveWholeWord'`.
+N> Second parameter is optional parameter and it denotes find Options. Possible values of find options are `'None' |'WholeWord' |'CaseSensitive'| 'CaseSensitiveWholeWord'`.
 
 ### Find all the occurrences in the document
 
@@ -119,7 +119,7 @@ The following example code illustrates how to find all the text in the document.
 documenteditor.search.findAll('Some text', 'None');
 ```
 
->Note: Second parameter is optional parameter and it denotes find Options. Possible values of find options are `'None' |'WholeWord' |'CaseSensitive'| 'CaseSensitiveWholeWord'`.
+N> Second parameter is optional parameter and it denotes find Options. Possible values of find options are `'None' |'WholeWord' |'CaseSensitive'| 'CaseSensitiveWholeWord'`.
 
 ## Search results
 
@@ -148,7 +148,7 @@ documentEditor.search.searchResults.replaceAll("Mike");
 
 Using [`insertText`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#inserttext), you can replace the current searched text with specified text and it replaces a single occurrence.
 
->Note: This [`insertText`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#inserttext) API accepts following control characters
+N> This [`insertText`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#inserttext) API accepts following control characters
 >* New line characters ("\r", "\r\n", "\n") - Inserts a new paragraph and appends the remaining text to the new paragraph.
 >* Line break character ("\v") - Moves the remaining text to start in new line.
 >* Tab character ("\t") - Allocates a tab space and continue the next character.
