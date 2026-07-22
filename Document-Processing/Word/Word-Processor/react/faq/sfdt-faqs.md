@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# FAQs about SFDT in React DOCX Editor
+# FAQs about SFDT in React Document Editor
 
-The frequently asked questions about SFDT in [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) is listed below:
+The frequently asked questions about SFDT in [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) are listed below:
 
 ## What is SFDT format?
 
@@ -22,7 +22,7 @@ It is not recommended to modify SFDT directly (either manually or programmatical
 
 ## What are the advantages of SFDT over DOCX?
 
-SFDT is optimized for web-based document editing scenarios. 
+SFDT is optimized for web-based document editing scenarios.
 
 - It is lightweight and easier to process.
 
@@ -34,9 +34,9 @@ SFDT is optimized for web-based document editing scenarios.
 
 SFDT is suitable in the following scenarios:
 
-- Applications where documents are edited within the browser using the Document Editor, and the document state needs to be saved and reopened later in the same editor
+- Applications where documents are edited within the browser using the Document Editor, and the document state needs to be saved and reopened later in the same editor.
 
-- Use cases that require efficient storage in a database and quick reloading for further editing
+- Use cases that require efficient storage in a database and quick reloading for further editing.
 
 ## Can SFDT be converted back to DOCX?
 
