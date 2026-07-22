@@ -1,6 +1,6 @@
 ---
 title: Word to PDF Conversion FAQs | DocIO | Syncfusion
-description: Find answers to common questions about converting Word documents to PDF using Syncfusion DocIO.
+description: Find answers to common questions about converting Word documents to PDF using using .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 keywords: Word to PDF FAQ, DocIO FAQ, Word conversion FAQ, chart conversion, Azure, content controls, multithreading
 platform: document-processing
 control: DocIO

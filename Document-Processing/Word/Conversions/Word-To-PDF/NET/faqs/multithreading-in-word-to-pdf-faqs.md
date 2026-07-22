@@ -329,6 +329,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## See also
 
-* [Word to PDF conversion overview](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/word-to-pdf)
+* [Word to PDF conversion overview](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/overview)
 * [Assemblies required for Word to PDF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/assemblies-required-word-to-pdf)
 * [NuGet packages required for Word to PDF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf)

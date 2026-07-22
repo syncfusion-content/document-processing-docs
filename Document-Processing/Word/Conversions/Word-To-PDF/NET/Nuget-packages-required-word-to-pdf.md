@@ -367,34 +367,6 @@ Install-Package Syncfusion.OfficeChartToImageConverter.Wpf
 Uninstall-Package Syncfusion.OfficeChartToImageConverter.Wpf -RemoveDependencies 
 ```
 
-### ASP.NET MVC4
-
-**NuGet Package:** Syncfusion.DocToPdfConverter.AspNet.Mvc4
-
-The package contains the DocToPdfConverter .NET library that allows you to convert the Word documents to PDF.
-
-```powershell
-// Install package
-Install-Package Syncfusion.DocToPdfConverter.AspNet.Mvc4
-```
-```powershell
-// Uninstall package
-Uninstall-Package Syncfusion.DocToPdfConverter.AspNet.Mvc4 -RemoveDependencies 
-```
-
-**NuGet Package:** Syncfusion.OfficeChartToImageConverter.AspNet.Mvc4
-
-The package contains OfficeChartToImageConverter .NET library for converting the chart present in word document to image.
-
-```powershell
-// Install package
-Install-Package Syncfusion.OfficeChartToImageConverter.AspNet.Mvc4
-```
-```powershell
-// Uninstall package
-Uninstall-Package Syncfusion.OfficeChartToImageConverter.AspNet.Mvc4 -RemoveDependencies 
-```
-
 ### ASP.NET MVC5
 
 **NuGet Package:** Syncfusion.DocToPdfConverter.AspNet.Mvc5
