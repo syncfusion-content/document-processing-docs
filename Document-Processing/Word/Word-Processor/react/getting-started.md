@@ -118,7 +118,7 @@ npm run dev
 
 ## Prerequisites
 
-* [System requirements for DOCX Editor](https://ej2.syncfusion.com/react/documentation/system-requirement)
+* [System requirements for React components](https://ej2.syncfusion.com/react/documentation/system-requirement)
 * [Browser Compatibility](https://ej2.syncfusion.com/react/documentation/browser)
 
 ## Create a new React application
