@@ -8,29 +8,32 @@ documentation: UG
 
 # Convert an Excel document to PDF in ASP.NET MVC
 
-Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Excel Library](https://www.syncfusion.com/document-processing/excel-framework/net/excel-library) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to PDF in ASP.NET MVC**.
+Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Excel Library](https://www.syncfusion.com/document-processing/excel-framework/net/excel-library) used to create, read, edit, and convert Excel documents programmatically, without Microsoft Excel or interop dependencies.
 
 ## Steps to convert an Excel document to PDF in C#
 
 Step 1: Create a new ASP.NET Web Application Project.
 
-![Create a ASP.NET Web App project in visual studio](ASP-NET-MVC_images\ASP-NET-MVC_images_img4.png)
+![Create an ASP.NET Web App project in Visual Studio](ASP-NET-MVC_images/ASP-NET-MVC_images_img4.png)
 
-Step 2: Name the project, choose the framework and click **Create** button.
+Step 2: Name the project, choose the framework, and click **Create**.
 
-![Name the project and choose the framework version](ASP-NET-MVC_images\ASP-NET-MVC_images_img5.png)
+![Name the project and choose the framework version](ASP-NET-MVC_images/ASP-NET-MVC_images_img5.png)
 
-Step 3: Select the MVC application.
+Step 3: Select the **MVC** template. Set **Authentication** to **No Authentication** to keep the sample minimal, and click **Create**.
 
-![Select the MVC App](ASP-NET-MVC_images\ASP-NET-MVC_images_img6.png)
+![Select the MVC App](ASP-NET-MVC_images/ASP-NET-MVC_images_img6.png)
 
-Step 4: Install the [Syncfusion.ExcelToPdfConverter.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.ExcelToPdfConverter.AspNet.Mvc5) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+Step 4: Install the [Syncfusion.ExcelToPdfConverter.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.ExcelToPdfConverter.AspNet.Mvc5) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/). This package transitively pulls in the required `Syncfusion.XlsIO.Base` and `Syncfusion.Pdf.Base` assemblies.
 
-![Install Syncfusion.ExcelToPdfConverter.AspNet.Mvc5 NuGet Package](ASP-NET-MVC_images\ASP-NET-MVC_images_img7.png)
+![Install Syncfusion.ExcelToPdfConverter.AspNet.Mvc5 NuGet Package](ASP-NET-MVC_images/ASP-NET-MVC_images_img7.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must also add the `Syncfusion.Licensing` reference and register a license key. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn how to register the Syncfusion<sup>&reg;</sup> license key. The simplest approach is to add the following call in `Global.asax` `Application_Start` (or `Startup`):
+> ```csharp
+> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+> ```
 
-Step 5: Add a new button in the **Index.cshtml** as shown below.
+Step 5: Add a new button to **Index.cshtml** as shown below.
 {% tabs %}  
 {% highlight CSHTML %}
 @{Html.BeginForm("ConvertExceltoPDF", "Home", FormMethod.Get);
@@ -44,7 +47,7 @@ Step 5: Add a new button in the **Index.cshtml** as shown below.
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the following namespaces in **HomeController.cs**.
+Step 6: Add the following namespaces in **HomeController.cs**.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 using Syncfusion.XlsIO;
@@ -53,42 +56,50 @@ using Syncfusion.ExcelToPdfConverter;
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Include the below code snippet in **HomeController.cs** to **convert an Excel document to PDF**. 
+Step 7: Add the following code in **HomeController.cs** to convert an Excel document to PDF. Place a `Sample.xlsx` file in the project root (or under `App_Data`) so the relative path resolves.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
-using (ExcelEngine excelEngine = new ExcelEngine())
+public ActionResult ConvertExceltoPDF()
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
+  using (ExcelEngine excelEngine = new ExcelEngine())
+  {
+    IApplication application = excelEngine.Excel;
+    application.DefaultVersion = ExcelVersion.Xlsx;
 
-  //Initialize ExcelToPdfConverter
-  ExcelToPdfConverter converter = new ExcelToPdfConverter(workbook);
+    //Open the existing Excel workbook. Adjust the path as required.
+    IWorkbook workbook = application.Workbooks.Open(Server.MapPath("~/Sample.xlsx"));
 
-  //Initialize PDF document
-  PdfDocument pdfDocument = new PdfDocument();
+    //Initialize the Excel-to-PDF converter
+    ExcelToPdfConverter converter = new ExcelToPdfConverter(workbook);
 
-  //Convert Excel document into PDF document
-  pdfDocument = converter.Convert();
+    //Convert the Excel document to a PDF document
+    PdfDocument pdfDocument = converter.Convert();
 
-  //Create the MemoryStream to save the converted PDF.      
-  MemoryStream pdfStream = new MemoryStream();
+    //Create a MemoryStream to save the converted PDF
+    MemoryStream pdfStream = new MemoryStream();
 
-  //Save the converted PDF document to MemoryStream.
-  pdfDocument.Save(pdfStream);
-  pdfStream.Position = 0;
+    //Save the converted PDF document to the MemoryStream
+    pdfDocument.Save(pdfStream);
+    pdfStream.Position = 0;
 
-  //Download PDF document in the browser.
-  return File(pdfStream, "application/pdf", "Sample.pdf");
+    //Close the workbook and the PDF document to release resources
+    workbook.Close();
+    pdfDocument.Close();
+
+    //Return the PDF document for download in the browser
+    return File(pdfStream, "application/pdf", "Sample.pdf");
+  }
 }
 {% endhighlight %}
 {% endtabs %}
 
+N> For additional control over page size, orientation, and font embedding, pass an `ExcelToPdfConverterSettings` instance when creating the `ExcelToPdfConverter` and call the `Convert(ExcelToPdfConverterSettings)` overload. See the [Excel-to-PDF conversion options](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/convert-excel-to-pdf-in-asp-net-mvc#excel-to-pdf-conversion-options) for details.
+
 A complete working example of how to convert an Excel document to PDF in ASP.NET MVC is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/ASP.NET%20MVC/Convert%20Excel%20to%20PDF).
 
-By executing the program, you will get the **PDF document** as follows.
+By executing the program, you will get the **PDF document** as shown below.
 
-![Output File](ASP-NET-MVC_images\ASP-NET-MVC_images_img8.png)
+![Output File](ASP-NET-MVC_images/ASP-NET-MVC_images_img8.png)
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/net) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
