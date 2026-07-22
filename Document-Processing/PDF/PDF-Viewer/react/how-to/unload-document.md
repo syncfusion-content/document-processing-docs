@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Unload document in React Pdfviewer component
 
-The PDF Viewer provides the [unload()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#unload) method to remove the currently loaded PDF from the viewer instance. Use this API to free memory or reset the viewer when navigating between documents or closing the viewer.
+The PDF Viewer provides the [unload()] (https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#unload) method to remove the currently loaded PDF from the viewer instance. Use this API to free memory or reset the viewer when navigating between documents or closing the viewer.
 
 The following steps are used to unload the PDF document programmatically.
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Load documents dynamically in React PDF Viewer
 
-The PDF Viewer supports loading or switching PDF documents at runtime after the initial viewer initialization. Use the [load](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#load) method to open a document from a URL or a Base64 string.
+The PDF Viewer supports loading or switching PDF documents at runtime after the initial viewer initialization. Use the [load] (https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#load) method to open a document from a URL or a Base64 string.
 
 The following steps show common approaches for loading documents dynamically.
 

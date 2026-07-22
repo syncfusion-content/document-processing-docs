@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Retrieve document ID in React PDF Viewer | Syncfusion
-description: Learn how to retrieve the document ID in the Syncfusion React PDF Viewer.
+description: Learn how to retrieve the document ID in the Syncfusion React PDF Viewer to identify, track, and manage loaded PDF documents.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## Retrieve document ID in React PDF Viewer
+# Retrieve document ID in React PDF Viewer
 
 This article shows how to retrieve the document ID for a PDF loaded in the React PDF Viewer. The value is held in `sessionStorage` under the key `hashId` and is written after a document is loaded, so it is `null` until a PDF is opened in the viewer.
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Configure minZoom and maxZoom in the React PDF Viewer
 
-The PDF Viewer exposes [minZoom](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#minzoom) and [maxZoom](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#maxzoom) to control the allowable zoom range for document viewing. Setting these properties helps maintain readability, performance, and a consistent experience across devices.
+The PDF Viewer exposes [minZoom] (https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#minzoom) and [maxZoom] (https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#maxzoom) to control the allowable zoom range for document viewing. Setting these properties helps maintain readability, performance, and a consistent experience across devices.
 
 ### minZoom
 

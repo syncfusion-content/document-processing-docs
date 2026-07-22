@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Restrict zoom percentage on mobile devices
+# Limit PDF Viewer Zoom Levels on Mobile Devices
 
 Use `minZoom` and `maxZoom` to restrict zoom levels on mobile devices and improve scrolling performance and perceived load time. Restricting zoom prevents extreme zoom levels that can degrade rendering performance on constrained devices.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Display custom stamp items in the custom stamp dropdown | Syncfusion
+title: Handle Signature Selection Events in PDF Viewer | Syncfusion
 description: Learn how to display custom items in the custom stamp dropdown using customStampSettings in the Syncfusion React PDF Viewer.
 control: PDF Viewer
 platform: document-processing
@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Display custom stamp items in the custom stamp dropdown
+# Add Custom Stamp Items to the Stamp Dropdown
 
 ### Overview
 
