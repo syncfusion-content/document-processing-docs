@@ -12,9 +12,9 @@ Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion
 
 **Prerequisites:**
 
-* Visual Studio 2019 or later with the **ASP.NET and web development** workload installed.
+* Visual Studio 2022 or later with the **ASP.NET and web development** workload installed.
 * An Azure account. If you do not have one, create a [free Azure account](https://azure.microsoft.com/free/) before you begin.
-* Target framework: .NET 6.0 or later (LTS recommended).
+* Target framework: [.NET 8.0 or later](https://dotnet.microsoft.com/en-us/download/dotnet).
 
 ## Steps to convert Word document to PDF in Azure App Service on Linux
 
