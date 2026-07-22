@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Change the cursor color in the React DOCX Editor component | Syncfusion
+title: Change Cursor Color in React DOCX Editor | Syncfusion
 description: Learn here all about Change the cursor color in the React Document Editor component of Syncfusion Essential JS 2 and more.
 control: Change the cursor color in Document Editor 
 platform: document-processing
