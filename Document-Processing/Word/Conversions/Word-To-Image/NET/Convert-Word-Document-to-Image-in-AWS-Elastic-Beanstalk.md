@@ -39,7 +39,7 @@ using Syncfusion.DocIORenderer;
 {% endhighlight %}
 {% endtabs %}
 
-Step 4: A default action method named `Index` will be present in `HomeController.cs`. Right-click on the `Index` method and select **Go To View**, which will take you to its associated view page `Index.cshtml`.
+Step 4: A default action method named Index will be present in **HomeController.cs**. Right-click on the Index method and select **Go To View**, which will take you to its associated view page **Index.cshtml**.
 
 Step 5: Add a new button in the **Index.cshtml** as shown below.
 
