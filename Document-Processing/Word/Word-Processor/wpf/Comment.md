@@ -1,6 +1,6 @@
 ---
 title: Comment in WPF RichTextBox control | Syncfusion
-description: Learn about the Comment support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+description: Learn about the Comment support in the Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and how to work with Comments in Word documents.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug

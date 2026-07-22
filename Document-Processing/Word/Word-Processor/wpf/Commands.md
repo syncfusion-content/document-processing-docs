@@ -1,6 +1,6 @@
 ---
 title: Commands in WPF RichTextBox control | Syncfusion
-description: Learn here all about Commands support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+description: Learn about the Commands support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
@@ -30,7 +30,7 @@ Commands are a way to handle user interface (UI) actions. They are a loosely cou
 
 * Document Styles – Create, modify, apply and clear style.
 
-## UI Command to access character formatting
+## UI Command to Access Character Formatting
 
 
 The following code example demonstrates how to bind commands for applying character format.
@@ -49,7 +49,7 @@ The following code example demonstrates how to bind commands for applying charac
 The following code example demonstrates how to bind commands with parameter.
 {% tabs %}
 {% highlight xaml %}
-<Button Content="Textalignment" Command="Syncfusion:SfRichTextBoxAdv.TextAlignmentCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}" CommandParameter="Right" />
+<Button Content="Text Alignment" Command="RichTextBoxAdv:SfRichTextBoxAdv.TextAlignmentCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}" CommandParameter="Right" />
 {% endhighlight %}
 {% endtabs %}
 
@@ -83,6 +83,17 @@ The following table contains the list of available UI Commands in SfRichTextBoxA
 </tr>
 <tr>
 <td>
+<p>ApplyStyleCommand</p>
+</td>
+<td>
+<p>Represents the command, which requests to apply style for the selected paragraph.</p>
+</td>
+<td>
+<p>Name of the Style</p>
+</td>
+</tr>
+<tr>
+<td>
 <p>AfterSpacingCommand</p>
 </td>
 <td>
@@ -101,6 +112,17 @@ The following table contains the list of available UI Commands in SfRichTextBoxA
 </td>
 <td>
 <p>The `AutoFitType` to fit the columns of the table.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>ClearFormattingCommand</p>
+</td>
+<td>
+<p>Represents the command, which requests to remove formatting from the selected paragraph.</p>
+</td>
+<td>
+<p>NA</p>
 </td>
 </tr>
 <tr>
@@ -658,7 +680,7 @@ The following table contains the list of available UI Commands in SfRichTextBoxA
 <p>IgnoreAllSpellingErrorsCommand</p>
 </td>
 <td>
-<p>Represents the command that ignores all the occurrence of a selected misspelled word.</p>
+<p>Represents the command that ignores all the occurrences of a selected misspelled word.</p>
 </td>
 <td>
 <p>The misspelled word to be ignored.</p>
@@ -1291,6 +1313,28 @@ The following table contains the list of available UI Commands in SfRichTextBoxA
 </tr>
 <tr>
 <td>
+<p>ShowStyleDialogCommand</p>
+</td>
+<td>
+<p>Represents the command that shows the create style dialog.</p>
+</td>
+<td>
+<p>NA</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>ShowStylesDialogCommand</p>
+</td>
+<td>
+<p>Represents the command that shows the modify style dialog.</p>
+</td>
+<td>
+<p>NA</p>
+</td>
+</tr>
+<tr>
+<td>
 <p>ShowTableDialogCommand</p>
 </td>
 <td>
@@ -1454,51 +1498,10 @@ The {{'[TextAlignment](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Con
 <p>NA</p>
 </td>
 </tr>
-<tr>
-<td>
-<p>ShowStyleDialogCommand</p>
-</td>
-<td>
-<p>Represents the command that shows the create style dialog.</p>
-</td>
-<td>
-<p>NA</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>ShowStylesDialogCommand</p>
-</td>
-<td>
-<p>Represents the command that shows the modify style dialog.</p>
-</td>
-<td>
-<p>NA</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>ApplyStyleCommand</p>
-</td>
-<td>
-<p>Represents the command, which requests to apply style for the selected paragraph.</p>
-</td>
-<td>
-<p>Name of the Style</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>ClearFormattingCommand</p>
-</td>
-<td>
-<p>Represents the command, which requests to remove formatting from the selected paragraph.</p>
-</td>
-<td>
-<p>NA</p>
-</td>
-</tr>
 </tbody>
 </table>
 
-N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations.You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to knows how to render and configure the editing tools.
+## See Also
+
+- [WPF RichTextBox Feature Tour](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor)
+- [WPF RichTextBox Examples](https://github.com/syncfusion/docx-editor-sdk-wpf-demos)
