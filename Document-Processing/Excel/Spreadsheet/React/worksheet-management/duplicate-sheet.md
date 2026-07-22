@@ -9,7 +9,7 @@ documentation: ug
 
 # Duplicate Worksheet in React Spreadsheet
 
-The Spreadsheet component allows you to create a copy of an existing worksheet along with its data, formatting, and configurations. Duplicating a sheet is useful when you want to reuse the same structure or data without manually recreating it.
+The Spreadsheet component allows you to create a copy of an existing worksheet, including its data, formatting, and configurations. Duplicating a sheet is useful when you want to reuse the same structure or data without manually recreating it.
 
 While duplicating the worksheet, a new worksheet is created as an exact copy of the selected sheet and is placed next to it. The duplicated sheet will automatically be assigned a unique name to avoid conflicts with existing sheet names.
 

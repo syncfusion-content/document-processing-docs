@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize File Menu in React Spreadsheet
 
-The [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component lets you customize the File menu. You can hide file menu items, disable items, and add your own custom items with click actions. This helps you build a clear, task‑focused menu. You can perform the following file menu customization options in the spreadsheet
+The [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component lets you customize the File menu. You can hide file menu items, disable items, and add your own custom items with click actions. This helps you build a clear, task-focused menu. You can perform the following file menu customization options in the Spreadsheet:
 
 * Add File Menu Items
 * Hide/Show File Menu Items
@@ -21,7 +21,7 @@ In the React Spreadsheet Editor, you can add custom items to the File menu to in
 
 A custom item can have its own text, icon, and sub‑items, and its click action is handled in the [fileMenuItemSelect](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#filemenuitemselect) event, where the selected item is identified and the defined functionality is executed.
 
-The following code sample shows how to add custom items in file menu:
+The following code sample shows how to add a custom item in the File menu:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
