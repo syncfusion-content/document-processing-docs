@@ -13,20 +13,13 @@ This page covers multithreading and thread-safety support in Word to PDF convers
 
 Yes, the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) is thread-safe, and you can create multiple instances of the [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html) class to load the same file as multiple copies or different Word files, then convert them to PDF using multithreading in C#.
 
-### Multithreading Word to PDF using tasks
+### Frequently asked questions about multithreading in Word to PDF
 
 The following code example illustrates how to use multithreading to convert multiple copies of a Word document to PDF by creating multiple tasks in C#.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-using System;
-using System.IO;
-using System.Threading.Tasks;
-using Syncfusion.DocIO;
-using Syncfusion.DocIO.DLS;
-using Syncfusion.DocIORenderer;
-using Syncfusion.Pdf;
 
 class MultiThreading
 {
@@ -72,13 +65,6 @@ class MultiThreading
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-using System;
-using System.IO;
-using System.Threading.Tasks;
-using Syncfusion.DocIO;
-using Syncfusion.DocIO.DLS;
-using Syncfusion.DocToPDFConverter;
-using Syncfusion.Pdf;
 
 class MultiThreading
 {
@@ -177,13 +163,6 @@ The following code example illustrates how to use a parallel `for` loop to proce
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-using System;
-using System.IO;
-using System.Threading.Tasks;
-using Syncfusion.DocIO;
-using Syncfusion.DocIO.DLS;
-using Syncfusion.DocIORenderer;
-using Syncfusion.Pdf;
 
 class MultiThreading
 {
@@ -229,13 +208,6 @@ class MultiThreading
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-using System;
-using System.IO;
-using System.Threading.Tasks;
-using Syncfusion.DocIO;
-using Syncfusion.DocIO.DLS;
-using Syncfusion.DocToPDFConverter;
-using Syncfusion.Pdf;
 
 class MultiThreading
 {
@@ -281,13 +253,6 @@ class MultiThreading
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Imports System
-Imports System.IO
-Imports System.Threading.Tasks
-Imports Syncfusion.DocIO
-Imports Syncfusion.DocIO.DLS
-Imports Syncfusion.DocToPDFConverter
-Imports Syncfusion.Pdf
 
 Module MultiThreading
     Public Sub Main(args As String())
