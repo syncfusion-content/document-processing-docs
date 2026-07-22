@@ -38,7 +38,7 @@ function App() {
           let formData: FormData = new FormData();
           formData.append('fileName', 'sample.docx');
           formData.append('data', exportedDocument);
-          /* eslint-disable */
+          /* tslint:disable */
           var req = new XMLHttpRequest();
           // Replace your running Url here
           req.open(
