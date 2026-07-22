@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Comments in React DOCX Editor component | Syncfusion
-description: Learn here all about Comments in Syncfusion React DOCX Editor component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Comments in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
 control: Comments 
 platform: document-processing
 documentation: ug

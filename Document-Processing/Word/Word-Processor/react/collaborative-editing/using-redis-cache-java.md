@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Collaborative Editing in React using Java | Syncfusion
-description: Learn how to enable collaborative editing in Syncfusion React DOCX editor control of Syncfusion Essential JS 2 and more.
+description: Learn how to enable collaborative editing in Syncfusion React Document Editor control of Syncfusion Essential JS 2 and more.
 control: Collaborative Editing Java
 platform: document-processing
 documentation: ug
@@ -29,7 +29,7 @@ To enable collaborative editing, inject `CollaborativeEditingHandler` and set th
 import { DocumentEditorContainerComponent, Toolbar, CollaborativeEditingHandler, ContainerContentChangeEventArgs, Operation, Inject, ToolbarItem } from '@syncfusion/ej2-react-documenteditor';
 
 // Inject collaborative editing module.
-DocumentEditorContainerComponent.Inject(CollaborativeEditingHandler);
+DocumentEditor.Inject(CollaborativeEditingHandler);
 
 
 public collaborativeEditingHandler?: CollaborativeEditingHandler;

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Collaborative Editing in React DOCX Editor | Syncfusion
-description: Learn how to enable collaborative editing in React DOCX Editor to allow multiple users to work on a document simultaneously.
+description: Learn how to enable collaborative editing in React Document Editor to allow multiple users to work on a document simultaneously.
 platform: document-processing
 control: Collaborative Editing 
 documentation: ug
