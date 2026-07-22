@@ -37,7 +37,7 @@ The following example illustrates how to auto save the document in AWS S3.
       if (contentChanged) {
         //You can save the document as below
         container.documentEditor.saveAsBlob('Docx').then((blob: Blob) => {
-          console.log('Saved sucessfully');
+          console.log('Saved successfully');
           let exportedDocument: Blob = blob;
           //Now, save the document where ever you want.
           let formData: FormData = new FormData();
@@ -54,7 +54,7 @@ The following example illustrates how to auto save the document in AWS S3.
           req.onreadystatechange = () => {
             if (req.readyState === 4) {
               if (req.status === 200 || req.status === 304) {
-                console.log('Saved sucessfully');
+                console.log('Saved successfully');
               }
             }
           };
