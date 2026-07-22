@@ -2,7 +2,7 @@
 layout: post
 title: Scrolling and Virtualization in React Spreadsheet component | Syncfusion
 description: Learn here all about Scrolling and Virtualization in React Spreadsheet component of Syncfusion Essential JS 2 and more.
-control: Scrolling 
+control: Spreadsheet
 platform: document-processing
 documentation: ug
 ---
@@ -20,13 +20,13 @@ You have the following options in Scrolling by using [`scrollSettings`](https://
 
 ## Finite Scrolling
 
-Finite scrolling supports two type of modes in scrolling. You can use the [`isFinite`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/scrollSettings/#isfinite) property in [`scrollSettings`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#scrollsettings) to specify the mode of scrolling.
+Finite scrolling supports two modes of scrolling. You can use the [`isFinite`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/scrollSettings/#isfinite) property in [`scrollSettings`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#scrollsettings) to specify the mode of scrolling.
 
 * Finite - This mode does not create a new row/column when the scrollbar reaches the end. This can be achieved by setting the [`isFinite`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/scrollSettings/#isfinite) property as `true`.
 
 * Infinite - This mode creates a new row/column when the scrollbar reaches the end. This can be achieved by setting the [`isFinite`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/scrollSettings/#isfinite) property as `false`.
 
-> By Default, the `isFinite` property is `false`.
+> By default, the `isFinite` property is `false`.
 
 ## Virtual Scrolling
 
@@ -34,7 +34,7 @@ Finite scrolling supports two type of modes in scrolling. You can use the [`isFi
 
 In virtual scrolling `enableVirtualization` is set to true means, it allows you to load the spreadsheet data while scrolling.
 
-> By Default, the `enableVirtualization` property is `true`.
+> By default, the `enableVirtualization` property is `true`.
 
 **User Interface**:
 

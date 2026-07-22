@@ -3,7 +3,7 @@ layout: post
 title: Overview of the React Spreadsheet Component | Syncfusion
 description: Learn here all about overview of the Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Index
+control: Spreadsheet
 documentation: ug
 ---
 

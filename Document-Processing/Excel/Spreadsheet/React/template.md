@@ -13,10 +13,10 @@ Cell templates allow you to embed HTML elements and Syncfusion<sup style="font-s
 
 ## Key Features
 
-- **HTML Elements** – You can add TextBox, RadioButton, TextArea, and other HTML controls to cells for enhanced user input options
-- **Syncfusion Components** – You can integrate DropDownList, MultiSelect, DatePicker, and other Syncfusion controls for advanced data entry
-- **Event Binding** – You can attach event handlers to perform operations on user interaction and update spreadsheet data
-- **Custom Rendering** – You can use the `beforeCellRender` event for advanced customization and dynamic template modifications
+- **HTML Elements** – You can add TextBox, RadioButton, TextArea, and other HTML controls to cells for enhanced user input options.
+- **Syncfusion Components** – You can integrate DropDownList, MultiSelect, DatePicker, and other Syncfusion controls for advanced data entry.
+- **Event Binding** – You can attach event handlers to perform operations on user interaction and update spreadsheet data.
+- **Custom Rendering** – You can use the `beforeCellRender` event for advanced customization and dynamic template modifications.
 
 ## Cell Templates
 

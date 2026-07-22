@@ -3,7 +3,7 @@ layout: post
 title: Performance practices in React Spreadsheet component | Syncfusion
 description: Learn here all about performance best practices in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Performance
+control: Spreadsheet
 documentation: ug
 ---
 
@@ -21,7 +21,7 @@ This approach significantly reduces initial load time, DOM size, and memory usag
 
 For more details, refer to the [virtual scrolling documentation](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/scrolling#virtual-scrolling).
 
-### Chunk response processing
+### Enable Chunk response processing for large server responses
 
 When opening large Excel files with extensive data and features, server responses can become too large—leading to memory issues or connection failures during transmission. The Chunk Response Processing feature addresses this by breaking the response into smaller chunks and sending them in parallel to the client.
 

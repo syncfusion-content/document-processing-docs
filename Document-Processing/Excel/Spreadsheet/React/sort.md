@@ -9,7 +9,7 @@ documentation: ug
 
 # Sort in React Spreadsheet component
 
-Sorting helps arranging the data to a specific order in a selected range of cells. You can use the [`allowSorting`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#allowsorting) property to enable or disable sorting functionality.
+Sorting helps arrange the data to a specific order in a selected range of cells. You can use the [`allowSorting`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#allowsorting) property to enable or disable sorting functionality.
 
 > * The default value for `allowSorting` property is `true`.
 
@@ -17,14 +17,14 @@ By default, the `sort` module is injected internally into Spreadsheet to perform
 
 ## Sort by Cell value
 
-In the active Spreadsheet, you can sort a selected range of cells by their values. Sorting can be done in following ways:
+In the active Spreadsheet, you can sort a selected range of cells by their values. Sorting can be done in the following ways:
 
 * **Ribbon Toolbar** – Select the sort option under the Ribbon toolbar and choose ascending or descending.  
 * **Context Menu** – Right-click the sheet, select the sort option, and choose ascending or descending.  
 * **Programmatically** – Use the [`sort`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#sort) method.  
 
 The cell values can be sorted in the following orders:
-* **Ascending** – Default order for sorting.  
+* **Ascending** – Default order for sorting.
 * **Descending** – Reverse order.
 When the `sort` method is called with empty arguments, the selected range is sorted by the active cell’s column in ascending order.
 
@@ -148,7 +148,7 @@ For custom sort comparer example, refer to the [`Sort a range by custom list`] b
 ### Sort a range by custom list
 You can also define the sorting of cell values based on your own customized personal list. In this article, custom list is achieved using `custom sort comparer`.
 
-For example, in the demo below, the `Trustworthiness`column is sorted according to the custom list values:  
+For example, in the demo below, the `Trustworthiness` column is sorted according to the custom list values:  
 * `Perfect`  
 * `Sufficient`  
 * `Insufficient`  
