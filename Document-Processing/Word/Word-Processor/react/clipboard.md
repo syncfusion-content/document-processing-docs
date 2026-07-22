@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Clipboard in React DOCX editor component | Syncfusion
-description: Learn here all about Clipboard in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Clipboard in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
 control: Clipboard
 platform: document-processing
 documentation: ug
