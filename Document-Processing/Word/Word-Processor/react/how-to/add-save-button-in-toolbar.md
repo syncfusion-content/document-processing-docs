@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Add save button in React Document editor component | Syncfusion
-description: Learn here to add save button in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
-control: Add save button tool bar 
+title: Add save button in React DOCX Editor Component | Syncfusion
+description: Learn here to add save button in Syncfusion React DOCX Editor component of Syncfusion Essential JS 2 and more.
+control: Add save button to toolbar
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add save button in React Document editor toolbar
+# Add Save Button in React DOCX Editor Toolbar
 
-## To add a save button to the existing toolbar in DocumentEditorContainer
+## To Add a Save Button to the Existing Toolbar in the DOCX Editor Container
 
-[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) Container allows you to add a new button to the existing items in a toolbar using [`CustomToolbarItemModel`](https://ej2.syncfusion.com/react/documentation/api/document-editor/customToolbarItemModel/) and with existing items in [`toolbarItems`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container#toolbaritems) property. Newly added item click action can be defined in [`toolbarClick`](https://ej2.syncfusion.com/react/documentation/api/toolbar/clickEventArgs/).
+[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (DOCX Editor) Container allows you to add a new button to the existing items in a toolbar using [`CustomToolbarItemModel`](https://ej2.syncfusion.com/react/documentation/api/document-editor/customToolbarItemModel/) and with existing items in [`toolbarItems`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container#toolbaritems) property. Newly added item click action can be defined in [`toolbarClick`](https://ej2.syncfusion.com/react/documentation/api/toolbar/clickEventArgs/).
 
 {% raw %}
 ```ts
@@ -70,7 +70,7 @@ function App() {
   function onToolbarClick(args) {
     switch (args.item.id) {
       case 'save':
-        //Save the document(Download the document)
+        //Save the document (Download the document)
         container.documentEditor.save('sample', 'Docx');
         break;
       default:
@@ -99,4 +99,4 @@ createRoot(document.getElementById('sample')).render(<App />);
 ```
 {% endraw %}
 
->Note: Default value of `toolbarItems` is `['New', 'Open', 'Separator', 'Undo', 'Redo', 'Separator', 'Image', 'Table', 'Hyperlink', 'Bookmark', 'TableOfContents', 'Separator', 'Header', 'Footer', 'PageSetup', 'PageNumber', 'Break', 'InsertFootnote', 'InsertEndnote', 'Separator', 'Find', 'Separator', 'Comments', 'TrackChanges', 'Separator', 'LocalClipboard', 'RestrictEditing', 'Separator', 'FormFields', 'UpdateFields','ContentControl']`.
+N> Default value of `toolbarItems` is `['New', 'Open', 'Separator', 'Undo', 'Redo', 'Separator', 'Image', 'Table', 'Hyperlink', 'Bookmark', 'TableOfContents', 'Separator', 'Header', 'Footer', 'PageSetup', 'PageNumber', 'Break', 'InsertFootnote', 'InsertEndnote', 'Separator', 'Find', 'Separator', 'Comments', 'TrackChanges', 'Separator', 'LocalClipboard', 'RestrictEditing', 'Separator', 'FormFields', 'UpdateFields','ContentControl']`.
