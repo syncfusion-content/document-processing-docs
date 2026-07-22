@@ -16,7 +16,7 @@ The table of contents in a document is the same as the list of chapters at the b
 
 [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) exposes an API to insert a table of contents at the cursor position programmatically. You can specify the settings for table of contents explicitly. Otherwise, the default settings will be applied.
 
-[`TableOfContentsSettings`](https://ej2.syncfusion.com/react/documentation/api/document-editor/tableOfContentsSettings/) contain the following properties:
+[`TableOfContentsSettings`](https://ej2.syncfusion.com/react/documentation/api/document-editor/tableOfContentsSettings) contain the following properties:
 * **startLevel**: Specifies the start level for constructing table of contents.
 * **endLevel**: Specifies the end level for constructing table of contents.
 * **includeHyperlink**: Specifies whether the link for headings is included.
