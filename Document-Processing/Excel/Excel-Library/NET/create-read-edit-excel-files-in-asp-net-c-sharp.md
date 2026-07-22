@@ -13,12 +13,6 @@ documentation: UG
 
 The following steps illustrate creating a simple invoice-formatted Excel document in ASP.NET Web Forms.
 
-**Prerequisites:**
-- Visual Studio 2017 or later with the **ASP.NET and web development** workload installed.
-- .NET Framework 4.5 or later.
-- A user account with write permissions to the project folder.
-- The `AdventureCycles-Logo.png` image placed in the project's `App_Data` folder.
-
 Step 1: Create a new ASP.NET Web application project.
 
 ![Create ASP.NET application in Visual Studio](ASP-NET_images/ASP-NET_images_img1.png)
@@ -70,7 +64,6 @@ Imports System.Drawing
 
 Step 6: Include the following code snippet in the click event of the button in `MainPage.aspx.cs`, and also place the `AdventureCycles-Logo.png` image in the `App_Data` folder, to create an Excel file and download it.
 
-N> Ensure the `AdventureCycles-Logo.png` image is present in the `App_Data` folder of the project, since the code uses `Server.MapPath("App_Data/AdventureCycles-Logo.png")` to resolve the file path.
 {% capture codesnippet3 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}

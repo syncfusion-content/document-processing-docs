@@ -10,24 +10,6 @@ documentation: UG
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET MAUI Excel library](https://www.syncfusion.com/document-sdk/net-excel-library) used to create, read, edit, and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to an image in .NET MAUI**.
 
-## Prerequisites
-
-{% tabcontents %}
-
-{% tabcontent Visual Studio %}
-
-To create .NET Multi-platform App UI (.NET MAUI) apps, you need the latest versions of Visual Studio 2022 and .NET 8 or later. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=vswin).
-
-{% endtabcontent %}
-
-{% tabcontent Visual Studio Code %}
-
-To create .NET Multi-platform App UI (.NET MAUI) apps using Visual Studio Code, you need the latest versions of the .NET 8 SDK, the MAUI workload (`dotnet workload install maui`), and additional tools configured for .NET MAUI development. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=vswin).
-
-{% endtabcontent %}
-
-{% endtabcontents %}
-
 ## Steps to convert Excel document to Image in .NET MAUI
 
 {% tabcontents %}
@@ -339,4 +321,4 @@ By executing the program, you will get the **Image** as follows.
 
 Click [here](https://www.syncfusion.com/document-sdk/net-excel-library) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
-An online sample link to [convert an Excel document to Image](https://ej2.syncfusion.com/aspnetcore/Excel/WorksheetToImage#/material3) in ASP.NET Core.
+An online sample link to [convert an Excel document to Image](https://document.syncfusion.com/demos/excel/worksheettoimage#/tailwind) in ASP.NET Core.

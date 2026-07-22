@@ -10,9 +10,6 @@ documentation: UG
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [WinUI Excel library](https://www.syncfusion.com/document-processing/excel-framework/winui/excel-library) used to create, read, edit, and convert Excel documents programmatically, without Microsoft Excel or interop dependencies.
 
-## Prerequisites
-To use the WinUI 3 project templates, install the Windows App SDK extension for Visual Studio. For more details, refer [here](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/set-up-your-development-environment?tabs=cs-vs-community%2Ccpp-vs-community%2Cvs-2022-17-1-a%2Cvs-2022-17-1-b).
-
 ## WinUI Desktop app
 
 Step 1: Create a new C# WinUI Desktop app. Select the **Blank App, Packaged (WinUI 3 in Desktop)** project template.
@@ -23,7 +20,7 @@ Step 2: Name the project and click **Create**.
 
 ![Name the project](WinUI_images/WinUI_images_img7.png)
 
-Step 3: Install the [Syncfusion.XlsIORenderer.Net](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/). This package transitively pulls in the required `Syncfusion.XlsIO.Net.Core` and `Syncfusion.Pdf.Net.Core` assemblies.
+Step 3: Install the [Syncfusion.XlsIORenderer.Net](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 
 ![Install Syncfusion.XlsIORenderer.Net NuGet Package](WinUI_images/WinUI_images_img8.png)
 
@@ -103,7 +100,7 @@ private async void ConvertExceltoPDF(object sender, Microsoft.UI.Xaml.RoutedEven
 {% endhighlight %}
 {% endtabs %}
 
-N> For additional control over page size, orientation, and font embedding, pass an `ExcelToPdfConverterSettings` instance to `XlsIORenderer.ConvertToPDF`. See the [Excel-to-PDF conversion options](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/convert-excel-to-pdf-in-winui#excel-to-pdf-conversion-options) for details.
+N> For additional control over page size, orientation, and font embedding, pass an `ExcelToPdfConverterSettings` instance to `XlsIORenderer.ConvertToPDF`. See the [Excel-to-PDF conversion options](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/excel-to-pdf-converter-settings) for details.
 
 ## Save PDF document in WinUI
 Add a new C# class file named **SaveHelper** in the project and paste the following code into it. The helper uses a single `FileSavePicker` path (the legacy Windows Phone 8.1 branch is removed because it does not apply to WinUI 3 Desktop).
@@ -177,4 +174,4 @@ By executing the program, you will get the **PDF document** as shown below.
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/winui) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
-An online sample link to [convert an Excel document to PDF](https://ej2.syncfusion.com/aspnetcore/Excel/ExcelToPDF#/material3) in ASP.NET Core.
+An online sample link to [convert an Excel document to PDF](https://document.syncfusion.com/demos/excel/exceltopdf#/tailwind) in ASP.NET Core.
