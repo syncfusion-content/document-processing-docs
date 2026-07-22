@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Bookmark in React Document editor component | Syncfusion
-description: Learn here all about Bookmark in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
+title: Bookmark in React DOCX editor component | Syncfusion
+description: Learn here all about Bookmark in Syncfusion React DOCX editor component of Syncfusion Essential JS 2 and more.
 control: Bookmark
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Bookmark in React Document editor component
+# Bookmark in React DOCX editor component
 
 Bookmark is a powerful tool that helps you to mark a place in the document to find again easily. You can enter many bookmarks in the document and give each one a unique name to identify easily.
 
@@ -65,7 +65,7 @@ this.container.documentEditor.selection.getBookmarks(false);
 
 ## Show or Hide Bookmark
 
-You can show or hide square brackets around bookmarked items in Document editor component.
+You can show or hide square brackets around bookmarked items in DOCX editor component.
 
 The following example code illustrates how to show or hide square brackets around bookmarked items.
 
