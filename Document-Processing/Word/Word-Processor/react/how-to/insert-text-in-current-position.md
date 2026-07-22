@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Insert text in current position in React Document editor | Syncfusion
-description: Learn here all about Insert text in current position in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
-control: Insert text in current position 
+title: Insert text in current position in React DOCX Editor | Syncfusion
+description: Learn here all about Insert text in current position in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+control: Insert text in current position
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Insert text in current position in React Document editor component
+# Insert text in current position in React Document Editor component
 
-You can insert the text, paragraph and rich-text content in [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) component.
+You can insert text, paragraphs, and rich-text content in [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) component.
 
 ## Insert text in current cursor position
 
 You can use [`insertText`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#inserttext) API in editor module to insert the text in current cursor position.
 
-The following example code illustrates how to add the text in current selection.
+The following example code illustrates how to add the text at the current cursor position.
 
 ```ts
 import * as ReactDOM from 'react-dom';
@@ -28,14 +28,14 @@ import {
 
 DocumentEditorContainerComponent.Inject(Toolbar);
 export class Default extends React.Component {
-  inserText() {
+  insertText() {
     // It will insert the provided text in current selection
     this.container.documentEditor.editor.insertText('Syncfusion');
   }
   render() {
     return (
       <div>
-        <button id="insert" onClick={this.inserText.bind(this)}>
+        <button id="insert" onClick={this.insertText.bind(this)}>
           Insert Text
         </button>
         <DocumentEditorContainerComponent
@@ -54,17 +54,17 @@ export class Default extends React.Component {
 ReactDOM.render(<Default />, document.getElementById('sample'));
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
-Please check below gif which illustrates how to insert text in current cursor position on button click:
+Please refer to the gif below which illustrates how to insert text in the current cursor position on button click:
 
-![Insert text in current cursor position in Javascript document editor](../images/insert_text.gif)
+![Insert text in current cursor position in JavaScript Document Editor](../images/insert_text.gif)
 
 ## Insert paragraph in current cursor position
 
-To insert new paragraph at current selection, you can can use [`insertText`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#inserttext) API with parameter as `\r\n` or `\n`.
+To insert a new paragraph at the current selection, you can use [`insertText`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#inserttext) API with parameter as `\r\n` or `\n`.
 
-The following example code illustrates how to add the new paragraph in current selection.
+The following example code illustrates how to add the new paragraph in the current selection.
 
 ```ts
 // It will add the new paragraph in current selection
@@ -73,11 +73,11 @@ this.container.documentEditor.editor.insertText('\n');
 
 ## Insert the rich-text content
 
-To insert the HTML content, you have to convert the HTML content to SFDT Format using [`web service`](../web-services-overview). Then use [`paste`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#paste) API to insert the sfdt at current cursor position.
+To insert the HTML content, you have to convert the HTML content to SFDT format using [`web service`](../web-services-overview). Then use [`paste`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#paste) API to insert the SFDT at the current cursor position.
 
->Note: Html string should be well formatted html. [`DocIO`](https://help.syncfusion.com/file-formats/docio/html) support only well formatted XHTML.  
+N> The HTML string should be well-formatted HTML. [`DocIO`](https://help.syncfusion.com/file-formats/docio/html) supports only well-formatted XHTML.
 
-The following example illustrates how to insert the HTML content at current cursor position.
+The following example illustrates how to insert the HTML content at the current cursor position.
 
 * Send the HTML content to server side for SFDT conversion. Refer to the following example to send the HTML content to server side and inserting it in current cursor position.
 
@@ -93,7 +93,7 @@ DocumentEditorContainerComponent.Inject(Toolbar);
 function App() {
   let container;
 
-  function inserText() {
+  function insertText() {
     let htmltags =
       "<?xml version='1.0' encoding='utf - 8'?><!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN''http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'><html xmlns ='http://www.w3.org/1999/xhtml' xml:lang='en' lang ='en'><body><h1>The img element</h1><img src='https://www.w3schools.com/images/lamp.jpg' alt ='Lamp Image' width='500' height='600'/></body></html>";
     let http = new XMLHttpRequest();
@@ -117,7 +117,7 @@ function App() {
 
   return (
     <div>
-      <button id="export" onClick={inserText.bind(this)}>
+      <button id="export" onClick={insertText.bind(this)}>
         Export HTML
       </button>
       <DocumentEditorContainerComponent
@@ -136,7 +136,7 @@ export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 * Please refer the following code example for server-side web implementation for HTML conversion using DocumentEditor.
 
@@ -158,4 +158,4 @@ public class InputParameter
 }
 ```
 
->Note: The above example illustrates inserting HTML content. Similarly, you can insert any rich-text content by converting any of the supported file formats (DOCX, DOC, WordML, HTML, RTF) to SFDT.
+N> The above example illustrates inserting HTML content. Similarly, you can insert any rich-text content by converting any of the supported file formats (DOCX, DOC, WordML, HTML, RTF) to SFDT.
