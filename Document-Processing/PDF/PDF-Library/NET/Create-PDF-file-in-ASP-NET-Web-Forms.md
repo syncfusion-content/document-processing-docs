@@ -112,7 +112,7 @@ using (PdfDocument document = new PdfDocument())
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/ASP.NET).
 
 By executing the program, you will get the PDF document as follows.
-![Getting started PDF output document"](GettingStarted_images/pdf-generation-output.png)
+![Getting started PDF output document](GettingStarted_images/pdf-generation-output.png)
 
 Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 

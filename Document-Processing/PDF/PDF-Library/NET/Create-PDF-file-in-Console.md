@@ -123,7 +123,7 @@ N> The `Output.pdf` is written to the current working directory of the applicati
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Console/.NET%20Framework/Create%20PDF).
 
 By executing the program, you will get the PDF document as follows.
-![Console output PDF document"](GettingStarted_images/pdf-generation-output.png)
+![Console output PDF document](GettingStarted_images/pdf-generation-output.png)
 
 Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 
