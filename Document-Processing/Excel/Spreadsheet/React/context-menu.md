@@ -45,7 +45,8 @@ Refer to the table below for the default context menu items and their actions.
 
 ## Context Menu Items in Pager
 
-The context menu in the pager provides quick access to actions for managing worksheet navigation and related options. The following table lists the default items and their actions.
+The context menu in the pager provides quick access to actions for managing worksheet navigation and related options. 
+The following table lists the default items and their actions.
 
 | Context Menu items | Action |
 |-------|---------|
