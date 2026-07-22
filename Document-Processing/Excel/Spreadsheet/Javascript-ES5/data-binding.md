@@ -3,15 +3,17 @@ layout: post
 title: Data binding in EJ2 Javascript Spreadsheet control | Syncfusion
 description: Learn here all about Data binding in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Data binding 
+control: Data binding
 documentation: ug
 ---
 
 # Data binding in EJ2 Javascript Spreadsheet control
 
-The Spreadsheet uses [`DataManager`](https://helpej2.syncfusion.com/javascript/documentation/data/), which supports both RESTful JSON data services and local JavaScript object array binding to a range. The `dataSource` property can be assigned either with the instance of [`DataManager`](https://helpej2.syncfusion.com/javascript/documentation/data/) or JavaScript object array collection.
+The Spreadsheet uses [`DataManager`](https://ej2.syncfusion.com/javascript/documentation/data/), which supports both RESTful JSON data services and local JavaScript object array binding to a range. The `dataSource` property can be assigned either with the instance of [`DataManager`](https://ej2.syncfusion.com/javascript/documentation/data/) or JavaScript object array collection.
 
-> To bind data to a cell, use `cell data binding` support.
+> Before binding data, you must have a Spreadsheet control initialized in your application. For setup details, refer to the [getting started](https://ej2.syncfusion.com/javascript/documentation/spreadsheet/getting-started) documentation.
+
+> To bind data to a cell, use the [cell data binding](#cell-data-binding) support.
 
 ## Local data
 
@@ -34,7 +36,7 @@ Refer to the following code example for local data binding.
 
 ### Customizing column data mapping
 
-By default, when a data source is bound to a sheet, columns are auto-assigned from the data source fields sequentially. This means that the first field in the data source is assigned to Column A, the second to Column B, and so on, sequentially. However, now you can customize the column assignments by specifying the appropriate field names in the desired order using the [fieldsOrder](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/rangeModel/#fieldsorder) property.
+By default, when a data source is bound to a sheet, columns are auto-assigned from the data source fields sequentially. This means that the first field in the data source is assigned to Column A, the second to Column B, and so on, sequentially. You can customize the column assignments by specifying the appropriate field names in the desired order using the [fieldsOrder](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/rangeModel/#fieldsorder) property.
 
 > You can customize the mapping of column data only in the local data binding support.
 
@@ -72,7 +74,7 @@ Refer to the following code example for remote data binding.
 
 ### Binding with OData services
 
-`OData` is a standardized protocol for creating and consuming data. You can retrieve data from OData service using the DataManager. Refer to the following code example for remote Data binding using OData service.
+`OData` is a standardized protocol for creating and consuming data. You can retrieve data from OData service using the DataManager. Configure the `DataManager` with the `ODataAdaptor` and the service endpoint `url`. Refer to the following code example for remote data binding using an OData service.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -87,7 +89,7 @@ Refer to the following code example for remote data binding.
 
 ### Web API
 
-You can use WebApiAdaptor to bind spreadsheet with Web API created using OData endpoint.
+You can use WebApiAdaptor to bind the spreadsheet with a Web API created using an OData endpoint.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -102,8 +104,7 @@ You can use WebApiAdaptor to bind spreadsheet with Web API created using OData e
 
 ## Cell data binding
 
-The Spreadsheet control can bind the data to individual cell in a sheet . To achive this you can use the
-`value` property.
+The Spreadsheet control can bind data to individual cells in a sheet. To achieve this, set the `value` property on the specific cell object inside the `cells` collection of a `row` within the sheet's `rows` definition. Each cell entry accepts a `value` field that holds the bound data.
 
 Refer to the following code example for cell data binding.
 
@@ -118,23 +119,23 @@ Refer to the following code example for cell data binding.
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/data-binding-cs5" %}
 
-> The cell data binding also supports formula, style, number format, and more.
+> The cell data binding also supports `formula`, `style`, `numberFormat`, `format`, `hyperlink`, `validation`, and `lock` properties on the cell object.
 
-## Dynamic data binding and Datasource change event
+## Dynamic data binding and dataSource change event
 
-You can dynamically change the datasource of the spreadsheet by changing the `dataSource` property of the `range` object of the `sheet`. The `dataSourceChanged` event handler will be triggered when editing, inserting, and deleting a row in the datasource range. This event will be triggered with a parameter named `action` which indicates the `edit`, `add` and `delete` actions for the respective ones.
+You can dynamically change the data source of the spreadsheet by changing the `dataSource` property of the `range` object of the `sheet`. The `dataSourceChanged` event handler will be triggered when editing, inserting, and deleting a row in the data source range. This event will be triggered with a parameter named `action` which indicates the `edit`, `add`, and `delete` actions for the respective action.
 
 The following table defines the arguments of the `dataSourceChanged` event.
 
 | Property | Type | Description |
 |-----|-----|-------|
-| action | string | Indicates the type of action such as `edit`, `add`, and `delete` performed in the datasource range. |
-| data | object[] | Modified data for `edit` action; New data for `add` action; Deleted data for `delete` action. |
-| rangeIndex | number | Specifies the range index of the datasource. |
-| sheetIndex | number | Specifies the sheet index of the datasource. |
+| action | string | Indicates the type of action such as `edit`, `add`, and `delete` performed in the data source range. |
+| data | object[] | Modified data for `edit` action; new data for `add` action; deleted data for `delete` action. |
+| rangeIndex | number | Specifies the range index of the data source. |
+| sheetIndex | number | Specifies the sheet index of the data source. |
 
-> For `add` action, the value for all the fields will be `null` in the data. In the case that you do not want the primary key field to be null which needs to be updated in the backend service, you can use `edit` action after updating the primary key field to update in the backend service. <br><br>
-> For inserting a row at the end of the datasource range, you should insert a row below at the end of the range to trigger the `dataSourceChanged` event with action `add`.
+> For `add` action, the value for all the fields will be `null` in the data. If you do not want the primary key field to be null, which needs to be updated in the backend service, you can use the `edit` action after updating the primary key field to update it in the backend service. <br><br>
+> For inserting a row at the end of the data source range, you should insert a row immediately below the end of the range to trigger the `dataSourceChanged` event with action `add`.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -171,4 +172,4 @@ The following code example demonstrates how to dynamically update data using the
 * [Filtering](./filter)
 * [Sorting](./sort)
 * [Hyperlink](./link)
-* [`Collaborative Editing`](use-cases/collaborative-editing)
+* [Collaborative Editing](./collaborative-editing.md)
