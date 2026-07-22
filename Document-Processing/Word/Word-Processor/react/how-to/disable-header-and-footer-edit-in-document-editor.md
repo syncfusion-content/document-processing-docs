@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Disable header and footer in React DOCX Editor using Syncfusion
-description: Learn here all about Disable header and footer edit in Document Editor in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Disable header and footer edit in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
 control: Disable header and footer edit in Document Editor
 platform: document-processing
 documentation: ug
@@ -64,7 +64,7 @@ N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-ed
 
 As an alternative to `restrictEditing`, you can disable clicking inside Header or Footer by using [`closeHeaderFooter`](https://ej2.syncfusion.com/react/documentation/api/document-editor/selection#closeheaderfooter) API in selection module. This method closes the active header or footer region when the selection enters it, returning the selection to the document body and preventing header/footer modification.
 
-The following example code illustrates how to disable header and footer edit in `DocumentEditorContainer` instance.
+The following example code illustrates how to disable header and footer edit in `DocumentEditorContainer` instance using `closeHeaderFooter` API.
 
 ```ts
 import * as ReactDOM from 'react-dom';
