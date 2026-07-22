@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open document from AWS S3 in React Document editor | Syncfusion
+title: Open document from AWS S3 in React DOCX Editor | Syncfusion
 description:  Learn how to open a document from AWS S3 in the React Document Editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Open document from AWS S3
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Open document from AWS S3 in React Document Editor
 
-To load a document from AWS S3 in a [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor), you can follow the steps below.
+To load a document from AWS S3 in a [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor), you can follow the steps below.
 
 **Step 1:** Create a simple Document Editor sample in React
 

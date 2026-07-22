@@ -1,16 +1,16 @@
 ---
 layout: post
-title: List format in React Document editor component | Syncfusion
-description: Learn here all about List format in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
+title: List format in React DOCX Editor component | Syncfusion
+description: Learn here all about List format in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
 control: List format 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# List format in React Document editor component
+# List format in React Document Editor component
 
-[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports both single-level and multilevel lists. Lists are used to organize data as step-by-step instructions in documents for easy understanding of key points. You can apply a list to paragraphs using the supported APIs.
+[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports both single-level and multilevel lists. Lists are used to organize data as step-by-step instructions in documents for easy understanding of key points. You can apply a list to paragraphs using the supported APIs.
 
 ## Create bullet list
 

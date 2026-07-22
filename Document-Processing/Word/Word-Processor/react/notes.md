@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Notes in React Document editor component | Syncfusion
-description: Learn here all about Notes in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
+title: Notes in React DOCX Editor component | Syncfusion
+description: Learn here all about Notes in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
 control: Notes 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Notes in React Document editor component
+# Notes in React Document Editor component
 
-[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) Container component provides support for inserting footnotes and endnotes through the built-in toolbar. Refer to the following screenshot.
+[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) Container component provides support for inserting footnotes and endnotes through the built-in toolbar. Refer to the following screenshot.
 
 ![Insert footnote endnote](images/note-toolbar.jpg)
 
