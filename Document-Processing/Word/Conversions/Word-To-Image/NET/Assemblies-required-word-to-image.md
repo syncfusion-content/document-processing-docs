@@ -82,8 +82,6 @@ WPF, Windows Forms, ASP.NET MVC<br/></td><td>
 Syncfusion.OfficeChartToImageConverter.WPF<br/>Syncfusion.SfChart.WPF<br/></td></tr>
 </table>
 
-N> The chart-to-image conversion assemblies (`Syncfusion.OfficeChartToImageConverter.WPF` and `Syncfusion.SfChart.WPF`) are applicable only to .NET Framework-based platforms (WPF, Windows Forms, ASP.NET MVC). For .NET Core, Blazor, WinUI, and .NET MAUI, chart conversion is handled through the `Syncfusion.OfficeChart.NET` assembly.
-
 ### Retired Platforms
 
 The following assemblies need to be referenced in your application based on the platform.
