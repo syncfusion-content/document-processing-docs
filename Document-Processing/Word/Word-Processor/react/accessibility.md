@@ -56,5 +56,3 @@ The accessibility compliance of the DOCX editor component is shown in the follow
 
 - [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> React components](https://ej2.syncfusion.com/react/documentation/common/accessibility)
 - [Keyboard shortcuts in React DOCX Editor component](./keyboard-shortcut)
-- [Right-to-left support in Syncfusion React components](https://ej2.syncfusion.com/react/documentation/common/accessibility#right-to-left-support)
-- [Getting Started with React DOCX Editor component](./getting-started)

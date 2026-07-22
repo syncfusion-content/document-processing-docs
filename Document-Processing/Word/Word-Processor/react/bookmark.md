@@ -57,7 +57,7 @@ this.container.documentEditor.getBookmarks(false);
 
 ## Get Bookmark from Selection
 
-You can get bookmarks in the current selection in the document using the [`getBookmarks`](https://ej2.syncfusion.com/react/documentation/api/selection#getbookmarks) method on the `Selection` instance as shown in the following code snippet.
+You can get bookmarks in the current selection in the document using the [`getBookmarks`](https://ej2.syncfusion.com/react/documentation/api/document-editor/index-default#getbookmarks) method on the `Selection` instance as shown in the following code snippet.
 
 ```typescript
 this.container.documentEditor.selection.getBookmarks(false);
@@ -94,10 +94,6 @@ this.container.documentEditor.editor.insertText('Hello World');
 ```
 
 ## Bookmark Dialog
-
-The following example shows how to open the bookmark dialog in document editor.
-
-Before you start, install the [`@syncfusion/ej2-react-documenteditor`](https://www.npmjs.com/package/@syncfusion/ej2-react-documenteditor) package.
 
 The following example shows how to open bookmark dialog in document editor.
 
