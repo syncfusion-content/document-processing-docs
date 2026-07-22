@@ -2,7 +2,7 @@
 layout: post
 title: Clipboard in React Document editor component | Syncfusion
 description: Learn here all about Clipboard in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
-control: Clipboard 
+control: Clipboard
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Clipboard in React Document editor component
 
-[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) takes advantage of system clipboard and allows you to copy or move a portion of the document into it in HTML format, so that it can be pasted in any application that supports clipboard.
+[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) takes advantage of the system clipboard and allows you to copy or move portions of the document to the clipboard in HTML format, so that it can be pasted into any application that supports clipboard operations.
 
 ## Copy
 
-Copy a portion of document to system clipboard using built-in context menu of document editor. You can also do it programmatically using the following sample code.
+Copy a portion of the document to the system clipboard using the built-in context menu of the Document Editor. You can also do it programmatically using the following sample code.
 
 ```ts
 documentEditor.selection.copy();
@@ -22,7 +22,7 @@ documentEditor.selection.copy();
 
 ## Cut
 
-Cut a portion of document to system clipboard using built-in context menu of document editor. You can also do it programmatically using the following sample code.
+Cut a portion of the document to the system clipboard using the built-in context menu of the Document Editor. You can also do it programmatically using the following sample code.
 
 ```ts
 documentEditor.editor.cut();
@@ -30,38 +30,39 @@ documentEditor.editor.cut();
 
 ## Paste
 
-Due to limitations, you can paste contents from system clipboard in document editor only using the ‘CTRL + V’ keyboard shortcut.
+Due to limitations, you can paste contents from the system clipboard into the Document Editor only using the **Ctrl + V** keyboard shortcut.
 
->Note: Due to browser limitation of getting content from system clipboard, paste using API and context menu option doesn't work.
+>Note: Due to browser limitations of getting content from the system clipboard, paste using the API and context menu options doesn't work.
 
 ## Local paste (copy/paste within control)
 
-Document Editor expose API to enable local paste within the control. On enabling this, the following is performed:
-* Selected contents will be stored to an internal clipboard as SFDT in addition to system clipboard.
-* Clipboard paste will be overridden, and internally stored data (SFDT data) that has formatted text will be pasted using paste() API in Document editor.
+Document Editor exposes an API to enable local paste within the control. When enabled, the following occurs:
+* Selected contents will be stored to an internal clipboard as SFDT in addition to the system clipboard.
+* Clipboard paste will be overridden, and the internally stored data (SFDT data) that has formatted text will be pasted using the `paste()` API in the Document Editor.
+
+### Enable Local Paste
 
 Refer to the following sample code.
 
 ```ts
-import * as ReactDOM from 'react-dom';
 import * as React from 'react';
+import { createRoot } from 'react-dom/client';
 import {
   DocumentEditorComponent,
   SfdtExport,
   Selection,
   Editor,
 } from '@syncfusion/ej2-react-documenteditor';
-//Inject require module.
+
+//Inject required modules.
 DocumentEditorComponent.Inject(Selection, Editor);
+
 function App() {
   let documenteditor;
   React.useEffect(() => {
-    componentDidMount();
-  }, []);
-  function componentDidMount() {
     //Enable document editor local paste option.
     documenteditor.enableLocalPaste = true;
-  }
+  }, []);
   return (
     <div>
       <DocumentEditorComponent
@@ -77,8 +78,8 @@ function App() {
   );
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
-
+const root = createRoot(document.getElementById('sample')!);
+root.render(<App />);
 ```
 
 By default, **enableLocalPaste** is false.
@@ -90,11 +91,11 @@ documentEditor.editor.paste();
 
 ### Paste options in context menu
 
-In Document editor, paste options in context menu will be in disabled state if you were try to copy/paste content from outside of Document editor. It gets enabled when **enableLocalPaste** is true and trying to copy/paste content inside Document editor.
+In the Document Editor, paste options in the context menu will be in a disabled state if you try to copy/paste content from outside of the Document Editor. It gets enabled when `enableLocalPaste` is `true` and you copy/paste content within the Document Editor.
 
->Note: Due to browser limitation of getting content from system clipboard, paste using API and context menu option doesn't work. Hence, the paste option is disabled in context menu.
+>Note: Due to browser limitations of getting content from the system clipboard, paste using the API and context menu options doesn't work. Hence, the paste option is disabled in the context menu.
 
-Alternatively, you can use the keyboard shortcuts,
+Alternatively, you can use the keyboard shortcuts:
 
 * Cut: Ctrl + X
 * Copy: Ctrl + C
@@ -109,16 +110,17 @@ Alternatively, you can use the keyboard shortcuts,
 
 Note:
 * Keyboard shortcut for pasting will work properly in both cases.
-* Copying content from Document Editor component and pasting outside will work properly in both cases.
+* Copying content from the Document Editor component and pasting outside will work properly in both cases.
 
 ## Paste with formatting
 
-Document Editor provides support to paste the system clipboard data with formatting. To enable clipboard paste with formatting options, set the `enableLocalPaste` property in Document Editor to false and use this .NET Standard library [`Syncfusion.EJ2.WordEditor.AspNet.Core`](<https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Core/>) for Core by the web API service implementation. This library helps you to paste the system clipboard data with formatting.
+Document Editor provides support to paste the system clipboard data with formatting. To enable clipboard paste with formatting options, set the `enableLocalPaste` property in the Document Editor to `false` and use the `Syncfusion.EJ2.WordEditor.AspNet.Core` .NET Standard library for the ASP.NET Core web API service implementation. This library helps you to paste the system clipboard data with formatting. For details on setting up the web API service, refer to the [web services overview](./web-services-overview).
 
 You can paste your system clipboard data in the following ways:
-* **Keep Source Formatting** This option retains the character styles and direct formatting applied to the copied text. Direct formatting includes characteristics such as font size, italics, or other formatting that is not included in the paragraph style.
-* **Match Destination Formatting** This option discards most of the formatting applied directly to the copied text, but it retains the formatting applied for emphasis, such as bold and italic when it is applied to only a portion of the selection. The text takes on the style characteristics of the paragraph where it is pasted. The text also takes on any direct formatting or character style properties of text that immediately precedes the cursor when the text is pasted.
-* **Text Only** This option discards all formatting and non-text elements such as pictures or tables. The text takes on the style characteristics of the paragraph where it is pasted and takes on any direct formatting or character style properties of text that immediately precedes the cursor when the text is pasted. Graphical elements are discarded and tables are converted to a series of paragraphs.
+
+* **Keep Source Formatting:** This option retains the character styles and direct formatting applied to the copied text. Direct formatting includes characteristics such as font size, italics, or other formatting that is not included in the paragraph style.
+* **Match Destination Formatting:** This option discards most of the formatting applied directly to the copied text, but it retains the formatting applied for emphasis, such as bold and italic when it is applied to only a portion of the selection. The text takes on the style characteristics of the paragraph where it is pasted. The text also takes on any direct formatting or character style properties of text that immediately precedes the cursor when the text is pasted.
+* **Text Only:** This option discards all formatting and non-text elements such as pictures or tables. The text takes on the style characteristics of the paragraph where it is pasted and takes on any direct formatting or character style properties of text that immediately precedes the cursor when the text is pasted. Graphical elements are discarded, and tables are converted to a series of paragraphs.
 
 This paste option appears as follows.
 

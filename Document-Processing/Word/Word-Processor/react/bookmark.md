@@ -51,7 +51,7 @@ this.container.documentEditor.editor.deleteBookmark("Bookmark1");
 
 ## Get Bookmark from Document
 
-You can get all the bookmarks in the document using the [`getBookmarks`](https://ej2.syncfusion.com/react/documentation/api/document-editor#bookmarks) method on the `DocumentEditor` instance as shown in the following code snippet.
+You can get all the bookmarks in the document using the [`getBookmarks`](https://ej2.syncfusion.com/react/documentation/api/document-editor#getbookmarks) method on the `DocumentEditor` instance as shown in the following code snippet.
 
 ```typescript
 this.container.documentEditor.getBookmarks(false);
@@ -160,4 +160,4 @@ Explore how to insert and manage bookmarks in Word documents using the React Doc
 ## See Also
 
 * [Feature modules](./feature-module)
-* [Bookmark dialog customization](./dialog#bookmark-dialog)
+* [Bookmark dialog](./dialog#bookmark-dialog)
