@@ -11,8 +11,6 @@ documentation: ug
 
 The Spreadsheet uses [`DataManager`](https://ej2.syncfusion.com/javascript/documentation/data/), which supports both RESTful JSON data services and local JavaScript object array binding to a range. The `dataSource` property can be assigned either with the instance of [`DataManager`](https://ej2.syncfusion.com/javascript/documentation/data/) or JavaScript object array collection.
 
-> Before binding data, you must have a Spreadsheet control initialized in your application. For setup details, refer to the [getting started](https://ej2.syncfusion.com/javascript/documentation/spreadsheet/getting-started) documentation.
-
 > To bind data to a cell, use the [cell data binding](#cell-data-binding) support.
 
 ## Local data
@@ -172,4 +170,3 @@ The following code example demonstrates how to dynamically update data using the
 * [Filtering](./filter)
 * [Sorting](./sort)
 * [Hyperlink](./link)
-* [Collaborative Editing](./collaborative-editing.md)

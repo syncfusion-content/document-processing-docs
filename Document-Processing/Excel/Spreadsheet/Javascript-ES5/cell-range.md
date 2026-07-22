@@ -11,8 +11,6 @@ documentation: ug
 
 A group of cells in a sheet is known as a cell range.
 
-> Before working with cell-range APIs, you must have a Spreadsheet control initialized in your application. For setup details, refer to the [getting started](https://ej2.syncfusion.com/javascript/documentation/spreadsheet/getting-started) documentation.
-
 ## Wrap text
 
 Wrap text allows you to display large content as multiple lines in a single cell. By default, wrap text support is enabled. Use the [`allowWrap`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowwrap) property to enable or disable wrap text support in the Spreadsheet.
@@ -197,7 +195,7 @@ In Auto Fill, we have the following options:
 * Fill Formatting Only
 * Fill Without Formatting
 
->* The default auto fill option is “FillSeries” which can be referred from `fillType` property.
+>* The default auto fill option is `FillSeries` which can be referred from `fillType` property.
 
 ### Copy Cells
 
