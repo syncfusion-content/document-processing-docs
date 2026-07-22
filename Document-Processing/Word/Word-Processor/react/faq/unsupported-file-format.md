@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Why Do I Get the Unsupported Warning Message When Opening a Document in React?
+# Unsupported file format warning in React
 
 If you receive a "The file format you have selected isn't supported. Please choose a valid format." message when opening a document in the [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor), it typically indicates that the document format is not supported by the current version of the Document Editor. Here are some common reasons for this warning:
 
