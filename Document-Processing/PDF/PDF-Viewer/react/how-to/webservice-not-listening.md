@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Resolve "Web-service is not listening" to error | Syncfusion
-description: Learn here all about How to clear the "Web-service is not listening" to error in React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: How to clear the "Web-service is not listening" to error
+title: Resolve "Web-service is not listening" error | Syncfusion
+description: Learn how to resolve the "Web-service is not listening" error in React PDF Viewer component of Syncfusion Essential JS 2 and more.
+control: How to clear the "Web-service is not listening" error
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # How to resolve the "Web-service is not listening" error in React
 
-![Alt text](../images/webservice.png)
+![Web-service is not listening error in React PDF Viewer](../images/webservice.png)
 
 If the React PDF Viewer reports a "Web-service is not listening" error, use the browser's developer tools to diagnose the request and the server behavior. The steps below guide the most common troubleshooting paths and remediation actions.
 
 **Step 1:** Open the browser's developer tools by right-clicking on the page and selecting `Inspect` from the dropdown menu. Then Navigate to the `Network` tab. This will show you all of the requests that are being made by the page.
 
-![Alt text](../images/networktab.png)
+![Browser Network tab showing PDF Viewer requests](../images/networktab.png)
 
 **Step 2:** Try to request the web service. If the service is not listening, the request will fail, and you should see an error message in the Network tab. Click on the failing request to see the details of the error, such as the error message or stack trace. This can help you identify the root cause of the issue. Check the server logs for any errors or warnings that may indicate the cause of the issue and help you to troubleshoot the problem.
 
@@ -26,15 +26,16 @@ By following these steps and using the Network tab in your browser's developer t
 
 N> Make sure you are connected to the internet and that your connection is stable. You can try accessing other websites or services to see if they are working, and make sure the URL you are using to access the web service is correct and properly formatted.
 
-## Here are some common exceptions
+## Common exceptions
 
-* File not found.
-* Document cache not found.
-* Document pointer does not exist in the cache.
+* [File not found](#file-not-found)
+* [Document cache not found](#document-cache-not-found)
+* [Document pointer does not exist in the cache](#the-document-pointer-does-not-exist-in-the-cache)
+* [Internal server error](#internal-server-error)
 
 ## File not found
 
-If you are encountering an error message stating that the web service is not listening due to a file not being found in the PDF viewer, you can try the following steps to resolve the issue:
+If you are encountering an error message stating that the web service is not listening due to a file not being found in the PDF Viewer, you can try the following steps to resolve the issue:
 
 ### Check the file path
 
@@ -54,7 +55,7 @@ We can use Redis cache and distributive cache for this issue.
 
 Ensure that your network connection is stable and strong enough to support the web service you are trying to use. Sometimes, simply restarting the web service can resolve the issue. Try stopping and starting the service again to see if it resolves the problem.
 
-## The document pointer does not exist in the cache.
+## The document pointer does not exist in the cache
 
 The `Document pointer does not exist in the cache` exception in the PDF Viewer usually occurs when there is an issue with loading or caching the PDF document. This error can be caused by a variety of reasons, including:
 
