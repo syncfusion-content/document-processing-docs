@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Auto save document in React DOCX Editor component | Syncfusion
-description: Learn here all about Auto save document in DOCX Editor in Syncfusion React DOCX Editor component of Syncfusion Essential JS 2 and more.
-control: Auto save document in DOCX Editor 
+description: Learn here all about Auto save document in Document Editor in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+control: Auto save document in Document Editor 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
