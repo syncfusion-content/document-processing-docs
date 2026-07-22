@@ -20,7 +20,7 @@ This section provides a step-by-step guide for setting up a Next.js application 
 
 ## Create a Next.js application
 
-**Step 1:** To create a new `Next.js` application, use one of the commands that are specific to either NPM or Yarn.
+**Step 1:** To create a new `Next.js` application, use one of the commands specific to NPM or Yarn.
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -47,7 +47,7 @@ Using one of the above commands will prompt you to configure additional settings
 {% endhighlight %}
 {% endtabs %}
 
-**Step 3:** Choose the following configuration options:
+**Step 3:** Choose the following configuration options below.
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -125,7 +125,6 @@ N> To learn more about built-in themes and CSS reference for individual componen
 
 Add the DOCX Editor component to your application. In the `app/page.tsx` file, add the following code to initialize the component:
 
-
 {% tabs %}
 {% highlight ts tabtitle="page.tsx" %}
 
@@ -168,7 +167,7 @@ yarn run dev
 {% endhighlight %}
 {% endtabs %}
 
-After the application starts, open the localhost URL shown in the terminal. The DOCX Editor is rendered in the browser with a toolbar and an editable document area, as shown below.
+After the application starts, open the `localhost` URL shown in the terminal. The DOCX Editor is rendered in the browser with a toolbar and an editable document area, as shown below.
 
 ![Output of React DOCX Editor in Next.js](./images/react_getting_started.png)
 
@@ -178,16 +177,16 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/React-DOCX-Edit
 
 The DOCX Editor component requires server-side interactions for the following operations:
 
-* Open file formats other than SFDT
-* Paste with formatting
-* Restrict editing
-* Spell check
-* Save as file formats other than SFDT and DOCX
+* Opening file formats other than SFDT
+* Pasting with formatting
+* Restricting editing
+* Spell checking
+* Saving as file formats other than SFDT and DOCX
 
 N> If you don't require the above functionalities, you can deploy the component as a pure client-side solution without any server-side interactions.
 
 For detailed information about server-side dependencies, refer to the [Web Services Overview](./web-services-overview) page.
 
-## See also
+## See Also
 
 - [Troubleshooting](https://help.syncfusion.com/document-processing/word/word-processor/react/troubleshooting)
