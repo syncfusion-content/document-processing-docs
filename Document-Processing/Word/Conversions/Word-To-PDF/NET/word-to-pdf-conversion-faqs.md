@@ -33,12 +33,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to validate the PDF conformance level in a DocIO-converted PDF?
 
-PDF conformance can be verified using tools like Adobe Acrobat Pro, VeraPDF, Xodo Validator, and PDFCreator Validator. These tools check if the PDF meets compliance standards. DocIO-generated PDFs can be validated using any of these tools to ensure compliance with the required standards.
-
-**Steps to validate:**
-1. Open the converted PDF in any of the validators listed above (for example, VeraPDF).
-2. Select the PDF conformance profile (such as PDF/A-1b, PDF/A-2b, or PDF/UA) you want to verify.
-3. Run the validation and review the report for any conformance issues.
+PDF conformance can be verified using tools like **Adobe Acrobat Pro, VeraPDF, Xodo Validator, and PDFCreator Validator**. These tools check if the PDF meets compliance standards. DocIO-generated PDFs can be validated using any of these tools to ensure compliance with the required standards.
 
 For more details on the supported conformance levels in DocIO, refer to [PDF Conformance](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-pdf-conformance).
 
