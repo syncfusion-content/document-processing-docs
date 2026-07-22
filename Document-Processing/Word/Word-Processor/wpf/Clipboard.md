@@ -22,16 +22,12 @@ The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor
 The following code example demonstrates how to bind commands for accessing clipboard operations.
 {% tabs %}
 {% highlight xaml %}
-<StackPanel Orientation="Horizontal">
-    <!-- Binds button to the CutCommand -->
-    <Button Content="Cut" Command="RichTextBoxAdv:SfRichTextBoxAdv.CutCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}" />
-    <!-- Binds button to the CopyCommand -->
-    <Button Content="Copy" Command="RichTextBoxAdv:SfRichTextBoxAdv.CopyCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}" />
-    <!-- Binds button to the PasteCommand -->
-    <Button Content="Paste" Command="RichTextBoxAdv:SfRichTextBoxAdv.PasteCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}" />
-</StackPanel>
-
-<RichTextBoxAdv:SfRichTextBoxAdv x:Name="richTextBoxAdv" />
+<!-- Binds button to the CutCommand -->
+<Button Content="Cut" Command="RichTextBoxAdv:SfRichTextBoxAdv.CutCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}" />
+<!-- Binds button to the CopyCommand -->
+<Button Content="Copy" Command="RichTextBoxAdv:SfRichTextBoxAdv.CopyCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}" />
+<!-- Binds button to the PasteCommand -->
+<Button Content="Paste" Command="RichTextBoxAdv:SfRichTextBoxAdv.PasteCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}" />
 
 
 {% endhighlight %}
