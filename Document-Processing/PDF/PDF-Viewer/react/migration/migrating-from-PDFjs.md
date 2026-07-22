@@ -137,7 +137,7 @@ This minimal tutorial shows a focused migration path from a canvas-based PDF.js 
 
 1) Project preparations
 
-- Remove existing `pdf js-dist` usage from the components you will replace. Keep a working branch so you can compare behavior.
+- Remove existing `pdfjs-dist` usage from the components you will replace. Keep a working branch so you can compare behavior.
 - Install Syncfusion React PDF Viewer:
 
 ```bash
@@ -292,7 +292,7 @@ N> To know more about available Features in Syncfusion React PDF Viewer. Check [
 - [load()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#load) — programmatically load a PDF.
 - [download()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#download) — trigger download of current document.
 - [addAnnotation(annotation: any)](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation) — add an annotation programmatically.
-- [exportAnnotation(annotationDataFormat)](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportannotation) / [exportAnnotationsAsBase64String()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportannotationsasbase64string):   — export annotations for persistence.
+- [exportAnnotation(annotationDataFormat)](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportannotation) / [exportAnnotationsAsBase64String()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportannotationsasbase64string) — export annotations for persistence.
 - [extractText(pageIndex: number, options?: any)](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#extracttext): — extract text and coordinates.
 - [Events](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#events): [documentLoad](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#documentload), [pageRenderComplete](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#pagerendercomplete), [pageChange](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#pagechange), [annotationAdd](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#annotationadd), [annotationRemove](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#annotationremove), [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#toolbarclick).
 
