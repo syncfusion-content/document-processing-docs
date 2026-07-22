@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Formatting in Blazor Spreadsheet Component | Syncfusion
-description: Checkout and learn all about formatting options in the Syncfusion Blazor Spreadsheet component | Syncfusion.
+description: Learn about formatting options in the Syncfusion Blazor Spreadsheet component, including number formatting, cell and text formatting and conditional formatting.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
@@ -52,7 +52,7 @@ Number formats can be applied through the UI using the following method:
 
 ### Applying Number Formats Programmatically
 
-Number formats can be applied programmatically to the current selection or a specified range using the [NumberFormatAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_NumberFormatAsync_System_String_System_String_) method. This method accepts a format string and an optional cell address.
+Number formats can be applied programmatically to the current selection or a specified range using the [NumberFormatAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_NumberFormatAsync_System_String_System_String_) method. This method accepts a format string and an optional cell address.
 
 | Parameter | Type | Description |
 | -- | -- | -- |
@@ -62,6 +62,7 @@ Number formats can be applied programmatically to the current selection or a spe
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
+@page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
 <button @onclick="ApplyFormat">Apply number format</button>
@@ -90,7 +91,7 @@ Number formats can be applied programmatically to the current selection or a spe
 {% endhighlight %}
 {% endtabs %}
 
-N> If the built-in formats do not meet specific requirements, custom patterns can be applied programmatically using the [NumberFormatAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_NumberFormatAsync_System_String_System_String_) method. Patterns must be compatible with Excel-style format strings.
+N> If the built-in formats do not meet specific requirements, custom patterns can be applied programmatically using the [NumberFormatAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_NumberFormatAsync_System_String_System_String_) method. Patterns must be compatible with Excel-style format strings.
 
 ## Text and Cell Formatting
 
@@ -121,19 +122,19 @@ Cell formatting options include:
 *   **Fill Color** - Adds color to the cell background to visually organize data or highlight important information.
 
 *   **Horizontal Alignment** - Controls the position of text from left to right within a cell. Options include:
-    *   **Left** - Default for text
-    *   **Center** - Useful for headings
-    *   **Right** - Default for numbers
+    *   **Left**: Default for text.
+    *   **Center**: Useful for headings.
+    *   **Right**: Default for numbers.
 
 *   **Vertical Alignment** - Controls the position of text from top to bottom within a cell. Options include:
-    *   **Top** – Aligns content to the top of the cell
-    *   **Middle** – Centers content vertically
-    *   **Bottom** – Default alignment
+    *   **Top**: Aligns content to the top of the cell.
+    *   **Middle**: Centers content vertically.
+    *   **Bottom**: Default alignment.
 
 *   **Wrap Text** - Displays long content on multiple lines within a single cell, preventing it from overflowing into adjacent cells. To enable text wrapping:
     1.  Select the target cell or range (e.g., C5).
-    2.  Go to the Home tab.
-    3.  Click Wrap Text in the ribbon to toggle text wrapping for the selected cells.
+    2.  Go to the **Home** tab.
+    3.  Click **Wrap Text** in the ribbon to toggle text wrapping.
 
 Text and cell formatting can be applied or removed from a cell or range by using the options available in the component's built-in **Ribbon** under the **Home** tab.
 
@@ -152,33 +153,33 @@ Borders visually separate cells and define tables or sections within a worksheet
 | Horizontal Border | Applies borders to the top and bottom edges of a cell or range. |
 | Vertical Border | Applies borders to the left and right edges of a cell or range. |
 | Outside Border | Applies borders to the outer edges of a range of cells. |
-| Inside Border | Applies borders to the inner edges of a range of cells |
+| Inside Border | Applies borders to the inner edges of a range of cells. |
 
 Border color, size, and style can also be customized. The supported sizes and styles are:
 
-| Type   | Description                      |
+| Type | Description |
 |--------|----------------------------------|
-| Thin   | Specifies a `1px` border size. |
-| Medium | Specifies a `2px` border size.       |
-| Thick  | Specifies a `3px` border size.       |
-| Solid  | Creates a `solid` border.  |
-| Dashed | Creates a `dashed` border.|
-| Dotted | Creates a `dotted` border.|
-| Double | Creates a `double` border.|
+| Thin | Specifies a `1px` border size. |
+| Medium | Specifies a `2px` border size. |
+| Thick | Specifies a `3px` border size. |
+| Solid | Creates a `solid` border. |
+| Dashed | Creates a `dashed` border. |
+| Dotted | Creates a `dotted` border. |
+| Double | Creates a `double` border. |
 
 ### Applying Borders via UI
 
 Borders can be applied through the UI using the following method:
 
 * Click the **Home** tab in the Ribbon.
-* Open the **Borders** dropdown.
+* In the **Font** group, open the **Borders** dropdown.
 * Select the desired border style, color, and size from the dropdown.
 
 ![Blazor Spreadsheet displaying available border options on the Home tab in the Ribbon toolbar](./images/borders.gif)
 
 ### Applying Borders Programmatically
 
-Borders can be applied programmatically to a specific cell or range of cells using the [SetBordersAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SetBordersAsync_Syncfusion_Blazor_Spreadsheet_BorderType_Syncfusion_XlsIO_ExcelLineStyle_System_String_System_String_) method. The available parameters in the [SetBordersAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SetBordersAsync_Syncfusion_Blazor_Spreadsheet_BorderType_Syncfusion_XlsIO_ExcelLineStyle_System_String_System_String_)  method are:
+Borders can be applied programmatically to a specific cell or range of cells using the [SetBordersAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SetBordersAsync_Syncfusion_Blazor_Spreadsheet_BorderType_Syncfusion_XlsIO_ExcelLineStyle_System_String_System_String_) method. The available parameters in the [SetBordersAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SetBordersAsync_Syncfusion_Blazor_Spreadsheet_BorderType_Syncfusion_XlsIO_ExcelLineStyle_System_String_System_String_) method are:
 
 | Parameter | Type | Description |
 | -- | -- | -- |
@@ -189,6 +190,7 @@ Borders can be applied programmatically to a specific cell or range of cells usi
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+@page "/"
 @using Syncfusion.Blazor.Spreadsheet
 @using Syncfusion.XlsIO
 
@@ -215,26 +217,60 @@ Borders can be applied programmatically to a specific cell or range of cells usi
 
 ## Conditional Formatting
 
-Conditional formatting enables automatic visual formatting of cells based on specified conditions, helping to highlight data patterns, identify outliers, and improve data interpretation. The Blazor Spreadsheet component provides comprehensive conditional formatting capabilities including color scales, data bars, icon sets, and custom formatting rules. These formats are Excel-compatible, respect worksheet protection settings, and integrate seamlessly with undo/redo operations. To control this functionality, use the `AllowConditionalFormat` property, which enables or disables conditioanl formatting support in the Spreadsheet. The default value of the `AllowConditionalFormat` property is **true**.
+Conditional formatting enables automatic visual formatting of cells based on specified conditions, helping to highlight data patterns, identify outliers, and improve data interpretation. The Blazor Spreadsheet component provides comprehensive conditional formatting capabilities including color scales, data bars, icon sets, and custom formatting rules. These formats are Excel-compatible, respect worksheet protection settings, and integrate seamlessly with undo/redo operations. To control this functionality, use the [AllowConditionalFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowConditionalFormat) property, which enables or disables conditional formatting support in the Spreadsheet. The default value of the [AllowConditionalFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowConditionalFormat) property is **true**.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@page "/"
+@using Syncfusion.Blazor.Spreadsheet
+
+<SfSpreadsheet AllowConditionalFormat="false">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+{% endhighlight %}
+{% endtabs %}
 
 ### Applying Conditional Formatting
 
-Conditional formatting can be applied through the UI or programmatically:
+Conditional formatting can be applied through the UI or programmatically.
 
-**Conditional formatting via UI**
-- Select the target cell range
-- Click the **Conditional Formatting** button in the **Home** tab of the Ribbon
-- Choose the desired formatting rule type and configure the conditions
+### Conditional formatting via UI
 
-**Conditional formatting programmatically**
-Apply conditional formatting using the `ConditionalFormatAsync()` method with a `ConditionalFormatRule` object to define the condition, format type, range, and styling.
+To apply conditional formatting through the UI:
+
+1.  Select the target cell range.
+2.  Click the **Conditional Formatting** button in the **Home** tab of the Ribbon.
+3.  Choose the desired formatting rule type and configure the conditions.
+
+### Conditional formatting programmatically
+
+Apply conditional formatting using the [ConditionalFormatAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ConditionalFormatAsync_Syncfusion_Blazor_Spreadsheet_ConditionalFormatRule_) method with a [ConditionalFormatRule](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.ConditionalFormatRule.html) object to define the condition, format type, range, and styling.
+
+The following table lists the commonly used properties of `ConditionalFormatRule`:
+
+| Property | Type | Description |
+| -- | -- | -- |
+| [ConditionalFormatType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.ConditionalFormatType.html) | enum | Specifies the rule type (for example, `GreaterThan`, `Top10Items`, `BlueDataBar`). |
+| PrimaryValue | string | The primary value used to evaluate the condition (for example, the threshold for `GreaterThan`). |
+| SecondaryValue | string (Optional) | The secondary value used by rules that need a range, such as `Between`. |
+| Range | string | The cell range the rule applies to (for example, `"B2:B50"`). |
+| [ConditionalFormatColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.ConditionalFormatColor.html) | enum | The preset color style for the rule. Applies only to Highlight Cells Rules and Top/Bottom Rules. |
+| FontColor | string | The font color used when custom styling is enabled. |
+| BackgroundColor | string | The cell background color used when custom styling is enabled. |
+| FontStyle | string | The italic style for the matching cells, such as `"italic"`. |
+| FontWeight | string | The font weight for the matching cells, such as `"bold"`. |
+| Underline | bool | When **true**, applies an underline decoration to the matching cells. |
 
 **Code Example**
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+@page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
+<button @onclick="HighlightHighScores">Highlight Scores greater than 80</button>
 <SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
@@ -273,14 +309,14 @@ Highlight cells rules apply preset color formatting based on cell values or text
 
 | ConditionalFormatType | Description |
 |---|---|
-| `GreaterThan` | Highlights cells with values greater than a specified threshold |
-| `LessThan` | Highlights cells with values less than a specified threshold |
-| `Between` | Highlights cells with values falling within a specified range |
-| `EqualTo` | Highlights cells with values equal to a specified value |
-| `ContainsText` | Highlights cells containing specified text |
-| `DateOccur` | Highlights cells containing dates matching a specified time period |
-| `Duplicate` | Highlights cells with duplicate values within the evaluated range |
-| `Unique` | Highlights cells with unique values within the evaluated range |
+| `GreaterThan` | Highlights cells with values greater than a specified threshold. |
+| `LessThan` | Highlights cells with values less than a specified threshold. |
+| `Between` | Highlights cells with values falling within a specified range. |
+| `EqualTo` | Highlights cells with values equal to a specified value. |
+| `ContainsText` | Highlights cells containing specified text. |
+| `DateOccur` | Highlights cells containing dates matching a specified time period. |
+| `Duplicate` | Highlights cells with duplicate values within the evaluated range. |
+| `Unique` | Highlights cells with unique values within the evaluated range. |
 
 **Available Preset Color Styles**
 
@@ -292,13 +328,16 @@ Highlight cells rules apply preset color formatting based on cell values or text
 | `RedFill` | Red | Default |
 | `RedText` | Default | Red |
 
+N> The [ConditionalFormatColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.ConditionalFormatColor.html) enum applies only to **Highlight Cells Rules** and **Top/Bottom Rules**. Data bars, color scales, and icon sets control color through the `ConditionalFormatType` itself (for example, `BlueDataBar`, `GreenYellowRedColorScale`, `ThreeTrafficLights1`).
+
 **Code Example**
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+@page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
-<button @onclick="HighlightHighScores">Highlight Scores > 80</button>
+<button @onclick="HighlightHighScores">Highlight Scores greater than 80</button>
 <SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
@@ -337,17 +376,18 @@ Top/Bottom rules apply formatting based on statistical rankings and averages wit
 
 | ConditionalFormatType | Description |
 |---|---|
-| `Top10Items` | Highlights the top N items in the range by value rank |
-| `Bottom10Items` | Highlights the bottom N items in the range by value rank |
-| `Top10Percentage` | Highlights the top N percent of items in the range by value |
-| `Bottom10Percentage` | Highlights the bottom N percent of items in the range by value |
-| `AboveAverage` | Highlights cells with values above the average of the range |
-| `BelowAverage` | Highlights cells with values below the average of the range |
+| `Top10Items` | Highlights the top N items in the range by value rank. |
+| `Bottom10Items` | Highlights the bottom N items in the range by value rank. |
+| `Top10Percentage` | Highlights the top N percent of items in the range by value. |
+| `Bottom10Percentage` | Highlights the bottom N percent of items in the range by value. |
+| `AboveAverage` | Highlights cells with values above the average of the range. |
+| `BelowAverage` | Highlights cells with values below the average of the range. |
 
 **Code Example**
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+@page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
 <button @onclick="HighlightTopPerformers">Highlight Top 10 Sales</button>
@@ -399,6 +439,7 @@ Data bars provide in-cell graphical representation of values, where the bar leng
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+@page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
 <button @onclick="ApplyRevenueDataBars">Visualize Revenue</button>
@@ -462,6 +503,7 @@ Color scales apply a gradient of colors to cells based on their values within th
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+@page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
 <button @onclick="ApplyTemperatureScale">Apply Temperature Color Scale</button>
@@ -548,6 +590,7 @@ Icon sets display symbolic representations of cell values, where different icons
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+@page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
 <button @onclick="ApplyPerformanceRating">Apply Performance Icons</button>
@@ -581,22 +624,23 @@ Icon sets display symbolic representations of cell values, where different icons
 
 ### Custom Format
 
-Custom formatting allows advanced styling of cells that meet specific conditions by directly setting properties such as font color, background color, font style (bold/italic), font weight, and underline effects. This provides fine-grained control over visual appearance beyond preset color schemes.
+Custom formatting allows advanced styling of cells that meet specific conditions by directly setting properties such as font color, background color, font style, font weight, and underline effects. This provides fine-grained control over visual appearance beyond preset color schemes.
+
+N> Custom format styling is supported only for **Highlight Cells Rules** and **Top/Bottom Rules** rule types. Data bars, color scales, and icon sets do not support custom formatting.
 
 **Supported Custom Format Properties**
 
-- **Color**: Font/text color
-- **Background Color**: Cell background fill color
-- **Font Style**: Italic styling
-- **Font Weight**: Bold styling
-- **Underline**: Text underline decoration
-
-N> Custom format styling is supported only for **Highlight Cells Rules** and **Top/Bottom Rules** conditional format types. Data bars, color scales, and icon sets do not support custom formatting.
+- **FontColor**: Font/text color
+- **BackgroundColor**: Cell background fill color
+- **FontStyle**: Italic styling (for example, `"italic"`)
+- **FontWeight**: Bold styling (for example, `"bold"`)
+- **Underline**: Text underline decoration (set to `true` to enable)
 
 **Code Example**
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+@page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
 <button @onclick="ApplyCustomFormat">Apply Custom Format Rule</button>
@@ -636,19 +680,19 @@ N> Custom format styling is supported only for **Highlight Cells Rules** and **T
 
 Conditional formatting rules can be removed from cells when no longer needed. This allows for dynamic rule management and prevents formatting conflicts when rules need to be updated or replaced.
 
-Conditional formatting can be cleared through the UI or programmatically:
+Conditional formatting can be cleared through the UI or programmatically.
 
-**Clearing conditional formats via UI**
+### Clearing conditional formats via UI
 
-- Select the cell range containing the conditional formats to remove
-- Click the **Conditional Formatting** button in the **Home** tab
-- Select **Clear Rules** and choose:
-   - **Clear Rules from Selected Cells** - Remove rules only from the selected range
-   - **Clear Rules from Entire Sheet** - Remove all conditional formatting from the worksheet
+1.  Select the cell range containing the conditional formats to remove.
+2.  Click the **Conditional Formatting** button in the **Home** tab.
+3.  Select **Clear Rules** and choose:
+    - **Clear Rules from Selected Cells**: Remove rules only from the selected range.
+    - **Clear Rules from Entire Sheet**: Remove all conditional formatting from the worksheet.
 
-**Clearing conditional format programmatically**
+### Clearing conditional format programmatically
 
-Use the `ClearConditionalFormatsAsync()` method to remove conditional formatting rules from specific cells or ranges.
+Use the [ClearConditionalFormatsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ClearConditionalFormatsAsync_System_String_) method to remove conditional formatting rules from specific cells or ranges.
 
 | Parameter | Type | Description |
 | -- | -- | -- |
@@ -658,6 +702,7 @@ Use the `ClearConditionalFormatsAsync()` method to remove conditional formatting
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+@page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
 <button @onclick="ApplyHighlightRule">Highlight Values</button>
@@ -702,12 +747,12 @@ Use the `ClearConditionalFormatsAsync()` method to remove conditional formatting
 
 The following operations have limitations when working with conditional formatting in the Blazor Spreadsheet component:
 
-- **Row/Column Insertion**: Inserting rows or columns within a range containing conditional formatting may not automatically expand the formatting to include the new rows/columns
-- **Formula-Based Rules**: Formula-based conditional formatting rules are not currently supported; rules must be based on static values or built-in rule types
-- **Cut and Paste**: Conditional formatting rules applied to cells are not copied when performing cut and paste operations on those cells
-- **Custom Rule Definitions**: Creating fully custom rule types beyond the predefined rule types is not supported
+- **Row/Column Insertion**: Inserting rows or columns within a range containing conditional formatting may not automatically expand the formatting to include the new rows/columns.
+- **Formula-Based Rules**: Formula-based conditional formatting rules are not currently supported; rules must be based on static values or built-in rule types.
+- **Cut and Paste**: Conditional formatting rules applied to cells are not copied when performing cut and paste operations on those cells.
+- **Custom Rule Definitions**: Creating fully custom rule types beyond the predefined rule types is not supported.
 
-### Limitations
+## General Formatting Limitations
 
-*  A custom number format UI dialog is not available, custom formats must be applied using the API.
+*  A custom number format UI dialog is not available; custom formats must be applied using the API.
 *  After inserting a row or column, border expansion is not currently supported.
