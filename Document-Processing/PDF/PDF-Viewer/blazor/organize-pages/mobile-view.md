@@ -21,16 +21,16 @@ On mobile, the `Organize Pages` toolbar appears in a bottom-anchored layout for 
 
 Tap-and-hold a page thumbnail to open the context menu. Available actions include:
 
-* **Rotate clockwise** — rotate the page 90° clockwise. See [Rotate pages](./rotate-pages).
-* **Rotate counter-clockwise** — rotate the page 90° counter-clockwise. See [Rotate pages](./rotate-pages).
-* **Rearrange pages** — drag thumbnails to update the page order. See [Rearrange pages](./reorder-pages).
-* **Insert page** — insert a blank page at the selected position. See [Insert blank pages](./insert-blank-pages).
-* **Duplicate page** — create a copy of the selected page. See [Duplicate pages](./duplicate-pages).
-* **Delete page** — remove the selected page. See [Remove pages](./remove-pages).
-* **Select all** — select all pages in the document.
-* **Import a PDF** — merge pages from another PDF file. See [Import pages](./import-pages).
-* **Extract pages** — export selected pages as a new PDF. See [Extract pages](./extract-pages).
-* **Save updates** — apply changes and use **Save** or **Save as** to download the modified PDF.
+* **Rotate clockwise**: rotate the page 90° clockwise. See [Rotate pages](./rotate-pages).
+* **Rotate counter-clockwise**: rotate the page 90° counter-clockwise. See [Rotate pages](./rotate-pages).
+* **Rearrange pages**: drag thumbnails to update the page order. See [Rearrange pages](./reorder-pages).
+* **Insert page**: insert a blank page at the selected position. See [Insert blank pages](./insert-blank-pages).
+* **Duplicate page**: create a copy of the selected page. See [Duplicate pages](./duplicate-pages).
+* **Delete page**: remove the selected page. See [Remove pages](./remove-pages).
+* **Select all**: select all pages in the document.
+* **Import a PDF**: merge pages from another PDF file. See [Import pages](./import-pages).
+* **Extract pages**: export selected pages as a new PDF. See [Extract pages](./extract-pages).
+* **Save updates**: apply changes and use **Save** or **Save as** to download the modified PDF.
 
 ![Organize mobile options](./images/organize-mobile-options.png)
 

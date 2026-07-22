@@ -21,11 +21,9 @@ This topic covers:
 
 The following flags are supported in the PDF Viewer:
 
-- [IsReadOnly](#make-fields-read-only)
-  Prevents users from modifying the form field in the UI while still allowing updates through APIs.
+- [IsReadOnly](#make-fields-read-only): Prevents users from modifying the form field in the UI while still allowing updates through APIs.
 
-- [IsRequired](#mark-fields-as-required)
-  Marks the form field as mandatory and includes it in form field validation.
+- [IsRequired](#mark-fields-as-required): Marks the form field as mandatory and includes it in form field validation.
 
 ## Flag behaviors
 

@@ -46,19 +46,19 @@ The Blazor PDF Viewer context menu supports the following built-in items, which 
 
 The context menu adapts its items based on the selected element. The following screenshots show the context menu in different scenarios:
 
-* **On Text Selection** — Displays text annotation options
+* **On Text Selection**: Displays text annotation options
 
   ![context menu on text](./images/context-menu-text.png)
 
-* **On Annotation** — Provides annotation management options
+* **On Annotation**: Provides annotation management options
 
   ![context menu on annotation](./images/context-menu-annotation.png)
 
-* **On Form Fields** — Shows form field operations (Designer mode only)
+* **On Form Fields**: Shows form field operations (Designer mode only)
 
   ![context menu on form fields](./images/context-menu-forms.png)
 
-* **On Empty Space** — Displays paste and general options
+* **On Empty Space**: Displays paste and general options
 
   ![context menu on empty space](./images/context-menu-empty.png)
 

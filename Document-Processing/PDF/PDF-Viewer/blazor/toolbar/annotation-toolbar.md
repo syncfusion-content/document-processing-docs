@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize the Annotation Toolbar in Blazor PDF Viewer | Syncfusion
-description: Learn how to show, hide, and customize the annotation toolbar in the Blazor PDF Viewer component.
+description: Learn how to show, hide, and customize the annotation toolbar in the Blazor PDF Viewer, including tool visibility, order, and runtime control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -89,9 +89,9 @@ On mobile devices, the toolbar adapts responsively to the available width.
 
 [View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/CustomAnnotationToolbar.razor)
 
-N> Property tools (color, opacity, thickness, font, etc.) now appear only after you select or add the related annotation. Until you select or add an annotation, these tools are hidden.
-
-N> This change reduces clutter and shows options only when they're relevant to the selected annotation.
+N>
+* Property tools (color, opacity, thickness, font, etc.) now appear only after you select or add the related annotation. Until you select or add an annotation, these tools are hidden.
+* This change reduces clutter and shows options only when they're relevant to the selected annotation.
 
 ## See also
 

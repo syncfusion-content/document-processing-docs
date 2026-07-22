@@ -8,12 +8,14 @@ documentation: UG
 
 # Create PowerPoint document in Azure Functions v4
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **create a PowerPoint document in Azure Functions v4**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit, and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **create a PowerPoint document in Azure Functions v4**.
 
 ## Steps to create a PowerPoint document in Azure Functions v4
 
-Step 1: Create a new Azure Functions project.
-![Create a Azure Functions project](Azure-Images/Functions-v1/Azure_PowerPoint_Presentation_to_PDF.png)
+N> Prerequisites: An active [Azure subscription](https://azure.microsoft.com/en-us/free/) and Visual Studio with the **Azure development** workload installed.
+
+Step 1: Create a new Azure Functions project. Select the **Azure Functions** template and choose the **Http trigger** function type.
+![Create an Azure Functions project](Azure-Images/Functions-v1/Azure_PowerPoint_Presentation_to_PDF.png)
 
 Step 2: Create a project name and select the location.
 ![Create a project name](Azure-Images/Functions-v1/Configure_PowerPoint_Presentation_to_PDF.png)
@@ -21,22 +23,39 @@ Step 2: Create a project name and select the location.
 Step 3: Select function worker as **.NET 8.0 (Long Term Support)**. 
 ![Select function worker](Azure-Images/Functions-v4/Additional_Information_PowerPoint_Presentation_to_PDF.png)
 
-Step 4: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.AspNet) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+Step 4: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/). To register the Syncfusion license in your project, also install the **Syncfusion.Licensing.Net.Core** NuGet package.
 ![Install Syncfusion.Presentation.Net.Core NuGet package](Workingwith-Core/Nuget-Package_Open_and_Save.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you also have to add the **Syncfusion.Licensing.Net.Core** assembly reference and include a license key in your project. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: Include the following namespaces in the **Function1.cs** file.
+To register the license key, add the following call in the **Function1** class before the application starts:
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+
+{% endhighlight %}
+{% endtabs %}
+
+Step 5: Include the following namespaces in the **Function1.cs** file.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+using System.IO;
+using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Reflection;
 using Syncfusion.Presentation;
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Add the following code snippet in **Run** method of **Function1** class to perform **create a PowerPoint document** in Azure Functions and return the resultant **PowerPoint document** to client end.
+Step 6: Add a folder named **Data** to the project, place an image (for example, `Image.jpg`) inside it, and set its **Build Action** to **Embedded Resource**. The embedded resource name used in the next step is `Create_PowerPoint_Presentation.Data.Image.jpg`; update it if your project's default namespace differs.
+
+Step 7: Add the following code snippet in the **Run** method of the **Function1** class to **create a PowerPoint document** in Azure Functions and return the resultant **PowerPoint document** to the client end.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -85,7 +104,7 @@ IShape stampShape = slide.Shapes.AddShape(AutoShapeType.Explosion1, 48.93, 430.7
 stampShape.Fill.FillType = FillType.None;
 stampShape.TextBody.AddParagraph("IMN").HorizontalAlignment = HorizontalAlignmentType.Center;
 
-MemoryStream memoryStream = new MemoryStream();
+using MemoryStream memoryStream = new MemoryStream();
 //Saves the PowerPoint document file.
 pptxDoc.Save(memoryStream);
 //Create the response to return.
@@ -98,54 +117,47 @@ response.Content.Headers.ContentDisposition = new ContentDispositionHeaderValue(
     FileName = "Result.pptx"
 };
 //Set the content type as PowerPoint document mime type.
-response.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/pptx");
+response.Content.Headers.ContentType = new MediaTypeHeaderValue("application/vnd.openxmlformats-officedocument.presentationml.presentation");
 //Return the response with output PowerPoint document stream.
 return response;
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Right click the project and select **Publish**. Then, create a new profile in the Publish Window.
+Step 8: Right click the project and select **Publish**. Then, create a new profile in the Publish Window.
 ![Create a new profile in the Publish Window](Azure-Images/Functions-v1/Publish_PowerPoint_Presentation_to_PDF.png)
 
-Step 7: Select the target as **Azure** and click **Next** button.
+Step 9: Select the target as **Azure** and click the **Next** button.
 ![Select the target as Azure](Azure-Images/Functions-v1/Target_PowerPoint_Presentation_to_PDF.png)
 
-Step 8: Select the **Create new** button.
+Step 10: Select the **Create new** button.
 ![Configure Hosting Plan](Azure-Images/Functions-v1/Function_Instance_PowerPoint_Presentation_to_PDF.png)
 
-Step 9: Click **Create** button. 
+Step 11: Click the **Create** button. 
 ![Select the plan type](Azure-Images/Functions-v1/Hosting_PowerPoint_Presentation_to_PDF.png)
 
-Step 10: After creating app service then click **Finish** button. 
+Step 12: After the app service is created, click the **Finish** button. 
 ![Creating app service](Azure-Images/Functions-v1/Finish_PowerPoint_Presentation_to_PDF.png)
 
-Step 11: Click the **Publish** button.
+Step 13: Click the **Publish** button.
 ![Click Publish Button](Azure-Images/Functions-v1/Before_Publish_PowerPoint_Presentation_to_PDF.png)
 
-Step 12: Publish has been succeed.
+Step 14: Publish succeeded.
 ![Publish succeeded](Azure-Images/Functions-v1/After_Publish_PowerPoint_Presentation_to_PDF.png)
 
-Step 13: Now, go to Azure portal and select the App Services. After running the service, click **Get function URL by copying it**. Then, paste it in the below client sample (which will request the Azure Functions, to perform **create a PowerPoint document** using the template PowerPoint document). You will get the output PowerPoint document as follows.
+Step 15: Now, go to the Azure portal and select the App Services. After running the service, click **Get Function URL** and copy it. Then, paste it into the client sample in the next section (which will request the Azure Functions to **create a PowerPoint document**). You will get the output PowerPoint document as follows.
 
 ![Create a PowerPoint document in Azure Functions v4](Workingwith-Web/GettingStartedSample.png)
 
 ## Steps to post the request to Azure Functions
 
-Step 1: Create a console application to request the Azure Functions API.
+Step 1: Create a console application (for example, **Console App** using .NET 8.0 or later) to request the Azure Functions API.
 
-Step 2: Add the following code snippet into **Main** method to post the request to Azure Functions with template PowerPoint document and get the resultant PowerPoint document.
+Step 2: Add the following code snippet into the **Main** method to post a request to the Azure Functions and get the resultant PowerPoint document. The Azure Functions create a new PowerPoint document from scratch and return it; no template is required.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//Reads the template PowerPoint file.
-FileStream fs = new FileStream(@"../../Data/Template.pptx", FileMode.Open, FileAccess.ReadWrite, FileShare.ReadWrite);
-fs.Position = 0;
-//Saves the PowerPoint file in memory stream.
-MemoryStream inputStream = new MemoryStream();
-fs.CopyTo(inputStream);
-inputStream.Position = 0;
 try
 {
     Console.WriteLine("Please enter your Azure Functions URL :");
@@ -153,21 +165,18 @@ try
 
     //Create HttpWebRequest with hosted azure functions URL.    
     HttpWebRequest req = (HttpWebRequest)WebRequest.Create(functionURL);
-    //Set request method as POST
+    //Set request method as POST.
     req.Method = "POST";
-    //Get the request stream to save the PowerPoint file stream
-    Stream stream = req.GetRequestStream();
-    //Write the PowerPoint file stream into request stream
-    stream.Write(inputStream.ToArray(), 0, inputStream.ToArray().Length);
+    //The Create function does not require a request body; send empty content.
+    req.ContentLength = 0;
 
-    //Gets the responce from the Azure Functions.
+    //Gets the response from the Azure Functions.
     HttpWebResponse res = (HttpWebResponse)req.GetResponse();
 
     //Saves the PowerPoint file stream.
     FileStream fileStream = File.Create("Result.pptx");
     res.GetResponseStream().CopyTo(fileStream);
-    //Dispose the streams.
-    inputStream.Dispose();
+    //Dispose the stream.
     fileStream.Dispose();
 }
 catch (Exception ex)

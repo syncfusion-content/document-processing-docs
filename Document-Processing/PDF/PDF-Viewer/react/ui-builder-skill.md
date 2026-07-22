@@ -12,17 +12,24 @@ keywords: React UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skills
 
 **Syncfusion® React UI Builder Skill** is an AI-powered agent skill that accelerates React PDF Viewer development by transforming natural-language UI requirements into production-ready code using Syncfusion® React components.
 
-Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® PDF Viewer** and other React components to deliver accurate and ready-to-use code.
-By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, React UI Builder helps you rapidly build scalable PDF viewing applications and user interfaces without leaving your development workflow.
+Integrated with your AI-powered IDE, it leverages deep knowledge of the **Syncfusion® PDF Viewer** SDK and other React components to deliver accurate and ready-to-use code.
+
+By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, the Syncfusion® React UI Builder Skill helps you rapidly build scalable PDF viewing applications and user interfaces without leaving your development workflow.
 
 ## Prerequisites
 
-Before installing React UI Builder Skill with PDF Viewer, ensure the following:
+Before installing the Syncfusion® React UI Builder Skill with PDF Viewer, ensure the following:
 
-- Install [APM (Agent Package Manager)](https://microsoft.github.io/apm/getting-started/installation/#quick-install-recommended)
-- Required [Node.js](https://nodejs.org/en) version ≥ 18
-- React application (existing or new); see [Quick Start](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start)
+- Install [APM (Agent Package Manager)](https://microsoft.github.io/apm/getting-started/installation/#quick-install-recommended).
+- [Node.js](https://nodejs.org/en) version 18 or higher. Verify your installed version using the following command:
+
+  ```bash
+  node -v
+  ```
+
+- A React application (existing or new); see the [Syncfusion® React Quick Start](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start)
 - A supported AI agent or IDE that integrates with the Skills (VS Code, Cursor, Syncfusion® Code Studio, etc.)
+- An active subscription for the selected agent (for example, a paid GitHub Copilot, Claude, or Cursor plan) where required by the agent.
 - Active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):  
   - [Commercial](https://www.syncfusion.com/sales/unlimitedlicense)  
   - [Community License](https://www.syncfusion.com/products/communitylicense)  
@@ -32,27 +39,27 @@ Before installing React UI Builder Skill with PDF Viewer, ensure the following:
 
 ### **AI-Driven UI Generation**
 - Transforms prompts into fully developed React components rather than just partial code snippets.
-- Automatically selects appropriate Syncfusion® components and features
-- Produces structured, maintainable code
+- Automatically selects appropriate Syncfusion® components and features.
+- Produces structured, maintainable code.
 
 ### **Component Usage & API Accuracy**
-- Uses correct Syncfusion® component APIs
-- Injects required feature modules (paging, sorting, filtering, etc.)
-- Avoids unsupported or deprecated patterns
+- Uses correct Syncfusion® component APIs.
+- Injects required feature modules (paging, sorting, filtering, etc.).
+- Avoids unsupported or deprecated patterns.
 
 ### **Patterns & Best Practices**
-- Recommended component composition and state management
-- Event handling aligned with React standards
-- Secure and scalable coding patterns
+- Provides recommended component composition and state management.
+- Aligns event handling with React standards.
+- Applies secure and scalable coding patterns.
 
 ### **Accessibility & Responsiveness**
-- WCAG 2.1 AA–aligned output
-- Semantic HTML with ARIA support
-- Mobile-first responsive layouts
+- Produces output aligned with WCAG 2.1 AA.
+- Generates semantic HTML with ARIA support.
+- Builds mobile-first responsive layouts.
 
 ### **Design-System Integration**
-- Supports Tailwind, Bootstrap, Material, or custom themes
-- Ensures consistent Syncfusion® styling and theme usage
+- Supports Tailwind, Bootstrap, Material, or custom themes.
+- Ensures consistent Syncfusion® styling and theme usage.
 
 ## Installation
 
@@ -109,21 +116,21 @@ Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targe
 3. **Component Mapping:** Map intent to Syncfusion® PDF Viewer and React components, including required modules.
 4. **Theming & Design System**  
    Load required theming guidelines and confirm key design choices:
-   - CSS framework (Tailwind, Bootstrap, Material, or Greenfield(custom theme)). If no themes detected in the existing project, Greenfield and Syncfusion Tailwind3 theme are shown as the default option, which can be used as is or changed based on preference.
-   - Syncfusion theme (Tailwind3, Bootstrap5, Material3, fluent2)
+   - CSS framework (Tailwind, Bootstrap, Material, or Greenfield). When no themes are detected in the existing project, the **Greenfield** project type and the **Syncfusion Tailwind3** theme are shown as the default options, which can be used as is or changed based on preference.
+   - Syncfusion theme (Tailwind3, Bootstrap5, Material3, Fluent2)
    - Light and Dark Mode
    - Core design basics (colors, spacing, typography, responsiveness, accessibility)
-5. **Code Generation:** Produce TypeScript React components with PDF Viewer integration, props interfaces, and CSS/styling scaffolding.
-6. **Dependency Management:** Recommend or install required Syncfusion® packages and peer dependencies.
-7. **Validation:** Run accessibility and basic security checks, request confirmation for changes.
-8. **Code Insertion:** Create files or patch existing files following project structure and conventions.
+5. **Code Generation:** Produces TypeScript React components with PDF Viewer integration, props interfaces, and CSS/styling scaffolding.
+6. **Dependency Management:** Recommends or installs required Syncfusion® packages and peer dependencies, such as `@syncfusion/ej2-react-pdfviewer`.
+7. **Validation:** Runs accessibility and basic security checks, requests confirmation for changes.
+8. **Code Insertion:** Creates files or patches existing files following project structure and conventions.
 
-**Key enforcement points:**
+### Key enforcement points
 
-- Adds correct theme and CSS imports for chosen Syncfusion® themes
-- Injects only the feature modules required by generated components
-- Generates semantic HTML with ARIA attributes and keyboard support
-- Avoids unsupported or deprecated API usages for Syncfusion® components
+- Adds correct theme and CSS imports for chosen Syncfusion® themes.
+- Injects only the feature modules required by generated components.
+- Generates semantic HTML with ARIA attributes and keyboard support.
+- Avoids unsupported or deprecated API usages for Syncfusion® components.
 
 > The assistant handles most stages automatically and may request confirmation where required.
 
@@ -138,10 +145,10 @@ To start using the skill:
 
 1. Open your supported IDE.
 2. In the chat panel, select the `syncfusion-react-ui-builder` agent from the **Agent dropdown**.
-  ![Set Agent](./images/UI-Builder-Agent.png)
-3. Start prompting the agent with a clear description of your UI requirements.
+  ![Select the syncfusion-react-ui-builder agent from the Agent dropdown](./images/UI-Builder-Agent.png)
+3. Prompt the agent with a clear description of your UI requirements.
 
-> For Syncfusion® Code Studio, if the UI Builder agent is not shown, ensure that the agent location is configured to use it in the chat, and refer to the [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/usersettings#agent-file-locations) to configure the agent location properly.
+> For Syncfusion® Code Studio, if the UI Builder agent is not shown, ensure that the agent location is configured to use it in the chat, and refer to the [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/usersettings) to configure the agent location properly.
 
 **Example Prompts:**
 
@@ -159,7 +166,7 @@ Generated code follows best practices with accessible, semantic HTML, responsive
 
 ## Best Practices
 
-Follow these guidelines to get the most out of UI Builder and ensure high-quality production-ready results:
+Follow these guidelines to get the most out of the Syncfusion® React UI Builder Skill and ensure high-quality production-ready results:
 
 - **Stay consistent:** Maintain consistent file organization, naming conventions, and coding standards throughout your project.
 - **Use advanced AI models:** For best results, use **Claude Sonnet 4.6 or higher** capability models to produce better code quality and more accurate implementations.
@@ -167,30 +174,46 @@ Follow these guidelines to get the most out of UI Builder and ensure high-qualit
 
 ## Troubleshooting
 
-- **APM installation failure**: Refer to this [documentation](https://microsoft.github.io/apm/getting-started/installation/#troubleshooting)
+### APM installation failure
 
-- **Skills not loading**: Ensure the **.agent/** and **.github/agents/** folders exist in your project and that the skill was installed successfully using APM. Verify that the correct agent is selected from the Agent dropdown in your IDE.
+Refer to the [APM installation troubleshooting guide](https://microsoft.github.io/apm/getting-started/installation/#troubleshooting).
 
-- **Component not rendering**: Retry generation using the specific component skill to resolve the issue, and ensure required Syncfusion® packages and themes are properly configured.
+### Skills not loading
 
-- **Syncfusion license banner appears**: Use the licensing skill to correctly register and validate your Syncfusion® license key in the application.
+Ensure the **.agent/** and **.github/agents/** folders exist in your project and that the skill was installed successfully using APM. Verify that the correct agent is selected from the Agent dropdown in your IDE.
+
+### Agent does not appear in the dropdown
+
+In Syncfusion® Code Studio, confirm that the agent location is configured to use the local agent. See the [Code Studio user settings documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/usersettings).
+
+### Component not rendering
+
+Retry generation using the specific component skill to resolve the issue, and ensure required Syncfusion® packages and themes are properly configured.
+
+### Syncfusion® license banner appears
+
+Use the Licensing Skill to correctly register and validate your Syncfusion® license key in the application.
 
 
 ## FAQ
 
 **Which agents/IDEs are supported?**
-Any Skills-compatible agent that reads local skill files (Code Studio, VS Code, Cursor, etc.).
 
-**Are skills loaded automatically?**  
+The Syncfusion® React UI Builder Skill works with any Skills-compatible agent that reads local skill files, including Syncfusion® Code Studio, VS Code, and Cursor.
+
+**Are skills loaded automatically?**
+
 Yes. Supported agents automatically load relevant skills based on your query.
 
 **Can I customize the generated styles?**
+
 Yes. The skill supports choosing Tailwind, Bootstrap, Material, or a custom theme; generated components include clear integration points for style adjustments.
 
 **Does it modify files automatically?**
+
 The skill proposes changes and requires confirmation for insertion; automatic dependency installation may be offered depending on agent permissions.
 
 ## See also
 
 - [Agent Skills Standards](https://agentskills.io/home)
-- [Agent Package Manager](https://microsoft.github.io/apm/getting-started/quick-start/)
+- [Agent Package Manager](https://microsoft.github.io/apm/getting-started/quick-start)

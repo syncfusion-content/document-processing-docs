@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Text search in React PDF Viewer
 
-The text search feature in the React PDF Viewer locates and highlights matching content within a document. Enable or disable this capability with the following configuration.
+The text search feature in the React PDF Viewer locates and highlights matching content within a document. Toggle the feature using the [`enableTextSearch`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enabletextsearch) property (default: `true`) and inject the `TextSearch` service, as shown in the snippet below.
 
 ![Text Search](../../javascript-es6/images/textSearch.gif)
 
@@ -103,14 +103,17 @@ While the PDF Viewer toolbar offers an interactive search experience, you can al
 
 #### `searchText`
 
-Use the [`searchText`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textsearch#searchtext) method to start a search with optional filters that control case sensitivity and whole-word behavior.
+Use the [`searchText`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textsearch#searchtext) method to start a search. The method highlights every match in the document and brings the first match into view.
 
 ```ts
 // searchText(text: string, isMatchCase?: boolean)
 pdfviewer.textSearch.searchText('search text', false);
 ```
 
-Set the `isMatchCase` parameter to `true` to perform a case-sensitive search that mirrors the Match Case option in the search panel.
+**Parameters**
+
+- `text` (string) — The text to search for in the document.
+- `isMatchCase` (boolean, optional) — When `true`, performs a case-sensitive search that mirrors the **Match Case** option in the search panel. Defaults to `false`.
 
 ```ts
 // This will only find instances of "PDF" in uppercase.
@@ -119,28 +122,25 @@ pdfviewer.textSearch.searchText('PDF', true);
 
 #### `searchNext`
 
-[`searchNext`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textSearch#searchnext) method searches the next occurrence of the current query from the active match.
+The [`searchNext`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textsearch#searchnext) method searches for the next occurrence of the current query from the active match.
 
 ```ts
-// searchText(text: string, isMatchCase?: boolean)
 pdfviewer.textSearch.searchNext();
 ```
 
 #### `searchPrevious`
 
-[`searchPrevious`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textSearch#searchprevious) API searches the previous occurrence of the current query from the active match.
+The [`searchPrevious`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textsearch#searchprevious) API searches for the previous occurrence of the current query from the active match.
 
 ```ts
-// searchText(text: string, isMatchCase?: boolean)
 pdfviewer.textSearch.searchPrevious();
 ```
 
 #### `cancelTextSearch`
 
-[`cancelTextSearch`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textSearch#canceltextsearch) method cancels the current text search and removes the highlighted occurrences from the PDF Viewer.
+The [`cancelTextSearch`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textsearch#canceltextsearch) method cancels the current text search and removes the highlighted occurrences from the PDF Viewer.
 
 ```ts
-// searchText(text: string, isMatchCase?: boolean)
 pdfviewer.textSearch.cancelTextSearch();
 ```
 
@@ -199,7 +199,7 @@ export default function App() {
 {% endhighlight %}
 {% endtabs %}
 
-**Expected result:** the viewer highlights occurrences of `pdf` and navigation commands jump between matches.
+**Expected result:** the viewer highlights occurrences of `pdf` (case-insensitive, because the second argument is `false`) and navigation commands jump between matches.
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples)
 

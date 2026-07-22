@@ -7,11 +7,13 @@ control: PDF viewer
 documentation: ug
 ---
 
-# Customize the scrollbar in UWP PDF Viewer
+# Customize the Scrollbar in UWP PDF Viewer
+
+This section explains how to customize the scrollbar appearance and width in the SfPdfViewer control.
 
 ## Customize the color of the scrollbar thumb
 
-The PDF viewer uses the [ScrollViewer] (https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.scrollviewer?view=winrt-19041) control to scroll the pages of a PDF. The color of the vertical and horizontal scrollbar thumbs can be customized using the following code. 
+The PDF Viewer uses the [`ScrollViewer`](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.scrollviewer?view=winrt-19041) control to scroll the pages of a PDF. The color of the vertical and horizontal scrollbar thumbs can be customized using the following code.
  
 {% tabs %}
 {% highlight xaml %}
@@ -28,14 +30,14 @@ The PDF viewer uses the [ScrollViewer] (https://docs.microsoft.com/en-us/uwp/api
 
 ## Customize the width of the vertical scrollbar
 
-The width of the vertical scrollbar of the [ScrollViewer](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.scrollviewer?view=winrt-20348) can be modified by using the [VerticalScrollBarWidth](https://help.syncfusion.com/cr/uwp/Syncfusion.Windows.PdfViewer.SfPdfViewerControl.html#Syncfusion_Windows_PdfViewer_SfPdfViewerControl_VerticalScrollBarWidth) property. The default value of the API is as same as the default width of the vertical scrollbar of the [ScrollViewer](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.scrollviewer?view=winrt-20348) control.
+The width of the vertical scrollbar of the [`ScrollViewer`](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.scrollviewer?view=winrt-20348) can be modified by using the [`VerticalScrollBarWidth`](https://help.syncfusion.com/cr/uwp/Syncfusion.Windows.PdfViewer.SfPdfViewerControl.html#Syncfusion_Windows_PdfViewer_SfPdfViewerControl_VerticalScrollBarWidth) property. The default value of this property matches the default width of the vertical scrollbar of the [`ScrollViewer`](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.scrollviewer?view=winrt-20348) control.
 
 {% tabs %}
 {% highlight c# %}
 
-//Sets the width of the vertical scrollbar in the PDF Viewer. 
-pdfViewerControl.VerticalScrollBarWidth = 100; 
-//Gets the width of the vertical scrollbar in the PDF Viewer. 
+// Sets the width of the vertical scrollbar in the PDF Viewer.
+pdfViewerControl.VerticalScrollBarWidth = 100;
+// Gets the width of the vertical scrollbar in the PDF Viewer.
 double verticalScrollBarWidth = pdfViewerControl.VerticalScrollBarWidth;
 
 {% endhighlight %}
