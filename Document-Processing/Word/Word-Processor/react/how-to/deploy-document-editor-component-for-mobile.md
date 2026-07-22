@@ -12,9 +12,11 @@ domainurl: ##DomainURL##
 
 ## Document editor component for Mobile
 
+N> Before proceeding, ensure the `@syncfusion/ej2-react-documenteditor` package is installed in your application. Refer to the [Getting Started](https://ej2.syncfusion.com/react/documentation/document-editor/getting-started) guide for setup.
+
 At present, [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) component is not responsive for mobile, and we haven't ensured the editing functionalities in mobile browsers. Whereas it works properly as a document viewer in mobile browsers.
 
-Hence, it is recommended to switch the Document editor component as read-only in mobile browsers. Also, invoke [`fitPage`](https://ej2.syncfusion.com/react/documentation/api/document-editor#fitpage/) method with `FitPageWidth` parameter in document change event, such as to display one full page by adjusting the zoom factor.
+Hence, it is recommended to switch the Document editor component as read-only in mobile browsers. Also, invoke [`fitPage`](https://ej2.syncfusion.com/react/documentation/api/document-editor#fitpage/) method with `FitPageWidth` parameter in the [`documentChange`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container#documentchange) event, such as to display one full page by adjusting the zoom factor.
 
 The following example code illustrates how to deploy Document Editor component for Mobile.
 
