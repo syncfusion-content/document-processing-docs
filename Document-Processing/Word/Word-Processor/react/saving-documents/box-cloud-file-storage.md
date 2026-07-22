@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Save document to Box cloud file storage in React DOCX Editor
+title: Save document to Box cloud file storage in React DOCX Editor | Syncfusion
 description: Learn how to save a document to Box cloud file storage in the Syncfusion React Document Editor of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to Box cloud file storage
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Box cloud file storage in React DOCX Editor
+# Save document to Box cloud file storage using React DOCX Editor
 
 To save a document to Box cloud file storage, you can follow the steps below.
 
