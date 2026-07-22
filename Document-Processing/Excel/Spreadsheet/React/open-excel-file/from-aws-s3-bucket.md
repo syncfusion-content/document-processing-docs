@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Opening excel from AWS S3 in React Spreadsheet control | Syncfusion
-description: Learn about how to Open an Excel file from AWS S3 in React Spreadsheet control of Syncfusion Essential JS 2 and more details.
+title: Open Excel from AWS S3 in React Spreadsheet Control | Syncfusion
+description: How to open an Excel file from AWS S3 in the React Spreadsheet control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Open file from AWS S3
 documentation: ug

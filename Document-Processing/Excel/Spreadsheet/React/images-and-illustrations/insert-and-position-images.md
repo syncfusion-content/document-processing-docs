@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Insert and Position images in React Spreadsheet component | Syncfusion
+title: Insert and Position Images in React Spreadsheet component | Syncfusion
 description: Learn here how to customize images in the Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
-control: Images
+control: Spreadsheet
 platform: document-processing
 documentation: ug
 ---
 
-# Insert and Position images in React Spreadsheet
+# Insert and position images in React Spreadsheet
 
 In the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component, images can be inserted into a worksheet and placed in a specific cell. The target cell determines where the image initially appears, and the image is rendered as an overlay on top of the grid.
 

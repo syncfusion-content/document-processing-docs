@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Calculation Mode in React Spreadsheet component | Syncfusion
-description: Learn here all about calculation mode in React Spreadsheet component of Syncfusion Essential JS 2 and more.
-control: Formulas 
+description: Learn about the calculation mode in the React Spreadsheet component of Syncfusion Essential JS 2 and more.
+control: Spreadsheet
 platform: document-processing
 documentation: ug
 ---
@@ -11,8 +11,8 @@ documentation: ug
 
 The Spreadsheet provides a **Calculation Mode** feature similar to the calculation options in online Excel. This feature lets you control when and how formulas are recalculated in the spreadsheet. The available modes are:
 
-* **Automatic**: Formulas recalculate instantly whenever a change is made in dependent cells.  
-* **Manual**: Formulas recalculate only when explicitly triggered by the user using options like **Calculate Sheet** or **Calculate Workbook**.
+* **Automatic**: Formulas are recalculated instantly whenever a change is made in dependent cells.  
+* **Manual**: Formulas are recalculated only when explicitly triggered by the user using options like **Calculate Sheet** or **Calculate Workbook**.
 
 You can configure the calculation mode using the [`calculationMode`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#calculationmode) property of the Spreadsheet. These modes give flexibility to balance real-time updates with performance optimization.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Built-in Formulas and Functions in React Spreadsheet | Syncfusion
-description: Learn here all about built in formulas and functions in React Spreadsheet component of Syncfusion Essential JS 2 and more.
+description: Learn here all about built-in formulas and functions in React Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Formulas 
 platform: document-processing
 documentation: ug

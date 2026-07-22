@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Create User Defined Functions / Custom Functions in React Spreadsheet
+# Create User-Defined Functions / Custom Functions in React Spreadsheet
 
 The Spreadsheet includes a set of built-in formulas. For convenience, you can find the list of supported formulas [here](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/formulas#supported-formulas).
 
