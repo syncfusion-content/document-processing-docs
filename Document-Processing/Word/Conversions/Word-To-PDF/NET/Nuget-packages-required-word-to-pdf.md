@@ -29,7 +29,7 @@ Package manager console command
 <tbody>
 <tr>
 <td>
-{{'[Windows Forms](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-windows-forms)'| Â markdownify }}, Console Application (Targeting .NET Framework)
+{{'[Windows Forms](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-window-forms)'| Â markdownify }}, Console Application (Targeting .NET Framework)
 </td>
 <td>
 <a href="https://www.nuget.org/packages/Syncfusion.DocToPdfConverter.WinForms">Syncfusion.DocToPdfConverter.WinForms</a>
