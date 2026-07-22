@@ -16,52 +16,55 @@ N> * The default value for `allowFindAndReplace` property is `true`.
 
 ## Find
 
-Find feature is used to select the matched contents of a cell within the sheet or workbook. It is extremely useful when working with large set of data source.
+The Find feature selects cells containing content that matches the search value within the current worksheet or workbook. It is useful when working with large data sources.
 
-**User Interface**:
 
-Find can be done by any of the following ways:
+To find a value:
 
-* Select the Search icon in the Ribbon toolbar or use `Ctrl + F` key to open the Find dialog.
-* Use find Next and find Previous buttons to search the given value in the workbook.
-* Select the option button in Find dialog to open the Find and Replace dialog. Then, select the below properties for enhanced searching.
+1. Select the **Search** icon in the Ribbon or press `Ctrl + F` to open the Find dialog.
+2. Enter the value to search for.
+3. Select **Find Next** or **Find Previous** to navigate between matching cells.
+4. Open the additional search options to configure the search scope, direction, case sensitivity, or exact-cell matching.
 
-N> * `Search within`: To search the target in a sheet (default) or in an entire workbook.
-<br/> * `Search by`: It enhance the search, either By Rows (default), or By Columns.
-<br/> * `Match case`: To find the matched value with case sensitive.
-<br/> * `Match exact cell contents`: To find the exact matched cell value with entire match cases.
+You can also use the `find()` method to perform the find operation programmatically.
 
-* Using `find()` method to perform find operation.
+N> The Find dialog provides the following options:
+<br/> * `Search within`: Searches within the current worksheet or the entire workbook. The default scope is the current worksheet.
+<br/> * `Search by`: Searches by rows or columns. The default direction is by rows.
+<br/> * `Match case`: Finds values that match the capitalization of the search value.
+<br/> * `Match exact cell contents`: Finds cells whose complete content exactly matches the search value.
 
 ## Replace
 
-Replace feature is used to change the find contents of a cell within sheet or workbook. Replace All is used to change all the matched contents of a cell within sheet or workbook.
+The Replace feature changes matching cell content within the current worksheet or workbook. The **Replace All** option changes all matching cells within the selected search scope.
 
-**User Interface**:
+To replace a value:
 
-Replace can be done by any of the following ways:
+1. Press `Ctrl + H` to open the Find and Replace dialog.
+2. Enter the value to find and the replacement value.
+3. Select **Replace** to replace the current match.
+4. Select **Replace All** to replace all matching cells within the selected worksheet or workbook scope.
 
-* Use `Ctrl + H` key to open the Find and Replace dialog.
-* Use Replace button to change the found value in sheet or workbook.
-* Using Replace All button, all the matched criteria can be replaced with find value based on sheet or workbook.
-* Using `replace()` method to perform replace operation by passing the argument `args.replaceby` as `replace`.
-* Using `replace()` method to perform replace all operation by passing the argument `args.replaceby` as `replaceall`.
+You can also use the `replace()` method to perform Replace and Replace All operations programmatically.
 
 ## Go to
 
-Go to feature is used to navigate to a specific cell address in the sheet or workbook.
+The Go To feature navigates to a specified cell address in a worksheet.
 
-**User Interface**:
+To navigate to a cell:
 
-* Use `Ctrl + G` key to open the Go To dialog.
-* Use `goTo()` method to perform Go To operation.
+1. Press `Ctrl + G` to open the **Go To** dialog.
+2. Enter the required cell address.
+3. Confirm the operation to navigate to the specified cell.
 
-In the following sample, searching can be done by following ways:
+You can also use the `goTo()` method to navigate to a cell programmatically.
 
-* Select the Home tab in the Ribbon toolbar, and then select the Search icon.
-* Enter any value in the search textbox.
-* Select the next (or) previous button to find the entered value in the spreadsheet.
-* You can have more options to find values by selecting the more options in the search toolbar.
+The following example demonstrates how to find values in the Spreadsheet:
+
+1. Open the **Home** tab in the Ribbon and select the **Search** icon.
+2. Enter a value in the search box.
+3. Select **Next** or **Previous** to navigate between matching cells.
+4. Open the additional search options to customize the search.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}

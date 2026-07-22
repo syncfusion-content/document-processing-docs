@@ -10,7 +10,7 @@ documentation: ug
 
 # Undo and Redo in ASP.NET MVC Spreadsheet control
 
-`Undo` option helps you to undone the last action performed and `Redo` option helps you to do the same action which is reverted in the Spreadsheet. You can use the [`allowUndoRedo`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowUndoRedo) property to enable or disable undo redo functionality in spreadsheet.
+The `Undo` option reverses the last action performed in the Spreadsheet. The `Redo` option reapplies the most recently undone action. Use the [`allowUndoRedo`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowUndoRedo) property to enable or disable undo and redo functionality in the Spreadsheet.
 
 N> * The default value for `allowUndoRedo` property is `true`.
 
@@ -18,23 +18,23 @@ By default, the `UndoRedo` module is injected internally into Spreadsheet to per
 
 ## Undo
 
-It reverses the last action you performed with Spreadsheet. Undo can be done by any of the following ways:
+Undo reverses the last action performed in the Spreadsheet. You can perform an undo operation in one of the following ways:
 
-* Select the undo item from HOME tab in Ribbon toolbar.
-* Use `Ctrl + Z` keyboard shortcut to perform the undo.
-* Use the `undo` method programmatically.
+* Open the **Home** tab in the Ribbon and choose **Undo**.
+* Press `Ctrl + Z`.
+* Use the `undo()` method programmatically.
 
 ## Redo
 
-It reverses the last undo action you performed with Spreadsheet. Redo can be done by any of the following ways:
+Redo reapplies the action that was most recently undone in the Spreadsheet.You can perform a redo operation in one of the following ways:
 
-* Select the redo item from HOME tab in Ribbon toolbar.
-* Use `Ctrl + Y` keyboard shortcut to perform the redo.
-* Use the `redo` method programmatically.
+* Open the **Home** tab in the Ribbon and choose **Redo**.
+* Press `Ctrl + Y`.
+* Use the `redo()` method programmatically.
 
-## Update custom actions in UndoRedo collection
+## Update custom actions in the UndoRedo collection
 
-You can update your own custom actions in UndoRedo collection, by using the `updateUndoRedoCollection` method. And also customize the undo redo operations of your custom action by using `actionComplete` event.
+Use the `updateUndoRedoCollection()` method to add or update custom actions in the UndoRedo collection. Use the `actionComplete` event to customize the undo and redo behavior of a custom action.
 
 The following code example shows `How to update and customize your own actions for undo redo` functionality in the Spreadsheet control.
 

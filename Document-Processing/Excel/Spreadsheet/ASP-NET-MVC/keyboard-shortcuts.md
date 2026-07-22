@@ -120,8 +120,8 @@ The following keyboard shortcuts are supported in the Spreadsheet:
 |----------|-------------|
 | Ctrl + 9 | Hides the selected row. |
 | Ctrl + 0 | Hides the selected column. |
-| Ctrl + Shift + 9 | Unhides the selected rows. |
-| Ctrl + Shift + 0 | Unhides the selected columns. |
+| Ctrl + Shift + 9 | Unhide the selected rows. |
+| Ctrl + Shift + 0 | Unhide the selected columns. |
 
 ## Open menu navigation
 

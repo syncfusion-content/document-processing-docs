@@ -14,11 +14,11 @@ Worksheet is a collection of cells organized in the form of rows and columns tha
 
 ## Add sheet
 
-You can dynamically add or insert a sheet by one of the following ways,
+You can add or insert a worksheet in one of the following ways:
 
-* Click the `Add Sheet` button in the sheet tab. This will add a new empty sheet next to current active sheet.
-* Right-click on the sheet tab, and then select `Insert` option from the context menu to insert a new empty sheet before the current active sheet.
-* Using `insertSheet`method, you can insert one or more sheets at your desired index.
+* Select **Add Sheet** on the sheet tab bar to add an empty worksheet next to the active worksheet.
+* Right-click a sheet tab and choose **Insert** from the context menu to insert an empty worksheet before the active worksheet.
+* Use the `insertSheet()` method to insert one or more worksheets at a specified index.
 
 The following code example shows the insert sheet operation in spreadsheet.
 
@@ -33,7 +33,7 @@ The following code example shows the insert sheet operation in spreadsheet.
 
 ### Insert a sheet programmatically and make it active sheet
 
-A sheet is a collection of cells organized in the form of rows and columns that allows you to store, format, and manipulate the data. Using `insertSheet` method, you can insert one or more sheets at the desired index. Then, you can make the inserted sheet as active sheet by focusing the start cell of that sheet using the `goTo` method.
+Use the `insertSheet()` method to insert one or more worksheets at the required index. After inserting a sheet, use the `goTo()` method to focus its first cell and make it the active worksheet.
 
 The following code example shows how to insert a sheet programmatically and make it the active sheet.
 
@@ -49,16 +49,14 @@ The following code example shows how to insert a sheet programmatically and make
 
 ## Delete sheet
 
-The Spreadsheet has support for removing an existing worksheet. You can dynamically delete the existing sheet by the following way,
+You can delete an existing worksheet in one of the following ways:
 
-* Right-click on the sheet tab, and then select `Delete` option from context menu.
-* Using `delete` method to delete the sheets.
+* Right-click the sheet tab and choose **Delete** from the context menu.
+* Use the appropriate delete method to remove a worksheet programmatically.
 
 ## Rename sheet
 
-You can dynamically rename an existing worksheet in the following way,
-
-* Right-click on the sheet tab, and then select `Rename` option from the context menu.
+* To rename a worksheet, right-click its sheet tab and choose **Rename** from the context menu.
 
 ## Headers
 
@@ -67,12 +65,16 @@ By default, the row and column headers are visible in worksheets. You can dynami
 * Switch to `View` tab, and then select `Hide Headers` option to hide both the row and column headers.
 * Set `showHeaders` property in `sheets` as `true` or `false` to show or hide the headers at initial load. By default, the `showHeaders` property is enabled in each worksheet.
 
+N> The default value of the `showHeaders` property is `true`.
+
 ## Gridlines
 
-Gridlines act as a border like appearance of cells. They are used to distinguish cells on the worksheet. You can dynamically show or hide gridlines by using one of the following ways,
+Gridlines are visual separators that help distinguish cells in a worksheet.You can show or hide gridlines in one of the following ways:
 
 * Switch to `View` tab, and then select `Hide Gridlines` option to hide the gridlines in worksheet.
 * Set `showGridLines` property in `sheets` as `true` or `false` to show or hide the gridlines at initial load. By default, the `showGridLines` property is enabled in each worksheet.
+
+N> The default value of the `showGridLines` property is `true`.
 
 The following code example shows the headers and gridlines operation in spreadsheet.
 
