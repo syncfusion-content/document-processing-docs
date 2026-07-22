@@ -1,14 +1,20 @@
----
+﻿---
 title: Convert an Excel document to Image on Linux | Syncfusion
-description: Convert an Excel document to Image in .NET Core application on Linux using Syncfusion .NET Core Excel library (XlsIO) without Microsoft Office
+description: Convert an Excel document to an image in a .NET Core application on Linux using the Syncfusion .NET Core Excel library (XlsIO), without Microsoft Office.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 # Convert an Excel document to Image on Linux
 
-Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to Image on Linux**.
+Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) used to create, read, edit, and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to an image on Linux**.
 
+## Prerequisites
+
+Install the following before proceeding:
+
+* **.NET SDK 6.0 or later** (verify with `dotnet --version`).
+* **Supported Linux distributions**: Ubuntu 20.04+, Debian 11+, CentOS 8+, RHEL 8+, or equivalent.
 ## Steps to convert an Excel document to Image on Linux
 
 {% tabcontents %}
@@ -26,14 +32,14 @@ Step 3: Select the framework and click **Create** button.
 
 ![Framework version](Linux_images/Linux_images_img3.png)
 
-Step 4: Install the following Nuget packages in your application from [NuGet.org](https://www.nuget.org/) by execute the following command.
+Step 4: Install the following NuGet packages in your application from [NuGet.org](https://www.nuget.org/) by executing the following commands:
 
 * [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core)
 * [SkiaSharp.NativeAssets.Linux](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)
 * [HarfBuzzSharp.NativeAssets.Linux](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.1.1)
 
 {% tabs %}
-{% highlight KCONFIG %}
+{% highlight text %}
 dotnet add package Syncfusion.XlsIORenderer.Net.Core -v 30.1.37 -s https://www.nuget.org/
 dotnet add package SkiaSharp.NativeAssets.Linux -v 3.119.1 -s https://www.nuget.org/
 dotnet add package HarfBuzzSharp.NativeAssets.Linux -v 8.3.1.1 -s https://www.nuget.org/
@@ -51,16 +57,19 @@ using Syncfusion.XlsIORenderer;
 {% endtabs %}
 
 Step 6: Add the following code snippet in Program.cs file.
+
+N> The `worksheet.ConvertToImage(IRange, Stream)` overload used below requires the ``XlsIORenderer`` to be assigned to ``application.XlsIORenderer`` (already shown in the code) and writes the image to the supplied ``MemoryStream`` in **PNG** format. The file is saved with a `.jpeg` extension for compatibility; if you need a true JPEG, convert the PNG bytes or use the `IImageOrPrintOptions` overload. Ensure that a valid Syncfusion license key is registered before running.
+
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
-	IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
+    IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
     IWorksheet worksheet = workbook.Worksheets[0];
 
-    //Initialize XlsIORenderer
+    //Initialize XlsIORenderer (required by ConvertToImage(IRange, Stream))
     application.XlsIORenderer = new XlsIORenderer();
 
     //Create the MemoryStream to save the image  
@@ -92,21 +101,21 @@ Step 2: Name the project and create the project.
 
 ![Name the project](Linux_images/Linux_images_img5.png)
 
-Alternatively, create a ASP.NET Core console application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+Alternatively, create a .NET Core console application using the following command in the terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 ```
 dotnet new console -o ConvertExcelToImage
 cd ConvertExcelToImage
 ```
 
-Step 3: Install the following Nuget packages in your application from [NuGet.org](https://www.nuget.org/) by execute the following command.
+Step 3: Install the following NuGet packages in your application from [NuGet.org](https://www.nuget.org/) by executing the following commands:
 
-* [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core)
+* [Syncfusion.XlsIORenderer.NET.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.NET.Core)
 * [SkiaSharp.NativeAssets.Linux](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)
 * [HarfBuzzSharp.NativeAssets.Linux](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.1.1)
 
 {% tabs %}
-{% highlight KCONFIG %}
+{% highlight text %}
 dotnet add package Syncfusion.XlsIORenderer.Net.Core -v 30.1.37 -s https://www.nuget.org/
 dotnet add package SkiaSharp.NativeAssets.Linux -v 3.119.1 -s https://www.nuget.org/
 dotnet add package HarfBuzzSharp.NativeAssets.Linux -v 8.3.1.1 -s https://www.nuget.org/
@@ -120,20 +129,24 @@ Step 4: Include the following Namespaces in the Program.cs file.
 {% highlight c# tabtitle="C#" %}
 using Syncfusion.XlsIO;
 using Syncfusion.XlsIORenderer;
+using System.IO;
 {% endhighlight %}
 {% endtabs %}
 
 Step 5: Add the following code snippet in Program.cs file.
+
+N> The `worksheet.ConvertToImage(IRange, Stream)` overload used below requires the ``XlsIORenderer`` to be assigned to ``application.XlsIORenderer`` (already shown in the code) and writes the image to the supplied ``MemoryStream`` in **PNG** format. The file is saved with a `.jpeg` extension for compatibility; if you need a true JPEG, convert the PNG bytes or use the `IImageOrPrintOptions` overload. Ensure that a valid Syncfusion license key is registered before running.
+
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
-	IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
+    IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
     IWorksheet worksheet = workbook.Worksheets[0];
 
-    //Initialize XlsIORenderer
+    //Initialize XlsIORenderer (required by ConvertToImage(IRange, Stream))
     application.XlsIORenderer = new XlsIORenderer();
 
     //Create the MemoryStream to save the image  
@@ -164,6 +177,6 @@ By executing the program, you will get the **Image** as follows.
 
 ![Output File](Linux_images/Linux_images_img6.png)
 
-Click [here](https://www.syncfusion.com/document-processing/excel-framework/net) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
+Click [here](https://www.syncfusion.com/document-sdk/net-excel-library) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
 An online sample link to [convert an Excel document to Image](https://ej2.syncfusion.com/aspnetcore/Excel/WorksheetToImage#/material3) in ASP.NET Core.

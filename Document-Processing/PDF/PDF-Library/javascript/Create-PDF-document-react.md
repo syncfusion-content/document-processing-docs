@@ -86,8 +86,9 @@ Replace `YOUR_LICENSE_KEY` with the key from your Syncfusion account. For more i
 
 Replace the contents of `App.jsx` with the following code. The file imports the PDF classes as named exports from `@syncfusion/ej2-pdf` and creates a one-page PDF with a click handler.
 
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
 {% raw %}
-{% highlight javascript %}
 
 import React from 'react';
 import { registerLicense } from '@syncfusion/ej2-base';
@@ -135,8 +136,9 @@ export default function App() {
   );
 }
 
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 N> This sample uses **named imports** from the npm package (`import { PdfDocument, ... } from '@syncfusion/ej2-pdf'`). The npm package does not expose a global `ej` namespace; using `ej.pdf.PdfDocument` without an import will throw `ReferenceError: ej is not defined` in a Vite or Create-React-App build. If you prefer the UMD-style global, load `ej2.min.js` from the Syncfusion CDN in `index.html` instead of importing the npm package.
 

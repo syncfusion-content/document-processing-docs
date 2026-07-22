@@ -8,15 +8,19 @@ documentation: UG
 
 # Create Word document in Amazon Web Services (AWS)
 
-Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and convert Word documents programmatically without **Microsoft Word** or interop dependencies. Using this library, **create a Word document in Amazon Web Services (AWS)** within a few lines of code. 
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and convert Word documents programmatically without **Microsoft Word** or interop dependencies. This page is an overview that links to service-specific guides for creating a Word document in Amazon Web Services (AWS) using the .NET Core Word (DocIO) library in C#.
 
-N> If this is your first time working with Amazon Web Services (AWS), please refer to the dedicated AWS resources. This section explains how to create Word document in C# using the .NET Core Word (DocIO) library in AWS. 
+N> If this is your first time working with Amazon Web Services (AWS), refer to the [AWS getting started resources](https://aws.amazon.com/getting-started/) before proceeding.
 
 ## Prerequisites 
 
-* An active **Amazon Web Services (AWS) account** is required. If you don’t have one, please [create an account](https://aws.amazon.com/) before starting.
+* An active **Amazon Web Services (AWS) account** is required. If you don’t have one, please [create an account](https://aws.amazon.com/) before starting. Ensure your IAM user has the permissions required to deploy and invoke the target AWS service (Lambda or Elastic Beanstalk).
 
-* Download and install the **AWS Toolkit** for Visual Studio, you can download the AWS toolkit from this [link](https://aws.amazon.com/visualstudio/). The Toolkit can be installed from Tools/Extension and updates options in Visual Studio.
+* **Visual Studio 2022** (or later) with the **.NET Core cross-platform development** workload, and a supported **.NET Core / .NET** SDK. Download it from [visualstudio.microsoft.com](https://visualstudio.microsoft.com/).
+
+## Supported AWS services
+
+The following AWS services are supported for creating a Word document with DocIO. Select a service to view the full, step-by-step walkthrough including code samples.
 
 ## Amazon Web Services (AWS)
 
@@ -37,3 +41,10 @@ NuGet package name<br/></th></tr></thead>
 {{'[Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core)' | markdownify}}<br/> 
 </td></tr>
 </table>
+
+## See Also
+
+* [Getting started with a simple Word document](https://help.syncfusion.com/document-processing/word/word-library/net/getting-started)
+* [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview)
+* [Create Word document in ASP.NET Core](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-asp-net-core)
+* [Create Word document in Linux](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-linux)

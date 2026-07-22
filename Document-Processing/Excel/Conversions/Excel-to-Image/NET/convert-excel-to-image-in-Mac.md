@@ -1,13 +1,21 @@
----
+﻿---
 title: Convert an Excel document to Image on Mac | Syncfusion
-description: Convert an Excel document to Image on Mac using Syncfusion .NET Core Excel library (XlsIO) without Microsoft Office
+description: Convert an Excel document to an image on Mac using the Syncfusion .NET Core Excel library (XlsIO), without Microsoft Office.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 # Convert an Excel document to Image on Mac
 
-Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to Image on Mac**.
+Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) used to create, read, edit, and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to an image on Mac**.
+
+## Prerequisites
+
+Install the following before proceeding:
+
+* **.NET SDK 6.0 or later** (verify with `dotnet --version`).
+* **Supported macOS versions**: macOS 11 (Big Sur) or later, on both Intel and Apple Silicon (M1/M2/M3) Macs.
+* A valid **Syncfusion license key** registered in the project (see the licensing note after Step 4 / Step 3).
 
 ## Steps to convert an Excel document to Image on Mac
 
@@ -41,16 +49,19 @@ using Syncfusion.XlsIORenderer;
 {% endtabs %}
 
 Step 6: Add the following code snippet in Program.cs file.
+
+N> The `worksheet.ConvertToImage(IRange, Stream)` overload used below requires the ``XlsIORenderer`` to be assigned to ``application.XlsIORenderer`` (already shown in the code) and writes the image to the supplied ``MemoryStream`` in **PNG** format. The file is saved with a `.jpeg` extension for compatibility; if you need a true JPEG, convert the PNG bytes or use the `IImageOrPrintOptions` overload. Ensure that a valid Syncfusion license key is registered before running.
+
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
-	IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
+    IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
     IWorksheet worksheet = workbook.Worksheets[0];
 
-    //Initialize XlsIORenderer
+    //Initialize XlsIORenderer (required by ConvertToImage(IRange, Stream))
     application.XlsIORenderer = new XlsIORenderer();
 
     //Create the MemoryStream to save the image  
@@ -82,15 +93,15 @@ Step 2: Name the project and create the project.
 
 ![Name the project](Mac_images/MacOS_images_img6.png)
 
-Alternatively, create a ASP.NET Core console application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+Alternatively, create a .NET Core console application using the following command in the terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 ```
 dotnet new console -o ConvertExcelToImage
 cd ConvertExcelToImage
 ```
 
-Step 3: To **Convert an Excel document to Image in .NET Core app**,run the following command to  install [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) package.
-![Install Syncfusion.XlsIORenderer.Net.Core Nuget Package](Mac_images/MacOS_images_img7.png)
+Step 3: To convert an Excel document to an image in a .NET Core app, run the following command to install the [Syncfusion.XlsIORenderer.NET.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.NET.Core) NuGet package.
+![Install Syncfusion.XlsIORenderer.NET.Core NuGet Package](Mac_images/MacOS_images_img7.png)
 
 ```
 dotnet add package Syncfusion.XlsIORenderer.Net.Core
@@ -107,16 +118,19 @@ using Syncfusion.XlsIORenderer;
 {% endtabs %}
 
 Step 5: Add the following code snippet in Program.cs file.
+
+N> The `worksheet.ConvertToImage(IRange, Stream)` overload used below requires the ``XlsIORenderer`` to be assigned to ``application.XlsIORenderer`` (already shown in the code) and writes the image to the supplied ``MemoryStream`` in **PNG** format. The file is saved with a `.jpeg` extension for compatibility; if you need a true JPEG, convert the PNG bytes or use the `IImageOrPrintOptions` overload. Ensure that a valid Syncfusion license key is registered before running.
+
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
-	IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
+    IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
     IWorksheet worksheet = workbook.Worksheets[0];
 
-    //Initialize XlsIORenderer
+    //Initialize XlsIORenderer (required by ConvertToImage(IRange, Stream))
     application.XlsIORenderer = new XlsIORenderer();
 
     //Create the MemoryStream to save the image  

@@ -14,21 +14,24 @@ Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.sync
 
 Step 1: Create a new C# Blazor Web application project.
 
-![Create Blazor Server Side web application in Visual Studio](Blazor_images/Blazor_Server_Web_img1.png)
+![Create a Blazor Server-Side web application in Visual Studio](Blazor_images/Blazor_Server_Web_img1.png)
 
 Step 2: Name the project.
 
-![Name the Blazor Web Server Side application in Visual Studio](Blazor_images/Blazor_Server_Web_img2.png)
+![Name the Blazor Server-Side application in Visual Studio](Blazor_images/Blazor_Server_Web_img2.png)
 
-Step 3: Select the framework and click Create button.
+Step 3: Select the framework and click **Create**.
 
-![Select the framework in Blazor Server Side application in Visual Studio](Blazor_images/Blazor_Server_Web_img3.png)
+![Select the framework in the Blazor Server-Side application in Visual Studio](Blazor_images/Blazor_Server_Web_img3.png)
 
-Step 4: Install the [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) NuGet package as reference to your Blazor web application from [NuGet.org](https://www.nuget.org).
+Step 4: Install the [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) NuGet package as a reference to your Blazor web application from [NuGet.org](https://www.nuget.org/). This package transitively pulls in the required `Syncfusion.XlsIO.Net.Core` and `Syncfusion.Pdf.Net.Core` assemblies.
 
-![Install Syncfusion.XlsIORenderer.Net.Core Nuget Package](Blazor_images/Blazor_Server_Web_img4.png)
+![Install Syncfusion.XlsIORenderer.Net.Core NuGet Package](Blazor_images/Blazor_Server_Web_img4.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must also add the `Syncfusion.Licensing` reference and register a license key. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn how to register the Syncfusion<sup>&reg;</sup> license key. The simplest approach is to add the following call in `Program.cs` before `app.Run()`:
+> ```csharp
+> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+> ```
 
 Step 5: Create a razor file with name as ``Excel`` under ``Pages`` folder, which is located inside the ``Components`` folder and include the following namespaces in the file.
 
