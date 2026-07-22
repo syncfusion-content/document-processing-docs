@@ -1,6 +1,6 @@
 ---
 title: Dialogs in WPF RichTextBox control | Syncfusion
-description: Learn here all about Dialogs support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+description: Learn about the Dialogs support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
@@ -34,7 +34,7 @@ The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor
 
 * Styles Dialog
 
-## UI Commands for accessing dialogs
+## UI Commands to Access Dialogs
 
 The following code example demonstrates how to show the built-in dialogs in SfRichTextBoxAdv through command binding.
 {% tabs %}
@@ -62,9 +62,9 @@ The following code example demonstrates how to show the built-in dialogs in SfRi
 <!-- Binds button to the ShowBordersAndShadingDialogCommand -->
 <Button Content="Borders and Shading" Command="RichTextBoxAdv:SfRichTextBoxAdv.ShowBordersAndShadingDialogCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}" />
 <!-- Binds button to the ShowStyleDialogCommand -->
-<Button Content="Create style" Command="Syncfusion:SfRichTextBoxAdv.ShowStyleDialogCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}" />
+<Button Content="Create Style" Command="RichTextBoxAdv:SfRichTextBoxAdv.ShowStyleDialogCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}" />
 <!-- Binds button to the ShowStylesDialogCommand -->
-<Button Content="Modify style" Command="Syncfusion:SfRichTextBoxAdv.ShowStylesDialogCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}" />
+<Button Content="Modify Style" Command="RichTextBoxAdv:SfRichTextBoxAdv.ShowStylesDialogCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}" />
 {% endhighlight %}
 
 {% endtabs %}
@@ -151,7 +151,7 @@ Public Partial Class FontWindow
 	Public Sub New(rte As SfRichTextBoxAdv)
 		InitializeComponent()
 		fontDialog.DataContext = rte
-		AddHandler this.Loaded, AddressOf FontWindow_Loaded
+		AddHandler Me.Loaded, AddressOf FontWindow_Loaded
 	End Sub
 ''' <summary>
 ''' Called when the font window is loaded.
@@ -167,7 +167,7 @@ Private Sub FontWindow_Loaded(sender As Object, e As RoutedEventArgs)
 	End If
 	Dim applybutton As Button = TryCast(font.Template.FindName("PART_ApplyFontFormatButton", TryCast(font, FrameworkElement)), Button)
 	If applybutton IsNot Nothing Then
-		Addhandler applybutton.Click, AddressOf Applybutton_Click
+		AddHandler applybutton.Click, AddressOf Applybutton_Click
 	End If
 End Sub
 
@@ -262,7 +262,7 @@ Public Partial Class MainWindow
 	Public Sub New()
 		InitializeComponent()
 		fontWindow = New FontWindow(richTextBoxAdv)
-		AddHandler this.Unloaded, AddressOf MainWindow_Unloaded
+		AddHandler Me.Unloaded, AddressOf MainWindow_Unloaded
 	End Sub
 	Private Sub MainWindow_Unloaded(sender As Object, e As RoutedEventArgs)
 	fontWindow.Close()
@@ -279,4 +279,9 @@ End Class
 {% endhighlight %}
 {% endtabs %}
 
-N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations.You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to knows how to render and configure the editing tools. 
+N> The same pattern can be followed to create custom windows for other dialogs such as Paragraph, List, Insert Table, Hyperlink, Find and Replace, Password, Table Properties, Table Options, Cell Options, Borders and Shading, and Styles. Replace the `FontDialog` control with the corresponding dialog control (e.g., `ParagraphDialog`, `ListDialog`, etc.).
+
+## See Also
+
+- [WPF RichTextBox Feature Tour](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor)
+- [WPF RichTextBox Examples](https://github.com/syncfusion/docx-editor-sdk-wpf-demos)
