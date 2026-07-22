@@ -136,7 +136,7 @@ The following features are not supported in Formatting:
 
 ## Note
 
-You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for feature highlights. You can also explore our [React Spreadsheet example](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/getting-started) to learn how to present and manipulate data.
+You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for feature highlights.
 
 ## See Also
 
