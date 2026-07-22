@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Sheet Visibility
+# Sheet Visibility in React Spreadsheet Component
 
 Hiding a worksheet can help prevent unauthorized or accidental changes to your file.
 
