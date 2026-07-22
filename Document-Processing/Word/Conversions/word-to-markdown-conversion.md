@@ -24,7 +24,7 @@ Refer to the following links for assemblies and NuGet packages required based on
 
 Convert an existing Word document or document that is created from scratch into a Markdown file using the .NET Word (DocIO) library.
 
-The following code example shows how to convert a Word document to a Markdown.
+The following code example shows how to convert a Word document to a Markdown file.
 
 N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
@@ -301,19 +301,20 @@ N> Nested block quotes are not supported in a Word to the Markdown conversion. T
 
 ## Save Options
 
-When converting a Word document to Markdown, the .NET Word (DocIO) library provides various save options to customize the output Markdown file. These options allow you to control image export location, customize image paths, set character encoding, and other export behaviors.
+When converting a Word document to Markdown, the .NET Word (DocIO) library provides various save options to customize the output Markdown file. These options allow you to control the image export folder, customize image paths, and set the character encoding used to write the output.
 
-When converting a Word document to a Markdown using the [Save(fileName)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Save_System_String_) overloads, DocIO creates a new folder parallel to the output file name and exports all the images into it as default.
+When converting a Word document to Markdown using the [Save(fileName)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Save_System_String_) overloads, DocIO creates a new folder parallel to the output file name and exports all the images into it as default.
 
-When converting a Word document to a Markdown using the [Save(Stream, FormatType)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Save_System_IO_Stream_Syncfusion_DocIO_FormatType_) overloads, DocIO preserves the images as base64 format in the output Markdown file as default.
+When converting a Word document to Markdown using the [Save(Stream, FormatType)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Save_System_IO_Stream_Syncfusion_DocIO_FormatType_) overloads, DocIO preserves the images as base64 format in the output Markdown file as default.
 
 Also, customize the above default behaviors using the following options in DocIO.
 
+
 ### Export images to folder
 
-Specify the folder location to export the images using the [MarkdownExportImagesFolder](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_MarkdownExportImagesFolder) API.
+Specify the folder location to export the images using the [MarkdownExportImagesFolder](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_MarkdownExportImagesFolder) API. If the folder does not exist, DocIO creates it automatically.
 
-The following code example illustrates how set the images folder to export the images while converting a Word document to a Markdown file.
+The following code example illustrates how to set the images folder to export the images while converting a Word document to a Markdown file.
 
 {% tabs %}
 
@@ -341,7 +342,7 @@ using (WordDocument document = new WordDocument("Input.docx", FormatType.Docx))
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Open an existing Word document.
-Using document As WordDocument = New WordDocument("Input.docx")
+Using document As WordDocument = New WordDocument("Input.docx", FormatType.Docx)
     'Set images folder to export images. 
     document.SaveOptions.MarkdownExportImagesFolder = "D:\\WordToMdConversion ";
     'Save a document as a Markdown file.
@@ -355,7 +356,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Customize the image path
 
-DocIO provides an `ImageNodeVisited` event, which is used to customize the image path to set in the output Markdown file and save images externally while converting a Word document to a Markdown.
+DocIO provides an `ImageNodeVisited` event, which is used to customize the image path to set in the output Markdown file and save images externally while converting a Word document to Markdown.
 
 The following code example illustrates how to save Image files during a Word to Markdown Conversion.
 
@@ -374,7 +375,7 @@ The following code example illustrates how to save Image files during a Word to 
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Open an existing Word document. 
-using (WordDocument document = new WordDocument(@"Input.docx"))
+using (WordDocument document = new WordDocument("Input.docx", FormatType.Docx))
 {
     //Hook the event to customize the image. 
     document.SaveOptions.MarkdownSaveOptions.ImageNodeVisited += SaveImage;
@@ -385,7 +386,7 @@ using (WordDocument document = new WordDocument(@"Input.docx"))
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Open an existing Word document. 
-Using document As WordDocument = New WordDocument("Input.docx")
+Using document As WordDocument = New WordDocument("Input.docx", FormatType.Docx)
     'Hook the event to customize the image. 
     document.SaveOptions.MarkdownSaveOptions.ImageNodeVisited += SaveImage
     'Save a Word document as a Markdown file.
@@ -439,7 +440,7 @@ End Sub
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Markdown-conversion/Customize-image-path).
 
-N> The `MarkdownExportImagesFolder`property and `MarkdownSaveOptions.ImageNodeVisited` event are not supported on the UWP platform.
+N> The `MarkdownExportImagesFolder` property and `MarkdownSaveOptions.ImageNodeVisited` event are not supported on the UWP platform.
 
 ### Encoding
 
@@ -462,7 +463,7 @@ using (WordDocument document = new WordDocument(Path.GetFullPath(@"Data/Input.do
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Open an existing Word document.
-using (WordDocument document = new WordDocument("Input.docx"))
+using (WordDocument document = new WordDocument("Input.docx", FormatType.Docx))
 {
     //Set the encoding values.
     document.SaveOptions.MarkdownSaveOptions.Encoding = Encoding.ASCII;
@@ -473,8 +474,8 @@ using (WordDocument document = new WordDocument("Input.docx"))
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Open an existing Word document.
-Using document As WordDocument = New WordDocument("Input.docx")
-    'Set the encoding values. 
+Using document As WordDocument = New WordDocument("Input.docx", FormatType.Docx)
+    'Specify the character encoding for the output Markdown file.
     document.SaveOptions.MarkdownSaveOptions.Encoding = Encoding.ASCII
     'Save the document as a Markdown file.
     document.Save("WordtoMd.md")
@@ -508,7 +509,7 @@ using (WordDocument document = new WordDocument(Path.GetFullPath(@"Data/Input.do
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 // Open an existing Word document.
-using (WordDocument document = new WordDocument("Input.docx"))
+using (WordDocument document = new WordDocument("Input.docx", FormatType.Docx))
 {
     // Convert the Word document to Markdown.
     MarkdownDocument markdownDocument = document.GetMarkdownDocument();
@@ -521,7 +522,7 @@ using (WordDocument document = new WordDocument("Input.docx"))
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Open an existing Word document.
-Using document As WordDocument = New WordDocument("Input.docx")
+Using document As WordDocument = New WordDocument("Input.docx", FormatType.Docx)
     'Convert the Word document to Markdown.
     Dim markdownDocument As MarkdownDocument = document.GetMarkdownDocument()
     'Save or process the Markdown document as needed.
