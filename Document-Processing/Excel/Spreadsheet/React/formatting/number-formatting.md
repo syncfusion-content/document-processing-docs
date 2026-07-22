@@ -1,13 +1,12 @@
 ---
 layout: post
-title: Number Formatting in React Spreadsheet component | Syncfusion
-description: Learn here all about Number formatting in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
-control: Formatting
+title: Number Formatting in the React Spreadsheet component | Syncfusion
+description: Learn here all about Number formatting in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.control: Formatting
 platform: document-processing
 documentation: ug
 ---
 
-# Number Formatting in React Spreadsheet component
+# Number Formatting in the React Spreadsheet component
 
 Number formatting defines the type of data displayed in the Spreadsheet. You can enable or disable the number formatting using the [`allowNumberFormatting`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#allownumberformatting) property. The Spreadsheet supports the following number formatting types:
 
@@ -22,19 +21,19 @@ Number formatting defines the type of data displayed in the Spreadsheet. You can
 | Time | `h:mm:ss AM/PM` | NA |
 | Percentage | `0.00%` | 10 |
 | Fraction | `# ?/?` | 12 |
-| Scientific |`0.00E+00`  | 11 |
+| Scientific | `0.00E+00` | 11 |
 | Text | `@` | 49 |
 
 Number formatting can be applied in following ways,
-* Using the [format](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cell#format) property in `cell`, you can set the desired format to each cell at initial load.
-* Using the [`numberFormat`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#numberformat) method, you can set the number format to a cell or range of cells.
-* Selecting the number format option from ribbon toolbar.
+* Using the [format](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cell#format) property on a `cell`, you can set the desired format for each cell at initial load.
+* Using the [`numberFormat`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#numberformat) method, you can set the number format on a cell or a range of cells.
+* Selecting the number format option from the ribbon toolbar.
 
 ## Custom Number Formatting
 
-Spreadsheet supports custom number formats to display your data as numbers, dates, times, percentages, and currency values. If the pre-defined number formats do not meet your needs, you can set your own custom formats using custom number formats dialog or [`numberFormat`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#numberformat) method.
+The Spreadsheet supports custom number formats to display your data as numbers, dates, times, percentages, and currency values. If the predefined formats do not meet your needs, you can set your own custom formats using the custom number formats dialog or the [`numberFormat`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#numberformat) method.
 
-The different types of custom number format populated in the custom number format dialog are,
+The custom number formats available in the custom number formats dialog are:
 
 | Type | Format Code | Format ID |
 |-------|---------|---------|
@@ -53,8 +52,8 @@ The different types of custom number format populated in the custom number forma
 | Currency | `$#,##0.00_);[Red]($#,##0.00)` | 8 |
 | Percentage | `0%` | 9 |
 | Percentage | `0.00%` | 10 |
-| Scientific |`0.00E+00`  | 11 |
-| Scientific |`##0.0E+0`  | 48 |
+| Scientific | `0.00E+00` | 11 |
+| Scientific | `##0.0E+0` | 48 |
 | Fraction | `# ?/?` | 12 |
 | Fraction | `# ??/??` | 13 |
 | ShortDate | `m/d/yyyy` | 14 |
@@ -75,11 +74,11 @@ The different types of custom number format populated in the custom number forma
 | Accounting | `_($* #,##0.00_);_($* (#,##0.00);_($* "-"??_);_(@_)` | 44 |
 | Accounting | `_(* #,##0.00_);_(* (#,##0.00);_(* "-"??_);_(@_)` | 43 |
 
-Custom Number formatting can be applied in following ways,
-* Using the [`numberFormat`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#numberformat) method, you can set your own custom number format to a cell or range of cells.
-* Selecting the custom number format option from custom number formats dialog or type your own format in dialog input and then click apply button. It will apply the custom format for selected cells.
+You can apply a custom number format in the following ways:
+* Using the [`numberFormat`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#numberformat) method, you can set your own custom number format on a cell or a range of cells.
+* Selecting the custom number format option from the custom number formats dialog, or typing your own format in the dialog input and clicking **Apply**, applies the custom format to the selected cells.
 
-The following code example shows the number formatting in cell data.
+The following code example shows number formatting applied to cell data.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -102,11 +101,11 @@ The following code example shows the number formatting in cell data.
 
 Earlier, the custom format dialog always showed formats using English settings (group separator, decimal separator, and currency symbol were not updated based on the applied culture). Starting from version **27.1.\***, the dialog now displays formats according to the applied culture. You can select a culture-based number format or enter your own format using the culture-specific decimal separator, group separator, and currency symbol. After that, click **Apply** to apply the culture-specific custom format to the selected cells.
 
-The Spreadsheet supports customizing formats in the dialog using the `configureLocalizedFormat` method. In this method, you pass a collection of default number format IDs along with their corresponding format codes. The dialog will then display the customized formats. You can refer to the [default number format IDs](https://learn.microsoft.com/en-us/dotnet/api/documentformat.openxml.spreadsheet.numberingformat?view=openxml-2.8.1) from the Excel built-in number format reference.
+The Spreadsheet supports customizing the formats shown in the dialog using the `configureLocalizedFormat` method. Pass a collection of default number format IDs and their corresponding format codes; the dialog then displays the customized formats. See the [default number format IDs](https://learn.microsoft.com/en-us/dotnet/api/documentformat.openxml.spreadsheet.numberingformat) in the Excel built-in number format reference.
 
 Compared to Excel, the date, time, currency, and accounting formats vary across different cultures. For example, when an Excel file with the date format `'m/d/yyyy'` is imported in the `en-US` culture, the spreadsheet displays the date in that format. However, when the same file is imported in the German culture, the date format changes to `'dd.MM.yyyy'`, which is the default for that region. The default number format ID for the date is 14. To customize the date format based on the culture, you should map the default number format ID to the appropriate culture-specific format code, like this: `{ id: 14, code: 'dd.MM.yyyy' }` in the `configureLocalizedFormat` method.
 
-> The format code should use the default decimal separator (.) and group separator (,).
+> The format code must use the default decimal separator (`.`) and group separator (`,`).
 
 The code below illustrates how culture-based format codes are mapped to their corresponding number format ID for the `German` culture.
 
@@ -160,7 +159,7 @@ The following code example demonstrates how to configure culture-based formats f
 
 ## Note
 
-You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for feature highlights. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to learn how to present and manipulate data.
+You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for feature highlights. You can also explore our [React Spreadsheet example](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/getting-started) to learn how to present and manipulate data.
 
 ## See Also
 
