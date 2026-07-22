@@ -10,31 +10,44 @@ documentation: UG
 
 Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [Xamarin Word library](https://www.syncfusion.com/document-processing/word-framework/xamarin/word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or **interop** dependencies. Using this library, you can **create a Word document in Xamarin**.
 
-## Steps to create Word document programmatically:
+## Prerequisites
+
+- Visual Studio with the **Mobile development with .NET** (Xamarin) workload installed.
+- For .NET 5+ targets, install the `Syncfusion.Xamarin.DocIO` NuGet package version that matches your target. The package is compatible with .NET Standard 2.0 and later.
+
+## Steps to create Word document programmatically
 
 Step 1: Create a new Xamarin.Forms application project.
 
 ![Create Xamarin application in Visual Studio](Xamarin_images/Create-Project-WordtoPDF.png)
 
-Step 2: Select a project template and required platforms to deploy the application. In this application the portable assemblies to be shared across multiple platforms, the .NET Standard code sharing strategy has been selected. For more details about code sharing refer [here](https://learn.microsoft.com/en-us/xamarin/cross-platform/app-fundamentals/code-sharing).
+Step 2: Select a project template and the required platforms to deploy the application. This sample uses the .NET Standard code sharing strategy so portable assemblies are shared across platforms. For more information about code sharing, see [Code sharing options](https://learn.microsoft.com/en-us/xamarin/cross-platform/app-fundamentals/code-sharing).
 
 N> If .NET Standard is not available in the code sharing strategy, the Portable Class Library (PCL) can be selected.
 
 ![Create Xamarin CodeSharing Option](Xamarin_images/Template_WordtoPDF.png)
 
-Step 3: Install [Syncfusion.Xamarin.DocIO](https://www.nuget.org/packages/Syncfusion.Xamarin.DocIO) NuGet package as a reference to the .NET Standard project in your application from [NuGet.org](https://www.nuget.org/).
+Step 3: Install the [Syncfusion.Xamarin.DocIO](https://www.nuget.org/packages/Syncfusion.Xamarin.DocIO) NuGet package as a reference to the .NET Standard project in your application from [NuGet.org](https://www.nuget.org/). Also install the same package in each platform-specific project (iOS, Android, and UWP).
+
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the https://www.nuget.org/packages/Syncfusion.Licensing NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 ![Install DocIO Xamarin NuGet package](Xamarin_images/Install_Nuget.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
-
-Step 4: Add new Forms XAML page in **portable project**. If there is no XAML page is defined in the App class. Otherwise proceed to the next step.
+Step 4: Add a new Forms XAML page in the **portable project**. If no XAML page is defined in the App class, complete the following sub-steps. Otherwise, proceed to the next step.
 <ul>
 <li>
-To add the new XAML page, right click on the project and select <b>Add > New Item</b> and add a Forms XAML Page from the list. Name it as MainXamlPage.
+To add the new XAML page, right-click on the project, select <b>Add > New Item</b>, and add a Forms XAML Page from the list. Name it <b>MainXamlPage</b>.
 </li>
 <li>
-In App class of <b>portable project</b> (App.cs), replace the existing constructor of App class with the code snippet given below which invokes the <b>MainXamlPage</b>.
+In the <b>App</b> class of the <b>portable project</b> (App.cs), replace the existing constructor of the <b>App</b> class with the code snippet given below, which invokes the <b>MainXamlPage</b>.
 </li>
 </ul>
 
@@ -50,7 +63,7 @@ public App()
 
 {% endtabs %}
 
-Step 5: In the MainXamlPage.xaml add new button as shown below.
+Step 5: In the MainXamlPage.xaml file, add a new button as shown in the following example.
 
 {% tabs %}
 
@@ -58,7 +71,7 @@ Step 5: In the MainXamlPage.xaml add new button as shown below.
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-        x:Class="GettingStarted. MainXamlPage">
+        x:Class="GettingStarted.MainXamlPage">
 
     <StackLayout VerticalOptions="Center">
         <Button Text="Generate Document" Clicked="OnButtonClicked" HorizontalOptions="Center"/>
@@ -406,10 +419,13 @@ Compile and execute the application. Now this application **creates a Word docum
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Xamarin).
 
+N> The code sample references image files (AdventureCycle.jpg, Mountain-200.jpg, Mountain-300.jpg, Road-550-W.jpg). Download these assets from the [GitHub sample folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Xamarin/Create-Word-document/Create-Word-document/Templates) and add them to a `Templates` folder in the portable project with their **Build Action** set to **Embedded Resource**.
+
 By executing the program, you will get the Word document as follows.
 
 ![Xamarin output Word document](Xamarin_images/GettingStartedOutput.jpg)
 
-Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page. 
+## See also
 
-An online sample link to [create a Word document](https://document.syncfusion.com/demos/word/helloworld#/tailwind) in ASP.NET Core. 
+- [Complete Xamarin working sample on GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Xamarin)
+- [.NET Word Library overview, features, and pricing](https://www.syncfusion.com/document-sdk/net-word-library) 
