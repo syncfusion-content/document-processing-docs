@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Collaborative Editing in React using Java | Syncfusion
-description: Learn how to enable collaborative editing in Syncfusion React Document editor control of Syncfusion Essential JS 2 and more.
+description: Learn how to enable collaborative editing in Syncfusion React DOCX editor control of Syncfusion Essential JS 2 and more.
 control: Collaborative Editing Java
 platform: document-processing
 documentation: ug
@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Collaborative Editing in React with Redis in Java
 
-Allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made. Collaborative editing can be a great way to improve efficiency, as it allows team members to work together on a document without having to wait for others to finish their changes.
+This feature allows multiple users to work on the same document simultaneously in real-time, so that collaborators can see the changes as they are made. Collaborative editing can be a great way to improve efficiency, as it allows team members to work together on a document without having to wait for others to finish their changes.
 
 ## Prerequisites
 
-The following are needed to enable collaborative editing in [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor).
+The following are needed to enable collaborative editing in [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor).
 
 - `SockJS`
 - `Redis`
@@ -29,7 +29,7 @@ To enable collaborative editing, inject `CollaborativeEditingHandler` and set th
 import { DocumentEditorContainerComponent, Toolbar, CollaborativeEditingHandler, ContainerContentChangeEventArgs, Operation, Inject, ToolbarItem } from '@syncfusion/ej2-react-documenteditor';
 
 // Inject collaborative editing module.
-DocumentEditor.Inject(CollaborativeEditingHandler);
+DocumentEditorContainerComponent.Inject(CollaborativeEditingHandler);
 
 
 public collaborativeEditingHandler?: CollaborativeEditingHandler;
@@ -51,7 +51,7 @@ render() {
             <DocumentEditorContainerComponent id="container" ref={(scope: DocumentEditorContainerComponent) => { this.container = scope; }} style={{ 'display': 'block' }}
                 height={'100%'} currentUser={this.currentUser} toolbarItems={this.toolbarItems} serviceUrl={this.serviceUrl + 'api/wordeditor'} enableToolbar={true} locale='en-US' >
                 <Inject services={[Toolbar]} />
-            </DocumentEditorContainerComponent>``
+            </DocumentEditorContainerComponent>
         </div>
     </div>);
 }
@@ -84,7 +84,7 @@ public onConnected() {
         this.connectToRoom(this.currentRoomName);
     }
 }
-//Receive the remote action and apply to currenty document.
+//Receive the remote action and apply to current document.
 public onDataRecived(data: any) {
     if (this.collaborativeEditingHandler) {
         var content = JSON.parse(data.body);
@@ -109,7 +109,7 @@ public openDocument(responseText: string, roomName: string): void {
         //Open the document
         this.container.documentEditor.open(data.sfdt);
         setTimeout(() => {
-            // connect to server using ScketJS
+            // connect to server using SockJS
             this.connectToRoom({ action: 'connect', roomName: roomName, currentUser: this.container.currentUser });
         });
     }
@@ -129,7 +129,7 @@ public connectToRoom(data: any) {
 
 ### Step 4: Broadcast current editing changes to remote users
 
-Changes made on the client-side need to be sent to the server-side to broadcast them to other connected users. To send the changes made to the server, use the method shown below from the document editor using the `contentChange` event.
+Changes made on the client-side need to be sent to the server-side to broadcast them to other connected users. To send the changes made to the server, use the method shown below from the Document Editor using the `contentChange` event.
 
 ```typescript
 this.container.contentChange = (args: ContainerContentChangeEventArgs) => {
@@ -311,9 +311,9 @@ public String getActionsFromServer(@RequestBody ActionInfo param) throws ClassNo
 ## How to perform Scaling in Collaborative Editing.
 
 ### Role of Scaling in Collaborative editing
-As the number of users increases, collaborative application face challenges in maintaining responsiveness and performance. This is where scaling becomes crucial. Scaling refers to the ability of an application to handle growing demands by effectively distributing the workload across multiple resources.
+As the number of users increases, collaborative applications face challenges in maintaining responsiveness and performance. This is where scaling becomes crucial. Scaling refers to the ability of an application to handle growing demands by effectively distributing the workload across multiple resources.
 
-During scaling the users may connected to different servers, so collaborative editing application introduces a specific challenge like, updating the edit operations to all the users connected in different serves. To overcome this issue you need to use ``` Redis Cache pub/sub ``` for message relay(syncing the editing operations to the users connected to different server instance)
+During scaling, users may be connected to different servers, so collaborative editing applications introduce specific challenges, such as updating edit operations to all users connected to different server instances. To overcome this issue, you need to use ``` Redis Cache pub/sub ``` for message relay (syncing the editing operations to the users connected to different server instances).
 
 ### Use of Redis Pub/Sub in scaling environment
 Redis offers Pub/Sub functionality. The publish/subscribe (pub/sub) pattern provides asynchronous communication among multiple AWS services without creating interdependency. When a user edits a document, the application can publish the changes to a Redis channel. Clients (in different server instances) subscribed to that channel receive real-time updates, reflecting the changes in their document views. 
@@ -334,7 +334,7 @@ Publish each editing operation to Redis channel with the room name. This will se
 
 ```java
 try (Jedis jedis = RedisSubscriber.jedisPool.getResource()) {                           
-jedis.publish("collaborativeedtiting", new com.fasterxml.jackson.databind.ObjectMapper().writeValueAsString(payload));                    
+jedis.publish("collaborativeediting", new com.fasterxml.jackson.databind.ObjectMapper().writeValueAsString(payload));                    
     break;
     } catch (JedisConnectionException e) {
     }
@@ -347,7 +347,7 @@ jedis.publish("collaborativeedtiting", new com.fasterxml.jackson.databind.Object
 @PostConstruct
       public void subscribeToInstanceChannel() {
             //Subscriber to `collaborativeediting`
-            String channel = "collaborativeedtiting";
+            String channel = "collaborativeediting";
              new Thread(() -> {
                    JedisPoolConfig poolConfig = new JedisPoolConfig();
                     jedisPool = new JedisPool(poolConfig, REDIS_HOST, REDIS_PORT);

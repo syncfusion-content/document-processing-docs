@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Collaborative Editing in React with Redis in ASP.NET Core
 
-[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports collaborative editing which Allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made
+[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports collaborative editing which allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ SignalR enables real-time communication by instantly sending and receiving docum
 
 ### Scale-out SignalR using Azure SignalR service
 
-Azure SignalR Service is a scalable, managed service for real-time communication in web applications. It enables real-time messaging between web clients (browsers) and your server-side application(across multiple servers).
+Azure SignalR Service is a scalable, managed service for real-time communication in web applications. It enables real-time messaging between web clients (browsers) and your server-side application (across multiple servers).
 
 The following code snippet demonstrates how to configure Azure SignalR in an ASP.NET Core application using the `AddAzureSignalR` method in the "Program.cs" file of the web service project.
 
