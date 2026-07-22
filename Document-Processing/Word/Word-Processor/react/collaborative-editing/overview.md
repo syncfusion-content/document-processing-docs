@@ -32,9 +32,9 @@ To support collaborative editing, it's crucial to have a backing system that tem
 
 With the distributed cache or database, all the editing operations are queued in order, and conflict resolution is performed using the `Operational Transformation` algorithm.
 
-N> **Tip**: To calculate the average requests per second of your application, assume the Document Editor in your live application is actively used by 1000 users, and each user's edit can trigger 2 to 5 requests per second. The total requests per second of your application will be around 2000 to 5000. In this case, you can finalize a configuration to support around 5000 average requests per second.
+N> 1. To calculate the average requests per second of your application, assume the Document Editor in your live application is actively used by 1000 users, and each user's edit can trigger 2 to 5 requests per second. The total requests per second of your application will be around 2000 to 5000. In this case, you can finalize a configuration to support around 5000 average requests per second.
 
-N> **Note**: The above metrics are based solely on the collaborative editing module. Actual throughput may decrease depending on other server-side interactions, such as document importing, pasting formatted content, editing restrictions, and spell checking. Therefore, it is advisable to monitor your app's traffic and choose a configuration that best suits your needs.
+N> 2. The above metrics are based solely on the collaborative editing module. Actual throughput may decrease depending on other server-side interactions, such as document importing, pasting formatted content, editing restrictions, and spell checking. Therefore, it is advisable to monitor your app's traffic and choose a configuration that best suits your needs.
 
 ## See Also
 
