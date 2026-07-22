@@ -42,4 +42,4 @@ Refer to the below links to apply themes for the SfSpreadsheet,
 ## See Also
 
 * [WPF Spreadsheet feature tour](https://www.syncfusion.com/wpf-controls/spreadsheet)
-* [WPF Spreadsheet examples on GitHub](https://github.com/Syncfusion-Samples/Syncfusion-WPF-SpreadsheetExamples)
+* [WPF Spreadsheet examples on GitHub](https://github.com/syncfusion/wpf-demos)

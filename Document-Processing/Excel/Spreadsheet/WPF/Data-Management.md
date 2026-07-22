@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Data Management in WPF Spreadsheet (SfSpreadsheet)
-SfSpreadsheet supports importing and exporting worksheet data to and from a `DataTable`. This is useful when binding spreadsheet data to data-bound UI controls, persisting it to a database, or exchanging it with other systems. The import and export calls delegate to the underlying `IWorksheet` provided by XlsIO.
+SfSpreadsheet supports importing and exporting worksheet data to and from a `DataTable`.
 
 ## Import from DataTable
 
@@ -30,7 +30,7 @@ spreadsheet.ActiveGrid.InvalidateCells();
 {% endhighlight %}
 {% endtabs %}
 
-For more details regarding importing data, please refer to the [XlsIO UG](http://help.syncfusion.com/file-formats/xlsio/working-with-data#importing-data-to-worksheets). The following related overloads are also available on `IWorksheet`: `ImportDataColumn`, `ImportDataView`, `ImportDataTable(IList)`, `BusinessObjectsToWorksheet`, and array-based imports — see the XlsIO link above for examples of each.
+For more details regarding importing data, please refer to the [XlsIO UG](http://help.syncfusion.com/file-formats/xlsio/working-with-data#importing-data-to-worksheets).
 
 ## Export to DataTable
 

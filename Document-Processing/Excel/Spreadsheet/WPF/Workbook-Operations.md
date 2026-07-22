@@ -14,14 +14,6 @@ This section explains how to manage Excel workbooks in SfSpreadsheet, including 
 
 A new workbook can be created by using the [Create](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_Create_System_Int32_) method with a specified number of worksheets. By default, a workbook will be created with a single worksheet.
 
-**Parameters**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `sheetCount` | `int` | The number of worksheets to add to the new workbook. If omitted, a single worksheet is created. |
-
-**Return value:** `void`
-
 {% tabs %}
 {% highlight c# tabtitle="MainWindow.xaml.cs" %}
 spreadsheet.Create(2);

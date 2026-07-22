@@ -9,7 +9,7 @@ documentation: ug
 
 # Cell Customization in WPF Spreadsheet (SfSpreadsheet)
 
-SfSpreadsheet supports cell customization through a data template, allowing any built-in WPF control or custom control to be hosted in a cell. Use this approach to embed interactive UI such as buttons, combo boxes, or expanders directly inside spreadsheet cells.
+SfSpreadsheet supports cell customization through a data template, allowing any built-in WPF control or custom control to be hosted in a cell.
 
 To customize a cell, follow these steps:
 
@@ -139,7 +139,7 @@ N> If you want to load the default edit element, you do not need to override the
 
 **Associate the Custom Cell Renderer with SpreadsheetGrid**
 
-To associate the custom cell renderer with [SpreadsheetGrid](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SpreadsheetGrid.html), subscribe to the [WorkbookLoaded](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_WorkbookLoaded) event of `SfSpreadsheet` (in XAML or in code-behind after the control is initialized). In the handler, initialize the `SpreadsheetTemplateCellRenderer` and add it to the renderer collection.
+To associate the custom cell renderer with [SpreadsheetGrid](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SpreadsheetGrid.html), invoke the [WorkbookLoaded](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_WorkbookLoaded) event of `SfSpreadsheet` (in XAML or in code-behind after the control is initialized). In the handler, initialize the `SpreadsheetTemplateCellRenderer` and add it to the renderer collection.
 
 Next, handle the [QueryRange](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SpreadsheetGrid.html#Syncfusion_UI_Xaml_Spreadsheet_SpreadsheetGrid_QueryRange) event of `SpreadsheetGrid` and set the `CellType` of the particular range to "DataTemplate" to load the user-defined template.
 

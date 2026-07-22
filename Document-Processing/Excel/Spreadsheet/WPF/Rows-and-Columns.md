@@ -126,7 +126,7 @@ spreadsheet.ActiveGrid.ColumnWidths.SetHidden(4, 4, false);
 
 ## Row Height and Column Width
 
-SfSpreadsheet provides support to adjust the row height and column width. The adjusted row height and column width can also be imported from Excel. Use the [AutofitColumn](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_AutofitColumn_System_Int32_), [AutofitRow](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_AutofitRow_System_Int32_), [AutofitColumns](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_AutofitColumns), and [AutofitRows](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_AutofitRows) methods of XlsIO to fit rows and columns to their content.
+SfSpreadsheet provides support to adjust the row height and column width. The adjusted row height and column width can also be imported from Excel.
 
 {% tabs %}
 {% highlight c# %}

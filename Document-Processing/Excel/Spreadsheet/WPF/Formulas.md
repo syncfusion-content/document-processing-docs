@@ -393,7 +393,7 @@ Returns the exponential of a complex number<br/><br/></td></tr>
 <tr>
 <td>
 IMPOWER<br/><br/></td><td>
-Calculates a complex number raised to a supplied exponent<br/><br/></td></tr>
+Calculates a complex number raised to a supplied power<br/><br/></td></tr>
 <tr>
 <td>
 GESTEP<br/><br/></td><td>

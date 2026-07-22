@@ -90,7 +90,7 @@ spreadsheet.RenameSheet("ExistingSheetName", "NewSheetName");
 
 ### Protecting a worksheet
 
-SfSpreadsheet provides support to protect the worksheet with or without a password. This helps to prevent a user from modifying the contents of the worksheet. The protection of the worksheet can also be done with [ExcelSheetProtection](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.ExcelSheetProtection.html) options, which is a flags enumeration — combine multiple options with the bitwise OR operator (`|`).
+SfSpreadsheet provides support to protect the worksheet with or without a password. This helps to prevent a user from modifying the contents of the worksheet. The protection of the worksheet can also be done with [ExcelSheetProtection](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.ExcelSheetProtection.html) options.
 
 The `ExcelSheetProtection` options are:
 
@@ -160,7 +160,7 @@ spreadsheet.SetRowColumnHeadersVisibility(false);
 
 ## Zooming
 
-SfSpreadsheet provides support to zoom in and zoom out of a worksheet view. The [AllowZooming](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_AllowZooming) property determines whether zooming is allowed; the default value is `true`.
+SfSpreadsheet provides support to zoom in and zoom out of a worksheet view. The [AllowZooming](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_AllowZooming) property determines whether zooming is allowed.
 
 {% tabs %}
 {% highlight c# %}
@@ -224,23 +224,23 @@ Occurs when the zoom factor in SfSpreadsheet is to be changed.</td></tr>
 <tr>
 <td>
 {{ '[ResizingColumns](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.SfCellGrid.html) ' | markdownify }}</td><td>
-Occurs when columns are resized in SfSpreadsheet.</td></tr>
+Occurs when performing the resizing columns in SfSpreadsheet.</td></tr>
 <tr>
 <td>
 {{ '[ResizingRows](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.SfCellGrid.html) ' | markdownify }}</td><td>
-Occurs when rows are resized in SfSpreadsheet.</td></tr>
+Occurs when performing the resizing rows in SfSpreadsheet.</td></tr>
 <tr>
 <td>
 {{ '[CellCommentOpening](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.SfCellGrid.html) ' | markdownify }}</td><td>
-Occurs when a cell comment is opened in SfSpreadsheet.</td></tr>
+Occurs when opening the comments in the cells of in SfSpreadsheet.</td></tr>
 <tr>
 <td>
 {{ '[CellTooltipOpening](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.SfCellGrid.html) ' | markdownify }}</td><td>
-Occurs when a cell tooltip is opened in SfSpreadsheet.</td></tr>
+Occurs when opening the tool tips of cells in SfSpreadsheet.</td></tr>
 <tr>
 <td>
 {{ '[CellContextMenuOpening](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.SfCellGrid.html) ' | markdownify }}</td><td>
-Occurs when the context menu of a cell is opened in SfSpreadsheet.</td></tr>
+Occurs when opening the context menu of a cell in SfSpreadsheet.</td></tr>
 <tr>
 <td>
 {{ '[QueryRange](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SpreadsheetGrid.html) ' | markdownify }}</td><td>

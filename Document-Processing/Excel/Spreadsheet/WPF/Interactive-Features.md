@@ -232,7 +232,7 @@ void ActiveGrid_CellContextMenuOpening(object sender, CellContextMenuOpeningEven
 {% endhighlight %}
 {% endtabs %}
 
-T> A custom cell context menu can also be added by assigning the customized menu items to the [CellContextMenu](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.SfCellGrid.html#Syncfusion_UI_Xaml_CellGrid_SfCellGrid_CellContextMenu) property of `SpreadsheetGrid`.
+T> A custom cell context menu can also be added by assigning the customized menu items to the [CellContextMenu](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.SfCellGrid.html#Syncfusion_UI_Xaml_CellGrid_SfCellGrid_CellContextMenu) property of `SpreadsheetGrid`.For your reference, [CustomContextMenu](https://www.syncfusion.com/kb/6499/how-to-create-a-customized-cell-context-menu-of-sfspreadsheet).
 
 ## Cell Comments
 

@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains how to apply conditional formatting rules programmatically at run time in SfSpreadsheet.
 
-In SfSpreadsheet, to apply a conditional format to a cell or range of cells, add an [IConditionalFormat](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.IConditionalFormat.html) to that range by using the [AddCondition](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.IConditionalFormats.html#Syncfusion_XlsIO_IConditionalFormats_AddCondition) method, then call `InvalidateCell` on `ActiveGrid` to refresh the view.
+In SfSpreadsheet, to apply a conditional format to a cell or range of cells, add an [IConditionalFormat](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.IConditionalFormat.html) to that range by using the [AddCondition](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.IConditionalFormats.html#Syncfusion_XlsIO_IConditionalFormats_AddCondition) method.
 
 {% tabs %}
 {% highlight c# %}
@@ -39,8 +39,6 @@ condition1.BackColor = ExcelKnownColors.Light_orange;
 spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Col(1));
 {% endhighlight %}
 {% endtabs %}
-
-> Use `SecondFormula` together with `FirstFormula` when the operator is `Between` or `NotBetween`.
 
 ### Based on Formula or Cell References
 
@@ -79,8 +77,6 @@ spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Col(1));
 
 To format cells based on a time period, set the format type to **TimePeriod** and configure the time period type and background color. The `Operator` property is not required for `TimePeriod`. Then, invalidate the cells to refresh the view.
 
-Supported `CFTimePeriods` values include: `Today`, `Yesterday`, `Tomorrow`, `Last7Days`, `ThisWeek`, `LastWeek`, `ThisMonth`, `LastMonth`.
-
 {% tabs %}
 {% highlight c# %}
 var worksheet = spreadsheet.Workbook.Worksheets[0];
@@ -100,8 +96,6 @@ Sample output
 ## Data Bars
 
 To apply a conditional format based on data bars, set the format type to **DataBar** and configure the associated properties such as the bar color, `MinPoint`, and `MaxPoint`. Then, invalidate the cells to update the view.
-
-Supported `ConditionValueType` values include: `LowestValue`, `HighestValue`, `Number`, `Percent`, `Formula`, `Automatic`,and `Percentile`.
 
 {% tabs %}
 {% highlight c# %}
@@ -146,8 +140,6 @@ Sample output
 
 To apply a conditional format for icon sets, set the format type to **IconSet** and configure the associated properties such as the icon type and criteria. Then, invalidate the cells to update the view.
 
-Supported `ExcelIconSetType` values include: `ThreeArrows`, `ThreeArrowsGray`, `ThreeFlags`, `ThreeTrafficLights1`, `ThreeTrafficLights2`, `ThreeSigns`, `ThreeSymbols`, `ThreeSymbols2`, `FourArrows`, `FourArrowsGray`, `FourRedToBlack`, `FourRating`, `FourTrafficLights`, `FiveArrows`, `FiveArrowsGray`, `FiveRating`, and `FiveQuarters`.
-
 {% tabs %}
 {% highlight c# %}
 var worksheet = spreadsheet.Workbook.Worksheets[0];
@@ -167,4 +159,3 @@ Sample output
 > **See also:**
 > - [WPF Spreadsheet Editor](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour
 > - [WPF Spreadsheet example](https://github.com/syncfusion/wpf-demos) on GitHub
-> - Related: [Cell Formatting](https://help.syncfusion.com/wpf/spreadsheet/cell-formatting), [Number Formatting](https://help.syncfusion.com/wpf/spreadsheet/number-formatting)

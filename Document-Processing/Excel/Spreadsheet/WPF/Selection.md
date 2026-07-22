@@ -36,7 +36,7 @@ var cell = spreadsheet.ActiveGrid.SelectionController.CurrentCell;
 
 ## Accessing the Selected Ranges
 
-The selected ranges of the `SpreadsheetGrid` are exposed through the [SelectedRanges](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.SfCellGrid.html#Syncfusion_UI_Xaml_CellGrid_SfCellGrid_SelectedRanges) property. The returned object is a `GridRangeInfoList` instance.
+The selected ranges of the `SpreadsheetGrid` are exposed through the [SelectedRanges](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.SfCellGrid.html#Syncfusion_UI_Xaml_CellGrid_SfCellGrid_SelectedRanges) property.
 
 {% tabs %}
 {% highlight c# %}
@@ -164,7 +164,7 @@ Gets the selection controller, which provides the selection of content when the 
 <tr>
 <td>
 {{ '[AllowSelection](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.SfCellGrid.html#Syncfusion_UI_Xaml_CellGrid_SfCellGrid_AllowSelection) ' | markdownify }}</td><td>
-Gets or sets a value indicating whether selection is allowed in the active grid.</td></tr>
+Gets or sets a value indicating whether selection is allowed in the ActiveGrid.</td></tr>
 <tr>
 <td>
 {{ '[ShowTouchIndicator](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.SelectionController.html#Syncfusion_UI_Xaml_CellGrid_SelectionController_ShowTouchIndicator) ' | markdownify }}</td><td>
@@ -172,7 +172,7 @@ Gets or sets a value indicating whether the touch indicator is shown.</td></tr>
 <tr>
 <td>
 {{ '[TouchHitTestPrecision](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.SelectionController.html#Syncfusion_UI_Xaml_CellGrid_SelectionController_TouchHitTestPrecision) ' | markdownify }}</td><td>
-Gets or sets the distance, in device-independent pixels, of the touch precision point from the touch indicator. Default is 30.</td></tr>
+Gets or sets the distance, of the touch precision point from the touch indicator.</td></tr>
 </table>
 
 ### [CurrentCell](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SpreadsheetGrid.html#Syncfusion_UI_Xaml_Spreadsheet_SpreadsheetGrid_CurrentCell) properties
@@ -185,27 +185,27 @@ Description</th></tr>
 <tr>
 <td>
 {{ '[CellRowColumnIndex](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.GridCurrentCell.html#Syncfusion_UI_Xaml_CellGrid_GridCurrentCell_CellRowColumnIndex) ' | markdownify }}</td><td>
-Gets the row and column index of the current cell.</td></tr>
+Gets the row and column index of the CurrentCell.</td></tr>
 <tr>
 <td>
 {{ '[RowIndex](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.GridCurrentCell.html#Syncfusion_UI_Xaml_CellGrid_GridCurrentCell_RowIndex) ' | markdownify }}</td><td>
-Gets the row index of the current cell.</td></tr>
+Gets the row index of the CurrentCell.</td></tr>
 <tr>
 <td>
 {{ '[ColumnIndex](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.GridCurrentCell.html#Syncfusion_UI_Xaml_CellGrid_GridCurrentCell_ColumnIndex) ' | markdownify }}</td><td>
-Gets the column index of the current cell.</td></tr>
+Gets the column index of the CurrentCell.</td></tr>
 <tr>
 <td>
 {{ '[Range](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.GridCurrentCell.html#Syncfusion_UI_Xaml_CellGrid_GridCurrentCell_Range) ' | markdownify }}</td><td>
-Gets the range of the current cell.</td></tr>
+Gets the range of the CurrentCell.</td></tr>
 <tr>
 <td>
 {{ '[HasCurrentCell](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.GridCurrentCell.html#Syncfusion_UI_Xaml_CellGrid_GridCurrentCell_HasCurrentCell) ' | markdownify }}</td><td>
- Gets a value indicating whether the grid has a current cell.</td></tr>
+ Gets a value indicating whether the grid has a CurrentCell.</td></tr>
 <tr>
 <td>
 {{ '[PreviousRowColumnIndex](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.GridCurrentCell.html#Syncfusion_UI_Xaml_CellGrid_GridCurrentCell_PreviousRowColumnIndex) ' | markdownify }}</td><td>
-Gets the row and column index of the previous current cell.</td></tr>
+Gets the row and column index of the previous CurrentCell.</td></tr>
 </table>
 
 ### Methods
@@ -222,11 +222,11 @@ Adds or extends the selection to the specified range.</td></tr>
 <tr>
 <td>
 {{ '[ClearSelection](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.SelectionController.html#Syncfusion_UI_Xaml_CellGrid_SelectionController_ClearSelection)' | markdownify }}</td><td>
-Clears the selection and resets the current cell to A1.</td></tr>
+Clears the selection.</td></tr>
 <tr>
 <td>
 {{ '[MoveCurrentCell](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.GridCurrentCell.html#Syncfusion_UI_Xaml_CellGrid_GridCurrentCell_MoveCurrentCell_Syncfusion_UI_Xaml_Grid_ScrollAxis_RowColumnIndex_System_Boolean_)' | markdownify }}</td><td>
-Moves the current cell to the specified row and column index. The optional <code>needToClearSelection</code> parameter (default <code>true</code>) controls whether the existing selection is cleared.</td></tr>
+Moves the current cell to the specified row and column index.</td></tr>
 </table>
 
 ## Key Navigation

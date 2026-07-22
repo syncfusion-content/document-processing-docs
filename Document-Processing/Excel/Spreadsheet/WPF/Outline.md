@@ -13,9 +13,9 @@ SfSpreadsheet provides support for Excel-style outlines that make your data easi
 
 ## Group rows and columns
 
-SfSpreadsheet supports grouping a specified range of rows or columns in a worksheet. The `ExcelGroupBy` enum accepts `ByRows` or `ByColumns` to indicate the grouping direction.
+SfSpreadsheet supports grouping a specified range of rows or columns in a worksheet.
 
-To [Group](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_Group_Syncfusion_XlsIO_IWorksheet_Syncfusion_UI_Xaml_CellGrid_GridRangeInfo_Syncfusion_XlsIO_ExcelGroupBy_) the rows:
+To [Group](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_Group_Syncfusion_XlsIO_IWorksheet_Syncfusion_UI_Xaml_CellGrid_GridRangeInfo_Syncfusion_XlsIO_ExcelGroupBy_) the rows/columns:
 
 {% tabs %}
 {% highlight c# %}
@@ -33,7 +33,7 @@ spreadsheet.Group(spreadsheet.ActiveSheet, gridRange, ExcelGroupBy.ByColumns);
 
 SfSpreadsheet supports ungrouping a previously grouped range of rows or columns.
 
-To [Ungroup](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_UnGroup_Syncfusion_XlsIO_IWorksheet_Syncfusion_UI_Xaml_CellGrid_GridRangeInfo_Syncfusion_XlsIO_ExcelGroupBy_) the rows:
+To [Ungroup](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_UnGroup_Syncfusion_XlsIO_IWorksheet_Syncfusion_UI_Xaml_CellGrid_GridRangeInfo_Syncfusion_XlsIO_ExcelGroupBy_) the rows/columns:
 
 {% tabs %}
 {% highlight c# %}
@@ -77,11 +77,11 @@ spreadsheet.RefreshOutlines(false, true);
 {% endhighlight %}
 {% endtabs %}
 
-> The [RefreshOutlines](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_RefreshOutlines_System_Boolean_System_Boolean_) method refreshes and updates the outline indicators in SfSpreadsheet. Its first parameter refreshes row outlines; the second refreshes column outlines.
+> The [RefreshOutlines](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_RefreshOutlines_System_Boolean_System_Boolean_) method refreshes and updates the outline indicators in SfSpreadsheet.
 
 ## Change outline settings
 
-In SfSpreadsheet, you can change the position of summary rows to appear below or above the detail rows, and summary columns to appear to the left or right of the detail columns. This is useful, for example, in accounting-style reports where totals appear at the top of a group.
+In SfSpreadsheet, you can change the position of summary rows to appear below or above the detail rows, and summary columns to appear to the left or right of the detail columns.
 
 {% tabs %}
 {% highlight c# %}

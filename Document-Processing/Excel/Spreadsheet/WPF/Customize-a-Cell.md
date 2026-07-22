@@ -135,7 +135,7 @@ protected override void OnInitializeEditElement(RowColumnIndex rowColumnIndex, C
 
 To associate the custom cell renderer with the [SpreadsheetGrid](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SpreadsheetGrid.html), handle the [WorkbookLoaded](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html) event of `SfSpreadsheet`, initialize the `SpreadsheetTemplateCellRenderer`, and add it to the renderer collection.
 
-Handle the [QueryRange](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SpreadsheetGrid.html) event of `SpreadsheetGrid` and set the `CellType` of a particular range to `DataTemplate` to load the user-defined template.
+Invoke the [QueryRange](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SpreadsheetGrid.html) event of `SpreadsheetGrid` and set the `CellType` of a particular range to `DataTemplate` to load the user-defined template.
 
 {% highlight c# %}
 

@@ -74,22 +74,22 @@ Gets the active SpreadsheetGrid</td></tr>
 <td>
 {{'[IsCustomTabItemContextMenuEnabled](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_IsCustomTabItemContextMenuEnabled)'| markdownify }}</td><td>
 TabStyleManager -> IsCustomTabItemContextMenuEnabled</td><td>
-Gets or sets whether the custom context menu is enabled</td></tr>
+Gets or sets whether the custom ContextMenu is enabled</td></tr>
 <tr>
 <td>
 {{ '[ShowTabItemContextMenu](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Tools.Controls.TabControlExt.html#Syncfusion_Windows_Tools_Controls_TabControlExt_ShowTabItemContextMenu)' | markdownify }}</td><td>
 TabStyleManager -> ShowTabItemContextMenu</td><td>
-Gets or sets whether the tab item context menu is displayed</td></tr>
+Gets or sets whether the TabItemContextMenu is displayed</td></tr>
 <tr>
 <td>
 {{ '[TabItemContextMenu](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_TabItemContextMenu)' | markdownify }}</td><td>
 TabStyleManager ->TabItemContextMenu</td><td>
-Gets or sets the context menu items for the tab item</td></tr>
+Gets or sets the ContextMenu items for the TabItem</td></tr>
 <tr>
 <td>
 {{ '[ActiveSheet](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_ActiveSheet)' | markdownify }}</td><td>
 ExcelProperties->Workbook->ActiveSheet</td><td>
-Gets the current active sheet</td></tr>
+Gets the current ActiveSheet</td></tr>
 <tr>
 <td>
 {{ '[Workbook](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_Workbook)' | markdownify }}</td><td>

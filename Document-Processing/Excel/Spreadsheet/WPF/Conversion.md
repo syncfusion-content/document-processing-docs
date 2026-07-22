@@ -60,7 +60,7 @@ System.Diagnostics.Process.Start("Sample.pdf");
 
 ## Convert to HTML
 
-SfSpreadsheet supports converting the Excel workbook into an HTML page using the `SaveAsHtml` method on the underlying `IWorkbook`. The second argument accepts an `HtmlSaveOptions` instance to control how styles, images, and unsupported features are emitted.
+SfSpreadsheet supports converting the Excel workbook into an HTML page using the `SaveAsHtml` method on the underlying `IWorkbook`.
 
 {% tabs %}
 {% highlight c# %}

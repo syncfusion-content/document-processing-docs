@@ -24,7 +24,7 @@ Styles and formats defined in an Excel file are automatically imported. Users ca
 
 ## Cell Background
 
-To apply a background color to cells at runtime, set the color on the XlsIO `IRange` and then invalidate the affected cells in `SpreadsheetGrid` to update the view. Use `Color` (OLE/Theme color) for new code; `ColorIndex` is retained for backward compatibility.
+To apply a background color to cells at runtime, set the color on the XlsIO `IRange` and then invalidate the affected cells in `SpreadsheetGrid` to update the view.
 
 For a single cell,
 
@@ -263,7 +263,7 @@ m/d/yyyy</td></tr>
 
 ## Built-in Styles
 
-SfSpreadsheet supports the predefined built-in styles provided by XlsIO. [BuiltInStyles](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.BuiltInStyles.html) is an enum that contains different styles for formatting a cell or range of cells. Common values include `Heading1`, `Heading2`, `Heading3`, `Title`, `Total`, `Accent1`, and `Accent2`.
+SfSpreadsheet supports the predefined built-in styles provided by XlsIO. [BuiltInStyles](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.BuiltInStyles.html) is an enum that contains different styles for formatting a cell or range of cells.
 
 {% tabs %}
 {% highlight c# %}
@@ -274,7 +274,7 @@ spreadsheet.ActiveGrid.InvalidateCell(3, 1);
 
 ## Format as Table
 
-SfSpreadsheet allows the user to format a range as a table using the built-in table styles provided by XlsIO via [TableBuiltInStyles](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.TableBuiltInStyles.html). This applies a `ListObject` with filter, sort, and structured-reference capabilities, which is different from applying a built-in cell style (see the previous section).
+SfSpreadsheet allows the user to format a range as a table using the built-in table styles provided by XlsIO via [TableBuiltInStyles](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.TableBuiltInStyles.html).
 
 {% tabs %}
 {% highlight c# %}
@@ -293,7 +293,7 @@ N> Users need to [refresh the view](https://help.syncfusion.com/document-process
 
 ## Clear formatting
 
-SfSpreadsheet provides support for clearing the contents of a cell along with its formatting, or for clearing specific items using the [ExcelClearOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelClearOptions.html) enum. The enum controls which elements are removed, including formats, content, comments, conditional formats, data validation, or a combination of any of them. The `Clear(true)` overload clears contents together with formatting, while `Clear(false)` clears only the contents.
+SfSpreadsheet provides support for clearing the contents of a cell along with its formatting, or for clearing specific items using the [ExcelClearOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelClearOptions.html) enum. The enum controls which elements are removed, including formats, content, comments, conditional formats, data validation, or a combination of any of them.
 
 {% tabs %}
 {% highlight c# %}

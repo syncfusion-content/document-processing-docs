@@ -14,7 +14,7 @@ This section explains how to access the worksheet, grid, and the events associat
 
 ## Accessing the worksheet
 
-A __workbook__ is an Excel document in SfSpreadsheet. It is an object that exposes the [IWorkbook](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.IWorkbook.html) interface. The currently loaded workbook in SfSpreadsheet can be accessed by using the [Workbook](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_Workbook) property of SfSpreadsheet. The Workbook property returns an IWorkbook instance and is non-null only after a workbook has been loaded.
+A __workbook__ is an Excel document in SfSpreadsheet. It is an object that exposes the [IWorkbook](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.IWorkbook.html) interface. The currently loaded workbook in SfSpreadsheet can be accessed by using the [Workbook](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_Workbook) property of SfSpreadsheet.
 
 A workbook consists of one or more worksheets stored within the worksheet collection. The worksheets in the collection can be accessed in the following ways:
 
@@ -68,11 +68,11 @@ void spreadsheet_WorksheetRemoved(object sender, WorksheetRemovedEventArgs args)
 {% endhighlight %}
 {% endtabs %}
 
-You can also access each `SpreadsheetGrid` in SfSpreadsheet in two ways: by passing the particular sheet name in the [GridCollection](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_GridCollection) or by iterating the `GridCollection` exposed on the `WorkbookLoadedEventArgs` of the `WorkbookLoaded` event. `GridCollection` is a `Dictionary<string, SpreadsheetGrid>` keyed by sheet name.
+You can also access each `SpreadsheetGrid` in SfSpreadsheet in two ways: by passing the particular sheet name in the [GridCollection](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_GridCollection) or by invoking `WorkbookLoaded` event of SfSpreadsheet.
 
 ### By using sheet name
 
-For reference, this example sets the row and column count dynamically for the second sheet in the workbook. A new workbook contains a single default sheet, so you must add a second sheet (for example, via `spreadsheet.Workbook.Worksheets.Add("Sheet2")`) before accessing `Worksheets[1]`.
+For reference, this example sets the row and column count dynamically for the second sheet in the workbook.
 
 {% tabs %}
 {% highlight c# %}
@@ -171,7 +171,7 @@ var displayValue = spreadsheet.Workbook.Worksheets[1].Range[4, 1].DisplayText;
 
 ## Setting the value or formula to a cell
 
-In SfSpreadsheet, to update the cell value or formula programmatically, invoke the [SetCellValue](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SpreadsheetGrid.html#Syncfusion_UI_Xaml_Spreadsheet_SpreadsheetGrid_SetCellValue_Syncfusion_XlsIO_IRange_System_String_) method of [SpreadsheetGrid](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SpreadsheetGrid.html) and then invalidate that cell to update the view. The `SetCellValue` method accepts both literal values and formula strings (strings that start with `=`).
+In SfSpreadsheet, to update the cell value or formula programmatically, invoke the [SetCellValue](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SpreadsheetGrid.html#Syncfusion_UI_Xaml_Spreadsheet_SpreadsheetGrid_SetCellValue_Syncfusion_XlsIO_IRange_System_String_) method of [SpreadsheetGrid](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SpreadsheetGrid.html) and then invalidate that cell to update the view.
 
 {% tabs %}
 {% highlight c# %}
@@ -200,11 +200,11 @@ spreadsheet.Workbook.Worksheets[0].Range[3, 3].Clear(ExcelClearOptions.ClearData
 {% endhighlight %}
 {% endtabs %}
 
-N> [ExcelClearOptions](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelClearOptions.html) is an enum which specifies what should be cleared from a range. Available values include: `ClearContent`, `ClearFormats`, `ClearComments`, `ClearConditionalFormats`, `ClearDataValidations`, `ClearHyperlinks`, and `ClearAll` (default; clears everything). Use `ClearAll` to clear cell content, formatting, comments, conditional formats, data validations, and hyperlinks in a single call.
+N> [ExcelClearOptions](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelClearOptions.html) is an enum which specifies the possible directions to clear the cell formats, content, comments,conditional format,data validation or clear all of them.
 
 ## Refreshing the view
 
-SfSpreadsheet allows you to invalidate or refresh the view either by specifying a specific range or the full range. Use the appropriate `Invalidate*` method based on the scope of the change:
+SfSpreadsheet allows you to invalidate or refresh the view either by specifying a specific range or the full range.
 
 The following code demonstrates the different ways of refreshing the view:
 
@@ -231,7 +231,7 @@ spreadsheet.ActiveGrid.InvalidateCellBorders(range);
 
 ## Scrolling the grid programmatically
 
-SfSpreadsheet allows the user to scroll the grid to the specified cell by using the [ScrollInView](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.SfCellGrid.html#Syncfusion_UI_Xaml_CellGrid_ScrollInView_Syncfusion_UI_Xaml_Grid_ScrollAxis_RowColumnIndex_) method of `SpreadsheetGrid`. The arguments are 1-based `RowColumnIndex(row, column)`.
+SfSpreadsheet allows the user to scroll the grid to the specified cell by using the [ScrollInView](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.SfCellGrid.html#Syncfusion_UI_Xaml_CellGrid_ScrollInView_Syncfusion_UI_Xaml_Grid_ScrollAxis_RowColumnIndex_) method of `SpreadsheetGrid`.
 
 {% tabs %}
 {% highlight c# %}
@@ -241,7 +241,7 @@ spreadsheet.ActiveGrid.ScrollInView(new RowColumnIndex(5, 5));
 
 ## Formula bar
 
-The formula bar is located above the worksheet area of SfSpreadsheet. The formula bar displays the data or formula stored in the active cell. By default, the formula bar is `Visible`.
+The formula bar is located above the worksheet area of SfSpreadsheet. The formula bar displays the data or formula stored in the active cell.
 
 You can set the visibility state of the formula bar using the [FormulaBarVisibility](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_FormulaBarVisibility) property of `SfSpreadsheet`.
 
@@ -294,7 +294,7 @@ spreadsheet.SuspendFormulaCalculation();
 
 ## Close the popup programmatically
 
-In SfSpreadsheet, popup windows are used to display options like the copy-paste option, the fill series option, and so on, which are closed automatically on certain actions. However, you can also close the popup programmatically by using the [ShowHidePopup](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SpreadsheetGrid.html#Syncfusion_UI_Xaml_Spreadsheet_SpreadsheetGrid_ShowHidePopup_System_Boolean_) method of `SpreadsheetGrid`. The popups affected include the copy-paste tag, fill series, autofill, and sort options.
+In SfSpreadsheet, popup windows are used to display options like the copy-paste option, the fill series option, and so on, which are closed automatically on certain actions. However, you can also close the popup programmatically by using the [ShowHidePopup](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SpreadsheetGrid.html#Syncfusion_UI_Xaml_Spreadsheet_SpreadsheetGrid_ShowHidePopup_System_Boolean_) method of `SpreadsheetGrid`.
 
 {% tabs %}
 {% highlight c# %}
@@ -308,7 +308,7 @@ spreadsheet.ActiveGrid.ShowHidePopup(true);
 
 ## Identify when the active sheet is changed
 
-SfSpreadsheet provides support to identify when the active sheet is changed by using the [PropertyChanged](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_PropertyChanged) event of SfSpreadsheet, as shown below. The `PropertyChanged` event is raised both when the user switches tabs in the sheet tab bar and when the active sheet is changed programmatically (for example, via `SetActiveSheet`).
+SfSpreadsheet provides support to identify when the active sheet is changed by using the [PropertyChanged](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_PropertyChanged) event of SfSpreadsheet, as shown below.
 
 {% tabs %}
 {% highlight c# %}

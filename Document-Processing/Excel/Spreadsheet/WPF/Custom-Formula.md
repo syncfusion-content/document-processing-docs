@@ -44,4 +44,4 @@ public string ComputeLength(string range)
 {% endtabs %}
 
 
-N> After the formula is registered, you can also type `=Length("sample")` directly into a cell instead of calling `SetCellValue`. For more information, see the [WPF Spreadsheet Editor](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour or browse the [WPF Spreadsheet examples on GitHub](https://github.com/syncfusion/wpf-demos).
+N> For more information, see the [WPF Spreadsheet Editor](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour or browse the [WPF Spreadsheet examples on GitHub](https://github.com/syncfusion/wpf-demos).

@@ -23,10 +23,6 @@ Create an instance of Syncfusion.UI.Xaml.SpreadsheetHelper.[GraphicChartCellRend
 
 {% tabs %}
 {% highlight c# %}
-using Syncfusion.UI.Xaml.Spreadsheet;
-using Syncfusion.UI.Xaml.Spreadsheet.GraphicCells;
-using Syncfusion.UI.Xaml.SpreadsheetHelper;
-
 public MainWindow()
 {
     InitializeComponent();
@@ -43,10 +39,6 @@ For adding charts in SfSpreadsheet at runtime, use the [AddChart](https://help.s
 
 {% tabs %}
 {% highlight c# %}
-using Syncfusion.UI.Xaml.Spreadsheet;
-using Syncfusion.UI.Xaml.Spreadsheet.GraphicCells;
-using Syncfusion.XlsIO;
-
 var chart = spreadsheet.AddChart(spreadsheet.ActiveSheet);
 object[] Y_values = new object[] { 200, 100, 100 };
 object[] X_values = new object[] { "Total Income", "Expenses", "Profit" };
@@ -77,10 +69,6 @@ Create an instance of Syncfusion.UI.Xaml.SpreadsheetHelper.[SparklineCellRendere
 
 {% tabs %}
 {% highlight c# %}
-using Syncfusion.UI.Xaml.Spreadsheet;
-using Syncfusion.UI.Xaml.Spreadsheet.GraphicCells;
-using Syncfusion.UI.Xaml.SpreadsheetHelper;
-
 public MainWindow()
 {
     InitializeComponent();
@@ -97,10 +85,6 @@ SfSpreadsheet provides support to import images in `SpreadsheetGrid`. To add an 
 
 {% tabs %}
 {% highlight c# %}
-using Syncfusion.UI.Xaml.Grid.ScrollAxis;
-using Syncfusion.UI.Xaml.Spreadsheet;
-using Syncfusion.UI.Xaml.Spreadsheet.GraphicCells;
-
 var worksheet = spreadsheet.ActiveSheet;
 var stream = typeof(MainWindow).Assembly.GetManifestResourceStream("GraphicCellDemo.Data.Sample.jpg");
 var shape = spreadsheet.AddImage(worksheet, new RowColumnIndex(5, 5), stream);
@@ -121,11 +105,6 @@ SfSpreadsheet provides support to import RichTextBox content in `SpreadsheetGrid
 
 {% tabs %}
 {% highlight c# %}
-using System.Windows;
-using Syncfusion.UI.Xaml.Grid.ScrollAxis;
-using Syncfusion.UI.Xaml.Spreadsheet;
-using Syncfusion.UI.Xaml.Spreadsheet.GraphicCells;
-
 var rtfText = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset1 Calibri;}{\\f1\\fnil\\fcharset1 Calibri;}}{\\colortbl;\\red0\\green0\\blue0;\\red255\\green0\\blue0;}{\\f0\\fs22\\b\\cf1\\u83*\\u121*\\u110*\\u99*\\u102*\\u117*\\u115*\\u105*\\u111*\\u110*\\u32*\\b0}                           {\\f1\\fs22\\cf2\\u83*\\u111*\\u102*\\u116*\\u119*\\u97*\\u114*\\u101*\\u32*}{\\f1\\fs22\\cf1\\u80*\\u118*\\u116*\\u46*\\u32*\\u76*\\u116*\\u100*}}";
 var textBox = spreadsheet.AddTextBox(spreadsheet.ActiveSheet, new RowColumnIndex(5, 5), new Size(200, 200), rtfText) as TextBoxShapeImpl;
 
@@ -141,11 +120,6 @@ SfSpreadsheet allows the user to access the selected shapes and modify their pro
 
 {% tabs %}
 {% highlight c# %}
-using System.Drawing;
-using Syncfusion.UI.Xaml.Spreadsheet;
-using Syncfusion.UI.Xaml.Spreadsheet.GraphicCells;
-using Syncfusion.XlsIO;
-
 var selectedShape = spreadsheet.ActiveGrid.GraphicModel.SelectedShapes;
 
 for(int i = 0; i < selectedShape.Count ; i++)
@@ -176,10 +150,6 @@ Users can select a shape programmatically by using the [AddSelectedShapes](https
 
 {% tabs %}
 {% highlight c# %}
-using Syncfusion.UI.Xaml.Spreadsheet;
-using Syncfusion.UI.Xaml.Spreadsheet.GraphicCells;
-using Syncfusion.XlsIO.Implementation.Shapes;
-
 var shape = spreadsheet.ActiveSheet.Shapes[2] as ShapeImpl;
 spreadsheet.ActiveGrid.GraphicModel.AddSelectedShapes(shape);
 {% endhighlight %}
@@ -191,9 +161,6 @@ Users can clear the selection from the shapes and move the selection to the grid
 
 {% tabs %}
 {% highlight c# %}
-using Syncfusion.UI.Xaml.Spreadsheet;
-using Syncfusion.UI.Xaml.Spreadsheet.GraphicCells;
-
 spreadsheet.ActiveGrid.GraphicModel.ClearSelection();
 {% endhighlight %}
 {% endtabs %}
@@ -201,5 +168,5 @@ spreadsheet.ActiveGrid.GraphicModel.ClearSelection();
 
 ## See Also
 
-- [WPF Spreadsheet Editor](https://www.syncfusion.com/wpf-controls/spreadsheet) — feature tour
-- [WPF Spreadsheet examples on GitHub](https://github.com/syncfusion/wpf-demos) — render and configure the spreadsheet
+- [WPF Spreadsheet Editor feature tour](https://www.syncfusion.com/wpf-controls/spreadsheet)
+- [WPF Spreadsheet examples on GitHub](https://github.com/syncfusion/wpf-demos)
