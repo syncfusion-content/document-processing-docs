@@ -375,7 +375,7 @@ The following code example illustrates how to save Image files during a Word to 
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Open an existing Word document. 
-using (WordDocument document = new WordDocument("Input.docx", FormatType.Docx))
+using (WordDocument document = new WordDocument("Input.docx"))
 {
     //Hook the event to customize the image. 
     document.SaveOptions.MarkdownSaveOptions.ImageNodeVisited += SaveImage;
@@ -386,7 +386,7 @@ using (WordDocument document = new WordDocument("Input.docx", FormatType.Docx))
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Open an existing Word document. 
-Using document As WordDocument = New WordDocument("Input.docx", FormatType.Docx)
+Using document As WordDocument = New WordDocument("Input.docx")
     'Hook the event to customize the image. 
     document.SaveOptions.MarkdownSaveOptions.ImageNodeVisited += SaveImage
     'Save a Word document as a Markdown file.
@@ -463,7 +463,7 @@ using (WordDocument document = new WordDocument(Path.GetFullPath(@"Data/Input.do
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Open an existing Word document.
-using (WordDocument document = new WordDocument("Input.docx", FormatType.Docx))
+using (WordDocument document = new WordDocument("Input.docx"))
 {
     //Set the encoding values.
     document.SaveOptions.MarkdownSaveOptions.Encoding = Encoding.ASCII;
@@ -474,7 +474,7 @@ using (WordDocument document = new WordDocument("Input.docx", FormatType.Docx))
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Open an existing Word document.
-Using document As WordDocument = New WordDocument("Input.docx", FormatType.Docx)
+Using document As WordDocument = New WordDocument("Input.docx")
     'Specify the character encoding for the output Markdown file.
     document.SaveOptions.MarkdownSaveOptions.Encoding = Encoding.ASCII
     'Save the document as a Markdown file.
@@ -509,7 +509,7 @@ using (WordDocument document = new WordDocument(Path.GetFullPath(@"Data/Input.do
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 // Open an existing Word document.
-using (WordDocument document = new WordDocument("Input.docx", FormatType.Docx))
+using (WordDocument document = new WordDocument("Input.docx"))
 {
     // Convert the Word document to Markdown.
     MarkdownDocument markdownDocument = document.GetMarkdownDocument();
@@ -522,7 +522,7 @@ using (WordDocument document = new WordDocument("Input.docx", FormatType.Docx))
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Open an existing Word document.
-Using document As WordDocument = New WordDocument("Input.docx", FormatType.Docx)
+Using document As WordDocument = New WordDocument("Input.docx")
     'Convert the Word document to Markdown.
     Dim markdownDocument As MarkdownDocument = document.GetMarkdownDocument()
     'Save or process the Markdown document as needed.

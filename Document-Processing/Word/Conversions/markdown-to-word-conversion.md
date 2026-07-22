@@ -64,11 +64,6 @@ End Using
 
 {% endtabs %}
 
-To save the converted document in a different format, change the `FormatType` value passed to `document.Save`. For example:
-
-* DOC: `FormatType.Doc`
-* RTF: `FormatType.Rtf`
-
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Markdown-to-Word-conversion/Convert-Markdown-to-Word).
 
 T> You can also save the markdown file as [HTML](https://help.syncfusion.com/document-processing/word/word-library/net/html), [PDF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf), and [Image](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/word-to-image).
@@ -528,8 +523,6 @@ N> Provide the encoding value before opening the Markdown file, as shown in the 
 ## Online Demo
 
 * Explore how to convert the Markdown file to Word document using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/markdowntoword#/tailwind).
-
-For information on the supported CommonMark and GitHub-flavored Markdown features, refer to the [Syncfusion DocIO API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MdImportSettings.html).
 
 ## See Also
 
