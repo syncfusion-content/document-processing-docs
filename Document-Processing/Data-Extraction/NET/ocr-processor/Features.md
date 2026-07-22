@@ -2295,8 +2295,6 @@ For full control over image preprocessing, Syncfusion's OCR Processor lets you p
 
 This is different from the [Built-in Image Enhancement Modes](#performing-ocr-with-built-in-image-enhancement-modes) and [Built-in Image Enhancement Options](#performing-ocr-with-built-in-image-enhancement-options) sections above, which cover the Syncfusion-provided pipeline.
 
-N> Install the `SixLabors.ImageSharp` NuGet package and the `Syncfusion.ImagePreProcessor.Base` (or `Syncfusion.ImagePreProcessor.Portable`) assembly before using the `ImageProcessor` class. Refer to the [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/ocr-processor/net/assemblies-required) page for the platform-specific package name.
-
 Please refer to the code snippet below.
 
 {% tabs %}  
@@ -2757,4 +2755,4 @@ File.WriteAllText("Output.txt", output.ToString())
 
 You can downloaded a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/OCR/.NET/Perform-OCR-on-tiff-image).
 
-For common errors and resolutions (missing tessdata, native DLL load failures, unsupported modes, garbage OCR output, etc.), see the dedicated [Troubleshooting](https://help.syncfusion.com/document-processing/pdf/ocr-processor/net/troubleshooting) page.
+For common errors and resolutions (missing tessdata, native DLL load failures, unsupported modes, garbage OCR output, etc.), see the dedicated [Troubleshooting](https://help.syncfusion.com/document-processing/data-extraction/net/ocr-processor/troubleshooting) page.

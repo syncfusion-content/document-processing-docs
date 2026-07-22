@@ -32,7 +32,7 @@ To integrate the .NET PDF library into your ASP.NET Core application, refer to t
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/ASP.NET%20Core/Create-new-PDF-document).
 
 By executing the program, you will get the PDF document as follows.
-![ASP.NET Core output PDF document showing the text "Hello World!!!"](GettingStarted_images/pdf-generation-output.png)
+![ASP.NET Core output PDF document"](GettingStarted_images/pdf-generation-output.png)
 
 Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 

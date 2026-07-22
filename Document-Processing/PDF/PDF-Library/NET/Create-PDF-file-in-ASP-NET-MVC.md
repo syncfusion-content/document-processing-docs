@@ -119,7 +119,7 @@ Step 10: Run the project by pressing <kbd>F5</kbd>. Visual Studio launches the a
 Step 11: Open the app in a browser, then click the **Generate PDF Document** button on the home page. The browser downloads `Output.pdf` containing the text "Hello World!!!".
 
 By executing the program, you will get the PDF document as follows.
-![ASP.NET MVC output PDF document showing the text "Hello World!!!"](GettingStarted_images/pdf-generation-output.png)
+![ASP.NET MVC output PDF document"](GettingStarted_images/pdf-generation-output.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/ASP.NET%20MVC/Creating-a-new-PDF-document).
 
