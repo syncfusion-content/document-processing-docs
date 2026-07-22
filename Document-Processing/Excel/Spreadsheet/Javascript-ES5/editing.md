@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Editing in EJ2 Javascript Spreadsheet control | Syncfusion
-description: Learn here all about Editing in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Editing in EJ2 JavaScript Spreadsheet control | Syncfusion
+description: Learn about the editing options supported in the Syncfusion EJ2 JavaScript Spreadsheet control, including enabling editing, programmatic edit, save, and cancel operations.
 platform: document-processing
-control: Editing 
+control: Editing
 documentation: ug
 ---
 
-# Editing in EJ2 Javascript Spreadsheet control
+# Editing in EJ2 JavaScript Spreadsheet control
 
-You can edit the contents of a cell directly in the cell or by typing in the formula bar. By default, the editing feature is enabled in the spreadsheet. Use the [`allowEditing`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowediting) property to enable or disable the editing feature.
+The Spreadsheet control lets you edit a cell's content directly in the cell or through the formula bar. By default, the editing feature is enabled in the Spreadsheet. To enable or disable the editing feature, set the [`allowEditing`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowediting) property to `true` or `false`. For information about related keyboard shortcuts, method signatures, and events, see [Editing in EJ2 Spreadsheet control](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowediting) in the API reference.
 
 ## Edit cell
 
 You can start editing by one of the following ways,
 
-* Double click a cell to start the edit mode.
-* Press `F2` key to edit the active cell.
-* Use formula bar to perform editing.
-* Use `BACKSPACE` or `SPACE` key to clear the cell content and start the edit mode.
+* Double-click a cell to enter edit mode.
+* Press `F2` to edit the active cell.
+* Use the formula bar to perform editing.
+* Press `Backspace` or `Space` to clear the cell content and start edit mode.
 
 * Using the [`startEdit`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#startedit) method.
 
@@ -26,16 +26,16 @@ You can start editing by one of the following ways,
 
 If the cell is in editable state, you can save the edited cell by one of the following ways,
 
-* Perform mouse click on any other cell rather than the current editing cell.
-* Press `Enter` or `Tab` keys to save the edited cell content.
+* Click any other cell to commit the current edit and move the selection.
+* Press `Enter` or `Tab` to save the current cell. `Enter` moves the active selection down by one row; `Tab` moves the active selection to the right.
 
 * Using the [`endEdit`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#endedit) method.
 
 ## Cancel editing
 
-To cancel the editing without saving the changes, you can use one of the following ways,
+To discard in-progress changes without saving, use either a UI action or a programmatic method.
 
-* Press `ESCAPE` key, this will remove the editable state and update the unchanged cell content.
+* Press `Escape`. This exits edit mode and restores the cell's previous value.
 
 * Using the [`closeEdit`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#closeedit) method.
 

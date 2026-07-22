@@ -1,16 +1,17 @@
 ---
 layout: post
-title: Context menu in EJ2 Javascript Spreadsheet control | Syncfusion
-description: Learn here all about Context menu in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Context Menu in Syncfusion JavaScript Spreadsheet Control | Syncfusion
+description: Learn about the built-in context menu items and how to customize the context menu in the Syncfusion JavaScript Spreadsheet control.
 platform: document-processing
-control: Context menu 
+control: Context Menu
 documentation: ug
 ---
 
-# Context menu in EJ2 Javascript Spreadsheet control
+# Context Menu in Syncfusion JavaScript Spreadsheet Control
 
-Context Menu is used to improve user interaction with Spreadsheet using the popup menu. This will open when right-clicking on Cell/Column Header/Row Header/ Pager in the Spreadsheet. You can use [`enableContextMenu`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#enablecontextmenu) property to enable/disable context menu.
+The context menu is a popup menu that improves user interaction with the Spreadsheet. It opens when you right-click a cell, column header, row header, or pager (sheet tab).
 
+Use the [`enableContextMenu`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#enablecontextmenu) property to enable or disable the context menu. The default value of `enableContextMenu` is `true`.
 > The default value for the `enableContextMenu` property is `true`.
 
 ## Context Menu Items in Row Cell
@@ -27,7 +28,7 @@ Please find the table below for default context menu items and their actions.
 | [`Sort`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#sort) | Perform sorting to the selected range of cells by ascending or descending. |
 | [`Hyperlink`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#hyperlink) | Create a link in the spreadsheet to navigate to web links or cell reference within the sheet or other sheets in the Spreadsheet. |
 
-## Context Menu Items in Row Header / Column Header
+## Context Menu Items in Row Header and Column Header
 
 Please find the table below for default context menu items and their actions.
 
@@ -56,11 +57,13 @@ Please find the table below for default context menu items and their actions.
  
 ## Context Menu Customization
 
-You can perform the following context menu customization options in the spreadsheet
+You can customize the context menu by performing the following actions:
 
-* Add Context Menu Items
-* Remove Context Menu Items
-* Enable/Disable Context Menu Items
+- Add context menu items
+- Remove context menu items
+- Enable or disable context menu items
+
+All customization methods are typically called inside the `contextmenuBeforeOpen` event so that the changes apply before the menu is shown.
 
 ### Add Context Menu Items
 
@@ -96,7 +99,7 @@ In this demo, Insert Column item has been removed from the row/column header con
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/contextmenu/removeContextMenu-cs1" %}
 
-### Enable/Disable Context Menu Items
+### Enable or Disable Context Menu Items
 
 You can enable/disable the items in context menu using the [`enableContextMenuItems`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#enablecontextmenuitems) in `contextmenuBeforeOpen` event
 

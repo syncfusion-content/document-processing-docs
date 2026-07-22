@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Rows and columns in EJ2 Javascript Spreadsheet control | Syncfusion
-description: Learn here all about Rows and columns in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
+description: Learn here all about Rows and columns in Syncfusion EJ2 JavaScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Rows and columns 
+control: Rows and columns
 documentation: ug
 ---
 
 # Rows and columns in EJ2 Javascript Spreadsheet control
 
-Spreadsheet is a tabular format consisting of rows and columns. The intersection point of rows and columns are called as cells. The list of operations that you can perform in rows and columns are,
+Spreadsheet is a tabular format consisting of rows and columns. The intersection of a row and a column is called a cell. The following operations can be performed on rows and columns:
 
 * Insert
 * Delete
@@ -17,11 +17,11 @@ Spreadsheet is a tabular format consisting of rows and columns. The intersection
 
 ## Insert
 
-You can insert rows or columns anywhere in a spreadsheet. Use the [`allowInsert`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowinsert) property to enable or disable the insert option in Spreadsheet.
- 
+You can insert rows or columns anywhere in a spreadsheet. Use the [`allowInsert`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowinsert) property to enable or disable the insert option in the Spreadsheet. The default value of `allowInsert` is `true`.
+
 ### Row
 
-The rows can be inserted in the following ways,
+The rows can be inserted in the following ways:
 
 * Using [`insertRow`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#insertrow) method, you can insert the rows once the component is loaded.
 * Using context menu, insert the empty rows in the desired position.
@@ -41,10 +41,9 @@ The following code example shows the options for inserting rows in the spreadshe
 
 ### Column
 
-The columns can be inserted in the following ways,
+The columns can be inserted in the following ways:
 
-* Using [`insertColumn`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#insertcolumn) method, you can insert the columns once the component is loaded.
-* Using context menu, insert the empty columns in the desired position.
+* Use the [`insertColumn`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#insertcolumn) method to insert columns after the Spreadsheet component is loaded.
  
 The following code example shows the options for inserting columns in the spreadsheet.
 
@@ -61,9 +60,9 @@ The following code example shows the options for inserting columns in the spread
 
 ## Delete
 
-Delete support provides an option for deleting the rows and columns in the spreadsheet. Use [`allowDelete`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowdelete) property to enable or disable the delete option in Spreadsheet.
+Delete support provides an option for deleting the rows and columns in the spreadsheet. Set the [`allowDelete`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowdelete) property to enable or disable the delete option in the Spreadsheet.
 
-The rows and columns can be deleted dynamically in the following ways,
+The rows and columns can be deleted dynamically in the following ways:
 
 * Using [`delete`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#delete) method, you can delete the loaded rows and columns.
 * Using context menu, you can delete the selected rows and columns.
@@ -83,7 +82,7 @@ The following code example shows the delete operation of rows and columns in the
 
 ## Limitations of insert and delete
 
-The following features have some limitations in Insert/Delete:
+The following features have limitations in Insert/Delete:
 
 * Insert row/column between the formatting applied cells.
 * Insert row/column between the data validation.
@@ -92,23 +91,23 @@ The following features have some limitations in Insert/Delete:
 
 ## Hide and show
 
-You can show or hide the rows and columns in the spreadsheet through property binding, method, and context menu.
+You can show or hide rows and columns in the spreadsheet through property binding, method, or context menu.
 
 ### Row
 
-The rows can be hidden or shown through the following ways,
+The rows can be hidden or shown in the following ways:
 
-* Using `hidden` property in row, you can hide/show the rows at initial load.
-* Using `hideRow` method, you can hide the rows by specifying the start and end row index, set the last argument `hide` as `false` to unhide the hidden rows.
-* Right-click on the row header and select the desired option from context menu
+* Set the `hidden` property on a `RowModel` to `true` to hide the row at initial load.
+* Use the `hideRow` method to hide rows by specifying the start and end row index; pass the last argument as `false` to unhide hidden rows.
+* Right-click the row header and select the desired option from the context menu.
 
 ### Column
 
-The columns can be hidden or shown through following ways,
+The columns can be hidden or shown in the following ways:
 
-* Using `hidden` property in columns, you can hide/show the columns at initial load.
-* Using `hideColumn` method, you can hide the columns by specifying the start and end column index, set the last argument `hide` as `false` to unhide the hidden columns.
-* Right-click on the column header and select the desired option from context menu
+* Set the `hidden` property on a `ColumnModel` to `true` to hide the column at initial load.
+* Use the `hideColumn` method to hide columns by specifying the start and end column index; pass the last argument as `false` to unhide hidden columns.
+* Right-click the column header and select the desired option from the context menu.
 
 The following code example shows the hide/show rows and columns operation in the spreadsheet.
 
@@ -125,7 +124,7 @@ The following code example shows the hide/show rows and columns operation in the
 
 ## Size
 
-You can change the size of rows and columns in the spreadsheet by using [setRowsHeight](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#setrowsheight) and [setColumnsWidth](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#setcolumnswidth) methods.
+You can change the size of rows and columns in the spreadsheet by using the [setRowsHeight](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#setrowsheight) and [setColumnsWidth](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#setcolumnswidth) methods. The size values are expressed in pixels.
 
 ### Row
 
@@ -136,7 +135,7 @@ You can provide the following type of ranges to the method:
 * Single row range: `['2:2']`
 * Multiple rows range: `['1:100']`
 * Multiple rows with discontinuous range: `['1:10', '15:25', '30:40']`
-* Multiple rows with different sheets: `[Sheet1!1:50, 'Sheet2!1:50', 'Sheet3!1:50']`
+* Multiple rows with different sheets: `['Sheet1!1:50', 'Sheet2!1:50', 'Sheet3!1:50']`
 
 The following code example shows how to change the height for single/multiple rows in the spreadsheet.
 
@@ -160,7 +159,7 @@ You can provide the following type of ranges to the method:
 * Single column range: `['F:F']`
 * Multiple columns range: `['A:F']`
 * Multiple columns with discontinuous range: `['A:C', 'G:I', 'K:M']`
-* Multiple columns with different sheets: `[Sheet1!A:H, 'Sheet2!A:H', 'Sheet3!A:H']`
+* Multiple columns with different sheets: `['Sheet1!A:H', 'Sheet2!A:H', 'Sheet3!A:H']`
 
 The following code example shows how to change the width for single/multiple columns in the spreadsheet.
 

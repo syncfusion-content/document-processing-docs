@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Illustrations in EJ2 Javascript Spreadsheet control | Syncfusion
-description: Learn here all about Illustrations in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
+description: Learn here all about Illustrations in the Syncfusion EJ2 JavaScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Illustrations 
+control: Illustrations
 documentation: ug
 ---
 
 # Illustrations in EJ2 Javascript Spreadsheet control
 
-Illustrations help you to insert an image, shapes, and graphic objects in the Essential<sup style="font-size:70%">&reg;</sup> JS 2 spreadsheet.
+Illustrations let you insert images and graphic objects such as charts in the Essential<sup style="font-size:70%">&reg;</sup> JS 2 spreadsheet to enhance the visual appeal of your data.
 
 ## Image
 
@@ -19,17 +19,19 @@ Adding images to a spreadsheet can enhance the visual appeal and help to convey 
 
 ### Insert Image
 
-You can insert the image by using one of the following ways,
+You can insert the image in one of the following ways:
 
-* Selecting the Insert tab in the Ribbon toolbar, and then choose the Image tab.
-* Use the `insertImage()` method programmatically.
+* Select the **Insert** tab in the Ribbon toolbar and then choose **Image**.
+* Use the [`insertImage()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#insertimage) method programmatically.
 
-The available parameters in `insertImage()` method are,
+The available parameters in the `insertImage()` method are:
 
 | Parameter | Type | Description |
 |-----|------|----|
-| images | `ImageModel` | Specifies the options to insert image in spreadsheet. |
-| range(optional) | `string` | Specifies the range in spreadsheet. |
+| images | `ImageModel` | Specifies the options to insert an image in the spreadsheet. |
+| range (optional) | `string` | Specifies the range in the spreadsheet where the image is anchored. |
+
+The `insertImage()` method returns `void`.
 
 The available arguments in `ImageModel` are:
 
@@ -47,12 +49,12 @@ The available arguments in `ImageModel` are:
 * If you want to delete the image, just select the image, and then press the Delete key.
 * Use the `deleteImage()` method programmatically.
 
-The available parameters in `deleteImage()` method are,
+The available parameters in the `deleteImage()` method are:
 
 | Parameter | Type | Description |
 |-----|------|----|
 | id | `string` | Specifies the id of the image element to be deleted. |
-| range(optional) | `string` | Specifies the range in spreadsheet. |
+| range (optional) | `string` | Specifies the range in the spreadsheet from which the image is removed. |
 
 ### Image Customization
 
@@ -83,12 +85,12 @@ Image feature allows you to view and insert an image in a spreadsheet, and you c
 
 The following features have some limitations in Image:
 
-* Corner resizing option in the image element.
-* Copy and paste the external image.
+* Corner resizing is not supported on the image element.
+* Copying and pasting external images is not supported.
 
 ## Chart
 
-A chart is a graphical representation of data, that organizes and represents a set of numerical or qualitative data. It mostly displays the selected range of data in terms of `x`-axis and `y`-axis. You can use the [`allowChart`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowchart) property to enable or disable the chart functionality.
+A chart is a graphical representation of data that organizes and displays a set of numerical or qualitative values, typically along the `x`-axis and `y`-axis. You can use the [`allowChart`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowchart) property to enable or disable the chart functionality.
 
 > The default value for the [`allowChart`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowchart) property is `true`.
 
@@ -105,13 +107,13 @@ The following types of charts are available in the Spreadsheet.
 
 ### Insert Chart
 
-You can insert the chart by using one of the following ways,
+You can insert the chart in one of the following ways:
 
-* Select the chart icon in the Ribbon toolbar under the Insert Tab.
+* Select the chart icon in the Ribbon toolbar under the **Insert** tab.
 
 * Use the [`insertChart()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#insertchart) method programmatically.
 
-The available parameter in the [`insertChart()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#insertchart) method is,
+The available parameter in the [`insertChart()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#insertchart) method is:
 
 | Parameter | Type | Description |
 |-----|------|----|
@@ -143,7 +145,7 @@ The available arguments in the `ChartModel` are:
 
 * Use the [`deleteChart()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#deletechart) method programmatically.
 
-The available parameter in the [`deleteChart()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#deletechart) method is,
+The available parameter in the [`deleteChart()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#deletechart) method is:
 
 | Parameter | Type | Description |
 |-----|------|----|
