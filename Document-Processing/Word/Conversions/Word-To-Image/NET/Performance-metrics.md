@@ -22,7 +22,7 @@ The following system configurations and test methodology were used for benchmark
 
 ## Benchmark Results
 
-The table below shows the performance results of various Word-to-Image operations, evaluated using the predefined input conditions described in the previous sections. Times are measured in seconds and include document loading, conversion, and image saving. Output is generated as PNG at 96 DPI.
+The table below shows the performance results of various Word-to-Image operations, evaluated using the predefined input conditions described in the previous sections. Times are measured in seconds and include document loading, conversion, and image saving.
 
 <table>
 <tr>

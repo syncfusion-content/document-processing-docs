@@ -86,7 +86,7 @@ First watermark of the Word document should be applied to the entire converted i
 Multi-Column Texts
 </td>
 <td>
-Multi-Column text positions are calculated dynamically when laying out the text. So, there may be some content position differences in the image.
+Multi-Column text positions are calculated dynamically when layout the text. So, there may be some content position differences in the image.
 </td>
 </tr>
 <tr>
@@ -135,7 +135,7 @@ Only DOCX and WordML format documents are supported.
 Pagination
 </td>
 <td>
-The Essential<sup>&reg;</sup> DocIO makes sensible decisions when laying out the text and its supported elements while generating the image documents. However, there may not be guaranteed pagination with all the documents.
+The Essential<sup>&reg;</sup> DocIO makes sensible decisions when layout the text and its supported elements while generating the image documents. However, there may not be guaranteed pagination with all the documents.
 </td>
 </tr>
 <tr>

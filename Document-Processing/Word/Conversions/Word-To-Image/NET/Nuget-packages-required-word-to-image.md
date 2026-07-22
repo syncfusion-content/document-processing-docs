@@ -50,6 +50,17 @@ Install-Package Syncfusion.DocIO.Wpf
 </tr>
 <tr>
 <td>
+ASP.NET MVC5
+</td>
+<td>
+Syncfusion.DocIO.AspNet.Mvc5.nupkg
+</td>
+<td>
+Install-Package Syncfusion.DocIO.AspNet.Mvc5
+</td>
+</tr>
+<tr>
+<td>
 ASP.NET Core, Console Application (Targeting .NET Core) and Blazor
 </td>
 <td>
@@ -137,17 +148,6 @@ Syncfusion.DocIO.AspNet.Mvc4.nupkg
 </td>
 <td>
 Install-Package Syncfusion.DocIO.AspNet.Mvc4
-</td>
-</tr>
-<tr>
-<td>
-{{'[ASP.NET MVC5](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-asp-net-mvc)' | markdownify}}<br/>
-</td>
-<td>
-Syncfusion.DocIO.AspNet.Mvc5.nupkg
-</td>
-<td>
-Install-Package Syncfusion.DocIO.AspNet.Mvc5
 </td>
 </tr>
 </table>
@@ -255,20 +255,8 @@ Syncfusion.OfficeChartToImageConverter.AspNet.Mvc5.nupkg
 Install-Package Syncfusion.OfficeChartToImageConverter.AspNet.Mvc5
 </td>
 </tr>
-<tr>
-<td>
-ASP.NET Core, Blazor, and .NET MAUI
-</td>
-<td>
-Syncfusion.OfficeChartToImageConverter.Net.Core.nupkg
-</td>
-<td>
-Install-Package Syncfusion.OfficeChartToImageConverter.Net.Core
-</td>
-</tr>
 </table>
 
-N> The chart-to-image conversion is supported on Windows-specific platforms and on cross-platform targets via `Syncfusion.OfficeChartToImageConverter.Net.Core` (for ASP.NET Core, Blazor, .NET MAUI) and `Syncfusion.OfficeChartToImageConverter.NET` (for WinUI). After installation, instantiate the converter and assign it to the `ChartToImageConverter` property of `DocIORenderer`. Refer to the [charts in Word documentation](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-charts) for code examples.
 
 ### Retired Platforms
 
