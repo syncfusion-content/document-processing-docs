@@ -64,5 +64,5 @@ The following example demonstrates how to prevent actions such as cut, paste, au
 
 ## See Also
 
-* [Protection](../protect-sheet) 
+* [Sheet protection](../protect-sheet)
 * [Events](../events)

@@ -1,13 +1,15 @@
 ---
 layout: post
-title: Create a object structure in React Spreadsheet component | Syncfusion
-description: Learn here all about Create a object structure in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
-control: Create a object structure 
+title: Create an object structure in React Spreadsheet component | Syncfusion
+description: Learn here all about Create an object structure in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+control: Create an object structure
 platform: document-processing
 documentation: ug
 ---
 
-# Create a object structure in React Spreadsheet component
+# Create an object structure in React Spreadsheet component
+
+This topic describes the JSON structure that can be passed to the [`openFromJson`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#openfromjson) method to render the spreadsheet. The structure is an object whose top-level key is `Workbook`, and the value is an object containing the spreadsheet's [`properties`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#properties).
 
 This topic guides you to construct a JSON structure that can be passed to the [`openFromJson`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#openfromjson) method to render the spreadsheet. The JSON structure is an object with the key as `Workbook` and the [`properties`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#properties) of the spreadsheet as value.
 
@@ -65,7 +67,7 @@ The following table defines each property of the `Cell`.
 | formula | string | Defines the formula or expression of the cell. |
 | format | string | Specifies the number format code to display the value in specified number format. |
 | hyperlink | string | Specifies the hyperlink of the cell. |
-| wrap | boolean | Wraps the cell text to the next line, if the text width exceeds the column width. |
+| wrap | boolean | Wraps the cell text to the next line if the text width exceeds the column width. |
 | isLocked | boolean | Specifies the cell whether it is locked or not, for allowing edit range in the spreadsheet protect option. |
 | colSpan | number | Specifies the column-wise cell merge count. |
 | rowSpan | number | Specifies the row-wise cell merge count. |
@@ -106,14 +108,13 @@ The following table defines each property of the `Validation`.
 
 | Property | Type | Description |
 |-------|-------|-------|
-| type | `ValidationType` | Specifies Validation Type. |
-| operator | `ValidationOperator` | Specifies Validation Operator. |
-| value1 | string | Specifies Validation Minimum Value. |
-| value2 | string | Specifies Validation Maximum Value. |
-| ignoreBlank | boolean | Specifies IgnoreBlank option in Data Validation. |
-| inCellDropDown | boolean | Specifies InCellDropDown option in Data Validation. |
-| isHighlighted | boolean | Specifies to allow Highlight Invalid Data. |
-|  |  |  |
+| type | `ValidationType` | Specifies the validation type. |
+| operator | `ValidationOperator` | Specifies the validation operator. |
+| value1 | string | Specifies the validation minimum value. |
+| value2 | string | Specifies the validation maximum value. |
+| ignoreBlank | boolean | Specifies the IgnoreBlank option in Data Validation. |
+| inCellDropDown | boolean | Specifies the InCellDropDown option in Data Validation. |
+| isHighlighted | boolean | Specifies whether to highlight invalid data. |
 
 ```js
 type ValidationType = 'WholeNumber' | 'Decimal' | 'Date' | 'TextLength' | 'List' | 'Time';

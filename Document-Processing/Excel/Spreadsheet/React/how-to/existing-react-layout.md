@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Integrating Spreadsheet into Existing React Layouts
+# Integrate Spreadsheet into Existing React Layouts
 
 ## Overview
 
@@ -38,7 +38,7 @@ If the Spreadsheet is placed inside a dialog (for example, a Syncfusion Dialog),
 
 And if the Spreadsheet is rendered while the dialog container is hidden and the container is made visible later, the Spreadsheet's layout may not calculated properly. In such cases, invoke the [resize](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#resize) method in the dialog's open event to re-render the Spreadsheet layout based on the currently visible parent container.
 
-The following sample shows how to render Spreadsheet inside the Dialog component.
+The following sample shows how to render the Spreadsheet inside the Dialog component.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
