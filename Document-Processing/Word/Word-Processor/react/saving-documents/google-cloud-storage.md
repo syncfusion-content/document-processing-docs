@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Save document to Google Cloud Storage in React DOCX Editor
+title: Save to Google Cloud Storage in React DOCX Editor | Syncfusion
 description: Learn how to save a document to Google Cloud Storage in the Syncfusion React Document Editor of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to Google Cloud Storage
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Google Cloud Storage in React DOCX Editor
+# Save document to Google Cloud Storage using React DOCX Editor
 
 To save a document to Google Cloud Storage, you can follow the steps below.
 
