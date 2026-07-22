@@ -14,7 +14,9 @@ N> If this is your first time working with the Google Cloud Platform (GCP), plea
 
 ## Prerequisites
 
-* A Google Cloud Platform (GCP) account with access to the App Engine service.
+* A Google Cloud Platform (GCP) account with an active billing account.
+* The Google App Engine Admin API must be enabled in your GCP project. To enable it, navigate to **APIs & Services > Library**, search for **App Engine Admin API**, and click **Enable**.
+* An active Syncfusion license. If you do not have one, request a free 30-day trial at [https://www.syncfusion.com/sales/communitylicense](https://www.syncfusion.com/sales/communitylicense).
 
 ## Supported Platforms in GCP
 
@@ -34,3 +36,11 @@ App Engine<br/></td><td>
 ## Create a PDF document in App Engine
 
 For a step-by-step walkthrough of creating and deploying an ASP.NET Core Web app that generates a PDF document on Google App Engine, refer to the [Create a PDF document in Google App Engine](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-google-app-engine) documentation.
+
+## Next steps
+
+* [Create a PDF in Azure App Service on Linux](Create-PDF-document-in-Azure-App-Service-Linux.md)
+* [Create a PDF in Docker](Create-PDF-document-in-Docker.md)
+* [Create a PDF in ASP.NET Core](Create-PDF-file-in-ASP-NET-Core.md)
+* [Open and read an existing PDF document](Open-PDF-file.md)
+* [Save the generated PDF to a file or stream](Save-PDF-file.md)

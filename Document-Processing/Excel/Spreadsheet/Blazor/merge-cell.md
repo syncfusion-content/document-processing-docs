@@ -1,17 +1,32 @@
 ---
 layout: post
-title: Merge cells in Blazor Spreadsheet component | Syncfusion
-description: Checkout and learn all about the comprehensive merge functionality in Syncfusion Blazor Spreadsheet component and much more.
+title: Merge cells in the Blazor Spreadsheet component | Syncfusion
+description: Check out and learn all about the comprehensive merge functionality in Syncfusion Blazor Spreadsheet component and much more.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Merge cells in Blazor Spreadsheet component
+# Merge cells in the Blazor Spreadsheet component
 
-Merging cells in the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component allows you to combine adjacent cells into a single larger cell, improving layout and readability. This feature is commonly used to create headers, section labels, or grouped content for a structured view. To control this functionality, use the [AllowMerge](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowMerge) property, which enables or disables merge cell support in the Spreadsheet. The default value of the [AllowMerge](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowMerge) property is true.
+Merging cells in the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component allows you to combine adjacent cells into a single larger cell, improving the layout and readability. This feature is commonly used to create headers, section labels, or grouped content for a structured view. To control this functionality, use the [AllowMerge](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowMerge) property, which enables or disables merge cell support in the Spreadsheet. The default value of the [AllowMerge](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowMerge) property is true.
 
-N> When [AllowMerge](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowMerge) is set to **`false`**, merge options are **disabled** in the Ribbon. API methods related to merging will also be inactive. Additionally, if the **worksheet is protected**, the merging feature is disabled. For more information, refer to the [Worksheet Protection](./protection#protect-sheet) documentation.
+## Disabling Merge
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@page "/"
+@using Syncfusion.Blazor.Spreadsheet
+
+<SfSpreadsheet AllowMerge="false">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+{% endhighlight %}
+{% endtabs %}
+
+N> When [AllowMerge](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowMerge) is set to **`false`**, merge options are **disabled** in the Ribbon. API methods related to merging are inactive. Additionally, if the **worksheet is protected**, the merging feature is disabled. For more information, refer to the [Worksheet Protection](./protection#protect-sheet) documentation.
 
 ## Merge operations
 
@@ -30,12 +45,14 @@ N> The **Merge Cell** button is disabled when a single unmerged cell is selected
 
 ### Merge cells via UI
 
-- Select a range of cells to merge.
-- Click on **Merge Cell** drop-down in the ribbon.
-- Choose one of the following option:
-   - **Merge & Center**
-   - **Merge Across**
-   - **Merge Cells**
+To merge cells through the Ribbon UI, follow these steps:
+
+1.  Select a range of cells to merge.
+2.  In the **Home** tab of the Ribbon, click the **Merge Cell** drop-down.
+3.  Choose one of the following options:
+    - **Merge & Center**
+    - **Merge Across**
+    - **Merge Cells**
 
 ![merge cells](./images/merge-cells.gif)
 
@@ -47,16 +64,17 @@ N> Clicking the **Merge Cells** button (not the drop-down) applies the default a
 
 ### Merge cells programmatically
 
-The [MergeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_MergeAsync_Syncfusion_Blazor_Spreadsheet_MergeType_System_String_) method merges cells based on the specified merge type. If the **cellRange** parameter is not provided, the current selection is used. This method provides a programmatic way to merge cells without using the UI. The available parameters in the [MergeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_MergeAsync_Syncfusion_Blazor_Spreadsheet_MergeType_System_String_) method are:
+The [MergeAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_MergeAsync_Syncfusion_Blazor_Spreadsheet_MergeType_System_String_) method merges cells based on the specified [MergeType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.MergeType.html).. If the **cellRange** parameter is not provided, the current selection is used. This method provides a programmatic way to merge cells without using the UI. The available parameters in the [MergeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_MergeAsync_Syncfusion_Blazor_Spreadsheet_MergeType_System_String_) method are:
 
 | Parameter | Type | Description |
 | -- | -- | -- |
-| mergeType | **MergeType** | Specifies the merge behavior.<br><br> The default **MergeType** is `MergeType.Cells`. Supported values:<br> • `Cells` - Merge the entire selection into one cell and preserve the top-left value;<br> • `Center`- Merge the entire selection and horizontally center the resulting cell’s content;<br> • `Across` - For each row in the selection, merge the cells across columns and preserve each row’s first cell value. |
+| mergeType | **MergeType** | Specifies the merge behavior.<br><br> The default **MergeType** is `MergeType.Cells`. Supported values:<br> • `MergeType.Cells` - Merge the entire selection into one cell and preserve the top-left value;<br> • `MergeType.Center`- Merge the entire selection and horizontally center the resulting cell’s content;<br> • `MergeType.Across` - For each row in the selection, merge the cells across columns and preserve each row’s first cell value. |
 | cellRange | string (optional) | Specifies the A1-style address of the range to unmerge (e.g., `"A1:D1"`). If not provided, the currently selected range will be unmerged. |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
+@page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
 <button class="e-btn" @onclick="MergeSelection">Merge cells</button>
@@ -91,10 +109,10 @@ The [MergeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreads
 
     private async Task MergeAndCenterRange()
     {
-        // Merge the range and center-align the merged cell’s content
+        // Merge the range and center-align the merged cell's content
         await SpreadsheetInstance.MergeAsync(MergeType.Center, "A1:D1");
     }
-    
+
 }
 
 {% endhighlight %}
@@ -104,15 +122,17 @@ The [MergeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreads
 
 ### Unmerge cells via UI
 
-- Select a range of cells to unmerge.
-- Click on **Merge Cell** drop-down in the ribbon.
-- Choose **Unmerge cells** option.
+To unmerge cells through the Ribbon UI, follow these steps:
+
+1.  Select a range of cells to unmerge.
+2.  In the **Home** tab of the Ribbon, click the **Merge Cell** drop-down.
+3.  Choose the **Unmerge cells** option.
 
 ![unmerge cells](./images/unmerge-cells.gif)
 
-### Unmerge cells programmatically.
+### Unmerge cells programmatically
 
-The [UnmergeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_UnmergeAsync_System_String_) method reverses a merge and restores individual cells. If the **cellRange** parameter is not provided, the current selection cell is unmerged. This method provides a programmatic way to unmerge cells without using the UI. The available parameters in the [UnmergeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_UnmergeAsync_System_String_) method are:
+The [UnmergeAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_UnmergeAsync_System_String_) method reverses a merge and restores individual cells. If the **cellRange** parameter is not provided, the current selection cell is unmerged. The available parameters in the [UnmergeAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_UnmergeAsync_System_String_) method are:
 
 | Parameter | Type | Description |
 | -- | -- | -- |
@@ -121,6 +141,7 @@ The [UnmergeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Sprea
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
+@page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
 <button class="e-btn" @onclick="UnmergeRange">Unmerge</button>
@@ -151,7 +172,7 @@ The [UnmergeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Sprea
 
 ## Limitations of Merge
 
-When merging cells in the Blazor Spreadsheet, certain constraints apply to ensure data integrity. In these cases, validation messages are displayed:
+The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) enforces these merge constraints to ensure data integrity. In these cases, validation messages are displayed:
 
 - **Sorting with merged cells** - When sorting a range that contains merged cells, a validation dialog appears to indicate that sorting cannot proceed unless all merged cells are consistent in size.
 
