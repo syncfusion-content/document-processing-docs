@@ -1,26 +1,26 @@
 ---
 layout: post
-title: Open Box cloud files in React Document editor | Syncfusion
-description: Learn here to open a document from Box cloud file storage in Syncfusion React Document editor control of Syncfusion Essential JS 2 and more.
+title: Open Box cloud files in the React DOCX Editor | Syncfusion
+description: Learn here to open a document from Box cloud file storage in the Syncfusion React DOCX Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Opening from Box cloud file storage
 documentation: ug
 domainurl: ##DomainURL##
 --- 
 
-# Open document from Box cloud file storage in React Document editor
+# Open document from Box cloud file storage in React Document Editor
 
-To load a document from Box cloud file storage in a [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor), you can follow the steps below
+To load a document from Box cloud file storage in a [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor), you can follow the steps below.
 
-**Step 1** Set up a Box developer account and create a Box application
+**Step 1:** Set up a Box developer account and create a Box application
 
-To access Box storage programmatically, you'll need a developer account with Box. Go to the [Box Developer Console](https://developer.box.com/), sign in or create a new account, and then create a new Box application. This application will provide you with the necessary credentials Client ID and Client Secret to authenticate and access Box APIs. Before accessing files, you need to authenticate your application to access your Box account. Box API supports `OAuth 2.0 authentication` for this purpose.
+To access Box storage programmatically, you'll need a developer account with Box. Go to the [Box Developer Console](https://developer.box.com/), sign in or create a new account, and then create a new Box application. This application will provide you with the necessary credentials, Client ID and Client Secret, to authenticate and access Box APIs. Before accessing files, you need to authenticate your application to access your Box account. Box API supports `OAuth 2.0 authentication` for this purpose.
 
-**Step 2:** Create a Simple Document Editor Sample in React
+**Step 2:** Create a simple Document Editor sample in React
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in react. This will give you a basic setup of the Document Editor component.
+Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in React. This will give you a basic setup of the Document Editor component.
 
-**Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
+**Step 3:** Modify the `DocumentEditorController.cs` file in the web service project
 
 * Create a web service project in .NET Core 3.0 or above. You can refer to this [link](../web-services-overview) for instructions on how to create a web service project.
 
@@ -35,7 +35,7 @@ using Box.V2.Config;
 using Box.V2.Models;
 ```
 
-* Add the following private fields and constructor parameters to the `DocumentEditorController` class, In the constructor, assign the values from the configuration to the corresponding fields
+* Add the following private fields and constructor parameters to the `DocumentEditorController` class. In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
 private IConfiguration _configuration;
@@ -63,13 +63,13 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 [HttpPost]
 [EnableCors("AllowAllOrigins")]
 [Route("LoadFromBoxCloud")]
-//Post action for Loading the documents
+//Post action for loading documents
 
 public async Task<string> LoadFromBoxCloud([FromBody] Dictionary<string, string> jsonObject)
 {
-    if (jsonObject == null && !jsonObject.ContainsKey("documentName"))
+    if (jsonObject == null || !jsonObject.ContainsKey("documentName"))
     {
-      return null
+      return null;
     }
     MemoryStream stream = new MemoryStream();
     // Initialize the Box API client with your authentication credentials
@@ -100,7 +100,7 @@ public async Task<string> LoadFromBoxCloud([FromBody] Dictionary<string, string>
 }
 ```
 
-* Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+* Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration.
 
 ```json
 {
@@ -118,11 +118,11 @@ public async Task<string> LoadFromBoxCloud([FromBody] Dictionary<string, string>
 }
 ```
 
-N> replace **Your_Box_Storage_Access_Token** with your actual box access token, and **Your_Folder_ID** with the ID of the folder in your box storage where you want to perform specific operations. Remember to use your valid box API credentials, as **Your_Box_Storage_ClientID** and **Your_Box_Storage_ClientSecret"** are placeholders for your application's API key and secret.
+N> Replace **Your_Box_Storage_Access_Token** with your actual Box access token, and **Your_Folder_ID** with the ID of the folder in your Box storage where you want to perform specific operations. Remember to use your valid Box API credentials, as **Your_Box_Storage_ClientID** and **Your_Box_Storage_ClientSecret** are placeholders for your application's API key and secret.
 
-**Step 4:**  Modify the index File in the Document Editor sample
+**Step 4:** Modify the index file in the Document Editor sample
 
-In the client-side, the document is returned from the web service is opening using [`open`](https://ej2.syncfusion.com/react/documentation/api/document-editor#open) method.
+On the client side, the document returned from the web service is opened using the [`open`](https://ej2.syncfusion.com/react/documentation/api/document-editor#open) method.
 
 ```typescript
 import * as ReactDOM from 'react-dom';
@@ -160,7 +160,7 @@ function load(): void {
 }
     return (
         <div>
-            <button onClick={load}>Open Document From Box cloud File storage</button>
+            <button onClick={load}>Open Document From Box Cloud File Storage</button>
             <DocumentEditorContainerComponent id="container" ref={(scope) => { container = scope; }}
                 height={'590px'}
                 serviceUrl="http://localhost:62870/api/documenteditor/"
