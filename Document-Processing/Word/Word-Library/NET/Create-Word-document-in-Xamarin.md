@@ -1,31 +1,33 @@
 ---
-title: Create Word document in AWS Elastic Beanstalk | Syncfusion
-description: Create Word document without Microsoft Word or interop dependencies in AWS Elastic Beanstalk application using .NET Core Word (DocIO) library.
+title: Create Word document in Xamarin | Syncfusion
+description: Create Word document without Microsoft Word or interop dependencies in Xamarin application using Syncfusion<sup>&reg;</sup> Xamarin Word (DocIO) library.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Create Word document in AWS Elastic Beanstalk
+# Create Word document in Xamarin
 
-Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and convert Word documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in AWS Elastic Beanstalk**.
+Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [Xamarin Word library](https://www.syncfusion.com/document-processing/word-framework/xamarin/word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or **interop** dependencies. Using this library, you can **create a Word document in Xamarin**.
 
 ## Prerequisites
 
-* An active **AWS account** with permissions to manage Elastic Beanstalk environments and EC2 instances.
-* **AWS Toolkit for Visual Studio** installed and signed in with a configured AWS credentials profile. Refer to the [AWS Toolkit for Visual Studio setup guide](https://docs.aws.amazon.com/toolkit-for-visual-studio/latest/user-guide/welcome.html).
-* **Visual Studio 2022** (or later) with the **ASP.NET and web development** workload.
-* **.NET 8.0** (or later) SDK installed. Target the project against a .NET version that Elastic Beanstalk supports; see the [AWS Elastic Beanstalk platform support matrix](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html).
+- Visual Studio with the **Mobile development with .NET** (Xamarin) workload installed.
+- For .NET 5+ targets, install the `Syncfusion.Xamarin.DocIO` NuGet package version that matches your target. The package is compatible with .NET Standard 2.0 and later.
 
-## Steps to create a Word document in AWS Elastic Beanstalk
+## Steps to create Word document programmatically
 
-Step 1: Create a new **ASP.NET Core Web application (Model-View-Controller)** project targeting **.NET 8.0** (or later). No authentication is required for this sample.
+Step 1: Create a new Xamarin.Forms application project.
 
-![Create ASP.NET Core Web application in Visual Studio](ASP-NET-Core_images/CreateProjectforConversion.png)
+![Create Xamarin application in Visual Studio](Xamarin_images/Create-Project-WordtoPDF.png)
 
-Step 2: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/). It is recommended to use the latest version available on NuGet.
+Step 2: Select a project template and the required platforms to deploy the application. This sample uses the .NET Standard code sharing strategy so portable assemblies are shared across platforms. For more information about code sharing, see [Code sharing options](https://learn.microsoft.com/en-us/xamarin/cross-platform/app-fundamentals/code-sharing).
 
-![Install Syncfusion.DocIO.Net.Core NuGet package](ASP-NET-Core_images/Install_Nuget.png)
+N> If .NET Standard is not available in the code sharing strategy, the Portable Class Library (PCL) can be selected.
+
+![Create Xamarin CodeSharing Option](Xamarin_images/Template_WordtoPDF.png)
+
+Step 3: Install the [Syncfusion.Xamarin.DocIO](https://www.nuget.org/packages/Syncfusion.Xamarin.DocIO) NuGet package as a reference to the .NET Standard project in your application from [NuGet.org](https://www.nuget.org/). Also install the same package in each platform-specific project (iOS, Android, and UWP).
 
 N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
 N>
@@ -37,53 +39,82 @@ N> ```
 N>
 N> For more information about generating and registering a license key, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
-Step 3: Include the following namespaces in the **HomeController.cs** file.
+![Install DocIO Xamarin NuGet package](Xamarin_images/Install_Nuget.png)
+
+Step 4: Add a new Forms XAML page in the **portable project**. If no XAML page is defined in the App class, complete the following sub-steps. Otherwise, proceed to the next step.
+<ul>
+<li>
+To add the new XAML page, right-click on the project, select <b>Add > New Item</b>, and add a Forms XAML Page from the list. Name it <b>MainXamlPage</b>.
+</li>
+<li>
+In the <b>App</b> class of the <b>portable project</b> (App.cs), replace the existing constructor of the <b>App</b> class with the code snippet given below, which invokes the <b>MainXamlPage</b>.
+</li>
+</ul>
 
 {% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+public App()
+{
+    // The root page of your application
+    MainPage = new MainXamlPage();
+}
+{% endhighlight %}
+
+{% endtabs %}
+
+Step 5: In the MainXamlPage.xaml file, add a new button as shown in the following example.
+
+{% tabs %}
+
 {% highlight c# tabtitle="C#" %}
 
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="GettingStarted.MainXamlPage">
+
+    <StackLayout VerticalOptions="Center">
+        <Button Text="Generate Document" Clicked="OnButtonClicked" HorizontalOptions="Center"/>
+    </StackLayout>
+</ContentPage>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Step 6: Include the following namespace in the MainXamlPage.xaml.cs file.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
-
+using System.Reflection;
+using System.IO;
 {% endhighlight %}
+
 {% endtabs %}
 
-Step 4: A default action method named Index will be present in HomeController.cs. Right click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
-
-Step 5: Add a new button in the **Index.cshtml** as shown below. Because the action only downloads a file (no side effects), `FormMethod.Get` is used and the controller action is decorated as an HTTP GET endpoint.
+Step 7: Include the below code snippet in the click event of the button in MainXamlPage.xaml.cs, to create Word document and save it in a stream.
 
 {% tabs %}
+
 {% highlight c# tabtitle="C#" %}
 
-@{
-    Html.BeginForm("CreateWordDocument", "Home", FormMethod.Get);
-    {
-        <div>
-           <input type="submit" value="Create Word document" style="width:200px;height:27px" />
-        </div>
-    }
-    Html.EndForm();
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-Step 6: Add a new action method **CreateWordDocument** in HomeController.cs and include the below code snippet to **create a Word document** and download it.
-
-{% tabs %}
-{% highlight c# tabtitle="C#" %}
-
-//Creating a new document.
-using (WordDocument document = new WordDocument())
+void OnButtonClicked(object sender, EventArgs args)
 {
-    //Adding a new section to the document.
+    //"App" is the class of Portable project
+    Assembly assembly = typeof(App).GetTypeInfo().Assembly;
+    //Creating a new document
+    WordDocument document = new WordDocument();
+    //Adding a new section to the document
     WSection section = document.AddSection() as WSection;
-    //Set Margin of the section.
+    //Set Margin of the section
     section.PageSetup.Margins.All = 72;
-    //Set page size of the section.
+    //Set page size of the section
     section.PageSetup.PageSize = new Syncfusion.Drawing.SizeF(612, 792);
 
-    //Create Paragraph styles.
+    //Create Paragraph styles
     WParagraphStyle style = document.AddParagraphStyle("Normal") as WParagraphStyle;
     style.CharacterFormat.FontName = "Calibri";
     style.CharacterFormat.FontSize = 11f;
@@ -101,11 +132,11 @@ using (WordDocument document = new WordDocument())
     style.ParagraphFormat.Keep = true;
     style.ParagraphFormat.KeepFollow = true;
     style.ParagraphFormat.OutlineLevel = OutlineLevel.Level1;
-    IWParagraph paragraph = section.HeadersFooters.Header.AddParagraph();
 
-    // Gets the image stream.
-    FileStream imageStream = new FileStream(Path.GetFullPath("wwwroot/Data/AdventureCycle.jpg"), FileMode.Open, FileAccess.Read);
-    IWPicture picture = paragraph.AppendPicture(imageStream);
+    IWParagraph paragraph = section.HeadersFooters.Header.AddParagraph();
+    //Gets the image stream
+    Stream imageStream1 = assembly.GetManifestResourceStream("GettingStarted.Templates.AdventureCycle.jpg");
+    IWPicture picture = paragraph.AppendPicture(imageStream1);
     picture.TextWrappingStyle = TextWrappingStyle.InFrontOfText;
     picture.VerticalOrigin = VerticalOrigin.Margin;
     picture.VerticalPosition = -45;
@@ -121,7 +152,7 @@ using (WordDocument document = new WordDocument())
     textRange.CharacterFormat.FontName = "Calibri";
     textRange.CharacterFormat.TextColor = Syncfusion.Drawing.Color.Red;
 
-    //Appends paragraph.
+    //Appends paragraph
     paragraph = section.AddParagraph();
     paragraph.ApplyStyle("Heading 1");
     paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
@@ -129,14 +160,14 @@ using (WordDocument document = new WordDocument())
     textRange.CharacterFormat.FontSize = 18f;
     textRange.CharacterFormat.FontName = "Calibri";
 
-    //Appends paragraph.
+    //Appends paragraph
     paragraph = section.AddParagraph();
     paragraph.ParagraphFormat.FirstLineIndent = 36;
     paragraph.BreakCharacterFormat.FontSize = 12f;
     textRange = paragraph.AppendText("Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is in Bothell, Washington with 290 employees, several regional sales teams are located throughout their market base.") as WTextRange;
     textRange.CharacterFormat.FontSize = 12f;
 
-    //Appends paragraph.
+    //Appends paragraph
     paragraph = section.AddParagraph();
     paragraph.ParagraphFormat.FirstLineIndent = 36;
     paragraph.BreakCharacterFormat.FontSize = 12f;
@@ -149,19 +180,19 @@ using (WordDocument document = new WordDocument())
     textRange = paragraph.AppendText("Product Overview") as WTextRange;
     textRange.CharacterFormat.FontSize = 16f;
     textRange.CharacterFormat.FontName = "Calibri";
-    //Appends table.
+
+    //Appends table
     IWTable table = section.AddTable();
     table.ResetCells(3, 2);
     table.TableFormat.Borders.BorderType = BorderStyle.None;
     table.TableFormat.IsAutoResized = true;
-
-    //Appends paragraph.
+    //Appends paragraph
     paragraph = table[0, 0].AddParagraph();
     paragraph.ParagraphFormat.AfterSpacing = 0;
     paragraph.BreakCharacterFormat.FontSize = 12f;
-    //Appends picture to the paragraph.
-    FileStream image1 = new FileStream(Path.GetFullPath("wwwroot/Data/Mountain-200.jpg"), FileMode.Open, FileAccess.Read);
-    picture = paragraph.AppendPicture(image1);
+    //Appends picture to the paragraph
+    Stream imageStream2 = assembly.GetManifestResourceStream("GettingStarted.Templates.Mountain-200.jpg");
+    picture = paragraph.AppendPicture(imageStream2);
     picture.TextWrappingStyle = TextWrappingStyle.TopAndBottom;
     picture.VerticalOrigin = VerticalOrigin.Paragraph;
     picture.VerticalPosition = 4.5f;
@@ -170,19 +201,18 @@ using (WordDocument document = new WordDocument())
     picture.WidthScale = 79;
     picture.HeightScale = 79;
 
-    //Appends paragraph.
+    //Appends paragraph
     paragraph = table[0, 1].AddParagraph();
     paragraph.ApplyStyle("Heading 1");
     paragraph.ParagraphFormat.AfterSpacing = 0;
     paragraph.ParagraphFormat.LineSpacing = 12f;
     paragraph.AppendText("Mountain-200");
-    //Appends paragraph.
+    //Appends paragraph
     paragraph = table[0, 1].AddParagraph();
     paragraph.ParagraphFormat.AfterSpacing = 0;
     paragraph.ParagraphFormat.LineSpacing = 12f;
     paragraph.BreakCharacterFormat.FontSize = 12f;
     paragraph.BreakCharacterFormat.FontName = "Times New Roman";
-
     textRange = paragraph.AppendText("Product No: BK-M68B-38\r") as WTextRange;
     textRange.CharacterFormat.FontSize = 12f;
     textRange.CharacterFormat.FontName = "Times New Roman";
@@ -195,19 +225,19 @@ using (WordDocument document = new WordDocument())
     textRange = paragraph.AppendText("Price: $2,294.99\r") as WTextRange;
     textRange.CharacterFormat.FontSize = 12f;
     textRange.CharacterFormat.FontName = "Times New Roman";
-    //Appends paragraph.
+    //Appends paragraph
     paragraph = table[0, 1].AddParagraph();
     paragraph.ParagraphFormat.AfterSpacing = 0;
     paragraph.ParagraphFormat.LineSpacing = 12f;
     paragraph.BreakCharacterFormat.FontSize = 12f;
 
-    //Appends paragraph.
+    //Appends paragraph
     paragraph = table[1, 0].AddParagraph();
     paragraph.ApplyStyle("Heading 1");
     paragraph.ParagraphFormat.AfterSpacing = 0;
     paragraph.ParagraphFormat.LineSpacing = 12f;
     paragraph.AppendText("Mountain-300 ");
-    //Appends paragraph.
+    //Appends paragraph
     paragraph = table[1, 0].AddParagraph();
     paragraph.ParagraphFormat.AfterSpacing = 0;
     paragraph.ParagraphFormat.LineSpacing = 12f;
@@ -225,19 +255,19 @@ using (WordDocument document = new WordDocument())
     textRange = paragraph.AppendText("Price: $1,079.99\r") as WTextRange;
     textRange.CharacterFormat.FontSize = 12f;
     textRange.CharacterFormat.FontName = "Times New Roman";
-    //Appends paragraph.
+    //Appends paragraph
     paragraph = table[1, 0].AddParagraph();
     paragraph.ParagraphFormat.AfterSpacing = 0;
     paragraph.ParagraphFormat.LineSpacing = 12f;
     paragraph.BreakCharacterFormat.FontSize = 12f;
 
-    //Appends paragraph.
+    //Appends paragraph
     paragraph = table[1, 1].AddParagraph();
     paragraph.ApplyStyle("Heading 1");
     paragraph.ParagraphFormat.LineSpacing = 12f;
-    //Appends picture to the paragraph.
-    FileStream image2 = new FileStream(Path.GetFullPath("wwwroot/Data/Mountain-300.jpg"), FileMode.Open, FileAccess.Read);
-    picture = paragraph.AppendPicture(image2);
+    //Appends picture to the paragraph
+    Stream imageStream3 = assembly.GetManifestResourceStream("GettingStarted.Templates.Mountain-300.jpg");
+    picture = paragraph.AppendPicture(imageStream3);
     picture.TextWrappingStyle = TextWrappingStyle.TopAndBottom;
     picture.VerticalOrigin = VerticalOrigin.Paragraph;
     picture.VerticalPosition = 8.2f;
@@ -246,13 +276,13 @@ using (WordDocument document = new WordDocument())
     picture.WidthScale = 75;
     picture.HeightScale = 75;
 
-    //Appends paragraph.
+    //Appends paragraph
     paragraph = table[2, 0].AddParagraph();
     paragraph.ApplyStyle("Heading 1");
     paragraph.ParagraphFormat.LineSpacing = 12f;
-    //Appends picture to the paragraph.
-    FileStream image3 = new FileStream(Path.GetFullPath("wwwroot/Data/Road-550-W.jpg"), FileMode.Open, FileAccess.Read);
-    picture = paragraph.AppendPicture(image3);
+    //Appends picture to the paragraph
+    Stream imageStream4 = assembly.GetManifestResourceStream("GettingStarted.Templates.Road-550-W.jpg");
+    picture = paragraph.AppendPicture(imageStream4);
     picture.TextWrappingStyle = TextWrappingStyle.TopAndBottom;
     picture.VerticalOrigin = VerticalOrigin.Paragraph;
     picture.VerticalPosition = 3.75f;
@@ -261,13 +291,13 @@ using (WordDocument document = new WordDocument())
     picture.WidthScale = 92;
     picture.HeightScale = 92;
 
-    //Appends paragraph.
+    //Appends paragraph
     paragraph = table[2, 1].AddParagraph();
     paragraph.ApplyStyle("Heading 1");
     paragraph.ParagraphFormat.AfterSpacing = 0;
     paragraph.ParagraphFormat.LineSpacing = 12f;
     paragraph.AppendText("Road-150 ");
-    //Appends paragraph.
+    //Appends paragraph
     paragraph = table[2, 1].AddParagraph();
     paragraph.ParagraphFormat.AfterSpacing = 0;
     paragraph.ParagraphFormat.LineSpacing = 12f;
@@ -285,55 +315,117 @@ using (WordDocument document = new WordDocument())
     textRange = paragraph.AppendText("Price: $3,578.27\r") as WTextRange;
     textRange.CharacterFormat.FontSize = 12f;
     textRange.CharacterFormat.FontName = "Times New Roman";
-    //Appends paragraph.
+    //Appends paragraph
     section.AddParagraph();
 
-    //Saves the Word document to MemoryStream.
+    //Saves the Word document to MemoryStream
     MemoryStream stream = new MemoryStream();
     document.Save(stream, FormatType.Docx);
-
-    //Download Word document in the browser.
-    return File(stream, "application/msword", "Sample.docx");
+    //Save the stream as a file in the device and invoke it for viewing
+    Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView("Sample.docx", "application/msword", stream);          
 }
-
 {% endhighlight %}
+
 {% endtabs %}
 
-## Steps to publish as an AWS Elastic Beanstalk application
+## Helper files for Xamarin
 
-Step 1: Right-click the project and select **Publish to AWS Elastic Beanstalk (Legacy)** option. (This menu requires the AWS Toolkit for Visual Studio — see [Prerequisites](#prerequisites).)
-![Right-click the project and select the Publish option](AWS_Images/Elastic_Beanstalk_Images/Publish-Create-Word-Document.png)
+Download the helper files from this [link](https://www.syncfusion.com/downloads/support/directtrac/general/HELPER~1-696201504.ZIP) and add them into the mentioned project. These helper files allow you to save the stream as a physical file and open the file for viewing.
 
-Step 2: Select the **Deployment Target** as **Create a new application environment** and click **Next**.
-![Deployment Target in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Deployment-Target-Convert-WordtoPDF.png)
+<table>
+  <tr>
+  <td>
+    <b>Project</b>
+  </td>
+  <td>
+    <b>File Name</b>
+  </td>
+  <td>
+    <b>Summary</b>
+  </td>
+  </tr>
+  <tr>
+  <td>
+    Portable project
+  </td>
+  <td>
+    ISave.cs
+  </td>
+  <td>Represent the base interface for save operation
+  </td>
+  </tr>
+  <tr>
+  <td rowspan="2">
+    iOS Project
+  </td>
+  <td>
+    SaveIOS.cs
+  </td>
+  <td>
+    Save implementation for iOS device
+  </td>
+  </tr>
+  <tr>
+  <td>
+    PreviewControllerDS.cs
+  </td>
+  <td>
+    Helper class for viewing the <b>Word document</b> in iOS device
+  </td>
+  </tr>
+  <tr>
+  <td>
+    Android project
+  </td>
+  <td>
+    SaveAndroid.cs
+  </td>
+  <td>Save implementation for Android device
+  </td>
+  </tr>
+  <tr>
+  <td>
+    WinPhone project
+  </td>
+  <td>
+    SaveWinPhone.cs
+  </td>
+  <td>Save implementation for Windows Phone device
+  </td>
+  </tr>
+  <tr>
+  <td>
+    UWP project
+  </td>
+  <td>
+    SaveWindows.cs
+  </td>
+  <td>Save implementation for UWP device.
+  </td>
+  </tr>
+  <tr>
+  <td>
+    Windows (8.1) project
+  </td>
+  <td>
+    SaveWindows81.cs
+  </td>
+  <td>Save implementation for WinRT device.
+  </td>
+  </tr>
+</table>
 
-Step 3: Choose the **Environment Name** from the dropdown list. The **URL** will be assigned automatically; verify the URL is available. If available, click **Next**; otherwise, change the **URL**.
-![Application Environment in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/URL-Availability-Create-Word-Document.png)
+Compile and execute the application. Now this application **creates a Word document**.
 
-Step 4: Select the instance type as **t3a.micro** from the dropdown list (sufficient for this lightweight DocIO workload; choose a larger instance for heavier document generation). Configure the platform branch to one that matches your target .NET runtime, then click **Next**.
-![Launch Configuration in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Launch-Configuration-Convert-WordtoPDF.png)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Xamarin).
 
-Step 5: Review the IAM permissions page. Ensure your AWS credentials/profile has the Elastic Beanstalk service and EC2 permissions required to publish. Click **Next** to proceed.
-![Permissions in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Permissions-Convert-WordtoPDF.png)
+N> The code sample references image files (AdventureCycle.jpg, Mountain-200.jpg, Mountain-300.jpg, Road-550-W.jpg). Download these assets from the [GitHub sample folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Xamarin/Create-Word-document/Create-Word-document/Templates) and add them to a `Templates` folder in the portable project with their **Build Action** set to **Embedded Resource**.
 
-Step 6: Review the application options, then click **Deploy** to deploy the sample to AWS Elastic Beanstalk.
-![Application Options and Review in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Application-Options-Convert-WordtoPDF.png)
-![Deploy the sample in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Review-Convert-WordtoPDF.png)
+By executing the program, you will get the Word document as follows.
 
-Step 7: After the status changes from **Updating** to **Environment is healthy**, click the **URL**.
-![Status check in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Status-Convert-WordtoPDF.png)
+![Xamarin output Word document](Xamarin_images/GettingStartedOutput.jpg)
 
-Step 8: After opening the provided **URL**, click the **Create Word document** button to download the Word document.
-![Click button to Create a Word document](AWS_Images/Elastic_Beanstalk_Images/Browser-Create-Word-document.png)
+## See also
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/AWS/AWS_Elastic_Beanstalk).
-
-N> The code sample references image files (AdventureCycle.jpg, Mountain-200.jpg, Mountain-300.jpg, Road-550-W.jpg). Download these assets from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/AWS/AWS_Elastic_Beanstalk/Create-Word-Document/wwwroot/Data) and place them in the application's `wwwroot/Data` folder so the relative paths in the code resolve correctly at runtime.
-
-By executing the program, you will get the **Word document** as follows.
-
-![Create Word document in AWS Elastic Beanstalk](ASP-NET-Core_images/GettingStartedOutput.jpg)
-
-Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page. 
-
-An online sample link to [create a Word document](https://document.syncfusion.com/demos/word/helloworld#/tailwind) in ASP.NET Core.  
+- [Complete Xamarin working sample on GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Xamarin)
+- [.NET Word Library overview, features, and pricing](https://www.syncfusion.com/document-sdk/net-word-library) 
