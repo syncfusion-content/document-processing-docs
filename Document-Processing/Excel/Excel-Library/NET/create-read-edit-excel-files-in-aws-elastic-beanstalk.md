@@ -15,9 +15,7 @@ Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.sync
 Before you begin, ensure the following:
 
 * An active **AWS account** with permissions to create Elastic Beanstalk applications, environments, and S3 buckets. If you do not have one, see [Create an AWS account](https://aws.amazon.com/free/).
-* **AWS CLI** installed and configured with your credentials â€” see [AWS CLI quick start](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-quickstart.html).
-* **Visual Studio 2022** with the **AWS Toolkit for Visual Studio** extension installed (required for the **Publish to AWS Elastic Beanstalk** menu option) â€” see [AWS Toolkit for Visual Studio](https://aws.amazon.com/visualstudio/).
-* A **Syncfusion license key**. Register it in `Program.cs` (see the snippet in Step 2a below) or store it in an **Elastic Beanstalk environment property** (for example, `SYNCFUSION_LICENSE_KEY`) and load it via `Environment.GetEnvironmentVariable` â€” see the [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
+* A **Syncfusion license key**. Register it in `Program.cs` (see the snippet in Step 2a below) or store it in an **Elastic Beanstalk environment property** (for example, `SYNCFUSION_LICENSE_KEY`) and load it via `Environment.GetEnvironmentVariable`see the [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 ## Steps to create an Excel document in AWS Elastic Beanstalk
 
@@ -367,4 +365,4 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
-An online sample link to [create an Excel document](https://ej2.syncfusion.com/aspnetcore/Excel/Create#/material3) in ASP.NET Core.
+An online sample link to [create an Excel document](https://document.syncfusion.com/demos/excel/create#/tailwind3) in ASP.NET Core.
