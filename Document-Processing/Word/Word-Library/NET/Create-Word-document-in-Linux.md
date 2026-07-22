@@ -35,13 +35,13 @@ dotnet new console
 
 ![Create .NET Core console application on Linux](Linux-images/CreateNewProject1.png)
 
-Step 2: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/) by execute the following command.
+Step 2: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/) by executing the following command.
 
 {% tabs %}
 
 {% highlight KCONFIG %}
 
-dotnet add package Syncfusion.DocIO.Net.Core -v 17.4.0.39 -s https://www.nuget.org/
+dotnet add package Syncfusion.DocIO.Net.Core -s https://www.nuget.org/
 
 {% endhighlight %}
 
@@ -49,7 +49,15 @@ dotnet add package Syncfusion.DocIO.Net.Core -v 17.4.0.39 -s https://www.nuget.o
 
 ![Install NuGet packages](Linux-images/InstallNuGetPackages1.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components.
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the https://www.nuget.org/packages/Syncfusion.Licensing NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 3: Add the following Namespaces in Program.cs file.
 
@@ -63,7 +71,7 @@ using System.IO;
 
 {% endtabs %}
 
-Step 4: Add the following code snippet in Program.cs file.
+Step 4: Add the following code snippet in Program.cs file. If you are using a licensed or trial Syncfusion package, register the license key at the start of the program:
 
 {% tabs %}
 
@@ -319,11 +327,13 @@ dotnet run
 
 {% endtabs %}
 
-![Run the Applcation](Linux-images/Run.png)
+![Run the Application](Linux-images/Run.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Linux).
 
-By executing the program, you will get the **Word document** as follows. The output will be saved in parallel to program.cs file.
+N> The code sample references image files (AdventureCycle.jpg, Mountain-200.jpg, Mountain-300.jpg, Road-550-W.jpg). Download these assets from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Linux/Create-Word-document/Data) and ensure they are present in the application's working directory (next to the `.csproj` file).
+
+By executing the program, you will get the **Word document** as follows. The output will be saved alongside the Program.cs file.
 
 ![Word document generated on Linux](Linux-images/GettingStartedOutput.jpg)
 
@@ -336,16 +346,16 @@ By executing the program, you will get the **Word document** as follows. The out
 * JetBrains Rider.
 * Install .NET 8 SDK or later.
 
-Step 1. Open JetBrains Rider and create a new .NET Core console application project.
+Step 1: Open JetBrains Rider and create a new .NET Core console application project.
 * Launch JetBrains Rider.
 * Click **New Solution** on the welcome screen.
 
 ![Launch JetBrains Rider](Linux-images/Launch-JetBrains-Rider.png)
 
 * In the New Solution dialog, select **Project Type** as **Console**.
-* Select the target framework (e.g., .NET 8.0, .NET 9.0).
+* Select the target framework .NET 8.0 or later.
 * Enter a project name and specify the location.
-* Click create.
+* Click Create.
 
 ![Creating a new .NET Core console application in JetBrains Rider](Linux-images/Create-Console-NET-core-sample.png)
 
@@ -361,7 +371,15 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 ![Install the Syncfusion.DocIO.Net.Core NuGet package](Linux-images/Install-Syncfusion.DocIO.Net.Core-NuGet.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the https://www.nuget.org/packages/Syncfusion.Licensing NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 3: Add the following Namespaces in Program.cs file.
 
@@ -375,7 +393,7 @@ using System.IO;
 
 {% endtabs %}
 
-Step 4: Add the following code snippet in Program.cs file.
+Step 4: Add the following code snippet in Program.cs file. If you are using a licensed or trial Syncfusion package, register the license key at the start of the program:
 
 {% tabs %}
 
@@ -615,7 +633,9 @@ Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to 
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Linux).
 
-By executing the program, you will get the **Word document** as follows. The output will be saved in parallel to program.cs file.
+N> The code sample references image files (AdventureCycle.jpg, Mountain-200.jpg, Mountain-300.jpg, Road-550-W.jpg). Download these assets from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Linux/Create-Word-document/Data) and ensure they are present in the application's working directory (next to the `.csproj` file).
+
+By executing the program, you will get the **Word document** as follows. The output will be saved alongside the Program.cs file.
 
 ![Word document generated on Linux](Linux-images/GettingStartedOutput.jpg)
 
@@ -627,7 +647,7 @@ Looking for the full .NET Word Library overview, features, pricing, and document
 
 An online sample link to [create a Word document](https://document.syncfusion.com/demos/word/helloworld#/tailwind) in ASP.NET Core. 
 
-## Frequently Asked Questions
+## Related FAQs
 
 * [How to copy necessary fonts to Linux containers?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/linux-faqs#how-to-copy-necessary-fonts-to-linux-containers)
 * [How to copy necessary Microsoft compatible fonts to Linux?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/linux-faqs#how-to-copy-necessary-microsoft-compatible-fonts-to-linux)

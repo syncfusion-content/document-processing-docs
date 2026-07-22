@@ -10,17 +10,32 @@ documentation: UG
 
 Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and convert Word documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in AWS Elastic Beanstalk**.
 
-## Steps to create Word document in AWS Elastic Beanstalk
+## Prerequisites
 
-Step 1: Create a new ASP.NET Core Web application (Model-View-Controller) project.
+* An active **AWS account** with permissions to manage Elastic Beanstalk environments and EC2 instances.
+* **AWS Toolkit for Visual Studio** installed and signed in with a configured AWS credentials profile. Refer to the [AWS Toolkit for Visual Studio setup guide](https://docs.aws.amazon.com/toolkit-for-visual-studio/latest/user-guide/welcome.html).
+* **Visual Studio 2022** (or later) with the **ASP.NET and web development** workload.
+* **.NET 8.0** (or later) SDK installed. Target the project against a .NET version that Elastic Beanstalk supports; see the [AWS Elastic Beanstalk platform support matrix](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html).
+
+## Steps to create a Word document in AWS Elastic Beanstalk
+
+Step 1: Create a new **ASP.NET Core Web application (Model-View-Controller)** project targeting **.NET 8.0** (or later). No authentication is required for this sample.
 
 ![Create ASP.NET Core Web application in Visual Studio](ASP-NET-Core_images/CreateProjectforConversion.png)
 
-Step 2: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+Step 2: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/). It is recommended to use the latest version available on NuGet.
 
 ![Install Syncfusion.DocIO.Net.Core NuGet package](ASP-NET-Core_images/Install_Nuget.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the https://www.nuget.org/packages/Syncfusion.Licensing NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 3: Include the following namespaces in the **HomeController.cs** file.
 
@@ -35,7 +50,7 @@ using Syncfusion.DocIO.DLS;
 
 Step 4: A default action method named Index will be present in HomeController.cs. Right click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
 
-Step 5: Add a new button in the **Index.cshtml** as shown below.
+Step 5: Add a new button in the **Index.cshtml** as shown below. Because the action only downloads a file (no side effects), `FormMethod.Get` is used and the controller action is decorated as an HTTP GET endpoint.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -284,37 +299,36 @@ using (WordDocument document = new WordDocument())
 {% endhighlight %}
 {% endtabs %}
 
-## Steps to publish as AWS Elastic Beanstalk
+## Steps to publish as an AWS Elastic Beanstalk application
 
-Step 1: Right-click the project and select **Publish to AWS Elastic Beanstalk (Legacy)** option.
+Step 1: Right-click the project and select **Publish to AWS Elastic Beanstalk (Legacy)** option. (This menu requires the AWS Toolkit for Visual Studio — see [Prerequisites](#prerequisites).)
 ![Right-click the project and select the Publish option](AWS_Images/Elastic_Beanstalk_Images/Publish-Create-Word-Document.png)
 
-Step 2: Select the **Deployment Target** as **Create a new application environment** and click **Next** button.
-![Deployment Target in AWS Ealastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Deployment-Target-Convert-WordtoPDF.png)
+Step 2: Select the **Deployment Target** as **Create a new application environment** and click **Next**.
+![Deployment Target in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Deployment-Target-Convert-WordtoPDF.png)
 
-Step 3: Choose the **Environment Name** in the dropdown list and the **URL** will be automatically assign and check the URL is available, if available click next otherwise change the **URL**. 
+Step 3: Choose the **Environment Name** from the dropdown list. The **URL** will be assigned automatically; verify the URL is available. If available, click **Next**; otherwise, change the **URL**.
 ![Application Environment in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/URL-Availability-Create-Word-Document.png)
 
-Step 4: Select the instance type in **t3a.micro** from the dropdown list and click next.
-![Application Environment in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Launch-Configuration-Convert-WordtoPDF.png)
+Step 4: Select the instance type as **t3a.micro** from the dropdown list (sufficient for this lightweight DocIO workload; choose a larger instance for heavier document generation). Configure the platform branch to one that matches your target .NET runtime, then click **Next**.
+![Launch Configuration in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Launch-Configuration-Convert-WordtoPDF.png)
 
-Step 5: Click the **Next** button to proceed further.
-![Application Environment in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Permissions-Convert-WordtoPDF.png)
+Step 5: Review the IAM permissions page. Ensure your AWS credentials/profile has the Elastic Beanstalk service and EC2 permissions required to publish. Click **Next** to proceed.
+![Permissions in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Permissions-Convert-WordtoPDF.png)
 
-Step 6: Click the **Next** button.
-![Application Options in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Application-Options-Convert-WordtoPDF.png)
-
-Step 7: Click the **Deploy** button to deploy the sample on
-AWS Elastic Beanstalk.
+Step 6: Review the application options, then click **Deploy** to deploy the sample to AWS Elastic Beanstalk.
+![Application Options and Review in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Application-Options-Convert-WordtoPDF.png)
 ![Deploy the sample in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Review-Convert-WordtoPDF.png)
 
-Step 8: After changing the status from **Updating** to **Environment is healthy**, click the **URL**.
+Step 7: After the status changes from **Updating** to **Environment is healthy**, click the **URL**.
 ![Status check in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Status-Convert-WordtoPDF.png)
 
-Step 9: After opening the provided **URL**, click **Create Document** button to download the Word document.
+Step 8: After opening the provided **URL**, click the **Create Word document** button to download the Word document.
 ![Click button to Create a Word document](AWS_Images/Elastic_Beanstalk_Images/Browser-Create-Word-document.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/AWS/AWS_Elastic_Beanstalk).
+
+N> The code sample references image files (AdventureCycle.jpg, Mountain-200.jpg, Mountain-300.jpg, Road-550-W.jpg). Download these assets from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/AWS/AWS_Elastic_Beanstalk/Create-Word-Document/wwwroot/Data) and place them in the application's `wwwroot/Data` folder so the relative paths in the code resolve correctly at runtime.
 
 By executing the program, you will get the **Word document** as follows.
 
