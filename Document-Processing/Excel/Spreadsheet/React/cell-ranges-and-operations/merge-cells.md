@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Merge Cells in React Spreadsheet component | Syncfusion
-description: Learn here how to apply merge to a cell range in React Spreadsheet component of Syncfusion Essential JS 2 and more.
+description: Learn how to merge cell ranges in the React Spreadsheet component of Syncfusion Essential JS 2.
 control: Spreadsheet
 platform: document-processing
 documentation: ug
@@ -17,16 +17,16 @@ You can merge the range of cells in the following ways,
 * Select the range of cells and apply merge by selecting the desired option from ribbon toolbar.
 * Use [`merge`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#merge) method to merge the range of cells, once the component is loaded.
 
-The available merge options in spreadsheet are,
+The following merge options are available in the Spreadsheet:
 
 | Type | Action |
 |-------|---------|
-| Merge All | Combines all the cells in a range in to a single cell (default). |
-| Merge Horizontally | Combines cells in a range as row-wise. |
-| Merge Vertically | Combines cells in a range as column-wise. |
+| Merge All | Combines all the cells in a range into a single cell (default). |
+| Merge Horizontally | Combines cells in a range across multiple columns (row-wise). |
+| Merge Vertically | Combines cells in a range across multiple rows (column-wise). |
 | UnMerge | Splits the merged cells into multiple cells. |
 
-The following code example shows the merge cells operation in spreadsheet.
+The following code example shows the merge cells operation in the Spreadsheet.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
