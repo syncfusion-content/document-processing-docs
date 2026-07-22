@@ -103,7 +103,7 @@ root.render(<App />);
 ## Notes and best practices
 
 - Always set a valid `resourceUrl` when using the Standalone PDF Viewer. If the path is incorrect, the event will not fire and `load()` will fail.
-- If the assets CDN is blocked by the network, the event will not fire. Allowlist the asset host (and the document URL host, when applicable) in CORS and CSP settings.
+- If the assets CDN is blocked by the network, the event will not fire. Allow list the asset host (and the document URL host, when applicable) in CORS and CSP settings.
 - Load documents inside `resourcesLoaded` to guarantee that the PDFium runtime is ready and to prevent intermittent errors on slower networks.
 
 ## See also
