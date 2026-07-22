@@ -28,15 +28,12 @@ Understanding how AI Assist processes your request helps you write better prompt
 When you submit a prompt in the AI Assist panel, the following happens behind the scenes:
 
 - **Intent Recognition**
-
   Your prompt is sent to the AI server, which reads it and determines what type of action you want — for example, formatting, editing, generating a report, or creating a chart. This step figures out the *what*.
 
 - **Command Generation**
-
   Once the intent is known, the spreadsheet's current data and the identified action are sent back to the AI. The AI then generates a precise set of instructions — such as which cells to update, what styles to apply, or what chart data to use. This step figures out the *how*.
 
 - **Execution**
-
   The generated instructions are applied directly to the spreadsheet. The result appears instantly in the grid, and a confirmation message is shown in the AI panel. Every change is also added to the undo history, so nothing is permanent.
 
 ## Supported Features
