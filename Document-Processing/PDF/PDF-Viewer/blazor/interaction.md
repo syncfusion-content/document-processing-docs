@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Interaction mode in Blazor SfPdfViewer Component | Syncfusion
-description: Checkout and learn here all about interaction mode in Syncfusion Blazor SfPdfViewer component and more.
+description: Learn how to use interaction modes in the Blazor SfPdfViewer component, including text selection, panning, and annotation locking.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Interaction mode in Blazor SfPdfViewer Component
 
-SfPdfViewer provides two user interaction options to control how the document responds to pointer input. By default, text selection is enabled and the interaction mode is `Selection`.
+SfPdfViewer provides two user interaction options to control how the viewer responds to pointer input. By default, text selection is enabled and the interaction mode is `Selection`.
 
-The built-in toolbar of SfPdfViewer contains the following two interaction options:
+SfPdfViewer's built-in toolbar provides two interaction options:
 
 * Selection mode
 * Panning mode
@@ -24,6 +24,8 @@ N> In Selection mode, page panning by touch/drag is disabled. Users can still sc
 
 You can enable or disable text selection by setting the [EnableTextSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableTextSelection) property.
 
+The following example enables text selection in the SfPdfViewer.
+
 ```cshtml
 
 @using Syncfusion.Blazor.SfPdfViewer
@@ -35,7 +37,7 @@ You can enable or disable text selection by setting the [EnableTextSelection](ht
 </SfPdfViewer2>
 
 @code{
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 ```
 
@@ -43,7 +45,9 @@ You can enable or disable text selection by setting the [EnableTextSelection](ht
 
 In this mode, users can pan and scroll pages in the loaded PDF document, but text selection is disabled.
 
-The interaction mode of the SfPdfViewer component can be modified using the [InteractionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_InteractionMode) property. This property supports runtime updates, and any changes are applied immediately to the viewer.
+The interaction mode of the SfPdfViewer component can be modified using the [InteractionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_InteractionMode) property. Changes to this property take effect immediately.
+
+The following example sets the SfPdfViewer to Panning mode.
 
 ```cshtml
 
@@ -55,13 +59,13 @@ The interaction mode of the SfPdfViewer component can be modified using the [Int
               InteractionMode="InteractionMode.Pan">
 </SfPdfViewer2>
 @code{
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 
 ```
-## Disable annotation interaction
+## Disabling annotation interaction
 
-Annotation interactions, such as dragging, resizing, and deleting, can be disabled by setting the [IsLock](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerAnnotationSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerAnnotationSettings_IsLock) property in the [AnnotationSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AnnotationSettings) configuration.
+Annotation interactions, such as dragging, resizing, and deleting, can be disabled by setting the [IsLock](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerAnnotationSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerAnnotationSettings_IsLock) property in the [AnnotationSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AnnotationSettings) configuration. When `IsLock` is set to `true`, existing annotations cannot be moved, resized, selected, or deleted, but new annotations can still be added.
 
 The following code illustrates how to lock annotation interactions.
 
@@ -70,16 +74,17 @@ The following code illustrates how to lock annotation interactions.
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfButton OnClick="@OnClick">Lock Annotation</SfButton>
+<SfButton OnClick="@LockAnnotations">Lock Annotation</SfButton>
+<SfButton OnClick="@UnlockAnnotations">Unlock Annotation</SfButton>
 <SfPdfViewer2 @ref="viewer"
               DocumentPath="@DocumentPath">
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async void OnClick(MouseEventArgs args)
+    private async Task LockAnnotations(MouseEventArgs args)
     {
         //Gets the annotation collection of the SfPdfViewer.
         var allAnnots = await viewer.GetAnnotationsAsync();
@@ -88,6 +93,19 @@ The following code illustrates how to lock annotation interactions.
         {
             //Disabling the interaction with annotation.
             item.AnnotationSettings.IsLock = true;
+            await viewer.EditAnnotationAsync(item);
+        }
+    }
+
+    private async Task UnlockAnnotations(MouseEventArgs args)
+    {
+        //Gets the annotation collection of the SfPdfViewer.
+        var allAnnots = await viewer.GetAnnotationsAsync();
+
+        foreach (var item in allAnnots)
+        {
+            //Enabling the interaction with annotation.
+            item.AnnotationSettings.IsLock = false;
             await viewer.EditAnnotationAsync(item);
         }
     }
@@ -100,3 +118,5 @@ The following code illustrates how to lock annotation interactions.
 ## See also
 
 * [Navigation in Blazor SfPdfViewer Component](./interactive-pdf-navigation-overview)
+* [Magnification in Blazor SfPdfViewer Component](./magnification)
+* [Events in Blazor SfPdfViewer Component](./events)

@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Context Menu in Blazor PDF Viewer | Syncfusion
-description: Learn how to customize the context menu in the Syncfusion Blazor PDF Viewer, including default items and custom configuration options using ContextMenuSettings.
+description: Learn how to customize the context menu in the Blazor PDF Viewer, including default items and custom configuration options using ContextMenuSettings.
 platform: document-processing
-control: PDF Viewer
+control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -21,9 +21,9 @@ The context menu is a right-click menu that displays relevant actions based on t
 The context menu in Blazor PDF Viewer supports the following:
 
 * **Enable or Disable**: Toggle the context menu availability using the [EnableContextMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerContextMenuSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerContextMenuSettings_EnableContextMenu) property.
-* **Trigger Action**: Choose between right-click or mouse-up actions to display the menu.
+* **Trigger Action**: Choose between right-click, mouse-up, or `None` to display the menu.
 * **Customize Menu Items**: Select which menu items should appear in the context menu.
-* **Default Items**: Support for standard actions like Copy, Cut, Paste, Delete, Comment, and annotation markup options (Highlight, Underline, Strikethrough, Squiggly).
+* **Default Items**: Provides standard actions (Copy, Cut, Paste, Delete, Comment) and annotation markup options (Highlight, Underline, Strikethrough, Squiggly).
 
 ### Available Context Menu Items
 
@@ -42,29 +42,29 @@ The Blazor PDF Viewer context menu supports the following built-in items, which 
 | **Strikethrough** | Applies strikethrough markup to selected text. |
 | **Squiggly** | Applies squiggly underline markup to selected text. |
 | **Properties** | Opens the properties dialog for the selected element (e.g., form fields). |
-| **ScaleRatio** | Displays scale ratio options for measurement annotations. |
+| **ScaleRatio** | Displays scale ratio options for measurement annotations, allowing the user to set the measurement scale used by the PDF document. |
 
 The context menu adapts its items based on the selected element. The following screenshots show the context menu in different scenarios:
 
-* **On Text Selection** — Displays text annotation options
+* **On Text Selection**: Displays text annotation options
 
   ![context menu on text](./images/context-menu-text.png)
 
-* **On Annotation** — Provides annotation management options
+* **On Annotation**: Provides annotation management options
 
   ![context menu on annotation](./images/context-menu-annotation.png)
 
-* **On Form Fields** — Shows form field operations (designer mode only)
+* **On Form Fields**: Shows form field operations (Designer mode only)
 
   ![context menu on form fields](./images/context-menu-forms.png)
 
-* **On Empty Space** — Displays paste and general options
+* **On Empty Space**: Displays paste and general options
 
   ![context menu on empty space](./images/context-menu-empty.png)
 
 ## Enable or Disable the Context Menu
 
-By default, the context menu is enabled in the Blazor PDF Viewer. You can control its availability using the [EnableContextMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerContextMenuSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerContextMenuSettings_EnableContextMenu)  property within [PdfViewerContextMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerContextMenuSettings.html).
+By default, the context menu is enabled in the Blazor PDF Viewer. You can control its availability using the [EnableContextMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerContextMenuSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerContextMenuSettings_EnableContextMenu) property within [PdfViewerContextMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerContextMenuSettings.html).
 
 ### Basic Configuration
 
@@ -145,7 +145,7 @@ The following example configures the context menu to appear on mouse-up:
 
 ## Disable the Context Menu Entirely
 
-To prevent the context menu from appearing, set [ContextMenuAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerContextMenuSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerContextMenuSettings_ContextMenuAction) to `None`:
+To prevent the context menu from appearing, set the [ContextMenuAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerContextMenuSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerContextMenuSettings_ContextMenuAction) property to `None`:
 
 {% tabs %}
 {% highlight razor%}
@@ -168,7 +168,7 @@ The following example demonstrates how to configure the context menu using the
 [`PdfViewerContextMenuSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerContextMenuSettings.html) API, including 
 [`EnableContextMenu`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerContextMenuSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerContextMenuSettings_EnableContextMenu), 
 [`ContextMenuAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerContextMenuSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerContextMenuSettings_ContextMenuAction), and 
-[`ContextMenuItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerContextMenuSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerContextMenuSettings_ContextMenuItems) properties
+[`ContextMenuItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerContextMenuSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerContextMenuSettings_ContextMenuItems) properties.
 
 {% tabs %}
 {% highlight razor %}
@@ -206,7 +206,7 @@ The following example demonstrates how to configure the context menu using the
 
 After completing this configuration, the context menu will appear with all the specified items when users right-click on document elements.
 
-## Related Topics
+## See also
 
 * [Getting Started with PDF Viewer](./getting-started/web-app)
 * [Annotations in Blazor PDF Viewer](./annotation/overview)

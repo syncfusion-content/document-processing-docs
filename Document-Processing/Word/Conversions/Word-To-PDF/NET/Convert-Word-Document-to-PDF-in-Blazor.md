@@ -1,6 +1,6 @@
 ---			
-title: Convert Word to PDF in Blazor | DocIO | Syncfusion 
-description: Convert Word to PDF in Blazor using Blazor Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Convert Word to PDF in Blazor | DocIO | Syncfusion
+description: Convert Word to PDF in Blazor using the Syncfusion DocIO library without Microsoft Word or Office interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert Word Document to PDF in Blazor
 
-Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, a **convert a Word document to PDF in Blazor**.
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to PDF in Blazor**.
 
 ## Word to PDF in Blazor Web App Server Application
 
@@ -30,7 +30,7 @@ Step 1: Create a new C# Blazor Web app project.
 
 ![Name the Blazor Web App in Visual Studio](Blazor_Images/Blazor_image_Web_ProjectName.png)
 
-*   Select the framework and click **Create** button.
+*   On the **Additional information** screen, set **Interactive render mode** to **Server**, ensure **Include sample pages** is checked (this creates the `Components/Pages` folder), and click **Create**.
 
 ![Select the framework in Blazor Web App Server in Visual Studio](Blazor_Images/Blazor_image_Server_Web_Additional_Information.png)
 
@@ -43,7 +43,9 @@ To **convert a Word document to PDF in a Blazor Web App Server**, install [Syncf
 N> 1. If deploying the application in a Linux environment, refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf#additional-nuget-packages-required-for-linux) for the required additional NuGet packages.
 N> 2. Starting with v16.2.0.x, if Syncfusion<sup>&reg;</sup> assemblies are referenced from trial setup or from the NuGet feed, the "Syncfusion.Licensing" assembly reference must also be added and a license key included in projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
 
-Step 3: Create a Razor file named `DocIO.razor` in the `Pages` folder, which is located inside the `Components` folder.
+Step 3: Create a Razor file named `DocIO.razor` in the `Pages` folder, which is located inside the `Components` folder (`Components/Pages/DocIO.razor`).
+
+> **Note:** The `@rendermode InteractiveServer` directive requires that the `<Routes>` component in `App.razor` be updated to `<Routes @rendermode="InteractiveServer" />` so the interactive rendering mode is available to pages.
 
 Include the following namespaces in the file:
 
@@ -51,11 +53,13 @@ Include the following namespaces in the file:
 {% highlight c# tabtitle="C#" %}
 
 @rendermode InteractiveServer
-@page "/DocIO"
-@using System.IO;
-@using Convert_Word_Document_to_PDF;
+@page "/docio"
+@using System.IO
+@using Convert_Word_Document_to_PDF
+@using Convert_Word_Document_to_PDF.Data
+@using Microsoft.JSInterop
 @inject Convert_Word_Document_to_PDF.Data.WordService service
-@inject Microsoft.JSInterop.IJSRuntime JS
+@inject IJSRuntime JS
 {% endhighlight %}
 {% endtabs %}
 
@@ -91,9 +95,9 @@ Add the following code to convert the Word document to PDF and download it:
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Create a new cs file `WordService.cs` in the `Data` folder.
+Step 6: Create the `Data` folder and a new C# file `WordService.cs` inside it (`Data/WordService.cs`). The `Data` folder does not exist by default in the Blazor Web App template, so create it first (right-click the project → **Add** → **New Folder** → name it `Data`).
 
-Include the following namespaces in the file:
+Include the following code in `WordService.cs`. This adds the required `using` directives, the namespace, and the class wrapper used to convert the Word document at `wwwroot/Template.docx` to a PDF:
 
 {% tabs %}
 
@@ -102,35 +106,35 @@ using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.DocIORenderer;
 using Syncfusion.Pdf;
-{% endhighlight %}
+using System.IO;
 
-{% endtabs %}
-
-Step 7: Implement the method in `WordService.cs`.
-
-Create a new `MemoryStream` method in the `WordService` class, and include the following code snippet to **convert the Word document to PDF in Blazor** Web App Server:
-
-{% tabs %}
-
-{% highlight c# tabtitle="C#" %}
-
-using (FileStream sourceStreamPath = new FileStream(@"wwwroot/Input.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+namespace Convert_Word_Document_to_PDF.Data
 {
-    // Open an existing Word document.
-    using (WordDocument document = new WordDocument(sourceStreamPath, FormatType.Docx))
+    public class WordService
     {
-        // Instantiation of DocIORenderer for Word to PDF conversion
-        using (DocIORenderer render = new DocIORenderer())
+        public MemoryStream ConvertWordtoPDF()
         {
-            // Converts Word document into PDF document
-            using (PdfDocument pdfDocument = render.ConvertToPDF(document))
+            //Open the file as Stream
+            using (FileStream sourceStreamPath = new FileStream(@"wwwroot/Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
             {
-                // Saves the PDF document to MemoryStream.
-                MemoryStream stream = new MemoryStream();
-                pdfDocument.Save(stream);
-                stream.Position = 0;
-                return stream;
-            }
+                //Open an existing Word document.
+                using (WordDocument document = new WordDocument(sourceStreamPath, FormatType.Automatic))
+                {
+                    //Instantiation of DocIORenderer for Word to PDF conversion
+                    using (DocIORenderer render = new DocIORenderer())
+                    {
+                        //Converts Word document into PDF document
+                        using (PdfDocument pdfDocument = render.ConvertToPDF(document))
+                        {
+                            //Saves the PDF document to MemoryStream.
+                            MemoryStream stream = new MemoryStream();
+                            pdfDocument.Save(stream);
+                            stream.Position = 0;
+                            return stream;
+                        }
+                    }
+                }
+            }                                           
         }
     }
 }
@@ -139,7 +143,7 @@ using (FileStream sourceStreamPath = new FileStream(@"wwwroot/Input.docx", FileM
 
 {% endtabs %}
 
-Step 8: Add the service in `Program.cs`. 
+Step 7: Add the service in `Program.cs`. 
 
 Add the following line to the `Program.cs` file to register `WordService` as a scoped service in the Blazor application. 
 
@@ -151,29 +155,33 @@ builder.Services.AddScoped<Convert_Word_Document_to_PDF.Data.WordService>();
 {% endhighlight %}
 {% endtabs %}
 
-Step 9: Create `FileUtils.cs` for JavaScript interoperability.
+Step 8: Create `FileUtils.cs` for JavaScript interoperability.
 
-Create a new class file named `FileUtils` in the project and add the following code to invoke the JavaScript action for file download in the browser.
+Create a new class file named `FileUtils.cs` at the project root and add the following code (including the required `using` directives and namespace) to invoke the JavaScript action for file download in the browser:
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
+using Microsoft.JSInterop;
 
-public static class FileUtils
+namespace Convert_Word_Document_to_PDF
 {
-    public static ValueTask<object> SaveAs(this IJSRuntime js, string filename, byte[] data)
-       => js.InvokeAsync<object>(
-            "saveAsFile",
-            filename,
-            Convert.ToBase64String(data));
+    public static class FileUtils
+    {
+        public static ValueTask<object> SaveAs(this IJSRuntime js, string filename, byte[] data)
+           => js.InvokeAsync<object>(
+                "saveAsFile",
+                filename,
+                Convert.ToBase64String(data));
+    }
 }
 {% endhighlight %}
 
 {% endtabs %}
 
-Step 10: Add JavaScript function to `App.razor`.
+Step 9: Add JavaScript function to `App.razor`.
 
-Add the following JavaScript function in the `App.razor` file located in the `Pages` folder.
+Add the following JavaScript function in the `App.razor` file located in the `Components` folder (`Components/App.razor`). If `App.razor` already contains a `<script>` block, merge the function into it; otherwise add a new `<script>` block inside the `<head>` element.
 
 {% tabs %}
 
@@ -206,9 +214,9 @@ Add the following JavaScript function in the `App.razor` file located in the `Pa
 
 {% endtabs %}
 
-Step 11: Add navigation link.
+Step 10: Add navigation link.
 
-Add the following code snippet to the Navigation menu's Razor file in the `Layout` folder.
+Add the following code snippet to the navigation menu's Razor file located at `Components/Layout/NavMenu.razor`. Ensure the `href` value matches the `@page` route defined in `DocIO.razor`:
 
 {% tabs %}
 
@@ -224,13 +232,13 @@ Add the following code snippet to the Navigation menu's Razor file in the `Layou
 
 {% endtabs %}
 
-Step 12: Build the project.
+Step 11: Build the project.
 
-Click on **Build** → **Build Solution** or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
+Set the Blazor Server project as the **startup project** (right-click the project in **Solution Explorer** → **Set as Startup Project**). Then click **Build** → **Build Solution** or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project. Fix any build errors before continuing.
 
-Step 13: Run the project.
+Step 12: Run the project.
 
-Click the Start button (green arrow) or press <kbd>F5</kbd> to run the application.
+Click the Start button (green arrow) or press <kbd>F5</kbd> to run the application. Once the app is running, open `https://localhost:<port>/docio` in the browser and click the **Convert Word to PDF** button. The converted `Sample.pdf` will be downloaded by the browser.
 
 A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/Blazor/Blazor-Web-Server-app).
 
@@ -251,22 +259,26 @@ Upon executing the program, the **PDF document** will be generated as follows.
 
 Step 1: Create a new C# Blazor Web app project.
 * Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
-* Choose the **Blazor Web App** template.
+* Choose the **Blazor Web App** template (requires .NET 8+; select the **Server** interactivity option).
 
 ![Choose Blazor Web App Server from template](Blazor_Images/Blazor-Web-app-template.png)
 
 * Select the project location, type the project name and press enter.
 * Then choose **Create project**.
 
-Step 2: To **convert a Word document to PDF in Web app**, install [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) to the Blazor project.
+Step 2: To **convert a Word document to PDF in Web app**, install the following NuGet packages to the Blazor project.
 * Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 * Ensure you're in the project root directory where your .csproj file is located.
-* Run the command `dotnet add package Syncfusion.DocIORenderer.Net.Core` to install the NuGet package.
+* Run the following commands to install the required NuGet packages:
+
+```
+dotnet add package Syncfusion.DocIORenderer.Net.Core
+```
 
 ![Add Syncfusion.DocIORenderer.Net.Core NuGet package](Blazor_Images/Command-to-add-NuGet-package-for-Server.png)
 
-N> 1. If deploying the application in a Linux environment, refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf#additional-nuget-packages-required-for-linux) for the required additional NuGet packages.
-N> 2. Starting with v16.2.0.x, if Syncfusion<sup>&reg;</sup> assemblies are referenced from trial setup or from the NuGet feed, the "Syncfusion.Licensing" assembly reference must also be added and a license key included in projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
+N> 1. If deploying the application in a Linux environment, refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf#additional-nuget-packages-required-for-linux) for the required additional NuGet packages (such as `SkiaSharp.NativeAssets.Linux`).
+N> 2. Starting with v16.2.0.x, if Syncfusion<sup>&reg;</sup> assemblies are referenced from trial setup or from the NuGet feed, the `Syncfusion.Licensing` assembly reference must also be added and a license key included in projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
 
 Step 3: Create a Razor file named `DocIO.razor` in the `Pages` folder, which is located inside the `Components` folder.
 
@@ -276,13 +288,16 @@ Include the following namespaces in the file:
 {% highlight c# tabtitle="C#" %}
 
 @rendermode InteractiveServer
-@page "/DocIO"
+@page "/docio"
 @using System.IO;
 @using Convert_Word_Document_to_PDF;
+@using Convert_Word_Document_to_PDF.Helpers;
 @inject Convert_Word_Document_to_PDF.Data.WordService service
 @inject Microsoft.JSInterop.IJSRuntime JS
 {% endhighlight %}
 {% endtabs %}
+
+> **Note:** The `@rendermode InteractiveServer` directive requires that the `<Routes>` component in `App.razor` be updated to `<Routes @rendermode="InteractiveServer" />` so the interactive rendering mode is available to pages.
 
 Step 4: Add a button to `DocIO.razor`.
 
@@ -316,46 +331,46 @@ Add the following code to convert the Word document to PDF and download it:
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Create a new cs file `WordService.cs` in the `Data` folder.
+Step 6: Create the `Data` folder and a new C# file `WordService.cs` inside it (`Data/WordService.cs`). The `Data` folder does not exist by default in the Blazor Web App template, so create it first (right-click the project → **Add** → **New Folder** → name it `Data`).
 
-Include the following namespaces in the file:
+Include the following code in `WordService.cs`. This adds the required `using` directives, the namespace, and the class wrapper used to convert the Word document at `wwwroot/Template.docx` to a PDF:
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
+using System.IO;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.DocIORenderer;
 using Syncfusion.Pdf;
-{% endhighlight %}
 
-{% endtabs %}
-
-Step 7: Implement the method in `WordService.cs`.
-
-Create a new `MemoryStream` method in the `WordService` class, and include the following code snippet to **convert the Word document to PDF in Blazor** Web App Server:
-
-{% tabs %}
-
-{% highlight c# tabtitle="C#" %}
-
-using (FileStream sourceStreamPath = new FileStream(@"wwwroot/Input.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+namespace Convert_Word_Document_to_PDF.Data
 {
-    // Open an existing Word document.
-    using (WordDocument document = new WordDocument(sourceStreamPath, FormatType.Docx))
+    public class WordService
     {
-        // Instantiation of DocIORenderer for Word to PDF conversion
-        using (DocIORenderer render = new DocIORenderer())
+        public MemoryStream ConvertWordtoPDF()
         {
-            // Converts Word document into PDF document
-            using (PdfDocument pdfDocument = render.ConvertToPDF(document))
+            //Open the file as Stream
+            using (FileStream sourceStreamPath = new FileStream(@"wwwroot/Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
             {
-                // Saves the PDF document to MemoryStream.
-                MemoryStream stream = new MemoryStream();
-                pdfDocument.Save(stream);
-                stream.Position = 0;
-                return stream;
-            }
+                //Open an existing Word document.
+                using (WordDocument document = new WordDocument(sourceStreamPath, FormatType.Automatic))
+                {
+                    //Instantiation of DocIORenderer for Word to PDF conversion
+                    using (DocIORenderer render = new DocIORenderer())
+                    {
+                        //Converts Word document into PDF document
+                        using (PdfDocument pdfDocument = render.ConvertToPDF(document))
+                        {
+                            //Saves the PDF document to MemoryStream.
+                            MemoryStream stream = new MemoryStream();
+                            pdfDocument.Save(stream);
+                            stream.Position = 0;
+                            return stream;
+                        }
+                    }
+                }
+            }                                           
         }
     }
 }
@@ -364,7 +379,7 @@ using (FileStream sourceStreamPath = new FileStream(@"wwwroot/Input.docx", FileM
 
 {% endtabs %}
 
-Step 8: Add the service in `Program.cs`.
+Step 7: Add the service in `Program.cs`.
 
 Add the following line to the `Program.cs` file to register `WordService` as a scoped service in the Blazor application. 
 
@@ -376,29 +391,38 @@ builder.Services.AddScoped<Convert_Word_Document_to_PDF.Data.WordService>();
 {% endhighlight %}
 {% endtabs %}
 
-Step 9: Create `FileUtils.cs` for JavaScript interoperability.
+> **Note:** Replace `Convert_Word_Document_to_PDF` with the actual project namespace you used when creating the Blazor project.
 
-Create a new class file named `FileUtils` in the project and add the following code to invoke the JavaScript action for file download in the browser.
+Step 8: Create `FileUtils.cs` for JavaScript interoperability.
+
+Create a new class file named `FileUtils.cs` inside a `Helpers` folder of the project and add the following code to invoke the JavaScript action for file download in the browser.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
 
-public static class FileUtils
+using System;
+using System.Threading.Tasks;
+using Microsoft.JSInterop;
+
+namespace Convert_Word_Document_to_PDF.Helpers
 {
-    public static ValueTask<object> SaveAs(this IJSRuntime js, string filename, byte[] data)
-       => js.InvokeAsync<object>(
-            "saveAsFile",
-            filename,
-            Convert.ToBase64String(data));
+    public static class FileUtils
+    {
+        public static ValueTask<object> SaveAs(this IJSRuntime js, string filename, byte[] data)
+           => js.InvokeAsync<object>(
+                "saveAsFile",
+                filename,
+                Convert.ToBase64String(data));
+    }
 }
 {% endhighlight %}
 
 {% endtabs %}
 
-Step 10: Add JavaScript function to `App.razor`.
+Step 9: Add JavaScript function to `App.razor`.
 
-Add the following JavaScript function in the `App.razor` file located in the `Pages` folder.
+Add the following JavaScript function in the `App.razor` file located in the `Components` folder (`Components/App.razor`). Place the `<script>` block just before the closing `</body>` tag so the `saveAsFile` function is available when the download is triggered.
 
 {% tabs %}
 
@@ -431,9 +455,9 @@ Add the following JavaScript function in the `App.razor` file located in the `Pa
 
 {% endtabs %}
 
-Step 11: Add navigation link.
+Step 10: Add navigation link.
 
-Add the following code snippet to the Navigation menu's Razor file in the `Layout` folder.
+Add the following code snippet to the `NavMenu.razor` file in the `Layout` folder. Ensure the `href` value matches the `@page` route defined in `DocIO.razor`.
 
 {% tabs %}
 
@@ -449,7 +473,7 @@ Add the following code snippet to the Navigation menu's Razor file in the `Layou
 
 {% endtabs %}
 
-Step 12: Build the project.
+Step 11: Build the project.
 
 Run the following command in terminal to build the project.
 
@@ -457,13 +481,15 @@ Run the following command in terminal to build the project.
 dotnet build
 ```
 
-Step 13: Run the project.
+Step 12: Run the project.
 
 Run the following command in terminal to run the project.
 
 ```
 dotnet run
 ```
+
+Once the app starts, open a browser and navigate to the URL shown in the terminal output (typically `https://localhost:5001` or `https://localhost:7xxx`). Then click the **Convert Word to PDF** button in the navigation menu to download the generated PDF.
 
 A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/Blazor/Blazor-Web-Server-app).
 
@@ -480,16 +506,18 @@ Upon executing the program, the **PDF document** will be generated as follows.
 * JetBrains Rider.
 * Install .NET 8 SDK or later.
 
-Step 1. Open JetBrains Rider and create a new Blazor Web app project.
+Step 1: Open JetBrains Rider and create a new Blazor Web app project.
 * Launch JetBrains Rider.
-* Click new solution on the welcome screen.
+* Click **New Solution** on the welcome screen.
 
 ![Launch JetBrains Rider](Blazor_Images/Launch-JetBrains-Rider.png)
 
 * In the new Solution dialog, select Project Type as Web.
 * Select the target framework (e.g., .NET 8.0, .NET 9.0).
 * Choose template as **Blazor Web App**.
-* Enter a project name and specify the location.
+* Set **Authentication type** to **None** (unless you specifically need a different option).
+* Ensure **Interactive render mode** is set to **Server** so that the `@rendermode InteractiveServer` directive used later in this guide works without additional configuration.
+* Enter a project name (for example, `Convert_Word_Document_to_PDF`) and specify the location.
 * Click create.
 
 ![Creating a new .NET Core console application in JetBrains Rider](Blazor_Images/Create-Blazor-Server-application.png)
@@ -509,21 +537,23 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 N> 1. If deploying the application in a Linux environment, refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf#additional-nuget-packages-required-for-linux) for the required additional NuGet packages.
 N> 2. Starting with v16.2.0.x, if Syncfusion<sup>&reg;</sup> assemblies are referenced from trial setup or from the NuGet feed, the "Syncfusion.Licensing" assembly reference must also be added and a license key included in projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
 
-Step 3: Create a Razor file named `DocIO.razor` in the `Pages` folder, which is located inside the `Components` folder.
+Step 3: Create a Razor file named `DocIO.razor` in the `Pages` folder, which is located inside the `Components` folder (`Components/Pages/DocIO.razor`).
 
-Include the following namespaces in the file:
+Include the following namespaces in the file. Replace `Convert_Word_Document_to_PDF` with the actual project name you provided in Step 1:
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 @rendermode InteractiveServer
-@page "/DocIO"
+@page "/docio"
 @using System.IO;
 @using Convert_Word_Document_to_PDF;
 @inject Convert_Word_Document_to_PDF.Data.WordService service
 @inject Microsoft.JSInterop.IJSRuntime JS
 {% endhighlight %}
 {% endtabs %}
+
+N> Ensure that the project is configured with Interactive Server render mode (selected in Step 1) so that the `@rendermode InteractiveServer` directive works without any additional configuration.
 
 Step 4: Add a button to `DocIO.razor`.
 
@@ -557,9 +587,9 @@ Add the following code to convert the Word document to PDF and download it:
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Create a new cs file `WordService.cs` in the `Data` folder.
+Step 6: Create the `Data` folder and a new C# file `WordService.cs` inside it (`Data/WordService.cs`). The `Data` folder does not exist by default in the Blazor Web App template, so create it first (right-click the project → **Add** → **New Folder** → name it `Data`).
 
-Include the following namespaces in the file:
+Include the following code in `WordService.cs`. This adds the required `using` directives, the namespace, and the class wrapper used to convert the Word document at `wwwroot/Template.docx` to a PDF:
 
 {% tabs %}
 
@@ -568,35 +598,35 @@ using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.DocIORenderer;
 using Syncfusion.Pdf;
-{% endhighlight %}
+using System.IO;
 
-{% endtabs %}
-
-Step 7: Implement the method in `WordService.cs`.
-
-Create a new `MemoryStream` method in the `WordService` class, and include the following code snippet to **convert the Word document to PDF in Blazor** Web App Server:
-
-{% tabs %}
-
-{% highlight c# tabtitle="C#" %}
-
-using (FileStream sourceStreamPath = new FileStream(@"wwwroot/Input.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+namespace Convert_Word_Document_to_PDF.Data
 {
-    // Open an existing Word document.
-    using (WordDocument document = new WordDocument(sourceStreamPath, FormatType.Docx))
+    public class WordService
     {
-        // Instantiation of DocIORenderer for Word to PDF conversion
-        using (DocIORenderer render = new DocIORenderer())
+        public MemoryStream ConvertWordtoPDF()
         {
-            // Converts Word document into PDF document
-            using (PdfDocument pdfDocument = render.ConvertToPDF(document))
+            //Open the file as Stream
+            using (FileStream sourceStreamPath = new FileStream(@"wwwroot/Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
             {
-                // Saves the PDF document to MemoryStream.
-                MemoryStream stream = new MemoryStream();
-                pdfDocument.Save(stream);
-                stream.Position = 0;
-                return stream;
-            }
+                //Open an existing Word document.
+                using (WordDocument document = new WordDocument(sourceStreamPath, FormatType.Automatic))
+                {
+                    //Instantiation of DocIORenderer for Word to PDF conversion
+                    using (DocIORenderer render = new DocIORenderer())
+                    {
+                        //Converts Word document into PDF document
+                        using (PdfDocument pdfDocument = render.ConvertToPDF(document))
+                        {
+                            //Saves the PDF document to MemoryStream.
+                            MemoryStream stream = new MemoryStream();
+                            pdfDocument.Save(stream);
+                            stream.Position = 0;
+                            return stream;
+                        }
+                    }
+                }
+            }                                           
         }
     }
 }
@@ -605,7 +635,7 @@ using (FileStream sourceStreamPath = new FileStream(@"wwwroot/Input.docx", FileM
 
 {% endtabs %}
 
-Step 8: Add the service in `Program.cs`.
+Step 7: Add the service in `Program.cs`.
 
 Add the following line to the `Program.cs` file to register `WordService` as a scoped service in the Blazor application. 
 
@@ -617,29 +647,36 @@ builder.Services.AddScoped<Convert_Word_Document_to_PDF.Data.WordService>();
 {% endhighlight %}
 {% endtabs %}
 
-Step 9: Create `FileUtils.cs` for JavaScript interoperability.
+Step 8: Create `FileUtils.cs` for JavaScript interoperability.
 
-Create a new class file named `FileUtils` in the project and add the following code to invoke the JavaScript action for file download in the browser.
+Right-click the project in the Solution Explorer, choose **Add -> Class**, and create a new class file named `FileUtils.cs` in the project root. Add the following complete code to the file to invoke the JavaScript action for file download in the browser.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
 
-public static class FileUtils
+using System;
+using System.Threading.Tasks;
+using Microsoft.JSInterop;
+
+namespace Convert_Word_Document_to_PDF
 {
-    public static ValueTask<object> SaveAs(this IJSRuntime js, string filename, byte[] data)
-       => js.InvokeAsync<object>(
-            "saveAsFile",
-            filename,
-            Convert.ToBase64String(data));
+    public static class FileUtils
+    {
+        public static ValueTask<object> SaveAs(this IJSRuntime js, string filename, byte[] data)
+           => js.InvokeAsync<object>(
+                "saveAsFile",
+                filename,
+                Convert.ToBase64String(data));
+    }
 }
 {% endhighlight %}
 
 {% endtabs %}
 
-Step 10: Add JavaScript function to `App.razor`.
+Step 9: Add JavaScript function to `App.razor`.
 
-Add the following JavaScript function in the `App.razor` file located in the `Pages` folder.
+Add the following JavaScript function in the `App.razor` file located in the `Components` folder (`Components/App.razor`). Place the `<script>` block just before the closing `</body>` tag so the `saveAsFile` function is available when the download is triggered.
 
 {% tabs %}
 
@@ -672,7 +709,7 @@ Add the following JavaScript function in the `App.razor` file located in the `Pa
 
 {% endtabs %}
 
-Step 11: Add navigation link.
+Step 10: Add navigation link.
 
 Add the following code snippet to the Navigation menu's Razor file in the `Layout` folder.
 
@@ -714,15 +751,16 @@ An online sample link to [convert Word document to PDF](https://document.syncfus
 
 *   Visual Studio 2022.
 *   Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
+*   Install the latest version of [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) (v23.2.4 or later is recommended for .NET 8 compatibility).
 
-Step 1: Create a new C# Blazor WASM Standalone app project.
+Step 1: Create a new C# Blazor WebAssembly Standalone app project.
 
 Select "Blazor WebAssembly Standalone App" from the template and click **Next**.
 
 ![Create Blazor WebAssembly Standalone application in  Visual Studio](Blazor_Images/Blazor_WASM_Standalone.png)
 
-Step 2: Install the following **Nuget packages** in the application from [Nuget.org](https://www.nuget.org/).
-*   [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core)
+Step 2: Install the following **NuGet packages** in the application from [NuGet.org](https://www.nuget.org/).
+*   [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) (latest stable version)
 *   [SkiaSharp.Views.Blazor v3.119.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1)
 
 ![Install Syncfusion.DocIORenderer.Net.Core NuGet Package](Blazor_Images/NugetPackage.png)
@@ -734,11 +772,11 @@ N> 3. If you face issues related to SkiaSharp during runtime, install the necess
 N> ```
 N> dotnet workload install wasm-tools
 N> ```
-N> After completing the installation, restart Visual Studio to ensure proper integration of the tools..
+N> After completing the installation, restart Visual Studio to ensure proper integration of the tools.
 
 Step 3: Create a Razor file named `DocIO.razor` in the `Pages` folder.
 
-Add the following namespaces in the file.
+Add the following namespaces and the required `@code` block to the file.
 
 {% tabs %}
 
@@ -763,7 +801,7 @@ Include the following code to create a new button that triggers the Word to PDF 
 {% highlight CSHTML %}
 
 <h2>Syncfusion DocIO Library</h2>
-<p>The Syncfusion Blazor DocIO library used to create, read, edit, and convert DocIO files in applications without Microsoft Office dependencies.</p>
+<p>The Syncfusion Blazor DocIO library is used to create, read, edit, and convert DocIO files in applications without Microsoft Office dependencies.</p>
 <button class="btn btn-primary" @onclick="@WordToPDF">Convert Word to PDF</button>
 
 {% endhighlight %}
@@ -772,30 +810,36 @@ Include the following code to create a new button that triggers the Word to PDF 
 
 Step 5: Implement `WordToPDF` method in `DocIO.razor`.
 
-Create a new `async` method named `WordToPDF` and include the following code snippet to **create a Word document in Blazor** WASM Standalone app.
+Add the following code inside an `@code { }` block in `DocIO.razor` to **open and convert an existing Word document in the Blazor WebAssembly Standalone app**:
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
 
-using (Stream inputStream = await client.GetStreamAsync("sample-data/Input.docx"))
+private async Task WordToPDF()
 {
-    // Open an existing Word document.
-    using (WordDocument document = new WordDocument(inputStream, FormatType.Docx))
+    try
     {
-        // Initialize the DocIORenderer for Word to PDF conversion.
-        using (DocIORenderer render = new DocIORenderer())
+        using (Stream inputStream = await client.GetStreamAsync("sample-data/Input.docx"))
         {
-            // Convert Word document into PDF document.
-            using (PdfDocument pdfDocument = render.ConvertToPDF(document))
+            // Open an existing Word document.
+            using (WordDocument document = new WordDocument(inputStream, FormatType.Docx))
             {
-                // Save the PDF document to MemoryStream.
-                using (MemoryStream outputStream = new MemoryStream())
+                // Initialize the DocIORenderer for Word to PDF conversion.
+                using (DocIORenderer render = new DocIORenderer())
                 {
-                    pdfDocument.Save(outputStream);
-                    outputStream.Position = 0;
-                    // Download PDF file in the browser.
-                    await JS.SaveAs("Output.pdf", outputStream.ToArray());
+                    // Convert Word document into PDF document.
+                    using (PdfDocument pdfDocument = render.ConvertToPDF(document))
+                    {
+                        // Save the PDF document to MemoryStream.
+                        using (MemoryStream outputStream = new MemoryStream())
+                        {
+                            pdfDocument.Save(outputStream);
+                            outputStream.Position = 0;
+                            // Download PDF file in the browser.
+                            await JS.SaveAs("Output.pdf", outputStream.ToArray());
+                        }
+                    }
                 }
             }
         }
@@ -807,7 +851,7 @@ using (Stream inputStream = await client.GetStreamAsync("sample-data/Input.docx"
 
 Step 6: Create `FileUtils.cs` for JavaScript interoperability.
 
-Create a class file named `FileUtils` and add the following code to invoke the JavaScript action for file download in the browser.
+Create a class file named `FileUtils` in the project root and add the following code to invoke the JavaScript action for file download in the browser.
 
 {% tabs %}
 
@@ -834,7 +878,7 @@ Add the following JavaScript function in the `index.html` file present under `ww
 
 {% highlight HTML %}
 
-<script type="text/javascript">
+<script>
     function saveAsFile(filename, bytesBase64) {
         if (navigator.msSaveBlob) {
             // Download document in Edge browser
@@ -885,7 +929,7 @@ Click on **Build** → **Build Solution** or press <kbd>Ctrl</kbd>+<kbd>Shift</k
 
 Step 10: Run the project.
 
-Click the Start button (green arrow) or press <kbd>F5</kbd> to run the application.
+Click the Start button (green arrow) or press <kbd>F5</kbd> to run the application. After the app loads, navigate to **https://localhost:<port>/docio** in the browser to test the conversion.
 
 A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/Blazor/Blazor-WASM-Standalone-app).
 
@@ -905,19 +949,23 @@ N> To convert Word to PDF, it is necessary to access the font stream internally.
 * Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 * Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
 
-Step 1: Create a new C# Blazor WASM Standalone app project.
-* Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
+Step 1: Create a new C# Blazor WebAssembly Standalone app project.
+* Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET: New Project** and press <kbd>Enter</kbd>.
 * Choose the **Blazor WebAssembly Standalone App** template.
 
 ![Choose Blazor Web app from template](Blazor_Images/Blazor-WASM-Standalone-app-template.png)
 
-* Select the project location, type the project name and press enter.
+* Select the project location, type the project name, and press <kbd>Enter</kbd>.
 * Then choose **Create project**.
 
-Step 2: To **convert a Word document to PDF in Blazor WASM Standalone app**, install [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) and [SkiaSharp.Views.Blazor v3.119.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1) to the Blazor project.
+Step 2: To **convert a Word document to PDF in the Blazor WebAssembly Standalone app**, install [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) and [SkiaSharp.Views.Blazor v3.119.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1) to the Blazor project.
 * Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 * Ensure you're in the project root directory where your .csproj file is located.
-* Run the command `dotnet add package Syncfusion.DocIORenderer.Net.Core` and `dotnet add package SkiaSharp.Views.Blazor --version 3.119.1` to install the NuGet package.
+* Run the following commands to install the NuGet packages:
+  ```
+  dotnet add package Syncfusion.DocIORenderer.Net.Core
+  dotnet add package SkiaSharp.Views.Blazor --version 3.119.1
+  ```
 
 ![Add Syncfusion.DocIORenderer.Net.Core NuGet package](Blazor_Images/Command-to-add-NuGet-package-for-WASM.png)
 
@@ -933,7 +981,7 @@ N> After completing the installation, restart Visual Studio Code to ensure prope
 
 Step 3: Create a Razor file named `DocIO.razor` in the `Pages` folder.
 
-Add the following namespaces in the file.
+Add the following namespaces and the required `@code` block to the file.
 
 {% tabs %}
 
@@ -958,7 +1006,7 @@ Include the following code to create a new button that triggers the Word to PDF 
 {% highlight CSHTML %}
 
 <h2>Syncfusion DocIO Library</h2>
-<p>The Syncfusion Blazor DocIO library used to create, read, edit, and convert DocIO files in applications without Microsoft Office dependencies.</p>
+<p>The Syncfusion Blazor DocIO library is used to create, read, edit, and convert DocIO files in applications without Microsoft Office dependencies.</p>
 <button class="btn btn-primary" @onclick="@WordToPDF">Convert Word to PDF</button>
 
 {% endhighlight %}
@@ -967,30 +1015,36 @@ Include the following code to create a new button that triggers the Word to PDF 
 
 Step 5: Implement `WordToPDF` method in `DocIO.razor`.
 
-Create a new `async` method named `WordToPDF` and include the following code snippet to **create a Word document in Blazor** WASM Standalone app.
+Add the following code inside an `@code { }` block in `DocIO.razor` to **open and convert an existing Word document in the Blazor WebAssembly Standalone app**:
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
 
-using (Stream inputStream = await client.GetStreamAsync("sample-data/Input.docx"))
+private async Task WordToPDF()
 {
-    // Open an existing Word document.
-    using (WordDocument document = new WordDocument(inputStream, FormatType.Docx))
+    try
     {
-        // Initialize the DocIORenderer for Word to PDF conversion.
-        using (DocIORenderer render = new DocIORenderer())
+        using (Stream inputStream = await client.GetStreamAsync("sample-data/Input.docx"))
         {
-            // Convert Word document into PDF document.
-            using (PdfDocument pdfDocument = render.ConvertToPDF(document))
+            // Open an existing Word document.
+            using (WordDocument document = new WordDocument(inputStream, FormatType.Docx))
             {
-                // Save the PDF document to MemoryStream.
-                using (MemoryStream outputStream = new MemoryStream())
+                // Initialize the DocIORenderer for Word to PDF conversion.
+                using (DocIORenderer render = new DocIORenderer())
                 {
-                    pdfDocument.Save(outputStream);
-                    outputStream.Position = 0;
-                    // Download PDF file in the browser.
-                    await JS.SaveAs("Output.pdf", outputStream.ToArray());
+                    // Convert Word document into PDF document.
+                    using (PdfDocument pdfDocument = render.ConvertToPDF(document))
+                    {
+                        // Save the PDF document to MemoryStream.
+                        using (MemoryStream outputStream = new MemoryStream())
+                        {
+                            pdfDocument.Save(outputStream);
+                            outputStream.Position = 0;
+                            // Download PDF file in the browser.
+                            await JS.SaveAs("Output.pdf", outputStream.ToArray());
+                        }
+                    }
                 }
             }
         }
@@ -1002,7 +1056,7 @@ using (Stream inputStream = await client.GetStreamAsync("sample-data/Input.docx"
 
 Step 6: Create `FileUtils.cs` for JavaScript interoperability.
 
-Create a class file named `FileUtils` and add the following code to invoke the JavaScript action for file download in the browser.
+Create a class file named `FileUtils` in the project root and add the following code to invoke the JavaScript action for file download in the browser.
 
 {% tabs %}
 
@@ -1029,7 +1083,7 @@ Add the following JavaScript function in the `index.html` file present under `ww
 
 {% highlight HTML %}
 
-<script type="text/javascript">
+<script>
     function saveAsFile(filename, bytesBase64) {
         if (navigator.msSaveBlob) {
             // Download document in Edge browser
@@ -1076,7 +1130,7 @@ Add the following code snippet to the Navigation menu's Razor file in the `Layou
 
 Step 9: Build the project.
 
-Run the following command in terminal to build the project.
+Run the following command in the terminal to build the project.
 
 ```
 dotnet build
@@ -1084,11 +1138,13 @@ dotnet build
 
 Step 10: Run the project.
 
-Run the following command in terminal to run the project.
+Run the following command in the terminal to run the project:
 
 ```
 dotnet run
 ```
+
+After the app loads, navigate to **https://localhost:<port>/docio** in the browser to test the conversion.
 
 A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/Blazor/Blazor-WASM-Standalone-app).
 
@@ -1105,35 +1161,36 @@ N> To convert Word to PDF, it is necessary to access the font stream internally.
 **Prerequisites:**
 
 * JetBrains Rider.
-* Install .NET 8 SDK or later.
+* Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
+* Install the latest version of [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) (v23.2.4 or later is recommended for .NET 8 compatibility).
 
-Step 1. Open JetBrains Rider and create a new Blazor WASM Standalone app project.
+Step 1: Open JetBrains Rider and create a new Blazor WebAssembly Standalone app project.
 * Launch JetBrains Rider.
-* Click new solution on the welcome screen.
+* Click **New Solution** on the welcome screen.
 
 ![Launch JetBrains Rider](Blazor_Images/Launch-JetBrains-Rider.png)
 
-* In the new Solution dialog, select Project Type as Web.
-* Select the target framework (e.g., .NET 8.0, .NET 9.0).
-* Choose template as **Blazor WebAssembly Standalone App**.
+* In the **New Solution** dialog, set Project Type to **Web**.
+* Select the target framework (for example, .NET 8.0 or later).
+* Choose the **Blazor WebAssembly Standalone App** template.
 * Enter a project name and specify the location.
-* Click create.
+* Click **Create**.
 
-![Creating a new .NET Core console application in JetBrains Rider](Blazor_Images/Create-Blazor-WASM-application.png)
+![Creating a new Blazor WebAssembly Standalone app in JetBrains Rider](Blazor_Images/Create-Blazor-WASM-application.png)
 
-Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
+Step 2: Install the NuGet packages from [NuGet.org](https://www.nuget.org/).
 * Click the NuGet icon in the Rider toolbar and type [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) in the search bar.
 * Ensure that "nuget.org" is selected as the package source.
 * Select the latest Syncfusion.DocIORenderer.Net.Core NuGet package from the list.
-* Click the + (Add) button to add the package.
+* Click the **+** (Add) button to add the package.
 
 ![Select the Syncfusion.DocIORenderer.Net.Core NuGet package](Blazor_Images/Select-Syncfusion.DocIORenderer.Net.Core-NuGet.png)
 
-* Click the Install button to complete the installation.
+* Click the **Install** button to complete the installation.
 
 ![Install the Syncfusion.DocIORenderer.Net.Core NuGet package](Blazor_Images/Install-Syncfusion.DocIORenderer.Net.Core-NuGet.png)
 
-* Similarly install the [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/) NuGet package from [NuGet.org](https://www.nuget.org/)
+* Similarly, install the [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/) NuGet package from [NuGet.org](https://www.nuget.org/).
 
 ![Install the SkiaSharp.Views.Blazor NuGet package](Blazor_Images/Install-SkiaSharp.Views.Blazor-NuGet.png)
 
@@ -1147,7 +1204,7 @@ N> After completing the installation, restart JetBrains Rider to ensure proper i
 
 Step 3: Create a Razor file named `DocIO.razor` in the `Pages` folder.
 
-Add the following namespaces in the file.
+Add the following namespaces and the required `@code` block to the file.
 
 {% tabs %}
 
@@ -1172,7 +1229,7 @@ Include the following code to create a new button that triggers the Word to PDF 
 {% highlight CSHTML %}
 
 <h2>Syncfusion DocIO Library</h2>
-<p>The Syncfusion Blazor DocIO library used to create, read, edit, and convert DocIO files in applications without Microsoft Office dependencies.</p>
+<p>The Syncfusion Blazor DocIO library is used to create, read, edit, and convert DocIO files in applications without Microsoft Office dependencies.</p>
 <button class="btn btn-primary" @onclick="@WordToPDF">Convert Word to PDF</button>
 
 {% endhighlight %}
@@ -1181,30 +1238,36 @@ Include the following code to create a new button that triggers the Word to PDF 
 
 Step 5: Implement `WordToPDF` method in `DocIO.razor`.
 
-Create a new `async` method named `WordToPDF` and include the following code snippet to **create a Word document in Blazor** WASM Standalone app.
+Add the following code inside an `@code { }` block in `DocIO.razor` to **open and convert an existing Word document in the Blazor WebAssembly Standalone app**:
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
 
-using (Stream inputStream = await client.GetStreamAsync("sample-data/Input.docx"))
+private async Task WordToPDF()
 {
-    // Open an existing Word document.
-    using (WordDocument document = new WordDocument(inputStream, FormatType.Docx))
+    try
     {
-        // Initialize the DocIORenderer for Word to PDF conversion.
-        using (DocIORenderer render = new DocIORenderer())
+        using (Stream inputStream = await client.GetStreamAsync("sample-data/Input.docx"))
         {
-            // Convert Word document into PDF document.
-            using (PdfDocument pdfDocument = render.ConvertToPDF(document))
+            // Open an existing Word document.
+            using (WordDocument document = new WordDocument(inputStream, FormatType.Docx))
             {
-                // Save the PDF document to MemoryStream.
-                using (MemoryStream outputStream = new MemoryStream())
+                // Initialize the DocIORenderer for Word to PDF conversion.
+                using (DocIORenderer render = new DocIORenderer())
                 {
-                    pdfDocument.Save(outputStream);
-                    outputStream.Position = 0;
-                    // Download PDF file in the browser.
-                    await JS.SaveAs("Output.pdf", outputStream.ToArray());
+                    // Convert Word document into PDF document.
+                    using (PdfDocument pdfDocument = render.ConvertToPDF(document))
+                    {
+                        // Save the PDF document to MemoryStream.
+                        using (MemoryStream outputStream = new MemoryStream())
+                        {
+                            pdfDocument.Save(outputStream);
+                            outputStream.Position = 0;
+                            // Download PDF file in the browser.
+                            await JS.SaveAs("Output.pdf", outputStream.ToArray());
+                        }
+                    }
                 }
             }
         }
@@ -1216,7 +1279,7 @@ using (Stream inputStream = await client.GetStreamAsync("sample-data/Input.docx"
 
 Step 6: Create `FileUtils.cs` for JavaScript interoperability.
 
-Create a class file named `FileUtils` and add the following code to invoke the JavaScript action for file download in the browser.
+Create a class file named `FileUtils` in the project root and add the following code to invoke the JavaScript action for file download in the browser.
 
 {% tabs %}
 
@@ -1243,7 +1306,7 @@ Add the following JavaScript function in the `index.html` file present under `ww
 
 {% highlight HTML %}
 
-<script type="text/javascript">
+<script>
     function saveAsFile(filename, bytesBase64) {
         if (navigator.msSaveBlob) {
             // Download document in Edge browser
@@ -1294,7 +1357,7 @@ Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</k
 
 Step 10: Run the project.
 
-Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.
+Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app. After the app loads, navigate to **https://localhost:<port>/docio** in the browser to test the conversion.
 
 A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/Blazor/Blazor-WASM-Standalone-app).
 

@@ -9,11 +9,17 @@ keywords: aws elastic beanstalk create pdf, aws edit pdf, merge, pdf form, fill 
 
 # Create PDF document in AWS Elastic Beanstalk
 
-The [.NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, open and save PDF documents in AWS Elastic Beanstalk. 
+The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can open and save PDF documents in AWS Elastic Beanstalk. 
+
+## Prerequisites
+
+* An active **Amazon Web Services (AWS) account** is required. If you don't have one, please [create an account](https://aws.amazon.com/) before starting.
+
+* Download and install the **AWS Toolkit** for Visual Studio from this [link](https://aws.amazon.com/visualstudio/). You can install the toolkit from the **Extensions > Manage Extensions** option in Visual Studio.
 
 ## Steps to create a PDF document in AWS Elastic Beanstalk
 
-Step 1: Create a new C# ASP.NET Core Web Application project.
+Step 1: Create a new **C# ASP.NET Core Web Application** project using the **ASP.NET Core Web App (Model-View-Controller)** template so that a `HomeController.cs` and `Views/Home/index.cshtml` are available.
 ![ASP.NET Core project](GettingStarted_images/Create-Project.png)
 
 Step 2: In configuration windows, name your project and select Next.
@@ -24,7 +30,9 @@ Step 2: In configuration windows, name your project and select Next.
 Step 3: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 ![Install NuGet package](GettingStarted_images/NuGet-Package-AWS-Elastic-Beanstalk.png)
 
-Step 4: A default controller named HomeController.cs gets added to create the ASP.NET Core MVC project. Include the following namespaces in that HomeController.cs file.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or the NuGet feed, add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to register the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+
+Step 4: A default controller named HomeController.cs is created with the ASP.NET Core MVC project. Create a `Data` folder in the project root, copy the `Input.pdf` file into it, and set **Copy to Output Directory** to **Copy if newer** for the file. Then include the following namespaces in the HomeController.cs file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -106,10 +114,10 @@ public IActionResult CreatePDF()
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Click the Publish to AWS Elastic Beanstalk (Legacy) option by right-clicking the project to publish the application in the AWS Elastic Beanstalk environment.
+Step 7: Build the project to ensure there are no compile errors. Then right-click the project and click the **Publish to AWS Elastic Beanstalk (Legacy)** option to publish the application in the AWS Elastic Beanstalk environment. Note that this option uses the legacy AWS publish tooling, which may be deprecated in future Visual Studio versions.
 ![Publish to AWS Elastic Beanstalk](GettingStarted_images/Publish-AWS-Elastic-Beanstalk.png)
 
-Step 8: Add the AWS profile in the Publish to AWS Elastic Beanstalk Window. After creating the profile, Choose Create a new application environment or Re-deploy to the existing environment. Then, click Next.
+Step 8: Add the AWS profile (access key, secret key, and region) in the Publish to AWS Elastic Beanstalk window. After creating the profile, choose **Create a new application environment** or **Re-deploy to the existing environment**. Then, click **Next**.
 ![Publish to AWS Elastic Beanstalk](GettingStarted_images/Publish-to-AWS-Elastic-Beanstalk.png)
 
 Step 9: Click Next from the Application Options window.
@@ -121,12 +129,12 @@ Step 10: Click Deploy from the Review window.
 Step 11: Click the URL link to launch the application once the Environment is updated successfully and Environment status is healthy.
 ![Launch Application Window](GettingStarted_images/Launch-Application-Window.png)
 
-Step 12: Now, the webpage will open in the browser. Click the button to convert the webpage to a PDF document.
+Step 12: Now, the webpage will open in the browser. Click the **Create PDF** button to generate and download the PDF document.
 ![Console Window](GettingStarted_images/Console-Page-AWS-Elastic-Beanstalk.png)
 
 By executing the program, you will get the PDF document as follows.
 
-![Open and save a PDF document in AWS Lambda](GettingStarted_images/Output.png)
+![Open and save a PDF document in AWS Elastic Beanstalk](GettingStarted_images/Output.png)
 
 Users can download the [AWS Elastic Beanstalk](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/AWS/AWSElasticBeanstalk) project from GitHub.
 

@@ -1,26 +1,26 @@
 ---
 layout: post
 title: Customize the Redaction Toolbar in Blazor PDF Viewer | Syncfusion
-description: Learn how to customize the redaction toolbar in the Syncfusion Blazor PDF Viewer by showing or hiding default items with runnable examples.
+description: Learn how to customize the redaction toolbar in the Blazor PDF Viewer by showing or hiding default items with runnable examples.
 platform: document-processing
-control: PDF Viewer
+control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
 # Customize the Redaction Toolbar in Blazor PDF Viewer
 
-This guide shows how to show or hide the redaction toolbar and how to enable it on desktop and mobile devices.
+This guide shows how to display or hide the redaction toolbar and how to enable it on desktop and mobile devices.
 
 ## Enable the redaction toolbar on desktop
 
 Show the redaction toolbar on desktop by including the required [ToolbarItem.Redaction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ToolbarItem.html#Syncfusion_Blazor_SfPdfViewer_ToolbarItem_Redaction) in the [PdfViewerToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html).
 
 {% tabs %}
-{% highlight razor tabtitle="Toolbar.razor" %}
+{% highlight razor tabtitle="DesktopToolbar.razor" %}
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfPdfViewer2 Height="100%" Width="100%" DocumentPath="Annotations.pdf">
+<SfPdfViewer2 Height="100%" Width="100%" DocumentPath="wwwroot/Data/Annotations.pdf">
     <PdfViewerToolbarSettings ToolbarItems="ToolbarItems"></PdfViewerToolbarSettings>
 </SfPdfViewer2>
 
@@ -50,19 +50,19 @@ Show the redaction toolbar on desktop by including the required [ToolbarItem.Red
 {% endhighlight %}
 {% endtabs %}
 
-Refer to the image below for the desktop view.
+The redaction toolbar appears in the desktop view when the page is loaded.
 
-![Enable redaction toolbar for desktop](../redaction/redaction-annotations-images/enable-redaction-toolbar-for-desktop.png)
+![Redaction toolbar enabled in the desktop view](../redaction/redaction-annotations-images/enable-redaction-toolbar-for-desktop.png)
 
 ## Enable the redaction toolbar on mobile
 
-Show the redaction toolbar on mobile by configuring the [MobileToolbarItem.Redaction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.MobileToolbarItem.html#Syncfusion_Blazor_SfPdfViewer_MobileToolbarItem_Redaction) in the [PdfViewerToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html).
+Show the redaction toolbar on mobile by configuring the [`MobileToolbarItem.Redaction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.MobileToolbarItem.html#Syncfusion_Blazor_SfPdfViewer_MobileToolbarItem_Redaction) in the [`PdfViewerToolbarSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html).
 
 {% tabs %}
-{% highlight razor tabtitle="Toolbar.razor" %}
+{% highlight razor tabtitle="MobileToolbar.razor" %}
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfPdfViewer2 Height="100%" Width="100%" DocumentPath="Annotations.pdf">
+<SfPdfViewer2 Height="100%" Width="100%" DocumentPath="wwwroot/Data/Annotations.pdf">
     <PdfViewerToolbarSettings MobileToolbarItems="MobileToolbarItems"></PdfViewerToolbarSettings>
 </SfPdfViewer2>
 
@@ -84,25 +84,25 @@ Show the redaction toolbar on mobile by configuring the [MobileToolbarItem.Redac
 {% endhighlight %}
 {% endtabs %}
 
-Refer to the image below for the mobile view.
+The redaction toolbar appears in the mobile view when the page is loaded.
 
-![Enable redaction toolbar for mobile](../redaction/redaction-annotations-images/mobile-redaction-toolbar.png)
+![Redaction toolbar enabled in the mobile view](../redaction/redaction-annotations-images/mobile-redaction-toolbar.png)
 
 ## Show or hide the redaction toolbar
 
-Use the [ShowRedactionToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ShowRedactionToolbar) method on the viewer to control visibility.
+Use the [`ShowRedactionToolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ShowRedactionToolbar) method on the viewer to control visibility. The method accepts a `bool` parameter: `true` shows the redaction toolbar and `false` hides it.
 
 ### Display the redaction toolbar using the toolbar icon
 
-When [ToolbarItem.Redaction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ToolbarItem.html#Syncfusion_Blazor_SfPdfViewer_ToolbarItem_Redaction) or [MobileToolbarItem.Redaction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.MobileToolbarItem.html#Syncfusion_Blazor_SfPdfViewer_MobileToolbarItem_Redaction) is enabled, selecting the redaction icon in the primary toolbar toggles the redaction toolbar.
+When [`ToolbarItem.Redaction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ToolbarItem.html#Syncfusion_Blazor_SfPdfViewer_ToolbarItem_Redaction) or [`MobileToolbarItem.Redaction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.MobileToolbarItem.html#Syncfusion_Blazor_SfPdfViewer_MobileToolbarItem_Redaction) is enabled, selecting the redaction icon in the primary toolbar opens the redaction toolbar. Selecting the icon again hides it.
 
-Refer to the image below for details.
+Selecting the redaction icon in the primary toolbar opens the redaction toolbar.
 
-![Show redaction toolbar from the primary toolbar](../redaction/redaction-annotations-images/redaction-icon-toolbar.png)
+![Redaction toolbar opened from the primary toolbar icon](../redaction/redaction-annotations-images/redaction-icon-toolbar.png)
 
 ### Display the redaction toolbar programmatically
 
-Control visibility through application logic by invoking the `ShowRedactionToolbar` method on the viewer instance.
+Control visibility through application logic by invoking the `ShowRedactionToolbar` method on the viewer instance. The `isRedactionToolbarVisible` flag tracks the current state so the toggle button switches between show and hide.
 
 {% tabs %}
 {% highlight razor tabtitle="Toolbar.razor" %}
@@ -119,7 +119,7 @@ Control visibility through application logic by invoking the `ShowRedactionToolb
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private bool isRedactionToolbarVisible = true;
 
     private List<ToolbarItem> ToolbarItems = new List<ToolbarItem>();
@@ -145,13 +145,13 @@ Control visibility through application logic by invoking the `ShowRedactionToolb
 {% endhighlight %}
 {% endtabs %}
 
-Refer to the image below for details.
+Invoking the `ShowRedactionToolbar` method opens the redaction toolbar.
 
-![Programmatically show the Redaction toolbar](../redaction/redaction-annotations-images/show-redaction-toolbar.png)
+![Programmatically shown redaction toolbar](../redaction/redaction-annotations-images/show-redaction-toolbar.png)
 
 ## Complete example with redaction toolbar customization
 
-The following is a complete, runnable example. It wires a toggle button and a viewer with the redaction toolbar enabled on desktop.
+The following is a complete, runnable example. It wires a toggle button and a viewer with the redaction toolbar enabled on both desktop and mobile.
 
 {% tabs %}
 {% highlight razor tabtitle="Toolbar.razor" %}
@@ -160,18 +160,21 @@ The following is a complete, runnable example. It wires a toggle button and a vi
 
 <SfButton @onclick="ToggleRedactionToolbar">Toggle Redaction Toolbar</SfButton>
 
-<SfPdfViewer2 @ref="viewer" 
-              DocumentPath="wwwroot/Data/Annotations.pdf" 
-              Height="100%" 
+<SfPdfViewer2 @ref="viewer"
+              DocumentPath="wwwroot/Data/Annotations.pdf"
+              Height="100%"
               Width="100%">
-    <PdfViewerToolbarSettings ToolbarItems="ToolbarItems"></PdfViewerToolbarSettings>
+    <PdfViewerToolbarSettings ToolbarItems="ToolbarItems"
+                              MobileToolbarItems="MobileToolbarItems">
+    </PdfViewerToolbarSettings>
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private bool isRedactionToolbarVisible = true;
 
     private List<ToolbarItem> ToolbarItems = new List<ToolbarItem>();
+    private List<MobileToolbarItem> MobileToolbarItems = new List<MobileToolbarItem>();
 
     protected override void OnInitialized()
     {
@@ -192,6 +195,16 @@ The following is a complete, runnable example. It wires a toggle button and a vi
             ToolbarItem.PrintOption,
             ToolbarItem.DownloadOption
         };
+
+        MobileToolbarItems = new List<MobileToolbarItem>()
+        {
+            MobileToolbarItem.Open,
+            MobileToolbarItem.UndoRedo,
+            MobileToolbarItem.EditAnnotation,
+            MobileToolbarItem.Redaction,
+            MobileToolbarItem.FormDesigner,
+            MobileToolbarItem.Search
+        };
     }
 
     private void ToggleRedactionToolbar()
@@ -203,8 +216,8 @@ The following is a complete, runnable example. It wires a toggle button and a vi
 {% endhighlight %}
 {% endtabs %}
 
-## Related topics
+## See also
 
 - [Customize primary toolbar](./primary-toolbar)
 - [Customize annotation toolbar](./annotation-toolbar)
-- [Adding redaction annotations](../redaction/overview)
+- [Redaction overview](../redaction/overview)

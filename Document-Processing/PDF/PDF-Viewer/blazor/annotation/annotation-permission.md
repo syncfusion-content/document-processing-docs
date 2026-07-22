@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotation Permissions in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to use annotation permissions in the Syncfusion Blazor SfPdfViewer to control annotation behavior and access.
+description: Learn how to use annotation permissions in the Blazor SfPdfViewer to control annotation behavior and access.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

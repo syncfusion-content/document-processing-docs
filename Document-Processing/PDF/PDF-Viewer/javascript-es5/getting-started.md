@@ -46,7 +46,7 @@ To use local scripts and styles for the Syncfusion® PDF Viewer, follow these st
 >
 > Styles: `C:/Program Files (x86)/Syncfusion/Essential Studio/JavaScript - EJ2/19.3.53/Web(Essential JS 2)/JavaScript/ej2-js-es5/styles/material.css`
 
-Alternatively, Run the following command to clone the [`Essential JS 2 quickstart`](https://github.com/syncfusion/ej2-quickstart.git) project from GitHub and install the required packages.
+Alternatively, run the following command to clone the [`Essential JS 2 quickstart`](https://github.com/syncfusion/ej2-quickstart.git) project from GitHub and install the required packages.
 
 {% tabs %}
 {% highlight bash tabtitle="CLI" %}
@@ -70,7 +70,7 @@ npm install
 >
 > `pdfium.wasm`: [`https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/dist/ej2-pdfviewer-lib/pdfium.wasm`](https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/dist/ej2-pdfviewer-lib/pdfium.wasm)
 
-3. Create a folder named `pdf-viewer-app/resources` and copy the EJ2 scripts and styles from the installed location into the `pdf-viewer-app/resources` directory. Include the `ej2-pdfviewer-lib` folder and PDF documents in the same location. The `ej2-pdfviewer-lib` folder should contain `pdfium.js` and `pdfium.wasm` files.
+3. Create a folder named `pdf-viewer-app/resources` and copy the EJ2 scripts and styles from the installed location into the `pdf-viewer-app/resources` directory. Copy the `ej2-pdfviewer-lib` folder (containing `pdfium.js` and `pdfium.wasm`) and the sample PDF document into the `pdf-viewer-app/resources` directory as well.
 
 4. Add the PDF Viewer and its dependent control style and script references inside the `<head>` section of your `index.html` file using local resources.
 
@@ -133,7 +133,7 @@ Create an HTML page (index.html) in `pdf-viewer-app` location and add the CDN li
 
 {% endtabcontents %}
 
-## Add the Syncfusion® PDF Viewer component
+## Add Syncfusion® PDF Viewer component
 
 Add a container element for the PDF Viewer control in the `index.html` file and then initialize the control inside the `<body>` section of your `index.html` file.
 
@@ -146,7 +146,7 @@ Add a container element for the PDF Viewer control in the `index.html` file and 
 {% endhighlight %}
 {% endtabs %}
 
-Now, initialize the PDF Viewer component in the `index.js` file:
+Initialize the PDF Viewer component in the `index.js` file:
 
 {% tabcontents %}
 
@@ -212,9 +212,9 @@ You can also explore the PDF Viewer interactively using the live sample below.
 
 {% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/es5-getting-started-cs2" %}
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/How%20to/Refer%20resource%20url%20locally). Looking for the full JavaScript PDF Viewer component overview, features, pricing, and documentation? Visit the [JavaScript PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/javascript-pdf-viewer) page.
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/How%20to/Refer%20resource%20url%20locally).
 
 ## See also
 
-- [Getting started with Server-Backed JavaScript PDF Viewer](./getting-started)
+- [Getting started with Server-Backed JavaScript PDF Viewer](./getting-started-with-server-backed)
 - [Feature modules](./feature-module)

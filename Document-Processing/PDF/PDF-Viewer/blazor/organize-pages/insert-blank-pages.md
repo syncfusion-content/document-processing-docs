@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Insert blank pages in Organize Pages in Blazor PDF Viewer | Syncfusion
-description: How to insert blank pages into a PDF using the Organize Pages UI in the Syncfusion Blazor PDF Viewer.
+description: How to insert blank pages into a PDF using the Organize Pages UI in the Blazor PDF Viewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Insert blank pages using the Organize Pages tool in Blazor
+# Insert blank pages using the Organize Pages tool in Blazor PDF Viewer
 
 ## Overview
 
@@ -43,10 +43,6 @@ This guide describes inserting new blank pages into a PDF using the **Organize P
 
 	- Click **Save** or **Save As** to include the blank pages in the exported PDF.
 
-## Expected result
-
-- Blank page thumbnails appear at the chosen position and are present in any saved or downloaded PDF.
-
 ## Programmatic insert
 
 You can also insert blank pages programmatically using the `InsertBlankPagesAsync` method.
@@ -62,7 +58,7 @@ You can also insert blank pages programmatically using the `InsertBlankPagesAsyn
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2? Viewer;
+    private SfPdfViewer2? Viewer;
 
     private async Task InsertBlankMethod() {
         await Viewer?.InsertBlankPagesAsync(2, 3);
@@ -71,7 +67,7 @@ You can also insert blank pages programmatically using the `InsertBlankPagesAsyn
 {% endhighlight %}
 {% endtabs %}
 
-In this example, `InsertBlankPagesAsync(2, 3)` inserts 3 blank pages starting at index 2.
+In this example, `InsertBlankPagesAsync(2, 3)` calls the API with the page index and the number of blank pages to insert as its two arguments; here, 3 blank pages are inserted starting at index 2.
 
 For more details on programmatic support, see [Programmatic support for Organize Pages](./programmatic-support).
 
@@ -82,7 +78,7 @@ For more details on programmatic support, see [Programmatic support for Organize
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Page%20Organizer/Organize-API-Support/Components/Pages/Home.razor)
 
-## Related topics
+## See also
 
 - [Organize pages toolbar customization](./toolbar)
 - [Programmatic support for Organize Pages](./programmatic-support)

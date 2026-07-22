@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotation Events in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to subscribe to and handle annotations and signature annotation events in the Syncfusion Blazor SfPdfViewer.
+description: Learn how to subscribe to and handle annotations and signature annotation events in the Blazor SfPdfViewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
