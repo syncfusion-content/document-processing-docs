@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Image in React Document editor component | Syncfusion
-description: Learn here all about Image in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
+title: Image in React DOCX Editor component | Syncfusion
+description: Learn here all about Image in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
 control: Image 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Image in React Document editor component
+# Image in React Document Editor component
 
-[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports common raster image formats such as PNG, BMP, JPEG, SVG, and GIF. You can insert an image file or online image in the document using the [`insertImage()`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#insertimage) method. Refer to the following sample code.
+[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports common raster image formats such as PNG, BMP, JPEG, SVG, and GIF. You can insert an image file or online image in the document using the [`insertImage()`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#insertimage) method. Refer to the following sample code.
 
 {% raw %}
 
@@ -77,7 +77,7 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 Image files are internally converted to base64 strings, whereas online images are preserved as URLs.
 
->Note: EMF and WMF images can't be inserted, but these types of images will be preserved in Document Editor when using ASP.NET MVC Web API.
+N>: EMF and WMF images can't be inserted, but these types of images will be preserved in Document Editor when using ASP.NET MVC Web API.
 
 ## Image resizing
 
@@ -94,7 +94,7 @@ documenteditor.selection.imageFormat.width = 800;
 documenteditor.selection.imageFormat.height = 800;
 ```
 
->Note: Images are stored and processed (read/write) as base64 string in DocumentEditor. The online image URL is preserved as a URL in DocumentEditor upon saving.
+N>: Images are stored and processed (read/write) as base64 string in DocumentEditor. The online image URL is preserved as a URL in DocumentEditor upon saving.
 
 ## Text wrapping style
 

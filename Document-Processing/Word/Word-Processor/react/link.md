@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Link in React Document editor component | Syncfusion
-description: Learn here all about Link in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
+title: Link in React DOCX Editor component | Syncfusion
+description: Learn here all about Link in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
 control: Link 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Link in React Document editor component
+# Link in React Document Editor component
 
-[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports the hyperlink field. You can link a part of the document content to the Internet, a file location, a mail address, or any text within the document.
+[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports the hyperlink field. You can link a part of the document content to the Internet, a file location, a mail address, or any text within the document.
 
 ## Navigate a hyperlink
 
@@ -101,11 +101,11 @@ documenteditor.selection.copyHyperlink();
 
 To create a basic hyperlink in the document, press `ENTER` / `SPACEBAR` / `SHIFT + ENTER` / `TAB` key after typing the address, for instance [`http://www.google.com`](http://www.google.com). Document Editor automatically converts this address to a hyperlink field. The text can be considered as a valid URL if it starts with any of the following.
 
-> `<http://>`<br>
-> `<https://>`<br>
-> `file:///`<br>
-> `www.`<br>
-> `mailto:`<br>
+N> `<http://>`<br>
+N> `<https://>`<br>
+N> `file:///`<br>
+N> `www.`<br>
+N> `mailto:`<br>
 
 Refer to the following example.
 
