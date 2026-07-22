@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion DocumentSDK MCP Server Setup – Syncfusion
-description: Accelerate DocumentSDK development with Syncfusion MCP Server—access docs, APIs and code snippets in your AI IDE.
+description: Explore the MCP server’s benefits, setup needs, and integration guidance for Syncfusion DocumentSDK.
 platform: document-processing
 control: AI coding assistant
 documentation: ug
@@ -141,7 +141,7 @@ Create a configuration file in your project folder to install the server for you
 
 **For .NET 8 / .NET 9 (using a local tool):**
 
-You can install the Syncfusion Document SDK MCP server as a local tool without a global installation. For guidance on installing and managing local .NET tools, refer the [documentation](https://learn.microsoft.com/en-us/dotnet/core/tools/local-tools-how-to-use).
+You can install the Syncfusion Document SDK MCP server as a local tool without a global installation. For guidance on installing and managing local .NET tools, refer to the [documentation](https://learn.microsoft.com/en-us/dotnet/core/tools/local-tools-how-to-use).
 
 1. Install the Syncfusion Document SDK MCP tool locally:
 
@@ -230,7 +230,7 @@ To get the most out of the Syncfusion<sup style="font-size:70%">&reg;</sup> Docu
 - **Use Descriptive Queries** - Avoid overly brief or ambiguous requests. Providing sufficient detail helps improve the accuracy and relevance of the response.
 - **Stay Consistent** - Keep file organization, naming conventions, and coding standards consistent throughout your document processing project.
 - **Start Fresh for New Topics** - Begin a new chat when switching to a different document library or task to maintain clean context.
-- **Use Advanced AI Models** - For best results, use **Claude Sonnet 4.5 or higher**. Other compatible models include **GPT-5 and Gemini 3 Pro**. Higher-capability models produce more accurate implementations.
+- **Use Advanced AI Models** - For the best results, use advanced AI models such as the latest-generation **Claude**, **GPT**, or **Gemini** models.
 - **For Troubleshooting** - Use AI suggestions for common issues; consult the [official documentation](https://help.syncfusion.com/document-processing/mcp-server/ai-coding-assistant/overview) or [support](https://support.syncfusion.com/support/tickets/create) for complex problems.
 - **Minimize Active Tools** - Limit the number of active MCP tools in your IDE to prevent tool-selection ambiguity and improve response accuracy.
 
@@ -260,6 +260,6 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> MCP Servers are designed wi
 
 The MCP Server acts purely as a knowledge bridge, connecting your AI model with Syncfusion-specific expertise while respecting your privacy and maintaining security.
 
-## See Also
+## See also
 
 - [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro)
