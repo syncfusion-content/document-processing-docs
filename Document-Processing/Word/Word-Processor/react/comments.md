@@ -224,7 +224,7 @@ createRoot(document.getElementById('sample')).render(<App />);
 
 ## Events
 
-DocumentEditor provides the [beforeCommentAction](https://ej2.syncfusion.com/react/documentation/api/document-editor#beforecommentaction) event, which is triggered on comment actions such as Post, edit, reply, resolve, and reopen. This event provides an opportunity to perform custom logic on these comment actions. The event handler receives the [CommentActionEventArgs](https://ej2.syncfusion.com/react/documentation/api/document-editor/commentactioneventargs/) object as an argument, which allows access to information about the comment.
+DocumentEditor provides the [beforeCommentAction](https://ej2.syncfusion.com/react/documentation/api/document-editor#beforecommentaction) event, which is triggered on comment actions such as Post, edit, reply, resolve, and reopen. This event provides an opportunity to perform custom logic on these comment actions. The event handler receives the [CommentActionEventArgs](https://ej2.syncfusion.com/react/documentation/api/document-editor/commentactioneventargs) object as an argument, which allows access to information about the comment.
 
 To demonstrate a specific use case, let’s consider an example where we want to restrict the delete functionality based on the author’s name. The following code snippet illustrates how to allow only the author of a comment to delete:
 
