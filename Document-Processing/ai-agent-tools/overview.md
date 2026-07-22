@@ -11,9 +11,9 @@ documentation: ug
 
 [Syncfusion Document SDK AI Agent Tool](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools) is a .NET library that enables AI agents to autonomously create, manipulate, convert, and extract data from Word, Excel, PDF, PowerPoint, Markdown, and other document formats. It exposes pre-built, AI-callable tools built on [Syncfusion Document SDK](https://www.syncfusion.com/document-sdk) - no document-processing logic required in your host application.
 
-You can quickly deploy it to your infrastructure via [NuGet](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools). If you want to add new functionality or customize any existing functionalities, then you can use our source code available on [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/tree/master/Syncfusion.DocumentSDK.AI.AgentTools). Compatible with .NET 8.0, 9.0, and 10.0.
+You can quickly deploy it to your infrastructure via [NuGet](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools). If you want to add new functionality or customize existing functionality, you can use the source code available on [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/tree/master/Syncfusion.DocumentSDK.AI.AgentTools). Compatible with .NET 8.0, 9.0, and 10.0.
 
-## How it works
+## How It Works
 
 ![How AI Agent Tool Execution Works](how-it-works.png)
 
@@ -117,7 +117,7 @@ You can quickly deploy it to your infrastructure via [NuGet](https://www.nuget.o
         <ul>
           <li>Structured data</li>
           <li>Table</li>
-          <li>Form extraction from PDFs and images</li>
+          <li>Form extraction from pdf and image files</li>
           <li>PDF and table to Markdown conversion</li>
         </ul>
       </td>
