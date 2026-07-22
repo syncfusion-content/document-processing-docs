@@ -29,7 +29,15 @@ Step 3: Install the [Syncfusion.Markdown](https://www.nuget.org/packages/Syncfus
 
 ![Install Syncfusion.Markdown NuGet package](ASP-NET-Core_images/Install_Nuget.png)
 
-N> Starting with v34.x.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> **Starting with v34.x.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the https://www.nuget.org/packages/Syncfusion.Licensing NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 4: Include the following namespace in that HomeController.cs file.
 
@@ -66,8 +74,6 @@ Html.EndForm();
 {% endtabs %}
 
 Step 7: Add a new action method **CreateDocument** in HomeController.cs and include the below code snippet to **create Markdown document** and download it.
-
-> The following code references an image file `photo.jpg`. Add an image to the `Data` folder under the project root (create the folder if it does not exist) and name it `photo.jpg`. If you do not require an image in the table, you can remove the `MdPicture` block from the code.
 
 {% tabs %}
 
@@ -148,6 +154,8 @@ Step 9: Run the project.
 Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app. When the page loads, click the **Create Document** button to generate and download the Markdown file.
 
 A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/ASP.NET%20MVC).
+
+N> The code sample references an image file (`photo.jpg`). Download this asset from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/ASP.NET%20MVC/Create-Markdown-Document/App_Data) and place it in the application's `Data` folder (under the project root) so the `MdPicture.Url` value (`"Data/photo.jpg"`) resolves correctly at runtime.
 
 By executing the program, you will get the Markdown document as follows.
 

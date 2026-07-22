@@ -10,7 +10,7 @@ documentation: UG
 
 Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in ASP.NET MVC**.
 
-## Steps to create a Word document programmatically:
+## Steps to create a Word document programmatically
 
 {% tabcontents %}
 
@@ -33,7 +33,15 @@ Step 3: Install the [Syncfusion.DocIO.AspNet.Mvc5](https://www.nuget.org/package
 
 ![Install DocIO ASP.NET MVC NuGet package](ASP-NET-MVC_images/Install_Nuget.jpg)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. To do so, also install the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) NuGet package and register the license key by calling `Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")` in your application startup. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn how to register the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the https://www.nuget.org/packages/Syncfusion.Licensing NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 4: Include the following namespaces in the HomeController.cs file.
 
@@ -294,7 +302,7 @@ document.Save("Sample.docx", FormatType.Docx, HttpContext.ApplicationInstance.Re
 
 {% endtabs %}
 
-N> The code references image files (`AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, and `Road-550-W.jpg`). Place these images in the project's working directory (e.g., the project root or `bin` folder), or use `Server.MapPath` to resolve their absolute paths. You can also obtain these images from the [GitHub sample](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/ASP.NET-MVC).
+N> The code references image files (`AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, and `Road-550-W.jpg`). Place these images in the project's working directory (e.g., the project root or `bin` folder), or use `Server.MapPath` to resolve their absolute paths. You can also obtain these images from the [GitHub sample folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/ASP.NET-MVC/Create-Word-document/App_Start).
 
 Step 8: Build the project.
 
@@ -345,7 +353,15 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 ![Install the Syncfusion.DocIO.AspNet.Mvc5 NuGet package](ASP-NET-MVC_images/Install-Syncfusion.DocIO.AspNet.Mvc5-NuGet.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. To do so, also install the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) NuGet package and register the license key by calling `Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")` in your application startup. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn how to register the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the https://www.nuget.org/packages/Syncfusion.Licensing NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 3: Include the following namespaces in the HomeController.cs file.
 
@@ -606,7 +622,7 @@ document.Save("Sample.docx", FormatType.Docx, HttpContext.ApplicationInstance.Re
 
 {% endtabs %}
 
-N> The code references image files (`AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, and `Road-550-W.jpg`). Place these images in the project's working directory (e.g., the project root or `bin` folder), or use `Server.MapPath` to resolve their absolute paths. You can also obtain these images from the [GitHub sample](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/ASP.NET-MVC).
+N> The code references image files (`AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, and `Road-550-W.jpg`). Place these images in the project's working directory (e.g., the project root or `bin` folder), or use `Server.MapPath` to resolve their absolute paths. You can also obtain these images from the [GitHub sample folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/ASP.NET-MVC/Create-Word-document/App_Start).
 
 Step 7: Build the project.
 
