@@ -9,7 +9,7 @@ documentation: ug
 
 # Custom Formula in WPF Spreadsheet (SfSpreadsheet)
 
-SfSpreadsheet allows you to add custom formulas into its function library. You can add the custom formula into the SfSpreadsheet by using the [AddFunction](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.FormulaEngine.html#Syncfusion_UI_Xaml_CellGrid_FormulaEngine_AddFunction_System_String_Syncfusion_UI_Xaml_CellGrid_FormulaEngine_LibraryFunction_) method of [FormulaEngine](http://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.FormulaEngine.html),
+SfSpreadsheet allows you to add custom formulas to its function library by using the [AddFunction](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.FormulaEngine.html#Syncfusion_UI_Xaml_CellGrid_FormulaEngine_AddFunction_System_String_Syncfusion_UI_Xaml_CellGrid_FormulaEngine_LibraryFunction_) method of [FormulaEngine](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.FormulaEngine.html).
 
 {% tabs %}
 {% highlight c# %}
@@ -17,7 +17,6 @@ spreadsheet.WorkbookLoaded += spreadsheet_WorkbookLoaded;
 
 void spreadsheet_WorkbookLoaded(object sender, WorkbookLoadedEventArgs args)
 {
-
     foreach (var grid in args.GridCollection)
         AddCustomFormula(grid); 
   
@@ -38,11 +37,11 @@ private void AddCustomFormula(SpreadsheetGrid grid)
     
 public string ComputeLength(string range)
 {
-  //Used to calculate the length of the string
+    // Calculate the length of the supplied string.
     return range.Length.ToString();
-}   
+}
 {% endhighlight %}
 {% endtabs %}
 
 
-N> You can refer to our [WPF Spreadsheet Editor](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [WPF Spreadsheet example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the spreadsheet.
+N> After the formula is registered, you can also type `=Length("sample")` directly into a cell instead of calling `SetCellValue`. For more information, see the [WPF Spreadsheet Editor](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour or browse the [WPF Spreadsheet examples on GitHub](https://github.com/syncfusion/wpf-demos).

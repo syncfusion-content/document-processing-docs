@@ -12,7 +12,15 @@ This section explains how to manage Excel workbooks in SfSpreadsheet, including 
 
 ## Creating a new Excel Workbook
 
-A new workbook can be created by using a [Create](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_Create_System_Int32_) method with specified number of worksheets. By default, a workbook will be created with single worksheet.
+A new workbook can be created by using the [Create](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_Create_System_Int32_) method with a specified number of worksheets. By default, a workbook will be created with a single worksheet.
+
+**Parameters**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `sheetCount` | `int` | The number of worksheets to add to the new workbook. If omitted, a single worksheet is created. |
+
+**Return value:** `void`
 
 {% tabs %}
 {% highlight c# tabtitle="MainWindow.xaml.cs" %}
@@ -22,7 +30,7 @@ spreadsheet.Create(2);
 
 ## Opening an existing Excel Workbook
 
-The Excel Workbook can be opened in SfSpreadsheet using the [Open](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_Open_Syncfusion_XlsIO_IWorkbook_) method in various ways,
+The Excel workbook can be opened in SfSpreadsheet using the [Open](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_Open_Syncfusion_XlsIO_IWorkbook_) method in various ways.
 
 {% tabs %}
 {% highlight c# tabtitle="MainWindow.xaml.cs" %}
@@ -49,7 +57,7 @@ Opening Excel File in SfSpreadsheet
 
 ## Saving the Excel Workbook
 
-The Excel workbook can be saved in SfSpreadsheet using [Save](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_Save) method. If the workbook already exists in the system drive, it will be saved in the same location, otherwise Save Dialog box opens to save the workbook in user specified location. 
+The Excel workbook can be saved in SfSpreadsheet using the [Save](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_Save) method. If the workbook was originally opened from a file path on the system drive, it will be saved to the same location; otherwise, a Save dialog box opens so the user can specify a location.
 
 {% tabs %}
 {% highlight c# tabtitle="MainWindow.xaml.cs" %}

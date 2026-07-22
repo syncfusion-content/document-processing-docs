@@ -9,9 +9,9 @@ documentation: ug
 
 # Customize a Cell in WPF Spreadsheet Control
 
-SfSpreadsheet provides support to customize the cell with Data template. It allows to load any WPF control or custom control into the cell. 
+SfSpreadsheet supports customizing a cell with a `DataTemplate`. It allows you to load any WPF or custom control into a cell.
 
-In order to customize the cell, please follow the below steps
+To customize a cell, follow these steps:
 
 * Create a DataTemplate
 * Override the  SpreadsheetColumn class
@@ -20,7 +20,7 @@ In order to customize the cell, please follow the below steps
 
 **Create** **a** **DataTemplate**:
 
-Create a custom DataTemplate (For ex: Button Template) in the Main window.xaml file,
+Create a custom `DataTemplate` (for example, an Button template) in the `MainWindow.xaml` file:
 
 {% highlight xaml %}
 
@@ -36,7 +36,7 @@ Create a custom DataTemplate (For ex: Button Template) in the Main window.xaml f
 
 **Override** **the** **SpreadsheetColumn** **class**
 
-Create an extension class SpreadsheetColumnExt by overriding the [SpreadsheetColumn](http://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SpreadsheetColumn.html) Class which holds all the operations related with cells.
+Create an extension class `SpreadsheetColumnExt` by inheriting from the [SpreadsheetColumn](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SpreadsheetColumn.html) class, which holds all the operations related to cells.
 
 Now override the function [OnUpdateColumn](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SpreadsheetColumn.html#Syncfusion_UI_Xaml_Spreadsheet_SpreadsheetColumn_OnUpdateColumn_System_Windows_FrameworkElement__) which updates the column properties (cell types, renderer, cell element, etc.) and get the data template which is used for displaying in the particular cell.
 
@@ -63,7 +63,7 @@ public DataTemplate CellEditTemplate
   set;
 }
 
-//Update the cell with the defined template
+// Update the cell with the defined template
 protected override void OnUpdateColumn(out FrameworkElement oldElement)
 {
    if (RowIndex == 3 && ColumnIndex == 6)
@@ -79,7 +79,7 @@ protected override void OnUpdateColumn(out FrameworkElement oldElement)
 
 **Create** **the** **Custom** **Cell** **Renderer**:
 
-Create a SpreadsheetTemplateCellRenderer class by overriding the [SpreadsheetVirtualizingCellRendererBase](http://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.CellRenderer.SpreadsheetVirtualizingCellRendererBase%602.html) class to display the defined custom renderer element.
+Create a `SpreadsheetTemplateCellRenderer` class by inheriting from the [SpreadsheetVirtualizingCellRendererBase](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.CellRenderer.SpreadsheetVirtualizingCellRendererBase%602.html) class to display the defined custom renderer element.
 
 For initializing the display element, set the content template in [OnInitializeDisplayElement](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.CellRenderer.SpreadsheetVirtualizingCellRendererBase-2.html#Syncfusion_UI_Xaml_Spreadsheet_CellRenderer_SpreadsheetVirtualizingCellRendererBase_2_OnInitializeDisplayElement_Syncfusion_UI_Xaml_Grid_ScrollAxis_RowColumnIndex__0_Syncfusion_UI_Xaml_Spreadsheet_SpreadsheetColumn_) method and for editing, set the content template in [OnInitializeEditElement](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.CellRenderer.SpreadsheetVirtualizingCellRendererBase-2.html#Syncfusion_UI_Xaml_Spreadsheet_CellRenderer_SpreadsheetVirtualizingCellRendererBase_2_OnInitializeEditElement_Syncfusion_UI_Xaml_Grid_ScrollAxis_RowColumnIndex__1_Syncfusion_UI_Xaml_Spreadsheet_SpreadsheetColumn_) method otherwise it will load the default display and edit element in the cells
 
@@ -113,7 +113,7 @@ protected override void OnUpdateEditCellStyle (RowColumnIndex cellRowColumnIndex
     base.OnUpdateEditCellStyle (cellRowColumnIndex, uiElement, column);
 }
 
-//To initialize the display element on the cell
+// To initialize the display element on the cell
 protected override void OnInitializeDisplayElement(RowColumnIndex rowColumnIndex, ContentControl uiElement, SpreadsheetColumn column) 
 {
     uiElement.ContentTemplate = (column as SpreadsheetColumnExt).CellItemTemplate;
@@ -129,13 +129,13 @@ protected override void OnInitializeEditElement(RowColumnIndex rowColumnIndex, C
 
 {% endhighlight %}
 
-N> If you want to load the default edit element, then no need to override the `OnInitializeEditElement` method.
+> **Note:** If you want to load the default edit element, you do not need to override the `OnInitializeEditElement` method.
 
 **Associating** **the** **Custom** **Cell** **Renderer** **to** **SpreadsheetGrid**
 
-To associate the custom cell renderer in [SpreadsheetGrid](http://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SpreadsheetGrid.html), invoke the [WorkbookLoaded](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html) Event of SfSpreadsheet and initialize the SpreadsheetTemplateCellRenderer and add it to the renderer collection. 
+To associate the custom cell renderer with the [SpreadsheetGrid](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SpreadsheetGrid.html), handle the [WorkbookLoaded](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html) event of `SfSpreadsheet`, initialize the `SpreadsheetTemplateCellRenderer`, and add it to the renderer collection.
 
-Invoke the [QueryRange](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SpreadsheetGrid.html) Event of `SpreadsheetGrid` and set the CellType of particular range to be “DataTemplate” to load the user defined template.
+Handle the [QueryRange](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SpreadsheetGrid.html) event of `SpreadsheetGrid` and set the `CellType` of a particular range to `DataTemplate` to load the user-defined template.
 
 {% highlight c# %}
 
@@ -168,5 +168,5 @@ void grid_QueryRange(object sender, SpreadsheetQueryRangeEventArgs e)
 
 {% endhighlight %}
 
-For more reference, please find the [customization](http://www.syncfusion.com/downloads/support/directtrac/general/ze/Cell_Customization-850724053) sample.
+For a working example, refer to the [customization sample](https://www.syncfusion.com/downloads/support/directtrac/general/ze/Cell_Customization-850724053).
 

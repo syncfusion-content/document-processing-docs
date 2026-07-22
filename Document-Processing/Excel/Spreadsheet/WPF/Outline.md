@@ -7,79 +7,81 @@ control: SfSpreadsheet
 documentation: ug
 ---
 
-# Outline in WPF Spreadsheet (SfSpreadsheet)
+# Outlines in WPF Spreadsheet (SfSpreadsheet)
 
-SfSpreadsheet provides support for outlines like in excel which makes your data easier to view. You can group or ungroup the data’s either by rows or columns.
+SfSpreadsheet provides support for Excel-style outlines that make your data easier to view and analyze. You can group or ungroup data by rows or columns, expand or collapse grouped sections, and configure summary-row and summary-column positions.
 
 ## Group rows and columns
 
-SfSpreadsheet provides support to group the specified range in a worksheet.
+SfSpreadsheet supports grouping a specified range of rows or columns in a worksheet. The `ExcelGroupBy` enum accepts `ByRows` or `ByColumns` to indicate the grouping direction.
 
-To [Group](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_Group_Syncfusion_XlsIO_IWorksheet_Syncfusion_UI_Xaml_CellGrid_GridRangeInfo_Syncfusion_XlsIO_ExcelGroupBy_) the rows/columns
+To [Group](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_Group_Syncfusion_XlsIO_IWorksheet_Syncfusion_UI_Xaml_CellGrid_GridRangeInfo_Syncfusion_XlsIO_ExcelGroupBy_) the rows:
 
 {% tabs %}
 {% highlight c# %}
 //Group rows,
-var gridRange = GridRangeInfo.Rows(4,8);
+var gridRange = GridRangeInfo.Rows(4, 8);
 spreadsheet.Group(spreadsheet.ActiveSheet, gridRange, ExcelGroupBy.ByRows);
 
 //Group columns,
-var gridRange = GridRangeInfo.Cols(4,8);
+var gridRange = GridRangeInfo.Cols(4, 8);
 spreadsheet.Group(spreadsheet.ActiveSheet, gridRange, ExcelGroupBy.ByColumns);
 {% endhighlight %}
 {% endtabs %}
 
 ## Ungroup rows and columns
 
-SfSpreadsheet provides support to ungroup the specified range in a worksheet.
+SfSpreadsheet supports ungrouping a previously grouped range of rows or columns.
 
-To [Ungroup](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_UnGroup_Syncfusion_XlsIO_IWorksheet_Syncfusion_UI_Xaml_CellGrid_GridRangeInfo_Syncfusion_XlsIO_ExcelGroupBy_) the rows/columns
+To [Ungroup](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_UnGroup_Syncfusion_XlsIO_IWorksheet_Syncfusion_UI_Xaml_CellGrid_GridRangeInfo_Syncfusion_XlsIO_ExcelGroupBy_) the rows:
 
 {% tabs %}
 {% highlight c# %}
 //Ungroup rows,
-var gridRange = GridRangeInfo.Rows(4,8);
+var gridRange = GridRangeInfo.Rows(4, 8);
 spreadsheet.UnGroup(spreadsheet.ActiveSheet, gridRange, ExcelGroupBy.ByRows);
 
 //Ungroup columns,
-var gridRange = GridRangeInfo.Cols(4,8);
+var gridRange = GridRangeInfo.Cols(4, 8);
 spreadsheet.UnGroup(spreadsheet.ActiveSheet, gridRange, ExcelGroupBy.ByColumns);
 {% endhighlight %}
 {% endtabs %}
 
-## Collapse or Expand Group
+## Collapse or expand group
 
-Groups can be Expanded by [ExpandGroup](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_ExpandGroup_Syncfusion_XlsIO_ExcelGroupBy_) method  and Collapsed  by [CollapseGroup](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CollapseGroup_Syncfusion_XlsIO_ExcelGroupBy_) method of `XlsIO`.
+Groups can be expanded by the [ExpandGroup](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_ExpandGroup_Syncfusion_XlsIO_ExcelGroupBy_) method and collapsed by the [CollapseGroup](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CollapseGroup_Syncfusion_XlsIO_ExcelGroupBy_) method of XlsIO. After toggling the state, use the SfSpreadsheet `RowHeights.SetHidden` / `ColumnWidths.SetHidden` methods to update the visual hide state, and call `RefreshOutlines` to repaint the outline indicators.
+
+### Expand group
 
 {% tabs %}
 {% highlight c# %}
-//Expand Rows,
+//Expand rows,
 spreadsheet.ActiveSheet.Range["A4:A8"].ExpandGroup(ExcelGroupBy.ByRows);
 spreadsheet.ActiveGrid.RowHeights.SetHidden(4, 8, false);
-spreadsheet.RefreshOutlines(true,false);
+spreadsheet.RefreshOutlines(true, false);
 
-//Expand Columns,
+//Expand columns,
 spreadsheet.ActiveSheet.Range["A3:F3"].ExpandGroup(ExcelGroupBy.ByColumns);
 spreadsheet.ActiveGrid.ColumnWidths.SetHidden(1, 6, false);
-spreadsheet.RefreshOutlines(false,true);
+spreadsheet.RefreshOutlines(false, true);
 
-//Collapse Rows,
+//Collapse rows,
 spreadsheet.ActiveSheet.Range["A4:A8"].CollapseGroup(ExcelGroupBy.ByRows);
 spreadsheet.ActiveGrid.RowHeights.SetHidden(4, 8, true);
-spreadsheet.RefreshOutlines(true,false);
+spreadsheet.RefreshOutlines(true, false);
 
-//Collapse Columns,
+//Collapse columns,
 spreadsheet.ActiveSheet.Range["A3:F3"].CollapseGroup(ExcelGroupBy.ByColumns);
 spreadsheet.ActiveGrid.ColumnWidths.SetHidden(1, 6, true);
-spreadsheet.RefreshOutlines(false,true);
+spreadsheet.RefreshOutlines(false, true);
 {% endhighlight %}
 {% endtabs %}
 
-N> [RefreshOutlines](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_RefreshOutlines_System_Boolean_System_Boolean_) method is invoked to refresh/update the Outlines of the Group in SfSpreadsheet.
+> The [RefreshOutlines](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_RefreshOutlines_System_Boolean_System_Boolean_) method refreshes and updates the outline indicators in SfSpreadsheet. Its first parameter refreshes row outlines; the second refreshes column outlines.
 
-## Change Outline Settings
+## Change outline settings
 
-In SfSpreadsheet, users can change the outline settings by changing the display of summary rows to either below or above the details and summary columns to  either left or right of the details in Outlines Group.
+In SfSpreadsheet, you can change the position of summary rows to appear below or above the detail rows, and summary columns to appear to the left or right of the detail columns. This is useful, for example, in accounting-style reports where totals appear at the top of a group.
 
 {% tabs %}
 {% highlight c# %}
@@ -88,10 +90,10 @@ spreadsheet.ActiveSheet.PageSetup.IsSummaryColumnRight = false;
 spreadsheet.RefreshOutlines(true, true);
 {% endhighlight %}
 {% endtabs %}
-           
-## Clear Outlines
 
-SfSpreadsheet provides support to clear all the Outlines of the Grouped range.
+## Clear outlines
+
+SfSpreadsheet supports clearing all outlines from a grouped range.
 
 {% tabs %}
 {% highlight c# %}
@@ -99,11 +101,10 @@ var sheet = spreadsheet.Workbook.Worksheets[0] as WorksheetImpl;
 
 foreach (OutlineWrapper outline in sheet.OutlineWrappers)
 {
-  outline.OutlineRange.Ungroup(outline.GroupBy);
+    outline.OutlineRange.Ungroup(outline.GroupBy);
 }
 spreadsheet.RefreshOutlines(true, true);
 {% endhighlight %}
 {% endtabs %}
 
-
-N> You can refer to our [WPF Spreadsheet Editor](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [WPF Spreadsheet example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the spreadsheet.
+N> Refer to the [WPF Spreadsheet Editor](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour page to explore the Spreadsheet's capabilities. You can also browse the [WPF Spreadsheet demos](https://github.com/syncfusion/wpf-demos) to see how to render and configure the Spreadsheet in an application.

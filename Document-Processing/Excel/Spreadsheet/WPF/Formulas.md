@@ -11,7 +11,7 @@ documentation: ug
 
 SfSpreadsheet calculation engine offers automated calculation over a formula, expression, or cross sheet references. SfSpreadsheet calculation engine is preloaded with 409 formulas covering a broad range of business functions.
 
-## Adding Formula into cell
+## Adding a Formula to a Cell
 
 To add formulas into a cell programmatically, use [SetCellValue](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SpreadsheetGrid.html#Syncfusion_UI_Xaml_Spreadsheet_SpreadsheetGrid_SetCellValue_Syncfusion_XlsIO_IRange_System_String_) method of [SpreadsheetGrid](http://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SpreadsheetGrid.html) should be invoked and then invalidate that cell to update the view.
 
@@ -25,7 +25,7 @@ spreadsheet.ActiveGrid.InvalidateCell(2,1);
 
 ## Named Ranges
 
-Named Ranges are the defined names that represents a cell, range of cells, formula, or constant value or table. Each name have a scope of either to a specific worksheet or to the entire workbook.
+Named Ranges are the defined names that represents a cell, range of cells, formula, or constant value or table. Each name has a scope of either to a specific worksheet or to the entire workbook.
 
 ### Define named ranges at runtime
 
@@ -55,7 +55,7 @@ spreadsheet.DeleteNamedRange(name);
 
 ## ExcelLikeComputations
 
-To return the result of formula computations of Essential<sup>®</sup> Calculate like Microsoft Excel computational result, this bool property [ExcelLikeComputations](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.FormulaEngine.html#Syncfusion_UI_Xaml_CellGrid_FormulaEngine_ExcelLikeComputations) is set to true.
+To make formula computations match Microsoft Excel's behavior, set the bool property [ExcelLikeComputations](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.FormulaEngine.html#Syncfusion_UI_Xaml_CellGrid_FormulaEngine_ExcelLikeComputations) is set to true.
 
 {% tabs %}
 {% highlight c# %}
@@ -248,8 +248,8 @@ DEC2BIN<br/><br/></td><td>
 Converts a decimal number to binary<br/><br/></td></tr>
 <tr>
 <td>
-DCE2OCT<br/><br/></td><td>
-Converts a binary number to octal<br/><br/></td></tr>
+DEC2OCT<br/><br/></td><td>
+Converts a decimal number to octal<br/><br/></td></tr>
 <tr>
 <td>
 DEC2HEX<br/><br/></td><td>
@@ -257,7 +257,7 @@ Converts a decimal number to hexadecimal<br/><br/></td></tr>
 <tr>
 <td>
 BIN2DEC<br/><br/></td><td>
-Converts a binary number to hexadecimal<br/><br/></td></tr>
+Converts a binary number to a decimal<br/><br/></td></tr>
 <tr>
 <td>
 BIN2OCT<br/><br/></td><td>
@@ -393,7 +393,7 @@ Returns the exponential of a complex number<br/><br/></td></tr>
 <tr>
 <td>
 IMPOWER<br/><br/></td><td>
-Calculates a complex number raised to a supplied power<br/><br/></td></tr>
+Calculates a complex number raised to a supplied exponent<br/><br/></td></tr>
 <tr>
 <td>
 GESTEP<br/><br/></td><td>
@@ -611,7 +611,7 @@ Checks whether the value is text and returns true or false<br/><br/></td></tr>
 <tr>
 <td>
 ISNONTEXT<br/><br/></td><td>
-Checks whether the value is not text(blank cells are not text) and returns true or false<br/><br/></td></tr>
+Checks whether the value is not text and returns true or false (returns false for blank cells)<br/><br/></td></tr>
 <tr>
 <td>
 ISEVEN<br/><br/></td><td>
@@ -655,7 +655,7 @@ Returns information about the contents, formatting or location of a given cell<b
 <tr>
 <td>
 INFO<br/><br/></td><td>
-Returns information about the the current operating environment<br/><br/></td></tr>
+Returns information about the current operating environment<br/><br/></td></tr>
 <tr>
 <td>
 TYPE<br/><br/></td><td>
@@ -676,11 +676,11 @@ Description<br/><br/></th></tr>
 <tr>
 <td>
 AND<br/><br/></td><td>
-Tests a number of user-defined conditions and returns TRUE if ALL of the conditions evaluate to TRUE, orFALSE otherwise<br/><br/></td></tr>
+Tests a number of user-defined conditions and returns TRUE if ALL of the conditions evaluate to TRUE, or FALSE otherwise<br/><br/></td></tr>
 <tr>
 <td>
 OR<br/><br/></td><td>
-Tests a number of user-defined conditions and returns TRUE if ANY of the conditions evaluate to TRUE, orFALSE otherwise<br/><br/></td></tr>
+Tests a number of user-defined conditions and returns TRUE if ANY of the conditions evaluate to TRUE, or FALSE otherwise<br/><br/></td></tr>
 <tr>
 <td>
 IF<br/><br/></td><td>
@@ -1066,7 +1066,7 @@ Returns the number of combinations for a given number of objects<br/><br/></td><
 <tr>
 <td>
 BASE<br/><br/></td><td>
-Converts number into text representation <br/><br/></td></tr>
+Converts a number into a text representation<br/><br/></td></tr>
 <tr>
 <td>
 DECIMAL<br/><br/></td><td>
@@ -1163,7 +1163,7 @@ Returns the rank of value in dataset as a percentage of the data set as percenta
 <tr>
 <td>
 PERCENTRANC.INC<br/><br/></td><td>
-Returns the rank of value in dataset as a percentage of the data set as percentage (0….1, inclusive) of the dataset<br/><br/></td></tr>
+Returns the rank of a value in a data set, as a percentage (0 - 1 inclusive) of the data set<br/><br/></td></tr>
 <tr>
 <td>
 STDEV.P<br/><br/></td><td>
@@ -1275,11 +1275,11 @@ Returns the one-tailed probability value of a z-test<br/><br/></td></tr>
 <tr>
 <td>
 RANK.AVG<br/><br/></td><td>
-Returns the statistical rank of a given value, within a supplied array of values (if more than one value has same rank, the average rank is returned)<br/><br/></td></tr>
+Returns the statistical rank of a given value, within a supplied array of values (if more than one value has the same rank, the average rank is returned)<br/><br/></td></tr>
 <tr>
 <td>
 RANK.EQ<br/><br/></td><td>
-Returns the Mode (the most frequently occurring value) of a list of supplied numbers (if more than one value has same rank, the top rank of that set is returned)<br/><br/></td></tr>
+Returns the statistical rank of a given value, within a supplied array of values (if more than one value has the same rank, the top rank of that set is returned)<br/><br/></td></tr>
 <tr>
 <td>
 NEGBINOM.DIST<br/><br/></td><td>
@@ -1479,7 +1479,7 @@ Returns the specified quartile of a set of supplied numbers, based on percentile
 <tr>
 <td>
 RANQ<br/><br/></td><td>
-Returns the Mode (the most frequently occurring value) of a list of supplied numbers (if more than one value has same rank, the top rank of that set is returned)<br/><br/></td></tr>
+Returns the rank of a supplied number, within a supplied list of numbers (if more than one value has the same rank, the top rank of that set is returned)<br/><br/></td></tr>
 <tr>
 <td>
 RSQ<br/><br/></td><td>
@@ -1660,7 +1660,7 @@ Returns a string consisting of a supplied text string, repeated a specified numb
 <tr>
 <td>
 SEARCHB<br/><br/></td><td>
-Returns the position of a supplied character or text string from within a supplied text string (non-case-sensitive)<br/><br/></td></tr>
+Returns the position of a supplied character or text string from within a supplied text string (case-insensitive)<br/><br/></td></tr>
 <tr>
 <td>
 UNICHAR<br/><br/></td><td>

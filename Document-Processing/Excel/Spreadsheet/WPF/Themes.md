@@ -9,16 +9,26 @@ documentation: ug
 
 # Themes in WPF Spreadsheet (SfSpreadsheet)
 
-SfSpreadsheet supports the following built-in themes.
-*	MaterialLight
-*	MaterialDark
-*	Office2019Colorful
-*	Office2019Black
-*	Office2019White
-*	Office2019DarkGray
-*	FluentLight
-*	FluentDark
-*	SystemTheme
+SfSpreadsheet supports built-in themes for customizing its appearance.
+
+## Available Themes
+
+### Material
+* MaterialLight
+* MaterialDark
+
+### Office2019
+* Office2019Colorful
+* Office2019Black
+* Office2019White
+* Office2019DarkGray
+
+### Fluent
+* FluentLight
+* FluentDark
+
+### System
+* SystemTheme
 
 Refer to the below links to apply themes for the SfSpreadsheet,
 
@@ -29,4 +39,7 @@ Refer to the below links to apply themes for the SfSpreadsheet,
   ![WPF Spreadsheet with Office2019Black Theme](Themes_images/wpf-spreadsheet-office2019black-theme.png)
 
 
-N> You can refer to our [WPF Spreadsheet Editor](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [WPF Spreadsheet example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the spreadsheet.
+## See Also
+
+* [WPF Spreadsheet feature tour](https://www.syncfusion.com/wpf-controls/spreadsheet)
+* [WPF Spreadsheet examples on GitHub](https://github.com/Syncfusion-Samples/Syncfusion-WPF-SpreadsheetExamples)
