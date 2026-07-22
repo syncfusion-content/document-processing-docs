@@ -64,7 +64,7 @@ The example below uses the Microsoft Agents Framework with OpenAI. The same step
 |---|---|
 | .NET SDK | .NET 8.0 or later|
 | AI Provider API Key | Required to authenticate requests to the AI provider. This page uses OpenAI.|
-| NuGet Packages | [Microsoft.Agents.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Agents.AI.OpenAI), [Microsoft.Extensions.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Extensions.AI.OpenAI) |
+| NuGet Packages | [Microsoft.Agents.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Agents.AI.OpenAI)|
 
 ### Integration
 
@@ -74,7 +74,7 @@ Install the [Syncfusion.DocumentSDK.AI.AgentTools](https://www.nuget.org/package
 
 ![Install NuGet package](Install_Nuget.png)
 
-After the packages installed, register your license key at application startup:
+After the packages are installed, register your license key at application startup:
 ```csharp
 string? licenseKey = Environment.GetEnvironmentVariable("SYNCFUSION_LICENSE_KEY");
 if (!string.IsNullOrEmpty(licenseKey))
@@ -226,7 +226,7 @@ The example below uses Azure Blob Storage. The same pattern works with any stora
 | .NET SDK | .NET 8.0, 9.0, or 10.0 |
 | AI Provider API Key | Required to authenticate requests to the AI provider. This page uses OpenAI.|
 | Azure Storage Account | Create from [Azure Portal](https://portal.azure.com) with a blob container |
-| NuGet Packages | [Microsoft.Agents.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Agents.AI.OpenAI), [Microsoft.Extensions.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Extensions.AI.OpenAI), [Azure.Storage.Blobs](https://www.nuget.org/packages/Azure.Storage.Blobs) |
+| NuGet Packages | [Microsoft.Agents.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Agents.AI.OpenAI), [Azure.Storage.Blobs](https://www.nuget.org/packages/Azure.Storage.Blobs) |
 
 The package compatibility table at the top of the [In-Memory Mode](#in-memory-mode) section also applies here.
 
