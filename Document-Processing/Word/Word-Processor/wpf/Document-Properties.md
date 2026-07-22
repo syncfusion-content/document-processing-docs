@@ -10,7 +10,7 @@ keywords: Word count, paragraph count, page count, current page number.
 [WPF RichTextBox](https://www.syncfusion.com/wpf-controls/richtextbox) keeps track of the statistics about your documents. These statistics contain information about word count, paragraph count and pages count.
 
 ## Word Count
-RichTextBox automatically counts the number of words in a document while you type. You can get the words count from [WordCount](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_WordCount.html) property. The default value of this property is 0. 
+RichTextBox automatically counts the number of words in a document while you type. You can get the words count from [WordCount](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_WordCount) property. The default value of this property is 0. 
 
 The following sample code demonstrates how to get the total number of words in the document.
 {% tabs %}
@@ -29,7 +29,7 @@ Dim wordCount As Integer = richTextBoxAdv.WordCount
 {% endtabs %}
 
 ## Paragraph Count
-RichTextBox automatically counts the number of paragraphs in a document while you type. You can get the paragraph count from [ParagraphCount](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_ParagraphCount.html) property. The default value of this property is 0. Also, it ignores empty paragraphs.
+RichTextBox automatically counts the number of paragraphs in a document while you type. You can get the paragraph count from [ParagraphCount](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_ParagraphCount) property. The default value of this property is 0. Also, it ignores empty paragraphs.
 
 The following sample code demonstrates how to get the total number of paragraphs in the document.
 {% tabs %}
@@ -48,7 +48,7 @@ Dim paragraphCount As Integer = richTextBoxAdv.ParagraphCount
 {% endtabs %}
 
 ## Page Count
-RichTextBox counts the number of pages in a document while you type. You can get the page count from [PageCount](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_PageCount.html) property. The default value of this property is 0.
+RichTextBox counts the number of pages in a document while you type. You can get the page count from [PageCount](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_PageCount) property. The default value of this property is 0.
 
 The following sample code demonstrates how to get the total number of pages in the document.
 {% tabs %}
@@ -73,7 +73,7 @@ End Sub
 {% endtabs %}
 
 ## Current Page Number
-The [CurrentPageNumber](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_CurrentPageNumber.html) property in the RichTextBox control returns the page number where the selection(cursor) is present.
+The [CurrentPageNumber](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_CurrentPageNumber) property in the RichTextBox control returns the page number where the selection(cursor) is present.
 
 The following sample code demonstrates how to get current page number in the document.
 
