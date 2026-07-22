@@ -173,7 +173,7 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports Syncfusion.Drawing
+Imports System.Drawing
 Imports System.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Interactive
@@ -1737,7 +1737,7 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Removing-the-sensitive-text-and-images-from-PDF-document).
 
-N>The redaction annotation flatten operation is currently supported in the .NET Framework and ASP.NET Core platforms only; it is not supported in the UWP and Xamarin platforms.
+N> The redaction annotation flatten operation is currently supported in the .NET Framework and ASP.NET Core platforms only; it is not supported in the UWP and Xamarin platforms.
 
 ### Watermark Annotation
 
@@ -5131,7 +5131,7 @@ using (PdfDocument document = new PdfDocument())
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using Syncfusion.Drawing;
+using System.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Interactive;
@@ -5169,7 +5169,7 @@ using (PdfDocument document = new PdfDocument())
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports Syncfusion.Drawing
+Imports System.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Graphics
 Imports Syncfusion.Pdf.Interactive
