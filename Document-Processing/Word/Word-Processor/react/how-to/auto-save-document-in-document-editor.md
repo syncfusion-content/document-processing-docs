@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Auto Save Document in React Document Editor Component
+# Automatically Save Document in React Document Editor Component
 
 In this article, we are going to see how to auto save the document in AWS S3. You can automatically save the edited content at regular intervals of time. It helps reduce the risk of data loss by saving an open document automatically at customized intervals.
 
 The following example illustrates how to auto save the document in AWS S3.
 
-* In the client-side, using the content change event, we can automatically save the edited content at regular intervals of time. Based on the `contentChanged` boolean, the document is sent as Docx format to the server-side using the [`saveAsBlob`](https://ej2.syncfusion.com/react/documentation/api/document-editor#saveasblob) method.
+* In the client-side, using the content change event, we can automatically save the edited content at regular intervals of time. Based on the `contentChanged` boolean, the document is sent as DOCX format to the server-side using the [`saveAsBlob`](https://ej2.syncfusion.com/react/documentation/api/document-editor#saveasblob) method.
 
    ```
        import * as ReactDOM from 'react-dom';
