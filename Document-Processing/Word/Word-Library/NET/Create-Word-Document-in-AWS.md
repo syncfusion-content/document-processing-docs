@@ -16,7 +16,7 @@ N> If this is your first time working with Amazon Web Services (AWS), refer to t
 
 * An active **Amazon Web Services (AWS) account** is required. If you don’t have one, please [create an account](https://aws.amazon.com/) before starting. Ensure your IAM user has the permissions required to deploy and invoke the target AWS service (Lambda or Elastic Beanstalk).
 
-* **Visual Studio 2022** (or later) with the **.NET Core cross-platform development** workload, and a supported **.NET Core / .NET** SDK (the `Syncfusion.DocIO.Net.Core` package targets .NET 8 and later). Download it from [visualstudio.microsoft.com](https://visualstudio.microsoft.com/).
+* **Visual Studio 2022** (or later) with the **.NET Core cross-platform development** workload, and a supported **.NET Core / .NET** SDK. Download it from [visualstudio.microsoft.com](https://visualstudio.microsoft.com/).
 
 ## Supported AWS services
 
