@@ -44,7 +44,7 @@ I> Syncfusion<sup>&reg;</sup> license keys can be validated during the Continuou
 
 Recommended place to register the license in the various platform controls (ASP.NET Core, Xamarin, etc.) included in Document Processing platforms is covered in the following section.
 
-### ReactJS
+## ReactJS
 
 Register the license key in the **index.js** file of the React project.
 
@@ -69,11 +69,11 @@ ReactDOM.render(
 {% endhighlight %}
 {% endtabs %}
 
-### Blazor
+## Blazor
 
 License registration requirements vary depending on the project type.
 
-## Blazor Web App (Interactive Auto)
+### 1. Blazor Web App (Interactive Auto)
 
 Open the **~/Program.cs** file in both the **server and client projects** of a Blazor Web App (Interactive Auto) and register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor license key.
 {% tabs %}
@@ -87,7 +87,7 @@ Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY
 
 {% endtabs %}
 
-## Blazor Web App (Interactive Server)
+### 2. Blazor Web App (Interactive Server)
 
 * For .NET 8, .NET 9, and .NET 10, open the **~/Program.cs** file and register the Syncfusion<sup style="font-size:70%">&reg;</sup> license key.
 
@@ -111,7 +111,7 @@ if (!app.Environment.IsDevelopment())
 
 {% endtabs %}
 
-## Blazor Web App (Interactive WebAssembly)
+### 3. Blazor Web App (Interactive WebAssembly)
 
 Open the **~/Program.cs** file in both the **server and client projects** of a Blazor Web App (Interactive WebAssembly) and register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor license key.
 {% tabs %}
@@ -125,7 +125,7 @@ Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY
 
 {% endtabs %}
 
-## Blazor Standalone WebAssembly App
+### 4. Blazor Standalone WebAssembly App
 
 Open the **~/Program.cs** file and register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor license key in the client web app.
 
@@ -145,7 +145,7 @@ var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
 {% endtabs %}
 
-### Angular
+## Angular
 
 Register the license key in the **main.ts** file of the Angular project.
 
@@ -170,9 +170,9 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 {% endhighlight %}
 {% endtabs %}
 
-### .NET MAUI
+##	 .NET MAUI
 
-For .NET MAUI there are two ways to register the License keys.
+In .NET MAUI, license keys can be registered using either of two approaches.
 
 ### 1. Registering license key in App.xaml.cs
 
@@ -245,7 +245,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
 {% endhighlight %}
 {% endtabs %}
 
-### JavaScript es6 / TypeScript
+## JavaScript es6 / TypeScript
 
 Register the license key at the entry point of the project before using the Syncfusion<sup>&reg;</sup> controls.
 
@@ -264,7 +264,7 @@ Syncfusion<sup>&reg;</sup> license key should be registered, if your project usi
 
 The following code is used to register the license.
 
-### JavaScript es5
+## JavaScript es5
 
 Register the license key by using **registerLicense** method after the [Syncfusion JavaScript script](https://ej2.syncfusion.com/javascript/documentation/getting-started/quick-start/#configure-syncfusion-javascript-es5-control-in-the-application-1) file reference as below.
 
@@ -275,7 +275,7 @@ ej.base.registerLicense('License Key');
 {% endhighlight %}
 {% endtabs %}
 
-### VueJS
+## VueJS
 
 Register the license key in the **index.js** file of the Vue project.
 
@@ -549,7 +549,7 @@ You must have an active Syncfusion<sup>&reg;</sup> Essential JS license to use S
 
 For the following platforms, you can use the script files without registering the license keys.
 
-### JavaScript (Essential<sup>&reg;</sup> JS 1)
+## JavaScript (Essential<sup>&reg;</sup> JS 1)
 
 * AngularJS
 
