@@ -1,20 +1,24 @@
 ---
 layout: post
-title: Perform form field double click event in React Pdfviewer component | Syncfusion
-description: Learn here all about Perform form field double click event in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Perform form field double click event
+title: Handle form field double-click event in React PDF Viewer | Syncfusion
+description: Learn how to handle the form field double-click event in the Syncfusion React PDF Viewer component.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## Perform form field double-click event in React PDF Viewer
+## Form field double-click event in React PDF Viewer
 
-This article demonstrates how to handle a double-click on a PDF form field by using the `formFieldDoubleClick` event. The event provides information about the clicked field and can be used to open custom editors, show dialogs, or trigger other application behaviors.
+This article demonstrates how to handle a double-click on a PDF form field by using the [`formFieldDoubleClick`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#formfielddoubleclick) event. The event provides information about the clicked field and can be used to open custom editors, show dialogs, or trigger other application behaviors.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started/) to create simple PDF Viewer sample in React.
 
-**Step 2:** Add the following code snippet in the `index.js` file to add the form field double click event in the PDF Viewer.
+**Step 1:** Create a simple PDF Viewer sample in React by following the steps in the appropriate getting-started guide based on your deployment mode.
+
+* [Getting started with the React Standalone PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started)
+* [Getting started with the React Server-Backed PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/server-backed/getting-started)
+
+**Step 2:** Subscribe to the `formFieldDoubleClick` event in the `index.js` file. The complete code for each deployment mode is shown below.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
