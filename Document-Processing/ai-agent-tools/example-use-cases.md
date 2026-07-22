@@ -22,7 +22,7 @@ This example demonstrates an **Automated PDF Redaction Agent** that uses the [Mi
 | AI Provider API Key | Required to authenticate requests to the AI provider. This page uses OpenAI. |
 | NuGet Packages | [Syncfusion.DocumentSDK.AI.AgentTools](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools), [Microsoft.Agents.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Agents.AI.OpenAI) |
 
-### How it works
+### How It Works
 
 At runtime the application performs the following steps:
 
@@ -96,13 +96,11 @@ This example demonstrates a **Blog Generator** that uses the [Microsoft Agent Fr
 | OpenAI Models | A text model (default **gpt-4o**) and an image model (default **gpt-image-1.5**) |
 | NuGet Packages | [Syncfusion.DocumentSDK.AI.AgentTools](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools), [Microsoft.Agents.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Agents.AI.OpenAI) |
 
-### How it works
-
-
+### How It Works
 
 At runtime the application performs the following steps:
 
-1. **Ask blog topic.** The user enters a topic from the console.
+1. **Ask blog topic.** The user enters a topic via the console.
 2. **Generate title and outline.** The agent drafts a title and 6–10 section outline for user confirmation (`[Y/n/r]`).
 3. **Draft blog content as HTML.** For each section the agent generates structured HTML with consistent styling.
 4. **Generate images.** For sections that need visuals, the **gpt-image-1.5** model generates PNG images embedded as Base64.
