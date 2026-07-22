@@ -1,17 +1,17 @@
 ---
 layout: post
 title: Installing Syncfusion FileFormats Mac installer - Syncfusion
-description: Learn here about how to install Syncfusion FileFormats Mac installer after downloading from our Syncfusion website.
-platform: document-processing
+description: Learn here about how to install Syncfusion Document Solutions Mac installer after downloading from our Syncfusion website.
+platform: document-solutions
 control: Installation and Deployment
 documentation: ug
 ---
 
-# Installing Syncfusion<sup>&reg;</sup> FileFormats Mac installer
+# Installing Syncfusion<sup>&reg;</sup> Document Solutions Mac installer
 
 ## Steps to resolve the warning message in Catalina OS or later
 
-   While running Essential Studio<sup>&reg;</sup> FileFormats Mac Installers on macOS Catalina or later, the following alert will be displayed.
+   While running Essential Studio<sup>&reg;</sup>Document Solutions Mac Installers on macOS Catalina or later, the following alert will be displayed.
 
    ![Alert Image](images/Mac_Catalina_MacOS_Alert1.png)  
      
@@ -26,7 +26,7 @@ documentation: ug
 
 ## Step-by-Step Installation
 
-The steps below show how to install Essential Studio<sup>&reg;</sup> FileFormats Mac installer.
+The steps below show how to install Essential Studio<sup>&reg;</sup> Document Solution Mac installer.
 
 1. Locate the downloaded DMG file and open it with a double-click.
 
@@ -40,13 +40,13 @@ The steps below show how to install Essential Studio<sup>&reg;</sup> FileFormats
 
    ![License confirmation wizard](images/Mac_Installer3.png)
 
-   N> The Unlock key is not required to install the Mac installer. The Syncfusion<sup>&reg;</sup> FileFormats Mac installer can be used for development purposes without registering an Unlock key.
+   N> The Unlock key is not required to install the Mac installer. The Syncfusion<sup>&reg;</sup> Document Solution Mac installer can be used for development purposes without registering an Unlock key.
 
 4. And paste it in the "Applications" folder.
 
    ![Paste in Applications](images/Mac_Installer4.png)
 
-5. Now you can open the folder to explore the Syncfusion<sup>&reg;</sup> FileFormats Mac installer.
+5. Now you can open the folder to explore the Syncfusion<sup>&reg;</sup> Document Solution Mac installer.
 
    ![Installation type wizard](images/Mac_Installer5.png)
 
@@ -56,7 +56,7 @@ The steps below show how to install Essential Studio<sup>&reg;</sup> FileFormats
 
 ## License key registration in samples
 
-After installation, the license key is required to register the demo source that is included in the Mac installer. To learn the steps for license registration for the ASP.NET Core (EJ2) samples in the Essential Studio<sup>&reg;</sup> FileFormats Mac installer, refer to the following:
+After installation, the license key is required to register the demo source that is included in the Mac installer. To learn the steps for license registration for the ASP.NET Core (EJ2) samples in the Essential Studio<sup>&reg;</sup> Document Solutions Mac installer, refer to the following:
 
 * Register the license key in the [Program.cs](https://ej2.syncfusion.com/aspnetcore/documentation/licensing/how-to-register-in-an-application#for-aspnet-core-application-using-net-60) file if you created the ASP.NET Core web application with Visual Studio 2022 and .NET 6.0.
 * Register the license key in Configure method of [Startup.cs](https://ej2.syncfusion.com/aspnetcore/documentation/licensing/how-to-register-in-an-application#for-aspnet-core-application-using-net-50-or-net-31)
