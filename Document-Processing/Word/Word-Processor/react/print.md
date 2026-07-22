@@ -1,16 +1,16 @@
 ---
 layout: post
 title: Print in React DOCX Editor | Syncfusion
-description: Learn here all about Print in the Syncfusion React DOCX Editor of Syncfusion Essential JS 2 and more.
+description: Learn here all about Print in the Syncfusion React Document Editor of Syncfusion Essential JS 2 and more.
 control: Print 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print in React DOCX Editor
+# Print in React Document Editor component
 
-To print the document, use the [`print`](https://ej2.syncfusion.com/react/documentation/api/document-editor#print) method from the document editor instance.
+To print the document, use the [`print`](https://ej2.syncfusion.com/react/documentation/api/document-editor#print) method from the Document Editor instance.
 
 Refer to the following example for showing a document and printing it.
 
@@ -45,11 +45,11 @@ Refer to the following example for creating a document and printing it.
 {% previewsample "/document-processing/code-snippet/document-editor/react/print-cs2" %}
 
 N> 1. DocumentEditor features are segregated into individual feature-wise modules. To use print, inject the `Print` module using `DocumentEditor.Inject(Print)`.
-N> 2. To enable print for a document editor instance, set `enablePrint` as true.
+N> 2. To enable print for a Document Editor instance, set `enablePrint` as true.
 
 ## Improve print quality
 
-The Document Editor provides an option to improve the print quality using [`printDevicePixelRatio`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorSettingsModel#printdevicepixelratio) in document editor settings. The document editor uses a canvas approach to render content. The canvas is then converted to an image and processed for print. Using the `printDevicePixelRatio` API, you can increase the image quality based on your requirement.
+The Document Editor provides an option to improve the print quality using [`printDevicePixelRatio`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorSettingsModel#printdevicepixelratio) in Document Editor settings. The Document Editor uses a canvas approach to render content. The canvas is then converted to an image and processed for print. Using the `printDevicePixelRatio` API, you can increase the image quality based on your requirement.
 
 The following example code illustrates how to improve the print quality in the Document Editor container.
 
@@ -84,7 +84,7 @@ N> By default, the `printDevicePixelRatio` value is 1.
 
 ## Print using window object
 
-You can print the document in the document editor by passing the window instance. This is useful to implement print in third-party frameworks such as Electron, where the window instance will be available. Refer to the following example.
+You can print the document in the Document Editor by passing the window instance. This is useful to implement print in third-party frameworks such as Electron, where the window instance will be available. Refer to the following example.
 
 ```ts
 import * as ReactDOM from 'react-dom';
@@ -216,7 +216,7 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
-By customizing margins, papers, and layouts, the layout of the document will be changed in the document editor. To modify these options during the print operation, serialize the document as SFDT using the [`serialize`](https://ej2.syncfusion.com/react/documentation/api/document-editor#serialize) method in the document editor instance and open the SFDT data in another instance of the document editor in a separate window.
+By customizing margins, papers, and layouts, the layout of the document will be changed in the Document Editor. To modify these options during the print operation, serialize the document as SFDT using the [`serialize`](https://ej2.syncfusion.com/react/documentation/api/document-editor#serialize) method in the Document Editor instance and open the SFDT data in another instance of the Document Editor in a separate window.
 
 The following example shows how to customize layout options only for printing.
 

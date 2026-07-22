@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Save document to AWS S3 in React DOCX Editor | Syncfusion
-description: Learn about how to save a document to AWS S3 in the Syncfusion React DOCX Editor of Essential JS 2 and more details.
+description: Learn about how to save a document to AWS S3 in the Syncfusion React Document Editor of Essential JS 2 and more details.
 platform: document-processing
 control: Save document to AWS S3
 documentation: ug
@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 To save a document to AWS S3, follow the steps below.
 
-**Step 1:** Create a simple [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) sample in React.
+**Step 1:** Create a simple [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) sample in React.
 
 Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in React. This will give you a basic setup of the Document Editor component.
 
