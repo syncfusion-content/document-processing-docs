@@ -35,7 +35,7 @@ You can select the bookmark in the document using [`selectBookmark`](https://ej2
 this.container.documentEditor.selection.selectBookmark("Bookmark1", true);
 ```
 
->Note: The second parameter is optional and it denotes whether to exclude the bookmark start and end from the selection. If true, excludes bookmark start and end from selection.
+N> The second parameter is optional and it denotes whether to exclude the bookmark start and end from the selection. If true, excludes bookmark start and end from selection.
 
 ## Delete Bookmark
 
@@ -53,7 +53,7 @@ You can get all the bookmarks in the document using the [`getBookmarks`](https:/
 this.container.documentEditor.getBookmarks(false);
 ```
 
->Note: The boolean parameter denotes whether to include hidden bookmarks. If false, hidden bookmarks are ignored.
+N> The boolean parameter denotes whether to include hidden bookmarks. If false, hidden bookmarks are ignored.
 
 ## Get Bookmark from Selection
 

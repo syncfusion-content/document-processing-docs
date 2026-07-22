@@ -32,7 +32,7 @@ documentEditor.editor.cut();
 
 Due to limitations, you can paste contents from the system clipboard into the Document Editor only using the **Ctrl + V** keyboard shortcut.
 
->Note: Due to browser limitations of getting content from the system clipboard, paste using the API and context menu options doesn't work.
+N> Due to browser limitations of getting content from the system clipboard, paste using the API and context menu options doesn't work.
 
 ## Local paste (copy/paste within control)
 
@@ -93,7 +93,7 @@ documentEditor.editor.paste();
 
 In the Document Editor, paste options in the context menu will be in a disabled state if you try to copy/paste content from outside of the Document Editor. It gets enabled when `enableLocalPaste` is `true` and you copy/paste content within the Document Editor.
 
->Note: Due to browser limitations of getting content from the system clipboard, paste using the API and context menu options doesn't work. Hence, the paste option is disabled in the context menu.
+N> Due to browser limitations of getting content from the system clipboard, paste using the API and context menu options doesn't work. Hence, the paste option is disabled in the context menu.
 
 Alternatively, you can use the keyboard shortcuts:
 
@@ -108,7 +108,7 @@ Alternatively, you can use the keyboard shortcuts:
 |True |Allows to paste content that is copied from the same Document Editor component alone and prevents pasting content from system clipboard. Hence the content copied from outside Document Editor component can’t be pasted.<br>Browser limitation of pasting from system clipboard using API and context menu options, will be resolved. So, you can copy and paste content within the Document Editor component using API and context menu options too.|
 |False|Allows to paste content from system clipboard. Hence the content copied from both the Document Editor component and outside can be pasted.<br>Browser limitation of pasting from system clipboard using API and context menu options, will remain as a limitation.|
 
-Note:
+N>
 * Keyboard shortcut for pasting will work properly in both cases.
 * Copying content from the Document Editor component and pasting outside will work properly in both cases.
 
