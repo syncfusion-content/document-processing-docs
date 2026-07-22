@@ -6,11 +6,11 @@ control: DocIO
 documentation: UG
 ---
 
-# Convert Word document to PDF in Linux
+# Convert a Word document to PDF in a .NET Core application on Linux
 
-Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to PDF in .NET Core application on Linux**.
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to PDF in a .NET Core application on Linux**.
 
-## Steps to convert a Word document to PDF in .NET Core application on Linux
+## Steps to convert a Word document to PDF in a .NET Core application on Linux
 
 {% tabcontents %}
 
@@ -19,9 +19,9 @@ Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncf
 **Prerequisites:**
 
 * Visual Studio 2022.
-* Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
+* Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet) or later.
 
-Step 1: Execute the following command in **Linux terminal** to create a new .NET Core Console application.
+Step 1: Execute the following command in the **Linux terminal** to create a new .NET Core Console application.
 
 {% tabs %}
 {% highlight KCONFIG %}
@@ -33,31 +33,32 @@ dotnet new console
 
 ![Create .NET Core console application on Linux](Linux-images/CreateNewProject1.png)
 
-Step 2: Install the following **Nuget packages** in your application from [Nuget.org](https://www.nuget.org/) by execute the following command.
+Step 2: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/) by executing the following command.
 
-* [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) 
+* [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) (latest version)
 * [SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)
 * [HarfBuzzSharp.NativeAssets.Linux v8.3.1.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.1.2)
 
 {% tabs %}
 {% highlight KCONFIG %}
 
-dotnet add package Syncfusion.DocIORenderer.Net.Core -v 22.1.34 -s https://www.nuget.org/
+dotnet add package Syncfusion.DocIORenderer.Net.Core -s https://www.nuget.org/
 dotnet add package SkiaSharp.NativeAssets.Linux -v 3.119.1 -s https://www.nuget.org/
 dotnet add package HarfBuzzSharp.NativeAssets.Linux -v 8.3.1.2 -s https://www.nuget.org/
 
 {% endhighlight %}
 {% endtabs %}
 
-N> 1. For other Linux environments, refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf#additional-nuget-packages-required-for-linux) for detailed information on the additional NuGet packages required. 
-N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components.
-N> 3. If you are using prior to v23.1.40 release, please refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/faq#what-are-the-nuget-packages-to-be-installed-to-perform-word-to-pdf-conversion-in-linux-os) to know about how to perform Word to PDF conversion in Linux.
+N> 1. From v32.1.19 onward, the dependent SkiaSharp package was upgraded to v3.119.1. The `SkiaSharp.NativeAssets.Linux v3.119.1` and `HarfBuzzSharp.NativeAssets.Linux v8.3.1.2` packages are mandatory in this environment. For other Linux environments (such as AWS Lambda or AWS Elastic Beanstalk), refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf#additional-nuget-packages-required-for-linux) for the appropriate native asset packages.
+N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components.
+N> 3. If you are using a version prior to v23.1.40, please refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/linux-faqs#what-are-the-nuget-packages-to-be-installed-to-perform-word-to-pdf-conversion-in-linux-os) to know about how to perform Word to PDF conversion in Linux.
 
-Step 3: Add the following Namespaces in **Program.cs** file.
+Step 3: Add the following namespaces in **Program.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using System.IO;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.DocIORenderer;
@@ -72,7 +73,7 @@ Step 4: Add the following code snippet in **Program.cs** file.
 {% highlight c# tabtitle="C#" %}
 
 //Open the file as Stream
-using (FileStream docStream = new FileStream("Data/Template.docx", FileMode.Open, FileAccess.Read))
+using (FileStream docStream = new FileStream(Path.GetFullPath("Data/Template.docx"), FileMode.Open, FileAccess.Read))
 {
     //Loads an existing Word document
     using (WordDocument wordDocument = new WordDocument(docStream, FormatType.Docx))
@@ -84,7 +85,7 @@ using (FileStream docStream = new FileStream("Data/Template.docx", FileMode.Open
             using (PdfDocument pdfDocument = render.ConvertToPDF(wordDocument))
             {
                 //Create FileStream to save the PDF file.
-                using (FileStream outputStream = new FileStream("Result.pdf", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
+                using (FileStream outputStream = new FileStream("Sample.pdf", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
                 {
                     //Saves the PDF file.
                     pdfDocument.Save(outputStream);
@@ -96,6 +97,8 @@ using (FileStream docStream = new FileStream("Data/Template.docx", FileMode.Open
 
 {% endhighlight %}
 {% endtabs %}
+
+N> Ensure the application is run from the project root directory so that the relative `Data/Template.docx` path resolves correctly.
 
 Step 5: Execute the following command to **restore** the NuGet packages.
 
@@ -119,11 +122,11 @@ dotnet run
 {% endhighlight %}
 {% endtabs %}
 
-![Run the Applcation](Linux-images/Run.png)
+![Run the Application](Linux-images/Run.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/Linux/Convert-Word-Document-to-PDF).
 
-By executing the program, you will get the **PDF** as follows. The output will be saved in parallel to program.cs file.
+By executing the program, you will get the **PDF** as follows. The output will be saved alongside **Program.cs** in the project output directory.
 
 ![Word to PDF in Linux](WordToPDF_images/OutputImage.png)
 
@@ -134,7 +137,7 @@ By executing the program, you will get the **PDF** as follows. The output will b
 **Prerequisites:**
 
 * JetBrains Rider.
-* Install .NET 8 SDK or later.
+* Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 
 Step 1: Open JetBrains Rider and create a new .NET Core console application project.
 * Launch JetBrains Rider.
@@ -149,7 +152,7 @@ Step 1: Open JetBrains Rider and create a new .NET Core console application proj
 
 ![Creating a new .NET Core console application in JetBrains Rider](Linux-images/Create-Console-NET-core-sample.png)
 
-Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
+Step 2: Install the NuGet packages from [NuGet.org](https://www.nuget.org/).
 * Click the NuGet icon in the Rider toolbar and type [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) in the search bar.
 * Ensure that nuget.org is selected as the package source.
 * Select the latest Syncfusion.DocIORenderer.Net.Core NuGet package from the list.
@@ -158,13 +161,15 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 ![Select the Syncfusion.DocIORenderer.Net.Core NuGet package](Linux-images/Select-Syncfusion.DocIORenderer.Net.Core-NuGet.png)
 
 * Click the **Install** button to complete the installation.
+* Repeat the steps above to install the additional NuGet packages required for Linux: [SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1) and [HarfBuzzSharp.NativeAssets.Linux v8.3.1.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.1.2).
 
 ![Install the Syncfusion.DocIORenderer.Net.Core NuGet package](Linux-images/Install-Syncfusion.DocIORenderer.Net.Core-NuGet.png)
 
-N> 1. For other Linux environments, refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf#additional-nuget-packages-required-for-linux) for detailed information on the additional NuGet packages required. 
-N> 2. Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> 1. From v32.1.19 onward, the dependent SkiaSharp package was upgraded to v3.119.1. The `SkiaSharp.NativeAssets.Linux v3.119.1` and `HarfBuzzSharp.NativeAssets.Linux v8.3.1.2` packages are mandatory in this environment. For other Linux environments (such as AWS Lambda or AWS Elastic Beanstalk), refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf#additional-nuget-packages-required-for-linux) for the appropriate native asset packages.
+N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> 3. If you are using a version prior to v23.1.40, please refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/linux-faqs#what-are-the-nuget-packages-to-be-installed-to-perform-word-to-pdf-conversion-in-linux-os) to know about how to perform Word to PDF conversion in Linux.
 
-Step 3: Add the following Namespaces in **Program.cs** file.
+Step 3: Add the following namespaces in **Program.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -183,7 +188,7 @@ Step 4: Add the following code snippet in **Program.cs** file.
 {% highlight c# tabtitle="C#" %}
 
 //Open the file as Stream
-using (FileStream docStream = new FileStream("Data/Template.docx", FileMode.Open, FileAccess.Read))
+using (FileStream docStream = new FileStream(Path.GetFullPath("Data/Template.docx"), FileMode.Open, FileAccess.Read))
 {
     //Loads an existing Word document
     using (WordDocument wordDocument = new WordDocument(docStream, FormatType.Docx))
@@ -208,6 +213,8 @@ using (FileStream docStream = new FileStream("Data/Template.docx", FileMode.Open
 {% endhighlight %}
 {% endtabs %}
 
+N> Ensure the application is run from the project root directory so that the relative `Data/Template.docx` path resolves correctly.
+
 Step 5: Build the project.
 
 Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
@@ -218,7 +225,7 @@ Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to 
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/Linux/Convert-Word-Document-to-PDF).
 
-By executing the program, you will get the **PDF** as follows. The output will be saved in parallel to program.cs file.
+By executing the program, you will get the **PDF** as follows. The output will be saved alongside **Program.cs** in the project output directory.
 
 ![Word to PDF in Linux](WordToPDF_images/OutputImage.png)
 

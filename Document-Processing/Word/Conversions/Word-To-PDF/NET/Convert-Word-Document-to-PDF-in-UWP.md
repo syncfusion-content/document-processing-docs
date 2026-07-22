@@ -1,6 +1,6 @@
 ---
-title: Convert Word to PDF in UWP | Syncfusion
-description: Convert Word to PDF in UWP using .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Convert Word document to PDF in UWP | Syncfusion
+description: Convert Word document to PDF in UWP using Syncfusion DocIO library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -8,21 +8,26 @@ documentation: UG
 
 # Convert Word document to PDF in UWP
 
-Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to PDF in UWP**.
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to PDF in UWP**.
 
 ## Steps to convert Word document to PDF in UWP
 
-Step 1: Create a new C# Blank App (Universal Windows) project.
+Step 1: Create a new **Blank App (Universal Windows)** project in Visual Studio with the project name **Convert_Word_Document_to_PDF**. In the project properties, set the **Minimum version** and **Target version** to **Windows 10 Fall Creators Update (FCU, build 16299)** or later.
 
 ![Create UWP application in Visual Studio](UWP_images/Create-UWP-project-WordtoPDF.png)
 
-Step 2: Install the [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core/) NuGet package as a reference to your UWP application from [NuGet.org](https://www.nuget.org/).
+Step 2: Install the following NuGet packages as references to your UWP application from [NuGet.org](https://www.nuget.org/):
+
+* [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core/) - required for `WordDocument`.
+* [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core/) - required for converting Word to PDF.
 
 ![Syncfusion.DocIORenderer.Net.Core](UWP_images/Nuget-Package-WordtoPDF.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 3: Add a new button in the **MainPage.xaml** as shown below.
+Step 3: Add the input Word document to the project. In **Solution Explorer**, create an **Assets** folder, add a sample Word file (for example, `Input.docx`), and set its **Build Action** to **Embedded Resource** so it can be loaded using `GetManifestResourceStream`.
+
+Step 4: Add a new button in the **MainPage.xaml** as shown below.
 
 {% tabs %}
 
@@ -48,20 +53,28 @@ Step 3: Add a new button in the **MainPage.xaml** as shown below.
 
 {% endtabs %}
 
-Step 4: Include the following namespaces in the **MainPage.xaml.cs** file.
+Step 5: Include the following namespaces in the **MainPage.xaml.cs** file.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
+using System.IO;
+using System.Reflection;
+using System.Collections.Generic;
 using Syncfusion.DocIO;
+using Syncfusion.DocIO.DLS;
 using Syncfusion.DocIORenderer;
 using Syncfusion.Pdf;
-using Syncfusion.DocIO.DLS;
+using Windows.Storage;
+using Windows.Storage.Pickers;
+using Windows.Storage.Streams;
+using Windows.UI.Popups;
+using Windows.UI.Xaml;
 {% endhighlight %}
 
 {% endtabs %}
 
-Step 5: Include the below code snippet in the click event of the button in MainPage.xaml.cs, to **convert the Word document to PDF** and save the **PDF** document as a physical file and open the file for viewing.
+Step 6: Include the below code snippet in the click event of the button in **MainPage.xaml.cs** to **convert the Word document to PDF** and save the **PDF** document as a physical file and open the file for viewing.
 
 {% tabs %}
 
@@ -76,22 +89,24 @@ using (WordDocument wordDocument = new WordDocument(assembly.GetManifestResource
     {
         //Converts Word document into PDF document
         using (PdfDocument pdfDocument = render.ConvertToPDF(wordDocument))
-        {                       
-            //Saves the PDF file
-            MemoryStream outputStream = new MemoryStream();
-            pdfDocument.Save(outputStream);        
-            outputStream.Position = 0;
-            //Save the PDF file
-            SavePDF(outputStream);
-        }                   
-    }               
-}               
+        {
+            //Save the PDF to a MemoryStream
+            using (MemoryStream outputStream = new MemoryStream())
+            {
+                pdfDocument.Save(outputStream);
+                outputStream.Position = 0;
+                //Save the PDF file
+                SavePDF(outputStream);
+            }
+        }
+    }
+}
 
 {% endhighlight %}
 
 {% endtabs %}
 
-## Save PDF document in UWP
+### Step 6.1: Save the PDF document
 
 {% tabs %}
 
@@ -104,6 +119,9 @@ private async void SavePDF(Stream outputStream)
     if (!(Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Phone.UI.Input.HardwareButtons")))
     {
         FileSavePicker savePicker = new FileSavePicker();
+        //Bind the picker to the current window (required on desktop UWP)
+        var hwnd = WinRT.Interop.WindowNative.GetWindowHandle(App.MainWindow);
+        WinRT.Interop.InitializeWithWindow.Initialize(savePicker, hwnd);
         savePicker.DefaultFileExtension = ".pdf";
         savePicker.SuggestedFileName = "Sample";
         savePicker.FileTypeChoices.Add("Adobe PDF Document", new List<string>() { ".pdf" });
@@ -141,14 +159,14 @@ private async void SavePDF(Stream outputStream)
 
 {% endtabs %}
 
+N> Wrap the file I/O and PDF conversion logic in a try/catch block to handle exceptions such as `UnauthorizedAccessException`, `IOException`, or rendering errors gracefully.
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/UWP).
 
 By executing the program, you will get the **PDF document** as follows.
 
 ![Word to PDF in UWP](WordToPDF_images/OutputImage.png)
 
-N> As per [MSDN announcement](https://devblogs.microsoft.com/dotnet/announcing-uwp-support-for-net-standard-2-0/), the minimum version of UWP project must be Fall Creators Update (FCU).
+N> The minimum target version of the UWP project must be Windows 10 Fall Creators Update (FCU, build 16299), which provides UWP support for .NET Standard 2.0.
 
-Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.
-
-An online sample link to [convert Word document to PDF](https://document.syncfusion.com/demos/word/wordtopdf#/tailwind) in ASP.NET Core. 
+Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page. 

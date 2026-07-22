@@ -1,6 +1,6 @@
 ---
 title: Convert Word to Image in Azure App Service on Linux | Syncfusion
-description: Convert Word to image in Azure App Service on Linux using .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
+description: Convert Word to image in Azure App Service on Linux using .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert Word to Image in Azure App Service on Linux
 
-Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to image in Azure App Service on Linux**.
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to image in Azure App Service on Linux**.
 
 ## Steps to convert Word document to Image in Azure App Service on Linux
 
@@ -21,14 +21,14 @@ Step 2: Create a project name and select the location.
 Step 3: Click **Create** button.
 ![Additional Information](Azure-Images/App-Service-Linux/Additional_Information_WordtoPDF.png)
 
-Step 4: Install the following **Nuget packages** in your application from [Nuget.org](https://www.nuget.org/).
+Step 4: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/).
 
 * [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) 
 * [SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)
 * [HarfBuzzSharp.NativeAssets.Linux v8.3.1.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.1.2)
 
- ![Install Syncfusion.DocIORenderer.Net.Core Nuget Package](Azure-Images/App-Service-Linux/Syncfusion_Nuget_Package_WordtoPDF.png)
- ![Install SkiaSharp.NativeAssets.Linux Nuget Package](Azure-Images/App-Service-Linux/SkiaSharp_Nuget-Package_WordtoPDF.png)
+ ![Install Syncfusion.DocIORenderer.Net.Core NuGet package](Azure-Images/App-Service-Linux/Syncfusion_Nuget_Package_WordtoPDF.png)
+ ![Install SkiaSharp.NativeAssets.Linux NuGet package](Azure-Images/App-Service-Linux/SkiaSharp_Nuget-Package_WordtoPDF.png)
  ![Install HarfBuzzSharp.NativeAssets.Linux Nuget Package](Azure-Images/App-Service-Linux/HarfBuzz-Nuget-WordtoImage.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
@@ -77,6 +77,7 @@ Step 6: Include the following namespaces in **HomeController.cs**.
 
 {% highlight c# tabtitle="C#" %}
 
+using Microsoft.AspNetCore.Mvc;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.DocIORenderer;
@@ -85,7 +86,7 @@ using Syncfusion.DocIORenderer;
 
 {% endtabs %}
 
-Step 7: Include the below code snippet in **HomeController.cs** for **convert the Word document to image**. 
+Step 7: Include the below code snippet in **HomeController.cs** to **convert the Word document to image**. 
 
 {% tabs %}
 
@@ -111,7 +112,7 @@ public IActionResult WordToImage(string button)
     {
         if (Request.Form.Files.Count == 0)
         {
-            ViewBag.Message = string.Format("Browse a Word document and then click the button to convert as a Image");
+            ViewBag.Message = string.Format("Browse a Word document and then click the button to convert as an image");
              return View("Index");
         }
         // Gets the extension from file.
@@ -147,12 +148,12 @@ public IActionResult WordToImage(string button)
         }
         else
         {
-            ViewBag.Message = string.Format("Please choose Word format document to convert to image");
+            ViewBag.Message = string.Format("Please choose a Word format document to convert to image");
         }
     }
     else
     {
-        ViewBag.Message = string.Format("Browse a Word document and then click the button to convert as a image document");
+        ViewBag.Message = string.Format("Browse a Word document and then click the button to convert as an image document");
     }
     return View("Index");
 }
