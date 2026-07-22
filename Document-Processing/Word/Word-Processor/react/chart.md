@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Chart in React Document editor component | Syncfusion
-description: Learn here all about Chart in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
+title: Chart in React DOCX Editor component | Syncfusion
+description: Learn here all about Chart in Syncfusion React DOCX Editor component of Syncfusion Essential JS 2 and more.
 control: Chart 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Chart in React Document editor component
+# Chart in React DOCX Editor component
 
-[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides chart preservation support. Using Document Editor, you can see the chart reports from your Word document.
+[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides chart preservation support. Using the DOCX Editor, you can view chart reports from your Word document.
 
-The following example shows chart preservation in Document Editor.
+The following example shows chart preservation in the DOCX Editor.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -25,12 +25,12 @@ The following example shows chart preservation in Document Editor.
 {% include code-snippet/document-editor/react/chart-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "/document-processing/code-snippet/document-editor/react/chart-cs1" %}
 
 ## Supported Chart Types
 
-The following chart types are supported in document editor
+The following chart types are supported in the DOCX Editor:
 * Scatter_Markers
 * Bubble
 * Area
@@ -53,4 +53,4 @@ The following chart types are supported in document editor
 
 ## Online Demo
 
-Explore how to preserve charts in Word documents using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/chart).
+Explore how to preserve charts in Word documents using the React DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/chart).

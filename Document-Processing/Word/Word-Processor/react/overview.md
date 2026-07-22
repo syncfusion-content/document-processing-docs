@@ -38,7 +38,7 @@ The [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-ed
 
 ## Supported platforms for server-side dependencies
 
-The Document Editor component requires server-side interactions for the following operations:
+The DOCX Editor component requires server-side interactions for the following operations:
 
 * Open file formats other than SFDT
 * Paste with formatting
