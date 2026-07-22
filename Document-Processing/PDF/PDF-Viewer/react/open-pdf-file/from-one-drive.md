@@ -53,7 +53,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the `Load()` method to load the PDF from One Drive.
+5. Modify the `Load()` method to load the PDF from OneDrive.
 
 ```csharp
 

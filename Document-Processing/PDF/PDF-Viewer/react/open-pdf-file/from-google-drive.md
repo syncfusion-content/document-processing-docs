@@ -11,7 +11,7 @@ documentation: ug
 
 These steps describe how to load a PDF stored in Google Drive into the React PDF Viewer using a server-backed web service.
 
-**Step 1** Set up Google Drive API and credentials
+**Step 1:** Set up Google Drive API and credentials
 
 Create a project in the Google Developers Console and enable the Google Drive API. Obtain OAuth 2.0 client credentials (OAuth client ID) or configure a service account depending on the chosen authentication flow. Register an appropriate redirect URI for OAuth flows and grant only the least-privilege scopes required to read files from the target Drive folder. See the official [Google Drive guide](https://developers.google.com/drive/api/guides/enable-sdk) for details.
 

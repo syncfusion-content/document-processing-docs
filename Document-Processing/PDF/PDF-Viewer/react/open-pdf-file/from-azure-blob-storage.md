@@ -13,7 +13,7 @@ The PDF Viewer allows loading PDF files from Azure Blob Storage using either the
 
 ## Using the standalone PDF Viewer
 
-To load a PDF file from Azure Blob Storage in a PDF Viewer, you can follow the steps below
+To load a PDF file from Azure Blob Storage in a PDF Viewer, follow the steps below:
 
 **Step 1:** Create a PDF Viewer sample in React
 
@@ -21,7 +21,7 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
 
 **Step 2:** Modify the `src/index.js` File in the React Project
 
-1. Add the following private properties to `index.js` and assign values from configuration or a secure source.
+1. Add the following configuration values to `index.js` and assign values from configuration or a secure source.
 
 N> Replace placeholders with the target Azure account, container, and blob names. Do not store credentials in source control.
 
@@ -114,7 +114,7 @@ using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Specialized;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to the `PdfViewerController` class. In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
 private readonly string _storageConnectionString;

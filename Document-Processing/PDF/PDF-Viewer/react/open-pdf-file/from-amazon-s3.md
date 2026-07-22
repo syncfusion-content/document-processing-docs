@@ -21,7 +21,7 @@ Follow the instructions in the getting started guide (React) to create a basic P
 
 **Step 2:** Modify the `src/index.js` File in the React Project
 
-1. Import the required namespaces at the top of the file:
+1. Import the required modules at the top of the file:
 
 ```typescript
 import AWS from 'aws-sdk';
@@ -96,7 +96,7 @@ using Amazon.S3;
 using Amazon.S3.Model;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to the `PdfViewerController` class. In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
 private IConfiguration _configuration;
@@ -162,7 +162,7 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 }
 ```
 
-6. Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+6. Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration.
 
 ```json
 {

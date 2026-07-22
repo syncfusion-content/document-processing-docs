@@ -15,7 +15,7 @@ These instructions describe how to load PDF files stored in Dropbox into the Rea
 
 To load a PDF file from Dropbox cloud file storage in a PDF Viewer, you can follow the steps below.
 
-**Step 1** Create a Dropbox API app
+**Step 1:** Create a Dropbox API app
 
 Create an API app in the Dropbox App Console. Follow the Dropbox tutorial for app creation and obtain an access token or configure OAuth 2.0 for server-side authentication. Ensure the app has the scopes required to read files from the target folder and register an appropriate redirect URI when using OAuth flows. See the Dropbox developer documentation for details.
 
@@ -87,7 +87,7 @@ using Dropbox.Api;
 using Dropbox.Api.Files;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to the `PdfViewerController` class. In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
 
@@ -149,7 +149,7 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 }
 ```
 
-6. Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+6. Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration.
 
 ```json
 {
