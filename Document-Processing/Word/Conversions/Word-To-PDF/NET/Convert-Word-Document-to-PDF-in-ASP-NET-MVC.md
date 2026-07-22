@@ -19,7 +19,7 @@ Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Word libra
 **Prerequisites:**
 
 * Visual Studio 2022.
-* Install **.NET desktop development** workload with necessary .NET Framework SDK.
+* Install **ASP.NET and web development** workload with .NET Framework 4.5 or later SDK.
 
 Step 1: Create a new ASP.NET Web Application project.
 
@@ -35,12 +35,14 @@ Step 3: Install the [Syncfusion.DocToPdfConverter.AspNet.Mvc5](https://www.nuget
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: Include the following namespace in that HomeController.cs file.
+Step 4: Include the following namespace in the `HomeController.cs` file.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
 
+using System.IO;
+using System.Web.Mvc;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.DocIO;
 using Syncfusion.Pdf;
@@ -50,28 +52,26 @@ using Syncfusion.DocToPDFConverter;
 
 {% endtabs %}
 
-Step 5: A default action method named Index will be present in HomeController.cs. Right click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
+Step 5: A default action method named `Index` will be present in `HomeController.cs`. Right-click on the `Index` method and select **Go To View**, where you will be directed to its associated view page **Index.cshtml**.
 
-Step 6: Add a new button in the Index.cshtml as shown below.
+Step 6: Add a new button in the **Index.cshtml** to trigger the conversion, as shown below.
 
 {% tabs %}
 
 {% highlight cshtml tabtitle="CSHTML" %}
 
-@{Html.BeginForm("ConvertWordtoPDF", "Home", FormMethod.Get);
+@using (Html.BeginForm("ConvertWordDocumentToPDF", "Home", FormMethod.Get))
 {
-<div>
-    <input type="submit" value="Convert Word Document to PDF" style="width:220px;height:27px" />
-</div>
-}
-Html.EndForm();
+    <div>
+        <input type="submit" value="Convert Word Document to PDF" style="width:220px;height:27px" />
+    </div>
 }
 
 {% endhighlight %}
 
 {% endtabs %}
 
-Step 7: Add a new action method **ConvertWordDocumentToPDF** in HomeController.cs and include the below code snippet to **convert the Word document to PDF** and download it.
+Step 7: Add a new action method **ConvertWordDocumentToPDF** in `HomeController.cs` and include the following code snippet to **convert the Word document to PDF** and download it.
 
 {% tabs %}
 
@@ -107,7 +107,7 @@ using (FileStream docStream = new FileStream(Server.MapPath("~/App_Data/Template
 
 Step 8: Build the project.
 
-Click on Build → Build Solution or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
+Click on Build → Build Solution, or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
 Step 9: Run the project.
 
@@ -125,10 +125,10 @@ By executing the program, you will get the **PDF document** as follows.
 
 **Prerequisites:**
 
-* JetBrains Rider.
-* Install .NET Framework Developer Pack.
+* JetBrains Rider (2022.3 or later).
+* Install the [.NET Framework 4.5 or later Developer Pack](https://dotnet.microsoft.com/en-us/download/dotnet-framework).
 
-Step 1. Open JetBrains Rider and create a new ASP.NET MVC web application project.
+Step 1: Open JetBrains Rider and create a new ASP.NET MVC web application project.
 * Launch JetBrains Rider.
 * Click **New Solution** on the welcome screen.
 
@@ -136,9 +136,9 @@ Step 1. Open JetBrains Rider and create a new ASP.NET MVC web application projec
 
 * In the New Solution dialog, select **Project Type** as **Web**.
 * Enter a project name and specify the location.
-* Select the target framework as Full Framework and choose the desired version.
+* Select the target framework as **Full Framework** and choose **.NET Framework 4.5 or later**.
 * Select **Template** as **Web App**.
-* Click create.
+* Click **Create**.
 
 ![Creating a new ASP.NET MVC web application in JetBrains Rider](ASP-NET-MVC_images/Create-MVC-sample.png)
 
@@ -154,14 +154,16 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 ![Install the Syncfusion.DocToPdfConverter.AspNet.Mvc5 NuGet package](ASP-NET-MVC_images/Install-Syncfusion.DocToPdfConverter.AspNet.Mvc5-NuGet.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 3: Include the following namespace in that HomeController.cs file.
+Step 3: Include the following namespaces in the `HomeController.cs` file.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
 
+using System.IO;
+using System.Web.Mvc;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.DocIO;
 using Syncfusion.Pdf;
@@ -171,28 +173,26 @@ using Syncfusion.DocToPDFConverter;
 
 {% endtabs %}
 
-Step 4: A default action method named Index will be present in HomeController.cs. Right click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
+Step 4: A default action method named `Index` will be present in `HomeController.cs`. Right-click on the `Index` method and select **Go To View**, where you will be directed to its associated view page **Index.cshtml**.
 
-Step 5: Add a new button in the Index.cshtml as shown below.
+Step 5: Add a new button in the **Index.cshtml** as shown below.
 
 {% tabs %}
 
 {% highlight cshtml tabtitle="CSHTML" %}
 
-@{Html.BeginForm("ConvertWordtoPDF", "Home", FormMethod.Get);
+@using (Html.BeginForm("ConvertWordDocumentToPDF", "Home", FormMethod.Get))
 {
-<div>
-    <input type="submit" value="Convert Word Document to PDF" style="width:220px;height:27px" />
-</div>
-}
-Html.EndForm();
+    <div>
+        <input type="submit" value="Convert Word Document to PDF" style="width:220px;height:27px" />
+    </div>
 }
 
 {% endhighlight %}
 
 {% endtabs %}
 
-Step 6: Add a new action method **ConvertWordDocumentToPDF** in HomeController.cs and include the below code snippet to **convert the Word document to PDF** and download it.
+Step 6: Add a new action method **ConvertWordDocumentToPDF** in `HomeController.cs` and include the following code snippet to **convert the Word document to PDF** and download it.
 
 {% tabs %}
 

@@ -21,4 +21,4 @@ N> If this is your first time working with Azure, please refer to the dedicated 
 
 * Azure App Service (Windows & Linux)
 * Azure Functions
-* Azure Functions in AKS (Azure Kubernetes Service)
+* Azure Kubernetes Service (AKS)

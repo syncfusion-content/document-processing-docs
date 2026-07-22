@@ -42,9 +42,16 @@ Install the [Vue Spreadsheet Editor](https://www.npmjs.com/package/@syncfusion/e
 npm install @syncfusion/ej2-vue-spreadsheet
 ```
 
+## Register a Syncfusion License Key
+
+Before initializing the Syncfusion Vue Spreadsheet control, generate a Syncfusion license key and register it in the application.
+
+- [Generate a Syncfusion License Key](https://help.syncfusion.com/document-processing/licensing/how-to-generate)
+- [Register a Syncfusion License Key in a Vue Application](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#vuejs)
+
 ## Add CSS references
 
-Add the following Spreadsheet and dependent component style references in the **\<style\>** section. Replace the existing content with the theme import code below. The following example uses the `Tailwind 3` theme.
+Add the following Spreadsheet and dependent component style references in the **\<style\>** section. Replace the existing content with the theme import code below.
 
 {% tabs %}
 {% highlight css tabtitle="~/src/App.vue" %}
@@ -62,9 +69,7 @@ Add the following Spreadsheet and dependent component style references in the **
 {% endhighlight %}
 {% endtabs %}
 
-Syncfusion also ships additional built-in themes. To use a different theme, replace `tailwind3.css` with the theme of your choice (for example, `bootstrap5.css`, `fluent2.css`, etc.) in all `@import` statements.
-
-> To know more about built-in themes and CSS reference for individual components, refer to the [themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) section.
+> **Note:** This example uses the `Tailwind3` theme. To use a different built-in theme, replace the `tailwind3.css` references with the corresponding theme stylesheets. Refer to the [Themes documentation](https://ej2.syncfusion.com/vue/documentation/appearance/theme) for information about the available themes and the different ways to include theme styles in a Vue application.
 
 ## Add the Vue Spreadsheet component to the application
 

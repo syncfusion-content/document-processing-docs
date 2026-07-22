@@ -11,7 +11,7 @@ documentation: ug
 
 This article provides a step-by-step guide for setting up a React application using Create React App and integrating React Spreadsheet Editor.
 
-> **Note:** Create React App (CRA) is no longer actively maintained, and the React team recommends modern build tools such as [Vite](https://vitejs.dev/) or [Next.js](https://nextjs.org/) for new projects. This guide remains available for existing CRA-based projects. To start a new project with Next.js, see [Getting Started with the React Spreadsheet Component in a Next.js Project](./nextjs-getting-started.md).
+> **Note:** Create React App (CRA) is no longer actively maintained, and the React team recommends modern build tools such as [Vite](https://vitejs.dev/) or [Next.js](https://nextjs.org/) for new projects. This guide remains available for existing CRA-based projects. To start a new project with Next.js, see [Getting Started with the React Spreadsheet Component in a Next.js Project](./nextjs-getting-started).
 
 ## Prerequisites
 
@@ -67,7 +67,7 @@ yarn add @syncfusion/ej2-react-spreadsheet
 
 ## Add CSS references
 
-Add the following Spreadsheet and dependent component style references to the `src/App.css` file. Replace the existing content with the theme import code below. The following example uses the `Tailwind 3` theme.
+Add the following Spreadsheet and dependent component style references to the `src/App.css` file. Replace the existing content with the theme import code below.
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
@@ -82,9 +82,7 @@ Add the following Spreadsheet and dependent component style references to the `s
 @import '../node_modules/@syncfusion/ej2-react-spreadsheet/styles/tailwind3.css';
 ```
 
-Syncfusion also ships additional built-in themes. To use a different theme, replace `tailwind3.css` with the theme of your choice (for example, `bootstrap5.css`, `fluent2.css`, etc.) in all `@import` statements.
-
-> To know more about built-in themes and CSS reference for individual components, refer to the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) section.
+> **Note:** This example uses the `Tailwind3` theme. To use a different built-in theme, replace the `tailwind3.css` references with the corresponding theme stylesheets. Refer to the [Themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme) for information about the available themes and the different ways to include theme styles in a React application.
 
 ## Add the Syncfusion® React Spreadsheet Component
 

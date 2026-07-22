@@ -6,14 +6,15 @@ control: PowerPoint
 documentation: UG
 ---
 
-# Create PowerPoint document in Azure Platform 
+# Create PowerPoint document in Microsoft Azure
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **create PowerPoint document in Azure Platform** within a few lines of code.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **create a PowerPoint document in Microsoft Azure** within a few lines of code.
 
-N> If this is your first time working with Azure, please refer to the dedicated Azure development resources. This section explains how to create PowerPoint document in C# using the PowerPoint library (Presentation) in Azure. 
+N> If this is your first time working with Azure, please refer to the dedicated Azure development resources. The sections linked below explain how to create a PowerPoint document in C# using the PowerPoint library (Presentation) in each supported Azure service.
 
-## Prerequisites 
-* An active **Microsoft Azure subscription** is required. If you don’t have one, please [create an account](https://portal.azure.com/#home) before starting.
+## Prerequisites
+* An active [Azure subscription](https://azure.microsoft.com/en-us/free/) is required. If you don't have one, please [create a free account](https://azure.microsoft.com/en-us/free/) before starting.
+* Visual Studio 2022 with the **Azure development** workload installed (the **ASP.NET and web development** workload is also required for the App Service samples).
 
 ## Azure Services
 <table>
@@ -45,4 +46,12 @@ NuGet packages required<br/></th></tr></thead>
 <br/></td><td>
 {{'[Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core)' | markdownify}}
  <br/></td></tr>
+ <tr>
+<td>
+{{'[Azure Functions (Flex Consumption)](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-powerpoint-presentation-in-azure-functions-flex-consumption)' | markdownify}}
+<br/></td><td>
+{{'[Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core)' | markdownify}}
+ <br/></td></tr>
 </table>
+
+N> The `Syncfusion.Presentation.Net.Core` package targets .NET 8.0 and later, while `Syncfusion.Presentation.AspNet` targets .NET Framework 4.6.2 and later. Starting with v16.2.0.x, you must also register a Syncfusion license key in your application; see the [licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details.

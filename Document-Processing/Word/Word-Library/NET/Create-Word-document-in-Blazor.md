@@ -8,13 +8,13 @@ documentation: UG
 
 # Create Word Document in Blazor
 
-Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, a **create a Word document in Blazor**.
+Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in Blazor**.
 
 To quickly get started with creating a Word document in Blazor, watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=yVfDlpewbpU" %}
 
-## Blazor Web App Server Application
+## Blazor Web App (Server)
 
 {% tabcontents %}
 
@@ -40,11 +40,19 @@ Step 1: Create a new C# Blazor Web app project.
 
 Step 2: Install the `Syncfusion.DocIO.Net.Core` NuGet package.
 
-To **create a Word document in a Blazor Web App Server**, install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) into the Blazor project.
+To create a Word document in a Blazor Web App, install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) into the Blazor project.
 
 ![Install DocIO.NET Core NuGet Package](Blazor_Images/Install_Nuget.png)
 
-N> Starting with v16.2.0.x, if Syncfusion<sup>&reg;</sup> assemblies are referenced from trial setup or from the NuGet feed, the "Syncfusion.Licensing" assembly reference must also be added and a license key included in projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the https://www.nuget.org/packages/Syncfusion.Licensing NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 3: Create a Razor file named `DocIO.razor` in the `Pages` folder, which is located inside the `Components` folder.
 
@@ -307,14 +315,22 @@ Step 1: Create a new C# Blazor Web app project.
 * Select the project location, type the project name and press enter.
 * Then choose **Create project**.
 
-Step 2: To **create a Word document in Blazor Web app Server**, install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) to the Blazor project.
+Step 2: To create a Word document in a Blazor Web App, install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) to the Blazor project.
 * Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 * Ensure you're in the project root directory where your .csproj file is located.
 * Run the command `dotnet add package Syncfusion.DocIO.Net.Core` to install the NuGet package.
 
 ![Add Syncfusion.DocIO.Net.Core NuGet package](Blazor_Images/Command-to-add-NuGet-package-for-Server.png)
 
-N> Starting with v16.2.0.x, if Syncfusion<sup>&reg;</sup> assemblies are referenced from trial setup or from the NuGet feed, the "Syncfusion.Licensing" assembly reference must also be added and a license key included in projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the https://www.nuget.org/packages/Syncfusion.Licensing NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 3: Create a Razor file named `DocIO.razor` in the `Pages` folder, which is located inside the `Components` folder.
 
@@ -600,7 +616,15 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 ![Install the Syncfusion.DocIO.Net.Core NuGet package](Blazor_Images/Install-Syncfusion.DocIO.Net.Core-NuGet.png)
 
-N> Starting with v16.2.0.x, if Syncfusion<sup>&reg;</sup> assemblies are referenced from trial setup or from the NuGet feed, the "Syncfusion.Licensing" assembly reference must also be added and a license key included in projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the https://www.nuget.org/packages/Syncfusion.Licensing NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 3: Create a Razor file named `DocIO.razor` in the `Pages` folder, which is located inside the `Components` folder.
 
@@ -872,7 +896,15 @@ To **create a Word document in a Blazor WASM Standalone app**, install [Syncfusi
 
 ![Install DocIO.NET Core NuGet Package](Blazor_Images/Install_Nuget.png)
 
-N> Starting with v16.2.0.x, if Syncfusion<sup>&reg;</sup> assemblies are referenced from trial setup or from the NuGet feed, the "Syncfusion.Licensing" assembly reference must also be added and a license key included in projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the https://www.nuget.org/packages/Syncfusion.Licensing NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 3: Create a Razor file named `DocIO.razor` in the `Pages` folder.
 
@@ -1099,14 +1131,22 @@ Step 1: Create a new C# Blazor WASM Standalone app project.
 * Select the project location, type the project name and press enter.
 * Then choose **Create project**.
 
-Step 2: To **create a Word document in Blazor WASM Standalone app**, install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) to the Blazor project.
+Step 2: To create a Word document in a Blazor WASM Standalone app, install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) to the Blazor project.
 * Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 * Ensure you're in the project root directory where your .csproj file is located.
 * Run the command `dotnet add package Syncfusion.DocIO.Net.Core` to install the NuGet package.
 
 ![Add Syncfusion.DocIO.Net.Core NuGet package](Blazor_Images/Command-to-add-NuGet-package-for-WASM.png)
 
-N> Starting with v16.2.0.x, if Syncfusion<sup>&reg;</sup> assemblies are referenced from trial setup or from the NuGet feed, the "Syncfusion.Licensing" assembly reference must also be added and a license key included in projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the https://www.nuget.org/packages/Syncfusion.Licensing NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 3: Create a Razor file named `DocIO.razor` in the `Pages` folder.
 
@@ -1355,7 +1395,15 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 ![Install the Syncfusion.DocIO.Net.Core NuGet package](Blazor_Images/Install-Syncfusion.DocIO.Net.Core-NuGet.png)
 
-N> Starting with v16.2.0.x, if Syncfusion<sup>&reg;</sup> assemblies are referenced from trial setup or from the NuGet feed, the "Syncfusion.Licensing" assembly reference must also be added and a license key included in projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the https://www.nuget.org/packages/Syncfusion.Licensing NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 3: Create a Razor file named `DocIO.razor` in the `Pages` folder.
 

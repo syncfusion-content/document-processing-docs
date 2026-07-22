@@ -9,14 +9,14 @@ Step 1: Open the terminal (Ctrl+` ) and run the following command to create a C#
 ```
 dotnet new mvc -n CreatePdfASPNETCoreAPP
 ```
-Step 2: Replace ****CreatePdfASPNETCoreAPP** with your desired project name.
+Step 2: Optionally, replace `CreatePdfASPNETCoreAPP` with your desired project name in the command above.
 
 Step 3: Navigate to the project directory using the following command
 
 ```
 cd CreatePdfASPNETCoreAPP
 ```
-Step 4: Use the following command in the terminal to add the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) package to your project.
+Step 4: Use the following command in the terminal to add the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) package to your project.
 
 ```
 dotnet add package Syncfusion.Pdf.Net.Core
@@ -53,7 +53,7 @@ Step 6: A default action method named Index will be present in HomeController.cs
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Add a new action method named ``CreatePDFDocument`` in HomeController.cs file and include the below code example to generate a PDF document using the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class. Then use the [DrawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) object to draw the text on the PDF page.
+Step 7: Add a new action method named `CreateDocument` in HomeController.cs file and include the below code example to generate a PDF document using the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class. Then use the [DrawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) object to draw the text on the PDF page.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -94,7 +94,7 @@ dotnet build
 
 Step 9: Run the project.
 
-Run the following command in terminal to build the project.
+Run the following command in terminal to run the project.
 
 ```
 dotnet run
