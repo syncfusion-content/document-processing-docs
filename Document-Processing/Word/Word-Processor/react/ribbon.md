@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Ribbon in React Document editor control | Syncfusion
-description: Learn here all about the Ribbon UI in Syncfusion React Document editor control, how to switch between Ribbon and Toolbar modes.
+title: Ribbon in React DOCX Editor | Syncfusion
+description: Learn here all about the Ribbon UI in the Syncfusion React DOCX Editor, how to switch between Ribbon and Toolbar modes.
 platform: document-processing
 control: Ribbon
 documentation: ug
@@ -34,11 +34,11 @@ To use Ribbon mode, add Document Editor component and its dependent component st
 @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-documenteditor/styles/material.css";
+@import '../node_modules/@syncfusion/ej2-documenteditor/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-ribbon/styles/material.css';/* Required for Ribbon */
 ```
 
-The following code shows the how to enable the `Ribbon` in Document Editor.
+The following code shows how to enable the `Ribbon` in the Document Editor.
 
 {% raw %}
 
@@ -86,7 +86,7 @@ Document Editor provides two different Ribbon layouts:
 
 By default, `ribbonLayout` is set to `Simplified`. 
 
-The following code shows the how to configure the ribbon layout in Document Editor:
+The following code shows how to configure the ribbon layout in the Document Editor:
 
 {% raw %}
 
@@ -98,8 +98,8 @@ import { DocumentEditorContainerComponent, Ribbon, Toolbar } from '@syncfusion/e
 DocumentEditorContainerComponent.Inject(Toolbar, Ribbon);
 const Default = () => {
     let hostUrl = "https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/";
-    let container = React.useRef(null);;
-    // Initialize the Document Editor Container with Ribbon mode enabled
+    let container = React.useRef(null);
+    // Configure the Document Editor Container with the Classic ribbon layout
     return (
         <div className="control-pane">
             <div className="control-section">

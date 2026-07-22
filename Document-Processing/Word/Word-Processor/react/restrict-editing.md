@@ -15,12 +15,12 @@ domainurl: ##DomainURL##
 
 ## Configure on client side
 
-Document Editor provides options to protect and unprotect a document using the [enforceProtection](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#enforceprotection) and [stopProtection](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#stopprotection) APIs, enabling various restricting editing operations.
+The Document Editor provides options to protect and unprotect a document using the [enforceProtection](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#enforceprotection) and [stopProtection](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#stopprotection) APIs, enabling various restrict-editing operations.
 
 
-### Read only mode
+### Read-only mode
 
-Document Editor supports protecting a document in read-only mode, where users can only view the content without making changes.
+The Document Editor supports protecting a document in read-only mode, where users can only view the content without making changes.
 
 The following example code illustrates how to enforce or remove read-only protection in the Document Editor.
 
@@ -68,7 +68,7 @@ export default App;
 
 ### Form filling mode
 
-Document Editor supports protecting a document with form-filling restrictions, allowing users to edit only form fields.
+The Document Editor supports protecting a document with form-filling restrictions, allowing users to edit only form fields.
 
 The following example code illustrates how to enforce or remove form-filling restrictions in the Document Editor.
 
@@ -118,7 +118,7 @@ export default App;
 
 ### Comments only mode
 
-Document Editor supports protecting a document in comments-only mode, allowing users to add or edit comments only.
+The Document Editor supports protecting a document in comments-only mode, allowing users to add or edit comments only.
 
 The following example code illustrates how to enforce and remove comments-only protection in the Document Editor.
 
@@ -136,7 +136,7 @@ function App() {
   let container: DocumentEditorContainerComponent;
   React.useEffect(() => {
     let sfdt = {"sfdt":"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"};
-   container.documentEditor.open(JSON.stringify(sfdt));
+    container.documentEditor.open(JSON.stringify(sfdt));
   }, []);
   function enforceProtection() {
     //enforce protection
@@ -168,7 +168,7 @@ export default App;
 
 ### Track changes only mode
 
-Document Editor supports protecting a document in revisions-only mode, allowing users to view the document and make corrections while tracking all changes. Users cannot accept or reject tracked changes; only the author can review and finalize them later.
+The Document Editor supports protecting a document in revisions-only mode, allowing users to view the document and make corrections while tracking all changes. Users cannot accept or reject tracked changes; only the author can review and finalize them later.
 
 The following example code illustrates how to enforce and remove revisions-only protection in the Document Editor.
 
@@ -218,7 +218,7 @@ export default App;
 
 ### Format restrictions
 
-Enforces document protection using the specified credentials. In the [enforceProtection](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#enforceprotection-1) method, the second parameter represents limitToFormatting, and the third parameter represents isReadOnly.
+The Document Editor enforces document protection using the specified credentials. In the [enforceProtection](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#enforceprotection-1) method, the second parameter represents `limitToFormatting`, and the third parameter represents `isReadOnly`.
 
 {% tabs %}
 {% highlight ts tabtitle="TS" %}
@@ -246,7 +246,7 @@ For more information on configuring restrict editing on the server side, refer t
 
 The [currentUser](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/documenteditor#currentuser) property can be used to authorize the current document user by name, email, or user group.
 
-The following code example demonstrates how to set the currentUser.
+The following code example demonstrates how to set the `currentUser`.
 
 {% tabs %}
 {% highlight ts tabtitle="TS" %}
@@ -257,10 +257,12 @@ container.documentEditor.currentUser = 'engineer@mycompany.com';
 {% endtabs %}
 
 ## Protect document with editable region
-User can select a specific section and mark it as an editable region, allowing modification only in that part. The rest of the document remains protected from any changes.
+
+Users can select a specific section and mark it as an editable region, allowing modification only in that part. The rest of the document remains protected from any changes.
 
 ### Insert editable region
-Use the [insertEditingRegion](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#inserteditingregion) method to mark specific paragraphs as editable.This allows you to control editing by giving access to all users or only selected users.
+
+Use the [insertEditingRegion](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#inserteditingregion) method to mark specific paragraphs as editable. This allows you to control editing by giving access to all users or only selected users.
 
 The following example shows how to insert an editable region.
 {% tabs %}
@@ -311,7 +313,7 @@ Restrict Editing Pane provides the following options to manage the document:
 * To apply editing restrictions to the current document, select the read only check box.
 * To add users to the current document, select more users option and add user from the popup dialog.
 * To include range permission to the current document, select parts of the document and choose users who are allowed to freely edit them from the listed check box.
-* To apply the chosen editing restrictions, click the **YES,START ENFORCING PROTECTION** button. A dialog box displays asking for a   password to protect.
+* To apply the chosen editing restrictions, click the **YES, START ENFORCING PROTECTION** button. A dialog box displays asking for a password to protect.
 * To stop protection, select **STOP PROTECTION** button. A dialog box displays asking for a password to stop protection.
 
 The following code shows Restrict Editing Pane. To unprotect the document, use password '123'.
