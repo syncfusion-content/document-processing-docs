@@ -32,7 +32,15 @@ Step 2: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/S
 
 ![Install DocIO .NET Core NuGet package](ASP-NET-Core_images/Install_Nuget.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. To do so, also install the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) NuGet package and register the license key by calling `Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")` in your application startup. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn how to register the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the https://www.nuget.org/packages/Syncfusion.Licensing NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 3: Include the following namespaces in the HomeController.cs file.
 
@@ -307,7 +315,7 @@ Step 8: Run the project.
 
 Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
 
-N> The code sample references image files (AdventureCycle.jpg, Mountain-200.jpg, Mountain-300.jpg, Road-550-W.jpg). Download these assets from the [GitHub sample](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/ASP.NET-Core) and place them in the application's output directory, or set their **Copy to Output Directory** property to **Copy always** in Solution Explorer.
+N> The code sample references image files (AdventureCycle.jpg, Mountain-200.jpg, Mountain-300.jpg, Road-550-W.jpg). Download these assets from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/ASP.NET-Core/Create-Word-Document/Data) and place them in the application's output directory, or set their **Copy to Output Directory** property to **Copy always** in Solution Explorer.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/ASP.NET-Core).
 
@@ -341,7 +349,15 @@ Step 2: To **create a Word document in ASP.NET Core Web app**, install [Syncfusi
 
 ![Add Syncfusion.DocIO.Net.Core NuGet package](ASP-NET-Core_images/Command-to-add-NuGet-package-AspNetCore.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Register the license key by calling `Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")` in your application startup. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn how to register the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the https://www.nuget.org/packages/Syncfusion.Licensing NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 3: Include the following namespaces in the HomeController.cs file.
 
@@ -624,7 +640,7 @@ Run the following command in the terminal to run the project.
 dotnet run
 ```
 
-N> The code sample references image files (AdventureCycle.jpg, Mountain-200.jpg, Mountain-300.jpg, Road-550-W.jpg). Download these assets from the [GitHub sample](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/ASP.NET-Core) and ensure they are present in the application's working directory (next to the .csproj file).
+N> The code sample references image files (AdventureCycle.jpg, Mountain-200.jpg, Mountain-300.jpg, Road-550-W.jpg). Download these assets from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/ASP.NET-Core/Create-Word-Document/Data) and ensure they are present in the application's working directory (next to the `.csproj` file).
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/ASP.NET-Core).
 
@@ -666,7 +682,15 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 ![Install the Syncfusion.DocIO.Net.Core NuGet package](ASP-NET-Core_images/Install-Syncfusion.DocIO.NETCore-NuGet.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Register the license key by calling `Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")` in your application startup. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn how to register the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the https://www.nuget.org/packages/Syncfusion.Licensing NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 3: Include the following namespaces in the HomeController.cs file.
 
@@ -941,7 +965,7 @@ Step 8: Run the project.
 
 Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.
 
-N> The code sample references image files (AdventureCycle.jpg, Mountain-200.jpg, Mountain-300.jpg, Road-550-W.jpg). Download these assets from the [GitHub sample](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/ASP.NET-Core) and ensure they are copied to the application's output directory.
+N> The code sample references image files (AdventureCycle.jpg, Mountain-200.jpg, Mountain-300.jpg, Road-550-W.jpg). Download these assets from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/ASP.NET-Core/Create-Word-Document/Data) and ensure they are copied to the application's output directory.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/ASP.NET-Core).
 
