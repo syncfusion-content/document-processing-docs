@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Form fields in React Document editor component | Syncfusion
-description: Learn here all about Form fields in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
+title: Form fields in React DOCX Editor component | Syncfusion
+description: Learn here all about Form fields in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
 control: Form fields 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form fields in React Document editor component
+# Form fields in React Document Editor component
 
-[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) Container component provide support for inserting Text, CheckBox, DropDown form fields through in-built toolbar.
+[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) Container component provides support for inserting Text, CheckBox, DropDown form fields through in-built toolbar.
 
 ![Form Fields](images/toolbar-form-fields.png)
 
@@ -29,7 +29,7 @@ documentEditor.editor.insertFormField('DropDown');
 
 ## Get form field names
 
-All the form fields names form current document can be retrieved using [`getFormFieldNames()`](https://ej2.syncfusion.com/react/documentation/api/document-editor#getformfieldnames).
+All the form fields names from current document can be retrieved using [`getFormFieldNames()`](https://ej2.syncfusion.com/react/documentation/api/document-editor#getformfieldnames).
 
 ```ts
 let formFieldsNames: string[] = documentEditor.getFormFieldNames();
@@ -67,7 +67,7 @@ checkboxfieldInfo.defaultValue = true;
 checkboxfieldInfo.name = "Check2";
 documentEditor.setFormFieldInfo('Check1',checkboxfieldInfo);
 
-// Set checkbox form field properties
+// Set dropdown form field properties
 let dropdownfieldInfo: DropDownFormFieldInfo = documentEditor.getFormFieldInfo('Drop1') as DropDownFormFieldInfo;
 dropdownfieldInfo.dropdownItems = ['One','Two', 'Three'];
 dropdownfieldInfo.name = "Drop2";
@@ -124,9 +124,9 @@ documentEditor.resetFormFields();
 
 Document Editor provides support for protecting the document with `FormFieldsOnly` protection. In this protection, user can only fill form fields in the document.
 
-Document editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#stopprotection) API.
+Document Editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#stopprotection) API.
 
-The following example code illustrates how to enforce and stop protection in Document editor container.
+The following example code illustrates how to enforce and stop protection in Document Editor container.
 
 ```ts
 import { createRoot } from 'react-dom/client';
@@ -148,8 +148,8 @@ function App() {
   }
   return (
     <div>
-      <button onClick={enforceProtection}>EnforceProtection</button>
-      <button onClick={stopProtection}>StopProtection</button>
+      <button onClick={EnforceProtection}>EnforceProtection</button>
+      <button onClick={StopProtection}>StopProtection</button>
       <DocumentEditorContainerComponent
         id="container"
         ref={(scope) => {
