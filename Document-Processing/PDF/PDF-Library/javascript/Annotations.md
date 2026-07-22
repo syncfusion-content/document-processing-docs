@@ -9,66 +9,15 @@ documentation: UG
 
 The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) provides support for interactive annotations. You can add, delete and modify the annotation from the PDF documents.
 
+For first-time setup, refer to the [Getting Started with JavaScript PDF Library](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/getting-started) guide.
+
 ## Adding annotations to a PDF document
 
-This example demonstrates how to add annotations to a PDF document using the [PdfPopupAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfpopupannotation) class. Adding annotations allows users to include comments, highlights, shapes, and other interactive elements within a PDF, enhancing collaboration and document review.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfPopupAnnotation, PdfPopupIcon, PdfAnnotationBorder} from '@syncfusion/ej2-pdf';
-
-// Creates a new PDF document
-let document: PdfDocument = new PdfDocument();
-// Adds a new page to the PDF
-let page: PdfPage = document.addPage();
-// Creates a new popup annotation
-let popup: PdfPopupAnnotation = new PdfPopupAnnotation(
-    'Test popup annotation',
-    { x: 10, y: 40, width: 30, height: 30 },
-    {
-        author: 'Syncfusion',
-        subject: 'General',
-        color: { r: 255, g: 255, b: 0 },
-        icon: PdfPopupIcon.newParagraph,
-        open: true
-    });
-popup.border = new PdfAnnotationBorder({width: 4, hRadius: 20, vRadius: 30});
-// Adds annotation to the page
-page.annotations.add(popup);
-// Saves and download the PDF document
-document.save('output.pdf');
-// Destroy the document
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-
-// Creates a new PDF document
-var document = new ej.pdf.PdfDocument();
-// Adds a new page to the PDF
-var page = document.addPage();
-// Creates a new popup annotation
-var popup = new ej.pdf.PdfPopupAnnotation('Test popup annotation',{x:10,y:40,width:30,height:30},{
-author:'Syncfusion',
-subject:'General',
-color:{r:255,g:255,b:0},
-icon:ej.pdf.PdfPopupIcon.newParagraph,
-open:true
-});
-popup.border = new ej.pdf.PdfAnnotationBorder({width:4,hRadius:20,vRadius:30});
-// Adds annotation to the page
-page.annotations.add(popup);
-// Saves and download the PDF document
-document.save('output.pdf');
-// Destroy the document
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
+The example below demonstrates how to add a rectangle annotation to a PDF document using the [PdfRectangleAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfrectangleannotation) class. The same pattern applies to every supported annotation type covered later in this document.
 
 ## Supported annotation types
 
-### File Link Annotation 
+### File Link Annotation
 
 This example demonstrates how to add a file link annotation to a PDF page using the [PdfFileLinkAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdffilelinkannotation) class. A file link annotation allows linking to an external file from within a PDF document, enabling users to access related resources directly.
 
@@ -93,7 +42,7 @@ let fileLink: PdfFileLinkAnnotation = new PdfFileLinkAnnotation(
     });
 // Adds annotation to the page
 page.annotations.add(fileLink);
-// Saves and download the PDF document
+// Save the document
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
@@ -115,13 +64,15 @@ action:"app.alert('Launching file')"
 });
 // Adds annotation to the page
 page.annotations.add(fileLink);
-// Saves and download the PDF document
+// Save the document
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
+
+> The `action` property is an Acrobat JavaScript expression evaluated by the PDF viewer (for example, Adobe Reader or Acrobat), not by the Syncfusion library itself.
 
 ### Free Text Annotation
 
@@ -140,7 +91,7 @@ let freeText: PdfFreeTextAnnotation = new PdfFreeTextAnnotation({ x: 250, y: 260
     {
         text: 'Free Text with Callout',
         annotationIntent: PdfAnnotationIntent.freeTextCallout,
-        calloutLines: [{ x: 200, y: 320 }, { x: 260, y: 300 }, { x: 260, y: 300 }],
+        calloutLines: [{ x: 200, y: 320 }, { x: 260, y: 300 }, { x: 260, y: 260 }],
         lineEndingStyle: PdfLineEndingStyle.openArrow,
         font: document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular),
         textMarkUpColor: { r: 40, g: 40, b: 40 },
@@ -152,7 +103,7 @@ let freeText: PdfFreeTextAnnotation = new PdfFreeTextAnnotation({ x: 250, y: 260
     });
 // Adds annotation to the page
 page.annotations.add(freeText);
-// Saves and download the PDF document
+// Save the document
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
@@ -168,7 +119,7 @@ var page = document.addPage();
 var freeText = new ej.pdf.PdfFreeTextAnnotation({x:250,y:260,width:180,height:80},{
 text:'Free Text with Callout',
 annotationIntent:ej.pdf.PdfAnnotationIntent.freeTextCallout,
-calloutLines:[{x:200,y:320},{x:260,y:300},{x:260,y:300}],
+calloutLines:[{x:200,y:320},{x:260,y:300},{x:260,y:260}],
 lineEndingStyle:ej.pdf.PdfLineEndingStyle.openArrow,
 font:document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular),
 textMarkUpColor:{r:40,g:40,b:40},
@@ -180,7 +131,7 @@ border:new ej.pdf.PdfAnnotationBorder({width:1,hRadius:0,vRadius:0,style:ej.pdf.
 });
 // Adds annotation to the page
 page.annotations.add(freeText);
-// Saves and download the PDF document
+// Save the document
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
@@ -188,9 +139,11 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-### Line Annotation 
+### Line Annotation
 
 This example demonstrates how to add a line annotation to a PDF page using the [PdfLineAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdflineannotation) class. A line annotation allows drawing straight lines between two points on a PDF page, often used to highlight connections or indicate measurements.
+
+The line endings are configured through the [PdfAnnotationLineEndingStyle](https://ej2.syncfusion.com/documentation/api/pdf/pdfannotationlineendingstyle) class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -216,7 +169,7 @@ lineAnnotation.leaderLine = 0;
 lineAnnotation.caption = new PdfAnnotationCaption({ cap: true, type: PdfLineCaptionType.inline });
 // Adds annotation to the page
 page.annotations.add(lineAnnotation);
-// Saves and download the PDF document
+// Save the document
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
@@ -244,7 +197,7 @@ lineAnnotation.leaderLine = 0;
 lineAnnotation.caption = new ej.pdf.PdfAnnotationCaption({cap:true,type:ej.pdf.PdfLineCaptionType.inline});
 // Adds annotation to the page
 page.annotations.add(lineAnnotation);
-// Saves and download the PDF document
+// Save the document
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
@@ -272,7 +225,7 @@ let stamp: PdfRubberStampAnnotation = new PdfRubberStampAnnotation({ x: 40, y: 6
     });
 // Adds annotation to the page
 page.annotations.add(stamp);
-// Saves and download the PDF document
+// Save the document
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
@@ -290,7 +243,61 @@ var stamp = new ej.pdf.PdfRubberStampAnnotation({x:40,y:60,width:80,height:20},{
 });
 // Adds annotation to the page
 page.annotations.add(stamp);
-// Saves and download the PDF document
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Custom appearance in stamp annotation
+
+This example demonstrates how to embed a custom image as the appearance of a rubber stamp annotation. The image is loaded at runtime and drawn into the annotation's normal appearance template.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import {PdfDocument, PdfPage, PdfRubberStampAnnotation, PdfImage, PdfBitmap} from '@syncfusion/ej2-pdf';
+
+// Load an existing PDF document
+let document: PdfDocument = new PdfDocument(data);
+// Get the first page
+let page: PdfPage = document.getPage(0) as PdfPage;
+// Load the stamp image as bytes
+const imgResp = await fetch('stamp.png');
+const imageBytes: Uint8Array = new Uint8Array(await imgResp.arrayBuffer());
+// Create an image object from the byte array
+let image: PdfImage = new PdfBitmap(imageBytes);
+// Create a new rubber stamp annotation
+let annotation: PdfRubberStampAnnotation = new PdfRubberStampAnnotation({x: 50, y: 100, width: 100, height: 50});
+// Access the normal template of the appearance and draw the image
+annotation.appearance.normal.graphics.drawImage(image, {x: 0, y: 0, width: 100, height: 50});
+// Add annotation to the page
+page.annotations.add(annotation);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load an existing PDF document
+var document = new ej.pdf.PdfDocument(data);
+// Get the first page
+var page = document.getPage(0);
+// Load the stamp image as bytes
+var imgResp = await fetch('stamp.png');
+var imageBytes = new Uint8Array(await imgResp.arrayBuffer());
+// Create an image object from the byte array
+var image = new ej.pdf.PdfBitmap(imageBytes);
+// Create a new rubber stamp annotation
+var annotation = new ej.pdf.PdfRubberStampAnnotation({x: 50, y: 100, width: 100, height: 50});
+// Access the normal template of the appearance and draw the image
+annotation.appearance.normal.graphics.drawImage(image, {x: 0, y: 0, width: 100, height: 50});
+// Add annotation to the page
+page.annotations.add(annotation);
+// Save the document
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
@@ -300,7 +307,7 @@ document.destroy();
 
 ### Ink Annotation
 
-This example demonstrates how to add an ink annotation to a PDF page using the [PdfInkAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfinkannotation) class. An ink annotation allows drawing freehand marks or sketches directly on a PDF page.
+This example demonstrates how to add an ink annotation to a PDF page using the [PdfInkAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfinkannotation) class. An ink annotation allows drawing freehand marks or sketches directly on a PDF page. The `pointsCollection` option defines the actual multi-stroke ink paths; the `points` argument passed to the constructor represents the bounding geometry that encloses those paths.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -342,7 +349,7 @@ let annotation: PdfInkAnnotation = new PdfInkAnnotation(
 page.annotations.add(annotation);
 // Save the document
 document.save('output.pdf');
-// Close the document
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
@@ -373,7 +380,7 @@ var annotation = new ej.pdf.PdfInkAnnotation(
 page.annotations.add(annotation);
 // Save the document
 document.save('output.pdf');
-// Close the document
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
@@ -381,7 +388,7 @@ document.destroy();
 
 ### Pop-up Annotation
 
-This example demonstrates how to add a popup annotation to a PDF document using the [PdfPopupAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfpopupannotation) class. A popup annotation allows you to display additional information or comments within the PDF at a specified position and size.
+This example demonstrates how to add a popup annotation to a PDF document using the [PdfPopupAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfpopupannotation) class. A popup annotation displays a textual note anchored to a position on the page.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -408,7 +415,7 @@ let annotation: PdfPopupAnnotation = new PdfPopupAnnotation('Review this paragra
 page.annotations.add(annotation);
 // Save the document
 document.save('output.pdf');
-// Close the document
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
@@ -432,7 +439,7 @@ var annotation = new ej.pdf.PdfPopupAnnotation('Review this paragraph',{x:10,y:4
 page.annotations.add(annotation);
 // Save the document
 document.save('output.pdf');
-// Close the document
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
@@ -462,7 +469,7 @@ let annotation: PdfAttachmentAnnotation = new PdfAttachmentAnnotation(
 page.annotations.add(annotation);
 // Save the document
 document.save('output.pdf');
-// Close the document
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
@@ -489,7 +496,7 @@ var annotation = new ej.pdf.PdfAttachmentAnnotation(
 page.annotations.add(annotation);
 // Save the document
 document.save('output.pdf');
-// Close the document
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
@@ -513,7 +520,7 @@ let annotation: PdfUriAnnotation = new PdfUriAnnotation({ x: 100, y: 150, width:
 page.annotations.add(annotation);
 // Save the document
 document.save('output.pdf');
-// Close the document
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
@@ -529,7 +536,7 @@ var annotation = new ej.pdf.PdfUriAnnotation({x:100,y:150,width:200,height:100},
 page.annotations.add(annotation);
 // Save the document
 document.save('output.pdf');
-// Close the document
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
@@ -538,6 +545,8 @@ document.destroy();
 ### Document Link Annotation
 
 This example demonstrates how to add a document link annotation to a PDF page using the [PdfDocumentLinkAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocumentlinkannotation) class. A document link annotation allows creating clickable links that navigate to a specific page or location within the same PDF document.
+
+`PdfDestination` is constructed with a `PdfPage`, a position (`{ x, y }`), and a [PdfDestinationMode](https://ej2.syncfusion.com/documentation/api/pdf/pdfdestinationmode) enum value such as `fitToPage`, `fitToWidth`, `fitToHeight`, or `fitToBox`.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -550,16 +559,16 @@ let page: PdfPage = document.addPage();
 // Create new document link annotation
 let annotation: PdfDocumentLinkAnnotation = new PdfDocumentLinkAnnotation(
       { x: 80, y: 100, width: 120, height: 18 },
-      new PdfDestination(page, { x: 0, y: 0 }, {mode: PdfDestinationMode.fitToPage}),
+      new PdfDestination(page, { x: 0, y: 0 }, PdfDestinationMode.fitToPage),
       {
-color: { r: 0, g: 128, b: 0 }, opacity: 1,
-     border: new PdfAnnotationBorder({ width: 1, hRadius: 0, vRadius: 0, style: PdfBorderStyle.solid })}
-    );
+        color: { r: 0, g: 128, b: 0 }, opacity: 1,
+        border: new PdfAnnotationBorder({ width: 1, hRadius: 0, vRadius: 0, style: PdfBorderStyle.solid })
+      });
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
 document.save('output.pdf');
-// Close the document
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
@@ -572,14 +581,14 @@ var page = document.addPage();
 // Create new document link annotation
 var annotation = new ej.pdf.PdfDocumentLinkAnnotation(
   {x:80,y:100,width:120,height:18},
-  new ej.pdf.PdfDestination(page:page,{x:0,y:0},{mode:ej.pdf.PdfDestinationMode.fitToPage}),
+  new ej.pdf.PdfDestination(page, {x:0, y:0}, ej.pdf.PdfDestinationMode.fitToPage),
   {color:{r:0,g:128,b:0},opacity:1,border:new ej.pdf.PdfAnnotationBorder({width:1,hRadius:0,vRadius:0,style:ej.pdf.PdfBorderStyle.solid})}
 );
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
 document.save('output.pdf');
-// Close the document
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
@@ -600,17 +609,17 @@ let page: PdfPage = document.addPage();
 // Create a new redaction annotation
 let annotation: PdfRedactionAnnotation = new PdfRedactionAnnotation({ x: 100, y: 100, width: 100, height: 100 },
         {
-borderColor: { r: 255, g: 0, b: 0},
+          borderColor: { r: 255, g: 0, b: 0 },
           repeatText: true,
           overlayText: 'Sample Overlay',
           font: document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular),
-          textColor: { r: 0, g: 0, b: 0}
-});
+          textColor: { r: 0, g: 0, b: 0 }
+        });
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
 document.save('output.pdf');
-// Close the document
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
@@ -635,7 +644,7 @@ var annotation = new ej.pdf.PdfRedactionAnnotation(
 page.annotations.add(annotation);
 // Save the document
 document.save('output.pdf');
-// Close the document
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
@@ -656,12 +665,12 @@ let page: PdfPage = document.addPage();
 // Create a new water mark annotation
 let annotation: PdfWatermarkAnnotation = new PdfWatermarkAnnotation('Water Mark', { x: 50, y: 100, width: 100, height: 50 });
 // Set the color of the annotation
-annotation.color = { r: 0, g: 0, b: 0};
+annotation.color = { r: 0, g: 0, b: 0 };
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
 document.save('output.pdf');
-// Close the document
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
@@ -679,7 +688,7 @@ annotation.color = { r: 0, g: 0, b: 0 };
 page.annotations.add(annotation);
 // Save the document
 document.save('output.pdf');
-// Close the document
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
@@ -698,9 +707,8 @@ let document: PdfDocument = new PdfDocument();
 // Adds a new page to the PDF
 let page: PdfPage = document.addPage();
 // Create a new text markup annotation
-// Create a new text markup annotation
 let annotation: PdfTextMarkupAnnotation = new PdfTextMarkupAnnotation('Water Mark', {x: 0, y: 0, width: 0, height: 0}, {
-boundsCollection: [{ x: 50, y: 200, width: 120, height: 14}, { x: 50, y: 215, width: 90, height: 14}],
+       boundsCollection: [{ x: 50, y: 200, width: 120, height: 14}, { x: 50, y: 215, width: 90, height: 14}],
        textMarkupType: PdfTextMarkupAnnotationType.underline, author: 'Syncfusion', subject: 'Annotation',
        textMarkUpColor: { r: 0, g: 128, b: 255}, innerColor: { r: 0, g: 0, b: 255}, opacity: 0.5,
        border: new PdfAnnotationBorder({ width: 1, hRadius: 0, vRadius: 0, style: PdfBorderStyle.solid })
@@ -709,7 +717,7 @@ boundsCollection: [{ x: 50, y: 200, width: 120, height: 14}, { x: 50, y: 215, wi
 page.annotations.add(annotation);
 // Save the document
 document.save('output.pdf');
-// Close the document
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
@@ -746,13 +754,13 @@ var annotation = new ej.pdf.PdfTextMarkupAnnotation(
 page.annotations.add(annotation);
 // Save the document
 document.save('output.pdf');
-// Close the document
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
 
-## Rectangle Annotation
+### Rectangle Annotation
 
 This example demonstrates how to add a rectangle annotation to a PDF page using the [PdfRectangleAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfrectangleannotation) class. A rectangle annotation allows drawing rectangular shapes on a PDF document.
 
@@ -766,7 +774,7 @@ let document: PdfDocument = new PdfDocument();
 let page: PdfPage = document.addPage();
 // Create a new rectangle annotation with bounds
 let annotation: PdfRectangleAnnotation = new PdfRectangleAnnotation({ x: 50, y: 80, width: 200, height: 100 }, {
-text: 'Rect', author: 'Syncfusion', subject: 'Rectangle Annotation',
+       text: 'Rect', author: 'Syncfusion', subject: 'Rectangle Annotation',
        color: { r: 255, g: 0, b: 0 },
        innerColor: { r: 255, g: 240, b: 240 },
        opacity: 0.6,
@@ -776,7 +784,7 @@ text: 'Rect', author: 'Syncfusion', subject: 'Rectangle Annotation',
 page.annotations.add(annotation);
 // Save the document
 document.save('output.pdf');
-// Close the document
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
@@ -808,13 +816,13 @@ var annotation = new ej.pdf.PdfRectangleAnnotation(
 page.annotations.add(annotation);
 // Save the document
 document.save('output.pdf');
-// Close the document
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
 
-## Polygon Annotation
+### Polygon Annotation
 
 This example demonstrates how to add a polygon annotation to a PDF page using the [PdfPolygonAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfpolygonannotation) class. A polygon annotation allows drawing multi-sided shapes on a PDF document.
 
@@ -828,19 +836,19 @@ let document: PdfDocument = new PdfDocument();
 let page: PdfPage = document.addPage();
 // Create a new polygon annotation with bounds
 let annotation: PdfPolygonAnnotation = new PdfPolygonAnnotation(
-[{ x: 100, y: 300 }, { x: 150, y: 200 }, { x: 300, y: 200 }, { x: 350, y: 300 }, { x: 300, y: 400 }, { x: 150, y: 400 }],
+       [{ x: 100, y: 300 }, { x: 150, y: 200 }, { x: 300, y: 200 }, { x: 350, y: 300 }, { x: 300, y: 400 }, { x: 150, y: 400 }],
        {
-text: 'Polygon', author: 'Syncfusion', subject: 'Polygon Annotation',
+         text: 'Polygon', author: 'Syncfusion', subject: 'Polygon Annotation',
          color: { r: 0, g: 128, b: 255 },
          innerColor: { r: 220, g: 240, b: 255 },
          opacity: 0.7,
          border: new PdfAnnotationBorder({ width: 2, hRadius: 0, vRadius: 0, style: PdfBorderStyle.solid })
-    });
+       });
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
 document.save('output.pdf');
-// Close the document
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
@@ -879,13 +887,13 @@ var annotation = new ej.pdf.PdfPolygonAnnotation(
 page.annotations.add(annotation);
 // Save the document
 document.save('output.pdf');
-// Close the document
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
 
-## Circle Annotation
+### Circle Annotation
 
 This example demonstrates how to add a circle annotation to a PDF page using the [PdfCircleAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfcircleannotation) class. A circle annotation allows drawing circular or oval shapes on a PDF document.
 
@@ -899,19 +907,19 @@ let document: PdfDocument = new PdfDocument();
 let page: PdfPage = document.addPage();
 // Create a new circle annotation with circle bounds
 let annotation: PdfCircleAnnotation = new PdfCircleAnnotation({ x: 50, y: 100, width: 120, height: 120 }, {
-text: 'Diameter',
+       text: 'Diameter',
        author: 'Syncfusion',
-       color: { r: 255, g: 0, b: 0},
-       innerColor: { r: 255, g: 255, b: 200},
+       color: { r: 255, g: 0, b: 0 },
+       innerColor: { r: 255, g: 255, b: 200 },
        opacity: 0.9,
-       border: new PdfAnnotationBorder({ width: 2, hRadius: 0, vRadius: 0, style: PdfBorderStyle.dashed, dash: [3, 2]}),
+       border: new PdfAnnotationBorder({ width: 2, hRadius: 0, vRadius: 0, style: PdfBorderStyle.dashed, dash: [3, 2] }),
        measure: { unit: PdfMeasurementUnit.centimeter, type: PdfCircleMeasurementType.diameter }
 });
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
 document.save('output.pdf');
-// Close the document
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
@@ -944,12 +952,13 @@ var annotation = new ej.pdf.PdfCircleAnnotation(
 page.annotations.add(annotation);
 // Save the document
 document.save('output.pdf');
-// Close the document
+// Destroy the document
+document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
 
-## Ellipse Annotation
+### Ellipse Annotation
 
 This example demonstrates how to add an ellipse annotation to a PDF page using the [PdfEllipseAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfellipseannotation) class. An ellipse annotation allows drawing elliptical shapes on a PDF document.
 
@@ -963,9 +972,9 @@ let document: PdfDocument = new PdfDocument();
 let page: PdfPage = document.addPage();
 // Create a new ellipse annotation with bounds
 let annotation: PdfEllipseAnnotation = new PdfEllipseAnnotation({ x: 80, y: 120, width: 160, height: 100 }, {
-text: 'Ellipse', author: 'Syncfusion', subject: 'Ellipse Annotation',
-       color: { r: 0, g: 128, b: 255},
-       innerColor: { r: 220, g: 240, b: 255},
+       text: 'Ellipse', author: 'Syncfusion', subject: 'Ellipse Annotation',
+       color: { r: 0, g: 128, b: 255 },
+       innerColor: { r: 220, g: 240, b: 255 },
        opacity: 0.7,
        border: new PdfAnnotationBorder({ width: 1, hRadius: 0, vRadius: 0, style: PdfBorderStyle.solid })
     });
@@ -973,7 +982,7 @@ text: 'Ellipse', author: 'Syncfusion', subject: 'Ellipse Annotation',
 page.annotations.add(annotation);
 // Save the document
 document.save('output.pdf');
-// Close the document
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
@@ -1005,65 +1014,15 @@ var annotation = new ej.pdf.PdfEllipseAnnotation(
 page.annotations.add(annotation);
 // Save the document
 document.save('output.pdf');
-// Close the document
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
-
-## Custom appearance in stamp annotation
-
-This example demonstrates how to add a rubber stamp annotation to an existing PDF using the [PdfRubberStampAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfrubberstampannotation) class. This feature allows embedding custom images as stamp appearances within a specific location on the page.
-
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfRubberStampAnnotation, PdfImage, PdfBitmap} from '@syncfusion/ej2-pdf';
-
-// Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data);
-// Get the first page
-let page: PdfPage = document.getPage(0) as PdfPage;
-// Create a new rubber stamp annotation
-let annotation: PdfRubberStampAnnotation = new PdfRubberStampAnnotation({x: 50, y: 100, width: 100, height: 50});
-// Create new image object by using JPEG image data as Base64 string format
-let image: PdfImage = new PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
-// Access the normal template of the appearance and draw the image
-annotation.appearance.normal.graphics.drawImage(image, {x: 0, y: 0, width: 100, height: 50});
-// Add annotation to the page
-page.annotations.add(annotation);
-// Save the document
-document.save('output.pdf');
-// Destroy the document
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-
-// Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data);
-// Get the first page
-var page = document.getPage(0) as PdfPage;
-// Create a new rubber stamp annotation
-var annotation = new ej.pdf.PdfRubberStampAnnotation({x: 50, y: 100, width: 100, height: 50});
-// Create new image object by using JPEG image data as Base64 string format
-var image = new ej.pdf.PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
-// Access the normal template of the appearance and draw the image
-annotation.appearance.normal.graphics.drawImage(image, {x: 0, y: 0, width: 100, height: 50});
-// Add annotation to the page
-page.annotations.add(annotation);
-// Save the document
-document.save('output.pdf');
 // Destroy the document
 document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
-
 
 ## Measurement Annotations
 
-This example demonstrates how to access a measurement annotation from a PDF page using the [PdfLineAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdflineannotation) class. A measurement annotation allows defining and displaying dimensions such as distances or lengths within a PDF document.
+Measurement annotations display dimensions for distances, areas, radii, and angles directly on a PDF page.
 
 Common types of measurement annotations include:
 
@@ -1071,6 +1030,10 @@ Common types of measurement annotations include:
 * Circle - Used to measure circular dimensions.(Radius)
 * Square - Defines rectangular or square measurements.(Area)
 * Angle  - Displays angular measurements between two intersecting lines.(degrees)
+
+### Adding Measurement Annotations
+
+The example below adds a line measurement annotation using the [PdfLineAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdflineannotation) class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -1094,7 +1057,7 @@ let lineAnnotation: PdfLineAnnotation = new PdfLineAnnotation({ x: 80, y: 420 },
 lineAnnotation.caption = new PdfAnnotationCaption({ cap: true, type: PdfLineCaptionType.inline });
 // Adds annotation to the page
 page.annotations.add(lineAnnotation);
-// Saves and download the PDF document
+// Save the document
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
@@ -1114,13 +1077,13 @@ color:{r:255,g:0,b:0},
 innerColor:{r:255,g:255,b:0},
 lineEndingStyle:new ej.pdf.PdfAnnotationLineEndingStyle({begin:ej.pdf.PdfLineEndingStyle.circle,end:ej.pdf.PdfLineEndingStyle.diamond}),
 opacity:0.5,
-measurementUnit: PdfMeasurementUnit.centimeter
+measurementUnit: ej.pdf.PdfMeasurementUnit.centimeter
 });
 // Assigns the line caption type
 lineAnnotation.caption = new ej.pdf.PdfAnnotationCaption({cap:true,type:ej.pdf.PdfLineCaptionType.inline});
 // Adds annotation to the page
 page.annotations.add(lineAnnotation);
-// Saves and download the PDF document
+// Save the document
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
@@ -1128,7 +1091,9 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-The following code snippet explains how to add a measurement annotation in an existing PDF document.
+### Modifying Measurement Annotations
+
+The following code snippet explains how to modify a measurement annotation in an existing PDF document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -1140,13 +1105,13 @@ let document: PdfDocument = new PdfDocument(data);
 let page: PdfPage = document.getPage(0);
 // Access the annotation at index 0
 let annotation: PdfLineAnnotation = page.annotations.at(0) as PdfLineAnnotation;
-// Sets the measurement unit of line measurement annoation as centimeter
+// Sets the measurement unit of line measurement annotation as centimeter
 annotation.unit = PdfMeasurementUnit.centimeter;
 // Sets the flag to have measurement dictionary of the line annotation.
 annotation.measure = true;
 // Save the document
 document.save('output.pdf');
-// Close the document
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
@@ -1165,13 +1130,13 @@ if (annotation instanceof ej.pdf.PdfLineAnnotation) {
 }
 // Save the document
 document.save('output.pdf');
-// Close the document
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
 
-## Modifying the annotations
+## Modifying Annotations
 
 This example demonstrates how to modify an existing annotation in a PDF page using the [PdfAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfannotation) class. Modifying annotations allows updating properties such as position, color, content, or appearance, enabling customization and refinement of the document's interactive elements.
 
@@ -1191,7 +1156,7 @@ annotation.color = { r: 0, g: 128, b: 255};
 annotation.opacity = 0.5;
 // Save the document
 document.save('output.pdf');
-// Close the document
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
@@ -1211,13 +1176,13 @@ if (annotation instanceof ej.pdf.PdfPopupAnnotation) {
 }
 // Save the document
 document.save('output.pdf');
-// Close the document
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
 
-## Removing annotations from an existing PDF 
+## Removing Annotations
 
 This example demonstrates how to remove an annotation from a PDF page using the [PdfAnnotationCollection](https://ej2.syncfusion.com/documentation/api/pdf/pdfannotationcollection) class. Removing annotations allows deleting comments, shapes, or other interactive elements from a PDF document.
 
@@ -1237,7 +1202,7 @@ page.annotations.remove(annotation);
 page.annotations.removeAt(1);
 // Save the document
 document.save('output.pdf');
-// Close the document
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
@@ -1254,13 +1219,15 @@ page.annotations.remove(annotation);
 page.annotations.removeAt(1);
 // Save the document
 document.save('output.pdf');
-// Close the document
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
 
-## Flatten annotation
+> After `remove(annotation)` runs, the indices of subsequent annotations shift by one. Recompute the index passed to `removeAt()` if the collection was modified.
+
+## Flattening Annotations
 
 This example demonstrates how to flatten annotations in a PDF document using the [PdfAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfannotation) class. Flattening annotations converts interactive elements such as comments, highlights, and shapes into static content.
 
@@ -1297,15 +1264,23 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
+N> **Warning:** Flattening an annotation is **irreversible**. The interactive element is converted to static page content and cannot be restored. Save a backup of the original PDF before flattening.
+
 N> Setting `document.flatten = true;` flattens all interactive elements in the PDF, converting form fields and annotations into static content throughout the entire document.
 
-## Importing annotations
+## Importing Annotations
 
 This example demonstrates how to import annotations into a PDF document using the `importAnnotations` method. The DataFormat enum specifies the format of the annotation data being imported, such as FDF, XFDF, JSON, or XML.
+
+The example below loads the annotation data at runtime via `fetch` and assigns it to `jsonData` (the variable name is reused for clarity; the same flow applies to FDF, XFDF, and XML formats).
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import {PdfDocument, DataFormat} from '@syncfusion/ej2-pdf';
+
+// Load the annotation data (XFDF in this example)
+const annoResp = await fetch('annotations.xfdf');
+const jsonData: string = await annoResp.text();
 
 // Load the base PDF document from resources
 let document: PdfDocument = new PdfDocument(data);
@@ -1313,11 +1288,15 @@ let document: PdfDocument = new PdfDocument(data);
 document.importAnnotations(jsonData, DataFormat.json);
 // Save the PDF document
 document.save('output.pdf');
-// Close the document
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
+// Load the annotation data (XFDF in this example)
+var annoResp = await fetch('annotations.xfdf');
+var jsonData = await annoResp.text();
 
 // Load the base PDF document from resources
 var document = new ej.pdf.PdfDocument(data);
@@ -1325,13 +1304,22 @@ var document = new ej.pdf.PdfDocument(data);
 document.importAnnotations(jsonData, ej.pdf.DataFormat.json);
 // Save the PDF document
 document.save('output.pdf');
-// Close the document
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
 
-## Exporting annotations
+### Supported Data Formats
+
+| Format | File Extension | Strength                          | Use Case                       |
+|--------|----------------|-----------------------------------|--------------------------------|
+| FDF    | .fdf           | Compact, Adobe-native             | Acrobat interop                |
+| XFDF   | .xfdf          | XML-based, portable               | Cross-platform annotation data |
+| JSON   | .json          | Human-readable, web-friendly      | Web app storage                |
+| XML    | .xml           | Schema-validated                  | Enterprise integrations        |
+
+## Exporting Annotations
 
 This example demonstrates how to export annotations from a PDF document using the `exportAnnotations` method. The DataFormat enum specifies the format of the annotation data being exported, such as FDF, XFDF, JSON, or XML.
 
@@ -1358,8 +1346,15 @@ var settings = new ej.pdf.PdfAnnotationExportSettings();
 settings.dataFormat = ej.pdf.DataFormat.json;
 // Export annotations to JSON format
 document.exportAnnotations('annotations.json', settings);
-// Close the document
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
+
+## Additional Resources
+
+- [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
+- [JavaScript PDF Library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
+- [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
+- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/fluent2/pdf/default)
