@@ -108,13 +108,6 @@ class MultiThreading
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Imports System
-Imports System.IO
-Imports System.Threading.Tasks
-Imports Syncfusion.DocIO
-Imports Syncfusion.DocIO.DLS
-Imports Syncfusion.DocToPDFConverter
-Imports Syncfusion.Pdf
 
 Module MultiThreading
     ' Indicates the number of threads to be created.
