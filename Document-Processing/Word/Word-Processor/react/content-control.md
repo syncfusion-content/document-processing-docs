@@ -70,7 +70,7 @@ this.container.documentEditor.editor.insertContentControl('Picture', 'data:image
 
 ## Import Content Control Properties
 
-Content control properties can be set using the [`ContentControlInfo`](https://ej2.syncfusion.com/react/documentation/api/document-editor/contentControlInfo/) and imported using the [`importContentControlData`](https://ej2.syncfusion.com/react/documentation/api/document-editor#importcontentcontroldata) method.
+Content control properties can be set using the [`ContentControlInfo`](https://ej2.syncfusion.com/react/documentation/api/document-editor/contentControlInfo) and imported using the [`importContentControlData`](https://ej2.syncfusion.com/react/documentation/api/document-editor#importcontentcontroldata) method.
 
 {% highlight ts %}
 let data: ContentControlInfo[] = [];
