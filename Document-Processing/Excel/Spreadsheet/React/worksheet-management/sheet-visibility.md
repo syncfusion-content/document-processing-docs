@@ -7,17 +7,17 @@ platform: document-processing
 documentation: ug
 ---
 
-# Sheet visibility
+# Sheet Visibility
 
 Hiding a worksheet can help prevent unauthorized or accidental changes to your file.
 
-There are three visibility state as like Microsoft Excel,
+There are three visibility states, as in Microsoft Excel:
 
 | State | Description |
 |-------|---------|
 | `Visible` | You can see the worksheet once the component is loaded. |
-| `Hidden` | This worksheet is not visible, but you can unhide by selecting the sheet from `List All Sheets` dropdown menu. |
-| `VeryHidden` | This worksheet is not visible and cannot be unhidden. Changing the state property to `Visible` is the only way to view this sheet. |
+| `Hidden` | This worksheet is not visible, but you can unhide it by selecting the sheet from the `List All Sheets` dropdown menu. |
+| `VeryHidden` | This worksheet is not visible and cannot be unhidden through the UI. Changing the state property to `Visible` is the only way to view this sheet. |
 
 The following code example shows the three types of sheet visibility state.
 

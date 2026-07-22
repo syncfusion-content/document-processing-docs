@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Events in React Spreadsheet component | Syncfusion
+title: Events in React Spreadsheet Component | Syncfusion
 description: Learn here all about the events in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
-control: Events 
+control: Events
 platform: document-processing
 documentation: ug
 ---
@@ -17,7 +17,7 @@ The `actionBegin` and `actionComplete` events are the primary action events in t
 
 The `actionBegin` event triggers when any action begins in the Spreadsheet and fires for all user-initiated actions, enabling you to identify the action type, prevent specific actions from executing, and apply custom logic at the initiation of an action.
 
-The `actionComplete` event triggers when any action completes in the Spreadsheet and fires for all user-initiated actions, enabling you to identify the action type and apply custom logic after an action has successfully completed.
+The `actionComplete` event triggers when an action completes in the Spreadsheet. It enables you to identify the action type and apply custom logic after the action has completed.
 
 You can identify the type of action being triggered by using the `args.action` property during both the action events.
 

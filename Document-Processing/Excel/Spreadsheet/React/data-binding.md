@@ -12,7 +12,7 @@ documentation: ug
 The Spreadsheet supports binding data from both **RESTful JSON services** and **local JavaScript object arrays** using the [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started).  
 You can assign the `dataSource` property either with a `DataManager` instance or directly with a JavaScript object array collection.
 
-To get start quickly with Data Binding, you can check on this video:
+To get started quickly with Data Binding, see the video below:
 
 {% youtube "https://www.youtube.com/watch?v=FK1OPoHIUPc" %}
 
@@ -66,7 +66,7 @@ The following code example demonstrates how to customize the mapping of column d
 
 To bind remote data to the Spreadsheet control, assign service data as an instance of [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started) to the `dataSource` property. To interact with remote data source, provide the service endpoint `url`.
 
-Refer to the following code example for remote data binding.
+Refer to the following code example for remote data binding:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -162,7 +162,7 @@ The following table defines the arguments of the `dataSourceChanged` event.
 
 | Property | Type | Description |
 |-----|-----|-------|
-| action | string | Indicates the type of action such as `edit`, `add`, and `delete` performed in the datasource range. |
+| action | string | Indicates the action performed in the datasource range: `edit`, `add`, or `delete`. |
 | data | object[] | Modified data for `edit` action; New data for `add` action; Deleted data for `delete` action. |
 | rangeIndex | number | Specifies the range index of the datasource. |
 | sheetIndex | number | Specifies the sheet index of the datasource. |
@@ -196,7 +196,7 @@ The [updateRange](https://ej2.syncfusion.com/react/documentation/api/spreadsheet
 - Specify the starting cell using the [startCell](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/rangeModel#startcell) property in the `RangeDirective`.
 - Set the `sheetIndex` to target the appropriate sheet.
 
-The following code example demonstrates how to dynamically update data using the [updateRange](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#updaterange) method.
+The following code example demonstrates how to dynamically update data using the [`updateRange`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#updaterange) method:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
