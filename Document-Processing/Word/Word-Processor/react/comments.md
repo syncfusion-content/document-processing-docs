@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Comments in React Document editor component | Syncfusion
-description: Learn here all about Comments in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
+title: Comments in React DOCX Editor component | Syncfusion
+description: Learn here all about Comments in Syncfusion React DOCX Editor component of Syncfusion Essential JS 2 and more.
 control: Comments 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Comments in React Document editor component
+# Comments in React Document Editor component
 
-[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) allows you to add comments to documents. You can add, navigate and remove comments in code and from the UI.
+[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) allows you to add comments to documents. You can add, navigate and remove comments in code and from the UI.
 
 To know more about the comments in DocumentEditor component, you can check the video below.
 
@@ -124,9 +124,9 @@ documentEditor.editor.deleteAllComments();
 
 Document Editor provides support for protecting the document with `CommentsOnly` protection. In this protection, users are allowed to add or edit comments alone in the document.
 
-Document editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#stopprotection) API.
+Document Editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#stopprotection) API.
 
-The following example code illustrates how to enforce and stop protection in Document editor container.
+The following example code illustrates how to enforce and stop protection in Document Editor container.
 
 ```ts
 import { createRoot } from 'react-dom/client';
