@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Getting Started with the Syncfusion React Spreadsheet Editor in Create React App
+# Getting Started with the React Spreadsheet Editor in Create React App
 
 This article provides a step-by-step guide for setting up a React application using Create React App(CRA) and integrating React Spreadsheet Editor.
 
