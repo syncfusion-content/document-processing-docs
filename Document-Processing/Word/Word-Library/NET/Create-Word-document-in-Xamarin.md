@@ -424,8 +424,3 @@ N> The code sample references image files (AdventureCycle.jpg, Mountain-200.jpg,
 By executing the program, you will get the Word document as follows.
 
 ![Xamarin output Word document](Xamarin_images/GettingStartedOutput.jpg)
-
-## See also
-
-- [Complete Xamarin working sample on GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Xamarin)
-- [.NET Word Library overview, features, and pricing](https://www.syncfusion.com/document-sdk/net-word-library) 

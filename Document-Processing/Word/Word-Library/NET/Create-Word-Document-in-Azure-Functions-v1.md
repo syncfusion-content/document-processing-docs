@@ -14,7 +14,6 @@ Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion
 
 * An active Azure subscription.
 * Visual Studio with the **Azure development** workload installed.
-* .NET Framework (version supported by the Syncfusion.DocIO.AspNet package referenced in Step 4).
 
 ## Steps to create a Word document in Azure Functions v1
 
