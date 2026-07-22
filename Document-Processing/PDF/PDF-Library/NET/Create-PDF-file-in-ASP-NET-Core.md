@@ -13,8 +13,6 @@ The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) 
 
 To integrate the .NET PDF library into your ASP.NET Core application, refer to the official documentation sections on [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) for step-by-step guidance.
 
-N> Beginning with our Volume 2, 2023 release, we have eliminated the dependency on the System.Drawing.Common package from our Syncfusion.Pdf.Imaging.Net.Core package. Instead, we have introduced SkiaSharp as the alternative library.
-
 ## Steps to create PDF document in ASP.NET Core
 
 {% tabcontents %}
@@ -31,20 +29,18 @@ N> Beginning with our Volume 2, 2023 release, we have eliminated the dependency 
 {% endtabcontent %}
 {% endtabcontents %}
 
-N> **Register the Syncfusion license key**
->
-> A watermark is added to the generated PDF until the Syncfusion license key is registered. To remove the watermark, register the license key at the application startup:
->
-> * Add the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) NuGet package.
-> * Call `Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")` in `Program.cs` (before `builder.Build().Run()`).
->
-> Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) for more information on generating and registering the license key.
-
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/ASP.NET%20Core/Create-new-PDF-document).
 
 By executing the program, you will get the PDF document as follows.
-![ASP.Net Core output PDF document](GettingStarted_images/pdf-generation-output.png)
+![ASP.NET Core output PDF document showing the text "Hello World!!!"](GettingStarted_images/pdf-generation-output.png)
 
 Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 
-An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind) in ASP.NET Core. 
+An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind) in ASP.NET Core.
+
+## Next steps
+
+* [Open and read an existing PDF document](Open-PDF-file.md)
+* [Save the generated PDF to a file or stream](Save-PDF-file.md)
+* [Work with PDF pages, fonts, and images](Working-with-Pages.md)
+* [Add headers, footers, and form fields](Working-with-Headers-and-Footers.md) 

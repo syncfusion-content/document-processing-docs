@@ -1737,8 +1737,6 @@ using (OCRProcessor processor = new OCRProcessor())
     PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
     //Set OCR language.
     processor.Settings.Language = Languages.English;
-    //Set tesseract version. ** For .NET Framework only. **
-    //processor.Settings.TesseractVersion = TesseractVersion.Version4_0;
     //Set OCR engine mode to process.
     processor.Settings.OCREngineMode = OCREngineMode.LSTMOnly;
     //Set WhiteList Property.
@@ -1766,8 +1764,6 @@ using (OCRProcessor processor = new OCRProcessor())
     PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
     //Set OCR language.
     processor.Settings.Language = Languages.English;
-    //Set tesseract version. ** For .NET Framework only. **
-    //processor.Settings.TesseractVersion = TesseractVersion.Version4_0;
     //Set OCR engine mode to process.
     processor.Settings.OCREngineMode = OCREngineMode.LSTMOnly;
     //Set WhiteList Property.
@@ -1795,8 +1791,6 @@ Using processor As OCRProcessor = New OCRProcessor()
     Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
     'Set OCR language. 
     processor.Settings.Language = Languages.English
-    'Set tesseract version. ** For .NET Framework only. **
-    'processor.Settings.TesseractVersion = TesseractVersion.Version4_0
     'Set OCR engine mode to process.
     processor.Settings.OCREngineMode = OCREngineMode.LSTMOnly
     'Set WhiteList Property.
@@ -1833,8 +1827,6 @@ using (OCRProcessor processor = new OCRProcessor())
     PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
     //Set OCR language.
     processor.Settings.Language = Languages.English;
-    //Set tesseract version. ** For .NET Framework only. **
-    //processor.Settings.TesseractVersion = TesseractVersion.Version4_0;
     //Set OCR engine mode to process.
     processor.Settings.OCREngineMode = OCREngineMode.LSTMOnly;
     //Set BlackList Property.
@@ -1862,8 +1854,6 @@ using (OCRProcessor processor = new OCRProcessor())
     PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
     //Set OCR language.
     processor.Settings.Language = Languages.English;
-    //Set tesseract version. ** For .NET Framework only. **
-    //processor.Settings.TesseractVersion = TesseractVersion.Version4_0;
     //Set OCR engine mode to process.
     processor.Settings.OCREngineMode = OCREngineMode.LSTMOnly;
     //Set BlackList Property.
@@ -1890,8 +1880,6 @@ Using processor As OCRProcessor = New OCRProcessor()
     Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
     'Set OCR language. 
     processor.Settings.Language = Languages.English
-    'Set tesseract version. ** For .NET Framework only. **
-    'processor.Settings.TesseractVersion = TesseractVersion.Version4_0
     'Set OCR engine mode to process.
     processor.Settings.OCREngineMode = OCREngineMode.LSTMOnly
     'Set BlackList Property.
