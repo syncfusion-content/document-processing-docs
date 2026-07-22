@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Save document to Google Drive in React DOCX Editor | Syncfusion
-description: Learn how to save a document to Google Drive in the Syncfusion React DOCX Editor of Syncfusion Essential JS 2 and more details.
+description: Learn how to save a document to Google Drive in the Syncfusion React Document Editor of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to Google Drive
 documentation: ug
@@ -143,12 +143,10 @@ private string GetValue(IFormCollection data, string key)
 }
 ```
 
-N> Replace **Your Google Drive Folder ID**, **Your Application name**, and **Your Path to the OAuth 2.0 Client IDs json file** with your actual Google Drive folder ID, your name for your application, and the path for the JSON file.
-
-N> 1. The **FolderId** is the unique identifier for the folder. For example, if your folder URL is: `https://drive.google.com/drive/folders/abc123xyz456`, then the folder ID is `abc123xyz456`.
-N> 2. The `CredentialPath` value in `appsettings.json` must point to the full OAuth 2.0 Client IDs credentials JSON file downloaded from the Google Cloud Console. This JSON file contains the unique `Client_ID` and `Client_Secret` used by `GoogleClientSecrets.Load(memStream)` to authenticate with the Google Drive API and securely save files.
-
-N> The **Google.Apis.Drive.v3** (v1.68.0.XXXX or later) NuGet package must be installed in your application to use the previous code example.
+N> 1. Replace **Your Google Drive Folder ID**, **Your Application name**, and **Your Path to the OAuth 2.0 Client IDs json file** with your actual Google Drive folder ID, your name for your application, and the path for the JSON file.
+N> 2. The **FolderId** is the unique identifier for the folder. For example, if your folder URL is: `https://drive.google.com/drive/folders/abc123xyz456`, then the folder ID is `abc123xyz456`.
+N> 3. The `CredentialPath` value in `appsettings.json` must point to the full OAuth 2.0 Client IDs credentials JSON file downloaded from the Google Cloud Console. This JSON file contains the unique `Client_ID` and `Client_Secret` used by `GoogleClientSecrets.Load(memStream)` to authenticate with the Google Drive API and securely save files.
+N> 4. The **Google.Apis.Drive.v3** (v1.68.0.XXXX or later) NuGet package must be installed in your application to use the previous code example.
 
 **Step 4:**  Modify the index File in the Document Editor sample
 

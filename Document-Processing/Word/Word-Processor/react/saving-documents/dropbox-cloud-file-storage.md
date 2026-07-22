@@ -132,11 +132,6 @@ private string GetValue(IFormCollection data, string key)
 ```
 
 N> Replace **Your_Dropbox_Access_Token** with your actual Dropbox access token and **Your_Folder_Name** with your folder name.
-
-N> 1. If the upload fails with an unauthorized error, verify that the access token is valid and has not expired.
-N> 2. If the upload fails with a "folder not found" error, confirm that the folder name in `appsettings.json` exists in your Dropbox account.
-N> 3. If the upload fails with a permission error, ensure the app's scopes include `files.content.write` in the Dropbox App Console.
-
 N> The **Dropbox.Api** NuGet package (version 7.x or later) must be installed in your application to use the previous code example.
 
 **Step 4:**  Modify the index File in the Document Editor sample
