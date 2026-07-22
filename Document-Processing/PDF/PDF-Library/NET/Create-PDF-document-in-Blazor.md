@@ -480,3 +480,11 @@ Click the **Create PDF document** button to download the generated PDF document 
 Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 
 An online sample to get started with creating a PDF document is available [here](https://document.syncfusion.com/demos/pdf/default#/tailwind).
+
+## Next steps
+
+* [Create a PDF in ASP.NET Core MVC](Create-PDF-file-in-ASP-NET-Core.md)
+* [Create a PDF in Azure App Service on Windows](Create-PDF-document-in-Azure-App-Service-Windows.md)
+* [Create a PDF in Azure Functions v4](Create-PDF-document-in-Azure-Functions-v4.md)
+* [Open and read an existing PDF document](Open-PDF-file.md)
+* [Save the generated PDF to a file or stream](Save-PDF-file.md)

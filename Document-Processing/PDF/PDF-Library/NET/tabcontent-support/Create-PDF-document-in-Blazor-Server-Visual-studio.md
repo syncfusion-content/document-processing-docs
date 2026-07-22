@@ -12,7 +12,29 @@ Step 2: In the **Interactive Render Mode section**, choose `Server` as the rende
 Step 3: To create a PDF document in a Blazor Server app, install the [Syncfusion.PDF.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) package into your Blazor project.
 ![Blazor NuGet installation](Create-PDF-Blazor/Blazor_server_NuGet.png)
 
-Step 4: Create a new cs file named **ExportService.cs** under the **Data** folder and include the following namespaces and class declaration in the file.
+Step 4: Register the Syncfusion license key. A trial watermark is added to every page of the generated PDF until a valid key is registered. Include the license key in **Program.cs** before initializing any Syncfusion component:
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Licensing;
+
+var builder = WebApplication.CreateBuilder(args);
+// Register the Syncfusion license
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+
+// Add services to the container.
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+
+var app = builder.Build();
+
+{% endhighlight %}
+{% endtabs %}
+
+Replace `"YOUR LICENSE KEY"` with the key from your Syncfusion account. If you do not have one, request a free 30-day trial at [https://www.syncfusion.com/sales/communitylicense](https://www.syncfusion.com/sales/communitylicense). For security, store the key in `appsettings.json` or in User Secrets rather than hardcoding it. Refer to the [Syncfusion License documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion license key in your application.
+
+Step 5: Create a new cs file named **ExportService.cs** under the **Data** folder and include the following namespaces and class declaration in the file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -25,7 +47,7 @@ using Syncfusion.Drawing;
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data sources.
+Step 6: The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data sources.
 
 Add the following code sample in the ``ExportService`` class which illustrates how to create a simple PDF document using ``PdfTextElement`` and ``PdfGrid``.
 
@@ -86,7 +108,7 @@ public static MemoryStream CreatePdf(WeatherForecast[] forecasts)
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Register your service in the ``Program.cs`` class as follows.
+Step 7: Register your service in the ``Program.cs`` class as follows.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -106,7 +128,7 @@ builder.Services.AddSingleton<ExportService>();
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Inject ``ExportService`` into ``Weather.razor`` using the following code.
+Step 8: Inject ``ExportService`` into ``Weather.razor`` using the following code.
 
 {% tabs %}
 {% highlight CSHTML %}
@@ -143,7 +165,7 @@ Add the ``ExportToPdf`` method in the ``Weather.razor`` page to call the export 
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Include the ``FileUtil`` class within the ``ExportService.cs`` file to enable file-related operations as part of the export functionality.
+Step 9: Include the ``FileUtil`` class within the ``ExportService.cs`` file to enable file-related operations as part of the export functionality.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -160,7 +182,7 @@ public static class FileUtil
 {% endhighlight %}
 {% endtabs %}
 
-Step 9: Add the following JavaScript function in the ``App.razor`` file available under the ``Components`` folder.
+Step 10: Add the following JavaScript function in the ``App.razor`` file available under the ``Components`` folder.
 
 {% tabs %}
 {% highlight HTML %}
@@ -194,10 +216,10 @@ Step 9: Add the following JavaScript function in the ``App.razor`` file availabl
 {% endhighlight %}
 {% endtabs %}
 
-Step 10: Build the project.
+Step 11: Build the project.
 
 Click on **Build** → **Build Solution** or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
-Step 11: Run the project.
+Step 12: Run the project.
 
 Click the Start button (green arrow) or press F5 to run the app.
