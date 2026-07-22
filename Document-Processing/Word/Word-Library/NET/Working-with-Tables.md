@@ -5,14 +5,14 @@ platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Working with Tables in Word document
+# Working with Tables in a Word document
 
 A table in Word document is used to arrange document content in rows and columns. [WTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTable.html) instance represents a table in Word document. A table must contain at least one row.
 
 1. A row is a collection of cells and it is represented by an instance of [WTableRow](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTableRow.html). Each row must contain at least one cell.
 2. A cell can contain one or more paragraphs and tables. An instance of [WTableCell](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTableCell.html) represents a table cell. Each table cell must contain at least one paragraph.
 
-N> Adding more than 63 columns not supported in Word document using Microsoft Word application. It shows alert when you attempt to insert table with more than 64 columns, which is a one of the behaviors of Microsoft Word and Essential<sup>&reg;</sup> DocIO does the same.
+N> Adding more than 63 columns is not supported in Word document using Microsoft Word application. It shows an alert when you attempt to insert a table with more than 64 columns, which is one of the behaviors of Microsoft Word and Essential<sup>&reg;</sup> DocIO does the same.
 
 The following image illustrates how a table in Word document is organized in EssentialDocIO’s DOM:
 
@@ -364,7 +364,7 @@ nestedCell.Width = 200;
 nestedCell.AddParagraph().AppendText("Mango");
 //Accesses the instance of the cell (second row, second cell)
 nestedCell = table.Rows[1].Cells[1];
-table[1, 1].AddParagraph().AppendText("85");
+nestedCell.AddParagraph().AppendText("85");
 table[2, 0].AddParagraph().AppendText("Pomegranate");
 table[2, 1].AddParagraph().AppendText("70");
 //Saves the Word document to MemoryStream
@@ -408,7 +408,7 @@ nestedCell.Width = 200;
 nestedCell.AddParagraph().AppendText("Mango");
 //Accesses the instance of the cell (second row, second cell)
 nestedCell = table.Rows[1].Cells[1];
-table[1, 1].AddParagraph().AppendText("85");
+nestedCell.AddParagraph().AppendText("85");
 table[2, 0].AddParagraph().AppendText("Pomegranate");
 table[2, 1].AddParagraph().AppendText("70");
 //Saves and closes the document instance
@@ -450,7 +450,7 @@ nestedCell.Width = 200
 nestedCell.AddParagraph().AppendText("Mango")
 'Accesses the instance of the cell (second row, second cell)
 nestedCell = table.Rows(1).Cells(1)
-table(1, 1).AddParagraph().AppendText("85")
+nestedCell.AddParagraph().AppendText("85")
 table(2, 0).AddParagraph().AppendText("Pomegranate")
 table(2, 1).AddParagraph().AppendText("70")
 'Saves and closes the document instance
@@ -464,7 +464,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Align text within a table
 
-You can iterate the cells within a table and align text for each cell. Find more information about iterating the cells from [here](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-tables#iterating-through-table-elements)
+You can iterate the cells within a table and align text for each cell. Find more information about iterating the cells from [here](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-tables#iterating-through-table-elements).
 
 The following code example illustrates how to align text within a table.
 
@@ -680,7 +680,7 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Tables/Insert-image-in-cell).
 
-## Apply formatting to Table, Row and Cell
+## Apply formatting to Table and Row
 
 The following code example illustrates how to load an existing document and apply table formatting options such as [Borders](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.RowFormat.html#Syncfusion_DocIO_DLS_RowFormat_Borders), [LeftIndent](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.RowFormat.html#Syncfusion_DocIO_DLS_RowFormat_LeftIndent), [Paddings](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.RowFormat.html#Syncfusion_DocIO_DLS_RowFormat_Paddings), [IsAutoResized](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.RowFormat.html#Syncfusion_DocIO_DLS_RowFormat_IsAutoResized), etc.
 
@@ -692,9 +692,8 @@ N> 4. As in the Microsoft Word, DocIO supports [RowFormat.Borders](https://help.
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Tables/Apply-table-formatting/.NET/Apply-table-formatting/Program.cs" %}
-//Creates an instance of WordDocument class (Empty Word Document)
-FileStream fileStreamPath = new FileStream("Table.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Opens an existing Word document into DocIO instance
+FileStream fileStreamPath = new FileStream("Table.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
 //Accesses the instance of the first section in the Word document
 WSection section = document.Sections[0];
@@ -844,6 +843,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ### Applying cell formatting
 
 Using DocIO, you can format table cells by setting text wrapping to control content flow and adjusting text direction for better readability. You can also customize cell borders, apply vertical alignment, and set a background color to enhance the table’s appearance.
+
+N> In the following snippets, the `row` and `cell` variables are assumed to be obtained from an existing table (for example, `WTableRow row = table.Rows[0];` and `WTableCell cell = row.Cells[0];`). See the [Apply formatting to Table and Row](#apply-formatting-to-table-and-row) section for how to access a table and its rows.
 
 #### Set cell background color
 
@@ -1054,15 +1055,15 @@ WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
 WSection section = document.Sections[0];
 //Accesses the instance of the first table in the section
 WTable table = section.Tables[0] as WTable;
-//Resizes the table to fit the contents respect to the contents
+//Resizes the table to fit its contents
 table.AutoFit(AutoFitType.FitToContent);
 //Accesses the instance of the second table in the section
 table = section.Tables[1] as WTable;
-//Resizes the table to fit the contents respect to window/page width
+//Resizes the table to fit the window/page width
 table.AutoFit(AutoFitType.FitToWindow);
 //Accesses the instance of the third table in the section
 table = section.Tables[2] as WTable;
-//Resizes the table to fit the contents respect to fixed column width
+//Resizes the table to fit the fixed column width
 table.AutoFit(AutoFitType.FixedColumnWidth);
 //Saves the Word document to MemoryStream
 MemoryStream stream = new MemoryStream();
@@ -1072,23 +1073,23 @@ document.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Creates an instance of WordDocument class (Empty Word Document)*'| markdownify }}
+//Creates an instance of WordDocument class (Empty Word Document)
 WordDocument document = new WordDocument();
 //Opens an existing Word document into DocIO instance
-document.Open("Template", FormatType.Docx);
+document.Open("Template.docx", FormatType.Docx);
 //Accesses the instance of the first section in the Word document
 WSection section = document.Sections[0];
 //Accesses the instance of the first table in the section
 WTable table = section.Tables[0] as WTable;
-//Resizes the table to fit the contents respect to the contents
+//Resizes the table to fit its contents
 table.AutoFit(AutoFitType.FitToContent);
 //Accesses the instance of the second table in the section
 table = section.Tables[1] as WTable;
-//Resizes the table to fit the contents respect to window/page width
+//Resizes the table to fit the window/page width
 table.AutoFit(AutoFitType.FitToWindow);
 //Accesses the instance of the third table in the section
 table = section.Tables[2] as WTable;
-//Resizes the table to fit the contents respect to fixed column width
+//Resizes the table to fit the fixed column width
 table.AutoFit(AutoFitType.FixedColumnWidth);
 //Saves and closes the document instance
 document.Save("Sample.docx", FormatType.Docx);
@@ -1099,18 +1100,18 @@ document.Close();
 'Creates an instance of WordDocument class (Empty Word Document)
 Dim document As WordDocument = New WordDocument
 'Opens an existing Word document into DocIO instance
-document.Open("Template", FormatType.Docx)
+document.Open("Template.docx", FormatType.Docx)
 Dim section As WSection = document.Sections(0)
 Dim table As WTable = CType(section.Tables(0), WTable)
-'Resizes the table to fit the contents respect to the contents
+'Resizes the table to fit its contents
 table.AutoFit(AutoFitType.FitToContent)
 'Accesses the instance of the second table in the section
 table = CType(section.Tables(1), WTable)
-'Resizes the table to fit the contents respect to window/page width
+'Resizes the table to fit the window/page width
 table.AutoFit(AutoFitType.FitToWindow)
 'Accesses the instance of the third table in the section
 table = CType(section.Tables(2), WTable)
-'Resizes the table to fit the contents respect to fixed column width
+'Resizes the table to fit the fixed column width
 table.AutoFit(AutoFitType.FixedColumnWidth)
 'Saves and closes the document instance
 document.Save("Sample.docx", FormatType.Docx)
@@ -1127,7 +1128,7 @@ N> In ASP.NET Core, UWP, and Xamarin platforms, to apply autofit for table in a 
 
 A table style defines a set of table, row, cell and paragraph level formatting that can be applied to a table. [WTableStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTableStyle.html) instance represents table style in a Word document.
 
-N>  Essential<sup>&reg;</sup> DocIO currently provides support for table styles in DOCX and WordML formats alone. The visual appearance is also preserved in Word to PDF, Word to Image, and Word to HTML conversions.
+N>  Essential<sup>&reg;</sup> DocIO currently provides support for table styles in DOCX and WordML formats only. The visual appearance is also preserved in Word to PDF, Word to Image, and Word to HTML conversions.
 
 The following code example illustrates how to apply the built-in table styles to the table.
 
@@ -1180,7 +1181,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 Once you have applied a table style, you can enable or disable the special formatting of the table. There are six options: first column, last column, banded rows, banded columns, header row and last row.  
 
-The following code example illustrates how to enable and disable the special table formatting options of the table styles
+The following code example illustrates how to enable and disable the special table formatting options of the table styles.
 
 {% tabs %}
 
@@ -1372,11 +1373,11 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Tables/Apply-custom-table-style).
 
-### Apply Base Style
+### Apply base style
 
 Table styles can be based on other table styles also. When applying a base style, the new style will inherit the values of the base style that are not explicitly redefined in the new style. You can apply a custom table style or a built-in table style as a base for the table style.
 
-The following code example illustrates how to apply built-in and custom table styles as base styles for another custom table.
+The following code example illustrates how to apply built-in and custom table styles as base styles for another custom table style.
 
 {% tabs %}
 
@@ -1662,7 +1663,7 @@ IWSection section = document.AddSection();
 section.AddParagraph().AppendText("Vertical merging of Table cells");
 IWTable table = section.AddTable();
 table.ResetCells(5, 5);
-// Specifies the vertical merge to the third cell, from second row to fifth row
+// Specifies the vertical merge to the third column, from second row to fifth row
 table.ApplyVerticalMerge(2, 1, 4);
 //Saves the Word document to MemoryStream
 MemoryStream stream = new MemoryStream();
@@ -1678,7 +1679,7 @@ IWSection section = document.AddSection();
 section.AddParagraph().AppendText("Vertical merging of Table cells");
 IWTable table = section.AddTable();
 table.ResetCells(5, 5);
-//Specifies the vertical merge to the third cell, from second row to fifth row
+//Specifies the vertical merge to the third column, from second row to fifth row
 table.ApplyVerticalMerge(2, 1, 4);
 //Saves and closes the document instance
 document.Save("VerticalMerge.docx", FormatType.Docx);
@@ -1692,7 +1693,7 @@ Dim section As IWSection = document.AddSection()
 section.AddParagraph().AppendText("Vertical merging of Table cells")
 Dim table As IWTable = section.AddTable()
 table.ResetCells(5, 5)
-'Specifies the vertical merge to the third cell, from second row to fifth row
+'Specifies the vertical merge to the third column, from second row to fifth row
 table.ApplyVerticalMerge(2, 1, 4)
 'Saves and closes the document instance
 document.Save("VerticalMerge.docx", FormatType.Docx)
@@ -1703,7 +1704,9 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Tables/Apply-vertical-merge-to-cells).
 
-The following code example illustrate how to create a table that contains horizontal merged cells.
+To merge cells manually, set the [HorizontalMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CellFormat.html#Syncfusion_DocIO_DLS_CellFormat_HorizontalMerge) or [VerticalMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CellFormat.html#Syncfusion_DocIO_DLS_CellFormat_VerticalMerge) property of [CellFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CellFormat.html) to [CellMerge.Start](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CellMerge.html) for the first cell of the merge range and to [CellMerge.Continue](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CellMerge.html) for the cells being merged into it.
+
+The following code example illustrates how to create a table that contains horizontal merged cells.
 
 {% tabs %}
 
@@ -1868,7 +1871,7 @@ You can specify one or more rows in a table to be repeated as header row at the 
 * In the case of a single header row, it must be the first row in the table. 
 * In the case of multiple header rows, then header rows must be consecutive from the first row of the table.
 
-N>  Heading rows do not have any effect with nested tables in Microsoft Word as well as DocIO 
+N>  Header rows have no effect on nested tables in Microsoft Word or DocIO.
 
 The following code example illustrates how to create a table with a single header row.
 
@@ -1962,7 +1965,7 @@ The following code example illustrates how to disable all the table rows from sp
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Tables/Disable-row-to-break-across-pages/.NET/Disable-row-to-break-across-pages/Program.cs" %}
 //Creates an instance of WordDocument class
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-WordDocument document = new WordDocument(fileStreamPath);
+WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
 WSection section = document.Sections[0];
 WTable table = section.Tables[0] as WTable;
 //Disables breaking across pages for all rows in the table.
@@ -2027,7 +2030,7 @@ foreach (WTableRow row in table.Rows)
         //Iterates through the paragraphs of the cell
         foreach (WParagraph paragraph in cell.Paragraphs)
         {
-            //When the paragraph contains text Panda then apply green as back color to cell
+            //When the paragraph contains the text 'panda', apply green as the back color to the cell
             if (paragraph.Text.Contains("panda"))
                 cell.CellFormat.BackColor = Color.Green;
         }
@@ -2054,7 +2057,7 @@ foreach (WTableRow row in table.Rows)
         //Iterates through the paragraphs of the cell
         foreach (WParagraph paragraph in cell.Paragraphs)
         {
-            //When the paragraph contains text Panda then apply green as back color to cell
+            //When the paragraph contains the text 'panda', apply green as the back color to the cell
             if (paragraph.Text.Contains("panda"))
                 cell.CellFormat.BackColor = Color.Green;
         }
@@ -2076,7 +2079,7 @@ For Each row As WTableRow In table.Rows
     For Each cell As WTableCell In row.Cells
         'Iterates through the paragraphs of the cell
         For Each paragraph As WParagraph In cell.Paragraphs
-            'When the paragraph contains text Panda then apply green as back color to cell
+            'When the paragraph contains the text 'panda', apply green as the back color to the cell
             If paragraph.Text.Contains("panda") Then
                 cell.CellFormat.BackColor = Color.Green
             End If
@@ -2233,7 +2236,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to split a table in a Word document using a bookmark between rows](https://support.syncfusion.com/kb/article/17785/how-to-split-a-table-in-a-word-document-using-a-bookmark-between-rows)
 * [How to split a table by columns in a Word document](https://support.syncfusion.com/kb/article/17714/how-to-split-a-table-by-columns-in-a-word-document)
 * [How to add rows with dynamic data into an existing table in Word document](https://support.syncfusion.com/kb/article/17819/how-to-add-rows-with-dynamic-data-into-an-existing-table-in-word-document)
-* [How to copy table from another Word document with its style?](https://support.syncfusion.com/kb/article/17897/how-to-copy-table-from-another-word-document-with-its-style)
 * [How to copy table from another Word document with its style?](https://support.syncfusion.com/kb/article/17897/how-to-copy-table-from-another-word-document-with-its-style)
 * [How to Replace Field with Table in ASP.NET Core Word Document?](https://support.syncfusion.com/kb/article/17134/how-to-replace-field-with-table-in-aspnet-core-word-document?)
 * [How to extract tables and add to a new Document in ASP.NETCore Word?](https://support.syncfusion.com/kb/article/19585/how-to-extract-tables-and-add-to-a-new-document-in-aspnetcore-word?)
