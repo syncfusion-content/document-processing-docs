@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Security Advisories in React Document Editor component | Syncfusion
-description: Learn here all about Security Advisories in React Document editor component of Syncfusion Essential JS 2 and more.
+title: Security Advisories in React DOCX Editor | Syncfusion
+description: Learn here all about Security Advisories in the Syncfusion React Document Editor of Syncfusion Essential JS 2 and more.
 control: Security advisories
 platform: document-processing
 documentation: ug
@@ -16,7 +16,7 @@ This document provides a description of the security updates available for Syncf
 
 ## Security Updates
 
-The following security updates are available for [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) control and are listed based on the release version. 
+The following security updates are available for [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) control and are listed based on the release version.
 
 ### 2024 Volume 2 (v26.2.4) - July 25, 2024
 
