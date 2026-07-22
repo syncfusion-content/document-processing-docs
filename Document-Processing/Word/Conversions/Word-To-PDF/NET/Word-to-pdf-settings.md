@@ -163,7 +163,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Accessible PDF document
 
-This setting allows you to determine whether to preserve document structured tags in the converted **PDF document for accessibility (508 compliance) support**. This property will set the title and description for images, diagrams and other objects in the generated PDF document. This information will be useful for **people with vision or cognitive impairments** who may not able to see or understand the object
+This setting allows you to determine whether to preserve document structured tags in the converted **PDF document for accessibility (508 compliance) support**. This property will set the title and description for images, diagrams and other objects in the generated PDF document. This information will be useful for **people with vision or cognitive impairments** who may not be able to see or understand the object.
 
 The following code sample shows how to preserve document structured tags in the converted PDF document.
 
@@ -228,7 +228,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Word document headings to PDF bookmarks
 
-This setting allows you to determine whether to **preserve Word document headings** (i.e., paragraph with heading style and outline level) as bookmarks in the converted PDF document. As per Microsoft Word behavior, either Word document headings or bookmarks can be exported as PDF bookmarks. By default, DocIO preserves Word documents bookmarks as PDF bookmarks in converted PDF document.
+This setting allows you to determine whether to **preserve Word document headings** (i.e., paragraph with heading style and outline level) as bookmarks in the converted PDF document. As per Microsoft Word behavior, either Word document headings or bookmarks can be exported as PDF bookmarks. By default, DocIO preserves Word document bookmarks as PDF bookmarks in converted PDF document.
 
 The following code sample shows how to preserve Word document headings as bookmarks in the converted PDF document.
 
@@ -291,6 +291,8 @@ wordDocument.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Export-Word-headings-into-PDF).
 
+### Preserve headings and bookmarks
+
 The following code sample shows how to preserve both Word document headings and Bookmarks as PDF bookmarks in the converted PDF document.
 
 {% tabs %}
@@ -352,7 +354,7 @@ wordDocument.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Export-Word-bookmarks-into-PDF).
 
-## Word document form field to PDF form field.
+## Word document form field to PDF form field
 
 This setting allows you to determine whether to **preserve Word document form fields** (Text form field, Checkbox form field and Drop-down form field) as PDF form fields in the converted PDF document. This features helps in **creating fillable PDF forms from Word document**.
 
@@ -417,9 +419,11 @@ wordDocument.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Create-fillable-PDF-from-Word).
 
-## Image quality 
+## Image quality
 
 This setting allows you to determine the **quality of the charts and JPEG images** in the converted PDF document.
+
+N> Image quality customization is supported only in Windows Forms, WPF, ASP.NET, and ASP.NET MVC platforms.
 
 The following code sample shows how to customize the image quality of charts and JPEG images in the converted PDF document.
 
@@ -483,6 +487,8 @@ This setting allows you to regenerate the nested EMF images present in the Word 
 
 This property is recommended to resolve the scaling problem of nested metafile images by regenerating the nested metafile images present in the Word document.
 
+N> Recreate Nested Metafile is supported only in Windows Forms, WPF, ASP.NET, and ASP.NET MVC platforms. It is also supported in .NET Core 3.0 when using the DocToPDFConverter assembly instead of DocIORenderer.
+
 The following code sample shows how to use this property to regenerate the nested EMF images present in the Word document during PDF conversion.
 
 {% tabs %}
@@ -529,7 +535,7 @@ wordDocument.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Recreate-nested-metafile).
 
-## Identical image optimization 
+## Identical image optimization
 
 This setting **reduces the Main Memory usage** in Word to PDF conversion by reusing the identical images.
 
@@ -822,7 +828,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 Essential<sup>&reg;</sup> DocIO now allows hyphenating text in a Word document while converting it to PDF format based on the given language dictionaries. These dictionaries prescribe where words of a specific language can be hyphenated. Use the dictionary files as OpenOffice format dictionary.
 
 N> 1. If automatic hyphenation is not enabled in the Word document, you can enable it by using [WordDocument.Properties.Hyphenation.AutoHyphenation](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Hyphenation.html#Syncfusion_DocIO_DLS_Hyphenation_AutoHyphenation) of DocIO.
-N> 2. After converting Word documents to PDF, release any dictionary file streams to avoid memory leaks. Call [Hyphenator.UnloadDictionaries()](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Hyphenator.html#Syncfusion_DocIO_DLS_Hyphenator_UnloadDictionaries) to free hyphenation resources and optimize performance.
+N> 2. You can obtain OpenOffice hyphenation dictionary files (.dic) from the [OpenOffice dictionary repository](https://github.com/LibreOffice/dictionaries).
+N> 3. After converting Word documents to PDF, release any dictionary file streams to avoid memory leaks. Call [Hyphenator.UnloadDictionaries()](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Hyphenator.html#Syncfusion_DocIO_DLS_Hyphenator_UnloadDictionaries) to free hyphenation resources and optimize performance.
 
 The following code sample shows how to hyphenate text in a Word document while converting it to PDF format.
 
@@ -838,13 +845,14 @@ DocIORenderer renderer = new DocIORenderer();
 FileStream dictionaryStream = new FileStream("hyphen_en_US.dic", FileMode.Open);
 //Adds the hyphenation dictionary of the specified language
 Hyphenator.Dictionaries.Add("en-US", dictionaryStream);
+dictionaryStream.Dispose();
 //Converts Word document into PDF document
 PdfDocument pdfDocument = renderer.ConvertToPDF(wordDocument);
 //Closes the instance of Word document object
 wordDocument.Close();
 //Releases the resources occupied by DocIORenderer instance
 renderer.Dispose();
-//Saves the PDF file  
+//Saves the PDF file
 MemoryStream outputStream = new MemoryStream();
 pdfDocument.Save(outputStream);
 //Closes the instance of PDF document object
@@ -864,7 +872,7 @@ FileStream dictionaryStream = new FileStream("hyphen_en_US.dic", FileMode.Open, 
 Hyphenator.Dictionaries.Add("en-US", dictionaryStream);
 //Converts Word document into PDF document
 PdfDocument pdfDocument = converter.ConvertToPDF(wordDocument);
-//Saves the PDF file 
+//Saves the PDF file
 pdfDocument.Save("WordtoPDF.pdf");
 //Closes the instance of document objects
 wordDocument.Close();
@@ -879,12 +887,12 @@ wordDocument.ChartToImageConverter = New ChartToImageConverter()
 'Creates an instance of the DocToPDFConverter
 Dim converter As New DocToPDFConverter()
 'Adds the hyphenation dictionary of the specified language
-Dim dictionaryStream As New FileStream("hyphen_en_US .dic", mode:=FileMode.Open)
+Dim dictionaryStream As New FileStream("hyphen_en_US.dic", mode:=FileMode.Open)
 'Adds the hyphenation dictionary of the specified language
 Hyphenator.Dictionaries.Add("en-US", dictionaryStream)
 'Converts Word document into PDF document
 Dim pdfDocument As PdfDocument = converter.ConvertToPDF(wordDocument)
-'Saves the PDF file 
+'Saves the PDF file
 pdfDocument.Save("WordtoPDF.pdf")
 'Closes the instance of document objects
 pdfDocument.Close(True)
@@ -896,6 +904,8 @@ wordDocument.Close()
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Hyphenation-in-Word-to-PDF).
 
 ## Track changes in Word-to-PDF conversion
+
+### Preserve track changes
 
 The following code sample shows how to **preserve revision marks in a generated PDF** when converting Word documents with tracked changes or revisions.
 
@@ -944,7 +954,7 @@ pdfDocument.Close();
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Loads an existing Word document
 Dim wordDocument As New WordDocument("Template.docx", FormatType.Docx)
-'Sets revision types to preserve track changes in when converting to PDF conversion.
+'Sets revision types to preserve track changes when converting to PDF.
 wordDocument.RevisionOptions.ShowMarkup = RevisionType.Deletions Or
 RevisionType.Formatting Or RevisionType.Insertions
 'Creates an instance of the DocToPDFConverter
@@ -967,7 +977,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Change the Track Changes Color
 
-You can customize how track changes markup appears in a generated PDF when converting Word documents into PDF. The following code sample shows how to customize revision marks colors.
+You can customize the track changes markup that appears in a generated PDF when converting Word documents into PDF. The following code sample shows how to customize revision marks colors.
 
 {% tabs %}
 
@@ -1222,6 +1232,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 This setting allows you to preserve Ole Equation as bitmap image in the converted PDF document.
 
+N> Preserving Ole Equation as bitmap image is supported only in Windows Forms, WPF, ASP.NET, and ASP.NET MVC platforms.
+
 The following code sample shows how to preserve Ole Equation as bitmap image in the converted PDF document.
 
 {% tabs %}
@@ -1268,11 +1280,11 @@ wordDocument.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Ole-Equation-as-bitmap).
 
-## Restrict all permission in a PDF document
+## Restrict all permissions in a PDF document
 
-You can restrict all the permission in a PDF document using [PdfPermissionsFlags](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfPermissionsFlags.html).
+You can restrict all permissions in a PDF document using [PdfPermissionsFlags](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfPermissionsFlags.html).
 
-The below code example shows how to restrict Copying and Printing permission of the PDF document.
+The code example below shows how to restrict Copying and Printing permission of the PDF document.
 
 {% tabs %}
 
@@ -1292,13 +1304,13 @@ PdfSecurity security = pdfDocument.Security;
 security.KeySize = PdfEncryptionKeySize.Key256Bit;
 security.Algorithm = Syncfusion.Pdf.Security.PdfEncryptionAlgorithm.AES;
 security.OwnerPassword = "syncfusion";
-//It restrict printing and copying of PDF document
+//It restricts printing and copying of PDF document
 security.Permissions = ~(PdfPermissionsFlags.CopyContent | PdfPermissionsFlags.Print);
 //Releases all resources used by the Word document and DocIO Renderer objects
 render.Dispose();
 wordDocument.Dispose();
 //Saves the PDF file
-FileStream outputFile = new FileStream("Output.docx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
+FileStream outputFile = new FileStream("Output.pdf", FileMode.OpenOrCreate, FileAccess.ReadWrite);
 pdfDocument.Save(outputFile);
 //Closes the instance of PDF document object
 pdfDocument.Close();
@@ -1307,7 +1319,7 @@ outputFile.Dispose();
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Creates an instance of WordDocument class
-WordDocument document = new WordDocument("Template.docx");
+WordDocument document = new WordDocument("Template.docx", FormatType.Docx);
 //Creates an instance of the DocToPDFConverter
 DocToPDFConverter converter = new DocToPDFConverter();
 //Converts Word document into PDF document
@@ -1328,7 +1340,7 @@ document.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Creates an instance of WordDocument class
-Dim document As WordDocument = New WordDocument("Template.docx")
+Dim document As WordDocument = New WordDocument("Template.docx", FormatType.Docx)
 'Creates an instance of the DocToPDFConverter
 Dim converter As DocToPDFConverter = New DocToPDFConverter()
 'Converts Word document into PDF document
@@ -1339,7 +1351,7 @@ Dim security As PdfSecurity = pdfDocument.Security
 security.KeySize = PdfEncryptionKeySize.Key256Bit
 security.Algorithm = Syncfusion.Pdf.Security.PdfEncryptionAlgorithm.AES
 security.OwnerPassword = "syncfusion"
-'It restrict printing and copying of PDF document
+'It restricts printing and copying of PDF document
 security.Permissions = Not (PdfPermissionsFlags.CopyContent Or PdfPermissionsFlags.Print)
 pdfDocument.Save("Output.pdf")
 pdfDocument.Close()

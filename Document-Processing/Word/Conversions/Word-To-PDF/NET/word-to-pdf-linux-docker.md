@@ -17,7 +17,7 @@ The following prerequisites are required before you begin:
 * [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 * [Docker Desktop](https://www.docker.com/products/docker-desktop/) (Windows/macOS) or Docker Engine (Linux) installed and running
 * A valid Syncfusion<sup>&reg;</sup> license key. Refer to this [licensing guide](https://help.syncfusion.com/common/essential-studio/licensing/overview) to generate and register a key.
-* [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/) with the **.NET desktop development** and **.NET Core cross-platform development** workloads (for the "Add Docker Support" steps in Visual Studio)
+* Visual Studio 2022 or laterwith the **.NET desktop development** and **.NET Core cross-platform development** workloads (for the "Add Docker Support" steps in Visual Studio)
 
 ## Steps to convert a Word document to PDF in Linux Docker
 
