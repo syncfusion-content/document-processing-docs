@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Disable header and footer edit in Document Editor in React Document Editor component
+# Disable header and footer editing in React Document Editor
 
 ## Disable header and footer edit in DocumentEditorContainer instance
 

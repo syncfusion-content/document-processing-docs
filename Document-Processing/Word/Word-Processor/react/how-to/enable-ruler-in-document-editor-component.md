@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "How to enable ruler in React DOCX Editor | Syncfusion"
 component: "DocumentEditor"
-description: "Learn how to enable ruler in React Document Editor component."
+description: "Learn here all about enabling the ruler in the Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more."
 control: Enable Ruler
 platform: document-processing
 documentation: ug
