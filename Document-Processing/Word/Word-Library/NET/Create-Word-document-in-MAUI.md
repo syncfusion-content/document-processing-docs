@@ -1245,8 +1245,6 @@ Refer the helper files to be added into the mentioned project. These helper file
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/.NET-MAUI).
 
-N> The code sample references image files (AdventureCycle.jpg, Mountain-200.jpg, Mountain-300.jpg, Road-550-W.jpg). Download these assets from the [GitHub sample folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/.NET-MAUI/Create-Word-document/Resources/DocIO) and add them as **Embedded Resources** in a `Resources/DocIO` folder in your project.
-
 By executing the program, you will get the **Word document** as follows.
 
 ![MAUI output Word document](MAUI_Images/GettingStartedOutput.jpg)

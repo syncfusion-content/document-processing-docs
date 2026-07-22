@@ -66,10 +66,6 @@ using Syncfusion.DocIO.DLS;
 
 Step 7: Include the below code snippet in **HomeController.cs** to **create a Word document**.
 
-N> The code sample references image files (AdventureCycle.jpg, Mountain-200.jpg, Mountain-300.jpg, Road-550-W.jpg). Download these assets from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Azure/Azure_App_Service/Create-Word-Document/wwwroot/Data) and place them in the application's `wwwroot/Data` folder so the relative paths in the code resolve correctly at runtime.
-
-N> Register the Syncfusion license key before creating the `WordDocument`. See [Registering a Syncfusion license in your application](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application) for details.
-
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
@@ -351,6 +347,8 @@ Step 11: The published webpage will open in the browser.
 Step 12: On the published page, click **Create Word Document** to generate the document. You will get the output **Word document** as follows.
 
 ![Create Word document in Azure App Service on Windows](ASP-NET-Core_images/GettingStartedOutput.jpg)
+
+N> The code sample references image files (AdventureCycle.jpg, Mountain-200.jpg, Mountain-300.jpg, Road-550-W.jpg). Download these assets from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Azure/Azure_App_Service/Create-Word-Document/wwwroot/Data) and place them in the application's `wwwroot/Data` folder so the relative paths in the code resolve correctly at runtime.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Azure/Azure_App_Service).
 
