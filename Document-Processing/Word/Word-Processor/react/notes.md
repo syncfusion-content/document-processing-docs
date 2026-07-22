@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # Notes in React Document editor component
 
-[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) Container component provides support for inserting footnotes and endnotes through the in-built toolbar. Refer to the following screenshot.
+[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) Container component provides support for inserting footnotes and endnotes through the built-in toolbar. Refer to the following screenshot.
 
 ![Insert footnote endnote](images/note-toolbar.jpg)
 
-The Footnotes and endnotes are both ways of adding extra bits of information to your writing outside of the main text. You can use footnotes and endnotes to add side comments to your work or to place other publications like books, articles, or websites.
+Footnotes and endnotes are both ways of adding extra bits of information to your writing outside of the main text. You can use footnotes and endnotes to add side comments to your work or to cite other publications like books, articles, or websites.
 
 ## Insert footnotes
 
-Document Editor exposes an API to insert footnotes at cursor position programmatically or can be inserted to the end of selected text.
+Document Editor exposes an API to insert footnotes at the cursor position programmatically, or they can be inserted at the end of selected text.
 
 ```ts
 import * as ReactDOM from 'react-dom';
@@ -31,13 +31,13 @@ import {
     TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog
 } from '@syncfusion/ej2-react-documenteditor';
 
-//Inject require module.
+//Inject required module.
 DocumentEditorComponent.Inject(Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog);
 function App() {
     let documenteditor: DocumentEditorComponent=new DocumentEditorComponent(undefined);
 return (
             <div>
-                <button onClick={Footnote}>insert Footnote</button>
+                <button onClick={Footnote}>Insert Footnote</button>
                 <DocumentEditorComponent  id="container" height={'330px'} ref={(scope) => { documenteditor = scope; }} serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" isReadOnly={false} enablePrint={true}
                     enableSelection={true} enableEditor={true} enableEditorHistory={true}
                     enableContextMenu={true} enableSearch={true} enableOptionsPane={true}
@@ -63,7 +63,7 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ## Insert endnotes
 
-Document Editor exposes an API to insert endnotes at cursor position programmatically or can be inserted to the end of selected text.
+Document Editor exposes an API to insert endnotes at the cursor position programmatically, or they can be inserted at the end of selected text.
 
 ```ts
 import * as ReactDOM from 'react-dom';
@@ -76,14 +76,14 @@ import {
     TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog
 } from '@syncfusion/ej2-react-documenteditor';
 
-//Inject require modules.
+//Inject required modules.
 DocumentEditorComponent.Inject(Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog);
 
     let documenteditor: DocumentEditorComponent= new DocumentEditorComponent(undefined);
     function App (){
       return (
         <div>
-            <button onClick={InsertEndnote}>insert Endnote</button>
+            <button onClick={InsertEndnote}>Insert Endnote</button>
             <DocumentEditorComponent id="container" height={'330px'}  ref={(scope) => { documenteditor = scope; }}  serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" isReadOnly={false} enablePrint={true}
             enableSelection={true} enableEditor={true} enableEditorHistory={true}
             enableContextMenu={true} enableSearch={true} enableOptionsPane={true}
@@ -96,7 +96,7 @@ DocumentEditorComponent.Inject(Print, SfdtExport, WordExport, TextExport, Select
 
       );
       function InsertEndnote() {
-        //Insert end note.
+        //Insert endnote.
         documenteditor.editor.insertEndnote();
       }
     }
@@ -109,10 +109,10 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ## Update or edit footnotes and endnotes
 
-You can update or edit the footnotes and endnotes using the built-in context menu shown up by right-clicking it. The footnote endnote dialog box popup and you can customize the number format and start at. Refer to the following screenshot.
+You can update or edit the footnotes and endnotes using the built-in context menu shown by right-clicking the footnote or endnote. The Footnote/Endnote dialog box pops up, and you can customize the number format and the starting value. Refer to the following screenshot.
 
 ![Update or edit footnotes and endnotes](images/notes-option.jpg)
 
 ## Online Demo
 
-Explore how to add and manage notes in Word documents using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/notes).
+Explore how to add and manage notes in Word documents using the React Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/notes).
