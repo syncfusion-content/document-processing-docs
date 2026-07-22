@@ -8,42 +8,37 @@ documentation: ug
 ---
 
 
-# FreezePanes in ASP.NET MVC Spreadsheet control
+# Freeze Panes in ASP.NET MVC Spreadsheet control
 
-Freeze Panes helps you to keep particular rows or columns visible when scrolling the sheet content in the spreadsheet. You can specify the number of frozen rows and columns using the `frozenRows` and `frozenColumns` properties inside the [`Sheet`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_Sheets) property.
+The Freeze Panes feature helps keep specific rows or columns visible while scrolling through the worksheet. Use the `frozenRows` and `frozenColumns` properties within the [`Sheet`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_Sheets) model to specify the number of rows and columns to freeze.
 
-## Apply freeze panes on UI
+## Apply freeze panes through the UI
 
-**User Interface**:
+To apply freeze panes:
 
-In the active spreadsheet, click the cell where you want to create freeze panes. Freeze panes can be done in any of the following ways:
+* Select the cell below the rows and to the right of the columns that you want to freeze.
+* Open the **View** tab in the Ribbon.
+* Select **Freeze Panes**.
 
-* Select the View tab in the Ribbon toolbar and choose the `Freeze Panes` item.
-* Use the `freezePanes` method programmatically.
+You can also use the `freezePanes` method to apply freeze panes programmatically.
 
-## FrozenRows
+## Frozen Rows
 
-It allows you to keep a certain number of rows visible while scrolling vertically through the rest of the worksheet.
+Frozen rows remain visible while scrolling vertically through the rest of the worksheet. You can freeze rows in one of the following ways:
 
-**User Interface**:
+* Select a cell in the active worksheet, open the **View** tab in the Ribbon, and choose **Freeze Rows**.
+* Set the `frozenRows` property in the `Sheet` model to specify the number of rows to freeze.
 
-In the active spreadsheet, select the cell where you want to create frozen rows. Frozen rows can be done in any one of the following ways:
+## Frozen Columns
 
-* Select the View tab in the Ribbon toolbar and choose the `Freeze Rows` item.
-* You can specify the number of frozen rows using the `frozenRows` property inside the `Sheet` property.
+Frozen columns remain visible while scrolling horizontally through the rest of the worksheet. You can freeze columns in one of the following ways:
 
-## FrozenColumns
+* Select a cell in the active worksheet, open the **View** tab in the Ribbon, and choose **Freeze Columns**.
+* Set the `frozenColumns` property in the `Sheet` model to specify the number of columns to freeze.
 
-It allows you to keep a certain number of columns visible while scrolling horizontally through the rest of the worksheet.
+## Freeze rows and columns
 
-**User Interface**:
-
-In the active spreadsheet, select the cell where you want to create frozen columns. Frozen columns can be done in any one of the following ways:
-
-* Select the View tab in the Ribbon toolbar and choose the `Freeze Columns` item.
-* You can specify the number of frozen columns using the `frozenColumns` property inside the `Sheet` property.
-
-In this demo, the frozenColumns is set as ‘2’, and the frozenRows is set as ‘2’. Hence, the two columns on the left and the top two rows are frozen.
+In this example, the `frozenColumns` and `frozenRows` properties are both set to `2`. Therefore, the first two columns on the left and the first two rows at the top remain frozen while scrolling.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
@@ -54,14 +49,18 @@ In this demo, the frozenColumns is set as ‘2’, and the frozenRows is set as 
 {% endhighlight %}
 {% endtabs %}
 
+After running the sample, scroll vertically and horizontally to verify that the first two rows and the first two columns remain visible.
 
+## Remove freeze panes
+
+To remove the frozen rows and columns, open the **View** tab in the Ribbon and choose **Unfreeze Panes**.
 
 ## Limitations
 
 Freeze Panes feature is not compatible with all the features which are available in the spreadsheet. Below features are not compatible with Freeze Panes feature.
 
-* Merging the cells between freeze and unfreeze area.
-* If images and charts are added inside the freeze area cells, their portion in the unfreeze area will not move when scrolling.
+* Cells cannot be merged across the boundary between the frozen and unfrozen areas.
+* When images or charts extend from the frozen area into the unfrozen area, the portion in the unfrozen area does not move while scrolling.
 
 ## See Also
 

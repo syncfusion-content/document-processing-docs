@@ -8,9 +8,9 @@ documentation: ug
 ---
 
 # Comment in EJ2 ASP.NET MVC Spreadsheet control
-The **Comment** feature allows you to add feedback to cells without changing their values, enabling contextual discussions through threaded **replies**. Unlike [Notes](./notes), Comment include advanced review tools such as **resolve** and **reopen** to track status, plus an optional **Comments Review Pane** for browsing and managing threads.
+The **Comment** feature allows users to add feedback to cells without changing their values and supports contextual discussions through threaded **replies**. Unlike [Notes](./notes), Comments include advanced review tools such as **Resolve** and **Reopen** for tracking the status of discussions. The optional **Comments review pane** can be used to browse and manage comment threads.
 
-Cells with comment display a small comment indicator; hover to preview the comment editor. This provides a clear, collaborative workflow while keeping data intact.
+Cells containing comments display a small comment indicator. Hover over the indicator to preview the comment.
 
 ![Spreadsheet showing a comment](./images/spreadsheet_comment.png)
 
@@ -23,7 +23,7 @@ The Syncfusion Spreadsheet does not automatically track user identity. To tag ne
         .Render()
     )
 ```
->If the author property is not set, "Guest User" will be displayed as the author for comment and replies by default.
+>If the `author` property is not set, "Guest User" is displayed as the default author for comments and replies.
 
 ## Adding a comment
 You can add a **comment** to a cell in several ways:
@@ -33,6 +33,8 @@ You can add a **comment** to a cell in several ways:
 * **Programmatically**: 
     * Use the `updateCell` method with the comment model to add a comment to a specific cell.
     * Bind comments via code-behind during initial load by associating the comment model with the cell model.
+
+For an example that adds a comment programmatically using the `updateCell` method, see the #resolve-and-reopen section.
 
 The image below shows that once a comment is posted, the cell displays an indicator, and the comment can be previewed on hover.
 
@@ -52,8 +54,8 @@ After posting, the replies appear under the first comment in the comment editor.
 ## Editing a comment
 You can edit the content of a comment or its replies directly within the comment editor.
 
-* **Edit first comment**: In the comment editor. Click the **"⋯" (More thread actions)** menu in the header, select the **Edit Comment**, modify the text and click **Post**.
-* **Edit a reply comment**: In the comment editor, hover over the specific reply, click the **"⋯" (More actions)**, select the **Edit Comment**, modify the text and click **Post**.
+* **Edit the first comment**: In the comment editor, click the **"⋯" (More thread actions)** menu in the header, select **Edit Comment**, modify the text, and click **Post**.
+* **Edit a reply**: In the comment editor, hover over the reply, click the **"⋯" (More actions)** menu, select **Edit Comment**, modify the text, and click **Post**.
 
 ![Editing a comment reply in Spreadsheet](./images/spreadsheet_edit_comment.png)
 
@@ -76,7 +78,7 @@ You can also use the `isResolved` property in the comment model when initializin
 // Update a cell with a comment using the updateCell method
     spreadsheet.updateCell({
         comment: {
-            author: 'Chistoper', text: 'Are you completed the report',
+            author: 'Christopher', text: 'Have you completed the report?',
             createdTime: 'January 03, 2026 at 5:00 PM',
             // Set to true to mark the thread as resolved; false keeps it active
             isResolved: false,
@@ -125,7 +127,7 @@ You can show or hide the "Comments" review pane using:
 ![Show comments in Spreadsheet](./images/spreadsheet_show_comments.gif)
 
 ### Features of the comments review pane
-The "Comments" review pane is rendered within the spreadsheet interface to provide a dedicated space for managing comments efficiently. It acts as a centralized hub where you can view all comment threads, perform actions, and keep discussions organized without navigating cell by cell.
+The **Comments review pane** provides a centralized view of all comments. Use it to filter, navigate, and manage comment threads without opening each cell's comment editor.
 
 The "Comments" review pane allows you to:
 
@@ -145,6 +147,16 @@ When the review pane is open, all actions performed in the review pane or in the
 * Actions such as **Reply**, **Edit**, **Delete**, and **Resolve/Reopen** update both the pane and the cell comment editor instantly, ensuring consistency across the UI.
 * The review pane dynamically updates when comments are added, deleted, or resolved, so you always see the latest state without refreshing.
 
+A comment object supports the following properties:
+
+- `author`: Specifies the author of the comment.
+- `text`: Specifies the comment text.
+- `createdTime`: Specifies when the comment was created.
+- `isResolved`: Specifies whether the comment thread is resolved.
+- `replies`: Contains the replies associated with the comment thread.
+
+Each reply supports the `author`, `text`, and `createdTime` properties.
+
 ## Saving a Workbook with Comments
 You can save spreadsheet data along with **comments** using **File > Save As > Microsoft Excel(.xlsx)**.
 - **MS Excel (.xlsx)** - Preserves all **threaded comments** (modern comments).
@@ -162,7 +174,7 @@ You can bind **comment thread** to cells at initial load by providing a `comment
 - **Comment**: `author`, `text`, `createdTime`, `isResolved`
 - **Replies**: A collection of replies. Each reply is an object containing its `author`, `text`, and `createdTime` (no nested replies-of-replies).
 
-In the below sample, comments are added to a specific cell using cell data binding. The "Comments" review pane is shown initially by enabling the `showCommentsPane` property, and comments are added using `updateCell` method in the `created` event.
+In the following example, a comment thread is assigned to a cell during the initial data binding. Additional comments are added using the `updateCell` method in the `created` event. The `showCommentsPane` property is enabled to display the Comments review pane when the Spreadsheet is rendered.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
@@ -173,6 +185,8 @@ In the below sample, comments are added to a specific cell using cell data bindi
 {% endhighlight %}
 {% endtabs %}
 
+After running the sample, verify that the comment indicator appears in the configured cell and that the corresponding comment thread is displayed in the Comments review pane.
+
 ### Important Notes
 * **One thread per cell**: Attach a single `comment` object per cell. New remarks should be added as replies inside the existing thread.
 * **Author Identity**: The author name for each comment and reply is static once set. When exporting, the author information is preserved for all comments, even if multiple authors exist in the workbook.
@@ -180,7 +194,7 @@ In the below sample, comments are added to a specific cell using cell data bindi
 
 ## Limitations
 * **Un-posted comments are not stored**: If you type in the comment editor and close it without clicking **Post**, the entered text is not saved and will not appear when you reopen the editor. Only posted content is persisted in the comment model.
-* **Comments and Notes cannot coexist**: When a cell contains comment, notes cannot be added. Similarly, if a cell already has a notes, comment cannot be added.
+* **Comments and Notes cannot coexist**: When a cell contains a comment, a note cannot be added. Similarly, when a cell contains a note, a comment cannot be added.
 * **Comments in Print**: Comments are not included in print output.
 * **Non-collaborative**: Real-time multi-user synchronization is not supported. However, when exporting and re-importing the workbook, the author information for each comment and reply is preserved.
 

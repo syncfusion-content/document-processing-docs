@@ -14,15 +14,22 @@ A group of cells in a sheet is known as cell range.
 
 ## Wrap text
 
-Wrap text allows you to display large content as multiple lines in a single cell. By default, the wrap text support is enabled. Use the [`allowWrap`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowWrap) property to enable or disable the wrap text support in spreadsheet.
+Wrap text displays lengthy content on multiple lines within a single cell. By default, wrap text support is enabled. Use the [allowWrap](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowWrap) property to enable or disable wrap text support in the Spreadsheet.
 
-Wrap text can be applied or removed to a cell or range of cells in the following ways,
+You can apply or remove wrap text in the following ways:
 
-* Using the `wrap` property in `cell`, you can enable or disable wrap text to a cell at initial load.
-* Select or deselect wrap button from ribbon toolbar to apply or remove the wrap text to the selected range.
-* Using the `wrap` method, you can apply or remove the wrap text once the component is loaded.
+* Use the `wrap` property of a cell to configure wrap text during the initial rendering.
+* Select or clear the **Wrap Text** option in the Ribbon toolbar for the selected range.
+* Use the `wrap` method to apply or remove wrap text after the component is loaded.
 
-The following code example shows the wrap text functionality in spreadsheet.
+The `wrap` method accepts the following arguments:
+
+* `address`: Specifies the cell or cell range to which wrap text is applied.
+* `wrap`: Specifies whether wrap text is enabled or disabled.
+
+Use `true` to apply wrap text and `false` to remove it.
+
+The following code example demonstrates wrap text functionality in the Spreadsheet.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
@@ -42,22 +49,24 @@ The following features have some limitations in wrap text:
 
 ## Merge cells
 
-Merge cells allows users to span two or more cells in the same row or column into a single cell. When cells with multiple values are merged, top-left most cell data will be the data for the merged cell. By default, the merge cells option is enabled. Use [`allowMerge`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowMerge) property to enable or disable the merge cells option in spreadsheet.
+The Merge Cells feature allows users to combine two or more cells into a single cell. When cells containing multiple values are merged, the value of the top-left cell is retained in the merged cell. By default, the Merge Cells feature is enabled. Use the [allowMerge](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowMerge) property to enable or disable this feature in the Spreadsheet.
 
-You can merge the range of cells in the following ways,
+You can merge cells in the following ways:
 
-* Set the `rowSpan` and `colSpan` property in `cell` to merge the number of cells at initial load.
-* Select the range of cells and apply merge by selecting the desired option from ribbon toolbar.
-* Use `merge` method to merge the range of cells, once the component is loaded.
+* Set the `rowSpan` and `colSpan` properties of a cell to merge cells during the initial rendering.
+* Select a range and choose the required merge option from the Ribbon toolbar.
+* Use the `merge` method to merge a range after the component is loaded.
 
-The available merge options in spreadsheet are,
+The `merge` method requires a cell range and the applicable merge type. The range identifies the cells to merge, and the merge type determines whether all cells, rows, or columns in the range are merged.
+
+The following code example demonstrates the merge operation in the Spreadsheet.
 
 | Type | Action |
 |-------|---------|
-| Merge All | Combines all the cells in a range in to a single cell (default). |
-| Merge Horizontally | Combines cells in a range as row-wise. |
-| Merge Vertically | Combines cells in a range as column-wise. |
-| UnMerge | Splits the merged cells into multiple cells. |
+| Merge All | Combines all cells in the selected range into a single cell. This is the default option. |
+| Merge Horizontally | Combines the cells in each row of the selected range. |
+| Merge Vertically | Combines the cells in each column of the selected range. |
+| UnMerge | Separates the merged cell into individual cells. |
 
 The following code example shows the merge cells operation in spreadsheet.
 
@@ -80,44 +89,51 @@ The following features have some limitations in Merge:
 
 ## Data Validation
 
-Data Validation is used to restrict the user from entering the invalid data. You can use the [`allowDataValidation`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowDataValidation) property to enable or disable data validation.
+Data Validation restricts the type of data or values that users can enter into cells. Use the [allowDataValidation](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowDataValidation) property to enable or disable data validation in the Spreadsheet.
 
-N> * The default value for `allowDataValidation` property is `true`.
+N> * The default value of the `allowDataValidation` property is `true`.
+
+The Spreadsheet supports predefined validation types, such as numbers, dates, text lengths, lists, and custom formulas.
 
 ### Apply Validation
 
-You can apply data validation to restrict the type of data or the values that users enter into a cell.
+Data validation can restrict the type of data or the range of values that users enter into a cell.
 
-You can apply data validation by using one of the following ways,
+You can apply data validation in the following ways:
 
-* Select the Data tab in the Ribbon toolbar, and then choose the Data Validation item.
-* Use the `addDataValidation()` method programmatically.
+* Select the required cells, open the **Data** tab in the Ribbon, and choose **Data Validation**.
+* Use the `addDataValidation()` method to apply a validation rule programmatically.
+
+The `addDataValidation()` method requires:
+
+* A validation rule that defines the validation type, operator, and permitted values or formula.
+* A cell or range address to which the rule is applied.
 
 ### Clear Validation
 
-Clear validation feature is used to remove data validations from the specified ranges or the whole worksheet.
+The Clear Validation feature removes data validation rules from a specified range or the entire worksheet.
 
-You can clear data validation rule by one of the following ways,
+You can clear data validation in the following ways:
 
-* Select the Data tab in the Ribbon toolbar, and then choose the Clear Validation item.
-* Use the `removeDataValidation()` method programmatically.
+* Select the required cells, open the **Data** tab in the Ribbon, and choose **Clear Validation**.
+* Use the `removeDataValidation()` method to remove validation programmatically.
 
 ### Highlight Invalid Data
 
-Highlight invalid data feature is used to highlight the previously entered invalid values.
+The Highlight Invalid Data feature identifies existing cell values that do not satisfy the applied validation rules.
 
-You can highlight an invalid data by using one of the following ways,
+You can highlight invalid data in the following ways:
 
-* Select the Data tab in the Ribbon toolbar, and then choose the Highlight Invalid Data item.
-* Use the `addInvalidHighlight()` method programmatically.
+* Open the **Data** tab in the Ribbon and choose **Highlight Invalid Data**.
+* Use the `addInvalidHighlight()` method to highlight invalid values programmatically.
 
 ### Clear Highlighted Invalid Data
 
-Clear highlight feature is used to remove the highlight from invalid cells.
+This feature removes the highlighting applied to invalid cell values without removing the associated validation rules.
 
-You can clear the highlighted invalid data by using the following ways,
+You can clear invalid-data highlighting in the following ways:
 
-* Select the Data tab in the Ribbon toolbar, and then choose the Clear Highlight item.
+* Open the **Data** tab in the Ribbon and choose **Clear Highlight**.
 * Use the `removeInvalidHighlight()` method programmatically.
 
 {% tabs %}
@@ -166,14 +182,20 @@ The following features have some limitations in Data Validation:
 
 ## Auto Fill
 
-Auto Fill is used to fill the cells with data based on adjacent cells. It also follows a pattern from adjacent cells if available. There is no need to enter the repeated data manually. You can use [`allowAutoFill`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowAutoFill) property to enable/disable the auto fill support. You can also use `showFillOptions` property to enable/disable the fill option and `fillType` property to change the default auto fill option which is available in [`autoFillSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AutoFillSettings).
+Auto Fill is used to fill the cells with data based on adjacent cells. It also follows a pattern from adjacent cells if available. There is no need to enter the repeated data manually. You can use [`allowAutoFill`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowAutoFill) property to enable/disable the auto fill support. You can also use `showFillOptions` property to enable/disable the fill option and `fillType` property to change the default auto fill option which is available in [`autoFillSettings`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AutoFillSettings).
 
-You can do this by one of the following ways,
+The `autoFillSettings` property configures Auto Fill behavior:
 
-* Using “AutoFillOptions” menu which is open, while drag and drop the cell using fill handle element.
-* Use the autoFill() method programmatically.
+* `showFillOptions`: Specifies whether the Auto Fill Options menu is displayed after an Auto Fill operation.
+* `fillType`: Specifies the default Auto Fill operation.
+* `direction`: Specifies the direction in which values are filled.
 
-The available parameters in `autoFill()` method are,
+You can perform Auto Fill in the following ways:
+
+* Drag the fill handle to the required range and select an option from the **Auto Fill Options** menu.
+* Use the `autoFill()` method programmatically.
+
+The `autoFill()` method accepts the following parameters:
 
 | Parameter | Type | Description |
 |-----|------|----|

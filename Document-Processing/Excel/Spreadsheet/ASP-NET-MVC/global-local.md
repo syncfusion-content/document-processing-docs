@@ -11,9 +11,9 @@ documentation: ug
 
 ## Localization
 
-The [Localization](https://ej2.syncfusion.com/aspnetmvc/documentation/common/localization/) library allows you to localize the default text content of the Spreadsheet. The Spreadsheet has static text on some features (cell formatting, Merge, Data validation, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the [locale](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_Locale) value and translation object.
+The [Localization](https://ej2.syncfusion.com/aspnetmvc/documentation/common/localization/) library allows you to localize the default text displayed by the Spreadsheet. Static text used by features such as cell formatting, merge cells, and data validation can be translated by defining the [locale](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_Locale) property and loading the corresponding translation object.
 
-The following list of properties and their values are used in the Spreadsheet.
+The following table lists the locale keywords and their default text used in the Spreadsheet. The **Locale keywords** column contains the keys used in the translation object, and the **Text** column contains their default English text.
 
 |Locale keywords|Text|
 |---------------|----|
@@ -111,7 +111,7 @@ PRODUCT | Multiplies a series of numbers and/or cells.
 AVERAGE | Calculates average for the series of numbers and/or cells excluding text.
 AVERAGEIF | Calculates average for the cells based on the specified criterion.
 AVERAGEIFS | Calculates average for the cells based on the specified conditions.
-AVERAGEA | Calculates the average for the cells evaluating TRUE as 1 text and FALSE as 0.
+AVERAGEA | Calculates the average for the cells, evaluating TRUE as 1 and text and FALSE as 0.
 COUNT | Counts the cells that contain numeric values in a range.
 COUNTIF | Counts the cells based on the specified condition.
 COUNTIFS | Counts the cells based on specified conditions.
@@ -123,19 +123,19 @@ DAY | Returns the day from the given date.
 DAYS | Returns the number of days between two dates.
 IF | Returns value based on the given expression.
 IFS | Returns value based on the given multiple expressions.
-AND | Returns TRUE if all the arguments are TRUE otherwise returns FALSE.
-OR | Returns TRUE if any of the arguments are TRUE otherwise returns FALSE.
-IFERROR | Returns value if no error found else it will return specified value.
+AND | Returns TRUE if all the arguments are TRUE; otherwise, returns FALSE.
+OR | Returns TRUE if any of the arguments are TRUE; otherwise, returns FALSE.
+IFERROR | Returns a value when no error is found; otherwise, returns the specified value.
 CHOOSE | Returns a value from the list of values based on the index number.
 INDEX | Returns the value of the cell in a given range based on row and column number.
-FIND | Returns the position of a string within another string which is case sensitive.
+FIND | Returns the position of a string within another string, which is case-sensitive.
 CONCATENATE | Combines two or more strings together.
 CONCAT | Concatenates a list or a range of text strings.
 SUBTOTAL | Returns subtotal for a range using the given function number.
 RADIANS | Converts degrees into radians.
 MATCH | Returns the relative position of a specified value in the given range.
-DefineNameExists | This name already exists try a different name.
-CircularReference | When a formula refers to one or more circular references this may result in an incorrect calculation.
+DefineNameExists | This name already exists. Try a different name.
+CircularReference | When a formula refers to one or more circular references, this may result in an incorrect calculation.
 ShowRowsWhere | Show rows where |
 CustomFilterDatePlaceHolder | Choose a date
 CustomFilterPlaceHolder | Enter the value
@@ -238,7 +238,7 @@ EqualTo | Equal to
 NotEqualTo | Not equal to
 Greaterthan | Greater than
 Lessthan | Less than
-GreaterThanOrEqaulTo | Greater than or eqaul to
+GreaterThanOrEqualTo | Greater than or equal to
 LessThanOrEqualTo | Less than or equal to
 InCellDropDown | In-cell-dropdown
 Sources | Sources
@@ -376,9 +376,16 @@ IsProtected | is protected
 
 ### Loading translations
 
-To load translation object in an application, use `load` function of the `L10n` class.
+Ensure that the required locale translation object is available in the application before calling the `L10n.load()` method.
 
-The following example demonstrates the Spreadsheet in `French` culture. In the below sample we have translated the ribbon tab names and Home tab content (clipboard, cell style).
+To load translations in the Spreadsheet:
+
+1. Create or reference the locale translation object.
+2. Load the translation object using the `L10n.load()` method.
+3. Set the Spreadsheet `locale` property to the corresponding culture code.
+4. Render the Spreadsheet.
+
+The following example demonstrates the Spreadsheet in the French culture. The Ribbon tab names and Home tab content, including clipboard and cell-style options, are localized.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
@@ -389,13 +396,16 @@ The following example demonstrates the Spreadsheet in `French` culture. In the b
 {% endhighlight %}
 {% endtabs %}
 
+After running the sample, verify that the translated Ribbon tabs and Home tab content are displayed in French.
 
 
 ## Internationalization
 
-The Internationalization library is used to globalize number, date, and time values in the spreadsheet component.
+The Internationalization library globalizes number, date, time, and currency values in the Spreadsheet.
 
-The following example demonstrates the Spreadsheet in French [ `fr-CH`] culture. In the below sample we have globalized the Date(Date column), Time(Time column), and Currency(Amount column) formats.
+Before rendering the Spreadsheet, ensure that the required culture data is loaded and that the Spreadsheet is configured with the corresponding culture.
+
+The following example demonstrates the Spreadsheet using the French (`fr-CH`) culture. It globalizes the date values in the **Date** column, time values in the **Time** column, and currency values in the **Amount** column.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
@@ -406,11 +416,12 @@ The following example demonstrates the Spreadsheet in French [ `fr-CH`] culture.
 {% endhighlight %}
 {% endtabs %}
 
+After running the sample, verify that the date, time, and currency values are displayed according to the `fr-CH` culture.
 
 
 ## Right to left (RTL)
 
-RTL provides an option to switch the text direction and layout of the Spreadsheet component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). To enable RTL Spreadsheet, set the [`enableRtl`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_EnableRtl) to true.
+RTL support changes the text direction and layout of the Spreadsheet from right to left. It improves usability and accessibility for users of right-to-left languages, such as Arabic, Farsi, and Urdu. set the [`enableRtl`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_EnableRtl) property to true to enable the right-to-left layout.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
@@ -421,6 +432,7 @@ RTL provides an option to switch the text direction and layout of the Spreadshee
 {% endhighlight %}
 {% endtabs %}
 
+After running the sample, verify that the Spreadsheet layout, Ribbon, and worksheet content are displayed from right to left.
 
 
 ## See Also
