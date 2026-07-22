@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Retry Timeout
 
-The `retryTimeout` property controls how long the PDF Viewer waits (in seconds) for an AJAX response before considering that request timed out. When a timeout occurs, the viewer will retry the request according to the `retryCount` setting. Properly configuring `retryTimeout` and `retryCount` makes the viewer more resilient to transient network errors while avoiding excessive load on the server.
+The `retryTimeout` property controls how long the PDF Viewer waits (in seconds) for an AJAX response before considering that request timed out. When a timeout occurs, the PDF Viewer retries the request according to the `retryCount` setting. Properly configuring `retryTimeout` and `retryCount` makes the PDF Viewer more resilient to transient network errors while avoiding excessive load on the server.
 
 Defaults and units:
 
