@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Override keyboard shortcuts in React Document editor | Syncfusion
-description: Learn here all about Override the keyboard shortcuts in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
-control: Override the keyboard shortcuts 
+title: Override keyboard shortcuts in React DOCX Editor | Syncfusion
+description: Learn here all about Override the keyboard shortcuts in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+control: Override the keyboard shortcuts
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Override the keyboard shortcuts in React Document editor component
+# Override the keyboard shortcuts in React Document Editor component
 
-[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) triggers the [`keyDown`](https://ej2.syncfusion.com/react/documentation/api/document-editor#keydown) event every time when any key is entered and provides an instance of [`DocumentEditorKeyDownEventArgs`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorKeyDownEventArgs/). You can use the [`isHandled`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorKeyDownEventArgs#ishandled) property to override the keyboard shortcut behavior.
+[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) triggers the [`keyDown`](https://ej2.syncfusion.com/react/documentation/api/document-editor#keydown) event every time any key is entered and provides an instance of [`DocumentEditorKeyDownEventArgs`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorKeyDownEventArgs/). You can use the [`isHandled`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorKeyDownEventArgs#ishandled) property to override the keyboard shortcut behavior.
 
-## Preventing default keyboard shortcut
+## Prevent the default keyboard shortcut
 
-The following code shows how to prevent the `CTRL + C` keyboard shortcut for copying selected content in document editor.
+The following code shows how to prevent the `CTRL + C` keyboard shortcut for copying selected content in the Document Editor.
 
 
 ```ts
@@ -34,7 +34,7 @@ function App() {
             let isCtrlKey: boolean = (args.event.ctrlKey || args.event.metaKey) ? true : ((keyCode === 17) ? true : false);
             //67 is the character code for 'C'
             if (isCtrlKey && keyCode === 67) {
-                //To prevent copy operation set isHandled to true
+                //To prevent the copy operation, set isHandled to true
                 args.isHandled = true;
             }
         }
@@ -57,9 +57,9 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
-## Override or define the keyboard shortcut
+## Override or define a keyboard shortcut
 
-Override or define a new keyboard shortcut behavior instead of preventing the keyboard shortcut.
+You can override or define a new keyboard shortcut behavior instead of preventing the default behavior.
 
 For example, `Ctrl + S` keyboard shortcut saves the document in SFDT format by default, and there is no behavior for `Ctrl + Alt + S`. The following code demonstrates how to override the `Ctrl + S` shortcut to save a document in DOCX format and define `Ctrl + Alt + S` to save the document in SFDT format.
 
@@ -98,13 +98,13 @@ function App() {
         : false;
       // 83 is the character code for 'S'
       if (isCtrlKey && !isAltKey && keyCode === 83) {
-        //To prevent default save operation, set the isHandled property to true
+        //To prevent the default save operation, set the isHandled property to true
         args.isHandled = true;
-        //Download the document in docx format.
+        //Download the document in DOCX format.
         documentEditor.save('sample', 'Docx');
         args.event.preventDefault();
       } else if (isCtrlKey && isAltKey && keyCode === 83) {
-        //Download the document in sfdt format.
+        //Download the document in SFDT format.
         documentEditor.save('sample', 'Sfdt');
       }
     };
