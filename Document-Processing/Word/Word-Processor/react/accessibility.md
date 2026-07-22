@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in React DOCX Editor component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React DOCX Editor component of Essential JS 2 and more.
+description: Learn here all about Accessibility in Syncfusion React Document Editor component of Essential JS 2 and more.
 control: Accessibility
 platform: document-processing
 documentation: ug

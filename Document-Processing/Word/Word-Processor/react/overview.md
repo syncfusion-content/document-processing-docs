@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of React DOCX Editor | Syncfusion
-description: Learn about the React DOCX Editor control, which enables you to create, edit, view, and print Word documents.
+description: Learn about the React Document Editor control, which enables you to create, edit, view, and print Word documents.
 control: Index 
 platform: document-processing
 documentation: ug

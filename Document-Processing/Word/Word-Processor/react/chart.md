@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Chart in React DOCX Editor component | Syncfusion
-description: Learn here all about Chart in Syncfusion React DOCX Editor component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Chart in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
 control: Chart 
 platform: document-processing
 documentation: ug

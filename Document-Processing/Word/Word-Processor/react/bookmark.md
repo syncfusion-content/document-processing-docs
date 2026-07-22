@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bookmark in React DOCX Editor component | Syncfusion
-description: Learn here all about Bookmark in Syncfusion React DOCX Editor component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Bookmark in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
 control: Bookmark
 platform: document-processing
 documentation: ug
