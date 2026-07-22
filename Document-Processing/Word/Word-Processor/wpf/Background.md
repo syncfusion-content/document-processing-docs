@@ -93,7 +93,7 @@ richTextBoxAdv.OverridesDocumentBackground = true
 
 ## Setting Background for Document Pages
 
-The RichTextBox control allows you to change background color of the document pages. A background of a document is represented by `Background` property of `DocumentAdv` class. The default value of this property is white.
+The RichTextBox control allows you to change background color of the document pages. A background of a document is represented by [`Background`](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.DocumentAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_DocumentAdv_Background) property of `DocumentAdv` class. The default value of this property is white.
 
 N> 1. This API is supported starting from release version v17.4.0.39.
 N> 2. This property is independent for a document. So the background will change when the document is changed.
