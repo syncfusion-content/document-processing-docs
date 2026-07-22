@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Azure Blob Storage
+# Save document to Azure Blob Storage in React DOCX Editor
 
 To save a document to Azure Blob Storage, you can follow the steps below.
 
