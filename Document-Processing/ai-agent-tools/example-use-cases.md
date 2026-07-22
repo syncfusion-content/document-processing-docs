@@ -22,7 +22,7 @@ This example demonstrates an **Automated PDF Redaction Agent** that uses the [Mi
 | AI Provider API Key | Required to authenticate requests to the AI provider. This page uses OpenAI. |
 | NuGet Packages | [Syncfusion.DocumentSDK.AI.AgentTools](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools), [Microsoft.Agents.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Agents.AI.OpenAI) |
 
-### How it works
+### How It Works
 
 At runtime the application performs the following steps:
 
@@ -32,7 +32,7 @@ At runtime the application performs the following steps:
 4. **Locate and redact:** All identified items are located using bounding box coordinates and permanently redacted with black boxes.
 5. **Export:** The redacted PDF is saved to the output folder with a `_redacted.pdf` suffix. The original file remains unchanged.
 
-### Syncfusion setup
+### Syncfusion Setup
 
 The snippet below shows only the Syncfusion-specific configuration. You can find the complete code snippet [here](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/Console/AutomatedPDFRedaction/Program.cs).
 
@@ -96,20 +96,18 @@ This example demonstrates a **Blog Generator** that uses the [Microsoft Agent Fr
 | OpenAI Models | A text model (default **gpt-4o**) and an image model (default **gpt-image-1.5**) |
 | NuGet Packages | [Syncfusion.DocumentSDK.AI.AgentTools](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools), [Microsoft.Agents.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Agents.AI.OpenAI) |
 
-### How it works
-
-
+### How It Works
 
 At runtime the application performs the following steps:
 
-1. **Ask blog topic.** The user enters a topic from the console.
+1. **Ask blog topic.** The user enters a topic via the console.
 2. **Generate title and outline.** The agent drafts a title and 6–10 section outline for user confirmation (`[Y/n/r]`).
 3. **Draft blog content as HTML.** For each section the agent generates structured HTML with consistent styling.
 4. **Generate images.** For sections that need visuals, the **gpt-image-1.5** model generates PNG images embedded as Base64.
 5. **Convert HTML to Word.** The AI agent autonomously chains [CreateDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.Word.WordDocumentAgentTools.html#Syncfusion_AI_AgentTools_Word_WordDocumentAgentTools_CreateDocument_System_String_System_String_) → [ImportHtml](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.Word.WordImportExportAgentTools.html#Syncfusion_AI_AgentTools_Word_WordImportExportAgentTools_ImportHtml_System_String_System_String_System_String_) → [ExportDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.Word.WordDocumentAgentTools.html#Syncfusion_AI_AgentTools_Word_WordDocumentAgentTools_ExportDocument_System_String_System_String_System_String_) using [WordDocumentAgentTools](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.Word.WordDocumentAgentTools.html) and [WordImportExportAgentTools](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.Word.WordImportExportAgentTools.html).
 6. **Save output.** Both the assembled HTML and the converted Word document are saved to the output folder.
 
-### Syncfusion setup
+### Syncfusion Setup
 
 The snippet below shows only the Syncfusion-specific configuration. You can find the complete code snippet [here](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/Console/BlogGenerator/Program.cs).
 
