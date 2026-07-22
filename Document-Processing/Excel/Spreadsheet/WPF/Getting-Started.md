@@ -36,6 +36,27 @@ To ensure the control is styled correctly, install the theme package:
 
 •	[Syncfusion.Themes.Windows11Light.WPF](https://www.nuget.org/packages/Syncfusion.Themes.Windows11Light.WPF)
 
+The following table lists the optional NuGet packages that enable additional features in the SfSpreadsheet control.
+
+<table>
+<tr>
+<th>
+Optional NuGet Packages</th><th>
+Description</th></tr>
+<tr>
+<td>
+{{'[Syncfusion.SfSpreadsheetHelper.WPF](https://www.nuget.org/packages/Syncfusion.SfSpreadsheetHelper.WPF)' | markdownify}}</td><td>
+Contains the classes that are responsible for importing charts and sparklines into SfSpreadsheet.</td></tr>
+<tr>
+<td>
+{{'[Syncfusion.ExcelChartToImageConverter.WPF](https://www.nuget.org/packages/Syncfusion.ExcelChartToImageConverter.WPF)' | markdownify}}</td><td>
+Contains the classes that are responsible for converting charts as images.</td></tr>
+<tr>
+<td>
+{{'[Syncfusion.SfChart.WPF](https://www.nuget.org/packages/Syncfusion.SfChart.WPF)' | markdownify}}</td><td>
+Contains the classes that are responsible for importing charts such as Line, Pie, Column, and Bar charts. Sparklines are handled by <code>Syncfusion.SfSpreadsheetHelper.WPF</code>, not by this package.</td></tr>
+</table>
+
 {% endtabcontent %}
  
 {% tabcontent Assemblies (.dll) %}
@@ -83,7 +104,7 @@ N> Add these references to your project to use the skinning and theming capabili
 
 ### Optional Assemblies
 
-The following optional assemblies enable additional features in the SfSpreadsheet control. Add only those required by your scenario. Each optional assembly is also available as a NuGet package with the same base name (for example, `Syncfusion.SfSpreadsheetHelper.WPF`).
+The following table lists the optional assemblies that enable additional features in the SfSpreadsheet control.
 
 <table>
 <tr>
@@ -126,81 +147,81 @@ WPF Spreadsheet control can be added to an application either through the design
 
 1. Add the theme and the [SfSkinManager](https://help.syncfusion.com/cr/wpf/Syncfusion.SfSkinManager.html) namespace to style the control correctly. Include the SfSkinManager namespace in the XAML code and apply the desired theme.
 
-{% tabs %}
-{% highlight xaml tabtitle="MainWindow.xaml" %}
-<Window x:Class="YourNamespace.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:syncfusionskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
-        syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=Windows11Light}">
+    {% tabs %}
+    {% highlight xaml tabtitle="MainWindow.xaml" %}
+    <Window x:Class="YourNamespace.MainWindow"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:syncfusionskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+            syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=Windows11Light}">
 
-</Window>
-{% endhighlight %}
-{% endtabs %}
+    </Window>
+    {% endhighlight %}
+    {% endtabs %}
 
 2. Open the Visual Studio **Toolbox**. Navigate to the Syncfusion<sup>®</sup> Controls tab and find the `SfSpreadsheet` and `SfSpreadsheetRibbon` toolbox items. (If the Syncfusion tab is missing, install the controls using the [Syncfusion<sup>®</sup> WinForms/WPF installer](https://help.syncfusion.com/wpf/visual-studio-integration/visual-studio-extensions/extensions) and restart Visual Studio.)
 
-![WPF Spreadsheet Getting-Started](Getting-Started_images/wpf-spreadsheet-getting-started.jpeg)
+    ![WPF Spreadsheet Getting-Started](Getting-Started_images/wpf-spreadsheet-getting-started.jpeg)
 
 3. Drag `SfSpreadsheet` and `SfSpreadsheetRibbon` from the Toolbox and drop them in the Designer area.
 
-![WPF Spreadsheet Interaction with Ribbon](Getting-Started_images/wpf-spreadsheet-interaction-with-ribbon.jpeg)
+    ![WPF Spreadsheet Interaction with Ribbon](Getting-Started_images/wpf-spreadsheet-interaction-with-ribbon.jpeg)
 
-{% tabs %}
-{% highlight xaml tabtitle="MainWindow.xaml" %}
-<Window x:Class="YourNamespace.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-	xmlns:syncfusion="clr-namespace:Syncfusion.UI.Xaml.Spreadsheet;assembly=Syncfusion.SfSpreadsheet.WPF"
-        xmlns:syncfusionskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
-        syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=Windows11Light}">
-    <Grid>
-	<syncfusion:SfSpreadsheetRibbon />
-    </Grid>
-</Window>
-{% endhighlight %}
-{% endtabs %}
+    {% tabs %}
+    {% highlight xaml tabtitle="MainWindow.xaml" %}
+    <Window x:Class="YourNamespace.MainWindow"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    	xmlns:syncfusion="clr-namespace:Syncfusion.UI.Xaml.Spreadsheet;assembly=Syncfusion.SfSpreadsheet.WPF"
+            xmlns:syncfusionskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+            syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=Windows11Light}">
+        <Grid>
+    	<syncfusion:SfSpreadsheetRibbon />
+        </Grid>
+    </Window>
+    {% endhighlight %}
+    {% endtabs %}
 
 4. Spreadsheet can be added to the application by dragging `SfSpreadsheet` to the Designer area.
 
-{% tabs %}
-{% highlight xaml tabtitle="MainWindow.xaml" %}
-<Window x:Class="YourNamespace.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-	xmlns:syncfusion="clr-namespace:Syncfusion.UI.Xaml.Spreadsheet;assembly=Syncfusion.SfSpreadsheet.WPF"
-        xmlns:syncfusionskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
-        syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=Windows11Light}">
+    {% tabs %}
+    {% highlight xaml tabtitle="MainWindow.xaml" %}
+    <Window x:Class="YourNamespace.MainWindow"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    	xmlns:syncfusion="clr-namespace:Syncfusion.UI.Xaml.Spreadsheet;assembly=Syncfusion.SfSpreadsheet.WPF"
+            xmlns:syncfusionskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+            syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=Windows11Light}">
 
-    <Grid>
-	<syncfusion:SfSpreadsheet x:Name = spreadsheet />
-    </Grid>
-</Window>
-{% endhighlight %}
-{% endtabs %}
+        <Grid>
+    	<syncfusion:SfSpreadsheet x:Name = spreadsheet />
+        </Grid>
+    </Window>
+    {% endhighlight %}
+    {% endtabs %}
 
-N> Declare a name for the Spreadsheet component (for example, `x:Name="spreadsheet"`) so that it can be referenced from the Ribbon.
+    N> Declare a name for the Spreadsheet component (for example, `x:Name="spreadsheet"`) so that it can be referenced from the Ribbon.
 
-![WPF Spreadsheet Drag and Drop](Getting-Started_images/wpf-spreadsheet-dragdrop.jpeg)
+    ![WPF Spreadsheet Drag and Drop](Getting-Started_images/wpf-spreadsheet-dragdrop.jpeg)
 
 5. To make an interaction between Ribbon items and `SfSpreadsheet`, bind the `SfSpreadsheet` as DataContext to the `SfSpreadsheetRibbon`.
 
-{% tabs %}
-{% highlight xaml tabtitle="MainWindow.xaml" %}
-<Window x:Class="YourNamespace.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:syncfusion="clr-namespace:Syncfusion.UI.Xaml.Spreadsheet;assembly=Syncfusion.SfSpreadsheet.WPF"
-        xmlns:syncfusionskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
-        syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=Windows11Light}">
+   {% tabs %}
+   {% highlight xaml tabtitle="MainWindow.xaml" %}
+   <Window x:Class="YourNamespace.MainWindow"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:syncfusion="clr-namespace:Syncfusion.UI.Xaml.Spreadsheet;assembly=Syncfusion.SfSpreadsheet.WPF"
+            xmlns:syncfusionskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+            syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=Windows11Light}">
 
-    <Grid>
-	<syncfusion:SfSpreadsheetRibbon DataContext= "{Binding ElementName=spreadsheet}"  />
-	<syncfusion:SfSpreadsheet x:Name = spreadsheet />
-    </Grid>
-</Window>
-{% endhighlight %}
-{% endtabs %}
+        <Grid>
+    	<syncfusion:SfSpreadsheetRibbon DataContext= "{Binding ElementName=spreadsheet}"  />
+    	<syncfusion:SfSpreadsheet x:Name = spreadsheet />
+        </Grid>
+   </Window>
+   {% endhighlight %}
+   {% endtabs %}
 
 {% endtabcontent %}
  
@@ -273,7 +294,7 @@ public MainWindow()
 
 ## Run the application
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application.The output will appear as follows:
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio to launch the application.The output will appear as follows:
 
 ![WPF Spreadsheet Control](Getting-Started_images/wpf-spreadsheet-control.jpeg)
 

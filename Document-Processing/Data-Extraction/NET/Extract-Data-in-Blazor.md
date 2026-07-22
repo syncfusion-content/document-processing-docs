@@ -21,7 +21,7 @@ The Syncfusion<sup>&reg;</sup> Smart Data Extractor is a .NET library used to ex
 **Prerequisites**:
 
 * Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-* Install Visual Studio: Download and install Visual Studio from the [official website](https://code.visualstudio.com/download).
+* Install Visual Studio: Download and install Visual Studio from the [official website](https://code.visualstudio.com/download?_exp_download=d53503e735).
 
 
 Step 1: Create a new C# Blazor Web App project.
@@ -43,6 +43,8 @@ To **Extract Data from PDF in a Blazor Web App Server**, install [Syncfusion.Sma
 
 ![Install Syncfusion.SmartDataExtractor.Net.Core NuGet Package](GettingStarted_images/Blazor_Nuget.png)
 
+Add the input PDF file named **Input.pdf** to the wwwroot folder before running the sample.
+
 Step 3: Create a Razor file named `Home.razor` in the `Pages` folder, which is located inside the `Components` folder.
 
 Add the following directives and service injections in the file
@@ -53,6 +55,7 @@ Add the following directives and service injections in the file
 @page "/"
 @rendermode InteractiveServer
 @using  Extract_Data_Blazor.Services
+@using Microsoft.JSInterop
 @inject ExtractionService extractor
 @inject IJSRuntime JS
 
@@ -112,15 +115,20 @@ Create a new method in the ExtractionService class, and add the following code s
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-
-using (FileStream stream = new FileStream(@"wwwroot/Input.pdf", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+public class ExtractionService
 {
-	// Initialize the Smart Data Extractor
-	DataExtractor extractor = new DataExtractor();
-	// Extract data as JSON string
-	string data = extractor.ExtractDataAsJson(stream);
-	// Return the JSON string
-	return data;
+    public string RunExtraction()
+    {
+        using (FileStream stream = new FileStream(@"wwwroot/Input.pdf", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+        {
+            // Initialize the Data Extractor
+            DataExtractor extractor = new DataExtractor();
+            // Extract data as JSON string
+            string data = extractor.ExtractDataAsJson(stream);
+            // Return the JSON string
+            return data;
+        }
+    }
 }
 
 {% endhighlight %}
@@ -157,6 +165,10 @@ Create a new class file named `FileUtils` in the project and add the following c
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
+
+using System;
+using System.Threading.Tasks;
+using Microsoft.JSInterop;
 
 public static class FileUtils
 {
@@ -208,7 +220,7 @@ Add the following JavaScript function in the `App.razor` file located in the roo
 
 Step 11: Add navigation link.
 
-Add the following code snippet to the Navigation menu's Razor file in the `Layout` folder.
+Add the following code snippet to the `NavMenu.razor` file in the `Layout` folder.
 
 {% tabs %}
 
@@ -262,9 +274,11 @@ Step 2: To **Extract Data from PDF in Web app**, install [Syncfusion.SmartDataEx
 * Run the command `dotnet add package Syncfusion.SmartDataExtractor.Net.Core` to install the NuGet package.
 
 ```
-dotnet add package Syncfusion.SmartDataExtractor.NET.Core
+dotnet add package Syncfusion.SmartDataExtractor.Net.Core
 
 ```
+
+Add the input PDF file named **Input.pdf** to the wwwroot folder before running the sample.
 
 Step 3: Create a Razor file named `Home.razor` in the `Pages` folder, which is located inside the `Components` folder.
 
@@ -276,6 +290,7 @@ Add the following directives and service injections in the file
 @page "/"
 @rendermode InteractiveServer
 @using  Extract_Data_Blazor.Services
+@using Microsoft.JSInterop
 @inject ExtractionService extractor
 @inject IJSRuntime JS
 
@@ -348,7 +363,7 @@ Create a new method in the ExtractionService class, and add the following code s
 
 using (FileStream stream = new FileStream(@"wwwroot/Input.pdf", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
 {
-	// Initialize the Smart Data Extractor
+	// Initialize the Data Extractor
 	DataExtractor extractor = new DataExtractor();
 
 	// Extract data as JSON string

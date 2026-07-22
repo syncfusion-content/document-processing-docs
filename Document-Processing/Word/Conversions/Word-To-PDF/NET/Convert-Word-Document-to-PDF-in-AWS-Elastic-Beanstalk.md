@@ -8,23 +8,31 @@ documentation: UG
 
 # Convert Word document to PDF in AWS Elastic Beanstalk
 
-Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to PDF in AWS Elastic Beanstalk**.
+Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and convert Word documents programmatically without Microsoft Word or interop dependencies. Using this library, you can convert a Word document to PDF in AWS Elastic Beanstalk.
 
-## Steps to convert word document to PDF in AWS Elastic Beanstalk
+## Prerequisites
 
-Step 1: Create a new ASP.NET Core Web application (Model-View-Controller) project.
+* An active AWS account with permissions to create and deploy Elastic Beanstalk applications and IAM roles.
+* Visual Studio with the **AWS Toolkit for Visual Studio** installed.
+* **.NET 8.0** or later.
+* A valid Syncfusion<sup>&reg;</sup> license key. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to generate and register your license key.
+
+## Steps to convert Word document to PDF in AWS Elastic Beanstalk
+
+Step 1: Create a new **ASP.NET Core Web App (Model-View-Controller)** project targeting **.NET 8.0** or later.
 
 ![Create ASP.NET Core Web application in Visual Studio](ASP-NET-Core_images/CreateProjectforConversion.png)
 
-Step 2: Install the following **Nuget packages** in your application from [Nuget.org](https://www.nuget.org/).
+Step 2: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/).
 
 * [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) 
 * [SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)
+* [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) (required for v16.2.0.x and later)
 
 ![Install Syncfusion.DocIORenderer.Net.Core NuGet Package](Azure-Images/App-Service-Linux/Syncfusion_Nuget_Package_WordtoPDF.png)
 ![Install SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1 NuGet Package](AWS_Images/Elastic_Beanstalk_Images/Nuget-Convert-WordtoPDF.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add a **Syncfusion.Licensing** NuGet package reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 3: Include the following namespaces in the **HomeController.cs** file.
 
@@ -39,7 +47,7 @@ using Syncfusion.Pdf;
 {% endhighlight %}
 {% endtabs %}
 
-Step 4: A default action method named Index will be present in HomeController.cs. Right click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
+Step 4: A default action method named Index is present in HomeController.cs. Right-click the Index method and select **Go To View** to navigate to the associated view page **Index.cshtml**.
 
 Step 5: Add a new button in the **Index.cshtml** as shown below.
 
@@ -50,7 +58,7 @@ Step 5: Add a new button in the **Index.cshtml** as shown below.
     Html.BeginForm("ConvertWordtoPDF", "Home", FormMethod.Get);
     {
         <div>
-            <input type="submit" value="Convert WordtoPDF" style="width:150px;height:27px" />
+            <input type="submit" value="Convert Word to PDF" style="width:150px;height:27px" />
         </div>
     }
     Html.EndForm();
@@ -59,7 +67,7 @@ Step 5: Add a new button in the **Index.cshtml** as shown below.
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the below code snippet in the **HomeController.cs** file to **convert a Word document to Pdf** and download it.
+Step 6: Include the below code snippet in the **HomeController.cs** file to **convert a Word document to PDF** and download it.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -113,39 +121,45 @@ private static void FontSettings_SubstituteFont(object sender, SubstituteFontEve
 
 ## Steps to publish as AWS Elastic Beanstalk
 
+N> This walkthrough uses the **Publish to AWS Elastic Beanstalk (Legacy)** option in the AWS Toolkit for Visual Studio. AWS is deprecating the legacy publish flow in newer Toolkit versions; if you do not see the legacy option, use the **AWS Elastic Beanstalk** publish profile or the EB CLI. See the [AWS Toolkit for Visual Studio documentation](https://docs.aws.amazon.com/toolkit-for-visual-studio/latest/user-guide/welcome.html) for the current recommended approach.
+
 Step 1: Right-click the project and select **Publish to AWS Elastic Beanstalk (Legacy)** option.
 ![Right-click the project and select the Publish option](AWS_Images/Elastic_Beanstalk_Images/Publish-Convert-WordtoPDF.png)
 
-Step 2: Select the **Deployment Target** as **Create a new application environment** and click **Next** button.
-![Deployment Target in AWS Ealastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Deployment-Target-Convert-WordtoPDF.png)
+Step 2: Select the **Deployment Target** as **Create a new application environment** and click **Next**.
+![Deployment Target in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Deployment-Target-Convert-WordtoPDF.png)
 
-Step 3: Choose the **Environment Name** in the dropdown list and the **URL** will be automatically assign and check the URL is available, if available click next otherwise change the **URL**. 
-![Application Environment in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/URL-Availability-Convert-WordtoPDF.png)
+Step 3: Choose the **Environment Name** from the dropdown list. The **URL** is automatically assigned; if it is available, click **Next**. Otherwise, change the **URL** until an available one is found.
+![URL availability in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/URL-Availability-Convert-WordtoPDF.png)
 
-Step 4: Select the instance type in **t3a.micro** from the dropdown list and click next.
-![Application Environment in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Launch-Configuration-Convert-WordtoPDF.png)
+Step 4: Select the instance type **t3a.micro** from the dropdown list and click **Next**.
 
-Step 5: Click the **Next** button to proceed further.
-![Application Environment in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Permissions-Convert-WordtoPDF.png)
+N> `t3a.micro` is suitable for the bundled sample. For production workloads or large Word documents, choose a larger instance (for example, `t3a.small` or higher) to avoid memory pressure during PDF conversion.
+![Launch configuration in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Launch-Configuration-Convert-WordtoPDF.png)
 
-Step 6: Click the **Next** button.
+Step 5: Review the **Permissions** screen and click **Next** to continue.
+![Permissions in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Permissions-Convert-WordtoPDF.png)
+
+Step 6: Review the **Application Options** screen and click **Next** to continue.
 ![Application Options in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Application-Options-Convert-WordtoPDF.png)
 
-Step 7: Click the **Deploy** button to deploy the sample on AWS Elastic Beanstalk.
-![Deploy the sample in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Review-Convert-WordtoPDF.png)
+Step 7: On the **Review** screen, verify the configuration summary and click **Deploy** to deploy the sample to AWS Elastic Beanstalk.
+![Review and deploy the sample in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Review-Convert-WordtoPDF.png)
 
-Step 8: After changing the status from **Updating** to **Environment is healthy**, click the **URL**.
+Step 8: Wait for the environment status to change from **Updating** to **Environment is healthy**, then click the **Environment URL** displayed at the top of the dashboard.
+
+N> If the status remains **Updating** or transitions to **Severe**/**Degraded**, open the **Logs** link on the environment dashboard to view the deployment and application logs. The first deployment may take several minutes.
 ![Status check in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Status-Convert-WordtoPDF.png)
 
-Step 9: After opening the provided **URL**, click **Convert WordtoPDF** button to download the PDF document.
+Step 9: After opening the provided **URL**, click the **Convert Word to PDF** button to download the PDF document.
 ![Click button to Convert Word to PDF](AWS_Images/Elastic_Beanstalk_Images/Browser-Covert-WordtoPDF.png)
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/AWS/AWS_Elastic_Beanstalk).
-
-By executing the program, you will get the **PDF document** as follows.
+When the conversion is complete, the **PDF document** is downloaded by the browser as shown below.
 
 ![Word to PDF in AWS Elastic Beanstalk](WordToPDF_images/OutputImage.png)
 
-Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.
+## Related links
 
-An online sample link to [convert Word document to PDF](https://document.syncfusion.com/demos/word/wordtopdf#/tailwind) in ASP.NET Core.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/AWS/AWS_Elastic_Beanstalk).
+
+Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.
