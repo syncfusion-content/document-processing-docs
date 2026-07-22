@@ -9,8 +9,6 @@ documentation: ug
 
 # Create an object structure in React Spreadsheet component
 
-This topic describes the JSON structure that can be passed to the [`openFromJson`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#openfromjson) method to render the spreadsheet. The structure is an object whose top-level key is `Workbook`, and the value is an object containing the spreadsheet's [`properties`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#properties).
-
 This topic guides you to construct a JSON structure that can be passed to the [`openFromJson`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#openfromjson) method to render the spreadsheet. The JSON structure is an object with the key as `Workbook` and the [`properties`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#properties) of the spreadsheet as value.
 
 ```js
