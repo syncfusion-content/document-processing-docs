@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to AWS S3
+# Save document to AWS S3 in React DOCX Editor
 
 To save a document to AWS S3, follow the steps below.
 
