@@ -5,12 +5,14 @@ platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Working with Images in Word document
+# Working with Images in a Word document
 
-DocIO provides support for both inline and absolute positioned images. 
+DocIO provides support for both inline and absolute positioned images.
 
 * Inline images: The position of the image is constrained to the lines of text on the page.
 * Absolute positioned images: The images can be positioned anywhere irrespective of the lines of text.
+
+N> To run the code samples in this topic, install the `Syncfusion.DocIO.Net.Core` (cross-platform) or `Syncfusion.DocIO.Wpf`/`Syncfusion.DocIO.WinForms` (Windows-specific) NuGet package, register your Syncfusion license, and add `using`/`Imports` directives for the `Syncfusion.DocIO` and `Syncfusion.DocIO.DLS` namespaces.
 
 The following code example explains how to add image to the paragraph.
 
@@ -25,8 +27,8 @@ WordDocument document = new WordDocument();
 IWSection section = document.AddSection();
 //Adds new paragraph to the section
 IWParagraph firstParagraph = section.AddParagraph();
-//Adds image to  the paragraph
-FileStream imageStream = new FileStream(@"Image.png", FileMode.Open, FileAccess.ReadWrite);
+//Adds image to the paragraph
+FileStream imageStream = new FileStream(@"Image.png", FileMode.Open, FileAccess.Read);
 IWPicture picture = firstParagraph.AppendPicture(imageStream);
 //Sets height and width for the image
 picture.Height = 100;
@@ -45,7 +47,7 @@ WordDocument document = new WordDocument();
 IWSection section = document.AddSection();
 //Adds new paragraph to the section
 IWParagraph firstParagraph = section.AddParagraph();
-//Adds image to  the paragraph
+//Adds image to the paragraph
 IWPicture picture = firstParagraph.AppendPicture(Image.FromFile("Image.png"));
 //Sets height and width for the image
 picture.Height = 100;
@@ -63,7 +65,7 @@ Dim document As New WordDocument()
 Dim section As IWSection = document.AddSection()
 'Adds new paragraph to the section
 Dim firstParagraph As IWParagraph = section.AddParagraph()
-'Adds image to  the paragraph
+'Adds image to the paragraph
 Dim picture As IWPicture = firstParagraph.AppendPicture(Image.FromFile("Image.png"))
 'Sets height and width for the image
 picture.Height = 100
@@ -82,12 +84,14 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 Image present in the document can be replaced with a new image. This can be achieved by iterating through the paragraph items.
 
+N> To identify images by `Title`, the `Title` property must have been set on the picture in the source document (for example, by Microsoft Word's "Alt Text" panel, or by setting `picture.Title` when the picture was created with DocIO).
+
 The following code example explains how to replace an existing image.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Replace-image/.NET/Replace-image/Program.cs" %}
-FileStream fileStream = new FileStream(@"Template.docx", FileMode.Open, FileAccess.ReadWrite);
+FileStream fileStream = new FileStream(@"Template.docx", FileMode.Open, FileAccess.Read);
 //Loads the template document
 WordDocument document = new WordDocument(fileStream, FormatType.Automatic);
 WTextBody textbody = document.Sections[0].Body;
@@ -103,7 +107,7 @@ foreach (WParagraph paragraph in textbody.Paragraphs)
             //Replaces the image
             if (picture.Title == "Bookmark")
             {
-                FileStream imageStream = new FileStream(@"Image.png", FileMode.Open, FileAccess.ReadWrite);
+                FileStream imageStream = new FileStream(@"Image.png", FileMode.Open, FileAccess.Read);
                 picture.LoadImage(imageStream);
             }
         }
@@ -177,7 +181,7 @@ The following code example explains how to remove the image from the paragraph i
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Remove-image/.NET/Remove-image/Program.cs" %}
-FileStream fileStream = new FileStream(@"Template.docx", FileMode.Open, FileAccess.ReadWrite);
+FileStream fileStream = new FileStream(@"Template.docx", FileMode.Open, FileAccess.Read);
 //Loads the template document 
 WordDocument document = new WordDocument(fileStream, FormatType.Automatic);
 WTextBody textbody = document.Sections[0].Body;
@@ -267,7 +271,7 @@ IWSection section = document.AddSection();
 //Adds new paragraph to the section
 IWParagraph paragraph = section.AddParagraph();
 paragraph.AppendText("This paragraph has picture. ");
-FileStream imageStream = new FileStream(@"Image.png", FileMode.Open, FileAccess.ReadWrite);
+FileStream imageStream = new FileStream(@"Image.png", FileMode.Open, FileAccess.Read);
 //Appends new picture to the paragraph
 WPicture picture = paragraph.AppendPicture(imageStream) as WPicture;
 //Sets text wrapping style – When the wrapping style is inline, the images are not absolutely positioned. It is added next to the text range.
@@ -275,8 +279,8 @@ picture.TextWrappingStyle = TextWrappingStyle.Square;
 //Sets horizontal and vertical origin
 picture.HorizontalOrigin = HorizontalOrigin.Page;
 picture.VerticalOrigin = VerticalOrigin.Paragraph;
-//Sets width and height for the paragraph
-picture.Width = 150;     
+//Sets width and height for the picture
+picture.Width = 150;
 picture.Height = 100;
 //Sets horizontal and vertical position for the picture
 picture.HorizontalPosition = 200;
@@ -313,7 +317,7 @@ picture.TextWrappingStyle = TextWrappingStyle.Square;
 //Sets horizontal and vertical origin
 picture.HorizontalOrigin = HorizontalOrigin.Page;
 picture.VerticalOrigin = VerticalOrigin.Paragraph;
-//Sets width and height for the paragraph
+//Sets width and height for the picture
 picture.Width = 150;
 picture.Height = 100;
 //Sets horizontal and vertical position for the picture
@@ -350,7 +354,7 @@ picture.TextWrappingStyle = TextWrappingStyle.Square
 'Sets horizontal and vertical origin
 picture.HorizontalOrigin = HorizontalOrigin.Page
 picture.VerticalOrigin = VerticalOrigin.Paragraph
-'Sets width and height for the paragraph
+'Sets width and height for the picture
 picture.Width = 150
 picture.Height = 100
 'Sets horizontal and vertical position for the picture
@@ -378,14 +382,14 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Find an image by title
 
-An Image with a specific title can be retrieved by iterating the paragraph items that can be used for further manipulations.
+An image with a specific title can be retrieved by iterating the text body child entities (paragraphs, tables, etc.) and the paragraph items within them, so that it can be used for further manipulations.
 
 The following code example explains how images can be iterated from the document elements.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Find-an-image-by-title/.NET/Find-an-image-by-title/Program.cs" %}
-FileStream fileStream = new FileStream(@"Template.docx", FileMode.Open, FileAccess.ReadWrite);
+FileStream fileStream = new FileStream(@"Template.docx", FileMode.Open, FileAccess.Read);
 //Loads an existing Word document into DocIO instance
 WordDocument document = new WordDocument(fileStream, FormatType.Docx);
 //Gets textbody content
@@ -419,7 +423,7 @@ document.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Creates a new Word document 
+//Loads an existing Word document
 WordDocument document = new WordDocument("Template.docx");
 //Gets textbody content
 WTextBody textBody = document.Sections[0].Body;
@@ -451,7 +455,7 @@ document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Creates a new Word document 
+'Loads an existing Word document
 Dim document As New WordDocument("Template.docx")
 'Gets textbody content
 Dim textBody As WTextBody = document.Sections(0).Body
@@ -481,9 +485,15 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Paragraphs/Find-an-image-by-title).
 
-## Add Image caption
+## Add image caption
 
-You can add caption to an image and update the caption numbers (Sequence fields) using [AddCaption](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WPicture.html#Syncfusion_DocIO_DLS_WPicture_AddCaption_System_String_Syncfusion_DocIO_CaptionNumberingFormat_Syncfusion_DocIO_CaptionPosition_) method.
+You can add caption to an image and update the caption numbers (Sequence fields) using [AddCaption](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WPicture.html#Syncfusion_DocIO_DLS_WPicture_AddCaption_System_String_Syncfusion_DocIO_CaptionNumberingFormat_Syncfusion_DocIO_CaptionPosition_) method. The `AddCaption` method accepts the following parameters:
+
+* `imageName`: The caption label name (e.g., "Figure", "Table").
+* `captionNumberingFormat`: A `CaptionNumberingFormat` value that controls how the caption number is formatted (e.g., `Roman`, `Number`).
+* `captionPosition`: A `CaptionPosition` value that determines whether the caption appears before or after the image (e.g., `AfterImage`, `BeforeImage`).
+
+N> Call `UpdateDocumentFields()` after adding captions so that the sequence (caption number) fields are computed and rendered in the output.
 
 The following code example shows how to add caption to an image.
 
@@ -499,29 +509,29 @@ section.PageSetup.Margins.All = 72;
 //Adds a paragraph to the section
 IWParagraph paragraph = section.AddParagraph();
 paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
-//Adds image to  the paragraph
-FileStream imageStream = new FileStream(@"Google.png", FileMode.Open, FileAccess.ReadWrite);
+//Adds image to the paragraph
+FileStream imageStream = new FileStream(@"Google.png", FileMode.Open, FileAccess.Read);
 IWPicture picture = paragraph.AppendPicture(imageStream);
 //Adds Image caption
-IWParagraph lastParagragh = picture.AddCaption("Figure", CaptionNumberingFormat.Roman, CaptionPosition.AfterImage);
+IWParagraph lastParagraph = picture.AddCaption("Figure", CaptionNumberingFormat.Roman, CaptionPosition.AfterImage);
 //Aligns the caption
-lastParagragh.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
+lastParagraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
 //Sets after spacing
-lastParagragh.ParagraphFormat.AfterSpacing = 12f;
+lastParagraph.ParagraphFormat.AfterSpacing = 12f;
 //Sets before spacing
-lastParagragh.ParagraphFormat.BeforeSpacing = 1.5f;
+lastParagraph.ParagraphFormat.BeforeSpacing = 1.5f;
 //Adds a paragraph to the section
 paragraph = section.AddParagraph();
 paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
-//Adds image to  the paragraph
-imageStream = new FileStream(@"Yahoo.png", FileMode.Open, FileAccess.ReadWrite);
+//Adds image to the paragraph
+imageStream = new FileStream(@"Yahoo.png", FileMode.Open, FileAccess.Read);
 picture = paragraph.AppendPicture(imageStream);
 //Adds Image caption
-lastParagragh = picture.AddCaption("Figure", CaptionNumberingFormat.Roman, CaptionPosition.AfterImage);
+lastParagraph = picture.AddCaption("Figure", CaptionNumberingFormat.Roman, CaptionPosition.AfterImage);
 //Aligns the caption
-lastParagragh.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
+lastParagraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
 //Sets before spacing
-lastParagragh.ParagraphFormat.BeforeSpacing = 1.5f;
+lastParagraph.ParagraphFormat.BeforeSpacing = 1.5f;
 //Updates the fields in Word document
 document.UpdateDocumentFields();
 //Saves the Word document to MemoryStream.
@@ -541,27 +551,27 @@ section.PageSetup.Margins.All = 72;
 //Adds a paragraph to the section
 IWParagraph paragraph = section.AddParagraph();
 paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
-//Adds image to  the paragraph
+//Adds image to the paragraph
 IWPicture picture = paragraph.AppendPicture(Image.FromFile("Google.png"));
 //Adds Image caption
-IWParagraph lastParagragh = picture.AddCaption("Figure", CaptionNumberingFormat.Roman, CaptionPosition.AfterImage);
+IWParagraph lastParagraph = picture.AddCaption("Figure", CaptionNumberingFormat.Roman, CaptionPosition.AfterImage);
 //Aligns the caption
-lastParagragh.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
+lastParagraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
 //Sets after spacing
-lastParagragh.ParagraphFormat.AfterSpacing = 12f;
+lastParagraph.ParagraphFormat.AfterSpacing = 12f;
 //Sets before spacing
-lastParagragh.ParagraphFormat.BeforeSpacing = 1.5f;
+lastParagraph.ParagraphFormat.BeforeSpacing = 1.5f;
 //Adds a paragraph to the section
 paragraph = section.AddParagraph();
 paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
-//Adds image to  the paragraph
+//Adds image to the paragraph
 picture = paragraph.AppendPicture(Image.FromFile("Yahoo.png"));
 //Adds Image caption
-lastParagragh = picture.AddCaption("Figure", CaptionNumberingFormat.Roman, CaptionPosition.AfterImage);
+lastParagraph = picture.AddCaption("Figure", CaptionNumberingFormat.Roman, CaptionPosition.AfterImage);
 //Aligns the caption
-lastParagragh.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
+lastParagraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
 //Sets before spacing
-lastParagragh.ParagraphFormat.BeforeSpacing = 1.5f;
+lastParagraph.ParagraphFormat.BeforeSpacing = 1.5f;
 //Updates the fields in Word document
 document.UpdateDocumentFields();
 //Saves and closes the document
@@ -579,27 +589,27 @@ section.PageSetup.Margins.All = 72
 'Adds a paragraph to the section
 Dim paragraph As IWParagraph = section.AddParagraph
 paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center
-'Adds image to  the paragraph
+'Adds image to the paragraph
 Dim picture As IWPicture = paragraph.AppendPicture(Image.FromFile("Google.png"))
 'Adds Image caption
-Dim lastParagragh As IWParagraph = picture.AddCaption("Figure", CaptionNumberingFormat.Roman, CaptionPosition.AfterImage)
+Dim lastParagraph As IWParagraph = picture.AddCaption("Figure", CaptionNumberingFormat.Roman, CaptionPosition.AfterImage)
 'Aligns the caption
-lastParagragh.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center
+lastParagraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center
 'Sets after spacing
-lastParagragh.ParagraphFormat.AfterSpacing = 12.0F
+lastParagraph.ParagraphFormat.AfterSpacing = 12.0F
 'Sets before spacing
-lastParagragh.ParagraphFormat.BeforeSpacing = 1.5F
+lastParagraph.ParagraphFormat.BeforeSpacing = 1.5F
 'Adds a paragraph to the section
 paragraph = section.AddParagraph
 paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center
-'Adds image to  the paragraph
+'Adds image to the paragraph
 picture = paragraph.AppendPicture(Image.FromFile("Yahoo.png"))
 'Adds Image caption
-lastParagragh = picture.AddCaption("Figure", CaptionNumberingFormat.Roman, CaptionPosition.AfterImage)
+lastParagraph = picture.AddCaption("Figure", CaptionNumberingFormat.Roman, CaptionPosition.AfterImage)
 'Aligns the caption
-lastParagragh.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center
+lastParagraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center
 'Sets before spacing
-lastParagragh.ParagraphFormat.BeforeSpacing = 1.5F
+lastParagraph.ParagraphFormat.BeforeSpacing = 1.5F
 'Updates the fields in Word document
 document.UpdateDocumentFields()
 'Saves and closes the document
@@ -619,14 +629,16 @@ By executing the above code example, it generates output Word document as follow
 
 To add an SVG image to a paragraph in a Word document using Syncfusion<sup>&reg;</sup> DocIO, you can use the [AppendPicture](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.IWParagraph.html#Syncfusion_DocIO_DLS_IWParagraph_AppendPicture_System_Byte___System_Byte___) API.
 
-N> To preserve the SVG image in the Word document, pass both the SVG image data and the equivalent bitmap image bytes to DocIO.
+N> To preserve the SVG image in the Word document, pass both the SVG image data and a fallback raster image (e.g., PNG) as byte arrays to DocIO. The fallback image is used by viewers that do not support SVG.
+
+N> SVG image support is available from Syncfusion.DocIO packages version 20.1.0.x and later.
 
 The following code example shows how to add an SVG image in a Word document.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Add-svg-image/.NET/Add-svg-image/Program.cs" %}
 
-///Create a new Word document.
+//Create a new Word document.
 using (WordDocument document = new WordDocument())
 {
     //Add a new section to the document.
@@ -643,8 +655,10 @@ using (WordDocument document = new WordDocument())
     picture.Height = 100;
     picture.Width = 100;
     //Save the Word document to MemoryStream.
-    MemoryStream stream = new MemoryStream();
-    document.Save(stream, FormatType.Docx);
+    using (MemoryStream stream = new MemoryStream())
+    {
+        document.Save(stream, FormatType.Docx);
+    }
 }
 
 {% endhighlight %}
@@ -677,12 +691,12 @@ Using document As New WordDocument()
     Dim section As IWSection = document.AddSection()
     ' Add a new paragraph to the section.
     Dim firstParagraph As IWParagraph = section.AddParagraph()
-    ' Get the PNG image as a byte array.
+    ' Get the fallback image (PNG) as a byte array.
     Dim imageBytes As Byte() = File.ReadAllBytes("Buyers.png")
     ' Get the SVG image as a byte array.
     Dim svgData As Byte() = File.ReadAllBytes("Buyers.svg")
     ' Add SVG image to the paragraph.
-    Dim picture As IWPicture = firstParagraph.AppendPicture(svgData, ImageType.Metafile, imageBytes)
+    Dim picture As IWPicture = firstParagraph.AppendPicture(svgData, imageBytes)
     ' Set height and width for the image.
     picture.Height = 100
     picture.Width = 100
@@ -695,12 +709,9 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Paragraphs/Add-svg-image/.NET).
 
-## Online Demo
-
-* Explore how to insert an image into the Word document using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/imageinsertion#/tailwind). 
-
 ## See Also
 
+* [How to insert an image into a Word document (live demo)](https://document.syncfusion.com/demos/word/imageinsertion#/tailwind) using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO).
 * [How to extract Images from Word document in C# and VB?](https://support.syncfusion.com/kb/article/11829/how-to-extract-images-from-word-document-in-c-and-vb)
 * [How to replace an image with same size in a Word document](https://support.syncfusion.com/kb/article/17796/how-to-replace-an-image-with-same-size-in-a-word-document)
 * [How to find and replace an image title in a Word document?](https://support.syncfusion.com/kb/article/18808/how-to-find-and-replace-an-image-title-in-a-word-document)
@@ -712,7 +723,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to Find and Remove Corrupted Images in .NET Core Word Document?](https://support.syncfusion.com/kb/article/19605/how-to-find-and-remove-corrupted-images-in-net-core-word-document)
 * [How to Convert Excel Worksheets to Images in .NET Core Word document?](https://support.syncfusion.com/kb/article/20162/how-to-convert-excel-worksheets-to-images-in-net-core-word-document)
 * [How to resize images to fit owner element in NET Core Word document?](https://support.syncfusion.com/kb/article/21490/how-to-resize-images-to-fit-owner-element-in-net-core-word-document)
-* [How to extract all images from ASP.NET Core Word Document?](https://support.syncfusion.com/kb/article/19583/how-to-extract-all-images-from-aspnet-core-word-document)
 
 ## Frequently Asked Questions
 

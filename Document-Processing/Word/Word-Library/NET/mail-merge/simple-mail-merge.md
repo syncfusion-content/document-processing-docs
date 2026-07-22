@@ -1,12 +1,12 @@
 ---
-title: Simple Mail merge in C# | DocIO | Syncfusion
-description: Learn how to Mail merge - replace all merge fields with data, by repeating whole document for each record in data source using the .NET Word (DocIO) library.
+title: Simple mail merge in C# | DocIO | Syncfusion
+description: Learn how to mail merge - replace all merge fields with data, by repeating whole document for each record in data source using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Simple Mail merge in Word document
+# Simple mail merge in a Word document
 
 You can create a Word document template using Microsoft Word application or by adding merge fields in the Word document programmatically. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-mail-merge#create-word-document-template).
 
@@ -51,9 +51,9 @@ The following table illustrates the supported mail merge overloads for Execute m
 
 ## Mail merge with string arrays
 
-The [MailMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html) class provides various overloads for [Execute](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_Execute_System_String___System_String___) method to perform Mail merge from various data sources. The Mail merge operation replaces the matching merge fields with the respective data.
+The [MailMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html) class provides various overloads for the [Execute](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_Execute_System_String___System_String___) method to perform a mail merge from various data sources. The mail merge operation replaces the matching merge fields with the respective data. Unmatched merge fields are left unchanged in the output document by default.
 
-### Create Word document template
+### Create a Word document template
 
 The following code example shows how to create a Word template document with merge fields.
 
@@ -78,9 +78,9 @@ document.LastParagraph.AppendText("\nPhone: ");
 document.LastParagraph.AppendField("Phone", FieldType.FieldMergeField);
 document.LastParagraph.AppendText("\nCity: ");
 document.LastParagraph.AppendField("City", FieldType.FieldMergeField);
-//Saves the Word document to MemoryStream
-MemoryStream stream = new MemoryStream();
-document.Save(stream, FormatType.Docx);
+//Saves the Word document to a file
+FileStream fileStream = new FileStream("Template.docx", FileMode.Create, FileAccess.ReadWrite);
+document.Save(fileStream, FormatType.Docx);
 //Closes the Word document
 document.Close();
 {% endhighlight %}
@@ -139,8 +139,7 @@ The generated template document looks as follows.
 
 ### Execute mail merge
 
-The following code example shows how to perform a simple Mail merge in the generated template document with string array as data source.
-
+The following code example shows how to perform a simple mail merge in the generated template document with a string array as the data source.
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mail-Merge/Mail-merge-with-string-arrays/.NET/Mail-merge-with-string-arrays/Program.cs" %}
@@ -192,3 +191,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 The resultant document looks as follows.
 
 ![Mail merged Word document](../MailMerge_images/file-formats-word-simple-mail-merge-output.png)
+
+## See also
+
+- [Mail merge using nested groups](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-mail-merge#mail-merge-using-nested-groups)
+- [Conditional merge fields](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-mail-merge#conditional-merge-fields)
+- [Mail merge for regions](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-mail-merge#region-mail-merge)
