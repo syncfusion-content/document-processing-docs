@@ -31,7 +31,15 @@ Step 4: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/S
 
 ![Install Syncfusion.DocIO.Net.Core NuGet package](ASP-NET-Core_images/Install_Nuget.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or the NuGet feed, you also have to add the `Syncfusion.Licensing` assembly reference and register a license key in your project. Refer to [how to register a Syncfusion license key in an application](https://help.syncfusion.com/common/essential-studio/licensing/how-to-register-in-an-application) for details.
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion<sup>&reg;</sup> licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 5: Add the image assets used by the sample. Create a `Data` folder under `wwwroot` and add the following images to it:
 * `AdventureCycle.jpg`
@@ -359,5 +367,7 @@ Step 12: Click the **Create Word Document** button to create a Word document. Yo
 ![Create Word document in Azure App Service on Linux](ASP-NET-Core_images/GettingStartedOutput.jpg)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Azure/Azure_App_Service).
+
+N> The code sample references image files (AdventureCycle.jpg, Mountain-200.jpg, Mountain-300.jpg, Road-550-W.jpg). Download these assets from the [GitHub sample folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Azure/Azure_App_Service/Create-Word-Document/wwwroot/Data) and place them in the application's `wwwroot/Data` folder so the relative paths in the code resolve correctly at runtime.
 
 Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page. 
