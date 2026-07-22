@@ -6,7 +6,7 @@ control: DocIO
 documentation: UG
 ---
 
-# Frequently Asked Questions
+# Frequently Asked Questions (Word to PDF)
 
 The frequently asked questions about Word to PDF conversion in Essential<sup>&reg;</sup> DocIO are listed below. This page addresses common questions on chart conversion, PDF conformance, font handling, form fields, track changes, and platform-specific issues.
 
@@ -33,7 +33,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to validate the PDF conformance level in a DocIO-converted PDF?
 
-PDF conformance can be verified using tools like **Adobe Acrobat Pro, VeraPDF, Xodo Validator, and PDFCreator Validator**. These tools check if the PDF meets compliance standards. DocIO-generated PDFs can be validated using any of these tools to ensure compliance with the required standards.
+PDF conformance can be verified using tools like **Adobe Acrobat Pro, VeraPDF and PDFCreator Validator**. These tools check if the PDF meets compliance standards. DocIO-generated PDFs can be validated using any of these tools to ensure compliance with the required standards.
 
 For more details on the supported conformance levels in DocIO, refer to [PDF Conformance](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-pdf-conformance).
 

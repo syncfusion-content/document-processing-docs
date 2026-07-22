@@ -274,7 +274,7 @@ public class AzureBlobStorage : IDocumentStorage
     public Stream Read(string filePath)
     {
         ArgumentException.ThrowIfNullOrEmpty(filePath);
-        var blob = _container.GetBlobClient(filePath);
+        var blob = _containerClient.GetBlobClient(filePath);
         var ms = new MemoryStream();
         blob.DownloadTo(ms);
         ms.Position = 0;
@@ -288,7 +288,7 @@ public class AzureBlobStorage : IDocumentStorage
         try
         {
             documentStream.Position = 0;
-            var blob = _container.GetBlobClient(filePath);
+            var blob = _containerClient.GetBlobClient(filePath);
             blob.Upload(documentStream, overwrite: true);
             return true;
         }
@@ -301,7 +301,7 @@ public class AzureBlobStorage : IDocumentStorage
     public bool Exists(string filePath)
     {
         ArgumentException.ThrowIfNullOrEmpty(filePath);
-        return _container.GetBlobClient(filePath).Exists();
+        return _containerClient.GetBlobClient(filePath).Exists();
     }
 }
 ```

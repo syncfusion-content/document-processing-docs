@@ -7,7 +7,7 @@ control: DocIO
 documentation: UG
 ---
 
-# Frequently Asked Questions
+# Frequently Asked Questions (Word to PDF)
 
 The frequently asked questions about Word to PDF conversion in Essential<sup>&reg;</sup> DocIO are listed below.
 
