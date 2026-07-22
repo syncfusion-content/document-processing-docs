@@ -5,20 +5,31 @@ platform: document-processing
 control: PDF
 documentation: UG
 ---
+
 # Digital Signature in JavaScript PDF Library
 
-The PDF provides support to create, validate, and manage digital signatures in PDF documents, ensuring authenticity, integrity, and security.
+The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) provides support to create and manage digital signatures in PDF documents, ensuring authenticity, integrity, and security. For more information about the underlying API, see the [PdfSignature](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature) class reference.
 
-## Adding a digital signature 
+## Adding a digital signature
 
 This example demonstrates how to add a digital signature to a PDF document using the [PdfSignature](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature) class. Digital signatures ensure document authenticity and integrity by applying cryptographic standards.
 
+The [`PdfSignature.create()`](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature#create) method supports the following overloads:
+
+| Overload | Parameters | Returns |
+|---|---|---|
+| `PdfSignature.create(certData, password, options?)` | `certData: Uint8Array`, `password: string`, `options?: PdfSignatureOptions` | `PdfSignature` |
+| `PdfSignature.create(callback, options?)` | `callback: ExternalSignatureCallback`, `options?: PdfSignatureOptions` | `PdfSignature` |
+| `PdfSignature.create(callback, publicCertificates, options?)` | `callback: ExternalSignatureCallback`, `publicCertificates: X509Certificate[]`, `options?: PdfSignatureOptions` | `PdfSignature` |
+
+### Add to a new document
+
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfForm, PdfSignatureField, DigestAlgorithm, CryptographicStandard} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfForm, PdfSignatureField, PdfSignature, DigestAlgorithm, CryptographicStandard} from '@syncfusion/ej2-pdf';
 
-// Load the document
-let document: PdfDocument = new PdfDocument()
+// Create the document
+let document: PdfDocument = new PdfDocument();
 // Get the first page of the document
 let page: PdfPage = document.addPage();
 // Access the PDF form
@@ -41,7 +52,7 @@ let sign: PdfSignature = PdfSignature.create(
 );
 // Set the signature to the field
 field.setSignature(sign);
-// Add the field into PDF form
+// Add the field to the PDF form
 form.add(field);
 // Save the document
 document.save('output.pdf');
@@ -51,7 +62,7 @@ document.destroy();
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 
-// Load the document
+// Create the document
 var document = new ej.pdf.PdfDocument();
 // Get the first page of the document
 var page = document.addPage();
@@ -63,7 +74,7 @@ var field = new ej.pdf.PdfSignatureField(page, 'Signature', {x: 10, y: 10, width
 var sign = ej.pdf.PdfSignature.create(certData, password, {cryptographicStandard: ej.pdf.CryptographicStandard.cms, digestAlgorithm: ej.pdf.DigestAlgorithm.sha256});
 // Set the signature to the field
 field.setSignature(sign);
-// Add the field into PDF form
+// Add the field to the PDF form
 form.add(field);
 // Save the document
 document.save('output.pdf');
@@ -73,14 +84,16 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
+### Add to an existing document
+
 The following code snippet explains how to add a digital signature in an existing PDF document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfForm, PdfSignatureField, DigestAlgorithm, CryptographicStandard} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfForm, PdfSignatureField, PdfSignature, DigestAlgorithm, CryptographicStandard} from '@syncfusion/ej2-pdf';
 
 // Load the document
-let document: PdfDocument = new PdfDocument(data)
+let document: PdfDocument = new PdfDocument(data);
 // Get the first page of the document
 let page: PdfPage = document.getPage(0);
 // Access the PDF form
@@ -103,7 +116,7 @@ let sign: PdfSignature = PdfSignature.create(
 );
 // Set the signature to the field
 field.setSignature(sign);
-// Add the field into PDF form
+// Add the field to the PDF form
 form.add(field);
 // Save the document
 document.save('output.pdf');
@@ -137,7 +150,7 @@ var sign = ej.pdf.PdfSignature.create(
 );
 // Set the signature to the field
 field.setSignature(sign);
-// Add the field into PDF form
+// Add the field to the PDF form
 form.add(field);
 // Save the document
 document.save('output.pdf');
@@ -147,17 +160,43 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## Create PDF Signature with External Signing
+### Supported enumerations
+
+The following enumerations are referenced throughout the examples in this guide.
+
+| Enumeration | Supported values |
+|---|---|
+| [`DigestAlgorithm`](https://ej2.syncfusion.com/documentation/api/pdf/digestalgorithm) | `sha1`, `sha256`, `sha384`, `sha512` |
+| [`CryptographicStandard`](https://ej2.syncfusion.com/documentation/api/pdf/cryptographicstandard) | `cms`, `cades` (where applicable) |
+| [`PdfCertificationFlags`](https://ej2.syncfusion.com/documentation/api/pdf/pdfcertificationflags) | `allowFormFill`, `forbidChanges` |
+
+### `PdfSignatureOptions` reference
+
+| Property | Type | Description |
+|---|---|---|
+| `signedName` | `string` | Name of the signer. |
+| `isLocked` | `boolean` | Locks the document after signing. |
+| `documentPermissions` | `PdfCertificationFlags` | Permissions granted after certifying. |
+| `certify` | `boolean` | Marks the signature as a certifying signature. |
+| `reason` | `string` | Reason for signing. |
+| `locationInfo` | `string` | Physical location of signing. |
+| `contactInfo` | `string` | Signer contact information. |
+| `cryptographicStandard` | `CryptographicStandard` | Cryptographic standard. |
+| `digestAlgorithm` | `DigestAlgorithm` | Digest algorithm. |
+
+## External signing
 
 [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) provides support to create a new PDF signature using a callback function for external signing, enabling secure and flexible digital signature workflows.
 
+> **When to use external signing:** Use external signing when the private key is stored outside your application — for example, on a Hardware Security Module (HSM), in a remote signing service, or in a cloud KMS such as Azure Key Vault or AWS CloudHSM.
+
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfForm, PdfSignatureField, DigestAlgorithm, CryptographicStandard} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfForm, PdfSignatureField, PdfSignature, DigestAlgorithm, CryptographicStandard} from '@syncfusion/ej2-pdf';
 
 // Load the document
 let document: PdfDocument = new PdfDocument(data);
-// Gets the first page of the document
+// Get the first page of the document
 let page: PdfPage = document.getPage(0);
 // Access the PDF form
 let form: PdfForm = document.form;
@@ -172,7 +211,7 @@ let externalSignatureCallback = (
     }
 ): { signedData: Uint8Array; timestampData?: Uint8Array } => {
     // Implement external signing logic here
-    return new Uint8Array(); // Placeholder return
+    return { signedData: new Uint8Array() }; // Placeholder return
 };
 // Create a new signature using external signing
 let signature: PdfSignature = PdfSignature.create(externalSignatureCallback, {
@@ -181,7 +220,7 @@ let signature: PdfSignature = PdfSignature.create(externalSignatureCallback, {
 });
 // Set the signature to the field
 field.setSignature(signature);
-// Add the field into PDF form
+// Add the field to the PDF form
 form.add(field);
 // Save the document
 document.save('output.pdf');
@@ -193,14 +232,14 @@ document.destroy();
 
 // Load the document
 var document = new ej.pdf.PdfDocument(data);
-// Gets the first page of the document
+// Get the first page of the document
 var page = document.getPage(0);
 // Access the PDF form
 var form = document.form;
 // Create a new signature field
 var field = new ej.pdf.PdfSignatureField(page, 'Signature', { x: 10, y: 10, width: 100, height: 50 });
 // Define a callback function used for external signing
-var externalSignatureCallback = (data, options) => {
+var externalSignatureCallback = function (data, options) {
   // data: Uint8Array
   // options: { algorithm: ej.pdf.DigestAlgorithm, cryptographicStandard: ej.pdf.CryptographicStandard }
   // Implement external signing logic here and return the signed bytes.
@@ -214,7 +253,7 @@ var signature = ej.pdf.PdfSignature.create(externalSignatureCallback, {
 });
 // Set the signature to the field
 field.setSignature(signature);
-// Add the field into PDF form
+// Add the field to the PDF form
 form.add(field);
 // Save the document
 document.save('output.pdf');
@@ -224,17 +263,23 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## Create Signature with Public Certificates for External Signing
+## Public certificates for external signing
 
 This example demonstrates how to create a new PDF signature using the [PdfSignature](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature) class with public certificates for external signing. External signing allows you to implement custom signing logic outside the [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) while maintaining compliance with cryptographic standards.
 
+`publicCertificates` is an array of `X509Certificate` objects that represent the public certificate chain to be embedded alongside the signature:
+
+```typescript
+const publicCertificates: X509Certificate[] = [/* PEM- or DER-decoded certificates */];
+```
+
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfForm, PdfSignatureField, DigestAlgorithm, CryptographicStandard} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfForm, PdfSignatureField, PdfSignature, DigestAlgorithm, CryptographicStandard} from '@syncfusion/ej2-pdf';
 
 // Load the document
 let document: PdfDocument = new PdfDocument(data);
-// Gets the first page of the document
+// Get the first page of the document
 let page: PdfPage = document.getPage(0);
 // Access the PDF form
 let form: PdfForm = document.form;
@@ -249,7 +294,7 @@ let externalSignatureCallback = (
     }
 ): { signedData: Uint8Array; timestampData?: Uint8Array } => {
     // Implement external signing logic here
-    return new Uint8Array(); // Placeholder return
+    return { signedData: new Uint8Array() }; // Placeholder return
 };
 // Create a new signature using external signing with public certificate collection
 let signature: PdfSignature = PdfSignature.create(
@@ -262,7 +307,7 @@ let signature: PdfSignature = PdfSignature.create(
 );
 // Set the signature to the field
 field.setSignature(signature);
-// Add the field into PDF form
+// Add the field to the PDF form
 form.add(field);
 // Save the document
 document.save('output.pdf');
@@ -274,7 +319,7 @@ document.destroy();
 
 // Load the document
 var document = new ej.pdf.PdfDocument(data);
-// Gets the first page of the document
+// Get the first page of the document
 var page = document.getPage(0);
 // Access the PDF form
 var form = document.form;
@@ -283,7 +328,7 @@ var field = new ej.pdf.PdfSignatureField(page, 'Signature', { x: 10, y: 10, widt
 // Define a callback function used for external signing
 var externalSignatureCallback = function (data, options) {
     // Implement external signing logic here
-    return new Uint8Array(); // Placeholder return
+    return { signedData: new Uint8Array() }; // Placeholder return
 };
 // Create a new signature using external signing with public certificate collection
 var signature = ej.pdf.PdfSignature.create(
@@ -296,7 +341,7 @@ var signature = ej.pdf.PdfSignature.create(
 );
 // Set the signature to the field
 field.setSignature(signature);
-// Add the field into PDF form
+// Add the field to the PDF form
 form.add(field);
 // Save the document
 document.save('output.pdf');
@@ -306,7 +351,123 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## Certified Signature
+## Replacing an empty signature
+
+> The two-step process is required when the signing operation cannot complete inside the `PdfSignature.create(...)` callback — for example, when the private key lives on a remote HSM with high latency. First, reserve the signature field with an empty signature dictionary; then, after the remote signer returns the signed bytes, call `replaceEmptySignature(...)` to embed them in the previously reserved field.
+
+This example demonstrates how to replace an empty signature field in a PDF document with externally signed data using the [`replaceEmptySignature()`](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature#replaceemptysignature) method of the [PdfSignature](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature) class. This method allows embedding externally signed content, certificates, and optional timestamp data into the PDF.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import {PdfDocument, PdfPage, PdfForm, PdfSignatureField, PdfSignature, DigestAlgorithm, CryptographicStandard} from '@syncfusion/ej2-pdf';
+
+// Load the document
+let document: PdfDocument = new PdfDocument(data);
+// Get the first page of the document
+let page: PdfPage = document.getPage(0);
+// Access the PDF form
+let form: PdfForm = document.form;
+// Create a new signature field
+let field: PdfSignatureField = new PdfSignatureField(page, 'Signature', { x: 10, y: 10, width: 100, height: 50 });
+// Placeholder for signed data produced by the external signer
+let signedData: Uint8Array;
+// Public certificate chain to embed with the signature
+const publicCertificates: X509Certificate[] = [/* your certificates here */];
+// Define a callback function used for external signing
+let externalSignatureCallback = (
+    data: Uint8Array,
+    options: {
+        algorithm: DigestAlgorithm;
+        cryptographicStandard: CryptographicStandard;
+    }
+): { signedData: Uint8Array; timestampData?: Uint8Array } => {
+    // Implement external signing logic here
+    const result: { signedData: Uint8Array; timestampData?: Uint8Array } = { signedData: new Uint8Array() };
+    signedData = result.signedData;
+    return result;
+};
+// Create a new signature using external signing with public certificate collection
+let signature: PdfSignature = PdfSignature.create(
+    externalSignatureCallback,
+    publicCertificates,
+    {
+        cryptographicStandard: CryptographicStandard.cms,
+        algorithm: DigestAlgorithm.sha256
+    }
+);
+// Set the signature to the field
+field.setSignature(signature);
+// Add the field to the PDF form
+form.add(field);
+// Save the document data
+let finalData: Uint8Array = document.save();
+// Destroy the document
+document.destroy();
+// Replace the empty signature with externally signed hash and certificates
+let signedDocumentData: Uint8Array = PdfSignature.replaceEmptySignature(
+    finalData,
+    'Signature',
+    signedData,
+    DigestAlgorithm.sha256,
+    publicCertificates
+);
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load the document
+var document = new ej.pdf.PdfDocument(data);
+// Get the first page of the document
+var page = document.getPage(0);
+// Access the PDF form
+var form = document.form;
+// Create a new signature field
+var field = new ej.pdf.PdfSignatureField(page, 'Signature', { x: 10, y: 10, width: 100, height: 50 });
+// Placeholder for signed data produced by the external signer
+var signedData;
+// Public certificate chain to embed with the signature
+var publicCertificates = [/* your certificates here */];
+// Define a callback function used for external signing
+var externalSignatureCallback = function (data, options) {
+    // Implement external signing logic here
+    var result = { signedData: new Uint8Array() };
+    signedData = result.signedData;
+    return result;
+};
+// Create a new signature using external signing with public certificate collection
+var signature = ej.pdf.PdfSignature.create(
+    externalSignatureCallback,
+    publicCertificates,
+    {
+        cryptographicStandard: ej.pdf.CryptographicStandard.cms,
+        algorithm: ej.pdf.DigestAlgorithm.sha256
+    }
+);
+// Set the signature to the field
+field.setSignature(signature);
+// Add the field to the PDF form
+form.add(field);
+// Save the document data
+var finalData = document.save();
+// Destroy the document
+document.destroy();
+// Replace the empty signature with externally signed hash and certificates
+var signedDocumentData = ej.pdf.PdfSignature.replaceEmptySignature(
+    finalData,
+    'Signature',
+    signedData,
+    ej.pdf.DigestAlgorithm.sha256,
+    publicCertificates
+);
+
+{% endhighlight %}
+{% endtabs %}
+
+## Signature options
+
+The following examples demonstrate the signature-creation options available in `PdfSignatureOptions`.
+
+### Certified signature
 
 This example demonstrates how to add a signature field to a PDF, create a digital signature using certificate data and a password, certify the document, and save the signed PDF document.
 
@@ -344,7 +505,7 @@ var field = new ej.pdf.PdfSignatureField(page, 'field', { x: 50, y: 50, width: 1
 var signature = ej.pdf.PdfSignature.create(certData, password, { certify: true });
 // Assign the signature to the signature field
 field.setSignature(signature);
-//// Add the signature field to the document form
+// Add the signature field to the document form
 document.form.add(field);
 // Save the document
 document.save('output.pdf');
@@ -354,7 +515,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## Lock Signature
+### Lock signature
 
 This example shows how to add a signature field to a PDF, create a digital signature using certificate data and a password, lock the document after signing, and save the result in [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library).
 
@@ -367,7 +528,7 @@ const document = new PdfDocument();
 // Add a new page to the document
 const page: PdfPage = document.addPage();
 // Create a signature field on the page at specified coordinates
-const field = new PdfSignatureField(page, 'field', { x: 50, y: 50, width: 100, height: 100 });
+const field: PdfSignatureField = new PdfSignatureField(page, 'field', { x: 50, y: 50, width: 100, height: 100 });
 // Create a digital signature using certificate data and password, locking the document after signing
 const signature: PdfSignature = PdfSignature.create(certData, password, { isLocked: true });
 // Assign the signature to the signature field
@@ -390,7 +551,7 @@ var page = document.addPage();
 var field = new ej.pdf.PdfSignatureField(page, 'field', { x: 50, y: 50, width: 100, height: 100 });
 // Create a digital signature using certificate data and password, locking the document after signing
 var signature = ej.pdf.PdfSignature.create(certData, password, { isLocked: true });
-// Assign// Assign the signature to the signature field
+// Assign the signature to the signature field
 field.setSignature(signature);
 // Add the signature field to the document form
 document.form.add(field);
@@ -404,7 +565,7 @@ document.destroy();
 
 ## Adding multiple signatures to a PDF
 
-This example demonstrates how to add two visible signature fields to a PDF, apply a certifying signature to the first field (allowing form filling), then reopen the document and apply a second signature with forbid changes permissions. 
+This example demonstrates how to add two visible signature fields to a PDF, apply a certifying signature to the first field (allowing form filling), then reopen the document and apply a second signature with forbid changes permissions.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -443,8 +604,8 @@ let data: Uint8Array = document.save();
 document.destroy();
 // Reopen the saved bytes as a new PdfDocument
 let ldocument: PdfDocument = new PdfDocument(data);
-// Retrieve the second signature field by index
-field = ldocument.form.fieldAt(1) as PdfSignatureField;
+// Retrieve the second signature field by index (0-based; index 1 = the second field)
+field = ldocument.form.fieldAt(1);
 // Create the second signature
 signature = PdfSignature.create(
     certData,
@@ -525,6 +686,10 @@ ldocument.destroy();
 
 This example shows how to apply a digital signature with a trusted timestamp, ensuring the signature remains valid even after the certificate expires. A timestamp callback contacts a Time Stamping Authority (TSA) to add an official time record to the signature. This provides long‑term proof of when the document was signed.
 
+> This section requires async handling. When the timestamp or external-signing callback is asynchronous, use `await document.saveAsync(...)` instead of `document.save(...)`. Otherwise, the save completes before the async callback resolves and the timestamp bytes are lost.
+
+The following example uses a placeholder TSA endpoint. Replace it with a provider such as FreeTSA, DigiCert, or GlobalSign, and wrap the request in a `try/catch` so the document is not saved with a partial signature if the TSA is unreachable.
+
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
@@ -532,7 +697,7 @@ import { PdfDocument, PdfPage, PdfForm, PdfSignatureField, PdfSignature, Cryptog
 
 // Load the document
 let document: PdfDocument = new PdfDocument(data);
-// Gets the first page of the document
+// Get the first page of the document
 let page: PdfPage = document.getPage(0);
 // Access the PDF form
 let form: PdfForm = document.form;
@@ -540,14 +705,29 @@ let form: PdfForm = document.form;
 let field: PdfSignatureField = new PdfSignatureField(page, 'Signature', {x: 10, y: 10, width: 100, height: 50});
 // Create a timestamp callback
 async function timestampCallback(request: Uint8Array): Promise<{ response: Uint8Array }> {
-    // Implement timestamp response logic here
-    return { response: new Uint8Array() }; // Placeholder return
+    // Replace with your provider's TSA URL (FreeTSA, DigiCert, GlobalSign, etc.)
+    const tsaUrl = 'https://freetsa.org/tsr';
+    try {
+        const httpResponse = await fetch(tsaUrl, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/timestamp-query' },
+            body: request
+        });
+        if (!httpResponse.ok) {
+            throw new Error(`TSA request failed with status ${httpResponse.status}`);
+        }
+        const buffer = await httpResponse.arrayBuffer();
+        return { response: new Uint8Array(buffer) };
+    } catch (error) {
+        console.error('Timestamp request failed:', error);
+        throw error;
+    }
 }
 // Create a new signature using PFX data, private key and call back function for timestamp
 const signature: PdfSignature = PdfSignature.create(certData, password, { cryptographicStandard: CryptographicStandard.cms, digestAlgorithm: DigestAlgorithm.sha256 }, timestampCallback);
-// Sets the signature to the field
+// Set the signature to the field
 field.setSignature(signature);
-// Add the field into PDF form
+// Add the field to the PDF form
 form.add(field);
 // Save the document
 await document.saveAsync('output.pdf');
@@ -559,7 +739,7 @@ document.destroy();
 
 // Load the document
 var document = new ej.pdf.PdfDocument(data);
-// Gets the first page of the document
+// Get the first page of the document
 var page = document.getPage(0);
 // Access the PDF form
 var form = document.form;
@@ -567,14 +747,29 @@ var form = document.form;
 var field = new ej.pdf.PdfSignatureField(page, 'Signature', {x: 10, y: 10, width: 100, height: 50});
 // Create a timestamp callback
 async function timestampCallback(request) {
-    // Implement timestamp response logic here
-    return { response: new Uint8Array() }; // Placeholder return
+    // Replace with your provider's TSA URL (FreeTSA, DigiCert, GlobalSign, etc.)
+    var tsaUrl = 'https://freetsa.org/tsr';
+    try {
+        var httpResponse = await fetch(tsaUrl, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/timestamp-query' },
+            body: request
+        });
+        if (!httpResponse.ok) {
+            throw new Error('TSA request failed with status ' + httpResponse.status);
+        }
+        var buffer = await httpResponse.arrayBuffer();
+        return { response: new Uint8Array(buffer) };
+    } catch (error) {
+        console.error('Timestamp request failed:', error);
+        throw error;
+    }
 }
 // Create a new signature using PFX data, private key and call back function for timestamp
-const signature = PdfSignature.create(certData, password, { cryptographicStandard: ej.pdf.CryptographicStandard.cms, digestAlgorithm: ej.pdf.DigestAlgorithm.sha256 }, timestampCallback);
-// Sets the signature to the field
+var signature = ej.pdf.PdfSignature.create(certData, password, { cryptographicStandard: ej.pdf.CryptographicStandard.cms, digestAlgorithm: ej.pdf.DigestAlgorithm.sha256 }, timestampCallback);
+// Set the signature to the field
 field.setSignature(signature);
-// Add the field into PDF form
+// Add the field to the PDF form
 form.add(field);
 // Save the document
 await document.saveAsync('output.pdf');
@@ -584,9 +779,13 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## Drawing text/image in the Signature Appearance
+## Customizing the signature appearance
 
-This example demonstrates how to create a visible signature field, apply a CMS (SHA-256) digital signature with signer information, customize the signature appearance using a base64-encoded image, and save the signed PDF document.
+This example demonstrates how to create a visible signature field, apply a CMS (SHA-256) digital signature with signer information, customize the signature appearance by drawing an image into the field, and save the signed PDF document.
+
+`PdfBitmap` accepts an image from a base64 string, a `Uint8Array` of decoded bytes, or a URL fetched at runtime. Supported formats include PNG, JPEG, and BMP.
+
+`field.getAppearance()` returns a [PdfAppearance](https://ej2.syncfusion.com/documentation/api/pdf/pdfappearance) object whose `normal.graphics` property exposes a [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) instance for custom drawing inside the signature widget.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -595,7 +794,7 @@ import { PdfDocument, PdfPage, PdfSignatureField, PdfSignature, CryptographicSta
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();
 // Add a new page to the document
-let page = document.addPage();
+let page: PdfPage = document.addPage();
 // Create a visible signature field at (50, 50) sized 100x100
 let field: PdfSignatureField = new PdfSignatureField(page, 'field', { x: 50, y: 50, width: 100, height: 100 });
 // Create a digital signature with CMS + SHA-256
@@ -612,15 +811,15 @@ const signature: PdfSignature = PdfSignature.create(
 );
 // Get the normal appearance graphics for the signature field
 let graphics: PdfGraphics = field.getAppearance().normal.graphics;
-// Create an image from a base64-encoded bitmap (placeholder content shown)
-let image: PdfImage = new PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
+// Create an image from a base64-encoded bitmap (replace with a valid base64 PNG/JPEG string)
+let image: PdfImage = new PdfBitmap('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=');
 // Draw the image to fill the signature widget (100x100)
 graphics.drawImage(image, { x: 0, y: 0, width: 100, height: 100 });
-// Register the signature field
-document.form.add(field);
 // Apply the signature to the field
 field.setSignature(signature);
-// Save the Document
+// Register the signature field with the document form
+document.form.add(field);
+// Save the document
 document.save('output.pdf');
 // Release document resources
 document.destroy();
@@ -648,14 +847,14 @@ var signature = ej.pdf.PdfSignature.create(
 );
 // Get the normal appearance graphics for the signature field
 var graphics = field.getAppearance().normal.graphics;
-// Create an image from a base64-encoded bitmap (placeholder content shown)
-var image = new ej.pdf.PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
-// Draw the image to fill// Draw the image to fill the signature widget (100x100)
+// Create an image from a base64-encoded bitmap (replace with a valid base64 PNG/JPEG string)
+var image = new ej.pdf.PdfBitmap('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=');
+// Draw the image to fill the signature widget (100x100)
 graphics.drawImage(image, { x: 0, y: 0, width: 100, height: 100 });
-// Register the signature field with the document form
-document.form.add(field);
 // Apply the signature to the field
 field.setSignature(signature);
+// Register the signature field with the document form
+document.form.add(field);
 // Save the document
 document.save('output.pdf');
 // Release document resources
@@ -664,26 +863,26 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## Retrieve the signed date of a PDF signature
+## Inspecting signatures
 
-This example demonstrates how to retrieve the signed date of a PDF signature using the [getSignedDate()](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature#getsigneddate) method of the [PdfSignature](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature) class. This property helps identify when the document was digitally signed.
+The following examples demonstrate how to read information from existing signatures in a PDF document.
+
+### Retrieve the signed date of a PDF signature
+
+This example demonstrates how to retrieve the signed date of a PDF signature using the [`getSignedDate()`](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature#getsigneddate) method of the [PdfSignature](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature) class. This property helps identify when the document was digitally signed.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfForm, PdfSignatureField} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfSignatureField, PdfSignature} from '@syncfusion/ej2-pdf';
 
 // Load the document
 let document: PdfDocument = new PdfDocument(data);
-// Get the first page of the document
-let page: PdfPage = document.getPage(0);
-// Access the PDF form
-let form: PdfForm = document.form;
 // Access the loaded signature field
 let field: PdfSignatureField = document.form.fieldAt(0) as PdfSignatureField;
-// Get the signed
-let signature = field.getSignature();
+// Get the signature
+let signature: PdfSignature = field.getSignature();
 // Get the signed date
-let date = signature.getSignedDate;
+let date: Date = signature.getSignedDate();
 // Destroy the document
 document.destroy();
 
@@ -692,37 +891,44 @@ document.destroy();
 
 // Load the document
 var document = new ej.pdf.PdfDocument(data);
-// Get the first page of the document
-var page = document.getPage(0);
-// Access the PDF form
-var form = document.form;
 // Access the loaded signature field
-var field = document.form.fieldAt(0) as ej.pdf.PdfSignatureField;
-// Get the signed
+var field = document.form.fieldAt(0);
+// Get the signature
 var signature = field.getSignature();
 // Get the signed date
-var date = signature.getSignedDate;
+var date = signature.getSignedDate();
 // Destroy the document
 document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
 
-## Get Certificate Information from a PDF Signature
+### Get certificate information from a PDF signature
 
-This example demonstrates how to retrieve the certificate information of a PDF signature using the [getCertificateInformation()](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature#getcertificateinformation) method of the [PdfSignature](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature) class. This information includes details about the signer's certificate used for digital signing.
+This example demonstrates how to retrieve the certificate information of a PDF signature using the [`getCertificateInformation()`](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature#getcertificateinformation) method of the [PdfSignature](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature) class. This information includes details about the signer's certificate used for digital signing.
+
+The [`PdfCertificateInformation`](https://ej2.syncfusion.com/documentation/api/pdf/pdfcertificateinformation) object exposes the following properties:
+
+| Property | Type | Description |
+|---|---|---|
+| `issuerName` | `string` | Issuer distinguished name. |
+| `subjectName` | `string` | Subject distinguished name. |
+| `serialNumber` | `string` | Certificate serial number. |
+| `validFrom` | `Date` | Certificate validity start. |
+| `validTo` | `Date` | Certificate validity end. |
+| `version` | `string` | Certificate version. |
+| `publicKey` | `Uint8Array` | Public key bytes. |
+| `thumbprint` | `string` | Certificate thumbprint. |
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfSignatureField, PdfCertificateInformation} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfSignatureField, PdfCertificateInformation} from '@syncfusion/ej2-pdf';
 
 // Load the document
 let document: PdfDocument = new PdfDocument(data);
-// Get the first page of the document
-let page: PdfPage = document.getPage(0);
 // Access the loaded signature field
-let field = document.form.fieldAt(0) as PdfSignatureField;
-// Get the signed
+let field: PdfSignatureField = document.form.fieldAt(0) as PdfSignatureField;
+// Get the signature
 let signature = field.getSignature();
 // Get the certificate information of the signature
 let certificateInfo: PdfCertificateInformation = signature.getCertificateInformation();
@@ -742,11 +948,9 @@ document.destroy();
 
 // Load the document
 var document = new ej.pdf.PdfDocument(data);
-// Get the first page of the document
-var page = document.getPage(0);
 // Access the loaded signature field
-var field = document.form.fieldAt(0) as PdfSignatureField;
-// Get the signed
+var field = document.form.fieldAt(0);
+// Get the signature
 var signature = field.getSignature();
 // Get the certificate information of the signature
 var certificateInfo = signature.getCertificateInformation();
@@ -764,18 +968,16 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## Get Digital Signature Configuration Options
+### Get digital signature configuration options
 
-This example demonstrates how to retrieve the configuration options of a digital signature in a PDF document using the [getSignatureOptions()](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature#getsignatureoptions) method of the [PdfSignature](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature) class. These options include details such as the cryptographic standard and digest algorithm used for signing.
+This example demonstrates how to retrieve the configuration options of a digital signature in a PDF document using the [`getSignatureOptions()`](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature#getsignatureoptions) method of the [PdfSignature](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature) class. These options include details such as the cryptographic standard and digest algorithm used for signing.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfForm, PdfSignature, PdfSignatureOptions, PdfSignatureField, CryptographicStandard} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfForm, PdfSignature, PdfSignatureOptions, PdfSignatureField, CryptographicStandard} from '@syncfusion/ej2-pdf';
 
 // Load the document
 let document: PdfDocument = new PdfDocument(data);
-// Get the first page of the document
-let page: PdfPage = document.getPage(0);
 // Access the PDF form
 let form: PdfForm = document.form;
 // Get the signature field
@@ -798,10 +1000,10 @@ let locationInfo = options.locationInfo;
 let certify = options.certify;
 // Get the certification permissions
 let documentPermissions = options.documentPermissions;
-// Get// Get the signature name
+// Get the signature name
 let signedName = options.signedName;
 // Get the lock status of the signature
-let isLocked = options.isLocked
+let isLocked = options.isLocked;
 // Destroy the document
 document.destroy();
 
@@ -810,8 +1012,6 @@ document.destroy();
 
 // Load the document
 var document = new ej.pdf.PdfDocument(data);
-// Get the first page of the document
-var page = document.getPage(0);
 // Access the PDF form
 var form = document.form;
 // Get the signature field
@@ -834,116 +1034,64 @@ var locationInfo = options.locationInfo;
 var certify = options.certify;
 // Get the certification permissions
 var documentPermissions = options.documentPermissions;
-// Get// Get the signature name
+// Get the signature name
 var signedName = options.signedName;
 // Get the lock status of the signature
-var isLocked = options.isLocked
+var isLocked = options.isLocked;
 // Destroy the document
 document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
 
-## Replace Empty Signature with Externally Signed Data
+### Document revisions
 
-This example demonstrates how to replace an empty signature field in a PDF document with externally signed data using the [replaceEmptySignature()](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature#replaceemptysignature) method of the [PdfSignature](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature) class. This method allows embedding externally signed content, certificates, and optional timestamp data into the PDF.
+Digital signatures in a PDF create new revisions, keeping every previous version intact. These revisions let you see how the document looked when each signature was applied and check if anything changed later. You can access all revisions using [`getRevisions()`](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument#getrevisions) method of the [PdfDocument](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument) class or get a specific one using [`getRevision()`](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignaturefield#getrevision) method of the [PdfSignatureField](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignaturefield).
+
+`getRevisions()` returns the zero-based indices of all revisions in a signed PDF, ordered by the sequence in which they were applied. `getRevision(index)` returns the document bytes for the revision at the given index, allowing comparison of pre- and post-signature states.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfForm, PdfSignatureField, DigestAlgorithm, CryptographicStandard} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfForm, PdfSignatureField} from '@syncfusion/ej2-pdf';
 
-// Load the document
+// Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
-// Get the first page of the document
-let page: PdfPage = document.getPage(0);
-// Access the PDF form
+// Access the loaded form
 let form: PdfForm = document.form;
-// Create a new signature field
-let field: PdfSignatureField = new PdfSignatureField(page, 'Signature', { x: 10, y: 10, width: 100, height: 50 });
-// Placeholder for signed data
-let signedData: Uint8Array;
-// Define a callback function used for external signing
-let externalSignatureCallback = (
-    data: Uint8Array,
-    options: {
-        algorithm: DigestAlgorithm;
-        cryptographicStandard: CryptographicStandard;
-    }
-): void => {
-    // Implement external signing logic here
-    signedData = new Uint8Array(); // Placeholder return
-};
-// Create a new signature using external signing with public certificate collection
-let signature: PdfSignature = PdfSignature.create(
-    externalSignatureCallback,
-    publicCertificates,
-    {
-        cryptographicStandard: CryptographicStandard.cms,
-        algorithm: DigestAlgorithm.sha256
-    }
-);
-// Set the signature to the field
-field.setSignature(signature);
-// Add the field into PDF form
-form.add(field);
-// Save the document data
-let finalData: Uint8Array = document.save();
-// Destroy the document
-document.destroy();
-// Replace the empty signature with externally signed hash and certificates
-let signedDocumentData: Uint8Array = PdfSignature.replaceEmptySignature(
-    finalData,
-    'Signature',
-    signedData,
-    DigestAlgorithm.sha256,
-    publicCertificates
-);
+// Access the loaded signature field
+let signatureField: PdfSignatureField = form.fieldAt(0) as PdfSignatureField;
+// Retrieve all revision indexes of the PDF document
+let revisions: number[] = document.getRevisions();
+// Get the revision number associated with the signature field
+let revision: number = signatureField.getRevision();
+// Compare the byte size of each revision to detect changes
+let sizes: number[] = revisions.map((index: number) => {
+    const revisionData: Uint8Array = document.getRevision(index);
+    return revisionData.byteLength;
+});
+console.log('Revision sizes:', sizes);
 // Destroy the document
 document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 
-// Load the document
+// Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
-// Get the first page of the document
-var page = document.getPage(0);
-// Access the PDF form
+// Access the loaded form
 var form = document.form;
-// Create a new signature field
-var field = new ej.pdf.PdfSignatureField(page, 'Signature', { x: 10, y: 10, width: 100, height: 50 });
-// Placeholder for signed data
-var signedData;
-// Define a callback function used for external signing
-var externalSignatureCallback = function (data, options) {
-    // Implement external signing logic here
-    signedData = new Uint8Array(); // Placeholder return
-};
-// Create a new signature using external signing with public certificate collection
-var signature = ej.pdf.PdfSignature.create(
-    externalSignatureCallback,
-    publicCertificates,
-    {
-        cryptographicStandard: ej.pdf.CryptographicStandard.cms,
-        algorithm: ej.pdf.DigestAlgorithm.sha256
-    }
-);
-// Set the signature to the field
-field.setSignature(signature);
-// Add the field into PDF form
-form.add(field);
-// Save the document data
-var finalData = document.save();
-// Destroy the document
-document.destroy();
-// Replace the empty signature with externally signed hash and certificates
-var signedDocumentData = ej.pdf.PdfSignature.replaceEmptySignature(
-    finalData,
-    'Signature',
-    signedData,
-    ej.pdf.DigestAlgorithm.sha256,
-    publicCertificates
-);
+// Access the loaded signature field
+var signatureField = form.fieldAt(0);
+// Retrieve all revision indexes of the PDF document
+var revisions = document.getRevisions();
+// Get the revision number associated with the signature field
+var revision = signatureField.getRevision();
+// Compare the byte size of each revision to detect changes
+var sizes = revisions.map(function (index) {
+    var revisionData = document.getRevision(index);
+    return revisionData.byteLength;
+});
+console.log('Revision sizes:', sizes);
 // Destroy the document
 document.destroy();
 
@@ -952,11 +1100,11 @@ document.destroy();
 
 ## Sign existing signature field
 
-This section explains how to sign an existing unsigned signature field in a PDF using the [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library). You can locate predefined signature fields and apply a digital signature directly by calling [setSignature()](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignaturefield#setsignature) method of the [PdfSignatureField](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignaturefield) class, without altering the document layout. This is ideal for templates where signature placeholders already exist, allowing you to add digital signatures to the field using a certificate and signature settings.
+This section explains how to sign an existing unsigned signature field in a PDF using the [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library). You can locate predefined signature fields and apply a digital signature directly by calling [`setSignature()`](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignaturefield#setsignature) method of the [PdfSignatureField](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignaturefield) class, without altering the document layout. This is ideal for templates where signature placeholders already exist, allowing you to add digital signatures to the field using a certificate and signature settings.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfForm, DigestAlgorithm, CryptographicStandard, PdfSignatureField} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfForm, DigestAlgorithm, CryptographicStandard, PdfSignature, PdfSignatureField} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
@@ -965,14 +1113,14 @@ let form: PdfForm = document.form;
 // Access the loaded form field
 let field: PdfSignatureField = form.fieldAt(0) as PdfSignatureField;
 // Create a digital signature with CMS + SHA-256
-const signature: PdfSignature = PdfSignature.create(certificate, 'password', {
+const signature: PdfSignature = PdfSignature.create(certData, password, {
     digestAlgorithm: DigestAlgorithm.sha256,
     cryptographicStandard: CryptographicStandard.cms
 });
-// Apply the signature to the field 
+// Apply the signature to the field
 field.setSignature(signature);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -986,14 +1134,14 @@ var form = document.form;
 // Access the loaded form field
 var field = form.fieldAt(0);
 // Create a digital signature with CMS + SHA-256
-const signature = ej.pdf.PdfSignature.create(certificate, 'password', {
+var signature = ej.pdf.PdfSignature.create(certData, password, {
     digestAlgorithm: ej.pdf.DigestAlgorithm.sha256,
     cryptographicStandard: ej.pdf.CryptographicStandard.cms
 });
-// Apply the signature to the field 
+// Apply the signature to the field
 field.setSignature(signature);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1002,7 +1150,7 @@ document.destroy();
 
 ## Remove existing digital signature
 
-This section explains how to remove an existing digital signature from a PDF by using [removeField()](https://ej2.syncfusion.com/documentation/api/pdf/pdfform#removefield) method of [PdfForm](https://ej2.syncfusion.com/documentation/api/pdf/pdfform) class to delete the signature field entirely. Removing the field clears the signature dictionary, allowing the document to be edited, corrected, or re‑signed as needed. This is useful when preparing a PDF for updates or resolving signature‑related issues.
+This section explains how to remove an existing digital signature from a PDF by using [`removeField()`](https://ej2.syncfusion.com/documentation/api/pdf/pdfform#removefield) method of [PdfForm](https://ej2.syncfusion.com/documentation/api/pdf/pdfform) class to delete the signature field entirely. Removing the field clears the signature dictionary, allowing the document to be edited, corrected, or re‑signed as needed. This is useful when preparing a PDF for updates or resolving signature‑related issues.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -1015,9 +1163,11 @@ let form: PdfForm = document.form;
 // Access the loaded form field
 let field: PdfSignatureField = form.fieldAt(0) as PdfSignatureField;
 // Remove the signature field
-if (field instanceof PdfSignatureField) { 
-    document.form.removeField(field); 
+if (field instanceof PdfSignatureField) {
+    document.form.removeField(field);
 }
+// Save the document
+document.save('output.pdf');
 // Destroy the document
 document.destroy();
 
@@ -1031,51 +1181,20 @@ var form = document.form;
 // Access the loaded form field
 var field = form.fieldAt(0);
 // Remove the signature field
-if (field instanceof ej.pdf.PdfSignatureField) { 
-    document.form.removeField(field); 
+if (field instanceof ej.pdf.PdfSignatureField) {
+    document.form.removeField(field);
 }
+// Save the document
+document.save('output.pdf');
 // Destroy the document
 document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
 
-## Document revisions
+## Additional Resources
 
-Digital signatures in a PDF create new revisions, keeping every previous version intact. These revisions let you see how the document looked when each signature was applied and check if anything changed later. You can access all revisions using [getRevisions()](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument#getrevisions) method of the [PdfDocument](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument) class or get a specific one using [getRevision()](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignaturefield#getrevision) method of the [PdfSignatureField](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignaturefield).
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfForm, PdfSignatureField} from '@syncfusion/ej2-pdf';
-
-// Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data);
-// Access loaded form
-let form: PdfForm = document.form;
-// Access the loaded form field
-let signature: PdfSignatureField = form.fieldAt(0);
-// Retrieve all revision indexes of the PDF document
-let revisions: number[] = document.getRevisions();
-// Gets the revision number associated with the signature field
-let revision: number = signature.getRevision();
-// Destroy the document
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-
-// Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data);
-// Access loaded form
-var form = document.form;
-// Access the loaded form field
-var signature = form.fieldAt(0);
-// Retrieve all revision indexes of the PDF document
-var revisions = document.getRevisions();
-// Gets the revision number associated with the signature field
-var revision = signature.getRevision();
-// Destroy the document
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
+- [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
+- [JavaScript PDF Library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
+- [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
+- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/fluent2/pdf/default)

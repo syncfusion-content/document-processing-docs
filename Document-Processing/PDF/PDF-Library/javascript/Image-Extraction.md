@@ -1,95 +1,137 @@
 ---
 title: Image Extraction in JavaScript PDF Library | Syncfusion
-description: This section explains how to extract images from PDF documents and retrieve their properties such as position and size using the JavaScript PDF Library
+description: Learn how to extract embedded images from PDF documents and read properties such as format, page index, occurrence index, bounds, resource name, interpolation, masking flags, and physical dimension using the JavaScript PDF Library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
+
 # Image Extraction in JavaScript PDF Library
 
-The PDF provides support to extract images from PDF documents and retrieve their properties such as bounds, index and raw byte data.
-
-N> For redaction features, you need to install the `@syncfusion/ej2-pdf-data-extract` package as an add-on. Please verify the platform's actual root directory where the `openjpeg` file is extracted. Depending on the platform, the root path may vary. Check which root folder is being used by reviewing the path referenced in the [Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-asp-net-core) page.
+The Syncfusion JavaScript PDF library provides support to extract images from PDF documents and retrieve their properties, such as format, page index, occurrence index, bounds, resource name, interpolation, masking flags, and physical dimension.
 
 ## Extract images from a PDF
 
-This code demonstrates how to extract embedded images and their metadata from a PDF using  [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor). It loads a PDF, retrieves all  [PdfEmbeddedImage](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfembeddedimage) entries across pages, accesses the first image's raw byte data, and reads its properties format, page index, occurrence index, bounds, interpolation status, and masking flags before saving/disposing resources by destroying the document.
+This section demonstrates how to extract embedded images and their metadata from a PDF using [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor). It loads a PDF, retrieves all [PdfEmbeddedImage](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfembeddedimage) entries across pages, accesses the first image's raw byte data, and reads its properties before disposing of the document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, Size } from '@syncfusion/ej2-pdf';
-import { PdfDataExtractor, PdfEmbeddedImage} from '@syncfusion/ej2-pdf-data-extract';
-
-// Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data);
-// Initialize a new instance of the `PdfDataExtractor` class
-let extractor: PdfDataExtractor = new PdfDataExtractor(document);
-// Extract collection of `PdfEmbeddedImage` from the PDF document
-let imageInfoCollection: PdfEmbeddedImage[] = extractor.extractImages({
+import { PdfDataExtractor, PdfEmbeddedImage } from '@syncfusion/ej2-pdf-data-extract';
+const extractor: PdfDataExtractor = new PdfDataExtractor(document);
+const imageInfoCollection: PdfEmbeddedImage[] = extractor.extractImages({
   startPageIndex: 0,
   endPageIndex: document.pageCount - 1
 });
-// Access the first extracted image and its raw data
-let imageInfo: PdfEmbeddedImage = imageInfoCollection[0];
-// Get the raw byte data of the extracted image
-let imageData: Uint8Array = imageInfo.data;
-// Gets the image format.
-let type = imageInfo.type;
-// Gets the page index of the image
-let pageIndex = imageInfo.pageIndex;
-// Gets the index of the image occurrence within the PDF page
-let index = imageInfo.index;
-// Gets the bounds of the image
-let bounds = imageInfo.bounds;
-// Gets the XObject resource name for this image
-let name: string = imageInfo.resourceName;
-// Gets the boolean flag indicating whether the image is interpolated or not
-let isImageInterpolated = imageInfo.isImageInterpolated;
-// Gets the boolean flag indicating whether the image is masked or not
-let isImageMasked = imageInfo.isImageMasked;
-// Gets the boolean flag indicating whether the image is soft masked or not
-let IsSoftMasked: boolean = imageInfo.isSoftMasked;
-// Gets the image physical dimension
-let physicalDimension: Size = imageInfo.physicalDimension;
-// Destroy the PDF document
-document.destroy();
+if (imageInfoCollection.length === 0) {
+  console.warn('No embedded images were found in the specified page range.');
+}
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 
-// Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data);
-// Initialize a new instance of the `PdfDataExtractor` class
-var extractor= new ej.pdfdataextract.PdfDataExtractor(document);
-// Extract collection of `PdfEmbeddedImage` from the PDF document
+var extractor = new ej.pdfdataextract.PdfDataExtractor(document);
 var imageInfoCollection = extractor.extractImages({
   startPageIndex: 0,
   endPageIndex: document.pageCount - 1
 });
-// Access the first extracted image and its raw data
-var imageInfo = imageInfoCollection[0];
-// Get the raw byte data of the extracted image
-var imageData = imageInfo.data;
-// Gets the image format.
-var type = imageInfo.type;
-// Gets the page index of the image.
-var pageIndex = imageInfo.pageIndex;
-// Gets the index of the image occurrence within the PDF page
-var index = imageInfo.index;
-// Gets the bounds of the image.
-var bounds = imageInfo.bounds;
-// Gets the XObject resource name for this image
-var name = imageInfo.resourceName;
-// Gets the boolean flag indicating whether the image is interpolated or not
-var isImageInterpolated = imageInfo.isImageInterpolated;
-//// Gets the boolean flag indicating whether the image is masked or not
-var isImageMasked = imageInfo.isImageMasked;
-// Gets the boolean flag indicating whether the image is soft masked or not
-var IsSoftMasked = imageInfo.isSoftMasked;
-// Gets the image physical dimension
-var physicalDimension = imageInfo.physicalDimension;
-// Destroy the PDF document
-document.destroy();
+if (!imageInfoCollection.length) {
+  console.warn('No embedded images were found in the specified page range.');
+}
 
 {% endhighlight %}
 {% endtabs %}
+
+#### `extractImages` options
+
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| `startPageIndex` | `number` | `0` | Zero-based index of the first page to process. |
+| `endPageIndex` | `number` | `document.pageCount - 1` | Zero-based index of the last page to process (inclusive). |
+
+### Extract from a specific page range
+
+```typescript
+// Extract images only from page 2 (zero-based index 1)
+const pageTwoImages: PdfEmbeddedImage[] = extractor.extractImages({
+  startPageIndex: 1,
+  endPageIndex: 1
+});
+```
+
+### Read image properties
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { Size } from '@syncfusion/ej2-pdf';
+
+const imageInfo: PdfEmbeddedImage = imageInfoCollection[0];
+// Raw byte data of the extracted image
+const imageData: Uint8Array = imageInfo.data;
+// Image format
+const type = imageInfo.type;
+// Page index where the image appears
+const pageIndex = imageInfo.pageIndex;
+// Occurrence index of the image within the page
+const index = imageInfo.index;
+// Bounds of the image on the page, in points
+const bounds = imageInfo.bounds;
+// XObject resource name for this image in the PDF content stream
+const resourceName: string = imageInfo.resourceName;
+// Whether the image is interpolated
+const isImageInterpolated = imageInfo.isImageInterpolated;
+// Whether the image is masked
+const isImageMasked = imageInfo.isImageMasked;
+// Whether the image is soft-masked
+const isSoftMasked: boolean = imageInfo.isSoftMasked;
+// Physical dimension of the image, in pixels
+const physicalDimension: Size = imageInfo.physicalDimension;
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+var imageInfo = imageInfoCollection[0];
+// Raw byte data of the extracted image
+var imageData = imageInfo.data;
+// Image format
+var type = imageInfo.type;
+// Page index where the image appears
+var pageIndex = imageInfo.pageIndex;
+// Occurrence index of the image within the page
+var index = imageInfo.index;
+// Bounds of the image on the page, in points
+var bounds = imageInfo.bounds;
+// XObject resource name for this image in the PDF content stream
+var resourceName = imageInfo.resourceName;
+// Whether the image is interpolated
+var isImageInterpolated = imageInfo.isImageInterpolated;
+// Whether the image is masked
+var isImageMasked = imageInfo.isImageMasked;
+// Whether the image is soft-masked
+var isSoftMasked = imageInfo.isSoftMasked;
+// Physical dimension of the image, in pixels
+var physicalDimension = imageInfo.physicalDimension;
+
+{% endhighlight %}
+{% endtabs %}
+
+#### `PdfEmbeddedImage` properties
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `data` | `Uint8Array` | Raw byte data of the embedded image. |
+| `type` | `ImageType` | Image format. Supported values: `JPEG`, `PNG`, `JPEG2000`, `JBIG2`, `CCITT`, `Bitmap`. |
+| `pageIndex` | `number` | Zero-based index of the page that contains the image. |
+| `index` | `number` | Zero-based occurrence index of the image within the page. |
+| `bounds` | `RectangleF` | Position and size on the page, in points. Members: `x`, `y`, `width`, `height`. |
+| `resourceName` | `string` | XObject resource name used to reference the image in the PDF content stream. |
+| `isImageInterpolated` | `boolean` | Indicates whether the image is flagged for interpolation. |
+| `isImageMasked` | `boolean` | Indicates whether the image is a stencil mask. |
+| `isSoftMasked` | `boolean` | Indicates whether the image is associated with a soft mask. |
+| `physicalDimension` | `Size` | Native width and height of the image, in pixels. Members: `width`, `height`. |
+
+## Additional Resources
+
+- [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
+- [JavaScript PDF Library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
+- [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
+- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/fluent2/pdf/default)
