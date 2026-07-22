@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Insert page number and navigate to page in React Document Editor component
+# Insert page number and navigate in React Document Editor
 
-You can insert page number and navigate to specific page in [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) component using the following ways.
+You can insert page number and navigate to specific page in [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) component using the following ways.
 
 ## Insert page number
 

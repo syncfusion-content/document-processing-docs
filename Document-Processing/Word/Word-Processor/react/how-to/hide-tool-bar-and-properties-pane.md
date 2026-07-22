@@ -16,7 +16,7 @@ domainurl: ##DomainURL##
 
 ## Hide the properties pane
 
-By default, Document Editor Container has built-in properties pane which contains options for formatting text, tables, images, headers, and footers. You can use [`showPropertiesPane`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/documentEditorContainerModel#showpropertiespane) API in [`DocumentEditorContainer`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/documentEditorContainerModel/) to hide the properties pane.
+By default, Document Editor Container has built-in properties pane which contains options for formatting text, tables, images, headers, and footers. You can use [`showPropertiesPane`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/documentEditorContainerModel#showpropertiespane) API in [`DocumentEditorContainer`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/documentEditorContainerModel) to hide the properties pane.
 
 The following example code illustrates how to hide the properties pane.
 
@@ -50,7 +50,7 @@ N> Positioning and customizing the properties pane in the Document Editor Contai
 
 ## Hide the toolbar
 
-You can use [`enableToolbar`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/documentEditorContainerModel#enabletoolbar) API in [`DocumentEditorContainer`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/documentEditorContainerModel/) to hide the existing toolbar.
+You can use [`enableToolbar`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/documentEditorContainerModel#enabletoolbar) API in [`DocumentEditorContainer`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/documentEditorContainerModel) to hide the existing toolbar.
 
 The following example code illustrates how to hide the existing toolbar.
 

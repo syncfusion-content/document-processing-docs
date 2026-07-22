@@ -85,7 +85,7 @@ Document Editor has [`selectionChange`](https://ej2.syncfusion.com/react/documen
 
 ## Select the content based on left and top positions
 
-Here, you can specify the [`selection settings`](https://ej2.syncfusion.com/react/documentation/api/document-editor/selectionSettings/) to select the content based on left and top positions.
+Here, you can specify the [`selection settings`](https://ej2.syncfusion.com/react/documentation/api/document-editor/selectionSettings) to select the content based on left and top positions.
 
 x denotes the left position, y denotes the top position, and extend denotes whether to extend or update the selection.
 
