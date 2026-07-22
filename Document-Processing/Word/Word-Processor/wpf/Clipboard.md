@@ -1,6 +1,6 @@
 ---
 title: Clipboard in WPF RichTextBox control | Syncfusion
-description: Learn here all about Clipboard support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+description: Learn about the Clipboard support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
@@ -16,22 +16,31 @@ The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor
 
 * Image.
 
-## UI Command to access clipboard operations
+## UI Commands to Access Clipboard Operations
 
 
 The following code example demonstrates how to bind commands for accessing clipboard operations.
 {% tabs %}
 {% highlight xaml %}
-<!-- Binds button to the CutCommand -->
-<Button Content="Cut" Command="RichTextBoxAdv:SfRichTextBoxAdv.CutCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}" />
-<!-- Binds button to the CopyCommand -->
-<Button Content="Copy" Command="RichTextBoxAdv:SfRichTextBoxAdv.CopyCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}" />
-<!-- Binds button to the PasteCommand -->
-<Button Content="Paste" Command="RichTextBoxAdv:SfRichTextBoxAdv.PasteCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}" />
+<StackPanel Orientation="Horizontal">
+    <!-- Binds button to the CutCommand -->
+    <Button Content="Cut" Command="RichTextBoxAdv:SfRichTextBoxAdv.CutCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}" />
+    <!-- Binds button to the CopyCommand -->
+    <Button Content="Copy" Command="RichTextBoxAdv:SfRichTextBoxAdv.CopyCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}" />
+    <!-- Binds button to the PasteCommand -->
+    <Button Content="Paste" Command="RichTextBoxAdv:SfRichTextBoxAdv.PasteCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}" />
+</StackPanel>
+
+<RichTextBoxAdv:SfRichTextBoxAdv x:Name="richTextBoxAdv" />
 
 
 {% endhighlight %}
 
 {% endtabs %}
-N> In order to cut, copy or paste, the standard keyboard shortcuts such as CTRL + X, CTRL + C, CTRL + V can also be used.
-You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations.You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to knows how to render and configure the editing tools.
+
+N> In order to cut, copy, or paste, the standard keyboard shortcuts such as CTRL+X, CTRL+C, and CTRL+V can also be used.
+
+## See Also
+
+- [WPF RichTextBox Feature Tour](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor)
+- [WPF RichTextBox Examples](https://github.com/syncfusion/docx-editor-sdk-wpf-demos)
