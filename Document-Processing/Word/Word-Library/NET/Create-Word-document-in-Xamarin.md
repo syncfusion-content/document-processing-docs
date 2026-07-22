@@ -31,13 +31,13 @@ Step 3: Install the [Syncfusion.Xamarin.DocIO](https://www.nuget.org/packages/Sy
 
 N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
 N>
-N> Install the https://www.nuget.org/packages/Syncfusion.Licensing NuGet package and register the license key during application startup.
+N> Install the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) NuGet package and register the license key during application startup.
 N>
 N> ```csharp
 N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
 N> ```
 N>
-N> For more information about generating and registering a license key, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
+N> For more information about generating and registering a license key, refer to the [Syncfusion<sup>&reg;</sup> licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 ![Install DocIO Xamarin NuGet package](Xamarin_images/Install_Nuget.png)
 
@@ -424,8 +424,3 @@ N> The code sample references image files (AdventureCycle.jpg, Mountain-200.jpg,
 By executing the program, you will get the Word document as follows.
 
 ![Xamarin output Word document](Xamarin_images/GettingStartedOutput.jpg)
-
-## See also
-
-- [Complete Xamarin working sample on GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Xamarin)
-- [.NET Word Library overview, features, and pricing](https://www.syncfusion.com/document-sdk/net-word-library) 
