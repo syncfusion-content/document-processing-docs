@@ -1,18 +1,18 @@
 ---
 layout: post
 title: Add save button in React DOCX Editor Component | Syncfusion
-description: Learn here to add save button in Syncfusion React DOCX Editor component of Syncfusion Essential JS 2 and more.
+description: Learn here to add save button in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
 control: Add save button to toolbar
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Save Button in React DOCX Editor Toolbar
+# Add Save Button in React Document Editor Toolbar
 
-## To Add a Save Button to the Existing Toolbar in the DOCX Editor Container
+## To Add a Save Button to the Existing Toolbar in the Document Editor Container
 
-[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (DOCX Editor) Container allows you to add a new button to the existing items in a toolbar using [`CustomToolbarItemModel`](https://ej2.syncfusion.com/react/documentation/api/document-editor/customToolbarItemModel/) and with existing items in [`toolbarItems`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container#toolbaritems) property. Newly added item click action can be defined in [`toolbarClick`](https://ej2.syncfusion.com/react/documentation/api/toolbar/clickEventArgs/).
+[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) Container allows you to add a new button to the existing items in a toolbar using [`CustomToolbarItemModel`](https://ej2.syncfusion.com/react/documentation/api/document-editor/customToolbarItemModel/) and with existing items in [`toolbarItems`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container#toolbaritems) property. Newly added item click action can be defined in [`toolbarClick`](https://ej2.syncfusion.com/react/documentation/api/toolbar/clickEventArgs/).
 
 {% raw %}
 ```ts

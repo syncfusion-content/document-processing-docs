@@ -1,16 +1,16 @@
 ---
 layout: post
 title: Header Footer in React DOCX Editor Component | Syncfusion
-description: Learn here all about header and footer in Syncfusion Essential React DOCX Editor component, its elements and more.
+description: Learn here all about header and footer in Syncfusion Essential React Document Editor component, its elements and more.
 control: Header and Footer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Header and Footer in React DOCX Editor Component
+# Header and Footer in React Document Editor Component
 
-[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (DOCX Editor) supports headers and footers in its document. Each section in the document can have the following types of headers and footers:
+[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports headers and footers in its document. Each section in the document can have the following types of headers and footers:
 
 * First page: Used only on the first page of the section.
 * Even pages: Used on all even numbered pages in the section.
@@ -87,7 +87,7 @@ documenteditor.selection.closeHeaderFooter()
 
 ## Online Demo
 
-Explore how to add and customize headers and footers in Word documents using the React DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/headers-and-footers).
+Explore how to add and customize headers and footers in Word documents using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/headers-and-footers).
 
 ## See Also
 
