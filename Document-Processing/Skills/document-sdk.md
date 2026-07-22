@@ -171,7 +171,7 @@ To learn more about the Skills CLI, refer [here](https://skills.sh/docs).
  
 1. **Read the relevant skill files and choose modes based on the user's query** The assistant retrieves library APIs, and code patterns from the installed Syncfusion<sup style="font-size:70%">&reg;</sup> Skills. It automatically chooses the appropriate operating mode based on the provided prompt.
  
-2. **Operates in two modes** based on the user's intent:
+2. **Operates in two modes** based on the user's intent.
    - **Mode 1 — Generate Code**:
 
        - Triggered when the prompt includes keywords such as `"code"`, `"snippet"`, `"how to"`, `"show me"`, `"sample"`, or `"example"`.
@@ -273,7 +273,7 @@ Any Skills compatible agent or IDE that loads local skill files (Visual Studio C
 
 Yes. Once installed, supported agents automatically detect and load relevant skills for Syncfusion‑related queries without requiring additional configuration.
 
-**Skills are not being loaded**
+**Skills are not being loaded?**
 
 Verify that skills are installed in the correct agent directory, restart the IDE, and confirm that the agent supports external skill files.
 

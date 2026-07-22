@@ -8,17 +8,23 @@ documentation: UG
 
 # Font Substitution in Word to PDF Conversion
 
-When the necessary fonts used in the Word document has not been installed in the production machine, then Essential<sup>&reg;</sup> DocIO uses the ”Microsoft Sans Serif” as default font for rendering the text. This leads to preservation difference in generated PDF as each font has different glyphs for characters. To learn more about the default font substitution, click [here](https://support.syncfusion.com/kb/article/6821/what-happens-when-the-word-document-used-fonts-for-a-text-is-not-installed-in-production).
+When the necessary fonts used in the Word document have not been installed in the production machine, then Essential<sup>&reg;</sup> DocIO uses the "Microsoft Sans Serif" as default font for rendering the text. This leads to preservation differences in the generated PDF, as each font has different glyphs for characters. To learn more about the default font substitution, click [here](https://support.syncfusion.com/kb/article/6821/what-happens-when-the-word-document-used-fonts-for-a-text-is-not-installed-in-production).
 
 To avoid this, the Essential<sup>&reg;</sup> DocIO library allows you to set an alternate font for the missing font used in the Word document.
 
-## Use alternate font from installed fonts
+The library supports the following font substitution approaches during Word to PDF conversion:
+
+* **Use an alternate font from installed fonts** – substitute with a font that is already installed on the production machine.
+* **Use an alternate font without installing** – load the replacement font from a file stream without installing it on the machine.
+* **Embed fonts** – embed the required TrueType font glyphs directly into the converted PDF. For more details, see [Embedding fonts in Word to PDF conversion](./Word-to-pdf-settings.md#embedding-fonts).
+
+## Use an alternate font from installed fonts
 
 You can use any other alternate fonts instead of "Microsoft Sans Serif" to layout and render the text during Word to PDF conversion by using the [SubstituteFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.FontSettings.html) event.
 
-N> Hook the [SubstituteFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.FontSettings.html#Syncfusion_DocIO_DLS_FontSettings_SubstituteFont) event only after the Word document is loaded to ensure it works correctly.
+N> Hook the [SubstituteFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.FontSettings.html#Syncfusion_DocIO_DLS_FontSettings_SubstituteFont) event only after the Word document is loaded. This ensures the event fires correctly.
 
-The following code example shows how to use alternate font instead of "Microsoft Sans Serif" when the specified font is not installed in the machine. 
+The following code example shows how to use an alternate font instead of "Microsoft Sans Serif" when the specified font is not installed in the machine.
 
 {% tabs %}
 
@@ -76,7 +82,7 @@ wordDocument.ChartToImageConverter = New ChartToImageConverter()
 'Hooks the font substitution event
 AddHandler wordDocument.FontSettings.SubstituteFont, AddressOf FontSettings_SubstituteFont
 'Creates an instance of the DocToPDFConverter
-Dim converter As DocToPDFConverter = New DocToPDFConverter
+Dim converter As DocToPDFConverter = New DocToPDFConverter()
 'Converts Word document into PDF document
 Dim pdfDocument As PdfDocument = converter.ConvertToPDF(wordDocument)
 'Unhooks the font substitution event after converting to PDF
@@ -142,9 +148,9 @@ End Sub
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Use-alternate-installed-font).
 
-### Event Handler to use alternate font without installing
+### Event Handler to use an alternate font without installing
 
-The following code example shows how to use the alternate fonts instead of "Microsoft Sans Serif" **without installing the fonts** into production machine.
+The following code example shows how to use alternate fonts instead of "Microsoft Sans Serif" **without installing the fonts** on the production machine.
 
 {% tabs %}
 
@@ -152,7 +158,7 @@ The following code example shows how to use the alternate fonts instead of "Micr
 private void FontSettings_SubstituteFont(object sender, SubstituteFontEventArgs args)
 {
     //Sets the alternate font when a specified font is not installed in the production environment
-    if (args.OrignalFontName == "Arial Unicode MS")
+    if (args.OriginalFontName == "Arial Unicode MS")
     {
         //Sets the alternate font based on the font style.
         switch (args.FontStyle)
@@ -175,7 +181,7 @@ private void FontSettings_SubstituteFont(object sender, SubstituteFontEventArgs 
 private void FontSettings_SubstituteFont(object sender, SubstituteFontEventArgs args)
 {
     //Sets the alternate font when a specified font is not installed in the production environment
-    if (args.OrignalFontName == "Arial Unicode MS")
+    if (args.OriginalFontName == "Arial Unicode MS")
     {
         //Sets the alternate font based on the font style.
         switch (args.FontStyle)
@@ -195,9 +201,9 @@ private void FontSettings_SubstituteFont(object sender, SubstituteFontEventArgs 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Private Sub SubstituteFont(ByVal sender As Object, ByVal args As SubstituteFontEventArgs)
+Private Sub FontSettings_SubstituteFont(ByVal sender As Object, ByVal args As SubstituteFontEventArgs)
     'Sets the alternate font when a specified font is not installed in the production environment
-    If args.OrignalFontName = "Arial Unicode MS" Then
+    If args.OriginalFontName = "Arial Unicode MS" Then
         'Sets the alternate font based on the font style.
         Select Case args.FontStyle
            Case FontStyle.Italic

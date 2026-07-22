@@ -1,19 +1,33 @@
 ---
 layout: post
 title: Context Menu in Blazor Spreadsheet component | Syncfusion
-description: Explore the context menu functionality in the Syncfusion Blazor Spreadsheet component, including options for cells, rows, columns, and sheet tabs.
+description: Explore the context menu for cells, rows, columns, and sheet tabs in the Syncfusion Blazor Spreadsheet component.
 control: Spreadsheet
 documentation: ug
 ---
 
 # Context Menu in Blazor Spreadsheet component
 
-The context menu enhances interaction with the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component by displaying a popup with relevant operations when a right-click is performed on elements such as **cells**, **column headers**, **row headers**, or **sheet tabs**. Its visibility can be controlled via the [`EnableContextMenu`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableContextMenu) property, which is set to **true** by default, enabling the context menu automatically.
+The context menu enhances interaction with the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component by displaying a popup with relevant operations when a right-click is performed on elements such as **cells**, **column headers**, **row headers**, or **sheet tabs**. Set [EnableContextMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableContextMenu) to control visibility. The default value is **true**.
 
-N> When the [`EnableContextMenu`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableContextMenu) property is set to **false**, the context menu does not appear upon right-clicking any element in the component.
+## Disable the context menu
 
+The example below shows how to disable the context menu across the entire Spreadsheet:
 
-## Context Menu Options Based on Spreadsheet Element Type
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@page "/"
+@using Syncfusion.Blazor.Spreadsheet
+
+<SfSpreadsheet EnableContextMenu="false">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Context Menu Options by Element
 
 The context menu options are dynamically adjusted based on the specific element in the Spreadsheet that is right-clicked. Each element displays context-specific functionality relevant to its type.
 
@@ -58,7 +72,7 @@ When a sheet is protected, **Insert Rows Above** and **Insert Rows Below** optio
 
 ### Column header context menu options
 
-When you right-click a single column header or  a range of selected column headers, the `context menu` shows options for column-level operations.
+When right-clicking a single column header or a range of selected column headers, the context menu displays options for column-level operations.
 
 | Options | Action |
 | -- | -- |
@@ -76,39 +90,42 @@ When a sheet is protected, **Insert column to the left** and **Insert column to 
 
 ### Sheet tab context menu options
 
-When right-clicking on a sheet tab located at the bottom of the Spreadsheet, the `context menu` displays options specific to sheet-level operations.
+When right-clicking on a sheet tab located at the bottom of the Spreadsheet, the context menu displays options specific to sheet-level operations.
 
 | Options | Action |
 | -- | -- |
-| Insert |  Inserts a new sheet immediately after the currently active sheet. |
+| Insert | Inserts a new sheet immediately after the currently active sheet. |
 | Delete | Deletes the selected sheet from the Spreadsheet. This option is disabled when only one sheet exists. |
 | Duplicate | Creates an exact copy of the selected sheet, including content, formatting, and settings. The duplicate is positioned immediately after the current sheet. |
 | Rename | Opens a dialog box to modify the name of the selected sheet. |
-| Protect Sheet / Unprotect Sheet | The **Protect Sheet** / **Unprotect Sheet** option dynamically switches based on the current protection status of the sheet. When the sheet is unprotected, the context menu displays **Protect Sheet** to restrict editing. Once protection is applied, the option changes to **Unprotect Sheet**, allowing removal of those restrictions. |
-| Move Right | Moves the selected sheet one position to the right in the tab sequence. Disabled when only one sheet is visible or when the last sheet is selected. |
-| Move Left | Moves the selected sheet one position to the left in the tab sequence. Disabled when only one sheet is visible or when the first sheet is selected. |
+| Protect Sheet (or Unprotect Sheet) | The label switches between **Protect Sheet** and **Unprotect Sheet** based on the current protection status of the sheet. When the sheet is unprotected, the context menu displays **Protect Sheet** to restrict editing. Once protection is applied, the option changes to **Unprotect Sheet**, allowing removal of those restrictions. |
+| Move Right | Moves the selected sheet one position to the right in the tab sequence. Disabled when the last sheet is selected. |
+| Move Left | Moves the selected sheet one position to the left in the tab sequence. Disabled when the first sheet is selected. |
 | Hide | Hides the selected sheet within the Spreadsheet. This option is disabled when only one sheet is visible. |
 
 ![Context menu options for sheet tab](./images/contextmenu-sheettab.png)
 
-Sheet tab context menu behavior is controlled by workbook-level protection. In a protected workbook, only the **Protect Sheet** or **Unprotect Sheet** option remains active. All other options like **Insert**, **Delete**, **Rename**, **Move Right**, **Move Left**, **Hide**, and **Duplicate** are disabled to preserve workbook structure.
+When a sheet is protected, the **Protect Sheet** (or **Unprotect Sheet**) option in the sheet tab context menu remains available so the protection status can be toggled directly from the tab. When a workbook is protected, only the **Protect Sheet** (or **Unprotect Sheet**) option remains active, and all other options—**Insert**, **Delete**, **Rename**, **Move Right**, **Move Left**, **Hide**, and **Duplicate**—are disabled to preserve the workbook structure.
 
-## Properties that influence context menu options
+## Context menu configuration properties
 
 These properties control specific context menu functionality:
 
-| Property | Default | Effect when set to "false" |
+| Property | Default | Effect when set to **false** |
 | -- | -- | -- |
-| `EnableClipboard` | true | Removes the **Cut**, **Copy**, and **Paste** options from all context menus throughout the Spreadsheet |
+| `EnableContextMenu` | true | Disables the context menu globally. No context menu appears for any element. |
+| `EnableClipboard` | true | Removes the **Cut**, **Copy**, and **Paste** options from all context menus throughout the Spreadsheet. |
 | `AllowSorting` | true | Removes the **Sort** option from the context menu, preventing sorting operations. |
 | `AllowFiltering` | true | Removes the **Filter** option from the context menu, disabling filtering capabilities. |
 | `AllowHyperlink` | true | Removes all hyperlink-related options from the context menu, preventing hyperlink operations. |
+| `AllowInsert` | true | Removes the all Insert-related options from the row and column header context menus. |
 
 ![Context menu options when disabling the properties](./images/contextmenu-propertyaffect.png)
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
+@page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
 <SfSpreadsheet DataSource="DataSourceBytes" AllowFiltering="false" AllowSorting="false" EnableClipboard="false" AllowHyperlink="false">
