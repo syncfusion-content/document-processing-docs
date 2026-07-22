@@ -281,7 +281,6 @@ The following code example illustrates how to set the indexed ICC color space us
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ColorSpace/Create-PDF-document-with-ICC-color-space/.NET/Create-PDF-document-with-ICC-color-space/Program.cs" %}
 
-using System.IO;
 using Syncfusion.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.ColorSpace;
@@ -332,7 +331,7 @@ document.Close(true);
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using System.Drawing;
-using System.IO;
+
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.ColorSpace;
 using Syncfusion.Pdf.Graphics;
@@ -382,7 +381,6 @@ document.Close(true);
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports System.Drawing
-Imports System.IO
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.ColorSpace
 Imports Syncfusion.Pdf.Graphics
@@ -438,7 +436,6 @@ The following code example illustrates how to set the indexed ICC color space in
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ColorSpace/Set-ICC-color-space-in-an-existing-PDF-document/.NET/Set-ICC-color-space-in-an-existing-PDF-document/Program.cs" %}
 
-using System.IO;
 using Syncfusion.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.ColorSpace;
@@ -490,7 +487,6 @@ loadedDocument.Close(true);
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using System.Drawing;
-using System.IO;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.ColorSpace;
 using Syncfusion.Pdf.Graphics;
@@ -541,7 +537,6 @@ loadedDocument.Close(true);
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports System.Drawing
-Imports System.IO
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.ColorSpace
 Imports Syncfusion.Pdf.Graphics
