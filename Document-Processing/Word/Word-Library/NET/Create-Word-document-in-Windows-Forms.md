@@ -21,7 +21,6 @@ Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Word libra
 * Visual Studio 2022.
 * Install **.NET desktop development** workload with necessary .NET Framework SDK.
 * .NET Framework 4.6.2 or later (4.8 recommended). This sample targets .NET Framework (not .NET / .NET Core).
-* The following image files placed in the application's output (bin) directory (or a path resolvable from the working folder): `AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, and `Road-550-W.jpg`.
 
 Step 1: Create a new Windows Forms application project.
 
@@ -31,7 +30,15 @@ Step 2: Install [Syncfusion.DocIO.WinForms](https://www.nuget.org/packages/Syncf
 
 ![Install DocIO Windows Forms NuGet package](Windows-Forms_images/Install_Nuget.jpg)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to install the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing/) NuGet package and register a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the https://www.nuget.org/packages/Syncfusion.Licensing NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 3: Add the following `using` directives to the top of **Form1.cs** (the Syncfusion namespaces are used by the click handler added in Step 5).
 
@@ -304,7 +311,7 @@ document.Save("Sample.docx");
 
 {% endtabs %}
 
-N> The image bitmaps (`AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, `Road-550-W.jpg`) are loaded from the working directory at runtime. Copy these images to the application's output (`bin\Debug` / `bin\Release`) directory, or use absolute paths based on `Application.StartupPath` to avoid file-not-found exceptions.
+N> The code sample references image files (`AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, `Road-550-W.jpg`). Download these assets from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Windows-Forms/Create-Word-document/Data) and ensure they are present in the application's working directory (next to the `.csproj` file). The image bitmaps are loaded from the working directory at runtime. Copy these images to the application's output (`bin\Debug` / `bin\Release`) directory, or use absolute paths based on `Application.StartupPath` to avoid file-not-found exceptions.
 
 
 Step 6: Build the project.
@@ -329,7 +336,6 @@ By executing the program, you will get the **Word document** as follows.
 
 * JetBrains Rider.
 * Install the .NET Framework Developer Pack matching the target framework (e.g., .NET Framework 4.8 Developer Pack for a 4.8 target). This sample targets .NET Framework (not .NET / .NET Core).
-* The following image files placed in the application's output (bin) directory (or a path resolvable from the working folder): `AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, and `Road-550-W.jpg`.
 
 Step 1: Open JetBrains Rider and create a new Windows Forms Application project.
 * Launch JetBrains Rider.
@@ -357,7 +363,15 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 ![Install the Syncfusion.DocIO.WinForms NuGet package](Windows-Forms_images/Install-Syncfusion.DocIO.WinForms-NuGet.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to install the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing/) NuGet package and register a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the https://www.nuget.org/packages/Syncfusion.Licensing NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 3: Add the following `using` directives to the top of **Form1.cs** (the Syncfusion namespaces are used by the click handler added in Step 5).
 
@@ -630,7 +644,7 @@ document.Save("Sample.docx");
 
 {% endtabs %}
 
-N> The image bitmaps (`AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, `Road-550-W.jpg`) are loaded from the working directory at runtime. Copy these images to the application's output (`bin\Debug` / `bin\Release`) directory, or use absolute paths based on `Application.StartupPath` to avoid file-not-found exceptions.
+N> The code sample references image files (`AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, `Road-550-W.jpg`). Download these assets from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Windows-Forms/Create-Word-document/Data) and ensure they are present in the application's working directory (next to the `.csproj` file). The image bitmaps are loaded from the working directory at runtime. Copy these images to the application's output (`bin\Debug` / `bin\Release`) directory, or use absolute paths based on `Application.StartupPath` to avoid file-not-found exceptions.
 
 
 Step 6: Build the project.
