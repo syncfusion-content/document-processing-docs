@@ -17,7 +17,7 @@ N> This ASP.NET Web Forms platform is deprecated. You can use the same product f
 Before you begin, ensure the following are available:
 
 - **Visual Studio 2017 or later** installed on a Windows machine.
-- .NET Framework 4.5.2 or later
+- .NET Framework 4.5.2 or later.
 
 ## Steps to create Word document programmatically
 
