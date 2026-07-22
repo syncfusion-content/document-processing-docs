@@ -1,22 +1,22 @@
 ---
 layout: post
 title: Open document from AWS S3 in React Document editor | Syncfusion
-description:  Learn about how to Open document from AWS S3 in React Document editor control of Syncfusion Essential JS 2 and more details.
+description:  Learn how to open a document from AWS S3 in the React Document Editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Open document from AWS S3
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from AWS S3 in React Document editor
+# Open document from AWS S3 in React Document Editor
 
-To load a document from AWS S3 in a [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor), you can follow the steps below
+To load a document from AWS S3 in a [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor), you can follow the steps below.
 
-**Step 1:** Create a Simple Document Editor Sample in React
+**Step 1:** Create a simple Document Editor sample in React
 
 Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in React. This will give you a basic setup of the Document Editor component. 
 
-**Step 2:** Modify the `DocumentEditorController.cs` File in the Web Service Project
+**Step 2:** Modify the `DocumentEditorController.cs` file in the web service project
 
 1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](../web-services-overview) for instructions on how to create a web service project.
 
@@ -31,7 +31,7 @@ using Amazon.S3;
 using Amazon.S3.Model;
 ```
 
-4. Add the following private fields and constructor parameters to the `DocumentEditorController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to the `DocumentEditorController` class. In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
 private IConfiguration _configuration;
@@ -58,13 +58,13 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 [HttpPost]
 [EnableCors("AllowAllOrigins")]
 [Route("LoadFromS3")]
-//Post action for Loading the documents
+//Post action for loading documents
 
 public async Task<string> LoadFromS3([FromBody] Dictionary<string, string> jsonObject)
 {
   MemoryStream stream = new MemoryStream();
 
-  if (jsonObject == null && !jsonObject.ContainsKey("documentName"))
+  if (jsonObject == null || !jsonObject.ContainsKey("documentName"))
   {
      return null;
   }
@@ -89,7 +89,7 @@ public async Task<string> LoadFromS3([FromBody] Dictionary<string, string> jsonO
 }
 ```
 
-6. Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+6. Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration.
 
 ```json
 {
@@ -106,11 +106,11 @@ public async Task<string> LoadFromS3([FromBody] Dictionary<string, string> jsonO
 }
 ```
 
-N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and **Your Bucket name from AWS S3** with your actual AWS access key, secret key and bucket name
+N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and **Your Bucket name from AWS S3** with your actual AWS access key, secret key, and bucket name.
 
-**Step 3:**  Modify the index File in the Document Editor sample
+**Step 3:**  Modify the index file in the Document Editor sample
 
-In the client-side, the document is returned from the web service is opening using [`open`](https://ej2.syncfusion.com/react/documentation/api/document-editor#open) method.
+On the client side, the document returned from the web service is opened using the [`open`](https://ej2.syncfusion.com/react/documentation/api/document-editor#open) method.
 
 ```typescript
 import * as ReactDOM from 'react-dom';
