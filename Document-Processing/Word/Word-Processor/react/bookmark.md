@@ -19,10 +19,6 @@ Bookmark is a powerful tool that helps you to mark a place in the document to fi
 
 ## Add a Bookmark
 
-Before working with bookmarks, set up the Document Editor in your React application by installing the [`@syncfusion/ej2-react-documenteditor`](https://www.npmjs.com/package/@syncfusion/ej2-react-documenteditor) package and importing the required CSS styles. Refer to the [getting started](./getting-started) guide for complete setup instructions. The following examples use `@syncfusion/ej2-react-documenteditor` version **27.2.2** or later.
-
->The code snippets in the following sections assume that `container` is a reference to the `DocumentEditorContainerComponent` instance declared in your React component, and that the `Editor`, `Selection`, and `SfdtExport` modules are injected.
-
 Use the [`insertBookmark`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#insertbookmark) method to add a bookmark to the selected text.
 
 >The following code snippet assumes that `container` is a reference to the `DocumentEditorContainerComponent` instance declared in your React component.
@@ -101,15 +97,9 @@ this.container.documentEditor.editor.insertText('Hello World');
 
 The following example shows how to open the bookmark dialog in document editor.
 
-Before you start, install the [`@syncfusion/ej2-react-documenteditor`](https://www.npmjs.com/package/@syncfusion/ej2-react-documenteditor) package:
+Before you start, install the [`@syncfusion/ej2-react-documenteditor`](https://www.npmjs.com/package/@syncfusion/ej2-react-documenteditor) package.
 
-```bash
-npm install @syncfusion/ej2-react-documenteditor --save
-```
-
-Also, import the required CSS styles. For the full list of stylesheet imports, refer to the [getting started](./getting-started#import-the-required-css-styles) guide.
-
-For the complete list of dialog types accepted by the `showDialog` method (for example, `'Bookmark'`, `'Hyperlink'`, `'Table'`, `'Style'`), refer to the [Dialog documentation](./dialog).
+The following example shows how to open bookmark dialog in document editor.
 
 ```ts
 import * as ReactDOM from 'react-dom';
