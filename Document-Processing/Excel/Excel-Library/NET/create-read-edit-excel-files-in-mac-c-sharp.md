@@ -13,6 +13,11 @@ documentation: UG
 
 The following steps illustrate creating a simple Invoice-formatted Excel document on Mac OS.
 
+**Prerequisites:**
+- .NET 8.0 SDK or later installed on macOS.
+- Visual Studio 2022 for Mac (17.0 or later) or Visual Studio Code with the C# extension.
+- A user account with write permissions to the project directory.
+
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}

@@ -13,6 +13,11 @@ documentation: UG
 
 The following steps illustrate creating a simple Invoice-formatted Excel document in a console application using .NET Core.
 
+**Prerequisites:**
+- Visual Studio 2022 (17.0 or later) or Visual Studio Code with the C# extension installed.
+- .NET 8.0 SDK or later.
+- A user account with write permissions to the project output directory.
+
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
@@ -833,7 +838,13 @@ By executing the program, you will get the Excel file as below.
 
 ## Create a simple Excel report using .NET Framework
 
+**Prerequisites:**
+- Visual Studio 2022 (17.0 or later) with the **.NET desktop development** workload installed.
+- .NET Framework 4.6.1 or later.
+- A user account with write permissions to the project output directory.
+
 The following steps illustrate creating a simple Invoice-formatted Excel document in a console application using .NET Framework.
+
 
 {% tabcontents %}
 

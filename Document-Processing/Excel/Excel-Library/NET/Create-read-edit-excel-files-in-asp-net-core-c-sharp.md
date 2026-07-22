@@ -16,6 +16,11 @@ To quickly get started on creating an Excel document in ASP.NET Core, please che
 
 The following steps illustrate creating a simple invoice-formatted Excel document in ASP.NET Core.
 
+**Prerequisites:**
+- Visual Studio 2022 (17.0 or later) with the **ASP.NET and web development** workload installed.
+- .NET 8.0 SDK or later.
+- A user account with write permissions to the project folder.
+
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}

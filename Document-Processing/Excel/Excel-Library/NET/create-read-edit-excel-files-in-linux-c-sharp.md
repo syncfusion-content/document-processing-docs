@@ -13,6 +13,10 @@ documentation: UG
 
 The following steps illustrate creating a simple Invoice-formatted Excel document on Linux.
 
+**Prerequisites:**
+- .NET 8.0 SDK or later installed on Linux.
+- A user account with write permissions to the project directory.
+
 Step 1: Execute the following command in the Linux terminal to create a new .NET Core Console application.
 {% tabs %}
 {% highlight KCONFIG %}

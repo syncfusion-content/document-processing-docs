@@ -14,6 +14,11 @@ documentation: UG
 
 The following steps illustrate creating a simple invoice-formatted Excel document in ASP.NET Core Web API.
 
+**Prerequisites:**
+- Visual Studio 2022 (17.0 or later) with the **ASP.NET and web development** workload installed.
+- .NET 8.0 SDK or later.
+- A user account with write permissions to the project output directory.
+
 Step 1: Create a new C# ASP.NET Core Web API project.
 
 ![Create ASP.NET Core Web API project in Visual Studio](ASP-NET-Core-Web-API_images/ASP-NET-Core-Web-API_images_img1.png)

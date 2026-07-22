@@ -10,6 +10,9 @@ documentation: UG
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [WinUI Excel library](https://www.syncfusion.com/document-processing/excel-framework/winui/excel-library) used to create, read, edit, and convert Excel documents programmatically, without Microsoft Excel or interop dependencies.
 
+## Prerequisites
+To use the WinUI 3 project templates, install the Windows App SDK extension for Visual Studio. For more details, refer [here](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/set-up-your-development-environment?tabs=cs-vs-community%2Ccpp-vs-community%2Cvs-2022-17-1-a%2Cvs-2022-17-1-b).
+
 ## WinUI Desktop app
 
 Step 1: Create a new C# WinUI Desktop app. Select the **Blank App, Packaged (WinUI 3 in Desktop)** project template.

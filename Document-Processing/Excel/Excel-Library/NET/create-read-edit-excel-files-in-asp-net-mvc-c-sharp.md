@@ -13,6 +13,11 @@ documentation: UG
 
 The following steps illustrate creating a simple invoice-formatted Excel document in ASP.NET MVC.
 
+**Prerequisites:**
+- Visual Studio 2017 or later with the **ASP.NET and web development** workload installed.
+- .NET Framework 4.5.2 or later.
+- A user account with write permissions to the project folder.
+
 Step 1: Create a new ASP.NET MVC application project.
 
 ![Create ASP.NET MVC application in Visual Studio](ASP-NET-MVC_images/ASP-NET-MVC_images_img1.png)

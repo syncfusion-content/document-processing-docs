@@ -13,6 +13,11 @@ documentation: UG
 
 The following steps illustrate creating a simple invoice-formatted Excel document in Windows Forms.
 
+**Prerequisites:**
+- Visual Studio 2017 or later with the **.NET desktop development** workload installed.
+- .NET Framework 4.5 or later.
+- A user account with write permissions to the project output directory.
+
 Step 1: Create a new C# Windows Forms Application project.
 
 ![Create Windows Forms application in Visual Studio](Windows-Forms_images/Windows-Forms_images_img1.png)

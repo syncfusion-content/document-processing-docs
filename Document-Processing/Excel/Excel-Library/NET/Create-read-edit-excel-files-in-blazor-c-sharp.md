@@ -13,6 +13,11 @@ documentation: UG
 
 The following steps illustrate the creation of a simple invoice-formatted Excel document in a Blazor Server application.
 
+**Prerequisites:**
+- Visual Studio 2022 (17.0 or later) with the **ASP.NET and web development** workload installed.
+- .NET 8.0 SDK or later.
+- A user account with write permissions to the project folder.
+
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}

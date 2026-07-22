@@ -13,6 +13,10 @@ The Syncfusion [.NET Excel Library (XlsIO) for UWP platform](https://www.syncfus
 
 The following steps illustrate creating a simple Invoice-formatted Excel document in a UWP application.
 
+**Prerequisites:**
+- Visual Studio 2017 or later with the Universal Windows Platform development workload installed.
+- Ensure the project targets a supported UWP build and that NuGet Package Manager is available.
+
 Step 1: Create a new C# Blank App (Universal Windows) project.
 
 ![Create UWP project](UWP_images/UWP_images_img1.png)

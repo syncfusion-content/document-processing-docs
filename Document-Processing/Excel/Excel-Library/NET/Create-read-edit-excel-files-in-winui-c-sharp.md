@@ -13,6 +13,10 @@ Syncfusion<sup>&reg;</sup> Excel library for WinUI platform can be used to creat
 
 The following steps illustrate creating a simple Invoice-formatted Excel document in a WinUI application.
 
+**Prerequisites:**
+- Visual Studio 2022 (17.0 or later) with the **.NET Desktop Development** workload and the **Windows App SDK** installed.
+- .NET 8 or later 
+
 Step 1: Create a new C# WinUI Desktop app. Select **Blank App, Packaged with WAP (WinUI 3 in Desktop)** from the template and click the **Next** button.
 
 ![Create WinUI application in Visual Studio](WinUI_images/WinUI_images_img1.png)
