@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Export in React DOCX Editor Component | Syncfusion
-description: Learn here all about export in Syncfusion Essential React DOCX Editor component, its elements and more.
+description: Learn here all about export in Syncfusion Essential React Document Editor component, its elements and more.
 control: Export 
 platform: document-processing
 documentation: ug

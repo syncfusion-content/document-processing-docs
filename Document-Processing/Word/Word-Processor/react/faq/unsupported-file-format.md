@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Unsupported file in React DOCX Editor component | Syncfusion
-description: Learn here all about Unsupported file in Syncfusion React DOCX Editor component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Unsupported file in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
 control: Unsupported file 
 platform: document-processing
 documentation: ug

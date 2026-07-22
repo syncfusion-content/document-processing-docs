@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dialog in React DOCX Editor component | Syncfusion
-description: Learn here all about Dialog in Syncfusion React DOCX Editor component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Dialog in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
 control: Dialog 
 platform: document-processing
 documentation: ug

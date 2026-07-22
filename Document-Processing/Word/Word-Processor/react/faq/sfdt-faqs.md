@@ -1,7 +1,7 @@
 ---
 layout: post
 title: FAQs about SFDT in React DOCX Editor | Syncfusion
-description: Learn all about FAQs on SFDT in the Syncfusion React DOCX Editor component, including its structure and usage.
+description: Learn all about FAQs on SFDT in the Syncfusion React Document Editor component, including its structure and usage.
 control: SFDT format 
 platform: document-processing
 documentation: ug

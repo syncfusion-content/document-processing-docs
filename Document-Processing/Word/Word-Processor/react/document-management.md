@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Document management in React DOCX Editor component | Syncfusion
-description: Learn here all about Document management in Syncfusion React DOCX Editor component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Document management in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
 control: Document management 
 platform: document-processing
 documentation: ug
