@@ -7,7 +7,13 @@ documentation: UG
 keywords: PDF Viewer, Smart PDF, AI PDF, Summarization, Redaction, Form Fill, Blazor, SDK
 ---
 
-# Welcome to Syncfusion Smart PDF Viewer
+# Welcome to Smart PDF Viewer
+
+The **Smart PDF Viewer** enhances the PDF experience with a layer of artificial intelligence. While it still offers robust core features—including displaying PDFs from byte arrays, streams, or file paths, along with printing, annotations, and easy navigation via bookmarks and thumbnails—it introduces next-generation capabilities.
+
+Experience AI Assistance to get instant answers from your documents, Smart Fill to automate form filling with a single click, and Advanced Redaction to effortlessly protect sensitive data. It is a complete solution for not only viewing and navigating PDFs but also for working with them more intelligently and securely.
+
+## Smart PDF Viewer Platforms
 
 {% doccards %}
 
@@ -15,6 +21,9 @@ keywords: PDF Viewer, Smart PDF, AI PDF, Summarization, Redaction, Form Fill, Bl
 
 {% enddoccards %}
 
-The **Syncfusion Smart PDF Viewer** enhances the PDF experience with a layer of artificial intelligence. While it still offers robust core features—including displaying PDFs from byte arrays, streams, or file paths, along with printing, annotations, and easy navigation via bookmarks and thumbnails—our smart viewer introduces next-generation capabilities.
+## See also
 
-Experience AI Assistance to get instant answers from your documents, Smart Fill to automate form filling with a single click, and Advanced Redaction to effortlessly protect sensitive data. It’s a complete solution for not only viewing and navigating PDFs but also for working with them more intelligently and securely.
+* [Blazor Smart PDF Viewer overview](./blazor/overview)
+* [Document Summarizer in Blazor Smart PDF Viewer](./blazor/document-summarizer)
+* [Smart Redaction in Blazor Smart PDF Viewer](./blazor/smart-redaction)
+* [Smart Fill in Blazor Smart PDF Viewer](./blazor/smart-fill)

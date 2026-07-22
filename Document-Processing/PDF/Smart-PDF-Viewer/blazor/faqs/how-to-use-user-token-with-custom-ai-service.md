@@ -1,12 +1,12 @@
 ---
 layout: post
-title: UserToken with Azure AI Service in Smart PDF Viewer| Syncfusion
+title: User Token with Azure OpenAI Service in Smart PDF Viewer | Syncfusion
 description: Implement a user token with a custom Azure OpenAI service in the Syncfusion Smart PDF Viewer for a Blazor app.
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
 ---
-# Getting Started Smart PDF Viewer using UserToken with Azure Service
+# Getting Started with Smart PDF Viewer Using a User Token
 
 This article provides step-by-step instructions for integrating and using Syncfusion Smart PDF Viewer with a user token and a custom Azure OpenAI service in a Blazor app.
 
@@ -21,9 +21,8 @@ Before you begin, ensure you have:
 
 After completing this setup, you can:
 
-1. [Add Smart PDF Viewer to your Blazor pages](../getting-started/web-app)
+* [Add Smart PDF Viewer to your Blazor pages](../getting-started/web-app)
 
----
 ## Step 1: Create User Token Service
 The `UserTokenService` is responsible for generating and managing per-user quotas. These tokens are used to authenticate and throttle requests to the custom Azure OpenAI service based on user identity.
 
@@ -207,9 +206,9 @@ public class UserTokensController : ControllerBase
 {% endhighlight %}
 {% endtabs %}
 
-## Step 3: Create a Custom Azure AI Service
+## Step 3: Create a Custom Azure OpenAI Service
 
-The Syncfusion Smart PDF Viewer is designed to work with different AI backends through the `IChatInferenceService` interface. This section shows how to create a custom implementation that connects the Smart PDF Viewer to the Azure OpenAI service.
+The Smart PDF Viewer uses the `IChatInferenceService` interface to connect to any AI backend. This section shows how to create a custom implementation that connects the Smart PDF Viewer to the Azure OpenAI service.
 
 ### Understanding the Interface
 
@@ -220,6 +219,9 @@ The `IChatInferenceService` interface is the bridge between Syncfusion Smart PDF
 
 {% tabs %}
 {% highlight c# tabtitle="~/AzureAIService.cs" %}
+
+using Microsoft.Extensions.AI;
+using Syncfusion.Blazor.AI;
 
 // AzureAIService integrates with Azure OpenAI to generate chat completions and manage token usage.
 public class AzureAIService : IChatInferenceService
@@ -239,10 +241,11 @@ public class AzureAIService : IChatInferenceService
     /// Gets a text completion from the Azure OpenAI service.
     /// </summary>
     /// <param name="prompt">The user prompt to send to the AI service.</param>
-    /// <param name="returnAsJson">Indicates whether the response should be returned in JSON format. Defaults to <c>true</c></param>
-    /// <param name="appendPreviousResponse">Indicates whether to append previous responses to the conversation history. Defaults to <c>false</c></param>
-    /// <param name="systemRole">Specifies the systemRole that is sent to AI Clients. Defaults to <c>null</c></param>
-    /// <returns>The AI-generated completion as a string.</returns>
+    /// <param name="returnAsJson">Indicates whether the response should be returned in JSON format. Defaults to <c>true</c>.</param>
+    /// <param name="appendPreviousResponse">Indicates whether to append previous responses to the conversation history. Defaults to <c>false</c>.</param>
+    /// <param name="systemRole">Specifies the system role sent to the AI client. Defaults to <c>null</c>.</param>
+    /// <param name="outputTokens">The maximum number of tokens to generate. Defaults to <c>2000</c>.</param>
+    /// <returns>The AI-generated completion as a string. Returns <see cref="string.Empty"/> on error.</returns>
     public async Task<string> GetCompletionAsync(string prompt, bool returnAsJson = true, bool appendPreviousResponse = false, string systemRole = null, int outputTokens = 2000)
     {
         string systemMessage = returnAsJson ? "You are a helpful assistant that only returns and replies with valid, iterable RFC8259 compliant JSON in your responses unless I ask for any other format. Do not provide introductory words such as 'Here is your result' or 'json', etc. in the response" : !string.IsNullOrEmpty(systemRole) ? systemRole : "You are a helpful assistant";
@@ -286,7 +289,7 @@ public class AzureAIService : IChatInferenceService
     /// Also checks and updates token usage.
     /// </summary>
     /// <param name="options">Chat parameters including messages and settings.</param>
-    /// <returns>AI-generated response text.</returns
+    /// <returns>AI-generated response text.</returns>
     public async Task<string> GenerateResponseAsync(ChatParameters options)
     {
         string userCode = await _userTokenService.GetUserFingerprintAsync();
@@ -324,7 +327,9 @@ public class AzureAIService : IChatInferenceService
 {% endhighlight %}
 {% endtabs %}
 
-## Step 4: Add a script file to your application and refer it to the body tag.
+## Step 4: Add a script file to your application and reference it from the body tag
+
+Create the file at `wwwroot/index.js` and reference it from the body tag of `~/Pages/_Host.cshtml` (Blazor Server) or `~/wwwroot/index.html` (Blazor WebAssembly). The `getRemainingTokens` helper resolves the API base URL from the `<base>` element, so ensure a `<base href="/"/>` tag is present in the same document.
 
 ```cshtml
 
@@ -333,14 +338,15 @@ public class AzureAIService : IChatInferenceService
 </body>
 
 ```
-## Step 5: Add the following code to render the JS component in the blazor to the newly added JS file.
+## Step 5: Add the following code to the newly created JS file
 
 ```javascript
 
-// Generates a unique fingerprint for the user based on canvas rendering and SHA-256 hashing
+// Generates a unique fingerprint for the user based on canvas rendering and SHA-256 hashing.
+// Requires a secure context (HTTPS or localhost) because of crypto.subtle.
 async function fingerPrint() {
     try {
-        // Create a hidden canvas element
+        // Create a detached canvas element so it is not appended to the document.
         var canvas = document.body.appendChild(document.createElement('canvas'));
         canvas.width = 600;
         canvas.height = 300;
@@ -494,7 +500,15 @@ function hideSpinner() {
 
 ## Step 6: Configure the Blazor App
 
-Configure the Blazor application to use the user token with the Azure OpenAI service and Syncfusion Smart PDF Viewer. This includes registering Syncfusion services, the chat client, and the custom AI service.
+Register the Syncfusion services, the Azure OpenAI chat client, the `UserTokenService`, the custom AI service, and the API controllers in **Program.cs**. The Azure OpenAI credentials and deployment name are read from configuration (for example, `appsettings.json` or user secrets) to avoid hard-coding secrets.
+
+Add the following keys to `appsettings.json`:
+
+* **apiKey**: Azure OpenAI API key.
+* **deploymentName**: Azure OpenAI deployment name.
+* **endpoint**: Azure OpenAI deployment endpoint URL.
+
+For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource). The values for `apiKey`, `deploymentName`, and `endpoint` are all provided by the resource.
 
 {% tabs %}
 {% highlight c# tabtitle="~/Program.cs" %}
@@ -522,12 +536,12 @@ AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(
     new ApiKeyCredential(azureOpenAIKey)
 );
 
-// Get a chat client from the AzureOpenAIClient and cast it to IChatClient
+// Get a chat client from the AzureOpenAIClient and cast it to IChatClient.
 IChatClient azureOpenAIChatClient = azureOpenAIClient.GetChatClient(azureOpenAIModel).AsIChatClient();
 builder.Services.AddChatClient(azureOpenAIChatClient);
 builder.Services.AddScoped<UserTokenService>();
 
-// Register AzureAIService as the implementation of IChatInferenceService
+// Register AzureAIService as the implementation of IChatInferenceService.
 builder.Services.AddScoped<IChatInferenceService, AzureAIService>(sp =>
 {
     UserTokenService userTokenService = sp.GetRequiredService<UserTokenService>();
@@ -540,15 +554,7 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-Here,
-
-* **apiKey**: "Azure OpenAI API Key";
-* **deploymentName**: "Azure OpenAI deployment name";
-* **endpoint**: "Azure OpenAI deployment end point URL";
-
-For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource), then values for `apiKey`, `deploymentName` and `endpoint` will all be provided to you.
-
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Custom%20Services/AzureAI%20service%20with%20User%20token)
+N> A complete sample is available on [GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Custom%20Services/AzureAI%20service%20with%20User%20token).
 
 ## See also
 

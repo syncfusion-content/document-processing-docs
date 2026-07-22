@@ -14,11 +14,11 @@ This section explains why preprocessing is useful, what operations you can perfo
 
 ## Why Preprocessing Is Needed
 Preprocessing a PDF before sending it to the viewer helps you:
-- **Reduce file size** — Compresses content to improve load time.
-- **Merge multiple documents** — Combine several PDFs into a single file.
-- **Extract only required pages** — Drop unused pages for faster loading.
-- **Flatten form fields and annotations** — Improves rendering performance and prevents further editing.
-- **Apply branding elements** — Such as watermarks or stamps.
+- **Reduce file size**: Compresses content to improve load time.
+- **Merge multiple documents**: Combine several PDFs into a single file.
+- **Extract only required pages**: Drop unused pages for faster loading.
+- **Flatten form fields and annotations**: Improves rendering performance and prevents further editing.
+- **Apply branding elements**: Such as watermarks or stamps.
 
 Each enhancement maps directly to a measurable improvement in load time, rendering speed, or document control.
 

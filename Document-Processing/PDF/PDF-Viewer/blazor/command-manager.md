@@ -31,8 +31,8 @@ Register commands with `PdfViewerCommandManager` and handle `CommandExecuted` to
 
 The following example registers two custom keyboard commands (`FitToWidth` and `FitToPage`) and handles them in `CommandExecuted`. The example uses `SfPdfViewer2`; use the component that matches the project version.
 
-```cshtml
-
+{% tabs %}
+{% highlight razor %}
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 Height="100%"
@@ -80,9 +80,10 @@ The following example registers two custom keyboard commands (`FitToWidth` and `
             await pdfViewer.FitToPageAsync();
         }
     }
-} 
+}
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Keyboard%20accessibility/Command%20Manager)
 

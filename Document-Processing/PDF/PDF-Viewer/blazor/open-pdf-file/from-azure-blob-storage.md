@@ -11,19 +11,19 @@ documentation: ug
 
 This article shows how to load a PDF stored in Azure Blob Storage into the Blazor `SfPdfViewer` component.
 
-## Step 1 — Create the storage account and container
+## Step 1: Create the storage account and container
 
 Sign in to the Azure portal and create a Storage account. Record the access keys or prepare a SAS token for secure access. Within the Storage Account, create a Blob Container following the steps in this [link](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json&tabs=azure-portal).
 
-## Step 2 — Create a minimal SfPdfViewer sample
+## Step 2: Create a minimal SfPdfViewer sample
 
 Create a basic Blazor Server application and integrate the SfPdfViewer component by following [Getting started with the Blazor PDF Viewer](../getting-started/web-app). This provides the required project configuration and a working viewer scaffold.
 
-## Step 3 — Configure secrets and the connection string
+## Step 3: Configure secrets and the connection string
 
 Store the Azure Storage connection string in a secure configuration source such as `appsettings.json`, environment variables, or Azure Key Vault. Do not hard-code it in Razor components. Load it at runtime through `IConfiguration`, as shown in the next step. To retrieve the connection string from the Azure portal, refer to the [View account access keys](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage) guide.
 
-## Step 4 — Add required namespaces
+## Step 4: Add required namespaces
 
 Add the required namespaces to `_Imports.razor` (or to the top of `Index.razor`):
 
@@ -34,7 +34,7 @@ Add the required namespaces to `_Imports.razor` (or to the top of `Index.razor`)
 @using Syncfusion.Blazor.SfPdfViewer
 ```
 
-## Step 5 — Load a PDF from Azure Blob Storage
+## Step 5: Load a PDF from Azure Blob Storage
 
 The example below downloads the blob to memory, converts it to a base64 data URL, and assigns it to [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath).
 

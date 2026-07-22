@@ -11,11 +11,11 @@ documentation: ug
 
 This article shows how to load a PDF stored in AWS S3 into the Blazor `SfPdfViewer` component.
 
-## Step 1 — Create an S3 bucket and upload the PDF
+## Step 1: Create an S3 bucket and upload the PDF
 
 Set up an AWS account by following the official guide: [AWS Management Console](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html). Create an S3 bucket, upload a PDF file to the bucket, and create an IAM user with permissions to read objects (for example, `s3:GetObject`).
 
-## Step 2 — Configure AWS credentials
+## Step 2: Configure AWS credentials
 
 Generate access keys for the IAM user and store them securely. Load the keys from configuration in your application:
 
@@ -23,11 +23,11 @@ Generate access keys for the IAM user and store them securely. Load the keys fro
 * When running on AWS infrastructure (EC2, ECS, Lambda), prefer IAM roles over long-lived access keys.
 * Do not hard-code credentials in source files or client-side code.
 
-## Step 3 — Create a simple SfPdfViewer sample
+## Step 3: Create a simple SfPdfViewer sample
 
 Follow the steps in the Blazor Server [getting started](../getting-started/web-app) guide for SfPdfViewer to create a basic sample. This provides the required project setup and SfPdfViewer configuration.
 
-## Step 4 — Add required namespaces
+## Step 4: Add required namespaces
 
 Add the following using directives to `_Imports.razor` (or to the top of the `.razor` file):
 
@@ -38,7 +38,7 @@ Add the following using directives to `_Imports.razor` (or to the top of the `.r
 @using Syncfusion.Blazor.SfPdfViewer;
 ```
 
-## Step 5 — Load a PDF from S3 and assign it to DocumentPath
+## Step 5: Load a PDF from S3 and assign it to DocumentPath
 
 The example below retrieves the PDF from S3, converts it to a base64 data URL, and assigns it to `DocumentPath`.
 

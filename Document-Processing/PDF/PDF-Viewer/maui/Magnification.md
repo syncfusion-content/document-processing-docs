@@ -12,9 +12,9 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 Give users precise control over how PDF content is displayed — from pinch-to-zoom on touch screens to setting an exact zoom percentage in code. You can also lock the view to predefined zoom modes like *Fit to Page* or *Fit to Width* to optimize readability for different document types.
 
-## Adjusting the Zoom Factor
+## Adjusting the zoom factor
 
-You can control the zoom level using the [ZoomFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ZoomFactor) property. Refer to the following code example.
+You can control the zoom level using the [ZoomFactor](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ZoomFactor) property. Refer to the following code example.
 
 {% tabs %}
 {% highlight xaml %}
@@ -28,13 +28,19 @@ PdfViewer.ZoomFactor = 3;
 
 You can also retrieve the current zoom level using the same property.
 
-### Setting Minimum and Maximum Zoom Limits
+{% tabs %}
+{% highlight c# %}
+double currentZoom = PdfViewer.ZoomFactor;
+{% endhighlight %}
+{% endtabs %}
+
+### Setting minimum and maximum zoom limits
 
 By default, the zoom range varies by platform:
 * **Mobile (Android/iOS):** 1.0 to 4.0
 * **Desktop (Windows/macOS):** 0.25 to 4.0
 
-To restrict zoom levels, use the [MinZoomFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_MinZoomFactor) and [MaxZoomFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_MaxZoomFactor) properties.
+To restrict zoom levels, use the [MinZoomFactor](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_MinZoomFactor) and [MaxZoomFactor](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_MaxZoomFactor) properties.
 
 The following code example explains restricting the zoom factor between 0.5 and 2.
 
@@ -49,39 +55,39 @@ PdfViewer.MaxZoomFactor = 2;
 {% endhighlight %}
 {% endtabs %}
 
-N> If the [ZoomFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ZoomFactor)  is set outside the defined [MinZoomFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_MinZoomFactor) and [MaxZoomFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_MaxZoomFactor) range, it will be ignored.
+N> If the [ZoomFactor](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ZoomFactor)  is set outside the defined [MinZoomFactor](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_MinZoomFactor) and [MaxZoomFactor](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_MaxZoomFactor) range, it will be ignored.
 
 You can download a sample project demonstrating magnification features [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples).
 
 ## Zoom Modes 
 
-The PDF Viewer supports the following zoom modes via the [ZoomMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ZoomMode.html#fields) property:
+The PDF Viewer supports the following zoom modes via the [ZoomMode](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.ZoomMode.html#fields) property:
 
 1. **Default** – Restores the viewer to the last user-set zoom level. This is the initial mode when a document is loaded.
 2. **Fit to Page** – Displays the entire page within the viewport.
 3. **Fit to Width** – Expands the page to fill the width of the viewer.
 
-The default value is [ZoomMode.Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ZoomMode.html#Syncfusion_Maui_PdfViewer_ZoomMode_Default).
+The default value is [ZoomMode.Default](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.ZoomMode.html#Syncfusion_Maui_PdfViewer_ZoomMode_Default).
 
-### Zoom Mode via Built-In Toolbar
+### Zoom mode via the built-in toolbar
 
 #### Desktop Toolbar
 
 The built-in toolbar includes a magnification dropdown showing the current zoom percentage. Users can select predefined zoom levels or choose **Fit to Page** / **Fit to Width**.
 
-![Desktop Zoom Mode Combo Box](Images/windowszoom.gif)
+![Desktop zoom mode combo box](Images/windowszoom.gif)
 
 #### Mobile Toolbar
 
 On mobile, the magnification tool appears only after the zoom factor changes. Users can then select **Fit to Page** or **Fit to Width**. Once selected, the icon disappears until the zoom factor changes again.
 
-![Mobile Zoom Mode Combo box](Images/ZoomModeforMobile.gif)
+![Mobile zoom mode combo box](Images/ZoomModeforMobile.gif)
 
-### Programmatically Setting Zoom Mode 
+### Programmatically setting zoom mode
 
 #### Fit to Page
 
-You can change the [SfPdfViewer.ZoomMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ZoomMode.html#fields) using the [ZoomMode.FitToPage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ZoomMode.html#Syncfusion_Maui_PdfViewer_ZoomMode_FitToPage) enumeration. It will magnify the PDF document so that the entire PDF page is visible in the view port. 
+You can change the [SfPdfViewer.ZoomMode](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.ZoomMode.html#fields) using the [ZoomMode.FitToPage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.ZoomMode.html#Syncfusion_Maui_PdfViewer_ZoomMode_FitToPage) enumeration. It magnifies the PDF document so that the entire PDF page is visible in the viewport.
 Refer to the following code example: 
 
 {% tabs %}
@@ -97,7 +103,7 @@ pdfViewer.ZoomMode = ZoomMode.FitToPage;
 
 #### Fit to Width
 
-You can change the [SfPdfViewer.ZoomMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ZoomMode.html#fields) using the [ZoomMode.FitToWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ZoomMode.html#Syncfusion_Maui_PdfViewer_ZoomMode_FitToWidth) enumeration. It will magnify the PDF document so that the widest page of the PDF document fits the width of the view port. 
+You can change the [SfPdfViewer.ZoomMode](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.ZoomMode.html#fields) using the [ZoomMode.FitToWidth](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.ZoomMode.html#Syncfusion_Maui_PdfViewer_ZoomMode_FitToWidth) enumeration. It magnifies the PDF document so that the widest page of the PDF document fits the width of the viewport.
 Refer to the following code example:
 
 {% tabs %}
@@ -106,14 +112,14 @@ Refer to the following code example:
 {% endhighlight %}
 
 {% highlight c# %}
-// To apply fit-to-page zoom mode. 
+// To apply fit-to-width zoom mode. 
 pdfViewer.ZoomMode = ZoomMode.FitToWidth; 
 {% endhighlight %}
 {% endtabs %}
 
 N> When the `ZoomFactor` is manually changed, the `ZoomMode` resets to `Default`. You can reapply the desired zoom mode afterward. 
 
-## Maintain Zoom Level in Single Page View Mode
+## Maintain zoom level in single-page view mode
 
 In single-page view mode, the zoom level resets to default each time you navigate to a new page. To maintain a consistent zoom factor throughout the document, enable the [PersistZoomOnPageChange](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_PersistZoomOnPageChange) property. This applies whether navigation is triggered by the built-in toolbar controls or programmatic APIs.
 The default value of [PersistZoomOnPageChange](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_PersistZoomOnPageChange) is `False`.
@@ -153,7 +159,7 @@ PdfViewer.PersistZoomOnPageChange = false;
 {% endhighlight %}
 {% endtabs %}
 
-## Enable or Disable Double-Tap Zoom
+## Enable or disable double-tap zoom
 
 The PDF Viewer allows users to zoom in and out of the document using a double-tap gesture. This behavior can be controlled programmatically using the `AllowDoubleTapZoom` property.
 
@@ -173,6 +179,10 @@ pdfViewer.AllowDoubleTapZoom = false;
 {% endtabs %}
 
 ## See Also
+
 - [Scrolling](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/scrolling)
 - [Page Navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/page-navigation)
 - [Gesture Events](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/gesture-events)
+- [Toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/toolbar)
+- [UI Customization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/ui-customization)
+- [Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/getting-started)
