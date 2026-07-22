@@ -18,7 +18,7 @@ The following system configurations were used for benchmarking:
 * **Processor:** AMD Ryzen 5 7520U with Radeon Graphics  
 * **RAM:** 16GB  
 * **.NET Version:** .NET 8.0  
-* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.DocIORenderer.Net.Core v33.1.44](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core/33.1.44)
+* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.DocIORenderer.Net.Core v34.1.29](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core/34.1.29)
 
 ## Benchmark Results
 
@@ -34,31 +34,31 @@ The table below shows the performance results of various Word document operation
 <tr>
     <td>{{'[Word to PDF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf)'| markdownify }}</td>
     <td>100 pages</td>
-    <td>5.24</td>
+    <td>5</td>
     <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Word-to-PDF/)'| markdownify }}</td>    
 </tr>
 <tr>
     <td>{{'[Accessible PDF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#accessible-pdf-document)'| markdownify }}</td>
     <td>2 pages</td>
-    <td>1.03</td>
+    <td>0.97</td>
     <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Accessible-PDF/)'| markdownify }}</td>
 </tr>
 <tr>
     <td>{{'[Comments](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#comments-in-word-to-pdf-conversion)'| markdownify }}</td>
     <td>2 pages</td>
-    <td>1.1</td>
+    <td>0.89</td>
     <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Comments/)'| markdownify }}</td>
 </tr>
 <tr>
     <td>{{'[Embed fonts in PDF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf#embedding-fonts)'| markdownify }}</td>
     <td>2 pages</td>
-    <td>1.06</td>
+    <td>0.96</td>
     <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Embed-fonts-in-PDF/)'| markdownify }}</td>
 </tr>
 <tr>
     <td>{{'[Export bookmarks](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#word-document-headings-to-pdf-bookmarks)'| markdownify }}</td>
     <td>2 pages</td>
-    <td>0.98</td>
+    <td>0.92</td>
     <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Export-Bookmarks/)'| markdownify }}</td>
 </tr>
 <tr>
@@ -70,13 +70,13 @@ The table below shows the performance results of various Word document operation
 <tr>
     <td>{{'[Font-Substitution](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/font-substituion-word-to-pdf)'| markdownify }}</td>
     <td>2 pages</td>
-    <td>0.95</td>
+    <td>0.93</td>
     <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Font-substitution-PDF/)'| markdownify }}</td>
 </tr>
 <tr>
     <td>{{'[PDF Conformance Level](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#pdf-conformance-level)'| markdownify }}</td>
     <td>2 pages</td>
-    <td>0.99</td>
+    <td>0.97</td>
     <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/PDF-Conformance-Level/)'| markdownify }}</td>
 </tr>
 <tr>

@@ -18,7 +18,7 @@ The following system configurations were used for benchmarking:
 * **Processor:** AMD Ryzen 5 7520U with Radeon Graphics  
 * **RAM:** 16GB  
 * **.NET Version:** .NET 8.0  
-* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.DocIO.Net.Core v33.1.44](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core/33.1.44)
+* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.DocIO.Net.Core v34.1.29](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core/34.1.29)
 
 ## Benchmark Results
 
@@ -34,13 +34,13 @@ The table below shows the performance results of various Word document operation
 <tr>
     <td>{{'[DOCX to DOCX](https://help.syncfusion.com/document-processing/word/word-library/net/loading-and-saving-document)'| markdownify }}</td>
     <td>100 pages</td>
-    <td>1.5</td>
+    <td>1.23</td>
     <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Open-and-save/.NET/Open-and-Save-Word-document)'| markdownify }}</td>    
 </tr>
 <tr>
     <td>{{'[RTF to RTF](https://help.syncfusion.com/document-processing/word/word-library/net/rtf)'| markdownify }}</td>
     <td>100 pages</td>
-    <td>4.3</td>
+    <td>4.01</td>
     <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Open-and-save/.NET/Open-and-Save-RTF-document)'| markdownify }}</td>
 </tr>
 <tr>
@@ -52,7 +52,7 @@ The table below shows the performance results of various Word document operation
 <tr>
     <td>{{'[Clone and merge](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-word-document#cloning-a-word-document)'| markdownify }}</td>
     <td>100 pages</td>
-    <td>0.8</td>
+    <td>0.4</td>
     <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Clone-and-merge/)'| markdownify }}</td>
 </tr>
 <tr>
@@ -88,7 +88,7 @@ The table below shows the performance results of various Word document operation
 <tr>
     <td>{{'[Update TOC](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-table-of-contents)'| markdownify }}</td>
     <td>100 pages</td>
-    <td>4.3</td>
+    <td>4.2</td>
     <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Update-TOC/)'| markdownify }}</td>
 </tr>
 <tr>
