@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## How to open a document from URL in DocumentEditor
 
-In this article, we are going to see how to open a document from URL in [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor).
+In this article, we are going to see how to open a document from URL in [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor).
 
 Please refer to the example below for the client-side code.
 
