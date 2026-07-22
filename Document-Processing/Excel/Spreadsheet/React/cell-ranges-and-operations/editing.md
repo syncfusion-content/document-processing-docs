@@ -19,7 +19,7 @@ To get start quickly with Editing, you can check on this video:
 
 You can start editing by one of the following ways,
 
-* Double click a cell to start the edit mode.
+* Double-click a cell to start the edit mode.
 * Press `F2` key to edit the active cell.
 * Use formula bar to perform editing.
 * Use `BACKSPACE` or `SPACE` key to clear the cell content and start the edit mode.
@@ -61,7 +61,7 @@ The following sample shows how to prevent the editing and cell save. Here `E` co
 
 ## Limitations
 
-* Text overflow in cells is not supported in Editing.
+* Text overflow in cells is not supported during Editing.
 
 ## Note
 
@@ -69,8 +69,8 @@ You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/sprea
 
 ## See Also
 
-* [Cell range](./cell-range)
-* [Formatting](./formatting)
-* [Hyperlink](./link)
-* [Undo and Redo](./undo-redo)
-* [Unlock the particular cells in the protected sheet](./protect-sheet#unlock-the-particular-cells-in-the-protected-sheet)
+* [Cell range](../cell-range-and-operation)
+* [Formatting](../formatting-overview)
+* [Hyperlink](../link)
+* [Undo and Redo](../undo-redo)
+* [Unlock the particular cells in the protected sheet](../protect-sheet#unlock-the-particular-cells-in-the-protected-sheet)

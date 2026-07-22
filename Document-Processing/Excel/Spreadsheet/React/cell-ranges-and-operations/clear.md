@@ -9,9 +9,9 @@ documentation: ug
 
 # Clear Cell Contents or Formats in React Spreadsheet
 
-The **Clear** feature enables you to remove cell contents (formulas and data) and formats (including number formats, conditional formats, and borders) from a spreadsheet. When you use **Clear All**, both the contents and formats are removed simultaneously.
+The **Clear** feature enables you to remove cell contents (formulas and data), formats (including number formats, conditional formats, and borders), and hyperlinks from a spreadsheet. When you use the **Clear All** option, both the contents and formats are removed simultaneously.
 
-## Applying the Clear Feature
+## Applying the Clear feature
 
 You can clear cell contents or formats using the following approaches:
 
