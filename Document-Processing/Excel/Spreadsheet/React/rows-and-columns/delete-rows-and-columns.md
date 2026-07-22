@@ -37,6 +37,6 @@ The following code example shows the delete operation of rows and columns in the
 
 ## Limitations of delete
 
-The following features have some limitations in Insert/Delete:
+The following features have some limitations in Delete:
 
 * Delete row/column between the filter applied cells.
