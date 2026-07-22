@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Collaborative Editing in React DOCX Editor control | Syncfusion
-description: Learn about collaborative editing in the Syncfusion React DOCX Editor control and more.
+description: Learn about collaborative editing in the Syncfusion React DOCX Editor control and how to implement real-time document collaboration.
 platform: document-processing
 control: Collaborative Editing
 documentation: ug
