@@ -8,11 +8,11 @@ documentation: UG
 
 # Mail merge options in Word Library
 
-The [MailMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html) class allows you to customize the Mail merge process with the following options.
+The [MailMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html) class allows you to customize the mail merge process with the following options.
 
 ## Field Mapping
 
-The [MailMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html) class can automatically **maps the merge field names with data source column names** during Mail merge process. You can also customize the field mapping when the merge field names in the template document varies with the column names in the data source by using [MappedFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_MappedFields) collection.
+The [MailMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html) class can automatically **map the merge field names with data source column names** during mail merge process. You can also customize the field mapping when the merge field names in the template document vary with the column names in the data source by using [MappedFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_MappedFields) collection.
 
 The following code example shows how to add mapping when a merge field name in a document and column name in data source have different names.
 
@@ -132,29 +132,29 @@ The following code example shows how to retrieve the merge field names for a spe
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mail-Merge/Retrieve-merge-field-names/.NET/Retrieve-merge-field-names/Program.cs" %}
-//Gets the fields from the specified groups. 
+//Gets the fields from the specified group. 
 string[] fieldNames = document.MailMerge.GetMergeFieldNames(groupName);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Gets the fields from the specified groups 
+//Gets the fields from the specified group 
 string[] fieldNames = document.MailMerge.GetMergeFieldNames(groupName);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Gets the fields from the specified groups 
+'Gets the fields from the specified group 
 Dim fieldNames As String() = document.MailMerge.GetMergeFieldNames(groupName)
 {% endhighlight %}
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Retrieve-merge-field-names).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Retrieve-merge-field-names). This sample demonstrates all three methods shown above (`GetMergeFieldNames`, `GetMergeGroupNames`, and `GetMergeFieldNames(groupName)`).
 
 ## Remove empty paragraphs
 
-You can remove the empty paragraphs when the paragraph has only a merge field item, without any data during Mail merge process.
+You can remove the empty paragraphs when the paragraph has only a merge field item, without any data during mail merge process.
 
-The following code example shows how to remove the empty paragraphs during Mail merge process.
+The following code example shows how to remove the empty paragraphs during mail merge process.
 
 {% tabs %}
 
@@ -215,15 +215,15 @@ Essential<sup>&reg;</sup> DocIO removes or keeps the unmerged merge fields in th
 
 When a merge field is considered as unmerged during mail merge process?
 
-1. The merge field doesn't have mapping field in data source.
+1. The merge field doesn't have a mapping field in data source.
 
-2. The merge field has mapping field in data source, but the data is null or string.Empty.
+2. The merge field has a mapping field in data source, but the data is null or string.Empty.
 
-Mail merge operation automatically removes the unmerged merge fields since the default value of [ClearFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ClearFields) property is true.
+The mail merge operation automatically removes the unmerged merge fields since the default value of the [ClearFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ClearFields) property is true.
 
 T> 1. Set [ClearFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ClearFields) property to false before the mail merge execution statement if your requirement is to keep the unmerged merge fields in the output document.
 T> 2. Modify the [ClearFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ClearFields) property before each mail merge execution statement while performing multiple mail merge executions if your requirement is to remove the unmerged merge fields in one mail merge execution and keep the unmerged merge fields in another mail merge execution.
-T> 3. Order the mail merge executions with the [ClearFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ClearFields) property false as first to avoid removal merge fields that are required for next mail merge execution in the same document.
+T> 3. Order the mail merge executions with the [ClearFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ClearFields) property false as first to avoid removal of merge fields that are required for next mail merge execution in the same document.
 T> 4. You can get the unmerged fields in your document, customize the mail merge process using the BeforeClearField Event. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/net/mail-merge/mail-merge-events#beforeclearfield-event).
 
 The following code example shows how to keep the unmerged merge fields in the generated Word document.
@@ -234,7 +234,7 @@ The following code example shows how to keep the unmerged merge fields in the ge
 //Opens the template document 
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
-//Sets “ClearFields” to true to remove empty mail merge fields from document 
+//Sets “ClearFields” to false to keep the unmerged mail merge fields in document 
 document.MailMerge.ClearFields = false;
 string[] fieldNames = new string[] { "EmployeeId", "Phone", "City" };
 string[] fieldValues = new string[] { "1001", "+91-9999999999", "London" };
@@ -250,7 +250,7 @@ document.Close();
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Opens the template document 
 WordDocument document = new WordDocument("Template.docx");
-//Sets “ClearFields” to true to remove empty mail merge fields from document 
+//Sets “ClearFields” to false to keep the unmerged mail merge fields in document 
 document.MailMerge.ClearFields = false;
 string[] fieldNames = new string[] { "EmployeeId", "Phone", "City" };
 string[] fieldValues = new string[] { "1001", "+91-9999999999", "London" };
@@ -264,7 +264,7 @@ document.Close();
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Opens the template document 
 Dim document As New WordDocument("Template.docx")
-'Sets “ClearFields” to true to remove empty mail merge fields from document 
+'Sets “ClearFields” to false to keep the unmerged mail merge fields in document 
 document.MailMerge.ClearFields = False
 Dim fieldNames As String() = New String() {"EmployeeId", "Phone", "City"}
 Dim fieldValues As String() = New String() {"1001", "+91-9999999999", "London"}
@@ -281,7 +281,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Remove empty group
 
-You can remove the empty merge field groups which contains unmerged merge fields after executing mail merge for a group in a Word document.
+You can remove the empty merge field groups which contain unmerged merge fields after executing mail merge for a group in a Word document.
 
 The following code example shows how to remove empty merge field group during mail merge process in a Word document.
 
@@ -544,15 +544,15 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Restart numbering in lists
 
-You can restart the list numbering for each records while performing mail merge for a group in Word document.
+You can restart the list numbering for each record while performing mail merge for a group in Word document by setting the [ImportOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.ImportOptions.html) to [ListRestartNumbering](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.ImportOptions.html).
 
-The following code example shows how to restart the list numbering in a Word documents while performing mail merge.
+The following code example shows how to restart the list numbering in a Word document while performing mail merge.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mail-Merge/Restart-list-numbering-in-mail-merge/.NET/Restart-list-numbering-in-mail-merge/Program.cs" %}
 //Loads an existing Word document
-FileStream fileStream = new FileStream("Template.docx", FileMode.Open);
+FileStream fileStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStream, FormatType.Docx);
 //Sets ImportOptions to restart the list numbering
 document.ImportOptions = ImportOptions.ListRestartNumbering;
@@ -583,7 +583,7 @@ employeeList.Add(new Employee("101", "Nancy Davolio", "Seattle, WA, USA"));
 employeeList.Add(new Employee("102", "Andrew Fuller", "Tacoma, WA, USA"));
 employeeList.Add(new Employee("103", "Janet Leverling", "Kirkland, WA, USA"));
 //Creates an instance of “MailMergeDataTable” by specifying mail merge group name and “IEnumerable” collection
-MailMergeDataTable dataTable = new MailMergeDataTable("Employee", employeeList);
+MailMergeDataTable dataTable = new MailMergeDataTable("Employees", employeeList);
 //Performs mail merge
 document.MailMerge.ExecuteGroup(dataTable);
 //Saves the Word document
@@ -603,7 +603,7 @@ employeeList.Add(New Employee("101", "Nancy Davolio", "Seattle, WA, USA"))
 employeeList.Add(New Employee("102", "Andrew Fuller", "Tacoma, WA, USA"))
 employeeList.Add(New Employee("103", "Janet Leverling", "Kirkland, WA, USA"))
 'Creates an instance of “MailMergeDataTable” by specifying mail merge group name and “IEnumerable” collection
-Dim dataTable As MailMergeDataTable = New MailMergeDataTable("Employee", employeeList)
+Dim dataTable As MailMergeDataTable = New MailMergeDataTable("Employees", employeeList)
 'Performs mail merge
 document.MailMerge.ExecuteGroup(dataTable)
 'Saves the Word document
@@ -774,7 +774,7 @@ document.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Opens the template document 
-Dim document As WordDocument = New WordDocument("Data/Template.docx")
+Dim document As WordDocument = New WordDocument("Template.docx")
 'Creates a data table
 Dim table As DataTable = New DataTable("CompatibleVersions")
 table.Columns.Add("WordVersion")
@@ -867,7 +867,7 @@ document.Close()
 
 {% endtabs %}
 
-The following code example shows how to skip merging particular image during mail merge process using MergeImageFieldEventHandler.
+The following code example shows how to skip merging particular image during mail merge process using [MergeImageFieldEventHandler](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MergeImageFieldEventHandler.html). For details on the event arguments, see [MergeImageFieldEventArgs](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MergeImageFieldEventArgs.html) (members: `Skip`, `FieldName`, `FieldValue`, `ImageStream`, `ImageFileName`, `Picture`).
 
 {% tabs %}
 
@@ -876,7 +876,10 @@ private void MergeEmployeePhoto(object sender, MergeImageFieldEventArgs args)
 {
     //Skip to merge particular image
     if (args.FieldName == "Andrew")
+    {
         args.Skip = true;
+        return;
+    }
     //Sets image
     string ProductFileName = args.FieldValue.ToString();
     FileStream imageStream = new FileStream(ProductFileName, FileMode.Open, FileAccess.Read);
@@ -892,7 +895,10 @@ private void MergeEmployeePhoto(object sender, MergeImageFieldEventArgs args)
 {
     //Skip to merge particular image
     if (args.FieldName == "Andrew")
+    {
         args.Skip = true;
+        return;
+    }
     //Sets image
     args.ImageFileName = args.FieldValue.ToString();
 }
@@ -903,6 +909,7 @@ Private Sub MergeEmployeePhoto(ByVal sender As Object, ByVal args As MergeImageF
     'Skip to merge particular image 
     If args.FieldName = "Andrew" Then 
         args.Skip = True
+        Return
     End If 
     'Sets image 
     Dim ProductFileName As String = args.FieldValue.ToString()
@@ -919,6 +926,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 You can start a new page for each group of records while performing a mail merge in Word documents by enabling the [StartAtNewPage](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_StartAtNewPage) property.
 
 The following code example illustrates how to start a new page for each group of records during the mail merge process.
+
+N> The `GetInvoice` helper method and the `Invoice`, `Orders`, `Order`, and `OrderTotals` classes used by this snippet are shown below the tabs.
 
 {% tabs %}
 
@@ -1105,7 +1114,7 @@ Public Function GetInvoice() As List(Of Invoice)
     invoices.Add(New Invoice(orders, order, orderTotals))
 
     orders = New List(Of Orders)()
-    orders.Add(New Orders("10250", "Hanari Carnes", "Rua do Paço, 67", "Rio de Janeiro", "05454-876", "Brazil", "VINET", "Rua do Paço, "1996-07-04T00:00:00-04:00", "1996-08-01T00:00:00-04:00", "1996-07-16T00:00:00-04:00", "United Package"))
+    orders.Add(New Orders("10250", "Hanari Carnes", "Rua do Paço, 67", "Rio de Janeiro", "05454-876", "Brazil", "VINET", "Rua do Paço, 67", "51100", "Rio de Janeiro", "Brazil", "Margaret Peacock", "Hanari Carnes", "1996-07-04T00:00:00-04:00", "1996-08-01T00:00:00-04:00", "1996-07-16T00:00:00-04:00", "United Package"))
 
     order = New List(Of Order)()
     order.Add(New Order("65", "Louisiana Fiery Hot Pepper Sauce", "16.8", "15", "0.15", "214.2"))
@@ -2020,7 +2029,7 @@ By executing the above code example, it generates the resultant Word document as
 
 ![Output Word document of start at new page](../mailmerge_images/generated-word-document-in-file-formats.png)
 
-N> This [StartAtNewPage](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_StartAtNewPage) property is valid for group mail merge and also that the corresponding group start and group end should be present in the text body of the Word document. This [StartAtNewPage](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_StartAtNewPage) property is not valid when the group start and group end are present in the table, headers, and footers.
+N> The [StartAtNewPage](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_StartAtNewPage) property is valid only for group mail merge where the group start and group end are present in the text body of the Word document. It is not valid when the group start and group end are present inside a table, header, or footer.
 
 ## Remove mail merge settings
 
@@ -2066,7 +2075,7 @@ Dim document As New WordDocument("Template.docx", FormatType.Docx)
 If document.MailMerge.Settings.HasData Then
     document.MailMerge.Settings.RemoveData()
 End If
-Saves and closes the Word document instance 
+'Saves and closes the Word document instance 
 document.Save("Sample.docx", FormatType.Docx)
 document.Close()
 {% endhighlight %}
@@ -2080,6 +2089,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 You can change the linked **data source file path from a Word mail merge main document**, which is used for mail merge process by Microsoft Word application.
 
 The following code example shows how to change the data source file path in the template Word document. 
+
+N> The path can be relative or absolute and should point to a file format supported by Microsoft Word for mail merge (for example, `.txt`, `.csv`, `.xls`/`.xlsx`, or `.mdb`).
 
 {% tabs %}
 

@@ -6,15 +6,13 @@ control: DocIO
 documentation: UG
 keywords: 
 ---
-# Working with Shapes for File-Formats Platform DocIO Control
+# Working with Shapes in .NET Word (DocIO) Library
 
-Shapes are drawing objects that include lines, curves, circles, rectangles, etc. It can be preset or custom geometry. You can create and manipulate the pre-defined shape in DOCX and WordML format documents.
+Shapes are drawing objects that can include lines, curves, circles, rectangles, and so on. A shape can have preset or custom geometry. You can create and manipulate preset shapes in DOCX and WordML format documents.
 
 ## Adding shapes
 
-The following code example illustrates how to add pre-defined shape to the document.
-
-N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+The following code example illustrates how to add a preset shape to the document.
 
 {% tabs %}
 
@@ -70,10 +68,10 @@ IWTextRange text = paragraph.AppendText("This text is in rounded rectangle shape
 text.CharacterFormat.TextColor = Color.Green;
 text.CharacterFormat.Bold = true;
 //Adds another shape to the document 
-paragraph = section.AddParagraph()as WParagraph;
+paragraph = section.AddParagraph() as WParagraph;
 paragraph.AppendBreak(BreakType.LineBreak);
 Shape pentagon = paragraph.AppendShape(AutoShapeType.Pentagon, 100, 100);
-paragraph = pentagon.TextBody.AddParagraph()as WParagraph;
+paragraph = pentagon.TextBody.AddParagraph() as WParagraph;
 paragraph.AppendText("This text is in pentagon shape");
 pentagon.HorizontalPosition = 72;
 pentagon.VerticalPosition = 200;
@@ -121,7 +119,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Format shapes
 
-Shape can have formatting such as line color, fill color, positioning, wrap formats, etc. The following code example illustrates how to apply formatting options for shape.
+A shape can have formatting such as line color, fill color, positioning, and wrap formats. The following code example illustrates how to apply formatting options to a shape.
+
+N> `FillFormat.Transparency` accepts a value from 0 to 100 (percentage).
 
 {% tabs %}
 
@@ -230,7 +230,7 @@ text.CharacterFormat.Bold = True
 rectangle.FillFormat.Fill = True
 rectangle.FillFormat.Color = Color.LightGray
 'Set transparency (opacity) to the shape fill color.
-rectangle.FillFormat.Transparency = 75;
+rectangle.FillFormat.Transparency = 75
 'Apply wrap formats
 rectangle.WrapFormat.TextWrappingStyle = TextWrappingStyle.Square
 rectangle.WrapFormat.TextWrappingType = TextWrappingType.Right
@@ -331,7 +331,7 @@ paragraph = TryCast(rectangle.TextBody.AddParagraph(), WParagraph)
 Dim text As IWTextRange = paragraph.AppendText("This text is in rounded rectangle shape")
 'Saves and closes the Word document
 document.Save("Sample.docx", FormatType.Docx)
-document.Close
+document.Close()
 {% endhighlight %}
 
 {% endtabs %}
@@ -340,20 +340,21 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Grouping shapes
 
-Word library now allows you to create or group multiple shapes, pictures, text boxes, and charts as a group shape in Word document (DOCX) and preserve it as in DOCX and WordML format conversions.
+The .NET Word (DocIO) library allows you to group multiple shapes, pictures, text boxes, and charts as a single group shape in a Word document (DOCX). These group shapes are preserved in DOCX and WordML format conversions.
 
-You can create a document with group shapes by using Microsoft Word. It provides an option to group a set of shapes and images as a single shape and a group shape as individual item.
+Microsoft Word provides an option to group a set of shapes and images as a single shape and to later ungroup it back into individual items.
 ![Create Group shape in Microsoft Word](Working-with-Shapes_images/Working-with-Shapes_img1.jpeg)
 
 **Key Features:**
 
-1. You can easily manage group of shapes, pictures, text boxes, or charts as a group shape.
-2. You can move several shapes or images simultaneously and apply the same formatting properties for children of group shapes.
+1. You can easily manage a group of shapes, pictures, text boxes, or charts as a group shape.
+2. You can move several shapes or images simultaneously and apply the same formatting properties to the children of a group shape.
 
-N> 1. While grouping the shapes or other objects, the shapes should be positioned relative to the “Page”.
-N> 2. While grouping the shapes or other objects, the wrapping style should not be "In Line with Text".
+N> The following constraints apply while grouping shapes or other objects:
+N> 1. The shapes should be positioned relative to the "Page".
+N> 2. The wrapping style should not be "In Line with Text".
 
-The following code example illustrates how to create group shape in Word document.
+The following code example illustrates how to create a group shape in a Word document. In the sample, an `Image.png` file must be present in the working directory (replace the path as needed).
 
 {% tabs %}
 
@@ -490,67 +491,67 @@ document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-‘Creates a new Word document
+'Creates a new Word document
 Dim document As WordDocument = New WordDocument()
-‘Adds new section to the document
+'Adds new section to the document
 Dim section As IWSection = document.AddSection()
-‘Adds new paragraph to the section
+'Adds new paragraph to the section
 Dim paragraph As WParagraph = TryCast(section.AddParagraph(), WParagraph)
-‘Creates new group shape
+'Creates new group shape
 Dim groupShape As GroupShape = New GroupShape(document)
-‘Adds group shape to the paragraph
+'Adds group shape to the paragraph
 paragraph.ChildEntities.Add(groupShape)
-‘Creates new shape
+'Creates new shape
 Dim shape As Shape = New Shape(document, AutoShapeType.RoundedRectangle)
-‘Sets height and width for shape
+'Sets height and width for shape
 shape.Height = 100
 shape.Width = 150
-‘Sets horizontal and vertical position
+'Sets horizontal and vertical position
 shape.HorizontalPosition = 72
 shape.VerticalPosition = 72
-‘Sets wrapping style for shape
+'Sets wrapping style for shape
 shape.WrapFormat.TextWrappingStyle = TextWrappingStyle.InFrontOfText
-‘Sets horizontal and vertical origin
+'Sets horizontal and vertical origin
 shape.HorizontalOrigin = HorizontalOrigin.Page
 shape.VerticalOrigin = VerticalOrigin.Page
-‘Adds the specified shape to group shape
+'Adds the specified shape to group shape
 groupShape.Add(shape)
-‘Creates new picture
+'Creates new picture
 Dim picture As WPicture = New WPicture(document)
 picture.LoadImage(Image.FromFile("Image.png"))
-‘Sets wrapping style for picture
+'Sets wrapping style for picture
 picture.TextWrappingStyle = TextWrappingStyle.InFrontOfText
-‘Sets height and width for the image
+'Sets height and width for the image
 picture.Height = 100
 picture.Width = 100
-‘Sets horizontal and vertical position
+'Sets horizontal and vertical position
 picture.HorizontalPosition = 400
 picture.VerticalPosition = 150
-‘Sets horizontal and vertical origin
+'Sets horizontal and vertical origin
 picture.HorizontalOrigin = HorizontalOrigin.Page
 picture.VerticalOrigin = VerticalOrigin.Page
-‘Adds the specified picture to group shape
+'Adds the specified picture to group shape
 groupShape.Add(picture)
-‘Creates new textbox
+'Creates new textbox
 Dim textbox As WTextBox = New WTextBox(document)
 textbox.TextBoxFormat.Width = 150
 textbox.TextBoxFormat.Height = 75
-‘Adds new text to the textbox body
+'Adds new text to the textbox body
 Dim textboxParagraph As IWParagraph = textbox.TextBoxBody.AddParagraph()
 textboxParagraph.AppendText("Text inside text box")
-‘Sets wrapping style for textbox
+'Sets wrapping style for textbox
 textbox.TextBoxFormat.TextWrappingStyle = TextWrappingStyle.Behind
-‘Sets horizontal and vertical position
+'Sets horizontal and vertical position
 textbox.TextBoxFormat.HorizontalPosition = 200
 textbox.TextBoxFormat.VerticalPosition = 200
-‘Sets horizontal and vertical origin
+'Sets horizontal and vertical origin
 textbox.TextBoxFormat.VerticalOrigin = VerticalOrigin.Page
 textbox.TextBoxFormat.HorizontalOrigin = HorizontalOrigin.Page
-‘Adds the specified textbox to group shape
+'Adds the specified textbox to group shape
 groupShape.Add(textbox)
-‘Saves the Word document
+'Saves the Word document
 document.Save("Sample.docx", FormatType.Docx)
-‘Closes the document
+'Closes the document
 document.Close()
 {% endhighlight %}
 
@@ -558,7 +559,7 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Shapes/Add-group-shape-in-Word).
 
-The following code example illustrates how to add collection of shapes or images as a group shape in Word document.
+The following code example illustrates how to add a collection of shapes, text boxes, and charts as a group shape by passing an array of paragraph items to the `GroupShape` constructor.
 
 {% tabs %}
 
@@ -579,7 +580,7 @@ shape.Width = 150;
 //Sets Wrapping style for shape
 shape.WrapFormat.TextWrappingStyle = TextWrappingStyle.InFrontOfText;
 //Sets horizontal and vertical position for shape
-shape.HorizontalPosition = 7;
+shape.HorizontalPosition = 72;
 shape.VerticalPosition = 72;
 //Sets horizontal and vertical origin for shape
 shape.HorizontalOrigin = HorizontalOrigin.Page;
@@ -687,7 +688,7 @@ shape.Width = 150;
 //Sets Wrapping style for shape
 shape.WrapFormat.TextWrappingStyle = TextWrappingStyle.InFrontOfText;
 //Sets horizontal and vertical position for shape
-shape.HorizontalPosition = 7;
+shape.HorizontalPosition = 72;
 shape.VerticalPosition = 72;
 //Sets horizontal and vertical origin for shape
 shape.HorizontalOrigin = HorizontalOrigin.Page;
@@ -768,7 +769,7 @@ chart.PrimaryCategoryAxis.CategoryLabels = chart.ChartData[2, 1, 11, 1];
 paragraphItems[2] = chart;
 //Creates new group shape
 GroupShape groupShape = new GroupShape(document, paragraphItems);
- groupShape.HorizontalPosition = 72;
+groupShape.HorizontalPosition = 72;
 //Adds the group shape to the paragraph
 paragraph.ChildEntities.Add(groupShape);
 //Saves the Word document
@@ -778,64 +779,64 @@ document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-‘Creates a new Word document
+'Creates a new Word document
 Dim document As WordDocument = New WordDocument()
-‘Adds new section to the document
+'Adds new section to the document
 Dim section As IWSection = document.AddSection()
-‘Adds new paragraph to the section
+'Adds new paragraph to the section
 Dim paragraph As WParagraph = TryCast(section.AddParagraph(), WParagraph)
-‘Creates paragraph item collections to add child shapes
+'Creates paragraph item collections to add child shapes
 Dim paragraphItems As ParagraphItem() = New ParagraphItem(2) {}
-‘Creates new shape
+'Creates new shape
 Dim shape As Shape = New Shape(document, AutoShapeType.RoundedRectangle)
-‘Sets height and width for shape
+'Sets height and width for shape
 shape.Height = 100
 shape.Width = 150
-‘Sets Wrapping style for shape
+'Sets Wrapping style for shape
 shape.WrapFormat.TextWrappingStyle = TextWrappingStyle.InFrontOfText
-‘Sets horizontal and vertical position for shape
-shape.HorizontalPosition = 7
+'Sets horizontal and vertical position for shape
+shape.HorizontalPosition = 72
 shape.VerticalPosition = 72
-‘Sets horizontal and vertical origin for shape
+'Sets horizontal and vertical origin for shape
 shape.HorizontalOrigin = HorizontalOrigin.Page
 shape.VerticalOrigin = VerticalOrigin.Page
-‘Sets the shape as paragraph item
+'Sets the shape as paragraph item
 paragraphItems(0) = shape
-‘Appends new textbox to the document
+'Appends new textbox to the document
 Dim textbox As WTextBox = New WTextBox(document)
-‘Sets height and width for textbox
+'Sets height and width for textbox
 textbox.TextBoxFormat.Width = 150
 textbox.TextBoxFormat.Height = 75
-‘Adds new text to the textbox body
+'Adds new text to the textbox body
 Dim textboxParagraph As IWParagraph = textbox.TextBoxBody.AddParagraph()
-‘Adds new text to the textbox paragraph
+'Adds new text to the textbox paragraph
 textboxParagraph.AppendText("Text inside text box")
-‘Sets wrapping style for textbox
+'Sets wrapping style for textbox
 textbox.TextBoxFormat.TextWrappingStyle = TextWrappingStyle.Behind
-‘Sets horizontal and vertical position for textbox
+'Sets horizontal and vertical position for textbox
 textbox.TextBoxFormat.HorizontalPosition = 200
 textbox.TextBoxFormat.VerticalPosition = 200
-‘Sets horizontal and vertical origin for textbox
+'Sets horizontal and vertical origin for textbox
 textbox.TextBoxFormat.VerticalOrigin = VerticalOrigin.Page
 textbox.TextBoxFormat.HorizontalOrigin = HorizontalOrigin.Page
-‘Sets the textbox as paragraph item
+'Sets the textbox as paragraph item
 paragraphItems(1) = textbox
-‘Appends new chart to the document
+'Appends new chart to the document
 Dim chart As WChart = New WChart(document)
-‘Sets height and width for chart
+'Sets height and width for chart
 chart.Height = 270
 chart.Width = 446
-‘Sets wrapping style for chart
+'Sets wrapping style for chart
 chart.WrapFormat.TextWrappingStyle = TextWrappingStyle.InFrontOfText
-‘Sets chart type
+'Sets chart type
 chart.ChartType = OfficeChartType.Pie
 chart.VerticalPosition = 350
-‘Sets chart title
-‘Sets font and size for chart title
+'Sets chart title
+'Sets font and size for chart title
 chart.ChartTitle = "Best Selling Products"
 chart.ChartTitleArea.FontName = "Calibri"
 chart.ChartTitleArea.Size = 14
-‘Sets data for chart
+'Sets data for chart
 chart.ChartData.SetValue(1, 1, "")
 chart.ChartData.SetValue(1, 2, "Sales")
 chart.ChartData.SetValue(2, 1, "Phyllis Lapin")
@@ -858,29 +859,29 @@ chart.ChartData.SetValue(10, 1, "Christina Berglund")
 chart.ChartData.SetValue(10, 2, 29.171)
 chart.ChartData.SetValue(11, 1, "Elizabeth Lincoln")
 chart.ChartData.SetValue(11, 2, 25.696)
-‘Creates a new chart series with the name “Sales”
+'Creates a new chart series with the name "Sales"
 Dim pieSeries As IOfficeChartSerie = chart.Series.Add("Sales")
-‘Sets value for the chart series
+'Sets value for the chart series
 pieSeries.Values = chart.ChartData(2, 2, 11, 2)
-‘Sets data label
+'Sets data label
 pieSeries.DataPoints.DefaultDataPoint.DataLabels.IsValue = True
 pieSeries.DataPoints.DefaultDataPoint.DataLabels.Position = OfficeDataLabelPosition.Outside
-‘Sets background color
+'Sets background color
 chart.ChartArea.Fill.ForeColor = Color.FromArgb(242, 242, 242)
 chart.PlotArea.Fill.ForeColor = Color.FromArgb(242, 242, 242)
 chart.ChartArea.Border.LinePattern = OfficeChartLinePattern.None
-‘Sets category labels
+'Sets category labels
 chart.PrimaryCategoryAxis.CategoryLabels = chart.ChartData(2, 1, 11, 1)
-‘Sets the chart as paragraph item
+'Sets the chart as paragraph item
 paragraphItems(2) = chart
-‘Creates new group shape
+'Creates new group shape
 Dim groupShape As GroupShape = New GroupShape(document, paragraphItems)
 groupShape.HorizontalPosition = 72
-‘Adds the group shape to the paragraph
+'Adds the group shape to the paragraph
 paragraph.ChildEntities.Add(groupShape)
-‘Saves the Word document
+'Saves the Word document
 document.Save("Sample.docx", FormatType.Docx)
-‘Closes the document
+'Closes the document
 document.Close()
 {% endhighlight %}
 
@@ -890,7 +891,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Nested group shapes
 
-The following code example illustrates how to group the nested group shapes as a group shape in Word document.
+You can nest one group shape inside another. The following code example illustrates how to group nested group shapes as a single group shape in a Word document.
 
 {% tabs %}
 
@@ -1073,91 +1074,91 @@ document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-‘Creates a new Word document
+'Creates a new Word document
 Dim document As WordDocument = New WordDocument()
-‘Adds new section to the document
+'Adds new section to the document
 Dim section As IWSection = document.AddSection()
-‘Adds new paragraph to the section
+'Adds new paragraph to the section
 Dim paragraph As WParagraph = TryCast(section.AddParagraph(), WParagraph)
-‘Creates new group shape
+'Creates new group shape
 Dim groupShape As GroupShape = New GroupShape(document)
-‘Adds group shape to the paragraph
+'Adds group shape to the paragraph
 paragraph.ChildEntities.Add(groupShape)
-‘Appends new shape to the document
+'Appends new shape to the document
 Dim shape As Shape = New Shape(document, AutoShapeType.RoundedRectangle)
-‘Sets height and width for shape
+'Sets height and width for shape
 shape.Height = 100
 shape.Width = 150
-‘Sets Wrapping style for shape
+'Sets Wrapping style for shape
 shape.WrapFormat.TextWrappingStyle = TextWrappingStyle.InFrontOfText
-‘Sets horizontal and vertical position for shape
+'Sets horizontal and vertical position for shape
 shape.HorizontalPosition = 72
 shape.VerticalPosition = 72
-‘Sets horizontal and vertical origin for shape
+'Sets horizontal and vertical origin for shape
 shape.HorizontalOrigin = HorizontalOrigin.Page
 shape.VerticalOrigin = VerticalOrigin.Page
-‘Adds the specified shape to group shape
+'Adds the specified shape to group shape
 groupShape.Add(shape)
-‘Appends new picture to the document
+'Appends new picture to the document
 Dim picture As WPicture = New WPicture(document)
-‘Loads image from the file
-picture.LoadImage(Image.FromFile("Image.jpg"))
-‘Sets wrapping style for picture
+'Loads image from the file
+picture.LoadImage(Image.FromFile("Image.png"))
+'Sets wrapping style for picture
 picture.TextWrappingStyle = TextWrappingStyle.InFrontOfText
-‘Sets height and width for the picture
+'Sets height and width for the picture
 picture.Height = 100
 picture.Width = 100
-‘Sets horizontal and vertical position for the picture
+'Sets horizontal and vertical position for the picture
 picture.HorizontalPosition = 400
 picture.VerticalPosition = 150
-‘Sets horizontal and vertical origin for the picture
+'Sets horizontal and vertical origin for the picture
 picture.HorizontalOrigin = HorizontalOrigin.Page
 picture.VerticalOrigin = VerticalOrigin.Page
-‘Adds specified picture to the group shape
+'Adds specified picture to the group shape
 groupShape.Add(picture)
-‘Creates new nested group shape
+'Creates new nested group shape
 Dim nestedGroupShape As GroupShape = New GroupShape(document)
-‘Appends new textbox to the document
+'Appends new textbox to the document
 Dim textbox As WTextBox = New WTextBox(document)
-‘Sets width and height for the textbox
+'Sets width and height for the textbox
 textbox.TextBoxFormat.Width = 150
 textbox.TextBoxFormat.Height = 75
-‘Adds new text to the textbox body
+'Adds new text to the textbox body
 Dim textboxParagraph As IWParagraph = textbox.TextBoxBody.AddParagraph()
-‘Adds new text to the textbox paragraph
+'Adds new text to the textbox paragraph
 textboxParagraph.AppendText("Text inside text box")
-‘Sets wrapping style for the textbox
+'Sets wrapping style for the textbox
 textbox.TextBoxFormat.TextWrappingStyle = TextWrappingStyle.Behind
-‘Sets horizontal and vertical position for the textbox
+'Sets horizontal and vertical position for the textbox
 textbox.TextBoxFormat.HorizontalPosition = 200
 textbox.TextBoxFormat.VerticalPosition = 200
-‘Sets horizontal and vertical origin for the textbox
+'Sets horizontal and vertical origin for the textbox
 textbox.TextBoxFormat.VerticalOrigin = VerticalOrigin.Page
 textbox.TextBoxFormat.HorizontalOrigin = HorizontalOrigin.Page
-‘Adds specified textbox to the nested group shape
+'Adds specified textbox to the nested group shape
 nestedGroupShape.Add(textbox)
-‘Appends new shape to the document
+'Appends new shape to the document
 shape = New Shape(document, AutoShapeType.Oval)
-‘Sets height and width for the new shape
+'Sets height and width for the new shape
 shape.Height = 100
 shape.Width = 150
-‘Sets horizontal and vertical position for the shape
+'Sets horizontal and vertical position for the shape
 shape.HorizontalPosition = 200
 shape.VerticalPosition = 72
-‘Sets horizontal and vertical origin for the shape
+'Sets horizontal and vertical origin for the shape
 shape.HorizontalOrigin = HorizontalOrigin.Page
 shape.VerticalOrigin = VerticalOrigin.Page
-‘Sets horizontal and vertical position for the nested group shape
+'Sets horizontal and vertical position for the nested group shape
 nestedGroupShape.HorizontalPosition = 72
 nestedGroupShape.VerticalPosition = 72
-‘Adds specified shape to the nested group shape
+'Adds specified shape to the nested group shape
 nestedGroupShape.Add(shape)
-‘Adds nested group shape to the group shape of the paragraph
+'Adds nested group shape to the group shape of the paragraph
 groupShape.Add(nestedGroupShape)
 groupShape.HorizontalPosition = 142
-‘Saves the Word document
+'Saves the Word document
 document.Save("Sample.docx", FormatType.Docx)
-‘Closes the document
+'Closes the document
 document.Close()
 {% endhighlight %}
 
@@ -1167,9 +1168,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Ungrouping shapes
 
-You can ungroup the group shapes in the Word document to preserve each shape as individual item.
+You can ungroup group shapes in a Word document so that each shape is preserved as an individual item.
 
-The following code example illustrates how to ungroup the group shape in Word document.
+N> The following example assumes that the template document (`Template.docx`) contains a `GroupShape` in its last paragraph. To locate group shapes in arbitrary documents, iterate through the paragraphs and paragraph items of each section.
+
+The following code example illustrates how to ungroup a group shape in a Word document.
 
 {% tabs %}
 
@@ -1245,7 +1248,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## Online Demo
 
 * Explore how to create a Word document with shapes using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/autoshapes#/tailwind).
-* See how to create a Word document with group shapes using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/groupshapes#/tailwind).  
+* See how to create a Word document with group shapes using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/groupshapes#/tailwind).
 
 ## See Also
 

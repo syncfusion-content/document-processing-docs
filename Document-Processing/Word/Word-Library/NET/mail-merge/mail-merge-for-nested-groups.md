@@ -6,9 +6,9 @@ control: DocIO
 documentation: UG
 ---
 
-# Nested Mail merge for group
+# Mail merge for nested groups
 
-You can perform nested Mail merge with relational or hierarchical data source and independent data tables in a template document.
+You can perform nested mail merge with relational or hierarchical data source and independent data tables in a template document.
 
 The following table illustrates the supported mail merge overloads for ExecuteNestedGroup method.
 
@@ -43,9 +43,9 @@ The following table illustrates the supported mail merge overloads for ExecuteNe
 
 ## Create template for nested group mail merge
 
-Nested Mail merge operation automatically replaces the merge field with immediate group data. You can also predefine the group data that is populated to a merge field. 
-  
-To execute nested mail merge, design your Word document template as follow.
+Nested mail merge operation automatically replaces the merge field with immediate group data. You can also predefine the group data that is populated in a merge field.
+
+To execute nested mail merge, design your Word document template as follows.
 
 ![Word document template for nested groups](../MailMerge_images/file-formats-word-nested-group-mail-merge-template.png)
 
@@ -53,13 +53,13 @@ In this template, Employees is the owner group and it has two child groups Custo
 
 ## Execute nested group mail merge
 
-The [MailMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html) class provides various overloads for the [ExecuteNestedGroup](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ExecuteNestedGroup_System_Data_Common_DbConnection_System_Collections_ArrayList_) method to perform Mail merge for nested groups or regions in the Word document.
+The [MailMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html) class provides various overloads for the [ExecuteNestedGroup](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ExecuteNestedGroup_System_Data_Common_DbConnection_System_Collections_ArrayList_) method to perform mail merge for nested groups or regions in the Word document.
 
-You need to define commands with the table name and expression for linking the multiple data tables **(explicit relation data)** during nested Mail merge process. You can use the “%TableName.ColumnName%” expression for getting the current value of specified column or field from the table.
+The following code example shows how to perform a nested mail merge.
 
-The following code example shows how to perform a nested Mail merge.
-
-N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+> **NOTE**  
+> `OleDbConnection` is supported only on Windows. It is not available on Linux or macOS, including in ASP.NET Core on non-Windows platforms. Use `Microsoft.ACE.OLEDB.12.0` instead of the deprecated `Microsoft.Jet.OLEDB.4.0` provider on modern Windows.
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
 {% tabs %}
 
@@ -154,7 +154,7 @@ The resultant document looks as follows.
 
 Essential<sup>&reg;</sup> DocIO allows you to perform Mail merge with the dynamic objects. The [ExpandoObject](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-6.0) is like a collection of key and value pairs, which means IDictionary<string, object>. So, you can also use IDictionary<string, object> collection instead of [ExpandoObject](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-6.0) to execute mail merge.
 
-The following code snippet shows how to perform the Mail merge with dynamic objects ([ExpandoObject](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-6.0)).
+The following code snippet shows how to perform the mail merge with dynamic objects ([ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject)).
 
 {% tabs %}
 
@@ -170,7 +170,7 @@ dataSet.Add(dataTable);
 dataTable = new MailMergeDataTable("Orders", GetOrders());
 dataSet.Add(dataTable);
 List<DictionaryEntry> commands = new List<DictionaryEntry>();
-//DictionaryEntry contain "Source table" (key) and "Command" (value)
+//DictionaryEntry contains "Source table" (key) and "Command" (value)
 DictionaryEntry entry = new DictionaryEntry("Customers", string.Empty);
 commands.Add(entry);
 //Retrieves the customer details
@@ -196,7 +196,7 @@ dataSet.Add(dataTable);
 dataTable = new MailMergeDataTable("Orders", GetOrders());
 dataSet.Add(dataTable);
 List<DictionaryEntry> commands = new List<DictionaryEntry>();
-//DictionaryEntry contain "Source table" (key) and "Command" (value)
+//DictionaryEntry contains "Source table" (key) and "Command" (value)
 DictionaryEntry entry = new DictionaryEntry("Customers", string.Empty);
 commands.Add(entry);
 //Retrieves the customer details
@@ -220,7 +220,7 @@ dataSet.Add(dataTable)
 dataTable = New MailMergeDataTable("Orders", GetOrders())
 dataSet.Add(dataTable)
 Dim commands As New List(Of DictionaryEntry)()
-'DictionaryEntry contain "Source table" (key) and "Command" (value)
+'DictionaryEntry contains "Source table" (key) and "Command" (value)
 Dim entry As New DictionaryEntry("Customers", String.Empty)
 commands.Add(entry)
 'Retrieves the customer details
@@ -361,23 +361,28 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Mail merge with implicit relational data
 
-You can perform **nested Mail merge with implicit relational data** objects without any explicit relational commands by using the [ExecuteNestedGroup](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ExecuteNestedGroup_Syncfusion_DocIO_DLS_MailMergeDataTable_) overload method.
+You can perform **nested mail merge with implicit relational data** objects without any explicit relational commands by using the [ExecuteNestedGroup](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ExecuteNestedGroup_Syncfusion_DocIO_DLS_MailMergeDataTable_) overload method.
 
-### Map the field of ancestor group
+DocIO automatically maps child collections to nested groups by matching the property name on the data object to the group name declared in the template (for example, a property named `Departments` on the `Organization` class maps to the `Departments` group region). Ensure property names match the group names used in the template.
 
-You can also merge any field in the nested group by **mapping the field or column of its ancestor group or table** in the data source. To achieve this, you need to add a corresponding group name or table name as a prefix to the merge field name along with “:” separator.
+### Map fields of ancestor groups
+
+You can also merge any field in the nested group by **mapping the field or column of its ancestor group or table** in the data source. To achieve this, add the corresponding group name or table name as a prefix to the merge field name along with the `:` separator.
 
 For example:
-  * The merge field name should be like “TableName:Id” (<<TableName:MergeFieldName>>)
-  * The merge field name should be like “Image:TableName:Photo” (<<Image:TableName:MergeFieldName>>)
-  
-For example, consider that you have a template document as follow.
+  * The merge field name should be like `TableName:Id` (<<TableName:MergeFieldName>>)
+  * The merge field name should be like `Image:TableName:Photo` (<<Image:TableName:MergeFieldName>>)
+
+> **NOTE**  
+> Image merge fields require the merge field to be configured with the `Image:` prefix in the template and the data value to be a byte array or `Image` instance.
+
+For example, consider that you have a template document as follows.
 
 ![Word document template to map the fields of ancestor group](../MailMerge_images/file-formats-word-mapping-template.png)
 
-In the above template, Organizations is the owner group and it has two child groups Departments and Employees. The Supervisor merge field of Departments group is used in Employees group.
+In the above template, Organizations is the owner group and it has two child groups Departments and Employees. The `Supervisor` merge field of the Departments group is used in the Employees group.
 
-The following code example shows how to perform nested Mail merge with the implicit relational data objects.
+The following code example shows how to perform nested mail merge with the implicit relational data objects.
 
 {% tabs %}
 
@@ -385,9 +390,9 @@ The following code example shows how to perform nested Mail merge with the impli
 //Opens the template document 
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
-//Gets the organization details as “IEnumerable” collection
+//Gets the organization details as IEnumerable collection
 List<Organization> organizationList = GetOrganizations();
-//Creates an instance of “MailMergeDataTable” by specifying mail merge group name and “IEnumerable” collection
+//Creates an instance of MailMergeDataTable by specifying mail merge group name and IEnumerable collection
 MailMergeDataTable dataTable = new MailMergeDataTable("Organizations", organizationList);
 //Performs Mail merge
 document.MailMerge.ExecuteNestedGroup(dataTable);
@@ -401,9 +406,9 @@ document.Close();
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Opens the template document 
 WordDocument document = new WordDocument("Template.docx");
-//Gets the organization details as “IEnumerable” collection
+//Gets the organization details as IEnumerable collection
 List<Organization> organizationList = GetOrganizations();
-//Creates an instance of “MailMergeDataTable” by specifying mail merge group name and “IEnumerable” collection
+//Creates an instance of MailMergeDataTable by specifying mail merge group name and IEnumerable collection
 MailMergeDataTable dataTable = new MailMergeDataTable("Organizations", organizationList);
 //Performs Mail merge
 document.MailMerge.ExecuteNestedGroup(dataTable);
@@ -415,9 +420,9 @@ document.Close();
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Opens the template document 
 Dim document As WordDocument = New WordDocument("Template.docx")
-'Gets the organization details as “IEnumerable” collection
+'Gets the organization details as IEnumerable collection
 Dim organizationList As List(Of Organization) = GetOrganizations()
-'Creates an instance of “MailMergeDataTable” by specifying mail merge group name and “IEnumerable” collection
+'Creates an instance of MailMergeDataTable by specifying mail merge group name and IEnumerable collection
 Dim dataTable As MailMergeDataTable = New MailMergeDataTable("Organizations", organizationList)
 'Performs Mail merge
 document.MailMerge.ExecuteNestedGroup(dataTable)
@@ -477,7 +482,7 @@ public static List<Organization> GetOrganizations()
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Public Function GetOrganizations() As List(Of Organization)
+Public Shared Function GetOrganizations() As List(Of Organization)
     'Creates Employee details
     Dim employees As List(Of EmployeeDetails) = New List(Of EmployeeDetails)
     employees.Add(New EmployeeDetails("Thomas Hardy", "1001", "05/27/1996"))
