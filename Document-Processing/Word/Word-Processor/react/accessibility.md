@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React DOCX Editor component
+# Accessibility in React Document Editor component
 
-The accessibility compliance for the [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (also referred to as the Document Editor) component is outlined below.
+The accessibility compliance for the [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (also referred to as the Document Editor) component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -40,19 +40,18 @@ The accessibility compliance for the [React DOCX Editor](https://www.syncfusion.
 
 ## Keyboard Accessibility
 
-For keyboard accessibility, the DOCX Editor supports a range of [keyboard shortcuts](./keyboard-shortcut) for navigation and editing without a mouse, including tab navigation, cursor movement, and shortcut key combinations for common editing actions such as copy, paste, undo, and redo.
+For keyboard accessibility, the Document Editor supports a range of [keyboard shortcuts](./keyboard-shortcut) for navigation and editing without a mouse, including tab navigation, cursor movement, and shortcut key combinations for common editing actions such as copy, paste, undo, and redo.
 
 The following accessibility compliance summary applies to the `@syncfusion/ej2-react-documenteditor` package.
 
 ## Ensuring Accessibility
 
-The DOCX Editor component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The Document Editor component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the DOCX editor component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/wordprocessor.html) in a new window to evaluate the accessibility of the DOCX editor component with accessibility tools.
+The accessibility compliance of the Document Editor component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/wordprocessor.html) in a new window to evaluate the accessibility of the Document Editor component with accessibility tools.
 
 {% previewsample "/document-processing/code-snippet/document-editor/react/accessibility-cs1" %}
 
 ## See Also
 
 - [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> React components](https://ej2.syncfusion.com/react/documentation/common/accessibility)
-- [Keyboard shortcuts in React DOCX Editor component](./keyboard-shortcut)

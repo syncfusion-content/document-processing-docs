@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Bookmark in React DOCX editor component | Syncfusion
-description: Learn here all about Bookmark in Syncfusion React DOCX editor component of Syncfusion Essential JS 2 and more.
+title: Bookmark in React DOCX Editor component | Syncfusion
+description: Learn here all about Bookmark in Syncfusion React DOCX Editor component of Syncfusion Essential JS 2 and more.
 control: Bookmark
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Bookmark in React DOCX editor component
+# Bookmark in React Document Editor component
 
 Bookmark is a powerful tool that helps you to mark a place in the document to find again easily. You can enter many bookmarks in the document and give each one a unique name to identify easily.
 
-[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides built-in dialog to add, delete, and navigate bookmarks within the document. To add a bookmark, select a portion of text in the document. After that, jump to the location or add links to it within the document using built-in hyperlink dialog. You can also delete bookmarks from a document.
+[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides built-in dialog to add, delete, and navigate bookmarks within the document. To add a bookmark, select a portion of text in the document. After that, jump to the location or add links to it within the document using built-in hyperlink dialog. You can also delete bookmarks from a document.
 
 >Bookmark names need to begin with a letter. They can include both numbers and letters, but not spaces. To separate the words, use an underscore.
 >Bookmark names starting with an underscore are called hidden bookmarks. For example, bookmarks generated for table of contents.
@@ -65,9 +65,9 @@ this.container.documentEditor.selection.getBookmarks(false);
 
 ## Show or Hide Bookmark
 
-You can show or hide square brackets around bookmarked items in DOCX editor component.
+You can show or hide the bookmark indicators around bookmarked items in Document Editor component.
 
-The following example code illustrates how to show or hide square brackets around bookmarked items.
+The following example code illustrates how to show or hide the bookmark indicators around bookmarked items.
 
 ```typescript
 this.container.documentEditor.documentEditorSettings.showBookmarks = true;
@@ -95,7 +95,7 @@ this.container.documentEditor.editor.insertText('Hello World');
 
 ## Bookmark Dialog
 
-The following example shows how to open bookmark dialog in document editor.
+The following example shows how to open bookmark dialog in Document Editor.
 
 ```ts
 import * as ReactDOM from 'react-dom';
