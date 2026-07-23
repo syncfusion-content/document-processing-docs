@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open Box cloud files in the React DOCX Editor | Syncfusion
-description: Learn here to open a document from Box cloud file storage in the Syncfusion React DOCX Editor control of Syncfusion Essential JS 2 and more.
+description: Learn here to open a document from Box cloud file storage in the Syncfusion React Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Opening from Box cloud file storage
 documentation: ug

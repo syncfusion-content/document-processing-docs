@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open OneDrive files in the React DOCX Editor | Syncfusion
-description: Learn how to open a document from OneDrive in the React DOCX Editor control of Syncfusion Essential JS 2 and more details.
+description: Learn how to open a document from OneDrive in the React Document Editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Open a document from OneDrive
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Open document from OneDrive in React Document Editor
 
-To load a document from OneDrive in a [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor), you can follow the steps below.
+To load a document from OneDrive in a [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor), you can follow the steps below.
 
 **Step 1:** Create the Microsoft Graph API.
 
@@ -185,10 +185,10 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 ```
 
 N> The following NuGet packages are required to use the previous code example.
-N> 1. **Microsoft.Identity.Client**
-N> 2. **Microsoft.Graph**
-N> 3. **Microsoft.Extensions.Configuration**
-N> 4. **Microsoft.Extensions.Configuration.FileExtensions**
-N> 5. **Microsoft.Extensions.Configuration.Json**
+- **Microsoft.Identity.Client** 
+- **Microsoft.Graph**
+- **Microsoft.Extensions.Configuration**
+- **Microsoft.Extensions.Configuration.FileExtensions**
+- **Microsoft.Extensions.Configuration.Json**
 
 You can install these packages using the NuGet Package Manager in Visual Studio or Visual Studio Code.

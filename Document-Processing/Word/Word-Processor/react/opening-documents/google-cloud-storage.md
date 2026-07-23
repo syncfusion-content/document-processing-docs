@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open Google Cloud files in the React DOCX Editor | Syncfusion
-description: Learn how to open a document from Google Cloud Storage in the React DOCX Editor control of Syncfusion Essential JS 2 and more details.
+description: Learn how to open a document from Google Cloud Storage in the React Document Editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Open document from Google Cloud Storage
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Open document from Google Cloud Storage in React Document Editor
 
-To load a document from Google Cloud Storage in a [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor), you can follow the steps below.
+To load a document from Google Cloud Storage in a [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor), you can follow the steps below.
 
 **Step 1:** Create a simple Document Editor sample in React
 
