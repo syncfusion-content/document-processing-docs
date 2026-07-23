@@ -108,25 +108,6 @@ document.destroy();
 
 This example demonstrates how to draw text in an existing PDF document using the [drawString](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#drawstring) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class. The existing PDF is passed as a byte array to the `PdfDocument` constructor.
 
-The following helper shows how to load a PDF from a file or URL before modifying it:
-
-```javascript
-// Load an existing PDF from a URL (browser)
-async function loadPdfFromUrl(url) {
-  const response = await fetch(url);
-  const buffer = await response.arrayBuffer();
-  return new Uint8Array(buffer);
-}
-
-// Load an existing PDF from a file input (browser)
-function loadPdfFromFile(file) {
-  return new Promise((resolve) => {
-    const reader = new FileReader();
-    reader.onload = () => resolve(new Uint8Array(reader.result));
-    reader.readAsArrayBuffer(file);
-  });
-}
-```
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -235,7 +216,7 @@ The JavaScript PDF Library supports the following font types:
 
 1. Standard fonts
 2. TrueType fonts
-3. Chinese, Japanese, and Korean (CJK) fonts
+3. Chinese, Japanese and Korean (CJK) fonts
 
 ### Drawing text using standard fonts
 
@@ -277,30 +258,6 @@ document.destroy();
 ### Drawing text using TrueType fonts
 
 This example demonstrates how to draw text using TrueType fonts in a PDF document by utilizing the [drawString](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#drawstring) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class along with a [PdfTrueTypeFont](https://ej2.syncfusion.com/documentation/api/pdf/pdftruetypefont) instance. TrueType fonts provide enhanced text rendering with support for custom font styles.
-
-Before embedding a TrueType font, load the TTF file as a byte array:
-
-```javascript
-// Load a TTF font from a URL (browser)
-async function loadTtfFromUrl(url) {
-  const response = await fetch(url);
-  const buffer = await response.arrayBuffer();
-  return new Uint8Array(buffer);
-}
-
-// Load a TTF font from a File input (browser)
-function loadTtfFromFile(file) {
-  return new Promise((resolve) => {
-    const reader = new FileReader();
-    reader.onload = () => resolve(new Uint8Array(reader.result));
-    reader.readAsArrayBuffer(file);
-  });
-}
-
-// Node.js (using fs)
-const fs = require('fs');
-const data = fs.readFileSync('path/to/font.ttf');
-```
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -623,29 +580,9 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## Text rendering notes
-
-N> Due to the inherent limitations of the PDF specification and the rendering capabilities of PDF libraries, emojis with skin-tone modifiers are not supported in generated PDF documents. Only the base versions of emojis can be displayed. This limitation is common across most PDF libraries, as the PDF format does not explicitly support rendering skin-tone variations in emojis.
-
-N> The `format` argument to `drawString` is optional. Pass a `PdfStringFormat` instance only when you need to apply alignment, spacing, clipping, or text-direction settings.
-
-## Supported PdfCjkFontFamily values
-
-The [PdfCjkFontFamily](https://ej2.syncfusion.com/documentation/api/pdf/pdfcjkfontfamily) enumeration provides the following values:
-
-| Value | Description |
-|---|---|
-| `heiseiKakuGoW5` | Japanese Heisei Kaku Gothic W5 |
-| `heiseiMinchoW3` | Japanese Heisei Mincho W3 |
-| `hanyangSystemsGothicMedium` | Korean Hanyang Systems Gothic Medium |
-| `hanyangSystemsShinMedium` | Korean Hanyang Systems Shin Medium |
-| `monotypeSungLight` | Chinese Monotype Sung Light |
-| `monotypeSungMedium` | Chinese Monotype Sung Medium |
-| `cmapSymbol` | CJK symbol font |
-
 ## Additional Resources
 
 - [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
 - [JavaScript PDF Library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
 - [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
-- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/fluent2/pdf/default)
+- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default.html)

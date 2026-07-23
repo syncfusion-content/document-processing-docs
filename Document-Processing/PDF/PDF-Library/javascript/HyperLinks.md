@@ -82,18 +82,6 @@ document.destroy();
 
 This example demonstrates how to create internal navigation within a PDF document using destination-based annotations.
 
-**Constructor parameters for `PdfDocumentLinkAnnotation`:**
-- `bounds`: Rectangle defining the annotation area
-- `textColor`: Text color as RGB object
-- `backgroundColor`: Background color as RGB object
-- `borderWidth`: Border width in points
-
-**`PdfDestination` constructor parameters:**
-- `page`: Target [PdfPage](https://ej2.syncfusion.com/documentation/api/pdf/pdfpage) for navigation
-- `bounds`: Target rectangle within the page
-- `zoom`: Zoom level (valid range: 0–10, where 1 = 100%)
-- `mode`: [PdfDestinationMode](https://ej2.syncfusion.com/documentation/api/pdf/pdfdestinationmode) enum (e.g., `fitToPage`, `fitWidth`, `fitHeight`)
-
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument, PdfPage, PdfStandardFont, PdfDocumentLinkAnnotation, PdfFontFamily, PdfFontStyle, PdfDestination, PdfDestinationMode, Size } from '@syncfusion/ej2-pdf';
@@ -156,10 +144,6 @@ This example demonstrates how to create external navigation in a PDF document us
 
 **File resolution behavior:** The file path specified in the constructor is **referenced at runtime** (not embedded in the PDF). The target file must be accessible at the specified path when the PDF is opened. Use an absolute path or ensure the file is located relative to the PDF viewer's working directory.
 
-**Constructor parameters for `PdfFileLinkAnnotation`:**
-- `bounds`: Rectangle defining the annotation area
-- `filePath`: Path to the external file (string)
-
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument, PdfPage, PdfFileLinkAnnotation } from '@syncfusion/ej2-pdf';
@@ -200,15 +184,11 @@ document.destroy();
 
 This example shows how to update hyperlink annotations in a PDF using [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library). Link annotations retrieved from a page can have their URL or bounding region updated as needed. This makes it easy to refresh outdated links or adjust navigation behavior whenever the document changes.
 
-**Loading an existing PDF:** Use `PdfDocument.load()` to read PDF bytes from a file, buffer, or [Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array).
-
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument, PdfPage, PdfTextWebLinkAnnotation, PdfAnnotation } from '@syncfusion/ej2-pdf';
-import * as fs from 'fs';
 
 // Load an existing PDF document from a file
-let pdfBytes: Uint8Array = fs.readFileSync('Input.pdf');
 let document: PdfDocument = new PdfDocument(pdfBytes);
 // Access the first page
 let page: PdfPage = document.getPage(0);
@@ -227,8 +207,6 @@ document.destroy();
 {% highlight javascript tabtitle="JavaScript" %}
 
 // Load an existing PDF document from a file
-var fs = require('fs');
-var pdfBytes = fs.readFileSync('Input.pdf');
 var document = new ej.pdf.PdfDocument(pdfBytes);
 // Access the first page
 var page = document.getPage(0);
@@ -257,10 +235,8 @@ This example demonstrates how to remove hyperlink annotations from a PDF using [
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument, PdfPage, PdfTextWebLinkAnnotation } from '@syncfusion/ej2-pdf';
-import * as fs from 'fs';
 
 // Load an existing PDF document from a file
-let pdfBytes: Uint8Array = fs.readFileSync('Input.pdf');
 let document: PdfDocument = new PdfDocument(pdfBytes);
 // Access the first page
 let page: PdfPage = document.getPage(0);
@@ -268,10 +244,8 @@ let page: PdfPage = document.getPage(0);
 let annotation: PdfTextWebLinkAnnotation = page.annotations.at(0) as PdfTextWebLinkAnnotation;
 // Remove an annotation from the collection
 page.annotations.remove(annotation);
-// Remove an annotation at index 1 (validate index exists first)
-if (page.annotations.count > 1) {
-    page.annotations.removeAt(1);
-}
+// Remove an annotation at index 1
+page.annotations.removeAt(1);
 // Save the document
 document.save('output.pdf');
 // Close the document
@@ -281,21 +255,15 @@ document.destroy();
 {% highlight javascript tabtitle="JavaScript" %}
 
 // Load an existing PDF document from a file
-var fs = require('fs');
-var pdfBytes = fs.readFileSync('Input.pdf');
 var document = new ej.pdf.PdfDocument(pdfBytes);
 // Access the first page
 var page = document.getPage(0);
 // Access first annotation from the PDF page
 var annotation = page.annotations.at(0);
 // Remove an annotation from the collection
-if (annotation instanceof ej.pdf.PdfTextWebLinkAnnotation) {
-    page.annotations.remove(annotation);
-}
-// Remove an annotation at index 1 (validate index exists first)
-if (page.annotations.count > 1) {
-    page.annotations.removeAt(1);
-}
+page.annotations.remove(annotation);
+// Remove an annotation at index 1
+page.annotations.removeAt(1);
 // Save the document
 document.save('output.pdf');
 // Close the document
@@ -309,4 +277,4 @@ document.destroy();
 - [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
 - [JavaScript PDF Library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
 - [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
-- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/fluent2/pdf/default)
+- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default.html)

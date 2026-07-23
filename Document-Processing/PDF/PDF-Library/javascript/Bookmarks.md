@@ -87,7 +87,7 @@ document.destroy();
 
 ## Inserting bookmarks at a specific position
 
-This example demonstrates how to insert a bookmark at a specific index in an existing PDF document using the [PdfBookmark](https://ej2.syncfusion.com/documentation/api/pdf/pdfbookmark) class. The 2-argument `add(title, index)` form creates a minimal bookmark; the destination is set afterwards via the `bookmark.destination` property.
+This example demonstrates how to insert a bookmark at a specific index in an existing PDF document using the [PdfBookmark](https://ej2.syncfusion.com/documentation/api/pdf/pdfbookmark) class. The `add(title, index)` overload creates a bookmark with only a title, and you can set its destination later through the `bookmark.destination` property.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -307,7 +307,7 @@ document.destroy();
 
 ## Getting a bookmark's page index
 
-This example demonstrates how to retrieve the page index associated with a bookmark in an existing PDF document using the [PdfBookmark](https://ej2.syncfusion.com/documentation/api/pdf/pdfbookmark) class. The page index can then be used to navigate to that page or to log the bookmark's location.
+This example demonstrates how to retrieve the page index associated with a bookmark in an existing PDF document using the [PdfBookmark](https://ej2.syncfusion.com/documentation/api/pdf/pdfbookmark) class. Specifies the page index linked to the bookmark.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -321,8 +321,6 @@ let bookmarks: PdfBookmarkBase = document.bookmarks;
 let bookmark: PdfBookmark = bookmarks.at(0);
 // Get the page index of the bookmark's destination
 let pageIndex: number = bookmark.destination.pageIndex;
-// Logs the page index to the console
-console.log(pageIndex);
 // Save the document
 document.save('output.pdf');
 // Close the document
@@ -339,8 +337,6 @@ var bookmarks = document.bookmarks;
 var bookmark = bookmarks.at(0);
 // Get the page index of the bookmark's destination
 var pageIndex = bookmark.destination.pageIndex;
-// Logs the page index to the console
-console.log(pageIndex);
 // Save the document
 document.save('output.pdf');
 // Close the document
@@ -356,4 +352,4 @@ document.destroy();
 - [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
 - [JavaScript PDF Library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
 - [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
-- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/fluent2/pdf/default)
+- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default.html)

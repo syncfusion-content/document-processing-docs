@@ -8,19 +8,15 @@ documentation: UG
 
 # Images in JavaScript PDF Library
 
-Syncfusion's [JavaScript PDF library](https://www.syncfusion.com/document-processing/pdf-library/javascript) supports adding **JPEG** and **PNG** images, including PNG images with an alpha (transparency) channel, to PDF documents. Both color and grayscale images are supported.
+Syncfusion's [JavaScript PDF library](https://www.syncfusion.com/document-processing/pdf-library/javascript) supports adding **JPEG** and **PNG** images.
 
 Images are supported through the [PdfImage](https://ej2.syncfusion.com/documentation/api/pdf/pdfimage) class, which is an abstract base class. The [PdfBitmap](https://ej2.syncfusion.com/documentation/api/pdf/pdfbitmap) class derives from `PdfImage` and is used to load and draw raster images in a PDF.
 
-For first-time setup, see the [Getting Started guide for the JavaScript PDF library](https://www.syncfusion.com/document-processing/pdf-library/javascript/getting-started).
-
 ## Adding an Image to a PDF Document
 
-The following example demonstrates how to add an image to a new PDF document using the [PdfBitmap](https://ej2.syncfusion.com/documentation/api/pdf/pdfbitmap) class and the [draw](https://ej2.syncfusion.com/documentation/api/pdf/pdfimage#draw) method of the [PdfImage](https://ej2.syncfusion.com/documentation/api/pdf/pdfimage) class. The image is loaded from a `Uint8Array` and drawn at the specified coordinates on the page.
+The following example demonstrates how to add an image to a new PDF document using the [PdfBitmap](https://ej2.syncfusion.com/documentation/api/pdf/pdfbitmap) class and the [draw](https://ej2.syncfusion.com/documentation/api/pdf/pdfimage#draw) method of the [PdfImage](https://ej2.syncfusion.com/documentation/api/pdf/pdfimage) class. The image is loaded from a `Uint8Array` or file and drawn at the specified coordinates on the page.
 
 The `draw` method also accepts optional `width` and `height` parameters to resize the image. If omitted, the image is drawn at its original size.
-
-> Replace `<image-bytes>` with a real `Uint8Array` containing a valid JPEG or PNG buffer. The truncated base64 in this example is a placeholder.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -65,8 +61,6 @@ document.destroy();
 ## Inserting an Image in an Existing Document
 
 The following example demonstrates how to insert an image into an existing PDF document using the [PdfBitmap](https://ej2.syncfusion.com/documentation/api/pdf/pdfbitmap) class and the [draw](https://ej2.syncfusion.com/documentation/api/pdf/pdfimage#draw) method of the [PdfImage](https://ej2.syncfusion.com/documentation/api/pdf/pdfimage) class.
-
-The existing PDF must first be loaded as a `Uint8Array` (for example, using `fs.readFileSync` in Node.js or `fetch` in the browser) and passed to the `PdfDocument` constructor.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -117,7 +111,6 @@ The following example demonstrates how to apply a clipping region and manage the
 - `PdfFillMode.alternate` — Uses the even-odd rule. A point is inside the region if a ray from it crosses the path an odd number of times. Suitable for paths with self-intersections or holes.
 - `PdfFillMode.winding` — Uses the non-zero winding rule. A point is inside the region if the winding number around it is non-zero. Suitable for nested and overlapping paths.
 
-In this example, a 200x100 image is drawn at `{10, 10}` and clipped by a 200x80 region starting at `{10, 10}`. The bottom 20 pixels of the image are clipped, leaving the top portion visible.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -175,11 +168,6 @@ document.destroy();
 
 The following example demonstrates how to apply transparency and rotation to an image in a PDF document using the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class. Transparency is controlled through the graphics state, while rotation is applied by transforming the graphics context before drawing the image, enabling advanced visual effects.
 
-- **Rotation unit** — `rotateTransform(angle)` accepts the angle in **degrees**. Positive values rotate clockwise; negative values rotate counter-clockwise.
-- **Transparency range** — `setTransparency(alpha)` accepts a value in the range **0.0 (fully transparent) to 1.0 (fully opaque)**. The default blending mode is normal alpha blending.
-
-> Transformations are applied in the order they are called. In this example, the coordinate system is first translated, then rotated, and the image is drawn at the new origin.
-
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument, PdfPage, PdfGraphics, PdfImage, PdfBitmap, PdfGraphicsState } from '@syncfusion/ej2-pdf';
@@ -194,15 +182,15 @@ let graphics: PdfGraphics = page.graphics;
 let image: PdfImage = new PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Save the current graphics state (to restore later)
 let state: PdfGraphicsState = graphics.save();
-// Translate the coordinate system to the required position
-graphics.translateTransform({ x: 100, y: 100 });
-// Apply transparency (0.0 = fully transparent, 1.0 = fully opaque)
+//Translate the coordinate system to the  required position
+graphics.translateTransform({ x: 100, y: 100});
+//Apply transparency
 graphics.setTransparency(0.5);
-// Rotate the coordinate system by -45 degrees
+//Rotate the coordinate system
 graphics.rotateTransform(-45);
 // Draw the image.
-image.draw(graphics, { x: 10, y: 20 });
-// Restore the saved graphics state
+image.draw(graphics,{ x: 10, y: 20});
+// Restore the graphics state to remove the clipping region
 graphics.restore(state);
 // Save the document
 document.save('Output.pdf');
@@ -223,14 +211,14 @@ var image = new ej.pdf.PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Save the current graphics state (to restore later)
 var state = graphics.save();
 // Translate the coordinate system to the required position
-graphics.translateTransform({ x: 100, y: 100 });
-// Apply transparency (0.0 = fully transparent, 1.0 = fully opaque)
+graphics.translateTransform({x: 100, y: 100});
+// Apply transparency
 graphics.setTransparency(0.5);
-// Rotate the coordinate system by -45 degrees
+// Rotate the coordinate system
 graphics.rotateTransform(-45);
 // Draw the image.
-image.draw(graphics, { x: 10, y: 20 });
-// Restore the saved graphics state
+image.draw(graphics, {x: 10, y: 20});
+// Restore the graphics state to remove the clipping region
 graphics.restore(state);
 // Save the document
 document.save('Output.pdf');
@@ -245,4 +233,4 @@ document.destroy();
 - [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
 - [JavaScript PDF Library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
 - [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
-- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/fluent2/pdf/default)
+- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default.html)

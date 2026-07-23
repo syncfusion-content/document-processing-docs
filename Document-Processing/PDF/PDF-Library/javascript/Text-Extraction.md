@@ -8,14 +8,12 @@ documentation: UG
 
 # Text Extraction in JavaScript PDF Library
 
-Syncfusion's JavaScript PDF library allows you to extract text from a particular page or from the entire PDF document. The [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor) class from the `@syncfusion/ej2-pdf-data-extract` add-on package supports four extraction modes:
+The JavaScript PDF library allows you to extract text from a particular page or from the entire PDF document. The [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor) class from the `@syncfusion/ej2-pdf-data-extract` add-on package supports four extraction modes:
 
 - **Basic text extraction** — Retrieve plain text content.
 - **Page-range extraction** — Retrieve plain text from a defined start and end page.
 - **Layout-based text extraction** — Preserve the visual layout of the source document.
 - **Bounds-based text extraction** — Retrieve per-line, per-word, and per-character (glyph) information, including position (`bounds`), font, size, style, and color.
-
-Use basic or layout-based extraction when you only need the textual content. Use bounds-based extraction when you also need positional and typographic information (for example, to build a search index, highlight matches, or re-render text).
 
 N> The `@syncfusion/ej2-pdf-data-extract` add-on package also powers the redaction features available in the JavaScript PDF Library.
 
@@ -23,46 +21,41 @@ N> The `@syncfusion/ej2-pdf-data-extract` add-on package also powers the redacti
 
 This example demonstrates how to extract plain text from a PDF document using the [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor) class. Basic text extraction retrieves text content from the entire PDF document.
 
-### `extractText(options)` options
-
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| `startPageIndex` | number | `0` | The zero-based index of the first page to extract. |
-| `endPageIndex` | number | Last page | The zero-based index of the last page to extract (inclusive). |
-| `isLayout` | boolean | `false` | When `true`, preserves the visual layout of text in the output. |
-
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
+
 import { PdfDocument } from '@syncfusion/ej2-pdf';
 import { PdfDataExtractor } from '@syncfusion/ej2-pdf-data-extract';
 
-// Load an existing PDF document (see "Loading a PDF document")
+// Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
 // Initialize a new instance of the `PdfDataExtractor` class
 let extractor: PdfDataExtractor = new PdfDataExtractor(document);
-// Extract text content from the PDF document
+// Extract text content from the PDF document.
 let text: string = extractor.extractText();
-// Release document resources
+// Save the document
+document.save('Output.pdf');
+// Close the document
 document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 
-// Load an existing PDF document (see "Loading a PDF document")
+// Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
-// Initialize a new instance of the `PdfDataExtractor` class
+// Initialize a new instance of the PdfDataExtractor class
 var extractor = new ej.pdfdataextract.PdfDataExtractor(document);
 // Extract text content from the PDF document
 var text = extractor.extractText();
-// Release document resources
+// Save the document
+document.save('Output.pdf');
+// Close the document
 document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
 
-N> All `extractText` options use **zero-based, inclusive** page indices. The first page of a document is at index `0`, and the last page is at `document.pageCount - 1`.
-
-## Working with text from a specific page range in a PDF document
+## Extract text from specific page range in a PDF document
 
 This example demonstrates how to extract text from a PDF document by specifying a start and end page index. This approach allows you to retrieve text content from a defined range of pages for processing or analysis.
 
@@ -71,7 +64,7 @@ This example demonstrates how to extract text from a PDF document by specifying 
 import { PdfDocument } from '@syncfusion/ej2-pdf';
 import { PdfDataExtractor } from '@syncfusion/ej2-pdf-data-extract';
 
-// Load an existing PDF document (see "Loading a PDF document")
+// Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
 // Initialize a new instance of the `PdfDataExtractor` class
 let extractor: PdfDataExtractor = new PdfDataExtractor(document);
@@ -83,7 +76,7 @@ document.destroy();
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 
-// Load an existing PDF document (see "Loading a PDF document")
+// Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Initialize a new instance of the `PdfDataExtractor` class
 var extractor = new ej.pdfdataextract.PdfDataExtractor(document);
@@ -104,7 +97,7 @@ This example demonstrates how to extract text from a PDF document using the [Pdf
 import { PdfDocument } from '@syncfusion/ej2-pdf';
 import { PdfDataExtractor } from '@syncfusion/ej2-pdf-data-extract';
 
-// Load an existing PDF document (see "Loading a PDF document")
+// Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
 // Initialize a new instance of the `PdfDataExtractor` class
 let extractor: PdfDataExtractor = new PdfDataExtractor(document);
@@ -116,7 +109,7 @@ document.destroy();
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 
-// Load an existing PDF document (see "Loading a PDF document")
+// Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Initialize a new instance of the `PdfDataExtractor` class
 var extractor = new ej.pdfdataextract.PdfDataExtractor(document);
@@ -130,7 +123,7 @@ document.destroy();
 
 N> Layout-based text extraction may take additional processing time when compared to the basic extraction mode.
 
-## Working with text extraction with bounds
+## Text extraction with bounds
 
 The following sections describe how to extract text along with positional and typographic information using the [extractTextLines](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#extracttextlines) method. The method returns a hierarchical collection of [TextLine](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/textline), [TextWord](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/textword), and [TextGlyph](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/textglyph) objects.
 
@@ -143,7 +136,7 @@ This example demonstrates how to extract text from a PDF page based on individua
 import { PdfDocument } from '@syncfusion/ej2-pdf';
 import { PdfDataExtractor, TextLine, TextWord, TextGlyph, PdfFontStyle, Rectangle } from '@syncfusion/ej2-pdf-data-extract';
 
-// Load an existing PDF document (see "Loading a PDF document")
+// Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
 // Initialize a new instance of the `PdfDataExtractor` class
 let extractor: PdfDataExtractor = new PdfDataExtractor(document);
@@ -172,7 +165,7 @@ document.destroy();
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 
-// Load an existing PDF document (see "Loading a PDF document")
+// Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Initialize a new instance of the `PdfDataExtractor` class
 var extractor = new ej.pdfdataextract.PdfDataExtractor(document);
@@ -210,7 +203,7 @@ This example demonstrates how to extract words from a PDF document using the [ex
 import { PdfDocument } from '@syncfusion/ej2-pdf';
 import { PdfDataExtractor, TextLine, TextWord, TextGlyph, PdfFontStyle, Rectangle } from '@syncfusion/ej2-pdf-data-extract';
 
-// Load an existing PDF document (see "Loading a PDF document")
+// Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
 // Initialize a new instance of the `PdfDataExtractor` class
 let extractor: PdfDataExtractor = new PdfDataExtractor(document);
@@ -238,7 +231,7 @@ document.destroy();
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 
-// Load an existing PDF document (see "Loading a PDF document")
+// Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Initialize a new instance of the `PdfDataExtractor` class
 var extractor = new ej.pdfdataextract.PdfDataExtractor(document);
@@ -275,7 +268,7 @@ You can retrieve a single character and its properties, including bounds, font n
 import { PdfDocument } from '@syncfusion/ej2-pdf';
 import { PdfDataExtractor, TextLine, TextWord, TextGlyph, PdfFontStyle, PdfColor, Rectangle } from '@syncfusion/ej2-pdf-data-extract';
 
-// Load an existing PDF document (see "Loading a PDF document")
+// Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
 // Initialize a new instance of the `PdfDataExtractor` class
 let extractor: PdfDataExtractor = new PdfDataExtractor(document);
@@ -307,7 +300,7 @@ document.destroy();
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 
-// Load an existing PDF document (see "Loading a PDF document")
+// Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Initialize a new instance of the `PdfDataExtractor` class
 var extractor = new ej.pdfdataextract.PdfDataExtractor(document);
@@ -344,4 +337,4 @@ document.destroy();
 - [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
 - [JavaScript PDF Library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
 - [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
-- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/fluent2/pdf/default)
+- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default.html)

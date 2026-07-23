@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Merging PDF Documents in JavaScript PDF Library
 
-The Syncfusion JavaScript PDF Library supports merging multiple PDF documents into a single file and importing pages from one document to another. This guide covers three common scenarios:
+The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) supports merging multiple PDF documents into a single file and importing pages from one document to another. This guide covers three common scenarios:
 
 - **Importing a Page Range** — copy the full range of pages from one document to another.
 - **Importing from Multiple Documents** — import selected page ranges from several source PDFs at specified positions.
@@ -15,7 +15,7 @@ The Syncfusion JavaScript PDF Library supports merging multiple PDF documents in
 
 ## Importing a Page Range
 
-This section explains how to import a range of pages from a source PDF into a destination document using the [importPageRange](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument#importpagerange) method. The overload used in this example copies the full range `[0, pageCount-1]` of the source document into the destination.
+This section explains how to import a range of pages from a source PDF into a destination document using the [importPageRange](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument#importpagerange) method.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -53,7 +53,7 @@ sourceDocument.destroy();
 
 ## Importing from Multiple Documents
 
-This section demonstrates how to import selected page ranges from multiple source PDFs into a destination document at specified positions using the [importPageRange](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument#importpagerange) method and [PdfPageImportOptions](https://ej2.syncfusion.com/documentation/api/pdf/pdfpageimportoptions). The `targetIndex` property controls where the imported pages are inserted in the destination document; when omitted, pages are appended at the end.
+This section demonstrates how to import selected page ranges from multiple source PDFs into a destination document at specified positions using the [importPageRange](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument#importpagerange) method and [PdfPageImportOptions](https://ej2.syncfusion.com/documentation/api/pdf/pdfpageimportoptions). This is useful for merging selected page ranges from different PDFs into one document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -117,7 +117,7 @@ sourceDocument2.destroy();
 
 ## Importing a Page with Optimization Options
 
-This example imports a single page from a source PDF into a destination document with rotation, resource optimization, and grouped form fields using the [PdfPageImportOptions](https://ej2.syncfusion.com/documentation/api/pdf/pdfpageimportoptions) class. The `targetIndex` property is optional; when omitted, the page is appended at the end of the destination document.
+This example imports a single page from a source PDF into a destination document with rotation, resource optimization, and grouped form fields using the [PdfPageImportOptions](https://ej2.syncfusion.com/documentation/api/pdf/pdfpageimportoptions) class. The `targetIndex` property is optional. If not specified, the page is appended at the end of the destination document.
 
 ### `PdfPageImportOptions` Properties
 
@@ -127,15 +127,6 @@ This example imports a single page from a source PDF into a destination document
 | `rotation` | `PdfRotationAngle` | The rotation angle applied to the imported page. |
 | `optimizeResources` | `boolean` | When `true`, merges duplicated resources (fonts, images) to reduce file size. |
 | `groupFormFields` | `boolean` | When `true`, groups form fields together for consistent appearance across viewers. |
-
-### `PdfRotationAngle` Enum
-
-| Member | Description |
-|--------|-------------|
-| `angle0` | No rotation (0°). |
-| `angle90` | Rotated 90° clockwise. |
-| `angle180` | Rotated 180°. |
-| `angle270` | Rotated 270° clockwise. |
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -196,4 +187,4 @@ sourceDocument.destroy();
 - [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
 - [JavaScript PDF Library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
 - [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
-- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/fluent2/pdf/default)
+- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default.html)

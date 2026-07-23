@@ -12,12 +12,11 @@ The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-
 
 ## Adding the document settings
 
-N> When no `PdfPageSettings` are provided, the PDF page is created using the default settings: A4 page size, portrait orientation, and 40 point page margins.
-
 This example shows how to configure custom page settings before adding a page to a PDF document. It creates a [PdfPageSettings](https://ej2.syncfusion.com/documentation/api/pdf/pdfpagesettings) instance, applies margins, page size, and sets the orientation.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
+
 import { PdfDocument, PdfPage, PdfPageSettings, PdfGraphics, PdfRotationAngle, PdfMargins, PdfPageOrientation, PdfFont, PdfFontFamily, PdfFontStyle, PdfBrush } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document.
@@ -41,8 +40,10 @@ graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200
 document.save('output.pdf');
 // Close the document and release resources.
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document.
 var document = new ej.pdf.PdfDocument();
 // Create a new PDF page settings instance.
@@ -68,9 +69,11 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
+N> When no `PdfPageSettings` are provided, the PDF page is created using the default settings: A4 page size, portrait orientation, and 40 point page margins.
+
 ## Working with document properties
 
-This example demonstrates how to create a PDF document, set its metadata properties, and then retrieve those properties using the `PdfDocumentInformation` class.
+This example demonstrates how to create a PDF document, get and set its metadata properties such as title, author, subject, keywords, creator, producer, language, and dates, and then retrieve these properties using the `PdfDocumentInformation` class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -78,20 +81,18 @@ import { PdfDocument, PdfDocumentInformation } from '@syncfusion/ej2-pdf';
 
 // Create a PDF document.
 let document: PdfDocument = new PdfDocument();
-
 // Set or update document properties.
 document.setDocumentInformation({
-    title: 'Sample PDF Document',         // Title of the PDF
-    author: 'John Doe',                   // Author name
-    subject: 'PDF Metadata Example',      // Subject of the document
-    keywords: 'PDF, Metadata, Example',   // Keywords for search
-    creator: 'JavaScript PDF Library',    // Application that created the PDF
-    producer: 'JavaScript PDF Library',   // PDF producer
-    language: 'en-US',                    // Language of the document
-    creationDate: new Date(),             // Creation date
-    modificationDate: new Date()          // Last modified date
+    title: 'Sample PDF Document', // Title of the PDF
+    author: 'John Doe', // Author name
+    subject: 'PDF Metadata Example', // Subject of the document
+    keywords: 'PDF, Metadata, Example', // Keywords for search
+    creator: 'JavaScript PDF Library', // Application that created the PDF
+    producer: 'JavaScript PDF Library', // PDF producer
+    language: 'en-US', // Language of the document
+    creationDate: new Date(), // Creation date
+    modificationDate: new Date() // Last modified date
 });
-
 // Access the document information.
 let documentProperties: PdfDocumentInformation = document.getDocumentInformation();
 // Get the title of the PDF document.
@@ -112,10 +113,8 @@ let language = documentProperties.language;
 let creationDate = documentProperties.creationDate;
 // Get the modification date of the PDF document.
 let modificationDate = documentProperties.modificationDate;
-
-// Add a page so the document is valid before saving.
+// Add a new page so the document is valid before saving.
 document.addPage();
-
 // Save the document.
 document.save('output.pdf');
 // Close the document.
@@ -128,15 +127,15 @@ document.destroy();
 var document = new ej.pdf.PdfDocument();
 // Set or update document properties.
 document.setDocumentInformation({
-    title: 'Sample PDF Document',         // Title of the PDF
-    author: 'John Doe',                   // Author name
-    subject: 'PDF Metadata Example',      // Subject of the document
-    keywords: 'PDF, Metadata, Example',   // Keywords for search
-    creator: 'JavaScript PDF Library',    // Application that created the PDF
-    producer: 'JavaScript PDF Library',   // PDF producer
-    language: 'en-US',                    // Language of the document
-    creationDate: new Date(),             // Creation date
-    modificationDate: new Date()          // Last modified date
+    title: 'Sample PDF Document', // Title of the PDF
+    author: 'John Doe', // Author name
+    subject: 'PDF Metadata Example', // Subject of the document
+    keywords: 'PDF, Metadata, Example', // Keywords for search
+    creator: 'JavaScript PDF Library', // Application that created the PDF
+    producer: 'JavaScript PDF Library', // PDF producer
+    language: 'en-US', // Language of the document
+    creationDate: new Date(), // Creation date
+    modificationDate: new Date() // Last modified date
 });
 // Access the document information.
 var documentProperties = document.getDocumentInformation();
@@ -158,10 +157,8 @@ var language = documentProperties.language;
 var creationDate = documentProperties.creationDate;
 // Get the modification date of the PDF document.
 var modificationDate = documentProperties.modificationDate;
-
-// Add a page so the document is valid before saving.
+// Add a new page so the document is valid before saving.
 document.addPage();
-
 // Save the document.
 document.save('output.pdf');
 // Close the document.
@@ -170,27 +167,11 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-### PdfDocumentInformation properties
-
-| Property | Type | Mutable | Description |
-|----------|------|---------|-------------|
-| `title` | string | Yes | Title of the PDF document. |
-| `author` | string | Yes | Author of the PDF document. |
-| `subject` | string | Yes | Subject of the PDF document. |
-| `keywords` | string | Yes | Comma-separated keywords for search. |
-| `creator` | string | Yes | Application that created the PDF. |
-| `producer` | string | Yes | PDF producer. |
-| `language` | string | Yes | Language of the document (for example, `en-US`). |
-| `creationDate` | Date | Yes | Creation date. |
-| `modificationDate` | Date | Yes | Last modified date. |
-
-N> The `setDocumentInformation` and `embedFont` signatures used in the samples above should be verified against the published `@syncfusion/ej2-pdf` API for the version you are using.
-
 ## Performing incremental updates on a PDF document
 
 The [isIncrementalUpdate](https://ej2.syncfusion.com/documentation/api/pdf/pdffilestructure#get-isincrementalupdate-boolean) property on the [PdfFileStructure](https://ej2.syncfusion.com/documentation/api/pdf/pdffilestructure) class controls whether modifications to a PDF document are appended incrementally or whether the entire file is rewritten.
 
-N> **Trade-offs**: Incremental updates are faster for small changes and preserve the document's revision history, but they can increase file size over time and may invalidate digital signatures that cover the modified content. Use a full rewrite (`isIncrementalUpdate = false`) when you need to minimize file size or when working with signed documents.
+N> Incremental updates are faster for small changes and preserve the document's revision history, but they can increase file size over time and may invalidate digital signatures that cover the modified content. Use a full rewrite (`isIncrementalUpdate = false`) when you need to minimize file size or when working with signed documents.
 
 ### Disabling incremental updates
 
@@ -228,51 +209,15 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-### Enabling incremental updates
-
-The following example appends changes instead of rewriting the file:
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument } from '@syncfusion/ej2-pdf';
-
-// Create a PDF document.
-let document: PdfDocument = new PdfDocument();
-// Enable incremental updates so changes are appended.
-document.fileStructure.isIncrementalUpdate = true;
-// Add a page.
-document.addPage();
-// Save the document.
-document.save('output.pdf');
-// Close the document.
-document.destroy();
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-// Create a PDF document.
-var document = new ej.pdf.PdfDocument();
-// Enable incremental updates so changes are appended.
-document.fileStructure.isIncrementalUpdate = true;
-// Add a page.
-document.addPage();
-// Save the document.
-document.save('output.pdf');
-// Close the document.
-document.destroy();
-{% endhighlight %}
-{% endtabs %}
-
 ## Flatten annotations and form fields
 
 The [flatten](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument#get-flatten-boolean) property converts all annotations and form fields in a PDF into static page content, removing interactivity while preserving the visual appearance of the annotations and form fields.
 
-N> **Edge cases**: If the document has no annotations or form fields, setting `flatten = true` has no visible effect. The operation is not reversible: once flattened, the original interactive elements cannot be recovered.
-
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument } from '@syncfusion/ej2-pdf';
 
-// Load an existing PDF document from a Uint8Array (for example, fetched from a server or read from disk).
-let data: Uint8Array = /* load PDF bytes */;
+// Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
 // Flatten PDF annotations and form fields.
 document.flatten = true;
@@ -280,10 +225,11 @@ document.flatten = true;
 document.save('output.pdf');
 // Destroy the document.
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
-// Load an existing PDF document from a Uint8Array (for example, fetched from a server or read from disk).
-var data = /* load PDF bytes */;
+
+// Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Flatten PDF annotations and form fields.
 document.flatten = true;
@@ -295,29 +241,11 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-### Loading an existing PDF
-
-The `PdfDocument` constructor accepts PDF data in the following formats:
-
-| Input type | Description |
-|------------|-------------|
-| `Uint8Array` | Raw PDF bytes. Use this when reading from a `File`, `Blob`, or `ArrayBuffer`. |
-| `ArrayBuffer` | Raw PDF bytes as an `ArrayBuffer`. |
-| `Blob` | A `Blob` containing PDF data (browser environments). |
-
-### Saving the PDF output
-
-The `save()` method supports the following usages:
-
-| Call | Environment | Description |
-|------|-------------|-------------|
-| `document.save('output.pdf')` | Node.js | Saves the PDF to the given file path. |
-| `document.save()` | Browser | Returns a `Promise<Uint8Array>`. |
-| `document.save(blob)` | Browser | Saves the PDF into a `Blob`. |
+N> If the document has no annotations or form fields, setting `flatten = true` has no visible effect. The operation is not reversible: once flattened, the original interactive elements cannot be recovered.
 
 ## Additional Resources
 
 - [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
 - [JavaScript PDF Library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
 - [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
-- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/fluent2/pdf/default)
+- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default.html)

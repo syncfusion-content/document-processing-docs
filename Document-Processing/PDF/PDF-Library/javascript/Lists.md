@@ -8,25 +8,11 @@ documentation: UG
 
 # Lists in JavaScript PDF Library
 
-The **JavaScript PDF Library** allows you to list the content in ordered and unordered lists. The ordered list can use numbers or letters (alphabetic characters), and the unordered list can use bullets, circles, squares, and asterisks as markers. Image-based markers are also supported through custom configuration; see the [Customize list markers](#customize-list-markers) section for details.
-
-## Overview
-
-The JavaScript PDF Library exposes a hierarchy of list classes rooted at the abstract `PdfList` base class.
-
-| Class | Description |
-|-------|-------------|
-| [PdfList](https://ej2.syncfusion.com/documentation/api/pdf/pdflist/) | Abstract base class that defines common list behavior such as `draw`, `items`, and pagination hooks. |
-| [PdfOrderedList](https://ej2.syncfusion.com/documentation/api/pdf/pdforderedlist/) | Renders items using a numeric or letter-based marker (for example, `1)`, `a)`, `i)`). |
-| [PdfUnorderedList](https://ej2.syncfusion.com/documentation/api/pdf/pdfunorderedlist/) | Renders items using a symbol-based marker (for example, `•`, `■`, `*`, `o`). |
-| [PdfListItem](https://ej2.syncfusion.com/documentation/api/pdf/pdflistitem/) | Represents a single item in a list. Exposes a `subList` property used to create nested lists. |
-| [PdfListItemCollection](https://ej2.syncfusion.com/documentation/api/pdf/pdflistitemcollection/) | A collection class that wraps an array of strings (or `PdfListItem` instances) and exposes array-style indexing, `at(index)`, `add(item)`, and `count`. |
-
-Both `PdfOrderedList` and `PdfUnorderedList` accept a `PdfListItemCollection` and an optional settings object that controls font, indentation, marker style, and so on.
+The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) aallows you to list the content in ordered and unordered lists. The ordered list can use numbers or letters (alphabetic characters), and the unordered list can use bullets, circles, squares, and asterisks as markers.
 
 ## Adding an ordered list
 
-This example demonstrates how to create an ordered list in a PDF document using the [PdfOrderedList](https://ej2.syncfusion.com/documentation/api/pdf/pdforderedlist/) class. Ordered lists allow you to present items in a structured, sequential format, typically numbered or lettered, enhancing readability and organization within the PDF content.
+This example demonstrates how to create an ordered list in a PDF document using the [PdfOrderedList](https://ej2.syncfusion.com/documentation/api/pdf/pdforderedlist) class. Ordered lists allow you to present items in a structured, sequential format, typically numbered or lettered, enhancing readability and organization within the PDF content.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -89,29 +75,6 @@ document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
-
-### PdfOrderedList options
-
-| Option | Type | Description |
-|--------|------|-------------|
-| `font` | `PdfFont` | Font used to render each list item. Use `document.embedFont(...)` to create. |
-| `format` | `PdfStringFormat` | Text layout settings such as alignment, line spacing, and clipping. |
-| `pen` | `PdfPen` | Stroke used for the marker glyph. |
-| `brush` | `PdfBrush` | Fill used for the marker glyph. |
-| `indent` | `number` | Left indent (in points) for the entire list block, applied at every nesting level. |
-| `textIndent` | `number` | Indent (in points) from the marker to the item text. |
-| `style` | `PdfNumberStyle` | Numbering format. See the enum table below. |
-| `delimiter` | `string` | Character(s) placed between the marker and the item text. Default is `.`. |
-
-### PdfNumberStyle values
-
-| Value | Rendered marker |
-|-------|-----------------|
-| `numeric` | `1`, `2`, `3`, ... |
-| `lowerLetter` | `a`, `b`, `c`, ... |
-| `upperLetter` | `A`, `B`, `C`, ... |
-| `lowerRoman` | `i`, `ii`, `iii`, ... |
-| `upperRoman` | `I`, `II`, `III`, ... |
 
 ## Adding an unordered list
 
@@ -179,19 +142,6 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-### PdfUnorderedList options
-
-| Option | Type | Description |
-|--------|------|-------------|
-| `font` | `PdfFont` | Font used to render each list item. |
-| `format` | `PdfStringFormat` | Text layout settings. |
-| `pen` | `PdfPen` | Stroke used for the marker glyph. |
-| `brush` | `PdfBrush` | Fill used for the marker glyph. |
-| `indent` | `number` | Left indent (in points) for the entire list block. |
-| `textIndent` | `number` | Indent (in points) from the marker to the item text. |
-| `style` | `PdfUnorderedListStyle` | Marker style. See the enum table below. |
-| `delimiter` | `string` | Character(s) placed between the marker and the item text. |
-
 ## Customize list markers
 
 This example demonstrates how to change the marker style of an unordered list in a PDF document using the [PdfUnorderedList](https://ej2.syncfusion.com/documentation/api/pdf/pdfunorderedlist/) class. The marker defines the symbol that appears before each list item. You can choose from the predefined marker styles listed below to visually distinguish different list types or emphasize specific content.
@@ -250,25 +200,6 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-**Switching marker style**
-
-To render a different marker, change the `style` value. The list below shows how each style renders for the same input (`['PDF', 'XlsIO', 'DocIO', 'PPT']`):
-
-```ts
-// Disk
-let list: PdfUnorderedList = new PdfUnorderedList(items, { style: PdfUnorderedListStyle.disk });
-// Circle
-let list: PdfUnorderedList = new PdfUnorderedList(items, { style: PdfUnorderedListStyle.circle });
-// Square
-let list: PdfUnorderedList = new PdfUnorderedList(items, { style: PdfUnorderedListStyle.square });
-// Asterisk
-let list: PdfUnorderedList = new PdfUnorderedList(items, { style: PdfUnorderedListStyle.asterisk });
-// No marker
-let list: PdfUnorderedList = new PdfUnorderedList(items, { style: PdfUnorderedListStyle.none });
-```
-
-> For image-based markers, supply an image to the `markerImage` property of the list before drawing.
-
 ## Applying custom fonts to list items
 
 Custom fonts, including Standard, TrueType, and CJK types, can be embedded and applied to list items for consistent multilingual text rendering across platforms.
@@ -321,45 +252,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-### TrueType font (from a file)
-
-TrueType fonts are loaded from a `.ttf` file and embedded in the resulting PDF so that the text renders consistently on any viewer.
-
-```ts
-import { PdfDocument, PdfPage, PdfUnorderedList, PdfListItemCollection, PdfFontStyle } from '@syncfusion/ej2-pdf';
-
-let document: PdfDocument = new PdfDocument();
-let page: PdfPage = document.addPage();
-let fontData: Uint8Array = new Uint8Array('OpenSans-Regular.ttf');
-let items: PdfListItemCollection = new PdfListItemCollection(['PDF', 'XlsIO', 'DocIO', 'PPT']);
-let list: PdfUnorderedList = new PdfUnorderedList(items, {
-    font: document.embedFont(fontData, 36, PdfFontStyle.regular)
-});
-list.draw(page, { x: 50, y: 50 });
-document.save('output.pdf');
-document.destroy();
-```
-
-### CJK font (Chinese, Japanese, Korean)
-
-CJK fonts must be loaded from a font file because the built-in Standard fonts do not include full CJK glyph sets.
-
-```ts
-import { PdfDocument, PdfPage, PdfUnorderedList, PdfListItemCollection, PdfFontStyle } from '@syncfusion/ej2-pdf';
-
-let document: PdfDocument = new PdfDocument();
-let page: PdfPage = document.addPage();
-let fontData: Uint8Array = new Uint8Array('NotoSansCJK-Regular.ttc');
-let items: PdfListItemCollection = new PdfListItemCollection(['日本語', '简体中文', '繁體中文', '한국어']);
-let list: PdfUnorderedList = new PdfUnorderedList(items, {
-    font: document.embedFont(fontData, 36, PdfFontStyle.regular)
-});
-list.draw(page, { x: 50, y: 50 });
-document.save('output.pdf');
-document.destroy();
-```
-
-> In the browser, load the font file with `fetch(url).then(r => r.arrayBuffer())` and pass the resulting `Uint8Array` to `embedFont`. In Node.js, use `fs.readFileSync`.
+N> Refer [Text](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/text#drawing-text-using-different-fonts) page to know about using different fonts
 
 ## Creating nested list structures
 
@@ -425,8 +318,6 @@ document.destroy();
 
 This example shows how long lists automatically continue onto the next page when drawn using the [PdfUnorderedList](https://ej2.syncfusion.com/documentation/api/pdf/pdfunorderedlist/) class. By applying a [PdfLayoutFormat](https://ej2.syncfusion.com/documentation/api/pdf/pdflayoutformat/), the layout engine handles page breaks smoothly while preserving markers, indentation, and nested levels. This ensures consistent rendering of multi-page or dynamically generated list content.
 
-The `suffix` option appends a character after each marker; for example, `suffix: '_'` renders items as `_PDF`, `_XlsIO`, and so on.
-
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument, PdfPage, PdfList, PdfLayoutFormat, PdfUnorderedList, PdfLayoutBreakType, PdfLayoutType, PdfListItemCollection, PdfLayoutResult } from '@syncfusion/ej2-pdf';
@@ -487,23 +378,9 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-### PdfLayoutFormat options
-
-| Property | Type | Description |
-|----------|------|-------------|
-| `layout` | `PdfLayoutType` | Layout strategy. Use `PdfLayoutType.paginate` to enable automatic page breaks. |
-| `break` | `PdfLayoutBreakType` | How an element that does not fit on the current page is handled. `fitElement` keeps the element together by moving it to the next page. |
-
-### PdfLayoutResult properties
-
-| Property | Type | Description |
-|----------|------|-------------|
-| `page` | `PdfPage` | The page on which the last fragment of the element was drawn. Use this page to draw the next element. |
-| `bounds` | `Rectangle` | Rectangle describing where the element was drawn. `bounds.x` and `bounds.y` are the top-left corner; `bounds.width` and `bounds.height` are the rendered size. |
-
 ## Additional Resources
 
 - [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
 - [JavaScript PDF Library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
 - [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
-- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/fluent2/pdf/default)
+- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default.html)
