@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create a custom toolbar in React PDF Viewer Component | Syncfusion
-description: Learn here all about custom toolbar in Syncfusion React PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: Learn how to create a custom toolbar in the Syncfusion React PDF Viewer component.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -163,7 +163,7 @@ import { RouteComponentProps } from 'react-router';
 
 **Step 4: Hide the default toolbar of the PDF Viewer.**
 
-Hide the default toolbar using `enableToolbar` and `enableThumbnail` properties:
+Hide the default toolbar using the `enableToolbar` property:
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -545,4 +545,4 @@ Sample: [https://document.syncfusion.com/demos/pdf-viewer/react/#/tailwind3/pdfv
 
 
 ## See also
-* [Feature Modules](./feature-module)
+* [Primary toolbar](./primary-toolbar)
