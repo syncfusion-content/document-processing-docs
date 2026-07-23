@@ -1,6 +1,6 @@
 ---
 title: Word Document Conversion Library | Syncfusion
-description: The .NET Word Conversion Library converts Word documents to several file formats, including PDF, Image, HTML, RTF, ODT, Markdown, and Text, without Microsoft Office dependencies. It also supports converting HTML, RTF, Markdown, and Text to Word documents.
+description: Convert Word documents to PDF, Image, HTML, RTF, ODT, Markdown, and Text — and back — using the .NET Word Conversion Library without Microsoft Office.
 platform: document-processing
 control: general
 documentation: UG
