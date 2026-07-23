@@ -116,7 +116,7 @@ Step 14: Publish has succeeded.
 
 Step 15: Now, go to the Azure portal and select the App Services. After running the service, click **Get function URL** by copying it. Then, paste it in the below client sample (which will request the Azure Functions, to perform **open and save a Word document** using the template Word document). You will get the output Word document as follows.
 
-![Open and Save in Azure Functions (Flex Consumption)](ASP-NET-Core_images/OpenAndSaveOutput.png)
+![Open and Save in Azure Functions Flex Consumption](ASP-NET-Core_images/OpenAndSaveOutput.png)
 
 ## Steps to post the request to Azure Functions
 
