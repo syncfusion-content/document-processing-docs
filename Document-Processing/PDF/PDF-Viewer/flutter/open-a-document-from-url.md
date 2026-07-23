@@ -31,7 +31,13 @@ To load a PDF from network using [SfPdfViewer.network](https://pub.dev/documenta
 <true/>
 ```
 
-N> Due to CORS security restrictions in a web application, some PDFs obtained from URLs might not be loaded on the `SfPdfViewer` web platform. Kindly refer to the Flutter [forum](https://github.com/flutter/flutter/issues/51125) for more information on this issue.
+N> Due to CORS security restrictions in a web application, some PDFs obtained from URLs might not be loaded on the `SfPdfViewer` web platform. Kindly refer to the Flutter [forum](https://github.com/flutter/flutter/issues/51125) for more information on this issue. See the [Resolve CORS issue](#resolve-cors-issue) section below for details on how the issue occurs and how to resolve it.
+
+## Resolve CORS issue
+
+When loading a PDF from a URL in the `SfPdfViewer` web platform, the browser enforces the Cross-Origin Resource Sharing (CORS) policy. The PDF is fetched using an `XMLHttpRequest`, and the browser blocks the response if the server hosting the PDF does not include the appropriate CORS headers (such as `Access-Control-Allow-Origin`) in its response. As a result, the PDF fails to load and you may see a CORS error in the browser console such as **"Access to XMLHttpRequest at 'PDF_URL' from origin 'APP_ORIGIN' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."**
+
+This typically happens when the PDF is hosted on a third-party server, a CDN that does not allow cross-origin access, or a local server without CORS configured.
 
 This issue can be resolved by configuring the CORS settings on the requested server or by disabling the security settings in **chrome.dart** as mentioned in the steps below:
 
