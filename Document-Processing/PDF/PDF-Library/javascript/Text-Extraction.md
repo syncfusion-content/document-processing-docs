@@ -262,12 +262,12 @@ document.destroy();
 
 ### Working with characters
 
-You can retrieve a single character and its properties, including bounds, font name, font size, font style, and text color, using the [extractTextLines](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor/#extracttextlines) method. Each `TextWord` exposes a `glyphs` collection of [TextGlyph](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/textglyph) objects, and each glyph's `color` is a [PdfColor](https://ej2.syncfusion.com/documentation/api/pdf/pdfcolor) value. Refer to the code sample below.
+You can retrieve a single character and its properties, including bounds, font name, font size, and text color, using the [extractTextLines](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#extracttextlines) method. Refer to the code sample below.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument } from '@syncfusion/ej2-pdf';
-import { PdfDataExtractor, TextLine, TextWord, TextGlyph, PdfFontStyle, PdfColor, Rectangle } from '@syncfusion/ej2-pdf-data-extract';
+import { PdfDocument, PdfColor, Rectangle } from '@syncfusion/ej2-pdf';
+import { PdfDataExtractor, TextLine, TextWord, TextGlyph, PdfFontStyle } from '@syncfusion/ej2-pdf-data-extract';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
