@@ -127,7 +127,7 @@ root.render(<App />);
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples)
 
-## See also
+## Related topics
 
 - [Form Designer overview](../overview)
 - [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)

@@ -71,7 +71,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## Modify PDF Form Field Properties by Field type
+## Modify PDF Form Field Properties by Field Type
 
 ### Textbox
 - UI: Update value, font, size, colors, border thickness, alignment, max length, multiline.
@@ -243,7 +243,7 @@ root.render(<App />);
 ### RadioButton
 - UI: Set selected item in a group (same Name).
 ![RadioButton properties panel showing grouped options](../../../javascript-es6/images/ui-radiobutton-edit.png)
-- API: [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) to set selected value and border appearance.
+- API: [`updateFormField()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/formdesigner#updateformfield) to set selected value and border appearance.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -290,7 +290,7 @@ root.render(<App />);
 ### ListBox
 - UI: Add/remove items, set selection, adjust fonts/colors.
 ![ListBox properties panel showing items and selection](../../../javascript-es6/images/ui-listbox-edit.png)
-- API: [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) for items, selection, borders.
+- API: [`updateFormField()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/formdesigner#updateformfield) for items, selection, borders.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -348,7 +348,7 @@ root.render(<App />);
 ### DropDown
 - UI: Add/remove items, default value, appearance.
 ![DropDown properties panel showing list items and default value](../../../javascript-es6/images/ui-dropdown-edit.png)
-- API: [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) for items, value, borders.
+- API: [`updateFormField()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/formdesigner#updateformfield) for items, value, borders.
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
 import * as ReactDOM from 'react-dom/client';
@@ -405,7 +405,7 @@ root.render(<App />);
 ### Signature Field
 - UI: Tooltip, thickness, indicator text, required/visibility.
 ![Signature field properties panel showing indicator and appearance](../../../javascript-es6/images/ui-signature-edit.png)
-- API: [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, required, colors, borders.
+- API: [`updateFormField()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/formdesigner#updateformfield) for tooltip, required, colors, borders.
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
 import * as ReactDOM from 'react-dom/client';
@@ -457,7 +457,7 @@ root.render(<App />);
 ### Initial Field
 - UI: Tooltip, indicator text, thickness, required/visibility.
 ![Initial field properties panel showing indicator and tooltip](../../../javascript-es6/images/ui-initial-edit.png)
-- API: [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, required, colors, borders.
+- API: [`updateFormField()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/formdesigner#updateformfield) for tooltip, required, colors, borders.
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
 import * as ReactDOM from 'react-dom/client';
@@ -508,12 +508,12 @@ root.render(<App />);
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples)
 
-## See also
+## Related topics
 
 - [Form Designer overview](../overview)
 - [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)
 - [Create form fields](./create-form-fields)
-- [Remove form Fields](./remove-form-fields)
+- [Remove form fields](./remove-form-fields)
 - [Style form fields](./customize-form-fields)
 - [Group form fields](../group-form-fields)
 - [Form validation](../form-validation)
