@@ -6,27 +6,29 @@ control: DocIO
 documentation: UG
 ---
 
-# Text Conversions in Word Library
+# Convert Word to Text Document and Vice Versa
 
-The Essential<sup>&reg;</sup> DocIO converts the Word document into Text file and vice versa. 
+The Essential<sup>&reg;</sup> DocIO converts a Word document to a Text file and vice versa without Microsoft Word or interop dependencies.
 
 To quickly start converting a Word document to Text and vice versa, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=sK71TfWEtk8" %}
 
 ## Convert Word to Text
 
-The following code example shows how to convert the Word document into text file.
+The following code example shows how to convert a Word document into a text file.
 
 N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
+N> The output text file contains only the textual content of the Word document. Document formatting such as bold, italics, lists, tables, and images is not preserved in the text file. For full-fidelity conversion, consider Word-to-PDF or Word-to-DOCX.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Text-file-conversion/Convert-Word-to-text-file/.NET/Convert-Word-to-text-file/Program.cs" %}
-FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-//Opens an existing document from file system through constructor of WordDocument class
+//Opens an existing document from the file system through the constructor of the WordDocument class
+using (FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
 using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
 {
-    //Saves the Word document to  MemoryStream
+    //Saves the Word document to a MemoryStream
     MemoryStream stream = new MemoryStream();
     document.Save(stream, FormatType.Txt);
     //Closes the Word document
@@ -37,16 +39,16 @@ using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx)
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads a template document
 WordDocument document = new WordDocument("Template.docx");
-//Saves the document as text file
+//Saves the document as a text file
 document.Save("WordToText.txt", FormatType.Txt);
 //Closes the document
 document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Loads a text file
+'Loads a Word document
 Dim document As New WordDocument("Template.docx")
-'Saves the document as text file
+'Saves the document as a text file
 document.Save("WordToText.txt", FormatType.Txt)
 'Closes the document
 document.Close()
@@ -58,7 +60,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Convert Text to Word
 
-The following code example shows how to convert a Text file into Word document.
+The following code example shows how to convert a Text file into a Word document.
 
 {% tabs %}
 
@@ -78,7 +80,7 @@ using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Txt))
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads a text file
 WordDocument document = new WordDocument("Template.txt");
-//Saves the document as text file
+//Saves the document as a Word document
 document.Save("TextToWord.docx", FormatType.Docx);
 //Closes the document
 document.Close();
@@ -87,7 +89,7 @@ document.Close();
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Loads a text file
 Dim document As New WordDocument("Template.txt")
-'Saves the document as text file
+'Saves the document as a Word document
 document.Save("TextToWord.docx", FormatType.Docx)
 'Closes the document
 document.Close()
@@ -97,7 +99,11 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Text-file-conversion/Convert-text-file-to-Word).
 
-The following code example shows how to retrieve the Word document contents as a plain text.
+## Retrieve Word Document as Plain Text
+
+The following code example shows how to retrieve the textual contents of a Word document and place them into a new Word document. This is useful when you need to strip out section breaks, page breaks, and other non-textual elements while keeping the content editable.
+
+N> `document.GetText()` returns the document's content as a `string` that may include section breaks, paragraph marks, and other control characters. If you only need the visible text, iterate the body items (sections, paragraphs, tables) and concatenate the inner text instead.
 
 {% tabs %}
 
@@ -108,15 +114,15 @@ using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx)
 {
     //Gets the document text
     string text = document.GetText();
-    //Creates new Word document
+    //Creates a new Word document
     WordDocument newdocument = new WordDocument();
-    //Adds new section
+    //Adds a new section
     IWSection section = newdocument.AddSection();
-    //Adds new paragraph
+    //Adds a new paragraph
     IWParagraph paragraph = section.AddParagraph();
     //Appends the text to the paragraph
     paragraph.AppendText(text);
-    //Saves the Word document to MemoryStream
+    //Saves the new Word document to a MemoryStream
     MemoryStream stream = new MemoryStream();
     newdocument.Save(stream, FormatType.Docx);
     //Closes the Word document
@@ -130,16 +136,16 @@ using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx)
 WordDocument document = new WordDocument("Template.docx");
 //Gets the document text
 string text = document.GetText();
-//Creates new Word document
+//Creates a new Word document
 WordDocument newdocument = new WordDocument();
-//Adds new section
+//Adds a new section
 IWSection section = newdocument.AddSection();
-//Adds new paragraph
+//Adds a new paragraph
 IWParagraph paragraph = section.AddParagraph();
 //Appends the text to the paragraph
 paragraph.AppendText(text);
 //Saves and closes the document
-newdocument.Save("Sample.docx");
+newdocument.Save("Sample.docx", FormatType.Docx);
 newdocument.Close();
 document.Close();
 {% endhighlight %}
@@ -149,16 +155,16 @@ document.Close();
 Dim document As New WordDocument("Template.docx")
 'Gets the document text
 Dim text As String = document.GetText()
-'Creates new Word document
+'Creates a new Word document
 Dim newdocument As New WordDocument()
-'Adds new section
+'Adds a new section
 Dim section As IWSection = newdocument.AddSection()
-'Adds new paragraph
+'Adds a new paragraph
 Dim paragraph As IWParagraph = section.AddParagraph()
 'Appends the text to the paragraph
 paragraph.AppendText(text)
 'Saves and closes the document
-newdocument.Save("Sample.docx")
+newdocument.Save("Sample.docx", FormatType.Docx)
 newdocument.Close()
 document.Close()
 {% endhighlight %}
