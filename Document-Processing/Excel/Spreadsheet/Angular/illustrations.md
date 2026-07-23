@@ -169,7 +169,7 @@ Chart feature allows you to view and insert a chart in a spreadsheet, and you ca
   
 {% previewsample "/document-processing/samples/spreadsheet/angular/chart-cs1" %}
 
-### Customization of Line Chart Markers
+#### Customization of Line Chart Markers
 
 Using the [`actionBegin`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#actionbegin) event, you can change the shape, size, fill color, and border of the line chart marker. In the following example, you can see the modified marker appearance, such as shape and size, while creating the line chart with UI interaction.
 

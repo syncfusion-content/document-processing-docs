@@ -161,7 +161,8 @@ You can save spreadsheet data along with **comments** using **File > Save As > M
 > Comments are **not included** when exporting to **.xls**, **.csv**, and **.pdf**.
 
 ### Why comments are not saved in `.xls`
-The **.xls** format is based on the older Excel binary structure (BIFF8), which does not support modern features like **threaded comments**. Threaded comments introduced in newer Excel versions require the **Open XML** structure used by `.xlsx`.
+The **.xls** format is based on the older Excel binary structure (BIFF8), which does not support modern features like **threaded comments**.
+Threaded comments introduced in newer Excel versions require the **Open XML** structure used by `.xlsx`.
 
 > To retain threaded comments, always save the workbook in **.xlsx** format.
 
