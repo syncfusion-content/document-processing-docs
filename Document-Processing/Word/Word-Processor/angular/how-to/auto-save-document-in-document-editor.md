@@ -1,26 +1,26 @@
 ---
 layout: post
-title: Auto save to AWS S3 in Angular Document editor | Syncfusion
-description: Learn here all about Auto save document in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Auto Save to AWS S3 in Angular DOCX Editor | Syncfusion
+description: Learn how to auto-save documents to AWS S3 from the Syncfusion Angular Document Editor component.
 platform: document-processing
 control: Auto save document in document editor 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Auto save document to AWS S3 in Angular Document editor component
+# Auto Save Document to AWS S3 in Angular Document Editor component
 
-In this article, we are going to see how to auto save the document in AWS S3. You can automatically save the edited content in regular intervals of time. It helps reduce the risk of data loss by saving an open document automatically at customized intervals.
+This article explains how to auto-save the document in AWS S3. You can save the edited content automatically at regular intervals, which reduces the risk of data loss by saving the open document at customized intervals.
 
-The following example illustrates how to auto save the document in AWS S3.
+The following example illustrates how to auto-save the document in AWS S3.
 
-* In the client-side, using content change event, we can automatically save the edited content in regular intervals of time. Based on `contentChanged` boolean, the document send as DOCX format to server-side using [`saveAsBlob`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#saveasblob) method.
+* On the client side, use the `contentChange` event to detect edits and save the document at regular intervals. When the `contentChanged` flag is `true`, the document is sent to the server in Document format using the [`saveAsBlob()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#saveasblob) method.
 
 ```typescript
 /**
  * Add below codes in app.component.html file
  */
- <ejs-documenteditorcontainer #documenteditor_default [enableToolbar]=true (created)="onCreate()"
+ <ejs-documenteditorcontainer #documenteditor_default [enableToolbar]="true" (created)="onCreate()"
                 (contentChange)="onContentChange()" height="600px" style="display:block;"></ejs-documenteditorcontainer>
 
 /**
@@ -53,7 +53,7 @@ export class AppComponent {
                       formData.append('data', exportedDocument);
                       /* tslint:disable */
                       var req = new XMLHttpRequest();
-                      // Replace your running Url here
+                      // Replace with your running URL here.
                       req.open(
                         'POST',
                         'http://localhost:62869/api/documenteditor/SaveToS3',
@@ -62,7 +62,7 @@ export class AppComponent {
                       req.onreadystatechange = () => {
                         if (req.readyState === 4) {
                           if (req.status === 200 || req.status === 304) {
-                            console.log('Saved sucessfully');
+                            console.log('Saved successfully');
                           }
                         }
                       };
@@ -79,9 +79,11 @@ export class AppComponent {
 }
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> 1. The Web Service link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` used in the `serviceUrl` property of the Document Editor is intended solely for demonstration and evaluation purposes.
+N> 2. For production deployment, please host your own Web Service with your required server configurations.
+N> 3. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own Web Service and use it for the `serviceUrl` property.
 
-* In server-side, configure the access key and secret key in `web.config` file and register profile in `startup.cs`.
+* On the server side, configure the access key and secret key in the `web.config` file and register the profile in `startup.cs`.
 
 In `web.config`, add key like below format:
 
@@ -99,7 +101,7 @@ In `startup.cs`, register profile in below format:
 Amazon.Util.ProfileManager.RegisterProfile("sync_development","", "");
 ```
 
-* In server-side, Receives the stream content from client-side and process it to save the document in aws s3. Add Web API in controller file like below to save the document in aws s3.
+* On the server side, receive the stream from the client and process it to save the document in AWS S3. Add a Web API method in a controller file to save the document in AWS S3, as shown below.
 
 ```c#
 [AcceptVerbs("Post")]
@@ -113,7 +115,7 @@ public string SaveToS3()
     file.CopyTo(stream);
     UploadFileStreamToS3(stream, "documenteditor", "", "GettingStarted.docx");
     stream.Close();
-    return "Sucess";
+    return "Success";
 }
 
 public bool UploadFileStreamToS3(System.IO.Stream localFilePath, string bucketName, string subDirectoryInBucket, string fileNameInS3)
@@ -125,15 +127,15 @@ public bool UploadFileStreamToS3(System.IO.Stream localFilePath, string bucketNa
 
     if (subDirectoryInBucket == "" || subDirectoryInBucket == null)
     {
-request.BucketName = bucketName; //no subdirectory just bucket name  
+        request.BucketName = bucketName; // No subdirectory; just the bucket name.
     }
     else
-    {   // subdirectory and bucket name  
-request.BucketName = bucketName + @"/" + subDirectoryInBucket;
+    {   // Subdirectory and bucket name.
+        request.BucketName = bucketName + @"/" + subDirectoryInBucket;
     }
-    request.Key = fileNameInS3; //file name up in S3  
+    request.Key = fileNameInS3; // File name in S3.
     request.InputStream = localFilePath;
-    utility.Upload(request); //commensing the transfer  
+    utility.Upload(request); // Commence the transfer.
 
     return true; //indicate that the file was sent  
 }
