@@ -317,7 +317,7 @@ document.destroy();
 
 ## List pagination
 
-This example shows how long lists automatically continue onto the next page when drawn using the [PdfUnorderedList](https://ej2.syncfusion.com/documentation/api/pdf/pdfunorderedlist) class. By applying a [PdfLayoutFormat](https://ej2.syncfusion.com/documentation/api/pdf/pdflayoutformat/), the layout engine handles page breaks smoothly while preserving markers, indentation, and nested levels. This ensures consistent rendering of multi-page or dynamically generated list content.
+This example shows how long lists automatically continue onto the next page when drawn using the [PdfUnorderedList](https://ej2.syncfusion.com/documentation/api/pdf/pdfunorderedlist) class. By applying a [PdfLayoutFormat](https://ej2.syncfusion.com/documentation/api/pdf/pdflayoutformat), the layout engine handles page breaks smoothly while preserving markers, indentation, and nested levels. This ensures consistent rendering of multi-page or dynamically generated list content.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

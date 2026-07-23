@@ -845,9 +845,9 @@ document.destroy();
 
 ### Get certificate information from a PDF signature
 
-This example demonstrates how to retrieve the certificate information of a PDF signature using the [`getCertificateInformation()`](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature/#getcertificateinformation) method of the [PdfSignature](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature) class. This information includes details about the signer's certificate used for digital signing.
+This example demonstrates how to retrieve the certificate information of a PDF signature using the [getCertificateInformation()](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature#getcertificateinformation) method of the [PdfSignature](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature) class. This information includes details about the signer's certificate used for digital signing.
 
-The [`PdfCertificateInformation`](https://ej2.syncfusion.com/documentation/api/pdf/pdfcertificateinformation) object exposes the following properties:
+The `PdfCertificateInformation` object exposes the following properties:
 
 | Property | Type | Description |
 |---|---|---|
@@ -909,7 +909,7 @@ document.destroy();
 
 ### Get digital signature configuration options
 
-This example demonstrates how to retrieve the configuration options of a digital signature in a PDF document using the [`getSignatureOptions()`](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature#getsignatureoptions) method of the [PdfSignature](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature) class. These options include details such as the cryptographic standard and digest algorithm used for signing.
+This example demonstrates how to retrieve the configuration options of a digital signature in a PDF document using the [getSignatureOptions](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature#getsignatureoptions) method of the [PdfSignature](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature) class. These options include details such as the cryptographic standard and digest algorithm used for signing.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
