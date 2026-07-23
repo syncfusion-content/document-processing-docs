@@ -3,7 +3,7 @@ layout: post
 title: Cell Range in Angular Spreadsheet Component | Syncfusion
 description: Learn here all about cell range in Syncfusion Essential Angular Spreadsheet component, it's elements and more.
 platform: document-processing
-control: Cell range 
+control: Cell range
 documentation: ug
 ---
 
@@ -21,7 +21,7 @@ Wrap text can be applied or removed to a cell or range of cells in the following
 * Select or deselect wrap button from ribbon toolbar to apply or remove the wrap text to the selected range.
 * Using the [`wrap`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#wrap) method, you can apply or remove the wrap text once the component is loaded.
 
-The following code example shows the wrap text functionality in spreadsheet.
+The following code example shows the wrap text functionality in the Spreadsheet.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
@@ -55,10 +55,10 @@ You can merge the range of cells in the following ways,
 The available merge options in spreadsheet are,
 
 | Type | Action |
-|-------|---------|
-| Merge All | Combines all the cells in a range in to a single cell (default). |
-| Merge Horizontally | Combines cells in a range as row-wise. |
-| Merge Vertically | Combines cells in a range as column-wise. |
+|------|--------|
+| Merge All | Combines all the cells in a range into a single cell (default). |
+| Merge Horizontally | Combines cells in a range row-wise (across columns). |
+| Merge Vertically | Combines cells in a range column-wise (across rows). |
 | UnMerge | Splits the merged cells into multiple cells. |
 
 The following code example shows the merge cells operation in spreadsheet.
@@ -169,10 +169,10 @@ The following code example demonstrates how to add custom data validation with a
 
 The following features have some limitations in Data Validation:
 
-* Entire row data validation.
-* Insert row between the data validation.
-* Copy/paste with data validation.
-* Delete cells between data validation applied range.
+* Applying validation to an entire row.
+* Inserting a row inside a validated range (the validation range does not shift automatically).
+* Copying and pasting values across validated ranges.
+* Deleting cells inside a validated range.
 
 ## Auto Fill
 
@@ -183,7 +183,7 @@ You can do this by one of the following ways,
 * Using “AutoFillOptions” menu which is open, while drag and drop the cell using fill handle element.
 * Use the autoFill() method programmatically.
 
-The available parameters in `autoFill()` method are,
+The available parameters in the `autoFill()` method are:
 
 | Parameter | Type | Description |
 |-----|------|----|

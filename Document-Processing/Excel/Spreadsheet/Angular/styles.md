@@ -3,7 +3,7 @@ layout: post
 title: Styles in Angular Spreadsheet component | Syncfusion
 description: Learn here all about Styles in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Styles 
+control: Styles
 documentation: ug
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: Undo redo in Angular Spreadsheet component | Syncfusion
 description: Learn here all about Undo redo in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Undo redo 
+control: Undo redo
 documentation: ug
 ---
 
@@ -19,21 +19,21 @@ By default, the `UndoRedo` module is injected internally into Spreadsheet to per
 
 It reverses the last action you performed with Spreadsheet. Undo can be done by any of the following ways:
 
-* Select the undo item from HOME tab in Ribbon toolbar.
-* Use `Ctrl + Z` keyboard shortcut to perform the undo.
+* Select the undo item from the HOME tab in the Ribbon toolbar.
+* Use the `Ctrl + Z` keyboard shortcut.
 * Use the [`undo`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#undo) method programmatically.
 
 ## Redo
 
 It reverses the last undo action you performed with Spreadsheet. Redo can be done by any of the following ways:
 
-* Select the redo item from HOME tab in Ribbon toolbar.
-* Use `Ctrl + Y` keyboard shortcut to perform the redo.
+* Select the redo item from the HOME tab in the Ribbon toolbar.
+* Use the `Ctrl + Y` keyboard shortcut.
 * Use the [`redo`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#redo) method programmatically.
 
 ## Update custom actions in UndoRedo collection
 
-You can update your own custom actions in UndoRedo collection, by using the [`updateUndoRedoCollection`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#updateundoredocollection) method. And also customize the undo redo operations of your custom action by using `actionComplete` event.
+You can add your own custom actions to the UndoRedo collection by using the [`updateUndoRedoCollection`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#updateundoredocollection) method. You can also customize the undo and redo behavior of your custom action by handling the `actionComplete` event.
 
 The following code example shows `How to update and customize your own actions for undo redo` functionality in the Spreadsheet control.
 

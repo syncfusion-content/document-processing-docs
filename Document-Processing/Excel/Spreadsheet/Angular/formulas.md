@@ -3,7 +3,7 @@ layout: post
 title: Formulas in Angular Spreadsheet component | Syncfusion
 description: Learn here all about Formulas in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Formulas 
+control: Formulas
 documentation: ug
 ---
 
@@ -62,9 +62,9 @@ The following code example shows an unsupported formula in the spreadsheet.
   
 {% previewsample "/document-processing/samples/spreadsheet/angular/formula-cs1" %}
 
-Second, if you want to directly compute any formula or expression, you can use the [computeExpression](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#computeexpression) method. This method will work for both built-in and used-defined/custom formula.
+Second, if you want to directly compute any formula or expression, you can use the [computeExpression](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#computeexpression) method. This method will work for both built-in and user-defined/custom formula.
 
-The following code example shows how to use `computeExpression` method in the spreadsheet.
+The following code example shows how to use the `computeExpression` method in the spreadsheet.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
@@ -84,7 +84,7 @@ Formula bar is used to edit or enter cell data in much easier way. By default, t
 
 ## Named Ranges
 
-You can define a meaningful name for a cell range and use it in the formula for calculation. It makes your formula much easier to understand and maintain. You can add named ranges to the Spreadsheet in the following ways,
+You can define a meaningful name for a cell range and use it in a formula for calculation. Named ranges make formulas much easier to understand and maintain. You can add named ranges to the Spreadsheet in the following ways:
 
 * Using the [`definedNames`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#definednames) collection, you can add multiple named ranges at initial load.
 * Use the [`addDefinedName`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#adddefinedname) method to add a named range dynamically.
@@ -118,7 +118,7 @@ You can configure the calculate mode using the [`calculationMode`](https://ej2.s
 
 In Automatic Mode, formulas are recalculated instantly whenever a dependent cell is modified. This mode is perfect for scenarios where real-time updates are essential, ensuring that users see the latest results without additional actions.
 
-For example, consider a spreadsheet where cell `C1` contains the formula `=A1+B1`. When the value in `A1` or `B1` changes, `C1` updates immediately without requiring any user intervention. You can enable this mode by setting the [`calculationMode`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#calculationmode) property to `Automatic`.
+For example, consider a spreadsheet where cell `C1` contains the formula `=A1+B1`. When the value in `A1` or `B1` changes, `C1` updates immediately without requiring any user intervention. To enable this mode, set the [`calculationMode`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#calculationmode) property to `CalculationMode.Automatic`.
 
 The following code example demonstrates how to set the Automatic calculation mode in a Spreadsheet.
 
@@ -138,7 +138,7 @@ The following code example demonstrates how to set the Automatic calculation mod
 
 In Manual Mode, formulas are not recalculated automatically when cell values are modified. Instead, recalculations must be triggered explicitly. This mode is ideal for scenarios where performance optimization is a priority, such as working with large datasets or computationally intensive formulas.
 
-For example, imagine a spreadsheet where cell `C1` contains the formula `=A1+B1`. When the value in `A1` or `B1` changes, the value in `C1` will not update automatically. Instead, the recalculation must be initiated manually using either the `Calculate Sheet` or `Calculate Workbook` option. To manually initiate recalculation, the Spreadsheet provides two options:
+For example, consider a spreadsheet where cell `C1` contains the formula `=A1+B1`. When the value in `A1` or `B1` changes, the value in `C1` will not update automatically. Instead, the recalculation must be initiated manually using either the `Calculate Sheet` or `Calculate Workbook` option. To manually initiate recalculation, the Spreadsheet provides two options:
 
 * `Calculate Sheet`: Recalculates formulas for the active sheet only.
 * `Calculate Workbook`: Recalculates formulas across all sheets in the workbook.
@@ -159,7 +159,7 @@ The following code example demonstrates how to set the Manual calculation mode i
 
 ## Supported Formulas
 
-The list of supported formulas can be find in following [`link`](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/formulas#supported-formulas).
+The list of supported formulas can be found in the following [`link`](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/formulas#supported-formulas).
 
 ## Formula Error Dialog
 

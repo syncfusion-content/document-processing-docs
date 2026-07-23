@@ -11,7 +11,7 @@ documentation: ug
 
 ## Localization
 
-The [Localization](https://helpej2.syncfusion.com/angular/documentation/common/globalization/localization) library allows you to localize the default text content of the Spreadsheet. The [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) has static text on some features (cell formatting, Merge, Data validation, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the [`locale`]https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#locale) value and translation object.
+The [Localization](https://ej2.syncfusion.com/angular/documentation/common/globalization/localization) library allows you to localize the default text content of the Spreadsheet. The [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) has static text on some features (cell formatting, Merge, Data validation, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the [`locale`]https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#locale) value and translation object.
 
 The following list of properties and their values are used in the Spreadsheet.
 
@@ -189,10 +189,10 @@ UnprotectSheet | Unprotect Sheet
 SelectCells | Select cells
 FormatCells | Format cells
 FormatRows | Format rows
-Format Columns | Format columns
+FormatColumns | Format columns
 InsertLinks | Insert links
 ProtectContent | Protect the contents of locked cells
-ProtectAllowUser | Allow all users of this worksheet to |
+ProtectAllowUser | Allow all users of this worksheet to
 EditAlert | The cell you're trying to change is protected. To make a change, unprotect the sheet.
 FindReplaceTooltip | Find & Replace
 InsertingEmptyValue | Reference value is not valid.
@@ -212,7 +212,7 @@ SearchWithin | Search within
 SearchBy | Search by
 Reference | Reference
 Workbook | Workbook
-NoElements | We couldn’t find what you were looking for.
+NoElements | We couldn't find what you were looking for.
 FindWhat | Find what
 ReplaceWith | Replace with
 EnterValue | Enter Value
@@ -238,7 +238,7 @@ EqualTo | Equal to
 NotEqualTo | Not equal to
 Greaterthan | Greater than
 Lessthan | Less than
-GreaterThanOrEqaulTo | Greater than or eqaul to
+GreaterThanOrEqualTo | Greater than or equal to
 LessThanOrEqualTo | Less than or equal to
 InCellDropDown | In-cell-dropdown
 Sources | Sources
@@ -361,7 +361,7 @@ VerticalAxisTitle | Vertical Axis Title
 HorizontalAxisTitle | Horizontal Axis Title
 EnterTitle | Enter Title
 ProtectWorkbook | Protect Workbook
-Password | Password (optional) |
+Password | Password (optional)
 unProtectPassword | Password
 EnterThePassword | Enter the password
 ConfirmPassword | Confirm Password
@@ -376,7 +376,7 @@ IsProtected | is protected
 
 ### Loading translations
 
-To load translation object in an application, use [`load`](https://helpej2.syncfusion.com/angular/documentation/common/globalization/internationalization#loading-cldr-json-data) function of the [`L10n`](https://helpej2.syncfusion.com/angular/documentation/common/globalization/internationalization) class.
+To load translation object in an application, use [`load`](https://ej2.syncfusion.com/angular/documentation/common/globalization/internationalization#loading-cldr-json-data) function of the [`L10n`](https://ej2.syncfusion.com/angular/documentation/common/globalization/internationalization) class.
 
 The following example demonstrates the Spreadsheet in `French` culture. In the below sample we have translated the ribbon tab names and Home tab content (clipboard, cell style).
 
@@ -394,7 +394,7 @@ The following example demonstrates the Spreadsheet in `French` culture. In the b
 
 ## Internationalization
 
-The Internationalization library is used to globalize number, date, and time values in the spreadsheet component.
+The Internationalization library is used to globalize number, date, and time values in the Spreadsheet component.
 
 For importing json files in your application, you need to include the json-typings.d.ts file.
 
@@ -443,4 +443,4 @@ You can refer to our [Angular Spreadsheet Editor](https://www.syncfusion.com/spr
 
 ## See Also
 
-* [Localization](https://helpej2.syncfusion.com/angular/documentation/common/globalization/localization)
+* [Localization](https://ej2.syncfusion.com/angular/documentation/common/globalization/localization)
