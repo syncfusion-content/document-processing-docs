@@ -13,7 +13,7 @@ This section explains how to manage Excel workbooks in the Spreadsheet control, 
 
 ## Creating a new Excel Workbook
 
-A new workbook can be created by using the [Create](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_Create_System_Int32_) method, which accepts an `int` parameter specifying the number of worksheets to include. By default, a workbook will be created with a single worksheet.
+A new workbook can be created by using the [Create](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_Create_System_Int32_) method with specified number of worksheets. By default, a workbook will be created with a single worksheet.
 
 {% tabs %}
 {% highlight c# tabtitle="Form1.cs" %}

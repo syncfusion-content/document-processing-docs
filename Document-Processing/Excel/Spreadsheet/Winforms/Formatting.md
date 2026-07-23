@@ -15,7 +15,7 @@ Styles and formats defined in an Excel file are automatically imported. You can 
 
 * Cell font settings (font name, size, color, style, etc.)
 * Cell background
-* Cell content alignment (vertical and horizontal alignment, indentation, and orientation)
+* Cell content alignment (vertical and horizontal alignment, indentation, and text wrapping)
 * Cell borders
 * Number Format
 * Merge and Unmerge Cells
@@ -311,7 +311,7 @@ N> You need to [refresh the view](https://help.syncfusion.com/document-processin
 
 ## Clear Formatting
 
-Spreadsheet provides support to clear the contents of a cell along with its formatting, or to specify the required clear options using the [ExcelClearOptions](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelClearOptions.html) enum, which specifies the options to clear cell formats, content, comments, conditional formats, data validation, or all of them.
+Spreadsheet provides support to clear the contents of a cell along with its formatting, or to specify the required clear options using the [ExcelClearOptions](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelClearOptions.html) enum, which specifies the options to clear cell formats, content, comments, conditional formats, data validation, or to clear all of them.
 
 {% tabs %}
 {% highlight c# %}

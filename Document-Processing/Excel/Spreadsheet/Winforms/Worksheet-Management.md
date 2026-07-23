@@ -13,7 +13,7 @@ This section explains the operations you can perform on worksheets in a workbook
 
 ## Insert and Delete
 
-The Spreadsheet lets you insert and delete worksheets in a workbook.
+The Spreadsheet allows you to insert and delete worksheets in a workbook.
 
 {% tabs %}
 {% highlight c# %}
@@ -32,7 +32,7 @@ spreadsheet.RemoveSheet("Sheet2");
 
 ## Hide and Unhide
 
-The Spreadsheet lets you hide and unhide worksheets in a workbook. Hidden sheets remain in the workbook and can be displayed again using `UnhideSheet`.
+The Spreadsheet allows you to hide and unhide worksheets in a workbook. Hidden sheets remain in the workbook and can be displayed again using `UnhideSheet`.
 
 {% tabs %}
 {% highlight c# %}
@@ -48,7 +48,7 @@ spreadsheet.UnhideSheet("Sheet2");
 
 ## Rename a Sheet programmatically
 
-The Spreadsheet lets you rename a worksheet in the workbook programmatically by using the [RenameSheet](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_RenameSheet_System_String_System_String_) method.
+The Spreadsheet allows you to rename a worksheet in the workbook programmatically by using the [RenameSheet](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_RenameSheet_System_String_System_String_) method.
 
 {% tabs %}
 	
@@ -64,7 +64,7 @@ spreadsheet.RenameSheet("ExistingSheetName", "NewSheetName");
 
 ### Protecting a Worksheet
 
-The Spreadsheet lets you protect a worksheet with or without a password to prevent users from modifying its contents. Protection can be configured through the [ExcelSheetProtection](https://help.syncfusion.com/cr/windowsforms/Syncfusion.XlsIO.ExcelSheetProtection.html) options.
+The Spreadsheet allows you to protect a worksheet with or without a password to prevent users from modifying its contents. Protection can be configured through the [ExcelSheetProtection](https://help.syncfusion.com/cr/windowsforms/Syncfusion.XlsIO.ExcelSheetProtection.html) options.
 
 The available protection options are:
 
@@ -107,7 +107,7 @@ spreadsheet.UnProtectSheet(spreadsheet.ActiveSheet, "123");
 
 ### Protecting a Workbook
 
-The Spreadsheet lets you protect the structure and windows of a workbook. Protecting the structure prevents a user from adding, deleting, or displaying hidden worksheets. Protecting the windows controls the size and position of the workbook window.
+The Spreadsheet allows you to protect the structure and windows of a workbook. Protecting the structure prevents a user from adding, deleting, or displaying hidden worksheets. Protecting the windows controls the size and position of the workbook window.
 
 {% tabs %}
 {% highlight c# %}
@@ -123,7 +123,7 @@ spreadsheet.Unprotect("123");
 
 ## Gridlines
 
-The Spreadsheet lets you control the visibility of gridlines in a worksheet.
+The Spreadsheet allows you to control the visibility of Gridlines in a worksheet.
 
 {% tabs %}
 {% highlight c# %}
@@ -139,7 +139,7 @@ spreadsheet.SetGridLinesVisibility(false);
 
 ## Headings
 
-The Spreadsheet lets you show or hide the row and column headers in a worksheet.
+The Spreadsheet allows you to show or hide the row and column headers in a worksheet.
 
 {% tabs %}
 {% highlight c# %}
@@ -152,7 +152,7 @@ spreadsheet.SetRowColumnHeadersVisibility(false);
 
 ## Zooming
 
-The Spreadsheet lets you zoom in and zoom out of a worksheet view. The [AllowZooming](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_AllowZooming) property determines whether users are allowed to change the zoom level interactively.
+The Spreadsheet allows you to zoom in and zoom out of a worksheet view. The [AllowZooming](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_AllowZooming) property determines whether users are allowed to change the zoom level interactively.
 
 {% tabs %}
 {% highlight c# %}

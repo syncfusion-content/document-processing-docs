@@ -111,7 +111,7 @@ shape.Width = 200;
 
 ## Text Boxes
 
-Spreadsheet supports importing rich text boxes in `SpreadsheetGrid`. To add a text box at runtime, use the [AddTextBox](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.GraphicCells.GraphicCellHelper.html#Syncfusion_Windows_Forms_Spreadsheet_GraphicCells_GraphicCellHelper_AddTextBox_Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_Syncfusion_XlsIO_IWorksheet_Syncfusion_Windows_Forms_CellGrid_ScrollAxis_RowColumnIndex_System_Drawing_Size_System_String_) method.
+Spreadsheet supports importing RichText Box in `SpreadsheetGrid`. To add a text box at runtime, use the [AddTextBox](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.GraphicCells.GraphicCellHelper.html#Syncfusion_Windows_Forms_Spreadsheet_GraphicCells_GraphicCellHelper_AddTextBox_Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_Syncfusion_XlsIO_IWorksheet_Syncfusion_Windows_Forms_CellGrid_ScrollAxis_RowColumnIndex_System_Drawing_Size_System_String_) method.
 
 {% tabs %}
 {% highlight c# %}
@@ -119,7 +119,7 @@ Spreadsheet supports importing rich text boxes in `SpreadsheetGrid`. To add a te
 var rtfText = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset1 Calibri;}{\\f1\\fnil\\fcharset1 Calibri;}}{\\colortbl;\\red0\\green0\\blue0;\\red255\\green0\\blue0;}{\\f0\\fs22\\b\\cf1\\u83*\\u121*\\u110*\\u99*\\u102*\\u117*\\u115*\\u105*\\u111*\\u110*\\u32*\\b0}                           {\\f1\\fs22\\cf2\\u83*\\u111*\\u102*\\u116*\\u119*\\u97*\\u114*\\u101*\\u32*}{\\f1\\fs22\\cf1\\u80*\\u118*\\u116*\\u46*\\u32*\\u76*\\u116*\\u100*}}";
 var textBox = spreadsheet.AddTextBox(spreadsheet.ActiveSheet, new RowColumnIndex(5, 5), new Size(200, 200), rtfText) as TextBoxShapeImpl;
 
-// Repositioning the text box
+// Repositioning the RichTextBox
 textBox.Left = 200;
 textBox.Top = 200;
          

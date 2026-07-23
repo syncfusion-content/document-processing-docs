@@ -45,11 +45,11 @@ Description</th></tr>
 <tr>
 <td>
 Paste</td><td>
-Pastes with all format options from the source range</td></tr>
+Paste with all format options from the source range</td></tr>
 <tr>
 <td>
 Formula</td><td>
-Pastes the formulas only</td></tr>
+Paste the formulas only</td></tr>
 <tr>
 <td>
 Keep Source Formatting</td><td>
@@ -57,15 +57,15 @@ Maintains the source range’s formatting</td></tr>
 <tr>
 <td>
 Value</td><td>
-Pastes the values only</td></tr>
+Paste the values only</td></tr>
 <tr>
 <td>
 Format</td><td>
-Pastes only the formats without pasting the values</td></tr>
+Paste only the formats without pasting the values</td></tr>
 <tr>
 <td>
 Value & Source Formatting</td><td>
-Maintains the source range’s original format and pastes only values</td></tr>
+Maintains the source range’s original format and paste only values</td></tr>
 </table>
 
 N> When the content is copied from external source, Spreadsheet does not support the format settings (paste options).

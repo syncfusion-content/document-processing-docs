@@ -63,7 +63,7 @@ Spreadsheet includes several advanced features like
 * **Supported file types** - Ability to import the following Excel file types: XLS, XLSX, XLSM, XLT, XLTX, and CSV (comma-delimited).
 
 ## Related Link
-- [Getting Started](https://help.syncfusion.com/document-processing/excel/spreadsheet/winforms/getting-started)
+- [Getting Started](Getting-Started)
 - [API Reference](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.html)
 - [Online Demos](https://github.com/syncfusion/spreadsheet-editor-sdk-winforms-demos)
 - [GitHub Samples](https://github.com/SyncfusionExamples/winforms-spreadsheet-examples)

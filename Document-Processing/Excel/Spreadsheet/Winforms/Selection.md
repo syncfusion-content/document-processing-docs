@@ -316,7 +316,7 @@ Moves the active current cell in one cell to the right of the selection.</td></t
 <tr>
 <td>
 SHIFT+TAB</td><td>
-Moves the active current cell one cell to the left of the selection.</td></tr>
+Moves the active current cell in one cell to the left of the selection.</td></tr>
 <tr>
 <td>
 BACKSPACE</td><td>

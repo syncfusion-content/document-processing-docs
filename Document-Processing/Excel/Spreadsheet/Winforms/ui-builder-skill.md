@@ -146,7 +146,7 @@ To start using the skill:
 
 3. Start prompting the agent with a clear description of your UI requirements.
 
-> For Syncfusion® Code Studio, if the agent isn't listed, configure the agent location as shown in the [Code Studio agent file locations documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/usersettings#agent-file-locations).
+> For Syncfusion® Code Studio, if the UI Builder agent is not shown, ensure that the agent location is configured to use it in the chat, and refer to the [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/usersettings#agent-file-locations) to configure the agent location properly.
 
 Example Prompts:
 
@@ -173,7 +173,7 @@ Follow these guidelines to get the most out of UI Builder and ensure high-qualit
 
 ## Troubleshooting
 
-- **APM installation failure**: Refer to the [APM installation troubleshooting guide](https://microsoft.github.io/apm/getting-started/installation/#troubleshooting).
+- **APM installation failure**: Refer to the [documentation](https://microsoft.github.io/apm/getting-started/installation/#troubleshooting).
 
 - **Skills not loading**: Ensure the **.agent/** and **.github/agents/** folders exist in your project and that the skill was installed successfully using APM. Verify that the correct agent is selected from the Agent dropdown in your IDE.
 
