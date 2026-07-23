@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Organize Pages in Mobile PDF Viewer React
+# Organize Pages in React Mobile PDF Viewer
 
 The PDF Viewer provides a mobile-responsive layout for the `Organize Pages` feature, optimized for touch interactions on small screens. The toolbar and navigation adapt to the device viewport so page-management controls remain accessible on phones and tablets.
 
