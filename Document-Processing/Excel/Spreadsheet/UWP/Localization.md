@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Localization in UWP Spreadsheet control | Syncfusion®
-description: Learn here all about Localization support in Syncfusion® UWP Spreadsheet (SfSpreadsheet) control and more.
+title: Localization in UWP Spreadsheet control | SyncfusionÂ®
+description: Learn here all about Localization support in SyncfusionÂ® UWP Spreadsheet (SfSpreadsheet) control and more.
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
@@ -24,7 +24,7 @@ Setting of the culture information,
 
 public MainPage()
 {
-    System.Globalization.CultureInfo.CurrentUICulture = new System.Globalization.CultureInfo("ja-JP");
+    System.Globalization.CultureInfo.CurrentUICulture = new System.Globalization.CultureInfo("ja");
     InitializeComponent();
 }
 
@@ -41,7 +41,7 @@ The following steps show how to implement localization in SfSpreadsheet.
 * Add the default English ('en-US') resource file of `SfSpreadsheet` to the `Resources` folder, named `Syncfusion.SfSpreadsheet.UWP.resw`.
   You can download the .resw file [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/Syncfusion.SfSpreadsheet.UWP.Resources1773657760)
 * Create a .resw (resource) file under the `Resources` folder and name it `Syncfusion.SfSpreadsheet.UWP.[Culture name].resw`.
-  For example, `Syncfusion.SfSpreadsheet.UWP.ja-JP.resw` for the Japanese culture.
+  For example, `Syncfusion.SfSpreadsheet.UWP.ja.resw` for the Japanese culture.
 
 ![UWP SfSpreadsheet displays added resource file](localization_images/Loc_Image1.png)
 

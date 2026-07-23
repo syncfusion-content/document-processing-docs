@@ -25,7 +25,7 @@ IConditionalFormat condition1 = condition.AddCondition();
 
 ### Based on CellValue
 
-To format the cells based on cell value, define the conditional format type as **CellValue** and other formatting options such as formula, operator, and background color, to the specified cell or range. Finally, invalidate the cells to refresh the view.
+To format the cells based on cell value, define the conditional format type as **CellValue** and other formatting options such as formula, operator, background color etc., to the specified cell or range. Finally, invalidate the cells to refresh the view.
 
 {% tabs %}
 {% highlight c# %}
@@ -43,7 +43,7 @@ spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Col(1));
 
 ### Based on Formula or Cell References
 
-To format the cells based on a Formula or Cell References, define the conditional format type as **Formula** and other formatting options such as formula and background color, to the specified cell or range. Finally, invalidate the cells to refresh the view.
+To format the cells based on a Formula or Cell References, define the conditional format type as **Formula** and other formatting options such as formula, background color etc., to the specified cell or range. Finally, invalidate the cells to refresh the view.
 
 {% tabs %}
 {% highlight c# %}
@@ -60,7 +60,7 @@ spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Col(1));
 
 ### Based on SpecificText
 
-To format the cells based on specified text, define the conditional format type as **SpecificText** and other formatting options such as the particular text, operator, and background color, to the specified cell or range. Finally, invalidate the cells to refresh the view.
+To format the cells based on specified text, define the conditional format type as **SpecificText** and other formatting options such as the particular text, operator, background color etc., to the specified cell or range. Finally, invalidate the cells to refresh the view.
 
 {% tabs %}
 {% highlight c# %}
@@ -78,7 +78,7 @@ spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Col(1));
 
 ### Based on TimePeriod
 
-To format the cells based on a time period, define the conditional format type as **TimePeriod** and other formatting options such as the time period for the date, operator, and background color, to the specified cell or range. Finally, invalidate the cells to refresh the view.
+To format the cells based on a time period, define the conditional format type as **TimePeriod** and other formatting options such as the time periods for the date, operator, background color etc., to the specified cell or range. Finally, invalidate the cells to refresh the view.
 
 {% tabs %}
 {% highlight c# %}
@@ -99,7 +99,7 @@ spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Col(1));
 
 ## Data Bars
 
-To apply the conditional format based on data bars, define the conditional format type as **DataBar** and specify the properties associated with DataBars, such as bar color, `MinPoint`, and `MaxPoint`, to the specified cell or range. Finally, invalidate the cells to update the view.
+To apply the conditional format based on data bars, define the conditional format type as **DataBar** and specify the properties associated with DataBars, such as bar color, MinPoint, MaxPoint etc., to the specified cell or range. Finally, invalidate the cells to update the view.
 
 {% tabs %}
 {% highlight c# %}
@@ -121,7 +121,7 @@ spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Col(2));
 
 ## Color Scales
 
-To apply the conditional format based on color scales, define the conditional format type as **ColorScale** and specify the other properties associated with ColorScale, such as condition count and color criteria, to the specified cell or range. Finally, invalidate the cells to update the view.
+To apply the conditional format based on color scales, define the conditional format type as **ColorScale** and specify the other properties associated with ColorScale, such as condition count, color criteria etc., to the specified cell or range. Finally, invalidate the cells to update the view.
 
 {% tabs %}
 {% highlight c# %}
@@ -143,7 +143,7 @@ spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Col(3));
 
 ## Icon Sets
 
-To apply the conditional format for Icon sets, define the conditional format type as **IconSet** and the properties associated with the IconSet, such as the type of icon and criteria, to the specified cell or range. Finally, invalidate the cells to update the view.
+To apply the conditional format for Icon sets, define the conditional format type as **IconSet** and the properties associated with the IconSet, such as the type of icon, criteria etc., to the specified cell or range. Finally, invalidate the cells to update the view.
 
 {% tabs %}
 {% highlight c# %}

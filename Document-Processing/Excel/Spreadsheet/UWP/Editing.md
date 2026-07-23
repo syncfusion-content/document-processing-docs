@@ -13,9 +13,9 @@ This section explains the Editing behavior, Data Validation, and Hyperlinks in S
 
 ## Editing
 
-SfSpreadsheet supports editing; you can modify and commit cell values in the workbook.
+SfSpreadsheet supports editing, you can modify and commit cell values in the workbook.
 
-By default, editing is enabled in SfSpreadsheet. To disable editing, set the `AllowEditing` property to `false`.
+By default, Editing is enabled in SfSpreadsheet. To disable editing, set the `AllowEditing` property to `false`.
 
 {% tabs %}
 {% highlight c# %}

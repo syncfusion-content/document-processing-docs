@@ -115,7 +115,7 @@ spreadsheet.ActiveGrid.InvalidateCell(gridRange, true);
 
 ## Cell Alignment
 
-SfSpreadsheet allows the user to align the content of the cell. The alignment options include Horizontal Alignment, Vertical Alignment, Indentation, and Orientation.
+SfSpreadsheet allows the user to align the content of the cell. The alignment options include Horizontal Alignment, Vertical Alignment, Indentation, Orientation etc.
 
 {% tabs %}
 {% highlight c# %}
