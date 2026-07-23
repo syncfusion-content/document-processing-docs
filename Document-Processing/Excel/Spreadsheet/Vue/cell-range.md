@@ -45,7 +45,7 @@ The following features have some limitations in wrap text:
 
 Merge cells allows users to span two or more cells in the same row or column into a single cell. When cells with multiple values are merged, top-left most cell data will be the data for the merged cell. By default, the merge cells option is enabled. Use [`allowMerge`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#allowmerge) property to enable or disable the merge cells option in spreadsheet.
 
-You can merge the range of cells in the following ways,
+You can merge a range of cells in the following ways,
 
 * Set the `rowSpan` and `colSpan` property in `cell` to merge the number of cells at initial load.
 * Select the range of cells and apply merge by selecting the desired option from ribbon toolbar.
@@ -143,7 +143,7 @@ For example, consider a scenario where you want to ensure that a cell contains a
 
 When this rule is applied, the Spreadsheet evaluates the entered value against the formula. If a user enters a value outside the specified range, an alert notifies them of the invalid input. This helps users correct errors efficiently and ensures that only desired values are accepted.
 
-You can apply custom data validation using two methods.
+You can apply custom data validation in two methods:
 
 * The first is through the Data Validation dialog in the Ribbon toolbar. Navigate to the Data tab, select the Data Validation option, and choose the Custom type from the Allow dropdown menu.
 * The second method is programmatically, using the [`addDataValidation()`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#adddatavalidation) method, which allows developers to set custom rules dynamically via code.

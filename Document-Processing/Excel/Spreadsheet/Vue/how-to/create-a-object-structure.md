@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Create a object structure in Vue Spreadsheet component
+# Create an object structure in Vue Spreadsheet component
 
 This topic guides you to construct a JSON structure that can be passed to the [`openFromJson`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#openfromjson) method to render the spreadsheet. The JSON structure is an object with the key as `Workbook` and the [`properties`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#properties) of the spreadsheet as value.
 
@@ -15,15 +15,15 @@ This topic guides you to construct a JSON structure that can be passed to the [`
 { Workbook: {} }
 ```
 
-The following properties are the root level properties of the `Workbook` object.
+The following properties are the root-level properties of the `Workbook` object.
 
 | Property | Type | Description |
 |-------|-------|-------|
-| activeSheetIndex | number | Specifies active sheet index in the workbook. |
+| activeSheetIndex | number | Specifies the active sheet index in the workbook. |
 | sheets | `Sheet[]` | Contains a list of sheet properties. |
 | definedNames | `DefineName[]` | Specifies the name for a range and uses it in the formula for calculation. |
 
-The following table defines each property of the `Sheet`.
+The following table defines the properties of a `Sheet`.
 
 | Property | Type | Description |
 |-------|-------|-------|
@@ -36,7 +36,7 @@ The following table defines each property of the `Sheet`.
 | isProtected | boolean | Specifies to protect the cells in the sheet. |
 | state | [`SheetState`](../worksheet#sheet-visibility) | Specifies the sheet visibility state. There must be at least one visible sheet in Spreadsheet. |
 | columns | `Column[]` | Contains a list of column properties |
-| rows | `Row[]` | Contains a list of row properties |
+| rows | `Row[]` | Contains a list of row properties. |
 | protectSettings | [`ProtectSettings`](../protect-sheet#protect-sheet) | Configures protect and its options. |
 | conditionalFormats | `ConditionalFormat[]` | Specifies the conditional formatting for the sheet. |
 
@@ -77,14 +77,14 @@ The following table defines each property of the `CellStyle`.
 
 | Property | Type | Description |
 |-------|-------|-------|
-| fontFamily | `FontFamily` | Specifies font family of the cell. |
-| verticalAlign | `VerticalAlign` | Specifies vertical align of the cell. |
-| textAlign | `TextAlign` | Specifies text align style of the cell. |
-| textIndent | string | Specifies text indent style of the cell. |
-| color | string | Specifies font color of the cell. |
+| fontFamily | `FontFamily` | Specifies the font family of the cell. |
+| verticalAlign | `VerticalAlign` | Specifies the vertical alignment of the cell. |
+| textAlign | `TextAlign` | Specifies the text alignment of the cell. |
+| textIndent | string | Specifies the text indent of the cell. |
+| color | string | Specifies the font color of the cell. |
 | backgroundColor | string | Specifies the background color of the cell. |
-| fontWeight | `FontWeight` | Specifies font weight of the cell. |
-| fontStyle | `FontStyle` | Specifies font style of the cell. |
+| fontWeight | `FontWeight` | Specifies the font weight of the cell. |
+| fontStyle | `FontStyle` | Specifies the font style of the cell. |
 | fontSize | string | Specifies font size of the cell. |
 | textDecoration | `TextDecoration` | Specifies text decoration of the cell. |
 | border | string | Specifies border of the cell. |
@@ -142,9 +142,9 @@ The following table defines each property of the `DefinedName`.
 
 | Property | Type | Description |
 |-------|-------|-------|
-| name | string | Specifies a name for the defined name, which can be used in the formula. |
-| scope | string | Specifies scope for the defined name. |
-| comment | string | Specifies comment for the defined name. |
+| name | string | Specifies the defined name, which can be used in formulas. |
+| scope | string | Specifies the scope of the defined name. |
+| comment | string | Specifies comment describing the defined name. |
 | refersTo | string | Specifies reference for the defined name. |
 
 In the following code, the JSON structure is passed to the `openFromJson` method to render the spreadsheet in the `created` event.

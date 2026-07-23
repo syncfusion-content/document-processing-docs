@@ -2,7 +2,7 @@
 layout: post
 title: Accessibility in Vue Spreadsheet component | Syncfusion
 description: Learn here all about Accessibility in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
-control: Accessibility 
+control: Spreadsheet 
 platform: document-processing
 documentation: ug
 ---
@@ -39,7 +39,7 @@ The accessibility compliance for the Spreadsheet component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Spreadsheet component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Spreadsheet component:
+The Spreadsheet component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Spreadsheet component:
 
 | Attributes | Purpose |
 |-------|---------|
@@ -61,7 +61,7 @@ The Spreadsheet component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/ap
 
 ## Keyboard interaction
 
-The Spreadsheet component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Spreadsheet component.
+The Spreadsheet component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Spreadsheet component.
 
 | Press | To do this |
 |----------|-------------|
@@ -100,8 +100,8 @@ The Spreadsheet component followed the [keyboard interaction](https://www.w3.org
 | Tab | Complete the cell editing and select the next cell in the same row. |
 | Shift + Tab | Complete the cell editing and select the previous cell in the same row. |
 | Alt | Focus on the active ribbon tab. |
-| Left | Move the focus to the previous items in the ribbon content. |
-| Right | Move the focus to the next items in the ribbon content. |
+| Left | Move the focus to the previous item in the ribbon content. |
+| Right | Move the focus to the next item in the ribbon content. |
 | Alt + Down | Open the ribbon dropdown menu. |
 | Esc / Alt + Up | Close the ribbon dropdown menu. |
 

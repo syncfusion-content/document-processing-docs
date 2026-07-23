@@ -15,7 +15,7 @@ The Spreadsheet uses [`DataManager`], which supports both RESTful JSON data serv
 
 ## Local data
 
-To bind local data to the Spreadsheet, you can assign a JavaScript object array to the `dataSource` property.
+To bind local data to the Spreadsheet, assign a JavaScript object array to the `dataSource` property.
 
 Refer to the following code example for local data binding.
 
@@ -102,7 +102,7 @@ You can use WebApiAdaptor to bind spreadsheet with Web API created using OData e
 
 ## Cell data binding
 
-The Spreadsheet control can bind the data to individual cell in a sheet . To achieve this you can use the
+The Spreadsheet control can bind data to an individual cell in a sheet. To achieve this, you can use the
 `value` property.
 
 Refer to the following code example for cell data binding.

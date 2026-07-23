@@ -11,7 +11,7 @@ documentation: ug
 
 Context Menu is used to improve user interaction with Spreadsheet using the popup menu. This will open when right-clicking on Cell/Column Header/Row Header/ Pager in the Spreadsheet. You can use [`enableContextMenu`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#enablecontextmenu) property to enable/disable context menu.
 
-> The default value for the `enableContextMenu` property is `true`.
+> The default value of the `enableContextMenu` property is `true`.
 
 ## Context Menu Items in Row Cell
 
@@ -33,10 +33,10 @@ Please find the table below for default context menu items and their actions.
 
 | Context Menu items | Action |
 |-------|---------|
-| [`Cut`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#cut) | Cut the selected row/column header data to the clipboard, you can select a cell where you want to move the data. |
-| [`Copy`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#copy) | Copy the selected row/column header data to the clipboard, so that you can paste it to somewhere else. |
-| [`Paste`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#paste) | Paste the data from clipboard to spreadsheet. |
-| [`Paste Special`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#paste) | `Values` - Paste the data values from clipboard to spreadsheet. `Formats` - Paste the data formats from clipboard to spreadsheet. |
+| [`Cut`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#cut) | Cut the data of the selected row or column to the clipboard. |
+| [`Copy`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#copy) | Copy the data of the selected row or column to the clipboard. |
+| [`Paste`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#paste) | Paste the clipboard contents into the Spreadsheet. |
+| [`Paste Special`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#paste) | `Values` – Paste only the data values. `Formats` – Paste only the data formats. |
 | [`Insert Rows`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#insertrow) / [`Insert Columns`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#insertcolumn) | Insert new rows or columns into the worksheet. |
 | [`Delete Rows`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#delete) / [`Delete Columns`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#delete) | Delete existing rows or columns from the worksheet. |
 | [`Hide Rows`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#hiderow) / [`Hide Columns`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#hidecolumn) | Hide the rows or columns. |

@@ -17,7 +17,7 @@ Ensure the following are available before you begin.
 
 ### Azure OpenAI credentials
 
-You must have an Azure OpenAI resource. Collect the following values from the [Azure Portal](https://portal.azure.com):
+Create or have access to an Azure OpenAI resource. Collect the following values from the [Azure Portal](https://portal.azure.com):
 
 | Credential | Description |
 |---|---|
@@ -42,7 +42,7 @@ const azureDeploymentName   = 'Your_Deployment_Name';
 
 ## Install dependencies
 
-Run the following commands in your Web API project to install the required NuGet packages:
+After creating the Web API project, run the following commands to install the required NuGet packages:
 
 ```bash
 dotnet add package Azure.AI.OpenAI
@@ -58,7 +58,7 @@ dotnet add package Microsoft.Extensions.AI.OpenAI
 
 ## Configure credentials
 
-Add the Azure OpenAI credentials in `appsettings.json` under `AI` section:
+Add the Azure OpenAI credentials in `appsettings.json` under the `AI` section:
 
 ```json
 {
