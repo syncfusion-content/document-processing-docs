@@ -119,8 +119,10 @@ using (WordDocument document = new WordDocument(assembly.GetManifestResourceStre
 }
 {% endhighlight %}
 
-N> **Embedded resource:** The input `Template.docx` must be added to the .NET Standard project and its **Build Action** set to **EmbeddedResource** in the Properties window. The file path used in `GetManifestResourceStream` (for example, `Convert-Word-Document-to-PDF.Template.Input.docx`) must match the project's default namespace followed by the folder and file name.
 {% endtabs %}
+
+N> **Embedded resource:** The input `Template.docx` must be added to the .NET Standard project and its **Build Action** set to **EmbeddedResource** in the Properties window. The file path used in `GetManifestResourceStream` (for example, `Convert-Word-Document-to-PDF.Template.Input.docx`) must match the project's default namespace followed by the folder and file name.
+
 
 ## Helper files for Xamarin
 
