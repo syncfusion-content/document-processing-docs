@@ -9,13 +9,13 @@ documentation: ug
 
 # Conditional Formatting in UWP Spreadsheet (SfSpreadsheet)
 
-This section explains about how to apply conditional formatting rules programmatically at run time in SfSpreadsheet.
+This section explains how to apply conditional formatting rules programmatically at run time in SfSpreadsheet.
 
-In SfSpreadsheet, to apply conditional format for a cell or range of cells, add `IConditionalFormat` to that range by using `AddCondition` method.
+In SfSpreadsheet, to apply a conditional format to a cell or range of cells, add an `IConditionalFormat` to that range by using the `AddCondition` method.
 
 {% tabs %}
 {% highlight c# %}
-var worksheet =spreadsheet.Workbook.Worksheets[0];
+var worksheet = spreadsheet.Workbook.Worksheets[0];
 IConditionalFormats condition = worksheet.Range["A1"].ConditionalFormats;
 IConditionalFormat condition1 = condition.AddCondition();
 {% endhighlight %}
@@ -25,7 +25,7 @@ IConditionalFormat condition1 = condition.AddCondition();
 
 ### Based on CellValue
 
-To format the cells based on cell value, define the conditional format type as **CellValue** and other formatting options such as formula, operator, background color etc., to the specified cell or range. Finally, invalidate the cells to refresh the view.
+To format the cells based on cell value, define the conditional format type as **CellValue** and other formatting options such as formula, operator, and background color, to the specified cell or range. Finally, invalidate the cells to refresh the view.
 
 {% tabs %}
 {% highlight c# %}
@@ -43,7 +43,7 @@ spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Col(1));
 
 ### Based on Formula or Cell References
 
-To format the cells based on Formula or Cell References, define the conditional format type as **Formula** and other formatting options such as formula, background color etc., to the specified cell or range. Finally, invalidate the cells to refresh the view.
+To format the cells based on a Formula or Cell References, define the conditional format type as **Formula** and other formatting options such as formula and background color, to the specified cell or range. Finally, invalidate the cells to refresh the view.
 
 {% tabs %}
 {% highlight c# %}
@@ -60,7 +60,7 @@ spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Col(1));
 
 ### Based on SpecificText
 
-To format the cells based on specified text, define the conditional format type as **SpecificText** and other formatting options such as the particular text, operator, background color etc., to the specified cell or range. Finally, invalidate the cells to refresh the view.
+To format the cells based on specified text, define the conditional format type as **SpecificText** and other formatting options such as the particular text, operator, and background color, to the specified cell or range. Finally, invalidate the cells to refresh the view.
 
 {% tabs %}
 {% highlight c# %}
@@ -78,7 +78,7 @@ spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Col(1));
 
 ### Based on TimePeriod
 
-To format the cells based on time period, define the conditional format type as **TimePeriod** and other formatting options such as the time periods for the date, operator, background color etc., to the specified cell or range. Finally, invalidate the cells to refresh the view.
+To format the cells based on a time period, define the conditional format type as **TimePeriod** and other formatting options such as the time period for the date, operator, and background color, to the specified cell or range. Finally, invalidate the cells to refresh the view.
 
 {% tabs %}
 {% highlight c# %}
@@ -87,24 +87,24 @@ IConditionalFormats condition = worksheet.Range["A1:A100"].ConditionalFormats;
 IConditionalFormat condition1 = condition.AddCondition();
 
 condition1.FormatType = ExcelCFType.TimePeriod;
-condition1.TimePeriodType = CFTimePeriods.Today
+condition1.TimePeriodType = CFTimePeriods.Today;
 condition1.BackColor = ExcelKnownColors.Light_orange;
 spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Col(1));
 {% endhighlight %}
 {% endtabs %}
 
-Sample Output
+**Sample Output**
 
-![UWP SfSpreadsheet displays different colors applied as per the conditions ](Conditional-Formatting_images/Conditional-Formatting_img1.PNG)
+![UWP SfSpreadsheet displaying different colors applied as per the conditions](Conditional-Formatting_images/Conditional-Formatting_img1.PNG)
 
 ## Data Bars
 
-To apply the conditional format based on data bars,define the conditional format type as a **DataBar** and specify the properties associated with DataBars such as bar color, MinPoint, MaxPoint etc.,.to the specified cell or range. Finally, invalidate that cells to update the view.
+To apply the conditional format based on data bars, define the conditional format type as **DataBar** and specify the properties associated with DataBars, such as bar color, `MinPoint`, and `MaxPoint`, to the specified cell or range. Finally, invalidate the cells to update the view.
 
 {% tabs %}
 {% highlight c# %}
 var worksheet = spreadsheet.Workbook.Worksheets[0];
-var conditionalFormats =   worksheet.Range["B1:B100"].ConditionalFormats;
+var conditionalFormats = worksheet.Range["B1:B100"].ConditionalFormats;
 var conditionalFormat = conditionalFormats.AddCondition();
 
 conditionalFormat.FormatType = ExcelCFType.DataBar;
@@ -115,13 +115,13 @@ spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Col(2));
 {% endhighlight %}
 {% endtabs %}
 
-Sample Output
+**Sample Output**
 
-![UWP SfSpreadsheet displays different colors applied in different columns based on conditions](Conditional-Formatting_images/Conditional-Formatting_img2.PNG)
+![UWP SfSpreadsheet displaying different colors applied in different columns based on conditions](Conditional-Formatting_images/Conditional-Formatting_img2.PNG)
 
 ## Color Scales
 
-To apply the conditional format based on color scales, define the conditional format type as a **ColorScale** and specify the other properties associated with ColorScale such as condition count,color criteria etc.,to the specified cell or range. Finally,invalidate that cells to update the view.
+To apply the conditional format based on color scales, define the conditional format type as **ColorScale** and specify the other properties associated with ColorScale, such as condition count and color criteria, to the specified cell or range. Finally, invalidate the cells to update the view.
 
 {% tabs %}
 {% highlight c# %}
@@ -137,13 +137,13 @@ spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Col(3));
 {% endhighlight %}
 {% endtabs %}
 
-Sample Output
+**Sample Output**
 
-![UWP SfSpreadsheet displays colors changed as per the scales](Conditional-Formatting_images/Conditional-Formatting_img3.PNG)
+![UWP SfSpreadsheet displaying colors changed as per the scales](Conditional-Formatting_images/Conditional-Formatting_img3.PNG)
 
 ## Icon Sets
 
-To apply the conditional format for Icon sets, define the conditional format type as **IconSet** and  the properties associated with IconSet such as the type of the icon,criteria etc., to the specified cell or range. Finally, invalidate that cells to update the view.
+To apply the conditional format for Icon sets, define the conditional format type as **IconSet** and the properties associated with the IconSet, such as the type of icon and criteria, to the specified cell or range. Finally, invalidate the cells to update the view.
 
 {% tabs %}
 {% highlight c# %}
@@ -157,6 +157,6 @@ spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Col(4));
 {% endhighlight %}
 {% endtabs %}
 
-Sample Output
+**Sample Output**
 
-![UWP SfSpreadsheet displays the applied icons as per the applied conditions](Conditional-Formatting_images/Conditional-Formatting_img4.PNG)
+![UWP SfSpreadsheet displaying the applied icons as per the applied conditions](Conditional-Formatting_images/Conditional-Formatting_img4.PNG)

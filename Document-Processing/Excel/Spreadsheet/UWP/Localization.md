@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Localization in UWP Spreadsheet control | Syncfusion®
-description: Learn here all about Localization support in Syncfusion® UWP Spreadsheet (SfSpreadsheet) control and more.
+title: Localization in UWP Spreadsheet control | Syncfusion�
+description: Learn here all about Localization support in Syncfusion� UWP Spreadsheet (SfSpreadsheet) control and more.
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
@@ -9,55 +9,55 @@ documentation: ug
 
 # Localization in UWP Spreadsheet (SfSpreadsheet)
 
-Localization is the process of configuring the application to a specific language. SfSpreadsheet provides support to localize all the static text in a Ribbon and all dialogs to any desired language. Localization can be done by adding resource file and setting the specific culture in the application.
+Localization is the process of adapting the application UI to a specific language or culture. SfSpreadsheet provides support to localize all the static text in a Ribbon and all dialogs to any desired language. Localization can be done by adding a resource file and setting the specific culture in the application.
 
-SfSpreadsheet allows you to set custom resource using Resw file. You can define your string values in resource file for a specific culture and set the culture in your application.
+SfSpreadsheet allows you to set a custom resource using a Resw file. You can define your string values in the resource file for a specific culture and set the culture in your application.
 
 ## Set Current UI Culture to the Application
 
-To set the CultureInformation in the Application, set the `CurrentUICulture` before the InitializeComponent() method is called. 
+To set the CultureInformation in the application, set the `CurrentUICulture` before the `InitializeComponent()` method is called.
 
 Setting of the culture information,
 
 {% tabs %}
 {% highlight c# %}
-   
+
 public MainPage()
 {
-    System.Globalization.CultureInfo.CurrentUICulture = new System.Globalization.CultureInfo("ja");
+    System.Globalization.CultureInfo.CurrentUICulture = new System.Globalization.CultureInfo("ja-JP");
     InitializeComponent();
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-Now, the Application is set to the Japanese Culture info. 
+Now, the application is set to the Japanese Culture info.
 
-## Localization using Resource file
+## Localization using Resource File
 
-The following steps show how to implement the localization in SfSpreadsheet,
+The following steps show how to implement localization in SfSpreadsheet.
 
-* Create a folder and name it as ‘Resources’ in your application.
-* Add the default resource[English("en-US")] file of `SfSpreadsheet` in the 'Resources' folder named as Syncfusion.SfSpreadsheet.UWP.resw.
-  You can download the Resw file [here](http://www.syncfusion.com/downloads/support/directtrac/general/ze/Syncfusion.SfSpreadsheet.UWP.Resources1773657760)
-* Create Resw(resource) file under the 'Resources' folder and name it as Syncfusion.SfSpreadsheet.UWP.[Culture name].resw. 
-  For example, Syncfusion.SfSpreadsheet.UWP.ja.resw for Japanese culture. 
+* Create a folder and name it `Resources` in your application.
+* Add the default English ('en-US') resource file of `SfSpreadsheet` to the `Resources` folder, named `Syncfusion.SfSpreadsheet.UWP.resw`.
+  You can download the .resw file [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/Syncfusion.SfSpreadsheet.UWP.Resources1773657760)
+* Create a .resw (resource) file under the `Resources` folder and name it `Syncfusion.SfSpreadsheet.UWP.[Culture name].resw`.
+  For example, `Syncfusion.SfSpreadsheet.UWP.ja-JP.resw` for the Japanese culture.
 
 ![UWP SfSpreadsheet displays added resource file](localization_images/Loc_Image1.png)
 
-* Add the resource key such as name and its corresponding localized value in Resource Designer of Syncfusion.SfSpreadsheet.UWP.ja.resw file. 
-  For your reference, you can download the Japanese("ja-JP") Resw file [here](http://www.syncfusion.com/downloads/support/directtrac/general/ze/Syncfusion.SfSpreadsheet.UWP.Resources.ja2068752327)
+* Add the resource key (Name) and its corresponding localized value in the Resource Designer of the `Syncfusion.SfSpreadsheet.UWP.ja.resw` file.
+  For your reference, you can download the Japanese ('ja-JP') .resw file [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/Syncfusion.SfSpreadsheet.UWP.Resources.ja2068752327)
 
 ![UWP SfSpreadsheet displays resource file item list](localization_images/Loc_Image2.png)
 
-The following screenshot shows you the localization in SfSpreadsheet,
+The following screenshot shows the localization applied in SfSpreadsheet:
 
-![UWP SfSpreadsheet displays locaization applied in sheet](localization_images/Loc_Image3.png)
+![Localization applied in SfSpreadsheet](localization_images/Loc_Image3.png)
 
-## Modifying the localized strings in Resource file
+## Modifying the Localized Strings in the Resource File
 
-Users can modify the default localized strings in Resource file by adding the default [Resw](http://www.syncfusion.com/downloads/support/directtrac/general/ze/Syncfusion.SfSpreadsheet.UWP.Resources1773657760) (resource) file of `SfSpreadsheet` in the 'Resources' folder of your application and name it as Syncfusion.SfSpreadsheet.UWP.resw.
+To modify the default localized strings, add the default [Resw](https://www.syncfusion.com/downloads/support/directtrac/general/ze/Syncfusion.SfSpreadsheet.UWP.Resources1773657760) (resource) file of `SfSpreadsheet` to the `Resources` folder of your application and name it `Syncfusion.SfSpreadsheet.UWP.resw`.
 
-Now, the default localized strings can be modified by changing the Name/Value pair in the Syncfusion.SfSpreadsheet.UWP.resw file.
+Then, change the Name/Value pairs in the `Syncfusion.SfSpreadsheet.UWP.resw` file to update the default localized strings.
 
 ![UWP SfSpreadsheet displays modified resource file item](localization_images/Loc_Image4.jpg)

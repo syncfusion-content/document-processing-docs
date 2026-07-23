@@ -8,11 +8,11 @@ documentation: ug
 ---
 
 # Shapes in UWP Spreadsheet (SfSpreadsheet)
-  This section explains about importing of charts, sparklines, pictures and textboxes in SfSpreadsheet.
+  This section explains importing charts, sparklines, pictures, and textboxes in SfSpreadsheet.
 
 ## Charts
 
-SfSpreadsheet provides support to import charts from excel which are used to represent numeric data in graphical format to make it easier to understand large quantities of data.
+SfSpreadsheet provides support to import charts from Excel which are used to represent numeric data in graphical format to make it easier to understand large quantities of data.
 
 For importing charts in SfSpreadsheet, add the following assembly as reference into the application.
  
@@ -23,7 +23,7 @@ Create an instance of `Syncfusion.UI.Xaml.SpreadsheetHelper.GraphicChartCellRend
 {% tabs %}
 {% highlight c# %}
 
-public MainWindow()
+public MainPage()
 {
   InitializeComponent();
   
@@ -54,11 +54,11 @@ series.EnteredDirectlyCategoryLabels = X_values;
 
 var shape = chart as ShapeImpl;
 
-// Re-Positioning Chart
+// Re-positioning Chart
 shape.Top = 200;
 shape.Left = 200;
 
-//Re-sizing a Chart
+// Re-sizing Chart
 shape.Height = 300;
 shape.Width = 300;
 {% endhighlight %}
@@ -76,7 +76,7 @@ Create an instance of `Syncfusion.UI.Xaml.SpreadsheetHelper.SparklineCellRendere
 {% tabs %}
 {% highlight c# %}
 
-public MainWindow()
+public MainPage()
 {
   InitializeComponent();
       
@@ -89,20 +89,20 @@ public MainWindow()
 
 ## Pictures
 
-SfSpreadsheet provides support to import images in SpreadsheetGrid and to add an image at run time, use `AddImage` method and also you can resize and reposition the image.
+SfSpreadsheet provides support to import images in SpreadsheetGrid and to add an image at runtime using the `AddImage` method. You can also resize and reposition the image.
 
 {% tabs %}
 {% highlight c# %}
 
 var worksheet = spreadsheet.ActiveSheet;
-var stream = typeof(MainWindow).Assembly.GetManifestResourceStream("GraphicCellDemo.Data.Sample.jpg");
+var stream = typeof(MainPage).Assembly.GetManifestResourceStream("GraphicCellDemo.Data.Sample.jpg");
 var shape = spreadsheet.AddImage(worksheet, new RowColumnIndex(5, 5), stream);
 
-// Re-Positioning Picture
+// Re-positioning Picture
 shape.Top = 200;
 shape.Left = 200;
 
- //Re-sizing a Picture
+// Re-sizing Picture
 shape.Height = 200;
 shape.Width = 200;
 
@@ -112,7 +112,7 @@ shape.Width = 200;
 
 ## Text Boxes
 
-SfSpreadsheet provides support to import RichText Box in SpreadsheetGrid and to add the rich text box at run time, use `AddTextBox` method
+SfSpreadsheet provides support to import Richext Box in SpreadsheetGrid and to add a rich-text box at runtime using the `AddTextBox` method.
 
 {% tabs %}
 {% highlight c# %}
@@ -127,7 +127,7 @@ textBox.Top = 200;
 {% endhighlight %}
 {% endtabs %}
 
-## Accessing the selected Shapes
+## Accessing the Selected Shapes
 
 SfSpreadsheet allows the user to access the selected shapes and modify the properties associated with it in `SpreadsheetGrid`.
 
@@ -159,22 +159,22 @@ spreadsheet.ActiveGrid.GraphicModel.InvalidateGraphicVisual();
 {% endhighlight %}
 {% endtabs %}
 
-## Select a Shape Programmatically
+## Selecting a Shape Programmatically
 
-Users can select a shape programmatically by using `AddSelectedShapes` method of `GraphicModel` class.
+Users can select a shape programmatically by using the `AddSelectedShapes` method of the `GraphicModel` class.
 
 {% tabs %}
 {% highlight c# %}
 
-var shape = spreadsheet.ActiveSheet.Shapes[2] as ShapeImpl;          
+var shape = spreadsheet.ActiveSheet.Shapes[2] as ShapeImpl;           
 spreadsheet.ActiveGrid.GraphicModel.AddSelectedShapes(shape);
 
 {% endhighlight %}
 {% endtabs %}
 
-## Clear a Selection
+## Clearing a Selection
 
-Users can clear the selection from the shapes and move the selection to the grid using `ClearSelection` method of `GraphicModel` class.
+Users can clear the shape selection and move focus back to the grid using the `ClearSelection` method of the `GraphicModel` class.
 
 {% tabs %}
 {% highlight c# %}
