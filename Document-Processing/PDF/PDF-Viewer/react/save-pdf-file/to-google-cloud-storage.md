@@ -15,7 +15,7 @@ To save a PDF file to Google Cloud Storage, follow the steps below.
 
 Follow the Syncfusion getting-started instructions for the React PDF Viewer: [React PDF Viewer getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started). This sets up the basic PDF Viewer application structure.
 
-**Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
+**Step 2:** Modify the `PdfViewerController.cs` file in the web service project
 
 1. Create a web service project in .NET Core 3.0 or above. Refer to the Syncfusion knowledge base article on creating a PDF Viewer web service: [Create a PDF Viewer web service in .NET Core 3.0 and above](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above).
 

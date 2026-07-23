@@ -107,7 +107,7 @@ N> Install the `dropbox` package in the React project before running the sample:
 
 ## Using server-backed PDF Viewer
 
-To save a PDF file to Dropbox cloud file storage, you can follow the steps below
+To save a PDF file to Dropbox cloud file storage, you can follow the steps below:
 
 **Step 1:** Create a Dropbox API app
 

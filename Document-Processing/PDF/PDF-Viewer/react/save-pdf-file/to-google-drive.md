@@ -13,7 +13,7 @@ This article describes how to save a PDF file to Google Drive from the React PDF
 
 **Step 1:** Set up the Google Drive API
 
-Create a Google Cloud project, enable the Google Drive API, and obtain OAuth 2.0 credentials. For details, see the [Google Drive](https://developers.google.com/drive/api/guides/enable-sdk) API enable guide.
+Create a Google Cloud project, enable the Google Drive API, and obtain OAuth 2.0 credentials. For details, see the [Google Drive API](https://developers.google.com/drive/api/guides/enable-drive-api) enable guide.
 
 **Step 2:** Create a PDF Viewer sample in React
 
@@ -136,7 +136,7 @@ N> Use a valid `client_id` from the JSON file to authenticate with the Google Dr
 
 **Step 4:** Set the PDF Viewer properties in the React PDF Viewer component
 
-Update the `serviceUrl` property of the PDF Viewer component to the web service URL, replacing `https://localhost:44396/pdfviewer` with the actual server endpoint. Set the `documentPath` property to the PDF file name that exists in the configured Google Drive folder.
+Update the `serviceUrl` property of the PDF Viewer component to the web service URL, replacing `https://localhost:44396/pdfviewer` with the actual server endpoint. Set the `documentPath` property to the PDF file name that the web service will load into the viewer. When the user triggers a download, the modified `Download()` method uploads this file to the configured Google Drive folder.
 
 {% raw %}
 

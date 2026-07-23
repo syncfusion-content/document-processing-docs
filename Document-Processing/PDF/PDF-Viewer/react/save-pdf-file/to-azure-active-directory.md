@@ -115,7 +115,7 @@ The React PDF Viewer component supports loading and saving PDF files using Azure
 ### Server-side code snippets
 ```cs
 string tenantId = "Provide the tenant id here";
-string clientId = "Provide the clientid here";
+string clientId = "Provide the client ID here";
 string clientSecret = "Provide the client secret here";
 string blobServiceEndpoint = "https://your-storage-account.blob.core.windows.net";
 string containerName = "Provide the container name here";

@@ -28,13 +28,13 @@ import * as AWS from 'aws-sdk';
 
 2. Configure the AWS SDK with the region, access key, and secret access key. This enables the application to interact with AWS services such as S3.
 
-N> Replace **Your Region** with the actual Region of your AWS S3 account and **Your Access Key** with the actual Access Key of your AWS S3 account and **Your Security Access Key** with the actual Security Access Key of your AWS S3 account.
+N> Replace **Your Region**, **Your Access Key**, and **Your Security Access Key** with the corresponding values from your AWS S3 account.
 
 ```typescript
 AWS.config.update({
-  region: '**Your Region**', // Update this your region
-  accessKeyId: '*Your Access Key*', // Update this with your access key id
-  secretAccessKey: '*Your Security Access Key*', // Update this with your secret access key
+  region: '**Your Region**', // Update this with your region
+  accessKeyId: '**Your Access Key**', // Update this with your access key id
+  secretAccessKey: '**Your Security Access Key**', // Update this with your secret access key
 });
 ```
 

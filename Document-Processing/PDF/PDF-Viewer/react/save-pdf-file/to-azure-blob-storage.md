@@ -13,7 +13,7 @@ The React PDF Viewer component supports saving PDF files to Azure Blob Storage u
 
 ## Using Standalone PDF Viewer
 
-Follow the steps below to save a PDF file to Azure Blob Storage from an React PDF Viewer.
+Follow the steps below to save a PDF file to Azure Blob Storage from a React PDF Viewer.
 
 **Step 1:** Create a PDF Viewer sample in React
 
@@ -188,8 +188,8 @@ public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
     }
   },
   "AllowedHosts": "*",
-  "connectionString": "*Your Connection string from Azure*",
-  "containerName": "*Your container name in Azure*"
+  "connectionString": "Your Connection string from Azure",
+  "containerName": "Your container name in Azure"
 }
 ```
 

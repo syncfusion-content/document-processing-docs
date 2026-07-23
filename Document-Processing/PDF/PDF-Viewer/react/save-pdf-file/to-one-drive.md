@@ -17,7 +17,7 @@ Create a Microsoft Graph API application, and obtain the application (client) ID
 
 **Step 2:** Create a PDF Viewer sample in React
 
-Create a simple PDF Viewer sample in React by following the PDF Viewer for React [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) guide. This establishes the application structure required for the integration
+Create a simple PDF Viewer sample in React by following the PDF Viewer for React [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) guide. This establishes the application structure required for the integration.
 
 **Step 3:** Modify the `PdfViewerController.cs` file in the web service project
 
