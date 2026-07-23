@@ -1,5 +1,6 @@
 ---
 title: Splitting PDFs in the JavaScript PDF Library | Syncfusion
+canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: Learn how to split a PDF into individual pages, custom page ranges, or fixed-size chunks using the JavaScript PDF Library.
 platform: document-processing
 control: PDF
@@ -62,13 +63,6 @@ document.destroy();
 ## Splitting a specified range of pages
 
 Use the [`splitByPageRanges`](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument#splitbypageranges) method when you know exactly which pages belong in each output.
-
-Each entry in the array is a tuple `[start, end]` where:
-
-- `start` and `end` are **0-based** page indices.
-- The bounds are **inclusive** on both ends.
-- Ranges must not overlap.
-- The page count of the source document is not validated against the ranges; out-of-range indices are ignored.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

@@ -1,5 +1,6 @@
 ---
 title: Header and footer support in JavaScript PDF Library | Syncfusion
+canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: This section explains how to create and apply header and footer templates with automatic fields in the JavaScript PDF Library.
 platform: document-processing
 control: PDF
@@ -17,13 +18,6 @@ The feature supports static elements such as text, images, shapes (including lin
 Header and footer templates in a PDF document are created using the `PdfPageTemplateElement` class and assigned through the `template` property of the [PdfDocument](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument) class. These templates help in maintaining a consistent layout across all pages by allowing the addition of elements such as images, text, shapes, and automatic fields. Users can also control the appearance of these templates by applying them to all pages or specifically to odd or even pages. 
 
 This sample demonstrates how to create header and footer templates with static elements and a page-number composite field.
-
-To create the templates:
-
-1. Create a new `PdfDocument` and add at least one page.
-2. Build the header and footer `PdfPageTemplateElement` instances.
-3. Assign the templates to the document using `document.template.top` and `document.template.bottom`.
-4. Save the document and open the generated PDF in any viewer (Adobe Acrobat, browser, and so on).
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

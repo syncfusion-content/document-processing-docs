@@ -1,5 +1,6 @@
 ---
 title: Lists in JavaScript PDF Library | Syncfusion
+canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: This section explains how to work with lists in a PDF document using the JavaScript PDF Library to display and manage items in a structured format
 platform: document-processing
 control: PDF
@@ -8,7 +9,7 @@ documentation: UG
 
 # Lists in JavaScript PDF Library
 
-The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) aallows you to list the content in ordered and unordered lists. The ordered list can use numbers or letters (alphabetic characters), and the unordered list can use bullets, circles, squares, and asterisks as markers.
+The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) allows you to list the content in ordered and unordered lists. The ordered list can use numbers or letters (alphabetic characters), and the unordered list can use bullets, circles, squares, and asterisks as markers.
 
 ## Adding an ordered list
 
@@ -78,7 +79,7 @@ document.destroy();
 
 ## Adding an unordered list
 
-This example demonstrates how to create an unordered list in a PDF document using the [PdfUnorderedList](https://ej2.syncfusion.com/documentation/api/pdf/pdfunorderedlist/) class. Unordered lists display items with bullet points instead of numbers, making them ideal for presenting non-sequential information in a clear and organized manner.
+This example demonstrates how to create an unordered list in a PDF document using the [PdfUnorderedList](https://ej2.syncfusion.com/documentation/api/pdf/pdfunorderedlist) class. Unordered lists display items with bullet points instead of numbers, making them ideal for presenting non-sequential information in a clear and organized manner.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -144,7 +145,7 @@ document.destroy();
 
 ## Customize list markers
 
-This example demonstrates how to change the marker style of an unordered list in a PDF document using the [PdfUnorderedList](https://ej2.syncfusion.com/documentation/api/pdf/pdfunorderedlist/) class. The marker defines the symbol that appears before each list item. You can choose from the predefined marker styles listed below to visually distinguish different list types or emphasize specific content.
+This example demonstrates how to change the marker style of an unordered list in a PDF document using the [PdfUnorderedList](https://ej2.syncfusion.com/documentation/api/pdf/pdfunorderedlist) class. The marker defines the symbol that appears before each list item. You can choose from the predefined marker styles listed below to visually distinguish different list types or emphasize specific content.
 
 ### PdfUnorderedListStyle values
 
@@ -252,13 +253,13 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-N> Refer [Text](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/text#drawing-text-using-different-fonts) page to know about using different fonts
+N> Refer [Drawing text using different fonts](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/text#drawing-text-using-different-fonts) page to know about using different fonts
 
 ## Creating nested list structures
 
-This example demonstrates how to create nested list structures in a PDF document using the [PdfUnorderedList](https://ej2.syncfusion.com/documentation/api/pdf/pdfunorderedlist/) and [PdfOrderedList](https://ej2.syncfusion.com/documentation/api/pdf/pdforderedlist/) classes. Nested lists allow you to organize information hierarchically by placing one list inside another. This is useful when representing multi-level data, outlining topics with sub-points, or grouping related items clearly.
+This example demonstrates how to create nested list structures in a PDF document using the [PdfUnorderedList](https://ej2.syncfusion.com/documentation/api/pdf/pdfunorderedlist) and [PdfOrderedList](https://ej2.syncfusion.com/documentation/api/pdf/pdforderedlist) classes. Nested lists allow you to organize information hierarchically by placing one list inside another. This is useful when representing multi-level data, outlining topics with sub-points, or grouping related items clearly.
 
-Each [PdfListItem](https://ej2.syncfusion.com/documentation/api/pdf/pdflistitem/) exposes a `subList` property of type `PdfList`. Assign any `PdfOrderedList` or `PdfUnorderedList` to `subList` to add a child list. There is no hard depth limit, but for readability, two or three levels are recommended.
+Each [PdfListItem](https://ej2.syncfusion.com/documentation/api/pdf/pdflistitem) exposes a `subList` property of type `PdfList`. Assign any `PdfOrderedList` or `PdfUnorderedList` to `subList` to add a child list. There is no hard depth limit, but for readability, two or three levels are recommended.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -316,7 +317,7 @@ document.destroy();
 
 ## List pagination
 
-This example shows how long lists automatically continue onto the next page when drawn using the [PdfUnorderedList](https://ej2.syncfusion.com/documentation/api/pdf/pdfunorderedlist/) class. By applying a [PdfLayoutFormat](https://ej2.syncfusion.com/documentation/api/pdf/pdflayoutformat/), the layout engine handles page breaks smoothly while preserving markers, indentation, and nested levels. This ensures consistent rendering of multi-page or dynamically generated list content.
+This example shows how long lists automatically continue onto the next page when drawn using the [PdfUnorderedList](https://ej2.syncfusion.com/documentation/api/pdf/pdfunorderedlist) class. By applying a [PdfLayoutFormat](https://ej2.syncfusion.com/documentation/api/pdf/pdflayoutformat/), the layout engine handles page breaks smoothly while preserving markers, indentation, and nested levels. This ensures consistent rendering of multi-page or dynamically generated list content.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

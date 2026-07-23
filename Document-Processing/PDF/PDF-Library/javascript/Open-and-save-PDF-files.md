@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Open and save PDF files using JavaScript PDF Library | Syncfusion
+canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: Learn how to load and save PDFs in the JavaScript PDF Library using Base64 strings or Uint8Array data.
 platform: document-processing
 control: PDF
@@ -21,8 +22,6 @@ Provide the PDF data as a Base64-encoded string to the `PdfDocument` constructor
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-
-import { PdfDocument } from '@syncfusion/ej2-pdf';
 
 // Sample Base64-encoded PDF data
 let data: string = 'JVBERi0xLjcNJeLjz9MNCjEyNSAw...........TU3MTQNCiUlRU9GDQo=';
@@ -47,7 +46,6 @@ Open an existing PDF document using the [PdfDocument](https://ej2.syncfusion.com
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument } from '@syncfusion/ej2-pdf';
 
 // Sample Uint8Array data
 let binaryData: Uint8Array = Uint8Array.from(data);
@@ -71,8 +69,6 @@ Open an encrypted PDF document by providing the correct password to the [PdfDocu
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { PdfDocument } from '@syncfusion/ej2-pdf';
-
 // Load an encrypted PDF document with a user password
 let document: PdfDocument = new PdfDocument(data, 'password');
 
@@ -91,7 +87,6 @@ Save and download the PDF document directly from the browser by passing a filena
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument } from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
@@ -117,7 +112,6 @@ Save the modified PDF document to memory as a `Uint8Array` using the parameterle
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument } from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
@@ -143,7 +137,6 @@ After every load and save operation described above, you must call the `destroy`
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument } from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);

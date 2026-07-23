@@ -1,6 +1,7 @@
 ---
-title: Creating and Configuring PDF Documents in JavaScript PDF Library | Syncfusion
-description: Learn how to create, configure, and manipulate PDF documents using the JavaScript PDF Library, including document settings, metadata properties, incremental updates, and flattening annotations and form fields.
+title: Creating and Configuring PDF Documents | Syncfusion
+canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
+description: Learn to create, configure, and manage PDF documents with JavaScript PDF Library, including metadata, settings, updates, and annotation flattening
 platform: document-processing
 control: PDF
 documentation: UG

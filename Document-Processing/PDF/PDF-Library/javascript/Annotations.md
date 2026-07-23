@@ -1,5 +1,6 @@
 ---
 title: Annotation in JavaScript PDF Library | Syncfusion
+canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: This section explains how to create, modify or remove different type of interactive Annotation by using JavaScript PDF Library
 platform: document-processing
 control: PDF
@@ -9,7 +10,7 @@ documentation: UG
 
 The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) provides support for interactive annotations. You can add, delete and modify the annotation from the PDF documents.
 
-For first-time setup, refer to the [Getting Started with JavaScript PDF Library](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/getting-started) guide.
+For first-time setup, refer to the [Getting Started with JavaScript PDF Library](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-javascript) guide.
 
 ## Adding annotations to a PDF document
 
@@ -18,7 +19,7 @@ This example demonstrates how to add annotations to a PDF document using the [Pd
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import {PdfDocument, PdfPage, PdfPopupAnnotation, PdfPopupIcon, PdfAnnotationState, PdfAnnotationStateModel} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfPopupAnnotation, PdfPopupIcon} from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();
@@ -32,9 +33,7 @@ let annotation: PdfPopupAnnotation = new PdfPopupAnnotation('Review this paragra
   subject: 'General',
   color: { r: 255, g: 255, b: 0 },
   icon: PdfPopupIcon.comment,
-  open: true,
-  state: PdfAnnotationState.accepted,
-  stateModel: PdfAnnotationStateModel.review
+  open: true
 }
 );
 // Add annotation to the page
@@ -57,9 +56,7 @@ var annotation = new ej.pdf.PdfPopupAnnotation('Review this paragraph',{x:10,y:4
   subject:'General',
   color:{r:255,g:255,b:0},
   icon:ej.pdf.PdfPopupIcon.comment,
-  open:true,
-  state:ej.pdf.PdfAnnotationState.accepted,
-  stateModel:ej.pdf.PdfAnnotationStateModel.review
+  open:true
 });
 // Add annotation to the page
 page.annotations.add(annotation);
@@ -1023,7 +1020,7 @@ document.destroy();
 {% endtabs %}
 
 
-#### Custom appearance in stamp annotation
+## Custom appearance in stamp annotation
 
 This example demonstrates how to embed a custom image as the appearance of a rubber stamp annotation.
 
@@ -1321,9 +1318,7 @@ N> Setting `document.flatten = true;` flattens all interactive elements in the P
 
 ## Importing Annotations
 
-This example demonstrates how to import annotations into a PDF document using the `importAnnotations` method. The DataFormat enum specifies the format of the annotation data being imported, such as FDF, XFDF, JSON, or XML.
-
-The example below loads the annotation data at runtime via `fetch` and assigns it to `jsonData` (the variable name is reused for clarity; the same flow applies to FDF and XFDF formats).
+This example demonstrates how to import annotations into a PDF document using the `importAnnotations` method. The DataFormat enum specifies the format of the annotation data being imported, such as FDF, XFDF and JSON.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

@@ -1,6 +1,7 @@
 ---
 title: Image Extraction in JavaScript PDF Library | Syncfusion
-description: Learn how to extract embedded images from PDF documents and retrieve properties such as format, page index, occurrence index, bounds, resource name, masking flags, and physical dimensions using the JavaScript PDF Library.
+canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
+description: Learn to extract PDF images and retrieve format, page location, bounds, masking flags, resource names, and dimensions with JavaScript PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
@@ -8,7 +9,7 @@ documentation: UG
 
 # Image Extraction in JavaScript PDF Library
 
-The Syncfusion JavaScript PDF Library enables you to extract embedded images from PDF documents and retrieve properties such as image format, page index, occurrence index, bounds, resource name, interpolation settings, masking flags, and physical dimensions.
+The JavaScript PDF Library enables you to extract embedded images from PDF documents and retrieve properties such as image format, page index, occurrence index, bounds, resource name, interpolation settings, masking flags, and physical dimensions.
 
 ## Extract Images from a PDF
 
@@ -96,7 +97,7 @@ document.destroy();
 | Property | Type | Description |
 |----------|----------|----------|
 | `data` | `Uint8Array` | Raw byte data of the embedded image. |
-| `type` | `ImageType` | Image format (`JPEG`, `PNG`, `JPEG2000`, `JBIG2`, `CCITT`, `Bitmap`). |
+| `type` | `ImageType` | Image format (`JPEG`, `PNG`, `unknown`). |
 | `pageIndex` | `number` | Zero-based page index containing the image. |
 | `index` | `number` | Zero-based occurrence index of the image within the page. |
 | `bounds` | `RectangleF` | Image position and size on the page. Members: `x`, `y`, `width`, `height`. |

@@ -1,6 +1,7 @@
 ---
 title: Shapes in JavaScript PDF Library | Syncfusion
-description: This section explains how to add shapes such as lines, paths, rectangles, rounded rectangles, pies, arcs, Beziers, polygons, and ellipses by using the JavaScript PDF Library
+canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
+description: Learn to add lines, paths, rectangles, rounded rectangles, pies, arcs, Bezier curves, polygons, and ellipses to PDF documents using JavaScript PDF Library
 platform: document-processing
 control: PDF
 documentation: UG
@@ -22,8 +23,6 @@ The JavaScript PDF Library supports adding the following shapes.
 ## Adding Shapes to a PDF document
 
 The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) supports shape rendering with PDF pens (outlines) and solid `PdfBrush` fills.
-
-The setup boilerplate (creating a document, adding a page, obtaining graphics, and saving) is identical in every example below.
 
 ### Line
 

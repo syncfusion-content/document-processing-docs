@@ -1,5 +1,6 @@
 ---
 title: Redaction in JavaScript PDF Library |Syncfusion
+canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: This section explains how to redact content from an existing PDF document by using the JavaScript PDF Library
 platform: document-processing
 control: PDF
@@ -115,12 +116,6 @@ document.destroy();
 
 You can apply a solid fill color to cover the redacted content. This is the most common approach for redaction.
 
-The `fillColor` property accepts a color object in any of the following formats:
-
-- `{ r: number, g: number, b: number }` — RGB with each channel in the range `0`–`255`.
-- `{ r: number, g: number, b: number, a: number }` — RGB with an alpha channel in the range `0`–`255`.
-- `{ hex: string }` — Hex color string, for example `'#FF0000'` or `'#F00'`.
-
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
@@ -187,7 +182,7 @@ document.destroy();
 
 Draw text or graphics over the redacted region to customize its appearance. Use the third constructor argument of `PdfRedactionRegion` to enable the appearance overlay, then draw on `redaction.appearance.normal.graphics`.
 
-The example adds two regions on page 0. The first region uses a custom appearance that displays the label "Redacted Text". The second region is added without a custom appearance so the default fill is used. Combining both demonstrates that styled and unstyled regions can coexist in a single redactor pass.
+The example adds two regions on page 0. The first region uses a custom appearance that displays the label "Redacted Text". The second region is added without a custom appearance so the default fill is used. Combining both demonstrates that styled and default regions can coexist in a single redactor pass.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

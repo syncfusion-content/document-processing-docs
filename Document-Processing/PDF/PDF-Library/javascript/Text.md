@@ -1,5 +1,6 @@
 ---
 title: Text in JavaScript PDF Library | Syncfusion
+canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: This section explains how to add text to a PDF by using different types of fonts, including TrueType fonts and standard fonts, with the JavaScript PDF Library
 platform: document-processing
 control: PDF
@@ -50,6 +51,8 @@ document.save('Output.pdf');
 document.destroy();
 {% endhighlight %}
 {% endtabs %}
+
+N> Due to the inherent limitations of the PDF specification and the rendering capabilities of PDF libraries, emojis with skin tone modifiers are not supported in generated PDF documents. Only the base versions of emojis can be displayed. This limitation is common across most PDF libraries, as the PDF format does not explicitly support rendering skin tone variations in emojis.
 
 ## The importance of saving and restoring graphics state in PDF content rendering
 
@@ -479,7 +482,7 @@ document.destroy();
 
 ## Drawing text with pagination using PdfTextElement
 
-The [PdfTextElement](https://ej2.syncfusion.com/documentation/api/pdf/pdftextelement) class provides a structured and flexible way to render text in PDF documents with layout-aware capabilities. It supports essential properties such as font, brush, pen, and formatting, enabling consistent and customizable text rendering.
+The `PdfTextElement` class provides a structured and flexible way to render text in PDF documents with layout-aware capabilities. It supports essential properties such as font, brush, pen, and formatting, enabling consistent and customizable text rendering.
 
 With built-in features like automatic pagination, alignment, and formatting, `PdfTextElement` simplifies the process of creating well-structured, multi-page documents. Text can be drawn using coordinates or defined bounds, ensuring precise placement and predictable layout behavior.
 

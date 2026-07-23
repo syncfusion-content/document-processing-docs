@@ -1,5 +1,6 @@
 ---
 title: Pages in JavaScript PDF Library | Syncfusion
+canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: This section explains how to add, rearrange, remove pages, and detect empty pages in a PDF file by using the JavaScript PDF Library
 platform: document-processing
 control: PDF
@@ -283,7 +284,7 @@ N> The indices in the array are **zero-based**. For a three-page document, the v
 
 ## Removing pages from a document
 
-This example demonstrates how to remove a page from a PDF document using the [removePage](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument#removepage) method of the [PdfDocument](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument) class. The method can accept either the **zero-based index** of the page to be removed or a reference to a [PdfPage](https://ej2.syncfusion.com/documentation/api/pdf/pdfpage) instance retrieved via [getPage](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument#getpage). This method does not return a value.
+This example demonstrates how to remove a page from a PDF document using the [removePage](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument#removepage) method of the [PdfDocument](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument) class. The method can accept either the **zero-based index** of the page to be removed or a reference to a [PdfPage](https://ej2.syncfusion.com/documentation/api/pdf/pdfpage) instance retrieved via [getPage](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument#getpage).
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
