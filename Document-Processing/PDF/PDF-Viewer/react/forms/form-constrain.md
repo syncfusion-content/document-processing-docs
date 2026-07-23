@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Form constraints in the React PDF Viewer component | Syncfusion
+title: PDF form field flags in React PDF Viewer component | Syncfusion
 description: Learn how to configure form field constraints such as isReadOnly, isRequired, and isPrint in the Syncfusion React PDF Viewer.
 platform: document-processing
 control: PDF Viewer
@@ -530,7 +530,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-### Set default flags for new PDF form fields
+### Set default flags for new fields
 You can configure default flag values so that form fields added using the [Form Designer toolbar](../toolbar-customization/form-designer-toolbar) automatically inherit them. This helps ensure consistent behavior for all newly created fields.
 
 {% tabs %}
