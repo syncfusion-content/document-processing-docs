@@ -46,7 +46,7 @@ It is used to paste the clipboard data to the selected range, rows or columns. Y
 * `Paste Special` - You can paste the values with formatting.
 * `Paste` - You can paste only the values without formatting.
 
-It also performs for external clipboard operation. If you perform cut and paste, clipboard data will be cleared, whereas in copy and paste the clipboard contents will be maintained. If you perform paste inside the copied range, the clipboard data will be cleared.
+The Spreadsheet also supports external clipboard operations. If you perform cut and paste, the clipboard data will be cleared, while with copy and paste the clipboard contents are maintained. If you paste inside the copied range, the clipboard data will be cleared.
 
 **User Interface**:
 
@@ -78,7 +78,7 @@ Paste can be done in one of the following ways.
 
 ## Prevent the paste functionality
 
-The following example shows, how to prevent the paste action in spreadsheet. In [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#actionbegin) event, you can set `cancel` argument as false in paste request type.
+The following example shows how to prevent the paste action in the spreadsheet. In the [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#actionbegin) event, you can set the `cancel` argument to `true` for the paste request type.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -100,11 +100,11 @@ The following example shows, how to prevent the paste action in spreadsheet. In 
 ## Limitations
 
 - External clipboard is not fully supported while copying data from another source and pasting into a spreadsheet, it only works with basic supports (Values, Number, cell, and Text formatting).
-- If you copy =SUM(A2,B2) and paste, the formula reference will change depending on the pasted cell address but we don't have support for nested formula(formula reference will be same).
+- If you copy `=SUM(A2,B2)` and paste it, the formula reference will change depending on the pasted cell address. However, nested formulas are not supported (the formula reference remains unchanged).
 - Clipboard is not supported with conditional formatting (values only pasting).
-- We have limitation while copying the whole sheet data and pasting it into another sheet.
-- Paste options in Ribbon UI and context menu are not enabled when copy and paste from an external content. The external clipboard paste works only through keyboard shortcuts (Ctrl + V).
+- There is a limitation when copying the whole sheet data and pasting it into another sheet.
+- Paste options in the Ribbon UI and context menu are not enabled when copying and pasting from an external source. External clipboard paste works only through the keyboard shortcut (`Ctrl + V`).
 
 ## Note
 
-You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
+You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/getting-started) to learn how to present and manipulate data.

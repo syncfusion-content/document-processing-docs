@@ -17,8 +17,7 @@ N> This ASP.NET Web Forms platform is deprecated. You can use the same product f
 Before you begin, ensure the following are available:
 
 - **Visual Studio 2017 or later** installed on a Windows machine.
-- **.NET Framework 4.5.2 or later** (required by the `Syncfusion.DocIO.AspNet` NuGet package, starting with v16.2.0.x).
-- **Syncfusion.DocIO.AspNet** NuGet package (install in Step 3).
+- .NET Framework 4.5.2 or later.
 
 ## Steps to create Word document programmatically
 
@@ -36,13 +35,13 @@ Step 3: Install the [Syncfusion.DocIO.AspNet](https://www.nuget.org/packages/Syn
 
 N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
 N>
-N> Install the https://www.nuget.org/packages/Syncfusion.Licensing NuGet package and register the license key during application startup.
+N> Install the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) NuGet package and register the license key during application startup.
 N>
 N> ```csharp
 N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
 N> ```
 N>
-N> For more information about generating and registering a license key, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
+N> For more information about generating and registering a license key, refer to the [Syncfusion<sup>&reg;</sup> licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 4: Add a new Web Form in your project. Right click on the project and select **Add > New Item** and add a **Web Form (C#)** from the list. Name it as MainPage.
 

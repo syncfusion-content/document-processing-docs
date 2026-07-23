@@ -45,15 +45,15 @@ Optional NuGet Packages</th><th>
 Description</th></tr>
 <tr>
 <td>
-[Syncfusion.SfSpreadsheetHelper.WPF](https://www.nuget.org/packages/Syncfusion.SfSpreadsheetHelper.WPF)</td><td>
+{{'[Syncfusion.SfSpreadsheetHelper.WPF](https://www.nuget.org/packages/Syncfusion.SfSpreadsheetHelper.WPF)' | markdownify}}</td><td>
 Contains the classes that are responsible for importing charts and sparklines into SfSpreadsheet.</td></tr>
 <tr>
 <td>
-[Syncfusion.ExcelChartToImageConverter.WPF](https://www.nuget.org/packages/Syncfusion.ExcelChartToImageConverter.WPF)</td><td>
+{{'[Syncfusion.ExcelChartToImageConverter.WPF](https://www.nuget.org/packages/Syncfusion.ExcelChartToImageConverter.WPF)' | markdownify}}</td><td>
 Contains the classes that are responsible for converting charts as images.</td></tr>
 <tr>
 <td>
-[Syncfusion.SfChart.WPF](https://www.nuget.org/packages/Syncfusion.SfChart.WPF)</td><td>
+{{'[Syncfusion.SfChart.WPF](https://www.nuget.org/packages/Syncfusion.SfChart.WPF)' | markdownify}}</td><td>
 Contains the classes that are responsible for importing charts such as Line, Pie, Column, and Bar charts. Sparklines are handled by <code>Syncfusion.SfSpreadsheetHelper.WPF</code>, not by this package.</td></tr>
 </table>
 
