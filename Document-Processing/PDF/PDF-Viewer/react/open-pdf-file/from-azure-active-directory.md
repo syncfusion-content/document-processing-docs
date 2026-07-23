@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Open PDF from Azure Active Directory
+# Open and Access PDFs Through Azure Active Directory
 
 ### Overview
 

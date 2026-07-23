@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Open PDF from Dropbox cloud storage
+# PDF file accessed via Dropbox
 
 These instructions describe how to load PDF files stored in Dropbox into the React PDF Viewer, using either the standalone client approach or a server-backed web service.
 
@@ -165,11 +165,11 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 }
 ```
 
-N> Replace the placeholders with actual Dropbox values (Access Token and Folder Name). Do not store secrets in plaintext for production—use environment variables or a secure secret store (for example, Azure Key Vault). Implement token refresh logic and add robust error handling for API failures and missing resources.
+N> Replace the placeholders with actual Dropbox values (Access Token and Folder Name). Do not store secrets in plain text for production—use environment variables or a secure secret store (for example, Azure Key Vault). Implement token refresh logic and add robust error handling for API failures and missing resources.
 
 **Step 4:** Configure the PDF Viewer component
 
-Set the [serviceUrl](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from Dropbox. Ensure the document name exists in your Dropbox folder.
+Set the [serviceUrl] (https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from Dropbox. Ensure the document name exists in your Dropbox folder.
 
 {% raw %}
 
