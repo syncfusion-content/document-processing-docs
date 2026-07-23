@@ -841,7 +841,7 @@ Import and export are processed in `server-side` using Spreadsheet server librar
 
 ## Server Dependencies
 
-Open and save helper functions are shipped in the Syncfusion.EJ2.Spreadsheet package, which is available in Essential Studio<sup style="font-size:70%">&reg;</sup> and [`nuget.org`](https://www.nuget.org/). The following list of dependencies is required for Spreadsheet open and save operations.
+Open and save helper functions are shipped in the Syncfusion.EJ2.Spreadsheet package, which is available in Essential Studio<sup style="font-size:70%">&reg;</sup> and [`nuget.org`](https://www.nuget.org). The following list of dependencies is required for Spreadsheet open and save operations.
 
 * Syncfusion.EJ2
 * Syncfusion.EJ2.Spreadsheet

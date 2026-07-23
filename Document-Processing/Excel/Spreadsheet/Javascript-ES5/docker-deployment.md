@@ -22,8 +22,8 @@ The Spreadsheet is supported on the [JavaScript](https://www.syncfusion.com/java
 You must have [Docker](https://www.docker.com/products/container-runtime/#/download) installed in your environment. The minimum supported versions are Docker Engine 20.10 or later and Docker Compose v2.0 or later.
 
 * On Windows, install [Docker Desktop for Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows).
-* On macOS, install [Docker Desktop for Mac](https://docs.docker.com/desktop/install/mac-install/).
-* On Linux, follow the [Docker Engine install](https://docs.docker.com/engine/install/) and [Docker Compose install](https://docs.docker.com/compose/install/) guides.
+* On macOS, install [Docker Desktop for Mac](https://docs.docker.com/desktop/install/mac-install).
+* On Linux, follow the [Docker Engine install](https://docs.docker.com/engine/install) and [Docker Compose install](https://docs.docker.com/compose/install) guides.
 
 ## How to deploy the Spreadsheet Docker Image
 
