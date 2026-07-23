@@ -6,7 +6,7 @@ control: Markdown
 documentation: UG
 ---
 
-# Working with Paragraph in Markdown Library
+# Working with Paragraphs in the Syncfusion<sup>&reg;</sup> .NET Markdown Library
 
 A paragraph is the basic building block of a Markdown document. All textual content in a Markdown document is represented by the `MdParagraph` class. Each paragraph contains a collection of inline elements such as text ranges, hyperlinks, and images, which are represented by the `Inlines` property. The `IMdInline` interface is the base interface for all inline elements. The following elements can be the child elements of a paragraph:
 
@@ -178,7 +178,7 @@ A complete working sample is available on [GitHub](https://github.com/Syncfusion
 
 ## Applying paragraph styles
 
-Paragraph styles define the visual appearance of a paragraph in a Markdown document. The Syncfusion Markdown library supports heading styles (Heading 1 through Heading 6), blockquote style, and the default normal paragraph style. You can apply a style to a paragraph by using the `ApplyParagraphStyle` method of the `MdParagraph` class.
+Paragraph styles define the visual appearance of a paragraph in a Markdown document. The Syncfusion<sup>&reg;</sup> .NET Markdown library supports heading styles (Heading 1 through Heading 6), the blockquote style, and the default paragraph style (Normal). You can apply a style to a paragraph by using the `ApplyParagraphStyle` method of the `MdParagraph` class. Omitting the call leaves the paragraph in the default Normal style.
 
 The following are the supported paragraph styles in the Syncfusion Markdown library:
 
@@ -504,7 +504,7 @@ A complete working sample is available on [GitHub](https://github.com/Syncfusion
 
 ## Working with hyperlinks
 
-Hyperlink is a reference to data that can link to external content like images, files, webpage, and more. In a Markdown document, a hyperlink may target to any one of the following sources:
+A hyperlink is a reference to data that can link to external content such as images, files, webpages, and more. In a Markdown document, a hyperlink may target any one of the following sources:
 
 * Webpage: Represents the web content.
 * File: Represents the file in some location.

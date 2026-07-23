@@ -6,7 +6,7 @@ control: general
 documentation: UG
 ---
 
-# Welcome to Syncfusion<sup>®</sup> Markdown Document Conversion Library
+# Welcome to Syncfusion<sup>&reg;</sup> Markdown Document Conversion Library
 
 {% doccards %}
 

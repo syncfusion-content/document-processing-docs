@@ -8,11 +8,11 @@ documentation: UG
 
 # Markdown to HTML and HTML to Markdown Conversions
 
-Markdown is a lightweight markup language that adds formatting elements to plain text documents. The .NET Word library supports the conversion of Markdown to HTML document and vice versa.
+Markdown is a lightweight markup language that adds formatting elements to plain text documents. The Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library supports converting Markdown to an HTML document and vice versa.
 
 ## Assemblies and NuGet packages required
 
-Refer to the following links for assemblies and NuGet packages required based on platforms to convert between Markdown and HTML documents using the .NET Word Library.
+Refer to the following links for the assemblies and NuGet packages required, based on the target platform, to convert between Markdown and HTML documents using the .NET Word Library.
 
 * [Markdown conversions assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required)
 * [Markdown conversions NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
@@ -32,24 +32,24 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 using (WordDocument document = new WordDocument(Path.GetFullPath("Input.md")))
 {
     //Save as a HTML document.
-    document.Save(Path.GetFullPath("Output.html"));
+    document.Save(Path.GetFullPath("Output.html"), FormatType.Html);
 }
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Open an existing Markdown file.
-using (WordDocument document = new WordDocument("Input.md"))
+using (WordDocument document = new WordDocument("Input.md", FormatType.Markdown))
 {
-    //Save as a HTML document.
-    document.Save("Output.html");
+    //Save as an HTML document.
+    document.Save("Output.html", FormatType.Html);
 }
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Open an existing Markdown file.
-Using document As WordDocument = New WordDocument("Input.md")
-    'Save as a HTML document.
-    document.Save("Output.html")
+Using document As WordDocument = New WordDocument("Input.md", FormatType.Markdown)
+    'Save as an HTML document.
+    document.Save("Output.html", FormatType.Html)
 End Using
 {% endhighlight %}
 
@@ -75,7 +75,7 @@ document.MdImportSettings.ImageNodeVisited += MdImportSettings_ImageNodeVisited;
 // Open the Markdown file.
 document.Open(Path.GetFullPath("Input.md"));
 // Save as a HTML document.
-document.Save(Path.GetFullPath("Output.html"));
+document.Save(Path.GetFullPath("Output.html"), FormatType.Html);
 document.Close();
 {% endhighlight %}
 
@@ -85,9 +85,9 @@ WordDocument document = new WordDocument();
 // Hook the event to customize the image while importing Markdown document.
 document.MdImportSettings.ImageNodeVisited += MdImportSettings_ImageNodeVisited;
 // Open the Markdown file.
-document.Open("Input.md");
+document.Open("Input.md", FormatType.Markdown);
 // Save as a HTML document.
-document.Save("Output.html");
+document.Save("Output.html", FormatType.Html);
 document.Close();
 {% endhighlight %}
 
@@ -97,9 +97,9 @@ Dim document As WordDocument = New WordDocument()
 ' Hook the event to customize the image while importing Markdown document.
 AddHandler document.MdImportSettings.ImageNodeVisited, AddressOf MdImportSettings_ImageNodeVisited
 ' Open the Markdown file.
-document.Open("Input.md")
+document.Open("Input.md", FormatType.Markdown)
 ' Save as a HTML document.
-document.Save("Output.html")
+document.Save("Output.html", FormatType.Html)
 document.Close()
 {% endhighlight %}
 
@@ -172,7 +172,7 @@ End Sub
 
 {% endtabs %}
 
-N> Hook the event handler before opening a Markdown document as per the above code example.
+N> Hook the event handler before opening a Markdown document as shown in the above code example.
  
 ### Encoding
 
@@ -188,9 +188,9 @@ WordDocument document = new WordDocument();
 // Set the encoding for the Markdown file.
 document.MdImportSettings.Encoding = Encoding.UTF8;
 // Open the Markdown file.
-document.Open(Path.GetFullPath("Input.md"));
+document.Open(Path.GetFullPath("Input.md"), FormatType.Markdown);
 // Save as a HTML document.
-document.Save(Path.GetFullPath("Output.html"));
+document.Save(Path.GetFullPath("Output.html"), FormatType.Html);
 document.Close();
 {% endhighlight %}
 
@@ -200,9 +200,9 @@ WordDocument document = new WordDocument();
 // Set the encoding for the Markdown file.
 document.MdImportSettings.Encoding = Encoding.UTF8;
 // Open the Markdown file.
-document.Open("Input.md");
+document.Open("Input.md", FormatType.Markdown);
 // Save as a HTML document.
-document.Save("Output.html");
+document.Save("Output.html", FormatType.Html);
 document.Close();
 {% endhighlight %}
 
@@ -212,9 +212,9 @@ Dim document As WordDocument = New WordDocument()
 ' Set the encoding for the Markdown file.
 document.MdImportSettings.Encoding = Encoding.UTF8
 ' Open the Markdown file.
-document.Open("Input.md")
+document.Open("Input.md", FormatType.Markdown)
 ' Save as a HTML document.
-document.Save("Output.html")
+document.Save("Output.html", FormatType.Html)
 document.Close()
 {% endhighlight %}
 
@@ -232,27 +232,27 @@ The following code example shows how to convert HTML to Markdown document.
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 // Open an existing HTML file.
-using (WordDocument document = new WordDocument(Path.GetFullPath("Input.html")))
+using (WordDocument document = new WordDocument(Path.GetFullPath("Input.html"), FormatType.Html))
 {
     //Save as a Markdown document.
-    document.Save(Path.GetFullPath("Output.md"));
+    document.Save(Path.GetFullPath("Output.md"), FormatType.Markdown);
 }
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Open an existing HTML file.
-using (WordDocument document = new WordDocument("Input.html"))
+using (WordDocument document = new WordDocument("Input.html", FormatType.Html))
 {
     //Save as a Markdown document.
-    document.Save("Output.md");
+    document.Save("Output.md", FormatType.Markdown);
 }
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Open an existing HTML file.
-Using document As WordDocument = New WordDocument("Input.html")
+Using document As WordDocument = New WordDocument("Input.html", FormatType.Html)
     'Save as a Markdown document.
-    document.Save("Output.md")
+    document.Save("Output.md", FormatType.Markdown)
 End Using
 {% endhighlight %}
 
@@ -272,20 +272,20 @@ The following code example illustrates how to save Image files during an HTML to
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
  //Open an existing HTML document.
- using (WordDocument document = new WordDocument(Path.GetFullPath(@"Data/Input.html")))
+ using (WordDocument document = new WordDocument(Path.GetFullPath(@"Data/Input.html"), FormatType.Html))
  {
      //Hook the event to customize the image. 
      document.SaveOptions.MarkdownSaveOptions.ImageNodeVisited += SaveImage;
      //Save the document as a Markdown file.
-     document.Save(Path.GetFullPath(@"Output/Output.md"));
+     document.Save(Path.GetFullPath(@"Output/Output.md"), FormatType.Markdown);
  }
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Open an existing HTML document. 
-using (WordDocument document = new WordDocument(@"Input.html"))
+//Open an existing HTML document.
+using (WordDocument document = new WordDocument(@"Input.html", FormatType.Html))
 {
-    //Hook the event to customize the image. 
+    //Hook the event to customize the image.
     document.SaveOptions.MarkdownSaveOptions.ImageNodeVisited += SaveImage;
     //Save an HTML document as a Markdown file.
     document.Save("HtmlToMd.md", FormatType.Markdown);
@@ -293,9 +293,9 @@ using (WordDocument document = new WordDocument(@"Input.html"))
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Open an existing HTML document. 
-Using document As WordDocument = New WordDocument("Input.html")
-    'Hook the event to customize the image. 
+'Open an existing HTML document.
+Using document As WordDocument = New WordDocument("Input.html", FormatType.Html)
+    'Hook the event to customize the image.
     document.SaveOptions.MarkdownSaveOptions.ImageNodeVisited += SaveImage
     'Save an HTML document as a Markdown file.
     document.Save("HtmlToMd.md", FormatType.Markdown)
@@ -358,12 +358,12 @@ The following code example shows how to save a Markdown file with a specific enc
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 //Open an existing HTML document.
-using (WordDocument document = new WordDocument(Path.GetFullPath(@"Data/Input.html")))
+using (WordDocument document = new WordDocument(Path.GetFullPath(@"Data/Input.html"), FormatType.Html))
 {
     //Set the encoding values.
     document.SaveOptions.MarkdownSaveOptions.Encoding = Encoding.ASCII;
     //Save the document as a Markdown file.
-    document.Save(Path.GetFullPath(@"Output/Output.md"));
+    document.Save(Path.GetFullPath(@"Output/Output.md"), FormatType.Markdown);
 }
 {% endhighlight %}
 
@@ -374,7 +374,7 @@ using (WordDocument document = new WordDocument("Input.html"))
     //Set the encoding values.
     document.SaveOptions.MarkdownSaveOptions.Encoding = Encoding.ASCII;
     //Save the document as a Markdown file.
-    document.Save("HtmlToMd.md");
+    document.Save("HtmlToMd.md", FormatType.Markdown);
 }
 {% endhighlight %}
 
@@ -384,7 +384,7 @@ Using document As WordDocument = New WordDocument("Input.html")
     'Set the encoding values. 
     document.SaveOptions.MarkdownSaveOptions.Encoding = Encoding.ASCII
     'Save the document as a Markdown file.
-    document.Save("HtmlToMd.md")
+    document.Save("HtmlToMd.md", FormatType.Markdown)
 End Using
 {% endhighlight %}
 

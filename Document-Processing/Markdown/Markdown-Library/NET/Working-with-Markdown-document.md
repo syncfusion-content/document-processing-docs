@@ -5,7 +5,7 @@ platform: document-processing
 control: Markdown
 documentation: UG
 ---
-# Working with Markdown document
+# Working with a Markdown Document in the Syncfusion<sup>&reg;</sup> .NET Markdown Library
 
 ## Cloning a Markdown document
 
