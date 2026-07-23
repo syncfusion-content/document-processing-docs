@@ -19,7 +19,7 @@ AI Assist integrates seamlessly into your Angular Spreadsheet application with m
 
 For complete setup steps, how-to guides, API references, and prompt examples, see [AI Assist Integration](./integration).
 
-## How AI Assist Works
+## How AI Assist Works in spreadsheet
 
 Understanding how AI Assist processes your request helps you write better prompts and get more reliable results.
 
