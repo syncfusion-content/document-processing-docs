@@ -16,9 +16,8 @@ The following steps illustrate creating a simple invoice-formatted Excel documen
 
 **Prerequisites:**
 - Visual Studio 2022 (17.0 or later) with the **ASP.NET and web development** workload installed.
-- .NET 6.0 SDK or later.
+- .NET 8.0 SDK or later.
 - A user account with write permissions to the project output directory.
-- The `AdventureCycles-Logo.png` image placed in the project output directory (the same folder as the Web API project DLL).
 
 Step 1: Create a new C# ASP.NET Core Web API project.
 
@@ -278,8 +277,6 @@ Step 2: Add a name for the application.
 
 Step 3: Add the following code snippet in the `Program.cs` file for accessing the Web API using HTTP requests.
 
-N> Make sure the Web API project is running locally (for example, via `dotnet run` or Visual Studio's **IIS Express** / **Kestrel** profile) before invoking the client. The endpoint URL below (`https://localhost:7000/api/Values/api/Excel`) must match the launchSettings.json port of your Web API project; the `/api/Values` segment is incorrect for the controller defined above (`api/Excel`) and should be removed when adapting the sample.
-
 {% capture codesnippet3 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
@@ -323,5 +320,5 @@ By executing the program, you will get the Excel file as below.
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
-An online sample link to [create an Excel document](https://ej2.syncfusion.com/aspnetcore/Excel/Create#/material3) in ASP.NET Core.
+An online sample link to [create an Excel document](https://document.syncfusion.com/demos/excel/create#/tailwind3) in ASP.NET Core.
 

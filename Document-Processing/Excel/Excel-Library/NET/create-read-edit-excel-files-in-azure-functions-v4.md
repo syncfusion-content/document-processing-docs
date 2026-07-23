@@ -14,7 +14,6 @@ documentation: UG
 Before you begin, ensure the following:
 
 * An active **Azure subscription**. If you do not have one, see [Create an Azure account](https://azure.microsoft.com/free/).
-* **Visual Studio 2022** with the **ASP.NET and web development** and **Azure development** workloads installed.
 * A **Syncfusion license key**. Register it in `Function1.cs` (see the snippet in Step 4a below) or via the `SyncfusionLicense.txt` file placed in the project output directory.
 
 ## Create a simple Excel report
@@ -409,5 +408,5 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
-An online sample link to [create an Excel document](https://ej2.syncfusion.com/aspnetcore/Excel/Create#/material3) in ASP.NET Core.
+An online sample link to [create an Excel document](https://document.syncfusion.com/demos/excel/create#/tailwind3) in ASP.NET Core.
 
