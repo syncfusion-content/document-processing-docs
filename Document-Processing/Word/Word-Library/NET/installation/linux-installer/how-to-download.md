@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Downloading Syncfusion<sup>&reg;</sup> Word linux installer - Syncfusion<sup>&reg;</sup>
-description: Learn here about how to download the Syncfusion<sup>&reg;</sup> Word linux installer from our Syncfusion<sup>&reg;</sup> website with license.
+title: Downloading Syncfusion<sup>&reg;</sup> Word Linux installer - Syncfusion<sup>&reg;</sup>
+description: Learn here about how to download the Syncfusion<sup>&reg;</sup> Word Linux installer from our Syncfusion<sup>&reg;</sup> website with license.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 
 ---
 
-# Download Syncfusion Word Linux Installer
+# Download Syncfusion<sup>&reg;</sup> Word Linux Installer
 
 The Syncfusion<sup>&reg;</sup> installer can be downloaded from the [Syncfusion](https://www.syncfusion.com/) website. You can either download the licensed installer or try our trial installer depending on your license.
 
@@ -27,14 +27,14 @@ Our 30-day trial can be downloaded in two ways.
 
 ### Download Free Trial Setup
 
-1. You can evaluate our 30-day free trial by visiting the [Download Free Trial](https://www.syncfusion.com/downloads) page and select the product
-2. After completing the required form or logging in with your registered Syncfusion<sup>&reg;</sup> account, you can download the trial installer from the confirmation page. (as shown in below screenshot.)
+1. You can evaluate our 30-day free trial by visiting the [Download Free Trial](https://www.syncfusion.com/downloads) page and select the Word product.
+2. After completing the required form or logging in with your registered Syncfusion<sup>&reg;</sup> account, you can download the Word trial installer from the confirmation page (as shown in the below screenshot).
 
    ![Trial and downloads of Syncfusion Word](images/trial-confirmation.png)
    
 3. With a trial license, only the latest version’s trial installer can be downloaded.
 4. Unlock key is not required to install the Syncfusion Word Linux trial installer.
-5. Before the trial expires, you can download the trial installer at any time from your registered account’s [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page (as shown in below screenshot.)
+5. Before the trial expires, you can download the trial installer at any time from your registered account's [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page (as shown in the below screenshot.)
  
    ![Trial and downloads of Syncfusion Word](images/trial-download.png)
 
@@ -52,12 +52,12 @@ You should initiate an evaluation if you have already obtained our components th
 	
     ![Trial and downloads of Syncfusion Word](images/start-trial-download.png)
    
-2. To access this page, you must sign up\log in with your Syncfusion<sup>&reg;</sup> account.
+2. To access this page, you must sign up or log in with your Syncfusion<sup>&reg;</sup> account.
 3. Begin your trial by selecting the Syncfusion<sup>&reg;</sup> product. 
 
    N> If you've already used the trial products and they haven't expired, you won't be able to start the trial for the same product again.
 
-4. After you've started the trial, go to the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page to get the latest version trial installer. You can generate the [unlock key](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) and [license key](https://help.syncfusion.com/common/essential-studio/licensing/how-to-generate) here at any time before the trial period expires. (as shown in below screenshot.)
+4. After you've started the trial, go to the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page to get the latest version trial installer. You can generate the [unlock key](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) and [license key](https://help.syncfusion.com/common/essential-studio/licensing/how-to-generate) here at any time before the trial period expires (as shown in the below screenshot).
 
    ![License and downloads of Syncfusion Word](images/start-trial-download-installer.png)
 
@@ -72,8 +72,8 @@ You should initiate an evaluation if you have already obtained our components th
 
    ![License and downloads of Syncfusion Word](images/license-download.png)
    
-4. Unlock key is not required to install the Syncfusion<sup>&reg;</sup> Word Linux trial installer.   
-5. For Linux OS, ZIP formats is available for download.
+4. Unlock key is not required to install the Syncfusion<sup>&reg;</sup> Word Linux installer.   
+5. For Linux OS, ZIP format is available for download.
    
    ![License and downloads of Syncfusion Word](images/Linux_Download.PNG)
 
