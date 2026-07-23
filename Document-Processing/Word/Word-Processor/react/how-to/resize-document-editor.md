@@ -74,7 +74,7 @@ import {
 } from '@syncfusion/ej2-react-documenteditor';
 DocumentEditorContainerComponent.Inject(Toolbar);
 function App() {
-  let container;
+  let container = DocumentEditorContainerComponent;
   function onCreate() {
     setInterval(() => {
       updateDocumentEditorSize();
