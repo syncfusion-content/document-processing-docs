@@ -4,12 +4,14 @@ description: Learn here all about Import and Export support in Syncfusion WPF Ri
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: import, export, load, save
+keywords: import, export, load, save, async-load, document-events, file-formats
 ---
 # Import and Export in WPF RichTextBox (SfRichTextBoxAdv)
 
-The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) allows you to import/export word documents (.docx, .doc), rich text format documents (.rtf), HTML documents (.htm, .html), XAML documents (.xaml) and text documents (.txt).
-The following sample code demonstrates how to import contents from a file into SfRichTextBoxAdv.
+The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) allows you to import or export Word documents (.docx, .doc), Rich Text Format documents (.rtf), HTML documents (.htm, .html), XAML documents (.xaml), and text documents (.txt). The import and export operations are exposed through the [Load](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_Load_System_String_), [Save](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_Save_System_String_), and [LoadAsync](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_LoadAsync_System_String_) API members.
+## Import
+
+The following sample code demonstrates how to import a document from a file into SfRichTextBoxAdv using the [Load(string)](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_Load_System_String_) overload. Use the `Load(string fileName)` overload for file paths, or `Load(Stream)` to load from a stream.
 {% tabs %}
 {% highlight c# %}
 // Imports the document.
@@ -57,7 +59,9 @@ End Sub
 {% endhighlight %}
 {% endtabs %}
 
-The following code example demonstrates how to export SfRichTextBoxAdv contents into a file.
+## Export
+
+The following code example demonstrates how to export the SfRichTextBoxAdv contents into a file using the [Save(string)](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_Save_System_String_) overload. Use the `Save(string fileName)` overload for file paths, or `Save(Stream)` to write the document to a stream.
 {% tabs %}
 {% highlight c# %}
 // Exports the document.
@@ -97,11 +101,13 @@ End Sub
 {% endhighlight %}
 {% endtabs %}
 
-N> When the SfRichTextBoxAdv control encounters an unsupported element, it does not render the element, instead, it continues to the next supported element and render it. Examples of unsupported elements are AutoShapes, watermarks, charts, SmartArt, WordArt, equations, document structure tags, styles, wrapping styles, fields other than hyperlinks, absolutely positioned tables, and absolutely positioned images.
+N> When the SfRichTextBoxAdv control encounters an unsupported element, it does not render the element; instead, it continues to the next supported element and renders it. Examples of unsupported elements are AutoShapes, watermarks, charts, SmartArt, WordArt, equations, document structure tags, styles, wrapping styles, fields other than hyperlinks, absolutely positioned tables, and absolutely positioned images. Content in unsupported elements is skipped without raising an error.
 
-## UI Commands for importing/exporting documents
+## UI commands
 
-The following code example demonstrates how to bind commands for performing importing and exporting documents.
+The [OpenDocumentCommand](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_OpenDocumentCommand) and [SaveDocumentCommand](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_SaveDocumentCommand) UI commands show built-in Open and Save dialogs, similar to the `Load` / `Save` methods shown above, but they handle the file-selection UI for you.
+
+The following code example demonstrates how to bind commands for importing and exporting documents.
 {% tabs %}
 {% highlight xaml %}
 <!-- Binds button to the OpenDocumentCommand -->
@@ -118,9 +124,22 @@ N> In order to perform import/export documents, the standard keyboard shortcuts 
 
 ## Asynchronous import settings
 
+The following code example demonstrates how to load a document asynchronously using the [LoadAsync](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_LoadAsync_System_String_) method.
+
+{% tabs %}
+{% highlight c# %}
+// Loads the document asynchronously.
+richTextBoxAdv.LoadAsync(openFileDialog.FileName);
+{% endhighlight %}
+{% highlight VB %}
+' Loads the document asynchronously.
+richTextBoxAdv.LoadAsync(openFileDialog.FileName)
+{% endhighlight %}
+{% endtabs %}
+
 ### Show or hide the loading page number
 
-The SfRichTextBoxAdv control shows the current loading page number by default at the bottom right corner of the control while loading the document asynchronously. You can hide this loading page number by using the ShowPageNumber property of LoadAsyncSettings class.
+The SfRichTextBoxAdv control shows the current loading page number by default at the bottom-right corner of the control while loading the document asynchronously. You can hide this loading page number by setting the [`ShowPageNumber`](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.LoadAsyncSettings.html#Syncfusion_Windows_Controls_RichTextBoxAdv_LoadAsyncSettings_ShowPageNumber) property of the `LoadAsyncSettings` class to `false`.
 
 The following code example demonstrates how to hide the loading page number in SfRichTextBoxAdv control.
 
@@ -153,39 +172,53 @@ richTextBoxAdv.LoadAsyncSettings.ShowPageNumber = false
 
 {% endtabs %}
 
-N> This API is supported starting from release version v17.4.0.X.
+N> This API is supported starting from the release version in which `LoadAsyncSettings` was introduced.
 
 
-## Events to notify document starts and completes loading and saving
+## Document load and save events
 
-SfRichTextBoxAdv control also provides below events to notify document starts and completes loading and saving.
+SfRichTextBoxAdv also provides the following events to notify when document loading and saving start and complete. The following example shows how to subscribe to them.
+
+{% tabs %}
+{% highlight c# %}
+// Hooks the event handlers.
+richTextBoxAdv.DocumentChanging += (s, e) => { /* document is about to load */ };
+richTextBoxAdv.DocumentChanged  += (s, e) => { /* document has finished loading */ };
+richTextBoxAdv.DocumentSaving   += (s, e) => { /* document is about to save */ };
+richTextBoxAdv.DocumentSaved    += (s, e) => { /* document has finished saving */ };
+{% endhighlight %}
+{% highlight VB %}
+' Hooks the event handlers.
+AddHandler richTextBoxAdv.DocumentChanging, Sub(s, e)
+    ' document is about to load
+End Sub
+AddHandler richTextBoxAdv.DocumentChanged, Sub(s, e)
+    ' document has finished loading
+End Sub
+AddHandler richTextBoxAdv.DocumentSaving, Sub(s, e)
+    ' document is about to save
+End Sub
+AddHandler richTextBoxAdv.DocumentSaved, Sub(s, e)
+    ' document has finished saving
+End Sub
+{% endhighlight %}
+{% endtabs %}
 
 
-### Events Table
+### Events table
 
-<table>
-<tr>
-<th>
-Event </th><th>
-Description </th></tr>
-<tr>
-<td>
-DocumentChanging</td><td>
-This event is triggered when the document starts loading.</td></tr>
-<tr>
-<td>
-DocumentChanged</td><td>
-This event is triggered after the document is successfully loaded.</td></tr>
-<tr>
-<td>
-DocumentSaving</td><td>
-This event is triggered when the document starts saving.</td></tr>
-<tr>
-<td>
-DocumentSaved</td><td>
-This event is triggered after the document is successfully saved.</td></tr>
-</table>
+| Event | Description |
+|-------|-------------|
+| [DocumentChanging](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_DocumentChanging) | Triggered when the document starts loading. |
+| [DocumentChanged](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_DocumentChanged) | Triggered after the document is successfully loaded. |
+| [DocumentSaving](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_DocumentSaving) | Triggered when the document starts saving. |
+| [DocumentSaved](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_DocumentSaved) | Triggered after the document is successfully saved. |
 
-N> This API is supported starting from release version v18.2.0.X.
+N> This API is supported starting from the release version in which these events were introduced.
 
-You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations.You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to knows how to render and configure the editing tools.
+N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk-wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
+## See Also
+
+- [Commands in WPF RichTextBox](Commands)
+- [Clipboard in WPF RichTextBox](Clipboard)
+- [Document Structure in WPF RichTextBox](Document-Structure)
