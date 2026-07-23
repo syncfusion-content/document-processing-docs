@@ -126,7 +126,7 @@ page.render(...).promise.then(() => console.log('Rendered'));
 
 ### Syncfusion Angular
 
-Check [Syncfusion Events Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/events#documentload) to know more about event handling in Syncfusion React PDF Viewer.
+Check [Syncfusion Events Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/events#documentload) to know more about event handling in Syncfusion Angular PDF Viewer.
 
 ```html
 <ejs-pdfviewer
@@ -151,20 +151,20 @@ onPageChange(args: any) {
 
 - Create a feature branch
 - Add smoke tests for existing PDF.js behavior
-- Identify components using `pdf js-dist`
+- Identify components using `pdfjs-dist`
 
 ### 2. Remove PDF.js Rendering Logic
 
 **Before**
 
 ```ts
-import * as pdfjsLib from 'pdf js-dist';
+import * as pdfjsLib from 'pdfjs-dist';
 ```
 
 **After**
 
 - Remove canvas elements
-- Remove `pdf js` dependency
+- Remove `pdfjs-dist` dependency
 
 ### 3. Add Syncfusion Viewer
 
@@ -231,8 +231,8 @@ Use Syncfusion CDN or host locally:
 - [load()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#load) — programmatically load a PDF.
 - [download()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#download) — trigger download of current document.
 - [addAnnotation(annotation: any)](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#addannotation) — add an annotation programmatically.
-- [exportAnnotation(annotationDataFormat)](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#exportannotation) / [exportAnnotationsAsBase64String()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#exportannotationsasbase64string):   — export annotations for persistence.
-- [extractText(pageIndex: number, options?: any)](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#extracttext): — extract text and coordinates.
+- [exportAnnotation(annotationDataFormat)](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#exportannotation) / [exportAnnotationsAsBase64String()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#exportannotationsasbase64string) — export annotations for persistence.
+- [extractText(pageIndex: number, options?: any)](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#extracttext) — extract text and coordinates.
 - [Events](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#events): [documentLoad](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#documentload), [pageRenderComplete](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#pagerendercomplete), [pageChange](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#pagechange), [annotationAdd](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#annotationadd), [annotationRemove](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#annotationremove), [toolbarClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#toolbarclick).
 
 ## See Also
