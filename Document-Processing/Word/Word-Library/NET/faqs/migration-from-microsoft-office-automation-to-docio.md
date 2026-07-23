@@ -633,7 +633,7 @@ Imports word = Microsoft.Office.Interop.Word
 
 ----------------
 
-Initializes objects.
+‘Initializes objects.
 Dim nullobject As Object = Missing.Value
 Dim newFilePath As Object = "Sample.docx"
 ‘Starts the application.
@@ -708,7 +708,7 @@ Dim picWatermark As PictureWatermark = New PictureWatermark()
 picWatermark.Scaling = 120f
 picWatermark.Washout = True
 doc.Watermark = picWatermark
-picWatermark.Picture = Image.FromFile(ImagesPath and "Water lilies.jpg")
+picWatermark.Picture = Image.FromFile(ImagesPath & "Water lilies.jpg")
 ‘Saves the document.
 doc.Save("Sample.docx", FormatType.Docx)
 ‘Closes the document.
@@ -755,7 +755,7 @@ foreach (word.Section section in document.Sections)
     section.Footers[word.WdHeaderFooterIndex.wdHeaderFooterPrimary].Range.Text = "Internal";
     section.Footers[word.WdHeaderFooterIndex.wdHeaderFooterPrimary].Range.ParagraphFormat.Alignment = word.WdParagraphAlignment.wdAlignParagraphLeft;
     //Header.
-    section.Headers[word.WdHeaderFooterIndex.wdHeaderFooterPrimary].Range.Fields.Add(section.Headers[word.WdHeaderFooterIndex.wdHeaderFooterPrimary].Range,reffieldEmpty, ref autoText, ref preserveFormatting);
+    section.Headers[word.WdHeaderFooterIndex.wdHeaderFooterPrimary].Range.Fields.Add(section.Headers[word.WdHeaderFooterIndex.wdHeaderFooterPrimary].Range, ref fieldEmpty, ref autoText, ref preserveFormatting);
     section.Headers[word.WdHeaderFooterIndex.wdHeaderFooterPrimary].Range.ParagraphFormat.Alignment = word.WdParagraphAlignment.wdAlignParagraphRight;
 }
 //Saves the document.
@@ -825,7 +825,7 @@ foreach (WSection sec in doc.Sections)
     para.AppendField("page", FieldType.FieldPage);
     para.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Right;
     sec.HeadersFooters.Header.Paragraphs.Add(para);
-    /Footer.
+    //Footer.
     WParagraph para1 = new WParagraph(doc);
     para1.AppendText("Internal");
     para1.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Left;
@@ -849,7 +849,7 @@ foreach (WSection sec in doc.Sections)
     para.AppendField("page", FieldType.FieldPage);
     para.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Right;
     sec.HeadersFooters.Header.Paragraphs.Add(para);
-    /Footer.
+    //Footer.
     WParagraph para1 = new WParagraph(doc);
     para1.AppendText("Internal");
     para1.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Left;
