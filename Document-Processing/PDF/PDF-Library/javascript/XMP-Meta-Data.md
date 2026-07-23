@@ -203,8 +203,6 @@ document.destroy();
 
 Different schema types define categories of metadata used in PDF documents. The following tables list the available properties for each schema.
 
-Use the following guide to select the right schema for your metadata needs.
-
 | Schema Type              | Description                                      |
 |--------------------------|--------------------------------------------------|
 | Basic Schema             | General document metadata (creator, dates, tool) |
