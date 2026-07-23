@@ -45,4 +45,4 @@ The following keyboard shortcuts copy the selected text:
 
 These topics describe how selection interacts with other features or how copy behavior may be limited depending on viewer configuration or PDF security settings.
 
-- [Text selection API reference](./text-selection-api-events)
+- [Text Selection API Events](./text-selection-api-events)

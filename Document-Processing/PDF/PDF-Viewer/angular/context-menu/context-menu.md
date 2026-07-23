@@ -32,5 +32,4 @@ The availability and behavior of the context menu are governed primarily by clie
 
 * [Built-in Context Menu](builtin-context-menu.md): A technical reference for default menu items by context (text, annotations, form fields, and empty space).
 * [Customize Context Menu](custom-context-menu.md): A guide on how to add custom menu items, handle click events, and disable the menu entirely.
-* [Angular PDF Viewer Getting Started](https://ej2.syncfusion.com/angular/documentation/pdfviewer/getting-started): Installation, module registration, and license key registration.
-* [API Reference: PdfViewerComponent](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index): Related properties such as `enableContextMenu` and `contextMenuOption`, and events such as `contextMenuOpen` and `contextMenuItemSelected`.
+* [Angular PDF Viewer Getting Started](../getting-started.md): Installation, module registration, and license key registration.

@@ -350,5 +350,3 @@ N> A comprehensive list of localization files and default strings is available o
 
 - [Default Language](./default-language)
 - [New Language](./new-language)
-- [GitHub Locale repository](https://github.com/syncfusion/ej2-locale)
-- [PDF Viewer API reference](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default)
