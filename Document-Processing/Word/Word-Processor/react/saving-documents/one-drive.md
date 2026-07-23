@@ -128,7 +128,7 @@ private string GetValue(IFormCollection data, string key)
   "AllowedHosts": "*",
   "TenantId": "Your_Tenant_ID",
   "applApplicationIdicationId": "Your_Application_ID",
-  "FolderName": "Your_Folder_Name_To_Access_The_Files_In_OneDrive"
+  "FolderName": "Your_Folder_Name_To_Access_The_Files_In_Onedrive"
 }
 
 ```
