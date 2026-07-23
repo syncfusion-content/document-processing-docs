@@ -51,7 +51,7 @@ chartArea.Border.LineWeight = OfficeChartLineWeight.Hairline
 
 ## Customization of Color
 
-The following code snippet illustrates how to fill the color in chart area.
+The following code snippet illustrates how to fill the chart area with color.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -192,7 +192,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Add Image in Chart Area
 
-The following code snippet illustrates how to fill the image in chart area.
+The following code snippet illustrates how to fill the chart area with an image.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -219,7 +219,7 @@ chartArea.Fill.UserPicture("Image.png")
 
 ## Set the Transparency level
 
-The following code snippet illustrates how to make transparency in chart area.
+The following code snippet illustrates how to set the transparency of the chart area.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}

@@ -12,7 +12,7 @@ Data Labels on a chart make it easier to understand. They show important informa
 
 ## Enable Data Labels in Chart
 
-The following code snippet illustrates how to visible the data label in chart.
+The following code snippet illustrates how to show the data label in chart.
 
 N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
