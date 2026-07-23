@@ -11,10 +11,6 @@ documentation: ug
 
 Formulas are used for calculating the data in a worksheet. You can refer to a cell reference from the same sheet or from different sheets.
 
-## Prerequisites
-
-Before working with formulas, ensure the Spreadsheet control is set up in your project. Refer to the [Getting Started](https://ej2.syncfusion.com/javascript/documentation/spreadsheet/getting-started) documentation for installation and initial configuration steps. The Spreadsheet scripts and styles must be referenced, and the control must be rendered before applying any formula-related APIs.
-
 ## Usage
 
 You can set formula for a cell in the following ways,
