@@ -41,7 +41,7 @@ function extractTextCompleted(args){
 
 ### Troubleshooting
 
-- If `extractTextCompleted` does not fire, verify that `isExtractText` is set to `true` and that the document has finished loading.
+- If `extractTextCompleted` does not fire, verify that the document has finished loading.
 - If `documentTextCollection` is empty, confirm the `serviceUrl` points to a reachable PDF Viewer Web API service.
 - If `documentTextCollection[i]` returns `undefined`, check that the document contains the expected number of pages (page indexing starts at 0).
 

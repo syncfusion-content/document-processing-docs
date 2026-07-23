@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Convert pixel to point in server side in React Pdfviewer component
+# Convert pixel to point in server side in React PDF Viewer component
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> PDF viewer will get the bounds of the annotations as the pixel in the Client-side. But while using it in the back end, we need to convert the pixel into point by using the below calculation. And the 0.75 is constant for all the calculations in the back end.
+Syncfusion® PDF Viewer renders pages at a 96 DPI resolution and obtains the annotation bounds in pixels on the client side. However, PDF coordinates are measured in points, which use a 72 DPI unit system. Therefore, when using these values on the back end, the pixel values must be converted to points using the following calculation.
 
 ```ts
 

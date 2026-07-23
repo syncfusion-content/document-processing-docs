@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Configure Annotation Selector Settings for Better User Interaction
 
-Use the [annotationSelectorSettings](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationSelectorSettings) property to configure the appearance and behavior of annotation selectors. These include selection handles and resizer (for example, handle shape and size), which determine how users interact with annotations during editing.
+Use the [annotationSelectorSettings] (https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationselectorsettings) property to configure the appearance and behavior of annotation selectors. These include selection handles and resizer (for example, handle shape and size), which determine how users interact with annotations during editing.
 
 The example below changes the selector's resizer handle shape to circular and opens an existing annotation for editing. Setting `resizerShape` updates the selector appearance to circular handles. Ensure an annotation exists before calling `editAnnotation` to avoid runtime errors.
 
