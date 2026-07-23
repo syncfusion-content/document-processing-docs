@@ -129,5 +129,5 @@ The following elements are supported in Word to EPUB conversion.
 
 ## See also
 
-* [Word to HTML conversion](html-conversions.md)
-* [Word to Markdown conversion](word-to-markdown-conversion.md)
+* [Word to HTML conversion](html-conversions)
+* [Word to Markdown conversion](word-to-markdown-conversion)
