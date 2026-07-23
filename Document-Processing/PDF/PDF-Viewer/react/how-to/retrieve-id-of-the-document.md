@@ -29,5 +29,5 @@ Refer to the following minimal example that logs the stored document ID when a b
 [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to/Get%20hash%20id%20from%20storage).
 
 ## See also
-- [Getting started with React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started)
-- [Load documents dynamically in React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/how-to/load-document)
+- [Getting started](../getting-started)
+- [Load documents dynamically in React PDF Viewer](../how-to/load-document)

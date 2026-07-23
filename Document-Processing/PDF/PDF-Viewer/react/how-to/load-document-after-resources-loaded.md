@@ -108,7 +108,7 @@ root.render(<App />);
 
 ## See also
 
-- [Events in React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/events)
-- [Open PDF files](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/open-pdf-files)
-- [Save PDF files](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/save-pdf-files)
-- [Getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started)
+- [Events in React PDF Viewer](../events#resourcesloaded)
+- [Open PDF files](../open-pdf-files)
+- [Save PDF files](../save-pdf-files)
+- [Getting started](../getting-started)

@@ -34,6 +34,6 @@ Find the sample [how to unload the PDF document programmatically](https://stackb
 
 ## See also
 
-* [Open PDF Files](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/open-pdf-files)
-* [Save PDF Files](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/save-pdf-files)
-* [Getting Started with Server-Backed React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started-with-server-backed)
+* [Open PDF Files](../open-pdf-files)
+* [Save PDF Files](../save-pdf-files)
+* [Getting Started with Server-Backed React PDF Viewer](../getting-started-with-server-backed)

@@ -111,5 +111,4 @@ root.render(<App />);
 Find the sample: [Load PDF documents dynamically](https://stackblitz.com/edit/react-nszkto?file=src%2Findex.js)
 
 ## See also
-- [Getting started with React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started)
-- [PDF Viewer API reference](https://ej2.syncfusion.com/react/documentation/api/pdfviewer)
+- [Getting started](../getting-started)

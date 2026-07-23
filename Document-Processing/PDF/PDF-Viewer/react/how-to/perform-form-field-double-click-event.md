@@ -15,7 +15,7 @@ This article demonstrates how to handle a double-click on a PDF form field by us
 
 **Step 1:** Create a simple PDF Viewer sample in React by following the steps in the appropriate getting-started guide based on your deployment mode.
 
-* [Getting started with the React Standalone PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started)
+* [Getting started with the React Standalone PDF Viewer](../getting-started)
 
 **Step 2:** Subscribe to the `formFieldDoubleClick` event in the `index.js` file. The complete code for each deployment mode is shown below.
 

@@ -49,7 +49,6 @@ See the sample: [how to lock square or rectangle annotations](https://stackblitz
 
 ## See also
 
-- [`RectangleSettings` API reference](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/rectanglesettings)
-- [Getting started with React Standalone PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started)
-- [Getting started with React Server-Backed PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started-with-server-backed)
-- [How to create and run a custom PDF Viewer Web Service](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/how-to/create-and-run-custom-pdf-viewer-web-service)
+- [Getting started with React Standalone PDF Viewer](../getting-started)
+- [Getting started with React Server-Backed PDF Viewer](../getting-started-with-server-backed)
+- [How to create and run a custom PDF Viewer Web Service](./create-and-run-custom-pdf-viewer-web-service)

@@ -2,7 +2,7 @@
 layout: post
 title: Load PDF Viewer with Local Resources in React | Syncfusion
 description: Configure the Syncfusion React PDF Viewer to load PDF documents and library files from local resources.
-control: PdfViewer
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 ---
@@ -60,7 +60,6 @@ Configure the PDF Viewer to use local paths:
 import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import './index.css';
-import '@syncfusion/ej2-react-pdfviewer/styles/material.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
         BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch,
         FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
@@ -93,7 +92,6 @@ root.render(<App />);
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import '@syncfusion/ej2-react-pdfviewer/styles/material.css';
 import  { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
           BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch,
           FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
