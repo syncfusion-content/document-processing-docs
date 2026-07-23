@@ -15,11 +15,9 @@ The Syncfusion<sup>&reg;</sup> Data Extraction Add-On can be downloaded from the
 
 ### Download Data Extraction Add-On Setup
 
-1. You can evaluate our Data Extraction Add-On by visiting the [Download](https://www.syncfusion.com/downloads) page and selecting the product.
-2. An unlock key is not required to download the Syncfusion<sup>&reg;</sup> Data Extraction Add-On.
-3. You can download the Data Extraction Add-On at any time from your registered account’s [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page by clicking the More Download Options (as shown in the screenshot below).
-![Trial and downloads of Syncfusion SmartDataExtractor](images/license-download.png)
-4. The Syncfusion Data Extraction Add-On is provided in ZIP format. After downloading, extract the file to access assemblies and demos for PDF and image data extraction.
-   ![License and downloads of Syncfusion SmartDataExtractor](images/start-trial-download-offline-installer.png)
+1. You can download the Data Extraction Add-On at any time from your registered account's [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page by clicking **More Download Options** (as shown in the screenshot below).
+   ![Trials and downloads of the Syncfusion Data Extraction Add-On](images/license-download.png)
+2. The Syncfusion Data Extraction Add-On is provided in ZIP format. After downloading, extract the file to access the assemblies and demos for PDF and image data extraction.
+   ![Extracted contents of the Syncfusion Data Extraction Add-On ZIP](images/start-trial-download-offline-installer.png)
 
-N> The Syncfusion Data Extraction Add‑On is available in ZIP format for Windows, Linux, and Mac. Extract the file to access the assemblies and demos for PDF or image data extraction.
+N> The Syncfusion Data Extraction Add-On is available in ZIP format for Windows, Linux, and Mac. Extract the file to access the assemblies and demos for PDF and image data extraction. A license key is required only at runtime to use the Add-On in your application; it is not required to download.

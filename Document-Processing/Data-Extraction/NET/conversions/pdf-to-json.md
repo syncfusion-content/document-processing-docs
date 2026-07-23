@@ -20,7 +20,7 @@ Refer to the following links for the assemblies and NuGet packages required on d
 
 ## Extract Data as JSON from PDF or Image
 
-To extract form fields across a PDF document using the [ExtractDataAsJson](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsJson_System_IO_Stream_) method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class, refer to the following code example:
+To extract structured data from a PDF document or image using the [ExtractDataAsJson](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsJson_System_IO_Stream_) method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class, refer to the following code example:
 
 {% tabs %} 
 
@@ -28,10 +28,9 @@ To extract form fields across a PDF document using the [ExtractDataAsJson](https
 
 using System.IO;
 using Syncfusion.SmartDataExtractor;
-using Syncfusion.SmartFormRecognizer;
 using System.Text;
 
-//Open the input PDF file as a stream.
+//Open the input PDF or image file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
     //Initialize the Data Extractor.
@@ -48,10 +47,9 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 using System.IO;
 using Syncfusion.SmartDataExtractor;
-using Syncfusion.SmartFormRecognizer;
 using System.Text;
 
-//Open the input PDF file as a stream.
+//Open the input PDF or image file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
     //Initialize the Data Extractor.
@@ -73,7 +71,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Extract Data from a Customized Page Range
 
-To extract data from a specific range of pages in a PDF document using the [ExtractDataAsJson](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsJson_System_IO_Stream_) method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class, refer to the following code example:
+To extract data from a specific range of pages in a PDF document using the [ExtractDataAsJson](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsJson_System_IO_Stream_) method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class, refer to the following code example. Page numbers are 1-based and the range is inclusive:
  
 {% tabs %} 
 
@@ -95,7 +93,6 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     //Save the extracted JSON data into an output file.
     File.WriteAllText("Output.json", data, Encoding.UTF8);
 }
-
 
 {% endhighlight %}
 
