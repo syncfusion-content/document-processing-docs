@@ -11,7 +11,7 @@ documentation: ug
 
 ## Overview
 
-This tutorial teaches you how to enable and use the Redaction tools in the Syncfusion React PDF Viewer optimized for mobile (phone/tablet) screens. You will add a redaction button to the viewer toolbar, open the viewer on a small-screen layout, create selective and page-wide redactions, customize appearance, and apply redactions permanently.
+This tutorial teaches you how to enable and use the Redaction tools in the Syncfusion React PDF Viewer, optimized for mobile (phone/tablet) screens. You will add a redaction button to the viewer toolbar, open the viewer on a small-screen layout, create selective and page-wide redactions, customize appearance, and apply redactions permanently.
 
 **Outcome**: a working React sample where users can mark content for redaction using touch, configure appearance, and apply redactions.
 
@@ -21,7 +21,7 @@ N> In mobile view the redaction toolbar appears at the bottom of the viewer for 
 
 ## Prerequisites
 
-- A React project with PDF Viewer added to project. See [getting started guide](../getting-started)
+- A React project with the PDF Viewer added to it. See [getting started guide](../getting-started)
 
 ## Steps
 

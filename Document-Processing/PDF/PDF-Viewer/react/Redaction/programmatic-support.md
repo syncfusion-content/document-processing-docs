@@ -191,7 +191,7 @@ export default function App() {
 ## Related topics
 
 - [Overview of Redaction](./overview)
-- [Redaction UI interactions](./ui-interactions)
+- [Redaction UI interactions](./ui-interaction)
 - [Redaction Toolbar](./toolbar)
 - [Redaction in Mobile view](./mobile-view)
 - [Search Text and Redact](./search-redact)
