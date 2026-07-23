@@ -10,7 +10,6 @@ documentation: ug
 # Formatting in Vue Spreadsheet component
 
 Formatting options make your data easier to view and understand. The Spreadsheet supports the following types of formatting:
-
 * Number Formatting
 * Text Formatting
 * Cell Formatting
