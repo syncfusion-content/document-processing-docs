@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Auto save document in React Document editor component | Syncfusion
-description: Learn here all about Auto save document in document editor in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
-control: Auto save document in document editor 
+title: Auto save document in React DOCX Editor component | Syncfusion
+description: Learn how to Auto save document in Document Editor in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+control: Auto save document in Document Editor 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Auto save document in React Document editor component
 
-In this article, we are going to see how to auto save the document to server. You can automatically save the edited content in regular intervals of time. It helps reduce the risk of data loss by saving an open document automatically at customized intervals.
+In this article, we are going to see how to auto save the document to the server. You can automatically save the edited content at regular intervals of time. It helps reduce the risk of data loss by saving an open document automatically at customized intervals.
 
-The following example illustrates how to auto save the document in server.
+The following example illustrates how to auto save the document on the server.
 
-* In the client-side, using content change event, we can automatically save the edited content in regular intervals of time. Based on `contentChanged` boolean, the document send as Docx format to server-side using [`saveAsBlob`](https://ej2.syncfusion.com/react/documentation/api/document-editor#saveasblob) method.
+* On the client side, using the content change event, we can automatically save the edited content at regular intervals of time. Based on the `contentChanged` boolean, the document is sent as DOCX format to the server side using the [`saveAsBlob`](https://ej2.syncfusion.com/react/documentation/api/document-editor#saveasblob) method.
 
 ```
 import * as ReactDOM from 'react-dom';
@@ -32,9 +32,9 @@ function App() {
       if (contentChanged) {
         //You can save the document as below
         container.documentEditor.saveAsBlob('Docx').then((blob: Blob) => {
-          console.log('Saved sucessfully');
+          console.log('Saved successfully');
           let exportedDocument: Blob = blob;
-          //Now, save the document where ever you want.
+          //Now, save the document wherever you want.
           let formData: FormData = new FormData();
           formData.append('fileName', 'sample.docx');
           formData.append('data', exportedDocument);
@@ -49,7 +49,7 @@ function App() {
           req.onreadystatechange = () => {
             if (req.readyState === 4) {
               if (req.status === 200 || req.status === 304) {
-                console.log('Saved sucessfully');
+                console.log('Saved successfully');
               }
             }
           };
@@ -71,7 +71,9 @@ function App() {
       }}
       height={'590px'}
       serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
-      enableToolbar={true} created={onCreate} contentChange={onContentChange}
+      enableToolbar={true}
+      created={onCreate}
+      contentChange={onContentChange}
     />
   );
 }
@@ -81,7 +83,7 @@ ReactDOM.render(<App />, document.getElementById('sample'));
  
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
-* In server-side, Receives the stream content from client-side and process it to save the document in aws s3. Add Web API in controller file like below to save the document in aws s3.
+* On the server side, receive the stream content from the client side and process it to save the document in AWS S3. Add Web API in the controller file like below to save the document in AWS S3.
 
   ```
 [AcceptVerbs("Post")]
@@ -95,7 +97,7 @@ public string AutoSave()
     file.CopyTo(stream);
     //Save the stream to database or server as per the requirement.
     stream.Close();
-    return "Sucess";
+    return "Success";
 }
  ```
 
@@ -104,4 +106,4 @@ public string AutoSave()
 Explore how to automatically save Word documents using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/material3/document-editor/default).
 
 ## See Also
-* [Autosave document in DocumentEditor](../how-to/auto-save-document-in-document-editor)
+* [Auto save document in DocumentEditor](../how-to/auto-save-document-in-document-editor)
