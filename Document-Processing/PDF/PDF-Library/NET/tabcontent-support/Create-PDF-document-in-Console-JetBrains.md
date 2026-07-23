@@ -1,7 +1,7 @@
 **Prerequisites:**
 
-* JetBrains Rider.
-* Install .NET 8 SDK or later.
+* [JetBrains Rider](https://www.jetbrains.com/rider/)
+* [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download) (or later)
 
 Step 1. Open JetBrains Rider and create a new .NET Core console application project.
 * Launch JetBrains Rider.
@@ -28,9 +28,22 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 ![Install the package](JetBrains_Images/Install-Core-Console-Package.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+Step 3: Register the Syncfusion license key. A trial watermark is added to every page of the generated PDF until a valid key is registered. Include the license key at the start of **Program.cs** before initializing any Syncfusion component:
 
-Step 3: Include the following namespaces in the *Program.cs* file.
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Licensing;
+
+// Register the Syncfusion license
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+
+{% endhighlight %}
+{% endtabs %}
+
+Replace `"YOUR LICENSE KEY"` with the key from your Syncfusion account. If you do not have one, request a free 30-day trial at [https://www.syncfusion.com/sales/communitylicense](https://www.syncfusion.com/sales/communitylicense). For local development, store the key in an environment variable and read it with `Environment.GetEnvironmentVariable("SyncfusionLicenseKey")` rather than hardcoding it. Refer to the [Syncfusion License documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion license key in your application.
+
+Step 4: Include the following namespaces in the *Program.cs* file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -43,7 +56,7 @@ using Syncfusion.Drawing;
 {% endhighlight %}
 {% endtabs %}
 
-Step 4: Include the below code snippet in *Program.cs* to create a PDF file.
+Step 5: Include the below code snippet in *Program.cs* to create a PDF file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
