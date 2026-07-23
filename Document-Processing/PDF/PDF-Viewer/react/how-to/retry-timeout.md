@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Retry Timeout | Syncfusion
+title: Configure Retry Timeout Settings | Syncfusion
 description: Learn here all about Retry Timeout in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
 control: Retry Timeout
 platform: document-processing
@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Retry Timeout
+# Configure Retry Timeout for PDF Viewer Requests
 
-The `retryTimeout` property controls how long the PDF Viewer waits (in seconds) for an AJAX response before considering that request timed out. When a timeout occurs, the viewer will retry the request according to the `retryCount` setting. Properly configuring `retryTimeout` and `retryCount` makes the viewer more resilient to transient network errors while avoiding excessive load on the server.
+The `retryTimeout` property controls how long the PDF Viewer waits (in seconds) for an AJAX response before considering that request timed out. When a timeout occurs, the PDF Viewer retries the request according to the `retryCount` setting. Properly configuring `retryTimeout` and `retryCount` makes the PDF Viewer more resilient to transient network errors while avoiding excessive load on the server.
 
 Defaults and units:
 

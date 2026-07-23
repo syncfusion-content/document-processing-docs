@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Navigation in React Pdfviewer control | Syncfusion
-description: Learn here all about Navigation in Syncfusion React Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Bookmark Navigation in React PDF Viewer control | Syncfusion
+description: Learn about bookmark navigation in the Syncfusion React PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -60,7 +60,7 @@ export default function App() {
 
 ### 2. Toggle bookmark view programmatically
 
-Toggle bookmark view programmatically using the [`openBookmarkPane`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/bookmarkview#openbookmarkpane) and [`closeBookmarkPane`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/bookmarkview#closebookmarkpane) APIs.
+Open or close the bookmark pane programmatically using the [`openBookmarkPane`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/bookmarkview#openbookmarkpane) and [`closeBookmarkPane`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/bookmarkview#closebookmarkpane) APIs. Call `openBookmarkPane` to show the panel and `closeBookmarkPane` to hide it. Both methods have no return value.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -102,7 +102,7 @@ export default function App() {
 
 ### 3. Navigate programmatically
 
-Call [`goToBookmark(x, y)`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/bookmarkview#gotobookmark) where `x` is the zero-based page index and `y` is the vertical coordinate.
+Call [`goToBookmark(pageIndex, y)`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/bookmarkview#gotobookmark) where `pageIndex` is the zero-based page index (so `1` navigates to the second page) and `y` is the vertical coordinate in PDF page space used to position the view.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -121,7 +121,7 @@ export default function App() {
     }
     return (
         <div style={{ height: '100vh' }}>
-            <button onClick={goTo}>Go To Page 2</button>
+            <button onClick={goTo}>Go to Page 2</button>
             <PdfViewerComponent
                 id="PdfViewer"
                 ref={viewerRef}
@@ -247,4 +247,4 @@ export default function App() {
 ## Related topics
 
 - [React PDF Viewer toolbar](../toolbar-customization/overview)
-- [Feature Modules](../feature-module)
+- [Feature Modules](https://ej2.syncfusion.com/react/documentation/pdfviewer/feature-module)

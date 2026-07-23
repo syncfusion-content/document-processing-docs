@@ -43,6 +43,8 @@ T> 1. If you encounter issues while using the .NET Word library in ASP.NET Core,
 T> 2. Switch to NuGet packages for a seamless experience:
 T>    * Get frequent bug fixes every week.
 T>    * Upgrade quickly with no manual effort.
+
+
 N> To avoid a trial watermark when using NuGet packages, it is recommended to register a license key in the application. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 N>
 N> Refer [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf) to know more about NuGet packages required.

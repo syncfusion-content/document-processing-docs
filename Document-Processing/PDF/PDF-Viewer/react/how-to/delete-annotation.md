@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Delete an annotation in PDF Viewer
+# Remove Existing Annotations in Syncfusion PDF Viewer
 
-This article shows how to remove a specific annotation from a PDF document using the `deleteAnnotationById()` method. The example below demonstrates a simple delete flow; for production code prefer accessing the viewer instance with React `@ViewChild` rather than `document.getElementById`.
+This article shows how to remove a specific annotation from a PDF document using the `deleteAnnotationById()` method. The example below demonstrates a simple delete flow; for production code, prefer accessing the viewer instance with the React `@ViewChild` rather than `document.getElementById`.
 
 The following steps are used to delete a specific annotation from PDF Document:
 
