@@ -10,14 +10,14 @@ documentation: UG
 
 ## Sorting
 
-Pivot field [AutoSort](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotField.html#Syncfusion_XlsIO_IPivotField_AutoSort_Syncfusion_XlsIO_PivotFieldSortType_System_Int32_) allows you to sort the pivot row or column fields based on the data field values. You can perform the sorting in following direction:
+The [AutoSort](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotField.html#Syncfusion_XlsIO_IPivotField_AutoSort_Syncfusion_XlsIO_PivotFieldSortType_System_Int32_) method of a pivot field sorts the pivot row or column field values based on the values of a specified data field. You can sort the pivot table in the following directions:
 
 * Top to Bottom
-* Left to Right 
+* Left to Right
 
 ### Sort a Pivot Table Field Top to Bottom
 
-Top to Bottom sorting can sort the pivot table column field values based on the sort type. To apply Top to Bottom sorting in pivot table, you should apply the sorting in pivot row field by [AutoSort](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotField.html#Syncfusion_XlsIO_IPivotField_AutoSort_Syncfusion_XlsIO_PivotFieldSortType_System_Int32_) method. 
+Top to Bottom sorting sorts the values of the pivot row field based on the sort type. To apply Top to Bottom sorting to a pivot table, call the [AutoSort](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotField.html#Syncfusion_XlsIO_IPivotField_AutoSort_Syncfusion_XlsIO_PivotFieldSortType_System_Int32_) method on the pivot row field. The second argument is the 1-based index of the data field whose values are used as the sort key.
 
 The following code example illustrates how to apply Top to Bottom sorting to a pivot table.
 
@@ -72,17 +72,17 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim rowField As IPivotField = pivotTable.RowFields(0)
   rowField.AutoSort(PivotFieldSortType.Ascending, 1)
 
-  workbook.SaveAs("PivotTableCalculate.xlsx")
+  workbook.SaveAs("PivotSortTopToBottom.xlsx")
   excelEngine.ThrowNotSavedOnDestroy = False
 End Using
 {% endhighlight %}
-{% endtabs %} 
+{% endtabs %}
 
-A complete working example for top to bottom sort in pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Sort%20Top%20to%20Bottom/.NET/Sort%20Top%20to%20Bottom). 
+A complete working example for top to bottom sort in pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Sort%20Top%20to%20Bottom/.NET/Sort%20Top%20to%20Bottom).
 
 ### Sort a Pivot Table Field Left to Right
 
-Left to Right sorting can sort the pivot table row field values based on the sort type. To apply Left to Right sorting in pivot table, you should apply the sorting in pivot column field by [AutoSort](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotField.html#Syncfusion_XlsIO_IPivotField_AutoSort_Syncfusion_XlsIO_PivotFieldSortType_System_Int32_) method. 
+Left to Right sorting sorts the values of the pivot column field based on the sort type. To apply Left to Right sorting to a pivot table, call the [AutoSort](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotField.html#Syncfusion_XlsIO_IPivotField_AutoSort_Syncfusion_XlsIO_PivotFieldSortType_System_Int32_) method on the pivot column field. The second argument is the 1-based index of the data field whose values are used as the sort key.
 
 The following code example illustrates how to apply Left to Right sorting to a pivot table.
 
@@ -134,10 +134,10 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim pivotTable As IPivotTable = sheet.PivotTables(0)
 
   ' Pivot table Left to Right sorting.
-  Dim rowField As columnField = pivotTable.ColumnFields(0)
+  Dim columnField As IPivotField = pivotTable.ColumnFields(0)
   columnField.AutoSort(PivotFieldSortType.Ascending, 1)
 
-  workbook.SaveAs("PivotTableCalculate.xlsx")
+  workbook.SaveAs("PivotSortLeftToRight.xlsx")
   excelEngine.ThrowNotSavedOnDestroy = False
 End Using
 {% endhighlight %}
@@ -145,11 +145,11 @@ End Using
 
 A complete working example for left to right sort in pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Sort%20Left%20to%20Right/.NET/Sort%20Left%20to%20Right). 
 
-N> [IsRefreshOnLoad](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.PivotTables.PivotCacheImpl.html#Syncfusion_XlsIO_Implementation_PivotTables_PivotCacheImpl_IsRefreshOnLoad) property of [PivotCacheImpl](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.PivotTables.PivotCacheImpl.html) is set as true when applying [AutoSort](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotField.html#Syncfusion_XlsIO_IPivotField_AutoSort_Syncfusion_XlsIO_PivotFieldSortType_System_Int32_) to pivot fields.
+N> The [IsRefreshOnLoad](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.PivotTables.PivotCacheImpl.html#Syncfusion_XlsIO_Implementation_PivotTables_PivotCacheImpl_IsRefreshOnLoad) property of the pivot cache is automatically set to `true` when [AutoSort](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotField.html#Syncfusion_XlsIO_IPivotField_AutoSort_Syncfusion_XlsIO_PivotFieldSortType_System_Int32_) is applied to pivot fields. The pivot table will refresh its layout when the file is next opened in Excel.
 
 ## Filtering
 
-The filtered data of a pivot table displays only the subset of data that meets the specified criteria. This can be achieved in XlsIO using the [IPivotFilters](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotFilters.html) interface.
+Filtering limits the pivot table to the subset of data that meets the specified criteria. In XlsIO, use the [IPivotFilters](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotFilters.html) interface and the `IPivotField.Items` collection to apply page, label, value, and item filters.
 
 ### Applying page filters
 
@@ -199,7 +199,7 @@ pageField.Items(2).Visible = False
 
 The row and column field filters can filter the pivot table based on labels, values, and items of the fields. The following code example illustrates how to apply these filters to a pivot table.
 
-**Label** **Filter** 
+**Label filter**
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -229,7 +229,7 @@ rowField.PivotFilters.Add(PivotFilterType.CaptionEqual, Nothing, "Central", Noth
 
 ![Applying label filters](../Working-with-Pivot-Tables_images/Working-with-Pivot-Tables_img2.jpeg)
 
-**Value** **Filter** 
+**Value filter**
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -247,17 +247,17 @@ field.PivotFilters.Add(PivotFilterType.ValueLessThan, field, "1341", null);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Apply row field filter
+'Apply value filter
 Dim field As IPivotField = pivotTable.Fields(2)
 
 'Applying value filter
-field.PivotFilters.Add(PivotFilterType. ValueLessThan, field, "1341", Nothing)
+field.PivotFilters.Add(PivotFilterType.ValueLessThan, field, "1341", Nothing)
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
 
 ![Applying value filters](../Working-with-Pivot-Tables_images/Working-with-Pivot-Tables_img3.jpeg)
 
-The complete code snippet illustrating the above options is shown below.
+The following end-to-end example combines page, label, item, and value filters in a single pivot table.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Pivot%20Filter/.NET/Pivot%20Filter/Pivot%20Filter/Program.cs,180" %}
@@ -265,7 +265,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"), ExcelOpenType.Automatic);
 	IWorksheet worksheet = workbook.Worksheets[0];
 	IWorksheet pivotSheet = workbook.Worksheets[1];
 
@@ -277,7 +277,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	pivotTable.Fields[6].Axis = PivotAxisTypes.Row;
 	pivotTable.Fields[3].Axis = PivotAxisTypes.Column;
 
-	IPivotField dataField = pivotSheet.PivotTables[0].Fields[5];
+	IPivotField dataField = pivotTable.Fields[5];
 	pivotTable.DataFields.Add(dataField, "Sum of Units", PivotSubtotalTypes.Sum);
 
 	//Apply page filter
@@ -327,7 +327,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   pivotTable.Fields[6].Axis = PivotAxisTypes.Row;
   pivotTable.Fields[3].Axis = PivotAxisTypes.Column;
 
-  IPivotField dataField = pivotSheet.PivotTables[0].Fields[5];
+  IPivotField dataField = pivotTable.Fields[5];
   pivotTable.DataFields.Add(dataField, "Sum of Units", PivotSubtotalTypes.Sum);
 
   //Apply page filter

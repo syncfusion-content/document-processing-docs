@@ -8,9 +8,11 @@ documentation: UG
 
 # Page Setup Options in Excel Document
 
+This article explains how to configure page setup options — page fit, print area, print titles, headers/footers, paper size, and orientation — in an Excel worksheet using Syncfusion<sup>&reg;</sup> XlsIO.
+
 ## Fit all rows on one page
 
-[FitToPagesTall](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_FitToPagesTall) enables the functionality of fitting all rows on one printed page.
+[FitToPagesTall](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_FitToPagesTall) fits all rows onto one printed page.
 
 The following code example illustrates how to use FitToPagesTall.
 
@@ -99,9 +101,9 @@ End Using
 
 A complete working example to fit all rows on one page in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/FitToPagesTall/.NET/FitToPagesTall).
 
-## Fit all columns on one page.
+## Fit all columns on one page
 
-[FitToPagesWide](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_FitToPagesWide) enables the functionality of fitting all columns on one printed page.
+[FitToPagesWide](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_FitToPagesWide) fits all columns onto one printed page.
 
 The following code example illustrates how to use FitToPagesWide.
 
@@ -190,9 +192,9 @@ End Using
 
 A complete working example to fit all columns on one page in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/FitToPagesWide/.NET/FitToPagesWide).
 
-## Fit the page content.
+## Fit the page content
 
-[IsFitToPage](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_IsFitToPage) enables the functionality of fitting the page content before printing.
+[IsFitToPage](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_IsFitToPage) fits the page content before printing.
 
 The following code example illustrates how to use IsFitToPage.
 
@@ -268,7 +270,7 @@ Using excelEngine As New ExcelEngine()
   Next
 
   'True to fit the content before printing
-  sheet.PageSetup.IsFitToPage = true;
+  sheet.PageSetup.IsFitToPage = true
 
   'Saving the workbook
   workbook.SaveAs("Output.xlsx")
@@ -473,9 +475,9 @@ End Using
 A complete working example to enable IsSummaryRowBelow in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/IsSummaryRowBelow/.NET/IsSummaryRowBelow).
 
 
-## Print Area.
+## Print Area
 
-The [PrintArea](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_PrintArea) functionality allows you to set the range to be printed.
+The [PrintArea](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_PrintArea) property specifies the range to be printed.
 
 The following code snippet shows how to use the PrintArea.
 
@@ -561,9 +563,9 @@ End Using
 
 A complete working example to set the range to be printed in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/PrintArea/.NET/PrintArea).
 
-## Print Gridlines.
+## Print Gridlines
 
-The [PrintGridlines](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_PrintGridlines) functionality allows you to set the gridlines to be printed.
+The [PrintGridlines](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_PrintGridlines) property prints cell gridlines on each page.
 
 The following code snippet shows how to use PrintGridlines.
 
@@ -649,9 +651,9 @@ End Using
 
 A complete working example to set the gridlines to be printed in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/PrintGridlines/.NET/PrintGridlines).
 
-## Print Headings.
+## Print Headings
 
-The [PrintHeadings](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_PrintHeadings) functionality allows you to set the row and column headings to be printed.
+The [PrintHeadings](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_PrintHeadings) property prints row and column headings on each page.
 
 The following code snippet shows how to use PrintHeadings.
 
@@ -737,9 +739,9 @@ End Using
 
 A complete working example to set the row and column headings to be printed in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/PrintHeadings/.NET/PrintHeadings).
 
-## Print TitleColumns.
+## Print TitleColumns
 
-The [PrintTitleColumns](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_PrintTitleColumns) functionality allows you to specify the columns containing cells that will be repeated on the left side of each printed page.
+The [PrintTitleColumns](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_PrintTitleColumns) property specifies the columns to repeat on the left side of each printed page.
 
 The following code snippet shows how to use PrintTitleColumns.
 
@@ -826,9 +828,9 @@ End Using
 A complete working example to set the PrintTitleColumns in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/PrintTitleColumns/.NET/PrintTitleColumns).
 
 
-## Print TitleRows.
+## Print TitleRows
 
-The [PrintTitleRows](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_PrintTitleRows) functionality allows you to specify the rows containing cells that will be repeated on the top side of each printed page.
+The [PrintTitleRows](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_PrintTitleRows) property specifies the rows to repeat at the top of each printed page.
 
 The following code snippet shows how to use PrintTitleRows.
 
@@ -904,7 +906,7 @@ Using excelEngine As New ExcelEngine()
   Next
 
   'Sets the rows to be repeated at the top of each page
-  sheet.PageSetup.PrintTitleRows = "A1:AX1";
+  sheet.PageSetup.PrintTitleRows = "A1:AX1"
 
   'Saving the workbook
   workbook.SaveAs("Output.xlsx")
@@ -977,7 +979,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Adding bold text, font size 18, and blue color formatting to the left footer
   worksheet.PageSetup.LeftFooter = "&B &18 &K0000FF Left Footer";
 
-  //Adding an image placeholder to the center footer
+  //Adding an image placeholder to the center footer. Requires: using System.Drawing;
   FileStream imageStream = new FileStream(Path.GetFullPath(@"Data/image.jpg"), FileMode.Open);
   worksheet.PageSetup.CenterFooter = "&G";
   worksheet.PageSetup.CenterFooterImage = Image.FromStream(imageStream);
@@ -1011,7 +1013,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   'Adding bold text, font size 18, and blue color formatting to the left footer
   worksheet.PageSetup.LeftFooter = "&B &18 &K0000FF Left Footer"
 
-  'Adding an image placeholder to the center footer
+  'Adding an image placeholder to the center footer. Requires: Imports System.Drawing
   FileStream imageStream = new FileStream(Path.GetFullPath(@"Data/image.jpg"), FileMode.Open)
   worksheet.PageSetup.CenterFooter = "&G"
   worksheet.PageSetup.CenterFooterImage = Image.FromStream(imageStream)
@@ -1026,9 +1028,9 @@ End Using
 
 A complete working example to add headers and footers in an Excel document using C# is present on [this GitHub page.](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Header%20and%20Footer/.NET/Header%20and%20Footer)
 
-## Paper Size  
+## Paper Size
 
-The <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Interfaces.IPageSetupBase.html#Syncfusion_XlsIO_Interfaces_IPageSetupBase_PaperSize">PaperSize</a> functionality allows you to specify the paper size for worksheet.
+The [PaperSize](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Interfaces.IPageSetupBase.html#Syncfusion_XlsIO_Interfaces_IPageSetupBase_PaperSize) property specifies the paper size for the worksheet.
 
 The following code snippet shows how to use PaperSize.
 
@@ -1081,11 +1083,11 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to set the paper size in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/PaperSize/.NET/PaperSize">this GitHub page</a>.
+A complete working example to set the paper size in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/PaperSize/.NET/PaperSize).
 
-## Orientation  
+## Orientation
 
-The <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Interfaces.IPageSetupBase.html#Syncfusion_XlsIO_Interfaces_IPageSetupBase_Orientation">Orientation</a> functionality allows you to specify the orientation for worksheet.
+The [Orientation](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Interfaces.IPageSetupBase.html#Syncfusion_XlsIO_Interfaces_IPageSetupBase_Orientation) property specifies the page orientation for the worksheet.
 
 The following code snippet shows how to use Orientation.
 
@@ -1138,4 +1140,8 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to set the page orientation in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Orientation/.NET/Orientation">this GitHub page</a>.
+A complete working example to set the page orientation in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Orientation/.NET/Orientation).
+
+## See also
+
+- Explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features at [Syncfusion Excel Framework for .NET Core](https://www.syncfusion.com/document-sdk/net-excel-library).

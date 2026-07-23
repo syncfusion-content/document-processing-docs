@@ -1,7 +1,7 @@
 ---
 title: Overview of Excel Library (XlsIO) | Syncfusion
 canonical_url: "https://www.syncfusion.com/document-sdk/net-excel-library"
-description: .NET Excel Library create, read, edit & convert Excel file in WinForms, WPF, UWP, ASP.NET Core, ASP.NET MVC, Xamarin, Blazor, WinUI and .NET MAUI applications.
+description: .NET Excel Library to create, read, edit, and convert Excel files in WinForms, WPF, UWP, ASP.NET Web Forms, ASP.NET Core, ASP.NET MVC, Xamarin, Blazor, WinUI, and .NET MAUI applications without Microsoft Office.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -9,9 +9,9 @@ documentation: UG
 
 # Overview of Excel Library (XlsIO)
 
-[**Essential<sup>&reg;</sup> XlsIO**](https://www.syncfusion.com/document-processing/excel-framework/net) is a native **.****NET** class library that can be used to create and modify **Microsoft** **Excel** files by using C#, VB.NET and managed C++ code. It is a non-UI component that provides a full-fledged object model that facilitates accessing & manipulating the spreadsheets without any dependency of Microsoft Office COM libraries & Microsoft Office.
+[**Essential<sup>&reg;</sup> XlsIO**](https://www.syncfusion.com/document-processing/excel-framework/net) is a native **.NET** class library used to create, read, edit, and modify **Microsoft Excel** files using C#, VB.NET, and managed C++. It is a non-UI component that provides a full-fledged object model for accessing and manipulating spreadsheets, with no dependency on Microsoft Office COM libraries or Microsoft Office.
 
-The library can be used in Windows Forms, WPF, UWP, ASP.NET Web Forms, ASP.NET MVC, ASP.NET Core, Xamarin, Blazor, WinUI and .NET MAUI applications.
+The library can be used in Windows Forms, WPF, UWP, ASP.NET Web Forms, ASP.NET MVC, ASP.NET Core, Xamarin, Blazor, WinUI, and .NET MAUI applications.
 
 
 **Key Features**
@@ -39,7 +39,7 @@ The library can be used in Windows Forms, WPF, UWP, ASP.NET Web Forms, ASP.NET M
 * Access the [Custom document properties](https://support.syncfusion.com/kb/article/7453/add-custom-properties-to-excel-document-using-xlsio) of Excel file.
 * Access the Built-in document properties.
 
-**Compatible Microsoft Excel Versions**
+## Compatible Microsoft Excel Versions
 
 * Microsoft Excel 97-2003
 * Microsoft Excel 2007
@@ -49,7 +49,7 @@ The library can be used in Windows Forms, WPF, UWP, ASP.NET Web Forms, ASP.NET M
 * Microsoft Excel 2019
 * Microsoft 365
 
-**Supported File Formats**
+## Supported File Formats
 
 * XLSX
 * XLSM
@@ -62,6 +62,14 @@ The library can be used in Windows Forms, WPF, UWP, ASP.NET Web Forms, ASP.NET M
 * TSV
 * XLSB (Limited support)
 
-N> You can also explore our [.Net Excel Framework demo](https://www.syncfusion.com/demos/fileformats/excel-library) that shows how to create and modify Excel files from C# with 5 lines of code on different platforms.
+N> You can also explore our [.NET Excel Framework demo](https://www.syncfusion.com/demos/fileformats/excel-library) that shows how to create and modify Excel files from C# with 5 lines of code on different platforms.
 
-N> XlsIO does not support Excel documents generated before version Excel 97.
+N> XlsIO can open and edit Microsoft Excel 97-2003 and later workbooks. Documents created in earlier versions of Excel (pre-97) are not supported.
+
+## See Also
+
+* [Assemblies Required for XlsIO](https://help.syncfusion.com/document-processing/excel/excel-library/net/assemblies-required)
+* [Create Excel File in C# and VB.NET](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-excel-file-csharp-vbnet)
+* [NuGet Packages](https://help.syncfusion.com/document-processing/nuget-packages)
+* [Licensing Overview](https://help.syncfusion.com/document-processing/licensing/overview)
+* [Release Notes](https://help.syncfusion.com/document-processing/release-notes)

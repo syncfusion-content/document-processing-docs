@@ -1,18 +1,18 @@
 ---
-title: Import to Excel document | Syncfusion
-description: In this section, you can learn how to import data to Excel document using Syncfusion Essential XlsIO..
+title: Import to Excel Worksheet | .NET XlsIO | Syncfusion
+description: Learn how to import data into an Excel worksheet from a DataTable, DataColumn, DataView, collection objects, arrays, Microsoft Grid controls, HTML tables, and XML files using the .NET Excel Library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Import to Excel Document
+# Import to Excel Worksheet
 
 ## DataTable to Excel
 
-The following code example illustrates on how to import a DataTable into an Excel using [ImportDataTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ImportDataTable_System_Data_DataTable_Syncfusion_XlsIO_IName_System_Boolean_System_Int32_System_Int32_) method.
+The following code example illustrates how to import a `DataTable` into Excel using the [ImportDataTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ImportDataTable_System_Data_DataTable_Syncfusion_XlsIO_IName_System_Boolean_System_Int32_System_Int32_) method. The parameters of the `ImportDataTable(dataTable, hasHeader, row, column, preserveTypes)` overload are: `dataTable` – the source `DataTable`; `hasHeader` – `true` to import the column names as the first row; `row` and `column` – the one-based starting cell; and `preserveTypes` – `true` to apply the `DataColumn` data type to the cell (default `false`).
 
-N> XlsIO supports importing of data from data table to worksheet in Windows Forms, WPF, ASP.NET, ASP.NET MVC and ASP.NET Core (2.0 onwards) platforms alone.
+N> XlsIO supports importing data from a `DataTable` to a worksheet in Windows Forms, WPF, ASP.NET, ASP.NET MVC, and ASP.NET Core (2.0 onwards) only.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Import%20and%20Export%20Data/DataTable%20to%20Worksheet/.NET/DataTable%20to%20Worksheet/DataTable%20to%20Worksheet/Program.cs,180" %}
@@ -73,7 +73,7 @@ End Using
 
 A complete working example to import data from DataTable to Excel in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20and%20Export%20Data/DataTable%20to%20Worksheet/.NET/DataTable%20to%20Worksheet).  
 
-N> XlsIO imports the data from data table into Excel worksheet based on the data table column type. So, it is suggested to create the data tables with required column types such as number, text or date time before importing the data table to Excel worksheet.
+N> XlsIO imports the data from a `DataTable` into an Excel worksheet based on the column type of the data table. It is recommended to create the `DataTable` columns with the required types (number, text, or `DateTime`) before importing it into Excel.
 
 ### Preserve Data Types  
 
@@ -95,9 +95,9 @@ worksheet.ImportDataTable(table, False, 1, 1, True) ' preserveTypes = True
 
 ## DataColumn to Excel
 
-The following code example illustrates how to import DataColumn into an Excel using [ImportDataColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ImportDataColumn_System_Data_DataColumn_System_Boolean_System_Int32_System_Int32_) method.
+The following code example illustrates how to import a `DataColumn` into Excel using the [ImportDataColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ImportDataColumn_System_Data_DataColumn_System_Boolean_System_Int32_System_Int32_) method. The `ImportDataColumn(dataColumn, addHeader, row, column)` parameters are: `dataColumn` – the source column; `addHeader` – `true` to include the column name as a header; `row` and `column` – the one-based starting cell.
 
-N> XlsIO supports importing data column to worksheet in Windows Forms, WPF, ASP.NET, ASP.NET MVC and ASP.NET Core (2.0 onwards) platforms alone.
+N> XlsIO supports importing a `DataColumn` to a worksheet in Windows Forms, WPF, ASP.NET, ASP.NET MVC, and ASP.NET Core (2.0 onwards) only.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Import%20and%20Export%20Data/DataColumn%20to%20Worksheet/.NET/DataColumn%20to%20Worksheet/DataColumn%20to%20Worksheet/Program.cs,180" %}
@@ -163,9 +163,9 @@ A complete working example to import data from DataColumn to Excel in C# is pres
 
 ## DataView to Excel
 
-The following code example illustrates how to import DataView into an Excel using [ImportDataView](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ImportDataView_System_Data_DataView_System_Boolean_System_Int32_System_Int32_) method.
+The following code example illustrates how to import a `DataView` into Excel using the [ImportDataView](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ImportDataView_System_Data_DataView_System_Boolean_System_Int32_System_Int32_) method. The `ImportDataView(dataView, hasHeader, row, column)` parameters are: `dataView` – the source `DataView`; `hasHeader` – `true` to include column names; `row` and `column` – the one-based starting cell.
 
-N> XlsIO supports importing data view to worksheet in Windows Forms, WPF, ASP.NET, ASP.NET MVC and ASP.NET Core (2.0 onwards) platforms alone.
+N> XlsIO supports importing a `DataView` to a worksheet in Windows Forms, WPF, ASP.NET, ASP.NET MVC, and ASP.NET Core (2.0 onwards) only.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Import%20and%20Export%20Data/DataView%20to%20Worksheet/.NET/DataView%20to%20Worksheet/DataView%20to%20Worksheet/Program.cs,180" %}
@@ -339,7 +339,7 @@ public static List<Customer> GetSalesReports()
 public class Customer
 {
   [DisplayNameAttribute("Sales Person Name")]
-  public string SalesPerson { get; set; 
+  public string SalesPerson { get; set; }
   [Bindable(false)]
   public string SalesJanJun { get; set; }
   public string SalesJulDec { get; set; }
@@ -413,14 +413,19 @@ A complete working example to import data from Collection Objects to Excel in C#
 
 **Data Options**
 
-[ExcelImportDataOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelImportDataOptions.html) is a support class for [ImportData](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ImportData_System_Collections_IEnumerable_Syncfusion_XlsIO_ExcelImportDataOptions_) method which contains various properties to import data with formatting. 
+[ExcelImportDataOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelImportDataOptions.html) is a supporting class for the [ImportData](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ImportData_System_Collections_IEnumerable_Syncfusion_XlsIO_ExcelImportDataOptions_) method and contains various properties to import data with formatting.
 
-**ExcelImportDataOptions** class contains the following properties:
+**ExcelImportDataOptions** exposes the following properties:
 
-FirstRow - Specifies first row from where the data should be imported.
-FirstColumn - Specifies first column from where the data should be imported.
-IncludeHeader - Specifies whether class properties names must be imported or not.
-PreserveTypes - Indicates whether XlsIO should preserve column types from Data. By default, preserve type is TRUE. Setting it to True will import data based on column type, otherwise will import based on value type.
+| Property | Description |
+| --- | --- |
+| `FirstRow` | Specifies the first row from where the data should be imported. |
+| `FirstColumn` | Specifies the first column from where the data should be imported. |
+| `IncludeHeader` | Specifies whether the class property names must be imported as column headers. |
+| `PreserveTypes` | Indicates whether XlsIO should preserve the column types from the source data. By default, `PreserveTypes` is `true`; setting it to `true` imports data based on the column type, otherwise it imports based on the value type. |
+| `NestedDataLayoutOptions` | Controls the layout of imported hierarchical data (`Default`, `Merge`, or `Repeat`). |
+| `NestedDataGroupOptions` | Groups hierarchical data on import (`Expand` or `Collapse`). |
+| `CollapseLevel` | Specifies the collapse level (1–8) when `NestedDataGroupOptions` is `Collapse`. |
 
 The following code example illustrates how to import collection objects into an Excel using **ImportData** method with **ExcelImportDataOptions** class.
 
@@ -490,7 +495,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   importDataOptions.IncludeHeader = False
   importDataOptions.PreserveTypes = False
 
-  worksheet.ImportData(output, importDataOptions)
+  worksheet.ImportData(reports, importDataOptions)
 
   workbook.SaveAs("ImportData.xlsx")
 End Using
@@ -545,7 +550,7 @@ public static List<Customer> GetSalesReports()
 //Customer details
 public class Customer
 {
-  public string SalesPerson { get; set; 
+  public string SalesPerson { get; set; }
   public string SalesJanJun { get; set; }
   public string SalesJulDec { get; set; }
 
@@ -616,9 +621,9 @@ A complete working example to import data to Excel with import data options in C
 
 ### Nested Collection Objects to Excel
 
-Import hierarchical data from nested collections to Excel helps the user to analyze data in its structure. XlsIO provides more flexible options to analyze such data by importing in different layouts and grouping the imported data.
+Importing hierarchical data from nested collections into Excel lets you analyze the data while preserving its structure. XlsIO provides flexible options to import such data in different layouts and to group the imported data.
 
-Data import can be done with the layout options:
+You can import the data with the following layout options:
 
 * **Default** - Parent records imported in the first row of its collection.
 * **Merge** - Parent records imported in merged rows. 
@@ -635,7 +640,7 @@ Let’s see these options in detail along with code examples and screenshots.
 
 **Default layout option**
 
-This option adds the property value once per object for the corresponding records in the column while importing.
+This option adds the parent property value only once, on the first row of each group, while importing.
 
 The following code example illustrates how to import data directly from nested collection objects with default layout option. The input XML file used in the code can be downloaded [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/ExportData831552872.zip).
 
@@ -1296,9 +1301,9 @@ The following screenshot represents the output document with Repeat layout optio
 
 **Grouping Options**
 
-Hierarchical data imported into Excel worksheet must be shown its structure to analyze more flexible. In addition, if the data is grouped according to its level, it is easier to analyze. XlsIO supports to import hierarchical data from nested collection and group them while importing.
+Hierarchical data imported into an Excel worksheet is best visualized with its structure preserved; if the data is grouped according to its level, analysis becomes much easier. XlsIO supports importing hierarchical data from a nested collection and grouping the imported data.
 
-The following are the options that is supported to group on import.
+The following grouping options are supported on import:
 
 * **Expand** – Imported data will be grouped and expanded.
 * **Collapse** – Imported data will be grouped and collapsed at first level, by default.
@@ -1768,7 +1773,7 @@ Namespace ImportFromNestedCollection
 
       'Set collapse level.
       'GroupingOption must set to ‘Collapse’ before applying ‘CollapseLevel’.
-      importDataOptions.CollapseLevel = 2;
+      importDataOptions.CollapseLevel = 2
 
       'Import data from the nested collection.
       worksheet.ImportData(vehicles, importDataOptions)
@@ -1938,7 +1943,7 @@ The following screenshot represents the output document of Grouped data imported
 
 **Collection Objects with hyperlink**
 
-XlsIO allows you to import images, data with URLs, and data with mail IDs as hyperlinks from various data sources binded in Collection Objects as shown below
+XlsIO allows you to import images, data with URLs, and data with mail IDs as hyperlinks from various data sources bound to collection objects, as shown below
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink=" https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Import%20and%20Export%20Data/Import%20with%20Hyperlink/.NET/Import%20with%20Hyperlink/Import%20with%20Hyperlink/Program.cs,180" %}
@@ -2233,7 +2238,7 @@ A complete working example to import data from array to an Excel in C# is presen
 
 ## Microsoft Grid Controls to Excel
 
-XlsIO provides support to import data from various Microsoft grid controls with its cell formatting. The supported grid controls are: 
+XlsIO can import data from various Microsoft grid controls while preserving their cell formatting. The supported grid controls are:
 
 * DataGrid
 * GridView
@@ -2241,7 +2246,7 @@ XlsIO provides support to import data from various Microsoft grid controls with 
 
 ### DataGrid
 
-Imports data from Microsoft DataGrid control with its header and cell formatting to Excel worksheet. The following code example illustrates how to import data from Microsoft DataGrid control to Excel.
+Imports data from a Microsoft DataGrid control, preserving its header and cell formatting, into an Excel worksheet. The following code example illustrates how to import data from a Microsoft DataGrid control to Excel.
  
 N> GetDataTable() method returns DataTable of applicable data to import.
 
@@ -2341,7 +2346,7 @@ excelEngine.Dispose()
 
 ### DataGridView
 
-Imports data from Microsoft DataGridView control with its header and cell formatting to Excel worksheet. In addition, this API imports sorted data applied in the control. The following code example illustrates how to import data from Microsoft DataGridView control to Excel.
+Imports data from a Microsoft DataGridView control, preserving its header and cell formatting, into an Excel worksheet. In addition, this API imports the sort order applied to the control. The following code example illustrates how to import data from a Microsoft DataGridView control to Excel.
  
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -2487,9 +2492,9 @@ The following screenshot represents the image of the Excel output with data impo
 
 ![Output document imported from HTML table](../Working-with-Data_images/Working-with-Data_img7.png)
 
-N> Syncfusion&reg; XlsIO supports importing HTML tables with the inline styles alone. HTML documents with embedded styles or style sheets are not supported.
+N> Syncfusion&reg; XlsIO supports importing HTML tables with inline styles only. HTML documents with embedded styles or external style sheets are not supported.
 
-N> Syncfusion&reg; XlsIO depends on the XMLDocument object to load HTML string in which the "<" and "&" symbols are invalid. These symbols needs to be changed as "&lt;" and "&amp;" respectively, to overcome the xml exception.
+N> Syncfusion&reg; XlsIO depends on the `XmlDocument` object to load the HTML string; in XML, the `<` and `&` symbols are invalid. These symbols need to be encoded as `&lt;` and `&amp;` respectively to avoid an XML exception. For example, `<` becomes `&lt;` and `&` becomes `&amp;` in the input HTML.
 
 N> Data formatting can be applied to the Excel cells only after importing the HTML table to Excel.
 

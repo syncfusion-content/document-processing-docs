@@ -1,6 +1,6 @@
 ---
-title: Loading and Saving Excel in Google App Engine | Syncfusion
-description: Explains how to load and save an Excel files in Google App Engine using .NET Core Excel (XlsIO) library without Microsoft Excel or interop dependencies.
+title: Loading and Saving Excel files in Google App Engine | Syncfusion
+description: Explains how to load and save Excel files in Google App Engine using the .NET Core Excel (XlsIO) library without Microsoft Excel or interop dependencies.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -8,7 +8,13 @@ documentation: UG
 
 # Loading and Saving Excel files in Google App Engine
 
-Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core) used to create, read, edit and convert Excel documents programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **load and save an Excel document in Google App Engine**.
+Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core) used to create, read, edit and convert Excel documents programmatically without **Microsoft Excel** or interop dependencies. This article explains how to **load and save an Excel file in Google App Engine** using Syncfusion XlsIO.
+
+## Prerequisites
+
+- A Google Cloud account with permissions to create App Engine applications and enable the App Engine API.
+- Visual Studio 2019 or later with the **ASP.NET and web development** workload installed.
+- A Syncfusion<sup>&reg;</sup> license key. Refer to [How to register the Syncfusion license key](https://help.syncfusion.com/common/essential-studio/licensing/how-to-register-in-an-application) for details.
 
 ## Set up App Engine
 
@@ -46,7 +52,7 @@ Step 3: Click the **Create** button.
 
 Step 4: Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org).
 
-![Install Syncfusion.XlsIO.Net.Core Nuget Package](GCP_Images/GAE_Img8.png)
+![Install Syncfusion.XlsIO.Net.Core NuGet Package](GCP_Images/GAE_Img8.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
@@ -56,7 +62,6 @@ Step 5: Include the following namespaces in the **HomeController.cs** file.
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.XlsIO;
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -106,7 +111,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     outputStream.Position = 0;
 
     //Download the Excel document in the browser.
-    return File(outputStream, "application/msexcel", "Sample.xlsx");
+    return File(outputStream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "Sample.xlsx");
 }
 {% endhighlight %}
 {% endtabs %}
@@ -121,7 +126,7 @@ Step 2: Drag and drop the sample from your local machine to **Workspace**.
 
 N> If you have your sample application in your local machine, drag and drop it into the Workspace. If you created the sample using the Cloud Shell terminal command, it will be available in the Workspace.
 
-Step 3: Open the Cloud Shell Terminal and run the following **command** to view the files and directories within your **current Workspace**.
+Step 3: Open the Cloud Shell Terminal and run the following **command** to list the files and directories within your **current Workspace**.
 
 {% tabs %}
 {% highlight c# tabtitle="CLI" %}
@@ -133,7 +138,7 @@ ls
 
 ![View the files and directories](GCP_Images/GAE_Img11.png)
 
-Step 4: Run the following **command** to navigate which sample you want run.
+Step 4: Run the following **command** to navigate to the sample you want to run.
 
 {% tabs %}
 {% highlight c# tabtitle="CLI" %}
@@ -163,7 +168,7 @@ Step 6: Verify that the application is running properly by accessing the **Web V
 Step 7: Now you can see the sample output on the preview page.
 ![Sample output in browser](GCP_Images/GAE_Img15.png)
 
-Step 8: Close the preview page and return to the terminal then press **Ctrl+C** for which will typically stop the process.
+Step 8: Close the preview page, return to the terminal, and press **Ctrl+C** to stop the running process.
 ![Press Ctrl+C in Cloud Shell Terminal](GCP_Images/GAE_Img16.png)
 
 ## Publish the application
@@ -191,9 +196,9 @@ cd bin/Release/net8.0/publish/
 
 ![Navigate to publish folder](GCP_Images/GAE_Img18.png)
 
-## Configure app.yaml and docker file
+## Configure app.yaml and Dockerfile
 
-Step 1: Add the app.yaml file to the publish folder with the following contents.
+Step 1: Add the `app.yaml` file to the publish folder with the following contents.
 
 {% tabs %}
 {% highlight c# tabtitle="CLI" %}
@@ -208,7 +213,7 @@ EOT
 
 ![Add required files to publish folder](GCP_Images/GAE_Img19.png)
 
-Step 2: Add the Docker file to the publish folder with the following contents.
+Step 2: Add the `Dockerfile` to the publish folder with the following contents.
 
 {% tabs %}
 {% highlight c# tabtitle="CLI" %}
@@ -228,12 +233,12 @@ EOT
 
 ![Add required files to publish folder](GCP_Images/GAE_Img20.png)
 
-Step 3: You can ensure **Docker** and **app.yaml** files are added in **Workspace**.
+Step 3: Verify that the **Dockerfile** and **app.yaml** files are present in the **Workspace**.
 ![Add required files to publish folder](GCP_Images/GAE_Img21.png)
 
 ## Deploy to App Engine
 
-Step 1: To deploy the application to the App Engine, run the following command in Cloud Shell Terminal. Afterwards, retrieve the **URL** from the Cloud Shell Terminal.
+Step 1: To deploy the application to App Engine, run the following command in the Cloud Shell Terminal. Afterwards, retrieve the deployed **URL** from the Cloud Shell Terminal.
 
 {% tabs %}
 {% highlight c# tabtitle="CLI" %}
@@ -248,7 +253,7 @@ gcloud app deploy --version v0
 Step 2: Open the **URL** to access the application, which has been successfully deployed.
 ![Add required files to publish folder](GCP_Images/GAE_Img23.png)
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Loading%20and%20Saving/Google%20Cloud%20Platform/Google%20App%20Engine/LoadingandSaving).  
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Loading%20and%20Saving/Google%20Cloud%20Platform/Google%20App%20Engine/LoadingandSaving).
 
 By executing the program, you will get the **Excel document** as follows. The output will be saved in **bin** folder.
 

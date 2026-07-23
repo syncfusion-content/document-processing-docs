@@ -8,7 +8,7 @@ documentation: UG
 
 # Filter the Data in Excel
 
-Auto filtering data allows you to view specific rows in a worksheet while hiding other rows. When an AutoFilter is added to the header row, a drop-down menu appears in each cell of the header row, which provides filter options that can be used to specify the rows to be displayed. This can be achieved programmatically by specifying the conditions.
+Auto-filtering data allows you to view specific rows in a worksheet while hiding other rows. When an AutoFilter is added to the header row, a drop-down menu appears in each cell of the header row, which provides filter options that can be used to specify the rows to be displayed. This can be achieved programmatically by specifying the conditions.
 
 The following code shows how to auto filter Excel data with specific conditions using Interop and XlsIO for .NET.
 
@@ -298,3 +298,9 @@ Private Sub FilterData()
 End Sub
 {% endhighlight %}
 {% endtabs %}
+
+## See also
+
+- [AutoFilter in XlsIO](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-autofilter)
+- [Syncfusion XlsIO overview](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview)
+- [Licensing requirements](https://help.syncfusion.com/document-processing/licensing/overview)

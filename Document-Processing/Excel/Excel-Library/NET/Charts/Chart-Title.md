@@ -6,9 +6,9 @@ control: XlsIO
 documentation: UG
 ---
 
-# Chart Title in Excel document
+# Chart Title in an Excel document
 
-Chart title is a brief description at the top of a chart, offering context and clarity for the data displayed. Using XlsIO, you can **customize the chart title in the chart**.
+Chart title is a brief description at the top of a chart, offering context and clarity for the data displayed. Using XlsIO, you can **customize the chart title**.
 
 ## Add
 
@@ -16,20 +16,17 @@ The following code snippet illustrates how to add the chart title.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//Set chart name and title
-chart.Name = "Purchase Details";
+//Set the chart title
 chart.ChartTitle = "Purchase Details";
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Set chart name and title
-chart.Name = "Purchase Details";
+//Set the chart title
 chart.ChartTitle = "Purchase Details";
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Set chart name and title
-chart.Name = "Purchase Details"
+'Set the chart title
 chart.ChartTitle = "Purchase Details"
 {% endhighlight %}
 {% endtabs %}
@@ -38,7 +35,7 @@ chart.ChartTitle = "Purchase Details"
 
 ### Color
 
-The following code snippet illustrates how to format the color of the chart area.
+The following code snippet illustrates how to format the color of the chart title.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -59,7 +56,7 @@ chart.ChartTitleArea.Color = ExcelKnownColors.Black
 
 ### Font
 
-The following code snippet illustrates how to format the font of the legend.
+The following code snippet illustrates how to format the font of the chart title.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -144,12 +141,11 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
-    IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx");
+    IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx", ExcelOpenType.Automatic);
     IWorksheet sheet = workbook.Worksheets[0];
     IChartShape chart = sheet.Charts[0];
 
-    //Set chart name and title
-    chart.Name = "Purchase Details";
+    //Set the chart title
     chart.ChartTitle = "Purchase Details";
 
     //Set the color
@@ -174,12 +170,11 @@ Using excelEngine As New ExcelEngine()
     Dim application As IApplication = excelEngine.Excel
     application.DefaultVersion = ExcelVersion.Xlsx
 
-    Dim workbook As IWorkbook = application.Workbooks.Open("InputTemplate.xlsx")
+    Dim workbook As IWorkbook = application.Workbooks.Open("InputTemplate.xlsx", ExcelOpenType.Automatic)
     Dim sheet As IWorksheet = workbook.Worksheets(0)
     Dim chart As IChartShape = sheet.Charts(0)
 
-    'Set chart name and title
-    chart.Name = "Purchase Details"
+    'Set the chart title
     chart.ChartTitle = "Purchase Details"
 
     'Set the color
@@ -191,10 +186,10 @@ Using excelEngine As New ExcelEngine()
     chart.ChartTitleArea.Underline = ExcelUnderline.Single
     chart.ChartTitleArea.Size = 15
 
-    'Set the position of
+    'Set the position of the chart title
     chart.ChartTitleArea.Layout.Left = 20
 
-    'Saving the workbook as stream
+    'Saving the workbook
     workbook.SaveAs("Output.xlsx")
 End Using
 {% endhighlight %}
@@ -204,11 +199,11 @@ A complete working example for the chart title in C# is present on [this GitHub 
 
 ## Remove
 
-The following code snippet illustrates how to remove the chart title.
+The following code snippet illustrates how to remove the chart title by clearing its text. The title frame is preserved but rendered without any text.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//Remove the chart title 
+//Remove the chart title
 chart.ChartTitleArea.Text = String.Empty;
 {% endhighlight %}
 
@@ -218,7 +213,7 @@ chart.ChartTitleArea.Text = String.Empty;
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Remove the chart title 
+'Remove the chart title
 chart.ChartTitleArea.Text = String.Empty
 {% endhighlight %}
 {% endtabs %}

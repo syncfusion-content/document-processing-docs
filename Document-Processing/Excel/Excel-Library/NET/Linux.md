@@ -1,14 +1,22 @@
 ---
-title: FAQ about using XlsIO in Linux | Syncfusion
-description: This page explains about the frequently asked questions about using the .NET Excel (XlsIO) library in Linux environment.
+title: FAQ about using XlsIO on Linux | Syncfusion
+description: Common questions and fixes for using Syncfusion XlsIO in Linux environments, including Docker containers, font installation, locale setup, and SkiaSharp native dependencies.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Frequently asked questions about using XlsIO in Linux
+# Frequently asked questions about using XlsIO on Linux
 
-The frequently asked questions about using XlsIO in Linux environment are listed below.
+This page covers common questions and fixes for using Syncfusion XlsIO in Linux environments, including Docker containers, font installation, locale setup, and SkiaSharp native dependencies. The font-related sections are only relevant for Excel-to-PDF or Excel-to-image conversion; reading and writing XLSX does not require fonts.
+
+## Prerequisites
+
+To follow the steps on this page, ensure the following are in place:
+
+- A Linux host or container based on Debian or Ubuntu (the `apt-get` snippets target `apt`). For other distributions, use the equivalent package manager (`dnf` on RHEL/Fedora, `apk` on Alpine).
+- A working Dockerfile if you are building a container image.
+- The Syncfusion XlsIO NuGet package installed and a valid license registered in your application.
 
 ## How to copy necessary fonts to Linux containers?
 
@@ -16,9 +24,9 @@ Excel to PDF conversion on Linux relies on system fonts available inside the con
 
 **Steps:**
 
-Step 1: Create a **Fonts** folder inside your project (or next to the solution).
-Step 2: Place the required TrueType/OpenType font files (.ttf/.otf) in that folder.
-Step 3: Add the following to your Dockerfile to copy the fonts to the container.
+**Step 1:** Create a `Fonts` folder inside your project (or next to the solution).
+**Step 2:** Place the required TrueType or OpenType font files (`.ttf` or `.otf`) in that folder.
+**Step 3:** Add the following to your `Dockerfile` to copy the fonts into the container and rebuild the font cache.
 
 {% tabs %}
 
@@ -34,7 +42,7 @@ You can download a complete working sample from <a href="https://github.com/Sync
 
 ## How to install Microsoft compatible fonts on Linux?
 
-By default, Linux systems include a limited set of fonts located at "/usr/share/fonts/". For document conversion scenarios that require Microsoft-compatible fonts, you can install them using the following command:
+By default, Linux systems include a limited set of fonts located at `/usr/share/fonts/`. For document conversion scenarios that require Microsoft-compatible fonts, you can install them using the following command. The `debconf-set-selections` line accepts the Microsoft EULA so the install runs non-interactively inside a container build.
 
 {% tabs %}
 
@@ -100,7 +108,7 @@ ENV LANG="en_US.UTF-8"
 
 ## How to resolve LibSkiaSharp not found exception?
 
-This exception occurs when required native dependencies are missing. Ensure the necessary packages are installed by adding this to your Docker file:
+This exception occurs when SkiaSharp's native Linux dependencies are missing. Add the following to your `Dockerfile` to install `libfontconfig1` (note the trailing `1` in the package name on Debian/Ubuntu), then rebuild the image:
 
 {% tabs %}
 

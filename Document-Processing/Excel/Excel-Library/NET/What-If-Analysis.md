@@ -123,7 +123,7 @@ By executing the program, you will get the Excel file as below.
 
 ### Edit Scenario
 
-An existing scenario can be edited or modified through [ModifyScenario](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenario.html#Syncfusion_XlsIO_IScenario_ModifyScenario_Syncfusion_XlsIO_IRange_System_Collections_Generic_List_System_Object__) method of [IScenario](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenario.html).
+An existing scenario can be edited using the [ModifyScenario](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenario.html#Syncfusion_XlsIO_IScenario_ModifyScenario_Syncfusion_XlsIO_IRange_System_Collections_Generic_List_System_Object__) method of [IScenario](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenario.html). The first argument is the new range of changing cells and the second is the new list of values.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -139,7 +139,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     IScenario scenario1 = scenarios[0];
     IScenario scenario2 = scenarios[1];
 
-    //Modify the scenario 
+    //Apply scenario 2's changing cells and values to scenario 1
     scenario1.ModifyScenario(scenario2.ChangingCells, scenario2.Values);
 
     //Saving the workbook
@@ -224,7 +224,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     IScenario scenario1 = scenarios[0];
     IScenario scenario2 = scenarios[1];
 
-    //Delete the scenario 
+    //Delete the scenario
     scenario1.Delete();
 
     //Saving the workbook
@@ -254,7 +254,7 @@ End Using
 
 ### Merge Scenario
 
-Scenarios in one Excel worksheet can be merged in to another, using [Merge](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenarios.html#Syncfusion_XlsIO_IScenarios_Merge_Syncfusion_XlsIO_IWorksheet_) method of [IScenarios](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenarios.html).
+Scenarios in one Excel worksheet can be merged into another, using the [Merge](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenarios.html#Syncfusion_XlsIO_IScenarios_Merge_Syncfusion_XlsIO_IWorksheet_) method of [IScenarios](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenarios.html). Both worksheets must contain at least one scenario before merging.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -420,7 +420,7 @@ End Using
 
 ### Apply Scenario
 
-Update the scenario values in the worksheet and display it using the [Show](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenario.html#Syncfusion_XlsIO_IScenario_Show) method.
+Apply a scenario's values to the worksheet using the [Show](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenario.html#Syncfusion_XlsIO_IScenario_Show) method. `Show()` overwrites the current values of the scenario's changing cells with the scenario's stored values.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/What-If%20Analysis/Apply%20Scenario/.NET/Apply%20Scenario/Apply%20Scenario/Program.cs,180" %}
@@ -501,7 +501,7 @@ A complete working example to show scenario in C# is present on [this GitHub pag
 
 ### Set Name
 
-The name of the scenario can be defined using the [Name](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenario.html#Syncfusion_XlsIO_IScenario_Name) property..
+The name of an existing scenario can be set or changed using the [Name](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenario.html#Syncfusion_XlsIO_IScenario_Name) property.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -563,7 +563,7 @@ End Using
 
 ### Hide Scenario
 
-The scenario can be hidden by enabling the [Hidden](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenario.html#Syncfusion_XlsIO_IScenario_Hidden) property of [IScenario](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenario.html).
+Hide a scenario by setting the [Hidden](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenario.html#Syncfusion_XlsIO_IScenario_Hidden) property of [IScenario](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenario.html) to `true`. A hidden scenario is only protected when the worksheet is also protected with `Worksheet.Protect(password)`.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/What-If%20Analysis/Hide%20Scenario/.NET/Hide%20Scenario/Hide%20Scenario/Program.cs,180" %}
@@ -710,7 +710,7 @@ A complete working example to unprotect a scenario in C# is present on [this Git
 
 ### Add Comment
 
-The comment associated with that particular scenario can be generated using the [Comment](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenario.html#Syncfusion_XlsIO_IScenario_Comment) property.
+Set the comment associated with a scenario using the [Comment](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenario.html#Syncfusion_XlsIO_IScenario_Comment) property of [IScenario](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenario.html). This comment is separate from range comments; it appears in the Scenario Manager dialog in Excel.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}

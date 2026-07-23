@@ -1,32 +1,35 @@
 ---
-title: Loading and saving Excel document in Google Cloud Storage | Syncfusion
-description: Explains how to load and save Excel files in Google Cloud Storage using .NET Core Excel (XlsIO) library without Microsoft Excel or interop dependencies.
+title: Loading and Saving Excel files in Google Cloud Storage | Syncfusion
+description: Explains how to load and save Excel files in Google Cloud Storage using the .NET Core Excel (XlsIO) library without Microsoft Excel or interop dependencies.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Loading and Saving Excel document in Google Cloud Storage
+# Loading and Saving Excel files in Google Cloud Storage
 
-## Prerequisites 
-* **[Google cloud storage](https://cloud.google.com/storage/docs/creating-buckets)** is required. 
+This article explains how to **load an Excel file from Google Cloud Storage** and **save an Excel file to Google Cloud Storage** using Syncfusion XlsIO.
 
-* **[Service account](https://cloud.google.com/iam/docs/service-accounts-create)** is required.
+## Prerequisites
 
-* **[Service account key](https://cloud.google.com/iam/docs/keys-create-delete#creating)** is required.
+* A Google Cloud project with a **[Cloud Storage bucket](https://cloud.google.com/storage/docs/creating-buckets)** and permission to read/write objects in it.
+* A **[service account](https://cloud.google.com/iam/docs/service-accounts-create)** with the **Storage Object Viewer** (loading) or **Storage Object Creator** (saving) role on the bucket.
+* A **[service account key](https://cloud.google.com/iam/docs/keys-create-delete#creating)** (JSON file) downloaded to your development machine.
+* Visual Studio 2019 or later with the **ASP.NET and web development** workload.
+* A Syncfusion<sup>&reg;</sup> license key. Refer to [How to register the Syncfusion license key](https://help.syncfusion.com/common/essential-studio/licensing/how-to-register-in-an-application) for details.
 
-## Loading Excel document from Google Cloud
+## Loading Excel files from Google Cloud Storage
 
 Steps to load an Excel document from Google Cloud Storage.
 
 Step 1: Create a new ASP.NET Core Web Application (Model-View-Controller).
 
-![Create a ASP.NET Core Web App project in visual studio](Loading-and-Saving_images/Loading-and-Saving_images_img1.png)
+![Create an ASP.NET Core Web App project in Visual Studio](Loading-and-Saving_images/Loading-and-Saving_images_img1.png)
 
 Step 2: Name the project.
 
 ![Name the project](Loading-and-Saving_images/Loading-and-Saving_images_img2.png)
 
-Step 3: Install the following **Nuget packages** in your application from [NuGet.org](https://www.nuget.org/).
+Step 3: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/).
 * [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core)
 * [Google.Cloud.Storage.V1](https://www.nuget.org/packages/Google.Cloud.Storage.V1)
 
@@ -56,7 +59,13 @@ using Google.Apis.Auth.OAuth2;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the below code snippet in **HomeController.cs** to **load an Excel document from Google Cloud Storage**.
+Step 6: Register the Syncfusion license key in **Program.cs** before `builder.Build()`:
+
+```csharp
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+```
+
+Step 7: Include the following code snippet in **HomeController.cs** to **load an Excel document from Google Cloud Storage**. The snippet is the body of the `EditDocument` action method that the button in Step 4 posts to. The `keyPath` placeholder should point to the service account JSON key file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -101,7 +110,7 @@ using (MemoryStream memoryStream = new MemoryStream())
         outputStream.Position = 0;
 
         //Download the Excel file in the browser
-        FileStreamResult fileStreamResult = new FileStreamResult(outputStream, "application/excel");
+        FileStreamResult fileStreamResult = new FileStreamResult(outputStream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
         fileStreamResult.FileDownloadName = "EditExcel.xlsx";
         return fileStreamResult;
     }
@@ -115,19 +124,19 @@ By executing the program, you will get the **Excel document** as follows.
 
 ![Output File](Loading-and-Saving_images/Loading-and-Saving_images_img5.png)
 
-## Saving Excel document to Google Cloud
+## Saving Excel files to Google Cloud Storage
 
 Steps to save an Excel document to Google Cloud Storage.
 
 Step 1: Create a new ASP.NET Core Web Application (Model-View-Controller).
 
-![Create a ASP.NET Core Web App project in visual studio](Loading-and-Saving_images/Loading-and-Saving_images_img1.png)
+![Create an ASP.NET Core Web App project in Visual Studio](Loading-and-Saving_images/Loading-and-Saving_images_img1.png)
 
 Step 2: Name the project.
 
 ![Name the project](Loading-and-Saving_images/Loading-and-Saving_images_img6.png)
 
-Step 3: Install the following **Nuget packages** in your application from [NuGet.org](https://www.nuget.org/).
+Step 3: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/).
 * [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core)
 * [Google.Cloud.Storage.V1](https://www.nuget.org/packages/Google.Cloud.Storage.V1)
 
@@ -158,7 +167,9 @@ using Google.Apis.Auth.OAuth2;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the below code snippet in **HomeController.cs** to **Save an Excel document to Google Cloud Storage**.
+Step 6: Register the Syncfusion license key (see the **Loading** section above) if you have not already done so.
+
+Step 7: Include the following code snippet in **HomeController.cs** to **save an Excel document to Google Cloud Storage**. The snippet is the body of the `CreateDocument` action method that the button in Step 4 posts to. The image file `AdventureCycles-Logo.png` must be present in the project and copied to the publish output. The `keyPath` placeholder should point to the service account JSON key file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -355,9 +366,9 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     //Instantiates a storage client to interact with Google Cloud Storage
     StorageClient storageClient = StorageClient.Create(credential);
 
-    //Uploads a file to Google Cloud Storage
-    storageClient.UploadObject(bucketName, fileName, null, stream);
-    
+    //Uploads a file to Google Cloud Storage. Set the content type to the standard Excel MIME for .xlsx.
+    storageClient.UploadObject(bucketName, fileName, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", stream);
+
     return Ok($"Uploaded {fileName} to {bucketName}.");
 }
 {% endhighlight %}
@@ -365,10 +376,10 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 A complete working example of how to save an Excel document to Google Cloud Storage in ASP.NET Core is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Loading%20and%20Saving/Google%20Cloud/Saving/Create%20Excel).
 
-By executing the program, you will get the **Excel document** as follows.
+By executing the program, you will get the **Excel document** as shown below.
 
 ![Output File](Loading-and-Saving_images/Loading-and-Saving_images_img7.png)
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/net-core) to explore the rich set of Syncfusion&reg; Excel library (XlsIO) features.
 
-An online sample link to [create an Excel document](https://ej2.syncfusion.com/aspnetcore/Excel/Create#/material3) in ASP.NET Core.
+An online sample link to [create an Excel document](https://document.syncfusion.com/demos/excel/create#/tailwind3) in ASP.NET Core.

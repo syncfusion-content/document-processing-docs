@@ -1,6 +1,6 @@
 ---
 title: Syncfusion Excel (XlsIO) Supported Features by Platforms
-description: Learn here all about supported and non-supported features of Syncfusion Excel (XlsIO) Library and more.
+description: Learn about the supported and unsupported features of Syncfusion XlsIO across .NET Framework, .NET (Core/Standard/5+), and Blazor platforms.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -8,7 +8,24 @@ documentation: UG
 
 # Supported Features by Platforms
 
-The list of various supported and non-supported Excel features of Essential<sup>&reg;</sup> XlsIO in different platforms is given in this section.
+The following tables list the supported and unsupported Excel features of *Essential<sup>&reg;</sup> XlsIO* across the supported platforms. Use these tables to confirm whether a feature is available in your target environment before designing your solution.
+
+## How to read these tables
+
+Each cell uses a yes/no indicator:
+
+- **Yes** — the feature is fully supported on the target platform.
+- **No** — the feature is not supported on the target platform.
+
+If a feature is marked **No** and is critical to your scenario, see the related getting-started page for your platform or contact Syncfusion support.
+
+## See also
+
+- [Syncfusion XlsIO overview](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview)
+- [System requirements](https://help.syncfusion.com/document-processing/excel/excel-library/net/system-requirements)
+- [Supported features by file format](https://help.syncfusion.com/document-processing/excel/excel-library/net/supported-features-by-file-formats)
+- [Getting started with XlsIO on .NET Core](https://help.syncfusion.com/document-processing/excel/excel-library/net/getting-started)
+- [Getting started with XlsIO on Blazor](https://help.syncfusion.com/document-processing/excel/excel-library/net/blazor-server-side/getting-started)
 
 ## Supported Features by .NET Framework and .NET Standard
 
@@ -489,7 +506,7 @@ N> Worksheet to image conversion is supported from .NET Framework 2.0 and .NET S
 
 ## Supported Features in Blazor Platform
 
-The list of supported and non-supported Excel features in Blazor platform is given below.
+The list of supported and non-supported Excel features in Blazor Server-Side and Blazor Client-Side (Blazor WebAssembly) is given below.
 
 <table>
   <tr>

@@ -8,9 +8,9 @@ documentation: UG
 
 # Add Worksheets to Workbook
 
-While handling Excel templates, you should add worksheets to workbook to fill certain data and manipulate it.
+While handling Excel templates, you can add worksheets to a workbook to fill in or manipulate data.
 
-The following code shows how to add five worksheets within a workbook with Interop and XlsIO for .NET.
+The following code shows how to add five worksheets to a workbook using Interop and XlsIO for .NET.
 
 ## Interop
 
@@ -42,7 +42,7 @@ private void AddWorksheet()
         //Get the cells collection
         Range cells = newWorksheet.Cells;
 
-        //Input a string value to a cell of the sheet
+        //Input a string value into a cell of the sheet
         cells.set_Item(i, i, "New_Sheet" + i.ToString());
     }
 
@@ -81,7 +81,7 @@ private void AddWorksheet()
         //Get the cells collection
         Range cells = newWorksheet.Cells;
 
-        //Input a string value to a cell of the sheet
+        //Input a string value into a cell of the sheet
         cells.set_Item(i, i, "New_Sheet" + i.ToString());
     }
 
@@ -118,7 +118,7 @@ Private Sub AddWorksheet()
     'Get the cells collection
     Dim cells As Range = newWorksheet.Cells
 
-    'Input a string value to a cell of the sheet
+    'Input a string value into a cell of the sheet
     cells.Item(i, i) = "New_Sheet" & i.ToString()
   Next
 
@@ -145,8 +145,7 @@ private void AddWorksheet()
     //Specify the template Excel file path
     string myPath = "Sample.xlsx";
 
-    //Instantiate a new workbook
-    //Open the Excel file
+    //Open the existing Excel file
     IWorkbook workbook = application.Workbooks.Open(myPath);
 
     //Declare a worksheet object
@@ -156,13 +155,13 @@ private void AddWorksheet()
     for (int i = 1; i <= 5; i++)
     {
       //Add a worksheet to the workbook
-      newWorksheet = workbook.Worksheets.Create("New_Sheet" + (i).ToString());
+      newWorksheet = workbook.Worksheets.Create("New_Sheet" + i.ToString());
 
       //Get the cells collection
       IRange cells = newWorksheet.Range;
 
-      //Input a string value to a cell of the sheet
-      cells[i, i].Value = "New_Sheet" + (i).ToString();
+      //Input a string value into a cell of the sheet
+      cells[i, i].Value = "New_Sheet" + i.ToString();
     }
 
     //Save as Excel file
@@ -182,8 +181,7 @@ private void AddWorksheet()
     //Specify the template Excel file path
     string myPath = "Sample.xlsx";
 
-    //Instantiate a new workbook
-    //Open the Excel file
+    //Open the existing Excel file
     IWorkbook workbook = application.Workbooks.Open(myPath);
 
     //Declare a worksheet object
@@ -193,13 +191,13 @@ private void AddWorksheet()
     for (int i = 1; i <= 5; i++)
     {
       //Add a worksheet to the workbook
-      newWorksheet = workbook.Worksheets.Create("New_Sheet" + (i).ToString());
+      newWorksheet = workbook.Worksheets.Create("New_Sheet" + i.ToString());
 
       //Get the cells collection
       IRange cells = newWorksheet.Range;
 
-      //Input a string value to a cell of the sheet
-      cells[i, i].Value = "New_Sheet" + (i).ToString();
+      //Input a string value into a cell of the sheet
+      cells[i, i].Value = "New_Sheet" + i.ToString();
     }
 
     //Save as Excel file
@@ -217,8 +215,7 @@ Private Sub AddWorksheet()
     'Specify the template Excel file path
     Dim myPath As String = "Sample.xlsx"
 
-    'Instantiate a new workbook
-    'Open the Excel file
+    'Open the existing Excel file
     Dim workbook As IWorkbook = application.Workbooks.Open(myPath)
 
     'Declare a worksheet object
@@ -227,13 +224,13 @@ Private Sub AddWorksheet()
     'Add five new worksheets to the workbook and fill some data into the cells
     For i As Integer = 1 To 5
       'Add a worksheet to the workbook
-      newWorksheet = workbook.Worksheets.Create("New_Sheet" & (i).ToString())
+      newWorksheet = workbook.Worksheets.Create("New_Sheet" & i.ToString())
 
       'Get the cells collection
       Dim cells As IRange = newWorksheet.Range
 
-      'Input a string value to a cell of the sheet
-      cells(i, i).Value = "New_Sheet" & (i).ToString()
+      'Input a string value into a cell of the sheet
+      cells(i, i).Value = "New_Sheet" & i.ToString()
     Next
 
     'Save as Excel file

@@ -5,7 +5,7 @@ platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Working with charts in Excel document.
+# Working with charts in an Excel document
 
 Essential<sup>&reg;</sup> XlsIO has support for creating and modifying Excel charts inside a workbook or as a [chart worksheet](https://support.microsoft.com/en-us/office/create-a-chart-from-start-to-finish-0baf399e-dd61-4e18-8a73-b3fd5d5680c2?ui=en-us&rs=en-us&ad=us).
 
@@ -107,7 +107,7 @@ End Using
 
 A complete working example to create a chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Create%20Chart/.NET/Create%20Chart). 
 
-### Creating a Chart from directly entered Values
+### Creating a Chart from Directly Entered Values
 
 A chart in XlsIO can also be created from directly entered values. 
 
@@ -372,20 +372,20 @@ End Using
 
 A complete working example to create a chart through series in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Chart%20through%20Series/.NET/Chart%20through%20Series).
 
-### Sparkline chart
+### Sparkline Chart
 
 [Sparkline](https://support.microsoft.com/en-us/office/use-sparklines-to-show-data-trends-1474e169-008c-4783-926b-5c60e620f5ca?ui=en-us&rs=en-us&ad=us) is a small chart in a worksheet cell that provides a visual representation of data.
 
-#### Creation of sparkline chart
+#### Creating a Sparkline Chart
 
 XlsIO provides support for creation, modification and removal of Sparklines.
 
 * [ISparklineGroups](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ISparklineGroups.html) interface caches the SparklineGroup that need to be added to the Spreadsheet. 
-* [ISparklineGroup](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ISparklineGroup.html) represents Sparklines in object, and has properties that allows  to customize it. 
+* [ISparklineGroup](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ISparklineGroup.html) represents Sparklines in object, and has properties that allow it to be customized. 
 * [ISparklines](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ISparklines.html) interface returns the collection of Sparkline present in a Worksheet. 
 * [ISparkline](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ISparkline.html) represents a sparkline in the Sparklines. Currently, XlsIO supports all the three types of sparklines - Line, Column, Win/Loss.
 
-The following code example illustrates how to create Sparkline chart.
+The following code example illustrates how to create a Sparkline chart.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Create%20Sparkline/.NET/Create%20Sparkline/Create%20Sparkline/Program.cs,180" %}
@@ -399,7 +399,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	//Add SparklineGroups
 	ISparklineGroup sparklineGroup = sheet.SparklineGroups.Add();
 
-	//Add SparkLineType
+	//Set SparklineType
 	sparklineGroup.SparklineType = SparklineType.Line;
 	sparklineGroup.MarkersColor = Color.BlueViolet;
 
@@ -427,7 +427,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Add SparklineGroups
   ISparklineGroup sparklineGroup = sheet.SparklineGroups.Add();
 
-  //Add SparkLineType
+  //Set SparklineType
   sparklineGroup.SparklineType = SparklineType.Line;
   sparklineGroup.MarkersColor = Color.BlueViolet;
 
@@ -452,7 +452,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   'Add SparklineGroups
   Dim sparklineGroup As ISparklineGroup = sheet.SparklineGroups.Add()
 
-  'Add SparkLineType
+  'Set SparklineType
   sparklineGroup.SparklineType = SparklineType.Line
   sparklineGroup.MarkersColor = Color.BlueViolet
 
@@ -470,7 +470,7 @@ End Using
 
 A complete working example to create sparkline chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Create%20Sparkline/.NET/Create%20Sparkline).
 
-#### Modifying an existing sparkline chart
+#### Modifying an Existing Sparkline Chart
 
 XlsIO provides an option to edit the data of existing Sparklines. 
 
@@ -631,8 +631,8 @@ N> Sparklines are supported only from Excel 2007 onwards and are ignored in the 
 
 XlsIO supports creating and manipulating new and modern chart types such as waterfall, histogram, pareto, box and whisker, tree map, and sunburst, all of which are introduced in Microsoft Excel 2016.
 
-#### Creating a Funnel chart
- 
+#### Creating a Funnel Chart
+
 A [Funnel](https://support.microsoft.com/en-us/office/create-a-funnel-chart-ba21bcba-f325-4d9f-93df-97074589a70e?ui=en-us&rs=en-us&ad=us) chart visualizes data progression through stages in a process, displaying it in a funnel shape. Each section's width corresponds to the magnitude of values at that stage.
 
 The following code example illustrates how to create a Funnel chart.
@@ -658,8 +658,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	//Set the chart title
 	chart.ChartTitle = "Funnel";
 
-	//Formatting the legend and data label option
-	chart.HasLegend = false;
+	//Formatting the data label option
 	chart.Series[0].DataPoints.DefaultDataPoint.DataLabels.IsValue = true;
 	chart.Series[0].DataPoints.DefaultDataPoint.DataLabels.Size = 8;
 
@@ -694,8 +693,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Set the chart title
   chart.ChartTitle = "Funnel";
 
-  //Formatting the legend and data label option
-  chart.HasLegend = false;
+  //Formatting the data label option
   chart.Series[0].DataPoints.DefaultDataPoint.DataLabels.IsValue = true;
   chart.Series[0].DataPoints.DefaultDataPoint.DataLabels.Size = 8;
 
@@ -722,8 +720,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   'Set the chart title
   chart.ChartTitle = "Funnel"
 
-  'Formatting the legend and data label option
-  chart.HasLegend = False
+  'Formatting the data label option
   chart.Series(0).DataPoints.DefaultDataPoint.DataLabels.IsValue = True
   chart.Series(0).DataPoints.DefaultDataPoint.DataLabels.Size = 8
 
@@ -738,7 +735,7 @@ By executing the program, you will get the Excel file as below
 
 ![funnel chart](Working-with-Charts_images/funnel.jpeg)
 
-#### Creating a Box and Whisker chart
+#### Creating a Box and Whisker Chart
 
 [Box and Whisker](https://support.microsoft.com/en-us/office/create-a-box-and-whisker-chart-62f4219f-db4b-4754-aca8-4743f6190f0d?ui=en-us&rs=en-us&ad=us) chart shows distribution of data into quartiles, highlighting the mean and outliers. Box and Whisker charts are most commonly used in statistical analysis.
 
@@ -902,7 +899,7 @@ By executing the program, you will get the Excel file as below
 
 ![box and whisker chart](Working-with-Charts_images/boxandwhisker.jpeg)
 
-#### Creating a Waterfall chart
+#### Creating a Waterfall Chart
 
 [Waterfall](https://support.microsoft.com/en-us/office/create-a-waterfall-chart-8de1ece4-ff21-4d37-acd7-546f5527f185?ui=en-us&rs=en-us&ad=us) chart helps to quickly understand the finances of business owners by viewing profit and loss statements. With a Waterfall chart, you can quickly illustrate the line items in your financial data and get a clear picture of how each item is impacting your bottom line.
 
@@ -1026,7 +1023,7 @@ By executing the program, you will get the Excel file as below
 
 ![waterfall chart](Working-with-Charts_images/waterfall.jpeg)
 
-#### Creation of Histogram chart
+#### Creating a Histogram Chart
 
 A [Histogram](https://support.microsoft.com/en-us/office/create-a-histogram-85680173-064b-4024-b39d-80f17ff2f4e8?ui=en-us&rs=en-us&ad=us) chart visually represents the frequencies within a distribution of data. It consists of a series of columns, called bins, where each bin represents a range of values.
 
@@ -1147,7 +1144,7 @@ By executing the program, you will get the Excel file as below
 
 ![histogram chart](Working-with-Charts_images/histogram.jpeg)
 
-#### Creation of Pareto chart
+#### Creating a Pareto Chart
 
 [Pareto](https://support.microsoft.com/en-us/office/create-a-pareto-chart-a1512496-6dba-4743-9ab1-df5012972856?ui=en-us&rs=en-us&ad=us) is a sorted histogram where columns sorted in descending order and a line representing the cumulative total percentage.
 
@@ -1272,9 +1269,9 @@ By executing the program, you will get the Excel file as below
 ![pareto chart](Working-with-Charts_images/pareto.jpeg)
 
 
-#### Creation of Treemap chart
+#### Creating a Treemap Chart
 
-[Treemap](https://support.microsoft.com/en-us/office/create-a-treemap-chart-in-office-dfe86d28-a610-4ef5-9b30-362d5c624b68?ui=en-us&rs=en-us&ad=us) provides a hierarchical view of data as clustered rectangle with a specific weighted attribute determining the size of the rectangle. 
+[Treemap](https://support.microsoft.com/en-us/office/create-a-treemap-chart-in-office-dfe86d28-a610-4ef5-9b30-362d5c624b68?ui=en-us&rs=en-us&ad=us) provides a hierarchical view of data as clustered rectangles with a specific weighted attribute determining the size of the rectangles.
 
 The following code example illustrates how to create Treemap chart.
 
@@ -1378,9 +1375,9 @@ By executing the program, you will get the Excel file as below
 
 ![treemap chart](Working-with-Charts_images/treemap.jpeg)
 
-#### Creation of Sunburst chart
+#### Creating a Sunburst Chart
 
-[Sunburst](https://support.microsoft.com/en-us/office/create-a-sunburst-chart-in-office-4a127977-62cd-4c11-b8c7-65b84a358e0c?ui=en-us&rs=en-us&ad=us) provides a hierarchical view of data where each level of the hierarchy is represented by one ring or circle with the innermost circle as the top of the hierarchy.
+[Sunburst](https://support.microsoft.com/en-us/office/create-a-sunburst-chart-in-office-4a127977-62cd-4c11-b8c7-65b84a358e0c?ui=en-us&rs=en-us&ad=us) provides a hierarchical view of data where each level of the hierarchy is represented by one ring or circle, with the innermost circle representing the top of the hierarchy.
 
 The following code example illustrates how to create Sunburst chart.
 
@@ -1508,7 +1505,7 @@ The following image illustrates the basic elements of a chart.
 
 With the Syncfusion<sup>&reg;</sup> Excel Library, you can customize the chart title by changing its name, font, color, position and more. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/charts/chart-title) for more details.
 
-#### Chart  Area
+#### Chart Area
 
 With the Syncfusion<sup>&reg;</sup> Excel Library, you can customize the chart area by changing its border, color and transparency. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/charts/chart-area) for more details.
 
@@ -1534,7 +1531,7 @@ With the Syncfusion<sup>&reg;</sup> Excel Library, you can customize the chart a
 
 ## Chart Appearance
  
-Chart appearance refers to the ability to customize the visual aspects of charts in your Excel documents. This includes modifying elements such as the chart area, plot area, series, legend etc. These customizations enhance the readability, aesthetics, and overall presentation of the charts. Beyond these standard elements, users can further refine the chart's appearance by utilizing Fill Settings, Adding Pictures in Chart, Positioning and Resizing, adding a Data Table to the chart, and applying 3D formats.
+Chart appearance refers to the ability to customize the visual aspects of charts in your Excel documents. This includes modifying elements such as the chart area, plot area, series, legend etc. These customizations enhance the readability, aesthetics, and overall presentation of the charts. Beyond these standard elements, users can further refine the chart's appearance by using Fill Settings, Adding Pictures in Chart, Positioning and Resizing, adding a Data Table to the chart, and applying 3D formats.
 
 With the Syncfusion<sup>&reg;</sup> Excel Library, you can customize various aspects of chart appearance in your Excel documents. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/charts/chart-appearance) for more details.
 

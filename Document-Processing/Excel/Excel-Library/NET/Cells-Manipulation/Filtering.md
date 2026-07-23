@@ -1,25 +1,27 @@
 ---
-title: Filtering | Excel library | Syncfusion
+title: Filtering | Excel Library | Syncfusion
 description: In this section, you can learn about how to filter data in an Excel document using .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Filtering Data in Excel Document
+# Filtering Data in Excel Worksheet
 
-Using [AutoFilters](https://support.office.com/en-US/article/Filter-data-in-a-range-or-table-01832226-31b5-4568-8806-38c37dcc180e), data can be filtered to enable quick and easy way to find and work with a subset of data in a range of cells. When the data is filtered, entire rows are hidden if values in one or more columns does not meet the filtering criteria. The following are the types of filters that can be used in XlsIO.
+Using AutoFilters, data can be filtered to provide a quick and easy way to find and work with a subset of data in a range of cells. When the data is filtered, entire rows are hidden if values in one or more columns do not meet the filtering criteria. The following types of filters are available in XlsIO through the [IAutoFilter](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IAutoFilter.html) interface:
 
-* Custom Filter (Conditional)
-* Combination Filter (Text and DateTime filter)
-* Dynamic Filter
-* Color Filter
-* Icon Filter
-* Advanced Filter
+* [Custom Filter (Conditional)](#custom-filter) using [ExcelFilterCondition](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelFilterCondition.html)
+* [Combination Filter](#combination-filter) (Text and DateTime)
+* [Dynamic Filter](#dynamic-filter) using [DynamicFilterType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.DynamicFilterType.html)
+* [Color Filter](#color-filter) using [ExcelColorFilterType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelColorFilterType.html)
+* [Icon Filter](#icon-filter) using [ExcelIconSetType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelIconSetType.html)
+* [Advanced Filter](#advanced-filter) using [ExcelFilterAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelFilterAction.html)
 
-## Applying Filter
+N> The column index used in `worksheet.AutoFilters[index]` is **zero-based** and is relative to the `FilterRange`. The first column of the filter range is index `0`.
 
-The following code example illustrates how to apply simple auto filters.
+## Applying Top10 Filter
+
+The following code example illustrates how to apply a [Top10](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IAutoFilter.html#Syncfusion_XlsIO_IAutoFilter_IsTop) auto filter that retains the top N cells of a column. To apply a Top10 filter, the [IsTop](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IAutoFilter.html#Syncfusion_XlsIO_IAutoFilter_IsTop) and [IsTop10](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IAutoFilter.html#Syncfusion_XlsIO_IAutoFilter_IsTop10) properties must be set to `true`, and [Top10Number](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IAutoFilter.html#Syncfusion_XlsIO_IAutoFilter_Top10Number) must be set to the number of cells to keep.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Filter/.NET/Filter/Filter/Program.cs,180" %}
@@ -196,9 +198,9 @@ A complete working example to apply custom filter on Excel data in C# is present
 
 ## Combination Filter
 
-This filter contains both Text filter and DateTime filter. It filters the data based on multiple criteria. 
+A combination filter combines text and date/time filters to filter data on multiple criteria in a single column. Use [AddTextFilter](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IAutoFilter.html#Syncfusion_XlsIO_IAutoFilter_AddTextFilter_System_String___) to add text values and [AddDateFilter](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IAutoFilter.html#Syncfusion_XlsIO_IAutoFilter_AddDateFilter_System_DateTime_Syncfusion_XlsIO_DateTimeGroupingType_) to add date values; the available [DateTimeGroupingType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.DateTimeGroupingType.html) values are `Year`, `Month`, `Day`, `Hour`, `Minute`, and `Second`.
 
-The following code example illustrates how to apply combination filter with multiple of Text filter and DateTime filter.
+The following code example illustrates how to apply a combination filter that includes both text and date/time filters.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Combination%20Filter/.NET/Combination%20Filter/Combination%20Filter/Program.cs,180" %}
@@ -287,7 +289,7 @@ A complete working example to apply combination filter on Excel data in C# is pr
 
 ## Dynamic Filter
 
-Dynamic filter is a relative date filter, which filters data based on [DynamicFilterType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.DynamicFilterType.html) enumeration. 
+A dynamic filter is a relative date filter that filters data based on the [DynamicFilterType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.DynamicFilterType.html) enumeration.
 
 The following code example illustrates how to apply Dynamic filter.
 
@@ -364,9 +366,9 @@ A complete working example to apply dynamic filter on Excel data in C# is presen
 
 ## Color Filter
 
-Color Filter can be used to filter data based on the color applied to the cell or the color applied to the text in the cell. 
+A color filter can be used to filter data based on the color applied to the cell (background) or the color applied to the text (font) in the cell. Use [AddColorFilter](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IAutoFilter.html#Syncfusion_XlsIO_IAutoFilter_AddColorFilter_Syncfusion_Drawing_Color_Syncfusion_XlsIO_ExcelColorFilterType_) with the [ExcelColorFilterType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelColorFilterType.html) value `CellColor` or `FontColor`.
 
-The following code example illustrates how to apply color filter based on cell color (fill color applied to the cell).
+The following code example illustrates how to apply a color filter based on cell color (fill color applied to the cell).
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Cell%20Color%20Filter/.NET/Cell%20Color%20Filter/Cell%20Color%20Filter/Program.cs,180" %}
@@ -439,9 +441,9 @@ End Using
 
 A complete working example to apply color filter on Excel data based on cell color in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Cell%20Color%20Filter/.NET/Cell%20Color%20Filter).
 
-To filter cells based on font color of the text inside cells just change the [ExcelColorFilterType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelColorFilterType.html) to Font Color. 
+To filter cells based on the font color of the text inside cells, change the [ExcelColorFilterType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelColorFilterType.html) to `FontColor`.
 
-The following code example illustrates how to filter the cells based on font color.
+The following code example illustrates how to filter cells based on font color.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Font%20Color%20Filter/.NET/Font%20Color%20Filter/Font%20Color%20Filter/Program.cs,180" %}
@@ -516,9 +518,9 @@ A complete working example to apply color filter on Excel data based on font col
 
 ## Icon Filter
 
-Icon filter can be used to filter data that has conditional formatting with Icon Sets applied. Applying Icon Sets for numeric data adds icons to each cell based on the value present in that cell. Using Icon Filter, the data that has only a specific Icon in it can be filtered easily.
+An icon filter can be used to filter data that has conditional formatting with icon sets applied. Applying icon sets to numeric data adds icons to each cell based on the value present in that cell. Using the icon filter, only the data with a specific icon can be filtered. The second parameter of [AddIconFilter](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IAutoFilter.html#Syncfusion_XlsIO_IAutoFilter_AddIconFilter_Syncfusion_XlsIO_ExcelIconSetType_System_Int32_) is the zero-based index of the icon within the icon set.
 
-The following code example illustrates how to apply icon filter.
+The following code example illustrates how to apply an icon filter.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Icon%20Filter/.NET/Icon%20Filter/Icon%20Filter/Program.cs,180" %}
@@ -593,19 +595,16 @@ A complete working example to apply icon filter on Excel data in C# is present o
 
 ## Advanced Filter
 
-Advanced Filter can be used to perform more complex filtering other than basic filters. Data can be filtered with custom defined criteria range.
+The advanced filter can be used to perform more complex filtering beyond basic filters. Data can be filtered with a custom-defined criteria range.
 
-Advanced Filter support two types of filter action.
+The advanced filter supports two types of [ExcelFilterAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelFilterAction.html):
 
-1. Filter in Place
-2. Filter Copy
+1. `FilterInPlace`: Filter data in the same location.
+2. `FilterCopy`: Filter and copy data into a new location within a worksheet.
 
-**Filter in Place**: Filter data in same location.
-**Filter Copy**: Filter and copy data into new location within a worksheet.
+The advanced filter also provides an option to filter only the unique records, which removes duplicates from the filtered data. Pass `true` as the last argument of [AdvancedFilter](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_AdvancedFilter_Syncfusion_XlsIO_ExcelFilterAction_Syncfusion_XlsIO_IRange_Syncfusion_XlsIO_IRange_Syncfusion_XlsIO_IRange_System_Boolean_) to enable unique-record filtering.
 
-Advanced Filter also provides an option to filter the unique records. This will remove the duplicate record from filtered data.
-
-The following code example illustrates how to apply Advanced Filter in worksheet.
+The following code example illustrates how to apply an advanced filter to a worksheet.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Advanced%20Filter/.NET/Advanced%20Filter/Advanced%20Filter/Program.cs,180" %}

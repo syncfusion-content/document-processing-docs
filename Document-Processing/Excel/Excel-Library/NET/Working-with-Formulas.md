@@ -1,6 +1,6 @@
 ---
 title: Working with Formulas | Syncfusion
-description: Learn how to create, read, edit & calculate formula in an Excel file. It provides support for all types of formula that Microsoft Excel supports.
+description: Learn how to create, read, edit, and calculate formulas in an Excel file using Syncfusion XlsIO.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -8,16 +8,16 @@ keywords: c#, vb.net, excel, read excel, edit excel, edit excel cell, excel form
 ---
 # Working with Formulas
 
-[Formulas](https://support.microsoft.com/en-gb/office/overview-of-formulas-in-excel-ecfdc708-9162-49e8-b993-c311f47ca173?redirectsourcepath=%252fen-us%252farticle%252foverview-of-formulas-7abfda78-eff3-4cc6-b4a7-6350d512d2dc) are entries in Excel that have equations, by which values are calculated. A typical formula might contain cell references, constants, and even functions. 
+[Formulas](https://support.microsoft.com/en-gb/office/overview-of-formulas-in-excel-ecfdc708-9162-49e8-b993-c311f47ca173?redirectsourcepath=%252fen-us%252farticle%252foverview-of-formulas-7abfda78-eff3-4cc6-b4a7-6350d512d2dc) are entries in Excel that contain equations used to calculate values. A typical formula might contain cell references, constants, and even functions.
 
 To quickly learn How to Work with Formulas in an Excel Using the .NET Excel Library, check out this video:
 {% youtube "https://www.youtube.com/watch?v=SjHcYYvVSF4" %}
 
 ## Enable and Disable Calculation
 
-To perform calculation in an Excel workbook, it is recommended to invoke [EnableSheetCalculations](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_EnableSheetCalculations) method of [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html). Enabling this method will initialize [CalcEngine](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-formulas#calculation-engine) objects and retrieves calculated values of formulas in a worksheet. 
+To perform calculation in an Excel workbook, it is recommended to invoke the [EnableSheetCalculations](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_EnableSheetCalculations) method of [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html). Enabling this method initializes the [calculation engine](#calculation-engine) and retrieves the calculated values of formulas in a worksheet.
 
-The following code sample illustrates on how to enable worksheet formula calculations.
+The following code sample illustrates how to enable worksheet formula calculations.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -42,9 +42,9 @@ sheet.EnableSheetCalculations()
 {% endhighlight %}
 {% endtabs %}   
 
-On completion of worksheet calculation, it is recommended to invoke [DisableSheetCalculations](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_DisableSheetCalculations) method of [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html). This will dispose all the [CalcEngine](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-formulas#calculation-engine) objects.
+On completion of worksheet calculation, it is recommended to invoke the [DisableSheetCalculations](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_DisableSheetCalculations) method of [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html). This disposes the [calculation engine](#calculation-engine) objects.
 
-The following code sample illustrates on how to disable worksheet formula calculations.
+The following code sample illustrates how to disable worksheet formula calculations.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -71,9 +71,9 @@ sheet.DisableSheetCalculations()
 
 ## Writing a Formula
 
-In a worksheet, formulas can be entered by using the [Formula](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Formula) property of [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) instance. Following code example illustrates on how to write a formula.
+In a worksheet, formulas can be entered by using the [Formula](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Formula) property of an [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) instance. The following code example illustrates how to write a formula.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Formulas/Set%20Formula/.NET/Set%20Formula/Set%20Formula/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -140,9 +140,9 @@ A complete working example to insert formula in Excel cell in C# is present on [
 
 ### Formula with Cross-sheet References
 
-XlsIO supports using formulas across worksheets. The following code shows how to apply formula with cross-sheet references.
+XlsIO supports formulas that reference cells in other worksheets of the same workbook. The following code shows how to apply a formula with cross-sheet references.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Formulas/Cross%20Sheet%20Formula/.NET/Cross%20Sheet%20Formula/Cross%20Sheet%20Formula/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -201,7 +201,7 @@ A complete working example to insert formula in Excel cell with cross sheet refe
 
 ## Reading a Formula
 
-Formulas are string values which can be accessed using [Formula](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Formula) property of [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html). If a cell has formula, the [Value](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Value) property of **IRange** will also return the formula as string.
+Formulas are string values that can be accessed using the [Formula](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Formula) property of [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html). If a cell contains a formula, the [Value](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Value) property of **IRange** also returns the formula as a string.
 
 The following code shows how to read a formula.
 
@@ -222,9 +222,9 @@ Dim formula as String = sheet("C1").Formula
 {% endhighlight %}
 {% endtabs %}   
 
-## Accessing a Calculated value
+## Accessing a Calculated Value
 
-To evaluate formula, it is must to [enable sheet calculation](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-formulas#enable-and-disable-calculation) in prior. After enabling the sheet calculation, the formula can be evaluated using [CalculatedValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CalculatedValue) of [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html), which returns a string value.
+To evaluate a formula, you must first [enable sheet calculation](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-formulas#enable-and-disable-calculation). After enabling sheet calculation, the formula can be evaluated using [CalculatedValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CalculatedValue) of [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html), which returns a string value.
 
 The following code shows how to access a calculated value.
 
@@ -301,9 +301,9 @@ End Using
 
 A complete working example to access calculated value of a formula in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Formulas/Calculated%20Value/.NET/Calculated%20Value).
 
-Apart from **CalculatedValue** property, the evaluated values can also be accessed as **bool**, **DateTime** and **double** data types. To obtain the updated values of these types, **CalculatedValue** property must be called in prior.
+Apart from the **CalculatedValue** property, the evaluated values can also be accessed as **bool**, **DateTime**, and **double** data types. To obtain the updated values of these types, the **CalculatedValue** property must be called first.
 
-To know more about evaluated values, please refer [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) in API section.
+For more information about evaluated values, refer to the [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) API reference.
 
 The following code shows how to access calculated values in different types.
 
@@ -437,27 +437,23 @@ N> Calculated value for external reference formulas can also be evaluated in Xls
 
 ## Applying Argument Separators Based on Cultures
 
-Formula separators vary for different cultures, and exceptions can be thrown in such cases. This can be overcome by setting the separators by using [SetSeparators](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_SetSeparators_System_Char_System_Char_) method of [IWorkbook](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html).
+Formula separators vary for different cultures, and exceptions can be thrown as a result. This can be resolved by setting the separators using the [SetSeparators](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_SetSeparators_System_Char_System_Char_) method of [IWorkbook](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html).
 
-Following code illustrates on how to change the formula separators.
+The following code illustrates how to change the formula separators.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Formulas/Argument%20Separator/.NET/Argument%20Separator/Argument%20Separator/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-	IApplication application = excelEngine.Excel;
-	application.DefaultVersion = ExcelVersion.Xlsx;
-	IWorkbook workbook = application.Workbooks.Create(1);
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Create(1);
+  IWorksheet worksheet = workbook.Worksheets[0];
 
-	#region Set Separators
-	//Setting the argument separator
-	workbook.SetSeparators(';', ',');
-	#endregion
+  //Setting the argument separator
+  workbook.SetSeparators(';', ',');
 
-	#region Save
-	//Saving the workbook
-	workbook.SaveAs(Path.GetFullPath("Output/Formula.xlsx"));
-	#endregion
+  workbook.SaveAs("Formula.xlsx");
 }
 {% endhighlight %}
 
@@ -492,13 +488,13 @@ End Using
 
 A complete working example to add argument separator in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Formulas/Argument%20Separator/.NET/Argument%20Separator).
 
-## Array of Formula
+## Array Formula
 
-Array formula is a special type of formula in Excel. It works with an array or series of data values, rather than a single data value which can be done through [FormulaArray](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_FormulaArray) property of [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) instance.
+An array formula is a special type of formula in Excel that works with an array or series of data values rather than a single data value. It can be set through the [FormulaArray](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_FormulaArray) property of an [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) instance.
 
-Following code shows how an array of values from [Named Range](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-formulas#defined-names) is used for computation. 
+The following code shows how an array of values from a [Named Range](#defined-names) is used for computation.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Formulas/Formula%20Array/.NET/Formula%20Array/Formula%20Array/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -520,7 +516,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	workbook.SaveAs(Path.GetFullPath("Output/Formula.xlsx"));	
+	workbook.SaveAs(Path.GetFullPath("Output/Formula.xlsx"));
 	#endregion
 }
 {% endhighlight %}
@@ -572,24 +568,24 @@ A complete working example to add formula array in C# is present on [this GitHub
 
 ## Incremental Formula
 
-The relative cell references in the formulas are automatically incremented by 1, when you fill formulas down a column or across a row by enabling the [EnableIncrementalFormula](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html#Syncfusion_XlsIO_IApplication_EnableIncrementalFormula) property of [IApplication](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html) interface.
+When formulas are filled down a column or across a row, the relative cell references in the formulas can be automatically incremented by 1 by enabling the [EnableIncrementalFormula](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html#Syncfusion_XlsIO_IApplication_EnableIncrementalFormula) property of the [IApplication](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html) interface.
 
-The below code snippet shows how to increment the cell references by 1 in the formulas.
+The following code snippet shows how to increment the cell references by 1 in the formulas.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Formulas/Incremental%20Formula/.NET/Incremental%20Formula/Incremental%20Formula/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
 
-	//Enables the incremental formula to updates the reference in cell
+	//Enables the incremental formula to update the cell reference
 	application.EnableIncrementalFormula = true;
 
 	IWorkbook workbook = application.Workbooks.Create(1);
 	IWorksheet sheet = workbook.Worksheets[0];
 
-	//Formula are automatically increments by one for the range of cells
+	//Formula is automatically incremented by one for the range of cells
 	sheet["A1:A5"].Formula = "=B1+C1";
 
 	#region Save
@@ -605,13 +601,13 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
 
-  //Enables the incremental formula to updates the reference in cell
+  //Enables the incremental formula to update the cell reference
   application.EnableIncrementalFormula = true;
 
   IWorkbook workbook = application.Workbooks.Create(1);
   IWorksheet sheet = workbook.Worksheets[0];
 
-  //Formula are automatically increments by one for the range of cells
+  //Formula is automatically incremented by one for the range of cells
   sheet["A1:A5"].Formula = "=B1+C1";
 
   workbook.SaveAs("IncrementalFormula.xlsx");
@@ -623,13 +619,13 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim application As IApplication = excelEngine.Excel
   application.DefaultVersion = ExcelVersion.Xlsx
 
-  'Enables the incremental formula to updates the reference in cell
+  'Enables the incremental formula to update the cell reference
   application.EnableIncrementalFormula = True
 
   Dim workbook As IWorkbook = application.Workbooks.Create(1)
   Dim sheet As IWorksheet = workbook.Worksheets(0)
 
-  'Formula are automatically increments by one for the range of cells
+  'Formula is automatically incremented by one for the range of cells
   sheet("A1:A5").Formula = "=B1+C1"
 
   workbook.SaveAs("IncrementalFormula.xlsx")
@@ -641,11 +637,11 @@ A complete working example to add incremental formula in C# is present on [this 
 
 ## External Formula
 
-XlsIO supports to write and preserve external formula.
+XlsIO supports writing and preserving external formulas.
 
-External formula is the one which refers to a cell or a range of cells or a defined named range from outside the current worksheet/workbook. The main benefit of using an external reference is that whenever the referenced cell(s) in another worksheet changes, the value returned by the external cell reference is automatically updated.
+An external formula refers to a cell, a range of cells, or a defined named range outside the current worksheet or workbook. The main benefit of using an external reference is that whenever the referenced cell(s) in another worksheet or workbook change, the value returned by the external cell reference is automatically updated.
 
-Following code illustrates the insertion of a formula that refers to cell 'A1' in another workbook which is enclosed in a square bracket [One.xlsx].
+The following code illustrates inserting a formula that refers to cell **A1** in another workbook, which is enclosed in square brackets (`[One.xlsx]`).
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Formulas/External%20Formula/.NET/External%20Formula/External%20Formula/Program.cs,180" %}
@@ -698,13 +694,13 @@ End Using
 
 A complete working example to add external formula in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Formulas/External%20Formula/.NET/External%20Formula).
 
-N> Links are updated automatically in Microsoft Excel to view the result for the preceding code.
+N> External links are updated automatically when the file is opened in Microsoft Excel to view the result of the preceding code.
 
 ## Calculated Column
 
-XlsIO supports to create, access and modify [calculated column](https://support.microsoft.com/en-gb/office/use-calculated-columns-in-an-excel-table-873fbac6-7110-4300-8f6f-aafa2ea11ce8?redirectsourcepath=%252fen-us%252farticle%252fcreate-edit-or-remove-a-calculated-column-in-an-excel-table-4507b5aa-8859-407c-b3eb-743a2650af3c) in a table. When a formulas is entered in a table column, Excel creates a calculated column. This column uses a single formula that’s automatically extended to additional rows in the column and adjusted for each row. Enter a formula once, and Excel immediately fills it down to create the calculated column.
+XlsIO supports creating, accessing, and modifying [calculated columns](https://support.microsoft.com/en-gb/office/use-calculated-columns-in-an-excel-table-873fbac6-7110-4300-8f6f-aafa2ea11ce8?redirectsourcepath=%252fen-us%252farticle%252fcreate-edit-or-remove-a-calculated-column-in-an-excel-table-4507b5aa-8859-407c-b3eb-743a2650af3c) in a table. When a formula is entered in a table column, Excel creates a calculated column. This column uses a single formula that is automatically extended to additional rows in the column and adjusted for each row. Enter a formula once, and Excel immediately fills it down to create the calculated column.
 
-Also, XlsIO supports [structured reference](https://support.microsoft.com/en-gb/office/using-structured-references-with-excel-tables-f5ed2452-2337-4f71-bed3-c8ae6d2b276e?redirectsourcepath=%252fen-us%252farticle%252fuse-structured-references-in-excel-table-formulas-75fb07d3-826a-449c-b76f-363057e3d16f) in calculated column in table from Excel 2013.
+In addition, XlsIO supports [structured references](https://support.microsoft.com/en-gb/office/using-structured-references-with-excel-tables-f5ed2452-2337-4f71-bed3-c8ae6d2b276e?redirectsourcepath=%252fen-us%252farticle%252fuse-structured-references-in-excel-table-formulas-75fb07d3-826a-449c-b76f-363057e3d16f) in calculated columns in tables from Excel 2013 onwards.
 
 The following code snippet illustrates how to create a calculated column.
 
@@ -814,7 +810,7 @@ A complete working example for calculated column in C# is present on [this GitHu
 
 ## Supported Functions
 
-XlsIO supports all the formulas supported by Excel. Whereas, below is the list of functions that XlsIO performs calculation and returns a calculated value.
+XlsIO supports writing, reading, and preserving all the formulas supported by Excel. The list below contains the functions that XlsIO also evaluates at runtime and returns a calculated value for. Functions marked with "Calculating this formula result is not supported in XlsIO" are written and preserved but not calculated by XlsIO.
 
 <table>
 <tr>
@@ -1452,8 +1448,8 @@ KURT<br/><br/></td><td>
 Returns the kurtosis of a data set<br/><br/></td></tr>
 <tr>
 <td>
-LAMBDA <br/><br/></td><td>
-Allows to use own formula parameters and logic<br/><br/></td></tr>
+LAMBDA<br/><br/></td><td>
+Enables you to create custom reusable functions with your own parameters and logic<br/><br/></td></tr>
 <tr>
 <td>
 LARGE<br/><br/></td><td>
@@ -2099,9 +2095,9 @@ Returns the logical value TRUE<br/><br/></td></tr>
 
 ## Add-in Functions
 
-Add-ins are mini-programs or custom functions that enhance the feature set of the Microsoft Excel application. These Add-ins can be accessed by registering it at first from Excel and refer it using XlsIO. For more details on adding AddIn functions, see [Add or remove Add-ins](https://support.microsoft.com/en-gb/office/add-or-remove-add-ins-in-excel-0af570c4-5cf3-4fa9-9b88-403625a0b460?redirectsourcepath=%252fen-us%252farticle%252fadd-or-remove-add-ins-64d3d147-98fb-4b82-8833-709d54e3ace1)
+Add-ins are mini-programs or custom functions that enhance the feature set of the Microsoft Excel application. These Add-ins must be registered in Excel first, and then referenced using XlsIO. For more details on adding AddIn functions, see [Add or remove Add-ins](https://support.microsoft.com/en-gb/office/add-or-remove-add-ins-in-excel-0af570c4-5cf3-4fa9-9b88-403625a0b460?redirectsourcepath=%252fen-us%252farticle%252fadd-or-remove-add-ins-64d3d147-98fb-4b82-8833-709d54e3ace1).
 
-The following code illustrates on how to include and access Add-ins in XlsIO.
+The following code illustrates how to include and access Add-ins in XlsIO.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -2114,11 +2110,11 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
   IAddInFunctions unknownFunctions = workbook.AddInFunctions;
 
-  //Adding the XLAM file reference to AddIn functions
-  //NOTE: The add-in name must be same as the function name
+  //Register the Add-in function name so XlsIO can preserve it in the workbook.
+  //NOTE: The add-in name must be the same as the function name.
   unknownFunctions.Add("AddInFunction");
 
-  //Use the function. The expected result is 30
+  //Use the function. The expected result is 30.
   sheet.Range["A3"].Formula = "AddInFunction(10,20)";
 
   //Saving the workbook
@@ -2148,7 +2144,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IAddInFunctions unknownFunctions = workbook.AddInFunctions;
 
   //Adding the XLAM file reference to AddIn functions
-  //NOTE: The add-in name must be same as the function name
+  //NOTE: The add-in name must be the same as the function name
   unknownFunctions.Add("D:/AddIn.xlam", "AddInFunction");
 
   //Use the function. The expected result is 30
@@ -2181,7 +2177,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim unknownFunctions As IAddInFunctions = workbook.AddInFunctions
 
   'Adding the XLAM file reference to AddIn functions
-  'NOTE: The add-in name must be same as the function name
+  'NOTE: The add-in name must be the same as the function name
   unknownFunctions.Add("D:/AddIn.xlam", "AddInFunction")
 
   'Use the function. The expected result is 30
@@ -2198,9 +2194,9 @@ N> If you move the file to another computer, or distribute it, the workbook will
 
 ## Defined Names
 
-Cell ranges can be [defined by names](https://support.microsoft.com/en-gb/office/define-and-use-names-in-formulas-4d0f13ac-53b7-422e-afd2-abd7ff379c64?redirectsourcepath=%252fen-us%252farticle%252fdefine-and-use-names-in-formulas-b2bacf14-945d-41d4-b3aa-267b18a23f6e) to perform formula calculation. This section explains about creating named ranges and accessing them from workbook or worksheet levels.
+Cell ranges can be [defined by names](https://support.microsoft.com/en-gb/office/define-and-use-names-in-formulas-4d0f13ac-53b7-422e-afd2-abd7ff379c64?redirectsourcepath=%252fen-us%252farticle%252fdefine-and-use-names-in-formulas-b2bacf14-945d-41d4-b3aa-267b18a23f6e) to make formulas easier to read and maintain. This section explains how to create named ranges and access them from the workbook or worksheet level.
 
-The following code shows how to define a named range from workbook level.
+The following code shows how to define a named range at the workbook level.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -2222,7 +2218,7 @@ name.RefersToRange = worksheet.Range("A1")
 {% endhighlight %}
 {% endtabs %}   
 
-The following code shows how to define a named range from worksheet level.
+The following code shows how to define a named range at the worksheet level.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -2379,7 +2375,7 @@ Following code illustrates on how to ignore or set error indicators.
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
-	application.DefaultVersion = ExcelVersion.Xlsx;	
+	application.DefaultVersion = ExcelVersion.Xlsx;
 	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet sheet = workbook.Worksheets[0];
 
@@ -2433,15 +2429,15 @@ A complete working example to ignore error in C# is present on [this GitHub page
 
 ## Calculation Engine
 
-Essential<sup>&reg;</sup> Calculate is now (from v9.1.x.x) integrated with Essential<sup>&reg;</sup> XlsIO, and thus makes it possible to calculate formulas entered at runtime without any additional references or packages.
+Essential<sup>&reg;</sup> Calculate is now integrated with Essential<sup>&reg;</sup> XlsIO (since v9.1.x.x), making it possible to calculate formulas entered at runtime without any additional references or packages.
 
-N> Do not add reference to Syncfusion.Calculate.Base. It will throw conflict errors as these are already integrated with XlsIO.
+N> Do not add a reference to `Syncfusion.Calculate.Base`. It will throw conflict errors because these types are already integrated with XlsIO.
 
-N> Only the formulas that are supported by Calculate engine can be calculated at runtime using Essential<sup>&reg;</sup> XlsIO.
+N> Only the formulas that are supported by the calculation engine can be calculated at runtime using Essential<sup>&reg;</sup> XlsIO. See [Supported Functions](#supported-functions) for the complete list.
 
 ## Calculate Options
 
-Calculate engines provides certain options like calculation modes, Recalculate before Save and Enable iterations to perform specific calculation. 
+The calculation engine provides certain options, such as calculation modes, Recalculate before Save, and Enable iterations, to perform specific calculations.
 
 ### Calculation Modes
 
@@ -2451,7 +2447,7 @@ There are various [calculation modes](https://docs.microsoft.com/en-us/office/tr
 * Automatic except for Data Tables
 * Manual
 
-Following code illustrates on how to set calculation mode in XlsIO.
+The following code illustrates how to set the calculation mode in XlsIO.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Formulas/Calculation%20Modes/.NET/Calculation%20Modes/Calculation%20Modes/Program.cs,180" %}
@@ -2533,9 +2529,9 @@ calcOptions.RecalcOnSave = False
 
 ### Iteration
 
-Iteration is the repeated recalculation of a worksheet until a specific numeric condition is met. If a formula refers back to one of its own cells, it is must determine how many times the formula should recalculate.
+Iteration is the repeated recalculation of a worksheet until a specific numeric condition is met. If a formula refers back to one of its own cells, you must determine how many times the formula should recalculate.
 
-Iteration settings will control the maximum number of iteration and the amount of acceptable change. By default, [IsIterationEnabled](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ICalculationOptions.html#Syncfusion_XlsIO_ICalculationOptions_IsIterationEnabled) is false, so that Excel does not try to solve accidental circular references. 
+Iteration settings control the maximum number of iterations and the amount of acceptable change. By default, [IsIterationEnabled](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ICalculationOptions.html#Syncfusion_XlsIO_ICalculationOptions_IsIterationEnabled) is `false`, so that Excel does not try to solve accidental circular references.
 
 Following code snippet illustrates how to set the Iterations.
 
@@ -2590,7 +2586,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim application As IApplication = excelEngine.Excel
   application.DefaultVersion = ExcelVersion.Xlsx
   Dim workbook As IWorkbook = application.Workbooks.Create(1)
-  Dim sheet As IWorkbook = workbook.Worksheets(0)
+  Dim sheet As IWorksheet = workbook.Worksheets(0)
 
   'Setting Iteration
   workbook.CalculationOptions.IsIterationEnabled = True

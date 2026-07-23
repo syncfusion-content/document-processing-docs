@@ -1,6 +1,6 @@
 ---
 title: Conditional Formatting | Excel library | Syncfusion
-description: In this section, you can learn how to create and use conditional formatting operations in Excel using XlsIO
+description: Learn how to create, read, and remove conditional formatting rules in Excel using Syncfusion XlsIO.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -8,14 +8,14 @@ documentation: UG
 
 # Working with Conditional Formatting
 
-Conditional formatting allows to format the contents of a cell dynamically. This can be defined and applied in XlsIO through the [IConditionalFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IConditionalFormat.html) interface.
+Conditional formatting allows you to format the contents of a cell dynamically based on rules that you define. These rules can be created and applied in XlsIO through the [IConditionalFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IConditionalFormat.html) interface.
 
 To quickly learn How to Apply Conditional Formatting in Excel Using .NET Excel Library, check out this video:
 {% youtube "https://www.youtube.com/watch?v=S1lkNLV70hc" %}
 
-## Create a Conditional Format 
+## Create a Conditional Format
 
-The [IConditionalFormats](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IConditionalFormats.html) represents a collection of conditional formats for a single [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html). One or more conditional formats can be added to the range as follows.
+The [IConditionalFormats](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IConditionalFormats.html) collection represents the conditional formats for a single [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html). One or more conditional formats can be added to the range by calling `AddCondition()`. The criteria are set through the [IConditionalFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IConditionalFormat.html) interface using the following key members:
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -233,7 +233,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   condition1.FirstFormula = "10"
   condition1.SecondFormula = "20"
   worksheet.Range("A2").Text = "Enter a number between 10 and 20"
-  worksheet.Range["F2"].BorderAround(ExcelLineStyle.Thin)
+  worksheet.Range("F2").BorderAround(ExcelLineStyle.Thin)
 
   'Setting back color and font style to be applied for target range
   condition1.BackColor = ExcelKnownColors.Light_orange
@@ -249,7 +249,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   condition2.Operator = ExcelComparisonOperator.Equal
   condition2.FirstFormula = "1000"
   worksheet.Range("A4").Text = "Enter the Number as 1000"
-  worksheet.Range["F4"].BorderAround(ExcelLineStyle.Thin)
+  worksheet.Range("F4").BorderAround(ExcelLineStyle.Thin)
 
   'Setting fill pattern and back color to target range
   condition2.FillPattern = ExcelPattern.LightUpwardDiagonal
@@ -264,7 +264,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   condition3.Operator = ExcelComparisonOperator.LessOrEqual
   condition3.FirstFormula = "1000"
   worksheet.Range("A6").Text = "Enter a Number which is less than or equal to 1000"
-  worksheet.Range["F6"].BorderAround(ExcelLineStyle.Thin)
+  worksheet.Range("F6").BorderAround(ExcelLineStyle.Thin)
 
   'Setting back color to target range
   condition3.BackColor = ExcelKnownColors.Light_green
@@ -276,21 +276,21 @@ End Using
 
 A complete working example to create conditional formatting in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Conditional%20Formatting/Create%20Conditional%20Format/.NET/Create%20Conditional%20Format).
 
-N> Excel allows the addition of a maximum of three conditions for the same cell in the Biff8 format and XlsIO. However, this restriction is removed from the Excel 2007 formats.
+N> Excel allows the addition of a maximum of three conditions for the same cell in the BIFF8 (`.xls`) format and XlsIO. This restriction is removed from the Excel 2007 (`.xlsx`) and later formats.
 
-N> The conditional formats for a single range should be added in descending order in XlsIO.
+N> The conditional formats for a single range must be added in descending order of priority in XlsIO.
 
-By executing the program, you will get the Excel file as below
+By executing the program, you will get the Excel file as shown below.
 
 ![working with conditional format](Working-with-Conditional-Formatting_images/Working-with-Conditional-Formatting_img1.jpeg)
 
 ## Reading an Existing Conditional Format
 
-XlsIO also reads conditional formats from an existing Excel workbook. 
+XlsIO can also read conditional formats from an existing Excel workbook.
 
-The following code example illustrates how to read an existing conditional formatting.
+The following code example illustrates how to read an existing conditional format.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Read%20Conditional%20Format/.NET/Read%20Conditional%20Format/Read%20Conditional%20Format/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -299,11 +299,11 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"), ExcelOpenType.Automatic);
 	IWorksheet worksheet = workbook.Worksheets[0];
 
-	//Read conditional formatting settings 
+	//Read conditional formatting settings
 	string formatType = worksheet.Range["A1"].ConditionalFormats[0].FormatType.ToString();
 	string cfOperator = worksheet.Range["A1"].ConditionalFormats[0].Operator.ToString();
 
-  workbook.SaveAs("Output.xlsx");
+	workbook.SaveAs(Path.GetFullPath("Output/Output.xlsx"));
 }
 {% endhighlight %}
 
@@ -315,7 +315,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IWorkbook workbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic);
   IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Read conditional formatting settings 
+  //Read conditional formatting settings
   string formatType = worksheet.Range["A1"].ConditionalFormats[0].FormatType.ToString();
   string cfOperator = worksheet.Range["A1"].ConditionalFormats[0].Operator.ToString();
   string backColor = worksheet.Range["A1"].ConditionalFormats[0].BackColor.ToString();
@@ -345,11 +345,11 @@ A complete working example to read an existing conditional formatting in C# is p
 
 ## Removing Conditional Formats
 
-All the conditional formats for a specified range can be removed using the [Remove](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IConditionalFormats.html#Syncfusion_XlsIO_IConditionalFormats_Remove) method. 
+All the conditional formats for a specified range can be removed using the [Remove](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IConditionalFormats.html#Syncfusion_XlsIO_IConditionalFormats_Remove) method.
 
 The following code example illustrates how to remove conditional formats.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Remove%20Conditional%20Format/.NET/Remove%20Conditional%20Format/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -359,7 +359,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"), ExcelOpenType.Automatic);
 	IWorksheet worksheet = workbook.Worksheets[0];
 
-	//Removing conditional format for a specified range 
+	//Removing conditional format for a specified range
 	worksheet.Range["E5"].ConditionalFormats.Remove();
 
 	#region Save
@@ -401,13 +401,13 @@ End Using
 
 A complete working example to remove conditional formatting in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Conditional%20Formatting/Remove%20Conditional%20Format/.NET).
 
-### Removing Conditional Formats at specified index value
+### Removing Conditional Formats at a Specified Index
 
 A particular conditional format at the specified range can be removed by using the [RemoveAt](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IConditionalFormats.html#Syncfusion_XlsIO_IConditionalFormats_RemoveAt_System_Int32_) method.
 
-The following code example illustrates how to remove conditional formats at specified index value.
+The following code example illustrates how to remove a conditional format at a specified index.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Remove%20at%20Index/.NET/Remove%20at%20Index/Remove%20at%20Index/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -416,7 +416,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"), ExcelOpenType.Automatic);
 	IWorksheet worksheet = workbook.Worksheets[0];
 
-	//Removing first conditional Format at the specified Range
+	//Removing the first conditional format at the specified range
 	worksheet.UsedRange.ConditionalFormats.RemoveAt(0);
 
 	#region Save
@@ -434,7 +434,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IWorkbook workbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic);
   IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Removing first conditional Format at the specified Range
+  //Removing the first conditional format at the specified range
   worksheet.Range["E5"].ConditionalFormats.RemoveAt(0);
 
   workbook.SaveAs("Output.xlsx");
@@ -448,7 +448,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim workbook As IWorkbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic)
   Dim worksheet As IWorksheet = workbook.Worksheets(0)
 
-  'Removing first conditional Format at the specified Range
+  'Removing the first conditional format at the specified range
   worksheet.Range("E5").ConditionalFormats.RemoveAt(0)
 
   workbook.SaveAs("Output.xlsx")
@@ -458,11 +458,11 @@ End Using
 
 A complete working example to remove conditional formats at specified index in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Conditional%20Formatting/Remove%20at%20Index/.NET/Remove%20at%20Index).
 
-### Removing Conditional Formats from entire sheet
+### Removing Conditional Formats from an Entire Sheet
 
-The following code example illustrates how to remove conditional formats from entire sheet.
+The following code example illustrates how to remove conditional formats from an entire sheet.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Remove%20all%20Conditional%20Formats/.NET/Remove%20all%20Conditional%20Formats/Remove%20all%20Conditional%20Formats/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -471,7 +471,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"), ExcelOpenType.Automatic);
 	IWorksheet worksheet = workbook.Worksheets[0];
 
-	//Removing Conditional Formatting Settings From Entire Sheet
+	//Removing conditional formatting settings from the entire sheet
 	worksheet.UsedRange.Clear(ExcelClearOptions.ClearConditionalFormats);
 
 	#region Save
@@ -489,7 +489,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IWorkbook workbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic);
   IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Removing Conditional Formatting Settings From Entire Sheet
+  //Removing conditional formatting settings from the entire sheet
   worksheet.UsedRange.Clear(ExcelClearOptions.ClearConditionalFormats);
 
   workbook.SaveAs("Output.xlsx");
@@ -503,7 +503,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim workbook As IWorkbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic)
   Dim worksheet As IWorksheet = workbook.Worksheets(0)
 
-  'Removing Conditional Formatting Settings From Entire Sheet
+  'Removing conditional formatting settings from the entire sheet
   worksheet.UsedRange.Clear(ExcelClearOptions.ClearConditionalFormats)
 
   workbook.SaveAs("Output.xlsx")
@@ -513,13 +513,13 @@ End Using
 
 A complete working example to remove conditional formats in entire worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Conditional%20Formatting/Remove%20all%20Conditional%20Formats/.NET/Remove%20all%20Conditional%20Formats).
 
-## Using FormulaR1C1 property in Conditional Formats
+## Using the FormulaR1C1 Property in Conditional Formats
 
-XlsIO sets the formula for the conditional format in R1C1-style notation. 
+XlsIO can set the formula for a conditional format in R1C1-style notation by using the `FirstFormulaR1C1` and `SecondFormulaR1C1` properties. This is useful when the formula needs to be expressed relative to the current cell rather than in absolute A1-style references.
 
-The following code example illustrates how to use formula in Conditional Format.
+The following code example illustrates how to use a formula in a conditional format.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Conditional%20Format%20with%20R1C1/.NET/Conditional%20Format%20with%20R1C1/Conditional%20Format%20with%20R1C1/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -528,7 +528,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	IWorkbook workbook = application.Workbooks.Create(1);
 	IWorksheet worksheet = workbook.Worksheets[0];
 
-	//Using FormulaR1C1 property in Conditional Formatting 
+	//Using the FormulaR1C1 property in conditional formatting
 	IConditionalFormats condition = worksheet.Range["E5:E18"].ConditionalFormats;
 	IConditionalFormat condition1 = condition.AddCondition();
 	condition1.FirstFormulaR1C1 = "=R[1]C[0]";
@@ -549,7 +549,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IWorkbook workbook = application.Workbooks.Create(1);
   IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Using FormulaR1C1 property in Conditional Formatting
+  //Using the FormulaR1C1 property in conditional formatting
   IConditionalFormats condition = worksheet.Range["E5:E18"].ConditionalFormats;
   IConditionalFormat condition1 = condition.AddCondition();
   condition1.FirstFormulaR1C1 = "=R[1]C[0]";
@@ -566,7 +566,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim workbook As IWorkbook = application.Workbooks.Create(1)
   Dim worksheet As IWorksheet = workbook.Worksheets(0)
 
-  'Using FormulaR1C1 property in Conditional Formatting
+  'Using the FormulaR1C1 property in conditional formatting
   Dim condition As IConditionalFormats = worksheet.Range("E5:E18").ConditionalFormats
   Dim condition1 As IConditionalFormat = condition.AddCondition()
   condition1.FirstFormulaR1C1 = "=R[1]C[0]"
@@ -613,7 +613,7 @@ With the Syncfusion<sup>&reg;</sup> Excel Library, you can add icon sets in cond
 
 #### Custom Icon Sets
 
-Similar to standard icon sets, custom icon sets allow users to define their own icons and the value ranges that trigger each icon. This offers more flexibility and customization, enabling tailored visual representations of data according to specific criteria or business needs.
+Similar to standard icon sets, custom icon sets allow you to define your own icons and the value ranges that trigger each icon. This offers more flexibility and customization, enabling tailored visual representations of data according to specific criteria or business needs. For more information and code examples, see [Icon Sets](https://help.syncfusion.com/document-processing/excel/excel-library/net/conditional-formatting/icon-sets#custom-icon-sets).
 
 ## See Also
 

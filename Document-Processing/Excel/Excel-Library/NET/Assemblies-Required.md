@@ -64,7 +64,7 @@ Syncfusion.XlsIO.Net.Core
 </tbody>
 </table>
 
-**Retired Platforms**
+### Retired Platforms
 
 The following assemblies need to be referenced in your application based on the platform.
 
@@ -217,7 +217,7 @@ Syncfusion.XlsIORenderer.NET<br/>
 </tbody>
 </table>
 
-**Retired Platforms**
+### Retired Platforms
 
 The following assemblies need to be referenced in your application based on the platform.
 
@@ -246,6 +246,8 @@ Syncfusion.ExcelToPdfConverter.Base
 </table>
 
 N> Excel to PDF conversion is supported from .NET Framework 2.0 and .NET Standard 1.4 onwards.
+
+N> Starting with v16.2.0.x, in addition to the assemblies listed above, you must also reference the `Syncfusion.Licensing` assembly and include a license key in your project. Refer to the [licensing overview](https://help.syncfusion.com/document-processing/licensing/overview) for details.
 
 ## Converting Excel Worksheet to Image
 
@@ -295,7 +297,7 @@ Syncfusion.XlsIORenderer.NET<br/>
 </tbody>
 </table>
 
-**Retired Platforms**
+### Retired Platforms
 
 The following assemblies need to be referenced in your application based on the platform.
 
@@ -322,6 +324,8 @@ Syncfusion.Compression.Base<br/>
 </table>
 
 N> Worksheet to image conversion is supported from .NET Framework 2.0 and .NET Standard 1.4 onwards.
+
+N> Starting with v16.2.0.x, in addition to the assemblies listed above, you must also reference the `Syncfusion.Licensing` assembly and include a license key in your project. Refer to the [licensing overview](https://help.syncfusion.com/document-processing/licensing/overview) for details.
 
 ## Converting Excel Chart to Image
 
@@ -372,7 +376,7 @@ Syncfusion.XlsIORenderer.NET<br/>
 </tbody>
 </table>
 
-**Retired Platforms**
+### Retired Platforms
 
 The following assemblies need to be referenced in your application based on the platform.
 
@@ -402,4 +406,11 @@ Syncfusion.SfChart.WPF
 
 N>  1. Chart to image conversion is supported from .NET Framework 4.0 and .NET Standard 2.0 onwards.
 
-N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components.
+N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/document-processing/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components.
+
+## See Also
+
+* [Overview of Excel Library (XlsIO)](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview)
+* [Create Excel File in C# and VB.NET](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-excel-file-csharp-vbnet)
+* [NuGet Packages](https://help.syncfusion.com/document-processing/nuget-packages)
+* [Licensing Overview](https://help.syncfusion.com/document-processing/licensing/overview)

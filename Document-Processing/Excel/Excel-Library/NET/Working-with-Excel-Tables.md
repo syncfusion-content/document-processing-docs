@@ -1,6 +1,6 @@
 ---
 title: Working with Tables | Excel library | Syncfusion
-description: This section illustrates about Excel Tables and its various features in Syncfusion XlsIO (a .NET Excel Library).
+description: This section explains Excel Tables and their various features in Syncfusion XlsIO (a .NET Excel Library).
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -12,9 +12,9 @@ To quickly learn how to create, edit, and format tables in Excel documents, chec
 
 ## Creating a table
 
-XlsIO supports reading and writing the table which helps to organize and analyze the related data. 
+XlsIO supports reading and writing tables which helps to organize and analyze the related data.
 
-* [IListObjects](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IListObjects.html) represents a collection of tables in the worksheet. 
+* [IListObjects](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IListObjects.html) represents a collection of tables in the worksheet.
 * [IListObject](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IListObject.html) represent a table in the worksheet.
 
 You can also create a calculated column in the table. For more details, refer [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-formulas#calculated-column).
@@ -29,9 +29,9 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"), ExcelOpenType.Automatic);
 	IWorksheet worksheet = workbook.Worksheets[0];
-	
+
 	//Create for the given data
 	IListObject table = worksheet.ListObjects.Create("Table1", worksheet["A1:C5"]);
 
@@ -78,7 +78,7 @@ A complete working example to create a table in C# is present on [this GitHub pa
 
 ## Accessing a table
 
-The existing tables in the worksheet can be accessed, as follows. 
+The existing tables in the worksheet can be accessed, as follows.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Table/Read%20Table/.NET/Read%20Table/Read%20Table/Program.cs,180" %}
@@ -138,7 +138,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   workbook.SaveAs(fileName)
 End Using
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
 
 A complete working example for accessing a table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Table/Read%20Table/.NET/Read%20Table).
 
@@ -148,7 +148,7 @@ You can apply built-in styles to the table using XlsIO. You can also customize t
 
 The following code snippet illustrates how to apply built-in table style.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Table/Format%20Table/.NET/Format%20Table/Format%20Table/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -206,12 +206,12 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   workbook.SaveAs(fileName)
 End Using
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
 
 A complete working example for formatting a table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Table/Format%20Table/.NET/Format%20Table).
 
 ### Apply Custom Table Style
-You can apply custom table style to the table using XlsIO. You can create custom table style in which you can specified border, font, back ground color and format. You can also customized table in with other table style options such as Header/total row, first/last column, banded rows to make a table easier to read.
+You can apply a custom table style to the table using XlsIO. You can create a custom table style in which you can specify border, font, background color, and format. You can also customize the table with other table style options such as Header/total row, first/last column, and banded rows to make a table easier to read.
 
 The below code example shows how to apply custom table style in XlsIO.
 
@@ -372,7 +372,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Create table
   IListObject table = worksheet.ListObjects.Create("Table1", worksheet["A1:E7"]);
 
-  //Apply custom table style
+  'Apply custom table style
   ITableStyles tableStyles = workbook.TableStyles;
   ITableStyle tableStyle = tableStyles.Add("Table Style 1");
   ITableStyleElements tableStyleElements = tableStyle.TableStyleElements;
@@ -427,7 +427,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   worksheet(2, 3).Number = 162.56
   worksheet(2, 4).Number = 5079.6
   worksheet(2, 5).Number = 1249.2
-  
+
   worksheet(3, 1).Text = "Antonio Moreno"
   worksheet(3, 2).Number = 5079.6
   worksheet(3, 3).Number = 1249.2
@@ -451,42 +451,42 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   worksheet(6, 3).Number = 4547.92
   worksheet(6, 4).Number = 1418
   worksheet(6, 5).Number = 756
-  
+
   worksheet(7, 1).Text = "Ernst Handel"
   worksheet(7, 2).Number = 943.89
   worksheet(7, 3).Number = 349.6
   worksheet(7, 4).Number = 4728
   worksheet(7, 5).Number = 4547.92
 
-'Ceate style for table number format
+'Create style for table number format
   Dim style As IStyle = workbook.Styles.Add("CurrencyFormat")
   style.NumberFormat = "_($* #,##0.00_);_($* (#,##0.00);_($* "" - ""??_);_(@_)"
   worksheet("B2:E8").CellStyleName = "CurrencyFormat"
-  
-  'Create table 
+
+  'Create table
   Dim table As IListObject = worksheet.ListObjects.Create("Table1", worksheet("A1:E7"))
 
-  //Apply custom table style
+  'Apply custom table style
   Dim tableStyles As ITableStyles = workbook.TableStyles
   Dim tableStyle As ITableStyle = tableStyles.Add("Table Style 1")
   Dim tableStyleElements As ITableStyleElements = tableStyle.TableStyleElements
   Dim tableStyleElement As ITableStyleElement = tableStyleElements.Add(ExcelTableStyleElementType.SecondColumnStripe)
   tableStyleElement.BackColorRGB = Color.FromArgb(217, 225, 242)
-  
+
   Dim tableStyleElement1 As ITableStyleElement = tableStyleElements.Add(ExcelTableStyleElementType.FirstColumn)
   tableStyleElement1.FontColorRGB = Color.FromArgb(128, 128, 128)
-  
+
   Dim tableStyleElement2 As ITableStyleElement = tableStyleElements.Add(ExcelTableStyleElementType.HeaderRow)
   tableStyleElement2.FontColor = ExcelKnownColors.White
   tableStyleElement2.BackColorRGB = Color.FromArgb(0, 112, 192)
-  
+
   Dim tableStyleElement3 As ITableStyleElement = tableStyleElements.Add(ExcelTableStyleElementType.TotalRow)
   tableStyleElement3.BackColorRGB = Color.FromArgb(0, 112, 192)
   tableStyleElement3.FontColor = ExcelKnownColors.White
-  
-  table.TableStyleName = tableStyle.Name    
 
-  'Total row 
+  table.TableStyleName = tableStyle.Name
+
+  'Total row
   table.ShowTotals = True
   table.ShowFirstColumn = True
   table.ShowTableStyleColumnStripes = True
@@ -507,7 +507,7 @@ A complete working example to apply custom table style in C# is present on [this
 
 The following screenshot represents generated Excel file with custom table styles in XlsIO.
 
-![custom table style](Working-with-Pivot-Tables_images/Working-with-Tables_img1.jpg)
+![custom table style](Working-with-Excel-Tables_images/Working-with-Tables_img1.jpg)
 
 N> The [TableStyles](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITableStyles.html) API only retrieves custom table styles.
 
@@ -521,7 +521,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"), ExcelOpenType.Automatic);
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	//Creating a table
@@ -579,11 +579,11 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   workbook.SaveAs(fileName)
 End Using
 {% endhighlight %}
-{% endtabs %} 
+{% endtabs %}
 
-A complete working example to insert column in a table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Table/Insert%20Column/.NET/Insert%20Column). 
+A complete working example to insert column in a table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Table/Insert%20Column/.NET/Insert%20Column).
 
-A complete working example to delete column in a table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Table/Remove%20Column/.NET/Remove%20Column). 
+A complete working example to delete column in a table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Table/Remove%20Column/.NET/Remove%20Column).
 
 N> Inserting rows or columns in a worksheet within the table range modifies table structure.
 
@@ -591,7 +591,7 @@ N> Inserting rows or columns in a worksheet within the table range modifies tabl
 
 The "Total Row" is added to a table by accessing the **Table** **Columns**. It is possible to set calculation function to be used to the total row cells by using the [ExcelTotalsCalculation](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelTotalsCalculation.html) enumerator. These cells are updated after they are calculated.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Table/Add%20Total%20Row/.NET/Add%20Total%20Row/Add%20Total%20Row/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -660,11 +660,11 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to insert total row in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Table/Add%20Total%20Row/.NET/Add%20Total%20Row).   
+A complete working example to insert total row in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Table/Add%20Total%20Row/.NET/Add%20Total%20Row).
 
-## Create a table from external connectionÂ 
+## Create a table from external connectionÂ
 
-External connection support allows to work with most recent data right in the workbook. After the data is imported, only refresh operations are performed to retrieve the updated data.
+External connection support allows you to work with the most recent data right in the workbook. After the data is imported, only refresh operations are performed to retrieve the updated data.
 
 The following code snippet explains the method of importing data through an external connection in the workbook.
 
@@ -677,16 +677,16 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   application.DefaultVersion = ExcelVersion.Excel2013;
   IWorkbook workbook = application.Workbooks.Create(1);
   IWorksheet worksheet = workbook.Worksheets[0];
-    
+
   //Database path
   string dataPath = Path.GetFullPath("../../../Data/access-sakila.mdb");
-    
+
   //Connection string for DataSource, here we are using jet.OLEDB.4.0 which supports only if program targets 32 and for core projects the targe bit is by default OS bit .. so make sure change program's platform target to x86 bit (which is 32 bit) through project -> project config -> build -> platform target -> x86
   string ConnectionStringOledb4 = "OLEDB;Provider=Microsoft.JET.OLEDB.4.0;Password=\"\";User ID=Admin;Data Source=" + dataPath;
 
   //Adding a connection to the workbook
   IConnection Connection = workbook.Connections.Add("Connection1", "Sample connection with MsAccess", ConnectionStringOledb4, "", ExcelCommandType.Table);
-    
+
   //Adding a QueryTable to sheet object
   worksheet.ListObjects.AddEx(ExcelListObjectSourceType.SrcQuery, Connection, worksheet.Range["A1"]);
 
@@ -711,7 +711,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Auto-fits the columns
   worksheet.UsedRange.AutofitColumns();
 
-  //Saving the workbook 
+  //Saving the workbook
   workbook.SaveAs("Output.xlsx");
 }
 
@@ -728,7 +728,7 @@ void GetOleDBDataTable(object sender, RefreshConnectionEventArgs e)
   Adapter.Fill(table);
   ole_connection.Dispose();
   Adapter.Dispose();
-  command.Dispose();            
+  command.Dispose();
   e.Data = table;
 }
 {% endhighlight %}
@@ -789,7 +789,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   'Connection string for DataSource
   Dim ConnectionString As String = "OLEDB;Provider=Microsoft.JET.OLEDB.4.0;Password="""";User ID=Admin;Data Source=" + dataPath
 
-  'Adding a connection to the workbook 
+  'Adding a connection to the workbook
   Dim Connection As IConnection = workbook.Connections.Add("Connection1", "Sample   connection with MsAccess", ConnectionString, "", ExcelCommandType.Sql)
 
   'Adding a QueryTable to sheet object
@@ -885,7 +885,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Accessing a connection from the workbook
   IConnection connection = workbook.Connections[0];
 
-  //Refresh all the data by accessing each ListObject 
+  //Refresh all the data by accessing each ListObject
   foreach (IListObject listObject in worksheet.ListObjects)
   {
     listObject.Refresh();
@@ -907,8 +907,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Accessing a connection from the workbook
   IConnection connection = workbook.Connections[0];
 
-  //Refresh all the data by accessing each ListObject 
-  foreach(IListObject listObject in worksheet.ListObjects) 
+  //Refresh all the data by accessing each ListObject
+  foreach(IListObject listObject in worksheet.ListObjects)
   {
     listObject.Refresh(); 
   }
@@ -941,14 +941,14 @@ End Using
 
 ## Adding parameters to query in Excel table
 
-Excel tables can be created by importing data from SQL Server through Excel data connections. The queries used to fetch data from SQL Server can be modified at run-time with the help of its parameters. There are three types of parameters which are applied to the WHERE clause of the SQL query. Let's see the types in detail and how to implement them. 
+Excel tables can be created by importing data from SQL Server through Excel data connections. The queries used to fetch data from SQL Server can be modified at run-time with the help of its parameters. There are three types of parameters which are applied to the WHERE clause of the SQL query. Let's see the types in detail and how to implement them.
 
 N> Excel table must be refreshed to obtain the filtered result with parameters. Table refresh operation is not supported in UWP, C# [Cross-platform] and Xamarin platforms.
 
 ### Set parameter as Prompt
 
 The following code example illustrates how to set parameter through **prompt** event.
- 
+
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
@@ -957,7 +957,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IWorkbook workbook = application.Workbooks.Open("QueryTable.xlsx", ExcelOpenType.Automatic);
   IWorksheet worksheet = workbook.Worksheets[0];
 
-  ///Get query table from list objects.
+  //Get query table from list objects.
   QueryTableImpl queryTable = worksheet.ListObjects[0].QueryTable;
 
   //Set SQL query to the query table Add parameters to the query table.
@@ -978,7 +978,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  IWorkbook workbook = application.Workbooks.Open("QueryTable.xlsx"); 
+  IWorkbook workbook = application.Workbooks.Open("QueryTable.xlsx");
   IWorksheet worksheet = workbook.Worksheets[0];
 
   //Get query table from list objects.
@@ -1046,7 +1046,7 @@ End Sub
 ### Set parameter as Constant
 
 The following code example illustrates how to set parameter through **constant** type.
- 
+
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
@@ -1055,7 +1055,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IWorkbook workbook = application.Workbooks.Open("QueryTable.xlsx", ExcelOpenType.Automatic);
   IWorksheet worksheet = workbook.Worksheets[0];
 
-  ///Get query table from list objects.
+  //Get query table from list objects.
   QueryTableImpl queryTable = worksheet.ListObjects[0].QueryTable;
 
   //Set SQL query to the query table Add parameters to the query table.
@@ -1067,7 +1067,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Set constant to the parameter value.
   parameter.SetParam(ExcelParameterType.Constant, 30);
 
-  //Saving the workbook 
+  //Saving the workbook
   workbook.SaveAs("ConstantParameter.xlsx");
 }
 {% endhighlight %}
@@ -1076,7 +1076,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  IWorkbook workbook = application.Workbooks.Open("QueryTable.xlsx"); 
+  IWorkbook workbook = application.Workbooks.Open("QueryTable.xlsx");
   IWorksheet worksheet = workbook.Worksheets[0];
 
   //Get query table from list objects.
@@ -1129,7 +1129,7 @@ End Using
 ### Set parameter as Range
 
 The following code example illustrates how to set parameter type to a specific **range**.
- 
+
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
@@ -1150,7 +1150,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Set range to the parameter value.
   parameter.SetParam(ExcelParameterType.Range, worksheet.Range["H1"]);
 
-  //Saving the workbook 
+  //Saving the workbook
   workbook.SaveAs("RangeParameter.xlsx");
 }
 {% endhighlight %}
@@ -1159,7 +1159,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  IWorkbook workbook = application.Workbooks.Open("QueryTable.xlsx"); 
+  IWorkbook workbook = application.Workbooks.Open("QueryTable.xlsx");
   IWorksheet worksheet = workbook.Worksheets[0];
 
   //Get query table from list objects.
