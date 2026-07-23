@@ -675,7 +675,7 @@ PictureWatermark picWatermark = new PictureWatermark();
 picWatermark.Scaling = 120f;
 picWatermark.Washout = true;
 doc.Watermark = picWatermark;
-picWatermark.Picture = Image.FromFile(ImagesPath + "Water lilies.jpg");
+picWatermark.Picture = Image.FromFile("Water lilies.jpg");
 //Saves the document.
 MemoryStream stream = new MemoryStream();
 doc.Save(stream, FormatType.Docx);
@@ -692,7 +692,7 @@ PictureWatermark picWatermark = new PictureWatermark();
 picWatermark.Scaling = 120f;
 picWatermark.Washout = true;
 doc.Watermark = picWatermark;
-picWatermark.Picture = Image.FromFile(ImagesPath + "Water lilies.jpg");
+picWatermark.Picture = Image.FromFile("Water lilies.jpg");
 //Saves the document.
 doc.Save("Sample.docx", FormatType.Docx);
 //Closes the document.
@@ -708,7 +708,7 @@ Dim picWatermark As PictureWatermark = New PictureWatermark()
 picWatermark.Scaling = 120f
 picWatermark.Washout = True
 doc.Watermark = picWatermark
-picWatermark.Picture = Image.FromFile(ImagesPath & "Water lilies.jpg")
+picWatermark.Picture = Image.FromFile("Water lilies.jpg")
 ‘Saves the document.
 doc.Save("Sample.docx", FormatType.Docx)
 ‘Closes the document.
