@@ -5,15 +5,15 @@
 
 Step 1. Open JetBrains Rider and create a new .NET MAUI Blazor Hybrid App project.
 * Launch JetBrains Rider.
-* Click new solution on the welcome screen.
+* Click **New Solution** on the welcome screen.
 
 ![Launch JetBrains Rider](JetBrains_Images/Launch-JetBrains-Rider.png)
 
-* In the new Solution dialog, select Project Type as Web.
+* In the **New Solution** dialog, select Project Type as **MAUI** (or **Mobile** / **Cross-platform**, depending on your Rider version).
 * Enter a project name and specify the location.
 * Choose template as **.NET MAUI Blazor Hybrid App**.
 * Select the target framework (e.g., .NET 8.0, .NET 9.0).
-* Click create.
+* Click **Create**.
 
 ![Creating a new .NET MAUI Blazor Hybrid APP](JetBrains_Images/Blazor-Maui-App.png)
 
@@ -28,6 +28,36 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 * Click the Install button to complete the installation.
 
 ![Install the NuGet Package](JetBrains_Images/Install-NET-BlazorMaui-Package.png)
+
+Step 3: Register the Syncfusion license key. A trial watermark is added to every page of the generated PDF until a valid key is registered. Include the license key in **MauiProgram.cs** before initializing any Syncfusion component:
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Licensing;
+
+public static class MauiProgram
+{
+    public static MauiApp CreateMauiApp()
+    {
+        var builder = MauiApp.CreateBuilder();
+        // Register the Syncfusion license
+        SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+
+        builder.UseMauiApp<App>().ConfigureFonts(fonts =>
+        {
+            fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+        });
+
+        builder.Services.AddMauiBlazorWebView();
+        return builder.Build();
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+Replace `"YOUR LICENSE KEY"` with the key from your Syncfusion account. If you do not have one, request a free 30-day trial at [https://www.syncfusion.com/sales/communitylicense](https://www.syncfusion.com/sales/communitylicense). For security, store the key in user secrets or in a platform-specific configuration rather than hardcoding it. Refer to the [Syncfusion License documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion license key in your application.
 
 Step 4: Next, include the following namespaces in the ``_Imports.razor`` file.
 
@@ -53,7 +83,7 @@ Step 5: Create a button in the ``Weather.razor`` using the following code.
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Define the ``@ExportToPdf`` click function on ``Weather.razor`` file.
+Step 6: Define the ``@ExportToPdf`` click function on the ``Weather.razor`` file.
 
 The [PdfDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created and add a [PdfPage](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfPage.html) to it. The [PdfTextElement](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data source.
 
@@ -116,4 +146,4 @@ Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</k
 
 Step 8: Run the project.
 
-Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.
+Click the **Run** button (green arrow) in the toolbar or press <kbd>Shift</kbd>+<kbd>F10</kbd> to run the app.

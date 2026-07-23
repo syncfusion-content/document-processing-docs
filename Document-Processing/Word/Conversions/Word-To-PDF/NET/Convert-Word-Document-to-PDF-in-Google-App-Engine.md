@@ -8,9 +8,18 @@ documentation: UG
 
 # Convert Word to PDF in Google App Engine
 
-Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) that allows you to create, read, edit, and **convert Word documents** programmatically, without the need for **Microsoft Word** or interop dependencies. Using this library, you can **convert Word document to PDF in Google App Engine**.
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) that allows you to create, read, edit, and **convert Word documents** programmatically, without the need for **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to PDF in Google App Engine**.
+
+## Prerequisites
+
+Before you begin, make sure you have the following:
+
+* A [Google Cloud Platform (GCP)](https://cloud.google.com/cloud-console?nodebwarning=true) account with billing enabled and access to the App Engine service.
+* [**.NET SDK 8.0** or later](https://dotnet.microsoft.com/en-us/download/dotnet) installed locally (the sample targets `net8.0`).
 
 ## Set up App Engine
+
+This section prepares the Google Cloud Shell environment used to build and deploy the application.
 
 Step 1: Open the **Google Cloud Console** and click the **Activate Cloud Shell** button.
 ![Activate Cloud Shell](GCP_Images/GAE_Images/Activate-Cloud-Shell-WordtoPDF.png)
@@ -33,18 +42,20 @@ gcloud auth list
 Step 4: Click the **Authorize** button.
 ![Click Authorize button](GCP_Images/GAE_Images/Authorize-WordtoPDF.png)
 
-## Create an application for App Engine
+## Create the ASP.NET Core Web application for App Engine
 
-Step 1: Open Visual Studio and select the ASP.NET Core Web app (Model-View-Controller) template.
+This section creates the local ASP.NET Core project that will later be deployed to App Engine.
+
+Step 1: Open Visual Studio and select the **ASP.NET Core Web App (Model-View-Controller)** template.
 ![Create ASP.NET Core Web application in Visual Studio](ASP-NET-Core_images/CreateProjectforConversion.png)
 
-Step 2: Configure your new project according to your requirements.
-![Create ASP.NET Core Web application in Visual Studio](GCP_Images/GAE_Images/Configuration_WordtoPDF.png)
+Step 2: Configure the project name (for example, **Convert-Word-document-to-PDF**), choose a location and click **Next**.
+![Configure project name and framework](GCP_Images/GAE_Images/Configuration_WordtoPDF.png)
 
-Step 3: Click the **Create** button.
+Step 3: Select **.NET 8.0** framework and Click the **Create** button.
 ![Create ASP.NET Core Web application in Visual Studio](GCP_Images/GAE_Images/Additional-Information-WordtoPDF.png)
 
-Step 4: Install the following **Nuget packages** in your application from [Nuget.org](https://www.nuget.org/).
+Step 4: Install the following **NuGet packages** in your application from [Nuget.org](https://www.nuget.org/).
 
 * [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) 
 * [SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)
@@ -52,7 +63,7 @@ Step 4: Install the following **Nuget packages** in your application from [Nuget
 
  ![Install Syncfusion.DocIORenderer.Net.Core Nuget Package](Azure-Images/App-Service-Linux/Syncfusion_Nuget_Package_WordtoPDF.png)
  ![Install SkiaSharp.NativeAssets.Linux Nuget Package](Azure-Images/App-Service-Linux/SkiaSharp_Nuget-Package_WordtoPDF.png)
- ![Install HarfBuzzSharp.NativeAssets.Linux Nuget Package](Azure-Images/App-Service-Linux/HarfBuzz-Nuget-WordtoImage.png)
+ ![Install HarfBuzzSharp.NativeAssets.Linux Nuget Package](Azure-Images/App-Service-Linux/HarfBuzz-Nuget-WordtoPDF.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
@@ -114,37 +125,37 @@ using (FileStream docStream = new FileStream(Path.GetFullPath("Data/Template.doc
 {% endhighlight %}
 {% endtabs %}
 
-## Move application to App Engine
+## Move the application to App Engine
 
 Step 1: Open the **Cloud Shell editor**.
 ![Cloud Shell Editor](GCP_Images/GAE_Images/Cloud-Shell-Editor-WordtoPDF.png)
 
 Step 2: Drag and drop the sample from your local machine to **Workspace**.
-![Open the Home Workspace](GCP_Images/GAE_Images/Terminal-WordtoPDF.png)
+![Drag and drop the sample into the Workspace](GCP_Images/GAE_Images/Terminal-WordtoPDF.png)
 
-N> If you have your sample application in your local machine, drag and drop it into the Workspace. If you created the sample using the Cloud Shell terminal command, it will be available in the Workspace.
+N> If you have your sample application on your local machine, drag and drop it into the Workspace. If you created the sample using the Cloud Shell terminal command, it will be available in the Workspace.
 
 Step 3: Open the Cloud Shell Terminal and run the following **command** to view the files and directories within your **current Workspace**.
 
 {% tabs %}
 {% highlight bash tabtitle="CLI" %}
 
-$ ls
+ls
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 4: Run the following **command** to navigate which sample you want run.
+Step 4: Run the following **command** to navigate to the sample you want to run.
 
 {% tabs %}
 {% highlight bash tabtitle="CLI" %}
 
-$ cd Convert-Word-Document-to-PDF
+cd Convert-Word-Document-to-PDF
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: To ensure that the sample is working correctly, please run the application using the following command.
+Step 5: To verify the sample works locally before deploying, run the application using the following command.
 
 {% tabs %}
 {% highlight bash tabtitle="CLI" %}
@@ -154,7 +165,7 @@ dotnet run --urls=http://localhost:8080
 {% endhighlight %}
 {% endtabs %}
 
-![Run the application using command](GCP_Images/GAE_Images/Run-Application-Command-WordtoPDF.png)
+![Run the application locally using the command](GCP_Images/GAE_Images/Run-Application-Command-WordtoPDF.png)
 
 Step 6: Verify that the application is running properly by accessing the **Web View** -> **Preview on port 8080**.
 ![Verify the application is running properly](GCP_Images/GAE_Images/Web-View-WordtoPDF.png)
@@ -162,7 +173,7 @@ Step 6: Verify that the application is running properly by accessing the **Web V
 Step 7: Now you can see the sample output on the preview page.
 ![Sample output in browser](GCP_Images/GAE_Images/Ensure-sample-WordtoPDF.png)
 
-Step 8: Close the preview page and return to the terminal then press **Ctrl+C** for which will typically stop the process.
+Step 8: Close the preview page, return to the terminal, and press **Ctrl+C** to stop the process.
 
 ## Publish the application
 
@@ -178,7 +189,7 @@ dotnet publish -c Release
 
 ![Publish the application](GCP_Images/GAE_Images/Publish_WordtoPDF.png)
 
-Step 2: Run the following command in **Cloud Shell Terminal** to navigate to the publish folder.
+Step 2: Run the following command in **Cloud Shell Terminal** to navigate to the publish output folder.
 
 {% tabs %}
 {% highlight bash tabtitle="CLI" %}
@@ -188,14 +199,16 @@ cd bin/Release/net8.0/publish/
 {% endhighlight %}
 {% endtabs %}
 
-## Configure app.yaml and docker file
+## Configure app.yaml and the Dockerfile
 
-Step 1: Add the app.yaml file to the publish folder with the following contents.
+This section adds the deployment configuration files to the publish folder. The `app.yaml` declares the **flex** environment with a **custom** runtime, which is required for .NET 8 Linux containers.
+
+Step 1: Add the `app.yaml` file to the publish folder with the following contents.
 
 {% tabs %}
 {% highlight bash tabtitle="CLI" %}
 
-$ cat <<EOT >> app.yaml
+cat <<EOT >> app.yaml
 env: flex
 runtime: custom   
 EOT
@@ -203,14 +216,14 @@ EOT
 {% endhighlight %}
 {% endtabs %}
 
-![Add required files to publish folder](GCP_Images/GAE_Images/Docker-File-WordtoPDF.png)
+![Add the app.yaml file to the publish folder](GCP_Images/GAE_Images/Docker-File-WordtoPDF.png)
 
-Step 2: Add the Docker file to the publish folder with the following contents.
+Step 2: Add the `Dockerfile` to the publish folder with the following contents. Verify the assembly name in the `ENTRYPOINT` matches your published `.dll` (the project name from Step 2 of *Create the ASP.NET Core Web application*).
 
 {% tabs %}
 {% highlight bash tabtitle="CLI" %}
 
-$ cat <<EOT >> Dockerfile
+cat <<EOT >> Dockerfile
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 RUN apt-get update -y && apt-get install libfontconfig -y
 ADD / /app
@@ -223,31 +236,31 @@ EOT
 {% endhighlight %}
 {% endtabs %}
 
-![Add required files to publish folder](GCP_Images/GAE_Images/Deploy-to-Cloud-WordtoPDF.png)
+![Add the Dockerfile to the publish folder](GCP_Images/GAE_Images/Deploy-to-Cloud-WordtoPDF.png)
 
-Step 3: You can ensure **Docker** and **app.yaml** files are added in **Workspace**.
-![Add required files to publish folder](GCP_Images/GAE_Images/Libfontconfig-WordtoPDF.png)
+Step 3: Verify that the `Dockerfile` and `app.yaml` files are present in the **Workspace**.
+![Verify Dockerfile and app.yaml in the Workspace](GCP_Images/GAE_Images/Libfontconfig-WordtoPDF.png)
 
 ## Deploy to App Engine
 
-Step 1: To deploy the application to the App Engine, run the following command in Cloud Shell Terminal. Afterwards, retrieve the **URL** from the Cloud Shell Terminal.
+Step 1: To deploy the application to App Engine, run the following command in the Cloud Shell Terminal. Afterwards, retrieve the **URL** from the Cloud Shell Terminal.
 
 {% tabs %}
 {% highlight bash tabtitle="CLI" %}
 
-$ gcloud app deploy --version v0
+gcloud app deploy --version v0
 
 {% endhighlight %}
 {% endtabs %}
 
-![Add required files to publish folder](GCP_Images/GAE_Images/Deploy-WordtoPDF.png)
+![Deploy the application to App Engine](GCP_Images/GAE_Images/Deploy-WordtoPDF.png)
 
 Step 2: Open the **URL** to access the application, which has been successfully deployed.
-![Add required files to publish folder](GCP_Images/GAE_Images/Browser-WordtoPDF.png)
+![Application successfully deployed and running in the browser](GCP_Images/GAE_Images/Browser-WordtoPDF.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/GCP/Google-App-Engine).
 
-By executing the program, you will get the **PDF document** as follows. The output will be saved in bin folder.
+By executing the program, the **PDF document** is generated and downloaded by the browser as `Sample.pdf`.
 
 ![Word to PDF in Google App Engine](WordToPDF_images/OutputImage.png)
 

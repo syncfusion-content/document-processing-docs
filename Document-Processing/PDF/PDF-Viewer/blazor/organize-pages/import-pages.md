@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Import pages in Organize Pages in Blazor PDF Viewer | Syncfusion
-description: How to import pages from another PDF into the current document using the Organize Pages UI in the Syncfusion Blazor PDF Viewer.
+description: How to import pages from another PDF into the current document using the Organize Pages UI in the Blazor PDF Viewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -29,11 +29,11 @@ This guide explains how to import pages from another PDF into the current docume
 
 2. Start import
 
-	- Click **Import Document** button and choose a valid PDF file from your local file system.
+	- Click the **Import Document** button and choose a valid PDF file from your local file system.
 
 3. Import pages
 
-	- The selected PDF pages will be imported and added to the document. If a page is selected in the current document, the imported pages are inserted after the selected page; otherwise, they are appended at the end of the document.
+	- The selected PDF pages are imported and added to the document. If a page is selected in the current document, the imported pages are inserted after the selected page; otherwise, they are appended at the end of the document.
 
 	![Import Document button](./images/Import_Pages.gif)
 
@@ -54,6 +54,7 @@ You can also import pages from another PDF programmatically using the `InsertPag
 {% tabs %}
 {% highlight razor %}
 @using Syncfusion.Blazor.Buttons
+@using System.IO
 
 <SfButton OnClick="ImportMethod">Import</SfButton>
 <SfPdfViewer2 @ref="Viewer" DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
@@ -62,7 +63,7 @@ You can also import pages from another PDF programmatically using the `InsertPag
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2? Viewer;
+    private SfPdfViewer2? Viewer;
 
     private async Task ImportMethod() {
         byte[] byteArray = System.IO.File.ReadAllBytes("wwwroot/pdf-succinctly.pdf");
@@ -77,6 +78,7 @@ You can also import pages from another PDF programmatically using the `InsertPag
 {% tabs %}
 {% highlight razor %}
 @using Syncfusion.Blazor.Buttons
+@using System.IO
 
 <SfButton OnClick="ImportMethodStream">Import Stream</SfButton>
 <SfPdfViewer2 @ref="Viewer" DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
@@ -85,11 +87,11 @@ You can also import pages from another PDF programmatically using the `InsertPag
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2? Viewer;
+    private SfPdfViewer2? Viewer;
 
     private async Task ImportMethodStream() {
         byte[] byteArray = System.IO.File.ReadAllBytes("wwwroot/pdf-succinctly.pdf");
-        MemoryStream stream = new MemoryStream(byteArray);
+        using var stream = new MemoryStream(byteArray);
         await Viewer?.InsertPagesAsync(2, stream, null);
     }
 }
@@ -103,7 +105,7 @@ You can also import pages from another PDF programmatically using the `InsertPag
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Page%20Organizer/Organize-API-Support/Components/Pages/Home.razor)
 
-## Related topics
+## See also
 
 - [Organize pages toolbar customization](./toolbar)
 - [Organize pages event reference](./events)

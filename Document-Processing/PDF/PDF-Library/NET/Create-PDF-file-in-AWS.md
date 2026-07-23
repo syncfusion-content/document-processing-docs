@@ -13,23 +13,52 @@ The [.NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-libr
 
 N> If this is your first time working with Amazon Web Services (AWS), please refer to the dedicated AWS resources. This section explains how to open and save a PDF document in C# using the .NET Core PDF library in AWS. 
 
-## Prerequisites 
+## Prerequisites
 
-* An active **Amazon Web Services (AWS) account** is required. If you don’t have one, please [create an account](https://aws.amazon.com/) before starting.
+* An active **Amazon Web Services (AWS) account** is required. If you don't have one, please [create an account](https://aws.amazon.com/) before starting.
+* Download and install the **AWS Toolkit** for Visual Studio from this [link](https://aws.amazon.com/visualstudio/). You can install the toolkit from the **Extensions > Manage Extensions** option in Visual Studio.
+* Visual Studio 2022 with the **AWS development** workload.
+* .NET 8.0 SDK or later.
+* An active Syncfusion license. If you do not have one, request a free 30-day trial at [https://www.syncfusion.com/sales/communitylicense](https://www.syncfusion.com/sales/communitylicense).
 
-* Download and install the **AWS Toolkit** for Visual Studio, you can download the AWS toolkit from this [link](https://aws.amazon.com/visualstudio/). The Toolkit can be installed from Tools or Extension and updates options in Visual Studio.
 
-## Amazon Web Services (AWS)
+
+## Supported AWS services
+
+The following AWS services are supported for creating PDF documents using the Syncfusion .NET Core PDF library. For step-by-step instructions, refer to the linked documentation.
 
 <table>
 <thead>
 <tr>
 <th>
 Amazon Web Services (AWS)<br/></th><th>
-NuGet package name<br/></th></tr></thead>
+NuGet package name<br/></th><th>
+Documentation<br/></th></tr></thead>
 <tr>
 <td>
 AWS Lambda <br/></td><td>
-{{'[Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/)' | markdownify}}<br/> 
-</td></tr>
+[Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/)<br/> 
+</td>
+<td>
+[Create PDF document in AWS Lambda](Create-PDF-file-in-AWS-Lambda.md)<br/>
+</td>
+</tr>
+<tr>
+<td>
+AWS Elastic Beanstalk <br/></td><td>
+[Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/)<br/> 
+</td>
+<td>
+[Create PDF document in AWS Elastic Beanstalk](Create-PDF-file-in-AWS-Elastic-Beanstalk.md)<br/>
+</td>
+</tr>
 </table>
+
+## Next steps
+
+* [Create a PDF in AWS Lambda](Create-PDF-file-in-AWS-Lambda.md)
+* [Create a PDF in AWS Elastic Beanstalk](Create-PDF-file-in-AWS-Elastic-Beanstalk.md)
+* [Create a PDF in ASP.NET Core MVC](Create-PDF-file-in-ASP-NET-Core.md)
+* [Create a PDF in Docker](Create-PDF-document-in-Docker.md)
+* [Open and read an existing PDF document](Open-PDF-file.md)
+* [Save the generated PDF to a file or stream](Save-PDF-file.md)

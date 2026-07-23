@@ -28,7 +28,7 @@ If using **WebAssembly** or **Auto** interactive render modes, install the requi
 
 dotnet workload install wasm-tools
 
-{% endhighlight %} 
+{% endhighlight %}
 {% endtabs %}
 
 The `wasm-tools` workload is installed for the active .NET SDK. When targeting a different .NET SDK version, ensure that the corresponding version-specific workload is installed.
@@ -39,7 +39,7 @@ Use Visual Studio 2022 to create a Blazor Web App via [Microsoft Templates](http
 
 ## Install Blazor SfPdfViewer and Themes NuGet Packages in the App
 
-To add **Syncfusion Blazor SfPdfViewer** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+To add Blazor **SfPdfViewer** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
 If you utilize `WebAssembly` or `Auto` render modes in the Blazor Web App, you need to install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components NuGet packages within the client project.
 
@@ -54,8 +54,9 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> For **WebAssembly** or **Auto** render modes, install packages in the **client project**.
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> uses [SkiaSharp.Views.Blazor version 3.119.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1). Ensure your project references this version.
+N>
+* For **WebAssembly** or **Auto** render modes, install packages in the **client project**.
+* Syncfusion<sup style="font-size:70%">&reg;</sup> uses [SkiaSharp.Views.Blazor version 3.119.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1). Ensure your project references this version.
 
 {% endtabcontent %}
 
@@ -74,7 +75,7 @@ If using **WebAssembly** or **Auto** interactive render modes, install the requi
 
 dotnet workload install wasm-tools
 
-{% endhighlight %} 
+{% endhighlight %}
 {% endtabs %}
 
 The `wasm-tools` workload is installed for the active .NET SDK. When targeting a different .NET SDK version, ensure that the corresponding version-specific workload is installed.
@@ -118,9 +119,10 @@ dotnet restore
 
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet packages list with component details.
-N> For **WebAssembly** or **Auto** render modes, install packages in the **client project**.
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> uses [SkiaSharp.Views.Blazor version 3.119.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1). Ensure your project references this version.
+N>
+* Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet packages list with component details.
+* For **WebAssembly** or **Auto** render modes, install packages in the **client project**.
+* Syncfusion<sup style="font-size:70%">&reg;</sup> uses [SkiaSharp.Views.Blazor version 3.119.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1). Ensure your project references this version.
 
 {% endtabcontent %}
 
@@ -189,8 +191,9 @@ dotnet restore
 
 {% endtabs %}
 
-N> For **WebAssembly** or **Auto** render modes, install packages in the **client project**.
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> uses [SkiaSharp.Views.Blazor version 3.119.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1). Ensure your project references this version.
+N>
+* For **WebAssembly** or **Auto** render modes, install packages in the **client project**.
+* Syncfusion<sup style="font-size:70%">&reg;</sup> uses [SkiaSharp.Views.Blazor version 3.119.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1). Ensure your project references this version.
 
 {% endtabcontent %}
 
@@ -282,8 +285,9 @@ Add the required script at the end of the `<body>` section in the `~/Components/
 {% endhighlight %}
 {% endtabs %}
 
-N> For **WebAssembly** or **Auto** render modes, the `_content/` static assets are exposed by the client project. Add the `<link>` and `<script>` tags to the client project's `~/Components/App.razor` file, not the server project's.
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to explore supported ways (such as static assets, CDN, and CRG) to apply themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
+N>
+* For **WebAssembly** or **Auto** render modes, the `_content/` static assets are exposed by the client project. Add the `<link>` and `<script>` tags to the client project's `~/Components/App.razor` file, not the server project's.
+* Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to explore supported ways (such as static assets, CDN, and CRG) to apply themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
 ## Add Blazor PDF Viewer component
 
@@ -306,10 +310,11 @@ The Blazor PDF Viewer (Next-Gen) component is added in the `~/Components/Pages/H
 
 ![Blazor Web App SfPdfViewer rendering in browser](gettingstarted-images/blazor-pdfviewer.png)
 
-N> The `Height="100%"` and `Width="100%"` values are relative to the parent container. Ensure the parent element (or the page body) has an explicit height, for example `style="height:100vh"`, otherwise the PDF Viewer may not render.
-N> The [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) property accepts an absolute URL (HTTP/HTTPS), a path relative to the app's `wwwroot` folder (for example, `"pdf/sample.pdf"`), or a base64-encoded PDF string.
-N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
-N> If the `DocumentPath` property is not set, the PDF Viewer renders without loading a PDF. Use the **Open** toolbar option to browse and open a PDF.
+N>
+* The `Height="100%"` and `Width="100%"` values are relative to the parent container. Ensure the parent element (or the page body) has an explicit height, for example `style="height:100vh"`, otherwise the PDF Viewer may not render.
+* The [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) property accepts an absolute URL (HTTP/HTTPS), a path relative to the app's `wwwroot` folder (for example, `"pdf/sample.pdf"`), or a base64-encoded PDF string.
+* If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
+* If the `DocumentPath` property is not set, the PDF Viewer renders without loading a PDF. Use the **Open** toolbar option to browse and open a PDF.
 
 ## Next steps
 

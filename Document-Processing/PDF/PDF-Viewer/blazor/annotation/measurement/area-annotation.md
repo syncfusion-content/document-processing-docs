@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add Area Annotations in Blazor PDF Viewer | Syncfusion
-description: Learn how to enable, draw, customize, and manage Area annotations in the Syncfusion Blazor SfPdfViewer.
+description: Learn how to enable, draw, customize, and manage Area annotations in the Blazor SfPdfViewer Component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -163,13 +163,13 @@ Drag any vertex handle to adjust the shape's points.
 
 Select the Area annotation first — the annotation toolbar appears below the main toolbar. Use it to change:
 
-- **Fill Color** — pick a new color with the Edit Color tool.
+- **Fill Color**: pick a new color with the Edit Color tool.
   ![Editing Calibrate FillColor in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-fillcolor.png)
-- **Stroke Color** — change the border color with the Edit Stroke Color tool.
+- **Stroke Color**: change the border color with the Edit Stroke Color tool.
   ![Editing Calibrate StrokeColor in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-stroke-color.png)
-- **Thickness** — adjust the border width with the Edit Thickness tool.
+- **Thickness**: adjust the border width with the Edit Thickness tool.
   ![Editing Calibrate Thickness in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-thickness.png)
-- **Opacity** — change transparency with the Edit Opacity tool.
+- **Opacity**: change transparency with the Edit Opacity tool.
   ![Editing Calibrate Opacity in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-opacity.png)
 
 #### Edit Area Annotation Programmatically
@@ -352,7 +352,7 @@ Area measurements can be exported and imported along with other annotations in *
 
 For the full export/import workflow and additional formats, see [**Export and Import Annotations**](../import-export-annotation).
 
-## See Also
+## See also
 
 - [Annotation Events](../events)
 - [Export and Import Annotations](../import-export-annotation)

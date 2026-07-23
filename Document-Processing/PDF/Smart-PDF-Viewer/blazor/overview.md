@@ -8,7 +8,7 @@ documentation: ug
 ---
 # Overview of Blazor Smart PDF Viewer
 
-The **[Blazor Smart PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-smart-pdf-viewer)** is an AI-powered component in Syncfusion’s Blazor suite that enhances document interaction. Key capabilities include [**Document Summarization with Q&A**](./document-summarizer), [**Smart Redaction**](./smart-redaction), and [**Smart Fill**](./smart-fill), enabling efficient and secure document workflows.
+The **[Blazor Smart PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-smart-pdf-viewer)** is an AI-powered component in Syncfusion's Blazor suite. It enhances document interaction with built-in AI capabilities. Key capabilities include [**Document Summarization with Q&A**](./document-summarize), [**Smart Redaction**](./smart-redactio), and [**Smart Fill**](./smart-fil). These features enable efficient and secure document workflows.
 
 ## Document Summarization
 
@@ -46,12 +46,15 @@ The **[Blazor Smart PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor
 ## Integration
 
 * Powered by AI services such as [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI), [Syncfusion.AI.PdfViewer](https://www.nuget.org/packages/Syncfusion.AI.PdfViewer), and [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal).
-* Features are optional and can be enabled individually based on application needs.
-* Compatible with Blazor Server applications.
+* Features are optional and can be enabled independently as needed.
+* Compatible with Blazor Server, MAUI Blazor, WPF Blazor, and WinForms Blazor applications.
 
 ## See also
 
 * [Getting Started with Blazor Smart PDF Viewer in Web App Server](./getting-started/web-app)
+* [Getting Started with Blazor Smart PDF Viewer in MAUI Blazor App](./getting-started/maui-blazor-app)
+* [Getting Started with Blazor Smart PDF Viewer in WPF Blazor App](./getting-started/wpf-blazor-app)
+* [Getting Started with Blazor Smart PDF Viewer in WinForms Blazor App](./getting-started/winforms-blazor-app)
 * [Document Summarizer in Blazor Smart PDF Viewer](./document-summarizer)
 * [Smart Redaction in Blazor Smart PDF Viewer](./smart-redaction)
 * [Smart Fill in Blazor Smart PDF Viewer](./smart-fill)

@@ -12,9 +12,7 @@ domainurl: ##DomainURL##
 
 ## Overview
 
-N> Remix's framework features were merged into React Router v7 and later. This guide targets React Router v7's framework-mode and shows a client-only (standalone) integration of the React PDF Viewer. Keep the viewer client-only to avoid SSR/runtime errors.
-
-## Quickstart
+N> Remix's framework features were merged into React Router v7. This guide targets React Router v7's framework mode and shows a client-only (standalone) integration of the React PDF Viewer. Keep the viewer client-only to avoid SSR/runtime errors.
 
 ## Prerequisites
 
@@ -27,15 +25,15 @@ N> Remix's framework features were merged into React Router v7 and later. This g
 
 Different starters create different folder layouts. Pick the mapping that matches your project and follow the file locations shown below.
 
-- create-react-router (framework-mode — `app/` tree)
-  - Global CSS: `app/app.css` (imported by `root.ts`)
-  - Component: `app/components/PdfViewerClient.ts`
-  - Route: `app/routes/home.ts` or `app/routes/index.ts`
+- create-react-router (framework mode — `app/` tree)
+  - Global CSS: `app/app.css` (imported by `root.tsx`)
+  - Component: `app/components/PdfViewerClient.tsx`
+  - Route: `app/routes/home.tsx` or `app/routes/index.tsx`
 
 - Vite / plain React (traditional — `src/` tree)
-  - Global CSS: `src/index.css` (imported from `src/main.ts`)
-  - Component: `src/components/PdfViewerClient.ts`
-  - Route wrapper: `src/App.ts` + `BrowserRouter` in `src/main.ts`
+  - Global CSS: `src/index.css` (imported from `src/main.tsx`)
+  - Component: `src/components/PdfViewerClient.tsx`
+  - Route wrapper: `src/App.tsx` + `BrowserRouter` in `src/main.tsx`
 
 Use the file paths that match your project layout when following the steps below.
 
@@ -91,11 +89,11 @@ Place the Syncfusion CSS imports in your project's global stylesheet. Choose the
 
 create-react-router (`app/` tree)
 
- - File: `app/app.css` (or similar global CSS imported by `root.ts`)
+ - File: `app/app.css` (or similar global CSS imported by `app/root.tsx`)
 
 Vite / plain React (`src/` tree)
 
- - File: `src/index.css` (imported from `src/main.ts`)
+ - File: `src/index.css` (imported from `src/main.tsx`)
 
 Example CSS (same for both):
 
@@ -112,9 +110,14 @@ Example CSS (same for both):
 
 Then import the stylesheet according to your starter:
 
-create-react-router (`app/root.ts` or `app/root.ts`): ensure the global CSS is imported or linked from `root` following the starter conventions.
+create-react-router (`app/root.tsx`):
 
-Vite / plain React (`src/main.ts`):
+```ts
+// app/root.tsx
+import './app.css';
+```
+
+Vite / plain React (`src/main.tsx`):
 
 ```js
 import React from 'react';
@@ -132,22 +135,22 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
 ## Client-only rendering
 
-The PDF Viewer depends on browser APIs and WebAssembly; avoid server-side rendering it. Render it only after the component mounts. Create a client-only component in the folder that matches your project layout.
+The PDF Viewer depends on browser APIs and WebAssembly; avoid server-side rendering it by creating a client-only component and mounting it after first render.
 
 create-react-router (`app/` tree)
 
- - `app/components/PdfViewerClient.ts`
+ - `app/components/PdfViewerClient.tsx`
 
 Vite / plain React (`src/` tree)
 
- - `src/components/PdfViewerClient.ts`
+ - `src/components/PdfViewerClient.tsx`
 
 Example component (works in either location):
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
 {% raw %}
-// components/PdfViewerClient.ts
+// components/PdfViewerClient.tsx
 import React, { useEffect, useState } from 'react';
 import {
   PdfViewerComponent,
@@ -169,9 +172,14 @@ export default function PdfViewerClient() {
       <PdfViewerComponent
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        // Path to the runtime assets copied to public/ej2-pdfviewer-lib.
         resourceUrl={`${window.location.origin}/ej2-pdfviewer-lib`}
         style={{ height: '640px' }}
       >
+        {/* Toolbar: top toolbar (open, save, print, etc.).
+            Magnification: zoom in/out and page-fit controls.
+            Navigation: page navigation, scroll, and jump-to-page.
+            Annotation: add, edit, and delete PDF annotations. */}
         <Inject services={[Toolbar, Magnification, Navigation, Annotation]} />
       </PdfViewerComponent>
     </div>
@@ -183,7 +191,7 @@ export default function PdfViewerClient() {
 
 Routing / usage examples:
 
-create-react-router (`app/routes/home.ts` or `app/routes/index.ts`):
+create-react-router (`app/routes/home.tsx` or `app/routes/index.tsx`):
 
 ```ts
 import PdfViewerClient from '../components/PdfViewerClient';
@@ -193,7 +201,7 @@ export default function Home() {
 }
 ```
 
-Vite / plain React (`src/App.ts`):
+Vite / plain React (`src/App.tsx`):
 
 ```ts
 import { Routes, Route } from 'react-router-dom';

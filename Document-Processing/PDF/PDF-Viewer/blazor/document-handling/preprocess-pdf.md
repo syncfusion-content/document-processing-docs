@@ -2,7 +2,7 @@
 layout: post
 title: Preprocess PDF Document in Blazor PDF Viewer | Syncfusion
 description: Learn how to preprocess PDF documents using Syncfusion PDF Library before displaying them in the Blazor PDF Viewer.
-control: PDF Viewer
+control: SfPdfViewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
@@ -14,11 +14,11 @@ This section explains why preprocessing is useful, what operations you can perfo
 
 ## Why Preprocessing Is Needed
 Preprocessing a PDF before sending it to the viewer helps you:
-- **Reduce file size** — Compresses content to improve load time.
-- **Merge multiple documents** — Combine several PDFs into a single file.
-- **Extract only required pages** — Drop unused pages for faster loading.
-- **Flatten form fields and annotations** — Improves rendering performance and prevents further editing.
-- **Apply branding elements** — Such as watermarks or stamps.
+- **Reduce file size**: Compresses content to improve load time.
+- **Merge multiple documents**: Combine several PDFs into a single file.
+- **Extract only required pages**: Drop unused pages for faster loading.
+- **Flatten form fields and annotations**: Improves rendering performance and prevents further editing.
+- **Apply branding elements**: Such as watermarks or stamps.
 
 Each enhancement maps directly to a measurable improvement in load time, rendering speed, or document control.
 
@@ -190,7 +190,7 @@ Refer to the Blazor PDF Viewer documentation for loading PDF from base64 data. F
 - **Render Multiple Pages While Scrolling:** Improve performance by rendering multiple pages during scrolling. For more details, refer to [How to render N pages while scrolling](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-render-n-pages-scrolling).
 - **Improve Performance Using CDN:** Enhance viewer performance using a Content Delivery Network. For more details, refer to [How to improve performance using CDN](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-improve-performance-using-cdn).
 
-## See Also
+## See also
 
 - [Load Large PDF Files](./load-large-pdf)
 - [Load a Password-Protected PDF](./load-password-pdf)

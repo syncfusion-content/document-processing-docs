@@ -36,7 +36,7 @@ Step 3: Install the [Syncfusion.SmartDataExtractor.NET](https://www.nuget.org/pa
 
 ![Install Syncfusion.SmartDataExtractor.NET NuGet package](GettingStarted_images/MAUI_Nuget.png)
 
-N> If you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+Add the input PDF file named **Input.pdf** to the project as a MauiAsset before running the sample.
 
 Step 4: Add a new button to the **MainPage.xaml** as shown below.
 
@@ -78,6 +78,7 @@ Step 5: Include the following namespaces in the **MainPage.xaml.cs** file.
 
 {% highlight c# tabtitle="C#" %}
 
+using System.IO;
 using System.Text;
 using Syncfusion.SmartDataExtractor;
 
@@ -93,13 +94,14 @@ Step 6: Add a new action method **OnExtractDataClicked** in MainPage.xaml.cs and
 
 // Load the input PDF from the app package (include it in the project as a MauiAsset)
 using Stream inputStream = await FileSystem.OpenAppPackageFileAsync(Path.Combine("Data", "Input.pdf"));
-// Initialize Smart Data Extractor
+// Initialize the Data Extractor
 DataExtractor extractor = new DataExtractor();
 // Extract data as JSON string
 string data = extractor.ExtractDataAsJson(inputStream);
 // Save the extracted JSON data into an output file inside the application directory
-string outputPath = Path.Combine(Environment.CurrentDirectory, "Output", "Output.json");
-Directory.CreateDirectory(Path.GetDirectoryName(outputPath));
+string outputDirectory = Path.Combine(FileSystem.AppDataDirectory, "Output");
+Directory.CreateDirectory(outputDirectory);
+string outputPath = Path.Combine(outputDirectory, "Output.json");
 File.WriteAllText(outputPath, data, Encoding.UTF8);
 // Show success message
 await DisplayAlert("Success", $"Extracted data saved to {outputPath}", "OK");
@@ -188,6 +190,7 @@ Step 4: Include the following namespaces in the **MainPage.xaml.cs** file.
 
 {% highlight c# tabtitle="C#" %}
 
+using System.IO;
 using System.Text;
 using Syncfusion.SmartDataExtractor;
 
@@ -203,13 +206,14 @@ Step 5: Add a new action method **OnExtractDataClicked** in MainPage.xaml.cs and
 
 // Load the input PDF from the app package (include it in the project as a MauiAsset)
 using Stream inputStream = await FileSystem.OpenAppPackageFileAsync(Path.Combine("Data", "Input.pdf"));
-// Initialize Smart Data Extractor
+// Initialize the Data Extractor
 DataExtractor extractor = new DataExtractor();
 // Extract data as JSON string
 string data = extractor.ExtractDataAsJson(inputStream);
 // Save the extracted JSON data into an output file inside the application directory
-string outputPath = Path.Combine(Environment.CurrentDirectory, "Output", "Output.json");
-Directory.CreateDirectory(Path.GetDirectoryName(outputPath));
+string outputDirectory = Path.Combine(FileSystem.AppDataDirectory, "Output");
+Directory.CreateDirectory(outputDirectory);
+string outputPath = Path.Combine(outputDirectory, "Output.json");
 File.WriteAllText(outputPath, data, Encoding.UTF8);
 // Show success message
 await DisplayAlert("Success", $"Extracted data saved to {outputPath}", "OK");

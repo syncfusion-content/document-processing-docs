@@ -11,6 +11,11 @@ Keywords: linux os save pdf, linux os load pdf, c# save pdf, c# load pdf
 
 The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency on Adobe Acrobat. Using this library, you can create a PDF document in a .NET Core application on Linux.
 
+## Prerequisites
+
+* [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download) (or later)
+* An active [Syncfusion&reg; license key](https://www.syncfusion.com/sales/communitylicense) (a free 30-day trial is available)
+
 ## Steps to create PDF document programmatically
 
 Step 1: Execute the following command in the Linux terminal to create a new .NET Core Console application project.
@@ -23,7 +28,17 @@ dotnet new console
 {% endhighlight %}
 {% endtabs %}
 
-Step 2: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/) by executing the following command.
+Step 2: Navigate to the newly created project directory.
+
+{% tabs %}
+{% highlight bash %}
+
+cd ConsoleApp
+
+{% endhighlight %}
+{% endtabs %}
+
+Step 3: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/) by executing the following command. Replace `xx.x.x.xx` with the actual version of the package you want to install (visit the NuGet page to find the latest stable version).
 
 {% tabs %}
 {% highlight bash %}
@@ -35,7 +50,22 @@ dotnet add package Syncfusion.Pdf.Net.Core -v xx.x.x.xx -s https://www.nuget.org
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you also have to add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 3: Include the following namespaces in the *Program.cs* file.
+Step 4: Register the Syncfusion<sup>&reg;</sup> license key. An evaluation watermark is added to every page of the generated PDF until a valid key is registered. Include the license key at the top of **Program.cs** before creating a `PdfDocument` instance. Refer to the [Syncfusion License documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion<sup>&reg;</sup> license key in your application.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Licensing;
+
+// Register the Syncfusion license
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+
+{% endhighlight %}
+{% endtabs %}
+
+Replace `"YOUR LICENSE KEY"` with the actual key from your Syncfusion<sup>&reg;</sup> account. If you do not have one, request a free 30-day trial at [https://www.syncfusion.com/sales/communitylicense](https://www.syncfusion.com/sales/communitylicense). For local development, store the key in an environment variable and read it with `Environment.GetEnvironmentVariable("SyncfusionLicenseKey")` rather than hardcoding it. For production environments, prefer reading the key from a secure store such as **Azure Key Vault**, **AWS Secrets Manager**, or a `appsettings.json` file that is excluded from source control. Refer to the [Syncfusion License documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details.
+
+Step 5: Include the following namespaces in the *Program.cs* file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -44,11 +74,12 @@ using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Drawing;
 using System.IO;
+using System.Collections.Generic;
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 4: Add the following code sample to the *Program.cs* file to **create a PDF document in the .NET Core application on Linux**.
+Step 6: Add the following code sample to the *Program.cs* file to **create a PDF document in the .NET Core application on Linux**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -103,11 +134,13 @@ using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"Output.pd
     //Save the PDF document to file stream.
     document.Save(outputFileStream);
 }
+//Close the PDF document.
+document.Close(true);
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Execute the following command to restore the NuGet packages.
+Step 7: Execute the following command to restore the NuGet packages.
 
 {% tabs %}
 {% highlight bash %}
@@ -119,7 +152,7 @@ dotnet restore
 
 ![Linux Build](GettingStarted_images/Linux_Build.png)
 
-Step 6: Execute the following command in terminal to run the application.
+Step 8: Execute the following command in terminal to run the application.
 {% tabs %}
 {% highlight bash %}
 
@@ -134,5 +167,14 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 By executing the program, you will get the PDF document as follows. The output will be saved alongside Program.cs.
 ![Linux output PDF document](GettingStarted_images/Open_and_save_output.png)
+
+## Next steps
+
+* [Create a PDF in a Console application (.NET Framework)](Create-PDF-file-in-Console.md)
+* [Create a PDF in a Console application (cross-platform)](Create-PDF-file-in-Console.md)
+* [Create a PDF in ASP.NET Core](Create-PDF-file-in-ASP-NET-Core.md)
+* [Create a PDF in WPF](Create-PDF-file-in-WPF.md)
+* [Open and read an existing PDF document](Open-PDF-file.md)
+* [Save the generated PDF to a file or stream](Save-PDF-file.md)
 
 Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.

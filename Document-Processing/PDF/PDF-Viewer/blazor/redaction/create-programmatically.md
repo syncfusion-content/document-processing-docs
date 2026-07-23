@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Programmatic redaction in Blazor SfPdfViewer | Syncfusion
-description: Learn how to add, edit, delete, and apply redaction annotations programmatically in the Syncfusion Blazor SfPdfViewer component.
+description: Learn how to add, edit, delete, and apply redaction annotations programmatically in the Blazor SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -13,7 +13,7 @@ documentation: ug
 
 Use the [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method to add a redaction annotation by creating a [PdfAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfAnnotation.html) instance. Configure redaction-specific settings with [RedactionProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.RedactionProperties.html).
 
-The example below creates a redaction annotation with custom appearance, redaction options, and position on the first page.
+Page numbers use a 0-based index, where `0` represents the first page. The example below creates a redaction annotation with custom appearance, redaction options, and a position on the first page.
 
 ```cshtml
 @page "/"
@@ -75,7 +75,33 @@ The **RedactionProperties** settings control the annotation’s appearance and b
 
 ## Delete redaction annotations programmatically
 
-Delete redaction annotations programmatically using the [DeleteAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteAnnotationsAsync) method by passing the annotation ID or object reference.
+Delete redaction annotations programmatically using the [DeleteAnnotationsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteAnnotationsAsync) method.
+
+The following example retrieves all annotations, locates the first redaction annotation, and removes it from the viewer.
+
+````cshtml
+@page "/"
+
+<SfButton OnClick="DeleteRedaction">Delete Redaction</SfButton>
+
+<SfPdfViewer2 @ref="SfPdfViewer2" DocumentPath="@DocumentPath" Height="800px" Width="100%">
+</SfPdfViewer2>
+
+@code{
+    private string DocumentPath { get; set; } = "wwwroot/data/Annotations.pdf";
+    private SfPdfViewer2? SfPdfViewer2;
+
+    private async Task DeleteRedaction()
+    {
+        List<PdfAnnotation> annotations = await SfPdfViewer2.GetAnnotationsAsync();
+        PdfAnnotation redaction = annotations.FirstOrDefault(a => a.AnnotationProperties is RedactionProperties);
+        if (redaction != null)
+        {
+            await SfPdfViewer2.DeleteAnnotationsAsync(new List<PdfAnnotation> { redaction });
+        }
+    }
+}
+````
 
 For additional examples, see [Delete annotation programmatically](../annotation/text-markup-annotation#delete-annotation-programmatically).
 
@@ -130,7 +156,7 @@ The following example retrieves an existing redaction annotation, updates proper
 
 ## Add page redactions programmatically
 
-Entire pages can be marked for redaction using the [AddPageRedactionsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddPageRedactionsAsync_System_Collections_Generic_List_System_Int32__) method.
+Entire pages can be marked with redaction annotations using the [AddPageRedactionsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddPageRedactionsAsync_System_Collections_Generic_List_System_Int32__) method.
 
 This is useful when the full page contains confidential data.
 
@@ -165,7 +191,7 @@ The following example adds redaction annotations to specific pages in a PDF usin
 
 ## Apply redaction programmatically
 
-Use the [RedactAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_RedactAsync) method to apply all redaction annotations.
+Use the [RedactAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_RedactAsync) method to permanently apply all redaction annotations to the document.
 
 N> Applying redaction is permanent and cannot be undone. Consider saving a copy of the document before applying redaction.
 
@@ -195,7 +221,7 @@ N> Applying redaction is permanent and cannot be undone. Consider saving a copy 
 
 Use [PdfViewerRedactionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerRedactionSettings.html) inside the viewer to set default redaction properties for newly created annotations, including fill color, overlay text, font style, and alignment.
 
-These defaults apply to newly added annotations created from the toolbar unless overridden.
+These defaults apply to annotations created from the toolbar unless overridden.
 
 The following example shows how to set default properties for redaction annotations using [PdfViewerRedactionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerRedactionSettings.html).
 
@@ -211,8 +237,8 @@ The following example shows how to set default properties for redaction annotati
                                 IsRepeat="false"
                                 FillColor="#F8F8F8" 
                                 FontColor="#333333"
-                                FontSize="14" 
-                                FontFamily="Symbol" 
+                                FontSize="14"
+                                FontFamily="Symbol"
                                 TextAlignment="TextAlignment.Right" />
         <PdfViewerToolbarSettings ToolbarItems="ToolbarItems" MobileToolbarItems="MobileToolbarItems"></PdfViewerToolbarSettings>
 </SfPdfViewer2>

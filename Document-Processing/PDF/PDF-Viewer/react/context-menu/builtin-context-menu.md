@@ -8,9 +8,12 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Built-in Context Menu Items in React PDF Viewer
+# Built-in Context Menu in React PDF Viewer
 
-The React PDF Viewer includes a context-sensitive menu that updates dynamically based on the right-clicked element within the document. This page lists the default menu items available for different document elements.
+The React PDF Viewer includes a context-sensitive menu that updates dynamically based on the element being right-clicked within the document. This page lists the default menu items available for different document elements.
+
+The context menu is enabled by default. To disable it, set the [`contextMenuOption`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#contextmenuoption) property to `None`.
+
 
 ## Context Menu Scenarios
 
@@ -18,15 +21,15 @@ Menu items vary depending on the target element:
 
 * **Text**: Displays options to annotate and copy selected text.
 
-  ![context menu on text](../images/context-menu-text.png)
+  ![Context menu displayed when right-clicking on selected text](../images/context-menu-text.png)
 
 * **Annotations**: Provides options to copy, cut, paste, or remove annotations, and add comments.
 
-  ![context menu on annotation](../images/context-menu-annotation.png)
+  ![Context menu displayed when right-clicking on an annotation](../images/context-menu-annotation.png)
 
-* **Form Fields**: Shows standard form field interactions, such as modifying properties. The context menu for form fields appears only when the viewer is in **designer mode**.
+* **Form Fields**: Shows standard form field interactions, such as modifying properties. The context menu for form fields appears only when the viewer is in **Form Designer mode**. To enable it, add `FormDesigner` to the `Inject services` array and set the [`enableFormDesigner`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enableformdesigner) property to `true`.
 
-  ![context menu on form fields](../images/context-menu-forms.png)
+  ![Context menu displayed when right-clicking on a form field](../images/context-menu-forms.png)
 
 * **Empty Space**: Displays the option to paste a previously copied annotation or form field.
 
@@ -49,7 +52,7 @@ The following table describes the default items available when right-clicking se
 
 ### Annotation Menu Items
 
-The following items are available when interacting with annotations:
+Default items when right-clicking an annotation:
 
 | Item | Description |
 | :--- | :--- |
@@ -57,11 +60,11 @@ The following items are available when interacting with annotations:
 | **Cut** | Removes the selected annotation and copies it to the clipboard. |
 | **Paste** | Pastes a previously copied or cut annotation. |
 | **Delete** | Permanently removes the selected annotation. |
-| **Comments** | Opens the comment panel to manage discussions on the annotation. |
+| **Comments** | Opens the comment panel for the annotation. |
 
 ### Form Field Menu Items
 
-These items appear when the viewer is in designer mode and a form field is selected:
+These items appear when the viewer is in Form Designer mode and a form field is selected:
 
 | Item | Description |
 | :--- | :--- |

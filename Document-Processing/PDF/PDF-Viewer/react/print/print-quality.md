@@ -18,12 +18,12 @@ This article shows a concise, task-oriented workflow to set and verify print qua
 
 ### 1. Choose a target print quality.
 
-- Valid [`printScaleFactor`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#printscalefactor) values: **0.5 – 5**. Higher values increase image sharpness and resource use.
+- Valid [`printScaleFactor`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#printscalefactor) values: **0.5 – 5** (type: `number`; decimal values are accepted). Higher values increase image sharpness and resource use.
 - Default value: **1**.
 
 ### 2. Set `printScaleFactor` during initialization
 
-It is recommended that you set the [`printScaleFactor`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#printscalefactor) in the viewer options during initialization.
+Set the [`printScaleFactor`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#printscalefactor) in the viewer options during initialization.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
