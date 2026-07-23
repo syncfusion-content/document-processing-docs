@@ -7,51 +7,52 @@ documentation: UG
 ---
 # Working with PDF Headers and Footers
 
-Essential<sup>&reg;</sup> PDF supports to draw the header and footer in PDF document using [PdfPageTemplateElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageTemplateElement.html) class. The header and footer can contain any types of element including dynamic fields.
+Syncfusion<sup>&reg;</sup> PDF supports drawing headers and footers in a PDF document using the [PdfPageTemplateElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageTemplateElement.html) class. The header and footer can contain any type of element, including dynamic fields.
 
-To quickly get started with adding headers and footers to PDF files using the Syncfusion<sup>®</sup> PDF library for .NET, refer to this video tutorial:
+To quickly get started with adding headers and footers to PDF files using the Syncfusion<sup>&reg;</sup> PDF library for .NET, refer to this video tutorial:
 {% youtube "https://youtu.be/zGcQEVw5v9Y?si=lI6qZLUJRw6UWUZi" %}
 
 ## Adding an automatic field in header and footer
 
-Essential<sup>&reg;</sup> PDF supports to add page count, page numbers, date and time using dynamic fields such as [PdfPageCountField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageCountField.html), [PdfPageNumberField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageNumberField.html) etc.
+Syncfusion<sup>&reg;</sup> PDF supports adding page count, page numbers, date, and time using dynamic fields such as [PdfPageCountField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageCountField.html) and [PdfPageNumberField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageNumberField.html).
 
-The below code snippet explains how to draw the page numbers in footer using automatic fields.
+The following code snippet explains how to draw page numbers in the footer using automatic fields.
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Header%20and%20Footer/Adding-an-automatic-field-in-header-and-footer/.NET/Adding-an-automatic-field-in-header-and-footer/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Header%20and%20Footer/Adding-an-automatic-field-in-header-and-footer/.NET/Adding-an-automatic-field-in-header-and-footer/Program.cs" %}
 
+using System.IO;
 using Syncfusion.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
-//Add a page to the PDF document
+//Add a page to the PDF document.
 PdfPage pdfPage = pdfDocument.Pages.Add();
 //Create a header and draw the image.
 RectangleF bounds = new RectangleF(0, 0, pdfDocument.Pages[0].GetClientSize().Width, 50);
 PdfPageTemplateElement header = new PdfPageTemplateElement(bounds);
-//Load the PDF document
+//Load the image for the header.
 FileStream imageStream = new FileStream("Logo.png", FileMode.Open, FileAccess.Read);
 PdfImage image = new PdfBitmap(imageStream);
 //Draw the image in the header.
 header.Graphics.DrawImage(image, new PointF(0, 0), new SizeF(100, 50));
 //Add the header at the top.
 pdfDocument.Template.Top = header;
-//Create a Page template that can be used as footer.
+//Create a page template that can be used as a footer.
 PdfPageTemplateElement footer = new PdfPageTemplateElement(bounds);
 PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 7);
 PdfBrush brush = new PdfSolidBrush(Color.Black);
-//Create page number field.
+//Create the page number field.
 PdfPageNumberField pageNumber = new PdfPageNumberField(font, brush);
-//Create page count field.
+//Create the page count field.
 PdfPageCountField count = new PdfPageCountField(font, brush);
-//Add the fields in composite fields.
+//Add the fields in a composite field.
 PdfCompositeField compositeField = new PdfCompositeField(font, brush, "Page {0} of {1}", pageNumber, count);
 compositeField.Bounds = footer.Bounds;
-//Draw the composite field in footer.
+//Draw the composite field in the footer.
 compositeField.Draw(footer.Graphics, new PointF(470, 40));
 //Add the footer template at the bottom.
 pdfDocument.Template.Bottom = footer;
@@ -70,7 +71,7 @@ using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
-//Add a page to the PDF document
+//Add a page to the PDF document.
 PdfPage pdfPage = pdfDocument.Pages.Add();
 //Create a header and draw the image.
 RectangleF bounds = new RectangleF(0, 0, pdfDocument.Pages[0].GetClientSize().Width, 50);
@@ -80,18 +81,18 @@ PdfImage image = new PdfBitmap(@"Logo.png");
 header.Graphics.DrawImage(image, new PointF(0, 0), new SizeF(100, 50));
 //Add the header at the top.
 pdfDocument.Template.Top = header;
-//Create a Page template that can be used as footer.
+//Create a page template that can be used as a footer.
 PdfPageTemplateElement footer = new PdfPageTemplateElement(bounds);
 PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 7);
 PdfBrush brush = new PdfSolidBrush(Color.Black);
-//Create page number field.
+//Create the page number field.
 PdfPageNumberField pageNumber = new PdfPageNumberField(font, brush);
-//Create page count field.
+//Create the page count field.
 PdfPageCountField count = new PdfPageCountField(font, brush);
-//Add the fields in composite fields.
+//Add the fields in a composite field.
 PdfCompositeField compositeField = new PdfCompositeField(font, brush, "Page {0} of {1}", pageNumber, count);
 compositeField.Bounds = footer.Bounds;
-//Draw the composite field in footer.
+//Draw the composite field in the footer.
 compositeField.Draw(footer.Graphics, new PointF(470, 40));
 //Add the footer template at the bottom.
 pdfDocument.Template.Bottom = footer;
@@ -144,18 +145,19 @@ pdfDocument.Close(True)
 
 {% endtabs %}  
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Header%20and%20Footer/Adding-an-automatic-field-in-header-and-footer). 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Header%20and%20Footer/Adding-an-automatic-field-in-header-and-footer).
 
 ## Adding dynamic headers and footers in PDF documents
 
-You can add unique, dynamic headers and footers like page numbers or dates to each page in a PDF by handling the [PageAdded](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PageAddedEventHandler.html) event. By also using the [BeginPageLayout](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutElement.html#Syncfusion_Pdf_Graphics_PdfLayoutElement_BeginPageLayout) event to reserve space, you ensure your main content doesn’t overlap with headers or footers.
+You can add unique, dynamic headers and footers like page numbers or dates to each page in a PDF by handling the [PageAdded](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_PageAdded) event of the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class. By also using the [BeginPageLayout](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutElement.html#Syncfusion_Pdf_Graphics_PdfLayoutElement_BeginPageLayout) event of the [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) to reserve space, you ensure that your main content does not overlap with the headers or footers.
 
-The example below illustrates how to implement a dynamic footer that updates uniquely for every page in a PDF document.
+The following example illustrates how to implement a dynamic header and footer that are drawn on every page in a PDF document.
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Header%20and%20Footer/Adding-dynamic-headers-and-footers-in-PDF/.NET/Adding-dynamic-headers-and-footers-in-PDF/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Header%20and%20Footer/Adding-dynamic-headers-and-footers-in-PDF/.NET/Adding-dynamic-headers-and-footers-in-PDF/Program.cs" %}
 
+using System;
 using Syncfusion.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
@@ -231,7 +233,7 @@ document.Save("Output.pdf");
 document.Close(true);
 
 // Add header and footer to every page.
-static void PageAddedHandler(object sender, PageAddedEventArgs e)
+static void PageAddedHandler(object sender, Syncfusion.Pdf.PageAddedEventArgs e)
 {
     PdfPage page = e.Page;
     int currentPage = page.Section.Pages.IndexOf(page) + 1;
@@ -260,6 +262,7 @@ static void PageAddedHandler(object sender, PageAddedEventArgs e)
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using System;
 using System.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
@@ -335,7 +338,7 @@ document.Save("Output.pdf");
 document.Close(true);
 
 // Add header and footer to every page.
-static void PageAddedHandler(object sender, PageAddedEventArgs e)
+static void PageAddedHandler(object sender, Syncfusion.Pdf.PageAddedEventArgs e)
 {
     PdfPage page = e.Page;
     int currentPage = page.Section.Pages.IndexOf(page) + 1;
@@ -364,6 +367,7 @@ static void PageAddedHandler(object sender, PageAddedEventArgs e)
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System
 Imports Syncfusion.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Graphics
@@ -455,4 +459,4 @@ End Sub
 
 {% endtabs %}  
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Header%20and%20Footer/Adding-dynamic-headers-and-footers-in-PDF/.NET).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Header%20and%20Footer/Adding-dynamic-headers-and-footers-in-PDF).
