@@ -10,9 +10,9 @@ documentation: UG
 
 ## Prerequisites  
 
-* **[Microsoft Azure subscription](https://portal.azure.com/#home)** is required. 
+* An active **[Microsoft Azure subscription](https://portal.azure.com/#home)** is required. 
 
-* **[Azure Cloud Storage](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json&tabs=azure-portal)** is required. 
+* An **[Azure Storage account](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json&tabs=azure-portal)** is required.
 
 ## Open Word document from Azure Blob
 
@@ -55,6 +55,7 @@ Step 5: Include the following namespaces in **HomeController.cs**.
 {% highlight c# tabtitle="C#" %}
 using Azure.Storage.Blobs.Models;
 using Azure.Storage.Blobs;
+using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 {% endhighlight %}
 {% endtabs %}
@@ -85,7 +86,7 @@ public async Task<IActionResult> EditDocument()
             paragraph.BreakCharacterFormat.FontSize = 12f;
 
             //Add new text to the paragraph
-            IWTextRange textRange = paragraph.AppendText("In 2000, AdventureWorks Cycles bought a small manufacturing plant, Importadores Neptuno, located in Mexico. Importadores Neptuno manufactures several critical subcomponents for the AdventureWorks Cycles product line. These subcomponents are shipped to the Bothell location for final product assembly. In 2001, Importadores Neptuno, became the sole manufacturer and distributor of the touring bicycle product group.") as IWTextRange;
+            IWTextRange textRange = paragraph.AppendText("In 2000, Adventure Works Cycles bought a small manufacturing plant, Importadores Neptuno, located in Mexico. Importadores Neptuno manufactures several critical subcomponents for the Adventure Works Cycles product line. These subcomponents are shipped to the Bothell location for final product assembly. In 2001, Importadores Neptuno, became the sole manufacturer and distributor of the touring bicycle product group.") as IWTextRange;
             textRange.CharacterFormat.FontSize = 12f;
 
             //Saving the Word document to a MemoryStream
@@ -93,7 +94,7 @@ public async Task<IActionResult> EditDocument()
             wordDocument.Save(outputStream, Syncfusion.DocIO.FormatType.Docx);
 
             //Download the Word file in the browser
-            FileStreamResult fileStreamResult = new FileStreamResult(outputStream, "application/msword");
+            FileStreamResult fileStreamResult = new FileStreamResult(outputStream, "application/vnd.openxmlformats-officedocument.wordprocessingml.document");
             fileStreamResult.FileDownloadName = "EditWord.docx";
             return fileStreamResult;
         }
@@ -469,10 +470,10 @@ public async Task<MemoryStream> UploadDocumentToAzure(MemoryStream stream)
         //Name of the Azure Blob Storage container
         string containerName = "Your_container_name";
 
-        //Name of the Word file you want to load
+        //Name of the Word file you want to save
         string blobName = "CreateWord.docx";
 
-        //Download the Word document from Azure Blob Storage
+        //Upload the Word document to Azure Blob Storage
         BlobServiceClient blobServiceClient = new BlobServiceClient(connectionString);
         BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient(containerName);
         BlobClient blobClient = containerClient.GetBlobClient(blobName);
@@ -482,9 +483,8 @@ public async Task<MemoryStream> UploadDocumentToAzure(MemoryStream stream)
     }
     catch (Exception e)
     {
-        Console.WriteLine("Unknown encountered on server. Message:'{0}' when writing an object", e.Message);
+        Console.WriteLine("Error encountered when writing an object: {0}", e.Message);
     }
-    return stream;
 }
 {% endhighlight %}
 {% endtabs %}

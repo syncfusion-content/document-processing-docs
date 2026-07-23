@@ -11,6 +11,8 @@ documentation: UG
 
 The following namespaces of Essential<sup>&reg;</sup> DocIO need to be included in your application to load and save the Word document.
 
+N> Install the DocIO NuGet package before referencing these namespaces: [Syncfusion.DocIO.WinForms](https://www.nuget.org/packages/Syncfusion.DocIO.WinForms/) for WinForms/WPF, or [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core/) for ASP.NET Core / cross-platform applications. Refer to the [installation and configuration](../installation/Installation-errors) section for complete setup steps.
+
 N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
 {% tabs %}
@@ -139,7 +141,7 @@ document.Open(wordDocumentStream, FormatType.Automatic)
 
 {% endtabs %}
 
-You can download a complete working sample from Stream from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Read-and-Save-document/Open-and-save-Word-document).
+You can download a complete working sample for opening from a stream from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Read-and-Save-document/Open-and-save-Word-document).
 
 ## Opening an Encrypted Word document
 
@@ -169,10 +171,14 @@ Dim document As New WordDocument(fileName, FormatType.Automatic, "password")
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//Open an existing document from stream through constructor of WordDocument class.
-FileStream fileStreamPath = new FileStream(@"Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-//Open an encrypted Word document.
-WordDocument document = new WordDocument(fileStreamPath, "password");
+//Creates an empty Word document instance
+using (WordDocument document = new WordDocument())
+{
+    //Loads or opens an existing encrypted word document from stream
+    FileStream fileStreamPath = new FileStream(@"Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+    //Opens an encrypted Word document through Open method of WordDocument class
+    document.Open(fileStreamPath, "password");
+}
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -191,11 +197,11 @@ document.Open(wordDocumentStream, FormatType.Automatic, "password")
 
 {% endtabs %}
 
-You can download a complete working sample from Stream from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Security/Open-encrypted-Word-document).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Security/Open-encrypted-Word-document).
 
-## Opening the read only Word document
+## Opening the read-only Word document
 
-You can open the ready only documents or read only streams using the [OpenReadOnly](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_OpenReadOnly_System_String_Syncfusion_DocIO_FormatType_) method. If the Word document for reading is opened by any other application such as Microsoft Word, then the same document can be opened using DocIO in ReadOnly mode. The following code sample demonstrates the same.
+You can open the read-only documents or read-only streams using the [OpenReadOnly](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_OpenReadOnly_System_String_Syncfusion_DocIO_FormatType_) method. If the Word document for reading is opened by any other application such as Microsoft Word, then the same document can be opened using DocIO in read-only mode. The following code sample demonstrates the same.
 
 {% tabs %}
 
@@ -206,20 +212,20 @@ You can open the ready only documents or read only streams using the [OpenReadOn
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Creates an empty WordDocument instance
 WordDocument document = new WordDocument();
-//Loads or opens an existing word document using read only stream
+//Loads or opens an existing word document using read-only stream
 document.OpenReadOnly("Template.docx", Syncfusion.DocIO.FormatType.Docx);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Creates an empty WordDocument instance 
 Dim document As WordDocument = New WordDocument
-'Loads or opens an existing word document using read only stream
+'Loads or opens an existing word document using read-only stream
 document.OpenReadOnly("Template.docx", Syncfusion.DocIO.FormatType.Docx)
 {% endhighlight %}
 
 {% endtabs %}
 
-You can also open an existing encrypted document in read only mode using the overloads as mentioned below.
+You can also open an existing encrypted document in read-only mode using the overloads as mentioned below.
 
 {% tabs %}
 
@@ -230,14 +236,14 @@ You can also open an existing encrypted document in read only mode using the ove
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Creates an empty WordDocument instance
 WordDocument document = new WordDocument();
-//Loads or opens an existing encrypted word document using read only stream
-document.OpenReadOnly("Template.docx", Syncfusion.DocIO.FormatType.Docx , "password");
+//Loads or opens an existing encrypted word document using read-only stream
+document.OpenReadOnly("Template.docx", Syncfusion.DocIO.FormatType.Docx, "password");
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Creates an empty WordDocument instance 
 Dim document As WordDocument = New WordDocument
-'Loads or opens an existing encrypted word document using read only stream
+'Loads or opens an existing encrypted word document using read-only stream
 document.OpenReadOnly("Template.docx", Syncfusion.DocIO.FormatType.Docx, "password")
 {% endhighlight %}
 
@@ -263,28 +269,33 @@ document.Save(outputStream, FormatType.Docx);
 document.Close();
 outputStream.Flush();
 outputStream.Dispose();
+inputStream.Dispose();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Creates an empty WordDocument instance
 WordDocument document = new WordDocument();
-//opens an existing Word document through Open method of WordDocument class
+//Opens an existing Word document through Open method of WordDocument class
 document.Open(fileName);
 //To-Do some manipulation
 //To-Do some manipulation
 //Saves the document in file system
 document.Save(outputFileName, FormatType.Docx);
+//Closes the document
+document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Creates an empty WordDocument instance
 Dim document As New WordDocument()
-'opens an existing Word document through Open method of WordDocument class
+'Opens an existing Word document through Open method of WordDocument class
 document.Open(fileName)
 'To-Do some manipulation
 'To-Do some manipulation
 'Saves the document in file system
 document.Save(outputFileName, FormatType.Docx)
+'Closes the document
+document.Close()
 {% endhighlight %}
 
 {% endtabs %}
@@ -327,6 +338,8 @@ document.Open(fileName);
 MemoryStream stream = new MemoryStream();
 //Saves the document to stream
 document.Save(stream, FormatType.Docx);
+//Closes the document
+document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
@@ -340,6 +353,8 @@ document.Open(fileName)
 Dim stream As New MemoryStream()
 'Saves the document to stream
 document.Save(stream, FormatType.Docx)
+'Closes the document
+document.Close()
 {% endhighlight %}
 
 {% endtabs %}
@@ -348,7 +363,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Sending to a client browser
 
-You can save and send the document to a client browser from a web site or web application by invoking the following shown overload of [Save](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Save_System_String_Syncfusion_DocIO_FormatType_System_Web_HttpResponse_Syncfusion_DocIO_HttpContentDisposition_) method.  This method explicitly makes use of an instance of [HttpResponse](https://docs.microsoft.com/en-us/dotnet/api/system.web.httpresponse?view=netframework-4.8) as its parameter in order to stream the document to client browser. So this overload is suitable for web application that references System.Web assembly.
+You can save and send the document to a client browser from a web site or web application by invoking the following overload of [Save](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Save_System_String_Syncfusion_DocIO_FormatType_System_Web_HttpResponse_Syncfusion_DocIO_HttpContentDisposition_) method. This method explicitly makes use of an instance of [HttpResponse](https://docs.microsoft.com/en-us/dotnet/api/system.web.httpresponse?view=netframework-4.8) as its parameter in order to stream the document to the client browser. So this overload is suitable for web applications that reference the System.Web assembly.
 
 {% tabs %}  
 
@@ -362,7 +377,7 @@ IWParagraph paragraph = section.AddParagraph();
 //Appends the text to the created paragraph
 paragraph.AppendText("AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.");
 MemoryStream stream = new MemoryStream();
-//Saves the Word document to  MemoryStream
+//Saves the Word document to MemoryStream
 document.Save(stream, FormatType.Docx);
 document.Close();
 stream.Position = 0;
@@ -377,10 +392,9 @@ WordDocument document = new WordDocument();
 document.Open(fileName);
 //To-Do some manipulation
 //To-Do some manipulation
-//Creates an instance of memory stream
-MemoryStream stream = new MemoryStream();
-//Saves the document to stream
+//Saves the document to the client browser
 document.Save(outputFileName, FormatType.Docx, Response, HttpContentDisposition.Attachment);
+document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
@@ -390,17 +404,16 @@ Dim document As New WordDocument()
 document.Open(fileName)
 'To-Do some manipulation
 'To-Do some manipulation
-'Creates an instance of memory stream
-Dim stream As New MemoryStream()
-'Saves the document to stream
+'Saves the document to the client browser
 document.Save(outputFileName, FormatType.Docx, Response, HttpContentDisposition.Attachment)
+document.Close()
 {% endhighlight %} 
 
 {% endtabs %}  
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Read-and-Save-document/Send-Word-to-client-browser).
 
-N> If you are using [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core/) package, then the [Save](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Save_System_String_Syncfusion_DocIO_FormatType_System_Web_HttpResponse_Syncfusion_DocIO_HttpContentDisposition_) API used in the above sample is not available in it. So, we suggest you to save the document as stream and then download. You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Read-and-Save-document/Send-Word-to-client-browser/ASP.NET).
+N> If you are using [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core/) package, then the [Save](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Save_System_String_Syncfusion_DocIO_FormatType_System_Web_HttpResponse_Syncfusion_DocIO_HttpContentDisposition_) API used in the above sample is not available in it. So, we suggest saving the document as a stream and then downloading it. You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Read-and-Save-document/Send-Word-to-client-browser/ASP.NET).
 
 ## Closing a document
 
@@ -430,7 +443,7 @@ using (WordDocument document = new WordDocument())
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Creates an empty WordDocument instance
 WordDocument document = new WordDocument();
-//opens an existing word document through Open method of WordDocument class
+//Opens an existing word document through Open method of WordDocument class
 document.Open(fileName);
 //To-Do some manipulation
 //To-Do some manipulation
@@ -443,9 +456,9 @@ document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'creates an empty WordDocument instance
+'Creates an empty WordDocument instance
 Dim document As New WordDocument()
-'opens an existing word document through Open method of WordDocument class
+'Opens an existing word document through Open method of WordDocument class
 document.Open(fileName)
 'To-Do some manipulation
 'To-Do some manipulation
