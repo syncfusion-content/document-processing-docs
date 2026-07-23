@@ -1,16 +1,16 @@
 ---
 layout: post
 title: Track Changes in React DOCX Editor | Syncfusion
-description: Learn how to enable Track Changes in React DOCX Editor and manage document revisions by accepting or rejecting edits made by multiple reviewers.
+description: Learn how to enable Track Changes in React Document Editor and manage document revisions by accepting or rejecting edits made by multiple reviewers.
 control: Track changes 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Track Change in React DOCX Editor
+# Track Changes in React Document Editor
 
-[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports Track Changes functionality, which allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject these modifications. It is a useful tool for managing changes made by several reviewers to the same document. When the Track Changes option is enabled, all editing operations are preserved as revisions in the Document Editor.
+[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports Track Changes functionality, which allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject these modifications. It is a useful tool for managing changes made by several reviewers to the same document. When the Track Changes option is enabled, all editing operations are preserved as revisions.
 
 ## Enable Track changes
 
@@ -50,7 +50,8 @@ createRoot(document.getElementById('sample')).render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-N> Track changes are document level settings. When opening a document, if the document does not have track changes enabled, then enableTrackChanges will be disabled even if we set enableTrackChanges: true in the initial rendering. If you want to enable track changes for all the documents, then we recommend enabling track changes in documentChange event. 
+N> 1. Track changes are document-level settings. When opening a document, if the document does not have track changes enabled, then `enableTrackChanges` will be disabled even if you set `enableTrackChanges: true` in the initial rendering.
+N> 2. If you want to enable track changes for all documents, we recommend enabling track changes in the `documentChange` event. 
 
 The following example demonstrates how to enable track changes for the all the document while opening.
 
@@ -68,7 +69,7 @@ container.current.documentChange = () => {
 
 ## Show or hide revisions pane
 
-The Show or Hide Revisions Pane in the Document Editor allows users to toggle the visibility of the revisions pane, providing flexibility in managing tracked changes within the document.
+The Show or Hide Revisions Pane option allows users to toggle the visibility of the revisions pane, providing flexibility in managing tracked changes within the document.
 
 The following example code illustrates how to show or hide the revisions pane.
 
@@ -89,8 +90,10 @@ function App() {
     let container = null;
 
     React.useEffect(() => {
-        container.documentEditor.showRevisions = true; // To show revisions pane
-        container.documentEditor.showRevisions = false; // To hide revisions pane
+        if (container != null) {
+            container.documentEditor.showRevisions = true; // To show revisions pane
+            container.documentEditor.showRevisions = false; // To hide revisions pane
+        }
     }, [container]); // Re-run the effect when the container is initialized
 
     return (
@@ -122,7 +125,7 @@ N> The hosted Web API URL is for demo and evaluation purposes only. For producti
 
 ## Get all tracked revisions
 
-Retrieves all tracked revisions from the current document using the [revisions collection](https://ej2.syncfusion.com/documentation/api/document-editor/revisioncollection) in the Document Editor.
+Use the [revisions collection](https://ej2.syncfusion.com/documentation/api/document-editor/revisioncollection) on the Document Editor instance to retrieve all tracked revisions from the current document.
 
 The following example demonstrates how to get all tracked revisions from the current document.
 
@@ -140,7 +143,7 @@ let revisions : RevisionCollection = documentEditor.revisions;
 
 ## Accept or reject all changes
 
-Handles all tracked changes in the document at once, either by accepting or rejecting them. This helps quickly finalize or discard edits without reviewing each change individually.
+Use `acceptAll()` or `rejectAll()` to apply or discard every tracked change at once, without reviewing each individually.
 
 The following example demonstrates how to accept or reject all changes.
 
@@ -166,7 +169,7 @@ revisions.rejectAll();
 
 ## Accept or reject a specific revision
 
-Applies changes to a specific tracked revision in the document, allowing precise control to accept or reject individual edits.
+Use `accept()` or `reject()` on a specific revision to apply or discard that edit individually.
 
 The following example demonstrates how to accept or reject a specific revision in the Document Editor.
 
@@ -191,7 +194,7 @@ revisions.get(1).reject();
 
 ## Navigate between the tracked changes
 
-Navigates through tracked changes in the document programmatically, enabling easy movement to the next or previous revision from the current selection.
+Use `navigateNextRevision()` and `navigatePreviousRevision()` to move the selection to the next or previous tracked change.
 
 The following example demonstrates how to navigate through tracked revisions programmatically.
 
@@ -212,7 +215,7 @@ this.container.documentEditor.selection.navigatePreviousRevision();
 
 ## Custom metadata along with author
 
-The Document Editor allows customizing revisions using [revisionSettings](https://ej2.syncfusion.com/react/documentation/api/document-editor/documenteditorsettingsmodel#revisionsettings). The [customData](https://ej2.syncfusion.com/react/documentation/api/document-editor/revisionsettings#customdata) property allows attaching additional metadata to tracked revisions. This metadata can represent roles, tags, or any custom identifier for a revision. To display this metadata along with the author name in the Track Changes pane, the [showCustomDataWithAuthor](https://ej2.syncfusion.com/react/documentation/api/document-editor/revisionsettings#showcustomdatawithauthor) property must be enabled.
+The Document Editor allows customizing revisions using [revisionSettings](https://ej2.syncfusion.com/react/documentation/api/document-editor/documenteditorsettingsmodel#revisionsettings). The [customData](https://ej2.syncfusion.com/react/documentation/api/document-editor/revisionsettings#customdata) property allows attaching additional metadata to tracked revisions. This metadata can represent roles, tags, or any custom identifier for a revision. To display this metadata along with the author name in the Track Changes pane, the [showCustomDataWithAuthor](https://ej2.syncfusion.com/react/documentation/api/document-editor/revisionsettings#showcustomdatawithauthor) property must be enabled.
 
 The following example illustrates how to enable and update custom metadata for track changes revisions.
 
@@ -253,13 +256,14 @@ The Track Changes pane will display the author name along with the custom metada
 
 ![Custom metadata along with author in track changes pane](./images/custom-metadata-author-trackchanges.png)
 
-N> When the document is exported as SFDT, the customData value is stored in the revision collection. Upon reopening the SFDT, the custom data is automatically restored and displayed in the Track Changes pane.In formats other than SFDT (such as DOCX and others), the customData is not preserved, as it is specific to the Document Editor component
+N> 1. When the document is exported as SFDT, the `customData` value is stored in the revision collection. Upon reopening the SFDT, the custom data is automatically restored and displayed in the Track Changes pane.
+N> 2. In formats other than SFDT (such as DOCX and others), the `customData` is not preserved, as it is specific to the Document Editor component.
 
 ## Restrict accept or reject by author
 
-Accepting or rejecting changes can be restricted based on the author’s name.
+Restrict accepting or rejecting changes by author name.
 
-The following example demonstrates how to restrict an author from accept or reject changes.
+The following example demonstrates how to restrict an author from accepting or rejecting changes.
 
 {% tabs %}
 {% highlight ts tabtitle="TS" %}
@@ -305,7 +309,7 @@ createRoot(document.getElementById('sample')).render(<App />);
 
 ## Filter Changes by User
 
-In the Document Editor, a built-in review panel is available that supports filtering changes based on the user.
+The built-in review panel in the Document Editor supports filtering changes based on the user.
 
 ![Filter changes by user in review panel](./images/filter-changes-by-user.png)
 
