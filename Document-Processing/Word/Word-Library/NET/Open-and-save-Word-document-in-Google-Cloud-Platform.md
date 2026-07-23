@@ -10,7 +10,7 @@ documentation: UG
 
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and convert Word documents programmatically without **Microsoft Word** or interop dependencies. Using this library, **open and save a Word document in Google Cloud Platform (GCP)** within a few lines of code. 
 
-N> If this is your first time working with Google Cloud Platform (GCP), please refer to the dedicated GCP resources. This section explains how to open and save a Word document in C# using the .NET Core Word (DocIO) library in GCP. 
+N> If this is your first time working with Google Cloud Platform (GCP), please refer to the [GCP documentation](https://cloud.google.com/docs). This section explains how to open and save a Word document in C# using the .NET Core Word (DocIO) library in GCP. 
 
 ## Prerequisites 
 
