@@ -186,26 +186,19 @@ The following code example shows how to load image data based on image source pa
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/HTML-conversions/Customize-image-data/.NET/Customize-image-data/Program.cs" %}
 //Open the file as Stream
-using (FileStream docStream = new FileStream("Input.html", FileMode.Open, FileAccess.Read))
+//Creates a new instance of WordDocument
+using (WordDocument document = new WordDocument())
 {
-    //Creates a new instance of WordDocument
-    using (WordDocument document = new WordDocument())
-    {
-        //Hooks the ImageNodeVisited event to open the image from a specific location
-        document.HTMLImportSettings.ImageNodeVisited += OpenImage;
-        //Opens the input HTML document
-        document.Open(docStream, FormatType.Html);
-        //Unhooks the ImageNodeVisited event after loading HTML
-        document.HTMLImportSettings.ImageNodeVisited -= OpenImage;
-        //Creates an instance of memory stream
-        //Saves the Word document to MemoryStream
-        using (MemoryStream stream = new MemoryStream())
-        {
-            document.Save(stream, FormatType.Docx);
-        }
-        //Closes the WordDocument instance
-        document.Close();
-    }
+    //Hooks the ImageNodeVisited event to open the image from a specific location
+    document.HTMLImportSettings.ImageNodeVisited += OpenImage;
+    //Opens the input HTML document
+    document.Open("Input.html", FormatType.Html);
+    //Unhooks the ImageNodeVisited event after loading HTML
+    document.HTMLImportSettings.ImageNodeVisited -= OpenImage;
+    //Saves the Word document
+    document.Save("HtmlToWord.docx", FormatType.Docx);
+    //Closes the WordDocument instance
+    document.Close();
 }
 {% endhighlight %}
 
@@ -1389,7 +1382,7 @@ Underline types and colors are ignored.
 * [How to convert HTML document to plain text in C# and VB.NET](https://www.syncfusion.com/kb/13194/how-to-convert-html-document-to-plain-text-in-c-and-vb-net)
 * [How to save images into a folder and use that path in Word to HTML?](https://www.syncfusion.com/kb/13949/how-to-save-images-into-a-folder-and-use-that-path-in-word-to-html)
 * [How to replace text in a list paragraph with an HTML string in a Word document?](https://support.syncfusion.com/kb/article/17674/how-to-replace-text-in-a-list-paragraph-with-an-html-string-in-a-word-document)
-* [How to convert Webpage to Word document using C#?](https://support.syncfusion.com/kb/article/17771/how-to-convert-webpage-to-word-document-using-c)
+* [How to merge header, body and footer from different HTML files into a Word document?](https://support.syncfusion.com/kb/article/17771/how-to-convert-a-webpage-to-a-word-document-using-c-in-net-core) 
 * [How to add numbers on pages in HTML to PDF in ASP.NET DocIO?](https://support.syncfusion.com/kb/article/19446/how-to-add-numbers-on-pages-in-html-to-pdf-in-aspnet-docio?isInternalRefresh=False)
 * [How to restart numbering when replacing multiple texts with the same HTML list in Word document?](https://support.syncfusion.com/kb/article/19665/how-to-restart-numbering-when-replacing-multiple-texts-with-the-same-html-list-in-word-document)
 * [How to export content between two bookmarks as HTML in a Word document?](https://support.syncfusion.com/kb/article/20097/how-to-export-content-between-two-bookmarks-as-html-in-a-word-document)
