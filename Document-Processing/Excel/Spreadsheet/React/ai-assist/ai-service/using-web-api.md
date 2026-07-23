@@ -58,7 +58,7 @@ dotnet add package Microsoft.Extensions.AI.OpenAI
 
 ## Configure credentials
 
-Add the Azure OpenAI credentials in `appsettings.json` under `AI` section:
+Add the Azure OpenAI credentials in `appsettings.json` under the `AI` section:
 
 ```json
 {
@@ -201,7 +201,7 @@ https://localhost:{port}/api/AIAssist/Chat
 
 ## Connect to the React Spreadsheet
 
-Once the server is listening, Configure the `requestUrl` inside [`aiAssistSettings`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#aiassistsettings) to point to the server endpoint:
+Once the server is listening, configure the `requestUrl` inside [`aiAssistSettings`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#aiassistsettings) to point to the server endpoint:
 
 {% raw %}
 
