@@ -8,11 +8,12 @@ documentation: ug
 ---
 
 # Worksheet Management in Windows Forms Spreadsheet
-This section explains about the operations that are performed with the worksheet.
+
+This section explains the operations you can perform on worksheets in a workbook using the Syncfusion WinForms Spreadsheet control.
 
 ## Insert and Delete
 
-Spreadsheet provides support to insert and delete the worksheets in a workbook.
+The Spreadsheet lets you insert and delete worksheets in a workbook.
 
 {% tabs %}
 {% highlight c# %}
@@ -31,23 +32,23 @@ spreadsheet.RemoveSheet("Sheet2");
 
 ## Hide and Unhide
 
-Spreadsheet provides support to hide and unhide the worksheets in a workbook.
+The Spreadsheet lets you hide and unhide worksheets in a workbook. Hidden sheets remain in the workbook and can be displayed again using `UnhideSheet`.
 
 {% tabs %}
 {% highlight c# %}
 
 //Hide Sheet
-spreadsheet.HideSheet("Sheet 2");
+spreadsheet.HideSheet("Sheet2");
 
 //Unhide Sheet
-spreadsheet.UnhideSheet("Sheet 2");
+spreadsheet.UnhideSheet("Sheet2");
 
 {% endhighlight %}
 {% endtabs %}
 
-## Rename a sheet programmatically
+## Rename a Sheet programmatically
 
-Spreadsheet provides support to rename a worksheet in the workbook programmatically by using [RenameSheet](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_RenameSheet_System_String_System_String_) method.
+The Spreadsheet lets you rename a worksheet in the workbook programmatically by using the [RenameSheet](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_RenameSheet_System_String_System_String_) method.
 
 {% tabs %}
 	
@@ -61,33 +62,33 @@ spreadsheet.RenameSheet("ExistingSheetName", "NewSheetName");
 
 ## Protection
 
-### Protecting a worksheet
+### Protecting a Worksheet
 
-Spreadsheet provides support to protect the worksheet with or without password. This helps to prevent a user from modifying the contents of the worksheet. The protection of worksheet can be done with [ExcelSheetProtection](https://help.syncfusion.com/cr/windowsforms/Syncfusion.XlsIO.ExcelSheetProtection.html) options also.
+The Spreadsheet lets you protect a worksheet with or without a password to prevent users from modifying its contents. Protection can be configured through the [ExcelSheetProtection](https://help.syncfusion.com/cr/windowsforms/Syncfusion.XlsIO.ExcelSheetProtection.html) options.
 
-The Protect sheet options are
+The available protection options are:
 
-* LockedCells         - Allows the users to select the locked cells of the protected worksheet.
+* LockedCells         - Allows users to select the locked cells of the protected worksheet.
 
-* UnLockedCells       - Allows the users to select the unlocked cells of the protected worksheet.
+* UnLockedCells       - Allows users to select the unlocked cells of the protected worksheet.
 
-* FormattingCells     - Allows the users to format any cell on a protected worksheet.
+* FormattingCells     - Allows users to format any cell on a protected worksheet.
 
-* FormattingRows      - Allows the users to format any row on a protected worksheet.
+* FormattingRows      - Allows users to format any row on a protected worksheet.
 
-* FormattingColumns   - Allows the users to format any column on a protected worksheet.
+* FormattingColumns   - Allows users to format any column on a protected worksheet.
 
-* InsertingRows       - Allows the users to insert rows on the protected worksheet.
+* InsertingRows       - Allows users to insert rows on the protected worksheet.
 
-* InsertingColumns    - Allows the users to insert columns on the protected worksheet.
+* InsertingColumns    - Allows users to insert columns on the protected worksheet.
 
-* InsertingHyperlinks - Allows the users to insert hyperlinks on the protected worksheet.
+* InsertingHyperlinks - Allows users to insert hyperlinks on the protected worksheet.
 
-* DeletingRows        - Allows the users to delete rows on the protected worksheet.
+* DeletingRows        - Allows users to delete rows on the protected worksheet.
 
-* DeletingColumns     - Allows the users to delete columns on the protected worksheet.
+* DeletingColumns     - Allows users to delete columns on the protected worksheet.
 
-* Objects             - Allows the users to edit the objects such as Graphic cells like charts,rich textbox, etc.
+* Objects             - Allows users to edit objects such as graphic cells, charts, and rich text boxes, and etc.
 
 {% tabs %}
 {% highlight c# %}
@@ -104,9 +105,9 @@ spreadsheet.UnProtectSheet(spreadsheet.ActiveSheet, "123");
 {% endhighlight %}
 {% endtabs %}
 
-### Protecting a workbook
+### Protecting a Workbook
 
-Spreadsheet provides support to protect the structure and windows of a workbook. By protecting the structure, prevent a user from adding or deleting worksheets or from displaying hidden worksheets. By protecting the windows in the workbook, you can control the size of the workbook, etc.
+The Spreadsheet lets you protect the structure and windows of a workbook. Protecting the structure prevents a user from adding, deleting, or displaying hidden worksheets. Protecting the windows controls the size and position of the workbook window.
 
 {% tabs %}
 {% highlight c# %}
@@ -122,7 +123,7 @@ spreadsheet.Unprotect("123");
 
 ## Gridlines
 
-Spreadsheet provides support to control the visibility and color of the Gridlines in a worksheet.
+The Spreadsheet lets you control the visibility of gridlines in a worksheet.
 
 {% tabs %}
 {% highlight c# %}
@@ -138,7 +139,7 @@ spreadsheet.SetGridLinesVisibility(false);
 
 ## Headings
 
-Spreadsheet provides support to control the visibility of row and column headers in a worksheet
+The Spreadsheet lets you show or hide the row and column headers in a worksheet.
 
 {% tabs %}
 {% highlight c# %}
@@ -151,7 +152,7 @@ spreadsheet.SetRowColumnHeadersVisibility(false);
 
 ## Zooming
 
-Spreadsheet provides support to zoom in and zoom out of a worksheet view. The property [AllowZooming](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_AllowZooming) determines whether to allow zooming or not.
+The Spreadsheet lets you zoom in and zoom out of a worksheet view. The [AllowZooming](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_AllowZooming) property determines whether users are allowed to change the zoom level interactively.
 
 {% tabs %}
 {% highlight c# %}
@@ -162,13 +163,15 @@ spreadsheet.SetZoomFactor("Sheet1", 200);
 {% endhighlight %}
 {% endtabs %}
 
-The Events associated with the Zooming are 
+The events associated with zooming are:
 
 . [ZoomFactorChanged](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html)
 
 . [ZoomFactorChanging](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html)
 
 ## Events
+
+The following table lists the events raised by the Spreadsheet during worksheet management operations.
 
 <table>
 <tr>
@@ -178,31 +181,31 @@ Description</th></tr>
 <tr>
 <td>
 {{ '[WorkbookCreating](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html) ' | markdownify }}</td><td>
-Occurs when the workbook is to be created in Spreadsheet.</td></tr>
+Occurs when the workbook is to be created in the Spreadsheet.</td></tr>
 <tr>
 <td>
 {{ '[WorkbookLoaded](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html) ' | markdownify }}</td><td>
-Occur when the workbook is loaded in Spreadsheet.</td></tr>
+Occurs when the workbook is loaded in the Spreadsheet.</td></tr>
 <tr>
 <td>
 {{ '[WorksheetAdding](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html) ' | markdownify }}
 </td><td>
-Occurs when the worksheet is to be added in Spreadsheet.</td></tr>
+Occurs when a worksheet is to be added in the Spreadsheet.</td></tr>
 <tr>
 <td>
 {{ '[WorksheetAdded](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html) ' | markdownify }}
 </td><td>
-Occurs when the worksheet is added in Spreadsheet.</td></tr>
+Occurs when a worksheet is added in the Spreadsheet.</td></tr>
 <tr>
 <td>
 {{ '[WorksheetRemoving](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html) ' | markdownify }}
 </td><td>
-Occurs when the worksheet is to be removed from Spreadsheet.</td></tr>
+Occurs when a worksheet is to be removed from the Spreadsheet.</td></tr>
 <tr>
 <td>
 {{ '[WorksheetRemoved](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html) ' | markdownify }}
 </td><td>
-Occurs when the worksheet is removed from Spreadsheet.</td></tr>
+Occurs when a worksheet is removed from the Spreadsheet.</td></tr>
 <tr>
 <td>
 {{ '[WorkbookUnloaded](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html) ' | markdownify }}</td><td>

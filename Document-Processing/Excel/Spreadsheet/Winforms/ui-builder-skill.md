@@ -12,7 +12,7 @@ keywords: WinForms UI Builder, Skills, AI Assistants, Spreadsheet SDK, Agent Ski
 
 **Syncfusion® WinForms UI Builder Skill** is an AI-powered agent skill that accelerates WinForms Spreadsheet development by transforming natural-language UI requirements into production-ready code using Syncfusion® WinForms components. 
 
-Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® Spreadsheet** and other WinForms components to deliver accurate and ready-to-use code.By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, WinForms UI Builder helps you rapidly build scalable spreadsheet applications and user interfaces without leaving your development workflow.
+Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® Spreadsheet** and other WinForms components to deliver accurate and ready-to-use code. By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, WinForms UI Builder helps you rapidly build scalable spreadsheet applications and user interfaces without leaving your development workflow.
 
 ## Prerequisites
 
@@ -31,8 +31,8 @@ Before installing WinForms UI Builder Skill with Spreadsheet, ensure the followi
 
 ### **AI-Driven UI Generation**
 - Transforms prompts into fully developed WinForms components rather than just partial code snippets.
-- Automatically selects appropriate Syncfusion® components and features
-- Produces structured, maintainable code
+- Automatically selects appropriate Syncfusion® components and features.
+- Produces structured, maintainable code.
 
 ### **Control Usage & API Accuracy**
 - Uses correct Syncfusion® control APIs and properties
@@ -122,13 +122,13 @@ Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targe
 Key enforcement points:
 
 - Adds correct SkinManager configuration and theme settings for chosen Syncfusion® themes (loads required theme assemblies)
-- Injects only the feature controls and behaviors required by generated controls
+- Injects only the feature controls and behaviors required by the generated controls
 - Follows Windows Forms conventions for control naming, initialization, and event handling
 - Generates designer-compatible code with proper control hierarchy and parent-child relationships
 - Ensures all required Syncfusion® assemblies and theme NuGet packages are referenced and configured
 - Avoids unsupported or deprecated API usages for Syncfusion® Windows Forms controls
 
-> The assistant handles most stages automatically and may request confirmation where required.
+> The assistant handles most stages automatically and may request confirmation where required for file modifications.
 
 ## Using the AI Assistant
 
@@ -146,9 +146,9 @@ To start using the skill:
 
 3. Start prompting the agent with a clear description of your UI requirements.
 
-> For Syncfusion® Code Studio, if the UI Builder agent is not shown, ensure that the agent location is configured to use it in the chat, and refer to the [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/usersettings#agent-file-locations) to configure the agent location properly.
+> For Syncfusion® Code Studio, if the agent isn't listed, configure the agent location as shown in the [Code Studio agent file locations documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/usersettings#agent-file-locations).
 
-Examples Prompts:
+Example Prompts:
 
 {% promptcards %}
 {% promptcard Spreadsheet with Multiple Sheets %}
@@ -159,7 +159,7 @@ Create a WinForms application using Syncfusion Spreadsheet that initializes a wo
 {% endpromptcard %}
 {% endpromptcards %}
 
-Generated code follows Windows Forms best practices with proper control layout, event handling, data bindings, strong C# typing, and built-in security measures such as input validation and avoidance of hardcore secrets. The code is fully compatible with Visual Studio designer and Windows Forms conventions.
+Generated code follows Windows Forms best practices. It includes proper control layout, event handling, data bindings, strong C# typing, and built-in security measures such as input validation and the avoidance of hardcoded secrets. The code is fully compatible with Visual Studio designer and Windows Forms conventions.
 
 ## Best Practices
 
@@ -173,7 +173,7 @@ Follow these guidelines to get the most out of UI Builder and ensure high-qualit
 
 ## Troubleshooting
 
-- **APM installation failure**: Refer to this [documentation](https://microsoft.github.io/apm/getting-started/installation/#troubleshooting)
+- **APM installation failure**: Refer to the [APM installation troubleshooting guide](https://microsoft.github.io/apm/getting-started/installation/#troubleshooting).
 
 - **Skills not loading**: Ensure the **.agent/** and **.github/agents/** folders exist in your project and that the skill was installed successfully using APM. Verify that the correct agent is selected from the Agent dropdown in your IDE.
 
@@ -185,7 +185,7 @@ Follow these guidelines to get the most out of UI Builder and ensure high-qualit
 ## FAQ
 
 **Which agents/IDEs are supported?**
-Any Skills-compatible agent that reads local skill files (Code Studio, VS Code, Cursor, etc.).
+Any Skills-compatible agent that reads local skill files (Syncfusion® Code Studio, VS Code, Cursor, etc.).
 
 **Are skills loaded automatically?**  
 Yes. Supported agents automatically load relevant skills based on your query.

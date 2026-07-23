@@ -13,7 +13,7 @@ This section explains about the Selection behavior in Spreadsheet.
 
 The Spreadsheet control provides support for selection in grid by using mouse, keyboard and touch interactions.
 
-By default, Selection behavior will be enabled in `Spreadsheet`,but if you want to disable the selection in Spreadsheet, then set the [AllowSelection](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.SfCellGrid.html#Syncfusion_Windows_Forms_CellGrid_SfCellGrid_AllowSelection) Property to be false.
+By default, the selection behavior is enabled in the `Spreadsheet`. To disable the selection in the `Spreadsheet`, set the [AllowSelection](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.SfCellGrid.html#Syncfusion_Windows_Forms_CellGrid_SfCellGrid_AllowSelection) property to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -59,22 +59,22 @@ Spreadsheet allows the user to add and clear the selection in the Active `Spread
 {% tabs %}
 {% highlight c# %}
 
-//To Add the Selection for range,
+//To add the selection for a range,
 spreadsheet.ActiveGrid.SelectionController.AddSelection(GridRangeInfo.Cells(4,6,5,8));
 
-//To Add the Selection for particular row,
+//To add the selection for a particular row,
 spreadsheet.ActiveGrid.SelectionController.AddSelection(GridRangeInfo.Row(4));
 
-//To Add the Selection for multiple rows,
+//To add the selection for multiple rows,
 spreadsheet.ActiveGrid.SelectionController.AddSelection(GridRangeInfo.Rows(4,9));
 
-//To Add the Selection for particular column,
+//To add the selection for a particular column,
 spreadsheet.ActiveGrid.SelectionController.AddSelection(GridRangeInfo.Col(5));
 
-//To Add the Selection for multiple columns,
+//To add the selection for multiple columns,
 spreadsheet.ActiveGrid.SelectionController.AddSelection(GridRangeInfo.Cols(5,10));
 
-//To Clear the Selection,
+//To clear the selection,
 spreadsheet.ActiveGrid.SelectionController.ClearSelection();
 
 {% endhighlight %}
@@ -87,10 +87,10 @@ Spreadsheet allows the user to move the current cell to the mentioned cell in `S
 {% tabs %}
 {% highlight c# %}
 
-//Moves current cell to the mentioned row and column index of cell,
+//Moves the current cell to the specified row and column index,
 spreadsheet.ActiveGrid.CurrentCell.MoveCurrentCell(5, 5);
 
-For moving the current cell to a different sheet,
+//To move the current cell to a different sheet,
 spreadsheet.SetActiveSheet("Sheet2");
 spreadsheet.ActiveGrid.CurrentCell.MoveCurrentCell(6, 5);
 
@@ -122,12 +122,12 @@ Events</th><th>
 Description</th></tr>
 <tr>
 <td>
-{{ '[CellClick](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.SfCellGrid.html) ' | markdownify }}</td><td>
- Occurs when you click on the cell.</td></tr>
+{{ '[CellClick](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.SfCellGrid.html)' | markdownify }}</td><td>
+Occurs when a cell is clicked.</td></tr>
 <tr>
 <td>
 {{ '[CurrentCellActivating](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.SfCellGrid.html)' | markdownify }}</td><td>
-Occurs when the current cell is going to be activated. This event allow to cancel the current cell activation.</td></tr>
+Occurs when the current cell is going to be activated. This event allows you to cancel the current cell activation.</td></tr>
 <tr>
 <td>
 {{ '[CurrentCellActivated](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.SfCellGrid.html)' | markdownify }}</td><td>
@@ -171,8 +171,8 @@ Gets or sets the thickness of selection border.</td></tr>
 Gets the Selection Controller which provides the selection of content when the user drags the pressed mouse to an edge of the control.</td></tr>
 <tr>
 <td>
-{{ '[AllowSelection](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.SfCellGrid.html#Syncfusion_Windows_Forms_CellGrid_SfCellGrid_AllowSelection) ' | markdownify }}</td><td>
-Gets or Sets the value whether to allow the selection in the ActiveGrid or not.</td></tr>
+{{ '[AllowSelection](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.SfCellGrid.html#Syncfusion_Windows_Forms_CellGrid_SfCellGrid_AllowSelection)' | markdownify }}</td><td>
+Gets or sets a value that indicates whether to allow the selection in the ActiveGrid.</td></tr>
 <tr>
 <td>
 {{ '[ShowTouchIndicator](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.SelectionController.html#Syncfusion_Windows_Forms_CellGrid_SelectionController_ShowTouchIndicator) ' | markdownify }}</td><td>
@@ -193,7 +193,7 @@ Description</th></tr>
 <tr>
 <td>
 {{ '[CellRowColumnIndex](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.GridCurrentCell.html#Syncfusion_Windows_Forms_CellGrid_GridCurrentCell_CellRowColumnIndex) ' | markdownify }}</td><td>
-Gets the row and column index of the CurrentCell.</td></tr
+Gets the row and column index of the CurrentCell.</td></tr>
 <tr>
 <td>
 {{ '[RowIndex](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.GridCurrentCell.html#Syncfusion_Windows_Forms_CellGrid_GridCurrentCell_RowIndex) ' | markdownify }}</td><td>
@@ -208,12 +208,12 @@ Gets the column index of the CurrentCell.</td></tr>
 Gets the range of the CurrentCell.</td></tr>
 <tr>
 <td>
-{{ '[HasCurrentCell](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.GridCurrentCell.html#Syncfusion_Windows_Forms_CellGrid_GridCurrentCell_HasCurrentCell) ' | markdownify }}</td><td>
-Gets the value indicating whether the Grid has CurrentCell or not.</td></tr>
+{{ '[HasCurrentCell](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.GridCurrentCell.html#Syncfusion_Windows_Forms_CellGrid_GridCurrentCell_HasCurrentCell)' | markdownify }}</td><td>
+Gets a value indicating whether the grid has a CurrentCell.</td></tr>
 <tr>
 <td>
 {{ '[PreviousRowColumnIndex](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.GridCurrentCell.html#Syncfusion_Windows_Forms_CellGrid_GridCurrentCell_PreviousRowColumnIndex) ' | markdownify }}</td><td>
-Gets or sets the row and column index of old CurrentCell.</td></tr>
+Gets or sets the row and column index of the previous CurrentCell.</td></tr>
 </table>
 
 Below table lists the methods associated with selection,
@@ -226,7 +226,7 @@ Description</th></tr>
 <tr>
 <td>
 {{ '[AddSelection](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.SelectionController.html#Syncfusion_Windows_Forms_CellGrid_SelectionController_AddSelection_Syncfusion_Windows_Forms_CellGrid_GridRangeInfo_)' | markdownify }}</td><td>
-Adds/Extends the Selection to the mentioned range .</td></tr>
+Adds or extends the selection to the specified range.</td></tr>
 <tr>
 <td>
 {{ '[ClearSelection](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.SelectionController.html#Syncfusion_Windows_Forms_CellGrid_SelectionController_ClearSelection)' | markdownify }}</td><td>
@@ -234,7 +234,7 @@ Clears the Selection.</td></tr>
 <tr>
 <td>
 {{ '[MoveCurrentCell](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.GridCurrentCell.html#Syncfusion_Windows_Forms_CellGrid_GridCurrentCell_MoveCurrentCell_Syncfusion_Windows_Forms_CellGrid_ScrollAxis_RowColumnIndex_System_Boolean_)' | markdownify }}</td><td>
-Move the Current cell to mentioned row and column index.</td></tr>
+Moves the current cell to the specified row and column index.</td></tr>
 </table>
 
 ## Key Navigation
@@ -249,15 +249,14 @@ Description</th></tr>
 <tr>
 <td>
 HOME</td><td>
-Moves to the first cell of the current row .</td></tr>
+Moves to the first cell of the current row.</td></tr>
 <tr>
 <td>
 END</td><td>
-Moves to the last cell of the current row .</td></tr>
+Moves to the last cell of the current row.</td></tr>
 <tr>
 <td>
-UPARROW
-</td><td>
+UPARROW</td><td>
 Moves to one cell up of the current cell in the worksheet.</td></tr>
 <tr>
 <td>
@@ -301,7 +300,7 @@ Moves one screen to the right in a worksheet.</td></tr>
 <tr>
 <td>
 CTRL + ARROW KEYS</td><td>
-Moves to the  first/last cell of the current cell based on Arrow directions .</td></tr>
+Moves to the first or last cell of the current cell based on the arrow direction.</td></tr>
 <tr>
 <td>
 ENTER</td><td>
@@ -317,7 +316,7 @@ Moves the active current cell in one cell to the right of the selection.</td></t
 <tr>
 <td>
 SHIFT+TAB</td><td>
-Moves the active current cell in  one cell to the left of the selection.</td></tr>
+Moves the active current cell one cell to the left of the selection.</td></tr>
 <tr>
 <td>
 BACKSPACE</td><td>
@@ -333,7 +332,7 @@ Extends the selection by one cell based on the arrow direction.</td></tr>
 <tr>
 <td>
 CTRL+SHIFT+ARROW KEYS</td><td>
-Extend the selection to the last cell in a row or column.</td></tr>
+Extends the selection to the last cell in a row or column.</td></tr>
 <tr>
 <td>
 SHIFT+HOME</td><td>

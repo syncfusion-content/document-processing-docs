@@ -9,18 +9,18 @@ documentation: ug
 
 # Editing in Windows Forms Spreadsheet
 
-This section explains about the Editing behavior, Data Validation and Hyperlinks in Spreadsheet.
+This section explains the editing behavior, data validation, and hyperlinks in the Spreadsheet.
 
 ## Cell Editing
 
-The Spreadsheet control provides support for editing, you can modify and commit the cell values in the workbook.
+The Spreadsheet control supports editing, allowing you to modify and commit cell values in the workbook.
 
-By default, Editing will be enabled in `Spreadsheet`,but if you want to disable the editing in Spreadsheet, then set the [AllowEditing](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.SfCellGrid.html#Syncfusion_Windows_Forms_CellGrid_SfCellGrid_AllowEditing) Property to be false.
+By default, editing is enabled in the `Spreadsheet`. To disable editing, set the [AllowEditing](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.SfCellGrid.html#Syncfusion_Windows_Forms_CellGrid_SfCellGrid_AllowEditing) property to `false`.
 
 {% tabs %}
 {% highlight c# %}
 
-void spreadsheet_WorkbookLoaded(object sender, WorkbookLoadedEventArgs args)
+private void spreadsheet_WorkbookLoaded(object sender, WorkbookLoadedEventArgs args)
 {
     spreadsheet.ActiveGrid.AllowEditing = false;
 }
@@ -32,7 +32,7 @@ void spreadsheet_WorkbookLoaded(object sender, WorkbookLoadedEventArgs args)
 
 #### Start editing
     
-User can edit a cell programmatically by using [BeginEdit](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetCurrentCell.html#Syncfusion_Windows_Forms_Spreadsheet_SpreadsheetCurrentCell_BeginEdit_System_Boolean_) method.
+You can edit a cell programmatically by using the [BeginEdit](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetCurrentCell.html#Syncfusion_Windows_Forms_Spreadsheet_SpreadsheetCurrentCell_BeginEdit_System_Boolean_) method.
 
 {% tabs %}
 {% highlight c# %}
@@ -44,28 +44,28 @@ spreadsheet.ActiveGrid.CurrentCell.BeginEdit(true);
 
 #### End editing
 
-User can end the editing of a cell programmatically in any of the following way,
+You can end the editing of a cell programmatically in any of the following ways:
 
-* [ValidateAndEndEdit](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.GridCurrentCell.html#Syncfusion_Windows_Forms_CellGrid_GridCurrentCell_ValidateAndEndEdit) - Validates and ends the edit operation for the current cell. if the cancel is "true", then the current cell remains in edit mode else if the validation is true, commits the new value and moved to next cell or else if the validation is false, it reverts the old value and moved to next cell.
+* [ValidateAndEndEdit](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.GridCurrentCell.html#Syncfusion_Windows_Forms_CellGrid_GridCurrentCell_ValidateAndEndEdit) - Validates and ends the edit operation for the current cell. If the cancel argument is `true`, the current cell remains in edit mode. If validation succeeds, the new value is committed and the active cell moves to the next cell. If validation fails, the old value is restored and the active cell moves to the next cell.
 
-* [EndEdit](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.GridCurrentCell.html#Syncfusion_Windows_Forms_CellGrid_GridCurrentCell_EndEdit_System_Boolean_)   - Commits and ends the edit operation for the current cell, if it is passed with parameter _"true"_, commits the new changes for the cell, else reverts the old value.
+* [EndEdit](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.GridCurrentCell.html#Syncfusion_Windows_Forms_CellGrid_GridCurrentCell_EndEdit_System_Boolean_) - Commits and ends the edit operation for the current cell. If `true` is passed, the new value is committed; otherwise, the old value is restored.
 
 {% tabs %}
 {% highlight c# %}
 
-//Validates and end the edit operation,
+//Validates and ends the edit operation,
 spreadsheet.ActiveGrid.CurrentCell.ValidateAndEndEdit();
 
-//Commits the value and end the edit operation,
+//Commits the value and ends the edit operation,
 spreadsheet.ActiveGrid.CurrentCell.EndEdit(true);
 
 {% endhighlight %}
 {% endtabs %}
 
-### Locking or unlocking a cell
+### Locking or UnLocking a cell
 
-Locking cells allows you to disable editing and formatting the cells when the sheet is protected. By default, every cells are locked in the worksheet.
-But while in protect mode, if you want to edit or format a cell, you can unlock the cells.
+Locking cells allows you to disable editing and formatting the cells when the sheet is protected. By default, every cell is locked in the worksheet.
+When the sheet is protected, you can unlock specific cells to allow editing or formatting.
 
 {% tabs %}
 {% highlight c# %}
@@ -73,18 +73,18 @@ But while in protect mode, if you want to edit or format a cell, you can unlock 
 var worksheet = spreadsheet.ActiveSheet;
 var excelStyle = worksheet.Range["A2"].CellStyle;
 
-//To unlock a cell,           
+//To unlock a cell,
 excelStyle.Locked = false;
 
-//To lock a cell, 
-excelStyle.Locked = true; 
+//To lock a cell,
+excelStyle.Locked = true;
 
 {% endhighlight %}
 {% endtabs %}
 
 ### Properties, Methods, and Events
 
-The order of events when editing and committing a cell value in Spreadsheet,
+The order of events when editing and committing a cell value in the Spreadsheet is as follows:
 
 <table>
 <tr>
@@ -94,7 +94,7 @@ Description</th></tr>
 <tr>
 <td>
 {{ '[CurrentCellBeginEdit](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.SfCellGrid.html)' | markdownify }}</td><td>
-Occurs when the current cell enters into edit mode. This event allows to cancel entering the edit mode.</td></tr>
+Occurs when the current cell enters edit mode. This event allows you to cancel entering edit mode.</td></tr>
 <tr>
 <td>
 {{ '[CurrentCellValueChanged](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.SfCellGrid.html)' | markdownify }}</td><td>
@@ -102,18 +102,18 @@ Occurs when the current cell value is changed in edit mode.</td></tr>
 <tr>
 <td>
 {{ '[CurrentCellValidating](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.SfCellGrid.html)' | markdownify }}</td><td>
-Occurs when the current cell value is going to be validated. It allows you to validate and cancel the end editing.</td></tr>
+Occurs when the current cell value is going to be validated. It allows you to validate the value and cancel the end editing.</td></tr>
 <tr>
 <td>
 {{ '[CurrentCellValidated](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.SfCellGrid.html)' | markdownify }}</td><td>
-Occurs after the current cell is validated.</td></tr>
+Occurs after the current cell value is validated.</td></tr>
 <tr>
 <td>
 {{ '[CurrentCellEndEdit](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.SfCellGrid.html)' | markdownify }}</td><td>
-Occurs when the current cell leaves from edit mode.</td></tr>
+Occurs when the current cell leaves edit mode.</td></tr>
 </table>
 
-Below table list the properties associated with Editing.
+The table below lists the properties associated with editing.
 
 <table>
 <tr>
@@ -127,18 +127,18 @@ Gets or sets the value indicating whether to allow the editing operation or not.
 <tr>
 <td>
 {{ '[EditorSelectionBehavior](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.SfCellGrid.html#Syncfusion_Windows_Forms_CellGrid_SfCellGrid_EditorSelectionBehavior)' | markdownify }}</td><td>
-Gets or sets a value indicating whether editor select all the value or move last position.</td></tr>
+Gets or sets a value indicating whether the editor selects all the cell text or moves the caret to the last position.</td></tr>
 <tr>
 <td>
 {{ '[EditTrigger](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.SfCellGrid.html#Syncfusion_Windows_Forms_CellGrid_SfCellGrid_EditTrigger)' | markdownify }}</td><td>
-Gets or sets a value indicating any of the trigger options will cause cells to enter Edit Mode.</td></tr>
+Gets or sets the trigger options that cause cells to enter edit mode.</td></tr>
 <tr>
 <td>
 {{ '[IsEditing](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.GridCurrentCell.html#Syncfusion_Windows_Forms_CellGrid_GridCurrentCell_isEditing)' | markdownify }}</td><td>
-Gets  whether the current cell is in edit mode or not.</td></tr>
+Gets a value indicating whether the current cell is in edit mode.</td></tr>
 </table>
 
-Below table list the methods associated with Editing.
+The table below lists the methods associated with editing.
 
 <table>
 <tr>
@@ -148,11 +148,11 @@ Description</th></tr>
 <tr>
 <td>
 {{ '[BeginEdit](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetCurrentCell.html#Syncfusion_Windows_Forms_Spreadsheet_SpreadsheetCurrentCell_BeginEdit_System_Boolean_)' | markdownify }}</td><td>
-Begins the editing operation of the current cell and returns true if the current cell enters into edit mode.</td></tr>
+Begins the edit operation for the current cell and returns `true` if the current cell enters edit mode.</td></tr>
 <tr>
 <td>
 {{ '[EndEdit](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetCurrentCell.html#Syncfusion_Windows_Forms_Spreadsheet_SpreadsheetCurrentCell_EndEdit_System_Boolean_)' | markdownify }}</td><td>
-Commits and ends the edit operation of the current cell.</td></tr>
+Commits and ends the edit operation for the current cell.</td></tr>
 <tr>
 <td>
 {{ '[ValidateAndEndEdit](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.GridCurrentCell.html#Syncfusion_Windows_Forms_CellGrid_GridCurrentCell_ValidateAndEndEdit)' | markdownify }}</td><td>
@@ -169,7 +169,7 @@ Data Validation is a list of rules to limit the type of data or the values that 
 
 ### Applying data validation at runtime
 
-Spreadsheet allows the user to apply the data validation rules at runtime for particular cell or range using `IDataValidation` interface.
+The Spreadsheet allows you to apply data validation rules at runtime for a particular cell or range using the `IDataValidation` interface.
 
 {% tabs %}
 {% highlight c# %}
@@ -214,35 +214,35 @@ validation.ErrorBoxText = "Sum of the values in A1 and A2 should be greater than
 
 For more reference, please go through the [XlsIO](https://help.syncfusion.com/file-formats/xlsio/working-with-data-validation) UG.
 
-T> If you want to load ComboBox to a cell in Spreadsheet, you can apply List Validation to that cell.
+T> If you want to display a ComboBox in a cell of the Spreadsheet, you can apply List validation to that cell.
 
-## Hyperlink
+## Hyperlinks
 
-The Hyperlink is a convenient way to access the web pages, files and browse the data within a worksheet or other worksheets in a workbook. Spreadsheet provides support to add, edit and remove the Hyperlinks in the workbook.
+A hyperlink is a convenient way to access web pages, files, and other data within a workbook. The Spreadsheet supports adding, editing, and removing hyperlinks in the workbook.
 
-### Adding hyperlink to a cell
+### Adding a hyperlink to a cell
 
-Spreadsheet provides support to add hyperlink to a cell and it can be added in the hyperlinks collection using `IHyperlinks` interface. 
+The Spreadsheet supports adding hyperlinks to a cell, and they can be added to the hyperlinks collection using the `IHyperLinks` interface.
 
-Spreadsheet allows you to add below types of the hyperlink.
+The Spreadsheet allows you to add the following types of hyperlinks.
 
 * Web URL
-* Cell or range in workbook
+* Cell or range in a workbook
 * E-mail
 * External files
 
 {% tabs %}
 {% highlight c# %}
 
-// Creating a Hyperlink for e-mail,
+// Creating a hyperlink for an e-mail,
 var range = spreadsheet.ActiveSheet.Range["A5"];
 IHyperLink hyperlink1 = spreadsheet.ActiveSheet.HyperLinks.Add(range);
 hyperlink1.Type = ExcelHyperLinkType.Url;
 hyperlink1.Address = "mailto:Username@syncfusion.com";
-hyperlink1.TextToDisplay="Send Mail";
+hyperlink1.TextToDisplay = "Send Mail";
 spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Cell(5, 1));
 
-// Creating a Hyperlink for Opening Files,
+// Creating a hyperlink for opening files,
 var range1 = spreadsheet.ActiveSheet.Range["D5"];
 IHyperLink hyperlink2 = spreadsheet.ActiveSheet.HyperLinks.Add(range1);
 hyperlink2.Type = ExcelHyperLinkType.File;
@@ -250,7 +250,7 @@ hyperlink2.Address = @"C:\Samples\Local";
 hyperlink2.TextToDisplay = "File Location";
 spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Cell(5, 4));
 
-//Creating a Hyperlink to refer another cell in the workbook,
+// Creating a hyperlink that refers to another cell in the workbook,
 var range2 = spreadsheet.ActiveSheet.Range["C13"];
 IHyperLink hyperlink3 = spreadsheet.ActiveSheet.HyperLinks.Add(range);
 hyperlink3.Type = ExcelHyperLinkType.Workbook;
@@ -261,22 +261,22 @@ spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Cell(13, 3));
 {% endhighlight %}
 {% endtabs %}
 
-### Editing or removing hyperlink
+### Editing or removing a hyperlink
 
-Spreadsheet provides support to edit or remove the hyperlinks from the range by accessing Hyperlinks collection.
+The Spreadsheet supports editing or removing the hyperlinks from a range by accessing the hyperlinks collection.
 
 {% tabs %}
 {% highlight c# %}
 
-//To Edit a hyperlink in a cell,
+//To edit a hyperlink in a cell,
 var hyperlink = spreadsheet.ActiveSheet.Range["A5"].Hyperlinks[0];
 hyperlink.TextToDisplay = "Sample";
 hyperlink.Address = "http://help.syncfusion.com";
-spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Cell(5,1));
+spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Cell(5, 1));
 
 //To remove a hyperlink in a cell,
-var hyperlink = spreadsheet.ActiveSheet.Range["A5"].Hyperlinks.RemoveAt(0);
-spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Cell(5,1));
+spreadsheet.ActiveSheet.Range["A5"].Hyperlinks.RemoveAt(0);
+spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Cell(5, 1));
 
 {% endhighlight %}
 {% endtabs %}

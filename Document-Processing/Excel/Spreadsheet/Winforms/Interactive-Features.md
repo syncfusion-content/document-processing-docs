@@ -9,13 +9,13 @@ documentation: ug
 
 # Interactive Features in Windows Forms Spreadsheet
 
- This section explains about the interactive operations with Spreadsheet
+This section covers the interactive operations in the Spreadsheet.
 
 ## Clipboard Operations
 
-Spreadsheet provides support for all the clipboard operations to with all the format settings when copied within a workbook.  
+Spreadsheet supports all clipboard operations, including all format settings when content is copied within a workbook.
 
-You can use the following shortcut keys for Clipboard operations like Excel
+You can use the following shortcut keys for clipboard operations, as in Excel.
 <table>
 <tr>
 <th>
@@ -35,7 +35,7 @@ Paste</td><td>
 Ctrl + V</td></tr>
 </table>
 
-The following are a list of paste options used while performing paste operation,
+The following is a list of paste options available during a paste operation:
 
 <table>
 <tr>
@@ -45,27 +45,27 @@ Description</th></tr>
 <tr>
 <td>
 Paste</td><td>
-To paste with all the format options in the source range</td></tr>
+Pastes with all format options from the source range</td></tr>
 <tr>
 <td>
 Formula</td><td>
-To paste the formulas alone </td></tr>
+Pastes the formulas only</td></tr>
 <tr>
 <td>
 Keep Source Formatting</td><td>
-To maintain the source range’s formatting</td></tr>
+Maintains the source range’s formatting</td></tr>
 <tr>
 <td>
 Value</td><td>
-To paste the values alone</td></tr>
+Pastes the values only</td></tr>
 <tr>
 <td>
 Format</td><td>
-To paste only the formats alone without pasting the values.</td></tr>
+Pastes only the formats without pasting the values</td></tr>
 <tr>
 <td>
 Value & Source Formatting</td><td>
-To maintain the source range original format and paste only values</td></tr>
+Maintains the source range’s original format and pastes only values</td></tr>
 </table>
 
 N> When the content is copied from external source, Spreadsheet does not support the format settings (paste options).
@@ -75,11 +75,11 @@ For [Cut](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.S
 {% tabs %}
 {% highlight c# %}
 			
-//To perform cut operation for selected ranges
+//To perform the cut operation on the selected range
 var range = spreadsheet.ActiveGrid.SelectedRanges.ActiveRange;
 spreadsheet.ActiveGrid.CopyPaste.Copy(range, true);
 
-//To perform cut operation
+//To perform the cut operation
 spreadsheet.ActiveGrid.CopyPaste.Cut();
 
 {% endhighlight %}
@@ -90,11 +90,11 @@ For [Copy](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.
 {% tabs %}
 {% highlight c# %}
 
-//To perform copy operation for selected ranges
+//To perform the copy operation on the selected range
 var range = spreadsheet.ActiveGrid.SelectedRanges.ActiveRange;
 spreadsheet.ActiveGrid.CopyPaste.Copy(range, false);
 
-//To perform Copy operation
+//To perform the copy operation on the current selection
 spreadsheet.ActiveGrid.CopyPaste.Copy();
 
 {% endhighlight %}
@@ -105,10 +105,10 @@ For [Paste](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms
 {% tabs %}
 {% highlight c# %}
 
-//To perform paste operation
+//To perform the paste operation on the current selection
 spreadsheet.ActiveGrid.CopyPaste.Paste();
 
-//To perform paste operation with range and Paste Options
+//To perform the paste operation with a range and paste options
 var copyPaste = spreadsheet.ActiveGrid.CopyPaste as SpreadsheetCopyPaste;
 copyPaste.Paste(range);
 copyPaste.Paste(range, PasteOptions.Paste);
@@ -116,13 +116,13 @@ copyPaste.Paste(range, PasteOptions.Paste);
 {% endhighlight %}
 {% endtabs %}
 
-T> Users can also set their default [PasteOptions](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.PasteOptions.html) while pasting in Spreadsheet, by using [DefaultPasteOption](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetCopyPaste.html#Syncfusion_Windows_Forms_Spreadsheet_SpreadsheetCopyPaste_DefaultPasteOption) property.
+T> Users can also set their default [PasteOptions](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.PasteOptions.html) while pasting in Spreadsheet by using the [DefaultPasteOption](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetCopyPaste.html#Syncfusion_Windows_Forms_Spreadsheet_SpreadsheetCopyPaste_DefaultPasteOption) property.
 
-## Undo or Redo
+## Undo or redo
 
-Spreadsheet provides support for Undo/Redo functionality like Microsoft Excel.
+Spreadsheet provides support for the undo/redo functionality like Microsoft Excel.
 
-The shortcut keys used for Undo/Redo Operations
+The following shortcut keys are used for undo/redo operations:
 
 <table>
 <tr>
@@ -139,9 +139,9 @@ Redo</td><td>
 Ctrl + Y</td></tr>
 </table>
 
-Spreadsheet has [History Manager](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.History.HistoryManager.html) class that supports the implementation of undo/ redo operations
+Spreadsheet has a [History Manager](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.History.HistoryManager.html) class that supports the implementation of undo/redo operations.
 
-By default, Undo/Redo operations in Spreadsheet is enabled. To disable the Undo/Redo operations, set the [Enabled](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.History.HistoryManager.html#Syncfusion_Windows_Forms_Spreadsheet_History_HistoryManager_Enabled) property of [History Manager](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.History.HistoryManager.html) to be false.  
+By default, undo/redo operations in Spreadsheet are enabled. To disable the undo/redo operations, set the [Enabled](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.History.HistoryManager.html#Syncfusion_Windows_Forms_Spreadsheet_History_HistoryManager_Enabled) property of the [History Manager](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.History.HistoryManager.html) to false.
 
 {% tabs %}
 {% highlight c# %}
@@ -151,7 +151,7 @@ spreadsheet.HistoryManager.Enabled = false;
 {% endhighlight %}
 {% endtabs %}
 
-To programmatically, invoke the Undo/Redo operations,
+To programmatically invoke the undo/redo operations:
 
 {% tabs %}
 {% highlight c# %}
@@ -165,13 +165,13 @@ spreadsheet.HistoryManager.Redo();
 
 ## Context menu
 
-Context menu in Spreadsheet is customizable menu which can be used for various functionalities
+The context menu in Spreadsheet is customizable and can be used for various functionalities.
 
-### TabItem Context menu
+### TabItem context menu
 
-TabItem Context menu opens when the user right-click on the sheet tab and contains the menus related to worksheet operations.
+The TabItem context menu opens when the user right-clicks on the sheet tab and contains menus related to worksheet operations.
 
-By default, TabItem Context menu is enabled in Spreadsheet. To disable the TabItem context menu, set the [AllowTabItemContextMenu](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_AllowTabItemContextMenu) property to false. 
+By default, the TabItem context menu is enabled in Spreadsheet. To disable the TabItem context menu, set the [AllowTabItemContextMenu](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_AllowTabItemContextMenu) property to false.
 
 {% tabs %}
 {% highlight c# %}
@@ -181,7 +181,7 @@ spreadsheet.AllowTabItemContextMenu = false;
 {% endhighlight %}
 {% endtabs %}
 
-Default TabItem context menu has options like Insert, Delete, Hide/Unhide and Protect sheet. You can also customize the TabItem Context menu by setting [IsCustomTabItemContextMenuEnabled](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_IsCustomTabItemContextMenuEnabled)  property to be true and you can add your customized menu items.
+The default TabItem context menu has options like Insert, Delete, Hide/Unhide, and Protect sheet. You can also customize the TabItem context menu by setting the [IsCustomTabItemContextMenuEnabled](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_IsCustomTabItemContextMenuEnabled) property to true and adding your customized menu items.
 
 {% tabs %}
 {% highlight c# %}
@@ -189,7 +189,7 @@ Default TabItem context menu has options like Insert, Delete, Hide/Unhide and Pr
 spreadsheet.IsCustomTabItemContextMenuEnabled = true;
 spreadsheet.TabItemContextMenu = CustomTabItemContextMenu();
 
-//Custom TabItem ContextMenus
+//Custom TabItem context menus
 
 public ContextMenu CustomTabItemContextMenu()
 {
@@ -197,11 +197,11 @@ public ContextMenu CustomTabItemContextMenu()
     contextMenu.BackColor = Color.White;
     contextMenu.RenderMode = ToolStripRenderMode.System;
     var insertRowIcon = new Image() { Source = new BitmapImage(new Uri(@"..\..\Icon\insertRow.png", UriKind.Relative)) };
-    var insertRow = new ToolStripMenuItem() { BackColor = Color.White, Text = "InsertRow" };           
+    var insertRow = new ToolStripMenuItem() { BackColor = Color.White, Text = "InsertRow" };
     insertRow.Image = insertRowIcon;
     insertRow.Click += insertRow_Click;
     var deleteRowIcon = new Image() { Source = new BitmapImage(new Uri(@"..\..\Icon\deleteRow.png", UriKind.Relative)) };
-    var deleteRow = new ToolStripMenuItem() { BackColor = Color.White, Text = "DeleteRow"};
+    var deleteRow = new ToolStripMenuItem() { BackColor = Color.White, Text = "DeleteRow" };
     deleteRow.Image = deleteRowIcon;
     deleteRow.Click += deleteRow_Click;
     contextMenu.Items.Add(insertRow);
@@ -212,11 +212,11 @@ public ContextMenu CustomTabItemContextMenu()
 {% endhighlight %}
 {% endtabs %}
 
-### Cell Context menu
+### Cell context menu
 
-Cell Context menu opens when the user right-click on a worksheet cell or selection of cells in Spreadsheet.
+The Cell context menu opens when the user right-clicks on a worksheet cell or a selection of cells in Spreadsheet.
 
-By default, Cell Context menu is enabled in Spreadsheet. To disable the Cell Context menu, set the [AllowCellContextMenu](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_AllowCellContextMenu)  property as false.
+By default, the Cell context menu is enabled in Spreadsheet. To disable the Cell context menu, set the [AllowCellContextMenu](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_AllowCellContextMenu) property to false.
 
 {% tabs %}
 {% highlight c# %}
@@ -226,9 +226,9 @@ spreadsheet.AllowCellContextMenu = false;
 {% endhighlight %}
 {% endtabs %}
 
-Users can also customize the Cell Context menu of Spreadsheet by using [CellContextMenuOpening](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.SfCellGrid.html) Event of `SpreadsheetGrid`.
+Users can also customize the Cell context menu of Spreadsheet by using the [CellContextMenuOpening](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.SfCellGrid.html) event of `SpreadsheetGrid`.
 
-Adding the customized menu items in the CellContextMenuOpening Event,
+Adding the customized menu items in the `CellContextMenuOpening` event:
 
 {% tabs %}
 {% highlight c# %}
@@ -237,7 +237,7 @@ spreadsheet.ActiveGrid.CellContextMenuOpening += ActiveGrid_CellContextMenuOpeni
 
 void ActiveGrid_CellContextMenuOpening(object sender, CellContextMenuOpeningEventArgs e)
 {
-    //Adding Customized Menu item
+    //Adding customized menu item
     var PasteSpecial = new ToolStripMenuItem(){ BackColor = Color.White, Name = "PasteSpecial"};
     PasteSpecial.Text = "PasteSpecial";
     Image paste = new Image() { Source = new BitmapImage(new Uri(@"..\..\Icon\paste.png", UriKind.Relative)) };
@@ -245,18 +245,18 @@ void ActiveGrid_CellContextMenuOpening(object sender, CellContextMenuOpeningEven
     PasteSpecial.Click += PasteSpecial_Click;
     spreadsheet.ActiveGrid.CellContextMenu.Items.Add(PasteSpecial);
        
-    //Remove the existing Context menu
+    //Remove the existing context menu item
     spreadsheet.ActiveGrid.CellContextMenu.Items.RemoveAt(2);
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-## Cell Comments
+## Cell comments
 
-Spreadsheet provides support for cell comments like in excel to give the reader additional context for the data it contains. You can set the comment height and color for the particular comments at runtime by invoking [CellCommentOpening](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.SfCellGrid.html) Event of SpreadsheetGrid
+Spreadsheet provides support for cell comments, like in Excel, to give the reader additional context for the data it contains. You can set the comment height and color for the particular comments at runtime by invoking the [CellCommentOpening](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.SfCellGrid.html) event of `SpreadsheetGrid`.
 
-To enable the comment in Spreadsheet, set the [ShowComment](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.SfCellGrid.html#Syncfusion_Windows_Forms_CellGrid_SfCellGrid_ShowComment) property of SpreadsheetGrid to true.
+To enable comments in Spreadsheet, set the [ShowComment](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.SfCellGrid.html#Syncfusion_Windows_Forms_CellGrid_SfCellGrid_ShowComment) property of `SpreadsheetGrid` to true.
 
 {% tabs %}
 {% highlight c# %}
@@ -266,13 +266,13 @@ spreadsheet.ActiveGrid.ShowComment = true;
 {% endhighlight %}
 {% endtabs %}
 
-To set the comments for particular cell at run time,
+To set the comment for a particular cell at run time:
 
 {% tabs %}
 {% highlight c# %}
 
 spreadsheet.ActiveSheet.Range["E5"].AddComment().Text = "Sample Comment";
 spreadsheet.ActiveGrid.InvalidateCell(5, 5);
-	
+
 {% endhighlight %}
 {% endtabs %}

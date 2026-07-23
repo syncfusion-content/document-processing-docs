@@ -9,14 +9,14 @@ documentation: ug
 
 # Conditional Formatting in Windows Forms Spreadsheet
 
-This section explains about how to apply conditional formatting rules programmatically at run time in Spreadsheet.
+This section explains how to apply conditional formatting rules programmatically at runtime in Spreadsheet.
 
-In Spreadsheet, to apply conditional format for a cell or range of cells, add [IConditionalFormat](https://help.syncfusion.com/cr/windowsforms/Syncfusion.XlsIO.IConditionalFormat.html) to that range by using [AddCondition](https://help.syncfusion.com/cr/windowsforms/Syncfusion.XlsIO.IConditionalFormats.html#Syncfusion_XlsIO_IConditionalFormats_AddCondition) method.
+In Spreadsheet, to apply a conditional format to a cell or range of cells, add a new [IConditionalFormat](https://help.syncfusion.com/cr/windowsforms/Syncfusion.XlsIO.IConditionalFormat.html) to that range by using the [AddCondition](https://help.syncfusion.com/cr/windowsforms/Syncfusion.XlsIO.IConditionalFormats.html#Syncfusion_XlsIO_IConditionalFormats_AddCondition) method.
 
 {% tabs %}
 {% highlight c# %}
 
-var worksheet =spreadsheet.Workbook.Worksheets[0];
+var worksheet = spreadsheet.Workbook.Worksheets[0];
 IConditionalFormats condition = worksheet.Range["A1"].ConditionalFormats;
 IConditionalFormat condition1 = condition.AddCondition();
 
@@ -25,9 +25,9 @@ IConditionalFormat condition1 = condition.AddCondition();
 
 ## Highlight Cell Rules
 
-### Based on CellValue
+### Based on Cell Value
 
-To format the cells based on cell value, define the conditional format type as **CellValue** and other formatting options such as formula, operator, background color etc., to the specified cell or range. Finally, invalidate the cells to refresh the view.
+To format the cells based on a cell value, define the conditional format type as **CellValue** and set the operator, threshold (`FirstFormula`), and background color on the specified cell or range.
 
 {% tabs %}
 {% highlight c# %}
@@ -48,7 +48,7 @@ spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Col(1));
 
 ### Based on Formula or Cell References
 
-To format the cells based on Formula or Cell References, define the conditional format type as **Formula** and other formatting options such as formula, background color etc., to the specified cell or range. Finally, invalidate the cells to refresh the view.
+To format the cells based on a formula or cell references, define the conditional format type as **Formula** and set the `FirstFormula` and background color on the specified cell or range.
 
 {% tabs %}
 {% highlight c# %}
@@ -66,9 +66,9 @@ spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Col(1));
 {% endhighlight %}
 {% endtabs %}
 
-### Based on SpecificText
+### Based on Specific Text
 
-To format the cells based on specified text, define the conditional format type as **SpecificText** and other formatting options such as the particular text, operator, background color etc., to the specified cell or range. Finally, invalidate the cells to refresh the view.
+To format the cells based on a specified text, define the conditional format type as **SpecificText** and set the `Text`, `Operator`, and background color on the specified cell or range.
 
 {% tabs %}
 {% highlight c# %}
@@ -87,9 +87,9 @@ spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Col(1));
 {% endhighlight %}
 {% endtabs %}
 
-### Based on TimePeriod
+### Based on Time Period
 
-To format the cells based on time period, define the conditional format type as **TimePeriod** and other formatting options such as the time periods for the date, operator, background color etc., to the specified cell or range. Finally, invalidate the cells to refresh the view.
+To format the cells based on a time period, define the conditional format type as **TimePeriod** and set the `TimePeriodType` and background color on the specified cell or range. Common `CFTimePeriods` values include `Today`, `Yesterday`, `Last7Days`, `LastMonth`, `NextMonth`, and `ThisWeek`.
 
 {% tabs %}
 {% highlight c# %}
@@ -98,7 +98,7 @@ var worksheet = spreadsheet.Workbook.Worksheets[0];
 IConditionalFormats condition = worksheet.Range["A1:A100"].ConditionalFormats;
 IConditionalFormat condition1 = condition.AddCondition();
 condition1.FormatType = ExcelCFType.TimePeriod;
-condition1.TimePeriodType = CFTimePeriods.Today
+condition1.TimePeriodType = CFTimePeriods.Today;
 condition1.BackColor = ExcelKnownColors.Light_orange;
 
 spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Col(1));
@@ -106,19 +106,19 @@ spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Col(1));
 {% endhighlight %}
 {% endtabs %}
 
-Sample Output
+**Sample Output**
 
-![Formatting based on time](Conditional-Formatting_images/Conditional-Formatting_img1.PNG)
+![Formatting based on time period](Conditional-Formatting_images/Conditional-Formatting_img1.PNG)
 
 ## Data Bars
 
-To apply the conditional format based on data bars,define the conditional format type as a **DataBar** and specify the properties associated with DataBars such as bar color, MinPoint, MaxPoint etc.,.to the specified cell or range. Finally, invalidate that cells to update the view.
+To apply the conditional format based on data bars, define the conditional format type as **DataBar** and set the `BarColor`, `MinPoint`, and `MaxPoint` on the specified cell or range. The `MinPoint` and `MaxPoint` accept a `ConditionValueType` such as `LowestValue`, `HighestValue`, `Number`, `Percent`, `Percentile`, or `Formula`.
 
 {% tabs %}
 {% highlight c# %}
 
 var worksheet = spreadsheet.Workbook.Worksheets[0];
-var conditionalFormats =   worksheet.Range["B1:B100"].ConditionalFormats;
+var conditionalFormats = worksheet.Range["B1:B100"].ConditionalFormats;
 var conditionalFormat = conditionalFormats.AddCondition();
 
 conditionalFormat.FormatType = ExcelCFType.DataBar;
@@ -131,13 +131,13 @@ spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Col(2));
 {% endhighlight %}
 {% endtabs %}
 
-Sample Output
+**Sample Output**
 
-![Appearance with data bars](Conditional-Formatting_images/Conditional-Formatting_img2.PNG)
+![Formatting with data bars](Conditional-Formatting_images/Conditional-Formatting_img2.PNG)
 
 ## Color Scales
 
-To apply the conditional format based on color scales, define the conditional format type as a **ColorScale** and specify the other properties associated with ColorScale such as condition count,color criteria etc.,to the specified cell or range. Finally,invalidate that cells to update the view.
+To apply the conditional format based on color scales, define the conditional format type as **ColorScale** and set the condition count (2 or 3) along with the color criteria on the specified cell or range. Each `Criteria[index]` defines a color stop; with three criteria you get a 2- or 3-color gradient between the stop colors.
 
 {% tabs %}
 {% highlight c# %}
@@ -156,14 +156,13 @@ spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Col(3));
 {% endhighlight %}
 {% endtabs %}
 
-Sample Output
+**Sample Output**
 
-![Formatting using color gradient](Conditional-Formatting_images/Conditional-Formatting_img3.PNG)
-
+![Formatting using color scale](Conditional-Formatting_images/Conditional-Formatting_img3.PNG)
 
 ## Icon Sets
 
-To apply the conditional format for Icon sets, define the conditional format type as **IconSet** and  the properties associated with IconSet such as the type of the icon,criteria etc., to the specified cell or range. Finally, invalidate that cells to update the view.
+To apply the conditional format based on icon sets, define the conditional format type as **IconSet** and set the `IconSet` property (from the `ExcelIconSetType` enum such as `ThreeArrows`, `ThreeSymbols`, `ThreeTrafficLights`, `ThreeFlags`, or `ThreeSigns`) on the specified cell or range. Optionally configure threshold criteria via `IconSet.Criteria`.
 
 {% tabs %}
 {% highlight c# %}
@@ -180,6 +179,6 @@ spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Col(4));
 {% endhighlight %}
 {% endtabs %}
 
-Sample Output
+**Sample Output**
 
-![Formatting with icons](Conditional-Formatting_images/Conditional-Formatting_img4.PNG)
+![Formatting with icon sets](Conditional-Formatting_images/Conditional-Formatting_img4.PNG)
