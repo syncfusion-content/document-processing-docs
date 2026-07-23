@@ -66,6 +66,11 @@ chart.PrimaryValueAxis.Border.LineWeight = OfficeChartLineWeight.Hairline;
 
 {% endhighlight %}
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+//Customize the horizontal category axis.
+chart.PrimaryCategoryAxis.Border.LinePattern = OfficeChartLinePattern.CircleDot;
+chart.PrimaryCategoryAxis.Border.LineColor = Color.Blue;
+chart.PrimaryCategoryAxis.Border.LineWeight = OfficeChartLineWeight.Hairline;
+
 chart.PrimaryValueAxis.Border.LinePattern = OfficeChartLinePattern.CircleDot;
 chart.PrimaryValueAxis.Border.LineColor = Color.Blue;
 chart.PrimaryValueAxis.Border.LineWeight = OfficeChartLineWeight.Hairline;
