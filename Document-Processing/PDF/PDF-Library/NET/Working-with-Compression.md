@@ -1,6 +1,6 @@
 ---
 title: Working with Compression | PDF library | Syncfusion
-description: Learn how to reduce the size of a PDF document in .NET by compressing images, optimizing embedded fonts and page contents, and removing metadata using the Syncfusion PDF library.
+description: Learn how to reduce PDF file size in .NET by compressing images, optimizing fonts and page content, and removing metadata with Syncfusion PDF.
 platform: document-processing
 control: PDF
 documentation: UG
@@ -550,7 +550,13 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 Essential<sup>&reg;</sup> PDF allows you to compress and change the quality of an image in a PDF document by assigning a value to the [Quality](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html#Syncfusion_Pdf_Graphics_PdfBitmap_Quality) property of the [PdfBitmap](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html) class.
 
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
 //PDF doesn't support direct image compression in C#/.NET cross platforms.
+
+{% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
