@@ -260,7 +260,7 @@ using (WordDocument document = new WordDocument())
 
     //Sets position of legend.
     chart.Legend.Position = OfficeLegendPosition.Bottom;
-    //Saves the Word document to file stream.
+    //Saves the Word document.
     document.Save("Sample.docx");             
 }
 

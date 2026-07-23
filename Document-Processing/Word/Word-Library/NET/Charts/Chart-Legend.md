@@ -8,7 +8,7 @@ documentation: UG
 
 # Customize Chart Legend
 
-Legends are visual pictorial hints that provide a viewer information that helps them understand an chart. Using DocIO, you can **customize the legend in the chart**.
+Legends are visual pictorial hints that provide a viewer information that helps them understand a chart. Using DocIO, you can **customize the legend in the chart**.
 
 ## Set the Position of Legend
 
@@ -50,14 +50,14 @@ The following code snippet illustrates how to prevent the overlapping the legend
 {% endhighlight %}
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Set the position of legend.
-chart.Legend.Position = OfficeLegendPosition.Bottom;
+//Legend without overlapping the chart.
+chart.Legend.IncludeInLayout = true;
 
 {% endhighlight %}
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-' Set the position of legend.
-chart.Legend.Position = OfficeLegendPosition.Bottom
+' Legend without overlapping the chart.
+chart.Legend.IncludeInLayout = True
 
 {% endhighlight %}
 {% endtabs %}
