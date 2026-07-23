@@ -45,7 +45,7 @@ N> 2. Starting with v16.2.0.x, if Syncfusion<sup>&reg;</sup> assemblies are refe
 
 Step 3: Create a Razor file named `DocIO.razor` in the `Pages` folder, which is located inside the `Components` folder (`Components/Pages/DocIO.razor`).
 
-> **Note:** The `@rendermode InteractiveServer` directive requires that the `<Routes>` component in `App.razor` be updated to `<Routes @rendermode="InteractiveServer" />` so the interactive rendering mode is available to pages.
+N> The `@rendermode InteractiveServer` directive requires that the `<Routes>` component in `App.razor` be updated to `<Routes @rendermode="InteractiveServer" />` so the interactive rendering mode is available to pages.
 
 Include the following namespaces in the file:
 
@@ -102,11 +102,6 @@ Include the following code in `WordService.cs`. This adds the required `using` d
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-using Syncfusion.DocIO;
-using Syncfusion.DocIO.DLS;
-using Syncfusion.DocIORenderer;
-using Syncfusion.Pdf;
-using System.IO;
 
 namespace Convert_Word_Document_to_PDF.Data
 {
@@ -162,7 +157,6 @@ Create a new class file named `FileUtils.cs` at the project root and add the fol
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-using Microsoft.JSInterop;
 
 namespace Convert_Word_Document_to_PDF
 {
@@ -338,11 +332,6 @@ Include the following code in `WordService.cs`. This adds the required `using` d
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-using System.IO;
-using Syncfusion.DocIO;
-using Syncfusion.DocIO.DLS;
-using Syncfusion.DocIORenderer;
-using Syncfusion.Pdf;
 
 namespace Convert_Word_Document_to_PDF.Data
 {
@@ -594,11 +583,6 @@ Include the following code in `WordService.cs`. This adds the required `using` d
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-using Syncfusion.DocIO;
-using Syncfusion.DocIO.DLS;
-using Syncfusion.DocIORenderer;
-using Syncfusion.Pdf;
-using System.IO;
 
 namespace Convert_Word_Document_to_PDF.Data
 {
@@ -768,11 +752,7 @@ Step 2: Install the following **NuGet packages** in the application from [NuGet.
 
 N> 1. If deploying the application in a Linux environment, refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf#additional-nuget-packages-required-for-linux) for the required additional NuGet packages.
 N> 2. Starting with v16.2.0.x, if Syncfusion<sup>&reg;</sup> assemblies are referenced from trial setup or from the NuGet feed, the "Syncfusion.Licensing" assembly reference must also be added and a license key included in projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
-N> 3. If you face issues related to SkiaSharp during runtime, install the necessary WebAssembly tools by running the following commands in the terminal:
-N> ```
-N> dotnet workload install wasm-tools
-N> ```
-N> After completing the installation, restart Visual Studio to ensure proper integration of the tools.
+
 
 Step 3: Create a Razor file named `DocIO.razor` in the `Pages` folder.
 
