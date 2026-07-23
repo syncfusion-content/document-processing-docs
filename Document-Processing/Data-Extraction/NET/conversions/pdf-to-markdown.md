@@ -49,7 +49,13 @@ using System.IO;
 using Syncfusion.SmartDataExtractor;
 using System.Text;
 
-//Open the input PDF or image file as a stream.
+//Open the input PDF file as a stream.
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    //Initialize the Data Extractor.
+    DataExtractor extractor = new DataExtractor();
+    //Extract data as Markdown.
+    string data = extractor.ExtractDataAsMarkdown(stream);
     //Save the extracted Markdown data into an output file.
     File.WriteAllText("Output.md", data, Encoding.UTF8);
 }

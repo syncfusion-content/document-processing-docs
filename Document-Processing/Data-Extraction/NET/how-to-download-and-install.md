@@ -20,4 +20,4 @@ The Syncfusion<sup>&reg;</sup> Data Extraction Add-On can be downloaded from the
 2. The Syncfusion Data Extraction Add-On is provided in ZIP format. After downloading, extract the file to access the assemblies and demos for PDF and image data extraction.
    ![Extracted contents of the Syncfusion Data Extraction Add-On ZIP](images/start-trial-download-offline-installer.png)
 
-N> The Syncfusion Data Extraction Add-On is available in ZIP format for Windows, Linux, and Mac. Extract the file to access the assemblies and demos for PDF and image data extraction. A license key is required only at runtime to use the Add-On in your application; it is not required to download.
+N> The Syncfusion Data Extraction Add‑On is available in ZIP format for Windows, Linux, and Mac. Extract the file to access the assemblies and demos for PDF or image data extraction.

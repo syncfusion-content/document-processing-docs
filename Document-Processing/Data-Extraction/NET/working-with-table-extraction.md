@@ -46,7 +46,7 @@ using Syncfusion.SmartTableExtractor;
 //Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    // Initialize the Smart Table Extractor.
+    // Initialize the Table Extractor.
     TableExtractor extractor = new TableExtractor();
     //Extract table data from the PDF document as JSON string.
     string data = extractor.ExtractTableAsJson(stream);
@@ -76,7 +76,7 @@ using Syncfusion.SmartTableExtractor;
 // Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    // Initialize the Smart Table Extractor.
+    // Initialize the Table Extractor
     TableExtractor extractor = new TableExtractor();
     // Extract table data from the PDF document as Markdown.
     string data = extractor.ExtractTableAsMarkdown(stream);
@@ -94,7 +94,7 @@ using Syncfusion.SmartTableExtractor;
 // Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    // Initialize the Smart Table Extractor.
+    // Initialize the Table Extractor
     TableExtractor extractor = new TableExtractor();
     // Extract table data from the PDF document as Markdown.
     string data = extractor.ExtractTableAsMarkdown(stream);
@@ -182,7 +182,7 @@ using Syncfusion.SmartTableExtractor;
 //Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    //Initialize the Smart Table Extractor.
+    //Initialize the Table Extractor.
     TableExtractor extractor = new TableExtractor();
     //Set the page range for extraction (pages 1 to 3).
     TableExtractionOptions options = new TableExtractionOptions();
@@ -238,7 +238,7 @@ using Syncfusion.SmartTableExtractor;
 // Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    // Initialize the Smart Table Extractor.
+    // Initialize the Table Extractor.
     TableExtractor tableExtractor = new TableExtractor();
     // Create a cancellation token with a timeout of 30 seconds to control the async operation.
     CancellationTokenSource cts = new CancellationTokenSource(TimeSpan.FromSeconds(30));
@@ -262,7 +262,7 @@ using Syncfusion.SmartTableExtractor;
 // Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    // Initialize the Smart Table Extractor.
+    // Initialize the Table Extractor.
     TableExtractor tableExtractor = new TableExtractor();
     // Create a cancellation token with a timeout of 30 seconds to control the async operation.
     CancellationTokenSource cts = new CancellationTokenSource(TimeSpan.FromSeconds(30));
@@ -281,7 +281,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Table Extraction Options
 
-### Disable Borderless Table Detection
+### Disable Border-less Table Detection
 
 To disable detection of tables without visible borders in a PDF document or image using the [ExtractTableAsJson](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartTableExtractor.TableExtractor.html#Syncfusion_SmartTableExtractor_TableExtractor_ExtractTableAsJson_System_IO_Stream_) method of the [TableExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartTableExtractor.TableExtractor.html) class, refer to the following code examples.
 
@@ -297,7 +297,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 {
     //Initialize the Smart Table Extractor.
     TableExtractor extractor = new TableExtractor();
-    //Configure the table extraction option to disable borderless tables in the document.
+    //Configure the table extraction option to disable border-less tables in the document.
     TableExtractionOptions options = new TableExtractionOptions();
     //By default *DetectBorderlessTables is true*
     options.DetectBorderlessTables = false;
@@ -319,16 +319,16 @@ using Syncfusion.SmartTableExtractor;
 //Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    // Initialize the Smart Table Extractor.
+    // Initialize the Table Extractor.
     TableExtractor extractor = new TableExtractor();
-    //Configure the table extraction option to detect border-less tables in the document.
+    // Configure the table extraction option to detect border-less tables in the document.
     TableExtractionOptions options = new TableExtractionOptions();
     options.DetectBorderlessTables = true;
-    //Assign the configured options to the extractor.
+    // Assign the configured options to the extractor.
     extractor.TableExtractionOptions = options;
-    //Extract table data from the PDF document as a JSON string.
+    // Extract table data from the PDF document as a JSON string.
     string data = extractor.ExtractTableAsJson(stream);
-    //Save the extracted JSON data into an output file.
+    // Save the extracted JSON data into an output file.
     File.WriteAllText("Output.json", data, Encoding.UTF8);
 }
 
