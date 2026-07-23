@@ -467,7 +467,7 @@ public IActionResult Open(IFormCollection openRequest)
 
 ## Save
 
-The Spreadsheet control saves its data, styles, format, and more as an Excel file document. To enable this feature, set [`allowSave`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowsave) as `true` and assign the service URL to the [`saveUrl`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#saveurl) property.
+The Spreadsheet control saves its data, style, format, and more as an Excel file document. To enable this feature, set [`allowSave`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowsave) as `true` and assign the service URL to the [`saveUrl`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#saveurl) property.
 
 **User Interface**:
 
