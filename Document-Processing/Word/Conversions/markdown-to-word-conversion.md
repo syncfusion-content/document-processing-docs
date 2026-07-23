@@ -499,7 +499,7 @@ N> Provide the encoding value before opening the Markdown file, as shown in the 
 <p>Image</p>
 </td>
 <td style="width: 26%;">
-<p>![Alternate text](URL path)</p>
+<p>![Alternate text] (URL path)</p>
 </td>
 <td style="width: 41.7072%;">
 <p>For an image, enclose alternative text within brackets [], and then the image URL within parentheses ().</p>
