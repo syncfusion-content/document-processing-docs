@@ -15,38 +15,25 @@ The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-
 
 ## Key features
 
-### Document creation and editing
+The following are the key features of this [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library).
 
-* [Create PDF documents from scratch](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-javascript) with full layout control.
-* [Load, edit, and save](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/open-and-save-pdf-files) existing PDF files.
-* [Merge multiple PDFs](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/merge-document) or [split a document into separate files](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/split-documents).
-* [Design and apply templates](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/templates) for consistent layouts and branding.
-
-### Content and graphics
-
-* Add formatted text, images, shapes, and other graphical elements.
-* [Insert hyperlinks](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/hyperlinks) for both web and document navigation.
-* Apply text, image, and annotation watermarks.
-* [Add, remove, or modify bookmarks](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/bookmarks) for better document organization.
-* [Create, remove, and flatten layers](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/layers) within PDFs.
-
-### Forms and annotations
-
+* Create PDF documents from scratch with ease.
+* Load, edit, and save existing PDF files.
+* Open and manipulate password-protected PDF documents.
+* Enhance PDFs by adding text, images, shapes, and other graphical elements.
 * Add and manage interactive components such as bookmarks, annotations, and form fields.
-* [Form fields](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/formfields) for a finalized document.
-* [Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/annotations) between documents.
-
-### Security
-
-* [Digitally sign PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/digitalsignature) using PFX and PKCS#12 certificates. PKCS#11 hardware tokens are supported via the platform-specific extension.
-* [Redacting in PDF Document](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/redaction) to protect sensitive content.
-
-### Text and image extraction
-
-* [Extract text from PDF files](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/text-extraction) for indexing or downstream processing.
-* [Extract images from PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/image-extraction).
-
-> **PDF version notes:** Redaction and certain digital signature features require PDF 2.0 (ISO 32000-2:2020). All other features are compatible with PDF 1.7 (ISO 32000-1).
+* Flatten form fields and annotations for a finalized document.
+* Import and export form field data and annotations seamlessly.
+* Merge multiple PDFs or split a document into separate files.
+* Apply text watermarks, image watermarks, and watermark annotations.
+* Insert hyperlinks for both web and document navigation.
+* Add, remove, or modify bookmarks for better document organization.
+* Create, remove, and flatten layers within PDFs.
+* Design and apply templates for consistent layouts and branding.
+* Digitally sign PDF documents for secure authentication.
+* Extract or redact text from PDF files.
+* Extract images from PDF documents.
+* Redact shapes to protect sensitive graphical content.
 
 ## Supported environments
 
@@ -71,6 +58,6 @@ If the license is not registered, the generated PDFs include a watermark and an 
 
 ## Next steps
 
-* [Quickstart tutorial](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/getting-started)
+* [Quickstart tutorial](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
 * [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
 * [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default.html)

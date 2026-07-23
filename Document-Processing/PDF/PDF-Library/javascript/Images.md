@@ -1,6 +1,7 @@
 ---
 title: Images in JavaScript PDF Library | Syncfusion
-description: Learn how to add and insert images into PDF documents using the JavaScript PDF Library. Covers JPEG and PNG formats, drawing, clipping, transparency, and rotation.
+canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
+description: Learn to add and insert JPEG and PNG images in PDF documents with JavaScript PDF Library, including drawing, clipping, transparency, and rotation
 platform: document-processing
 control: PDF
 documentation: UG
@@ -8,7 +9,7 @@ documentation: UG
 
 # Images in JavaScript PDF Library
 
-Syncfusion's [JavaScript PDF library](https://www.syncfusion.com/document-processing/pdf-library/javascript) supports adding **JPEG** and **PNG** images.
+Syncfusion's [JavaScript PDF library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) supports adding **JPEG** and **PNG** images.
 
 Images are supported through the [PdfImage](https://ej2.syncfusion.com/documentation/api/pdf/pdfimage) class, which is an abstract base class. The [PdfBitmap](https://ej2.syncfusion.com/documentation/api/pdf/pdfbitmap) class derives from `PdfImage` and is used to load and draw raster images in a PDF.
 
@@ -68,7 +69,7 @@ import { PdfDocument, PdfPage, PdfGraphics, PdfImage, PdfBitmap } from '@syncfus
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
-// Access first page using getPage
+// Access first page
 let page: PdfPage = document.getPage(0);
 // Get graphics from the page
 let graphics: PdfGraphics = page.graphics;
@@ -86,7 +87,7 @@ document.destroy();
 
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
-// Access first page using getPage
+// Access first page
 var page = document.getPage(0);
 // Get graphics from the page
 var graphics = page.graphics;

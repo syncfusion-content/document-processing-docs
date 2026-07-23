@@ -1,5 +1,6 @@
 ---
 title: Text Extraction in JavaScript PDF Library | Syncfusion
+canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: This section explains how to extract text and its bounds from a specific page or the entire PDF document by using the JavaScript PDF Library
 platform: document-processing
 control: PDF
@@ -261,7 +262,7 @@ document.destroy();
 
 ### Working with characters
 
-You can retrieve a single character and its properties, including bounds, font name, font size, font style, and text color, using the [extractTextLines](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#extracttextlines) method. Each `TextWord` exposes a `glyphs` collection of [TextGlyph](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/textglyph) objects, and each glyph's `color` is a [PdfColor](https://ej2.syncfusion.com/documentation/api/pdf/pdfcolor) value. Refer to the code sample below.
+You can retrieve a single character and its properties, including bounds, font name, font size, font style, and text color, using the [extractTextLines](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor/#extracttextlines) method. Each `TextWord` exposes a `glyphs` collection of [TextGlyph](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/textglyph) objects, and each glyph's `color` is a [PdfColor](https://ej2.syncfusion.com/documentation/api/pdf/pdfcolor) value. Refer to the code sample below.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

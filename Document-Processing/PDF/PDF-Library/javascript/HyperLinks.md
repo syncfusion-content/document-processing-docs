@@ -1,5 +1,6 @@
 ---
 title: Hyperlinks in JavaScript PDF Library | Syncfusion
+canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: This section explains how to add a hyperlink in a new or existing PDF document by using the JavaScript PDF Library
 platform: document-processing
 control: PDF
@@ -10,25 +11,9 @@ documentation: UG
 
 You can add hyperlinks to allow users to navigate to another part of a PDF file, a web page, or any other external content.
 
-## Annotation Type Overview
-
-| Use Case | Class | Description |
-|---|---|---|
-| Web navigation | `PdfTextWebLinkAnnotation` | Navigate to a URL by clicking annotated text |
-| Internal document navigation | `PdfDocumentLinkAnnotation` | Navigate to a location within the same PDF |
-| External document navigation | `PdfFileLinkAnnotation` | Open another file (PDF, image, etc.) |
-| Modify existing link | `PdfTextWebLinkAnnotation` | Update URL or bounds of an existing web link |
-| Remove link | `PdfAnnotationCollection` | Use `remove()` or `removeAt()` to delete annotations |
-
 ## Working with web navigation
 
 This example demonstrates how to create a web link annotation in a PDF document using the [PdfTextWebLinkAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdftextweblinkannotation) class. A web link annotation allows users to navigate to a specified URL directly from the PDF by clicking the annotated text.
-
-**Constructor parameters:**
-- `bounds`: Rectangle defining the annotation area (`{ x, y, width, height }`)
-- `textColor`: Text color as RGB object (`{ r, g, b }`)
-- `backgroundColor`: Background color as RGB object (`{ r, g, b }`)
-- `borderWidth`: Border width in points
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -142,8 +127,6 @@ document.destroy();
 
 This example demonstrates how to create external navigation in a PDF document using [PdfFileLinkAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdffilelinkannotation) annotations. External navigation allows users to open and navigate to another PDF or an external file from within the current document.
 
-**File resolution behavior:** The file path specified in the constructor is **referenced at runtime** (not embedded in the PDF). The target file must be accessible at the specified path when the PDF is opened. Use an absolute path or ensure the file is located relative to the PDF viewer's working directory.
-
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument, PdfPage, PdfFileLinkAnnotation } from '@syncfusion/ej2-pdf';
@@ -180,6 +163,8 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
+N> The file path specified in the constructor is **referenced at runtime** (not embedded in the PDF). The target file must be accessible at the specified path when the PDF is opened. Use an absolute path or ensure the file is located relative to the PDF viewer's working directory.
+
 ## Modifying or updating existing hyperlinks
 
 This example shows how to update hyperlink annotations in a PDF using [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library). Link annotations retrieved from a page can have their URL or bounding region updated as needed. This makes it easy to refresh outdated links or adjust navigation behavior whenever the document changes.
@@ -188,7 +173,7 @@ This example shows how to update hyperlink annotations in a PDF using [JavaScrip
 {% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument, PdfPage, PdfTextWebLinkAnnotation, PdfAnnotation } from '@syncfusion/ej2-pdf';
 
-// Load an existing PDF document from a file
+// Load an existing PDF document
 let document: PdfDocument = new PdfDocument(pdfBytes);
 // Access the first page
 let page: PdfPage = document.getPage(0);
@@ -206,7 +191,7 @@ document.destroy();
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 
-// Load an existing PDF document from a file
+// Load an existing PDF document
 var document = new ej.pdf.PdfDocument(pdfBytes);
 // Access the first page
 var page = document.getPage(0);

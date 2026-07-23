@@ -1,5 +1,6 @@
 ---
 title: Bookmarks in JavaScript PDF Library | Syncfusion
+canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: This section explains how to add, modify and remove bookmarks in the PDF document by using JavaScript PDF Library
 platform: document-processing
 control: PDF
@@ -15,7 +16,7 @@ Bookmarks (also called *outlines* in the PDF specification) appear in the bookma
 This guide covers the supported operations:
 
 | Operation | API |
-|---|---|
+|||
 | Add a bookmark to a new PDF | `bookmarks.add(title, index, options?)` |
 | Insert a bookmark at a specific position in an existing PDF | `bookmarks.add(title, index, options?)` |
 | Create nested (parent–child) bookmarks | `bookmark.add(title, index, options?)` |
@@ -24,20 +25,9 @@ This guide covers the supported operations:
 | Remove every bookmark | `bookmarks.clear()` |
 | Get the page index of a bookmark | `bookmark.destination.pageIndex` |
 
----
-
 ## Adding bookmarks to a PDF
 
 This example demonstrates how to add bookmarks to a PDF document using the [PdfBookmark](https://ej2.syncfusion.com/documentation/api/pdf/pdfbookmark) class. Bookmarks provide an easy way to navigate through different sections of a PDF file.
-
-`bookmarks.add` has two overloads:
-
-| Signature | Description |
-|---|---|
-| `add(title: string, index: number): PdfBookmark` | Adds a minimal bookmark at the given position. The destination can be set afterwards via `bookmark.destination`. |
-| `add(title: string, index: number, options: PdfBookmarkOptions): PdfBookmark` | Adds a bookmark with destination, named destination, color, and text style in a single call. |
-
-The `PdfDestination` constructor accepts `(page: PdfPage, point: { x: number, y: number }, zoom?: { zoom: number })`. Coordinates are in PDF user space (origin at the bottom-left of the page). The `color` option is an `{ r, g, b }` object with each channel in `0`–`255`; it controls the bookmark's color in the reader's bookmark pane. `PdfTextStyle` is an enum with values such as `regular`, `bold`, and `italic`.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -83,11 +73,9 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ## Inserting bookmarks at a specific position
 
-This example demonstrates how to insert a bookmark at a specific index in an existing PDF document using the [PdfBookmark](https://ej2.syncfusion.com/documentation/api/pdf/pdfbookmark) class. The `add(title, index)` overload creates a bookmark with only a title, and you can set its destination later through the `bookmark.destination` property.
+This example demonstrates how to insert a bookmark at a specific index in an existing PDF document using the [PdfBookmark](https://ej2.syncfusion.com/documentation/api/pdf/pdfbookmark) class. This feature allows precise control over bookmark order.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -128,8 +116,6 @@ document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
-
----
 
 ## Creating nested bookmarks
 
@@ -190,8 +176,6 @@ document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
-
----
 
 ## Removing bookmarks
 
@@ -303,8 +287,6 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ## Getting a bookmark's page index
 
 This example demonstrates how to retrieve the page index associated with a bookmark in an existing PDF document using the [PdfBookmark](https://ej2.syncfusion.com/documentation/api/pdf/pdfbookmark) class. Specifies the page index linked to the bookmark.
@@ -344,8 +326,6 @@ document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
-
----
 
 ## Additional Resources
 

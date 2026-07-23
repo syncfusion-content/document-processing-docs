@@ -1,5 +1,6 @@
 ---
 title: Digital Signature in JavaScript PDF Library | Syncfusion
+canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: This section explains how to create a digital signature in the PDF document by using JavaScript PDF Library
 platform: document-processing
 control: PDF
@@ -14,15 +15,7 @@ The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-
 
 This example demonstrates how to add a digital signature to a PDF document using the [PdfSignature](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature) class. Digital signatures ensure document authenticity and integrity by applying cryptographic standards.
 
-The [`PdfSignature.create()`](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature#create) method supports the following overloads:
-
-| Overload | Parameters | Returns |
-|---|---|---|
-| `PdfSignature.create(certData, password, options?)` | `certData: Uint8Array`, `password: string`, `options?: PdfSignatureOptions` | `PdfSignature` |
-| `PdfSignature.create(callback, options?)` | `callback: ExternalSignatureCallback`, `options?: PdfSignatureOptions` | `PdfSignature` |
-| `PdfSignature.create(callback, publicCertificates, options?)` | `callback: ExternalSignatureCallback`, `options?: PdfSignatureOptions` | `PdfSignature` |
-
-### Add to a new document
+### Add a digital signature to a new document
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -84,7 +77,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-### Add to an existing document
+### Add a digital signature to an existing document
 
 The following code snippet explains how to add a digital signature in an existing PDF document.
 
@@ -160,35 +153,9 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-### Supported enumerations
-
-The following enumerations are referenced throughout the examples in this guide.
-
-| Enumeration | Supported values |
-|---|---|
-| [`DigestAlgorithm`](https://ej2.syncfusion.com/documentation/api/pdf/digestalgorithm) | `sha1`, `sha256`, `sha384`, `sha512` |
-| [`CryptographicStandard`](https://ej2.syncfusion.com/documentation/api/pdf/cryptographicstandard) | `cms`, `cades` (where applicable) |
-| [`PdfCertificationFlags`](https://ej2.syncfusion.com/documentation/api/pdf/pdfcertificationflags) | `allowFormFill`, `forbidChanges`, `allowComments` |
-
-### `PdfSignatureOptions` reference
-
-| Property | Type | Description |
-|---|---|---|
-| `signedName` | `string` | Name of the signer. |
-| `isLocked` | `boolean` | Locks the document after signing. |
-| `documentPermissions` | `PdfCertificationFlags` | Permissions granted after certifying. |
-| `certify` | `boolean` | Marks the signature as a certifying signature. |
-| `reason` | `string` | Reason for signing. |
-| `locationInfo` | `string` | Physical location of signing. |
-| `contactInfo` | `string` | Signer contact information. |
-| `cryptographicStandard` | `CryptographicStandard` | Cryptographic standard. |
-| `digestAlgorithm` | `DigestAlgorithm` | Digest algorithm. |
-
 ## External signing
 
 [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) provides support to create a new PDF signature using a callback function for external signing, enabling secure and flexible digital signature workflows.
-
-> **When to use external signing:** Use external signing when the private key is stored outside your application — for example, on a Hardware Security Module (HSM), in a remote signing service, or in a cloud KMS such as Azure Key Vault or AWS CloudHSM.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -263,7 +230,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## Public certificates for external signing
+## Create Signature with Public Certificates for External Signing
 
 This example demonstrates how to create a new PDF signature using the [PdfSignature](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature) class with public certificates for external signing. External signing allows you to implement custom signing logic outside the [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) while maintaining compliance with cryptographic standards.
 
@@ -346,8 +313,6 @@ document.destroy();
 {% endtabs %}
 
 ## Replacing an empty signature
-
-> The two-step process is required when the signing operation cannot complete inside the `PdfSignature.create(...)` callback — for example, when the private key lives on a remote HSM with high latency. First, reserve the signature field with an empty signature dictionary; then, after the remote signer returns the signed bytes, call `replaceEmptySignature(...)` to embed them in the previously reserved field.
 
 This example demonstrates how to replace an empty signature field in a PDF document with externally signed data using the [`replaceEmptySignature()`](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature#replaceemptysignature) method of the [PdfSignature](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature) class. This method allows embedding externally signed content, certificates, and optional timestamp data into the PDF.
 
@@ -455,9 +420,25 @@ var signedDocumentData = ej.pdf.PdfSignature.replaceEmptySignature(
 {% endhighlight %}
 {% endtabs %}
 
+N> The two-step process is required when the signing operation cannot complete inside the `PdfSignature.create(...)` callback — for example, when the private key lives on a remote HSM with high latency. First, reserve the signature field with an empty signature dictionary; then, after the remote signer returns the signed bytes, call `replaceEmptySignature(...)` to embed them in the previously reserved field.
+
 ## Signature options
 
 The following examples demonstrate the signature-creation options available in `PdfSignatureOptions`.
+
+### `PdfSignatureOptions` reference
+
+| Property | Type | Description |
+|---|---|---|
+| `signedName` | `string` | Name of the signer. |
+| `isLocked` | `boolean` | Locks the document after signing. |
+| `documentPermissions` | `PdfCertificationFlags` | Permissions granted after certifying. |
+| `certify` | `boolean` | Marks the signature as a certifying signature. |
+| `reason` | `string` | Reason for signing. |
+| `locationInfo` | `string` | Physical location of signing. |
+| `contactInfo` | `string` | Signer contact information. |
+| `cryptographicStandard` | `CryptographicStandard` | Cryptographic standard. |
+| `digestAlgorithm` | `DigestAlgorithm` | Digest algorithm. |
 
 ### Certified signature
 
@@ -678,10 +659,6 @@ ldocument.destroy();
 
 This example shows how to apply a digital signature with a trusted timestamp, ensuring the signature remains valid even after the certificate expires. A timestamp callback contacts a Time Stamping Authority (TSA) to add an official time record to the signature. This provides long‑term proof of when the document was signed.
 
-> This section requires async handling. When the timestamp or external-signing callback is asynchronous, use `await document.saveAsync(...)` instead of `document.save(...)`. Otherwise, the save completes before the async callback resolves and the timestamp bytes are lost.
-
-The following example uses a placeholder TSA endpoint. Replace it with a provider and wrap the request in a `try/catch` so the document is not saved with a partial signature if the TSA is unreachable.
-
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument, PdfPage, PdfForm, PdfSignatureField, PdfSignature, CryptographicStandard, DigestAlgorithm } from '@syncfusion/ej2-pdf';
@@ -739,6 +716,8 @@ document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
+
+N> This section requires async handling. When the timestamp or external-signing callback is asynchronous, use `await document.saveAsync(...)` instead of `document.save(...)`. Otherwise, the save completes before the async callback resolves and the timestamp bytes are lost.
 
 ## Customizing the signature appearance
 
@@ -866,7 +845,7 @@ document.destroy();
 
 ### Get certificate information from a PDF signature
 
-This example demonstrates how to retrieve the certificate information of a PDF signature using the [`getCertificateInformation()`](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature#getcertificateinformation) method of the [PdfSignature](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature) class. This information includes details about the signer's certificate used for digital signing.
+This example demonstrates how to retrieve the certificate information of a PDF signature using the [`getCertificateInformation()`](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature/#getcertificateinformation) method of the [PdfSignature](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature) class. This information includes details about the signer's certificate used for digital signing.
 
 The [`PdfCertificateInformation`](https://ej2.syncfusion.com/documentation/api/pdf/pdfcertificateinformation) object exposes the following properties:
 
@@ -879,7 +858,6 @@ The [`PdfCertificateInformation`](https://ej2.syncfusion.com/documentation/api/p
 | `validTo` | `Date` | Certificate validity end. |
 | `version` | `string` | Certificate version. |
 | `publicKey` | `Uint8Array` | Public key bytes. |
-| `thumbprint` | `string` | Certificate thumbprint. |
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

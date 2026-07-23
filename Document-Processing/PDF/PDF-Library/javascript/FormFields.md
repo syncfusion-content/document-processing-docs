@@ -1,5 +1,6 @@
 ---
 title: Form Fields in JavaScript PDF Library | Syncfusion
+canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: Learn how to create, fill, modify, order, auto-name, flatten, import, and export form fields in a PDF document using the Syncfusion JavaScript PDF Library.
 platform: document-processing
 control: PDF
@@ -1160,7 +1161,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-To flatten all interactive elements (form fields and annotations) in a single call, set `document.flatten = true;` before saving. This is a document-level operation that applies throughout the document.
+N> To flatten all interactive elements (form fields and annotations) in a single call, set `document.flatten = true;` before saving. This is a document-level operation that applies throughout the document.
 
 ## Marking form fields as read-only
 

@@ -1,6 +1,7 @@
 ---
 title: XMP Metadata support in JavaScript PDF Library | Syncfusion
-description: This section explains how to create, read, modify, and manage XMP metadata in PDF documents using the JavaScript PDF Library. It covers the supported XMP schemas, custom metadata, and best practices for embedding structured metadata in PDFs.
+canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
+description: Learn to create, read, edit, and manage XMP metadata in PDF documents with JavaScript PDF Library, including schemas, custom metadata, and best practices
 platform: document-processing
 control: PDF
 documentation: UG
@@ -84,8 +85,6 @@ let xmpMetadata: PdfXmpMetadata = documentProperties.xmpMetadata;
 // Modify metadata
 xmpMetadata.basicSchema.creatorTool = 'Updated Tool';
 xmpMetadata.dublinCoreSchema.title = { 'en-US': 'Updated Title' };
-// Persist updated document information
-document.setDocumentInformation(documentProperties);
 // Save changes
 document.save('Modified.pdf');
 document.destroy();
@@ -102,8 +101,6 @@ var xmpMetadata = documentProperties.xmpMetadata;
 // Modify metadata
 xmpMetadata.basicSchema.creatorTool = 'Updated Tool';
 xmpMetadata.dublinCoreSchema.title = { 'en-US': 'Updated Title' };
-// Persist updated document information
-document.setDocumentInformation(documentProperties);
 // Save changes
 document.save('Modified.pdf');
 // Destroy the document
@@ -208,16 +205,15 @@ Different schema types define categories of metadata used in PDF documents. The 
 
 Use the following guide to select the right schema for your metadata needs.
 
-| If you need to store… | Use this Schema |
-|---|---|
-| Creator tool, creation/modification dates | Basic Schema |
-| Title, author, subject, description | Dublin Core Schema |
-| PDF-specific properties (keywords, producer, version) | PDF Schema |
-| Print job or workflow information | Job Ticket Schema |
-| Ownership, rights, and permissions | Rights Management Schema |
-| Page count and structural metadata | Paged Text Schema |
-| Application-specific data with a custom namespace | Custom XMP Schema |
-| Simple key-value pairs in the PDF Info dictionary | Custom Metadata (Info Dictionary) |
+| Schema Type              | Description                                      |
+|--------------------------|--------------------------------------------------|
+| Basic Schema             | General document metadata (creator, dates, tool) |
+| Dublin Core Schema       | Descriptive metadata (title, author)             |
+| Job Ticket Schema        | Print workflow metadata                          |
+| Rights Management Schema | Ownership and permissions                        |
+| PDF Schema               | PDF-specific properties (producer, version)      |
+| Paged Text Schema        | Page content and structure-related metadata      |
+| Custom Schema            | User-defined metadata with custom namespaces     |
 
 ## Basic Schema
 
@@ -235,13 +231,11 @@ let document: PdfDocument = new PdfDocument(data);
 // Access document information
 let documentProperties: PdfDocumentInformation = document.getDocumentInformation(false);
 // Get XMP metadata
-let xmpMetadata: PdfDocumentInformation['xmpMetadata'] = documentProperties.xmpMetadata;
+let xmpMetadata = documentProperties.xmpMetadata;
 // Set basic schema metadata
 xmpMetadata.basicSchema.creatorTool = 'MyApp';
 xmpMetadata.basicSchema.createDate = new Date();
 xmpMetadata.basicSchema.modifyDate = new Date();
-// Persist updated document information
-document.setDocumentInformation(documentProperties);
 // Save the updated document
 document.save('Output.pdf');
 // Destroy the document
@@ -260,8 +254,6 @@ var xmpMetadata = documentProperties.xmpMetadata;
 xmpMetadata.basicSchema.creatorTool = 'MyApp';
 xmpMetadata.basicSchema.createDate = new Date();
 xmpMetadata.basicSchema.modifyDate = new Date();
-// Persist updated document information
-document.setDocumentInformation(documentProperties);
 // Save the updated document
 document.save('Output.pdf');
 // Destroy the document
@@ -290,8 +282,6 @@ let xmpMetadata: PdfXmpMetadata = documentProperties.xmpMetadata;
 // Set Dublin Core metadata
 xmpMetadata.dublinCoreSchema.creator = ['Author Name'];
 xmpMetadata.dublinCoreSchema.title = { 'en-US': 'Sample Title' };
-// Persist updated document information
-document.setDocumentInformation(documentProperties);
 // Save the updated document
 document.save('Output.pdf');
 // Destroy the document
@@ -309,8 +299,6 @@ var xmpMetadata = documentProperties.xmpMetadata;
 // Set Dublin Core metadata
 xmpMetadata.dublinCoreSchema.creator = ['Author Name'];
 xmpMetadata.dublinCoreSchema.title = { 'en-US': 'Sample Title' };
-// Persist updated document information
-document.setDocumentInformation(documentProperties);
 // Save the updated document
 document.save('Output.pdf');
 // Destroy the document
@@ -339,8 +327,6 @@ let xmpMetadata: PdfXmpMetadata = documentProperties.xmpMetadata;
 // Set job references
 xmpMetadata.basicJobTicketSchema.jobRef = ['JobA', 'JobB'];
 xmpMetadata.basicJobTicketSchema.jobName = 'Quarterly Report';
-// Persist updated document information
-document.setDocumentInformation(documentProperties);
 // Save the updated document
 document.save('Output.pdf');
 // Destroy the document
@@ -358,8 +344,6 @@ var xmpMetadata = documentProperties.xmpMetadata;
 // Set job references
 xmpMetadata.basicJobTicketSchema.jobRef = ['JobA', 'JobB'];
 xmpMetadata.basicJobTicketSchema.jobName = 'Quarterly Report';
-// Persist updated document information
-document.setDocumentInformation(documentProperties);
 // Save the updated document
 document.save('Output.pdf');
 // Destroy the document
@@ -389,8 +373,6 @@ let xmpMetadata: PdfXmpMetadata = documentProperties.xmpMetadata;
 xmpMetadata.rightsManagementSchema.isMarked = true;
 xmpMetadata.rightsManagementSchema.mark = 'Copyright 2026 Syncfusion';
 xmpMetadata.rightsManagementSchema.webStatement = 'https://example.com/rights';
-// Persist updated document information
-document.setDocumentInformation(documentProperties);
 // Save the updated document
 document.save('Output.pdf');
 // Destroy the document
@@ -409,8 +391,6 @@ var xmpMetadata = documentProperties.xmpMetadata;
 xmpMetadata.rightsManagementSchema.isMarked = true;
 xmpMetadata.rightsManagementSchema.mark = 'Copyright 2026 Syncfusion';
 xmpMetadata.rightsManagementSchema.webStatement = 'https://example.com/rights';
-// Persist updated document information
-document.setDocumentInformation(documentProperties);
 // Save the updated document
 document.save('Output.pdf');
 // Destroy the document
@@ -485,8 +465,6 @@ let documentProperties: PdfDocumentInformation = document.getDocumentInformation
 let xmpMetadata: PdfXmpMetadata = documentProperties.xmpMetadata;
 // Set page count from the actual document page count
 xmpMetadata.pagedTextSchema.pageCount = document.pageCount.toString();
-// Persist updated document information
-document.setDocumentInformation(documentProperties);
 // Save the updated document
 document.save('Output.pdf');
 // Destroy the document
@@ -503,8 +481,6 @@ var documentProperties = document.getDocumentInformation(false);
 var xmpMetadata = documentProperties.xmpMetadata;
 // Set page count from the actual document page count
 xmpMetadata.pagedTextSchema.pageCount = document.pageCount.toString();
-// Persist updated document information
-document.setDocumentInformation(documentProperties);
 // Save the updated document
 document.save('Output.pdf');
 // Destroy the document
@@ -538,8 +514,6 @@ let custom: PdfCustomSchema = new PdfCustomSchema(
 );
 // Add custom metadata value
 custom.customData.set('appVersion', '1.0.0');
-// Persist updated document information
-document.setDocumentInformation(documentProperties);
 // Save the document
 document.save('Output.pdf');
 // Destroy the document
@@ -562,8 +536,6 @@ var custom = new ej.pdf.PdfCustomSchema(
 );
 // Add custom metadata value
 custom.customData.set('appVersion', '1.0.0');
-// Persist updated document information
-document.setDocumentInformation(documentProperties);
 // Save the document
 document.save('Output.pdf');
 // Destroy the document

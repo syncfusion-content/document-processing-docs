@@ -1,5 +1,6 @@
 ---
 title: Watermarks in JavaScript PDF Library | Syncfusion
+canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: This section explains how to add text and image watermarks to both new and existing PDF documents using the JavaScript PDF Library
 platform: document-processing
 control: PDF
@@ -34,10 +35,8 @@ let document: PdfDocument = new PdfDocument();
 let page: PdfPage = document.addPage();
 // Get the graphics of the PDF page
 let graphics: PdfGraphics = page.graphics;
-// Read the image file as a Base64 string (replace 'logo.png' with your image file path)
-let imageData: string = fs.readFileSync('logo.png').toString('base64');
-// Create a new image object using the Base64 string
-let image: PdfBitmap = new PdfBitmap(imageData);
+// Create a new image object using JPEG image data as a Base64 string
+let image: PdfImage = new PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Save the graphics state
 let state: PdfGraphicsState = graphics.save();
 // Set graphics transparency
@@ -60,10 +59,8 @@ var document = new ej.pdf.PdfDocument();
 var page = document.addPage();
 // Get the graphics of the PDF page
 var graphics = page.graphics;
-// Read the image file as a Base64 string (replace 'logo.png' with your image file path)
-var imageData = fs.readFileSync('logo.png').toString('base64');
-// Create a new image object using the Base64 string
-var image = new ej.pdf.PdfBitmap(imageData);
+// Create a new image object using JPEG image data as a Base64 string
+var image = new ej.pdf.PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Save the graphics state
 var state = graphics.save();
 // Set graphics transparency
@@ -78,8 +75,6 @@ document.save('output.pdf');
 document.destroy();
 {% endhighlight %}
 {% endtabs %}
-
----
 
 ## Adding watermark annotation
 
@@ -133,8 +128,6 @@ document.save('output.pdf');
 document.destroy();
 {% endhighlight %}
 {% endtabs %}
-
----
 
 ## Removing watermark annotation
 
