@@ -26,7 +26,7 @@ The `extractText` method retrieves text content and, optionally, positional data
 
 ## Complete example
 
-Here is an example that demonstrates how to use the extractText method along with event handling:
+The following example shows how to use the `extractText` method to extract text from a single page or a range of pages.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
