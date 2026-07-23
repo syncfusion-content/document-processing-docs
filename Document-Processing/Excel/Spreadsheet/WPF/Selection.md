@@ -44,7 +44,7 @@ var rangeList = spreadsheet.ActiveGrid.SelectedRanges;
 {% endhighlight %}
 {% endtabs %}
 
-N> To get the currently focused range within the selected ranges list, use the [ActiveRange](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.GridRangeInfoList.html#Syncfusion_UI_Xaml_CellGrid_GridRangeInfoList_ActiveRange) property of the [GridRangeInfoList](http://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.GridRangeInfoList.html) class.
+N> To get the active range within the selected ranges list, use the [ActiveRange](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.GridRangeInfoList.html#Syncfusion_UI_Xaml_CellGrid_GridRangeInfoList_ActiveRange) property of the [GridRangeInfoList](http://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.GridRangeInfoList.html) class.
 
 ## Adding or Clearing the Selection
 
