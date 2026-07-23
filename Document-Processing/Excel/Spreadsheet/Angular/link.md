@@ -39,7 +39,7 @@ In the Edit Link dialog box, make the changes that you want, and click UPDATE.
 
 ## Remove Hyperlink
 
-Performing this operation remove a single hyperlink without losing the display text.
+Removing a hyperlink clears the link from a cell but keeps the display text.
 
 **User Interface**:
 
