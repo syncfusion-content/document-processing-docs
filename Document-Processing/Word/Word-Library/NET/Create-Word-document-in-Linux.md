@@ -49,7 +49,15 @@ dotnet add package Syncfusion.DocIO.Net.Core -s https://www.nuget.org/
 
 ![Install NuGet packages](Linux-images/InstallNuGetPackages1.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or the NuGet feed, you also have to add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering the Syncfusion<sup>&reg;</sup> license key in your applications to use our components.
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion<sup>&reg;</sup> licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 3: Add the following Namespaces in Program.cs file.
 
@@ -323,6 +331,8 @@ dotnet run
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Linux).
 
+N> The code sample references image files (AdventureCycle.jpg, Mountain-200.jpg, Mountain-300.jpg, Road-550-W.jpg). Download these assets from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Linux/Create-Word-document/Data) and ensure they are present in the application's working directory (next to the `.csproj` file).
+
 By executing the program, you will get the **Word document** as follows. The output will be saved alongside the Program.cs file.
 
 ![Word document generated on Linux](Linux-images/GettingStartedOutput.jpg)
@@ -361,7 +371,15 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 ![Install the Syncfusion.DocIO.Net.Core NuGet package](Linux-images/Install-Syncfusion.DocIO.Net.Core-NuGet.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from the trial setup or the NuGet feed, you also have to add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering the Syncfusion license key in your applications to use our components.
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion<sup>&reg;</sup> licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 3: Add the following Namespaces in Program.cs file.
 
@@ -614,6 +632,8 @@ Step 6: Run the project.
 Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Linux).
+
+N> The code sample references image files (AdventureCycle.jpg, Mountain-200.jpg, Mountain-300.jpg, Road-550-W.jpg). Download these assets from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Linux/Create-Word-document/Data) and ensure they are present in the application's working directory (next to the `.csproj` file).
 
 By executing the program, you will get the **Word document** as follows. The output will be saved alongside the Program.cs file.
 
