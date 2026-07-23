@@ -577,6 +577,4 @@ End Using
 A complete working example of how to read and edit an Excel file in UWP in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/UWP/Edit%20Excel).
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/uwp) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
-
-An online sample link to [create an Excel document](https://ej2.syncfusion.com/aspnetcore/Excel/Create#/material3) in ASP.NET Core.
-
+An online sample link to [create an Excel document](https://document.syncfusion.com/demos/excel/create#/tailwind3) in ASP.NET Core.
