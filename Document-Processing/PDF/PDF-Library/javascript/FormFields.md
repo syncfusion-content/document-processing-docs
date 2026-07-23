@@ -314,8 +314,6 @@ document.destroy();
 
 The following example adds a check box field using the [PdfCheckBoxField](https://ej2.syncfusion.com/documentation/api/pdf/pdfcheckboxfield) class. Check boxes allow users to select or deselect options in a form.
 
-> **Note:** The `PdfCheckBoxField` constructor uses the argument order `(name, bounds, page, options)`. All other field constructors use `(page, name, bounds, options)`.
-
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import {PdfDocument, PdfPage, PdfField, PdfCheckBoxField, PdfInteractiveBorder, PdfBorderStyle} from '@syncfusion/ej2-pdf';
@@ -376,7 +374,7 @@ document.destroy();
 
 ### Adding the signature field
 
-The following example adds a signature field using the [PdfSignatureField](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignaturefield) class. A signature field enables users to digitally sign the PDF document. To apply a real digital signature using PFX data, see [Signing PDF documents](#signing-pdf-documents).
+The following example adds a signature field using the [PdfSignatureField](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignaturefield) class. A signature field enables users to digitally sign the PDF document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -506,16 +504,13 @@ document.destroy();
 
 The following example adds a date field to a PDF form, allowing users to enter or select a date within the document. Configure the date field's appearance, format, and behavior by attaching JavaScript actions to the `actions` object.
 
-> **Note:** The `AFDate_*` functions are built-in Adobe Acrobat JavaScript APIs. They execute on the reader side (Adobe Reader/Acrobat) when the form is opened or filled. See the [Adobe Acrobat JavaScript API reference](https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/) for the full list.
+> **Note:** The `AFDate_*` functions are built-in Adobe Acrobat JavaScript APIs. They execute on the reader side (Adobe Reader/Acrobat) when the form is opened or filled.
 
 | Action key | Fires when | Typical use |
 |---|---|---|
 | `format` | The field is formatted for display | Apply a date format such as `yyyy-mm-dd` |
 | `keyPressed` | The user presses a key | Validate the keystroke against the expected format |
 | `validate` | The field value is committed | Verify the final value |
-| `focus` | The field gains focus | Show helper UI |
-| `blur` | The field loses focus | Hide helper UI |
-| `calculate` | A referenced field changes | Recompute dependent fields |
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -578,8 +573,6 @@ document.destroy();
 ## Filling form fields in an existing PDF document
 
 The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) lets you fill form fields using the `PdfField` API.
-
-> **Tip:** Look up fields by name using `document.form.getField('FirstName')` rather than by index. Field order is implementation-defined and may change across API versions. The samples below use `fieldAt(index)` for illustration only.
 
 ### Filling the text box field
 
@@ -854,7 +847,6 @@ To apply a real digital signature using a PFX certificate, use the `PdfSignature
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import {PdfDocument, PdfPage, PdfSignatureField, PdfSignature} from '@syncfusion/ej2-pdf';
-import * as fs from 'fs';
 
 // Load the existing PDF
 let document: PdfDocument = new PdfDocument(data);
@@ -862,11 +854,8 @@ let document: PdfDocument = new PdfDocument(data);
 let page: PdfPage = document.getPage(0);
 // Add (or access) a signature field
 let field: PdfSignatureField = document.form.fieldAt(0) as PdfSignatureField;
-// Load the PFX certificate
-let pfxData: Uint8Array = fs.readFileSync('certificate.pfx');
-let pfxPassword: string = 'password';
-// Create a digital signature
-let signature: PdfSignature = new PdfSignature(pfxData, pfxPassword);
+// Create a digital signature with PFX data and password
+let signature: PdfSignature = new PdfSignature(pfxData, 'password');
 signature.reason = 'Approval';
 signature.location = 'Headquarters';
 signature.contactInfo = 'support@example.com';
@@ -886,9 +875,6 @@ var document = new ej.pdf.PdfDocument(data);
 var page = document.getPage(0);
 // Add (or access) a signature field
 var field = document.form.fieldAt(0);
-// Load the PFX certificate (browser: use a file input / fetch)
-var pfxData = /* Uint8Array of the PFX bytes */;
-var pfxPassword = 'password';
 // Create a digital signature
 var signature = new ej.pdf.PdfSignature(pfxData, pfxPassword);
 signature.reason = 'Approval';
@@ -1216,8 +1202,6 @@ document.destroy();
 
 The `importFormData` method imports form data into a PDF document. The `DataFormat` enum specifies the format of the data: `FDF`, `XFDF`, `JSON`, or `XML`.
 
-Obtain `fdfData` as a `Uint8Array` from a local file, a fetch request, or `fs.readFileSync`. When importing, fields in the PDF that do not appear in the imported data are left unchanged (merge semantics).
-
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import {PdfDocument, DataFormat} from '@syncfusion/ej2-pdf';
@@ -1287,4 +1271,4 @@ document.destroy();
 - [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
 - [JavaScript PDF Library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
 - [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
-- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/fluent2/pdf/default)
+- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default.html)

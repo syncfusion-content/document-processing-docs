@@ -8,19 +8,15 @@ documentation: UG
 
 # Header and footer support in JavaScript PDF Library
 
-**Supported versions:** Syncfusion EJ2 PDF Library (latest), Node.js 14+, modern browsers (Chrome, Firefox, Edge, Safari).
-
 Header and footer support lets you add reusable content to every page in a PDF document. It reserves layout space to prevent overlap with page content.
 
 The feature supports static elements such as text, images, shapes (including lines and rectangles), and dynamic automatic fields such as page numbers and date/time.
 
 ## Adding a header and footer template to the PDF document
 
-Header and footer templates in a PDF document are created using the `PdfPageTemplateElement` class and assigned through the `template` property of the [PdfDocument](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument) class. The template is assigned using a wrapper object — for example, `document.template.top = { template: header }` — so additional options such as `alignment` can be supplied on the same property.
+Header and footer templates in a PDF document are created using the `PdfPageTemplateElement` class and assigned through the `template` property of the [PdfDocument](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument) class. These templates help in maintaining a consistent layout across all pages by allowing the addition of elements such as images, text, shapes, and automatic fields. Users can also control the appearance of these templates by applying them to all pages or specifically to odd or even pages. 
 
 This sample demonstrates how to create header and footer templates with static elements and a page-number composite field.
-
-> **Note:** This sample references `logo.png`. Place an image file with that name in the project root before running the sample.
 
 To create the templates:
 
@@ -276,21 +272,20 @@ Automatic fields are dynamic elements evaluated during rendering. They provide p
 
 | Field Type              | Description                                  |
 |-------------------------|----------------------------------------------|
-| [Page Number](#page-number-field)             | Displays the current page number             |
-| [Page Count](#page-count-field)              | Displays the total number of pages           |
-| [Section Page Number](#section-page-number-field)     | Displays the page number within a section    |
-| [Section Page Count](#section-page-count-field)      | Displays the total pages in a section        |
-| [Section Number](#section-number-field)          | Displays the section number                  |
-| [Date and Time](#date-and-time-field)           | Displays the current system date and time    |
-| [Creation Date](#creation-date-field)           | Displays the document creation date          |
-| [Document Author](#document-author-field)         | Displays the document author metadata        |
-| [Destination Page Number](#destination-page-number-field) | Displays the page number of a target page    |
+| Page Number             | Displays the current page number             |
+| Page Count              | Displays the total number of pages           |
+| Section Page Number     | Displays the page number within a section    |
+| Section Page Count      | Displays the total pages in a section        |
+| Section Number          | Displays the section number                  |
+| Date and Time           | Displays the current system date and time    |
+| Creation Date           | Displays the document creation date          |
+| Document Author         | Displays the document author metadata        |
+| Destination Page Number | Displays the page number of a target page    |
+| Composite Field         | Combines multiple fields into one formatted output using a pattern like "Page {0} of {1}" (where {0} = first field value and {1} = second field value, e.g., "Page 1 of 10")|
 
 ## Drawing automatic fields on a PDF page
 
-Automatic fields can be drawn directly on a `PdfPage` or within a `PdfPageTemplateElement`. Drawing a field on a template applies it to every page that uses the template. Drawing a field on a page applies it only to that page. The `draw` method takes a graphics object and a position `{ x, y }`.
-
-The optional `numberStyle` parameter accepts values from the `PdfNumberStyle` enum, including `numeric`, `uppercaseRoman`, `lowercaseRoman`, `uppercaseLetter`, and `lowercaseLetter`. The optional `dateFormat` parameter accepts standard date format tokens such as `yyyy`, `MM`, `dd`, `HH`, `mm`, and `ss`.
+Automatic fields can be drawn directly on a PDF page or within templates. They are resolved dynamically and provide accurate values for each page.
 
 ### Page Number Field
 
@@ -815,8 +810,6 @@ document.destroy();
 
 Displays the page number of a specified destination page.
 
-> **Note:** If the supplied `page` is `null` or `undefined`, the field will not be drawn and a runtime error may occur.
-
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
@@ -966,4 +959,4 @@ document.destroy();
 - [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
 - [JavaScript PDF Library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
 - [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
-- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/fluent2/pdf/default)
+- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default.html)

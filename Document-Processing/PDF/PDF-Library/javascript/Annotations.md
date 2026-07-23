@@ -13,7 +13,63 @@ For first-time setup, refer to the [Getting Started with JavaScript PDF Library]
 
 ## Adding annotations to a PDF document
 
-The example below demonstrates how to add a rectangle annotation to a PDF document using the [PdfRectangleAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfrectangleannotation) class. The same pattern applies to every supported annotation type covered later in this document.
+This example demonstrates how to add annotations to a PDF document using the [PdfPopupAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfpopupannotation) class. Adding annotations allows users to include comments, highlights, shapes, and other interactive elements within a PDF, enhancing collaboration and document review.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+
+import {PdfDocument, PdfPage, PdfPopupAnnotation, PdfPopupIcon, PdfAnnotationState, PdfAnnotationStateModel} from '@syncfusion/ej2-pdf';
+
+// Create a new PDF document
+let document: PdfDocument = new PdfDocument();
+// Adds a new page to the PDF
+let page: PdfPage = document.addPage();
+// Create a new popup annotation
+let annotation: PdfPopupAnnotation = new PdfPopupAnnotation('Review this paragraph',
+{x: 10, y: 40, width: 30, height: 30},
+{
+  author: 'Reviewer',
+  subject: 'General',
+  color: { r: 255, g: 255, b: 0 },
+  icon: PdfPopupIcon.comment,
+  open: true,
+  state: PdfAnnotationState.accepted,
+  stateModel: PdfAnnotationStateModel.review
+}
+);
+// Add annotation to the page
+page.annotations.add(annotation);
+// Save the document
+document.save('output.pdf');
+// Close the document
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Adds a new page to the PDF
+var page = document.addPage();
+// Create a new popup annotation
+var annotation = new ej.pdf.PdfPopupAnnotation('Review this paragraph',{x:10,y:40,width:30,height:30},{
+  author:'Reviewer',
+  subject:'General',
+  color:{r:255,g:255,b:0},
+  icon:ej.pdf.PdfPopupIcon.comment,
+  open:true,
+  state:ej.pdf.PdfAnnotationState.accepted,
+  stateModel:ej.pdf.PdfAnnotationStateModel.review
+});
+// Add annotation to the page
+page.annotations.add(annotation);
+// Save the document
+document.save('output.pdf');
+// Close the document
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Supported annotation types
 
@@ -243,60 +299,6 @@ var stamp = new ej.pdf.PdfRubberStampAnnotation({x:40,y:60,width:80,height:20},{
 });
 // Adds annotation to the page
 page.annotations.add(stamp);
-// Save the document
-document.save('output.pdf');
-// Destroy the document
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
-
-#### Custom appearance in stamp annotation
-
-This example demonstrates how to embed a custom image as the appearance of a rubber stamp annotation. The image is loaded at runtime and drawn into the annotation's normal appearance template.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfRubberStampAnnotation, PdfImage, PdfBitmap} from '@syncfusion/ej2-pdf';
-
-// Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data);
-// Get the first page
-let page: PdfPage = document.getPage(0) as PdfPage;
-// Load the stamp image as bytes
-const imgResp = await fetch('stamp.png');
-const imageBytes: Uint8Array = new Uint8Array(await imgResp.arrayBuffer());
-// Create an image object from the byte array
-let image: PdfImage = new PdfBitmap(imageBytes);
-// Create a new rubber stamp annotation
-let annotation: PdfRubberStampAnnotation = new PdfRubberStampAnnotation({x: 50, y: 100, width: 100, height: 50});
-// Access the normal template of the appearance and draw the image
-annotation.appearance.normal.graphics.drawImage(image, {x: 0, y: 0, width: 100, height: 50});
-// Add annotation to the page
-page.annotations.add(annotation);
-// Save the document
-document.save('output.pdf');
-// Destroy the document
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-
-// Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data);
-// Get the first page
-var page = document.getPage(0);
-// Load the stamp image as bytes
-var imgResp = await fetch('stamp.png');
-var imageBytes = new Uint8Array(await imgResp.arrayBuffer());
-// Create an image object from the byte array
-var image = new ej.pdf.PdfBitmap(imageBytes);
-// Create a new rubber stamp annotation
-var annotation = new ej.pdf.PdfRubberStampAnnotation({x: 50, y: 100, width: 100, height: 50});
-// Access the normal template of the appearance and draw the image
-annotation.appearance.normal.graphics.drawImage(image, {x: 0, y: 0, width: 100, height: 50});
-// Add annotation to the page
-page.annotations.add(annotation);
 // Save the document
 document.save('output.pdf');
 // Destroy the document
@@ -546,7 +548,7 @@ document.destroy();
 
 This example demonstrates how to add a document link annotation to a PDF page using the [PdfDocumentLinkAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocumentlinkannotation) class. A document link annotation allows creating clickable links that navigate to a specific page or location within the same PDF document.
 
-`PdfDestination` is constructed with a `PdfPage`, a position (`{ x, y }`), and a [PdfDestinationMode](https://ej2.syncfusion.com/documentation/api/pdf/pdfdestinationmode) enum value such as `fitToPage`, `fitToWidth`, `fitToHeight`, or `fitToBox`.
+`PdfDestination` is constructed with a `PdfPage`, a position (`{ x, y }`), and a [PdfDestinationMode](https://ej2.syncfusion.com/documentation/api/pdf/pdfdestinationmode) enum value such as `fitToPage`, `fitToR`, `fitToH`, or `location`.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -559,7 +561,7 @@ let page: PdfPage = document.addPage();
 // Create new document link annotation
 let annotation: PdfDocumentLinkAnnotation = new PdfDocumentLinkAnnotation(
       { x: 80, y: 100, width: 120, height: 18 },
-      new PdfDestination(page, { x: 0, y: 0 }, PdfDestinationMode.fitToPage),
+      new PdfDestination(page: page, { x: 0, y: 0 }, {mode: PdfDestinationMode.fitToPage}),
       {
         color: { r: 0, g: 128, b: 0 }, opacity: 1,
         border: new PdfAnnotationBorder({ width: 1, hRadius: 0, vRadius: 0, style: PdfBorderStyle.solid })
@@ -581,7 +583,7 @@ var page = document.addPage();
 // Create new document link annotation
 var annotation = new ej.pdf.PdfDocumentLinkAnnotation(
   {x:80,y:100,width:120,height:18},
-  new ej.pdf.PdfDestination(page, {x:0, y:0}, ej.pdf.PdfDestinationMode.fitToPage),
+  new ej.pdf.PdfDestination(page: page, {x:0, y:0}, {mode:ej.pdf.PdfDestinationMode.fitToPage}),
   {color:{r:0,g:128,b:0},opacity:1,border:new ej.pdf.PdfAnnotationBorder({width:1,hRadius:0,vRadius:0,style:ej.pdf.PdfBorderStyle.solid})}
 );
 // Add annotation to the page
@@ -1020,6 +1022,55 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
+
+#### Custom appearance in stamp annotation
+
+This example demonstrates how to embed a custom image as the appearance of a rubber stamp annotation.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import {PdfDocument, PdfPage, PdfRubberStampAnnotation, PdfImage, PdfBitmap} from '@syncfusion/ej2-pdf';
+
+// Load an existing PDF document
+let document: PdfDocument = new PdfDocument(data);
+// Get the first page
+let page: PdfPage = document.getPage(0) as PdfPage;
+// Create an image object from the byte array
+let image: PdfImage = new PdfBitmap(imageBytes);
+// Create a new rubber stamp annotation
+let annotation: PdfRubberStampAnnotation = new PdfRubberStampAnnotation({x: 50, y: 100, width: 100, height: 50});
+// Access the normal template of the appearance and draw the image
+annotation.appearance.normal.graphics.drawImage(image, {x: 0, y: 0, width: 100, height: 50});
+// Add annotation to the page
+page.annotations.add(annotation);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load an existing PDF document
+var document = new ej.pdf.PdfDocument(data);
+// Get the first page
+var page = document.getPage(0);
+// Create an image object from the byte array
+var image = new ej.pdf.PdfBitmap(imageBytes);
+// Create a new rubber stamp annotation
+var annotation = new ej.pdf.PdfRubberStampAnnotation({x: 50, y: 100, width: 100, height: 50});
+// Access the normal template of the appearance and draw the image
+annotation.appearance.normal.graphics.drawImage(image, {x: 0, y: 0, width: 100, height: 50});
+// Add annotation to the page
+page.annotations.add(annotation);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Measurement Annotations
 
 Measurement annotations display dimensions for distances, areas, radii, and angles directly on a PDF page.
@@ -1264,7 +1315,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-N> **Warning:** Flattening an annotation is **irreversible**. The interactive element is converted to static page content and cannot be restored. Save a backup of the original PDF before flattening.
+N> **Warning:** Flattening an annotation is **irreversible**. The interactive element is converted to static page content and cannot be restored.
 
 N> Setting `document.flatten = true;` flattens all interactive elements in the PDF, converting form fields and annotations into static content throughout the entire document.
 
@@ -1272,15 +1323,11 @@ N> Setting `document.flatten = true;` flattens all interactive elements in the P
 
 This example demonstrates how to import annotations into a PDF document using the `importAnnotations` method. The DataFormat enum specifies the format of the annotation data being imported, such as FDF, XFDF, JSON, or XML.
 
-The example below loads the annotation data at runtime via `fetch` and assigns it to `jsonData` (the variable name is reused for clarity; the same flow applies to FDF, XFDF, and XML formats).
+The example below loads the annotation data at runtime via `fetch` and assigns it to `jsonData` (the variable name is reused for clarity; the same flow applies to FDF and XFDF formats).
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import {PdfDocument, DataFormat} from '@syncfusion/ej2-pdf';
-
-// Load the annotation data (XFDF in this example)
-const annoResp = await fetch('annotations.xfdf');
-const jsonData: string = await annoResp.text();
 
 // Load the base PDF document from resources
 let document: PdfDocument = new PdfDocument(data);
@@ -1288,15 +1335,11 @@ let document: PdfDocument = new PdfDocument(data);
 document.importAnnotations(jsonData, DataFormat.json);
 // Save the PDF document
 document.save('output.pdf');
-// Destroy the document
+// Close the document
 document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
-
-// Load the annotation data (XFDF in this example)
-var annoResp = await fetch('annotations.xfdf');
-var jsonData = await annoResp.text();
 
 // Load the base PDF document from resources
 var document = new ej.pdf.PdfDocument(data);
@@ -1304,7 +1347,7 @@ var document = new ej.pdf.PdfDocument(data);
 document.importAnnotations(jsonData, ej.pdf.DataFormat.json);
 // Save the PDF document
 document.save('output.pdf');
-// Destroy the document
+// Close the document
 document.destroy();
 
 {% endhighlight %}
@@ -1317,11 +1360,10 @@ document.destroy();
 | FDF    | .fdf           | Compact, Adobe-native             | Acrobat interop                |
 | XFDF   | .xfdf          | XML-based, portable               | Cross-platform annotation data |
 | JSON   | .json          | Human-readable, web-friendly      | Web app storage                |
-| XML    | .xml           | Schema-validated                  | Enterprise integrations        |
 
 ## Exporting Annotations
 
-This example demonstrates how to export annotations from a PDF document using the `exportAnnotations` method. The DataFormat enum specifies the format of the annotation data being exported, such as FDF, XFDF, JSON, or XML.
+This example demonstrates how to export annotations from a PDF document using the `exportAnnotations` method. The DataFormat enum specifies the format of the annotation data being exported, such as FDF, XFDF, JSON.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -1357,4 +1399,4 @@ document.destroy();
 - [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
 - [JavaScript PDF Library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
 - [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
-- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/fluent2/pdf/default)
+- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default.html)
