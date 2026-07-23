@@ -1,14 +1,14 @@
 ---
-title: Limitations in Word to Image Conversion | DocIO | Syncfusion
-description: Learn about the limitations in Word to Image conversion in C# using the .NET Word (DocIO) library for effective application.
+title: Limitations in Word-to-Image Conversion | DocIO | Syncfusion
+description: Learn about the limitations in Word-to-Image conversion in C# using the .NET Word (DocIO) library for effective application.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Limitations in Word to Image Conversion
+# Limitations in Word-to-Image Conversion
 
-The following tables shows the limitations of Word to Image conversion.
+The following tables show the limitations of Word-to-Image conversion.
 
 <table>
 <thead> 
@@ -43,7 +43,7 @@ Only DOCX and WordML format documents are supported.
 </tr>
 <tr>
 <td>
-Custom Shapes 
+Custom Shapes
 </td>
 <td>
 Only DrawingML custom shapes in DOCX and WordML format documents are supported.
@@ -62,7 +62,7 @@ Mathematical equations extending to multiple lines will be rendered in a single 
 SmartArt
 </td>
 <td>
-Supported only in DOCX format document to image.  Additional behavior explained {{ '[here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/unsupported-elements-word-to-pdf#smartart)' | markdownify }}.
+Supported only in DOCX format document to image. Additional behavior explained {{ '[here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/unsupported-elements-word-to-pdf#smartart)' | markdownify }}.
 </td>
 </tr>
 <tr>
@@ -78,7 +78,7 @@ Not supported
 Watermark
 </td>
 <td>
-First watermark of the Word document should be applied to the entire converted PDF document when the Word document have multiple watermarks.
+First watermark of the Word document should be applied to the entire converted image when the Word document has multiple watermarks.
 </td>
 </tr>
 <tr>
@@ -86,7 +86,7 @@ First watermark of the Word document should be applied to the entire converted P
 Multi-Column Texts
 </td>
 <td>
-Multi-Column text positions are calculated dynamically when layout the text. So, there may be some content position differences occur in the image.
+Multi-Column text positions are calculated dynamically when layout the text. So, there may be some content position differences in the image.
 </td>
 </tr>
 <tr>
@@ -94,7 +94,7 @@ Multi-Column text positions are calculated dynamically when layout the text. So,
 Footnote and endnote
 </td>
 <td>
-Number formats in Roman, Alphabets, and Arabic only supported.
+Number formats in Roman, Alphabets, and Arabic are only supported.
 </td>
 </tr>
 <tr>
@@ -135,7 +135,7 @@ Only DOCX and WordML format documents are supported.
 Pagination
 </td>
 <td>
-The Essential<sup>&reg;</sup> DocIO makes sensible decision when layout the text, and its supported elements while generating the PDF documents. But however, there may not be guaranteed pagination with all the documents.
+The Essential<sup>&reg;</sup> DocIO makes sensible decisions when layout the text and its supported elements while generating the image documents. However, there may not be guaranteed pagination with all the documents.
 </td>
 </tr>
 <tr>
@@ -159,7 +159,7 @@ Not supported
 Borders
 </td>
 <td>
-Using of patterns and 3D borders are not retained in the output image.
+Use of patterns and 3D borders are not retained in the output image.
 </td>
 </tr>
 <tr>

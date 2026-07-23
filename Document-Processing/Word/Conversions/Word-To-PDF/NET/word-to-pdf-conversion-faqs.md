@@ -6,17 +6,19 @@ control: DocIO
 documentation: UG
 ---
 
-# Frequently Asked Questions
+# Frequently Asked Questions (Word to PDF)
 
-The frequently asked questions about Word to PDF conversion in Essential<sup>&reg;</sup> DocIO are listed below.
+The frequently asked questions about Word to PDF conversion in Essential<sup>&reg;</sup> DocIO are listed below. This page addresses common questions on chart conversion, PDF conformance, font handling, form fields, track changes, and platform-specific issues.
 
-## Could not find Syncfusion.OfficeChartToImageConverter assembly in .NET 3.5 Framework, does it mean there is no support for chart conversion in this Framework? 
+## Could not find Syncfusion.OfficeChartToImageConverter assembly in the .NET 3.5 Framework. Does it mean there is no support for chart conversion in this framework?
 
-Yes, OfficeChartToImageConverter assembly is not supported in .NET 3.5 Framework and it is available in .NET 4.0 Framework.
+Yes, the OfficeChartToImageConverter assembly is not supported in the .NET 3.5 Framework. It is available in the .NET 4.0 Framework and later versions. To use chart conversion, upgrade your project to .NET 4.0 or higher. For the list of required assemblies, refer to the [Assemblies required for Word to PDF conversion](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/assemblies-required-word-to-pdf) documentation.
 
 ## Is it possible to convert 3D charts to PDF?
 
-Current version of the DocIO library does not provide support for converting 3D charts to PDF format.
+The current version of the DocIO library does not provide support for converting 3D charts to PDF format.
+
+**Workaround:** As an alternative, you can render the 3D chart as an image using the [OfficeChartToImageConverter](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-charts) and then insert that image into the Word document before conversion. For more information, refer to the [Working with Charts](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-charts) documentation.
 
 ## Is it possible to specify PDF conformance level in Word to PDF conversion?
 
@@ -31,11 +33,15 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to validate the PDF conformance level in a DocIO-converted PDF?
 
-PDF conformance can be verified using tools like **Adobe Acrobat Pro, VeraPDF, Xodo Validator, and PDFCreator Validator**. These tools check if the PDF meets compliance standards. DocIO-generated PDFs can be validated using any of these tools to ensure compliance with the required standards.
+PDF conformance can be verified using tools like **Adobe Acrobat Pro, VeraPDF and PDFCreator Validator**. These tools check if the PDF meets compliance standards. DocIO-generated PDFs can be validated using any of these tools to ensure compliance with the required standards.
+
+For more details on the supported conformance levels in DocIO, refer to [PDF Conformance](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-pdf-conformance).
 
 ## Is it possible to preserve track changes revisions in a Word document as comments in a PDF using DocIO?
 
-When a Word document with revisions is converted to a PDF using Microsoft Word, the revisions are preserved as balloons. So, it is not possible to preserve revisions in a Word document as comments in a PDF. Using DocIO, revisions can be displayed as balloons in the converted PDF by enabling the [ShowMarkup](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.RevisionOptions.html#Syncfusion_DocIO_DLS_RevisionOptions_ShowMarkup) property. Refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#show-or-hide-revisions-in-balloons) and [GitHub sample](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Show-or-hide-revisions-in-balloons) for implementation.
+No. When a Word document with revisions is converted to a PDF using Microsoft Word, the revisions are preserved as balloons (revision marks) rather than as comments. Likewise, DocIO cannot convert track changes revisions into PDF comments.
+
+**What DocIO supports:** You can display the revisions as balloons in the converted PDF by enabling the [ShowMarkup](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.RevisionOptions.html#Syncfusion_DocIO_DLS_RevisionOptions_ShowMarkup) property. Refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#show-or-hide-revisions-in-balloons) and [GitHub sample](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Show-or-hide-revisions-in-balloons) for implementation.
 
 ## Why does a Word document converted to PDF on one device not display correctly when converted on another device?
 
@@ -45,9 +51,11 @@ For more details with implementation, refer to the [documentation](https://help.
 
 ## Why are Chinese characters missing or blank in the PDF after Word-to-PDF conversion?
 
-Chinese characters may not appear in the converted PDF if the original Word document uses fonts like **Calibri**, which do not support Chinese glyphs in PDFs.
+Chinese characters may not appear in the converted PDF if the original Word document uses fonts like Calibri, which do not support Chinese glyphs in PDFs.
 
-To render Chinese and other Unicode characters correctly, we **recommend using the Arial Unicode MS font in your Word document**. If Arial Unicode MS is not installed on the machine during conversion, the characters will not display properly in the output PDF. To resolve this, **install the Arial Unicode MS font** on the system before converting the document.
+To render Chinese and other Unicode characters correctly, we recommend using the *Arial Unicode MS* font in your Word document. If Arial Unicode MS is not installed on the machine during conversion, the characters will not display properly in the output PDF. To resolve this, install the *Arial Unicode MS* font on the system before converting the document.
+
+For more details on configuring fallback fonts for missing glyphs, refer to the [Fallback fonts](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/fallback-fonts-word-to-pdf) documentation.
 
 ## What is the difference between font substitution and fallback fonts in Word to PDF conversion?
 
@@ -66,7 +74,7 @@ To render Chinese and other Unicode characters correctly, we **recommend using t
       <td>Replaces an entirely missing font.</td>
     </tr>
     <tr>
-      <td><b>When It’s Used</b></td>
+      <td><b>When It's Used</b></td>
       <td>A font is present but lacks specific character glyphs.</td>
       <td>The required font is not installed on the system.</td>
     </tr>
@@ -99,7 +107,9 @@ This exception typically occurs due to version mismatches between SkiaSharp and 
 
 ## Why does System.TypeInitializationException occur during Word to PDF or image conversion in Linux using Syncfusion DocIO?
 
-This error usually occurs due to an incompatible GLIBC version on the Linux system. SkiaSharp, used by DocIO for rendering, requires a minimum GLIBC version to function correctly. For example, SkiaSharp version 3.119.1 requires at least GLIBC version 2.29, which is not available in older Linux distributions like Debian 10. If a lower version is present, the conversion may fail with errors such as GLIBC_2.29 not found. To resolve this, ensure the operating system includes the required GLIBC version for the SkiaSharp version being used, or upgrade to a newer Linux distribution.
+This error usually occurs due to an incompatible GLIBC version on the Linux system. SkiaSharp, used by DocIO for rendering, requires a minimum GLIBC version to function correctly. For example, SkiaSharp version 3.119.1 requires at least GLIBC version 2.29, which is not available in older Linux distributions like Debian 10. If a lower version is present, the conversion may fail with an error such as `GLIBC_2.29 not found`.
+
+**Resolution:** Ensure the operating system includes the required GLIBC version for the SkiaSharp version being used, or upgrade to a newer Linux distribution. For the list of supported Linux distributions, refer to the [Convert Word document to PDF in Linux](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-linux) documentation.
 
 ## Is it possible to substitute fonts in a Word document?
 

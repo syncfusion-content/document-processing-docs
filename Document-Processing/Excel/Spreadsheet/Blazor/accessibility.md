@@ -9,14 +9,15 @@ documentation: ug
 
 # Accessibility in Blazor Spreadsheet
 
-The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WAI-ARIA](https://www.w3.org/TR/wai-aria#roles) roles that are commonly used to evaluate accessibility.
+The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WAI-ARIA](https://www.w3.org/TR/wai-aria#roles) roles commonly used to evaluate accessibility.
+
 <style>
     .post .post-content img {
         display: inline-block;
         margin: 0.5em 0;
     }
 </style>
-The accessibility compliance for the Spreadsheet component is outlined below.
+The accessibility compliance for the Spreadsheet component is outlined below. The icons in the table indicate the level of compliance: a full check means all features meet the requirement, a partial check means some features do not, and a cross means the requirement is not met. Click any criterion to learn more about the standard.
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features of the component meet the requirement.</div>
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
@@ -33,16 +34,16 @@ The accessibility compliance for the Spreadsheet component is outlined below.
 | [Axe-core Accessibility Validation](https://blazor.syncfusion.com/documentation/common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
 
 ## WAI-ARIA attributes
-The Syncfusion Blazor Spreadsheet follows [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet accessibility standards. The following ARIA attributes are used in the Spreadsheet component:
+The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) follows [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet accessibility standards. The following ARIA attributes are used in the Spreadsheet component:
 
 | Attributes | Purpose |
-|---------------|-------------|
-| `role=textbox` | Identifies an element as an input field that allows text entry.|
+|---|---|
+| `role=textbox` | Identifies an element as an input field that allows text entry. |
 | `role=button` | Identifies an element that functions as a button. |
 | `role=combobox` | Identifies a component that combines a text input with a popup listbox or tree. |
 | `role=menu` | Defines a container for a collection of choices or commands presented in a contextual or dropdown format. |
 | `role=alert` | Designates an element that displays important, time-sensitive information. |
-| `aria-label`| This attribute describes the accessible name for the interactive elements. |
+| `aria-label` | This attribute describes the accessible name for the interactive elements. |
 | `aria-expanded` | Indicates whether a collapsible element (e.g., a dropdown) is currently expanded or collapsed. |
 | `aria-live` | Defines a region as "live", meaning its content updates dynamically. Values include "off", "polite" (waits until idle), or "assertive" (announces immediately). |
 | `aria-rowindex` | Defines the row index of a row with respect to the total number of rows in the Spreadsheet. |
@@ -52,7 +53,7 @@ The Syncfusion Blazor Spreadsheet follows [WAI-ARIA](https://www.w3.org/WAI/ARIA
 
 ## Keyboard interaction
 
-The Syncfusion Blazor Spreadsheet follows [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert#keyboardinteraction) guidelines, making it accessible for people who use assistive technologies (AT) and those who rely on keyboard navigation. The following keyboard shortcuts are supported by the Spreadsheet.
+The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) follows [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert#keyboardinteraction) guidelines, making it accessible for people who use assistive technologies (AT) and those who rely on keyboard navigation. The following keyboard shortcuts are supported by the Spreadsheet.
 
 <b>Clipboard</b>
 
@@ -80,7 +81,7 @@ The Syncfusion Blazor Spreadsheet follows [keyboard interaction](https://www.w3.
 
 | Windows | MAC | Actions |
 |-----|----- | -----|
-| <kbd>Page Up</kbd> / <kbd>Page Down</kbd> | <kbd>Fn</kbd> + <kbd>↑</kbd> / <kbd>↓</kbd> |Scrolls up or down one screen at a time.|
+| <kbd>Page Up</kbd> / <kbd>Page Down</kbd> | <kbd>Page Up</kbd> / <kbd>Page Down</kbd> (or <kbd>Fn</kbd> + <kbd>↑</kbd> / <kbd>↓</kbd> on older keyboards) |Scrolls up or down one screen at a time.|
 | <kbd>Arrow keys</kbd> | <kbd>Arrow keys</kbd> | Navigates between adjacent cells in the direction of the arrow key.|
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Moves the active cell down one row.|
 | <kbd>Shift</kbd> + <kbd>Enter</kbd> | <kbd>⇧</kbd> + <kbd>Enter</kbd> | Moves the active cell up one row.|
@@ -108,10 +109,10 @@ The Syncfusion Blazor Spreadsheet follows [keyboard interaction](https://www.w3.
 
 | Windows | MAC | Actions |
 |-----|----- | -----|
-| <kbd>Ctrl</kbd> + <kbd>Click</kbd> | <kbd>⌘</kbd> + <kbd>Click</kbd> | Open the link in the selected cell.|
+| <kbd>Ctrl</kbd> + <kbd>Click</kbd> | <kbd>⌘</kbd> + <kbd>Click</kbd> | Opens the link in the selected cell.|
 | <kbd>Ctrl</kbd> + <kbd>K</kbd> | <kbd>⌘</kbd> + <kbd>K</kbd> | Opens the hyperlink dialog to insert a new link or edit an existing one.|
 
-> * The <kbd>Command</kbd> and <kbd>Control</kbd> keys on Mac devices can be interchanged. When this switch occurs, use the <kbd>Command</kbd> key in place of the <kbd>Control</kbd> key for the above listed key interactions with Mac devices.
+N> The <kbd>Command</kbd> and <kbd>Control</kbd> keys on Mac devices can be interchanged. When this switch occurs, use the <kbd>Command</kbd> key in place of the <kbd>Control</kbd> key for the above listed key interactions with Mac devices.
 
 ## See also
 
