@@ -15,10 +15,10 @@ The class name returned by the [contextMenuBeforeOpen](https://ej2.syncfusion.co
 
 | Class name | Context menu name |
 |-------|---------|
-| .e-sheet-content | Cell context menu |
-| .e-toolbar-item | Footer context menu |
-| .e-rowhdr-table | Row header context menu |
-| .e-colhdr-table | Column header context menu |
+| `.e-sheet-content` | Cell context menu |
+| `.e-toolbar-item` | Footer context menu |
+| `.e-rowhdr-table` | Row header context menu |
+| `.e-colhdr-table` | Column header context menu |
 
 The following code example shows how to identify the context menu opened.
 

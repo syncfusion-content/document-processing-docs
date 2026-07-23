@@ -3,7 +3,7 @@ layout: post
 title: AI Assist Web API Server Setup in Angular Spreadsheet | Syncfusion
 description: Learn how to set up and connect an ASP.NET Core Web API server for the AI Assist feature in the Syncfusion Angular Spreadsheet component.
 platform: document-processing
-control: AI Assist Web API Server Setup
+control: Spreadsheet
 documentation: ug
 ---
 
@@ -58,7 +58,7 @@ dotnet add package Microsoft.Extensions.AI.OpenAI
 
 ## Configure credentials
 
-Add the Azure OpenAI credentials in `appsettings.json` under `AI` section:
+Add the Azure OpenAI credentials in `appsettings.json` under the `AI` section:
 
 ```json
 {
