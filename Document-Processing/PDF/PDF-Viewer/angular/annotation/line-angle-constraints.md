@@ -70,7 +70,7 @@ export class AppComponent {
 
 When line angle constraints are enabled:
 
-- Start drawing a supported annotation (Line, Arrow, Polyline, Distance, or Perimeter).
+- Start drawing a supported annotation (Line, Arrow, Polygon, Distance, or Perimeter).
 - The segment snaps to the nearest allowed angle.
 - A visual indicator reflects snapping in real time.
 - Release to complete the annotation.

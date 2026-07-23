@@ -131,8 +131,6 @@ Use the `applyCommentFilter` method to apply filters with specific criteria:
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 import {
   PdfViewerModule,
   LinkAnnotationService,
@@ -266,8 +264,6 @@ You can combine multiple filter criteria to create more specific filters:
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 import {
   PdfViewerModule,
   LinkAnnotationService,

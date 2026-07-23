@@ -5,6 +5,7 @@ description: Learn how to handle Import/Export events for PDF Annotations in the
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Import/Export events in Angular PDF Viewer

@@ -15,7 +15,7 @@ Polygon annotations allow users to outline irregular regions, draw custom shapes
 
 ## Enable Polygon Annotation in the Viewer
 
-To enable Line annotations, inject the following modules into the Angular PDF Viewer:
+To enable Polygon annotations, inject the following modules into the Angular PDF Viewer:
 
 - [**Annotation**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#annotation)
 - [**Toolbar**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#toolbar)
@@ -163,11 +163,11 @@ export class AppComponent {
 
 ## Manage Polygon (Edit, Move, Resize, Delete)
 
-### Edit Circle
+### Edit Polygon
 
-#### Edit Circle (UI)
+#### Edit Polygon (UI)
 
-- Select a Circle to view resize handles.
+- Select a Polygon to view resize handles.
 - Drag any side/corner to resize; drag inside the shape to move it.
 - Edit **fill**, **stroke**, **thickness**, and **opacity** using the annotation toolbar.
 
@@ -188,7 +188,7 @@ Use the annotation toolbar:
 
 #### Edit Polygon Programmatically
 
-Modify an existing Circle programmatically using `editAnnotation()`.
+Modify an existing Polygon programmatically using `editAnnotation()`.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
