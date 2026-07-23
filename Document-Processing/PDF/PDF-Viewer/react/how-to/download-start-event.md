@@ -116,6 +116,6 @@ Using the [downloadStart](https://ej2.syncfusion.com/react/documentation/api/pdf
 
 ### See also
 
-* [Events in React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/events)
+* [Events in React PDF Viewer](../events)
 * [downloadEnd event](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/downloadEndEventArgs)
-* [Getting started with React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started)
+* [Getting started with React PDF Viewer](../getting-started)
