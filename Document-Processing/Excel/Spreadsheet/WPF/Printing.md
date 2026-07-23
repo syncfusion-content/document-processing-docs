@@ -55,5 +55,7 @@ pdfViewer.Print(true);
 {% endhighlight %}
 {% endtabs %}
 
+## See Also
 
-N> You can refer to our [WPF Spreadsheet Editor](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [WPF Spreadsheet example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the spreadsheet.
+- [WPF Spreadsheet feature tour](https://www.syncfusion.com/wpf-controls/spreadsheet)
+- [WPF Spreadsheet examples on GitHub](https://github.com/syncfusion/wpf-demos)
