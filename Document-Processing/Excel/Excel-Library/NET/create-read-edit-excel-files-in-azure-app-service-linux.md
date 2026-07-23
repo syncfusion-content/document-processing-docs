@@ -14,8 +14,7 @@ documentation: UG
 Before you begin, ensure the following:
 
 * An active **Azure subscription**. If you do not have one, see [Create an Azure account](https://azure.microsoft.com/free/).
-* **Visual Studio 2022** with the **ASP.NET and web development** and **Azure development** workloads installed.
-* A **Syncfusion license key**. Register it in `Program.cs` (see the snippet in Step 4a below) or via the `SyncfusionLicense.txt` file. In Azure App Service on Linux, the recommended approach is to store the key in an environment variable or application setting and load it at startup â€” see the [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
+* A **Syncfusion license key**. Register it in `Program.cs` (see the snippet in Step 4a below) or via the `SyncfusionLicense.txt` file. In Azure App Service on Linux, the recommended approach is to store the key in an environment variable or application setting and load it at startup see the [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 
 ## Create a simple Excel report
@@ -534,8 +533,6 @@ The following code snippet illustrates how to read and edit an Excel file in Azu
 
 Step 1: Add a sample Excel file named `Sample.xlsx` to the **`wwwroot/`** folder of the project (right-click **wwwroot** -> **Add** -> **New Item** -> **Excel Workbook**, or drag-and-drop the file). Set its **Build Action** to **Content** and **Copy to Output Directory** to **Copy if newer** so it is deployed with the App Service.
 
-N> The `application.Workbooks.Open("Sample.xlsx")` call below resolves the path relative to the app's content root. In Azure App Service on Linux, files under `wwwroot/` are served from `wwwroot/`, so the relative path works as long as the file is deployed. Alternatively, you can resolve the path via `Path.Combine(_hostingEnvironment.WebRootPath, "Sample.xlsx")` as shown in the Create section.
-
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 //New instance of ExcelEngine is created.
@@ -585,4 +582,4 @@ A complete working example of how to read and edit an Excel file in Azure App Se
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
-An online sample link to [create an Excel document](https://ej2.syncfusion.com/aspnetcore/Excel/Create#/material3) in ASP.NET Core.
+An online sample link to [create an Excel document](https://document.syncfusion.com/demos/excel/create#/tailwind3) in ASP.NET Core.
