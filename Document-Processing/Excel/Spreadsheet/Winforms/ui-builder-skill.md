@@ -159,7 +159,7 @@ Create a WinForms application using Syncfusion Spreadsheet that initializes a wo
 {% endpromptcard %}
 {% endpromptcards %}
 
-Generated code follows Windows Forms best practices. It includes proper control layout, event handling, data bindings, strong C# typing, and built-in security measures such as input validation and the avoidance of hardcoded secrets. The code is fully compatible with Visual Studio designer and Windows Forms conventions.
+Generated code follows Windows Forms best practices. It includes proper control layout, event handling, data bindings, strong C# typing, and built-in security measures such as input validation and the avoidance of hardcore secrets. The code is fully compatible with Visual Studio designer and Windows Forms conventions.
 
 ## Best Practices
 
