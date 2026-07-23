@@ -1,20 +1,20 @@
 ---
 layout: post
-title: How to in React DOCX Editor Component | Syncfusion
-description: Learn here all about How to in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
-control: How to
+title: How to in React Document editor component | Syncfusion
+description: Learn here all about How to in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
+control: How to 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to in React Document Editor Component
+# How to in React Document editor component
 
-[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document editor) triggers the [`keyDown`](./api-documentEditorKeyDownEventArgs.html) event each time a key is entered and provides an instance of `DocumentEditorKeyDownEventArgs`. You can use the `isHandled` property to override the keyboard shortcut behavior.
+[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) triggers the [`keyDown`](./api-documentEditorKeyDownEventArgs.html) event every time when any key is entered and provides an instance of `DocumentEditorKeyDownEventArgs`. You can use the `isHandled` property to override the keyboard shortcut behavior.
 
-## Preventing Default Keyboard Shortcut
+## Preventing default keyboard shortcut
 
-The following code shows how to prevent the `Ctrl + C` keyboard shortcut for copying selected content in the Document editor.
+The following code shows how to prevent the `CTRL + C` keyboard shortcut for copying selected content in document editor.
 
 ```ts
 
@@ -61,11 +61,11 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
-## Override or Define the Keyboard Shortcut
+## Override or define the keyboard shortcut
 
 Override or define a new keyboard shortcut behavior instead of preventing the keyboard shortcut.
 
-For example, the `Ctrl + S` keyboard shortcut saves the document in the SFDT format by default, and there is no behavior for `Ctrl + Alt + S`. The following code demonstrates how to override the `Ctrl + S` shortcut to save a document in the Document format and define `Ctrl + Alt + S` to save the document in the SFDT format.
+For example, `Ctrl + S` keyboard shortcut saves the document in SFDT format by default, and there is no behavior for `Ctrl + Alt + S`. The following code demonstrates how to override the `Ctrl + S` shortcut to save a document in DOCX format and define `Ctrl + Alt + S` to save the document in SFDT format.
 
 ```ts
 import * as React from 'react';
