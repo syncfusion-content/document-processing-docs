@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Flatten Annotations in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to flatten annotations and form fields before saving a PDF in the Syncfusion Blazor SfPdfViewer.
+description: Learn how to flatten PDF annotations and form fields before saving documents in the Blazor SfPdfViewer component for consistent output.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Flatten annotations in Blazor SfPdfViewer
+# Flatten annotations in Blazor SfPdfViewer Component
 
-Flattening takes the visual appearance of annotations and embeds them into each page's content stream. The visual result remains visible, but the annotation objects and interactive form field structures are removed or converted so they can no longer be selected, edited, or filled.
+Flattening takes the visual appearance of annotations and embeds them into each page's content stream. The visual result remains visible, but the annotation objects and interactive form field structures are removed, leaving only the rendered appearance. Once flattened, they can no longer be selected, edited, or filled.
 
 Flattening annotations permanently merges them into the PDF content. Once flattened:
 - Annotations are **no longer editable** in any PDF viewer.
@@ -41,7 +41,7 @@ Use the example below to flatten annotations on button click.
 
 @code {
     private SfPdfViewer2? Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
     private async Task FlattenDownload()
     {
@@ -84,13 +84,14 @@ Use the example below to flatten annotations on button click.
 }
 ```
 
-## Behavior notes
+## API reference
 
 - `GetDocumentAsync()`: Retrieves the current document from the viewer as a byte array, including all annotations and form data.
 - `PdfLoadedDocument.Form.Flatten = true`: Merges form field appearances into the page content, making them non-interactive.
 - `page.Annotations.Flatten = true`: Embeds annotation appearances into the page, removing interactivity.
 - `LoadAsync()`: Reloads the flattened PDF into the viewer for display.
 - `DownloadAsync()`: Triggers the browser download of the currently displayed document.
+- `loadedDocument.Close(true)`: Closes the document and releases resources. Pass `true` to dispose the underlying streams; pass `false` to keep them alive.
 
 ## Notes
 
@@ -102,10 +103,10 @@ Use the example below to flatten annotations on button click.
 
 ## See also
 
-- [Annotation Overview](overview.md)
-- [Create and Modify Annotations](create-modify-annotation.md)
-- [Annotation Permissions](annotation-permission.md)
-- [Text Markup Annotations](text-markup/highlight-annotation.md)
-- [Shape Annotations](shape/line-annotation.md)
-- [Measurement Annotations](measurement/distance-annotation.md)
-- [Annotation Undo/Redo](annotations-undo-redo.md)
+- [Annotation Overview](./overview)
+- [Create and Modify Annotations](./create-modify-annotation)
+- [Annotation Permissions](./annotation-permission)
+- [Text Markup Annotations](./text-markup/highlight-annotation)
+- [Shape Annotations](./shape/line-annotation)
+- [Measurement Annotations](./measurement/distance-annotation)
+- [Annotation Undo/Redo](./annotations-undo-redo)

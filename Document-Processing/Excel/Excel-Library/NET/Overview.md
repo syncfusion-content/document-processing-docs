@@ -13,7 +13,6 @@ documentation: UG
 
 The library can be used in Windows Forms, WPF, UWP, ASP.NET Web Forms, ASP.NET MVC, ASP.NET Core, Xamarin, Blazor, WinUI and .NET MAUI applications.
 
-N> Looking for the full .NET Excel Library component overview, features, pricing, and documentation? Visit the [.NET Excel Library](https://www.syncfusion.com/document-sdk/net-excel-library) page.
 
 **Key Features**
 

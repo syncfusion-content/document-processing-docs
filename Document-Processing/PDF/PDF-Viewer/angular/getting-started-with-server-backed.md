@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 This section explains how to create a simple Angular application and add the server-backed [Syncfusion® Angular PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/angular-pdf-viewer) component with the minimum required setup.
 
-N> Starting with the 2026 Vol 2 main release (June 2026), no new features will be added to the Server PDF Viewer, as almost all of the PDF Viewer functionalities are now available in the Standalone PDF Viewer. If you are currently using the server-backed PDF Viewer, please refer to the [migration documentation](./server-to-standalone) to transition to the Standalone PDF Viewer.
+N> As of the 2026 Vol 2 main release (July 6, 2026), no new features will be added to the server-backed PDF Viewer, as almost all of the PDF Viewer functionalities are now available in the Standalone PDF Viewer. If you are currently using the server-backed PDF Viewer, refer to the [migration documentation](./server-to-standalone) to transition to the Standalone PDF Viewer.
 
 ## Prerequisites
 
@@ -82,7 +82,7 @@ Add the following PDF Viewer and dependent component style references to the `sr
 
 Add the PDF Viewer component to your Angular application in server-backed mode. In this mode, the PDF Viewer communicates with a server-side web service through the `serviceUrl` property.
 
-Update `src/app/app.ts` as shown below:
+The example below uses a standalone component. The default project uses standalone components, and the root component file is `src/app/app.ts`. Update it as shown below:
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
@@ -136,7 +136,7 @@ ng serve --open
 {% endhighlight %}
 {% endtabs %}
 
-After the application starts, open the localhost URL shown in the terminal to view the Angular PDF Viewer component in the browser. The output will appear as follows:
+After the application starts, open `http://localhost` (the default Angular dev server URL) in a modern browser such as Chrome, Edge, Firefox, or Safari to view the Angular PDF Viewer component. The output will appear as follows:
 
 ![Rendered PDF Viewer in browser](images/pdfviewer-control.png)
 
@@ -148,8 +148,7 @@ After the application starts, open the localhost URL shown in the terminal to vi
 
 To host your own PDF Viewer service:
 
-1. Download the web service sample from GitHub:
-   [GitHub Web Service Sample](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices)
+1. Download or clone the [EJ2-PDFViewer-WebServices repository](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices).
 2. Navigate to the appropriate folder based on your .NET version:
    - .NET 6.0 → [PdfViewerWebService_6.0](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices/tree/main/ASP.NET%20Core/PdfViewerWebService_6.0)
    - .NET 8.0 → [PdfViewerWebService_8.0](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices/tree/main/ASP.NET%20Core/PdfViewerWebService_8.0)
@@ -177,8 +176,6 @@ For detailed compatibility information, refer to the [Angular version support ma
 * [Create a Standalone PDF Viewer in Angular 12](./how-to/create-a-standalone-pdf-viewer-in-angular-12)
 
 For older Angular versions, refer to the respective Angular PDF Viewer guides.
-
-N> Looking for the full Angular PDF Viewer component overview, features, pricing, and documentation? Visit the [Angular PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/angular-pdf-viewer) page.
 
 ## See also
 

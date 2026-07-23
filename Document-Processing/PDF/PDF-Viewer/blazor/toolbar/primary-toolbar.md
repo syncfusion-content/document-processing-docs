@@ -1,20 +1,20 @@
 ---
 layout: post
 title: Customize the Primary Toolbar in Blazor PDF Viewer | Syncfusion
-description: Learn how to show or hide, reorder, and add items to the primary toolbar in the Syncfusion Blazor PDF Viewer.
+description: Learn how to show or hide, reorder, and add items to the primary toolbar in the Blazor PDF Viewer.
 platform: document-processing
-control: PDF Viewer
+control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize Primary Toolbar in Blazor PDF Viewer
+# Customize the Primary Toolbar in Blazor PDF Viewer
 
 This guide explains how to show or hide the primary toolbar, remove default items, reorder toolbar items, and add custom toolbar items.
 
 ## Show or hide primary toolbar at initialization
 
-Set [EnableToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableToolbar) to `false` to hide the built-in toolbar.
+Set [`EnableToolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableToolbar) to `false` to hide the built-in toolbar.
 
 {% tabs %}
 {% highlight razor tabtitle="Toolbar.razor" %}
@@ -30,7 +30,7 @@ Set [EnableToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPd
 
 ## Show or hide primary toolbar at runtime
 
-Use the [ShowToolbarAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ShowToolbarAsync_System_Boolean_) method to show or hide the toolbar dynamically.
+Use the [`ShowToolbarAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ShowToolbarAsync_System_Boolean_) method to show or hide the toolbar dynamically.
 
 {% tabs %}
 {% highlight razor tabtitle="Toolbar.razor" %}
@@ -46,9 +46,9 @@ Use the [ShowToolbarAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 PdfViewer;
+    private SfPdfViewer2 PdfViewer;
     
-    public async void OnClick(MouseEventArgs args)
+    private async Task OnClick()
     {
         await PdfViewer.ShowToolbarAsync(false);
     }
@@ -58,11 +58,11 @@ Use the [ShowToolbarAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 [View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Custom%20Toolbar).
 
-## Customize the default toolbar items
+## Customize the default toolbar items in the primary toolbar
 
-Display only the required default actions and control their order.
+Show only the required default actions and control their order in the primary toolbar.
 
-Use [PdfViewerToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html) to specify which toolbar items are shown and their order. The toolbar renders only the items listed in the [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_ToolbarItems) collection.
+Use [`PdfViewerToolbarSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html) to specify which toolbar items are shown and their order. The toolbar renders only the items listed in the [`ToolbarItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_ToolbarItems) collection. For a full list of available values, see the [`ToolbarItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ToolbarItem.html) enum.
 
 {% tabs %}
 {% highlight razor tabtitle="Toolbar.razor" %}
@@ -87,9 +87,9 @@ Use [PdfViewerToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.
 {% endhighlight %}
 {% endtabs %}
 
-## Rearrange the default toolbar items
+## Rearrange the default toolbar items in the primary toolbar
 
-Change the visual order of default items by reordering the [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_ToolbarItems) collection.
+Change the visual order of default items in the primary toolbar by reordering the [`ToolbarItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_ToolbarItems) collection.
 
 {% tabs %}
 {% highlight razor tabtitle="Toolbar.razor" %}
@@ -122,11 +122,11 @@ Change the visual order of default items by reordering the [ToolbarItems](https:
 
 [View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Primary%20Custom%20Toolbar/Rearrange-Default-Options).
 
-## Disable default items and add custom items in the primary toolbar
+## Remove default items and add custom items to the primary toolbar
 
-Replace built-in items with custom buttons rendered via templates at specific indexes.
+Render custom buttons in place of the default items by using templates positioned at specific indexes.
 
-Set [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_ToolbarItems) to `null` and provide a list of [PdfToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfToolbarItem.html) objects with custom templates. Each item defines a [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfToolbarItem.html#Syncfusion_Blazor_SfPdfViewer_PdfToolbarItem_Template) and [Index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfToolbarItem.html#Syncfusion_Blazor_SfPdfViewer_PdfToolbarItem_Index) for positioning.
+Set [`ToolbarItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_ToolbarItems) to `null` and provide a list of [`PdfToolbarItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfToolbarItem.html) objects with custom templates. Each item defines a [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfToolbarItem.html#Syncfusion_Blazor_SfPdfViewer_PdfToolbarItem_Template) and [`Index`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfToolbarItem.html#Syncfusion_Blazor_SfPdfViewer_PdfToolbarItem_Index) for positioning.
 
 {% tabs %}
 {% highlight razor tabtitle="Toolbar.razor" %}
@@ -142,9 +142,9 @@ Set [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdf
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 Viewer;
+    private SfPdfViewer2 Viewer;
     
-    public List<PdfToolbarItem> CustomToolbarItems = new List<PdfToolbarItem>()
+    private List<PdfToolbarItem> CustomToolbarItems = new List<PdfToolbarItem>()
     {
         new PdfToolbarItem() { Index = 0, Template = GetTemplate("PreviousPage") },
         new PdfToolbarItem() { Index = 1, Template = GetTemplate("NextPage") },
@@ -158,28 +158,28 @@ Set [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdf
         {
             if (name == "PreviousPage")
             {
-                <ToolbarItem PrefixIcon="e-icons e-chevron-up" 
-                            Text="Previous Page" 
-                            TooltipText="Previous Page" 
-                            Id="previousPage" 
+                <ToolbarItem PrefixIcon="e-icons e-chevron-left"
+                            Text="Previous Page"
+                            TooltipText="Previous Page"
+                            Id="previousPage"
                             Align="ItemAlign.Left">
                 </ToolbarItem>
             }
             else if (name == "NextPage")
             {
-                <ToolbarItem PrefixIcon="e-icons e-chevron-down" 
-                            Text="Next Page" 
-                            TooltipText="Next Page" 
-                            Id="nextPage" 
+                <ToolbarItem PrefixIcon="e-icons e-chevron-right"
+                            Text="Next Page"
+                            TooltipText="Next Page"
+                            Id="nextPage"
                             Align="ItemAlign.Left">
                 </ToolbarItem>
             }
             else if (name == "Print")
             {
-                <ToolbarItem PrefixIcon="e-icons e-print" 
-                            Text="Print" 
-                            TooltipText="Print" 
-                            Id="print" 
+                <ToolbarItem PrefixIcon="e-icons e-print"
+                            Text="Print"
+                            TooltipText="Print"
+                            Id="print"
                             Align="ItemAlign.Right">
                 </ToolbarItem>
             }
@@ -195,7 +195,7 @@ Set [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdf
         };
     }
 
-    public async void ClickAction(ClickEventArgs Item)
+    private async void ClickAction(ClickEventArgs Item)
     {
         if (Item.Item.Id == "previousPage")
         {
@@ -218,13 +218,13 @@ Set [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdf
 {% endhighlight %}
 {% endtabs %}
 
-![Primary toolbar with custom items including Save](../images/primary-toolbar-customization-with-save-option.png)
+![Primary toolbar with custom items Previous Page, Next Page, Print, and Download](../images/primary-toolbar-customization-with-save-option.png)
 
 [View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Primary%20Custom%20Toolbar/Without-Default-Options).
 
 ## Customize the primary toolbar with default options
 
-Combine default and custom items by using both [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_ToolbarItems) and [CustomToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_CustomToolbarItems). Custom items are inserted at specified index positions among the default items.
+Combine default and custom items by using both [`ToolbarItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_ToolbarItems) and [`CustomToolbarItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_CustomToolbarItems). Custom items are inserted at specified index positions among the default items.
 
 {% tabs %}
 {% highlight razor tabtitle="Toolbar.razor" %}
@@ -240,10 +240,10 @@ Combine default and custom items by using both [ToolbarItems](https://help.syncf
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 Viewer;
+    private SfPdfViewer2 Viewer;
     MemoryStream stream;
 
-    public List<ToolbarItem> ToolbarItems = new List<ToolbarItem>()
+    private List<ToolbarItem> ToolbarItems = new List<ToolbarItem>()
     {
         ToolbarItem.OpenOption,
         ToolbarItem.SelectionTool,
@@ -251,7 +251,7 @@ Combine default and custom items by using both [ToolbarItems](https://help.syncf
         ToolbarItem.PrintOption
     };
 
-    public List<PdfToolbarItem> CustomToolbarItems = new List<PdfToolbarItem>()
+    private List<PdfToolbarItem> CustomToolbarItems = new List<PdfToolbarItem>()
     {
         new PdfToolbarItem() { Index = 1, Template = GetTemplate("Save") },
         new PdfToolbarItem() { Index = 3, Template = GetTemplate("Download") }
@@ -282,7 +282,7 @@ Combine default and custom items by using both [ToolbarItems](https://help.syncf
         };
     }
 
-    public async void ClickAction(ClickEventArgs Item)
+    private async void ClickAction(ClickEventArgs Item)
     {
         if (Item.Item.Id == "save")
         {
@@ -323,10 +323,10 @@ Customize the appearance of toolbar icons for custom toolbar items. The followin
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 Viewer;
+    private SfPdfViewer2 Viewer;
     MemoryStream stream;
 
-    public List<PdfToolbarItem> CustomToolbarItems = new List<PdfToolbarItem>()
+    private List<PdfToolbarItem> CustomToolbarItems = new List<PdfToolbarItem>()
     {
         new PdfToolbarItem() { Index = 1, Template = GetTemplate("PreviousPage") },
         new PdfToolbarItem() { Index = 2, Template = GetTemplate("NextPage") },
@@ -340,7 +340,7 @@ Customize the appearance of toolbar icons for custom toolbar items. The followin
         {
             if (name == "PreviousPage")
             {
-                <ToolbarItem PrefixIcon="e-icons e-chevron-up"
+                <ToolbarItem PrefixIcon="e-icons e-chevron-left"
                             Text="Previous Page"
                             TooltipText="Previous Page"
                             Id="previousPage"
@@ -349,7 +349,7 @@ Customize the appearance of toolbar icons for custom toolbar items. The followin
             }
             else if (name == "NextPage")
             {
-                <ToolbarItem PrefixIcon="e-icons e-chevron-down"
+                <ToolbarItem PrefixIcon="e-icons e-chevron-right"
                             Text="Next Page"
                             TooltipText="Next Page"
                             Id="nextPage"
@@ -377,7 +377,7 @@ Customize the appearance of toolbar icons for custom toolbar items. The followin
         };
     }
 
-    public async void ClickAction(ClickEventArgs Item)
+    private async void ClickAction(ClickEventArgs Item)
     {
         if (Item.Item.Id == "previousPage")
         {
@@ -403,11 +403,11 @@ Customize the appearance of toolbar icons for custom toolbar items. The followin
 {% endtabs %}
 
 <style>
-    .e-icons.e-chevron-up::before {
+    .e-icons.e-chevron-left::before {
         content: '\e87a';
     }
 
-    .e-icons.e-chevron-down::before {
+    .e-icons.e-chevron-right::before {
         content: '\e70d';
     }
 
@@ -424,11 +424,11 @@ Customize the appearance of toolbar icons for custom toolbar items. The followin
 
 [View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Primary%20Custom%20Toolbar/Icon-Style-Change).
 
-N> This applies only to a custom toolbar.
+N> This applies only to custom toolbar items.
 
-## Enable the redaction toolbar on desktop
+## Add the redaction tool to the primary toolbar on desktop
 
-Show the redaction toolbar on desktop by including [ToolbarItem.Redaction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ToolbarItem.html#Syncfusion_Blazor_SfPdfViewer_ToolbarItem_Redaction) in the [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_ToolbarItems) collection.
+Show the redaction tool in the primary toolbar on desktop by including [`ToolbarItem.Redaction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ToolbarItem.html#Syncfusion_Blazor_SfPdfViewer_ToolbarItem_Redaction) in the [`ToolbarItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_ToolbarItems) collection.
 
 {% tabs %}
 {% highlight razor tabtitle="Toolbar.razor" %}
@@ -468,7 +468,7 @@ Show the redaction toolbar on desktop by including [ToolbarItem.Redaction](https
 
 ## Show or hide the navigation toolbar
 
-Control the sidebar that toggles bookmarks and thumbnails using the [EnableNavigationToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableNavigationToolbar) property.
+Control the sidebar that displays thumbnails using the [`EnableNavigationToolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableNavigationToolbar) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Toolbar.razor" %}
@@ -482,7 +482,7 @@ Control the sidebar that toggles bookmarks and thumbnails using the [EnableNavig
 {% endhighlight %}
 {% endtabs %}
 
-## Related topics
+## See also
 
 - [Annotation toolbar customization](./annotation-toolbar)
 - [Form designer toolbar customization](./form-designer-toolbar)

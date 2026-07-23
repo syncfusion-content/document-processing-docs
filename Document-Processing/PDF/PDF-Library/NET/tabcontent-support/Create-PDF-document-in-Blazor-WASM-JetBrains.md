@@ -31,7 +31,9 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 3: Next, include the following namespaces in that  ``FetchData.razor`` file.
+Step 3: Create a Razor file named ``FetchData.razor`` in the ``Pages`` folder if it does not already exist (the Blazor WebAssembly Standalone template provides a sample data page that you can reuse).
+
+Step 4: Next, include the following namespaces in the ``FetchData.razor`` file.
 
 {% tabs %}
 {% highlight CSHTML %}
@@ -46,7 +48,7 @@ Step 3: Next, include the following namespaces in that  ``FetchData.razor`` file
 {% endhighlight %}
 {% endtabs %}
 
-Step 4: Create a button in the ``FetchData.razor`` using the following code.
+Step 5: Create a button in the ``FetchData.razor`` using the following code.
 
 {% tabs %}
 {% highlight CSHTML %}
@@ -54,7 +56,7 @@ Step 4: Create a button in the ``FetchData.razor`` using the following code.
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Define the ``@ExportToPdf`` click function on ``FetchData.razor`` file.
+Step 6: Define the ``@ExportToPdf`` click function on the ``FetchData.razor`` file.
 
 The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created and add a [PdfPage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPage.html) to it. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data sources. 
 
@@ -77,7 +79,7 @@ The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.
         PdfTextElement title = new PdfTextElement("Weather Forecast", font, PdfBrushes.Black);
         PdfLayoutResult result = title.Draw(page, new PointF(0, 0));
         PdfStandardFont contentFont = new PdfStandardFont(PdfFontFamily.TimesRoman, 12);
-        //Create text element. 
+        //Create text element.
         PdfTextElement content = new PdfTextElement("This component demonstrates fetching data from a client side and Exporting the data to PDF document using Syncfusion .NET PDF library.", contentFont, PdfBrushes.Black);
         PdfLayoutFormat format = new PdfLayoutFormat();
         format.Layout = PdfLayoutType.Paginate;
@@ -96,10 +98,12 @@ The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.
         //Draw PDF grid into the PDF page.
         pdfGrid.Draw(page, new Syncfusion.Drawing.PointF(0, result.Bounds.Bottom + paragraphAfterSpacing));
 
-        //Create memory stream. 
+        //Create memory stream.
         MemoryStream memoryStream = new MemoryStream();
         //Save the PDF document.
         pdfDocument.Save(memoryStream);
+        //Close the PDF document
+        pdfDocument.Close(true);
         //Download the PDF document
         JS.SaveAs("Sample.pdf", memoryStream.ToArray());
     }
@@ -108,7 +112,7 @@ The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Create a class file with ``FileUtil`` name and add the following code to invoke the JavaScript action to download the file in the browser.
+Step 7: Create a class file named ``FileUtil.cs`` and add the following code to invoke the JavaScript action to download the file in the browser.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -125,7 +129,7 @@ public static class FileUtil
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Add the following JavaScript function in the ``index.html`` available under the ``wwwroot`` folder.
+Step 8: Add the following JavaScript function in the ``index.html`` file available under the ``wwwroot`` folder.
 
 {% tabs %}
 {% highlight HTML %}
@@ -159,10 +163,10 @@ Step 7: Add the following JavaScript function in the ``index.html`` available un
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Build the project.
+Step 9: Build the project.
 
 Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
-Step 9: Run the project.
+Step 10: Run the project.
 
 Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.

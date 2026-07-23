@@ -199,8 +199,6 @@ Yes - the skill supports choosing Tailwind, Bootstrap, Material, or a custom the
 **Does it modify files automatically?**
 The skill proposes changes and requires confirmation for insertion; automatic dependency installation may be offered depending on agent permissions.
 
-N> Looking for the full Blazor DOCX Editor component overview, features, pricing, and documentation? Visit the [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) page.
-
 ## See also
 
 - [Agent Skills Standards](https://agentskills.io/home)

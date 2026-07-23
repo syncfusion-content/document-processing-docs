@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Add Distance Annotations in Blazor PDF Viewer | Syncfusion
-description: Learn how to enable, measure, customize, and manage Distance annotations in the Syncfusion Blazor SfPdfViewer.
+description: Learn how to enable, measure, customize, and manage Distance annotations in the Blazor SfPdfViewer Component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Add Distance Annotations in Blazor SfPdfViewer
+# Add Distance Annotations in Blazor SfPdfViewer Component
 
 Distance is a measurement annotation used to measure the length between two points on a PDF page. Use it for precise reviews, markups, or engineering measurements.
 
@@ -15,7 +15,7 @@ Distance is a measurement annotation used to measure the length between two poin
 
 ## Enable Distance Annotation
 
-The SfPdfViewer component supports distance measurement annotations by default. To enable the annotation toolbar and measurement functionality, simply add the SfPdfViewer component to your Blazor page:
+The `SfPdfViewer` component supports Distance measurement annotations by **default**. To enable the annotation toolbar and measurement functionality, simply add the `SfPdfViewer` component to your Blazor page:
 
 ```cshtml
 @using Syncfusion.Blazor.SfPdfViewer
@@ -32,20 +32,20 @@ The SfPdfViewer component supports distance measurement annotations by default. 
 
 ## Add Distance Annotation
 
-### Add Distance Using the Toolbar
+### Add Distance Annotation Using the Toolbar
 
-1. Click the **Edit Annotation** button in the SfPdfViewer toolbar. A toolbar appears below it.
-2. Click the **measurement Annotation** dropdown button. A dropdown appears with measurement annotation types.
-3. Select **Distance** to enable distance measurement mode.
-4. Click to set the start point, then click again to set the end point.
+1. Click the **Edit Annotation** button in the SfPdfViewer toolbar. A secondary toolbar appears below it.
+2. Click the **Measurement Annotation** dropdown. A list of measurement annotation types appears.
+3. Select **Distance** to enter Distance measurement mode.
+4. Click on the page to set the start point, then click again to set the end point.
 
 ![Measurement Toolbar](../../images/blazor-pdfviewer-add-calibrate-in-toolbar.png)
 
-> **Tip:** If Pan mode is active, choosing a measurement tool switches the viewer into the appropriate interaction mode for a smoother workflow.
+N> If Pan mode is active, choosing a measurement tool switches the viewer into the appropriate interaction mode for a smoother workflow.
 
-### Enable Distance Mode
+### Enable Distance Annotation Mode Programmatically
 
-Programmatically switch the viewer into Distance mode using `SetAnnotationModeAsync()`.
+Switch the viewer into Distance mode from code by calling [`SetAnnotationModeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SetAnnotationModeAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationType_).
 
 ```cshtml
 @using Syncfusion.Blazor.SfPdfViewer
@@ -59,30 +59,34 @@ Programmatically switch the viewer into Distance mode using `SetAnnotationModeAs
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async void OnClick(MouseEventArgs args)
+    private async Task OnClick(MouseEventArgs args)
     {
         await viewer.SetAnnotationModeAsync(AnnotationType.Distance);
     }
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 ```
 
-#### Exit Distance Mode
+#### Exit Distance Annotation Mode
 
-Switch back to normal mode using:
+Switch back to the default mode by calling [`SetAnnotationModeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SetAnnotationModeAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationType_) with annotation type `None`.
 
 ```cshtml
-public async void ExitDistanceMode()
-{
-    await viewer.SetAnnotationModeAsync(AnnotationType.None);
+@code {
+    private async Task ExitDistanceMode()
+    {
+        await viewer.SetAnnotationModeAsync(AnnotationType.None);
+    }
 }
 ```
 
-### Add Distance Programmatically
+### Add Distance Annotation Programmatically
 
-Use [`AddAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) to add a distance measurement by providing two **VertexPoints**.
+Use [`AddAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) to add a Distance measurement by providing exactly **two VertexPoints**.
+
+A Distance annotation requires **exactly two vertices** — the first is the start, the second is the end. Supplying more or fewer produces undefined behavior.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -92,26 +96,27 @@ Use [`AddAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private SfPdfViewer2 Viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async void AddDistance(MouseEventArgs args)
+    private async Task AddDistance(MouseEventArgs args)
     {
         PdfAnnotation annotation = new PdfAnnotation();
         annotation.Type = AnnotationType.Distance;
         annotation.PageNumber = 0;
-        List<VertexPoint> vertexPoints = new List<VertexPoint>();
-        vertexPoints.Add(new VertexPoint() { X = 200, Y = 230 });
-        vertexPoints.Add(new VertexPoint() { X = 350, Y = 230 });
-        annotation.VertexPoints = vertexPoints;
+        annotation.VertexPoints = new List<VertexPoint>
+        {
+            new VertexPoint() { X = 200, Y = 230 },
+            new VertexPoint() { X = 350, Y = 230 }
+        };
         await Viewer.AddAnnotationAsync(annotation);
     }
 }
 ```
 
-## Customize Distance Appearance
+## Customize Distance Annotation Appearance
 
-Configure default distance settings such as **fill color**, **stroke color**, **thickness**, and **opacity** using [`DistanceSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DistanceSettings).
+Configure the default Distance style — **fill color**, **stroke color**, **thickness**, and **opacity** — using the [`DistanceSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DistanceSettings) property.
 
 ```cshtml
 @using Syncfusion.Blazor.SfPdfViewer
@@ -124,51 +129,49 @@ Configure default distance settings such as **fill color**, **stroke color**, **
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    PdfViewerDistanceSettings DistanceSettings = new PdfViewerDistanceSettings
+    private PdfViewerDistanceSettings DistanceSettings = new PdfViewerDistanceSettings
     {
         FillColor = "blue",
         StrokeColor = "green",
+        Thickness = 2,
         Opacity = 0.6
     };
 }
 ```
 
-## Manage Distance (Move, Resize, Edit, Delete)
+## Manage Distance Annotation
 
-- **Move**: Drag the measurement to reposition it.
-- **Resize**: Drag the end handles to adjust the length.
+### Move Distance Annotation
 
-### Edit Distance
+Drag the body of the measurement to reposition it on the page.
 
-#### Edit Distance (UI)
+### Resize Distance Annotation
 
-Use the annotation toolbar to modify:
-- **Fill Color** - Edit the fill color using the Edit Color tool
+Drag the end handles to adjust the length, or change `VertexPoints` programmatically.
 
-![Editing Calibrate FillColor in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-fillcolor.png)
+### Edit Distance Annotation
 
-- **Stroke Color** - Edit the stroke color using the Edit Stroke Color tool
+#### Edit Distance Annotation Appearance (UI)
 
-![Editing Calibrate StrokeColor in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-stroke-color.png)
+Select the Distance annotation first — the annotation toolbar appears below the main toolbar. Use it to change:
 
-- **Thickness** - Edit the border thickness using the Edit Thickness tool
+- **Fill Color**: pick a new color with the Edit Color tool.
+  ![Editing Calibrate FillColor in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-fillcolor.png)
+- **Stroke Color**: change the line color with the Edit Stroke Color tool.
+  ![Editing Calibrate StrokeColor in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-stroke-color.png)
+- **Thickness**: adjust the line width with the Edit Thickness tool.
+  ![Editing Calibrate Thickness in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-thickness.png)
+- **Opacity**: change transparency with the Edit Opacity tool.
+  ![Editing Calibrate Opacity in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-opacity.png)
+- **Line properties**: change the leader style (line only, with arrows, or full dimension lines) with the Edit Property tool.
+  ![Editing Calibrate Property in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-property.png)
 
-![Editing Calibrate Thickness in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-thickness.png)
+#### Edit Distance Annotation Programmatically
 
-- **Opacity** - Edit the opacity using the Edit Opacity tool
-
-![Editing Calibrate Opacity in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-opacity.png)
-
-- **Line properties** - Edit the Line property of annotation
-
-![Editing Calibrate Property in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-property.png)
-
-#### Edit Distance Programmatically
-
-Modify an existing distance annotation programmatically using [`EditAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_).
+Modify an existing Distance annotation programmatically using [`EditAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_). The example below expects `PDF_Succinctly.pdf` to already contain a Distance annotation; replace the filter with one that matches your data.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -178,30 +181,63 @@ Modify an existing distance annotation programmatically using [`EditAnnotationAs
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/Distance_Annotation.pdf";
+    private SfPdfViewer2 Viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async void EditDistance(MouseEventArgs args)
+    private async Task EditDistance(MouseEventArgs args)
     {
-        // Get annotation collection
+        // Get the annotations on the current document
         List<PdfAnnotation> annotationCollection = await Viewer.GetAnnotationsAsync();
-        // Select the annotation you want to edit
-        PdfAnnotation annotation = annotationCollection[0];
-        // Change the stroke color to blue
+
+        // Guard against an empty collection
+        if (annotationCollection == null || annotationCollection.Count == 0)
+        {
+            return;
+        }
+
+        // Pick the first Distance annotation (replace with your own selection logic)
+        PdfAnnotation annotation = annotationCollection
+            .FirstOrDefault(a => a.Type == AnnotationType.Distance);
+
+        if (annotation == null)
+        {
+            return;
+        }
+
+        // Update the style
         annotation.StrokeColor = "#0000FF";
-        // Change the thickness to 2
         annotation.Thickness = 2;
-        // Change the opacity to 0.8
+        annotation.FillColor = "#FFFF00";
         annotation.Opacity = 0.8;
-        // Edit the distance annotation
+        annotation.LeaderLength = 8;
+
+        // Apply the changes
         await Viewer.EditAnnotationAsync(annotation);
     }
 }
 ```
 
+For the full set of `PdfAnnotation` members, see the [PdfAnnotation API reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfAnnotation.html).
+
 ### Delete Distance Annotation
 
-The SfPdfViewer supports deleting existing annotations through both the UI and API. Use [`DeleteAnnotationAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) to remove an annotation programmatically. For supported workflows and APIs, see [**Delete Annotation**](../delete-annotation).
+Delete a Distance annotation through the UI (right-click → **Delete**, click **Delete** on the annotation toolbar, or press the `Delete` key while the annotation is selected) or programmatically:
+
+```cshtml
+@code {
+    private async Task DeleteFirstDistance()
+    {
+        List<PdfAnnotation> annotations = await Viewer.GetAnnotationsAsync();
+        PdfAnnotation target = annotations.FirstOrDefault(a => a.Type == AnnotationType.Distance);
+        if (target != null)
+        {
+            await Viewer.DeleteAnnotationAsync(target);
+        }
+    }
+}
+```
+
+For more deletion patterns, see [**Delete Annotation**](../delete-annotation).
 
 ## Set Default Properties During Initialization
 
@@ -218,7 +254,7 @@ Apply defaults for Distance using the [`DistanceSettings`](https://help.syncfusi
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
     PdfViewerDistanceSettings DistanceSettings = new PdfViewerDistanceSettings
@@ -230,9 +266,9 @@ Apply defaults for Distance using the [`DistanceSettings`](https://help.syncfusi
 }
 ```
 
-## Add Distance Annotation with Custom Properties
+## Add Distance Annotation Programmatically with Custom Properties
 
-Set custom properties for individual distance annotations when adding them programmatically:
+Override the default style for a single Distance annotation by setting properties directly on the `PdfAnnotation` instance before adding it.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -242,18 +278,19 @@ Set custom properties for individual distance annotations when adding them progr
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private SfPdfViewer2 Viewer;
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async void AddStyledDistance(MouseEventArgs args)
+    private async Task AddStyledDistance(MouseEventArgs args)
     {
         PdfAnnotation annotation = new PdfAnnotation();
         annotation.Type = AnnotationType.Distance;
         annotation.PageNumber = 0;
-        List<VertexPoint> vertexPoints = new List<VertexPoint>();
-        vertexPoints.Add(new VertexPoint() { X = 220, Y = 260 });
-        vertexPoints.Add(new VertexPoint() { X = 360, Y = 260 });
-        annotation.VertexPoints = vertexPoints;
+        annotation.VertexPoints = new List<VertexPoint>
+        {
+            new VertexPoint() { X = 220, Y = 260 },
+            new VertexPoint() { X = 360, Y = 260 }
+        };
         annotation.StrokeColor = "#059669";
         annotation.Opacity = 0.9;
         annotation.FillColor = "#D1FAE5";
@@ -265,12 +302,11 @@ Set custom properties for individual distance annotations when adding them progr
 
 ## Scale Ratio and Units
 
-- Use **Scale Ratio** from the context menu to set the actual-to-page scale.
-- Supported units include **Inch, Millimeter, Centimeter, Point, Pica, Feet**.
+The **Scale Ratio** controls how many page units equal one real-world unit. Open it from the **context menu** of any measurement annotation to recalibrate.
 
 ### Set Default Scale Ratio During Initialization
 
-Configure scale defaults using [`MeasurementSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerMeasurementSettings.html).
+Configure scale defaults using [`MeasurementSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerMeasurementSettings.html). The default `ScaleRatio` is `1`; values must be greater than `0`.
 
 ```cshtml
 @using Syncfusion.Blazor.SfPdfViewer
@@ -283,10 +319,10 @@ Configure scale defaults using [`MeasurementSettings`](https://help.syncfusion.c
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    PdfViewerMeasurementSettings MeasurementSettings = new PdfViewerMeasurementSettings
+    private PdfViewerMeasurementSettings MeasurementSettings = new PdfViewerMeasurementSettings
     {
         ScaleRatio = 2,
         ConversionUnit = CalibrationUnit.Cm
@@ -294,16 +330,25 @@ Configure scale defaults using [`MeasurementSettings`](https://help.syncfusion.c
 }
 ```
 
-## Handle Distance Events
+## Handle Distance Annotation Events
 
-Listen to annotation life-cycle events (add/modify/select/remove). For the full list and parameters, see [**Annotation Events**](../events).
+Listen to the annotation life-cycle with the `Added`, `Modified`, `Selected`, and `Removed` events. The handler receives an `AnnotationEventArgs` payload that includes the affected `PdfAnnotation`, the page number, and the action that triggered the event.
+
+For the full list of events and their payloads, see [**Annotation Events**](../events).
 
 ## Export and Import
 
-Distance measurements can be exported or imported with other annotations. For workflows and supported formats, see [**Export and Import Annotations**](../import-export-annotation).
+Distance measurements are exported and imported with the rest of the annotations in **JSON** or **XFDF** format. You can programmatically export and import these annotations using the [`ExportAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ExportAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationDataFormat_) and [`ImportAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ImportAnnotationAsync_System_IO_Stream_Syncfusion_Blazor_SfPdfViewer_AnnotationDataFormat_) methods.
 
-## See Also
+For the full export/import workflow and additional formats, see [**Export and Import Annotations**](../import-export-annotation).
+
+## See also
 
 - [Annotation Events](../events)
 - [Export and Import Annotations](../import-export-annotation)
 - [Delete Annotations](../delete-annotation)
+- [Measurement Annotations Overview](overview)
+- [Add Area Annotations](area-annotation)
+- [Add Perimeter Annotations](perimeter-annotation)
+- [Add Radius Annotations](radius-annotation)
+- [Add Volume Annotations](volume-annotation)

@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert Excel document to Image in ASP.NET Core
 
-Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to Image in ASP.NET Core**.
+Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-sdk/net-excel-library) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to Image in ASP.NET Core**.
 
 ## Steps to convert Excel document to Image in ASP.NET Core
 
@@ -16,17 +16,20 @@ Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.sync
 
 {% tabcontent Visual Studio %}
 
-Step 1: Create a new ASP.NET Core Web application (Model-View-Controller) project.
+Step 1: Create a new **ASP.NET Core Web App (Model-View-Controller)** project (Visual Studio → **File** → **New** → **Project** → **ASP.NET Core Web App (Model-View-Controller)**). Target **.NET 8.0** (or .NET 6 / 7) and set **Authentication** to **No Authentication** to keep the sample minimal.
 
-![Create ASP.NET Core Web application in Visual Studio](ASP-NET-Core_images/ASP-NET-Core_images_img10.png)
+![Create an ASP.NET Core Web application in Visual Studio](ASP-NET-Core_images/ASP-NET-Core_images_img10.png)
 
-Step 2: Install the [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+Step 2: Install the [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/). This package transitively pulls in the required `Syncfusion.XlsIO.Net.Core` and `Syncfusion.Pdf.Net.Core` assemblies.
 
 ![Install Syncfusion.XlsIORenderer.Net.Core NuGet Package](ASP-NET-Core_images/ASP-NET-Core_images_img12.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must also add the `Syncfusion.Licensing` reference and register a license key. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn how to register the Syncfusion<sup>&reg;</sup> license key. The simplest approach is to add the following call in `Program.cs` before `app.Run()`:
+> ```csharp
+> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+> ```
 
-Step 3: Include the following namespaces in the HomeController.cs file.
+Step 3: Add the following namespaces in **HomeController.cs**.
 
 {% tabs %}
 
@@ -39,9 +42,7 @@ using Syncfusion.XlsIORenderer;
 
 {% endtabs %}
 
-Step 5: A default action method named Index will be present in HomeController.cs. Right click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
-
-Step 6: Add a new button in the Index.cshtml as shown below.
+Step 4: Add a new submit button to **Index.cshtml** (inside the existing `<div class="text-center">` block) as shown below.
 
 {% tabs %}
 
@@ -61,31 +62,38 @@ Step 6: Add a new button in the Index.cshtml as shown below.
 
 {% endtabs %}
 
-Step 7: Add a new action method **ConvertExceltoImage** in HomeController.cs and include the below code snippet to **convert the Excel document to image**.
-
+Step 5: Add a new action method named `ConvertExceltoImage` in **HomeController.cs** and include the following code to convert the Excel document to an image. Place a `InputTemplate.xlsx` file in the project's `wwwroot` folder so the relative path resolves at runtime.
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
 
-using (ExcelEngine excelEngine = new ExcelEngine())
+public IActionResult ConvertExceltoImage()
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx");
-  IWorksheet worksheet = workbook.Worksheets[0];
+    using (ExcelEngine excelEngine = new ExcelEngine())
+    {
+        IApplication application = excelEngine.Excel;
+        application.DefaultVersion = ExcelVersion.Xlsx;
 
-  //Initialize XlsIO renderer.
-  application.XlsIORenderer = new XlsIORenderer();
+        //Open the existing Excel workbook from wwwroot.
+        IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx");
+        IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Create the MemoryStream to save the image.      
-  MemoryStream imageStream = new MemoryStream();
+        //Initialize the XlsIO renderer.
+        application.XlsIORenderer = new XlsIORenderer();
 
-  //Save the converted image to MemoryStream.
-  worksheet.ConvertToImage(worksheet.UsedRange, imageStream);
-  imageStream.Position = 0;
+        //Create a MemoryStream to save the converted image.
+        MemoryStream imageStream = new MemoryStream();
 
-  //Download image in the browser.
-  return File(imageStream, "application/jpeg", "Sample.jpeg");
+        //Save the converted image to the MemoryStream.
+        worksheet.ConvertToImage(worksheet.UsedRange, imageStream);
+        imageStream.Position = 0;
+
+        //Close the workbook to release resources.
+        workbook.Close();
+
+        //Return the image for download in the browser.
+        return File(imageStream, "application/jpeg", "Sample.jpeg");
+    }
 }
 
 {% endhighlight %}
@@ -97,24 +105,27 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% tabcontent Visual Studio Code %}
 
 Step 1: Create a new ASP.NET Core Web application project.
-* Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
-* Choose the **ASP.NET Core Web App( Model-View-Controller) MVC** template.
+* Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET: New Project** and press Enter.
+* Choose the **ASP.NET Core Web App (Model-View-Controller)** template.
 
 ![Choose ASP.NET Core Web app from template](ASP-NET-Core_images/ASP-NET-Core_images_img11.png)
 
-* Select the project location, type the project name and press enter.
+* Select the project location, type the project name, and press Enter.
 * Then choose **Create project**.
 
-Step 2: To **convert a Excel document to image in ASP.NET Core Web app**, install [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) to the ASP.NET Core project.
+Step 2: To convert an Excel document to an image in an ASP.NET Core Web app, install [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) to the ASP.NET Core project.
 * Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 * Ensure you're in the project root directory where your .csproj file is located.
 * Run the command `dotnet add package Syncfusion.XlsIORenderer.Net.Core` to install the NuGet package.
 
 ![Add Syncfusion.XlsIORenderer.Net.Core NuGet package](ASP-NET-Core_images/ASP-NET-Core_images_img13.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must also add the `Syncfusion.Licensing` reference and register a license key. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn how to register the Syncfusion<sup>&reg;</sup> license key. The simplest approach is to add the following call in `Program.cs` before `app.Run()`:
+> ```csharp
+> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+> ```
 
-Step 3: Include the following namespaces in the HomeController.cs file.
+Step 3: Add the following namespaces in **HomeController.cs**.
 
 {% tabs %}
 
@@ -127,9 +138,7 @@ using Syncfusion.XlsIORenderer;
 
 {% endtabs %}
 
-Step 4: A default action method named Index will be present in HomeController.cs. Right click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
-
-Step 5: Add a new button in the Index.cshtml as shown below.
+Step 4: Add a new submit button to **Index.cshtml** (inside the existing `<div class="text-center">` block) as shown below.
 
 {% tabs %}
 
@@ -149,31 +158,38 @@ Step 5: Add a new button in the Index.cshtml as shown below.
 
 {% endtabs %}
 
-Step 6: Add a new action method **ConvertExceltoImage** in HomeController.cs and include the below code snippet to **convert the Excel document to image**.
-
+Step 5: Add a new action method named `ConvertExceltoImage` in **HomeController.cs** and include the following code to convert the Excel document to an image. Place a `InputTemplate.xlsx` file in the project's `wwwroot` folder so the relative path resolves at runtime.
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
 
-using (ExcelEngine excelEngine = new ExcelEngine())
+public IActionResult ConvertExceltoImage()
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx");
-  IWorksheet worksheet = workbook.Worksheets[0];
+    using (ExcelEngine excelEngine = new ExcelEngine())
+    {
+        IApplication application = excelEngine.Excel;
+        application.DefaultVersion = ExcelVersion.Xlsx;
 
-  //Initialize XlsIO renderer.
-  application.XlsIORenderer = new XlsIORenderer();
+        //Open the existing Excel workbook from wwwroot.
+        IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx");
+        IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Create the MemoryStream to save the image.      
-  MemoryStream imageStream = new MemoryStream();
+        //Initialize the XlsIO renderer.
+        application.XlsIORenderer = new XlsIORenderer();
 
-  //Save the converted image to MemoryStream.
-  worksheet.ConvertToImage(worksheet.UsedRange, imageStream);
-  imageStream.Position = 0;
+        //Create a MemoryStream to save the converted image.
+        MemoryStream imageStream = new MemoryStream();
 
-  //Download image in the browser.
-  return File(imageStream, "application/jpeg", "Sample.jpeg");
+        //Save the converted image to the MemoryStream.
+        worksheet.ConvertToImage(worksheet.UsedRange, imageStream);
+        imageStream.Position = 0;
+
+        //Close the workbook to release resources.
+        workbook.Close();
+
+        //Return the image for download in the browser.
+        return File(imageStream, "application/jpeg", "Sample.jpeg");
+    }
 }
 
 {% endhighlight %}
@@ -184,12 +200,12 @@ using (ExcelEngine excelEngine = new ExcelEngine())
  
 {% endtabcontents %}
 
-You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/ASP.NET%20Core/ConvertExcelToImage">GitHub</a>.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/ASP.NET%20Core/ConvertExcelToImage).
 
-By executing the program, you will get the **image** as follows.
+By executing the program, you will get the **image** as shown below.
 
 ![Excel to Image in ASP.NET Core](ASP-NET-Core_images/ASP-NET-Core_images_img14.png)    
 
-Click [here](https://www.syncfusion.com/document-processing/excel-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
+Click [here](https://www.syncfusion.com/document-sdk/net-excel-library) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
-An online sample link to [convert an Excel document to Image](https://ej2.syncfusion.com/aspnetcore/Excel/WorksheetToImage#/material3) in ASP.NET Core.
+An online sample link to [convert an Excel document to Image](https://document.syncfusion.com/demos/excel/worksheettoimage#/tailwind) in ASP.NET Core.

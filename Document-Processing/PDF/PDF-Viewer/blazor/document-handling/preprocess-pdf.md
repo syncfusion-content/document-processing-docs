@@ -2,7 +2,7 @@
 layout: post
 title: Preprocess PDF Document in Blazor PDF Viewer | Syncfusion
 description: Learn how to preprocess PDF documents using Syncfusion PDF Library before displaying them in the Blazor PDF Viewer.
-control: PDF Viewer
+control: SfPdfViewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,17 +10,17 @@ domainurl: ##DomainURL##
 
 # Pre-process PDF Document Before Displaying in Blazor PDF Viewer
 
-This section explains why preprocessing is useful, what operations you can perform using the Syncfusion PDF Library and Blazor PDF Viewer, and how to load the processed document in the Blazor PDF Viewer.
+This section explains why preprocessing is useful, what operations you can perform using the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Library and Blazor PDF Viewer, and how to load the processed document in the Blazor PDF Viewer.
 
 ## Why Preprocessing Is Needed
 Preprocessing a PDF before sending it to the viewer helps you:
-- Reduce file size and improve load time
-- Merge multiple documents into one
-- Extract only required pages for faster loading
-- Flatten form fields and annotations for performance & security
-- Apply branding elements such as watermarks or stamps
+- **Reduce file size**: Compresses content to improve load time.
+- **Merge multiple documents**: Combine several PDFs into a single file.
+- **Extract only required pages**: Drop unused pages for faster loading.
+- **Flatten form fields and annotations**: Improves rendering performance and prevents further editing.
+- **Apply branding elements**: Such as watermarks or stamps.
 
-These enhancements ensure a better, faster, and more controlled viewing experience.
+Each enhancement maps directly to a measurable improvement in load time, rendering speed, or document control.
 
 ## Merge PDF Documents
 ### UI-Level Merging
@@ -31,11 +31,11 @@ You can visually merge pages in the **Organize Pages** UI inside the Blazor PDF 
 For more details, refer to [UI Interactions - Import Pages](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/organize-pages/ui-interactions#import-pages).
 
 ### Programmatically Merge PDFs
-Using the Syncfusion PDF Viewer, you can merge documents before loading them into the viewer.
+Using the Blazor PDF Viewer, you can merge documents before loading them into the viewer.
 
 For more details, refer to [Programmatic Support - Import Pages](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/organize-pages/programmatic-support#import-pages).
 
-N> You can then load the merged PDF into the viewer using a file path or stream.
+N> You can then load the merged PDF into the viewer using a file path, stream, or byte array.
 
 ## Extract Pages
 ### UI-Level Extraction
@@ -60,7 +60,7 @@ For more details, refer to [Programmatic Support - Export Pages](https://help.sy
 
 Use the following code-snippet when you want uploaded PDFs to be flattened before they are loaded into the viewer.
 
-```cs
+```csharp
 @page "/"
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.SfPdfViewer
@@ -68,7 +68,7 @@ Use the following code-snippet when you want uploaded PDFs to be flattened befor
 @using Syncfusion.Pdf.Parsing
 
 <SfPdfViewer2 Height="600px" Width="100%" @ref="Viewer"><PdfViewerEvents Created="OnCreated"></PdfViewerEvents></SfPdfViewer2>
-@code{
+@code {
     private SfPdfViewer2? Viewer;
     async Task OnCreated()
     {
@@ -110,6 +110,8 @@ The Blazor PDF Viewer toolbar allows users to:
 ![Custom Stamp](../images/customized_templated_stamp_appearance.png)
 
 ### Programmatically Add a Watermark
+
+The following example loads an existing PDF, draws a watermark image on every page using `PdfGraphics`, and then reloads the result into the viewer. The image is loaded from a file in `wwwroot` and converted to a `byte[]` — the recommended approach over hard-coding base64.
 
 ```csharp
 @page "/"
@@ -171,21 +173,25 @@ You can load the processed PDF using a remote URL, stream, or byte array and bas
 
 ### Load From Remote URL
 
-Refer to the Syncfusion Blazor PDF Viewer documentation for loading PDF from Remote URL. For more details, visit [Load PDF Document from Remote URL](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/opening-pdf-file#opening-a-pdf-from-remote-url).
+Refer to the Blazor PDF Viewer documentation for loading PDF from Remote URL. For more details, visit [Load PDF Document from Remote URL](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/opening-pdf-file#opening-a-pdf-from-remote-url).
 
 https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/opening-pdf-file#opening-a-pdf-from-remote-url
 
 ### Load Using Stream or Byte Array
 
-Refer to the Syncfusion Blazor PDF Viewer documentation for loading PDF from stream or byte array. For more details, visit [Load PDF Document from Stream](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/opening-pdf-file#opening-a-pdf-from-stream).
+Refer to the Blazor PDF Viewer documentation for loading PDF from stream or byte array. For more details, visit [Load PDF Document from Stream](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/opening-pdf-file#opening-a-pdf-from-stream).
 
 ### Load Using base64 Data
 
-Refer to the Syncfusion Blazor PDF Viewer documentation for loading PDF from base64 data. For more details, visit [Load PDF Document from base64 Data](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/opening-pdf-file#opening-a-pdf-from-base64-data).
+Refer to the Blazor PDF Viewer documentation for loading PDF from base64 data. For more details, visit [Load PDF Document from base64 Data](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/opening-pdf-file#opening-a-pdf-from-base64-data).
 
 ## Additional Performance Tips
 
 - **Render Multiple Pages While Scrolling:** Improve performance by rendering multiple pages during scrolling. For more details, refer to [How to render N pages while scrolling](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-render-n-pages-scrolling).
 - **Improve Performance Using CDN:** Enhance viewer performance using a Content Delivery Network. For more details, refer to [How to improve performance using CDN](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-improve-performance-using-cdn).
 
+## See also
 
+- [Load Large PDF Files](./load-large-pdf)
+- [Load a Password-Protected PDF](./load-password-pdf)
+- [Getting started with SfPdfViewer in a Blazor Web App](../getting-started/web-app)

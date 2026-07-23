@@ -10,6 +10,8 @@ documentation: UG
 
 Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **create a PowerPoint document in AWS Lambda**.
 
+N> A basic understanding of AWS Lambda concepts (Lambda functions, execution roles, and publishing) is assumed. To learn how to set up an AWS account and the AWS Toolkit for Visual Studio, refer to the official [AWS Lambda documentation](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html) and [AWS Toolkit for Visual Studio](https://aws.amazon.com/visualstudio/).
+
 ## Steps to create PowerPoint document in AWS Lambda
 
 Step 1: Create a new **AWS Lambda project** as follows.
@@ -21,7 +23,18 @@ Step 2: Select Blueprint as Empty Function and click **Finish**.
 Step 3: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 ![Install Syncfusion.Presentation.Net.Core NuGet package](Workingwith-Blazor/NuGet.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+
+N> Register the Syncfusion license key in the `FunctionHandler` of the **Function.cs** file before performing any Syncfusion library operations. Refer to the [license key generation](https://help.syncfusion.com/common/essential-studio/licensing/how-to-generate) and [application registration](https://help.syncfusion.com/common/essential-studio/licensing/how-to-register-in-an-application) guides for details. A minimal registration is shown below.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+//Register Syncfusion license key before using any Syncfusion types.
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+
+{% endhighlight %}
+{% endtabs %}
 
 Step 4: Create a folder and copy the required data files and include the files to the project.
 ![Create a folder](AWS_Images/Lambda_Images/Data-Folder-PowerPoint-Presentation-to-PDF.png)
@@ -34,76 +47,88 @@ Step 6: Include the following namespaces in **Function.cs** file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using System;
+using System.IO;
 using Syncfusion.Presentation;
+using Syncfusion.Licensing;
 
 {% endhighlight %}
 {% endtabs %}
 
-step 7: Add the following code snippet in **Function.cs** to **create a PowerPoint document in AWS Lambda**.
+Step 7: Add the following code snippet in **Function.cs** to **create a PowerPoint document in AWS Lambda**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//Create a new instance of PowerPoint Presentation file.
-using IPresentation pptxDoc = Presentation.Create();
+public string FunctionHandler(string input)
+{
+    //Register the Syncfusion license before using any Syncfusion types.
+    SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
 
-//Add a new slide to file and apply background color.
-ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.TitleOnly);
-//Specify the fill type and fill color for the slide background.
-slide.Background.Fill.FillType = FillType.Solid;
-slide.Background.Fill.SolidFill.Color = ColorObject.FromArgb(232, 241, 229);
+    //Create a new instance of PowerPoint Presentation file.
+    using IPresentation pptxDoc = Presentation.Create();
 
-//Add title content to the slide by accessing the title placeholder of the TitleOnly layout-slide.
-IShape titleShape = slide.Shapes[0] as IShape;
-titleShape.TextBody.AddParagraph("Company History").HorizontalAlignment = HorizontalAlignmentType.Center;
+    //Add a new slide to file and apply background color.
+    ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.TitleOnly);
+    //Specify the fill type and fill color for the slide background.
+    slide.Background.Fill.FillType = FillType.Solid;
+    slide.Background.Fill.SolidFill.Color = ColorObject.FromArgb(232, 241, 229);
 
-//Add description content to the slide by adding a new TextBox.
-IShape descriptionShape = slide.AddTextBox(53.22, 141.73, 874.19, 77.70);
-descriptionShape.TextBody.Text = "IMN Solutions PVT LTD is the software company, established in 1987, by George Milton. The company has been listed as the trusted partner for many high-profile organizations since 1988 and got awards for quality products from reputed organizations.";
+    //Add title content to the slide by accessing the title placeholder of the TitleOnly layout-slide.
+    IShape titleShape = slide.Shapes[0] as IShape;
+    titleShape.TextBody.AddParagraph("Company History").HorizontalAlignment = HorizontalAlignmentType.Center;
 
-//Add bullet points to the slide.
-IShape bulletPointsShape = slide.AddTextBox(53.22, 270, 437.90, 116.32);
-//Add a paragraph for a bullet point.
-IParagraph firstPara = bulletPointsShape.TextBody.AddParagraph("The company acquired the MCY corporation for 20 billion dollars and became the top revenue maker for the year 2015.");
-//Format how the bullets should be displayed.
-firstPara.ListFormat.Type = ListType.Bulleted;
-firstPara.LeftIndent = 35;
-firstPara.FirstLineIndent = -35;
-// Add another paragraph for the next bullet point.
-IParagraph secondPara = bulletPointsShape.TextBody.AddParagraph("The company is participating in top open source projects in automation industry.");
-//Format how the bullets should be displayed.
-secondPara.ListFormat.Type = ListType.Bulleted;
-secondPara.LeftIndent = 35;
-secondPara.FirstLineIndent = -35;
+    //Add description content to the slide by adding a new TextBox.
+    IShape descriptionShape = slide.AddTextBox(53.22, 141.73, 874.19, 77.70);
+    descriptionShape.TextBody.Text = "IMN Solutions PVT LTD is the software company, established in 1987, by George Milton. The company has been listed as the trusted partner for many high-profile organizations since 1988 and got awards for quality products from reputed organizations.";
 
-//Get a picture as stream.
-string filePath = Path.GetFullPath(@"Data/Image.jpg");
-using FileStream pictureStream = new(filePath, FileMode.Open, FileAccess.Read);
-//Add the picture to a slide by specifying its size and position.
-slide.Shapes.AddPicture(pictureStream, 499.79, 238.59, 364.54, 192.16);
+    //Add bullet points to the slide.
+    IShape bulletPointsShape = slide.AddTextBox(53.22, 270, 437.90, 116.32);
+    //Add a paragraph for a bullet point.
+    IParagraph firstPara = bulletPointsShape.TextBody.AddParagraph("The company acquired the MCY corporation for 20 billion dollars and became the top revenue maker for the year 2015.");
+    //Format how the bullets should be displayed.
+    firstPara.ListFormat.Type = ListType.Bulleted;
+    firstPara.LeftIndent = 35;
+    firstPara.FirstLineIndent = -35;
+    // Add another paragraph for the next bullet point.
+    IParagraph secondPara = bulletPointsShape.TextBody.AddParagraph("The company is participating in top open source projects in automation industry.");
+    //Format how the bullets should be displayed.
+    secondPara.ListFormat.Type = ListType.Bulleted;
+    secondPara.LeftIndent = 35;
+    secondPara.FirstLineIndent = -35;
 
-//Add an auto-shape to the slide.
-IShape stampShape = slide.Shapes.AddShape(AutoShapeType.Explosion1, 48.93, 430.71, 104.13, 80.54);
-//Format the auto-shape color by setting the fill type and text.
-stampShape.Fill.FillType = FillType.None;
-stampShape.TextBody.AddParagraph("IMN").HorizontalAlignment = HorizontalAlignmentType.Center;
+    // Get a picture as stream from the bundled Data folder in the deployment package.
+    string filePath = Path.GetFullPath(@"Data/Image.jpg");
+    using FileStream pictureStream = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+    //Add the picture to a slide by specifying its size and position.
+    slide.Shapes.AddPicture(pictureStream, 499.79, 238.59, 364.54, 192.16);
 
-//Save the PowerPoint Presentation.
-MemoryStream pptxStream = new MemoryStream();
-pptxDoc.Save(pptxStream);
-return Convert.ToBase64String(pptxStream.ToArray());
+    //Add an auto-shape to the slide.
+    IShape stampShape = slide.Shapes.AddShape(AutoShapeType.Explosion1, 48.93, 430.71, 104.13, 80.54);
+    //Format the auto-shape color by setting the fill type and text.
+    stampShape.Fill.FillType = FillType.None;
+    stampShape.TextBody.AddParagraph("IMN").HorizontalAlignment = HorizontalAlignmentType.Center;
+
+    //Save the PowerPoint Presentation.
+    using MemoryStream pptxStream = new MemoryStream();
+    pptxDoc.Save(pptxStream);
+    return Convert.ToBase64String(pptxStream.ToArray());
+}
 
 {% endhighlight %}
 {% endtabs %}
 
 Step 8: Right-click the project and select **Publish to AWS Lambda**.
+
+N> Before publishing, ensure that an IAM execution-role with the **AWSLambdaBasicExecutionRole** managed policy (or equivalent) is available in your AWS account so Step 10 can attach it. See [AWS Lambda execution role](https://docs.aws.amazon.com/lambda/latest/dg/lambda-intro-execution-role.html) for setup.
+
 ![Publish to AWS Lambda](AWS_Images/Lambda_Images/Publish-PowerPoint-Presentation-to-PDF.png)
 
 Step 9: Create a new AWS profile in the Upload Lambda Function Window. After creating the profile, add a name for the Lambda function to publish. Then, click **Next**.
 ![Upload Lambda Function](AWS_Images/Lambda_Images/Upload-Lampda-PowerPoint-Presentation-to-PDF.png)
 
 Step 10: In the Advanced Function Details window, specify the **Role Name** as based on AWS Managed policy. After selecting the role, click the **Upload** button to deploy your application.
-![Advance Function Details](AWS_Images/Lambda_Images/Advanced-AWS-PowerPoint-Presentation-to-PDF.png)
+![Advanced Function Details](AWS_Images/Lambda_Images/Advanced-AWS-PowerPoint-Presentation-to-PDF.png)
 
 Step 11: After deploying the application, you can see the published Lambda function in **AWS console**.
 ![After deploying the application](AWS_Images/Lambda_Images/Function-PowerPoint-Presentation-to-PDF.png)
@@ -111,19 +136,23 @@ Step 11: After deploying the application, you can see the published Lambda funct
 Step 12: Edit Memory size and Timeout as maximum in General configuration of the AWS Lambda function.
 ![AWS Lambda Function](AWS_Images/Lambda_Images/General-configuration-PowerPoint-Presentation-to-PDF.png)
 
+N> **Troubleshooting:**
+> * **Timeout / Function execution failed**: Increases Timeout (e.g. 1-5 min) and Memory (recommended at least 512 MB) in General configuration. Cold start of the containerized Lambda may take longer on first invoke.
+> * **File not found at Data/Image.jpg**: The Lambda runtime's working directory is read-only; ensure the `Data` folder is bundled and **Copy if newer** is set (Step 5), or load the picture from an embedded resource / Amazon S3.
+
 ## Steps to post the request to AWS Lambda
 
 Step 1: Create a new console project.
 ![Create a console project](AWS_Images/Lambda_Images/Console-APP-PowerPoint-Presentation-to-PDF.png)
 
-step 2: Install the following **Nuget packages** in your application from [Nuget.org](https://www.nuget.org/).
+Step 2: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/).
 
 * [AWSSDK.Core](https://www.nuget.org/packages/AWSSDK.Core/)
 * [AWSSDK.Lambda](https://www.nuget.org/packages/AWSSDK.Lambda/)
 * [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/)
-![Install AWSSDK.Core Nuget Package](AWS_Images/Lambda_Images/Nuget-Package-AWSSDK-Core-PowerPoint-Presentation-to-PDF.png)
-![Install AWSSDK.Lambda Nuget Package](AWS_Images/Lambda_Images/Nuget-Package-AWSSDK-Lambda-PowerPoint-Presentation-to-PDF.png)
-![Install Newtonsoft.Json Nuget Package](AWS_Images/Lambda_Images/Nuget-Package-Newton-Json-PowerPoint-Presentation-to-PDF.png)
+![Install AWSSDK.Core NuGet Package](AWS_Images/Lambda_Images/Nuget-Package-AWSSDK-Core-PowerPoint-Presentation-to-PDF.png)
+![Install AWSSDK.Lambda NuGet Package](AWS_Images/Lambda_Images/Nuget-Package-AWSSDK-Lambda-PowerPoint-Presentation-to-PDF.png)
+![Install Newtonsoft.Json NuGet Package](AWS_Images/Lambda_Images/Nuget-Package-Newton-Json-PowerPoint-Presentation-to-PDF.png)
 
 Step 3: Include the following namespaces in **Program.cs** file.
 
@@ -140,11 +169,12 @@ using Newtonsoft.Json;
 
 Step 4: Add the following code snippet in **Program.cs** to invoke the published AWS Lambda function using the function name and access keys.
 
+
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Create a new AmazonLambdaClient
-AmazonLambdaClient client = new AmazonLambdaClient("awsaccessKeyID", "awsSecreteAccessKey", RegionEndpoint.USEast2);
+AmazonLambdaClient client = new AmazonLambdaClient("awsaccessKeyID", "awsSecretAccessKey", RegionEndpoint.USEast2);
 //Create new InvokeRequest with published function name.
 InvokeRequest invoke = new InvokeRequest
 {
@@ -155,14 +185,14 @@ InvokeRequest invoke = new InvokeRequest
 //Get the InvokeResponse from client InvokeRequest.
 InvokeResponse response = client.Invoke(invoke);
 //Read the response stream
-var stream = new StreamReader(response.Payload);
-JsonReader reader = new JsonTextReader(stream);
-var serilizer = new JsonSerializer();
-var responseText = serilizer.Deserialize(reader);
+using var stream = new StreamReader(response.Payload);
+using JsonReader reader = new JsonTextReader(stream);
+var serializer = new JsonSerializer();
+var responseText = serializer.Deserialize(reader);
 //Convert Base64String into PowerPoint document
 byte[] bytes = Convert.FromBase64String(responseText.ToString());
-FileStream fileStream = new FileStream("Sample.pptx", FileMode.Create);
-BinaryWriter writer = new BinaryWriter(fileStream);
+using FileStream fileStream = new FileStream("Sample.pptx", FileMode.Create);
+using BinaryWriter writer = new BinaryWriter(fileStream);
 writer.Write(bytes, 0, bytes.Length);
 writer.Close();
 System.Diagnostics.Process.Start("Sample.pptx");

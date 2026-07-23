@@ -40,8 +40,6 @@ You can directly invoke individual tools by name for more targeted assistance (e
 - If a step times out or becomes unresponsive, cancel it and retry the current step.
 - Always review the generated code and commands before accepting or applying them in production.
 
-N> Looking for the full React Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) page.
-
 ### See also
 
 - To explore customization options for layouts, components, styles, and more examples of effective prompts, refer to the [prompt Library](https://ej2.syncfusion.com/react/documentation/mcp-server/agentic-ui-builder/prompt-library).

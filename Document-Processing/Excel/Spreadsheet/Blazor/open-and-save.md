@@ -11,6 +11,11 @@ documentation: ug
 
 The **Open** and **Save** functionalities in the Blazor Spreadsheet component allow for efficient management of Excel files. You can open existing Excel files for analysis and modification, and save new or modified spreadsheets in a compatible format.
 
+## New
+To create a new, blank workbook through the UI, select **File > New** from the **Ribbon**. This action initializes a blank spreadsheet component, ready for data entry or formatting. If unsaved changes are present, a confirmation dialog will appear, indicating that these changes will be lost. The dialog presents options to proceed with creating the new workbook by selecting **OK**, or to cancel the operation by selecting **Cancel**.
+
+![UI showing file menu with new option](./images/file-new-feature.png)
+
 ## Open
 The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component preserves all data, cell styles, formatting, and other spreadsheet elements when opening Excel files. These files can be loaded through the user interface action or programmatic methods.
 
@@ -77,6 +82,8 @@ An Excel file encoded as a Base64 string can be loaded into the Spreadsheet comp
 ### Open an Excel file from JSON data
 
 The Blazor Spreadsheet component accepts data only as a byte array through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DataSource) property. To load JSON data into the Spreadsheet, convert the JSON data into an Excel file format using [XlsIO](https://help.syncfusion.com/file-formats/xlsio/overview), then convert it to a byte array. This approach allows importing JSON data from a local file or a remote URL.
+
+N> To run the following examples, install the [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.core) NuGet package in your project to access the XlsIO APIs used for converting JSON data to Excel format.
 
 #### Load an Excel file from a local JSON file
 
@@ -230,6 +237,8 @@ JSON data can be loaded from a local JSON file, converted to Excel format using 
 #### Load an Excel file from a remote JSON URL
 
 Remote JSON data can be integrated into the Spreadsheet component by converting it into an Excel-compatible format. The process begins with asynchronous retrieval of JSON from the specified endpoint using HttpClient. The fetched data is then transformed into an Excel workbook through XlsIO, and the resulting byte array is passed to the Spreadsheet for rendering. This approach is particularly useful for integrating real-time data from REST APIs or other web services.
+
+N> Before using HttpClient, register it in the **Program.cs** file of your application. For Blazor WebAssembly, add `builder.Services.AddHttpClient();` before `await builder.Build().RunAsync();`. For Blazor Server, add `builder.Services.AddHttpClient();` in the service configuration section.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -504,7 +513,7 @@ The Spreadsheet component supports opening the following file formats:
 The Spreadsheet component allows you to save data, styles, formatting, and other content as an Excel file. This functionality ensures that all modifications are preserved in a compatible format.
 
 ### Save an Excel file using UI
-To save the Spreadsheet content through the user interface, select the **File > Save As** option from the **Ribbon**.You can then specify the file name and format in the save dialog.
+To save the Spreadsheet content through the user interface, select the **File > Save As** option from the **Ribbon**. You can then specify the file name and format in the save dialog.
 
 ![UI showing file menu with save option](./images/file-save-feature.png)
 
@@ -572,6 +581,8 @@ N> If options are not provided, the default settings are **FileName**: `"Spreads
 
 The [SaveAsStreamAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SaveAsStreamAsync) method retrieves the spreadsheet content as a [MemoryStream](https://learn.microsoft.com/dotnet/api/system.io.memorystream) for further processing, such as saving to a database or cloud storage.
 
+N> The following example uses `File.Create` to persist the stream to disk, which works only in Blazor Server (where the server has file system access). In Blazor WebAssembly, browser security prevents direct file system writes; use JavaScript interop (`IJSRuntime`) to trigger a client-side download, or send the stream to a backend API for storage.
+
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
@@ -608,7 +619,7 @@ The Blazor Spreadsheet component supports exporting spreadsheet data to multiple
 **Supported Save Formats:**
 
 | SaveType | File Extension | Description |
-|---|---|---|---|
+|---|---|---|
 | `Xlsx` | `.xlsx` | Microsoft Excel 2007 and later format |
 | `Xls` | `.xls` | Microsoft Excel 97-2003 format |
 | `Csv` | `.csv` | Comma Separated Values format |
@@ -677,6 +688,15 @@ PDF export from the Blazor Spreadsheet component supports customization of layou
 | `Orientation` | `PdfPageOrientation` | `Portrait` | Controls page orientation: `Portrait` (8.5" × 11") or `Landscape` (11" × 8.5"). Choose Portrait for standard letter-sized documents or Landscape for wide data ranges. |
 | `FitSheetOnOnePage` | `bool` | `false` | Determines content scaling behavior: `true` scales content proportionally to fit entire sheet on single page; `false` allows content to span multiple pages using normal printing pagination. |
 
+**Configuring PDF Layout Settings via BeforeSave Event:**
+
+The [BeforeSaveEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.BeforeSaveEventArgs.html) class provides properties that can be used to customize the PDF layout settings during the save operation.
+
+| Property | Type | Description |
+|---|---|---|
+| `SaveType` | Enum | Gets the export format specified in the [SaveOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SaveOptions.html) during the save operation. Use this to apply conditional logic (for example, only configure PDF layout when `SaveType.Pdf` is detected). |
+| `PdfLayoutSettings` | Class | Gets or sets the PDF layout configuration (page orientation and scaling behavior). Assign a `PdfLayoutSettings` instance to apply custom layout before the PDF is generated. |
+
 **Layout Configuration Guide:**
 
 **Orientation Selection:**
@@ -732,7 +752,13 @@ The following code example demonstrates saving the spreadsheet as PDF with diffe
 
 ### Preserve fonts when saving PDF (Blazor WebAssembly)
 
-In Blazor WebAssembly, to preserve fonts in exported PDF use the `CustomFont` property of the SfSpreadsheet component. Provide local TrueType font (.ttf) files from wwwroot and reference them via the component.
+In Blazor WebAssembly, to preserve fonts in exported PDF use the `CustomFonts` property of the SfSpreadsheet component. Provide local TrueType font (.ttf) files from wwwroot and reference them via the component.
+
+**CustomFonts Parameter:**
+
+| Property | Type | Description |
+|---|---|---|
+| `CustomFonts` | `List<string>` | Gets or sets the list of local TrueType font (.ttf) file paths (relative to `wwwroot`) that the WASM PDF exporter fetches and embeds in the generated PDF. Only local `.ttf` files are supported; remote URLs are not allowed.|
 
 #### How to use
 - Place .ttf files under wwwroot (for example: wwwroot/Arial.ttf).
@@ -763,9 +789,4 @@ In Blazor WebAssembly, to preserve fonts in exported PDF use the `CustomFont` pr
 {% endhighlight %}
 {% endtabs %}
 
-N> Only local TrueType (.ttf) files referenced in `CustomFonts` are fetched and embedded by the WASM PDF exporter. If a font used in the sheet is not provided, a fallback font will be used and the appearance may change. 
-
-## New
-To create a new, blank workbook through the UI, select **File > New** from the **Ribbon**. This action initializes a blank spreadsheet component, ready for data entry or formatting. If unsaved changes are present, a confirmation dialog will appear, indicating that these changes will be lost. The dialog presents options to proceed with creating the new workbook by selecting **OK**, or to cancel the operation by selecting **Cancel**.
-
-![UI showing file menu with new option](./images/file-new-feature.png)
+N> Only local TrueType (.ttf) files referenced in `CustomFonts` are fetched and embedded by the WASM PDF exporter. If a font used in the sheet is not provided, a default font will be used and the appearance may change.

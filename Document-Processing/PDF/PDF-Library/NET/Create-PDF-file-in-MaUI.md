@@ -10,8 +10,6 @@ documentation: UG
 
 The [.NET MAUI PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit **PDF** documents. This library also includes functions for merging, splitting, stamping, working with forms, and securing PDF files and more. Using this library, you can create a PDF document in a .NET MAUI application.
 
-N> Our PDF library is currently supported in .NET MAUI applications on Android, iOS, and Windows platforms. It is not supported on the Mac Catalyst platform.
-
 ## Steps to create PDF document programmatically in .NET MAUI
 
 {% tabcontents %}
@@ -24,7 +22,7 @@ N> Our PDF library is currently supported in .NET MAUI applications on Android, 
 {% endtabcontent %}
 
 {% tabcontent JetBrains Rider %}
-{% include_relative tabcontent-support/Create-PDF-document-in-Blazor-MaUI-JetBrains.md %}
+{% include_relative tabcontent-support/Create-PDF-document-in-MaUI-JetBrains.md %}
 {% endtabcontent %}
 {% endtabcontents %}
 
@@ -39,7 +37,7 @@ By executing the program on Android, you will get the PDF document as follows.
 By executing the program on iOS, you will get the PDF document as follows.
 ![.NET MAUI invoice iOS image](MAUI_images/invoice_ios.png)  
 
-N> You can also explore our [MAUI PDF library demo](https://www.syncfusion.com/demos/fileformats/pdf-library) that shows how to create and modify PDF files from C# with just five lines of code.
+N> You can also explore our [MAUI PDF library demo](https://www.syncfusion.com/demos/fileformats/pdf-library) that shows how to create and modify PDF files from C# with only a few lines of code.
 
 **Helper files for .NET MAUI**
 
@@ -64,7 +62,7 @@ Download the helper files from this [link](https://www.syncfusion.com/downloads/
   <td>
     SaveService.cs
   </td>
-  <td>Represent the base class for save operation.
+  <td>Represents the base class for the save operation.
   </td>
   </tr>
   <tr>
@@ -120,4 +118,4 @@ Download the helper files from this [link](https://www.syncfusion.com/downloads/
 
 Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 
-An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind).
+An online sample to [create a PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind) is also available.

@@ -12,7 +12,12 @@ documentation: UG
 
 ## Create a simple Excel report
 
-The below steps illustrates creating a simple invoice formatted Excel document in ASP.NET Core Web API.
+The following steps illustrate creating a simple invoice-formatted Excel document in ASP.NET Core Web API.
+
+**Prerequisites:**
+- Visual Studio 2022 (17.0 or later) with the **ASP.NET and web development** workload installed.
+- .NET 8.0 SDK or later.
+- A user account with write permissions to the project output directory.
 
 Step 1: Create a new C# ASP.NET Core Web API project.
 
@@ -22,7 +27,7 @@ Step 2: Add a name for the project.
 
 ![Name the project](ASP-NET-Core-Web-API_images/ASP-NET-Core-Web-API_images_img2.png)
 
-Step 3: Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org).
+Step 3: Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package as a reference to your ASP.NET Core Web API application from [NuGet.org](https://www.nuget.org).
 
 ![Add Syncfusion.XlsIO.Net.Core reference to the project](ASP-NET-Core-Web-API_images/ASP-NET-Core-Web-API_images_img3.png)
 
@@ -32,7 +37,7 @@ Step 4: Add a new API controller empty file in the project.
 
 ![Add empty API controller to the project](ASP-NET-Core-Web-API_images/ASP-NET-Core-Web-API_images_img4.png)
 
-Step 5: Include the following namespaces in the **ValuesController.cs** file.
+Step 5: Include the following namespaces in the `ValuesController.cs` file.
 {% capture codesnippet1 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
@@ -44,7 +49,9 @@ using Microsoft.AspNetCore.Mvc;
 {% endcapture %}
 {{ codesnippet1 | OrderList_Indent_Level_1 }}
 
-Step 6: Add a new action method CreateDocument in **ValuesController.cs** and include the below code snippet to create an Excel file and download it.
+Step 6: Add a new action method `CreateDocument` in the `ValuesController.cs` file and include the following code snippet to create an Excel file and download it.
+
+N> Before running, place the `AdventureCycles-Logo.png` image in the Web API project's output directory (typically `bin/Debug/net6.0/` or similar) so it can be loaded.
 
 {% capture codesnippet2 %}
 {% tabs %}  
@@ -83,6 +90,8 @@ public static MemoryStream ExportTimecardDailyDetail()
         //Adding a picture
         FileStream imageStream = new FileStream("AdventureCycles-Logo.png", FileMode.Open, FileAccess.Read);
         IPictureShape shape = worksheet.Pictures.AddPicture(1, 1, imageStream, 20, 20);
+
+        imageStream.Dispose();
 
         //Disable gridlines in the worksheet
         worksheet.IsGridLinesVisible = false;
@@ -241,7 +250,7 @@ public static MemoryStream ExportTimecardDailyDetail()
         worksheet.Range["A9:A14"].RowHeight = 15;
         worksheet.Range["A15:A23"].RowHeight = 18;
 
-        //Saving the Excel to the MemoryStream 
+        //Saving the Excel to the MemoryStream
         MemoryStream stream = new MemoryStream();
         workbook.SaveAs(stream);
 
@@ -266,7 +275,7 @@ Step 1: Create a console application.
 Step 2: Add a name for the application.
 ![Name the project](ASP-NET-Core-Web-API_images/ASP-NET-Core-Web-API_images_img6.png)
 
-Step 3: Add the below code snippet in the **Program.cs** file for accessing the Web API using HTTP requests. 
+Step 3: Add the following code snippet in the `Program.cs` file for accessing the Web API using HTTP requests.
 
 {% capture codesnippet3 %}
 {% tabs %}  
@@ -311,5 +320,5 @@ By executing the program, you will get the Excel file as below.
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
-An online sample link to [create an Excel document](https://ej2.syncfusion.com/aspnetcore/Excel/Create#/material3) in ASP.NET Core.
+An online sample link to [create an Excel document](https://document.syncfusion.com/demos/excel/create#/tailwind3) in ASP.NET Core.
 

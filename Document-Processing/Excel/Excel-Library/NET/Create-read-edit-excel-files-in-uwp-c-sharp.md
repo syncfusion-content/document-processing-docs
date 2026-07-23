@@ -7,23 +7,27 @@ documentation: UG
 ---
 # Create, read, and edit Excel files in UWP
 
-[.NET Excel Library for UWP platform](https://www.syncfusion.com/document-processing/excel-framework/uwp/excel-library) can be used to create, read, edit Excel files. This also convert Excel files to PDF.
+The Syncfusion [.NET Excel Library (XlsIO) for UWP platform](https://www.syncfusion.com/document-processing/excel-framework/uwp/excel-library) can be used to create, read, and edit Excel files. It can also convert Excel files to PDF.
 
 ## Create a simple Excel report
 
-The below steps illustrates creating an simple Invoice formatted Excel document in UWP application.
+The following steps illustrate creating a simple Invoice-formatted Excel document in a UWP application.
+
+**Prerequisites:**
+- Visual Studio 2017 or later with the Universal Windows Platform development workload installed.
+- Ensure the project targets a supported UWP build and that NuGet Package Manager is available.
 
 Step 1: Create a new C# Blank App (Universal Windows) project.
 
-![Install Syncfusion.XlsIO.Wpf Nuget Package](UWP_images/UWP_images_img1.png)
+![Create UWP project](UWP_images/UWP_images_img1.png)
 
-Step 2: Install the [Syncfusion.XlsIO.UWP](https://www.nuget.org/packages/Syncfusion.XlsIO.UWP) NuGet package as reference to your .NET Framework applications from [NuGet.org](https://www.nuget.org).
+Step 2: Install the [Syncfusion.XlsIO.UWP](https://www.nuget.org/packages/Syncfusion.XlsIO.UWP) NuGet package as a reference to your UWP application from [NuGet.org](https://www.nuget.org).
 
 ![Install Syncfusion.XlsIO.UWP Nuget Package](UWP_images/UWP_images_img2.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
 
-Step 3: Add a new button in the MainPage.xaml as shown below.
+Step 3: Right-click the **MainPage.xaml** file in **Solution Explorer**, select **View Code**, and add a new click handler named `OnButtonClicked` in `MainPage.xaml.cs`. Then add a new button in the MainPage.xaml as shown below.
 {% capture codesnippet1 %}
 {% tabs %}  
 {% highlight XAML %}
@@ -51,22 +55,28 @@ Step 4: Include the following namespaces in the MainPage.xaml.cs file.
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
 using Syncfusion.XlsIO;
+using System.Reflection;
 using Windows.Storage.Pickers;
 using Windows.Storage;
 using Windows.UI;
+using System.IO;
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET" %}
 Imports Syncfusion.XlsIO
+Imports System.Reflection
 Imports Windows.Storage.Pickers
 Imports Windows.Storage
 Imports Windows.UI
+Imports System.IO
 {% endhighlight %}
 {% endtabs %} 
 {% endcapture %}
 {{ codesnippet2 | OrderList_Indent_Level_1 }}  
 
-Step 5: Include the below code snippet in the click event of the button in MainPage.xaml.cs, to create an Excel file and save the Excel document as a physical file and open the file for viewing.
+N> Before proceeding, add the `AdventureCycles-Logo.png` image to the project and set its **Build Action** to **Embedded Resource** in the file properties so it can be loaded using `GetManifestResourceStream`.
+
+Step 5: Include the following code snippet in the click event of the button in MainPage.xaml.cs to create an Excel file, save it as a physical file, and open the file for viewing.
 {% capture codesnippet3 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
@@ -443,26 +453,24 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   'Save the Workbook
   Dim storageFile As StorageFile
   If Not Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Phone.UI.Input.HardwareButtons") Then
-    Dim savePicker As FileSavePicker = New FileSavePicker
+    Dim savePicker As New FileSavePicker()
     savePicker.SuggestedStartLocation = PickerLocationId.Desktop
     savePicker.SuggestedFileName = "Output"
-    savePicker.FileTypeChoices.Add("Excel Files", New List(Of String))
-    storageFile = savePicker.PickSaveFileAsync
+    savePicker.FileTypeChoices.Add("Excel Files", New List(Of String) From {".xlsx"})
+    storageFile = Await savePicker.PickSaveFileAsync()
   Else
     Dim local As StorageFolder = Windows.Storage.ApplicationData.Current.LocalFolder
-    storageFile = local.CreateFileAsync("Output.xlsx", CreationCollisionOption.ReplaceExisting)
+    storageFile = Await local.CreateFileAsync("Output.xlsx", CreationCollisionOption.ReplaceExisting)
   End If
 
   'Saving the workbook
-  Function workbook_SaveAsAsync_((ByVal Unknown As storageFile) As await Implements workbook.SaveAsAsync.(Of
-  End Function
+  Await workbook.SaveAsAsync(storageFile)
 
   'Launch the saved file
-  Function Windows_System_Launcher_LaunchFileAsync_((ByVal Unknown As storageFile) As await Implements Windows.System.Launcher.LaunchFileAsync.(Of
-  End Function
+  Await Windows.System.Launcher.LaunchFileAsync(storageFile)
 End Using
 {% endhighlight %}
-{% endtabs %} 
+{% endtabs %}
 {% endcapture %}
 {{ codesnippet3 | OrderList_Indent_Level_1 }}
 
@@ -473,100 +481,100 @@ By executing the program, you will get the Excel file as below.
 
 ## Read and Edit Excel file
 
-The below code illustrates how to read and edit an Excel file in UWP.
+The following code illustrates how to read and edit an Excel file in UWP.
 
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
 //Create an instance of ExcelEngine
-ExcelEngine excelEngine = new ExcelEngine();
-IApplication application = excelEngine.Excel;
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
 
-//Instantiates the File Picker. 
-FileOpenPicker openPicker = new FileOpenPicker();
-openPicker.SuggestedStartLocation = PickerLocationId.Desktop;
-openPicker.FileTypeFilter.Add(".xlsx");
-openPicker.FileTypeFilter.Add(".xls");
-StorageFile openFile = await openPicker.PickSingleFileAsync();
+  //Instantiates the File Picker.
+  FileOpenPicker openPicker = new FileOpenPicker();
+  openPicker.SuggestedStartLocation = PickerLocationId.Desktop;
+  openPicker.FileTypeFilter.Add(".xlsx");
+  openPicker.FileTypeFilter.Add(".xls");
+  StorageFile openFile = await openPicker.PickSingleFileAsync();
 
-//Opens the workbook. 
-IWorkbook workbook = await application.Workbooks.OpenAsync(openFile);
+  //Opens the workbook.
+  IWorkbook workbook = await application.Workbooks.OpenAsync(openFile);
 
-//Access first worksheet from the workbook.
-IWorksheet worksheet = workbook.Worksheets[0];
+  //Access first worksheet from the workbook.
+  IWorksheet worksheet = workbook.Worksheets[0];
 
-//Set Text in cell A3.
-worksheet.Range["A3"].Text ="Hello World";
+  //Set Text in cell A3.
+  worksheet.Range["A3"].Text = "Hello World";
 
-//Access a cell value from Excel
-var value = worksheet.Range["A1"].Value;
+  //Access a cell value from Excel
+  var value = worksheet.Range["A1"].Value;
 
-//Sets workbook version.
-workbook.Version = ExcelVersion.Xlsx;
+  //Sets workbook version.
+  workbook.Version = ExcelVersion.Xlsx;
 
-//Initializes FileSavePicker.
-FileSavePicker savePicker = new FileSavePicker();
-savePicker.SuggestedStartLocation = PickerLocationId.Desktop;
-savePicker.SuggestedFileName = "CreateSpreadsheet";
-savePicker.FileTypeChoices.Add("Excel Files", new List<string>() { ".xlsx" });
+  //Initializes FileSavePicker.
+  FileSavePicker savePicker = new FileSavePicker();
+  savePicker.SuggestedStartLocation = PickerLocationId.Desktop;
+  savePicker.SuggestedFileName = "CreateSpreadsheet";
+  savePicker.FileTypeChoices.Add("Excel Files", new List<string>() { ".xlsx" });
 
-//Creates a storage file from FileSavePicker.
-StorageFile storageFile = await savePicker.PickSaveFileAsync();
+  //Creates a storage file from FileSavePicker.
+  StorageFile storageFile = await savePicker.PickSaveFileAsync();
 
-//Saves changes to the specified storage file.
-await workbook.SaveAsAsync(storageFile);
+  //Saves changes to the specified storage file.
+  await workbook.SaveAsAsync(storageFile);
 
-workbook.Close();
-excelEngine.Dispose();
+  workbook.Close();
+  excelEngine.Dispose();
+}
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET" %}
 'Create an instance of ExcelEngine
-Dim excelEngine As ExcelEngine = New ExcelEngine()
-Dim application As IApplication = excelEngine.Excel
+Using excelEngine As New ExcelEngine()
+  Dim application As IApplication = excelEngine.Excel
 
-'Instantiates the File Save Picker.  
-Dim openPicker As New FileOpenPicker()
-openPicker.SuggestedStartLocation = PickerLocationId.Desktop 
-openPicker.FileTypeFilter.Add(".xlsx") 
-openPicker.FileTypeFilter.Add(".xls") 
-Dim openFile As StorageFile = Await openPicker.PickSingleFileAsync()
+  'Instantiates the File Save Picker.
+  Dim openPicker As New FileOpenPicker()
+  openPicker.SuggestedStartLocation = PickerLocationId.Desktop
+  openPicker.FileTypeFilter.Add(".xlsx")
+  openPicker.FileTypeFilter.Add(".xls")
+  Dim openFile As StorageFile = Await openPicker.PickSingleFileAsync()
 
-'Opens the Workbook. 
-Dim workbook As IWorkbook = Await application.Workbooks.OpenAsync(openFile)
-Dim workbook.SaveAsAsyncCType(As await, openFile)
+  'Opens the Workbook.
+  Dim workbook As IWorkbook = Await application.Workbooks.OpenAsync(openFile)
 
-'Access first worksheet from the workbook.
-Dim worksheet As IWorksheet = workbook.Worksheets(0)
+  'Access first worksheet from the workbook.
+  Dim worksheet As IWorksheet = workbook.Worksheets(0)
 
-'Set Text in cell A3.
-worksheet.Range("A3").Text ="Hello World"
+  'Set Text in cell A3.
+  worksheet.Range("A3").Text = "Hello World"
 
-'Access a cell value from Excel
-Dim value As var = worksheet.Range("A1").Value
+  'Access a cell value from Excel
+  Dim value As Object = worksheet.Range("A1").Value
 
-'Sets workbook version.
-workbook.Version = ExcelVersion.Xlsx
+  'Sets workbook version.
+  workbook.Version = ExcelVersion.Xlsx
 
-'Initializes FileSavePicker.
-Dim savePicker As New FileSavePicker()
-savePicker.SuggestedStartLocation = PickerLocationId.Desktop
-savePicker.SuggestedFileName = "CreateSpreadsheet"
-savePicker.FileTypeChoices.Add("Excel Files", New List(Of String)() From {".xlsx"})
+  'Initializes FileSavePicker.
+  Dim savePicker As New FileSavePicker()
+  savePicker.SuggestedStartLocation = PickerLocationId.Desktop
+  savePicker.SuggestedFileName = "CreateSpreadsheet"
+  savePicker.FileTypeChoices.Add("Excel Files", New List(Of String)() From {".xlsx"})
 
-'Creates a storage file from FileSavePicker.
-Dim storageFile As StorageFile = Await savePicker.PickSaveFileAsync()
+  'Creates a storage file from FileSavePicker.
+  Dim storageFile As StorageFile = Await savePicker.PickSaveFileAsync()
 
-'Saves changes to the specified storage file.
-Await workbook.SaveAsAsync(storageFile)
+  'Saves changes to the specified storage file.
+  Await workbook.SaveAsAsync(storageFile)
 
-workbook.Close()
-excelEngine.Dispose()
+  workbook.Close()
+  excelEngine.Dispose()
+End Using
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
 
 A complete working example of how to read and edit an Excel file in UWP in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/UWP/Edit%20Excel).
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/uwp) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
-
-An online sample link to [create an Excel document](https://ej2.syncfusion.com/aspnetcore/Excel/Create#/material3) in ASP.NET Core.
-
+An online sample link to [create an Excel document](https://document.syncfusion.com/demos/excel/create#/tailwind3) in ASP.NET Core.

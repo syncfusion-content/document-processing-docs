@@ -5,14 +5,14 @@
 
 Step 1. Open JetBrains Rider and create a new .NET Core console application project.
 * Launch JetBrains Rider.
-* Click new solution on the welcome screen.
+* Click **New Solution** on the welcome screen.
 
 ![Launch JetBrains Rider](JetBrains_Images/Launch-JetBrains-Rider.png)
 
 * In the new Solution dialog, select Project Type as Console.
 * Enter a project name and specify the location.
 * Select the target framework (e.g., .NET 8.0, .NET 9.0).
-* Click create.
+* Click **Create**.
 
 ![Creating a new .NET Core console application in JetBrains Rider](JetBrains_Images/Create-Console-NET-core-sample.png)
 
@@ -30,11 +30,12 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: Include the following namespaces in the *Program.cs* file.
+Step 3: Include the following namespaces in the *Program.cs* file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using System.IO;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf;
 using Syncfusion.Drawing;
@@ -42,7 +43,7 @@ using Syncfusion.Drawing;
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Include the below code snippet in *Program.cs* to create an PDF file.
+Step 4: Include the below code snippet in *Program.cs* to create a PDF file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -66,10 +67,10 @@ document.Close(true);
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Build the project.
+Step 5: Build the project.
 
 Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
-Step 7: Run the project.
+Step 6: Run the project.
 
 Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.

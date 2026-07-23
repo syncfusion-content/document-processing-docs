@@ -1,20 +1,20 @@
 ---
 layout: post
 title: Custom Data in Annotation Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to use custom data in annotations in the Syncfusion Blazor SfPdfViewer to attach metadata to annotations.
+description: Learn how to use custom data in annotations in the Blazor SfPdfViewer to attach metadata to annotations.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Custom data in annotations in Blazor SfPdfViewer
+# Custom data in annotations in Blazor SfPdfViewer Component
 
-Annotations can include custom key–value data via the `CustomData` property. This is supported at two levels:
+Annotations can include custom key-value data via the [`CustomData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerAnnotationSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerAnnotationSettings_CustomData) property. This is supported at two levels:
 
-- Default level via `PdfViewerAnnotationSettings`: applies to all annotations created through the UI.
-- Per-annotation-type level: provide `CustomData` inside specific annotation-type settings components (for example, `PdfViewerHighlightSettings`, `PdfViewerRectangleSettings`).
+- Default level via [`PdfViewerAnnotationSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerAnnotationSettings.html): applies to all annotations created through the UI.
+- Per-annotation-type level: provide [`CustomData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerAnnotationSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerAnnotationSettings_CustomData) inside specific annotation-type settings components (for example, `PdfViewerHighlightSettings`, `PdfViewerRectangleSettings`).
 
-The `CustomData` value can be any JSON-serializable object. It is preserved during annotation export/import and is available at runtime via the `AnnotationSettings.CustomData` property on the annotation object.
+The [`CustomData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerAnnotationSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerAnnotationSettings_CustomData) value can be any JSON-serializable object. It is preserved during annotation export/import and is available at runtime via the [`AnnotationSettings.CustomData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerAnnotationSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerAnnotationSettings_CustomData) property on the annotation object.
 
 ## Default custom data (PdfViewerAnnotationSettings)
 
@@ -64,7 +64,7 @@ Set custom data at the global level using `PdfViewerAnnotationSettings` to apply
 
 ## Custom data for individual annotation types
 
-Provide `CustomData` inside individual annotation-type settings components when you want specific metadata for different annotation tools.
+Provide [`CustomData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerAnnotationSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerAnnotationSettings_CustomData) inside individual annotation-type settings components when you want specific metadata for different annotation tools.
 
 ```cshtml
 @using Syncfusion.Blazor.SfPdfViewer
@@ -234,7 +234,7 @@ Provide `CustomData` inside individual annotation-type settings components when 
 
 ## Retrieve custom data at runtime
 
-Access the `CustomData` for any annotation through the viewer using `GetAnnotationsAsync()`. Get all annotations and read their custom payloads from `AnnotationSettings.CustomData`.
+Access the [`CustomData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerAnnotationSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerAnnotationSettings_CustomData) for any annotation through the viewer using [`GetAnnotationsAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_GetAnnotationsAsync). Get all annotations and read their custom payloads from [`AnnotationSettings.CustomData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerAnnotationSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerAnnotationSettings_CustomData).
 
 ```cshtml
 @using Syncfusion.Blazor.SfPdfViewer
@@ -272,10 +272,10 @@ Access the `CustomData` for any annotation through the viewer using `GetAnnotati
 
 ## Notes
 
-- `CustomData` can be any JSON-serializable object and is stored with the annotation.
-- Use `PdfViewerAnnotationSettings.CustomData` for global defaults and override with per-annotation-type settings as needed.
+- [`CustomData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerAnnotationSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerAnnotationSettings_CustomData) can be any JSON-serializable object and is stored with the annotation.
+- Use [`PdfViewerAnnotationSettings.CustomData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerAnnotationSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerAnnotationSettings_CustomData) for global defaults and override with per-annotation-type settings as needed.
 - Custom data is preserved during annotation export/import operations.
-- Access custom data via `annotation.AnnotationSettings.CustomData` after retrieving annotations with `GetAnnotationsAsync()`.
+- Access custom data via [`annotation.AnnotationSettings.CustomData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerAnnotationSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerAnnotationSettings_CustomData) after retrieving annotations with [`GetAnnotationsAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_GetAnnotationsAsync).
 
 ## See also
 

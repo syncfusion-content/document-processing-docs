@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Extract and Highlight Text in Blazor PDF Viewer | Syncfusion
-description: Learn here all about how to extract specific text and highlight it in the Syncfusion Blazor PDF Viewer component.
+description: Learn here all about how to extract specific text and highlight it in the Blazor PDF Viewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,18 +9,15 @@ documentation: ug
 
 # Extract and Highlight Text in Blazor PDF Viewer Component
 
-The Syncfusion&reg; Blazor PDF Viewer component provides powerful capabilities to extract text from a PDF document and **highlight** specific text. This functionality enables users to interactively process PDF content, making it easier to emphasize important information.
+The Blazor PDF Viewer component allows extracting text from a PDF document and highlighting specific text. This functionality enables users to interactively process PDF content, making it easier to emphasize important information.
 
-To extract text, the PDF Viewer utilizes the **FindText** method, which identifies the positions of specified text within the PDF. Once the text is found, user can highlight it by creating a highlight annotation and adding it asynchronously using the [**AddAnnotationAsync**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
+To extract text, the Syncfusion PDF Library provides the `FindText` method on `PdfLoadedDocument`, which identifies the positions of specified text within the PDF. Once the text is found, users can highlight it by creating a highlight annotation and asynchronously adding it via the [`AddAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
 
-The following code example demonstrates how to extract text from a PDF document and highlight it in the Syncfusion&reg; Blazor PDF Viewer component.
+The following code example demonstrates how to extract text from a PDF document and highlight it in the Blazor PDF Viewer component.
 
 ```cshtml
 @page "/"
 @using Microsoft.Extensions.Caching.Memory;
-@using Syncfusion.Blazor.Popups;
-@using Syncfusion.Blazor.Buttons;
-@using Syncfusion.Blazor.Navigations;
 @using Syncfusion.Blazor.SfPdfViewer;
 @using System.Drawing;
 @using Syncfusion.Pdf.Parsing;
@@ -38,11 +35,11 @@ The following code example demonstrates how to extract text from a PDF document 
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/data/pdf-succinctly.pdf";
     private Dictionary<int, List<Syncfusion.Drawing.RectangleF>> matchRects = new Dictionary<int, List<Syncfusion.Drawing.RectangleF>>();
 
-    public async void loadDocument()
+    private void loadDocument()
     {
         using (FileStream docStream = new FileStream(Path.GetFullPath("wwwroot/data/pdf-succinctly.pdf"), FileMode.Open, FileAccess.Read))
         {
@@ -54,7 +51,7 @@ The following code example demonstrates how to extract text from a PDF document 
         }
     }
 
-    public async void highlightText()
+    private async void highlightText()
     {
         if (matchRects != null && matchRects.Count > 0)
         {
@@ -105,4 +102,11 @@ The following code example demonstrates how to extract text from a PDF document 
 }
 ```
 
- [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Extract%20Particular%20Text%20and%20Highlight).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Extract%20Particular%20Text%20and%20Highlight).
+
+## See also
+
+* [Highlight Annotation](../annotation/text-markup/highlight-annotation)
+* [Events in Blazor PDF Viewer](../events)
+* [Supported features: Desktop vs mobile](../overview#supported-features-desktop-vs-mobile).
+* [Render a PDF document from a URL in the MAUI app](../getting-started/maui-blazor-app).

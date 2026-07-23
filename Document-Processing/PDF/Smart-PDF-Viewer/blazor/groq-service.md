@@ -36,13 +36,9 @@ For detailed model specifications and capabilities, visit the [Groq Models docum
 
 ## Getting Started for Groq AI with Smart PDF Viewer
 
-After completing this setup, you can:
+After completing this setup, see [Add Smart PDF Viewer to your Blazor pages](../blazor/getting-started/web-app) to render the component on a page.
 
-1. [Add Smart PDF Viewer to your Blazor pages](../blazor/getting-started/web-app)
-
----
-
-## Install the following NuGet packages to your project:
+## Step 1: Install the required NuGet packages
 
 Open the NuGet Package Manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), then search for and install the following packages:
 
@@ -50,15 +46,9 @@ Open the NuGet Package Manager in Visual Studio (Tools → NuGet Package Manager
 2. [Microsoft.SemanticKernel](https://www.nuget.org/packages/Microsoft.SemanticKernel)
 3. [Microsoft.SemanticKernel.Connectors.OpenAI](https://www.nuget.org/packages/Microsoft.SemanticKernel.Connectors.OpenAI)
 
-## Step 1: Create a Custom AI Service
+## Step 2: Create a Custom AI Service
 
-Create a bridge between Syncfusion Smart PDF Viewer and the Groq service. This enables Smart PDF Viewer to use Groq's AI capabilities through the `IChatInferenceService` interface.
-
-The `IChatInferenceService` interface is part of the Syncfusion infrastructure that allows Smart PDF Viewer to work with different AI providers:
-
-1. Create a new file named `MyCustomService.cs`
-2. Add the required Syncfusion and Microsoft namespaces
-3. Implement the interface as shown below
+Create a bridge between Syncfusion Smart PDF Viewer and the Groq service. The `IChatInferenceService` interface is the Syncfusion abstraction that allows Smart PDF Viewer to work with different AI providers. Create a new file (e.g., `MyCustomService.cs`) that imports the `Syncfusion.Blazor.AI` and `Microsoft.Extensions.AI` namespaces, then implement the interface as shown below:
 
 {% tabs %}
 {% highlight c# tabtitle="~/MyCustomService.cs" %}
@@ -80,7 +70,7 @@ public class MyCustomService : IChatInferenceService
      /// Also checks and updates token usage.
      /// </summary>
      /// <param name="options">Chat parameters including messages and settings.</param>
-     /// <returns>AI-generated response text.</returns
+     /// <returns>AI-generated response text.</returns>
      public async Task<string> GenerateResponseAsync(ChatParameters options)
      {
          ChatOptions completionRequest = new ChatOptions
@@ -112,7 +102,7 @@ public class MyCustomService : IChatInferenceService
 {% endhighlight %}
 {% endtabs %}
 
-## Step 2: Configure the Blazor App
+## Step 3: Configure the Blazor App
 
 Configure the Blazor app to use the Groq AI service with Syncfusion Smart PDF Viewer. This involves registering the necessary services and setting up the dependency injection container.
 
