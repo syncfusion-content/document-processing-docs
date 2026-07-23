@@ -163,7 +163,7 @@ spreadsheet.SetZoomFactor("Sheet1", 200);
 {% endhighlight %}
 {% endtabs %}
 
-The events associated with zooming are:
+The Events associated with zooming are:
 
 . [ZoomFactorChanged](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html)
 

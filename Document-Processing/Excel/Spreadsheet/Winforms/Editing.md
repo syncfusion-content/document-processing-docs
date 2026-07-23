@@ -9,7 +9,7 @@ documentation: ug
 
 # Editing in Windows Forms Spreadsheet
 
-This section explains the editing behavior, data validation, and hyperlinks in the Spreadsheet.
+This section explains the Editing behavior, Data Validation, and Hyperlinks in the Spreadsheet.
 
 ## Cell Editing
 
@@ -113,7 +113,7 @@ Occurs after the current cell value is validated.</td></tr>
 Occurs when the current cell leaves edit mode.</td></tr>
 </table>
 
-The table below lists the properties associated with editing.
+The table below lists the properties associated with Editing.
 
 <table>
 <tr>
@@ -131,14 +131,14 @@ Gets or sets a value indicating whether the editor selects all the cell text or 
 <tr>
 <td>
 {{ '[EditTrigger](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.SfCellGrid.html#Syncfusion_Windows_Forms_CellGrid_SfCellGrid_EditTrigger)' | markdownify }}</td><td>
-Gets or sets the trigger options that cause cells to enter edit mode.</td></tr>
+Gets or sets the trigger options that cause cells to enter Edit Mode.</td></tr>
 <tr>
 <td>
 {{ '[IsEditing](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.GridCurrentCell.html#Syncfusion_Windows_Forms_CellGrid_GridCurrentCell_isEditing)' | markdownify }}</td><td>
 Gets a value indicating whether the current cell is in edit mode.</td></tr>
 </table>
 
-The table below lists the methods associated with editing.
+The table below lists the methods associated with Editing.
 
 <table>
 <tr>
@@ -214,11 +214,11 @@ validation.ErrorBoxText = "Sum of the values in A1 and A2 should be greater than
 
 For more reference, please go through the [XlsIO](https://help.syncfusion.com/file-formats/xlsio/working-with-data-validation) UG.
 
-T> If you want to display a ComboBox in a cell of the Spreadsheet, you can apply List validation to that cell.
+T> If you want to display a ComboBox in a cell of the Spreadsheet, you can apply List Validation to that cell.
 
 ## Hyperlinks
 
-A hyperlink is a convenient way to access web pages, files, and other data within a workbook. The Spreadsheet supports adding, editing, and removing hyperlinks in the workbook.
+A hyperlink is a convenient way to access web pages, files, and other data within a workbook. The Spreadsheet supports adding, editing, and removing Hyperlinks in the workbook.
 
 ### Adding a hyperlink to a cell
 

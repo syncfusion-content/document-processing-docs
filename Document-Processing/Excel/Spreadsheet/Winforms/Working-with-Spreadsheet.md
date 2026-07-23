@@ -9,7 +9,7 @@ documentation: ug
 ---
 
 # Working With Spreadsheet in Windows Forms Spreadsheet
- This section explains how to access the worksheet, grid, and related events.
+ This section explains how to access the Worksheet, Grid, and related events.
 
 ## Accessing the worksheet
 
