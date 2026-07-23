@@ -12,7 +12,7 @@ Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion
 
 ## Prerequisites
 - Install the Windows App SDK extension for Visual Studio. For more details, refer [here](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/set-up-your-development-environment?tabs=cs-vs-community%2Ccpp-vs-community%2Cvs-2022-17-1-a%2Cvs-2022-17-1-b).
-- Supported environment: Visual Studio 2022 (17.x) with the Windows App SDK 1.x workload on Windows 10 (build 17763 or later) or Windows 11.
+- Supported environment: **Visual Studio 2022 or later** with the **Windows App SDK** workload on Windows 10 (build 17763 or later) or Windows 11.
 
 ## WinUI Desktop app
 
@@ -24,7 +24,7 @@ Step 2: Enter the project name and click **Create** button.
 
 ![Create a project name for your new project](WinUI_Images/Project-Name-WinUI-WordtoPDF.png)
 
-Step 3: Install [Syncfusion.DocIORenderer.NET](https://www.nuget.org/packages/Syncfusion.DocIORenderer.NET) and [Syncfusion.DocIO.NET](https://www.nuget.org/packages/Syncfusion.DocIO.NET) NuGet packages as references to your WinUI Desktop application from the [NuGet.org](https://www.nuget.org/).
+Step 3: Install [Syncfusion.DocIORenderer.NET](https://www.nuget.org/packages/Syncfusion.DocIORenderer.NET) NuGet package as references to your WinUI Desktop application from the [NuGet.org](https://www.nuget.org/).
 
 ![Syncfusion.DocIORenderer.NET NuGet package](WinUI_Images/Nuget-Package-WordtoPDF.png)
 

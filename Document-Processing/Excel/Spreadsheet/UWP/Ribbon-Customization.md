@@ -9,19 +9,19 @@ documentation: ug
 
 # Ribbon Customization in UWP Spreadsheet (SfSpreadsheet)
 
-Ribbon Customization can be done in two ways,
+You can customize the ribbon in two ways:
 
 ## Using Control Template:
 
-User can customize the ribbon items by overriding the template of `SfSpreadsheetRibbon`.
+You can customize the ribbon items by overriding the template of `SfSpreadsheetRibbon`.
 
 ## Using Event
 
-By invoking SfSpreadsheetRibbon Loaded Event, User can add/delete the ribbon menu items.
+By invoking the SfSpreadsheetRibbon `Loaded` Event, you can add or delete ribbon menu items.
 
-### Adding a RibbonTab
+### Adding a Ribbon Tab
 
-To create a custom Ribbon tab with user defined menu options in `SfSpreadsheetRibbon`,
+To create a custom Ribbon tab with user-defined menu options in `SfSpreadsheetRibbon`,
 
 {% tabs %}
 {% highlight xaml %}
@@ -67,9 +67,9 @@ void ribbon_Loaded(object sender, RoutedEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-### Adding a Ribbon Items in Existing Tab
+### Adding Ribbon Items to an Existing Tab
 
-To add a ribbon items in already existing tab,
+To add ribbon items to an existing tab,
 
 {% tabs %}
 {% highlight xaml %}
@@ -104,9 +104,9 @@ void ribbon_Loaded(object sender, RoutedEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-### Removing a RibbonTab
+### Removing a Ribbon Tab
 
-To remove the ribbon tab in the SfSpreadsheetRibbon,
+To remove a ribbon tab from the SfSpreadsheetRibbon,
 
 {% tabs %}
 {% highlight xaml %}
@@ -138,9 +138,9 @@ void ribbon_Loaded(object sender, RoutedEventArgs e)
 {% endtabs %}
 
 
-### Removing a Ribbon Items in a RibbonTab
+### Removing Ribbon Items from a Ribbon Tab
 
-To remove the ribbon menu items in the ribbon tab of SfSpreadsheetRibbon,
+To remove ribbon menu items from a ribbon tab in the SfSpreadsheetRibbon,
 
 {% tabs %}
 {% highlight xaml %}
