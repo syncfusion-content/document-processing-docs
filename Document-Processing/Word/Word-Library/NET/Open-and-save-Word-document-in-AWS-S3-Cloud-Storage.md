@@ -11,6 +11,8 @@ documentation: UG
 ## Prerequisites  
 
 * **[AWS S3 Cloud Storage](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html)** is required.
+* An active **Amazon Web Services (AWS) account** with access to an S3 bucket. Store your access key ID and secret access key securely (for example, via [environment variables](https://docs.aws.amazon.com/sdk-for-net/v3/developer-guide/creds-idc.html) or the AWS profiles file); avoid hard-coding them in source code.
+* The Word template file (for example, `WordTemplate.docx`) must already be uploaded to your S3 bucket before running the **Open** sample.
 
 ## Open Word document from AWS S3
 
@@ -52,6 +54,7 @@ Step 5: Include the following namespaces in **HomeController.cs**.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 using Amazon.S3;
+using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 {% endhighlight %}
 {% endtabs %}
@@ -499,10 +502,9 @@ public async Task<MemoryStream> UploadDocumentToS3(MemoryStream stream)
         }
         catch (Exception e)
         {
-            Console.WriteLine("Unknown encountered on server. Message:'{0}' when writing an object", e.Message);
+            Console.WriteLine("Unknown error encountered on server. Message:'{0}' when writing an object", e.Message);
         }
     }
-    return stream;
 }
 {% endhighlight %}
 {% endtabs %}
