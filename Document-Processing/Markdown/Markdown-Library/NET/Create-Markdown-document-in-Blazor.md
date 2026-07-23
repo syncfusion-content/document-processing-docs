@@ -38,7 +38,15 @@ To **create a Markdown document in a Blazor Web App Server**, install [Syncfusio
 
 ![Install Syncfusion.Markdown NuGet Package](ASP-NET-Core_images/Install_Nuget.png)
 
-N> If you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or the NuGet feed (v34.x.x and later), install the `Syncfusion.Licensing` NuGet package and register the license key in `Program.cs` by calling `Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")` before any Syncfusion type is used. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
+N> **Starting with v34.x.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion<sup>&reg;</sup> licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview). Register the license key in `Program.cs` before any Syncfusion type is used.
 
 Step 3: Create a Razor file named `Markdown.razor` in the `Pages` folder, which is located inside the `Components` folder.
 
@@ -274,6 +282,8 @@ Click the Start button (green arrow) or press <kbd>F5</kbd> to run the applicati
 
 A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/Blazor/Blazor-Web-Server-app).
 
+N> The code sample references an image file (`photo.jpg`). Download this asset from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/Blazor/Blazor-Web-Server-app/Create-Markdown-Document/Data) and place it in the application's `wwwroot/Data` folder so the `MdPicture.Url` value (`"Data/photo.jpg"`) resolves correctly at runtime.
+
 By executing the program, you will get the **Markdown document** as follows.
 
 ![Blazor Web App Server output Markdown document](GettingStarted_images/GettingStarted_Output1.png)
@@ -297,7 +307,15 @@ To **create a Markdown document in a Blazor WASM Standalone app**, install [Sync
 
 ![Install Syncfusion.Markdown NuGet Package](ASP-NET-Core_images/Install_Nuget.png)
 
-N> Starting with v34.x.x, if Syncfusion<sup>&reg;</sup> assemblies are referenced from trial setup or from the NuGet feed, the "Syncfusion.Licensing" assembly reference must also be added and a license key included in projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
+N> **Starting with v34.x.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion<sup>&reg;</sup> licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 3: Create a Razor file named `Markdown.razor` in the `Pages` folder.
 
@@ -491,6 +509,8 @@ Step 10: Run the project.
 Click the Start button (green arrow) or press <kbd>F5</kbd> to run the application.
 
 A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/Blazor/Blazor-WASM-Standalone-app).
+
+N> The code sample references an image file (`photo.jpg`). Download this asset from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/Blazor/Blazor-WASM-Standalone-app/Create-Markdown-Document/wwwroot/Data) and place it in the application's `wwwroot/Data` folder so the `MdPicture.Url` value (`"Data/photo.jpg"`) resolves correctly at runtime.
 
 By executing the program, you will get the **Markdown document** as follows.
 
