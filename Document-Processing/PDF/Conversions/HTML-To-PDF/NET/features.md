@@ -3423,7 +3423,7 @@ document.Close(True)
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Wait-for-external-fonts-in-HTML-to-PDF).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/HTML-to-PDF-Wait-For-External-Fonts/.NET).
 
 ## Accessible PDF
 
@@ -3977,7 +3977,7 @@ End Using
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Adding-Digital-Signature-to-HTML-converted-PDF).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Adding-signature-field-to-PDF-converted-from-HTML/.NET).
 
 ## Wait until browser navigation completes
 
