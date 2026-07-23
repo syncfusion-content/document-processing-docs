@@ -1,6 +1,6 @@
 ---
 title: Working with Metadata | Syncfusion
-description: This section explains how to add metadata in the PDF document and the metadata is a data that describes the characteristics of properties of a document
+description: This section explains how to add, modify, and read document information and XMP metadata in PDF documents using the Syncfusion .NET PDF library.
 platform: document-processing
 control: PDF
 documentation: UG
@@ -8,36 +8,156 @@ documentation: UG
 
 # Working with Metadata (XMP)
 
-Metadata is a data that describes the characteristics or properties of a document. It includes document information properties such as author, modification date, and copyright status.
+Metadata is data that describes the characteristics or properties of a document. It includes document information properties such as author, modification date, and copyright status, as well as structured XMP packets that conform to the [Extensible Metadata Platform (XMP)](https://www.adobe.com/products/xmp.html) specification. PDF readers and search engines use this metadata to index, classify, and display information about a document.
 
-## Working with the XMP metadata
+Syncfusion<sup>&reg;</sup> PDF provides comprehensive support for reading and writing both document information properties and XMP metadata, including the standard XMP schemas and custom user-defined schemas.
 
-In order to work multiple applications effectively with metadata, there must be a common standard that they understand. XMP-the Extensible Metadata Platform is designed to provide such a standard.
+## Assemblies and NuGet packages
 
-XMP standardizes the definition, creation, and processing of metadata.
+The following assemblies or NuGet packages are required to work with PDF metadata.
 
-## Adding XMP metadata in a PDF document
+**Assemblies**
 
-You can add XMP metadata in a PDF document using the [XmpMetadata](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xmp.XmpMetadata.html) class as shown in the following code example.
+* Syncfusion.Pdf.Base
+* Syncfusion.Drawing.Base
 
-{% tabs %}  
+**NuGet packages**
+
+* [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) (cross-platform)
+* [Syncfusion.Pdf.WinForms](https://www.nuget.org/packages/Syncfusion.Pdf.WinForms) (Windows-specific)
+* [Syncfusion.Pdf.Wpf](https://www.nuget.org/packages/Syncfusion.Pdf.Wpf) (Windows-specific)
+* [Syncfusion.Pdf.AspNet](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet) (ASP.NET Web Forms)
+* [Syncfusion.Pdf.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet.Mvc5) (ASP.NET MVC5)
+* [Syncfusion.Pdf.AspNet.Mvc4](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet.Mvc4) (ASP.NET MVC4)
+
+For more information, refer to the [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) and [NuGet Packages Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) documentation.
+
+## Working with document information
+
+Document information, also called the **Document Information Dictionary**, is a simpler set of metadata properties stored in the PDF file that is used by Acrobat and other PDF readers to display information about a document. The [PdfDocumentInformation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentInformation.html) class exposes the following commonly used properties.
+
+| Property | Description |
+|----------|-------------|
+| [Author](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentInformation.html#Syncfusion_Pdf_PdfDocumentInformation_Author) | The name of the person who created the document. |
+| [Title](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentInformation.html#Syncfusion_Pdf_PdfDocumentInformation_Title) | The title of the document. |
+| [Subject](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentInformation.html#Syncfusion_Pdf_PdfDocumentInformation_Subject) | The subject of the document. |
+| [Keywords](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentInformation.html#Syncfusion_Pdf_PdfDocumentInformation_Keywords) | Keywords associated with the document. |
+| [Creator](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentInformation.html#Syncfusion_Pdf_PdfDocumentInformation_Creator) | The application that created the original document. |
+| [Producer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentInformation.html#Syncfusion_Pdf_PdfDocumentInformation_Producer) | The application that produced the PDF. |
+| [CreationDate](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentInformation.html#Syncfusion_Pdf_PdfDocumentInformation_CreationDate) | The date and time the document was created. |
+| [ModificationDate](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentInformation.html#Syncfusion_Pdf_PdfDocumentInformation_ModificationDate) | The date and time the document was last modified. |
+
+The following code example shows how to set the basic document information properties.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using System;
+using System.IO;
+using Syncfusion.Pdf;
+
+//Create a PDF document.
+PdfDocument pdfDoc = new PdfDocument();
+pdfDoc.Pages.Add();
+
+//Set the document information.
+pdfDoc.DocumentInformation.Author = "Syncfusion";
+pdfDoc.DocumentInformation.Title = "Working with PDF Metadata";
+pdfDoc.DocumentInformation.Subject = "PDF metadata overview";
+pdfDoc.DocumentInformation.Keywords = "PDF, metadata, XMP";
+pdfDoc.DocumentInformation.Creator = "Syncfusion .NET PDF library";
+pdfDoc.DocumentInformation.Producer = "Syncfusion .NET PDF library";
+pdfDoc.DocumentInformation.CreationDate = DateTime.Now;
+pdfDoc.DocumentInformation.ModificationDate = DateTime.Now;
+
+//Save and close the document.
+using (FileStream outputStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.Write))
+{
+    pdfDoc.Save(outputStream);
+}
+pdfDoc.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System;
+using Syncfusion.Pdf;
+
+//Create a PDF document.
+PdfDocument pdfDoc = new PdfDocument();
+pdfDoc.Pages.Add();
+
+//Set the document information.
+pdfDoc.DocumentInformation.Author = "Syncfusion";
+pdfDoc.DocumentInformation.Title = "Working with PDF Metadata";
+pdfDoc.DocumentInformation.Subject = "PDF metadata overview";
+pdfDoc.DocumentInformation.Keywords = "PDF, metadata, XMP";
+pdfDoc.DocumentInformation.Creator = "Syncfusion .NET PDF library";
+pdfDoc.DocumentInformation.Producer = "Syncfusion .NET PDF library";
+pdfDoc.DocumentInformation.CreationDate = DateTime.Now;
+pdfDoc.DocumentInformation.ModificationDate = DateTime.Now;
+
+//Save and close the document.
+pdfDoc.Save("Output.pdf");
+pdfDoc.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System
+Imports Syncfusion.Pdf
+
+'Create a PDF document.
+Dim pdfDoc As New PdfDocument()
+pdfDoc.Pages.Add()
+
+'Set the document information.
+pdfDoc.DocumentInformation.Author = "Syncfusion"
+pdfDoc.DocumentInformation.Title = "Working with PDF Metadata"
+pdfDoc.DocumentInformation.Subject = "PDF metadata overview"
+pdfDoc.DocumentInformation.Keywords = "PDF, metadata, XMP"
+pdfDoc.DocumentInformation.Creator = "Syncfusion .NET PDF library"
+pdfDoc.DocumentInformation.Producer = "Syncfusion .NET PDF library"
+pdfDoc.DocumentInformation.CreationDate = DateTime.Now
+pdfDoc.DocumentInformation.ModificationDate = DateTime.Now
+
+'Save and close the document.
+pdfDoc.Save("Output.pdf")
+pdfDoc.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Document information is also available on existing PDF documents through the same [DocumentInformation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_DocumentInformation) property of [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html).
+
+> **Note:** The `Producer` property of `PdfDocumentInformation` is set automatically by Syncfusion<sup>&reg;</sup> PDF when the document is saved. Setting a custom value overrides this default behavior.
+
+## Adding XMP metadata in a new PDF document
+
+You can add XMP metadata in a PDF document using the [XmpMetadata](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xmp.XmpMetadata.html) class, which is exposed through the [XmpMetadata](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentInformation.html#Syncfusion_Pdf_PdfDocumentInformation_XmpMetadata) property of the [PdfDocumentInformation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentInformation.html) class. The following code example shows how to populate the XMP basic schema.
+
+{% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Metadata/Adding-XMP-metadata-in-PDF-document/.NET/Adding-XMP-metadata-in-PDF-document/Program.cs" %}
 
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Xmp;
 
-//Create a PDF document
+//Create a PDF document.
 PdfDocument pdfDoc = new PdfDocument();
-//Create a page
-PdfPage page = pdfDoc.Pages.Add();
+//Add a page.
+pdfDoc.Pages.Add();
 
-//Get XMP object
+//Get the XMP object.
 XmpMetadata metaData = pdfDoc.DocumentInformation.XmpMetadata;
 
-//XMP Basic Schema
+//Access the XMP Basic Schema.
 BasicSchema basic = metaData.BasicSchema;
-//Set the basic details of the document
+//Set the basic details of the document.
 basic.Advisory.Add("advisory");
 basic.BaseURL = new Uri("http://google.com");
 basic.CreateDate = DateTime.Now;
@@ -49,7 +169,7 @@ basic.ModifyDate = DateTime.Now;
 basic.Nickname = "nickname";
 basic.Rating.Add(-25);
 
-//Save and close the document
+//Save and close the document.
 pdfDoc.Save("Output.pdf");
 pdfDoc.Close(true);
 
@@ -60,17 +180,17 @@ pdfDoc.Close(true);
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Xmp;
 
-//Create a PDF document
+//Create a PDF document.
 PdfDocument pdfDoc = new PdfDocument();
-//Create a page
-PdfPage page = pdfDoc.Pages.Add();
+//Add a page.
+pdfDoc.Pages.Add();
 
-//Get XMP object
+//Get the XMP object.
 XmpMetadata metaData = pdfDoc.DocumentInformation.XmpMetadata;
 
-//XMP Basic Schema
+//Access the XMP Basic Schema.
 BasicSchema basic = metaData.BasicSchema;
-//set the basic details of the document
+//Set the basic details of the document.
 basic.Advisory.Add("advisory");
 basic.BaseURL = new Uri("http://google.com");
 basic.CreateDate = DateTime.Now;
@@ -78,11 +198,11 @@ basic.CreatorTool = "creator tool";
 basic.Identifier.Add("identifier");
 basic.Label = "label";
 basic.MetadataDate = DateTime.Now;
-basic.ModifyDate = DateTime.Now
+basic.ModifyDate = DateTime.Now;
 basic.Nickname = "nickname";
 basic.Rating.Add(-25);
 
-//Save and close the document
+//Save and close the document.
 pdfDoc.Save("Output.pdf");
 pdfDoc.Close(true);
 
@@ -93,17 +213,17 @@ pdfDoc.Close(true);
 Imports Syncfusion.Pdf.Xmp
 Imports Syncfusion.Pdf
 
-'Create a PDF document
+'Create a PDF document.
 Dim pdfDoc As New PdfDocument()
-'Create a page
-Dim page As PdfPage = pdfDoc.Pages.Add()
+'Add a page.
+pdfDoc.Pages.Add()
 
-'Get XMP object
+'Get the XMP object.
 Dim metaData As XmpMetadata = pdfDoc.DocumentInformation.XmpMetadata
 
-'XMP Basic Schema
+'Access the XMP Basic Schema.
 Dim basic As BasicSchema = metaData.BasicSchema
-'set the basic details of the document
+'Set the basic details of the document.
 basic.Advisory.Add("advisory")
 basic.BaseURL = New Uri("http://google.com")
 basic.CreateDate = DateTime.Now
@@ -115,37 +235,41 @@ basic.ModifyDate = DateTime.Now
 basic.Nickname = "nickname"
 basic.Rating.Add(-25)
 
-'Save and close the document
-pdfDoc.Save("DocumentInformation.pdf")
+'Save and close the document.
+pdfDoc.Save("Output.pdf")
 pdfDoc.Close(True)
 
 {% endhighlight %}
 
-{% endtabs %}  
+{% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Metadata/Adding-XMP-metadata-in-PDF-document).
 
 ## Adding XMP metadata in an existing PDF document
 
-You can add metadata in an existing PDF document using the [XmpMetadata](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xmp.XmpMetadata.html) class, as follows.
+You can add XMP metadata in an existing PDF document by loading it with [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) and accessing the [XmpMetadata](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentInformation.html#Syncfusion_Pdf_PdfDocumentInformation_XmpMetadata) property.
 
-{% tabs %}  
+The following code example shows how to add XMP basic schema to an existing PDF document.
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Metadata/Adding-XMP-metadata-to-an-existing-PDF-document/.NET/Adding-XMP-metadata-to-an-existing-PDF-document/Program.cs" %}	
+{% tabs %}
 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Metadata/Adding-XMP-metadata-to-an-existing-PDF-document/.NET/Adding-XMP-metadata-to-an-existing-PDF-document/Program.cs" %}
+
+using System.IO;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Parsing;
 using Syncfusion.Pdf.Xmp;
 
-//Load the PDF document
-PdfLoadedDocument pdfDoc = new PdfLoadedDocument("Input.pdf");
+//Load the existing PDF document.
+FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument pdfDoc = new PdfLoadedDocument(inputStream);
 
-//Get XMP object
+//Get the XMP object.
 XmpMetadata metaData = pdfDoc.DocumentInformation.XmpMetadata;
 
-//XMP Basic Schema
+//Access the XMP Basic Schema.
 BasicSchema basic = metaData.BasicSchema;
-//Set the basic details of the document
+//Set the basic details of the document.
 basic.Advisory.Add("advisory");
 basic.BaseURL = new Uri("http://google.com");
 basic.CreateDate = DateTime.Now;
@@ -157,10 +281,10 @@ basic.ModifyDate = DateTime.Now;
 basic.Nickname = "nickname";
 basic.Rating.Add(-25);
 
-//Save and close the document
+//Save and close the document.
 pdfDoc.Save("Output.pdf");
 pdfDoc.Close(true);
-
+inputStream.Close();
 
 {% endhighlight %}
 
@@ -170,15 +294,15 @@ using Syncfusion.Pdf;
 using Syncfusion.Pdf.Parsing;
 using Syncfusion.Pdf.Xmp;
 
-//Load the document
-PdfLoadedDocument pdfDoc = new PdfLoadedDocument("input.pdf");
+//Load the existing PDF document.
+PdfLoadedDocument pdfDoc = new PdfLoadedDocument("Input.pdf");
 
-//Get XMP object
+//Get the XMP object.
 XmpMetadata metaData = pdfDoc.DocumentInformation.XmpMetadata;
 
-//XMP Basic Schema
+//Access the XMP Basic Schema.
 BasicSchema basic = metaData.BasicSchema;
-//Set the basic details of the document
+//Set the basic details of the document.
 basic.Advisory.Add("advisory");
 basic.BaseURL = new Uri("http://google.com");
 basic.CreateDate = DateTime.Now;
@@ -190,7 +314,7 @@ basic.ModifyDate = DateTime.Now;
 basic.Nickname = "nickname";
 basic.Rating.Add(-25);
 
-//Save and close the document
+//Save and close the document.
 pdfDoc.Save("Output.pdf");
 pdfDoc.Close(true);
 
@@ -202,16 +326,16 @@ Imports Syncfusion.Pdf.Parsing
 Imports Syncfusion.Pdf.Xmp
 Imports Syncfusion.Pdf
 
-'Load the document
-Dim pdfDoc As New PdfLoadedDocument("input.pdf")
+'Load the existing PDF document.
+Dim pdfDoc As New PdfLoadedDocument("Input.pdf")
 
-'Get metaData object
+'Get the XMP object.
 Dim metaData As XmpMetadata = pdfDoc.DocumentInformation.XmpMetadata
 
-'XMP Basic Schema
+'Access the XMP Basic Schema.
 Dim basic As BasicSchema = metaData.BasicSchema
 
-'Set the basic details of the document
+'Set the basic details of the document.
 basic.Advisory.Add("advisory")
 basic.BaseURL = New Uri("http://google.com")
 basic.CreateDate = DateTime.Now
@@ -223,13 +347,13 @@ basic.ModifyDate = DateTime.Now
 basic.Nickname = "nickname"
 basic.Rating.Add(-25)
 
-'Save and close the document
-pdfDoc.Save("DocumentInformation.pdf")
+'Save and close the document.
+pdfDoc.Save("Output.pdf")
 pdfDoc.Close(True)
 
 {% endhighlight %}
 
-{% endtabs %} 
+{% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Metadata/Adding-XMP-metadata-to-an-existing-PDF-document).
 
@@ -367,7 +491,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Dublin Core Schema
 
-The Dublin Core schema provides a set of commonly used properties such as,
+The Dublin Core schema provides a set of commonly used properties such as:
 
 * Contributor
 * Coverage
@@ -379,33 +503,33 @@ The Dublin Core schema provides a set of commonly used properties such as,
 * Publisher
 * Title
 
-The [DublinCoreSchema](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xmp.DublinCoreSchema.html) class is used to create the Dublin core schema properties in PDF document. 
+The [DublinCoreSchema](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xmp.DublinCoreSchema.html) class is used to create the Dublin core schema properties in a PDF document.
 
-{% tabs %}  
+{% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Metadata/Create-PDF-document-with-dubline-core-schema-properties/.NET/Create-PDF-document-with-dubline-core-schema-properties/Program.cs" %}
 
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Xmp;
 
-//Create new PDF document
+//Create a new PDF document.
 PdfDocument pdfDoc = new PdfDocument();
-//Add a new page 
+//Add a new page.
 PdfPage page = pdfDoc.Pages.Add();
 
-//Gets XMP object
+//Get the XMP object.
 XmpMetadata metaData = pdfDoc.DocumentInformation.XmpMetadata;
 
-//XMP Dublin core Schema
+//XMP Dublin Core Schema.
 DublinCoreSchema dublin = metaData.DublinCoreSchema;
-//Set the Dublin Core Schema details of the document
+//Set the Dublin Core Schema details of the document.
 dublin.Creator.Add("Syncfusion");
-dublin.Description.Add("Title", "Essential PDF creator");
+dublin.Description.Add("Title", "Syncfusion .NET PDF library creator");
 dublin.Title.Add("Resource name", "Documentation");
 dublin.Type.Add("PDF");
-dublin.Publisher.Add("Essential PDF");
+dublin.Publisher.Add("Syncfusion");
 
-//Save and close the document
+//Save and close the document.
 pdfDoc.Save("Output.pdf");
 pdfDoc.Close(true);
 
@@ -416,24 +540,24 @@ pdfDoc.Close(true);
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Xmp;
 
-//Create new PDF document
+//Create a new PDF document.
 PdfDocument pdfDoc = new PdfDocument();
-//Add a new page 
+//Add a new page.
 PdfPage page = pdfDoc.Pages.Add();
 
-//Gets XMP object
+//Get the XMP object.
 XmpMetadata metaData = pdfDoc.DocumentInformation.XmpMetadata;
 
-//XMP Dublin core Schema
+//XMP Dublin Core Schema.
 DublinCoreSchema dublin = metaData.DublinCoreSchema;
-//Set the Dublin Core Schema details of the document
+//Set the Dublin Core Schema details of the document.
 dublin.Creator.Add("Syncfusion");
-dublin.Description.Add("Title", "Essential PDF creator");
+dublin.Description.Add("Title", "Syncfusion .NET PDF library creator");
 dublin.Title.Add("Resource name", "Documentation");
 dublin.Type.Add("PDF");
-dublin.Publisher.Add("Essential PDF");
+dublin.Publisher.Add("Syncfusion");
 
-//Save and close the document
+//Save and close the document.
 pdfDoc.Save("Output.pdf");
 pdfDoc.Close(true);
 
@@ -444,30 +568,30 @@ pdfDoc.Close(true);
 Imports Syncfusion.Pdf.Xmp
 Imports Syncfusion.Pdf
 
-'Create new PDF document
+'Create a new PDF document.
 Dim pdfDoc As New PdfDocument()
-'Add a new page
+'Add a new page.
 Dim page As PdfPage = pdfDoc.Pages.Add()
 
-'Gets XMP object
+'Get the XMP object.
 Dim metaData As XmpMetadata = pdfDoc.DocumentInformation.XmpMetadata
 
-'XMP Dublin core Schema
+'XMP Dublin Core Schema.
 Dim dublin As DublinCoreSchema = metaData.DublinCoreSchema
-'Set the Dublin Core Schema details of the document
+'Set the Dublin Core Schema details of the document.
 dublin.Creator.Add("Syncfusion")
-dublin.Description.Add("Title", "Essential PDF creator")
+dublin.Description.Add("Title", "Syncfusion .NET PDF library creator")
 dublin.Title.Add("Resource name", "Documentation")
 dublin.Type.Add("PDF")
-dublin.Publisher.Add("Essential PDF")
+dublin.Publisher.Add("Syncfusion")
 
-'Saves and close the document
-pdfDoc.Save("DocumentInformation.pdf")
+'Save and close the document.
+pdfDoc.Save("Output.pdf")
 pdfDoc.Close(True)
 
 {% endhighlight %}
 
-{% endtabs %}  
+{% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Metadata/Create-PDF-document-with-dubline-core-schema-properties).
 
@@ -568,31 +692,31 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Basic Job Ticket Schema
 
-This schema describes very simple workflow or job information and the [BasicJobTicketSchema](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xmp.BasicJobTicketSchema.html) class is used to create the Basic Job Ticket Schema properties in PDF document.
+This schema describes simple workflow or job information. The [BasicJobTicketSchema](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xmp.BasicJobTicketSchema.html) class is used to create the Basic Job Ticket Schema properties in a PDF document. It exposes the following property:
 
 * JobRef
 
-{% tabs %} 
+{% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Metadata/Create-PDF-document-with-basic-job-ticket-schema/.NET/Create-PDF-document-with-basic-job-ticket-schema/Program.cs" %}
 
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Xmp;
 
-//Create a document
+//Create a document.
 PdfDocument pdfDoc = new PdfDocument();
-//Add a page
+//Add a page.
 PdfPage page = pdfDoc.Pages.Add();
 
-//Gets XMP object
+//Get the XMP object.
 XmpMetadata metaData = pdfDoc.DocumentInformation.XmpMetadata;
 
-//XMP Rights Management Schema
+//XMP Basic Job Ticket Schema.
 BasicJobTicketSchema basicJob = metaData.BasicJobTicketSchema;
-//Set the Rights Management Schema details of the document
+//Set the Basic Job Ticket Schema details of the document.
 basicJob.JobRef.Add("PDF document creation");
 
-//Save and close the document
+//Save and close the document.
 pdfDoc.Save("Output.pdf");
 pdfDoc.Close(true);
 
@@ -603,20 +727,20 @@ pdfDoc.Close(true);
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Xmp;
 
-//Create a document
+//Create a document.
 PdfDocument pdfDoc = new PdfDocument();
-//Add a page
+//Add a page.
 PdfPage page = pdfDoc.Pages.Add();
 
-//Gets XMP object
+//Get the XMP object.
 XmpMetadata metaData = pdfDoc.DocumentInformation.XmpMetadata;
 
-//XMP Rights Management Schema
+//XMP Basic Job Ticket Schema.
 BasicJobTicketSchema basicJob = metaData.BasicJobTicketSchema;
-//Set the Rights Management Schema details of the document
+//Set the Basic Job Ticket Schema details of the document.
 basicJob.JobRef.Add("PDF document creation");
 
-//Save and close the document
+//Save and close the document.
 pdfDoc.Save("Output.pdf");
 pdfDoc.Close(true);
 
@@ -627,26 +751,26 @@ pdfDoc.Close(true);
 Imports Syncfusion.Pdf.Xmp
 Imports Syncfusion.Pdf
 
-'Create a document
+'Create a document.
 Dim pdfDoc As New PdfDocument()
-'Add a page
+'Add a page.
 Dim page As PdfPage = pdfDoc.Pages.Add()
 
-'Gets XMP object
+'Get the XMP object.
 Dim metaData As XmpMetadata = pdfDoc.DocumentInformation.XmpMetadata
 
-'XMP Rights Management Schema
+'XMP Basic Job Ticket Schema.
 Dim basicJob As BasicJobTicketSchema = metaData.BasicJobTicketSchema
-'Set the Rights Management Schema details of the document
+'Set the Basic Job Ticket Schema details of the document.
 basicJob.JobRef.Add("PDF document creation")
 
-'Save and close the document
-pdfDoc.Save("DocumentInformation.pdf")
+'Save and close the document.
+pdfDoc.Save("Output.pdf")
 pdfDoc.Close(True)
 
 {% endhighlight %}
 
-{% endtabs %}  
+{% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Metadata/Create-PDF-document-with-basic-job-ticket-schema).
 
@@ -750,31 +874,37 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### PDF schema
 
-This schema specifies the properties used with Adobe PDF documents. The [PDFSchema](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xmp.PDFSchema.html) class is used to create the PDF Schema properties in PDF document. It has the following set of properties.
+This schema specifies the properties used with Adobe PDF documents. The [PDFSchema](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xmp.PDFSchema.html) class is used to create the PDF Schema properties in a PDF document. It exposes the following properties.
 
-{% tabs %} 
+| Property | Description |
+|----------|-------------|
+| `Producer` | The name of the tool that produced the PDF. |
+| `PDFVersion` | The PDF version of the document. |
+| `Keywords` | Keywords associated with the document. |
+
+{% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Metadata/Create-PDF-document-with-PDF-schema/.NET/Create-PDF-document-with-PDF-schema/Program.cs" %}
 
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Xmp;
 
-//Create a PDF document
+//Create a PDF document.
 PdfDocument pdfDoc = new PdfDocument();
-//Add a page
+//Add a page.
 PdfPage page = pdfDoc.Pages.Add();
 
-//Gets XMP object
+//Get the XMP object.
 XmpMetadata metaData = pdfDoc.DocumentInformation.XmpMetadata;
 
-//XMP PDF Schema
+//XMP PDF Schema.
 PDFSchema pdfSchema = metaData.PDFSchema;
-//Set the PDF Schema details of the document
+//Set the PDF Schema details of the document.
 pdfSchema.Producer = "Syncfusion";
 pdfSchema.PDFVersion = "1.5";
-pdfSchema.Keywords = "Essential PDF";
+pdfSchema.Keywords = "Syncfusion .NET PDF library";
 
-//Save and close the document
+//Save and close the document.
 pdfDoc.Save("Output.pdf");
 pdfDoc.Close(true);
 
@@ -785,22 +915,22 @@ pdfDoc.Close(true);
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Xmp;
 
-//Create a PDF document
+//Create a PDF document.
 PdfDocument pdfDoc = new PdfDocument();
-//Add a page
+//Add a page.
 PdfPage page = pdfDoc.Pages.Add();
 
-//Gets XMP object
+//Get the XMP object.
 XmpMetadata metaData = pdfDoc.DocumentInformation.XmpMetadata;
 
-//XMP PDF Schema
+//XMP PDF Schema.
 PDFSchema pdfSchema = metaData.PDFSchema;
-//Set the PDF Schema details of the document
+//Set the PDF Schema details of the document.
 pdfSchema.Producer = "Syncfusion";
 pdfSchema.PDFVersion = "1.5";
-pdfSchema.Keywords = "Essential PDF";
+pdfSchema.Keywords = "Syncfusion .NET PDF library";
 
-//Save and close the document
+//Save and close the document.
 pdfDoc.Save("Output.pdf");
 pdfDoc.Close(true);
 
@@ -811,28 +941,28 @@ pdfDoc.Close(true);
 Imports Syncfusion.Pdf.Xmp
 Imports Syncfusion.Pdf
 
-'Create a PDF document
+'Create a PDF document.
 Dim pdfDoc As New PdfDocument()
-'Add a page
+'Add a page.
 Dim page As PdfPage = pdfDoc.Pages.Add()
 
-'Gets XMP object
+'Get the XMP object.
 Dim metaData As XmpMetadata = pdfDoc.DocumentInformation.XmpMetadata
 
-'XMP PDF Schema
+'XMP PDF Schema.
 Dim pdfSchema As PDFSchema = metaData.PDFSchema
-'Set the PDF Schema details of the document
+'Set the PDF Schema details of the document.
 pdfSchema.Producer = "Syncfusion"
 pdfSchema.PDFVersion = "1.5"
-pdfSchema.Keywords = "Essential PDF"
+pdfSchema.Keywords = "Syncfusion .NET PDF library"
 
-'Save and close the document
-pdfDoc.Save("DocumentInformation.pdf")
+'Save and close the document.
+pdfDoc.Save("Output.pdf")
 pdfDoc.Close(True)
 
 {% endhighlight %}
 
-{% endtabs %}  
+{% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Metadata/Create-PDF-document-with-PDF-schema).
 
@@ -931,9 +1061,9 @@ pdfDoc.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Metadata/Create-PDF-document-with-custom-schema).
 
-## Adding Custom Schema to the PDF document
+## Adding a custom schema to the PDF document
 
-Essential<sup>&reg;</sup> PDF allows you to add required metadata (custom schema) to a PDF document using the [CustomSchema](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xmp.CustomSchema.html) class with [XmpMetadata](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xmp.XmpMetadata.html) class. The following code illustrates this.
+Syncfusion<sup>&reg;</sup> PDF allows you to add required metadata (custom schema) to a PDF document using the [CustomSchema](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xmp.CustomSchema.html) class with the [XmpMetadata](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xmp.XmpMetadata.html) class. The following code example demonstrates how to create a custom schema by initializing a new [XmpMetadata](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xmp.XmpMetadata.html#Syncfusion_Pdf_Xmp_XmpMetadata__ctor_System_Xml_XmlDocument_) instance from the existing XML data.
 
 {% tabs %}  
 
@@ -1317,4 +1447,12 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Metadata/Extracting-XMP-metadata-from-PDF-image).
 
-N> To extract the image information from PDF page in .NET Core, you need to include [Syncfusion.Pdf.Imaging.Portable](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) assembly reference in .NET Core project.
+> **Note:** To extract image information from a PDF page in .NET Core, add the [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) package reference to your project.
+
+## See also
+
+* [Working with Document](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-document)
+* [Working with Document Conversions](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-document-conversions)
+* [Working with Images](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-images)
+* [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required)
+* [NuGet Packages Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required)

@@ -1,19 +1,36 @@
 ---
 title: Working with Tables | Syncfusion
-description: Learn how to create or add a table to a PDF document, apply cell style & built-in table styles, automatic pagination, customize the rows and columns, and more.
+description: Learn how to choose between the PdfGrid and PdfLightTable models, what customizations each supports, and which one to use for your scenario.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Working with .NET PDF Tables 
+# Working with .NET PDF Tables
 
-The Syncfusion<sup>&reg;</sup> .NET PDF library provides support for two types of [PDF table](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/pdf-tables) models, both having a different levels of customization, which is explained as follows. The two types of table models are:
+The Syncfusion<sup>&reg;</sup> .NET PDF library provides support for two types of [PDF table](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/pdf-tables) models that offer different levels of customization. The two table models are:
 
 1. [PdfGrid* (Recommended)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html)
 2. [PdfLightTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html)
 
-N> We strongly recommend to use ``PdfGrid`` for creating table in PDF document since it represents flexible grid which supports various customization of rows and columns. 
+N> We strongly recommend using `PdfGrid` for creating tables in PDF documents because it represents a flexible grid that supports a wider range of row and column customizations. Use `PdfLightTable` only when you need a lightweight table with minimal formatting requirements.
+
+## Choosing the right table model
+
+Use the following guidelines to choose between `PdfGrid` and `PdfLightTable`:
+
+* Choose **PdfGrid** when you need:
+  * Direct, typed access to individual rows, columns, and cells.
+  * Row span and column span support.
+  * Nested grids (a grid inside a cell).
+  * Built-in table styles and rich cell formatting.
+
+* Choose **PdfLightTable** when you need:
+  * A lightweight table for simple, data-bound reports.
+  * Minimal code and fewer customizations.
+  * Compatibility with legacy code that uses the `PdfLightTable` API.
+
+For a complete walkthrough of the `PdfGrid` API, refer to [Working with Tables using PdfGrid](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/pdfgrid). For `PdfLightTable`, refer to [Working with Tables using PdfLightTable](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/pdflighttable).
 
 ## Difference between PdfLightTable and PdfGrid
 

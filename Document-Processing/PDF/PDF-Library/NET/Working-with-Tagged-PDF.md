@@ -10,19 +10,18 @@ documentation: UG
 
 ## Introduction
 
-The Tagged PDF is a PDF that includes structure in terms for a set of instruction that defines reading order and meaning of significant elements such as figures, images, lists, tables and more. Tagged PDF documents created using Syncfusion<sup>&reg;</sup> PDF library are compliant with section 508 (PDF/UA) standard or WCAG 2.0 standard (ISO 14289-1:2014).
-Usually tagged PDF used to making content accessible to users who rely on assistive technology.
+A Tagged PDF is a PDF that includes a structure of instructions that defines the reading order and meaning of significant elements such as figures, images, lists, tables, and more. Tagged PDF documents created using the Syncfusion<sup>&reg;</sup> PDF library are compliant with the Section 508 (PDF/UA) standard and the WCAG 2.0 standard (ISO 14289-1:2014). Tagged PDFs make content accessible to users who rely on assistive technology.
 
-This section explains how to add tags to PDF elements such as text element, image, shapes, form fields, annotations, table, list, and more
+This section explains how to add tags to PDF elements such as text, images, shapes, form fields, annotations, tables, lists, and more.
 
-To quickly get started with creating accessible PDF documents in .NET using the PDF Library, please check this video.
+To quickly get started with creating accessible PDF documents in .NET using the PDF Library, watch the following video.
 {% youtube "https://www.youtube.com/watch?v=vmmUqe2_jtY" %}
 
 ## Adding tag to text element
 
-You can add tag to text or paragraphs in PDF document by using the [PdfTag](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutElement.html#Syncfusion_Pdf_Graphics_PdfLayoutElement_PdfTag) property available in the [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) class and specifying the tag type as ```Paragraph``` of [PdfTagType](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfTagType.html) Enum in the [PdfStructureElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfStructureElement.html) class.
+You can add a tag to text or paragraphs in a PDF document by setting the [PdfTag](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutElement.html#Syncfusion_Pdf_Graphics_PdfLayoutElement_PdfTag) property of the [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) class. Pass a [PdfStructureElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfStructureElement.html) whose constructor argument is the `Paragraph` value of the [PdfTagType](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfTagType.html) enum. You can also use the [ActualText](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfStructureElement.html#Syncfusion_Pdf_PdfStructureElement_ActualText) property to set an alternative text that screen readers announce in place of the visual text.
 
-The following code sample explains you how to add tag for the text element in PDF document.
+The following code sample explains how to add a tag to a text element in a PDF document.
 
 {% tabs %}
 
@@ -143,9 +142,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding tag to image
 
-You can add tag to image in the PDF document by using the [PdfTag](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutElement.html#Syncfusion_Pdf_Graphics_PdfLayoutElement_PdfTag) property available in the [PdfBitmap](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html) class and specifying the tag type as ```Figure``` of [PdfTagType](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfTagType.html) Enum in the [PdfStructureElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfStructureElement.html) class. You can add alternate text to image by using the the [AlternateText](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfStructureElement.html#Syncfusion_Pdf_PdfStructureElement_AlternateText) property available in the ```PdfStructureElement``` class.
+You can add a tag to an image in a PDF document by setting the [PdfTag](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutElement.html#Syncfusion_Pdf_Graphics_PdfLayoutElement_PdfTag) property of the [PdfBitmap](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html) class. Pass a [PdfStructureElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfStructureElement.html) whose constructor argument is the `Figure` value of the [PdfTagType](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfTagType.html) enum. Use the [AlternateText](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfStructureElement.html#Syncfusion_Pdf_PdfStructureElement_AlternateText) property of the `PdfStructureElement` to provide a description of the image for screen readers. Decorative images that do not convey meaning should be marked as artifacts instead, as described later in this document.
 
-The following code explains how to add tag for image element in PDF document.
+The following code explains how to add a tag to an image element in a PDF document.
 
 {% tabs %}
 
@@ -257,9 +256,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding tag to shapes
 
-You can add tag to shapes such as rectangle, line, circle, polygon, and more by using the [PdfTag](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutElement.html#Syncfusion_Pdf_Graphics_PdfLayoutElement_PdfTag) property and specifying the tag type as ```Figure``` of [PdfTagType](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfTagType.html) Enum. You can add alternate text to shapes by using the the [AlternateText](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfStructureElement.html#Syncfusion_Pdf_PdfStructureElement_AlternateText) property available in the [PdfStructureElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfStructureElement.html) class.
+You can add a tag to shapes such as rectangles, lines, ellipses, polygons, and more by setting the [PdfTag](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutElement.html#Syncfusion_Pdf_Graphics_PdfLayoutElement_PdfTag) property and specifying the tag type as `Figure` from the [PdfTagType](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfTagType.html) enum. Use the [AlternateText](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfStructureElement.html#Syncfusion_Pdf_PdfStructureElement_AlternateText) property of the [PdfStructureElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfStructureElement.html) class to provide a description for the shape. Decorative shapes that do not convey meaning should be marked as artifacts instead.
 
-The following code explains how to add tag for shape element in the PDF document.
+The following code explains how to add a tag to a shape element in a PDF document.
 
 {% tabs %}
 
@@ -374,9 +373,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding tag to Form Fields
 
-You can tag the form fields in the PDF document by using the [PdfTag](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutElement.html#Syncfusion_Pdf_Graphics_PdfLayoutElement_PdfTag) and specifying the tag type as ```Form``` of [PdfTagType](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfTagType.html) Enum.
+You can tag form fields in a PDF document by setting the [PdfTag](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutElement.html#Syncfusion_Pdf_Graphics_PdfLayoutElement_PdfTag) property and specifying the tag type as `Form` from the [PdfTagType](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfTagType.html) enum. In addition to tagging, provide a [ToolTip](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfField.html#Syncfusion_Pdf_Interactive_PdfField_ToolTip) on every form field so that the field is described for screen-reader users; this is required for full accessibility compliance.
 
-The following code explains how to add tag for the form fields in PDF document.
+The following code explains how to add a tag to a form field in a PDF document.
 
 {% tabs %}
 
@@ -491,9 +490,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding tag to Annotation
 
-You can add tags to annotation in PDF document by using the [PdfTag](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutElement.html#Syncfusion_Pdf_Graphics_PdfLayoutElement_PdfTag) property and specifying the tag type as ```Annotation``` of [PdfTagType](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfTagType.html) Enum.
+You can add a tag to an annotation in a PDF document by setting the [PdfTag](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutElement.html#Syncfusion_Pdf_Graphics_PdfLayoutElement_PdfTag) property and specifying the tag type as `Annotation` from the [PdfTagType](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfTagType.html) enum. Use the [AlternateText](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfStructureElement.html#Syncfusion_Pdf_PdfStructureElement_AlternateText) property of the `PdfStructureElement` to provide a description of the annotation for screen readers.
 
-The following code explains how to add tag for the annotations in PDF document.
+The following code explains how to add a tag to an annotation in a PDF document.
 
 {% tabs %}
 
@@ -613,9 +612,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding tag to Hyperlink
 
-You can tag the hyperlink present in the PDF document by using [PdfTag](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutElement.html#Syncfusion_Pdf_Graphics_PdfLayoutElement_PdfTag) available in the [PdfTextWebLink](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfTextWebLink.html) class and specifying the tag type as ```Link``` of [PdfTagType](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfTagType.html) Enum. 
+You can tag a hyperlink in a PDF document by setting the [PdfTag](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutElement.html#Syncfusion_Pdf_Graphics_PdfLayoutElement_PdfTag) property of the [PdfTextWebLink](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfTextWebLink.html) class and specifying the tag type as `Link` from the [PdfTagType](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfTagType.html) enum.
 
-The following code example shows how to add tag for hyperlink in PDF document
+The following code example shows how to add a tag to a hyperlink in a PDF document.
 
 {% tabs %}
 
@@ -750,9 +749,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding tag to Template
 
-You can add tags to template in PDF document by using the [PdfTag](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutElement.html#Syncfusion_Pdf_Graphics_PdfLayoutElement_PdfTag) property available in the [PdfTemplate](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTemplate.html) class. 
+You can add a tag to a template in a PDF document by setting the [PdfTag](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutElement.html#Syncfusion_Pdf_Graphics_PdfLayoutElement_PdfTag) property of the [PdfTemplate](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTemplate.html) class. Tagging a template propagates the tag to every element that is drawn through the template.
 
-The following code sample explains how to add tag support for the template element.
+The following code sample explains how to add tag support for a template element.
 
 {% tabs %}
 
@@ -873,13 +872,15 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding tag to Table
 
-You can tag the table in the PDF document by specifying the tag type as ```Table``` of [PdfTagType](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfTagType.html) Enum. The following tag types are used to mention the table header, rows, and cells:
+You can tag a table in a PDF document by specifying the tag type as `Table` from the [PdfTagType](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfTagType.html) enum. The following tag types are used to tag the table header, rows, and cells:
 
-1. PdfTagType.TableHeader
-2. PdfTagType.TableRow
-3. PdfTagType.TableDataCell
+1. `PdfTagType.TableHeader`
+2. `PdfTagType.TableRow`
+3. `PdfTagType.TableDataCell`
 
-The following code snippet illustrates how to add tag for table element.
+> Apply the `TableHeader` tag to every header cell, the `TableRow` tag to every row (including header rows), and the `TableDataCell` tag to every data cell so that assistive technology can announce the table structure correctly. Each row must contain the same number of cells, and tables should have a header row for full accessibility compliance.
+
+The following code snippet illustrates how to add a tag to a table element.
 
 {% tabs %}
 
@@ -1075,9 +1076,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding tag to List Element
 
-You can add the tags to list element in PDF document by specifying the tag type as ```List``` of [PdfTagType](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfTagType.html) Enum available in the [PdfStructureElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfStructureElement.html) class. 
+You can add a tag to a list element in a PDF document by specifying the tag type as `List` from the [PdfTagType](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfTagType.html) enum on the [PdfStructureElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfStructureElement.html). Apply the `ListItem` tag to each item in the list. The library supports both `PdfOrderedList` (numbered) and `PdfUnorderedList` (bulleted) lists.
 
-The following code example illustrates how to add tag support for list element.
+The following code example illustrates how to add tag support to a list element.
 
 {% tabs %}
 
@@ -1249,7 +1250,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Adding tags to nested list elements
 
-You can apply tags to nested list elements using the [PdfStructureElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfStructureElement.html) class, which helps define the structural hierarchy and semantic roles of both main and sublist items. This ensures better document accessibility and logical organization. Refer to the code example below for implementation details.
+You can apply tags to nested list elements by using the [PdfStructureElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfStructureElement.html) class. The parent list uses the `List` tag, the parent items use the `ListItem` tag, and the nested sublist that is attached to a parent item is tagged as a separate `List`. This ensures proper document accessibility and logical organization. Refer to the code example below for implementation details.
 
 {% tabs %}
 
@@ -1496,7 +1497,7 @@ document.Close(True)
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Tagged%20PDF/Add-tag-to-nested-list-elements-in-PDF-document).
 
 ## Well-Tagged PDF (WTPDF)
 
@@ -1969,7 +1970,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Tag Reading Order
 
-Basically, the element which draws first takes precedence over the tag reading order. You can re-order the tagged elements in document using the [Order](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfStructureElement.html#Syncfusion_Pdf_PdfStructureElement_Order) property. 
+The reading order of tagged elements is determined by the order in which they are drawn on the page. You can override the drawing order by setting the [Order](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfStructureElement.html#Syncfusion_Pdf_PdfStructureElement_Order) property on the [PdfStructureElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfStructureElement.html). Elements with lower `Order` values are read first. If two elements share the same `Order` value, the element drawn first is read first.
 
 The following code example illustrates how to order the tagged elements in a PDF document.
 
@@ -2144,11 +2145,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Auto Tagging a new document
 
-When the auto-tag feature is enabled, all the elements in the document is tagged with appropriate tag type that is ```Paragraph```, ```Figure```, ```Annotation```, and more from [PdfTagType](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfTagType.html) Enum. 
+When the auto-tag feature is enabled, all the elements in the document are tagged with the appropriate tag type (`Paragraph`, `Figure`, `Annotation`, and more) from the [PdfTagType](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfTagType.html) enum. Set the [AutoTag](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_AutoTag) property to `true` on the `PdfDocument` instance before adding any content.
 
 The following code example explains how to auto-tag the elements in a PDF document.
 
-N> Enabling the auto-tag feature will never add alternate texts/descriptions for figures, images, and other properties related to tag.
+N> Enabling the auto-tag feature does not add alternate texts or descriptions for figures, images, and other properties related to the tag. To provide accessible descriptions, assign tags to the elements manually and set the `AlternateText` and `ActualText` properties. If both auto-tag and manual tags are applied, the manually assigned tag takes precedence.
 
 {% tabs %}
 
@@ -2265,22 +2266,22 @@ N> After the document is auto tagged and if any element tagged manually, then th
 
 ## How to pass accessibility full check
 
-To pass the full check accessibility, follow the below conventions while tagging the document:
+To pass the full accessibility check, follow the conventions below while tagging the document:
 
-1. Mention the PDF document “Title” in the document properties.
-2. Make sure that the images in the document has alternate text or marked as artifact.
-3. The bookmarks should be included for tagged PDF with more than 21 pages.
-4. All the form fields require text description (tooltip).
-5. All tables in a document should have a header.
-6. Tables must contain same number of columns in each row.
-7. A list element must contain list item element (LI), and list item element can only contain label (Lbl) or body elements(LBody).
+1. Set the document **Title** in the `DocumentInformation` properties.
+2. Make sure that every image in the document has alternate text or is marked as an artifact.
+3. Include bookmarks for tagged PDFs that contain more than 21 pages.
+4. Provide a text description (`ToolTip`) for every form field.
+5. Make sure that every table in the document has a header row.
+6. Make sure that every table row contains the same number of columns.
+7. Make sure that every list element contains `ListItem` (`LI`) elements, and that every `ListItem` contains only `Lbl` (label) or `LBody` (body) elements.
 
 
 ## Converting Word document to Tagged PDF
 
-This setting allows you to determine whether to preserve document structured tags in the converted PDF document for accessibility (508 compliance) support. This property will set the title and description for images, diagrams, and other objects in the generated PDF document. This information will be useful for people with vision or cognitive impairments who cannot see or understand the object.
+You can preserve the document structure tags when converting a Word document to PDF so that the resulting PDF supports accessibility (Section 508 compliance). Set the [AutoTag](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocToPDFConverter.DocToPDFConverterSettings.html#Syncfusion_DocToPDFConverter_DocToPDFConverterSettings_AutoTag) property to `true` on the [DocToPDFConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocToPDFConverter.DocToPDFConverterSettings.html) class. The property sets the title and description for images, diagrams, and other objects in the generated PDF document. This information is useful for people with vision or cognitive impairments who cannot see or understand the object.
 
-The following code sample shows how to preserve document structured tags in the converted PDF document by setting the [AutoTag]() property as **true** in [DocToPDFConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocToPDFConverter.DocToPDFConverterSettings.html) class.
+The following code sample shows how to preserve document structured tags in the converted PDF document.
 
 {% tabs %}
 
@@ -2365,13 +2366,13 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Validating tagged PDF in Acrobat
 
-Follow the below steps to validate the tagged PDF information in Adobe Acrobat:
+Follow the steps below to validate the tagged-PDF information in Adobe Acrobat:
 
-1.	Choose Tools > Accessibility.
-2.	In the secondary toolbar, click Full Check. 
-3.	The Accessibility Checker Option dialog box will be displayed, from that you can ensure the validity of tagged information. 
+1. Choose **Tools** > **Accessibility**.
+2. In the secondary toolbar, click **Full Check**.
+3. The **Accessibility Checker Options** dialog box appears. Run the check to verify the validity of the tagged information.
 
-The following screenshot shows the Accessibility checker dialog box.
+The following screenshot shows the Accessibility Checker dialog box.
 
 ![TaggedPDF](TaggedPDF_images/TaggedPDF_img0.png)
 
