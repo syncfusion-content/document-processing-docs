@@ -133,7 +133,7 @@ Step 1: Open the **Cloud Shell editor**.
 Step 2: Drag and drop the sample from your local machine to **Workspace**.
 ![Drag and drop the sample into the Workspace](GCP_Images/GAE_Images/Terminal-WordtoPDF.png)
 
-N> If you have your sample application on your local machine, drag and drop it into the Workspace. If you created the sample using the Cloud Shell terminal command, it will be available in the Workspace. For large files, consider using `gcloud storage cp` instead of drag-and-drop.
+N> If you have your sample application on your local machine, drag and drop it into the Workspace. If you created the sample using the Cloud Shell terminal command, it will be available in the Workspace.
 
 Step 3: Open the Cloud Shell Terminal and run the following **command** to view the files and directories within your **current Workspace**.
 
@@ -243,7 +243,7 @@ Step 3: Verify that the `Dockerfile` and `app.yaml` files are present in the **W
 
 ## Deploy to App Engine
 
-Step 1: To deploy the application to App Engine, run the following command in the Cloud Shell Terminal. Afterwards, retrieve the **URL** from the Cloud Shell Terminal (or run `gcloud app browse`).
+Step 1: To deploy the application to App Engine, run the following command in the Cloud Shell Terminal. Afterwards, retrieve the **URL** from the Cloud Shell Terminal.
 
 {% tabs %}
 {% highlight bash tabtitle="CLI" %}
