@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Server side export in React Document editor component | Syncfusion
-description: Learn here all about Server side export in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
-control: Server side export 
+title: Server-side export in React DOCX Editor | Syncfusion
+description: Learn here all about Server-side export in the Syncfusion React Document Editor of Syncfusion Essential JS 2 and more.
+control: Server-side export 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Server side export in React Document editor component
+# Server-side export in React Document Editor
 
 ## SFDT to DOCX export
 
-[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports server-side export of **Syncfusion Document Text (.sfdt)** to Doc, DOCX, RTF, Txt, WordML, HTML formats using server-side helper **Syncfusion.EJ2.DocumentEditor** available in ASP.NET Core & ASP.NET MVC platform in the below NuGet's.
+[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports server-side export of **Syncfusion Document Text (.sfdt)** to Doc, DOCX, RTF, Txt, WordML, HTML formats using server-side helper **Syncfusion.EJ2.DocumentEditor** available in ASP.NET Core & ASP.NET MVC platform in the NuGet packages below.
 
 * [Syncfusion.EJ2.WordEditor.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Core)
 * [Syncfusion.EJ2.WordEditor.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Mvc5)
 * [Syncfusion.EJ2.WordEditor.AspNet.Mvc4](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Mvc4)
 
-Please refer the following code example.
+Please refer to the following code example.
 
 ```csharp
     //API controller for the conversion.
@@ -38,14 +38,14 @@ Please refer the following code example.
     }
 ```
 
-Please refer the client side example to serialize the sfdt and send to the server.
+Please refer to the following client-side example to serialize the SFDT and send it to the server.
 
 ```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { DocumentEditorComponent, WordExport, SfdtExport } from '@syncfusion/ej2-react-documenteditor';
 
-//Inject require modules.
+//Inject required modules.
 DocumentEditorComponent.Inject(WordExport, SfdtExport);
 function App() {
     let documenteditor: DocumentEditorComponent;
@@ -71,4 +71,4 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
-> DocumentEditor object is available in DocumentEditorContainer component(DocumentEditor packaged with toolbar, status bar & properties pane) as [`documentEditor`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container#documenteditor-code-classlanguage-textdocumenteditorcode/)
+N> The DocumentEditor object is available in the DocumentEditorContainer component (DocumentEditor packaged with toolbar, status bar & properties pane) as [`documentEditor`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container#documenteditor-code-classlanguage-textdocumenteditorcode/).
