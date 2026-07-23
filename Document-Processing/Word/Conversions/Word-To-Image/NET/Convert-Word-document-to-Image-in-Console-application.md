@@ -74,15 +74,15 @@ using (FileStream docStream = new FileStream("Input.docx", FileMode.Open, FileAc
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Build the project.
+Step 5: Build the project.
 
 Click on Build → Build Solution or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
-Step 7: Run the project.
+Step 6: Run the project.
 
 Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
 
-You can download a complete working sample from [GitHub](hthttps://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Convert-Word-to-image/.NET-Standard).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Convert-Word-to-image/.NET).
 
 By executing the program, you will get the **image** as follows.
 
@@ -110,9 +110,9 @@ Step 1: Create a new .NET Core console application project.
 Step 2: To **convert a Word document to image in console app**, install [Syncfusion.DocIORenderer.Net.Core ](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core/) to the project.
 * Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 * Ensure you're in the project root directory where your .csproj file is located.
-* Run the command `dotnet add package Syncfusion.DocIORenderer.NET.Core` to install the NuGet package.
+* Run the command `dotnet add package Syncfusion.DocIORenderer.Net.Core` to install the NuGet package.
 
-![Add Syncfusion.DocIORenderer.NET.Core NuGet package](Console-Images/NET/Command-to-add-NuGet-package-console.png) 
+![Add Syncfusion.DocIORenderer.Net.Core NuGet package](Console-Images/NET/Command-to-add-NuGet-package-console.png) 
 
 N> 1. If you're deploying the application in a Linux environment, refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/nuget-packages-required-word-to-image#additional-nuget-packages-required-for-linux) for the required additional NuGet packages.
 N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
@@ -175,7 +175,7 @@ Run the following command in terminal to run the project.
 dotnet run
 ```
 
-You can download a complete working sample from [GitHub](hthttps://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Convert-Word-to-image/.NET-Standard).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Convert-Word-to-image/.NET).
 
 By executing the program, you will get the **image** as follows.
 
@@ -190,7 +190,7 @@ By executing the program, you will get the **image** as follows.
 * JetBrains Rider.
 * Install .NET 8 SDK or later.
 
-Step 1. Open JetBrains Rider and create a new .NET Core console application project.
+Step 1: Open JetBrains Rider and create a new .NET Core console application project.
 * Launch JetBrains Rider.
 * Click new solution on the welcome screen.
 
@@ -204,19 +204,19 @@ Step 1. Open JetBrains Rider and create a new .NET Core console application proj
 ![Creating a new .NET Core console application in JetBrains Rider](Console-Images/NET/Create-Console-NET-core-sample.png)
 
 Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
-* Click the NuGet icon in the Rider toolbar and type [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) in the search bar.
+* Click the NuGet icon in the Rider toolbar and type [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) in the search bar.
 * Ensure that "nuget.org" is selected as the package source.
 * Select the latest Syncfusion.DocIORenderer.Net.Core NuGet package from the list.
 * Click the + (Add) button to add the package.
 
 ![Select the Syncfusion.DocIORenderer.Net.Core NuGet package](Console-Images/NET/Select-Syncfusion.DocIORenderer.Net.Core-NuGet.png)
 
-* Click the Install button to complete the installation.
+* Click the **Install** button to complete the installation.
 
 ![Install the Syncfusion.DocIORenderer.Net.Core NuGet package](Console-Images/NET/Install-Syncfusion.DocIORenderer.Net.Core-NuGet.png)
 
 N> 1. If you're deploying the application in a Linux environment, refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/nuget-packages-required-word-to-image#additional-nuget-packages-required-for-linux) for the required additional NuGet packages.
-N> 2. Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 3: Include the following namespaces in **Program.cs** file.
 
@@ -268,7 +268,7 @@ Step 6: Run the project.
 
 Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.
 
-You can download a complete working sample from [GitHub](hthttps://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Convert-Word-to-image/.NET-Standard).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Convert-Word-to-image/.NET).
 
 By executing the program, you will get the **image** as follows.
 
@@ -304,6 +304,8 @@ Step 3: Include the following namespaces in **Program.cs** file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using System.Drawing;
+using System.Drawing.Imaging;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 
@@ -350,7 +352,7 @@ By executing the program, you will get the **image** as follows.
 * JetBrains Rider.
 * Install .NET Framework Developer Pack.
 
-Step 1. Open JetBrains Rider and create a new .NET Framework console application project.
+Step 1: Open JetBrains Rider and create a new .NET Framework console application project.
 * Launch JetBrains Rider.
 * Click new solution on the welcome screen.
 
@@ -382,6 +384,8 @@ Step 3: Include the following namespaces in **Program.cs** file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using System.Drawing;
+using System.Drawing.Imaging;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 

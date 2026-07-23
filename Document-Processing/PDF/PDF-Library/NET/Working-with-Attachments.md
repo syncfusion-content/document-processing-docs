@@ -21,7 +21,7 @@ You can add a file attachment to a new PDF document using the [PdfAttachment](ht
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Attachment/Adding-attachment-to-a-PDF-document/.NET/Adding-attachment-to-a-PDF-document/Program.cs" %}
 
 using System;
-using System.IO;
+
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Interactive;
 
@@ -108,7 +108,7 @@ Essential<sup>&reg;</sup> PDF also supports adding attachments to an existing PD
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Attachment/Adding-the-attachments-to-an-existing-PDF-document/.NET/Adding-the-attachments-to-an-existing-PDF-document/Program.cs" %}
 
 using System;
-using System.IO;
+
 using Syncfusion.Pdf.Interactive;
 using Syncfusion.Pdf.Parsing;
 
@@ -255,7 +255,7 @@ document.Close(True)
 
 {% endtabs %}
 
-> TIP: Use `Attachments.Count` to check the number of attachments before calling `RemoveAt` to avoid an `ArgumentOutOfRangeException` when the index is invalid.
+N> Use `Attachments.Count` to check the number of attachments before calling `RemoveAt` to avoid an `ArgumentOutOfRangeException` when the index is invalid.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Attachment/Remove-attachment-from-an-existing-PDF-document/).
 
@@ -267,7 +267,6 @@ Essential<sup>&reg;</sup> PDF provides support for extracting attachments and sa
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Attachment/Extract-and-saving-an-attachment-to-the-disk/.NET/Extract-and-saving-an-attachment-to-the-disk/Program.cs" %}
 
-using System.IO;
 using Syncfusion.Pdf.Interactive;
 using Syncfusion.Pdf.Parsing;
 
@@ -292,7 +291,6 @@ document.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using System.IO;
 using Syncfusion.Pdf.Interactive;
 using Syncfusion.Pdf.Parsing;
 
@@ -316,7 +314,6 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports System.IO
 Imports Syncfusion.Pdf.Interactive
 Imports Syncfusion.Pdf.Parsing
 
@@ -338,7 +335,7 @@ document.Close(True)
 
 {% endtabs %}
 
-> NOTE: When extracting attachments, the `attachment.FileName` is used to create the output file. Ensure the application has write permission to the target directory. The `attachment.Data` property contains the raw bytes of the embedded file.
+N> When extracting attachments, the `attachment.FileName` is used to create the output file. Ensure the application has write permission to the target directory. The `attachment.Data` property contains the raw bytes of the embedded file.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Attachment/Extract-and-saving-an-attachment-to-the-disk/).
 
@@ -354,7 +351,7 @@ You can achieve this functionality by using JavaScript actions within Syncfusion
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Attachment/Adding-PDF-Attachments-with-Interactive-Launch-Buttons/.NET/Adding-PDF-Attachments-with-Interactive-Launch-Buttons/Program.cs" %}
 
-using System.IO;
+
 using Syncfusion.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
@@ -403,7 +400,6 @@ loadedDocument.Close(true);
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using System.Drawing;
-using System.IO;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Interactive;
@@ -451,7 +447,7 @@ loadedDocument.Close(true);
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports System.Drawing
-Imports System.IO
+
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Graphics
 Imports Syncfusion.Pdf.Interactive
@@ -500,6 +496,6 @@ loadedDocument.Close(True)
 
 {% endtabs %}
 
-> IMPORTANT: The JavaScript action `this.exportDataObject` is supported in most modern PDF viewers, including Adobe Acrobat and Reader. The `nLaunch` value `2` indicates that the attached file should be opened in a new window. The file name passed in `cName` must exactly match the `FileName` of the [PdfAttachment](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAttachment.html).
+N> The JavaScript action `this.exportDataObject` is supported in most modern PDF viewers, including Adobe Acrobat and Reader. The `nLaunch` value `2` indicates that the attached file should be opened in a new window. The file name passed in `cName` must exactly match the `FileName` of the [PdfAttachment](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAttachment.html).
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Attachment/Adding-PDF-Attachments-with-Interactive-Launch-Buttons/.NET).

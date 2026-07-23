@@ -8,25 +8,28 @@ documentation: UG
 
 # Convert an Excel document to PDF in UWP
 
-Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to PDF in UWP**.
+Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Excel library](https://www.syncfusion.com/document-processing/excel-framework/net/excel-library) used to create, read, edit, and convert Excel documents programmatically, without Microsoft Excel or interop dependencies.
 
 ## Steps to convert an Excel document to PDF in UWP
 
 Step 1: Create a new C# Blank App (Universal Windows) project.
 
-![Create a UWP application project in visual studio](UWP_images\UWP_images_img4.png)
+![Create a UWP application project in Visual Studio](UWP_images/UWP_images_img4.png)
 
 Step 2: Name the project.
 
-![Name the project](UWP_images\UWP_images_img5.png)
+![Name the project](UWP_images/UWP_images_img5.png)
 
-Step 3: Install the [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+Step 3: Install the [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/). This package transitively pulls in the required `Syncfusion.XlsIO.Net.Core` and `Syncfusion.Pdf.Net.Core` assemblies.
 
-![Install Syncfusion.XlsIORenderer.Net.Core NuGet Package](UWP_images\UWP_images_img6.png)
+![Install Syncfusion.XlsIORenderer.Net.Core NuGet Package](UWP_images/UWP_images_img6.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must also add the `Syncfusion.Licensing` reference and register a license key. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn how to register the Syncfusion<sup>&reg;</sup> license key. The simplest approach is to add the following call in `App.xaml.cs` before constructing the `ExcelEngine`:
+> ```csharp
+> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+> ```
 
-Step 4: Add a new button in **MainPage.xaml** as shown below.
+Step 4: Add a new button to **MainPage.xaml** as shown below.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 <Page
@@ -46,7 +49,9 @@ Step 4: Add a new button in **MainPage.xaml** as shown below.
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Include the following namespaces in the **MainPage.xaml.cs**.
+Step 5: Add an `InputTemplate.xlsx` file to the project. In **Solution Explorer**, right-click the project, choose **Add → Existing Item**, select `InputTemplate.xlsx`, and set its **Build Action** to **Embedded Resource** in the Properties window. The logical name passed to `GetManifestResourceStream` (below) must match the project's default namespace followed by the file name (e.g. `Convert_Excel_to_PDF.InputTemplate.xlsx`).
+
+Step 6: Add the following namespaces in **MainPage.xaml.cs**.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 using Syncfusion.XlsIO;
@@ -55,34 +60,41 @@ using Syncfusion.XlsIORenderer;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the below code snippet in the click event of the button in **MainPage.xaml.cs**, to **convert an Excel document to PDF** and save the **PDF** document as a physical file and open the file for viewing.
+Step 7: Add the following code in the **OnButtonClicked** handler in **MainPage.xaml.cs** to convert an Excel document to PDF, save the PDF as a file, and open the file for viewing. The `OnButtonClicked` method must be declared with the UWP event-handler signature (`Windows.UI.Xaml.RoutedEventArgs`). Note: `async void` is acceptable in UWP event handlers; the `SavePDF` and `MessageDialog.ShowAsync` calls require the UI thread, which is the calling thread here.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
-using (ExcelEngine excelEngine = new ExcelEngine())
+private async void OnButtonClicked(object sender, Windows.UI.Xaml.RoutedEventArgs e)
 {
-    IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
+    using (ExcelEngine excelEngine = new ExcelEngine())
+    {
+        IApplication application = excelEngine.Excel;
+        application.DefaultVersion = ExcelVersion.Xlsx;
 
-    //Load an existing file
-    Assembly assembly = typeof(App).GetTypeInfo().Assembly;
-   
-    IWorkbook workbook =application.Workbooks.Open(assembly.GetManifestResourceStream("Convert_Excel_to_PDF.InputTemplate.xlsx"));
+        // Load the embedded Excel workbook as a stream.
+        Assembly assembly = typeof(App).GetTypeInfo().Assembly;
+        IWorkbook workbook = application.Workbooks.Open(
+            assembly.GetManifestResourceStream("Convert_Excel_to_PDF.InputTemplate.xlsx"));
 
-    //Initialize XlsIO renderer.
-    XlsIORenderer renderer = new XlsIORenderer();
+        // Initialize the XlsIO renderer.
+        XlsIORenderer renderer = new XlsIORenderer();
 
-    //Convert Excel document into PDF document 
-    PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
+        // Convert the Excel document to a PDF document.
+        PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
 
-    //Create the MemoryStream to save the converted PDF.      
-    MemoryStream pdfStream = new MemoryStream();
+        // Create a MemoryStream to save the converted PDF.
+        MemoryStream pdfStream = new MemoryStream();
 
-    //Save the converted PDF document to MemoryStream.
-    pdfDocument.Save(pdfStream);
-    pdfStream.Position = 0;
+        // Save the converted PDF document to the MemoryStream.
+        pdfDocument.Save(pdfStream);
+        pdfStream.Position = 0;
 
-    // Save the PDF file or perform any other action with the PDF
-    SavePDF(pdfStream);
+        // Close the workbook and the PDF document to release resources.
+        workbook.Close();
+        pdfDocument.Close();
+
+        // Save the PDF file or perform any other action with the PDF.
+        await SavePDF(pdfStream);
+    }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -132,11 +144,13 @@ private async void SavePDF(Stream outputStream)
 {% endhighlight %}
 {% endtabs %}
 
+N> For additional control over page size, orientation, and font embedding, pass an `ExcelToPdfConverterSettings` instance to `XlsIORenderer.ConvertToPDF`. See the [Excel-to-PDF conversion options](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/convert-excel-to-pdf-in-uwp#excel-to-pdf-conversion-options) for details.
+
 A complete working example of how to convert an Excel document to PDF in UWP is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/UWP/Convert%20Excel%20to%20PDF).
 
-By executing the program, you will get the **PDF document** as follows.
+By executing the program, you will get the **PDF document** as shown below.
 
-![Output File](UWP_images\UWP_images_img7.png)
+![Output File](UWP_images/UWP_images_img7.png)
 
 N> As per [MSDN announcement](https://devblogs.microsoft.com/dotnet/announcing-uwp-support-for-net-standard-2-0/), the minimum version of UWP project must be Fall Creators Update (FCU).
 

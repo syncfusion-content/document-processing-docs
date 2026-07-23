@@ -16,8 +16,6 @@ Essential<sup>&reg;</sup> PDF allows you to [compress a PDF](https://www.syncfus
 To quickly get started with compressing an existing PDF document in .NET, check this video:
 {% youtube "https://www.youtube.com/watch?v=v-rZYeyWYZU" %}
 
-
-
 ## Compressing an existing PDF document
 
 You can compress an existing PDF document by using the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) and [PdfCompressionOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html) classes. The following compression techniques are supported:
@@ -26,6 +24,10 @@ You can compress an existing PDF document by using the [PdfLoadedDocument](https
 2. [Optimize embedded fonts](#optimizing-embedded-fonts)
 3. [Optimize page contents](#optimizing-page-contents)
 4. [Remove metadata information](#removing-metadata-information)
+
+N> 1.To compress an existing PDF document in .NET Core, you need to add the [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) package from [NuGet.org](https://www.nuget.org/) as a reference in your project.
+N> 2.To ensure compatibility on **Linux** when performing image-based operations such as compression or rendering using `Syncfusion.Pdf.Imaging.Net.Core`, you must include the `SkiaSharp` library along with the `SkiaSharp.NativeAssets.Linux` package in your project.
+N> 3.For Linux environments, refer to the [documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) for detailed information on the additional NuGet packages required.
 
 ## Compressing images with image quality
 
@@ -195,7 +197,7 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Compression/Optimize-embedded-font-in-an-existing-PDF-document).
 
-> NOTE: Font compression is supported only with TrueType and Type 2 embedded fonts.
+N> Font compression is supported only with TrueType and Type 2 embedded fonts.
 
 ## Optimizing page contents
 

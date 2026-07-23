@@ -49,7 +49,7 @@ document.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using Syncfusion.Drawing;
+using System.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Barcode;
 using Syncfusion.Pdf.Graphics;
@@ -75,7 +75,7 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports Syncfusion.Drawing
+Imports System.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Barcode
 Imports Syncfusion.Pdf.Graphics
@@ -135,7 +135,7 @@ document.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using Syncfusion.Drawing;
+using System.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Barcode;
 using Syncfusion.Pdf.Graphics;
@@ -161,7 +161,7 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports Syncfusion.Drawing
+Imports System.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Barcode
 Imports Syncfusion.Pdf.Graphics
@@ -221,7 +221,7 @@ document.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using Syncfusion.Drawing;
+using System.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Barcode;
 using Syncfusion.Pdf.Graphics;
@@ -247,7 +247,7 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports Syncfusion.Drawing
+Imports System.Drawing
 Imports Syncfusion.Pdf.Barcode
 Imports Syncfusion.Pdf.Graphics
 
@@ -310,7 +310,7 @@ document.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using Syncfusion.Drawing;
+using System.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Barcode;
 using Syncfusion.Pdf.Graphics;
@@ -338,7 +338,7 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports Syncfusion.Drawing
+Imports System.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Barcode
 Imports Syncfusion.Pdf.Graphics
@@ -402,7 +402,7 @@ document.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using Syncfusion.Drawing;
+using System.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Barcode;
 using Syncfusion.Pdf.Graphics;
@@ -430,7 +430,7 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports Syncfusion.Drawing
+Imports System.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Barcode
 Imports Syncfusion.Pdf.Graphics
@@ -496,7 +496,7 @@ document.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using Syncfusion.Drawing;
+using System.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Barcode;
 using Syncfusion.Pdf.Graphics;
@@ -524,7 +524,7 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports Syncfusion.Drawing
+Imports System.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Barcode
 Imports Syncfusion.Pdf.Graphics
@@ -590,7 +590,7 @@ document.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using Syncfusion.Drawing;
+using System.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Barcode;
 using Syncfusion.Pdf.Graphics;
@@ -618,7 +618,7 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports Syncfusion.Drawing
+Imports System.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Barcode
 Imports Syncfusion.Pdf.Graphics
@@ -652,7 +652,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 Essential<sup>&reg;</sup> PDF supports converting one-dimensional barcodes such as Code 39, Code 39 Extended, Code 11, Codabar, Code 32, Code 93, Code 93 Extended, Code 128A, Code 128B, UPC bar code, and Code 128C to an image using the [ToImage()](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfUnidimensionalBarcode.html#Syncfusion_Pdf_Barcode_PdfUnidimensionalBarcode_ToImage) method of the [PdfUnidimensionalBarcode](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfUnidimensionalBarcode.html) class.
 
-> NOTE: To export a barcode as an image in cross-platform (.NET Core / .NET 5+) applications, the [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) NuGet package must be referenced in your application.
+N> To export a barcode as an image in cross-platform (.NET Core / .NET 5+) applications, the [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) NuGet package must be referenced in your application.
 
 The following code example shows how to convert a one-dimensional barcode to an image.
 
@@ -682,7 +682,7 @@ using (FileStream outputFileStream = new FileStream("Image.png", FileMode.Create
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using Syncfusion.Drawing;
+using System.Drawing;
 using Syncfusion.PDF.Graphics;
 using Syncfusion.Pdf.Barcode;
 
@@ -794,7 +794,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The height of a one-dimensional barcode can be changed using the [BarHeight](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfBarcode.html#Syncfusion_Pdf_Barcode_PdfBarcode_BarHeight) property. The equivalent property to change the block size for a two-dimensional barcode is [XDimension](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfBidimensionalBarcode.html#Syncfusion_Pdf_Barcode_PdfBidimensionalBarcode_XDimension). You can also customize the barcode color by changing the `BarColor` (for dark bars) and `BackColor` (for light bars) properties.
 
-> NOTE: This color customization is supported only for one-dimensional barcodes; it is not supported for two-dimensional barcodes.
+N> This color customization is supported only for one-dimensional barcodes; it is not supported for two-dimensional barcodes.
 
 The following code sample explains how to customize a one-dimensional barcode such as Code 93 using the [BarHeight](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfBarcode.html#Syncfusion_Pdf_Barcode_PdfBarcode_BarHeight) and [BarColor](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfBarcode.html#Syncfusion_Pdf_Barcode_PdfBarcode_BarColor) properties of the [PdfCode93Barcode](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfCode93Barcode.html) class.
 
@@ -916,7 +916,7 @@ document.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using Syncfusion.Drawing;
+using System.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Barcode;
 using Syncfusion.Pdf.Graphics;
@@ -946,7 +946,7 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports Syncfusion.Drawing
+Imports System.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Barcode
 Imports Syncfusion.Pdf.Graphics
@@ -1015,7 +1015,7 @@ document.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using Syncfusion.Drawing;
+using System.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Barcode;
 using Syncfusion.Pdf.Graphics;
@@ -1045,7 +1045,7 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports Syncfusion.Drawing
+Imports System.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Barcode
 Imports Syncfusion.Pdf.Graphics
