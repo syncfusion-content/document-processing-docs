@@ -11,27 +11,27 @@ documentation: ug
 
 [Winforms Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/winforms-spreadsheet-editor) calculation engine offers automated calculation over a formula, expression, or cross sheet references. Spreadsheet calculation engine is preloaded with 409 formulas covering a broad range of business functions.
 
-## Adding formula into cell
+## Adding formulas to cells
 
-To add formulas into a cell programmatically, use [SetCellValue](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetGrid.html#Syncfusion_Windows_Forms_Spreadsheet_SpreadsheetGrid_SetCellValue_Syncfusion_XlsIO_IRange_System_String_) method of [SpreadsheetGrid](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetGrid.html) should be invoked and then invalidate that cell to update the view.
+To add a formula to a cell programmatically, call the [SetCellValue](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetGrid.html#Syncfusion_Windows_Forms_Spreadsheet_SpreadsheetGrid_SetCellValue_Syncfusion_XlsIO_IRange_System_String_) method of [SpreadsheetGrid](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetGrid.html), then call `InvalidateCell(row, column)` to refresh the view.
 
 {% tabs %}
 {% highlight c# %}
 
 var range = spreadsheet.ActiveSheet.Range["A2"];
 spreadsheet.ActiveGrid.SetCellValue(range, "=SUM(B1:B2)");
-spreadsheet.ActiveGrid.InvalidateCell(2,1);
+spreadsheet.ActiveGrid.InvalidateCell(2, 1);
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Named Ranges
 
-Named Ranges are the defined names that represents a cell, range of cells, formula, or constant value or table. Each name have a scope of either to a specific worksheet or to the entire workbook.
+Named ranges are the defined names that represents a cell, range of cells, formula, constant value, or table. Each name has a scope of either a specific worksheet or the entire workbook.
 
-### Define named ranges at runtime
+### Defining named ranges at runtime
 
-Spreadsheet allows the user to define/add the named ranges at runtime by using [AddNamedRange](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_AddNamedRange_System_String_System_String_System_String_) method.
+Use the [AddNamedRange](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_AddNamedRange_System_String_System_String_System_String_) method to define a named range at runtime.
 
 {% tabs %}
 {% highlight c# %}
@@ -43,16 +43,16 @@ spreadsheet.AddNamedRange("SampleName", "A3:B3", "Sheet1");
 
 ### Editing or removing named ranges at runtime
 
-Spreadsheet allows the user to edit the named ranges at runtime by [EditNamedRange](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_EditNamedRange_System_String_System_String_Syncfusion_XlsIO_IName_) method and remove the named ranges at runtime by [DeleteNamedRange](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_DeleteNamedRange_Syncfusion_XlsIO_IName_) method
+Edit a named range at runtime with the [EditNamedRange](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_EditNamedRange_System_String_System_String_Syncfusion_XlsIO_IName_) method, or remove it with the [DeleteNamedRange](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_DeleteNamedRange_Syncfusion_XlsIO_IName_) method.
 
 {% tabs %}
 {% highlight c# %}
 
-//To Edit the named ranges,
+// To edit a named range:
 IName name = spreadsheet.Workbook.Names["Sample"];
 spreadsheet.EditNamedRange("Test", "A3:B3", name);
 
-//To remove the named ranges,
+// To remove a named range:
 IName name = spreadsheet.Workbook.Names["Sample"];
 spreadsheet.DeleteNamedRange(name);
 
@@ -226,8 +226,8 @@ DEC2BIN<br/><br/></td><td>
 Converts a decimal number to binary<br/><br/></td></tr>
 <tr>
 <td>
-DCE2OCT<br/><br/></td><td>
-Converts a binary number to octal<br/><br/></td></tr>
+DEC2OCT<br/><br/></td><td>
+Converts a decimal number to octal<br/><br/></td></tr>
 <tr>
 <td>
 DEC2HEX<br/><br/></td><td>
@@ -235,7 +235,7 @@ Converts a decimal number to hexadecimal<br/><br/></td></tr>
 <tr>
 <td>
 BIN2DEC<br/><br/></td><td>
-Converts a binary number to hexadecimal<br/><br/></td></tr>
+Converts a binary number to decimal<br/><br/></td></tr>
 <tr>
 <td>
 BIN2OCT<br/><br/></td><td>
@@ -633,7 +633,7 @@ Returns information about the contents, formatting or location of a given cell<b
 <tr>
 <td>
 INFO<br/><br/></td><td>
-Returns information about the the current operating environment<br/><br/></td></tr>
+Returns information about the current operating environment<br/><br/></td></tr>
 <tr>
 <td>
 TYPE<br/><br/></td><td>
@@ -654,11 +654,11 @@ Description<br/><br/></th></tr>
 <tr>
 <td>
 AND<br/><br/></td><td>
-Tests a number of user-defined conditions and returns TRUE if ALL of the conditions evaluate to TRUE, orFALSE otherwise<br/><br/></td></tr>
+Tests a number of user-defined conditions and returns TRUE if ALL of the conditions evaluate to TRUE, or FALSE otherwise<br/><br/></td></tr>
 <tr>
 <td>
 OR<br/><br/></td><td>
-Tests a number of user-defined conditions and returns TRUE if ANY of the conditions evaluate to TRUE, orFALSE otherwise<br/><br/></td></tr>
+Tests a number of user-defined conditions and returns TRUE if ANY of the conditions evaluate to TRUE, or FALSE otherwise<br/><br/></td></tr>
 <tr>
 <td>
 IF<br/><br/></td><td>
@@ -1140,7 +1140,7 @@ PERCENTRANK.EXC<br/><br/></td><td>
 Returns the rank of value in dataset as a percentage of the data set as percentage (0….1, exclusive) of the dataset<br/><br/></td></tr>
 <tr>
 <td>
-PERCENTRANC.INC<br/><br/></td><td>
+PERCENTRANK.INC<br/><br/></td><td>
 Returns the rank of value in dataset as a percentage of the data set as percentage (0….1, inclusive) of the dataset<br/><br/></td></tr>
 <tr>
 <td>
@@ -1253,11 +1253,11 @@ Returns the one-tailed probability value of a z-test<br/><br/></td></tr>
 <tr>
 <td>
 RANK.AVG<br/><br/></td><td>
-Returns the statistical rank of a given value, within a supplied array of values (if more than one value has same rank, the average rank is returned)<br/><br/></td></tr>
+Returns the rank of a value in a dataset as a percentage (0 to 1 inclusive); if more than one value shares the same rank, the average rank is returned<br/><br/></td></tr>
 <tr>
 <td>
 RANK.EQ<br/><br/></td><td>
-Returns the Mode (the most frequently occurring value) of a list of supplied numbers (if more than one value has same rank, the top rank of that set is returned)<br/><br/></td></tr>
+Returns the rank of a given value within a supplied array of values; if more than one value has the same rank, the top rank of that set is returned<br/><br/></td></tr>
 <tr>
 <td>
 NEGBINOM.DIST<br/><br/></td><td>
@@ -1456,8 +1456,8 @@ QUARTILE<br/><br/></td><td>
 Returns the specified quartile of a set of supplied numbers, based on percentile value 0 - 1 (inclusive)<br/><br/></td></tr>
 <tr>
 <td>
-RANQ<br/><br/></td><td>
-Returns the Mode (the most frequently occurring value) of a list of supplied numbers (if more than one value has same rank, the top rank of that set is returned)<br/><br/></td></tr>
+RANK<br/><br/></td><td>
+Returns the rank of a number in a list of supplied numbers (if more than one value has the same rank, the top rank of that set is returned)<br/><br/></td></tr>
 <tr>
 <td>
 RSQ<br/><br/></td><td>
@@ -1614,7 +1614,7 @@ Returns the length of a supplied text string<br/><br/></td></tr>
 <tr>
 <td>
 MINB<br/><br/></td><td>
-Returns the smallest value in a set of values. does not ignore logical text and values<br/><br/></td></tr>
+Returns the smallest value in a set of values, counting text and logical values (does not ignore them)<br/><br/></td></tr>
 <tr>
 <td>
 RIGHTB<br/><br/></td><td>
@@ -1670,4 +1670,3 @@ WEBSERVICE<br/><br/></td><td>
 Returns data from a web service on the Internet or Intranet<br/><br/></td></tr>
 </table>
 
-</table>
