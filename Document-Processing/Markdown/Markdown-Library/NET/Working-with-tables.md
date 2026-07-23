@@ -6,7 +6,7 @@ control: Markdown
 documentation: UG
 ---
 
-# Working with Tables in the Syncfusion<sup>&reg;</sup> .NET Markdown Library
+# Working with Tables in Markdown Library
 
 Tables are essential components in Markdown documents used to organize and present data in a structured format of rows and columns. The Syncfusion<sup>&reg;</sup> .NET Markdown library provides comprehensive support for creating, modifying, and managing tables programmatically in a Markdown document.
 

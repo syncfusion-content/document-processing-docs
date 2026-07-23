@@ -7,7 +7,7 @@ documentation: UG
 keywords: markdown, SDK, Automation, API, create, read
 ---
 
-# Welcome to Syncfusion<sup>&reg;</sup> .NET Markdown Document Processing Framework
+# Welcome to Syncfusion® Markdown Document Processing Framework
 
 Syncfusion<sup>&reg;</sup> .NET Markdown Document Processing Framework is a collection of Markdown document processing library that works without any external dependencies. It eases the developers, as they can just integrate and achieve the required Markdown document processing functionalities and concentrate on core logics of their application.
 

@@ -6,7 +6,7 @@ control: Markdown
 documentation: UG
 ---
 
-# Working with Lists in the Syncfusion<sup>&reg;</sup> .NET Markdown Library
+# Working with Lists in Markdown Library
 
 Lists are essential elements in Markdown documents that organize and present information in a hierarchical and structured manner. The Syncfusion<sup>&reg;</sup> .NET Markdown library supports creating, modifying, and managing both numbered (ordered) and bulleted (unordered) lists in a Markdown document. Lists are not separate block types; they are produced by applying an `MdListFormat` instance to an `MdParagraph`. The library supports up to nine nesting levels (level `0` to level `8`), allowing for complex hierarchical structures.
 

@@ -7,7 +7,7 @@ documentation: UG
 keywords: markdown, SDK, Automation, API, create, read, edit
 ---
 
-# Welcome to Syncfusion<sup>&reg;</sup> .NET Markdown Document Processing Library
+# Welcome to Syncfusion® Markdown Document Processing Library
 
 Syncfusion<sup>&reg;</sup> .NET Markdown Document Processing library is a .NET class library used to create, read, and edit Markdown documents programmatically in Windows Forms, WPF, ASP.NET MVC, ASP.NET Core, Blazor, and .NET MAUI applications without any external dependencies.
 
