@@ -2,7 +2,7 @@
 layout: post
 title: Illustrations in Vue Spreadsheet component | Syncfusion
 description: Learn here all about Illustrations in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
-control: Illustrations 
+control: Spreadsheet
 platform: document-processing
 documentation: ug
 ---
@@ -13,7 +13,7 @@ Illustrations help you to insert an image, shapes, and graphic objects in the Es
 
 ## Image
 
-Adding images to a spreadsheet can enhance the visual appeal and help to convey information more clearly.
+Adding images to a spreadsheet can enhance visual appeal and convey information more clearly.
 
 >* The default value for the `allowImage` property is `true`.
 
@@ -83,8 +83,8 @@ Image feature allows you to view and insert an image in a spreadsheet, and you c
 
 The following features have some limitations in Image:
 
-* Corner resizing option in the image element.
-* Copy and paste the external image.
+* Corner resizing option in the image element is not supported.
+* Copying and pasting external images is not supported.
 
 ## Chart
 
@@ -183,17 +183,19 @@ Using the [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/sprea
 
 ### Limitations of Chart
 
-The following features have some limitations in the Chart:
-
-* Insert row/delete row between the chart data source will not reflect the chart.
+The folling or deleting rows within the chart's data range does not update the chart.
+* Copy/paste operations within the chart's data range do not update the chart.
+* Corner-based resizing of the chart element is not supported data source will not reflect the chart.
 * Copy/paste into the chart data source will not reflect the chart.
-* Corner resizing option in chart element.
+* Corner resizing option in chart element.to explore its feature showcase. You can also explore our [Vue Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/vue/#/tailwind3/spreadsheet/default.html) to learn how to present and manipulate data.
+
+>* This page documents the Vue Spreadsheet component. The Composition API examples use Vue 3's `<script setup>` syntax; the Options API examples work with both Vue 2 and Vue 3. The component is provided by the `@syncfusion/ej2-vue-spreadsheet` package
 
 ## Note
 
 You can refer to our [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/vue/#/tailwind3/spreadsheet/default.html) to knows how to present and manipulate data.
 
-## See Also
+## See Alsohyper
 
 * [Formatting](./formatting)
 * [Rows and columns](./rows-and-columns)

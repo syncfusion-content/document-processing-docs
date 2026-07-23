@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Open save in Vue Spreadsheet component
+# Open and Save in Vue Spreadsheet component
 
 The native data format for Spreadsheet is `JSON`. When you open an excel file, it needs to be read and converted to client side Spreadsheet model. The converted client side Spreadsheet model is sent as JSON which is used to render Spreadsheet. Similarly, when you save the Spreadsheet, the client Spreadsheet model is sent to the server as JSON for processing and saved as Excel file formats. [`Server configuration`](./open-save#server-configuration) is used for this process.
 
@@ -17,7 +17,7 @@ The Spreadsheet control opens an Excel document with its data, style, format, an
 
 **User Interface**:
 
-In user interface you can open an Excel document by clicking `File > Open` menu item in ribbon.
+In the user interface, you can open an Excel document by clicking `File > Open` menu item in ribbon.
 
 The following sample shows the `Open` option by using the [`openUrl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#openurl) property in the Spreadsheet control. You can also use the [`beforeOpen`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#beforeopen) event to trigger before opening an Excel file.
 
@@ -32,7 +32,7 @@ The following sample shows the `Open` option by using the [`openUrl`](https://ej
         
 {% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-cs1" %}
 
-Please find the below table for the beforeOpen event arguments.
+Please find the below table for the `beforeOpen` event arguments.
 
  | **Parameter** | **Type** | **Description** |
 | ----- | ----- | ----- |
@@ -41,11 +41,11 @@ Please find the below table for the beforeOpen event arguments.
 | requestData | object |  To provide the Form data. |
 
 > * Use `Ctrl + O` keyboard shortcut to open Excel documents.
-> * The default value of the [allowOpen](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#allowopen) property is `true`. For demonstration purpose, we have showcased the [allowOpen](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#allowopen) property in previous code snippet.
+> * The default value of the [allowOpen](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#allowopen) property is `true`. For demonstration purposes, we have showcased the [allowOpen](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#allowopen) property in the previous code snippet.
 
-### Open an excel file using a file uploader
+### Open an Excel file using a file uploader
 
-If you explore your machine to select and upload an excel document using the file uploader, you will receive the uploaded document as a raw file in the [success](https://ej2.syncfusion.com/vue/documentation/api/uploader/#success) event of the file uploader. In this `success` event, you should pass the received raw file as an argument to the Spreadsheet's [open](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#open) method to see the appropriate output.
+If you explore your machine to select and upload an Excel document using the file uploader, you will receive the uploaded document as a raw file in the [success](https://ej2.syncfusion.com/vue/documentation/api/uploader/#success) event of the file uploader. In this `success` event, you should pass the received raw file as an argument to the Spreadsheet's [open](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#open) method to see the appropriate output.
 
 The following code example shows how to import an excel document using file uploader in spreadsheet.
 
@@ -60,7 +60,7 @@ The following code example shows how to import an excel document using file uplo
         
 {% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-uploader-cs1" %}
 
-### Open an external URL excel file while initial load
+### Open an external URL Excel file on initial load
 
 You can achieve to access the remote excel file by using the [`created`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#created) event. In this event you can fetch the excel file and convert it to a blob. Convert this blob to a file and [`open`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#open) this file by using Spreadsheet component open method.
 
@@ -75,11 +75,11 @@ You can achieve to access the remote excel file by using the [`created`](https:/
         
 {% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-cs2" %}
 
-### Open an excel file from blob data
+### Open an Excel file from Blob data
 
-By default, the Spreadsheet component provides an option to browse files from the local file system and open them within the component. If you want to open an Excel file from blob data, you need to fetch the blob data from the server or another source and convert this blob data into a `File` object. Then, you can use the [open](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#open) method in the Spreadsheet component to load that `File` object.
+By default, the Spreadsheet component provides an option to browse files from the local file system and open them within the component. If you want to open an Excel file from Blob data, you need to fetch the Blob data from the server or another source and convert this Blob data into a `File` object. Then, you can use the [open](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#open) method in the Spreadsheet component to load that `File` object.
 
-Please find the code to fetch the blob data and load it into the Spreadsheet component below.
+Please find the code to fetch the Blob data and load it into the Spreadsheet component below.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -147,7 +147,7 @@ You can find the server endpoint code to fetch and process the Excel file in thi
 fetch('https://localhost:{port number}/Home/Open')
 ```
 
-### Open an excel file using a hosted web service in AWS Lambda
+### Open an Excel file using a hosted web service in AWS Lambda
 
 Before proceeding with the opening process, you should deploy the spreadsheet open/save web API service in AWS Lambda. To host the open/save web service in the AWS Lambda environment, please refer to the following KB documentation.
 
@@ -333,9 +333,9 @@ export default {
 ```csharp
 public IActionResult Open(OpenOptions openOptions)
 {
-    // Convert the base64 string to bytes array.
+    // Convert the base64 string to a byte array.
     byte[] bytes = Convert.FromBase64String(openOptions.File);
-    // Loading the bytes array to stream.
+    // Loading the byte array into a stream.
     MemoryStream stream = new MemoryStream(bytes);
     OpenRequest open = new OpenRequest();
     // Converting the stream into FormFile.
@@ -354,7 +354,7 @@ public class OpenOptions
 }
 ```
 
-### Open an excel file from Base64 string data
+### Open an Excel file from a Base64 string
 
 In the Spreadsheet component, there is no direct option to open data as a `Base64` string. To achieve this, the `import()` function fetches the `Base64` string, converts it to a Blob, creates a File object from the Blob, and then opens it using the [open](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#open) method in the spreadsheet.
 The following code example shows how to save the spreadsheet data as base64 string.
@@ -590,7 +590,7 @@ The [attachment](https://www.syncfusion.com/downloads/support/directtrac/general
     <ejs-spreadsheet ref="spreadsheet" openUrl="https://localhost:{port number}/Home/Open"></ejs-spreadsheet>
 ```
 
-### Add custom header during open
+### Add a custom header during open
 
 You can add your own custom header to the open action in the Spreadsheet. For processing the data, it has to be sent from server to client side and adding customer header can provide privacy to the data with the help of Authorization Token. Through the [`beforeOpen`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#beforeopen) event, the custom header can be added to the request during open action.
 
@@ -625,7 +625,7 @@ public IActionResult Open(IFormCollection openRequest)
 
 ## Supported file formats
 
-The following list of Excel file formats are supported in Spreadsheet:
+The following list of Excel file formats are supported in the Spreadsheet for the **open** action:
 
 * MS Excel (.xlsx)
 * MS Excel 97-2003 (.xls)
@@ -654,11 +654,11 @@ The following sample shows the `Save` option by using the [`saveUrl`](https://ej
         
 {% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-save-cs1" %}
 
-Please find the below table for the beforeSave event arguments.
+Please find the below table for the `beforeSave` event arguments.
 
 | **Parameter** | **Type** | **Description** |
 | ----- | ----- | ----- |
-| url | string |  Specifies the save url.  |
+| url | string |  Specifies the save URL.  |
 | fileName | string | Specifies the file name. |
 | saveType | SaveType | Specifies the saveType like Xlsx, Xls, Csv and Pdf. |
 | customParams | object | Passing the custom parameters from client to server while performing save operation. |
@@ -727,8 +727,8 @@ By default, the Spreadsheet component saves the Excel file and downloads it to t
             
             // Save the workbook as stream.
             Stream fileStream = Workbook.Save<Stream>(saveSettings);
-            // Using XLSIO, we are opening the file stream and saving the file in the server under "Files" folder.
-            // You can also save the stream file in your server location.
+            // Using XlsIO, open the file stream and save the file on the server under the "Files" folder.
+            // You can also save the stream file to your own server location.
             IWorkbook workbook = application.Workbooks.Open(fileStream);
             string basePath = _env.ContentRootPath + "\\Files\\" + saveSettings.FileName + ".xlsx";
             var file = System.IO.File.Create(basePath);
@@ -754,7 +754,7 @@ You can find the server endpoint code to save the spreadsheet data as an Excel f
 fetch('https://localhost:{port number}/Home/Save')
 ```
 
-### Save an excel file using a hosted web service in AWS Lambda
+### Save an Excel file using a hosted web service in AWS Lambda
 
 Before proceeding with the save process, you should deploy the spreadsheet open/save web API service in AWS Lambda. To host the open/save web service in the AWS Lambda environment, please refer to the following KB documentation.
 
@@ -1004,9 +1004,9 @@ public string Save([FromForm]SaveSettings saveSettings)
 
 In the Spreadsheet component, there is currently no direct option to save data as a `Base64` string. You can achieve this by saving the Spreadsheet data as blob data and then converting that saved blob data to a `Base64` string using `FileReader`. 
 
-> You can get the Spreadsheet data as blob in the [saveComplete](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#savecomplete) event when you set the  `needBlobData` as **true** and `isFullPost` as **false** in the [beforeSave](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#beforesave) event.
+> You can get the Spreadsheet data as a Blob in the [saveComplete](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#savecomplete) event when you set the `needBlobData` to **true** and `isFullPost` to **false** in the [beforeSave](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#beforesave) event.
 
-The following code example shows how to save the spreadsheet data as base64 string.
+The following code example shows how to save the spreadsheet data as a Base64 string.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -1082,7 +1082,7 @@ Server side code snippets:
         }
 ```
 
-### Add custom header during save
+### Add a custom header during save
 
 You can add your own custom header to the save action in the Spreadsheet. For processing the data, it has to be sent from client to server side and adding customer header can provide privacy to the data with the help of Authorization Token. Through the [`fileMenuItemSelect`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#filemenuitemselect) event, the custom header can be added to the request during save action.
 
@@ -1119,7 +1119,7 @@ The possible values are:
 
 ### Supported file formats
 
-The following list of Excel file formats are supported in Spreadsheet:
+The following list of Excel file formats are supported by the Spreadsheet for the **save** action:
 
 * MS Excel (.xlsx)
 * MS Excel 97-2003 (.xls)
@@ -1150,7 +1150,7 @@ Import and export are processed in `server-side` using Spreadsheet server librar
     [Route("api/[controller]")]
     public class SpreadsheetController : Controller
     {
-        //To open excel file
+        // To open an Excel file
         [AcceptVerbs("Post")]
         [HttpPost]
         [EnableCors("AllowAllOrigins")]
@@ -1162,7 +1162,7 @@ Import and export are processed in `server-side` using Spreadsheet server librar
             return Content(Workbook.Open(open));
         }
 
-        //To save as excel file
+        // To save as an Excel file
         [AcceptVerbs("Post")]
         [HttpPost]
         [EnableCors("AllowAllOrigins")]

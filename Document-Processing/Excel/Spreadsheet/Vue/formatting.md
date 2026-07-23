@@ -9,7 +9,8 @@ documentation: ug
 
 # Formatting in Vue Spreadsheet component
 
-Formatting options make your data easier to view and understand. The different types of formatting options in the Spreadsheet are,
+Formatting options make your data easier to view and understand. The Spreadsheet supports the following types of formatting:
+
 * Number Formatting
 * Text Formatting
 * Cell Formatting
@@ -18,7 +19,7 @@ Formatting options make your data easier to view and understand. The different t
 
 ## Number Formatting
 
-Number formatting provides a type for your data in the Spreadsheet. Use the [`allowNumberFormatting`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#allownumberformatting) property to enable or disable the number formatting option in the Spreadsheet. The different types of number formatting supported in Spreadsheet are,
+Number formatting provides a type for your data in the Spreadsheet. Use the [`allowNumberFormatting`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#allownumberformatting) property to enable or disable the number formatting option in the Spreadsheet. The default value of `allowNumberFormatting` is `true`. The types of number formatting supported in the Spreadsheet are:
 
 | Types | Format Code | Format ID |
 |---------|---------|---------|
@@ -34,10 +35,10 @@ Number formatting provides a type for your data in the Spreadsheet. Use the [`al
 | Scientific |`0.00E+00`  | 11 |
 | Text | `@` | 49 |
 
-Number formatting can be applied in following ways,
-* Using the `format` property in `cell`, you can set the desired format to each cell at initial load.
-* Using the [`numberFormat`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#numberformat) method, you can set the number format to a cell or range of cells.
-* Selecting the number format option from ribbon toolbar.
+Number formatting can be applied in the following ways:
+* Set the `format` property on a `cell` to apply a format to each cell at initial load.
+* Use the [`numberFormat`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#numberformat) method to set the number format on a cell or range of cells.
+* Select the number format option from the ribbon toolbar.
 
 The following code example shows the number formatting in cell data.
 
@@ -64,7 +65,7 @@ The spreadsheet allows customization of formats in the custom format dialog usin
 
 Compared to Excel, the date, time, currency, and accounting formats vary across different cultures. For example, when an Excel file with the date format `'m/d/yyyy'` is imported in the `en-US` culture, the spreadsheet displays the date in that format. However, when the same file is imported in the German culture, the date format changes to `'dd.MM.yyyy'`, which is the default for that region. The default number format ID for the date is 14. To customize the date format based on the culture, you should map the default number format ID to the appropriate culture-specific format code, like this: `{ id: 14, code: 'dd.MM.yyyy' }` in the `configureLocalizedFormat` method.
 
-> The format code should use the default decimal separator (.) and group separator (,).
+> The format code should use the default decimal separator (`.`) and group separator (`,`).
 
 The code below illustrates how culture-based format codes are mapped to their corresponding number format ID for the `German (de)` culture.
 
@@ -123,19 +124,19 @@ Various font formats supported in the spreadsheet are font-family, font-size, bo
 
 ### Text Alignment
 
-You can align text in a cell either vertically or horizontally using the  `textAlign` and `verticalAlign` property.
+You can align text in a cell either vertically or horizontally using the `textAlign` and `verticalAlign` properties.
 
 ### Indents
 
-To enhance the appearance of text in a cell, you can change the indentation of a cell content using `textIndent` property.
+To enhance the appearance of text in a cell, change the indentation of a cell's content using the `textIndent` property.
 
 ### Fill color
 
-To highlight cell or range of cells from whole workbook you can apply background color for a cell using `backgroundColor` property.
+To highlight a cell or range of cells from the whole workbook, apply a background color using the `backgroundColor` property.
 
 ### Borders
 
-You can add borders around a cell or range of cells to define a section of worksheet or a table. The different types of border options available in the spreadsheet are,
+You can add borders around a cell or range of cells to define a section of a worksheet or a table. The border options available in the Spreadsheet are:
 
 | Types | Actions |
 |-------|---------|
@@ -144,13 +145,13 @@ You can add borders around a cell or range of cells to define a section of works
 | Right Border | Specifies the right border of a cell or range of cells.|
 | Bottom Border | Specifies the bottom border of a cell or range of cells.|
 | No Border | Used to clear the border from a cell or range of cells.|
-| All Border | Specifies all border of a cell or range of cells.|
+| All Border | Specifies all borders of a cell or range of cells.|
 | Horizontal Border | Specifies the top and bottom border of a cell or range of cells.|
 | Vertical Border | Specifies the left and right border of a cell or range of cells.|
 | Outside Border | Specifies the outside border of a range of cells.|
 | Inside Border | Specifies the inside border of a range of cells.|
 
-You can also change the color, size, and style of the border. The size and style supported in the spreadsheet are,
+You can also change the color, size, and style of the border. The size and style supported in the Spreadsheet are:
 
 | Types | Actions |
 |-------|---------|
@@ -195,7 +196,7 @@ Conditional formatting helps you to format a cell or range of cells based on the
 
 ### Apply Conditional Formatting
 
-You can apply conditional formatting by using one of the following ways,
+You can apply conditional formatting by using one of the following ways:
 
 * Select the conditional formatting icon in the Ribbon toolbar under the Home Tab.
 * Using the [`conditionalFormat()`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#conditionalformat) method to define the condition.
@@ -245,7 +246,7 @@ The following options can be given for the color scales as type,
 
 ### Icon Sets
 
-Icon sets will help you to visually represent your data with icons. Every icon represents a range of values. In the Three Arrows(colored) icon, the green arrow icon represents the values greater than 67%, the yellow arrow icon represents the values between 33% to 67%, and the red arrow icon represents the values less than 33%.
+Icon sets will help you to visually represent your data with icons. Every icon represents a range of values. In the Three Arrows (colored) icon, the green arrow icon represents values greater than 67%, the yellow arrow icon represents values from 33% to 67%, and the red arrow icon represents values less than 33%.
 
 The following options can be given for the icon sets as type,
 
@@ -261,10 +262,10 @@ In the MAY and JUN columns, we have applied conditional formatting custom format
 
 ### Clear Rules
 
-You can clear the defined rules by using one of the following ways,
+You can clear the defined rules by using one of the following ways:
 
-* Using the “Clear Rules” option in the Conditional Formatting button of HOME Tab in the ribbon to clear the rule from selected cells.
-* Using the [`clearConditionalFormat()`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#clearconditionalformat) method to clear the defined rules.
+* Use the **Clear Rules** option in the **Conditional Formatting** button of the **Home** tab in the ribbon to clear the rule from the selected cells.
+* Use the [`clearConditionalFormat()`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#clearconditionalformat) method to clear the defined rules.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -310,7 +311,7 @@ To apply these formats, use the `verticalAlign` property within the style of a r
 
 You can apply subscript and superscript formatting in the following ways:
 
-1. Select the desired portion of text within a cell, then click the Subscript or Superscript option in the ribbon to apply the formatting.
+1. Select the desired portion of text within a cell, then click the **Subscript** or **Superscript** option in the **Home** tab of the ribbon to apply the formatting.
 
 ![Subscript and superscript in Spreadsheet](./images/spreadsheet_richtext.gif)
 
