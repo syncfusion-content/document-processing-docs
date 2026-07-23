@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize context menu in React DOCX Editor component | Syncfusion
-description: Learn how to customize the context menu in the Syncfusion React Document Editor component.
+description: Learn how to customize the context menu in the Syncfusion React Document Editor component by adding custom menu items and handling selection events.
 control: Customize Context Menu
 platform: document-processing
 documentation: ug
@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## How to Customize Context Menu in the Document Editor
 
-[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) allows you to add custom options to the context menu. Use the [`addCustomMenu()`](https://ej2.syncfusion.com/react/documentation/api/document-editor/contextmenu#addcustommenu) method to add a custom option, and handle the selection with the [`customContextMenuSelect`](https://ej2.syncfusion.com/react/documentation/api/document-editor/customContentMenuEventArgs/) event.
+[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) allows you to add custom options to the context menu. Use the [`addCustomMenu()`](https://ej2.syncfusion.com/react/documentation/api/document-editor/contextmenu#addcustommenu) method to add a custom option, and handle the selection with the [`customContextMenuSelect`](https://ej2.syncfusion.com/react/documentation/api/document-editor/customContentMenuEventArgs) event.
 
 ### Add Custom Option
 
@@ -146,7 +146,7 @@ N> 3. You can refer and reuse the [GitHub Web Service example](https://github.co
 
 #### Customize Added Context Menu Items
 
-The following code shows how to show or hide an added custom option in the context menu using the [`customContextMenuBeforeOpen`](https://ej2.syncfusion.com/react/documentation/api/document-editor/beforeOpenCloseCustomContentMenuEventArgs/) event.
+The following code shows how to show or hide an added custom option in the context menu using the [`customContextMenuBeforeOpen`](https://ej2.syncfusion.com/react/documentation/api/document-editor/beforeOpenCloseCustomContentMenuEventArgs) event.
 
 ```ts
 import { createRoot } from 'react-dom/client';
