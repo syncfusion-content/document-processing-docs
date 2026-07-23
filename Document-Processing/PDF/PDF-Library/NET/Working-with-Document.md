@@ -1,6 +1,6 @@
 ---
 title: Working with Document | PDF library | Syncfusion
-description: Learn how to configure page settings, sections, document properties, viewer preferences, compression, multi-threading, and uniform resource naming in PDF documents using the Syncfusion .NET PDF library.
+description: Learn to configure page settings, sections, document properties, viewer preferences, compression, multithreading, and URN support in PDFs using Syncfusion .NET PDF.
 platform: document-processing
 control: PDF
 documentation: UG
@@ -8,22 +8,6 @@ documentation: UG
 # Working with Document
 
 Essential<sup>&reg;</sup> PDF provides a comprehensive set of APIs for configuring the page layout, document information, viewer behavior, and runtime options of a PDF document. The following sections cover the most common scenarios:
-
-* [Document settings – page size, orientation, and rotation](#adding-the-document-settings)
-* [Sections](#creating-sections-in-a-pdf)
-* [Printing a PDF document](#printing-pdf-document)
-* [Document properties](#working-with-document-properties)
-* [Removing specific document information entries](#remove-specific-keys-from-the-existing-document-information)
-* [Incremental updates](#performing-incremental-update-for-pdf-document)
-* [Viewer preferences](#choosing-the-viewer-preferences)
-* [Document actions](#adding-document-action)
-* [Multi-threading](#working-in-multi-threading-environment)
-* [Uniform resource naming](#uniform-resource-naming-in-pdf-document)
-* [Memory optimization](#memory-optimization)
-* [Finding corrupted PDF documents](#find-corrupted-pdf-document)
-* [Embedding fonts](#embed-all-the-non-embedded-fonts-in-the-existing-pdf-document)
-* [Base URI](#add-or-retrieve-baseuri-in-a-pdf-document)
-* [Tracking save progress](#tracking-save-progress)
 
 ## Adding the document settings
 
@@ -117,8 +101,6 @@ document.Close(True)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/PDF%20Document/Create-a-PDF-document-with-standard-page-size/).
-
-> **NOTE:** The [PdfPageSize](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageSize.html) enumeration includes common presets such as A0–A6, B0–B6, Letter, Legal, Ledger, and Executive. Choose a preset for built-in sizes, or assign a custom [SizeF](https://learn.microsoft.com/dotnet/api/system.drawing.sizef) value to the [PdfPageSettings.Size](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageSettings.html#Syncfusion_Pdf_PdfPageSettings_Size) property for any other size, expressed in points (1 point = 1/72 inch).
 
 You can create a PDF document with a custom page size by assigning a custom [SizeF](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageSettings.html#Syncfusion_Pdf_PdfPageSettings_Size) value to the [PdfPageSettings.Size](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageSettings.html#Syncfusion_Pdf_PdfPageSettings_Size) property, as illustrated in the following code example.
 

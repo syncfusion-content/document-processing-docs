@@ -1,6 +1,6 @@
 ---
 title: Working with Barcode | PDF library | Syncfusion
-description: This section explains how to add one-dimensional and two-dimensional barcodes to a PDF document, customize their appearance, set their position and size, and export them as images.
+description: Learn to add 1D and 2D barcodes to PDF documents, customize appearance, control size and placement, and export them as images.
 platform: document-processing
 control: PDF
 documentation: UG

@@ -5395,7 +5395,7 @@ newDocument.Close(True)
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Preserve-Formfields-in-the-Template-created-from-existing-PDF).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Preserve-Formfields-%20in-the-Template-created-from-existing-PDF).
  
 ## Troubleshooting
 
