@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Load N number of pages on initial loading | Syncfusion
-description: Learn how to Load N number of pages on initial loading in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Load N number of pages on initial loading
+title: Load N pages on initial load | Syncfusion
+description: Learn how to load a specific number of pages during initial rendering in the Syncfusion React PDF Viewer for improved performance.
+control: Load N pages on initial load
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load N pages initially
+# Load Initial Pages in PDF Viewer
 
 Control the number of pages the PDF Viewer renders on the initial load to improve perceived performance and reduce initial memory usage. Additional pages are rendered dynamically as the user scrolls through the document, allowing quick access to early pages without loading the entire file.
 
-Set the [initialRenderPages](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#initialrenderpages) property to specify how many pages to render initially. For large documents, avoid high values for `initialRenderPages` because rendering many pages at once increases memory use and may slow loading. Typical ranges of 10–20 pages work well for most documents; adjust based on document size and client capabilities.
+Set the [initialRenderPages] (https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#initialrenderpages) property to specify how many pages to render initially. For large documents, avoid high values for `initialRenderPages` because rendering many pages at once increases memory use and may slow loading. Typical ranges of 10–20 pages work well for most documents; adjust based on document size and client capabilities.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -32,8 +32,8 @@ function App() {
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         style={{ 'height': '640px' }}
-        initialRenderPages = {10}>
-              <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation,
+        initialRenderPages={10}>
+              <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
                                   BookmarkView, ThumbnailView, Print, TextSelection, TextSearch]} />
       </PdfViewerComponent>
     </div>
@@ -62,8 +62,8 @@ function App() {
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
         style={{ 'height': '640px' }}
-        initialRenderPages = {10}>
-              <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation,
+        initialRenderPages={10}>
+              <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
                                   BookmarkView, ThumbnailView, Print, TextSelection, TextSearch]} />
       </PdfViewerComponent>
     </div>
