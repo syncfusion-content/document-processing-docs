@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ribbon Customization in Blazor Spreadsheet Component | Syncfusion
-description: Checkout and learn here about ribbon customization in the Syncfusion Blazor Spreadsheet component and more.
+description: Learn how to customize the ribbon, tabs, groups, items, and File menu in the Syncfusion Blazor Spreadsheet component.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Ribbon Customization in Blazor Spreadsheet Component
 
-The Blazor Spreadsheet component provides a comprehensive ribbon interface that can be customized to match your application's needs. You can control the visibility, state, and layout of ribbon elements including tabs, groups, and items. Additionally, you can add custom tabs, groups, and items to extend the ribbon with your own functionality.
+The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component includes a ribbon interface that can be customized to match your application's needs. You can control the visibility, state, and layout of tabs, groups, and items, or add custom tabs, groups, and items to extend the ribbon with your own functionality.
 
 ## Overview
 
-The Spreadsheet ribbon component is organized hierarchically, with tabs at the top level, groups as related containers within tabs, and items as individual controls within groups. Ribbon customization can be performed either declaratively using property binding or dynamically using methods, based on your application requirements.
+The Spreadsheet ribbon is organized hierarchically: tabs at the top level, groups as related containers within tabs, and items as individual controls within groups. Customization can be performed declaratively using property binding or dynamically using methods, depending on your application requirements.
 
 ## Customizing the Ribbon Using Property Binding
 
@@ -25,9 +25,9 @@ Built-in tabs can be customized using the [RibbonTabItems](https://help.syncfusi
 
 | Property | Type | Description |
 |--|--|--|
-| TabId | string | The unique identifier of the ribbon tab (e.g., "homeTab", "insertTab") |
-| IsVisible | bool | Controls whether the tab is visible in the ribbon. Default is **true** |
-| Order | int? | Sets the tab's display order. Lower values appear first. Default is **null** |
+| TabId | string | The unique identifier of the ribbon tab (for example, `homeTab`, `insertTab`). |
+| IsVisible | bool | Controls whether the tab is visible in the ribbon. The default is **true**. |
+| Order | int? | Sets the tab's display order. Lower values appear first. The default is **null**. |
 | HeaderText | string | Overrides the tab's display label. |
 
 {% tabs %}
@@ -67,10 +67,10 @@ Built-in groups within tabs can be customized using the [RibbonGroupItems](https
 
 | Property | Type | Description |
 |--|--|--|
-| GroupId | string | The unique identifier of the ribbon group (e.g., "clipboardGroup", "fontStyleGroup") |
-| TabId | string | The ID of the parent tab containing this group |
-| IsVisible | bool | Controls whether the group is visible. Default is **true** |
-| Order | int? | Sets the group's display order within its tab. Lower values appear first. Default is **null** |
+| GroupId | string | The unique identifier of the ribbon group (for example, `clipboardGroup`, `fontStyleGroup`). |
+| TabId | string | The ID of the parent tab containing this group. |
+| IsVisible | bool | Controls whether the group is visible. The default is **true**. |
+| Order | int? | Sets the group's display order within its tab. Lower values appear first. The default is **null**. |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -106,11 +106,11 @@ Individual ribbon items can be customized using the [RibbonItems](https://help.s
 
 | Property | Type | Description |
 |--|--|--|
-| ItemId | string | The unique identifier of the ribbon item (e.g., "bold", "italic").|
-| GroupId | string | The ID of the parent group containing this item |
-| IsVisible | bool | Controls whether the item is visible. Default is **true** |
-| IsEnabled | bool? | Controls whether the item is enabled. Default is **null** |
-| Order | int? | Sets the item's display order within its group. Lower values appear first. Default is **null** |
+| ItemId | string | The unique identifier of the ribbon item (for example, `bold`, `italic`). |
+| GroupId | string | The ID of the parent group containing this item. |
+| IsVisible | bool | Controls whether the item is visible. The default is **true**. |
+| IsEnabled | bool? | Controls whether the item is enabled. The default is **null**. |
+| Order | int? | Sets the item's display order within its group. Lower values appear first. The default is **null**. |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -149,8 +149,8 @@ The ribbon can be extended with completely new tabs using the [CustomRibbonTabs]
 
 | Property | Type | Description |
 |--|--|--|
-| Index | int | The position where the tab will be inserted. |
-| Template | RenderFragment | The Blazor markup defining the tab's content and layout |
+| Index | int | The position where the tab is inserted. |
+| Template | RenderFragment | The Blazor markup defining the tab's content and layout. |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -212,9 +212,9 @@ Custom groups can be added to existing tabs using the [CustomRibbonGroups](https
 
 | Property | Type | Description |
 |--|--|--|
-| TabId | string | The ID of the parent tab where the group will be added |
-| Index | int | The position where the group will be inserted within the tab. |
-| Template | RenderFragment | The Blazor markup defining the group's content |
+| TabId | string | The ID of the parent tab where the group is added. |
+| Index | int | The position where the group is inserted within the tab. |
+| Template | RenderFragment | The Blazor markup defining the group's content. |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -236,7 +236,7 @@ Custom groups can be added to existing tabs using the [CustomRibbonGroups](https
             new SpreadsheetCustomRibbonGroup
             {
                 TabId = "homeTab",
-                Index = 8,  // Insert after existing groups
+                Index = 8,  // Insert after the existing groups
                 Template = CreateCustomGroupTemplate()
             }
         };
@@ -273,9 +273,9 @@ Custom items can be added to existing groups using the [CustomRibbonItems](https
 
 | Property | Type | Description |
 |--|--|--|
-| GroupId | string | The ID of the parent group where the item will be added |
-| Index | int | The position where the item will be inserted within the group. |
-| Template | RenderFragment | The Blazor markup defining the item's content |
+| GroupId | string | The ID of the parent group where the item is added. |
+| Index | int | The position where the item is inserted within the group. If the index exceeds the group size, the item is appended. |
+| Template | RenderFragment | The Blazor markup defining the item's content. |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -297,7 +297,7 @@ Custom items can be added to existing groups using the [CustomRibbonItems](https
             new SpreadsheetCustomRibbonItem
             {
                 GroupId = "fontStyleGroup",
-                Index = 4,  // Insert after existing formatting items
+                Index = 4,  // Insert at position 4 within the group
                 Template = CreateCustomItemTemplate()
             }
         };
@@ -325,11 +325,11 @@ Custom items can be added to existing groups using the [CustomRibbonItems](https
 
 ## Customizing the Ribbon Using Methods
 
-Methods provide programmatic control over ribbon elements during the component lifecycle. This approach is ideal for dynamic customizations based on user actions or application state.
+Methods provide programmatic control over ribbon elements during the component lifecycle. They are well suited for dynamic customizations based on user actions or application state.
 
 ### Showing and Hiding Tabs
 
-Tab visibility can be controlled using the [ShowRibbonTabs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ShowRibbonTabs_System_Collections_Generic_List_System_String__) and [HideRibbonTabs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_HideRibbonTabs_System_Collections_Generic_List_System_String__) methods.
+Tab visibility can be controlled using the [ShowRibbonTabs()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ShowRibbonTabs_System_Collections_Generic_List_System_String__) and [HideRibbonTabs()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_HideRibbonTabs_System_Collections_Generic_List_System_String__) methods.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -362,9 +362,11 @@ Tab visibility can be controlled using the [ShowRibbonTabs](https://help.syncfus
 {% endhighlight %}
 {% endtabs %}
 
+N> If a tab name in the list does not match a built-in tab, the call is ignored and no error is raised.
+
 ### Enabling and Disabling Tabs
 
-Tab interactivity can be controlled using the [EnableRibbonTabs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableRibbonTabs_System_Collections_Generic_List_System_String__) and [DisableRibbonTabs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DisableRibbonTabs_System_Collections_Generic_List_System_String__) methods. Disabled tabs appear grayed out but remain visible.
+Tab interactivity can be controlled using the [EnableRibbonTabs()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableRibbonTabs_System_Collections_Generic_List_System_String__) and [DisableRibbonTabs()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DisableRibbonTabs_System_Collections_Generic_List_System_String__) methods.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -399,7 +401,7 @@ Tab interactivity can be controlled using the [EnableRibbonTabs](https://help.sy
 
 ### Showing and Hiding Items
 
-Item visibility can be controlled using the [ShowRibbonItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ShowRibbonItems_System_Collections_Generic_List_System_String__) and [HideRibbonItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_HideRibbonItems_System_Collections_Generic_List_System_String__) methods. Hidden items are completely removed from the ribbon interface.
+Item visibility can be controlled using the [ShowRibbonItems()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ShowRibbonItems_System_Collections_Generic_List_System_String__) and [HideRibbonItems()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_HideRibbonItems_System_Collections_Generic_List_System_String__) methods. Hidden items are completely removed from the ribbon interface.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -432,9 +434,11 @@ Item visibility can be controlled using the [ShowRibbonItems](https://help.syncf
 {% endhighlight %}
 {% endtabs %}
 
+N> Item IDs are case-sensitive. An unknown item ID is silently ignored.
+
 ### Enabling and Disabling Items
 
-Item interactivity can be controlled using the [EnableRibbonItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableRibbonItems_System_Collections_Generic_List_System_String__) and [DisableRibbonItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DisableRibbonItems_System_Collections_Generic_List_System_String__) methods. Disabled items appear grayed out but remain visible.
+Item interactivity can be controlled using the [EnableRibbonItems()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableRibbonItems_System_Collections_Generic_List_System_String__) and [DisableRibbonItems()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DisableRibbonItems_System_Collections_Generic_List_System_String__) methods. Disabled items remain visible but appear grayed out and cannot be clicked.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -469,7 +473,12 @@ Item interactivity can be controlled using the [EnableRibbonItems](https://help.
 
 ### Adding Ribbon Tabs
 
-Custom tabs can be added dynamically using the [AddRibbonTab](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AddRibbonTab_Syncfusion_Blazor_Navigations_RibbonTab_System_Int32_) method.
+Custom tabs can be added dynamically using the [AddRibbonTab()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AddRibbonTab_Syncfusion_Blazor_Ribbon_RibbonTab_System_Int32_) method.
+
+| Parameter | Type | Description |
+|--|--|--|
+| tab | Class | The [RibbonTab](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonTab.html) model to add to the ribbon. The tab can contain custom groups and items. |
+| index | int | The zero-based index at which to insert the new tab within the ribbon. |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -506,7 +515,14 @@ Custom tabs can be added dynamically using the [AddRibbonTab](https://help.syncf
 
 ### Adding Ribbon Items
 
-Custom items can be added to existing groups using the [AddRibbonItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AddRibbonItems_System_String_System_Collections_Generic_List_Syncfusion_Blazor_Navigations_RibbonItem__System_Int32_Syncfusion_Blazor_Navigations_RibbonGroup_) method.
+Custom items can be added to existing groups using the [AddRibbonItems()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AddRibbonItems_System_String_System_Collections_Generic_List_Syncfusion_Blazor_Ribbon_RibbonItem__System_Int32_Syncfusion_Blazor_Ribbon_RibbonGroup_) method.
+
+| Parameter | Type | Description |
+|--|--|--|
+| tabName | string | The **displayed tab name** (for example, `Home`) that contains the target group. |
+| items | List<RibbonItem> | The list of items to add. A list with a single item is also accepted. |
+| index | int | The zero-based collection index where items should be inserted within the tab. |
+| group *(optional)* | Class | The target group. When omitted, the first available group in the tab is used. |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -538,7 +554,7 @@ Custom items can be added to existing groups using the [AddRibbonItems](https://
             }
         };
 
-        // Add item to a group in Home tab at index 0
+        // Add the item to the first group in the Home tab at index 0
         SpreadsheetInstance.AddRibbonItems("Home", new List<RibbonItem> { item }, index: 0);
     }
 
@@ -557,7 +573,12 @@ The File menu in the Spreadsheet component can be customized to add, show or hid
 
 ### Adding File Menu Items
 
-Custom menu items can be added to the File menu using the [AddFileMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AddFileMenuItems_System_Collections_Generic_List_Syncfusion_Blazor_Navigations_MenuItem__System_Int32_) method.
+Custom menu items can be added to the File menu using the [AddFileMenuItems()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AddFileMenuItems_System_Collections_Generic_List_Syncfusion_Blazor_Navigations_MenuItem__System_Int32_) method.
+
+| Parameter | Type | Description |
+|--|--|--|
+| items | List<MenuItem> | The list of menu items to add. |
+| index | int | The zero-based index at which to insert the menu items within the File menu. |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -595,7 +616,7 @@ Custom menu items can be added to the File menu using the [AddFileMenuItems](htt
             }
         };
 
-        // Add export menu at position 0
+        // Insert the export menu at position 0
         SpreadsheetInstance.AddFileMenuItems(exportMenu, index: 0);
     }
 }
@@ -605,7 +626,7 @@ Custom menu items can be added to the File menu using the [AddFileMenuItems](htt
 
 ### Showing and Hiding File Menu Items
 
-Menu item visibility can be controlled using the [ShowFileMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ShowFileMenuItems_System_Collections_Generic_List_System_String__) and [HideFileMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_HideFileMenuItems_System_Collections_Generic_List_System_String__) methods.
+Menu item visibility can be controlled using the [ShowFileMenuItems()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ShowFileMenuItems_System_Collections_Generic_List_System_String__) and [HideFileMenuItems()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_HideFileMenuItems_System_Collections_Generic_List_System_String__) methods.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -627,13 +648,13 @@ Menu item visibility can be controlled using the [ShowFileMenuItems](https://hel
     private void HideItems()
     {
         // Hide menu items
-        SpreadsheetInstance.HideFileMenuItems(new List<string> { "Open", "Save As"});
+        SpreadsheetInstance.HideFileMenuItems(new List<string> { "Open", "Save As" });
     }
 
     private void ShowItems()
     {
         // Show previously hidden menu items
-        SpreadsheetInstance.ShowFileMenuItems(new List<string> { "Open", "Save As"});
+        SpreadsheetInstance.ShowFileMenuItems(new List<string> { "Open", "Save As" });
     }
 }
 
@@ -642,7 +663,7 @@ Menu item visibility can be controlled using the [ShowFileMenuItems](https://hel
 
 ### Enabling and Disabling File Menu Items
 
-Menu item interactivity can be controlled using the [EnableFileMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableFileMenuItems_System_Collections_Generic_List_System_String__) and [DisableFileMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DisableFileMenuItems_System_Collections_Generic_List_System_String__) methods.
+Menu item interactivity can be controlled using the [EnableFileMenuItems()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableFileMenuItems_System_Collections_Generic_List_System_String__) and [DisableFileMenuItems()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DisableFileMenuItems_System_Collections_Generic_List_System_String__) methods.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -683,70 +704,70 @@ The following section contains identifier references for customizing the ribbon 
 
 ### Ribbon Tab
 
-| Tab ID | Display Name | Description |
+| Tab ID | Header Text | Description |
 |--|--|--|
-| `homeTab` | Home | Contains formatting, editing, and data protection commands |
-| `insertTab` | Insert | Contains commands for inserting images, hyperlinks, and functions |
-| `formulasTab` | Formulas | Contains calculation options and named range management commands |
-| `reviewTab` | Review | Contains worksheet protection and name manager commands |
-| `viewTab` | View | Contains view options such as gridlines |
+| `homeTab` | Home | Contains formatting, editing, and data operations commands. |
+| `insertTab` | Insert | Contains commands for inserting images, hyperlinks, and functions. |
+| `formulasTab` | Formulas | Contains calculation options and named-range management commands. |
+| `reviewTab` | Review | Contains worksheet and workbook protection commands. |
+| `viewTab` | View | Contains view options such as gridlines. |
 
 ### Ribbon Group
 
 | Group ID | Tab | Description |
 |--|--|--|
-| `undoRedoGroup` | Home | Undo and redo cell modifications |
-| `clipboardGroup` | Home | Cut, copy, and paste operations |
-| `numberFormatGroup` | Home | Number format selection and application |
-| `fontFamilyGroup` | Home | Font family selection |
-| `fontSizeGroup` | Home | Font size adjustment |
-| `fontStyleGroup` | Home | Text formatting options: bold, italic, underline, strikethrough, font color |
-| `bordersGroup` | Home | Border styling and color application |
-| `backgroundColorGroup` | Home | Cell background color and cell merge operations |
-| `fontAlignmentGroup` | Home | Text alignment and wrap options |
-| `conditionalFormattingGroup` | Home | Conditional formatting rule creation and management |
-| `dataOperationsGroup` | Home | Data clearing and sorting operations |
-| `insertGroup` | Insert | Hyperlink and image insertion |
-| `insertFunctionsGroup` | Formulas | Function insertion and formula building |
-| `calculationOptionGroup` | Formulas | Calculation mode selection |
-| `manualCalculationGroup` | Formulas | Manual sheet and workbook calculation |
-| `namedRangesGroup` | Formulas | Named range definition and management |
-| `protectionGroup` | Review | Worksheet and workbook protection |
-| `viewGroup` | View | Grid display and view customization options |
+| `undoRedoGroup` | Home | Undo and redo cell modifications. |
+| `clipboardGroup` | Home | Cut, copy, and paste operations. |
+| `numberFormatGroup` | Home | Number format selection and application. |
+| `fontFamilyGroup` | Home | Font family selection. |
+| `fontSizeGroup` | Home | Font size adjustment. |
+| `fontStyleGroup` | Home | Text formatting options: bold, italic, underline, strikethrough, font color. |
+| `bordersGroup` | Home | Border styling and color application. |
+| `backgroundColorGroup` | Home | Cell background color and cell merge operations. |
+| `fontAlignmentGroup` | Home | Text alignment and wrap options. |
+| `conditionalFormattingGroup` | Home | Conditional formatting rule creation and management. |
+| `dataOperationsGroup` | Home | Data clearing and sorting operations. |
+| `insertGroup` | Insert | Hyperlink and image insertion. |
+| `insertFunctionsGroup` | Formulas | Function insertion and formula building. |
+| `calculationOptionGroup` | Formulas | Calculation mode selection. |
+| `manualCalculationGroup` | Formulas | Manual sheet and workbook calculation. |
+| `namedRangesGroup` | Formulas | Named range definition and management. |
+| `protectionGroup` | Review | Worksheet and workbook protection. |
+| `viewGroup` | View | Grid display and view options. |
 
 ### Ribbon Items
 
 | Item ID | Description |
 |--|--|
-| `undo` | Undo the last cell modification |
-| `redo` | Redo the last undone action |
-| `cut` | Remove selected cells to clipboard |
-| `copy` | Copy selected cells to clipboard |
-| `paste` | Paste clipboard contents to selected cells |
-| `numberFormat` | Apply number format to selected cells |
-| `fontFamily` | Change the font family of selected text |
-| `fontSize` | Adjust the font size of selected text |
-| `bold` | Apply or remove bold formatting |
-| `italic` | Apply or remove italic formatting |
-| `underline` | Apply or remove underline formatting |
-| `strikethrough` | Apply or remove strikethrough formatting |
-| `fontColor` | Change the color of selected text |
-| `borderPicker` | Apply borders to selected cells |
-| `colorPicker` | Set the background color of selected cells |
-| `mergeCell` | Merge selected cells into one |
-| `horizontalAlignment` | Set horizontal text alignment |
-| `verticalAlignment` | Set vertical text alignment |
-| `wrapText` | Enable or disable text wrapping in cells |
-| `conditionalFormat` | Create and apply conditional formatting rules |
-| `clear` | Clear contents from selected cells |
-| `sort` | Sort data in ascending or descending order |
-| `link` | Insert or edit a hyperlink |
-| `image` | Insert an image into the worksheet |
-| `insertFunction` | Insert a formula function |
-| `calculationOption` | Change the calculation mode |
-| `calculateSheet` | Recalculate the current sheet |
-| `calculateWorkbook` | Recalculate all sheets in the workbook |
-| `nameManager` | Define and manage named ranges |
-| `protectSheet` | Enable or disable worksheet protection |
-| `protectWorkbook` | Enable or disable workbook protection |
-| `gridlines` | Show or hide gridlines in the worksheet |
+| `undo` | Undo the last cell modification. |
+| `redo` | Redo the last undone action. |
+| `cut` | Remove selected cells to clipboard. |
+| `copy` | Copy selected cells to clipboard. |
+| `paste` | Paste clipboard contents to selected cells. |
+| `numberFormat` | Apply a number format to the selected cells. |
+| `fontFamily` | Change the font family of selected text. |
+| `fontSize` | Adjust the font size of selected text. |
+| `bold` | Apply or remove bold formatting. |
+| `italic` | Apply or remove italic formatting. |
+| `underline` | Apply or remove underline formatting. |
+| `strikethrough` | Apply or remove strikethrough formatting. |
+| `fontColor` | Change the color of selected text. |
+| `borderPicker` | Apply borders to selected cells. |
+| `colorPicker` | Set the background color of selected cells. |
+| `mergeCell` | Merge selected cells into one. |
+| `horizontalAlignment` | Set horizontal text alignment. |
+| `verticalAlignment` | Set vertical text alignment. |
+| `wrapText` | Enable or disable text wrapping in cells. |
+| `conditionalFormat` | Create and apply conditional formatting rules. |
+| `clear` | Clear contents from selected cells. |
+| `sort` | Sort data in ascending or descending order. |
+| `link` | Insert or edit a hyperlink. |
+| `image` | Insert an image into the worksheet. |
+| `insertFunction` | Insert a formula function. |
+| `calculationOption` | Change the calculation mode. |
+| `calculateSheet` | Recalculate the current sheet. |
+| `calculateWorkbook` | Recalculate all sheets in the workbook. |
+| `nameManager` | Define and manage named ranges. |
+| `protectSheet` | Enable or disable worksheet protection. |
+| `protectWorkbook` | Enable or disable workbook protection. |
+| `gridlines` | Show or hide gridlines in the worksheet. |

@@ -7,7 +7,7 @@ control: SfSmartPdfViewer
 documentation: ug
 ---
 
-# Using Smart PDF Viewer Component in the Windows Forms app 
+# Using Smart PDF Viewer Component in the WinForms app
 
 This section explains how to add the Syncfusion&reg; Blazor Smart PDF Viewer component to a WinForms Blazor Hybrid App using [Visual Studio](https://visualstudio.microsoft.com/vs/) or Visual Studio Code. The result is a desktop application (WinForms) that hosts Blazor UI inside a BlazorWebView control.
 
@@ -25,7 +25,7 @@ Create a WinForms application using Visual Studio 2022 with the WinForms project
 
 ## Install Blazor Smart PDF Viewer NuGet package in WinForms App
 
-To add **Blazor Smart PDF Viewer** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install
+To add the **Blazor Smart PDF Viewer** component to the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for and install
 
 * [Syncfusion.Blazor.SfSmartPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfSmartPdfViewer) 
 * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
@@ -45,7 +45,7 @@ N> Ensure that the package `Microsoft.AspNetCore.Components.WebView.WindowsForms
 
 ## Create a new WinForms app in Visual Studio Code
 
-Create a WinForms desktop project (not a WinForms Blazor HybridApp) using the .NET CLI in Visual Studio Code. This WinForms project will host Blazor UI through BlazorWebView. For guidance, see [Microsoft templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+Create a WinForms desktop project (not a WinForms Blazor Hybrid App) using the .NET CLI in Visual Studio Code. This WinForms project will host Blazor UI through BlazorWebView. For guidance, see [Microsoft templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
 {% tabs %}
 {% highlight c# tabtitle="WinForms Blazor HybridApp" %}
@@ -55,13 +55,13 @@ dotnet new winforms -n WinFormsBlazorHybridApp
 {% endhighlight %}
 {% endtabs %}
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart PDF Viewer and Themes NuGet packages in the app
+## Install Blazor Smart PDF Viewer and Themes NuGet packages in the app
 
 Install the required NuGet packages in the WinForms project that will host the Blazor UI.
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
 * Ensure the current directory contains the WinForms project `.csproj` file.
-* Run the following commands to install [Syncfusion.Blazor.SfSmartPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfSmartPdfViewer), [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/), and [Microsoft.AspNetCore.Components.WebView.WindowsForms](https://www.nuget.org/packages/Microsoft.AspNetCore.Components.WebView.WindowsForms). This adds the Smart PDF Viewer, theme, and the BlazorWebView host control.
+* Run the following commands to install [Syncfusion.Blazor.SfSmartPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfSmartPdfViewer), [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/), and [Microsoft.AspNetCore.Components.WebView.WindowsForms](https://www.nuget.org/packages/Microsoft.AspNetCore.Components.WebView.WindowsForms). These packages add the Smart PDF Viewer, theme, and the BlazorWebView host control to the project.
 
 {% tabs %}
 
@@ -101,7 +101,7 @@ The WinForms project must target Windows and enable WinForms. A typical project 
 {% endhighlight %} 
 {% endtabs %}
 
-Create a `Component` folder, add an `_Imports.razor` file in it, and include the required component namespaces within that folder.
+Create a `Components` folder, add an `_Imports.razor` file in it, and include the required component namespaces within that folder.
 
 {% tabs %}
 {% highlight razor tabtitle="_Imports.razor" %}
@@ -116,7 +116,7 @@ Create a `Component` folder, add an `_Imports.razor` file in it, and include the
 
 * Create a new folder named wwwroot in the WinForms project root.
 
-* Inside wwwroot, create an index.html host page for the Blazor UI. This host page is required by BlazorWebView to initialize the Blazor runtime and load static assets (themes and scripts). A basic index.html might look like the following:
+* Inside wwwroot, create an index.html host page for the Blazor UI. This host page is required by BlazorWebView to initialize the Blazor runtime and load static assets (themes and scripts). Use the following index.html:
 
 {% tabs %} 
 {% highlight html tabtitle="index.html" hl_lines="8 13" %}
@@ -142,18 +142,18 @@ Create a `Component` folder, add an `_Imports.razor` file in it, and include the
 
 N> Ensure that the Smart PDF Viewer static assets (themes and scripts) are loaded properly.
 
-## To Configure Azure OpenAI Service
+## Configure Azure OpenAI Service
 
 This section is required only when enabling AI-powered features in Smart PDF Viewer (such as document summarization, smart redaction, or smart fill). It is not required for basic PDF rendering.
 
-In **Visual Studio**, Go to Tools → NuGet Package Manager → Package Manager Console. Run these commands one by one:
+In **Visual Studio**, Go to Tools → NuGet Package Manager → Package Manager Console. Run the following commands:
 
 {% tabs %}
 {% highlight razor tabtitle="Package Manager" %}
 
 Install-Package Azure.AI.OpenAI
 Install-Package Microsoft.Extensions.AI
-Install-Package Microsoft.Extensions.AI.OpenAI -Version 9.8.0-preview.1.25412.6
+Install-Package Microsoft.Extensions.AI.OpenAI
 
 {% endhighlight %}
 {% endtabs %}
@@ -165,7 +165,7 @@ In **Visual Studio Code**, open the terminal and run these commands:
 
 dotnet add package Azure.AI.OpenAI
 dotnet add package Microsoft.Extensions.AI
-dotnet add package Microsoft.Extensions.AI.OpenAI --version 9.8.0-preview.1.25412.6
+dotnet add package Microsoft.Extensions.AI.OpenAI
 
 {% endhighlight %}
 {% endtabs %}
@@ -187,7 +187,7 @@ using WinFormsBlazorHybridApp.Components;
 {% endhighlight %}
 {% endtabs %}
 
-Register Syncfusion Blazor services and BlazorWebView in `~/Form1.cs` after component initialized so that the WinForms window can host Blazor components.
+Register Syncfusion Blazor services and BlazorWebView in `~/Form1.cs` after the BlazorWebView is initialized so that the WinForms window can host Blazor components.
 
 {% tabs %}
 {% highlight c# tabtitle="Form1.cs (WinForms host)" %}
@@ -205,7 +205,7 @@ services.AddChatClient(azureOpenAiChatClient);
 services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
 BlazorWebView blazorWebView = new BlazorWebView()
 {
-    HostPage = "wwwroot\\index.html",
+    HostPage = "wwwroot/index.html",
     Services = services.BuildServiceProvider(),
     Dock = DockStyle.Fill
 };
@@ -218,12 +218,12 @@ this.Controls.Add(blazorWebView);
 
 ## Adding Blazor Smart PDF Viewer component
 
-Create a Razor component (for example, SmartPDFViewer.razor) in the project and add the Syncfusion&reg; Smart PDF Viewer component to it within the `Component` folder
+Create a Razor component (for example, SmartPDFViewer.razor) in the project and add the Syncfusion&reg; Smart PDF Viewer component to it within the `Components` folder
 
 {% tabs %}
 {% highlight razor %}
 
-@using Syncfusion.Blazor.SmartPdfViewer;
+@using Syncfusion.Blazor.SmartPdfViewer
 
 <SfSmartPdfViewer Height="100%" Width="100%" DocumentPath="https://cdn.syncfusion.com/content/pdf/http-succinctly.pdf">
 </SfSmartPdfViewer>

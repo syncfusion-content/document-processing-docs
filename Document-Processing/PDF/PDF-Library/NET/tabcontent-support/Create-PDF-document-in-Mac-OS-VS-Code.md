@@ -1,29 +1,48 @@
-**Prerequisites**:
+**Prerequisites:**
 
-* Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-* Install Visual Studio Code: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
-* Install C# Extension for VS Code: Open Visual Studio Code, go to the Extensions view (Ctrl+Shift+X), and search for 'C#'. Install the official [C# extension provided by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
+* [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download) (or later)
+* [Visual Studio Code](https://code.visualstudio.com/download)
+* [C# extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) (search for `C#` in the **Extensions** view (<kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>X</kbd>) and install the official Microsoft extension)
+* An active [Syncfusion&reg; license key](https://www.syncfusion.com/sales/communitylicense) (a free 30-day trial is available)
 
-Step 1: Open the terminal (Ctrl+` ) and run the following command to create a .NET Core console application.
+Step 1: Open the integrated terminal (`Cmd+`` ) from the parent directory where you want the project to be created, and run the following command to create a new .NET console application. Replace `CreatePdfMacOSApp` with your desired project name.
 
 ```
 dotnet new console -n CreatePdfMacOSApp
 ```
-Step 2: Replace ****CreatePdfMacOSApp** with your desired project name.
 
-Step 3: Navigate to the project directory using the following command
+N> Use `dotnet new console -f net8.0 -n CreatePdfMacOSApp` to explicitly target a specific .NET version (for example, .NET 8.0).
+
+Step 2: Navigate to the project directory using the following command.
 
 ```
 cd CreatePdfMacOSApp
 ```
-Step 4: Use the following command in the terminal to add the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) package to your project.
+
+Step 3: Use the following command in the terminal to add the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) package as a reference to your project.
 
 ```
 dotnet add package Syncfusion.Pdf.Net.Core
 ```
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 5: Include the following Namespaces in the Program.cs file.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+
+Step 4: Register the Syncfusion<sup>&reg;</sup> license key. An evaluation watermark is added to every page of the generated PDF until a valid key is registered. Include the license key at the top of **Program.cs** before creating a `PdfDocument` instance. Refer to the [Syncfusion License documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion<sup>&reg;</sup> license key in your application.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Licensing;
+
+// Register the Syncfusion license
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+
+{% endhighlight %}
+{% endtabs %}
+
+Replace `"YOUR LICENSE KEY"` with the actual key from your Syncfusion<sup>&reg;</sup> account. If you do not have one, request a free 30-day trial at [https://www.syncfusion.com/sales/communitylicense](https://www.syncfusion.com/sales/communitylicense). For local development, store the key in an environment variable and read it with `Environment.GetEnvironmentVariable("SyncfusionLicenseKey")` rather than hardcoding it. For production environments, prefer reading the key from a secure store such as **Azure Key Vault**, the **macOS Keychain**, or a `appsettings.json` file that is excluded from source control. Refer to the [Syncfusion License documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details.
+
+Step 5: Include the following namespaces in the *Program.cs* file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -36,7 +55,7 @@ using System.IO;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Add the following code sample to the *Program.cs* file to **create PDF document in .NET Core application on Mac OS**.
+Step 6: Add the following code sample to the *Program.cs* file to **create a PDF document in a .NET application on macOS**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -56,10 +75,10 @@ PdfBitmap image = new PdfBitmap(imageStream);
 //Draw an image.
 graphics.DrawImage(image, new RectangleF(130,0, 250, 100));
 
-//Draw header text. 
+//Draw header text.
 graphics.DrawString("Adventure Works Cycles", new PdfStandardFont(PdfFontFamily.TimesRoman, 20, PdfFontStyle.Bold), PdfBrushes.Gray, new PointF(150, 150));
 
-//Add paragraph. 
+//Add paragraph.
 string text = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base.";
 //Create a text element with the text and font.
 PdfTextElement textElement = new PdfTextElement(text, new PdfStandardFont(PdfFontFamily.TimesRoman, 12));
@@ -86,16 +105,26 @@ pdfGrid.ApplyBuiltinStyle(PdfGridBuiltinStyle.GridTable4Accent3);
 pdfGrid.Draw(graphics, new RectangleF(0, 300, page.Size.Width - 80, 0));
 
 //Create file stream.
-using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"Output.pdf"), FileMode.Create, FileAccess.ReadWrite))
+using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
 {
     //Save the PDF document to file stream.
     document.Save(outputFileStream);
+    //Close the document.
+    document.Close(true);
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Build the project.
+Step 7: Add the **AdventureCycle.jpg** image to the project root (alongside *Program.cs*) so the program can locate it at runtime.
+
+Step 8: Open the project folder in Visual Studio Code by running the following command in the terminal.
+
+```
+code .
+```
+
+Step 9: Build the project.
 
 Run the following command in terminal to build the project.
 
@@ -103,9 +132,9 @@ Run the following command in terminal to build the project.
 dotnet build
 ```
 
-Step 8: Run the project.
+Step 10: Run the project.
 
-Run the following command in terminal to build the project.
+Run the following command in terminal to run the project.
 
 ```
 dotnet run

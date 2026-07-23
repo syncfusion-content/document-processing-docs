@@ -7,9 +7,9 @@ control: SfSmartPdfViewer
 documentation: ug
 ---
 
-# Using Smart PDF Viewer Component in the WPF app 
+# Using Smart PDF Viewer Component in the WPF Blazor Hybrid App
 
-This section explains how to add the Syncfusion&reg; Blazor Smart PDF Viewer component to a WPF Blazor Hybrid App using [Visual Studio](https://visualstudio.microsoft.com/vs/) or Visual Studio Code. The result is a desktop application (WPF) that hosts Blazor UI inside a BlazorWebView control.
+This guide explains how to add the Syncfusion&reg; Blazor Smart PDF Viewer component to a WPF Blazor Hybrid App using [Visual Studio](https://visualstudio.microsoft.com/vs/) or Visual Studio Code. The result is a desktop application (WPF) that hosts Blazor UI inside a BlazorWebView control.
 
 {% tabcontents %}
 
@@ -19,19 +19,19 @@ This section explains how to add the Syncfusion&reg; Blazor Smart PDF Viewer com
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-## Create a new WPF app in Visual Studio
+## Create a new WPF Blazor Hybrid app in Visual Studio
 
-Create a WPF application using Visual Studio 2022 with the WPF project template. The app will later host Blazor components via BlazorWebView. For reference, see [Microsoft Blazor tooling](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+Create a WPF Blazor Hybrid application using Visual Studio 2022 with the WPF Blazor Hybrid App project template. The app will later host Blazor components via BlazorWebView. For reference, see [Microsoft Blazor tooling](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-## Install Blazor Smart PDF Viewer NuGet package in WPF App
+## Install Blazor Smart PDF Viewer NuGet package in a WPF Blazor Hybrid app
 
-To add **Blazor Smart PDF Viewer** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install
+To add the **Blazor Smart PDF Viewer** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install
 
 * [Syncfusion.Blazor.SfSmartPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfSmartPdfViewer) 
 * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
 * [Microsoft.AspNetCore.Components.WebView.Wpf](https://www.nuget.org/packages/Microsoft.AspNetCore.Components.WebView.Wpf)
 
-N> Ensure that the package `Microsoft.AspNetCore.Components.WebView.Wpf` updated to version `8.0.16`.
+N> Ensure that the package `Microsoft.AspNetCore.Components.WebView.Wpf` is updated to version `8.0.16`.
 
 ![WPF Blazor App Smart PDF Viewer NuGet package reference](../images/wpf-smart-pdfviewer-package.png)
 
@@ -43,21 +43,21 @@ N> Ensure that the package `Microsoft.AspNetCore.Components.WebView.Wpf` updated
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-## Create a new WPF app in Visual Studio Code
+## Create a new WPF Blazor Hybrid app in Visual Studio Code
 
-Create a WPF desktop project (not a WPF Blazor HybridApp) using the .NET CLI in Visual Studio Code. This WPF project will host Blazor UI through BlazorWebView. For guidance, see [Microsoft templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+Create a WPF Blazor Hybrid App project using the .NET CLI in Visual Studio Code. This project will host Blazor UI through BlazorWebView. For guidance, see [Microsoft templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
 {% tabs %}
-{% highlight c# tabtitle="WPF Blazor HybridApp" %}
+{% highlight c# tabtitle="WPF Blazor Hybrid App" %}
 
 dotnet new wpf -n WPFBlazorHybridApp
 
 {% endhighlight %}
 {% endtabs %}
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart PDF Viewer and Themes NuGet packages in the app
+## Install Blazor Smart PDF Viewer and Themes NuGet packages in the app
 
-Install the required NuGet packages in the WPF project that will host the Blazor UI.
+Install the required NuGet packages in the WPF Blazor Hybrid app that will host the Blazor UI.
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
 * Ensure the current directory contains the WPF project `.csproj` file.
@@ -78,7 +78,7 @@ dotnet restore
 
 N> Syncfusion&reg; Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) for the list of available packages and component details.
 
-N> Ensure that the package `Microsoft.AspNetCore.Components.WebView.Wpf` updated to version `8.0.16`.
+N> Ensure that the package `Microsoft.AspNetCore.Components.WebView.Wpf` is updated to version `8.0.16`.
 
 {% endtabcontent %}
 
@@ -86,12 +86,12 @@ N> Ensure that the package `Microsoft.AspNetCore.Components.WebView.Wpf` updated
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
-The WPF project must target Windows and enable WPF. A typical project file looks like the following.
+The WPF Blazor Hybrid app must target Windows and enable WPF. A typical project file looks like the following.
 
 {% tabs %} 
 {% highlight xml tabtitle="WPFBlazorHybridApp.csproj" hl_lines="1" %}
 
-<Project Sdk="Microsoft.NET.Sdk.Razor">
+<Project Sdk="Microsoft.NET.Sdk">
 
     ....
 
@@ -111,18 +111,18 @@ Create an `_Imports.razor` and add the component namespace
 {% endhighlight %}
 {% endtabs %}
 
-## To Configure Azure OpenAI Service
+## Configure Azure OpenAI Service
 
 This section is required only when enabling AI-powered features in Smart PDF Viewer (such as document summarization, smart redaction, or smart fill). It is not required for basic PDF rendering.
 
 In **Visual Studio**, Go to Tools → NuGet Package Manager → Package Manager Console. Run these commands one by one:
 
 {% tabs %}
-{% highlight razor tabtitle="Package Manager" %}
+{% highlight razor tabtitle="Package Manager Console" %}
 
 Install-Package Azure.AI.OpenAI
 Install-Package Microsoft.Extensions.AI
-Install-Package Microsoft.Extensions.AI.OpenAI -Version 9.8.0-preview.1.25412.6
+Install-Package Microsoft.Extensions.AI.OpenAI
 
 {% endhighlight %}
 {% endtabs %}
@@ -130,19 +130,19 @@ Install-Package Microsoft.Extensions.AI.OpenAI -Version 9.8.0-preview.1.25412.6
 In **Visual Studio Code**, open the terminal and run these commands:
 
 {% tabs %}
-{% highlight razor tabtitle="Package Manager" %}
+{% highlight razor tabtitle="NuGet CLI" %}
 
 dotnet add package Azure.AI.OpenAI
 dotnet add package Microsoft.Extensions.AI
-dotnet add package Microsoft.Extensions.AI.OpenAI --version 9.8.0-preview.1.25412.6
+dotnet add package Microsoft.Extensions.AI.OpenAI
 
 {% endhighlight %}
 {% endtabs %}
 
-Add the `Syncfusion.Blazor` namespace to the `~/MainWindow.xaml.cs` file.
+Add the following using directives to the `~/MainWindow.xaml.cs` file.
 
 {% tabs %}
-{% highlight c# tabtitle="MainWindow.xaml.cs (WPF host)" %}
+{% highlight c# tabtitle="MainWindow.xaml.cs (WPF host) - Imports" %}
 
 using Microsoft.Extensions.DependencyInjection;
 using Azure.AI.OpenAI;
@@ -154,10 +154,10 @@ using System.ClientModel;
 {% endhighlight %}
 {% endtabs %}
 
-Register Syncfusion Blazor services, AI services and BlazorWebView in `~/MainWindow.xaml.cs` after component initialized so that the WPF window can host Blazor components.
+Register Syncfusion Blazor services, AI services and BlazorWebView in `~/MainWindow.xaml.cs` after the component is initialized so that the WPF window can host Blazor components.
 
 {% tabs %}
-{% highlight c# tabtitle="MainWindow.xaml.cs (WPF host)" %}
+{% highlight c# tabtitle="MainWindow.xaml.cs (WPF host) - Service registration" %}
 
 ServiceCollection serviceCollection = new ServiceCollection();
 serviceCollection.AddWpfBlazorWebView();
@@ -175,18 +175,18 @@ Resources.Add("services", serviceCollection.BuildServiceProvider());
 {% endhighlight %}
 {% endtabs %}
 
-Here,
-* **apiKey**: “Azure OpenAI API Key”
-* **deploymentName**: “Azure OpenAI deployment name”
-* **endpoint**: “Azure OpenAI deployment endpoint URL”
+Replace these placeholders in the code above:
+* **apiKey**: Azure OpenAI API key.
+* **deploymentName**: Azure OpenAI deployment name.
+* **endpoint**: Azure OpenAI deployment endpoint URL.
 
 For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal), then the values for `apiKey`, `deploymentName`, and `endpoint` will be available.
 
 ## Create wwwroot folder and index.html file 
 
-* Create a new folder named wwwroot in the WPF project root.
+* Create a new folder named wwwroot in the WPF Blazor Hybrid app project root.
 
-* Inside wwwroot, create an index.html host page for the Blazor UI. This host page is required by BlazorWebView to initialize the Blazor runtime and load static assets (themes and scripts). A basic index.html might look like the following:
+* Inside wwwroot, create an index.html host page for the Blazor UI. This host page is required by BlazorWebView to initialize the Blazor runtime and load static assets (themes and scripts). Use the following index.html:
 
 {% tabs %} 
 {% highlight html tabtitle="index.html" hl_lines="8 13" %}
@@ -219,7 +219,7 @@ Create a Razor component (for example, Main.razor) in the project and add the Sy
 {% tabs %}
 {% highlight razor %}
 
-@using Syncfusion.Blazor.SmartPdfViewer;
+@using Syncfusion.Blazor.SmartPdfViewer
 
 <SfSmartPdfViewer Height="100%" Width="100%" DocumentPath="https://cdn.syncfusion.com/content/pdf/http-succinctly.pdf">
 </SfSmartPdfViewer>
@@ -232,6 +232,7 @@ Create a Razor component (for example, Main.razor) in the project and add the Sy
 * Open MainWindow.xaml.
 * Add the Microsoft.AspNetCore.Components.WebView.Wpf namespace.
 * Embed the BlazorWebView control, set HostPage to wwwroot/index.html, and map a RootComponent that matches the Razor component type and the selector in index.html (#app).
+* In App.xaml, define a `DynamicResource` entry named `services` whose value is the service provider registered in `MainWindow.xaml.cs` (this is what `Services="{DynamicResource services}"` resolves to).
 
 {% tabs %} 
 {% highlight xaml tabtitle="MainWindow.xaml" hl_lines="3 7 8 9 11 12" %}
@@ -244,8 +245,8 @@ Create a Razor component (for example, Main.razor) in the project and add the Sy
     <Grid>
         <blazor:BlazorWebView HostPage="wwwroot\index.html" Services="{DynamicResource services}">
             <blazor:BlazorWebView.RootComponents>
-                <blazor:RootComponent Selector="#app" ComponentType="{x:Type local:YourRazorFileName}" />
-                <!-- Replace 'YourRazorFileName' with the actual Razor component class (e.g., Main) in your project's namespace -->
+                <blazor:RootComponent Selector="#app" ComponentType="{x:Type local:Main}" />
+                <!-- 'Main' is the Razor component created in the previous step. Replace it with your component's class name if different. -->
             </blazor:BlazorWebView.RootComponents>
         </blazor:BlazorWebView>
     </Grid>
@@ -258,7 +259,7 @@ Create a Razor component (for example, Main.razor) in the project and add the Sy
 
 Run the WPF application. The Syncfusion&reg; Blazor Smart PDF Viewer renders inside the WPF window.
 
-![WPF Blazor HybridApp Smart PDF Viewer rendering in browser](../images/blazor-hybrid-wpf-sfsmartpdfviewer.png)
+![WPF Blazor Hybrid App Smart PDF Viewer rendering in the WPF window](../images/blazor-hybrid-wpf-sfsmartpdfviewer.png)
 
 > [View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Getting%20Started/WPF%20Blazor%20App).
 

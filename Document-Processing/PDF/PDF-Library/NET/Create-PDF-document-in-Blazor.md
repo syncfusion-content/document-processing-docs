@@ -1,21 +1,28 @@
 ---
-title: Create or Generate PDF file in Blazor | Syncfusion
-description: Learn how to create or generate a PDF file in Blazor applications with easy steps using Syncfusion .NET Core PDF library without depending on Adobe.
+title: Create or Generate PDF document in Blazor | Syncfusion
+description: Learn how to create or generate a PDF document in Blazor applications with easy steps using Syncfusion .NET Core PDF library without depending on Adobe.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Create or Generate PDF file in Blazor
+# Create or Generate PDF document in Blazor
 
-The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, work with forms, and secure PDF files.
+The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, work with forms, and secure PDF documents.
 
 To include the Syncfusion<sup>&reg;</sup> .NET PDF library into your Blazor application, please refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) documentation.
 
 To quickly get started with creating a PDF document in Blazor, check this video:
 {% youtube "https://www.youtube.com/watch?v=B5BOBwus0Jc&t=2s" %}
 
-## Steps to create PDF document in Blazor Server application
+## Prerequisites
+
+- .NET 8.0 SDK or later for Blazor Server, Blazor WebAssembly, and Blazor WebAssembly PWA projects
+- .NET 8.0 SDK or later for .NET MAUI Blazor projects
+- Visual Studio 2022 with the ASP.NET and web development workload installed (or Visual Studio Code / JetBrains Rider)
+- A valid Syncfusion license key (required for production use; a free Community License is available)
+
+## Steps to create a PDF document in Blazor Server application
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -36,12 +43,12 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 By executing the program, you will get the following output in the browser.
 ![Blazor server side browser window](Create-PDF-Blazor/Blazor_browser_output.png)
 
-Click the Export to PDF button, and you will get the PDF document with the following output.
+Click the **Export to PDF** button to get the PDF document with the following output.
 ![Blazor server side output PDF document](Create-PDF-Blazor/Blazor_PDF_output.png)
 
-N> We recommend using Blazor Server (server-side) applications to reduce payload and improve performance compared to Blazor WebAssembly (client-side).
+N> We recommend using Blazor Server (server-side) applications. They reduce the payload sent to the client and improve performance compared to Blazor WebAssembly (client-side) applications.
 
-## Steps to create PDF document in Blazor WASM application
+## Steps to create a PDF document in Blazor WebAssembly application
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -62,8 +69,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 By executing the program, you will get the following output in the browser.
 ![Blazor client browser window](Create-PDF-Blazor/Blazor_Client_WebResult.png)
 
-Click the Export to PDF button and you will get the PDF document with the following output.
-![Blazor getting started output PDF document](Create-PDF-Blazor/Blazor_PDF_output.png)    
+Click the **Export to PDF** button to get the PDF document with the following output.
+![Blazor getting started output PDF document](Create-PDF-Blazor/Blazor_PDF_output.png)
 
 ## Steps to create PDF documents in .NET MAUI Blazor application
 
@@ -83,10 +90,10 @@ Click the Export to PDF button and you will get the PDF document with the follow
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Blazor/BlazorMauiAppCreatePdfSample).
 
-By running the program, you will see the output in the browser when you click the "Weather" option in the left-side menu.
+By running the program, you will see the output in the browser when you click the **Weather** option in the left-side menu.
 ![Blazor client browser window](Create-PDF-Blazor/Blazor_browser_output.png)
 
-Click the `Export to PDF` button to get the PDF document with the following output.
+Click the **Export to PDF** button to download the PDF document with the following output.
 ![Blazor getting started output PDF document](Create-PDF-Blazor/Blazor_PDF_output.png)
 
 **Save the PDF document on different platforms**
@@ -457,9 +464,27 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 By executing the program, you will get the following output in the browser.
 ![Blazor WASM PWA browser](Create-PDF-Blazor/Blazor-PWA-4.png)
 
-Click the `Create PDF document` button, and you will get the PDF document with the following output.
+Click the **Create PDF document** button to download the generated PDF document with the following output.
 ![Blazor getting started output PDF document](Create-PDF-Blazor/Blazor_PDF_output.png)
+
+## Troubleshooting
+
+| Issue | Possible Cause | Solution |
+|-------|----------------|----------|
+| License key not registered exception | `SyncfusionLicenseProvider.RegisterLicense` not called | Add license registration in `Program.cs` or `MauiProgram.cs` before app build |
+| `QLPreviewItemBundle` or `PreviewControllerDS` not found | Helper classes not included | Copy the helper classes from the [MAUI helper files](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui#helper-files-for-net-maui) page |
+| Android file save fails on Android 11+ | Scoped storage restrictions | Ensure you are writing to the app-specific external storage directory (as shown in the code) and the `FileProvider` is configured correctly |
+| Windows picker not visible | Window handle not initialized | Verify `WinRT.Interop.InitializeWithWindow.Initialize(savePicker, windowHandle)` is called |
+| iOS preview not displaying | Using deprecated `KeyWindow` API | Use the `ConnectedScenes` API as shown in the updated iOS code sample |
 
 Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 
 An online sample to get started with creating a PDF document is available [here](https://document.syncfusion.com/demos/pdf/default#/tailwind).
+
+## Next steps
+
+* [Create a PDF in ASP.NET Core MVC](Create-PDF-file-in-ASP-NET-Core.md)
+* [Create a PDF in Azure App Service on Windows](Create-PDF-document-in-Azure-App-Service-Windows.md)
+* [Create a PDF in Azure Functions v4](Create-PDF-document-in-Azure-Functions-v4.md)
+* [Open and read an existing PDF document](Open-PDF-file.md)
+* [Save the generated PDF to a file or stream](Save-PDF-file.md)

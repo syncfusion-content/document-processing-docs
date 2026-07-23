@@ -8,9 +8,9 @@ documentation: UG
 
 # Markdown to Word Conversion
 
-Markdown is a lightweight markup language that adds formatting elements to plain text documents. The .NET Word (DocIO) library supports the conversion of Markdown to Word document and vice versa, which mostly follows the CommonMark specification and GitHub-flavored syntax.
+Markdown is a lightweight markup language that adds formatting elements to plain text documents. The .NET Word (DocIO) library supports converting Markdown files to Word documents, which mostly follows the CommonMark specification and GitHub-flavored syntax.
 
-To quickly start converting a Word document to Markdown and vice versa, please check out this video:
+To quickly start converting a Markdown file to a Word document, check out this video:
 {% youtube "https://www.youtube.com/watch?v=7iMVgVKXRdU" %}
 
 ## Assemblies and NuGet packages required
@@ -22,9 +22,15 @@ Refer to the following links for assemblies and NuGet packages required based on
 
 ## Convert Markdown to Word document
 
-Convert an existing markdown file to a Word document (DOC, DOCX and RTF) using the .NET Word (DocIO) library.
+Convert an existing markdown file to a Word document (DOC, DOCX, or RTF) using the .NET Word (DocIO) library.
 
-The following code example shows how to convert Markdown to Word document.
+The following code example shows how to convert a Markdown file to a Word document. Add the required `using` directives to your source file:
+
+```csharp
+using System.IO;
+using Syncfusion.DocIO;
+using Syncfusion.DocIO.DLS;
+```
 
 N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
@@ -62,15 +68,27 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 T> You can also save the markdown file as [HTML](https://help.syncfusion.com/document-processing/word/word-library/net/html), [PDF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf), and [Image](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/word-to-image).
 
-N> 1. Hook the event handler before opening a Word document as per the above code example.
-N> 2. In Markdown to Word conversion, SVG or invalid images are replaced with a red "X" image instead of the original image.
+N> In Markdown to Word conversion, SVG or invalid images are replaced with a red "X" image instead of the original image.
 
-## MdImport Setting
+## Markdown Import Settings
 
 When opening an existing Markdown document, the .NET Word (DocIO) library provides custom import settings through the **MdImportSettings** property. This allows you to customize how the Markdown content is parsed and imported.
 
+The following properties are available on `MdImportSettings`:
+
+| Property | Description |
+| --- | --- |
+| `ImageNodeVisited` | An event raised for each image encountered while importing. Use it to load image data from a custom source. |
+| `Encoding` | The character encoding used to read the Markdown file. Defaults to `Encoding.UTF8`. |
+
 ### Customize image data
-The .NET Word (DocIO) library provides a [ImageNodeVisited](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_ImageNodeVisited) event, which customizes image data while importing a Markdown file. Implement the logic to customize the image data by using this [ImageNodeVisited](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_ImageNodeVisited) event.
+
+The .NET Word (DocIO) library provides an [ImageNodeVisited](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_ImageNodeVisited) event that customizes image data while importing a Markdown file. Handle this event to load image data from a custom source.
+
+The `ImageNodeVisited` event provides an `MdImageNodeVisitedEventArgs` object with the following members:
+
+* `Uri` — the image source declared in the Markdown (file name, relative path, or URL).
+* `ImageStream` — the stream to populate. The library reads from this stream when inserting the image into the Word document.
 
 The following code example shows how to load image data based on the image source path when importing the Markdown files.
 
@@ -131,12 +149,12 @@ private static void MdImportSettings_ImageNodeVisited(object sender, Syncfusion.
     //Retrieve the image from the website and use it.
     else if (args.Uri.StartsWith("https://"))
     {
-        WebClient client = new WebClient();
         //Download the image as a stream.
-        byte[] image = client.DownloadData(args.Uri);
-        Stream stream = new MemoryStream(image);
-        //Set the retrieved image from the input Markdown.
-        args.ImageStream = stream;
+        using (HttpClient client = new HttpClient())
+        {
+            byte[] image = client.GetByteArrayAsync(args.Uri).GetAwaiter().GetResult();
+            args.ImageStream = new MemoryStream(image);
+        }
     }
 }
 {% endhighlight %}
@@ -152,12 +170,12 @@ private static void MdImportSettings_ImageNodeVisited(object sender, Syncfusion.
     //Retrieve the image from the website and use it.
     else if (args.Uri.StartsWith("https://"))
     {
-        WebClient client = new WebClient();
         //Download the image as a stream.
-        byte[] image = client.DownloadData(args.Uri);
-        Stream stream = new MemoryStream(image);
-        //Set the retrieved image from the input Markdown.
-        args.ImageStream = stream;
+        using (HttpClient client = new HttpClient())
+        {
+            byte[] image = client.GetByteArrayAsync(args.Uri).GetAwaiter().GetResult();
+            args.ImageStream = new MemoryStream(image);
+        }
     }
 }
 {% endhighlight %}
@@ -171,25 +189,24 @@ Private Shared Sub MdImportSettings_ImageNodeVisited(ByVal sender As Object, ByV
         args.ImageStream = New FileStream("Image_2.png", FileMode.Open)
     'Retrieve the image from the website and use it.
     ElseIf args.Uri.StartsWith("https://") Then
-        Dim client As WebClient = New WebClient()
         'Download the image as a stream.
-        Dim image As Byte() = client.DownloadData(args.Uri)
-        Dim stream As Stream = New MemoryStream(image)
-        'Set the retrieved image from the input Markdown.
-        args.ImageStream = stream
+        Using client As New HttpClient()
+            Dim image As Byte() = client.GetByteArrayAsync(args.Uri).GetAwaiter().GetResult()
+            args.ImageStream = New MemoryStream(image)
+        End Using
     End If
 End Sub
 {% endhighlight %}
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Markdown-to-Word-conversion/Customize-image).
+N> Hook the event handler before opening the Markdown file, as shown in the previous code example. Stream instances assigned to `args.ImageStream` are not disposed by DocIO; dispose of them yourself when you no longer need the image data.
 
-N> Hook the event handler before opening a Word document as per the above code example.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Markdown-to-Word-conversion/Customize-image).
 
 ### Encoding
 
-The .NET Word (DocIO) library provides an `Encoding` property to specify the character encoding to use when opening a Markdown file. This property is useful when you need to open Markdown files that are saved with specific character encodings such as UTF-8, UTF-16, ASCII, or other encodings.
+The .NET Word (DocIO) library provides an `Encoding` property to specify the character encoding to use when opening a Markdown file. This property is useful when you need to open Markdown files that are saved with specific character encodings such as UTF-8, UTF-16, or ASCII. The default value is `Encoding.UTF8`.
 
 The following code example shows how to open a Markdown file with a specific encoding.
 
@@ -200,7 +217,7 @@ The following code example shows how to open a Markdown file with a specific enc
 using (WordDocument document = new WordDocument())
 {
     //Set the encoding for the Markdown file.
-    document.MdImportSettings.Encoding = Encoding.UTF8;
+    document.MdImportSettings.Encoding = System.Text.Encoding.UTF8;
     //Open the Markdown file.
     document.Open(Path.GetFullPath("Data/Input.md"));
     //Save as a Word document.
@@ -213,7 +230,7 @@ using (WordDocument document = new WordDocument())
 using (WordDocument document = new WordDocument())
 {
     //Set the encoding for the Markdown file.
-    document.MdImportSettings.Encoding = Encoding.UTF8;
+    document.MdImportSettings.Encoding = System.Text.Encoding.UTF8;
     //Open the Markdown file.
     document.Open("Input.md");
     //Save as a Word document.
@@ -225,7 +242,7 @@ using (WordDocument document = new WordDocument())
 'Create a Word document instance.
 Using document As WordDocument = New WordDocument()
     'Set the encoding for the Markdown file.
-    document.MdImportSettings.Encoding = Encoding.UTF8
+    document.MdImportSettings.Encoding = System.Text.Encoding.UTF8
     'Open the Markdown file.
     document.Open("Input.md")
     'Save as a Word document.
@@ -235,22 +252,16 @@ End Using
 
 {% endtabs %}
 
-N> Provide the encoding values before opening a Word document as per the above code example.
+N> Provide the encoding value before opening the Markdown file, as shown in the above code example.
 
 ## Supported Markdown Syntax
 
-<table style="width: 85.7072%;">
+<table>
 <tbody>
 <tr>
-<td style="width: 16%;">
-<p><strong>Element</strong></p>
-</td>
-<td style="width: 26%;">
-<p><strong>Syntax</strong></p>
-</td>
-<td style="width: 41.7072%;">
-<p><strong>Description</strong></p>
-</td>
+<th>Element</th>
+<th>Syntax</th>
+<th>Description</th>
 </tr>
 <tr>
 <td style="width: 16%;">
@@ -260,7 +271,7 @@ N> Provide the encoding values before opening a Word document as per the above c
 <p>Sample content for **bold text**.</p>
 </td>
 <td style="width: 41.7072%;">
-<p>For bold, add ** to front and back of the text.</p>
+<p>For bold, add ** to the front and back of the text.</p>
 </td>
 </tr>
 <tr>
@@ -271,7 +282,7 @@ N> Provide the encoding values before opening a Word document as per the above c
 <p>Sample content for *Italic text*.</p>
 </td>
 <td style="width: 41.7072%;">
-<p>For Italic, add * to front and back of the text.</p>
+<p>For italic, add * to the front and back of the text.</p>
 </td>
 </tr>
 <tr>
@@ -282,7 +293,7 @@ N> Provide the encoding values before opening a Word document as per the above c
 <p>Sample content for ***bold and Italic text***.</p>
 </td>
 <td style="width: 41.7072%;">
-<p>For bold and Italics, add *** to the front and back of the text.</p>
+<p>For bold and italics, add *** to the front and back of the text.</p>
 </td>
 </tr>
 <tr>
@@ -293,12 +304,12 @@ N> Provide the encoding values before opening a Word document as per the above c
 <p>Sample content for ~~strike through text~~.</p>
 </td>
 <td style="width: 41.7072%;">
-<p>For strike through, add ~~ to front and back of the text.</p>
+<p>For strikethrough, add ~~ to the front and back of the text.</p>
 </td>
 </tr>
 <tr>
 <td style="width: 16%;">
-<p>Subscript</p>
+<p>Subscript (HTML)</p>
 </td>
 <td style="width: 26%;">
 <p>&lt;sub&gt;Subscript text&lt;/sub&gt;</p>
@@ -309,7 +320,7 @@ N> Provide the encoding values before opening a Word document as per the above c
 </tr>
 <tr>
 <td style="width: 16%;">
-<p>Superscript</p>
+<p>Superscript (HTML)</p>
 </td>
 <td style="width: 26%;">
 <p>&lt;sup&gt;Superscript text&lt;/sup&gt;</p>
@@ -326,7 +337,7 @@ N> Provide the encoding values before opening a Word document as per the above c
 <p>#Heading 1 content</p>
 </td>
 <td style="width: 41.7072%;">
-<p>For heading 1, add # to start of the line.</p>
+<p>For heading 1, add # to the start of the line.</p>
 </td>
 </tr>
 <tr>
@@ -337,7 +348,7 @@ N> Provide the encoding values before opening a Word document as per the above c
 <p>##Heading 2 content</p>
 </td>
 <td style="width: 41.7072%;">
-<p>For heading 2, add ## to start of the line.</p>
+<p>For heading 2, add ## to the start of the line.</p>
 </td>
 </tr>
 <tr>
@@ -348,7 +359,7 @@ N> Provide the encoding values before opening a Word document as per the above c
 <p>###Heading 3 content</p>
 </td>
 <td style="width: 41.7072%;">
-<p>For heading 3, add ### to start of the line.</p>
+<p>For heading 3, add ### to the start of the line.</p>
 </td>
 </tr>
 <tr>
@@ -359,7 +370,7 @@ N> Provide the encoding values before opening a Word document as per the above c
 <p>####Heading 4 content</p>
 </td>
 <td style="width: 41.7072%;">
-<p>For heading 4, add #### to start of the line.</p>
+<p>For heading 4, add #### to the start of the line.</p>
 </td>
 </tr>
 <tr>
@@ -370,7 +381,7 @@ N> Provide the encoding values before opening a Word document as per the above c
 <p>#####Heading 5 content</p>
 </td>
 <td style="width: 41.7072%;">
-<p>For heading 5, add ##### to start of the line.</p>
+<p>For heading 5, add ##### to the start of the line.</p>
 </td>
 </tr>
 <tr>
@@ -381,7 +392,7 @@ N> Provide the encoding values before opening a Word document as per the above c
 <p>######Heading 6 content</p>
 </td>
 <td style="width: 41.7072%;">
-<p>For heading 6, add ###### to start of the line.</p>
+<p>For heading 6, add ###### to the start of the line.</p>
 </td>
 </tr>
 <tr>
@@ -392,7 +403,7 @@ N> Provide the encoding values before opening a Word document as per the above c
 <p>&gt;Block quotes text</p>
 </td>
 <td style="width: 41.7072%;">
-<p>For block quotes, add&gt;to start of the line.</p>
+<p>For block quotes, add &gt; to the start of the line.</p>
 </td>
 </tr>
 <tr>
@@ -403,7 +414,7 @@ N> Provide the encoding values before opening a Word document as per the above c
 <p>`Code span text`</p>
 </td>
 <td style="width: 41.7072%;">
-<p>For code span, add ` to front and back of the text.</p>
+<p>For a code span, add ` to the front and back of the text.</p>
 </td>
 </tr>
 <tr>
@@ -414,7 +425,7 @@ N> Provide the encoding values before opening a Word document as per the above c
 <p>4 spaces</p>
 </td>
 <td style="width: 41.7072%;">
-<p>For indented code block, add 4 spaces at the beginning of line.</p>
+<p>For an indented code block, add 4 spaces at the beginning of the line.</p>
 </td>
 </tr>
 <tr>
@@ -425,7 +436,7 @@ N> Provide the encoding values before opening a Word document as per the above c
 <p>```<br /> Multi line code text<br /> Multi line code text<br /> ```</p>
 </td>
 <td style="width: 41.7072%;">
-<p>For fenced code block, add ``` in the new line before and after the content.</p>
+<p>For a fenced code block, add ``` on a new line before and after the content.</p>
 </td>
 </tr>
 <tr>
@@ -436,7 +447,7 @@ N> Provide the encoding values before opening a Word document as per the above c
 <p>1. First<br /> 2. Second</p>
 </td>
 <td style="width: 41.7072%;">
-<p>For ordered list, preceding the text with 1. (number with dot and one space)</p>
+<p>For an ordered list, precede the text with a number followed by a dot and a space (for example, <code>1. </code>).</p>
 </td>
 </tr>
 <tr>
@@ -447,7 +458,7 @@ N> Provide the encoding values before opening a Word document as per the above c
 <p>- First<br /> - second</p>
 </td>
 <td style="width: 41.7072%;">
-<p>For unordered list, preceding the text with &ndash; (hyphen and space).</p>
+<p>For an unordered list, precede the text with &ndash; (hyphen and space).</p>
 </td>
 </tr>
 <tr>
@@ -455,10 +466,10 @@ N> Provide the encoding values before opening a Word document as per the above c
 <p>Links</p>
 </td>
 <td style="width: 26%;">
-<p><strong>Link text without title text</strong> :<br /> [Link text](URL)<br /> <strong>Link text with title text</strong> :<br /> [Link text](URL , &ldquo;title text&rdquo;)</p>
+<p><strong>Link text without title text</strong>:<br /> [Link text](URL)<br /> <strong>Link text with title text</strong>:<br /> [Link text](URL , &ldquo;title text&rdquo;)</p>
 </td>
 <td style="width: 41.7072%;">
-<p>For hyperlink, enclose the link text within the brackets [ ], and then enclose the URL as first parameter and title as second parameter within the parentheses().<br /> <strong>Note:</strong>The title text is optional.</p>
+<p>For a hyperlink, enclose the link text within brackets [ ], and then enclose the URL as the first parameter and the title as the second parameter within parentheses ().<br /> <strong>Note:</strong> The title text is optional.</p>
 </td>
 </tr>
 <tr>
@@ -467,10 +478,9 @@ N> Provide the encoding values before opening a Word document as per the above c
 </td>
 <td style="width: 26%;"><img src="MarkdownToWord_images/Created_Table.png" alt="Table Syntax in Markdown"></td>
 <td style="width: 41.7072%;">
-<p>Create a table using the pipes and underscores as given in the syntax to create 2 x 2 table.</p>
-<p></p>
-<p>You can also set column alignments using the syntax below, default it is left aligned.</p>
-<p>Right alignment:<br/><img src="MarkdownToWord_images/RightAligned_Table.png" alt="Right aligned table Syntax in Markdown"><br /> <br /> Center alignment:<br/><img src="MarkdownToWord_images/CenterAligned_Table.png" alt="Center aligned table Syntax in Markdown"></p>
+<p>Create a table using the pipes and underscores as shown in the syntax to create a 2 x 2 table.</p>
+<p>You can also set column alignments using the syntax below; the default is left aligned.</p>
+<p>Right alignment:<br/><img src="MarkdownToWord_images/RightAligned_Table.png" alt="Right aligned table syntax in Markdown"><br /><br /> Center alignment:<br/><img src="MarkdownToWord_images/CenterAligned_Table.png" alt="Center aligned table syntax in Markdown"></p>
 </td>
 </tr>
 <tr>
@@ -481,7 +491,7 @@ N> Provide the encoding values before opening a Word document as per the above c
 <p>--- (three hyphen characters)</p>
 </td>
 <td style="width: 41.7072%;">
-<p>For horizontal line, add --- (three hyphens) in a new line.</p>
+<p>For a horizontal line, add --- (three hyphens) on a new line.</p>
 </td>
 </tr>
 <tr>
@@ -492,8 +502,8 @@ N> Provide the encoding values before opening a Word document as per the above c
 <p>![Alternate text] (URL path)</p>
 </td>
 <td style="width: 41.7072%;">
-<p>For image, enclose an alternative text within the brackets [], and then link of the image source within parentheses ().</p>
-<p>If URL path is base64string, then it will be preserved properly in Word document. Otherwise, you can also {{'[set image from stream while opening Markdown file.](https://help.syncfusion.com/document-processing/word/word-library/net/convert-markdown-to-word-document-in-csharp#customize-image-data)'| markdownify }}</p>
+<p>For an image, enclose alternative text within brackets [], and then the image URL within parentheses ().</p>
+<p>If the URL is a base64 string, it will be preserved properly in the Word document. Otherwise, see the [customize image data](#customize-image-data) section to set the image from a stream while opening the Markdown file.</p>
 </td>
 </tr>
 <tr>
@@ -516,4 +526,5 @@ N> Provide the encoding values before opening a Word document as per the above c
 
 ## See Also
 
+* [Convert Word document to Markdown in C#](word-to-markdown-conversion.md)
 * [How to change the image size during Markdown to Word conversion](https://support.syncfusion.com/kb/article/17707/how-to-change-the-image-size-during-markdown-to-word-conversion)

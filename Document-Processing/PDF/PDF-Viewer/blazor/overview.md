@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Blazor PDF Viewer Component | Syncfusion
-description: Learn about Blazor SfPdfViewer including, performance, offline loading, annotations, form filling, printing, and support for Server & WebAssembly.
+description: Learn about Blazor SfPdfViewer including performance, offline loading, annotations, form filling, printing, and support for Server & WebAssembly.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -15,34 +15,39 @@ The Blazor `SfPdfViewer` component enables viewing, annotating, printing, and do
 
 ## Key Features
 
-* Accurate, reliable rendering of PDF pages.
-* Easy page navigation with:
-    * [Thumbnail page view](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/interactive-pdf-navigation/page-thumbnail)
-    * [Bookmark panel](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/interactive-pdf-navigation/bookmark)
-    * [Hyperlink navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/interactive-pdf-navigation/hyperlink)
-    * [Table of contents navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/interactive-pdf-navigation/table-of-content)
-* Core interactions:
-    * [Zooming](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/magnification) and [panning](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/interaction#panning-mode)
-    * [Text searching](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/text-search)
-    * Text selection and copy
-* [Print](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/print) PDF files.
-* Annotate PDFs with:
-    * [Highlight](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/annotation/text-markup-annotation#highlight-a-text), [underline](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/annotation/text-markup-annotation#underline-a-text), and [strikethrough](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/annotation/text-markup-annotation#strikethrough-a-text) text markup
-    * [Shape annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/annotation/shape-annotation): rectangle, circle, polygon, line, and arrow
-    * [Stamp annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/annotation/stamp-annotation): built-in and custom stamps
-    * [Measurement annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/annotation/measurement-annotation)
-    * [Free text annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/annotation/free-text-annotation)
-    * [Redaction annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/redaction/overview)
-    * [Comments](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/annotation/comments) and [sticky notes](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/annotation/sticky-notes-annotation)
-* [Form filling](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/form-filling)
-* [Form designer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/form-designer)
-* [Handwritten signature](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/hand-written-signature)
+### Page Navigation
+* [Thumbnail page view](./interactive-pdf-navigation/page-thumbnail)
+* [Bookmark panel](./interactive-pdf-navigation/bookmark)
+* [Hyperlink navigation](./interactive-pdf-navigation/hyperlink)
+* [Table of contents navigation](./interactive-pdf-navigation/table-of-content)
+
+### Core Interactions
+* [Zooming](./magnification) and [panning](./interaction#panning-mode)
+* [Text searching](./text-search/overview)
+* [Text selection and copy](./text-selection/overview)
+* [Print](./print/overview) PDF files.
+
+### Annotations
+* [Highlight](./annotation/text-markup/highlight-annotation), [underline](./annotation/text-markup/underline-annotation), and [strikethrough](./annotation/text-markup-annotation#strikethrough-a-text) text markup
+* Shape annotations including [rectangle](./annotation/shape/rectangle-annotation), [circle](./annotation/shape/circle-annotation), [polygon](./annotation/shape/polygon-annotation), [line](./annotation/shape/line-annotation), and [arrow](./annotation/shape/arrow-annotation)
+* [Stamp annotations](./annotation/stamp-annotation) with built-in and custom stamps
+* Measurement annotations including [area](./annotation/measurement/area-annotation), [distance](./annotation/measurement/distance-annotation), [perimeter](./annotation/measurement/perimeter-annotation), [radius](./annotation/measurement/radius-annotation) and [volume](./annotation/measurement/volume-annotation)
+* [Free text annotations](./annotation/free-text-annotation)
+* [Comments](./annotation/comments) and [sticky notes](./annotation/sticky-notes-annotation)
+* [Redaction annotations](./redaction/overview)
+
+### Forms
+* [Form filling](./forms/form-filling)
+* [Form designer](./forms/form-designer)
+
+### Signatures
+* [Handwritten signature](./hand-written-signature)
 
 ## Supported Features: Desktop vs Mobile
 
 The following table summarizes feature support on desktop and mobile devices.
 
-| Feature | Desktop | Mobile devices |
+| Feature | Desktop | Mobile |
 |--|--|--|
 | Keyboard interaction | Yes | No |
 | Open file from a different origin | Yes | Yes |
@@ -66,4 +71,4 @@ The following table summarizes feature support on desktop and mobile devices.
 | Modern Navigation Panel | Yes | Yes |
 | Organize Pages | Yes | Yes |
 
-N> See the [Blazor SfPdfViewer feature tour](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) for a concise overview of capabilities and the [Blazor SfPdfViewer demo](https://liveviewereditorblazorapp.azurewebsites.net/demos/pdf-viewer/blazor-server/pdf-viewer/default-functionalities) to explore core features interactively.
+N> See the [Blazor SfPdfViewer feature tour](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) for a concise overview of capabilities; the [Blazor SfPdfViewer demo](https://liveviewereditorblazorapp.azurewebsites.net/demos/pdf-viewer/blazor-server/pdf-viewer/default-functionalities) is also available to explore core features interactively.

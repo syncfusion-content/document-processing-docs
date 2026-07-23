@@ -9,10 +9,32 @@ Step 1: Create a new `Blazor WebAssembly Standalone App` project.
 Step 2: Enable PWA support by selecting the `Progressive Web Application` checkbox.
 ![Blazor WASM PWA step2](Create-PDF-Blazor/Blazor-PWA-2.png)
 
-Step 3: Install the [Syncfusion.PDF.NET](https://www.nuget.org/packages/Syncfusion.pdf.Net) NuGet package as a reference to your Blazor application from [NuGet.org](https://www.nuget.org).
+Step 3: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) NuGet package as a reference to your Blazor application from [NuGet.org](https://www.nuget.org).
 ![Blazor WASM PWA NuGet package installation](Create-PDF-Blazor/Blazor-PWA-3.png)
 
-Step 4: Create a Razor file named `FetchData.razor` in the `Pages` folder. Then, add the required namespace to the `FetchData.razor` file.
+Step 4: Register the Syncfusion license key. A trial watermark is added to every page of the generated PDF until a valid key is registered. Include the license key in **Program.cs** before initializing any Syncfusion component:
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Licensing;
+
+var builder = WebApplication.CreateBuilder(args);
+// Register the Syncfusion license
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+
+// Add services to the container.
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+
+var app = builder.Build();
+
+{% endhighlight %}
+{% endtabs %}
+
+Replace `"YOUR LICENSE KEY"` with the key from your Syncfusion account. If you do not have one, request a free 30-day trial at [https://www.syncfusion.com/sales/communitylicense](https://www.syncfusion.com/sales/communitylicense). For security, store the key in `appsettings.json` or in User Secrets rather than hardcoding it. Refer to the [Syncfusion License documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion license key in your application.
+
+Step 5: Create a Razor file named `FetchData.razor` in the `Pages` folder. Then, add the required namespace to the `FetchData.razor` file.
 
 {% tabs %}
 {% highlight CSHTML %}
@@ -27,7 +49,7 @@ Step 4: Create a Razor file named `FetchData.razor` in the `Pages` folder. Then,
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Create a button in the `FetchData.razor` using the following code.
+Step 6: Create a button in the `FetchData.razor` using the following code.
 
 {% tabs %}
 {% highlight CSHTML %}
@@ -37,7 +59,7 @@ Step 5: Create a button in the `FetchData.razor` using the following code.
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Implement `CreatePDF` method in `FetchData.razor`.
+Step 7: Implement the `CreatePDF` method in `FetchData.razor`.
 
 Create a new `async` method named `CreatePDF` and include the following code example to create a PDF document in the Blazor WebAssembly Standalone app with PWA support.
 
@@ -53,20 +75,20 @@ Create a new `async` method named `CreatePDF` and include the following code exa
        PdfDocument pdfDocument = new PdfDocument();
        // Add Page to the PDF document.
        PdfPage page = pdfDocument.Pages.Add();
-       
+
        // Create a new font.
        PdfStandardFont font = new PdfStandardFont(PdfFontFamily.TimesRoman, 16);
        // Create a text element to draw a text in PDF page.
        PdfTextElement title = new PdfTextElement("Weather Forecast", font, PdfBrushes.Black);
        PdfLayoutResult result = title.Draw(page, new PointF(0, 0));
        PdfStandardFont contentFont = new PdfStandardFont(PdfFontFamily.TimesRoman, 12);
-       // Create text element. 
+       // Create text element.
        PdfTextElement content = new PdfTextElement("This component demonstrates fetching data from a client side and Exporting the data to PDF document using Syncfusion .NET PDF library.", contentFont, PdfBrushes.Black);
        PdfLayoutFormat format = new PdfLayoutFormat();
        format.Layout = PdfLayoutType.Paginate;
        // Draw a text to the PDF document.
        result = content.Draw(page, new RectangleF(0, result.Bounds.Bottom + paragraphAfterSpacing, page.GetClientSize().Width, page.GetClientSize().Height), format);
-       
+
        // Create a PdfGrid.
        PdfGrid pdfGrid = new PdfGrid();
        pdfGrid.Style.CellPadding.Left = cellMargin;
@@ -78,13 +100,13 @@ Create a new `async` method named `CreatePDF` and include the following code exa
        pdfGrid.Style.Font = contentFont;
        // Draw PDF grid into the PDF page.
        pdfGrid.Draw(page, new Syncfusion.Drawing.PointF(0, result.Bounds.Bottom + paragraphAfterSpacing));
-       
-       // Create memory stream. 
+
+       // Create memory stream.
        MemoryStream memoryStream = new MemoryStream();
        // Save the PDF document.
        pdfDocument.Save(memoryStream);
        // Closes the PDF document
-       pdfDocument.Close();
+       pdfDocument.Close(true);
        memoryStream.Position = 0;
        // Download the PDF document
        JS.SaveAs("Sample.pdf", memoryStream.ToArray());
@@ -94,7 +116,7 @@ Create a new `async` method named `CreatePDF` and include the following code exa
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Create a class file with `FileUtil` name and add the following code to invoke the JavaScript action to download the file in the browser.
+Step 8: Create a class file named `FileUtil.cs` and add the following code to invoke the JavaScript action to download the file in the browser.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -111,7 +133,7 @@ public static class FileUtil
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Add the following JavaScript function in the `index.html` available under the `wwwroot` folder.
+Step 9: Add the following JavaScript function in the `index.html` file available under the `wwwroot` folder.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -145,10 +167,10 @@ Step 8: Add the following JavaScript function in the `index.html` available unde
 {% endhighlight %}
 {% endtabs %}
 
-Step 9: Build the project.
+Step 10: Build the project.
 
 Click on **Build** → **Build Solution** or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
-Step 10: Run the project.
+Step 11: Run the project.
 
 Click the Start button (green arrow) or press <kbd>F5</kbd> to run the application.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor SfPdfViewer Component | Syncfusion
-description: Explore all events available in the Syncfusion Blazor SfPdfViewer component, including lifecycle, navigation, annotation, search, and printing events.
+description: Explore all events available in the Blazor SfPdfViewer component, including lifecycle, navigation, annotation, search, and printing events.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -35,37 +35,37 @@ The following events are available in the SfPdfViewer component.
 |[ExportSucceed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ExportSucceed)|Triggers when exporting annotations succeeds in the SfPdfViewer.|
 |[ExtractTextCompleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ExtractTextCompleted)|Triggers when text extraction is completed in the SfPdfViewer.|
 |[FormFieldAdded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldAdded)|Triggers when a form field is added to the PDF document.|
-|[FormFieldAdding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldAdding)|Triggers before a new form field is added, allowing validation before insertion.| 
-|[FormFieldClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldClick)|Triggers when a user clicks on a form field while designer mode is off.| 
-|[FormFieldDeleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldDeleted)|Triggers when a form field is removed from the document.| 
-|[FormFieldDoubleClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldDoubleClick)|Triggers when a form field is double-clicked.| 
-|[FormFieldFocusIn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldFocusIn)|Triggers when focus enters a form field.| 
-|[FormFieldFocusOut](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldFocusOut)|Triggers when focus leaves a form field.| 
-|[FormFieldMouseEnter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldMouseEnter)|Triggers when the mouse hovers over a form field.| 
-|[FormFieldMouseLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldMouseLeave)|Triggers when the mouse leaves a form field.| 
-|[FormFieldPropertyChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldPropertyChanged)|Triggers when a form field's properties are modified.| 
-|[FormFieldResized](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldResized)|Triggers when a form field is resized.| 
-|[FormFieldSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldSelected)|Triggers when a form field is selected.| 
-|[FormFieldsExported](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldsExported)|Triggers when form fields are successfully exported.| 
-|[FormFieldsExportFailed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldsExportFailed)|Triggers when form fields export operation fails.| 
-|[FormFieldsExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldsExporting)|Triggers before form fields are exported, allowing customization of the export process.| 
-|[FormFieldsImported](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldsImported)|Triggers when form fields are successfully imported.| 
-|[FormFieldsImportFailed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldsImportFailed)|Triggers when form fields import operation fails.| 
-|[FormFieldsImporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldsImporting)|Triggers before form fields are imported, allowing validation or modifications.| 
-|[FormFieldUnselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldUnselected)|Triggers when a form field is unselected.| 
-|[ImportFailed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ImportFailed)|Triggers when importing annotations fails in the PDF document.| 
-|[ImportStarted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ImportStarted)|Triggers when importing annotations starts in the PDF document.| 
-|[ImportSucceed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ImportSucceed)|Triggers when importing annotations succeeds in the PDF document.| 
+|[FormFieldAdding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldAdding)|Triggers before a new form field is added, allowing validation before insertion.|
+|[FormFieldClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldClick)|Triggers when a user clicks on a form field while designer mode is off.|
+|[FormFieldDeleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldDeleted)|Triggers when a form field is removed from the document.|
+|[FormFieldDoubleClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldDoubleClick)|Triggers when a form field is double-clicked.|
+|[FormFieldFocusIn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldFocusIn)|Triggers when focus enters a form field.|
+|[FormFieldFocusOut](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldFocusOut)|Triggers when focus leaves a form field.|
+|[FormFieldMouseEnter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldMouseEnter)|Triggers when the mouse hovers over a form field.|
+|[FormFieldMouseLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldMouseLeave)|Triggers when the mouse leaves a form field.|
+|[FormFieldPropertyChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldPropertyChanged)|Triggers when a form field's properties are modified.|
+|[FormFieldResized](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldResized)|Triggers when a form field is resized.|
+|[FormFieldSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldSelected)|Triggers when a form field is selected.|
+|[FormFieldsExported](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldsExported)|Triggers when form fields are successfully exported.|
+|[FormFieldsExportFailed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldsExportFailed)|Triggers when form fields export operation fails.|
+|[FormFieldsExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldsExporting)|Triggers before form fields are exported, allowing customization of the export process.|
+|[FormFieldsImported](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldsImported)|Triggers when form fields are successfully imported.|
+|[FormFieldsImportFailed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldsImportFailed)|Triggers when form fields import operation fails.|
+|[FormFieldsImporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldsImporting)|Triggers before form fields are imported, allowing validation or modifications.|
+|[FormFieldUnselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldUnselected)|Triggers when a form field is unselected.|
+|[ImportFailed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ImportFailed)|Triggers when importing annotations fails in the PDF document.|
+|[ImportStarted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ImportStarted)|Triggers when importing annotations starts in the PDF document.|
+|[ImportSucceed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ImportSucceed)|Triggers when importing annotations succeeds in the PDF document.|
 |[MoveSignature](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_MoveSignature)|Triggers when a signature is moved on a page in the PDF document.|
 |[OnAnnotationDoubleClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_OnAnnotationDoubleClick)|Triggers when an annotation is double-clicked.|
 |[OnHyperlinkClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_OnHyperlinkClick)|Triggers when a hyperlink in the PDF document is clicked.|
 |[OnHyperlinkMouseOver](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_OnHyperlinkMouseOver)|Triggers when a hyperlink in the PDF document is hovered.|
 |[OnPageClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_OnPageClick)|Triggers when a mouse click is performed on a page in the PDF document.|
-|[OnTextSearchComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_OnTextSearchComplete)|Triggers when a text search is completed.| 
-|[OnTextSearchHighlight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_OnTextSearchHighlight)|Triggers when searched text is highlighted.| 
-|[OnTextSearchStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_OnTextSearchStart)|Triggers when a text search starts.| 
-|[OnTextSelectionEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_OnTextSelectionEnd)|Triggers when text selection ends.| 
-|[OnTextSelectionStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_OnTextSelectionStart)|Triggers when text selection starts.| 
+|[OnTextSearchComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_OnTextSearchComplete)|Triggers when a text search is completed.|
+|[OnTextSearchHighlight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_OnTextSearchHighlight)|Triggers when searched text is highlighted.|
+|[OnTextSearchStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_OnTextSearchStart)|Triggers when a text search starts.|
+|[OnTextSelectionEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_OnTextSelectionEnd)|Triggers when text selection ends.|
+|[OnTextSelectionStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_OnTextSelectionStart)|Triggers when text selection starts.|
 |[OnThumbnailClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_OnThumbnailClick)|Triggers when a thumbnail is clicked in the thumbnail panel of the SfPdfViewer.|
 |[PageChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_PageChanged)|Triggers when the current page number changes.|
 |[PageMouseover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_PageMouseover)|Triggers when the mouse pointer moves over a page.|
@@ -76,7 +76,7 @@ The following events are available in the SfPdfViewer component.
 |[SignaturePropertiesChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_SignaturePropertiesChange)|Triggers when the properties of a signature are changed on a page in the PDF document.|
 |[SignatureSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_SignatureSelected)|Triggers when a signature is selected on a page in the PDF document.|
 |[SignatureUnselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_SignatureUnselected)|Triggers when a signature is unselected on a page in the PDF document.|
-|[ToolbarClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ToolbarClicked)|Triggers when a custom toolbar item is clicked in the toolbar.| 
+|[ToolbarClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ToolbarClicked)|Triggers when a custom toolbar item is clicked in the toolbar.|
 |[ValidateFormFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ValidateFormFields)|Triggers when form fields are validated.|
 |[ZoomChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ZoomChanged)|Triggers when the magnification value changes.|
 
@@ -97,7 +97,7 @@ Wrap the SfPdfViewer events inside the [PdfViewerEvents](https://help.syncfusion
 
     private void DocumentLoaded(LoadEventArgs args)
     {
-        object PageData = args.PageData;
+        Console.WriteLine("Document loaded successfully.");
     }
 }
 
@@ -105,24 +105,25 @@ Wrap the SfPdfViewer events inside the [PdfViewerEvents](https://help.syncfusion
 
 ## Created event
 
-The Created event Triggers when the PDF Viewer component is rendered.
+The Created event triggers when the PDF Viewer component is created.
 
 The following example illustrates how to load a PDF document in the Created event.
 
 ```cshtml
 
 @using Syncfusion.Blazor.SfPdfViewer
+@using System.Net.Http
 
-<SfPdfViewer2  DocumentPath="@DocumentPath" Height="100%" Width="100%">
-    <PdfViewerEvents Created="created"></PdfViewerEvents>
+<SfPdfViewer2 DocumentPath="@DocumentPath" Height="100%" Width="100%">
+    <PdfViewerEvents Created="Created"></PdfViewerEvents>
 </SfPdfViewer2>
 
 @code 
 {
-    public string DocumentPath { get; set; }
+    private string DocumentPath { get; set; }
 
     //Triggers when the PDFViewer component is created.
-    public void created()
+    private void Created()
     {
         string Link = "http://infolab.stanford.edu/pub/papers/google.pdf";
         System.Net.WebClient webClient = new System.Net.WebClient();
@@ -130,16 +131,16 @@ The following example illustrates how to load a PDF document in the Created even
         byte[] byteArray = webClient.DownloadData(Link);
         //Converting the byte array to Base64 string and sets the document path.
         DocumentPath = "data:application/pdf;base64," + Convert.ToBase64String(byteArray);
-    }  
+    }
 }
 
 ```
 
-## DocumentEdited Event
+## DocumentEdited event
 
-The DocumentEdited event Triggers when the PDF document is edited. 
+The DocumentEdited event triggers when the PDF document is edited. 
 
-The following example illustrates how to handle the DocumentEdited event. In this example, [EditingAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.EditingAction.html) provides information related to the edit operation. 
+The following example illustrates how to handle the DocumentEdited event. The [EditingAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.EditingAction.html) argument indicates the type of edit operation performed.
 
 ```cshtml
 
@@ -150,8 +151,8 @@ The following example illustrates how to handle the DocumentEdited event. In thi
 </SfPdfViewer2>
 
 @code{ 
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
-    public async Task DocumentEdited(DocumentEditedEventArgs args) 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    private async Task DocumentEdited(DocumentEditedEventArgs args) 
     {
         Console.WriteLine(args.EditingAction);
     }	 
@@ -159,9 +160,9 @@ The following example illustrates how to handle the DocumentEdited event. In thi
 
 ```
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20a%20PDF%20document%20using%20created%20event)
+[Load a PDF document using created event](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20a%20PDF%20document%20using%20created%20event)
 
-## See Also
+## See also
 
 * [Annotation Events in Blazor PDF Viewer](./annotation/events)
 * [Form Designer Events in Blazor PDF Viewer](./form-designer/events)

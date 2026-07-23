@@ -7,21 +7,21 @@ control: SfSmartPdfViewer
 documentation: ug
 ---
 
-# Using Smart PDF Viewer Component in the Blazor MAUI app 
+# Getting Started with Smart PDF Viewer in Blazor MAUI App
 
 This section explains how to add the Syncfusion&reg; Blazor Smart PDF Viewer component to a .NET MAUI Blazor app and run it on Windows and Android.
 
 ## Prerequisites
 
-To use MAUI project templates, install the Mobile development with .NET workload for Visual Studio. For detailed steps, see [Install .NET MAUI](https://learn.microsoft.com/en-us/dotnet/MAUI/get-started/installation?tabs=vswin) on Windows in the Microsoft documentation.
+To use MAUI project templates, install the Mobile development with .NET workload for Visual Studio. For detailed steps, see [Install .NET MAUI](https://learn.microsoft.com/en-us/dotnet/MAUI/get-started/installation?tabs=vswin) on Windows in the Microsoft documentation. For more information, see the [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements).
 
 ## Create a new Blazor MAUI App in Visual Studio
 
 Create a new .NET MAUI Blazor App in Visual Studio by selecting the template named **.NET MAUI Blazor Hybrid APP**.
 
-## Install Smart PDF Viewer NuGet package in Blazor Maui App
+## Install Smart PDF Viewer NuGet package in Blazor MAUI App
 
-To add NuGet packages into the Blazor Maui app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install [Syncfusion.Blazor.SfSmartPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfSmartPdfViewer) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+To add NuGet packages into the Blazor MAUI app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install [Syncfusion.Blazor.SfSmartPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfSmartPdfViewer) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the full package list and component details.
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -47,7 +47,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-* Add the `Syncfusion.Blazor` namespace to the `Program.cs` file.
+* Add the `Syncfusion.Blazor` namespace to the `~/MauiProgram.cs` file.
 
 {% tabs %}
 {% highlight c# tabtitle="MauiProgram.cs" %}
@@ -57,13 +57,12 @@ using Syncfusion.Blazor;
 {% endhighlight %}
 {% endtabs %}
 
-
 * Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the `~/MauiProgram.cs` file.
 
 {% tabs %}
 {% highlight c# tabtitle="MauiProgram.cs" %}
 
-// Enable memory cachin
+// Enable memory caching
 builder.Services.AddMemoryCache();
 // Register Syncfusion Blazor service
 builder.Services.AddSyncfusionBlazor();
@@ -71,9 +70,9 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
-N> Ensure the Syncfusion<sup style="font-size:70%">&reg;</sup> license is registered in the application before using Syncfusion<sup style="font-size:70%">&reg;</sup> components.
+N> Ensure the Syncfusion<sup style="font-size:70%">&reg;</sup> license is registered in the application before using Syncfusion<sup style="font-size:70%">&reg;</sup> components. See the [Licensing overview](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Licensing.html) for details on registering a license key.
 
-## To Configure Azure OpenAI Service
+## Configure Azure OpenAI Service
 
 This article is required only when enabling AI-powered features in Smart PDF Viewer (such as document summarization, smart redaction, or smart fill). It is not required for basic PDF rendering.
 
@@ -84,7 +83,7 @@ In **Visual Studio**, Go to Tools → NuGet Package Manager → Package Manager 
 
 Install-Package Azure.AI.OpenAI
 Install-Package Microsoft.Extensions.AI
-Install-Package Microsoft.Extensions.AI.OpenAI -Version 9.8.0-preview.1.25412.6
+Install-Package Microsoft.Extensions.AI.OpenAI
 
 {% endhighlight %}
 {% endtabs %}
@@ -92,19 +91,19 @@ Install-Package Microsoft.Extensions.AI.OpenAI -Version 9.8.0-preview.1.25412.6
 In **Visual Studio Code**, open the terminal and run these commands:
 
 {% tabs %}
-{% highlight c# tabtitle="Package Manager" %}
+{% highlight c# tabtitle=".NET CLI" %}
 
 dotnet add package Azure.AI.OpenAI
 dotnet add package Microsoft.Extensions.AI
-dotnet add package Microsoft.Extensions.AI.OpenAI --version 9.8.0-preview.1.25412.6
+dotnet add package Microsoft.Extensions.AI.OpenAI
 
 {% endhighlight %}
 {% endtabs %}
 
-Add the AI namespace to the `Program.cs` file.
+Add the following namespaces to the `~/MauiProgram.cs` file.
 
 {% tabs %}
-{% highlight c# tabtitle="Blazor Server App" %}
+{% highlight c# tabtitle="MauiProgram.cs" %}
 
 using Azure.AI.OpenAI;
 using Microsoft.Extensions.AI;
@@ -114,10 +113,10 @@ using System.ClientModel;
 {% endhighlight %}
 {% endtabs %}
 
-To configure the AI service, add the following settings to the *`~/MauiProgram.cs` file in your Blazor Server app.
+To configure the AI service, add the following settings to the *`~/MauiProgram.cs` file in your MAUI Blazor app.
 
 {% tabs %}
-{% highlight c# tabtitle="Blazor Server App" %}
+{% highlight c# tabtitle="MauiProgram.cs" %}
 
 // Azure OpenAI configuration values
 string azureOpenAiKey = "api-key";
@@ -133,19 +132,17 @@ builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
 {% endtabs %}
 
 Here,
-* **apiKey**: “Azure OpenAI API Key”
-* **deploymentName**: “Azure OpenAI deployment name”
-* **endpoint**: “Azure OpenAI deployment endpoint URL”
+* **apiKey**: Azure OpenAI API key.
+* **deploymentName**: Azure OpenAI deployment name.
+* **endpoint**: Azure OpenAI deployment endpoint URL.
 
-For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal), then the values for `apiKey`, `deploymentName`, and `endpoint` will be available.
+For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal), then the values for `azureOpenAiKey`, `azureOpenAiModel`, and `azureOpenAiEndpoint` will be available.
 
-## Adding stylesheet and script
+## Add stylesheet and script resources
 
-Add the following stylesheet and script to the head section of the `~/wwwroot/index.html` file.
+Add the following stylesheet and script to the `~/wwwroot/index.html` file.
 
-### Add stylesheet resource
-
-Include the stylesheet reference in the `<head>` section in the `~/wwwroot/index.html` file.
+Include the stylesheet reference in the `<head>` of the `~/wwwroot/index.html` file.
 
 {% tabs %}
 {% highlight html %}
@@ -156,10 +153,7 @@ Include the stylesheet reference in the `<head>` section in the `~/wwwroot/index
 {% endhighlight %}
 {% endtabs %}
 
-
-### Add script resource
-
-Add script reference at the end of the `<body>` in the `~/wwwroot/index.html` file as shown below.
+Add the script reference at the end of the `<body>` in the `~/wwwroot/index.html` file.
 
 {% tabs %}
 {% highlight html %}
@@ -183,6 +177,12 @@ Add the Syncfusion Blazor Smart PDF Viewer component in the **~/Pages/Index.razo
 {% endhighlight %}
 {% endtabs %}
 
+The following parameters are used in the `SfSmartPdfViewer` component:
+
+* **Height**: Height of the PDF Viewer (for example, `"100%"`).
+* **Width**: Width of the PDF Viewer (for example, `"100%"`).
+* **DocumentPath**: URL of the PDF document to be loaded. The host must allow CORS requests, or the document must be served from the same origin.
+
 ## Run on Windows
 
 Run the sample in Windows Machine mode. The application will run the Blazor MAUI app targeting Windows.
@@ -195,7 +195,7 @@ After the application launches, the PDF Viewer component renders the specified P
 
 ## Run on Android
 
-To run the PDF Viewer in a Blazor Android MAUI application using the Android emulator, follow these steps. These steps are required only when using local embeddings for AI features; they are not needed for basic PDF viewing.
+Set the debug target to the Android emulator in Visual Studio and run the application. The Blazor MAUI app launches on the Android emulator and the Smart PDF Viewer renders the PDF document.
 
 1. Add the following asset files to the project by creating an Assets folder (Platforms → Android → Assets):  
    [model](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/blob/master/Common/LocalEmbeddingsModel/model.onnx) and [vocab](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/blob/master/Common/LocalEmbeddingsModel/vocab.txt).
@@ -250,9 +250,9 @@ public static class MauiProgram
 {% endhighlight %}
 {% endtabs %}
 
-![Run MAUI app on Android emulator](gettingstarted-images/android-maui.png)
+N> Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/device-manager#android-device-manager-on-windows) to set up the Android emulator with Android Device Manager.
 
-Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/device-manager#android-device-manager-on-windows) to Set up the Android emulator with Android Device Manager.
+![Run MAUI app on Android emulator](gettingstarted-images/android-maui.png)
 
 N> If any errors occur while using the Android Emulator, see [Troubleshooting the Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 

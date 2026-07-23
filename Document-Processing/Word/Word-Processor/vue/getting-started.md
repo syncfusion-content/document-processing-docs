@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Vue DOCX Editor | Syncfusion
-description: Learn how to create a DOCX Editor in a Vue application using the Syncfusion® Document Editor control to create, edit, and view Word documents.
+description: Learn how to create a DOCX Editor in a Vue application using the Syncfusion® DOCX Editor control to create, edit, and view Word documents.
 platform: document-processing
 control: Getting started 
 documentation: ug
@@ -12,14 +12,13 @@ domainurl: ##DomainURL##
 
 [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/Vue-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a Vue application.
 
-## Steps to create a DOCX Editor in Vue 2
+## Prerequisites
 
-### Prerequisites
+* [System requirements for Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+* [Browser Compatibility](https://ej2.syncfusion.com/vue/documentation/browser)
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
-
-### Create a Vue application
+## Create a Vue application
 
 Use [Vue CLI](https://cli.vuejs.org/#getting-started) to set up a Vue application, as it provides a modular project architecture, flexible configuration, and an integrated plugin system.
 
@@ -42,22 +41,29 @@ Move into the created project using the following command:
 ```bash
 cd quickstart
 ```
-### Install the Document Editor packages
+## Install the DOCX Editor packages
 
-The Document Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-vue-documenteditor).
+The DOCX Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-vue-documenteditor).
 
-To install the Document Editor component, use the following command:
+To install the DOCX Editor component, use the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-documenteditor --save
 ```
 
-### Add CSS reference
+## Register a Syncfusion License Key
 
-Add the following Document Editor and dependent component style references to the `<style>` section of `src/App.vue` file.
+Before initializing the Vue DOCX Editor control, generate a Syncfusion license key and register it in your application.
+
+- [Generate a Syncfusion License Key](https://help.syncfusion.com/document-processing/licensing/how-to-generate)
+- [Register a Syncfusion License Key in Vue](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#vuejs)
+
+## Import the required CSS styles
+
+Add the following DOCX Editor and dependent component style references to the `<style>` section of `src/App.vue` file.
 
 {% tabs %}
-{% highlight html tabtitle="App.vue" %}
+{% highlight css tabtitle="App.vue" %}
 
 @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
 @import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
@@ -74,9 +80,9 @@ Add the following Document Editor and dependent component style references to th
 
 N> Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-### Add the Document Editor component
+## Initialize the DOCX Editor
 
-Modify the `src/App.vue` file to render the Document Editor. Add the Document Editor in the `<template>` section using the `<ejs-documenteditorcontainer>` selector and configure it in the `<script>` section.
+Modify the `src/App.vue` file to render the DOCX Editor. Add the DOCX Editor component in the `<template>` section using the `<ejs-documenteditorcontainer>` selector and configure it in the `<script>` section.
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
@@ -120,7 +126,7 @@ export default {
 
 N> The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
 
-### Run the application
+## Run the application
 
 Run the application using the following command:
 
@@ -128,25 +134,25 @@ Run the application using the following command:
 npm run serve
 ```
 
-After the application starts, open the localhost URL shown in the terminal. The Document Editor is rendered in the browser with a toolbar and an editable document area, as shown below.
+After the application starts, open the localhost URL shown in the terminal. The DOCX Editor is rendered in the browser with a toolbar and an editable document area, as shown below.
 
-![Output of Vue Document Editor](./images/vue_2_getting_started.png)
+![Output of Vue DOCX Editor](./images/vue_2_getting_started.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Vue-DOCX-Editor-Examples/tree/master/getting-started/vue_2).
 
 ## Online Demo
 
-Explore how to create, edit, and print Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/material3/document-editor/default.html).
+Explore how to create, edit, and print Word documents using the Vue DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/material3/document-editor/default.html).
 
 ## Video tutorial
 
-To get started quickly with the Document Editor component using CLI, you can check the video below.
+To get started quickly with the DOCX Editor component using CLI, you can check the video below.
 
 {% youtube "https://www.youtube.com/watch?v=UbmGFUXtzYg" %}
 
 ## Server-side dependencies
 
-The Document Editor component requires server-side interactions for the following operations:
+The DOCX Editor component requires server-side interactions for the following operations:
 
 * Open file formats other than SFDT
 * Paste with formatting
@@ -154,14 +160,15 @@ The Document Editor component requires server-side interactions for the followin
 * Spell check
 * Save as file formats other than SFDT and DOCX
 
-N> If you don't require the above functionalities, you can deploy the component as a pure client-side solution without any server-side interactions.
+N> If you do not require the above functionalities, you can deploy the component as a pure client-side solution without any server-side interaction.
 
 For detailed information about server-side dependencies, refer to the [Web Services Overview](./web-services-overview) page.
 
-N> Looking for the full Vue DOCX Editor component overview, features, pricing, and documentation? Visit the [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) page.
+N> Looking for the full Vue DOCX Editor component overview, features, pricing, and documentation? Visit the [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) page.
 
 ## See also
 
 - [Open a document](./import)
 - [Save a document](./export)
 - [Collaborative Editing](./collaborative-editing/overview)
+- [Troubleshooting](https://help.syncfusion.com/document-processing/word/word-processor/vue/troubleshooting)

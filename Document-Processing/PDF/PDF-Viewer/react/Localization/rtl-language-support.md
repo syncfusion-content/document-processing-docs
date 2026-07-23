@@ -1,25 +1,25 @@
 ---
 layout: post
 title: RTL Localization in React PDF Viewer | Syncfusion
-description: Learn about the Localization and Right to Left Lanugage Support in Syncfusion React PDF Viewer component.
+description: Learn about the Localization and Right-to-Left (RTL) Language Support in the Syncfusion React PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# RTL and Localization Page in React PDF Viewer
+# RTL and Localization in the React PDF Viewer
 
 Use RTL support to render the viewer interface for right-to-left languages.
 - Enable [enableRtl](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#enablertl) to apply right-to-left layout.
 - Load culture-specific strings globally with `L10n.load`.
 - Set the [locale](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#locale) property on the `PdfViewer` instance to the target culture.
 
-![Arabic Localization](../../javascript-es6/images/locale-ar.gif)
+![Arabic Localization in the React PDF Viewer](../../javascript-es6/images/locale-ar.gif)
 
 ## Example: enable RTL and provide Arabic localization
 
-Use the example below to enable RTL for languages such as Arabic, Hebrew, and Persian.
+The example below enables RTL for the React PDF Viewer and loads Arabic translations through `L10n.load`.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -28,14 +28,8 @@ import {L10n} from '@syncfusion/ej2-base';
 // Inject required modules
 PdfViewer.Inject(TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields, PageOrganizer);
 
-const pdfviewer: PdfViewer = new PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib",
-    locale: 'ar-AE', //Using locale updates culture
-    enableRtl: true, //To enbale Right to Left rendering.
-});
-//Load culutre files here
-    L10n.load({
+//Load culture files here
+L10n.load({
                 'ar-AE': {
                     'PdfViewer': {
                         'PdfViewer': 'قوات الدفاع الشعبي المشاهد',
@@ -106,7 +100,7 @@ const pdfviewer: PdfViewer = new PdfViewer({
                         'End Arrow': 'نهاية السهم',
                         'Line Style': 'أسلوب الخط',
                         'Fill Color': 'ملء اللون',
-                        'Line Color': ' الخط اللون',
+                        'Line Color': 'لون الخط',
                         'None': 'لا شيء',
                         'Open Arrow': 'افتح',
                         'Closed Arrow': 'مغلق',
@@ -292,11 +286,18 @@ const pdfviewer: PdfViewer = new PdfViewer({
                     }
                 }
             });
+
+const pdfviewer: PdfViewer = new PdfViewer({
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib",
+    locale: 'ar-AE', // The locale property updates the active culture.
+    enableRtl: true, // To enable right-to-left rendering of the viewer UI.
+});
 pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-N> A comprehensive list of localization files and default strings is available on GitHub: [GitHub Locale](https://github.com/syncfusion/ej2-locale). Provide only keys that require overrides; missing keys fall back to the default `en-US` values.
+N> A comprehensive list of localization files and default strings is available on GitHub: [GitHub Locale](https://github.com/syncfusion/ej2-locale). You can also provide only the keys that require overrides; missing keys fall back to the default `en-US` values.
 
 ## See Also
 

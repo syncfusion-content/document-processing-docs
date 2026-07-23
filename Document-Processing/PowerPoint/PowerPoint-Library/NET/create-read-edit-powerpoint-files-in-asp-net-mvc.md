@@ -1,14 +1,16 @@
 ---
-title: Create and edit PowerPoint files in ASP.NET MVC |Syncfusion
+title: Create and edit PowerPoint files in ASP.NET MVC | Syncfusion
 description: ASP.NET MVC PowerPoint library to create, read, edit and convert PowerPoint files in ASP.NET MVC applications.
 platform: document-processing
 control: PowerPoint
-documentation: ug
+documentation: UG
 ---
 
 # Create, read and edit a PowerPoint file in ASP.NET MVC
 
 You can create or edit a PowerPoint file in ASP.NET MVC with the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library). The below are the steps.
+
+The Syncfusion.Presentation.AspNet.Mvc5 package supports .NET Framework 4.0 and later. The examples in this topic use the latest stable version of the package.
 
 ## Create a PowerPoint file in ASP.NET MVC
 
@@ -19,9 +21,9 @@ You can create or edit a PowerPoint file in ASP.NET MVC with the [.NET PowerPoin
 **Prerequisites:**
 
 * Visual Studio 2022.
-* Install **.NET desktop development** workload with necessary .NET Framework SDK.
+* Install **.NET desktop development** workload with the necessary .NET Framework SDK (4.6.2 or later).
 
-Step 1: Create a new C# ASP.NET MVC application project.
+Step 1: Create a new C# ASP.NET Web Application project.
 
 ![Create ASP.NET MVC project](Workingwith-MVC/Project-Open-and-Save.png)
 
@@ -29,13 +31,13 @@ Step 2: Select the **MVC** template to create the project.
 
 ![Select MVC template](Workingwith-MVC/MVC-Open-and-Save.png)
 
-Step 3: Install the [Syncfusion.Presentation.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.Presentation.AspNet.Mvc5/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
+Step 3: Install the [Syncfusion.Presentation.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.Presentation.AspNet.Mvc5/) NuGet package as a reference to your ASP.NET MVC project from [NuGet.org](https://www.nuget.org/).
 
 ![Install ASP.NET MVC Nuget](Workingwith-MVC/Nuget-Open-and-Save.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: After installing the **Syncfusion.Presentation.AspNet.Mvc5** nuget package, the following assemblies were included in our project.
+Step 4: After installing the **Syncfusion.Presentation.AspNet.Mvc5** nuget package, the following assemblies are included in our project.
 <ul>
 <li>Syncfusion.Compression.Base</li>
 <li>Syncfusion.Licensing</li>
@@ -43,7 +45,15 @@ Step 4: After installing the **Syncfusion.Presentation.AspNet.Mvc5** nuget packa
 <li>Syncfusion.Presentation.Base</li>
 </ul>
 
-Step 5: The below code snippets demonstrate how to create a PowerPoint Presentation in ASP.NET MVC platform.
+Step 5: The following code snippets demonstrate how to create a PowerPoint Presentation in ASP.NET MVC. Place this code inside an MVC controller action (for example, the `Index` action of `HomeController`). Add the following `using` statements at the top of the file:
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+using Syncfusion.Presentation;
+{% endhighlight %}
+
+{% endtabs %}
 
 **Create Presentation instance:**
 
@@ -100,7 +110,7 @@ titleShape.TextBody.AddParagraph("Company History").HorizontalAlignment = Horizo
 {% highlight c# tabtitle="C#" %}
 //Add description content to the slide by adding a new TextBox
 IShape descriptionShape = slide.AddTextBox(53.22, 141.73, 874.19, 77.70);
-descriptionShape.TextBody.Text = "IMN Solutions PVT LTD is the software company, established in 1987, by George Milton. The company has been listed as the trusted partner for many high-profile organizations since 1988 and got awards for quality products from reputed organizations.";
+descriptionShape.TextBody.Text = "IMN Solutions PVT LTD is the software company, established in 1987, by George Milton. The company has been listed as the trusted partner for many high-profile organizations since 1988 and received awards for quality products from reputed organizations.";
 {% endhighlight %}
 
 {% endtabs %}
@@ -133,9 +143,8 @@ secondPara.FirstLineIndent = -35;
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-//Gets a picture as stream.
+//Gets a picture as stream and adds it to a slide by specifying its size and position.
 FileStream pictureStream = new FileStream("Image.jpg", FileMode.Open);
-//Adds the picture to a slide by specifying its size and position.
 slide.Shapes.AddPicture(pictureStream, 499.79, 238.59, 364.54, 192.16);
 {% endhighlight %}
 
@@ -162,7 +171,7 @@ stampShape.TextBody.AddParagraph("IMN").HorizontalAlignment = HorizontalAlignmen
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-//Save the PowerPoint Presentation
+//Save the PowerPoint Presentation as the HTTP response (place this code inside an MVC controller action)
 pptxDoc.Save("Sample.pptx", FormatType.Pptx, HttpContext.ApplicationInstance.Response);
 //Close the PowerPoint presentation
 pptxDoc.Close();
@@ -170,11 +179,11 @@ pptxDoc.Close();
 
 {% endtabs %}
 
-Step 5: Build the project.
+Step 6: Build the project.
 
 Click on Build → Build Solution or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
-Step 6: Run the project.
+Step 7: Run the project.
 
 Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
 
@@ -191,9 +200,9 @@ The output of the above code example will generate the below PowerPoint slide.
 **Prerequisites:**
 
 * JetBrains Rider.
-* Install .NET Framework Developer Pack.
+* Install the [.NET Framework Developer Pack](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks) (4.7.2 or later).
 
-Step 1. Open JetBrains Rider and create a new ASP.NET MVC web application project.
+Step 1: Open JetBrains Rider and create a new ASP.NET MVC web application project.
 * Launch JetBrains Rider.
 * Click **New Solution** on the welcome screen.
 
@@ -203,7 +212,7 @@ Step 1. Open JetBrains Rider and create a new ASP.NET MVC web application projec
 * Enter a project name and specify the location.
 * Select the target framework as Full Framework and choose the desired version.
 * Select **Template** as **Web App**.
-* Click create.
+* Click Create.
 
 ![Creating a new ASP.NET MVC web application in JetBrains Rider](Workingwith-MVC/Create-MVC-sample.png)
 
@@ -219,9 +228,9 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 ![Install the Syncfusion.Presentation.AspNet.Mvc5 NuGet package](Workingwith-MVC/Install-Syncfusion.Presentation.AspNet.Mvc5-NuGet.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 3: After installing the **Syncfusion.Presentation.AspNet.Mvc5** nuget package, the following assemblies were included in our project.
+Step 3: After installing the **Syncfusion.Presentation.AspNet.Mvc5** nuget package, the following assemblies are included in our project.
 <ul>
 <li>Syncfusion.Compression.Base</li>
 <li>Syncfusion.Licensing</li>
@@ -229,7 +238,15 @@ Step 3: After installing the **Syncfusion.Presentation.AspNet.Mvc5** nuget packa
 <li>Syncfusion.Presentation.Base</li>
 </ul>
 
-Step 4: The below code snippets demonstrate how to create a PowerPoint Presentation in ASP.NET MVC platform.
+Step 4: The following code snippets demonstrate how to create a PowerPoint Presentation in ASP.NET MVC. Place this code inside an MVC controller action (for example, the `Index` action of `HomeController`). Add the following `using` statements at the top of the file:
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+using Syncfusion.Presentation;
+{% endhighlight %}
+
+{% endtabs %}
 
 **Create Presentation instance:**
 
@@ -286,7 +303,7 @@ titleShape.TextBody.AddParagraph("Company History").HorizontalAlignment = Horizo
 {% highlight c# tabtitle="C#" %}
 //Add description content to the slide by adding a new TextBox
 IShape descriptionShape = slide.AddTextBox(53.22, 141.73, 874.19, 77.70);
-descriptionShape.TextBody.Text = "IMN Solutions PVT LTD is the software company, established in 1987, by George Milton. The company has been listed as the trusted partner for many high-profile organizations since 1988 and got awards for quality products from reputed organizations.";
+descriptionShape.TextBody.Text = "IMN Solutions PVT LTD is the software company, established in 1987, by George Milton. The company has been listed as the trusted partner for many high-profile organizations since 1988 and received awards for quality products from reputed organizations.";
 {% endhighlight %}
 
 {% endtabs %}
@@ -319,9 +336,8 @@ secondPara.FirstLineIndent = -35;
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-//Gets a picture as stream.
+//Gets a picture as stream and adds it to a slide by specifying its size and position.
 FileStream pictureStream = new FileStream("Image.jpg", FileMode.Open);
-//Adds the picture to a slide by specifying its size and position.
 slide.Shapes.AddPicture(pictureStream, 499.79, 238.59, 364.54, 192.16);
 {% endhighlight %}
 
@@ -348,7 +364,7 @@ stampShape.TextBody.AddParagraph("IMN").HorizontalAlignment = HorizontalAlignmen
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-//Save the PowerPoint Presentation
+//Save the PowerPoint Presentation as the HTTP response (place this code inside an MVC controller action)
 pptxDoc.Save("Sample.pptx", FormatType.Pptx, HttpContext.ApplicationInstance.Response);
 //Close the PowerPoint presentation
 pptxDoc.Close();
@@ -376,7 +392,7 @@ The output of the above code example will generate the below PowerPoint slide.
 
 ## Read and edit a PowerPoint file in ASP.NET MVC
 
-You can edit an existing PowerPoint file using this library. The below code snippet demonstrates accessing a shape from a slide and changing the text within it.
+You can edit an existing PowerPoint file using this library. This example assumes that an existing Sample.pptx file is present in the application's working/output directory. The following code snippet demonstrates accessing a shape from a slide and changing its text.
 
 {% tabs %}
 

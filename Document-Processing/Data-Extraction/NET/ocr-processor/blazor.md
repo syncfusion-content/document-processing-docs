@@ -9,63 +9,93 @@ keywords: Assemblies
 
 # Perform OCR in Blazor
 
-The [.NET OCR library](https://www.syncfusion.com/document-sdk/net-pdf-library/ocr-process) is used to extract text from scanned PDFs and images in the Blazor application with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.
+The [.NET OCR library](https://www.syncfusion.com/document-sdk/net-pdf-library/ocr-process) is used to extract text from scanned PDFs and images in Blazor applications with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.
 
-## Steps to perform OCR on the entire PDF document in the Blazor application
+## Prerequisites
+
+**Version Compatibility**
+
+- Syncfusion.PDF.OCR.Net.Core supports .NET 8.0 and later versions.
+
+**Supported Inputs**
+
+The OCR processor supports the following input formats:
+
+- Single-page and multi-page PDF documents
+- Scanned images in common formats (JPEG, PNG, TIFF)
+- Recommended DPI: 200 DPI or higher for optimal OCR accuracy
+
+**Required Software**
+
+- .NET 8 SDK or later
+- Visual Studio, Visual Studio Code, or JetBrains Rider
+
+**Register the License Key**
+
+N> Starting with v16.2.0.x, if you reference Syncfusion® assemblies from trial setup or from the NuGet feed, you must add the Syncfusion.Licensing assembly reference and register a license key in your application. For more information, see the licensing documentation.
+
+Include the following code in the **Program.cs** file to register the license key:
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+using Syncfusion.Licensing;
+
+// Register Syncfusion license at application startup
+SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+
+{% endhighlight %}
+{% endtabs %}
+
+N> 1. Beginning from version 21.1.x, the TesseractBinaries and Tesseract language data folders are now included by default; you no longer have to set these paths explicitly.
+N> 2. The current NuGet package includes Tesseract 5.0, which provides support for 100+ languages.
+
+## Steps to perform OCR on an entire PDF document in Blazor
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
-**Prerequisites**:
-
-* Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-* Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download?_exp_download=d53503e735).
-
-Step 1: Create a new C# Blazor Server application project. Select Blazor App from the template and click Next.
+Step 1: Create a new C# Blazor Server application project targeting **.NET 6 or later**. Select **Blazor App** from the template and click **Next**:
 ![Blazor server app creation](OCR-Images/blazor_server_app_creation.png)
 
-Step 2: In the project configuration window, name your project and click Create.
+Step 2: In the project configuration window, name your project and click **Create**.
 ![Blazor server project configuraion1](OCR-Images/blazor_server_configuration1.png)
 
-Step 3:  Install the [Syncfusion.PDF.OCR.Net.Core](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net.Core) NuGet package as a reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).   
+Step 3: Install the [Syncfusion.PDF.OCR.Net.Core](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net.Core) NuGet package into your Blazor application from [NuGet.org](https://www.nuget.org/).   
 ![NuGet package installation](OCR-Images/OCR-Core-NuGet-package.png)
 
-N> 1. Beginning from version 21.1.x, the default configuration includes the addition of the TesseractBinaries and Tesseract language data folder paths, eliminating the requirement to explicitly provide these paths.
-N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
-
-Step 4: Create a new class file named *ExportService* under the Data folder and include the following namespaces in the file.
+Step 4: Create a new class file named **ExportService** under the Data folder and include the following namespaces:
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.OCRProcessor;
 using Syncfusion.Pdf.Parsing;
-using System.IO;
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Use the following code sample to perform OCR on the entire PDF document using [PerformOCR](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html#Syncfusion_OCRProcessor_OCRProcessor_PerformOCR_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_String_) method of the [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html) class in the **ExportService** file.  
+Step 5: Use the following code sample to perform OCR on the entire PDF document using the [PerformOCR](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html#Syncfusion_OCRProcessor_OCRProcessor_PerformOCR_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_String_) method of the [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html) class in the **ExportService** file:
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public MemoryStream CreatePdf()
 {   
-    //Initialize the OCR processor.
+    // Initialize the OCR processor
     using (OCRProcessor processor = new OCRProcessor("Tesseractbinaries/Windows"))
     {
         FileStream fileStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-        //Load a PDF document.
+        // Load a PDF document
         PdfLoadedDocument lDoc = new PdfLoadedDocument(fileStream);
-        //Set OCR language to process.
+        // Set OCR language
         processor.Settings.Language = Languages.English;
-        //Process OCR by providing the PDF document.
+        // Set Tesseract version
+        processor.Settings.TesseractVersion = TesseractVersion.Version5_0;
+        // Perform OCR on the document
         processor.PerformOCR(lDoc, "tessdata/");
-        //Create memory stream.
+        // Create memory stream and save the processed document
         MemoryStream stream = new MemoryStream();
-        //Save the document to memory stream.
         lDoc.Save(stream);
         return stream;
     }
@@ -74,7 +104,7 @@ public MemoryStream CreatePdf()
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Register your service in the ConfigureServices method available in the *Startup.cs* class as follows.
+Step 6: Register your service in the **ConfigureServices** method available in **Startup.cs**:
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -90,19 +120,19 @@ public void ConfigureServices(IServiceCollection services)
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Inject ExportService into *FetchData.razor* using the following code.
+Step 7: Inject **ExportService** into **FetchData.razor** using the following code:
 
 {% tabs %}
 {% highlight CSHTML %}
 
 @inject ExportService exportService
 @inject Microsoft.JSInterop.IJSRuntime JS
-@using  System.IO
+@using System.IO
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Create a button in the *FetchData.razor* using the following code.
+Step 8: Create a button in **FetchData.razor** using the following code:
 
 {% tabs %}
 {% highlight CSHTML %}
@@ -112,7 +142,7 @@ Step 8: Create a button in the *FetchData.razor* using the following code.
 {% endhighlight %}
 {% endtabs %}
 
-Step 9: Add the PerformOCR method in *FetchData.razor* page to call the export service.
+Step 9: Add the **PerformOCR** method in **FetchData.razor** to call the export service:
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -122,9 +152,9 @@ Step 9: Add the PerformOCR method in *FetchData.razor* page to call the export s
    protected async Task PerformOCR()
    {
        ExportService exportService = new ExportService();
-       using (MemoryStream excelStream = exportService.CreatePdf())
+       using (MemoryStream pdfStream = exportService.CreatePdf())
        {
-           await JS.SaveAs("Output.pdf", excelStream.ToArray());
+           await JS.SaveAs("Output.pdf", pdfStream.ToArray());
        }
    }
 }
@@ -132,7 +162,7 @@ Step 9: Add the PerformOCR method in *FetchData.razor* page to call the export s
 {% endhighlight %}
 {% endtabs %}
 
-Step 10: Create a class file with the FileUtil name and add the following code to invoke the JavaScript action to download the file in the browser.
+Step 10: Create a class file named **FileUtil** and add the following code to invoke the JavaScript action to download the file in the browser:
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -149,7 +179,7 @@ public static class FileUtil
 {% endhighlight %}
 {% endtabs %}
 
-Step 11: Add the following JavaScript function in the *_Host.cshtml* available under the Pages folder.
+Step 11: Add the following JavaScript function in **_Host.cshtml** (available under the Pages folder):
 
 {% tabs %}
 {% highlight CSHTML %}
@@ -157,7 +187,7 @@ Step 11: Add the following JavaScript function in the *_Host.cshtml* available u
 <script type="text/javascript">
     function saveAsFile(filename, bytesBase64) {
         if (navigator.msSaveBlob) {
-            //Download document in Edge browser
+            // Download document in Edge browser
             var data = window.atob(bytesBase64);
             var bytes = new Uint8Array(data.length);
             for (var i = 0; i < data.length; i++) {
@@ -182,43 +212,37 @@ Step 11: Add the following JavaScript function in the *_Host.cshtml* available u
 
 Step 12: Build the project.
 
-Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
+Click **Build > Build Solution** or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
 Step 13: Run the project.
 
-Click the Start button (green arrow) or press F5 to run the app.
+Click the **Start** button (green arrow) or press <kbd>F5</kbd> to run the application.
 
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
 
-**Prerequisites**:
-
-* Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-* Install Visual Studio Code:  Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download?_exp_download=d53503e735).
-* Install C# Extension for VS Code: Open Visual Studio Code, go to the Extensions view (Ctrl+Shift+X), and search for 'C#'. Install the official [C# extension provided by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
-
-Step 1: Open the terminal (Ctrl+` ) and run the following command to create a new Blazor Server application
+Step 1: Open the terminal in Visual Studio Code using <kbd>Ctrl</kbd>+<kbd>`</kbd> and run the following command to create a new Blazor Server application:
 
 ```
 dotnet new blazorserver -n CreatePdfBlazorServerApp
 ```
-Step 2: Replace ****CreatePdfBlazorServerApp** with your desired project name.
 
-Step 3: Navigate to the project directory using the following command
+Step 2: Replace `CreatePdfBlazorServerApp` with your desired project name.
+
+Step 3: Navigate to the project directory using the following command:
 
 ```
 cd CreatePdfBlazorServerApp
 ```
-Step 4: Use the following command in the terminal to add the [Syncfusion.PDF.OCR.Net.Core](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net.Core) package to your project.
+
+Step 4: Use the following command to add the [Syncfusion.PDF.OCR.Net.Core](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net.Core) package to your project:
 
 ```
 dotnet add package Syncfusion.PDF.OCR.Net.Core
 ```
-N> 1. Beginning from version 21.1.x, the default configuration includes the addition of the TesseractBinaries and Tesseract language data folder paths, eliminating the requirement to explicitly provide these paths.
-N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 5: Create a new class file named *ExportService* under the Data folder and include the following namespaces in the file.
+Step 5: Create a new class file named **ExportService** under the Data folder and include the following namespaces:
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -230,26 +254,27 @@ using System.IO;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Use the following code sample to perform OCR on the entire PDF document using [PerformOCR](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html#Syncfusion_OCRProcessor_OCRProcessor_PerformOCR_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_String_) method of the [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html) class in the **ExportService** file.  
+Step 6: Use the following code sample to perform OCR on the entire PDF document using the [PerformOCR](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html#Syncfusion_OCRProcessor_OCRProcessor_PerformOCR_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_String_) method of the [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html) class in the **ExportService** file:
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public MemoryStream CreatePdf()
 {   
-    //Initialize the OCR processor.
+    // Initialize the OCR processor
     using (OCRProcessor processor = new OCRProcessor("Tesseractbinaries/Windows"))
     {
         FileStream fileStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-        //Load a PDF document.
+        // Load a PDF document
         PdfLoadedDocument lDoc = new PdfLoadedDocument(fileStream);
-        //Set OCR language to process.
+        // Set OCR language
         processor.Settings.Language = Languages.English;
-        //Process OCR by providing the PDF document.
+        // Set Tesseract version
+        processor.Settings.TesseractVersion = TesseractVersion.Version5_0;
+        // Perform OCR on the document
         processor.PerformOCR(lDoc, "tessdata/");
-        //Create memory stream.
+        // Create memory stream and save the processed document
         MemoryStream stream = new MemoryStream();
-        //Save the document to memory stream.
         lDoc.Save(stream);
         return stream;
     }
@@ -258,7 +283,7 @@ public MemoryStream CreatePdf()
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Register your service in the ConfigureServices method available in the *Startup.cs* class as follows.
+Step 7: Register your service in the **ConfigureServices** method available in **Startup.cs**:
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -274,19 +299,19 @@ public void ConfigureServices(IServiceCollection services)
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Inject ExportService into *FetchData.razor* using the following code.
+Step 8: Inject **ExportService** into **FetchData.razor** using the following code:
 
 {% tabs %}
 {% highlight CSHTML %}
 
 @inject ExportService exportService
 @inject Microsoft.JSInterop.IJSRuntime JS
-@using  System.IO
+@using System.IO
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 9: Create a button in the *FetchData.razor* using the following code.
+Step 9: Create a button in **FetchData.razor** using the following code:
 
 {% tabs %}
 {% highlight CSHTML %}
@@ -296,7 +321,7 @@ Step 9: Create a button in the *FetchData.razor* using the following code.
 {% endhighlight %}
 {% endtabs %}
 
-Step 10: Add the PerformOCR method in *FetchData.razor* page to call the export service.
+Step 10: Add the **PerformOCR** method in **FetchData.razor** to call the export service:
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -306,9 +331,9 @@ Step 10: Add the PerformOCR method in *FetchData.razor* page to call the export 
    protected async Task PerformOCR()
    {
        ExportService exportService = new ExportService();
-       using (MemoryStream excelStream = exportService.CreatePdf())
+       using (MemoryStream pdfStream = exportService.CreatePdf())
        {
-           await JS.SaveAs("Output.pdf", excelStream.ToArray());
+           await JS.SaveAs("Output.pdf", pdfStream.ToArray());
        }
    }
 }
@@ -316,7 +341,7 @@ Step 10: Add the PerformOCR method in *FetchData.razor* page to call the export 
 {% endhighlight %}
 {% endtabs %}
 
-Step 11: Create a class file with the FileUtil name and add the following code to invoke the JavaScript action to download the file in the browser.
+Step 11: Create a class file named **FileUtil** and add the following code to invoke the JavaScript action to download the file in the browser:
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -333,7 +358,7 @@ public static class FileUtil
 {% endhighlight %}
 {% endtabs %}
 
-Step 12: Add the following JavaScript function in the *_Host.cshtml* available under the Pages folder.
+Step 12: Add the following JavaScript function in **_Host.cshtml** (available under the Pages folder):
 
 {% tabs %}
 {% highlight CSHTML %}
@@ -341,7 +366,7 @@ Step 12: Add the following JavaScript function in the *_Host.cshtml* available u
 <script type="text/javascript">
     function saveAsFile(filename, bytesBase64) {
         if (navigator.msSaveBlob) {
-            //Download document in Edge browser
+            // Download document in Edge browser
             var data = window.atob(bytesBase64);
             var bytes = new Uint8Array(data.length);
             for (var i = 0; i < data.length; i++) {
@@ -366,7 +391,7 @@ Step 12: Add the following JavaScript function in the *_Host.cshtml* available u
 
 Step 13: Build the project.
 
-Run the following command in terminal to build the project.
+Run the following command in the terminal to build the project:
 
 ```
 dotnet build
@@ -383,11 +408,6 @@ dotnet run
 
 {% tabcontent JetBrains Raider %}
 
-**Prerequisites:**
-
-* JetBrains Rider.
-* Install .NET 8 SDK or later.
-
 Step 1. Open JetBrains Rider and create a new Blazor server-side app project.
 * Launch JetBrains Rider.
 * Click new solution on the welcome screen.
@@ -397,7 +417,7 @@ Step 1. Open JetBrains Rider and create a new Blazor server-side app project.
 * In the new Solution dialog, select Project Type as Web.
 * Enter a project name and specify the location.
 * Choose template as **Blazor Server App**.
-* Select the target framework (e.g., .NET 8.0, .NET 9.0).
+* Select the target framework (e.g., .NET 8.0, .NET 9.0 and .NET 10).
 * Click create.
 
 ![Creating a new Blazor server-side app project in JetBrains Rider](OCR-Images/Blazor-Server-App-JetBrains.png)
@@ -413,9 +433,6 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 * Click the Install button to complete the installation.
 
 ![Install the package](OCR-Images/Install-Blazor-JetBrains-Package.png)
-
-N> 1. Beginning from version 21.1.x, the default configuration includes the addition of the TesseractBinaries and Tesseract language data folder paths, eliminating the requirement to explicitly provide these paths.
-N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 4: Create a new class file named *ExportService* under the Data folder and include the following namespaces in the file.
 
