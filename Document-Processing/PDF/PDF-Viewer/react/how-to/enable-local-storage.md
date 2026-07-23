@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Manage local storage in React PDF Viewer | Syncfusion
+title: Manage session storage in React PDF Viewer | Syncfusion
 description: Learn how to control session-specific data storage in the React PDF Viewer using the enableLocalStorage property.
 control: PDF Viewer
 platform: document-processing
@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Manage local storage in PDF Viewer
+# Manage session storage in PDF Viewer
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer exposes the `enableLocalStorage` property to control how session-specific viewer data is stored. Configure this property to choose between the viewer's internal storage mechanism (in-memory collection) and the browser's session storage.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer exposes the `enableLocalStorage` property to control how session-specific viewer data is stored. Set this property to choose between in-memory storage and the browser's `sessionStorage`.
 
 ### Using the `enableLocalStorage` property
 
-Set `enableLocalStorage` to control whether the viewer preserves session data in an internal (in-memory) collection or uses browser session storage. When `enableLocalStorage` is `true`, the viewer keeps session data in memory for the current application session; when `false` (the default), session storage is used. Review memory implications before enabling in-memory storage for large documents or heavy interactive content.
+Set `enableLocalStorage` to control whether the viewer preserves session data in an in-memory collection or uses the browser's `sessionStorage`. When `enableLocalStorage` is `true`, the viewer keeps session data in memory for the current application session; when `false` (the default), `sessionStorage` is used. Review memory implications before enabling in-memory storage for large documents or heavy interactive content.
 
 {% tabs %}
 {% highlight js tabtitle="Server-Backed" %}
@@ -32,8 +32,8 @@ export function App() {
         documentPath="PDF_Succinctly.pdf"
         serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
         style={{ 'height': '680px' }}
-        // Enable or disable pinch zoom.
-        enableLocalStorage = "true"
+        // Enable or disable the use of browser session storage for viewer data.
+        enableLocalStorage={true}
       >
         <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
           Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
@@ -51,7 +51,7 @@ root.render(<App />);
 ### Considerations
 
 - **Increased memory usage**: Enabling in-memory storage can increase memory consumption, especially for large documents or when many interactive elements (form fields, annotations) are present.
-- **Dispose when unused**: Dispose or destroy the PDF Viewer instance when it is no longer required to avoid memory leaks, particularly when `enableLocalStorage` is `true`.
-- **Default behavior**: The default value is `false`, which uses the browser session storage unless explicitly changed.
+- **Destroy the instance when no longer needed**: Destroy the PDF Viewer instance when it is no longer required to avoid memory leaks, particularly when `enableLocalStorage` is `true`.
+- **Default behavior**: The default value is `false`, which uses the browser's `sessionStorage` unless explicitly changed.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to/)
