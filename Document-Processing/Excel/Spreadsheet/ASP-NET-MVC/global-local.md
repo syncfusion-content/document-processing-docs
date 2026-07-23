@@ -13,7 +13,7 @@ documentation: ug
 
 The [Localization](https://ej2.syncfusion.com/aspnetmvc/documentation/common/localization/) library allows you to localize the default text displayed by the Spreadsheet. Static text used by features such as cell formatting, merge cells, and data validation can be translated by defining the [locale](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_Locale) property and loading the corresponding translation object.
 
-The following table lists the locale keywords and their default text used in the Spreadsheet. The **Locale keywords** column contains the keys used in the translation object, and the **Text** column contains their default English text.
+The following table lists the locale keywords and their corresponding default text used in the Spreadsheet.
 
 |Locale keywords|Text|
 |---------------|----|
@@ -189,7 +189,7 @@ UnprotectSheet | Unprotect Sheet
 SelectCells | Select cells
 FormatCells | Format cells
 FormatRows | Format rows
-Format Columns | Format columns
+FormatColumns | Format columns
 InsertLinks | Insert links
 ProtectContent | Protect the contents of locked cells
 ProtectAllowUser | Allow all users of this worksheet to |

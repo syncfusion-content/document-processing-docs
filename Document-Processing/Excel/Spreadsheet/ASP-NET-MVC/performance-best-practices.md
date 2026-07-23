@@ -122,8 +122,6 @@ The following code example shows how to set `isFullPost` to **false** in the Spr
 
 ### Configure JSON serialization options during save
 
-Serialization options in the Spreadsheet allows you to exclude specific features such as styles, formats, charts, images, wrap, etc. from the `Workbook JSON object` when saving it using the `saveAsJson` method in the Spreadsheet. By skipping unnecessary features, you can significantly improve performance, especially when working with large or complex workbooks.
-
 Serialization options in the Spreadsheet allow you to exclude specific features, such as styles, number formats, charts, images, and wrap, from the `Workbook JSON object` when saving it using the `saveAsJson` method. Skipping unnecessary features can improve performance when working with large or complex workbooks.
 
 This is particularly useful when:
