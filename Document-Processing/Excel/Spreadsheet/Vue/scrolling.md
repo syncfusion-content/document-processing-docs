@@ -20,13 +20,13 @@ You have the following options in Scrolling by using [`scrollSettings`](https://
 
 ## Finite Scrolling
 
-Finite scrolling supports two type of modes in scrolling. You can use the [`isFinite`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/scrollSettings/#isfinite) property in [`scrollSettings`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#scrollsettings) to specify the mode of scrolling.
+Finite scrolling supports two types of modes. You can use the [`isFinite`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/scrollSettings/#isfinite) property in [`scrollSettings`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#scrollsettings) to specify the mode of scrolling.
 
 * Finite - This mode does not create a new row/column when the scrollbar reaches the end. This can be achieved by setting the [`isFinite`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/scrollSettings/#isfinite) property as `true`.
 
 * Infinite - This mode creates a new row/column when the scrollbar reaches the end. This can be achieved by setting the [`isFinite`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/scrollSettings/#isfinite) property as `false`.
 
-> By Default, the `isFinite` property is `false`.
+> By default, the `isFinite` property is `false`.
 
 ## Virtual Scrolling
 
@@ -34,7 +34,7 @@ Finite scrolling supports two type of modes in scrolling. You can use the [`isFi
 
 In virtual scrolling `enableVirtualization` is set to true means, it allows you to load the spreadsheet data while scrolling.
 
-> By Default, the `enableVirtualization` property is `true`.
+> By default, the `enableVirtualization` property is `true`.
 
 **User Interface**:
 
@@ -46,7 +46,7 @@ You can scroll through the worksheet using one of the following ways,
 
 ## Finite scrolling with defined rows and columns
 
-If you want to perform scrolling with defined rows and columns, you must define `rowCount` and `colCount` in the [`sheets`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#sheets) property and set `isFinite` as true and `enableVirtualization` as false in `scrollSettings`.
+To restrict scrolling to a fixed range, define `rowCount` and `colCount` in the [`sheets`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#sheets) property, set `isFinite` to `true`, and set `enableVirtualization` to `false` in `scrollSettings`.
 
 The following code example shows the finite scrolling with defined rows and columns in the spreadsheet. Here, we used rowCount as 20 and colCount as 20, after reaching the 20th row or 20th column you can't able to scroll.
 
@@ -63,4 +63,4 @@ The following code example shows the finite scrolling with defined rows and colu
 
 ## Note
 
-You can refer to our [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/vue/#/tailwind3/spreadsheet/default.html) to knows how to present and manipulate data.
+You can refer to our [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations.

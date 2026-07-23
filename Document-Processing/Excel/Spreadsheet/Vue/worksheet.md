@@ -2,7 +2,7 @@
 layout: post
 title: Worksheet in Vue Spreadsheet component | Syncfusion
 description: Learn here all about Worksheet in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
-control: Worksheet 
+control: Spreadsheet
 platform: document-processing
 documentation: ug
 ---
@@ -13,7 +13,7 @@ Worksheet is a collection of cells organized in the form of rows and columns tha
 
 ## Add sheet
 
-You can dynamically add or insert a sheet by one of the following ways,
+You can dynamically add or insert a sheet in one of the following ways,
 
 * Click the `Add Sheet` button in the sheet tab. This will add a new empty sheet next to current active sheet.
 * Right-click on the sheet tab, and then select `Insert` option from the context menu to insert a new empty sheet before the current active sheet.
@@ -34,7 +34,7 @@ The following code example shows the insert sheet operation in spreadsheet.
 
 ### Insert a sheet programmatically and make it active sheet
 
-A sheet is a collection of cells organized in the form of rows and columns that allows you to store, format, and manipulate the data. Using [insertSheet](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#insertsheet) method, you can insert one or more sheets at the desired index. Then, you can make the inserted sheet as active sheet by focusing the start cell of that sheet using the [goTo](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#goto) method.
+Using the [insertSheet](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#insertsheet) method, you can insert one or more sheets at the desired index. Then, you can make the inserted sheet the active sheet by focusing the start cell of that sheet using the [goTo](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#goto) method.
 
 The following code example shows how to insert a sheet programmatically and make it the active sheet.
 
@@ -51,30 +51,30 @@ The following code example shows how to insert a sheet programmatically and make
 
 ## Delete sheet
 
-The Spreadsheet has support for removing an existing worksheet. You can dynamically delete the existing sheet by the following way,
+The Spreadsheet has support for removing an existing worksheet. You can dynamically delete the existing sheet in one of the following ways:
 
-* Right-click on the sheet tab, and then select `Delete` option from context menu.
-* Using [`delete`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#delete ) method to delete the sheets.
+* Right-click on the sheet tab, and then select the `Delete` option from the context menu.
+* Use the [`delete`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#delete) method to delete the sheets.
 
 ## Rename sheet
 
-You can dynamically rename an existing worksheet in the following way,
+You can dynamically rename an existing worksheet in one of the following ways:
 
-* Right-click on the sheet tab, and then select `Rename` option from the context menu.
+* Right-click on the sheet tab, and then select the `Rename` option from the context menu.
 
 ## Headers
 
-By default, the row and column headers are visible in worksheets. You can dynamically show or hide worksheet headers by using one of the following ways,
+By default, the row and column headers are visible in worksheets. You can dynamically show or hide worksheet headers in one of the following ways:
 
-* Switch to `View` tab, and then select `Hide Headers` option to hide both the row and column headers.
-* Set `showHeaders` property in `sheets` as `true` or `false` to show or hide the headers at initial load. By default, the `showHeaders` property is enabled in each worksheet.
+* Switch to the `View` tab, and then select the `Hide Headers` option to hide both the row and column headers.
+* Set the `showHeaders` property of a sheet to `true` or `false` to show or hide the headers at initial load. By default, the `showHeaders` property is enabled in each worksheet.
 
 ## Gridlines
 
-Gridlines act as a border like appearance of cells. They are used to distinguish cells on the worksheet. You can dynamically show or hide gridlines by using one of the following ways,
+Gridlines appear as cell borders. They are used to distinguish cells on the worksheet. You can dynamically show or hide gridlines in one of the following ways:
 
-* Switch to `View` tab, and then select `Hide Gridlines` option to hide the gridlines in worksheet.
-* Set `showGridLines` property in `sheets` as `true` or `false` to show or hide the gridlines at initial load. By default, the `showGridLines` property is enabled in each worksheet.
+* Switch to the `View` tab, and then select the `Hide Gridlines` option to hide the gridlines in the worksheet.
+* Set the `showGridLines` property of a sheet to `true` or `false` to show or hide the gridlines at initial load. By default, the `showGridLines` property is enabled in each worksheet.
 
 The following code example shows the headers and gridlines operation in spreadsheet.
 
@@ -93,7 +93,7 @@ The following code example shows the headers and gridlines operation in spreadsh
 
 Hiding a worksheet can help prevent unauthorized or accidental changes to your file.
 
-There are three visibility state as like Microsoft Excel,
+There are three visibility states, like Microsoft Excel:
 
 | State | Description |
 |-------|---------|
@@ -116,7 +116,7 @@ The following code example shows the three types of sheet visibility state.
 
 ## Note
 
-You can refer to our [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/vue/#/tailwind3/spreadsheet/default.html) to knows how to present and manipulate data.
+You can refer to our [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations.
 
 ## See Also
 

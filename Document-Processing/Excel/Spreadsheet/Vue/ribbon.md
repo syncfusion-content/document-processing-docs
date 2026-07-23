@@ -9,11 +9,11 @@ documentation: ug
 
 # Ribbon in Vue Spreadsheet component
 
-It helps to organize a spreadsheet's features into a series of tabs. By clicking the expand or collapse icon, you can expand or collapse the ribbon toolbar dynamically.
+The Ribbon in the Syncfusion Vue Spreadsheet component organizes spreadsheet features into a series of tabs. Click the expand or collapse icon to expand or collapse the ribbon toolbar dynamically.
 
 ## Ribbon Customization
 
-You can customize the ribbon using the following methods,
+You can customize the ribbon using the following methods.
 
 | Method | Action |
 |-------|---------|
@@ -42,7 +42,7 @@ The following code example shows the usage of ribbon customization.
 
 ## Note
 
-You can refer to our [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/vue/#/tailwind3/spreadsheet/default.html) to knows how to present and manipulate data.
+You can refer to our [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations.
 
 ## See Also
 

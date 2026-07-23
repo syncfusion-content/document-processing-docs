@@ -9,7 +9,7 @@ documentation: ug
 
 # Sort in Vue Spreadsheet component
 
-Sorting helps arranging the data to a specific order in a selected range of cells. You can use the [`allowSorting`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#allowsorting) property to enable or disable sorting functionality.
+Sorting helps arrange the data in a specific order within a selected range of cells. Use the [`allowSorting`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#allowsorting) property to enable or disable sorting functionality.
 
 > * The default value for `allowSorting` property is `true`.
 
@@ -92,7 +92,7 @@ When you want to perform sorting on multiple columns, it can be done by any of t
 
 ### Custom sort dialog
 
-The custom sort dialog helps sorting multiple columns in the selected range by utilizing the rich UI. This dialog will be appeared while choosing the `Custom sort…` from the Ribbon item or context menu item. By default, sort criteria with the first column name from the selected range will be appeared in the dialog on initial load and it cannot be removed.
+The custom sort dialog sorts multiple columns in the selected range by utilizing the rich UI. This dialog appears when you choose the `Custom sort…` item from the Ribbon or context menu. By default, the first column name from the selected range appears in the dialog on initial load and it cannot be removed.
 
 You can add multiple criteria using the `Add Column` button at the bottom of the dialog. Thus, multiple columns can be specified with different sort order. The newly added sort criteria items can be removed using the `delete` icons at the end of each items.
 
@@ -100,7 +100,7 @@ You can refer to the [`Data contains header`](./sort/#data-contains-header) topi
 
 ### Passing sort criteria manually
 
-The multi-column sorting can also be performed manually by passing sort options to the `sort()` method programmatically. The `sortOption` have the following arguments:
+The multi-column sorting can also be performed manually by passing sort options to the `sort()` method programmatically. The `sortOption` has the following arguments:
 * [`sortDescriptors`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#sortdescriptors) – Sort criteria collection that holds the collection of field name, sort order, and [`sortComparer`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#sortcomparer).
 * `containsHeader` – Boolean argument that specifies whether the range has headers in it.
 * `caseSensitive` – Boolean argument that specifies whether the range needs to consider case.
@@ -161,7 +161,7 @@ The following errors have been handled for sorting,
 
 ## Note
 
-You can refer to our [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/vue/#/tailwind3/spreadsheet/default.html) to knows how to present and manipulate data.
+You can refer to our [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations.
 
 ## See Also
 

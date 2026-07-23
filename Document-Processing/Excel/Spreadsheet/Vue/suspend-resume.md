@@ -78,7 +78,7 @@ Suspends visual updates in the Spreadsheet.
 Resumes visual updates and applies all pending changes.
 
 **Behavior:**
-- Applies all operations performed after `suspendRefresh`
+- Applies all operations performed between `suspendRefresh` and `resumeRefresh`
 - Refreshes the Spreadsheet UI once
 - Improves rendering efficiency for bulk operations
 
@@ -120,7 +120,7 @@ The following types of operations can be performed between `suspendRefresh` and 
 
 - Use suspend and resume UI refresh when multiple operations are executed together.
 - Avoid using it for few or simple operations.
-- Useful during initialization and large data updates.
+- This feature is useful during initialization and large data updates.
 - Data and model changes are processed during the suspended state; only visual refresh is delayed.
 
 ## See Also
