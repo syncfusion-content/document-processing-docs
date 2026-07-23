@@ -13,13 +13,13 @@ A group of cells in a sheet is known as a cell range.
 
 ## Wrap text
 
-Wrap text allows you to display large content as multiple lines in a single cell. By default, wrap text support is enabled. Use the [`allowWrap`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowwrap) property to enable or disable wrap text support in the Spreadsheet.
+Wrap text allows you to display large content as multiple lines in a single cell. By default, wrap text support is enabled. Use the [`allowWrap`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowwrap) property to enable or disable wrap text support in the Spreadsheet.
 
 You can apply wrap text to or remove it from a cell or range of cells in one of the following ways:
 
 * Using the `wrap` property in `cell`, you can enable or disable wrap text on a cell at initial load.
 * Select or deselect the wrap button from the ribbon toolbar to apply wrap text to or remove it from the selected range.
-* Using the [`wrap`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#wrap) method, you can apply or remove wrap text once the component is loaded.
+* Using the [`wrap`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#wrap) method, you can apply or remove wrap text once the component is loaded.
 
 The following code example shows the wrap text functionality in the Spreadsheet.
 
@@ -43,13 +43,13 @@ The following features have some limitations in wrap text:
 
 ## Merge cells
 
-Merging cells allows users to span two or more cells in the same row or column into a single cell. When cells with multiple values are merged, the top-leftmost cell data becomes the data for the merged cell. By default, the merge cells option is enabled. Use the [`allowMerge`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowmerge) property to enable or disable the merge cells option in the Spreadsheet.
+Merging cells allows users to span two or more cells in the same row or column into a single cell. When cells with multiple values are merged, the top-leftmost cell data becomes the data for the merged cell. By default, the merge cells option is enabled. Use the [`allowMerge`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowmerge) property to enable or disable the merge cells option in the Spreadsheet.
 
 You can merge a range of cells in the following ways:
 
 * Set the `rowSpan` and `colSpan` properties in `cell` to merge a specified number of cells at initial load.
 * Select the range of cells and apply merge by selecting the desired option from the ribbon toolbar.
-* Use the [`merge`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#merge) method to merge the range of cells once the component is loaded.
+* Use the [`merge`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#merge) method to merge the range of cells once the component is loaded.
 
 The available merge options in spreadsheet are:
 
@@ -82,7 +82,7 @@ The following features have limitations in Merge:
 
 ## Data Validation
 
-Data Validation is used to restrict the user from entering invalid data. You can use the [`allowDataValidation`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowdatavalidation) property to enable or disable data validation.
+Data Validation is used to restrict the user from entering invalid data. You can use the [`allowDataValidation`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowdatavalidation) property to enable or disable data validation.
 
 > * The default value for the `allowDataValidation` property is `true`.
 
@@ -93,7 +93,7 @@ You can apply data validation to restrict the type of data or the values that us
 You can apply data validation in using one of the following ways:
 
 * Select the Data tab in the Ribbon toolbar, and then choose the Data Validation item.
-* Use the [`addDataValidation()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#adddatavalidation) method programmatically.
+* Use the [`addDataValidation()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#adddatavalidation) method programmatically.
 
 ### Clear Validation
 
@@ -102,7 +102,7 @@ The clear validation feature is used to remove data validations from the specifi
 You can clear a data validation rule in one of the following ways:
 
 * Select the Data tab in the Ribbon toolbar, and then choose the Clear Validation item.
-* Use the [`removeDataValidation()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#removedatavalidation) method programmatically.
+* Use the [`removeDataValidation()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#removedatavalidation) method programmatically.
 
 ### Highlight Invalid Data
 
@@ -111,7 +111,7 @@ Highlight invalid data feature is used to highlight the previously entered inval
 You can highlight invalid data in one of the following ways:
 
 * Select the Data tab in the Ribbon toolbar, and then choose the Highlight Invalid Data item.
-* Use the [`addInvalidHighlight()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#addinvalidhighlight) method programmatically.
+* Use the [`addInvalidHighlight()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#addinvalidhighlight) method programmatically.
 
 ### Clear Highlighted Invalid Data
 
@@ -120,7 +120,7 @@ Clear highlight feature is used to remove the highlight from invalid cells.
 You can clear the highlighted invalid data in the following ways:
 
 * Select the Data tab in the Ribbon toolbar, and then choose the Clear Highlight item.
-* Use the [`removeInvalidHighlight()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#removeinvalidhighlight) method programmatically.
+* Use the [`removeInvalidHighlight()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#removeinvalidhighlight) method programmatically.
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/spreadsheet/javascript-es5/data-validation-cs1/index.js %}
@@ -145,7 +145,7 @@ When this rule is applied, the Spreadsheet evaluates the entered value against t
 You can apply custom data validation using two methods.
 
 * The first is through the Data Validation dialog in the Ribbon toolbar. Navigate to the Data tab, select the Data Validation option, and choose the Custom type from the Allow dropdown menu.
-* The second method is programmatically, using the [`addDataValidation()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#adddatavalidation) method, which allows developers to set custom rules dynamically via code.
+* The second method is programmatically, using the [`addDataValidation()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#adddatavalidation) method, which allows developers to set custom rules dynamically via code.
 
 The following code example demonstrates how to add custom data validation with a formula in a Spreadsheet.
 
@@ -171,12 +171,12 @@ The following features have some limitations in Data Validation:
 
 ## Auto Fill
 
-Auto Fill is used to fill cells with data based on adjacent cells. It also follows a pattern from adjacent cells if available. There is no need to enter repeated data manually. You can use the [`allowAutoFill`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowautofill) property to enable/disable auto fill support. You can also use the [`showFillOptions`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/autoFillSettings/#showfilloptions) property to enable/disable the fill options and the [`fillType`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/autoFillSettings/#filltype) property to change the default auto fill option, both of which are available in [`autoFillSettings`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#autofillsettings).
+Auto Fill is used to fill cells with data based on adjacent cells. It also follows a pattern from adjacent cells if available. There is no need to enter repeated data manually. You can use the [`allowAutoFill`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowautofill) property to enable/disable auto fill support. You can also use the [`showFillOptions`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/autoFillSettings#showfilloptions) property to enable/disable the fill options and the [`fillType`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/autoFillSettings#filltype) property to change the default auto fill option, both of which are available in [`autoFillSettings`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#autofillsettings).
 
 You can do this in one of the following ways:
 
 * Using the AutoFillOptions menu, which opens when you drag the fill handle of a cell.
-* Use the [`autoFill()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#autofill) method programmatically.
+* Use the [`autoFill()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#autofill) method programmatically.
 
 The available parameters in the `autoFill()` method are:
 
@@ -258,7 +258,7 @@ Clear feature helps you to clear the cell contents (formulas and data), formats 
 You can apply the clear feature in one of the following ways:
 
 * Select the clear icon in the ribbon toolbar under the Home tab.
-* Use the [`clear()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#clear) method to clear the values.
+* Use the [`clear()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#clear) method to clear the values.
 
 Clear has the following types in the Spreadsheet:
 
@@ -271,7 +271,7 @@ Clear has the following types in the Spreadsheet:
 
 ### Methods
 
-Clear the cell contents and formats in the Spreadsheet document by using the [clear](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#clear) method. The [clear](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#clear) method has `type` and `range` as parameters. The following code example shows how to clear the cell contents and formats in the button click event.
+Clear the cell contents and formats in the Spreadsheet document by using the [clear](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#clear) method. The [clear](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#clear) method has `type` and `range` as parameters. The following code example shows how to clear the cell contents and formats in the button click event.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}

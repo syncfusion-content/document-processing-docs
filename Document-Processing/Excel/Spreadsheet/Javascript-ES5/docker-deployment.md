@@ -116,8 +116,6 @@ Now the Spreadsheet server Docker instance runs on localhost with the provided p
 
 By default, the Spreadsheet Docker container runs in the `en_US` culture. You can configure a different culture for the Spreadsheet server by setting the `LC_ALL`, `LANGUAGE`, and `LANG` environment variables in the `docker-compose.yml` file. These environment variables are applied at container startup to set the locale of the .NET process inside the container.
 
-> Common supported values include `en_US.UTF-8`, `de_DE.UTF-8`, `fr_FR.UTF-8`, `es_ES.UTF-8`, `ja_JP.UTF-8`, and `zh_CN.UTF-8`. The locale must be available inside the base image; otherwise, the server falls back to the default `en_US`.
-
 ```yaml
 services:
   spreadsheet-server:
