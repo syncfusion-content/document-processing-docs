@@ -1,6 +1,6 @@
 ---
 title: Working with Portfolio | Syncfusion
-description: Explains how to create a PDF portfolio that brings together content from a variety of sources, including documents, drawings, images, e-mail, spreadsheets, and web pages, and how to extract or remove files from it.
+description: Create and manage PDF portfolios with Syncfusion .NET PDF, including adding, extracting, and removing files from multiple content sources
 platform: document-processing
 control: PDF
 documentation: UG

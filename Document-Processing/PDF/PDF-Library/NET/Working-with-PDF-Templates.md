@@ -1,6 +1,6 @@
 ---
 title: Working with PDF templates | Syncfusion
-description: This section explains how to create and use PDF templates as reusable drawing surfaces, build page template elements for headers and footers, overlay templates, and add page templates to existing PDF documents.
+description: Create and use PDF templates with Syncfusion .NET PDF for headers, footers, overlays, and consistent page elements in new or existing documents
 platform: document-processing
 control: PDF
 documentation: UG

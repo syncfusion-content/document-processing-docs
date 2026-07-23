@@ -1,6 +1,6 @@
 ---
 title: Working with Metadata | Syncfusion
-description: This section explains how to add, modify, and read document information and XMP metadata in PDF documents using the Syncfusion .NET PDF library.
+description: This section explains how to add, modify, and read document information and XMP metadata in PDF documents using the Syncfusion .NET PDF library
 platform: document-processing
 control: PDF
 documentation: UG
@@ -8,44 +8,13 @@ documentation: UG
 
 # Working with Metadata (XMP)
 
-Metadata is data that describes the characteristics or properties of a document. It includes document information properties such as author, modification date, and copyright status, as well as structured XMP packets that conform to the [Extensible Metadata Platform (XMP)](https://www.adobe.com/products/xmp.html) specification. PDF readers and search engines use this metadata to index, classify, and display information about a document.
+Metadata is data that describes the characteristics or properties of a document. It includes document information properties such as author, modification date, and copyright status, as well as structured XMP packets that conform to the Extensible Metadata Platform (XMP) specification. PDF readers and search engines use this metadata to index, classify, and display information about a document.
 
 Syncfusion<sup>&reg;</sup> PDF provides comprehensive support for reading and writing both document information properties and XMP metadata, including the standard XMP schemas and custom user-defined schemas.
-
-## Assemblies and NuGet packages
-
-The following assemblies or NuGet packages are required to work with PDF metadata.
-
-**Assemblies**
-
-* Syncfusion.Pdf.Base
-* Syncfusion.Drawing.Base
-
-**NuGet packages**
-
-* [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) (cross-platform)
-* [Syncfusion.Pdf.WinForms](https://www.nuget.org/packages/Syncfusion.Pdf.WinForms) (Windows-specific)
-* [Syncfusion.Pdf.Wpf](https://www.nuget.org/packages/Syncfusion.Pdf.Wpf) (Windows-specific)
-* [Syncfusion.Pdf.AspNet](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet) (ASP.NET Web Forms)
-* [Syncfusion.Pdf.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet.Mvc5) (ASP.NET MVC5)
-* [Syncfusion.Pdf.AspNet.Mvc4](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet.Mvc4) (ASP.NET MVC4)
-
-For more information, refer to the [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) and [NuGet Packages Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) documentation.
 
 ## Working with document information
 
 Document information, also called the **Document Information Dictionary**, is a simpler set of metadata properties stored in the PDF file that is used by Acrobat and other PDF readers to display information about a document. The [PdfDocumentInformation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentInformation.html) class exposes the following commonly used properties.
-
-| Property | Description |
-|----------|-------------|
-| [Author](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentInformation.html#Syncfusion_Pdf_PdfDocumentInformation_Author) | The name of the person who created the document. |
-| [Title](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentInformation.html#Syncfusion_Pdf_PdfDocumentInformation_Title) | The title of the document. |
-| [Subject](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentInformation.html#Syncfusion_Pdf_PdfDocumentInformation_Subject) | The subject of the document. |
-| [Keywords](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentInformation.html#Syncfusion_Pdf_PdfDocumentInformation_Keywords) | Keywords associated with the document. |
-| [Creator](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentInformation.html#Syncfusion_Pdf_PdfDocumentInformation_Creator) | The application that created the original document. |
-| [Producer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentInformation.html#Syncfusion_Pdf_PdfDocumentInformation_Producer) | The application that produced the PDF. |
-| [CreationDate](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentInformation.html#Syncfusion_Pdf_PdfDocumentInformation_CreationDate) | The date and time the document was created. |
-| [ModificationDate](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentInformation.html#Syncfusion_Pdf_PdfDocumentInformation_ModificationDate) | The date and time the document was last modified. |
 
 The following code example shows how to set the basic document information properties.
 
@@ -54,7 +23,6 @@ The following code example shows how to set the basic document information prope
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
 using System;
-using System.IO;
 using Syncfusion.Pdf;
 
 //Create a PDF document.
@@ -72,10 +40,7 @@ pdfDoc.DocumentInformation.CreationDate = DateTime.Now;
 pdfDoc.DocumentInformation.ModificationDate = DateTime.Now;
 
 //Save and close the document.
-using (FileStream outputStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.Write))
-{
-    pdfDoc.Save(outputStream);
-}
+pdfDoc.Save("Output.pdf");
 pdfDoc.Close(true);
 
 {% endhighlight %}
@@ -131,10 +96,6 @@ pdfDoc.Close(True)
 {% endhighlight %}
 
 {% endtabs %}
-
-Document information is also available on existing PDF documents through the same [DocumentInformation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_DocumentInformation) property of [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html).
-
-> **Note:** The `Producer` property of `PdfDocumentInformation` is set automatically by Syncfusion<sup>&reg;</sup> PDF when the document is saved. Setting a custom value overrides this default behavior.
 
 ## Adding XMP metadata in a new PDF document
 
@@ -255,7 +216,6 @@ The following code example shows how to add XMP basic schema to an existing PDF 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Metadata/Adding-XMP-metadata-to-an-existing-PDF-document/.NET/Adding-XMP-metadata-to-an-existing-PDF-document/Program.cs" %}
 
-using System.IO;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Parsing;
 using Syncfusion.Pdf.Xmp;
@@ -1447,12 +1407,4 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Metadata/Extracting-XMP-metadata-from-PDF-image).
 
-> **Note:** To extract image information from a PDF page in .NET Core, add the [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) package reference to your project.
-
-## See also
-
-* [Working with Document](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-document)
-* [Working with Document Conversions](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-document-conversions)
-* [Working with Images](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-images)
-* [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required)
-* [NuGet Packages Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required)
+N> To extract image information from a PDF page in .NET Core, add the [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) package reference to your project.

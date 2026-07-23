@@ -1,12 +1,12 @@
 ---
 title: Working with Images | Syncfusion
-description: This section explains how to add and replace images in PDF documents using the Syncfusion .NET PDF library. Syncfusion PDF supports both raster and vector images.
+description: Add or replace raster and vector images in PDF documents with Syncfusion .NET PDF, enabling flexible image handling and customization.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Working with Images
+# Working with PDF Images and Graphics
 
 Syncfusion<sup>&reg;</sup> PDF supports both raster and vector images.
 
@@ -34,7 +34,6 @@ The following code snippet shows how to add a file from disk to the PDF document
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Images/Insert-image-in-a-new-PDF-document/.NET/Insert-image-in-a-new-PDF-document/Program.cs" %}
 
-using System.IO;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 
@@ -115,7 +114,6 @@ You can add images to an existing PDF document by loading the PDF with [PdfLoade
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Images/Insert-image-in-an-existing-PDF-document/.NET/Insert-image-in-an-existing-PDF-document/Program.cs" %}
 
-using System.IO;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Parsing;
@@ -250,7 +248,6 @@ doc.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports System.IO
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Graphics
 Imports Syncfusion.Pdf.Parsing
@@ -374,7 +371,6 @@ The following code example shows how to add a mask to a TIFF image.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Images/Add-a-mask-to-TIFF-image/.NET/Add-a-mask-to-TIFF-image/Program.cs" %}
 
-using System.IO;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 
@@ -457,7 +453,7 @@ doc.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Add-a-mask-to-TIFF-image/).
 
-> **Note:** Image masking in ASP.NET Core requires the [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) package.
+N> Image masking in ASP.NET Core requires the [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) package.
 
 ## Replacing images in an existing PDF document
 
@@ -467,7 +463,6 @@ Syncfusion<sup>&reg;</sup> PDF allows you to replace images in an existing PDF d
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-using System.IO;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Parsing;
 
@@ -534,7 +529,6 @@ You can allow a large image to paginate across multiple pages in the PDF documen
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Images/Paginate-an-image-in-PDF-document/.NET/Paginate-an-image-in-PDF-document/Program.cs" %}
 
-using System.IO;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 
@@ -621,7 +615,6 @@ This example demonstrates how to draw an image in a PDF document and apply a cli
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Images/Clipping-and-graphics-state/.NET/Clipping-and-graphics-state/Program.cs" %}
 
-using System.IO;
 using Syncfusion.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
@@ -752,7 +745,6 @@ You can add transparency and rotation to the image using the [SetTransparency](h
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Images/Add-transparancy-and-rotation-to-the-image/.NET/Add-transparancy-and-rotation-to-the-image/Program.cs" %}
 
-using System.IO;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 
@@ -1177,4 +1169,4 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Remove-images-from-PDF-document). 
 
-> **Note:** Removing images from an existing PDF document in ASP.NET Core requires the [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) package.
+N> Removing images from an existing PDF document in ASP.NET Core requires the [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) package.

@@ -1,12 +1,12 @@
 ---
 title: Working with Layers | Syncfusion
-description: This section explains how to add, modify, remove, and toggle the visibility of layers (Optional Content Groups) in PDF documents using the Syncfusion .NET PDF library.
+description: Manage PDF layers (Optional Content Groups) with Syncfusion .NET PDF to add, edit, remove, and control layer visibility dynamically
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Working with Layers
+# Working with PDF Layers
 
 Layers, also known as **Optional Content Groups** (OCG), are sections of content in a PDF document that can be selectively viewed or hidden by document authors or consumers. This capability is useful in items such as CAD drawings, layered artwork, maps, and multi-language documents.
 
@@ -133,15 +133,13 @@ The following code example illustrates how to add multiple layers to an existing
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Layer/Add-the-multiple-layers-in-an-existing-PDF-document/.NET/Add-the-multiple-layers-in-an-existing-PDF-document/Program.cs" %}
 
-using System.IO;
 using Syncfusion.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Parsing;
 
 //Load the existing PDF document.
-FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Get the first page from the document.
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 
@@ -164,7 +162,6 @@ graphics.DrawEllipse(pen, bounds);
 //Save and close the document.
 loadedDocument.Save("Output.pdf");
 loadedDocument.Close(true);
-inputStream.Close();
 
 {% endhighlight %}
 
@@ -250,7 +247,6 @@ The following code example illustrates how to add an annotation to a layer.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Layer/Adding-annotation-to-layer-in-the-PDF-document/.NET/Adding-annotation-to-layer-in-the-PDF-document/Program.cs" %}
 
-using System.IO;
 using Syncfusion.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
@@ -277,13 +273,8 @@ annotation.Layer = layer;
 page.Annotations.Add(annotation);
 
 //Save and close the document.
-using (FileStream outputStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.Write))
-{
-    document.Save(outputStream);
-}
+document.Save("Output.pdf");
 document.Close(true);
-
-{% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
@@ -361,7 +352,6 @@ The following code example illustrates how to add an annotation to a layer in an
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Layer/Add-annotation-to-the-layer-in-an-existing-PDF-document/.NET/Add-annotation-to-the-layer-in-an-existing-PDF-document/Program.cs" %}
 
-using System.IO;
 using Syncfusion.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
@@ -369,8 +359,7 @@ using Syncfusion.Pdf.Interactive;
 using Syncfusion.Pdf.Parsing;
 
 //Load the existing PDF document.
-FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Get the first page from the document.
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 
@@ -476,7 +465,6 @@ Syncfusion<sup>&reg;</sup> PDF allows users to add nested layers in the PDF docu
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Layer/Add-nested-layers-in-the-PDF-document/.NET/Add-nested-layers-in-the-PDF-document/Program.cs" %}
 
-using System.IO;
 using Syncfusion.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
@@ -1076,13 +1064,3 @@ loadedDocument.Close(True)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Layer/Removing-the-layer-with-its-graphical-content).
-
-> **Note:** When you call [RemoveAt(index)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentLayerCollection.html#Syncfusion_Pdf_PdfDocumentLayerCollection_RemoveAt_System_Int32_) without the second parameter, the layer is removed but its graphical content is preserved on the page. Pass `true` as the second parameter to remove both the layer entry and its graphical content.
-
-## See also
-
-* [Working with Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-annotations)
-* [Working with Bookmarks](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-bookmarks)
-* [Working with Document](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-document)
-* [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required)
-* [NuGet Packages Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required)

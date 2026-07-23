@@ -1,6 +1,6 @@
 ---
 title: Working with Document | PDF library | Syncfusion
-description: Learn to configure page settings, sections, document properties, viewer preferences, compression, multithreading, and URN support in PDFs using Syncfusion .NET PDF.
+description: Learn Syncfusion .NET PDF page setup, sections, document properties, viewer preferences, compression, multithreading, and URN support
 platform: document-processing
 control: PDF
 documentation: UG

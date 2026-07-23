@@ -101,7 +101,7 @@ doc.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports Syncfusion.Drawing
+Imports System.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Graphics
 
@@ -878,8 +878,6 @@ You can tag a table in a PDF document by specifying the tag type as `Table` from
 2. `PdfTagType.TableRow`
 3. `PdfTagType.TableDataCell`
 
-> Apply the `TableHeader` tag to every header cell, the `TableRow` tag to every row (including header rows), and the `TableDataCell` tag to every data cell so that assistive technology can announce the table structure correctly. Each row must contain the same number of cells, and tables should have a header row for full accessibility compliance.
-
 The following code snippet illustrates how to add a tag to a table element.
 
 {% tabs %}
@@ -1497,11 +1495,11 @@ document.Close(True)
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Tagged%20PDF/Add-tag-to-nested-list-elements-in-PDF-document).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Tagged%20PDF/Adding-tags-to-nested-list/.NET).
 
 ## Well-Tagged PDF (WTPDF)
 
-Well-Tagged PDF (WTPDF) enables the creation of fully reusable and accessible PDF 2.0 files in an interoperable manner. WTPDF is essentially identical to PDF/UA-2. A PDF file can be compliant with PDF/UA-2, WTPDF, or both.
+Well-Tagged PDF (WTPDF) enables the creation of fully reusable and accessible PDF 2.0 files in a standards-compliant manner. WTPDF is essentially identical to PDF/UA-2. A PDF file can be compliant with PDF/UA-2, WTPDF, or both.
 
 N> PDF/UA-2 is fully compatible with PDF/A-4.
 

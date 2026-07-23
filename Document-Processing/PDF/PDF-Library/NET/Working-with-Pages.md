@@ -1,6 +1,6 @@
 ﻿---
 title: Working with pages | Syncfusion
-description: This section explains how to add, insert, rearrange, remove, and split pages, detect empty pages, customize page numbering, and configure page-level actions in a PDF document.
+description: Add, insert, reorder, remove, and split PDF pages with Syncfusion .NET PDF, plus page numbering, page actions, and empty page detection
 platform: document-processing
 control: PDF
 documentation: UG
@@ -604,7 +604,7 @@ document.Close(True)
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Pages/Customize-section-page-numbering-styles-in-PDF/).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Pages/Add-section-wise-page-number/.NET-Framework).
 
 ## Getting the number of pages from a PDF document
 

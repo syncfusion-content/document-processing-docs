@@ -216,8 +216,8 @@ N> Layout-based text extraction may take additional processing time when compare
 
 The bounds-based text extraction API returns the bounding rectangle, content, and font details for each line, word, or glyph in the page. Use the API that matches your target framework:
 
-* In .NET Core / .NET 5+, use the `TextLineCollection` overloads.
-* In .NET Framework (Windows Forms, WPF, Xamarin), use the `TextLines` / `List<TextLine>` overloads.
+* In .NET Core, use the `TextLineCollection` overloads.
+* In .NET Framework (Windows Forms, WPF), use the `TextLines` / `List<TextLine>` overloads.
 
 ### Working with Lines
 
@@ -524,7 +524,7 @@ Dim glyphColor As Color = textGlyph.TextColor
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text%20Extraction/Get-text-glyph-details-from-extract-text/).
 
 N> In .NET Framework, use the `ExtractText(out List<TextData>)` or `ExtractText(out List<TextLine>)` method to extract text with metadata from a PDF.
-N> For .NET Core / .NET 5+, the equivalent method is `ExtractText(out TextLineCollection)`, which provides a unified structure for handling the extracted text data.
+N> For .NET Core, the equivalent method is `ExtractText(out TextLineCollection)`, which provides a unified structure for handling the extracted text data.
 
 ## Find Text
 
@@ -710,12 +710,3 @@ To retrieve form field values, you have two recommended options:
 1. [Flatten form fields](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-forms#flattening-form-fields-in-a-pdf): Convert interactive form fields into static page content, embedding their values directly into the PDF's text stream. After flattening, any text extraction process (such as `ExtractText`) includes these values.
 
 2. [Iterate through form fields directly](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-forms#enumerate-the-form-fields): Access each form field in the PDF's form collection and read its value programmatically. This approach provides the most accurate and structured method for extracting form data.
-
-## See also
-
-* [Working with Document](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-document)
-* [Working with Pages](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-pages)
-* [Working with Forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-forms)
-* [Working with Redaction](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-redaction)
-* [Working with Tagged PDF](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-tagged-pdf)
-* [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required)

@@ -1,6 +1,6 @@
 ---
 title: Working with Security | Syncfusion
-description: Learn how to protect PDF documents using RC4, AES, and AES-GCM encryption, set user and owner passwords, define permission flags, and decrypt or load protected PDF documents.
+description: Learn how to protect PDF documents with Syncfusion .NET PDF using RC4, AES, and AES-GCM encryption, passwords, permissions, and decryption features
 platform: document-processing
 control: PDF
 documentation: UG
@@ -612,7 +612,7 @@ document.Close(True)
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Security/Secure_data_with_AES_GCM/.NET).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Security/Secure_data%20_with%20_AES_GCM/.NET).
 
 ## Encryption options
 

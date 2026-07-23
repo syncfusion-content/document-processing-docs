@@ -19,18 +19,16 @@ N> We strongly recommend using `PdfGrid` for creating tables in PDF documents be
 
 Use the following guidelines to choose between `PdfGrid` and `PdfLightTable`:
 
-* Choose **PdfGrid** when you need:
+Choose **PdfGrid** when you need:
   * Direct, typed access to individual rows, columns, and cells.
   * Row span and column span support.
   * Nested grids (a grid inside a cell).
   * Built-in table styles and rich cell formatting.
 
-* Choose **PdfLightTable** when you need:
+Choose **PdfLightTable** when you need:
   * A lightweight table for simple, data-bound reports.
   * Minimal code and fewer customizations.
   * Compatibility with legacy code that uses the `PdfLightTable` API.
-
-For a complete walkthrough of the `PdfGrid` API, refer to [Working with Tables using PdfGrid](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/pdfgrid). For `PdfLightTable`, refer to [Working with Tables using PdfLightTable](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/pdflighttable).
 
 ## Difference between PdfLightTable and PdfGrid
 

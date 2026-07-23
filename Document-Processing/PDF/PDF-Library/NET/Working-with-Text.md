@@ -99,6 +99,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 N>  Due to the inherent limitations of the PDF specification and the rendering capabilities of PDF libraries, emojis with skin tone modifiers are not supported in generated PDF documents. Only the base versions of emojis can be displayed. This limitation is common across most PDF libraries, as the PDF format does not explicitly support rendering skin tone variations in emojis.
 
 ## The importance of saving and restoring graphics state in PDF content rendering
+
 Saving and restoring the graphics state in a PDF document is crucial for maintaining the consistency and integrity of the document's layout and appearance. This approach allows you to make temporary changes to the graphics state, such as transformations, clipping paths, or color adjustments, without affecting subsequent content rendering by using the [Save](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_Save) and [Restore](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_Restore) methods of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class.
 
 Please refer to the below code example to understand how to save and restore the graphics state in PDF rendering.
@@ -1973,7 +1974,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 You can search for a particular text in a PDF document and retrieve its bounds using the [FindText](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FindText_System_String_System_Collections_Generic_Dictionary_System_Int32_System_Collections_Generic_List_System_Drawing_RectangleF____) method of the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class. The method returns the page index and the list of bounding rectangles for every match.
 
-N> If you are using the [Syncfusion PDF Viewer](https://help.syncfusion.com/windowsforms/pdf-viewer) component to display PDFs in a WinForms or WPF application, the `PdfViewerControl.FindText` method provides the same capability. To use it, add `Syncfusion.PdfViewer.Windows.dll`, `Syncfusion.Pdf.Base.dll`, and `Syncfusion.Compression.Base.dll` as references to your project.
+N> If you are using the [Syncfusion PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/overview) component to display PDFs in a WinForms or WPF application, the `PdfViewerControl.FindText` method provides the same capability. To use it, add `Syncfusion.PdfViewer.Windows.dll`, `Syncfusion.Pdf.Base.dll`, and `Syncfusion.Compression.Base.dll` as references to your project.
 
 The following code snippet illustrates how to get the bounds of a text from a PDF document using the `PdfLoadedDocument.FindText` API.
 
@@ -2801,16 +2802,6 @@ A complete working sample is available for download on [GitHub](https://github.c
 
 The Syncfusion<sup>&reg;</sup> PDF library provides extensive options for customizing TrueType font settings in PDF documents through the [PdfFontSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfFontSettings.html) class. Users can modify font size, style, and choose to embed or subset fonts. Additionally, measurement settings can be adjusted using a floating factor for precise control over font rendering.
 
-**Parameters of the `PdfFontSettings` constructor**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `size` | `float` | The font size in points. |
-| `style` | `PdfFontStyle` | The font style: `Regular`, `Bold`, `Italic`, or `BoldItalic`. |
-| `embed` | `bool` | When `true`, the font is embedded in the generated PDF so that the text renders correctly on machines that do not have the font installed. |
-| `subset` | `bool` | When `true`, only the glyphs that are actually used are included in the embedded subset. This can significantly reduce the output file size for fonts with large character sets. |
-| `measureFloatFactor` | `bool` | When `true`, the float-based measurement routine is used. This can be useful when the default integer-based measurement produces a width of 0 for a glyph that the font actually supports. |
-
 The following code example illustrates this.
 
 {% tabs %}
@@ -3215,12 +3206,3 @@ PdfTrueTypeFont ttf = new PdfTrueTypeFont("Arial.ttf", 20);
 </td>
 </tr>
 </table>
-
-## See also
-
-* [Working with Shapes](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-shapes)
-* [Working with Images](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-images)
-* [Working with Text Extraction](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-text-extraction)
-* [Working with Document](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-document)
-* [Working with Document Conversions](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-document-conversions)
-* [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required)

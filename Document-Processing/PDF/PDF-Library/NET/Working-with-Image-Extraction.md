@@ -17,7 +17,6 @@ The following code example shows how to extract images from a specific page of a
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Image%20Extraction/Extract-images-from-a-PDF-pages/.NET/Extract-images-from-a-PDF-pages/Program.cs" %}
 
-using System.IO;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Exporting;
 using Syncfusion.Pdf.Parsing;
@@ -50,7 +49,6 @@ inputStream.Close();
 
 using System.Drawing;
 using System.Drawing.Imaging;
-using System.IO;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Exporting;
 using Syncfusion.Pdf.Parsing;
@@ -104,7 +102,7 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Image%20Extraction/Extract-images-from-a-PDF-pages/).
 
-> **Note:** The return type of `ExtractImages` is platform-dependent. On cross-platform targets, the method returns `Stream[]`; on Windows targets, it returns `Image[]`. To extract images in a .NET Core application, add the [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) package to your project.
+N> To extract images from PDF page in .NET Core application, add the [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) package to your project.
 
 ## Extracting image information
 
@@ -197,13 +195,9 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Image%20Extraction/Extract-the-image-info-from-a-PDF-page/).
 
-> **Note:** Each [PdfImageInfo](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Exporting.PdfImageInfo.html) object exposes the `Bounds`, `ImageIndex`, and `Image` properties. The `Image` property provides access to the underlying image; the `Bounds` property returns the image location on the page; and the `ImageIndex` property returns the index of the image within the page.
-
 ## Extract images from PDF documents with better memory consumption and performance
 
 The [PdfDocumentExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfDocumentExtractor.html) class extracts images from an entire PDF document using a streaming approach, which keeps memory usage low even for large documents. The class exposes the [PageCount](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfDocumentExtractor.html#Syncfusion_Pdf_Parsing_PdfDocumentExtractor_PageCount) property and the [ExtractImages()](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfDocumentExtractor.html#Syncfusion_Pdf_Parsing_PdfDocumentExtractor_ExtractImages) overloads, which allow you to extract images from the entire document or from a specific page range.
-
-> **Note:** `PdfDocumentExtractor` is currently available on Windows-specific targets. On cross-platform targets, iterate the pages of the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) and call [ExtractImages](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_ExtractImages().html) on each page to achieve similar results.
 
 The following code example illustrates how to extract images from an entire PDF document.
 
@@ -315,7 +309,7 @@ inputStream.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Image%20Extraction/Extract-images-from-PDF-documents).
 
-> **Note:** The `ExtractImages(startIndex, endIndex)` overload extracts images from a specific page range, where both the start and end indices are inclusive and use a 1-based page numbering. Always call `Dispose` on the `PdfDocumentExtractor` to release the underlying stream and other resources.
+N> To extract images from PDF page in .NET Core application, add the [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) package to your project.
 
 ## Troubleshooting and FAQs
 
@@ -365,18 +359,3 @@ dotnet add package SkiaSharp.NativeAssets.Linux.NoDependencies --version 3.116.1
     </td>
   </tr>
 </table>
-
-### Extracted image count does not match the visual count
-
-| Issue | The number of images returned by `ExtractImages` or `ImagesInfo` differs from the number of images visible in the PDF. |
-|-------|-----|
-| **Reason** | Some PDFs reuse the same image resource on a page, or store images as inline masks, soft masks, or tiling patterns. These resources are counted separately but may produce fewer distinct images when rendered. |
-| **Solution** | Use the `Image` property of each [PdfImageInfo](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Exporting.PdfImageInfo.html) entry to deduplicate by reference, or call `ExtractImages` on each page individually and merge the results. |
-
-## See also
-
-* [Working with Images](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-images)
-* [Working with Document Conversions](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-document-conversions)
-* [Working with Pages](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-pages)
-* [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required)
-* [NuGet Packages Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required)

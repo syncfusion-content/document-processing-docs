@@ -1,6 +1,6 @@
 ---
 title: Working with Redaction | Syncfusion
-description: Learn how to redact sensitive or confidential content from an existing PDF document using the Syncfusion .NET PDF Library, including overlay text, images, patterns, fill colors, progress tracking, results, and regex-based redaction.
+description: Learn how to redact sensitive content in PDF documents with .NET PDF, including text, images, patterns, colors, and regex-based redaction
 platform: document-processing
 control: PDF
 documentation: UG

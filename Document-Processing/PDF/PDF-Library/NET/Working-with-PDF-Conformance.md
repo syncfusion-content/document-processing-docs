@@ -8,7 +8,7 @@ documentation: UG
 
 # Working with PDF Conformance in File Formats PDF
 
-Essential<sup>&reg;</sup> PDF enables working with PDF Conformance standards such as [PDF/A](https://en.wikipedia.org/wiki/PDF/A), [PDF/X](https://en.wikipedia.org/wiki/PDF/X), and [PDF/UA](https://en.wikipedia.org/wiki/PDF/UA) to ensure compliance with archival, prepress, and accessibility requirements. This topic covers the supported standards, the conformance levels you can produce, and the APIs to create, convert, and validate conformant documents.
+Essential<sup>&reg;</sup> PDF enables working with PDF Conformance standards such as [PDF/A](https://en.wikipedia.org/wiki/PDF/A), [PDF/X](https://en.wikipedia.org/wiki/PDF/X), and [PDF/UA](https://en.wikipedia.org/wiki/PDF/UA) to ensure compliance with archival and accessibility requirements. This topic covers the supported standards, the conformance levels you can produce, and the APIs to create, convert, and validate conformance documents.
 
 To quickly get started with PDF Conformance in .NET using the Syncfusion PDF Library, watch this video:
 
@@ -1305,7 +1305,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## PDF to PDF/A conversion
 
-An existing PDF document can be converted to a PDF/A conformant document by calling the [ConvertToPDFA](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_ConvertToPDFA_Syncfusion_Pdf_PdfConformanceLevel_) method on a [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) instance and passing one of the following [PdfConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfConformanceLevel.html) values:
+An existing PDF document can be converted to a PDF/A conformance document by calling the [ConvertToPDFA](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_ConvertToPDFA_Syncfusion_Pdf_PdfConformanceLevel_) method on a [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) instance and passing one of the following [PdfConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfConformanceLevel.html) values:
 
 <b>Available PDF/A conformance options for conversion:</b>
 * `Pdf_A1B`
@@ -1319,7 +1319,7 @@ An existing PDF document can be converted to a PDF/A conformant document by call
 
 The [Conformance](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Conformance) property is a convenient alternative for Windows-specific targets that does the same thing for the supported `Pdf_A1B` and `Pdf_A2B` levels.
 
-N> 1. To convert an existing PDF to a PDF/A conformant document in .NET Core, you need to add the [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) package from [NuGet.org](https://www.nuget.org/) as a reference in your project.
+N> 1. To convert an existing PDF to a PDF/A conformance document in .NET Core, you need to add the [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) package from [NuGet.org](https://www.nuget.org/) as a reference in your project.
 N> 2. For Linux environments, refer to the [NuGet Packages Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) documentation for detailed information on the additional NuGet packages required.
 
 Refer to the following code sample to implement this conversion.
@@ -1439,7 +1439,7 @@ static void LoadedDocument_SubstituteFont(object sender, PdfFontEventArgs args)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/PDF%20Conformance/Convert-PDF-to-PDFA-conformance-document).
 
-N> 1. Converting a PDF to a PDF/X-1a conformant document is not supported.
+N> 1. Converting a PDF to a PDF/X-1a conformance document is not supported.
 N> 2. CMYK color space images and symbolic fonts are not supported during PDF/A conversion.
 N> 3. From the .NET Framework 3.5 version onward, Essential<sup>&reg;</sup> PDF is compatible with PDF to PDF/A conversion.
 
