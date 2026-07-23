@@ -53,9 +53,28 @@ Step 3: Click the **Create** button.
 Step 4: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 ![Install Syncfusion.Pdf.Net.Core NuGet package](GettingStarted_images/Google-NuGet-Package.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you also have to add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+Step 5: Register the Syncfusion license key. A trial watermark is added to every page of the generated PDF until a valid key is registered. Include the license key in **Program.cs** before initializing any Syncfusion component:
 
-Step 5: Include the following namespaces in the **HomeController.cs** file.
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Licensing;
+
+var builder = WebApplication.CreateBuilder(args);
+// Register the Syncfusion license
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+
+// Add services to the container.
+builder.Services.AddControllersWithViews();
+
+var app = builder.Build();
+
+{% endhighlight %}
+{% endtabs %}
+
+Replace `"YOUR LICENSE KEY"` with the key from your Syncfusion account. If you do not have one, request a free 30-day trial at [https://www.syncfusion.com/sales/communitylicense](https://www.syncfusion.com/sales/communitylicense). For Google App Engine, store the key in **app.yaml** under `env_variables: SyncfusionLicenseKey: YOUR-KEY` and read it with `builder.Configuration["SyncfusionLicenseKey"]` so the key is not committed to source control. Refer to the [Syncfusion License documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion license key in your application.
+
+Step 6: Include the following namespaces in the **HomeController.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -71,9 +90,9 @@ using System.IO;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: A default action method named Index will be present in HomeController.cs. Right click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
+Step 7: A default action method named Index will be present in HomeController.cs. Right click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
 
-Step 7: Add a new button in the Index.cshtml as shown in the following.
+Step 8: Add a new button in the Index.cshtml as shown in the following.
 
 {% tabs %}
 {% highlight CSHTML %}
@@ -89,9 +108,9 @@ Step 7: Add a new button in the Index.cshtml as shown in the following.
 {% endhighlight %}
 {% endtabs %}
 
-Step 7a: Add a sample **Input.pdf** file to the **Data** folder of your project. Right-click the **Data** folder, select **Add > New Item**, and choose an existing PDF file or create a new one. Then, set its **Copy to Output Directory** property to **Copy if newer** so the file is included in the publish output.
+Step 8a: Add a sample **Input.pdf** file to the **Data** folder of your project. Right-click the **Data** folder, select **Add > New Item**, and choose an existing PDF file or create a new one. Then, set its **Copy to Output Directory** property to **Copy if newer** so the file is included in the publish output.
 
-Step 8: Add a new action method **CreateDocument** in HomeController.cs and include the following code sample to **create PDF document** and download it.
+Step 9: Add a new action method **CreateDocument** in HomeController.cs and include the following code sample to **create PDF document** and download it.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -292,3 +311,11 @@ By executing the program, you will get the **PDF document** as follows. The outp
 ![Output PDF Document](GettingStarted_images/Open_and_save_output.png)
 
 Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
+
+## Next steps
+
+* [Create a PDF in Azure App Service on Linux](Create-PDF-document-in-Azure-App-Service-Linux.md)
+* [Create a PDF in Docker](Create-PDF-document-in-Docker.md)
+* [Create a PDF in ASP.NET Core](Create-PDF-file-in-ASP-NET-Core.md)
+* [Open and read an existing PDF document](Open-PDF-file.md)
+* [Save the generated PDF to a file or stream](Save-PDF-file.md)
