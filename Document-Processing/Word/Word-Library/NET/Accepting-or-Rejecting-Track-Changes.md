@@ -200,7 +200,7 @@ Executing the above code example generates the following output Word document.
 
 You can **accept all changes made by a specific reviewer** in the Word document using the [Accept](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Revision.html#Syncfusion_DocIO_DLS_Revision_Accept) method.
 
-The following code example shows how to accept the tracked changes made by a specific reviewer. The reviewer is identified by the `Author` property of each revision (for example, `"Nancy Davolio"`).
+The following code example shows how to accept the tracked changes made by a specific reviewer. The reviewer is identified by the `Author` property of each revision.
 
 {% tabs %}
 
@@ -270,7 +270,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 You can **reject all changes made by a specific reviewer** in the Word document using the [Reject](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Revision.html#Syncfusion_DocIO_DLS_Revision_Reject) method.
 
-The following code example shows how to reject the tracked changes made by a specific reviewer. The reviewer is identified by the `Author` property of each revision (for example, `"Nancy Davolio"`).
+The following code example shows how to reject the tracked changes made by a specific reviewer. The reviewer is identified by the `Author` property of each revision.
 
 {% tabs %}
 
