@@ -1,16 +1,16 @@
 ---
 layout: post
 title: Spell check in React DOCX Editor | Syncfusion
-description: Learn how to use Spell check in the React DOCX Editor to detect and correct errors seamlessly- without relying on Microsoft Word.
+description: Learn how to use Spell check in the React Document Editor to detect and correct errors seamlessly, without relying on Microsoft Word.
 control: Spell check 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Spell Check in React DOCX Editor
+# Spell Check in React Document Editor
 
-[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports spell checking for document content. It identifies misspelled words and provides suggestions through a dialog and the context menu. The spell checker is compatible with [Hunspell](https://github.com/wooorm/dictionaries) dictionary files.
+[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports spell checking for document content. It identifies misspelled words and provides suggestions through a dialog and the context menu. The spell checker is compatible with [Hunspell](https://github.com/wooorm/dictionaries) dictionary files.
 
 ## Features
 
@@ -18,7 +18,7 @@ domainurl: ##DomainURL##
 
 * Provides options such as Ignore, Ignore All, Change, and Change All in the spell check dialog.
 
-## Configure spell check in React DOCX Editor
+## Configure spell check in React Document Editor
 
 Spell checking is enabled using the [enableSpellCheck](https://ej2.syncfusion.com/documentation/api/document-editor-container/index-default#enablespellcheck) property and by configuring the spellChecker settings. A server-side service is required to process text, detect misspelled words, and provide suggestions for display in the editor.
 
@@ -41,11 +41,11 @@ function App() {
             let container: DocumentEditorContainerComponent = containerRef.current as DocumentEditorContainerComponent;
             // Get the SpellChecker instance from DocumentEditorContainer.
             let spellChecker: SpellChecker = container.documentEditor.spellChecker;
-            // set the language ID for spell checker. Here, 1033 is the language ID for English (United States).
+            // Set the language ID for spell checker. Here, 1033 is the language ID for English (United States).
             spellChecker.languageID = 1033;
             // remove the underline for misspelled words.
             spellChecker.removeUnderline = false;
-            // Allow suggestion for misspelled word 
+            // Allow suggestions for misspelled words.
             spellChecker.allowSpellCheckAndSuggestion = true;
         }
     }, []);
@@ -101,7 +101,7 @@ The following code example demonstrates how to configure this behavior.
 
 ```ts
 
-container.documentEditor.spellChecker.removeUnderline = false;
+container.documentEditor.spellChecker.removeUnderline = true;
 
 ```
 
@@ -113,7 +113,7 @@ The following code example demonstrates how to configure the languageID.
 
 ```ts
 
-container.documentEditor.spellChecker.languageID = 1033; //LCID of "en-us";
+container.documentEditor.spellChecker.languageID = 1033; //LCID of "en-us"
 
 ```
 
@@ -173,21 +173,21 @@ container.documentEditor.spellChecker.enableOptimizedSpellCheck = true;
 
 ## Context menu
 
-Right-click on an error word to open the context menu with spell check options. See the screenshot below for reference.
+Right-click on a misspelled word to open the context menu with spell check options. See the screenshot below for reference.
 
 ### More suggestions
 
-The context menu shows suggestions for misspelled words. By clicking the required word from the suggestions, the error word is replaced automatically.
+The context menu shows suggestions for misspelled words. By clicking the required word from the suggestions, the misspelled word is replaced automatically.
 
 ### Add to dictionary
 
-This option allows the current word to be added to the dictionary. As a result, the spell checker will not treat the word as an error in the future
+This option allows the current word to be added to the dictionary. As a result, the spell checker will not treat the word as an error in the future.
 
 ### Ignore Once and Ignore All
 
 If the word should not be added to the dictionary and should not be marked as an error, the Ignore Once or Ignore All options can be used.
 
-**Ignore**: Ignores only the current occurrence of a word.
+**Ignore Once:** Ignores only the current occurrence of a word.
 
 **Ignore All:** Ignores all occurrences of a word in the entire document.
 
