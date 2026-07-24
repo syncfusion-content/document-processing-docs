@@ -3,13 +3,13 @@ layout: post
 title: Formulas in EJ2 Javascript Spreadsheet Control | Syncfusion
 description: Learn here all about Formulas in Syncfusion Essential EJ2 Javascript Spreadsheet control, its elements and more.
 platform: document-processing
-control: Formulas 
+control: Formulas
 documentation: ug
 ---
 
-# Formulas in EJ2 Javascript Spreadsheet Control
+# Formulas in EJ2 JavaScript Spreadsheet Control
 
-Formulas are used for calculating the data in a worksheet. You can refer the cell reference from same sheet or from different sheets.
+Formulas are used for calculating the data in a worksheet. You can refer to a cell reference from the same sheet or from different sheets.
 
 ## Usage
 
@@ -17,8 +17,8 @@ You can set formula for a cell in the following ways,
 
 * Using the `formula` property from `cell`, you can set the formula or expression to each cell at initial load.
 * Set the formula or expression through data binding.
-* You can set formula for a cell by [`editing`](./editing).
-* Using the [`updateCell`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#updatecell) method, you can set or update the cell formula. 
+* You can set formula for a cell by [`editing`](./editing) a cell and typing a formula that starts with the `=` sign.
+* Using the [`updateCell`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#updatecell) method, you can set or update the cell formula. The method accepts a cell model object (containing the `formula` field) and the cell address as arguments.
 
 ## Culture-Based Argument Separator
 
@@ -26,9 +26,9 @@ Previously, although you could import culture-based Excel files into the Spreads
 
 > Before importing culture-based Excel files, ensure that the Spreadsheet is rendered with the corresponding culture. Additionally, launch the import/export services with the same culture to ensure compatibility.
 
-When loading spreadsheet data with culture-based formula argument separators using cell data binding, local/remote data, or JSON, ensure to set the [listSeparator](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#listseparator) property value as the culture-based list separator from your end. Additionally, note that when importing an Excel file, the [listSeparator](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#listseparator) property will be updated based on the culture of the launched import/export service.
+When loading spreadsheet data with culture-based formula argument separators using cell data binding, local/remote data, or JSON, set the [listSeparator](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#listseparator) property value to the culture-based list separator. Common separators per culture are: German (`de`) → `;`, French (`fr`) → `;`, Spanish (`es`) → `;`. When importing an Excel file, the [listSeparator](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#listseparator) property is updated automatically based on the culture of the launched import/export service.
 
-In the example below, the Spreadsheet component is rendered with the `German` [`de`] culture. Additionally, you can find references on how to set the culture-based argument separator and culture-based formatted numeric value as arguments to the formulas.
+In the example below, the Spreadsheet component is rendered with the `German` [`de`] culture. The sample shows how to set the culture-based argument separator and use culture-based formatted numeric values as formula arguments.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -60,9 +60,9 @@ The following code example shows an unsupported formula in the spreadsheet.
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/formula-cs1" %}
 
-Second, if you want to directly compute any formula or expression, you can use the [computeExpression](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#computeexpression) method. This method will work for both built-in and used-defined/custom formula.
+Second, to directly compute a formula or expression without writing it to a cell, use the [computeExpression](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#computeexpression) method (available from version 20.1.0.47 and later). This method works for both built-in and user-defined or custom formulas.
  
-The following code example shows how to use `computeExpression` method in the spreadsheet.
+The following code example shows how to use the `computeExpression` method in the spreadsheet.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -81,12 +81,12 @@ Formula bar is used to edit or enter cell data in much easier way. By default, t
 
 ## Named Ranges
 
-You can define a meaningful name for a cell range and use it in the formula for calculation. It makes your formula much easier to understand and maintain. You can add named ranges to the Spreadsheet in the following ways,
+You can define a meaningful name for a cell range and use it in a formula for calculation. Named ranges make formulas easier to understand and maintain. You can add named ranges to the Spreadsheet in the following ways:
 
 * Using the [`definedNames`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#definednames) collection, you can add multiple named ranges at initial load.
-* Use the [`addDefinedName`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#adddefinedname) method to add a named range dynamically.
-* You can remove an added named range dynamically using the [`removeDefinedName`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#removedefinedname) method.
-* Select the range of cells, and then enter the name for the selected range in the `Name box`.
+* Use the [`addDefinedName`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#adddefinedname) method to add a named range dynamically. `addDefinedName(namedModel)` accepts a `DefinedName` model (for example, `{ name: 'RangeName', refersTo: '=Sheet1!A1:A10' }`).
+* Use the [`removeDefinedName`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#removedefinedname) method to remove a named range dynamically. `removeDefinedName(definedName, scope)` accepts the defined name and, for worksheet-scoped names, the sheet name; pass an empty string for the scope when the name is workbook-scoped.
+* Select the range of cells, and then enter the name for the selected range in the `Name box` located at the left end of the formula bar.
 
 The following code example shows the usage of named ranges support.
 
@@ -108,13 +108,13 @@ The Spreadsheet provides a `Calculation Mode` feature like the calculation optio
 * `Automatic`: Formulas are recalculated instantly whenever a change occurs in the dependent cells.
 * `Manual`: Formulas are recalculated only when triggered explicitly by the user using options like `Calculate Sheet` or `Calculate Workbook`.
 
-You can configure the calculate mode using the [`calculationMode`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#calculationmode) property of the Spreadsheet. These modes offer flexibility to balance real-time updates and performance optimization.
+You can configure the calculation mode using the [`calculationMode`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#calculationmode) property (available from version 27.1.48 and later) of the Spreadsheet. These modes offer flexibility to balance real-time updates and performance optimization.
 
 ### Automatic Mode
 
 In Automatic Mode, formulas are recalculated instantly whenever a dependent cell is modified. This mode is perfect for scenarios where real-time updates are essential, ensuring that users see the latest results without additional actions.
 
-For example, consider a spreadsheet where cell `C1` contains the formula `=A1+B1`. When the value in `A1` or `B1` changes, `C1` updates immediately without requiring any user intervention. You can enable this mode by setting the [`calculationMode`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#calculationmode) property to `Automatic`.
+For example, consider a spreadsheet where cell `C1` contains the formula `=A1+B1`. When the value in `A1` or `B1` changes, `C1` updates immediately without requiring any user intervention. You can enable this mode by setting the `calculationMode` property to `Automatic`.
 
 The following code example demonstrates how to set the Automatic calculation mode in a Spreadsheet.
 
@@ -137,6 +137,8 @@ For example, imagine a spreadsheet where cell `C1` contains the formula `=A1+B1`
 
 * `Calculate Sheet`: Recalculates formulas for the active sheet only.
 * `Calculate Workbook`: Recalculates formulas across all sheets in the workbook.
+
+In the Spreadsheet ribbon UI, trigger recalculation from the **Formulas** tab by choosing **Calculate Sheet** (recalculates the active sheet) or **Calculate Workbook** (recalculates all sheets in the workbook). To verify the result, change a dependent cell (for example, `A1`) and observe that `C1` updates only after invoking one of these options.
 
 The following code example demonstrates how to set the Manual calculation mode in a Spreadsheet.
 
@@ -171,12 +173,12 @@ The following are the list of formulas supported in spreadsheet,
 | CONCAT | Concatenates a list or a range of text strings. |
 | CONCATENATE | Combines two or more strings together. |
 | COUNT | Counts the cells that contain numeric values in a range. |
-| COUNTA | Counts the cells that contains values in a range. |
+| COUNTA | Counts the cells that contain values in a range. |
 | COUNTBLANK | Returns the number of empty cells in a specified range of cells. |
 | COUNTIF | Counts the cells based on specified condition. |
 | COUNTIFS | Counts the cells based on specified conditions. |
 | DATE | Returns the date based on given year, month, and day. |
-| DATEVALUE | Converts a date string into date value. |
+| DATEVALUE | Converts a date string into a date value. |
 | DAY | Returns the day from the given date. |
 | DAYS | Returns the number of days between two dates. |
 | DECIMAL | Converts a text representation of a number in a given base into a decimal number. |
@@ -198,9 +200,9 @@ The following are the list of formulas supported in spreadsheet,
 | INDEX | Returns a value of the cell in a given range based on row and column number. |
 | INT | Rounds a number down to the nearest integer. |
 | INTERCEPT | Calculates the point of the Y-intercept line via linear regression. |
-| ISNUMBER | Returns true when the value parses as a numeric value. |
+| ISNUMBER | Returns TRUE when the value parses as a numeric value. |
 | LARGE | Returns the `k-th` largest value in a given array. |
-| LEN | Returns a number of characters in a given string. |
+| LEN | Returns the number of characters in a given string. |
 | LN | Returns the natural logarithm of a number. |
 | LOG | Returns the logarithm of a number to the base that you specify. |
 | LOOKUP | Looks for a value in a one-row or one-column range, then returns a value from the same position in a second one-row or one-column range. |
@@ -237,7 +239,7 @@ The following are the list of formulas supported in spreadsheet,
 | SUMPRODUCT | Returns the sum of the products of the corresponding array in given arrays. |
 | T | Checks whether a value is text or not and returns the text. |
 | TEXT | Converts the supplied value into text by using the user-specified format. |
-| TIME | Converts hours, minutes, seconds to the time formatted text. |
+| TIME | Converts hours, minutes, and seconds into a time-formatted value. |
 | TODAY | Returns the current date. |
 | TRUNC | Truncates a supplied number to a specified number of decimal places. |
 | UNIQUE | Returns a unique values from a range or array. |
@@ -245,7 +247,7 @@ The following are the list of formulas supported in spreadsheet,
 
 ## Formula Error Dialog
 
-If you enter an invalid formula in a cell, an error dialog with an error message will appear. For instance, a formula with the incorrect number of arguments, a formula without parenthesis, etc.
+If you enter an invalid formula in a cell, an error dialog with an error message appears. For instance, a formula with an incorrect number of arguments, a formula without parentheses, etc.
 
 | Error Message | Reason |
 |-------|---------|
