@@ -4,11 +4,11 @@ description: Learn here all about Table support in Syncfusion WPF RichTextBox (S
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: table
+keywords: table,rows,columns,cells,merge,alignment
 ---
 # Table in WPF RichTextBox (SfRichTextBoxAdv)
 
-The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) allows you to add tables into the rich text document. You can insert any rows or columns to the existing table and also can delete existing rows and columns. The SfRichTextBoxAdv also allows you to merge the selected cells into one (both vertically and horizontally).
+The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) allows you to add tables to the rich text document. You can insert rows or columns into an existing table and can also delete existing rows and columns. The SfRichTextBoxAdv also allows you to merge the selected cells into one (both vertically and horizontally). The tables are represented using the [TableAdv](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.TableAdv.html) class, with each row represented by [TableRowAdv](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.TableRowAdv.html) and each cell by [TableCellAdv](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.TableCellAdv.html). The cell-level layout is controlled by the [CellFormat](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.CellFormat.html) class.
 The following code example illustrates how to add tables into the rich text document.
 
 {% tabs %}
@@ -78,13 +78,13 @@ section.Blocks.Add(tableAdv);
 document.Sections.Add(section);
 // Initialize and add any number of sections to the document here.
 
-// Assign the documen to the RichTextBoxAdv instance.
+// Assign the document to the RichTextBoxAdv instance.
 richTextBoxAdv.Document = document;
 
 
 {% endhighlight %}
 {% highlight VB %}
-' Initializes a document.
+' Initialize a document.
 Dim document As New DocumentAdv()
 
 ' Initialize a section.
@@ -100,7 +100,7 @@ Dim tableRowAdv As New TableRowAdv()
 Dim tableCellAdv As New TableCellAdv()
 tableCellAdv.CellFormat.CellWidth = 240
 
-' Initializes a paragraph.
+' Initialize a paragraph.
 Dim paragraphAdv As New ParagraphAdv()
 Dim spanAdv As New SpanAdv()
 spanAdv.Text = "Cell 1"
@@ -121,7 +121,7 @@ section.Blocks.Add(tableAdv)
 document.Sections.Add(section)
 ' Initialize and add any number of sections to the document here.
 
-' Assign the documen to the RichTextBoxAdv instance.
+' Assign the document to the RichTextBoxAdv instance.
 richTextBoxAdv.Document = document
 
 
@@ -130,7 +130,9 @@ richTextBoxAdv.Document = document
 
 ## UI Commands for accessing table
 
-The following code example illustrates how to bind the Button UI Command for inserting a table.
+### Insert Table
+
+The following code example illustrates how to bind a button UI command for inserting a table.
 {% tabs %}
 {% highlight xaml %}
 <!-- Inserts the table with default size of one row and two columns -->
@@ -162,7 +164,9 @@ SfRichTextBoxAdv.InsertTableCommand.Execute(New Integer() {2, 3}, richTextBoxAdv
 {% endtabs %}
 
 
-The following code example illustrates how to bind the Button UI Command for inserting rows and columns.
+### Insert Row and Column
+
+The following code example illustrates how to bind a button UI command for inserting rows and columns.
 {% tabs %}
 {% highlight xaml %}
 <!-- Inserts one row above to the current row -->
@@ -177,7 +181,9 @@ The following code example illustrates how to bind the Button UI Command for ins
 
 {% endtabs %}
 
-The following code example illustrates how to bind the Button UI Command for selecting cell, row, column and table.
+### Select Cell, Row, Column, or Table
+
+The following code example illustrates how to bind a button UI command for selecting a cell, row, column, or table.
 {% tabs %}
 {% highlight xml %}
 <!--Selects the Cell--> 
@@ -193,7 +199,9 @@ The following code example illustrates how to bind the Button UI Command for sel
 
 {% endtabs %}
 
-The following code example illustrates how to bind the Button UI Command for merging selected cells.
+### Merge Cells
+
+The following code example illustrates how to bind a button UI command for merging selected cells.
 {% tabs %}
 {% highlight xaml %}
 <!-- Merges the selected cells -->
@@ -204,7 +212,9 @@ The following code example illustrates how to bind the Button UI Command for mer
 
 {% endtabs %}
 
-The following code example illustrates how to bind the Button UI Command to change content alignment of the selected cells.
+### Change Cell Content Alignment
+
+The following code example illustrates how to bind a button UI command to change the content alignment of the selected cells.
 {% tabs %}
 {% highlight xaml %}
 <!--Change cell content alignment with command parameter as comma separated(vertical alignment and text alignment)-->
@@ -232,7 +242,9 @@ The following code example illustrates how to bind the Button UI Command to chan
 
 {% endtabs %}
 
-The following code example illustrates how to Button UI Command for deleting a row, deleting a column and deleting an entire table.
+### Delete Row, Column, or Table
+
+The following code example illustrates how to bind a button UI command for deleting a row, deleting a column, and deleting an entire table.
 {% tabs %}
 {% highlight xaml %}
 <!-- Deletes the column -->
@@ -247,4 +259,10 @@ The following code example illustrates how to Button UI Command for deleting a r
 
 {% endtabs %}
 
-N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations.You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to knows how to render and configure the editing tools.
+N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
+
+## See Also
+
+- [Commands in WPF RichTextBox](Commands)
+- [Document Structure in WPF RichTextBox](Document-Structure)
+- [Document Properties in WPF RichTextBox](Document-Properties)

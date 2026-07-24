@@ -5,7 +5,7 @@ description: Install Syncfusion® WPF UI Builder to generate production-ready WP
 control: DOCX Editor
 platform: document-processing
 documentation: ug
-keywords: WPF UI Builder, Skills, AI Assistants, DOCX Editor SDK, Agent Skills
+keywords: WPF UI Builder,Skills,AI Assistants,DOCX Editor SDK,Agent Skills,installation,configuration,agent,prompt
 ---
 
 # WPF UI Builder Skill with DOCX Editor for AI Assistants
@@ -22,8 +22,8 @@ Before installing WPF UI Builder Skill with DOCX Editor, ensure the following:
 - Install [APM (Agent Package Manager)](https://microsoft.github.io/apm/getting-started/installation/#quick-install-recommended)
 - Required [.NET SDK](https://dotnet.microsoft.com/en-us/download) version ≥ 6
 - WPF application (existing or new); see [Overview](https://help.syncfusion.com/wpf/welcome-to-syncfusion-essential-wpf)
-- A supported AI agent or IDE that integrates with the Skills (VS Code, Cursor, Syncfusion® Code Studio, etc.)
-- Active Syncfusion<sup style="font-size:70%">&reg;</sup> license(any of the following):  
+- A supported AI agent or IDE that integrates with the Skills, such as VS Code, Cursor, or Syncfusion® Code Studio
+- Active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):  
   - [Commercial](https://www.syncfusion.com/sales/unlimitedlicense)  
   - [Community License](https://www.syncfusion.com/products/communitylicense)  
   - [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials)
@@ -41,7 +41,7 @@ Before installing WPF UI Builder Skill with DOCX Editor, ensure the following:
 - Avoids unsupported or deprecated patterns
 
 ### **Patterns & Best Practices**
-- Recommended control composition and state management
+- Recommends control composition and state management
 - Event handling aligned with WPF standards
 - Secure and scalable coding patterns
 
@@ -171,11 +171,11 @@ Generated code follows best practices with well-structured XAML markup, proper e
 
 ## Best Practices
 
-Follow these guidelines to get the most out of UI Builder and ensure high-quality production-ready result:
+Follow these guidelines to get the most out of UI Builder and ensure high-quality production-ready results:
 
 - **Stay consistent** — Maintain consistent naming conventions (PascalCase for classes, camelCase for variables), control hierarchies, and XAML patterns throughout your project.
 - **Use advanced AI models** — For best results, use **Claude Sonnet 4.6 or higher** capability models to produce better code quality and more accurate implementations.
-- **Visual Studio designer testing** — Generated XAML code should be compatible with Visual Studio designer; validate layouts visually and ensure proper control initialization.
+- **Visual Studio / Code Studio designer testing** — Generated XAML code should be compatible with the Visual Studio / Code Studio designer; validate layouts visually and ensure proper control initialization.
 - **Accessibility validation** — Test generated controls with Windows Narrator and Inspect tool (UIA) to ensure full accessibility support for keyboard navigation and screen readers.
 - **DPI awareness** — Test on high-resolution displays and ensure all controls scale properly and maintain visual fidelity.
 - **Review all content and assets before production** — Validate the logic, security, and compatibility with your existing code and Syncfusion® licensing before deployment.
@@ -205,7 +205,7 @@ Yes — the generated WPF controls include clear integration points for style ad
 **Does it modify files automatically?**
 The skill proposes changes and requires confirmation for insertion; automatic dependency installation may be offered depending on agent permissions.
 
-## See also
+## See Also
 
 - [Agent Skills Standards](https://agentskills.io/home)
 - [Agent Package Manager](https://microsoft.github.io/apm/getting-started/quick-start/)

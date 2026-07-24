@@ -4,11 +4,11 @@ description: Learn here all about Styles and Templates support in Syncfusion WPF
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: styles-and-templates, custom-style
+keywords: styles-and-templates,custom-style,theming,control-template,resource,xaml
 ---
 # Styles and Templates in WPF RichTextBox (SfRichTextBoxAdv)
 
-This section describes the styles and templates for the [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) control. The Template defines the structure of the SfRichTextBoxAdv control and the Style defines its visual appearance. You can modify the default Control template to define a unique appearance for the control.
+This section describes the styles and templates for the [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) control. The Template defines the structure of the SfRichTextBoxAdv control and the Style defines its visual appearance. You can modify the default control template to define a unique appearance for the control.
 The following XAML shows the default style and template for the SfRichTextBoxAdv control.
 {% tabs %}
 {% highlight xaml %}
@@ -757,12 +757,12 @@ The following XAML shows the default style and template for the SfRichTextBoxAdv
 
 {% endtabs %}
 
-N> In the control template, you are allowed to reorder the template parts and to add your own elements. However, when changing the control template you should be careful to include all required parts. Usually required parts are marked with Name attribute. Omission of required parts may impact some of the functionality. 
+N> In the control template, you are allowed to reorder the template parts and to add your own elements. However, when changing the template, you should be careful to include all required parts. Required parts are usually marked with the `Name` attribute. Omission of required parts may impact functionality.
 
 ## Styling the SfRichTextBoxAdv
 
-You can define custom style for the SfRichTextBoxAdv control either by creating empty style and set it up on your own or by copying the default style and modifying it. 
-The following example demonstrates how to customize the style for SfRichTextBoxAdv control.
+You can define a custom style for the SfRichTextBoxAdv control by either creating a new style from scratch or by copying the default style and modifying it.
+The following example demonstrates how to customize the style for SfRichTextBoxAdv control, including disabling the [EnableMiniToolBar](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_EnableMiniToolBar) property.
 {% tabs %}
 {% highlight xaml %}
 <RichTextBoxAdv:SfRichTextBoxAdvResourceWrapper x:Key="SfRichTextBoxAdvResourceWrapper"/>
@@ -821,7 +821,7 @@ The following example demonstrates how to customize the style for SfRichTextBoxA
 
 {% endtabs %}
 
-The following code example demonstrates how to apply the custom style for SfRichTextBoxAdv control. Applying this style will result in a SfRichTextBoxAdv control with no options pane and no spelling pane.
+The following code example demonstrates how to apply the custom style for SfRichTextBoxAdv control. Applying this style will result in an SfRichTextBoxAdv control with no options pane and no spelling pane.
 {% tabs %}
 {% highlight xaml %}
 <RichTextBoxAdv:SfRichTextBoxAdv x:Name="richTextBoxAdv" Style="{StaticResource RichTextBoxAdvCustomStyle}" />
@@ -831,4 +831,10 @@ The following code example demonstrates how to apply the custom style for SfRich
 
 {% endtabs %}
 
-N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations.You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to knows how to render and configure the editing tools.
+N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
+
+## See Also
+
+- [Getting Started in WPF RichTextBox](Getting-Started)
+- [Document Structure in WPF RichTextBox](Document-Structure)
+- [Commands in WPF RichTextBox](Commands)
