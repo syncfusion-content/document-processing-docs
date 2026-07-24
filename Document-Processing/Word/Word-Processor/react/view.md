@@ -1,34 +1,34 @@
 ---
 layout: post
-title: View in React Document editor component | Syncfusion
-description: Learn here all about View in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
+title: View in the React DOCX Editor component | Syncfusion
+description: Learn here all about view options in the Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
 control: View 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# View in React Document Editor Component
+# View in the React Document Editor component
 
-## Web Layout
+## Web layout
 
-[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) Container component allows you to change the view to web layout and print using the [`layoutType`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container#layouttype) property with the supported [`LayoutType`](https://ej2.syncfusion.com/react/documentation/api/document-editor/layoutType/).
+[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) Container component allows you to change the view to a web layout or print layout using the [`layoutType`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container#layouttype) property with the supported [`LayoutType`](https://ej2.syncfusion.com/react/documentation/api/document-editor/layoutType).
 
 ```
 <DocumentEditorContainerComponent id="container" layoutType={'Continuous'} enableToolbar={true}/>
 ```
 
->Note: Default value of [`layoutType`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container#layouttype) in Document Editor Container component is [`Pages`](https://ej2.syncfusion.com/react/documentation/api/document-editor/layoutType/).
+N> The default value of [`layoutType`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container#layouttype) in the Document Editor Container component is [`Pages`](https://ej2.syncfusion.com/react/documentation/api/document-editor/layoutType).
 
 ### Online Demo
 
-Explore how to view Word documents in web layout using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/web-layout).
+Explore how to view Word documents in web layout using the React Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/web-layout).
 
 ## Ruler
 
-Using ruler we can refer to setting specific margins, tab stops, or indentations within a document to ensure consistent formatting in Document Editor.
+The ruler helps you set specific margins, tab stops, and indentations within a document to ensure consistent formatting in the Document Editor.
 
-The following example illustrates how to enable ruler in Document Editor
+The following example illustrates how to enable the ruler in the Document Editor.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -48,11 +48,11 @@ The following example illustrates how to enable ruler in Document Editor
 
 ### Online Demo
 
-Explore how to use the ruler in the React Document Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/ruler).
+Explore how to use the ruler in the React Document Editor for working with Word documents in this [live demo](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/ruler).
 
-## Heading Navigation Pane 
+## Heading Navigation Pane
 
-Using the heading navigation pane allows users to swiftly navigate documents by heading, enhancing their ability to move through the document efficiently.
+The heading navigation pane allows users to quickly navigate documents by heading, making it easier to move through the document.
 
 The following example demonstrates how to enable the heading navigation pane in a document editor.
 
@@ -85,4 +85,4 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ### Online Demo
 
-Explore how to navigate through headings in Word documents using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/heading-navigation).
+Explore how to navigate through headings in Word documents using the React Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/heading-navigation).

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Paragraph format in React Document editor component | Syncfusion
-description: Learn here all about Paragraph format in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
+title: Paragraph format in React DOCX Editor component | Syncfusion
+description: Learn about paragraph formatting in the Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
 control: Paragraph format 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Paragraph format in React Document editor component
+# Paragraph format in React Document Editor component
 
-[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
+[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
 
 ## Indentation
 
@@ -23,7 +23,7 @@ documenteditor.selection.paragraphFormat.rightIndent= 24;
 
 ## Special indentation
 
-You can define special indent for first line of the paragraph using the following sample code.
+You can define a special indent for the first line of the paragraph using the following sample code.
 
 ```ts
 documenteditor.selection.paragraphFormat.firstLineIndent= 24;
@@ -31,7 +31,7 @@ documenteditor.selection.paragraphFormat.firstLineIndent= 24;
 
 ## Increase indent
 
-You can increase the left indent of selected paragraphs by a factor of 36 points using the following sample code.
+You can increase the left indent of selected paragraphs by 36 points using the following sample code.
 
 ```ts
 documenteditor.editor.increaseIndent()
@@ -39,7 +39,7 @@ documenteditor.editor.increaseIndent()
 
 ## Decrease indent
 
-You can decrease the left indent of selected paragraphs by a factor of 36 points using the following sample code.
+You can decrease the left indent of selected paragraphs by 36 points using the following sample code.
 
 ```ts
 documenteditor.editor.decreaseIndent()
@@ -87,11 +87,11 @@ documenteditor.selection.paragraphFormat.spaceBeforeAuto = true;
 documenteditor.selection.paragraphFormat.spaceAfterAuto = true;
 ```
 
->Note: If auto spacing property is enabled, then value defined in the `beforeSpacing` and `afterSpacing` property will not be considered.
+N>: If auto spacing property is enabled, then value defined in the `beforeSpacing` and `afterSpacing` property will not be considered.
 
-## Paragraph Border
+## Paragraph border
 
-You can apply borders to the paragraphs in a Word document. Using borders, decorate the paragraphs to set them apart from other paragraphs in the document.
+You can apply borders to the paragraphs in a Word document. Using borders, you can decorate the paragraphs to set them apart from other paragraphs in the document.
 
 The following example code illustrates how to apply box border for the selected paragraphs.
 
@@ -117,7 +117,7 @@ documenteditor.selection.paragraphFormat.borders.bottom.lineWidth = 3;
 documenteditor.selection.paragraphFormat.borders.bottom.color = "#000000";
 ```
 
-Note: At present, the Document editor component displays all the border styles as single line. But you can apply any border style and get the proper display in Microsoft Word app when opening the exported Word document.
+N> At present, the Document Editor component displays all the border styles as single line. But you can apply any border style and get the proper display in Microsoft Word app when opening the exported Word document.
 
 ## Pagination properties
 
@@ -137,7 +137,7 @@ documenteditor.selection.paragraphFormat.keepLinesTogether = true;
 
 ## Show or Hide Paragraph marks
 
-You can show or hide the hidden formatting symbols like spaces, tab, paragraph marks, and breaks in Document editor component. These marks help identify the start and end of a paragraph and all the hidden formatting symbols in a Word document.
+You can show or hide the hidden formatting symbols like spaces, tab, paragraph marks, and breaks in Document Editor component. These marks indicate the start and end of a paragraph, as well as all the hidden formatting symbols in a Word document.
 
 The following example code illustrates how to show or hide paragraph marks.
 
@@ -159,7 +159,7 @@ import {
 import { ToolbarComponent, ItemsDirective, ItemDirective } from '@syncfusion/ej2-react-navigations';
 import { DropDownButtonComponent, ItemModel } from '@syncfusion/ej2-react-splitbuttons';
 
-//Inject require modules.
+//Inject required modules.
 DocumentEditorComponent.Inject(Selection, Editor, EditorHistory, ContextMenu);
 function App() {
     let documenteditor: DocumentEditorComponent;
@@ -315,7 +315,7 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ## Online Demo
 
-Explore how to apply paragraph formatting in Word documents using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/paragraph-formatting).
+Explore how to apply paragraph formatting in Word documents using the React Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/paragraph-formatting).
 
 ## See Also
 
