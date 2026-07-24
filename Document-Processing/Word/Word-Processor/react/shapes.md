@@ -44,4 +44,4 @@ Document Editor preserves the position properties of the shape and displays the 
 
 ## Online Demo
 
-Explore how to preserve auto shapes and grouped shapes in Word documents using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/autoshapes).
+Explore how to preserve AutoShapes and grouped shapes in Word documents using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/autoshapes).
