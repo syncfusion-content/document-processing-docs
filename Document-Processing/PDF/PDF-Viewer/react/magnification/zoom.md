@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Zoom in React PDF Viewer | How-to Guide | Syncfusion
-description:  Learn how to implement zoom functionality in the Syncfusion React PDF Viewer component. Enable zooming and programmatically control zoom levels.
+description: Learn how to implement zoom functionality in the Syncfusion React PDF Viewer component. Enable zooming and programmatically control zoom levels.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -26,7 +26,7 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+         ThumbnailView, Print, TextSelection, TextSearch, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
   return (<div>
@@ -57,7 +57,7 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+         ThumbnailView, Print, TextSelection, TextSearch, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
   return (<div>
@@ -97,7 +97,7 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+         ThumbnailView, Print, TextSelection, TextSearch, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
   const pdfViewerRef = React.useRef(null);
@@ -142,7 +142,7 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+         ThumbnailView, Print, TextSelection, TextSearch, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
   const pdfViewerRef = React.useRef(null);
@@ -194,7 +194,7 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+         ThumbnailView, Print, TextSelection, TextSearch, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
   const pdfViewerRef = React.useRef(null);
@@ -244,7 +244,7 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+         ThumbnailView, Print, TextSelection, TextSearch, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
   const pdfViewerRef = React.useRef(null);
@@ -301,7 +301,7 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+         ThumbnailView, Print, TextSelection, TextSearch, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
   const pdfViewerRef = React.useRef(null);
@@ -340,7 +340,7 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+         ThumbnailView, Print, TextSelection, TextSearch, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
   const pdfViewerRef = React.useRef(null);
@@ -571,7 +571,7 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+         ThumbnailView, Print, TextSelection, TextSearch, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
   const pdfViewerRef = React.useRef(null);
@@ -614,7 +614,7 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+         ThumbnailView, Print, TextSelection, TextSearch, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
   const pdfViewerRef = React.useRef(null);
@@ -636,7 +636,7 @@ function App() {
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         enableMagnification={true}
         serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
-        onZoomChange={onZoomChange}
+        zoomChange={onZoomChange}
         style={{ 'height': '640px' }}>
 
             <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -654,10 +654,10 @@ root.render(<App />);
 
 ## Zoom range and limits
 
-The PDF Viewer supports zoom values from 10% to 400% by default. You can override these limits using the [minZoom](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#minzoom) and [maxZoom](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#minzoom) properties on the `PdfViewerComponent`.
+The PDF Viewer supports zoom values from 10% to 400% by default. You can override these limits using the [minZoom](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#minzoom) and [maxZoom](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#maxzoom) properties on the `PdfViewerComponent`.
 
 - [minZoom](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#minzoom) (number): Specifies the minimum acceptable zoom level for the control. Default: `10`.
-- [maxZoom](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#minzoom) (number): Specifies the maximum allowable zoom level for the control. Default: `400`.
+- [maxZoom](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#maxzoom) (number): Specifies the maximum allowable zoom level for the control. Default: `400`.
 
 Below are full example snippets that show how to set custom `minZoom` and `maxZoom` values (Standalone and Server-Backed):
 
