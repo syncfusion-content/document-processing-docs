@@ -1,6 +1,6 @@
 ---
 title: Working with JavaScript | Syncfusion
-description: This section explains how to add/modify JavaScript action in the existing PDF document by using Essential PDF
+description: This section explains how to add and modify JavaScript actions in PDF documents using the Syncfusion .NET PDF library.
 platform: document-processing
 control: PDF
 documentation: UG
@@ -8,35 +8,41 @@ documentation: UG
 
 # Working with JavaScript
 
-A JavaScript action allows execution of JavaScript code embedded in the PDF document. Essential<sup>&reg;</sup> PDF supports adding JavaScript action to the PDF document in the following:
+A JavaScript action allows execution of JavaScript code embedded in a PDF document. Syncfusion<sup>&reg;</sup> PDF supports adding JavaScript actions to a PDF document in the following ways:
 
-* Document level JavaScript action
-* JavaScript action to the form fields
-* JavaScript in 3D Annotation
+* Document-level JavaScript action
+* JavaScript action on form fields
+* JavaScript in 3D annotations
 
-## Document level JavaScript action
+> **Note:** PDF JavaScript uses the Acrobat JavaScript API (such as `app.alert`, `this.print`, and `host.getURL`) rather than the standard browser JavaScript API. Refer to the [Acrobat JavaScript API Reference](https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/) for the complete list of supported objects and methods.
 
-You can add the JavaScript action to the PDF document by using [PdfJavaScriptAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfJavaScriptAction.html) class. The following code sample illustrates this. 
+## Document-level JavaScript action
+
+You can add a JavaScript action to the PDF document by using the [PdfJavaScriptAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfJavaScriptAction.html) class and assigning it to the [Actions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_Actions) property of the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class. The following code example shows how to add an `AfterOpen` action that displays an alert when the document is opened.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/JavaScript/Add-the-JavaScript-action-to-the-PDF-document/.NET/Add-the-JavaScript-action-to-the-PDF-document/Program.cs" %}
 
+using System.IO;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Interactive;
 
-//Create a new document
+//Create a new document.
 PdfDocument document = new PdfDocument();
-//Add a page
+//Add a page.
 PdfPage page = document.Pages.Add();
 
-//Create JavaScript action
+//Create a JavaScript action.
 PdfJavaScriptAction scriptAction = new PdfJavaScriptAction("app.alert(\"Hello World!!!\")");
-//Add the JavaScript action
+//Add the JavaScript action to the document.
 document.Actions.AfterOpen = scriptAction;
 
-//Save and close the PDF document
-document.Save("Output.pdf");
+//Save and close the PDF document.
+using (FileStream outputStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.Write))
+{
+    document.Save(outputStream);
+}
 document.Close(true);
 
 {% endhighlight %}
@@ -46,17 +52,17 @@ document.Close(true);
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Interactive;
 
-//Create a new document
+//Create a new document.
 PdfDocument document = new PdfDocument();
-//Add a page
+//Add a page.
 PdfPage page = document.Pages.Add();
 
-//Create JavaScript action
+//Create a JavaScript action.
 PdfJavaScriptAction scriptAction = new PdfJavaScriptAction("app.alert(\"Hello World!!!\")");
-//Add the JavaScript action
+//Add the JavaScript action to the document.
 document.Actions.AfterOpen = scriptAction;
 
-//Save and close the PDF document
+//Save and close the PDF document.
 document.Save("Output.pdf");
 document.Close(true);
 
@@ -67,17 +73,17 @@ document.Close(true);
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Interactive
 
-'Create a new document
+'Create a new document.
 Dim document As New PdfDocument()
-'Add a page
+'Add a page.
 Dim page As PdfPage = document.Pages.Add()
 
-'Create JavaScript action
+'Create a JavaScript action.
 Dim scriptAction As New PdfJavaScriptAction("app.alert(""Hello World!!!"")")
-'Add the JavaScript action
+'Add the JavaScript action to the document.
 document.Actions.AfterOpen = scriptAction
 
-'Save and close the PDF document
+'Save and close the PDF document.
 document.Save("Output.pdf")
 document.Close(True)
 
@@ -87,42 +93,48 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/JavaScript/Add-the-JavaScript-action-to-the-PDF-document).
 
-## JavaScript action to the form fields
+> **Note:** The [PdfDocumentActions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentActions.html) class also exposes the [BeforeClose](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentActions.html#Syncfusion_Pdf_PdfDocumentActions_BeforeClose) and [BeforeSave](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentActions.html#Syncfusion_Pdf_PdfDocumentActions_BeforeSave) properties, which allow you to trigger JavaScript code before the document is closed or saved.
 
-You can add the JavaScript actions to various form fields using [PdfJavaScriptAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfJavaScriptAction.html) instance. The [PdfFieldActions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfFieldActions.html) class is used to create form field actions. 
+## JavaScript action on form fields
 
-The following code snippet illustrate this.
+You can add JavaScript actions to form fields using the [PdfJavaScriptAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfJavaScriptAction.html) class. The [PdfFieldActions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfFieldActions.html) class is used to assign actions to a form field.
+
+The following code example shows how to attach a `MouseDown` JavaScript action to a button field.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/JavaScript/Add-JavaScript-action-to-the-form-fields-in-a-PDF/.NET/Add-JavaScript-action-to-the-form-fields-in-a-PDF/Program.cs" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/JavaScript/Add-JavaScript-action-to-the-form-fields-in-a-PDF/.NET/Add-JavaScript-action-to-the-form-fields-in-a-PDF/Program.cs" %}
 
+using System.IO;
 using Syncfusion.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Interactive;
 
-//Create a new PDF document
+//Create a new PDF document.
 PdfDocument document = new PdfDocument();
-//Creates a new page
+//Create a new page.
 PdfPage page = document.Pages.Add();
 
-//Create a new PdfButtonField
+//Create a new button field.
 PdfButtonField submitButton = new PdfButtonField(page, "submitButton");
 submitButton.Bounds = new RectangleF(25, 160, 100, 20);
 submitButton.Text = "Apply";
 submitButton.BackColor = new PdfColor(181, 191, 203);
 
-//Create a new PdfJavaScriptAction
-PdfJavaScriptAction scriptAction = new PdfJavaScriptAction("app.alert(\"You are looking at Form field action of PDF \")");
-//Set the scriptAction to submitButton
+//Create a JavaScript action.
+PdfJavaScriptAction scriptAction = new PdfJavaScriptAction("app.alert(\"You are looking at Form field action of PDF\")");
+//Set the JavaScript action to the button.
 submitButton.Actions.MouseDown = scriptAction;
 
-//Add the submit button to the new document
+//Add the button to the new document.
 document.Form.Fields.Add(submitButton);
 
-//Save and close the PDF document
-document.Save("Output.pdf");
+//Save and close the PDF document.
+using (FileStream outputStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.Write))
+{
+    document.Save(outputStream);
+}
 document.Close(true);
 
 {% endhighlight %}
@@ -134,28 +146,27 @@ using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Interactive;
 
-//Create a new PDF document
+//Create a new PDF document.
 PdfDocument document = new PdfDocument();
-//Creates a new page
+//Create a new page.
 PdfPage page = document.Pages.Add();
 
-//Create a new PdfButtonField
+//Create a new button field.
 PdfButtonField submitButton = new PdfButtonField(page, "submitButton");
 submitButton.Bounds = new RectangleF(25, 160, 100, 20);
 submitButton.Text = "Apply";
 submitButton.BackColor = new PdfColor(181, 191, 203);
 
-//Create a new PdfJavaScriptAction
-PdfJavaScriptAction scriptAction = new PdfJavaScriptAction("app.alert(\"You are looking at Form field action of PDF \")");
-//Set the script action to submitButton
+//Create a JavaScript action.
+PdfJavaScriptAction scriptAction = new PdfJavaScriptAction("app.alert(\"You are looking at Form field action of PDF\")");
+//Set the JavaScript action to the button.
 submitButton.Actions.MouseDown = scriptAction;
 
-//Add the submit button to the new document
+//Add the button to the new document.
 document.Form.Fields.Add(submitButton);
 
-//Save document to disk
-document.Save("fieldAction.pdf");
-//Save document to disk
+//Save and close the document.
+document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}
@@ -167,28 +178,27 @@ Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Interactive
 Imports Syncfusion.Pdf.Graphics
 
-'Create a new PDF document
+'Create a new PDF document.
 Dim document As New PdfDocument()
-'Creates a new page
+'Create a new page.
 Dim page As PdfPage = document.Pages.Add()
 
-'Create a new PdfButtonField
+'Create a new button field.
 Dim submitButton As New PdfButtonField(page, "submitButton")
 submitButton.Bounds = New RectangleF(25, 160, 100, 20)
 submitButton.Text = "Apply"
 submitButton.BackColor = New PdfColor(181, 191, 203)
 
-'Create a new PdfJavaScriptAction
-Dim scriptAction As New PdfJavaScriptAction("app.alert(""You are looking at Form field action of PDF "")")
-'Set the scriptAction to submitButton
+'Create a JavaScript action.
+Dim scriptAction As New PdfJavaScriptAction("app.alert(""You are looking at Form field action of PDF"")")
+'Set the JavaScript action to the button.
 submitButton.Actions.MouseDown = scriptAction
 
-'Add the submit button to the new document
+'Add the button to the new document.
 document.Form.Fields.Add(submitButton)
 
-'Save document to disk
-document.Save("fieldAction.pdf")
-'Close the document
+'Save and close the document.
+document.Save("Output.pdf")
 document.Close(True)
 
 {% endhighlight %}
@@ -205,31 +215,35 @@ The 3D Annotations are used to represent 3D artworks in a PDF document. You can 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/JavaScript/Add-JavaScript-to-3D-annotation-in-a-PDF-document/.NET/Add-JavaScript-to-3D-annotation-in-a-PDF-document/Program.cs" %}
 
+using System.IO;
 using Syncfusion.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Interactive;
 
-//Creates a new PDF document
+//Create a new PDF document.
 PdfDocument document = new PdfDocument();
-//Creates a new page
+//Create a new page.
 PdfPage page = document.Pages.Add();
 
-//Load 3D annotation as stream
+//Load the 3D annotation stream.
 FileStream inputStream = new FileStream("3DAnnotation.U3D", FileMode.Open, FileAccess.Read);
-//Creates a new PDF 3D annotation
+//Create a new PDF 3D annotation.
 Pdf3DAnnotation pdf3dAnnotation = new Pdf3DAnnotation(new RectangleF(10, 50, 300, 150), inputStream);
-//Assign JavaScript script
+//Assign a JavaScript script.
 pdf3dAnnotation.OnInstantiate = "host.getURL(\"http://www.google.com\")";
-//Handles the activation of the 3D annotation
+//Handle the activation of the 3D annotation.
 Pdf3DActivation activation = new Pdf3DActivation();
 activation.ActivationMode = Pdf3DActivationMode.ExplicitActivation;
 activation.ShowToolbar = true;
 pdf3dAnnotation.Activation = activation;
-//Adds annotation to page
+//Add the annotation to the page.
 page.Annotations.Add(pdf3dAnnotation);
 
-//Save and close the PDF document
-document.Save("Output.pdf");
+//Save and close the PDF document.
+using (FileStream outputStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.Write))
+{
+    document.Save(outputStream);
+}
 document.Close(true);
 
 {% endhighlight %}
@@ -240,26 +254,25 @@ using System.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Interactive;
 
-//Creates a new PDF document
+//Create a new PDF document.
 PdfDocument document = new PdfDocument();
-//Creates a new page
+//Create a new page.
 PdfPage page = document.Pages.Add();
 
-//Create a new PDF 3D annotation
-Pdf3DAnnotation pdf3dAnnotation = new Pdf3DAnnotation(new RectangleF(10, 50, 300, 150), @"Input.u3d");
-//Assign JavaScript script
+//Create a new PDF 3D annotation.
+Pdf3DAnnotation pdf3dAnnotation = new Pdf3DAnnotation(new RectangleF(10, 50, 300, 150), "Input.u3d");
+//Assign a JavaScript script.
 pdf3dAnnotation.OnInstantiate = "host.getURL(\"http://www.google.com\")";
-//Handles the activation of the 3D annotation
+//Handle the activation of the 3D annotation.
 Pdf3DActivation activation = new Pdf3DActivation();
 activation.ActivationMode = Pdf3DActivationMode.ExplicitActivation;
 activation.ShowToolbar = true;
 pdf3dAnnotation.Activation = activation;
-//Adds annotation to page
+//Add the annotation to the page.
 page.Annotations.Add(pdf3dAnnotation);
 
-//Save the document to disk
+//Save and close the document.
 document.Save("Output.pdf");
-//Close the document
 document.Close(true);
 
 {% endhighlight %}
@@ -270,26 +283,25 @@ Imports System.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Interactive
 
-'Creates a new PDF document
+'Create a new PDF document.
 Dim document As New PdfDocument()
-'Creates a new page
+'Create a new page.
 Dim page As PdfPage = document.Pages.Add()
 
-'Create a new PDF 3D annotation
+'Create a new PDF 3D annotation.
 Dim pdf3dAnnotation As New Pdf3DAnnotation(New RectangleF(10, 50, 300, 150), "Input.u3d")
-'Assign JavaScript script
+'Assign a JavaScript script.
 pdf3dAnnotation.OnInstantiate = "host.getURL(""http://www.google.com"")"
-'Handles the activation of the 3D annotation
+'Handle the activation of the 3D annotation.
 Dim activation As New Pdf3DActivation()
 activation.ActivationMode = Pdf3DActivationMode.ExplicitActivation
 activation.ShowToolbar = True
 pdf3dAnnotation.Activation = activation
-'Adds annotation to page
+'Add the annotation to the page.
 page.Annotations.Add(pdf3dAnnotation)
 
-'Save the document to disk
+'Save and close the document.
 document.Save("Output.pdf")
-'Close the document
 document.Close(True)
 
 {% endhighlight %}
@@ -297,6 +309,8 @@ document.Close(True)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/JavaScript/Add-JavaScript-to-3D-annotation-in-a-PDF-document).
+
+> **Note:** 3D annotations require a U3D-formatted file as input. The U3D file must be available in the application directory or supplied through a stream. To view 3D content, the PDF reader must support the PDF 3D specification; the standard Acrobat Reader provides this support.
 
 ## Add/Modify JavaScript actions to the PDF
 
