@@ -104,7 +104,7 @@ You can delete either a specific reply or an entire comment thread (including al
 ### Deleting a comment thread
 * **Context menu**: Right-click the cell that contains the comment and select **Comment > Delete Comment**.
 * **Ribbon**: Go to **Review > Comment > Delete Comment** on a cell that contains the comment.
-* **Comment editor**: In the comment editor, click the **"⋯" (More thread actions)** menu in the header and select **Delete Thread** for an active comment, or use the **Delete Thread** button in the header for a resolved comment.
+* **Comment editor**: In the comment editor, click the **"⋯" (More thread actions)** menu in the header and select **Delete Thread** for an active comment, or use the **Delete Thread** button in header for a resolved comment.
 
 Deleting a thread removes the comment and all its replies from the cell.
 
@@ -140,7 +140,7 @@ The "Comments" review pane is rendered within the spreadsheet interface to provi
 
 The "Comments" review pane allows you to:
 
-* Add a new comment using the **New** button.
+* Add new comment using the **New** button.
 * Filter comments by **All**, **Active**, or **Resolved** to view specific comment threads.
 * Navigate between comments and synchronize selection with the corresponding cells.
 * Perform actions such as:

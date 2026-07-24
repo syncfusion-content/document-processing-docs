@@ -13,8 +13,8 @@ The Spreadsheet includes several context menus that will open and display depend
 
 The class name returned by the [contextMenuBeforeOpen](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#contextmenubeforeopen) event can be used to identify the context menu that is opened. The context menus and their class names are tabulated below.
 
-| Class name | Context menu |
-|------------|--------------|
+| Class name | Context menu name |
+|-------|---------|
 | `.e-sheet-content` | Cell context menu |
 | `.e-toolbar-item` | Footer context menu |
 | `.e-rowhdr-table` | Row header context menu |

@@ -58,7 +58,7 @@ dotnet add package Microsoft.Extensions.AI.OpenAI
 
 ## Configure credentials
 
-Add the Azure OpenAI credentials in `appsettings.json` under the `AI` section:
+Add the Azure OpenAI credentials in `appsettings.json` under `AI` section:
 
 ```json
 {

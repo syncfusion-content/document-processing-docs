@@ -23,7 +23,7 @@ The following properties are the root-level properties of the `Workbook` object.
 | sheets | `Sheet[]` | Contains a list of sheet properties. |
 | definedNames | `DefineName[]` | Specifies the name for a range and uses it in the formula for calculation. |
 
-The following table defines the properties of a `Sheet`.
+The following table defines each property of the `Sheet`.
 
 | Property | Type | Description |
 |-------|-------|-------|
@@ -36,7 +36,7 @@ The following table defines the properties of a `Sheet`.
 | isProtected | boolean | Specifies to protect the cells in the sheet. |
 | state | [`SheetState`](../worksheet#sheet-visibility) | Specifies the sheet visibility state. There must be at least one visible sheet in Spreadsheet. |
 | columns | `Column[]` | Contains a list of column properties |
-| rows | `Row[]` | Contains a list of row properties. |
+| rows | `Row[]` | Contains a list of row properties |
 | protectSettings | [`ProtectSettings`](../protect-sheet#protect-sheet) | Configures protect and its options. |
 | conditionalFormats | `ConditionalFormat[]` | Specifies the conditional formatting for the sheet. |
 
