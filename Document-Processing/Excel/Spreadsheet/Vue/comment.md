@@ -79,9 +79,9 @@ The **Resolve thread** option marks a comment thread as completed when the discu
 
 ![Resolve and reopen in Spreadsheet](./images/spreadsheet_resolve_reopen.gif)
 
-You can also use the `isResolved` property in the comment model when initializing or updating comments programmatically.
+You can also set the `isResolved` property in the comment model when initializing or updating comments programmatically.
 
-**Example: Using `isResolved` property in the comment model with the `updateCell` method**
+**Example: Using the `isResolved` property in the comment model with the `updateCell` method**
 
 ```ts
 // Update a cell with a comment using the updateCell method
@@ -104,7 +104,7 @@ You can delete either a specific reply or an entire comment thread (including al
 ### Deleting a comment thread
 * **Context menu**: Right-click the cell that contains the comment and select **Comment > Delete Comment**.
 * **Ribbon**: Go to **Review > Comment > Delete Comment** on a cell that contains the comment.
-* **Comment editor**: In the comment editor, click the **"⋯" (More thread actions)** menu in the header and select **Delete Thread** for an active comment or use the **Delete Thread** button in header for a resolved comment.
+* **Comment editor**: In the comment editor, click the **"⋯" (More thread actions)** menu in the header and select **Delete Thread** for an active comment, or use the **Delete Thread** button in header for a resolved comment.
 
 Deleting a thread removes the comment and all its replies from the cell.
 

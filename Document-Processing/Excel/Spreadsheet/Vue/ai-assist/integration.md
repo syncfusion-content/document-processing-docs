@@ -24,7 +24,7 @@ Ensure the following before integrating AI Assist:
 
 ### Add CSS references
 
-Add the following AI Assist dependent style references to the `src/App.vue` file.
+Add the following AI Assist dependent style references to the `src/App.vue` file, in addition to the base Spreadsheet theme that is already imported:
 
 ```css
 @import '../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css';
@@ -70,7 +70,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-This enables the AI Assist into the spreadsheet.
+This enables AI Assist in the spreadsheet.
 
 ### Configure AI Assist Settings
 
@@ -215,17 +215,17 @@ export default {
 
 If the AI panel displays an error message:
 
-1. Verify the server is running
-    * Confirm your Node.js or Web API server is active
-    * Check the console for startup messages
-2. Check the requestUrl
+1. Verify the server is running.
+    * Confirm your Node.js or Web API server is active.
+    * Check the console for startup messages.
+2. Check the `requestUrl`.
     * Ensure the URL matches your server's exact address and port
     * For local development:
-        * Node.js: http://localhost:3000/api/AIAssist/Chat
-        * Web API (.NET): https://localhost:5001/api/AIAssist/Chat
+        * Node.js: `http://localhost:3000/api/AIAssist/Chat`
+        * Web API (.NET): `https://localhost:5001/api/AIAssist/Chat`
 3. Verify CORS is enabled
     * Your Vue app origin must be allowed in the server's CORS policy
-    * Default Vue dev server: http://localhost:5173 (Vite) or http://localhost:8080 (Vue CLI)
+    * Default Vue dev server: `http://localhost:5173` (Vite) or `http://localhost:8080` (Vue CLI)
 4. Use browser DevTools
     * Open the Network tab to inspect failed requests
     * Check for 404, 500, or CORS errors
