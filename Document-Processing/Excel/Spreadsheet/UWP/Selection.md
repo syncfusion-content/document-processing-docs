@@ -9,11 +9,11 @@ documentation: ug
 
 # Selection in UWP Spreadsheet (SfSpreadsheet)
 
-This section explains about the Selection behavior in SfSpreadsheet.
+This section explains the Selection behavior in SfSpreadsheet.
 
 The SfSpreadsheet control provides support for selection in grid by using mouse, keyboard and touch interactions.
 
-By default, Selection behavior will be enabled in `SfSpreadsheet`,but if you want to disable the selection in SfSpreadsheet, then set the `AllowSelection` Property to be false.
+By default, Selection behavior is enabled in `SfSpreadsheet`, but if you want to disable the selection in SfSpreadsheet, then set the `AllowSelection` Property to false.
 
 {% tabs %}
 {% highlight c# %}
@@ -28,19 +28,19 @@ void spreadsheet_WorkbookLoaded(object sender, WorkbookLoadedEventArgs args)
 
 ## Accessing the Current cell
 
-SfSpreadsheet allows the user to access the active cell by using the `CurrentCell` property of `SelectionController` Class.
+SfSpreadsheet allows the user to access the active cell by using the `CurrentCell` property of the `SelectionController` Class.
 
 {% tabs %}
 {% highlight c# %}
 
-var cell= spreadsheet.ActiveGrid.SelectionController.CurrentCell;
+var cell = spreadsheet.ActiveGrid.SelectionController.CurrentCell;
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Accessing the Selected ranges
 
-SfSpreadsheet allows the user to access the selected ranges of the `SpreadsheetGrid` using `SelectedRanges` property of `SpreadsheetGrid`.
+SfSpreadsheet allows the user to access the selected ranges from the `SpreadsheetGrid` using the `SelectedRanges` property of `SpreadsheetGrid`.
 
 {% tabs %}
 {% highlight c# %}
@@ -87,11 +87,10 @@ SfSpreadsheet allows the user to move the current cell to the mentioned cell in 
 {% tabs %}
 {% highlight c# %}
 
-//Moves current cell to the mentioned row and column index of cell,
+//Moves current cell to the mentioned row and column index,
 spreadsheet.ActiveGrid.CurrentCell.MoveCurrentCell(5, 5);
 
-For moving the current cell to a different sheet,
-
+//For moving the current cell to a different sheet,
 spreadsheet.SetActiveSheet("Sheet2");
 spreadsheet.ActiveGrid.CurrentCell.MoveCurrentCell(6, 5);
 
@@ -100,7 +99,7 @@ spreadsheet.ActiveGrid.CurrentCell.MoveCurrentCell(6, 5);
 
 ## Converting GridRangeInfo into IRange
 
-SfSpreadsheet allows the user to convert the `GridRangeInfo` into the equivalent `IRange` by using `ConvertGridRangeToExcelRange` method of `GridExcelHelper` class.
+SfSpreadsheet allows the user to convert the `GridRangeInfo` into the equivalent `IRange` by using the `ConvertGridRangeToExcelRange` method of the `GridExcelHelper` class.
 
 {% tabs %}
 {% highlight c# %}
@@ -110,7 +109,7 @@ var excelRange = GridExcelHelper.ConvertGridRangeToExcelRange(GridRangeInfo.Cell
 {% endhighlight %}
 {% endtabs %}
 
-T> Users can also convert the `IRange` into equivalent `GridRangeInfo` by using `ConvertExcelRangeToGridRange` method of  `GridExcelHelper` class.
+T> Users can also convert the `IRange` into equivalent `GridRangeInfo` by using the `ConvertExcelRangeToGridRange` method of the `GridExcelHelper` class.
 
 ## Properties, Methods and Events
 
@@ -128,7 +127,7 @@ Description</th></tr>
 <tr>
 <td>
 <code>CurrentCellActivating</code></td><td>
-Occurs when the current cell is going to be activated. This event allow to cancel the current cell activation.</td></tr>
+Occurs when the current cell is going to be activated. This event allows you to cancel the current cell activation.</td></tr>
 <tr>
 <td>
 <code>CurrentCellActivated</code></td><td>
@@ -169,11 +168,11 @@ Gets or sets the thickness of selection border.</td></tr>
 <tr>
 <td>
 <code>SelectionController</code></td><td>
- Gets the Selection Controller which provides the selection of content when the user drags the pressed mouse to an edge of the control.</td></tr>
+Gets the Selection Controller which provides the selection of content when the user drags the pressed mouse to an edge of the control.</td></tr>
 <tr>
 <td>
 <code>AllowSelection</code></td><td>
-Gets or Sets the value whether to allow the selection in the ActiveGrid or not.</td></tr>
+Gets or sets a value indicating whether to allow the selection in the ActiveGrid or not.</td></tr>
 <tr>
 <td>
 <code>ShowTouchIndicator</code></td><td>
@@ -227,7 +226,7 @@ Description</th></tr>
 <tr>
 <td>
 <code>AddSelection</code></td><td>
-Adds/Extends the Selection to the mentioned range .</td></tr>
+Adds or extends the Selection to the mentioned range.</td></tr>
 <tr>
 <td>
 <code>ClearSelection</code></td><td>
@@ -235,7 +234,7 @@ Clears the Selection.</td></tr>
 <tr>
 <td>
 <code>MoveCurrentCell</code></td><td>
-Move the Current cell to mentioned row and column index.</td></tr>
+Moves the Current cell to the mentioned row and column index.</td></tr>
 </table>
 
 ## Key Navigation
@@ -250,38 +249,38 @@ Description</th></tr>
 <tr>
 <td>
 HOME</td><td>
-Moves to the first cell of the current row .</td></tr>
+Moves to the first cell of the current row.</td></tr>
 <tr>
 <td>
 END</td><td>
-Moves to the last cell of the current row .</td></tr>
+Moves to the last cell of the current row.</td></tr>
 <tr>
 <td>
-UPARROW
+Up Arrow
 </td><td>
-Moves to one cell up of the current cell in the worksheet.</td></tr>
+Moves one cell up from the current cell in the worksheet.</td></tr>
 <tr>
 <td>
-DOWNARROW
+Down Arrow
 </td><td>
-Moves to one cell down of the current cell in the worksheet.</td></tr>
+Moves one cell down from the current cell in the worksheet.</td></tr>
 <tr>
 <td>
-LEFTARROW
+Left Arrow
 </td><td>
-Moves to one cell left of the current cell in the worksheet.</td></tr>
+Moves one cell left from the current cell in the worksheet.</td></tr>
 <tr>
 <td>
-RIGHTARROW
+Right Arrow
 </td><td>
-Moves to one cell right of the current cell in the worksheet.</td></tr>
+Moves one cell right from the current cell in the worksheet.</td></tr>
 <tr>
 <td>
-PAGEUP</td><td>
+PAGE UP</td><td>
 Moves to the first visible cell of the current column.</td></tr>
 <tr>
 <td>
-PAGEDOWN</td><td>
+PAGE DOWN</td><td>
 Moves to the last visible cell of the current column.</td></tr>
 <tr>
 <td>
@@ -301,8 +300,8 @@ ALT+PAGE DOWN</td><td>
 Moves one screen to the right in a worksheet.</td></tr>
 <tr>
 <td>
-CTRL + ARROW KEYS</td><td>
-Moves to the  first/last cell of the current cell based on Arrow directions .</td></tr>
+CTRL+ARROW KEYS</td><td>
+Moves to the first/last cell of the current cell based on Arrow directions .</td></tr>
 <tr>
 <td>
 ENTER</td><td>
@@ -318,11 +317,11 @@ Moves the active current cell in one cell to the right of the selection.</td></t
 <tr>
 <td>
 SHIFT+TAB</td><td>
-Moves the active current cell in  one cell to the left of the selection.</td></tr>
+Moves the active current cell in one cell to the left of the selection.</td></tr>
 <tr>
 <td>
 BACKSPACE</td><td>
-Begins the edit operation for the active cell in the selection.</td></tr>
+Clears the content of the active cell and begins edit mode when the cell is empty.</td></tr>
 <tr>
 <td>
 CTRL+A</td><td>
@@ -330,7 +329,7 @@ Selects the entire worksheet.</td></tr>
 <tr>
 <td>
 SHIFT+ARROW KEYS</td><td>
-Extends the selection by one cell based on the arrow direction.</td></tr>
+Extends the selection by one cell in the direction of the arrow key.</td></tr>
 <tr>
 <td>
 CTRL+SHIFT+ARROW KEYS</td><td>
@@ -342,7 +341,7 @@ Extends the selection to the first column from the active cell.</td></tr>
 <tr>
 <td>
 CTRL+SHIFT+HOME</td><td>
-Extends the selection from the active cell to the first cell.</td></tr>
+Extends the selection from the active cell to the first cell of the worksheet.</td></tr>
 <tr>
 <td>
 SHIFT+PAGE DOWN</td><td>
