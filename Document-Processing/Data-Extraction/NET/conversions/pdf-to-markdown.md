@@ -13,14 +13,14 @@ Markdown is a lightweight markup language that adds formatting elements to plain
 
 ## Assemblies and NuGet packages required
 
-Refer to the following links for assemblies and NuGet packages required based on platforms to Extract data as Markdown file  using the .NET Word Library (DocIO).
+Refer to the following links for the assemblies and NuGet packages required based on your target platform to extract data as a Markdown file using the Syncfusion® Smart Data Extractor library.
 
 * [PDF to Markdown Extraction assemblies](/document-processing/data-extraction/net/Assemblies-required)
 * [PDF to Markdown Extraction NuGet packages](/document-processing/data-extraction/net/Nuget-packages-required)
 
 ## Extract Data as Markdown from PDF or Image
 
-To extract form fields across a PDF document using the [ExtractDataAsMarkdown](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsMarkdown_System_IO_Stream_) method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class, refer to the following code example:
+To extract structured data from a PDF document or image using the [ExtractDataAsMarkdown](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsMarkdown_System_IO_Stream_) method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class, refer to the following code example:
 
 {% tabs %} 
 
@@ -30,7 +30,7 @@ using System.IO;
 using Syncfusion.SmartDataExtractor;
 using System.Text;
 
-//Open the input PDF file as a stream.
+//Open the input PDF or image file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
     //Initialize the Data Extractor.
@@ -70,7 +70,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Extract a specific page to Markdown
 
-The following code demonstrates how to use the [ExtractDataAsMarkdown](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsMarkdown_System_IO_Stream_) method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class to extract content from a selected page in a PDF and save it as a Markdown file by specifying its page index.
+The following code demonstrates how to use the [ExtractDataAsMarkdown](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsMarkdown_System_IO_Stream_) method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class to extract content from a selected page in a PDF and save it as a Markdown file by specifying its page index. Page numbers are 1-based and the range is inclusive.
 
 {% tabs %} 
 
@@ -121,7 +121,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 ## Extract a range of pages to Markdown
 
-The following code demonstrates how to use the [ExtractDataAsMarkdown](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsMarkdown_System_IO_Stream_) method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class to extract content from a range of pages in a PDF and save it as a Markdown file by specifying the page range.
+The following code demonstrates how to use the [ExtractDataAsMarkdown](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsMarkdown_System_IO_Stream_) method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class to extract content from a range of pages in a PDF and save it as a Markdown file by specifying the page range. Page numbers are 1-based and the range is inclusive.
 
 {% tabs %} 
 
@@ -171,7 +171,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 ## Customize image saving
 
-The [ImageNodeVisited](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_ImageNodeVisited) event in the [SaveOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html) class (from the Syncfusion® DocIO library, used within Smart Data Extractor) allows control over how images are handled when generating a Markdown string. With this event, you can:
+The [ImageNodeVisited](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_ImageNodeVisited) event in the [SaveOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html) class (from the Syncfusion® DocIO library, used within Smart Data Extractor) allows control over how images are handled when generating a Markdown string. Create the output image folder before writing files. With this event, you can:
 
 * Customize image names and storage paths, and save images externally using a FileStream.
 * Replace Base64 content with a file path or URL for optimized storage and cloud reference.
