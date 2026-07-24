@@ -41,15 +41,15 @@ Optional NuGet Packages</th><th>
 Description</th></tr>
 <tr>
 <td>
-{{'[Syncfusion.SpreadsheetHelper.Windows](https://www.nuget.org/packages/Syncfusion.SpreadsheetHelper.Windows)' | markdownify}}</td><td>
+[Syncfusion.SpreadsheetHelper.Windows](https://www.nuget.org/packages/Syncfusion.SpreadsheetHelper.Windows)</td><td>
 Contains the classes that import charts and sparklines into the Spreadsheet.</td></tr>
 <tr>
 <td>
-{{'[Syncfusion.ExcelChartToImageConverter.WPF](https://www.nuget.org/packages/Syncfusion.ExcelChartToImageConverter.WPF)' | markdownify}}</td><td>
+[Syncfusion.ExcelChartToImageConverter.WPF](https://www.nuget.org/packages/Syncfusion.ExcelChartToImageConverter.WPF)</td><td>
 Contains the classes that convert charts to images.</td></tr>
 <tr>
 <td>
-{{'[Syncfusion.Chart.Windows](https://www.nuget.org/packages/Syncfusion.Chart.Windows)' | markdownify}}</td><td>
+[Syncfusion.Chart.Windows](https://www.nuget.org/packages/Syncfusion.Chart.Windows)</td><td>
 Contains the classes that create charts that hold axes, series, and legends.</td></tr>
 </table>
 
@@ -135,7 +135,7 @@ WinForms Spreadsheet control can be added to an application either through the d
 
    ![Toolbox in WindowsForms Spreadsheet](getting-started_images/windowsforms-spreadsheet-toolbox.jpg)
 
-2. Drag `Spreadsheet` and `SpreadsheetRibbon` from the Toolbox onto the Designer area.
+2.Drag `Spreadsheet` and `SpreadsheetRibbon` from the Toolbox onto the Designer area.
     {% tabs %}
     {% highlight c# tabtitle="Form1.Designer.cs" %}
     ....
@@ -152,7 +152,7 @@ WinForms Spreadsheet control can be added to an application either through the d
     {% endhighlight %}
     {% endtabs %}
 
-3. Ribbon can be added to the application by dragging `SpreadsheetRibbon` to the Designer area.
+3.Ribbon can be added to the application by dragging `SpreadsheetRibbon` to the Designer area.
 
     {% tabs %}
     {% highlight c# tabtitle="Form1.Designer.cs" %}
@@ -171,7 +171,7 @@ WinForms Spreadsheet control can be added to an application either through the d
     {% endhighlight %}
     {% endtabs %}
 
-4. To make an interaction between Ribbon items and `Spreadsheet`, bind the Spreadsheet as DataContext to the `SpreadsheetRibbon`.
+4.To make an interaction between Ribbon items and `Spreadsheet`, bind the Spreadsheet as DataContext to the `SpreadsheetRibbon`.
 
     {% tabs %}
     {% highlight c# tabtitle="Form1.Designer.cs" %}
