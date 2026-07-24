@@ -1,13 +1,13 @@
 ---
 layout: post
-title: AI Assist in ASP.NET MVC Spreadsheet control | Syncfusion
+title: AI Assist in ASP.NET MVC Spreadsheet Control | Syncfusion
 description: Learn about the AI Assist feature in the Syncfusion ASP.NET MVC Spreadsheet control and how to configure it.
 platform: document-processing
 control: AI Assist
 documentation: ug
 ---
 
-# AI Assist in ASP.NET MVC Spreadsheet control
+# AI Assist in ASP.NET MVC Spreadsheet Control
 
 **AI Assist** brings AI-powered capabilities directly into the spreadsheet. Instead of manually applying formatting, writing formulas, or organizing data, you can describe what you want in plain English — and the AI Assist performs the action for you.
 
@@ -15,17 +15,19 @@ documentation: ug
 
 ## Integration
 
-AI Assist integrates seamlessly into your ASP.NET MVC Spreadsheet application with minimal configuration. This includes enabling the feature, configuring the backend server connection, handling events, and exploring the full range of supported prompts.
+AI Assist integrates seamlessly into your ASP.NET MVC Spreadsheet application with minimal configuration. This includes enabling the feature, configuring the server-side connection, handling events, and exploring the full range of supported prompts.
 
 For complete setup instructions, how-to guides, API references, and prompt examples, see [AI Assist Integration](./integration).
 
-## How AI Assist Works in spreadsheet
+After completing the integration, open the AI Assist panel, submit a prompt, and verify that the requested operation is applied to the active worksheet.
+
+## How AI Assist Works in the spreadsheet
 
 Understanding how AI Assist processes your request helps you write better prompts and get more reliable results.
 
 ### The Three-Step Process
 
-When you submit a prompt in the AI Assist panel, the following happens behind the scenes:
+When you submit a prompt in the AI Assist panel, the following process occurs:
 
 - **Intent Recognition**
 Your prompt is sent to the AI server, which reads it and determines what type of action you want — for example, formatting, editing, generating a report, or creating a chart. This step figures out the *what*.
@@ -51,7 +53,7 @@ AI Assist supports a wide range of spreadsheet operations through natural langua
 | **Navigation** | Perform sorting, filtering, and find & replace operations. |
 | **Visualization** | Insert charts with multiple types, themes, titles, and sizing options. |
 
-### Writing Effective Prompts
+### Writing effective prompts
 
 AI responses are only as good as the prompt you provide. Vague requests like *"fix this"* give the AI very little context. More specific prompts like *"highlight all values in column B that are greater than 500 in red"* produce reliable, accurate results.
 

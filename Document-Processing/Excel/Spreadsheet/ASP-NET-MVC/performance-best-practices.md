@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Performance Best Practices in EJ2 ASP.NET MVC Syncfusion Spreadsheet Component
+title: Performance Best Practices in ASP.NET MVC Spreadsheet | Syncfusion
 description: Learn here all about performance best practices in Syncfusion EJ2 ASP.NET MVC Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Performance
 documentation: ug
 ---
 
-# Performance Best Practices in EJ2 ASP.NET MVC Spreadsheet control
+# Performance Best Practices in the EJ2 ASP.NET MVC Spreadsheet control
 
 Performance optimization is crucial when working with large datasets in the [Syncfusion® ASP.NET MVC Spreadsheet](https://www.syncfusion.com/aspnet-mvc-ui-controls/spreadsheet). This documentation outlines best practices to enhance data handling efficiency and ensure a smooth, responsive user experience during various spreadsheet operations.
 
@@ -30,9 +30,9 @@ These chunks are combined on the client side to load the Excel data smoothly int
 To enable the chunk response processing feature, you can refer to the following UG section:
 * [Chunk Response Processing](https://ej2.syncfusion.com/aspnetmvc/documentation/spreadsheet/open-save#chunk-response-processing)
 
-### Configure JSON serialization options during open
+### Configure JSON deserialization options during open
 
-Serialization options in the Spreadsheet allows you to exclude specific features—such as styles, formats, charts, images, wrap, etc.—from the `Workbook JSON object` when opening it in the Spreadsheet using the `openFromJson` method. By skipping unnecessary features, you can significantly improve performance, especially when working with large or complex workbooks.
+Deserialization options in the Spreadsheet allow you to exclude specific features, such as styles, number formats, charts, images, and wrap from the `Workbook JSON object` when loading it using the `openFromJson` method. Skipping unnecessary features can improve performance when working with large or complex workbooks.
 
 This is particularly useful when:
 * You need only the raw data without formatting.
@@ -45,7 +45,7 @@ Refer to the following UG section to learn how to configure these options:
 
 ### Configuring threshold limits
 
-To improve performance when importing large Excel files into the Spreadsheet component, you can configure thresholds for both the maximum number of cells `MaximumDataLimit` and the file size `MaximumFileSize`. These limits help prevent delays or potential server timeouts by restricting excessively large files from being imported.
+To improve performance when importing large Excel files, configure the `MaximumDataLimit` and `MaximumFileSize` properties on the server. The `MaximumDataLimit` property specifies the maximum number of cells, while the `MaximumFileSize` property specifies the maximum file size in bytes. These limits help prevent delays or potential server timeouts by restricting excessively large files from being imported.
 
 When these thresholds are exceeded:
 * The Spreadsheet displays an alert dialog indicating that the file is large.
@@ -86,7 +86,7 @@ To learn how to configure these parsing options, please refer to the UG section 
 
 ### Manual calculation mode
 
-Manual Calculation Mode in the Spreadsheet is a performance optimization feature that allows you to delay formula recalculations until they are explicitly triggered. By default, the Spreadsheet automatically recalculates formulas whenever a dependent cell is edited or changed. While this behavior works well for small datasets, it can result in noticeable lag or UI freezing when working with large spreadsheets that contain many formulas or complex calculation chains.
+Manual Calculation Mode in the Spreadsheet is a performance optimization feature that allows you to delay formula recalculations until they are explicitly triggered. By default, the Spreadsheet automatically recalculates formulas whenever a dependent cell changes. While this behavior works well for small datasets, it can result in noticeable lag or UI freezing when working with large spreadsheets that contain many formulas or complex calculation chains.
 
 To prevent such performance issues during bulk operations—such as importing data, applying formats, or setting multiple formulas — manual calculation mode gives developers control over when recalculations should occur.
 
@@ -122,7 +122,7 @@ The following code example shows how to set `isFullPost` to **false** in the Spr
 
 ### Configure JSON serialization options during save
 
-Serialization options in the Spreadsheet allows you to exclude specific features such as styles, formats, charts, images, wrap, etc. from the `Workbook JSON object` when saving it using the `saveAsJson` method in the Spreadsheet. By skipping unnecessary features, you can significantly improve performance, especially when working with large or complex workbooks.
+Serialization options in the Spreadsheet allow you to exclude specific features, such as styles, number formats, charts, images, and wrap, from the `Workbook JSON object` when saving it using the `saveAsJson` method. Skipping unnecessary features can improve performance when working with large or complex workbooks.
 
 This is particularly useful when:
 * You need only the raw data without formatting.
@@ -139,16 +139,16 @@ Refer to the following UG section to learn how to configure these options:
 
 ### Disabling aggregate calculation
 
-When working with large datasets in the Spreadsheet, user interactions such as selecting a large range of cells can experience delays. This occurs because, by default, the Spreadsheet performs aggregate calculations (e.g., SUM, AVERAGE, COUNT, MIN, and MAX) on the selected range and displays the results in the sheet tab panel at the bottom-right corner.
+When working with large datasets, selecting a large range of cells may cause delays because the Spreadsheet calculates aggregate values, such as `SUM`, `AVERAGE`, `COUNT`, `MIN`, and `MAX`, for the selected range.
 
 To enhance the responsiveness of cell selection, particularly in performance-critical scenarios, consider disabling unnecessary aggregate calculations using the [`showAggregate`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_ShowAggregate) property.
 
 Benefits:
 * Reduces selection lag when dealing with large data ranges.
-* Prevents real-time computation of formulas like SUM, AVERAGE, MIN, and MAX for large selections.
+* Prevents real-time aggregate calculations, such as `SUM`, `AVERAGE`, `COUNT`, `MIN`, and `MAX`, for large selections.
 * Keeps the UI responsive during large selection operations.
 
-You can disable aggregate calculation using the following code example:
+Set the `showAggregate` property to `false` to disable aggregate calculations for selected ranges. When disabled, aggregate results are not displayed in the sheet tab panel.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}

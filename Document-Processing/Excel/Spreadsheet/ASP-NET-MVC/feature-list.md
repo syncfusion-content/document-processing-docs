@@ -21,8 +21,8 @@ The following table compares Excel functionality with the availability of EJ1 an
 | Scrolling | Partially | Yes | - |
 | Selection | Yes | Yes | - |
 | Editing | Yes | Yes | - |
-| Formulae | Yes | Partially | EJ2 supports limited number of [`most used formulas`](https://ej2.syncfusion.com/aspnetcore/documentation/spreadsheet/formulas#supported-formulas)  |
-| Named range | Yes | Partially | EJ2 Spreadsheet Named range supports only in workbook scope |
+| Formulae | Yes | Partially | EJ2 supports a limited number of [`commonly used formulas`](https://ej2.syncfusion.com/aspnetcore/documentation/spreadsheet/formulas#supported-formulas)  |
+| Named range | Yes | Partially | EJ2 Spreadsheet Named Range feature is supported only at the workbook scope |
 | Data Binding | Yes | Yes | - |
 | Formatting | Yes | Yes | - |
 | Context menu | Yes | Yes | - |
@@ -40,7 +40,7 @@ The following table compares Excel functionality with the availability of EJ1 an
 | Template | No | Yes | - |
 | Merge cells | Yes | Yes | - |
 | Show / Hide rows and columns | Yes | Yes | - |
-| Sheet customizations | Yes | Partially | Move or copy sheet is not supported in EJ2 spreadsheet. |
+| Sheet customizations | Yes | Partially | Moving or copying worksheets is not supported in the EJ2 Spreadsheet. |
 | Data Validation | Yes | Yes | - |
 | Table | Yes | No | - |
 | Chart | Yes | Yes | - |
@@ -53,8 +53,8 @@ The following table compares Excel functionality with the availability of EJ1 an
 | Autofill | Yes | No | - |
 | Auto Sum | Yes | Yes | - |
 | Format painter | Yes | No | - |
-| Cell Style | Yes | Partially | We can only customize the cell style in EJ2 Spreadsheet through API. |
-| Protection | Yes | Partially | Custom encryption is not supported in EJ2 Spreadsheet's protect workbook. |
+| Cell Style | Yes | Partially | Cell styles can be customized in the EJ2 Spreadsheet only through the API. |
+| Protection | Yes | Partially | Custom encryption is not supported in the EJ2 Spreadsheet workbook protection feature. |
 | Find and replace | Yes | Yes | - |
 | Drag and Drop | Yes | No | - |
 | Notes | Yes | No | - |

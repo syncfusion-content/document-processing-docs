@@ -31,12 +31,12 @@ For a few operations, this feature is usually not required.
 
 Use the following methods:
 
-- `suspendRefresh` — pauses UI rendering
-- `resumeRefresh` — applies all pending visual updates
+- [`suspendRefresh`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#suspendrefresh) — pauses UI rendering
+- [`resumeRefresh`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#resumerefresh) — applies all pending visual updates
 
 ### Step 1: Suspend UI refresh
 
-Call `suspendRefresh` before starting multiple Spreadsheet operations.
+Call [`suspendRefresh`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#suspendrefresh) before starting multiple Spreadsheet operations.
 
 ### Step 2: Perform the required operations
 
@@ -44,7 +44,7 @@ Execute the actions you want to apply. The Spreadsheet model is updated, but the
 
 ### Step 3: Resume UI refresh
 
-Call `resumeRefresh` after all operations are complete. The Spreadsheet then renders all accumulated changes in a single refresh.
+Call [`resumeRefresh`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#resumerefresh) after all operations are complete. The Spreadsheet then renders all accumulated changes in a single refresh.
 
 ### Example pattern
 
@@ -74,8 +74,9 @@ Call `resumeRefresh` after all operations are complete. The Spreadsheet then ren
 		spreadsheetObj.setColumnsWidth(90, ['B:K']);
 		spreadsheetObj.resumeRefresh();
 	}
-<script>
+</script>
 ```
+> Always pair each `suspendRefresh` call with a corresponding `resumeRefresh` call. If `resumeRefresh` is not called, the pending UI changes may not be displayed.
 
 ## API reference
 

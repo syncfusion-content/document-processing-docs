@@ -10,7 +10,9 @@ documentation: ug
 
 # Rows and columns in ASP.NET MVC Spreadsheet control
 
-Spreadsheet is a tabular format consisting of rows and columns. The intersection point of rows and columns are called as cells. The list of operations that you can perform in rows and columns are,
+The Spreadsheet consists of rows and columns arranged in a tabular format. The intersection of a row and column is called a cell.
+
+You can perform the following operations on rows and columns:
 
 * Insert
 * Delete
@@ -22,10 +24,10 @@ You can insert rows or columns anywhere in a spreadsheet. Use the [`allowInsert`
 
 ### Row
 
-The rows can be inserted in the following ways,
+You can insert rows in one of the following ways:
 
-* Using `insertRow` method, you can insert the rows once the component is loaded.
-* Using context menu, insert the empty rows in the desired position.
+* Select a row header, right-click it, and choose the required insert option from the context menu.
+* Use the `insertRow` method to insert rows programmatically after the Spreadsheet is rendered.
 
 The following code example shows the options for inserting rows in the spreadsheet.
 
@@ -42,10 +44,11 @@ The following code example shows the options for inserting rows in the spreadshe
 
 ### Column
 
-The columns can be inserted in the following ways,
+You can insert columns in one of the following ways:
 
-* Using `insertColumn` method, you can insert the columns once the component is loaded.
-* Using context menu, insert the empty columns in the desired position.
+* Select a column header, right-click it, and choose the required insert option from the context menu.
+* Use the `insertColumn` method to insert columns programmatically after the Spreadsheet is rendered.
+
 
 The following code example shows the options for inserting columns in the spreadsheet.
 
@@ -64,10 +67,10 @@ The following code example shows the options for inserting columns in the spread
 
 Delete support provides an option for deleting the rows and columns in the spreadsheet. Use [`allowDelete`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowDelete) property to enable or disable the delete option in Spreadsheet.
 
-The rows and columns can be deleted dynamically in the following ways,
+You can delete rows or columns in one of the following ways:
 
-* Using `delete` method, you can delete the loaded rows and columns.
-* Using context menu, you can delete the selected rows and columns.
+* Select the required row or column headers, right-click the selection, and choose the appropriate delete option from the context menu.
+* Use the `delete` method to delete rows or columns programmatically.
 
 The following code example shows the delete operation of rows and columns in the spreadsheet.
 
@@ -88,21 +91,21 @@ You can show or hide the rows and columns in the spreadsheet through property bi
 
 ### Row
 
-The rows can be hidden or shown through the following ways,
+You can hide or show rows in one of the following ways:
 
-* Using `hidden` property in row, you can hide/show the rows at initial load.
-* Using `hideRow` method, you can hide the rows by specifying the start and end row index, set the last argument `hide` as `false` to unhide the hidden rows.
-* Right-click on the row header and select the desired option from context menu
+* Use the `hidden` property in the row model to hide rows during the initial rendering.
+* Use the `hideRow` method to hide or show rows programmatically. Specify the start and end row indexes, and set the final `hide` argument to `false` to show hidden rows.
+* Right-click the row header and choose the required option from the context menu.
 
 ### Column
 
-The columns can be hidden or shown through following ways,
+You can hide or show columns in one of the following ways:
 
-* Using `hidden` property in columns, you can hide/show the columns at initial load.
-* Using `hideColumn` method, you can hide the columns by specifying the start and end column index, set the last argument `hide` as `false` to unhide the hidden columns.
-* Right-click on the column header and select the desired option from context menu
+* Use the `hidden` property in the column model to hide columns during the initial rendering.
+* Use the `hideColumn` method to hide or show columns programmatically. Specify the start and end column indexes, and set the final `hide` argument to `false` to show hidden columns.
+* Right-click the column header and choose the required option from the context menu.
 
-The following code example shows the hide/show rows and columns operation in the spreadsheet.
+The following code example demonstrates how to hide and show rows and columns in the Spreadsheet.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
@@ -117,7 +120,7 @@ The following code example shows the hide/show rows and columns operation in the
 
 ## Size
 
-You can change the size of rows and columns in the spreadsheet by using `setRowsHeight` and `setColumnsWidth` methods.
+Use the `setRowsHeight` and `setColumnsWidth` methods to change the size of rows and columns in the Spreadsheet.
 
 ### Row
 
@@ -125,9 +128,9 @@ You can change the height of single or multiple rows by using the `setRowsHeight
 
 You can provide the following type of ranges to the method:
 
-* Single row range: `['2:2']`
-* Multiple rows range: `['1:100']`
-* Multiple rows with discontinuous range: `['1:10', '15:25', '30:40']`
+* Single-row range: `['2:2']`
+* Multiple-row range: `['1:100']`
+* Multiple rows with discontinuous range:: `['1:10', '15:25', '30:40']`
 * Multiple rows with different sheets: `[Sheet1!1:50, 'Sheet2!1:50', 'Sheet3!1:50']`
 
 The following code example shows how to change the height for single/multiple rows in the spreadsheet.
@@ -147,10 +150,10 @@ You can change the width of single or multiple columns by using the `setColumnsW
 
 You can provide the following type of ranges to the method:
 
-* Single column range: `['F:F']`
-* Multiple columns range: `['A:F']`
-* Multiple columns with discontinuous range: `['A:C', 'G:I', 'K:M']`
-* Multiple columns with different sheets: `[Sheet1!A:H, 'Sheet2!A:H', 'Sheet3!A:H']`
+* Single-column range: `['F:F']`
+* Multiple-column range: `['A:F']`
+* Discontinuous column ranges: `['A:C', 'G:I', 'K:M']`
+* Column ranges across different sheets: `[Sheet1!A:H, 'Sheet2!A:H', 'Sheet3!A:H']`
 
 The following code example shows how to change the width for single/multiple columns in the spreadsheet.
 
@@ -163,9 +166,9 @@ The following code example shows how to change the width for single/multiple col
 {% endhighlight %}
 {% endtabs %}
 
-## Changing text in column headers
+## Change text in column headers
 
-Using the [`beforeCellRender`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_BeforeCellRender) event, you can change the text in the column headers. In that event, you can use the `e-header-cell` class to identify the header cell element and update its text value.
+Use the [`beforeCellRender`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_BeforeCellRender) event to change the column-header text. In the event handler, identify column-header elements using the `e-header-cell` class and update their displayed text value.
 
 The following code example shows how to change the text in the column headers.
 
@@ -175,14 +178,14 @@ The following code example shows how to change the text in the column headers.
 {% endhighlight %}
 {% endtabs %}
 
-## Limitations of insert and delete
+## Limitations of insert and delete operations
 
-The following features have some limitations in Insert/Delete:
+Insert and delete operations have the following limitations:
 
-* Insert row/column between the formatting applied cells.
-* Insert row/column between the data validation.
-* Insert row/column between the conditional formatting applied cells.
-* Insert/delete row/column between the filter applied cells.
+* Inserting rows or columns within formatted ranges has limited support.
+* Inserting rows or columns within data-validation ranges has limited support.
+* Inserting rows or columns within conditionally formatted ranges has limited support.
+* Inserting or deleting rows or columns within filtered ranges has limited support.
 
 ## See Also
 

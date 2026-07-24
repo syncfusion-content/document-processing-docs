@@ -3,16 +3,18 @@ layout: post
 title: Create an object structure in ASP.NET MVC Spreadsheet | Syncfusion
 description: Learn here all about how to create an object structure in ASP.NET MVC Spreadsheet Control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Create a object structure 
+control: Create an object structure
 documentation: ug
 ---
 
 # Create an object structure in ASP.NET MVC Spreadsheet Control
 
-This topic guides you to construct a JSON structure that can be passed to the `openFromJson` method to render the spreadsheet. The JSON structure is an object with the key as `Workbook` and the [`properties`](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.spreadsheet.spreadsheet.html#properties) of the spreadsheet as value.
+This topic describes how to construct a JSON object that can be passed to the `openFromJson()` method to render the Spreadsheet. The JSON structure is an object with the key as `Workbook` and the [`properties`](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.spreadsheet.spreadsheet.html#properties) of the spreadsheet as value.
 
 ```js
-{ Workbook: {} }
+{
+    Workbook: {}
+}
 ```
 
 The following properties are the root level properties of the `Workbook` object.
@@ -65,13 +67,13 @@ The following table defines each property of the `Cell`.
 | formula | string | Defines the formula or expression of the cell. |
 | format | string | Specifies the number format code to display the value in specified number format. |
 | hyperlink | string | Specifies the hyperlink of the cell. |
-| wrap | boolean | Wraps the cell text to the next line, if the text width exceeds the column width. |
-| isLocked | boolean | Specifies the cell whether it is locked or not, for allowing edit range in the spreadsheet protect option. |
+| wrap | boolean | Wraps the cell text to the next line when its width exceeds the column width. |
+| isLocked | boolean | Specifies whether the cell is locked when worksheet protection is enabled. |
 | colSpan | number | Specifies the column-wise cell merge count. |
 | rowSpan | number | Specifies the row-wise cell merge count. |
 | style | `CellStyle` | Specifies the cell style options. |
 | validation | `Validation` | Specifies the validation of the cell. |
-| image | `Image[]` | Specifies the image of the cell. |
+| image | `Image[]` | Specifies the images associated with the cell. |
 
 The following table defines each property of the `CellStyle`.
 
@@ -136,7 +138,7 @@ The following table defines each property of the `ConditionalFormat`.
 | Property | Type | Description |
 |-------|-------|-------|
 | type | `HighlightCell` or `TopBottom` or `DataBar` or `ColorScale` or `IconSet` | Specifies Conditional formatting Type. |
-| format | `Format` | Specifies format. |
+| format | `Format` | Specifies the formatting applied when the condition is satisfied. |
 | cFColor | `CFColor` | Specifies Conditional formatting Highlight Color. |
 | value | string | Specifies Conditional formatting value. |
 | range | string | Specifies Conditional formatting range. |
@@ -166,7 +168,9 @@ The following table defines each property of the `DefinedName`.
 | comment | string | Specifies comment for the defined name. |
 | refersTo | string | Specifies reference for the defined name. |
 
-In the following demo, the JSON structure is passed to the `openFromJson` method to render the spreadsheet in the [`created`](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.spreadsheet.spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_Created) event.
+Obtain the rendered Spreadsheet instance in the `created` event handler before calling the `openFromJson()` method. Bind the `created` event when rendering the Spreadsheet.
+
+The following example passes the constructed JSON object to the `openFromJson()` method in the [`created`](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.spreadsheet.spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_Created) event handler to render the Spreadsheet.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}

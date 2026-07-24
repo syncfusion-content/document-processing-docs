@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Docker image deployment in EJ2 ASP.NET MVC Spreadsheet control | Syncfusion
+title: Deploy Docker Image in ASP.NET MVC Spreadsheet | Syncfusion
 description: Learn here all about Docker image deployment in Syncfusion EJ2 ASP.NET MVC Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Docker deployment 
@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 The [**Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet (also known as Excel Viewer)**](https://www.syncfusion.com/aspnet-mvc-ui-controls/spreadsheet) is a feature-rich control for organizing and analyzing data in a tabular format. It provides all the common Excel features, including data binding, selection, editing, formatting, resizing, sorting, filtering, importing, and exporting Excel documents.
 
-This Docker image is the pre-defined Docker container for Syncfusion's Spreadsheet backend functionalities. This server-side Web API project targets ASP.NET Core 8.0.
+This Docker image is a predefined Docker container for Syncfusion Spreadsheet server-side functionality. This server-side Web API project targets ASP.NET Core 8.0.
 
-You can deploy it quickly to your infrastructure. If you want to add new functionality or customize any existing functionalities, create your own Docker file by referencing the existing [Spreadsheet Docker project](https://github.com/SyncfusionExamples/Spreadsheet-Server-Docker).
+You can deploy it quickly to your infrastructure. If you want to add new functionality or customize any existing functionalities, create your own Dockerfile by referencing the existing [Spreadsheet Docker project](https://github.com/SyncfusionExamples/Spreadsheet-Server-Docker).
 
 The Spreadsheet is supported on the [JavaScript](https://www.syncfusion.com/javascript-ui-controls), [Angular](https://www.syncfusion.com/angular-ui-components), [React](https://www.syncfusion.com/react-ui-components), [Vue](https://www.syncfusion.com/vue-ui-components), [ASP.NET Core](https://www.syncfusion.com/aspnet-core-ui-controls), and [ASP.NET MVC](https://www.syncfusion.com/aspnet-mvc-ui-controls) platforms.
 
@@ -56,9 +56,16 @@ services:
 docker-compose up
 ```
 
-Now the Spreadsheet server Docker instance runs on localhost with the provided port number `http://localhost:6002`. Open this link in a browser and navigate to the Spreadsheet Web API open and save service at `http://localhost:6002/api/spreadsheet/open` and `http://localhost:6002/api/spreadsheet/save`.
+The Spreadsheet server is now available at `http://localhost:6002`.
+
+Use the following endpoints for Spreadsheet file operations:
+
+* Open service: `http://localhost:6002/api/spreadsheet/open`
+* Save service: `http://localhost:6002/api/spreadsheet/save`
 
 **Step 4:** Append the URLs of the Docker instance running services to the [`openUrl`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_OpenUrl) property as `http://localhost:6002/api/spreadsheet/open` and the [`saveUrl`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_SaveUrl) property as `http://localhost:6002/api/spreadsheet/save` in the client-side Spreadsheet control. For more information on how to get started with the Spreadsheet control, refer to this [`getting started page.`](https://ej2.syncfusion.com/aspnetmvc/documentation/spreadsheet/getting-started-mvc)
+
+Add the following Spreadsheet configuration to the Razor view in which the Spreadsheet component is rendered. Configure the `OpenUrl` and `SaveUrl` properties to use the open and save endpoints exposed by the Docker container.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
@@ -68,9 +75,11 @@ Now the Spreadsheet server Docker instance runs on localhost with the provided p
 {% endhighlight %}
 {% endtabs %}
 
-## How to configure different cultures using a Docker compose file
+Run the ASP.NET MVC application and verify that the Spreadsheet can open and save Excel files using the configured Docker service endpoints.
 
-By default, the Spreadsheet Docker container is generated in the `en_US` culture. You can configure different cultures using the `LC_ALL`, `LANGUAGE`, and `LANG` environment variables in the `docker-compose.yml` file. These environment variables are replaced in the Docker file to set the specified culture for the Spreadsheet server.
+## How to configure different cultures using a Docker Compose file
+
+By default, the Spreadsheet Docker container is generated in the `en_US` culture. You can configure different cultures using the `LC_ALL`, `LANGUAGE`, and `LANG` environment variables in the `docker-compose.yml` file. These environment variables are replaced in the Dockerfile to set the specified culture for the Spreadsheet server.
 
 ```yaml
 version: '3.4' 

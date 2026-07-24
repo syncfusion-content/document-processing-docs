@@ -10,9 +10,9 @@ documentation: ug
 
 # Context Menu in ASP.NET MVC Spreadsheet control
 
-Context Menu is used to improve user interaction with Spreadsheet using the popup menu. This will open when right-clicking on Cell/Column Header/Row Header/ Pager in the Spreadsheet. You can use [`enableContextMenu`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_EnableContextMenu) property to enable/disable context menu.
+The context menu provides quick access to Spreadsheet operations through a popup menu. It opens when a user right-clicks a cell, row header, column header, or worksheet tab. Use the [enableContextMenu](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_EnableContextMenu) property to enable or disable the context menu.
 
-N> The default value for the `enableContextMenu` property is `true`.
+N> The default value of the `enableContextMenu` property is `true`.
 
 ## Context Menu Items in Row Cell
 
@@ -20,9 +20,9 @@ Find the table below for default context menu items and their actions.
 
 | Context Menu items | Action |
 |-------|---------|
-| `Cut` | Cut the selected cells data to the clipboard, you can select a cell where you want to move the data. |
-| `Copy` | Copy the selected cells data to the clipboard, so that you can paste it to somewhere else. |
-| `Paste` | Paste the data from clipboard to spreadsheet. |
+| `Cut` | Cut the selected cell data to the clipboard so that it can be pasted to another location. |
+| `Copy` | Copy the selected cell data to the clipboard so that it can be pasted to another location. |
+| `Paste` | Paste the clipboard data into the selected cells. |
 | `Paste Special` | `Values` - Paste the data values from clipboard to spreadsheet.  `Formats` - Paste the data formats from clipboard to spreadsheet. |
 | `Filter` | Perform filtering to the selected cells based on an active cell’s value. |
 | `Sort` | Perform sorting to the selected range of cells by ascending or descending. |
@@ -34,14 +34,14 @@ Find the table below for default context menu items and their actions.
 
 | Context Menu items | Action |
 |-------|---------|
-| `Cut` | Cut the selected row/column header data to the clipboard, you can select a cell where you want to move the data. |
-| `Copy`| Copy the selected row/column header data to the clipboard, so that you can paste it to somewhere else. |
-| `Paste` | Paste the data from clipboard to spreadsheet. |
+| `Cut` | Cut the selected row or column data to the clipboard so that it can be pasted to another location. |
+| `Copy` | Copy the selected row or column data to the clipboard so that it can be pasted to another location. |
+| `Paste` | Paste the clipboard data into the selected rows or columns. |
 | `Paste Special` | `Values` - Paste the data values from clipboard to spreadsheet. `Formats` - Paste the data formats from clipboard to spreadsheet. |
-| `Insert Columns` | Insert new rows or columns into the worksheet. |
-| `Delete Columns` | Delete existing rows or columns from the worksheet. |
-| `Hide Columns` | Hide the rows and columns. |
-| `UnHide Columns` | Show the hidden rows and columns. |
+| `Insert Rows`/`Insert Columns` | Insert new rows or columns into the worksheet. |
+| `Delete Rows`/`Delete Columns` | Delete existing rows or columns from the worksheet. |
+| `Hide Rows`/`Hide Columns` | Hide the selected rows or columns. |
+| `Unhide Rows`/`Unhide Columns` | Show the hidden rows or columns. |
 
 ## Context Menu Items in Pager
 
@@ -53,7 +53,7 @@ Find the table below for default context menu items and their actions.
 | `Delete` | Delete the selected worksheet from the spreadsheet. |
 | `Rename` | Rename the selected worksheet. |
 | `Protect Sheet` | Prevent unwanted changes from others by limiting their ability to edit. |
-| `Hide` |Hide the selected worksheet. |
+| `Hide` | Hide the selected worksheet. |
 
 ## Context Menu Customization
 
@@ -65,9 +65,9 @@ You can perform the following context menu customization options in the spreadsh
 
 ### Add Context Menu Items
 
-You can add the custom items in context menu using the `addContextMenuItems` in `contextmenuBeforeOpen` event
+Use the `addContextMenuItems` method in the `contextmenuBeforeOpen` event to add custom items to the context menu.
 
-In this demo, Custom Item is added after the Paste item in the context menu.
+In this example, a custom item is added after the **Paste** item. After running the sample, right-click a cell and verify that the custom item appears in the context menu.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
@@ -82,9 +82,9 @@ In this demo, Custom Item is added after the Paste item in the context menu.
 
 ### Remove Context Menu Items
 
-You can remove the items in context menu using the `removeContextMenuItems` in `contextmenuBeforeOpen` event
+Use the `removeContextMenuItems` method in the `contextmenuBeforeOpen` event to remove items from the context menu.
 
-In this demo, Insert Column item has been removed from the row/column header context menu.
+In this example, the **Insert Column** item is removed from the row or column header context menu. After running the sample, right-click a row or column header and verify that the item is not displayed.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
@@ -99,9 +99,9 @@ In this demo, Insert Column item has been removed from the row/column header con
 
 ### Enable/Disable Context Menu Items
 
-You can enable/disable the items in context menu using the `enableContextMenuItems` in `contextmenuBeforeOpen` event
+Use the `enableContextMenuItems` method in the `contextmenuBeforeOpen` event to enable or disable context menu items.
 
-In this demo, Rename item is disabled in the pager context menu.
+In this example, the **Rename** item is disabled in the pager context menu. After running the sample, right-click a worksheet tab and verify that the **Rename** item is disabled.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}

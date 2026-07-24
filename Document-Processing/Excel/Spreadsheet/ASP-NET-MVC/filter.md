@@ -18,23 +18,26 @@ By default, the `filter` module is injected internally into Spreadsheet to perfo
 
 ## Apply filter on UI
 
-In the active Spreadsheet, select a range of cells to filter by value of the cell. The filtering can be done by any of the following ways:
+Select a cell or range in the active Spreadsheet and apply filtering in one of the following ways:
 
-* Select the filter item in the Ribbon toolbar.
-* Right-click the sheet, select the filter item in the context menu.
+* Choose **Filter** from the Ribbon.
+* Right-click the selected range and choose **Filter** from the context menu.
 * Use the `applyFilter()` method programmatically.
-* Use `Ctrl + Shift + L` keyboard shortcut to apply the filter.
+* Press `Ctrl + Shift + L` to apply the filter.
 
-N> * Use `Alt + Up/Down` keyboard shortcut to open the filter dialog.
+
+N> * Press `Alt + Up/Down` to open the filter dialog.
 
 ## Filter by criteria
 
-The `applyFilter()` method will apply the filter UI, based on the predicate and range given in the arguments.
+Use the `applyFilter()` method to apply a filter based on the specified predicate and cell range. The predicate defines the filter condition, and the range specifies the cells to which the filter is applied.
 
 N> * The `beforeFilter` event will be triggered before filtering the specified range.
 <br/> * The `filterComplete` event will be triggered after the filter action is completed successfully.
 
 The following code example shows `filter` functionality in the Spreadsheet control.
+
+After running the sample, verify that only the rows matching the specified filter criteria are displayed.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
@@ -49,30 +52,32 @@ The following code example shows `filter` functionality in the Spreadsheet contr
 
 ## Filter by cell value
 
-To apply a filter for a cell value, right-click the cell and choose filter -> `Filter By Selected Cell's Value` option from the menu. It applies the filter based on the value of the selected cell in the current sheet.
+To filter by a cell value, right-click the cell and choose `Filter -> Filter By Selected Cell's Value` from the context menu. The filter is applied based on the value of the selected cell in the active sheet.
 
 ## Clear filter
 
-After applying filter to a certain column, you may want to clear it to make all filtered rows visible again. It can be done in the following ways,
+After applying a filter, you can clear all filters to display every row again. You can clear all filters in one of the following ways:
 
-* Choose `Clear` option in ribbon toolbar under `Filter and Sort`. It clears the filters applied in the spreadsheet for all fields.
+* Choose `Clear` from `Filter and Sort` in the Ribbon.
 
-* Use the `clearFilter()` method programmatically, to clear the applied filters in spreadsheet for all fields.
+* Use the `clearFilter()` method to programmatically clear filters from all fields.
 
 ## Clear filter on a field
 
-After filtering, you can clear/reset the filter for a field alone. It can be done in the following ways,
+You can clear or reset the filter applied to a specific field in one of the following ways:
 
-* Click filter icon in the column’s header and then choose `Clear Filter` option from the filter dialog.
-* You can right-click on a filtered column cell and choose `Clear Filter from <Column Name>.` option from the context menu.
-* Use the `clearFilter(field)` method programmatically, to clear the filter in a particular column.
+* Click the filter icon in the column header and choose `Clear Filter` from the filter dialog.
+* Right-click a cell in the filtered column and choose the corresponding `Clear Filter` option from the context menu.
+* Use the `clearFilter(field)` method to programmatically clear the filter from a specific field.
 
 ## Reapply filter
 
-When you want to reapply the filter after some changes happened in the rows. It can be done in the following ways,
+After modifying the data in filtered rows, you can reapply the existing filter in one of the following ways:
 
-* You can choose `Reapply` option in ribbon toolbar under `Filter and Sort` to reapply the filtered columns again.
-* You can right-click on a filtered cell and choose `Reapply` option from the context menu. It reapplies the filters again in the Spreadsheet for all the fields.
+* Choose `Reapply` from `Filter and Sort` in the Ribbon.
+* Right-click a filtered cell and choose `Reapply` from the context menu.
+
+Reapplying updates the filtered results based on the current data.
 
 ## Known error validations
 
@@ -96,11 +101,11 @@ The following code example shows how to get the filtered rows.
 
 ## Limitations
 
-The following features have some limitations in Filter:
+The following operations have limitations when filtering is applied:
 
-* Insert/delete row/column between the filter applied cells.
-* Merge cells with filter.
-* Copy/cut paste the filter applied cells.
+* Inserting or deleting rows and columns within the filtered range.
+* Merging cells within the filtered range.
+* Copying, cutting, or pasting cells within the filtered range.
 
 ## See Also
 

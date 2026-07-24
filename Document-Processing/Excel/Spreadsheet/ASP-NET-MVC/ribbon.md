@@ -10,28 +10,29 @@ documentation: ug
 
 # Ribbon in ASP.NET MVC Spreadsheet Control
 
-It helps to organize a spreadsheet’s features into a series of tabs. By clicking the expand or collapse icon, you can expand or collapse the ribbon toolbar dynamically.
+The Ribbon organizes Spreadsheet features into a series of tabs. Click the expand or collapse icon to dynamically expand or collapse the Ribbon.
+
+To expand or collapse the Ribbon:
+
+1. Locate the expand or collapse icon in the Ribbon.
+2. Click the icon to change the Ribbon state.
+3. Verify that the Ribbon content expands or collapses accordingly.
 
 ## Ribbon Customization
 
-You can customize the ribbon using the following methods,
+You can customize the Ribbon using the following methods:
 
-| Method | Action |
-|-------|---------|
-| `hideRibbonTabs` | Used to show or hide the existing ribbon tabs. |
-| `enableRibbonTabs` | Used to enable or disable the existing
-ribbon tabs. |
-| `addRibbonTabs` | Used to add custom ribbon tabs. |
-| `hideToolbarItems`| Used to show or hide the existing ribbon
-toolbar items. |
-| `enableToolbarItems` | Used to enable or disable the specified
-toolbar items. |
-| `addToolbarItems` | Used to add the custom items in ribbon
-toolbar. |
-| `hideFileMenuItems` | Used to show or hide the ribbon file menu
-items. |
-| `enableFileMenuItems`| Used to enable or disable file menu items. |
-| `addFileMenuItems`| Used to add custom file menu items. |
+| Method | Description |
+|--------|-------------|
+| `hideRibbonTabs` | Shows or hides existing Ribbon tabs. |
+| `enableRibbonTabs` | Enables or disables existing Ribbon tabs. |
+| `addRibbonTabs` | Adds custom Ribbon tabs. |
+| `hideToolbarItems` | Shows or hides existing Ribbon toolbar items. |
+| `enableToolbarItems` | Enables or disables specified Ribbon toolbar items. |
+| `addToolbarItems` | Adds custom items to the Ribbon toolbar. |
+| `hideFileMenuItems` | Shows or hides File-menu items. |
+| `enableFileMenuItems` | Enables or disables File-menu items. |
+| `addFileMenuItems` | Adds custom File-menu items. |
 
 The following code example shows the usage of ribbon customization.
 
