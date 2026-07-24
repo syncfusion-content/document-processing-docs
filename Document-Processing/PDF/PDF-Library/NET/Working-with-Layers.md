@@ -276,6 +276,8 @@ page.Annotations.Add(annotation);
 document.Save("Output.pdf");
 document.Close(true);
 
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using System.Drawing;
