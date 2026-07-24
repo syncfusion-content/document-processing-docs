@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in EJ2 ASP.NET MVC Spreadsheet Control
-description: "Documentation for the accessibility in the Essential JS2 Spreadsheet, featuring WAI-ARIA standards."
+title: Accessibility in EJ2 ASP.NET MVC Spreadsheet Control | Syncfusion
+description: "Learn about accessibility support in the Syncfusion ASP.NET MVC Spreadsheet control, including WAI-ARIA attributes and keyboard navigation."
 platform: document-processing
 control: Accessibility
 documentation: ug

@@ -11,7 +11,7 @@ documentation: ug
 
 ## Localization
 
-The [Localization](https://ej2.syncfusion.com/aspnetmvc/documentation/common/localization/) library allows you to localize the default text displayed by the Spreadsheet. Static text used by features such as cell formatting, merge cells, and data validation can be translated by defining the [locale](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_Locale) property and loading the corresponding translation object.
+The [Localization](https://ej2.syncfusion.com/aspnetmvc/documentation/common/localization) library allows you to localize the default text displayed by the Spreadsheet. Static text used by features such as cell formatting, merge cells, and data validation can be translated by defining the [locale](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_Locale) property and loading the corresponding translation object.
 
 The following table lists the locale keywords and their corresponding default text used in the Spreadsheet.
 
@@ -437,4 +437,4 @@ After running the sample, verify that the Spreadsheet layout, Ribbon, and worksh
 
 ## See Also
 
-* [Localization](https://ej2.syncfusion.com/aspnetmvc/documentation/common/localization/)
+* [Localization](https://ej2.syncfusion.com/aspnetmvc/documentation/common/localization)

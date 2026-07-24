@@ -59,7 +59,7 @@ You can merge cells in the following ways:
 
 The `merge` method requires a cell range and the applicable merge type. The range identifies the cells to merge, and the merge type determines whether all cells, rows, or columns in the range are merged.
 
-The following code example demonstrates the merge operation in the Spreadsheet.
+The available merge options in spreadsheet are,
 
 | Type | Action |
 |-------|---------|

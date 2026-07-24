@@ -130,8 +130,8 @@ You can provide the following type of ranges to the method:
 
 * Single-row range: `['2:2']`
 * Multiple-row range: `['1:100']`
-* iscontinuous row ranges: `['1:10', '15:25', '30:40']`
-* Row ranges across different sheets: `[Sheet1!1:50, 'Sheet2!1:50', 'Sheet3!1:50']`
+* Multiple rows with discontinuous range:: `['1:10', '15:25', '30:40']`
+* Multiple rows with different sheets: `[Sheet1!1:50, 'Sheet2!1:50', 'Sheet3!1:50']`
 
 The following code example shows how to change the height for single/multiple rows in the spreadsheet.
 

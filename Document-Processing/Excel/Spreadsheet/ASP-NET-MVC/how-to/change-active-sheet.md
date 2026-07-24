@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Change active sheet in EJ2 ASP.NET MVC Spreadsheet control | Syncfusion
+title: Change Active Sheet in ASP.NET MVC Spreadsheet | Syncfusion
 description: Learn here all about changing active sheet index when import a file in Syncfusion EJ2 ASP.NET MVC Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Spreadsheet

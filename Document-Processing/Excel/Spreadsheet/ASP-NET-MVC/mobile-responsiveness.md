@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mobile Responsiveness in ASP.NET MVC Syncfusion Spreadsheet Control
+title: Mobile Responsiveness in ASP.NET MVC Spreadsheet | Syncfusion
 description: Learn  about Mobile Responsiveness in ASP.NET MVC Spreadsheet Control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Mobile Responsiveness
