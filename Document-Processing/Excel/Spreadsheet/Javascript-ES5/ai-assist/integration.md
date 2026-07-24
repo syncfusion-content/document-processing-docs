@@ -62,11 +62,11 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
 spreadsheet.appendTo('#element');
 ```
 
-This enables the AI Assist into the spreadsheet.
+This enables AI Assist in the Spreadsheet.
 
 ### Configure AI Assist Settings
 
-Use the [`aiAssistSettings`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#aiassistsettings) property to connect the spreadsheet to the backend server and customize the AI Assist.
+Use the [`aiAssistSettings`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#aiassistsettings) property to connect the Spreadsheet to the backend server and customize the AI Assist.
 
 ```js
 ej.spreadsheet.Spreadsheet.Inject(ej.spreadsheet.AIAssist);
@@ -90,8 +90,8 @@ Your Spreadsheet is now integrated with AI Assist and ready to use.
 ### Open and Close the AI Panel
 
 * **Open**: Click the **AI Assist** button in the ribbon toolbar.
-* **Close**: Click the **✕** button inside the panel header, or click the **AI Assist** ribbon button again.
-* **Start new conversation.**: Click the **↺ (Refresh)** button in the panel header.
+* **Close**: Click the **Close (✕)** button inside the panel header, or click the **AI Assist** ribbon button again.
+* **Start a new conversation**: Click the **Refresh (↺)** button in the panel header.
 * **Resize the panel**: Drag the left edge of the panel to make it wider or narrower.
 
 ### Undo an AI Action
@@ -100,7 +100,7 @@ All actions performed by AI Assist are recorded in the spreadsheet's undo/redo h
 
 ### How to Customize the Request Before Sending
 
-Use the [`promptRequest`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#promptrequest) event to add custom data — such as a user ID or session token — to the request before it reaches your server.
+Use the [`promptRequest`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#promptrequest) event to add custom data, such as a user ID or session token, to the request before it reaches your server.
 
 ```js
 ej.spreadsheet.Spreadsheet.Inject(ej.spreadsheet.AIAssist);
@@ -122,8 +122,7 @@ You can also prevent the request entirely by setting `args.cancel = true`.
 
 ### How to Handle AI Responses
 
-Use the [`promptResponse`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#promptresponse) event to run custom logic after the AI completes its task — for example, logging results or showing a notification.
-
+Use the [`promptResponse`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#promptresponse) event to run custom logic after the AI completes its task, for example logging results or showing a notification.
 ```js
 ej.spreadsheet.Spreadsheet.Inject(ej.spreadsheet.AIAssist);
 
@@ -182,7 +181,7 @@ If the AI panel displays an error message:
 
 Type your request in plain English — no formulas or technical knowledge needed.
 
-#### Data Analysis
+#### Data analysis
 
 | What to say | What it does |
 |---|---|
@@ -190,7 +189,7 @@ Type your request in plain English — no formulas or technical knowledge needed
 | *"What are the top 5 rows by sales?"* | Picks out the highest-performing records from your data |
 | *"Generate a full report for this sheet"* | Creates a structured report with KPIs, top records, and chart suggestions |
 
-#### Data Operations
+#### Data operations
 
 | What to say | What it does |
 |---|---|
@@ -207,7 +206,7 @@ Type your request in plain English — no formulas or technical knowledge needed
 | *"Make the text italic and red in column C"* | Applies italic style and red font color to the column |
 | *"Make the text fit inside the cells in column D"* | Turns on text wrapping so long text does not overflow |
 
-#### Rules & Validation
+#### Rules and validation
 
 | What to say | What it does |
 |---|---|
@@ -216,7 +215,7 @@ Type your request in plain English — no formulas or technical knowledge needed
 | *"Only allow values between 1 and 100 in column B"* | Adds a data validation rule to restrict input |
 | *"Add a dropdown list with Yes and No options to column C"* | Creates a dropdown for easy, consistent data entry |
 
-#### Structure Management
+#### Structure management
 
 | What to say | What it does |
 |---|---|
@@ -233,7 +232,7 @@ Type your request in plain English — no formulas or technical knowledge needed
 | *"Show me only the rows where the region is India"* | Applies a filter so only matching rows are visible |
 | *"Find all cells that say 'Pending' and change them to 'Done'"* | Runs a find and replace across the sheet |
 
-#### Clipboard Actions
+#### Clipboard actions
 
 | What to say | What it does |
 |---|---|

@@ -9,7 +9,7 @@ documentation: ug
 
 # AI Assist in JavaScript Spreadsheet control
 
-**AI Assist** brings AI-powered capabilities directly into the spreadsheet. Instead of manually applying formatting, writing formulas, or organizing data, you can describe what you want in plain English — and the AI Assist performs the action for you.
+**AI Assist** brings AI-powered capabilities directly into the Spreadsheet control. Instead of manually applying formatting, writing formulas, or organizing data, you can describe what you want in plain English — and the AI Assist performs the action for you.
 
 ![Spreadsheet AI Assist panel](../images/spreadsheet_ai_assist.gif)
 
@@ -19,7 +19,7 @@ AI Assist integrates seamlessly into your JavaScript Spreadsheet application wit
 
 For complete setup instructions, how-to guides, API references, and prompt examples, see [AI Assist Integration](./integration).
 
-## How AI Assist Works in spreadsheet
+## How AI Assist Works in the Spreadsheet
 
 Understanding how AI Assist processes your request helps you write better prompts and get more reliable results.
 
@@ -31,14 +31,14 @@ When you submit a prompt in the AI Assist panel, the following happens behind th
 Your prompt is sent to the AI server, which reads it and determines what type of action you want — for example, formatting, editing, generating a report, or creating a chart. This step figures out the *what*.
 
 - **Command Generation**
-Once the intent is known, the spreadsheet's current data and the identified action are sent back to the AI. The AI then generates a precise set of instructions — such as which cells to update, what styles to apply, or what chart data to use. This step figures out the *how*.
+Once the intent is known, the Spreadsheet's current data and the identified action are sent back to the AI. The AI then generates a precise set of instructions — such as which cells to update, what styles to apply, or what chart data to use. This step figures out the *how*.
 
 - **Execution**
-The generated instructions are applied directly to the spreadsheet. The result appears instantly in the grid, and a confirmation message is shown in the AI panel. Every change is also added to the undo history, so nothing is permanent.
+The generated instructions are applied directly to the Spreadsheet. The result appears instantly in the grid, and a confirmation message is shown in the AI panel. Every change is also added to the undo history, so nothing is permanent.
 
 ## Supported Features
 
-AI Assist supports a wide range of spreadsheet operations through natural language prompts:
+AI Assist supports a wide range of Spreadsheet operations through natural language prompts.
 
 | Feature | Description |
 |---|---|

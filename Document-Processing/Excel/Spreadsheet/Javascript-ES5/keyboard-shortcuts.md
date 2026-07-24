@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Keyboard shortcuts in EJ2 Javascript Spreadsheet control | Syncfusion
-description: Learn here all about Keyboard shortcuts in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Keyboard shortcuts in EJ2 JavaScript Spreadsheet control | Syncfusion
+description: Learn here all about Keyboard shortcuts in Syncfusion EJ2 JavaScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Keyboard shortcuts 
+control: Keyboard shortcuts
 documentation: ug
 ---
 
-# Keyboard shortcuts in EJ2 Javascript Spreadsheet control
+# Keyboard shortcuts in EJ2 JavaScript Spreadsheet control
 
-The keyboard shortcuts supported in the spreadsheet are,
+The following tables list the built-in keyboard shortcuts supported by the Syncfusion EJ2 JavaScript Spreadsheet control. Use this page as a quick reference while working in the spreadsheet UI.
 
 | Shortcut | Description |
 |-------|---------|
-| Ctrl + O | Displays dialog to open a file. |
+| Ctrl + O | Displays the **Open** dialog to open a file. |
 | Ctrl + S / Alt + F2 | Saves the workbook. |
-| Ctrl + P | Print the active worksheet when the spreadsheet is in focus. |
-| F2 | Enables edit mode. |
-| ESC | Cancel edit mode and discard the changes. |
-| Backspace and SPACE | Clears content of the active cell and enables edit mode. |
+| Ctrl + P | Prints the active worksheet when the spreadsheet is in focus. |
+| F2 | Enables Edit mode for the active cell. |
+| ESC | Cancels Edit mode and discards the changes. |
+| Backspace | Clears the content of the active cell and enables Edit mode. |
 | Ctrl + C | Copies the selected cells. |
 | Ctrl + X | Cuts the selected cells. |
 | Ctrl + V | Paste the clipboard(cut or copied) content in the new selected range. |
@@ -28,11 +28,11 @@ The keyboard shortcuts supported in the spreadsheet are,
 | Ctrl + 5 | Applies or removes ~~strikethrough~~. |
 | Ctrl + Z | Reverses (Undo) the last action. |
 | Ctrl + Y | Repeats (Redo) the last reversed action. |
-| Ctrl + K | It opens the `Insert Hyperlink` dialog for adding new hyperlink to a cell. If the selected cell already contains hyperlink, it opens the `Edit Hyperlink` dialog. |
-| Ctrl + F / Shift + F5 | Opens `Find` dialog. |
-| Ctrl + H | Opens `Find and Replace` dialog. |
-| Ctrl + G | Opens `GoTo` dialog, which helps to navigate to cell. |
-| Ctrl + Shift + L | Applies filter to the first row of the selected range or used range. |
+| Ctrl + K | Opens the `Insert Hyperlink` dialog. If the active cell already contains a hyperlink, opens the `Edit Hyperlink` dialog instead. |
+| Ctrl + F / Shift + F5 | Opens the `Find` dialog. |
+| Ctrl + H | Opens the `Find and Replace` dialog. |
+| Ctrl + G | Opens the `GoTo` dialog to navigate to a specific cell. |
+| Ctrl + Shift + L | Applies a filter to the first row of the selected range or used range. |
 | Alt + F | Opens the `File` menu. |
 | Alt + H | Go to `Home` tab. |
 | Alt + N | Go to `Insert` tab. |

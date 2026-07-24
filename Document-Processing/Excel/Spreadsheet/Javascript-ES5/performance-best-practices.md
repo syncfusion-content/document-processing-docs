@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Performance best practices in EJ2 JavaScript Spreadsheet | Syncfusion
-description: Learn here all about how to optimize the performance EJ2 JavaScript Spreadsheet control, its elements and more.
+title: Performance Best Practices in EJ2 JavaScript Spreadsheet Control | Syncfusion
+description: Learn how to optimize the performance of the EJ2 JavaScript Spreadsheet control and its elements.
 platform: document-processing
-control: Performance 
+control: Performance
 documentation: ug
 ---
 
@@ -15,7 +15,7 @@ Performance optimization is crucial when working with large datasets in the [Jav
 
 ### Virtual scrolling
 
-Virtual scrolling is an essential performance feature in the EJ2 Spreadsheet that enhances rendering efficiency when handling large datasets. Instead of loading all rows and columns into the DOM at once, it renders only the cells visible within the viewport. As the user scrolls, additional rows or columns are dynamically loaded and rendered.
+Virtual scrolling is an essential performance feature in the Spreadsheet that enhances rendering efficiency when handling large datasets. Instead of loading all rows and columns into the DOM at once, it renders only the cells visible within the viewport. As the user scrolls, additional rows or columns are dynamically loaded and rendered.
 
 This approach significantly reduces initial load time, DOM size, and memory usage — resulting in smoother rendering and interaction, especially when working with thousands of rows or columns.
 
@@ -36,7 +36,7 @@ Serialization options in the EJ2 Spreadsheet allow you to exclude specific featu
 
 This is particularly useful when:
 * You need only the raw data without formatting.
-* You're opening the `Workbook JSON object` in the Spreadsheet using the [`openFromJson`](https://helpej2.syncfusion.com/javascript/documentation/api/spreadsheet#openfromjson) method.
+* You are opening the `Workbook JSON object` in the Spreadsheet using the [`openFromJson`](https://helpej2.syncfusion.com/javascript/documentation/api/spreadsheet#openfromjson) method.
 * You want to minimize the size of the JSON payload and optimize processing speed.
 
 Refer to the following UG section to learn how to configure these options:
@@ -82,26 +82,26 @@ To improve performance when opening large Excel files, use parsing options like 
 To learn how to configure these parsing options, please refer to the UG section below.
 * [Configure Parsing Options](./open-save#improving-excel-file-open-performance-with-parsing-options)
 
-## How to improve performance on formula calculation in Spreadsheet?
+## How to improve performance for formula calculation in the Spreadsheet?
 
 ### Manual calculation mode
 
 Manual Calculation Mode in the EJ2 Spreadsheet is a performance optimization feature that allows you to delay formula recalculations until they are explicitly triggered. By default, the Spreadsheet automatically recalculates formulas whenever a dependent cell is edited or changed. While this behavior works well for small datasets, it can result in noticeable lag or UI freezing when working with large spreadsheets that contain many formulas or complex calculation chains.
 
-To prevent such performance issues during bulk operations—such as importing data, applying formats, or setting multiple formulas — manual calculation mode gives developers control over when recalculations should occur.
+To prevent such performance issues during bulk operations—such as importing data, applying formats, or setting multiple formulas—manual calculation mode gives developers control over when recalculations should occur.
 
 Enabling manual mode is highly beneficial when:
 * Importing large Excel or JSON files with formula-heavy sheets.
 * Performing bulk updates (e.g., updating rows or columns via code).
 * Applying formulas dynamically to a large number of cells.
-* You want to postpone calculations until all content or changes are finalized.
+* Postponing calculations until all content or changes are finalized.
 
 To learn more about Manual Calculation Mode and how to enable it, you can refer to the following [UG link](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es5/formulas#manual-mode).
 ## How to improve save performance in the Spreadsheet?
 
 ### Handling large file saves with `isFullPost` option
 
-When saving large Excel files with extensive data and features using **File → Save As** or the **save** method, the Spreadsheet triggers a server API call through a form submit operation. This can lead to performance issues such as timeouts or delays, particularly due to the size and complexity of the workbook.
+When saving large Excel files with extensive data and features using **File → Save As** or the [`save`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#save) method, the Spreadsheet triggers a server API call through a form submit operation. This can lead to performance issues such as timeouts or delays, particularly due to the size and complexity of the workbook.
 
 To mitigate these issues during the save operation, you can set the [`isFullPost`](https://helpej2.syncfusion.com/javascript/documentation/api/spreadsheet/beforeSaveEventArgs#isfullpost) property to **false** in the [`beforeSave`](https://helpej2.syncfusion.com/javascript/documentation/api/spreadsheet#beforesave) event of the Spreadsheet.
 
@@ -121,7 +121,7 @@ Serialization options in the EJ2 Spreadsheet allow you to exclude specific featu
 
 This is particularly useful when:
 * You need only the raw data without formatting.
-* You're saving the `Workbook JSON object` using the [`saveAsJson`](https://helpej2.syncfusion.com/javascript/documentation/api/spreadsheet#saveasjson) method in the Spreadsheet.
+* You are saving the `Workbook JSON object` using the [`saveAsJson`](https://helpej2.syncfusion.com/javascript/documentation/api/spreadsheet#saveasjson) method in the Spreadsheet.
 * You want to minimize the size of the JSON payload and optimize processing speed.
 
 Proper use of serialization options during save improves performance and reduces the time taken during the save process.

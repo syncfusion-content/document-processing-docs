@@ -9,7 +9,7 @@ documentation: ug
 
 # AI Assist Node.js Server Setup in JavaScript Spreadsheet
 
-AI Assist requires a backend service to process prompts and return AI-generated responses. This topic explains how to create a **Node.js** server with **Azure OpenAI** credentials.
+AI Assist requires a backend service to process prompts and return AI-generated responses. This how-to guide shows how to create a **Node.js** server with **Azure OpenAI** credentials and connect it to the JavaScript Spreadsheet.
 
 ## Prerequisites
 
@@ -80,7 +80,7 @@ Ensure your `package.json` includes `"type": "module"` to support ES module impo
 
 Create a `.env` file in the project root and add your Azure OpenAI credentials:
 
-```csharp
+```ini
 apiKey      = Your_Azure_OpenAI_API_Key
 endpoint    = https://your-resource.openai.azure.com/
 deployment  = Your_Deployment_Name
@@ -91,7 +91,7 @@ apiVersion  = Your_Azure_OpenAI_API_Version
 
 ## Configure required modules
 
-Create `ai-model.js` to initialize the Azure OpenAI client using the credentials from `.env`:
+Create `ai-model.js` in the project root to initialize the Azure OpenAI client using the credentials from `.env`. The client is created once and reused for every request.
 
 ```js
 import { AzureOpenAI } from "openai";
@@ -157,13 +157,13 @@ app.listen(PORT, () => {
 
 ## Run the server
 
-Run the following command to start the server:
+From the project root, start the server:
 
 ```bash
 npm start
 ```
 
-The server runs on `http://localhost:3000`. Update the AI Assist endpoint like below:
+The AI Assist chat endpoint exposed by this server is:
 
 ```
 http://localhost:3000/api/AIAssist/Chat
@@ -206,8 +206,8 @@ The server accepts a `POST` request with the following JSON body:
 ```json
 {
   "messages": [
-    { "role": "system",    "content": "You are a spreadsheet assistant." },
-    { "role": "user",      "content": "Make the header row bold." }
+    { "role": "system", "content": "You are a spreadsheet assistant." },
+    { "role": "user",   "content": "Make the header row bold." }
   ]
 }
 ```
@@ -223,7 +223,7 @@ And returns:
 
 ## Sample
 
-A Node.js server sample project is available for quick setup. Extract the archive, update the Azure OpenAI credentials in the `.env` file, and start the server using the following command
+A Node.js server sample project is available for quick setup. Extract the archive, update the Azure OpenAI credentials in the `.env` file, and start the server using the following command:
 
 ```bash
 npm start

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Suspend and Resume UI Refresh in Javascript Spreadsheet | Syncfusion
-description: Improve performance in Syncfusion EJ2 Javascript Spreadsheet by using suspendRefresh and resumeRefresh to group multiple updates and avoid repeated rendering.
+title: Suspend and Resume UI Refresh in JavaScript Spreadsheet | Syncfusion
+description: Improve performance in Syncfusion EJ2 JavaScript Spreadsheet by using suspendRefresh and resumeRefresh to group multiple updates and avoid repeated rendering.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Suspend and Resume UI Refresh in JavaScript Spreadsheet
+# Suspend and Resume UI Refresh in the JavaScript Spreadsheet
 
 The Spreadsheet refreshes its UI after each operation performed through public methods, such as updating a cell, applying formatting, or inserting rows. This immediate rendering works well for a few actions, but it can lead to performance issues when many operations are executed one after another.
 
@@ -31,8 +31,8 @@ For a few operations, this feature is usually not required.
 
 Use the following methods:
 
-- `suspendRefresh` — pauses UI rendering
-- `resumeRefresh` — applies all pending visual updates
+- `suspendRefresh` — pauses UI rendering.
+- `resumeRefresh` — applies all pending visual updates.
 
 ### Step 1: Suspend UI refresh
 
@@ -70,10 +70,10 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
 Suspends visual updates in the Spreadsheet.
 
 **Behavior:**
-- Prevents the UI from refreshing after each operation
-- Allows multiple actions to be grouped together
-- Keeps internal model updates running
-- Must be paired with `resumeRefresh`
+- Prevents the UI from refreshing after each subsequent operation.
+- Allows multiple actions to be grouped together.
+- Internal model and data updates continue to run.
+- Must be paired with `resumeRefresh()` to restore rendering.
 
 ### resumeRefresh
 
@@ -99,7 +99,7 @@ Resumes visual updates and applies all pending changes.
 
 ## Supported operations
 
-The following types of operations can be performed between `suspendRefresh` and `resumeRefresh`:
+The following types of operations can be performed between `suspendRefresh` and `resumeRefresh`.
 
 - **Cell operations:** `updateCell`, `autoFill`, `clear`
 - **Row and column operations:** `insertRow`, `insertColumn`, `hideRow`, `hideColumn`, `setRowsHeight`, `setRowHeight`, `setColWidth`, `setColumnsWidth`, `autoFit`
@@ -122,7 +122,7 @@ The following types of operations can be performed between `suspendRefresh` and 
 
 - Use suspend and resume UI refresh when multiple operations are executed together.
 - Avoid using it for few or simple operations.
-- Useful during initialization and large data updates.
+- It is useful during initialization and large data updates.
 - Data and model changes are processed during the suspended state; only visual refresh is delayed.
 
 ## See Also
