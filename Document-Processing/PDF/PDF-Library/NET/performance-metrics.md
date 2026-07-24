@@ -1,6 +1,6 @@
 ---
 title: Performance Metrics of the Syncfusion PDF Library
-description: This section provides a detailed overview of the performance metrics and capabilities of the PDF processing library.
+description: This section provides a detailed overview of the performance metrics and capabilities of the Syncfusion PDF processing library.
 platform: document-processing
 control: PDF
 documentation: UG
@@ -8,7 +8,7 @@ documentation: UG
 
 # Performance Metrics in PDF Library
 
-The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) provides high-performance APIs to create, read, edit, and secure PDF documents programmatically. This performance benchmark report highlights the speed and efficiency of key operations, demonstrating how PDF library handles large-scale document processing in real-world scenarios.
+The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) provides high-performance APIs to create, read, edit, and secure PDF documents programmatically. This performance benchmark report highlights the speed and efficiency of key operations, demonstrating how the PDF library handles large-scale document processing in real-world scenarios.
 
 ## Environment Details
 
@@ -147,7 +147,7 @@ A complete working sample used for this performance evaluation is available for 
 
 ## Compress PDF
 
-The table below illustrates the performance of compression operations applied to PDF documents. To compress an existing PDF document in .NET, you should add the [Syncfusion.Pdf.Imaging.NET](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.NET/31.2.12) package.
+The table below illustrates the performance of compression operations applied to PDF documents. To compress an existing PDF document in .NET, add the [Syncfusion.Pdf.Imaging.NET](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.NET/31.2.12) package.
 
 <table>
   <tr>
