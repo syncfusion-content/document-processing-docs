@@ -8,9 +8,9 @@ documentation: UG
 
 # Font Substitution in Word to Image Conversion
 
-When the necessary fonts used in the Word document has not been installed in the production machine, then Essential<sup>&reg;</sup> DocIO uses the ”Microsoft Sans Serif” as default font for rendering the text. This leads to preservation difference in generated image as each font has different glyphs for characters. To learn more about the default font substitution, click [here](https://support.syncfusion.com/kb/article/6821/what-happens-when-the-word-document-used-fonts-for-a-text-is-not-installed-in-production).
+When the necessary fonts used in the Word document have not been installed in the production machine, then Essential<sup>&reg;</sup> DocIO uses the "Microsoft Sans Serif" as the default font for rendering the text. This leads to preservation differences in the generated image, as each font has different glyphs for characters. To learn more about the default font substitution, click [here](https://support.syncfusion.com/kb/article/6821/what-happens-when-the-word-document-used-fonts-for-a-text-is-not-installed-in-production).
 
-To avoid this, the Essential<sup>&reg;</sup> DocIO library allows you to set an alternate font for the missing font used in the Word document.
+To avoid this, the Essential<sup>&reg;</sup> DocIO library allows you to specify an alternate font for any missing font used in the Word document.
 
 ## Use alternate font from installed fonts
 
@@ -158,7 +158,7 @@ The following code example shows how to use the alternate fonts instead of "Micr
 private void FontSettings_SubstituteFont(object sender, SubstituteFontEventArgs args)
 {
     //Sets the alternate font when a specified font is not installed in the production environment
-    if (args.OrignalFontName == "Arial Unicode MS")
+    if (args.OriginalFontName == "Arial Unicode MS")
     {
         //Sets the alternate font based on the font style.
         switch (args.FontStyle)
@@ -181,7 +181,7 @@ private void FontSettings_SubstituteFont(object sender, SubstituteFontEventArgs 
 private void FontSettings_SubstituteFont(object sender, SubstituteFontEventArgs args)
 {
     //Sets the alternate font when a specified font is not installed in the production environment
-    if (args.OrignalFontName == "Arial Unicode MS")
+    if (args.OriginalFontName == "Arial Unicode MS")
     {
         //Sets the alternate font based on the font style.
         switch (args.FontStyle)
@@ -201,9 +201,9 @@ private void FontSettings_SubstituteFont(object sender, SubstituteFontEventArgs 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Private Sub SubstituteFont(ByVal sender As Object, ByVal args As SubstituteFontEventArgs)
+Private Sub FontSettings_SubstituteFont(ByVal sender As Object, ByVal args As SubstituteFontEventArgs)
     'Sets the alternate font when a specified font is not installed in the production environment
-    If args.OrignalFontName = "Arial Unicode MS" Then
+    If args.OriginalFontName = "Arial Unicode MS" Then
         'Sets the alternate font based on the font style.
         Select Case args.FontStyle
            Case FontStyle.Italic
