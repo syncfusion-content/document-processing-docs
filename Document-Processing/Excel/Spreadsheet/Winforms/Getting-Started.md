@@ -41,15 +41,15 @@ Optional NuGet Packages</th><th>
 Description</th></tr>
 <tr>
 <td>
-[Syncfusion.SpreadsheetHelper.Windows](https://www.nuget.org/packages/Syncfusion.SpreadsheetHelper.Windows)</td><td>
+{{'[Syncfusion.SpreadsheetHelper.Windows](https://www.nuget.org/packages/Syncfusion.SpreadsheetHelper.Windows)' | markdownify}}</td><td>
 Contains the classes that import charts and sparklines into the Spreadsheet.</td></tr>
 <tr>
 <td>
-[Syncfusion.ExcelChartToImageConverter.WPF](https://www.nuget.org/packages/Syncfusion.ExcelChartToImageConverter.WPF)</td><td>
+{{'[Syncfusion.ExcelChartToImageConverter.WPF](https://www.nuget.org/packages/Syncfusion.ExcelChartToImageConverter.WPF)' | markdownify}}</td><td>
 Contains the classes that convert charts to images.</td></tr>
 <tr>
 <td>
-[Syncfusion.Chart.Windows](https://www.nuget.org/packages/Syncfusion.Chart.Windows)</td><td>
+{{'[Syncfusion.Chart.Windows](https://www.nuget.org/packages/Syncfusion.Chart.Windows)' | markdownify}}</td><td>
 Contains the classes that create charts that hold axes, series, and legends.</td></tr>
 </table>
 
