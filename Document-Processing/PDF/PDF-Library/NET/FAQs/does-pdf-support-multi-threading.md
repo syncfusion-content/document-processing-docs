@@ -1,26 +1,37 @@
 ---
-title: PDF support for multi threading | Syncfusion
-description: This page provides detailed information on the multi-threading support offered by the Syncfusion .NET PDF library.
+title: PDF support for multi-threading | Syncfusion
+description: This page provides detailed information about the multi-threading support offered by the Syncfusion .NET PDF library, including enabling thread safety, creating documents, and modifying existing documents in multi-threaded scenarios.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Does PDF library support multithreading and thread-safe?
+# Does the PDF Library Support Multithreading and Is It Thread-Safe?
 
-Yes, Essential<sup>&reg;</sup> PDF allows you to create or modify PDF documents simultaneously in multi-threading environment using [EnableThreadSafe](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_EnableThreadSafe) property of [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class.
+Yes, the Essential<sup>&reg;</sup> PDF library supports creating or modifying PDF documents concurrently in a multi-threaded environment. Thread safety is enabled by setting the [EnableThreadSafe](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_EnableThreadSafe) property of the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class to **true**.
 
-The following code sample illustrates how to create a PDF document in multi-threading environment.
+N> When `EnableThreadSafe` is set to **true**, the PDF library synchronizes access to shared resources internally, allowing multiple threads to safely create and modify PDF documents simultaneously.
 
-{% tabs %}  
+## Creating a PDF Document in a Multi-Threading Environment
+
+The following code samples demonstrate how to create a PDF document in a multi-threaded environment using `Parallel.ForEach`.
+
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-IEnumerable<int> works = Enumerable.Range(0, 100);
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Threading.Tasks;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
+IEnumerable<int> works = Enumerable.Range(0, 100);
 Parallel.ForEach(works, index => GeneratePDF(index));
 
 private void GeneratePDF(int index)
 {
-    //Enable the thread safe in PDF document.
+    //Enable thread safety in the PDF document.
     PdfDocument.EnableThreadSafe = true;
 
     //Create a new PDF document.
@@ -34,23 +45,31 @@ private void GeneratePDF(int index)
     PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
     //Draw the text.
     graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
+
     string name = Guid.NewGuid().ToString();
 
     //Save the document.
-    document.Save(name+".pdf");
+    document.Save(name + ".pdf");
     //Close the document.
     document.Close(true);
 }
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-IEnumerable<int> works = Enumerable.Range(0, 100);
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Threading.Tasks;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
+IEnumerable<int> works = Enumerable.Range(0, 100);
 Parallel.ForEach(works, index => GeneratePDF(index));
 
 private void GeneratePDF(int index)
 {
-    //Enable the thread safe in PDF document.
+    //Enable thread safety in the PDF document.
     PdfDocument.EnableThreadSafe = true;
 
     //Create a new PDF document.
@@ -64,20 +83,26 @@ private void GeneratePDF(int index)
     PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
     //Draw the text.
     graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
+
     string name = Guid.NewGuid().ToString();
 
     //Save the document.
-    document.Save(name+".pdf");
+    document.Save(name + ".pdf");
     //Close the document.
     document.Close(true);
 }
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+
 Dim works As IEnumerable(Of Integer) = Enumerable.Range(0, 100)
-    Parallel.ForEach(works, Sub(index) GeneratePDF(index))
-    Private Sub GeneratePDF(ByVal index As Integer)
-    'Enable the thread safe in PDF document.
+Parallel.ForEach(works, Sub(index) GeneratePDF(index))
+
+Private Sub GeneratePDF(ByVal index As Integer)
+    'Enable thread safety in the PDF document.
     PdfDocument.EnableThreadSafe = True
 
     'Create a new PDF document.
@@ -91,6 +116,7 @@ Dim works As IEnumerable(Of Integer) = Enumerable.Range(0, 100)
     Dim font As PdfFont = New PdfStandardFont(PdfFontFamily.Helvetica, 20)
     'Draw the text.
     graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, New PointF(0, 0))
+
     Dim name As String = Guid.NewGuid().ToString()
 
     'Save the document.
@@ -103,75 +129,103 @@ End Sub
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/PDF%20Document/Create-a-PDF-in-multi-threading-environment).
 
-To modify the existing PDF document in multi-threading environment [EnableThreadSafe](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_EnableThreadSafe) property to an existing PDF document using [PDFLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class. The following code example explain this.
+## Modifying an Existing PDF Document in a Multi-Threading Environment
 
-{% tabs %}  
+To modify an existing PDF document in a multi-threaded environment, set the [EnableThreadSafe](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_EnableThreadSafe) property to **true** and load the PDF document using the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class. The following code samples illustrate this scenario.
+
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-IEnumerable<int> works = Enumerable.Range(0, 100);
-Parallel.ForEach(works, index => GeneratePDF(index));
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Threading.Tasks;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
 
-private void GeneratePDF(int index)
+IEnumerable<int> works = Enumerable.Range(0, 100);
+Parallel.ForEach(works, index => ModifyPDF(index));
+
+private void ModifyPDF(int index)
 {
-    //Enable the thread safe in PDF document.
+    //Enable thread safety in the PDF document.
     PdfDocument.EnableThreadSafe = true;
     //Load a PDF document.
     PdfLoadedDocument doc = new PdfLoadedDocument("input.pdf");
-    //Get first page from document
+    //Get the first page from the document.
     PdfLoadedPage page = doc.Pages[0] as PdfLoadedPage;
 
-    //Create PDF graphics for the page
+    //Create PDF graphics for the page.
     PdfGraphics graphics = page.Graphics;
     //Set the standard font.
     PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
     //Draw the text.
     graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
+
     string name = Guid.NewGuid().ToString();
 
     //Save the document.
-    doc.Save(name+".pdf");
+    doc.Save(name + ".pdf");
     //Close the document.
     doc.Close(true);
 }
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-IEnumerable<int> works = Enumerable.Range(0, 100);
-Parallel.ForEach(works, index => GeneratePDF(index));
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Threading.Tasks;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
 
-private void GeneratePDF(int index)
+IEnumerable<int> works = Enumerable.Range(0, 100);
+Parallel.ForEach(works, index => ModifyPDF(index));
+
+private void ModifyPDF(int index)
 {
-    //Enable the thread safe in PDF document.
+    //Enable thread safety in the PDF document.
     PdfDocument.EnableThreadSafe = true;
     //Load a PDF document.
     PdfLoadedDocument doc = new PdfLoadedDocument("input.pdf");
-    //Get first page from document
+    //Get the first page from the document.
     PdfLoadedPage page = doc.Pages[0] as PdfLoadedPage;
 
-    //Create PDF graphics for the page
+    //Create PDF graphics for the page.
     PdfGraphics graphics = page.Graphics;
     //Set the standard font.
     PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
     //Draw the text.
     graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
+
     string name = Guid.NewGuid().ToString();
 
     //Save the document.
-    doc.Save(name+".pdf");
+    doc.Save(name + ".pdf");
     //Close the document.
     doc.Close(true);
 }
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
+
 Dim works As IEnumerable(Of Integer) = Enumerable.Range(0, 100)
-    Parallel.ForEach(works, Sub(index) GeneratePDF(index))
-    Private Sub GeneratePDF(ByVal index As Integer)
-    'Enable the thread safe in PDF document.
+Parallel.ForEach(works, Sub(index) ModifyPDF(index))
+
+Private Sub ModifyPDF(ByVal index As Integer)
+    'Enable thread safety in the PDF document.
     PdfDocument.EnableThreadSafe = True
 
     'Load a PDF document.
     Dim doc As PdfLoadedDocument = New PdfLoadedDocument("input.pdf")
-    'Get first page from document.
+    'Get the first page from the document.
     Dim page As PdfLoadedPage = doc.Pages(0)
 
     'Create PDF graphics for the page.
@@ -180,13 +234,13 @@ Dim works As IEnumerable(Of Integer) = Enumerable.Range(0, 100)
     Dim font As PdfFont = New PdfStandardFont(PdfFontFamily.Helvetica, 20)
     'Draw the text.
     graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, New PointF(0, 0))
+
     Dim name As String = Guid.NewGuid().ToString()
 
     'Save the document.
     doc.Save(name + ".pdf")
     'Close the document.
     doc.Close(True)
-
 End Sub
 {% endhighlight %}
 {% endtabs %}

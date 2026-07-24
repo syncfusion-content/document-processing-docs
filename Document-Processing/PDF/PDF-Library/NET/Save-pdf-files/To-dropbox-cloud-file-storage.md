@@ -1,22 +1,24 @@
 ---
-title: Save PDF file to Dropbox cloud file storage| Syncfusion
-description: This page describes how to save PDF file to  Dropbox cloud file storage in C#  using Syncfusion .NET PDF library.
+title: Save PDF file to Dropbox cloud file storage | Syncfusion
+description: This page describes how to save a PDF file to Dropbox cloud file storage in C# using the Syncfusion .NET PDF library.
+keywords: dropbox, save pdf, c# save pdf, upload pdf
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 # Save PDF file to Dropbox Cloud Storage
 
-To save a PDF file to Dropbox Cloud Storage, you can follow the steps below
+To save a PDF file to Dropbox Cloud Storage, you can follow the steps below.
 
-Step 1: Create a Dropbox API
+Step 1: Create a Dropbox API app
 
-To create a Dropbox API App, you should follow the official documentation provided by Dropbox [link](https://www.dropbox.com/developers/documentation/dotnet#tutorial). The process involves visiting the Dropbox Developer website and using their App Console to set up your API app. This app will allow you to interact with Dropbox programmatically, enabling secure access to files and data.
+To create a Dropbox API App, follow the official documentation provided by Dropbox at this [link](https://www.dropbox.com/developers/documentation/dotnet#tutorial). The process involves visiting the Dropbox Developer website and using their App Console to set up your API app. This app will allow you to interact with Dropbox programmatically, enabling secure access to files and data.
 
-Step 2: Create a simple console application
+Step 2: Create a simple console application.
+
 ![Project configuration window](Save-PDF-Images/Console-Application.png)
 
-Step 3: Install the [Syncfusion.Pdf.Net.Core ](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) and [Dropbox.Api](https://www.nuget.org/packages/Dropbox.Api) NuGet packages as a reference to your project from the [NuGet.org](https://www.nuget.org/).
+Step 3: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) and [Dropbox.Api](https://www.nuget.org/packages/Dropbox.Api) NuGet packages as a reference to your project from the [NuGet.org](https://www.nuget.org/).
 
 ![NuGet package installation](Save-PDF-Images/Syncfusion.Pdf.Net.Core-nuget.png)<br><br>
 ![NuGet package installation](Save-PDF-Images/Dropbox.Api-nuget.png)
@@ -48,22 +50,26 @@ PdfPage page = doc.Pages.Add();
 PdfGraphics graphics = page.Graphics;
 // Create a font for drawing text.
 PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 12);
-// Draw the text 
+// Draw the text.
 graphics.DrawString("Hello, World!", font, PdfBrushes.Black, new PointF(10, 10));
 // Save the PDF to a memory stream.
 MemoryStream stream = new MemoryStream();
 doc.Save(stream);
 // Close the PDF document.
 doc.Close(true);
-var accessToken = "YOUR_ACCESS_TOKEN";// Replace with your actual access token
-// Initialize a DropboxClient with the provided access token.
+
+// Replace with your actual access token.
+var accessToken = "YOUR_ACCESS_TOKEN";
+// Specify the path in Dropbox where the PDF should be uploaded.
+var dropboxFilePath = "/folder/Sample.pdf";
+
+// Initialize a DropboxClient with the provided access token and upload the PDF.
 using (var dbx = new DropboxClient(accessToken))
 {
-    // Upload the PDF to Dropbox.
     var uploadResult = await dbx.Files.UploadAsync(
-"/path/to/save/Sample.pdf",
-WriteMode.Overwrite.Instance,
-body: new MemoryStream(stream.ToArray()));
+        dropboxFilePath,
+        WriteMode.Overwrite.Instance,
+        body: new MemoryStream(stream.ToArray()));
 }
 
 {% endhighlight %}
