@@ -72,7 +72,7 @@ export class AppComponent implements OnInit {
 
 ![FormFilling](../../javascript-es6/images/FormFields.gif)
 
-1. [Programmatically Form fill](./form-filling#fill-pdf-forms-programmatically)
+1. [Fill PDF forms programmatically](./form-filling#fill-pdf-forms-programmatically)
 2. [Form Fill Using UI](./form-filling#fill-pdf-forms-through-the-user-interface)
 3. [Import the Form data](./form-filling#fill-pdf-forms-through-import-data)
 
@@ -82,7 +82,7 @@ A built-in Form Designer enables creating, positioning, and editing form fields 
 
 See the [Form Designer](./form-designer) page for full details.
 
-Use the following Code-snippet to enable Form Designer by injecting `FormDesigner` Module.
+Use the following code-snippet to enable Form Designer by injecting `FormDesigner` Module.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -95,6 +95,7 @@ import {
   TextSelectionService,
   TextSearchService,
   FormFieldsService,
+  FormDesignerService,
   PdfViewerModule,
 } from '@syncfusion/ej2-angular-pdfviewer';
 
@@ -120,6 +121,7 @@ import {
     TextSelectionService,
     TextSearchService,
     FormFieldsService,
+    FormDesignerService,
   ],
 })
 export class AppComponent implements OnInit {
@@ -130,7 +132,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {}
 }
-
 {% endhighlight %}
 {% endtabs %}
 

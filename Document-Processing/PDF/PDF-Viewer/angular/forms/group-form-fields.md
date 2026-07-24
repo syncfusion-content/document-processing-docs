@@ -16,7 +16,7 @@ This page covers:
 - [Field behavior based on type](#field-behavior-by-type)
 - [How to group form fields using the UI](#group-using-the-form-designer-ui)
 - [How to group form fields programmatically](#group-pdf-form-fields-programmatically)
-- [Related references and samples](#example-scenarios)
+- [Example scenarios](#example-scenarios)
 
 ## How grouping works
 

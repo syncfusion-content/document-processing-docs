@@ -5,6 +5,7 @@ description: Learn how to attach, update, and read custom Data on PDF form field
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Add Custom Data to PDF Form Fields in Angular PDF Viewer
@@ -21,7 +22,7 @@ This page explains how to:
 - [Apply best practices when using custom data](#best-practices)
 
 **Key Points**
-- customData is a **free form object**; you control its structure.
+- customData is a **free-form object**; you control its structure.
 - Use only **serializable values** such as objects, arrays, strings, numbers, and booleans.
 - Custom data does not affect the field appearance or behavior unless consumed by your application logic.
 
@@ -152,7 +153,7 @@ export class AppComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     // ...viewer initialization as above...
-    // Example for texbox defaults
+    // Example for textbox defaults
     this.pdfviewer.textFieldSettings = {
       name: 'Textbox',
       customData: { group: 'contact', createdBy: 'designer', requiredRole: 'user' }

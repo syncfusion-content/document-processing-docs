@@ -11,9 +11,9 @@ documentation: ug
 
 ## Remove Form Fields Using the UI
 **Steps:**
-1.	Enable **Form Designer mode**.
-2.	Select the form field.
-3.	Click **Delete** in the toolbar or press the **Delete** key.
+1. Enable **Form Designer mode**.
+2. Select the form field.
+3. Click **Delete** in the toolbar or press the **Delete** key.
 ![Form Designer toolbar with Delete icon](../../../javascript-es6/images/ui-del-formfields.png)
 
 ## Remove Form Fields Programmatically

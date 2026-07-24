@@ -25,7 +25,7 @@ Flattening PDF forms converts interactive fields such as textboxes, dropdowns, c
 2. Intercept the download flow using [`downloadStart`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#downloadstart) and cancel the default flow.
 3. Retrieve the viewer's blob via [`saveAsBlob()`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#saveasblob) and convert the blob to base64.
 4. Use `PdfDocument` from Syncfusion PDF Library to open the document, set `field.flatten = true` for each form field, then save.
-5. For the flattening the form fields when downloading through *Save As* option in Page Organizer, repeat steps 2–4 by using [`pageOrganizerSaveAs`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#pageorganizersaveas) event.
+5. To flatten the form fields when downloading through the *Save As* option in Page Organizer, repeat steps 2–4 by using [`pageOrganizerSaveAs`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#pageorganizersaveas) event.
 
 ## Complete example
 

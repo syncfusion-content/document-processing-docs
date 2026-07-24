@@ -53,7 +53,6 @@ Use [`FormFieldDataFormat.Xfdf`](https://ej2.syncfusion.com/angular/documentatio
 this.pdfviewer.exportFormFields('FormData', FormFieldDataFormat.Xfdf);
 {% endhighlight %}
 
-
 ### 5. Export as JSON
 
 Use [`FormFieldDataFormat.Json`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formfielddataformat) to export form data as a JSON file.

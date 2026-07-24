@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The Angular PDF Viewer provides a set of form field events that report changes associated with creating, selecting, modifying, moving, resizing, or removing form fields. These events supply metadata related to the affected field and are raised during user interaction or programmatic updates.
 
-Validation‑related events are emitted when the viewer performs operations that require confirmation of field completion, such as print or download actions.
+Validation-related events are emitted when the viewer performs operations that require confirmation of field completion, such as print or download actions.
 
 ## Supported PDF Form Field Events
 
