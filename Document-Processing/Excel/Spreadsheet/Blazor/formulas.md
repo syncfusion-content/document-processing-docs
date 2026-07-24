@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Formulas in Blazor Spreadsheet Component | Syncfusion
-description: Checkout and learn here all about formulas in Syncfusion Blazor Spreadsheet component and more | Syncfusion.
+description: Check out and learn all about formulas and calculation features in the Syncfusion Blazor Spreadsheet component.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
@@ -15,11 +15,24 @@ documentation: ug
 
 The **Formula Bar** simplifies editing or entering cell data. The [ShowFormulaBar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ShowFormulaBar) property is used to enable or disable the **Formula Bar**. The default value of the [ShowFormulaBar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ShowFormulaBar) property is **true**.
 
-### Working with Formulas via the UI
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@page "/"
+@using Syncfusion.Blazor.Spreadsheet
+
+<SfSpreadsheet ShowFormulaBar="false">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+{% endhighlight %}
+{% endtabs %}
+
+### Inserting Formulas via the UI
 
 Formulas in the Syncfusion Blazor Spreadsheet can be accessed and inserted using the following methods:
 
-*   Select **Insert Function** from the **Formulas** tab in the Ribbon toolbar. In the **Insert Function** dialog, choose a category, then select the desired function to insert it into the selected cell.
+*   Select **Insert Function** from the **Formulas** tab in the Ribbon toolbar. In the **Insert Function** dialog, choose a category and then the desired function to insert it into the selected cell.
 
     ![Insert Function Dialog](./images/insert-formula.gif)
 
@@ -41,7 +54,7 @@ The Spreadsheet includes **Calculation Option** functionality, similar to Excel'
 
 ### Automatic
 
-In **Automatic Mode**, formulas are recalculated instantly whenever a dependent cell is modified. This mode is ideal for scenarios requiring real-time updates, ensuring the most current results are displayed without manual intervention.
+In **Automatic Mode**, formulas are recalculated instantly whenever a dependent cell is modified. This mode is ideal for scenarios requiring real-time updates, ensuring results are up to date without manual intervention.
 
 **Example:**
 
@@ -81,15 +94,15 @@ N> Named Ranges can be defined only for cells or ranges that contain values.
 
 To edit a Named Range:
 
-*   Open the **Name Manager** dialog.
+1.  Open the **Name Manager** dialog.
 
-*   Select the Named Range to be edited.
+2.  Select the Named Range to be edited.
 
-*   Click the **Edit** icon.
+3.  Click the **Edit** icon.
 
-*   Modify the name, range, or scope as needed.
+4.  Modify the name, range, or scope as needed.
 
-* Click the **Update Range** button, then click **OK** button to save changes.
+5.  Click the **Update Range** button, then click **OK** to save changes.
 
 To delete a Named Range:
   
@@ -103,7 +116,20 @@ N> Deleting a Named Range used in formulas may cause formula errors. Ensure the 
 
 ## Aggregates
 
-The **Aggregates** feature provides instant statistical summaries of selected cell ranges without requiring formula creation. This functionality enables quick data analysis by automatically calculating statistics such as sum, average, count, minimum, and maximum values. Aggregate calculations appear in the footer at the bottom of the Spreadsheet component, providing at-a-glance insights into selected data. To control this functionality, use the `ShowAggregate` property, which enables or disables aggregate support in the Spreadsheet. The default value of the `ShowAggregate` property is true.
+The **Aggregates** feature provides instant statistical summaries of selected cell ranges without requiring formula creation. This functionality enables quick data analysis by automatically calculating statistics such as sum, average, count, minimum, and maximum values. Aggregate calculations appear in the footer at the bottom of the Spreadsheet component, providing at-a-glance insights into selected data. To control this functionality, use the [ShowAggregate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ShowAggregate) property, which enables or disables aggregate support in the Spreadsheet. The default value of the `ShowAggregate` property is true.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@page "/"
+@using Syncfusion.Blazor.Spreadsheet
+
+<SfSpreadsheet ShowAggregate="false">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+{% endhighlight %}
+{% endtabs %}
 
 ### Supported Aggregate Functions
 
@@ -117,7 +143,7 @@ The Blazor Spreadsheet component calculates five key aggregate statistics for nu
 | **Min** | Identifies the smallest value in the selected range |
 | **Max** | Identifies the largest value in the selected range |
 
-N> Aggregate calculations only include numeric values. Cells containing text, logical values, or empty cells are excluded from sum and average calculations but are counted if the **Count** includes them based on their data type.
+N> Aggregate calculations only include numeric values. Cells containing text, logical values, or empty cells are excluded from sum and average calculations. The **Count** function may include or exclude these cells based on their data type.
 
 ### Aggregates and Selection Behavior
 
@@ -284,7 +310,7 @@ Returns the test for independence<br/><br/></td></tr>
 <tr>
 <td>
 CHOOSE<br/><br/></td><td>
-Chooses a value from a list of values<br/><br/></td></tr>
+Returns a value from a list of values<br/><br/></td></tr>
 <tr>
 <td>
 CHOOSECOLS<br/><br/></td><td>
@@ -407,7 +433,7 @@ DEC2BIN<br/><br/></td><td>
 Converts a decimal number to binary<br/><br/></td></tr>
 <tr>
 <td>
-DECHEX<br/><br/></td><td>
+DEC2HEX<br/><br/></td><td>
 Converts a decimal number to hexadecimal<br/><br/></td></tr>
 <tr>
 <td>
@@ -476,11 +502,11 @@ Rounds a number up to the nearest even integer<br/><br/></td></tr>
 <tr>
 <td>
 EXACT<br/><br/></td><td>
-Checks to see if two text values are identical<br/><br/></td></tr>
+Returns TRUE if two text values are identical<br/><br/></td></tr>
 <tr>
 <td>
 EXP<br/><br/></td><td>
-Returns {{'__e__ '| markdownify }}raised to the power of a given number<br/><br/></td></tr>
+Returns e raised to the power of a given number<br/><br/></td></tr>
 <tr>
 <td>
 EXPONDIST<br/><br/></td><td>
@@ -511,12 +537,12 @@ FISHER<br/><br/></td><td>
 Returns the Fisher transformation<br/><br/></td></tr>
 <tr>
 <td>
-FISHER<br/><br/></td><td>
+FISHERINV<br/><br/></td><td>
 Returns the inverse of the Fisher transformation<br/><br/></td></tr>
 <tr>
 <td>
 FIXED<br/><br/></td><td>
-Formats a number as text with a fixed number of decimals<br/><br/></td></tr>
+Returns a number as text with a fixed number of decimals<br/><br/></td></tr>
 <tr>
 <td>
 FLOOR<br/><br/></td><td>
@@ -525,6 +551,10 @@ Rounds a number down, toward zero<br/><br/></td></tr>
 <td>
 FORECAST<br/><br/></td><td>
 Returns a value along a linear trend<br/><br/></td></tr>
+<tr>
+<td>
+FORMULATEXT<br/><br/></td><td>
+Returns the formula in a cell as text<br/><br/></td></tr>
 <tr>
 <td>
 FV<br/><br/></td><td>
@@ -543,7 +573,7 @@ GAMMAINV<br/><br/></td><td>
 Returns the inverse of the gamma cumulative distribution<br/><br/></td></tr>
 <tr>
 <td>
-GAMMALIN<br/><br/></td><td>
+GAMMALN<br/><br/></td><td>
 Returns the natural logarithm of the gamma function, Γ(x)<br/><br/></td></tr>
 <tr>
 <td>
@@ -556,7 +586,7 @@ Returns the geometric mean<br/><br/></td></tr>
 <tr>
 <td>
 GESTEP<br/><br/></td><td>
-Tests whether a number is greater than a threshold value<br/><br/></td></tr>
+Returns TRUE if a number is greater than a threshold value<br/><br/></td></tr>
 <tr>
 <td>
 GROWTH<br/><br/></td><td>
@@ -580,7 +610,7 @@ Converts a hexadecimal number to octal<br/><br/></td></tr>
 <tr>
 <td>
 HLOOKUP<br/><br/></td><td>
-Looks in the top row of an array and returns the value of the indicated cell<br/><br/></td></tr>
+Returns a value from the top row of an array<br/><br/></td></tr>
 <tr>
 <td>
 HOUR<br/><br/></td><td>
@@ -596,15 +626,15 @@ Returns the hypergeometric distribution<br/><br/></td></tr>
 <tr>
 <td>
 IF<br/><br/></td><td>
-Specifies a logical test to perform<br/><br/></td></tr>
+Returns one value if a logical test is TRUE and another if it is FALSE<br/><br/></td></tr>
 <tr>
 <td>
 IFERROR<br/><br/></td><td>
-Returns a specified value if a formula evaluates to an error.<br/><br/></td></tr>
+Returns a specified value if a formula evaluates to an error<br/><br/></td></tr>
 <tr>
 <td>
 IFS<br/><br/></td><td>
-Checks whether one or more conditions are met and returns a value that corresponds to the first TRUE condition<br/><br/></td></tr>
+Returns a value that corresponds to the first TRUE condition<br/><br/></td></tr>
 <tr>
 <td>
 IMABS<br/><br/></td><td>
@@ -652,7 +682,7 @@ Returns a complex number raised to an integer power<br/><br/></td></tr>
 <tr>
 <td>
 IMPRODUCT<br/><br/></td><td>
-Returns the product of from 2 to 29 complex numbers<br/><br/></td></tr>
+Returns the product of 2 to 29 complex numbers<br/><br/></td></tr>
 <tr>
 <td>
 IMREAL<br/><br/></td><td>
@@ -676,7 +706,7 @@ Returns the sum of complex numbers<br/><br/></td></tr>
 <tr>
 <td>
 INDEX<br/><br/></td><td>
-Uses an index to choose a value from a reference or array<br/><br/></td></tr>
+Returns a value from a reference or array using an index<br/><br/></td></tr>
 <tr>
 <td>
 INDIRECT<br/><br/></td><td>
@@ -727,7 +757,7 @@ ISLOGICAL<br/><br/></td><td>
 Returns TRUE if the value is a logical value<br/><br/></td></tr>
 <tr>
 <td>
-ISAN<br/><br/></td><td>
+ISNA<br/><br/></td><td>
 Returns TRUE if the value is the #N/A error value<br/><br/></td></tr>
 <tr>
 <td>
@@ -743,10 +773,6 @@ ISODD<br/><br/></td><td>
 Returns TRUE if the number is odd<br/><br/></td></tr>
 <tr>
 <td>
-ISMPT<br/><br/></td><td>
-Calculates the interest paid during a specific period of an investment<br/><br/></td></tr>
-<tr>
-<td>
 ISREF<br/><br/></td><td>
 Returns TRUE if the value is a reference<br/><br/></td></tr>
 <tr>
@@ -760,7 +786,7 @@ Returns the kurtosis of a data set<br/><br/></td></tr>
 <tr>
 <td>
 LAMBDA <br/><br/></td><td>
-Allows to use own formula parameters and logic<br/><br/></td></tr>
+Returns a custom reusable formula<br/><br/></td></tr>
 <tr>
 <td>
 LARGE<br/><br/></td><td>
@@ -808,7 +834,7 @@ Returns the cumulative log-normal distribution<br/><br/></td></tr>
 <tr>
 <td>
 LOOKUP<br/><br/></td><td>
-Looks up values in a vector or array<br/><br/></td></tr>
+Returns a value from a vector or array<br/><br/></td></tr>
 <tr>
 <td>
 LOWER<br/><br/></td><td>
@@ -816,7 +842,7 @@ Converts text to lowercase<br/><br/></td></tr>
 <tr>
 <td>
 MATCH<br/><br/></td><td>
-Looks up values in a reference or array<br/><br/></td></tr>
+Returns a value from a reference or array<br/><br/></td></tr>
 <tr>
 <td>
 MAX<br/><br/></td><td>
@@ -879,7 +905,7 @@ MODE<br/><br/></td><td>
 Returns the most common value in a data set<br/><br/></td></tr>
 <tr>
 <td>
-MMONTH<br/><br/></td><td>
+MONTH<br/><br/></td><td>
 Converts a serial number to a month<br/><br/></td></tr>
 <tr>
 <td>
@@ -887,7 +913,7 @@ MROUND<br/><br/></td><td>
 Returns a number rounded to the desired multiple<br/><br/></td></tr>
 <tr>
 <td>
-MULTINOMINAL<br/><br/></td><td>
+MULTINOMIAL<br/><br/></td><td>
 Returns the multinomial of a set of numbers<br/><br/></td></tr>
 <tr>
 <td>
@@ -1144,19 +1170,19 @@ Returns a normalized value<br/><br/></td></tr>
 <tr>
 <td>
 STDEV<br/><br/></td><td>
-Estimates standard deviation based on a sample<br/><br/></td></tr>
+Returns the standard deviation based on a sample<br/><br/></td></tr>
 <tr>
 <td>
 STDEVA<br/><br/></td><td>
-Estimates standard deviation based on a sample, including numbers, text, and logical values<br/><br/></td></tr>
+Returns the standard deviation based on a sample, including numbers, text, and logical values<br/><br/></td></tr>
 <tr>
 <td>
 STDEVP<br/><br/></td><td>
-Calculates standard deviation based on the entire population<br/><br/></td></tr>
+Returns the standard deviation based on the entire population<br/><br/></td></tr>
 <tr>
 <td>
 STDEVPA<br/><br/></td><td>
-Calculates standard deviation based on the entire population, including numbers, text, and logical values<br/><br/></td></tr>
+Returns the standard deviation based on the entire population, including numbers, text, and logical values<br/><br/></td></tr>
 <tr>
 <td>
 STEYX<br/><br/></td><td>
@@ -1177,6 +1203,10 @@ Adds its arguments<br/><br/></td></tr>
 <td>
 SUMIF<br/><br/></td><td>
 Adds the cells specified by a given criteria<br/><br/></td></tr>
+<tr>
+<td>
+SUMIFS<br/><br/></td><td>
+Adds the cells specified by multiple criteria<br/><br/></td></tr>
 <tr>
 <td>
 SUMPRODUCT<br/><br/></td><td>
@@ -1200,7 +1230,7 @@ Returns the sum of squares of differences of corresponding values in two arrays<
 <tr>
 <td>
 SWITCH<br/><br/></td><td>
-Evaluates an expression against a list of values and returns the result corresponding to the first matching value. If there is no match, an optional default value may be returned.<br/><br/></td></tr>
+Returns a result corresponding to the first matching value in a list<br/><br/></td></tr>
 <tr>
 <td>
 SYD<br/><br/></td><td>
@@ -1220,7 +1250,7 @@ Returns the hyperbolic tangent of a number<br/><br/></td></tr>
 <tr>
 <td>
 TEXT<br/><br/></td><td>
-Formats a number and converts it to text<br/><br/></td></tr>
+Returns a number as text in a specified format<br/><br/></td></tr>
 <tr>
 <td>
 TEXTBEFORE<br/><br/></td><td>
@@ -1228,7 +1258,7 @@ Returns text that occurs before a given character<br/><br/></td></tr>
 <tr>
 <td>
 TEXTJOIN<br/><br/></td><td>
-Combines the text from multiple ranges and/or strings with a delimiter you specify between each text value that will be combined<br/><br/></td></tr>
+Returns text from multiple ranges and/or strings with a delimiter<br/><br/></td></tr>
 <tr>
 <td>
 TEXTSPLIT<br/><br/></td><td>
@@ -1255,7 +1285,7 @@ TOROW<br/><br/></td><td>
 Transforms an array into a single row<br/><br/></td></tr>
 <tr>
 <td>
-TRANSPORSE<br/><br/></td><td>
+TRANSPOSE<br/><br/></td><td>
 Returns the transpose of an array<br/><br/></td></tr>
 <tr>
 <td>
@@ -1292,19 +1322,19 @@ Returns the text from any specified value. Calculating this formula result is no
 <tr>
 <td>
 VAR<br/><br/></td><td>
-Estimates variance based on a sample<br/><br/></td></tr>
+Returns the variance based on a sample<br/><br/></td></tr>
 <tr>
 <td>
 VARA<br/><br/></td><td>
-Estimates variance based on a sample, including numbers, text, and logical values<br/><br/></td></tr>
+Returns the variance based on a sample, including numbers, text, and logical values<br/><br/></td></tr>
 <tr>
 <td>
 VARP<br/><br/></td><td>
-Calculates variance based on the entire population<br/><br/></td></tr>
+Returns the variance based on the entire population<br/><br/></td></tr>
 <tr>
 <td>
 VARPA<br/><br/></td><td>
-Calculates variance based on the entire population, including numbers, text, and logical values<br/><br/></td></tr>
+Returns the variance based on the entire population, including numbers, text, and logical values<br/><br/></td></tr>
 <tr>
 <td>
 VDB<br/><br/></td><td>
@@ -1312,7 +1342,7 @@ Returns the depreciation of an asset for a specified or partial period by using 
 <tr>
 <td>
 VLOOKUP<br/><br/></td><td>
-Looks in the first column of an array and moves across the row to return the value of a cell<br/><br/></td></tr>
+Returns a value from the first column of an array by moving across the row<br/><br/></td></tr>
 <tr>
 <td>
 WEEKDAY<br/><br/></td><td>

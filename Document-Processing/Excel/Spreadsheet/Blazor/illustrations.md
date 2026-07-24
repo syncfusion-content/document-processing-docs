@@ -1,21 +1,38 @@
 ---
 layout: post
 title: Illustrations in Blazor Spreadsheet component | Syncfusion
-description: Checkout and learn here about the Illustrations in the Syncfusion Blazor Spreadsheet component and more.
+description: Check out and learn about illustrations in the Syncfusion Blazor Spreadsheet component and enhance spreadsheets with visual content.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Images and Illustrations in Blazor Spreadsheet Component
+# Images in Blazor Spreadsheet Component
 
-Syncfusion Blazor Spreadsheet component allows you to insert images directly into worksheet to enhance visual presentation and provide additional context alongside data. Images such as logos, screenshots, diagrams, or illustrations can be placed within a sheet, positioned as needed, resized, selected, or removed.
+The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component lets you insert images into a worksheet to enhance visual presentation and provide additional context alongside data. Images such as logos, screenshots, diagrams, can be placed within a sheet, positioned as needed, resized, selected, or removed.
 
-Images can be controlled using the [AllowImage](https://help.syncfusion.com/cr/blazor/syncfusion.blazor.spreadsheet.sfspreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowImage) property, which is enabled by default.
+Image support is controlled by the [AllowImage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowImage) property, which is enabled by default.
 
-## Overview of Images and Illustrations Operations
+## Disabling image support
 
-The Blazor Spreadsheet component also provides a range of features for working with images and illustrations. Below is a quick overview of each feature, with links to their respective documentation sections:
+The example below shows how to disable image support across the Spreadsheet:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@page "/"
+@using Syncfusion.Blazor.Spreadsheet
+
+<SfSpreadsheet AllowImage="false">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Overview of Image Operations
+
+The The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component also provides a range of features for working with images. Below is a quick overview of each feature.
 
 * **Insert and Position Images**: Add images to your spreadsheet and place them at the desired location.
 
@@ -25,10 +42,13 @@ The Blazor Spreadsheet component also provides a range of features for working w
 
 * **Position Images**: Select one or multiple images for further actions or deselect them as needed.
 
+
 ![Images in Blazor Spreadsheet](./images/image-feature.gif)
 
 ## Limitations of Image
 
-* Corner resizing option is not available in the image element.
-* Copy and paste of external images.
+The following limitations apply to the image support in the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor):
+
+* Corner resize handles are not available on inserted images. Resizing must be performed using edge handles.
+* Copying and pasting external images is not supported. 
 * Programmatic operations for image manipulation are currently not available.
