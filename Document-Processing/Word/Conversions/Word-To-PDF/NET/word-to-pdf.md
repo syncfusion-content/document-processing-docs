@@ -8,9 +8,19 @@ documentation: UG
 
 # Convert Word to PDF in .NET using Syncfusion® Word (DocIO) library
 
-The [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) allows you to convert Word document to PDF within a few lines of code in .NET applications and also it does not require Adobe and Microsoft Word application to be installed in the machine. Using this, you can create an input Word document from scratch or load an existing Word document and then easily convert to PDF.  
+The [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) allows you to convert a Word document to PDF within a few lines of code in .NET applications. It does not require Adobe Acrobat or Microsoft Word to be installed on the machine. Using this library, you can create a Word document from scratch or load an existing Word document and then easily convert it to PDF.  
 
 The [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) to PDF converter offers high versatility and seamless performance across various .NET platforms, including [Windows Forms](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-window-forms), [WPF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-wpf), [ASP.NET](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net), [ASP.NET MVC](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net-mvc), [ASP.NET Core](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net-core), [Blazor](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-blazor), [Xamarin](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-xamarin), [WinUI](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-winui), [.NET MAUI](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-maui). Also, in different environments like [Azure](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-azure), [AWS](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-aws), [Google Cloud](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-google-cloud-platform), [Linux](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-linux), [Docker](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-linux-docker), and [macOS](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-mac). 
+
+## Assemblies and NuGet packages required
+
+Refer to the following links for the assemblies and NuGet packages required based on your platform to convert a Word document to PDF.
+
+* [Word to PDF conversion assemblies](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/assemblies-required-word-to-pdf) 
+* [Word to PDF conversion NuGet packages](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf)
+
+For a quick walkthrough on converting a Word document to a PDF, check out this video:
+{% youtube "https://www.youtube.com/watch?v=8QdevnBxgHk" %}
 
 ## Key Features  
 
@@ -26,19 +36,14 @@ The [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library
 * Ability to use custom dictionaries for [text hyphenation](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#hyphenation-in-word-to-pdf-conversion) in the converted PDF. 
 * Support for preserving revision marks of [tracked changes](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#track-changes-in-word-to-pdf-conversion) in the converted PDF. 
 * Option to toggle between preserving or excluding [comments](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#comments-in-word-to-pdf-conversion) during Word to PDF conversions. 
-* Option to [show warnings for any unsupported elements](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf#show-warning-for-unsupported-elements) during conversion. 
-
-## Assemblies and NuGet packages required
-
-Refer to the following links for assemblies required based on platforms to convert the Word document to PDF.
-
-* [Word to PDF conversion assemblies](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/assemblies-required-word-to-pdf) 
-* [Word to PDF conversion NuGet packages](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf)
-
-To quickly start converting a Word document to a PDF, please check out this video:
-{% youtube "https://www.youtube.com/watch?v=8QdevnBxgHk" %}
+* Option to [show warnings for any unsupported elements](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/unsupported-elements-word-to-pdf#show-warning-for-unsupported-elements) during conversion. 
 
 ## Convert Word to PDF
+
+The following prerequisites are required before running the code samples in this section:
+
+* Create a new .NET console, class library, or web application targeting a supported version of .NET Framework, .NET Core.
+* Install the required Syncfusion NuGet packages for your target platform. For details, see [Word to PDF conversion NuGet packages](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf).
 
 The following namespaces are required to compile the code:
 
@@ -47,6 +52,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
+using System.IO;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.DocIORenderer;
@@ -143,9 +149,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 T> For troubleshooting issues in the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO), refer [this](https://support.syncfusion.com/kb/article/16012/troubleshooting-guide-for-syncfusion-word-docio-library-issues?isInternalRefresh=False) article that provides comprehensive guidance on resolving common problems.
 
-N> 1. For .NET Framework, creating an instance of the [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) class is mandatory to convert the charts present in the Word to PDF. Otherwise, the charts are not preserved in the converted PDF. Whereas this is not necessary for .NET Core, as ChartToImageConverter is initialized internally in Syncfusion.DocIORenderer.Portable assembly.
-N> 2. Total number of pages in the converted PDF may vary based on unsupported elements in the input Word document.
-N> 3. "DocIO supports Word to PDF conversion in UWP application using DocIORenderer." For further information, please refer [here](https://support.syncfusion.com/kb/article/8902/how-to-convert-word-document-to-pdf-in-uwp)
+N> 1. For .NET Framework, creating an instance of the [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) class is mandatory to convert the charts present in the Word to PDF. Otherwise, the charts are not preserved in the converted PDF. Whereas this is not necessary for .NET (Core), as ChartToImageConverter is initialized internally in the Syncfusion.DocIORenderer.Portable assembly.
+N> 2. Total number of pages in the converted PDF may vary based on unsupported elements in the input Word document. For more information, refer to the [Limitations in Word to PDF Conversion](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/unsupported-elements-word-to-pdf) page.
+N> 3. DocIO supports Word to PDF conversion in UWP applications using DocIORenderer. For further information, refer [here](https://support.syncfusion.com/kb/article/8902/how-to-convert-word-document-to-pdf-in-uwp).
 N> 4. Failing to dispose of resources can lead to memory leaks, high memory usage, and performance issues, potentially causing the application to crash. Using **Dispose()** or a **using** statement ensures efficient memory management and keeps the app stable.
 
 ## Supported File formats
@@ -162,59 +168,59 @@ N> To see limitations and unsupported features in Word to PDF conversion, refer 
 
 ## Word to PDF conversion in Linux OS
 
-In Linux OS, you can perform the Word to PDF conversion using .NET Core (Targeting .netcoreapp) application. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-linux).
+In Linux OS, you can perform the Word to PDF conversion using a .NET Core application (targeting .NET 8 or later). For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-linux).
 
-**Frequently Asked Questions**
+## Frequently Asked Questions
 
 * [How to copy necessary fonts to Linux containers?](https://help.syncfusion.com/document-processing/word/word-library/net/faq#how-to-copy-necessary-fonts-to-linux-containers)
 * [How to set culture / locale in Docker containers (Windows & Linux containers)?](https://help.syncfusion.com/document-processing/word/word-library/net/faq#how-to-set-culturelocale-in-docker-containers-windows-and-linux-containers)
 * [How to copy necessary Microsoft compatible fonts to Linux?](https://help.syncfusion.com/document-processing/word/word-library/net/faq#how-to-copy-necessary-microsoft-compatible-fonts-to-linux)
-* [How to resolve LibSkiaSharp not found Exception?](https://help.syncfusion.com/document-processing/word/word-library/net/faq#how-to-resolve-libskiasharp-not-found-exception)
+* [How to resolve LibSkiaSharp not found exception?](https://help.syncfusion.com/document-processing/word/word-library/net/faq#how-to-resolve-libskiasharp-not-found-exception)
 
 ## Customization settings
 
-The Essential<sup>&reg;</sup> DocIO provides settings while performing Word to PDF conversion mentioned below, 
+Essential<sup>&reg;</sup> DocIO provides the following settings to customize Word to PDF conversion. Use these options to control font embedding, accessibility, structure preservation, image handling, conformance, and security in the output PDF.
 
 ### Embedding fonts
 
-You can customize the TrueType fonts embedding in two ways as follows:
+You can customize the TrueType font embedding in two ways:
 
-* [Embed Subset Fonts](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#embed-subset-fonts).
-* [Embed Complete Fonts](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#embed-complete-fonts).
+* [Embed subset fonts](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#embed-subset-fonts).
+* [Embed complete fonts](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#embed-complete-fonts).
 
 ### Accessible PDF document
 
-This setting allows you to determine whether to preserve document structured tags in the converted **PDF document for accessibility (508 compliance) support**. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#accessible-pdf-document).
+This setting allows you to determine whether to preserve document structured tags in the converted **PDF document for accessibility (Section 508 compliance) support**. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#accessible-pdf-document).
 
 ### Word document headings to PDF bookmarks
 
-This setting allows you to determine whether to **preserve Word document headings** (i.e., paragraph with heading style and outline level) as bookmarks in the converted PDF document. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#word-document-headings-to-pdf-bookmarks).
+This setting allows you to determine whether to **preserve Word document headings** (i.e., paragraphs with heading style and outline level) as bookmarks in the converted PDF document. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#word-document-headings-to-pdf-bookmarks).
 
-### Word document form field to PDF form field.
+### Word document form field to PDF form field
 
-This setting allows you to determine whether to **preserve Word document form fields** (Text form field, Checkbox form field and Drop-down form field) as PDF form fields in the converted PDF document. This features helps in creating fillable PDF forms from Word document. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#word-document-form-field-to-pdf-form-field).
+This setting allows you to determine whether to **preserve Word document form fields** (text form field, checkbox form field, and drop-down form field) as PDF form fields in the converted PDF document. This feature helps in creating fillable PDF forms from a Word document. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#word-document-form-field-to-pdf-form-field).
 
-### Image quality 
+### Image quality
 
 This setting allows you to determine the **quality of the charts and JPEG images** in the converted PDF document. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#image-quality).
 
-### Recreate Nested Metafile
+### Recreate nested metafile
 
 This setting allows you to regenerate the nested EMF images present in the Word document during PDF conversion. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#recreate-nested-metafile).
 
-### Identical image optimization 
+### Identical image optimization
 
-This setting **reduces the Main Memory usage** in Word to PDF conversion by reusing the identical images. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#identical-image-optimization).
+This setting **reduces the main memory usage** in Word to PDF conversion by reusing identical images. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#identical-image-optimization).
 
-### PDF Conformance Level
+### PDF conformance level
 
 This setting allows you to set the PDF conformance level. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#pdf-conformance-level).
 
-### Enable Alternate Chunks
+### Enable alternate chunks
 
-In the Word document, another Word documents are embedded in it and referred as AltChunks. This setting allows you to include the alternate chunks while converting Word to PDF conversion. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#enable-alternate-chunks).
+In the Word document, other Word documents are embedded and referred to as AltChunks. This setting allows you to include the alternate chunks while converting Word to PDF. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#enable-alternate-chunks).
 
-### Complex Script Text
+### Complex script text
 
 This setting allows you to preserve the **complex script text** in the converted PDF document. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#complex-script-text).
 
@@ -228,23 +234,23 @@ You can **preserve revision marks in a generated PDF document** when converting 
 
 ### Comments in Word-to-PDF conversion
 
-You can **preserve comments balloon in a generated PDF** when converting Word documents with comments. Also you can customize how comments balloon color appears in a generated PDF. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#comments-in-word-to-pdf-conversion).
+You can **preserve comment balloons in a generated PDF** when converting Word documents with comments. You can also customize how the comment balloon color appears in a generated PDF. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#comments-in-word-to-pdf-conversion).
 
-### Preserve Ole Equation as bitmap image
+### Preserve OLE equation as bitmap image
 
-You can preserve Ole Equation as bitmap image in the converted PDF document. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#preserve-ole-equation-as-bitmap-image).
+You can preserve an OLE equation as a bitmap image in the converted PDF document. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#preserve-ole-equation-as-bitmap-image).
 
 ### Restrict all permission in a PDF document
 
-You can restrict all the permission in a PDF document using [PdfPermissionsFlags](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfPermissionsFlags.html). For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#restrict-all-permission-in-a-pdf-document).
+You can restrict all the permissions in a PDF document using [PdfPermissionsFlags](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfPermissionsFlags.html). For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#restrict-all-permission-in-a-pdf-document).
 
-### Apply Matte to Transparent Images
+### Apply matte to transparent images
 
 This setting allows you to determine whether to **apply a matte color to transparent images** during Word to PDF conversion, ensuring they render cleanly without unwanted borders or artifacts in the final PDF. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#apply-matte-to-transparent-images).
 
-## Font Substitution
+## Font substitution
 
-When the necessary fonts used in the Word document has not been installed in the production machine, then Essential<sup>&reg;</sup> DocIO uses the ”Microsoft Sans Serif” as default font for rendering the text. This leads to preservation difference in generated PDF as each font has different glyphs for characters. 
+When the necessary fonts used in the Word document have not been installed in the production machine, Essential<sup>&reg;</sup> DocIO uses "Microsoft Sans Serif" as the default font for rendering the text. This leads to a preservation difference in the generated PDF, as each font has different glyphs for characters. 
 
 To avoid this, the Essential<sup>&reg;</sup> DocIO library allows you to set an alternate font for the missing font used in the Word document. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/font-substituion-word-to-pdf).
 
@@ -256,17 +262,19 @@ During Word to PDF conversions, if a glyph of the input text is unavailable in t
 
 Refer [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/unsupported-elements-word-to-pdf#detailed-limitations) to know about unsupported elements in Word to PDF conversion.
 
-## Show Warning for Unsupported Elements
+## Show warning for unsupported elements
 
 When converting a Word document to a PDF, the presence of unsupported elements in the input Word document can lead to preservation issues in the converted PDF. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/unsupported-elements-word-to-pdf#show-warning-for-unsupported-elements).
 
-## Online Demo
+## Online demo
 
-* Explore how to convert a Word document to PDF using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/wordtopdf#/tailwind).
-* See how to convert a Word document to PDF/UA using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/wordtopdfua#/tailwind).
-* See how to convert a Word document to PDF/A using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/wordtopdfa#/tailwind).
+Explore live demos of Word to PDF conversion using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO):
 
-## See Also
+* [Convert Word to PDF](https://document.syncfusion.com/demos/word/wordtopdf#/tailwind)
+* [Convert Word to PDF/UA](https://document.syncfusion.com/demos/word/wordtopdfua#/tailwind)
+* [Convert Word to PDF/A](https://document.syncfusion.com/demos/word/wordtopdfa#/tailwind)
+
+## See also
 
 * [Supported file formats](https://help.syncfusion.com/document-processing/word/word-library/net/support-file-formats)
 * [How to perform font substitution in Word to PDF conversion](https://support.syncfusion.com/kb/article/7499/how-to-perform-font-substitution-in-winforms-word-to-pdf-conversion)
