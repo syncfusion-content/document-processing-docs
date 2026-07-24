@@ -10,7 +10,7 @@ documentation: UG
 
 Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, and edit **Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in Windows Forms**.
 
-## Steps to create Word document programmatically:
+## Steps to create a Word document programmatically
 
 {% tabcontents %}
 
@@ -20,6 +20,7 @@ Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Word libra
 
 * Visual Studio 2022.
 * Install **.NET desktop development** workload with necessary .NET Framework SDK.
+* .NET Framework 4.6.2 or later (4.8 recommended). This sample targets .NET Framework (not .NET / .NET Core).
 
 Step 1: Create a new Windows Forms application project.
 
@@ -29,9 +30,17 @@ Step 2: Install [Syncfusion.DocIO.WinForms](https://www.nuget.org/packages/Syncf
 
 ![Install DocIO Windows Forms NuGet package](Windows-Forms_images/Install_Nuget.jpg)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion<sup>&reg;</sup> licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
-Step 3: Include the following namespaces in the **Form1.Designer.cs** file.
+Step 3: Add the following `using` directives to the top of **Form1.cs** (the Syncfusion namespaces are used by the click handler added in Step 5).
 
 {% tabs %}
 
@@ -47,7 +56,7 @@ using System.Windows.Forms;
 
 {% endtabs %}
 
-Step 4: Add a new button in **Form1.Designer.cs** to create Word file as follows.
+Step 4: Add a new button in **Form1.Designer.cs** to create Word file as follows. The `btnCreate_Click` handler referenced below is added in **Form1.cs** in Step 5.
 
 {% tabs %}
 
@@ -72,7 +81,7 @@ private void InitializeComponent()
     btnCreate.Text = "Create Document";
     btnCreate.Click += new EventHandler(btnCreate_Click);
   
-    //Create Word
+    //Form settings
     ClientSize = new System.Drawing.Size(450, 150);
     Controls.Add(label);
     Controls.Add(btnCreate);
@@ -82,7 +91,7 @@ private void InitializeComponent()
 
 {% endtabs %}
 
-Step 5: Add the following code in **btnCreate_Click** to **create Word document** with simple text.
+Step 5: Add the following code in the **btnCreate_Click** event handler in **Form1.cs** to **create a Word document** with simple text.
 
 {% tabs %}
 
@@ -301,6 +310,9 @@ document.Save("Sample.docx");
 {% endhighlight %}
 
 {% endtabs %}
+
+N> The code sample references image files (`AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, `Road-550-W.jpg`). Download these assets from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Windows-Forms/Create-Word-document/Data) and ensure they are present in the application's working directory (next to the `.csproj` file). The image bitmaps are loaded from the working directory at runtime. Copy these images to the application's output (`bin\Debug` / `bin\Release`) directory, or use absolute paths based on `Application.StartupPath` to avoid file-not-found exceptions.
+
 
 Step 6: Build the project.
 
@@ -323,9 +335,9 @@ By executing the program, you will get the **Word document** as follows.
 **Prerequisites:**
 
 * JetBrains Rider.
-* Install .NET Framework Developer Pack.
+* Install the .NET Framework Developer Pack matching the target framework (e.g., .NET Framework 4.8 Developer Pack for a 4.8 target). This sample targets .NET Framework (not .NET / .NET Core).
 
-Step 1. Open JetBrains Rider and create a new Windows Forms Application project.
+Step 1: Open JetBrains Rider and create a new Windows Forms Application project.
 * Launch JetBrains Rider.
 * Click **New Solution** on the welcome screen.
 
@@ -333,9 +345,9 @@ Step 1. Open JetBrains Rider and create a new Windows Forms Application project.
 
 * In the New Solution dialog, select **Project Type** as **Desktop**.
 * Enter a project name and specify the location.
-* Select the target framework as Full Framework and choose the desired version.
+* Select the target framework as **.NET Framework** and choose the desired version (4.6.2 or later; 4.8 recommended).
 * Select **Template** as **Windows Forms App**.
-* Click create.
+* Click **Create**.
 
 ![Creating a new Windows Forms App in JetBrains Rider](Windows-Forms_images/Create-WindowsForms-sample.png)
 
@@ -351,9 +363,17 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 ![Install the Syncfusion.DocIO.WinForms NuGet package](Windows-Forms_images/Install-Syncfusion.DocIO.WinForms-NuGet.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion<sup>&reg;</sup> licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
-Step 3: Include the following namespaces in the **Form1.Designer.cs** file.
+Step 3: Add the following `using` directives to the top of **Form1.cs** (the Syncfusion namespaces are used by the click handler added in Step 5).
 
 {% tabs %}
 
@@ -369,7 +389,7 @@ using System.Windows.Forms;
 
 {% endtabs %}
 
-Step 4: Add a new button in **Form1.Designer.cs** to create Word file as follows.
+Step 4: Add a new button in **Form1.Designer.cs** to create Word file as follows. The `btnCreate_Click` handler referenced below is added in **Form1.cs** in Step 5.
 
 {% tabs %}
 
@@ -394,7 +414,7 @@ private void InitializeComponent()
     btnCreate.Text = "Create Document";
     btnCreate.Click += new EventHandler(btnCreate_Click);
   
-    //Create Word
+    //Form settings
     ClientSize = new System.Drawing.Size(450, 150);
     Controls.Add(label);
     Controls.Add(btnCreate);
@@ -404,7 +424,7 @@ private void InitializeComponent()
 
 {% endtabs %}
 
-Step 5: Add the following code in **btnCreate_Click** to **create Word document** with simple text.
+Step 5: Add the following code in the **btnCreate_Click** event handler in **Form1.cs** to **create a Word document** with simple text.
 
 {% tabs %}
 
@@ -624,6 +644,9 @@ document.Save("Sample.docx");
 
 {% endtabs %}
 
+N> The code sample references image files (`AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, `Road-550-W.jpg`). Download these assets from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Windows-Forms/Create-Word-document/Data) and ensure they are present in the application's working directory (next to the `.csproj` file). The image bitmaps are loaded from the working directory at runtime. Copy these images to the application's output (`bin\Debug` / `bin\Release`) directory, or use absolute paths based on `Application.StartupPath` to avoid file-not-found exceptions.
+
+
 Step 6: Build the project.
 
 Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
@@ -644,4 +667,4 @@ By executing the program, you will get the **Word document** as follows.
 
 Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.
 
-An online sample link to [create a Word document](https://document.syncfusion.com/demos/word/helloworld#/tailwind) in ASP.NET Core.
+An online sample demonstrating how to [create a Word document](https://document.syncfusion.com/demos/word/helloworld#/tailwind) is also available (hosted as an ASP.NET Core demo that uses the same DocIO APIs shown here).

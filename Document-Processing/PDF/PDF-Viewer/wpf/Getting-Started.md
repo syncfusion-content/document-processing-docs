@@ -99,8 +99,8 @@ WPF PDF Viewer control can be added to an application either through the designe
 {% tabcontents %}
  
 {% tabcontent Via Designer %}
-1.Open the Visual Studio toolbox.
-2.Navigate to <b>Syncfusion<sup>&reg;</sup> WPF Toolbox</b> tab and drag the `PdfViewerControl` toolbox item to the Designer window. The required references are automatically added to the current application.
+1. Open the Visual Studio toolbox.
+2. Navigate to <b>Syncfusion<sup>&reg;</sup> WPF Toolbox</b> tab and drag the `PdfViewerControl` toolbox item to the Designer window. The required references are automatically added to the current application.
 
    ![WPF PDF Viewer in Toolbox](getting-started_images/wpf-pdf-viewer-in-toolbox.png)
    PDF Viewer control in toolbox
@@ -143,8 +143,8 @@ WPF PDF Viewer control can be added to an application either through the designe
 	{% tabcontent Via Coding %}
 To add the control manually from code, follow these steps:
 
-1.Add the required assemblies as a reference to the project.
-2.Add the following Syncfusion<sup>&reg;</sup>; namespace in MainWindow.xaml.cs.
+1. Add the required assemblies as a reference to the project.
+2. Add the following Syncfusion<sup>&reg;</sup>; namespace in MainWindow.xaml.cs.
 
 	{% tabs %}
 	{% highlight c# tabtitle="C#" %}

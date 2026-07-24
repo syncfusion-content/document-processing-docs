@@ -6,9 +6,9 @@ control: DocIO
 documentation: UG
 ---
 
-# Convert Word to PDF in Console application
+# Convert Word to PDF in Console Application
 
-Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert Word to PDF in Console application**.
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert Word documents to PDF in a Console application**.
 
 ## Convert Word to PDF using .NET Core and Latest
 
@@ -37,6 +37,8 @@ Step 3: Include the following namespaces in **Program.cs** file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using System;
+using System.IO;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.DocIORenderer;
@@ -66,7 +68,7 @@ using (FileStream docStream = new FileStream(Path.GetFullPath("Data/Template.doc
             using(FileStream stream = new FileStream("Sample.pdf", FileMode.Create, FileAccess.Write))
             {
                 pdfDocument.Save(stream);
-            }           
+            }
         }
     }
 }
@@ -99,7 +101,7 @@ By executing the program, you will get the **PDF** as follows.
 * Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
 
 Step 1: Create a new .NET Core console application project.
-* Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
+* Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and press Enter.
 * Choose the **Console App** template.
 
 ![Choose Console app from template](Console-Images/NET/Console-app-template.png)
@@ -110,7 +112,7 @@ Step 1: Create a new .NET Core console application project.
 Step 2: To **convert a Word document to PDF in console app**, install [Syncfusion.DocIORenderer.Net.Core ](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core/) to the project.
 * Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 * Ensure you're in the project root directory where your .csproj file is located.
-* Run the command `dotnet add package Syncfusion.DocIORenderer.NET.Core` to install the NuGet package.
+* Run the command `dotnet add package Syncfusion.DocIORenderer.Net.Core` to install the NuGet package.
 
 ![Add Syncfusion.DocIORenderer.NET.Core NuGet package](Console-Images/NET/Command-to-add-NuGet-package-console.png) 
 
@@ -122,6 +124,8 @@ Step 3: Include the following namespaces in **Program.cs** file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using System;
+using System.IO;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.DocIORenderer;
@@ -151,7 +155,7 @@ using (FileStream docStream = new FileStream(Path.GetFullPath("Data/Template.doc
             using(FileStream stream = new FileStream("Sample.pdf", FileMode.Create, FileAccess.Write))
             {
                 pdfDocument.Save(stream);
-            }           
+            }
         }
     }
 }
@@ -190,9 +194,9 @@ By executing the program, you will get the **PDF** as follows.
 * JetBrains Rider.
 * Install .NET 8 SDK or later.
 
-Step 1. Open JetBrains Rider and create a new .NET Core console application project.
+Step 1: Open JetBrains Rider and create a new .NET Core console application project.
 * Launch JetBrains Rider.
-* Click new solution on the welcome screen.
+* Click New Solution on the welcome screen.
 
 ![Launch JetBrains Rider](Console-Images/NET/Launch-JetBrains-Rider.png)
 
@@ -204,7 +208,7 @@ Step 1. Open JetBrains Rider and create a new .NET Core console application proj
 ![Creating a new .NET Core console application in JetBrains Rider](Console-Images/NET/Create-Console-NET-core-sample.png)
 
 Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
-* Click the NuGet icon in the Rider toolbar and type [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) in the search bar.
+* Click the NuGet icon in the Rider toolbar and type [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) in the search bar.
 * Ensure that "nuget.org" is selected as the package source.
 * Select the latest Syncfusion.DocIORenderer.Net.Core NuGet package from the list.
 * Click the + (Add) button to add the package.
@@ -216,13 +220,15 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 ![Install the Syncfusion.DocIORenderer.Net.Core NuGet package](Console-Images/NET/Install-Syncfusion.DocIORenderer.Net.Core-NuGet.png)
 
 N> 1. If you're deploying the application in a Linux environment, refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf#additional-nuget-packages-required-for-linux) for the required additional NuGet packages.
-N> 2. Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 3: Include the following namespaces in **Program.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using System;
+using System.IO;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.DocIORenderer;
@@ -252,7 +258,7 @@ using (FileStream docStream = new FileStream(Path.GetFullPath("Data/Template.doc
             using(FileStream stream = new FileStream("Sample.pdf", FileMode.Create, FileAccess.Write))
             {
                 pdfDocument.Save(stream);
-            }           
+            }
         }
     }
 }
@@ -287,23 +293,26 @@ By executing the program, you will get the **PDF** as follows.
 **Prerequisites:**
 
 * Visual Studio 2022.
-* Install **.NET desktop development** workload with necessary .NET Framework SDK.
+* Install the .NET Framework SDK and the **.NET desktop development** workload.
 
 Step 1: Create a new **.NET Framework console application** project.
 ![Create a .NET FrameWork Console application in Visual Studio](Console-Images/NET-FrameWork/Console-Template-Net-FrameWork.png)
 
-Step 2: Install [Syncfusion.DocToPdfConverter.WinForms](https://www.nuget.org/packages/Syncfusion.DocToPDFConverter.WinForms) NuGet package as a reference to your Windows Forms application from the [NuGet.org](https://www.nuget.org/).
+Step 2: Install [Syncfusion.DocToPDFConverter.WinForms](https://www.nuget.org/packages/Syncfusion.DocToPDFConverter.WinForms) NuGet package as a reference to your Windows Forms application from the [NuGet.org](https://www.nuget.org/).
 
-![Install Syncfusion.DocToPdfConverter.WinForms NuGet package](Windows-Forms_images/Nuget-Package-WordtoPDF.png)
+![Install Syncfusion.DocToPDFConverter.WinForms NuGet package](Windows-Forms_images/Nuget-Package-WordtoPDF.png)
 
-N> 1. The [Syncfusion.DocToPdfConverter.WinForms](https://www.nuget.org/packages/Syncfusion.DocToPDFConverter.WinForms) is a dependency for Syncfusion<sup>&reg;</sup> Windows Forms GUI controls and is named with the suffix "WinForms". It contains platform-independent .NET Framework assemblies (compatible with versions 4.0, 4.5, 4.5.1, and 4.6) for the Word library and does not include any Windows Forms-related references or code. Therefore, we recommend using this package for .NET Framework Console applications.
+N> 1. The [Syncfusion.DocToPDFConverter.WinForms](https://www.nuget.org/packages/Syncfusion.DocToPDFConverter.WinForms) is a dependency for Syncfusion<sup>&reg;</sup> Windows Forms GUI controls and is named with the suffix "WinForms". It contains platform-independent .NET Framework assemblies (compatible with versions 4.0, 4.5, 4.5.1, and 4.6) for the Word library and does not include any Windows Forms-related references or code. Therefore, we recommend using this package for .NET Framework Console applications.
 N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> 3. If you're deploying the application in a Linux environment, refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf#additional-nuget-packages-required-for-linux) for the required additional NuGet packages.
 
 Step 3: Include the following namespaces in **Program.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using System;
+using System.IO;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.DocIO;
 using Syncfusion.DocToPDFConverter;
@@ -327,9 +336,9 @@ using (WordDocument document = new WordDocument("Data/Input.docx", FormatType.Do
         using (PdfDocument pdfDocument = converter.ConvertToPDF(document))
         {
             //Save the PDF document.
-            pdfDocument.Save("Sample.pdf");                       
+            pdfDocument.Save("Sample.pdf");
         }
-    }               
+    }
 }
 
 {% endhighlight %}
@@ -356,11 +365,11 @@ By executing the program, you will get the **PDF** as follows.
 **Prerequisites:**
 
 * JetBrains Rider.
-* Install .NET Framework Developer Pack.
+* Install the .NET Framework Developer Pack (4.6.1 or later).
 
-Step 1. Open JetBrains Rider and create a new .NET Framework console application project.
+Step 1: Open JetBrains Rider and create a new .NET Framework console application project.
 * Launch JetBrains Rider.
-* Click new solution on the welcome screen.
+* Click New Solution on the welcome screen.
 
 ![Launch JetBrains Rider](Console-Images/NET/Launch-JetBrains-Rider.png)
 
@@ -372,24 +381,27 @@ Step 1. Open JetBrains Rider and create a new .NET Framework console application
 ![Creating a new .NET Framework console application in JetBrains Rider](Console-Images/NET-FrameWork/Create-Console-Framework-project.png)
 
 Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
-* Click the NuGet icon in the Rider toolbar and type [Syncfusion.DocToPdfConverter.WinForms](https://www.nuget.org/packages/Syncfusion.DocToPdfConverter.WinForms/) in the search bar.
+* Click the NuGet icon in the Rider toolbar and type [Syncfusion.DocToPDFConverter.WinForms](https://www.nuget.org/packages/Syncfusion.DocToPDFConverter.WinForms/) in the search bar.
 * Ensure that "nuget.org" is selected as the package source.
-* Select the latest Syncfusion.DocToPdfConverter.WinForms NuGet package from the list.
+* Select the latest Syncfusion.DocToPDFConverter.WinForms NuGet package from the list.
 * Click the + (Add) button to add the package.
 
-![Select the Syncfusion.DocToPdfConverter.WinForms NuGet package](Console-Images/NET-FrameWork/Select-Syncfusion.DocToPdfConverter.WinForms-NuGet.png)
+![Select the Syncfusion.DocToPDFConverter.WinForms NuGet package](Console-Images/NET-FrameWork/Select-Syncfusion.DocToPDFConverter.WinForms-NuGet.png)
 
 * Click the Install button to complete the installation.
 
-![Install the Syncfusion.DocToPdfConverter.WinForms NuGet package](Console-Images/NET-FrameWork/Install-Syncfusion.DocToPdfConverter.WinForms-NuGet.png)
+![Install the Syncfusion.DocToPDFConverter.WinForms NuGet package](Console-Images/NET-FrameWork/Install-Syncfusion.DocToPDFConverter.WinForms-NuGet.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> If you're deploying the application in a Linux environment, refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf#additional-nuget-packages-required-for-linux) for the required additional NuGet packages.
 
 Step 3: Include the following namespaces in **Program.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using System;
+using System.IO;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.DocIO;
 using Syncfusion.DocToPDFConverter;
@@ -413,9 +425,9 @@ using (WordDocument document = new WordDocument("Data/Input.docx", FormatType.Do
         using (PdfDocument pdfDocument = converter.ConvertToPDF(document))
         {
             //Save the PDF document.
-            pdfDocument.Save("Sample.pdf");                       
+            pdfDocument.Save("Sample.pdf");
         }
-    }               
+    }
 }
 
 {% endhighlight %}

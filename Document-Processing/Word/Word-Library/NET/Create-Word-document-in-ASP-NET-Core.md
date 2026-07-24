@@ -13,7 +13,7 @@ Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Core Word 
 To quickly create a Word document in ASP.NET Core, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=ptbMtxIv3CY" %}
 
-## Steps to create Word document programmatically:
+## Steps to create a Word document programmatically
 
 {% tabcontents %}
 
@@ -32,7 +32,15 @@ Step 2: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/S
 
 ![Install DocIO .NET Core NuGet package](ASP-NET-Core_images/Install_Nuget.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion<sup>&reg;</sup> licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 3: Include the following namespaces in the HomeController.cs file.
 
@@ -48,7 +56,7 @@ using System.IO;
 
 {% endtabs %}
 
-Step 4: A default action method named Index will be present in HomeController.cs. Right click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
+Step 4: A default action method named Index will be present in HomeController.cs. Right-click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
 
 Step 5: Add a new button in the Index.cshtml as shown below.
 
@@ -293,7 +301,7 @@ MemoryStream stream = new MemoryStream();
 document.Save(stream, FormatType.Docx);
 stream.Position = 0;
 //Download Word document in the browser
-return File(stream, "application/msword", "Sample.docx");
+return File(stream, "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "Sample.docx");
 
 {% endhighlight %}
 
@@ -306,6 +314,8 @@ Click on Build → Build Solution or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd
 Step 8: Run the project.
 
 Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
+
+N> The code sample references image files (AdventureCycle.jpg, Mountain-200.jpg, Mountain-300.jpg, Road-550-W.jpg). Download these assets from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/ASP.NET-Core/Create-Word-Document/Data) and place them in the application's output directory, or set their **Copy to Output Directory** property to **Copy always** in Solution Explorer.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/ASP.NET-Core).
 
@@ -324,8 +334,8 @@ By executing the program, you will get the **Word document** as follows.
 * Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
 
 Step 1: Create a new ASP.NET Core Web application project.
-* Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
-* Choose the **ASP.NET Core Web App( Model-View-Controller) MVC** template.
+* Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET: New Project** and enter.
+* Choose the **ASP.NET Core Web App (Model-View-Controller)** template.
 
 ![Choose ASP.NET Core Web app from template](ASP-NET-Core_images/AspNetCore-app-template.png)
 
@@ -335,11 +345,19 @@ Step 1: Create a new ASP.NET Core Web application project.
 Step 2: To **create a Word document in ASP.NET Core Web app**, install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) to the ASP.NET Core project.
 * Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 * Ensure you're in the project root directory where your .csproj file is located.
-* Run the command `dotnet add package Syncfusion.DocIO.Net.Core` to install the NuGet package.
+* Run the command `dotnet add package Syncfusion.DocIO.Net.Core` to install the NuGet package. Also run `dotnet add package Syncfusion.Licensing` to install the licensing package.
 
 ![Add Syncfusion.DocIO.Net.Core NuGet package](ASP-NET-Core_images/Command-to-add-NuGet-package-AspNetCore.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion<sup>&reg;</sup> licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 3: Include the following namespaces in the HomeController.cs file.
 
@@ -355,7 +373,7 @@ using System.IO;
 
 {% endtabs %}
 
-Step 4: A default action method named Index will be present in HomeController.cs. Right click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
+Step 4: A default action method named Index will be present in HomeController.cs. Right-click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
 
 Step 5: Add a new button in the Index.cshtml as shown below.
 
@@ -600,7 +618,7 @@ MemoryStream stream = new MemoryStream();
 document.Save(stream, FormatType.Docx);
 stream.Position = 0;
 //Download Word document in the browser
-return File(stream, "application/msword", "Sample.docx");
+return File(stream, "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "Sample.docx");
 
 {% endhighlight %}
 
@@ -608,7 +626,7 @@ return File(stream, "application/msword", "Sample.docx");
 
 Step 7: Build the project.
 
-Run the following command in terminal to build the project.
+Run the following command in the terminal to build the project.
 
 ```
 dotnet build
@@ -616,11 +634,13 @@ dotnet build
 
 Step 8: Run the project.
 
-Run the following command in terminal to run the project.
+Run the following command in the terminal to run the project.
 
 ```
 dotnet run
 ```
+
+N> The code sample references image files (AdventureCycle.jpg, Mountain-200.jpg, Mountain-300.jpg, Road-550-W.jpg). Download these assets from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/ASP.NET-Core/Create-Word-Document/Data) and ensure they are present in the application's working directory (next to the `.csproj` file).
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/ASP.NET-Core).
 
@@ -635,18 +655,18 @@ By executing the program, you will get the **Word document** as follows.
 **Prerequisites:**
 
 * JetBrains Rider.
-* Install .NET 8 SDK or later.
+* Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 
-Step 1. Open JetBrains Rider and create a new ASP.NET Core Web application project.
+Step 1: Open JetBrains Rider and create a new ASP.NET Core Web application project.
 * Launch JetBrains Rider.
-* Click new solution on the welcome screen.
+* Click **New Solution** on the welcome screen.
 
 ![Launch JetBrains Rider](Console-Images/NET/Launch-JetBrains-Rider.png)
 
 * In the new Solution dialog, select Project Type as Web.
-* Select the target framework (e.g., .NET 8.0, .NET 9.0) and template as **Web App(Model-View-Controller)**. 
+* Select the target framework (e.g., .NET 8.0, .NET 9.0) and template as **Web App (Model-View-Controller)**.
 * Enter a project name and specify the location.
-* Click create.
+* Click **Create**.
 
 ![Creating a new .NET Core console application in JetBrains Rider](ASP-NET-Core_images/Create-ASP.NET-Core-application.png)
 
@@ -662,7 +682,15 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 ![Install the Syncfusion.DocIO.Net.Core NuGet package](ASP-NET-Core_images/Install-Syncfusion.DocIO.NETCore-NuGet.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion<sup>&reg;</sup> licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 3: Include the following namespaces in the HomeController.cs file.
 
@@ -678,7 +706,7 @@ using System.IO;
 
 {% endtabs %}
 
-Step 4: A default action method named Index will be present in HomeController.cs. Right click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
+Step 4: A default action method named Index will be present in HomeController.cs. Right-click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
 
 Step 5: Add a new button in the Index.cshtml as shown below.
 
@@ -923,7 +951,7 @@ MemoryStream stream = new MemoryStream();
 document.Save(stream, FormatType.Docx);
 stream.Position = 0;
 //Download Word document in the browser
-return File(stream, "application/msword", "Sample.docx");
+return File(stream, "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "Sample.docx");
 
 {% endhighlight %}
 
@@ -937,6 +965,8 @@ Step 8: Run the project.
 
 Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.
 
+N> The code sample references image files (AdventureCycle.jpg, Mountain-200.jpg, Mountain-300.jpg, Road-550-W.jpg). Download these assets from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/ASP.NET-Core/Create-Word-Document/Data) and ensure they are copied to the application's output directory.
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/ASP.NET-Core).
 
 By executing the program, you will get the **Word document** as follows.
@@ -947,6 +977,6 @@ By executing the program, you will get the **Word document** as follows.
 
 {% endtabcontents %}
 
-Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page. 
+Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.
 
-An online sample link to [create a Word document](https://document.syncfusion.com/demos/word/helloworld#/tailwind) in ASP.NET Core.  
+An online sample link to [create a Word document](https://document.syncfusion.com/demos/word/helloworld#/tailwind) in ASP.NET Core. For licensing registration, refer to the [licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).  

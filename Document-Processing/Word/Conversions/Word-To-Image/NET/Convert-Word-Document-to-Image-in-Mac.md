@@ -1,6 +1,6 @@
 ---
 title: Convert Word to Image on macOS | Syncfusion
-description: Convert Word to image in ASP.NET Core application on macOS using .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
+description: Convert Word to image in ASP.NET application on macOS using .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert Word document to Image on macOS
 
-Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to image in .NET Core application on macOS**.
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to image in .NET Core application on macOS**.
 
 ## Steps to convert Word document to Image in .NET Core application on macOS
 
@@ -29,12 +29,12 @@ Step 2: Select the project version.
 
 ![Select Project version](Mac-images/selectprojectverion.png)
 
-Step 3: Install the [Syncfusion.DocIORenderer.Net.Core ](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core/) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/). Install the Nuget Package on Mac please refer this [Link](https://learn.microsoft.com/en-us/visualstudio/mac/nuget-walkthrough?view=vsmac-2022)
+Step 3: Install the [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core/) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/). For instructions on installing NuGet packages in Visual Studio for Mac, refer to this [link](https://learn.microsoft.com/en-us/visualstudio/mac/nuget-walkthrough?view=vsmac-2022).
 
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: Include the following Namespaces in the Program.cs file.
+Step 4: Include the following namespaces in the Program.cs file.
 
 {% tabs %}
 
@@ -119,7 +119,7 @@ Step 2: To **convert a Word document to image in console app**, install [Syncfus
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 3: Include the following Namespaces in the Program.cs file.
+Step 3: Include the following namespaces in the Program.cs file.
 
 {% tabs %}
 
@@ -193,7 +193,7 @@ By executing the program, you will get the **image** as follows. The output will
 * JetBrains Rider.
 * Install .NET 8 SDK or later.
 
-Step 1. Open JetBrains Rider and create a new .NET Core console application project.
+Step 1: Open JetBrains Rider and create a new .NET Core console application project.
 * Launch JetBrains Rider.
 * Click **New solution** on the welcome screen.
 
@@ -220,7 +220,7 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
-Step 3: Include the following Namespaces in the Program.cs file.
+Step 3: Include the following namespaces in the Program.cs file.
 
 {% tabs %}
 

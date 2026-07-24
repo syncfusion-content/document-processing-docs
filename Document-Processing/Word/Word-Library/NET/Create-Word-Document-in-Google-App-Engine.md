@@ -10,6 +10,8 @@ documentation: UG
 
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) that allows you to create, read, edit, and convert Word documents programmatically, without the need for **Microsoft Word** or interop dependencies. Using this library, you can **create Word document in Google App Engine**.
 
+N> This sample targets **.NET 8**. Install the .NET 8 SDK before you begin. You also need a Google Cloud project with **billing enabled** and the **App Engine Admin API** enabled. Install the [`gcloud` CLI](https://cloud.google.com/sdk/docs/install) (or use the pre-provisioned Cloud Shell) and run `gcloud auth login` before proceeding.
+
 ## Set up App Engine
 
 Step 1: Open the **Google Cloud Console** and click the **Activate Cloud Shell** button.
@@ -18,7 +20,7 @@ Step 1: Open the **Google Cloud Console** and click the **Activate Cloud Shell**
 Step 2: Click the **Cloud Shell Editor** button to view the **Workspace**.
 ![Open Editor in Cloud Shell](GCP_Images/Authentication-WordtoImage.png)
 
-Step 3: Open **Cloud Shell Terminal**, run the following **command** to confirm authentication.
+Step 3: Open **Cloud Shell Terminal**, and run the following **command** to confirm authentication.
 
 {% tabs %}
 {% highlight c# tabtitle="CLI" %}
@@ -30,7 +32,7 @@ gcloud auth list
 
 ![Authentication for App Engine](GCP_Images/Editor-Button-WordtoImage.png)
 
-Step 4: Click the **Authorize** button.
+Step 4: Click the **Authorize** button to grant the Cloud Shell session the permissions it needs to manage your App Engine application.
 ![Click Authorize button](GCP_Images/Authorize-WordtoImage.png)
 
 ## Create an application for App Engine
@@ -48,7 +50,15 @@ Step 4: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/S
 
 ![Install Syncfusion.DocIO.Net.Core NuGet package](ASP-NET-Core_images/Install_Nuget.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion<sup>&reg;</sup> licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 5: Include the following namespaces in the **HomeController.cs** file.
 
@@ -61,7 +71,7 @@ using Syncfusion.DocIO;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: A default action method named Index will be present in HomeController.cs. Right click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
+Step 6: A default action method named Index will be present in HomeController.cs. Right-click on the Index method and select **Go To View**. You will be directed to its associated view page **Index.cshtml**.
 
 Step 7: Add a new button in the Index.cshtml as shown below.
 
@@ -335,7 +345,7 @@ ls
 
 ![View the files and directories](GCP_Images/View-the-File-Create-Word-Document.png)
 
-Step 4: Run the following **command** to navigate which sample you want run.
+Step 4: Run the following **command** to navigate to the sample you want to run.
 
 {% tabs %}
 {% highlight c# tabtitle="CLI" %}
@@ -347,11 +357,12 @@ cd Create-Word-Document
 
 ![Navigate which sample you want run](GCP_Images/Navigate-Create-Word-Document.png)
 
-Step 5: To ensure that the sample is working correctly, please run the application using the following command.
+Step 5: To ensure that the sample is working correctly, restore the dependencies and run the application using the following commands.
 
 {% tabs %}
 {% highlight c# tabtitle="CLI" %}
 
+dotnet restore
 dotnet run --urls=http://localhost:8080
 
 {% endhighlight %}
@@ -365,7 +376,7 @@ Step 6: Verify that the application is running properly by accessing the **Web V
 Step 7: Now you can see the sample output on the preview page.
 ![Sample output in browser](GCP_Images/Ensure-sample-Create-Word-Document.png)
 
-Step 8: Close the preview page and return to the terminal then press **Ctrl+C** for which will typically stop the process.
+Step 8: Close the preview page and return to the terminal, then press **Ctrl+C**, which will stop the process.
 ![Press Ctrl+C in Cloud Shell Terminal](GCP_Images/Stop-Process-Create-Word-Document.png)
 
 ## Publish the application
@@ -382,7 +393,7 @@ dotnet publish -c Release
 
 ![Publish the application](GCP_Images/Publish-Create-Word-Document.png)
 
-Step 2: Run the following command in **Cloud Shell Terminal** to navigate to the publish folder.
+Step 2: Run the following command in **Cloud Shell Terminal** to navigate to the publish folder. The folder name matches your target framework (for example, `net8.0`); adjust it if you targeted a different TFM.
 {% tabs %}
 {% highlight c# tabtitle="CLI" %}
 
@@ -393,7 +404,7 @@ cd bin/Release/net8.0/publish/
 
 ![Navigate to publish folder](GCP_Images/Navigate-Publish-Folder-Create-Word-Document.png)
 
-## Configure app.yaml and docker file
+## Configure app.yaml and Dockerfile
 
 Step 1: Add the app.yaml file to the publish folder with the following contents.
 
@@ -410,7 +421,7 @@ EOT
 
 ![Add required files to publish folder](GCP_Images/Yaml-File-Create-Word-Document.png)
 
-Step 2: Add the Docker file to the publish folder with the following contents.
+Step 2: Add the Dockerfile to the publish folder with the following contents.
 
 {% tabs %}
 {% highlight c# tabtitle="CLI" %}
@@ -430,12 +441,12 @@ EOT
 
 ![Add required files to publish folder](GCP_Images/Docker-File-Create-Word-Document.png)
 
-Step 3: You can ensure **Docker** and **app.yaml** files are added in **Workspace**.
+Step 3: You can ensure **Dockerfile** and **app.yaml** files are added in **Workspace**.
 ![Add required files to publish folder](GCP_Images/Check-Docker-File-in-Workspace-Create-Word-Document.png)
 
 ## Deploy to App Engine
 
-Step 1: To deploy the application to the App Engine, run the following command in Cloud Shell Terminal. Afterwards, retrieve the **URL** from the Cloud Shell Terminal.
+Step 1: To deploy the application to the App Engine, run the following command in Cloud Shell Terminal. On the first deploy, you will be prompted to select a region for your App Engine app; choose one close to your users. The `--version v0` flag assigns a specific version id to this deployment. Then retrieve the **URL** from the Cloud Shell Terminal.
 
 {% tabs %}
 {% highlight c# tabtitle="CLI" %}
@@ -445,12 +456,14 @@ gcloud app deploy --version v0
 {% endhighlight %}
 {% endtabs %}
 
-![Add required files to publish folder](GCP_Images/Deploy-Create-Word-Document.png)
+![Deploy the application to App Engine](GCP_Images/Deploy-Create-Word-Document.png)
 
 Step 2: Open the **URL** to access the application, which has been successfully deployed.
-![Add required files to publish folder](GCP_Images/Browser-Create-Word-Document.png)
+![Application running in the browser](GCP_Images/Browser-Create-Word-Document.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/GCP/Google_App_Engine).
+
+N> The code sample references image files (AdventureCycle.jpg, Mountain-200.jpg, Mountain-300.jpg, Road-550-W.jpg). Download these assets from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/GCP/Google_App_Engine/Create-Word-Document/Data) and place them in the application's `Data` folder so the relative paths in the code resolve correctly at runtime.
 
 By executing the program, you will get the **Word document** as follows. The output will be saved in **bin** folder.
 

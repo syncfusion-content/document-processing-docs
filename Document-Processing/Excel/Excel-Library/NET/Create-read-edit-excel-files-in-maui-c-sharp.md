@@ -13,7 +13,7 @@ Syncfusion<sup>&reg;</sup> Excel library for .NET MAUI platform can be used to c
 
 To use the .NET MAUI project templates, install the **Mobile development with .NET** workload for Visual Studio. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?tabs=vswin).
 
-The supported development environment is Visual Studio 2022 (17.3 or later) on Windows with the .NET MAUI workload installed, and .NET 7 or later.
+The supported development environment is Visual Studio 2022 (17.3 or later) on Windows with the .NET MAUI workload installed, and .NET 8 or later.
 
 ## Create a simple Excel report
 
@@ -942,5 +942,5 @@ A complete working example of how to read and edit an Excel file in the .NET MAU
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/maui) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
-An online sample link to [create an Excel document](https://ej2.syncfusion.com/aspnetcore/Excel/Create#/material3) in ASP.NET Core.
+An online sample link to [create an Excel document](https://document.syncfusion.com/demos/excel/create#/tailwind3) in ASP.NET Core.
 

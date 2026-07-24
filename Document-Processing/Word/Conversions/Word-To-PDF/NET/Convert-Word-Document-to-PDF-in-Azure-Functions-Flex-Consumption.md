@@ -6,20 +6,28 @@ control: DocIO
 documentation: UG
 ---
 
-# Convert Word document to PDF in Azure Functions (Flex Consumption)
+# Convert Word to PDF in Azure Functions (Flex Consumption)
 
-Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to PDF in Azure Functions deployed on Flex (Consumption) plan**.
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to PDF in Azure Functions deployed on a Flex Consumption plan**.
+
+## Prerequisites
+
+- An active Azure subscription.
+- Visual Studio 2022 (or later) with the **Azure Development** workload installed.
+- [Azure Functions Tools](https://learn.microsoft.com/en-us/azure/azure-functions/functions-develop-local?pivots=programming-language-csharp) for Visual Studio.
+- [.NET 8 SDK or later](https://dotnet.microsoft.com/en-us/download/dotnet) (the Flex Consumption plan supports only the **.NET 8 isolated worker** model).
+- A Syncfusion license key. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering the Syncfusion<sup>&reg;</sup> license key in your application.
 
 ## Steps to convert a Word document to PDF in Azure Functions (Flex Consumption)
 
 Step 1: Create a new Azure Functions project.
-![Create a Azure Functions project](Azure-Images/Functions-Flex-Consumption/Azure_Word_to_PDF.png)
+![Create an Azure Functions project](Azure-Images/Functions-Flex-Consumption/Azure_Word_to_PDF.png)
 
-Step 2: Create a project name and select the location.
+Step 2: Enter a project name and select the location.
 ![Create a project name](Azure-Images/Functions-Flex-Consumption/Configuration_Word_to_PDF.png)
 
-Step 3: Select function worker as **.NET 8.0 (Long Term Support)** (isolated worker) and target Flex/Consumption hosting suitable for isolated worker.
-![Select function worker](Azure-Images/Functions-Flex-Consumption/Additional_Information_Word_to_PDF.png)
+Step 3: In the **Additional information** dialog, select the function worker as **.NET 8.0 (Long Term Support) (Isolated)** and choose **Flex Consumption** as the hosting plan. Then click **Create**.
+![Select function worker and hosting plan](Azure-Images/Functions-Flex-Consumption/Additional_Information_Word_to_PDF.png)
 
 Step 4: Install the [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) and [SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1) NuGet packages as references to your project from [NuGet.org](https://www.nuget.org/).
 ![Install NuGet packages](Azure-Images/Functions-Flex-Consumption/Nuget_Package_Word_to_PDF.png)
@@ -32,6 +40,13 @@ Step 5: Include the following namespaces in the **Function1.cs** file.
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
+using System;
+using System.IO;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Azure.Functions.Worker;
+using Microsoft.Extensions.Logging;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.DocIORenderer;
@@ -40,7 +55,7 @@ using Syncfusion.Pdf;
 
 {% endtabs %}
 
-Step 6: Add the following code snippet in **Run** method of **Function1** class to perform **Word document to PDF conversion** in Azure Functions and return the resultant **PDF** to client end.
+Step 6: Add the following code snippet in the **Run** method of the **Function1** class to perform **Word document to PDF conversion** in Azure Functions and return the resultant **PDF** to the client end. The font substitution handler and the `ILogger` field shown below are part of the same class.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -125,33 +140,46 @@ Step 7: Right click the project and select **Publish**. Then, create a new profi
 Step 8: Select the target as **Azure** and click **Next** button.
 ![Select the target as Azure](Azure-Images/Functions-Flex-Consumption/Target_Word_to_PDF.png)
 
-Step 9: Select the specific target as **Azure Function App** and click **Next** button.
-![Select the target as Azure](Azure-Images/Functions-Flex-Consumption/Specific_Target_Word_to_PDF.png)
+Step 9: Select the specific target as **Azure Function App** and click **Next**.
+![Select the target as Azure Function App](Azure-Images/Functions-Flex-Consumption/Specific_Target_Word_to_PDF.png)
 
-Step 10: Select the **Create new** button.
+Step 10: Click **Create new** button to configure a new Azure Function App instance.
 ![Configure Hosting Plan](Azure-Images/Functions-Flex-Consumption/Function_Instance_Word_to_PDF.png)
 
-Step 11: Click **Create** button. 
-![Select the plan type](Azure-Images/Functions-Flex-Consumption/Hosting_Word_to_PDF.png)
+Step 11: In the hosting plan list, select **Flex Consumption** (required for the isolated worker model on .NET 8) and click **Create**.
+![Select Flex Consumption plan](Azure-Images/Functions-Flex-Consumption/Hosting_Word_to_PDF.png)
 
-Step 12: After creating app service then click **Finish** button. 
+Step 12: After the Function App is created, click **Finish**.
 ![Creating app service](Azure-Images/Functions-Flex-Consumption/Finish_Word_to_PDF.png)
 
-Step 13: Click the **Publish** button.
-![Click Publish Button](Azure-Images/Functions-Flex-Consumption/Before_Publish_Word_to_PDF.png)
+Step 13: Click **Publish**.
+![Click Publish button](Azure-Images/Functions-Flex-Consumption/Before_Publish_Word_to_PDF.png)
 
-Step 14: Publish has been succeed.
+Step 14: Publishing succeeded.
 ![Publish succeeded](Azure-Images/Functions-Flex-Consumption/After_Publish_Word_to_PDF.png)
 
-Step 15: Now, go to Azure portal and select the App Services. After running the service, click **Get function URL by copying it**. Then, paste it in the below client sample (which will request the Azure Functions, to perform **Word document to PDF conversion** using the template Word document). You will get the output **PDF** as follows.
+Step 15: Go to the Azure portal and select **App Services** → your Function App → **Functions** → **Function1**. Click **Get Function URL** and copy the URL (it includes the `?code=...` function key). Paste this URL into the client console app below to send a Word document to the function and receive the converted PDF. The output PDF is shown below.
+![Word to PDF in Azure Functions Flex Consumption](WordToPDF_images/WordToPDF_Output_Cloud.png)
 
 ![Word to PDF in Azure Functions v1](WordToPDF_images/WordToPDF_Output_Cloud.png)
 
 ## Steps to post the request to Azure Functions
 
-Step 1: Create a console application to request the Azure Functions API.
+Step 1: Create a .NET console application to request the Azure Functions API.
 
 Step 2: Add the following code snippet into Main method to post the request to Azure Functions with template Word document and get the resultant PDF.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+using System;
+using System.IO;
+using System.Net.Http;
+using System.Threading.Tasks;
+{% endhighlight %}
+
+{% endtabs %}
+
+Step 3: Add the following code snippet to the **Main** method to post the Word document to the Azure Function and save the returned PDF (or the error response, if conversion fails).
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -185,6 +213,8 @@ static async Task Main()
     }
 {% endhighlight %}
 {% endtabs %}
+
+N> **Function key:** Because the trigger is configured with `AuthorizationLevel.Function`, the client must send the URL with the function key (the `?code=...` value) or supply the `x-functions-key` header. The **Get Function URL** link in the Azure portal already includes the key in the query string.
 
 From GitHub, you can download the [console application](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/Azure/Azure_Functions/Console_App_Flex_Consumption) and [Azure Functions Flex Consumption](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/Azure/Azure_Functions/Azure_Function_Flex_Consumption).
 

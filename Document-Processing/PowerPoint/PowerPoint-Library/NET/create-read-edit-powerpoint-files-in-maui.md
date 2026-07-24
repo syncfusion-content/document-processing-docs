@@ -5,11 +5,11 @@ platform: document-processing
 control: PowerPoint
 documentation: UG
 ---
-# Create, read and edit a PowerPoint file in .NET MAUI 
+# Create, read, and edit a PowerPoint file in .NET MAUI
 
 Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> Presentation is a [.NET PowerPoint library](https://www.syncfusion.com/powerpoint-framework/maui/powerpoint-library) used to create, read, and edit PowerPoint documents programmatically without Microsoft PowerPoint or interop dependencies. Using this library, you can create a PowerPoint document in .NET MAUI.
 
-## Steps to create PowerPoint file in .NET MAUI
+## Steps to create a PowerPoint file in .NET MAUI
 
 {% tabcontents %}
 
@@ -17,11 +17,11 @@ Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> Presentation is a [.NET Pow
 
 **Prerequisites:**
 
-* Visual Studio 2022.
+* Install Visual Studio 2022.
 * Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
-* For more details about installation, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin).
+* For more details about installation, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=vswin).
 
-Step 1: Create a new C# .NET MAUI app. Select **.NET MAUI App (Preview)** from the template and click the **Next** button.
+Step 1: Create a new C# .NET MAUI app. Select **.NET MAUI App** from the template and click the **Next** button.
 
 ![Create the MAUI app in Visual Studio](Workingwith-MAUI/Create_Project.png)
 
@@ -29,7 +29,7 @@ Step 2: Enter the project name and click **Create**.
 
 ![Create a project name for your new project](Workingwith-MAUI/Configure.png)
 
-Step 3: Install the Syncfusion.Presentation.NET NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+Step 3: Install the [Syncfusion.Presentation.NET](https://www.nuget.org/packages/Syncfusion.Presentation.NET) NuGet package as a reference to your .NET Standard applications from the [NuGet.org](https://www.nuget.org/). The examples in this topic use the latest stable version of the package.
 
 ![Install the Presentation .NET NuGet package](Workingwith-MAUI/Install_Nuget.png)
 
@@ -74,6 +74,8 @@ using System.Reflection;
 {% endhighlight %}
 
 {% endtabs %}
+
+N> The following sample loads an image named `Image.png` from the project's embedded resources (path `CreatePowerPoint.Resources.Presentation.Image.png`). To make this work, add an `Image.png` file under a `Resources/Presentation` folder in your project, then set its **Build Action** to **Embedded Resource** in the properties window.
 
 Step 6: Add a new action method **CreatePresentation** in MainPage.xaml.cs and include the below code snippet to **create a PowerPoint file**.
 
@@ -150,7 +152,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Helper files for .NET MAUI
 
-Download the helper files from this [link](https://www.syncfusion.com/downloads/support/directtrac/general/ze/HelperFiles_Presentation-1440845842.zip) and add them into the mentioned project. These helper files allow you to save the stream as a physical file and open the file for viewing.
+Download the helper files from this [link](https://www.syncfusion.com/downloads/support/directtrac/general/ze/HelperFiles_Presentation-1440845842.zip) and add them to your project. These helper files allow you to save the stream as a physical file and open the file for viewing.
 
 <table>
   <tr>
@@ -171,7 +173,7 @@ Download the helper files from this [link](https://www.syncfusion.com/downloads/
   <td>
     SaveService.cs
   </td>
-  <td>Represent the base class for save operation.
+  <td>Represents the base class for save operation.
   </td>
   </tr>
   <tr>
@@ -249,9 +251,9 @@ Step 1: Create a new C# .NET MAUI app project.
 Step 2: To **create a PowerPoint document in .NET MAUI app**, install [Syncfusion.Presentation.NET.Core](https://www.nuget.org/packages/Syncfusion.Presentation.NET.Core) to the MAUI project.
 * Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 * Ensure you're in the project root directory where your .csproj file is located.
-* Run the command `dotnet add package Syncfusion.Presentation.Net.Core` to install the NuGet package.
+* Run the command `dotnet add package Syncfusion.Presentation.NET` to install the NuGet package.
 
-![Add Syncfusion.Presentation.Net.Core NuGet package](Workingwith-MAUI/Command-to-add-NuGet-package-MAUI.png)
+![Add Syncfusion.Presentation.NET NuGet package](Workingwith-MAUI/Command-to-add-NuGet-package-MAUI.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
@@ -294,6 +296,8 @@ using System.Reflection;
 {% endhighlight %}
 
 {% endtabs %}
+
+N> The following sample loads an image named `Image.png` from the project's embedded resources (path `CreatePowerPoint.Resources.Presentation.Image.png`). To make this work, add an `Image.png` file under a `Resources/Presentation` folder in your project, then set its **Build Action** to **Embedded Resource** in the properties window.
 
 Step 5: Add a new action method **CreatePresentation** in MainPage.xaml.cs and include the below code snippet to **create a PowerPoint file**.
 
@@ -370,7 +374,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Helper files for .NET MAUI
 
-Download the helper files from this [link](https://www.syncfusion.com/downloads/support/directtrac/general/ze/HelperFiles_Presentation-1440845842.zip) and add them into the mentioned project. These helper files allow you to save the stream as a physical file and open the file for viewing.
+Download the helper files from this [link](https://www.syncfusion.com/downloads/support/directtrac/general/ze/HelperFiles_Presentation-1440845842.zip) and add them to your project. These helper files allow you to save the stream as a physical file and open the file for viewing.
 
 <table>
   <tr>
@@ -391,7 +395,7 @@ Download the helper files from this [link](https://www.syncfusion.com/downloads/
   <td>
     SaveService.cs
   </td>
-  <td>Represent the base class for save operation.
+  <td>Represents the base class for save operation.
   </td>
   </tr>
   <tr>
@@ -451,11 +455,12 @@ Download the helper files from this [link](https://www.syncfusion.com/downloads/
 
 **Prerequisites:**
 
-* JetBrains Rider.
+* Install JetBrains Rider.
 * Install .NET 8 SDK or later.
+* Run `dotnet workload install maui` to install the .NET MAUI workload.
 * For more details about installation, refer [here](https://www.jetbrains.com/help/rider/MAUI.html).
 
-Step 1. Open JetBrains Rider and create a new .NET MAUI App project.
+Step 1: Open JetBrains Rider and create a new .NET MAUI App project.
 * Launch JetBrains Rider.
 * Click **New solution** on the welcome screen.
 
@@ -465,23 +470,23 @@ Step 1. Open JetBrains Rider and create a new .NET MAUI App project.
 * Select the target framework (e.g., .NET 8.0, .NET 9.0).
 * Choose **Type** as **App**.
 * Enter a project name and specify the location.
-* Click create.
+* Click **Create**.
 
 ![Creating a new .NET MAUI App in JetBrains Rider](Workingwith-MAUI/Create-MAUI-application.png)
 
 Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
-* Click the NuGet icon in the Rider toolbar and type [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) in the search bar.
+* Click the NuGet icon in the Rider toolbar and type [Syncfusion.Presentation.NET](https://www.nuget.org/packages/Syncfusion.Presentation.NET) in the search bar.
 * Ensure that nuget.org is selected as the package source.
-* Select the latest Syncfusion.Presentation.Net.Core NuGet package from the list.
+* Select the latest Syncfusion.Presentation.NET NuGet package from the list.
 * Click the + (Add) button to add the package.
 
-![Select the Syncfusion.Presentation.Net.Core NuGet package](Workingwith-MAUI/Select-Syncfusion.Presentation.Net.Core-NuGet.png)
+![Select the Syncfusion.Presentation.NET NuGet package](Workingwith-MAUI/Select-Syncfusion.Presentation.Net.Core-NuGet.png)
 
 * Click the **Install** button to complete the installation.
 
-![Install the Syncfusion.Presentation.Net.Core NuGet package](Workingwith-MAUI/Install-Syncfusion.Presentation.Net.Core-NuGet.png)
+![Install the Syncfusion.Presentation.NET NuGet package](Workingwith-MAUI/Install-Syncfusion.Presentation.Net.Core-NuGet.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 3: Add a new button to the **MainPage.xaml** as shown below.
 
@@ -522,6 +527,8 @@ using System.Reflection;
 {% endhighlight %}
 
 {% endtabs %}
+
+N> The following sample loads an image named `Image.png` from the project's embedded resources (path `CreatePowerPoint.Resources.Presentation.Image.png`). To make this work, add an `Image.png` file under a `Resources/Presentation` folder in your project, then set its **Build Action** to **Embedded Resource** in the properties window.
 
 Step 5: Add a new action method **CreatePresentation** in MainPage.xaml.cs and include the below code snippet to **create a PowerPoint file**.
 
@@ -601,7 +608,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Helper files for .NET MAUI
 
-Download the helper files from this [link](https://www.syncfusion.com/downloads/support/directtrac/general/ze/HelperFiles_Presentation-1440845842.zip) and add them into the mentioned project. These helper files allow you to save the stream as a physical file and open the file for viewing.
+Download the helper files from this [link](https://www.syncfusion.com/downloads/support/directtrac/general/ze/HelperFiles_Presentation-1440845842.zip) and add them to your project. These helper files allow you to save the stream as a physical file and open the file for viewing.
 
 <table>
   <tr>
@@ -622,7 +629,7 @@ Download the helper files from this [link](https://www.syncfusion.com/downloads/
   <td>
     SaveService.cs
   </td>
-  <td>Represent the base class for save operation.
+  <td>Represents the base class for save operation.
   </td>
   </tr>
   <tr>
@@ -682,14 +689,15 @@ Download the helper files from this [link](https://www.syncfusion.com/downloads/
 
 ## Read and edit a PowerPoint file in .NET MAUI
 
-You can edit an existing PowerPoint file using this library. The below code snippet demonstrates accessing a shape from a slide and changing the text within it.
+You can edit an existing PowerPoint file using this library. This example assumes that an existing Sample.pptx file is present in the application's working/output directory. The following code snippet demonstrates accessing a shape from a slide and changing its text.
+
+N> Add a Sample.pptx file under a Resources/Presentation folder in your project, then set its Build Action to Embedded Resource in the properties window.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
 //Opens an existing PowerPoint presentation.
 Assembly assembly = typeof(MainPage).GetTypeInfo().Assembly;
-//Opens an existing PowerPoint presentation.
 using IPresentation pptxDoc = Presentation.Open(assembly.GetManifestResourceStream("Sample.pptx"));
 //Gets the first slide from the PowerPoint presentation.
 ISlide slide = pptxDoc.Slides[0];
@@ -709,6 +717,6 @@ saveService.SaveAndView("Output.pptx", "application/vnd.openxmlformats-officedoc
 
 {% endtabs %}
 
-Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page.
 
-An online sample link to [create a PowerPoint Presentation](https://document.syncfusion.com/demos/powerpoint/default#/tailwind) in ASP.NET Core. 
+An online sample link to [create a PowerPoint Presentation](https://document.syncfusion.com/demos/powerpoint/default#/tailwind) in ASP.NET Core.

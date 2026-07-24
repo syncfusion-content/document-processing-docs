@@ -1,6 +1,6 @@
 ---
 title: Convert Word to Image in AWS Lambda | Syncfusion
-description: Convert Word to image in AWS Lambda using .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
+description: Convert Word to image in AWS Lambda using .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert Word Document to Image in AWS Lambda
 
-Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to image in AWS Lambda**.
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to image in AWS Lambda**..
 
 ## Steps to convert Word document to Image in AWS Lambda
 
@@ -18,17 +18,17 @@ Step 1: Create a new **AWS Lambda project** as follows.
 Step 2: Select Blueprint as Empty Function and click **Finish**.
 ![Select Blueprint as Empty Function](AWS_Images/Lambda_Images/Blueprint-AWS-WordtoPDF.png)
 
-Step 3: Install the following **Nuget packages** in your application from [Nuget.org](https://www.nuget.org/).
+Step 3: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/).
 
 * [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) 
 * [SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)
 
-![Install Syncfusion.DocIORenderer.Net.Core Nuget Package](ASP-NET-Core_images/NugetPackage.png)
-![Install SkiaSharp.NativeAssets.Linux.NoDependencies Nuget Package](AWS_Images/Lambda_Images/SkiaSharp-Nuget-Package-WordtoPDF.png)
+![Install Syncfusion.DocIORenderer.Net.Core NuGet package](ASP-NET-Core_images/NugetPackage.png)
+![Install SkiaSharp.NativeAssets.Linux.NoDependencies NuGet package](AWS_Images/Lambda_Images/SkiaSharp-Nuget-Package-WordtoPDF.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: Create a folder and copy the required data files and include the files to the project.
+Step 4: Create a folder and copy the required data files. Then include the files in the project.
 ![Create a folder](AWS_Images/Lambda_Images/Data-Folder-WordtoPDF.png)
 
 Step 5: Set the **copy to output directory** to **Copy if newer** to all the data files.
@@ -51,6 +51,7 @@ Step 7: Include the following namespaces in **Function.cs** file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using Amazon.Lambda.Core;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.DocIORenderer;
@@ -59,7 +60,7 @@ using Syncfusion.Drawing;
 {% endhighlight %}
 {% endtabs %}
 
-step 8: Add the following code snippet in **Function.cs** to **convert a Word document to image**.
+Step 8: Add the following code snippet in **Function.cs** to **convert a Word document to image**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -113,7 +114,7 @@ private void FontSettings_SubstituteFont(object sender, SubstituteFontEventArgs 
 {% endhighlight %}
 {% endtabs %}
 
-N> If using an older version of Syncfusion and Skiasharp NuGet as v2.88.8, there is a chance of encountering a libSkiaSharp not found exception during the conversion process.
+N> If you are using an older version of Syncfusion and SkiaSharp NuGet (such as v2.88.8), you may encounter a libSkiaSharp not found exception during the conversion process.
 To resolve this, refer to the code snippet provided in the documentation [here]( https://help.syncfusion.com/document-processing/faq/how-to-resolve-libskiasharp-not-found-exception-in-net8-and-net9-on-linux).
 
 Step 9: Right-click the project and select **Publish to AWS Lambda**.
@@ -122,7 +123,7 @@ Step 9: Right-click the project and select **Publish to AWS Lambda**.
 Step 10: Create a new AWS profile in the Upload Lambda Function Window. After creating the profile, add a name for the Lambda function to publish. Then, click **Next**.
 ![Upload Lambda Function](AWS_Images/Lambda_Images/Upload-Lampda-WordtoPDF.png)
 
-Step 11: In the Advanced Function Details window, specify the **Role Name** as based on AWS Managed policy. After selecting the role, click the **Upload** button to deploy your application.
+Step 11: In the Advanced Function Details window, specify the **Role Name** based on an AWS Managed policy. After selecting the role, click the **Upload** button to deploy your application.
 ![Advance Function Details](AWS_Images/Lambda_Images/Advanced-AWS-WordtoPDF.png)
 
 Step 12: After deploying the application, you can see the published Lambda function in **AWS console**.
@@ -136,14 +137,14 @@ Step 13: Edit Memory size and Timeout as maximum in General configuration of the
 Step 1: Create a new console project.
 ![Create a console project](AWS_Images/Lambda_Images/Console-APP-WordtoPDF.png)
 
-step 2: Install the following **Nuget packages** in your application from [Nuget.org](https://www.nuget.org/).
+Step 2: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/).
 
 * [AWSSDK.Core](https://www.nuget.org/packages/AWSSDK.Core/)
 * [AWSSDK.Lambda](https://www.nuget.org/packages/AWSSDK.Lambda/)
 * [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/)
-![Install AWSSDK.Core Nuget Package](AWS_Images/Lambda_Images/Nuget-Package-AWSSDK-Core-WordtoPDF.png)
-![Install AWSSDK.Lambda Nuget Package](AWS_Images/Lambda_Images/Nuget-Package-AWSSDK-Lambda-WordtoPDF.png)
-![Install Newtonsoft.Json Nuget Package](AWS_Images/Lambda_Images/Nuget-Package-Newton-Json-WordtoPDF.png)
+![Install AWSSDK.Core NuGet package](AWS_Images/Lambda_Images/Nuget-Package-AWSSDK-Core-WordtoPDF.png)
+![Install AWSSDK.Lambda NuGet package](AWS_Images/Lambda_Images/Nuget-Package-AWSSDK-Lambda-WordtoPDF.png)
+![Install Newtonsoft.Json NuGet package](AWS_Images/Lambda_Images/Nuget-Package-Newton-Json-WordtoPDF.png)
 
 Step 3: Include the following namespaces in **Program.cs** file.
 

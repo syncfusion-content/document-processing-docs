@@ -3,7 +3,7 @@ layout: post
 title: Clipboard in Angular Spreadsheet component | Syncfusion
 description: Learn here all about Clipboard in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Clipboard 
+control: Clipboard
 documentation: ug
 ---
 
@@ -46,7 +46,7 @@ It is used to paste the clipboard data to the selected range, rows or columns. Y
 * `Paste Special` - You can paste the values with formatting.
 * `Paste` - You can paste only the values without formatting.
 
-It also performs for external clipboard operation. If you perform cut and paste, clipboard data will be cleared, whereas in copy and paste the clipboard contents will be maintained. If you perform paste inside the copied range, the clipboard data will be cleared.
+It also supports external clipboard operations. If you perform cut and paste, clipboard data will be cleared, whereas in copy and paste the clipboard contents will be maintained. If you perform paste inside the copied range, the clipboard data will be cleared.
 
 **User Interface**:
 

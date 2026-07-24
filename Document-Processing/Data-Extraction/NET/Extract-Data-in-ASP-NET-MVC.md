@@ -21,8 +21,10 @@ Step 2: In the project configuration window, name your project and select Create
 ![Configuration window1](GettingStarted_images/MVC_Data_ProjectCreation.png)   
 ![Configuration window2](GettingStarted_images/CreateASPNetMVCProject_DataExtractor.png)   
 
-Step 3: Install [Syncfusion.SmartDataExtractor.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.SmartDataExtractor.AspNet.Mvc5)  NuGet package as reference to your .NET application from [NuGet.org](https://www.nuget.org/).
+Step 3: Install [Syncfusion.SmartDataExtractor.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.SmartDataExtractor.AspNet.Mvc5) NuGet package as a reference for your ASP.NET MVC application from [NuGet.org](https://www.nuget.org/).
 ![NuGet package installation](GettingStarted_images/MVC_DataExtractorNuget.png)  
+
+Add the input PDF file named **Input.pdf** to the App_Data folder before running the sample.
 
 Step 4: Include the following namespaces in the HomeController.cs file.
 

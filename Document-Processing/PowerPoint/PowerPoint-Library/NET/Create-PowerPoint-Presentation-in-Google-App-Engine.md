@@ -35,6 +35,8 @@ Step 4: Click the **Authorize** button.
 
 ## Create an application for App Engine
 
+N> Prerequisites: A [Google Cloud account](https://cloud.google.com/) with billing enabled, the App Engine Admin API enabled, and Visual Studio with the **.NET 8 SDK** and the **ASP.NET and web development** workload installed. The sample targets **.NET 8** to match the runtime used in later Docker and publish steps.
+
 Step 1: Open Visual Studio and select the ASP.NET Core Web app (Model-View-Controller) template.
 ![Create ASP.NET Core Web application in Visual Studio](GCP_Images/Create-PowerPoint-Presentation-to-PDF.png)
 
@@ -59,9 +61,9 @@ using Syncfusion.Presentation;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: A default action method named Index will be present in HomeController.cs. Right click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
+Step 6: Add a folder named **Data** and place an image named `Image.jpg` into it. The code in Step 8 loads this image from `Data/Image.jpg`.
 
-Step 7: Add a new button in the Index.cshtml as shown below.
+Step 7: A default action method named Index will be present in HomeController.cs. Right click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**. Add a new button in the Index.cshtml as shown below.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -141,15 +143,15 @@ return File(pptxStream, "application/powerpoint", "Result.pptx");
 
 ## Move application to App Engine
 
-Step 1: Open the **Cloud Shell editor**.
+Step 1: Open the **Cloud Shell Editor**.
 ![Cloud Shell Editor](GCP_Images/Cloud-Shell-Editor-PowerPoint-Presentation-to-PDF.png)
 
 Step 2: Drag and drop the sample from your local machine to **Workspace**.
-![Open the Home Workspace](GCP_Images/Terminal-Create-PowerPoint-Presentation.png)
+![Drag and drop the sample into Workspace](GCP_Images/Terminal-Create-PowerPoint-Presentation.png)
 
 N> If you have your sample application in your local machine, drag and drop it into the Workspace. If you created the sample using the Cloud Shell terminal command, it will be available in the Workspace.
 
-Step 3: Open the Cloud Shell Terminal and run the following **command** to view the files and directories within your **current Workspace**.
+Step 3: Open the **Cloud Shell Terminal** and run the following **command** to view the files and directories within your **current Workspace**.
 
 {% tabs %}
 {% highlight c# tabtitle="CLI" %}
@@ -161,7 +163,7 @@ ls
 
 ![View the files and directories](GCP_Images/View-Files-Create-PowerPoint-Presentation.png)
 
-Step 4: Run the following **command** to navigate which sample you want run.
+Step 4: Run the following **command** to navigate to the sample you want to run.
 
 {% tabs %}
 {% highlight c# tabtitle="CLI" %}
@@ -171,9 +173,9 @@ cd Create-PowerPoint-Presentation
 {% endhighlight %}
 {% endtabs %}
 
-![Navigate which sample you want run](GCP_Images/Navigate-Create-PowerPoint-Presentation.png)
+![Navigate to the sample you want to run](GCP_Images/Navigate-Create-PowerPoint-Presentation.png)
 
-Step 5: To ensure that the sample is working correctly, please run the application using the following command.
+Step 5: To ensure that the sample is working correctly, run the application using the following command.
 
 {% tabs %}
 {% highlight c# tabtitle="CLI" %}
@@ -191,7 +193,7 @@ Step 6: Verify that the application is running properly by accessing the **Web V
 Step 7: Now you can see the sample output on the preview page.
 ![Sample output in browser](GCP_Images/Ensure-Create-PowerPoint-Presentation.png)
 
-Step 8: Close the preview page and return to the terminal then press **Ctrl+C** for which will typically stop the process.
+Step 8: Close the preview page and return to the terminal, then press **Ctrl+C** to stop the process.
 ![Stop the process in terminal](GCP_Images/Close-Process-Create-PowerPoint-Presentation.png)
 
 ## Publish the application
@@ -219,7 +221,7 @@ cd bin/Release/net8.0/publish/
 
 ![Navigate to the publish folder](GCP_Images/Navigate-Publish-Folder-Create-PowerPoint-Presentation.png)
 
-## Configure app.yaml and docker file
+## Configure app.yaml and Dockerfile
 
 Step 1: Add the app.yaml file to the publish folder with the following contents.
 
@@ -228,15 +230,15 @@ Step 1: Add the app.yaml file to the publish folder with the following contents.
 
 cat <<EOT >> app.yaml
 env: flex
-runtime: custom   
+runtime: custom
 EOT
 
 {% endhighlight %}
 {% endtabs %}
 
-![Add required files to publish folder](GCP_Images/Yaml-File-Create-PowerPoint-Presentation.png)
+![Add the app.yaml file to the publish folder](GCP_Images/Yaml-File-Create-PowerPoint-Presentation.png)
 
-Step 2: Add the Docker file to the publish folder with the following contents.
+Step 2: Add the Docker file to the publish folder with the following contents. Replace `Create-PowerPoint-Presentation.dll` with your project's assembly name if it differs.
 
 {% tabs %}
 {% highlight c# tabtitle="CLI" %}
@@ -254,12 +256,14 @@ EOT
 {% endhighlight %}
 {% endtabs %}
 
-![Add required files to publish folder](GCP_Images/Docker-File-Create-PowerPoint-Presentation.png)
+![Add the Dockerfile to the publish folder](GCP_Images/Docker-File-Create-PowerPoint-Presentation.png)
 
-Step 3: You can ensure **Docker** and **app.yaml** files are added in **Workspace**.
-![Add required files to publish folder](GCP_Images/Ensure-Files-Create-PowerPoint-Presentation.png)
+Step 3: Verify that the **Dockerfile** and **app.yaml** files are added in the **Workspace**.
+![Confirm files are added in Workspace](GCP_Images/Ensure-Files-Create-PowerPoint-Presentation.png)
 
 ## Deploy to App Engine
+
+N> The flexible environment (`env: flex`) requires a billing-enabled GCP project. Ensure that the **App Engine Admin API** is enabled and that you have selected a region before running the deploy command.
 
 Step 1: To deploy the application to the App Engine, run the following command in Cloud Shell Terminal. Afterwards, retrieve the **URL** from the Cloud Shell Terminal.
 
@@ -271,14 +275,14 @@ gcloud app deploy --version v1
 {% endhighlight %}
 {% endtabs %}
 
-![Add required files to publish folder](GCP_Images/Deploy-Create-PowerPoint-Presentation.png)
+![Deploy the application](GCP_Images/Deploy-Create-PowerPoint-Presentation.png)
 
 Step 2: Open the **URL** to access the application, which has been successfully deployed.
-![Add required files to publish folder](GCP_Images/Browser-Create-PowerPoint-Presentation.png)
+![Access the deployed application in a browser](GCP_Images/Browser-Create-PowerPoint-Presentation.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/GCP/Google_App_Engine).
 
-By executing the program, you will get the **PowerPoint document** as follows. The output will be saved in **bin** folder.
+By clicking **Create PowerPoint** on the deployed page, you will get the **PowerPoint document** as follows.
 
 ![Create a PowerPoint in Google App Engine](GCP_Images/Output-Create-PowerPoint-Presentation.png)
 

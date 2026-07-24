@@ -8,9 +8,9 @@ documentation: UG
 
 # Create Pie Chart in Excel
 
-The pie charts are used to display the contribution of each value (slice) to a total (pie). So, it is easy to compare proportions. Pie charts always use one data series.
+Pie charts display the contribution of each value (slice) to a total, making it easy to compare proportions. Pie charts always use one data series.
 
-The following code shows how to create pie chart in Excel and to place it in a worksheet with Interop and XlsIO for .NET.
+The following code shows how to create a pie chart in Excel and place it in a worksheet using Interop and XlsIO for .NET.
 
 ## Interop
 
@@ -32,7 +32,7 @@ private void CreatePieChart()
   sheet.Cells[1, 1] = "Products";
   sheet.Cells[1, 2] = "Users";
 
-  //Add data from A2 till B4
+  //Add data from A2 to B4
   sheet.Cells[2, 1] = "XlsIO";
   sheet.Cells[2, 2] = 10000;
   sheet.Cells[3, 1] = "DocIO";
@@ -50,7 +50,7 @@ private void CreatePieChart()
   chart.HasTitle = true;
   chart.ChartTitle.Text = "Users";
 
-  //Gets the cells that define the data to be charted
+  //Get the cells that define the data to be charted
   Range chartRange = sheet.get_Range("A2", "B4");
   chart.SetSourceData(chartRange, Type.Missing);
 
@@ -80,7 +80,7 @@ private void CreatePieChart()
   sheet.Cells[1, 1] = "Products";
   sheet.Cells[1, 2] = "Users";
 
-  //Add data from A2 till B4
+  //Add data from A2 to B4
   sheet.Cells[2, 1] = "XlsIO";
   sheet.Cells[2, 2] = 10000;
   sheet.Cells[3, 1] = "DocIO";
@@ -98,7 +98,7 @@ private void CreatePieChart()
   chart.HasTitle = true;
   chart.ChartTitle.Text = "Users";
 
-  //Gets the cells that define the data to be charted
+  //Get the cells that define the data to be charted
   Range chartRange = sheet.get_Range("A2", "B4");
   chart.SetSourceData(chartRange, Type.Missing);
 
@@ -127,7 +127,7 @@ Private Sub CreatePieChart()
   sheet.Cells(1, 1) = "Products"
   sheet.Cells(1, 2) = "Users"
 
-  'Add data from A2 till B4
+  'Add data from A2 to B4
   sheet.Cells(2, 1) = "XlsIO"
   sheet.Cells(2, 2) = 10000
   sheet.Cells(3, 1) = "DocIO"
@@ -145,7 +145,7 @@ Private Sub CreatePieChart()
   chart.HasTitle = True
   chart.ChartTitle.Text = "Users"
 
-  'Gets the cells that define the data to be charted
+  'Get the cells that define the data to be charted
   Dim chartRange As Range = sheet.Range("A2", "B4")
   chart.SetSourceData(chartRange, Type.Missing)
 
@@ -180,7 +180,7 @@ private void CreatePieChart()
     worksheet.SetValue(1, 1, "Products");
     worksheet.SetValue(1, 2, "Users");
 
-    //Add data from A2 till B4
+    //Add data from A2 to B4
     worksheet.SetValue(2, 1, "XlsIO");
     worksheet.Range["B2"].Value2 = 10000;
     worksheet.SetValue(3, 1, "DocIO");
@@ -228,7 +228,7 @@ private void CreatePieChart()
     worksheet.SetValue(1, 1, "Products");
     worksheet.SetValue(1, 2, "Users");
 
-    //Add data from A2 till B4
+    //Add data from A2 to B4
     worksheet.SetValue(2, 1, "XlsIO");
     worksheet.Range["B2"].Value2 = 10000;
     worksheet.SetValue(3, 1, "DocIO");
@@ -274,7 +274,7 @@ Private Sub CreatePieChart()
     worksheet.SetValue(1, 1, "Products")
     worksheet.SetValue(1, 2, "Users")
 
-    'Add data from A2 till B4
+    'Add data from A2 to B4
     worksheet.SetValue(2, 1, "XlsIO")
     worksheet.Range("B2").Value2 = 10000
     worksheet.SetValue(3, 1, "DocIO")
@@ -297,7 +297,7 @@ Private Sub CreatePieChart()
     'Set chart title
     chart.ChartTitle = "Users"
 
-    'Save as Excel file
+    'Save the workbook
     workbook.SaveAs("XlsIOOutput_PieChart.xlsx")
   End Using
 End Sub

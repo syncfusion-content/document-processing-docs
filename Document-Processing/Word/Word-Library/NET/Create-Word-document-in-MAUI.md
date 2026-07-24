@@ -23,19 +23,29 @@ Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET MAUI Word 
 * For more details about installation, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin).
 
 
-Step 1: Create a new C# .NET MAUI app. Select **.NET MAUI App (Preview)** from the template and click the **Next** button.
+Step 1: Create a new C# .NET MAUI app. Select **.NET MAUI App** from the template and click the **Next** button.
 
 ![Create the MAUI app in Visual Studio](MAUI_Images/Create_Project.png)
 
-Step 2: Enter the project name and click **Create**.
+Step 2: Enter the project name, select the target framework (e.g., .NET 8.0 and later), and click **Create**.
 
 ![Create a project name for your new project](MAUI_Images/Configure.png)
 
-Step 3: Install the Syncfusion.DocIO.NET NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+Step 3: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 
 ![Install the DocIO .NET NuGet package](MAUI_Images/Install_Nuget.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> The `Syncfusion.DocIO.Net.Core` package requires .NET 8 or later. Syncfusion DocIO has supported .NET MAUI since v20.4.0.x.
+
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion<sup>&reg;</sup> licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 4: Add a new button to the **MainPage.xaml** as shown below.
 
@@ -309,7 +319,15 @@ saveService.SaveAndView("Sample.docx", "application/msword", ms);
 
 {% endtabs %}
 
-Step 7: Run the Application.
+Step 7: Add the following images as **EmbeddedResource** to a `Resources/DocIO` folder in your project, then set their **Build Action** to **Embedded Resource** in the Properties window:
+* `AdventureCycle.jpg`
+* `Mountain-200.jpg`
+* `Mountain-300.jpg`
+* `Road-550-W.jpg`
+
+Step 8: Add the platform-specific helper files listed in the [Helper files for .NET MAUI](#helper-files-for-net-maui) section to your project. These files are required for the `SaveService.SaveAndView` method used in the code to compile and run.
+
+Step 9: Run the application.
 
 1. Select the target framework, device or emulator.
 2. Press <kbd>F5</kbd> to run the application.
@@ -394,6 +412,8 @@ Refer the helper files to be added into the mentioned project. These helper file
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/.NET-MAUI).
 
+N> The code sample references image files (AdventureCycle.jpg, Mountain-200.jpg, Mountain-300.jpg, Road-550-W.jpg). Download these assets from the [GitHub sample folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/.NET-MAUI/Create-Word-document/Resources/DocIO) and add them as **Embedded Resources** in a `Resources/DocIO` folder in your project.
+
 By executing the program, you will get the **Word document** as follows.
 
 ![MAUI output Word document](MAUI_Images/GettingStartedOutput.jpg)
@@ -411,7 +431,7 @@ By executing the program, you will get the **Word document** as follows.
   - [Steps for each platform](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) 
 
 Step 1: Create a new C# .NET MAUI app project.
-* Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
+* Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>, type **.NET: New Project**, and press <kbd>Enter</kbd>.
 * Choose the **.NET MAUI App** template.
 
 ![Choose .NET MAUI app from template](MAUI_Images/MAUI-app-template.png)
@@ -426,7 +446,17 @@ Step 2: To **create a Word document in .NET MAUI app**, install [Syncfusion.DocI
 
 ![Add Syncfusion.DocIO.Net.Core NuGet package](MAUI_Images/Command-to-add-NuGet-package-MAUI.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> The `Syncfusion.DocIO.Net.Core` package requires .NET 8 or later. Syncfusion DocIO has supported .NET MAUI since v20.4.0.x.
+
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion<sup>&reg;</sup> licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 3: Add a new button to the **MainPage.xaml** as shown below.
 
@@ -700,7 +730,15 @@ saveService.SaveAndView("Sample.docx", "application/msword", ms);
 
 {% endtabs %}
 
-Step 6: Run the Application.
+Step 6: Add the following images as **EmbeddedResource** to a `Resources/DocIO` folder in your project, then set their **Build Action** to **Embedded Resource** in the file properties:
+* `AdventureCycle.jpg`
+* `Mountain-200.jpg`
+* `Mountain-300.jpg`
+* `Road-550-W.jpg`
+
+Step 7: Add the platform-specific helper files listed in the [Helper files for .NET MAUI](#helper-files-for-net-maui) section to your project. These files are required for the `SaveService.SaveAndView` method used in the code to compile and run.
+
+Step 8: Run the application.
 
 1. Select the target framework, device or emulator.
 2. Press <kbd>F5</kbd> to run the application.
@@ -785,6 +823,8 @@ Refer the helper files to be added into the mentioned project. These helper file
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/.NET-MAUI).
 
+N> The code sample references image files (AdventureCycle.jpg, Mountain-200.jpg, Mountain-300.jpg, Road-550-W.jpg). Download these assets from the [GitHub sample folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/.NET-MAUI/Create-Word-document/Resources/DocIO) and add them as **Embedded Resources** in a `Resources/DocIO` folder in your project.
+
 By executing the program, you will get the **Word document** as follows.
 
 ![MAUI output Word document](MAUI_Images/GettingStartedOutput.jpg)
@@ -799,7 +839,7 @@ By executing the program, you will get the **Word document** as follows.
 * Install .NET 8 SDK or later.
 * For more details about installation, refer [here](https://www.jetbrains.com/help/rider/MAUI.html).
 
-Step 1. Open JetBrains Rider and create a new .NET MAUI App project.
+Step 1: Open JetBrains Rider and create a new .NET MAUI App project.
 * Launch JetBrains Rider.
 * Click new solution on the welcome screen.
 
@@ -825,7 +865,17 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 ![Install the Syncfusion.DocIO.Net.Core NuGet package](MAUI_Images/Install-Syncfusion.DocIO.Net.Core-NuGet.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> The `Syncfusion.DocIO.Net.Core` package requires .NET 8 or later. Syncfusion DocIO has supported .NET MAUI since v20.4.0.x.
+
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion<sup>&reg;</sup> licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 3: Add a new button to the **MainPage.xaml** as shown below.
 
@@ -1099,11 +1149,19 @@ saveService.SaveAndView("Sample.docx", "application/msword", ms);
 
 {% endtabs %}
 
-Step 6: Build the project.
+Step 6: Add the following images as **EmbeddedResource** to a `Resources/DocIO` folder in your project, then set their **Build Action** to **Embedded Resource** in the file properties:
+* `AdventureCycle.jpg`
+* `Mountain-200.jpg`
+* `Mountain-300.jpg`
+* `Road-550-W.jpg`
+
+Step 7: Add the platform-specific helper files listed in the [Helper files for .NET MAUI](#helper-files-for-net-maui) section to your project. These files are required for the `SaveService.SaveAndView` method used in the code to compile and run.
+
+Step 8: Build the project.
 
 Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
-Step 7: Run the project.
+Step 9: Run the project.
 
 Select the target platform in the Run Configuration dropdown, then click Run.
 

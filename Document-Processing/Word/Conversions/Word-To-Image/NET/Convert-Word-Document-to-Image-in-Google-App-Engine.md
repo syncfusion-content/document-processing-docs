@@ -1,6 +1,6 @@
 ---
 title: Convert Word to Image in Google App Engine | Syncfusion
-description: Convert Word to image in Google App Engine using .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
+description: Convert Word to image in Google App Engine using .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert Word to Image in Google App Engine
 
-Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) that allows you to create, read, edit, and **convert Word documents** programmatically, without the need for **Microsoft Word** or interop dependencies. Using this library, you can **convert Word document to image in Google App Engine**.
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) that allows you to create, read, edit, and **convert Word documents** programmatically, without the need for **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to image in Google App Engine**.
 
 ## Set up App Engine
 
@@ -44,14 +44,14 @@ Step 2: Configure your new project according to your requirements.
 Step 3: Click the **Create** button.
 ![Create ASP.NET Core Web application in Visual Studio](GCP_Images/Additional-Information-WordtoPDF.png)
 
-Step 4: Install the following **Nuget packages** in your application from [Nuget.org](https://www.nuget.org/).
+Step 4: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/).
 
 * [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) 
 * [SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)
 * [HarfBuzzSharp.NativeAssets.Linux v8.3.1.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.1.2)
 
- ![Install Syncfusion.DocIORenderer.Net.Core Nuget Package](Azure-Images/App-Service-Linux/Syncfusion_Nuget_Package_WordtoPDF.png)
- ![Install SkiaSharp.NativeAssets.Linux Nuget Package](Azure-Images/App-Service-Linux/SkiaSharp_Nuget-Package_WordtoPDF.png)
+ ![Install Syncfusion.DocIORenderer.Net.Core NuGet package](Azure-Images/App-Service-Linux/Syncfusion_Nuget_Package_WordtoPDF.png)
+ ![Install SkiaSharp.NativeAssets.Linux NuGet package](Azure-Images/App-Service-Linux/SkiaSharp_Nuget-Package_WordtoPDF.png)
  ![Install HarfBuzzSharp.NativeAssets.Linux Nuget Package](Azure-Images/App-Service-Linux/HarfBuzz-Nuget-WordtoImage.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
@@ -135,7 +135,7 @@ ls
 
 ![View the files and directories](GCP_Images/View-the-File-WordtoImage.png)
 
-Step 4: Run the following **command** to navigate which sample you want run.
+Step 4: Run the following **command** to navigate to the sample you want to run.
 
 {% tabs %}
 {% highlight c# tabtitle="CLI" %}
@@ -165,7 +165,7 @@ Step 6: Verify that the application is running properly by accessing the **Web V
 Step 7: Now you can see the sample output on the preview page.
 ![Sample output in browser](GCP_Images/Ensure-sample-WordtoImage.png)
 
-Step 8: Close the preview page and return to the terminal then press **Ctrl+C** for which will typically stop the process.
+Step 8: Close the preview page, return to the terminal, and press **Ctrl+C** to stop the process.
 ![Press Ctrl+C in Cloud Shell Terminal](GCP_Images/Stop-Process-WordtoImage.png)
 
 ## Publish the application

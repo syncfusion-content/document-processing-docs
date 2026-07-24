@@ -9,11 +9,11 @@ documentation: ug
 
 # Find and Replace in WPF Spreadsheet (SfSpreadsheet)
 
-This section explains about Find and Replace operations in SfSpreadsheet. 
+This section explains the Find and Replace operations in SfSpreadsheet.
 
 ## Find 
 
-Searches for specific data such as particular number or text according to specified options and returns an IRange representing the cell or null if no cell is found. The various options in Find operation are
+Searches for specific data such as a number or text according to the specified options and returns an IRange representing the cell or null if no cell is found. The various options in Find operation are
 
 * [FindAll](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SearchManager.html#Syncfusion_UI_Xaml_Spreadsheet_SearchManager_FindAll_Syncfusion_XlsIO_IWorkbook_System_String_Syncfusion_UI_Xaml_Spreadsheet_SearchBy_Syncfusion_XlsIO_ExcelFindType_System_Boolean_System_Boolean_)
 * [FindNext](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SearchManager.html#Syncfusion_UI_Xaml_Spreadsheet_SearchManager_FindNext_Syncfusion_XlsIO_IWorkbook_System_String_Syncfusion_UI_Xaml_Spreadsheet_SearchBy_Syncfusion_XlsIO_ExcelFindType_System_Boolean_System_Boolean_)
@@ -26,10 +26,10 @@ The common parameters to be passed in Find functions are,
 
 * The option to specify whether the search can be done within the Workbook([IWorkbook](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.IWorkbook.html)) or Worksheet([IWorksheet](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.IWorksheet.html)).
 * The text to be searched.
-* The option to specify the direction whether the search can be done either by row wise or column wise using [SearchBy](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SearchBy.html) enum.
-* The type to specify whether the search can be done either in formulas or values using [ExcelFindType](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.ExcelFindType.html) enum.
-* For a case sensitive search, pass the parameter as true otherwise you can pass the parameter as false.
-* For matching the entire cell content with the search text, pass the parameter as true otherwise you can pass the parameter as false.
+* The option to specify the direction whether the search can be done either row-wise or column-wise using the [SearchBy](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SearchBy.html) enum.
+* The type to specify whether the search is done in formulas or values, using the [ExcelFindType](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.ExcelFindType.html) enum.
+* Set to `true` for a case-sensitive search; otherwise, `false`.
+* Set to `true` to match the entire cell content; otherwise, `false`.
 
 ### Find All
 
@@ -45,7 +45,7 @@ var list = spreadsheet.SearchManager.FindAll(spreadsheet.Workbook, "sample", Sea
 
 foreach (var cell in list)
 {  
-  spreadsheet. ActiveGrid.SelectionController.AddSelection(GridRangeInfo.Cell(cell.Row, cell.Column));          
+  spreadsheet.ActiveGrid.SelectionController.AddSelection(GridRangeInfo.Cell(cell.Row, cell.Column));          
 }
 
 //Search the particular worksheet
@@ -76,7 +76,7 @@ spreadsheet.ActiveGrid.CurrentCell.MoveCurrentCell(cell.Row,cell.Column);
 var cell = spreadsheet.SearchManager.FindNext(spreadsheet.Workbook.Worksheets[0], "sum", SearchBy.ByRows, ExcelFindType.Text, false, false);
 
 // To move the current cell to matched cell content range,
-spreadsheet.ActiveGrid.CurrentCell.MoveCurrentCell(cell.Row,cell.Column);          
+spreadsheet.ActiveGrid.CurrentCell.MoveCurrentCell(cell.Row, cell.Column);
 {% endhighlight %}
 {% endtabs %}
 
@@ -159,15 +159,15 @@ foreach (var cell in list)
 
 ## Replace All
 
-Searches and replaces all the texts either in the workbook or worksheet based on the given option.
+Searches and replaces all occurrences in the workbook or worksheet based on the given option.
 
-The parameters to be passed in [ReplaceAll](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SearchManager.html#Syncfusion_UI_Xaml_Spreadsheet_SearchManager_ReplaceAll_Syncfusion_XlsIO_IWorkbook_System_String_System_String_System_Boolean_System_Boolean_) function is,
+The parameters to be passed in the [ReplaceAll](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SearchManager.html#Syncfusion_UI_Xaml_Spreadsheet_SearchManager_ReplaceAll_Syncfusion_XlsIO_IWorkbook_System_String_System_String_System_Boolean_System_Boolean_) function are,
 
-* The option to specify whether the search can be done within the Workbook([IWorkbook](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.IWorkbook.html)) or Worksheet([IWorksheet](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.IWorksheet.html)) in SfSpreadsheet.
+* The scope of the search: an [IWorkbook](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.IWorkbook.html) or [IWorksheet](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.IWorksheet.html).
 * The text to be searched.
 * The text to be replaced.
-* For a case sensitive search, pass the parameter as true otherwise you can pass the parameter as false.
-* For matching the entire cell content with the search text, pass the parameter as true otherwise you can pass the parameter as false.
+* Set to `true` for a case-sensitive search; otherwise, `false`.
+* Set to `true` to match the entire cell content; otherwise, `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -183,7 +183,7 @@ spreadsheet.SearchManager.ReplaceAll(spreadsheet.Workbook.Worksheets[0], "sample
 
 ## Replace
 
-Searches for the text or numbers that you want to change using `FindNext` method and once the immediate matched cell has been found, use [SetCellValue](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SpreadsheetGrid.html#Syncfusion_UI_Xaml_Spreadsheet_SpreadsheetGrid_SetCellValue_Syncfusion_XlsIO_IRange_System_String_) method to replace it with specified text or numbers in SfSpreadsheet.
+Searches for the text or numbers that you want to change using the `FindNext` method, and once a match is found, uses the [SetCellValue](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SpreadsheetGrid.html#Syncfusion_UI_Xaml_Spreadsheet_SpreadsheetGrid_SetCellValue_Syncfusion_XlsIO_IRange_System_String_) method to replace it with the specified text or numbers in SfSpreadsheet.
 
 {% tabs %}
 {% highlight c# %}

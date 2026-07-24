@@ -1,16 +1,16 @@
 ---
-title: Create Word document on Mac OS | Syncfusion
+title: Create Word document on macOS | Syncfusion
 description: Create Word document in ASP.NET Core application on macOS using Syncfusion .NET Core Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Create Word document on Mac OS 
+# Create Word document on macOS
 
-Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in .NET Core application on Mac OS**.
+Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in a .NET Core application on macOS**.
 
-## Steps to create Word document programmatically in .NET Core application on Mac OS
+## Steps to create Word document programmatically in .NET Core application on macOS
 
 {% tabcontents %}
 
@@ -25,16 +25,24 @@ Step 1: Create a new .NET Core console application project.
 
 ![Create .NET Core console application in Visual Studio](Mac-images/CreateProject.png)
 
-Step 2: Select the project version.
+Step 2: Select the project version as .NET 8.0 or later.
 
 ![Select Project version](Mac-images/selectprojectverion.png)
 
-Step 3: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+Step 3: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) and [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) NuGet packages as references to your project from [NuGet.org](https://www.nuget.org/).
 
 ![Install DocIO .NET Core NuGet package](Mac-images/Install_Nuget1.png)
 ![Install DocIO .NET Core NuGet package](Mac-images/Install_Nuget.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion<sup>&reg;</sup> licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 4: Include the following Namespaces in the Program.cs file.
 
@@ -286,9 +294,11 @@ Step 7: Run the project.
 
 Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
 
+N> The code sample references image files (`AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, `Road-550-W.jpg`). Download these assets from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Mac/Create-Word-document/Data) and ensure they are present in the project's output directory (e.g., `bin/Debug/net8.0/`). If the images are missing, a `FileNotFoundException` will be thrown at runtime. You can copy the images to the output directory by setting their **Build Action** to **Content** and **Copy to Output Directory** to **Copy if newer** in the file properties.
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Mac).
 
-By executing the program, you will get the **Word document** as follows. The output will be saved in bin folder.
+By executing the program, you will get the **Word document** as follows. The output (`Result.docx`) will be saved in the project's output directory (e.g., `bin/Debug/net8.0/`).
 
 ![.Net Core output Word document](Mac-images/GettingStartedOutput.jpg)
 
@@ -303,22 +313,35 @@ By executing the program, you will get the **Word document** as follows. The out
 * Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
 
 Step 1: Create a new .NET Core console application project.
-* Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
+* Open the command palette by pressing <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (macOS) and type **.NET: New Project** and press Enter.
 * Choose the **Console App** template.
 
 ![Choose Console app from template](Mac-images/Console-app-template.png)
 
-* Select the project location, type the project name and press enter.
+* Select the project location, type the project name and press Enter.
 * Then choose **Create project**.
 
-Step 2: To **create a Word document in console app**, install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) to the project.
+Step 2: To **create a Word document in a console app**, install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) and [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) to the project.
 * Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 * Ensure you're in the project root directory where your .csproj file is located.
-* Run the command `dotnet add package Syncfusion.DocIO.Net.Core` to install the NuGet package.
+* Run the following commands to install the NuGet packages:
+
+```
+dotnet add package Syncfusion.DocIO.Net.Core
+dotnet add package Syncfusion.Licensing
+```
 
 ![Add Syncfusion.DocIO.Net.Core NuGet package](Mac-images/Command-to-add-NuGet-package-console.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion<sup>&reg;</sup> licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 3: Include the following Namespaces in the Program.cs file.
 
@@ -564,7 +587,7 @@ outputStream.Dispose();
 
 Step 5: Build the project.
 
-Run the following command in terminal to build the project.
+Run the following command in the terminal to build the project.
 
 ```
 dotnet build
@@ -572,15 +595,17 @@ dotnet build
 
 Step 6: Run the project.
 
-Run the following command in terminal to run the project.
+Run the following command in the terminal to run the project.
 
 ```
 dotnet run
 ```
 
+N> The code sample references image files (`AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, `Road-550-W.jpg`). Download these assets from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Mac/Create-Word-document/Data) and ensure they are present in the project's output directory (e.g., `bin/Debug/net8.0/`). If the images are missing, a `FileNotFoundException` will be thrown at runtime. You can set their **Build Action** to **Content** and **Copy to Output Directory** to **Copy if newer** in the file properties, or run the project from the directory containing the images.
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Mac).
 
-By executing the program, you will get the **Word document** as follows. The output will be saved in bin folder.
+By executing the program, you will get the **Word document** as follows. The output (`Result.docx`) will be saved in the project's output directory (e.g., `bin/Debug/net8.0/`).
 
 ![.Net Core output Word document](Mac-images/GettingStartedOutput.jpg)
 
@@ -591,9 +616,9 @@ By executing the program, you will get the **Word document** as follows. The out
 **Prerequisites:**
 
 * JetBrains Rider.
-* Install .NET 8 SDK or later.
+* Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 
-Step 1. Open JetBrains Rider and create a new .NET Core console application project.
+Step 1: Open JetBrains Rider and create a new .NET Core console application project.
 * Launch JetBrains Rider.
 * Click **New solution** on the welcome screen.
 
@@ -602,15 +627,16 @@ Step 1. Open JetBrains Rider and create a new .NET Core console application proj
 * In the New Solution dialog, select **Project Type** as **Console**.
 * Select the target framework (e.g., .NET 8.0, .NET 9.0).
 * Enter a project name and specify the location.
-* Click create.
+* Click **Create**.
 
-![Creating a new .NET MAUI App in JetBrains Rider](Mac-images/Create-Console-NET-Core-sample-in-Mac.png)
+![Creating a new console application in JetBrains Rider](Mac-images/Create-Console-NET-Core-sample-in-Mac.png)
 
-Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
+Step 2: Install the NuGet packages from [NuGet.org](https://www.nuget.org/).
 * Click the NuGet icon in the Rider toolbar and type [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) in the search bar.
 * Ensure that nuget.org is selected as the package source.
 * Select the latest Syncfusion.DocIO.Net.Core NuGet package from the list.
 * Click the + (Add) button to add the package.
+* Repeat the same steps to add the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) NuGet package.
 
 ![Select the Syncfusion.DocIO.Net.Core NuGet package](Mac-images/Select-Syncfusion.DocIO.Net.Core-NuGet.png)
 
@@ -618,7 +644,15 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 ![Install the Syncfusion.DocIO.Net.Core NuGet package](Mac-images/Install-Syncfusion.DocIO.Net.Core-NuGet.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion<sup>&reg;</sup> licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 3: Include the following Namespaces in the Program.cs file.
 
@@ -870,9 +904,11 @@ Step 6: Run the project.
 
 Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.
 
+N> The code sample references image files (`AdventureCycle.jpg`, `Mountain-200.jpg`, `Mountain-300.jpg`, `Road-550-W.jpg`). Download these assets from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Mac/Create-Word-document/Data) and ensure they are present in the project's output directory (e.g., `bin/Debug/net8.0/`). If the images are missing, a `FileNotFoundException` will be thrown at runtime. You can set their **Build Action** to **Content** and **Copy to Output Directory** to **Copy if newer** in the file properties.
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Mac).
 
-By executing the program, you will get the **Word document** as follows. The output will be saved in bin folder.
+By executing the program, you will get the **Word document** as follows. The output (`Result.docx`) will be saved in the project's output directory (e.g., `bin/Debug/net8.0/`).
 
 ![.Net Core output Word document](Mac-images/GettingStartedOutput.jpg)
 

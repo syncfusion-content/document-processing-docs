@@ -35,12 +35,14 @@ Step 3: Install the [Syncfusion.DocIO.AspNet.Mvc5](https://www.nuget.org/package
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: Include the following namespace in that **HomeController.cs** file.
+Step 4: Include the following namespaces in the **HomeController.cs** file.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
 
+using System.Drawing;
+using System.Drawing.Imaging;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 
@@ -164,6 +166,8 @@ Step 3: Include the following namespace in that **HomeController.cs** file.
 
 {% highlight c# tabtitle="C#" %}
 
+using System.Drawing;
+using System.Drawing.Imaging;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 

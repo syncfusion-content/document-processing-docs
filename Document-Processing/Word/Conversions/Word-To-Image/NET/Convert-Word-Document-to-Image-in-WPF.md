@@ -37,6 +37,8 @@ Step 3: Include the following namespaces in the **MainWindow.xaml.cs** file.
 
 {% highlight c# tabtitle="C#" %}
 
+using System.Drawing;
+using System.Drawing.Imaging;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 
@@ -44,7 +46,7 @@ using Syncfusion.DocIO.DLS;
 
 {% endtabs %}
 
-Step 4: Add a new button in **MainWindow.xaml** to **convert Word document to image** file as follows.
+Step 4: Add a new button in **MainWindow.xaml** to **convert Word document to image** as follows.
 
 {% tabs %}
 
@@ -114,7 +116,7 @@ By executing the program, you will get the **image** as follows.
 * JetBrains Rider.
 * Install .NET Framework Developer Pack.
 
-Step 1. Open JetBrains Rider and create a new WPF application project.
+Step 1: Open JetBrains Rider and create a new WPF application project.
 * Launch JetBrains Rider.
 * Click **New Solution** on the welcome screen.
 
@@ -148,6 +150,8 @@ Step 3: Include the following namespaces in the **MainWindow.xaml.cs** file.
 
 {% highlight c# tabtitle="C#" %}
 
+using System.Drawing;
+using System.Drawing.Imaging;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 
@@ -155,7 +159,7 @@ using Syncfusion.DocIO.DLS;
 
 {% endtabs %}
 
-Step 4: Add a new button in **MainWindow.xaml** to **convert Word document to image** file as follows.
+Step 4: Add a new button in **MainWindow.xaml** to **convert Word document to image** as follows.
 
 {% tabs %}
 

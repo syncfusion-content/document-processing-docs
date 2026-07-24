@@ -26,20 +26,23 @@ Step 1: Create a new C# Console Application project.
 Step 2: Name the project.
 ![Name the application](GettingStarted_images/ConsoleName.png)
 
-Step 3: Install the [Syncfusion.SmartDataExtractor.Net.Core](https://www.nuget.org/packages/Syncfusion.SmartDataExtractor.Net.Core) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org).
+Step 3: Install the [Syncfusion.SmartDataExtractor.Net.Core](https://www.nuget.org/packages/Syncfusion.SmartDataExtractor.Net.Core) NuGet package as a reference for your console application from [NuGet.org](https://www.nuget.org).
 ![NET Core NuGet package](GettingStarted_images/ConsoleCoreNuget.png)
+
+Add the input PDF file named **Input.pdf** to the project root directory before running the sample.
 
 Step 4: Include the following namespaces in the *Program.cs* file.
 
 {% highlight c# tabtitle="C#" %}
 
+using System.Text;
 using System.IO;
 using Syncfusion.Pdf.Parsing;
 using Syncfusion.SmartDataExtractor;
 
 {% endhighlight %}
 
-Step 5: Include the following code snippet in *Program.cs* to Extract data from an PDF file.
+Step 5: Include the following code snippet in *Program.cs* to extract data from a PDF file.
 
 {% tabs %}
 
@@ -84,7 +87,7 @@ Step 1: Open the terminal (Ctrl+` ) and run the following command to create a ne
 ```
 dotnet new console -n ExtractDataConsoleApp
 ```
-Step 2: Replace ****ExtractDataConsoleApp** with your desired project name.
+Step 2: Replace **ExtractDataConsoleApp** with your desired project name.
 
 Step 3: Navigate to the project directory using the following command
 
@@ -166,13 +169,16 @@ Step 1: Create a new C# Console Application (.NET Framework) project.
 Step 2: Name the project.
 ![Name the application](GettingStarted_images/ConsoleFramework_ProjectName.png)
 
-Step 3: Install the [Syncfusion.SmartDataExtractor.WinForms](https://www.nuget.org/packages/Syncfusion.SmartDataExtractor.WinForms/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org).
+Step 3: Install the [Syncfusion.SmartDataExtractor.WinForms](https://www.nuget.org/packages/Syncfusion.SmartDataExtractor.WinForms/) NuGet package as a reference for your .NET Framework console application from [NuGet.org](https://www.nuget.org).
 ![NET Framework NuGet package](GettingStarted_images/ConsoleNuget_DataExtractor.png)
+
+Add the input PDF file named **Input.pdf** to the project root directory before running the sample.
 
 Step 4: Include the following namespaces in the *Program.cs*.
 
 {% highlight c# tabtitle="C#" %}
 
+using System.Text;
 using System.IO;
 using Syncfusion.Pdf.Parsing;
 using Syncfusion.SmartDataExtractor;
