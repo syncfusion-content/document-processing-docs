@@ -10,44 +10,44 @@ documentation: UG
 
 ## Show or hide the field list
 
-To show or hide the pivot table field list pane, use the [ShowFieldList](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPivotTableOptions.html#Syncfusion_XlsIO_IPivotTableOptions_ShowFieldList) property.
+To show or hide the pivot table field list pane, use the [ShowFieldList](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotTableOptions.html#Syncfusion_XlsIO_IPivotTableOptions_ShowFieldList) property. The default value is `true`.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//Enable ShowFieldList
+//Hide the pivot table field list pane
 options.ShowFieldList = false;
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Enable ShowFieldList
+//Hide the pivot table field list pane
 options.ShowFieldList = false;
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Enable ShowFieldList
+'Hide the pivot table field list pane
 options.ShowFieldList = False
 {% endhighlight %}
-{% endtabs %} 
+{% endtabs %}
 
 ## Header caption
 
-The [RowHeaderCaption](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPivotTableOptions.html#Syncfusion_XlsIO_IPivotTableOptions_RowHeaderCaption) and [ColumnHeaderCaption](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPivotTableOptions.html#Syncfusion_XlsIO_IPivotTableOptions_ColumnHeaderCaption) properties allows to edit the respective pivot table headers. The header caption can be enabled or disabled using the [DisplayFieldCaptions](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPivotTableOptions.html#Syncfusion_XlsIO_IPivotTableOptions_DisplayFieldCaptions) property.
+The [RowHeaderCaption](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotTableOptions.html#Syncfusion_XlsIO_IPivotTableOptions_RowHeaderCaption) and [ColumnHeaderCaption](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotTableOptions.html#Syncfusion_XlsIO_IPivotTableOptions_ColumnHeaderCaption) properties edit the corresponding pivot table headers. The header captions can be shown or hidden using the [DisplayFieldCaptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotTableOptions.html#Syncfusion_XlsIO_IPivotTableOptions_DisplayFieldCaptions) property. By default, the row header shows "Row Labels" and the column header shows "Column Labels" in compact layout mode.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//Enable header captions
+//Set the row and column header captions
 options.RowHeaderCaption = "Payment Dates";
-options.ColumnHeaderCaption = "Payments"; 
+options.ColumnHeaderCaption = "Payments";
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Enable header captions
+//Set the row and column header captions
 options.RowHeaderCaption = "Payment Dates";
 options.ColumnHeaderCaption = "Payments";
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Enable header captions
+'Set the row and column header captions
 options.RowHeaderCaption = "Payment Dates"
 options.ColumnHeaderCaption = "Payments"
 {% endhighlight %}
@@ -55,27 +55,27 @@ options.ColumnHeaderCaption = "Payments"
 
 ## Grand total
 
-XlsIO provides an equivalent API to perform grand totals with the properties as follows.
+Use the `ColumnGrand` and `RowGrand` properties of the `IPivotTable` to show or hide the column and row grand totals. Both properties default to `true`.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//Enable GrandTotals
+//Hide column grand total; show row grand total
 pivotTable.ColumnGrand = false;
 pivotTable.RowGrand = true;
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Enable GrandTotals
+//Hide column grand total; show row grand total
 pivotTable.ColumnGrand = false;
 pivotTable.RowGrand = true;
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Enable GrandTotals
+'Hide column and row grand totals
 pivotTable.ColumnGrand = False
 pivotTable.RowGrand = False
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
 
 ## Show or hide collapse button
 
@@ -83,20 +83,20 @@ You can also show or hide the **Collapse** button that appears in the fields of 
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//Enable ShowDrillIndicators
+//Show the collapse (drill) buttons
 pivotTable.ShowDrillIndicators = true;
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Enable ShowDrillIndicators
+//Show the collapse (drill) buttons
 pivotTable.ShowDrillIndicators = true;
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Enable ShowDrillIndicators
+'Show the collapse (drill) buttons
 pivotTable.ShowDrillIndicators = True
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
 
 ## Display field caption and filter option
 
@@ -104,20 +104,20 @@ The filter buttons and field names in the pivot table can be shown or hidden, as
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//Enable DisplayFieldCaption
+//Show the field captions and filter buttons
 pivotTable.DisplayFieldCaptions = true;
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Enable DisplayFieldCaption
+//Show the field captions and filter buttons
 pivotTable.DisplayFieldCaptions = true;
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Enable DisplayFieldCaption
+'Show the field captions and filter buttons
 pivotTable.DisplayFieldCaptions = True
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
 
 ## Repeating row label on each page
 
@@ -125,20 +125,20 @@ You can set the row label on each page while printing, and the header can be vie
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//Enable RepeatItemsOnEachPrintedPage
+//Repeat row labels on every printed page
 pivotTable.RepeatItemsOnEachPrintedPage = true;
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Enable RepeatItemsOnEachPrintedPage
+//Repeat row labels on every printed page
 pivotTable.RepeatItemsOnEachPrintedPage = true;
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Enable RepeatItemsOnEachPrintedPage
+'Repeat row labels on every printed page
 pivotTable.RepeatItemsOnEachPrintedPage = True
 {% endhighlight %}
-{% endtabs %} 
+{% endtabs %}
 
 ## Repeat Labels
 
@@ -159,7 +159,7 @@ pivotTable.Fields[0].RepeatLabels = true;
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-‘Set repeat labels option to a specific pivot field
+'Set repeat labels option to a specific pivot field
 pivotTable.Fields(0).RepeatLabels = True
 {% endhighlight %}
 {% endtabs %}  
@@ -179,14 +179,14 @@ pivotTable.Options.RepeatAllLabels(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-‘Set repeat labels option to all the pivot fields
+'Set repeat labels option to all the pivot fields
 pivotTable.Options.RepeatAllLabels(True)
 {% endhighlight %}
 {% endtabs %}
 
 ## Show Values Row
 
-To show values in rows in a pivot table, use the **ShowValuesRow** property. The following code illustrates how to show values row option in the pivot table.
+To show values in rows in a pivot table, set the `ShowValuesRow` property of `IPivotTableOptions` to `true`. The following code illustrates how to enable the values row in the pivot table.
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 //Set the show values row option in pivot table.
@@ -200,7 +200,7 @@ pivotTable.Options.ShowValuesRow = true;
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Set the show values row option in pivot table.
-pivotTable.Options.ShowValuesRow = true
+pivotTable.Options.ShowValuesRow = True
 {% endhighlight %}
 {% endtabs %}
 

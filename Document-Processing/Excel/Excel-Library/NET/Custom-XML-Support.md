@@ -7,18 +7,18 @@ documentation: UG
 ---
 # Custom XML Support in Syncfusion<sup>&reg;</sup> Excel Library
 
-When you embed XML data in a document, the data is named as custom XML part, which is used to store arbitrary XML data in the workbook. 
+A custom XML part is arbitrary XML data embedded in the workbook.
 
-Essential<sup>&reg;</sup> XlsIO supports the following functionalities with Custom XML:
+Essential<sup>&reg;</sup> XlsIO supports the following Custom XML features:
 
 * Adding CustomXmlPart to workbook
-* Reading CustomXmlPart from workbook 
+* Reading CustomXmlPart from workbook
 
-**Add** **Custom** **XML** 
+**Add Custom XML**
 
-Adding Custom XML part to workbook is achieved by using the [Add](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ICustomXmlPartCollection.html#Syncfusion_XlsIO_ICustomXmlPartCollection_Add_Syncfusion_XlsIO_ICustomXmlPart_) method of [ICustomXmlPartCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ICustomXmlPartCollection.html) interface. 
+A Custom XML part is added by using the [Add](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ICustomXmlPartCollection.html#Syncfusion_XlsIO_ICustomXmlPartCollection_Add_Syncfusion_XlsIO_ICustomXmlPart_) method of the [ICustomXmlPartCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ICustomXmlPartCollection.html) interface.
 
-The following code snippet illustrates on how to add a Custom XML part.
+The following code snippet illustrates how to add a Custom XML part.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Custom%20XML%20Support/Add%20Custom%20XML/.NET/Add%20Custom%20XML/Add%20Custom%20XML/Program.cs,180" %}
@@ -40,8 +40,6 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	//Saving the workbook
 	workbook.SaveAs(Path.GetFullPath("Output/CreateCustomXML.xlsx"));
 	#endregion
-
-	//Open default JSON
 }
 {% endhighlight %}
 
@@ -57,7 +55,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   ICustomXmlPart customXmlPart = workbook.CustomXmlparts.Add("SD10003");
 
   //Add XmlData to CustomXmlPart
-  byte[] xmlData = File.ReadAllBytes("Test.xml");
+  byte[] xmlData = File.ReadAllBytes(Path.GetFullPath("Test.xml"));
   customXmlPart.Data = xmlData;
 
   workbook.SaveAs("CustomXml.xlsx");
@@ -75,7 +73,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim customXmlPart As ICustomXmlPart = workbook.CustomXmlparts.Add("SD10003")
 
   'Add XmlData to CustomXmlPart
-  Dim xmlData() As Byte = File.ReadAllBytes("Test.xml")
+  Dim xmlData() As Byte = File.ReadAllBytes(Path.GetFullPath("Test.xml"))
   customXmlPart.Data = xmlData
 
   workbook.SaveAs("CustomXml.xlsx")
@@ -83,11 +81,11 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to add custom XML in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Custom%20XML%20Support/Add%20Custom%20XML/.NET/Add%20Custom%20XML). 
+A complete working example to add custom XML in C# is available on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Custom%20XML%20Support/Add%20Custom%20XML/.NET/Add%20Custom%20XML).
 
-**Read** **Custom** **XML** 
+**Read Custom XML**
 
-Reading Custom XML part from workbook is achieved by using the [GetById](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ICustomXmlPartCollection.html#Syncfusion_XlsIO_ICustomXmlPartCollection_GetById_System_String_) method of [ICustomXmlPartCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ICustomXmlPartCollection.html) interface. The following code snippet illustrates on how to read Custom XML parts from workbook.
+A Custom XML part is read by using the [GetById](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ICustomXmlPartCollection.html#Syncfusion_XlsIO_ICustomXmlPartCollection_GetById_System_String_) method of the [ICustomXmlPartCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ICustomXmlPartCollection.html) interface. The following code snippet illustrates how to read Custom XML parts from the workbook.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Custom%20XML%20Support/Read%20Custom%20XML/.NET/Read%20Custom%20XML/Read%20Custom%20XML/Program.cs,180" %}
@@ -149,10 +147,12 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   workbook.SaveAs("CustomXml.xlsx")
 End Using
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
 
-A complete working example to read custom XML in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Custom%20XML%20Support/Read%20Custom%20XML/.NET/Read%20Custom%20XML). 
+A complete working example to read custom XML in C# is available on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Custom%20XML%20Support/Read%20Custom%20XML/.NET/Read%20Custom%20XML).
 
-N> Custom XML cannot be modified when the file is saved in Excel 97-2003 (\*.xls) format.
-N> Custom XML can be created and modified when the file is saved in Excel 2007 and later versions (\*.xlsx).
+**Supported File Formats**
+
+N> Custom XML is not supported in the Excel 97-2003 (\*.xls) format.
+N> Custom XML is supported in Excel 2007 and later versions (\*.xlsx, \*.xlsm, \*.xltx).
 

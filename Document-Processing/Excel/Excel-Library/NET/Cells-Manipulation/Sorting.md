@@ -1,12 +1,12 @@
 ---
-title: Sorting | Excel library | Syncfusion
-description: In this section, you can learn about how to sort data in an Excel document using .NET Excel Library.
+title: Sorting | Excel Library | Syncfusion
+description: In this section, you can learn how to sort data in an Excel worksheet by cell values, font color, and cell color using the .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Sorting Data in Excel Document
+# Sorting Data in Excel Worksheet
 
 A range of cells in Excel worksheet can be sorted based on data in one or more columns. Following types of sorting is supported in XlsIO:
 
@@ -14,9 +14,11 @@ A range of cells in Excel worksheet can be sorted based on data in one or more c
 * Font Color
 * Cell Color
 
-N> Currently XlsIO donâ€™t support sorting based on cell icon, parsing and serialization of its sorting details.
+N> Currently XlsIO don’t support sorting based on cell icon, parsing and serialization of its sorting details.
 
 ## Cell Values
+
+The [OrderBy](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.OrderBy.html) enum supports `Ascending` and `Descending` for value-based sorting.
 
 The following code example illustrates how to sort a range of cells by values.
 
@@ -45,7 +47,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	//Sort based on the sort Field attribute
 	sorter.Sort();
 
-	//Creates the data sorter
+	//A new data sorter is required because the previous sort has been applied
 	sorter = workbook.CreateDataSorter();
 
 	//Range to sort
@@ -147,7 +149,9 @@ A complete working example to sort Excel data based on cell values in C# is pres
 
 ## Font Color
 
-The following code example illustrates how to move a range of cells with the specified font color to either top or bottom of the sorting range.
+The [OrderBy](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.OrderBy.html) enum supports `OnTop` and `OnBottom` for color-based sorting. When multiple sort fields are added on the **same column index** with different colors, the first color takes priority over the second, and so on. Set the color to sort on through the [ISortField.Color](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ISortField.html#Syncfusion_XlsIO_ISortField_Color) property.
+
+The following code example illustrates how to sort a range of cells so that the cells with the specified font color appear at the top or bottom of the sorting range.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Sort%20on%20Font%20Color/.NET/Sort%20on%20Font%20Color/Sort%20on%20Font%20Color/Program.cs,180" %}
@@ -174,7 +178,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	//Sort based on the sort Field attribute
 	sorter.Sort();
 
-	//Creates the data sorter
+	//A new data sorter is required because the previous sort has been applied
 	sorter = workbook.CreateDataSorter();
 
 	//Range to sort
@@ -211,6 +215,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   sorter.SortRange = sheet.Range["A2:D16"];
 
   //Creates the sort field with the column index, sort based on and order by attribute
+  //First color takes priority over the second for the same column
   ISortField sortField1 = sorter.SortFields.Add(2, SortOn.FontColor, OrderBy.OnTop);
 
   //Specifies the color to sort the data
@@ -236,19 +241,20 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim workbook As IWorkbook = application.Workbooks.Open("Sample.xlsx")
   Dim sheet As IWorksheet = workbook.Worksheets(0)
 
-  'Creates the Data sorter
+  'Creates the data sorter
   Dim sorter As IDataSort = workbook.CreateDataSorter()
 
   'Specifies the sort range
   sorter.SortRange = sheet.Range("A2:D16")
 
-  'Adds the sort field with column index, sort based on and order by attribute
+  'Adds the sort field with column index, based on and order by attribute
+  'First color takes priority over the second for the same column
   Dim field1 As ISortField = sorter.SortFields.Add(2, SortOn.FontColor, OrderBy.OnTop)
 
   'Sorts the data based on this color
   field1.Color = Color.Red
 
-  'Adds another sort field with column index, sort based on and order by attribute
+  'Adds another sort field with column index, based on and order by attribute
   Dim field2 As ISortField = sorter.SortFields.Add(2, SortOn.FontColor, OrderBy.OnTop)
 
   'Sorts the data based on this color
@@ -267,7 +273,7 @@ A complete working example to sort Excel data based on font color in C# is prese
 
 ## Cell Color
 
-The following code example illustrates how to move a range of cells with the specified cell background color to either top or bottom of the sorting range.
+The following code example illustrates how to sort a range of cells so that the cells with the specified cell background color appear at the top or bottom of the sorting range.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Sort%20On%20Cell%20Color/.NET/Sort%20On%20Cell%20Color/Sort%20On%20Cell%20Color/Program.cs,180" %}
@@ -294,7 +300,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	//Sort based on the sort Field attribute
 	sorter.Sort();
 
-	//Creates the data sorter
+	//A new data sorter is required because the previous sort has been applied
 	sorter = workbook.CreateDataSorter();
 
 	//Range to sort
@@ -331,6 +337,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   sorter.SortRange = sheet.Range["A2:D16"];
 
   //Creates the sort field with the column index, sort based on and order by attribute
+  //First color takes priority over the second for the same column
   ISortField sortField1 = sorter.SortFields.Add(2, SortOn.CellColor, OrderBy.OnTop);
 
   //Specifies the color to sort the data
@@ -360,13 +367,14 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   'Specifies the sort range.
   sorter.SortRange = sheet.Range("A2:D16")
 
-  'Adds the sort field with column index, sort based on and order by attribute
+  'Adds the sort field with column index, based on and order by attribute
+  'First color takes priority over the second for the same column
   Dim field1 As ISortField = sorter.SortFields.Add(2, SortOn.CellColor, OrderBy.OnTop)
 
   'Sorts the data based on this color
   field1.Color = Color.Red
 
-  'Adds the sort field with column index, sort based on and order by attribute
+  'Adds the sort field with column index, based on and order by attribute
   Dim field2 As ISortField = sorter.SortFields.Add(2, SortOn.CellColor, OrderBy.OnTop)
 
   'Sorts the data based on this color
