@@ -1,5 +1,6 @@
 ---
 title: Header and footer support in JavaScript PDF Library | Syncfusion
+canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: This section explains how to create and apply header and footer templates with automatic fields in the JavaScript PDF Library.
 platform: document-processing
 control: PDF
@@ -8,25 +9,27 @@ documentation: UG
 
 # Header and footer support in JavaScript PDF Library
 
-Header and footer support enables adding reusable content across all pages in a PDF document. It ensures layout-safe rendering by reserving space and preventing overlap with page content. 
+Header and footer support lets you add reusable content to every page in a PDF document. It reserves layout space to prevent overlap with page content.
 
-The feature supports static elements such as text, images, shapes, and dynamic automatic fields such as page numbers and date/time. 
+The feature supports static elements such as text, images, shapes (including lines and rectangles), and dynamic automatic fields such as page numbers and date/time.
 
 ## Adding a header and footer template to the PDF document
 
 Header and footer templates in a PDF document are created using the `PdfPageTemplateElement` class and assigned through the `template` property of the [PdfDocument](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument) class. These templates help in maintaining a consistent layout across all pages by allowing the addition of elements such as images, text, shapes, and automatic fields. Users can also control the appearance of these templates by applying them to all pages or specifically to odd or even pages. 
 
-This sample demonstrates how to create header and footer templates with static elements and a date-time automatic field.
+This sample demonstrates how to create header and footer templates with static elements and a page-number composite field.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { PdfDocument, PdfPage, PdfPageTemplateElement, PdfStandardFont, PdfFontFamily, PdfBrush, PdfPen, PdfBitmap, PdfPageNumberField, PdfPageCountField, PdfCompositeField, PdfVerticalAlignment, PdfStringFormat, PdfTextAlignment } from '@syncfusion/ej2-pdf';  
+import { PdfDocument, PdfPage, PdfPageTemplateElement, PdfStandardFont, PdfFontFamily, PdfBrush, PdfPen, PdfBitmap, PdfPageNumberField, PdfPageCountField, PdfCompositeField, PdfVerticalAlignment, PdfStringFormat, PdfTextAlignment, PdfFontStyle } from '@syncfusion/ej2-pdf';  
  
 // Create a new PDF document 
 const document: PdfDocument = new PdfDocument(); 
+// Add a page so the template has a page to render on 
+const page: PdfPage = document.addPage(); 
 // Create header template with width and height 
-const header: PdfPageTemplateElement = new PdfPageTemplateElement({  width: 515, height: 50 }); 
+const header: PdfPageTemplateElement = new PdfPageTemplateElement({  width: 515, height: 50 }); 
 // Create a bold title font for header 
 const titleFont: PdfStandardFont = new PdfStandardFont(PdfFontFamily.helvetica, 16, PdfFontStyle.bold); 
 // Create center-aligned string format 
@@ -46,13 +49,13 @@ document.template.top = { template: header };
 // Create footer font 
 const footerFont: PdfStandardFont = new PdfStandardFont(PdfFontFamily.helvetica, 10, PdfFontStyle.bold); 
 // Create footer template 
-const footer: PdfPageTemplateElement = new PdfPageTemplateElement({  width: 515, height: 50 }); 
+const footer: PdfPageTemplateElement = new PdfPageTemplateElement({  width: 515, height: 50 }); 
 // Draw copyright text in footer center 
 footer.graphics.drawString('@Copyright 2015', footerFont, { x: 0, y: 18, width: 515, height: 20 }, new PdfBrush({ r: 128, g: 128, b: 128 }), center); 
 // Create page number field 
 const pageNumber: PdfPageNumberField = new PdfPageNumberField({ font: footerFont }); 
 // Create page count field 
-const pageCount: PdfPageCountField  = new PdfPageCountField({ font: footerFont }); 
+const pageCount: PdfPageCountField  = new PdfPageCountField({ font: footerFont }); 
 // Create composite field 
 const composite: PdfCompositeField = new PdfCompositeField({font: footerFont, brush: new PdfBrush({ r: 128, g: 128, b: 128 }), 
 pattern: 'Page {0} of {1}', 
@@ -71,16 +74,18 @@ document.destroy();
 
 // Create a new PDF document 
 var document = new ej.pdf.PdfDocument(); 
+// Add a page so the template has a page to render on 
+var page = document.addPage(); 
 // Create header template with width and height 
-var header = new ej.pdf.PdfPageTemplateElement({  width: 515, height: 50 }); 
+var header = new ej.pdf.PdfPageTemplateElement({  width: 515, height: 50 }); 
 // Create a bold title font for header 
-Var titleFont = new ej.pdf.PdfStandardFont(ej.pdf.PdfFontFamily.helvetica, 16, ej.pdf.PdfFontStyle.bold); 
+var titleFont = new ej.pdf.PdfStandardFont(ej.pdf.PdfFontFamily.helvetica, 16, ej.pdf.PdfFontStyle.bold); 
 // Create center-aligned string format 
 var center = new ej.pdf.PdfStringFormat(); 
 center.alignment = ej.pdf.PdfTextAlignment.center; 
 center.lineAlignment = ej.pdf.PdfVerticalAlignment.middle; 
 // Draw logo image on the right side of header 
-header.graphics.drawImage(new ej.pdf.PdfBitmap('logo.png’), { x: 515 - 130, y: 5, width: 110, height: 35 }); 
+header.graphics.drawImage(new ej.pdf.PdfBitmap('logo.png'), { x: 515 - 130, y: 5, width: 110, height: 35 }); 
 // Draw title text in the center of header 
 header.graphics.drawString('Syncfusion Essential PDF', titleFont, { x: 0, y: 0, width: 515, height: 50 }, new ej.pdf.PdfBrush({ r: 44, g: 71, b: 120 }), center); 
 // Draw top border line of header 
@@ -92,7 +97,7 @@ document.template.top = { template: header };
 // Create footer font 
 var footerFont = new ej.pdf.PdfStandardFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.bold); 
 // Create footer template 
-var footer = new ej.pdf.PdfPageTemplateElement({  width: 515, height: 50 }); 
+var footer = new ej.pdf.PdfPageTemplateElement({  width: 515, height: 50 }); 
 // Draw copyright text in footer center 
 footer.graphics.drawString('@Copyright 2015', footerFont, { x: 0, y: 18, width: 515, height: 20 }, new ej.pdf.PdfBrush({ r: 128, g: 128, b: 128 }), center); 
 // Create page number field 
@@ -115,16 +120,85 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## Applying header and footer template to the PDF section
+## Applying different templates to odd and even pages
 
-Header and footer templates can also be assigned through the `template` property of the [PdfSection](https://ej2.syncfusion.com/documentation/api/pdf/pdfsection) class, allowing them to be applied only to the pages within that specific section rather than across the entire document.
-
-This sample demonstrates how to apply templates across multiple pages.
+The `template` property of the `PdfDocument` class exposes `oddTop`, `oddBottom`, `evenTop`, and `evenBottom` so you can apply different headers and footers to odd and even pages.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { PdfDocument, PdfPage, PdfPageTemplateElement, PdfStandardFont, PdfFontFamily, PdfBrush, PdfPen, PdfSection } from '@syncfusion/ej2-pdf'; 
+import { PdfDocument, PdfPage, PdfPageTemplateElement, PdfStandardFont, PdfFontFamily, PdfBrush, PdfStringFormat, PdfTextAlignment, PdfVerticalAlignment } from '@syncfusion/ej2-pdf'; 
+ 
+// Create a new PDF document 
+const document: PdfDocument = new PdfDocument(); 
+// Add pages to the document 
+const page1: PdfPage = document.addPage(); 
+const page2: PdfPage = document.addPage(); 
+// Create standard font for header text 
+const font: PdfStandardFont = new PdfStandardFont(PdfFontFamily.helvetica, 12); 
+// Create center-aligned string format 
+const center: PdfStringFormat = new PdfStringFormat(); 
+center.alignment = PdfTextAlignment.center; 
+center.lineAlignment = PdfVerticalAlignment.middle; 
+// Create odd page header 
+const oddHeader: PdfPageTemplateElement = new PdfPageTemplateElement({ width: 515, height: 50 }); 
+oddHeader.graphics.drawString('Odd Page Header', font, { x: 0, y: 0, width: 515, height: 50 }, new PdfBrush({ r: 0, g: 0, b: 0 }), center); 
+// Create even page header 
+const evenHeader: PdfPageTemplateElement = new PdfPageTemplateElement({ width: 515, height: 50 }); 
+evenHeader.graphics.drawString('Even Page Header', font, { x: 0, y: 0, width: 515, height: 50 }, new PdfBrush({ r: 0, g: 0, b: 0 }), center); 
+// Assign odd and even templates 
+document.template.oddTop = { template: oddHeader }; 
+document.template.evenTop = { template: evenHeader }; 
+// Save the document 
+document.save('odd-even.pdf'); 
+// Destroy the document 
+document.destroy(); 
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Create a new PDF document 
+var document = new ej.pdf.PdfDocument(); 
+// Add pages to the document 
+var page1 = document.addPage(); 
+var page2 = document.addPage(); 
+// Create standard font for header text 
+var font = new ej.pdf.PdfStandardFont(ej.pdf.PdfFontFamily.helvetica, 12); 
+// Create center-aligned string format 
+var center = new ej.pdf.PdfStringFormat(); 
+center.alignment = ej.pdf.PdfTextAlignment.center; 
+center.lineAlignment = ej.pdf.PdfVerticalAlignment.middle; 
+// Create odd page header 
+var oddHeader = new ej.pdf.PdfPageTemplateElement({ width: 515, height: 50 }); 
+oddHeader.graphics.drawString('Odd Page Header', font, { x: 0, y: 0, width: 515, height: 50 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 0 }), center); 
+// Create even page header 
+var evenHeader = new ej.pdf.PdfPageTemplateElement({ width: 515, height: 50 }); 
+evenHeader.graphics.drawString('Even Page Header', font, { x: 0, y: 0, width: 515, height: 50 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 0 }), center); 
+// Assign odd and even templates 
+document.template.oddTop = { template: oddHeader }; 
+document.template.evenTop = { template: evenHeader }; 
+// Save the document 
+document.save('odd-even.pdf'); 
+// Destroy the document 
+document.destroy(); 
+
+{% endhighlight %}
+{% endtabs %}
+
+## Applying a header and footer template to a PDF section
+
+Header and footer templates can also be assigned through the `template` property of the [PdfSection](https://ej2.syncfusion.com/documentation/api/pdf/pdfsection) class. The section's `template` is applied only to the pages within that specific section rather than across the entire document.
+
+Use document-level templates when every page in the document should share the same header or footer. Use section-level templates when different parts of the document need their own header or footer (for example, a cover page section versus a content section).
+
+The `alignment` option on a section template uses the `PdfTemplateHorizontalAlignment` enum, which accepts `left`, `center`, and `right` to position the template horizontally within the page.
+
+This sample demonstrates how to apply templates to a section.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+
+import { PdfDocument, PdfPage, PdfPageTemplateElement, PdfStandardFont, PdfFontFamily, PdfBrush, PdfPen, PdfSection, PdfTemplateHorizontalAlignment } from '@syncfusion/ej2-pdf'; 
  
 // Create a new PDF document 
 const document: PdfDocument = new PdfDocument(); 
@@ -192,18 +266,18 @@ Automatic fields are dynamic elements evaluated during rendering. They provide p
 
 | Field Type              | Description                                  |
 |-------------------------|----------------------------------------------|
-| Page Number             | Displays current page number                 |
-| Page Count              | Displays total number of pages               |
-| Section Page Number     | Displays page number within a section        |
-| Section Page Count      | Displays total pages in a section            |
-| Date and Time           | Displays current date and time               |
-| Document Author         | Displays document metadata                   |
-| Creation Date           | Displays document creation date              |
-| Destination Page Number | Displays destination page within document    |
-| Section Number          | Displays section number                      |
+| Page Number             | Displays the current page number             |
+| Page Count              | Displays the total number of pages           |
+| Section Page Number     | Displays the page number within a section    |
+| Section Page Count      | Displays the total pages in a section        |
+| Section Number          | Displays the section number                  |
+| Date and Time           | Displays the current system date and time    |
+| Creation Date           | Displays the document creation date          |
+| Document Author         | Displays the document author metadata        |
+| Destination Page Number | Displays the page number of a target page    |
 | Composite Field         | Combines multiple fields into one formatted output using a pattern like "Page {0} of {1}" (where {0} = first field value and {1} = second field value, e.g., "Page 1 of 10")|
 
-## Drawing automatic fields on PDF page
+## Drawing automatic fields on a PDF page
 
 Automatic fields can be drawn directly on a PDF page or within templates. They are resolved dynamically and provide accurate values for each page.
 
@@ -214,24 +288,24 @@ Displays the current page number dynamically on each page of the PDF document.
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { PdfDocument, PdfPageNumberField, PdfStandardFont, PdfFontFamily, PdfBrush, PdfStringFormat, PdfTextAlignment, PdfNumberStyle } from '@syncfusion/ej2-pdf'; 
+import { PdfDocument, PdfPage, PdfPageNumberField, PdfStandardFont, PdfFontFamily, PdfBrush, PdfStringFormat, PdfTextAlignment, PdfNumberStyle } from '@syncfusion/ej2-pdf'; 
  
 // Create a new PDF document 
-let document: PdfDocument = new PdfDocument(); 
+const document: PdfDocument = new PdfDocument(); 
 // Add a new page to the document 
-let page: PdfPage = document.addPage(); 
+const page: PdfPage = document.addPage(); 
 // Create a standard font for rendering text 
-let font:  PdfStandardFont  = new PdfStandardFont(PdfFontFamily.helvetica, 12); 
+const font: PdfStandardFont  = new PdfStandardFont(PdfFontFamily.helvetica, 12); 
 // Create a brush to define text color (black) 
-let brush: PdfBrush = new PdfBrush({ r: 0, g: 0, b: 0 }); 
+const brush: PdfBrush = new PdfBrush({ r: 0, g: 0, b: 0 }); 
 // Create a string format to align text to the right 
-let format: PdfStringFormat = new PdfStringFormat(PdfTextAlignment.right); 
+const format: PdfStringFormat = new PdfStringFormat(PdfTextAlignment.right); 
 // Create a page number field with font, color, alignment and numeric style 
-let pageNumber: PdfPageNumberField = new PdfPageNumberField({ 
-  font: font, 
-  brush: brush, 
-  stringFormat: format, 
-  numberStyle: PdfNumberStyle.numeric 
+const pageNumber: PdfPageNumberField = new PdfPageNumberField({ 
+  font: font, 
+  brush: brush, 
+  stringFormat: format, 
+  numberStyle: PdfNumberStyle.numeric 
 }); 
 // Draw the page number field on the page at the specified position 
 pageNumber.draw(page.graphics, { x: 250, y: 750 }); 
@@ -244,9 +318,9 @@ document.destroy();
 {% highlight javascript tabtitle="JavaScript" %}
 
 // Create a new PDF document 
-let document = new ej.pdf.PdfDocument(); 
+var document = new ej.pdf.PdfDocument(); 
 // Add a new page to the document 
-let page = document.addPage(); 
+var page = document.addPage(); 
 // Create a standard font for rendering text 
 var font = new ej.pdf.PdfStandardFont(ej.pdf.PdfFontFamily.helvetica, 12); 
 // Create a brush to define text color (black) 
@@ -255,10 +329,10 @@ var brush = new ej.pdf.PdfBrush({ r: 0, g: 0, b: 0 });
 var format = new ej.pdf.PdfStringFormat(ej.pdf.PdfTextAlignment.right); 
 // Create a page number field with font, color, alignment and numeric style 
 var pageNumber = new ej.pdf.PdfPageNumberField({ 
-  font: font, 
-  brush: brush, 
-  stringFormat: format, 
-  numberStyle: ej.pdf.PdfNumberStyle.numeric 
+  font: font, 
+  brush: brush, 
+  stringFormat: format, 
+  numberStyle: ej.pdf.PdfNumberStyle.numeric 
 }); 
 // Draw the page number field on the page at the specified position 
 pageNumber.draw(page.graphics, { x: 250, y: 750 }); 
@@ -280,21 +354,21 @@ Displays the total number of pages dynamically in a PDF document.
 import { PdfDocument, PdfPage, PdfPageCountField, PdfStandardFont, PdfFontFamily, PdfBrush, PdfStringFormat, PdfTextAlignment, PdfNumberStyle } from '@syncfusion/ej2-pdf'; 
  
 // Create a new PDF document 
-let document: PdfDocument = new PdfDocument(); 
+const document: PdfDocument = new PdfDocument(); 
 // Add a new page to the document 
-let page: PdfPage = document.addPage(); 
+const page: PdfPage = document.addPage(); 
 // Create a standard font for rendering text 
-let font: PdfStandardFont = new PdfStandardFont(PdfFontFamily.helvetica, 12); 
+const font: PdfStandardFont = new PdfStandardFont(PdfFontFamily.helvetica, 12); 
 // Create a brush to define text color (black) 
-let brush: PdfBrush = new PdfBrush({ r: 0, g: 0, b: 0 }); 
+const brush: PdfBrush = new PdfBrush({ r: 0, g: 0, b: 0 }); 
 // Create a string format to align text to the right 
-let format: PdfStringFormat = new PdfStringFormat(PdfTextAlignment.right); 
+const format: PdfStringFormat = new PdfStringFormat(PdfTextAlignment.right); 
 // Create a page count field with font, color, alignment and numeric style 
-let pageCount: PdfPageCountField = new PdfPageCountField({ 
-  font: font, 
-  brush: brush, 
-  stringFormat: format, 
-  numberStyle: PdfNumberStyle.numeric 
+const pageCount: PdfPageCountField = new PdfPageCountField({ 
+  font: font, 
+  brush: brush, 
+  stringFormat: format, 
+  numberStyle: PdfNumberStyle.numeric 
 }); 
 // Draw the page count field on the page at the specified position 
 pageCount.draw(page.graphics, { x: 250, y: 730 }); 
@@ -318,82 +392,15 @@ var brush = new ej.pdf.PdfBrush({ r: 0, g: 0, b: 0 });
 var format = new ej.pdf.PdfStringFormat(ej.pdf.PdfTextAlignment.right); 
 // Create a page count field with font, color, alignment and numeric style 
 var pageCount = new ej.pdf.PdfPageCountField({ 
-  font: font, 
-  brush: brush, 
-  stringFormat: format, 
-  numberStyle: ej.pdf.PdfNumberStyle.numeric 
+  font: font, 
+  brush: brush, 
+  stringFormat: format, 
+  numberStyle: ej.pdf.PdfNumberStyle.numeric 
 }); 
 // Draw the page count field on the page at the specified position 
 pageCount.draw(page.graphics, { x: 250, y: 730 }); 
 // Save the document 
 document.save('page-count.pdf'); 
-// Destroy the document 
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
-
-### Section Number Field 
-
-Displays the section index dynamically for the current page within a PDF document.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-
-import { PdfDocument, PdfPage, PdfSection, PdfSectionNumberField, PdfStandardFont, PdfFontFamily, PdfBrush, PdfStringFormat, PdfTextAlignment, PdfNumberStyle } from '@syncfusion/ej2-pdf'; 
- 
-// Create a new PDF document 
-let document: PdfDocument = new PdfDocument(); 
-// Add a new section to the document 
-let section: PdfSection = document.addSection(); 
-// Add a new page to the section 
-let page: PdfPage = section.addPage(); 
-// Create a standard font for rendering text 
-let font: PdfStandardFont = new PdfStandardFont(PdfFontFamily.helvetica, 12); 
-// Create a brush to define text color 
-let brush: PdfBrush = new PdfBrush({ r: 0, g: 0, b: 0 }); 
-// Create a string format to align text to the right 
-let format: PdfStringFormat = new PdfStringFormat(PdfTextAlignment.right); 
-// Create a section number field with font, color, alignment and numeric style 
-let sectionNumber: PdfSectionNumberField = new PdfSectionNumberField({ 
-  font: font, 
-  brush: brush, 
-  stringFormat: format, 
-  numberStyle: PdfNumberStyle.numeric 
-}); 
-// Draw the section number field on the page at the specified position 
-sectionNumber.draw(page.graphics, { x: 200, y: 700 }); 
-// Save the document 
-document.save('section-number.pdf'); 
-// Destroy the document 
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-
-// Create a new PDF document 
-var document = new ej.pdf.PdfDocument(); 
-// Add a new section to the document 
-var section = document.addSection(); 
-// Add a new page to the section 
-var page = section.addPage(); 
-// Create a standard font for rendering text 
-var font = new ej.pdf.PdfStandardFont(ej.pdf.PdfFontFamily.helvetica, 12); 
-// Create a brush to define text color 
-var brush = new ej.pdf.PdfBrush({ r: 0, g: 0, b: 0 }); 
-// Create a string format to align text to the right 
-var format = new ej.pdf.PdfStringFormat(ej.pdf.PdfTextAlignment.right); 
-// Create a section number field with font, color, alignment and numeric style 
-var sectionNumber = new ej.pdf.PdfSectionNumberField({ 
-  font: font, 
-  brush: brush, 
-  stringFormat: format, 
-  numberStyle: ej.pdf.PdfNumberStyle.numeric 
-}); 
-// Draw the section number field on the page at the specified position 
-sectionNumber.draw(page.graphics, { x: 200, y: 700 }); 
-// Save the document 
-document.save('section-number.pdf'); 
 // Destroy the document 
 document.destroy();
 
@@ -410,23 +417,23 @@ Displays the page number within the current section dynamically in a PDF documen
 import { PdfDocument, PdfPage, PdfSection, PdfSectionPageNumberField, PdfStandardFont, PdfFontFamily, PdfBrush, PdfStringFormat, PdfTextAlignment, PdfNumberStyle } from '@syncfusion/ej2-pdf'; 
  
 // Create a new PDF document 
-let document: PdfDocument = new PdfDocument(); 
+const document: PdfDocument = new PdfDocument(); 
 // Add a new section to the document 
-let section: PdfSection = document.addSection(); 
+const section: PdfSection = document.addSection(); 
 // Add a new page to the section 
-let page: PdfPage = section.addPage(); 
+const page: PdfPage = section.addPage(); 
 // Create a standard font for rendering text 
-let font: PdfStandardFont = new PdfStandardFont(PdfFontFamily.helvetica, 12); 
+const font: PdfStandardFont = new PdfStandardFont(PdfFontFamily.helvetica, 12); 
 // Create a brush to define text color (black) 
-let brush: PdfBrush = new PdfBrush({ r: 0, g: 0, b: 0 }); 
+const brush: PdfBrush = new PdfBrush({ r: 0, g: 0, b: 0 }); 
 // Create a string format to align text to the right 
-let format: PdfStringFormat = new PdfStringFormat(PdfTextAlignment.right); 
+const format: PdfStringFormat = new PdfStringFormat(PdfTextAlignment.right); 
 // Create a section page number field with font, color, alignment and numeric style 
-let sectionPageNumber: PdfSectionPageNumberField = new PdfSectionPageNumberField({ 
-  font: font, 
-  brush: brush, 
-  stringFormat: format, 
-  numberStyle: PdfNumberStyle.numeric 
+const sectionPageNumber: PdfSectionPageNumberField = new PdfSectionPageNumberField({ 
+  font: font, 
+  brush: brush, 
+  stringFormat: format, 
+  numberStyle: PdfNumberStyle.numeric 
 }); 
 // Draw the section page number field on the page at the specified position 
 sectionPageNumber.draw(page.graphics, { x: 200, y: 680 }); 
@@ -446,16 +453,16 @@ var section = document.addSection();
 var page = section.addPage(); 
 // Create a standard font for rendering text 
 var font = new ej.pdf.PdfStandardFont(ej.pdf.PdfFontFamily.helvetica, 12); 
-// Create a brush to define text color 
+// Create a brush to define text color (black) 
 var brush = new ej.pdf.PdfBrush({ r: 0, g: 0, b: 0 }); 
 // Create a string format to align text to the right 
 var format = new ej.pdf.PdfStringFormat(ej.pdf.PdfTextAlignment.right); 
 // Create a section page number field with font, color, alignment and numeric style 
 var sectionPageNumber = new ej.pdf.PdfSectionPageNumberField({ 
-  font: font, 
-  brush: brush, 
-  stringFormat: format, 
-  numberStyle: ej.pdf.PdfNumberStyle.numeric 
+  font: font, 
+  brush: brush, 
+  stringFormat: format, 
+  numberStyle: ej.pdf.PdfNumberStyle.numeric 
 }); 
 // Draw the section page number field on the page at the specified position 
 sectionPageNumber.draw(page.graphics, { x: 200, y: 680 }); 
@@ -477,23 +484,23 @@ Displays the total number of pages dynamically within the current section of a P
 import { PdfDocument, PdfPage, PdfSection, PdfSectionPageCountField, PdfStandardFont, PdfFontFamily, PdfBrush, PdfStringFormat, PdfTextAlignment, PdfNumberStyle } from '@syncfusion/ej2-pdf'; 
  
 // Create a new PDF document 
-let document: PdfDocument = new PdfDocument(); 
+const document: PdfDocument = new PdfDocument(); 
 // Add a new section to the document 
-let section: PdfSection = document.addSection(); 
+const section: PdfSection = document.addSection(); 
 // Add a new page to the section 
-let page: PdfPage = section.addPage(); 
+const page: PdfPage = section.addPage(); 
 // Create a standard font for rendering text 
-let font: PdfStandardFont = new PdfStandardFont(PdfFontFamily.helvetica, 12); 
+const font: PdfStandardFont = new PdfStandardFont(PdfFontFamily.helvetica, 12); 
 // Create a brush to define text color 
-let brush: PdfBrush = new PdfBrush({ r: 0, g: 0, b: 0 }); 
+const brush: PdfBrush = new PdfBrush({ r: 0, g: 0, b: 0 }); 
 // Create a string format to align text to the right 
-let format: PdfStringFormat = new PdfStringFormat(PdfTextAlignment.right); 
+const format: PdfStringFormat = new PdfStringFormat(PdfTextAlignment.right); 
 // Create a section page count field with font, color, alignment and numeric style 
-let sectionPageCount: PdfSectionPageCountField = new PdfSectionPageCountField({ 
-  font: font, 
-  brush: brush, 
-  stringFormat: format, 
-  numberStyle: PdfNumberStyle.numeric 
+const sectionPageCount: PdfSectionPageCountField = new PdfSectionPageCountField({ 
+  font: font, 
+  brush: brush, 
+  stringFormat: format, 
+  numberStyle: PdfNumberStyle.numeric 
 }); 
 // Draw the section page count field on the page at the specified position 
 sectionPageCount.draw(page.graphics, { x: 200, y: 660 }); 
@@ -519,15 +526,82 @@ var brush = new ej.pdf.PdfBrush({ r: 0, g: 0, b: 0 });
 var format = new ej.pdf.PdfStringFormat(ej.pdf.PdfTextAlignment.right); 
 // Create a section page count field with font, color, alignment and numeric style 
 var sectionPageCount = new ej.pdf.PdfSectionPageCountField({ 
-  font: font, 
-  brush: brush, 
-  stringFormat: format, 
-  numberStyle: ej.pdf.PdfNumberStyle.numeric 
+  font: font, 
+  brush: brush, 
+  stringFormat: format, 
+  numberStyle: ej.pdf.PdfNumberStyle.numeric 
 }); 
 // Draw the section page count field on the page at the specified position 
 sectionPageCount.draw(page.graphics, { x: 200, y: 660 }); 
 // Save the document 
 document.save('section-page-count.pdf'); 
+// Destroy the document 
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+### Section Number Field 
+
+Displays the section index dynamically for the current page within a PDF document.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+
+import { PdfDocument, PdfPage, PdfSection, PdfSectionNumberField, PdfStandardFont, PdfFontFamily, PdfBrush, PdfStringFormat, PdfTextAlignment, PdfNumberStyle } from '@syncfusion/ej2-pdf'; 
+ 
+// Create a new PDF document 
+const document: PdfDocument = new PdfDocument(); 
+// Add a new section to the document 
+const section: PdfSection = document.addSection(); 
+// Add a new page to the section 
+const page: PdfPage = section.addPage(); 
+// Create a standard font for rendering text 
+const font: PdfStandardFont = new PdfStandardFont(PdfFontFamily.helvetica, 12); 
+// Create a brush to define text color 
+const brush: PdfBrush = new PdfBrush({ r: 0, g: 0, b: 0 }); 
+// Create a string format to align text to the right 
+const format: PdfStringFormat = new PdfStringFormat(PdfTextAlignment.right); 
+// Create a section number field with font, color, alignment and numeric style 
+const sectionNumber: PdfSectionNumberField = new PdfSectionNumberField({ 
+  font: font, 
+  brush: brush, 
+  stringFormat: format, 
+  numberStyle: PdfNumberStyle.numeric 
+}); 
+// Draw the section number field on the page at the specified position 
+sectionNumber.draw(page.graphics, { x: 200, y: 700 }); 
+// Save the document 
+document.save('section-number.pdf'); 
+// Destroy the document 
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Create a new PDF document 
+var document = new ej.pdf.PdfDocument(); 
+// Add a new section to the document 
+var section = document.addSection(); 
+// Add a new page to the section 
+var page = section.addPage(); 
+// Create a standard font for rendering text 
+var font = new ej.pdf.PdfStandardFont(ej.pdf.PdfFontFamily.helvetica, 12); 
+// Create a brush to define text color 
+var brush = new ej.pdf.PdfBrush({ r: 0, g: 0, b: 0 }); 
+// Create a string format to align text to the right 
+var format = new ej.pdf.PdfStringFormat(ej.pdf.PdfTextAlignment.right); 
+// Create a section number field with font, color, alignment and numeric style 
+var sectionNumber = new ej.pdf.PdfSectionNumberField({ 
+  font: font, 
+  brush: brush, 
+  stringFormat: format, 
+  numberStyle: ej.pdf.PdfNumberStyle.numeric 
+}); 
+// Draw the section number field on the page at the specified position 
+sectionNumber.draw(page.graphics, { x: 200, y: 700 }); 
+// Save the document 
+document.save('section-number.pdf'); 
 // Destroy the document 
 document.destroy();
 
@@ -543,20 +617,20 @@ Displays the current system date and time dynamically in a PDF document.
 import { PdfDocument, PdfPage, PdfDateTimeField, PdfStandardFont, PdfFontFamily, PdfBrush, PdfStringFormat } from '@syncfusion/ej2-pdf'; 
  
 // Create a new PDF document 
-let document: PdfDocument = new PdfDocument(); 
+const document: PdfDocument = new PdfDocument(); 
 // Add a new page to the document 
-let page: PdfPage = document.addPage(); 
+const page: PdfPage = document.addPage(); 
 // Create a standard font for rendering text 
-let font: PdfStandardFont = new PdfStandardFont(PdfFontFamily.helvetica, 12); 
+const font: PdfStandardFont = new PdfStandardFont(PdfFontFamily.helvetica, 12); 
 // Create a brush to define text color (black) 
-let brush: PdfBrush = new PdfBrush({ r: 0, g: 0, b: 0 }); 
+const brush: PdfBrush = new PdfBrush({ r: 0, g: 0, b: 0 }); 
 // Create a string format for text alignment 
-let format: PdfStringFormat = new PdfStringFormat(); 
+const format: PdfStringFormat = new PdfStringFormat(); 
 // Create a date and time field with font, color, and alignment 
-let dateTime: PdfDateTimeField = new PdfDateTimeField({ 
-  font: font, 
-  brush: brush, 
-  stringFormat: format 
+const dateTime: PdfDateTimeField = new PdfDateTimeField({ 
+  font: font, 
+  brush: brush, 
+  stringFormat: format 
 }); 
 // Draw the date and time field on the page at the specified position 
 dateTime.draw(page.graphics, { x: 200, y: 640 }); 
@@ -580,9 +654,9 @@ var brush = new ej.pdf.PdfBrush({ r: 0, g: 0, b: 0 });
 var format = new ej.pdf.PdfStringFormat(); 
 // Create a date and time field with font, color, and alignment 
 var dateTime = new ej.pdf.PdfDateTimeField({ 
-  font: font, 
-  brush: brush, 
-  stringFormat: format 
+  font: font, 
+  brush: brush, 
+  stringFormat: format 
 }); 
 // Draw the date and time field on the page at the specified position 
 dateTime.draw(page.graphics, { x: 200, y: 640 }); 
@@ -596,7 +670,7 @@ document.destroy();
 
 ### Creation Date Field 
 
-Displays the document creation date dynamically based on the document metadata.
+Displays the document creation date dynamically based on the document metadata. The value is read from the `creationDate` property set through `setDocumentInformation`.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -604,23 +678,23 @@ Displays the document creation date dynamically based on the document metadata.
 import { PdfDocument, PdfPage, PdfCreationDateField, PdfStandardFont, PdfFontFamily, PdfBrush, PdfStringFormat } from '@syncfusion/ej2-pdf'; 
  
 // Create a new PDF document 
-let document: PdfDocument = new PdfDocument(); 
+const document: PdfDocument = new PdfDocument(); 
 // Set document creation date in metadata 
 document.setDocumentInformation({ creationDate: new Date() }); 
 // Add a new page to the document 
-let page: PdfPage = document.addPage(); 
+const page: PdfPage = document.addPage(); 
 // Create a standard font for rendering text 
-let font: PdfStandardFont = new PdfStandardFont(PdfFontFamily.helvetica, 12); 
+const font: PdfStandardFont = new PdfStandardFont(PdfFontFamily.helvetica, 12); 
 // Create a brush to define text color (black) 
-let brush: PdfBrush = new PdfBrush({ r: 0, g: 0, b: 0 }); 
+const brush: PdfBrush = new PdfBrush({ r: 0, g: 0, b: 0 }); 
 // Create a string format for text alignment 
-let format: PdfStringFormat = new PdfStringFormat(); 
+const format: PdfStringFormat = new PdfStringFormat(); 
 // Create a creation date field with font, color, alignment, and date format 
-let creationDate: PdfCreationDateField = new PdfCreationDateField({ 
-  font: font, 
-  brush: brush, 
-  stringFormat: format, 
-  dateFormat: 'yyyy/MM/dd' 
+const creationDate: PdfCreationDateField = new PdfCreationDateField({ 
+  font: font, 
+  brush: brush, 
+  stringFormat: format, 
+  dateFormat: 'yyyy/MM/dd' 
 }); 
 // Draw the creation date field on the page at the specified position 
 creationDate.draw(page.graphics, { x: 200, y: 620 }); 
@@ -646,10 +720,10 @@ var brush = new ej.pdf.PdfBrush({ r: 0, g: 0, b: 0 });
 var format = new ej.pdf.PdfStringFormat(); 
 // Create a creation date field with font, color, alignment, and date format 
 var creationDate = new ej.pdf.PdfCreationDateField({ 
-  font: font, 
-  brush: brush, 
-  stringFormat: format, 
-  dateFormat: 'yyyy/MM/dd' 
+  font: font, 
+  brush: brush, 
+  stringFormat: format, 
+  dateFormat: 'yyyy/MM/dd' 
 }); 
 // Draw the creation date field on the page at the specified position 
 creationDate.draw(page.graphics, { x: 200, y: 620 }); 
@@ -661,76 +735,9 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-### Destination Page Number Field 
-
-Displays the page number of a specified destination page dynamically within the PDF document.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-
-import { PdfDocument, PdfPage, PdfDestinationPageNumberField, PdfStandardFont, PdfFontFamily, PdfBrush, PdfStringFormat, PdfTextAlignment, PdfNumberStyle } from '@syncfusion/ej2-pdf'; 
- 
-// Create a new PDF document 
-let document: PdfDocument = new PdfDocument(); 
-// Add pages to the document 
-let page1: PdfPage = document.addPage(); 
-let page2: PdfPage = document.addPage(); 
-// Create a standard font for rendering text 
-let font: PdfStandardFont = new PdfStandardFont(PdfFontFamily.helvetica, 12); 
-// Create a brush to define text color (black) 
-let brush: PdfBrush = new PdfBrush({ r: 0, g: 0, b: 0 }); 
-// Create a string format to align text to the right 
-let format: PdfStringFormat = new PdfStringFormat(PdfTextAlignment.right); 
-// Create a destination page number field with font, color, alignment, number style, and target page 
-let destination: PdfDestinationPageNumberField = new PdfDestinationPageNumberField({ 
-  font: font, 
-  brush: brush, 
-  stringFormat: format, 
-  numberStyle: PdfNumberStyle.numeric, 
-  page: page2 
-}); 
-// Draw the destination page number field on the first page 
-destination.draw(page1.graphics, { x: 200, y: 600 }); 
-// Save the document 
-document.save('destination-page.pdf'); 
-// Destroy the document 
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-
-// Create a new PDF document 
-var document = new ej.pdf.PdfDocument(); 
-// Add pages to the document 
-var page1 = document.addPage(); 
-var page2 = document.addPage(); 
-// Create a standard font for rendering text 
-var font = new ej.pdf.PdfStandardFont(ej.pdf.PdfFontFamily.helvetica, 12); 
-// Create a brush to define text color (black) 
-var brush = new ej.pdf.PdfBrush({ r: 0, g: 0, b: 0 }); 
-// Create a string format to align text to the right 
-var format = new ej.pdf.PdfStringFormat(ej.pdf.PdfTextAlignment.right); 
-// Create a destination page number field with font, color, alignment, number style, and target page 
-var destination = new ej.pdf.PdfDestinationPageNumberField({ 
-  font: font, 
-  brush: brush, 
-  stringFormat: format, 
-  numberStyle: ej.pdf.PdfNumberStyle.numeric, 
-  page: page2 
-}); 
-// Draw the destination page number field on the first page 
-destination.draw(page1.graphics, { x: 200, y: 600 }); 
-// Save the document 
-document.save('destination-page.pdf'); 
-// Destroy the document 
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
-
 ### Document Author Field
 
-Displays the document author metadata dynamically from the PDF document properties.
+Displays the document author metadata dynamically from the PDF document properties. The value is read from the `author` property set through `setDocumentInformation`.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -738,19 +745,19 @@ Displays the document author metadata dynamically from the PDF document properti
 import { PdfDocument, PdfPage, PdfDocumentAuthorField, PdfStandardFont, PdfFontFamily, PdfBrush, PdfStringFormat } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
-let document: PdfDocument = new PdfDocument();
+const document: PdfDocument = new PdfDocument();
 // Set document author in metadata
 document.setDocumentInformation({ author: 'Syncfusion' });
 // Add a new page to the document
-let page: PdfPage = document.addPage();
+const page: PdfPage = document.addPage();
 // Create a standard font for rendering text
-let font: PdfStandardFont = new PdfStandardFont(PdfFontFamily.helvetica, 12);
+const font: PdfStandardFont = new PdfStandardFont(PdfFontFamily.helvetica, 12);
 // Create a brush to define text color (black)
-let brush: PdfBrush = new PdfBrush({ r: 0, g: 0, b: 0 });
+const brush: PdfBrush = new PdfBrush({ r: 0, g: 0, b: 0 });
 // Create a string format for text alignment
-let format: PdfStringFormat = new PdfStringFormat();
+const format: PdfStringFormat = new PdfStringFormat();
 // Create a document author field with font, color, and alignment
-let authorField: PdfDocumentAuthorField = new PdfDocumentAuthorField({
+const authorField: PdfDocumentAuthorField = new PdfDocumentAuthorField({
   font: font,
   brush: brush,
   stringFormat: format
@@ -793,9 +800,78 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-### Composite Field
+### Destination Page Number Field 
 
-Combines multiple automatic fields into a single formatted output, such as displaying page numbers along with total page count.
+Displays the page number of a specified destination page.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+
+import { PdfDocument, PdfPage, PdfDestinationPageNumberField, PdfStandardFont, PdfFontFamily, PdfBrush, PdfStringFormat, PdfTextAlignment, PdfNumberStyle } from '@syncfusion/ej2-pdf'; 
+ 
+// Create a new PDF document 
+const document: PdfDocument = new PdfDocument(); 
+// Add pages to the document 
+const page1: PdfPage = document.addPage(); 
+const page2: PdfPage = document.addPage(); 
+// Create a standard font for rendering text 
+const font: PdfStandardFont = new PdfStandardFont(PdfFontFamily.helvetica, 12); 
+// Create a brush to define text color (black) 
+const brush: PdfBrush = new PdfBrush({ r: 0, g: 0, b: 0 }); 
+// Create a string format to align text to the right 
+const format: PdfStringFormat = new PdfStringFormat(PdfTextAlignment.right); 
+// Create a destination page number field with font, color, alignment, number style, and target page 
+const destination: PdfDestinationPageNumberField = new PdfDestinationPageNumberField({ 
+  font: font, 
+  brush: brush, 
+  stringFormat: format, 
+  numberStyle: PdfNumberStyle.numeric, 
+  page: page2 
+}); 
+// Draw the destination page number field on the first page 
+destination.draw(page1.graphics, { x: 200, y: 600 }); 
+// Save the document 
+document.save('destination-page.pdf'); 
+// Destroy the document 
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Create a new PDF document 
+var document = new ej.pdf.PdfDocument(); 
+// Add pages to the document 
+var page1 = document.addPage(); 
+var page2 = document.addPage(); 
+// Create a standard font for rendering text 
+var font = new ej.pdf.PdfStandardFont(ej.pdf.PdfFontFamily.helvetica, 12); 
+// Create a brush to define text color (black) 
+var brush = new ej.pdf.PdfBrush({ r: 0, g: 0, b: 0 }); 
+// Create a string format to align text to the right 
+var format = new ej.pdf.PdfStringFormat(ej.pdf.PdfTextAlignment.right); 
+// Create a destination page number field with font, color, alignment, number style, and target page 
+var destination = new ej.pdf.PdfDestinationPageNumberField({ 
+  font: font, 
+  brush: brush, 
+  stringFormat: format, 
+  numberStyle: ej.pdf.PdfNumberStyle.numeric, 
+  page: page2 
+}); 
+// Draw the destination page number field on the first page 
+destination.draw(page1.graphics, { x: 200, y: 600 }); 
+// Save the document 
+document.save('destination-page.pdf'); 
+// Destroy the document 
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+## Composite Field
+
+A `PdfCompositeField` is a pattern that combines other automatic fields into a single formatted output. The `automaticFields` array supplies the fields in the order they should appear, and the `pattern` string uses `{0}`, `{1}`, and so on as placeholders. The first field value replaces `{0}`, the second replaces `{1}`, and so on. For example, with `pattern: 'Page {0} of {1}'` and `automaticFields: [pageNumber, pageCount]`, the rendered output is `Page 1 of 10`.
+
+The first sample in this document also demonstrates a `PdfCompositeField` in the footer — see [Adding a header and footer template to the PDF document](#adding-a-header-and-footer-template-to-the-pdf-document).
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -803,25 +879,25 @@ Combines multiple automatic fields into a single formatted output, such as displ
 import { PdfDocument, PdfPage, PdfPageNumberField, PdfPageCountField, PdfCompositeField, PdfStandardFont, PdfFontFamily, PdfBrush } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
-let document: PdfDocument = new PdfDocument();
+const document: PdfDocument = new PdfDocument();
 // Add a new page to the document
-let page: PdfPage = document.addPage();
+const page: PdfPage = document.addPage();
 // Create a standard font for rendering text
-let font: PdfStandardFont = new PdfStandardFont(PdfFontFamily.helvetica, 12);
+const font: PdfStandardFont = new PdfStandardFont(PdfFontFamily.helvetica, 12);
 // Create a brush to define text color (black)
-let brush: PdfBrush = new PdfBrush({ r: 0, g: 0, b: 0 });
+const brush: PdfBrush = new PdfBrush({ r: 0, g: 0, b: 0 });
 // Create a page number field with font and color
-let pageNumber: PdfPageNumberField = new PdfPageNumberField({
+const pageNumber: PdfPageNumberField = new PdfPageNumberField({
   font: font,
   brush: brush
 });
 // Create a page count field with font and color
-let pageCount: PdfPageCountField = new PdfPageCountField({
+const pageCount: PdfPageCountField = new PdfPageCountField({
   font: font,
   brush: brush
 });
 // Create a composite field combining page number and page count
-let composite: PdfCompositeField = new PdfCompositeField({
+const composite: PdfCompositeField = new PdfCompositeField({
   font: font,
   brush: brush,
   pattern: 'Page {0} of {1}',
@@ -871,3 +947,10 @@ document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
+
+## Additional Resources
+
+- [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
+- [JavaScript PDF Library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
+- [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
+- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default.html)

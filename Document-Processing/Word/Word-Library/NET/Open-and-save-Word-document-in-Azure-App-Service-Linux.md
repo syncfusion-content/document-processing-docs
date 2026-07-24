@@ -8,9 +8,9 @@ documentation: UG
 
 # Open and save Word document in Azure App Service on Linux
 
-Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit and convert Word documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **open and save Word document in Azure App Service on Linux**.
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit and convert Word documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **open and save a Word document in Azure App Service on Linux**.
 
-## Steps to open and save Word document in Azure App Service on Linux
+## Steps to open and save a Word document in Azure App Service on Linux
 
 Step 1: Create a new ASP.NET Core Web App (Model-View-Controller).
 ![Create a ASP.NET Core Web App project](Azure-Images/App-Service-Linux/Create-Project-WordtoPDF.png)
@@ -63,13 +63,13 @@ Step 7: Add a new action method **OpenAndSaveDocument** in HomeController.cs and
 {% highlight c# tabtitle="C#" %}
 
 string filePath = Path.Combine(_hostingEnvironment.WebRootPath, "Data/Input.docx");
-using (FileStream docStream1 = new FileStream(filePath, FileMode.Open, FileAccess.Read));
-using (WordDocument document = new WordDocument(docStream, FormatType.Docx));
+using FileStream docStream = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+using WordDocument document = new WordDocument(docStream, FormatType.Docx);
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Add below code example to add a paragraph in the Word document.
+Step 8: Add the below code example to add a paragraph in the Word document.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -87,7 +87,7 @@ textRange.CharacterFormat.FontSize = 12f;
 {% endhighlight %}
 {% endtabs %}
 
-Step 9: Add below code example to **save the Word document**.
+Step 9: Add the below code example to **save the Word document**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -97,7 +97,7 @@ MemoryStream stream = new MemoryStream();
 document.Save(stream, FormatType.Docx);
 stream.Position = 0;
 //Download Word document in the browser.
-return File(stream, "application/msword", "Sample.docx");
+return File(stream, "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "Sample.docx");
 
 {% endhighlight %}
 {% endtabs %}
@@ -131,13 +131,13 @@ Step 8: Click **Close** button.
 Step 9: Click the **Publish** button.
 ![Click the Publish button](Azure-Images/App-Service-Linux/Before-Publish-Open-and-Save-Word-Document.png)
 
-Step 10: Now, Publish has been succeeded.
+Step 10: Publish has succeeded.
 ![Publish has been succeeded](Azure-Images/App-Service-Linux/After-Publish-Open-and-Save-Word-Document.png)
 
 Step 11: Now, the published webpage will open in the browser. 
 ![Browser will open after publish](Azure-Images/App-Service-Windows/Browser-Open-and-Save-Word-Document.png)
 
-Step 12: Click **Open and Save Document** button.You will get the output **Word document** as follows.
+Step 12: Click the **Open and Save Document** button. You will get the output **Word document** as follows.
 
 ![Open and Save Word document in Azure App Service on Linux](ASP-NET-Core_images/OpenAndSaveOutput.png)
 
