@@ -74,7 +74,7 @@ import { PdfViewerModule, ToolbarService, AnnotationService } from '@syncfusion/
   imports: [PdfViewerModule],
   providers: [ToolbarService, AnnotationService],
   template: `
-    <button (click)="addRectangleAnnotation()">Add Redaction Annotation</button>
+    <button (click)="addRedactionAnnotation()">Add Redaction Annotation</button>
     <ejs-pdfviewer
       id="pdfViewer"
       [documentPath]="document"
