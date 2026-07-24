@@ -41,7 +41,7 @@ Step 5: Add a new button in the **Index.cshtml** as shown below.
 {% highlight c# tabtitle="C#" %}
 
 @{
-    Html.BeginForm("CreateWordDocument", "Home", FormMethod.Get);
+    Html.BeginForm("OpenAndSaveDocument", "Home", FormMethod.Get);
     {
         <div>
             <input type="submit" value="Create Word document" style="width:200px;height:27px" />

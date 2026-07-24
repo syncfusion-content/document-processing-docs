@@ -45,7 +45,7 @@ Remove the [`TextSelection`](https://ej2.syncfusion.com/react/documentation/api/
 
 **Set `enableTextSelection` to false**
 
-Use the [`enableTextSelection`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enabletextselection) during initialization to disable or enable text selection. The following example disables the text selection during initialization
+Use the [`enableTextSelection`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enabletextselection) property (boolean, default `true`) during initialization to disable or enable text selection. The following example disables the text selection during initialization.
 
 {% highlight ts %}
 {% raw %}
@@ -69,7 +69,9 @@ Use the [`enableTextSelection`](https://ej2.syncfusion.com/react/documentation/a
 
 ### 2. Toggle text selection at runtime
 
-The [`enableTextSelection`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enabletextselection) property can also be used to toggle the text selection at runtime.
+Ensure the [`TextSelection`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textselection) module is included in the `Inject` services array so the property is available at runtime.
+
+The [`enableTextSelection`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enabletextselection) property can also be used to toggle the text selection at runtime. Click the corresponding button to switch the selection state while the PDF is loaded.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -125,7 +127,7 @@ N> When text selection is disabled, the viewer automatically switches to pan mod
 ## Use cases and considerations
 
 - Document protection: Disable text selection to help prevent copying sensitive content.
-- Read-only documents: Provide a cleaner viewing experience by preventing selection.
+- Read-only documents: Prevent selection for a cleaner viewing experience.
 - Interactive apps: Toggle selection based on user roles or document states.
 
 N> Text selection is enabled by default. Set `enableTextSelection` to `false` to disable it.

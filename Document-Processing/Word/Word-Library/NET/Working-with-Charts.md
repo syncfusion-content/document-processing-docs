@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Working with Charts in Word document
 
-A Chart is a graphical representation of data where the data is represented as symbols such as bars, lines etc. Charts can represent numerical data, functions or some kinds of qualitative structures. DocIO supports the following chart types:
+A Chart is a graphical representation of data where the data is represented as symbols such as bars, lines, etc. Charts can represent numerical data, functions, or some kinds of qualitative structures. DocIO supports the following chart types:
 
 * Bar chart
 * Line chart
@@ -18,6 +18,8 @@ A Chart is a graphical representation of data where the data is represented as s
 * Surface chart
 * Stock chart
 * Radar chart
+
+For the complete list of supported chart types, refer to the [Supported Chart Types](#supported-chart-types) section.
 
 N> DocIO supports chart only in DOCX and WordML format documents.
 
@@ -68,7 +70,7 @@ using (WordDocument document = new WordDocument())
     chart.ChartData.SetValue(10, 2, 29.171);
     chart.ChartData.SetValue(11, 1, "Elizabeth Lincoln");
     chart.ChartData.SetValue(11, 2, 25.696);
-    //Creates a new chart series with the name “Sales”
+    //Creates a new chart series with the name "Sales"
     IOfficeChartSerie pieSeries = chart.Series.Add("Sales");
     pieSeries.Values = chart.ChartData[2, 2, 11, 2];
     //Sets data label
@@ -81,122 +83,122 @@ using (WordDocument document = new WordDocument())
     //Sets category labels
     chart.PrimaryCategoryAxis.CategoryLabels = chart.ChartData[2, 1, 11, 1];
     //Saves the Word document to MemoryStream
-    MemoryStream stream = new MemoryStream();
-    document.Save(stream, FormatType.Docx);
-    document.Close();
+    using (MemoryStream stream = new MemoryStream())
+    {
+        document.Save(stream, FormatType.Docx);
+    }
 }
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Creates a new Word document
-WordDocument document = new WordDocument();
-//Adds section to the document
-IWSection sec = document.AddSection();
-//Adds paragraph to the section
-IWParagraph paragraph = sec.AddParagraph();
-//Creates and Appends chart to the paragraph
-WChart chart = paragraph.AppendChart(446, 270);
-//Sets chart type
-chart.ChartType = OfficeChartType.Pie;
-//Sets chart title
-chart.ChartTitle = "Best Selling Products";
-chart.ChartTitleArea.FontName = "Calibri";
-chart.ChartTitleArea.Size = 14;
-//Sets data for chart
-chart.ChartData.SetValue(1, 1, "");
-chart.ChartData.SetValue(1, 2, "Sales");
-chart.ChartData.SetValue(2, 1, "Phyllis Lapin");
-chart.ChartData.SetValue(2, 2, 141.396);
-chart.ChartData.SetValue(3, 1, "Stanley Hudson");
-chart.ChartData.SetValue(3, 2, 80.368);
-chart.ChartData.SetValue(4, 1, "Bernard Shah");
-chart.ChartData.SetValue(4, 2, 71.155);
-chart.ChartData.SetValue(5, 1, "Patricia Lincoln");
-chart.ChartData.SetValue(5, 2, 47.234);
-chart.ChartData.SetValue(6, 1, "Camembert Pierrot");
-chart.ChartData.SetValue(6, 2, 46.825);
-chart.ChartData.SetValue(7, 1, "Thomas Hardy");
-chart.ChartData.SetValue(7, 2, 42.593);
-chart.ChartData.SetValue(8, 1, "Hanna Moos");
-chart.ChartData.SetValue(8, 2, 41.819);
-chart.ChartData.SetValue(9, 1, "Alice Mutton");
-chart.ChartData.SetValue(9, 2, 32.698);
-chart.ChartData.SetValue(10, 1, "Christina Berglund");
-chart.ChartData.SetValue(10, 2, 29.171);
-chart.ChartData.SetValue(11, 1, "Elizabeth Lincoln");
-chart.ChartData.SetValue(11, 2, 25.696);
-//Creates a new chart series with the name “Sales”
-IOfficeChartSerie pieSeries = chart.Series.Add("Sales");
-pieSeries.Values = chart.ChartData[2, 2, 11, 2];
-//Sets data label
-pieSeries.DataPoints.DefaultDataPoint.DataLabels.IsValue = true;
-pieSeries.DataPoints.DefaultDataPoint.DataLabels.Position = OfficeDataLabelPosition.Outside;
-//Sets background color
-chart.ChartArea.Fill.ForeColor = Color.FromArgb(242, 242, 242);
-chart.PlotArea.Fill.ForeColor = Color.FromArgb(242, 242, 242);
-chart.ChartArea.Border.LinePattern = OfficeChartLinePattern.None;
-//Sets category labels
-chart.PrimaryCategoryAxis.CategoryLabels = chart.ChartData[2, 1, 11, 1];            
-//Saves the document
-document.Save("Sample.docx", FormatType.Docx);
-//Closes the document
-document.Close();
+using (WordDocument document = new WordDocument())
+{
+    //Adds section to the document
+    IWSection sec = document.AddSection();
+    //Adds paragraph to the section
+    IWParagraph paragraph = sec.AddParagraph();
+    //Creates and Appends chart to the paragraph
+    WChart chart = paragraph.AppendChart(446, 270);
+    //Sets chart type
+    chart.ChartType = OfficeChartType.Pie;
+    //Sets chart title
+    chart.ChartTitle = "Best Selling Products";
+    chart.ChartTitleArea.FontName = "Calibri";
+    chart.ChartTitleArea.Size = 14;
+    //Sets data for chart
+    chart.ChartData.SetValue(1, 1, "");
+    chart.ChartData.SetValue(1, 2, "Sales");
+    chart.ChartData.SetValue(2, 1, "Phyllis Lapin");
+    chart.ChartData.SetValue(2, 2, 141.396);
+    chart.ChartData.SetValue(3, 1, "Stanley Hudson");
+    chart.ChartData.SetValue(3, 2, 80.368);
+    chart.ChartData.SetValue(4, 1, "Bernard Shah");
+    chart.ChartData.SetValue(4, 2, 71.155);
+    chart.ChartData.SetValue(5, 1, "Patricia Lincoln");
+    chart.ChartData.SetValue(5, 2, 47.234);
+    chart.ChartData.SetValue(6, 1, "Camembert Pierrot");
+    chart.ChartData.SetValue(6, 2, 46.825);
+    chart.ChartData.SetValue(7, 1, "Thomas Hardy");
+    chart.ChartData.SetValue(7, 2, 42.593);
+    chart.ChartData.SetValue(8, 1, "Hanna Moos");
+    chart.ChartData.SetValue(8, 2, 41.819);
+    chart.ChartData.SetValue(9, 1, "Alice Mutton");
+    chart.ChartData.SetValue(9, 2, 32.698);
+    chart.ChartData.SetValue(10, 1, "Christina Berglund");
+    chart.ChartData.SetValue(10, 2, 29.171);
+    chart.ChartData.SetValue(11, 1, "Elizabeth Lincoln");
+    chart.ChartData.SetValue(11, 2, 25.696);
+    //Creates a new chart series with the name "Sales"
+    IOfficeChartSerie pieSeries = chart.Series.Add("Sales");
+    pieSeries.Values = chart.ChartData[2, 2, 11, 2];
+    //Sets data label
+    pieSeries.DataPoints.DefaultDataPoint.DataLabels.IsValue = true;
+    pieSeries.DataPoints.DefaultDataPoint.DataLabels.Position = OfficeDataLabelPosition.Outside;
+    //Sets background color
+    chart.ChartArea.Fill.ForeColor = Color.FromArgb(242, 242, 242);
+    chart.PlotArea.Fill.ForeColor = Color.FromArgb(242, 242, 242);
+    chart.ChartArea.Border.LinePattern = OfficeChartLinePattern.None;
+    //Sets category labels
+    chart.PrimaryCategoryAxis.CategoryLabels = chart.ChartData[2, 1, 11, 1];
+    //Saves the document
+    document.Save("Sample.docx", FormatType.Docx);
+}
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Creates a new Word document
-Dim document As New WordDocument()
-'Adds section to the document
-Dim sec As IWSection = document.AddSection()
-'Adds paragraph to the section
-Dim paragraph As IWParagraph = sec.AddParagraph()
-'Creates and Appends chart to the paragraph
-Dim chart As WChart = paragraph.AppendChart(446, 270)
-'Sets chart type
-chart.ChartType = OfficeChartType.Pie
-'Sets chart title
-chart.ChartTitle = "Best Selling Products"
-chart.ChartTitleArea.FontName = "Calibri"
-chart.ChartTitleArea.Size = 14
-'Sets data for chart
-chart.ChartData.SetValue(1, 1, "")
-chart.ChartData.SetValue(1, 2, "Sales")
-chart.ChartData.SetValue(2, 1, "Phyllis Lapin")
-chart.ChartData.SetValue(2, 2, 141.396)
-chart.ChartData.SetValue(3, 1, "Stanley Hudson")
-chart.ChartData.SetValue(3, 2, 80.368)
-chart.ChartData.SetValue(4, 1, "Bernard Shah")
-chart.ChartData.SetValue(4, 2, 71.155)
-chart.ChartData.SetValue(5, 1, "Patricia Lincoln")
-chart.ChartData.SetValue(5, 2, 47.234)
-chart.ChartData.SetValue(6, 1, "Camembert Pierrot")
-chart.ChartData.SetValue(6, 2, 46.825)
-chart.ChartData.SetValue(7, 1, "Thomas Hardy")
-chart.ChartData.SetValue(7, 2, 42.593)
-chart.ChartData.SetValue(8, 1, "Hanna Moos")
-chart.ChartData.SetValue(8, 2, 41.819)
-chart.ChartData.SetValue(9, 1, "Alice Mutton")
-chart.ChartData.SetValue(9, 2, 32.698)
-chart.ChartData.SetValue(10, 1, "Christina Berglund")
-chart.ChartData.SetValue(10, 2, 29.171)
-chart.ChartData.SetValue(11, 1, "Elizabeth Lincoln")
-chart.ChartData.SetValue(11, 2, 25.696)
-'Creates a new chart series with the name “Sales”
-Dim pieSeries As IOfficeChartSerie = chart.Series.Add("Sales")
-pieSeries.Values = chart.ChartData(2, 2, 11, 2)
-'Sets data label
-pieSeries.DataPoints.DefaultDataPoint.DataLabels.IsValue = True
-pieSeries.DataPoints.DefaultDataPoint.DataLabels.Position = OfficeDataLabelPosition.Outside
-'Sets background color
-chart.ChartArea.Fill.ForeColor = Color.FromArgb(242, 242, 242)
-chart.PlotArea.Fill.ForeColor = Color.FromArgb(242, 242, 242)
-chart.ChartArea.Border.LinePattern = OfficeChartLinePattern.None
-'Sets category labels
-chart.PrimaryCategoryAxis.CategoryLabels = chart.ChartData(2, 1, 11, 1)
-'Saves the document
-document.Save("Sample.docx", FormatType.Docx)
-'Closes the document
-document.Close()
+Using document As New WordDocument()
+    'Adds section to the document
+    Dim sec As IWSection = document.AddSection()
+    'Adds paragraph to the section
+    Dim paragraph As IWParagraph = sec.AddParagraph()
+    'Creates and Appends chart to the paragraph
+    Dim chart As WChart = paragraph.AppendChart(446, 270)
+    'Sets chart type
+    chart.ChartType = OfficeChartType.Pie
+    'Sets chart title
+    chart.ChartTitle = "Best Selling Products"
+    chart.ChartTitleArea.FontName = "Calibri"
+    chart.ChartTitleArea.Size = 14
+    'Sets data for chart
+    chart.ChartData.SetValue(1, 1, "")
+    chart.ChartData.SetValue(1, 2, "Sales")
+    chart.ChartData.SetValue(2, 1, "Phyllis Lapin")
+    chart.ChartData.SetValue(2, 2, 141.396)
+    chart.ChartData.SetValue(3, 1, "Stanley Hudson")
+    chart.ChartData.SetValue(3, 2, 80.368)
+    chart.ChartData.SetValue(4, 1, "Bernard Shah")
+    chart.ChartData.SetValue(4, 2, 71.155)
+    chart.ChartData.SetValue(5, 1, "Patricia Lincoln")
+    chart.ChartData.SetValue(5, 2, 47.234)
+    chart.ChartData.SetValue(6, 1, "Camembert Pierrot")
+    chart.ChartData.SetValue(6, 2, 46.825)
+    chart.ChartData.SetValue(7, 1, "Thomas Hardy")
+    chart.ChartData.SetValue(7, 2, 42.593)
+    chart.ChartData.SetValue(8, 1, "Hanna Moos")
+    chart.ChartData.SetValue(8, 2, 41.819)
+    chart.ChartData.SetValue(9, 1, "Alice Mutton")
+    chart.ChartData.SetValue(9, 2, 32.698)
+    chart.ChartData.SetValue(10, 1, "Christina Berglund")
+    chart.ChartData.SetValue(10, 2, 29.171)
+    chart.ChartData.SetValue(11, 1, "Elizabeth Lincoln")
+    chart.ChartData.SetValue(11, 2, 25.696)
+    'Creates a new chart series with the name "Sales"
+    Dim pieSeries As IOfficeChartSerie = chart.Series.Add("Sales")
+    pieSeries.Values = chart.ChartData(2, 2, 11, 2)
+    'Sets data label
+    pieSeries.DataPoints.DefaultDataPoint.DataLabels.IsValue = True
+    pieSeries.DataPoints.DefaultDataPoint.DataLabels.Position = OfficeDataLabelPosition.Outside
+    'Sets background color
+    chart.ChartArea.Fill.ForeColor = Color.FromArgb(242, 242, 242)
+    chart.PlotArea.Fill.ForeColor = Color.FromArgb(242, 242, 242)
+    chart.ChartArea.Border.LinePattern = OfficeChartLinePattern.None
+    'Sets category labels
+    chart.PrimaryCategoryAxis.CategoryLabels = chart.ChartData(2, 1, 11, 1)
+    'Saves the document
+    document.Save("Sample.docx", FormatType.Docx)
+End Using
 {% endhighlight %}
 
 {% endtabs %}
@@ -205,9 +207,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Creating a Chart from Excel file
 
-The chart data can be set through the object array or can be loaded from the excel stream. The specific range of the data from the excel file can be used to set chart data. 
+The chart data can be set through the object array or can be loaded from an Excel stream. The specific range of the data from the Excel file can be used to set chart data. 
 
-The following code example illustrates the chart data loaded from the excel file.
+The following code example illustrates the chart data loaded from the Excel file.
 
 {% tabs %}
 
@@ -220,87 +222,92 @@ using (WordDocument document = new WordDocument())
     //Adds paragraph to the section
     IWParagraph paragraph = sec.AddParagraph();
     //Loads the excel file as stream
-    Stream excelStream = File.OpenRead("Excel_Template.xlsx");
-    //Creates and Appends chart to the paragraph with excel stream as parameter
-    WChart chart = paragraph.AppendChart(excelStream, 1, "B2:C6", 470, 300);
-    //Sets chart type and title
-    chart.ChartType = OfficeChartType.Column_Clustered;
-    chart.ChartTitle = "Purchase Details";
-    chart.ChartTitleArea.FontName = "Calibri";
-    chart.ChartTitleArea.Size = 14;
-    chart.ChartArea.Border.LinePattern = OfficeChartLinePattern.None;
-    //Sets name to chart series
-    chart.Series[0].Name = "Sum of Purchases";
-    chart.Series[1].Name = "Sum of Future Expenses";
-    chart.PrimaryCategoryAxis.Title = "Products";
-    chart.PrimaryValueAxis.Title = "In Dollars";
-    //Sets position of legend
-    chart.Legend.Position = OfficeLegendPosition.Bottom;
+    using (Stream excelStream = File.OpenRead("Excel_Template.xlsx"))
+    {
+        //Creates and Appends chart to the paragraph with excel stream as parameter
+        WChart chart = paragraph.AppendChart(excelStream, 1, "B2:C6", 470, 300);
+        //Sets chart type and title
+        chart.ChartType = OfficeChartType.Column_Clustered;
+        chart.ChartTitle = "Purchase Details";
+        chart.ChartTitleArea.FontName = "Calibri";
+        chart.ChartTitleArea.Size = 14;
+        chart.ChartArea.Border.LinePattern = OfficeChartLinePattern.None;
+        //Sets name to chart series
+        chart.Series[0].Name = "Sum of Purchases";
+        chart.Series[1].Name = "Sum of Future Expenses";
+        chart.PrimaryCategoryAxis.Title = "Products";
+        chart.PrimaryValueAxis.Title = "In Dollars";
+        //Sets position of legend
+        chart.Legend.Position = OfficeLegendPosition.Bottom;
+    }
     //Saves the Word document to  MemoryStream
-    MemoryStream stream = new MemoryStream();
-    document.Save(stream, FormatType.Docx);
-    document.Close();
+    using (MemoryStream stream = new MemoryStream())
+    {
+        document.Save(stream, FormatType.Docx);
+    }
 }
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Creates a new Word document
-WordDocument document = new WordDocument();
-//Adds section to the document
-IWSection sec = document.AddSection();
-//Adds paragraph to the section
-IWParagraph paragraph = sec.AddParagraph();
-//Loads the excel file as stream
-Stream excelStream = File.OpenRead("Excel_Template.xlsx");
-//Creates and Appends chart to the paragraph with excel stream as parameter
-WChart chart = paragraph.AppendChart(excelStream, 1, "B2:C6", 470, 300);
-//Sets chart type and title
-chart.ChartType = OfficeChartType.Column_Clustered;
-chart.ChartTitle = "Purchase Details";
-chart.ChartTitleArea.FontName = "Calibri";
-chart.ChartTitleArea.Size = 14;
-chart.ChartArea.Border.LinePattern = OfficeChartLinePattern.None;       
-//Sets name to chart series
-chart.Series[0].Name = "Sum of Purchases";
-chart.Series[1].Name = "Sum of Future Expenses";
-chart.PrimaryCategoryAxis.Title = "Products";
-chart.PrimaryValueAxis.Title = "In Dollars";
-//Sets position of legend
-chart.Legend.Position = OfficeLegendPosition.Bottom;
-//Saves the document
-document.Save("Sample.docx", FormatType.Docx);
-//Closes the document
-document.Close();
+using (WordDocument document = new WordDocument())
+{
+    //Adds section to the document
+    IWSection sec = document.AddSection();
+    //Adds paragraph to the section
+    IWParagraph paragraph = sec.AddParagraph();
+    //Loads the excel file as stream
+    using (Stream excelStream = File.OpenRead("Excel_Template.xlsx"))
+    {
+        //Creates and Appends chart to the paragraph with excel stream as parameter
+        WChart chart = paragraph.AppendChart(excelStream, 1, "B2:C6", 470, 300);
+        //Sets chart type and title
+        chart.ChartType = OfficeChartType.Column_Clustered;
+        chart.ChartTitle = "Purchase Details";
+        chart.ChartTitleArea.FontName = "Calibri";
+        chart.ChartTitleArea.Size = 14;
+        chart.ChartArea.Border.LinePattern = OfficeChartLinePattern.None;       
+        //Sets name to chart series
+        chart.Series[0].Name = "Sum of Purchases";
+        chart.Series[1].Name = "Sum of Future Expenses";
+        chart.PrimaryCategoryAxis.Title = "Products";
+        chart.PrimaryValueAxis.Title = "In Dollars";
+        //Sets position of legend
+        chart.Legend.Position = OfficeLegendPosition.Bottom;
+    }
+    //Saves the document
+    document.Save("Sample.docx", FormatType.Docx);
+}
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Creates a new Word document
-Dim document As New WordDocument()
-'Adds section to the document
-Dim sec As IWSection = document.AddSection()
-'Adds paragraph to the section
-Dim paragraph As IWParagraph = sec.AddParagraph()
-'Loads the excel file as stream
-Dim excelStream As Stream = File.OpenRead("Excel_Template.xlsx")
-'Creates and Appends chart to the paragraph with excel stream as parameter
-Dim chart As WChart = paragraph.AppendChart(excelStream, 1, "B2:C6", 470, 300)
-'Sets chart type and title
-chart.ChartType = OfficeChartType.Column_Clustered
-chart.ChartTitle = "Purchase Details"
-chart.ChartTitleArea.FontName = "Calibri"
-chart.ChartTitleArea.Size = 14
-chart.ChartArea.Border.LinePattern = OfficeChartLinePattern.None
-'Sets name to chart series
-chart.Series(0).Name = "Sum of Purchases"
-chart.Series(1).Name = "Sum of Future Expenses"
-chart.PrimaryCategoryAxis.Title = "Products"
-chart.PrimaryValueAxis.Title = "In Dollars"
-'Sets position of legend
-chart.Legend.Position = OfficeLegendPosition.Bottom
-'Saves the document
-document.Save("Sample.docx", FormatType.Docx)
-'Closes the document
-document.Close()
+Using document As New WordDocument()
+    'Adds section to the document
+    Dim sec As IWSection = document.AddSection()
+    'Adds paragraph to the section
+    Dim paragraph As IWParagraph = sec.AddParagraph()
+    'Loads the excel file as stream
+    Using excelStream As Stream = File.OpenRead("Excel_Template.xlsx")
+        'Creates and Appends chart to the paragraph with excel stream as parameter
+        Dim chart As WChart = paragraph.AppendChart(excelStream, 1, "B2:C6", 470, 300)
+        'Sets chart type and title
+        chart.ChartType = OfficeChartType.Column_Clustered
+        chart.ChartTitle = "Purchase Details"
+        chart.ChartTitleArea.FontName = "Calibri"
+        chart.ChartTitleArea.Size = 14
+        chart.ChartArea.Border.LinePattern = OfficeChartLinePattern.None
+        'Sets name to chart series
+        chart.Series(0).Name = "Sum of Purchases"
+        chart.Series(1).Name = "Sum of Future Expenses"
+        chart.PrimaryCategoryAxis.Title = "Products"
+        chart.PrimaryValueAxis.Title = "In Dollars"
+        'Sets position of legend
+        chart.Legend.Position = OfficeLegendPosition.Bottom
+    End Using
+    'Saves the document
+    document.Save("Sample.docx", FormatType.Docx)
+End Using
 {% endhighlight %}
 
 {% endtabs %}
@@ -360,109 +367,109 @@ using (WordDocument document = new WordDocument())
     //Sets position of legend
     chart.Legend.Position = OfficeLegendPosition.Bottom;
     //Saves the Word document to  MemoryStream
-    MemoryStream stream = new MemoryStream();
-    document.Save(stream, FormatType.Docx);
-    document.Close();
+    using (MemoryStream stream = new MemoryStream())
+    {
+        document.Save(stream, FormatType.Docx);
+    }
 }
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Creates a new Word document
-WordDocument document = new WordDocument();
-//Adds section to the document
-IWSection sec = document.AddSection();
-//Adds paragraph to the section
-IWParagraph paragraph = sec.AddParagraph();
-//Inputs data for chart
-object[][] data = new object[6][];
-for (int i = 0; i < 6; i++)
-    data[i] = new object[3];
-data[0][0] = "";
-data[1][0] = "Camembert Pierrot";
-data[2][0] = "Alice Mutton";
-data[3][0] = "Roasted Tigers";
-data[4][0] = "Orange Shake";
-data[5][0] = "Dried Apples";
-data[0][1] = "Sum of Purchases";
-data[1][1] = 286;
-data[2][1] = 680;
-data[3][1] = 288;
-data[4][1] = 200;
-data[5][1] = 731;
-data[0][2] = "Sum of Future Expenses";
-data[1][2] = 1300;
-data[2][2] = 700;
-data[3][2] = 1280;
-data[4][2] = 1200;
-data[5][2] = 2660;
-//Creates and Appends chart to the paragraph
-WChart chart = paragraph.AppendChart(data, 470, 300);
-//Sets chart type and title
-chart.ChartTitle = "Purchase Details";
-chart.ChartTitleArea.FontName = "Calibri";
-chart.ChartTitleArea.Size = 14;
-chart.ChartArea.Border.LinePattern = OfficeChartLinePattern.None;
-//Sets series type 
-chart.Series[0].SerieType = OfficeChartType.Line_Markers;
-chart.Series[1].SerieType = OfficeChartType.Bar_Clustered;
-chart.PrimaryCategoryAxis.Title = "Products";
-chart.PrimaryValueAxis.Title = "In Dollars";
-//Sets position of legend
-chart.Legend.Position = OfficeLegendPosition.Bottom;
-//Saves the document
-document.Save("Sample.docx", FormatType.Docx);
-//Closes the document
-document.Close();
+using (WordDocument document = new WordDocument())
+{
+    //Adds section to the document
+    IWSection sec = document.AddSection();
+    //Adds paragraph to the section
+    IWParagraph paragraph = sec.AddParagraph();
+    //Inputs data for chart
+    object[][] data = new object[6][];
+    for (int i = 0; i < 6; i++)
+        data[i] = new object[3];
+    data[0][0] = "";
+    data[1][0] = "Camembert Pierrot";
+    data[2][0] = "Alice Mutton";
+    data[3][0] = "Roasted Tigers";
+    data[4][0] = "Orange Shake";
+    data[5][0] = "Dried Apples";
+    data[0][1] = "Sum of Purchases";
+    data[1][1] = 286;
+    data[2][1] = 680;
+    data[3][1] = 288;
+    data[4][1] = 200;
+    data[5][1] = 731;
+    data[0][2] = "Sum of Future Expenses";
+    data[1][2] = 1300;
+    data[2][2] = 700;
+    data[3][2] = 1280;
+    data[4][2] = 1200;
+    data[5][2] = 2660;
+    //Creates and Appends chart to the paragraph
+    WChart chart = paragraph.AppendChart(data, 470, 300);
+    //Sets chart type and title
+    chart.ChartTitle = "Purchase Details";
+    chart.ChartTitleArea.FontName = "Calibri";
+    chart.ChartTitleArea.Size = 14;
+    chart.ChartArea.Border.LinePattern = OfficeChartLinePattern.None;
+    //Sets series type 
+    chart.Series[0].SerieType = OfficeChartType.Line_Markers;
+    chart.Series[1].SerieType = OfficeChartType.Bar_Clustered;
+    chart.PrimaryCategoryAxis.Title = "Products";
+    chart.PrimaryValueAxis.Title = "In Dollars";
+    //Sets position of legend
+    chart.Legend.Position = OfficeLegendPosition.Bottom;
+    //Saves the document
+    document.Save("Sample.docx", FormatType.Docx);
+}
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Creates a new Word document
-Dim document As New WordDocument()
-'Adds section to the document
-Dim sec As IWSection = document.AddSection()
-'Adds paragraph to the section
-Dim paragraph As IWParagraph = sec.AddParagraph()
-'Inputs data for chart
-Dim data As Object()() = New Object(5)() {}
-For i As Integer = 0 To 5
-    data(i) = New Object(2) {}
-Next
-data(0)(0) = ""
-data(1)(0) = "Camembert Pierrot"
-data(2)(0) = "Alice Mutton"
-data(3)(0) = "Roasted Tigers"
-data(4)(0) = "Orange Shake"
-data(5)(0) = "Dried Apples"
-data(0)(1) = "Sum of Purchases"
-data(1)(1) = 286
-data(2)(1) = 680
-data(3)(1) = 288
-data(4)(1) = 200
-data(5)(1) = 731
-data(0)(2) = "Sum of Future Expenses"
-data(1)(2) = 1300
-data(2)(2) = 700
-data(3)(2) = 1280
-data(4)(2) = 1200
-data(5)(2) = 2660
-'Creates and Appends chart to the paragraph
-Dim chart As WChart = paragraph.AppendChart(data, 470, 300)
-'Sets chart type and title
-chart.ChartTitle = "Purchase Details"
-chart.ChartTitleArea.FontName = "Calibri"
-chart.ChartTitleArea.Size = 14
-chart.ChartArea.Border.LinePattern = OfficeChartLinePattern.None
-'Sets series type 
-chart.Series(0).SerieType = OfficeChartType.Line_Markers
-chart.Series(1).SerieType = OfficeChartType.Bar_Clustered
-chart.PrimaryCategoryAxis.Title = "Products"
-chart.PrimaryValueAxis.Title = "In Dollars"
-'Sets position of legend
-chart.Legend.Position = OfficeLegendPosition.Bottom
-'Saves the document
-document.Save("Sample.docx", FormatType.Docx)
-'Closes the document
-document.Close()
+Using document As New WordDocument()
+    'Adds section to the document
+    Dim sec As IWSection = document.AddSection()
+    'Adds paragraph to the section
+    Dim paragraph As IWParagraph = sec.AddParagraph()
+    'Inputs data for chart
+    Dim data As Object()() = New Object(5)() {}
+    For i As Integer = 0 To 5
+        data(i) = New Object(2) {}
+    Next
+    data(0)(0) = ""
+    data(1)(0) = "Camembert Pierrot"
+    data(2)(0) = "Alice Mutton"
+    data(3)(0) = "Roasted Tigers"
+    data(4)(0) = "Orange Shake"
+    data(5)(0) = "Dried Apples"
+    data(0)(1) = "Sum of Purchases"
+    data(1)(1) = 286
+    data(2)(1) = 680
+    data(3)(1) = 288
+    data(4)(1) = 200
+    data(5)(1) = 731
+    data(0)(2) = "Sum of Future Expenses"
+    data(1)(2) = 1300
+    data(2)(2) = 700
+    data(3)(2) = 1280
+    data(4)(2) = 1200
+    data(5)(2) = 2660
+    'Creates and Appends chart to the paragraph
+    Dim chart As WChart = paragraph.AppendChart(data, 470, 300)
+    'Sets chart type and title
+    chart.ChartTitle = "Purchase Details"
+    chart.ChartTitleArea.FontName = "Calibri"
+    chart.ChartTitleArea.Size = 14
+    chart.ChartArea.Border.LinePattern = OfficeChartLinePattern.None
+    'Sets series type 
+    chart.Series(0).SerieType = OfficeChartType.Line_Markers
+    chart.Series(1).SerieType = OfficeChartType.Bar_Clustered
+    chart.PrimaryCategoryAxis.Title = "Products"
+    chart.PrimaryValueAxis.Title = "In Dollars"
+    'Sets position of legend
+    chart.Legend.Position = OfficeLegendPosition.Bottom
+    'Saves the document
+    document.Save("Sample.docx", FormatType.Docx)
+End Using
 {% endhighlight %}
 
 {% endtabs %}
@@ -500,8 +507,10 @@ using (WordDocument document = new WordDocument())
     //Set the legend.
     chart.HasLegend = true;
     //Save a Word document.
-    MemoryStream stream = new MemoryStream();
-    document.Save(stream, FormatType.Docx);
+    using (MemoryStream stream = new MemoryStream())
+    {
+        document.Save(stream, FormatType.Docx);
+    }
 }
 
 // Get the data to create a pie chart.
@@ -509,23 +518,25 @@ private static DataTable GetDataTable()
 {
     string path = Path.GetFullPath(@"../../Data/DataBase.mdb");
     //Create a new instance of OleDbConnection.
-    OleDbConnection connection = new OleDbConnection();
-    //Set the string to open a Database.
-    connection.ConnectionString = "Provider=Microsoft.JET.OLEDB.4.0;Password=\"\";User ID=Admin;Data Source=" + path;
-    //Open the Database connection.
-    connection.Open();
-    //Get all the data from the Database.
-    OleDbCommand query = new OleDbCommand("select * from Products", connection);
-    //Create a new instance of OleDbDataAdapter.
-    OleDbDataAdapter adapter = new OleDbDataAdapter(query);
-    //Create a new instance of DataSet.
-    DataSet dataSet = new DataSet();
-    //Add rows in the Dataset.
-    adapter.Fill(dataSet);
-    //Create a DataTable from the Dataset.
-    DataTable table = dataSet.Tables[0];
-    table.TableName = "Products";
-    return table;
+    using (OleDbConnection connection = new OleDbConnection())
+    {
+        //Set the string to open a Database.
+        connection.ConnectionString = "Provider=Microsoft.JET.OLEDB.4.0;Password=\"\";User ID=Admin;Data Source=" + path;
+        //Open the Database connection.
+        connection.Open();
+        //Get all the data from the Database.
+        OleDbCommand query = new OleDbCommand("select * from Products", connection);
+        //Create a new instance of OleDbDataAdapter.
+        OleDbDataAdapter adapter = new OleDbDataAdapter(query);
+        //Create a new instance of DataSet.
+        DataSet dataSet = new DataSet();
+        //Add rows in the Dataset.
+        adapter.Fill(dataSet);
+        //Create a DataTable from the Dataset.
+        DataTable table = dataSet.Tables[0];
+        table.TableName = "Products";
+        return table;
+    }
 }
 
 // Set the value for the chart.
@@ -586,49 +597,51 @@ private static DataTable GetDataTable()
 {
     string path = Path.GetFullPath(@"../../Data/DataBase.mdb");
     //Create a new instance of OleDbConnection.
-    OleDbConnection connection = new OleDbConnection();
-    //Set the string to open a Database.
-    connection.ConnectionString = "Provider=Microsoft.JET.OLEDB.4.0;Password=\"\";User ID=Admin;Data Source=" + path;
-    //Open the Database connection.
-    connection.Open();
-    //Get all the data from the Database.
-    OleDbCommand query = new OleDbCommand("select * from Products", connection);
-    //Create a new instance of OleDbDataAdapter.
-    OleDbDataAdapter adapter = new OleDbDataAdapter(query);
-    //Create a new instance of DataSet.
-    DataSet dataSet = new DataSet();
-    //Add rows in the Dataset.
-    adapter.Fill(dataSet);
-    //Create a DataTable from the Dataset.
-    DataTable table = dataSet.Tables[0];
-    table.TableName = "Products";
-    return table;
+    using (OleDbConnection connection = new OleDbConnection())
+    {
+        //Set the string to open a Database.
+        connection.ConnectionString = "Provider=Microsoft.JET.OLEDB.4.0;Password=\"\";User ID=Admin;Data Source=" + path;
+        //Open the Database connection.
+        connection.Open();
+        //Get all the data from the Database.
+        OleDbCommand query = new OleDbCommand("select * from Products", connection);
+        //Create a new instance of OleDbDataAdapter.
+        OleDbDataAdapter adapter = new OleDbDataAdapter(query);
+        //Create a new instance of DataSet.
+        DataSet dataSet = new DataSet();
+        //Add rows in the Dataset.
+        adapter.Fill(dataSet);
+        //Create a DataTable from the Dataset.
+        DataTable table = dataSet.Tables[0];
+        table.TableName = "Products";
+        return table;
+    }
 }
 
 // Set the value for the chart.
- private static void AddChartData(WChart chart, DataTable dataTable)
- {
-     //Set the value for the chart data.
-     chart.ChartData.SetValue(1, 1, "Names");
-     chart.ChartData.SetValue(1, 2, "Product");
+private static void AddChartData(WChart chart, DataTable dataTable)
+{
+    //Set the value for the chart data.
+    chart.ChartData.SetValue(1, 1, "Names");
+    chart.ChartData.SetValue(1, 2, "Product");
 
-     int rowIndex = 2;
-     int colIndex = 1;
-     //Get the value from the DataTable and set the value for the chart data
-     foreach (DataRow row in dataTable.Rows)
-     {
-         foreach (object val in row.ItemArray)
-         {
-             string value = val.ToString();
-             chart.ChartData.SetValue(rowIndex, colIndex, value);
-             colIndex++;
-             if (colIndex == 3)
-                 break;
-         }
-         colIndex = 1;
-         rowIndex++;
-     }
- }
+    int rowIndex = 2;
+    int colIndex = 1;
+    //Get the value from the DataTable and set the value for the chart data
+    foreach (DataRow row in dataTable.Rows)
+    {
+        foreach (object val in row.ItemArray)
+        {
+            string value = val.ToString();
+            chart.ChartData.SetValue(rowIndex, colIndex, value);
+            colIndex++;
+            if (colIndex == 3)
+                break;
+        }
+        colIndex = 1;
+        rowIndex++;
+    }
+}
 
 {% endhighlight %}
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
@@ -663,23 +676,24 @@ Private Function GetDataTable() As DataTable
 
     Dim path As String = System.IO.Path.GetFullPath("..\..\Data\DataBase.mdb")
     ' Create a new instance of OleDbConnection.
-    Dim connection As New OleDbConnection()
-    ' Set the string to open a Database.
-    connection.ConnectionString = "Provider=Microsoft.JET.OLEDB.4.0;Password="""";User ID=Admin;Data Source=" & path
-    ' Open the Database connection.
-    connection.Open()
-    ' Get all the data from the Database.
-    Dim query As New OleDbCommand("select * from Products", connection)
-    ' Create a new instance of OleDbDataAdapter.
-    Dim adapter As New OleDbDataAdapter(query)
-    ' Create a new instance of DataSet.
-    Dim dataSet As New DataSet()
-    ' Add rows in the Dataset.
-    adapter.Fill(dataSet)
-    ' Create a DataTable from the Dataset.
-    Dim table As DataTable = dataSet.Tables(0)
-    table.TableName = "Products"
-    Return table
+    Using connection As New OleDbConnection()
+        ' Set the string to open a Database.
+        connection.ConnectionString = "Provider=Microsoft.JET.OLEDB.4.0;Password="""";User ID=Admin;Data Source=" & path
+        ' Open the Database connection.
+        connection.Open()
+        ' Get all the data from the Database.
+        Dim query As New OleDbCommand("select * from Products", connection)
+        ' Create a new instance of OleDbDataAdapter.
+        Dim adapter As New OleDbDataAdapter(query)
+        ' Create a new instance of DataSet.
+        Dim dataSet As New DataSet()
+        ' Add rows in the Dataset.
+        adapter.Fill(dataSet)
+        ' Create a DataTable from the Dataset.
+        Dim table As DataTable = dataSet.Tables(0)
+        table.TableName = "Products"
+        Return table
+    End Using
 End Function
 
 ' Set the value for the chart.
@@ -712,7 +726,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Refreshing the Chart
 
-The chart may not have the data in the referred excel file instead it may represent some other data. For those charts to have the excel data, it should be refreshed. 
+The chart may not have the data in the referred Excel file; instead, it may represent some other data. For those charts to display the Excel data, the chart should be refreshed. 
 
 The following code example illustrates how to refresh the chart.
 
@@ -730,41 +744,44 @@ using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx)
     // Refreshes the chart data. Set true to evaluate Excel formulas before refreshing,
     // or false to refresh only the data without evaluating formulas.
     chart.Refresh(false);
-    MemoryStream stream = new MemoryStream();
-    document.Save(stream, FormatType.Docx);
+    //Saves the Word document to MemoryStream
+    using (MemoryStream stream = new MemoryStream())
+    {
+        document.Save(stream, FormatType.Docx);
+    }
     //Closes the Word document
-    document.Close();
 }
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads the template document
-WordDocument document = new WordDocument("Template.docx");
-//Gets the last paragraph
-WParagraph paragraph = document.LastParagraph;
-//Gets the chart entity from the paragraph items
-WChart chart = paragraph.ChildEntities[1] as WChart;
-// Refreshes the chart data. Set true to evaluate Excel formulas before refreshing,
-// or false to refresh only the data without evaluating formulas.
-chart.Refresh(false);
-//Saves and closes the document
-document.Save("Sample.docx", FormatType.Docx);
-document.Close();
+using (WordDocument document = new WordDocument("Template.docx"))
+{
+    //Gets the last paragraph
+    WParagraph paragraph = document.LastParagraph;
+    //Gets the chart entity from the paragraph items
+    WChart chart = paragraph.ChildEntities[1] as WChart;
+    // Refreshes the chart data. Set true to evaluate Excel formulas before refreshing,
+    // or false to refresh only the data without evaluating formulas.
+    chart.Refresh(false);
+    //Saves the document
+    document.Save("Sample.docx", FormatType.Docx);
+}
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Loads the template document
-Dim document As New WordDocument("Template.docx")
-'Gets the last paragraph
-Dim paragraph As WParagraph = document.LastParagraph
-'Gets the chart entity from the paragraph items
-Dim chart As WChart = TryCast(paragraph.ChildEntities(1), WChart)
-'Refreshes the chart data. Set true to evaluate Excel formulas before refreshing,
-'or false to refresh only the data without evaluating formulas.
-chart.Refresh(false)
-'Saves and closes the document
-document.Save("Sample.docx", FormatType.Docx)
-document.Close()
+Using document As New WordDocument("Template.docx")
+    'Gets the last paragraph
+    Dim paragraph As WParagraph = document.LastParagraph
+    'Gets the chart entity from the paragraph items
+    Dim chart As WChart = TryCast(paragraph.ChildEntities(1), WChart)
+    'Refreshes the chart data. Set True to evaluate Excel formulas before refreshing,
+    'or False to refresh only the data without evaluating formulas.
+    chart.Refresh(False)
+    'Saves the document
+    document.Save("Sample.docx", FormatType.Docx)
+End Using
 {% endhighlight %}
 
 {% endtabs %}
@@ -792,47 +809,50 @@ using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx)
     chart.ChartData.SetValue(4, 2, 70);
     //Refreshes chart data to set the modified values
     chart.Refresh();
-    MemoryStream stream = new MemoryStream();
-    document.Save(stream, FormatType.Docx);
+    //Saves the Word document to MemoryStream
+    using (MemoryStream stream = new MemoryStream())
+    {
+        document.Save(stream, FormatType.Docx);
+    }
     //Closes the Word document
-    document.Close();
 }
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads the template document
-WordDocument document = new WordDocument("Template.docx");
-//Gets the last paragraph
-WParagraph paragraph = document.LastParagraph;
-//Gets the chart entity from the paragraph items
-WChart chart = paragraph.ChildEntities[0] as WChart;
-//Modifies the data values of chart
-chart.ChartData.SetValue(2, 2, 120);
-chart.ChartData.SetValue(3, 2, 60);
-chart.ChartData.SetValue(4, 2, 70);
-//Refreshes chart data to set the modified values
-chart.Refresh();
-//Saves and closes the document
-document.Save("Sample.docx", FormatType.Docx);
-document.Close();
+using (WordDocument document = new WordDocument("Template.docx"))
+{
+    //Gets the last paragraph
+    WParagraph paragraph = document.LastParagraph;
+    //Gets the chart entity from the paragraph items
+    WChart chart = paragraph.ChildEntities[0] as WChart;
+    //Modifies the data values of chart
+    chart.ChartData.SetValue(2, 2, 120);
+    chart.ChartData.SetValue(3, 2, 60);
+    chart.ChartData.SetValue(4, 2, 70);
+    //Refreshes chart data to set the modified values
+    chart.Refresh();
+    //Saves the document
+    document.Save("Sample.docx", FormatType.Docx);
+}
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Loads the template document
-Dim document As New WordDocument("Template.docx")
-'Gets the last paragraph
-Dim paragraph As WParagraph = document.LastParagraph
-'Gets the chart entity from the paragraph items
-Dim chart As WChart = TryCast(paragraph.ChildEntities(0), WChart)
-'Modifies the data values of chart
-chart.ChartData.SetValue(2, 2, 120)
-chart.ChartData.SetValue(3, 2, 60)
-chart.ChartData.SetValue(4, 2, 70)
-'Refreshes chart data to set the modified values
-chart.Refresh()
-'Saves and closes the document
-document.Save("Sample.docx", FormatType.Docx)
-document.Close()
+Using document As New WordDocument("Template.docx")
+    'Gets the last paragraph
+    Dim paragraph As WParagraph = document.LastParagraph
+    'Gets the chart entity from the paragraph items
+    Dim chart As WChart = TryCast(paragraph.ChildEntities(0), WChart)
+    'Modifies the data values of chart
+    chart.ChartData.SetValue(2, 2, 120)
+    chart.ChartData.SetValue(3, 2, 60)
+    chart.ChartData.SetValue(4, 2, 70)
+    'Refreshes chart data to set the modified values
+    chart.Refresh()
+    'Saves the document
+    document.Save("Sample.docx", FormatType.Docx)
+End Using
 {% endhighlight %}
 
 {% endtabs %}
@@ -841,7 +861,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Customizing the Chart & its elements
 
-A Chart is composed of various elements such as plot area, chart area, title area, legend, data labels, axis etc. The following screenshot illustrates the various elements of chart.
+A Chart is composed of various elements such as plot area, chart area, title area, legend, data labels, axis, etc. The following screenshot illustrates the various elements of a chart.
 
 ![Illustrates the various elements of chart](workingwithchartsimages/Chart-Basic-Elements.jpeg)
 
@@ -863,7 +883,7 @@ Customize the **chart area** by changing its border, colors, transparency, and m
 Customize the **chart plot area** by changing its border, colors, transparency, position and adding image using the **Word (DocIO) library**. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/net/charts/chart-plot-area).
 
 ### Chart Series
- Customize the **chart series** by changing the series name, type, color, border, and more using the **Word (DocIO) library**. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/net/charts/chart-series).
+Customize the **chart series** by changing the series name, type, color, border, and more using the **Word (DocIO) library**. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/net/charts/chart-series).
 
 ### Chart Legend
 Customize the **chart legend** by changing the position, border, and modifying the legend entry using the **Word (DocIO) library**. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/net/charts/chart-legend).
@@ -877,6 +897,8 @@ Customize the **chart axes** by changing the title, border, font, rotation angle
 ## Add Data Table
 
 To add a data table to a chart, enable the [HasDataTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WChart.html#Syncfusion_DocIO_DLS_WChart_HasDataTable) property of the [WChart](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WChart.html) class. By default, it is false, hiding the data table. Setting this property to true displays the data table beneath the chart.
+
+N> Ensure the [DataRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WChart.html#Syncfusion_DocIO_DLS_WChart_DataRange) property of the `WChart` is set before enabling `HasDataTable`; otherwise the data table renders without values.
 
 The following code example illustrates how to add data table for chart.
 
@@ -913,80 +935,80 @@ using (WordDocument document = new WordDocument())
     officeChartDataTable.HasHorzBorder = true;
     officeChartDataTable.HasVertBorder = true;
     //Saves the Word document to MemoryStream
-    MemoryStream stream = new MemoryStream();
-    document.Save(stream, FormatType.Docx);
-    document.Close();
+    using (MemoryStream stream = new MemoryStream())
+    {
+        document.Save(stream, FormatType.Docx);
+    }
 }
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 // Create a new Word document.
-WordDocument document = new WordDocument();
-// Add a section to the document.
-IWSection section = document.AddSection();
-// Add a paragraph to the section.
-IWParagraph paragraph = section.AddParagraph();
-// Create and append the chart to the paragraph.
-WChart chart = paragraph.AppendChart(446, 270);
-// Set chart type.
-chart.ChartType = OfficeChartType.Column_Clustered;
-// Set chart data.
-chart.ChartData.SetValue(2, 1, "Apples");
-chart.ChartData.SetValue(3, 1, "Grapes");
-chart.ChartData.SetValue(4, 1, "Banana");
-chart.ChartData.SetValue(1, 2, "Joey");
-chart.ChartData.SetValue(2, 2, 5);
-chart.ChartData.SetValue(3, 2, 4);
-chart.ChartData.SetValue(4, 2, 4);
-// Define the data range for the chart.
-chart.DataRange = chart.ChartData[1, 1, 4, 2];
-// Add data table to the chart.
-chart.HasDataTable = true;
-IOfficeChartDataTable officeChartDataTable = chart.DataTable;
-// Customize the data table appearance.
-officeChartDataTable.ShowSeriesKeys = true;
-officeChartDataTable.HasBorders = true;
-officeChartDataTable.HasHorzBorder = true;
-officeChartDataTable.HasVertBorder = true;
-//Saves the document
-document.Save("Sample.docx", FormatType.Docx);
-//Closes the document
-document.Close();
+using (WordDocument document = new WordDocument())
+{
+    // Add a section to the document.
+    IWSection section = document.AddSection();
+    // Add a paragraph to the section.
+    IWParagraph paragraph = section.AddParagraph();
+    // Create and append the chart to the paragraph.
+    WChart chart = paragraph.AppendChart(446, 270);
+    // Set chart type.
+    chart.ChartType = OfficeChartType.Column_Clustered;
+    // Set chart data.
+    chart.ChartData.SetValue(2, 1, "Apples");
+    chart.ChartData.SetValue(3, 1, "Grapes");
+    chart.ChartData.SetValue(4, 1, "Banana");
+    chart.ChartData.SetValue(1, 2, "Joey");
+    chart.ChartData.SetValue(2, 2, 5);
+    chart.ChartData.SetValue(3, 2, 4);
+    chart.ChartData.SetValue(4, 2, 4);
+    // Define the data range for the chart.
+    chart.DataRange = chart.ChartData[1, 1, 4, 2];
+    // Add data table to the chart.
+    chart.HasDataTable = true;
+    IOfficeChartDataTable officeChartDataTable = chart.DataTable;
+    // Customize the data table appearance.
+    officeChartDataTable.ShowSeriesKeys = true;
+    officeChartDataTable.HasBorders = true;
+    officeChartDataTable.HasHorzBorder = true;
+    officeChartDataTable.HasVertBorder = true;
+    //Saves the document
+    document.Save("Sample.docx", FormatType.Docx);
+}
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 ' Create a new Word document.
-Dim document As New WordDocument()
-' Add a section to the document.
-Dim section As IWSection = document.AddSection()
-' Add a paragraph to the section.
-Dim paragraph As IWParagraph = section.AddParagraph()
-' Create and append the chart to the paragraph.
-Dim chart As WChart = paragraph.AppendChart(446, 270)
-' Set chart type.
-chart.ChartType = OfficeChartType.Column_Clustered
-' Set chart data.
-chart.ChartData.SetValue(2, 1, "Apples")
-chart.ChartData.SetValue(3, 1, "Grapes")
-chart.ChartData.SetValue(4, 1, "Banana")
-chart.ChartData.SetValue(1, 2, "Joey")
-chart.ChartData.SetValue(2, 2, 5)
-chart.ChartData.SetValue(3, 2, 4)
-chart.ChartData.SetValue(4, 2, 4)
-' Define the data range for the chart.
-chart.DataRange = chart.ChartData(1, 1, 4, 2)
-' Add data table to the chart.
-chart.HasDataTable = True
-Dim officeChartDataTable As IOfficeChartDataTable = chart.DataTable
-' Customize the data table appearance.
-officeChartDataTable.ShowSeriesKeys = True
-officeChartDataTable.HasBorders = True
-officeChartDataTable.HasHorzBorder = True
-officeChartDataTable.HasVertBorder = True
-' Save the document.
-document.Save("Sample.docx", FormatType.Docx)
-' Close the document.
-document.Close()
+Using document As New WordDocument()
+    ' Add a section to the document.
+    Dim section As IWSection = document.AddSection()
+    ' Add a paragraph to the section.
+    Dim paragraph As IWParagraph = section.AddParagraph()
+    ' Create and append the chart to the paragraph.
+    Dim chart As WChart = paragraph.AppendChart(446, 270)
+    ' Set chart type.
+    chart.ChartType = OfficeChartType.Column_Clustered
+    ' Set chart data.
+    chart.ChartData.SetValue(2, 1, "Apples")
+    chart.ChartData.SetValue(3, 1, "Grapes")
+    chart.ChartData.SetValue(4, 1, "Banana")
+    chart.ChartData.SetValue(1, 2, "Joey")
+    chart.ChartData.SetValue(2, 2, 5)
+    chart.ChartData.SetValue(3, 2, 4)
+    chart.ChartData.SetValue(4, 2, 4)
+    ' Define the data range for the chart.
+    chart.DataRange = chart.ChartData(1, 1, 4, 2)
+    ' Add data table to the chart.
+    chart.HasDataTable = True
+    Dim officeChartDataTable As IOfficeChartDataTable = chart.DataTable
+    ' Customize the data table appearance.
+    officeChartDataTable.ShowSeriesKeys = True
+    officeChartDataTable.HasBorders = True
+    officeChartDataTable.HasHorzBorder = True
+    officeChartDataTable.HasVertBorder = True
+    ' Save the document.
+    document.Save("Sample.docx", FormatType.Docx)
+End Using
 {% endhighlight %}
 
 {% endtabs %}
@@ -995,186 +1017,195 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Applying 3D Formats
 
-Essential<sup>&reg;</sup> DocIO allows to modify the side wall, back wall, floor of the 3D chart. The following code snippet illustrates how to apply properties for side wall, floor and back wall of a 3D chart.
+Essential<sup>&reg;</sup> DocIO allows you to modify the side wall, back wall, and floor of a 3D chart. The following code snippet illustrates how to apply properties for the side wall, floor, and back wall of a 3D chart.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 //Creates a new Word document
-WordDocument document = new WordDocument();
-//Adds section to the document
-IWSection sec = document.AddSection();
-//Adds paragraph to the section
-IWParagraph paragraph = sec.AddParagraph();
-//Loads the excel file as stream
-Stream excelStream = File.OpenRead("Excel_Template.xlsx");
-//Creates and Appends chart to the paragraph with excel stream as parameter
-WChart chart = paragraph.AppendChart(excelStream, 1, "B2:C6", 470, 300);
-//Sets chart type and title
-chart.ChartType = OfficeChartType.Column_Clustered_3D;
-chart.ChartTitle = "Purchase Details";
-chart.ChartTitleArea.FontName = "Calibri";
-chart.ChartTitleArea.Size = 14;
-chart.ChartArea.Border.LinePattern = OfficeChartLinePattern.None;          
-//Sets name to chart series            
-chart.Series[0].Name = "Sum of Purchases";
-chart.Series[1].Name = "Sum of Future Expenses";
-chart.PrimaryCategoryAxis.Title = "Products";
-chart.PrimaryValueAxis.Title = "In Dollars";
-//Sets position of legend
-chart.Legend.Position = OfficeLegendPosition.Bottom;
-//Sets rotation and elevation values
-chart.Rotation = 20;
-chart.Elevation = 15;
-//Sets side wall properties
-chart.SideWall.Fill.FillType = OfficeFillType.SolidColor;
+using (WordDocument document = new WordDocument())
+{
+    //Adds section to the document
+    IWSection sec = document.AddSection();
+    //Adds paragraph to the section
+    IWParagraph paragraph = sec.AddParagraph();
+    //Loads the excel file as stream
+    using (Stream excelStream = File.OpenRead("Excel_Template.xlsx"))
+    {
+        //Creates and Appends chart to the paragraph with excel stream as parameter
+        WChart chart = paragraph.AppendChart(excelStream, 1, "B2:C6", 470, 300);
+        //Sets chart type and title
+        chart.ChartType = OfficeChartType.Column_Clustered_3D;
+        chart.ChartTitle = "Purchase Details";
+        chart.ChartTitleArea.FontName = "Calibri";
+        chart.ChartTitleArea.Size = 14;
+        chart.ChartArea.Border.LinePattern = OfficeChartLinePattern.None;          
+        //Sets name to chart series            
+        chart.Series[0].Name = "Sum of Purchases";
+        chart.Series[1].Name = "Sum of Future Expenses";
+        chart.PrimaryCategoryAxis.Title = "Products";
+        chart.PrimaryValueAxis.Title = "In Dollars";
+        //Sets position of legend
+        chart.Legend.Position = OfficeLegendPosition.Bottom;
+        //Sets rotation and elevation values
+        chart.Rotation = 20;
+        chart.Elevation = 15;
+        //Sets side wall properties
+        chart.SideWall.Fill.FillType = OfficeFillType.SolidColor;
 chart.SideWall.Fill.ForeColor = Color.White;
 chart.SideWall.Fill.BackColor = Color.White;
-chart.SideWall.Border.LineColor = Syncfusion.Drawing.Color.Beige;
-//Sets floor fill option.
-chart.Floor.Fill.FillType = OfficeFillType.Pattern;
-//Sets the floor pattern Type.
-chart.Floor.Fill.Pattern = OfficeGradientPattern.Pat_Divot;
-//Sets the floor fore and Back ground color.
-chart.Floor.Fill.ForeColor = Syncfusion.Drawing.Color.Blue;
-chart.Floor.Fill.BackColor = Syncfusion.Drawing.Color.White;
-//Sets the floor thickness.
-chart.Floor.Thickness = 3;
-//Sets the back wall fill option.
-chart.BackWall.Fill.FillType = OfficeFillType.Gradient;
-//Sets the Texture Type.
-chart.BackWall.Fill.GradientColorType = OfficeGradientColor.TwoColor;
-chart.BackWall.Fill.GradientStyle = OfficeGradientStyle.Diagonl_Down;
+        chart.SideWall.Border.LineColor = Syncfusion.Drawing.Color.Beige;
+        //Sets floor fill option.
+        chart.Floor.Fill.FillType = OfficeFillType.Pattern;
+        //Sets the floor pattern Type.
+        chart.Floor.Fill.Pattern = OfficeGradientPattern.Pat_Divot;
+        //Sets the floor fore and Back ground color.
+        chart.Floor.Fill.ForeColor = Syncfusion.Drawing.Color.Blue;
+        chart.Floor.Fill.BackColor = Syncfusion.Drawing.Color.White;
+        //Sets the floor thickness.
+        chart.Floor.Thickness = 3;
+        //Sets the back wall fill option.
+        chart.BackWall.Fill.FillType = OfficeFillType.Gradient;
+        //Sets the gradient color type.
+        chart.BackWall.Fill.GradientColorType = OfficeGradientColor.TwoColor;
+        chart.BackWall.Fill.GradientStyle = OfficeGradientStyle.Diagonl_Down;
 chart.BackWall.Fill.ForeColor = Color.WhiteSmoke;
 chart.BackWall.Fill.BackColor = Color.LightBlue;
-//Sets the Border Line color.
-chart.BackWall.Border.LineColor = Syncfusion.Drawing.Color.Wheat;
-//Sets the Picture Type.
-chart.BackWall.PictureUnit = OfficeChartPictureType.stretch;
-//Sets the back wall thickness.
-chart.BackWall.Thickness = 10;
-//Saves and closes the document
-MemoryStream stream = new MemoryStream();
-document.Save(stream, FormatType.Docx);
-document.Close();
+        //Sets the Border Line color.
+        chart.BackWall.Border.LineColor = Syncfusion.Drawing.Color.Wheat;
+        //Sets the Picture Type.
+        chart.BackWall.PictureUnit = OfficeChartPictureType.stretch;
+        //Sets the back wall thickness.
+        chart.BackWall.Thickness = 10;
+    }
+    //Saves and closes the document
+    using (MemoryStream stream = new MemoryStream())
+    {
+        document.Save(stream, FormatType.Docx);
+    }
+}
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Creates a new Word document
-WordDocument document = new WordDocument();
-//Adds section to the document
-IWSection sec = document.AddSection();
-//Adds paragraph to the section
-IWParagraph paragraph = sec.AddParagraph();
-//Loads the excel file as stream
-Stream excelStream = File.OpenRead("Excel_Template.xlsx");
-//Creates and Appends chart to the paragraph with excel stream as parameter
-WChart chart = paragraph.AppendChart(excelStream, 1, "B2:C6", 470, 300);
-//Sets chart type and title
-chart.ChartType = OfficeChartType.Column_Clustered_3D;
-chart.ChartTitle = "Purchase Details";
-chart.ChartTitleArea.FontName = "Calibri";
-chart.ChartTitleArea.Size = 14;
-chart.ChartArea.Border.LinePattern = OfficeChartLinePattern.None;          
-//Sets name to chart series            
-chart.Series[0].Name = "Sum of Purchases";
-chart.Series[1].Name = "Sum of Future Expenses";
-chart.PrimaryCategoryAxis.Title = "Products";
-chart.PrimaryValueAxis.Title = "In Dollars";
-//Sets position of legend
-chart.Legend.Position = OfficeLegendPosition.Bottom;
-//Sets rotation and elevation values
-chart.Rotation = 20;
-chart.Elevation = 15;
-//Sets side wall properties
-chart.SideWall.Fill.FillType = OfficeFillType.SolidColor;
-chart.SideWall.Fill.ForeColor = Color.White;
-chart.SideWall.Fill.BackColor = Color.White;
-chart.SideWall.Border.LineColor = System.Drawing.Color.Beige;
-//Sets floor fill option.
-chart.Floor.Fill.FillType = OfficeFillType.Pattern;
-//Sets the floor pattern Type.
-chart.Floor.Fill.Pattern = OfficeGradientPattern.Pat_Divot;
-//Sets the floor fore and Back ground color.
-chart.Floor.Fill.ForeColor = System.Drawing.Color.Blue;
-chart.Floor.Fill.BackColor = System.Drawing.Color.White;
-//Sets the floor thickness.
-chart.Floor.Thickness = 3;
-//Sets the back wall fill option.
-chart.BackWall.Fill.FillType = OfficeFillType.Gradient;
-//Sets the Texture Type.
-chart.BackWall.Fill.GradientColorType = OfficeGradientColor.TwoColor;
-chart.BackWall.Fill.GradientStyle = OfficeGradientStyle.Diagonl_Down;
-chart.BackWall.Fill.ForeColor = Color.WhiteSmoke;
-chart.BackWall.Fill.BackColor = Color.LightBlue;
-//Sets the Border Line color.
-chart.BackWall.Border.LineColor = System.Drawing.Color.Wheat;
-//Sets the Picture Type.
-chart.BackWall.PictureUnit = OfficeChartPictureType.stretch;
-//Sets the back wall thickness.
-chart.BackWall.Thickness = 10;
-//Saves and closes the document
-document.Save("Sample.docx", FormatType.Docx);
-document.Close();
+using (WordDocument document = new WordDocument())
+{
+    //Adds section to the document
+    IWSection sec = document.AddSection();
+    //Adds paragraph to the section
+    IWParagraph paragraph = sec.AddParagraph();
+    //Loads the excel file as stream
+    using (Stream excelStream = File.OpenRead("Excel_Template.xlsx"))
+    {
+        //Creates and Appends chart to the paragraph with excel stream as parameter
+        WChart chart = paragraph.AppendChart(excelStream, 1, "B2:C6", 470, 300);
+        //Sets chart type and title
+        chart.ChartType = OfficeChartType.Column_Clustered_3D;
+        chart.ChartTitle = "Purchase Details";
+        chart.ChartTitleArea.FontName = "Calibri";
+        chart.ChartTitleArea.Size = 14;
+        chart.ChartArea.Border.LinePattern = OfficeChartLinePattern.None;          
+        //Sets name to chart series            
+        chart.Series[0].Name = "Sum of Purchases";
+        chart.Series[1].Name = "Sum of Future Expenses";
+        chart.PrimaryCategoryAxis.Title = "Products";
+        chart.PrimaryValueAxis.Title = "In Dollars";
+        //Sets position of legend
+        chart.Legend.Position = OfficeLegendPosition.Bottom;
+        //Sets rotation and elevation values
+        chart.Rotation = 20;
+        chart.Elevation = 15;
+        //Sets side wall properties
+        chart.SideWall.Fill.FillType = OfficeFillType.SolidColor;
+        chart.SideWall.Fill.ForeColor = Color.White;
+        chart.SideWall.Fill.BackColor = Color.White;
+        chart.SideWall.Border.LineColor = System.Drawing.Color.Beige;
+        //Sets floor fill option.
+        chart.Floor.Fill.FillType = OfficeFillType.Pattern;
+        //Sets the floor pattern Type.
+        chart.Floor.Fill.Pattern = OfficeGradientPattern.Pat_Divot;
+        //Sets the floor fore and Back ground color.
+        chart.Floor.Fill.ForeColor = System.Drawing.Color.Blue;
+        chart.Floor.Fill.BackColor = System.Drawing.Color.White;
+        //Sets the floor thickness.
+        chart.Floor.Thickness = 3;
+        //Sets the back wall fill option.
+        chart.BackWall.Fill.FillType = OfficeFillType.Gradient;
+        //Sets the gradient color type.
+        chart.BackWall.Fill.GradientColorType = OfficeGradientColor.TwoColor;
+        chart.BackWall.Fill.GradientStyle = OfficeGradientStyle.Diagonl_Down;
+        chart.BackWall.Fill.ForeColor = Color.WhiteSmoke;
+        chart.BackWall.Fill.BackColor = Color.LightBlue;
+        //Sets the Border Line color.
+        chart.BackWall.Border.LineColor = System.Drawing.Color.Wheat;
+        //Sets the Picture Type.
+        chart.BackWall.PictureUnit = OfficeChartPictureType.stretch;
+        //Sets the back wall thickness.
+        chart.BackWall.Thickness = 10;
+    }
+    //Saves and closes the document
+    document.Save("Sample.docx", FormatType.Docx);
+}
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Creates a new Word document
-Dim document As New WordDocument()
-'Adds section to the document
-Dim sec As IWSection = document.AddSection()
-'Adds paragraph to the section
-Dim paragraph As IWParagraph = sec.AddParagraph()
-'Loads the excel file as stream
-Dim excelStream As Stream = File.OpenRead("Excel_Template.xlsx")
-'Creates and Appends chart to the paragraph with excel stream as parameter
-Dim chart As WChart = paragraph.AppendChart(excelStream, 1, "B2:C6", 470, 300)
-'Sets chart type and title
-chart.ChartType = OfficeChartType.Column_Clustered_3D
-chart.ChartTitle = "Purchase Details"
-chart.ChartTitleArea.FontName = "Calibri"
-chart.ChartTitleArea.Size = 14
-chart.ChartArea.Border.LinePattern = OfficeChartLinePattern.None
-'Sets name to chart series            
-chart.Series(0).Name = "Sum of Purchases"
-chart.Series(1).Name = "Sum of Future Expenses"
-chart.PrimaryCategoryAxis.Title = "Products"
-chart.PrimaryValueAxis.Title = "In Dollars"
-'Sets position of legend
-chart.Legend.Position = OfficeLegendPosition.Bottom
-'Sets rotation and elevation values
-chart.Rotation = 20
-chart.Elevation = 15
-'Sets side wall properties
-chart.SideWall.Fill.FillType = OfficeFillType.SolidColor
-chart.SideWall.Fill.ForeColor = Color.White
-chart.SideWall.Fill.BackColor = Color.White
-chart.SideWall.Border.LineColor = System.Drawing.Color.Beige
-'Sets floor fill option.
-chart.Floor.Fill.FillType = OfficeFillType.Pattern
-'Sets the floor pattern Type.
-chart.Floor.Fill.Pattern = OfficeGradientPattern.Pat_Divot
-'Sets the floor fore and Back ground color.
-chart.Floor.Fill.ForeColor = System.Drawing.Color.Blue
-chart.Floor.Fill.BackColor = System.Drawing.Color.White
-'Sets the floor thickness.
-chart.Floor.Thickness = 3
-'Sets the back wall fill option.
-chart.BackWall.Fill.FillType = OfficeFillType.Gradient
-'Sets the Texture Type.
-chart.BackWall.Fill.GradientColorType = OfficeGradientColor.TwoColor
-chart.BackWall.Fill.GradientStyle = OfficeGradientStyle.Diagonl_Down
-chart.BackWall.Fill.ForeColor = Color.WhiteSmoke
-chart.BackWall.Fill.BackColor = Color.LightBlue
-'Sets the Border Line color.
-chart.BackWall.Border.LineColor = System.Drawing.Color.Wheat
-'Sets the Picture Type.
-chart.BackWall.PictureUnit = OfficeChartPictureType.stretch
-'Sets the back wall thickness.
-chart.BackWall.Thickness = 10
-'Saves and closes the document
-document.Save("Sample.docx", FormatType.Docx)
-document.Close()
+Using document As New WordDocument()
+    'Adds section to the document
+    Dim sec As IWSection = document.AddSection()
+    'Adds paragraph to the section
+    Dim paragraph As IWParagraph = sec.AddParagraph()
+    'Loads the excel file as stream
+    Using excelStream As Stream = File.OpenRead("Excel_Template.xlsx")
+    'Creates and Appends chart to the paragraph with excel stream as parameter
+    Dim chart As WChart = paragraph.AppendChart(excelStream, 1, "B2:C6", 470, 300)
+    'Sets chart type and title
+    chart.ChartType = OfficeChartType.Column_Clustered_3D
+    chart.ChartTitle = "Purchase Details"
+    chart.ChartTitleArea.FontName = "Calibri"
+    chart.ChartTitleArea.Size = 14
+    chart.ChartArea.Border.LinePattern = OfficeChartLinePattern.None
+    'Sets name to chart series            
+    chart.Series(0).Name = "Sum of Purchases"
+    chart.Series(1).Name = "Sum of Future Expenses"
+    chart.PrimaryCategoryAxis.Title = "Products"
+    chart.PrimaryValueAxis.Title = "In Dollars"
+    'Sets position of legend
+    chart.Legend.Position = OfficeLegendPosition.Bottom
+    'Sets rotation and elevation values
+    chart.Rotation = 20
+    chart.Elevation = 15
+    'Sets side wall properties
+    chart.SideWall.Fill.FillType = OfficeFillType.SolidColor
+    chart.SideWall.Fill.ForeColor = Color.White
+    chart.SideWall.Fill.BackColor = Color.White
+    chart.SideWall.Border.LineColor = System.Drawing.Color.Beige
+    'Sets floor fill option.
+    chart.Floor.Fill.FillType = OfficeFillType.Pattern
+    'Sets the floor pattern Type.
+    chart.Floor.Fill.Pattern = OfficeGradientPattern.Pat_Divot
+    'Sets the floor fore and Back ground color.
+    chart.Floor.Fill.ForeColor = System.Drawing.Color.Blue
+    chart.Floor.Fill.BackColor = System.Drawing.Color.White
+    'Sets the floor thickness.
+    chart.Floor.Thickness = 3
+    'Sets the back wall fill option.
+    chart.BackWall.Fill.FillType = OfficeFillType.Gradient
+    'Sets the gradient color type.
+    chart.BackWall.Fill.GradientColorType = OfficeGradientColor.TwoColor
+    chart.BackWall.Fill.GradientStyle = OfficeGradientStyle.Diagonl_Down
+    chart.BackWall.Fill.ForeColor = Color.WhiteSmoke
+    chart.BackWall.Fill.BackColor = Color.LightBlue
+    'Sets the Border Line color.
+    chart.BackWall.Border.LineColor = System.Drawing.Color.Wheat
+    'Sets the Picture Type.
+    chart.BackWall.PictureUnit = OfficeChartPictureType.stretch
+    'Sets the back wall thickness.
+    chart.BackWall.Thickness = 10
+    End Using
+    'Saves and closes the document
+    document.Save("Sample.docx", FormatType.Docx)
+End Using
 {% endhighlight %}
 
 {% endtabs %}
@@ -1190,59 +1221,62 @@ The following code example illustrates how to remove the chart from the document
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Charts/Remove-chart-from-Word-document/.NET/Remove-chart-from-Word-document/Program.cs" %}
 //Loads the template document 
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
-//Gets the last paragraph
-WParagraph paragraph = document.LastParagraph;
-//Gets the chart entity and remove it from paragraph
-foreach (ParagraphItem item in paragraph.ChildEntities)
+using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
 {
-    if (item is WChart)
+    //Gets the last paragraph
+    WParagraph paragraph = document.LastParagraph;
+    //Gets the chart entity and remove it from paragraph
+    foreach (ParagraphItem item in paragraph.ChildEntities)
     {
-        paragraph.ChildEntities.Remove(item);
-        break;
+        if (item is WChart)
+        {
+            paragraph.ChildEntities.Remove(item);
+            break;
+        }
+    }
+    //Saves the Word document to  MemoryStream
+    using (MemoryStream stream = new MemoryStream())
+    {
+        document.Save(stream, FormatType.Docx);
     }
 }
-//Saves the Word document to  MemoryStream
-MemoryStream stream = new MemoryStream();
-document.Save(stream, FormatType.Docx);
-//Closes the document
-document.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads the template document
-WordDocument document = new WordDocument("Template.docx");
-//Gets the last paragraph
-WParagraph paragraph = document.LastParagraph;
-//Gets the chart entity and remove it from paragraph
-foreach (ParagraphItem item in paragraph.ChildEntities)
+using (WordDocument document = new WordDocument("Template.docx"))
 {
-    if (item is WChart)
+    //Gets the last paragraph
+    WParagraph paragraph = document.LastParagraph;
+    //Gets the chart entity and remove it from paragraph
+    foreach (ParagraphItem item in paragraph.ChildEntities)
     {
-        paragraph.ChildEntities.Remove(item);
-        break;
+        if (item is WChart)
+        {
+            paragraph.ChildEntities.Remove(item);
+            break;
+        }
     }
+    //Saves the document
+    document.Save("Sample.docx", FormatType.Docx);
 }
-//Saves and closes the document
-document.Save("Sample.docx", FormatType.Docx);
-document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Loads the template document
-Dim document As New WordDocument("Template.docx")
-'Gets the last paragraph
-Dim paragraph As WParagraph = document.LastParagraph
-'Gets the chart entity and removes it from paragraph
-For Each item As ParagraphItem In paragraph.ChildEntities
-If TypeOf item Is WChart Then
-paragraph.ChildEntities.Remove(item)
-Exit For
-End If
-Next
-'Saves and closes the document
-document.Save("Sample.docx", FormatType.Docx)
-document.Close()
+Using document As New WordDocument("Template.docx")
+    'Gets the last paragraph
+    Dim paragraph As WParagraph = document.LastParagraph
+    'Gets the chart entity and removes it from paragraph
+    For Each item As ParagraphItem In paragraph.ChildEntities
+        If TypeOf item Is WChart Then
+            paragraph.ChildEntities.Remove(item)
+            Exit For
+        End If
+    Next
+    'Saves the document
+    document.Save("Sample.docx", FormatType.Docx)
+End Using
 {% endhighlight %}
 
 {% endtabs %}
@@ -1339,57 +1373,58 @@ using (FileStream docStream = new FileStream("TemplateWithChart.docx", FileMode.
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads an existing Word document.
-WordDocument wordDocument = new WordDocument("TemplateWithChart.docx", FormatType.Docx);
-//Initializes the ChartToImageConverter for converting charts during Word to image conversion.
-wordDocument.ChartToImageConverter = new ChartToImageConverter();
-//Sets the scaling mode for charts. (Normal mode reduces the file size)
-wordDocument.ChartToImageConverter.ScalingMode = ScalingMode.Normal;
-//Gets the first paragraph from section.
-WParagraph paragraph = wordDocument.LastSection.Paragraphs[0];
-//Gets the chart element in the paragarph item.
-WChart chart = paragraph.ChildEntities[0] as WChart;
-//Creating the memory stream for chart image.
-MemoryStream stream = new MemoryStream();
-//Converts chart to image.
-wordDocument.ChartToImageConverter.SaveAsImage(chart.OfficeChart, stream);
-Image image = Image.FromStream(stream);
-//Dispose the stream.
-stream.Close();
-//Saving image stream to file.
-image.Save("ChartToImage.jpeg", ImageFormat.Jpeg);
-//Closes the document.
-wordDocument.Close();
+using (WordDocument wordDocument = new WordDocument("TemplateWithChart.docx", FormatType.Docx))
+{
+    //Initializes the ChartToImageConverter for converting charts during Word to image conversion.
+    wordDocument.ChartToImageConverter = new ChartToImageConverter();
+    //Sets the scaling mode for charts. (Normal mode reduces the file size)
+    wordDocument.ChartToImageConverter.ScalingMode = ScalingMode.Normal;
+    //Gets the first paragraph from section.
+    WParagraph paragraph = wordDocument.LastSection.Paragraphs[0];
+    //Gets the chart element in the paragraph item.
+    WChart chart = paragraph.ChildEntities[0] as WChart;
+    //Creating the memory stream for chart image.
+    using (MemoryStream stream = new MemoryStream())
+    {
+        //Converts chart to image.
+        wordDocument.ChartToImageConverter.SaveAsImage(chart.OfficeChart, stream);
+        using (Image image = Image.FromStream(stream))
+        {
+            //Saving image stream to file.
+            image.Save("ChartToImage.jpeg", ImageFormat.Jpeg);
+        }
+    }
+}
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Loads an existing Word document.
-Dim wordDocument As New WordDocument("TemplateWithChart.docx", FormatType.Docx)
-'Initializes the ChartToImageConverter for converting charts during Word to image conversion.
-wordDocument.ChartToImageConverter = New ChartToImageConverter()
-'Sets the scaling mode for charts. (Normal mode reduces the file size)
-wordDocument.ChartToImageConverter.ScalingMode = ScalingMode.Normal
-'Gets the first paragraph from section.
-Dim paragraph As WParagraph = wordDocument.LastSection.Paragraphs(0)
-'Gets the chart element in the paragarph item.
-Dim chart As WChart = TryCast(paragraph.ChildEntities(0),WChart)
-'Creating the memory stream for chart image.
-Dim stream As New MemoryStream()
-'Converts chart to image.
-wordDocument.ChartToImageConverter.SaveAsImage(chart.OfficeChart, stream)
-Dim image As Image = Image.FromStream(stream)
-'Dispose the stream.
-stream.Close()
-'Saving image stream to file.
-image.Save("ChartToImage.jpeg", ImageFormat.Jpeg)
-'Closes the document.
-wordDocument.Close()
+Using wordDocument As New WordDocument("TemplateWithChart.docx", FormatType.Docx)
+    'Initializes the ChartToImageConverter for converting charts during Word to image conversion.
+    wordDocument.ChartToImageConverter = New ChartToImageConverter()
+    'Sets the scaling mode for charts. (Normal mode reduces the file size)
+    wordDocument.ChartToImageConverter.ScalingMode = ScalingMode.Normal
+    'Gets the first paragraph from section.
+    Dim paragraph As WParagraph = wordDocument.LastSection.Paragraphs(0)
+    'Gets the chart element in the paragraph item.
+    Dim chart As WChart = TryCast(paragraph.ChildEntities(0), WChart)
+    'Creating the memory stream for chart image.
+    Using stream As New MemoryStream()
+        'Converts chart to image.
+        wordDocument.ChartToImageConverter.SaveAsImage(chart.OfficeChart, stream)
+        Using image As Image = Image.FromStream(stream)
+            'Saving image stream to file.
+            image.Save("ChartToImage.jpeg", ImageFormat.Jpeg)
+        End Using
+    End Using
+End Using
 {% endhighlight %}
 
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Charts/Convert-chart-to-image).
 
-N> 1. To convert chart in Word document as image, it is need to refer chart conversion related [assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required#converting-charts) or [NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#converting-charts).
+N> 1. To convert chart in Word document as image, you need to refer chart conversion related [assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required#converting-charts) or [NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#converting-charts).
 N> 2. The ChartToImageConverter is supported from .NET Framework 4.0 onwards.
 
 ## Supported Chart Types 

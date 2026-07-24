@@ -65,11 +65,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### XHTML Validation
 
-Every HTML content is validated against a Document Type Declaration (DTD) which is a set of mark-up declarations that define a document type for a SGML-family mark-up language (GML, SGML, XML, HTML).
+All HTML content is validated against a Document Type Declaration (DTD), which is a set of markup declarations that define a document type for an SGML-family markup language (GML, SGML, XML, HTML).
 
 #### XHTML validation types
 
-The following XHTML validation types are supported in Essential<sup>&reg;</sup> DocIO while importing an HTML content.
+The following XHTML validation types are supported in Essential<sup>&reg;</sup> DocIO while importing HTML content.
 
 <table>
 <thead>
@@ -88,16 +88,16 @@ The following XHTML validation types are supported in Essential<sup>&reg;</sup> 
 </tr>
 <tr>
 <td><b>XHTMLValidationType.Strict</b></td>
-<td>It does not allows the attributes inside the tag.</td>
+<td>It does not allow the attributes inside the tag.</td>
 </tr>
 </table>
 
 ### Customizing the HTML to Word conversion
 
-The Essential<sup>&reg;</sup> DocIO provides settings while performing HTML to Word conversion as mentioned as follows: 
+The Essential<sup>&reg;</sup> DocIO provides settings while performing HTML to Word conversion as follows:
 
 * Validate the HTML string against XHTML 1.0 Strict and Transitional schema.
-* Insert the HTML string at the specified position of the document body contents.
+* Insert the HTML string at the specified position of the document body.
 * Append HTML string to the specified paragraph.
 
 The following code example shows how to customize the HTML to Word conversion.
@@ -155,9 +155,9 @@ Dim document As New WordDocument("Template.docx")
 'Html string to be inserted
 Dim htmlstring As String = "<p><b>This text is inserted as HTML string.</b></p>"
 'Validates the Html string
-Dim isValidHtmlAs Boolean = document.LastSection.Body.IsValidXHTML(htmlstring, XHTMLValidationType.Transitional)
+Dim isValidHtml As Boolean = document.LastSection.Body.IsValidXHTML(htmlstring, XHTMLValidationType.Transitional)
 'When the Html string passes validation, it is inserted to document
-If isValidHtmlThen
+If isValidHtml Then
     'Appends Html string as first item of the second paragraph in the document
     document.Sections(0).Body.InsertXHTML(htmlstring, 2, 0)
     'Appends the Html string to first paragraph in the document
@@ -172,11 +172,9 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/HTML-conversions/Customize-HTML-to-Word-conversion).
 
-N> 1. Inserting XHTML string is not supported in Silverlight, Windows Phone, and Xamarin applications.
-N> 2. XHTML validation against XHTML 1.0 Strict and Transitional schema is not supported in Windows Store applications.
-N> 3. [XHTMLValidationType.None](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.XHTMLValidationType.html): Default validation while importing HTML file.
-N> 4. [XHTMLValidationType.None](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.XHTMLValidationType.html): Validates the HTML file against XHTML format and it doesn't perform any schema validation.
-N> 5. From version 27.X.X, the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) supports opening HTML even if it contains improper closing tags when validation is set to None.
+N> 1. Inserting XHTML string is not supported in Xamarin applications.
+N> 2. [XHTMLValidationType.None](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.XHTMLValidationType.html) is the default validation while importing an HTML file. It validates the HTML against the XHTML format but does not perform any schema validation.
+N> 3. From version 27.1.X, the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) supports opening HTML even if it contains improper closing tags when validation is set to None.
 
 ### Customize image data
 
@@ -188,21 +186,20 @@ The following code example shows how to load image data based on image source pa
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/HTML-conversions/Customize-image-data/.NET/Customize-image-data/Program.cs" %}
 //Open the file as Stream
-FileStream docStream = new FileStream("Input.html", FileMode.Open, FileAccess.Read);
 //Creates a new instance of WordDocument
-WordDocument document = new WordDocument();
-//Hooks the ImageNodeVisited event to open the image from a specific location
-document.HTMLImportSettings.ImageNodeVisited += OpenImage;
-//Opens the input HTML document
-document.Open(docStream, FormatType.Html);
-//Unhooks the ImageNodeVisited event after loading HTML
-document.HTMLImportSettings.ImageNodeVisited -= OpenImage;
-//Creates an instance of memory stream
-//Saves the Word document to MemoryStream
-MemoryStream stream = new MemoryStream();
-document.Save(stream, FormatType.Docx);
-//Closes the WordDocument instance
-document.Close(); 
+using (WordDocument document = new WordDocument())
+{
+    //Hooks the ImageNodeVisited event to open the image from a specific location
+    document.HTMLImportSettings.ImageNodeVisited += OpenImage;
+    //Opens the input HTML document
+    document.Open("Input.html", FormatType.Html);
+    //Unhooks the ImageNodeVisited event after loading HTML
+    document.HTMLImportSettings.ImageNodeVisited -= OpenImage;
+    //Saves the Word document
+    document.Save("HtmlToWord.docx", FormatType.Docx);
+    //Closes the WordDocument instance
+    document.Close();
+}
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -274,7 +271,7 @@ N> Calling the above event is mandatory in ASP.NET Core, UWP, and Xamarin platfo
 
 * [How to get image from URL while opening HTML in .NET Core targeting applications?](https://www.syncfusion.com/kb/13053/how-to-get-image-from-url-while-opening-html-in-asp-net-core)
 
-### Supported CSS Selector in DocIO
+### Supported CSS Selectors in DocIO
 
 CSS selectors are used to select the HTML elements you want to style and apply a set of CSS rules.
 
@@ -478,7 +475,7 @@ document.SaveOptions.HtmlExportCssStyleSheetFileName = "UserDefinedFileName.css"
 'Export the Word document image as Base-64 embedded image
 document.SaveOptions.HTMLExportImageAsBase64 = True
 'Set value to omit XML declaration in the exported html file.
-document.SaveOptions.HtmlExportOmitXmlDeclaration = True;
+document.SaveOptions.HtmlExportOmitXmlDeclaration = True
 'Saves the document as html file
 export.SaveAsXhtml(document, "WordtoHtml.html")
 document.Close()
@@ -619,8 +616,8 @@ using (FileStream fileStreamPath = new FileStream("Input.docx", FileMode.Open, F
 WordDocument document = new WordDocument("Input.docx", FormatType.Docx);
 //Enable the flag, to save HTML with elements inside body tags alone.
 document.SaveOptions.HtmlExportBodyContentAlone = true;
-//Saves the document as html file
-document.Save(document, "WordtoHtml.html");
+//Saves the document as HTML file
+document.Save("WordtoHtml.html", FormatType.Html);
 document.Close();
 {% endhighlight %}
 
@@ -628,9 +625,9 @@ document.Close();
 'Loads an existing document
 Dim document As New WordDocument("Input.docx")
 'Enable the flag, to save HTML with elements inside body tags alone.
-document.SaveOptions.HtmlExportBodyContentAlone = true
-'Saves the document as html file
-document.Save(document, "WordtoHtml.html")
+document.SaveOptions.HtmlExportBodyContentAlone = True
+'Saves the document as HTML file
+document.Save("WordtoHtml.html", FormatType.Html)
 document.Close()
 {% endhighlight %}
 
@@ -1385,8 +1382,7 @@ Underline types and colors are ignored.
 * [How to convert HTML document to plain text in C# and VB.NET](https://www.syncfusion.com/kb/13194/how-to-convert-html-document-to-plain-text-in-c-and-vb-net)
 * [How to save images into a folder and use that path in Word to HTML?](https://www.syncfusion.com/kb/13949/how-to-save-images-into-a-folder-and-use-that-path-in-word-to-html)
 * [How to replace text in a list paragraph with an HTML string in a Word document?](https://support.syncfusion.com/kb/article/17674/how-to-replace-text-in-a-list-paragraph-with-an-html-string-in-a-word-document)
-* [How to convert Webpage to Word document using C#?](https://support.syncfusion.com/kb/article/17771/how-to-convert-webpage-to-word-document-using-c)
-* [How to merge header, body and footer from different HTML files into a Word document?](https://support.syncfusion.com/kb/article/17771/how-to-convert-webpage-to-word-document-using-c) 
+* [How to merge header, body and footer from different HTML files into a Word document?](https://support.syncfusion.com/kb/article/17771/how-to-convert-a-webpage-to-a-word-document-using-c-in-net-core) 
 * [How to add numbers on pages in HTML to PDF in ASP.NET DocIO?](https://support.syncfusion.com/kb/article/19446/how-to-add-numbers-on-pages-in-html-to-pdf-in-aspnet-docio?isInternalRefresh=False)
 * [How to restart numbering when replacing multiple texts with the same HTML list in Word document?](https://support.syncfusion.com/kb/article/19665/how-to-restart-numbering-when-replacing-multiple-texts-with-the-same-html-list-in-word-document)
 * [How to export content between two bookmarks as HTML in a Word document?](https://support.syncfusion.com/kb/article/20097/how-to-export-content-between-two-bookmarks-as-html-in-a-word-document)

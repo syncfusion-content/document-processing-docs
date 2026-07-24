@@ -215,7 +215,7 @@ End Sub
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/FAQs/Insert-data-table-in-Word-document).
 
-## How to insert a table from HTML string in Word document?
+## How to insert a table from HTML string in a Word document?
 
 An HTML string can be inserted to the Word document at text body or paragraph. The following code illustrates how to insert a table to the document from the HTML string.
 
@@ -294,7 +294,7 @@ foreach (WTableRow row in table.Rows)
             //Sets width as 100 for cells in even column
             cell.Width = 100;
         else
-            //Sets width as 150 for cell in odd column
+            //Sets width as 150 for cells in odd column
             cell.Width = 150;
     }
 }
@@ -322,7 +322,7 @@ foreach (WTableRow row in table.Rows)
             //Sets width as 100 for cells in even column
             cell.Width = 100;
         else
-            //Sets width as 150 for cell in odd column
+            //Sets width as 150 for cells in odd column
             cell.Width = 150;
     }
 }
@@ -347,7 +347,7 @@ For Each row As WTableRow In table.Rows
             'Sets width as 100 for cells in even column
             cell.Width = 100
         Else
-            'Sets width as 150 for cell in odd column
+            'Sets width as 150 for cells in odd column
             cell.Width = 150
         End If
     Next
@@ -418,7 +418,7 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Tables/Set-position-for-table).
 
-## How to set the text direction to a table in Word document?
+## How to set the text direction to a table in a Word document?
 
 The contents of the table cell can be in vertical or horizontal direction. Each cell content can have different text direction. The following code illustrates how to set the text direction for the text in the table.
 
@@ -645,7 +645,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to access a specific cell in a table in a Word document?
 
-To access a specific cell in a table, iterate through the rows and cells of the table. Refer [here]( https://help.syncfusion.com/document-processing/word/word-library/net/working-with-tables#iterating-through-table-elements) for detailed instructions on how to iterate through the table and access particular cell.
+To access a specific cell in a table, iterate through the rows and cells of the table. Refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-tables#iterating-through-table-elements) for detailed instructions on how to iterate through the table and access particular cell.
 
 ## Is it possible to access and edit the content of a table in a Word document?
 
