@@ -122,6 +122,4 @@ The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sd
 
 The following image illustrates the comprehensive selection capabilities available in the Blazor Spreadsheet component, including cell, row, and column selection using both mouse and keyboard interactions.
 
-N> Looking for the full Blazor Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) page
-
 ![An animated GIF demonstrating cell, row, and column selection in the Syncfusion Blazor Spreadsheet.](./images/selection-types.gif)
