@@ -84,7 +84,7 @@ enablePerimeterMode(): void {
 {% endhighlight %}
 {% endtabs %}
 
-#### Exit Perimeter Mode
+### Exit Perimeter Mode
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 

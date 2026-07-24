@@ -54,7 +54,7 @@ export class AppComponent {
 ## Add Stamp Annotation
 
 ### Add Stamp Using the Toolbar
-1. Open the **Annotation Toolbar**.
+1. Open the **Annotation Toolbar** using the [`showAnnotationToolbar`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbar#showannotationtoolbar) method, or ensure it is enabled via [`annotationToolbarItems`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarsettings#annotationtoolbaritems). For details, see [Annotation Toolbar](../../toolbar-customization/annotation-toolbar).
 2. Choose **Stamp** to open the stamp gallery.
 ![Stamp toolbar](../../../javascript-es6/images/stamp_tool.png)
 3. Select a stamp type (**Dynamic**, **Sign Here**, **Standard Business**, or **Custom**) and click on the page to place it.
