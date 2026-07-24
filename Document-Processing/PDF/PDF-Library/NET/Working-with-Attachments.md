@@ -20,8 +20,6 @@ You can add a file attachment to a new PDF document using the [PdfAttachment](ht
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Attachment/Adding-attachment-to-a-PDF-document/.NET/Adding-attachment-to-a-PDF-document/Program.cs" %}
 
-using System;
-
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Interactive;
 
@@ -45,7 +43,6 @@ document.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using System;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Interactive;
 
@@ -67,7 +64,6 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports System
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Interactive
 
@@ -107,8 +103,6 @@ Essential<sup>&reg;</sup> PDF also supports adding attachments to an existing PD
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Attachment/Adding-the-attachments-to-an-existing-PDF-document/.NET/Adding-the-attachments-to-an-existing-PDF-document/Program.cs" %}
 
-using System;
-
 using Syncfusion.Pdf.Interactive;
 using Syncfusion.Pdf.Parsing;
 
@@ -135,7 +129,6 @@ loadedDocument.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using System;
 using Syncfusion.Pdf.Interactive;
 using Syncfusion.Pdf.Parsing;
 
@@ -350,7 +343,6 @@ You can achieve this functionality by using JavaScript actions within Syncfusion
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Attachment/Adding-PDF-Attachments-with-Interactive-Launch-Buttons/.NET/Adding-PDF-Attachments-with-Interactive-Launch-Buttons/Program.cs" %}
-
 
 using Syncfusion.Drawing;
 using Syncfusion.Pdf;
