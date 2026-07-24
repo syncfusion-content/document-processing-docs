@@ -12,7 +12,7 @@ The [.NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-libr
 
 N> If this is your first time working with Google Cloud Platform (GCP), please refer to the dedicated GCP resources. This section explains how to open and save a PDF document in C# using the .NET Core PDF library in GCP.
 
-## Prerequisites 
+## Prerequisites
 
 * A Google Cloud Platform (GCP) account with access to the App Engine service.
 
@@ -21,12 +21,14 @@ N> If this is your first time working with Google Cloud Platform (GCP), please r
 <table>
 <thead>
 <tr>
-<th>
-Google Cloud Platform<br/></th><th>
-NuGet package name<br/></th></tr></thead>
+<th>Google Cloud Platform</th>
+<th>NuGet Package Name</th>
+</tr>
+</thead>
+<tbody>
 <tr>
-<td>
-App Engine<br/></td><td>
-{{'[Syncfusion.PDF.Net.Core](https://www.nuget.org/packages/Syncfusion.PDF.Net.Core)' | markdownify}}<br/>
-</td></tr>
+<td>App Engine</td>
+<td>{{'[Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core)' | markdownify}}</td>
+</tr>
+</tbody>
 </table>
