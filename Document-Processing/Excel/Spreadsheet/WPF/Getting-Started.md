@@ -145,7 +145,7 @@ WPF Spreadsheet control can be added to an application either through the design
  
 {% tabcontent Via Designer %}
 
-1. Add the theme and the [SfSkinManager](https://help.syncfusion.com/cr/wpf/Syncfusion.SfSkinManager.html) namespace to style the control correctly. Include the SfSkinManager namespace in the XAML code and apply the desired theme.
+1.Add the theme and the [SfSkinManager](https://help.syncfusion.com/cr/wpf/Syncfusion.SfSkinManager.html) namespace to style the control correctly. Include the SfSkinManager namespace in the XAML code and apply the desired theme.
 
     {% tabs %}
     {% highlight xaml tabtitle="MainWindow.xaml" %}
@@ -159,11 +159,11 @@ WPF Spreadsheet control can be added to an application either through the design
     {% endhighlight %}
     {% endtabs %}
 
-2. Open the Visual Studio **Toolbox**. Navigate to the Syncfusion<sup>®</sup> Controls tab and find the `SfSpreadsheet` and `SfSpreadsheetRibbon` toolbox items. (If the Syncfusion tab is missing, install the controls using the [Syncfusion<sup>®</sup> WinForms/WPF installer](https://help.syncfusion.com/wpf/visual-studio-integration/visual-studio-extensions/extensions) and restart Visual Studio.)
+2.Open the Visual Studio **Toolbox**. Navigate to the Syncfusion<sup>®</sup> Controls tab and find the `SfSpreadsheet` and `SfSpreadsheetRibbon` toolbox items. (If the Syncfusion tab is missing, install the controls using the [Syncfusion<sup>®</sup> WinForms/WPF installer](https://help.syncfusion.com/wpf/visual-studio-integration/visual-studio-extensions/extensions) and restart Visual Studio.)
 
     ![WPF Spreadsheet Getting-Started](Getting-Started_images/wpf-spreadsheet-getting-started.jpeg)
 
-3. Drag `SfSpreadsheet` and `SfSpreadsheetRibbon` from the Toolbox and drop them in the Designer area.
+3.Drag `SfSpreadsheet` and `SfSpreadsheetRibbon` from the Toolbox and drop them in the Designer area.
 
     ![WPF Spreadsheet Interaction with Ribbon](Getting-Started_images/wpf-spreadsheet-interaction-with-ribbon.jpeg)
 
@@ -182,7 +182,7 @@ WPF Spreadsheet control can be added to an application either through the design
     {% endhighlight %}
     {% endtabs %}
 
-4. Spreadsheet can be added to the application by dragging `SfSpreadsheet` to the Designer area.
+4.Spreadsheet can be added to the application by dragging `SfSpreadsheet` to the Designer area.
 
     {% tabs %}
     {% highlight xaml tabtitle="MainWindow.xaml" %}
@@ -204,7 +204,7 @@ WPF Spreadsheet control can be added to an application either through the design
 
     ![WPF Spreadsheet Drag and Drop](Getting-Started_images/wpf-spreadsheet-dragdrop.jpeg)
 
-5. To make an interaction between Ribbon items and `SfSpreadsheet`, bind the `SfSpreadsheet` as DataContext to the `SfSpreadsheetRibbon`.
+5.To make an interaction between Ribbon items and `SfSpreadsheet`, bind the `SfSpreadsheet` as DataContext to the `SfSpreadsheetRibbon`.
 
    {% tabs %}
    {% highlight xaml tabtitle="MainWindow.xaml" %}
