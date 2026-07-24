@@ -64,7 +64,6 @@ using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Grid;
 using Syncfusion.Drawing;
 using System.Reflection;
-using System.Xml.Linq;
 {% endhighlight %}
 
 {% endtabs %}
@@ -81,6 +80,10 @@ private void OnButtonClicked(object sender, RoutedEventArgs e)
     string basePath = "Load_and_Save_PDF_WinUI_Desktop.Assets.";
     Stream inputStream = assembly.GetManifestResourceStream(basePath + "Input.pdf");
     PdfLoadedDocument document = new PdfLoadedDocument(inputStream);
+    //Get the first page from the document.
+    PdfLoadedPage page = document.Pages[0] as PdfLoadedPage;
+    //Create PDF graphics for the page.
+    PdfGraphics graphics = page.Graphics;
 }
 {% endhighlight %}
 
@@ -141,4 +144,4 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 By executing the program, you will get the **PDF document** as follows.
 ![WinUI output PDF document](Images/Open_and_save_output.png)
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/winui) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
+Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
