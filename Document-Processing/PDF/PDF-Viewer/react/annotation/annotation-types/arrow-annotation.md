@@ -57,7 +57,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 N> When in Pan mode, selecting a shape tool automatically switches the viewer to selection mode for smooth interaction.
 
 ### Enable Arrow Mode
-Switch the viewer into highlight mode using `setAnnotationMode('Arrow')`.
+Switch the viewer into Arrow mode using `setAnnotationMode('Arrow')`.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -122,13 +122,13 @@ Configure default arrow appearance (fill color, stroke color, thickness, opacity
 {% endhighlight %}
 {% endtabs %}
 
-N> For **Line** and **Arrow** annotations, **Fill Color** is available only when an arrowhead style is applied at the **Start** or **End**. If both are `None`, lines do not render fill and the Fill option remains disabled.
+> For **Line** and **Arrow** annotations, **Fill Color** is available only when an arrowhead style is applied at the **Start** or **End**. If both are `None`, lines do not render fill and the Fill option remains disabled.
 
 ## Manage Arrow (Edit, Move, Resize, Delete)
 ### Edit Arrow 
 
 #### Edit Arrow (UI)
-- Select a Arrow to view resize handles.
+- Select an Arrow to view resize handles.
 - Drag endpoints to adjust length/angle.
 - Edit stroke color, opacity, and thickness using the annotation toolbar.
 
@@ -178,7 +178,7 @@ See [**Delete Annotation**](../remove-annotations) for full behavior and workflo
 
 Use the [**Comments panel**](../comments) to add, view, and reply to threaded discussions linked to arrow annotations. It provides a dedicated interface for collaboration and review within the PDF Viewer.
 
-## Set properties while adding Individual Annotation
+## Set properties while adding individual annotations
 
 Set properties for individual arrow annotations by passing values directly during [`addAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation).
 
@@ -245,7 +245,7 @@ Disable shape annotations (Line, Arrow, Rectangle, Circle, Polygon) using the [`
 ## Handle Arrow Events
 
 The PDF viewer provides annotation life-cycle events that notify when Arrow annotations are added, modified, selected, or removed.
-For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event)
+For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event).
 
 ## Export and Import
 The PDF Viewer supports exporting and importing annotations. For details on supported formats and workflows, see [**Export and Import annotations**](../export-import-annotations).

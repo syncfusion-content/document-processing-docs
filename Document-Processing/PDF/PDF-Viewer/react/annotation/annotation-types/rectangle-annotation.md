@@ -15,7 +15,7 @@ Rectangle annotations let users highlight regions, group content, or draw callou
 
 ## Enable Rectangle Annotation in the Viewer
 
-To enable Line annotations, inject the following modules into the React PDF Viewer:
+To enable Rectangle annotations, inject the following modules into the React PDF Viewer:
 
 - [**Annotation**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#annotation)
 - [**Toolbar**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#toolbar)
@@ -58,7 +58,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 N> When in Pan mode, selecting a shape tool automatically switches the viewer to selection mode for smooth interaction.
 
 ### Enable Rectangle Mode
-Switch the viewer into highlight mode using `setAnnotationMode('Rectangle')`.
+Switch the viewer into Rectangle mode using `setAnnotationMode('Rectangle')`.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -175,7 +175,7 @@ See [**Delete Annotation**](../remove-annotations) for full behavior and workflo
 ### Comments
 Use the [**Comments panel**](../comments) to add, view, and reply to threaded discussions linked to rectangle annotations. It provides a dedicated interface for collaboration and review within the PDF Viewer.
 
-## Set properties while adding Individual Annotation
+## Set properties while adding individual annotations
 Set properties for individual rectangle annotations by passing values directly during [`addAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation).
 
 {% tabs %}
@@ -234,7 +234,7 @@ Disable shape annotations (Line, Arrow, Rectangle, Circle, Polygon) using the [`
 ## Handle Rectangle Events
 
 The PDF viewer provides annotation life-cycle events that notify when Rectangle annotations are added, modified, selected, or removed.
-For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event)
+For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event).
 
 ## Export and Import
 The PDF Viewer supports exporting and importing annotations. For details on supported formats and workflows, see [**Export and Import annotations**](../export-import-annotations).

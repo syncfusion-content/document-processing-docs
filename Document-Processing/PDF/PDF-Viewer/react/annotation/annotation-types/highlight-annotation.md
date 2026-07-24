@@ -64,7 +64,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 
 ![Highlight tool](../../../javascript-es6/annotations/annotation-images/highlight-tool.gif)
 
-### Apply highlight using Context Menu
+### Apply Highlight Using the Context Menu
 
 Right-click a selected text region → select **Highlight**.
 
@@ -132,7 +132,7 @@ Configure default highlight settings such as **color**, **opacity**, and **autho
   id="container"
   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
   resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-  height="650px"
+  style={{ height: '650px' }}
   highlightSettings={{
     author: 'Guest User',
     subject: 'Important',
@@ -185,16 +185,16 @@ function editHighlightProgrammatically() {
 ### Delete Highlight
 
 The PDF Viewer supports deleting existing annotations through both the UI and API.
-For detailed behavior, supported deletion workflows, and API reference, see [Delete Annotation](../remove-annotations)
+For detailed behavior, supported deletion workflows, and API reference, see [Delete Annotation](../remove-annotations).
 
 ### Comments
 
-Use the [Comments panel](../comments) to add, view, and reply to threaded discussions linked to underline annotations.
+Use the [Comments panel](../comments) to add, view, and reply to threaded discussions linked to highlight annotations.
 It provides a dedicated UI for reviewing feedback, tracking conversations, and collaborating on annotation‑related notes within the PDF Viewer.
 
-## Set properties while adding Individual Annotation
+## Set properties while adding individual annotations
 
-Set properties for individual annotation before creating the control using [highlightSettings](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#highlightsettings)
+Set properties for individual annotation before creating the control using [highlightSettings](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#highlightsettings).
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -247,12 +247,12 @@ Disable text markup annotations (including highlight) using the [`enableTextMark
 ## Handle Highlight Events
 
 The PDF viewer provides annotation life-cycle events that notify when highlight annotations are added, modified, selected, or removed.
-For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event)
+For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event).
 
 ## Export and Import
 
 The PDF Viewer supports exporting and importing annotations, allowing you to save annotations as a separate file or load existing annotations back into the viewer.
-For full details on supported formats and steps to export or import annotations, see [Export and Import Annotation](../export-import-annotations)
+For full details on supported formats and steps to export or import annotations, see [Export and Import Annotation](../export-import-annotations).
 
 ## See Also
 

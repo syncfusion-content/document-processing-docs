@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add Distance Annotations in React PDF Viewer \ Syncfusion
+title: Add Distance Annotations in React PDF Viewer | Syncfusion
 description: Learn how to enable, measure, customize, and manage Distance annotations in the Syncfusion React PDF Viewer.
 platform: document-processing
 control: PDF Viewer
@@ -105,7 +105,7 @@ function addDistance() {
 {% endtabs %}
 
 ## Customize Distance Appearance
-Configure default properties using the [`Distance Settings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#distancesettings) property (for example, default **fill color**, **stroke color**, **opacity**).
+Configure default properties using the [`distanceSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#distancesettings) property (for example, default **fill color**, **stroke color**, **opacity**).
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}

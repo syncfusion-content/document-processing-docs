@@ -74,8 +74,7 @@ function addStickyNote() {
 {% endtabs %}
 
 ## Customize Sticky Note Appearance
-Configure default properties using the [`stickyNotesSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#stickyNotesSettings).
- property (for example, default **fill color**, **stroke color**, **opacity**).
+Configure default properties using the [`stickyNotesSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#stickyNotesSettings) property (for example, default **fill color**, **stroke color**, **opacity**).
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -115,7 +114,7 @@ Update properties and call `editAnnotation()`.
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
 {% raw %}
-function editVolumeProgrammatically() {
+function editStickyNotesProgrammatically() {
   const viewer = document.getElementById('container').ej2_instances[0];
   for (const ann of viewer.annotationCollection) {
     if (ann.subject === 'Volume calculation') {
@@ -131,12 +130,12 @@ function editVolumeProgrammatically() {
 {% endhighlight %}
 {% endtabs %}
 
-### Delete Volume Annotation
+### Delete Sticky Notes Annotation
 
-Delete Volume Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
+Delete Sticky Notes Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
 
 ## Set Default Properties During Initialization
-Configure scale defaults using [`stickyNotesSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#stickyNotesSettings).
+Configure default properties for Sticky Notes using [`stickyNotesSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#stickyNotesSettings).
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
