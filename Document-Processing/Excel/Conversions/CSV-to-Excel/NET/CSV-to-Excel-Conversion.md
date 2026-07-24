@@ -1,6 +1,6 @@
 ---
 title: Syncfusion CSV to Excel Conversion
-description: In this section, you can learn how to convert CSV docuemnt to Excel document using Syncfusion Essential XlsIO.
+description: Lists how to convert a CSV (or TSV) document to an Excel workbook using the Syncfusion .NET Excel (XlsIO) library.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -8,16 +8,18 @@ documentation: UG
 
 # CSV to Excel Conversion
 
-XlsIO supports converting CSV data to Excel files by saving the workbook using the [SaveAs](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_SaveAs_System_IO_Stream_) method. When opening a CSV file, users can specify various delimiters to structure the data appropriately.
+XlsIO can read a CSV file with [`IWorkbooks.Open`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbooks.html#Syncfusion_XlsIO_IWorkbooks_Open_System_String_System_String_) and write the result to an Excel workbook with [`IWorkbook.SaveAs`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_SaveAs_System_String_). The default delimiter when opening a CSV is a comma (`,`). To read other delimited formats, pass the matching character to the `Open` overload.
 
-**Delimiters Used in CSV files**
+N> IMPORTANT: Before running the samples on this page, install the required NuGet package for your target platform and register your Syncfusion license key. For more information, see the [Licensing overview](https://help.syncfusion.com/document-processing/licensing/overview).
 
-* Comma (,)
-* Tab (\t)
-* Semicolon (;)
-* Colon (:)
-* Space ( )
-* Equals Sign (=)
+The supported delimiters are:
+
+* **Comma** (`,`) — the default.
+* **Tab** (`\t`) — used to open a TSV file.
+* **Semicolon** (`;`)
+* **Colon** (`:`)
+* **Space** (` `)
+* **Equals** (`=`) — used by some locales that export with leading `=` on every value; not a true separator. Use a different delimiter (for example `,` or `;`) and add a quote/unescape step in your own code.
 
 The following code example illustrates how to convert a CSV to an Excel file.
 
@@ -52,7 +54,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Using excelEngine As ExcelEngine = New ExcelEngine()
+Using excelEngine As New ExcelEngine()
   Dim application As IApplication = excelEngine.Excel
   application.DefaultVersion = ExcelVersion.Xlsx
 
@@ -63,11 +65,13 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   workbook.SaveAs("Output.xlsx")
 End Using
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
  
 A complete working example to convert CSV to an Excel file in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/CSV%20to%20Excel/CSV%20to%20Excel/.NET/CSV%20to%20Excel).
 
 ## TSV to Excel Conversion
+
+**TSV (Tab-Separated Values)** files are loaded by passing the tab character (`\t` in C#, `vbTab` in VB.NET) as the delimiter to `Workbooks.Open`. The workbook is then written to `.xlsx` with `SaveAs`.
 
 The following code example illustrates how to convert a TSV to an Excel file.
 
@@ -108,10 +112,18 @@ Using excelEngine As New ExcelEngine()
   ' Open the TSV file
   Dim workbook As IWorkbook = application.Workbooks.Open("InputTemplate.tsv", vbTab)
 
-  ' Save in workbook
+  ' Saving the workbook
   workbook.SaveAs("Output.xlsx")
 End Using
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
  
 A complete working example to convert TSV to an Excel file in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/TSV%20to%20Excel/TSV%20to%20Excel/.NET/TSV%20to%20Excel).
+
+## See also
+
+* [Convert Excel to CSV (or TSV)](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-csv/overview)
+* [Convert Excel to PDF](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/overview)
+* [Convert Excel to image](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-image/overview)
+* [NuGet packages for Excel (XlsIO)](https://help.syncfusion.com/document-processing/excel/getting-started/nuget-packages-required)
+* [Syncfusion .NET Excel (XlsIO) — Licensing overview](https://help.syncfusion.com/document-processing/licensing/overview)
