@@ -12,7 +12,7 @@ documentation: ug
 The Spreadsheet supports binding data from both **RESTful JSON services** and **local JavaScript object arrays** using the [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started).  
 You can assign the `dataSource` property either with a `DataManager` instance or directly with a JavaScript object array collection.
 
-To get started quickly with Data Binding, see the video below:
+To get start quickly with Data Binding, you can check on this video:
 
 {% youtube "https://www.youtube.com/watch?v=FK1OPoHIUPc" %}
 

@@ -26,7 +26,7 @@ In the active sheet, select a range of cells to filter by value of the cell. The
 
 > * Use `Alt + Up/Down` keyboard shortcut to open the filter dialog.
 
-## Apply filter programmatically by criteria
+## Filter by criteria
 
 The [`applyFilter`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#applyfilter) method will apply the filter UI, based on the predicate and range given in the arguments.
 
