@@ -23,7 +23,7 @@ In this section, we will see about the changes which need to be considered while
 <td>{{'[Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core)'| markdownify }}</td>
 </tr>
 <tr>
-<td>{{'[Syncfusion.DocToPDFConverter.WinForms](https://www.nuget.org/packages/Syncfusion.DocToPDFConverter.WinForms)'| markdownify }}<br/>{{'[Syncfusion.DocToPDFConverter.Wpf](https://www.nuget.org/packages/Syncfusion.DocToPDFConverter.Wpf)'| markdownify }}<br/>{{'[Syncfusion.DocToPDFConverter.AspNet](https://www.nuget.org/packages/Syncfusion.DocToPDFConverter.AspNet)'| markdownify }}<br/>{{'[Syncfusion.DocToPDFConverter.AspNet.Mvc4](https://www.nuget.org/packages/Syncfusion.DocToPdfConverter.AspNet.Mvc4)'| markdownify }}<br/>{{'[Syncfusion.DocIToPDFConverter.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.DocToPdfConverter.AspNet.Mvc5)'| markdownify }}</td>
+<td>{{'[Syncfusion.DocToPDFConverter.WinForms](https://www.nuget.org/packages/Syncfusion.DocToPDFConverter.WinForms)'| markdownify }}<br/>{{'[Syncfusion.DocToPDFConverter.Wpf](https://www.nuget.org/packages/Syncfusion.DocToPDFConverter.Wpf)'| markdownify }}<br/>{{'[Syncfusion.DocToPDFConverter.AspNet](https://www.nuget.org/packages/Syncfusion.DocToPDFConverter.AspNet)'| markdownify }}<br/>{{'[Syncfusion.DocToPDFConverter.AspNet.Mvc4](https://www.nuget.org/packages/Syncfusion.DocToPdfConverter.AspNet.Mvc4)'| markdownify }}<br/>{{'[Syncfusion.DocToPDFConverter.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.DocToPdfConverter.AspNet.Mvc5)'| markdownify }}</td>
 <td>{{'[Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core)'| markdownify }}</td>
 </tr>
 </table>
@@ -138,7 +138,7 @@ In this section, we will see about the changes which need to be considered while
 <td>You can open the document as stream from the file system using {{'[WordDocument.Open(Stream, FormatType)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Open_System_IO_Stream_Syncfusion_DocIO_FormatType_)'| markdownify }} API</td>
 </tr>
 <tr>
-<td>{{'[WordDocument.Save(String)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Save_System_String_)'| markdownify }}<br/>{{'[WordDocumentSave(String, FormatType)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Save_System_String_Syncfusion_DocIO_FormatType_)'| markdownify }}</td>
+<td>{{'[WordDocument.Save(String)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Save_System_String_)'| markdownify }}<br/>{{'[WordDocument.Save(String, FormatType)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Save_System_String_Syncfusion_DocIO_FormatType_)'| markdownify }}</td>
 <td>You can save the document as stream to the file system using {{'[WordDocument.Save(Stream, FormatType)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Save_System_IO_Stream_Syncfusion_DocIO_FormatType_)'| markdownify }} API</td>
 </tr>
 <tr>
@@ -196,5 +196,5 @@ EMF and WMF images are not supported in .NET Core platforms.
 N> If you want to migrate without any code changes from [“Syncfusion.DocIO.ASP.NET”](https://www.nuget.org/packages/Syncfusion.DocIO.AspNet) NuGet in application targeting .NET Framework, you can consider to use anyone of the packages 
 N> * [Syncfusion.DocIO.WinForms](https://www.nuget.org/packages/Syncfusion.DocIO.WinForms)
 N> * [Syncfusion.DocIO.Wpf](https://www.nuget.org/packages/Syncfusion.DocIO.Wpf)
-N> * [Syncfusion.DocIO.AspNet.Mcv4](https://www.nuget.org/packages/Syncfusion.DocIO.AspNet.Mvc4)
+N> * [Syncfusion.DocIO.AspNet.Mvc4](https://www.nuget.org/packages/Syncfusion.DocIO.AspNet.Mvc4)
 N>*But, this is not a recommended approach.* 

@@ -11,11 +11,11 @@ documentation: UG
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET MAUI Word library](https://www.syncfusion.com/document-processing/word-framework/maui/word-library) used to **create, read, and edit Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **open and save a Word document in .NET MAUI**.
 
 **Prerequisites:**
-To create .NET Multi-platform App UI (.NET MAUI) apps, you need the latest versions of Visual Studio 2022 and .NET 6. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin).
+To create .NET Multi-platform App UI (.NET MAUI) apps, you need the latest version of Visual Studio 2022 with the .NET MAUI workload and .NET 8 SDK or later. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-10.0&viewFallbackFrom=net-maui-8.0&tabs=visual-studio).
 
 ## Steps to open and save Word document programmatically in .NET MAUI
 
-Step 1: Create a new C# .NET MAUI app. Select **.NET MAUI App (Preview)** from the template and click the **Next** button.
+Step 1: Create a new C# .NET MAUI app. Select **.NET MAUI App** from the template and click the **Next** button.
 
 ![Create the MAUI app in Visual Studio](MAUI_Images/Create_Project.png)
 
@@ -23,7 +23,7 @@ Step 2: Enter the project name and click **Create**.
 
 ![Create a project name for your new project](MAUI_Images/Configure.png)
 
-Step 3: Install the [Syncfusion.DocIO.NET](https://www.nuget.org/packages/Syncfusion.DocIO.Net) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+Step 3: Install the [Syncfusion.DocIO.Net](https://www.nuget.org/packages/Syncfusion.DocIO.Net) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 
 ![Install Syncfusion.DocIO.NET NuGet package](MAUI_Images/Install_Nuget.png)
 
@@ -62,6 +62,7 @@ Step 5: Include the following namespaces in the **MainPage.xaml.cs** file.
 {% highlight c# tabtitle="C#" %}
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
+using System.Reflection;
 {% endhighlight %}
 
 {% endtabs %}
