@@ -1,22 +1,22 @@
 ---
 title: Working with Mathematical Equation | DocIO | Syncfusion
-description: Learn how to add, modify, and remove mathematical equations in a Word document using the .NET Word (DocIO) library without Microsoft Word.
+description: Learn how to add and modify mathematical equations in a Word document using the .NET Word (DocIO) library without Microsoft Word.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 # Working with Mathematical Equation
 
-Equations in Word document are combination of mathematical symbols or text. For example, you can create a Fourier series equation in Word document.
+Equations in a Word document are combinations of mathematical symbols or text. For example, you can create a Fourier series equation in a Word document.
 
-The [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) offers two ways to create and modify equations in Word document.
+The [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) offers two ways to create and modify equations in a Word document.
 
 * [Using WMath DOM](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-mathematical-equation#types-of-equation).
 * [Using LaTeX](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-latex).
 
 ![Mathematical equation in Microsoft Word document](WorkingwithMathematicalEquation_images/Mathematical Equation.png)
 
-N> You can use mathematical equation only in documents that are saved in the Open XML Format and cannot be used in the Word 97-2003 document (.doc) format.
+N> You can use mathematical equations only in documents that are saved in the Open XML Format and cannot use them in the Word 97-2003 document (.doc) format.
 
 ## Types of equation
 
@@ -55,7 +55,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document
 document.EnsureMinimal();
-//Appends a new mathematical equation  to the paragraph
+//Appends a new mathematical equation to the paragraph
 WMath math = document.LastParagraph.AppendMath();
 //Adds a new math
 IOfficeMath officeMath = math.MathParagraph.Maths.Add();
@@ -74,7 +74,7 @@ textRange.CharacterFormat.Bold = true;
 textRange.CharacterFormat.Italic = true;
 //Saves and closes the Word document instance
 MemoryStream stream = new MemoryStream();
-//Saves the Word document to  MemoryStream
+//Saves the Word document to MemoryStream
 document.Save(stream, FormatType.Docx);
 document.Close();
 {% endhighlight %}
@@ -84,7 +84,7 @@ document.Close();
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document
 document.EnsureMinimal();
-//Appends a new mathematical equation  to the paragraph
+//Appends a new mathematical equation to the paragraph
 WMath math = document.LastParagraph.AppendMath();
 //Adds a new math
 IOfficeMath officeMath = math.MathParagraph.Maths.Add();
@@ -112,14 +112,14 @@ document.Close();
 Dim document As WordDocument = New WordDocument
 'Adds one section and one paragraph to the document
 document.EnsureMinimal()
-'Appends a new mathematical equation  to the paragraph
+'Appends a new mathematical equation to the paragraph
 Dim math As WMath = document.LastParagraph.AppendMath
 'Adds a new math
 Dim officeMath As IOfficeMath = math.MathParagraph.Maths.Add
 'Adds an accent equation
 Dim mathAccent As IOfficeMathAccent = CType(officeMath.Functions.Add(MathFunctionType.Accent), IOfficeMathAccent)
 'Sets the accent character
-mathAccent.AccentCharacter = ""
+mathAccent.AccentCharacter = "̆"
 Dim officeMathRunElement As IOfficeMathRunElement = CType(mathAccent.Equation.Functions.Add(MathFunctionType.RunElement), IOfficeMathRunElement)
 officeMathRunElement.Item = New WTextRange(document)
 Dim textRange As WTextRange = CType(officeMathRunElement.Item, WTextRange)
@@ -140,7 +140,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Bar
 
-You can add a bar (which adds horizontal line on top or bottom) to the equation. The following code example shows how to add a bar to the equation.
+You can add a bar (which adds a horizontal line on top or bottom) to the equation. The following code example shows how to add a bar to the equation.
 
 {% tabs %}
 
@@ -153,7 +153,7 @@ document.EnsureMinimal();
 WMath math = document.LastParagraph.AppendMath();
 //Adds a new math
 IOfficeMath officeMath = math.MathParagraph.Maths.Add();
-//Adds an bar function
+//Adds a bar equation
 IOfficeMathBar mathBar = officeMath.Functions.Add(0, MathFunctionType.Bar) as IOfficeMathBar;
 //Sets the bar top
 mathBar.BarTop = true;
@@ -162,9 +162,11 @@ IOfficeMathRunElement officeMathRunElement = mathBar.Equation.Functions.Add(0, M
 officeMathRunElement.Item = new WTextRange(document);
 //Sets text for bar equation
 (officeMathRunElement.Item as WTextRange).Text = "a";
-//Saves the Word document to MemoryStream
+//Saves and closes the Word document instance
 MemoryStream stream = new MemoryStream();
+//Saves the Word document to MemoryStream
 document.Save(stream, FormatType.Docx);
+document.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -196,7 +198,7 @@ document.Close();
 Dim document As WordDocument = New WordDocument
 'Adds one section and one paragraph to the document
 document.EnsureMinimal()
-'Appends a new mathematical equation  to the paragraph
+'Appends a new mathematical equation to the paragraph
 Dim math As WMath = document.LastParagraph.AppendMath
 'Adds a new math
 Dim officeMath As IOfficeMath = math.MathParagraph.Maths.Add
@@ -260,7 +262,7 @@ officeMathRunElement.Item = new WTextRange(document);
 (officeMathRunElement.Item as WTextRange).Text = "adx";
 //Saves and closes the Word document instance
 MemoryStream stream = new MemoryStream();
-//Saves the Word document to  MemoryStream
+//Saves the Word document to MemoryStream
 document.Save(stream, FormatType.Docx);
 document.Close();
 {% endhighlight %}
@@ -311,7 +313,7 @@ document.Close();
 Dim document As WordDocument = New WordDocument
 'Adds one section and one paragraph to the document
 document.EnsureMinimal()
-'Appends a new mathematical equation  to the paragraph
+'Appends a new mathematical equation to the paragraph
 Dim math As WMath = document.LastParagraph.AppendMath
 'Adds a new math
 Dim officeMath As IOfficeMath = math.MathParagraph.Maths.Add
@@ -388,7 +390,7 @@ officeMathRunElement.Item = new WTextRange(document);
 (officeMathRunElement.Item as WTextRange).Text = "a+b-c";
 //Saves and closes the Word document instance
 MemoryStream stream = new MemoryStream();
-//Saves the Word document to  MemoryStream
+//Saves the Word document to MemoryStream
 document.Save(stream, FormatType.Docx);
 document.Close();
 {% endhighlight %}
@@ -437,7 +439,7 @@ document.Close();
 Dim document As WordDocument = New WordDocument
 'Adds one section and one paragraph to the document
 document.EnsureMinimal()
-'Appends a new mathematical equation  to the paragraph
+'Appends a new mathematical equation to the paragraph
 Dim math As WMath = document.LastParagraph.AppendMath
 'Adds a new math
 Dim officeMath As IOfficeMath = math.MathParagraph.Maths.Add
@@ -474,7 +476,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Delimiter
 
-You can add a delimiter (parenthesis, square brackets and other characters) to the equation. The following code example shows how to a add delimiter to the equation.
+You can add a delimiter (parenthesis, square brackets, and other characters) to the equation. The following code example shows how to add a delimiter to the equation.
 
 {% tabs %}
 
@@ -506,7 +508,7 @@ officeMathRunElement.Item = new WTextRange(document);
 (officeMathRunElement.Item as WTextRange).Text = "a+b";
 //Saves and closes the Word document instance
 MemoryStream stream = new MemoryStream();
-//Saves the Word document to  MemoryStream
+//Saves the Word document to MemoryStream
 document.Save(stream, FormatType.Docx);
 document.Close();
 {% endhighlight %}
@@ -548,7 +550,7 @@ document.Close();
 Dim document As WordDocument = New WordDocument
 'Adds one section and one paragraph to the document
 document.EnsureMinimal()
-'Appends a new mathematical equation  to the paragraph
+'Appends a new mathematical equation to the paragraph
 Dim math As WMath = document.LastParagraph.AppendMath
 'Adds a new math
 Dim officeMath As IOfficeMath = math.MathParagraph.Maths.Add
@@ -615,7 +617,7 @@ officeMathRunElement.Item = new WTextRange(document);
 (officeMathRunElement.Item as WTextRange).Text = "x+y-z=1";
 //Saves and closes the Word document instance
 MemoryStream stream = new MemoryStream();
-//Saves the Word document to  MemoryStream
+//Saves the Word document to MemoryStream
 document.Save(stream, FormatType.Docx);
 document.Close();
 {% endhighlight %}
@@ -663,7 +665,7 @@ document.Close();
 Dim document As WordDocument = New WordDocument
 'Adds one section and one paragraph to the document
 document.EnsureMinimal()
-'Appends a new mathematical equation  to the paragraph
+'Appends a new mathematical equation to the paragraph
 Dim math As WMath = document.LastParagraph.AppendMath
 'Adds a new math
 Dim officeMath As IOfficeMath = math.MathParagraph.Maths.Add
@@ -714,12 +716,12 @@ IOfficeMath officeMath = math.MathParagraph.Maths.Add();
 //Adds a fraction equation
 IOfficeMathFraction mathFraction =
 officeMath.Functions.Add(0, MathFunctionType.Fraction) as IOfficeMathFraction;
-//Sets the denominator for fraction
+//Sets the numerator for fraction
 IOfficeMathRunElement officeMathRunElement =
 mathFraction.Numerator.Functions.Add(0, MathFunctionType.RunElement) as IOfficeMathRunElement;
 officeMathRunElement.Item = new WTextRange(document);
 (officeMathRunElement.Item as WTextRange).Text = "a";
-//Sets the numerator for fraction
+//Sets the denominator for fraction
 officeMathRunElement =
 mathFraction.Denominator.Functions.Add(0, MathFunctionType.RunElement) as IOfficeMathRunElement;
 officeMathRunElement.Item = new WTextRange(document);
@@ -728,7 +730,7 @@ officeMathRunElement.Item = new WTextRange(document);
 mathFraction.FractionType = MathFractionType.NormalFractionBar;
 //Saves and closes the Word document instance
 MemoryStream stream = new MemoryStream();
-//Saves the Word document to  MemoryStream
+//Saves the Word document to MemoryStream
 document.Save(stream, FormatType.Docx);
 document.Close();
 {% endhighlight %}
@@ -745,12 +747,12 @@ IOfficeMath officeMath = math.MathParagraph.Maths.Add();
 //Adds a fraction equation
 IOfficeMathFraction mathFraction =
 officeMath.Functions.Add(0, MathFunctionType.Fraction) as IOfficeMathFraction;
-//Sets the denominator for fraction
+//Sets the numerator for fraction
 IOfficeMathRunElement officeMathRunElement =
 mathFraction.Numerator.Functions.Add(0, MathFunctionType.RunElement) as IOfficeMathRunElement;
 officeMathRunElement.Item = new WTextRange(document);
 (officeMathRunElement.Item as WTextRange).Text = "a";
-//Sets the numerator for fraction
+//Sets the denominator for fraction
 officeMathRunElement =
 mathFraction.Denominator.Functions.Add(0, MathFunctionType.RunElement) as IOfficeMathRunElement;
 officeMathRunElement.Item = new WTextRange(document);
@@ -768,16 +770,16 @@ document.Close();
 Dim document As WordDocument = New WordDocument
 'Adds one section and one paragraph to the document
 document.EnsureMinimal()
-'Appends a new mathematical equation  to the paragraph
+'Appends a new mathematical equation to the paragraph
 Dim math As WMath = document.LastParagraph.AppendMath
 'Adds a new math
 Dim officeMath As IOfficeMath = math.MathParagraph.Maths.Add
 Dim mathFraction As IOfficeMathFraction = CType(officeMath.Functions.Add(0, MathFunctionType.Fraction), IOfficeMathFraction)
-'Sets the denominator for fraction
+'Sets the numerator for fraction
 Dim officeMathRunElement As IOfficeMathRunElement = CType(mathFraction.Numerator.Functions.Add(0, MathFunctionType.RunElement), IOfficeMathRunElement)
 officeMathRunElement.Item = New WTextRange(document)
 CType(officeMathRunElement.Item, WTextRange).Text = "a"
-'Sets the numerator for fraction
+'Sets the denominator for fraction
 officeMathRunElement = CType(mathFraction.Denominator.Functions.Add(0, MathFunctionType.RunElement), IOfficeMathRunElement)
 officeMathRunElement.Item = New WTextRange(document)
 CType(officeMathRunElement.Item, WTextRange).Text = "b"
@@ -824,7 +826,7 @@ officeMathRunElement.Item = new WTextRange(document);
 (officeMathRunElement.Item as WTextRange).Text = "90";
 //Saves and closes the Word document instance
 MemoryStream stream = new MemoryStream();
-//Saves the Word document to  MemoryStream
+//Saves the Word document to MemoryStream
 document.Save(stream, FormatType.Docx);
 document.Close();
 {% endhighlight %}
@@ -863,7 +865,7 @@ document.Close();
 Dim document As WordDocument = New WordDocument
 'Adds one section and one paragraph to the document
 document.EnsureMinimal()
-'Appends a new mathematical equation  to the paragraph
+'Appends a new mathematical equation to the paragraph
 Dim math As WMath = document.LastParagraph.AppendMath
 'Adds a new math
 Dim officeMath As IOfficeMath = math.MathParagraph.Maths.Add
@@ -919,7 +921,7 @@ officeMathRunElement.Item = new WTextRange(document);
 (officeMathRunElement.Item as WTextRange).Text = "a-b";
 //Saves and closes the Word document instance
 MemoryStream stream = new MemoryStream();
-//Saves the Word document to  MemoryStream
+//Saves the Word document to MemoryStream
 document.Save(stream, FormatType.Docx);
 document.Close();
 {% endhighlight %}
@@ -959,7 +961,7 @@ document.Close();
 Dim document As WordDocument = New WordDocument
 'Adds one section and one paragraph to the document
 document.EnsureMinimal()
-'Appends a new mathematical equation  to the paragraph
+'Appends a new mathematical equation to the paragraph
 Dim math As WMath = document.LastParagraph.AppendMath
 'Adds a new math
 Dim officeMath As IOfficeMath = math.MathParagraph.Maths.Add
@@ -1024,7 +1026,7 @@ officeMathRunElement.Item = new WTextRange(document);
 (officeMathRunElement.Item as WTextRange).Text = "x";
 //Saves and closes the Word document instance
 MemoryStream stream = new MemoryStream();
-//Saves the Word document to  MemoryStream
+//Saves the Word document to MemoryStream
 document.Save(stream, FormatType.Docx);
 document.Close();
 {% endhighlight %}
@@ -1072,7 +1074,7 @@ document.Close();
 Dim document As WordDocument = New WordDocument
 'Adds one section and one paragraph to the document
 document.EnsureMinimal()
-'Appends a new mathematical equation  to the paragraph
+'Appends a new mathematical equation to the paragraph
 Dim math As WMath = document.LastParagraph.AppendMath
 'Adds a new math
 Dim officeMath As IOfficeMath = math.MathParagraph.Maths.Add
@@ -1112,7 +1114,7 @@ You can create a matrix equation in a Word document. The following code example 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Create-matrix-equation/.NET/Create-matrix-equation/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
-///Adds one section and one paragraph to the document
+//Adds one section and one paragraph to the document
 document.EnsureMinimal();
 //Appends a new mathematical equation to the paragraph
 WMath wmath = document.LastParagraph.AppendMath();
@@ -1157,7 +1159,7 @@ officeMathRunElement.Item = new WTextRange(document);
 (officeMathRunElement.Item as WTextRange).Text = "2";
 //Gets an argument in first cell in second row
 officeMath = mathMatrix.Rows[1].Arguments[0];
-//Sets text for argument in first cell in seond row
+//Sets text for argument in first cell in second row
 officeMathRunElement = officeMath.Functions.Add(MathFunctionType.RunElement) as IOfficeMathRunElement;
 officeMathRunElement.Item = new WTextRange(document);
 (officeMathRunElement.Item as WTextRange).Text = "3";
@@ -1169,7 +1171,7 @@ officeMathRunElement.Item = new WTextRange(document);
 (officeMathRunElement.Item as WTextRange).Text = "4";
 //Saves and closes the Word document instance
 MemoryStream stream = new MemoryStream();
-//Saves the Word document to  MemoryStream
+//Saves the Word document to MemoryStream
 document.Save(stream, FormatType.Docx);
 document.Close();
 {% endhighlight %}
@@ -1177,7 +1179,7 @@ document.Close();
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
-///Adds one section and one paragraph to the document
+//Adds one section and one paragraph to the document
 document.EnsureMinimal();
 //Appends a new mathematical equation to the paragraph
 WMath wmath = document.LastParagraph.AppendMath();
@@ -1243,7 +1245,7 @@ document.Close();
 Dim document As WordDocument = New WordDocument
 'Adds one section and one paragraph to the document
 document.EnsureMinimal()
-'Appends a new mathematical equation  to the paragraph
+'Appends a new mathematical equation to the paragraph
 Dim math As WMath = document.LastParagraph.AppendMath
 'Adds a new math
 Dim officeMath As IOfficeMath = math.MathParagraph.Maths.Add
@@ -1348,7 +1350,7 @@ officeMathRunElement.Item = new WTextRange(document);
 (officeMathRunElement.Item as WTextRange).Text = "x";
 //Saves and closes the Word document instance
 MemoryStream stream = new MemoryStream();
-//Saves the Word document to  MemoryStream
+//Saves the Word document to MemoryStream
 document.Save(stream, FormatType.Docx);
 document.Close();
 {% endhighlight %}
@@ -1398,7 +1400,7 @@ document.Close();
 Dim document As WordDocument = New WordDocument
 'Adds one section and one paragraph to the document
 document.EnsureMinimal()
-'Appends a new mathematical equation  to the paragraph
+'Appends a new mathematical equation to the paragraph
 Dim math As WMath = document.LastParagraph.AppendMath
 'Adds a new math
 Dim officeMath As IOfficeMath = math.MathParagraph.Maths.Add
@@ -1465,7 +1467,7 @@ officeMathRunElement.Item = new WTextRange(document);
 (officeMathRunElement.Item as WTextRange).Text = "x";
 //Saves and closes the Word document instance
 MemoryStream stream = new MemoryStream();
-//Saves the Word document to  MemoryStream
+//Saves the Word document to MemoryStream
 document.Save(stream, FormatType.Docx);
 document.Close();
 {% endhighlight %}
@@ -1504,7 +1506,7 @@ document.Close();
 Dim document As WordDocument = New WordDocument
 'Adds one section and one paragraph to the document
 document.EnsureMinimal()
-'Appends a new mathematical equation  to the paragraph
+'Appends a new mathematical equation to the paragraph
 Dim math As WMath = document.LastParagraph.AppendMath
 'Adds a new math
 Dim officeMath As IOfficeMath = math.MathParagraph.Maths.Add
@@ -1571,7 +1573,7 @@ officeMathRunElement.Item = new WTextRange(document);
 (officeMathRunElement.Item as WTextRange).Text = "a-b";
 //Saves and closes the Word document instance
 MemoryStream stream = new MemoryStream();
-//Saves the Word document to  MemoryStream
+//Saves the Word document to MemoryStream
 document.Save(stream, FormatType.Docx);
 document.Close();
 {% endhighlight %}
@@ -1621,7 +1623,7 @@ document.Close();
 Dim document As WordDocument = New WordDocument
 'Adds one section and one paragraph to the document
 document.EnsureMinimal()
-'Appends a new mathematical equation  to the paragraph
+'Appends a new mathematical equation to the paragraph
 Dim math As WMath = document.LastParagraph.AppendMath
 'Adds a new math
 Dim officeMath As IOfficeMath = math.MathParagraph.Maths.Add
@@ -1688,7 +1690,7 @@ officeMathRunElement.Item = new WTextRange(document);
 (officeMathRunElement.Item as WTextRange).Text = "x";
 //Saves and closes the Word document instance
 MemoryStream stream = new MemoryStream();
-//Saves the Word document to  MemoryStream
+//Saves the Word document to MemoryStream
 document.Save(stream, FormatType.Docx);
 document.Close();
 {% endhighlight %}
@@ -1729,7 +1731,7 @@ document.Close();
 Dim document As WordDocument = New WordDocument
 'Adds one section and one paragraph to the document
 document.EnsureMinimal()
-'Appends a new mathematical equation  to the paragraph
+'Appends a new mathematical equation to the paragraph
 Dim math As WMath = document.LastParagraph.AppendMath
 'Adds a new math
 Dim officeMath As IOfficeMath = math.MathParagraph.Maths.Add
@@ -1792,7 +1794,7 @@ officeMathRunElement.Item = new WTextRange(document);
 (officeMathRunElement.Item as WTextRange).Text = "Y";
 //Saves and closes the Word document instance
 MemoryStream stream = new MemoryStream();
-//Saves the Word document to  MemoryStream
+//Saves the Word document to MemoryStream
 document.Save(stream, FormatType.Docx);
 document.Close();
 {% endhighlight %}
@@ -1835,7 +1837,7 @@ document.Close();
 Dim document As WordDocument = New WordDocument
 'Adds one section and one paragraph to the document
 document.EnsureMinimal()
-'Appends a new mathematical equation  to the paragraph
+'Appends a new mathematical equation to the paragraph
 Dim math As WMath = document.LastParagraph.AppendMath
 Dim officeMath As IOfficeMath = math.MathParagraph.Maths.Add
 'Adds a left subsuperscript equation.
@@ -1899,7 +1901,7 @@ officeMathRunElement.Item = new WTextRange(document);
 (officeMathRunElement.Item as WTextRange).Text = "Y";
 //Saves and closes the Word document instance
 MemoryStream stream = new MemoryStream();
-//Saves the Word document to  MemoryStream
+//Saves the Word document to MemoryStream
 document.Save(stream, FormatType.Docx);
 document.Close();
 stream.Position = 0;
@@ -1947,7 +1949,7 @@ document.Close();
 Dim document As WordDocument = New WordDocument
 'Adds one section and one paragraph to the document
 document.EnsureMinimal()
-'Appends a new mathematical equation  to the paragraph
+'Appends a new mathematical equation to the paragraph
 Dim math As WMath = document.LastParagraph.AppendMath
 'Adds a new math
 Dim officeMath As IOfficeMath = math.MathParagraph.Maths.Add
@@ -2021,7 +2023,7 @@ MathParagraphItem.Item = new WTextRange(document);
 MathParagraphItem.MathFormat.Style = MathStyleType.Italic;
 //Saves and closes the Word document instance
 MemoryStream stream = new MemoryStream();
-//Saves the Word document to  MemoryStream
+//Saves the Word document to MemoryStream
 document.Save(stream, FormatType.Docx);
 document.Close();
 {% endhighlight %}

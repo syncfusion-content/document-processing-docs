@@ -49,7 +49,7 @@ Step 4: Add a new button in **MainWindow.xaml** to create Word file as follows.
     </Button.Background>
     <StackPanel Orientation="Horizontal" Height="23" Margin="0,0,0,-2.52" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="100">
         <Image Name="image2" Margin="2" HorizontalAlignment="Center" VerticalAlignment="Center" />
-        <TextBlock Text="Opend and Save" Height="15.96" Width="126" Margin="0,4,0,3" />
+        <TextBlock Text="Open and Save" Height="15.96" Width="126" Margin="0,4,0,3" />
     </StackPanel>
 </Button>
 {% endhighlight %}
@@ -62,7 +62,8 @@ Step 5: Add the following code in **btnOpenAndSave_Click** to **open an existing
 
 {% highlight c# tabtitle="C#" %}
 //Open an existing Word document.
-WordDocument document = new WordDocument("Input.docx");
+using (WordDocument document = new WordDocument("Input.docx"))
+{
 {% endhighlight %}
 
 {% endtabs %}
@@ -91,6 +92,7 @@ Step 7: Add below code example to **save the Word document in WPF**.
 {% highlight c# tabtitle="C#" %}
 //Save the Word document
 document.Save("Sample.docx");
+}
 {% endhighlight %}
 
 {% endtabs %}

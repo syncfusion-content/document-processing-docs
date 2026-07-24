@@ -7,9 +7,9 @@ documentation: UG
 ---
 # Working with Comments
 
-A comment is a note or annotation that an author or reviewer can add to a document. DocIO represents comment with [WComment](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WComment.html) instance.
+A comment is a note or annotation that an author or reviewer can add to a document. DocIO represents a comment with a [WComment](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WComment.html) instance.
 
-N> The comment start and end ranges and dates can be preserved only on processing an existing document that already contains these information for each comment.
+N> The comment start and end ranges and dates can be preserved only on processing an existing document that already contains this information for each comment.
 
 ## Adding a Comment
 
@@ -33,9 +33,9 @@ paragraph.AppendText("AdventureWorks Cycles, the fictitious company on which the
 WComment comment = paragraph.AppendComment("comment test");
 //Specifies the author of the comment
 comment.Format.User = "Peter";
-//Specifies the initial of the author
+//Specifies the initials of the author
 comment.Format.UserInitials = "St";
-//Set the date and time for comment
+//Sets the date and time for the comment
 comment.Format.DateTime = DateTime.Now;
 //Saves the Word document to MemoryStream.
 MemoryStream stream = new MemoryStream();
@@ -56,9 +56,9 @@ paragraph.AppendText("AdventureWorks Cycles, the fictitious company on which the
 WComment comment = paragraph.AppendComment("comment test");
 //Specifies the author of the comment
 comment.Format.User = "Peter";
-//Specifies the initial of the author
+//Specifies the initials of the author
 comment.Format.UserInitials = "St";
-//Set the date and time for comment
+//Sets the date and time for the comment
 comment.Format.DateTime = DateTime.Now;
 //Saves and closes the Word document
 document.Save("Comment.docx", FormatType.Docx);
@@ -77,8 +77,10 @@ paragraph.AppendText("AdventureWorks Cycles, the fictitious company on which the
 Dim comment As WComment = paragraph.AppendComment("comment test")
 'Specifies the author of the comment
 comment.Format.User = "Peter"
-'Specifies the initial of the author
+'Specifies the initials of the author
 comment.Format.UserInitials = "St"
+'Sets the date and time for the comment
+comment.Format.DateTime = DateTime.Now
 'Saves and closes the Word document
 document.Save("Comment.docx", FormatType.Docx)
 document.Close()
@@ -155,11 +157,11 @@ using (FileStream fileStream = new FileStream("Input.docx", FileMode.Open, FileA
     //Open the existing Word document.
     using (WordDocument document = new WordDocument(fileStream, FormatType.Docx))
     {
-        //Find all occurrence of a particular text ending with comma in the document using regex.
+        //Find all occurrences of a particular text ending with a comma in the document using regex.
         TextSelection[] textSelection = document.FindAll(new Regex("\\w+,"));
         if (textSelection != null)
         {
-            //Iterates through each occurrence and comment it.
+            //Iterates through each occurrence and adds a comment to it.
             for (int i = 0; i < textSelection.Count(); i++)
             {
                 //Get the found text as a single text range.
@@ -168,17 +170,17 @@ using (FileStream fileStream = new FileStream("Input.docx", FileMode.Open, FileA
                 WParagraph paragraph = textRange.OwnerParagraph;
                 //Get the index of the found text.
                 int textIndex = paragraph.ChildEntities.IndexOf(textRange);
-                //Add comment to a paragraph.
+                //Add a comment to a paragraph.
                 WComment comment = paragraph.AppendComment("comment test_" + i);
                 //Specify the author of the comment.
                 comment.Format.User = "Peter";
-                //Specify the initial of the author.
+                //Specify the initials of the author.
                 comment.Format.UserInitials = "St";
                 //Set the date and time for the comment.
                 comment.Format.DateTime = DateTime.Now;
-                //Insert the comment next to the textrange.
+                //Insert the comment next to the text range.
                 paragraph.ChildEntities.Insert(textIndex + 1, comment);
-                //Add the paragraph items to the commented items.
+                //Add the paragraph item to the commented items.
                 comment.AddCommentedItem(textRange);
             }
         }
@@ -197,11 +199,11 @@ using (FileStream fileStream = new FileStream("Input.docx", FileMode.Open, FileA
 //Open the existing Word document.
 using (WordDocument document = new WordDocument("Input.docx", FormatType.Docx))
 {
-    //Find all occurrence of a particular text ending with comma in the document using regex.
+    //Find all occurrences of a particular text ending with a comma in the document using regex.
     TextSelection[] textSelection = document.FindAll(new Regex("\\w+,"));
     if (textSelection != null)
     {
-        //Iterates through each occurrence and comment it.
+        //Iterates through each occurrence and adds a comment to it.
         for (int i = 0; i < textSelection.Count(); i++)
         {
             //Get the found text as a single text range.
@@ -210,21 +212,21 @@ using (WordDocument document = new WordDocument("Input.docx", FormatType.Docx))
             WParagraph paragraph = textRange.OwnerParagraph;
             //Get the index of the found text.
             int textIndex = paragraph.ChildEntities.IndexOf(textRange);
-            //Add comment to a paragraph.
+            //Add a comment to a paragraph.
             WComment comment = paragraph.AppendComment("comment test_" + i);
             //Specify the author of the comment.
             comment.Format.User = "Peter";
-            //Specify the initial of the author.
+            //Specify the initials of the author.
             comment.Format.UserInitials = "St";
             //Set the date and time for the comment.
             comment.Format.DateTime = DateTime.Now;
-            //Insert the comment next to the textrange.
+            //Insert the comment next to the text range.
             paragraph.ChildEntities.Insert(textIndex + 1, comment);
-            //Add the paragraph items to the commented items.
+            //Add the paragraph item to the commented items.
             comment.AddCommentedItem(textRange);
-            //Save the Word document.
-            document.Save("Result.docx");
         }
+        //Save the Word document.
+        document.Save("Result.docx");
     }
 }
 
@@ -232,31 +234,31 @@ using (WordDocument document = new WordDocument("Input.docx", FormatType.Docx))
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Using document As New WordDocument("Input.docx", FormatType.Docx)
-    ' Find all occurrences of a particular text ending with a comma in the document using regex.
+    'Find all occurrences of a particular text ending with a comma in the document using regex.
     Dim textSelection As TextSelection() = document.FindAll(New Regex("\w+,"))
     If textSelection IsNot Nothing Then
-        ' Iterate through each occurrence and add a comment.
+        'Iterates through each occurrence and adds a comment to it.
         For i As Integer = 0 To textSelection.Count() - 1
-            ' Get the found text as a single text range.
+            'Get the found text as a single text range.
             Dim textRange As WTextRange = textSelection(i).GetAsOneRange()
-            ' Get the owner paragraph of the found text.
+            'Get the owner paragraph of the found text.
             Dim paragraph As WParagraph = textRange.OwnerParagraph
-            ' Get the index of the found text.
+            'Get the index of the found text.
             Dim textIndex As Integer = paragraph.ChildEntities.IndexOf(textRange)
-            ' Add a comment to a paragraph.
+            'Add a comment to a paragraph.
             Dim comment As WComment = paragraph.AppendComment("comment test_" & i)
-            ' Specify the author of the comment.
+            'Specify the author of the comment.
             comment.Format.User = "Peter"
-            ' Specify the initials of the author.
+            'Specify the initials of the author.
             comment.Format.UserInitials = "St"
-            ' Set the date and time for the comment.
+            'Set the date and time for the comment.
             comment.Format.DateTime = DateTime.Now
-            ' Insert the comment next to the text range.
+            'Insert the comment next to the text range.
             paragraph.ChildEntities.Insert(textIndex + 1, comment)
-            ' Add the paragraph items to the commented items.
+            'Add the paragraph item to the commented items.
             comment.AddCommentedItem(textRange)
         Next
-        ' Save the Word document.
+        'Save the Word document.
         document.Save("Result.docx")
     End If
 End Using
@@ -270,7 +272,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 You can either remove all the comments or a particular comment from the Word document.
 
-The following code illustrates how to remove all the comments in Word document.
+The following code illustrates how to remove all the comments in the Word document.
 
 {% tabs %}
 
@@ -306,16 +308,16 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Comments/Remove-all-comments-in-Word-document).
 
-The following code illustrates how to remove a particular comment from Word document.
+The following code illustrates how to remove a particular comment from a Word document.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Comments/Remove-particular-comment-from-Word/.NET/Remove-particular-comment-from-Word/Program.cs" %}
 FileStream fileStreamPath = new FileStream("Comment.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
-//Removes second comments from a document.
+//Removes the second comment from the document.
 document.Comments.RemoveAt(1);
-//Saves the Word document to  MemoryStream
+//Saves the Word document to MemoryStream
 MemoryStream stream = new MemoryStream();
 document.Save(stream, FormatType.Docx);
 //Closes the document
@@ -324,7 +326,7 @@ document.Close();
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 WordDocument document = new WordDocument("Comment.docx");
-//Removes second comments from a document.
+//Removes the second comment from the document.
 document.Comments.RemoveAt(1);
 //Saves and closes the Word document
 document.Save("Result.docx", FormatType.Docx);
@@ -333,7 +335,7 @@ document.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Dim document As New WordDocument("Comment.docx")
-'Removes second comments from a document.
+'Removes the second comment from the document.
 document.Comments.RemoveAt(1)
 'Saves and closes the Word document
 document.Save("Result.docx", FormatType.Docx)
@@ -346,7 +348,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Accessing parent comment
 
-You can access the parent comment of a particular comment (reply) in a Word document using [Ancestor](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WComment.html#Syncfusion_DocIO_DLS_WComment_Ancestor) API. The ancestor for parent comment returns `null` as default.
+You can access the parent comment of a particular comment (reply) in a Word document using [Ancestor](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WComment.html#Syncfusion_DocIO_DLS_WComment_Ancestor) API. The ancestor of a parent comment returns `null` by default.
 
 The following code examples show how to access the parent comment of a particular comment in a Word document.
 
@@ -355,35 +357,34 @@ The following code examples show how to access the parent comment of a particula
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Comments/Access-parent-comment/.NET/Access-parent-comment/Program.cs" %}
 FileStream fileStreamPath = new FileStream("Comment.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
-// Get the Ancestor comment.
-document.Comments[1].Ancestor;
-//Save the Word document to  MemoryStream.
+//Get the ancestor comment.
+WComment ancestorComment = document.Comments[1].Ancestor;
+//Save the Word document to MemoryStream.
 MemoryStream stream = new MemoryStream();
 document.Save(stream, FormatType.Docx);
 //Close the document.
 document.Close();
 stream.Position = 0;
-//Download the Word document in the browser
+//Download the Word document in the browser.
 return File(stream, "application/msword", "Result.docx");
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Load an existing Word document into DocIO instance.
 WordDocument document = new WordDocument("Comment.docx");
-//Get the Ancestor comment.
+//Get the ancestor comment.
 WComment ancestorComment = document.Comments[1].Ancestor;
-//Save and Close the Word document.
+//Save and close the Word document.
 document.Save("Result.docx", FormatType.Docx);
 document.Close();
-
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Load an existing Word document into DocIO instance.
 Dim document As WordDocument = New WordDocument("Comment.docx")
-'Get the Ancestor comment.
-Dim ancestorComment As WComment = document.Comments[1].Ancestor
-'Save and Close the Word document.
+'Get the ancestor comment.
+Dim ancestorComment As WComment = document.Comments(1).Ancestor
+'Save and close the Word document.
 document.Save("Result.docx", FormatType.Docx)
 document.Close()
 {% endhighlight %}
@@ -394,7 +395,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Retrieve the commented word or items
 
-The following code example illustrates how to get the paragraph item where it exists in the commented region based on the existing comment in the Word document.
+The following code example illustrates how to retrieve the paragraph item that exists in the commented region of a particular comment in the Word document.
 
 {% tabs %}
 
@@ -405,10 +406,10 @@ using(WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
     //Iterate the comments in the Word document.
     foreach (WComment comment in document.Comments)
     {
-        //Get the commented word or part of a particular comment.
+        //Get the commented text or items of a particular comment.
         if (comment.TextBody.LastParagraph.Text == "This is the second comment.")
             ParagraphItemCollection paragraphItem = comment.CommentedItems;
-    }
+        }
     //Save the Word document to MemoryStream.
     MemoryStream stream = new MemoryStream();
     document.Save(stream, FormatType.Docx);
@@ -424,10 +425,10 @@ using(WordDocument document = new WordDocument("Comment.docx"))
     //Iterate the comments in the Word document.
     foreach (WComment comment in document.Comments)
     {
-        //Get the commented word or part of a particular comment.
+        //Get the commented text or items of a particular comment.
         if (comment.TextBody.LastParagraph.Text == "This is the second comment.")
             ParagraphItemCollection paragraphItem = comment.CommentedItems;
-    }
+        }
     document.Save("Result.docx", FormatType.Docx);
 }
 {% endhighlight %}
@@ -436,6 +437,7 @@ using(WordDocument document = new WordDocument("Comment.docx"))
 Using document As New WordDocument("Comment.docx")
     'Iterate the comments in the Word document.
     For Each comment As WComment In document.Comments
+        'Get the commented text or items of a particular comment.
         If comment.TextBody.LastParagraph.Text = "This is the second comment." Then
             Dim paragraphItem As ParagraphItemCollection = comment.CommentedItems
         End If

@@ -7,12 +7,11 @@ documentation: UG
 ---
 # Working with Table Of Contents
 
-[Table of contents](https://support.microsoft.com/en-gb/office/insert-a-table-of-contents-882e8564-0edb-435e-84b5-1d8552ccf0c0?redirectSourcePath=%252fen-us%252farticle%252fCreate-a-table-of-contents-or-update-a-table-of-contents-eb275189-b93e-4559-8dd9-c279457bfd72#__create_a_table ) (TOC) is used to provide an outline of the Word document. By default table of contents will be created automatically from heading styles. 
+[Table of contents](https://support.microsoft.com/en-gb/office/insert-a-table-of-contents-882e8564-0edb-435e-84b5-1d8552ccf0c0) (TOC) is used to provide an outline of the Word document. By default, the table of contents is created automatically from heading styles. 
 
-You can add the TOC into the paragraph by specifying the [LowerHeadingLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.TableOfContent.html#Syncfusion_DocIO_DLS_TableOfContent_LowerHeadingLevel) and [UpperHeadingLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.TableOfContent.html#Syncfusion_DocIO_DLS_TableOfContent_UpperHeadingLevel). The heading level range must be from 1 to 9.
+You can add a TOC into the paragraph by specifying the [LowerHeadingLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.TableOfContent.html#Syncfusion_DocIO_DLS_TableOfContent_LowerHeadingLevel) and [UpperHeadingLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.TableOfContent.html#Syncfusion_DocIO_DLS_TableOfContent_UpperHeadingLevel). The heading level range must be from 1 to 9.
 
-Basically TOC determines the TOC entries based on the TOC switches. 
-
+TOC determines its entries based on the TOC switches.
 ## Switches in TOC
 
 <table>
@@ -59,6 +58,16 @@ Builds a table of figures of the given label. <br/><br/></td></tr>
 7<br/><br/></td><td>
 \a<br/><br/></td><td>
 Builds a table of figures but does not include the caption's label and number. <br/><br/></td></tr>
+<tr>
+<td>
+8<br/><br/></td><td>
+\u<br/><br/></td><td>
+Uses the applied paragraph outline level. <br/><br/></td></tr>
+<tr>
+<td>
+9<br/><br/></td><td>
+\f<br/><br/></td><td>
+Includes entries based on the TC (Table of Contents Entry) fields instead of heading styles. <br/><br/></td></tr>
 </tbody>
 </table>
 
@@ -67,7 +76,7 @@ To quickly start create and update a table of contents in Word document, please 
 
 ## Adding a TOC field
 
-The following code example shows how to add a table of contents (TOC) in Word document.
+The following code example shows how to add a table of contents (TOC) in a Word document.
 
 {% tabs %}
 
@@ -209,7 +218,7 @@ paragraph.ApplyStyle(BuiltinStyle.Heading3)
 section.AddParagraph().AppendText(paraText)
 'Updates the table of contents
 document.UpdateTableOfContents()
-‘Saves and closes the Word document instance
+'Saves and closes the Word document instance
 document.Save("Sample.docx", FormatType.Docx)
 document.Close()
 {% endhighlight %}
@@ -224,13 +233,13 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Updating table of contents
 
-You can also update or re-build the TOC in an existing document or document created from the scratch.  
+You can also update or rebuild the TOC in an existing document or a document created from scratch. 
 
 N>  1. Updating of TOC is not supported in Silverlight, WinRT, Universal and Windows Phone applications. 
-N>  2. Updating TOC makes use of the Word to PDF layout engine that may lead to update incorrect page number due to its limitations.
+N>  2. Updating TOC makes use of the Word to PDF layout engine that may lead to updating incorrect page numbers due to its limitations.
 N>  3. In ASP.NET Core, Blazor, and Xamarin platforms, to update TOC in a Word document we recommend you to use Word to PDF [assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required#converting-word-document-to-pdf) or [NuGet](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#converting-word-document-to-pdf) as a reference in your application.
 
-The following code example shows how to update a TOC in an existing word document. 
+The following code example shows how to update a TOC in an existing Word document.
 
 {% tabs %} 
 
@@ -248,8 +257,8 @@ document.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Opens an input word template
-WordDocument document = new WordDocument(@”Template.docx”);
+//Opens an input Word template
+WordDocument document = new WordDocument(@"Template.docx");
 //Updates the table of contents.
 document.UpdateTableOfContents();
 //Saves and closes the Word document instance.
@@ -262,7 +271,7 @@ document.Close();
 Dim document As New WordDocument("Template.docx")
 'Updates the table of contents.
 document.UpdateTableOfContents()
-‘Saves and closes the Word document instance.
+'Saves and closes the Word document instance.
 document.Save("Sample.docx", FormatType.Docx)
 document.Close()
 {% endhighlight %}
@@ -280,7 +289,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Creating table of contents with user-defined styles
 
-The following code example shows how to create table of contents with user-defined styles instead of heading styles.
+The following code example shows how to create a table of contents with user-defined styles instead of heading styles.
 
 {% tabs %}
 
@@ -441,12 +450,12 @@ paragraph = section.AddParagraph()
 'Adds the text for the headings
 paragraph.AppendText("Third Chapter")
 'Sets the built-in heading style
-paragraph.ApplyStyle("My style")
+paragraph.ApplyStyle("MyStyle")
 'Adds the text to the paragraph
 section.AddParagraph().AppendText(paraText)
 'Updates the table of contents
 document.UpdateTableOfContents()
-‘Saves and closes the Word document instance
+'Saves and closes the Word document instance
 document.Save("Sample.docx", FormatType.Docx)
 document.Close()
 {% endhighlight %}
@@ -717,7 +726,7 @@ End Using
 
 ## Removing table of contents
 
-The following code example shows how to remove table of contents (TOC) in Word document.
+The following code example shows how to remove a table of contents (TOC) in a Word document.
 
 {% tabs %}
 
@@ -734,7 +743,6 @@ using (WordDocument document = new WordDocument())
     //Saves the file in the given path
     MemoryStream stream = new MemoryStream();
     document.Save(stream, FormatType.Docx);
-    docStream.Dispose();
     //Closes the document
     document.Close();
 }
@@ -769,7 +777,7 @@ End Using
 
 {% endtabs %}
 
-The helper methods helps for removing table of contents (TOC) in Word document.
+The helper methods help to remove a table of contents (TOC) in a Word document.
 
 {% tabs %}
 

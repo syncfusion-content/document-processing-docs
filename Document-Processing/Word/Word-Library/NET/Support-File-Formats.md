@@ -1,16 +1,16 @@
 ---
 title: Supported file formats in .NET Word (DocIO) Library | Syncfusion
-description: Learn more about the supported file formats in .NET Word (DocIO) Library to create, edit, and convert Word document.
+description: Learn more about the supported file formats in .NET Word (DocIO) Library to create, edit, and convert Word documents.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Supported File Formats in .NET Word Library  
+# Supported File Formats in .NET Word (DocIO) Library
 
 Syncfusion<sup>&reg;</sup> [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) supports all major native file formats of Microsoft Word, such as [DOC](https://help.syncfusion.com/document-processing/word/conversions/word-file-formats-conversions#word-binary-97-2003-format), [DOCX](https://help.syncfusion.com/document-processing/word/conversions/word-file-formats-conversions#word-document-docx), [RTF](https://help.syncfusion.com/document-processing/word/conversions/rtf-conversions), [DOT](https://help.syncfusion.com/document-processing/word/conversions/word-file-formats-conversions#word-97-2003-template-dot), [DOTX](https://help.syncfusion.com/document-processing/word/conversions/word-file-formats-conversions#word-template-dotx), [DOCM](https://help.syncfusion.com/document-processing/word/conversions/word-file-formats-conversions#macros-docm-dotm), and more. It also supports conversion for major native file formats to [HTML](https://help.syncfusion.com/document-processing/word/conversions/html-conversions), [Markdown](https://help.syncfusion.com/document-processing/word/conversions/word-to-markdown-conversion), [PDF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf) and [image](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/word-to-image). 
 
-The following table describes the supported file formats and their conversions in DocIO. 
+The following table describes the supported file formats and their conversions in DocIO.
 
 <table>
 <tr>
@@ -25,7 +25,7 @@ The following table describes the supported file formats and their conversions i
 {{'[DOCX](https://help.syncfusion.com/document-processing/word/conversions/word-file-formats-conversions#word-document-docx)'| markdownify }}
 </th>
 <th>
-{{'[Word Processing XML (2007)](https://help.syncfusion.com/document-processing/word/conversions/word-file-formats-conversions#word-processing-xml-xml)'| markdownify }}
+{{'[Word Processing XML](https://help.syncfusion.com/document-processing/word/conversions/word-file-formats-conversions#word-processing-xml-xml)'| markdownify }}
 </th>
 <th>
 {{'[DOT](https://help.syncfusion.com/document-processing/word/conversions/word-file-formats-conversions#word-97-2003-template-dot)'| markdownify }}
@@ -267,9 +267,9 @@ The following table describes the supported file formats and their conversions i
 </tr>
 </table>
 
-N> 1. Importing ODT format is not supported, you can save the existing document as ODT using DocIO. 
-N> 2. Exporting the Word Processing 2003 XML document is not supported. Whereas you can import the Word Processing 2003 XML documents and export it to other supported file formats. 
+N> 1. Importing the ODT format is not supported; however, you can save an existing document as ODT using DocIO.
+N> 2. Exporting to the Word Processing 2003 XML format is not supported. However, you can import Word Processing 2003 XML documents and export them to other supported file formats.
 
 ## See Also
 
-* [How to Identify and Manage File formats Unsupported by .NET Core Word?](https://support.syncfusion.com/kb/article/19611/how-to-identify-and-manage-file-formats-unsupported-by-net-core-word)
+* [How to Identify and Manage File Formats Unsupported by .NET Word (DocIO)?](https://support.syncfusion.com/kb/article/19611/how-to-identify-and-manage-file-formats-unsupported-by-net-core-word)

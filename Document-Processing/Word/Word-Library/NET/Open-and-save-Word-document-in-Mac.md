@@ -12,6 +12,10 @@ Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncf
 
 ## Steps to open and save Word document programmatically in .NET Core application on Mac OS
 
+**Prerequisites:**
+
+*   Install [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/) or the [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
+
 Step 1: Create a new .NET Core console application project.
 
 ![Create .NET Core console application in Visual Studio](Mac-images/CreateProject.png)
@@ -38,7 +42,7 @@ using Syncfusion.DocIO.DLS;
 
 {% endtabs %}
 
-Step 5: Add the following code snippet in Program.cs file to **open an existing Word document in .NET Core application on Mac OS**.
+Step 5: Place an existing Word document named `Input.docx` in the project folder (alongside `Program.cs`), since the sample reads `Input.docx` from the application's working directory. Then, add the following code snippet in Program.cs file to **open an existing Word document in .NET Core application on Mac OS**.
 
 {% tabs %}
 
@@ -83,10 +87,14 @@ outputStream.Dispose();
 
 {% endtabs %}
 
+Step 8: Build and run the project.
+
+Click **Run** ▸ **Start Without Debugging** in Visual Studio for Mac, or execute `dotnet run` in the terminal, to build and run the application.
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Read-and-Save-document/Open-and-save-Word-document/MAC).
 
 By executing the program, you will get the **Word document** as follows. The output will be saved in bin folder.
 
-![.Net Core open and save output Word document](Mac-images/OpenAndSaveOutput.png)
+![.NET Core open and save output Word document](Mac-images/OpenAndSaveOutput.png)
 
 Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page. 
