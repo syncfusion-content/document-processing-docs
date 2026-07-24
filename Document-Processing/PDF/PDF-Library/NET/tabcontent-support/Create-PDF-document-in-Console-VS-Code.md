@@ -1,31 +1,46 @@
-**Prerequisites**:
+**Prerequisites:**
 
-* Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-* Install Visual Studio Code: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
-* Install C# Extension for VS Code: Open Visual Studio Code, go to the Extensions view (Ctrl+Shift+X), and search for 'C#'. Install the official [C# extension provided by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
+* [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download) (or later)
+* [Visual Studio Code](https://code.visualstudio.com/download)
+* [C# extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) (search for `C#` in the **Extensions** view and install the official Microsoft extension)
+* An active [Syncfusion&reg; license key](https://www.syncfusion.com/sales/communitylicense) (a free 30-day trial is available)
 
-
-
-Step 1: Open the terminal (Ctrl+` ) and run the following command to create a new .NET console application project. Replace `CreatePdfConsoleApp` with your desired project name.
+Step 1: Open a new terminal in VS Code by pressing <kbd>Ctrl</kbd>+<kbd>`</kbd> and run the following command to create a new .NET console application project. Replace `CreatePdfConsoleApp` with your desired project name.
 
 ```
 dotnet new console -n CreatePdfConsoleApp
 ```
 
-Step 2: Navigate to the project directory using the following command.
+N> Use `dotnet new console -f net8.0 -n CreatePdfConsoleApp` to explicitly target a specific .NET version (for example, .NET 8.0).
+
+Step 2: Navigate to the newly created project directory.
 
 ```
 cd CreatePdfConsoleApp
 ```
 
-Step 3: Use the following command in the terminal to add the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) package to your project.
+Step 3: Use the following command in the terminal to add the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) package as a reference to your project.
 
 ```
 dotnet add package Syncfusion.Pdf.Net.Core
 ```
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: Include the following namespaces in the *Program.cs* file.
+Step 4: Register the Syncfusion<sup>&reg;</sup> license key. An evaluation watermark is added to every page of the generated PDF until a valid key is registered. Include the license key at the top of **Program.cs** before creating a `PdfDocument` instance. Refer to the [Syncfusion License documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion<sup>&reg;</sup> license key in your application.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Licensing;
+
+// Register the Syncfusion license
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+
+{% endhighlight %}
+{% endtabs %}
+
+Replace `"YOUR LICENSE KEY"` with the license key associated with your Syncfusion<sup>&reg;</sup> account. If you do not have a license key, you can request a free 30-day trial or apply for a Community License from the Syncfusion<sup>&reg;</sup> website. For more information about registering a license key in your application, refer to the [Syncfusion<sup>&reg;</sup> Licensing Documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
+
+Step 5: Include the following namespaces in the *Program.cs* file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -38,11 +53,11 @@ using Syncfusion.Drawing;
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Include the below code snippet in *Program.cs* to create a PDF file.
+Step 6: Replace the contents of *Program.cs* with the code below to create a PDF file using the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class. The [DrawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) object is used to draw text on the PDF page, and the [Save](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_Save_System_String_) method persists the document to the specified file path before [Close](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_Close_System_Boolean_) finalizes it.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
- 
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a page to the document.
@@ -53,26 +68,26 @@ PdfGraphics graphics = page.Graphics;
 PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
 //Draw the text.
 graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
-//Create a fileStream.
-FileStream fileStream = new FileStream("Output.pdf", FileMode.CreateNew, FileAccess.ReadWrite);
 //Save and close the PDF document.
-document.Save(fileStream);
+document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Build the project.
+Step 7: Build the project.
 
-Run the following command in terminal to build the project.
+Run the following command in the integrated terminal:
 
 ```
 dotnet build
 ```
 
-Step 7: Run the project.
+Confirm that the build succeeds with no errors before continuing to the next step.
 
-Run the following command in terminal to run the project.
+Step 8: Run the project.
+
+Run the following command in the integrated terminal to build and launch the application:
 
 ```
 dotnet run

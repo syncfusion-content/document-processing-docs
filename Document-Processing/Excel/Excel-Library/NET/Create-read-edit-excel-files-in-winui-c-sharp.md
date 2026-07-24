@@ -15,7 +15,7 @@ The following steps illustrate creating a simple Invoice-formatted Excel documen
 
 **Prerequisites:**
 - Visual Studio 2022 (17.0 or later) with the **.NET Desktop Development** workload and the **Windows App SDK** installed.
-- .NET 6 or later (WinUI 3 requires .NET 6+ for desktop apps).
+- .NET 8 or later 
 
 Step 1: Create a new C# WinUI Desktop app. Select **Blank App, Packaged with WAP (WinUI 3 in Desktop)** from the template and click the **Next** button.
 
@@ -347,6 +347,4 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 A complete working example of how to read and edit an Excel file in WinUI in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/WinUI/Edit%20Excel).
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/winui) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
-
-An online sample link to [create an Excel document](https://ej2.syncfusion.com/aspnetcore/Excel/Create#/material3) in ASP.NET Core.
-
+An online sample link to [create an Excel document](https://document.syncfusion.com/demos/excel/create#/tailwind3) in ASP.NET Core.
