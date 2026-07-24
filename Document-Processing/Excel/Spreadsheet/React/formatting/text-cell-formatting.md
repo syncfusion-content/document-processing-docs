@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Text & Cell Formatting in React Spreadsheet component | Syncfusion
+title: Text & Cell Formatting in React Spreadsheet Component | Syncfusion
 description: Learn here all about Text and cell formatting in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Formatting
 platform: document-processing
@@ -38,7 +38,7 @@ You can align text in cells using the following options:
 | Alignment Type | Options | Description |
 |----------------|---------|-------------|
 | [`textAlign`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/textalign) | Left, Center, Right | Aligns text horizontally from left to right within the cell. |
-| [verticalAlign](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/verticalalign) | Top, Middle, Bottom | Aligns text from top to bottom within the cell. |
+| [`verticalAlign`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/verticalalign) | Top, Middle, Bottom | Aligns text from top to bottom within the cell. |
 
 ## Indents
 
@@ -73,39 +73,39 @@ The React Spreadsheet Editor allows you to apply borders to a cell or a range of
 
 ### Border Types
 
-The Spreadsheet supports many types of borders. Each type adds a border to a specific side or area of the selected cells:
+The following border types are supported. Each type adds a border to a specific side or area of the selected cells:
 
-| Types | Actions |
-|-------|---------|
-| **Top Border** | Specifies the top border of a cell or range of cells.|
-| **Left Border** | Specifies the left border of a cell or range of cells.|
-| **Right Border** | Specifies the right border of a cell or range of cells.|
-| **Bottom Border** | Specifies the bottom border of a cell or range of cells.|
-| **No Border** | Used to clear the border from a cell or range of cells.|
-| **All Border** | Specifies all border of a cell or range of cells.|
-| **Horizontal Border** | Specifies the top and bottom border of a cell or range of cells.|
-| **Vertical Border** | Specifies the left and right border of a cell or range of cells.|
-| **Outside Border** | Specifies the outside border of a range of cells.|
-| **Inside Border** | Specifies the inside border of a range of cells.|
+| Type | Description |
+|------|-------------|
+| **Top Border** | Specifies the top border of a cell or range of cells. |
+| **Left Border** | Specifies the left border of a cell or range of cells. |
+| **Right Border** | Specifies the right border of a cell or range of cells. |
+| **Bottom Border** | Specifies the bottom border of a cell or range of cells. |
+| **No Border** | Clears the border from a cell or range of cells. |
+| **All Border** | Specifies all borders of a cell or range of cells. |
+| **Horizontal Border** | Specifies the top and bottom borders of a cell or range of cells. |
+| **Vertical Border** | Specifies the left and right borders of a cell or range of cells. |
+| **Outside Border** | Specifies the outer perimeter of a range of cells. |
+| **Inside Border** | Specifies the inside borders of a range of cells. |
 
 ### Customize Border Colors and Styles
 
-You can also change how the border looks by adjusting its size and style. The Spreadsheet supports the following options:
+You can change the appearance of a border by adjusting its size, style, and color. The Spreadsheet supports the following options:
 
-| Types | Actions |
-|-------|---------|
-| **Thin** | Specifies the `1px` border size (default).|
-| **Medium** | Specifies the `2px` border size.|
-| **Thick** | Specifies the `3px` border size.|
-| **Solid** | Used to create the `solid` border (default).|
-| **Dashed** | Used to create the `dashed` border.|
-| **Dotted** | Used to create the `dotted` border.|
-| **Double** | Used to create the `double` border.|
+| Style | Description |
+|-------|-------------|
+| **Thin** | Specifies the `1px` border size (default). |
+| **Medium** | Specifies the `2px` border size. |
+| **Thick** | Specifies the `3px` border size. |
+| **Solid** | Creates a `solid` border (default). |
+| **Dashed** | Creates a `dashed` border. |
+| **Dotted** | Creates a `dotted` border. |
+| **Double** | Creates a `double` border. |
 
-Borders can be applied in the following ways,
+Borders can be applied in the following ways:
 
-- Using the `border`, `borderLeft`, `borderRight`, `borderBottom` properties, you can set the desired border to each cell at initial load. The [border](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#border) property is part of  [CellStyleModel](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel) and is applied via the cell's `style` object.
-- Using the [setBorder](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#setborder) method, you can set various border options to a cell or range of cells.
+- Using the `border`, `borderTop`, `borderLeft`, `borderRight`, `borderBottom` properties, you can set the desired border on each cell at initial load. The [border](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#border) property is part of [CellStyleModel](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel) and is applied via the cell's `style` object.
+- Using the [setBorder](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#setborder) method, you can set various border options on a cell or range of cells.
 - Selecting the border options from the ribbon toolbar.
 
 The following code sample shows how to apply different typed border, colors and styles in the Spreadsheet.
@@ -136,7 +136,7 @@ The following features are not supported in Formatting:
 
 ## Note
 
-You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for feature highlights. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to learn how to present and manipulate data.
+You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for feature highlights.
 
 ## See Also
 

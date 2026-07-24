@@ -22,6 +22,7 @@ The following types of charts are available in the Spreadsheet.
 >* Area Chart
 >* Line Chart
 >* Pie Chart
+>* Doughnut Chart
 >* Scatter Chart
 
 ## How Charts Stay Synchronized

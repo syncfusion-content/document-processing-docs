@@ -9,19 +9,19 @@ documentation: ug
 
 # Conditional Formatting
 
-Conditional formatting helps you to format a cell or range of cells based on the conditions applied. You can enable or disable conditional formats by using the [`allowConditionalFormat`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#allowconditionalformat) property.
+Conditional formatting helps you format a cell or range of cells based on the conditions applied. You can enable or disable conditional formats by using the [`allowConditionalFormat`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#allowconditionalformat) property.
 
 > * The default value for the `allowConditionalFormat` property is `true`.
 
 ## Apply Conditional Formatting
 
-You can apply conditional formatting by using one of the following ways,
+You can apply conditional formatting by using one of the following ways:
 
-* Select the conditional formatting icon in the Ribbon toolbar under the Home Tab.
-* Using the [`conditionalFormat()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#conditionalformat) method to define the condition.
-* Using the `conditionalFormats` in sheets model.
+* Select the conditional formatting icon in the Ribbon toolbar under the **Home** tab.
+* Use the [`conditionalFormat()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#conditionalformat) method to define the condition.
+* Use the `conditionalFormats` property in the sheets model.
 
-Conditional formatting has the following types in the spreadsheet,
+The Spreadsheet supports the following conditional formatting types:
 
 ## Highlight Cells Rules
 
@@ -77,16 +77,16 @@ Using the custom format for conditional formatting you can set cell styles like 
 
 In the MAY and JUN columns, we have applied conditional formatting custom format.
 
->* In the Conditional format, custom format supported for **Highlight cell rules** and **Top bottom rules**.
+>* Custom Format is supported only for **Highlight Cells Rules** and **Top Bottom Rules**.
 
 ## Clear Rules
 
-You can clear the defined rules by using one of the following ways,
+You can clear defined rules by using one of the following ways:
 
 * Using the `Clear Rules` option in the Conditional Formatting button of HOME Tab in the ribbon to clear the rule from selected cells.
 * Using the [`clearConditionalFormat`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#clearconditionalformat) method to clear the defined rules.
 
-The following code sample shows how to apply different types of conditional formatting, colors, and styles in the Spreadsheet
+The following code sample shows how to apply different types of conditional formatting, colors, and styles in the Spreadsheet.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -105,7 +105,7 @@ The following code sample shows how to apply different types of conditional form
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/conditional-formatting-cs1" %}
 
-## Limitations of Conditional formatting
+## Limitations of Conditional Formatting
 
 The following features have some limitations in Conditional Formatting:
 
@@ -116,7 +116,7 @@ The following features have some limitations in Conditional Formatting:
 
 ## Note
 
-You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for feature highlights. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to learn how to present and manipulate data.
+You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for feature highlights.
 
 ## See Also
 
