@@ -1,6 +1,6 @@
 ---
 title: Document Styles in WPF RichTextBox control | Syncfusion
-description: Learn here all about Document Styles support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+description: Learn about the Document Styles support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
@@ -13,26 +13,20 @@ A style is a predefined set of table, numbering, paragraph, and character format
 In [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor), styles are created and added to a document programmatically or using the built-in Styles dialog.
 
 A style in a document should have the following properties:
-### Name
-Name of the style. All styles in a document have a unique name, which is used as an identifier when applying the style.
 
-### Type
-Specifies the document elements that the style will target. For example, paragraph or character.
+**Name** – Name of the style. All styles in a document have a unique name, which is used as an identifier when applying the style.
 
-### Next
-Specifies the style that will be automatically applied to a new paragraph, which is created following a paragraph with the parent paragraph style applied.
+**Type** – Specifies the document elements that the style will target. For example, paragraph or character.
 
-### Link
-Provides a relation between the paragraph and character style.
+**Next** – Specifies the style that will be automatically applied to a new paragraph, which is created following a paragraph with the parent paragraph style applied.
 
-### CharacterFormat
-Specifies the properties of paragraph and character style.
+**Link** – Provides a relation between the paragraph and character style.
 
-### ParagraphFormat
-Specifies the properties of paragraph style.
+**CharacterFormat** – Specifies the properties of paragraph and character style.
 
-### BasedOn
-Specifies that the current style inherits the style set to this property. This is how hierarchical styles are defined. It can be optional.
+**ParagraphFormat** – Specifies the properties of paragraph style.
+
+**BasedOn** – Specifies that the current style inherits the style set to this property. This is how hierarchical styles are defined. It can be optional.
 
 N> The style type should match the inherited style type. For example, it is not possible to have a character style inherit a paragraph style.
 
@@ -81,13 +75,13 @@ SfRichTextBoxAdv provides the following functionalities related with styles:
 * Apply style
 * Clear formatting
 
-## Create new style
+## Create New Style
 New styles are created and added to the style collection of the document. Here, you can create character, paragraph and linked type styles.
 
 The following code example explains how to create new style dialog through command binding.
 {% tabs %}
 {% highlight xaml %}
-<Button Content="Create style" Command="Syncfusion:SfRichTextBoxAdv.ShowStyleDialogCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}" ></Button>
+<Button Content="Create Style" Command="Syncfusion:SfRichTextBoxAdv.ShowStyleDialogCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}" ></Button>
 {% endhighlight %}
 {% endtabs %}
 
@@ -99,7 +93,7 @@ You can modify a style directly using the ShowStylesDialogCommand in SfRichTextB
 The following code example explains how to modify the style dialog through command binding.
 {% tabs %}
 {% highlight xaml %}
-<Button Content="Modify style" Command="Syncfusion:SfRichTextBoxAdv.ShowStylesDialogCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}"></Button>
+<Button Content="Modify Style" Command="Syncfusion:SfRichTextBoxAdv.ShowStylesDialogCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}"></Button>
 {% endhighlight %}
 {% endtabs %}
 
@@ -119,7 +113,7 @@ When there is no selection, styles of Linked type will change the values of the 
 The following code example explains how to apply style through command binding.
 {% tabs %}
 {% highlight xaml %}
-<Button Content="Apply style" Command="Syncfusion:SfRichTextBoxAdv.ApplyStyleCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}" CommandParameter="Heading 1"></Button>
+<Button Content="Apply Style" Command="Syncfusion:SfRichTextBoxAdv.ApplyStyleCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}" CommandParameter="Heading 1"></Button>
 {% endhighlight %}
 {% endtabs %}
 
@@ -129,8 +123,11 @@ It will remove all the formatting from the selection leaving only the normal unf
 The following code example explains how to clear the formatting of text through command binding.
 {% tabs %}
 {% highlight xaml %}
-<Button Content="Clear formatting" Command="Syncfusion:SfRichTextBoxAdv.ClearFormattingCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}"></Button>
+<Button Content="Clear Formatting" Command="Syncfusion:SfRichTextBoxAdv.ClearFormattingCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}"></Button>
 {% endhighlight %}
 {% endtabs %}
 
-N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations.You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to knows how to render and configure the editing tools.
+## See Also
+
+- [WPF RichTextBox Feature Tour](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor)
+- [WPF RichTextBox Examples](https://github.com/syncfusion/docx-editor-sdk-wpf-demos)

@@ -1,19 +1,19 @@
 ---
-title: Detect viewer scrolled to bottom in WPF SfRichTextBoxAdv | Syncfusion
-description: Learn here all about how to identify whether the viewer is scrolled to the bottom in Syncfusion WPF SfRichTextBoxAdv and more.
+title: Detect When the Viewer is Scrolled to the Bottom in WPF SfRichTextBoxAdv | Syncfusion
+description: Learn how to identify whether the viewer is scrolled to the bottom in Syncfusion WPF SfRichTextBoxAdv and more.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: scroll-to-bottom
 ---
 
-# Detect viewer scrolled to bottom in WPF SfRichTextBoxAdv
+# Detect When the Viewer is Scrolled to the Bottom in WPF SfRichTextBoxAdv
 
 This page explains how to identify whether the viewer is scrolled to the bottom in [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv).
 
-SfRichTextBoxAdv scrollbars can be accessed through the [VerticalScrollBar](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_VerticalScrollBar) and [HorizontalScrollBar](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_HorizontalScrollBar) properties of [SfRichTextBoxAdv](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html) class. Using these properties, we can identify when the document is scrolled to the bottom of the control. 
+SfRichTextBoxAdv scrollbars can be accessed through the [VerticalScrollBar](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_VerticalScrollBar) and [HorizontalScrollBar](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_HorizontalScrollBar) properties of [SfRichTextBoxAdv](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html) class. Using these properties, you can identify when the document is scrolled to the bottom of the control. 
 
-We can use the ValueChanged event of the [VerticalScrollBar](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_VerticalScrollBar) for this purpose. Check if the scroll bar's value equals the [VerticalScrollBar](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_VerticalScrollBar) Maximum property value, if these values are equal then the vertical scroll bar has been scrolled to the bottom of the control.
+You can use the ValueChanged event of the [VerticalScrollBar](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_VerticalScrollBar) for this purpose. Check if the scroll bar's value equals the VerticalScrollBar Maximum property value. If these values are equal, then the vertical scroll bar has been scrolled to the bottom of the control.
 
 The following code example illustrates to identify whether the viewer is scrolled to the bottom of the SfRichTextBoxAdv.
 
@@ -41,9 +41,14 @@ The following code example illustrates to identify whether the viewer is scrolle
  {
      if (e.NewValue == richTextBoxAdv.VerticalScrollBar.Maximum)
      {
-             ///When the scroll bar value and its maximum value are same.
-             ///Then scroll reached the bottom of the control.
+             //When the scroll bar value and its maximum value are same.
+             //Then scroll reached the bottom of the control.
      }
  }
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+
+- [WPF RichTextBox Feature Tour](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor)
+- [WPF RichTextBox Examples](https://github.com/syncfusion/docx-editor-sdk-wpf-demos)
