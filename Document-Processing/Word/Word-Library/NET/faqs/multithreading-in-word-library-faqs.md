@@ -22,7 +22,7 @@ The following code example illustrates how to use multithreading to open, edit, 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 class MultiThreading
 {
-    //Indicates the number of threads to be create.
+    //Indicates the number of threads to be created.
     private const int TaskCount = 1000;
     public static async Task Main()
     {
@@ -60,7 +60,7 @@ class MultiThreading
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 class MultiThreading
 {
-    //Indicates the number of threads to be create.
+    //Indicates the number of threads to be created.
     private const int TaskCount = 1000;
     public static async Task Main()
     {
@@ -97,7 +97,7 @@ class MultiThreading
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Module MultiThreading
-    'Indicates the number of threads to be create.
+    'Indicates the number of threads to be created.
     Private Const TaskCount As Integer = 1000
     Public Sub Main()
         'Create an array of tasks based on the TaskCount.
@@ -141,7 +141,7 @@ class MultiThreading
 {
     static void Main(string[] args)
     {
-        //Indicates the number of threads to be create.
+        //Indicates the number of threads to be created.
         int limit = 5;
         Console.WriteLine("Parallel For Loop");
         Parallel.For(0, limit, count =>
@@ -178,7 +178,7 @@ class MultiThreading
 {
     static void Main(string[] args)
     {
-        //Indicates the number of threads to be create.
+        //Indicates the number of threads to be created.
         int limit = 5;
         Console.WriteLine("Parallel For Loop");
         Parallel.For(0, limit, count =>
