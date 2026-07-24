@@ -1,22 +1,22 @@
 ---
-title: Find and Replace | Excel library | Syncfusion
-description: In this section, you can learn about how to find and replace in an Excel document using .NET Excel Library.
+title: Find and Replace | Excel Library | Syncfusion
+description: In this section, you can learn how to find and replace text, numbers, formulas, values, and comments in an Excel worksheet using the .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Find and Replace in Excel Document
+# Find and Replace in Excel Worksheet
 
-**Find**
+## Find
 
-XlsIO provides the following options to perform find using [ExcelFindType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelFindType.html) in an Excel workbook or worksheet:
+XlsIO provides the following options to perform a find operation using [ExcelFindType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelFindType.html) in an Excel workbook or worksheet:
 
 * Search for number
 * Search for text
 * Search for values
 * Search for comments
-* Search for formula
+* Search for formulas
 
 Additionally, you can search for case-sensitive data and match the entire cell contents using [ExcelFindOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelFindOptions.html). All occurrences of a text in an Excel worksheet can be found using the [FindAll](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_FindAll_System_Boolean_) method.
 
@@ -31,22 +31,22 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
   IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Searches for the given string within the text of worksheet
+  //Searches for the given string within the text of a worksheet
   IRange[] textCells = worksheet.FindAll("Gill", ExcelFindType.Text);
 
-  //Searches for the given string within the text of worksheet
+  //Searches for the given number within a worksheet
   IRange[] numberCells = worksheet.FindAll(700, ExcelFindType.Number);
 
   //Searches for the given string in formulas
   IRange[] formulaCells = worksheet.FindAll("=SUM(F10:F11)", ExcelFindType.Formula);
 
-  //Searches for the given string in calculated value, number and text
+  //Searches for the given value in the calculated result, number, or text
   IRange[] valueCells = worksheet.FindAll("41", ExcelFindType.Values);
 
   //Searches for the given string within the text of worksheet and case matched
   IRange[] textMatchingCaseCells = worksheet.FindAll("Pen Set", ExcelFindType.Text, ExcelFindOptions.MatchCase);
 
-  //Searches for the given string within the text of worksheet and the entire cell content matching to search text
+  //Searches for the given string within the text of a worksheet and the entire cell content matching the search text
   IRange[] textMatchingEntireContentCells = worksheet.FindAll("5", ExcelFindType.Text, ExcelFindOptions.MatchEntireCellContent);
 
   foreach (IRange cell in textCells)
@@ -82,7 +82,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   foreach (IRange cell in textMatchingEntireContentCells)
   {
       //Highlight found entire content matching text cells in teal
-      cell.CellStyle.Color = Syncfusion.Drawing.Color.FromArgb(255, 0, 128, 128); 
+      cell.CellStyle.Color = Syncfusion.Drawing.Color.FromArgb(255, 0, 128, 128);
   }
 
   //Saving the workbook
@@ -98,26 +98,26 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IWorkbook workbook = application.Workbooks.Open("../../Data/InputTemplate.xlsx");
   IWorksheet sheet = workbook.Worksheets[0];
 
-  //Searches for the given string within the text of worksheet
-  IRange[] result1 = worksheet.FindAll("Gill", ExcelFindType.Text);
+  //Searches for the given string within the text of a worksheet
+  IRange[] result1 = sheet.FindAll("Gill", ExcelFindType.Text);
 
-  //Searches for the given string within the text of worksheet
-  IRange[] result2 = worksheet.FindAll(700, ExcelFindType.Number);
+  //Searches for the given number within a worksheet
+  IRange[] result2 = sheet.FindAll(700, ExcelFindType.Number);
 
   //Searches for the given string in formulas
-  IRange[] result3 = worksheet.FindAll("=SUM(F10:F11)", ExcelFindType.Formula);
+  IRange[] result3 = sheet.FindAll("=SUM(F10:F11)", ExcelFindType.Formula);
 
-  //Searches for the given string in calculated value, number and text
-  IRange[] result4 = worksheet.FindAll("41", ExcelFindType.Values);
+  //Searches for the given value in the calculated result, number, or text
+  IRange[] result4 = sheet.FindAll("41", ExcelFindType.Values);
 
   //Searches for the given string in comments
-  IRange[] result5 = worksheet.FindAll("Desk", ExcelFindType.Comments);
+  IRange[] result5 = sheet.FindAll("Desk", ExcelFindType.Comments);
 
-  //Searches for the given string within the text of worksheet and case matched
-  IRange[] result6 = worksheet.FindAll("Pen Set", ExcelFindType.Text, ExcelFindOptions.MatchCase);
+  //Searches for the given string within the text of a worksheet and case-matched
+  IRange[] result6 = sheet.FindAll("Pen Set", ExcelFindType.Text, ExcelFindOptions.MatchCase);
 
-  //Searches for the given string within the text of worksheet and the entire cell content matching to search text
-  IRange[] result7 = worksheet.FindAll("5", ExcelFindType.Text, ExcelFindOptions.MatchEntireCellContent);
+  //Searches for the given string within the text of a worksheet and the entire cell content matching the search text
+  IRange[] result7 = sheet.FindAll("5", ExcelFindType.Text, ExcelFindOptions.MatchEntireCellContent);
 
   //Saving the workbook
   workbook.SaveAs("Find.xlsx");
@@ -131,25 +131,25 @@ Using excelEngine As New ExcelEngine()
     Dim workbook As IWorkbook = application.Workbooks.Open("../../Data/InputTemplate.xlsx")
     Dim worksheet As IWorksheet = workbook.Worksheets(0)
 
-    'Searches for the given string within the text of worksheet
+    'Searches for the given string within the text of a worksheet
     Dim result1 As IRange() = worksheet.FindAll("Gill", ExcelFindType.Text)
 
-    'Searches for the given string within the text of worksheet
+    'Searches for the given number within a worksheet
     Dim result2 As IRange() = worksheet.FindAll(700, ExcelFindType.Number)
 
     'Searches for the given string in formulas
     Dim result3 As IRange() = worksheet.FindAll("=SUM(F10:F11)", ExcelFindType.Formula)
 
-    'Searches for the given string in calculated value, number and text
+    'Searches for the given value in the calculated result, number, or text
     Dim result4 As IRange() = worksheet.FindAll("41", ExcelFindType.Values)
 
     'Searches for the given string in comments
     Dim result5 As IRange() = worksheet.FindAll("Desk", ExcelFindType.Comments)
 
-    'Searches for the given string within the text of worksheet and case matched
+    'Searches for the given string within the text of a worksheet and case-matched
     Dim result6 As IRange() = worksheet.FindAll("Pen Set", ExcelFindType.Text, ExcelFindOptions.MatchCase)
 
-    'Searches for the given string within the text of worksheet and the entire cell content matching to search text
+    'Searches for the given string within the text of a worksheet and the entire cell content matching the search text
     Dim result7 As IRange() = worksheet.FindAll("5", ExcelFindType.Text, ExcelFindOptions.MatchEntireCellContent)
 
     'Saving the workbook
@@ -160,9 +160,9 @@ End Using
 
 A complete working example to find all occurrences of text in a worksheet with different find options in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Find/.NET/Find).
 
-**Replace** 
+## Replace
 
-It is possible to replace a text with another text with the help of [Replace](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_Replace_System_String_System_String_) method which searches for text which should be changed. A string can be replaced, with the data of various data types and data sources, such as data table, data column and array.
+It is possible to replace text with other text using the [Replace](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_Replace_System_String_System_String_) method, which searches the active worksheet for the text that should be changed. The replacement value can be a string, a `DateTime` value, a `DataTable`, a `DataColumn`, or a `string[]` array.
 
 To know more about replace overloads, please refer [Replace](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_Replace_System_String_System_Data_DataColumn_System_Boolean_) in the API documentation section.
 
@@ -180,10 +180,10 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	//Replaces the given string with another string
 	worksheet.Replace("Wilson", "William");
 
-	//Replaces the given string with another string on match case
+	//Replaces the given string with another string on case match
 	worksheet.Replace("4.99", "4.90", ExcelFindOptions.MatchCase);
 
-	//Replaces the given string with another string matching entire cell content to the search word
+	//Replaces the given string with another string where the entire cell content matches the search word
 	worksheet.Replace("Pen Set", "Pen", ExcelFindOptions.MatchEntireCellContent);
 
 	//Replaces the given string with DateTime value
@@ -209,10 +209,10 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Replaces the given string with another string
   worksheet.Replace("Wilson", "William");
 
-  //Replaces the given string with another string on match case
+  //Replaces the given string with another string on case match
   worksheet.Replace("4.99", "4.90", ExcelFindOptions.MatchCase);
 
-  //Replaces the given string with another string matching entire cell content to the search word
+  //Replaces the given string with another string where the entire cell content matches the search word
   worksheet.Replace("Pen Set", "Pen", ExcelFindOptions.MatchEntireCellContent);
 
   //Replaces the given string with DateTime value
@@ -236,10 +236,10 @@ Using excelEngine As New ExcelEngine()
     ' Replaces the given string with another string
     worksheet.Replace("Wilson", "William")
 
-    ' Replaces the given string with another string on match case
+    ' Replaces the given string with another string on case match
     worksheet.Replace("4.99", "4.90", ExcelFindOptions.MatchCase)
 
-    ' Replaces the given string with another string matching entire cell content to the search word
+    ' Replaces the given string with another string where the entire cell content matches the search word
     worksheet.Replace("Pen Set", "Pen", ExcelFindOptions.MatchEntireCellContent)
 
     ' Replaces the given string with DateTime value
@@ -254,4 +254,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to replace all occurrences of given string in a worksheet with different find options in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Replace/.NET/Replace).
+A complete working example to replace all occurrences of a given string in a worksheet with different replace options in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Replace/.NET/Replace).
