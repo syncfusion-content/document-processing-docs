@@ -1,54 +1,54 @@
 ---
 layout: post
-title: Scrolling in EJ2 Javascript Spreadsheet control | Syncfusion
-description: Learn here all about Scrolling in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Scrolling in EJ2 JavaScript Spreadsheet Control | Syncfusion
+description: Learn here all about Scrolling in Syncfusion EJ2 JavaScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Scrolling 
+control: Scrolling
 documentation: ug
 ---
 
-# Scrolling in EJ2 Javascript Spreadsheet control
+# Scrolling in EJ2 JavaScript Spreadsheet control
 
-Scrolling helps you to move quickly to different areas of the worksheet. It moves faster if we use horizontal and vertical scroll bars. Scrolling can be enabled by setting the [`allowScrolling`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowscrolling) as true.
+Scrolling helps you move quickly to different areas of the worksheet. Movement is faster when you use the horizontal and vertical scroll bars. You can enable scrolling by setting the [`allowScrolling`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowscrolling) property to `true`.
 
-> By default, the `allowScrolling` property is true.
+> The default value for `allowScrolling` property is `true`.
 
-You have the following options in Scrolling by using [`scrollSettings`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#scrollsettings).
+The [`scrollSettings`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#scrollsettings) property provides the following scrolling options:
 
 * Finite scrolling.
 * Virtual scrolling.
 
 ## Finite Scrolling
 
-Finite scrolling supports two type of modes in scrolling. You can use the [`isFinite`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/scrollsettings/#isfinite) property in [`scrollSettings`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#scrollsettings) to specify the mode of scrolling.
+The Finite scrolling option supports two types of modes. You can use the [`isFinite`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/scrollsettings#isfinite) property in [`scrollSettings`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#scrollsettings) to specify the mode of scrolling.
 
-* Finite - This mode does not create a new row/column when the scrollbar reaches the end. This can be achieved by setting the [`isFinite`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/scrollsettings/#isfinite) property as `true`.
+* Finite - This mode does not create a new row/column when the scrollbar reaches the end. This can be achieved by setting the [`isFinite`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/scrollsettings#isfinite) property to `true`.
 
-* Infinite - This mode creates a new row/column when the scrollbar reaches the end. This can be achieved by setting the [`isFinite`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/scrollsettings/#isfinite) property as `false`.
+* Infinite - This mode creates a new row/column when the scrollbar reaches the end. This can be achieved by setting the [`isFinite`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/scrollsettings#isfinite) property to `false`.
 
-> By Default, the `isFinite` property is `false`.
+> By default, the `isFinite` property is `false`.
 
 ## Virtual Scrolling
 
-* Virtual scrolling allows you to load data that you require (load data based on viewport size) without buffering the entire huge database. You can set the `enableVirtualization` property in `scrollSettings` as `true`.
+* Virtual scrolling allows you to load data on demand (based on the viewport size) without buffering the entire large dataset. You can enable virtual scrolling by setting the `enableVirtualization` property in `scrollSettings` to `true`.
 
-In virtual scrolling `enableVirtualization` is set to true means, it allows you to load the spreadsheet data while scrolling.
+When `enableVirtualization` is set to `true`, the spreadsheet loads data while you scroll.
 
-> By Default, the `enableVirtualization` property is `true`.
+> By default, the `enableVirtualization` property is `true`.
 
 **User Interface**:
 
-You can scroll through the worksheet using one of the following ways,
+You can scroll through the worksheet using one of the following ways:
 
 * Using the `arrow` keys.
 * Using the Horizontal and Vertical`scroll` bars.
 * Using the `mouse` wheel.
 
-## Finite scrolling with defined rows and columns
+## Finite Scrolling with Defined Rows and Columns
 
-If you want to perform scrolling with defined rows and columns, you must define `rowCount` and `colCount` in the [`sheets`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#sheets) property and set `isFinite` as true and `enableVirtualization` as false in `scrollSettings`.
+If you want to perform scrolling with defined rows and columns, you must define `rowCount` and `colCount` in the [`sheets`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#sheets) property and set `isFinite` as true and `enableVirtualization` as false in `scrollSettings`.
 
-The following code example shows the finite scrolling with defined rows and columns in the spreadsheet. Here, we used rowCount as 20 and colCount as 20, after reaching the 20th row or 20th column you can't able to scroll.
+The following code example shows finite scrolling with defined rows and columns in the spreadsheet. Here, `rowCount` is set to 20 and `colCount` is set to 20. After reaching the 20th row or 20th column, you cannot scroll further.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
