@@ -7,16 +7,16 @@ documentation: UG
 ---
 
 # Create Equation using LaTeX
-The .NET Word (DocIO) library allows to create mathematical equation in Word document using **LaTeX**.
+The .NET Word (DocIO) library allows you to create mathematical equations in a Word document using **LaTeX**.
 
 To quickly start working with LaTeX Equations, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=pdN4HNlKTJs" %}
 
 ## Accent
 
-Add **accent** equation to a Word document using the LaTeX through [AppendMath](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendMath_System_String_) API.
+Add an **accent** equation to a Word document using LaTeX through the [AppendMath](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendMath_System_String_) API.
 
-The following code example illustrates how to create accent equation using LaTeX in Word document.
+The following code example illustrates how to create an accent equation using LaTeX in a Word document.
 
 N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
@@ -156,9 +156,9 @@ The following table demonstrates the LaTeX equivalent to professional format acc
 
 ## Bar
 
-Add **bar** equation to a Word document using the LaTeX through [AppendMath](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendMath_System_String_) API.
+Add a **bar** equation to a Word document using LaTeX through the [AppendMath](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendMath_System_String_) API.
 
-The following code example illustrates how to create bar equation using LaTeX in Word document.
+The following code example illustrates how to create a bar equation using LaTeX in a Word document.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/Bar/.NET/Bar/Program.cs" %}
@@ -169,7 +169,7 @@ using WordDocument document = new WordDocument();
 //Add one section and one paragraph to the document.
 document.EnsureMinimal();
 
-//Append an bar equation using LaTeX.
+//Append a bar equation using LaTeX.
 document.LastParagraph.AppendMath(@"\overline{a}");
 
 //Save the Word document to MemoryStream
@@ -186,7 +186,7 @@ using WordDocument document = new WordDocument();
 //Add one section and one paragraph to the document.
 document.EnsureMinimal();
 
-//Append an bar equation using LaTeX.
+//Append a bar equation using LaTeX.
 document.LastParagraph.AppendMath(@"\overline{a}");
 
 //Save the Word document.
@@ -201,7 +201,7 @@ Dim document As WordDocument = New WordDocument()
 'Add one section and one paragraph to the document.
 document.EnsureMinimal()
 
-'Append an bar equation using LaTeX.
+'Append a bar equation using LaTeX.
 document.LastParagraph.AppendMath(@"\overline{a}")
 
 'Save the Word document.
@@ -236,9 +236,9 @@ The following table demonstrates the LaTeX equivalent to professional format bar
 
 ## Box
 
-Add **box** equation to a Word document using the LaTeX through [AppendMath](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendMath_System_String_) API.
+Add a **box** equation to a Word document using LaTeX through the [AppendMath](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendMath_System_String_) API.
 
-The following code example illustrates how to create box equation using LaTeX in Word document.
+The following code example illustrates how to create a box equation using LaTeX in a Word document.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/Box/.NET/Box/Program.cs" %}
@@ -249,7 +249,7 @@ using WordDocument document = new WordDocument();
 //Add one section and one paragraph to the document.
 document.EnsureMinimal();
 
-//Append an box equation using LaTeX.
+//Append a box equation using LaTeX.
 document.LastParagraph.AppendMath(@"\box{a}");
 
 //Save the Word document to MemoryStream
@@ -266,7 +266,7 @@ using WordDocument document = new WordDocument();
 //Add one section and one paragraph to the document.
 document.EnsureMinimal();
 
-//Append an box equation using LaTeX.
+//Append a box equation using LaTeX.
 document.LastParagraph.AppendMath(@"\box{a}");
 
 //Save the Word document.
@@ -281,7 +281,7 @@ Dim document As WordDocument = New WordDocument()
 'Add one section and one paragraph to the document.
 document.EnsureMinimal()
 
-'Append an box equation using LaTeX.
+'Append a box equation using LaTeX.
 document.LastParagraph.AppendMath(@"\box{a}")
 
 'Save the Word document.
@@ -309,11 +309,11 @@ The following table demonstrates the LaTeX equivalent to professional format box
 </tr>
 </table>
 
-## Border Box
+## Border box
 
-Add **border box** equation to a Word document using the LaTeX through [AppendMath](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendMath_System_String_) API.
+Add a **border box** equation to a Word document using LaTeX through the [AppendMath](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendMath_System_String_) API.
 
-The following code example illustrates how to create border box equation using LaTeX in Word document.
+The following code example illustrates how to create a border box equation using LaTeX in a Word document.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/Border-Box/.NET/Border-Box/Program.cs" %}
@@ -325,7 +325,7 @@ using WordDocument document = new WordDocument();
 //Add one section and one paragraph to the document.
 document.EnsureMinimal();
 
-//Append an border box equation using LaTeX.
+//Append a border box equation using LaTeX.
 document.LastParagraph.AppendMath(@"\boxed{{x}^{2}+{y}^{2}={z}^{2}}");
 
 //Save the Word document to MemoryStream
@@ -344,7 +344,7 @@ using WordDocument document = new WordDocument();
 //Add one section and one paragraph to the document.
 document.EnsureMinimal();
 
-//Append an border box equation using LaTeX.
+//Append a border box equation using LaTeX.
 document.LastParagraph.AppendMath(@"\boxed{{x}^{2}+{y}^{2}={z}^{2}}");
 
 //Save the Word document.
@@ -361,7 +361,7 @@ Dim document As WordDocument = New WordDocument()
 'Add one section and one paragraph to the document.
 document.EnsureMinimal()
 
-'Append an border box equation using LaTeX.
+'Append a border box equation using LaTeX.
 document.LastParagraph.AppendMath(@"\boxed{{x}^{2}+{y}^{2}={z}^{2}}")
 
 'Save the Word document.
@@ -392,9 +392,9 @@ The following table demonstrates the LaTeX equivalent to professional format bor
 
 ## Delimiter
 
-Add **delimiter** equation to a Word document using the LaTeX through [AppendMath](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendMath_System_String_) API.
+Add a **delimiter** equation to a Word document using LaTeX through the [AppendMath](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendMath_System_String_) API.
 
-The following code example illustrates how to create delimiter equation using LaTeX in Word document.
+The following code example illustrates how to create a delimiter equation using LaTeX in a Word document.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/Delimiter/.NET/Delimiter/Program.cs" %}
@@ -405,7 +405,7 @@ using WordDocument document = new WordDocument();
 //Add one section and one paragraph to the document.
 document.EnsureMinimal();
 
-//Append an delimiter equation using LaTeX.
+//Append a delimiter equation using LaTeX.
 document.LastParagraph.AppendMath(@"\left(a\right)");
 
 //Save the Word document to MemoryStream
@@ -422,7 +422,7 @@ using WordDocument document = new WordDocument();
 //Add one section and one paragraph to the document.
 document.EnsureMinimal();
 
-//Append an delimiter equation using LaTeX.
+//Append a delimiter equation using LaTeX.
 document.LastParagraph.AppendMath(@"\left(a\right)");
 
 //Save the Word document.
@@ -437,7 +437,7 @@ Dim document As WordDocument = New WordDocument()
 'Add one section and one paragraph to the document.
 document.EnsureMinimal()
 
-'Append an delimiter equation using LaTeX.
+'Append a delimiter equation using LaTeX.
 document.LastParagraph.AppendMath(@"\left(a\right)")
 
 'Save the Word document.
@@ -600,11 +600,11 @@ The following table demonstrates the LaTeX equivalent to professional format del
 </tr>
 </table>
 
-## Equation Array
+## Equation array
 
-Add **equation array** to a Word document using the LaTeX through [AppendMath](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendMath_System_String_) API.
+Add an **equation array** to a Word document using LaTeX through the [AppendMath](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendMath_System_String_) API.
 
-The following code example illustrates how to create an equation array using LaTeX in Word document.
+The following code example illustrates how to create an equation array using LaTeX in a Word document.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/Equation-array/.NET/Equation-array/Program.cs" %}
@@ -615,7 +615,7 @@ using WordDocument document = new WordDocument();
 //Add one section and one paragraph to the document.
 document.EnsureMinimal();
 
-//Append an box equation using LaTeX.
+//Append an equation array using LaTeX.
 document.LastParagraph.AppendMath(@"\eqarray{a@&b}");
 
 //Save the Word document to MemoryStream
@@ -631,7 +631,7 @@ using WordDocument document = new WordDocument();
 //Add one section and one paragraph to the document.
 document.EnsureMinimal();
 
-//Append an box equation using LaTeX.
+//Append an equation array using LaTeX.
 document.LastParagraph.AppendMath(@"\eqarray{a@&b}");
 
 //Save the Word document.
@@ -646,8 +646,8 @@ Dim document As WordDocument = New WordDocument()
 'Add one section and one paragraph to the document.
 document.EnsureMinimal()
 
-'Append an box equation using LaTeX.
-document.LastParagraph.AppendMath(@"\eqarray{a@&b}");
+'Append an equation array using LaTeX.
+document.LastParagraph.AppendMath(@"\eqarray{a@&b}")
 
 'Save the Word document.
 document.Save("Result.docx", FormatType.Docx)
@@ -676,9 +676,9 @@ The following table demonstrates the LaTeX equivalent to professional format equ
 
 ## Fraction
 
-Add **fraction** equation to a Word document using the LaTeX through [AppendMath](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendMath_System_String_) API.
+Add a **fraction** equation to a Word document using LaTeX through the [AppendMath](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendMath_System_String_) API.
 
-The following code example illustrates how to create fraction equation using LaTeX in Word document.
+The following code example illustrates how to create a fraction equation using LaTeX in a Word document.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/Fraction/.NET/Fraction/Program.cs" %}
@@ -689,7 +689,7 @@ using WordDocument document = new WordDocument();
 //Add one section and one paragraph to the document.
 document.EnsureMinimal();
 
-//Append an fraction equation using LaTeX.
+//Append a fraction equation using LaTeX.
 document.LastParagraph.AppendMath(@"{\frac{dy}{dx}}");
 
 //Save the Word document to MemoryStream
@@ -706,7 +706,7 @@ using WordDocument document = new WordDocument();
 //Add one section and one paragraph to the document.
 document.EnsureMinimal();
 
-//Append an fraction equation using LaTeX.
+//Append a fraction equation using LaTeX.
 document.LastParagraph.AppendMath(@"{\frac{dy}{dx}}");
 
 //Save the Word document.
@@ -721,7 +721,7 @@ Dim document As WordDocument = New WordDocument()
 'Add one section and one paragraph to the document.
 document.EnsureMinimal()
 
-'Append an fraction equation using LaTeX.
+'Append a fraction equation using LaTeX.
 document.LastParagraph.AppendMath(@"{\frac{dy}{dx}}")
 
 'Save the Word document.
@@ -745,7 +745,7 @@ The following table demonstrates the LaTeX equivalent to professional format fra
 <tr>
 <td>1.</td>
 <td><img src="WorkingwithMathematicalEquation_images/Fraction1.png" alt="Fraction equation"></td>
-<td>frac{\mathbit{dy}}{\mathbit{dx}}</td>
+<td>\frac{\mathbit{dy}}{\mathbit{dx}}</td>
 </tr>
 <tr>
 <td>2.</td>
@@ -754,11 +754,6 @@ The following table demonstrates the LaTeX equivalent to professional format fra
 </tr>
 <tr>
 <td>3.</td>
-																																 
-					   
-	 
-	
-		   
 <td><img src="WorkingwithMathematicalEquation_images/Fraction4.png" alt="Fraction equation"></td>
 <td>{\frac{dy}{dx}}</td>
 </tr>
@@ -767,9 +762,9 @@ The following table demonstrates the LaTeX equivalent to professional format fra
 
 ## Function
 
-Add **function** equation to a Word document using the LaTeX through [AppendMath](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendMath_System_String_) API.
+Add a **function** equation to a Word document using LaTeX through the [AppendMath](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendMath_System_String_) API.
 
-The following code example illustrates how to create function equation using LaTeX in Word document.
+The following code example illustrates how to create a function equation using LaTeX in a Word document.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/Function/.NET/Function/Program.cs" %}
@@ -780,7 +775,7 @@ using WordDocument document = new WordDocument();
 //Add one section and one paragraph to the document.
 document.EnsureMinimal();
 
-//Append an function equation using LaTeX.
+//Append a function equation using LaTeX.
 document.LastParagraph.AppendMath(@"\sin{\theta}");
 
 //Save the Word document to MemoryStream
@@ -797,7 +792,7 @@ using WordDocument document = new WordDocument();
 //Add one section and one paragraph to the document.
 document.EnsureMinimal();
 
-//Append an function equation using LaTeX.
+//Append a function equation using LaTeX.
 document.LastParagraph.AppendMath(@"\sin{\theta}");
 
 //Save the Word document.
@@ -812,7 +807,7 @@ Dim document As WordDocument = New WordDocument()
 'Add one section and one paragraph to the document.
 document.EnsureMinimal()
 
-'Append an function equation using LaTeX.
+'Append a function equation using LaTeX.
 document.LastParagraph.AppendMath(@"\sin{\theta}")
 
 'Save the Word document.
@@ -987,9 +982,9 @@ The following table demonstrates the LaTeX equivalent to professional format fun
 
 ## Group character
 
-Add **group character** equation to a Word document using the LaTeX through [AppendMath](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendMath_System_String_) API.
+Add a **group character** equation to a Word document using LaTeX through the [AppendMath](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendMath_System_String_) API.
 
-The following code example illustrates how to create group character equation using LaTeX in Word document.
+The following code example illustrates how to create a group character equation using LaTeX in a Word document.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/Group-character/.NET/Group-character/Program.cs" %}
@@ -1000,7 +995,7 @@ using WordDocument document = new WordDocument();
 //Add one section and one paragraph to the document.
 document.EnsureMinimal();
 
-//Append an group character equation using LaTeX.
+//Append a group character equation using LaTeX.
 document.LastParagraph.AppendMath(@"\overbrace{a-b}");
 
 //Save the Word document to MemoryStream
@@ -1017,7 +1012,7 @@ using WordDocument document = new WordDocument();
 //Add one section and one paragraph to the document.
 document.EnsureMinimal();
 
-//Append an group character equation using LaTeX.
+//Append a group character equation using LaTeX.
 document.LastParagraph.AppendMath(@"\overbrace{a-b}");
 
 //Save the Word document.
@@ -1032,7 +1027,7 @@ Dim document As WordDocument = New WordDocument()
 'Add one section and one paragraph to the document.
 document.EnsureMinimal()
 
-'Append an group character equation using LaTeX.
+'Append a group character equation using LaTeX.
 document.LastParagraph.AppendMath(@"\overbrace{a-b}")
 
 'Save the Word document.
@@ -1067,9 +1062,9 @@ The following table demonstrates the LaTeX equivalent to professional format gro
 
 ## Limit
 
-Add **limit** equation to a Word document using the LaTeX through [AppendMath](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendMath_System_String_) API.
+Add a **limit** equation to a Word document using LaTeX through the [AppendMath](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendMath_System_String_) API.
 
-The following code example illustrates how to create limit equation using LaTeX in Word document.
+The following code example illustrates how to create a limit equation using LaTeX in a Word document.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/Limit/.NET/Limit/Program.cs" %}
@@ -1080,7 +1075,7 @@ using WordDocument document = new WordDocument();
 //Add one section and one paragraph to the document.
 document.EnsureMinimal();
 
-//Append an limit equation using LaTeX.
+//Append a limit equation using LaTeX.
 document.LastParagraph.AppendMath(@"\lim\below{b}{a}");
 
 //Save the Word document to MemoryStream
@@ -1097,7 +1092,7 @@ using WordDocument document = new WordDocument();
 //Add one section and one paragraph to the document.
 document.EnsureMinimal();
 
-//Append an limit equation using LaTeX.
+//Append a limit equation using LaTeX.
 document.LastParagraph.AppendMath(@"\lim\below{b}{a}");
 
 //Save the Word document.
@@ -1112,7 +1107,7 @@ Dim document As WordDocument = New WordDocument()
 'Add one section and one paragraph to the document.
 document.EnsureMinimal()
 
-'Append an limit equation using LaTeX.
+'Append a limit equation using LaTeX.
 document.LastParagraph.AppendMath(@"\lim\below{b}{a}")
 
 'Save the Word document.
@@ -1152,9 +1147,9 @@ The following table demonstrates the LaTeX equivalent to professional format lim
 
 ## Matrix
 
-Add **matrix** equation to a Word document using the LaTeX through [AppendMath](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendMath_System_String_) API.
+Add a **matrix** equation to a Word document using LaTeX through the [AppendMath](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendMath_System_String_) API.
 
-The following code example illustrates how to create matrix equation using LaTeX in Word document.
+The following code example illustrates how to create a matrix equation using LaTeX in a Word document.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/Matrix/.NET/Matrix/Program.cs" %}
@@ -1165,7 +1160,7 @@ using WordDocument document = new WordDocument();
 //Add one section and one paragraph to the document.
 document.EnsureMinimal();
 
-//Append an matrix equation using LaTeX.
+//Append a matrix equation using LaTeX.
 document.LastParagraph.AppendMath(@"\begin{matrix}a&b\\\end{matrix}");
 
 //Save the Word document to MemoryStream
@@ -1182,7 +1177,7 @@ using WordDocument document = new WordDocument();
 //Add one section and one paragraph to the document.
 document.EnsureMinimal();
 
-//Append an matrix equation using LaTeX.
+//Append a matrix equation using LaTeX.
 document.LastParagraph.AppendMath(@"\begin{matrix}a&b\\\end{matrix}");
 
 //Save the Word document.
@@ -1197,7 +1192,7 @@ Dim document As WordDocument = New WordDocument()
 'Add one section and one paragraph to the document.
 document.EnsureMinimal()
 
-'Append an matrix equation using LaTeX.
+'Append a matrix equation using LaTeX.
 document.LastParagraph.AppendMath(@"\begin{matrix}a&b\\\end{matrix}")
 
 'Save the Word document.
@@ -1227,9 +1222,9 @@ The following table demonstrates the LaTeX equivalent to professional format mat
 
 ## N-array
 
-Add **N-array** equation to a Word document using the LaTeX through [AppendMath](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendMath_System_String_) API.
+Add an **N-array** equation to a Word document using LaTeX through the [AppendMath](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendMath_System_String_) API.
 
-The following code example illustrates how to create N-array equation using LaTeX in Word document.
+The following code example illustrates how to create an N-array equation using LaTeX in a Word document.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/N-array/.NET/N-array/Program.cs" %}
@@ -1352,9 +1347,9 @@ The following table demonstrates the LaTeX equivalent to professional format N-a
 
 ## Radical
 
-Add **radical** equation to a Word document using the LaTeX through [AppendMath](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendMath_System_String_) API.
+Add a **radical** equation to a Word document using LaTeX through the [AppendMath](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendMath_System_String_) API.
 
-The following code example illustrates how to create radical equation using LaTeX in Word document.
+The following code example illustrates how to create a radical equation using LaTeX in a Word document.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/Radical/.NET/Radical/Program.cs" %}
@@ -1365,7 +1360,7 @@ using WordDocument document = new WordDocument();
 //Add one section and one paragraph to the document.
 document.EnsureMinimal();
 
-//Append an radical equation using LaTeX.
+//Append a radical equation using LaTeX.
 document.LastParagraph.AppendMath(@"\sqrt{a}");
 
 //Save the Word document to MemoryStream
@@ -1382,7 +1377,7 @@ using WordDocument document = new WordDocument();
 //Add one section and one paragraph to the document.
 document.EnsureMinimal();
 
-//Append an radical equation using LaTeX.
+//Append a radical equation using LaTeX.
 document.LastParagraph.AppendMath(@"\sqrt{a}");
 
 //Save the Word document.
@@ -1397,7 +1392,7 @@ Dim document As WordDocument = New WordDocument()
 'Add one section and one paragraph to the document.
 document.EnsureMinimal()
 
-'Append an radical equation using LaTeX.
+'Append a radical equation using LaTeX.
 document.LastParagraph.AppendMath(@"\sqrt{a}")
 
 'Save the Word document.
@@ -1432,9 +1427,9 @@ The following table demonstrates the LaTeX equivalent to professional format rad
 
 ## SubSuperScript
 
-Add **SubSuperScript** equation to a Word document using the LaTeX through [AppendMath](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendMath_System_String_) API.
+Add a **SubSuperScript** equation to a Word document using LaTeX through the [AppendMath](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendMath_System_String_) API.
 
-The following code example illustrates how to create SubSuperScript equation using LaTeX in Word document.
+The following code example illustrates how to create a SubSuperScript equation using LaTeX in a Word document.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/SubSuperScript/.NET/SubSuperScript/Program.cs" %}
@@ -1445,8 +1440,8 @@ using WordDocument document = new WordDocument();
 //Add one section and one paragraph to the document.
 document.EnsureMinimal();
 
-//Append an SubSuperScript equation using LaTeX.
-document.LastParagraph.AppendMath((@"{a}^{b}");
+//Append a SubSuperScript equation using LaTeX.
+document.LastParagraph.AppendMath(@"{a}^{b}");
 
 //Save the Word document to MemoryStream
 using MemoryStream stream = new MemoryStream();
@@ -1462,8 +1457,8 @@ using WordDocument document = new WordDocument();
 //Add one section and one paragraph to the document.
 document.EnsureMinimal();
 
-//Append an SubSuperScript equation using LaTeX.
-document.LastParagraph.AppendMath((@"{a}^{b}");
+//Append a SubSuperScript equation using LaTeX.
+document.LastParagraph.AppendMath(@"{a}^{b}");
 
 //Save the Word document.
 document.Save("Result.docx", FormatType.Docx);
@@ -1477,8 +1472,8 @@ Dim document As WordDocument = New WordDocument()
 'Add one section and one paragraph to the document.
 document.EnsureMinimal()
 
-'Append an SubSuperScript equation using LaTeX.
-document.LastParagraph.AppendMath((@"{a}^{b}")
+'Append a SubSuperScript equation using LaTeX.
+document.LastParagraph.AppendMath(@"{a}^{b}")
 
 'Save the Word document.
 document.Save("Result.docx", FormatType.Docx)
@@ -1512,9 +1507,9 @@ The following table demonstrates the LaTeX equivalent to professional format Sub
 
 ## Left SubSuperScript
 
-Add **Left SubSuperScript** equation to a Word document using the LaTeX through [AppendMath](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendMath_System_String_) API.
+Add a **Left SubSuperScript** equation to a Word document using LaTeX through the [AppendMath](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendMath_System_String_) API.
 
-The following code example illustrates how to create Left SubSuperScript equation using LaTeX in Word document.
+The following code example illustrates how to create a Left SubSuperScript equation using LaTeX in a Word document.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/Left-SubSuperScript/.NET/Left-SubSuperScript/Program.cs" %}
@@ -1525,7 +1520,7 @@ using WordDocument document = new WordDocument();
 //Add one section and one paragraph to the document.
 document.EnsureMinimal();
 
-//Append an Left SubSuperScript equation using LaTeX.
+//Append a Left SubSuperScript equation using LaTeX.
 document.LastParagraph.AppendMath(@"{_{40}^{20}}{100}");
 
 //Save the Word document to MemoryStream
@@ -1542,7 +1537,7 @@ using WordDocument document = new WordDocument();
 //Add one section and one paragraph to the document.
 document.EnsureMinimal();
 
-//Append an Left SubSuperScript equation using LaTeX.
+//Append a Left SubSuperScript equation using LaTeX.
 document.LastParagraph.AppendMath(@"{_{40}^{20}}{100}");
 
 //Save the Word document.
@@ -1557,8 +1552,8 @@ Dim document As WordDocument = New WordDocument()
 'Add one section and one paragraph to the document.
 document.EnsureMinimal()
 
-'Append an Left SubSuperScript equation using LaTeX.
-document.LastParagraph.AppendMath(@"{_{40}^{20}}{100}");
+'Append a Left SubSuperScript equation using LaTeX.
+document.LastParagraph.AppendMath(@"{_{40}^{20}}{100}")
 
 'Save the Word document.
 document.Save("Result.docx", FormatType.Docx)
@@ -1587,9 +1582,9 @@ The following table demonstrates the LaTeX equivalent to professional format Lef
 
 ## Right SubSuperScript
 
-Add **Right SubSuperScript** equation to a Word document using the LaTeX through [AppendMath](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendMath_System_String_) API.
+Add a **Right SubSuperScript** equation to a Word document using LaTeX through the [AppendMath](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendMath_System_String_) API.
 
-The following code example illustrates how to create Right SubSuperScript equation using LaTeX in Word document.
+The following code example illustrates how to create a Right SubSuperScript equation using LaTeX in a Word document.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/Right-SubSuperScript/.NET/Right-SubSuperScript/Program.cs" %}
@@ -1600,7 +1595,7 @@ using WordDocument document = new WordDocument();
 //Add one section and one paragraph to the document.
 document.EnsureMinimal();
 
-//Append an Right SubSuperScript equation using LaTeX.
+//Append a Right SubSuperScript equation using LaTeX.
 document.LastParagraph.AppendMath(@"{100}_{40}^{20}");
 
 //Save the Word document to MemoryStream
@@ -1617,7 +1612,7 @@ using WordDocument document = new WordDocument();
 //Add one section and one paragraph to the document.
 document.EnsureMinimal();
 
-//Append an Right SubSuperScript equation using LaTeX.
+//Append a Right SubSuperScript equation using LaTeX.
 document.LastParagraph.AppendMath(@"{100}_{40}^{20}");
 
 //Save the Word document.
@@ -1632,7 +1627,7 @@ Dim document As WordDocument = New WordDocument()
 'Add one section and one paragraph to the document.
 document.EnsureMinimal()
 
-'Append an Right SubSuperScript equation using LaTeX.
+'Append a Right SubSuperScript equation using LaTeX.
 document.LastParagraph.AppendMath(@"{100}_{40}^{20}")
 
 'Save the Word document.
@@ -1660,7 +1655,7 @@ The following table demonstrates the LaTeX equivalent to professional format Rig
 </tr>
 </table>
 
-## Format Equations
+## Format equations
 
 ### Apply style to characters
 
@@ -1739,7 +1734,7 @@ document.EnsureMinimal()
 'Append an accent equation with Bold using LaTeX.
 document.LastParagraph.AppendMath(@"\dot{\mathbf{a}}")
 'Append an accent equation with Bold-Italic using LaTeX.
-document. LastSection.AddParagraph().AppendMath(@"\dot{\mathbit{a}}")
+document.LastSection.AddParagraph().AppendMath(@"\dot{\mathbit{a}}")
 
 'Save the Word document.
 document.Save("Result.docx", FormatType.Docx)
@@ -1849,11 +1844,11 @@ document.LastParagraph.AppendMath(@"\dot{\mathbb{a}}")
 'Append an accent equation with Fraktur font using LaTeX.
 document.LastSection.AddParagraph().AppendMath(@"\dot{\mathfrak{a}}")
 'Append an accent equation with SansSerif font using LaTeX.
-document. LastSection.AddParagraph().AppendMath(@"\dot{\mathsf{a}}")
+document.LastSection.AddParagraph().AppendMath(@"\dot{\mathsf{a}}")
 'Append an accent equation with Script using LaTeX.
-document. LastSection.AddParagraph().AppendMath(@"\dot{\mathcal{a}}")
+document.LastSection.AddParagraph().AppendMath(@"\dot{\mathcal{a}}")
 'Append an accent equation with Script using LaTeX.
-document. LastSection.AddParagraph().AppendMath(@"\dot{\mathscr{a}}")
+document.LastSection.AddParagraph().AppendMath(@"\dot{\mathscr{a}}")
 
 'Save a Word document.
 document.Save("Result.docx", FormatType.Docx)
@@ -2010,14 +2005,14 @@ if (math != null)
 }
 //Saves and closes the Word document instance
 MemoryStream stream = new MemoryStream();
-//Saves the Word document to  MemoryStream
+//Save the Word document to a MemoryStream
 document.Save(stream, FormatType.Docx);
 document.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-// Open the FileStream for reading and writing the "Template.docx" file
+// Load the "Template.docx" file into a WordDocument instance
 WordDocument document = new WordDocument("Template.docx");
 // Access the first paragraph from the last section of the document
 WParagraph paragraph = document.LastSection.Body.ChildEntities[0] as WParagraph;
@@ -2030,12 +2025,10 @@ if (math != null)
     // Replace occurrences of 'x' with 'k' in the LaTeX representation
     math.MathParagraph.LaTeX = laTeX.Replace("x", "k");
 }
-//Saves the word document
-document.Save("Sample.docx");
-//Close the word document
+//Save the modified Word document
+document.Save("Sample.docx", FormatType.Docx);
+//Close the Word document
 document.Close();
-// Save the modified document to the FileStream in DOCX format
-document.Save(stream, FormatType.Docx);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
@@ -2044,15 +2037,16 @@ Dim document As WordDocument = New WordDocument("Template.docx")
 'Access the paragraph from Word document
 Dim paragraph As WParagraph = CType(document.LastSection.Body.ChildEntities(0), WParagraph)
 'Access the mathematical equation from the paragraph
-Dim math As WMath = CType(paragraph.ChildEntities(0), WMath)If math IsNot Nothing Then
+Dim math As WMath = CType(paragraph.ChildEntities(0), WMath)
+If math IsNot Nothing Then
     ' Get the LaTeX representation of the math equation
     Dim laTeX As String = math.MathParagraph.LaTeX
     ' Replace occurrences of 'x' with 'k' in the LaTeX representation
     math.MathParagraph.LaTeX = laTeX.Replace("x", "k")
 End If
-'Saves the word document
-document.Save("Sample.docx")
-'Close the word document
+'Saves the Word document
+document.Save("Sample.docx", FormatType.Docx)
+'Close the Word document
 document.Close()
 {% endhighlight %}
 

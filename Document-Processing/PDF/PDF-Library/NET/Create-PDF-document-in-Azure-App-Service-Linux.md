@@ -10,6 +10,13 @@ documentation: UG
 
 The [.NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **create PDF document in Azure App Service on Linux**.
 
+## Prerequisites
+
+* An active **Microsoft Azure subscription**.
+* Visual Studio 2022 (17.0 or later) with the **ASP.NET and web development** and **Azure development** workloads installed.
+* An active Syncfusion license. If you do not have one, request a free 30-day trial at [https://www.syncfusion.com/sales/communitylicense](https://www.syncfusion.com/sales/communitylicense).
+* The Linux App Service plan supports **.NET 6.0 or later**; verify your target framework before publishing.
+
 ## Steps to create PDF document in Azure App Service on Linux
 
 Step 1: Create a new ASP.NET Core Web App (Model-View-Controller).
@@ -24,9 +31,28 @@ Step 3: Click **Create** button.
 Step 4: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 ![Install Syncfusion.Pdf.Net.Core NuGet package](Azure_images/Azure-app-service-Linux/NuGet_package.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+Step 5: Register the Syncfusion license key. A trial watermark is added to every page of the generated PDF until a valid key is registered. Include the license key in **Program.cs** before initializing any Syncfusion component:
 
-Step 5: A default action method named Index will be present in *HomeController.cs*. Right click on Index method and select Go To View where you will be directed to its associated view page *Index.cshtml*. Add a new button in the *Index.cshtml* as shown below.
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Licensing;
+
+var builder = WebApplication.CreateBuilder(args);
+// Register the Syncfusion license
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+
+// Add services to the container.
+builder.Services.AddControllersWithViews();
+
+var app = builder.Build();
+
+{% endhighlight %}
+{% endtabs %}
+
+Replace `"YOUR LICENSE KEY"` with the key from your Syncfusion account. For security, store the key in `appsettings.json` (local development) or in the App Service's **Configuration > Application settings** (Azure portal) rather than hardcoding it. Refer to the [Syncfusion License documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion license key in your application.
+
+Step 6: A default action method named Index will be present in *HomeController.cs*. Right click on Index method and select Go To View where you will be directed to its associated view page *Index.cshtml*. Add a new button in the *Index.cshtml* as shown below.
 
 {% tabs %}
 
@@ -46,7 +72,7 @@ Step 5: A default action method named Index will be present in *HomeController.c
 
 {% endtabs %}
 
-Step 6: Include the following namespaces in *HomeController.cs*.
+Step 7: Include the following namespaces in *HomeController.cs*.
 
 {% tabs %}
 
@@ -61,7 +87,7 @@ using Syncfusion.Pdf;
 
 {% endtabs %}
 
-Step 7: Add a new action method named CreatePDFDocument in HomeController.cs file and include the below code example to generate a PDF document in *HomeController.cs*. 
+Step 8: Add a new action method named CreatePDFDocument in HomeController.cs file and include the below code example to generate a PDF document in *HomeController.cs*.
 
 {% tabs %}
 
@@ -179,6 +205,14 @@ Step 13: Select the PDF document and Click **Create PDF document** to generate t
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Azure/Azure%20App%20Service).
 
-Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features. 
+Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 
-An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind). 
+An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind).
+
+## Next steps
+
+* [Create a PDF in Azure App Service on Windows](Create-PDF-document-in-Azure-App-Service-Windows.md)
+* [Create a PDF in Azure Functions v4](Create-PDF-document-in-Azure-Functions-v4.md)
+* [Create a PDF in an AKS cluster](Create-PDF-document-in-AKS-Environment.md)
+* [Open and read an existing PDF document](Open-PDF-file.md)
+* [Save the generated PDF to a file or stream](Save-PDF-file.md) 

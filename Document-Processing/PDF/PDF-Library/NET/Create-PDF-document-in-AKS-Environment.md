@@ -31,8 +31,28 @@ Step 3: Click **Create** button.
 Step 4: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 ![Install Syncfusion.Pdf.Net.Core NuGet package](AKS_images/NuGet_package.png)
 
+Step 5: Register the Syncfusion license key. A trial watermark is added to every page of the generated PDF until a valid key is registered. Include the license key in **Program.cs** before initializing any Syncfusion component:
 
-Step 5: A default action method named Index will be present in *HomeController.cs*. Right-click on Index method and select Go To View where you will be directed to its associated view page *Index.cshtml*. Add a new button in the *Index.cshtml* as shown below.
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Licensing;
+
+var builder = WebApplication.CreateBuilder(args);
+// Register the Syncfusion license
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+
+// Add services to the container.
+builder.Services.AddControllersWithViews();
+
+var app = builder.Build();
+
+{% endhighlight %}
+{% endtabs %}
+
+Replace `"YOUR LICENSE KEY"` with the key from your Syncfusion account. For security, store the key in `appsettings.json` (local development) or as a Kubernetes **Secret** mounted as an environment variable (`SyncfusionLicenseKey`) and read with `builder.Configuration["SyncfusionLicenseKey"]` rather than hardcoding it. Refer to the [Syncfusion License documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion license key in your application.
+
+Step 6: A default action method named Index will be present in *HomeController.cs*. Right-click on Index method and select Go To View where you will be directed to its associated view page *Index.cshtml*. Add a new button in the *Index.cshtml* as shown below.
 
 {% tabs %}
 {% highlight CSHTML %}
@@ -50,7 +70,7 @@ Step 5: A default action method named Index will be present in *HomeController.c
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the following namespaces in *HomeController.cs*.
+Step 7: Include the following namespaces in *HomeController.cs*.
 
 {% tabs %}
 
@@ -65,7 +85,7 @@ using Syncfusion.Drawing;
 
 {% endtabs %}
 
-Step 7: Inject `IWebHostEnvironment` in the *HomeController* constructor and add a new action method named `CreatePDFDocument` in *HomeController.cs*. Include the below code example to generate a PDF document in *HomeController.cs*.
+Step 8: Inject `IWebHostEnvironment` in the *HomeController* constructor and add a new action method named `CreatePDFDocument` in *HomeController.cs*. Include the below code example to generate a PDF document in *HomeController.cs*.
 
 {% tabs %}
 
@@ -307,6 +327,14 @@ kubectl delete svc createpdfdocument --namespace=default
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Azure/Create%20PDF%20document%20in%20AKS%20environment/createpdfdocument).
 
-Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features. 
+Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 
-An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind). 
+An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind).
+
+## Next steps
+
+* [Create a PDF in Azure App Service on Windows](Create-PDF-document-in-Azure-App-Service-Windows.md)
+* [Create a PDF in Azure App Service on Linux](Create-PDF-document-in-Azure-App-Service-Linux.md)
+* [Create a PDF in Azure Functions v4](Create-PDF-document-in-Azure-Functions-v4.md)
+* [Open and read an existing PDF document](Open-PDF-file.md)
+* [Save the generated PDF to a file or stream](Save-PDF-file.md) 
