@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Core in React Document editor component | Syncfusion
-description: Learn here all about Core in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
+title: Core in the React DOCX Editor component | Syncfusion
+description: Learn here all about Core in the Syncfusion React DOCX Editor component of Syncfusion Essential JS 2 and more.
 control: Core 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Core in React Document editor component
+# Core in the React Document Editor component
 
-DocumentEditor depends on server side interaction for below listed operations can be written in ASP.NET Core using [Syncfusion.EJ2.WordEditor.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Core).
+DocumentEditor depends on server-side interactions for the operations listed below, which can be written in ASP.NET Core using [Syncfusion.EJ2.WordEditor.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Core).
 
 * Import Word Document
 * Paste with formatting
@@ -18,15 +18,15 @@ DocumentEditor depends on server side interaction for below listed operations ca
 * Spell Check
 * Save as file formats other than SFDT and DOCX
 
->Note: Syncfusion<sup style="font-size:70%">&reg;</sup> provides a predefined [Word Processor server docker image](https://hub.docker.com/r/syncfusion/word-processor-server) targeting ASP.NET Core 2.1 framework. You can directly pull this docker image and deploy it in server on the go. You can also create own docker image by customizing the existing [docker project from GitHub](https://github.com/SyncfusionExamples/Word-Processor-Server-Docker). To know more, refer this link.[Word Processor Server Docker Image Overview](../server-deployment/word-processor-server-docker-image-overview)
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> provides a predefined [Word Processor server docker image](https://hub.docker.com/r/syncfusion/word-processor-server) targeting ASP.NET Core 2.1 framework. You can directly pull this docker image and deploy it on a server on the go. You can also create your own docker image by customizing the existing [docker project from GitHub](https://github.com/SyncfusionExamples/Word-Processor-Server-Docker). To know more, refer to this link: [Word Processor Server Docker Image Overview](../server-deployment/word-processor-server-docker-image-overview)
 
 This section explains how to create the service for DocumentEditor in ASP.NET Core.
 
-## Importing Word Document
+## Importing Word documents
 
-As the Document editor client-side script requires the document in SFDT file format, you can convert the Word documents (.dotx,.docx,.docm,.dot,.doc), rich text format documents (.rtf), and text documents (.txt) into SFDT format by using this Web API.
+As the Document Editor client-side script requires the document in SFDT file format, you can convert the Word documents (.dotx,.docx,.docm,.dot,.doc), rich text format documents (.rtf), and text documents (.txt) into SFDT format by using this Web API.
 
-The following example code illustrates how to write a Web API for importing Word documents into Document Editor component.
+The following example code illustrates how to write a Web API for importing Word documents into the Document Editor component.
 
 ```csharp
     [AcceptVerbs("Post")]
@@ -52,13 +52,13 @@ The following example code illustrates how to write a Web API for importing Word
     }
 ```
 
-### Import document with TIFF, EMF and WMF images
+### Import a document with TIFF, EMF, and WMF images
 
-The web browsers do not support to display metafile images like EMF and WMF and also TIFF format images. As a fallback approach, you can convert the metafile/TIFF format image to raster image using any image converter in the `MetafileImageParsed` event and this fallback raster image will be displayed in the client-side Document editor component.
+Web browsers do not support displaying metafile images like EMF and WMF, or TIFF format images. As a fallback approach, you can convert the metafile/TIFF format image to a raster image using any image converter in the `MetafileImageParsed` event, and this fallback raster image will be displayed in the client-side Document Editor component.
 
->Note: In `MetafileImageParsedEventArgs` event argument, you can get the metafile stream using `MetafileStream` property and you can get the `IsMetafile` boolean value to determine whether the image  is meta file images(WMF,EMF) or TIFF format images. In below example, we have converted the TIFF to raster image in `ConvertTiffToRasterImage()` method using `Bitmiracle https://www.nuget.org/packages/BitMiracle.LibTiff.NET`.
+N> In the `MetafileImageParsedEventArgs` event argument, you can get the metafile stream using the `MetafileStream` property, and you can get the `IsMetafile` boolean value to determine whether the image is a metafile image (WMF, EMF) or a TIFF format image. In the example below, the TIFF is converted to a raster image in the `ConvertTiffToRasterImage()` method using [BitMiracle.LibTiff.NET](https://www.nuget.org/packages/BitMiracle.LibTiff.NET).
 
-The following example code illustrates how to use `MetafileImageParsed` event for creating fallback raster image for metafile present in a Word document.
+The following example code illustrates how to use the `MetafileImageParsed` event for creating a fallback raster image for a metafile present in a Word document.
 
 ```c#
     using SkiaSharp;
@@ -214,13 +214,13 @@ The following example code illustrates how to write a Web API for paste with for
     }
 ```
 
->Note: The web browsers do not support to display metafile images like EMF and WMF. As a fallback approach, you can convert the metafile to raster image using any image converter in the `MetafileImageParsed` event and this fallback raster image will be displayed in the client-side Document editor component.
+N> Web browsers do not support displaying metafile images like EMF and WMF. As a fallback approach, you can convert the metafile to a raster image using any image converter in the `MetafileImageParsed` event, and this fallback raster image will be displayed in the client-side Document Editor component.
 
 ## Restrict editing
 
-This Web API generates hash from the specified password and salt value which is required for restrict editing functionality of Document Editor component.
+This Web API generates a hash from the specified password and salt value which is required for the restrict editing functionality of the Document Editor component.
 
-The following example code illustrates how to write a Web API for restrict editing.
+The following example code illustrates how to write a Web API to restrict editing.
 
 ```csharp
     [AcceptVerbs("Post")]
@@ -254,7 +254,7 @@ To set up spell checking, place the required dictionary files, including the .di
 
 Refer to the following screenshot for the folder structure.
 
-![Dictionary setup in React DOCX Editor](../images/spellcheck-dictionary-setup.png)
+![Dictionary setup in React Document Editor](../images/spellcheck-dictionary-setup.png)
 
 The JSON file should contain the configuration details in the following format:
 
@@ -297,7 +297,7 @@ public Startup(IConfiguration configuration, IWebHostEnvironment env)
     //check the spell check dictionary path environment variable value and assign default data folder
     //if it is null.
     path = string.IsNullOrEmpty(path) ? Path.Combine(env.ContentRootPath, "App_Data") : Path.Combine(env.ContentRootPath, path);
-    //Set the default spellcheck.json file if the json filename is empty.
+    //Set the default spellcheck.json file if the JSON filename is empty.
     jsonFileName = string.IsNullOrEmpty(jsonFileName) ? Path.Combine(path, "spellcheck.json") : Path.Combine(path, jsonFileName);
     if (File.Exists(jsonFileName))
     {
@@ -402,13 +402,13 @@ N> You can find the [GitHub Web Service example](https://github.com/SyncfusionEx
 
 ## Save as file formats other than SFDT and DOCX
 
-You can configure this API, if you want to save the document in file format other than DOCX and SFDT using server-side. You can save the document in following ways:
+You can configure this API if you want to save the document in a file format other than DOCX and SFDT on the server side. You can save the document in the following ways:
 
-### Save the document in database or file server
+### Save the document in a database or file server
 
-This Web API saves the document in the server machine. You can customize this API to save the document into databases or file servers.
+This Web API saves the document on the server. You can customize this API to save the document into databases or file servers.
 
-The following example code illustrates how to write a Web API for save document in server-side.
+The following example code illustrates how to write a Web API to save a document on the server side.
 
 ```csharp
     [AcceptVerbs("Post")]
@@ -424,7 +424,7 @@ The following example code illustrates how to write a Web API for save document 
             name = "Document1.doc";
         }
         WDocument document = WordDocument.Save(data.Content);
-        // Saves the document to server machine file system, you can customize here to save into databases or file servers based on requirement.
+        // Saves the document to the server file system. You can customize this to save into databases or file servers based on your requirements.
         FileStream fileStream = new FileStream(name, FileMode.OpenOrCreate, FileAccess.ReadWrite);
         document.Save(fileStream, GetWFormatType(format));
         document.Close();
@@ -440,9 +440,9 @@ The following example code illustrates how to write a Web API for save document 
 
 ### Save as other file formats by passing SFDT string
 
-This Web API converts the SFDT string to required format and returns the document as FileStreamResult to client-side. Using this API, you can save the document in file format other than SFDT and DOCX and download the document in client browser.
+This Web API converts the SFDT string to the required format and returns the document as a FileStreamResult to the client side. Using this API, you can save the document in a file format other than SFDT and DOCX and download the document in the client browser.
 
-The following example code illustrates how to write a Web API for export sfdt.
+The following example code illustrates how to write a Web API to export SFDT.
 
 ```csharp
     [AcceptVerbs("Post")]
@@ -512,9 +512,9 @@ The following example code illustrates how to write a Web API for export sfdt.
 
 ### Save as other file formats by passing DOCX file
 
-This Web API converts the DOCX document to required format and returns the document as FileStreamResult to client-side. Using this API, you can save the document in file format other than SFDT and DOCX and download the document in client browser.
+This Web API converts the DOCX document to the required format and returns the document as a FileStreamResult to the client side. Using this API, you can save the document in a file format other than SFDT and DOCX and download the document in the client browser.
 
-The following example code illustrates how to write a Web API for export.
+The following example code illustrates how to write a Web API to export.
 
 ```csharp
     [AcceptVerbs("Post")]
