@@ -42,7 +42,7 @@ For a quick walkthrough on converting a Word document to a PDF, check out this v
 
 The following prerequisites are required before running the code samples in this section:
 
-* Create a new .NET console, class library, or web application targeting a supported version of .NET Framework, .NET Core, or .NET (5+).
+* Create a new .NET console, class library, or web application targeting a supported version of .NET Framework, .NET Core.
 * Install the required Syncfusion NuGet packages for your target platform. For details, see [Word to PDF conversion NuGet packages](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf).
 
 The following namespaces are required to compile the code:

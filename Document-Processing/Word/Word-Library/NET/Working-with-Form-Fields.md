@@ -7,21 +7,21 @@ documentation: UG
 ---
 # Working with Form Fields in Word Library
 
-You can create template document with form fields such as Text, Checkbox and Drop-Down. You can also open an existing template document and fill the form fields with the specified data. 
+You can create a template document with form fields such as Text, Checkbox, and Drop-Down. You can also open an existing template document and fill the form fields with the specified data. 
 
-The following are the types of form field in the Word document
+The following are the types of form fields available in a Word document:
 
 * Checkbox – represented by an instance of [WCheckBox](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WCheckBox.html)
-* Drop-down – represented by an instance of [WDropDownFormField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WDropDownFormField.html)
+* Drop-Down – represented by an instance of [WDropDownFormField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WDropDownFormField.html)
 * Text input – represented by an instance of [WTextFormField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTextFormField.html)
 
 N> To generate editable fields in the PDF converted from a Word document, use Form Fields; regular text and content controls will not be editable. Refer [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#word-document-form-field-to-pdf-form-field) to learn more about converting form fields as editable fields during Word to PDF conversion.
 
 ## Check Box
 
-You can add new Checkbox form field to a Word document by using [AppendCheckBox](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendCheckBox) method of [WParagraph](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html) class.
+You can add a new Checkbox form field to a Word document by using the [AppendCheckBox](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendCheckBox) method of the [WParagraph](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html) class.
 
-The following code illustrates how to add new checkbox form field.
+The following code illustrates how to add a new Checkbox form field.
 
 N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
@@ -116,7 +116,7 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Form-Fields/Add-checkbox-form-field).
 
-You can modify the checkbox properties such as checked state, size, help text in a Word document. The following code illustrates how to modify the checkbox form field properties.
+You can modify the checkbox properties such as checked state, size, and help text in a Word document. The following code illustrates how to modify the Checkbox form field properties.
 
 {% tabs %}
 
@@ -190,9 +190,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Drop-Down
 
-You can add new Dropdown form field to a Word document by using [AppendDropDownFormField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendDropDownFormField) method of [WParagraph](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html) class.
+You can add a new Drop-Down form field to a Word document by using the [AppendDropDownFormField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendDropDownFormField) method of the [WParagraph](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html) class.
 
-The following code illustrates how to add a new dropdown field.
+The following code illustrates how to add a new Drop-Down form field.
 
 {% tabs %}
 
@@ -273,7 +273,7 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Form-Fields/Add-dropdown-form-field).
 
-You can add or modify list of items of a Dropdown form field in a Word document. The following code illustrates how to modify the dropdown list of a Dropdown form field.
+You can add or modify the list of items of a Drop-Down form field in a Word document. The following code illustrates how to modify the drop-down list of a Drop-Down form field.
 
 {% tabs %}
 
@@ -344,11 +344,11 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Form-Fields/Modify-dropdown-form-field).
 
-## Text Form field
+## Text Form Field
 
-You can add new text form field to a Word document by using [AppendTextFormField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendTextFormField_System_String_) method of [WParagraph](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html) class.
+You can add a new Text form field to a Word document by using the [AppendTextFormField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendTextFormField_System_String_) method of the [WParagraph](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html) class.
 
-The following code illustrates how to add new text form field.
+The following code illustrates how to add a new Text form field.
 
 {% tabs %}
 
@@ -425,7 +425,7 @@ document.Close();
 'Creates a new Word document 
 Dim document As New WordDocument()
 'Adds new section to the document
-section As IWSection = document.AddSection()
+Dim section As IWSection = document.AddSection()
 'Adds new paragraph to the section
 Dim paragraph As WParagraph = TryCast(section.AddParagraph(), WParagraph)
 paragraph.AppendText("General Information")
@@ -459,7 +459,7 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Form-Fields/Add-text-form-field).
 
-You can add or modify text form field properties such as default text, type in a Word document. The following code illustrates how to modify the text form field
+You can add or modify Text form field properties such as default text and type in a Word document. The following code illustrates how to modify the Text form field.
 
 {% tabs %}
 

@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Working with OLE Objects in Word Library
 
-OLE (Object Linking and Embedding) objects allow embedding and linking to documents and other objects. It allows the content of one program to be used in a Word document. The Objects can be inserted in the following two ways:
+OLE (Object Linking and Embedding) objects allow embedding and linking to documents and other objects. It allows the content of one program to be used in a Word document. The objects can be inserted in the following two ways:
 
 * Linked: The content is linked to the source file
 * Embedded: The content is copied to the Word document and is not linked to the source file 
@@ -90,7 +90,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Extract OLE Objects from Word document
 
-The following code example explains how to extract OLE objects from the document and save as separate file.
+The following code example explains how to extract OLE objects from the document and save them as separate files.
 
 {% tabs %}
 
@@ -267,7 +267,7 @@ private static void ExtractOLEObject(WordDocument document)
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Opens an existing document
-Using document As WordDocument = New WordDocument(inputFileName)
+Using document As WordDocument = New WordDocument("Template.docx")
     'Extract the OLE object from the word document
     ExtractOLEObject(document)
 End Using
@@ -461,14 +461,14 @@ Private Shared Sub RemoveOLEObject(ByVal document As WordDocument)
                 If entity.EntityType Is EntityType.OleObject Then
                     paragraph.ChildEntities.Remove(entity)
                     isFieldStart = True
-                    i -= 1
+                    i = i - 1
                 ElseIf isFieldStart AndAlso entity.EntityType Is EntityType.FieldMark AndAlso TryCast(entity, WFieldMark).Type Is FieldMarkType.FieldEnd Then
                     paragraph.ChildEntities.Remove(entity)
                     isFieldStart = False
-                    i -= 1
+                    i = i - 1
                 ElseIf isFieldStart Then
                     paragraph.ChildEntities.Remove(entity)
-                    i -= 1
+                    i = i - 1
                 End If
             Next
         Next

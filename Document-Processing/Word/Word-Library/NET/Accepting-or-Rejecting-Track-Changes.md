@@ -7,14 +7,14 @@ documentation: UG
 ---
 # Accepting or Rejecting Track Changes
 
-It is used to keep track of the changes made to a Word document. It helps to maintain the record of author, name and time for every insertion, deletion, or modification in a document. This can be enabled by using the [TrackChanges](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_TrackChanges) property of the Word document.
+Track changes is used to keep track of the changes made to a Word document. It helps to maintain the record of the author, date, and time for every insertion, deletion, or modification in a document. This can be enabled by using the [TrackChanges](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_TrackChanges) property of the Word document.
 
-N> With this support, the changes made in the Word document by DocIO library cannot be tracked.
+N> With this support, the changes made in the Word document by the DocIO library cannot be tracked.
 
-To quickly start to handle Tracked Changes in Word document, please check out this video:
+To quickly start handling tracked changes in a Word document, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=Md-Ft4QFHYk" %}
 
-The following code example illustrates how to enable track changes of the document.
+The following code example illustrates how to enable track changes in the document.
 
 N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
@@ -32,11 +32,11 @@ IWTextRange text = paragraph.AppendText("This sample illustrates how to track th
 //Sets font name and size for text
 text.CharacterFormat.FontName = "Times New Roman";
 text.CharacterFormat.FontSize = 14;
-text = paragraph.AppendText("This track changes is useful in shared environment.");
+text = paragraph.AppendText("This track changes is useful in a shared environment.");
 text.CharacterFormat.FontSize = 12;
 //Turns on the track changes option
 document.TrackChanges = true;
-//Saves the Word document to  MemoryStream
+//Saves the Word document to MemoryStream
 MemoryStream stream = new MemoryStream();
 document.Save(stream, FormatType.Docx);
 //Closes the document
@@ -55,7 +55,7 @@ IWTextRange text = paragraph.AppendText("This sample illustrates how to track th
 //Sets font name and size for text
 text.CharacterFormat.FontName = "Times New Roman";
 text.CharacterFormat.FontSize = 14;
-text = paragraph.AppendText("This track changes is useful in shared environment.");
+text = paragraph.AppendText("This track changes is useful in a shared environment.");
 text.CharacterFormat.FontSize = 12;
 //Turns on the track changes option
 document.TrackChanges = true;
@@ -76,7 +76,7 @@ Dim text As IWTextRange = paragraph.AppendText("This sample illustrates how to t
 'Sets font name and size for text
 text.CharacterFormat.FontName = "Times New Roman"
 text.CharacterFormat.FontSize = 14
-text = paragraph.AppendText("This track changes is useful in shared environment.")
+text = paragraph.AppendText("This track changes is useful in a shared environment.")
 text.CharacterFormat.FontSize = 12
 'Turns on the track changes option
 document.TrackChanges = True
@@ -91,7 +91,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Accept all changes
 
-You can **accept all track changes in Word document** using [AcceptAll](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.RevisionCollection.html#Syncfusion_DocIO_DLS_RevisionCollection_AcceptAll) method.
+You can **accept all track changes in a Word document** using the [AcceptAll](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.RevisionCollection.html#Syncfusion_DocIO_DLS_RevisionCollection_AcceptAll) method.
 
 The following code example shows how to accept all the tracked changes.
 
@@ -139,13 +139,13 @@ System.Diagnostics.Process.Start("Sample.docx")
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Track-Changes/Accept-all-changes).
 
-By executing the above code example, it generates output Word document as follows.
+Executing the above code example generates the following output Word document.
 
 ![Accepting all track changes in Word document](WorkingWithTrackChanges_images/AcceptAll.png)
 
 ## Reject all changes
 
-You can **reject all track changes in Word document** using [RejectAll](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.RevisionCollection.html#Syncfusion_DocIO_DLS_RevisionCollection_RejectAll) method.
+You can **reject all track changes in a Word document** using the [RejectAll](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.RevisionCollection.html#Syncfusion_DocIO_DLS_RevisionCollection_RejectAll) method.
 
 The following code example shows how to reject all the tracked changes.
 
@@ -192,15 +192,15 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Track-Changes/Reject-all-changes).
 
-By executing the above code example, it generates output Word document as follows.
+Executing the above code example generates the following output Word document.
 
 ![Rejecting all track changes in Word document](WorkingWithTrackChanges_images/RejectAll.png)
 
 ## Accept all changes by a particular reviewer
 
-You can **accept all changes made by the author** in the Word document using [Accept](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Revision.html#Syncfusion_DocIO_DLS_Revision_Accept) method.
+You can **accept all changes made by a specific reviewer** in the Word document using the [Accept](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Revision.html#Syncfusion_DocIO_DLS_Revision_Accept) method.
 
-The following code example shows how to accept the tracked changes made by the author.
+The following code example shows how to accept the tracked changes made by a specific reviewer. The reviewer is identified by the `Author` property of each revision.
 
 {% tabs %}
 
@@ -214,7 +214,7 @@ for (int i = document.Revisions.Count - 1; i >= 0; i--)
     //Checks the author of current revision and accepts it.
     if (document.Revisions[i].Author == "Nancy Davolio")
         document.Revisions[i].Accept();
-    //Resets to last item when accept the moving related revisions.
+    //Resets to last item when accepting the moving related revisions.
     if (i > document.Revisions.Count - 1)
         i = document.Revisions.Count;
 }
@@ -234,7 +234,7 @@ for (int i = document.Revisions.Count - 1; i >= 0; i--)
     //Checks the author of current revision and accepts it.
     if (document.Revisions[i].Author == "Nancy Davolio")
         document.Revisions[i].Accept();
-    //Resets to last item when accept the moving related revisions.
+    //Resets to last item when accepting the moving related revisions.
     if (i > document.Revisions.Count - 1)
         i = document.Revisions.Count;
 }
@@ -249,10 +249,10 @@ Dim document As WordDocument = New WordDocument("Template.docx", FormatType.Docx
 'Iterates into all the revisions in Word document
 For i As Integer = document.Revisions.Count - 1 To 0 Step -1
     'Checks the author of current revision and accepts it.
-    If document.Revisions(i).Author Is "Nancy Davolio" Then
+    If document.Revisions(i).Author = "Nancy Davolio" Then
         document.Revisions(i).Accept()
     End If
-    'Resets to last item when accept the moving related revisions.
+    'Resets to last item when accepting the moving related revisions.
     If i > document.Revisions.Count - 1 Then
         i = document.Revisions.Count
     End If
@@ -266,11 +266,11 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Track-Changes/Accept-all-changes-made-by-author).
 
-## Reject all changes by particular reviewer
+## Reject all changes by a particular reviewer
 
-You can **reject all changes made by the author** in the Word document using [Reject](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Revision.html#Syncfusion_DocIO_DLS_Revision_Reject) method.
+You can **reject all changes made by a specific reviewer** in the Word document using the [Reject](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Revision.html#Syncfusion_DocIO_DLS_Revision_Reject) method.
 
-The following code example shows how to reject the tracked changes made by the author.
+The following code example shows how to reject the tracked changes made by a specific reviewer. The reviewer is identified by the `Author` property of each revision.
 
 {% tabs %}
 
@@ -284,7 +284,7 @@ for (int i = document.Revisions.Count - 1; i >= 0; i--)
     //Checks the author of current revision and rejects it.
     if (document.Revisions[i].Author == "Nancy Davolio")
         document.Revisions[i].Reject();
-    //Resets to last item when reject the moving related revisions.
+    //Resets to last item when rejecting the moving related revisions.
     if (i > document.Revisions.Count - 1)
         i = document.Revisions.Count;
 }
@@ -304,7 +304,7 @@ for (int i = document.Revisions.Count - 1; i >= 0; i--)
     //Checks the author of current revision and rejects it.
     if (document.Revisions[i].Author == "Nancy Davolio")
         document.Revisions[i].Reject();
-    //Resets to last item when reject the moving related revisions.
+    //Resets to last item when rejecting the moving related revisions.
     if (i > document.Revisions.Count - 1)
         i = document.Revisions.Count;
 }
@@ -319,10 +319,10 @@ Dim document As WordDocument = New WordDocument("Template.docx", FormatType.Docx
 'Iterates into all the revisions in Word document
 For i As Integer = document.Revisions.Count - 1 To 0 Step -1
     'Checks the author of current revision and rejects it.
-    If document.Revisions(i).Author Is "Nancy Davolio" Then
+    If document.Revisions(i).Author = "Nancy Davolio" Then
         document.Revisions(i).Reject()
     End If
-    'Resets to last item when accept the moving related revisions.
+    'Resets to last item when rejecting the moving related revisions.
     If i > document.Revisions.Count - 1 Then
         i = document.Revisions.Count
     End If
@@ -339,6 +339,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## Revision information
 
 You can get the **revision information of track changes** in the Word document like author name, date, and type of revision.
+
+The `RevisionType` property returns a [RevisionType](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.RevisionType.html) enum value that indicates the kind of change, such as `Insertion`, `Deletion`, `Formatting`, `MoveFrom`, or `MoveTo`.
 
 The following code example shows how to get the details about the revision information of track changes.
 
@@ -386,8 +388,6 @@ Dim author As String = revision.Author
 Dim dateTime As Date = revision.Date
 ' Gets the type of the track changes revision
 Dim revisionType As RevisionType = revision.RevisionType
-'Closes the document
-document.Close()
 'Saves and closes the document
 document.Save("Sample.docx", FormatType.Docx)
 document.Close()
