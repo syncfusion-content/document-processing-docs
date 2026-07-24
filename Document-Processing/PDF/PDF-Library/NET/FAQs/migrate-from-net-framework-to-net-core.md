@@ -1,7 +1,6 @@
 ---
 title: Migrate from .NET Framework to .NET Core | Syncfusion 
-description: This section explains the process of migrating from .NET Framework to .NET Core for classes, methods, properties and events. 
-platform: document-processing
+description: This section describes the changes to consider when migrating the Syncfusion .NET PDF library from .NET Framework to .NET Core.
 control: PDF
 documentation: UG
 ---

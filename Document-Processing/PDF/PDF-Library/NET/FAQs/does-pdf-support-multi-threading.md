@@ -1,6 +1,6 @@
 ---
 title: PDF support for multi-threading | Syncfusion
-description: This page provides detailed information about the multi-threading support offered by the Syncfusion .NET PDF library, including enabling thread safety, creating documents, and modifying existing documents in multi-threaded scenarios.
+description: This page provides detailed information about the multi-threading support offered by the Syncfusion .NET PDF library
 platform: document-processing
 control: PDF
 documentation: UG
