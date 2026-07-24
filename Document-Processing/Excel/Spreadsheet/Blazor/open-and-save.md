@@ -428,7 +428,7 @@ Import the required namespaces at the top of the file:
 Add the below code example to download the `Google Drive` file using the Drive API, convert the stream to a byte array, and bind it to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DataSource) property.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
 @page "/"
 
@@ -772,7 +772,7 @@ In Blazor WebAssembly, to preserve fonts in exported PDF use the `CustomFonts` p
 
 @using Syncfusion.Blazor.Spreadsheet
      
-<SfSpreadsheet @ref="SpreadsheetRef" CustomFonts="@CustomFonts">
+<SfSpreadsheet @ref="SpreadsheetInstance" CustomFonts="@CustomFonts">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 

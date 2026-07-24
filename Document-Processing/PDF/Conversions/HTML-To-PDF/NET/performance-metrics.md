@@ -8,7 +8,7 @@ documentation: UG
 
 # HTML to PDF Performance Benchmarks
 
-The Syncfusion<sup>&reg;</sup> [HTML to PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library/html-to-pdf) delivers high-performance APIs to convert web content into PDF documents programmatically. This performance benchmark report highlights the speed and efficiency of HTML-to-PDF conversion, showcasing how the library manages large-scale document rendering in real-world scenarios.
+The [HTML to PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library/html-to-pdf) delivers high-performance APIs to convert web content into PDF documents programmatically. This performance benchmark report highlights the speed and efficiency of HTML-to-PDF conversion, showcasing how the library manages large-scale document rendering in real-world scenarios.
 
 ## Environment Details
 
