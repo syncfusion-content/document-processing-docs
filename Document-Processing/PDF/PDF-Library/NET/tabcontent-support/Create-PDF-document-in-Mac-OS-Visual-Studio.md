@@ -1,7 +1,10 @@
-**Prerequisites**:
+**Prerequisites:**
 
-* Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-* Install Visual Studio: Download and install Visual Studio from the [official website](https://visualstudio.microsoft.com/downloads/).
+* [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download) (or later)
+* [Visual Studio for Mac 2022](https://visualstudio.microsoft.com/vs/mac/) (or later) with the **.NET** workload installed
+* An active [Syncfusion&reg; license key](https://www.syncfusion.com/sales/communitylicense) (a free 30-day trial is available)
+
+N> Visual Studio for Mac was retired by Microsoft in August 2022 and is no longer receiving new features. Existing installations still work, but new users are encouraged to use **Visual Studio Code** with the C# extension as shown in the **Visual Studio Code** tab.
 
 Step 1: Create a new .NET console application project in your IDE.
 
@@ -12,7 +15,22 @@ Step 3: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syn
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: Include the following namespaces in the *Program.cs* file.
+Step 4: Register the Syncfusion<sup>&reg;</sup> license key. An evaluation watermark is added to every page of the generated PDF until a valid key is registered. Include the license key at the top of **Program.cs** before creating a `PdfDocument` instance. Refer to the [Syncfusion License documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion<sup>&reg;</sup> license key in your application.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Licensing;
+
+// Register the Syncfusion license
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+
+{% endhighlight %}
+{% endtabs %}
+
+Replace `"YOUR LICENSE KEY"` with the license key associated with your Syncfusion<sup>&reg;</sup> account. If you do not have a license key, you can request a free 30-day trial or apply for a Community License from the Syncfusion<sup>&reg;</sup> website. For more information about registering a license key in your application, refer to the [Syncfusion<sup>&reg;</sup> Licensing Documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
+
+Step 5: Include the following namespaces in the *Program.cs* file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -25,7 +43,7 @@ using System.IO;
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Add the following code sample to the *Program.cs* file to **create a PDF document in a .NET application on macOS**.
+Step 6: Add the following code sample to the *Program.cs* file to **create a PDF document in a .NET application on macOS**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -86,12 +104,12 @@ using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Creat
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Add the **AdventureCycle.jpg** image to the project root (or the output directory) so the program can locate it at runtime.
+Step 7: Add the **AdventureCycle.jpg** image to the project root (or the output directory) so the program can locate it at runtime.
 
-Step 7: Build the project.
+Step 8: Build the project.
 
 Click the **Build** button in the toolbar or press <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
-Step 8: Run the project.
+Step 9: Run the project.
 
 Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.

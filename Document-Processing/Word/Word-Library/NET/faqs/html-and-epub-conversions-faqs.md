@@ -39,12 +39,6 @@ Dim document As New WordDocument("Template.docx", FormatType.Docx)
 document.BuiltinDocumentProperties.Title = "This is a title in EPub document"
 'Saves and closes the document.
 document.Save("Sample.epub", FormatType.EPub)
-document.Close()'Loads the existing Word document by using DocIO instance
-Dim document As New WordDocument("Template.docx", FormatType.Docx)
-'Sets title for Word document
-document.BuiltinDocumentProperties.Title = "This is a title in EPub document"
-'Saves and closes the document.
-document.Save("Sample.epub", FormatType.EPub)
 document.Close()
 {% endhighlight %}
 
@@ -95,7 +89,7 @@ When importing an HTML file into a Word document using DocIO, it is essential to
 {% tabs %}
 
 {% highlight html tabtitle="HTML" %}
-<p style="line-height: 1.5;”> Hello world</p>
+<p style="line-height: 1.5;"> Hello world</p>
 {% endhighlight %}
 
 {% endtabs %}

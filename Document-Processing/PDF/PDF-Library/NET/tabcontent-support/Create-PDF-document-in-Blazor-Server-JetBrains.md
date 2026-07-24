@@ -29,7 +29,29 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 ![Install the package](JetBrains_Images/Install-Core-BlazorServer-Package.png)
 
-Step 3: Create a new cs file named **ExportService.cs** under **Data** folder and include the following namespaces and class declaration in the file.
+Step 3: Register the Syncfusion license key. A trial watermark is added to every page of the generated PDF until a valid key is registered. Include the license key in **Program.cs** before initializing any Syncfusion component:
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Licensing;
+
+var builder = WebApplication.CreateBuilder(args);
+// Register the Syncfusion license
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+
+// Add services to the container.
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+
+var app = builder.Build();
+
+{% endhighlight %}
+{% endtabs %}
+
+Replace `"YOUR LICENSE KEY"` with the license key associated with your Syncfusion<sup>&reg;</sup> account. If you do not have a license key, you can request a free 30-day trial or apply for a Community License from the Syncfusion<sup>&reg;</sup> website. For more information about registering a license key in your application, refer to the [Syncfusion<sup>&reg;</sup> Licensing Documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
+
+Step 4: Create a new cs file named **ExportService.cs** under **Data** folder and include the following namespaces and class declaration in the file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -42,7 +64,7 @@ using Syncfusion.Drawing;
 {% endhighlight %}
 {% endtabs %}
 
-Step 4: The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data sources.
+Step 5: The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data sources.
 
 Add the following code sample in the ``ExportService`` class which illustrates how to create a simple PDF document using ``PdfTextElement`` and ``PdfGrid``.
 
@@ -123,7 +145,7 @@ builder.Services.AddSingleton<ExportService>();
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Inject ``ExportService`` into ``FetchData.razor`` using the following code.
+Step 6: Inject ``ExportService`` into ``FetchData.razor`` using the following code.
 
 {% tabs %}
 {% highlight CSHTML %}
@@ -164,7 +186,7 @@ Add the ``ExportToPdf`` method in the ``FetchData.razor`` page to call the expor
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Create a class file named ``FileUtil.cs`` and add the following code to invoke the JavaScript action to download the file in the browser.
+Step 7: Create a class file named ``FileUtil.cs`` and add the following code to invoke the JavaScript action to download the file in the browser.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -181,7 +203,7 @@ public static class FileUtil
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Add the following JavaScript function in the ``App.razor`` file available under the ``Components`` folder.
+Step 8: Add the following JavaScript function in the ``App.razor`` file available under the ``Components`` folder.
 
 {% tabs %}
 {% highlight HTML %}
@@ -215,10 +237,10 @@ Step 7: Add the following JavaScript function in the ``App.razor`` file availabl
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Build the project.
+Step 9: Build the project.
 
 Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
-Step 9: Run the project.
+Step 10: Run the project.
 
-Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.
+Click the **Run** button (green arrow) in the toolbar or press <kbd>Shift</kbd>+<kbd>F10</kbd> to run the app.
