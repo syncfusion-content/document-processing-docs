@@ -13,7 +13,7 @@ This article explains how to **load an Excel file from AWS S3 Cloud Storage** an
 
 * An AWS account with an **[Amazon S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html)** and permission to read/write objects in it.
 * Visual Studio 2019 or later with the **ASP.NET and web development** workload.
-* AWS credentials (access key + secret key, or an attached IAM role). For local development, configure them using the **[default AWS credentials provider chain](https://docs.aws.amazon.com/sdk-for-net/v3/developer-guide/creds-idcs.html)** (environment variables, `~/.aws/credentials`, or an IAM role).
+* AWS credentials (access key + secret key, or an attached IAM role).
 * A Syncfusion<sup>&reg;</sup> license key. Refer to [How to register the Syncfusion license key](https://help.syncfusion.com/common/essential-studio/licensing/how-to-register-in-an-application) for details.
 
 ## Loading Excel files from AWS S3

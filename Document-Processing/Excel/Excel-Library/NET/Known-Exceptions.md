@@ -20,7 +20,7 @@ Each row has three columns:
 ## See also
 
 - [Syncfusion XlsIO overview](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview)
-- [System requirements](https://help.syncfusion.com/document-processing/excel/excel-library/net/system-requirements)
+- [System requirements](https://help.syncfusion.com/document-processing/system-requirements)
 - [Licensing requirements](https://help.syncfusion.com/document-processing/licensing/overview)
 
 ## ApplicationException

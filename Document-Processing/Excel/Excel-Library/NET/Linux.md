@@ -1,6 +1,6 @@
 ---
 title: FAQ about using XlsIO on Linux | Syncfusion
-description: Common questions and fixes for using Syncfusion XlsIO in Linux environments, including Docker containers, font installation, locale setup, and SkiaSharp native dependencies.
+description: Find answers to common Syncfusion XlsIO Linux issues, including Docker setup, font installation, locale configuration, and SkiaSharp dependencies.
 platform: document-processing
 control: XlsIO
 documentation: UG

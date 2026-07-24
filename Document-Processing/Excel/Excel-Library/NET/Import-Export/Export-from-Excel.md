@@ -1,6 +1,6 @@
 ---
 title: Export from Excel Document | Syncfusion
-description: Learn how to export data from an Excel document using Syncfusion Essential XlsIO.
+description: Learn to export data from Excel documents using Syncfusion Essential XlsIO, enabling efficient data extraction and seamless integration.
 platform: document-processing
 control: XlsIO
 documentation: UG

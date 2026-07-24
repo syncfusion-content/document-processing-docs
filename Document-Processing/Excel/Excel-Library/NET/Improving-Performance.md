@@ -1,6 +1,6 @@
 ---
 title: Improving Performance | Syncfusion
-description: Performance patterns and best practices for working with the Syncfusion XlsIO library, with code examples for read, write, styles, autofit, importing, and validation.
+description: Discover Syncfusion XlsIO performance best practices with code examples for reading, writing, styling, autofit, data import, and validation.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -28,7 +28,7 @@ To use the examples in this section, ensure the following are in place:
 
 - [Working with cell or range formatting](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-cell-or-range-formatting)
 - [Working with data validation](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-data-validation)
-- [Working with import and export](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-import-and-export)
+- [Working with data](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-data)
 - [Syncfusion XlsIO overview](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview)
 
 ## UsedRange
