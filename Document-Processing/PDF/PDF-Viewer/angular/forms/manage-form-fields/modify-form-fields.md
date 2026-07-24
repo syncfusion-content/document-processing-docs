@@ -16,7 +16,7 @@ You can modify form fields using the **UI** or **API**.
 - Drag to move; use handles to resize.
 - Use the toolbar to toggle field mode or add new fields.
 
-## Modify PDF Form Field Properties programmatically
+## Modify PDF Form Field Properties Programmatically
 Use [updateFormField()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#updateformfields) to change behavior/data (including position and size):
 
 {% tabs %}
@@ -309,9 +309,9 @@ export class AppComponent {
 {% endtabs %}
 
 ### RadioButton
-•	UI: Set selected item in a group (same Name).
+- UI: Set selected item in a group (same Name).
 ![RadioButton edited from UI](../../../javascript-es6/images/ui-radiobutton-edit.png)
-•	API: [updateFormField()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#updateformfields) to set selected value and border appearance.
+- API: [updateFormField()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#updateformfields) to set selected value and border appearance.
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 import { Component, ViewChild } from '@angular/core';
@@ -372,9 +372,9 @@ export class AppComponent {
 {% endtabs %}
 
 ### ListBox
-•	UI: Add/remove items, set selection, adjust fonts/colors.
+- UI: Add/remove items, set selection, adjust fonts/colors.
 ![ListBox edited from UI](../../../javascript-es6/images/ui-listbox-edit.png)
-•	API: [updateFormField()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#updateformfields) for items, selection, borders.
+- API: [updateFormField()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#updateformfields) for items, selection, borders.
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 import { Component, ViewChild } from '@angular/core';
@@ -446,9 +446,9 @@ export class AppComponent {
 {% endtabs %}
 
 ### DropDown
-•	UI: Add/remove items, default value, appearance.
+- UI: Add/remove items, default value, appearance.
 ![DropDown edited from UI](../../../javascript-es6/images/ui-dropdown-edit.png)
-•	API: [updateFormField()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#updateformfields) for items, value, borders.
+- API: [updateFormField()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#updateformfields) for items, value, borders.
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 import { Component, ViewChild } from '@angular/core';
@@ -520,9 +520,9 @@ export class AppComponent {
 {% endtabs %}
 
 ### Signature Field
-•	UI: Tooltip, thickness, indicator text, required/visibility.
+- UI: Tooltip, thickness, indicator text, required/visibility.
 ![Signature field edited from UI](../../../javascript-es6/images/ui-signature-edit.png)
-•	API: [updateFormField()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, required, colors, borders.
+- API: [updateFormField()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, required, colors, borders.
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 import { Component, ViewChild } from '@angular/core';
@@ -589,9 +589,9 @@ export class AppComponent {
 {% endtabs %}
 
 ### Initial Field
-•	UI: Tooltip, indicator text, thickness, required/visibility.
+- UI: Tooltip, indicator text, thickness, required/visibility.
 ![Initial field edited from UI](../../../javascript-es6/images/ui-initial-edit.png)
-•	API: [updateFormField()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, required, colors, borders.
+- API: [updateFormField()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, required, colors, borders.
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 import { Component, ViewChild } from '@angular/core';

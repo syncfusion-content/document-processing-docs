@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Overview
 
-The Angular PDF Viewer allows submitting filled form data like text fields, checkboxes, radio buttons and dropdown values to a back end server for processing. This guide shows how to extract form data from the viewer and **post** it as `JSON` to a server endpoint.
+The Angular PDF Viewer allows submitting filled form data like text fields, checkboxes, radio buttons, and dropdown values to a back end server for processing. This guide shows how to extract form data from the viewer and **post** it as `JSON` to a server endpoint.
 
 ## Prerequisites
 
@@ -124,14 +124,14 @@ export class AppComponent implements OnInit {
 
 - **No form values returned**: Ensure the PDF has interactive fields and the viewer has finished loading before calling [`exportFormFieldsAsObject()`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#exportformfieldsasobject).
 - **CORS errors**: Enable CORS on the server or serve both frontend and back end from the same origin during testing.
-- **Server rejects payload**: Confirm the server expects `application/json` and validates shape of the object.
+- **Server rejects payload**: Confirm the server expects `application/json` and validates the shape of the object.
 - **WASM or resource errors**: Ensure [`resourceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#resourceurl) points to the correct Syncfusion PDF Viewer library files.
 
 ## Use cases
 
 - Enable remote verification and approval workflows by sending submitted form data to a back end service for review and sign-off.
 - Store submitted form responses in a database to persist user inputs for auditing, reporting, or later retrieval.
-- Trigger workflow automation and downstream processing by sending form data to business systems or server less functions.
+- Trigger workflow automation and downstream processing by sending form data to business systems or serverless functions.
 - Merge submitted values into a final flattened PDF on the server to produce a non-editable document that combines the form data with the original PDF.
 
 ## Related topics

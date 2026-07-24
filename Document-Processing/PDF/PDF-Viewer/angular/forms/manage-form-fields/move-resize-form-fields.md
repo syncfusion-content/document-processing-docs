@@ -11,10 +11,10 @@ documentation: ug
 - **Move**: Drag the form field to reposition it.
 - **Resize**: Use the resize handles to change width and height.
 
-![Moveing and Resizing a form field](../../../javascript-es6/images/move-resize-forms.gif)
+![Moving and Resizing a form field](../../../javascript-es6/images/move-resize-forms.gif)
 
 ## Move and Resize Fields Programmatically (API)
-You can set absolute bounds or move fields by a delta.
+You can set absolute bounds to reposition and resize fields.
 
 **Set absolute bounds**
 

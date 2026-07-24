@@ -18,7 +18,7 @@ Use the **Properties** panel to adjust:
 - Background color
 ![Textbox style from UI](../../../javascript-es6/images/ui-textbox-style.png)
 
-## Customize appearance Form Fields Programmatically
+## Customize the Appearance of Form Fields Programmatically
 Use [updateFormField()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#updateformfields) to apply styles:
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
