@@ -1,7 +1,7 @@
 ---
 layout: post
 title: WebMCP Integration in React Spreadsheet | Syncfusion
-description: Learn how to integrate WebMCP (Model Context Protocol) with Syncfusion React Spreadsheet to enable AI agents and external tools to interact with your spreadsheet data and operations.
+description: Integrate WebMCP with React Spreadsheet to enable AI agents and external tools to automate spreadsheet operations programmatically.
 platform: document-processing
 control: WebMCP
 documentation: ug
