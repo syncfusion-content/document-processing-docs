@@ -29,7 +29,7 @@ The Nutrient Web SDK can be used via CDN or installed as a package. The CDN expo
 
 ```bash
 # CDN: add the script tag to `index.html` (example version shown)
-# <script src="https://cdn.cloud.nutrient.io/pspdfkit-web@1.13.0/nutrient-viewer.js"></script>
+<!-- <script src="https://cdn.cloud.nutrient.io/pspdfkit-web@1.13.0/nutrient-viewer.js"></script> -->
 
 # or install the package for local use
 npm install @nutrient-sdk/viewer
