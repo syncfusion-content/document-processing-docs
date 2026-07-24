@@ -22,13 +22,15 @@ N> If .NET Standard is not available in the code sharing strategy, the Portable 
 
 ![Create Xamarin CodeSharing Option](Xamarin_images/Template_WordtoPDF.png)
 
+N> Xamarin is deprecated. For new cross-platform projects, use .NET MAUI instead. See the migration guide [here](https://learn.microsoft.com/en-us/dotnet/maui/migration/).
+
 Step 3: Install [Syncfusion.Xamarin.DocIO](https://www.nuget.org/packages/Syncfusion.Xamarin.DocIO) NuGet package as a reference to the .NET Standard project in your application from [NuGet.org](https://www.nuget.org/).
 
 ![Install Syncfusion.Xamarin.DocIO NuGet package](Xamarin_images/Install_Nuget.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: Add new Forms XAML page in **portable project**. If there is no XAML page defined in the App class. Otherwise proceed to the next step.
+Step 4: Add a new Forms XAML page in the **portable project**, if there is no XAML page already defined and set as the start page in the App class. If a start page is already configured, proceed to the next step.
 <ul>
 <li>
 To add the new XAML page, right click on the project and select <b>Add > New Item</b> and add a Forms XAML Page from the list. Name it as MainXamlPage.
@@ -74,6 +76,9 @@ Step 6: Include the following namespace in the MainXamlPage.xaml.cs file.
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
+using System;
+using System.IO;
+using System.Reflection;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 {% endhighlight %}
@@ -125,7 +130,7 @@ Step 9: Add below code example to **save the Word document in Xamarin**.
 MemoryStream stream = new MemoryStream();
 document.Save(stream, FormatType.Docx);
 //Save the stream as a file in the device and invoke it for viewing.
-Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView("Sample.docx", "application/msword", stream);
+Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView("Sample.docx", "application/vnd.openxmlformats-officedocument.wordprocessingml.document", stream);
 {% endhighlight %}
 
 {% endtabs %}
@@ -153,7 +158,7 @@ Download the helper files from this [link](https://www.syncfusion.com/downloads/
   <td>
     ISave.cs
   </td>
-  <td>Represent the base interface for save operation
+  <td>Represents the base interface for save operation
   </td>
   </tr>
   <tr>
@@ -212,12 +217,14 @@ Download the helper files from this [link](https://www.syncfusion.com/downloads/
   <td>
     SaveWindows81.cs
   </td>
-  <td>Save implementation for WinRT device.
+  <td>Save implementation for WinRT device (Windows 8.1).
   </td>
   </tr>
 </table>
 
 Compile and execute the application. Now this application **opens and saves a Word document**.
+
+N> Windows Phone and Windows 8.1 (WinRT) platforms are no longer supported by Microsoft. The corresponding helper files are provided only for legacy projects and are not recommended for new development.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Read-and-Save-document/Open-and-save-Word-document/Xamarin).
 

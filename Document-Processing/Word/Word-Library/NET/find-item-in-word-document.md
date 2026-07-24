@@ -188,9 +188,9 @@ using (FileStream docStream = new FileStream("Input.docx", FileMode.Open, FileAc
     //Load the file stream into a Word document.
     using (WordDocument document = new WordDocument(docStream, FormatType.Docx))
     {
-        //Find all footnote and endnote by EntityType in Word document.
+        //Find all footnotes by EntityType in Word document.
         List<Entity> footNotes = document.FindAllItemsByProperty(EntityType.Footnote, null, null);
-        //Remove the footnotes and endnotes.
+        //Remove the footnotes.
         for (int i = 0; i < footNotes.Count; i++)
         {
             WFootnote footnote = footNotes[i] as WFootnote;
@@ -220,9 +220,9 @@ using (FileStream docStream = new FileStream("Input.docx", FileMode.Open, FileAc
 //Load an existing Word document.
 using (WordDocument document = new WordDocument("Input.docx", FormatType.Docx))
 {
-    //Find all footnote and endnote by EntityType in Word document.
+    //Find all footnotes by EntityType in Word document.
     List<Entity> footNotes = document.FindAllItemsByProperty(EntityType.Footnote, null, null);
-    //Remove the footnotes and endnotes.
+    //Remove the footnotes.
     for (int i = 0; i < footNotes.Count; i++)
     {
         WFootnote footnote = footNotes[i] as WFootnote;
@@ -247,9 +247,9 @@ using (WordDocument document = new WordDocument("Input.docx", FormatType.Docx))
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Load an existing Word document.
 Using document As WordDocument = New WordDocument("Input.docx", FormatType.Docx)
-    'Find all footnote and endnote by EntityType in Word document.
+    'Find all footnotes by EntityType in Word document.
     Dim footNotes As List(Of Entity) = document.FindAllItemsByProperty(EntityType.Footnote, Nothing, Nothing)
-    'Remove the footnotes and endnotes.
+    'Remove the footnotes.
     For i = 0 To footNotes.Count - 1
         Dim footnote As WFootnote = TryCast(footNotes(i), WFootnote)
         footnote.OwnerParagraph.ChildEntities.Remove(footnote)
@@ -261,7 +261,7 @@ Using document As WordDocument = New WordDocument("Input.docx", FormatType.Docx)
         'Creates hyperlink instance from field to manipulate the hyperlink.
         Dim hyperlink As Hyperlink = New Hyperlink(TryCast(fields(i), WField))
         'Modifies the Uri of the hyperlink.
-        If hyperlink.Type Is HyperlinkType.WebLink AndAlso hyperlink.TextToDisplay Is "HTML" Then hyperlink.Uri = "http://www.w3schools.com/"
+        If hyperlink.Type = HyperlinkType.WebLink AndAlso hyperlink.TextToDisplay = "HTML" Then hyperlink.Uri = "http://www.w3schools.com/"
     Next
     'Save a Word document.
     document.Save("Sample.docx", FormatType.Docx)

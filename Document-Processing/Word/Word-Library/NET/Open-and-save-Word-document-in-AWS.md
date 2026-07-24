@@ -16,7 +16,7 @@ N> If this is your first time working with Amazon Web Services (AWS), please ref
 
 * An active **Amazon Web Services (AWS) account** is required. If you don’t have one, please [create an account](https://aws.amazon.com/) before starting.
 
-* Download and install the **AWS Toolkit** for Visual Studio, you can download the AWS toolkit from this [link](https://aws.amazon.com/visualstudio/). The Toolkit can be installed from Tools/Extension and updates options in Visual Studio.
+* Download and install the **AWS Toolkit** for Visual Studio, you can download the AWS toolkit from this [link](https://aws.amazon.com/visualstudio/). The Toolkit can be installed from the **Tools > Extensions and Updates** options in Visual Studio.
 
 ## Amazon Web Services (AWS)
 
@@ -26,6 +26,7 @@ N> If this is your first time working with Amazon Web Services (AWS), please ref
 <th>
 Amazon Web Services (AWS)<br/></th><th>
 NuGet package name<br/></th></tr></thead>
+<tbody>
 <tr>
 <td>
 {{'[AWS Lambda](https://help.syncfusion.com/document-processing/word/word-library/net/open-and-save-word-document-in-aws-lambda)' | markdownify}} <br/></td><td>
@@ -33,6 +34,13 @@ NuGet package name<br/></th></tr></thead>
 </td></tr>
 <tr>
 <td>
-{{'[AWS Elastic Beanstalk](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-aws-elastic-beanstalk)' | markdownify}} <br/></td><td>
+{{'[AWS Elastic Beanstalk](https://help.syncfusion.com/document-processing/word/word-library/net/open-and-save-word-document-in-aws-elastic-beanstalk)' | markdownify}} <br/></td><td>
 {{'[Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core)' | markdownify}}<br/> 
+</td></tr>
+<tr>
+<td>
+{{'[AWS S3 Cloud Storage](https://help.syncfusion.com/document-processing/word/word-library/net/open-and-save-word-document-in-aws-s3-cloud-storage)' | markdownify}} <br/></td><td>
+{{'[Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core)' | markdownify}}<br/> 
+</td></tr>
+</tbody>
 </table>
