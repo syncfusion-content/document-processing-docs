@@ -57,7 +57,7 @@ The [MailMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.Do
 
 The following code example shows how to perform a nested mail merge.
 
-> **NOTE**  
+N> 
 > `OleDbConnection` is supported only on Windows. It is not available on Linux or macOS, including in ASP.NET Core on non-Windows platforms. Use `Microsoft.ACE.OLEDB.12.0` instead of the deprecated `Microsoft.Jet.OLEDB.4.0` provider on modern Windows.
 N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
