@@ -19,7 +19,7 @@ This guide explains how to duplicate pages within the current PDF using the Orga
 ## Prerequisites
 
 - EJ2 React PDF Viewer installed
-- PDF Viewer injected with `PageOrganizer` module
+- PDF Viewer with the `PageOrganizer` module injected
 
 ## Steps
 

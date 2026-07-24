@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Extract Pages in React PDF Viewer | Syncfusion
-description: Learn here all about Extract Pages in Organize Pages in Syncfusion React PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: Learn how to extract pages in the Organize Pages panel of the Syncfusion React PDF Viewer component of Syncfusion Essential JS 2.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -57,7 +57,7 @@ You can control the Extract Pages experience via settings and invoke extraction 
 
 Use the `canExtractPages` API to enable or disable the Extract Pages option. When set to `false`, the Extract Pages tool is disabled in the toolbar. The default value is `true`.
 
-Use the following code snippet to enable or disable the Extract Pages option:
+Use the following code snippet to enable the Extract Pages option:
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}

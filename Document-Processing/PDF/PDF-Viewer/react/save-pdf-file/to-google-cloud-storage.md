@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Save PDF files to Google Cloud Storage in React PDF Viewer | Syncfusion
+title: Save PDF Files to Google Cloud Storage | Syncfusion
 description: Learn how to save PDF files to Google Cloud Storage using the Syncfusion React PDF Viewer component with a server-backed web service.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 ---
 
-# Save PDF files to Google Cloud Storage
+# Store PDF Files in Google Cloud Storage
 
 To save a PDF file to Google Cloud Storage, follow the steps below.
 
@@ -15,7 +15,7 @@ To save a PDF file to Google Cloud Storage, follow the steps below.
 
 Follow the Syncfusion getting-started instructions for the React PDF Viewer: [React PDF Viewer getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started). This sets up the basic PDF Viewer application structure.
 
-**Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
+**Step 2:** Modify the `PdfViewerController.cs` file in the web service project
 
 1. Create a web service project in .NET Core 3.0 or above. Refer to the Syncfusion knowledge base article on creating a PDF Viewer web service: [Create a PDF Viewer web service in .NET Core 3.0 and above](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above).
 
@@ -108,7 +108,7 @@ N> Replace **path/to/service-account-key.json** with the actual file path to the
 
 **Step 3:** Set the PDF Viewer properties in the React PDF Viewer component
 
-Modify the [serviceUrl](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#serviceurl) property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from Google Cloud Storage, and ensure that the document exists in the target bucket.
+Modify the [serviceUrl] (https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#serviceurl) property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from Google Cloud Storage, and ensure that the document exists in the target bucket.
 
 {% raw %}
 

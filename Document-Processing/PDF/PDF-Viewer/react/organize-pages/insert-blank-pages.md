@@ -65,4 +65,4 @@ To enable or disable the **Insert Pages** button in the page thumbnails, update 
 - [Organize pages toolbar customization](./toolbar)
 - [Organize pages event reference](./events)
 - [Remove pages in Organize Pages](./remove-pages)
-- [Reorder pages in Organize Pages](./remove-pages)
+- [Reorder pages in Organize Pages](./reorder-pages)
