@@ -7,13 +7,13 @@ platform: document-processing
 documentation: ug
 ---
 
-# Open PDF from Azure Active Directory
+# Open and Access PDFs Through Azure Active Directory
 
 ### Overview
 
 The React PDF Viewer component supports loading and saving PDF files with Azure Active Directory (AAD). The following steps explain how to securely load and store PDFs using AAD.
 
-### Steps to open a PDF from Azure Active Directory
+### Steps to open and save a PDF from Azure Active Directory
 
 ---
 
@@ -43,7 +43,7 @@ The React PDF Viewer component supports loading and saving PDF files with Azure 
 
 1. **Create a Storage Account**:
    - In the Azure portal, use the search bar to search for **Storage accounts**.
-   - Create a new storage account by filling in the required details (e.g., name, location, resource group, etc.).
+   - Create a new storage account by filling in the required details (for example: name, location, and resource group).
 
     ![storage-account](../images/storage-account.png)
 
@@ -96,7 +96,7 @@ The React PDF Viewer component supports loading and saving PDF files with Azure 
    - Start the React sample that includes the React PDF Viewer.
 
 2. **Load PDF from AAD**:
-   - When the user clicks the **Load from AAD** button, the React client will make an HTTP request to the server-side API to fetch the PDF from Azure Blob Storage.
+   - When the user clicks the **Load from AAD** button, the React client makes an HTTP request to the server-side API to fetch the PDF from Azure Blob Storage.
    - The server will retrieve the PDF from Azure, convert it to a base64 string, and return it to the client.
 
 3. **Display PDF in the PDF Viewer**:
