@@ -99,7 +99,7 @@ function saveDocument() {
 }
 ```
 
-N> Install the Azure Storage Blob client package for browser use: `npm install @azure/storage-blob`. For server-side operations use `dotnet add package Azure.Storage.Blobs`.
+N> Install the Azure Storage Blob client package for browser use: `npm install @azure/storage-blob`. For server-side operations use `dot net add package Azure.Storage.Blobs`.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-azure-blob-storage/tree/master/Open%20and%20Save%20PDF%20in%20Azure%20Blob%20Storage%20using%20Standalone).
 
@@ -140,7 +140,7 @@ public PdfViewerController(IConfiguration configuration, ILogger<PdfViewerContro
 }
 ```
 
-5. Modify the [Download()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#download) method to save the downloaded PDF file to the Azure Blob Storage container.
+5. Modify the [Download()] (https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#download) method to save the downloaded PDF file to the Azure Blob Storage container.
 
 ```csharp
 
@@ -197,7 +197,7 @@ N> Replace the placeholders with the actual Azure Storage connection string and 
 
 **Step 3:** Set the PDF Viewer properties in the React PDF Viewer component
 
-Modify the [serviceUrl](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#serviceurl) property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from Azure Blob Storage, and ensure that the document exists in the target container.
+Modify the [serviceUrl] (https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#serviceurl) property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from Azure Blob Storage, and ensure that the document exists in the target container.
 
 {% tabs %}
 {% highlight ts tabtitle="Server-Backed" %}

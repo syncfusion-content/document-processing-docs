@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Toolbar in React PDF Viewer component | Syncfusion
-description: Learn about the toolbars available in the Syncfusion React PDF Viewer component.
+description: Learn about the various toolbars available in the Syncfusion React PDF Viewer and how they help users access key PDF features.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

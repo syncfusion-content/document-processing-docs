@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Save PDF files to Dropbox cloud storage
+# Save PDF Files to Dropbox from React PDF Viewer
 
 The React PDF Viewer component supports saving PDF files to Dropbox using either the standalone or server-backed configuration. The following steps demonstrate both approaches.
 

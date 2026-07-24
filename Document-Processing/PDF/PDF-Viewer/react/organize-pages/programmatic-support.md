@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Programmatic Support for Organize Pages in React PDF Viewer | Syncfusion
+title: Programmatic Support for Page Organization in React PDF Viewer
 description: Learn how to use the programmatic APIs for Organize Pages in the Syncfusion React PDF Viewer component of Syncfusion Essential JS 2.
 platform: document-processing
 control: PDF Viewer

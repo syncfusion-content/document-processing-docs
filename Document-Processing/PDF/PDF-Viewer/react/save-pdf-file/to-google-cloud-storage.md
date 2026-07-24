@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Save PDF files to Google Cloud Storage
+# Store PDF Files in Google Cloud Storage
 
 To save a PDF file to Google Cloud Storage, follow the steps below.
 
@@ -108,7 +108,7 @@ N> Replace **path/to/service-account-key.json** with the actual file path to the
 
 **Step 3:** Set the PDF Viewer properties in the React PDF Viewer component
 
-Modify the [serviceUrl](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#serviceurl) property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from Google Cloud Storage, and ensure that the document exists in the target bucket.
+Modify the [serviceUrl] (https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#serviceurl) property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from Google Cloud Storage, and ensure that the document exists in the target bucket.
 
 {% raw %}
 

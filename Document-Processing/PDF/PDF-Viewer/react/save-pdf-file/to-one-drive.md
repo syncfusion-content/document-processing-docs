@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Save PDF files to OneDrive
+# Store PDF Files in OneDrive
 
 This article describes how to save a PDF file to OneDrive from the React PDF Viewer using a server-side web service. Follow the steps below.
 

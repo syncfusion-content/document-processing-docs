@@ -55,7 +55,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Download()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#download) method to save the downloaded PDF file to the Box cloud storage folder.
+5. Modify the [Download()] (https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#download) method to save the downloaded PDF file to the Box cloud storage folder.
 
 ```csharp
 [HttpPost("Download")]
@@ -150,7 +150,7 @@ root.render(<App />);
 ```
 {% endraw %}
 
-N> Install the Box .NET SDK in the web service project: `dotnet add package Box.V2`.
+N> Install the Box .NET SDK in the web service project: `dot net add package Box.V2`.
 
 N> Replace `PDF_Succinctly.pdf` with the actual document name to load from Box cloud storage. Pass the document name from the Box folder to the `documentPath` property of the `React PDF Viewer` component.
 
