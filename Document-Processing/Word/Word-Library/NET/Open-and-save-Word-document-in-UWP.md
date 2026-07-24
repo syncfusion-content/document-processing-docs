@@ -27,6 +27,9 @@ Step 3: Include the following namespaces in the MainPage.xaml.cs file.
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
+using System;
+using System.IO;
+using System.Reflection;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 {% endhighlight %}

@@ -9,11 +9,11 @@ control: PDF Viewer
 
 # Migrating from Apryse Web Viewer to Angular PDF Viewer
 
-This guide helps Angular developers migrate applications built using **Apryse Web Viewer** to the **Angular PDF Viewer**. It explains architectural differences, setup changes, feature mapping, and common API replacements specific to an Angular environment.
+This guide helps Angular developers migrate applications built using **Apryse WebViewer** to the **Angular PDF Viewer**. It explains architectural differences, setup changes, feature mapping, and common API replacements specific to an Angular environment.
 
 ## Overview
 
-**Apryse Web Viewer** is an SDK-style viewer that is mounted imperatively into a DOM element and exposes a rich JavaScript API surface.
+**Apryse WebViewer** is an SDK-style viewer that is mounted imperatively into a DOM element and exposes a rich JavaScript API surface.
 
 **Angular PDF Viewer** provides a **fully declarative Angular component-based experience**, offering built-in UI, annotations, form fields, text search, and navigation through Angular modules and services—without requiring external runtime SDK initialization.
 
@@ -25,7 +25,7 @@ Key migration benefits:
 
 ## Architecture Differences
 
-| Concept | Apryse Web Viewer | Angular PDF Viewer |
+| Concept | Apryse WebViewer | Angular PDF Viewer |
 |--------|-----------------|-------------------------------|
 | Integration style | Imperative DOM-based SDK mount | Declarative Angular component |
 | Initialization | Web Viewer({...}, element) | `<ejs-pdfviewer>` component |
@@ -37,7 +37,7 @@ Migration generally involves **removing the Apryse SDK mount** and **replacing i
 
 ## Installation
 
-### Apryse Web Viewer
+### Apryse WebViewer
 ```bash
 npm install @pdftron/webviewer
 ```
@@ -76,7 +76,7 @@ Add the required Syncfusion styles in `angular.json` or `styles.css`:
 
 ## Viewer Initialization Comparison
 
-### Apryse Web Viewer (Angular)
+### Apryse WebViewer (Angular)
 
 ```ts
 import WebViewer from '@pdftron/webviewer';
@@ -165,7 +165,7 @@ this.pdfViewer.importAnnotation(annotationData);
 
 ## Migration Checklist
 
-- Remove `Apryse web viewer` initialization and DOM mounting code
+- Remove `Apryse WebViewer` initialization and DOM mounting code
 - Install `@syncfusion/ej2-angular-pdfviewer`
 - Import `PdfViewerModule` into Angular modules
 - Replace SDK initialization with `<ejs-pdfviewer>`
@@ -190,7 +190,7 @@ this.pdfViewer.importAnnotation(annotationData);
 - [load()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#load) — programmatically load a PDF.
 - [download()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#download) — trigger download of current document.
 - [addAnnotation(annotation: any)](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#addannotation) — add an annotation programmatically.
-- [exportAnnotation(annotationDataFormat)](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#exportannotation) / [exportAnnotationsAsBase64String()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#exportannotationsasbase64string):   — export annotations for persistence.
+- [exportAnnotation(annotationDataFormat)](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#exportannotation) / [exportAnnotationsAsBase64String()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#exportannotationsasbase64string): — export annotations for persistence.
 - [extractText(pageIndex: number, options?: any)](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#extracttext): — extract text and coordinates.
 - [Events](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#events): [documentLoad](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#documentload), [pageRenderComplete](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#pagerendercomplete), [pageChange](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#pagechange), [annotationAdd](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#annotationadd), [annotationRemove](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#annotationremove), [toolbarClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#toolbarclick).
 
