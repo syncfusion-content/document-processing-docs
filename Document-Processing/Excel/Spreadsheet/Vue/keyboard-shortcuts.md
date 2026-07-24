@@ -15,13 +15,13 @@ The keyboard shortcuts supported in the Spreadsheet are,
 |-------|---------|
 | Ctrl + O | Displays dialog to open a file. |
 | Ctrl + S / Alt + F2 | Saves the workbook. |
-| Ctrl + P | Print the active worksheet when the spreadsheet is in focus. |
+| Ctrl + P | Prints the active worksheet when the spreadsheet is in focus. |
 | F2 | Enables edit mode. |
 | ESC | Cancel edit mode and discard the changes. |
 | Backspace and SPACE | Clears content of the active cell and enables edit mode. |
 | Ctrl + C | Copies the selected cells. |
 | Ctrl + X | Cuts the selected cells. |
-| Ctrl + V | Paste the clipboard(cut or copied) content in the new selected range. |
+| Ctrl + V | Pastes the clipboard(cut or copied) content in the new selected range. |
 | Ctrl + B | Applies or removes **bold** formatting. |
 | Ctrl + I | Applies or removes *italic* formatting. |
 | Ctrl + U | Applies or removes `underline`. |

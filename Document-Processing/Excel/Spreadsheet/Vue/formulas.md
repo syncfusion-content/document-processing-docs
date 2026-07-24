@@ -2,14 +2,14 @@
 layout: post
 title: Formulas in Vue Spreadsheet component | Syncfusion
 description: Learn here all about Formulas in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
-control: Formulas 
+control: Formulas
 platform: document-processing
 documentation: ug
 ---
 
 # Formulas in Vue Spreadsheet component
 
-Formulas are used for calculating the data in a worksheet. You can refer the cell reference from same sheet or from different sheets.
+Formulas are used to calculate the data in a worksheet. You can refer to a cell reference from the same sheet or from different sheets.
 
 ## Usage
 
@@ -17,7 +17,7 @@ You can set formula for a cell in the following ways,
 
 * Using the `formula` property from `cell`, you can set the formula or expression to each cell at initial load.
 * Set the formula or expression through data binding.
-* You can set formula for a cell by [`editing`](./editing).
+* You can set formula for a cell using [`editing`](./editing).
 * Using the [`updateCell`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#updatecell) method, you can set or update the cell formula.
 
 ## Culture-Based Argument Separator
@@ -45,7 +45,7 @@ In the example below, the Spreadsheet component is rendered with the `German cul
 
 The Spreadsheet includes a number of built-in formulas. For your convenience, a list of supported formulas can be found [here](https://help.syncfusion.com/document-processing/excel/spreadsheet/vue/formulas#supported-formulas).
 
-You can define and use an unsupported formula, i.e. a user defined/custom formula, in the spreadsheet by using the [addCustomFunction](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#addcustomfunction) function. Meanwhile, remember that you should define a user defined/custom formula whose results should only return a single value. If a user-defined/custom formula returns an array, it will be time-consuming to update adjacent cell values.
+You can define and use an unsupported formula, i.e., a user-defined/custom formula, in the spreadsheet by using the [addCustomFunction](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#addcustomfunction) function. Remember that you must define a user-defined/custom formula whose result returns a single value. If a user-defined/custom formula returns an array, it will be time-consuming to update adjacent cell values.
 
 The following code example shows an unsupported formula in the spreadsheet.
 
@@ -60,7 +60,7 @@ The following code example shows an unsupported formula in the spreadsheet.
         
 {% previewsample "/document-processing/code-snippet/spreadsheet/vue/formula-cs1" %}
 
-Second, if you want to directly compute any formula or expression, you can use the [computeExpression](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#computeexpression) method. This method will work for both built-in and used-defined/custom formula.
+Second, if you want to directly compute any formula or expression, you can use the [computeExpression](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#computeexpression) method. This method works for both built-in and user-defined/custom formulas.
 
 The following code example shows how to use `computeExpression` method in the spreadsheet.
 
@@ -81,7 +81,7 @@ Formula bar is used to edit or enter cell data in much easier way. By default, t
 
 ## Named Ranges
 
-You can define a meaningful name for a cell range and use it in the formula for calculation. It makes your formula much easier to understand and maintain. You can add named ranges to the Spreadsheet in the following ways,
+You can define a meaningful name for a cell range and use it in the formula for calculation. This makes your formula much easier to understand and maintain. You can add named ranges to the Spreadsheet in the following ways,
 
 * Using the [`definedNames`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#definednames) collection, you can add multiple named ranges at initial load.
 * Use the [`addDefinedName`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#adddefinedname) method to add a named range dynamically.
@@ -108,7 +108,7 @@ The Spreadsheet provides a `Calculation Mode` feature like the calculation optio
 * `Automatic`: Formulas are recalculated instantly whenever a change occurs in the dependent cells.
 * `Manual`: Formulas are recalculated only when triggered explicitly by the user using options like `Calculate Sheet` or `Calculate Workbook`.
 
-You can configure the calculate mode using the [`calculationMode`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#calculationmode) property of the Spreadsheet. These modes offer flexibility to balance real-time updates and performance optimization.
+You can configure the calculate mode using the [`calculationMode`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#calculationmode) property of the Spreadsheet. These modes let you balance real-time updates with performance optimization.
 
 ### Automatic Mode
 
@@ -133,7 +133,7 @@ The following code example demonstrates how to set the Automatic calculation mod
 
 In Manual Mode, formulas are not recalculated automatically when cell values are modified. Instead, recalculations must be triggered explicitly. This mode is ideal for scenarios where performance optimization is a priority, such as working with large datasets or computationally intensive formulas.
 
-For example, imagine a spreadsheet where cell `C1` contains the formula `=A1+B1`. When the value in `A1` or `B1` changes, the value in `C1` will not update automatically. Instead, the recalculation must be initiated manually using either the `Calculate Sheet` or `Calculate Workbook` option. To manually initiate recalculation, the Spreadsheet provides two options:
+For example, imagine a spreadsheet where cell `C1` contains the formula `=A1+B1`. When the value in `A1` or `B1` changes, the value in `C1` will not update automatically. Instead, the recalculation must be triggered manually using either the `Calculate Sheet` or `Calculate Workbook` option. To manually trigger recalculation, the Spreadsheet provides two options:
 
 * `Calculate Sheet`: Recalculates formulas for the active sheet only.
 * `Calculate Workbook`: Recalculates formulas across all sheets in the workbook.
@@ -153,7 +153,7 @@ The following code example demonstrates how to set the Manual calculation mode i
 
 ## Supported Formulas
 
-The list of supported formulas can be find in following [`link`](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/formulas#supported-formulas).
+The list of supported formulas can be found at the following [`link`](https://help.syncfusion.com/document-processing/excel/spreadsheet/vue/formulas#supported-formulas).
 
 ## Formula Error Dialog
 
@@ -175,11 +175,10 @@ If you enter an invalid formula in a cell, an error dialog with an error message
 
 ## Note
 
-You can refer to our [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/vue/#/tailwind3/spreadsheet/default.html) to knows how to present and manipulate data.
+You can refer to our [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/vue/#/tailwind3/spreadsheet/default.html) to see how to present and manipulate data.
 
 ## See Also
 
+* [Open and Save](./open-save)
 * [Editing](./editing)
 * [Formatting](./formatting)
-* [Open](./open-save)
-* [Save](./open-save)

@@ -2,7 +2,7 @@
 layout: post
 title: Illustrations in Vue Spreadsheet component | Syncfusion
 description: Learn here all about Illustrations in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
-control: Illustrations 
+control: Spreadsheet
 platform: document-processing
 documentation: ug
 ---
@@ -13,7 +13,7 @@ Illustrations help you to insert an image, shapes, and graphic objects in the Es
 
 ## Image
 
-Adding images to a spreadsheet can enhance the visual appeal and help to convey information more clearly.
+Adding images to a spreadsheet can enhance visual appeal and convey information more clearly.
 
 >* The default value for the `allowImage` property is `true`.
 
@@ -83,8 +83,8 @@ Image feature allows you to view and insert an image in a spreadsheet, and you c
 
 The following features have some limitations in Image:
 
-* Corner resizing option in the image element.
-* Copy and paste the external image.
+* Corner resizing option in the image element is not supported.
+* Copying and pasting external images is not supported.
 
 ## Chart
 

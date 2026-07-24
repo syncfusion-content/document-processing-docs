@@ -11,8 +11,8 @@ documentation: ug
 
 ## Localization
 
-The [`Localization`](https://ej2.syncfusion.com/vue/documentation/common/localization) library allows you to localize the default text content of the Spreadsheet. The Spreadsheet has static text on some features (cell formatting, Merge, Data validation, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the
-[`locale`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#locale) value and translation object.
+The [`Localization`](https://ej2.syncfusion.com/vue/documentation/common/localization) library allows you to localize the default text content of the Spreadsheet. The Spreadsheet contains static text for some features (cell formatting, Merge, Data validation, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the
+[`locale`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#locale) value and a translation object.
 
 The following list of properties and their values are used in the Spreadsheet.
 
@@ -137,7 +137,7 @@ RADIANS | Converts degrees into radians.
 MATCH | Returns the relative position of a specified value in the given range.
 DefineNameExists | This name already exists try a different name.
 CircularReference | When a formula refers to one or more circular references this may result in an incorrect calculation.
-ShowRowsWhere | Show rows where |
+ShowRowsWhere | Show rows where
 CustomFilterDatePlaceHolder | Choose a date
 CustomFilterPlaceHolder | Enter the value
 CustomFilter | Custom Filter
@@ -190,19 +190,19 @@ UnprotectSheet | Unprotect Sheet
 SelectCells | Select cells
 FormatCells | Format cells
 FormatRows | Format rows
-Format Columns | Format columns
+FormatColumns | Format columns
 InsertLinks | Insert links
 ProtectContent | Protect the contents of locked cells
-ProtectAllowUser | Allow all users of this worksheet to |
+ProtectAllowUser | Allow all users of this worksheet to
 EditAlert | The cell you're trying to change is protected. To make a change, unprotect the sheet.
 FindReplaceTooltip | Find & Replace
 InsertingEmptyValue | Reference value is not valid.
-ByRow |  By Row
+ByRow | By Row
 ByColumn | By Column
 MatchExactCellElements | Match Exact Cell Contents
 EntercellAddress | Enter Cell Address
 FindAndReplace | Find and Replace
-ReplaceAllEnd |  matches replaced with.
+ReplaceAllEnd | matches replaced with.
 FindNextBtn | Find Next
 FindPreviousBtn | Find Previous
 ReplaceBtn | Replace
@@ -394,7 +394,7 @@ The following example demonstrates the Spreadsheet in `French` culture. In the b
 
 ## Internationalization
 
-The Internationalization library is used to globalize number, date, and time values in the spreadsheet component.
+The Internationalization library is used to globalize number, date, and time values in the Spreadsheet component.
 
 The following example demonstrates the Spreadsheet in French [ `fr-CH`] culture. In the below sample we have globalized the Date(Date column), Time(Time column), and Currency(Amount column) formats.
 
