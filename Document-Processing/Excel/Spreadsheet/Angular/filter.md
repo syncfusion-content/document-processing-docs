@@ -7,7 +7,7 @@ control: Filter
 documentation: ug
 ---
 
-# Filter in Angular Spreadsheet component
+# Filter in Angular Spreadsheet Component
 
 Filtering helps you to view specific rows in the Spreadsheet by hiding the other rows. You can use the [`allowFiltering`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowfiltering) property to enable or disable filtering functionality.
 
@@ -17,7 +17,7 @@ By default, the `Filter` module is injected internally into Spreadsheet to perfo
 
 ## Apply filter on UI
 
-In the active Spreadsheet, select a range of cells to filter by value of the cell. The filtering can be done by any of the following ways:
+In the active Spreadsheet, select a range of cells to filter by the values of the cells. The filtering can be done by any of the following ways:
 
 * Select the filter item in the Ribbon toolbar.
 * Right-click the sheet, select the filter item in the context menu.
@@ -26,7 +26,7 @@ In the active Spreadsheet, select a range of cells to filter by value of the cel
 
 > * Use `Alt + Up/Down` keyboard shortcut to open the filter dialog.
 
-## Filter by criteria
+## Filter by Criteria
 
 The [`applyFilter()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#applyfilter) method will apply the filter UI, based on the predicate and range given in the arguments.
 
@@ -47,11 +47,11 @@ The following code example shows `filter` functionality in the Spreadsheet contr
   
 {% previewsample "/document-processing/samples/spreadsheet/angular/filter-cs1" %}
 
-## Filter by cell value
+## Filter by Cell Value
 
 To apply a filter for a cell value, right-click the cell and choose filter -> `Filter By Selected Cell's Value` option from the menu. It applies the filter based on the value of the selected cell in the current sheet.
 
-## Clear filter
+## Clear Filter
 
 After applying filter to a certain column, you may want to clear it to make all filtered rows visible again. It can be done in the following ways,
 
@@ -59,7 +59,7 @@ After applying filter to a certain column, you may want to clear it to make all 
 
 * Use the `clearFilter()` method programmatically, to clear the applied filters in spreadsheet for all fields.
 
-## Clear filter on a field
+## Clear Filter on a Field
 
 After filtering, you can clear/reset the filter for a field alone. It can be done in the following ways,
 
@@ -67,7 +67,7 @@ After filtering, you can clear/reset the filter for a field alone. It can be don
 * You can right-click on a filtered column cell and choose `Clear Filter from <Column Name>.` option from the context menu.
 * Use the `clearFilter(field)` method programmatically, to clear the filter in a particular column.
 
-## Reapply filter
+## Reapply Filter
 
 When you want to reapply the filter after some changes happened in the rows. It can be done in the following ways,
 

@@ -3,7 +3,7 @@ layout: post
 title: Performance practices in Angular Spreadsheet component | Syncfusion
 description: Learn here all about performance best practices in the Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Performance 
+control: Spreadsheet
 documentation: ug
 ---
 
@@ -23,7 +23,7 @@ For more details, refer to the [virtual scrolling documentation](https://help.sy
 
 ### Chunk response processing
 
-When opening large Excel files with extensive data and features, server responses can become too large—leading to memory issues or connection failures during transmission. The Chunk Response Processing feature addresses this by breaking the response into smaller chunks and sending them in parallel to the client.
+When opening large Excel files with extensive data and features, server responses can become too large, leading to memory issues or connection failures during transmission. The Chunk Response Processing feature addresses this by breaking the response into smaller chunks and sending them in parallel to the client.
 
 These chunks are combined on the client side to load the Excel data smoothly into the Spreadsheet. This approach avoids transmission failures due to memory constraints and ensures reliable and efficient loading of large files.
 
@@ -102,9 +102,9 @@ To learn more about Manual Calculation Mode and how to enable it, you can refer 
 
 ### Handling large file saves with `isFullPost` option
 
-When saving large Excel files with extensive data and features using **File → Save As** or the **save** method, the Spreadsheet triggers a server API call through a form submit operation. This can lead to performance issues such as timeouts or delays, particularly due to the size and complexity of the workbook.
+When saving large Excel files using **File → Save As** or the [`save`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#save) method, the Spreadsheet triggers a server API call through a form submit operation. This can lead to performance issues such as timeouts or delays, particularly due to the size and complexity of the workbook.
 
-To mitigate these issues during the save operation, you can set the [`isFullPost`](https://helpej2.syncfusion.com/angular/documentation/api/spreadsheet/beforesaveeventargs#isfullpost) property to **false** in the [`beforeSave`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#beforesave) event of the Spreadsheet.
+To mitigate these issues during the save operation, you can set the [`isFullPost`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/beforesaveeventargs#isfullpost) property to **false** in the [`beforeSave`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#beforesave) event of the Spreadsheet.
 
 The following code example shows how to set `isFullPost` to **false** in the Spreadsheet component:
 

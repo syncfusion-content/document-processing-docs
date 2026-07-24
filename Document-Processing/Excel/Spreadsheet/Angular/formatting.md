@@ -18,7 +18,7 @@ Formatting options make your data easier to view and understand. The different t
 
 ## Number Formatting
 
-Number formatting provides a type for your data in the [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor). Use the [`allowNumberFormatting`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allownumberformatting) property to enable or disable the number formatting option in the Spreadsheet. The different types of number formatting supported in Spreadsheet are,
+Number formatting provides a type for your data in the [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor). Use the [`allowNumberFormatting`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allownumberformatting) property to enable or disable the number formatting option in the Spreadsheet. The different types of number formatting supported in the Spreadsheet are:
 
 | Types | Format Code | Format ID |
 |---------|---------|---------|
@@ -43,7 +43,7 @@ Number formatting can be applied in following ways,
 
 Spreadsheet supports custom number formats to display your data as numbers, dates, times, percentages, and currency values. If the pre-defined number formats do not meet your needs, you can set your own custom formats using custom number formats dialog or `numberFormat` method.
 
-The different types of custom number format populated in the custom number format dialog are,
+The different types of custom number formats populated in the custom number format dialog are,
 
 | Type | Format Code | Format ID |
 |-------|---------|---------|
@@ -110,7 +110,7 @@ The spreadsheet allows customization of formats in the custom format dialog usin
 
 Compared to Excel, the date, time, currency, and accounting formats vary across different cultures. For example, when an Excel file with the date format `'m/d/yyyy'` is imported in the `en-US` culture, the spreadsheet displays the date in that format. However, when the same file is imported in the German culture, the date format changes to `'dd.MM.yyyy'`, which is the default for that region. The default number format ID for the date is 14. To customize the date format based on the culture, you should map the default number format ID to the appropriate culture-specific format code, like this: `{ id: 14, code: 'dd.MM.yyyy' }` in the `configureLocalizedFormat` method.
 
-> The format code should use the default decimal separator (.) and group separator (,).
+> The format code should use the default decimal separator (`.`) and group separator (`,`).
 
 The code below illustrates how culture-based format codes are mapped to their corresponding number format ID for the `German (de)` culture.
 
@@ -159,18 +159,18 @@ The following code example demonstrates how to configure culture-based formats f
 
 ## Text and cell formatting
 
-Text and cell formatting enhances the look and feel of your cell. It helps to highlight a particular cell or range of cells from a whole workbook. You can apply formats like font size, font family, font color, text alignment, border etc. to a cell or range of cells. Use the [`allowCellFormatting`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowcellformatting) property to enable or disable the text and cell formatting option in Spreadsheet. You can set the formats in following ways,
+Text and cell formatting enhance the look and feel of your cells. It helps to highlight a particular cell or range of cells from a whole workbook. You can apply formats like font size, font family, font color, text alignment, border etc. to a cell or range of cells. Use the [`allowCellFormatting`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowcellformatting) property to enable or disable the text and cell formatting option in the Spreadsheet. You can set the formats in the following ways:
 * Using the `style` property, you can set formats to each cell at initial load.
 * Using the [`cellFormat`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#cellformat) method, you can set formats to a cell or range of cells.
-* You can also apply by clicking the desired format option from the ribbon toolbar.
+* You can also apply formats by clicking the desired format option from the **Home** tab in the ribbon toolbar.
 
 ### Fonts
 
-Various font formats supported in the spreadsheet are font-family, font-size, bold, italic, strike-through, underline and font color.
+The supported font formats in the Spreadsheet are font-family, font-size, bold, italic, strike-through, underline, and font color.
 
 ### Text Alignment
 
-You can align text in a cell either vertically or horizontally using the  `textAlign` and `verticalAlign` property.
+You can align text in a cell either vertically or horizontally using the `textAlign` and `verticalAlign` properties.
 
 ### Indents
 
@@ -178,7 +178,7 @@ To enhance the appearance of text in a cell, you can change the indentation of a
 
 ### Fill color
 
-To highlight cell or range of cells from whole workbook you can apply background color for a cell using `backgroundColor` property.
+To highlight a cell or range of cells from the whole workbook, you can apply a background color to a cell using `backgroundColor` property.
 
 ### Borders
 
@@ -210,9 +210,9 @@ You can also change the color, size, and style of the border. The size and style
 | Double | Used to create the `double` border.|
 
 Borders can be applied in the following ways,
-* Using the  `border`, `borderLeft`, `borderRight`, `borderBottom` properties, you can set the desired border to each cell at initial load.
-* Using the `setBorder` method, you can set various border options to a cell or range of cells.
-* Selecting the border options from ribbon toolbar.
+* Using the `border`, `borderLeft`, `borderRight`, and `borderBottom` properties, you can set the desired border to each cell at initial load.
+* Using the [`setBorder`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#setborder) method, you can set various border options to a cell or range of cells.
+* Selecting the border options from the **Home** tab in the ribbon toolbar.
 
 The following code example shows the style formatting in text and cells of the spreadsheet.
 
@@ -243,11 +243,11 @@ Conditional formatting helps you to format a cell or range of cells based on the
 
 ### Apply Conditional Formatting
 
-You can apply conditional formatting by using one of the following ways,
+You can apply conditional formatting in one of the following ways:
 
-* Select the conditional formatting icon in the Ribbon toolbar under the Home Tab.
+* Select the **Conditional Formatting** icon in the ribbon toolbar under the **Home** tab.
 * Using the [`conditionalFormat()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#conditionalformat) method to define the condition.
-* Using the `conditionalFormats` in sheets model.
+* Using the `conditionalFormats` property in the sheets model.
 
 Conditional formatting has the following types in the spreadsheet,
 
@@ -301,7 +301,7 @@ The following options can be given for the icon sets as type,
 
 ### Custom Format
 
-Using the custom format for conditional formatting you can set cell styles like color, background color, font style, font weight, and underline.
+Using the custom format for conditional formatting, you can set cell styles such as color, background color, font style, font weight, and underline.
 
 In the MAY and JUN columns, we have applied conditional formatting custom format.
 
@@ -309,9 +309,9 @@ In the MAY and JUN columns, we have applied conditional formatting custom format
 
 ### Clear Rules
 
-You can clear the defined rules by using one of the following ways,
+You can clear the defined rules in one of the following ways:
 
-* Using the “Clear Rules” option in the Conditional Formatting button of HOME Tab in the ribbon to clear the rule from selected cells.
+* Using the **Clear Rules** option in the **Conditional Formatting** button on the **Home** tab in the ribbon to clear the rule from the selected cells.
 * Using the [`clearConditionalFormat()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#clearconditionalformat) method to clear the defined rules.
 
 {% tabs %}
@@ -358,7 +358,7 @@ Set `verticalAlign: 'super'` for superscript and `verticalAlign: 'sub'` for subs
 
 You can apply subscript and superscript formatting in following ways:
 
-1. Select the desired portion of text within a cell, then click the Subscript or Superscript option in the ribbon to apply the formatting.
+1. Select the desired portion of text within a cell, then click the **Subscript** or **Superscript** option in the **Home** tab of the ribbon to apply the formatting.
 
 ![Subscript and superscript in Spreadsheet](./images/spreadsheet_richtext.gif)
 
@@ -416,4 +416,4 @@ You can refer to our [Angular Spreadsheet Editor](https://www.syncfusion.com/spr
 * [Hyperlink](./link)
 * [Sorting](./sort)
 * [Filtering](./filter)
-* [`Ribbon customization`](./ribbon#ribbon-customization)
+* [Ribbon customization](./ribbon#ribbon-customization)
