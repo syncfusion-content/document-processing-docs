@@ -13,7 +13,7 @@ The keyboard shortcuts supported in the Spreadsheet are,
 
 | Shortcut | Description |
 |-------|---------|
-| Ctrl + O | Displays the dialog to open a file. |
+| Ctrl + O | Displays dialog to open a file. |
 | Ctrl + S / Alt + F2 | Saves the workbook. |
 | Ctrl + P | Prints the active worksheet when the spreadsheet is in focus. |
 | F2 | Enables edit mode. |

@@ -52,7 +52,7 @@ To apply a filter for a cell value, right-click the cell and choose filter -> `F
 
 ## Clear filter
 
-After applying a filter to a column, you may want to clear it to make all filtered rows visible again. It can be done in the following ways,
+After applying filter to a certain column, you may want to clear it to make all filtered rows visible again. It can be done in the following ways,
 
 * Choose `Clear` in the Ribbon toolbar under `Filter and Sort`. This clears the filters applied in the spreadsheet for all fields.
 
@@ -62,7 +62,7 @@ After applying a filter to a column, you may want to clear it to make all filter
 
 After filtering, you can clear/reset the filter for a field alone. It can be done in the following ways,
 
-* Click the filter icon in the column’s header and then choose `Clear Filter` option from the filter dialog.
+* Click filter icon in the column’s header and then choose `Clear Filter` option from the filter dialog.
 * Right-click a filtered column cell and choose `Clear Filter from <Column Name>.` option from the context menu.
 * Use the [`clearFilter(field)`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#clearfilter) method programmatically, to clear the filter in a particular column.
 

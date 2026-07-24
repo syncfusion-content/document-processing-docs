@@ -17,12 +17,12 @@ You can set formula for a cell in the following ways,
 
 * Using the `formula` property from `cell`, you can set the formula or expression to each cell at initial load.
 * Set the formula or expression through data binding.
-* You can set a formula for a cell using [`editing`](./editing).
+* You can set formula for a cell using [`editing`](./editing).
 * Using the [`updateCell`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#updatecell) method, you can set or update the cell formula.
 
 ## Culture-Based Argument Separator
 
-Previously, although you could import culture-based Excel files into the Spreadsheet component, the formulas did not calculate correctly. This was due to the absence of culture-based argument separators and support for culture-based formatted numeric values as arguments. However, starting from version 25.1.35, you can now import culture-based Excel files into the Spreadsheet component.
+Previously, although you could import culture-based Excel files into the Spreadsheet component, the formulas wouldn't calculate correctly. This was due to the absence of culture-based argument separators and support for culture-based formatted numeric values as arguments. However, starting from version 25.1.35, you can now import culture-based Excel files into the Spreadsheet component.
 
 > Before importing culture-based Excel files, ensure that the Spreadsheet component is rendered with the corresponding culture. Additionally, launch the import/export services with the same culture to ensure compatibility.
 
@@ -43,7 +43,7 @@ In the example below, the Spreadsheet component is rendered with the `German cul
 
 ## Create User Defined Functions / Custom Functions
 
-The Spreadsheet includes several built-in formulas. For your convenience, a list of supported formulas can be found [here](https://help.syncfusion.com/document-processing/excel/spreadsheet/vue/formulas#supported-formulas).
+The Spreadsheet includes a number of built-in formulas. For your convenience, a list of supported formulas can be found [here](https://help.syncfusion.com/document-processing/excel/spreadsheet/vue/formulas#supported-formulas).
 
 You can define and use an unsupported formula, i.e., a user-defined/custom formula, in the spreadsheet by using the [addCustomFunction](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#addcustomfunction) function. Remember that you must define a user-defined/custom formula whose result returns a single value. If a user-defined/custom formula returns an array, it will be time-consuming to update adjacent cell values.
 

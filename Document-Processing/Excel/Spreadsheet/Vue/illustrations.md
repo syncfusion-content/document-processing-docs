@@ -183,13 +183,11 @@ Using the [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/sprea
 
 ### Limitations of Chart
 
-The folling or deleting rows within the chart's data range does not update the chart.
-* Copy/paste operations within the chart's data range do not update the chart.
-* Corner-based resizing of the chart element is not supported data source will not reflect the chart.
-* Copy/paste into the chart data source will not reflect the chart.
-* Corner resizing option in chart element.to explore its feature showcase. You can also explore our [Vue Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/vue/#/tailwind3/spreadsheet/default.html) to learn how to present and manipulate data.
+The following features have some limitations in the Chart:
 
->* This page documents the Vue Spreadsheet component. The Composition API examples use Vue 3's `<script setup>` syntax; the Options API examples work with both Vue 2 and Vue 3. The component is provided by the `@syncfusion/ej2-vue-spreadsheet` package
+* Insert row/delete row between the chart data source will not reflect the chart.
+* Copy/paste into the chart data source will not reflect the chart.
+* Corner resizing option in chart element.
 
 ## Note
 

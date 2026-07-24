@@ -35,8 +35,8 @@ Number formatting provides a type for your data in the Spreadsheet. Use the [`al
 | Text | `@` | 49 |
 
 Number formatting can be applied in the following ways:
-* Set the `format` property on a `cell` to apply a format to each cell at initial load.
-* Use the [`numberFormat`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#numberformat) method to set the number format on a cell or range of cells.
+* Using the `format` property in `cell`, you can set the desired format to each cell at initial load.
+* Using the [`numberFormat`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#numberformat) method to set the number format on a cell or range of cells.
 * Select the number format option from the ribbon toolbar.
 
 The following code example shows the number formatting in cell data.
@@ -245,7 +245,7 @@ The following options can be given for the color scales as type,
 
 ### Icon Sets
 
-Icon sets will help you to visually represent your data with icons. Every icon represents a range of values. In the Three Arrows (colored) icon, the green arrow icon represents values greater than 67%, the yellow arrow icon represents values from 33% to 67%, and the red arrow icon represents values less than 33%.
+Icon sets will help you to visually represent your data with icons. Every icon represents a range of values. In the Three Arrows(colored) icon, the green arrow icon represents values greater than 67%, the yellow arrow icon represents values from 33% to 67%, and the red arrow icon represents values less than 33%.
 
 The following options can be given for the icon sets as type,
 
@@ -263,8 +263,8 @@ In the MAY and JUN columns, we have applied conditional formatting custom format
 
 You can clear the defined rules by using one of the following ways:
 
-* Use the **Clear Rules** option in the **Conditional Formatting** button of the **Home** tab in the ribbon to clear the rule from the selected cells.
-* Use the [`clearConditionalFormat()`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#clearconditionalformat) method to clear the defined rules.
+* Using the **Clear Rules** option in the **Conditional Formatting** button of the **Home** tab in the ribbon to clear the rule from the selected cells.
+* Using the [`clearConditionalFormat()`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#clearconditionalformat) method to clear the defined rules.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

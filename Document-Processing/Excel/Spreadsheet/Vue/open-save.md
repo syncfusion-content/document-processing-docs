@@ -590,7 +590,7 @@ The [attachment](https://www.syncfusion.com/downloads/support/directtrac/general
     <ejs-spreadsheet ref="spreadsheet" openUrl="https://localhost:{port number}/Home/Open"></ejs-spreadsheet>
 ```
 
-### Add a custom header during open
+### Add custom header during open
 
 You can add your own custom header to the open action in the Spreadsheet. For processing the data, it has to be sent from server to client side and adding customer header can provide privacy to the data with the help of Authorization Token. Through the [`beforeOpen`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#beforeopen) event, the custom header can be added to the request during open action.
 
@@ -1082,7 +1082,7 @@ Server side code snippets:
         }
 ```
 
-### Add a custom header during save
+### Add custom header during save
 
 You can add your own custom header to the save action in the Spreadsheet. For processing the data, it has to be sent from client to server side and adding customer header can provide privacy to the data with the help of Authorization Token. Through the [`fileMenuItemSelect`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#filemenuitemselect) event, the custom header can be added to the request during save action.
 
