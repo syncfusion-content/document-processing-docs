@@ -60,7 +60,7 @@ N> When in Pan mode, selecting a shape tool automatically switches the viewer to
 
 ### Enable Line Mode
 
-Switch the viewer into highlight mode using `setAnnotationMode('Line')`.
+Switch the viewer into Line mode using `setAnnotationMode('Line')`.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -186,7 +186,7 @@ See [**Delete Annotation**](../remove-annotations) for full behavior and workflo
 
 Use the [**Comments panel**](../comments) to add, view, and reply to threaded discussions linked to line annotations. It provides a dedicated interface for collaboration and review within the PDF Viewer.
 
-## Set properties while adding Individual Annotation
+## Set properties while adding individual annotations
 
 Set properties for individual line annotations using the [`lineSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#linesettings) API or by passing per‑annotation values during [`addAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation).
 
@@ -251,8 +251,7 @@ Disable shape annotations (Line, Arrow, Rectangle, Circle, Polygon) using the [`
 ## Handle Line Events
 
 The PDF viewer provides annotation life-cycle events that notify when Line annotations are added, modified, selected, or removed.
-For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event)
-
+For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event).
 
 ## Export and Import
 The PDF Viewer supports exporting and importing annotations. For details on supported formats and workflows, see [**Export and Import annotations**](../export-import-annotations).
