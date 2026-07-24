@@ -169,10 +169,10 @@ The following code example demonstrates how to add custom data validation with a
 
 The following features have some limitations in Data Validation:
 
-* Applying validation to an entire row.
-* Inserting a row inside a validated range (the validation range does not shift automatically).
-* Copying and pasting values across validated ranges.
-* Deleting cells inside a validated range.
+* Applying data validation to an entire row.
+* Insert row between the data validation.
+* Copy/paste with data validation.
+* Delete cells between data validation applied range.
 
 ## Auto Fill
 
@@ -183,7 +183,7 @@ You can do this by one of the following ways,
 * Using “AutoFillOptions” menu which is open, while drag and drop the cell using fill handle element.
 * Use the autoFill() method programmatically.
 
-The available parameters in the `autoFill()` method are:
+The available parameters in `autoFill()` method are:
 
 | Parameter | Type | Description |
 |-----|------|----|

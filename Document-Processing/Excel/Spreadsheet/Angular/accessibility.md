@@ -44,7 +44,7 @@ The Spreadsheet component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg
 | Attributes | Purpose |
 |-------|---------|
 | `grid` (role) | This role is added to the spreadsheet content table and describes the collection of rows and columns. |
-| `gridcell` (role) | This role is added to the data cell and describes the cell `<td>` element. |
+| `gridcell` (role) | This role is added to the cell element and describes the cell `<td>` element. |
 | `rowheader` (role) | This role is added to the row header and describes the header of the rows. |
 | `colheader` (role) | This role is added to the column header and describes the header of the columns. |
 | `aria-rowindex` (attribute) | This attribute describes the table's row index in the spreadsheet. |

@@ -167,7 +167,7 @@ Threaded comments introduced in newer Excel versions require the **Open XML** st
 > To retain threaded comments, always save the workbook in **.xlsx** format.
 
 ## Bind Comments via code-behind
-You can bind a **comment thread** to cells at initial load by providing a `comment` object in the cell model. Each cell supports one comment thread, which can include:
+You can bind **comment thread** to cells at initial load by providing a `comment` object in the cell model. Each cell supports **per comment thread**, which can include:
 - **Comment**: `author`, `text`, `createdTime`, `isResolved`
 - **Replies**: A collection of replies. Each reply is an object containing its `author`, `text`, and `createdTime` (no nested replies-of-replies).
 
@@ -192,7 +192,7 @@ In the below sample, comments are added to a specific cell using cell data bindi
 
 ## Limitations
 * **Un-posted comments are not stored**: If you type in the comment editor and close it without clicking **Post**, the entered text is not saved and will not appear when you reopen the editor. Only posted content is persisted in the comment model.
-* **Comments and Notes cannot coexist**: When a cell contains a comment, notes cannot be added. Similarly, if a cell already has a note, a comment cannot be added.
+* **Comments and Notes cannot coexist**: When a cell contains comment, notes cannot be added. Similarly, if a cell already has a notes, comment cannot be added.
 * **Comments in Print**: Comments are not included in print output.
 * **Non-collaborative**: Real-time multi-user synchronization is not supported. However, when exporting and re-importing the workbook, the author information for each comment and reply is preserved.
 
