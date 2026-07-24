@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Rows and Columns in UWP Spreadsheet (SfSpreadsheet)
-This section explains about the operations related with rows and columns in SfSpreadsheet
+This section explains operations related to rows and columns in SfSpreadsheet.
 
 ## Insert Rows and Columns
 
@@ -21,16 +21,16 @@ SfSpreadsheet provides support for dynamically inserting rows and columns into a
 spreadsheet.ActiveSheet.InsertRow(2, 3);
 spreadsheet.ActiveGrid.Model.InsertRows(2, 3);
 
-//For Inserting Cols
+//For Inserting Columns
 spreadsheet.ActiveSheet.InsertColumn(3, 2);
 spreadsheet.ActiveGrid.Model.InsertColumns(3, 2);
 
 {% endhighlight %}
 {% endtabs %}
 
-###Events
+### Events
 
-Below events of `SpreadsheetGridModel` are triggered while inserting the rows and columns. 
+The following events of `SpreadsheetGridModel` are raised when rows/columns are inserted.
 
 * `RowsInserted`
 * `ColumnsInserted`
@@ -65,16 +65,16 @@ SfSpreadsheet provides support for deleting rows and columns from a worksheet,
 spreadsheet.ActiveSheet.DeleteRow(5, 2);
 spreadsheet.ActiveGrid.Model.RemoveRows(5, 2);
 
-//For Deleting Cols
+//For Deleting Columns
 spreadsheet.ActiveSheet.DeleteColumn(3, 2);
 spreadsheet.ActiveGrid.Model.RemoveColumns(3, 2);
 
 {% endhighlight %}
 {% endtabs %}
 
-###Events
+### Events
 
-Below events of `SpreadsheetGridModel` are triggered while deleting the rows and columns. 
+The following events of `SpreadsheetGridModel` are raised when rows/columns are deleted.
 
 * `RowsRemoved`
 * `ColumnsRemoved`
@@ -92,7 +92,7 @@ void Model_RowsRemoved(object sender, GridRangeRemovedEventArgs e)
 //To notify when columns are deleted
 spreadsheet.ActiveGrid.Model.ColumnsRemoved += Model_ColumnsRemoved;
 
-void Model_ColumnsRemoved(object sender, GridRangeInsertedEventArgs e)
+void Model_ColumnsRemoved(object sender, GridRangeRemovedEventArgs e)
 {
 }
 
@@ -101,7 +101,7 @@ void Model_ColumnsRemoved(object sender, GridRangeInsertedEventArgs e)
 
 ## Hide Rows and Columns
 
-SfSpreadsheet provides support to hide rows/columns and this can be done by `HideRow` and `HideColumn` method
+SfSpreadsheet provides support to hide rows/columns using the `HideRow` and `HideColumn` methods.
 
 {% tabs %}
 {% highlight c# %}
@@ -110,7 +110,7 @@ SfSpreadsheet provides support to hide rows/columns and this can be done by `Hid
 spreadsheet.ActiveSheet.HideRow(5);
 spreadsheet.ActiveGrid.RowHeights.SetHidden(5, 5, true);
 
-//For Hiding Cols,
+//For Hiding Columns,
 spreadsheet.ActiveSheet.HideColumn(4);
 spreadsheet.ActiveGrid.ColumnWidths.SetHidden(4, 4, true);
 
@@ -119,7 +119,7 @@ spreadsheet.ActiveGrid.ColumnWidths.SetHidden(4, 4, true);
 
 ## Unhide Rows and Columns
 
-Unhide the rows/columns in SfSpreadsheet can be done by `ShowRow` and `ShowColumn` methods.
+Rows/columns can be unhidden using the `ShowRow` and `ShowColumn` methods.
 
 {% tabs %}
 {% highlight c# %}
@@ -128,7 +128,7 @@ Unhide the rows/columns in SfSpreadsheet can be done by `ShowRow` and `ShowColum
 spreadsheet.ActiveSheet.ShowRow(5, true);
 spreadsheet.ActiveGrid.RowHeights.SetHidden(5, 5, false);
 
-//For Unhiding Cols,
+//For Unhiding Columns,
 spreadsheet.ActiveSheet.ShowColumn(4,true);
 spreadsheet.ActiveGrid.ColumnWidths.SetHidden(4, 4, false);
 
@@ -137,7 +137,7 @@ spreadsheet.ActiveGrid.ColumnWidths.SetHidden(4, 4, false);
 
 ## Row Height and Column Width
 
-SfSpreadsheet provides support to adjust the row height and column width. And also can import the adjusted row height and column width from Excel. SfSpreadsheet provides support to fit the row and column based on its contents.
+SfSpreadsheet provides support to adjust the row height and column width. It can also import the adjusted row height and column width from Excel. SfSpreadsheet provides support to fit the row and column based on its contents.
 
 {% tabs %}
 {% highlight c# %}
