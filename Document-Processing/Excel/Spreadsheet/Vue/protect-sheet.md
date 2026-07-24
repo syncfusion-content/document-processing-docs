@@ -158,7 +158,7 @@ You can use the [`isProtected`](https://ej2.syncfusion.com/vue/documentation/api
 
 In the active Spreadsheet, you can protect the worksheet by selecting the Data tab in the Ribbon toolbar and choosing the `Protect Workbook` item. Then, enter the password and confirm it and click on OK.
 
-The following example shows **Protect Workbook** using the [`isProtected`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#isprotected) property on the Spreadsheet control.
+The following example shows **Protect Workbook** using the [`isProtected`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#isprotected) property in the Spreadsheet control.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -171,7 +171,7 @@ The following example shows **Protect Workbook** using the [`isProtected`](https
         
 {% previewsample "/document-processing/code-snippet/spreadsheet/vue/local-data-binding-cs4" %}
 
-The following example shows **Protect Workbook** using the [`password`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#password) property in the Spreadsheet control. To unprotect the workbook, click **Unprotect Workbook** in the data tab and provide the password as syncfusion<sup style="font-size:70%">&reg;</sup> in the dialog box.
+The following example shows **Protect Workbook** using the [`password`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#password) property in the Spreadsheet control. To unprotect the workbook, click **Unprotect Workbook** button in the data tab and provide the password as syncfusion<sup style="font-size:70%">&reg;</sup> in the dialog box.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

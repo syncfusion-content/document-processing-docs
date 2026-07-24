@@ -60,7 +60,7 @@ Go to feature is used to navigate to a specific cell address in the sheet or wor
 * Select the Home tab in the Ribbon toolbar, and then select the Search icon.
 * Enter any value in the search textbox.
 * Select the Next or Previous button to find the entered value in the spreadsheet.
-* Select the more options in the search toolbar to access additional search properties.
+* You can have more options to find values by selecting the more options in the search toolbar.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

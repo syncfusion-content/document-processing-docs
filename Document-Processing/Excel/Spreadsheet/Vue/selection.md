@@ -13,7 +13,7 @@ Selection provides interactive support to highlight the cell, row, or column tha
 
 > * The default value for `mode` in `selectionSettings` is `Multiple`.
 
-Selection supports the following options:
+You have the following options in Selection,
 
 * Cell selection
 * Row selection
@@ -21,7 +21,7 @@ Selection supports the following options:
 
 ## Cell selection
 
-Cell selection is used to select a single cell or a range of cells. Use the [`selectRange`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#selectrange) method to perform cell selection programmatically.
+Cell selection is used to select a single cell or a range of cells. It can be performed using the [`selectRange`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#selectrange) method.
 
 **User Interface**:
 
@@ -40,9 +40,9 @@ Row selection is used to select a single or multiple rows.
 You can perform row selection in any of the following ways:
 
 * Click the row header.
-* To select multiple adjacent rows, click a row header and drag over other row headers, or hold `Shift` and use the arrow keys.
+* To select multiple rows, select a row header with the left mouse button and drag over to other row headers (or) use the `Shift + arrow` keys to select multiple rows.
 * To select non-adjacent rows, hold `Ctrl` and select each row header.
-* Programmatically, you can use the `selectRange` method for row selection.
+* You can also use the `selectRange` method for row selection.
 
 The following sample shows row selection in the spreadsheet, selecting the 5th row using the `selectRange` method.
 
@@ -66,9 +66,9 @@ Column selection is used to select a single or multiple columns.
 You can perform column selection in any of the following ways:
 
 * Click the column header.
-* To select multiple adjacent columns, click a column header and drag over other column headers, or hold `Shift` and use the arrow keys.
+* To select multiple columns, select a column header with the left mouse button and drag over to other column headers (or) use the `Shift + arrow` keys to select the multiple columns.
 * To select non-adjacent columns, hold `Ctrl` and select each column header.
-* Programmatically, you can use the `selectRange` method for row selection.
+* You can also use the `selectRange` method for row selection.
 
 The following sample shows column selection in the spreadsheet, selecting the 3rd column using the `selectRange` method.
 

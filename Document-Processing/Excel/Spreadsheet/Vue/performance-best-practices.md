@@ -23,7 +23,7 @@ For more details, refer to the [virtual scrolling documentation](https://help.sy
 
 ### Chunk Response Processing
 
-When opening large Excel files with extensive data and features, the server response can become too large, leading to memory issues or connection failures during transmission. Chunk Response Processing breaks the response into smaller pieces and sends them in parallel to the client
+When opening large Excel files with extensive data and features, server responses can become too large—leading to memory issues or connection failures during transmission. The Chunk Response Processing feature addresses this by breaking the response into smaller chunks and sending them in parallel to the client.
 
 These chunks are combined on the client side to load the Excel data smoothly into the Spreadsheet. This approach avoids transmission failures due to memory constraints and ensures reliable and efficient loading of large files.
 

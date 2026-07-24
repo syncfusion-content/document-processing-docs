@@ -54,7 +54,7 @@ The following code example shows how to insert a sheet programmatically and make
 The Spreadsheet has support for removing an existing worksheet. You can dynamically delete the existing sheet in one of the following ways:
 
 * Right-click on the sheet tab, and then select the `Delete` option from the context menu.
-* Use the [`delete`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#delete) method to delete the sheets.
+* Using [`delete`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#delete) method to delete the sheets.
 
 ## Rename sheet
 
@@ -67,14 +67,14 @@ You can dynamically rename an existing worksheet in one of the following ways:
 By default, the row and column headers are visible in worksheets. You can dynamically show or hide worksheet headers in one of the following ways:
 
 * Switch to the `View` tab, and then select the `Hide Headers` option to hide both the row and column headers.
-* Set the `showHeaders` property of a sheet to `true` or `false` to show or hide the headers at initial load. By default, the `showHeaders` property is enabled in each worksheet.
+* Set the `showHeaders` property in `sheets` as `true` or `false` to show or hide the headers at initial load. By default, the `showHeaders` property is enabled in each worksheet.
 
 ## Gridlines
 
 Gridlines appear as cell borders. They are used to distinguish cells on the worksheet. You can dynamically show or hide gridlines in one of the following ways:
 
 * Switch to the `View` tab, and then select the `Hide Gridlines` option to hide the gridlines in the worksheet.
-* Set the `showGridLines` property of a sheet to `true` or `false` to show or hide the gridlines at initial load. By default, the `showGridLines` property is enabled in each worksheet.
+* Set the `showGridLines` property in `sheets` as `true` or `false` to show or hide the gridlines at initial load. By default, the `showGridLines` property is enabled in each worksheet.
 
 The following code example shows the headers and gridlines operation in spreadsheet.
 
