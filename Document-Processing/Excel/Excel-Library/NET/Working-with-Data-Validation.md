@@ -1,35 +1,43 @@
 ---
 title: Working with Data Validation | Syncfusion
-description: This section explains about how to create data validation rules. Data Validation is a list of rules to the data that can be entered in a cell.
+description: Learn how to create and remove data validation rules in an Excel worksheet using Syncfusion XlsIO.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Working with Data Validation 
+# Working with Data Validation
 
-Data Validation is a list of rules to the data that can be entered in a cell. This can be applied by using [IDataValidation](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IDataValidation.html) interface. XlsIO supports following validation types.
+Data validation restricts the values that can be entered in a cell based on rules that you define. Rules are applied in XlsIO through the [IDataValidation](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IDataValidation.html) interface, which exposes the following key members:
 
-* **Text** **Length** **Validation**
-* **Time** **Validation**
-* **List** **Validation**
-* **Number** **Validation**
-* **Date** **Validation**
-* **Custom** **Validation**
+* **AllowType** – the validation type, set through the [ExcelDataType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelDataType.html) enumerator (for example, `TextLength`, `Time`, `Integer`, `Date`, `Decimal`, `List`, `User`, or `Formula`).
+* **CompareOperator** – the comparison operator, set through the [ExcelDataValidationComparisonOperator](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelDataValidationComparisonOperator.html) enumerator (`Between`, `Equal`, `NotEqual`, `GreaterThan`, `LessThan`, `GreaterThanOrEqual`, `LessThanOrEqual`).
+* **FirstFormula** / **SecondFormula** – the threshold formulas (used with `Between` to define a range; otherwise only **FirstFormula** is required).
+* **FirstDateTime** / **SecondDateTime** – the threshold date/time values when **AllowType** is `Date` or `Time`.
+* **ListOfValues** – a hard-coded list of values for a dropdown when **AllowType** is `List`.
+* **ShowErrorBox** / **ErrorBoxText** / **ErrorBoxTitle** – control the error shown when an invalid value is entered.
+* **ShowPromptBox** / **PromptBoxText** / **IsPromptBoxVisible** – control the input prompt displayed when the cell is selected.
 
-To quickly get started on creating data validation in an Excel document, please check out this video:
+XlsIO supports the following validation types:
+
+* **Text Length Validation**
+* **Time Validation**
+* **List Validation**
+* **Number Validation**
+* **Date Validation**
+* **Custom Validation**
 {% youtube "https://youtu.be/VFOBAiXM03o?si=vsIhBrVwIQ80FPKm" %}
 
 ## Text Length Validation
 
 The following code snippet illustrates how to set text length validation.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Data%20Validation/Text%20Length%20Validation/.NET/Text%20Length%20Validation/Text%20Length%20Validation/Program.cs,180" %}
 //Data validation for text length
 IDataValidation validation = sheet.Range["A3"].DataValidation;
 validation.AllowType = ExcelDataType.TextLength;
 
-//Text length should be lesser than 5 characters
+//Text length should be less than 5 characters
 validation.CompareOperator = ExcelDataValidationComparisonOperator.Between;
 validation.FirstFormula = "0";
 validation.SecondFormula = "5";
@@ -40,7 +48,7 @@ validation.SecondFormula = "5";
 IDataValidation validation = sheet.Range["A3"].DataValidation;
 validation.AllowType = ExcelDataType.TextLength;
 
-//Text length should be lesser than 5 characters
+//Text length should be less than 5 characters
 validation.CompareOperator = ExcelDataValidationComparisonOperator.Between;
 validation.FirstFormula = "0";
 validation.SecondFormula = "5";
@@ -51,12 +59,12 @@ validation.SecondFormula = "5";
 Dim validation As IDataValidation = sheet.Range("A3").DataValidation
 validation.AllowType = ExcelDataType.TextLength
 
-'Text length should be lesser than 5 characters
+'Text length should be less than 5 characters
 validation.CompareOperator = ExcelDataValidationComparisonOperator.Between
 validation.FirstFormula = "0"
 validation.SecondFormula = "5"
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
 
 A complete working example for text length data validation in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Data%20Validation/Text%20Length%20Validation/.NET/Text%20Length%20Validation).
 
@@ -64,13 +72,13 @@ A complete working example for text length data validation in C# is present on [
 
 The following code snippet illustrates how to set time validation.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Data%20Validation/Time%20Validation/.NET/Time%20Validation/Time%20Validation/Program.cs,180" %}
 //Data validation for time
 IDataValidation validation = sheet.Range["A3"].DataValidation;
 validation.AllowType = ExcelDataType.Time;
 
-//Time between 10:00 and 12:00 'o Clock
+//Time between 10:00 and 12:00 o'clock
 validation.CompareOperator = ExcelDataValidationComparisonOperator.Between;
 validation.FirstFormula = "10.00";
 validation.SecondFormula = "12.00";
@@ -81,7 +89,7 @@ validation.SecondFormula = "12.00";
 IDataValidation validation = sheet.Range["A3"].DataValidation;
 validation.AllowType = ExcelDataType.Time;
 
-//Time between 10:00 and 12:00 'o Clock
+//Time between 10:00 and 12:00 o'clock
 validation.CompareOperator = ExcelDataValidationComparisonOperator.Between;
 validation.FirstFormula = "10.00";
 validation.SecondFormula = "12.00";
@@ -92,12 +100,12 @@ validation.SecondFormula = "12.00";
 Dim validation As IDataValidation = sheet.Range("A3").DataValidation
 validation.AllowType = ExcelDataType.Time
 
-'Time between 10:00 and 12:00 'o Clock
+'Time between 10:00 and 12:00 o'clock
 validation.CompareOperator = ExcelDataValidationComparisonOperator.Between
 validation.FirstFormula = "10.00"
 validation.SecondFormula = "12.00"
 {% endhighlight %}
-{% endtabs %} 
+{% endtabs %}
 
 A complete working example for time data validation in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Data%20Validation/Time%20Validation/.NET/Time%20Validation).  
 
@@ -105,7 +113,7 @@ A complete working example for time data validation in C# is present on [this Gi
 
 The following code snippet illustrates how to set list validation.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Data%20Validation/List%20Validation/.NET/List%20Validation/List%20Validation/Program.cs,180" %}
 //Data validation for list
 IDataValidation validation = sheet.Range["A3"].DataValidation;
@@ -123,7 +131,7 @@ validation.ListOfValues = new string[] { "ListItem1", "ListItem2", "ListItem3" }
 Dim validation As IDataValidation = sheet.Range("A3").DataValidation
 validation.ListOfValues = New String() {"ListItem1", "ListItem2", "ListItem3"}
 {% endhighlight %}
-{% endtabs %}   
+{% endtabs %}
 
 A complete working example for list data validation in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Data%20Validation/List%20Validation/.NET/List%20Validation). 
 
@@ -133,7 +141,7 @@ N> The [ListOfValues](https://help.syncfusion.com/cr/document-processing/Syncfus
 
 The following code snippet illustrates how to set list validation for a user-defined range.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Data%20Validation/UserDefinedValidation/.NET/UserDefinedValidation/UserDefinedValidation/Program.cs,180" %}
 //Data validation for the user-defined range
 IDataValidation validation = worksheet.Range["C3"].DataValidation;
@@ -154,21 +162,21 @@ Dim validation As IDataValidation = worksheet.Range("C3").DataValidation
 validation.AllowType = ExcelDataType.User
 validation.FirstFormula = "=Sheet1!$B$1:$B$3"
 {% endhighlight %}
-{% endtabs %}   
+{% endtabs %}
 
 A complete working example of list validation for a user-defined range in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Data%20Validation/UserDefinedValidation/.NET/UserDefinedValidation">this GitHub page</a>.
 
 ## Number Validation
 
-The following code snippet illustrates  how to set number validation.
+The following code snippet illustrates how to set number validation.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Data%20Validation/Number%20Validation/.NET/Number%20Validation/Number%20Validation/Program.cs,180" %}
 //Data validation for number
 IDataValidation validation = sheet.Range["A3"].DataValidation;
 validation.AllowType = ExcelDataType.Integer;
 
-//Value between 0 to 10
+//Value between 0 and 10
 validation.CompareOperator = ExcelDataValidationComparisonOperator.Between;
 validation.FirstFormula = "0";
 validation.SecondFormula = "10";
@@ -179,7 +187,7 @@ validation.SecondFormula = "10";
 IDataValidation validation = sheet.Range["A3"].DataValidation;
 validation.AllowType = ExcelDataType.Integer;
 
-//Value between 0 to 10
+//Value between 0 and 10
 validation.CompareOperator = ExcelDataValidationComparisonOperator.Between;
 validation.FirstFormula = "0";
 validation.SecondFormula = "10";
@@ -190,12 +198,12 @@ validation.SecondFormula = "10";
 Dim validation As IDataValidation = sheet.Range("A3").DataValidation
 validation.AllowType = ExcelDataType.Integer
 
-'Value between 0 to 10
+'Value between 0 and 10
 validation.CompareOperator = ExcelDataValidationComparisonOperator.Between
 validation.FirstFormula = "0"
 validation.SecondFormula = "10"
 {% endhighlight %}
-{% endtabs %}   
+{% endtabs %}
 
 A complete working example for number data validation in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Data%20Validation/Number%20Validation/.NET/Number%20Validation). 
 
@@ -203,13 +211,13 @@ A complete working example for number data validation in C# is present on [this 
 
 The following code snippet illustrates how to set date validation.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Data%20Validation/Date%20Validation/.NET/Date%20Validation/Date%20Validation/Program.cs,180" %}
 //Data validation for date
 IDataValidation validation = sheet.Range["A3"].DataValidation;
 validation.AllowType = ExcelDataType.Date;
 
-//Date between 10/5/2003 to 10/5/2004
+//Date between 10/5/2003 and 10/5/2004
 validation.CompareOperator = ExcelDataValidationComparisonOperator.Between;
 validation.FirstDateTime = new DateTime(2003, 5, 10);
 validation.SecondDateTime = new DateTime(2004, 5, 10);
@@ -220,7 +228,7 @@ validation.SecondDateTime = new DateTime(2004, 5, 10);
 IDataValidation validation = sheet.Range["A3"].DataValidation;
 validation.AllowType = ExcelDataType.Date;
 
-//Date between 10/5/2003 to 10/5/2004
+//Date between 10/5/2003 and 10/5/2004
 validation.CompareOperator = ExcelDataValidationComparisonOperator.Between;
 validation.FirstDateTime = new DateTime(2003, 5, 10);
 validation.SecondDateTime = new DateTime(2004, 5, 10);
@@ -231,20 +239,20 @@ validation.SecondDateTime = new DateTime(2004, 5, 10);
 Dim validation As IDataValidation = sheet.Range("A3").DataValidation
 validation.AllowType = ExcelDataType.Date
 
-'Date between 10/5/2003 to 10/5/2004
+'Date between 10/5/2003 and 10/5/2004
 validation.CompareOperator = ExcelDataValidationComparisonOperator.Between
 validation.FirstDateTime = New DateTime(2003, 5, 10)
 validation.SecondDateTime = New DateTime(2004, 5, 10)
 {% endhighlight %}
-{% endtabs %} 
+{% endtabs %}
 
 A complete working example for date data validation in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Data%20Validation/Date%20Validation/.NET/Date%20Validation).   
 
 ## Custom Validation
 
-Custom validation can be set to a cell with its [AllowType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IDataValidation.html#Syncfusion_XlsIO_IDataValidation_AllowType) as **User**. The following code snippet illustrates how to set custom validation.
+Custom validation is set with [AllowType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IDataValidation.html#Syncfusion_XlsIO_IDataValidation_AllowType) set to **Formula** and the rule expressed as a formula in **FirstFormula**. The formula must evaluate to `TRUE` for the value to be accepted. The following code snippet illustrates how to set custom validation.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 //Data validation for custom data
 IDataValidation validation = sheet.Range["A3"].DataValidation;
@@ -265,11 +273,11 @@ Dim validation As IDataValidation = sheet.Range("A3").DataValidation
 validation.AllowType = ExcelDataType.Formula
 validation.FirstFormula = "=A1>10"
 {% endhighlight %}
-{% endtabs %}   
+{% endtabs %}
 
-The following code snippet shows all the data validation supports discussed previously.
+The following code example shows all the data validation types discussed previously combined in a single program.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -289,7 +297,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
   //Shows the error message
   txtLengthValidation.ShowErrorBox = true;
-  txtLengthValidation.ErrorBoxText = "Text length should be lesser than 5 characters";
+  txtLengthValidation.ErrorBoxText = "Text length should be less than 5 characters";
   txtLengthValidation.ErrorBoxTitle = "ERROR";
   txtLengthValidation.PromptBoxText = "Data validation for text length";
   txtLengthValidation.ShowPromptBox = true;
@@ -334,7 +342,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
   //Shows the error message
   numberValidation.ShowErrorBox = true;
-  numberValidation.ErrorBoxText = "Enter a value between 0 to 10";
+  numberValidation.ErrorBoxText = "Enter a value between 0 and 10";
   numberValidation.ErrorBoxTitle = "ERROR";
   numberValidation.PromptBoxText = "Data validation for numbers";
   numberValidation.ShowPromptBox = true;
@@ -350,7 +358,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
   //Shows the error message
   dateValidation.ShowErrorBox = true;
-  dateValidation.ErrorBoxText = "Enter a value between 10/5/2003 to 10/5/2004";
+  dateValidation.ErrorBoxText = "Enter a value between 10/5/2003 and 10/5/2004";
   dateValidation.ErrorBoxTitle = "ERROR";
   dateValidation.PromptBoxText = "Data validation for date";
   dateValidation.ShowPromptBox = true;
@@ -389,7 +397,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
   //Shows the error message
   txtLengthValidation.ShowErrorBox = true;
-  txtLengthValidation.ErrorBoxText = "Text length should be lesser than 5 characters";
+  txtLengthValidation.ErrorBoxText = "Text length should be less than 5 characters";
   txtLengthValidation.ErrorBoxTitle = "ERROR";
   txtLengthValidation.PromptBoxText = "Data validation for text length";
   txtLengthValidation.ShowPromptBox = true;
@@ -434,7 +442,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
   //Shows the error message
   numberValidation.ShowErrorBox = true;
-  numberValidation.ErrorBoxText = "Enter a value between 0 to 10";
+  numberValidation.ErrorBoxText = "Enter a value between 0 and 10";
   numberValidation.ErrorBoxTitle = "ERROR";
   numberValidation.PromptBoxText = "Data validation for numbers";
   numberValidation.ShowPromptBox = true;
@@ -450,7 +458,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
   //Shows the error message
   dateValidation.ShowErrorBox = true;
-  dateValidation.ErrorBoxText = "Enter a value between 10/5/2003 to 10/5/2004";
+  dateValidation.ErrorBoxText = "Enter a value between 10/5/2003 and 10/5/2004";
   dateValidation.ErrorBoxTitle = "ERROR";
   dateValidation.PromptBoxText = "Data validation for date";
   dateValidation.ShowPromptBox = true;
@@ -488,7 +496,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
 
   'Shows the error message
   txtLengthValidation.ShowErrorBox = True
-  txtLengthValidation.ErrorBoxText = "Text length should be lesser than 5 characters"
+  txtLengthValidation.ErrorBoxText = "Text length should be less than 5 characters"
   txtLengthValidation.ErrorBoxTitle = "ERROR"
   txtLengthValidation.PromptBoxText = "Data validation for text length"
   txtLengthValidation.ShowPromptBox = True
@@ -533,7 +541,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
 
   'Shows the error message
   numberValidation.ShowErrorBox = True
-  numberValidation.ErrorBoxText = "Enter a value between 0 to 10"
+  numberValidation.ErrorBoxText = "Enter a value between 0 and 10"
   numberValidation.ErrorBoxTitle = "ERROR"
   numberValidation.PromptBoxText = "Data validation for numbers"
   numberValidation.ShowPromptBox = True
@@ -549,7 +557,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
 
   'Shows the error message
   dateValidation.ShowErrorBox = True
-  dateValidation.ErrorBoxText = "Enter a value between 10/5/2003 to 10/5/2004"
+  dateValidation.ErrorBoxText = "Enter a value between 10/5/2003 and 10/5/2004"
   dateValidation.ErrorBoxTitle = "ERROR"
   dateValidation.PromptBoxText = "Data validation for date"
   dateValidation.ShowPromptBox = True
@@ -570,11 +578,11 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-## Remove Data Validation 
+## Remove Data Validation
 
 The following code snippet illustrates how to remove data validation rules from a worksheet.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Data%20Validation/Remove%20Validation/.NET/Remove%20Validation/Remove%20Validation/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -617,10 +625,10 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   'Removing data validation from the worksheet
   worksheet.UsedRange.Clear(ExcelClearOptions.ClearDataValidations)
 
-  'Saving the workbook 
+  'Saving the workbook
   workbook.SaveAs("Output.xlsx")
 End Using
 {% endhighlight %}
-{% endtabs %} 
+{% endtabs %}
  
 A complete working example to remove validations from a worksheet in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Data%20Validation/Remove%20Validation/.NET/Remove%20Validation">this GitHub page</a>. 

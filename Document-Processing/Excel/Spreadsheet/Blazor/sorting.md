@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sorting in Blazor Spreadsheet Component | Syncfusion
-description: Learn how to perform data sorting in the Blazor Spreadsheet component, including multi-column sorting, custom sort orders, and more.
+description: Learn how to perform data sorting in the Blazor Spreadsheet component, including single-column sorting, filter-dialog sort options, and programmatic sort APIs.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
@@ -9,14 +9,42 @@ documentation: ug
 
 # Sorting in Blazor Spreadsheet Component
 
-The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component provides built-in sorting functionality that enables users to organize worksheet data in either ascending or descending order. This feature helps improve readability and simplifies data analysis by arranging content according to selected columns. The sorting behavior is controlled by the [`AllowSorting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowSorting) property, which is set to `true` by default. When [`AllowSorting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowSorting) is set to `false`, all sorting options are removed from the interface, including the Ribbon and Context Menu, and related API methods become inactive. Additionally, sorting is disabled if the worksheet is protected. For more information on worksheet protection, refer to the [worksheet protection documentation](./protection#protect-sheet).
+The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component provides built-in sorting functionality that enables users to organize worksheet data in either ascending or descending order. This feature helps improve readability and simplifies data analysis by arranging content according to selected columns. The sorting behavior is controlled by the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowSorting) property, which is set to **true** by default. When [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowSorting) is set to **false**, all sorting options are removed from the interface, including the Ribbon and Context Menu, and related API methods become inactive. Additionally, sorting is disabled if the worksheet is protected. For more information on worksheet protection, refer to the [worksheet protection documentation](./protection#protect-sheet).
 
-## Sort Operations
+## Disabling sorting
 
-The component supports two types of sort orders that help organize data for analysis and presentation:
+The example below shows how to disable sorting across the entire Spreadsheet:
 
-*   **Ascending**: Arranges data from lowest to highest (e.g., A to Z, 0 to 9).
-*   **Descending**: Arranges data from highest to lowest (e.g., Z to A, 9 to 0).
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@page "/"
+@using Syncfusion.Blazor.Spreadsheet
+
+<SfSpreadsheet DataSource="DataSourceBytes" AllowSorting="false">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+    public byte[] DataSourceBytes { get; set; }
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+}
+
+
+{% endhighlight %}
+{% endtabs %}
+
+## Sort operations
+
+The component supports two sort orders that help organize data for analysis and presentation:
+
+*   **Ascending** - Arranges data from smallest to largest (e.g., **A → Z**, **0 → 9**, **earliest → latest date**).
+*   **Descending** - Arranges data from largest to smallest (e.g., **Z → A**, **9 → 0**, **latest → earliest date**).
 
 ### Sort via UI
 
@@ -54,27 +82,25 @@ If filtering is enabled, sorting can also be performed using the filter dialog. 
 
 ### Sort by active cell
 
-When a sort operation is performed without an explicitly selected range, the component automatically identifies the **used range** of the worksheet. The used range includes all contiguous cells that contain data. Sorting is applied to this entire range using the column of the **active cell** as the sort key.
-
-The **sort key** is the column whose values determine the order of the rows during sorting. It compares the values in this column and rearranges the rows accordingly.
+When a sort operation is performed through the UI without an explicitly selected range, the component automatically identifies the **used range** of the worksheet. Sorting is applied to this entire range using the column of the **active cell** as the sort key - the column whose values determine the order of the rows during sorting.
 
 This behavior ensures that the entire dataset is sorted cohesively, preserving row integrity and preventing data misalignment.
 
 **Example**
 
-If the **active cell** is located in **Column C** and no range is selected, it's sorts all rows within the used range based on the values in **Column C**.
+If the **active cell** is located in **Column C** and no range is selected, it sorts all rows within the used range based on the values in **Column C**.
 
-### Sorting a Selected Range
+### Sorting a selected range
 
-When a specific cell range is selected, the sort operation is restricted to that range. The column of the active cell within the selected range is used as the sort key. This method allows for targeted sorting of a subset a data without affecting the rest of the worksheet.
+When a specific cell range is selected in the UI, the sort operation is restricted to that range. The column of the active cell within the selected range is used as the sort key. This method allows for targeted sorting of a subset of data without affecting the rest of the worksheet.
 
 **Example**
 
 If the range **B2:D10** is selected and the active cell is in **Column D**, the component sorts only the rows within **B2:D10** based on the values in **Column D**.
 
-### Sort via programmatically
+### Sort programmatically
 
-The [SortRangeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SortRangeAsync_System_String_Syncfusion_Blazor_Spreadsheet_SortDirection_) method enables sorting of a specified range of cells based on the values in a specific column. This method provides a programmatic way to sort data without using the UI. The available parameters in the `SortRangeAsync` method are:
+The [SortRangeAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SortRangeAsync_System_String_Syncfusion_Blazor_Spreadsheet_SortDirection_) method enables sorting of a specified range of cells based on the values in a specific column. This method provides a programmatic way to sort data without using the UI. The available parameters in the `SortRangeAsync()` method are:
 
 | **Parameter**     | **Type**                   | **Description** |
 |-------------------|----------------------------|-----------------|
@@ -84,9 +110,11 @@ The [SortRangeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spr
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
+@page "/"
 @using Syncfusion.Blazor.Spreadsheet
+@using Syncfusion.Blazor.Buttons
 
-<button @onclick="SortData">Sort</button>
+<SfButton OnClick="SortData" Content="Sort B2:D5"></SfButton>
 
 <SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>

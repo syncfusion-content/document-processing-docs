@@ -2331,3 +2331,86 @@ A complete working example demonstrating how to enable the [ShowFileNameWithExte
 * [Assemblies Required for Excel to PDF conversion](assemblies-required-for-excel-to-pdf) — manual assembly references for non-NuGet scenarios.
 * [NuGet Packages Required for Excel to PDF conversion](nuget-packages-required-for-excel-to-pdf) — install the right package for your target platform.
 * [Licensing overview](https://help.syncfusion.com/document-processing/licensing/overview) — register your license key.
+
+## Enable Form Fields
+
+This property enables the form fields in the Excel worksheet to be rendered as interactive form fields in the PDF document. The default value is FALSE.
+
+The following code snippet explains how to enable the [EnableFormFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverterSettings.html#Syncfusion_ExcelToPdfConverter_ExcelToPdfConverterSettings_EnableFormFields) property while converting an Excel document to PDF.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/refs/heads/EnableFormFields/Excel%20to%20PDF/EnableFormFields/.NET/EnableFormFields/EnableFormFields/Program.cs" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+    IApplication application = excelEngine.Excel;
+    application.DefaultVersion = ExcelVersion.Xlsx;
+    IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
+
+    //Initialize XlsIORendererSettings
+    XlsIORendererSettings settings = new XlsIORendererSettings();
+
+    //Enable Form Fields
+    settings.EnableFormFields = true;
+
+    //Initialize XlsIORenderer
+    XlsIORenderer renderer = new XlsIORenderer();
+
+    //Convert the Excel document to PDF with renderer settings
+    PdfDocument pdfDocument = renderer.ConvertToPDF(workbook, settings);
+
+    #region Save
+    //Saving the workbook
+    pdfDocument.Save(Path.GetFullPath("Output/BookmarksInPDF.pdf"));
+    #endregion
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
+
+  //Initialize ExcelToPdfConverterSettings
+  ExcelToPdfConverterSettings settings = new ExcelToPdfConverterSettings();
+
+  //Enable Form Fields
+  settings.EnableFormFields = true;
+
+  //Load the Excel document into ExcelToPdfConverter
+  ExcelToPdfConverter converter = new ExcelToPdfConverter(workbook);
+
+  //Convert the Excel document to PDF with converter settings
+  PdfDocument document = converter.Convert(settings);
+
+  //Save the PDF document
+  document.Save("Output.pdf");
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Using excelEngine As ExcelEngine = New ExcelEngine()
+  Dim application As IApplication = excelEngine.Excel
+  application.DefaultVersion = ExcelVersion.Xlsx
+  Dim workbook As IWorkbook = application.Workbooks.Open("Sample.xlsx")
+
+  'Initialize ExcelToPdfConverterSettings
+  Dim settings As ExcelToPdfConverterSettings = New ExcelToPdfConverterSettings()
+
+  'Enable Form Fields
+  settings.EnableFormFields = True
+
+  'Load the Excel document into ExcelToPdfConverter
+  Dim converter As ExcelToPdfConverter = New ExcelToPdfConverter(workbook)
+
+  'Convert the Excel document to PDF with converter settings
+  Dim document As PdfDocument = converter.Convert(settings)
+
+  'Save the PDF document
+  document.Save("Output.pdf")
+End Using
+{% endhighlight %}
+{% endtabs %}
+
+A complete working sample to enable form fields in Excel to PDF conversion in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/EnableFormFields/Excel%20to%20PDF/EnableFormFields/.NET/EnableFormFields).

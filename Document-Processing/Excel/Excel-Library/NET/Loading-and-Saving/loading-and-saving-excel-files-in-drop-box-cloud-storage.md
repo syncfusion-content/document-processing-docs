@@ -1,32 +1,37 @@
 ---
 title: Loading and saving Excel document in Dropbox Storage | Syncfusion
-description: Explains how to load and save Excel files in Dropbox Cloud Storage using .NET Core Excel (XlsIO) library without Microsoft Excel or interop dependencies.
+description: Explains how to load and save Excel files in Dropbox Cloud Storage using the .NET Core Excel (XlsIO) library without Microsoft Excel or interop dependencies.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Loading and Saving Excel document in Dropbox Cloud Storage
+# Loading and Saving Excel files in Dropbox Cloud Storage
 
 ## Prerequisites
 
-* Create a [Dropbox API app](https://www.dropbox.com/developers/documentation/dotnet#tutorial) using the Dropbox Developer website.
-* Use the App Console to set up your API app for secure access to Dropbox files and data.
+* A Dropbox account.
+* A **[Dropbox API app](https://www.dropbox.com/developers/apps)** created in the App Console with the required permission scope (for example, `files.content.read` and `files.content.write`).
+* An **access token** (short-lived) or a **refresh token + app key/secret** flow for production.
+* Visual Studio 2019 or later with the **ASP.NET and web development** workload.
+* A Syncfusion<sup>&reg;</sup> license key. Refer to [How to register the Syncfusion license key](https://help.syncfusion.com/common/essential-studio/licensing/how-to-register-in-an-application) for details.
 
-## Loading Excel document from Dropbox
+N> Do not commit the Dropbox access token to source control. Store it outside the project folder and reference it via configuration (for example, an environment variable, user secrets, or Azure Key Vault). Short-lived access tokens expire quickly; for long-running applications use the refresh-token flow.
+
+## Loading Excel files from Dropbox Cloud Storage
 
 Steps to load an Excel document from Dropbox Cloud Storage.
 
 Step 1: Create a new ASP.NET Core Web Application (Model-View-Controller).
 
-![Create a ASP.NET Core Web App project in visual studio](Loading-and-Saving_images/Loading-and-Saving_images_img1.png)
+![Create an ASP.NET Core Web App project in Visual Studio](Loading-and-Saving_images/Loading-and-Saving_images_img1.png)
 
 Step 2: Name the project.
 
 ![Name the project](Loading-and-Saving_images/Loading-and-Saving_images_img2.png)
 
-Step 3: Install the following **Nuget packages** in your application from [NuGet.org](https://www.nuget.org/).
+Step 3: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/).
 * [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core)
-* [Dropbox.API](https://www.nuget.org/packages/Dropbox.API)
+* [Dropbox.Api](https://www.nuget.org/packages/Dropbox.Api)
 
 ![Install Syncfusion.XlsIO.Net.Core NuGet Package](Loading-and-Saving_images/Loading-and-Saving_images_img12.png)
 ![Install Dropbox.API NuGet Package](Loading-and-Saving_images/Loading-and-Saving_images_img11.png)
@@ -50,11 +55,16 @@ Step 5: Include the following namespaces in **HomeController.cs**.
 {% highlight c# tabtitle="C#" %}
 using Dropbox.Api;
 using Syncfusion.XlsIO;
-using Syncfusion.Drawing;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the below code snippet in **HomeController.cs** to **load an Excel document from Dropbox Cloud Storage**.
+Step 6: Register the Syncfusion license key in **Program.cs** before `builder.Build()`:
+
+```csharp
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+```
+
+Step 7: Include the following code snippet in **HomeController.cs** to **load an Excel document from Dropbox Cloud Storage**. The snippet is the body of the `EditDocument` action method that the button in Step 4 posts to, plus the `GetDocumentFromDropBox` helper it calls.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -83,7 +93,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     outputStream.Position = 0;
 
     //Download the Excel file in the browser
-    FileStreamResult fileStreamResult = new FileStreamResult(outputStream, "application/excel");
+    FileStreamResult fileStreamResult = new FileStreamResult(outputStream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
     fileStreamResult.FileDownloadName = "EditExcel.xlsx";
     return fileStreamResult;
 }
@@ -91,10 +101,11 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 // Download file from DropBox
 public async Task<MemoryStream> GetDocumentFromDropBox()
 {
-    //Define the access token for authentication with the Dropbox API
+    //Define the access token for authentication with the Dropbox API.
+    //Do not hard-code the token; load it from configuration (for example, an environment variable or user secret).
     var accessToken = "Access_Token";
 
-    //Define the file path in Dropbox where the file is located. For ex: "/Template.docx"
+    //Define the file path in Dropbox where the file is located. For example: "/Template.xlsx"
     var filePathInDropbox = "FilePath";
 
     try
@@ -129,21 +140,21 @@ By executing the program, you will get the **Excel document** as follows.
 
 ![Output File](Loading-and-Saving_images/Loading-and-Saving_images_img5.png)
 
-## Saving Excel document to Dropbox
+## Saving Excel files to Dropbox Cloud Storage
 
 Steps to save an Excel document to Dropbox Cloud Storage.
 
 Step 1: Create a new ASP.NET Core Web Application (Model-View-Controller).
 
-![Create a ASP.NET Core Web App project in visual studio](Loading-and-Saving_images/Loading-and-Saving_images_img1.png)
+![Create an ASP.NET Core Web App project in Visual Studio](Loading-and-Saving_images/Loading-and-Saving_images_img1.png)
 
 Step 2: Name the project.
 
 ![Name the project](Loading-and-Saving_images/Loading-and-Saving_images_img6.png)
 
-Step 3: Install the following **Nuget packages** in your application from [NuGet.org](https://www.nuget.org/).
+Step 3: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/).
 * [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core)
-* [Dropbox.API](https://www.nuget.org/packages/Dropbox.API)
+* [Dropbox.Api](https://www.nuget.org/packages/Dropbox.Api)
 
 ![Install Syncfusion.XlsIO.Net.Core NuGet Package](Loading-and-Saving_images/Loading-and-Saving_images_img3.png)
 ![Install Dropbox.API NuGet Package](Loading-and-Saving_images/Loading-and-Saving_images_img10.png)
@@ -171,7 +182,9 @@ using Syncfusion.Drawing;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the below code snippet in **HomeController.cs** to **Save an Excel document to Dropbox Cloud Storage**.
+Step 6: Register the Syncfusion license key (see the **Loading** section above) if you have not already done so.
+
+Step 7: Include the following code snippet in **HomeController.cs** to **save an Excel document to Dropbox Cloud Storage**. The snippet is the body of the `CreateDocument` action method that the button in Step 4 posts to, plus the `UploadDocumentToDropBox` helper it calls. The image file `AdventureCycles-Logo.png` must be present in the project and copied to the publish output.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -362,10 +375,11 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 // Upload file to Dropbox
 public async Task<MemoryStream> UploadDocumentToDropBox(MemoryStream stream)
 {
-    //Define the access token for authentication
+    //Define the access token for authentication.
+    //Do not hard-code the token; load it from configuration (for example, an environment variable or user secret).
     var accessToken = "Access_Token";
 
-    //Define the file path in Dropbox where the file should be saved. For ex: "/Template.docx"
+    //Define the file path in Dropbox where the file should be saved. For example: "/Template.xlsx"
     var filePathInDropbox = "FilePath";
 
     try
@@ -374,7 +388,7 @@ public async Task<MemoryStream> UploadDocumentToDropBox(MemoryStream stream)
         using (var dbx = new DropboxClient(accessToken))
         {
             //Upload the file to Dropbox
-            var uploadResult =await dbx.Files.UploadAsync(filePathInDropbox, WriteMode.Overwrite.Instance, body: new MemoryStream(stream.ToArray()));
+            var uploadResult = await dbx.Files.UploadAsync(filePathInDropbox, WriteMode.Overwrite.Instance, body: new MemoryStream(stream.ToArray()));
         }
         Console.WriteLine("Upload completed successfully");
     }
@@ -390,10 +404,10 @@ public async Task<MemoryStream> UploadDocumentToDropBox(MemoryStream stream)
 
 A complete working example of how to save an Excel document to Dropbox Cloud Storage in ASP.NET Core is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Loading%20and%20Saving/Dropbox/Saving/Create%20Excel).
 
-By executing the program, you will get the **Excel document** as follows.
+By executing the program, you will get the **Excel document** as shown below.
 
 ![Output File](Loading-and-Saving_images/Loading-and-Saving_images_img7.png)
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/net-core) to explore the rich set of Syncfusion&reg; Excel library (XlsIO) features.
 
-An online sample link to [create an Excel document](https://ej2.syncfusion.com/aspnetcore/Excel/Create#/material3) in ASP.NET Core.
+An online sample link to [create an Excel document](https://document.syncfusion.com/demos/excel/create#/tailwind3) in ASP.NET Core.
