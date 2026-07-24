@@ -18,4 +18,4 @@ To resolve this, you need to use a [PdfTrueTypeFont](https://help.syncfusion.com
 
 ## Where can I find more information on how to implement TrueTypeFont in my PDF document?
 
-Please refer to the [User Guide](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-text?cs-save-lang=1&cs-lang=csharp#drawing-text-using-opentype-font) documentation for detailed instructions on how to create and use TrueTypeFont in your PDF document.
+Please refer to the [User Guide](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-text#drawing-text-using-opentype-font) documentation for detailed instructions on how to create and use TrueTypeFont in your PDF document.

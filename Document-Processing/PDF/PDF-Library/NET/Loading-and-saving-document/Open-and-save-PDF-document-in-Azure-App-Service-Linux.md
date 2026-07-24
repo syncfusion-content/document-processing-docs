@@ -154,7 +154,7 @@ Step 10: Now, the published webpage will open in the browser.
 ![Browser will open after publish](Azure_Images/Azure-app-service-Windows//WebView.png)
 
 Step 11: Click **Open and Save Document** button.You will get the output **PDF document** as follows.
-![Output PDF](Azure_Images/Azure-app-service-Windows/Output_screenshot.png)
+![Output PDF](Azure_Images/Azure-app-service-Windows/Output.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Open%20and%20Save%20PDF%20document/Azure/Azure_App_Service).
 
