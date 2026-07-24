@@ -1,28 +1,28 @@
 ---
 layout: post
-title: Auto save to server in Angular Document editor | Syncfusion
-description: Learn here all about Auto save document in document editor in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Auto Save to Server in Angular DOCX Editor | Syncfusion
+description: Learn how to auto-save documents to a server from the Syncfusion Angular Document Editor component.
 platform: document-processing
 control: Auto save document in document editor 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Auto save document to server in Angular Document editor component
+# Auto Save Document to Server in Angular Document Editor component
 
-In this article, we are going to see how to auto save the document to server. You can automatically save the edited content in regular intervals of time. It helps reduce the risk of data loss by saving an open document automatically at customized intervals.
+This article explains how to auto-save the document to a server. You can save the edited content automatically at regular intervals, which reduces the risk of data loss by saving the open document at customized intervals.
 
-The following example illustrates how to auto save the document in server.
+The following example illustrates how to auto-save the document to a server.
 
-* In the client-side, using content change event, we can automatically save the edited content in regular intervals of time. Based on `contentChanged` boolean, the document send as DOCX format to server-side using [`saveAsBlob`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#saveasblob) method.
+* On the client side, use the `contentChange` event to detect edits and save the document at regular intervals. When the `contentChanged` flag is `true`, the document is sent to the server in Document format using the [`saveAsBlob()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#saveasblob) method.
 
 ```typescript
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {
   ToolbarService,
   DocumentEditorContainerComponent,
+  DocumentEditorContainerModule,
 } from '@syncfusion/ej2-angular-documenteditor';
-import { DocumentEditorContainerModule } from '@syncfusion/ej2-angular-documenteditor';
 
 @Component({
   selector: 'app-container',
@@ -34,7 +34,7 @@ import { DocumentEditorContainerModule } from '@syncfusion/ej2-angular-documente
       serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" 
       height="600px" 
       style="display:block" 
-      [enableToolbar]=true 
+      [enableToolbar]="true" 
       (created)="onCreate()"
       (contentChange)="onContentChange()">
     </ejs-documenteditorcontainer>
@@ -51,17 +51,17 @@ export class AppComponent implements OnInit {
 
     setInterval(() => {
       if (this.contentChanged) {
-        //You can save the document as below
+        // Save the document as shown below.
         this.container?.documentEditor.saveAsBlob('Docx').then((blob: Blob) => {
-          console.log('Saved sucessfully');
+          console.log('Saved successfully');
           let exportedDocument: Blob = blob;
-          //Now, save the document where ever you want.
+          // Save the document wherever you want.
           let formData: FormData = new FormData();
           formData.append('fileName', 'sample.docx');
           formData.append('data', exportedDocument);
           /* tslint:disable */
           var req = new XMLHttpRequest();
-          // Replace your running Url here
+          // Replace with your running URL here.
           req.open(
             'POST',
             'http://localhost:62869/api/documenteditor/AutoSave',
@@ -87,9 +87,11 @@ export class AppComponent implements OnInit {
 }
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> 1. The Web Service link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` used in the `serviceUrl` property of the Document Editor is intended solely for demonstration and evaluation purposes.
+N> 2. For production deployment, please host your own Web Service with your required server configurations.
+N> 3. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own Web Service and use it for the `serviceUrl` property.
 
-* In server-side, Receives the stream content from client-side and process it to save the document in Server or Database from the received stream. Add Web API in controller file like below to save the document.
+* On the server side, receive the stream from the client and process it to save the document to a server or database. Add a Web API method in a controller file to save the document, as shown below.
 
 ```c#
 [AcceptVerbs("Post")]
@@ -103,7 +105,7 @@ public string AutoSave()
     file.CopyTo(stream);
     //Save the stream to database or server as per the requirement.
     stream.Close();
-    return "Sucess";
+    return "Success";
 }
 ```
 
@@ -112,4 +114,4 @@ public string AutoSave()
 Explore how to automatically save Word documents in the Angular Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/auto-save).
 
 ## See Also
-* [AutoSave document in DocumentEditor](..//how-to/auto-save-document-in-document-editor)
+* [AutoSave document in DocumentEditor](../how-to/auto-save-document-in-document-editor)
