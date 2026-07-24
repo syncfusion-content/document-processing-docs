@@ -26,7 +26,7 @@ WordDocument document = new WordDocument();
 IWSection section = document.AddSection();
 //Adds new paragraph to the section
 IWParagraph paragraph = section.AddParagraph();
-//Applies default numbered list style
+//Applies default bulleted list style
 paragraph.ListFormat.ApplyDefBulletStyle();
 //Adds text to the paragraph
 paragraph.AppendText("List item 1");
@@ -56,7 +56,7 @@ WordDocument document = new WordDocument();
 IWSection section = document.AddSection();
 //Adds new paragraph to the section
 IWParagraph paragraph = section.AddParagraph();
-//Applies default numbered list style
+//Applies default bulleted list style
 paragraph.ListFormat.ApplyDefBulletStyle();
 //Adds text to the paragraph
 paragraph.AppendText("List item 1");
@@ -85,7 +85,7 @@ Dim document As New WordDocument()
 Dim section As IWSection = document.AddSection()
 'Adds new paragraph to the section
 Dim paragraph As IWParagraph = section.AddParagraph()
-'Applies default numbered list style
+'Applies default bulleted list style
 paragraph.ListFormat.ApplyDefBulletStyle()
 'Adds text to the paragraph
 paragraph.AppendText("List item 1")
@@ -109,7 +109,7 @@ document.Close()
 
 {% endtabs %}
 
-By running the above code, you will generate a **Bullet List** as shown below.
+By running the above code, you will generate a **Bulleted List** as shown below.
 ![List](Lists_images/CreateBulletedList.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Paragraphs/Simple-bulleted-list).
@@ -228,7 +228,7 @@ WordDocument document = new WordDocument();
 IWSection section = document.AddSection();
 //Adds new paragraph to the section
 IWParagraph paragraph = section.AddParagraph();
-//Applies default numbered list style
+//Applies default bulleted list style
 paragraph.ListFormat.ApplyDefBulletStyle();
 //Adds text to the paragraph
 paragraph.AppendText("List item 1 - Level 0");
@@ -262,7 +262,7 @@ WordDocument document = new WordDocument();
 IWSection section = document.AddSection();
 //Adds new paragraph to the section
 IWParagraph paragraph = section.AddParagraph();
-//Applies default numbered list style
+//Applies default bulleted list style
 paragraph.ListFormat.ApplyDefBulletStyle();
 //Adds text to the paragraph
 paragraph.AppendText("List item 1 - Level 0");
@@ -295,7 +295,7 @@ Dim document As New WordDocument()
 Dim section As IWSection = document.AddSection()
 'Adds new paragraph to the section
 Dim paragraph As IWParagraph = section.AddParagraph()
-'Applies default numbered list style
+'Applies default bulleted list style
 paragraph.ListFormat.ApplyDefBulletStyle()
 'Adds text to the paragraph
 paragraph.AppendText("List item 1 - Level 0")
@@ -323,14 +323,14 @@ document.Close()
 
 {% endtabs %}
 
-By running the above code, you will generate a **Multilevel Bullet List** as shown below.
+By running the above code, you will generate a **Multilevel Bulleted List** as shown below.
 ![List](Lists_images/MultilevelBulletList.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Paragraphs/Multilevel-bulleted-list).
 
 ## Create Multilevel Numbered List
 
-The following code example explains how to create multilevel numbered list.
+The following code example explains how to create a multilevel numbered list.
 
 {% tabs %}
 
@@ -441,7 +441,7 @@ By running the above code, you will generate a **Multilevel Numbered List** as s
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Paragraphs/Multilevel-numbered-list).
 
-## List number format
+## List Number Format
 
 The ListPatternType enum in DocIO lets you customize how list numbers appear in Word documents. It supports 61 styles, including Arabic, Hebrew, and more. This is useful for creating region-specific documents or applying culturally appropriate numbering formats.
 
@@ -515,7 +515,7 @@ levelOne.PatternType = ListPatternType.Hebrew1;
 levelOne.StartAt = 1;
 // Adds a heading paragraph for the Hebrew1 list.
 paragraph = section.AddParagraph();
-paragraph.AppendText("List pattern Herbrew");
+paragraph.AppendText("List pattern Hebrew");
 // Adds first list item using Hebrew1 style.
 paragraph = section.AddParagraph();
 paragraph.AppendText("List item 1");
@@ -604,7 +604,7 @@ levelOne.PatternType = ListPatternType.Hebrew1;
 levelOne.StartAt = 1;
 // Adds a heading paragraph for the Hebrew1 list.
 paragraph = section.AddParagraph();
-paragraph.AppendText("List pattern Herbrew");
+paragraph.AppendText("List pattern Hebrew");
 // Adds first list item using Hebrew1 style.
 paragraph = section.AddParagraph();
 paragraph.AppendText("List item 1");
@@ -716,7 +716,7 @@ document.Close()
 
 {% endtabs %}
 
-By running the above code, you will generate a **List Numbered Format** as shown below.
+By running the above code, you will generate a **List Number Format** as shown below.
 ![List](Lists_images/ListNumberFormat.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Paragraphs/List-number-format).
@@ -727,7 +727,7 @@ N> Except for the following [ListPatternType](https://help.syncfusion.com/cr/doc
 
 You can customize lists in Word documents using DocIO, allowing you to define numbering styles, bullet symbols, indentation levels, and list patterns to suit your formatting needs.
 
-The following code example explains how to create user defined list styles.
+The following code example explains how to create a user-defined numbered list style. For a user-defined bulleted list style, see [Bulleted List Styles](#bulleted-list-styles).
 
 {% tabs %}
 
@@ -890,7 +890,7 @@ paragraph = section.AddParagraph();
 paragraph.AppendText("Multilevel numbered list - Level 0");
 //Continues last defined list
 paragraph.ListFormat.ContinueListNumbering();
-//Increases the level indent
+//Decreases the level indent
 paragraph.ListFormat.DecreaseIndentLevel();   
 //Adds new paragraph
 paragraph = section.AddParagraph();
@@ -931,7 +931,7 @@ paragraph = section.AddParagraph();
 paragraph.AppendText("Multilevel numbered list - Level 0");
 //Continues last defined list
 paragraph.ListFormat.ContinueListNumbering();
-//Increases the level indent
+//Decreases the level indent
 paragraph.ListFormat.DecreaseIndentLevel();
 //Adds new paragraph
 paragraph = section.AddParagraph();
@@ -971,7 +971,7 @@ paragraph = section.AddParagraph()
 paragraph.AppendText("Multilevel numbered list - Level 0")
 'Continues last defined list
 paragraph.ListFormat.ContinueListNumbering()
-'Increases the level indent
+'Decreases the level indent
 paragraph.ListFormat.DecreaseIndentLevel()
 'Adds new paragraph
 paragraph = section.AddParagraph()
@@ -988,7 +988,7 @@ document.Close()
 
 {% endtabs %}
 
-By running the above code, you will generate a **Increase or Decrease List indent** as shown below.
+By running the above code, you will generate the **Increase or Decrease List Indent** output as shown below.
 ![List](Lists_images/ChangeListLevels.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Paragraphs/Increase-or-decrease-list-indent).
@@ -1007,18 +1007,18 @@ IWSection section = document.AddSection();
 //Add a new list style to the document.
 ListStyle listStyle = document.AddListStyle(ListType.Bulleted, "UserDefinedList");
 WListLevel levelOne = listStyle.Levels[0];
-//Define the following character, pattern and start index for level 0.
+//Define the pattern, bullet character, and start index for level 0.
 levelOne.PatternType = ListPatternType.Bullet;
 levelOne.BulletCharacter = "*";
 levelOne.StartAt = 1;
 WListLevel levelTwo = listStyle.Levels[1];
-//Define the following character, pattern and start index for level 1.
+//Define the pattern, bullet character, and start index for level 1.
 levelTwo.PatternType = ListPatternType.Bullet;
 levelTwo.BulletCharacter = "\u00A9";
 levelTwo.CharacterFormat.FontName = "Wingdings";
 levelTwo.StartAt = 1;
 WListLevel levelThree = listStyle.Levels[2];
-//Define the following character, pattern and start index for level 2.
+//Define the pattern, bullet character, and start index for level 2.
 levelThree.PatternType = ListPatternType.Bullet;
 levelThree.BulletCharacter = "\u0076";
 levelThree.CharacterFormat.FontName = "Wingdings";
@@ -1058,18 +1058,18 @@ IWSection section = document.AddSection();
 //Add a new list style to the document.
 ListStyle listStyle = document.AddListStyle(ListType.Bulleted, "UserDefinedList");
 WListLevel levelOne = listStyle.Levels[0];
-//Define the following character, pattern and start index for level 0.
+//Define the pattern, bullet character, and start index for level 0.
 levelOne.PatternType = ListPatternType.Bullet;
 levelOne.BulletCharacter = "*";
 levelOne.StartAt = 1;
 WListLevel levelTwo = listStyle.Levels[1];
-//Define the following character, pattern and start index for level 1.
+//Define the pattern, bullet character, and start index for level 1.
 levelTwo.PatternType = ListPatternType.Bullet;
 levelTwo.BulletCharacter = "\u00A9";
 levelTwo.CharacterFormat.FontName = "Wingdings";
 levelTwo.StartAt = 1;
 WListLevel levelThree = listStyle.Levels[2];
-//Define the following character, pattern and start index for level 2.
+//Define the pattern, bullet character, and start index for level 2.
 levelThree.PatternType = ListPatternType.Bullet;
 levelThree.BulletCharacter = "\u0076";
 levelThree.CharacterFormat.FontName = "Wingdings";
@@ -1108,18 +1108,18 @@ Dim section As IWSection = document.AddSection()
 'Add a new list style to the document.          
 Dim listStyle As ListStyle = document.AddListStyle(ListType.Bulleted, "UserDefinedList")
 Dim levelOne As WListLevel = listStyle.Levels(0)
-'Define the following  character, pattern and start index for level 0.
+'Define the pattern, bullet character, and start index for level 0.
 levelOne.PatternType = ListPatternType.Bullet
 levelOne.BulletCharacter = "*"
 levelOne.StartAt = 1
 Dim levelTwo As WListLevel = listStyle.Levels(1)
-'Define the following character, pattern and start index for level 1.
+'Define the pattern, bullet character, and start index for level 1.
 levelTwo.PatternType = ListPatternType.Bullet
 levelTwo.BulletCharacter = ChrW(169)
 levelTwo.CharacterFormat.FontName = "Wingdings"
 levelTwo.StartAt = 1
 Dim levelThree As WListLevel = listStyle.Levels(2)
-'Define the following character, pattern and start index for level 2.
+'Define the pattern, bullet character, and start index for level 2.
 levelThree.PatternType = ListPatternType.Bullet
 levelThree.BulletCharacter = ChrW(118)
 levelThree.CharacterFormat.FontName = "Wingdings"
@@ -1159,7 +1159,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Numbered List with Prefix
 
-The following code example explains how to create numbered list with prefix from previous level.
+The following code example explains how to create a numbered list with prefix from previous level.
 
 N> The [NumberPrefix](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WListLevel.html#Syncfusion_DocIO_DLS_WListLevel_NumberPrefix) value for the numbered list should meet the syntax "\u000N" to update the previous list level value as prefix to the current list level. For example, it should be represented as (“\u0000.” or “\u0000.\u0001.”).
 
@@ -1184,7 +1184,7 @@ levelTwo.NumberPrefix = "\u0000.";
 levelTwo.PatternType = ListPatternType.Arabic;
 levelTwo.StartAt = 1;
 WListLevel levelThree = listStyle.Levels[2];
-//Defines the follow character, prefix from previous level, pattern, start index for level 1
+//Defines the follow character, prefix from previous level, pattern, start index for level 2
 levelThree.FollowCharacter = FollowCharacterType.Nothing;
 levelThree.NumberPrefix = "\u0000.\u0001.";
 levelThree.PatternType = ListPatternType.Arabic;
@@ -1235,7 +1235,7 @@ levelTwo.NumberPrefix = "\u0000.";
 levelTwo.PatternType = ListPatternType.Arabic;
 levelTwo.StartAt = 1;
 WListLevel levelThree = listStyle.Levels[2];
-//Defines the follow character, prefix from previous level, pattern, start index for level 1
+//Defines the follow character, prefix from previous level, pattern, start index for level 2
 levelThree.FollowCharacter = FollowCharacterType.Nothing;
 levelThree.NumberPrefix = "\u0000.\u0001.";
 levelThree.PatternType = ListPatternType.Arabic;
@@ -1285,7 +1285,7 @@ levelTwo.NumberPrefix = vbNullChar & "."
 levelTwo.PatternType = ListPatternType.Arabic
 levelTwo.StartAt = 1
 Dim levelThree As WListLevel = listStyle.Levels(2)
-'Defines the follow character, prefix from previous level, pattern, start index for level 1
+'Defines the follow character, prefix from previous level, pattern, start index for level 2
 levelThree.FollowCharacter = FollowCharacterType.[Nothing]
 levelThree.NumberPrefix = vbNullChar & "." & ChrW(1) & "."
 levelThree.PatternType = ListPatternType.Arabic
