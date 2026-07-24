@@ -28,7 +28,7 @@ To perform actions on a page thumbnail, tap and hold (long-press) the thumbnail 
 *   **Select All**: Select all pages in the document.
 
 
-![Context menu displaying page operations rotate insert copy delete and selectall)](../images/Context-Menu-Page-Operations1.png)
+![Context menu displaying page operations rotate insert copy delete select all](../images/Context-Menu-Page-Operations1.png)
 
 ## Rearranging Pages on Mobile
 
