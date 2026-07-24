@@ -8,7 +8,7 @@ documentation: UG
 
 # Unmerge Cells in Excel
 
-Merged cells can be unmerged at anytime.
+Merged cells can be unmerged at any time.
 
 The following code shows how to unmerge cells in Excel with Interop and XlsIO for .NET.
 
@@ -27,10 +27,10 @@ private void UnmergeCells()
   //Open the Excel file
   Workbook workbook = excelApp.Workbooks.Open(myPath);
 
-  //Get the A1 cell (merged cell)
+  //Get the A1 cell, which is the top-left cell of a merged range
   Range rng1 = excelApp.get_Range("A1", Missing.Value);
 
-  //Unmerge the cell
+  //Unmerge the cells
   rng1.UnMerge();
 
   //Save the file
@@ -53,10 +53,10 @@ private void UnmergeCells()
   //Open the Excel file
   Workbook workbook = excelApp.Workbooks.Open(myPath);
 
-  //Get the A1 cell (merged cell)
+  //Get the A1 cell, which is the top-left cell of a merged range
   Range rng1 = excelApp.get_Range("A1", Missing.Value);
 
-  //Unmerge the cell
+  //Unmerge the cells
   rng1.UnMerge();
 
   //Save the file
@@ -78,10 +78,10 @@ Private Sub UnmergeCells()
   'Open the Excel file
   Dim workbook As Workbook = excelApp.Workbooks.Open(myPath)
 
-  'Get the A1 cell (merged cell)
+  'Get the A1 cell, which is the top-left cell of a merged range
   Dim rng1 As Range = excelApp.Range("A1")
 
-  'Unmerge the cell
+  'Unmerge the cells
   rng1.UnMerge()
 
   'Save the file
@@ -144,14 +144,14 @@ Private Sub UnmergeCells()
     'Instantiate the application object
     Dim application As IApplication = excelEngine.Excel
 
-    'Open the Excel file
+    'Open the Excel file containing merged cells
     Dim workbook As IWorkbook = application.Workbooks.Open("XlsIOOutput_MergedCells.xlsx")
     Dim worksheet As IWorksheet = workbook.Worksheets(0)
 
     'Unmerge the merged cells from A1 to C1
     worksheet.Range("A1:C1").UnMerge()
 
-    'Save as Excel file
+    'Save the workbook
     workbook.SaveAs("XlsIOOutput_UnmergedCells.xlsx")
   End Using
 End Sub

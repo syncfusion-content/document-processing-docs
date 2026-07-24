@@ -6,9 +6,9 @@ control: XlsIO
 documentation: UG
 ---
 
-# Chart Area in Excel document
+# Chart Area in an Excel document
 
-Chart area refers to the space that contains the entire chart or graph within a document. It includes all elements of the chart, such as data points, labels, axes, and the plot area. Using XlsIO, you **can customize various aspects of the chart area in the chart**.
+Chart area refers to the space that contains the entire chart or graph within a document. It includes all elements of the chart, such as data points, labels, axes, and the plot area. Using XlsIO, you **can customize various aspects of the chart area**.
 
 ## Formatting
 
@@ -169,7 +169,7 @@ A complete working example for the chart area in C# is present on [this GitHub p
 
 ### Transparency
 
-The following code snippet illustrates how to apply transparency in the chart area.
+The following code snippet illustrates how to apply transparency to the chart area. This snippet assumes `chartArea` is already initialized from the [Border](#border) or [Color](#color) example.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -188,4 +188,4 @@ chartArea.Fill.Transparency = 0.5
 {% endhighlight %}
 {% endtabs %}
 
-N> [Transparency](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IFill.html#Syncfusion_XlsIO_IFill_Transparency) is only applicable when [FillType](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IFill.html#Syncfusion_XlsIO_IFill_FillType) is set as SolidColor. Color-shaded fill is represented as a floating-point value ranging from 0.0 (Clear) to 1.0 (Opaque).
+N> [Transparency](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IFill.html#Syncfusion_XlsIO_IFill_Transparency) is only applicable when [FillType](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IFill.html#Syncfusion_XlsIO_IFill_FillType) is set as SolidColor. The value is a floating-point number ranging from 0.0 (Clear) to 1.0 (Opaque).

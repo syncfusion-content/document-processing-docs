@@ -174,9 +174,9 @@ application.DataProviderType = ExcelDataProviderType.Unsafe
 {% endhighlight %}
 {% endtabs %}  
   
-### Move Rows and Columns 
+### Move Rows and Columns
 
-In addition, cells can be deleted by shifting other cells in a row or column towards up/left by one step. This can be done by using the [Clear](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Clear) method as shown in the following code.
+Cells can also be deleted by shifting the remaining cells in a row or column up or left by one step. This is done by using the [Clear](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Clear) method as shown in the following code.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Format%20rows%20and%20columns/Move%20Rows%20and%20Columns/.NET/Move%20Rows%20and%20Columns/Move%20Rows%20and%20Columns/Program.cs,180" %}
@@ -243,9 +243,9 @@ A complete working example to move rows and columns in an Excel worksheet in C# 
 N> Deletion by using above method is more efficient than looping.
 N> Row/Column index of these methods are "one based".
 
-## Show or Hide Rows and Columns 
+## Show or Hide Rows and Columns
 
-Visibility of rows and columns can be set by using the [ShowRow](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ShowRow_System_Int32_System_Boolean_) and [ShowColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ShowColumn_System_Int32_System_Boolean_) methods as shown as follows.
+The visibility of rows and columns can be set by using the [ShowRow](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ShowRow_System_Int32_System_Boolean_) and [ShowColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ShowColumn_System_Int32_System_Boolean_) methods, as shown in the following code.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Format%20rows%20and%20columns/Hide%20Rows%20and%20Columns/.NET/Hide%20Rows%20and%20Columns/Hide%20Rows%20and%20Columns/Program.cs,180" %}
@@ -658,7 +658,7 @@ worksheet.Rows(0).AutofitRows()
 'AutoFit applied to first column
 worksheet.Columns(0).AutofitColumns()
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
 
 N> Here column and row indexes are "zero based".
 

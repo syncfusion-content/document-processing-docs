@@ -1,17 +1,39 @@
 ---
 title: Improving Performance | Syncfusion
-description: This section explains how to improve performance in the .NET Excel Library with clear guidance and practical examples.
+description: Discover Syncfusion XlsIO performance best practices with code examples for reading, writing, styling, autofit, data import, and validation.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 # Improving Performance
 
-This section gives you an idea for improving performance while developing with XlsIO. 
+This section describes patterns that improve XlsIO performance when you read, write, format, or validate large workbooks. Measure a baseline first, then apply the patterns that target your bottleneck.
+
+## Prerequisites
+
+To use the examples in this section, ensure the following are in place:
+
+- Reference the **Syncfusion.XlsIO** assembly (or install the **Syncfusion.ExcelIO.Net.Core** NuGet package).
+- Include the required namespaces in your code file:
+
+  ```csharp
+  using Syncfusion.XlsIO;
+  using System.Drawing;
+  ```
+
+- Register the Syncfusion license in your application.
+- Always measure a baseline before applying a pattern, and again after, to confirm the improvement is meaningful for your data.
+
+## See also
+
+- [Working with cell or range formatting](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-cell-or-range-formatting)
+- [Working with data validation](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-data-validation)
+- [Working with data](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-data)
+- [Syncfusion XlsIO overview](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview)
 
 ## UsedRange
 
-Get [UsedRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_UsedRange) globally. It is recommended to get the **UsedRange** in loops as follows
+Cache the [UsedRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_UsedRange) outside any loop that reads row or column bounds. `UsedRange` is a computed property; calling it on every iteration of a hot loop adds avoidable overhead.
 
 {% tabs %} 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -200,71 +222,69 @@ Next
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-ExcelEngine excelEngine = new ExcelEngine();
-excelEngine.Excel.DefaultVersion = ExcelVersion.Excel2013;
-IWorkbook workbook = excelEngine.Excel.Workbooks.Create();
-IWorksheet sheet = workbook.Worksheets[0];
-IMigrantRange migrantRange = workbook.Worksheets[0].MigrantRange;
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  excelEngine.Excel.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = excelEngine.Excel.Workbooks.Create();
+  IMigrantRange migrantRange = workbook.Worksheets[0].MigrantRange;
 
-// Writing values.
-migrantRange.ResetRowColumn(1, 1);
+  // Writing values.
+  migrantRange.ResetRowColumn(1, 1);
 
-//Setting boolean value
-migrantRange.SetValue(true);
-migrantRange.ResetRowColumn(1, 2);
+  //Setting boolean value
+  migrantRange.SetValue(true);
+  migrantRange.ResetRowColumn(1, 2);
 
-//Setting DateTime value
-migrantRange.SetValue(DateTime.Now);
-migrantRange.ResetRowColumn(1, 3);
+  //Setting DateTime value
+  migrantRange.SetValue(DateTime.Now);
+  migrantRange.ResetRowColumn(1, 3);
 
-//Setting double value
-migrantRange.SetValue(5.5);
-migrantRange.ResetRowColumn(1, 4);
+  //Setting double value
+  migrantRange.SetValue(5.5);
+  migrantRange.ResetRowColumn(1, 4);
 
-//Setting int value
-migrantRange.SetValue(5);
-migrantRange.ResetRowColumn(1, 5);
+  //Setting int value
+  migrantRange.SetValue(5);
+  migrantRange.ResetRowColumn(1, 5);
 
-//Setting string value
-migrantRange.SetValue("Syncfusion");
-workbook.Version = ExcelVersion.Excel2013;
-workbook.SaveAs("MigrantRange.xlsx");
-workbook.Close();
-excelEngine.Dispose();          
+  //Setting string value
+  migrantRange.SetValue("Syncfusion");
+
+  workbook.SaveAs("MigrantRange.xlsx");
+}
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-ExcelEngine excelEngine = new ExcelEngine();
-excelEngine.Excel.DefaultVersion = ExcelVersion.Excel2013;
-IWorkbook workbook = excelEngine.Excel.Workbooks.Create();
-IWorksheet sheet = workbook.Worksheets[0];
-IMigrantRange migrantRange = workbook.Worksheets[0].MigrantRange;
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  excelEngine.Excel.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = excelEngine.Excel.Workbooks.Create();
+  IMigrantRange migrantRange = workbook.Worksheets[0].MigrantRange;
 
-// Writing values.
-migrantRange.ResetRowColumn(1, 1);
+  // Writing values.
+  migrantRange.ResetRowColumn(1, 1);
 
-//Setting boolean value
-migrantRange.SetValue(true);
-migrantRange.ResetRowColumn(1, 2);
+  //Setting boolean value
+  migrantRange.SetValue(true);
+  migrantRange.ResetRowColumn(1, 2);
 
-//Setting DateTime value
-migrantRange.SetValue(DateTime.Now);
-migrantRange.ResetRowColumn(1, 3);
+  //Setting DateTime value
+  migrantRange.SetValue(DateTime.Now);
+  migrantRange.ResetRowColumn(1, 3);
 
-//Setting double value
-migrantRange.SetValue(5.5);
-migrantRange.ResetRowColumn(1, 4);
+  //Setting double value
+  migrantRange.SetValue(5.5);
+  migrantRange.ResetRowColumn(1, 4);
 
-//Setting int value
-migrantRange.SetValue(5);
-migrantRange.ResetRowColumn(1, 5);
+  //Setting int value
+  migrantRange.SetValue(5);
+  migrantRange.ResetRowColumn(1, 5);
 
-//Setting string value
-migrantRange.SetValue("Syncfusion");
-workbook.Version = ExcelVersion.Excel2013;
-workbook.SaveAs("MigrantRange.xlsx");
-workbook.Close();
-excelEngine.Dispose();          
+  //Setting string value
+  migrantRange.SetValue("Syncfusion");
+
+  workbook.SaveAs("MigrantRange.xlsx");
+}
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
@@ -338,6 +358,7 @@ bodyStyle.Borders(ExcelBordersIndex.EdgeLeft).LineStyle = ExcelLineStyle.Thin
 bodyStyle.Borders(ExcelBordersIndex.EdgeRight).LineStyle = ExcelLineStyle.Thin
 bodyStyle.EndUpdate()
 {% endhighlight %}
+
 {% endtabs %}  
   
 ### Set default row style and default column style
@@ -467,7 +488,7 @@ application.SkipAutoFitRow = True
 
 ## Importing DataTable
 
-[ImportDataTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ImportDataTable_System_Data_DataTable_System_Int32_System_Int32_System_Boolean_) overload method which has **ImportOnSave** argument allows you to import data with less memory consumption along with improved method performance by serializing the data directly on save method. This option is preferred for larger data that need to be imported in short time.
+The [ImportDataTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ImportDataTable_System_Data_DataTable_System_Int32_System_Int32_System_Boolean_) overload that takes an `ImportOnSave` boolean argument lets you import a `DataTable` with lower memory usage by serializing the data directly during the `SaveAs` call. Prefer this overload when you are importing large data sets and do not need to modify the imported data afterward.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}

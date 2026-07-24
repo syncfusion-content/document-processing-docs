@@ -8,12 +8,12 @@ documentation: UG
 
 # Hide Excel Worksheets
 
-You can hide any type of sheet in a workbook so that, users cannot see that when opening the workbook, but, you must always leave at least one sheet visible.
+You can hide any sheet in a workbook so that users cannot see it when they open the workbook. However, you must always leave at least one sheet visible.
 A sheet can be visible, hidden, or very hidden.
 
-* A visible sheets tab appears in the bottom of the Excel window enabling users to click the tab for navigating to the sheet. By default, all new sheets are visible.
-* If a sheet is hidden, the sheets tab will only disappear. Formulas can still retrieve values stored on a hidden sheet. It just disappears from the user interface.
-* The difference between a hidden sheet and a very hidden sheet is, very hidden sheets do not appear in the unhide dialog box.
+* A visible sheet's tab appears at the bottom of the Excel window, allowing users to click the tab to navigate to the sheet. By default, all new sheets are visible.
+* If a sheet is hidden, the sheet's tab will disappear. Formulas can still retrieve values stored on a hidden sheet; it simply disappears from the user interface.
+* The difference between a hidden sheet and a very hidden sheet is that very hidden sheets do not appear in the **Unhide** dialog box.
 
 The following code shows how to hide Excel worksheets with Interop and XlsIO for .NET.
 
@@ -39,7 +39,7 @@ private void HideWorksheet()
     worksheet.Visible = XlSheetVisibility.xlSheetHidden;
 
     //Save the file
-    workbook.SaveCopyAs("InteropOutput_HiddenWorksheet.xlsx");
+    workbook.SaveAs("InteropOutput_HiddenWorksheet.xlsx");
 
     //Quit the application
     excelApp.Quit();
@@ -65,7 +65,7 @@ private void HideWorksheet()
   worksheet.Visible = XlSheetVisibility.xlSheetHidden;
 
   //Save the file
-  workbook.SaveCopyAs("InteropOutput_HiddenWorksheet.xlsx");
+  workbook.SaveAs("InteropOutput_HiddenWorksheet.xlsx");
 
   //Quit the application
   excelApp.Quit();
@@ -90,7 +90,7 @@ Private Sub HideWorksheet()
   worksheet.Visible = XlSheetVisibility.xlSheetHidden
 
   'Save the file
-  workbook.SaveCopyAs("InteropOutput_HiddenWorksheet.xlsx")
+  workbook.SaveAs("InteropOutput_HiddenWorksheet.xlsx")
 
   'Quit the application
   excelApp.Quit()
@@ -171,7 +171,7 @@ Private Sub HideWorksheet()
     'Hide the worksheet
     worksheet.Visibility = WorksheetVisibility.Hidden
 
-    'Save as Excel file
+    'Save the workbook
     workbook.SaveAs("XlsIOOutput_HiddenWorksheet.xlsx")
   End Using
 End Sub

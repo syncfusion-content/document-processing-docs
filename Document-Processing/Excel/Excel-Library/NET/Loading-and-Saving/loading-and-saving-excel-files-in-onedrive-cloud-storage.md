@@ -1,31 +1,36 @@
 ---
-title: Loading and saving Excel document in OneDrive Storage | Syncfusion
-description: Explains how to load and save Excel files in OneDrive Cloud Storage using .NET Core Excel (XlsIO) library without Microsoft Excel or interop dependencies.
+title: Loading and Saving Excel files in OneDrive Cloud Storage | Syncfusion
+description: Explains how to load and save Excel files in OneDrive Cloud Storage using the .NET Core Excel (XlsIO) library without Microsoft Excel or interop dependencies.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Loading and Saving Excel document in OneDrive Cloud Storage
+# Loading and Saving Excel files in OneDrive Cloud Storage
 
 ## Prerequisites
 
-* **[Microsoft Azure subscription](https://portal.azure.com/#home)** is required. 
-* **[Register an application in App Registrations within the Azure portal](https://learn.microsoft.com/en-us/graph/auth-register-app-v2)** is required
-* The **Application (client) ID**, **Tenant ID**, and **Client Secret** from the registered app are required for authentication and API access.
+* An active **[Microsoft Azure subscription](https://portal.azure.com/#home)**.
+* An app **[registered in Microsoft Entra ID](https://learn.microsoft.com/en-us/graph/auth-register-app-v2)** (formerly Azure AD) with the **Microsoft Graph** application permission `Files.Read.All` (loading) or `Files.ReadWrite.All` (saving), and admin consent granted.
+* The **Application (client) ID**, **Directory (tenant) ID**, and **Client Secret** from the registered app.
+* A **OneDrive** account and the **User ID (UPN or email)** of the user whose OneDrive you want to access.
+* Visual Studio 2019 or later with the **ASP.NET and web development** workload.
+* A Syncfusion<sup>&reg;</sup> license key. Refer to [How to register the Syncfusion license key](https://help.syncfusion.com/common/essential-studio/licensing/how-to-register-in-an-application) for details.
 
-## Loading Excel document from OneDrive
+N> Do not hard-code the **Client Secret** in source code. Store it in a secure location (for example, **Azure Key Vault**, environment variables, or user secrets) and load it at runtime. Rotate the secret periodically.
+
+## Loading Excel files from OneDrive Cloud Storage
 
 Steps to load an Excel document from OneDrive Cloud Storage.
 
 Step 1: Create a new ASP.NET Core Web Application (Model-View-Controller).
 
-![Create a ASP.NET Core Web App project in visual studio](Loading-and-Saving_images/Loading-and-Saving_images_img1.png)
+![Create an ASP.NET Core Web App project in Visual Studio](Loading-and-Saving_images/Loading-and-Saving_images_img1.png)
 
 Step 2: Name the project.
 
 ![Name the project](Loading-and-Saving_images/Loading-and-Saving_images_img2.png)
 
-Step 3: Install the following **Nuget packages** in your application from [NuGet.org](https://www.nuget.org/).
+Step 3: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/).
 * [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core)
 * [Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client)
 
@@ -49,13 +54,24 @@ Step 4: Add a new button in the **Index.cshtml** as shown below.
 Step 5: Include the following namespaces in **HomeController.cs**.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
-using Syncfusion.XlsIO;
-using Syncfusion.Drawing;
+using System;
+using System.IO;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Identity.Client;
+using Syncfusion.XlsIO;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the below code snippet in **HomeController.cs** to **load an Excel document from OneDrive Cloud Storage**.
+Step 6: Register the Syncfusion license key in **Program.cs** before `builder.Build()`:
+
+```csharp
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+```
+
+Step 7: Include the following code snippet in **HomeController.cs** to **load an Excel document from OneDrive Cloud Storage**. The snippet is the body of the `EditDocument` action method that the button in Step 4 posts to, plus the `DownloadDocumentFromOneDrive` helper it calls.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -84,7 +100,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     outputStream.Position = 0;
 
     //Download the Excel file in the browser
-    FileStreamResult fileStreamResult = new FileStreamResult(outputStream, "application/excel");
+    FileStreamResult fileStreamResult = new FileStreamResult(outputStream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
     fileStreamResult.FileDownloadName = "EditExcel.xlsx";
     return fileStreamResult;
 }
@@ -92,7 +108,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 // Download file from OneDrive
 public async Task<MemoryStream> DownloadDocumentFromOneDrive()
 {
-    //Replace with your application (client) ID, tenant ID, and secret
+    //Load these values from configuration (for example, Azure Key Vault, environment variables, or user secrets).
+    //Do not hard-code the client secret in source code.
     string clientId = "your-client-id";
     string tenantId = "your-tenant-id";
     string clientSecret = "your-client-secret";
@@ -153,19 +170,19 @@ By executing the program, you will get the **Excel document** as follows.
 
 ![Output File](Loading-and-Saving_images/Loading-and-Saving_images_img5.png)
 
-## Saving Excel document to OneDrive
+## Saving Excel files to OneDrive Cloud Storage
 
 Steps to save an Excel document to OneDrive Cloud Storage.
 
 Step 1: Create a new ASP.NET Core Web Application (Model-View-Controller).
 
-![Create a ASP.NET Core Web App project in visual studio](Loading-and-Saving_images/Loading-and-Saving_images_img1.png)
+![Create an ASP.NET Core Web App project in Visual Studio](Loading-and-Saving_images/Loading-and-Saving_images_img1.png)
 
 Step 2: Name the project.
 
 ![Name the project](Loading-and-Saving_images/Loading-and-Saving_images_img6.png)
 
-Step 3: Install the following **Nuget packages** in your application from [NuGet.org](https://www.nuget.org/).
+Step 3: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/).
 * [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core)
 * [Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client)
 
@@ -189,13 +206,21 @@ Step 4: Add a new button in the **Index.cshtml** as shown below.
 Step 5: Include the following namespaces in **HomeController.cs**.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
+using System;
+using System.IO;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Identity.Client;
 using Syncfusion.XlsIO;
 using Syncfusion.Drawing;
-using Microsoft.Identity.Client;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the below code snippet in **HomeController.cs** to **Save an Excel document to OneDrive Cloud Storage**.
+Step 6: Register the Syncfusion license key (see the **Loading** section above) if you have not already done so.
+
+Step 7: Include the following code snippet in **HomeController.cs** to **save an Excel document to OneDrive Cloud Storage**. The snippet is the body of the `CreateDocument` action method that the button in Step 4 posts to, plus the `UploadDocumentToOneDrive` helper it calls. The image file `AdventureCycles-Logo.png` must be present in the project and copied to the publish output.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -386,7 +411,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 // Upload file to OneDrive
 public async Task<MemoryStream> UploadDocumentToOneDrive(MemoryStream stream)
 {
-    //Replace with your application (client) ID, tenant ID, and secret
+    //Load these values from configuration (for example, Azure Key Vault, environment variables, or user secrets).
+    //Do not hard-code the client secret in source code.
     string clientId = "your-client-id";
     string tenantId = "your-tenant-id";
     string clientSecret = "your-client-secret";
@@ -414,9 +440,10 @@ public async Task<MemoryStream> UploadDocumentToOneDrive(MemoryStream stream)
     var httpClient = new HttpClient();
     httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", authenticationResult.AccessToken);
 
-    //Upload the file to OneDrive
+    //Upload the file to OneDrive. Set the content type to the standard Excel MIME for .xlsx
+    //so the file opens directly in Excel Online.
     var content = new StreamContent(stream);
-    content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
+    content.Headers.ContentType = new MediaTypeHeaderValue("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
 
     //Construct the OneDrive upload URL using user ID and file path
     var uploadUrl = $"https://graph.microsoft.com/v1.0/users/{userId}/drive/root:{filePath}:/content";
@@ -441,7 +468,7 @@ public async Task<MemoryStream> UploadDocumentToOneDrive(MemoryStream stream)
 
 A complete working example of how to save an Excel document to OneDrive Cloud Storage in ASP.NET Core is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Loading%20and%20Saving/OneDrive/Saving/Create%20Excel).
 
-By executing the program, you will get the **Excel document** as follows.
+By executing the program, you will get the **Excel document** as shown below.
 
 ![Output File](Loading-and-Saving_images/Loading-and-Saving_images_img7.png)
 

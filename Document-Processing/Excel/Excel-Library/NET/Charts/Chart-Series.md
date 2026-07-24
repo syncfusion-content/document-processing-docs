@@ -6,38 +6,38 @@ control: XlsIO
 documentation: UG
 ---
 
-# Chart Series in Excel document
+# Chart Series in an Excel document
 
-In a chart, a **series** represents a set of related data points, often depicted using lines, bars, or markers to show data trends or comparisons. Using XlsIO, you can **customize the series in the chart**.
+In a chart, a **series** represents a set of related data points, often depicted using lines, bars, or markers to show data trends or comparisons. Using XlsIO, you can **customize the series**.
 
 ## Add
 
-The following code snippet illustrates how to add series in chart.
+The following code snippet illustrates how to add a series to a chart. Series are zero-indexed, so the first series is `Series[0]`. This snippet assumes `chart` is an existing `IChartShape` and `worksheet` is an existing `IWorksheet`.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 //Add series
-IChartSerie Amount = chart.Series.Add("Amount");
-Amount.Values = worksheet.Range["B2:B6"];
-Amount.CategoryLabels = worksheet.Range["A2:A6"];
+IChartSerie amount = chart.Series.Add("Amount");
+amount.Values = worksheet.Range["B2:B6"];
+amount.CategoryLabels = worksheet.Range["A2:A6"];
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Add series
-IChartSerie Amount = chart.Series.Add("Amount");
-Amount.Values = worksheet.Range["B2:B6"];
-Amount.CategoryLabels = worksheet.Range["A2:A6"];
+IChartSerie amount = chart.Series.Add("Amount");
+amount.Values = worksheet.Range["B2:B6"];
+amount.CategoryLabels = worksheet.Range["A2:A6"];
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Add series
-IChartSerie Amount = chart.Series.Add("Amount")
-Amount.Values = worksheet.Range["B2:B6"]
-Amount.CategoryLabels = worksheet.Range["A2:A6"]
+Dim amount As IChartSerie = chart.Series.Add("Amount")
+amount.Values = worksheet.Range("B2:B6")
+amount.CategoryLabels = worksheet.Range("A2:A6")
 {% endhighlight %}
 {% endtabs %}
 
-## Format
+## Formatting
 
 ### Border
 
@@ -59,7 +59,7 @@ chart.Series[1].SerieFormat.LineProperties.LineWeight = ExcelChartLineWeight.Nar
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-' Set the border
+'Set the border
 chart.Series(1).SerieFormat.LineProperties.LineColor = Color.Red
 chart.Series(1).SerieFormat.LineProperties.LinePattern = ExcelChartLinePattern.Dot
 chart.Series(1).SerieFormat.LineProperties.LineWeight = ExcelChartLineWeight.Narrow
@@ -107,17 +107,17 @@ chart.Series[1].SerieFormat.Fill.Transparency = 1.0;
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Set the transparency 
+//Set the transparency
 chart.Series[1].SerieFormat.Fill.Transparency = 1.0;
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Set the transparency 
+'Set the transparency
 chart.Series(1).SerieFormat.Fill.Transparency = 1.0
 {% endhighlight %}
 {% endtabs %}
 
-N> [Transparency](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IFill.html#Syncfusion_XlsIO_IFill_Transparency) is only applicable when [FillType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IFill.html#Syncfusion_XlsIO_IFill_FillType) is set as SolidColor. Color-shaded fill is represented as a floating-point value ranging from 0.0 (Clear) to 1.0 (Opaque).
+N> [Transparency](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IFill.html#Syncfusion_XlsIO_IFill_Transparency) is only applicable when [FillType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IFill.html#Syncfusion_XlsIO_IFill_FillType) is set as SolidColor. The value is a floating-point number ranging from 0.0 (Clear) to 1.0 (Opaque).
 
 ## Series Type
 
@@ -339,9 +339,9 @@ A complete working example for the chart data series in C# is present on [this G
 
 ## Series Settings
 
-### Add DataPoint as total
+### Mark a Data Point as Total
 
-The following code snippet illustrates how to add the Data Point as total in chart.
+The following code snippet illustrates how to mark a data point as total in a chart.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -360,9 +360,9 @@ chart.Series(0).DataPoints(3).SetAsTotal = True
 {% endhighlight %}
 {% endtabs %}
 
-### Add Connector lines between data points 
+### Add Connector Lines Between Data Points
 
-The following code snippet illustrates how to add the connector lines between data points. 
+The following code snippet illustrates how to add the connector lines between data points.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -381,11 +381,11 @@ chart.Series(0).SerieFormat.ShowConnectorLines = True
 {% endhighlight %}
 {% endtabs %}
 
-### Add space between bars
+### Add Space Between Bars
 
 Spaces between chart bars are of two types.
 
-1. **Series Overlap** : Space between bars of different data series of single category.
+1. **Series Overlap** : Space between bars of different data series of a single category.
 2. **Gap Width** : Space between different categories.
 
 XlsIO allows you to adjust the space between chart bars using [Overlap](https://help.syncfusion.com/cr/windowsforms/Syncfusion.XlsIO.IChartFormat.html#Syncfusion_XlsIO_IChartFormat_Overlap) and [GapWidth](https://help.syncfusion.com/cr/windowsforms/Syncfusion.XlsIO.IChartFormat.html#Syncfusion_XlsIO_IChartFormat_GapWidth) properties of [IChartFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IChartFormat.html) interface.
@@ -394,7 +394,7 @@ The following code snippet illustrates how to add space between bars.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Chart%20Bars%20Spacing/.NET/Chart%20Bars%20Spacing/Chart%20Bars%20Spacing/Program.cs,180" %}
-//Adding space between bars of different series of single category.
+//Adding space between bars of different series of a single category.
 chart.Series[0].SerieFormat.CommonSerieOptions.Overlap = 60;
 
 //Adding space between bars of different categories.
@@ -402,7 +402,7 @@ chart.Series[0].SerieFormat.CommonSerieOptions.GapWidth = 80;
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Adding space between bars of different series of single category.
+//Adding space between bars of different series of a single category.
 chart.Series[0].SerieFormat.CommonSerieOptions.Overlap = 60;
 
 //Adding space between bars of different categories.
@@ -489,7 +489,7 @@ chart.Series(0).SerieFormat.CommonSerieOptions.HasDropLines = True
 
 'Apply formats to DropLines.
 chart.Series(0).SerieFormat.CommonSerieOptions.DropLines.LineColor = Color.Red
-chart.Series(0).SerieFormat.CommonSerieOptions.DropLines.LinePattern = ExcelChartLinePattern.Dot;
+chart.Series(0).SerieFormat.CommonSerieOptions.DropLines.LinePattern = ExcelChartLinePattern.Dot
 chart.Series(0).SerieFormat.CommonSerieOptions.DropLines.LineWeight = ExcelChartLineWeight.Narrow
 {% endhighlight %}
 {% endtabs %}
@@ -498,7 +498,7 @@ A complete working example to add drop lines of chart in C# is present on [this 
 
 ### Add Series Lines
 
-The following code snippet illustrates how to add series lines in chart.
+The following code snippet illustrates how to add series lines to a chart.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Series%20Lines/.NET/Series%20Lines/Series%20Lines/Program.cs,180" %}
@@ -523,7 +523,7 @@ chart.Series[0].SerieFormat.CommonSerieOptions.PieSeriesLine.LineWeight = ExcelC
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Set HasSeriesLines property to true
-chart.Series(0).SerieFormat.CommonSerieOptions.HasSeriesLines = true
+chart.Series(0).SerieFormat.CommonSerieOptions.HasSeriesLines = True
 
 'Apply formats to SeriesLines
 chart.Series(0).SerieFormat.CommonSerieOptions.PieSeriesLine.LineColor = Color.Red

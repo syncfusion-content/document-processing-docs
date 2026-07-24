@@ -6,17 +6,17 @@ control: XlsIO
 documentation: UG
 ---
 
-# Chart Axis in Excel document
+# Chart Axis in an Excel document
 
 Charts typically have two axes that are used to measure and categorize data.
--  Horizontal axis (also known as category axis or x axis).
--  Vertical axis (also known as value axis or y axis).
+- Horizontal axis (also known as category axis or x-axis).
+- Vertical axis (also known as value axis or y-axis).
 
-Using XlsIO, you can **customize the axis in the chart**.
+Using XlsIO, you can **customize the axis**.
 
-## Add
+## Set the Axis Title
 
-The following code snippet illustrates how to add the chart axis title.
+The following code snippet illustrates how to set the chart axis title.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -49,7 +49,7 @@ The following code snippet illustrates how to format the border of the chart axi
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//Set the border 
+//Set the border
 chart.PrimaryCategoryAxis.Border.LinePattern = ExcelChartLinePattern.CircleDot;
 chart.PrimaryCategoryAxis.Border.LineColor = Syncfusion.Drawing.Color.Blue;
 chart.PrimaryCategoryAxis.Border.LineWeight = ExcelChartLineWeight.Hairline;
@@ -64,7 +64,7 @@ chart.SecondaryValueAxis.Border.LineWeight = ExcelChartLineWeight.Hairline;
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Set the border 
+//Set the border
 chart.PrimaryCategoryAxis.Border.LinePattern = ExcelChartLinePattern.CircleDot;
 chart.PrimaryCategoryAxis.Border.LineColor = Syncfusion.Drawing.Color.Blue;
 chart.PrimaryCategoryAxis.Border.LineWeight = ExcelChartLineWeight.Hairline;
@@ -79,7 +79,7 @@ chart.SecondaryValueAxis.Border.LineWeight = ExcelChartLineWeight.Hairline;
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Set the border 
+'Set the border
 chart.PrimaryCategoryAxis.Border.LinePattern = ExcelChartLinePattern.CircleDot
 chart.PrimaryCategoryAxis.Border.LineColor = Syncfusion.Drawing.Color.Blue
 chart.PrimaryCategoryAxis.Border.LineWeight = ExcelChartLineWeight.Hairline
@@ -285,9 +285,9 @@ chart.PrimaryValueAxis.HasMinorGridLines = False
 {% endhighlight %}
 {% endtabs %}
 
-### Max cross
+### Max Cross
 
-The following code snippet illustrates how to set the max cross in the chart axis.
+The following code snippet illustrates how to set the Max Cross in the chart axis.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -302,7 +302,7 @@ chart.SecondaryValueAxis.IsMaxCross = true;
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Set maxcross
-chart.SecondaryValueAxis.IsMaxCross = true
+chart.SecondaryValueAxis.IsMaxCross = True
 {% endhighlight %}
 {% endtabs %}
 
@@ -350,7 +350,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	chart.PrimaryValueAxis.Title = "Precipitation,in.";
 	chart.SecondaryValueAxis.Title = "Temperature,deg.F";
 
-	//Set the border 
+	//Set the border
 	chart.PrimaryCategoryAxis.Border.LinePattern = ExcelChartLinePattern.CircleDot;
 	chart.PrimaryCategoryAxis.Border.LineColor = Syncfusion.Drawing.Color.Blue;
 	chart.PrimaryCategoryAxis.Border.LineWeight = ExcelChartLineWeight.Hairline;
@@ -405,11 +405,11 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	//Showing major gridlines
 	chart.PrimaryValueAxis.HasMajorGridLines = true;
-	
+
 	//Hiding minor gridlines
 	chart.PrimaryValueAxis.HasMinorGridLines = false;
 
-	//Saving the workbook 
+	//Saving the workbook
 	workbook.SaveAs(Path.GetFullPath("Output/Output.xlsx"));
 }
 {% endhighlight %}
@@ -428,7 +428,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     chart.PrimaryValueAxis.Title = "Precipitation,in.";
     chart.SecondaryValueAxis.Title = "Temperature,deg.F";
 
-    //Set the border 
+    //Set the border
     chart.PrimaryCategoryAxis.Border.LinePattern = ExcelChartLinePattern.CircleDot;
     chart.PrimaryCategoryAxis.Border.LineColor = Syncfusion.Drawing.Color.Blue;
     chart.PrimaryCategoryAxis.Border.LineWeight = ExcelChartLineWeight.Hairline;
@@ -483,7 +483,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
     //Showing major gridlines
     chart.PrimaryValueAxis.HasMajorGridLines = true;
-    
+
     //Hiding minor gridlines
     chart.PrimaryValueAxis.HasMinorGridLines = false;
 
@@ -505,7 +505,7 @@ Using excelEngine As New ExcelEngine()
     chart.PrimaryValueAxis.Title = "Precipitation,in."
     chart.SecondaryValueAxis.Title = "Temperature,deg.F"
 
-    'Set the border 
+    'Set the border
     chart.PrimaryCategoryAxis.Border.LinePattern = ExcelChartLinePattern.CircleDot
     chart.PrimaryCategoryAxis.Border.LineColor = Syncfusion.Drawing.Color.Blue
     chart.PrimaryCategoryAxis.Border.LineWeight = ExcelChartLineWeight.Hairline

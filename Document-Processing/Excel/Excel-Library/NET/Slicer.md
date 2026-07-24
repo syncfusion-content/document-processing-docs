@@ -10,7 +10,7 @@ documentation: UG
 
 Slicers are UI filters that help to display only specific data based on the selection criteria. They provide easy and simple UI options to enable or disable the filters in a table.
 
-Syncfusion<sup>&reg;</sup> XlsIO supports below features.
+Syncfusion<sup>&reg;</sup> XlsIO supports the following features.
 
 * Create slicers and filter table data.
 * Format slicers with built-in styles. 
@@ -80,7 +80,7 @@ End Using
 
 ### Slicer name
 
-The existing name of a slicer can be obtained or changed through **Name** property. 
+The existing name of a slicer can be obtained or changed through the **Name** property.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -101,7 +101,7 @@ slicer.Name = "Slicer1"
 
 ### Slicer caption
 
-Slicer caption can be modified through **Caption** property. 
+The slicer caption can be modified through the **Caption** property.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -122,7 +122,7 @@ slicer.Caption = "Select any value"
 
 ### Positioning a Slicer
 
-Slicer can be positioned in the worksheet as required, as below.
+A slicer can be positioned in the worksheet as shown below.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -170,7 +170,7 @@ slicer.Width = 150
 
 ### Resize Slicer item
 
-Slicer item can also the resized, as shown below.
+Slicer items can also be resized, as shown below.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -194,7 +194,7 @@ slicer.SlicerItemWidth = 80
 
 ### Slicer columns
 
-Select the number of columns inside a slicer as below.
+Set the number of columns inside the slicer as shown below.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -215,7 +215,7 @@ slicer.NumberOfColumns = 2
 
 ### Slicer header
 
-A slicer header can be shown or hidden through **DisplayHeader** property.
+A slicer header can be shown or hidden through the **DisplayHeader** property.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -236,7 +236,7 @@ slicer.DisplayHeader = True
 
 ### Slicer style
 
-Slicer style can be selected as shown below.
+The slicer style can be set as shown below.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -329,7 +329,7 @@ cache.IsAscending = True
 
 ### Sort the slicer items using Custom list sorting option
 
-The following example shows how to sort the slicer items using Custom list sorting option
+The following example shows how to sort the slicer items using the custom list sorting option.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -351,7 +351,7 @@ cache.UseCustomListSorting = True
 {% endhighlight %}
 {% endtabs %}
 
-The following code snippet illustrates how to format an existing slicer with all the above discussed properties. 
+The following code snippet illustrates how to format an existing slicer with all the previously discussed properties.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}

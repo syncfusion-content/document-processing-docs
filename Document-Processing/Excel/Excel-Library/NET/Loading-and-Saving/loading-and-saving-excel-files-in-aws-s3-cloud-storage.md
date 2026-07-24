@@ -1,29 +1,34 @@
 ---
-title: Loading and saving Excel document in AWS S3 Cloud Storage | Syncfusion
-description: Explains how to load and save Excel files in AWS S3 Cloud Storage using .NET Core Excel (XlsIO) library without Microsoft Excel or interop dependencies.
+title: Loading and Saving Excel files in AWS S3 Cloud Storage | Syncfusion
+description: Explains how to load and save Excel files in AWS S3 Cloud Storage using the .NET Core Excel (XlsIO) library without Microsoft Excel or interop dependencies.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Loading and Saving Excel document in AWS S3 Cloud Storage
+# Loading and Saving Excel files in AWS S3 Cloud Storage
 
-## Prerequisites  
+This article explains how to **load an Excel file from AWS S3 Cloud Storage** and **save an Excel file to AWS S3 Cloud Storage** using Syncfusion XlsIO.
 
-* **[AWS S3 Cloud Storage](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html)** is required. 
+## Prerequisites
 
-## Loading Excel document from AWS S3
+* An AWS account with an **[Amazon S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html)** and permission to read/write objects in it.
+* Visual Studio 2019 or later with the **ASP.NET and web development** workload.
+* AWS credentials (access key + secret key, or an attached IAM role).
+* A Syncfusion<sup>&reg;</sup> license key. Refer to [How to register the Syncfusion license key](https://help.syncfusion.com/common/essential-studio/licensing/how-to-register-in-an-application) for details.
+
+## Loading Excel files from AWS S3
 
 Steps to load an Excel document from AWS S3 Cloud Storage.
 
 Step 1: Create a new ASP.NET Core Web Application (Model-View-Controller).
 
-![Create a ASP.NET Core Web App project in visual studio](Loading-and-Saving_images/Loading-and-Saving_images_img1.png)
+![Create an ASP.NET Core Web App project in Visual Studio](Loading-and-Saving_images/Loading-and-Saving_images_img1.png)
 
 Step 2: Name the project.
 
 ![Name the project](Loading-and-Saving_images/Loading-and-Saving_images_img2.png)
 
-Step 3: Install the following **Nuget packages** in your application from [NuGet.org](https://www.nuget.org/).
+Step 3: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/).
 * [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core)
 * [AWSSDK.S3](https://www.nuget.org/packages/AWSSDK.S3)
 
@@ -65,9 +70,10 @@ string bucketName = "your-bucket-name";
 //Name of the Excel file you want to load from AWS S3
 string key = "CreateExcel.xlsx";
 
-// Configure AWS credentials and region
-var region = Amazon.RegionEndpoint.USEast1; 
-var credentials = new Amazon.Runtime.BasicAWSCredentials("your-access-key", "your-secret-key"); 
+// Configure AWS credentials and region.
+// The default credentials provider chain picks up credentials from the environment,
+// the shared AWS credentials file, or an attached IAM role.
+var region = Amazon.RegionEndpoint.USEast1;
 var config = new AmazonS3Config
 {
     RegionEndpoint = region
@@ -116,7 +122,7 @@ try
                 outputStream.Position = 0;
 
                 //Download the Excel file in the browser
-                FileStreamResult fileStreamResult = new FileStreamResult(outputStream, "application/excel");
+                FileStreamResult fileStreamResult = new FileStreamResult(outputStream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
                 fileStreamResult.FileDownloadName = "EditExcel.xlsx";
                 return fileStreamResult;
             }
@@ -137,19 +143,19 @@ By executing the program, you will get the **Excel document** as follows.
 
 ![Output File](Loading-and-Saving_images/Loading-and-Saving_images_img5.png)
 
-## Saving Excel document to AWS S3
+## Saving Excel files to AWS S3
 
 Steps to save an Excel document to AWS S3 Cloud Storage.
 
 Step 1: Create a new ASP.NET Core Web Application (Model-View-Controller).
 
-![Create a ASP.NET Core Web App project in visual studio](Loading-and-Saving_images/Loading-and-Saving_images_img1.png)
+![Create an ASP.NET Core Web App project in Visual Studio](Loading-and-Saving_images/Loading-and-Saving_images_img1.png)
 
 Step 2: Name the project.
 
 ![Name the project](Loading-and-Saving_images/Loading-and-Saving_images_img6.png)
 
-Step 3: Install the following **Nuget packages** in your application from [NuGet.org](https://www.nuget.org/).
+Step 3: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/).
 * [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core)
 * [AWSSDK.S3](https://www.nuget.org/packages/AWSSDK.S3)
 
@@ -181,7 +187,9 @@ using Syncfusion.Drawing;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the below code snippet in **HomeController.cs** to **Save an Excel document to AWS S3 Storage**.
+Step 6: Register the Syncfusion license key (see the **Loading** section above) if you have not already done so.
+
+Step 7: Include the following code snippet in **HomeController.cs** to **save an Excel document to AWS S3 Storage**. The snippet is the body of the `CreateDocument` action method that the button in Step 4 posts to. The image file `AdventureCycles-Logo.png` must be present in the project and copied to the publish output.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -369,15 +377,16 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     //Name of the Excel file you want to upload
     string keyName = "CreateExcel.xlsx"; 
 
-    // Configure AWS credentials and region
-    var region = RegionEndpoint.USEast1; 
-    var credentials = new Amazon.Runtime.BasicAWSCredentials("your-access-key", "your-secret-key"); 
+    // Configure AWS region.
+    // The default credentials provider chain picks up credentials from the environment,
+    // the shared AWS credentials file, or an attached IAM role.
+    var region = RegionEndpoint.USEast1;
     var config = new AmazonS3Config
     {
         RegionEndpoint = region
     };
 
-    using (var client = new AmazonS3Client(credentials, config))
+    using (var client = new AmazonS3Client(config))
     {
         var fileTransferUtility = new TransferUtility(client);
 
@@ -403,7 +412,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 A complete working example of how to save an Excel document to AWS S3 Cloud Storage in ASP.NET Core is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Loading%20and%20Saving/AWS/Saving/Create%20Excel).
 
-By executing the program, you will get the **Excel document** as follows.
+By executing the program, you will get the **Excel document** as shown below.
 
 ![Output File](Loading-and-Saving_images/Loading-and-Saving_images_img7.png)
 

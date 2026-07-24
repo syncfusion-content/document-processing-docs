@@ -1,6 +1,6 @@
 ---
 title: Color Scales | Excel library | Syncfusion
-description: In this section, you can learn how to apply color scales using conditional formatting in an Excel document with XlsIO
+description: Learn how to apply color-scale conditional formatting rules in an Excel document using Syncfusion XlsIO.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -8,11 +8,19 @@ documentation: UG
 
 # Color Scales in Conditional Formatting
 
-Color Scales let you create visual effects in your data to see how the value of a cell is compared with the values in a range of cells. A color scale uses cell shading, as opposed to bars, to communicate relative values, beyond the relative size of the value of a cell.
+Color scales apply cell shading to visually indicate how the value of a cell compares to the other values in a range. Unlike data bars, color scales use cell background color rather than an embedded bar to communicate relative values.
 
-The following code example illustrates how to apply color scales using [IColorScale](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IColorScale.html) interface in XlsIO.
+The following code example illustrates how to apply color scales using the [IColorScale](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IColorScale.html) interface in XlsIO. Key members are:
 
-{% tabs %}  
+* **SetConditionCount** – sets the number of colors in the scale; XlsIO supports 2-color and 3-color scales.
+* **Criteria** – an array of ColorScaleCriteria(length 2 or 3), one for each color in the scale.
+* **FormatColorRGB** (on each criterion) – the color used when the criterion is met.
+* **Type** (on each criterion) – the [ConditionValueType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ConditionValueType.html) that defines how the criterion's threshold is interpreted: `LowestValue`, `HighestValue`, `Percent`, `Percentile`, `Number`, or `Formula`.
+* **Value** (on each criterion) – the threshold value, required when **Type** is `Percent`, `Percentile`, `Number`, or `Formula`; ignored when **Type** is `LowestValue` or `HighestValue`.
+
+N> Color-scale conditional formatting is supported in Excel 2007 and later formats (`.xlsx`, `.xlsm`).
+
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Color%20Scales/.NET/Color%20Scales/Color%20Scales/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -27,7 +35,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	conditionalFormat.FormatType = ExcelCFType.ColorScale;
 	IColorScale colorScale = conditionalFormat.ColorScale;
 
-	//Sets 3 - color scale
+	//Set a 3-color scale
 	colorScale.SetConditionCount(3);
 	colorScale.Criteria[0].FormatColorRGB = Color.FromArgb(230, 197, 218);
 	colorScale.Criteria[0].Type = ConditionValueType.LowestValue;
@@ -60,7 +68,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     conditionalFormat.FormatType = ExcelCFType.ColorScale;
     IColorScale colorScale = conditionalFormat.ColorScale;
 
-    //Sets 3 - color scale
+    //Set a 3-color scale
     colorScale.SetConditionCount(3);
     colorScale.Criteria[0].FormatColorRGB = Color.FromArgb(230, 197, 218);
     colorScale.Criteria[0].Type = ConditionValueType.LowestValue;
@@ -90,7 +98,7 @@ Using excelEngine As New ExcelEngine()
     conditionalFormat.FormatType = ExcelCFType.ColorScale
     Dim colorScale As IColorScale = conditionalFormat.ColorScale
 
-    ' Sets 3 - color scale
+    ' Set a 3-color scale
     colorScale.SetConditionCount(3)
     colorScale.Criteria(0).FormatColorRGB = Color.FromArgb(230, 197, 218)
     colorScale.Criteria(0).Type = ConditionValueType.LowestValue

@@ -1,16 +1,16 @@
 ---
-title: List of APIs under IRange | Excel library | Syncfusion
-description: In this section, you can learn about the list of APIs under IRange for Excel document using .NET Excel Library.
+title: List of APIs under IRange | Excel Library | Syncfusion
+description: In this section, you can learn about the properties and methods of the IRange interface for an Excel worksheet using the .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# List of APIs under IRange 
+# List of APIs under IRange
 
 ## Cell Address
 
-The following code example illustrates the usage of [Address](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Address), [AddressGlobal](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_AddressGlobal), [AddressLocal](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_AddressLocal), [AddressR1C1](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_AddressR1C1), [AddressR1C1Local](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_AddressR1C1Local) properties.
+The following code example illustrates the usage of [Address](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Address), [AddressGlobal](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_AddressGlobal), [AddressLocal](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_AddressLocal), [AddressR1C1](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_AddressR1C1), and [AddressR1C1Local](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_AddressR1C1Local) properties. `Address` and `AddressLocal` return the range in A1 style (in English or the current locale), while `AddressR1C1` and `AddressR1C1Local` return the range in R1C1 style.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -161,7 +161,7 @@ End Using
 
 ## Borders
 
-The following code example illustrates how to set border styles for a worksheet range using [Borders](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Borders) property.
+The following code example illustrates how to set border styles for a worksheet range using the [Borders](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Borders) property. The [ExcelBordersIndex](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelBordersIndex.html) and [ExcelLineStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelLineStyle.html) enums identify which border edge to style and which line style to apply.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -242,9 +242,9 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-## Built-In-Style
+## Built-In Style
 
-The following code example illustrates how to add [BuiltInStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_BuiltInStyle) for a worksheet range.
+The following code example illustrates how to add a [BuiltInStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_BuiltInStyle) for a worksheet range. The [BuiltInStyles](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.BuiltInStyles.html) enum provides the available built-in style names.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -303,9 +303,9 @@ End Using
 
 ## Calculated Value
 
-[CalculatedValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CalculatedValue) is the evaluated value of the formula. The following code example illustrates how to get the **CalculatedValue** of the formula.
+[CalculatedValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CalculatedValue) is the evaluated value of a formula. The following code example illustrates how to get the **CalculatedValue** of a formula. It is recommended to call [DisableSheetCalculations](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_DisableSheetCalculations) after reading the value to free resources.
 
-N> It is mandatory to enable sheet calculations i.e., **worksheet.EnableSheetCalculations();** before accessing the **CalculatedValue**. Else, **CalculatedValue** will be returned as null.
+N> It is mandatory to enable sheet calculations via [EnableSheetCalculations](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_EnableSheetCalculations) before accessing the **CalculatedValue**; otherwise, **CalculatedValue** will be returned as `null`.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -394,7 +394,7 @@ End Using
 
 ## Cells
 
-[Cells](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Cells) property maintains the collection of cells in a worksheet range. The following code example illustrates how to access this property.
+The [Cells](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Cells) property returns an `IRange[]` array containing the individual cells in the worksheet range. The following code example illustrates how to access this property.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -461,7 +461,7 @@ End Using
 
 ## Cell Style Name
 
-[CellStyleName](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CellStyleName) represents the name of the style of worksheet range/cell. The default value is **Normal**.
+[CellStyleName](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CellStyleName) represents the name of the style of a worksheet range or cell. The default value is **Normal**. Use [IStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IStyle.html) to create custom styles and [ExcelKnownColors](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelKnownColors.html) for standard color values.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -538,7 +538,7 @@ End Using
 
 ## Column
 
-[Column](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Column) property gets the column index of first column in worksheet range, which is one-index based. 
+The [Column](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Column) property returns the column index of the first column in the worksheet range; the index is **one-based**.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -588,7 +588,7 @@ End Using
 
 ## Columns
 
-[Columns](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Columns) property maintains the collection of columns in a worksheet range. 
+The [Columns](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Columns) property returns an `IRange[]` array containing the individual columns in the worksheet range.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -717,7 +717,7 @@ For more details about Data Validation, [click here.](https://help.syncfusion.co
 
 ## End
 
-[End](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_End) property returns the last cell in the particular worksheet range.
+The [End](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_End) property returns the last cell in the given worksheet range.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -767,7 +767,7 @@ End Using
 
 ## Entire Column
 
-[EntireColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_EntireColumn), as the name says gets the entire column of the particular range.
+The [EntireColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_EntireColumn) property, as the name says, returns the entire column of the given range.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -819,7 +819,7 @@ N> Using EntireColumn property excessively leads to time consumption and affects
 
 ## Entire Row
 
-[EntireRow](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_EntireRow), as the name says gets the entire row of the particular range.
+The [EntireRow](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_EntireRow) property, as the name says, returns the entire row of the given range.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -1213,7 +1213,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Set value through Value property
   worksheet.Range["B1"].Value = "Hello World";
 
-  //Set date time through DatTime property
+  //Set date time through DateTime property
   worksheet.Range["B2"].DateTime = DateTime.Now;
 
   //Set value through Value2 property
@@ -1242,7 +1242,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Set value through Value property
   worksheet.Range["B1"].Value = "Hello World";
 
-  //Set date time through DatTime property
+  //Set date time through DateTime property
   worksheet.Range["B2"].DateTime = DateTime.Now;
 
   //Set value through Value2 property
@@ -1270,7 +1270,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   'Set value through Value property
   worksheet.Range("B1").Value = "Hello World"
 
-  'Set date time through DatTime property
+  'Set date time through DateTime property
   worksheet.Range("B2").DateTime = DateTime.Now
 
   'Set value through Value2 property

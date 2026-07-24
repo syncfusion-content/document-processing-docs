@@ -1,13 +1,13 @@
 ---
 title: Working with Template Markers | Syncfusion
-description: This section illustrate how to create template markers in an Excel template that appends multiple records from a data source into a worksheet.
+description: This section illustrates how to create template markers in an Excel template that appends multiple records from a data source into a worksheet.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 # Working with Template Markers
 
-A template marker is a special marker symbol created in an Excel template that appends multiple records from a data source into a worksheet. This marker automatically maps the column name in the data source and names of the marker fields in the template Excel document and fills the data (text or image). Essential<sup>&reg;</sup> XlsIO allows you to bind the template markers to data from various sources, such as 
+A template marker is a special marker symbol created in an Excel template that appends multiple records from a data source into a worksheet. This marker automatically maps the column name in the data source and names of the marker fields in the template Excel document and fills the data (text or image). Essential<sup>&reg;</sup> XlsIO allows you to bind the template markers to data from various sources, such as
 
 * DataTable
 * Collection objects
@@ -26,7 +26,7 @@ Each marker starts with a prefix character (by default it is “%” character).
 <td>
 %&lt;MarkerVariable&gt;.&lt;Property&gt; <br/><br/>For example: %Customers.CompanyName<br/><br/>Where, “Customers” is marker variable name and CompanyName is the property name</td></tr>
 </table>
-You can change the marker prefix and delimiter characters by the [MarkerPrefix](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITemplateMarkersProcessor.html#Syncfusion_XlsIO_ITemplateMarkersProcessor_MarkerPrefix) and [ArgumentSeparator](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITemplateMarkersProcessor.html#Syncfusion_XlsIO_ITemplateMarkersProcessor_ArgumentSeparator) properties of the [ITemplateMarkersProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITemplateMarkersProcessor.html) instance respectively. 
+You can change the marker prefix and delimiter characters by the [MarkerPrefix](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITemplateMarkersProcessor.html#Syncfusion_XlsIO_ITemplateMarkersProcessor_MarkerPrefix) and [ArgumentSeparator](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITemplateMarkersProcessor.html#Syncfusion_XlsIO_ITemplateMarkersProcessor_ArgumentSeparator) properties of the [ITemplateMarkersProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITemplateMarkersProcessor.html) instance respectively.
 
 **Arguments**
 
@@ -90,13 +90,13 @@ The following screenshot represents the input template which has a template mark
 
 Following code example illustrates how to bind the data from an array to a marker.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"), ExcelOpenType.Automatic);	
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"), ExcelOpenType.Automatic);
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	//Create Template Marker Processor
@@ -141,7 +141,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Insert Array Horizontally
   string[] names = new string[] { "Mickey", "Donald", "Tom", "Jerry" };
   string[] descriptions = new string[] { "Mouse", "Duck", "Cat", "Mouse" };
-  
+
   //Add collections to the marker variables where the name should match with input template
   marker.AddVariable("Names", names);
   marker.AddVariable("Descriptions", descriptions);
@@ -155,7 +155,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Using excelEngine As ExcelEngine = New ExcelEngine()
+Using excelEngine As New ExcelEngine()
   Dim workbook As IWorkbook = excelEngine.Excel.Workbooks.Open("Sample.xlsx")
   Dim sheet As IWorksheet = workbook.Worksheets(0)
 
@@ -177,15 +177,15 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   workbook.SaveAs("TemplateMarker.xlsx")
 End Using
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
 
-The following screenshot represents generated Excel file in which the array of data is bounded.
+The following screenshot represents generated Excel file in which the array of data is bound.
 
 ![Bind from Array Example](Working-with-Template-Markers_images/Bind_data_from_Array_to_Excel_Spreadsheet_Template.jpeg)
 
 You can also add or insert template markers using XlsIO APIs as follows.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -251,9 +251,9 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Using excelEngine As ExcelEngine = New ExcelEngine()
+Using excelEngine As New ExcelEngine()
   Dim workbook As IWorkbook = excelEngine.Excel.Workbooks.Open("Sample.xlsx")
-  IWorksheet sheet = workbook.Worksheets(0)
+  Dim sheet As IWorksheet = workbook.Worksheets(0)
 
   'Insert Simple marker
   sheet.Range("B2").Text = "%Marker"
@@ -279,7 +279,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   workbook.SaveAs("TemplateMarker.xlsx")
 End Using
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
 
 ## Bind from DataTable
 
@@ -296,18 +296,18 @@ The following screenshot represents the input template which has a template mark
 
 ![Bind from DataTable Example](Working-with-Template-Markers_images/Bind_data_from_datatable_to_Excel_Spreadsheet_Template.jpeg)
 
-N> XlsIO supports binding data from data table using template markers in Windows Forms, WPF, ASP.NET, ASP.NET MVC, and ASP.NET Core (2.0 onwards) platforms alone. 
+N> XlsIO supports binding data from data table using template markers in Windows Forms, WPF, ASP.NET, ASP.NET MVC, and ASP.NET Core (2.0 onwards) platforms only.
 
 The following code snippet illustrates how to detect data type and apply number format with template marker.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Import%20Data%20to%20Template/Import%20Data%20Table/.NET/Import%20Data%20Table/Import%20Data%20Table/Program.cs,180" %}
 //Binding data from data table is supported only from ASP.NET Core 2.0
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   IWorkbook workbook = application.Workbooks.Open("TemplateMarker.xlsx");
- 
+
  //Create Template Marker Processor
   ITemplateMarkersProcessor marker = workbook.CreateTemplateMarkersProcessor();
 
@@ -321,7 +321,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   reports.Rows.Add("Phyllis Lapin", new DateTime(2014, 09, 21), new DateTime(2014, 09, 25));
   reports.Rows.Add("Stanley Hudson", new DateTime(2014, 09, 26), new DateTime(2014, 09, 30));
 
-  //Add collection to the marker variables where the name should match with input template  
+  //Add collection to the marker variables where the name should match with input template
   //Detects number format in DateTable values
   marker.AddVariable("Reports", reports, VariableTypeAction.DetectNumberFormat);
 
@@ -336,7 +336,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-using(ExcelEngine excelEngine = new ExcelEngine())
+using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IWorkbook workbook = excelEngine.Excel.Workbooks.Open("TemplateMarker.xlsx");
 
@@ -366,7 +366,7 @@ using(ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-using excelEngine As ExcelEngine = new ExcelEngine()
+Using excelEngine As New ExcelEngine()
   Dim workbook As IWorkbook = excelEngine.Excel.Workbooks.Open("TemplateMarker.xlsx")
 
   'Create Template Marker Processor
@@ -393,7 +393,7 @@ using excelEngine As ExcelEngine = new ExcelEngine()
   workbook.SaveAs("TemplateMarkerWithFormat.xlsx")
 End Using
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
 
 A complete working example to bind data from data table to template marker in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20Data%20to%20Template/Import%20Data%20Table/.NET/Import%20Data%20Table).
 
@@ -440,7 +440,7 @@ Image is applied to the specified size (width, height).<br/><br/>Height paramete
 position:</span>position<br/><br/>Ex:<br/><br/>%Reports.Image;position:middle-center<br/><br/>(or)<br/><br/>%Reports.Image;position:right <br/><br/></td><td>
 Image is positioned (top-left, top-center, etc.,) within the cell.<br/><br/></td></tr>
 </table>
-In the following example, a marker is added for merging images. Data source and property name is specified (%Reports.Image;) for image also. 
+In the following example, a marker is added for merging images. Data source and property name is specified (%Reports.Image;) for image also.
 
 ![Import collection objects with images Example](Working-with-Template-Markers_images/Working-with-Template_Markers_img5.jpeg)
 
@@ -521,14 +521,14 @@ The import data group options are:
 
 The following code snippet illustrates how to import data from nested collection objects with template marker.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Import%20Data%20to%20Template/Import%20Nested%20Collection/.NET/Import%20Nested%20Collection/Import%20Nested%20Collection/Program.cs,180" %}
 //Binding data from data table is supported only from ASP.NET Core 2.0
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"), ExcelOpenType.Automatic);	
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"), ExcelOpenType.Automatic);
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	//Create Template Marker Processor
@@ -551,7 +551,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  IWorkbook workbook = application.Workbooks.Open("TemplateMarker.xlsx")
+  IWorkbook workbook = application.Workbooks.Open("TemplateMarker.xlsx");
 
   //Create Template Marker Processor
   ITemplateMarkersProcessor marker = workbook.CreateTemplateMarkersProcessor();
@@ -567,7 +567,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-using excelEngine As ExcelEngine = new ExcelEngine()
+Using excelEngine As New ExcelEngine()
   Dim workbook As IWorkbook = excelEngine.Excel.Workbooks.Open("TemplateMarker.xlsx")
 
   'Create Template Marker Processor
@@ -582,11 +582,11 @@ using excelEngine As ExcelEngine = new ExcelEngine()
   workbook.SaveAs("TemplateMarkerNestedCollection.xlsx");
 End Using
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
 
 The following code snippet provides supporting methods and classes for the previous code.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 //Gets a list of sales reports
 public static List<Customer> GetSalesReports()
@@ -714,7 +714,7 @@ Public Shared Function GetSalesReports() As List(Of Customer)
   orders.Add(New Order(1408, 451.75))
   orders.Add(New Order(1278, 340.00))
   orders.Add(New Order(1123, 290.50))
-  
+
   Dim c1 As Customer = New Customer(002107, "Andy Bernard", 45)
   c1.Orders = orders
   Dim c2 As Customer = New Customer(011564, "Jim Halpert", 34)
@@ -725,7 +725,7 @@ Public Shared Function GetSalesReports() As List(Of Customer)
   c4.Orders = orders
   Dim c5 As Customer = New Customer(012167, "Stanley Hudson", 41)
   c5.Orders = orders
-  
+
   reports.Add(c1)
   reports.Add(c2)
   reports.Add(c3)
@@ -758,7 +758,7 @@ Public Class Order
   End Sub
 End Class
 {% endhighlight %}
-{% endtabs %} 
+{% endtabs %}
 
 A complete working example to bind data from nested collections to template marker in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20Data%20to%20Template/Import%20Nested%20Collection/.NET/Import%20Nested%20Collection).
 
@@ -816,7 +816,7 @@ Generated output
 
 ## Template marker with conditional formatting
 
-You can create or apply conditional format to the template marker range.  
+You can create or apply conditional format to the template marker range.
 
 The following screenshot represents the input template, which has a template marker.
 
@@ -824,7 +824,7 @@ The following screenshot represents the input template, which has a template mar
 
 The following code sample illustrates how to create or apply conditional format to the marker.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Import%20Data%20to%20Template/Conditional%20Formatting/.NET/Conditional%20Formatting/Conditional%20Formatting/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -936,7 +936,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	workbook.SaveAs(Path.GetFullPath("Output/ConditionalFormatting.xlsx"));	
+	workbook.SaveAs(Path.GetFullPath("Output/ConditionalFormatting.xlsx"));
 	#endregion
 }
 {% endhighlight %}
@@ -1027,7 +1027,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-using excelEngine As ExcelEngine = new ExcelEngine()
+Using excelEngine As New ExcelEngine()
   Dim workbook As IWorkbook = excelEngine.Excel.Workbooks.Open("TemplateMarker.xlsx")
   Dim worksheet As IWorksheet = workbook.Worksheets(0)
 
@@ -1113,7 +1113,7 @@ using excelEngine As ExcelEngine = new ExcelEngine()
   workbook.SaveAs("TemplateMarkerCF.xlsx")
 End Using
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
 
 The following code snippet provides supporting method and class for the previous code.
 
@@ -1217,14 +1217,14 @@ The following screenshot represents the input template, which has a template mar
 
 The following code snippet illustrates how to detect data type and apply number format with template marker.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Import%20Data%20to%20Template/Import%20with%20Hyperlinks/.NET/Import%20with%20Hyperlinks/Import%20with%20Hyperlinks/Program.cs,180" %}
 //Binding data from data table is supported only from ASP.NET Core 2.0
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"), ExcelOpenType.Automatic);	
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"), ExcelOpenType.Automatic);
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	//Create Template Marker Processor
@@ -1247,7 +1247,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  IWorkbook workbook = application.Workbooks.Open("TemplateMarker.xlsx")
+  IWorkbook workbook = application.Workbooks.Open("TemplateMarker.xlsx");
 
   //Create Template Marker Processor
   ITemplateMarkersProcessor marker = workbook.CreateTemplateMarkersProcessor();
@@ -1263,7 +1263,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-using excelEngine As ExcelEngine = new ExcelEngine()
+Using excelEngine As New ExcelEngine()
   Dim workbook As IWorkbook = excelEngine.Excel.Workbooks.Open("TemplateMarker.xlsx")
 
   'Create Template Marker Processor
@@ -1278,11 +1278,11 @@ using excelEngine As ExcelEngine = new ExcelEngine()
   workbook.SaveAs("TemplateMarkerHyperlink.xlsx");
 End Using
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
 
 The following code snippet provides supporting methods and classes for the previous code.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 //Gets a list of company details
 private List<Company> GetCompanyDetails()
@@ -1308,7 +1308,7 @@ private List<Company> GetCompanyDetails()
   companyList.Add(company);
 
   return companyList;
-}    
+}
 public class Hyperlink : IHyperLink
 {
   public IApplication Application { get; }
@@ -1328,7 +1328,7 @@ public class Hyperlink : IHyperLink
   {
     Address = address;
     ScreenTip = screenTip;
-    SubAddress = subAddress;            
+    SubAddress = subAddress;
     TextToDisplay = textToDisplay;
     Type = type;
     Image = image;
@@ -1367,7 +1367,7 @@ private List<Company> GetCompanyDetails()
   companyList.Add(company);
 
   return companyList;
-}    
+}
 public class Hyperlink : IHyperLink
 {
   public IApplication Application { get; }
@@ -1387,7 +1387,7 @@ public class Hyperlink : IHyperLink
   {
     Address = address;
     ScreenTip = screenTip;
-    SubAddress = subAddress;            
+    SubAddress = subAddress;
     TextToDisplay = textToDisplay;
     Type = type;
     Image = image;
@@ -1405,29 +1405,29 @@ public class Company
 'Gets a list of company details
 Private Function GetCompanyDetails() As List(Of Company)
   Dim companyList As List(Of Company) = New List(Of Company)()
-  
+
   Dim company As Company = New Company()
   company.Name = "Syncfusion"
   Dim link As Hyperlink = New Hyperlink("https://www.syncfusion.com", "", "", "Syncfusion", ExcelHyperLinkType.Url, Nothing)
   company.Link = link
   companyList.Add(company)
-  
+
   company = New Company()
   company.Name = "Microsoft"
   link = New Hyperlink("https://www.microsoft.com", "", "", "Microsoft", ExcelHyperLinkType.Url, Nothing)
   company.Link = link
   companyList.Add(company)
-  
+
   company = New Company()
   company.Name = "Google"
   link = New Hyperlink("https://www.google.com", "", "", "Google", ExcelHyperLinkType.Url, Nothing)
   company.Link = link
   companyList.Add(company)
-  
+
   Return companyList
-End Function 
-  
-Public Class Hyperlink Inherits IHyperLink
+End Function
+
+Public Class Hyperlink Implements IHyperLink
   Public ReadOnly Property Application As IApplication
   Public ReadOnly Property Parent As Object
   Public Property Address As String
@@ -1456,7 +1456,7 @@ Public Class Company
   Public Property Link As Hyperlink
 End Class
 {% endhighlight %}
-{% endtabs %} 
+{% endtabs %}
 
 A complete working example to import data to template marker with hyperlink in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20Data%20to%20Template/Import%20with%20Hyperlinks/.NET/Import%20with%20Hyperlinks).
 

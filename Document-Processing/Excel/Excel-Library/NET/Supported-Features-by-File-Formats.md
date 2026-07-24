@@ -1,14 +1,38 @@
 ---
-title: Supported Features by Document Processing | Syncfusion
-description: Learn here all about supported and non-supported features of Syncfusion Document Processing library, and more.
+title: Supported Features by File Formats in Syncfusion XlsIO | Syncfusion
+description: Learn about the supported and non-supported features of Syncfusion XlsIO across Excel file formats (XLS and XLSX).
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Supported Features by Document Processing
+# Supported Features by File Formats in Syncfusion XlsIO
 
-The list of supported and non-supported Excel Document Processing features in *Essential<sup>&reg;</sup> XlsIO* is given in the following table. *XLS* represents Excel 97 to 2003 format and *XLSX* represents Excel 2007 and above formats.
+The following table lists the supported and non-supported Excel document-processing features in *Essential<sup>&reg;</sup> XlsIO*. *XLS* represents the Excel 97 to 2003 format and *XLSX* represents the Excel 2007 and above formats.
+
+## How to read this table
+
+Each cell describes how XlsIO handles a feature in a given file format. The columns mean the following:
+
+- **Read** — XlsIO can load this feature from an existing file.
+- **Write** — XlsIO can create or modify this feature in code.
+- **Preserve** — XlsIO keeps this feature unchanged when re-saving a file (relevant when the feature is owned by another component, such as a Pivot table or AutoShape).
+- **XLS to XLSX** — The feature is preserved when converting an XLS file to XLSX.
+
+The cell values are:
+
+- **Yes** — fully supported.
+- **Partial** — only a subset of the feature is supported (see the feature-specific notes).
+- **No** — not supported.
+- **-** — not applicable to this format.
+
+## See also
+
+- [Syncfusion XlsIO overview](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview)
+- [Working with formulas](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-formulas)
+- [Working with charts](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-charts)
+- [Working with pivot tables](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-pivot-tables)
+- [Working with conditional formatting](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-conditional-formatting)
 
 <table>
 <tr>

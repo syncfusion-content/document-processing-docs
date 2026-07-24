@@ -8,9 +8,9 @@ documentation: UG
 
 # Use Formulas in Excel
 
-A formula is an expression that operates on values in a range of cells or a cell. Functions are predefined formulas in Excel.
+A formula is an expression that operates on values in one or more cells. Functions are predefined formulas in Excel.
 
-The following code shows how to use formulas in Excel by adding values in a range of cells using the formula function sum and highlighting the resultant value with Interop and XlsIO for .NET.
+The following code shows how to use the SUM formula in Excel, add values in a range of cells, and highlight the result, using Interop and XlsIO for .NET.
 
 ## Interop
 
@@ -88,7 +88,7 @@ private void ExcelFormulas()
     cellA4.Interior.Color = XlRgbColor.rgbYellow;
 
     //Save the Excel file
-    workbook.SaveCopyAs("InteropOutput_ExcelFormulas.xlsx");
+    workbook.SaveAs("InteropOutput_ExcelFormulas.xlsx");
 
     //Quit the application
     excelApp.Quit();
@@ -250,7 +250,7 @@ Private Sub ExcelFormulas()
     'Set the background color to yellow in cell A4
     cellA4.CellStyle.Interior.Color = Color.Yellow
 
-    'Save as Excel file
+    'Save the workbook
     workbook.SaveAs("XlsIOOutput_ExcelFormulas.xlsx")
   End Using
 End Sub
