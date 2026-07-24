@@ -118,7 +118,7 @@ document.Save("Sample.pdf");
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Open%20and%20Save%20PDF%20document/WPf/Open-and-save-PDF-document-WPF).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Open%20and%20Save%20PDF%20document/WPF/Open-and-save-PDF-document-WPF).
 
 By executing the program, you will get the **PDF document** as follows.
 ![WPF open and save output PDF document](Images/Open_and_save_output.png)
