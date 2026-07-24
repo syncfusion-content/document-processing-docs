@@ -1312,9 +1312,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-N> **Warning:** Flattening an annotation is **irreversible**. The interactive element is converted to static page content and cannot be restored.
-
-N> Setting `document.flatten = true;` flattens all interactive elements in the PDF, converting form fields and annotations into static content throughout the entire document.
+N> Setting `document.flatten = true;` flattens all interactive elements in the PDF, converting form fields and annotations into static content throughout the entire document and this action is irreversible.
 
 ## Importing Annotations
 
