@@ -296,5 +296,5 @@ By executing the program, you will get the **PDF document** as follows. The outp
 
 ![Output PDF Document](GCP_Images/Open_and_save_output.png)
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-core?_gl=1*dk4frx*_ga*OTcwNzc5NDkuMTY4MTEwMjEwNA..*_ga_WC4JKKPHH0*MTY5MDQzMjEyNi4zNzMuMS4xNjkwNDMyMTUwLjM2LjAuMA..) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
+Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 

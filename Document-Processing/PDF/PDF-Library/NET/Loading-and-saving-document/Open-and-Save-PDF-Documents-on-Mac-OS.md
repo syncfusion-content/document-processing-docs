@@ -102,4 +102,4 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 By executing the program, you will get the **PDF document** as follows.
 ![Mac OS output PDF document](Images/Open_and_save_output.png)
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
+Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.

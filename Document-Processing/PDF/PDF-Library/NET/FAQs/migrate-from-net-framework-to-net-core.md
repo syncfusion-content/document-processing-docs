@@ -308,7 +308,7 @@ Not supported due to .NET Core framework limitations. Alternatively, use the [im
 </td>
 <td>
 Not supported due to .NET Core framework limitations. Use the [.NET Word library](https://help.syncfusion.com/document-processing/word/word-library/net/overview) instead.<br/>
-[RTF to PDF](https://www.syncfusion.com/kb/8472/how-to-convert-a-word-document-to-pdf-in-asp-net-core)
+[RTF to PDF](https://support.syncfusion.com/kb/article/7542/how-to-convert-a-word-document-to-pdf-in-aspnet-core)
 </td>
 </tr>
 <tr>
