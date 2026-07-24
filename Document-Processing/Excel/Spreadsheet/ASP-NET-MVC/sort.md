@@ -24,7 +24,6 @@ To sort a selected range by cell value:
 * Choose the required sorting option in one of the following ways:
    * Open the sorting options in the Ribbon and choose **Ascending** or **Descending**.
    * Right-click the selected range, open the sorting options in the context menu, and choose **Ascending** or **Descending**.
-* Verify that the values in the selected range are arranged in the chosen order.
 
 You can also use the `sort()` method to sort a range programmatically.
 

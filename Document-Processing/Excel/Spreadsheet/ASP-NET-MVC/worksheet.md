@@ -91,15 +91,13 @@ The following code example shows the headers and gridlines operation in spreadsh
 
 Hiding a worksheet can help prevent unauthorized or accidental changes to your file.
 
-There are three visibility state as like Microsoft Excel,
+The Spreadsheet provides three worksheet visibility states, similar to Microsoft Excel:
 
 | State | Description |
-|-------|---------|
-| `Visible` | You can see the worksheet once the component is loaded. |
-| `Hidden` | This worksheet is not visible, but you can unhide by selecting the sheet from `List All Sheets`
-dropdown menu. |
-| `VeryHidden` | This worksheet is not visible and cannot be unhidden. Changing the
-state property to `Visible` is the only way to view this sheet. |
+|-------|-------------|
+| `Visible` | The worksheet is visible when the Spreadsheet is loaded. |
+| `Hidden` | The worksheet is hidden but can be displayed by selecting it from the **List All Sheets** drop-down menu. |
+| `VeryHidden` | The worksheet is hidden and cannot be displayed through the user interface. Set its `state` property to `Visible` to display it. |
 
 The following code example shows the three types of sheet visibility state.
 

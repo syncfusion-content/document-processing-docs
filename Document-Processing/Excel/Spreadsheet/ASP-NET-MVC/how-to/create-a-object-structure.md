@@ -21,7 +21,7 @@ The following properties are the root level properties of the `Workbook` object.
 
 | Property | Type | Description |
 |-------|-------|-------|
-| activeSheetIndex | number | Specifies active sheet index in the workbook. |
+| activeSheetIndex | number | Specifies the active sheet index in the workbook. |
 | sheets | `Sheet[]` | Contains a list of sheet properties. |
 | definedNames | `DefineName[]` | Specifies the name for a range and uses it in the formula for calculation. |
 
@@ -32,13 +32,13 @@ The following table defines each property of the `Sheet`.
 | name | string | Specifies the name of the sheet. |
 | selectedRange | string | Specifies selected range in the sheet. |
 | activeCell | string | Specifies active cell within `selectedRange` in the sheet. |
-| topLeftCell | string | Specified cell will be positioned at the upper-left corner of the sheet. |
+| topLeftCell | string | Specifies the cell positioned at the upper-left corner of the sheet. |
 | showHeaders | boolean | Specifies to show or hide column and row headers in the sheet. |
 | showGridLines | boolean | Specifies to show or hide gridlines in the sheet. |
 | isProtected | boolean | Specifies to protect the cells in the sheet. |
 | state | [`SheetState`](../worksheet#sheet-visibility) | Specifies the sheet visibility state. There must be at least one visible sheet in Spreadsheet. |
-| columns | `Column[]` | Contains a list of column properties |
-| rows | `Row[]` | Contains a list of row properties |
+| columns | `Column[]` | Contains a list of column properties. |
+| rows | `Row[]` | Contains a list of row properties. |
 | protectSettings | [`ProtectSettings`](../protect-sheet#protect-sheet) | Configures protect and its options. |
 | conditionalFormats | `ConditionalFormat[]` | Specifies the conditional formatting for the sheet. |
 
@@ -95,6 +95,8 @@ The following table defines each property of the `CellStyle`.
 | borderLeft | string | Specifies left border of the cell. |
 | borderRight | string | Specifies right border of the cell. |
 
+### Cell style type definitions
+
 ```js
 type FontFamily = 'Arial' | 'Arial Black' | 'Axettac Demo' | 'Batang' | 'Book Antiqua' | 'Calibri' | 'Courier' | 'Courier New' | 'Din Condensed' | 'Georgia' | 'Helvetica' | 'Helvetica New' | 'Roboto' | 'Tahoma' | 'Times New Roman' | 'Verdana';
 type VerticalAlign = 'bottom' | 'middle' | 'top';
@@ -104,18 +106,17 @@ type FontStyle = 'italic' | 'normal';
 type TextDecoration = 'underline' | 'line-through' | 'underline line-through' | 'none';
 ```
 
-The following table defines each property of the `Validation`.
-
 | Property | Type | Description |
 |-------|-------|-------|
-| type | `ValidationType` | Specifies Validation Type. |
-| operator | `ValidationOperator` | Specifies Validation Operator. |
-| value1 | string | Specifies Validation Minimum Value. |
-| value2 | string | Specifies Validation Maximum Value. |
-| ignoreBlank | boolean | Specifies IgnoreBlank option in Data Validation. |
-| inCellDropDown | boolean | Specifies InCellDropDown option in Data Validation. |
-| isHighlighted | boolean | Specifies to allow Highlight Invalid Data. |
-|  |  |  |
+| type | `ValidationType` | Specifies the validation type. |
+| operator | `ValidationOperator` | Specifies the validation operator. |
+| value1 | string | Specifies the minimum validation value. |
+| value2 | string | Specifies the maximum validation value. |
+| ignoreBlank | boolean | Specifies whether blank cells are ignored. |
+| inCellDropDown | boolean | Specifies whether the in-cell drop-down is displayed. |
+| isHighlighted | boolean | Specifies whether invalid data is highlighted. |
+
+### Validation type definitions
 
 ```js
 type ValidationType = 'WholeNumber' | 'Decimal' | 'Date' | 'TextLength' | 'List' | 'Time';
@@ -137,11 +138,15 @@ The following table defines each property of the `ConditionalFormat`.
 
 | Property | Type | Description |
 |-------|-------|-------|
-| type | `HighlightCell` or `TopBottom` or `DataBar` or `ColorScale` or `IconSet` | Specifies Conditional formatting Type. |
-| format | `Format` | Specifies the formatting applied when the condition is satisfied. |
-| cFColor | `CFColor` | Specifies Conditional formatting Highlight Color. |
-| value | string | Specifies Conditional formatting value. |
-| range | string | Specifies Conditional formatting range. |
+| type | `HighlightCell` or `TopBottom` or `DataBar` or `ColorScale` or `IconSet` | Specifies the conditional-formatting type. |
+| format | `Format` | Specifies the formatting applied when the condition is met. |
+| cFColor | `CFColor` | Specifies the conditional-formatting highlight color. |
+| value | string | Specifies the conditional-formatting value. |
+| range | string | Specifies the range to which conditional formatting is applied. |
+
+The `HighlightCell`, `TopBottom`, `DataBar`, `ColorScale`, and `IconSet` types are defined in the following type definitions.
+
+### Conditional-formatting type definitions
 
 ```js
 type HighlightCell = 'GreaterThan' | 'LessThan' | 'Between' | 'EqualTo' | 'ContainsText' | 'DateOccur' | 'Duplicate' | 'Unique';

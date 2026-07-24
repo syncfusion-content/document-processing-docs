@@ -36,7 +36,7 @@ Use the following methods:
 
 ### Step 1: Suspend UI refresh
 
-Call [`suspendRefresh`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#suspendrefresh) before starting multiple Spreadsheet operations.
+Call `suspendRefresh` before starting multiple Spreadsheet operations.
 
 ### Step 2: Perform the required operations
 
@@ -44,7 +44,7 @@ Execute the actions you want to apply. The Spreadsheet model is updated, but the
 
 ### Step 3: Resume UI refresh
 
-Call [`resumeRefresh`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#resumerefresh) after all operations are complete. The Spreadsheet then renders all accumulated changes in a single refresh.
+Call `resumeRefresh` after all operations are complete. The Spreadsheet then renders all accumulated changes in a single refresh.
 
 ### Example pattern
 

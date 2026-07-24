@@ -15,9 +15,7 @@ documentation: ug
 
 ## Integration
 
-AI Assist integrates seamlessly into your ASP.NET MVC Spreadsheet application with minimal configuration. This includes enabling the feature, configuring the server-side connection, handling events, and exploring the full range of supported prompts.
-
-For complete setup instructions, how-to guides, API references, and prompt examples, see [AI Assist Integration](./integration).
+To configure AI Assist, inject the required module, enable the feature, and connect the Spreadsheet to a backend AI service. For setup instructions, event customization, API references, troubleshooting, and example prompts, see [AI Assist Integration](./integration).
 
 After completing the integration, open the AI Assist panel, submit a prompt, and verify that the requested operation is applied to the active worksheet.
 
@@ -38,7 +36,7 @@ Once the intent is known, the spreadsheet's current data and the identified acti
 - **Execution**
 The generated instructions are applied directly to the spreadsheet. The result appears instantly in the grid, and a confirmation message is shown in the AI panel. Every change is also added to the undo history, so nothing is permanent.
 
-## Supported Features
+## Supported features
 
 AI Assist supports a wide range of spreadsheet operations through natural language prompts:
 
@@ -50,7 +48,7 @@ AI Assist supports a wide range of spreadsheet operations through natural langua
 | **Formatting** | Apply styles such as bold, italic, font color, background color, number formats, and wrap text. |
 | **Structure Management** | Insert/delete rows and columns, merge cells, and freeze panes. |
 | **Clipboard Actions** | Perform cut, copy, and paste operations through AI commands. |
-| **Navigation** | Perform sorting, filtering, and find & replace operations. |
+| **Navigation** | Perform sorting, filtering, and Find and Replace operations. |
 | **Visualization** | Insert charts with multiple types, themes, titles, and sizing options. |
 
 ### Writing effective prompts
