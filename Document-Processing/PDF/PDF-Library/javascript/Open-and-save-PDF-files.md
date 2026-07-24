@@ -133,7 +133,7 @@ var bytes = document.save();
 
 ## Closing a PDF document
 
-After every load and save operation described above, you must call the `destroy` method on the PdfDocument](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument) instance to release the memory held by the PDF document instance. Failing to do so can lead to memory leaks, especially in long-running applications or when processing many documents in sequence.
+After every load and save operation described above, you must call the `destroy` method on the [PdfDocument](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument) instance to release the memory held by the PDF document instance. Failing to do so can lead to memory leaks, especially in long-running applications or when processing many documents in sequence.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
