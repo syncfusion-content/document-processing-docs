@@ -8,7 +8,7 @@ documentation: UG
 
 # Apply Borders in Excel
 
-Applying borders around specific cells makes those cells stand out to people who view the document. For example, this is used when calling attention to totals, other specific numbers, or words in the file. Alternatively, as the borders are thicker and more pronounceable than the default grid lines, you can add border lines around all the cells to define each to prevent from blending together when users view the document. You can also use different line styles for borders.
+Applying borders around specific cells makes those cells stand out to people who view the document. For example, you might use borders to highlight totals, specific numbers, or words in the file. Alternatively, since borders are thicker and more noticeable than the default grid lines, you can add border lines around all the cells to prevent them from blending together when users view the document. You can also use different line styles for borders.
 
 The following code shows how to apply borders in Excel with different line styles to cells using Interop and XlsIO for .NET.
 
@@ -346,7 +346,7 @@ Private Sub ApplyBorders()
     'Autofit column A
     worksheet.AutofitColumn(1)
 
-    'Save as Excel file
+    'Save the workbook
     workbook.SaveAs("XlsIOOutput_Borders.xlsx")
   End Using
 End Sub

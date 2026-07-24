@@ -6,9 +6,9 @@ control: XlsIO
 documentation: UG
 ---
 
-# Fill Series 
+# Fill Series
 
-The **Fill Series** feature in the XlsIO library allows users to programmatically fill a range with a sequence of values based on the specified direction (row or column), series type, step value, and stop value.
+The **Fill Series** feature in Syncfusion<sup>&reg;</sup> XlsIO lets you programmatically fill a range with a sequence of values based on the specified direction (row or column), series type, step value, and stop value.
 
 ## Types
 
@@ -74,7 +74,7 @@ range.FillSeries(ExcelSeriesBy.Columns, ExcelFillSeries.Growth, 2, 100)
 
 {% endtabs %}  
 
-### DateTime
+### Date and Time
 
 The **Days, Weekdays, Months, and Years** options generate date sequences by incrementing the corresponding part of the date based on the specified direction (row or column). These types do not support the **Trend** option. They are useful for creating structured date progressions such as schedules, timelines, or calendars.
 
@@ -215,9 +215,9 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example of how to fill a date series in a worksheet using C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Fill%20Series/.NET/DateTimeFillSeries">this GitHub page</a>.
+A complete working example of how to fill a date series in a worksheet using C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Fill%20Series/.NET/DateTimeFillSeries).
 
-By executing the program, you will get the Excel file as below
+By executing the program, you will get the Excel file as shown below.
 
 ![Fill Series](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img2.png)
 
@@ -296,9 +296,9 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example of how to fill a number series in a worksheet using C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Fill%20Series/.NET/NumberFillSeries">this GitHub page</a>.
+A complete working example of how to fill a number series in a worksheet using C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Fill%20Series/.NET/NumberFillSeries).
 
-By executing the program, you will get the Excel file as below
+By executing the program, you will get the Excel file as shown below.
 
 ![Fill Series](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img3.png)
 
@@ -383,9 +383,13 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example of how to fill series by enabling trend in a worksheet using C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Fill%20Series/.NET/FillSeriesByEnablingTrend">this GitHub page</a>.
+A complete working example of how to fill series by enabling trend in a worksheet using C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Fill%20Series/.NET/FillSeriesByEnablingTrend).
 
-By executing the program, you will get the Excel file as below
+By executing the program, you will get the Excel file as shown below.
 
 ![Fill Series](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img4.png)
+
+## See also
+
+- Explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features at [Syncfusion Excel Framework for .NET Core](https://www.syncfusion.com/document-sdk/net-excel-library).
 
