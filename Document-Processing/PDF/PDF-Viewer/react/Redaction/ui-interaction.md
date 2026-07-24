@@ -57,7 +57,7 @@ This guide explains how to use the Redaction UI in the React PDF Viewer: drawing
 
 	- General tab: set Overlay Text, Repeat Overlay Text, font, and final Fill Color (these values are used when you apply redaction).
 
-	    ![Overlay Text Options](redaction-annotations-images/redaction-overalytext.png)
+	    ![Redaction Overlay Text Options](redaction-annotations-images/redaction-overalytext.png)
 
 	    ![Fill Color in General Tab](redaction-annotations-images/after-redaction-fill-color.png)
 

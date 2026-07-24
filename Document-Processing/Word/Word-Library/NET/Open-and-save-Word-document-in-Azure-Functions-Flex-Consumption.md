@@ -8,7 +8,7 @@ documentation: UG
 
 # Open and save Word document in Azure Functions (Flex Consumption)
 
-Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and convert Word documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **Open and save Word document in Azure Functions deployed on Flex (Consumption) plan**.
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and convert Word documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **open and save a Word document in Azure Functions deployed on the Flex (Consumption) plan**.
 
 ## Steps to Open and save Word document in Azure Functions (Flex Consumption)
 
@@ -18,7 +18,7 @@ Step 1: Create a new Azure Functions project.
 Step 2: Create a project name and select the location.
 ![Create a project name](Azure-Images/Functions-Flex-Consumption/Configuration-Open-and-Save-Word-Document.png)
 
-Step 3: Select function worker as **.NET 8.0 (Long Term Support)** (isolated worker) and target Flex/Consumption hosting suitable for isolated worker.
+Step 3: Select the function worker as **.NET 8.0 (Long Term Support)** and the isolated worker model. Target the **Flex Consumption** hosting plan (suitable for isolated worker).
 ![Select function worker](Azure-Images/Functions-Flex-Consumption/Additional_Information_Word_Document.png)
 
 Step 4: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
@@ -38,7 +38,7 @@ using Syncfusion.DocIO.DLS;
 
 {% endtabs %}
 
-Step 6: Add the following code snippet in **Run** method of **Function1** class to perform **Open and save Word document** in Azure Functions and return the resultant **Word document** to client end.
+Step 6: Add the following code snippet in the **Run** method of the **Function1** class to **open and save a Word document** in Azure Functions and return the resultant **Word document** to the client end.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -105,24 +105,24 @@ Step 10: Select the **Create new** button.
 Step 11: Click **Create** button. 
 ![Select the plan type](Azure-Images/Functions-Flex-Consumption/Hosting_Word_Document.png)
 
-Step 12: After creating app service then click **Finish** button. 
+Step 12: After creating the app service, click the **Finish** button. 
 ![Creating app service](Azure-Images/Functions-Flex-Consumption/Finish_Word_Document.png)
 
 Step 13: Click the **Publish** button.
 ![Click Publish Button](Azure-Images/Functions-Flex-Consumption/Before_Publish_Word_Document.png)
 
-Step 14: Publish has been succeed.
+Step 14: Publish has succeeded.
 ![Publish succeeded](Azure-Images/Functions-Flex-Consumption/After_Publish_Word_Document.png)
 
-Step 15: Now, go to Azure portal and select the App Services. After running the service, click **Get function URL by copying it**. Then, paste it in the below client sample (which will request the Azure Functions, to perform **Open and save a Word document** using the template Word document). You will get the output Word document as follows.
+Step 15: Now, go to the Azure portal and select the App Services. After running the service, click **Get function URL** by copying it. Then, paste it in the below client sample (which will request the Azure Functions, to perform **open and save a Word document** using the template Word document). You will get the output Word document as follows.
 
-![Open and Save in Azure Functions v4](ASP-NET-Core_images/OpenAndSaveOutput.png)
+![Open and Save in Azure Functions Flex Consumption](ASP-NET-Core_images/OpenAndSaveOutput.png)
 
 ## Steps to post the request to Azure Functions
 
 Step 1: Create a console application to request the Azure Functions API.
 
-Step 2: Add the following code snippet into Main method to post the request to Azure Functions with template Word document and get the resultant Word document.
+Step 2: Add the following code snippet into the **Main** method to post the request to Azure Functions with the template Word document and get the resultant Word document.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -147,7 +147,7 @@ static async Task Main()
             var resBytes = await res.Content.ReadAsByteArrayAsync();
             // Extract the media type from the response headers
             string mediaType = res.Content.Headers.ContentType?.MediaType ?? string.Empty;
-            // Decide the output file path the response is an image or txt         
+            // Decide the output file path: the response is a Word document or an error text
             string outputPath = mediaType.Contains("word", StringComparison.OrdinalIgnoreCase)
                 || mediaType.Contains("officedocument", StringComparison.OrdinalIgnoreCase)
                 || mediaType.Equals("application/vnd.openxmlformats-officedocument.wordprocessingml.document", StringComparison.OrdinalIgnoreCase)

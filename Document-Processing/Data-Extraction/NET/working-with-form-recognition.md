@@ -1,6 +1,6 @@
 ---
 title: Working with Form Recognition | Syncfusion&reg;
-description:  Learn how to recognize forms and configure FormRecognizeOptions in Syncfusion® SmartFormRecognizer to detect and process form elements easily.
+description: Learn how to recognize forms and configure FormRecognizeOptions in Syncfusion® SmartFormRecognizer to detect and process form elements easily.
 platform: document-processing
 control: SmartFormRecognizer
 documentation: UG
