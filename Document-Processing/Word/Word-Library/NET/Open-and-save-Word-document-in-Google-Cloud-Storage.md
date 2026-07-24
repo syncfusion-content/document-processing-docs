@@ -10,7 +10,7 @@ documentation: UG
 
 ## Prerequisites  
 
-* **[Google cloud storage](https://cloud.google.com/storage/docs/creating-buckets)** is required. 
+* **[Google Cloud Storage](https://cloud.google.com/storage/docs/creating-buckets)** is required. 
 
 * **[Service account](https://cloud.google.com/iam/docs/service-accounts-create)** is required.
 
@@ -38,8 +38,8 @@ Step 3: Install the following **Nuget packages** in your application from [NuGet
 
 Step 4: Add a new button in the **Index.cshtml** as shown below.
 
-{% tabs %}  
-{% highlight CSHTML %}
+{% tabs %}
+{% highlight cshtml tabtitle="CSHTML" %}
 @{Html.BeginForm("EditDocument", "Home", FormMethod.Get);
     {
         <div>
@@ -57,6 +57,7 @@ Step 5: Include the following namespaces in **HomeController.cs**.
 {% highlight c# tabtitle="C#" %}
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Storage.V1;
+using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 {% endhighlight %}
 {% endtabs %}
@@ -137,7 +138,7 @@ public async Task<MemoryStream> GetDocumentFromGoogle()
     catch (Exception ex)
     {
         Console.WriteLine($"Error retrieving document from Google Cloud Storage: {ex.Message}");
-        throw; // or handle the exception as needed
+        throw;
     }
 }
 {% endhighlight %}
@@ -171,8 +172,8 @@ Step 3: Install the following **Nuget packages** in your application from [NuGet
 
 Step 4: Add a new button in the **Index.cshtml** as shown below.
 
-{% tabs %}  
-{% highlight CSHTML %}
+{% tabs %}
+{% highlight cshtml tabtitle="CSHTML" %}
 @{Html.BeginForm("UploadDocument", "Home", FormMethod.Get);
     {
         <div>
@@ -431,6 +432,7 @@ public async Task<IActionResult> UploadDocument()
     //Saves the Word document to MemoryStream
     MemoryStream stream = new MemoryStream();
     document.Save(stream, FormatType.Docx);
+    document.Close();
 
     //Upload the document to Google
     await UploadDocumentToGoogle(stream);
