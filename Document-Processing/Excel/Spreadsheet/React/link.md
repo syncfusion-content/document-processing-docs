@@ -12,7 +12,7 @@ Hyperlink is used to navigate to web links or cell reference within the sheet or
 
 > * The default value for `allowHyperlink` property is `true`.
 
-## Insert Hyperlink
+## Insert Link
 
 You can insert a hyperlink in a worksheet cell for quick access to related information.
 

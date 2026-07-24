@@ -21,7 +21,7 @@ This approach significantly reduces initial load time, DOM size, and memory usag
 
 For more details, refer to the [virtual scrolling documentation](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/scrolling#virtual-scrolling).
 
-### Enable Chunk response processing for large server responses
+### Chunk response processing
 
 When opening large Excel files with extensive data and features, server responses can become too large—leading to memory issues or connection failures during transmission. The Chunk Response Processing feature addresses this by breaking the response into smaller chunks and sending them in parallel to the client.
 

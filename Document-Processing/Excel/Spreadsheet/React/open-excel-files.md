@@ -62,7 +62,7 @@ For a quick walkthrough on how the open functionality works, refer to the follow
 
 ## UI options to open Excel files
 
-In the user interface you can open an Excel document by clicking `File > Open` in the ribbon.
+In the user interface you can open an Excel document by clicking `File > Open` menu item in ribbon.
 
 The following sample shows the `Open` option configured by using the [`openUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openurl) property. You can also use the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforeopen) event to customize or cancel the import action, which is triggered before opening an Excel file.
 

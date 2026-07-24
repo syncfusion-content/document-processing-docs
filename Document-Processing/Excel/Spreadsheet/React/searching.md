@@ -30,11 +30,11 @@ Find can be done by any of the following ways:
 > * `Match case`: To find the matched value with case sensitivity.
 > * `Match exact cell contents`: To find the exact matched cell value with entire match cases.
 
-* Use the [`find`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#find) method to perform a find operation programmatically.
+* Using [`find`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#find) method to perform find operation.
 
 ## Replace
 
-Replace is used to change the found contents of a cell within a sheet or workbook. Replace All is used to change all the matched contents of a cell within a sheet or workbook.
+Replace is used to change the find contents of a cell within a sheet or workbook. Replace All is used to change all the matched contents of a cell within a sheet or workbook.
 
 **User Interface**:
 
@@ -60,7 +60,7 @@ In the following sample, searching can be done in the following ways:
 * Select the Home tab in the Ribbon toolbar, and then select the Search icon.
 * Enter any value in the search textbox.
 * Select the next (or previous) button to find the entered value in the spreadsheet.
-* You can access more options for finding values by selecting the more options in the search toolbar.
+* You can have more options to find values by selecting the more options in the search toolbar.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

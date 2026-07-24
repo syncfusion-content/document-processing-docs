@@ -46,7 +46,7 @@ A dialog box will open where you can enter the note content. After entering the 
 
 ## Editing a note
 
-In the active worksheet, you can modify the content of an existing note in the document:
+In the active worksheet, you can modify the content of an existing notes in the document:
 
 * **Context Menu**: Right-click the cell containing the note and select **Edit Note**.
 * **Ribbon**: Select the cell containing the note, navigate to the **Review** tab, click the **Notes** dropdown, and select **Edit Note**.
@@ -57,7 +57,7 @@ The note editor dialog box will open with the existing content. After editing th
 
 ## Deleting a note
 
-You can remove a note from a cell using either of the following ways:
+You can remove notes from cells using the following ways:
 
 * **Context Menu**: Right-click the cell containing the note and select **Delete Note**.
 * **Ribbon**: Select the cell containing the note, navigate to the **Review** tab, click the **Notes** dropdown, and select **Delete Note**.
@@ -182,7 +182,7 @@ In the below example, you can navigate between notes using **Previous Note** and
 
 ## Limitations
 
-* When importing a document that contains notes, the formatting of the content in the notes will not be available. Similarly, while adding notes, we cannot apply formatting to them.
+* When importing a document with notes, the formatting of the content in the notes will not be available. Similarly, while adding notes, we cannot apply formatting to them.
 * The style and appearance of the dialog box for the notes, including size, color, border, and other elements, cannot be directly changed.
 * Exporting the workbook along with notes is not supported in file formats such as Comma Separated Values (.csv), Excel Macro-Enabled Workbook (.xlsm), Excel Binary Workbook (.xlsb), and PDF Document (.pdf).
 * Notes added outside the used ranges of the worksheet will not be included in the exported document.
