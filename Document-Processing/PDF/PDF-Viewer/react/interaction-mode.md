@@ -31,7 +31,7 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+         ThumbnailView, Print, TextSelection, TextSearch, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
   return (<div>
@@ -61,7 +61,7 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+         ThumbnailView, Print, TextSelection, TextSearch, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
   return (<div>
@@ -200,7 +200,7 @@ root.render(<App />);
 
 ## Disable text selection (enable pan mode)
 
-Disable text selection by setting `enableTextSelection={false}` to enable pan mode for document navigation. When text selection is disabled, users can only pan through the document and cannot select or copy text.
+Disable text selection by setting [`enableTextSelection={false}`] (https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#enabletextselection) to enable pan mode for document navigation. When text selection is disabled, users can only pan through the document and cannot select or copy text.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -265,7 +265,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## Programmatically toggle interaction mode during runtime
+## Programmatically toggle interaction mode at runtime
 
 Toggle interaction modes at runtime in response to events or user actions, such as when opening annotation tools.
 

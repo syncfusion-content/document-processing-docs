@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Mobile Toolbar Interface in React Pdfviewer component | Syncfusion
-description: Learn All About the Mobile Toolbar Interface in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Mobile Toolbar Interface in React PDF Viewer component | Syncfusion
+description: Learn all about the Mobile Toolbar Interface in Syncfusion React PDF Viewer component of Syncfusion Essential JS 2 and more.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Mobile toolbar interface in React PDF Viewer component
+# Mobile Toolbar Interface in React PDF Viewer component
 
 The mobile PDF Viewer provides features for viewing, searching, annotating, and managing PDF documents on mobile devices. It includes Essential<sup style="font-size:70%">&reg;</sup> tools such as search, download, bookmarking, annotation, and page organization. The desktop toolbar can be enabled in mobile mode to expose additional actions when required.
 
@@ -38,9 +38,8 @@ N> In mobile mode, the annotation toolbar is displayed at the bottom of the view
 
 When you open the "more options" menu, you will see additional actions such as:
 
-**DownloadOption:** Tap to download the currently opened PDF document.
-
-**BookmarkOption:** Allows you to view bookmarks within the document.
+- **DownloadOption:** Tap to download the currently opened PDF document.
+- **BookmarkOption:** Allows you to view bookmarks within the document.
 
 ![More options menu showing additional actions like download and bookmark](images/more-options.png)
 

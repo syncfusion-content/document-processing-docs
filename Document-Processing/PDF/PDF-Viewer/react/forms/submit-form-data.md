@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Submit PDF Form Data to a Server using React PDF Viewer | Syncfusion
-description: Submit filled PDF form data from the EJ2 React PDF Viewer to a backend server, with a complete frontend example and a minimal Node receiver.
+description: Submit filled PDF form data from the EJ2 React PDF Viewer to a backend server, with a complete frontend example.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -112,7 +112,7 @@ export default function SubmitFormExample() {
 
 - Enable remote verification and approval workflows by sending submitted form data to a back end service for review and sign-off.
 - Store submitted form responses in a database to persist user inputs for auditing, reporting, or later retrieval.
-- Trigger workflow automation and downstream processing by sending form data to business systems or server less functions.
+- Trigger workflow automation and downstream processing by sending form data to business systems or serverless functions.
 - Merge submitted values into a final flattened PDF on the server to produce a non-editable document that combines the form data with the original PDF.
 
 ## Related topics

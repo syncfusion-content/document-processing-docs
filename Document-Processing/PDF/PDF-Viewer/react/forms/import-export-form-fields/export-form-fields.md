@@ -16,7 +16,7 @@ This guide shows concise, actionable steps to export PDF form field data for sto
 
 ## Steps
 
-### 1. Configure the PDF Viewer 
+### 1. Import the required modules
 
 Install and import the viewer with required services.
 
@@ -29,7 +29,7 @@ import {
 import { RefObject, useRef } from 'react';
 {% endhighlight %}
 
-### 2. Initialize ref 
+### 2. Initialize the viewer reference
 
 Initialize the viewer with a `ref` so you can call export methods.
 

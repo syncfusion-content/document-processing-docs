@@ -95,7 +95,7 @@ export default function App() {
 - [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)
 - [Export form fields](./export-form-fields)
 - [Import Export Events](./import-export-events)
-- [Create Edit form fields](../overview-create-forms)
+- [Create/Edit form fields](../overview-create-forms)
 - [Group form fields](../group-form-fields)
 - [Form validation](../form-validation)
 - [Add custom data to form fields](../custom-data)

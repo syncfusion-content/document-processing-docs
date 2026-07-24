@@ -36,7 +36,7 @@ N> form field grouping is controlled by the `Name` property. The position of eac
 1. Enable the [Form Designer toolbar](../toolbar-customization/form-designer-toolbar).
 2. Add the form fields you want to group.
 3. Select a form field, open **Properties**, and set the **Name** value.
-4. Assign the same **Name** to all PDF Form Field that belong to the group.
+4. Assign the same **Name** to all PDF form fields that belong to the group.
 5. Apply the changes and verify that updates in one widget reflect in the others.
 
 ![Grouping textboxes with the same name](../../javascript-es6/images/groupTextFileds.png)
