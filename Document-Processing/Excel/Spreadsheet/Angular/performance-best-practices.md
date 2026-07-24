@@ -102,7 +102,7 @@ To learn more about Manual Calculation Mode and how to enable it, you can refer 
 
 ### Handling large file saves with `isFullPost` option
 
-When saving large Excel files using **File → Save As** or the [`save`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#save) method, the Spreadsheet posts the workbook to the server using a form submit. This can cause timeouts for very large or complex workbooks.
+When saving large Excel files using **File → Save As** or the [`save`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#save) method, the Spreadsheet triggers a server API call through a form submit operation. This can lead to performance issues such as timeouts or delays, particularly due to the size and complexity of the workbook.
 
 To mitigate these issues during the save operation, you can set the [`isFullPost`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/beforesaveeventargs#isfullpost) property to **false** in the [`beforeSave`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#beforesave) event of the Spreadsheet.
 

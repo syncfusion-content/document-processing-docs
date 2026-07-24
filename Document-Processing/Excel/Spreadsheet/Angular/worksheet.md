@@ -69,7 +69,7 @@ You can dynamically rename an existing worksheet in the following ways,
 By default, the row and column headers are visible in worksheets. You can dynamically show or hide worksheet headers by using one of the following ways,
 
 * Switch to `View` tab, and then select `Hide Headers` option to hide both the row and column headers.
-* Set the `showHeaders` property of a sheet to `true` or `false` to show or hide the headers at initial load. By default, the `showHeaders` property is enabled in each worksheet.
+* Set `showHeaders` property in `sheets` as `true` or `false` to show or hide the headers at initial load. By default, the `showHeaders` property is enabled in each worksheet.
 
 ## Gridlines
 

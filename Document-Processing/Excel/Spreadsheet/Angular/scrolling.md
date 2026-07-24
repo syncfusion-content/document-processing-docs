@@ -9,7 +9,7 @@ documentation: ug
 
 # Scrolling in Angular Spreadsheet component
 
-Scrolling lets you move quickly across the worksheet. Scrolling can be enabled by setting the [`allowScrolling`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowscrolling) property to `true`.
+Scrolling lets you move quickly across the worksheet. It moves faster if we use horizontal and vertical scroll bars. Scrolling can be enabled by setting the [`allowScrolling`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowscrolling) property to `true`.
 
 > By default, the `allowScrolling` property is `true`.
 
@@ -46,7 +46,7 @@ You can scroll through the worksheet using one of the following ways:
 
 ## Finite Scrolling with Defined Rows and Columns
 
-To perform scrolling with a fixed number of rows and columns, define `rowCount` and `colCount` in the [`sheets`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#sheets) property and set `isFinite` to `true` in `scrollSettings`.
+If you want to perform scrolling with defined rows and columns, you must define `rowCount` and `colCount` in the [`sheets`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#sheets) property and set `isFinite` as true and `enableVirtualization` as false in `scrollSettings`.
 
 The following code example shows the finite scrolling with defined rows and columns in the spreadsheet. Here, we used rowCount as 20 and colCount as 20, after reaching the 20th row or 20th column you can't able to scroll.
 

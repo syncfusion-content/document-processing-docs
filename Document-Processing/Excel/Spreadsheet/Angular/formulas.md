@@ -64,7 +64,7 @@ The following code example shows an unsupported formula in the spreadsheet.
 
 Second, if you want to directly compute any formula or expression, you can use the [computeExpression](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#computeexpression) method. This method will work for both built-in and user-defined/custom formula.
 
-The following code example shows how to use the `computeExpression` method in the spreadsheet.
+The following code example shows how to use `computeExpression` method in the spreadsheet.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
@@ -118,7 +118,7 @@ You can configure the calculate mode using the [`calculationMode`](https://ej2.s
 
 In Automatic Mode, formulas are recalculated instantly whenever a dependent cell is modified. This mode is perfect for scenarios where real-time updates are essential, ensuring that users see the latest results without additional actions.
 
-For example, consider a spreadsheet where cell `C1` contains the formula `=A1+B1`. When the value in `A1` or `B1` changes, `C1` updates immediately without requiring any user intervention. To enable this mode, set the [`calculationMode`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#calculationmode) property to `CalculationMode.Automatic`.
+For example, consider a spreadsheet where cell `C1` contains the formula `=A1+B1`. When the value in `A1` or `B1` changes, `C1` updates immediately without requiring any user intervention. To enable this mode, set the [`calculationMode`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#calculationmode) property to `Automatic`.
 
 The following code example demonstrates how to set the Automatic calculation mode in a Spreadsheet.
 

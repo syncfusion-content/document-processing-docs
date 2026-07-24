@@ -24,12 +24,12 @@ You can insert an image in one of the following ways:
 * Selecting the Insert tab in the Ribbon toolbar, and then choose the Image tab.
 * Use the `insertImage()` method programmatically.
 
-The available parameters in the `insertImage()` method are:
+The available parameters in `insertImage()` method are:
 
 | Parameter | Type | Description |
 |-----|------|----|
 | images | `ImageModel` | Specifies the options to insert an image in the spreadsheet. |
-| range(optional) | `string` | Specifies the range in the spreadsheet where the image is inserted. |
+| range(optional) | `string` | Specifies the range in the spreadsheet. |
 
 The available arguments in `ImageModel` are:
 
@@ -47,7 +47,7 @@ The available arguments in `ImageModel` are:
 * If you want to delete the image, just select the image, and then press the Delete key.
 * Use the `deleteImage()` method programmatically.
 
-The available parameters in the `deleteImage()` method are:
+The available parameters in `deleteImage()` method are:
 
 | Parameter | Type | Description |
 |-----|------|----|
