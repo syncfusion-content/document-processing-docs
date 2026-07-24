@@ -16,7 +16,7 @@ Syncfusion® Document Solutions has [Docx Editor SDK](https://www.syncfusion.com
 
 ## Download the Trial Version
 
-Our 30-day trial can be downloaded in two ways.
+Our 30-days trial can be downloaded in two ways.
 
 * Download Free Trial Setup
 * Start Trials if using components through [NuGet.org](https://www.nuget.org/packages?q=syncfusion)
@@ -24,7 +24,7 @@ Our 30-day trial can be downloaded in two ways.
 
 ### Download Free Trial Setup
 
-1. You can evaluate our 30-day free trial by visiting the [Download Free Trial](https://www.syncfusion.com/downloads) page and you can select any Document SDK platform.
+1. You can evaluate our 30-days free trial by visiting the [Download Free Trial](https://www.syncfusion.com/downloads) page and you can select any Document Solution platform.
 2. After completing the required form or logging in with your registered Syncfusion<sup>&reg;</sup> account, you can download the Document SDK trial installer from the confirmation page. (as shown in the screenshot below.)
 
    N> Correspondingly, You can also download other SDK platform (such as Docx Editor SDK, PDF Viewer SDK, Spreadsheet Editor SDK, Document SDK) from the [Trial and downloads of Syncfusion Essential Studio](https://www.syncfusion.com/downloads) page. 
@@ -45,7 +45,7 @@ Our 30-day trial can be downloaded in two ways.
 
 You should initiate an evaluation if you have already obtained our components through [NuGet.org](https://www.nuget.org/packages?q=syncfusion)
 
-1. You can start your 30-day free trial from the [Start Trial](https://www.syncfusion.com/account/manage-trials/start-trials) page from your account.
+1. You can start your 30-days free trial from the [Start Trial](https://www.syncfusion.com/account/manage-trials/start-trials) page from your account.
 
    N> You can generate the license key for your active trial products from [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page. This license key will be mandatory to use our trial products in your application. To know more about License key, refer this [help topic](https://help.syncfusion.com/document-processing/licensing/overview).
 	
@@ -56,7 +56,7 @@ You should initiate an evaluation if you have already obtained our components th
 
    N> If you've already used the trial products and they haven't expired, you won't be able to start the trial for the same product again.
 
-4. After you've started the trial, go to the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page to get the latest version trial installer. You can generate the [unlock key](https://support.syncfusion.com/kb/article/7053/how-to-generate-unlock-key-for-essentials-studio-products) and [license key](https://help.syncfusion.com/document-processing/licensing/how-to-generate) here at any time before the trial period expires. (as shown in the screenshot below.)
+4. After you've started the trial, go to the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page to get the latest version trial installer. You can generate the [unlock key](https://support.syncfusion.com/kb/article/7053/how-to-generate-unlock-key-for-essentials-studio-products) and [license key](https://help.syncfusion.com/document-processing/licensing/how-to-generate) here at any time before the trial period expires (as shown in the screenshot below.). Once generated, Register the license key in your application. For additional guidance, refer to the [Registering the License Key](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application) documentation. 
 
    ![License and downloads of Syncfusion Essential Studio](images/start-trial-download-installer.png)
 
