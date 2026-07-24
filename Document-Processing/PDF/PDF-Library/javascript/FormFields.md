@@ -1127,8 +1127,6 @@ document.destroy();
 
 Flattening a form field makes its value permanent and non-editable. The field's visual appearance is preserved while the interactive element is removed. Set the `flatten` property on any `PdfField` (text box, combo box, list box, radio button, check box, signature, or button).
 
-> **Note:** The `flatten` flag must be set before `document.save()`. After save, the field is no longer interactive in the saved PDF.
-
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import {PdfDocument, PdfField} from '@syncfusion/ej2-pdf';
