@@ -146,7 +146,7 @@ this.pdfviewerObj.textSearch.searchText('PDF', true);
 [`searchNext`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/textSearch#searchnext) method searches the next occurrence of the current query from the active match.
 
 ```ts
-// searchText(text: string, isMatchCase?: boolean)
+// searchNext()
 this.pdfviewerObj.textSearch.searchNext();
 ```
 
@@ -155,7 +155,7 @@ this.pdfviewerObj.textSearch.searchNext();
 [`searchPrevious`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/textSearch#searchprevious) API searches the previous occurrence of the current query from the active match.
 
 ```ts
-// searchText(text: string, isMatchCase?: boolean)
+// searchPrevious()
 this.pdfviewerObj.textSearch.searchPrevious();
 ```
 
@@ -164,7 +164,7 @@ this.pdfviewerObj.textSearch.searchPrevious();
 [`cancelTextSearch`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/textSearch#canceltextsearch) method cancels the current text search and removes the highlighted occurrences from the PDF Viewer.
 
 ```ts
-// searchText(text: string, isMatchCase?: boolean)
+// cancelTextSearch()
 this.pdfviewerObj.textSearch.cancelTextSearch();
 ```
 

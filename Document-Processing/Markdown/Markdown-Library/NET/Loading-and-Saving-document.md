@@ -8,11 +8,11 @@ documentation: UG
 
 # Loading and Saving a Markdown Document
 
-The Syncfusion<sup>&reg;</sup> Markdown library allows you to load an existing Markdown document and save it to the file system or stream programmatically.
+The Syncfusion<sup>&reg;</sup> .NET Markdown library allows you to load an existing Markdown document and save it to the file system or stream programmatically.
 
 ## Namespaces required
 
-The following namespaces of Essential<sup>&reg;</sup> Markdown need to be included in your application to load and save the Markdown document.
+The following namespaces need to be included in your application to load and save a Markdown document.
 
 N> Refer to the appropriate tabs in the code snippets section: ***C#*** for ASP.NET Core, Blazor, ASP.NET MVC, UWP, .NET MAUI, WinUI, WinForms and WPF; ***VB.NET*** for VB.NET applications.
 

@@ -1,20 +1,18 @@
 ---
 layout: post
-title: Configure annotation selector settings in React PDF Viewer | Syncfusion
-description: Learn how to configure annotation selector settings in the React PDF Viewer using annotationSelectorSettings and related options.
+title: Configure Annotation Selector Settings in Syncfusion React PDF Viewer
+description: Learn how to configure annotation selector settings in the React PDF Viewer using the AnnotationSelectorSettings and related options.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Configure annotation selector settings
+# Personalize Annotation Selection Settings in React PDF Viewer
 
-Use the [annotationSelectorSettings](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationSelectorSettings/) property to customize the appearance and interaction behavior of the annotation selector in the react PDF Viewer UI.
+Use the [annotationSelectorSettings](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationSelectorSettings) property to customize the appearance and interaction behavior of the annotation selector in the React PDF Viewer UI.
 
-AnnotationSelectorSettingsModel
-
-The [AnnotationSelectorSettingsModel](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationSelectorSettingsModel/) defines selector appearance and behavior settings—such as border colors, resizer appearance, and selector line style—providing fine-grained control over how annotations are displayed and manipulated.
+The [AnnotationSelectorSettingsModel](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationSelectorSettingsModel) defines selector appearance and behavior settings—such as border colors, resizer appearance, and selector line style—providing fine-grained control over how annotations are displayed and manipulated.
 
 Steps to configure annotation selector settings
 - Step 1: Create a PDF Viewer instance and initialize it.
@@ -53,7 +51,7 @@ Key properties
 - selectionBorderThickness: Specifies the thickness of the selection border.
 - resizerShape: Sets the shape of the resizer handles (for example, Circle or Square).
 - selectorLineDashArray: Specifies the dash pattern for the selector line.
-- resizerLocation: Determines where the resizers appear relative to the annotation (for example, Corners or Edges).
+- resizerLocation: Determines where the resizer appear relative to the annotation (for example, Corners or Edges).
 - resizerCursorType: Sets the cursor style when hovering over a resizer.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to)

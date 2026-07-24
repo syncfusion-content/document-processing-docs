@@ -1,5 +1,6 @@
 ---
 title: Templates in JavaScript PDF Library | Syncfusion
+canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: This section explains how to create a PDF template, which is a drawing surface where contents can be added, by using the JavaScript PDF Library
 platform: document-processing
 control: PDF
@@ -7,14 +8,15 @@ documentation: UG
 ---
 # Templates in JavaScript PDF Library
 
-A PDF template is a drawing surface, where contents can be added. All the elements that can be added to a PdfPage is supported in PdfTemplate as well. The template in turn can be drawn over the page or can be positioned at any part of the page.
+A PDF template is a drawing surface where contents can be added. All the elements that can be added to a PDF page are supported in PDF template as well. The template can be drawn anywhere on a page or onto other templates, making it ideal for headers, footers, watermarks, and other repeating graphics.
 
-## Creating a new PDF template
+## Creating a New PDF Template
 
-This example demonstrates how to create a new PDF template using the [PdfTemplate](https://ej2.syncfusion.com/documentation/api/pdf/pdftemplate) class. A PDF template allows you to define reusable graphics or content that can be drawn on multiple pages or annotations within a PDF document.
+This example demonstrates how to create a new PDF template using the [PdfTemplate](https://ej2.syncfusion.com/javascript/documentation/api/pdf/pdftemplate) class. A PDF template allows you to define reusable graphics or content that can be drawn on multiple pages or annotations within a PDF document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
+
 import { PdfDocument, PdfPage, PdfTemplate, PdfImage, PdfBitmap, PdfStandardFont, PdfBrush, PdfFontFamily, PdfFontStyle } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
@@ -64,3 +66,10 @@ document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
+
+## Additional Resources
+
+- [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
+- [JavaScript PDF Library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
+- [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
+- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default.html)
