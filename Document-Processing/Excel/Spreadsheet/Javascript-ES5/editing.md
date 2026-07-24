@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Editing in EJ2 JavaScript Spreadsheet control | Syncfusion
-description: Learn about the editing options supported in the Syncfusion EJ2 JavaScript Spreadsheet control, including enabling editing, programmatic edit, save, and cancel operations.
+description: Learn here all about Editing in Syncfusion EJ2 JavaScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Editing
 documentation: ug

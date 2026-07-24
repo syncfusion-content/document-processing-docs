@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Freeze Panes in EJ2 Javascript Spreadsheet control | Syncfusion
-description: Learn how to freeze rows and columns in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Freeze Panes in EJ2 JavaScript Spreadsheet control | Syncfusion
+description: Learn how to freeze rows and columns in Syncfusion EJ2 JavaScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Freeze Panes 
 documentation: ug
 ---
 
-# Freeze Panes in EJ2 Javascript Spreadsheet control
+# Freeze Panes in EJ2 JavaScript Spreadsheet control
 
-The Freeze Panes feature helps you to keep particular rows or columns visible when scrolling the sheet content in the spreadsheet. You can specify the number of frozen rows and columns using the [`frozenRows`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#frozenrows) and [`frozenColumns`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#frozencolumns) properties inside the [`sheets`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#sheets) property of the Spreadsheet.
+The Freeze Panes feature helps you to keep particular rows or columns visible when scrolling the sheet content in the spreadsheet. You can specify the number of frozen rows and columns using the [`frozenRows`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#frozenrows) and [`frozenColumns`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#frozencolumns) properties inside the [`sheets`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#sheets) property of the Spreadsheet.
 
 > * The `frozenRows` and `frozenColumns` properties accept numeric values that represent the count of rows or columns to freeze.
 
@@ -20,7 +20,7 @@ In the active spreadsheet, select the cell where you want the freeze split to be
 You can apply freeze panes in any of the following ways:
 
 * Select the View tab in the Ribbon toolbar and choose the `Freeze Panes` item.
-* Use the [`freezePanes`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#freezepanes) method programmatically.
+* Use the [`freezePanes`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#freezepanes) method programmatically.
 
 ## FrozenRows
 

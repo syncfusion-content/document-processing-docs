@@ -26,7 +26,7 @@ Previously, although you could import culture-based Excel files into the Spreads
 
 > Before importing culture-based Excel files, ensure that the Spreadsheet is rendered with the corresponding culture. Additionally, launch the import/export services with the same culture to ensure compatibility.
 
-When loading spreadsheet data with culture-based formula argument separators using cell data binding, local/remote data, or JSON, set the [listSeparator](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#listseparator) property value to the culture-based list separator. Common separators per culture are: German (`de`) → `;`, French (`fr`) → `;`, Spanish (`es`) → `;`. When importing an Excel file, the [listSeparator](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#listseparator) property is updated automatically based on the culture of the launched import/export service.
+When loading spreadsheet data with culture-based formula argument separators using cell data binding, local/remote data, or JSON, ensure to set the [listSeparator](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#listseparator) property value as the culture-based list separator from your end. Additionally, note that when importing an Excel file, the [listSeparator](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#listseparator) property will be updated based on the culture of the launched import/export service.
 
 In the example below, the Spreadsheet component is rendered with the `German` [`de`] culture. The sample shows how to set the culture-based argument separator and use culture-based formatted numeric values as formula arguments.
 
