@@ -1,6 +1,6 @@
 ---
 title: Word file format conversions in C# | DocIO | Syncfusion
-description: Learn about the supported Word file format conversions such a Word open XML formats, Word processing XML, and Word binary in the .NET Word library.
+description: Learn about the supported Word file format conversions such as Word Open XML formats, WordprocessingML, and Word binary in the .NET Word library.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -38,7 +38,7 @@ Click [here](https://help.syncfusion.com/document-processing/word/word-library/n
 
 DOTX is a Word document template. Templates are useful when you regularly produce similar types of documents, as they let you start from a ready-made structure instead of building the document from scratch each time.
 
-The following code example illustrates how to create the Word document template with a few lines of code.
+The following code example illustrates how to create a Word document template with a few lines of code.
 
 N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
@@ -100,10 +100,10 @@ For further information, click [here](https://help.syncfusion.com/document-proce
 
 Word Processing XML (WordML) is a single‑file XML format introduced in Microsoft Word 2003 to represent Word document content in XML.
 
-The Essential<sup>&reg;</sup> DocIO supports converting the Word document into Word Processing XML document and vice versa.
+Essential<sup>&reg;</sup> DocIO supports converting Word documents into Word Processing XML and back.
 
-N> 1. Importing and exporting Word Processing 2007 XML documents is supported.
-N> 2. Exporting Word Processing 2003 XML documents is not supported. However, you can import Word Processing 2003 XML documents and export them to other supported file formats.
+N> 1. Word Processing 2007 XML documents can be both imported and exported.
+N> 2. Word Processing 2003 XML documents cannot be exported. However, you can import Word Processing 2003 XML documents and export them to other supported file formats.
 N> 3. Custom XML elements present in Word Processing 2003 XML documents are removed automatically during import, similar to the behavior of recent versions of Microsoft Word. Custom XML elements are a deprecated feature in newer Word versions.
 
 ### Word to WordML 
@@ -190,7 +190,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Supported elements in Word Processing XML conversion
 
-Word Processing XML conversion supports all common Word document elements such as paragraphs, text, tables, images, and other standard formatting elements. The following table highlights the support status of specific elements that may have limitations or behavior differences during conversion.
+Word Processing XML conversion supports all common Word document elements such as paragraphs, text, tables, images, and other standard formatting elements. The following table summarizes the element-level support for the Word-to-WordML and WordML-to-Word conversions covered above, and flags elements that have limitations or behavior differences.
 
 <table>
   <thead>
@@ -300,7 +300,7 @@ document.EnsureMinimal()
 'Appends text to the last paragraph of the document
 document.LastParagraph.AppendText("Hello World")
 'Saves and closes the Word document
-document.Save("BinaryDocument.doc ")
+document.Save("BinaryDocument.doc")
 document.Close()
 {% endhighlight %}
 
@@ -371,7 +371,7 @@ using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx)
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads an existing document
 WordDocument document = new WordDocument("Template.docx", FormatType.Docx);
-//Saves the Word document(.docx) as binary document(.doc) file
+//Saves the Word document (.docx) as Word 97-2003 document (.doc)
 document.Save("DocxToBinary.doc", FormatType.Doc);
 //Closes the document
 document.Close();
@@ -380,7 +380,7 @@ document.Close();
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Loads an existing document
 Dim document As New WordDocument("Template.docx", FormatType.Docx)
-'Saves the Word document(.docx) as binary document(.doc) file 
+'Saves the Word document (.docx) as Word 97-2003 document (.doc)
 document.Save("DocxToBinary.doc", FormatType.Doc)
 'Closes the document
 document.Close()
@@ -394,7 +394,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 DOT is the binary template file format used in Word 97–Word 2003 and is used to create new documents from an existing template.
 
-The following code example illustrates how to create a binary format document template with a few lines of code.
+The following code example illustrates how to create a Word 97-2003 template document with a few lines of code.
 
 {% tabs %}
 
@@ -493,9 +493,9 @@ document.Close
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-file-formats/Save-Word-with-compatibility).
 
-#### Save Word in old compatibility
+#### Save Word with a specific compatibility mode
 
-The following code example illustrates how to save a Word document in old compatibility using DocIO.
+The following code example illustrates how to save a Word document with a chosen compatibility mode using DocIO. The available `CompatibilityMode` values include `Word2007`, `Word2010`, `Word2013`, `Word2016`, and `Word2019`; see the [CompatibilityMode API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CompatibilityMode.html) for the full list.
 
 {% tabs %}
 
@@ -555,11 +555,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Open a Word (*.doc) document containing incremental save information
 
-Essential<sup>&reg;</sup> DocIO process the content that are preserved in the last complete save operation alone from a Word (.doc) document and it doesn't process the incremental save information. Hence it throws "Complex format is not supported" exception when attempting to open a Word (.doc) document containing incremental save information.
+Essential<sup>&reg;</sup> DocIO processes only the content that was preserved in the last complete save operation of a Word (.doc) document and does not process incremental save information. Therefore, it throws a "Complex format is not supported" exception when attempting to open a Word (.doc) document that contains incremental save information.
 
-You can open the Word (*.doc) documents containing incremental save information without exception by setting [SkipIncrementalSaveValidation](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Settings.html#Syncfusion_DocIO_DLS_Settings_SkipIncrementalSaveValidation) property of Settings class as true. Whereas the recent changes saved as incremental save information using older Microsoft Word application can't be preserved.
+You can open Word (*.doc) documents containing incremental save information without an exception by setting the [SkipIncrementalSaveValidation](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Settings.html#Syncfusion_DocIO_DLS_Settings_SkipIncrementalSaveValidation) property of the `Settings` class to `true`.
 
-The following code example illustrates how to open a Word (*.doc) document containing incremental save information without exception.
+The following code example illustrates how to open a Word (*.doc) document containing incremental save information without an exception.
 
 {% tabs %}
 

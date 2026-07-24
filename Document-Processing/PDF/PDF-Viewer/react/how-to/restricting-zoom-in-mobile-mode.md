@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Restrict zoom percentage on mobile devices | Syncfusion
+title: Restrict PDF Zoom on Mobile Devices | Syncfusion
 description: Learn how to restrict zoom percentage on mobile devices using minZoom and maxZoom in the Syncfusion React PDF Viewer.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 ---
 
-# Restrict zoom percentage on mobile devices
+# Limit PDF Viewer Zoom Levels on Mobile Devices
 
 Use `minZoom` and `maxZoom` to restrict zoom levels on mobile devices and improve scrolling performance and perceived load time. Restricting zoom prevents extreme zoom levels that can degrade rendering performance on constrained devices.
 
@@ -20,7 +20,7 @@ import * as React from 'react';
 import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
          BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation,
-         FormFields, FormDesigner, PageOrganizer Inject } from '@syncfusion/ej2-react-pdfviewer';
+         FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 import  {Browser} from '@syncfusion/ej2-base';
 
 function App() {
@@ -63,7 +63,7 @@ import * as React from 'react';
 import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
          BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation,
-         FormFields, FormDesigner, PageOrganizer Inject } from '@syncfusion/ej2-react-pdfviewer';
+         FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 import  {Browser} from '@syncfusion/ej2-base';
 
 function App() {
