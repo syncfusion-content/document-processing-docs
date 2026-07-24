@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Changing the active sheet while importing a file in the Vue Spreadsheet component | Syncfusion
+title: Change active sheet while importing a file in Vue Spreadsheet component | Syncfusion
 description: Learn here all about changing the active sheet index when importing a file in the Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Spreadsheet 
 platform: document-processing
 documentation: ug
 ---
 
-## Changing the active sheet while importing a file in Vue Spreadsheet component
+# Changing the active sheet while importing a file in Vue Spreadsheet component
 
-You can change the active sheet of the imported file by updating the [`activeSheetIndex`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#activesheetindex) property on the [`openComplete`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#opencomplete) event.
+You can change the active sheet of the imported file by updating the [`activeSheetIndex`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#activesheetindex) property on the [`openComplete`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#opencomplete) event.
 
 The following code example shows how to set the active sheet when importing an Excel file.
 

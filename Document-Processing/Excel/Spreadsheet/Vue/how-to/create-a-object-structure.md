@@ -9,7 +9,7 @@ documentation: ug
 
 # Create an object structure in Vue Spreadsheet component
 
-This topic guides you to construct a JSON structure that can be passed to the [`openFromJson`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#openfromjson) method to render the spreadsheet. The JSON structure is an object with the key as `Workbook` and the [`properties`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#properties) of the spreadsheet as value.
+This topic guides you to construct a JSON structure that can be passed to the [`openFromJson`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#openfromjson) method to render the spreadsheet. The JSON structure is an object with the key as `Workbook` and the [`properties`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#properties) of the spreadsheet as value.
 
 ```js
 { Workbook: {} }
@@ -216,4 +216,4 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-Sample link : [`create-a-object-structure`](https://codesandbox.io/s/vue-template-forked-rzkpc)
+Sample link : [`create-a-object-structure`](https://codesandbox.io/p/sandbox/vue-template-forked-rzkpc)
