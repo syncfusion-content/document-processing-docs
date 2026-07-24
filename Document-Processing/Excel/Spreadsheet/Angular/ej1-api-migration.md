@@ -184,7 +184,7 @@ This article describes the API migration process of the Spreadsheet component fr
 |Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 |--------- | ----------- | ----------- |
 | Enables or disables the cell type feature | **Property:** *allowCellType* <br><br>`<ej-spreadsheet [allowCellType]="true">`<br>`</ej-spreadsheet>`| By default, it is enabled. |
-| Specifies the cell types for a cell or range | **Property:** *sheets.cellTypes* <br><br>`<ej-spreadsheet [sheets]="sheets">`<br>`</ej-spreadsheet>`<br>**Ts**<br>`this.sheets = [{ cellTypes: [{ range: 'F5', settings: { type: ej.Spreadsheet.CustomCellType.Button, 'background-color': 'yellow', color: 'black', text: 'BUTTON' } }] }];`| **Property:** *sheets.ranges.template* <br><br>`<ejs-spreadsheet>`<br>`<e-sheets><e-sheet><e-ranges><e-range template="<button class='e-button-template'>BUTTON</button>" address="F5"></e-range></e-ranges></e-sheet></e-sheets>`<br>`</ejs-spreadsheet>`|
+| Specifies the cell types for a cell or range | **Property:** *sheets.cellTypes* <br><br>`<ej-spreadsheet [sheets]="sheets">`<br>`</ej-spreadsheet>`<br>**Ts**<br>`this.sheets = [{ cellTypes: [{ range: 'F5', settings: { type: ej.Spreadsheet.CustomCellType.Button, background-color: 'yellow', color: 'black', text: 'BUTTON' } }] }];`| **Property:** *sheets.ranges.template* <br><br>`<ejs-spreadsheet>`<br>`<e-sheets><e-sheet><e-ranges><e-range template="<button class='e-button-template'>BUTTON</button>" address="F5"></e-range></e-ranges></e-sheet></e-sheets>`<br>`</ejs-spreadsheet>`|
 
 ## Merge
 

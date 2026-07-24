@@ -18,7 +18,7 @@ Formatting options make your data easier to view and understand. The different t
 
 ## Number Formatting
 
-Number formatting provides a type for your data in the [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor). Use the [`allowNumberFormatting`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allownumberformatting) property to enable or disable the number formatting option in the Spreadsheet. The different types of number formatting supported in the Spreadsheet are:
+Number formatting provides a type for your data in the [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor). Use the [`allowNumberFormatting`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allownumberformatting) property to enable or disable the number formatting option in the Spreadsheet. The different types of number formatting supported in Spreadsheet are:
 
 | Types | Format Code | Format ID |
 |---------|---------|---------|
@@ -159,7 +159,7 @@ The following code example demonstrates how to configure culture-based formats f
 
 ## Text and cell formatting
 
-Text and cell formatting enhance the look and feel of your cells. It helps to highlight a particular cell or range of cells from a whole workbook. You can apply formats like font size, font family, font color, text alignment, and border, to a cell or range of cells. Use the [`allowCellFormatting`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowcellformatting) property to enable or disable the text and cell formatting option in the Spreadsheet. You can set the formats in the following ways:
+Text and cell formatting enhance the look and feel of your cells. It helps to highlight a particular cell or range of cells from a whole workbook. You can apply formats like font size, font family, font color, text alignment, border etc. to a cell or range of cells. Use the [`allowCellFormatting`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowcellformatting) property to enable or disable the text and cell formatting option in the Spreadsheet. You can set the formats in the following ways:
 * Using the `style` property, you can set formats to each cell at initial load.
 * Using the [`cellFormat`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#cellformat) method, you can set formats to a cell or range of cells.
 * You can also apply formats by clicking the desired format option from the **Home** tab in the ribbon toolbar.
@@ -337,7 +337,7 @@ The following features have some limitations in Conditional Formatting:
 
 ## Rich Text Formatting
 
-Rich text formatting allows you to apply different styles to specific portions of text within a single cell to improve readability and presentation. Currently, only subscript and superscript formatting are supported; other rich text font styles are not supported.
+Rich text formatting allows you to apply different styles to specific portions of text within a single cell to improve readability and presentation. Currently, subscript and superscript formatting are supported, and other rich text font styles are not supported.
 
 In the **Syncfusion Angular Spreadsheet**, rich text formatting is supported through the [`richText`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#richtext) property of the cell model. This property lets you define multiple text segments inside a cell, where each segment can have its own style.
 
@@ -355,6 +355,8 @@ To apply these formats, use the `verticalAlign` property within the style of a r
 Set `verticalAlign: 'super'` for superscript and `verticalAlign: 'sub'` for subscript.
 
 #### How to Apply Subscript and Superscript
+
+You can apply subscript and superscript formatting in following ways:
 
 1. Select the desired portion of text within a cell, then click the **Subscript** or **Superscript** option in the **Home** tab of the ribbon to apply the formatting.
 
