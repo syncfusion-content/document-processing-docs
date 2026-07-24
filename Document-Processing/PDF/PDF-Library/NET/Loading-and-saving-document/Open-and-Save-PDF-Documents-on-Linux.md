@@ -61,8 +61,8 @@ Step 5: Add the following code example to add a paragraph and table to the PDF d
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-//Get the first page from a document.
-PdfLoadedPage page = document.Pages[0] as PdfLoadedPage;
+//Get the first page from the document.
+PdfLoadedPage page = loadedDocument.Pages[0] as PdfLoadedPage;
 //Create PDF graphics for the page.
 PdfGraphics graphics = page.Graphics;
 
@@ -70,7 +70,7 @@ PdfGraphics graphics = page.Graphics;
 PdfGrid pdfGrid = new PdfGrid();
 //Add values to the list.
 List<object> data = new List<object>();
-Object row1 = new { Product_ID = "1001", Product_Name = "Bicycle" , Price ="10,000"};
+Object row1 = new { Product_ID = "1001", Product_Name = "Bicycle", Price = "10,000" };
 Object row2 = new { Product_ID = "1002", Product_Name = "Head Light", Price = "3,000" };
 Object row3 = new { Product_ID = "1003", Product_Name = "Break wire", Price = "1,500" };
 data.Add(row1);
@@ -83,8 +83,8 @@ IEnumerable<object> dataTable = data;
 pdfGrid.DataSource = dataTable;
 //Apply built-in table style.
 pdfGrid.ApplyBuiltinStyle(PdfGridBuiltinStyle.GridTable4Accent3);
-//Draw the grid to the page of PDF document.
-pdfGrid.Draw(graphics, new RectangleF(40, 400,page.Size.Width-80,0));
+//Draw the grid to the page of the PDF document.
+pdfGrid.Draw(graphics, new RectangleF(40, 400, page.Size.Width - 80, 0));
 {% endhighlight %}
 
 {% endtabs %}
@@ -95,10 +95,10 @@ Step 6: Add the following code example to **save the PDF document in .NET Core a
 
 {% highlight c# tabtitle="C#" %}
 //Create a FileStream to save the PDF document.
-using(FileStream outputStream = new FileStream("Result.pdf", FileMode.Create, FileAccess.ReadWrite))
+using (FileStream outputStream = new FileStream("Result.pdf", FileMode.Create, FileAccess.ReadWrite))
 {
     //Save the PDF file.
-    document.Save(outputStream);
+    loadedDocument.Save(outputStream);
 }
 {% endhighlight %}
 

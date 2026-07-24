@@ -78,6 +78,10 @@ Assembly assembly = typeof(MainPage).GetTypeInfo().Assembly;
 string basePath = "Load_and_Save_PDF_MAUI.Resources.Data.";
 Stream inputStream = assembly.GetManifestResourceStream(basePath + "Input.pdf");
 PdfLoadedDocument document = new PdfLoadedDocument(inputStream);
+//Get the first page from the document.
+PdfLoadedPage page = document.Pages[0] as PdfLoadedPage;
+//Create PDF graphics for the page.
+PdfGraphics graphics = page.Graphics;
 {% endhighlight %}
 
 {% endtabs %}
@@ -120,13 +124,13 @@ Step 8: Add the following code example to **save the PDF document in .NET MAUI**
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-//Saves the PDF to the memory stream.
+//Save the PDF to the memory stream.
 using MemoryStream ms = new();
 document.Save(ms);
-//Close the PDF document
+//Close the PDF document.
 document.Close(true);
 ms.Position = 0;
-//Saves the memory stream as file.
+//Save the memory stream as a file.
 SaveService saveService = new();
 saveService.SaveAndView("Result.pdf", "application/pdf", ms);
 {% endhighlight %}

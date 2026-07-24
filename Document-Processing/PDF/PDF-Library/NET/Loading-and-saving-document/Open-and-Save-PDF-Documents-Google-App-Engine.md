@@ -9,7 +9,7 @@ keywords: google app engine save pdf, app engine load pdf, c# save pdf, c# load 
 
 # Open and save PDF document in Google App Engine
 
-The [.NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency on Adobe Acrobat. Using this library, you can **open and save PDF document in Google App Engine**. 
+The [.NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency on Adobe Acrobat. Using this library, you can **open and save a PDF document in Google App Engine**.
 
 ## Set up App Engine
 
@@ -173,7 +173,7 @@ Step 4: Run the following **command** to navigate which sample you want to run.
 {% tabs %}
 {% highlight bash %}
 
-cd Open-and-save-Word-document
+cd Open_and_Save_PDF_GoogleAppEngine
 
 {% endhighlight %}
 {% endtabs %}
@@ -260,7 +260,7 @@ ADD / /app
 EXPOSE 8080
 ENV ASPNETCORE_URLS=http://*:8080
 WORKDIR /app
-ENTRYPOINT [ "dotnet", "Open-and-save-Word-document.dll"]
+ENTRYPOINT [ "dotnet", "Open_and_Save_PDF_GoogleAppEngine.dll"]
 EOT
 
 {% endhighlight %}
