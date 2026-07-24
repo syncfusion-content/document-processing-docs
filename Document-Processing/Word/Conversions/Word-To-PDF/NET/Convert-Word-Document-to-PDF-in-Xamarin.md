@@ -10,7 +10,7 @@ documentation: UG
 
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or **interop** dependencies. Using this library, you can **convert a Word document to PDF in Xamarin**.
 
-N> **Platform status:** Xamarin and Xamarin.Forms are in maintenance mode. Microsoft recommends migrating to [.NET MAUI](https://learn.microsoft.com/en-us/dotnet/maui/) for new development. For an equivalent guide for .NET MAUI, refer to [Convert Word Document to PDF in .NET MAUI](convert-word-document-to-pdf-in-maui.md).
+N> **Platform status:** Xamarin and Xamarin.Forms are in maintenance mode. Microsoft recommends migrating to [.NET MAUI](https://learn.microsoft.com/en-us/dotnet/maui/) for new development. For an equivalent guide for .NET MAUI, refer to [Convert Word Document to PDF in .NET MAUI](convert-word-document-to-pdf-in-maui).
 
 ## Prerequisites
 
@@ -119,8 +119,10 @@ using (WordDocument document = new WordDocument(assembly.GetManifestResourceStre
 }
 {% endhighlight %}
 
-N> **Embedded resource:** The input `Template.docx` must be added to the .NET Standard project and its **Build Action** set to **EmbeddedResource** in the Properties window. The file path used in `GetManifestResourceStream` (for example, `Convert-Word-Document-to-PDF.Template.Input.docx`) must match the project's default namespace followed by the folder and file name.
 {% endtabs %}
+
+N> **Embedded resource:** The input `Template.docx` must be added to the .NET Standard project and its **Build Action** set to **EmbeddedResource** in the Properties window. The file path used in `GetManifestResourceStream` (for example, `Convert-Word-Document-to-PDF.Template.Input.docx`) must match the project's default namespace followed by the folder and file name.
+
 
 ## Helper files for Xamarin
 

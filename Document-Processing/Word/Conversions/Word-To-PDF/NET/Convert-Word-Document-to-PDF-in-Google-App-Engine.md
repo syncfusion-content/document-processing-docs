@@ -46,13 +46,13 @@ Step 4: Click the **Authorize** button.
 
 This section creates the local ASP.NET Core project that will later be deployed to App Engine.
 
-Step 1: Open Visual Studio and select the **ASP.NET Core Web App (Model-View-Controller)** template targeting **.NET 8.0**.
+Step 1: Open Visual Studio and select the **ASP.NET Core Web App (Model-View-Controller)** template.
 ![Create ASP.NET Core Web application in Visual Studio](ASP-NET-Core_images/CreateProjectforConversion.png)
 
-Step 2: Configure the project name (for example, **Convert-Word-document-to-PDF**), choose a location, and ensure the **.NET 8.0** framework is selected.
+Step 2: Configure the project name (for example, **Convert-Word-document-to-PDF**), choose a location and click **Next**.
 ![Configure project name and framework](GCP_Images/GAE_Images/Configuration_WordtoPDF.png)
 
-Step 3: Click the **Create** button.
+Step 3: Select **.NET 8.0** framework and Click the **Create** button.
 ![Create ASP.NET Core Web application in Visual Studio](GCP_Images/GAE_Images/Additional-Information-WordtoPDF.png)
 
 Step 4: Install the following **NuGet packages** in your application from [Nuget.org](https://www.nuget.org/).
@@ -133,7 +133,7 @@ Step 1: Open the **Cloud Shell editor**.
 Step 2: Drag and drop the sample from your local machine to **Workspace**.
 ![Drag and drop the sample into the Workspace](GCP_Images/GAE_Images/Terminal-WordtoPDF.png)
 
-N> If you have your sample application on your local machine, drag and drop it into the Workspace. If you created the sample using the Cloud Shell terminal command, it will be available in the Workspace. For large files, consider using `gcloud storage cp` instead of drag-and-drop.
+N> If you have your sample application on your local machine, drag and drop it into the Workspace. If you created the sample using the Cloud Shell terminal command, it will be available in the Workspace.
 
 Step 3: Open the Cloud Shell Terminal and run the following **command** to view the files and directories within your **current Workspace**.
 
@@ -243,7 +243,7 @@ Step 3: Verify that the `Dockerfile` and `app.yaml` files are present in the **W
 
 ## Deploy to App Engine
 
-Step 1: To deploy the application to App Engine, run the following command in the Cloud Shell Terminal. Afterwards, retrieve the **URL** from the Cloud Shell Terminal (or run `gcloud app browse`).
+Step 1: To deploy the application to App Engine, run the following command in the Cloud Shell Terminal. Afterwards, retrieve the **URL** from the Cloud Shell Terminal.
 
 {% tabs %}
 {% highlight bash tabtitle="CLI" %}

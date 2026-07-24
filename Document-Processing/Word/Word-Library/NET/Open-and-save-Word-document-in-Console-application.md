@@ -12,7 +12,12 @@ Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion
 
 ## Open and save Word document using .NET Core and Latest
 
-The below steps illustrates open and save **Word document** in console application using **.NET Core**.
+The below steps illustrate how to open and save a **Word document** in a console application using **.NET Core**.
+
+**Prerequisites:**
+
+*   Visual Studio 2022.
+*   Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 
 Step 1: Create a new **.NET Core console application** project.
 ![Create a Console application in Visual Studio](Console-Images/NET/Console-Template-Net-Core.png)
@@ -77,7 +82,7 @@ using (FileStream outputStream = new FileStream("Result.docx", FileMode.Create, 
 {% endhighlight %}
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Read-and-Save-document/Open-and-save-Word-document/.NET-Standard).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Read-and-Save-document/Open-and-save-Word-document/.NET).
 
 By executing the program, you will get the **Word document** as follows.
 
@@ -85,12 +90,17 @@ By executing the program, you will get the **Word document** as follows.
 
 ## Open and save Word document in .NET Framework
 
-The below steps illustrates open and save **Word document** in console application using **.NET Framework**.
+The below steps illustrate how to open and save a **Word document** in a console application using **.NET Framework**.
 
-Step 1: Create a new **.NET FrameWork console application** project.
+**Prerequisites:**
+
+*   Visual Studio 2022.
+*   .NET Framework 4.6.2 or later.
+
+Step 1: Create a new **.NET Framework console application** project.
 ![Create a Console application in Visual Studio](Console-Images/NET-FrameWork/Console-Template-Net-FrameWork.png)
 
-Step 2: Install [Syncfusion.DocIO.WinForms](https://www.nuget.org/packages/Syncfusion.DocIO.WinForms/) NuGet package as a reference to your Windows Forms application from the [NuGet.org](https://www.nuget.org/).
+Step 2: Install [Syncfusion.DocIO.WinForms](https://www.nuget.org/packages/Syncfusion.DocIO.WinForms/) NuGet package as a reference to your .NET Framework application from the [NuGet.org](https://www.nuget.org/).
 
 ![Install Syncfusion.DocIO.WinForms NuGet package](Console-Images/NET-FrameWork/Nuget-Package-NET-FrameWork.png)
 
@@ -108,7 +118,7 @@ using Syncfusion.DocIO.DLS;
 {% endhighlight %}
 {% endtabs %}
 
-Step 4: Add the following code snippet in **Program.cs** file to **open an existing Word document in .NET FrameWork console application**.
+Step 4: Add the following code snippet in **Program.cs** file to **open an existing Word document in .NET Framework console application**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -136,7 +146,7 @@ text.CharacterFormat.FontSize = 12f;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Add below code example to **save the Word document in .NET FrameWork console application**.
+Step 6: Add below code example to **save the Word document in .NET Framework console application**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -151,4 +161,4 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 By executing the program, you will get the **Word document** as follows.
 
-![Output Word document in .NET FrameWork console application](Blazor_Images/Blazor_Output.png)
+![Output Word document in .NET Framework console application](Blazor_Images/Blazor_Output.png)
