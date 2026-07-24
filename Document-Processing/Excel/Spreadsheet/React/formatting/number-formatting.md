@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Number Formatting in the React Spreadsheet component | Syncfusion
-description: Learn here all about Number formatting in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.control: Formatting
+description: Learn here all about Number formatting in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+control: Formatting
 platform: document-processing
 documentation: ug
 ---
@@ -25,13 +26,13 @@ Number formatting defines the type of data displayed in the Spreadsheet. You can
 | Text | `@` | 49 |
 
 Number formatting can be applied in following ways,
-* Using the [format](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cell#format) property on a `cell`, you can set the desired format for each cell at initial load.
+* Using the [format](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cell#format) property in `cell`, you can set the desired format for each cell at initial load.
 * Using the [`numberFormat`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#numberformat) method, you can set the number format on a cell or a range of cells.
 * Selecting the number format option from the ribbon toolbar.
 
 ## Custom Number Formatting
 
-The Spreadsheet supports custom number formats to display your data as numbers, dates, times, percentages, and currency values. If the predefined formats do not meet your needs, you can set your own custom formats using the custom number formats dialog or the [`numberFormat`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#numberformat) method.
+Spreadsheet supports custom number formats to display your data as numbers, dates, times, percentages, and currency values. If the pre-defined number formats do not meet your needs, you can set your own custom formats using custom number formats dialog or [`numberFormat`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#numberformat) method.
 
 The custom number formats available in the custom number formats dialog are:
 
@@ -101,7 +102,7 @@ The following code example shows number formatting applied to cell data.
 
 Earlier, the custom format dialog always showed formats using English settings (group separator, decimal separator, and currency symbol were not updated based on the applied culture). Starting from version **27.1.\***, the dialog now displays formats according to the applied culture. You can select a culture-based number format or enter your own format using the culture-specific decimal separator, group separator, and currency symbol. After that, click **Apply** to apply the culture-specific custom format to the selected cells.
 
-The Spreadsheet supports customizing the formats shown in the dialog using the `configureLocalizedFormat` method. Pass a collection of default number format IDs and their corresponding format codes; the dialog then displays the customized formats. See the [default number format IDs](https://learn.microsoft.com/en-us/dotnet/api/documentformat.openxml.spreadsheet.numberingformat) in the Excel built-in number format reference.
+The Spreadsheet supports customizing formats in the dialog using the `configureLocalizedFormat` method. In this method, you pass a collection of default number format IDs along with their corresponding format codes. The dialog will then display the customized formats. You can refer to the [default number format IDs](https://learn.microsoft.com/en-us/dotnet/api/documentformat.openxml.spreadsheet.numberingformat?view=openxml-2.8.1) from the Excel built-in number format reference.
 
 Compared to Excel, the date, time, currency, and accounting formats vary across different cultures. For example, when an Excel file with the date format `'m/d/yyyy'` is imported in the `en-US` culture, the spreadsheet displays the date in that format. However, when the same file is imported in the German culture, the date format changes to `'dd.MM.yyyy'`, which is the default for that region. The default number format ID for the date is 14. To customize the date format based on the culture, you should map the default number format ID to the appropriate culture-specific format code, like this: `{ id: 14, code: 'dd.MM.yyyy' }` in the `configureLocalizedFormat` method.
 

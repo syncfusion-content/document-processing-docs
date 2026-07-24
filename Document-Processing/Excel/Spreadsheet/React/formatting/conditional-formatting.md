@@ -18,8 +18,8 @@ Conditional formatting helps you format a cell or range of cells based on the co
 You can apply conditional formatting by using one of the following ways:
 
 * Select the conditional formatting icon in the Ribbon toolbar under the **Home** tab.
-* Use the [`conditionalFormat()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#conditionalformat) method to define the condition.
-* Use the `conditionalFormats` property in the sheets model.
+* Using the [`conditionalFormat()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#conditionalformat) method to define the condition.
+* Using the `conditionalFormats` property in the sheets model.
 
 The Spreadsheet supports the following conditional formatting types:
 

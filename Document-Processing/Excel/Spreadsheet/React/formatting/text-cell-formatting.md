@@ -73,7 +73,7 @@ The React Spreadsheet Editor allows you to apply borders to a cell or a range of
 
 ### Border Types
 
-The following border types are supported. Each type adds a border to a specific side or area of the selected cells:
+The following border types are supported in Spreadsheet. Each type adds a border to a specific side or area of the selected cells:
 
 | Type | Description |
 |------|-------------|
@@ -82,15 +82,15 @@ The following border types are supported. Each type adds a border to a specific 
 | **Right Border** | Specifies the right border of a cell or range of cells. |
 | **Bottom Border** | Specifies the bottom border of a cell or range of cells. |
 | **No Border** | Clears the border from a cell or range of cells. |
-| **All Border** | Specifies all borders of a cell or range of cells. |
-| **Horizontal Border** | Specifies the top and bottom borders of a cell or range of cells. |
-| **Vertical Border** | Specifies the left and right borders of a cell or range of cells. |
-| **Outside Border** | Specifies the outer perimeter of a range of cells. |
-| **Inside Border** | Specifies the inside borders of a range of cells. |
+| **All Border** | Specifies all border of a cell or range of cells. |
+| **Horizontal Border** | Specifies the top and bottom border of a cell or range of cells. |
+| **Vertical Border** | Specifies the left and right border of a cell or range of cells. |
+| **Outside Border** | Specifies the outside border of a range of cells. |
+| **Inside Border** | Specifies the inside border of a range of cells. |
 
 ### Customize Border Colors and Styles
 
-You can change the appearance of a border by adjusting its size, style, and color. The Spreadsheet supports the following options:
+You can also change how the border looks by adjusting its size and style. The Spreadsheet supports the following options:
 
 | Style | Description |
 |-------|-------------|
