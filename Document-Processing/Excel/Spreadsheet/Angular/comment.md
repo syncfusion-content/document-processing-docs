@@ -25,7 +25,7 @@ The Syncfusion Spreadsheet does not automatically track user identity. To tag ne
     selector: 'app-root',
     standalone: true,
     imports: [SpreadsheetAllModule],
-    // Set the author name. If not set, "Guest User" will be shown by default..
+    // Set the author name. If not set, "Guest User" will be shown by default.
     template: `<ejs-spreadsheet [author]=author></ejs-spreadsheet>`
     })
     export class AppComponent {
@@ -71,7 +71,7 @@ You can edit the content of a comment or its replies directly within the comment
 The **Resolve thread** option marks a comment thread as completed when the discussion or issue is addressed. When a thread is resolved, its background color changes to indicate the resolved state, and the reply input box and reply menu actions are hidden. Use **Reopen** to restore the comment if further discussion is needed.
 
 ### Resolve a comment
-* In the comment editor, click the **"⋯" (More thread actions)** menu in the header and select **Resolve Thread**. 
+* In the comment editor, click the **"⋯" (More thread actions)** menu in the header and select **Resolve Thread**.
 
 ### Reopen a comment
 * In the comment editor, click the **Reopen** button in the header to make the thread active again.
@@ -102,7 +102,7 @@ You can delete either a specific reply or an entire comment thread (including al
 ### Deleting a comment thread
 * **Context menu**: Right-click the cell that contains the comment and select **Comment > Delete Comment**.
 * **Ribbon**: Go to **Review > Comment > Delete Comment** on a cell that contains the comment.
-* **Comment editor**: In the comment editor, click the **"⋯" (More thread actions)** menu in the header and select **Delete Thread** for an active comment or use the **Delete Thread** button in header for a resolved comment.
+* **Comment editor**: In the comment editor, click the **"⋯" (More thread actions)** menu in the header and select **Delete Thread** for an active comment, or use the **Delete Thread** button in header for a resolved comment.
 
 Deleting a thread removes the comment and all its replies from the cell.
 
@@ -162,12 +162,12 @@ You can save spreadsheet data along with **comments** using **File > Save As > M
 
 ### Why comments are not saved in `.xls`
 The **.xls** format is based on the older Excel binary structure (BIFF8), which does not support modern features like **threaded comments**.
-Threaded comments introduced in newer Excel versions require the **Open XML** structure used by `.xlsx`.  
+Threaded comments introduced in newer Excel versions require the **Open XML** structure used by `.xlsx`.
 
 > To retain threaded comments, always save the workbook in **.xlsx** format.
 
 ## Bind Comments via code-behind
-You can bind **comment thread** to cells at initial load by providing a `comment` object in the cell model. Each cell supports **per comment thread**, which can include:
+You can bind **comment thread** to cells at initial load by providing a `comment` object in the cell model. Each cell supports one comment thread, which can include:
 - **Comment**: `author`, `text`, `createdTime`, `isResolved`
 - **Replies**: A collection of replies. Each reply is an object containing its `author`, `text`, and `createdTime` (no nested replies-of-replies).
 
@@ -192,7 +192,7 @@ In the below sample, comments are added to a specific cell using cell data bindi
 
 ## Limitations
 * **Un-posted comments are not stored**: If you type in the comment editor and close it without clicking **Post**, the entered text is not saved and will not appear when you reopen the editor. Only posted content is persisted in the comment model.
-* **Comments and Notes cannot coexist**: When a cell contains comment, notes cannot be added. Similarly, if a cell already has a notes, comment cannot be added.
+* **Comments and Notes cannot coexist**: When a cell contains comment, notes cannot be added. Similarly, if a cell already has a note, a comment cannot be added.
 * **Comments in Print**: Comments are not included in print output.
 * **Non-collaborative**: Real-time multi-user synchronization is not supported. However, when exporting and re-importing the workbook, the author information for each comment and reply is preserved.
 
