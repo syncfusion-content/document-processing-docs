@@ -23,4 +23,6 @@ The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor
 * Enables [cut](./Clipboard), [copy](./Clipboard), and [paste](./Clipboard) operations, including rich text content via the clipboard. 
 * Supports loading encrypted Word documents with valid password. 
 
-N> Currently, the SfRichTextBoxAdv cannot edit rich text in headers and footers. 
+> **Limitation:** The SfRichTextBoxAdv cannot currently edit rich text in headers and footers.
+
+N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool. 
