@@ -9,15 +9,15 @@ documentation: ug
 
 # Localization in Windows Forms Spreadsheet
 
-Localization is the process of configuring the application to a specific language. Spreadsheet provides support to localize all the static text in a Ribbon and all dialogs to any desired language. Localization can be done by adding resource file and setting the specific culture in the application.
+Localization is the process of adapting the application for a specific language or locale. Spreadsheet supports localizing all the static text in the Ribbon and all its dialogs to any desired language. You can perform localization by adding a resource file and setting the specific culture in the application.
 
-Spreadsheet allows you to set custom resource using Resx file. You can define your string values in resource file for a specific culture and set the culture in your application.
+Spreadsheet allows you to set custom resources using a .resx file. You can define your string values in a resource file for a specific culture and then set that culture in your application.
 
 ## Set current UI culture to the application
 
-To set the CultureInformation in the Application, set the `CurrentUICulture` before the InitializeComponent() method is called. 
+To set the culture in the application, set `CurrentUICulture` before the `InitializeComponent()` method is called.
 
-Setting of the culture information,
+Set the culture information as shown in the following code:
 
 {% tabs %}
 {% highlight c# %}
@@ -31,34 +31,33 @@ public MainWindow()
 {% endhighlight %}
 {% endtabs %}
 
-Now, the Application is set to the Japanese Culture info. 
+Now, the application is set to the Japanese culture.
 
 ## Localization using resource file
 
-The following steps show how to implement the localization in Spreadsheet,
+The following steps show how to implement localization in the Spreadsheet control:
 
-* Create a folder and name it as ‘Resources’ in your application.
-* Add the default resource[English("en-US")] file of `Spreadsheet` in the 'Resources' folder named as Syncfusion.Spreadsheet.Windows.resx.
-  You can download the Resx file [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/Syncfusion.SfSpreadsheet.Windows991194474)
-* Create Resx(resource) file under the 'Resources' folder and name it as Syncfusion.Spreadsheet.Windows.[Culture name].resx. 
-  For example, Syncfusion.Spreadsheet.Windows.ja.resx for Japanese culture. 
+1. Create a folder named `Resources` in your application.
+2. Add the default English (en-US) resource file for `Spreadsheet` to the `Resources` folder and name it `Syncfusion.Spreadsheet.Windows.resx`.
+   You can download the .resx file [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/Syncfusion.SfSpreadsheet.Windows991194474).
+3. Create a .resx file under the `Resources` folder and name it `Syncfusion.Spreadsheet.Windows.[Culture name].resx`.
+   For example, `Syncfusion.Spreadsheet.Windows.ja.resx` for the Japanese culture.
 
-![Multiple resource files to change the default strings](localization_images/Loc_Image1.JPG)
+   ![Multiple resource files to change the default strings](localization_images/Loc_Image1.JPG)
 
-* Add the resource key such as name and its corresponding localized value in Resource Designer of Syncfusion.Spreadsheet.Windows.ja.resx file.
-  For your reference, you can download the Japanese("ja-JP") Resx file [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/Syncfusion.SfSpreadsheet.Windows991194474)
+4. Add the resource keys and their corresponding localized values using the Resource Designer of the `Syncfusion.Spreadsheet.Windows.ja.resx` file.
+   For your reference, you can download the Japanese (ja-JP) .resx file [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/Syncfusion.SfSpreadsheet.Windows991194474).
 
 ![Resource file for Japanese culture](localization_images/Loc_Image2.JPG)
 
-
-The following screenshot shows you the localization in Spreadsheet,
+The following screenshot shows localization in the Spreadsheet:
 
 ![Localized strings with Japanese culture](localization_images/localization_img1.jpg)
 
 ## Modifying the localized strings in resource file
 
-Users can modify the default localized strings in Resource file by adding the default [Resx](https://www.syncfusion.com/downloads/support/directtrac/general/ze/Syncfusion.SfSpreadsheet.Windows991194474) (resource) file of `Spreadsheet` in the 'Resources' folder of your application and name it as Syncfusion.Spreadsheet.Windows.resx.
+You can modify the default localized strings by adding the default [.resx](https://www.syncfusion.com/downloads/support/directtrac/general/ze/Syncfusion.SfSpreadsheet.Windows991194474) (resource) file for `Spreadsheet` to the `Resources` folder of your application and naming it `Syncfusion.Spreadsheet.Windows.resx`.
 
-Now, the default localized strings can be modified by changing the Name/Value pair in the Syncfusion.Spreadsheet.Windows.resx file.
+Modify the default strings by changing the Name/Value pairs in the `Syncfusion.Spreadsheet.Windows.resx` file.
 
 ![Modified default strings of English culture](localization_images/Loc_Image3.jpg)
