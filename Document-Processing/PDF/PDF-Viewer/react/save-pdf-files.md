@@ -84,7 +84,7 @@ function App() {
       {/* Render the PDF Viewer */}
         <PdfViewerComponent
           id="container"
-          // Replace  correct PDF Document URL want to load
+          // Replace with the correct PDF document URL you want to load
           documentPath="https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf"
           serviceUrl="https://localhost:44396/pdfviewer"
           style={{ 'height': '640px' }}>
@@ -130,7 +130,7 @@ return (<div>
         <PdfViewerComponent
           id="container"
           // Replace PDF_Succinctly.pdf with the actual document name that you want to load
-          documentPath:"PDF_Succinctly.pdf"
+          documentPath="PDF_Succinctly.pdf"
           // Replace the "localhost:44396" with the actual URL of your server
           serviceUrl="https://localhost:44396/pdfviewer"
           style={{ 'height': '640px' }}>
