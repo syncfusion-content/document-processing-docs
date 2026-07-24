@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Illustrations in Angular Spreadsheet component | Syncfusion
 description: Learn here all about Illustrations in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
@@ -19,17 +19,17 @@ Adding images to a spreadsheet can enhance the visual appeal and help to convey 
 
 ### Insert Image
 
-You can insert the image by using one of the following ways,
+You can insert an image in one of the following ways:
 
 * Selecting the Insert tab in the Ribbon toolbar, and then choose the Image tab.
 * Use the `insertImage()` method programmatically.
 
-The available parameters in `insertImage()` method are,
+The available parameters in `insertImage()` method are:
 
 | Parameter | Type | Description |
 |-----|------|----|
-| images | `ImageModel` | Specifies the options to insert image in spreadsheet. |
-| range(optional) | `string` | Specifies the range in spreadsheet. |
+| images | `ImageModel` | Specifies the options to insert an image in the spreadsheet. |
+| range(optional) | `string` | Specifies the range in the spreadsheet. |
 
 The available arguments in `ImageModel` are:
 
@@ -47,12 +47,12 @@ The available arguments in `ImageModel` are:
 * If you want to delete the image, just select the image, and then press the Delete key.
 * Use the `deleteImage()` method programmatically.
 
-The available parameters in `deleteImage()` method are,
+The available parameters in `deleteImage()` method are:
 
 | Parameter | Type | Description |
 |-----|------|----|
 | id | `string` | Specifies the id of the image element to be deleted. |
-| range(optional) | `string` | Specifies the range in spreadsheet. |
+| range(optional) | `string` | Specifies the range in the spreadsheet. |
 
 ### Image Customization
 
@@ -95,7 +95,7 @@ A chart is a graphical representation of data, that organizes and represents a s
 
 ### Types of chart
 
-The following types of charts are available in the Spreadsheet.
+The following chart types are available in the Spreadsheet:
 
 >* Column Chart
 >* Bar Chart
@@ -106,18 +106,18 @@ The following types of charts are available in the Spreadsheet.
 
 ### Insert Chart
 
-You can insert the chart by using one of the following ways,
+You can insert a chart in one of the following ways:
 
 * Select the chart icon in the Ribbon toolbar under the Insert Tab.
 * Use the [`insertChart()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#insertchart) method programmatically.
 
-The available parameter in the [`insertChart()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#insertchart) method is,
+The available parameter in the [`insertChart()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#insertchart) method is:
 
 | Parameter | Type | Description |
 |-----|------|----|
 | chart | `ChartModel` | Specifies the options to insert a chart in the spreadsheet. |
 
-The available arguments in the `ChartModel` are:
+The available arguments in `ChartModel` are:
 
 * type: Specifies the type of chart.
 * theme: Specifies the theme of a chart.
@@ -169,7 +169,7 @@ Chart feature allows you to view and insert a chart in a spreadsheet, and you ca
   
 {% previewsample "/document-processing/samples/spreadsheet/angular/chart-cs1" %}
 
-#### Customization of line chart markers
+#### Customization of Line Chart Markers
 
 Using the [`actionBegin`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#actionbegin) event, you can change the shape, size, fill color, and border of the line chart marker. In the following example, you can see the modified marker appearance, such as shape and size, while creating the line chart with UI interaction.
 

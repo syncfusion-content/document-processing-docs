@@ -39,12 +39,12 @@ The accessibility compliance for the Spreadsheet component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Spreadsheet component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Spreadsheet component:
+The Spreadsheet component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Spreadsheet component:
 
 | Attributes | Purpose |
 |-------|---------|
 | `grid` (role) | This role is added to the spreadsheet content table and describes the collection of rows and columns. |
-| `gridcell` (role) | This role is added to the cell element and describes the rows `<td>` element. |
+| `gridcell` (role) | This role is added to the cell element and describes the cell `<td>` element. |
 | `rowheader` (role) | This role is added to the row header and describes the header of the rows. |
 | `colheader` (role) | This role is added to the column header and describes the header of the columns. |
 | `aria-rowindex` (attribute) | This attribute describes the table's row index in the spreadsheet. |
@@ -61,7 +61,7 @@ The Spreadsheet component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/ap
 
 ## Keyboard interaction
 
-The Spreadsheet component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Spreadsheet component.
+The Spreadsheet component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Spreadsheet component.
 
 | Press | To do this |
 |----------|-------------|

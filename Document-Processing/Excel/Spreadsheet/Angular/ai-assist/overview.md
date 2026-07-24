@@ -17,7 +17,7 @@ documentation: ug
 
 AI Assist integrates seamlessly into your Angular Spreadsheet application with minimal configuration. This includes injecting the module, enabling the feature, configuring the backend server connection, handling events, and exploring the full range of supported prompts.
 
-For complete setup instructions, how-to guides, API references, and prompt examples, see [AI Assist Integration](./integration).
+For complete setup steps, how-to guides, API references, and prompt examples, see [AI Assist Integration](./integration).
 
 ## How AI Assist Works in spreadsheet
 

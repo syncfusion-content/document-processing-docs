@@ -3,7 +3,7 @@ layout: post
 title: Worksheet in Angular Spreadsheet component | Syncfusion
 description: Learn here all about Worksheet in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Worksheet 
+control: Worksheet
 documentation: ug
 ---
 
@@ -13,11 +13,11 @@ Worksheet is a collection of cells organized in the form of rows and columns tha
 
 ## Add sheet
 
-You can dynamically add or insert a sheet by one of the following ways,
+You can dynamically add or insert a sheet in one of the following ways,
 
-* Click the `Add Sheet` button in the sheet tab. This will add a new empty sheet next to current active sheet.
-* Right-click on the sheet tab, and then select `Insert` option from the context menu to insert a new empty sheet before the current active sheet.
-* Using [`insertSheet`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#insertsheet) method, you can insert one or more sheets at your desired index.
+* Click the `Add Sheet` button in the sheet tab. This will add a new empty sheet next to the active sheet.
+* Right-click on the sheet tab, and then select `Insert` option from the context menu to insert a new empty sheet before the active sheet.
+* Using [`insertSheet`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#insertsheet) method, you can insert one or more sheets at the desired index.
 
 The following code example shows the insert sheet operation in spreadsheet.
 
@@ -53,14 +53,14 @@ The following code example shows how to insert a sheet programmatically and make
 
 ## Delete sheet
 
-The Spreadsheet has support for removing an existing worksheet. You can dynamically delete the existing sheet by the following way,
+The Spreadsheet has support for removing an existing worksheet. You can dynamically delete the existing sheet in the following ways,
 
-* Right-click on the sheet tab, and then select `Delete` option from context menu.
-* Using [`delete`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#delete ) method to delete the sheets.
+* Right-click on the sheet tab, and then select `Delete` option from the context menu.
+* Using [`delete`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#delete) method to delete the sheets.
 
 ## Rename sheet
 
-You can dynamically rename an existing worksheet in the following way,
+You can dynamically rename an existing worksheet in the following ways,
 
 * Right-click on the sheet tab, and then select `Rename` option from the context menu.
 
@@ -73,7 +73,7 @@ By default, the row and column headers are visible in worksheets. You can dynami
 
 ## Gridlines
 
-Gridlines act as a border like appearance of cells. They are used to distinguish cells on the worksheet. You can dynamically show or hide gridlines by using one of the following ways,
+Gridlines act as a border-like appearance of cells. They are used to distinguish cells on the worksheet. You can dynamically show or hide gridlines by using one of the following ways,
 
 * Switch to `View` tab, and then select `Hide Gridlines` option to hide the gridlines in worksheet.
 * Set `showGridLines` property in `sheets` as `true` or `false` to show or hide the gridlines at initial load. By default, the `showGridLines` property is enabled in each worksheet.
@@ -96,7 +96,7 @@ The following code example shows the headers and gridlines operation in spreadsh
 
 Hiding a worksheet can help prevent unauthorized or accidental changes to your file.
 
-There are three visibility state as like Microsoft Excel,
+There are three visibility states, as in Microsoft Excel,
 
 | State | Description |
 |-------|---------|

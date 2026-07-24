@@ -3,7 +3,7 @@ layout: post
 title: Rows and columns in Angular Spreadsheet component | Syncfusion
 description: Learn here all about Rows and columns in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Rows and columns 
+control: Rows and columns
 documentation: ug
 ---
 
@@ -95,7 +95,7 @@ The following features have some limitations in Insert/Delete:
 
 ## Hide and show
 
-You can show or hide the rows and columns in the spreadsheet through property binding, method, and context menu.
+You can show or hide rows and columns in the spreadsheet through property binding, method, and context menu.
 
 ## Row
 
@@ -107,7 +107,7 @@ The rows can be hidden or shown through the following ways,
 
 ## Column
 
-The columns can be hidden or shown through following ways,
+The columns can be hidden or shown through the following ways,
 
 * Using `hidden` property in columns, you can hide/show the columns at initial load.
 * Using `hideColumn` method, you can hide the columns by specifying the start and end column index, set the last argument `hide` as `false` to unhide the hidden columns.
