@@ -2326,7 +2326,7 @@ This property enables the form fields in the Excel worksheet to be rendered as i
 The following code snippet explains how to enable the [EnableFormFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverterSettings.html#Syncfusion_ExcelToPdfConverter_ExcelToPdfConverterSettings_EnableFormFields) property while converting an Excel document to PDF.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/refs/heads/EnableFormFields/Excel%20to%20PDF/EnableFormFields/.NET/EnableFormFields/EnableFormFields/Program.cs" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
