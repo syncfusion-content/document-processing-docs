@@ -22,7 +22,29 @@ Step 4: Use the following command in the terminal to add the [Syncfusion.Pdf.Net
 dotnet add package Syncfusion.Pdf.Net.Core
 ```
 
-Step 5: Create a new cs file named **ExportService.cs** under the **Data** folder and include the following namespaces and class declaration in the file.
+Step 5: Register the Syncfusion license key. A trial watermark is added to every page of the generated PDF until a valid key is registered. Include the license key in **Program.cs** before initializing any Syncfusion component:
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Licensing;
+
+var builder = WebApplication.CreateBuilder(args);
+// Register the Syncfusion license
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+
+// Add services to the container.
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+
+var app = builder.Build();
+
+{% endhighlight %}
+{% endtabs %}
+
+Replace `"YOUR LICENSE KEY"` with the license key associated with your Syncfusion<sup>&reg;</sup> account. If you do not have a license key, you can request a free 30-day trial or apply for a Community License from the Syncfusion<sup>&reg;</sup> website. For more information about registering a license key in your application, refer to the [Syncfusion<sup>&reg;</sup> Licensing Documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
+
+Step 6: Create a new cs file named **ExportService.cs** under the **Data** folder and include the following namespaces and class declaration in the file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -35,7 +57,7 @@ using Syncfusion.Drawing;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data sources.
+Step 7: The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data sources.
 
 Add the following code sample in the ``ExportService`` class which illustrates how to create a simple PDF document using ``PdfTextElement`` and ``PdfGrid``.
 
@@ -96,7 +118,27 @@ public static MemoryStream CreatePdf(WeatherForecast[] forecasts)
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Inject ``ExportService`` into ``FetchData.razor`` using the following code.
+Step 8: Register the service in the **Program.cs** file as follows.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+using CreatePdfBlazorWASMApp.Data;
+
+// ...
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Register the Syncfusion license
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+
+// Add services to the container.
+builder.Services.AddRazorPages();
+builder.Services.AddSingleton<WeatherForecastService>();
+builder.Services.AddSingleton<ExportService>();
+{% endhighlight %}
+{% endtabs %}
+
+Step 9: Inject ``ExportService`` into ``FetchData.razor`` using the following code.
 
 {% tabs %}
 {% highlight CSHTML %}
@@ -133,7 +175,7 @@ Add the ``ExportToPdf`` method in the ``FetchData.razor`` page to call the expor
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Create a class file named ``FileUtil.cs`` and add the following code to invoke the JavaScript action to download the file in the browser.
+Step 10: Create a class file named ``FileUtil.cs`` and add the following code to invoke the JavaScript action to download the file in the browser.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -150,7 +192,7 @@ public static class FileUtil
 {% endhighlight %}
 {% endtabs %}
 
-Step 9: Add the following JavaScript function in the ``index.html`` file available under the ``wwwroot`` folder.
+Step 11: Add the following JavaScript function in the ``index.html`` file available under the ``wwwroot`` folder.
 
 {% tabs %}
 {% highlight HTML %}
@@ -184,14 +226,14 @@ Step 9: Add the following JavaScript function in the ``index.html`` file availab
 {% endhighlight %}
 {% endtabs %}
 
-Step 10: Build the project.
+Step 12: Build the project.
 Run the following command in terminal to build the project.
 
 ```
 dotnet build
 ```
 
-Step 11: Run the project.
+Step 13: Run the project.
 
 Run the following command in the terminal to run the project.
 

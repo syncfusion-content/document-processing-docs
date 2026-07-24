@@ -14,10 +14,9 @@ documentation: UG
 The following steps illustrate creating a simple Invoice-formatted Excel document on Mac OS.
 
 **Prerequisites:**
-- .NET 6.0 SDK or later installed on macOS.
+- .NET 8.0 SDK or later installed on macOS.
 - Visual Studio 2022 for Mac (17.0 or later) or Visual Studio Code with the C# extension.
 - A user account with write permissions to the project directory.
-- The `AdventureCycles-Logo.png` image added to the project and set to **Embedded Resource** (in Visual Studio) or placed in the project output directory (in Visual Studio Code / CLI).
 
 {% tabcontents %}
 
@@ -506,4 +505,4 @@ excelEngine.Dispose();
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
-An online sample link to [create an Excel document](https://ej2.syncfusion.com/aspnetcore/Excel/Create#/material3) in ASP.NET Core.
+An online sample link to [create an Excel document](https://document.syncfusion.com/demos/excel/create#/tailwind3) in ASP.NET Core.

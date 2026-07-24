@@ -15,9 +15,8 @@ The following steps illustrate creating a simple Invoice-formatted Excel documen
 
 **Prerequisites:**
 - Visual Studio 2022 (17.0 or later) or Visual Studio Code with the C# extension installed.
-- .NET 6.0 SDK or later.
+- .NET 8.0 SDK or later.
 - A user account with write permissions to the project output directory.
-- The `AdventureCycles-Logo.png` image placed in the project output directory (the same folder as `Program.cs`).
 
 {% tabcontents %}
 
@@ -843,9 +842,9 @@ By executing the program, you will get the Excel file as below.
 - Visual Studio 2022 (17.0 or later) with the **.NET desktop development** workload installed.
 - .NET Framework 4.6.1 or later.
 - A user account with write permissions to the project output directory.
-- The AdventureCycles-Logo.png image placed in the project output directory (the same folder as Program.cs).
 
 The following steps illustrate creating a simple Invoice-formatted Excel document in a console application using .NET Framework.
+
 
 {% tabcontents %}
 
@@ -1665,4 +1664,4 @@ By executing the program, you will get the Excel file as below.
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/net) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
-An online sample link to [create an Excel document](https://ej2.syncfusion.com/aspnetcore/Excel/Create#/material3) in ASP.NET Core.
+An online sample link to [create an Excel document](https://document.syncfusion.com/demos/excel/create#/tailwind3) in ASP.NET Core.
