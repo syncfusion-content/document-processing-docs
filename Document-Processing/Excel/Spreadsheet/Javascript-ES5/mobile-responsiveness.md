@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mobile responsiveness in EJ2 JavaScript Spreadsheet control | Syncfusion
+title: Mobile responsiveness in EJ2 JavaScript Spreadsheet | Syncfusion
 description: Learn here all about Mobile responsiveness in Syncfusion EJ2 JavaScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Mobile responsiveness
