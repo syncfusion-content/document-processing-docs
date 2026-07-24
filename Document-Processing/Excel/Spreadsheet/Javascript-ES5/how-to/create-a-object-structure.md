@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create an object structure in EJ2 JavaScript Spreadsheet control | Syncfusion
+title: Create a object structure in EJ2 Javascript Spreadsheet control | Syncfusion
 description: Learn here all about creating an object structure in the Syncfusion EJ2 JavaScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Create a object structure 

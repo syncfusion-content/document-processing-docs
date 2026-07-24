@@ -11,7 +11,7 @@ documentation: ug
 
 ## Localization
 
-The [Localization](https://ej2.syncfusion.com/javascript/documentation/common/localization) library allows you to localize the default text content of the Spreadsheet. The Spreadsheet has static text on features such as cell formatting, Merge, and Data validation. You can change this text to other cultures (Arabic, Deutsch, French, and so on) by setting the [`locale`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#locale) property and providing a translation object via the [`L10n`](https://ej2.syncfusion.com/javascript/documentation/api/base/l10n) class.
+The [Localization](https://ej2.syncfusion.com/javascript/documentation/common/localization) library allows you to localize the default text content of the Spreadsheet. The Spreadsheet has static text on features such as cell formatting, Merge, and Data validation. You can change this text to other cultures (Arabic, Deutsch, French, and so on) by setting the [`locale`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#locale) property and providing a translation object via the [`L10n`](https://ej2.syncfusion.com/javascript/documentation/api/base/l10n) class.
 
 The following list of properties and their values are used in the Spreadsheet.
 
@@ -410,7 +410,7 @@ The following example demonstrates the Spreadsheet in French [`fr-CH`] culture. 
 
 ## Right to left (RTL)
 
-RTL provides an option to switch the text direction and layout of the Spreadsheet component from right to left. It improves the user experience and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). To enable RTL Spreadsheet, set the [`enableRtl`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#enablertl) to true.
+RTL provides an option to switch the text direction and layout of the Spreadsheet component from right to left. It improves the user experience and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). To enable RTL Spreadsheet, set the [`enableRtl`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#enablertl) to true.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}

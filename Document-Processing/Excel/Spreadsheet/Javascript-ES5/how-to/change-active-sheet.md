@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Change the active sheet in the EJ2 JavaScript Spreadsheet control | Syncfusion
+title: Change active sheet in EJ2 Javascript Spreadsheet control | Syncfusion
 description: Learn how to change the active sheet index when importing a file in the Syncfusion EJ2 JavaScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Spreadsheet
