@@ -16,7 +16,7 @@ The library supports the following font substitution approaches during Word to P
 
 * **Use an alternate font from installed fonts** – substitute with a font that is already installed on the production machine.
 * **Use an alternate font without installing** – load the replacement font from a file stream without installing it on the machine.
-* **Embed fonts** – embed the required TrueType font glyphs directly into the converted PDF. For more details, see [Embedding fonts in Word to PDF conversion](./Word-to-pdf-settings.md#embedding-fonts).
+* **Embed fonts** – embed the required TrueType font glyphs directly into the converted PDF. For more details, see [Embedding fonts in Word to PDF conversion](./Word-to-pdf-settings#embedding-fonts).
 
 ## Use an alternate font from installed fonts
 

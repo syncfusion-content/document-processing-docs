@@ -6,7 +6,7 @@ control: Markdown
 documentation: UG
 ---
 
-# Assemblies Required for Markdown
+# Assemblies Required for .NET Markdown Library
 
 The following assemblies need to be referenced in your application to use the .NET Markdown library.
 

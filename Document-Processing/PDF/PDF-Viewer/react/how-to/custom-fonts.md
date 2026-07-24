@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Custom Fonts to PDF Forms in React PDF Viewer
+# Add Custom Fonts in React PDF Viewer
 
 The Syncfusion **React PDF Viewer** supports loading, editing, and saving **custom fonts** in form fields such as [TextBox](../forms/manage-form-fields/create-form-fields#textbox), [ListBox](../forms/manage-form-fields/create-form-fields#listbox), and [DropDown](../forms/manage-form-fields/create-form-fields#dropdown) fields using the `customFonts` property. This ensures consistent text rendering even when the required fonts are not installed on the user's system.
 Custom fonts are embedded and preserved when form fields are modified or saved, making the PDF display correctly across environments.
@@ -21,7 +21,7 @@ Dynamic fonts are currently used in the following scenarios:
 ## How Custom Fonts Work
 The custom font workflow in the PDF Viewer is as follows:
 - Place the required **TrueType Font (TTF)** files in the resource directory used by the viewer.
-- Specify the font names using the customFonts property.
+- Specify the font file paths using the `customFonts` property. Paths are resolved relative to the `resourceUrl` (for relative paths) or used as-is (for absolute URLs).
 - The specified fonts become available for:
   - Rendering form field content
   - Editing text in form fields
@@ -34,13 +34,13 @@ The custom font workflow in the PDF Viewer is as follows:
 2. Fonts can be referenced in either of the following ways:
    - **Relative path** 
      Example:  
-     calibri.ttf  
-     fallback-fonts/calibri.ttf
+     `calibri.ttf`  
+     `fallback-fonts/calibri.ttf`
    - **Absolute URL**
      Fonts can be hosted on a server and referenced using a fully qualified URL. Ensure that the hosting server has **CORS** enabled.
 
 ### Configure Custom Fonts in the PDF Viewer
-Specify the required font names in the customFonts property.
+Specify the required font file paths in the `customFonts` property.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -125,7 +125,7 @@ Custom fonts can be applied to the following form field types:
 - [DropDown](../forms/manage-form-fields/create-form-fields#dropdown)
 
 ## Notes and Limitations
-- If text rendered using a custom font exceeds the form field’s bounds, the downloaded PDF may render incorrectly in some third party PDF viewers.
+- If text rendered using a custom font exceeds the form field’s bounds, the downloaded PDF may render incorrectly in some third-party PDF viewers.
 - The same content displays correctly in the **Syncfusion PDF Viewer**.
 
 ## To avoid rendering issues:

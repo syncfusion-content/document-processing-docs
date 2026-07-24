@@ -7,11 +7,11 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Add header values in the React PDF Viewer
+# Add header values to AJAX requests in the React PDF Viewer
 
-Use the `ajaxHeaders` property inside the PDF Viewer’s [ajaxRequestSettings](https://ej2.syncfusion.com/React/documentation/api/pdfviewer/#ajaxrequestsettings) to send custom HTTP headers with each request made by the viewer.
+Use the `ajaxHeaders` property inside the PDF Viewer’s [ajaxRequestSettings] (https://ej2.syncfusion.com/react/documentation/api/pdfviewer/ajaxrequestsettings) to send custom HTTP headers with each request made by the viewer.
 
-Example: Add a custom Authorization header using `ajaxRequestSettings` in an React component
+Example: Add a custom Authorization header using `ajaxRequestSettings` in a React component
 
 ```ts
 
@@ -19,14 +19,11 @@ viewer.ajaxRequestSettings = {
    ajaxHeaders: [
       {
          headerName: "Authorization",
-
          headerValue: "Bearer 64565dfgfdsjweiuvbiuyhiueygf"
       }
    ],
-
    withCredentials: false
 };
-
 ```
 
 Find the sample [how to add custom headers in AjaxRequestSettings](https://stackblitz.com/edit/react-dnkbqh66-tnifjnlb?file=package.json,index.js)

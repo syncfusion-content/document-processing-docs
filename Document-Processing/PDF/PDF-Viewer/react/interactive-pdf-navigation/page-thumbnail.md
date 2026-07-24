@@ -14,13 +14,14 @@ domainurl: ##DomainURL##
 
 Page thumbnails are miniature previews of PDF pages displayed in a side panel. They allow users to quickly navigate to specific pages without scrolling through the entire document.
 
-This guide explains how to enable the thumbnail navigation feature and to toggle thumbnail view programmatically in the React PDF Viewer component. When enabled, a thumbnails panel appears in the viewer, displaying small previews of each page.
+This guide explains how to enable the thumbnail navigation feature and to toggle the thumbnail view programmatically in the React PDF Viewer component. When enabled, a thumbnails panel appears in the viewer, displaying small previews of each page. You can also open or close the panel on demand using the [`openThumbnailPane`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/thumbnailview#openthumbnailpane) and [`closeThumbnailPane`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/thumbnailview#closethumbnailpane) methods.
+
 
 ## Steps
 
 ### 1. Enable thumbnail view
 
-Enable or disable the thumbnail view by using [`enableThumbnail`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enablethumbnail) API.
+Enable or disable the thumbnail view by using the [`enableThumbnail`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enablethumbnail) property. The default value of `enableThumbnail` is `true`, so thumbnails are available out of the box once the `ThumbnailView` module is injected.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -58,13 +59,17 @@ export default function App() {
 {% endhighlight %}
 {% endtabs %}
 
-**Expected Output:** When [`enableThumbnail`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enablethumbnail) is set to `true`, a thumbnail panel can be opened through the navigation toolbar on the left side of the PDF Viewer which displays miniature previews of each page. Clicking on any thumbnail navigates directly to that page. To disable thumbnail navigation, set `enableThumbnail={false}` or simply remove the property.
+#### Expected output
+
+When [`enableThumbnail`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enablethumbnail) is set to `true`, a thumbnail panel can be opened through the navigation toolbar on the left side of the PDF Viewer, which displays miniature previews of each page. Clicking on any thumbnail navigates directly to that page. To disable thumbnail navigation, set `enableThumbnail={false}` or simply remove the property.
 
 ![Page thumbnails panel in the PDF Viewer](../images/thumbnail.png)
 
 ### 2. Open or close thumbnail view programmatically
 
-The thumbnail view in the React PDF Viewer can be opened by using the [`openThumbnailPane`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/thumbnailview#openthumbnailpane) and closed by using the [`closeThumbnailPane`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/thumbnailview#closethumbnailpane) APIs
+The thumbnail view in the React PDF Viewer can be opened by using the [`openThumbnailPane`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/thumbnailview#openthumbnailpane) method and closed by using the [`closeThumbnailPane`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/thumbnailview#closethumbnailpane) method. Both methods return `void` and can be called on the `thumbnailView` instance of the viewer reference.
+
+> The `thumbnailView` property is only available on the viewer instance when the `ThumbnailView` module is included in the `Inject` services array. If the module is not injected, `viewerRef.current?.thumbnailView` will be `undefined`.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -104,6 +109,10 @@ export default function App() {
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
+
+#### Expected output
+
+Clicking **Open Thumbnail** invokes `openThumbnailPane()`, which expands the thumbnail panel on the left side of the PDF Viewer. Clicking **Close Thumbnail** invokes `closeThumbnailPane()`, which collapses the panel. The buttons are standard HTML elements placed above the viewer inside the same `div` container.
 
 ## Troubleshooting
 

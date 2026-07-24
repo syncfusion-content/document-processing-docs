@@ -180,10 +180,10 @@ Step 3: Include the following namespaces in the **Form1.cs** (or **Form1.Designe
 using System;
 using System.IO;
 using System.Windows.Forms;
-using Syncfusion.DocIO.DLS;     // Provides WordDocument and FormatType.
-using Syncfusion.DocIO;          // Core DocIO namespace.
-using Syncfusion.DocToPDFConverter; // Provides the DocToPDFConverter.
-using Syncfusion.Pdf;            // Provides PdfDocument.
+using Syncfusion.DocIO.DLS;
+using Syncfusion.DocIO;
+using Syncfusion.DocToPDFConverter;
+using Syncfusion.Pdf;
 
 {% endhighlight %}
 
@@ -253,7 +253,7 @@ using (WordDocument document = new WordDocument(Path.GetFullPath(inputPath), For
 
 {% endtabs %}
 
-N> **Troubleshooting tip:** If the sample throws `FileNotFoundException` for `Input.docx`, confirm the file is present in the `Data` folder and that **Copy to Output Directory** is set to **Copy always**. For advanced conversion options, see [Word to PDF settings](word-to-pdf-settings.md).
+N> **Troubleshooting tip:** If the sample throws `FileNotFoundException` for `Input.docx`, confirm the file is present in the `Data` folder and that **Copy to Output Directory** is set to **Copy always**. For advanced conversion options, see [Word to PDF settings](./word-to-pdf-settings).
 
 Step 6: Build the project.
 

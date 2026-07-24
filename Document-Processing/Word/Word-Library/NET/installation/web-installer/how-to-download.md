@@ -26,13 +26,13 @@ Our 30-day trial can be downloaded in two ways.
 ### Download Free Trial Setup
 
 1. You can evaluate our 30-day free trial by visiting the [Download Free Trial](https://www.syncfusion.com/downloads) page and select the Word platform.
-2. After completing the required form or logging in with your registered Syncfusion<sup>&reg;</sup> account, you can download the Word trial installer from the confirmation page. (as shown in below screenshot.) 
+2. After completing the required form or logging in with your registered Syncfusion<sup>&reg;</sup> account, you can download the Word trial installer from the confirmation page (as shown in the below screenshot). 
    
    ![Trial and downloads of Syncfusion Essential Studio](images/trial-confirmation.png)
    
 3. With a trial license, only the latest version’s trial installer can be downloaded.
 4. After downloading, the Syncfusion<sup>&reg;</sup> Word trial installer can be unlocked using either the trial unlock key or the Syncfusion<sup>&reg;</sup> registered login credential. More information on generating an unlock key can be found in [this](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) article.
-5. Before the trial expires, you can download the trial installer at any time from your registered account’s [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page (as shown in below screenshot.)
+5. Before the trial expires, you can download the trial installer at any time from your registered account's [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page (as shown in the below screenshot.)
 6. Click the Download (element 1 in the screenshot below) button to get the Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> Word web installer.
  
    ![Trial and downloads of Syncfusion Essential Studio](images/trial-download.png)

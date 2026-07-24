@@ -12,6 +12,10 @@ Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncf
 
 ## Steps to open and save Word document programmatically in .NET Core application on Linux
 
+**Prerequisites:**
+
+*   Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
+
 Step 1: Execute the following command in Linux terminal to create a new .NET Core Console application.
 
 {% tabs %}
@@ -26,7 +30,7 @@ dotnet new console
 
 ![Create .NET Core console application on Linux](Linux-images/CreateNewProject1.png)
 
-Step 2: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/) by execute the following command.
+Step 2: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/) by executing the following command.
 
 ![Install Syncfusion.DocIO.Net.Core NuGet packages](Linux-images/InstallNuGetPackages1.png)
 
@@ -34,11 +38,13 @@ Step 2: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/S
 
 {% highlight KCONFIG %}
 
-dotnet add package Syncfusion.DocIO.Net.Core -v 17.4.0.39 -s https://www.nuget.org/
+dotnet add package Syncfusion.DocIO.Net.Core
 
 {% endhighlight %}
 
 {% endtabs %}
+
+N> To install a specific version, use the `-v` flag (for example, `dotnet add package Syncfusion.DocIO.Net.Core -v 17.4.0.39`).
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components.
 
@@ -53,7 +59,7 @@ using Syncfusion.DocIO.DLS;
 
 {% endtabs %}
 
-Step 4: Add the following code snippet in Program.cs file to **open an existing Word document in .NET Core application on Linux**.
+Step 4: Place an existing Word document named `Input.docx` in the project folder (alongside `Program.cs`), since the sample reads `Input.docx` from the application's working directory. Then, add the following code snippet in Program.cs file to **open an existing Word document in .NET Core application on Linux**.
 
 {% tabs %}
 
@@ -125,7 +131,7 @@ dotnet run
 {% endtabs %}
 
 
-![Run the Applcation](Linux-images/Run.png)
+![Run the Application](Linux-images/Run.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Read-and-Save-document/Open-and-save-Word-document/Linux/Open-and-save-Word-document).
 
