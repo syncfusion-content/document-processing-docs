@@ -364,7 +364,7 @@ Edit opacity using the range slider in the Edit Opacity tool.
 
 ![Change signature opacity](../../react/images/change_opacity.png)
 
-### Edit Signature Annotation Programmatically
+### Edit signature annotation programmatically
 
 With the PDF Viewer library, you can programmatically edit a handwritten signature in the PDF Viewer control using the `editSignature()` method.
 
@@ -476,7 +476,7 @@ export class AppComponent {
   }
 }
 {% endhighlight %}
-{% highlight ts tabtitle="Standalone" %}
+{% highlight ts tabtitle="Server-Backed" %}
 import { Component } from '@angular/core';
 import {
   PdfViewerModule,
@@ -588,7 +588,7 @@ export class AppComponent {
 The following example enables or disables the handwritten signature in the PDF Viewer. Setting the value to `false` disables the feature.
 
 {% tabs %}
-{% highlight ts tabtitle="Standalone" %}
+{% highlight ts tabtitle="Server-Backed" %}
 import { Component } from '@angular/core';
 import {
   PdfViewerModule,
@@ -650,7 +650,7 @@ export class AppComponent {
     'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
 }
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
+{% highlight ts tabtitle="Standalone" %}
 import { Component } from '@angular/core';
 import {
   PdfViewerModule,
