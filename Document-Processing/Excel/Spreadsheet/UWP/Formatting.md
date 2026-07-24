@@ -9,14 +9,14 @@ documentation: ug
 
 # Formatting in UWP Spreadsheet (SfSpreadsheet)
 
-This section explains about the formatting options similar to excel in SfSpreadsheet.
+This section explains the formatting options similar to Excel in SfSpreadsheet.
 
-Styles and formats defined in an Excel file are automatically imported. Users can also apply these settings to cells during run time. The following are the formatting attributes for the cell.
+Styles and formats defined in an Excel file are automatically imported. You can also apply these settings to cells at run time. The following are the formatting attributes for a cell.
 
-* Cell font settings (font name, size, color, style, etc.) 
-* Cell background 
-* Cell content alignment (vertical and horizontal alignment, indent and text wrapping) 
-* Cell borders 
+* Cell font settings (font name, size, color, style, etc.)
+* Cell background
+* Cell content alignment (vertical and horizontal alignment, indent and text wrapping)
+* Cell borders
 * Number Formatting
 * Merge Cells
 * Built-in Styles
@@ -24,9 +24,9 @@ Styles and formats defined in an Excel file are automatically imported. Users ca
 
 ## Cell Background
 
-For applying background color for the cells at runtime in SfSpreadsheet, set the color index for the particular XlsIO range and invalidate the range in order to update the view in `SpreadsheetGrid`.
+To apply background color to the cells at runtime in SfSpreadsheet, set the color index for the particular XlsIO range and invalidate the range in order to update the view in `SpreadsheetGrid`.
 
-For single cell
+For a single cell,
 
 {% tabs %}
 {% highlight c# %}
@@ -38,7 +38,7 @@ spreadsheet.ActiveGrid.InvalidateCell(range.Row, range.Column);
 {% endhighlight %}
 {% endtabs %}
 
-For selected range of cells,
+For a selected range of cells,
 
 {% tabs %}
 {% highlight c# %}
@@ -57,7 +57,7 @@ foreach (var range in selectedRanges)
 
 ## Font
 
-SfSpreadsheet allows the user to apply the font settings such as font color, font name ,font size etc., for a particular cell or a range of cells.
+SfSpreadsheet allows the user to apply font settings such as font color, font name, font size, and so on, for a particular cell or a range of cells.
 
 {% tabs %}
 {% highlight c# %}
@@ -84,7 +84,7 @@ range.CellStyle.Font.Underline = ExcelUnderline.Single;
 //Setting the Font Color,
 range.CellStyle.Font.Color = ExcelKnownColors.Blue;
 
-//Invalidating the range, to update in view,
+//Invalidating the range to update the view,
 spreadsheet.ActiveGrid.InvalidateCell(gridRange, true);
 
 {% endhighlight %}
@@ -92,7 +92,7 @@ spreadsheet.ActiveGrid.InvalidateCell(gridRange, true);
 
 ## Cell Borders
 
-SfSpreadsheet allows the user to apply the borders at runtime for particular cell or range of cells,
+SfSpreadsheet allows the user to apply borders at runtime for a particular cell or range of cells,
 
 {% tabs %}
 {% highlight c# %}
@@ -115,7 +115,7 @@ spreadsheet.ActiveGrid.InvalidateCell(gridRange, true);
 
 ## Cell Alignment
 
-SfSpreadsheet allows the user to align the content of the cell. The alignment options includes Horizontal Alignment, Vertical Alignment, Indentation, Orientation etc.,
+SfSpreadsheet allows the user to align the content of the cell. The alignment options include Horizontal Alignment, Vertical Alignment, Indentation, Orientation etc.
 
 {% tabs %}
 {% highlight c# %}
@@ -147,7 +147,7 @@ spreadsheet.FormatIndentLevel(3);
 
 ## Wrap Text
 
-SfSpreadsheet allows the user to wrap the text in the cell, if the text is too large.
+SfSpreadsheet allows the user to wrap the text in a cell when the text is too large.
 
 {% tabs %}
 {% highlight c# %}
@@ -165,9 +165,9 @@ spreadsheet.ActiveGrid.InvalidateCell(4, 3);
 
 ### Merge
 
-SfSpreadsheet provides support to merge two or more cells. When a group of cells is merged, the contents of the upper-left cell will be taken as the content of the merged cell, rest will be deleted.
+SfSpreadsheet provides support to merge two or more cells. When a group of cells is merged, the contents of the upper-left cell are taken as the content of the merged cell, and the rest are deleted.
 
-For merging the cells in SfSpreadsheet, you need to add the `CoveredCellInfo` into `CoveredCells` collection of SpreadsheetGrid and merge the range using `Merge` method in XlsIO. Also to update the view, you need to invalidate the cells in the SpreadsheetGrid
+To merge the cells in SfSpreadsheet, add the `CoveredCellInfo` to the `CoveredCells` collection of `SpreadsheetGrid` and merge the range using the `Merge` method in XlsIO. To update the view, invalidate the cells in the `SpreadsheetGrid`.
 
 {% tabs %}
 {% highlight c# %}
@@ -187,7 +187,7 @@ spreadsheet.ActiveGrid.InvalidateCell(gridRange, true);
 
 You can also unmerge the merged cells in SfSpreadsheet.
 
-For unmerging the cells in SfSpreadsheet, you need to clear the `CoveredCells` from the SpreadsheetGrid and unmerge the range using `UnMerge` method in XlsIO. Also to update the view, you need to invalidate the cells in the SpreadsheetGrid
+To unmerge the cells in SfSpreadsheet, clear the `CoveredCells` from the `SpreadsheetGrid` and unmerge the range using the `UnMerge` method in XlsIO. To update the view, invalidate the cells in the `SpreadsheetGrid`.
 
 {% tabs %}
 {% highlight c# %}
@@ -204,7 +204,7 @@ spreadsheet.ActiveGrid.InvalidateCell(gridRange, true);
 
 ## Number Format
 
-SfSpreadsheet allows the user to view the numbers in the cells with different formats which includes currency, percentage, datetime, scientific etc.,
+SfSpreadsheet allows the user to view the numbers in cells with different formats, including currency, percentage, date-time, scientific, and so on.
 
 {% tabs %}
 {% highlight c# %}
@@ -224,7 +224,7 @@ spreadsheet.ActiveGrid.InvalidateCell(3,4);
 {% endhighlight %}
 {% endtabs %}
 
-The different types of number formats with its notation are
+The different types of number formats with their notation are
 
 <table>
 <tr>
@@ -275,7 +275,7 @@ m/d/yyyy</td></tr>
 
 ## Built-in Styles
 
-SfSpreadsheet supports some predefined built in styles of XlsIO. `BuiltInStyles` is an enum which contains different styles for formatting a cell or range of cells.
+SfSpreadsheet supports some predefined built-in styles of XlsIO. `BuiltInStyles` is an enum that contains different styles for formatting a cell or range of cells.
 
 {% tabs %}
 {% highlight c# %}
@@ -288,7 +288,7 @@ spreadsheet.ActiveGrid.InvalidateCell(3, 1);
 
 ## Format as Table
 
-SfSpreadsheet allows the users to format a table with built in styles of table (i.e.) `TableBuiltInStyles` of XlsIO
+SfSpreadsheet allows the user to format a table with the built-in table styles (`TableBuiltInStyles`) of XlsIO.
 
 {% tabs %}
 {% highlight c# %}
@@ -303,13 +303,13 @@ spreadsheet.ActiveGrid.InvalidateCells();
 {% endhighlight %}
 {% endtabs %}
 
-For more information regarding formatting options, please go through [XlsIO](http://help.syncfusion.com/file-formats/xlsio/working-with-cell-or-range-formatting)
+For more information regarding formatting options, please go through [XlsIO](https://help.syncfusion.com/file-formats/xlsio/working-with-cell-or-range-formatting).
 
 N> Users need to [refresh the view](https://help.syncfusion.com/document-processing/excel/spreadsheet/uwp/working-with-sfspreadsheet#refreshing-the-view) after the formatting is applied on the XlsIO range to update the styles in `SpreadsheetGrid`.
 
 ## Clear formatting
 
-SfSpreadsheet provides support to clear the contents of a cell along with its formatting or by specifying the required clear options using [ExcelClearOptions](http://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelClearOptions.html) enum which specifies the possible directions to clear the cell formats, content, comments,conditional format,data validation or clear all of them.
+SfSpreadsheet provides support to clear the contents of a cell along with its formatting. You can also specify the required clear options using the [ExcelClearOptions](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelClearOptions.html) enum, which specifies the possible directions to clear the cell formats, content, comments, conditional formats, data validation, or clear all of them.
 
 {% tabs %}
 {% highlight c# %}

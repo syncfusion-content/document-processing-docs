@@ -15,8 +15,6 @@ Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.sync
 Before you begin, ensure the following:
 
 * An active **Google Cloud Platform (GCP) account**. If you do not have one, see [Create a GCP account](https://cloud.google.com/free).
-* A **GCP project** with **billing enabled** (required for App Engine) and the **App Engine Admin API** enabled â€” see [Enable billing for a project](https://cloud.google.com/billing/docs/how-to/modify-project) and [Enable the App Engine API](https://cloud.google.com/appengine/docs/standard/nodejs/create-app).
-* **Visual Studio 2022** with the **ASP.NET and web development** workload installed.
 * A **Syncfusion license key**. Register it in `Program.cs` (see the snippet in Step 4a below) or store it in the `app.yaml` `env_variables` section for production deployments.
 
 ## Steps to create Excel document in Google App Engine
@@ -406,13 +404,6 @@ EOT
 {% endhighlight %}
 {% endtabs %}
 
-You can also add the Syncfusion license key as an environment variable in `app.yaml` so it is not committed to source control:
-
-```yaml
-env_variables:
-  SYNCFUSION_LICENSE_KEY: "your-license-key"
-```
-
 ![Add required files to publish folder](GCP_Images/Yaml_File_Create_Excel.png)
 
 Step 2: Add the Docker file to the publish folder with the following contents.
@@ -509,4 +500,4 @@ A complete working example of how to read and edit an Excel file in GCP is prese
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
-An online sample link to [create an Excel document](https://ej2.syncfusion.com/aspnetcore/Excel/Create#/material3) in ASP.NET Core.
+An online sample link to [create an Excel document](https://document.syncfusion.com/demos/excel/create#/tailwind3) in ASP.NET Core.

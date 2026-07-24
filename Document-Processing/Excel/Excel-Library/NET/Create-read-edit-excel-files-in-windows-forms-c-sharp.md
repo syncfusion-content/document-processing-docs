@@ -17,7 +17,6 @@ The following steps illustrate creating a simple invoice-formatted Excel documen
 - Visual Studio 2017 or later with the **.NET desktop development** workload installed.
 - .NET Framework 4.5 or later.
 - A user account with write permissions to the project output directory.
-- The `AdventureCycles-Logo.png` image placed in the project output directory (typically `bin/Debug/net*/`).
 
 Step 1: Create a new C# Windows Forms Application project.
 
@@ -546,6 +545,4 @@ End Using
 A complete working example of how to read and edit an Excel file in Windows Forms in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Windows%20Forms/Edit%20Excel).
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/net) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
-
-An online sample link to [create an Excel document](https://ej2.syncfusion.com/aspnetcore/Excel/Create#/material3) in ASP.NET Core.
-
+An online sample link to [create an Excel document](https://document.syncfusion.com/demos/excel/create#/tailwind3) in ASP.NET Core.

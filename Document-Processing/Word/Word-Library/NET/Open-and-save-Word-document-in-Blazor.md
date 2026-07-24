@@ -8,7 +8,7 @@ documentation: UG
 
 # Open and Save Word Document in Blazor
 
-Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, a **open and save a Word document in Blazor**.
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **open and save a Word document in Blazor**.
 
 ## Blazor Web App Server Application
 
@@ -154,6 +154,9 @@ Create a new class file named `FileUtils` in the project and add the following c
 
 {% highlight c# tabtitle="C#" %}
 
+using Microsoft.JSInterop;
+using System.Threading.Tasks;
+
 public static class FileUtils
 {
     public static ValueTask<object> SaveAs(this IJSRuntime js, string filename, byte[] data)
@@ -168,7 +171,7 @@ public static class FileUtils
 
 Step 11: Add JavaScript function to `App.razor`.
 
-Add the following JavaScript function in the `App.razor` file located in the `Pages` folder.
+Add the following JavaScript function in the `App.razor` file located in the `Components` folder.
 
 {% tabs %}
 
@@ -211,7 +214,7 @@ Add the following code snippet to the Navigation menu's Razor file in the `Layou
 
 <div class="nav-item px-3">
      <NavLink class="nav-link" href="docio">
-        <span class="oi oi-list-rich" aria-hidden="true"></span> Create Word
+        <span class="oi oi-list-rich" aria-hidden="true"></span> Open and Save Word
      </NavLink>
  </div>
 
@@ -294,7 +297,7 @@ Add the following code to create a new button that triggers document processing:
 {% highlight CSHTML %}
 
 <h2>Syncfusion DocIO Library (DocIO)</h2>
-<p>The Syncfusion Blazor DocIO library (DocIO) used to create, read, edit, and convert DocIO files in applications without Microsoft Office dependencies.</p>
+<p>The Syncfusion Blazor DocIO library (DocIO) is used to create, read, edit, and convert Word files in applications without Microsoft Office dependencies.</p>
 <button class="btn btn-primary" @onclick="@OpenAndSaveDocument">Open and save Document</button>
 
 {% endhighlight %}
@@ -364,6 +367,9 @@ Create a new class file named `FileUtils` in the project and add the following c
 
 {% highlight c# tabtitle="C#" %}
 
+using Microsoft.JSInterop;
+using System.Threading.Tasks;
+
 public static class FileUtils
 {
     public static ValueTask<object> SaveAs(this IJSRuntime js, string filename, byte[] data)
@@ -420,7 +426,7 @@ Add the following code snippet to the Navigation menu's Razor file in the `Layou
 
 <div class="nav-item px-3">
     <NavLink class="nav-link" href="docio">
-        <span class="oi oi-list-rich" aria-hidden="true"></span> Create Word
+        <span class="oi oi-list-rich" aria-hidden="true"></span> Open and Save Word
     </NavLink>
 </div>
 {% endhighlight %}

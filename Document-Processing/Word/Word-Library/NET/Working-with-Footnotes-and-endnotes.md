@@ -1,5 +1,5 @@
 ---
-title: Working with Footnotes and endnotes | DocIO | Syncfusion
+title: Working with Footnotes and Endnotes | DocIO | Syncfusion
 description: Learn how to add, modify, and remove footnotes and endnotes in a Word document using the .NET Word (DocIO) library without Microsoft Word.
 platform: document-processing
 control: DocIO
@@ -7,18 +7,18 @@ documentation: UG
 ---
 # Footnotes and endnotes
 
-Footnotes and endnotes are separate text body contents used in documents to show the source of supplementary information that does not interrupt the normal body text of the Word document. Footnotes are typically located at the bottom of a page or beneath text being referenced, and endnotes are typically placed at the end of a document or at the end of a section. When document has been divided up into one or more sections, each section of a document can contain endnotes.
+Footnotes and endnotes are separate text body contents used in documents to show the source of supplementary information that does not interrupt the normal body text of the Word document. Footnotes are typically located at the bottom of a page or beneath the text being referenced, and endnotes are typically placed at the end of a document or at the end of a section. When a document has been divided into one or more sections, each section of the document can contain endnotes.
 
 Both footnotes and endnotes consist of two parts:
 
 * A note reference mark with numbering value in the body text to indicate that additional information is in a footnote or endnote at the end of the page or the end of the document or section.
 * The footnote or endnote text body content.
 
-## Adding a Footnotes
+## Adding Footnotes
 
 N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
-The following code example shows how to insert the footnotes into the Word document.
+The following code example shows how to insert footnotes into a Word document.
 
 {% tabs %}
 
@@ -101,7 +101,7 @@ paragraph.AppendText("Sample content for footnotes").CharacterFormat.Bold = True
 'Adds footnote text
 paragraph = footnote.TextBody.AddParagraph()
 paragraph.AppendText("AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.")
-‘Saves and closes the Word document instance
+'Saves and closes the Word document instance
 document.Save("Sample.docx", FormatType.Docx)
 document.Close()
 {% endhighlight %}
@@ -110,9 +110,9 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Footnotes-and-Endnotes/Add-footnotes-in-Word-document).
 
-## Adding a Endnotes
+## Adding Endnotes
 
-The following code example shows how to insert the endnotes into the Word document.
+The following code example shows how to insert endnotes into a Word document.
 
 {% tabs %}
 
@@ -168,7 +168,7 @@ paragraph.AppendText("Sample content for endnotes").CharacterFormat.Bold = true;
 //Adds footnote text
 paragraph = endnote.TextBody.AddParagraph();
 paragraph.AppendText("AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.");
-//Saves and closes the Word document instance
+'Saves and closes the Word document instance
 document.Save("Sample.docx", FormatType.Docx);
 document.Close();
 {% endhighlight %}
@@ -195,7 +195,7 @@ paragraph.AppendText("Sample content for endnotes").CharacterFormat.Bold = True
 'Adds footnote text
 paragraph = endnote.TextBody.AddParagraph()
 paragraph.AppendText("AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.")
-‘Saves and closes the Word document instance
+'Saves and closes the Word document instance
 document.Save("Sample.docx", FormatType.Docx)
 document.Close()
 {% endhighlight %}
@@ -206,9 +206,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Set Footnotes and Endnotes position
 
-Footnotes are typically located at the bottom of a page or beneath the text being referenced, and endnotes are typically placed at the end of a document or at the end of a section. This can be done using [FootnotePosition](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FootnotePosition) API and [EndnotePosition](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_EndnotePosition) API.
+Footnotes are typically located at the bottom of a page or beneath the text being referenced, and endnotes are typically placed at the end of a document or at the end of a section. This can be done using the [FootnotePosition](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FootnotePosition) API and [EndnotePosition](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_EndnotePosition) API.
 
-The following code example illustrates how to set positions for footnotes and endnotes:
+The following code example illustrates how to set the positions for footnotes and endnotes:
 
 {% tabs %}
 
@@ -398,7 +398,7 @@ using (WordDocument document = new WordDocument())
     //Appends the footnotes
     WFootnote footnote = (WFootnote)paragraph.AppendFootnote(Syncfusion.DocIO.FootnoteType.Footnote);
     WTextBody separator = document.Footnotes.Separator;
-    //Replaces the default footnote separated by text
+    //Replaces the default footnote separator with text
     separator.Paragraphs[0].Text = "Footnote separator";
     //Sets the footnote character format
     footnote.MarkerCharacterFormat.SubSuperScript = SubSuperScript.SuperScript;
@@ -430,7 +430,7 @@ paragraph = section.AddParagraph();
 //Appends the footnotes
 WFootnote footnote = (WFootnote)paragraph.AppendFootnote(Syncfusion.DocIO.FootnoteType.Footnote);
 WTextBody separator = document.Footnotes.Separator;
-//Replaces the default footnote separated by text
+//Replaces the default footnote separator with text
 separator.Paragraphs[0].Text = "Footnote separator";
 //Sets the footnote character format
 footnote.MarkerCharacterFormat.SubSuperScript = SubSuperScript.SuperScript;
@@ -460,7 +460,7 @@ paragraph = section.AddParagraph()
 'Appends the footnotes
 Dim footnote As WFootnote = DirectCast(paragraph.AppendFootnote(Syncfusion.DocIO.FootnoteType.Footnote), WFootnote)
 Dim separator As WTextBody = document.Footnotes.Separator
-'Replaces the default footnote separated by text
+'Replaces the default footnote separator with text
 separator.Paragraphs(0).Text = "Footnote separator"
 'Sets the footnote character format
 footnote.MarkerCharacterFormat.SubSuperScript = SubSuperScript.SuperScript
@@ -469,7 +469,7 @@ paragraph.AppendText("Sample content for footnotes").CharacterFormat.Bold = True
 'Adds footnote text
 paragraph = footnote.TextBody.AddParagraph()
 paragraph.AppendText("AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.")
-‘Saves and closes the Word document instance
+'Saves and closes the Word document instance
 document.Save("Sample.docx", FormatType.Docx)
 document.Close()
 {% endhighlight %}
@@ -499,7 +499,7 @@ using (WordDocument document = new WordDocument())
     //Appends the endnotes
     WFootnote endnote = (WFootnote)paragraph.AppendFootnote(Syncfusion.DocIO.FootnoteType.Endnote);
     WTextBody separator = document.Endnotes.Separator;
-    //Replaces the default endnote separated by text
+    //Replaces the default endnote separator with text
     separator.Paragraphs[0].Text = "Endnote separator";
     //Sets the endnote character format
     endnote.MarkerCharacterFormat.SubSuperScript = SubSuperScript.SuperScript;
@@ -531,13 +531,13 @@ paragraph = section.AddParagraph();
 //Appends the endnote
 WFootnote endnote = (WFootnote)paragraph.AppendFootnote(Syncfusion.DocIO.FootnoteType.Endnote);
 WTextBody separator = document.Endnotes.Separator;
-//Replaces the default foot note separate by text
+//Replaces the default endnote separator with text
 separator.Paragraphs[0].Text = "Endnote separator";
 //Sets the endnote character format
 endnote.MarkerCharacterFormat.SubSuperScript = SubSuperScript.SuperScript;
 //Inserts the text into the paragraph
 paragraph.AppendText("Sample content for endnotes").CharacterFormat.Bold = true;
-//Adds the footnote text
+//Adds the endnote text
 paragraph = endnote.TextBody.AddParagraph();
 paragraph.AppendText("AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.");
 //Saves and closes the Word document instance
@@ -561,16 +561,16 @@ paragraph = section.AddParagraph()
 'Appends the endnote
 Dim endnote As WFootnote = DirectCast(paragraph.AppendFootnote(Syncfusion.DocIO.FootnoteType.Endnote), WFootnote)
 Dim separator As WTextBody = document.Endnotes.Separator
-'Replaces the default footnote separated by text
+'Replaces the default endnote separator with text
 separator.Paragraphs(0).Text = "Endnote separator"
 'Sets the endnote character format
 endnote.MarkerCharacterFormat.SubSuperScript = SubSuperScript.SuperScript
 'Inserts the text into the paragraph
 paragraph.AppendText("Sample content for endnotes").CharacterFormat.Bold = True
-'Adds the footnote text
+'Adds the endnote text
 paragraph = endnote.TextBody.AddParagraph()
 paragraph.AppendText("AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.")
-‘Saves and closes the Word document instance
+'Saves and closes the Word document instance
 document.Save("Sample.docx", FormatType.Docx)
 document.Close()
 {% endhighlight %}
@@ -580,9 +580,10 @@ document.Close()
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Footnotes-and-Endnotes/Change-default-endnote-separator).
 
 ## Modify Footnote and Endnote content
-Modify footnote and endnote contents in an existing Word document.
 
-The following code example shows how to modify the footnote and endnote content from an existing Word document:
+You can modify the footnote and endnote contents in an existing Word document.
+
+The following code example shows how to modify the footnote and endnote content of an existing Word document:
 
 {% tabs %}
 
@@ -617,7 +618,7 @@ using (FileStream docStream  = new FileStream("Input.docx", FileMode.Open, FileA
         endnote.MarkerCharacterFormat.SubSuperScript = SubSuperScript.SuperScript;
         //Append the endnote text.
         endnoteParagraph.AppendText(" Endnote is modified.");
-        //Save the the Word document to the MemoryStream.
+        //Save the Word document to the MemoryStream.
         MemoryStream outputStream = new MemoryStream();
         document.Save(outputStream, FormatType.Docx);
     }
@@ -693,9 +694,9 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Footnotes-and-Endnotes/Modify-Footnote-and-Endnote-content).
 
-## Removing a Footnotes/Endnotes
+## Removing Footnotes/Endnotes
 
-The following code example shows how to remove the footnotes/endnotes from the Word document.
+The following code example shows how to remove footnotes/endnotes from a Word document.
 
 {% tabs %}
 
@@ -836,7 +837,7 @@ private static void RemoveFootNoteEndNote(WTable table)
 'Loads the template document
 Dim document As New WordDocument("Template.docx")
 'Removes footnote from the document
-RemoveFootNoteEndNote(document);
+RemoveFootNoteEndNote(document)
 'Saves and closes the Word document
 document.Save("Result.docx", FormatType.Docx)
 document.Close()
@@ -866,7 +867,7 @@ Private Shared Sub RemoveFootNoteEndNote(ByVal textBody As WTextBody)
                 'Table is a collection of rows and cells
                 'Iterates through table's DOM and and Remove footnote.
                 RemoveFootNoteEndNote(TryCast(bodyItemEntity, WTable))
-            Case EntityType.BlockContentControl			    
+            Case EntityType.BlockContentControl
                 Dim blockContentControl As BlockContentControl = TryCast(bodyItemEntity, BlockContentControl)
                 'Iterates to the body items of Block Content Control and Remove footnote.
                 RemoveFootNoteEndNote(blockContentControl.TextBody)

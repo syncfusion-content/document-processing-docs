@@ -90,7 +90,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to set OpenType Font Features?
 
-The Open type features provide special effects for the text. This feature is specific to Word 2010 and later version documents.
+The OpenType features provide special effects for the text. This feature is specific to Word 2010 and later version documents.
 
 The OpenType features includes the following:
 
@@ -675,13 +675,13 @@ This behavior aligns with Microsoft Word's standards, and the DocIO library adhe
 
 ## Does importing content using keep source formatting option copy the format from the style to the destination document?
 
-Yes, when you use [ImportOptions.KeepSourceFormatting](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.ImportOptions.html#fields) while importing content using [ImportContent](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.ImportOptions.html) API, it copies both the style and inline formatting. For example, if the text is red and bold in the source document(which applied through the style), the destination document will keep the same red color and bold effect.
+Yes, when you use [ImportOptions.KeepSourceFormatting](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.ImportOptions.html#fields) while importing content using [ImportContent](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.ImportOptions.html) API, it copies both the style and inline formatting. For example, if the text is red and bold in the source document (which is applied through the style), the destination document will keep the same red color and bold effect.
 
 However, if part of the text has inline formatting (like a blue color), it will override the style only for that part of the text. So, the destination document will show the blue part, but the rest of the text will stay red and bold.
 
 In short, **inline formatting** takes priority over the style for specific parts of the text, while "Keep Source Formatting" ensures that most formatting is preserved.
 
-This behavior follows the Microsoft Word when using "Keep Source Formatting". Similarly, DocIO also follows this behavior when you use [ImportOptions.KeepSourceFormatting](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.ImportOptions.html#fields).
+This behavior follows the Microsoft Word behavior when using "Keep Source Formatting". Similarly, DocIO also follows this behavior when you use [ImportOptions.KeepSourceFormatting](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.ImportOptions.html#fields).
 
 ## Are strip lines on charts supported in DocIO?
 

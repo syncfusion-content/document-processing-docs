@@ -14,9 +14,8 @@ documentation: UG
 The following steps illustrate creating a simple Invoice-formatted Excel document on Linux.
 
 **Prerequisites:**
-- .NET 6.0 SDK or later installed on Linux.
+- .NET 8.0 SDK or later installed on Linux.
 - A user account with write permissions to the project directory.
-- The `AdventureCycles-Logo.png` image placed in the project output directory (the same folder as `Program.cs`).
 
 Step 1: Execute the following command in the Linux terminal to create a new .NET Core Console application.
 {% tabs %}
@@ -283,4 +282,4 @@ excelEngine.Dispose();
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
-An online sample link to [create an Excel document](https://ej2.syncfusion.com/aspnetcore/Excel/Create#/material3) in ASP.NET Core.
+An online sample link to [create an Excel document](https://document.syncfusion.com/demos/excel/create#/tailwind3) in ASP.NET Core.

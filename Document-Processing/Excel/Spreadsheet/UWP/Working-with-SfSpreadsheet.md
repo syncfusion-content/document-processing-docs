@@ -7,14 +7,15 @@ control: SfSpreadsheet
 documentation: ug
 ---
 
-# Working With Spreadsheet in UWP Spreadsheet (SfSpreadsheet)
- This section explains about accessing the Worksheet, Grid and the events associated with it.
+# Working with Spreadsheet in UWP Spreadsheet (SfSpreadsheet)
+
+This section explains accessing the Worksheet, Grid, and the events associated with them.
 
 ## Accessing the Worksheet
 
-A __workbook__ is an excel document in the SfSpreadsheet. It is an object that exposes the `IWorkbook` interface. Currently loaded workbook in the Spreadsheet can be accessed by using the `Workbook` property of SfSpreadsheet.
+A __workbook__ is an Excel document in the SfSpreadsheet. It is an object that exposes the `IWorkbook` interface. The currently loaded workbook in the Spreadsheet can be accessed by using the `Workbook` property of SfSpreadsheet.
 
-A workbook consists of one or more worksheets stored within the worksheet collection. Accessing the worksheets in the collection, can be done by the following ways,
+A workbook consists of one or more worksheets stored within the worksheet collection. Accessing the worksheets in the collection can be done in the following ways:
 
 {% tabs %}
 {% highlight c# %}
@@ -39,9 +40,9 @@ N> `ActiveGrid` and `ActiveSheet` property can be accessed only after the `Workb
 
 Each worksheet in the workbook is loaded into the view as `SpreadsheetGrid` in `SfSpreadsheet`.
 
-When the workbook is loaded in the SfSpreadsheet, the `WorkbookLoaded` Event is invoked and when the workbook is removed from SfSpreadsheet, the `WorkbookUnloaded` Event is invoked.
+When the workbook is loaded in the SfSpreadsheet, the `WorkbookLoaded` Event is invoked, and when the workbook is unloaded from the SfSpreadsheet, the `WorkbookUnloaded` Event is invoked.
 
-When the worksheet is added into the SfSpreadsheet, the `WorksheetAdded` Event is invoked and when the worksheet is removed in the SfSpreadsheet, `WorksheetRemoved` Event is invoked.
+When the worksheet is added to the SfSpreadsheet, the `WorksheetAdded` Event is invoked, and when the worksheet is removed from the SfSpreadsheet, the `WorksheetRemoved` Event is invoked.
 
 Hence you can access the `ActiveGrid` either in the `WorkbookLoaded` or `WorksheetAdded` Event.
 
@@ -70,11 +71,11 @@ void spreadsheet_WorksheetRemoved(object sender, WorksheetRemovedEventArgs args)
 {% endhighlight %}
 {% endtabs %}
 
-You can also access the each `SpreadsheetGrid` in the SfSpreadsheet either by passing the particular sheet name in the `GridCollection` or by invoking `WorkbookLoaded` Event of SfSpreadsheet. 
+You can also access each `SpreadsheetGrid` in the SfSpreadsheet, either by passing the sheet name in the GridCollection or by invoking the `WorkbookLoaded` Event of SfSpreadsheet.
 
 ### By using Sheet Name
 
-For your reference, setting the row and column count dynamically for the second sheet in the Workbook
+The following example sets the row and column count dynamically for the second sheet in the Workbook:
 
 {% tabs %}
 {% highlight c# %}
@@ -136,9 +137,9 @@ spreadsheet.SetActiveSheet("Sheet5");
 
 ## Accessing the cell or range of cells
 
-SfSpreadsheet allows to access a single cell or range of cells in the workbook using `IRange` interface.
+SfSpreadsheet allows you to access a single cell or range of cells in the workbook using the IRange interface.
 
-The following code shows the several ways of accessing a single cell or range of cells in the `Worksheet`,
+The following code shows several ways of accessing a single cell or range of cells in the `Worksheet`:
 
 {% tabs %}
 {% highlight c# %}
@@ -149,13 +150,13 @@ var cell = spreadsheet.Workbook.Worksheets[0].Range["A3"];
 // Access a cell by specifying cell row and column index. 
 var cell1 = spreadsheet.Workbook.Worksheets[0].Range[3, 1];
 
-// Access a cells by specifying user defined name.
+// Access a cell by specifying a user-defined name.
 var cell2 = spreadsheet.Workbook.Worksheets[0].Range["Namerange"];
 
-// Accessing a range of cells by specifying cell's address.
+// Access a range of cells by specifying the cell address.
 var cell3 = spreadsheet.Workbook.Worksheets[0].Range["A5:C8"];
 
-// Accessing a range of cells specifying cell row and column index.
+// Access a range of cells by specifying the cell row and column index.
 var cell4 = spreadsheet.Workbook.Worksheets[0].Range[15, 1, 15, 3];
 
 {% endhighlight %}
@@ -173,7 +174,7 @@ SfSpreadsheet allows you to access the value of a cell by using [Value](https://
 {% highlight c# %}
 
 // Access a cell value by using "Value" Property,
-var cellValue = spreadsheet.Workbook.Worksheets[1].Range["A3"].Value
+var cellValue = spreadsheet.Workbook.Worksheets[1].Range["A3"].Value;
 
 // Access a cell value by using "DisplayText" Property. 
 var displayValue = spreadsheet.Workbook.Worksheets[1].Range[4, 1].DisplayText;
@@ -183,7 +184,7 @@ var displayValue = spreadsheet.Workbook.Worksheets[1].Range[4, 1].DisplayText;
 
 ## Setting the value or formula to a cell
 
-In SfSpreadsheet, to update the cell value and formula programmatically, `SetCellValue` method of `SpreadsheetGrid` should be invoked and then invalidate that cell to update the view.
+In SfSpreadsheet, to update a cell value or formula programmatically, invoke the SetCellValue method of SpreadsheetGrid and then invalidate that cell to update the view.
 
 {% tabs %}
 {% highlight c# %}
@@ -197,9 +198,9 @@ spreadsheet.ActiveGrid.InvalidateCell(2,2);
 
 ## Clearing the value or formatting from a cell
 
-SfSpreadsheet allows you to delete the contents of a cell or delete the contents along with its formatting(comments,Conditional formats,..) also.
+SfSpreadsheet allows you to delete the contents of a cell, or delete the contents along with its formatting (comments, Conditional formats, etc.).
 
-The following code illustrates the different way of deleting the value from a cell,
+The following code illustrates the different ways of deleting the value from a cell:
 
 {% tabs %}
 {% highlight c# %}
@@ -216,7 +217,7 @@ spreadsheet.Workbook.Worksheets[0].Range[3, 3].Clear(ExcelClearOptions.ClearData
 {% endhighlight %}
 {% endtabs %}
 
-N> [ExcelClearOptions](http://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelClearOptions.html) is an enum which specifies the possible directions to clear the cell formats, content, comments,conditional format,data validation or clear all of them.
+N> [ExcelClearOptions](http://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelClearOptions.html) is an enum which specifies the possible options to clear the cell formats, content, comments, conditional formats, data validation, or clear all of them.
 
 ## Refreshing the view
 
@@ -279,7 +280,7 @@ spreadsheet.FormulaBarVisibility =  Windows.UI.Xaml.Visibility.Collapsed;
 
 ## Identify whether the workbook is modified or not
 
-`IsCellModified` property of `WorkbookImpl` is used to identify whether any cell modified in a workbook or not after importing. Since it is an internal property, access it using Reflection.
+`IsCellModified` property of `WorkbookImpl` is used to identify whether any cell has been modified in a workbook after importing. Since it is an internal property, access it using Reflection.
 
 {% tabs %}
 {% highlight c# %}
@@ -293,7 +294,7 @@ var value = typeof(WorkbookImpl).GetProperty("IsCellModified", binding).GetValue
 
 ## Suppress message boxes in Spreadsheet
 
-In Spreadsheet, warning messages, error alerts are displayed while performing some actions like Excel. If you want to avoid those alerts, then set the `DisplayAlerts` property to `false`. 
+In Spreadsheet, warning messages and error alerts are displayed while performing actions, similar to Excel. To suppress those alerts, set the `DisplayAlerts` property to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -306,9 +307,9 @@ spreadsheet.DisplayAlerts = false;
 
 ## Suspend and resume formula calculation
 
-Spreadsheet provides support to suspend the formula calculation and resume it whenever needed using the `SuspendFormulaCalculation` and `ResumeFormulaCalculation` method.
+Spreadsheet provides support to suspend the formula calculation and resume it when needed using the `SuspendFormulaCalculation` and `ResumeFormulaCalculation` methods.
 
-Resuming formula calculation will recalculate all the formula cells in a workbook. This would be helpful to improve the performance when you are updating the value of more number of cells by skipping the dependent cells recalculation on each cell value changed.
+Resuming formula calculation will recalculate all the formula cells in a workbook. This helps improve performance when you update the values of a large number of cells by skipping the dependent cell recalculation on every cell value change.
 
 {% tabs %}
 {% highlight c# %}
@@ -319,13 +320,12 @@ spreadsheet.ResumeFormulaCalculation();
 //Suspends the automatic formula calculation
 spreadsheet.SuspendFormulaCalculation();
 
-
 {% endhighlight %}
 {% endtabs %}
 
-## Close the popup programmatically 	
+## Close the popup programmatically
 
-In SfSpreadsheet, popup windows are used to display the options like copy paste option, fill series option, etc. which will be closed automatically on certain actions. However you can also able to close the popup programmatically by using the `ShowHidePopup` method of `SpreadsheetGrid`.
+In SfSpreadsheet, popup windows are used to display options such as copy-paste options and fill series options, which are closed automatically on certain actions. However, you can also close the popup programmatically by using the ShowHidePopup method of SpreadsheetGrid.
 
 {% tabs %}
 {% highlight c# %}
@@ -333,7 +333,7 @@ In SfSpreadsheet, popup windows are used to display the options like copy paste 
 //To close the popup
 spreadsheet.ActiveGrid.ShowHidePopup(false);
 
-//To show the closed popup, if needed.
+//To show the popup again, if needed.
 spreadsheet.ActiveGrid.ShowHidePopup(true);
 
 {% endhighlight %}
@@ -341,7 +341,7 @@ spreadsheet.ActiveGrid.ShowHidePopup(true);
 
 ## Identify when the active sheet is changed
 
-SfSpreadsheet provides support to identify when the active sheet is changed by using `PropertyChanged` event of SfSpreadsheet like below.
+SfSpreadsheet provides support to identify when the active sheet is changed by using the `PropertyChanged` event of SfSpreadsheet, as shown below.
 
 {% tabs %}
 {% highlight c# %}
