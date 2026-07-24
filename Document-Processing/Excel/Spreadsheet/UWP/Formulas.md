@@ -9,11 +9,11 @@ documentation: ug
 
 # Formulas in UWP Spreadsheet (SfSpreadsheet)
 
-SfSpreadsheet calculation engine offers automated calculation over a formula, expression, or cross sheet references. SfSpreadsheet calculation engine is preloaded with 409 formulas covering a broad range of business functions.
+SfSpreadsheet calculation engine offers automated calculation over a formula, expression, or cross-sheet references. The calculation engine is preloaded with a broad range of built-in formulas covering common business functions.
 
 ## Adding Formula into cell
 
-To add formulas into a cell programmatically, use `SetCellValue` method of `SpreadsheetGrid` should be invoked and then invalidate that cell to update the view.
+To add formulas into a cell programmatically, the `SetCellValue` method of `SpreadsheetGrid` should be invoked and then the cell should be invalidated to update the view.
 
 {% tabs %}
 {% highlight c# %}
@@ -27,7 +27,7 @@ spreadsheet.ActiveGrid.InvalidateCell(2,1);
 
 ## Named Ranges
 
-Named Ranges are the defined names that represents a cell, range of cells, formula, or constant value or table. Each name have a scope of either to a specific worksheet or to the entire workbook.
+Named Ranges are the defined names that represent a cell, a range of cells, a formula, a constant value, or a table. Each name has a scope of either a specific worksheet or the entire workbook.
 
 ### Define named ranges at runtime
 
@@ -43,7 +43,7 @@ spreadsheet.AddNamedRange("SampleName", "A3:B3", "Sheet1");
 
 ### Edit or remove named ranges at runtime
 
-SfSpreadsheet allows the user to edit the named ranges at runtime by `EditNamedRange` method and remove the named ranges at runtime by `DeleteNamedRange` method
+SfSpreadsheet allows the user to edit named ranges at runtime by using the `EditNamedRange` method and to remove named ranges at runtime by using the `DeleteNamedRange` method.
 
 {% tabs %}
 {% highlight c# %}
@@ -100,7 +100,7 @@ DSTDEVP<br/><br/></td><td>
 Calculates the standard deviation (based on an entire population) of values in a field of a list or database, that satisfy specified conditions<br/><br/></td></tr>
 <tr>
 <td>
-DSTEV<br/><br/></td><td>
+DSTDEV<br/><br/></td><td>
 Calculates the standard deviation (based on a sample of a population) of values in a field of a list or database, that satisfy specified conditions<br/><br/></td></tr>
 <tr>
 <td>
@@ -122,7 +122,7 @@ Description<br/><br/></th></tr>
 <tr>
 <td>
 DATE<br/><br/></td><td>
-Returns a date, from a user-supplied year, month and day<br/><br/></td></tr>
+Returns a date, from a user-supplied year, month, and day<br/><br/></td></tr>
 <tr>
 <td>
 DATEVALUE<br/><br/></td><td>
@@ -146,7 +146,7 @@ Returns the minute part of a user-supplied time<br/><br/></td></tr>
 <tr>
 <td>
 SECOND<br/><br/></td><td>
-Returns the seconds part of a user-supplied time<br/><br/></td></tr>
+Returns the second part of a user-supplied time<br/><br/></td></tr>
 <tr>
 <td>
 MONTH<br/><br/></td><td>
@@ -154,11 +154,11 @@ Returns the month from a user-supplied date<br/><br/></td></tr>
 <tr>
 <td>
 NOW<br/><br/></td><td>
-Returns the current date & time<br/><br/></td></tr>
+Returns the current date and time<br/><br/></td></tr>
 <tr>
 <td>
 TIME<br/><br/></td><td>
-Returns a time, from a user-supplied hour, minute and second<br/><br/></td></tr>
+Returns a time, from a user-supplied hour, minute, and second<br/><br/></td></tr>
 <tr>
 <td>
 TIMEVALUE<br/><br/></td><td>
@@ -226,8 +226,8 @@ DEC2BIN<br/><br/></td><td>
 Converts a decimal number to binary<br/><br/></td></tr>
 <tr>
 <td>
-DCE2OCT<br/><br/></td><td>
-Converts a binary number to octal<br/><br/></td></tr>
+DEC2OCT<br/><br/></td><td>
+Converts a decimal number to octal<br/><br/></td></tr>
 <tr>
 <td>
 DEC2HEX<br/><br/></td><td>
@@ -235,7 +235,7 @@ Converts a decimal number to hexadecimal<br/><br/></td></tr>
 <tr>
 <td>
 BIN2DEC<br/><br/></td><td>
-Converts a binary number to hexadecimal<br/><br/></td></tr>
+Converts a binary number to decimal<br/><br/></td></tr>
 <tr>
 <td>
 BIN2OCT<br/><br/></td><td>
@@ -569,7 +569,7 @@ Checks whether the value is number and returns true or false<br/><br/></td></tr>
 <tr>
 <td>
 ISLOGICAL<br/><br/></td><td>
-Checks whether a value is logical value(TRUE/FALSE) and returns true or false<br/><br/></td></tr>
+Checks whether a value is a logical value (TRUE/FALSE) and returns true or false<br/><br/></td></tr>
 <tr>
 <td>
 ISNA<br/><br/></td><td>
@@ -629,11 +629,11 @@ Returns the Excel #N/A error<br/><br/></td></tr>
 <tr>
 <td>
 CELL<br/><br/></td><td>
-Returns information about the contents, formatting or location of a given cell<br/><br/></td></tr>
+Returns information about the contents, formatting, or location of a given cell<br/><br/></td></tr>
 <tr>
 <td>
 INFO<br/><br/></td><td>
-Returns information about the the current operating environment<br/><br/></td></tr>
+Returns information about the current operating environment<br/><br/></td></tr>
 <tr>
 <td>
 TYPE<br/><br/></td><td>
@@ -754,7 +754,7 @@ SHEETS<br/><br/></td><td>
 Returns the number of sheets in reference<br/><br/></td></tr>
 </table>
 
-### Math & Trigonometry functions
+### Math and Trigonometry Functions
 
 <table>
 <tr>
@@ -876,7 +876,7 @@ Rounds a number to the nearest integer or to the nearest multiple of significanc
 <tr>
 <td>
 CEILING.MATH<br/><br/></td><td>
-Returns the RoundUp of the given number to the given significance<br/><br/></td></tr>
+Rounds a number up to the nearest integer or to the nearest multiple of significance<br/><br/></td></tr>
 <tr>
 <td>
 COLUMNS<br/><br/></td><td>
@@ -1056,7 +1056,7 @@ Converts a roman numeral to Arabic<br/><br/></td></tr>
 <tr>
 <td>
 CEILING.MATH<br/><br/></td><td>
-Rounds a number to the nearest integer or to the nearest multiple of significance<br/><br/></td></tr>
+Rounds a number up to the nearest integer or to the nearest multiple of significance<br/><br/></td></tr>
 <tr>
 <td>
 MDETERM<br/><br/></td><td>
@@ -1075,7 +1075,7 @@ MUNIT<br/><br/></td><td>
 Returns the unit matrix for the specified dimension<br/><br/></td></tr>
 </table>
 
-### Statistical functions
+### Statistical Functions
 
 <table>
 <tr>
@@ -1137,11 +1137,11 @@ Returns the Kth percentile of the values in a range, where K is in the range 0�
 <tr>
 <td>
 PERCENTRANK.EXC<br/><br/></td><td>
-Returns the rank of value in dataset as a percentage of the data set as percentage (0….1, exclusive) of the dataset<br/><br/></td></tr>
+Returns the rank of a value in a dataset as a percentage (0….1, exclusive) of the dataset<br/><br/></td></tr>
 <tr>
 <td>
-PERCENTRANC.INC<br/><br/></td><td>
-Returns the rank of value in dataset as a percentage of the data set as percentage (0….1, inclusive) of the dataset<br/><br/></td></tr>
+PERCENTRANK.INC<br/><br/></td><td>
+Returns the rank of a value in a dataset as a percentage (0….1, inclusive) of the dataset<br/><br/></td></tr>
 <tr>
 <td>
 STDEV.P<br/><br/></td><td>
@@ -1257,7 +1257,7 @@ Returns the statistical rank of a given value, within a supplied array of values
 <tr>
 <td>
 RANK.EQ<br/><br/></td><td>
-Returns the Mode (the most frequently occurring value) of a list of supplied numbers (if more than one value has same rank, the top rank of that set is returned)<br/><br/></td></tr>
+Returns the statistical rank of a given value, within a supplied array of values (if more than one value has the same rank, the top rank of that set is returned)<br/><br/></td></tr>
 <tr>
 <td>
 NEGBINOM.DIST<br/><br/></td><td>
@@ -1409,7 +1409,7 @@ Returns the kurtosis of a data set<br/><br/></td></tr>
 <tr>
 <td>
 LARGE<br/><br/></td><td>
-Returns the Kth LARGEST value from a list of supplied numbers, for a given value K<br/><br/></td></tr>
+Returns the Kth largest value from a list of supplied numbers, for a given value K<br/><br/></td></tr>
 <tr>
 <td>
 LOGNORMDIST<br/><br/></td><td>
@@ -1433,7 +1433,7 @@ Returns the Pearson product moment correlation coefficient<br/><br/></td></tr>
 <tr>
 <td>
 PERCENTILE<br/><br/></td><td>
-Returns the K'th percentile of values in a supplied range, where K is in the range 0 - 1 (inclusive)<br/><br/></td></tr>
+Returns the Kth percentile of values in a supplied range, where K is in the range 0 - 1 (inclusive)<br/><br/></td></tr>
 <tr>
 <td>
 PERCENTILERANK<br/><br/></td><td>
@@ -1456,8 +1456,8 @@ QUARTILE<br/><br/></td><td>
 Returns the specified quartile of a set of supplied numbers, based on percentile value 0 - 1 (inclusive)<br/><br/></td></tr>
 <tr>
 <td>
-RANQ<br/><br/></td><td>
-Returns the Mode (the most frequently occurring value) of a list of supplied numbers (if more than one value has same rank, the top rank of that set is returned)<br/><br/></td></tr>
+RANK<br/><br/></td><td>
+Returns the rank of a value in a list of supplied numbers (if more than one value has the same rank, the top rank of that set is returned)<br/><br/></td></tr>
 <tr>
 <td>
 RSQ<br/><br/></td><td>
@@ -1473,7 +1473,7 @@ Returns the slope of the linear regression line through a supplied series of x- 
 <tr>
 <td>
 SMALL<br/><br/></td><td>
-Returns the Kth SMALLEST value from a list of supplied numbers, for a given value K<br/><br/></td></tr>
+Returns the Kth smallest value from a list of supplied numbers, for a given value K<br/><br/></td></tr>
 <tr>
 <td>
 STANDARDIZE<br/><br/></td><td>
@@ -1546,7 +1546,7 @@ Returns the length of a supplied text string<br/><br/></td></tr>
 <tr>
 <td>
 TRUNC<br/><br/></td><td>
-Truncates a number to an integer removing decimal part or fractional part <br/><br/></td></tr>
+Truncates a number to an integer, removing the decimal or fractional part<br/><br/></td></tr>
 <tr>
 <td>
 MID<br/><br/></td><td>
@@ -1630,7 +1630,7 @@ Converts all characters in a supplied text string to proper case (i.e. letters t
 <tr>
 <td>
 REPLACE<br/><br/></td><td>
-Replaces all or part of a text string with another string (from a user supplied position)<br/><br/></td></tr>
+Replaces all or part of a text string with another string, starting from a user-supplied position<br/><br/></td></tr>
 <tr>
 <td>
 REPT<br/><br/></td><td>

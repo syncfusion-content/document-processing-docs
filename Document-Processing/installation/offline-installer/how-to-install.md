@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Installing Syncfusion Document Solution offline installer - Syncfusion
-description: Learn here about how to install Syncfusion Document Solution offline installer after downloading from our Syncfusion website.
-platform: document-processing
+title: Installing Syncfusion Document SDK offline installer - Syncfusion
+description: Learn here about how to install Syncfusion Document SDK offline installer after downloading from our Syncfusion website.
+platform: document-sdk
 control: Installation and Deployment
 documentation: ug
 
 ---
 
-# Installing Syncfusion<sup>&reg;</sup> Document Solution offline installer
+# Installing Syncfusion<sup>&reg;</sup> Document SDK offline installer
 
 
 ## Installing with UI   
 
-The steps below show how to install the Essential Studio<sup>&reg;</sup> Document Solution installer.
+The steps below show how to install the Essential Studio<sup>&reg;</sup> Document SDK installer.
 
-1. Open the Syncfusion<sup>&reg;</sup> Document Solution offline installer file from the downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
+1. Open the Syncfusion<sup>&reg;</sup> Document SDK offline installer file from the downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 
     ![Installer extraction wizard](images/Step-by-Step-Installation_img1.png)
 
@@ -28,8 +28,6 @@ The steps below show how to install the Essential Studio<sup>&reg;</sup> Documen
    
     * *Use Unlock Key*
    
-   
-   
     **Login To Install**
    
     You must enter your Syncfusion<sup>&reg;</sup> email address and password. If you don't already have a Syncfusion<sup>&reg;</sup> account, you can sign up for one by clicking **"Create an account"**. If you have forgotten your password, click on **"Forgot Password"** to create a new one. Once you've entered your Syncfusion<sup>&reg;</sup> email and password, click Next.
@@ -39,7 +37,7 @@ The steps below show how to install the Essential Studio<sup>&reg;</sup> Documen
 
     **Use Unlock Key**
    
-    Unlock keys are used to unlock the Syncfusion<sup>&reg;</sup> offline installer, and they are platform and version specific. You should use either Syncfusion<sup>&reg;</sup> licensed or trial Unlock key to unlock Syncfusion<sup>&reg;</sup> Document Solution installer.
+    Unlock keys are used to unlock the Syncfusion<sup>&reg;</sup> offline installer, and they are platform and version specific. You should use either Syncfusion<sup>&reg;</sup> licensed or trial Unlock key to unlock Syncfusion<sup>&reg;</sup> Document SDK installer.
    
     The trial unlock key is only valid for 30 days, and the installer will not accept an expired trial key. 
    
@@ -89,23 +87,23 @@ The steps below show how to install the Essential Studio<sup>&reg;</sup> Documen
 	
 	![Installing wizard](images/Step-by-Step-Installation_img8.png)
 
-    N> The **Completed** screen is displayed once the Document Solution product is installed. If any version is selected to uninstall, the **Completed** screen will display both install and uninstall status.
+    N> The **Completed** screen is displayed once the Document SDK product is installed. If any version is selected to uninstall, the **Completed** screen will display both install and uninstall status.
 
 	![Completed wizard](images/Step-by-Step-Installation_img10.png)
 
 6. After installing, click the **Launch Control Panel** link to open the Syncfusion<sup>&reg;</sup> Control Panel.
 
-7. Click the **Finish** button. The Syncfusion<sup>&reg;</sup> Essential Studio Document Solution product is now installed on your system.
+7. Click the **Finish** button. The Syncfusion<sup>&reg;</sup> Essential Studio Document SDK product is now installed on your system.
 
 ## Installing in silent mode
 
-The Syncfusion<sup>&reg;</sup> Essential Studio Document Solution Installer supports installation and uninstallation via the command line.
+The Syncfusion<sup>&reg;</sup> Essential Studio Document SDK Installer supports installation and uninstallation via the command line.
 
 ### Command Line Installation
 
 To install through the Command Line in Silent mode, follow the steps below.
 
-1. Run the Syncfusion<sup>&reg;</sup> Document Solution installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
+1. Run the Syncfusion<sup>&reg;</sup> Document SDK installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 2. The `syncfusionessentialdocumentsdk_(version).exe` file will be extracted into the Temp directory.
 3. Run `%temp%`. The Temp folder will be opened. The `syncfusionessentialdocumentsdk_(version).exe` file will be located in one of the folders.
 4. Copy the extracted `syncfusionessentialdocumentsdk_(version).exe` file to a local drive.
@@ -121,16 +119,16 @@ To install through the Command Line in Silent mode, follow the steps below.
     **Example:** “D:\Temp\syncfusionessentialdocumentsdk_x.x.x.x.exe” /Install silent /UNLOCKKEY:“product unlock key” /log “C:\Temp\EssentialStudio_Platform.log” /InstallPath:C:\Syncfusion\x.x.x.x /InstallSamples:true /InstallAssemblies:true /UninstallExistAssemblies:true /InstallToolbox:true
 
 	
-7.  Essential Studio<sup>&reg;</sup> for Document Solution is installed.
+7.  Essential Studio<sup>&reg;</sup> for Document SDK is installed.
 
     N> x.x.x.x should be replaced with the Essential Studio<sup>&reg;</sup> version and the Product Unlock Key needs to be replaced with the Unlock Key for that version.
    
 
 ### Command Line Uninstallation
 
-Syncfusion<sup>&reg;</sup> Essential Document Solution can be uninstalled silently using the Command Line.
+Syncfusion<sup>&reg;</sup> Essential Document SDK can be uninstalled silently using the Command Line.
 
-1.	Run the Syncfusion<sup>&reg;</sup> Document Solution installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
+1.	Run the Syncfusion<sup>&reg;</sup> Document SDK installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 2.	The file syncfusionessentialdocumentsdk_(version).exe file will be extracted into the Temp directory.
 3.	Run %temp%. The Temp folder will be opened. The syncfusionessentialdocumentsdk_(version).exe file will be located in one of the folders.
 4.	Copy the extracted syncfusionessentialdocumentsdk_(version).exe file in local drive.
@@ -142,6 +140,6 @@ Syncfusion<sup>&reg;</sup> Essential Document Solution can be uninstalled silent
     **Example:** “D:\Temp\syncfusionessentialdocumentsdk_x.x.x.x.exe" /uninstall silent
 
 
-7. Essential Studio<sup>&reg;</sup> for Document Solution is uninstalled.
+7. Essential Studio<sup>&reg;</sup> for Document SDK is uninstalled.
    
    
