@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Retrieve the Loaded Document in React PDF Viewer | syncfusion
+title: Retrieve the Loaded Document in React PDF Viewer | Syncfusion
 description: Learn how to access the loaded PDF document instance in the React PDF Viewer using refs and the documentLoad event.
 platform: document-processing
 documentation: ug
@@ -64,7 +64,7 @@ function App() {
     // 2) Read loaded document details (shape depends on event payload/version)
     console.log('documentLoad args:', args);
 
-    // 4) Call viewer APIs (after load)
+    // 3) Call viewer APIs (after load)
     const pageCount =
       (viewer && viewer.pageCount) ||
       (args && args.pageCount) ||
