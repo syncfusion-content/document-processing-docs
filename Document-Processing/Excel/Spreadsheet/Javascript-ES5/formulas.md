@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Formulas in EJ2 Javascript Spreadsheet Control | Syncfusion
-description: Learn here all about Formulas in Syncfusion Essential EJ2 Javascript Spreadsheet control, its elements and more.
+title: Formulas in EJ2 JavaScript Spreadsheet Control | Syncfusion
+description: Learn here all about Formulas in Syncfusion Essential EJ2 JavaScript Spreadsheet control, its elements and more.
 platform: document-processing
 control: Formulas
 documentation: ug
 ---
 
-# Formulas in EJ2 JavaScript Spreadsheet Control
+# Formulas in EJ2 JavaScript Spreadsheet control
 
 Formulas are used for calculating the data in a worksheet. You can refer to a cell reference from the same sheet or from different sheets.
 
@@ -18,7 +18,7 @@ You can set formula for a cell in the following ways,
 * Using the `formula` property from `cell`, you can set the formula or expression to each cell at initial load.
 * Set the formula or expression through data binding.
 * You can set formula for a cell by [`editing`](./editing) a cell and typing a formula that starts with the `=` sign.
-* Using the [`updateCell`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#updatecell) method, you can set or update the cell formula. The method accepts a cell model object (containing the `formula` field) and the cell address as arguments.
+* Using the [`updateCell`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#updatecell) method, you can set or update the cell formula. The method accepts a cell model object (containing the `formula` field) and the cell address as arguments.
 
 ## Culture-Based Argument Separator
 
@@ -26,7 +26,7 @@ Previously, although you could import culture-based Excel files into the Spreads
 
 > Before importing culture-based Excel files, ensure that the Spreadsheet is rendered with the corresponding culture. Additionally, launch the import/export services with the same culture to ensure compatibility.
 
-When loading spreadsheet data with culture-based formula argument separators using cell data binding, local/remote data, or JSON, set the [listSeparator](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#listseparator) property value to the culture-based list separator. Common separators per culture are: German (`de`) → `;`, French (`fr`) → `;`, Spanish (`es`) → `;`. When importing an Excel file, the [listSeparator](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#listseparator) property is updated automatically based on the culture of the launched import/export service.
+When loading spreadsheet data with culture-based formula argument separators using cell data binding, local/remote data, or JSON, set the [listSeparator](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#listseparator) property value to the culture-based list separator. Common separators per culture are: German (`de`) → `;`, French (`fr`) → `;`, Spanish (`es`) → `;`. When importing an Excel file, the [listSeparator](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#listseparator) property is updated automatically based on the culture of the launched import/export service.
 
 In the example below, the Spreadsheet component is rendered with the `German` [`de`] culture. The sample shows how to set the culture-based argument separator and use culture-based formatted numeric values as formula arguments.
 
@@ -45,7 +45,7 @@ In the example below, the Spreadsheet component is rendered with the `German` [`
 
 The Spreadsheet includes a number of built-in formulas. For your convenience, a list of supported formulas can be found [here](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es5/formulas#supported-formulas).
 
-You can define and use an unsupported formula, i.e. a user defined/custom formula, in the spreadsheet by using the [addCustomFunction](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#addcustomfunction) function. Meanwhile, remember that you should define a user defined/custom formula whose results should only return a single value. If a user-defined/custom formula returns an array, it will be time-consuming to update adjacent cell values.
+You can define and use an unsupported formula, i.e. a user defined/custom formula, in the spreadsheet by using the [addCustomFunction](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#addcustomfunction) function. Meanwhile, remember that you should define a user defined/custom formula whose results should only return a single value. If a user-defined/custom formula returns an array, it will be time-consuming to update adjacent cell values.
 
 The following code example shows an unsupported formula in the spreadsheet.
 
@@ -60,7 +60,7 @@ The following code example shows an unsupported formula in the spreadsheet.
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/formula-cs1" %}
 
-Second, to directly compute a formula or expression without writing it to a cell, use the [computeExpression](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#computeexpression) method (available from version 20.1.0.47 and later). This method works for both built-in and user-defined or custom formulas.
+Second, to directly compute a formula or expression without writing it to a cell, use the [computeExpression](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#computeexpression) method (available from version 20.1.0.47 and later). This method works for both built-in and user-defined or custom formulas.
  
 The following code example shows how to use the `computeExpression` method in the spreadsheet.
 
@@ -77,15 +77,15 @@ The following code example shows how to use the `computeExpression` method in th
 
 ## Formula bar
 
-Formula bar is used to edit or enter cell data in much easier way. By default, the formula bar is enabled in the spreadsheet. Use the [`showFormulaBar`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#showformulabar) property to enable or disable the formula bar.
+Formula bar is used to edit or enter cell data in much easier way. By default, the formula bar is enabled in the spreadsheet. Use the [`showFormulaBar`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#showformulabar) property to enable or disable the formula bar.
 
 ## Named Ranges
 
 You can define a meaningful name for a cell range and use it in a formula for calculation. Named ranges make formulas easier to understand and maintain. You can add named ranges to the Spreadsheet in the following ways:
 
-* Using the [`definedNames`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#definednames) collection, you can add multiple named ranges at initial load.
-* Use the [`addDefinedName`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#adddefinedname) method to add a named range dynamically. `addDefinedName(namedModel)` accepts a `DefinedName` model (for example, `{ name: 'RangeName', refersTo: '=Sheet1!A1:A10' }`).
-* Use the [`removeDefinedName`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#removedefinedname) method to remove a named range dynamically. `removeDefinedName(definedName, scope)` accepts the defined name and, for worksheet-scoped names, the sheet name; pass an empty string for the scope when the name is workbook-scoped.
+* Using the [`definedNames`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#definednames) collection, you can add multiple named ranges at initial load.
+* Use the [`addDefinedName`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#adddefinedname) method to add a named range dynamically. `addDefinedName(namedModel)` accepts a `DefinedName` model (for example, `{ name: 'RangeName', refersTo: '=Sheet1!A1:A10' }`).
+* Use the [`removeDefinedName`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#removedefinedname) method to remove a named range dynamically. `removeDefinedName(definedName, scope)` accepts the defined name and, for worksheet-scoped names, the sheet name; pass an empty string for the scope when the name is workbook-scoped.
 * Select the range of cells, and then enter the name for the selected range in the `Name box` located at the left end of the formula bar.
 
 The following code example shows the usage of named ranges support.
@@ -108,7 +108,7 @@ The Spreadsheet provides a `Calculation Mode` feature like the calculation optio
 * `Automatic`: Formulas are recalculated instantly whenever a change occurs in the dependent cells.
 * `Manual`: Formulas are recalculated only when triggered explicitly by the user using options like `Calculate Sheet` or `Calculate Workbook`.
 
-You can configure the calculation mode using the [`calculationMode`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#calculationmode) property (available from version 27.1.48 and later) of the Spreadsheet. These modes offer flexibility to balance real-time updates and performance optimization.
+You can configure the calculation mode using the [`calculationMode`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#calculationmode) property (available from version 27.1.48 and later) of the Spreadsheet. These modes offer flexibility to balance real-time updates and performance optimization.
 
 ### Automatic Mode
 

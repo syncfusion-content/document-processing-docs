@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Rows and columns in EJ2 Javascript Spreadsheet control | Syncfusion
+title: Rows and columns in EJ2 JavaScript Spreadsheet control | Syncfusion
 description: Learn here all about Rows and columns in Syncfusion EJ2 JavaScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Rows and columns
 documentation: ug
 ---
 
-# Rows and columns in EJ2 Javascript Spreadsheet control
+# Rows and columns in EJ2 JavaScript Spreadsheet control
 
 Spreadsheet is a tabular format consisting of rows and columns. The intersection of a row and a column is called a cell. The following operations can be performed on rows and columns:
 
@@ -17,13 +17,13 @@ Spreadsheet is a tabular format consisting of rows and columns. The intersection
 
 ## Insert
 
-You can insert rows or columns anywhere in a spreadsheet. Use the [`allowInsert`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowinsert) property to enable or disable the insert option in the Spreadsheet. The default value of `allowInsert` is `true`.
+You can insert rows or columns anywhere in a spreadsheet. Use the [`allowInsert`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowinsert) property to enable or disable the insert option in the Spreadsheet. The default value of `allowInsert` is `true`.
 
 ### Row
 
 The rows can be inserted in the following ways:
 
-* Using [`insertRow`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#insertrow) method, you can insert the rows once the component is loaded.
+* Using [`insertRow`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#insertrow) method, you can insert the rows once the component is loaded.
 * Using context menu, insert the empty rows in the desired position.
 
 The following code example shows the options for inserting rows in the spreadsheet.
@@ -43,7 +43,7 @@ The following code example shows the options for inserting rows in the spreadshe
 
 The columns can be inserted in the following ways:
 
-* Use the [`insertColumn`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#insertcolumn) method to insert columns after the Spreadsheet component is loaded.
+* Use the [`insertColumn`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#insertcolumn) method to insert columns after the Spreadsheet component is loaded.
  
 The following code example shows the options for inserting columns in the spreadsheet.
 
@@ -60,11 +60,11 @@ The following code example shows the options for inserting columns in the spread
 
 ## Delete
 
-Delete support provides an option for deleting the rows and columns in the spreadsheet. Set the [`allowDelete`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowdelete) property to enable or disable the delete option in the Spreadsheet.
+Delete support provides an option for deleting the rows and columns in the spreadsheet. Set the [`allowDelete`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowdelete) property to enable or disable the delete option in the Spreadsheet.
 
 The rows and columns can be deleted dynamically in the following ways:
 
-* Using [`delete`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#delete) method, you can delete the loaded rows and columns.
+* Using [`delete`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#delete) method, you can delete the loaded rows and columns.
 * Using context menu, you can delete the selected rows and columns.
 
 The following code example shows the delete operation of rows and columns in the spreadsheet.
@@ -124,11 +124,11 @@ The following code example shows the hide/show rows and columns operation in the
 
 ## Size
 
-You can change the size of rows and columns in the spreadsheet by using the [setRowsHeight](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#setrowsheight) and [setColumnsWidth](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#setcolumnswidth) methods. The size values are expressed in pixels.
+You can change the size of rows and columns in the spreadsheet by using the [setRowsHeight](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#setrowsheight) and [setColumnsWidth](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#setcolumnswidth) methods. The size values are expressed in pixels.
 
 ### Row
 
-You can change the height of single or multiple rows by using the [setRowsHeight](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#setrowsheight) method.
+You can change the height of single or multiple rows by using the [setRowsHeight](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#setrowsheight) method.
 
 You can provide the following type of ranges to the method:
 
@@ -152,7 +152,7 @@ The following code example shows how to change the height for single/multiple ro
 
 ### Column
 
-You can change the width of single or multiple columns by using the [setColumnsWidth](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#setcolumnswidth) method.
+You can change the width of single or multiple columns by using the [setColumnsWidth](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#setcolumnswidth) method.
 
 You can provide the following type of ranges to the method:
 
@@ -176,7 +176,7 @@ The following code example shows how to change the width for single/multiple col
 
 ## Changing text in column headers
 
-Using the [`beforeCellRender`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#beforecellrender) event, you can change the text in the column headers. In that event, you can use the `e-header-cell` class to identify the header cell element and update its text value.
+Using the [`beforeCellRender`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#beforecellrender) event, you can change the text in the column headers. In that event, you can use the `e-header-cell` class to identify the header cell element and update its text value.
 
 The following code example shows how to change the text in the column headers.
 

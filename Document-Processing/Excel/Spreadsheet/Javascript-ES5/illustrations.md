@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Illustrations in EJ2 Javascript Spreadsheet control | Syncfusion
+title: Illustrations in EJ2 JavaScript Spreadsheet control | Syncfusion
 description: Learn here all about Illustrations in the Syncfusion EJ2 JavaScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Illustrations
 documentation: ug
 ---
 
-# Illustrations in EJ2 Javascript Spreadsheet control
+# Illustrations in EJ2 JavaScript Spreadsheet control
 
 Illustrations let you insert images and graphic objects such as charts in the Essential<sup style="font-size:70%">&reg;</sup> JS 2 spreadsheet to enhance the visual appeal of your data.
 
@@ -90,9 +90,9 @@ The following features have some limitations in Image:
 
 ## Chart
 
-A chart is a graphical representation of data that organizes and displays a set of numerical or qualitative values, typically along the `x`-axis and `y`-axis. You can use the [`allowChart`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowchart) property to enable or disable the chart functionality.
+A chart is a graphical representation of data that organizes and displays a set of numerical or qualitative values, typically along the `x`-axis and `y`-axis. You can use the [`allowChart`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowchart) property to enable or disable the chart functionality.
 
-> The default value for the [`allowChart`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowchart) property is `true`.
+> The default value for the [`allowChart`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowchart) property is `true`.
 
 ### Types of chart
 
@@ -111,9 +111,9 @@ You can insert the chart in one of the following ways:
 
 * Select the chart icon in the Ribbon toolbar under the **Insert** tab.
 
-* Use the [`insertChart()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#insertchart) method programmatically.
+* Use the [`insertChart()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#insertchart) method programmatically.
 
-The available parameter in the [`insertChart()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#insertchart) method is:
+The available parameter in the [`insertChart()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#insertchart) method is:
 
 | Parameter | Type | Description |
 |-----|------|----|
@@ -143,9 +143,9 @@ The available arguments in the `ChartModel` are:
 
 * If you want to delete the chart, just select the chart, and then press the Delete key.
 
-* Use the [`deleteChart()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#deletechart) method programmatically.
+* Use the [`deleteChart()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#deletechart) method programmatically.
 
-The available parameter in the [`deleteChart()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#deletechart) method is:
+The available parameter in the [`deleteChart()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#deletechart) method is:
 
 | Parameter | Type | Description |
 |-----|------|----|
@@ -172,7 +172,7 @@ Chart feature allows you to view and insert a chart in a spreadsheet, and you ca
 
 #### Customization of line chart markers
 
-Using the [`actionBegin`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#actionbegin) event, you can change the shape, size, fill color, and border of the line chart marker. In the following example, you can see the modified marker appearance, such as shape and size, while creating the line chart with UI interaction.
+Using the [`actionBegin`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#actionbegin) event, you can change the shape, size, fill color, and border of the line chart marker. In the following example, you can see the modified marker appearance, such as shape and size, while creating the line chart with UI interaction.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
