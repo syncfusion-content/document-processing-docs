@@ -7,7 +7,11 @@ documentation: UG
 ---
 # Assemblies required to convert Word document to PDF
 
+This page lists the Syncfusion assemblies that must be referenced in your project to convert a Word document to PDF. The required assemblies differ based on the target platform (WPF, Windows Forms, ASP.NET Core, Blazor, WinUI, .NET MAUI, etc.). Use the tables below to identify the assemblies for your platform, and refer to the linked per-platform guides for step-by-step setup.
+
 ## Converting Word document to PDF
+
+### Active platforms
 
 For converting a Word document to PDF, the following assemblies need to be referenced in your application
 <table>
@@ -39,11 +43,13 @@ T> 1. If you encounter issues while using the .NET Word library in ASP.NET Core,
 T> 2. Switch to NuGet packages for a seamless experience:
 T>    * Get frequent bug fixes every week.
 T>    * Upgrade quickly with no manual effort.
-T> Note: To avoid trail watermark when using NuGet packages, it is recommended to register license key in application. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
-T>
-T> Refer [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf) to know more about NuGet packages required.
 
-#### Retired Platforms
+
+N> To avoid a trial watermark when using NuGet packages, it is recommended to register a license key in the application. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N>
+N> Refer [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf) to know more about NuGet packages required.
+
+### Retired platforms
 
 The following assemblies need to be referenced in your application based on the platform.
 
@@ -74,7 +80,7 @@ N> 8. Starting with the v27.1.x, if you reference "Syncfusion.DocIORenderer", yo
 
 ## Converting Charts
 
-The following assemblies are required to be referred in addition to the above mentioned assemblies for converting the chart present in the Word document into PDF.
+The following assemblies are required to be referenced in addition to the above mentioned assemblies for converting the chart present in the Word document into PDF.
 <table>
 <thead>
 <tr>
@@ -87,7 +93,7 @@ WPF, Windows Forms, ASP.NET MVC<br/></td><td>
 Syncfusion.OfficeChartToImageConverter.WPF<br/>Syncfusion.SfChart.WPF<br/></td></tr>
 </table>
 
-#### Retired Platforms
+### Retired platforms
 
 The following assemblies need to be referenced in your application based on the platform.
 
@@ -102,3 +108,13 @@ Assembly<br/></th></tr></thead>
 ASP.NET<br/></td><td>
 Syncfusion.OfficeChartToImageConverter.WPF<br/>Syncfusion.SfChart.WPF<br/></td></tr>
 </table>
+
+## See also
+
+* [NuGet packages required for Word to PDF conversion](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf)
+* [Word to PDF conversion overview](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf)
+* [Word to PDF settings](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings)
+* [Fallback fonts for Word to PDF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/fallback-fonts-word-to-pdf)
+* [Licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview)
+* [Syncfusion Reference Manager add-in](https://help.syncfusion.com/extension/syncfusion-reference-manager/overview)
+* [ASP.NET Core DocIO troubleshooting guide](https://support.syncfusion.com/kb/article/16012/troubleshoot-guide-for-aspnet-core-word-docio-library-issues#things-to-check-while-facing-an-issue-in-word-library)
