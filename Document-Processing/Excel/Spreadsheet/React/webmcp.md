@@ -63,7 +63,7 @@ const spreadsheet = new Spreadsheet({
 });
 ```
 
-### Register Tools on the MCP Client
+### Register Tools on the Application
 
 Once WebMCP is enabled, retrieve the available tools and register them with the MCP client (typically the `document.modelContext` global object):
 
@@ -224,61 +224,6 @@ WebMCP exposes the following tools that any MCP client can discover and invoke:
 | **hyperlink** | Insert hyperlinks into cells. |
 | **cut** / **copy** / **paste** | Perform clipboard operations. |
 
-## Tool Command Architecture
-
-### Command Structure
-
-Each WebMCP tool execution follows this structure:
-
-```ts
-interface AssistCommand {
-    action: string;                    // Tool name (e.g., 'editCell', 'formatCells')
-    args: AssistCommandArgs;           // Arguments specific to the action
-}
-
-interface AssistCommandArgs {
-    range?: string;                    // Target range (e.g., 'A1:C10')
-    address?: string;                  // Single cell address (e.g., 'A1')
-    value?: string | number | boolean; // Value to set or search for
-    [key: string]: any;                // Additional action-specific arguments
-}
-```
-
-### Command Execution Result
-
-Each tool returns a `CommandResult` object:
-
-```ts
-interface CommandResult {
-    action: string;          // The action executed
-    success: boolean;        // Whether execution succeeded
-    message: string;         // Human-readable result message
-    data?: {
-        ranges?: string[];   // Affected cell ranges
-        [key: string]: any;  // Additional result data
-    };
-    error?: {
-        code: string;
-        message: string;
-    };
-}
-```
-
-### Example: Executing a Command
-
-When an MCP client calls a WebMCP tool, the Spreadsheet receives the command, processes it, and returns the result:
-
-```
-Client Call: sales_editCell({address: 'A1', value: 'New Value'})
-                    ↓
-Spreadsheet receives and parses the command
-                    ↓
-CommandExecutor executes: Set cell A1 to 'New Value'
-                    ↓
-Action added to undo/redo history
-                    ↓
-Returns: {success: true, message: 'Updated cell A1', data: {ranges: ['A1']}}
-```
 
 ## Best Practices
 
@@ -312,57 +257,12 @@ Use the `beforeWebMcpToolExecute` event to audit, validate, or restrict tool usa
 
 ```ts
 beforeWebMcpToolExecute: (args: WebMcpToolExecuteEventArgs): void => {
-    console.log(`[${new Date().toISOString()}] Tool executed: ${args.toolName}`);
-    
-    // Log all operations for audit trails
-    auditLog.push({
-        timestamp: Date.now(),
-        toolName: args.toolName,
-        args: args.toolArgs
-    });
-}
-```
-
-### 4. **Leverage Undo/Redo**
-
-All WebMCP operations integrate with the native undo/redo history. Instruct users and AI agents that they can safely experiment — changes can always be reverted:
-
-```ts
-// Undo: Ctrl+Z / Cmd+Z
-// Redo: Ctrl+Y / Cmd+Y
-// Users can undo/redo any MCP-executed action just like manual edits
-```
-
-### 5. **Handle Async Operations**
-
-Some tools (copy, cut, paste) are asynchronous. Always `await` tool execution results:
-
-```ts
-async function executeToolAsync() {
-    const result = await spreadsheet.executeWebMcpTool('sales_copy', { range: 'A1:C10' });
-    console.log(result);  // Process result after operation completes
-}
-```
-
-### 6. **Validate Input Data**
-
-MCP clients may pass unexpected or invalid arguments. Implement validation in your event handlers:
-
-```ts
-beforeWebMcpToolExecute: (args: WebMcpToolExecuteEventArgs): void => {
-    if (args.toolName.includes('edit') && !args.toolArgs.value) {
-        console.error('Edit command requires a value');
+    if (args.toolName.includes('edit')) {
+        console.log('Edit command is not allowed');
         args.cancel = true;
     }
 }
 ```
-
-## Limitations & Constraints
-
-* **Single Sheet Scope**: WebMCP tools operate on the currently active sheet only. Multi-sheet operations require separate tool calls.
-* **Synchronous Communication**: Most tools execute synchronously; plan accordingly for performance-critical operations.
-* **Data Size**: Large range operations (e.g., formatting 100,000 rows) may impact performance.
-* **Formula Complexity**: Complex nested formulas may take longer to evaluate.
 
 ## Troubleshooting
 
@@ -465,24 +365,7 @@ const spreadsheet = new Spreadsheet({
 
 This section demonstrates how AI agents use WebMCP tools to handle practical spreadsheet tasks through natural language prompts.
 
-### Example 1: Simple Data Retrieval
-
-**User Prompt:** "What is the cell value of A1?"
-
-**AI Tool Execution Flow:**
-```
-AI calls: getCellData({address: "A1"})
-         ↓
-Tool returns: {sheetName: "Price Details", address: "A1", value: "Item Name"}
-         ↓
-AI responds: "The value of cell A1 is Item Name"
-```
-
-**Key Insight:** The tool returns not just the value, but metadata including the sheet name, making it easy for AI to track context.
-
----
-
-### Example 2: Search and Retrieve
+### Example 1: Search and Retrieve
 
 **User Prompt:** "What is the price of formal shoes?"
 
@@ -505,9 +388,7 @@ AI responds: "The price of formal shoes is 15"
 
 **Key Insight:** Complex tasks require multiple tool calls. The AI chains tools together — find → identify structure → retrieve data.
 
----
-
-### Example 3: Data Analysis with Conditional Formatting
+### Example 2: Data Analysis with Conditional Formatting
 
 **User Prompt:** "Highlight the profit values greater than 30"
 
@@ -535,9 +416,7 @@ AI responds: "Profit values > 30 in H2:H11 are now highlighted"
 
 **Key Insight:** Data analysis tasks often require sheet introspection first, then applying formatting based on discovered data ranges.
 
----
-
-### Example 4: Formula Evaluation
+### Example 3: Formula Evaluation
 
 **User Prompt:** "What is the result of =SUM(H2:H11)?"
 
@@ -552,9 +431,7 @@ AI responds: "The result is 554"
 
 **Key Insight:** Formula evaluation is one of the fastest operations — direct calculation without iterating cells.
 
----
-
-### Example 5: Data Modification
+### Example 4: Data Modification
 
 **User Prompt:** "Change the quantity of Sneakers from 40 to 45"
 
@@ -579,9 +456,7 @@ AI responds: "Updated quantity of Sneakers in D7 from 40 to 45"
 
 **Key Insight:** Even simple edits require context discovery. AI must locate the item and identify the correct column before editing.
 
----
-
-### Example 6: Formatting Operations
+### Example 5: Formatting Operations
 
 **User Prompt:** "Apply bold and blue background to the header row"
 
@@ -602,9 +477,7 @@ AI responds: "Header row (A1:H1) is now bold with blue background"
 
 **Key Insight:** Multiple formatting attributes can be applied in a single tool call for efficiency.
 
----
-
-### Example 7: Number Format Application
+### Example 6: Number Format Application
 
 **User Prompt:** "Apply currency format to the Price and Amount columns"
 
@@ -635,23 +508,14 @@ AI responds: "Applied currency format to Price (E2:E11) and Amount (F2:F11)"
 
 **Key Insight:** AI discovers target columns first, then applies formatting to the relevant data rows only.
 
----
+## Limitations
 
-## Comparison: WebMCP vs. AI Assist
-
-| Feature | WebMCP | AI Assist |
-|---------|--------|-----------|
-| **Target Audience** | AI agents, external tools, enterprise systems | End-users with natural language requests |
-| **Interface** | Programmatic (MCP protocol) | UI panel with chat interface |
-| **Tool Discovery** | Automatic (MCP schema) | Predefined natural language intents |
-| **Backend Dependency** | Optional (client-side execution) | Required (AI server for NLU) |
-| **Use Case** | System-to-system, automation, workflows | Interactive, conversational analytics |
-| **Undo/Redo** | Fully supported | Fully supported |
+* **Single Sheet Scope**: WebMCP tools operate on the currently active sheet only.
+* **Synchronous Communication**: Most tools execute synchronously; plan accordingly for performance-critical operations.
+* **Data Size**: Large range operations (e.g., formatting 100,000 rows) may impact performance.
 
 ## See Also
 
 * [AI Assist in React Spreadsheet](../ai-assist/overview)
-* [Data Binding](../data-binding)
 * [Open Excel Files](../open-excel-files)
 * [Save Excel Files](../save-excel-files)
-* [MCP Protocol Specification](https://modelcontextprotocol.io/)
