@@ -7,7 +7,7 @@ control: Selection
 documentation: ug
 ---
 
-# Selection in EJ2 Javascript Spreadsheet control
+# Selection in EJ2 JavaScript Spreadsheet control
 
 Selection provides interactive support to highlight the cell, row, or column that you select. Selection can be done through mouse, touch, or keyboard interaction. To enable selection, set `mode` as `Single` or `Multiple` in [`selectionSettings`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#selectionsettings). If you set `mode` to `None`, it disables the UI selection.
 

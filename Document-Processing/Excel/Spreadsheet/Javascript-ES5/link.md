@@ -24,7 +24,7 @@ In the active spreadsheet, click the cell where you want to create a hyperlink. 
 * Select the INSERT tab in the Ribbon toolbar and choose the `Link` item.
 * Right-click the cell and select **Hyperlink** in the context menu.
 * Use `Ctrl + K` keyboard shortcut to apply the hyperlink.
-* Use the [`addHyperlink`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#addhyperlink) method programmatically.
+* Use the [`addHyperlink`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#addhyperlink) method programmatically.
  
 ## Edit Hyperlink
 
