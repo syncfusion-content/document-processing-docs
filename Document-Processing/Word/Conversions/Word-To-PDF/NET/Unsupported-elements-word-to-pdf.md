@@ -8,7 +8,7 @@ documentation: UG
 
 # Limitations in Word to PDF Conversion
 
-The following tables shows the limitations of Word to PDF conversion.
+The following table shows the limitations of Word to PDF conversion.
 
 <table>
 <thead> 
@@ -30,7 +30,7 @@ Only DOCX and WordML format documents are supported.
 Chart
 </td>
 <td>
-    Only DOCX and WordML format documents are supported from .NET Framework 4.0 onwards.
+    Only DOCX and WordML format documents are supported on .NET Framework 4.0 and later, as well as on .NET, ASP.NET Core, Blazor, WinUI, .NET MAUI, and Xamarin.
     <br/><br/>
     The following chart types are not supported on all platforms:
     <ul>
@@ -62,7 +62,7 @@ Only DOCX and WordML format documents are supported.
 </tr>
 <tr>
 <td>
-Custom Shapes 
+Custom Shapes
 </td>
 <td>
 Only DrawingML custom shapes in DOCX and WordML format documents are supported.
@@ -73,7 +73,7 @@ Only DrawingML custom shapes in DOCX and WordML format documents are supported.
 Equation
 </td>
 <td>
-Mathematical equations extending to multiple lines will be rendered in a single line and content exceeding the right margin will clip in the PDF.
+Mathematical equations extending to multiple lines will be rendered in a single line and content exceeding the right margin will be clipped in the PDF.
 </td>
 </tr>
 <tr>
@@ -81,7 +81,7 @@ Mathematical equations extending to multiple lines will be rendered in a single 
 SmartArt
 </td>
 <td>
-Supported only in DOCX format document to PDF. Additional behavior explained {{ '[here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/unsupported-elements-word-to-pdf#smartart)' | markdownify }}.
+Supported only in DOCX format document to PDF. Additional behavior is explained in the [SmartArt](#smartart) section below.
 </td>
 </tr>
 <tr>
@@ -94,10 +94,18 @@ Not supported
 </tr>
 <tr>
 <td>
+Drawing Canvas
+</td>
+<td>
+Not supported programmatically. See the [Drawing Canvas](#drawing-canvas) section below for details.
+</td>
+</tr>
+<tr>
+<td>
 Watermark
 </td>
 <td>
-First watermark of the Word document should be applied to the entire converted PDF document when the Word document have multiple watermarks.
+The first watermark of the Word document is applied to the entire converted PDF document when the Word document has multiple watermarks.
 </td>
 </tr>
 <tr>
@@ -105,12 +113,12 @@ First watermark of the Word document should be applied to the entire converted P
 Multi-Column Texts
 </td>
 <td>
-Multi-Column text positions are calculated dynamically when layout the text. So, there may be some content position differences occur in the PDF document.
+Multi-Column text positions are calculated dynamically when laying out the text. As a result, there may be some content position differences in the PDF document.
 </td>
 </tr>
 <tr>
 <td>
-Footnote and endnote
+Footnote and Endnote
 </td>
 <td>
 Number formats in Roman, Alphabets, and Arabic only supported.
@@ -118,7 +126,7 @@ Number formats in Roman, Alphabets, and Arabic only supported.
 </tr>
 <tr>
 <td>
-Textbox
+TextBox
 </td>
 <td>
 Linked text boxes are not supported.
@@ -126,10 +134,10 @@ Linked text boxes are not supported.
 </tr>
 <tr>
 <td>
-Ink elements
+Ink Elements
 </td>
 <td>
-Supported only in DOCX format document to PDF. Additional behavior explained {{ '[here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/unsupported-elements-word-to-pdf#ink)' | markdownify }}.
+Supported only in DOCX format document to PDF. Additional behavior is explained in the [Ink](#ink) section below.
 </td>
 </tr>
 </table>
@@ -154,7 +162,7 @@ Only DOCX and WordML format documents are supported.
 Pagination
 </td>
 <td>
-The Essential<sup>&reg;</sup> DocIO makes sensible decision when layout the text, and its supported elements while generating the PDF documents. But however, there may not be guaranteed pagination with all the documents.
+DocIO makes sensible decisions when laying out the text and its supported elements while generating the PDF documents. However, pagination is not guaranteed for all documents.
 </td>
 </tr>
 <tr>
@@ -178,7 +186,7 @@ Not supported
 Borders
 </td>
 <td>
-Using of patterns and 3D borders are not retained in the output PDF document.
+Pattern fills and 3D borders are not retained in the output PDF document.
 </td>
 </tr>
 <tr>
@@ -239,7 +247,7 @@ Some elements have additional limitations or require manual steps to ensure accu
 
 SmartArt typically contains graphic properties, including bounds information for SmartArt and its nodes. When creating or modifying SmartArt using the Syncfusion Word Library, these graphic properties (e.g., bounds information) are not generated. Due to this limitation, SmartArt created or modified using the Syncfusion Word Library may not be accurately preserved during Word-to-PDF and image conversions.
 
-**To resolve this**, first save the document using DocIO before converting it to a PDF or image. Then, open the saved document in Microsoft Word, save it again, and finally convert it to a PDF or image using DocIO. This regenerates the required SmartArt properties, ensuring accurate output.
+**To resolve this**, save the document using DocIO first, then open the saved document in Microsoft Word and save it again. Finally, convert it to a PDF or image using DocIO. This regenerates the required SmartArt properties, ensuring accurate output.
 
 ### Drawing Canvas
 
@@ -249,13 +257,15 @@ Creating, editing, or cloning Drawing Canvas elements programmatically is not su
 
 During Word-to-PDF and Word-to-Image conversions, Syncfusion Word Library uses fallback images embedded in the document to preserve the Ink visual appearance. However, when Ink is created or modified using the Syncfusion Word Library, some Ink effects cannot be rendered accurately due to rendering engine limitations. Although the Ink stroke geometry is preserved, visual brush effects are lost.
 
-**To resolve this**, save the created or modified document using DocIO first in DOCX format. Then, open the saved document in Microsoft Word and save it again. Finally, convert it to PDF or Image using DocIO. This process regenerates the required Ink fallback images, ensuring accurate visual output.
+**To resolve this**, save the created or modified document using DocIO first in DOCX format, then open the saved document in Microsoft Word and save it again. Finally, convert it to PDF or Image using DocIO. This process regenerates the required Ink fallback images, ensuring accurate visual output.
 
 ## Show Warning for Unsupported Elements
 
-When converting a Word document to a PDF, the presence of unsupported elements in the input Word document can lead to preservation issues in the converted PDF. The .NET Word library (DocIO) contains [Warning](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocToPDFConverter.DocToPDFConverterSettings.html#Syncfusion_DocToPDFConverter_DocToPDFConverterSettings_Warning) API, which helps to detect and handle these unsupported elements during the conversion process. This API holds the information of unsupported elements once found in the input Word document. 
+> **Prerequisites:** Refer to the [NuGet packages required for Word to PDF conversion](nuget-packages-required-word-to-pdf) and ensure the required assemblies are referenced in your project.
 
-Users can display warning messages for the unsupported elements using the [WarningType](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WarningInfo.html#Syncfusion_DocIO_DLS_WarningInfo_WarningType) during Word to PDF conversion. Users can set a flag to stop the conversion process based on the warning. 
+When converting a Word document to a PDF, the presence of unsupported elements in the input Word document can lead to preservation issues in the converted PDF. The .NET Word library (DocIO) provides the [Warning](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocToPDFConverter.DocToPDFConverterSettings.html#Syncfusion_DocToPDFConverter_DocToPDFConverterSettings_Warning) API (and the equivalent [DocIORenderer.Settings.Warning](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIORenderer.DocIORendererSettings.html#Syncfusion_DocIORenderer_DocIORendererSettings_Warning) for cross-platform scenarios), which helps to detect and handle these unsupported elements during the conversion process. This API holds the information of unsupported elements found in the input Word document.
+
+Users can display warning messages for the unsupported elements using the [WarningType](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WarningInfo.html#Syncfusion_DocIO_DLS_WarningInfo_WarningType) enumeration during Word to PDF conversion. Users can also set a flag to stop the conversion process when a warning is encountered.
 
 The following code demonstrates how to stop conversion if the input Word document has an unsupported element like SmartArt during Word to PDF conversion.
 
@@ -275,7 +285,7 @@ using (FileStream fileStream = new FileStream("Input.docx", FileMode.Open))
             //Converts Word document into a PDF document.
             using (PdfDocument pdfDocument = renderer.ConvertToPDF(wordDocument))
             {
-                //If the IsCanceled boolean is enabled, the input document will contain an unsupported element.
+                //If the IsCanceled property is true, the input document contained an unsupported element.
                 if (renderer.IsCanceled)
                 {
                     Console.WriteLine("The execution stopped due to unsupported element.");
@@ -299,8 +309,8 @@ using (FileStream fileStream = new FileStream("Input.docx", FileMode.Open))
 WordDocument wordDocument = new WordDocument("Input.docx");
 DocToPDFConverter converter = new DocToPDFConverter();
 converter.Settings.Warning = new DocumentWarning();
-PdfDocument pdfDocument = converter.ConvertToPDF(document);
-//If the IsCanceled boolean is enabled, the input document will contain an unsupported element.
+PdfDocument pdfDocument = converter.ConvertToPDF(wordDocument);
+//If the IsCanceled property is true, the input document contained an unsupported element.
 if (converter.IsCanceled)
 {
     Console.WriteLine("The execution stopped due to unsupported element.");
@@ -320,9 +330,9 @@ else
 Dim wordDocument As New WordDocument("Input.docx")
 Dim converter As New DocToPDFConverter()
 converter.Settings.Warning = New DocumentWarning()
-Dim pdfDocument As PdfDocument = converter.ConvertToPDF(document)
+Dim pdfDocument As PdfDocument = converter.ConvertToPDF(wordDocument)
 
-' If the IsCanceled boolean is enabled, the input document will contain an unsupported element.
+' If the IsCanceled property is true, the input document contained an unsupported element.
 If converter.IsCanceled Then
     Console.WriteLine("The execution stopped due to unsupported element.")
     Console.ReadKey()
@@ -337,11 +347,14 @@ End If
 
 {% endtabs %}
 
-The following code demonstrates how to initialize the [Warning](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocToPDFConverter.DocToPDFConverterSettings.html#Syncfusion_DocToPDFConverter_DocToPDFConverterSettings_Warning) API and display warning messages for all unsupported elements in the input document. Additionally, this code shows how to set a flag to stop Word to PDF conversion if an unsupported element is identified.
+The following code demonstrates how to implement the [IWarning](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.IWarning.html) interface and display warning messages for all unsupported elements in the input document. Additionally, this code shows how to set a flag to stop Word to PDF conversion if an unsupported element is identified. The same `DocumentWarning` class is used by both the cross-platform (`DocIORenderer`) and Windows-specific (`DocToPDFConverter`) workflows.
+
+The supported [WarningType](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WarningInfo.html#Syncfusion_DocIO_DLS_WarningInfo_WarningType) values include (but are not limited to): `SmartArt`, `Ink`, `Chart`, `Shape`, `TextBox`, `Watermark`, and `Equation`. Refer to the API reference for the complete list.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
+//The same class is used for the Windows-specific workflow.
 public class DocumentWarning : IWarning
 {
     public bool ShowWarnings(List<WarningInfo> warningInfo)

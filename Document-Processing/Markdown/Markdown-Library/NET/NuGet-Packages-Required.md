@@ -6,11 +6,11 @@ control: Markdown
 documentation: UG
 ---
 
-# NuGet Packages Required for Markdown Library
+# NuGet Packages Required for .NET Markdown Library
 
 ## Installing Syncfusion<sup>&reg;</sup> Markdown through NuGet Packages
 
-NuGet is the one of the easiest way to download and install Markdown library to create, read, and edit the Markdown documents. The following NuGet packages need to be installed in your application.
+NuGet is one of the easiest ways to download and install the Markdown library to create, read, and edit Markdown documents. The following NuGet package needs to be installed in your application.
 
 <table>
 <thead>
@@ -44,7 +44,7 @@ N> 2. Starting with v34.x.x, if you reference Syncfusion® assemblies from trial
 
 ## NuGet Package Installation and Uninstallation
 
-To use Syncfusion<sup>&reg;</sup> NuGet packages in your project, please refer the NuGet Package [Installation](https://help.syncfusion.com/extension/syncfusion-nuget-packages/nuget-packages) and [Uninstallation](https://help.syncfusion.com/extension/syncfusion-nuget-packages/nuget-uninstallation-process#) sections.
+To use Syncfusion<sup>&reg;</sup> NuGet packages in your project, refer to the NuGet package [Installation](https://help.syncfusion.com/extension/syncfusion-nuget-packages/nuget-packages) and [Uninstallation](https://help.syncfusion.com/extension/syncfusion-nuget-packages/nuget-uninstallation-process#) sections.
 
 Markdown NuGet packages can be installed and uninstalled using Package Manager Console. 
 

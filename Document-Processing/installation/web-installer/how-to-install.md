@@ -1,32 +1,32 @@
 ---
 layout: post
-title: Installing Syncfusion Document Processing web installer - Syncfusion
-description: Learn here about how to install the Syncfusion Document Processing web installer after downloading it from our Syncfusion website.
+title: Installing Syncfusion Document SDK web installer - Syncfusion
+description: Learn here about how to install the Syncfusion Document SDK web installer after downloading it from our Syncfusion website.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 ---
 
-# Installing Syncfusion<sup>&reg;</sup> Document Processing Web Installer
+# Installing Syncfusion<sup>&reg;</sup> Document SDK Web Installer
 
 
 ## Overview
 
-For the Essential Studio<sup>&reg;</sup> Document Processing product, Syncfusion<sup>&reg;</sup> offers a Web Installer. This installer alleviates the burden of downloading a larger installer. You can simply download and run the online installer, which will be smaller in size and will download and install the Essential Studio<sup>&reg;</sup> products you have chosen. You can get the most recent version of Essential Studio<sup>&reg;</sup> Web Installer [here](https://www.syncfusion.com/downloads/latest-version). 
+For the Essential Studio<sup>&reg;</sup> Document SDK product, Syncfusion<sup>&reg;</sup> offers a Web Installer. This installer alleviates the burden of downloading a larger installer. You can simply download and run the online installer, which will be smaller in size and will download and install the Essential Studio<sup>&reg;</sup> products you have chosen. You can get the most recent version of Essential Studio<sup>&reg;</sup> Web Installer [here](https://www.syncfusion.com/downloads/latest-version). 
 
  
 ## Installation
 
-The steps below show how to install Essential Studio<sup>&reg;</sup> Document Processing Web Installer.
+The steps below show how to install Essential Studio<sup>&reg;</sup> Document SDK Web Installer.
 
-1. Open the Syncfusion<sup>&reg;</sup> Essential Studio Document Processing Web Installer file from the downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
+1. Open the Syncfusion<sup>&reg;</sup> Essential Studio Document SDK Web Installer file from the downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 
    ![Installer Extraction Wizard](images/Step-by-Step-Installation_img1.png)
 
     
-    N> The installer wizard extracts the `syncfusionessentialfileformatswebinstaller_{version}.exe` dialog, which displays the package's unzip operation.
+    N> The installer wizard extracts the `syncfusionessential(platform)webinstaller_{version}.exe` dialog, which displays the package's unzip operation.
 
-2. The Syncfusion<sup>&reg;</sup> Document Processing Web Installer's welcome wizard will be displayed. Click the **Next** button.
+2. The Syncfusion<sup>&reg;</sup> Document SDK Web Installer's welcome wizard will be displayed. Click the **Next** button.
 
     ![Welcome wizard](images/Step-by-Step-Installation_img2.png)
 
@@ -109,31 +109,31 @@ The steps below show how to install Essential Studio<sup>&reg;</sup> Document Pr
 	
 ## Uninstallation
 
-The Syncfusion<sup>&reg;</sup> Document Processing installer can be uninstalled in two ways:
+The Syncfusion<sup>&reg;</sup> Document SDK installer can be uninstalled in two ways:
 
-* Uninstall the Document Processing using the Syncfusion<sup>&reg;</sup> Document Processing web installer.
-* Uninstall the Document Processing from the Windows Control Panel.
+* Uninstall the Document SDK using the Syncfusion<sup>&reg;</sup> Document SDK web installer.
+* Uninstall the Document SDK from the Windows Control Panel.
 
-Follow one of the options below to uninstall the Syncfusion<sup>&reg;</sup> Essential Studio Document Processing installer.
+Follow one of the options below to uninstall the Syncfusion<sup>&reg;</sup> Essential Studio Document SDK installer.
   
-**Option 1: Uninstall the Document Processing using the Syncfusion<sup>&reg;</sup> Document Processing web installer**
+**Option 1: Uninstall the Document SDK using the Syncfusion<sup>&reg;</sup> Document SDK web installer**
 
 Syncfusion<sup>&reg;</sup> provides the option to uninstall products of the same version directly from the Web Installer application. Select the products to be uninstalled from the list, and the Web Installer will uninstall them one by one.
 
 ![Platform Selection wizard Installed](images/Step-by-Step-Installation_img4.png)
 	
 	
-**Option 2: Uninstall the Document Processing from Windows Control Panel**
+**Option 2: Uninstall the Document SDK from Windows Control Panel**
 
-You can uninstall all the installed products by selecting the **Syncfusion<sup>&reg;</sup> Essential Studio {version}** entry (element 1 in the screenshot below) from the Windows Control Panel, or you can uninstall Document Processing alone by selecting the **Syncfusion<sup>&reg;</sup> Essential Studio for Document Processing {version}** entry (element 2 in the screenshot below) from the Windows Control Panel.
+You can uninstall all the installed products by selecting the **Syncfusion<sup>&reg;</sup> Essential Studio {version}** entry (element 1 in the screenshot below) from the Windows Control Panel, or you can uninstall Document SDK alone by selecting the **Syncfusion<sup>&reg;</sup> Essential Studio for Document SDK {version}** entry (element 2 in the screenshot below) from the Windows Control Panel.
 
 ![Control Panel](images/Step-by-Step-Installation_img22.png)
 
-N> If the **Syncfusion<sup>&reg;</sup> Essential Studio for Document Processing {version}** entry is selected from the Windows Control Panel, the Syncfusion<sup>&reg;</sup> Essential Studio Document Processing alone will be removed and the default MSI uninstallation window will be displayed.
+N> If the **Syncfusion<sup>&reg;</sup> Essential Studio for Document SDK {version}** entry is selected from the Windows Control Panel, the Syncfusion<sup>&reg;</sup> Essential Studio Document SDK alone will be removed and the default MSI uninstallation window will be displayed.
 
-### Uninstallation using the Syncfusion<sup>&reg;</sup> Document Processing web installer
+### Uninstallation using the Syncfusion<sup>&reg;</sup> Document SDK web installer
 
-1. The Syncfusion<sup>&reg;</sup> Document Processing Web Installer's welcome wizard will be displayed. Click the **Next** button.
+1. The Syncfusion<sup>&reg;</sup> Document SDK Web Installer's welcome wizard will be displayed. Click the **Next** button.
 
    ![Welcome wizard uninstall](images/Step-by-Step-Installation_img2.png)
 	

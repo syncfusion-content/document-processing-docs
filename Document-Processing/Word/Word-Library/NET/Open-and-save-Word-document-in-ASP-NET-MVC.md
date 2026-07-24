@@ -10,7 +10,7 @@ documentation: UG
 
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to **create, read, and edit Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **open and save a Word document in ASP.NET MVC**.
 
-## Steps to open and save Word document programmatically:
+## Steps to open and save Word document programmatically
 
 Step 1: Create a new ASP.NET Web application project.
 
@@ -24,7 +24,7 @@ Step 3: Install the [Syncfusion.DocIO.AspNet.Mvc5](https://www.nuget.org/package
 
 ![Install Syncfusion.DocIO.AspNet.Mvc5 NuGet package](ASP-NET-MVC_images/Install_Nuget.jpg)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/document-processing/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 4: Include the following namespace in that HomeController.cs file.
 
@@ -60,7 +60,7 @@ Html.EndForm();
 
 Step 7: Add a new action method **OpenAndSaveDocument** in HomeController.cs.
 
-Step 8: Add below code example to **open an existing Word document in ASP.NET MVC**.
+Step 8: Add below code example to **open an existing Word document in ASP.NET MVC**. Place the **Input.docx** file in the project's root or `App_Data` folder before running.
 
 {% tabs %}
 
@@ -95,6 +95,8 @@ Step 10: Add below code example to **save the Word document in ASP.NET MVC**.
 {% highlight c# tabtitle="C#" %}
 //Save the Word document and download as attachment.
 document.Save("Sample.docx", FormatType.Docx, HttpContext.ApplicationInstance.Response, HttpContentDisposition.Attachment);
+//Closes the Word document.
+document.Close();
 {% endhighlight %}
 
 {% endtabs %}
@@ -103,6 +105,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 By executing the program, you will get the **Word document** as follows.
 
-![ASP.Net MVC open and save Word document](ASP-NET-MVC_images/OpenAndSaveOutput.png)
+![ASP.NET MVC open and save Word document](ASP-NET-MVC_images/OpenAndSaveOutput.png)
 
 Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.
