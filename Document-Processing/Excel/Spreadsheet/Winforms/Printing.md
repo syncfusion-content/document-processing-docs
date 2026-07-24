@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Printing in Windows Forms Spreadsheet control | Syncfusion®
+title: Printing in Windows Forms Spreadsheet | Syncfusion®
 description: Learn about Printing support in Syncfusion® Windows Forms Spreadsheet control, its elements and more details.
 platform: document-processing
 control: Spreadsheet
@@ -9,11 +9,11 @@ documentation: ug
 
 # Printing in Windows Forms Spreadsheet
 
-Spreadsheet control allows you to print the data in the workbook with the help of PDF Conversion. To provide the printing support in Spreadsheet, you need to convert the workbook into PDF document using ExcelToPdfConverter.
+The Spreadsheet control allows you to print the data in the workbook via PDF Conversion. To enable printing in the Spreadsheet, convert the workbook into a PDF document using `ExcelToPdfConverter`.
 
-For Conversion of Excel Workbook in Spreadsheet to PDF document, use `Convert` method of `ExcelToPdfConverter`.
+To convert a workbook in the Spreadsheet to a PDF document, use the `Convert` method of `ExcelToPdfConverter`.
 
-For viewing the PDF document, you can use `PdfViewerControl` to load the saved PDF stream.
+To view the PDF document, you can use `PdfViewerControl` to load the saved PDF stream.
 
 {% tabs %}
 {% highlight c# %}
@@ -21,12 +21,12 @@ For viewing the PDF document, you can use `PdfViewerControl` to load the saved P
 //Create the pdf viewer for load the document.
 PdfViewerControl pdfViewer = new PdfViewerControl();
 
-//Create Memory Stream to save pdf document
+//Create a MemoryStream to save the PDF document
 MemoryStream pdfStream = new MemoryStream();
-ExcelToPdfConverter converter = new ExcelToPdfConverter (spreadsheet.Workbook);  
+ExcelToPdfConverter converter = new ExcelToPdfConverter(spreadsheet.Workbook);
 
-//Initialize the ExcelToPdfConverter Settings
-ExcelToPdfConverterSettings settings = new ExcelToPdfConverterSettings(); 
+//Initialize the ExcelToPdfConverter settings
+ExcelToPdfConverterSettings settings = new ExcelToPdfConverterSettings();
 settings.LayoutOptions = LayoutOptions.NoScaling;
 
 {% endhighlight %}
@@ -38,22 +38,22 @@ For print preview you can load the PDF stream into viewer and for direct printin
 {% highlight c# %}
 
 //Initialize the PdfDocument
-PdfDocument pdfDoc = new PdfDocument ();
+PdfDocument pdfDoc = new PdfDocument();
 
-//Assign the PdfDocument to the templateDocument property of ExcelToPdfConverterSettings  
+//Assign the PdfDocument to the TemplateDocument property of ExcelToPdfConverterSettings
 settings.TemplateDocument = pdfDoc;
 settings.DisplayGridLines = GridLinesDisplayStyle.Invisible;
 
-//Convert Excel Document into PDF document
+//Convert the workbook into a PDF document
 pdfDoc = converter.Convert(settings);
 
-//Save the PDF file     
+//Save the PDF file
 pdfDoc.Save(pdfStream);
 
-//Load the document to pdf viewer
+//Load the document into the PDF viewer
 pdfViewer.Load(pdfStream);
 
-//Print the doc
+//Print the document
 pdfViewer.Print(true);
 
 {% endhighlight %}

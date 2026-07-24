@@ -159,6 +159,6 @@ export default function App() {
 
 - [Overview of Redaction](./overview)
 - [Programmatic Support in Redaction](./programmatic-support)
-- [Redaction UI interactions](./ui-interactions)
+- [Redaction UI interactions](./ui-interaction)
 - [Redaction in Mobile View](./mobile-view)
 - [Redaction Toolbar](./toolbar)
