@@ -9,11 +9,11 @@ keywords: wpf save pdf, wpf load pdf, c# save pdf, c# load pdf
 
 # Open and save PDF document in WPF
 
-The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **open and save PDF document in WPF**. 
+The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **open and save a PDF document in WPF**.
 
 ## Steps to open and save PDF document programmatically:
 
-Step 1: Create a new Windows Forms application project.
+Step 1: Create a new WPF application project.
 ![Create WPF application in Visual Studio](Images/Create_WPF_application.png)
 
 Step 2: Install [Syncfusion.Pdf.Wpf](https://www.nuget.org/packages/Syncfusion.Pdf.Wpf/) NuGet package as a reference to your Windows Forms application from the [NuGet.org](https://www.nuget.org/).
@@ -51,7 +51,7 @@ Step 4: Add a new button in the **MainWindow.xaml** to open and save the PDF doc
     </Button.Background>
     <StackPanel Orientation="Horizontal" Height="23" Margin="0,0,0,-2.52" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="200">
         <Image Name="image2" Margin="2" HorizontalAlignment="Center" VerticalAlignment="Center" />
-        <TextBlock Text="Opend and Save PDF documemt" Height="26" Width="261" />
+        <TextBlock Text="Open and Save PDF document" Height="26" Width="261" />
     </StackPanel>
 </Button>
 
@@ -67,21 +67,20 @@ Step 5: Add the following code in the **btnOpenAndSave_Click** to **open an exis
 
 //Open an existing PDF document.
 PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+//Get the first page from the document.
+PdfLoadedPage page = document.Pages[0] as PdfLoadedPage;
+//Create PDF graphics for the page.
+PdfGraphics graphics = page.Graphics;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-Step 6: Add the below code example to add a table in the PDF document.
+Step 6: Add the below code example to add a table to the PDF document.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-
-//Load the page. 
-PdfLoadedPage loadedPage = document.Pages[0] as PdfLoadedPage;
-//Create graphics for the page. 
-PdfGraphics graphics = loadedPage.Graphics;
 
 //Create a PdfGrid.
 PdfGrid pdfGrid = new PdfGrid();
@@ -99,8 +98,8 @@ IEnumerable<object> dataTable = data;
 pdfGrid.DataSource = dataTable;
 //Apply built-in table style.
 pdfGrid.ApplyBuiltinStyle(PdfGridBuiltinStyle.GridTable4Accent3);
-//Draw the grid to the page of PDF document.
-pdfGrid.Draw(graphics, new RectangleF(40, 400, loadedPage.Size.Width - 80, 0));
+//Draw the grid to the page of the PDF document.
+pdfGrid.Draw(graphics, new RectangleF(40, 400, page.Size.Width - 80, 0));
 
 {% endhighlight %}
 

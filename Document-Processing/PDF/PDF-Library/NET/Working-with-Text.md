@@ -7,9 +7,9 @@ documentation: UG
 ---
 # Working with text in the PDF document
 
-Essential<sup>®</sup> PDF supports adding text to a PDF document using the Syncfusion .NET PDF library. You can add text using standard, TrueType, CJK fonts, RTL text, and complex scripts.
+Essential<sup>&reg;</sup> PDF supports adding text to a PDF document using the Syncfusion .NET PDF library. You can add text using standard, TrueType, CJK fonts, OpenType fonts, RTL text, and complex scripts.
 
-To quickly get started with adding text to PDF documents using the Syncfusion<sup>®</sup> PDF library for .NET, refer to this video tutorial:
+To quickly get started with adding text to PDF documents using the Syncfusion<sup>&reg;</sup> PDF library for .NET, refer to this video tutorial:
 {% youtube "https://youtu.be/-LJdP6x1JmM?si=NfMHO8l1pKeY-dV-" %}
 
 ## Drawing text in a new document
@@ -99,6 +99,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 N>  Due to the inherent limitations of the PDF specification and the rendering capabilities of PDF libraries, emojis with skin tone modifiers are not supported in generated PDF documents. Only the base versions of emojis can be displayed. This limitation is common across most PDF libraries, as the PDF format does not explicitly support rendering skin tone variations in emojis.
 
 ## The importance of saving and restoring graphics state in PDF content rendering
+
 Saving and restoring the graphics state in a PDF document is crucial for maintaining the consistency and integrity of the document's layout and appearance. This approach allows you to make temporary changes to the graphics state, such as transformations, clipping paths, or color adjustments, without affecting subsequent content rendering by using the [Save](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_Save) and [Restore](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_Restore) methods of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class.
 
 Please refer to the below code example to understand how to save and restore the graphics state in PDF rendering.
@@ -391,6 +392,7 @@ You can add text using TrueType fonts either installed on the system or provided
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 
@@ -417,6 +419,7 @@ document.Close(true);
 
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
+using System.Drawing;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -439,8 +442,9 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -800,12 +804,12 @@ Dim format As PdfStringFormat = New PdfStringFormat()
 format.MeasureTiltingSpace = True 
 Dim text As String = "Hello World!" 
 'Measure the tilted text 
-Dim size As SizeF = font.MeasureString(text, format) 
+Dim size As SizeF = font.MeasureString(text, format)
 'Draw the text to the PDF document.
 page.Graphics.DrawString(text, font, PdfBrushes.Black, New RectangleF(0, 0, size.Width, size.Height))
-Save the document 
-document.Save("Output.pdf") 
-Close the document 
+'Save the document.
+document.Save("Output.pdf")
+'Close the document.
 document.Close(True) 
 
 {% endhighlight %}
@@ -959,7 +963,7 @@ Module Program
                 .Layout = PdfLayoutType.Paginate
             }
 
-            text within the bounds
+            ' Draw the text within the bounds
             textElement.Draw(page, textBounds, layoutFormat)
 
             ' Save the document
@@ -984,13 +988,8 @@ N> To render a Unicode text in the PDF document the chosen font should have the 
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-//PDF supports embedding fonts or displaying a Unicode text in the PDF document by default in ASP.NET Core platform. 
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
+using System.Text;
+using Syncfusion.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 
@@ -1001,10 +1000,41 @@ PdfPage page = document.Pages.Add();
 
 //Create PDF graphics for the page.
 PdfGraphics graphics = page.Graphics;
-//use the system installed font
+//Load a Unicode font from the local *.ttf file. Embedding is enabled by default in ASP.NET Core.
+FileStream fontStream = new FileStream("Arial Unicode.ttf", FileMode.Open, FileAccess.Read);
+PdfFont font = new PdfTrueTypeFont(fontStream, 14);
+//Read the Unicode text from the text file.
+StreamReader reader = new StreamReader("input.txt", Encoding.Unicode);
+string text = reader.ReadToEnd();
+reader.Close();
+//Draw the text.
+graphics.DrawString(text, font, PdfBrushes.Black, new PointF(0, 0));
+
+//Save the document.
+document.Save("Output.pdf");
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using System.Text;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+//Add a page to the document.
+PdfPage page = document.Pages.Add();
+
+//Create PDF graphics for the page.
+PdfGraphics graphics = page.Graphics;
+//Use the system-installed Unicode font. The second argument embeds the font into the PDF.
 PdfFont font = new PdfTrueTypeFont(new Font("Arial Unicode MS", 14), true);
-//Read the unicode text from the text file.
-StreamReader reader = new StreamReader(@"input.txt", Encoding.Unicode);
+//Read the Unicode text from the text file.
+StreamReader reader = new StreamReader("input.txt", Encoding.Unicode);
 string text = reader.ReadToEnd();
 reader.Close();
 //Draw the text.
@@ -1019,6 +1049,7 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Text
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Graphics
 Imports System.Drawing
@@ -1030,9 +1061,9 @@ Dim page As PdfPage = document.Pages.Add()
 
 'Create PDF graphics for the page.
 Dim graphics As PdfGraphics = page.Graphics
-'use the system installed font
+'Use the system-installed Unicode font. The second argument embeds the font into the PDF.
 Dim font As PdfFont = New PdfTrueTypeFont(New Font("Arial Unicode MS", 14), True)
-'Read the unicode text from the text file.
+'Read the Unicode text from the text file.
 Dim reader As New StreamReader("input.txt", Encoding.Unicode)
 Dim text As String = reader.ReadToEnd()
 reader.Close()
@@ -1195,48 +1226,17 @@ Essential<sup>&reg;</sup> PDF provides support to render simple HTML string in a
 
 Step 1: The PdfHTMLTextElement class provides support for a basic set of HTML tags, to render HTML format text in the PDF document.
 
-   Supported tags (Should be XHTML-compliant)
-<table border="1">
-<th style="font-size:14px" width="100px">Supported tags</th>
-<th style="font-size:14px">Windows-Specific</th>
-<th style="font-size:14px">Cross-Platform</th>
-<tr>
-    <td>Font</td>
-    <td>Yes</td>
-    <td>Yes</td>
-</tr>
-<tr>
-    <td>Bold (B)</td>
-    <td>Yes</td>
-    <td>Yes</td>
-</tr>
-<tr>
-    <td>Italic (I)</td>
-    <td>Yes</td>
-    <td>Yes</td>
-</tr>
-<tr>
-    <td>Underline (U)</td>
-    <td>Yes</td>
-    <td>Yes</td>
-</tr>
-<tr>
-    <td>Subscript (Sub) (U)</td>
-    <td>Yes</td>
-    <td>No</td>
-</tr>
-<tr>
-    <td>Line Break (BR) (U)</td>
-    <td>Yes</td>
-    <td>Yes</td>
-</tr>
-<tr>
-    <td>Paragraph (P)</td>
-    <td>Yes</td>
-    <td>Yes</td>
-</tr>
+Supported tags (must be XHTML-compliant):
 
-</table>
+| Supported tag | Windows-Specific | Cross-Platform |
+|---------------|------------------|----------------|
+| `Font` | Yes | Yes |
+| `Bold` (`B`) | Yes | Yes |
+| `Italic` (`I`) | Yes | Yes |
+| `Underline` (`U`) | Yes | Yes |
+| `Subscript` (`Sub`) | Yes | No |
+| `Line Break` (`BR`) | Yes | Yes |
+| `Paragraph` (`P`) | Yes | Yes |
 
    
 Step 2: The [PdfMetafileLayoutFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfMetafileLayoutFormat.html) class enables to break the HTML text into multiple pages.
@@ -1718,10 +1718,10 @@ pdfList.Font = font;
 pdfList.StringFormat = format;
 foreach (string s in products)
 {
-//Add items
-pdfList.Items.Add(string.Concat("Essential ", s));
+    //Add items
+    pdfList.Items.Add(string.Concat("Essential ", s));
 }
-pdfList.Draw(page, new RectangleF(0, 20, size.Width, size.Height));  
+pdfList.Draw(page, new RectangleF(0, 20, size.Width, size.Height));
 
 // Save and close the document.
 document.Save("Output.pdf");
@@ -1972,13 +1972,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Search and get the bounds of a text in a document
 
-You can search for a particular text in a document and get the bounds using [FindText](https://help.syncfusion.com/cr/document-processing#Syncfusion_Windows_Forms_PdfViewer_PdfViewerControl_FindText_System_String_System_Collections_Generic_Dictionary_System_Int32_System_Collections_Generic_List_System_Drawing_RectangleF____/Syncfusion.DocIO.html) method of [PdfViewerControl](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html) class. To include this functionality, you need to add the below mentioned assemblies as reference to the project.
+You can search for a particular text in a PDF document and retrieve its bounds using the [FindText](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FindText_System_String_System_Collections_Generic_Dictionary_System_Int32_System_Collections_Generic_List_System_Drawing_RectangleF____) method of the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class. The method returns the page index and the list of bounding rectangles for every match.
 
-1. Syncfusion.Compression.Base.dll
-2. Syncfusion.Pdf.Base.dll
-3. Syncfusion.PdfViewer.Windows.dll 
+N> If you are using the [Syncfusion PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/overview) component to display PDFs in a WinForms or WPF application, the `PdfViewerControl.FindText` method provides the same capability. To use it, add `Syncfusion.PdfViewer.Windows.dll`, `Syncfusion.Pdf.Base.dll`, and `Syncfusion.Compression.Base.dll` as references to your project.
 
-The following code snippet illustrates how to get the bound of a text from PDF document.
+The following code snippet illustrates how to get the bounds of a text from a PDF document using the `PdfLoadedDocument.FindText` API.
 
 {% tabs %}
 
@@ -1987,29 +1985,29 @@ The following code snippet illustrates how to get the bound of a text from PDF d
 using System.Drawing;
 using Syncfusion.PdfViewer;
 
+//Load the PDF document.
 PdfViewerControl documentViewer = new PdfViewerControl();
-//Load the PDF document
 documentViewer.Load("Input.pdf");
 
-//Get the occurrences of the target text and location.
+//Get the occurrences of the target text and its location.
 Dictionary<int, List<RectangleF>> textSearch = new Dictionary<int, List<RectangleF>>();
-bool IsMatchFound = documentViewer.FindText("hello", out textSearch);
+bool isMatchFound = documentViewer.FindText("hello", out textSearch);
 documentViewer.Dispose();
 
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+{% highlight vb.net tabtitle="Windows-specific (PdfViewerControl)" %}
 
-Imports System.Drawing;
-Imports Syncfusion.PdfViewer;
+Imports System.Drawing
+Imports Syncfusion.PdfViewer
 
+'Load the PDF document.
 Dim documentViewer As New PdfViewerControl()
-'Load the PDF document
 documentViewer.Load("Input.pdf")
 
-'Get the occurrences of the target text and location.
+'Get the occurrences of the target text and its location.
 Dim textSearch As New Dictionary(Of Integer, List(Of RectangleF))()
-Dim IsMatchFound As Boolean = documentViewer.FindText("hello", textSearch)
+Dim isMatchFound As Boolean = documentViewer.FindText("hello", textSearch)
 documentViewer.Dispose()
 
 {% endhighlight %}
@@ -2694,7 +2692,9 @@ if (result.Remainder != null)
     // Output the clipped text to the console for debugging or review
     Console.WriteLine("Remainder Text: " + remainderText);
 }
-// Close the document and release resources
+//Save the document.
+document.Save("Output.pdf");
+//Close the document and release resources
 document.Close(true);
 
 {% endhighlight %}
@@ -2740,7 +2740,9 @@ if (result.Remainder != null)
     // Output the clipped text to the console for debugging or review
     Console.WriteLine("Remainder Text: " + remainderText);
 }
-// Close the document and release resources
+//Save the document.
+document.Save("Output.pdf");
+//Close the document and release resources
 document.Close(true);
 
 {% endhighlight %}
@@ -2785,7 +2787,9 @@ If result.Remainder IsNot Nothing Then
     ' Output the clipped text to the console for debugging or review
     Console.WriteLine("Remainder Text: " & remainderText)
 End If
-' Close the document and release resources
+'Save the document.
+document.Save("Output.pdf")
+'Close the document and release resources
 document.Close(True)
 
 {% endhighlight %}
@@ -2796,7 +2800,7 @@ A complete working sample is available for download on [GitHub](https://github.c
 
 ## Customizing TrueType fonts in a PDF document
 
-The Syncfusion<sup>&reg;</sup> PDF library provides extensive options for customizing TrueType font settings in PDF documents through the `PdfFontSettings` class. Users can modify font size, style, and choose to embed or subset fonts. Additionally, measurement settings can be adjusted using a floating factor for precise control over font rendering.
+The Syncfusion<sup>&reg;</sup> PDF library provides extensive options for customizing TrueType font settings in PDF documents through the [PdfFontSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfFontSettings.html) class. Users can modify font size, style, and choose to embed or subset fonts. Additionally, measurement settings can be adjusted using a floating factor for precise control over font rendering.
 
 The following code example illustrates this.
 
@@ -2883,11 +2887,15 @@ document.Close(true)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Customizing-truetype-fonts-in-a-PDF/.NET).
 
-## LineLimit, ClipPath, NoClip properties in PdfStringFormat
+## LineLimit, ClipPath, and NoClip properties in PdfStringFormat
 
-**LineLimit:** When LineLimit is enabled, the provided string will be laid out within the specified bounds. If the LineLimit property is disabled, the layout will continue to fill any remaining space. The default value of the LineLimit property is true.
+The [PdfStringFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfStringFormat.html) class exposes three properties that control how text is laid out inside a layout rectangle:
 
-**NoClip:** If we enable the NoClip option, it will show the text without cutting any words. If we disable the NoClip option, any text outside the fitting area will be hidden.
+| Property | Default | Behavior |
+|----------|---------|----------|
+| `LineLimit` | `true` | When enabled, the layout stops at the first line that does not fit. When disabled, the layout uses partial lines to fill the available space. |
+| `NoClip` | `false` | When enabled, the text is rendered outside the layout bounds if necessary. When disabled, text outside the bounds is clipped. |
+| `ClipPath` | `false` | When enabled, the rendered text is used as a clipping path for subsequent drawing operations. |
 
 The following code example illustrates this.
 
@@ -3045,7 +3053,20 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Line-limit-in-PDF/.NET).
 
-## Troubleshooting and FAQ's
+## Troubleshooting
+
+| Issue | Possible cause | Resolution |
+|-------|----------------|------------|
+| Text is not rendered or appears as missing-character boxes for non-ASCII characters. | The standard 14 PDF fonts (Helvetica, Times Roman, Courier, and so on) do not include Unicode glyphs. | Switch to a TrueType font that supports the required Unicode range, or use `PdfCjkStandardFont` for Chinese, Japanese, and Korean. |
+| `PdfTrueTypeFont("Arial", 14)` throws "Font not found" in .NET Core or cross-platform apps. | The cross-platform build does not expose installed system fonts by family name. | Provide the actual `.ttf` file path or a `FileStream`/`Stream` to the `PdfTrueTypeFont` constructor. |
+| The drawn text overlaps the page margin. | The text is positioned at a `PointF` that is inside the page, but the text width exceeds the available width. | Use `PdfStringFormat.Alignment` and `PdfStringFormat.LineAlignment` to align the text within a `RectangleF` layout bounds. |
+| Unicode characters do not render even after switching to a TrueType font. | The font file is installed but is not embedded, so the reader substitutes another font that lacks the glyphs. | Pass `true` as the `embed` parameter of the `PdfTrueTypeFont` constructor (or use the `PdfFontSettings` constructor that accepts an `embed` flag). |
+| `Encoding.GetEncoding("Windows-1250")` throws `NotSupportedException` in .NET Core. | Code-page encodings are not registered by default in .NET Core. | Call `System.Text.Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);` once at application startup. |
+| License warnings appear in the generated document. | The Syncfusion license has not been registered. | Register the license at application startup using `Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("your license key")`. Refer to the [licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) for more information. |
+
+## Frequently asked questions
+
+### Why are German culture-specific characters (like € or umlauts) not printing correctly in the PDF when exporting the Grid?
 
 ### Why are German culture-specific characters (like € or umlauts) not printing correctly in the PDF when exporting the Grid?
 <table>
@@ -3182,3 +3203,6 @@ PdfTrueTypeFont ttf = new PdfTrueTypeFont("Arial.ttf", 20);
 
 {% endhighlight %}
 {% endtabs %}
+</td>
+</tr>
+</table>

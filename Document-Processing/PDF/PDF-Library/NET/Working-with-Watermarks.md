@@ -1,6 +1,6 @@
 ---
 title: Working with Watermarks | Syncfusion
-description: This section explains how to add text and image watermarks to the newly PDF document and to an existing PDF document using Syncfusion .NET PDF library.
+description: This section explains how to add text and image watermarks to a new PDF document and to an existing PDF document using the Syncfusion .NET PDF library.
 platform: document-processing
 control: PDF
 documentation: UG
@@ -14,9 +14,9 @@ To quickly get started, add Watermarks and Bookmarks to a PDF document in .NET u
 
 ## Adding text watermark in PDF document
 
-The below code illustrates how to draw the text watermark in new PDF document using [DrawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfPen_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class. The transparency can be applied to the text or images using [SetTransparency](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_SetTransparency_System_Single_) method and rotation can be applied using [RotateTransform](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_RotateTransform_System_Single_) method.
+The following code illustrates how to draw a text watermark in a new PDF document using the [DrawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class. Transparency can be applied to the text using the [SetTransparency](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_SetTransparency_System_Single_) method and rotation can be applied using the [RotateTransform](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_RotateTransform_System_Single_) method.
 
-The [PdfGraphicsState](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphicsState.html) class is used to save the current graphics context of a PdfGraphics object. This includes properties like transformations, transparency settings, clipping paths, and other graphical configurations. By calling `graphics.Save()`, you store the current state before applying changes such as rotation or transparency. Later, you can restore this state using `graphics.Restore(state)` to revert to the original settings, ensuring that temporary modifications do not affect subsequent drawing operations. This is especially useful when adding watermarks, as it allows you to isolate the watermark styling from other content on the page.
+The [PdfGraphicsState](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphicsState.html) class is used to save the current graphics context of a PdfGraphics object, including properties like transformations, transparency settings, clipping paths, and other graphical configurations. By calling `graphics.Save()`, you store the current state before applying changes such as rotation or transparency. Later, you can restore this state using `graphics.Restore(state)` to revert to the original settings, ensuring that temporary modifications do not affect subsequent drawing operations. This is especially useful when adding watermarks, as it allows you to isolate the watermark styling from other content on the page.
 
 {% tabs %}
 
@@ -108,7 +108,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 The following screenshot shows the output of adding text watermark to PDF document. 
 <img src="Watermark_images/Watermark_img1.png" alt="Text watermark to PDF" width="100%" Height="Auto"/>
 
-The below code illustrates how to draw the text watermark in an existing PDF document using [DrawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class.
+The following code illustrates how to draw a text watermark in an existing PDF document using the [DrawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class.
 
 {% tabs %}
 
@@ -207,9 +207,9 @@ The following screenshot shows the output of adding text watermark to an existin
 
 ## Adding image watermark in PDF document
 
-The below code sample illustrates how to add image watermark in PDF document, using [DrawImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawImage_Syncfusion_Pdf_Graphics_PdfImage_System_Drawing_PointF_System_Drawing_SizeF_) method of [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class. The transparency can be applied to the text or images using [SetTransparency](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_SetTransparency_System_Single_) method and rotation can be applied using [RotateTransform](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_RotateTransform_System_Single_) method.
+The following code sample illustrates how to add an image watermark in a PDF document using the [DrawImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawImage_Syncfusion_Pdf_Graphics_PdfImage_System_Drawing_PointF_System_Drawing_SizeF_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class. Transparency can be applied to the image using the [SetTransparency](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_SetTransparency_System_Single_) method and rotation can be applied using the [RotateTransform](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_RotateTransform_System_Single_) method.
 
-The [PdfGraphicsState](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphicsState.html) class is used to save the current graphics context of a PdfGraphics object. This includes properties like transformations, transparency settings, clipping paths, and other graphical configurations. By calling `graphics.Save()`, you store the current state before applying changes such as rotation or transparency. Later, you can restore this state using `graphics.Restore(state)` to revert to the original settings, ensuring that temporary modifications do not affect subsequent drawing operations. This is especially useful when adding watermarks, as it allows you to isolate the watermark styling from other content on the page.
+The [PdfGraphicsState](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphicsState.html) class is used to save the current graphics context of a PdfGraphics object, including properties like transformations, transparency settings, clipping paths, and other graphical configurations. By calling `graphics.Save()`, you store the current state before applying changes such as rotation or transparency. Later, you can restore this state using `graphics.Restore(state)` to revert to the original settings, ensuring that temporary modifications do not affect subsequent drawing operations. This is especially useful when adding watermarks, as it allows you to isolate the watermark styling from other content on the page.
 
 {% tabs %}
 
@@ -300,7 +300,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 The following screenshot shows the output of adding image watermark to PDF document. 
 <img src="Watermark_images/Watermark_img3.jpg" alt="Image watermark to PDF" width="100%" Height="Auto"/>
 
-The below code illustrates how to draw the image watermark in existing PDF document using  using [DrawImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawImage_Syncfusion_Pdf_Graphics_PdfImage_System_Drawing_PointF_System_Drawing_SizeF_) method of [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class. 
+The following code illustrates how to draw an image watermark in an existing PDF document using the [DrawImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawImage_Syncfusion_Pdf_Graphics_PdfImage_System_Drawing_PointF_System_Drawing_SizeF_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class.
 
 {% tabs %}
 

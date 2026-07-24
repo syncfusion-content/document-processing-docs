@@ -1,76 +1,77 @@
 ---
-title: Working with Color Spaces in File Formats PDF library | Syncfusion
-description: Learn here about Working with Color Spaces in Syncfusion Essential File Formats PDF library, its elements, and more.
+title: Working with Color Spaces | PDF library | Syncfusion
+description: Learn how to apply color spaces such as CalGray, CalRGB, ICC, and Pantone colors when drawing graphics in a PDF document using the Syncfusion .NET PDF library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with Color Spaces in File Formats PDF library
+# Working with Color Spaces
 
-The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) allows you to set color spaces in different ways.
+The Syncfusion<sup>&reg;</sup> [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) allows you to apply color spaces in the following ways:
 
-* Document Color Space
-* Graphics Color Space
+* [Document color space](#working-with-color-spaces-in-a-document)
+* [Graphics color space](#working-with-color-spaces-in-graphics)
 
-## Working with color space in document 
+## Working with color spaces in a document
 
-You can set the color space by using [ColorSpace](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_ColorSpace) property in PDF document. It supports the following types,
+You can set the color space by using the [ColorSpace](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_ColorSpace) property of the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class. The following color space categories are supported:
 
-* Device color Spaces
-* CIE-based Color Spaces
-* ICC-based Color Spaces
+* [Device color spaces](#device-color-space)
+* [CIE-based color spaces](#cie-based-color-spaces)
+* [ICC-based color spaces](#icc-based-color-spaces)
 
-## Device Color Space
+## Device color space
 
-Device color space simply describes the range of colors that a camera can see, a printer can print, or a monitor can display. These color spaces depend upon the device where it is displayed. It contains the following types.
+Device color space simply describes the range of colors that a camera can see, a printer can print, or a monitor can display. These color spaces depend on the device on which the document is displayed. The following types are supported:
 
 * DeviceGray
 * DeviceRGB
 * DeviceCMYK
 
-##  CIE-based Color Spaces
+## CIE-based color spaces
 
-CIE-based color space in the PDF document is classified as, 
+CIE-based color space in the PDF document is classified as follows:
 
 * CalGray
 * CalRGB
 * Lab
 
-You can draw a rectangle on new PDF document with **CalGray** brush using [PdfCalGrayColorSpace](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.ColorSpace.PdfCalGrayColorSpace.html) class. The following code snippet explains this.
+You can draw a rectangle on a new PDF document with a **CalGray** brush using the [PdfCalGrayColorSpace](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.ColorSpace.PdfCalGrayColorSpace.html) class. The following code example illustrates this.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ColorSpace/Draw-rectangle-on-new-PDF-with-CalGray-brush/.NET/Draw-rectangle-on-new-PDF-with-CalGray-brush/Program.cs" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ColorSpace/Draw-rectangle-on-new-PDF-with-CalGray-brush/.NET/Draw-rectangle-on-new-PDF-with-CalGray-brush/Program.cs" %}
 
 using Syncfusion.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.ColorSpace;
 using Syncfusion.Pdf.Graphics;
 
-//Creates a new PDF document.
-PdfDocument pdfDocument = new PdfDocument();
-//Adds a page to the PDF document
-PdfPage pdfPage = pdfDocument.Pages.Add();
-//Acquires graphics of the page.
-PdfGraphics graphics = pdfPage.Graphics;
+// Create a new PDF document
+PdfDocument document = new PdfDocument();
+// Add a page to the PDF document
+PdfPage page = document.Pages.Add();
+// Acquire the graphics of the page
+PdfGraphics graphics = page.Graphics;
 
-//Creates CalGray color space.
+// Create a CalGray color space
 PdfCalGrayColorSpace calGrayColorSpace = new PdfCalGrayColorSpace();
-//Updates color values.
+// Update the color values
 calGrayColorSpace.Gamma = 0.7;
 calGrayColorSpace.WhitePoint = new double[] { 0.2, 1, 0.8 };
-PdfCalGrayColor calGrayColorSpace1 = new PdfCalGrayColor(calGrayColorSpace);
-calGrayColorSpace1.Gray = 0.1;
-PdfBrush brush = new PdfSolidBrush(calGrayColorSpace1);
+// Apply the color space to a brush
+PdfCalGrayColor calGrayColor = new PdfCalGrayColor(calGrayColorSpace);
+calGrayColor.Gray = 0.1;
+PdfBrush brush = new PdfSolidBrush(calGrayColor);
 RectangleF bounds = new RectangleF(0, 0, 300, 300);
 
-//Draws rectangle by using the PdfBrush
+// Draw a rectangle using the brush
 graphics.DrawRectangle(brush, bounds);
 
-//Save the document
-pdfDocument.Save("Output.pdf");
-//Closes the document
-pdfDocument.Close(true);
+// Save the document
+document.Save("Output.pdf");
+// Close the document
+document.Close(true);
 
 {% endhighlight %}
 
@@ -81,30 +82,31 @@ using Syncfusion.Pdf;
 using Syncfusion.Pdf.ColorSpace;
 using Syncfusion.Pdf.Graphics;
 
-//Creates a new PDF document.
-PdfDocument pdfDocument = new PdfDocument();
-//Adds a page to the PDF document
-PdfPage pdfPage = pdfDocument.Pages.Add();
-//Acquires graphics of the page.
-PdfGraphics graphics = pdfPage.Graphics;
+// Create a new PDF document
+PdfDocument document = new PdfDocument();
+// Add a page to the PDF document
+PdfPage page = document.Pages.Add();
+// Acquire the graphics of the page
+PdfGraphics graphics = page.Graphics;
 
-//Creates CalGray color space.
+// Create a CalGray color space
 PdfCalGrayColorSpace calGrayColorSpace = new PdfCalGrayColorSpace();
-//Updates color values.
+// Update the color values
 calGrayColorSpace.Gamma = 0.7;
 calGrayColorSpace.WhitePoint = new double[] { 0.2, 1, 0.8 };
-PdfCalGrayColor calGrayColorSpace1 = new PdfCalGrayColor(calGrayColorSpace);
-calGrayColorSpace1.Gray = 0.1;
-PdfBrush brush = new PdfSolidBrush(calGrayColorSpace1);
+// Apply the color space to a brush
+PdfCalGrayColor calGrayColor = new PdfCalGrayColor(calGrayColorSpace);
+calGrayColor.Gray = 0.1;
+PdfBrush brush = new PdfSolidBrush(calGrayColor);
 RectangleF bounds = new RectangleF(0, 0, 300, 300);
 
-//Draws rectangle by using the PdfBrus.
+// Draw a rectangle using the brush
 graphics.DrawRectangle(brush, bounds);
 
-//Saves the document.
-pdfDocument.Save("Output.pdf");
-//Closes the document.
-pdfDocument.Close(true);
+// Save the document
+document.Save("Output.pdf");
+// Close the document
+document.Close(true);
 
 {% endhighlight %}
 
@@ -115,30 +117,31 @@ Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.ColorSpace
 Imports Syncfusion.Pdf.Graphics
 
-'Creates a new PDF document.
-Dim pdfDocument As New PdfDocument()
-'Adds a page to the PDF document
-Dim pdfPage As PdfPage = pdfDocument.Pages.Add()
-'Acquires graphics of the page.
-Dim graphics As PdfGraphics = pdfPage.Graphics
+' Create a new PDF document
+Dim document As New PdfDocument()
+' Add a page to the PDF document
+Dim page As PdfPage = document.Pages.Add()
+' Acquire the graphics of the page
+Dim graphics As PdfGraphics = page.Graphics
 
-'Creates CalGray color space.
+' Create a CalGray color space
 Dim calGrayColorSpace As New PdfCalGrayColorSpace()
-'Updates color values.
+' Update the color values
 calGrayColorSpace.Gamma = 0.7
 calGrayColorSpace.WhitePoint = New Double() {0.2, 1, 0.8}
-Dim calGrayColorSpace1 As New PdfCalGrayColor(calGrayColorSpace)
-calGrayColorSpace1.Gray = 0.1
-Dim brush As PdfBrush = New PdfSolidBrush(calGrayColorSpace1)
+' Apply the color space to a brush
+Dim calGrayColor As New PdfCalGrayColor(calGrayColorSpace)
+calGrayColor.Gray = 0.1
+Dim brush As PdfBrush = New PdfSolidBrush(calGrayColor)
 Dim bounds As New RectangleF(0, 0, 300, 300)
 
-'Draws rectangle using the PdfBrush
+' Draw a rectangle using the brush
 graphics.DrawRectangle(brush, bounds)
 
-'Saves the document.
-pdfDocument.Save("Output.pdf")
-'Closes the document
-pdfDocument.Close(True)
+' Save the document
+document.Save("Output.pdf")
+' Close the document
+document.Close(True)
 
 {% endhighlight %}
 
@@ -146,7 +149,7 @@ pdfDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/ColorSpace/Draw-rectangle-on-new-PDF-with-CalGray-brush).
 
-The following code example illustrates how to draw a rectangle with **CalGray** brush in existing PDF document.
+The following code example illustrates how to draw a rectangle with a **CalGray** brush in an existing PDF document.
 
 {% tabs %}
 
@@ -158,29 +161,30 @@ using Syncfusion.Pdf.ColorSpace;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Parsing;
 
-//Load the PDF document.
+// Load the existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-//Loads the page.
+// Load the first page
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
-//Acquires graphics of the page.
+// Acquire the graphics of the page
 PdfGraphics graphics = loadedPage.Graphics;
 
-//Creates CalGray color space.
+// Create a CalGray color space
 PdfCalGrayColorSpace calGrayColorSpace = new PdfCalGrayColorSpace();
-//Updates color values.
+// Update the color values
 calGrayColorSpace.Gamma = 0.7;
 calGrayColorSpace.WhitePoint = new double[] { 0.2, 1, 0.8 };
-PdfCalGrayColor calGrayColorSpace1 = new PdfCalGrayColor(calGrayColorSpace);
-calGrayColorSpace1.Gray = 0.1;
-PdfBrush brush = new PdfSolidBrush(calGrayColorSpace1);
+// Apply the color space to a brush
+PdfCalGrayColor calGrayColor = new PdfCalGrayColor(calGrayColorSpace);
+calGrayColor.Gray = 0.1;
+PdfBrush brush = new PdfSolidBrush(calGrayColor);
 RectangleF bounds = new RectangleF(0, 0, 300, 300);
 
-//Draws rectangle by using the PdfBrush.
+// Draw a rectangle using the brush
 graphics.DrawRectangle(brush, bounds);
 
-//Saves the modified document.
+// Save the modified document
 loadedDocument.Save("Output.pdf");
-//Closes the document.
+// Close the document
 loadedDocument.Close(true);
 
 {% endhighlight %}
@@ -193,29 +197,30 @@ using Syncfusion.Pdf.ColorSpace;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Parsing;
 
-//Loads the existing PDF document.
+// Load the existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-//Loads the page.
+// Load the first page
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
-//Acquires graphics of the page.
+// Acquire the graphics of the page
 PdfGraphics graphics = loadedPage.Graphics;
 
-//Creates CalGray color space.
+// Create a CalGray color space
 PdfCalGrayColorSpace calGrayColorSpace = new PdfCalGrayColorSpace();
-//Updates color values.
+// Update the color values
 calGrayColorSpace.Gamma = 0.7;
 calGrayColorSpace.WhitePoint = new double[] { 0.2, 1, 0.8 };
-PdfCalGrayColor calGrayColorSpace1 = new PdfCalGrayColor(calGrayColorSpace);
-calGrayColorSpace1.Gray = 0.1;
-PdfBrush brush = new PdfSolidBrush(calGrayColorSpace1);
+// Apply the color space to a brush
+PdfCalGrayColor calGrayColor = new PdfCalGrayColor(calGrayColorSpace);
+calGrayColor.Gray = 0.1;
+PdfBrush brush = new PdfSolidBrush(calGrayColor);
 RectangleF bounds = new RectangleF(0, 0, 300, 300);
 
-//Draws rectangle by using the PdfBrush.
+// Draw a rectangle using the brush
 graphics.DrawRectangle(brush, bounds);
 
-//Saves the modified document.
+// Save the modified document
 loadedDocument.Save("Output.pdf");
-//Closes the document.
+// Close the document
 loadedDocument.Close(true);
 
 {% endhighlight %}
@@ -228,30 +233,30 @@ Imports Syncfusion.Pdf.ColorSpace
 Imports Syncfusion.Pdf.Graphics
 Imports Syncfusion.Pdf.Parsing
 
-'Loads the existing PDF document.
+' Load the existing PDF document
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
-'Loads the page
+' Load the first page
 Dim loadedPage As PdfLoadedPage = TryCast(loadedDocument.Pages(0), PdfLoadedPage)
-'Acquires graphics of the page.
+' Acquire the graphics of the page
 Dim graphics As PdfGraphics = loadedPage.Graphics
 
-'Creates CalGray color space.
+' Create a CalGray color space
 Dim calGrayColorSpace As New PdfCalGrayColorSpace()
-'Updates color values.
+' Update the color values
 calGrayColorSpace.Gamma = 0.7
 calGrayColorSpace.WhitePoint = New Double() {0.2, 1, 0.8}
-Dim calGrayColorSpace1 As New PdfCalGrayColor(calGrayColorSpace)
-calGrayColorSpace1.Gray = 0.1
-Dim brush As PdfBrush = New PdfSolidBrush(calGrayColorSpace1)
+' Apply the color space to a brush
+Dim calGrayColor As New PdfCalGrayColor(calGrayColorSpace)
+calGrayColor.Gray = 0.1
+Dim brush As PdfBrush = New PdfSolidBrush(calGrayColor)
 Dim bounds As New RectangleF(0, 0, 300, 300)
 
-'Draws rectangle by using the PdfBrush.
+' Draw a rectangle using the brush
 graphics.DrawRectangle(brush, bounds)
 
-'Saves the modified document.
+' Save the modified document
 loadedDocument.Save("Output.pdf")
-
-'Closes the document.
+' Close the document
 loadedDocument.Close(True)
 
 {% endhighlight %}
@@ -260,17 +265,17 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/ColorSpace/Draw-rectangle-with-CalGray-brush-in-an-existing-PDF).
 
-## ICC-based Color Spaces
+## ICC-based color spaces
 
-To create color for brush/pen to render shape or text in the PDF document, you can use ICC based color spaces.
+To create a color for a brush or pen used to render a shape or text in the PDF document, you can use ICC-based color spaces.
 
-It contains the following types:
+The following types are supported:
 
-* Special color spaces -Pantone colors
+* Special color spaces – Pantone colors
 * Indexed
 * Separation
 
-The following code example illustrates how to set the indexed ICC color space using [PdfCalRGBColorSpace](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.ColorSpace.PdfCalRGBColorSpace.html) and [PdfICCColorSpace](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.ColorSpace.PdfICCColorSpace.html) class in new PDF document.
+The following code example illustrates how to set the indexed ICC color space using the [PdfCalRGBColorSpace](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.ColorSpace.PdfCalRGBColorSpace.html) and [PdfICCColorSpace](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.ColorSpace.PdfICCColorSpace.html) classes in a new PDF document.
 
 {% tabs %}
 
@@ -281,90 +286,95 @@ using Syncfusion.Pdf;
 using Syncfusion.Pdf.ColorSpace;
 using Syncfusion.Pdf.Graphics;
 
-//Creates a new PDF document.
-PdfDocument pdfDocument = new PdfDocument();
-//Adds a page to the PDF document.
-PdfPage pdfPage = pdfDocument.Pages.Add();
-//Acquires graphics of the page.
-PdfGraphics graphics = pdfPage.Graphics;
+// Create a new PDF document
+PdfDocument document = new PdfDocument();
+// Add a page to the PDF document
+PdfPage page = document.Pages.Add();
+// Acquire the graphics of the page
+PdfGraphics graphics = page.Graphics;
 
-//Creates ICCBased color space.
+// Create a CalRGB color space to use as the alternate color space
 PdfCalRGBColorSpace calRgbCS = new PdfCalRGBColorSpace();
 calRgbCS.Gamma = new double[] { 7.6, 5.1, 8.5 };
 calRgbCS.Matrix = new double[] { 1, 0, 0, 0, 1, 0, 0, 0, 1 };
 calRgbCS.WhitePoint = new double[] { 0.7, 1, 0.8 };
 
-//Reads the ICC profile.
-FileStream fileStream = new FileStream(@"input.icc", FileMode.Open, FileAccess.Read);
-byte[] profileData = new byte[fileStream.Length];
-fileStream.Read(profileData, 0, profileData.Length);
-fileStream.Close();
+// Read the ICC profile from a file
+byte[] profileData;
+using (FileStream fileStream = new FileStream("input.icc", FileMode.Open, FileAccess.Read))
+{
+    profileData = new byte[fileStream.Length];
+    fileStream.Read(profileData, 0, profileData.Length);
+}
 
-//Instantiates ICC color space.
+// Instantiate the ICC color space and configure it
 PdfICCColorSpace iccBasedCS = new PdfICCColorSpace();
 iccBasedCS.ProfileData = profileData;
 iccBasedCS.AlternateColorSpace = calRgbCS;
 iccBasedCS.ColorComponents = 3;
 iccBasedCS.Range = new double[] { 0.0, 1.0, 0.0, 1.0, 0.0, 1.0 };
-PdfICCColor red = new PdfICCColor(iccBasedCS);
-red.ColorComponents = new double[] { 1, 0, 1 };
-PdfBrush brush = new PdfSolidBrush(red);
+PdfICCColor redColor = new PdfICCColor(iccBasedCS);
+redColor.ColorComponents = new double[] { 1, 0, 1 };
+PdfBrush brush = new PdfSolidBrush(redColor);
 RectangleF bounds = new RectangleF(0, 0, 300, 300);
 
-//Draws rectangle by using the PdfBrush.
+// Draw a rectangle using the brush
 graphics.DrawRectangle(brush, bounds);
 
-//Saves the document.
-pdfDocument.Save("Output.pdf");
-//Closes the document.
-pdfDocument.Close(true);
+// Save the document
+document.Save("Output.pdf");
+// Close the document
+document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using System.Drawing;
+
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.ColorSpace;
 using Syncfusion.Pdf.Graphics;
 
-//Creates a new PDF document.
-PdfDocument pdfDocument = new PdfDocument();
-//Adds a page to the PDF document.
-PdfPage pdfPage = pdfDocument.Pages.Add();
-//Acquires graphics of the page.
-PdfGraphics graphics = pdfPage.Graphics;
+// Create a new PDF document
+PdfDocument document = new PdfDocument();
+// Add a page to the PDF document
+PdfPage page = document.Pages.Add();
+// Acquire the graphics of the page
+PdfGraphics graphics = page.Graphics;
 
-//Creates ICCBased color space.
+// Create a CalRGB color space to use as the alternate color space
 PdfCalRGBColorSpace calRgbCS = new PdfCalRGBColorSpace();
 calRgbCS.Gamma = new double[] { 7.6, 5.1, 8.5 };
 calRgbCS.Matrix = new double[] { 1, 0, 0, 0, 1, 0, 0, 0, 1 };
 calRgbCS.WhitePoint = new double[] { 0.7, 1, 0.8 };
 
-//Reads the ICC profile.
-FileStream fileStream = new FileStream(@"input.icc", FileMode.Open, FileAccess.Read);
-byte[] profileData = new byte[fileStream.Length];
-fileStream.Read(profileData, 0, profileData.Length);
-fileStream.Close();
+// Read the ICC profile from a file
+byte[] profileData;
+using (FileStream fileStream = new FileStream("input.icc", FileMode.Open, FileAccess.Read))
+{
+    profileData = new byte[fileStream.Length];
+    fileStream.Read(profileData, 0, profileData.Length);
+}
 
-//Instantiates ICC color space.
+// Instantiate the ICC color space and configure it
 PdfICCColorSpace iccBasedCS = new PdfICCColorSpace();
 iccBasedCS.ProfileData = profileData;
 iccBasedCS.AlternateColorSpace = calRgbCS;
 iccBasedCS.ColorComponents = 3;
 iccBasedCS.Range = new double[] { 0.0, 1.0, 0.0, 1.0, 0.0, 1.0 };
-PdfICCColor red = new PdfICCColor(iccBasedCS);
-red.ColorComponents = new double[] { 1, 0, 1 };
-PdfBrush brush = new PdfSolidBrush(red);
+PdfICCColor redColor = new PdfICCColor(iccBasedCS);
+redColor.ColorComponents = new double[] { 1, 0, 1 };
+PdfBrush brush = new PdfSolidBrush(redColor);
 RectangleF bounds = new RectangleF(0, 0, 300, 300);
 
-//Draws rectangle by using the PdfBrush.
+// Draw a rectangle using the brush
 graphics.DrawRectangle(brush, bounds);
 
-//Saves the document.
-pdfDocument.Save("Output.pdf");
-//Closes the document.
-pdfDocument.Close(true);
+// Save the document
+document.Save("Output.pdf");
+// Close the document
+document.Close(true);
 
 {% endhighlight %}
 
@@ -375,41 +385,44 @@ Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.ColorSpace
 Imports Syncfusion.Pdf.Graphics
 
-'Creates a new PDF document.
-Dim pdfDocument As New PdfDocument()
-'Adds a page to the PDF document.
-Dim pdfPage As PdfPage = pdfDocument.Pages.Add()
-'Acquires graphics of the page.
-Dim graphics As PdfGraphics = pdfPage.Graphics
+' Create a new PDF document
+Dim document As New PdfDocument()
+' Add a page to the PDF document
+Dim page As PdfPage = document.Pages.Add()
+' Acquire the graphics of the page
+Dim graphics As PdfGraphics = page.Graphics
 
-'Creates ICCBased color space.
+' Create a CalRGB color space to use as the alternate color space
 Dim calRgbCS As New PdfCalRGBColorSpace()
 calRgbCS.Gamma = New Double() {7.6, 5.1, 8.5}
 calRgbCS.Matrix = New Double() {1, 0, 0, 0, 1, 0, 0, 0, 1}
 calRgbCS.WhitePoint = New Double() {0.7, 1, 0.8}
 
-'Reads the ICC profile.
-Dim fileStream As New FileStream("input.icc", FileMode.Open, FileAccess.Read)
-Dim profileData(fileStream.Length - 1) As Byte
-fileStream.Read(profileData, 0, profileData.Length)
-fileStream.Close()
+' Read the ICC profile from a file
+Dim profileData As Byte()
+Using fileStream As New FileStream("input.icc", FileMode.Open, FileAccess.Read)
+    ReDim profileData(CInt(fileStream.Length) - 1)
+    fileStream.Read(profileData, 0, profileData.Length)
+End Using
 
-'Instantiates ICC color space.
+' Instantiate the ICC color space and configure it
 Dim iccBasedCS As New PdfICCColorSpace()
 iccBasedCS.ProfileData = profileData
 iccBasedCS.AlternateColorSpace = calRgbCS
 iccBasedCS.ColorComponents = 3
 iccBasedCS.Range = New Double() {0.0, 1.0, 0.0, 1.0, 0.0, 1.0}
-Dim red As New PdfICCColor(iccBasedCS)
-red.ColorComponents = New Double() {1, 0, 1}
-Dim brush As PdfBrush = New PdfSolidBrush(red)
+Dim redColor As New PdfICCColor(iccBasedCS)
+redColor.ColorComponents = New Double() {1, 0, 1}
+Dim brush As PdfBrush = New PdfSolidBrush(redColor)
 Dim bounds As New RectangleF(0, 0, 300, 300)
-'Draws rectangle by using the PdfBrush.
+
+' Draw a rectangle using the brush
 graphics.DrawRectangle(brush, bounds)
-'Saves the document.
-pdfDocument.Save("Output.pdf")
-'Closes the document
-pdfDocument.Close(True)
+
+' Save the document
+document.Save("Output.pdf")
+' Close the document
+document.Close(True)
 
 {% endhighlight %}
 
@@ -417,7 +430,7 @@ pdfDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/ColorSpace/Create-PDF-document-with-ICC-color-space).
 
-The following code example illustrates how to set the indexed ICC color space in existing PDF document.
+The following code example illustrates how to set the indexed ICC color space in an existing PDF document.
 
 {% tabs %}
 
@@ -429,42 +442,44 @@ using Syncfusion.Pdf.ColorSpace;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Parsing;
 
-//Load PDF document
+// Load the existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-//Loads the page.
+// Load the first page
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
-//Acquires graphics of the page.
+// Acquire the graphics of the page
 PdfGraphics graphics = loadedPage.Graphics;
 
-//Creates ICCBased color space.
+// Create a CalRGB color space to use as the alternate color space
 PdfCalRGBColorSpace calRgbCS = new PdfCalRGBColorSpace();
 calRgbCS.Gamma = new double[] { 7.6, 5.1, 8.5 };
 calRgbCS.Matrix = new double[] { 1, 0, 0, 0, 1, 0, 0, 0, 1 };
 calRgbCS.WhitePoint = new double[] { 0.7, 1, 0.8 };
 
-//Reads the ICC profile.
-FileStream fileStream = new FileStream(@"input.icc", FileMode.Open, FileAccess.Read);
-byte[] profileData = new byte[fileStream.Length];
-fileStream.Read(profileData, 0, profileData.Length);
-fileStream.Close();
+// Read the ICC profile from a file
+byte[] profileData;
+using (FileStream fileStream = new FileStream("input.icc", FileMode.Open, FileAccess.Read))
+{
+    profileData = new byte[fileStream.Length];
+    fileStream.Read(profileData, 0, profileData.Length);
+}
 
-//Instantiates ICC color space.
+// Instantiate the ICC color space and configure it
 PdfICCColorSpace iccBasedCS = new PdfICCColorSpace();
 iccBasedCS.ProfileData = profileData;
 iccBasedCS.AlternateColorSpace = calRgbCS;
 iccBasedCS.ColorComponents = 3;
 iccBasedCS.Range = new double[] { 0.0, 1.0, 0.0, 1.0, 0.0, 1.0 };
-PdfICCColor red = new PdfICCColor(iccBasedCS);
-red.ColorComponents = new double[] { 1, 0, 1 };
-PdfBrush brush = new PdfSolidBrush(red);
+PdfICCColor redColor = new PdfICCColor(iccBasedCS);
+redColor.ColorComponents = new double[] { 1, 0, 1 };
+PdfBrush brush = new PdfSolidBrush(redColor);
 RectangleF bounds = new RectangleF(0, 0, 300, 300);
 
-//Draws rectangle by using the PdfBrush.
+// Draw a rectangle using the brush
 graphics.DrawRectangle(brush, bounds);
 
-//Saves the document.
+// Save the document
 loadedDocument.Save("Output.pdf");
-//Closes the document.
+// Close the document
 loadedDocument.Close(true);
 
 {% endhighlight %}
@@ -477,89 +492,93 @@ using Syncfusion.Pdf.ColorSpace;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Parsing;
 
-//Loads the existing PDF document.
+// Load the existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-//Loads the page.
+// Load the first page
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
-//Acquires graphics of the page.
+// Acquire the graphics of the page
 PdfGraphics graphics = loadedPage.Graphics;
 
-//Creates ICCBased color space.
+// Create a CalRGB color space to use as the alternate color space
 PdfCalRGBColorSpace calRgbCS = new PdfCalRGBColorSpace();
 calRgbCS.Gamma = new double[] { 7.6, 5.1, 8.5 };
 calRgbCS.Matrix = new double[] { 1, 0, 0, 0, 1, 0, 0, 0, 1 };
 calRgbCS.WhitePoint = new double[] { 0.7, 1, 0.8 };
 
-//Reads the ICC profile.
-FileStream fileStream = new FileStream(@"input.icc", FileMode.Open, FileAccess.Read);
-byte[] profileData = new byte[fileStream.Length];
-fileStream.Read(profileData, 0, profileData.Length);
-fileStream.Close();
+// Read the ICC profile from a file
+byte[] profileData;
+using (FileStream fileStream = new FileStream("input.icc", FileMode.Open, FileAccess.Read))
+{
+    profileData = new byte[fileStream.Length];
+    fileStream.Read(profileData, 0, profileData.Length);
+}
 
-//Instantiates ICC color space.
+// Instantiate the ICC color space and configure it
 PdfICCColorSpace iccBasedCS = new PdfICCColorSpace();
 iccBasedCS.ProfileData = profileData;
 iccBasedCS.AlternateColorSpace = calRgbCS;
 iccBasedCS.ColorComponents = 3;
 iccBasedCS.Range = new double[] { 0.0, 1.0, 0.0, 1.0, 0.0, 1.0 };
-PdfICCColor red = new PdfICCColor(iccBasedCS);
-red.ColorComponents = new double[] { 1, 0, 1 };
-PdfBrush brush = new PdfSolidBrush(red);
+PdfICCColor redColor = new PdfICCColor(iccBasedCS);
+redColor.ColorComponents = new double[] { 1, 0, 1 };
+PdfBrush brush = new PdfSolidBrush(redColor);
 RectangleF bounds = new RectangleF(0, 0, 300, 300);
 
-//Draws rectangle by using the PdfBrush.
+// Draw a rectangle using the brush
 graphics.DrawRectangle(brush, bounds);
 
-//Saves the document.
+// Save the document
 loadedDocument.Save("Output.pdf");
-//Closes the document.
+// Close the document
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports Syncfusion.Drawing
+Imports System.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.ColorSpace
 Imports Syncfusion.Pdf.Graphics
 Imports Syncfusion.Pdf.Parsing
 
-'Loads the existing PDF document.
-Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
-'Loads the page.
+' Load the existing PDF document
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+' Load the first page
 Dim loadedPage As PdfLoadedPage = TryCast(loadedDocument.Pages(0), PdfLoadedPage)
-'Acquires graphics of the page.
+' Acquire the graphics of the page
 Dim graphics As PdfGraphics = loadedPage.Graphics
 
-'Creates ICCBased color space.
-Dim calRgbCS As PdfCalRGBColorSpace = New PdfCalRGBColorSpace()
+' Create a CalRGB color space to use as the alternate color space
+Dim calRgbCS As New PdfCalRGBColorSpace()
 calRgbCS.Gamma = New Double() {7.6, 5.1, 8.5}
 calRgbCS.Matrix = New Double() {1, 0, 0, 0, 1, 0, 0, 0, 1}
 calRgbCS.WhitePoint = New Double() {0.7, 1, 0.8}
 
-'Instantiates ICC color space.  
-Dim fileStream As FileStream = New FileStream("input.icc", FileMode.Open, FileAccess.Read)
-Dim profileData As Byte() = New Byte(fileStream.Length - 1) {}
-fileStream.Read(profileData, 0, profileData.Length)
-fileStream.Close()
+' Read the ICC profile from a file
+Dim profileData As Byte()
+Using fileStream As New FileStream("input.icc", FileMode.Open, FileAccess.Read)
+    ReDim profileData(CInt(fileStream.Length) - 1)
+    fileStream.Read(profileData, 0, profileData.Length)
+End Using
 
-'Instantiates ICC color space. 
-Dim iccBasedCS As PdfICCColorSpace = New PdfICCColorSpace()
+' Instantiate the ICC color space and configure it
+Dim iccBasedCS As New PdfICCColorSpace()
 iccBasedCS.ProfileData = profileData
 iccBasedCS.AlternateColorSpace = calRgbCS
 iccBasedCS.ColorComponents = 3
 iccBasedCS.Range = New Double() {0.0, 1.0, 0.0, 1.0, 0.0, 1.0}
-Dim red As PdfICCColor = New PdfICCColor(iccBasedCS)
-red.ColorComponents = New Double() {1, 0, 1}
-Dim brush As PdfBrush = New PdfSolidBrush(red)
-Dim bounds As RectangleF = New RectangleF(0, 0, 300, 300)
+Dim redColor As New PdfICCColor(iccBasedCS)
+redColor.ColorComponents = New Double() {1, 0, 1}
+Dim brush As PdfBrush = New PdfSolidBrush(redColor)
+Dim bounds As New RectangleF(0, 0, 300, 300)
 
-'Draws rectangle by using the PdfBrush. 
+' Draw a rectangle using the brush
 graphics.DrawRectangle(brush, bounds)
 
-'Save and close PDF document. 
+' Save the document
 loadedDocument.Save("Output.pdf")
+' Close the document
 loadedDocument.Close(True)
 
 {% endhighlight %}
@@ -570,7 +589,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Pantone colors
 
-The following code example illustrates how to draw the graphics elements by using Pantone colors through [PdfSeparationColorSpace](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.ColorSpace.PdfSeparationColorSpace.html) class in new PDF document.
+The following code example illustrates how to draw graphics elements by using Pantone colors through the [PdfSeparationColorSpace](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.ColorSpace.PdfSeparationColorSpace.html) class in a new PDF document.
 
 {% tabs %}
 
@@ -582,35 +601,32 @@ using Syncfusion.Pdf.ColorSpace;
 using Syncfusion.Pdf.Functions;
 using Syncfusion.Pdf.Graphics;
 
-//Creates a new document
+// Create a new PDF document
 PdfDocument document = new PdfDocument();
-//Creates a new page
+// Add a page to the PDF document
 PdfPage page = document.Pages.Add();
 
-//Creates exponential interpolation function
+// Create an exponential interpolation function used to map the tint value
 PdfExponentialInterpolationFunction function = new PdfExponentialInterpolationFunction(true);
-float[] numberArray = new float[4];
-numberArray[0] = 0f;
-numberArray[1] = 0.44f;
-numberArray[2] = 0.87f;
-numberArray[3] = 0.10f;
-function.C1 = numberArray;
+function.C1 = new float[] { 0.38f, 0.88f };
 
-//Creates SeparationColorSpace
+// Create the separation color space for the Pantone color
 PdfSeparationColorSpace colorSpace = new PdfSeparationColorSpace();
 colorSpace.TintTransform = function;
 colorSpace.Colorant = "PANTONE Orange 021 C";
+
+// Apply the color space to a pen
 PdfSeparationColor color = new PdfSeparationColor(colorSpace);
 color.Tint = 0.7;
 RectangleF bounds = new RectangleF(20, 70, 200, 100);
 PdfPen pen = new PdfPen(color);
 
-//Draws the rectangle
+// Draw a rectangle using the pen
 page.Graphics.DrawRectangle(pen, bounds);
 
-//Saves the document
+// Save the document
 document.Save("SeparationColor.pdf");
-//Closes the document
+// Close the document
 document.Close(true);
 
 {% endhighlight %}
@@ -621,74 +637,72 @@ using System.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.ColorSpace;
 using Syncfusion.Pdf.Functions;
-using Syncfusion.Pdf.Graphics;        
+using Syncfusion.Pdf.Graphics;
 
-//Creates a new document
+// Create a new PDF document
 PdfDocument document = new PdfDocument();
-//Creates a new page
+// Add a page to the PDF document
 PdfPage page = document.Pages.Add();
 
-//Creates exponential interpolation function
+// Create an exponential interpolation function used to map the tint value
 PdfExponentialInterpolationFunction function = new PdfExponentialInterpolationFunction(true);
-float[] numberArray = new float[4];
-numberArray[0] = 0.38f;
-numberArray[1] = 0.88f;
-function.C1 = numberArray;
+function.C1 = new float[] { 0.38f, 0.88f };
 
-//Creates SeparationColorSpace
+// Create the separation color space for the Pantone color
 PdfSeparationColorSpace colorSpace = new PdfSeparationColorSpace();
 colorSpace.TintTransform = function;
 colorSpace.Colorant = "PANTONE Orange 021 C";
+
+// Apply the color space to a pen
 PdfSeparationColor color = new PdfSeparationColor(colorSpace);
 color.Tint = 0.7;
 RectangleF bounds = new RectangleF(20, 70, 200, 100);
 PdfPen pen = new PdfPen(color);
 
-//Draws the rectangle
+// Draw a rectangle using the pen
 page.Graphics.DrawRectangle(pen, bounds);
 
-//Saves the document
+// Save the document
 document.Save("SeparationColor.pdf");
-//Closes the document
+// Close the document
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports Syncfusion.Drawing
+Imports System.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.ColorSpace
 Imports Syncfusion.Pdf.Functions
 Imports Syncfusion.Pdf.Graphics
 
-'Creates a new document
-Dim document As PdfDocument = New PdfDocument()
-'Creates a page
+' Create a new PDF document
+Dim document As New PdfDocument()
+' Add a page to the PDF document
 Dim page As PdfPage = document.Pages.Add()
 
-'Creates exponential interpolation function 
-Dim [function] As PdfExponentialInterpolationFunction = New PdfExponentialInterpolationFunction(True)
-Dim numberArray() As Single = New Single(4) {}
-numberArray(0) = 0.38F
-numberArray(1) = 0.88F
-[function].C1 = numberArray
+' Create an exponential interpolation function used to map the tint value
+Dim function As New PdfExponentialInterpolationFunction(True)
+function.C1 = New Single() {0.38F, 0.88F}
 
-'Creates SeparationColorSpace
-Dim colorSpace As PdfSeparationColorSpace = New PdfSeparationColorSpace()
-colorSpace.TintTransform = [function]
+' Create the separation color space for the Pantone color
+Dim colorSpace As New PdfSeparationColorSpace()
+colorSpace.TintTransform = function
 colorSpace.Colorant = "PANTONE Orange 021 C"
-Dim color As PdfSeparationColor = New PdfSeparationColor(colorSpace)
-color.Tint = 0.7
-Dim bounds As RectangleF = New RectangleF(20, 70, 200, 100)
-Dim pen As PdfPen = New PdfPen(color)
 
-'Draws the rectangle
+' Apply the color space to a pen
+Dim color As New PdfSeparationColor(colorSpace)
+color.Tint = 0.7
+Dim bounds As New RectangleF(20, 70, 200, 100)
+Dim pen As New PdfPen(color)
+
+' Draw a rectangle using the pen
 page.Graphics.DrawRectangle(pen, bounds)
 
-'Saves the document
+' Save the document
 document.Save("SeparationColor.pdf")
-'Closes the document
+' Close the document
 document.Close(True)
 
 {% endhighlight %}
@@ -697,7 +711,7 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/ColorSpace/Draw-graphics-elements-by-using-Pantone-colors-in-a-PDF).
 
-The following code example illustrates how to draw the graphics elements by using Pantone colors in existing PDF document.
+The following code example illustrates how to draw graphics elements by using Pantone colors in an existing PDF document.
 
 {% tabs %}
 
@@ -710,33 +724,32 @@ using Syncfusion.Pdf.Functions;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Parsing;
 
-//Load the PDF document
+// Load the existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-//Load the page 
+// Load the first page
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 
-//Creates exponential interpolation function 
+// Create an exponential interpolation function used to map the tint value
 PdfExponentialInterpolationFunction function = new PdfExponentialInterpolationFunction(true);
-float[] numberArray = new float[4];
-numberArray[0] = 0.38f;
-numberArray[1] = 0.88f;
-function.C1 = numberArray;
+function.C1 = new float[] { 0.38f, 0.88f };
 
-//Creates SeparationColorSpace
+// Create the separation color space for the Pantone color
 PdfSeparationColorSpace colorSpace = new PdfSeparationColorSpace();
 colorSpace.TintTransform = function;
 colorSpace.Colorant = "PANTONE Orange 021 C";
+
+// Apply the color space to a pen
 PdfSeparationColor color = new PdfSeparationColor(colorSpace);
 color.Tint = 0.7;
 RectangleF bounds = new RectangleF(20, 70, 200, 100);
 PdfPen pen = new PdfPen(color);
 
-//Draws the rectangle
+// Draw a rectangle using the pen
 loadedPage.Graphics.DrawRectangle(pen, bounds);
 
-//Saves the document
+// Save the document
 loadedDocument.Save("SeparationColor.pdf");
-//Closes the document
+// Close the document
 loadedDocument.Close(true);
 
 {% endhighlight %}
@@ -750,33 +763,32 @@ using Syncfusion.Pdf.Functions;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Parsing;
 
-//Loads the document
+// Load the existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-//Load the page
+// Load the first page
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 
-//Creates exponential interpolation function 
+// Create an exponential interpolation function used to map the tint value
 PdfExponentialInterpolationFunction function = new PdfExponentialInterpolationFunction(true);
-float[] numberArray = new float[4];
-numberArray[0] = 0.38f;
-numberArray[1] = 0.88f;
-function.C1 = numberArray;
+function.C1 = new float[] { 0.38f, 0.88f };
 
-//Creates SeparationColorSpace
+// Create the separation color space for the Pantone color
 PdfSeparationColorSpace colorSpace = new PdfSeparationColorSpace();
-colorSpace.TintTransform = function
+colorSpace.TintTransform = function;
 colorSpace.Colorant = "PANTONE Orange 021 C";
+
+// Apply the color space to a pen
 PdfSeparationColor color = new PdfSeparationColor(colorSpace);
 color.Tint = 0.7;
 RectangleF bounds = new RectangleF(20, 70, 200, 100);
 PdfPen pen = new PdfPen(color);
 
-//Draws the rectangle
+// Draw a rectangle using the pen
 loadedPage.Graphics.DrawRectangle(pen, bounds);
 
-//Saves the document
+// Save the document
 loadedDocument.Save("SeparationColor.pdf");
-//Closes the document
+// Close the document
 loadedDocument.Close(true);
 
 {% endhighlight %}
@@ -790,33 +802,32 @@ Imports Syncfusion.Pdf.Functions
 Imports Syncfusion.Pdf.Graphics
 Imports Syncfusion.Pdf.Parsing
 
-'Loads the document
+' Load the existing PDF document
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
-'Load the page
+' Load the first page
 Dim loadedPage As PdfLoadedPage = TryCast(loadedDocument.Pages(0), PdfLoadedPage)
 
-'Creates exponential interpolation function
-Dim [function] As PdfExponentialInterpolationFunction = New PdfExponentialInterpolationFunction(True)
-Dim numberArray() As Single = New Single(3) {}
-numberArray(0) = 0.38F
-numberArray(1) = 0.88F
-[function].C1 = numberArray
+' Create an exponential interpolation function used to map the tint value
+Dim function As New PdfExponentialInterpolationFunction(True)
+function.C1 = New Single() {0.38F, 0.88F}
 
-'Creates SeparationColorSpace
-Dim colorSpace As PdfSeparationColorSpace = New PdfSeparationColorSpace()
-colorSpace.TintTransform = [function]
+' Create the separation color space for the Pantone color
+Dim colorSpace As New PdfSeparationColorSpace()
+colorSpace.TintTransform = function
 colorSpace.Colorant = "PANTONE Orange 021 C"
-Dim color As PdfSeparationColor = New PdfSeparationColor(colorSpace)
-color.Tint = 0.7
-Dim bounds As RectangleF = New RectangleF(20, 70, 200, 100)
-Dim pen As PdfPen = New PdfPen(color)
 
-'Draws the rectangle
+' Apply the color space to a pen
+Dim color As New PdfSeparationColor(colorSpace)
+color.Tint = 0.7
+Dim bounds As New RectangleF(20, 70, 200, 100)
+Dim pen As New PdfPen(color)
+
+' Draw a rectangle using the pen
 loadedPage.Graphics.DrawRectangle(pen, bounds)
 
-'Saves the document
+' Save the document
 loadedDocument.Save("SeparationColor.pdf")
-'Closes the document
+' Close the document
 loadedDocument.Close(True)
 
 {% endhighlight %}
@@ -825,11 +836,11 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/ColorSpace/Add-graphics-elemets-by-Pantone-color-in-existing-PDF).
 
-## Working with color space in graphics
+## Working with color spaces in graphics
 
-You can set the color spaces to the particular object in the PDF document by using the [ColorSpace](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_ColorSpace) property available in the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class and specifying the color space as ``GrayScale`` and ``CMYK`` of [PdfColorSpace](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfColorSpace.html) Enum.  
+You can set the color space for a particular object in a PDF document by using the [ColorSpace](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_ColorSpace) property of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class and specifying the color space as `GrayScale` or `CMYK` from the [PdfColorSpace](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfColorSpace.html) enumeration.
 
-The following code illustrates how to use the color spaces in particular objects in new PDF document.
+The following code example illustrates how to use the color spaces on particular objects in a new PDF document.
 
 {% tabs %}
 
@@ -839,38 +850,38 @@ using Syncfusion.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 
-//Creates a new PDF document.
-PdfDocument pdfDocument = new PdfDocument();
-//Adds a page to the PDF document.
-PdfPage pdfPage = pdfDocument.Pages.Add();
+// Create a new PDF document
+PdfDocument document = new PdfDocument();
+// Add a page to the PDF document
+PdfPage page = document.Pages.Add();
 
-//Acquires graphics of the page.
-PdfGraphics graphics = pdfPage.Graphics;
+// Acquire the graphics of the page
+PdfGraphics graphics = page.Graphics;
 PdfPen pen = new PdfPen(Color.Red);
 PdfBrush brush = new PdfSolidBrush(Color.Blue);
 RectangleF rectangle = new RectangleF(0, 0, 100, 100);
-//Default color space
+
+// Draw using the default color space
 graphics.DrawRectangle(pen, brush, rectangle);
 graphics.Save();
 
-//GrayScale color space.
+// Use the GrayScale color space
 graphics.ColorSpace = PdfColorSpace.GrayScale;
 graphics.DrawRectangle(pen, brush, rectangle);
 
-//CMYK color space.
+// Use the CMYK color space
 graphics.ColorSpace = PdfColorSpace.CMYK;
 graphics.DrawRectangle(pen, brush, rectangle);
 graphics.Restore();
 
-//Default color space.
+// Draw using the default color space again
 graphics.DrawRectangle(pen, brush, rectangle);
-//Draws by using the PdfBrush.
 graphics.DrawRectangle(brush, rectangle);
 
-//Saves the document.
-pdfDocument.Save("Output.pdf");
-//Closes the document
-pdfDocument.Close(true);
+// Save the document
+document.Save("Output.pdf");
+// Close the document
+document.Close(true);
 
 {% endhighlight %}
 
@@ -880,79 +891,79 @@ using System.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 
-//Creates a new PDF document.
-PdfDocument pdfDocument = new PdfDocument();
-//Adds a page to the PDF document.
-PdfPage pdfPage = pdfDocument.Pages.Add();
+// Create a new PDF document
+PdfDocument document = new PdfDocument();
+// Add a page to the PDF document
+PdfPage page = document.Pages.Add();
 
-//Acquires graphics of the page.
-PdfGraphics graphics = pdfPage.Graphics;
+// Acquire the graphics of the page
+PdfGraphics graphics = page.Graphics;
 PdfPen pen = new PdfPen(Color.Red);
 PdfBrush brush = new PdfSolidBrush(Color.Blue);
 RectangleF rectangle = new RectangleF(0, 0, 100, 100);
-//Default color space.
+
+// Draw using the default color space
 graphics.DrawRectangle(pen, brush, rectangle);
 graphics.Save();
 
-//GrayScale color space.
+// Use the GrayScale color space
 graphics.ColorSpace = PdfColorSpace.GrayScale;
 graphics.DrawRectangle(pen, brush, rectangle);
 
-//CMYK color space.
+// Use the CMYK color space
 graphics.ColorSpace = PdfColorSpace.CMYK;
 graphics.DrawRectangle(pen, brush, rectangle);
 graphics.Restore();
 
-//Default color space.
+// Draw using the default color space again
 graphics.DrawRectangle(pen, brush, rectangle);
-//Draws by using the PdfBrush.
 graphics.DrawRectangle(brush, rectangle);
 
-//Saves the document.
-pdfDocument.Save("Output.pdf");
-//Closes the document
-pdfDocument.Close(true);
+// Save the document
+document.Save("Output.pdf");
+// Close the document
+document.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports Syncfusion.Drawing
+Imports System.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Graphics
 
-'Creates a new PDF document.
-Dim pdfDocument As New PdfDocument()
-'Adds a page to the PDF document.
-Dim pdfPage As PdfPage = pdfDocument.Pages.Add()
+' Create a new PDF document
+Dim document As New PdfDocument()
+' Add a page to the PDF document
+Dim page As PdfPage = document.Pages.Add()
 
-'Acquires graphics of the page.
-Dim graphics As PdfGraphics = pdfPage.Graphics
+' Acquire the graphics of the page
+Dim graphics As PdfGraphics = page.Graphics
 Dim pen As New PdfPen(Color.Red)
-Dim brush As PdfBrush = New PdfSolidBrush(Color.Blue)
+Dim brush As New PdfSolidBrush(Color.Blue)
 Dim rectangle As New RectangleF(0, 0, 100, 100)
-'Default color space.
+
+' Draw using the default color space
 graphics.DrawRectangle(pen, brush, rectangle)
 graphics.Save()
 
-'GrayScale color space.
+' Use the GrayScale color space
 graphics.ColorSpace = PdfColorSpace.GrayScale
 graphics.DrawRectangle(pen, brush, rectangle)
 
-'CMYK color space.
+' Use the CMYK color space
 graphics.ColorSpace = PdfColorSpace.CMYK
 graphics.DrawRectangle(pen, brush, rectangle)
 graphics.Restore()
 
-'Default color space.
+' Draw using the default color space again
 graphics.DrawRectangle(pen, brush, rectangle)
-'Draws by using the PdfBrush.
 graphics.DrawRectangle(brush, rectangle)
 
-'Saves the document.
-pdfDocument.Save("Output.pdf")
-'Closes the document
-pdfDocument.Close(True)
+' Save the document
+document.Save("Output.pdf")
+' Close the document
+document.Close(True)
 
 {% endhighlight %}
 
@@ -960,7 +971,7 @@ pdfDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/ColorSpace/Use-color-space-in-particular-object-in-a-new-PDF).
 
-The following code illustrates how to use the color spaces in particular objects in existing PDF document.
+The following code example illustrates how to use the color spaces on particular objects in an existing PDF document.
 
 {% tabs %}
 
@@ -971,37 +982,37 @@ using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Parsing;
 
-//Load the PDF document
+// Load the existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-//Loads the page
+// Load the first page
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 
-//Acquires graphics of the page.
+// Acquire the graphics of the page
 PdfGraphics graphics = loadedPage.Graphics;
 PdfPen pen = new PdfPen(Color.Red);
 PdfBrush brush = new PdfSolidBrush(Color.Blue);
 RectangleF rectangle = new RectangleF(0, 0, 100, 100);
-//Default color space.
+
+// Draw using the default color space
 graphics.DrawRectangle(pen, brush, rectangle);
 graphics.Save();
 
-//GrayScale color space.
+// Use the GrayScale color space
 graphics.ColorSpace = PdfColorSpace.GrayScale;
 graphics.DrawRectangle(pen, brush, rectangle);
 
-//CMYK color space.
+// Use the CMYK color space
 graphics.ColorSpace = PdfColorSpace.CMYK;
 graphics.DrawRectangle(pen, brush, rectangle);
 graphics.Restore();
 
-//Default color space.
+// Draw using the default color space again
 graphics.DrawRectangle(pen, brush, rectangle);
-//Draws by using the PdfBrush.
 graphics.DrawRectangle(brush, rectangle);
 
-//Saves the document.
+// Save the document
 loadedDocument.Save("Output.pdf");
-//Closes the document
+// Close the document
 loadedDocument.Close(true);
 
 {% endhighlight %}
@@ -1013,80 +1024,79 @@ using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Parsing;
 
-//Loads the existing PDF document.
+// Load the existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-//Loads the page
+// Load the first page
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 
-//Acquires graphics of the page.
+// Acquire the graphics of the page
 PdfGraphics graphics = loadedPage.Graphics;
 PdfPen pen = new PdfPen(Color.Red);
 PdfBrush brush = new PdfSolidBrush(Color.Blue);
 RectangleF rectangle = new RectangleF(0, 0, 100, 100);
-//Default color space.
+
+// Draw using the default color space
 graphics.DrawRectangle(pen, brush, rectangle);
 graphics.Save();
 
-//GrayScale color space.
+// Use the GrayScale color space
 graphics.ColorSpace = PdfColorSpace.GrayScale;
 graphics.DrawRectangle(pen, brush, rectangle);
 
-//CMYK color space.
+// Use the CMYK color space
 graphics.ColorSpace = PdfColorSpace.CMYK;
 graphics.DrawRectangle(pen, brush, rectangle);
 graphics.Restore();
 
-//Default color space.
+// Draw using the default color space again
 graphics.DrawRectangle(pen, brush, rectangle);
-//Draws by using the PdfBrush.
 graphics.DrawRectangle(brush, rectangle);
 
-//Saves the document.
+// Save the document
 loadedDocument.Save("Output.pdf");
-//Closes the document
+// Close the document
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports Syncfusion.Drawing
+Imports System.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Graphics
 Imports Syncfusion.Pdf.Parsing
 
-'Loads the existing PDF document.
+' Load the existing PDF document
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
-'Loads the page
+' Load the first page
 Dim loadedPage As PdfLoadedPage = TryCast(loadedDocument.Pages(0), PdfLoadedPage)
 
-'Acquires graphics of the page.
+' Acquire the graphics of the page
 Dim graphics As PdfGraphics = loadedPage.Graphics
 Dim pen As New PdfPen(Color.Red)
-Dim brush As PdfBrush = New PdfSolidBrush(Color.Blue)
+Dim brush As New PdfSolidBrush(Color.Blue)
 Dim rectangle As New RectangleF(0, 0, 100, 100)
-'Default color space.
+
+' Draw using the default color space
 graphics.DrawRectangle(pen, brush, rectangle)
 graphics.Save()
 
-'GrayScale color space.
+' Use the GrayScale color space
 graphics.ColorSpace = PdfColorSpace.GrayScale
 graphics.DrawRectangle(pen, brush, rectangle)
 
-'CMYK color space.
+' Use the CMYK color space
 graphics.ColorSpace = PdfColorSpace.CMYK
 graphics.DrawRectangle(pen, brush, rectangle)
 graphics.Restore()
 
-'Default color space.
+' Draw using the default color space again
 graphics.DrawRectangle(pen, brush, rectangle)
-'Draws by using the PdfBrush.
 graphics.DrawRectangle(brush, rectangle)
 
-'Saves the document.
+' Save the document
 loadedDocument.Save("Output.pdf")
-
-'Closes the document
+' Close the document
 loadedDocument.Close(True)
 
 {% endhighlight %}

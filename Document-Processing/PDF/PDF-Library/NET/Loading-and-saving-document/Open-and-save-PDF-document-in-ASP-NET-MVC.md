@@ -78,6 +78,11 @@ Step 8: Add the below code example to add a table in the PDF document.
 
 {% highlight c# tabtitle="C#" %}
 
+//Get the first page from the document.
+PdfLoadedPage loadedPage = document.Pages[0] as PdfLoadedPage;
+//Create PDF graphics for the page.
+PdfGraphics graphics = loadedPage.Graphics;
+
 //Create a PdfGrid.
 PdfGrid pdfGrid = new PdfGrid();
 //Add values to the list.
@@ -95,8 +100,8 @@ IEnumerable<object> dataTable = data;
 pdfGrid.DataSource = dataTable;
 //Apply built-in table style.
 pdfGrid.ApplyBuiltinStyle(PdfGridBuiltinStyle.GridTable4Accent3);
-//Draw the grid to the page of PDF document.
-pdfGrid.Draw(graphics, new RectangleF(40, 400, page.Size.Width - 80, 0));
+//Draw the grid to the page of the PDF document.
+pdfGrid.Draw(graphics, new RectangleF(40, 400, loadedPage.Size.Width - 80, 0));
 
 {% endhighlight %}
 

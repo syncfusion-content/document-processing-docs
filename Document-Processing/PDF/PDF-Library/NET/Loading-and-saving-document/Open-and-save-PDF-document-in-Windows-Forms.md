@@ -9,7 +9,7 @@ keywords: winforms save pdf, winforms load pdf, c# save pdf, c# load pdf
 
 # Open and save PDF document in Windows Forms
 
-The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **open and save PDF document in Windows Forms**. 
+The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **open and save a PDF document in Windows Forms**.
 
 ## Steps to open and save PDF document programmatically:
 
@@ -77,6 +77,10 @@ Step 5: Add the following code in the **btnOpenAndSave_Click** to **open an exis
 
 //Open an existing PDF document.
 PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+//Get the first page from the document.
+PdfLoadedPage page = document.Pages[0] as PdfLoadedPage;
+//Create PDF graphics for the page.
+PdfGraphics graphics = page.Graphics;
 
 {% endhighlight %}
 

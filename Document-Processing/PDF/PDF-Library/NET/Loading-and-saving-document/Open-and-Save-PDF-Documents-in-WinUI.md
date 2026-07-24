@@ -64,7 +64,6 @@ using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Grid;
 using Syncfusion.Drawing;
 using System.Reflection;
-using System.Xml.Linq;
 {% endhighlight %}
 
 {% endtabs %}
@@ -81,6 +80,10 @@ private void OnButtonClicked(object sender, RoutedEventArgs e)
     string basePath = "Load_and_Save_PDF_WinUI_Desktop.Assets.";
     Stream inputStream = assembly.GetManifestResourceStream(basePath + "Input.pdf");
     PdfLoadedDocument document = new PdfLoadedDocument(inputStream);
+    //Get the first page from the document.
+    PdfLoadedPage page = document.Pages[0] as PdfLoadedPage;
+    //Create PDF graphics for the page.
+    PdfGraphics graphics = page.Graphics;
 }
 {% endhighlight %}
 

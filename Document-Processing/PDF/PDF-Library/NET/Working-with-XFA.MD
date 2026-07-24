@@ -7,10 +7,10 @@ documentation: UG
 ---
 # Working with XFA Forms
 
-XFA stands for XML Forms Architecture, dynamic forms are based on a XML specification. Essential<sup>&reg;</sup> PDF supports both the dynamic and static XFA forms.
+XFA stands for XML Forms Architecture. Dynamic forms are based on an XML specification. Essential<sup>&reg;</sup> PDF supports both dynamic and static XFA forms.
 
-* In a static form the form's appearance and layout is fixed, regardless of the field content.
-* Dynamic forms can change in appearance in several ways in response to changes in the data.
+* In a **static** form, the form's appearance and layout are fixed regardless of the field content.
+* **Dynamic** forms can change their appearance in several ways in response to changes in the data.
 
 ## Creating a new XFA form
 
@@ -581,7 +581,7 @@ mainForm.Fields.Add(textElement);
 document.XfaForm = mainForm;
 
 //Save the document with static form.
-document.Save("XfaForm.pdf",PdfXfaType.Static);
+document.Save("XfaForm.pdf", PdfXfaType.Static);
 //Close the document.
 document.Close();
 
@@ -593,11 +593,11 @@ Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Graphics
 Imports Syncfusion.Pdf.Xfa
 
-'Create a new PDF XFA document
+'Create a new PDF XFA document.
 Dim document As New PdfXfaDocument()
-'Set the page size
+'Set the page size.
 document.PageSettings.PageSize = PdfPageSize.A4
-'Add a new XFA page
+'Add a new XFA page.
 Dim xfaPage As PdfXfaPage = document.Pages.Add()
 
 'Create a new PDF XFA form

@@ -1,19 +1,20 @@
 ---
 title: Save PDF file to AWS S3 | Syncfusion
-description: This page explains how to save a PDF file to AWS S3 storage using C# with the Syncfusion .NET PDF library
+description: This page explains how to save a PDF file to AWS S3 storage using C# with the Syncfusion .NET PDF library.
+keywords: aws s3, save pdf, c# save pdf, upload pdf
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 # Save PDF file to AWS S3
 
-To save a PDF file to AWS S3, you can follow the steps below
+To save a PDF file to AWS S3, you can follow the steps below.
 
-Step 1: Create a simple console application
+Step 1: Create a simple console application.
 
 ![Project configuration window](Save-PDF-Images/Console-Application.png)
 
-Step 2: Install the [Syncfusion.Pdf.Net.Core ](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) and [AWSSDK.S3](https://www.nuget.org/packages/AWSSDK.S3) NuGet packages as a reference to your project from the [NuGet.org](https://www.nuget.org/).
+Step 2: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) and [AWSSDK.S3](https://www.nuget.org/packages/AWSSDK.S3) NuGet packages as a reference to your project from the [NuGet.org](https://www.nuget.org/).
 <br><br>
 ![NuGet package installation](Save-PDF-Images/Syncfusion.Pdf.Net.Core-nuget.png)
 <br><br>
@@ -39,41 +40,37 @@ Step 4: Add the below code example to create a simple PDF and save in AWS S3.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-// Create a new PDF document
+// Create a new PDF document.
 using (PdfDocument document = new PdfDocument())
 {
-    // Add a page to the document
+    // Add a page to the document.
     PdfPage page = document.Pages.Add();
 
-    // Create a PDF graphics for the page
+    // Get the PDF graphics for the page.
     PdfGraphics graphics = page.Graphics;
 
-    // Draw text on the page
+    // Draw text on the page.
     graphics.DrawString("Hello, Syncfusion PDF!", new PdfStandardFont(PdfFontFamily.Helvetica, 12), PdfBrushes.Black, new PointF(10, 10));
 
-    // Save the PDF to a stream
+    // Save the PDF to a memory stream.
     MemoryStream stream = new MemoryStream();
     document.Save(stream);
+    // The document is closed by the using block; reset the stream position before reading it.
+    stream.Position = 0;
 
-    // Save the stream to a file (optional)
-    File.WriteAllBytes("HelloWorld.pdf", stream.ToArray());
-
-    // Upload the PDF to AWS S3 (see next step)
-
-    // Set your AWS credentials and region
+    // Set your AWS credentials and region.
     string accessKey = "YOUR_ACCESS_KEY";
     string secretKey = "YOUR_SECRET_KEY";
-    // Change to your desired region
-    RegionEndpoint region = RegionEndpoint.YOUR_REGION; 
+    // Change to your desired region.
+    RegionEndpoint region = RegionEndpoint.YOUR_REGION;
 
-    // Create an Amazon S3 client
+    // Specify the bucket name and object key.
+    string bucketName = "YOUR_BUCKET_NAME";
+    string objectKey = "HelloWorld.pdf";
+
+    // Upload the PDF to S3.
     using (var s3Client = new AmazonS3Client(accessKey, secretKey, region))
     {
-        // Specify the bucket name and object key
-        string bucketName = "your_bucket_name";
-        string objectKey = "HelloWorld.pdf";
-
-        // Upload the PDF to S3
         using (var transferUtility = new TransferUtility(s3Client))
         {
             transferUtility.Upload(stream, bucketName, objectKey);

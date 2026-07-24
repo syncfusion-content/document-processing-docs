@@ -6,9 +6,9 @@ control: PDF
 documentation: UG
 ---
 
-# Working with .NET PDF Tables using the PdfGrid model 
+# Working with .NET PDF Tables using the PdfGrid model
 
-The [Syncfusion<sup>&reg;</sup> .NET PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net) supports creating [PDF tables or grids](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/pdf-tables). The PDF table displays data from the data sources or by direct data binding in a tabular format. It is designed for high performance with advanced customization, styling, and formatting. Here you will see the creation of a PDF table using the ``PdfGrid`` model.
+The [.NET PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net) supports creating [PDF tables or grids](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/pdf-tables). The PDF table displays data from data sources or by direct data binding in a tabular format. It is designed for high performance with advanced customization, styling, and formatting. This section demonstrates how to create a PDF table using the `PdfGrid` model.
 
 Check the following video for a quick guide on creating a table in a PDF document using the PDF Library.
 {% youtube "https://youtu.be/BIRbIOFUdak?si=nVg6U56SCHNmybUA" %}
@@ -23,7 +23,7 @@ The [DataSource](https://help.syncfusion.com/cr/document-processing/Syncfusion.P
 
 N> In Silverlight, Windows store apps, and Xamarin, only the strongly typed IEnumerable objects are supported. 
 
-The following code sample illustrates how to create a simple table from a data source using the ``PdfGrid.``
+The following code sample illustrates how to create a simple table from a data source using `PdfGrid`.
 
 {% tabs %}
 
@@ -1224,8 +1224,8 @@ dataTable.Columns.Add("Name")
 dataTable.Rows.Add(New Object() {"E01", "Clay"})
 dataTable.Rows.Add(New Object() {"E02", "Thomas"})
 dataTable.Rows.Add(New Object() {"E03", "George"})
-dataTable.Rows.Add(new object() {"E04", "Stefan"})
-dataTable.Rows.Add(new object() {"E05", "Mathew"})
+dataTable.Rows.Add(New Object() {"E04", "Stefan"})
+dataTable.Rows.Add(New Object() {"E05", "Mathew"})
 
 'Assign data source.
 pdfGrid.DataSource = dataTable
@@ -1362,12 +1362,12 @@ dataTable.Columns.Add("Name")
 dataTable.Rows.Add(New Object() {"E01", "Clay"})
 dataTable.Rows.Add(New Object() {"E02", "Thomas"})
 dataTable.Rows.Add(New Object() {"E03", "George"})
-dataTable.Rows.Add(new object() { "E04", "Stefan"})
-dataTable.Rows.Add(new object() { "E05", "Mathew"})
+dataTable.Rows.Add(New Object() {"E04", "Stefan"})
+dataTable.Rows.Add(New Object() {"E05", "Mathew"})
 
 'Assign data source.
 pdfGrid.DataSource = dataTable
-'Initialize grid built-in style. 
+'Initialize grid built-in style.
 Dim tableStyleOption As New PdfGridBuiltinStyleSettings()
 tableStyleOption.ApplyStyleForBandedRows = True
 tableStyleOption.ApplyStyleForHeaderRow = True
@@ -1387,14 +1387,14 @@ doc.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Table/PdfGrid/Apply-built-in-style-to-table-with-table-option).
 
-The following image shows the PDF document with `PdfGridBuiltinStyle.Gridtable4Accent4`.
+The following image shows the PDF document with `PdfGridBuiltinStyle.GridTable4Accent4`.
 <img src="Table_images/Gridtable4Accent4.png" alt="Gridtable4Accent4 image" width="100%" Height="Auto"/>
 
-## Pagination 
+## Pagination
 
-Essential<sup>&reg;</sup> PDF supports to paginate the [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) using [PdfGridLayoutFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridLayoutFormat.html) class.
+The Essential<sup>&reg;</sup> PDF library supports pagination of the [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) using the [PdfGridLayoutFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridLayoutFormat.html) class.
 
-The below sample illustrates how to allow the ``PdfGrid`` to flow across pages.
+The following sample illustrates how to allow the `PdfGrid` to flow across pages.
 
 {% tabs %}
 
