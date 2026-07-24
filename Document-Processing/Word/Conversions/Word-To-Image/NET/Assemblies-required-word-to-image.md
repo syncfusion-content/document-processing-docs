@@ -1,13 +1,13 @@
 ---
 title: Assemblies required to convert Word document to Image | Syncfusion
-description: Learn the assemblies required to convert Word document to image using the .NET Word (DocIO) library.
+description: Learn the assemblies required to convert a Word document to Image using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 # Assemblies required to convert Word document to Image
 
-## Converting Word document to image
+## Converting Word document to Image
 
 For converting a Word document to image, the following assemblies need to be referenced in your application.
 <table>
@@ -32,18 +32,18 @@ Syncfusion.DocIO.Portable<br/>Syncfusion.Compression.Portable<br/>Syncfusion.Off
 <td>
 {{'[Windows UI Library (WinUI)](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-winui)' | markdownify}}<br/> {{'[.NET Multi-platform App UI (.NET MAUI)](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-maui)' | markdownify}}<br/>
 </td><td>
-Syncfusion.DocIO.NET<br/>Syncfusion.Compression.NET<br/>Syncfusion.OfficeChart.NET<br/>Syncfusion.Pdf.NET<br/>Syncfusion.DocIORenderer.NET<br/>Syncfusion.Pdf.Imaging.NET<br/>Syncfusion.MetafileRenderer.NET<br/> SkiaSharp<br/>Syncfusion.SkiaSharpHelper.NET</td></tr>
+Syncfusion.DocIO.NET<br/>Syncfusion.Compression.NET<br/>Syncfusion.OfficeChart.NET<br/>Syncfusion.Pdf.NET<br/>Syncfusion.DocIORenderer.NET<br/>Syncfusion.Pdf.Imaging.NET<br/>Syncfusion.MetafileRenderer.NET<br/>SkiaSharp<br/>Syncfusion.SkiaSharpHelper.NET</td></tr>
 </table>
 
 T> 1. If you encounter issues while using the .NET Word library in ASP.NET Core, refer to the [troubleshooting guide](https://support.syncfusion.com/kb/article/16012/troubleshoot-guide-for-aspnet-core-word-docio-library-issues#things-to-check-while-facing-an-issue-in-word-library) for recommended checks and solutions.
 T> 2. Switch to NuGet packages for a seamless experience:
 T>    * Get frequent bug fixes every week.
 T>    * Upgrade quickly with no manual effort.
-T> Note: To avoid trail watermark when using NuGet packages, it is recommended to register license key in application. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+T> 3. To avoid a trial watermark when using NuGet packages, it is recommended to register the license key in the application. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 T>
 T> Refer [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/nuget-packages-required-word-to-image) to know more about NuGet packages required.
 
-#### Retired Platforms
+### Retired Platforms
 
 The following assemblies need to be referenced in your application based on the platform.
 
@@ -63,12 +63,13 @@ Syncfusion.DocIO.Base<br/>Syncfusion.Compression.Base<br/>Syncfusion.OfficeChart
 Syncfusion.DocIO.Portable<br/>Syncfusion.Compression.Portable<br/>Syncfusion.OfficeChart.Portable<br/>Syncfusion.Pdf.Portable<br/>Syncfusion.DocIORenderer.Portable<br/>Syncfusion.Pdf.Imaging.Portable<br/>Syncfusion.MetafileRenderer.Portable<br/>SkiaSharp.HarfBuzz<br/>Syncfusion.SkiaSharpHelper.Portable<br/></td></tr>
 </table>
 
+N> Xamarin is retired. For new development, migrate to [.NET MAUI](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-maui).
 N> 1. Starting with the v24.1.x, if you reference "Syncfusion.DocIORenderer", you have to add the "Syncfusion.Pdf.Imaging" assembly reference in your projects to perform Word to Image conversion.
 N> 2. Starting with the v27.1.x, if you reference "Syncfusion.DocIORenderer", you have to add the "Syncfusion.MetafileRenderer" assembly reference in your projects to perform Word to Image conversion.
 
 ## Converting Charts
 
-The following assemblies are required to be referred in addition to the above mentioned assemblies for converting the chart present in the Word document and image.
+The following assemblies are required to be referenced in addition to the above mentioned assemblies for converting the chart present in the Word document to image.
 <table>
 <thead>
 <tr>
@@ -81,7 +82,7 @@ WPF, Windows Forms, ASP.NET MVC<br/></td><td>
 Syncfusion.OfficeChartToImageConverter.WPF<br/>Syncfusion.SfChart.WPF<br/></td></tr>
 </table>
 
-#### Retired Platforms
+### Retired Platforms
 
 The following assemblies need to be referenced in your application based on the platform.
 

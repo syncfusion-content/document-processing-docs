@@ -194,7 +194,7 @@ N> Tools that operate on a single document type (e.g., [WordDocumentAgentTools](
 
 ### Document Storage Manager
 
-Document Storage Manager reads documents from and writes them back to storage (such as Azure Blob Storage, S3, or local disk) on each tool invocation; no in‑memory objects are maintained, so every tool call opens and saves document instances, making this mode well suited for web APIs and applications that require horizontal scaling, support large documents, or need state persistence across sessions.
+Document Storage Manager reads documents from and writes them back to storage (such as Azure Blob Storage, S3, or local disk) on each tool invocation; no in‑memory objects are maintained, so every tool call opens and saves document instances, making this mode well-suited for web APIs and applications that require horizontal scaling, support large documents, or need state persistence across sessions.
 
 ## See Also
 
