@@ -31,7 +31,7 @@ The Ink Eraser is most useful in these scenarios:
 
 ## Enable Ink Eraser
 
-To enable the Ink Eraser feature, inject the following modules into the Angular PDF Viewer:
+To enable the Ink Eraser feature, inject the following services into the Angular PDF Viewer:
 
 - [**Annotation**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#annotation)
 - [**Toolbar**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#toolbar)
@@ -426,7 +426,7 @@ export class AppComponent implements OnInit {
 - **Partial erasing**: You can erase any portion of an ink stroke without affecting other strokes.
 - **Real-time erasing**: Erased content is immediately removed as the eraser moves across the stroke.
 - **Undo/Redo support**: Eraser actions can be undone and redone using the toolbar buttons or keyboard shortcuts (Ctrl+Z, Ctrl+Y).
-- **Size adjust-ability**: The eraser size can be changed at any time without exiting eraser mode.
+- **Size adjustability**: The eraser size can be changed at any time without exiting eraser mode.
 - **Mouse and touch input**: The eraser works with mouse, stylus, and touch input on supported devices.
 
 ### Programmatic control behavior

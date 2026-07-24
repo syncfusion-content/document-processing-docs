@@ -145,7 +145,7 @@ Update properties and call `editAnnotation()`.
 editStickyProgrammatically(): void {
   const pdfViewer = (document.getElementById('pdfViewer') as any).ej2_instances[0];
   for (const ann of pdfViewer.annotationCollection) {
-    if (ann.subject === 'Volume calculation') {
+    if (ann.subject === 'Sticky Note') {
       ann.strokeColor = '#0000FF';
       ann.thickness = 2;
       ann.opacity = 0.8;
@@ -157,12 +157,12 @@ editStickyProgrammatically(): void {
 {% endhighlight %}
 {% endtabs %}
 
-### Delete Volume Annotation
+### Delete Sticky Note
 
-Delete Volume Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
+Delete Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../delete-annotation).
 
 ## Set Default Properties During Initialization
-Configure scale defaults using [`stickyNotesSettings`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#stickyNotesSettings).
+Configure sticky note defaults using [`stickyNotesSettings`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#stickyNotesSettings).
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}

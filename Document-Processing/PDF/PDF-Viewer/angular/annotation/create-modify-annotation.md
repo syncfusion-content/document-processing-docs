@@ -26,15 +26,15 @@ Jump directly to a specific annotation type for detailed usage and examples:
 - Line: [Line annotation](./annotation-types/line-annotation)
 - Arrow: [Arrow annotation](./annotation-types/arrow-annotation)
 - Rectangle: [Rectangle annotation](./annotation-types/rectangle-annotation)
-- Circle : [Circle annotation](./annotation-types/circle-annotation)
+- Circle: [Circle annotation](./annotation-types/circle-annotation)
 - Polygon: [Polygon annotation](./annotation-types/polygon-annotation)
 
 **Measurement annotations:**
 - Distance: [Distance annotation](./annotation-types/distance-annotation)
 - Perimeter: [Perimeter annotation](./annotation-types/perimeter-annotation)
 - Area: [Area annotation](./annotation-types/area-annotation)
-- Radius: [Radius annotation](./annotation-types/ra)
-- Volume: [Volume annotation](./annotation-types/vo)
+- Radius: [Radius annotation](./annotation-types/radius-annotation)
+- Volume: [Volume annotation](./annotation-types/volume-annotation)
 
 **Other annotations:**
 - Redaction: [Redaction annotation](./annotation-types/redaction-annotation)
@@ -62,7 +62,7 @@ N> Each annotation type page includes both UI steps and programmatic examples sp
 
 Creation patterns vary by type. Refer to the individual annotation pages for tailored code.
 
-Example: creating a Rectangle annotation using [`addAnnotation`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#addannotation).
+Example: creating a Redaction annotation using [`addAnnotation`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#addannotation).
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}

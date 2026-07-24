@@ -159,7 +159,7 @@ export class AppComponent {
 {% endtabs %}
 
 ## Manage Rectangle (Edit, Move, Resize, Delete)
-### Edit Rectangle 
+### Edit Rectangle
 
 #### Edit Rectangle (UI)
 - Select a rectangle to view resize handles.

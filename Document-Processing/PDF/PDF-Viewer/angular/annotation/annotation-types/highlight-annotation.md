@@ -71,7 +71,7 @@ export class AppComponent {
 
 ![Highlight tool](../../../javascript-es6/annotations/annotation-images/highlight-tool.gif)
 
-### Apply highlight using Context Menu
+### Add Highlight Using the Context Menu
 
 Right-click a selected text region → select **Highlight**.
 
@@ -221,7 +221,7 @@ For detailed behavior, supported deletion workflows, and API reference, see [Del
 
 ### Comments
 
-Use the [Comments panel](../comments) to add, view, and reply to threaded discussions linked to underline annotations.
+Use the [Comments panel](../comments) to add, view, and reply to threaded discussions linked to highlight annotations.
 It provides a dedicated UI for reviewing feedback, tracking conversations, and collaborating on annotation‑related notes within the PDF Viewer.
 
 ## Set properties while adding Individual Annotation

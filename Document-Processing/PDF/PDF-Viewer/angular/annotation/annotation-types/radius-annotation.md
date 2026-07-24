@@ -151,7 +151,7 @@ export class AppComponent {
 {% endtabs %}
 
 ## Manage Radius (Move, Reshape, Edit, Delete)
-- **Move**: Drag inside the polygon to reposition it.
+- **Move**: Drag inside the circle to reposition it.
 - **Reshape**: Drag any vertex handle to adjust points and shape.
 
 ### Edit Radius Annotation
@@ -240,7 +240,7 @@ export class AppComponent {
 {% endtabs %}
 
 ## Set Properties While Adding Individual Annotation
-Apply defaults for Area using the [`radiusSettings`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#radiussettings) property.
+Apply defaults for Radius using the [`radiusSettings`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#radiussettings) property.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}

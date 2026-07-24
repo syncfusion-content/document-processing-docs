@@ -117,7 +117,7 @@ The following examples switch to stamp annotation modes.
 ## Add a stamp annotation to the PDF document programmatically
 The PDF Viewer library allows adding a stamp annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation#addannotation) method.
 
-Here are examples showing how to add stamp annotations programmatically using addAnnotation():
+Here are examples showing how to add stamp annotations programmatically using `addAnnotation()`:
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
