@@ -15,7 +15,7 @@ Circle annotations let users highlight circular regions or draw emphasis bubbles
 
 ## Enable Circle Annotation in the Viewer
 
-To enable Line annotations, inject the following modules into the React PDF Viewer:
+To enable Circle annotations, inject the following modules into the React PDF Viewer:
 
 - [**Annotation**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#annotation)
 - [**Toolbar**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#toolbar)
@@ -58,7 +58,7 @@ N> When in Pan mode, selecting a shape tool automatically switches the viewer to
 
 ### Enable Circle Mode
 
-Switch the viewer into highlight mode using `setAnnotationMode('Circle')`.
+Switch the viewer into Circle mode using `setAnnotationMode('Circle')`.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -179,7 +179,7 @@ See [**Delete Annotation**](../remove-annotations) for full behavior and workflo
 ### Comments
 Use the [**Comments panel**](../comments) to add, view, and reply to threaded discussions linked to circle annotations. It provides a dedicated interface for collaboration and review within the PDF Viewer.
 
-## Set properties while adding Individual Annotation
+## Set properties while adding individual annotations
 Set properties for individual circle annotations by passing values directly during [`addAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation).
 
 {% tabs %}
@@ -238,7 +238,7 @@ Disable shape annotations (Line, Arrow, Rectangle, Circle, Polygon) using the [`
 ## Handle Circle Events
 
 The PDF viewer provides annotation life-cycle events that notify when Circle annotations are added, modified, selected, or removed.
-For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event)
+For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event).
 
 ## Export and Import
 
