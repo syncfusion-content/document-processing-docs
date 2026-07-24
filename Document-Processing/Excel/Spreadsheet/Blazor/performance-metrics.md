@@ -1,16 +1,15 @@
 ---
 layout: post
-title: Performance Metrics in Blazor Spreadsheet Control | Syncfusion
-description: Learn here all about performance metrics in the Blazor Spreadsheet control, including how it manages data, handles rendering speed and more. 
+title: Performance Metrics in Blazor Spreadsheet Component | Syncfusion
+description: Learn about performance metrics in the Blazor Spreadsheet component, including rendering, styling, and file import/export.
 platform: document-processing
-control: Performance 
+control: Spreadsheet
 documentation: ug
 ---
 
-# Performance Metrics in blazor Spreadsheet Control
+# Performance Metrics in Blazor Spreadsheet Component
 
-Performance metrics show how efficiently the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) handles large datasets and core operations such as rendering, styling, number Formats and file import/export. This documentation provides the measured results for these operations to give a clear view of how the control performs under different workloads.
-
+Performance metrics show how efficiently the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) handles large datasets and core operations such as rendering, styling, number formats, and file import/export. This documentation provides the measured results for these operations to give a clear view of how the component performs under different workloads.
 
 ## Environment
 
@@ -28,50 +27,47 @@ The following environment configuration is used for performance evaluation:
 
 ## Spreadsheet Features
 
-This section outlines the operations evaluated in the Spreadsheet when working with large datasets. It covers actions such as rendering cells, applying styles, number formats and file import/export to help understand how the control processes common spreadsheet tasks.
+This section outlines the operations evaluated in the Spreadsheet when working with large datasets. It covers actions such as rendering cells, applying styles, applying number formats, and file import/export to help understand how the component processes common spreadsheet tasks.
 
-### Server 
+### Blazor Server
 
-| Operation                   | Dataset Size | Time (sec) |
-|-----------------------------|--------------|-------------|
-| Initial Rendering           | 250k cells   | 1.31 sec    |
-| Applying Styles             | 250k cells   | 12.0 sec    |
-| Applying Number Formats     | 250k cells   | 0.97 sec    |
+| Operation | Dataset Size | Time (sec) |
+|--|--|--|
+| Initial Rendering | 250K cells | 1.31 |
+| Applying Styles | 250K cells | 12.0 |
+| Applying Number Formats | 250K cells | 0.97 |
 
+### Blazor WebAssembly (Wasm)
 
-### Wasm
+| Operation | Dataset Size | Time (sec) |
+|--|--|--|
+| Initial Rendering | 250K cells | 6.99 |
+| Applying Styles | 250K cells | 15.98 |
+| Applying Number Formats | 250K cells | 9.45 |
 
-| Operation                   | Dataset Size | Time (sec) |
-|-----------------------------|--------------|-------------|
-| Initial Rendering           | 250k cells   | 6.99 sec    |
-| Applying Styles             | 250k cells   | 15.98 sec    |
-| Applying Number Formats     | 250k cells   | 9.45 sec    |
-
-
-## Import and export performance metrics
+## Import and Export Performance Metrics
 
 This section focuses on evaluating how the Spreadsheet handles file import and export operations involving large datasets with formatting and validation. It provides insight into how efficiently these operations are processed under varying data conditions.
 
-### Server 
+### Blazor Server
 
-| Operation                               | Dataset Size                     | Time (sec) |
-|-----------------------------------------|-----------------------------------|------------|
-| Importing                               | 250k cells without formats           | 2.35 sec   |
-| Importing                               | 250k cells with formats         | 3.12 sec   |
-| Exporting                               | 250k cells without formats           | 1.07 sec   |
-| Exporting                               | 250k cells with formats        | 1.26 sec   |
+| Operation | Dataset Size | Time (sec) |
+|--|--|--|--|
+| Importing | 250K cells without formats | 2.35 |
+| Importing | 250K cells with formats | 3.12 |
+| Exporting | 250K cells without formats | 1.07 |
+| Exporting | 250K cells with formats | 1.26 | 
 
-### Wasm
+### Blazor WebAssembly (Wasm)
 
+| Operation | Dataset Size | Time (sec) |
+|--|--|--|--|
+| Importing | 250K cells without formats | 38 |
+| Importing | 250K cells with formats | 50 |
+| Exporting | 250K cells without formats | 6.25 |
+| Exporting | 250K cells with formats | 8.14 |
 
-| Operation                               | Dataset Size                     | Time (sec) |
-|-----------------------------------------|-----------------------------------|------------|
-| Importing                               | 250k cells without formats           |  38 sec   |
-| Importing                               | 250k cells with formats         |  50 sec   |
-| Exporting                               | 250k cells without formats           | 6.25 sec   |
-| Exporting                               | 250k cells with formats         |  8.14 sec  |
-
-> **Disclaimer:**  Performance metrics and memory benchmarking are based on internal tests under specific conditions. Actual results may vary depending on the environment and usage. 
+N> **Disclaimer:**  Performance metrics and memory benchmarking are based on internal tests under specific conditions. Actual results may vary depending on the environment and usage. 
 
 ## See Also
 

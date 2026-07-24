@@ -9,13 +9,13 @@ documentation: ug
 ---
 
 # Working With Spreadsheet in Windows Forms Spreadsheet
- This section explains about accessing the Worksheet, Grid and the events associated with it.
+ This section explains how to access the Worksheet, Grid, and related events.
 
 ## Accessing the worksheet
 
 A __workbook__ is an excel document in the Spreadsheet. It is an object that exposes the [IWorkbook](https://help.syncfusion.com/cr/windowsforms/Syncfusion.XlsIO.IWorkbook.html) interface. Currently loaded workbook in the Spreadsheet can be accessed by using the [Workbook](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_Workbook) property of Spreadsheet.
 
-A workbook consists of one or more worksheets stored within the worksheet collection. Accessing the worksheets in the collection, can be done by the following ways,
+A workbook consists of one or more worksheets stored within the worksheet collection. Accessing the worksheets in the collection can be done in the following ways:
 
 {% tabs %}
 {% highlight c# %}
@@ -73,7 +73,7 @@ void spreadsheet_WorksheetRemoved(object sender, WorksheetRemovedEventArgs args)
 
 You can also access the each `SpreadsheetGrid` in the Spreadsheet either by passing the particular sheet name in the [GridCollection](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_GridCollection) or by invoking `WorkbookLoaded` Event of Spreadsheet. 
 
-### By using sheet name
+### Using a Sheet Name
 
 For your reference, setting the row and column count dynamically for the second sheet in the Workbook
 
@@ -87,7 +87,7 @@ spreadsheet.GridCollection[sheet.Name].ColumnCount = 12;
 {% endhighlight %}
 {% endtabs %} 
 
-### By using event
+### Using Events
 
 {% tabs %}
 {% highlight c# %}
@@ -135,7 +135,7 @@ spreadsheet.SetActiveSheet("Sheet5");
 
 Spreadsheet allows to access a single cell or range of cells in the workbook using `IRange` interface.
 
-The following code shows the several ways of accessing a single cell or range of cells in the `Worksheet`,
+The following code shows several ways to access a single cell or range of cells in the `Worksheet`.
 
 {% tabs %}
 {% highlight c# %}
@@ -152,7 +152,7 @@ var cell2 = spreadsheet.Workbook.Worksheets[0].Range["Namerange"];
 // Accessing a range of cells by specifying cell's address.
 var cell3 = spreadsheet.Workbook.Worksheets[0].Range["A5:C8"];
 
-// Accessing a range of cells specifying cell row and column index.
+// Accessing a range of cells by specifying cell row and column index.
 var cell4 = spreadsheet.Workbook.Worksheets[0].Range[15, 1, 15, 3];
 
 {% endhighlight %}
@@ -180,7 +180,7 @@ var displayValue = spreadsheet.Workbook.Worksheets[1].Range[4, 1].DisplayText;
 
 ## Setting the value or formula to a cell
 
-In Spreadsheet, to update the cell value and formula programmatically, [SetCellValue](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetGrid.html#Syncfusion_Windows_Forms_Spreadsheet_SpreadsheetGrid_SetCellValue_Syncfusion_XlsIO_IRange_System_String_) method of [SpreadsheetGrid](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetGrid.html) should be invoked and then invalidate that cell to update the view.
+To update a cell's value or formula programmatically in the Spreadsheet, invoke the [SetCellValue](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetGrid.html#Syncfusion_Windows_Forms_Spreadsheet_SpreadsheetGrid_SetCellValue_Syncfusion_XlsIO_IRange_System_String_) method of [SpreadsheetGrid](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetGrid.html) and then invalidate that cell to update the view.
 
 {% tabs %}
 {% highlight c# %}
@@ -213,7 +213,7 @@ spreadsheet.Workbook.Worksheets[0].Range[3, 3].Clear(ExcelClearOptions.ClearData
 {% endhighlight %}
 {% endtabs %}
 
-N> [ExcelClearOptions](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelClearOptions.html) is an enum which specifies the possible directions to clear the cell formats, content, comments,conditional format,data validation or clear all of them.
+N> [ExcelClearOptions](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelClearOptions.html) is an enum that specifies the ways to clear cell formats, content, comments, conditional formats, data validation, or to clear all of them.
 
 ## Refreshing the view
 
@@ -246,7 +246,7 @@ spreadsheet.ActiveGrid.InvalidateCellBorders(range);
 
 ## Scrolling the Grid programmatically
 
-Spreadsheet allows the user to scroll the grid into mentioned cell, by using [ScrollInView](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.SfCellGrid.html#Syncfusion_Windows_Forms_CellGrid_SfCellGrid_ScrollInView_Syncfusion_Windows_Forms_CellGrid_ScrollAxis_RowColumnIndex_) method of `SpreadsheetGrid`.
+Spreadsheet allows you to scroll the grid to a specified cell by using the [ScrollInView](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.CellGrid.SfCellGrid.html#Syncfusion_Windows_Forms_CellGrid_SfCellGrid_ScrollInView_Syncfusion_Windows_Forms_CellGrid_ScrollAxis_RowColumnIndex_) method of `SpreadsheetGrid`.
 
 {% tabs %}
 {% highlight c# %}
@@ -311,13 +311,12 @@ spreadsheet.ResumeFormulaCalculation();
 //Suspends the automatic formula calculation
 spreadsheet.SuspendFormulaCalculation();
 
-
 {% endhighlight %}
 {% endtabs %}
 
 ## Close the popup programmatically 	
 
-In Spreadsheet, popup windows are used to display the options like copy paste option, fill series option, etc. which will be closed automatically on certain actions. However you can also able to close the popup programmatically by using the [ShowHidePopup](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetGrid.html#Syncfusion_Windows_Forms_Spreadsheet_SpreadsheetGrid_ShowHidePopup_System_Boolean_) method of `SpreadsheetGrid`.
+In the Spreadsheet, popup windows are used to display options such as the copy-paste and fill-series options, which close automatically on certain actions. However, you can also close the popup programmatically by using the [ShowHidePopup](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetGrid.html#Syncfusion_Windows_Forms_Spreadsheet_SpreadsheetGrid_ShowHidePopup_System_Boolean_) method of `SpreadsheetGrid`.
 
 {% tabs %}
 {% highlight c# %}
@@ -353,4 +352,3 @@ void Spreadsheet_PropertyChanged(object sender, System.ComponentModel.PropertyCh
 
 {% endhighlight %}
 {% endtabs %}
-

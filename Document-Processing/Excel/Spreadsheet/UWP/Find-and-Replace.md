@@ -9,11 +9,11 @@ documentation: ug
 
 # Find and Replace in UWP Spreadsheet (SfSpreadsheet)
 
-This section explains about Find and Replace operations in SfSpreadsheet. 
+This section explains Find and Replace operations in SfSpreadsheet.
 
-## Find 
+## Find
 
-Searches for specific data such as particular number or text according to specified options and returns an IRange representing the cell or null if no cell is found. The various options in Find operation are
+Searches for specific data such as a particular number or text according to specified options and returns an `IRange` representing the cell, or `null` if no cell is found. The Find operation provides the following methods:
 
 * `FindAll`
 * `FindNext`
@@ -22,7 +22,7 @@ Searches for specific data such as particular number or text according to specif
 * `FindFormulas`
 * `FindDataValidation`
 
-The common parameters to be passed in Find functions are,
+The common parameters for the Find methods are:
 
 * The option to specify whether the search can be done within the Workbook(`IWorkbook`) or Worksheet(`IWorksheet`).
 * The text to be searched.
@@ -33,7 +33,7 @@ The common parameters to be passed in Find functions are,
 
 ### Find All
 
-Searches every occurrence of specific data based on the criteria that you are searching for and returns an `IRange` list representing the cells in `SfSpreadsheet`
+Searches every occurrence of specific data based on the criteria that you are searching for and returns an `IRange` list representing the cells in `SfSpreadsheet`.
 
 {% tabs %}
 {% highlight c# %}
@@ -41,21 +41,19 @@ Searches every occurrence of specific data based on the criteria that you are se
 //Search the entire workbook
 var list = spreadsheet.SearchManager.FindAll(spreadsheet.Workbook, "sample", SearchBy.ByRows, ExcelFindType.Text, false, true);
 
-// To select the matched cell content ranges,
-
+//To select the matched cell content ranges,
 foreach (var cell in list)
-{  
-  spreadsheet.ActiveGrid.SelectionController.AddSelection(GridRangeInfo.Cell(cell.Row, cell.Column));          
+{
+  spreadsheet.ActiveGrid.SelectionController.AddSelection(GridRangeInfo.Cell(cell.Row, cell.Column));
 }
 
 //Search the particular worksheet
 var list = spreadsheet.SearchManager.FindAll(spreadsheet.Workbook.Worksheets[0], "sample", SearchBy.ByRows, ExcelFindType.Text, false, true);
 
-// To select the matched cell content ranges,
-
+//To select the matched cell content ranges,
 foreach (var cell in list)
 {
-  spreadsheet.ActiveGrid.SelectionController.AddSelection(GridRangeInfo.Cell(cell.Row, cell.Column));          
+  spreadsheet.ActiveGrid.SelectionController.AddSelection(GridRangeInfo.Cell(cell.Row, cell.Column));
 }
 
 {% endhighlight %}
@@ -63,22 +61,22 @@ foreach (var cell in list)
 
 ### Find Next
 
-Searches the first occurrence of specific data which matches the conditions and returns the matched `IRange` from the current range that represents the cell.
+Searches the first occurrence of data that matches the conditions and returns the `IRange` of the first matching cell, starting from the current cell position.
 
 {% tabs %}
 {% highlight c# %}
 
-//Search the text in entire workbook in column wise,
+//Search the text in the entire workbook column-wise
 var cell = spreadsheet.SearchManager.FindNext(spreadsheet.Workbook, "sample", SearchBy.ByColumns, ExcelFindType.Text, false, true);
 
-// To move the current cell to matched cell content range,
-spreadsheet.ActiveGrid.CurrentCell.MoveCurrentCell(cell.Row,cell.Column);          
+//To move the current cell to the matched cell content range,
+spreadsheet.ActiveGrid.CurrentCell.MoveCurrentCell(cell.Row, cell.Column);
 
-//Search the formula in particular worksheet in row wise,
-var cell = spreadsheet.SearchManager.FindNext(spreadsheet.Workbook.Worksheets[0], "sum", SearchBy.ByRows, ExcelFindType.Text, false, false);
+//Search the formula in a particular worksheet row-wise
+cell = spreadsheet.SearchManager.FindNext(spreadsheet.Workbook.Worksheets[0], "sum", SearchBy.ByRows, ExcelFindType.Formula, false, false);
 
-// To move the current cell to matched cell content range,
-spreadsheet.ActiveGrid.CurrentCell.MoveCurrentCell(cell.Row,cell.Column);          
+//To move the current cell to the matched cell content range,
+spreadsheet.ActiveGrid.CurrentCell.MoveCurrentCell(cell.Row, cell.Column);
 
 {% endhighlight %}
 {% endtabs %}
@@ -90,14 +88,13 @@ Searches and returns the `IRange` list which have conditional formatting within 
 {% tabs %}
 {% highlight c# %}
 
-//Searches the conditional formatting within the worksheet,
+//Search the conditional formatting within the worksheet
 var list = spreadsheet.SearchManager.FindConditionalFormatting(spreadsheet.Workbook.Worksheets[0]);
 
-// To select the matched cell content ranges,
-
+//To select the matched cell content ranges,
 foreach (var cell in list)
 {
-  spreadsheet.ActiveGrid.SelectionController.AddSelection(GridRangeInfo.Cell(cell.Row, cell.Column));          
+  spreadsheet.ActiveGrid.SelectionController.AddSelection(GridRangeInfo.Cell(cell.Row, cell.Column));
 }
 
 {% endhighlight %}
@@ -110,14 +107,13 @@ Searches and returns the `IRange` list which have constants within the specified
 {% tabs %}
 {% highlight c# %}
 
-//Searches the constants within the worksheet,
+//Search the constants within the worksheet
 var list = spreadsheet.SearchManager.FindConstants(spreadsheet.Workbook.Worksheets[0]);
 
-// To select the matched cell content ranges,
-
+//To select the matched cell content ranges,
 foreach (var cell in list)
 {
-   spreadsheet.ActiveGrid.SelectionController.AddSelection(GridRangeInfo.Cell(cell.Row, cell.Column));         
+  spreadsheet.ActiveGrid.SelectionController.AddSelection(GridRangeInfo.Cell(cell.Row, cell.Column));
 }
 
 {% endhighlight %}
@@ -130,14 +126,13 @@ Searches and returns the `IRange` list which have formulas within the specified 
 {% tabs %}
 {% highlight c# %}
 
-//Searches the formulas within the worksheet,
+//Search the formulas within the worksheet
 var list = spreadsheet.SearchManager.FindFormulas(spreadsheet.Workbook.Worksheets[0]);
 
-// To select the matched cell content ranges,
-
+//To select the matched cell content ranges,
 foreach (var cell in list)
 {
-   spreadsheet.ActiveGrid.SelectionController.AddSelection(GridRangeInfo.Cell(cell.Row, cell.Column));          
+  spreadsheet.ActiveGrid.SelectionController.AddSelection(GridRangeInfo.Cell(cell.Row, cell.Column));
 }
 
 {% endhighlight %}
@@ -150,14 +145,13 @@ Searches and returns the `IRange` list which have data validation within the spe
 {% tabs %}
 {% highlight c# %}
 
-//Searches the data validation within the worksheet,
+//Search the data validation within the worksheet
 var list = spreadsheet.SearchManager.FindDataValidation(spreadsheet.Workbook.Worksheets[0]);
 
-// To select the matched cell content ranges,
-
+//To select the matched cell content ranges,
 foreach (var cell in list)
 {
-   spreadsheet.ActiveGrid.SelectionController.AddSelection(GridRangeInfo.Cell(cell.Row, cell.Column));        
+  spreadsheet.ActiveGrid.SelectionController.AddSelection(GridRangeInfo.Cell(cell.Row, cell.Column));
 }
 
 {% endhighlight %}
@@ -165,23 +159,23 @@ foreach (var cell in list)
 
 ## Replace All
 
-Searches and replaces all the texts either in the workbook or worksheet based on the given option.
+Searches and replaces all occurrences either in the workbook or in a specific worksheet based on the given option.
 
-The parameters to be passed in `ReplaceAll` function is,
+The parameters for the `ReplaceAll` function are:
 
-* The option to specify whether the search can be done within the Workbook(`IWorkbook`) or Worksheet(`IWorksheet`) in SfSpreadsheet.
-* The text to be searched.
-* The text to be replaced.
-* For a case sensitive search, pass the parameter as true otherwise you can pass the parameter as false.
-* For matching the entire cell content with the search text, pass the parameter as true otherwise you can pass the parameter as false.
+* The scope: the `IWorkbook` (entire workbook) or an `IWorksheet` (specific worksheet).
+* The text to search for.
+* The replacement text.
+* `caseSensitive` (`true`/`false`): pass `true` for a case-sensitive search, otherwise `false`.
+* `matchEntireCell` (`true`/`false`): pass `true` to match the entire cell content with the search text, otherwise `false`.
 
 {% tabs %}
 {% highlight c# %}
 
-//Replaces the text in the entire workbook
-spreadsheet.SearchManager.ReplaceAll(spreadsheet.Workbook, "sample","Sync", false, false);
+//Replace the text in the entire workbook
+spreadsheet.SearchManager.ReplaceAll(spreadsheet.Workbook, "sample", "Sync", false, false);
 
-//Replaces the text in the particular worksheet
+//Replace the text in the particular worksheet
 spreadsheet.SearchManager.ReplaceAll(spreadsheet.Workbook.Worksheets[0], "sample", "sync", false, true);
 
 {% endhighlight %}
@@ -189,12 +183,12 @@ spreadsheet.SearchManager.ReplaceAll(spreadsheet.Workbook.Worksheets[0], "sample
 
 ## Replace
 
-Searches for the text or numbers that you want to change using `FindNext` method and once the immediate matched cell has been found, use `SetCellValue` method to replace it with specified text or numbers in `SfSpreadsheet`.
+Searches for the text or numbers that you want to change using the `FindNext` method, and once the first matching cell is found, uses `SetCellValue` to replace it with the specified text or numbers in `SfSpreadsheet`.
 
 {% tabs %}
 {% highlight c# %}
 
-//Searches the given text and replaces it with specified text
+//Search the given text and replace it with the specified text
 var cell = spreadsheet.SearchManager.FindNext(spreadsheet.Workbook, "sample", SearchBy.ByColumns, ExcelFindType.Text, false, true);
 spreadsheet.ActiveGrid.SetCellValue(cell, "sync");
 

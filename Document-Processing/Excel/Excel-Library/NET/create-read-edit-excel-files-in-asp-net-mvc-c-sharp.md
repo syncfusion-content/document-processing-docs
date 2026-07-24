@@ -17,7 +17,6 @@ The following steps illustrate creating a simple invoice-formatted Excel documen
 - Visual Studio 2017 or later with the **ASP.NET and web development** workload installed.
 - .NET Framework 4.5.2 or later.
 - A user account with write permissions to the project folder.
-- The `AdventureCycles-Logo.png` image placed in the project's `App_Data` folder.
 
 Step 1: Create a new ASP.NET MVC application project.
 

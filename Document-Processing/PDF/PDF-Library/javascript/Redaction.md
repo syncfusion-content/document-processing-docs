@@ -1,78 +1,124 @@
 ---
 title: Redaction in JavaScript PDF Library |Syncfusion
+canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: This section explains how to redact content from an existing PDF document by using the JavaScript PDF Library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
+
 # Redaction in JavaScript PDF Library
 
-Redacting a PDF is the process of permanently removing sensitive or confidential information from PDF documents. [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) provides an easy way to redact PDF documents. 
+Redacting a PDF is the process of permanently removing sensitive or confidential information from a PDF document. The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) supports permanent redaction of PDF documents, including text, images, and metadata, by defining redaction regions and applying an irreversible overlay on top of the original content.
 
 N> For redaction features, you need to install the `@syncfusion/ej2-pdf-data-extract` package as an add-on.
 
-## Removing sensitive content from the PDF document
+## Remove sensitive content from the PDF document
 
-Redaction permanently removes confidential or sensitive information from a PDF. The [PdfRedactor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfredactor) and [PdfRedactionRegion](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfredactionregion) classes allow you to mark specific areas and apply irreversible redaction to the document.
+The [`PdfRedactor`](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfredactor) and [`PdfRedactionRegion`](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfredactionregion) classes let you mark specific areas on a page and then apply irreversible redaction to the document.
+
+The following example loads an existing PDF, adds a single redaction region, applies the redaction, and saves the result.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument } from '@syncfusion/ej2-pdf';
 import { PdfRedactor, PdfRedactionRegion, ApplicationPlatform } from '@syncfusion/ej2-pdf-data-extract';
 
-// Load the document
+// Load the source PDF
 let document: PdfDocument = new PdfDocument(data);
-// Create a new text extractor
+// Create the redactor
 let redactor: PdfRedactor = new PdfRedactor(document);
-// Add redactions to the collection
+// Define the redaction region
 let redactions: PdfRedactionRegion[] = [];
-redactions.push(new PdfRedactionRegion(0, {x: 10, y: 10, width: 100, height: 50}));
+redactions.push(new PdfRedactionRegion(0, { x: 10, y: 10, width: 100, height: 50 }));
+// Add the regions to the redactor
 redactor.add(redactions);
-// Define a canvas render callback that returns a canvas element and the application platform.
-const canvasRenderCallback = (): {canvas: any, applicationPlatform: ApplicationPlatform} => {
+// Provide a canvas that the redactor can use while rasterizing page content
+const canvasRenderCallback = (): { canvas: any, applicationPlatform: ApplicationPlatform } => {
     const canvas = document.createElement('canvas');
     return { canvas: canvas, applicationPlatform: ApplicationPlatform.typescript };
 };
-// Apply redactions on the PDF document
-await redactor.redact(callBack: canvasRenderCallback);
-// Save the document
+// Apply the redactions
+await redactor.redact(canvasRenderCallback);
+// Save and dispose
 document.save('output.pdf');
-// Destroy the document
 document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
-
-// Load the document
+// Load the source PDF
 var document = new ej.pdf.PdfDocument(data);
-// Create a new text extractor
+// Create the redactor
 var redactor = new ej.pdfdataextract.PdfRedactor(document);
-// Add redactions to the collection
+// Define the redaction region
 var redactions = [];
-redactions.push(new PdfRedactionRegion(0, {x: 10, y: 10, width: 100, height: 50}));
+redactions.push(new ej.pdfdataextract.PdfRedactionRegion(0, { x: 10, y: 10, width: 100, height: 50 }));
+// Add the regions to the redactor
 redactor.add(redactions);
-// Define a canvas render callback that returns a canvas element and the application platform.
-const canvasRenderCallback = (): {canvas, applicationPlatform} => {
-    const canvas = document.createElement('canvas');
-    return { canvas: canvas, applicationPlatform: ej.pdf.ApplicationPlatform.typescript };
+// Provide a canvas that the redactor can use while rasterizing page content
+var canvasRenderCallback = function () {
+    var canvas = document.createElement('canvas');
+    return { canvas: canvas, applicationPlatform: ej.pdfdataextract.ApplicationPlatform.typescript };
 };
-// Apply redactions on the PDF document
+// Apply the redactions
 await redactor.redact(canvasRenderCallback);
-// Save the document
+// Save and dispose
 document.save('output.pdf');
-// Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
 N>  Use PdfRedactor.redact(callback) when you need to redact images along with other PDF content. In contrast, PdfRedactor.redactSync() is faster because it runs synchronously, but it cannot redact images—only text and other non‑image elements.
 
-## Fill color on the redacted area
+The following example uses `redactSync()`:
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { PdfDocument } from '@syncfusion/ej2-pdf';
+import { PdfRedactor, PdfRedactionRegion } from '@syncfusion/ej2-pdf-data-extract';
+
+// Load the source PDF
+let document: PdfDocument = new PdfDocument(data);
+// Create the redactor
+let redactor: PdfRedactor = new PdfRedactor(document);
+// Define the redaction region
+let redactions: PdfRedactionRegion[] = [];
+redactions.push(new PdfRedactionRegion(0, { x: 10, y: 10, width: 100, height: 50 }));
+// Add the regions to the redactor
+redactor.add(redactions);
+// Apply the redactions synchronously (text only)
+redactor.redactSync();
+// Save and dispose
+document.save('output.pdf');
+document.destroy();
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Load the source PDF
+var document = new ej.pdf.PdfDocument(data);
+// Create the redactor
+var redactor = new ej.pdfdataextract.PdfRedactor(document);
+// Define the redaction region
+var redactions = [];
+redactions.push(new ej.pdfdataextract.PdfRedactionRegion(0, { x: 10, y: 10, width: 100, height: 50 }));
+// Add the regions to the redactor
+redactor.add(redactions);
+// Apply the redactions synchronously (text only)
+redactor.redactSync();
+// Save and dispose
+document.save('output.pdf');
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+## Set a fill color for the redacted region
 
 You can apply a solid fill color to cover the redacted content. This is the most common approach for redaction.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
+
 import { PdfDocument } from '@syncfusion/ej2-pdf';
 import { PdfRedactor, PdfRedactionRegion, ApplicationPlatform } from '@syncfusion/ej2-pdf-data-extract';
 
@@ -128,12 +174,15 @@ await redactor.redact(canvasRenderCallback);
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
-## Text appearance on the redacted area
+## Text appearance on the redacted region
 
-Customize the redacted region by drawing text or graphics over it, using [PdfRedactionRegion](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfredactionregion) and [PdfRedactor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfredactor) to define the area and apply a custom visual appearance to the redaction.
+Draw text or graphics over the redacted region to customize its appearance. Use the third constructor argument of `PdfRedactionRegion` to enable the appearance overlay, then draw on `redaction.appearance.normal.graphics`.
+
+The example adds two regions on page 0. The first region uses a custom appearance that displays the label "Redacted Text". The second region is added without a custom appearance so the default fill is used. Combining both demonstrates that styled and default regions can coexist in a single redactor pass.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -211,3 +260,10 @@ document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
+
+## Additional Resources
+
+- [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
+- [JavaScript PDF Library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
+- [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
+- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default.html)

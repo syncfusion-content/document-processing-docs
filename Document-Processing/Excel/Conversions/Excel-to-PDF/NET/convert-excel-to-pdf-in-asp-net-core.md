@@ -99,7 +99,7 @@ public IActionResult ConvertExceltoPDF()
 {% endhighlight %}
 {% endtabs %}
 
-N> The `XlsIORenderer.ConvertToPDF(IWorkbook)` overload used above is suitable for the XlsIO renderer; for additional control over page size, orientation, and font embedding, pass an `ExcelToPdfConverterSettings` instance to the `ConvertToPDF` overload. See the [Excel-to-PDF conversion options](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/convert-excel-to-pdf-in-asp-net-core#excel-to-pdf-conversion-options) section.
+N> The `XlsIORenderer.ConvertToPDF(IWorkbook)` overload used above is suitable for the XlsIO renderer; for additional control over page size, orientation, and font embedding, pass an `ExcelToPdfConverterSettings` instance to the `ConvertToPDF` overload. See the [Excel-to-PDF conversion settings](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/excel-to-pdf-converter-settings) section.
 
 {% endtabcontent %}
 
@@ -200,4 +200,4 @@ By executing the program, you will get the **PDF document** as shown below.
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
-An online sample link to [convert an Excel document to PDF](https://ej2.syncfusion.com/aspnetcore/Excel/ExcelToPDF#/material3) in ASP.NET Core.
+An online sample link to [convert an Excel document to PDF](https://document.syncfusion.com/demos/excel/exceltopdf#/tailwind) in ASP.NET Core.

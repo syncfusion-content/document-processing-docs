@@ -13,7 +13,7 @@ N> DocIO supports Ink only in DOCX format documents.
 
 ## Create Ink
 
-The following code example illustrating how to create an Ink in a Word document. 
+The following code example illustrates how to create an Ink in a Word document. 
 
 N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
@@ -124,14 +124,14 @@ document.Close()
 
 {% endtabs %}
 
-By running the above code, you will generate a a document with **Ink elements** as shown below.
+By running the above code, you will generate a document with **Ink elements** as shown below.
 ![Process](Ink_images/Create-Ink.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Ink/Create-ink/.NET/).
 
 ## Create Ink with Multiple Traces 
 
-The following code example illustrating how to create an Ink with Multiple Traces (strokes) in a Word document. 
+The following code example illustrates how to create an Ink with Multiple Traces (strokes) in a Word document. 
 
 {% tabs %}
 
@@ -248,12 +248,12 @@ document.Close()
 
 {% endtabs %}
 
-By running the above code, you will generate an **Ink with multiple trace points** as shown below.
+By running the above code, you will generate an **Ink with multiple traces** as shown below.
 ![Process](Ink_images/Ink-multipletraces.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Ink/Create-ink-with-multipletraces/.NET/).
 
-The following code example shows GetPoints method which is used to get trace points.
+The following code example shows the `GetPoints` method, which is used to get trace points.
 
 {% tabs %}
 
@@ -372,7 +372,7 @@ End Function
 
 ## Modify Ink
 
-You can modify the appearance of Ink by changing the trace ink effects, color, size, points.  
+You can modify the appearance of Ink by changing the trace ink effects, color, size, and points.  
 
 ### Modify Ink Effect
 
@@ -553,10 +553,10 @@ WSection section = document.Sections[0];
 WInk ink = section.Paragraphs[0].ChildEntities[0] as WInk;
 // Gets the ink trace from the ink object.
 IOfficeInkTrace inkTrace = ink.Traces[0];
-// Modify the ink size (thickness) to 1 point.
+//Modify the ink size (thickness) to 1 point.
 inkTrace.Brush.Size = new SizeF(1f, 1f);
 //Saves and closes the Word document instance
-document.Save("Sample.docx");
+document.Save("Result.docx");
 //Closes the document
 document.Close();
 
@@ -575,7 +575,7 @@ Dim inkTrace As IOfficeInkTrace = ink.Traces(0)
 ' Modify the ink size (thickness) to 1 point.
 inkTrace.Brush.Size = New SizeF(1F, 1F)
 'Saves and closes the Word document instance
-document.Save("Sample.docx")
+document.Save("Result.docx")
 'Closes the document
 document.Close()
 
@@ -628,7 +628,7 @@ IOfficeInkTrace inkTrace = ink.Traces[0];
 // Close the ink stroke by setting the last point to be the same as the first point
 inkTrace.Points[inkTrace.Points.Length - 1] = new PointF(inkTrace.Points[0].X, inkTrace.Points[0].Y);
 //Saves and closes the Word document instance
-document.Save("Sample.docx");
+document.Save("Result.docx");
 //Closes the document
 document.Close();
 
@@ -647,7 +647,7 @@ Dim inkTrace As IOfficeInkTrace = ink.Traces(0)
 ' Close the ink stroke by setting the last point to be the same as the first point
 inkTrace.Points(inkTrace.Points.Length - 1) = New PointF(inkTrace.Points(0).X, inkTrace.Points(0).Y)
 'Saves and closes the Word document instance
-document.Save("Sample.docx")
+document.Save("Result.docx")
 'Closes the document
 document.Close()
 
@@ -655,7 +655,7 @@ document.Close()
 
 {% endtabs %}
 
-By running the above code,  you will generate **modified ink points** as shown below.
+By running the above code, you will generate **modified ink points** as shown below.
 ![Process](Ink_images/Modify-ink-points.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Ink/Modify-ink-points/.NET/).
@@ -708,7 +708,7 @@ for (int i = 0; i < paragraph.ChildEntities.Count; i++)
     }
 }
 //Saves and closes the Word document instance
-document.Save("Sample.docx");
+document.Save("Result.docx");
 //Closes the document
 document.Close();
 
@@ -731,10 +731,7 @@ While i < paragraph.ChildEntities.Count
     i += 1
 End While
 'Saves and closes the Word document instance
-document.Save("Sample.docx")
-'Closes the document
-document.Close()
-
+document.Save("Result.docx")
 {% endhighlight %}
 
 {% endtabs %}
@@ -769,7 +766,7 @@ During Word-to-PDF and Word-to-Image conversions, Syncfusion Word Library uses f
 * [What is Ink Trace?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#what-is-ink-trace)
 * [How Ink Width and Height Work](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#how-ink-width-and-height-work)
 * [How Trace Points Are Calculated?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#how-trace-points-are-calculated)
-* [Example: Triangle Ink Trace Points](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#example:-triangle-ink-trace-points)
+* [Example: Triangle Ink Trace Points](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#example-triangle-ink-trace-points)
 * [How to Set Stroke Thickness?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#how-to-set-stroke-thickness)
 
 ## Online Demo
