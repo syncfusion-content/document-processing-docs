@@ -12,7 +12,7 @@ documentation: ug
 ## Localization
 
 The [`Localization`](https://ej2.syncfusion.com/vue/documentation/common/localization) library allows you to localize the default text content of the Spreadsheet. The Spreadsheet has static text on some features (cell formatting, Merge, Data validation, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the
-[`locale`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#locale) value and translation object.
+[`locale`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#locale) value and translation object.
 
 The following list of properties and their values are used in the Spreadsheet.
 
@@ -603,11 +603,11 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-Internalization [`sample link`](https://codesandbox.io/s/vue-template-forked-cthq7?file=/src/App.vue)
+Internalization [`sample link`](https://codesandbox.io/p/sandbox/vue-template-forked-cthq7)
 
 ## Right to left (RTL)
 
-RTL provides an option to switch the text direction and layout of the Spreadsheet component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). To enable RTL Spreadsheet, set the [`enableRtl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#enablertl) to true.
+RTL provides an option to switch the text direction and layout of the Spreadsheet component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). To enable RTL Spreadsheet, set the [`enableRtl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#enablertl) to true.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

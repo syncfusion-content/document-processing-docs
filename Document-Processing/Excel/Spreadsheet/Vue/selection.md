@@ -21,7 +21,7 @@ You have the following options in Selection,
 
 ## Cell selection
 
-Cell selection is used to select a single cell or a range of cells. It can be performed using the [`selectRange`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#selectrange) method.
+Cell selection is used to select a single cell or a range of cells. It can be performed using the [`selectRange`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#selectrange) method.
 
 **User Interface**:
 

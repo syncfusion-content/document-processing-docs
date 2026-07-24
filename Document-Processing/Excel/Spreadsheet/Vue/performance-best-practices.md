@@ -32,7 +32,7 @@ To enable the chunk response processing feature, you can refer to the following 
 
 ### Configure JSON Serialization Options During Open
 
-Serialization options in the Vue Spreadsheet allow you to exclude specific features—such as styles, formats, charts, images, wrap, etc.—from the `Workbook JSON object` when opening it in the Spreadsheet using the [`openFromJson`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#openfromjson) method. By skipping unnecessary features, you can significantly improve performance, especially when working with large or complex workbooks.
+Serialization options in the Vue Spreadsheet allow you to exclude specific features—such as styles, formats, charts, images, wrap, etc.—from the `Workbook JSON object` when opening it in the Spreadsheet using the [`openFromJson`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#openfromjson) method. By skipping unnecessary features, you can significantly improve performance, especially when working with large or complex workbooks.
 
 This is particularly useful when:
 * You need only the raw data without formatting.
@@ -104,7 +104,7 @@ To learn more about Manual Calculation Mode and how to enable it, you can refer 
 
 When saving large Excel files with extensive data and features using **File → Save As** or the **save** method, the Spreadsheet triggers a server API call through a form submit operation. This can lead to performance issues such as timeouts or delays, particularly due to the size and complexity of the workbook.
 
-To mitigate these issues during the save operation, you can set the [`isFullPost`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/beforeSaveEventArgs/#isfullpost) property to **false** in the [`beforeSave`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#beforesave) event of the Spreadsheet.
+To mitigate these issues during the save operation, you can set the [`isFullPost`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/beforeSaveEventArgs#isfullpost) property to **false** in the [`beforeSave`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#beforesave) event of the Spreadsheet.
 
 The following code example shows how to set `isFullPost` to **false** in the Spreadsheet component:
 
@@ -211,7 +211,7 @@ Refer to the following UG section to learn how to configure these options:
 
 When working with large datasets in the Vue Spreadsheet, user interactions such as selecting a large range of cells can experience delays. This occurs because, by default, the Spreadsheet performs aggregate calculations (e.g., SUM, AVERAGE, COUNT, MIN, and MAX) on the selected range and displays the results in the sheet tab panel at the bottom-right corner.
 
-To enhance the responsiveness of cell selection, particularly in performance-critical scenarios, consider disabling unnecessary aggregate calculations using the [`showAggregate`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#showaggregate) property.
+To enhance the responsiveness of cell selection, particularly in performance-critical scenarios, consider disabling unnecessary aggregate calculations using the [`showAggregate`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#showaggregate) property.
 
 Benefits:
 * Reduces selection lag when dealing with large data ranges.
