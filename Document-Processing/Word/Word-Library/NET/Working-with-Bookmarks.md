@@ -9,8 +9,8 @@ documentation: UG
 
 A bookmark identifies a location or a selection of text within a document that you can name and identify for future reference.
 
-In Essential<sup>&reg;</sup> DocIO, bookmark is represented by [Bookmark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Bookmark.html) instance that is a pair of [BookmarkStart](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkStart.html) and [BookmarkEnd](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html).
-[BookmarkStart](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkStart.html) represents start point of a bookmark and [BookmarkEnd](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html) represents end point of a bookmark. Every Word document contains a collection of bookmarks that are accessible through the [Bookmarks](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Bookmarks) property of [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html) class.
+In Essential<sup>&reg;</sup> DocIO, a bookmark is represented by a [Bookmark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Bookmark.html) instance that is a pair of [BookmarkStart](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkStart.html) and [BookmarkEnd](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html).
+[BookmarkStart](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkStart.html) represents the start point of a bookmark and [BookmarkEnd](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html) represents the end point of a bookmark. Every Word document contains a collection of bookmarks that are accessible through the [Bookmarks](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Bookmarks) property of [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html) class.
 
 To quickly start working with bookmarks in a Word document, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=8C2-aS8tdLU" %}
@@ -34,7 +34,7 @@ IWParagraph paragraph = document.LastParagraph;
 paragraph.AppendBookmarkStart("Northwind");
 //Adds a text between the bookmark start and end into paragraph
 paragraph.AppendText("The Northwind sample database (Northwind.mdb) is included with all versions of Access. It provides data you can experiment with and database objects that demonstrate features you might want to implement in your own databases.");
-//Adds a new bookmark end into paragraph with name " Northwind "
+//Adds a new bookmark end into paragraph with name "Northwind"
 paragraph.AppendBookmarkEnd("Northwind");
 //Adds a text after the bookmark end
 paragraph.AppendText(" Using Northwind, you can become familiar with how a relational database is structured and how the database objects work together to help you enter, store, manipulate, and print your data.");
@@ -56,14 +56,14 @@ IWParagraph paragraph = document.LastParagraph;
 paragraph.AppendBookmarkStart("Northwind");
 //Adds a text between the bookmark start and end into paragraph
 paragraph.AppendText("The Northwind sample database (Northwind.mdb) is included with all versions of Access. It provides data you can experiment with and database objects that demonstrate features you might want to implement in your own databases.");
-//Adds a new bookmark end into paragraph with name " Northwind "
+//Adds a new bookmark end into paragraph with name "Northwind"
 paragraph.AppendBookmarkEnd("Northwind");
 //Adds a text after the bookmark end
 paragraph.AppendText(" Using Northwind, you can become familiar with how a relational database is structured and how the database objects work together to help you enter, store, manipulate, and print your data.");
 //Saves the document in the given name and format
 document.Save("Bookmarks.docx", FormatType.Docx);
-//Releases the resources occupied by WordDocument instance
-document.Close(); 
+//Releases the resources occupied by the WordDocument instance
+document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
@@ -77,14 +77,14 @@ Dim paragraph As IWParagraph = document.LastParagraph
 paragraph.AppendBookmarkStart("Northwind")
 'Adds a text between the bookmark start and end into paragraph
 paragraph.AppendText("The Northwind sample database (Northwind.mdb) is included with all versions of Access. It provides data you can experiment with and database objects that demonstrate features you might want to implement in your own databases.")
-'Adds a new bookmark end into paragraph with name " Northwind "
+'Adds a new bookmark end into paragraph with name "Northwind"
 paragraph.AppendBookmarkEnd("Northwind")
 'Adds a text after the bookmark end
 paragraph.AppendText(" Using Northwind, you can become familiar with how a relational database is structured and how the database objects work together to help you enter, store, manipulate, and print your data.")
 'Saves the document in the given name and format
 document.Save("Bookmarks.docx", FormatType.Docx)
-'Releases the resources occupied by WordDocument instance
-document.Close() 
+'Releases the resources occupied by the WordDocument instance
+document.Close()
 {% endhighlight %}
 
 {% endtabs %}
@@ -103,7 +103,7 @@ FileStream fileStreamPath = new FileStream(@"Bookmarks.docx", FileMode.Open, Fil
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
 //Gets the bookmark instance by using FindByName method of BookmarkCollection with bookmark name
 Syncfusion.DocIO.DLS.Bookmark bookmark = document.Bookmarks.FindByName("Northwind");
-//Accesses the bookmark start’s owner paragraph by using bookmark and changes its back color
+//Accesses the bookmark start's owner paragraph by using the bookmark and changes its back color
 bookmark.BookmarkStart.OwnerParagraph.ParagraphFormat.BackColor = Color.AliceBlue;
 //Saves the Word document to MemoryStream
 MemoryStream stream = new MemoryStream();
@@ -117,7 +117,7 @@ document.Close();
 WordDocument document = new WordDocument("Bookmarks.docx", FormatType.Docx);
 //Gets the bookmark instance by using FindByName method of BookmarkCollection with bookmark name
 Syncfusion.DocIO.DLS.Bookmark bookmark = document.Bookmarks.FindByName("Northwind");
-//Accesses the bookmark start’s owner paragraph by using bookmark and changes its back color
+//Accesses the bookmark start's owner paragraph by using the bookmark and changes its back color
 bookmark.BookmarkStart.OwnerParagraph.ParagraphFormat.BackColor = Color.AliceBlue;
 document.Save("Result.docx", FormatType.Docx);
 document.Close();
@@ -128,7 +128,7 @@ document.Close();
 Dim document As New WordDocument("Bookmarks.docx", FormatType.Docx)
 'Gets the bookmark instance by using FindByName method of BookmarkCollection with bookmark name
 Dim bookmark As Syncfusion.DocIO.DLS.Bookmark = document.Bookmarks.FindByName("Northwind")
-'Accesses the bookmark start’s owner paragraph by using bookmark and changes its back color
+'Accesses the bookmark start's owner paragraph by using the bookmark and changes its back color
 bookmark.BookmarkStart.OwnerParagraph.ParagraphFormat.BackColor = Color.AliceBlue
 document.Save("Result.docx", FormatType.Docx)
 document.Close()
@@ -138,9 +138,9 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Bookmarks/Get-an-instance-of-bookmark).
 
-## Removing a Bookmark from Word document
+## Removing a bookmark from a Word document
 
-The following code example shows how to remove a bookmark from Word document.
+The following code example shows how to remove a bookmark from a Word document.
 
 {% tabs %}
 
@@ -185,14 +185,14 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Bookmarks/Remove-bookmark-from-Word-document).
 
-## Retrieving contents within a bookmark 
+## Retrieving contents within a bookmark
 
-[BookmarkNavigator](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarksNavigator.html) is used for navigating to a bookmark in a Word document. You can retrieve, replace and delete the content of a specified bookmark by using [BookmarkNavigator](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarksNavigator.html).
+[BookmarkNavigator](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarksNavigator.html) is used for navigating to a bookmark in a Word document. You can retrieve, replace, and delete the content of a specified bookmark by using [BookmarkNavigator](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarksNavigator.html).
 
 You can get the content between bookmark start and bookmark end of the specified bookmark in two ways: 
 
-1. You can use [GetBookmarkContent](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarksNavigator.html#Syncfusion_DocIO_DLS_BookmarksNavigator_GetBookmarkContent) method for retrieving content as collection of body items when the bookmark start and bookmark end are preserved in a single section.
-2. You can use [GetContent](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarksNavigator.html#Syncfusion_DocIO_DLS_BookmarksNavigator_GetContent) method for retrieving content as collection of sections when the bookmark start and bookmark end are preserved in different sections. 
+1. You can use [GetBookmarkContent](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarksNavigator.html#Syncfusion_DocIO_DLS_BookmarksNavigator_GetBookmarkContent) method for retrieving content as a collection of body items when the bookmark start and bookmark end are preserved in a single section.
+2. You can use [GetContent](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarksNavigator.html#Syncfusion_DocIO_DLS_BookmarksNavigator_GetContent) method for retrieving content as a collection of sections when the bookmark start and bookmark end are preserved in different sections. 
 
 The following code example shows how to retrieve the specified bookmark content by using [GetBookmarkContent](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarksNavigator.html#Syncfusion_DocIO_DLS_BookmarksNavigator_GetBookmarkContent) method in a Word document.
 
@@ -317,7 +317,7 @@ wordDocumentPart.Close()
 'Close the template Word document
 document.Close()
 newDocument.Save("Result.docx", FormatType.Docx)
-'Releases the resources hold by WordDocument instance
+'Releases the resources held by the WordDocument instance
 newDocument.Close()
 {% endhighlight %}
 
@@ -325,12 +325,12 @@ newDocument.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Bookmarks/Get-bookmark-content-as-document-part).
 
-## Retrieving bookmark contents within a table 
+## Retrieving bookmark contents within a table
 
 You can select the column range for bookmarks inside the tables in Word documents by using [FirstColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Bookmark.html#Syncfusion_DocIO_DLS_Bookmark_FirstColumn) and [LastColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Bookmark.html#Syncfusion_DocIO_DLS_Bookmark_LastColumn) properties.
 
-N> 1. [FirstColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Bookmark.html#Syncfusion_DocIO_DLS_Bookmark_FirstColumn) and [LastColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Bookmark.html#Syncfusion_DocIO_DLS_Bookmark_LastColumn) properties are valid to select table cells, only when the respective bookmark end and start is present within the same row or next rows of the same table.
-N> 2. [FirstColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Bookmark.html#Syncfusion_DocIO_DLS_Bookmark_FirstColumn) property denotes the top left corner cell and [LastColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Bookmark.html#Syncfusion_DocIO_DLS_Bookmark_LastColumn) property denotes the bottom right corner cell of rectangular selection region since you can only select the content as a rectangular selection by using bookmarks within the table.
+N> 1. [FirstColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Bookmark.html#Syncfusion_DocIO_DLS_Bookmark_FirstColumn) and [LastColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Bookmark.html#Syncfusion_DocIO_DLS_Bookmark_LastColumn) properties are valid to select table cells, only when the respective bookmark end and start are present within the same row or next rows of the same table.
+N> 2. [FirstColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Bookmark.html#Syncfusion_DocIO_DLS_Bookmark_FirstColumn) property denotes the top left corner cell and [LastColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Bookmark.html#Syncfusion_DocIO_DLS_Bookmark_LastColumn) property denotes the bottom right corner cell of rectangular selection region, because bookmark selections inside a table are always rectangular.
 N> 3. [FirstColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Bookmark.html#Syncfusion_DocIO_DLS_Bookmark_FirstColumn) property selects from the first cell of the respective row when this property value is negative (or) greater than the cells of a row (or) greater than the [LastColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Bookmark.html#Syncfusion_DocIO_DLS_Bookmark_LastColumn) value.
 N> 4. [LastColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Bookmark.html#Syncfusion_DocIO_DLS_Bookmark_LastColumn) property selects till last cell of the respective row when this property value is negative (or) greater than the cells of a row (or) less than the [FirstColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Bookmark.html#Syncfusion_DocIO_DLS_Bookmark_FirstColumn) value.
 
@@ -357,9 +357,11 @@ bookmarkNavigator.CurrentBookmark.LastColumn = 4;
 TextBodyPart part = bookmarkNavigator.GetBookmarkContent();
 //Adds new section
 document.AddSection();
-for (int i = 0; i < part.BodyItems.Count; i++)
 //Adds the retrieved content into another new section
-document.LastSection.Body.ChildEntities.Add(part.BodyItems[i]);
+for (int i = 0; i < part.BodyItems.Count; i++)
+{
+    document.LastSection.Body.ChildEntities.Add(part.BodyItems[i]);
+}
 //Saves the Word document to MemoryStream
 MemoryStream stream = new MemoryStream();
 document.Save(stream, FormatType.Docx);
@@ -388,9 +390,11 @@ TextBodyPart part = bookmarkNavigator.GetBookmarkContent();
 document.AddSection();
 //Adds the retrieved content into another new section
 for (int i = 0; i < part.BodyItems.Count; i++)
-document.LastSection.Body.ChildEntities.Add(part.BodyItems[i]);
+{
+    document.LastSection.Body.ChildEntities.Add(part.BodyItems[i]);
+}
 //Saves and closes the Word document
-document.Save("Sample.docx", FormatType.Docx);
+document.Save("Result.docx", FormatType.Docx);
 document.Close();
 {% endhighlight %}
 
@@ -630,6 +634,8 @@ FileStream imageStream = new FileStream("Northwind.png", FileMode.Open, FileAcce
 picture.LoadImage(imageStream);
 picture.WidthScale = 50;
 picture.HeightScale = 50;
+//Disposes the image stream
+imageStream.Dispose();
 //Saves the Word document to MemoryStream
 MemoryStream stream = new MemoryStream();
 document.Save(stream, FormatType.Docx);
@@ -904,7 +910,7 @@ FileStream fileStreamPath = new FileStream("Bookmarks.docx", FileMode.Open, File
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
 //Creates the bookmark navigator instance to access the bookmark
 BookmarksNavigator bookmarkNavigator = new BookmarksNavigator(document);
-//Moves the virtual cursor to the location before the end of the bookmark "Northwind "
+//Moves the virtual cursor to the location before the end of the bookmark "Northwind"
 bookmarkNavigator.MoveToBookmark("Northwind");
 //Deletes bookmark content without deleting the format in the target document.
 bookmarkNavigator.DeleteBookmarkContent(false);
@@ -920,7 +926,7 @@ document.Close();
 WordDocument document = new WordDocument("Bookmarks.docx", FormatType.Docx);
 //Creates the bookmark navigator instance to access the bookmark
 BookmarksNavigator bookmarkNavigator = new BookmarksNavigator(document);
-//Moves the virtual cursor to the location before the end of the bookmark "Northwind "
+//Moves the virtual cursor to the location before the end of the bookmark "Northwind"
 bookmarkNavigator.MoveToBookmark("Northwind");
 //Deletes bookmark content without deleting the format in the target document.
 bookmarkNavigator.DeleteBookmarkContent(false);
@@ -951,13 +957,13 @@ You can replace the contents of an existing bookmark with simple text, [TextBody
 
 N> You cannot replace the multi section contents into a bookmark within table in Word documents. Use "for loop" instead of "foreach loop" to iterate through document elements when replacing the bookmark contents to avoid “collection modified exception”, as there is a chance for modification in the document elements on replacing the bookmark contents.
 
-As per Microsoft Word behavior, you cannot replace the bookmark contents when the bookmark start and end is not in a same table as following cases:
+As per Microsoft Word behavior, you cannot replace the bookmark contents when the bookmark start and end are not in the same table, as in the following cases:
 
-Case 1
+Case 1: Bookmark start and end are present in different tables.
 
 ![Bookmark start and end present in different tables](WorkingwithBookmarks_images/WorkingwithBookmarks_img1.jpeg)
 
-Case 2
+Case 2: Bookmark start is placed outside the table and the end is inside the table.
 
 ![Bookmark start placed outside table and end in table](WorkingwithBookmarks_images/WorkingwithBookmarks_img2.jpeg)
 
@@ -1055,13 +1061,13 @@ bookmarkNavigator.MoveToBookmark("Northwind");
 //Gets the bookmark content as WordDocumentPart
 WordDocumentPart wordDocumentPart = bookmarkNavigator.GetContent();
 //Loads the Word document with bookmark NorthwindDB
-FileStream fileStreamPath = new FileStream("Bookmarks.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
+FileStream fileStream = new FileStream("Bookmarks.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+WordDocument document = new WordDocument(fileStream, FormatType.Docx);
 //Creates the bookmark navigator instance to access the bookmark
 bookmarkNavigator = new BookmarksNavigator(document);
 //Moves the virtual cursor to the location before the end of the bookmark "NorthwindDB"
 bookmarkNavigator.MoveToBookmark("NorthwindDB");
-//Replaces the bookmark content with word body part
+//Replaces the bookmark content with WordDocumentPart
 bookmarkNavigator.ReplaceContent(wordDocumentPart);
 //Close the WordDocumentPart instance
 wordDocumentPart.Close();
@@ -1089,7 +1095,7 @@ WordDocument document = new WordDocument("Bookmarks.docx", FormatType.Docx);
 bookmarkNavigator = new BookmarksNavigator(document);
 //Moves the virtual cursor to the location before the end of the bookmark "NorthwindDB"
 bookmarkNavigator.MoveToBookmark("NorthwindDB");
-//Replaces the bookmark content with word body part
+//Replaces the bookmark content with WordDocumentPart
 bookmarkNavigator.ReplaceContent(wordDocumentPart);
 //Close the WordDocumentPart instance
 wordDocumentPart.Close();
@@ -1114,7 +1120,7 @@ Dim document As New WordDocument("Bookmarks.docx", FormatType.Docx)
 bookmarkNavigator = New BookmarksNavigator(document)
 'Moves the virtual cursor to the location before the end of the bookmark "NorthwindDB"
 bookmarkNavigator.MoveToBookmark("NorthwindDB")
-'Replaces the bookmark content with word body part
+'Replaces the bookmark content with WordDocumentPart
 bookmarkNavigator.ReplaceContent(wordDocumentPart)
 'Close the WordDocumentPart instance
 wordDocumentPart.Close()
@@ -1152,7 +1158,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to export content between two bookmarks as HTML in a Word document?](https://support.syncfusion.com/kb/article/20097/how-to-export-content-between-two-bookmarks-as-html-in-a-word-document)
 * [How to apply a style to bookmark content in a Word document?](https://support.syncfusion.com/kb/article/20093/how-to-apply-a-style-to-bookmark-content-in-a-word-document)
 * [How to export Bookmarks content as HTML in .NET Core Word Document?](https://support.syncfusion.com/kb/article/22282/how-to-export-bookmarks-content-as-html-in-net-core-word-document)
-* [How to Add Bookmarks to All Paragraphs and Retrieve Their Contents in .NET Core Word document?](https://support.syncfusion.com/kb/article/22282/how-to-export-bookmarks-content-as-html-in-net-core-word-document)
+* [How to Add Bookmarks to All Paragraphs and Retrieve Their Contents in .NET Core Word document?](https://support.syncfusion.com/kb/article/22282/how-to-add-bookmarks-to-all-paragraphs-and-retrieve-their-contents-in-net-core-word-document)
 * [How to format bookmark content in ASP.NET Core Word Document?](https://support.syncfusion.com/kb/article/22143/how-to-format-bookmark-content-in-aspnet-core-word-document)
 * [How to Identify Bookmark Placement in Word Document in .NET Core?](https://support.syncfusion.com/kb/article/22205/how-to-identify-bookmark-placement-in-word-document-in-net-core)
 * [How to Find Nested Bookmarks in a Word Document in C# .NET Core?](https://support.syncfusion.com/kb/article/22187/how-to-find-nested-bookmarks-in-a-word-document-in-c-net-core)
