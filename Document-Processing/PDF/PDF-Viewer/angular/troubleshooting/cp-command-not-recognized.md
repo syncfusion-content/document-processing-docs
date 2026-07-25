@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Troubleshoot error 'cp' is not recognized as a command
+# Resolving the 'cp' Command Not Recognized Error in Angular PDF Viewer
 
 The error message you're seeing, "'cp' is not recognized as an internal or external command," is because the `cp` command you're trying to use is not recognized on Windows command prompt.
 
