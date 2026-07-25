@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Extract Pages in Angular PDF Viewer | Syncfusion
-description: Learn how to extract pages using the Organize Pages UI in the Syncfusion Angular PDF Viewer.
+description: Learn how to extract pages from PDF documents using the Organize Pages UI in the Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Document Loading Issues in Version 23.1 or Newer Angular PDF Viewer Component
+title: Document Loading Issues in Syncfusion Angular PDF Viewer
 description: Learn here all about troubleshooting Document Loading Issues in Version 23.1 or newer in Angular PDF Viewer of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Document Loading Issues in Version 23.1 or Newer
+# Document Loading Issues in Version 23.1 or Newer — Angular
 
 If a document does not render in the viewer when using version 23.1 or later, use the following troubleshooting checklist to identify and resolve the issue.
 
