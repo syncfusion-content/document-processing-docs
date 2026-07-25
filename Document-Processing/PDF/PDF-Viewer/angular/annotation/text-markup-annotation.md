@@ -205,7 +205,7 @@ export class AppComponent implements OnInit {
 
 ## Highlight text programmatically
 
-Programmatically add highlights using the [addAnnotation()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation#addannotationn) method.
+Programmatically add highlights using the [addAnnotation()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Example:
 
@@ -483,7 +483,7 @@ export class AppComponent implements OnInit {
 
 ## Underline text programmatically
 
-Programmatically add underlines using the [addAnnotation()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation#addannotationn) method.
+Programmatically add underlines using the [addAnnotation()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Example:
 
@@ -523,7 +523,7 @@ export class AppComponent implements OnInit {
       pdfviewer.annotation.addAnnotation("Underline", {
         bounds: [{ x: 250, y: 148, width: 345, height: 14 }],
         pageNumber: 2
-    } as HighlightSettings);
+    } as UnderlineSettings);
   }
 }
 {% endhighlight %}
@@ -563,7 +563,7 @@ export class AppComponent implements OnInit {
       pdfviewer.annotation.addAnnotation("Underline", {
         bounds: [{ x: 250, y: 148, width: 345, height: 14 }],
         pageNumber: 2
-    } as HighlightSettings);
+    } as UnderlineSettings);
   }
 }
 
@@ -761,7 +761,7 @@ export class AppComponent implements OnInit {
 
 ## Strikethrough text programmatically
 
-Programmatically add strikethrough using the [addAnnotation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation#addannotationn) method.
+Programmatically add strikethrough using the [addAnnotation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Example:
 
