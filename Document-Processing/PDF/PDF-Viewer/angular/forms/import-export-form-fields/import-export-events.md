@@ -83,4 +83,3 @@ onExportFailed(args: any): void {
 - [Export form fields](./export-form-fields)
 - [Form validation](../form-validation)
 - [Form fields API](../form-fields-api)
-- [Form fields API](../form-fields-api)
