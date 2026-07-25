@@ -18,7 +18,7 @@ To troubleshoot and resolve this error, follow these steps:
 
 2. **Network and CORS:** Use the browser developer tools to confirm the asset requests return HTTP 200. If the assets are hosted on a different origin, configure appropriate CORS response headers (for example, `Access-Control-Allow-Origin`) or host the assets on the same origin to avoid cross-origin worker load failures.
 
-N> If the `ej2-pdfviewer-lib` folder is not available in `src/assets`, copy the contents from `./node_modules/@syncfusion/ej2-pdfviewer/dist` into `src/assets/ej2-pdfviewer-lib` using the command:
+Note: If the `ej2-pdfviewer-lib` folder is not available in `src/assets`, copy the contents from `./node_modules/@syncfusion/ej2-pdfviewer/dist` into `src/assets/ej2-pdfviewer-lib` using the command:
 ```bash
 cp -R ./node_modules/@syncfusion/ej2-pdfviewer/dist/ej2-pdfviewer-lib  src/assets/ej2-pdfviewer-lib
 ```

@@ -107,7 +107,7 @@ pdfviewer.printMode = 'NewWindow';
 - `Default`: Print from the same window (default).
 - `NewWindow`: Print from a new window or tab.
 
-N> Browser pop-up blockers must allow new windows or tabs when using `pdfviewer.printMode = "NewWindow"`.
+Note: Browser pop-up blockers must allow new windows or tabs when using `pdfviewer.printMode = "NewWindow"`.
 
 [View live examples and samples on GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples)
 
