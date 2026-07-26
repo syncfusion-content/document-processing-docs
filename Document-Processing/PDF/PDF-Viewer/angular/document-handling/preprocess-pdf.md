@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Pre-process PDF Document Before Displaying in Angular PDF Viewer
+# Preprocess PDF Document Before Displaying in Angular PDF Viewer
 
 This section explains why preprocessing is useful, what operations you can perform using the Syncfusion PDF Library, and how to load the processed document in the Angular PDF Viewer.
 
