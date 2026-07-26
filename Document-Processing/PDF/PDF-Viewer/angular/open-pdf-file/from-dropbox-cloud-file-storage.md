@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF from Dropbox cloud storage
+# Open PDF from Dropbox cloud storage in Angular PDF Viewer
 
 The Angular PDF Viewer component supports loading PDF files from Dropbox using either the standalone or the server-backed PDF Viewer. The following steps demonstrate both approaches.
 
