@@ -145,7 +145,7 @@ N> Applying redaction is irreversible. Once applied, the original content cannot
 
 ## Comment Support
 
-Redaction annotations can include comments using the built‑in comment panel. This helps you add notes, track reviews, or record the reason for redaction.  
+Redaction annotations can include comments using the built‑in comment panel. This helps you add notes, track reviews, or record the reason for redaction.
 
 Comments can be added through the UI or API. For more details, see the [Comments documentation](../annotations/comments).
 
