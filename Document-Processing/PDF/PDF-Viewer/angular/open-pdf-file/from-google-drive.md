@@ -14,7 +14,7 @@ Follow these steps to load a PDF from Google Drive using the server-backed PDF V
 
 **Step 1:** Set up Google Drive API
 
-Create a project in the Google Developers Console, enable the Google Drive API, and obtain OAuth 2.0 credentials. See the official guide for [details](https://developers.google.com/drive/api/guides/enable-sdk)
+Create a project in the Google Developers Console, enable the Google Drive API, and obtain OAuth 2.0 credentials. See the official guide for [details](https://developers.google.com/drive/api/guides/enable-sdk).
 
 **Step 2:** Create a simple PDF Viewer sample in Angular
 
@@ -22,7 +22,7 @@ Start by following the steps in this guide to create a simple [PDF Viewer sample
 
 **Step 3:** Modify the PdfViewerController.cs file in the web service project
 
-1. Create a web service project in .NET Core 3.0 or above. For background on the PDF Viewer [web service pattern](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above)
+1. Create a web service project in .NET Core 3.0 or above. For background on the PDF Viewer web service pattern, see this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above).
 
 2. Open the `PdfViewerController.cs` file in your web service project.
 
@@ -37,6 +37,8 @@ using Google.Apis.Util.Store;
 4. Add the following private fields and constructor parameters to PdfViewerController. In the constructor, assign values from configuration to the corresponding fields.
 
 ```csharp
+private IWebHostEnvironment _hostingEnvironment;
+private IMemoryCache _cache;
 private IConfiguration _configuration;
 public readonly string folderId;
 public readonly string applicationName;
@@ -125,7 +127,7 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 }
 ```
 
-6. Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+6. Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration
 
 ```json
 {

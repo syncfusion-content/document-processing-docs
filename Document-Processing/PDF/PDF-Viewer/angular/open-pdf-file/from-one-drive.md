@@ -14,7 +14,7 @@ Follow these steps to load a PDF from OneDrive using the server-backed PDF Viewe
 
 **Step 1:** Create a Microsoft Graph API application
 
-Create a Microsoft Graph API application and obtain the application ID and tenant ID. Follow this [guide](https://learn.microsoft.com/en-us/training/modules/msgraph-access-file-data/3-exercise-access-files-onedrive)
+Create a Microsoft Graph API application and obtain the application ID and tenant ID. Follow this [guide](https://learn.microsoft.com/en-us/training/modules/msgraph-access-file-data/3-exercise-access-files-onedrive).
 
 **Step 2:** Create a simple PDF Viewer sample in Angular
 
@@ -22,7 +22,7 @@ Start by following the steps in this guide to create a simple [PDF Viewer sample
 
 **Step 3:** Modify the PdfViewerController.cs file in the web service project
 
-1. Create a web service project in .NET Core 3.0 or above. For background on the PDF Viewer [web service pattern](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above)
+1. Create a web service project in .NET Core 3.0 or above. For background on the PDF Viewer web service pattern, see this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above).
 
 2. Open the `PdfViewerController.cs` file in your web service project.
 
@@ -35,9 +35,11 @@ using Microsoft.Identity.Client;
 using Helpers;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to the `PdfViewerController` class. In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
+private IWebHostEnvironment _hostingEnvironment;
+private IMemoryCache _cache;
 private IConfiguration _configuration;
 public readonly string folderName;
 public readonly string applicationId;
@@ -114,7 +116,7 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
     else
     {
       byte[] bytes = Convert.FromBase64String(jsonObject["document"]);
-       stream = new MemoryStream(bytes);
+      stream = new MemoryStream(bytes);
     }
   }
   jsonResult = pdfviewer.Load(stream, jsonObject);
@@ -123,7 +125,7 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 
 ```
 
-6. Open appsettings.json in the web service project and add the following keys below the existing AllowedHosts configuration
+6. Open the `appsettings.json` file in the web service project and add the following keys below the existing `AllowedHosts` configuration.
 
 ```json
 {
@@ -135,7 +137,7 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
   },
   "AllowedHosts": "*",
   "TenantId": "Your_Tenant_ID",
-  "applApplicationIdicationId": "Your_Application_ID",
+  "ApplicationId": "Your_Application_ID",
   "FolderName": "Your_Folder_Name_To_Access_The_Files_In_Onedrive"
 }
 
@@ -175,7 +177,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
   }
 ```
 
-N> The following NuGet packages are required to use the previous code example
+N> The following NuGet packages are required to use the previous code example:
 * **Microsoft.Identity.Client**
 * **Microsoft.Graph**
 * **Microsoft.Extensions.Configuration**

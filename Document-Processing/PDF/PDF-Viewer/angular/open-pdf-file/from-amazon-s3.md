@@ -34,7 +34,7 @@ N> Replace the placeholder values with valid values when testing. Do not embed p
 
 ```typescript
 AWS.config.update({
-  region: '**Your Region**', // Update this your region
+  region: '**Your Region**', // Update this to your region
   accessKeyId: '*Your Access Key*', // Update this with your access key id
   secretAccessKey: '*Your Security Access Key*', // Update this with your secret access key
 });
@@ -78,7 +78,7 @@ N> Install the AWS SDK package appropriate for the project. For v2 use `npm inst
 
 ## Using the server-backed PDF Viewer
 
-Follow these steps to load a PDF from AWS S3 using the server-backed PDF Viewer
+Follow these steps to load a PDF from AWS S3 using the server-backed PDF Viewer.
 
 **Step 1:** Create a Simple PDF Viewer Sample in Angular
 
@@ -99,9 +99,11 @@ using Amazon.S3;
 using Amazon.S3.Model;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
+private IWebHostEnvironment _hostingEnvironment;
+private IMemoryCache _cache;
 private IConfiguration _configuration;
 public readonly string _accessKey;
 public readonly string _secretKey;
@@ -166,7 +168,7 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 
 ```
 
-6. Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+6. Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration
 
 ```json
 {
