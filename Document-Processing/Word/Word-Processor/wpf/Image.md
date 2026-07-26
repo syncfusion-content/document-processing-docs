@@ -54,7 +54,7 @@ Starting from v19.1.0.x, the SfRichTextBoxAdv preserves the position properties 
 
 > **Behavior:** The image with text wrapping style `InLine` can only be dragged and dropped anywhere in the document.
 
-N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk-wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
+N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 
 ## See Also
 
