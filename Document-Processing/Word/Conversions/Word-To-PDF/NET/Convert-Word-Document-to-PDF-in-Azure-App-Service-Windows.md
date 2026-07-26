@@ -224,7 +224,7 @@ An online sample link to [convert Word document to PDF](https://document.syncfus
 
 ## See Also
 
-- [Convert Word to PDF in Azure App Service on Linux](convert-word-document-to-pdf-in-azure-app-service-linux.md)
+- [Convert Word to PDF in Azure App Service on Linux](convert-word-document-to-pdf-in-azure-app-service-linux)
 - [Convert Word to PDF in Azure App Service Windows (Console / SDK sample)](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/Azure/Azure_App_Service)
 - [Syncfusion<sup>&reg;</sup> licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview)
-- [DocIO NuGet packages required for Word to PDF conversion](nuget-packages-required-word-to-pdf.md)
+- [DocIO NuGet packages required for Word to PDF conversion](nuget-packages-required-word-to-pdf)
