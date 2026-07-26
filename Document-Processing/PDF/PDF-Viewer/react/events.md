@@ -1003,7 +1003,7 @@ root.render(<App />);
 
 The [hyperlinkMouseOver](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#hyperlinkmouseoverevent) event triggers when hovering over a hyperlink.
 
-- Event arguments: [HyperlinkMouseOverArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/hyperlinkMouseOverArgs).
+- Event arguments: [HyperlinkMouseOverArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/hyperlinkmouseoverargs).
 
 Example:
 
@@ -1217,7 +1217,7 @@ root.render(<App />);
 
 The [moveSignature](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#movesignatureevent) event triggers when a signature is moved across the page.
 
-- Event arguments: [MoveSignatureEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/moveSignatureEventArgs).
+- Event arguments: [MoveSignatureEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/movesignatureeventargs).
 
 Example:
 
@@ -1331,7 +1331,7 @@ root.render(<App />);
 
 The [pageMouseover](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#pagemouseoverevent) event triggers when the mouse moves over a page.
 
-- Event arguments: [PageMouseoverEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/pageMouseoverEventArgs).
+- Event arguments: [PageMouseoverEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/pagemouseovereventargs).
 
 Example:
 
@@ -1369,7 +1369,7 @@ root.render(<App />);
 
 The [pageOrganizerSaveAs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#pageorganizersaveasevent) event triggers when a Save As action is performed in the page organizer.
 
-- Event arguments: [PageOrganizerSaveAsEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/pageOrganizerSaveAsEventArgs).
+- Event arguments: [PageOrganizerSaveAsEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/pageorganizersaveaseventargs).
 
 Example:
 
@@ -1939,7 +1939,7 @@ root.render(<App />);
 
 The [textSelectionStart](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#textselectionstartevent) event triggers when text selection is initiated.
 
-- Event arguments: [TextSelectionStartEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textSelectionStartEventArgs).
+- Event arguments: [TextSelectionStartEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textselectionstarteventargs).
 
 Example:
 
