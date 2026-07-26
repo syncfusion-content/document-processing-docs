@@ -144,7 +144,7 @@ The following examples show how to perform page navigation programmatically.
 <body>
     <!--Element which will render as PdfViewer -->
     <button id="goToFirstPage">Go To First Page</button>
-    <button id="goToLastPage">Go To last Page</button>
+    <button id="goToLastPage">Go To Last Page</button>
     <button id="goToNextPage">Go To Next Page</button>
     <button id="goToPage">Go To Page</button>
     <button id="goToPreviousPage">Go To Previous Page</button>
@@ -176,7 +176,7 @@ import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService, Magnifi
                </div>
                <ejs-pdfviewer #pdfViewer id="pdfViewer"
                         [documentPath]='document'
-                        [resoourceUrl]="resource"
+                        [resourceUrl]="resource"
                         style="height:640px;display:block">
                </ejs-pdfviewer>
             </div>`,

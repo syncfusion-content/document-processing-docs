@@ -16,7 +16,7 @@ N> The table of contents pane and hyperlink interactions rely on the same naviga
 
 ## Required modules
 
-Inject the following modules to enable both navigation experiences: `Toolbar`, `Magnification`, `Navigation`, `LinkAnnotation`, `BookmarkView`, `TextSelection`, `ThumbnailView`, and optionally `Annotation`.
+Inject the following modules to enable both navigation experiences: `Toolbar`, `Magnification`, `Navigation`, `LinkAnnotation`, `BookmarkView`, `TextSelection`, `ThumbnailView`, `Print`, and optionally `Annotation`.
 
 ## Table of contents navigation
 
