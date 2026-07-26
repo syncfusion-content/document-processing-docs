@@ -6,13 +6,15 @@ platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---
-# Spreadsheet Comparison in WPF Spreadsheet
+# Spreadsheet Comparison in WPF
 
-## Choose between SfSpreadsheet and Spreadsheet (Classic) control
+**SfSpreadsheet** is the recommended choice for new development and for migrating from the legacy Spreadsheet (Classic) control. It delivers improved scrolling performance, broader formula support, workbook-level undo/redo, and richer formatting and validation features.
 
-WPF suite contains **SfSpreadsheet** and **Spreadsheet (Classic)** control for viewing and editing the excel files. SfSpreadsheet is an alternate for Spreadsheet (Classic) control which is marked as classic control. Hence it is recommended to use SfSpreadsheet which provides better performance and rich set features over Spreadsheet (Classic) control. 
+## Feature comparison
 
-Below are the features that SfSpreadsheet have over Spreadsheet (Classic) control,
+WPF suite contains **SfSpreadsheet** and **Spreadsheet (Classic)** controls for viewing and editing Excel files. SfSpreadsheet is the recommended replacement for the legacy Spreadsheet (Classic) control. Hence, it is recommended to use SfSpreadsheet, which provides better performance and a rich set of features over the Spreadsheet (Classic) control.
+
+Below are the features that SfSpreadsheet has over the Spreadsheet (Classic) control:
 
 <table>
 <tr>
@@ -22,40 +24,40 @@ SfSpreadsheet</th></tr>
 <tr>
 <td>
 Scrolling performance</td><td>
-Supports fast and fluid scrolling even if the excel has a huge set of data .Thus its  performance is high compared to Spreadsheet (Classic) control.</td></tr>
+Supports fast and fluid scrolling even if the Excel file has a huge set of data. Thus, its performance is higher than that of the Spreadsheet (Classic) control.</td></tr>
 <tr>
 <td>
 Copy Paste</td><td>
-Supports various paste options similar to excel options like Paste, Formulas, Values, Formula and Source Formatting, Values and Source Formatting and Formatting alone. It also provides a good performance compared to Spreadsheet (Classic) control.</td></tr>
+Supports various paste options similar to Excel options, such as Paste, Formulas, Values, Formula and Source Formatting, Values and Source Formatting, and Formatting alone. It also provides better performance compared to the Spreadsheet (Classic) control.</td></tr>
 <tr>
 <td>
 Undo/Redo</td><td>
-Supports undo/redo functionalities similar to those achieved with Microsoft Office-type applications. This operation records the changes in the whole workbook while Spreadsheet (Classic) Control records the changes in sheet level only.</td></tr>
+Supports undo/redo functionalities similar to those achieved with Microsoft Office-type applications. This operation records the changes in the whole workbook, while the Spreadsheet (Classic) control records the changes at the sheet level only.</td></tr>
 <tr>
 <td>
 Formula calculation</td><td>
-Provides support for 400+ most widely used formulas and uses Multi-threading concept So, the calculation speed is also high compared to Spreadsheet (Classic) control.</td></tr>
+Provides support for 400+ of the most widely used formulas and uses a multi-threading concept, so the calculation speed is also high compared to the Spreadsheet (Classic) control.</td></tr>
 <tr>
 <td>
 Floating Cells</td><td>
-Provides support to float cell both in display and edit mode.</td></tr>
+Provides support to float a cell in both display and edit modes.</td></tr>
 <tr>
 <td>
 Hyperlinks</td><td>
-Provides support for Hyperlink feature which you can create hyperlink for existing files or web page and email addresses too.</td></tr>
+Provides support for the Hyperlink feature, letting you create hyperlinks to existing files, web pages, or email addresses.</td></tr>
 <tr>
 <td>
 Conditional Formatting</td><td>
-Provides support to define and import the conditional formatting rules such as Data Bars, Icon Sets and Color Scales options which are used to visualize the data.</td></tr>
+Provides support to define and import conditional formatting rules, such as Data Bars, Icon Sets, and Color Scales, which are used to visualize the data.</td></tr>
 <tr>
 <td>
 Data validation</td><td>
-Provides support for validation for cross sheet references and list validation with formula/cell references compared to Spreadsheet (Classic) control.</td></tr>
+Provides support for cross-sheet reference validation and list validation with formula/cell references compared to the Spreadsheet (Classic) control.</td></tr>
 </table>
 
-### Properties table
+### API mapping
 
-Below are the properties difference between SfSpreadsheet and Spreadsheet (Classic) control,
+Below are the property differences between SfSpreadsheet and the Spreadsheet (Classic) control:
 
 <table>
 <tr>
@@ -72,43 +74,49 @@ Gets the active SpreadsheetGrid</td></tr>
 <td>
 {{'[IsCustomTabItemContextMenuEnabled](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_IsCustomTabItemContextMenuEnabled)'| markdownify }}</td><td>
 TabStyleManager -> IsCustomTabItemContextMenuEnabled</td><td>
-Gets or sets whether Custom ContextMenu is to be Enabled</td></tr>
+Gets or sets whether the custom ContextMenu is enabled</td></tr>
 <tr>
 <td>
 {{ '[ShowTabItemContextMenu](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Tools.Controls.TabControlExt.html#Syncfusion_Windows_Tools_Controls_TabControlExt_ShowTabItemContextMenu)' | markdownify }}</td><td>
 TabStyleManager -> ShowTabItemContextMenu</td><td>
-Gets or sets whether TabItemContextMenu is to be displayed</td></tr>
+Gets or sets whether the TabItemContextMenu is displayed</td></tr>
 <tr>
 <td>
 {{ '[TabItemContextMenu](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_TabItemContextMenu)' | markdownify }}</td><td>
 TabStyleManager ->TabItemContextMenu</td><td>
-Gets or sets the ContextMenu Items for TabItem</td></tr>
+Gets or sets the ContextMenu items for the TabItem</td></tr>
 <tr>
 <td>
 {{ '[ActiveSheet](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_ActiveSheet)' | markdownify }}</td><td>
 ExcelProperties->Workbook->ActiveSheet</td><td>
-Gets the Current ActiveSheet</td></tr>
+Gets the current ActiveSheet</td></tr>
 <tr>
 <td>
 {{ '[Workbook](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_Workbook)' | markdownify }}</td><td>
 ExcelProperties->Workbook</td><td>
-</td></tr>
+Gets the underlying Workbook instance</td></tr>
 <tr>
 <td>
 {{ '[CurrentCellStyle](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_CurrentCellStyle)' | markdownify }}</td><td>
 GridProperties->CurrentCellStyle</td><td>
-Gets the Style of the Current Cell</td></tr>
+Gets the style of the current cell</td></tr>
 <tr>
 <td>
 {{ '[HistoryManager](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_HistoryManager)' | markdownify }}</td><td>
 GridProperties.ActiveSpreadsheetGrid.Model.CommandStack</td><td>
-Gets the command stack of the SfSpreadsheet.By default it has been enabled</td></tr>
+Gets the command stack of the SfSpreadsheet. Undo/redo is enabled by default.</td></tr>
 <tr>
 <td>
 {{ '[SheetName](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SpreadsheetGrid.html#Syncfusion_UI_Xaml_Spreadsheet_SpreadsheetGrid_SheetName)' | markdownify }}</td><td>
 GridProperties->CurrentSheetName</td><td>
-Gets the tab sheet name</td></tr>
+Gets the name of the active sheet tab</td></tr>
 </table>
 
 
-N> You can refer to our [WPF Spreadsheet Editor](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [WPF Spreadsheet example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the spreadsheet.
+N> See the [WPF Spreadsheet](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour page for a visual overview, and explore the [WPF Spreadsheet samples](https://github.com/syncfusion/wpf-demos) for runnable examples of rendering and configuring the control.
+
+## See also
+
+- [Getting started with SfSpreadsheet](https://help.syncfusion.com/wpf/spreadsheet/getting-started)
+- [WPF Spreadsheet feature tour](https://www.syncfusion.com/wpf-controls/spreadsheet)
+- [WPF Spreadsheet samples on GitHub](https://github.com/syncfusion/wpf-demos)

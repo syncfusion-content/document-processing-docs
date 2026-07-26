@@ -3,7 +3,7 @@ layout: post
 title: Docker image deployment in EJ2 JavaScript Spreadsheet | Syncfusion
 description: Learn here all about Docker image deployment in Syncfusion EJ2 JavaScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Docker deployment 
+control: Docker deployment
 documentation: ug
 ---
 
@@ -13,16 +13,17 @@ The [**Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet (also known 
 
 This Docker image is the pre-defined Docker container for Syncfusion's<sup style="font-size:70%">&reg;</sup> Spreadsheet back-end functionalities. This server-side Web API project targets ASP.NET Core 8.0.
 
-You can deploy it quickly to your infrastructure. If you want to add new functionality or customize any existing functionalities, create your own Docker file by referencing the existing [Spreadsheet Docker project](https://github.com/SyncfusionExamples/Spreadsheet-Server-Docker).
+You can deploy it quickly to your infrastructure. If you want to add new functionality or customize any existing functionality, create your own Dockerfile by referencing the existing [Spreadsheet Docker project](https://github.com/SyncfusionExamples/Spreadsheet-Server-Docker).
 
 The Spreadsheet is supported on the [JavaScript](https://www.syncfusion.com/javascript-ui-controls), [Angular](https://www.syncfusion.com/angular-ui-components), [React](https://www.syncfusion.com/react-ui-components), [Vue](https://www.syncfusion.com/vue-ui-components), [ASP.NET Core](https://www.syncfusion.com/aspnet-core-ui-controls), and [ASP.NET MVC](https://www.syncfusion.com/aspnet-mvc-ui-controls) platforms.
 
 ## Prerequisites
 
-Have [`Docker`](https://www.docker.com/products/container-runtime#/download) installed in your environment:
+You must have [Docker](https://www.docker.com/products/container-runtime/#/download) installed in your environment. The minimum supported versions are Docker Engine 20.10 or later and Docker Compose v2.0 or later.
 
-* On Windows, install [`Docker for Windows`](https://hub.docker.com/editions/community/docker-ce-desktop-windows).
-* On macOS, install [`Docker for Mac`](https://docs.docker.com/desktop/install/mac-install/).
+* On Windows, install [Docker Desktop for Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows).
+* On macOS, install [Docker Desktop for Mac](https://docs.docker.com/desktop/install/mac-install).
+* On Linux, follow the [Docker Engine install](https://docs.docker.com/engine/install) and [Docker Compose install](https://docs.docker.com/compose/install) guides.
 
 ## How to deploy the Spreadsheet Docker Image
 
@@ -35,8 +36,6 @@ docker pull syncfusion/spreadsheet-server
 **Step 2:** Create the `docker-compose.yml` file with the following code in your file system.
 
 ```yaml
-version: '3.4' 
-
 services:
   spreadsheet-server:
     image: syncfusion/spreadsheet-server:latest
@@ -72,7 +71,6 @@ Now the Spreadsheet server Docker instance runs on localhost with the provided p
     <link href="resources/lists/styles/material.css" rel="stylesheet" type="text/css"/>
     <link href="resources/navigations/styles/material.css" rel="stylesheet" type="text/css"/>
     <link href="resources/popups/styles/material.css" rel="stylesheet" type="text/css"/>
-    <link href="resources/dropdowns/styles/material.css" rel="stylesheet" type="text/css"/>
     <link href="resources/dropdowns/styles/material.css" rel="stylesheet" type="text/css"/>
     <link href="resources/grids/styles/material.css" rel="stylesheet" type="text/css"/>
     <!-- Essential JS 2 Spreadsheet's material theme -->
@@ -116,11 +114,9 @@ Now the Spreadsheet server Docker instance runs on localhost with the provided p
 
 ## How to configure different cultures using a Docker compose file
 
-By default, the Spreadsheet Docker container is generated in the `en_US` culture. You can configure different cultures using the `LC_ALL`, `LANGUAGE`, and `LANG` environment variables in the `docker-compose.yml` file. These environment variables are replaced in the Docker file to set the specified culture for the Spreadsheet server.
+By default, the Spreadsheet Docker container runs in the `en_US` culture. You can configure a different culture for the Spreadsheet server by setting the `LC_ALL`, `LANGUAGE`, and `LANG` environment variables in the `docker-compose.yml` file. These environment variables are applied at container startup to set the locale of the .NET process inside the container.
 
 ```yaml
-version: '3.4' 
-
 services:
   spreadsheet-server:
     image: syncfusion/spreadsheet-server:latest
