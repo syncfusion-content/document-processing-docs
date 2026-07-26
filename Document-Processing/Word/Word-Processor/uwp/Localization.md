@@ -1,47 +1,54 @@
 ---
-layout: post
+---
 title: Localization in UWP RichTextBox control | Syncfusion
 description: Learn here all about Localization support in Syncfusion UWP RichTextBox (SfRichTextBoxAdv) control and more.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: localization
+keywords: localization,resw,resource-file,culture,language,en-us,fr-fr,resources
 ---
-# Localization in UWP RichTextBox (SfRichTextBoxAdv)
+# Localization in UWP RichTextBox
 
-Localization is the process of configuring the application to a specific language. SfRichTextBoxAdv provides support to localize all the static text in radial menu and all its dialogs. Localization can be done by adding resource file (Resw) and setting the specific culture in the application.
+Localization is the process of configuring the application to a specific language. [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.SfRichTextBoxAdv.SfRichTextBoxAdv.html) provides support for localizing all the static text in the radial menu and in all its dialogs. Localization can be done by adding a resource file (`.resw`) and setting the desired culture in the application.
 
-## Setting language in the app manifest file
+## Setting the language in the app manifest file
 
-The following steps illustrates you how to configure the app package for localization using the manifest designer
+The following steps illustrate how to configure the app package for localization using the Manifest Designer.
 
-* In **Solution** **Explorer**, expand the project node of your UWP app.
-* Double-click the **Package****.****appxmanifest** file. If the manifest file is already open in the XML code view, Visual Studio prompts you to close the file.
-* Now specify the **Default** **language** on the **Application** tab as required to localize your app. Click on **More** **information** to know about the supported languages.
+1. In **Solution Explorer**, expand the project node of your UWP app.
+2. Double-click the **Package.appxmanifest** file. If the manifest file is already open in the XML code view, Visual Studio prompts you to close the file.
+3. On the **Application** tab, specify the **Default language** as required to localize your app. Click **More information** to learn about the supported languages.
 
-![UWP SfRichTextBoxAdv displays manifest file of package](Localization_images/Localization_img1.jpeg)
+   ![UWP app manifest designer showing the default language setting](Localization_images/Localization_img1.jpeg)
 
+4. Save the app manifest file after setting the default language.
 
-* Save the app manifest file after setting the default language.
+## Adding a resource file
 
-## Adding Resource file
+1. Create a folder named `Resources` in your application.
+2. Create a folder named after the culture (for example, `en-US`, `fr-FR`) under `Resources` to hold the resource file for that culture.
+3. Add the default English (`en-US`) `.resw` files for `SfRichTextBoxAdv` and your application — named `Syncfusion.SfRichTextBoxAdv.UWP.Resources.resw`, `Syncfusion.SfRibbon.UWP.Resources.resw`, and `Localization.Resources.resw` respectively — in the `en-US` folder. For reference, a French (`fr-FR`) `.resw` file is available in the [Syncfusion UWP RichTextBox GitHub sample](https://github.com/SyncfusionExamples/UWP-RichTextBox-Examples).
 
-* Create a folder with name ‘Resources’ in your application.
-* Create a folder with language (“en-US”, “fr-FR”, etc.) under ‘Resources’ to hold the resource file for the respective language.
-* Add default English (“en-US”) [Resw](https://www.syncfusion.com/downloads/support/directtrac/general/ze/Resources_File-1713514901)(resource) file of SfRichTextBoxAdv and application (Localization) in the ‘en-US’ folder, named as Syncfusion.SfRichTextBoxAdv.UWP.Resources. resw, Syncfusion.SfRibbon. Resources.resw and Localization.Resources. resw respectively. For your reference, French(“fr-FR”) [Resw](https://www.syncfusion.com/downloads/support/directtrac/general/ze/Resources2076091381) file.
+   ![UWP project showing the added resource files under the Resources folder](Localization_images/Localization_img2.jpeg)
 
-![UWP SfRichTextBoxAdv displays added resource file](Localization_images/Localization_img2.jpeg)
+4. Add the resource name and its corresponding localized value in the Resource Designer of each `.resw` file.
 
+   ![UWP project showing the resource file list with localized values](Localization_images/Localization_img3.jpeg)
 
-* Add the resource key such as name and its corresponding localized value in Resource Designer of Syncfusion.SfRichTextBoxAdv.UWP.Resources. resw, Syncfusion.SfRibbon. Resources.resw and Localization. Resources.resw file.
+> **Note:** If you have not used `SfRibbon` in your application, you can skip the `Syncfusion.SfRibbon.UWP.[Culture name].resw` file mentioned above.
 
-![UWP SfRichTextBoxAdv displays resource file list](Localization_images/Localization_img3.jpeg)
+The following screenshot shows the localized `SfRichTextBoxAdv`.
 
+![Localized SfRichTextBoxAdv UI](Localization_images/Localization_img4.jpeg)
 
-N> If you have not used SfRibbon in your application, you can skip Syncfusion.SfRibbon.UWP.[Culture name].resw file mentioned above.
+N> The localization resources are embedded inside the Syncfusion UWP RichTextBox assembly. You only need to add your own culture-specific `.resw` file; the default English fallback is provided by the assembly.
 
-The following screenshot shows the localization in SfRichTextBoxAdv
+N> The localization support for SfRichTextBoxAdv is available from Syncfusion UWP RichTextBox v17.4.0.X onwards.
 
-![UWP shows the localization in SfRichTextBoxAdv](Localization_images/Localization_img4.jpeg)
+## See Also
+
+- [SfRichTextBoxAdv API reference](https://help.syncfusion.com/cr/uwp/Syncfusion.SfRichTextBoxAdv.SfRichTextBoxAdv.html)
+- [Commands in UWP RichTextBox](https://help.syncfusion.com/uwp/richtextbox/commands)
+- [Getting started with UWP RichTextBox](https://help.syncfusion.com/uwp/richtextbox/getting-started)
 
 

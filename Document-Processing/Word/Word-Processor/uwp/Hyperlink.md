@@ -4,12 +4,17 @@ description: Learn here all about Hyperlink support in Syncfusion UWP RichTextBo
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: hyperlink
+keywords: hyperlink,insert-hyperlink,requestnavigate,displayscreentips,launchuriasync,screentip,editor-settings
 ---
-# Hyperlink in UWP RichTextBox (SfRichTextBoxAdv)
+# Hyperlink support in UWP RichTextBox
 
-The SfRichTextBoxAdv supports hyperlink field similar to the Microsoft Word. You can link part of the document content to Internet or file location, mail address or any text.
+The [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.SfRichTextBoxAdv.SfRichTextBoxAdv.html) supports the hyperlink field, similar to Microsoft Word. You can link part of the document content to the internet, a file location, a mail address, or any text.
+
+## Inserting a hyperlink
+
 The following code example illustrates how to insert a hyperlink field.
+
+N> The XAML snippets in this document assume the `RichTextBoxAdv` namespace is mapped to `using:Syncfusion.UI.Xaml.RichTextBoxAdv` and that the host `SfRichTextBoxAdv` is declared as `<RichTextBoxAdv:SfRichTextBoxAdv x:Name="richTextBoxAdv" />`.
 {% tabs %}
 {% highlight xaml %}
 <RichTextBoxAdv:ParagraphAdv xmlns:RichTextBoxAdv="using:Syncfusion.UI.Xaml.RichTextBoxAdv">
@@ -28,14 +33,16 @@ The following code example illustrates how to insert a hyperlink field.
 {% endhighlight %}
 
 {% highlight c# %}
+using Syncfusion.UI.Xaml.RichTextBoxAdv;
+
 // Appends the field start.
 paragraphAdv.Inlines.Add(new FieldBeginAdv());
 // Appends the field code.
 SpanAdv fieldCode = new SpanAdv();
-string url = "www.syncfusion.com";
+string url = "http://www.syncfusion.com";
 fieldCode.Text = " HYPERLINK \"" + url + "\" ";
 paragraphAdv.Inlines.Add(fieldCode);
-// Appends the field separator
+// Appends the field separator.
 paragraphAdv.Inlines.Add(new FieldSeparatorAdv());
 // Appends the field result.
 SpanAdv fieldResult = new SpanAdv();
@@ -45,6 +52,7 @@ fieldResult.CharacterFormat.FontColor = Windows.UI.Color.FromArgb(0xff, 0x05, 0x
 paragraphAdv.Inlines.Add(fieldResult);
 // Appends the field end.
 paragraphAdv.Inlines.Add(new FieldEndAdv());
+richTextBoxAdv.Document.Sections[0].Blocks.Add(paragraphAdv);
 
 
 {% endhighlight %}
@@ -63,16 +71,16 @@ The following code example illustrates how to insert hyperlink field into SfRich
 
 ## Hyperlink ScreenTip
 
-In RichTextBox control ToolTip (ScreenTip) shows some information or navigation link, when the mouse hovers over that hyperlink and it disappears when the mouse is moved away from that hyperlink. By default, it shows navigation link of that hyperlink and you can set the text you want to use for your ScreenTip.
+In the `SfRichTextBoxAdv` control, a ToolTip (ScreenTip) shows information or the navigation link when the mouse hovers over a hyperlink, and disappears when the mouse is moved away. By default, it shows the navigation link of the hyperlink; you can override this with custom ScreenTip text.
 
-<table><tr><td>Without ScreenTipText</td><td>With ScreenTipText</td></tr><tr><td><img src="Hyperlink_images/screentip_ug1.PNG" alt="Hyperlink_images1"/></td><td><img src="Hyperlink_images/screentip_ug2.PNG" alt="Hyperlink_images2"/></td></tr></table>
+<table><tr><td>Without ScreenTipText</td><td>With ScreenTipText</td></tr><tr><td><img src="Hyperlink_images/screentip_ug1.PNG" alt="SfRichTextBoxAdv hyperlink without ScreenTip"/></td><td><img src="Hyperlink_images/screentip_ug2.PNG" alt="SfRichTextBoxAdv hyperlink with custom ScreenTip text"/></td></tr></table>
 
 The following code example illustrates how to insert a hyperlink field with ScreenTip.
 {% tabs %}
 {% highlight xaml %}
 <RichTextBoxAdv:ParagraphAdv>
     <RichTextBoxAdv:FieldBeginAdv></RichTextBoxAdv:FieldBeginAdv>
-    <RichTextBoxAdv:SpanAdv Text=" HYPERLINK &quot;\http://www.syncfusion.com&quot; \o SfRichTextBox "></RichTextBoxAdv:SpanAdv>
+    <RichTextBoxAdv:SpanAdv Text=" HYPERLINK &quot;http://www.syncfusion.com&quot; \o &quot;SfRichTextBox&quot; "></RichTextBoxAdv:SpanAdv>
     <RichTextBoxAdv:FieldSeparatorAdv></RichTextBoxAdv:FieldSeparatorAdv>
     <RichTextBoxAdv:SpanAdv Text="SfRichTextBoxAdv">
             <RichTextBoxAdv:SpanAdv.CharacterFormat>
@@ -84,16 +92,18 @@ The following code example illustrates how to insert a hyperlink field with Scre
 
 {% endhighlight %}
 {% highlight c# %}
+using Syncfusion.UI.Xaml.RichTextBoxAdv;
+
 ParagraphAdv paragraphAdv = new ParagraphAdv();
 // Appends the field start.
 paragraphAdv.Inlines.Add(new FieldBeginAdv());
 // Appends the field code.
 SpanAdv fieldCode = new SpanAdv();
-string url = "www.syncfusion.com";
+string url = "http://www.syncfusion.com";
 string screenTip = "SfRichTextBox";
 fieldCode.Text = " HYPERLINK \"" + url + "\" \\o \"" + screenTip + "\" ";
 paragraphAdv.Inlines.Add(fieldCode);
-// Appends the field separator
+// Appends the field separator.
 paragraphAdv.Inlines.Add(new FieldSeparatorAdv());
 // Appends the field result.
 SpanAdv fieldResult = new SpanAdv();
@@ -107,15 +117,17 @@ richTextBoxAdv.Document.Sections[0].Blocks.Add(paragraphAdv);
 
 {% endhighlight %}
 {% highlight VB %}
+Imports Syncfusion.UI.Xaml.RichTextBoxAdv
+
 ' Appends the field start.
 paragraphAdv.Inlines.Add(New FieldBeginAdv())
 ' Appends the field code.
 Dim fieldCode As New SpanAdv()
-Dim url As String = "www.syncfusion.com"
+Dim url As String = "http://www.syncfusion.com"
 Dim screenTip As String = "SfRichTextBox"
-fieldCode.Text = (Convert.ToString(" HYPERLINK """) & url) + """ ""o """ + (screenTip) + """ "
+fieldCode.Text = " HYPERLINK """ & url & """ \o """ & screenTip & """ "
 paragraphAdv.Inlines.Add(fieldCode)
-' Appends the field separator
+' Appends the field separator.
 paragraphAdv.Inlines.Add(New FieldSeparatorAdv())
 ' Appends the field result.
 Dim fieldResult As New SpanAdv()
@@ -125,6 +137,7 @@ fieldResult.CharacterFormat.FontColor = Color.FromArgb(&Hff, &H5, &H63, &Hc1)
 paragraphAdv.Inlines.Add(fieldResult)
 ' Appends the field end.
 paragraphAdv.Inlines.Add(New FieldEndAdv())
+richTextBoxAdv.Document.Sections(0).Blocks.Add(paragraphAdv)
 
 {% endhighlight %}
 {% endtabs %}
@@ -132,7 +145,8 @@ paragraphAdv.Inlines.Add(New FieldEndAdv())
 The following code example illustrates how to insert hyperlink field with ScreenTip into RichTextBox Document through UI command.
 {% tabs %}
 {% highlight C# %}
-richTextBoxAdv.InsertHyperlinkCommand.Execute(new string[3] { "www.syncfusion.com", "SfRichTextBoxAdv", "SfRichTextBox" });
+// The string array parameters are: 0 = URL, 1 = display text, 2 = ScreenTip text.
+richTextBoxAdv.InsertHyperlinkCommand.Execute(new string[3] { "http://www.syncfusion.com", "SfRichTextBoxAdv", "SfRichTextBox" });
 
 {% endhighlight %}
 {% endtabs %}
@@ -143,7 +157,7 @@ The following section illustrates how to insert hyperlink field with ScreenTip i
 {% capture codesnippet1 %}
 {% tabs %}
 {% highlight xaml %}
-<!-- Binds button to the ShowHyperlinkDialogCommand -->
+<!-- Binds the button to the ShowHyperlinkDialogCommand -->
 <Button Content="Hyperlink" Command="{Binding ElementName=richTextBoxAdv, Path=ShowHyperlinkDialogCommand}"/>
 
 {% endhighlight %}
@@ -154,7 +168,7 @@ The following section illustrates how to insert hyperlink field with ScreenTip i
 2. Enter the display text, URL link and ScreenTip text.
 3. Click on OK to close the dialog box.
 
-![Adding Hyperlink to WPF RichTextBox](Hyperlink_images/uwp-richtextbox-insert-hyperlink.PNG)
+![Adding hyperlink to UWP RichTextBox using the Insert Hyperlink dialog](Hyperlink_images/uwp-richtextbox-insert-hyperlink.PNG)
 
 In the SfRichTextBoxAdv control, ToolTip (ScreenTip) will be shown by default when the mouse hovers over that hyperlink. You can disable ToolTip by using the [DisplayScreenTips](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.EditorSettings.html#Syncfusion_UI_Xaml_RichTextBoxAdv_EditorSettings_DisplayScreenTips) property of [EditorSettings](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.EditorSettings.html) class.
 
@@ -181,33 +195,48 @@ richTextBoxAdv.EditorSettings.DisplayScreenTips = False
 {% endhighlight %}
 {% endtabs %}
 
-N> ScreenTip option is supported from V20.4.0.38
+N> The `ScreenTip` option is supported starting from v20.4.0.38.
+
+N> The hyperlink, `InsertHyperlinkCommand`, and `RequestNavigate` APIs are supported from Syncfusion UWP RichTextBox v17.4.0.X onwards.
 
 ## Hyperlink Navigation
 
-The SfRichTextBoxAdv supports event to identify whenever hyperlink navigation is requested. This allows you to easily customize the hyperlink navigation functionality.
-The following code example demonstrates how to customize hyperlink navigation functionality for the SfRichTextBoxAdv instance.
+SfRichTextBoxAdv supports an event that fires when hyperlink navigation is requested. This allows you to easily customize the hyperlink navigation behavior.
+
+N> The UWP app must declare the `internetClient` capability in its `Package.appxmanifest` to open `http://` links with `Windows.System.Launcher.LaunchUriAsync`. For `mailto:` links the `email` capability is required.
+
+The following code example demonstrates how to customize hyperlink navigation in `SfRichTextBoxAdv`.
+
 {% tabs %}
 {% highlight c# %}
-//Hooks the event handler for RequestNavigate event.
+using System;
+using Syncfusion.UI.Xaml.RichTextBoxAdv;
+
+// Hooks the event handler for the RequestNavigate event.
 richTextBoxAdv.RequestNavigate += RichTextBoxAdv_RequestNavigate;
 
 
 /// <summary>
 /// Handles the RequestNavigate event of the richTextBoxAdv control.
 /// </summary>
-/// <param name="obj">The source of the event.</param>
-/// <param name="args">The <see cref="RequestNavigateEventArgs"/> instance containing the event data.</param>
-private async void RichTextBoxAdv_RequestNavigate(object obj, RequestNavigateEventArgs args)
+/// <param name="sender">The source of the event.</param>
+/// <param name="e">The <see cref="RequestNavigateEventArgs"/> instance containing the event data.</param>
+private async void RichTextBoxAdv_RequestNavigate(object sender, RequestNavigateEventArgs e)
 {
-    if (args.Hyperlink.LinkType == HyperlinkType.Webpage || args.Hyperlink.LinkType == HyperlinkType.Email)
+    if (e.Hyperlink.LinkType == HyperlinkType.WebPage || e.Hyperlink.LinkType == HyperlinkType.Email)
     {
-        Uri uri = new Uri(args.Hyperlink.NavigationLink);
+        Uri uri = new Uri(e.Hyperlink.NavigationLink);
         await Windows.System.Launcher.LaunchUriAsync(uri);
     }
 }
 
-
 {% endhighlight %}
 
 {% endtabs %}
+
+## See Also
+
+- [SfRichTextBoxAdv API reference](https://help.syncfusion.com/cr/uwp/Syncfusion.SfRichTextBoxAdv.SfRichTextBoxAdv.html)
+- [Commands in UWP RichTextBox](https://help.syncfusion.com/uwp/richtextbox/commands)
+- [EditorSettings](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.EditorSettings.html)
+- [Selection in UWP RichTextBox](https://help.syncfusion.com/uwp/richtextbox/selection)

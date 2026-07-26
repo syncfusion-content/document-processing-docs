@@ -4,12 +4,13 @@ description: Learn here all about introduction of Syncfusion UWP RichTextBox (Sf
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: overview, richtextboxadv, sfrichtextboxadv
+keywords: overview,richtextboxadv,sfrichtextboxadv,printing,headers-footers,undo-redo,encrypted-documents,layout-types,text-wrapping-style
 ---
 # Overview of the Syncfusion<sup>&reg;</sup> UWP RichTextBox
 
-The Syncfusion <sup style="font-size:70%">&reg;</sup> [UWP RichTextBox](https://www.syncfusion.com/docx-editor-sdk/uwp-docx-editor) (SfRichTextBoxAdv) is a feature-rich, user-interactive control that enables viewing, editing, and printing rich text content with advanced formatting and layout capabilities, supporting elements such as text, images, tables, paragraphs, and comments. 
-![Overview image of UWP RichTextBox](Overview_images/uwp-richtextbox.png)
+The Syncfusion<sup>&reg;</sup> [UWP RichTextBox](https://www.syncfusion.com/docx-editor-sdk/uwp-docx-editor) ([`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.SfRichTextBoxAdv.SfRichTextBoxAdv.html)) is a feature-rich, user-interactive control that enables viewing, editing, and printing rich-text content. It supports advanced formatting and layout for elements such as text, images, tables, paragraphs, and comments.
+
+![SfRichTextBoxAdv overview showing the Pages layout with a sample document](Overview_images/uwp-richtextbox.png)
 
 ## Key Features
 
@@ -27,7 +28,31 @@ The Syncfusion <sup style="font-size:70%">&reg;</sup> [UWP RichTextBox](https://
 
 * Enables [cut, copy, and paste](/uwp/richtextbox/Clipboard) operations, including rich text content via the clipboard. 
 
-* Supports loading encrypted Word documents with valid password. 
+* Supports loading encrypted Word documents with a valid password.
 
+> **Limitation:** Currently, the SfRichTextBoxAdv cannot edit rich text in the headers and footers of a document.
 
-N> Currently, the SfRichTextBoxAdv cannot edit rich text in headers and footers.
+## Getting started
+
+To start using `SfRichTextBoxAdv`, instantiate the control in XAML and add it to your page. The following example shows a minimal UWP page that hosts the control.
+
+```xaml
+<Page
+    x:Class="MyApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:RichTextBoxAdv="using:Syncfusion.UI.Xaml.RichTextBoxAdv">
+    <Grid>
+        <RichTextBoxAdv:SfRichTextBoxAdv x:Name="richTextBoxAdv" LayoutType="Continuous" />
+    </Grid>
+</Page>
+```
+
+N> The `SfRichTextBoxAdv` is supported from Syncfusion UWP RichTextBox v17.4.0.X onwards. For the complete walkthrough, see the [Getting started with UWP RichTextBox](https://help.syncfusion.com/uwp/richtextbox/getting-started) page.
+
+## See Also
+
+- [Getting started with UWP RichTextBox](https://help.syncfusion.com/uwp/richtextbox/getting-started)
+- [Import and export in UWP RichTextBox](https://help.syncfusion.com/uwp/richtextbox/import-and-export)
+- [Commands in UWP RichTextBox](https://help.syncfusion.com/uwp/richtextbox/commands)
+- [SfRichTextBoxAdv API reference](https://help.syncfusion.com/cr/uwp/Syncfusion.SfRichTextBoxAdv.SfRichTextBoxAdv.html)
