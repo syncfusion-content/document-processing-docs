@@ -12,7 +12,7 @@ The [WinUI PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library)
 
 **Prerequisites:**
 - Install the **Windows App SDK** extension for Visual Studio to use the WinUI 3 project templates. For more details, refer [here](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/set-up-your-development-environment?tabs=cs-vs-community%2Ccpp-vs-community%2Cvs-2022-17-1-a%2Cvs-2022-17-1-b).
-- This guide targets **WinUI 3 Desktop (packaged)** on **.NET 6.0 (Windows) or later**.
+- This guide targets **WinUI 3 Desktop (packaged)** on **.NET 8.0 (Windows) or later**.
 
 
 ## WinUI Desktop app
@@ -29,7 +29,7 @@ Step 3: Set the Target version to Windows 10, version 2004 (build 19041) and the
 Step 4: Install the [Syncfusion.Pdf.NET](https://www.nuget.org/packages/Syncfusion.Pdf.NET/) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 ![WinUI NuGet package](WinUI_Images/Install_Nuget.png) 
 
-Step 5: Register the Syncfusion<sup>&reg;</sup> license key in the *App.xaml.cs* file before any Syncfusion component is used, to remove the evaluation watermark. Replace `"YOUR LICENSE KEY"` with the actual key from your Syncfusion account.
+Step 5: Register the Syncfusion<sup>&reg;</sup> license key in the *App.xaml.cs* file before any Syncfusion component is used, to remove the evaluation watermark. Replace `"YOUR LICENSE KEY"` with the actual key from your Syncfusion<sup>&reg;</sup> account.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -53,7 +53,7 @@ namespace CreatePdfDemoSample
 {% endhighlight %}
 {% endtabs %}
 
-N> The license must be registered once during application startup, before instantiating any Syncfusion component (for example, before creating a `PdfDocument`). Refer to the [licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details.
+N> The license must be registered once during application startup, before instantiating any Syncfusion<sup>&reg;</sup> component (for example, before creating a `PdfDocument`). Refer to the [licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details.
 
 Step 6: Add a new button to the **MainWindow.xaml** as shown below. This snippet replaces the default page contents of the empty WinUI 3 Desktop window.
 

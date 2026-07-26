@@ -1,5 +1,5 @@
 ---
-title: Modify the Appearance of Series | Syncfusion
+title: Modify the Appearance of Series | DocIO | Syncfusion
 description: Learn how to modify the appearance of series in a chart in a Word document using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library without Microsoft Word.
 platform: document-processing
 control: DocIO
@@ -260,7 +260,7 @@ using (WordDocument document = new WordDocument())
 
     //Sets position of legend.
     chart.Legend.Position = OfficeLegendPosition.Bottom;
-    //Saves the Word document to file stream.
+    //Saves the Word document.
     document.Save("Sample.docx");             
 }
 

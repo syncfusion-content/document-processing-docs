@@ -43,52 +43,52 @@ Before proceeding, ensure the following are in place:
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) is automatically installed as a dependency when [Syncfusion.Maui.PdfViewer](https://www.nuget.org/packages/Syncfusion.Maui.PdfViewer) NuGet is installed. 
 
 1. Add the following namespace in your `MauiProgram.cs` file.
-{% tabs %}
-{% highlight c# tabtitle="MauiProgram.cs" %}
-using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
-{% endtabs %}
+   {% tabs %}
+   {% highlight c# tabtitle="MauiProgram.cs" %}
+   using Syncfusion.Maui.Core.Hosting;
+   {% endhighlight %} 
+   {% endtabs %}
 
 2. Register the Syncfusion core handler in your `MauiProgram.cs` file to use Syncfusion controls.
-{% tabs %}
-{% highlight c# tabtitle="MauiProgram.cs" hl_lines="11" %}
+   {% tabs %}
+   {% highlight c# tabtitle="MauiProgram.cs" hl_lines="11" %}
+   
+   public static MauiApp CreateMauiApp()
+   {
+       var builder = MauiApp.CreateBuilder();
+       builder
+           .UseMauiApp<App>()
+           .ConfigureFonts(fonts =>
+           {
+               fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+           });
 
-public static MauiApp CreateMauiApp()
-{
-    var builder = MauiApp.CreateBuilder();
-    builder
-        .UseMauiApp<App>()
-        .ConfigureFonts(fonts =>
-        {
-            fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-        });
+       builder.ConfigureSyncfusionCore();
+       return builder.Build();
+   }
 
-    builder.ConfigureSyncfusionCore();
-    return builder.Build();
-}
-
-{% endhighlight %} 
-{% endtabs %}
+   {% endhighlight %} 
+   {% endtabs %}
 
 ## Step 4: Add PDF Viewer
 
 Open the `MainPage.xaml` file and follow the steps below. 
-
+    
 1.  Add the following namespace in your MainPage.xaml file.
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
-xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Maui.PdfViewer"
-{% endhighlight %} 
-{% endtabs %}
+    {% tabs %}
+    {% highlight xaml tabtitle="MainPage.xaml" %}
+    
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Maui.PdfViewer"
+    {% endhighlight %} 
+    {% endtabs %}
 
 2.  Add the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) control.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfPdfViewer x:Name="pdfViewer"></syncfusion:SfPdfViewer>
-{% endhighlight %} 
-{% endtabs %}
+    
+    {% tabs %}
+    {% highlight xaml tabtitle="MainPage.xaml" %}
+    <syncfusion:SfPdfViewer x:Name="pdfViewer"></syncfusion:SfPdfViewer>
+    {% endhighlight %} 
+    {% endtabs %}
 
 ## Step 5: Load a PDF Document
 
@@ -98,79 +98,79 @@ xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Ma
 
     {% tabs %}
     {% highlight c# tabtitle="PdfViewerViewModel.cs" %}
-
-using System.ComponentModel;
-using System.Reflection;
     
-public class PdfViewerViewModel : INotifyPropertyChanged
-{
-    private Stream pdfDocumentStream;
-
-    /// <summary>
-    /// Occurs when a property value changes.
-    /// </summary>
-    public event PropertyChangedEventHandler? PropertyChanged;
-
-    /// <summary>
-    /// Gets or sets the stream of the currently loaded PDF document.
-    /// </summary>
-    public Stream PdfDocumentStream
+    using System.ComponentModel;
+    using System.Reflection;
+    
+    public class PdfViewerViewModel : INotifyPropertyChanged
     {
-        get
+        private Stream pdfDocumentStream;
+        
+        /// <summary>
+        /// Occurs when a property value changes.
+        /// </summary>
+        public event PropertyChangedEventHandler? PropertyChanged;
+        
+        /// <summary>
+        /// Gets or sets the stream of the currently loaded PDF document.
+        /// </summary>
+        public Stream PdfDocumentStream
         {
-            return pdfDocumentStream;
+            get
+            {
+                return pdfDocumentStream;
+            }
+            set
+            {
+                pdfDocumentStream = value;
+                OnPropertyChanged(nameof(PdfDocumentStream));
+            }
         }
-        set
+                
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PdfViewerViewModel"/> class.
+        /// </summary>
+        public PdfViewerViewModel()
         {
-            pdfDocumentStream = value;
-            OnPropertyChanged(nameof(PdfDocumentStream));
+            // Load the embedded PDF document stream.
+            // Replace 'PdfViewerExample' with your project's default namespace in the resource path. Verify that the namespace matches your project name.
+            pdfDocumentStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf");
         }
+    
+        /// <summary>
+        /// Raises the <see cref="PropertyChanged"/> event for the specified property name.
+        /// </summary>
+        /// <param name="name">The name of the property that changed.</param>
+        public void OnPropertyChanged(string name)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        } 
     }
-            
-    /// <summary>
-    /// Initializes a new instance of the <see cref="PdfViewerViewModel"/> class.
-    /// </summary>
-    public PdfViewerViewModel()
-    {
-        // Load the embedded PDF document stream.
-        // Replace 'PdfViewerExample' with your project's default namespace in the resource path. Verify that the namespace matches your project name.
-        pdfDocumentStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf");
-    }
-
-    /// <summary>
-    /// Raises the <see cref="PropertyChanged"/> event for the specified property name.
-    /// </summary>
-    /// <param name="name">The name of the property that changed.</param>
-    public void OnPropertyChanged(string name)
-    {
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-    } 
-}
 
     {% endhighlight %} 
     {% endtabs %}
 
 4.  Open the `MainPage.xaml` file again and add the namespace `PdfViewerExample` and name it as `local`.
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-xmlns:local="clr-namespace:PdfViewerExample"
-{% endhighlight %} 
-{% endtabs %}
+    {% tabs %}
+    {% highlight xaml tabtitle="MainPage.xaml" %}
+    xmlns:local="clr-namespace:PdfViewerExample"
+    {% endhighlight %} 
+    {% endtabs %}
 
 5.  Set an instance of the `PdfViewerViewModel` class as the `BindingContext`. Bind the PDF viewer's [DocumentSource](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) to the `PdfDocumentStream` property of the `PdfViewerViewModel` class.
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-<ContentPage.BindingContext>
-    <local:PdfViewerViewModel x:Name="viewModel" />
-</ContentPage.BindingContext>
-
-<syncfusion:SfPdfViewer x:Name="pdfViewer" DocumentSource="{Binding PdfDocumentStream}"/>
-
-{% endhighlight %} 
-{% endtabs %}
-
-N> 1. While changing or opening different documents on the same page, the previously loaded document will be unloaded automatically by the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). 
-N> 2. If you are using multiple pages in your application, then make sure to unload the document from the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) while leaving the page that has it to release the memory and resources consumed by the PDF document that is loaded.  The unloading of documents can be done by calling the [UnloadDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_UnloadDocument) method. 
+    {% tabs %}
+    {% highlight xaml tabtitle="MainPage.xaml" %}
+    <ContentPage.BindingContext>
+        <local:PdfViewerViewModel x:Name="viewModel" />
+    </ContentPage.BindingContext>
+    
+    <syncfusion:SfPdfViewer x:Name="pdfViewer" DocumentSource="{Binding PdfDocumentStream}"/>
+    
+    {% endhighlight %} 
+    {% endtabs %}
+    
+    N> 1. While changing or opening different documents on the same page, the previously loaded document will be unloaded automatically by the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). 
+    N> 2. If you are using multiple pages in your application, then make sure to unload the document from the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) while leaving the page that has it to release the memory and resources consumed by the PDF document that is loaded.  The unloading of documents can be done by calling the [UnloadDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_UnloadDocument) method. 
 
 ## Step 6: Running the Application
 
@@ -207,149 +207,149 @@ Before proceeding, ensure the following are in place:
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) will be automatically installed as a dependency when [Syncfusion.Maui.PdfViewer](https://www.nuget.org/packages/Syncfusion.Maui.PdfViewer) NuGet is installed. 
 
 1. Add the following namespace in your `MauiProgram.cs` file.
-{% tabs %}
-{% highlight c# tabtitle="MauiProgram.cs" %}
-using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
-{% endtabs %}
+    {% tabs %}
+    {% highlight c# tabtitle="MauiProgram.cs" %}
+    using Syncfusion.Maui.Core.Hosting;
+    {% endhighlight %} 
+    {% endtabs %}
 
 2. Register the Syncfusion core handler in your `MauiProgram.cs` file to use Syncfusion controls.
-{% tabs %}
-{% highlight c# tabtitle="MauiProgram.cs" hl_lines="11" %}
+    {% tabs %}
+    {% highlight c# tabtitle="MauiProgram.cs" hl_lines="11" %}
 
-public static MauiApp CreateMauiApp()
-{
-    var builder = MauiApp.CreateBuilder();
-    builder
-        .UseMauiApp<App>()
-        .ConfigureFonts(fonts =>
-        {
-            fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-        });
+    public static MauiApp CreateMauiApp()
+    {
+        var builder = MauiApp.CreateBuilder();
+        builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-   builder.ConfigureSyncfusionCore();
-   return builder.Build();
-}
+    builder.ConfigureSyncfusionCore();
+    return builder.Build();
+    }
 
-{% endhighlight %} 
-{% endtabs %}
+    {% endhighlight %} 
+    {% endtabs %}
 
 ## Step 4: Add PDF Viewer
 
 Open the `MainPage.xaml` file and follow the steps below. 
 
 1.  Add the following namespace in your MainPage.xaml file.
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+    {% tabs %}
+    {% highlight xaml tabtitle="MainPage.xaml" %}
 
-xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Maui.PdfViewer"
-{% endhighlight %} 
-{% endtabs %}
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Maui.PdfViewer"
+    {% endhighlight %} 
+    {% endtabs %}
 
 2.  Add the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) control.
 
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+    {% tabs %}
+    {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<syncfusion:SfPdfViewer x:Name="pdfViewer"></syncfusion:SfPdfViewer>
+    <syncfusion:SfPdfViewer x:Name="pdfViewer"></syncfusion:SfPdfViewer>
 
-{% endhighlight %} 
-{% endtabs %}
+    {% endhighlight %} 
+    {% endtabs %}
 
 ## Step 5: Load a PDF Document
 
 1.  From the solution explorer of the project, add a new folder to the project named `Assets` and add the PDF document you need to load into the PDF viewer. Here, a PDF document named `PDF_Succinctly.pdf` is used.
 2.  Open the `.csproj` file and add the following code snippet to embed the PDF document as a resource.
 
-{% tabs %}
-{% highlight xml tabtitle="PdfViewerExample.csproj" %}
+    {% tabs %}
+    {% highlight xml tabtitle="PdfViewerExample.csproj" %}
 
-<ItemGroup>
-	<EmbeddedResource Include="Assets\PDF_Succinctly.pdf" />
-</ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Include="Assets\PDF_Succinctly.pdf" />
+    </ItemGroup>
 
-{% endhighlight %} 
-{% endtabs %}
+    {% endhighlight %} 
+    {% endtabs %}
 
-If the project does not reload automatically after editing the `.csproj`, close and reopen the project.
+    If the project does not reload automatically after editing the `.csproj`, close and reopen the project.
 
 3.  In this example, the PDF document is loaded using MVVM binding. Create a new C# file named `PdfViewerViewModel.cs` and add the following code snippet.
 
     {% tabs %}
     {% highlight c# tabtitle="PdfViewerViewModel.cs" %}
 
-using System.ComponentModel;
-using System.Reflection;
-    
-public class PdfViewerViewModel : INotifyPropertyChanged
-{
-    private Stream pdfDocumentStream;
-
-    /// <summary>
-    /// Occurs when a property value changes.
-    /// </summary>
-    public event PropertyChangedEventHandler? PropertyChanged;
-
-    /// <summary>
-    /// Gets or sets the stream of the currently loaded PDF document.
-    /// </summary>
-    public Stream PdfDocumentStream
+    using System.ComponentModel;
+    using System.Reflection;
+        
+    public class PdfViewerViewModel : INotifyPropertyChanged
     {
-        get
+        private Stream pdfDocumentStream;
+
+        /// <summary>
+        /// Occurs when a property value changes.
+        /// </summary>
+        public event PropertyChangedEventHandler? PropertyChanged;
+
+        /// <summary>
+        /// Gets or sets the stream of the currently loaded PDF document.
+        /// </summary>
+        public Stream PdfDocumentStream
         {
-            return pdfDocumentStream;
+            get
+            {
+                return pdfDocumentStream;
+            }
+            set
+            {
+                pdfDocumentStream = value;
+                OnPropertyChanged(nameof(PdfDocumentStream));
+            }
         }
-        set
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PdfViewerViewModel"/> class.
+        /// </summary>
+        public PdfViewerViewModel()
         {
-            pdfDocumentStream = value;
-            OnPropertyChanged(nameof(PdfDocumentStream));
+            // Load the embedded PDF document stream.
+            // Replace 'PdfViewerExample' with your project's default namespace in the resource path. Verify that the namespace matches your project name.
+            pdfDocumentStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf");
         }
+
+        /// <summary>
+        /// Raises the <see cref="PropertyChanged"/> event for the specified property name.
+        /// </summary>
+        /// <param name="name">The name of the property that changed.</param>
+        public void OnPropertyChanged(string name)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        } 
     }
 
-    /// <summary>
-    /// Initializes a new instance of the <see cref="PdfViewerViewModel"/> class.
-    /// </summary>
-    public PdfViewerViewModel()
-    {
-        // Load the embedded PDF document stream.
-        // Replace 'PdfViewerExample' with your project's default namespace in the resource path. Verify that the namespace matches your project name.
-        pdfDocumentStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf");
-    }
-
-    /// <summary>
-    /// Raises the <see cref="PropertyChanged"/> event for the specified property name.
-    /// </summary>
-    /// <param name="name">The name of the property that changed.</param>
-    public void OnPropertyChanged(string name)
-    {
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-    } 
-}
-
-{% endhighlight %} 
-{% endtabs %}
+    {% endhighlight %} 
+    {% endtabs %}
 
 4.  Open the `MainPage.xaml` file again and add the namespace `PdfViewerExample` and name it as `local`.
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-xmlns:local="clr-namespace:PdfViewerExample"
-{% endhighlight %} 
-{% endtabs %}
+    {% tabs %}
+    {% highlight xaml tabtitle="MainPage.xaml" %}
+    xmlns:local="clr-namespace:PdfViewerExample"
+    {% endhighlight %} 
+    {% endtabs %}
 
 5.  Set an instance of the `PdfViewerViewModel` class as the `BindingContext`. Bind the PDF viewer's [DocumentSource](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) to the `PdfDocumentStream` property of the `PdfViewerViewModel` class.
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-<ContentPage.BindingContext>
-    <local:PdfViewerViewModel x:Name="viewModel" />
-</ContentPage.BindingContext>
+    {% tabs %}
+    {% highlight xaml tabtitle="MainPage.xaml" %}
+    <ContentPage.BindingContext>
+        <local:PdfViewerViewModel x:Name="viewModel" />
+    </ContentPage.BindingContext>
 
-<syncfusion:SfPdfViewer x:Name="pdfViewer" DocumentSource="{Binding PdfDocumentStream}"/>
-    
-{% endhighlight %} 
-{% endtabs %}
+    <syncfusion:SfPdfViewer x:Name="pdfViewer" DocumentSource="{Binding PdfDocumentStream}"/>
+        
+    {% endhighlight %} 
+    {% endtabs %}
 
-N> 1. While changing or opening different documents on the same page, the previously loaded document will be unloaded automatically by the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). 
-N> 2. If you are using multiple pages in your application, then make sure to unload the document from the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) while leaving the page that has it to release the memory and resources consumed by the PDF document that is loaded.  The unloading of documents can be done by calling the [UnloadDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_UnloadDocument) method. 
+    N> 1. While changing or opening different documents on the same page, the previously loaded document will be unloaded automatically by the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). 
+    N> 2. If you are using multiple pages in your application, then make sure to unload the document from the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) while leaving the page that has it to release the memory and resources consumed by the PDF document that is loaded.  The unloading of documents can be done by calling the [UnloadDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_UnloadDocument) method. 
 
 ## Step 6: Running the Application
 
@@ -381,158 +381,158 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.PdfViewer](https://www.nuget.org/packages/Syncfusion.Maui.PdfViewer) and install the latest version.
 3. Ensure the dependencies are installed, and the project is restored. If not, open the Terminal in Rider and manually run the following code.
 
-{% tabs %}
-{% highlight c# tabtitle="terminal" %}
+    {% tabs %}
+    {% highlight c# tabtitle="terminal" %}
 
-dotnet restore
+    dotnet restore
 
-{% endhighlight %}
-{% endtabs %}
+    {% endhighlight %}
+    {% endtabs %}
 
 ## Step 3: Register the Syncfusion<sup>®</sup> Core Handler
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) is automatically installed as a dependency when [Syncfusion.Maui.PdfViewer](https://www.nuget.org/packages/Syncfusion.Maui.PdfViewer) NuGet is installed. 
 
 1. Add the following namespace in your `MauiProgram.cs` file.
-{% tabs %}
-{% highlight c# tabtitle="MauiProgram.cs" %}
-using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
-{% endtabs %}
+    {% tabs %}
+    {% highlight c# tabtitle="MauiProgram.cs" %}
+    using Syncfusion.Maui.Core.Hosting;
+    {% endhighlight %} 
+    {% endtabs %}
 
 2. Register the Syncfusion core handler in your `MauiProgram.cs` file to use Syncfusion controls.
-{% tabs %}
-{% highlight c# tabtitle="MauiProgram.cs" hl_lines="11" %}
+    {% tabs %}
+    {% highlight c# tabtitle="MauiProgram.cs" hl_lines="11" %}
 
-public static MauiApp CreateMauiApp()
-{
-    var builder = MauiApp.CreateBuilder();
-    builder
-        .UseMauiApp<App>()
-        .ConfigureFonts(fonts =>
-        {
-            fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-        });
+    public static MauiApp CreateMauiApp()
+    {
+        var builder = MauiApp.CreateBuilder();
+        builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-    builder.ConfigureSyncfusionCore();
-    return builder.Build();
-}
+        builder.ConfigureSyncfusionCore();
+        return builder.Build();
+    }
 
-{% endhighlight %} 
-{% endtabs %}
+    {% endhighlight %} 
+    {% endtabs %}
 
 ## Step 4: Add PDF Viewer
 
 Open the `MainPage.xaml` file and follow the steps below. 
 
 1.  Add the following namespace in your MainPage.xaml file.
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Maui.PdfViewer"
-{% endhighlight %} 
-{% endtabs %}
+    {% tabs %}
+    {% highlight xaml tabtitle="MainPage.xaml" %}
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Maui.PdfViewer"
+    {% endhighlight %} 
+    {% endtabs %}
 
 2.  Add the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) control.
 
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+    {% tabs %}
+    {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<syncfusion:SfPdfViewer x:Name="pdfViewer"></syncfusion:SfPdfViewer>
+    <syncfusion:SfPdfViewer x:Name="pdfViewer"></syncfusion:SfPdfViewer>
 
-{% endhighlight %} 
-{% endtabs %}
+    {% endhighlight %} 
+    {% endtabs %}
 
 ## Step 5: Load a PDF Document
 
 1.  From the solution explorer of the project, add a new folder to the project named `Assets` and add the PDF document you need to load into the PDF viewer. Here, a PDF document named `PDF_Succinctly.pdf` is used.
 2.  Open the `.csproj` file and add the following code snippet to embed the PDF document as a resource.
 
-{% tabs %}
-{% highlight xml tabtitle="PdfViewerExample.csproj" %}
+    {% tabs %}
+    {% highlight xml tabtitle="PdfViewerExample.csproj" %}
 
-<ItemGroup>
-	<EmbeddedResource Include="Assets\PDF_Succinctly.pdf" />
-</ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Include="Assets\PDF_Succinctly.pdf" />
+    </ItemGroup>
 
-{% endhighlight %} 
-{% endtabs %}
+    {% endhighlight %} 
+    {% endtabs %}
 3.  In this example, the PDF document is loaded using MVVM binding. Create a new C# file named `PdfViewerViewModel.cs` and add the following code snippet.
 
     {% tabs %}
     {% highlight c# tabtitle="PdfViewerViewModel.cs" %}
+    
+    using System.ComponentModel;
+    using System.Reflection;
 
-using System.ComponentModel;
-using System.Reflection;
-
-public class PdfViewerViewModel : INotifyPropertyChanged
-{
-    private Stream pdfDocumentStream;
-
-    /// <summary>
-    /// Occurs when a property value changes.
-    /// </summary>
-    public event PropertyChangedEventHandler? PropertyChanged;
-
-    /// <summary>
-    /// Gets or sets the stream of the currently loaded PDF document.
-    /// </summary>
-    public Stream PdfDocumentStream
+    public class PdfViewerViewModel : INotifyPropertyChanged
     {
-        get
+        private Stream pdfDocumentStream;
+
+        /// <summary>
+        /// Occurs when a property value changes.
+        /// </summary>
+        public event PropertyChangedEventHandler? PropertyChanged;
+
+        /// <summary>
+        /// Gets or sets the stream of the currently loaded PDF document.
+        /// </summary>
+        public Stream PdfDocumentStream
         {
-            return pdfDocumentStream;
+            get
+            {
+                return pdfDocumentStream;
+            }
+            set
+            {
+                pdfDocumentStream = value;
+                OnPropertyChanged(nameof(PdfDocumentStream));
+            }
         }
-        set
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PdfViewerViewModel"/> class.
+        /// </summary>
+        public PdfViewerViewModel()
         {
-            pdfDocumentStream = value;
-            OnPropertyChanged(nameof(PdfDocumentStream));
+            // Load the embedded PDF document stream.
+            // Replace 'PdfViewerExample' with your project's default namespace in the resource path. Verify that the namespace matches your project name.
+            pdfDocumentStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf");
         }
+
+        /// <summary>
+        /// Raises the <see cref="PropertyChanged"/> event for the specified property name.
+        /// </summary>
+        /// <param name="name">The name of the property that changed.</param>
+        public void OnPropertyChanged(string name)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        } 
     }
 
-    /// <summary>
-    /// Initializes a new instance of the <see cref="PdfViewerViewModel"/> class.
-    /// </summary>
-    public PdfViewerViewModel()
-    {
-        // Load the embedded PDF document stream.
-        // Replace 'PdfViewerExample' with your project's default namespace in the resource path. Verify that the namespace matches your project name.
-        pdfDocumentStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf");
-    }
-
-    /// <summary>
-    /// Raises the <see cref="PropertyChanged"/> event for the specified property name.
-    /// </summary>
-    /// <param name="name">The name of the property that changed.</param>
-    public void OnPropertyChanged(string name)
-    {
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-    } 
-}
-
-{% endhighlight %} 
-{% endtabs %}
+    {% endhighlight %} 
+    {% endtabs %}
 
 4.  Open the `MainPage.xaml` file again and add the namespace `PdfViewerExample` and name it as `local`.
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-xmlns:local="clr-namespace:PdfViewerExample"
-{% endhighlight %} 
-{% endtabs %}
+    {% tabs %}
+    {% highlight xaml tabtitle="MainPage.xaml" %}
+    xmlns:local="clr-namespace:PdfViewerExample"
+    {% endhighlight %} 
+    {% endtabs %}
 
 5.  Set an instance of the `PdfViewerViewModel` class as the `BindingContext`. Bind the PDF viewer's [DocumentSource](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) to the `PdfDocumentStream` property of the `PdfViewerViewModel` class.
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-<ContentPage.BindingContext>
-    <local:PdfViewerViewModel x:Name="viewModel" />
-</ContentPage.BindingContext>
+    {% tabs %}
+    {% highlight xaml tabtitle="MainPage.xaml" %}
+    <ContentPage.BindingContext>
+        <local:PdfViewerViewModel x:Name="viewModel" />
+    </ContentPage.BindingContext>
 
-<syncfusion:SfPdfViewer x:Name="pdfViewer" DocumentSource="{Binding PdfDocumentStream}"/>
+    <syncfusion:SfPdfViewer x:Name="pdfViewer" DocumentSource="{Binding PdfDocumentStream}"/>
 
-{% endhighlight %} 
-{% endtabs %}
+    {% endhighlight %} 
+    {% endtabs %}
 
-N> 1. While changing or opening different documents on the same page, the previously loaded document will be unloaded automatically by the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). 
-N> 2. If you are using multiple pages in your application, then make sure to unload the document from the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) while leaving the page that has it to release the memory and resources consumed by the PDF document that is loaded.  The unloading of documents can be done by calling the [UnloadDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_UnloadDocument) method. 
+    N> 1. While changing or opening different documents on the same page, the previously loaded document will be unloaded automatically by the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). 
+    N> 2. If you are using multiple pages in your application, then make sure to unload the document from the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) while leaving the page that has it to release the memory and resources consumed by the PDF document that is loaded.  The unloading of documents can be done by calling the [UnloadDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_UnloadDocument) method. 
 
 ## Step 6: Running the Application
 
@@ -564,3 +564,4 @@ Now that the PDF Viewer is running, you can explore the following features:
 
 * For migration from Xamarin to .NET MAUI, please follow the [Migration Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/migration).
 
+N> Looking for the full .NET MAUI PDF Viewer component overview, features, pricing, and documentation? Visit the [.NET MAUI PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/net-maui-pdf-viewer) page

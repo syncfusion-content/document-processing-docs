@@ -9,7 +9,7 @@ documentation: ug
 
 # Custom Formula in UWP Spreadsheet (SfSpreadsheet)
 
-SfSpreadsheet allows you to add custom formulas into its function library. You can add the custom formula into the SfSpreadsheet by using the `AddFunction` method of `FormulaEngine`,
+SfSpreadsheet allows you to add custom formulas to its built-in function library. You can register a custom formula with the SfSpreadsheet by using the `AddFunction` method of `FormulaEngine`.
 
 {% tabs %}
 {% highlight c# %}
@@ -23,15 +23,15 @@ void spreadsheet_WorkbookLoaded(object sender, WorkbookLoadedEventArgs args)
     AddCustomFormula(grid); 
   
   //Computing the formula at runtime
-   var range = spreadsheetControl.ActiveSheet.Range["B2"];
-   spreadsheetControl.ActiveGrid.SetCellValue(range,"=FindLength(Sample)");
+   var range = spreadsheet.ActiveSheet.Range["B2"];
+   spreadsheet.ActiveGrid.SetCellValue(range,"=FindLength(Sample)");
 }  
 
 private void AddCustomFormula(SpreadsheetGrid grid)
 {
 
-  // Add a formula named FindLength to the Library.
-   grid.FormulaEngine.AddFunction("FindLength", new FormulaEngine.LibraryFunction(ComputeLength));      
+  // Adds a formula named FindLength to the Library.
+   grid.FormulaEngine.AddFunction("FindLength", new FormulaEngine.LibraryFunction(ComputeLength));
 }    
 
 //Implementation of formula
@@ -39,7 +39,7 @@ private void AddCustomFormula(SpreadsheetGrid grid)
 public string ComputeLength(string range)
 {
 
-  //Used to calculate the length of the string
+  // Returns the length of the supplied string.
     return range.Length.ToString();
 }
 

@@ -35,18 +35,26 @@ Step 3: Enable Docker support with **Linux** as the target OS.
 Step 4: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) NuGet package as a reference to your .NET application from [NuGet.org](https://www.nuget.org/).
 ![NuGet Package](GettingStarted_images/Docker-Image4.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you must also add the "Syncfusion.Licensing" assembly reference and include a license key in your project. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
-
-Step 5: Register the Syncfusion license key in `Program.cs` before building the application.
+Step 5: Register the Syncfusion<sup>&reg;</sup> license key. A trial watermark is added to every page of the generated PDF until a valid key is registered. Include the license key in **Program.cs** before initializing any Syncfusion<sup>&reg;</sup> component:
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-// Register the Syncfusion license key
-Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+using Syncfusion.Licensing;
+
+var builder = WebApplication.CreateBuilder(args);
+// Register the Syncfusion license
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+
+// Add services to the container.
+builder.Services.AddControllersWithViews();
+
+var app = builder.Build();
 
 {% endhighlight %}
 {% endtabs %}
+
+Replace `"YOUR LICENSE KEY"` with the license key associated with your Syncfusion<sup>&reg;</sup> account. If you do not have a license key, you can request a free 30-day trial or apply for a Community License from the Syncfusion<sup>&reg;</sup> website. For more information about registering a license key in your application, refer to the [Syncfusion<sup>&reg;</sup> Licensing Documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 6: A default action method named `Index` is present in `HomeController.cs`. Right-click on this `Index` method and select **Go To View** to open its associated view page `Index.cshtml`. Add a new button in `Index.cshtml` as follows.
 
@@ -66,7 +74,7 @@ Step 6: A default action method named `Index` is present in `HomeController.cs`.
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data sources. 
+Step 7: The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data sources.
 
 Add the following code sample in ``ExportService`` class which illustrates how to create a simple PDF document using ``PdfTextElement`` and ``PdfGrid``.
 
@@ -144,4 +152,12 @@ By executing the program, you will get a PDF document as follows.
 
 Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 
-An online sample link to [create a PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind). 
+An online sample link to [create a PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind).
+
+## Next steps
+
+* [Create a PDF in ASP.NET Core](Create-PDF-file-in-ASP-NET-Core.md)
+* [Create a PDF in Azure App Service on Windows](Create-PDF-document-in-Azure-App-Service-Windows.md)
+* [Create a PDF in an AKS cluster](Create-PDF-document-in-AKS-Environment.md)
+* [Open and read an existing PDF document](Open-PDF-file.md)
+* [Save the generated PDF to a file or stream](Save-PDF-file.md) 

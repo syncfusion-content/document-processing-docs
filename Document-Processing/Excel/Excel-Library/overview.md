@@ -1,14 +1,18 @@
 ---
 title: Excel Document Processing Library | Syncfusion
 canonical_url: "https://www.syncfusion.com/document-sdk/net-excel-library"
-description: Syncfusion Excel document processing library lets you create, read, and write Excel files programmatically in .NET and Flutter apps without Microsoft Office.
+description: Syncfusion Excel library (XlsIO) lets you create, read, edit, and convert Excel files programmatically in .NET (Windows Forms, WPF, ASP.NET MVC, ASP.NET Core, Blazor, .NET MAUI, WinUI, UWP) and Flutter apps without Microsoft Office.
 platform: document-processing
-control: general
+control: XlsIO
 documentation: UG
 keywords: Excel, SDK, Automation, API, create, read, write
 ---
 
 # Welcome to Syncfusion<sup>®</sup> Excel Document Processing Library
+
+Syncfusion<sup>®</sup> Excel Library (XlsIO) is a class library that lets you create, read, edit, and convert Excel files programmatically in .NET (Windows Forms, WPF, ASP.NET MVC, ASP.NET Core, Blazor, .NET MAUI, WinUI, UWP) and Flutter applications without Microsoft Office dependencies. Use the platform-specific quick-start links below to get started.
+
+## Quick Starts by Platform
 
 {% doccards %}
 
