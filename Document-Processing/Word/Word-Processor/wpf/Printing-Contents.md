@@ -4,14 +4,11 @@ description: Learn here all about Printing Contents support in Syncfusion WPF Ri
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: printing,print-dialog,print-completed,print-comments
+keywords: printing
 ---
 # Printing Contents in WPF RichTextBox (SfRichTextBoxAdv)
 
-The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) supports an API to print the rich text content as pages using the print dialog through the [PrintDocument](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_PrintDocument) method.
-
-## Print
-
+The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) supports API to print the rich text content rendered as pages using the print dialog.
 The following sample code demonstrates how to print the document content as pages.
 {% tabs %}
 {% highlight c# %}
@@ -28,9 +25,7 @@ richTextBoxAdv.PrintDocument()
 {% endhighlight %}
 {% endtabs %}
 
-## PrintCompleted event
-
-The SfRichTextBoxAdv also supports the [PrintCompleted](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_PrintCompleted) event that is raised when the printing operation completes. The [PrintCompletedEventArgs](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.PrintCompletedEventArgs.html) provides information about the print operation. The following code example demonstrates how to handle the print completed event.
+The SfRichTextBoxAdv also supports event to notify whenever the printing operation is completed. The following code example demonstrates how to handle for the print completed event.
 {% tabs %}
 {% highlight c# %}
 // Hooks the print completed event.
@@ -61,9 +56,9 @@ RemoveHandler richTextBoxAdv.PrintCompleted, AddressOf RichTextBoxAdv_PrintCompl
 {% endhighlight %}
 {% endtabs %}
 
-## UI command for printing
+## UI Command for printing
 
-The following code example demonstrates how to bind the [PrintDocumentCommand](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_PrintDocumentCommand) UI command to invoke printing in SfRichTextBoxAdv.
+The following code example demonstrates how to bind UI Command to invoke printing in SfRichTextBoxAdv.
 {% tabs %}
 {% highlight XAML %}
 <!-- Binds button to the PrintDocumentCommand -->
@@ -74,11 +69,9 @@ The following code example demonstrates how to bind the [PrintDocumentCommand](h
 
 {% endtabs %}
 
-## Hide comments when printing
+In the SfRichTextBoxAdv control, comments will be shown by default on printing the document. You can hide the comments while printing by using the [PrintComments](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.EditorSettings.html#Syncfusion_Windows_Controls_RichTextBoxAdv_EditorSettings_PrintComments) property of [EditorSettings](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.EditorSettings.html) class.
 
-In the SfRichTextBoxAdv control, comments are shown by default when printing the document (the default value of `PrintComments` is `true`). You can hide the comments while printing by setting the [PrintComments](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.EditorSettings.html#Syncfusion_Windows_Controls_RichTextBoxAdv_EditorSettings_PrintComments) property of the [EditorSettings](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.EditorSettings.html) class to `false`.
-
-The following code example illustrates how to hide the comments when printing the document.
+The following code example illustrates how to hide the comments on printing the document.
 
 {% tabs %}
 {% highlight xaml %}
@@ -103,10 +96,4 @@ richTextBoxAdv.EditorSettings.PrintComments = False
 
 N> In order to invoke printing, the standard keyboard shortcut CTRL + P can also be used.
 
-You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
-
-## See Also
-
-- [Commands in WPF RichTextBox](Commands)
-- [Document Properties in WPF RichTextBox](Document-Properties)
-- [EditorSettings in WPF RichTextBox](EditorSettings)
+You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations.You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to knows how to render and configure the editing tools.
