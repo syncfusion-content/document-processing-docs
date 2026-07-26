@@ -18,7 +18,7 @@ Follow the steps below to save a PDF file to AWS S3 from a browser-based Angular
 
 **Step 1:** Create a PDF Viewer sample in Angular
 
-Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample in TypeScript. This will set up the basic structure of your PDF Viewer application.
+Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample in Angular. This will set up the basic structure of your PDF Viewer application.
 
 **Step 2:** Modify the `src/app/app.ts` File in the Angular Project
 
@@ -34,7 +34,7 @@ N> Replace the placeholder values with the AWS region and credentials. For produ
 
 ```typescript
 AWS.config.update({
-  region: '**Your Region**', // Update this your region
+  region: '**Your Region**', // Update this with your region
   accessKeyId: '*Your Access Key*', // Update this with your access key id
   secretAccessKey: '*Your Security Access Key*', // Update this with your secret access key
 });
@@ -89,7 +89,7 @@ N> Replace **Your Bucket Name** and **Your Key** with the target S3 bucket and o
 ```typescript
 private s3 = new AWS.S3();
 
-saveDocument() {
+SavePdfToBlob() {
     var viewer = (<any>document.getElementById("pdfViewer")).ej2_instances[0];
     viewer.saveAsBlob().then((value: Blob) => {
       const reader = new FileReader();
@@ -141,10 +141,12 @@ using Amazon.S3;
 using Amazon.S3.Model;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to the `PdfViewerController` class. In the constructor, assign the values from the configuration to the corresponding fields
 
 ```csharp
 private IConfiguration _configuration;
+private IWebHostEnvironment _hostingEnvironment;
+private IMemoryCache _cache;
 public readonly string _accessKey;
 public readonly string _secretKey;
 public readonly string _bucketName;

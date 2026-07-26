@@ -39,6 +39,8 @@ using Helpers;
 
 ```csharp
 private IConfiguration _configuration;
+private IWebHostEnvironment _hostingEnvironment;
+private IMemoryCache _cache;
 public readonly string folderName;
 public readonly string applicationId;
 public readonly string tenantId;
@@ -101,7 +103,7 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
 }
 ```
 
-6. Open `appsettings.json` in the web service project and add the following keys below the existing `AllowedHosts` configuration
+6. Open `appsettings.json` in the web service project and add the following keys below the existing `AllowedHosts` configuration.
 
 ```json
 {
@@ -113,7 +115,7 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
   },
   "AllowedHosts": "*",
   "TenantId": "Your_Tenant_ID",
-  "applApplicationIdicationId": "Your_Application_ID",
+  "ApplicationId": "Your_Application_ID",
   "FolderName": "Your_Folder_Name_To_Access_The_Files_In_Onedrive"
 }
 

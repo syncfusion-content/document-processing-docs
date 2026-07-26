@@ -33,10 +33,12 @@ using Google.Apis.Auth.OAuth2;
 4. Add the following private fields and constructor parameters to the `PdfViewerController` class. In the constructor, assign the configuration values to the corresponding fields.
 
 ```csharp
-// Private readonly object _storageClient
+// Private readonly StorageClient _storageClient
 private readonly StorageClient _storageClient;
 
 private IConfiguration _configuration;
+private IWebHostEnvironment _hostingEnvironment;
+private IMemoryCache _cache;
 
 public readonly string _bucketName;
 
@@ -55,9 +57,9 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
   // Create a storage client using the service account credentials.
   _storageClient = StorageClient.Create(credentials);
 
-   _configuration = configuration;
+  _configuration = configuration;
 
-   _bucketName = _configuration.GetValue<string>("BucketName");
+  _bucketName = _configuration.GetValue<string>("BucketName");
 }
 ```
 
@@ -108,6 +110,7 @@ N> Replace **Your Bucket name from Google Cloud Storage** with the actual name o
 N> Replace **path/to/service-account-key.json** with the actual file path to the service account key JSON file. Provide the correct path and filename.
 
 **Step 3:** Set the PDF Viewer properties in the Angular PDF Viewer component
+
 Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from Google Cloud Storage. Ensure that you correctly pass the document name from the files available in your bucket to the documentPath property.
 
 ```typescript

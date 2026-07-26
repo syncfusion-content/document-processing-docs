@@ -32,7 +32,7 @@ Follow the instructions provided in this [link](https://help.syncfusion.com/docu
 import { Dropbox } from 'dropbox';
 ```
 
-2. Configure a custom toolbar item for the download function to save a PDF file in Azure Blob Storage.
+2. Configure a custom toolbar item for the download function to save a PDF file in Dropbox cloud storage.
 
 ```typescript
 @Component({
@@ -79,8 +79,8 @@ export class AppComponent implements OnInit {
 N> Replace **Your Access Token** with the actual access token for the Dropbox app.
 
 ```typescript
-saveDocument() {
-  var proxy = this
+SavePdfToBlob() {
+  var proxy = this;
   var viewer = (<any>document.getElementById("pdfViewer")).ej2_instances[0];
   this.fileName = viewer.fileName;
   viewer.saveAsBlob().then((value: Blob) => {
@@ -131,10 +131,12 @@ using Dropbox.Api;
 using Dropbox.Api.Files;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to the `PdfViewerController` class. In the constructor, assign the values from the configuration to the corresponding fields
 
 ```csharp
 private IConfiguration _configuration;
+private IWebHostEnvironment _hostingEnvironment;
+private IMemoryCache _cache;
 public readonly string _accessToken;
 public readonly string _folderName;
 
@@ -142,7 +144,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 {
   _hostingEnvironment = hostingEnvironment;
   _cache = cache;
-   _configuration = configuration;
+  _configuration = configuration;
   _accessToken = _configuration.GetValue<string>("AccessToken");
   _folderName = _configuration.GetValue<string>("FolderName");
 }

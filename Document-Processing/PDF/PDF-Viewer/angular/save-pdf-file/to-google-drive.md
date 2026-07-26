@@ -38,6 +38,8 @@ using Google.Apis.Util.Store;
 
 ```csharp
 private IConfiguration _configuration;
+private IWebHostEnvironment _hostingEnvironment;
+private IMemoryCache _cache;
 public readonly string folderId;
 public readonly string applicationName;
 public readonly string credentialPath;
@@ -135,7 +137,7 @@ N> The folder ID is the unique identifier in the folder URL. For example, in `ht
 
 N> Use a valid `client_id` from the JSON file to authenticate with the Google Drive API and save files securely.
 
-**Step 4:**  Set the PDF Viewer Properties in Angular PDF viewer component
+**Step 4:** Set the PDF Viewer properties in the Angular PDF Viewer component
 
 Update the `serviceUrl` property of the PDF Viewer component to the web service URL, replacing `https://localhost:44396/pdfviewer` with the actual server endpoint. Set the `documentPath` property to the PDF file name that exists in the configured Google Drive folder.
 

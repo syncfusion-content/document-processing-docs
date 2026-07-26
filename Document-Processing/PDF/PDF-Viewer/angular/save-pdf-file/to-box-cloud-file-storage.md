@@ -35,10 +35,12 @@ using Box.V2.Config;
 using Box.V2.Models;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to the `PdfViewerController` class. In the constructor, assign the values from the configuration to the corresponding fields
 
 ```csharp
 private IConfiguration _configuration;
+private IWebHostEnvironment _hostingEnvironment;
+private IMemoryCache _cache;
 public readonly string _accessToken;
 public readonly string _clientID;
 public readonly string _clientSecret;
@@ -48,7 +50,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 {
   _hostingEnvironment = hostingEnvironment;
   _cache = cache;
-   _configuration = configuration;
+  _configuration = configuration;
   _accessToken = _configuration.GetValue<string>("AccessToken");
   _clientID = _configuration.GetValue<string>("ClientID");
   _clientSecret = _configuration.GetValue<string>("ClientSecret");
@@ -97,7 +99,7 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
 
 ```
 
-6. Open the `appsettings.json` file in your web service project, add the required settings below the existing `"AllowedHosts"` configuration
+6. Open the `appsettings.json` file in your web service project. Add the required settings below the existing `"AllowedHosts"` configuration
 
 ```json
 {
