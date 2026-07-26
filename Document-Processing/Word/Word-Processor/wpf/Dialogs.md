@@ -281,7 +281,10 @@ End Class
 
 N> The same pattern can be followed to create custom windows for other dialogs such as Paragraph, List, Insert Table, Hyperlink, Find and Replace, Password, Table Properties, Table Options, Cell Options, Borders and Shading, and Styles. Replace the `FontDialog` control with the corresponding dialog control (e.g., `ParagraphDialog`, `ListDialog`, etc.).
 
+N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
+
 ## See Also
 
-- [WPF RichTextBox Feature Tour](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor)
-- [WPF RichTextBox Examples](https://github.com/syncfusion/docx-editor-sdk-wpf-demos)
+- [Document Properties in WPF RichTextBox](./Document-Properties)
+- [Selection in WPF RichTextBox](./Selection)
+- [Commands in WPF RichTextBox](./Commands)

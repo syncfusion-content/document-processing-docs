@@ -36,7 +36,10 @@ The following code example demonstrates how to bind commands for accessing clipb
 
 N> In order to cut, copy, or paste, the standard keyboard shortcuts such as CTRL+X, CTRL+C, and CTRL+V can also be used.
 
+N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
+
 ## See Also
 
-- [WPF RichTextBox Feature Tour](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor)
-- [WPF RichTextBox Examples](https://github.com/syncfusion/docx-editor-sdk-wpf-demos)
+- [Document Properties in WPF RichTextBox](./Document-Properties)
+- [Selection in WPF RichTextBox](./Selection)
+- [Commands in WPF RichTextBox](./Commands)
