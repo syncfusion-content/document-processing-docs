@@ -178,7 +178,7 @@ To enhance the appearance of text in a cell, you can change the indentation of a
 
 ### Fill color
 
-To highlight a cell or range of cells from the whole workbook, you can apply a background color to a cell using `backgroundColor` property.
+To highlight a cell or range of cells from the whole workbook, you can apply a background color to a cell using the `backgroundColor` property.
 
 ### Borders
 
