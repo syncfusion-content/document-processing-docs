@@ -50,7 +50,7 @@ End Class
 
 ### Create the Resources folder
 
-Create a folder named `Resources` in your project root (alongside your `.csproj` / `.vbproj` file).
+Create a folder named `Resources` in your project root (alongside your `.csproj` file).
 
 ### Add the default Resx
 
