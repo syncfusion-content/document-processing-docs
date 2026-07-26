@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Pre-process PDF Document Before Displaying in Angular PDF Viewer
+# Preprocess PDF Document Before Displaying in Angular PDF Viewer
 
 This section explains why preprocessing is useful, what operations you can perform using the Syncfusion PDF Library, and how to load the processed document in the Angular PDF Viewer.
 
@@ -30,7 +30,7 @@ You can visually merge pages in the **Organize Pages** UI inside the PDF Viewer.
 
 ### Programmatically Merge PDFs
 Using the Syncfusion PDF Library, you can merge documents before loading them into the viewer.
-```js
+```ts
 import { PdfDocument } from '@syncfusion/ej2-pdf';
 
 const document1 = await PdfDocument.load('file1.pdf');
@@ -48,7 +48,7 @@ Using the Viewer's [**Organize Pages**](../../organize-pages/overview) window, u
 ![Extract Pages](../images/extract-page.png)
 
 ### Programmatically Extract Pages
-```js
+```ts
 import { PdfDocument } from '@syncfusion/ej2-pdf';
 
 const original = await PdfDocument.load('sample.pdf');
@@ -64,7 +64,7 @@ This reduces file size and improves performance when loading large documents.
 - Ensures consistent appearance across all devices
 
 ### Programmatic Flattening
-```js
+```ts
 import { PdfDocument } from '@syncfusion/ej2-pdf';
 
 const doc = await PdfDocument.load('form.pdf');
@@ -75,7 +75,7 @@ const bytes = await doc.save();
 
 ### Flatten on Load
 
-Use the following code-snippet, when you want uploaded PDFs to be flattened before they are loaded into the viewer.
+Use the following code snippet when you want uploaded PDFs to be flattened before they are loaded into the viewer.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -212,7 +212,7 @@ The PDF Viewer toolbar allows users to:
 ![Custom Stamp](../images/customStamp.png)
 
 ### Programmatically Add a Watermark
-```js
+```ts
 import { PdfDocument, PdfGraphics, PdfBrushes } from '@syncfusion/ej2-pdf';
 
 const doc = await PdfDocument.load('input.pdf');
