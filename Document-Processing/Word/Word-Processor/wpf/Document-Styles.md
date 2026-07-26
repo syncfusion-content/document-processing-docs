@@ -131,6 +131,6 @@ N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor
 
 ## See Also
 
+- [Document Properties in WPF RichTextBox](./Document-Properties)
 - [Selection in WPF RichTextBox](./Selection)
 - [Commands in WPF RichTextBox](./Commands)
-- [Document Structure in WPF RichTextBox](./Document-Structure)
