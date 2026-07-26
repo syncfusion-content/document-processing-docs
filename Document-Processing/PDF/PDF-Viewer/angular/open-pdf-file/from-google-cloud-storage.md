@@ -18,7 +18,7 @@ Start by following the steps in this guide to create a simple [PDF viewer sample
 
 **Step 2:** Modify the `PdfViewerController.cs` file in the web service project
 
-1. Create a web service project in .NET Core 3.0 or above. See this background article for the PDF Viewer [web service pattern](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above)
+1. Create a web service project in .NET Core 3.0 or above. See this background article for the PDF Viewer [web service pattern](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above).
 
 2. Open the `PdfViewerController.cs` file in your web service project.
 
@@ -33,9 +33,9 @@ using Google.Apis.Auth.OAuth2;
 4. Add the following private fields and constructor parameters to PdfViewerController. In the constructor, assign values from configuration to the corresponding fields.
 
 ```csharp
-// Private readonly object _storageClient
 private readonly StorageClient _storageClient;
-
+private IWebHostEnvironment _hostingEnvironment;
+private IMemoryCache _cache;
 private IConfiguration _configuration;
 
 public readonly string _bucketName;
@@ -54,9 +54,8 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
   // Create a storage client with Application Default Credentials
   _storageClient = StorageClient.Create(credentials);
 
-   _configuration = configuration;
-
-   _bucketName = _configuration.GetValue<string>("BucketName");
+  _configuration = configuration;
+  _bucketName = _configuration.GetValue<string>("BucketName");
 }
 ```
 
@@ -94,7 +93,7 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonObject)
 }
 ```
 
-6. Open appsettings.json in the web service project and add the following keys below the existing AllowedHosts configuration
+6. Open the `appsettings.json` file in the web service project and add the following keys below the existing `AllowedHosts` configuration.
 
 ```json
 {

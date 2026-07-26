@@ -8,15 +8,15 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF from Dropbox cloud storage
+# Open PDF from Dropbox cloud storage in Angular PDF Viewer
 
 The Angular PDF Viewer component supports loading PDF files from Dropbox using either the standalone or the server-backed PDF Viewer. The following steps demonstrate both approaches.
 
 ## Using Standalone PDF Viewer
 
-To load a PDF file from Dropbox cloud file storage in a PDF Viewer, you can follow the steps below
+To load a PDF file from Dropbox cloud file storage in a PDF Viewer, you can follow the steps below.
 
-**Step 1** Create a Dropbox API
+**Step 1:** Create a Dropbox API
 
 Follow the Dropbox documentation to create an API app: [link](https://www.dropbox.com/developers/documentation/dotnet#tutorial). This enables programmatic access with secure credentials.
 
@@ -67,9 +67,9 @@ N> The **npm install dropbox** package must be installed in the Angular applicat
 
 ## Using the server-backed PDF Viewer
 
-To load a PDF file from Dropbox cloud file storage in a PDF Viewer, you can follow the steps below
+To load a PDF file from Dropbox cloud file storage in a PDF Viewer, you can follow the steps below.
 
-**Step 1** Create a Dropbox API
+**Step 1:** Create a Dropbox API
 
 To create a Dropbox API App, you should follow the official documentation provided by Dropbox [link](https://www.dropbox.com/developers/documentation/dotnet#tutorial). This enables programmatic access with secure credentials.
 
@@ -91,9 +91,11 @@ using Dropbox.Api;
 using Dropbox.Api.Files;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to the `PdfViewerController` class. In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
+private IWebHostEnvironment _hostingEnvironment;
+private IMemoryCache _cache;
 private IConfiguration _configuration;
 public readonly string _accessToken;
 public readonly string _folderName;
@@ -102,7 +104,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 {
   _hostingEnvironment = hostingEnvironment;
   _cache = cache;
-   _configuration = configuration;
+  _configuration = configuration;
   _accessToken = _configuration.GetValue<string>("AccessToken");
   _folderName = _configuration.GetValue<string>("FolderName");
 }
@@ -132,7 +134,7 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
       string fileName = jsonObject["document"];
 
       using (var dropBox = new DropboxClient(_accessToken))
-     {
+      {
         using (var response = await dropBox.Files.DownloadAsync(_folderName + "/" + fileName))
         {
           var byteArray = await response.GetContentAsByteArrayAsync();
@@ -154,7 +156,7 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 
 ```
 
-6. Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+6. Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration
 
 ```json
 {

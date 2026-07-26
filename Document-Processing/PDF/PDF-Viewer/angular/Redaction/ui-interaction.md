@@ -5,6 +5,7 @@ description: Learn about UI interactions in Redaction annotations of the Syncfus
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Redaction UI interactions in Angular PDF Viewer
