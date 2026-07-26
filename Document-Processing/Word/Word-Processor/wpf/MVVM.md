@@ -8,7 +8,7 @@ keywords: mvvm,data-binding,dependency-property,two-way-binding,viewmodel
 ---
 # MVVM in WPF RichTextBox (SfRichTextBoxAdv)
 
-The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) control can be used with the Model-View-ViewModel (MVVM) pattern. This section demonstrates how to use the SfRichTextBoxAdv control with the MVVM pattern. For a complete working example, see the [WPF RichTextBox MVVM sample on GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/MVVM).
+The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) control can be used with the Model-View-ViewModel (MVVM) pattern. This section demonstrates how to use the SfRichTextBoxAdv control with the MVVM pattern.
 
 ## Creating a View Model
 
