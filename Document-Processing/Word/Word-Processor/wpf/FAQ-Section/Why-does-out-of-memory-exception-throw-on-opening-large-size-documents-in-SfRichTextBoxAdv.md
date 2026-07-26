@@ -29,12 +29,3 @@ To avoid an `OutOfMemoryException` when working with large documents, consider t
 
 - **Split large documents** — Break the content into several smaller documents and open them individually instead of loading the entire document at once.
 - **Use a high-configuration machine** — Run the application on a machine with sufficient RAM and CPU resources to comfortably load and edit the document.
-- **Release document instances** — Dispose of document instances as soon as they are no longer needed so that the memory they occupy is released promptly. See [Memory cleanup](#memory-cleanup) for details.
-
-### Memory cleanup
-
-Memory used by a document instance is held until that instance is unloaded. To reclaim memory programmatically, do the following when a document is no longer needed:
-
-- Detach the document from the `SfRichTextBoxAdv` by setting the [Document](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_Document) property to `null` or by clearing the underlying `DocumentStream`.
-- If your application owns the `Stream` or `WordDocument` instance used to load the content, dispose of it as well.
-- For long-running scenarios that load several documents, close each `SfRichTextBoxAdv` window or unload the control's content before opening the next document so that the previous document instance is eligible for garbage collection.
