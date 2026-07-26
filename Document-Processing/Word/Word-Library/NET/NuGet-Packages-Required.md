@@ -8,9 +8,9 @@ documentation: UG
 
 # NuGet Packages Required for Word Library
 
-## Installing Syncfusion<sup>&reg;</sup> DocIO through NuGet Packages 
+## Installing the Syncfusion<sup>&reg;</sup> DocIO Library through NuGet Packages
 
-NuGet is the one of the easiest way to download and install DocIO library to read, write and edit the Word documents. The following NuGet packages need to be installed in your application.
+NuGet is one of the easiest ways to download and install the DocIO library to read, write, and edit Word documents. The following NuGet packages need to be installed in your application based on the platform.
 <table>
 <thead>
 <tr>
@@ -157,14 +157,14 @@ Install-Package Syncfusion.Xamarin.DocIO
 </tr>
 </table>
 
-N> 1. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
-N> 2. Syncfusion<sup>&reg;</sup> components are available in [nuget.org](https://www.nuget.org/)
-N> 3. Starting with v17.3.0.x, Syncfusion<sup>&reg;</sup> provides support to .NET Core 3.0. You can use the above WPF or Windows Forms platform NuGet packages for .NET Core 3.0 targeting applications and use the same "C# tab" code examples for it.
+N> 1. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add the "Syncfusion.Licensing" assembly reference and include a license key in your project. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> 2. Syncfusion<sup>&reg;</sup> components are available in [nuget.org](https://www.nuget.org/).
+N> 3. Starting with v17.3.0.x, Syncfusion<sup>&reg;</sup> provides support for .NET Core 3.0. You can use the above WPF or Windows Forms platform NuGet packages for .NET Core 3.0 targeting applications and use the same "C# tab" code examples for it.
 N> 4. Syncfusion has **deprecated the ASP.NET package**. We strongly recommend upgrading your applications to ASP.NET Core. Refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/migrate-from-net-framework-to-net-core) to migrate from .NET Framework to .NET Core.
 
-## Converting Word document to PDF
+## Converting a Word document to PDF
 
-For converting Word document into PDF, the following NuGet packages need to be installed in your application.
+For converting a Word document to PDF, the following NuGet packages need to be installed in your application based on the platform.
 
 <table>
 <thead>
@@ -243,7 +243,7 @@ Install-Package Syncfusion.DocToPdfConverter.AspNet.Mvc5
 Syncfusion.DocIORenderer.Net.Core.nupkg<br/>
 <br/>
 <i>Note:</i><br/>
-<i>Please refer {{'[here](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/linux-faqs#what-are-the-nuget-packages-to-be-installed-to-perform-word-to-pdf-conversion-in-linux-os)'| markdownify }} to know about the NuGet packages that need to be installed to perform Word to PDF conversion in Linux OS.</i><br/>
+<i>Please refer {{'[here](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/linux-faqs#what-are-the-nuget-packages-to-be-installed-to-perform-word-to-pdf-conversion-in-linux-os)'| markdownify }} to learn about the NuGet packages that need to be installed to perform Word to PDF conversion in Linux OS.</i><br/>
 </td>
 <td>
 Install-Package Syncfusion.DocIORenderer.Net.Core
@@ -306,9 +306,9 @@ Install-Package Syncfusion.Xamarin.DocIORenderer
 </tr>
 </table>
 
-N> 1. Please refer the procedure to deploy your .NET Core application in Linux OS from [here](https://support.syncfusion.com/kb/article/7626/how-to-deploy-net-core-application-with-word-to-pdf-conversion-capabilities-in-linux-os).
-N> 2. From v32.1.19, the dependent package SkiaSharp is upgraded from 3.116.1 to 3.119.1 version and it is mandatory to use SkiaSharp.NativeAssets.Linux v3.119.1 and HarfBuzzSharp.NativeAssets.Linux v8.3.1.2 packages for converting Word documents into PDF in Linux environment.
-N> 3. "DocIO supports Word to PDF conversion in UWP application using DocIORenderer." For further information, please refer [here](https://support.syncfusion.com/kb/article/8902/how-to-convert-word-document-to-pdf-in-uwp)
+N> 1. Please refer to the procedure to deploy your .NET Core application in Linux OS from [here](https://support.syncfusion.com/kb/article/7626/how-to-deploy-net-core-application-with-word-to-pdf-conversion-capabilities-in-linux-os).
+N> 2. From v32.1.19, the dependent package SkiaSharp is upgraded from version 3.116.1 to 3.119.1, and it is mandatory to use SkiaSharp.NativeAssets.Linux v3.119.1 and HarfBuzzSharp.NativeAssets.Linux v8.3.1.2 packages for converting Word documents to PDF in Linux environments.
+N> 3. DocIO supports Word to PDF conversion in UWP applications using DocIORenderer. For further information, refer [here](https://support.syncfusion.com/kb/article/8902/how-to-convert-word-document-to-pdf-in-uwp).
 
 ### Additional NuGet packages required for Linux
 
@@ -351,9 +351,9 @@ The following table illustrates the native assets NuGet packages and their appli
   </tbody>
 </table>
 
-## Converting Word document to image
+## Converting a Word document to an image
 
-For converting Word document into image, the following NuGet packages need to be installed in your application.
+For converting a Word document to an image, the following NuGet packages need to be installed in your application based on the platform.
 
 <table>
 <thead>
@@ -432,7 +432,7 @@ ASP.NET Core, Console Application (Targeting .NET Core) and Blazor
 Syncfusion.DocIORenderer.Net.Core.nupkg<br/>
 <br/>
 <i>Note:</i><br/>
-<i>Please refer {{'[here](https://help.syncfusion.com/document-processing/word/word-library/net/faq#what-are-the-nuget-packages-to-be-installed-to-perform-word-to-image-conversion-in-linux-os)'| markdownify }} to know about the NuGet packages that need to be installed to perform Word to Image conversion in Linux OS.</i><br/>
+<i>Please refer {{'[here](https://help.syncfusion.com/document-processing/word/word-library/net/faqs#what-are-the-nuget-packages-to-be-installed-to-perform-word-to-image-conversion-in-linux-os)'| markdownify }} to learn about the NuGet packages that need to be installed to perform Word to image conversion in Linux OS.</i><br/>
 </td>
 <td>
 Install-Package Syncfusion.DocIORenderer.Net.Core
@@ -536,7 +536,9 @@ The following table illustrates the native assets NuGet packages and their appli
 
 ## Converting Charts
 
-The following NuGet package need to be installed additionally to preserve chart as image in Word to PDF, and Image conversions.
+The following NuGet package needs to be installed additionally to preserve charts as images in Word to PDF and image conversions.
+
+N> For ASP.NET Core, Blazor, UWP, WinUI, and .NET MAUI applications, chart preservation during Word to PDF or image conversion is handled by the corresponding DocIORenderer package (Syncfusion.DocIORenderer.Net.Core or Syncfusion.DocIORenderer.NET). A separate OfficeChartToImageConverter package is not required for these platforms.
 
 <table>
 <thead>
@@ -631,7 +633,7 @@ Install-Package Syncfusion.OfficeChartToImageConverter.AspNet
 
 ## NuGet Package Installation and Uninstallation
 
-To use Syncfusion<sup>&reg;</sup> NuGet packages in your project, please refer the NuGet Package [Installation](https://help.syncfusion.com/extension/syncfusion-nuget-packages/nuget-packages) and [Uninstallation](https://help.syncfusion.com/extension/syncfusion-nuget-packages/nuget-uninstallation-process#) sections.
+To use Syncfusion<sup>&reg;</sup> NuGet packages in your project, please refer to the NuGet Package [Installation](https://help.syncfusion.com/extension/syncfusion-nuget-packages/nuget-packages) and [Uninstallation](https://help.syncfusion.com/extension/syncfusion-nuget-packages/nuget-uninstallation-process#) sections.
 
 DocIO NuGet packages can be installed and uninstalled using Package Manager Console. In Visual Studio, select Tools > NuGet Package Manager > Package Manager Console and execute the following commands.
 
@@ -639,7 +641,7 @@ DocIO NuGet packages can be installed and uninstalled using Package Manager Cons
 
 **NuGet Package:** Syncfusion.DocIO.WinForms
 
-The package contains DocIO library that allows you to create, read and edit Word documents.
+The package contains the DocIO library that allows you to create, read, and edit Word documents.
 
 ~~~
 // Install package
@@ -652,7 +654,7 @@ Uninstall-Package Syncfusion.DocIO.WinForms -RemoveDependencies
 
 **NuGet Package:** Syncfusion.DocToPdfConverter.WinForms
 
-The package contains the DocToPdfConverter .NET library that allows you to convert the Word documents to PDF.
+The package contains the DocToPdfConverter .NET library that allows you to convert Word documents to PDF.
 
 ~~~
 // Install package
@@ -665,7 +667,7 @@ Uninstall-Package Syncfusion.DocToPdfConverter.WinForms -RemoveDependencies
 
 **NuGet Package:** Syncfusion.OfficeChartToImageConverter.WinForms
 
-The package contains OfficeChartToImageConverter .NET library for converting the chart present in word document to image.
+The package contains the OfficeChartToImageConverter .NET library for converting the chart present in a Word document to an image.
 
 ~~~
 // Install package
@@ -680,7 +682,7 @@ Uninstall-Package Syncfusion.OfficeChartToImageConverter.WinForms -RemoveDepende
 
 **NuGet Package:** Syncfusion.DocIO.Wpf
 
-The package contains DocIO library that allows you to create, read and edit Word documents.
+The package contains the DocIO library that allows you to create, read, and edit Word documents.
 
 ~~~
 // Install package
@@ -693,7 +695,7 @@ Uninstall-Package Syncfusion.DocIO.Wpf -RemoveDependencies
 
 **NuGet Package:** Syncfusion.DocToPdfConverter.Wpf
 
-The package contains the DocToPdfConverter .NET library that allows you to convert the Word documents to PDF.
+The package contains the DocToPdfConverter .NET library that allows you to convert Word documents to PDF.
 
 ~~~
 // Install package
@@ -706,7 +708,7 @@ Uninstall-Package Syncfusion.DocToPdfConverter.Wpf -RemoveDependencies
 
 **NuGet Package:** Syncfusion.OfficeChartToImageConverter.Wpf
 
-The package contains OfficeChartToImageConverter .NET library for converting the chart present in word document to image.
+The package contains the OfficeChartToImageConverter .NET library for converting the chart present in a Word document to an image.
 
 ~~~
 // Install package
@@ -721,7 +723,7 @@ Uninstall-Package Syncfusion.OfficeChartToImageConverter.Wpf -RemoveDependencies
 
 **NuGet Package:** Syncfusion.DocIO.AspNet.Mvc4
 
-The package contains DocIO library that allows you to create, read and edit Word documents.
+The package contains the DocIO library that allows you to create, read, and edit Word documents.
 
 ~~~
 // Install package
@@ -734,7 +736,7 @@ Uninstall-Package Syncfusion.DocIO.AspNet.Mvc4 -RemoveDependencies
 
 **NuGet Package:** Syncfusion.DocToPdfConverter.AspNet.Mvc4
 
-The package contains the DocToPdfConverter .NET library that allows you to convert the Word documents to PDF.
+The package contains the DocToPdfConverter .NET library that allows you to convert Word documents to PDF.
 
 ~~~
 // Install package
@@ -747,7 +749,7 @@ Uninstall-Package Syncfusion.DocToPdfConverter.AspNet.Mvc4 -RemoveDependencies
 
 **NuGet Package:** Syncfusion.OfficeChartToImageConverter.AspNet.Mvc4
 
-The package contains OfficeChartToImageConverter .NET library for converting the chart present in word document to image.
+The package contains the OfficeChartToImageConverter .NET library for converting the chart present in a Word document to an image.
 
 ~~~
 // Install package
@@ -762,7 +764,7 @@ Uninstall-Package Syncfusion.OfficeChartToImageConverter.AspNet.Mvc4 -RemoveDepe
 
 **NuGet Package:** Syncfusion.DocIO.AspNet.Mvc5
 
-The package contains DocIO library that allows you to create, read and edit Word documents.
+The package contains the DocIO library that allows you to create, read, and edit Word documents.
 
 ~~~
 // Install package
@@ -775,7 +777,7 @@ Uninstall-Package Syncfusion.DocIO.AspNet.Mvc5 -RemoveDependencies
 
 **NuGet Package:** Syncfusion.DocToPdfConverter.AspNet.Mvc5
 
-The package contains the DocToPdfConverter .NET library that allows you to convert the Word documents to PDF.
+The package contains the DocToPdfConverter .NET library that allows you to convert Word documents to PDF.
 
 ~~~
 // Install package
@@ -788,7 +790,7 @@ Uninstall-Package Syncfusion.DocToPdfConverter.AspNet.Mvc5 -RemoveDependencies
 
 **NuGet Package:** Syncfusion.OfficeChartToImageConverter.AspNet.Mvc5
 
-The package contains OfficeChartToImageConverter .NET library for converting the chart present in word document to image.
+The package contains the OfficeChartToImageConverter .NET library for converting the chart present in a Word document to an image.
 
 ~~~
 // Install package
@@ -803,7 +805,7 @@ Uninstall-Package Syncfusion.OfficeChartToImageConverter.AspNet.Mvc5 -RemoveDepe
 
 **NuGet Package:** Syncfusion.DocIO.Net.Core
 
-The package contains DocIO portable library that allows you to create, read and edit Word documents.
+The package contains the DocIO portable library that allows you to create, read, and edit Word documents.
 
 ~~~
 // Install package
@@ -816,7 +818,7 @@ Uninstall-Package Syncfusion.DocIO.Net.Core -RemoveDependencies
 
 **NuGet Package:** Syncfusion.DocIORenderer.Net.Core
 
-The package contains the DocIORenderer .NET portable library that allows you to convert the Word documents to PDF.
+The package contains the DocIORenderer .NET portable library that allows you to convert Word documents to PDF.
 
 ~~~
 // Install package
@@ -831,7 +833,7 @@ Uninstall-Package Syncfusion.DocIORenderer.Net.Core -RemoveDependencies
 
 **NuGet Package:**  Syncfusion.DocIO.UWP
 
-The package contains DocIO library that allows you to create, read and edit Word documents.
+The package contains the DocIO library that allows you to create, read, and edit Word documents.
 
 ~~~
 // Install package
@@ -846,7 +848,7 @@ Uninstall-Package Syncfusion.DocIO.UWP -RemoveDependencies
 
 **NuGet Package:**  Syncfusion.DocIO.NET
 
-The package contains DocIO library that allows you to create, read and edit Word documents.
+The package contains the DocIO library that allows you to create, read, and edit Word documents.
 
 ~~~
 // Install package
@@ -859,7 +861,7 @@ Uninstall-Package Syncfusion.DocIO.NET -RemoveDependencies
 
 **NuGet Package:** Syncfusion.DocIORenderer.NET
 
-The package contains the DocIORenderer .NET library that allows you to convert the Word documents to PDF.
+The package contains the DocIORenderer .NET library that allows you to convert Word documents to PDF.
 
 ~~~
 // Install package
