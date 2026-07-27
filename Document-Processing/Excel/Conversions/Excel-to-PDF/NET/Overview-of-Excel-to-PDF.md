@@ -1,6 +1,6 @@
 ---
 title: Convert Excel to PDF using the .NET Excel (XlsIO) Library | Syncfusion
-description: The Syncfusion .NET Excel (XlsIO) library is a non-UI Excel library used to create, read, edit, and convert Excel files to PDF in Windows Forms, WPF, UWP, ASP.NET Web Forms, ASP.NET MVC, ASP.NET Core, Xamarin, Blazor, WinUI, and .NET MAUI applications without Microsoft Office dependencies.
+description: Syncfusion .NET XlsIO is a high-performance Excel library for creating, reading, editing, and converting Excel files to PDF across .NET platforms without Microsoft Office dependencies.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -34,8 +34,6 @@ using Syncfusion.Pdf;
 * Windows Forms, WPF, UWP, ASP.NET Web Forms, ASP.NET MVC, ASP.NET Core, Xamarin, Blazor, WinUI, and .NET MAUI
 * Hosting environments: AWS, Google Cloud, and Microsoft Azure
 * .NET versions: .NET Framework 4.6.1+, .NET Core 8, and later
-
-> IMPORTANT: On Linux and macOS, the conversion relies on **System.Drawing.Common** for rendering charts and shapes. Install the [libgdiplus](https://learn.microsoft.com/dotnet/core/install/linux-scripted-manual#libgdiplus) native library and add `<PackageReference Include="System.Drawing.Common" Version="..." />` to your project. Without this, chart-to-PDF conversion will fail at runtime.
 
 ## Key Features
 

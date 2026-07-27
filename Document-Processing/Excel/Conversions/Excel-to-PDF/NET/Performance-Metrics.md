@@ -69,7 +69,7 @@ The benchmark was run on the following configuration:
 1. Install the [Syncfusion.ExcelToPdfConverter.Wpf](https://www.nuget.org/packages/Syncfusion.ExcelToPdfConverter.Wpf) NuGet package (or the platform-specific package for your target).
 2. Register your license key by calling `Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")` at application startup.
 3. Open the sample project that matches the data type you want to benchmark (see the **Sample** column above).
-4. Build in **Release** configuration and run. The sample uses `System.Diagnostics.Stopwatch` to measure conversion time.
+4. 	Built-in **Release** configuration and run. The sample uses `System.Diagnostics.Stopwatch` to measure conversion time.
 
 ## See also
 

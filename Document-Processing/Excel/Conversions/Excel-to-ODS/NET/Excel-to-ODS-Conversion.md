@@ -8,9 +8,9 @@ documentation: UG
 
 # Excel to ODS Conversion
 
-The OpenDocument Format (ODF) is an XML-based file format for spreadsheets, charts, presentations, and word-processing documents. The OpenDocument Spreadsheet (ODS) format is the spreadsheet counterpart used by OpenOffice and LibreOffice. XlsIO converts XLS and XLSX workbooks to ODS.
+The OpenDocument Format (ODF) is an XML-based file format for spreadsheets, charts, presentations, and word-processing documents. The OpenDocument Spreadsheet format is the spreadsheet counterpart used by OpenOffice. XlsIO converts XLS and XLSX workbooks to ODS.
 
-To write an ODS file, set `application.DefaultVersion` to a value that maps to ODS (`ExcelVersion.Excel2013` is shown in the samples below; older values such as `Excel2010` are also accepted) and call `workbook.SaveAs("Output.ods")`. All sheets in the workbook are exported.
+To write an OpenDocument Spreadsheet file, set `application.DefaultVersion` to a value that maps to OpenDocument Spreadsheet (`ExcelVersion.Excel2013` is shown in the samples below; older values such as `Excel2010` are also accepted) and call `workbook.SaveAs("Output.ods")`. All sheets in the workbook are exported.
 
 N> IMPORTANT: Before running the samples on this page, install the required NuGet package for your target platform and register your Syncfusion license key. For more information, see the [Licensing overview](https://help.syncfusion.com/document-processing/licensing/overview).
 
@@ -160,7 +160,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to convert Excel to ODS in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20ODS/Excel%20to%20ODS/.NET/Excel%20to%20ODS).
+A complete working example to convert Excel to OpenDocument Spreadsheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20ODS/Excel%20to%20ODS/.NET/Excel%20to%20ODS).
 
 ## Supported and unsupported elements in ODS conversion
 
@@ -210,5 +210,4 @@ The table below summarizes the workbook features XlsIO preserves when writing an
 * [Convert Excel to image](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-image/overview)
 * [Convert Excel to HTML](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-html/overview)
 * [Convert Excel to CSV (or TSV)](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-csv/overview)
-* [NuGet packages for Excel (XlsIO)](https://help.syncfusion.com/document-processing/excel/getting-started/nuget-packages-required)
 * [Syncfusion .NET Excel (XlsIO) — Licensing overview](https://help.syncfusion.com/document-processing/licensing/overview)

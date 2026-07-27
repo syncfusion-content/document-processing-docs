@@ -19,7 +19,7 @@ The supported delimiters are:
 * **Semicolon** (`;`)
 * **Colon** (`:`)
 * **Space** (` `)
-* **Equals** (`=`) — used by some locales that export with leading `=` on every value; not a true separator. Use a different delimiter (for example `,` or `;`) and add a quote/unescape step in your own code.
+* **Equals** (`=`)
 
 The following code example illustrates how to convert a CSV to an Excel file.
 
@@ -125,5 +125,4 @@ A complete working example to convert TSV to an Excel file in C# is present on [
 * [Convert Excel to CSV (or TSV)](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-csv/overview)
 * [Convert Excel to PDF](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/overview)
 * [Convert Excel to image](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-image/overview)
-* [NuGet packages for Excel (XlsIO)](https://help.syncfusion.com/document-processing/excel/getting-started/nuget-packages-required)
 * [Syncfusion .NET Excel (XlsIO) — Licensing overview](https://help.syncfusion.com/document-processing/licensing/overview)

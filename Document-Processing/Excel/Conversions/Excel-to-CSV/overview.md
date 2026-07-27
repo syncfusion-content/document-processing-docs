@@ -181,5 +181,4 @@ A complete working example to convert an Excel file to TSV in C# is present on [
 * [Save a workbook in CSV, TSV, or other delimited formats](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-csv/overview)
 * [Convert Excel to PDF](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/overview)
 * [Convert Excel to image](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-image/overview)
-* [NuGet packages for Excel (XlsIO)](https://help.syncfusion.com/document-processing/excel/getting-started/nuget-packages-required)
 * [Syncfusion .NET Excel (XlsIO) — Licensing overview](https://help.syncfusion.com/document-processing/licensing/overview)

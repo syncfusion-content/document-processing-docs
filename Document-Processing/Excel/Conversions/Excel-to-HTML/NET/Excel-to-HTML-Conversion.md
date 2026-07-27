@@ -132,6 +132,5 @@ A complete working example to save an Excel worksheet as HTML file using [HtmlSa
 * [Convert Excel to image](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-image/overview)
 * [Convert Excel to CSV (or TSV)](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-csv/overview)
 * [Convert a chart to an image](https://help.syncfusion.com/document-processing/excel/conversions/chart-to-image/overview)
-* [NuGet packages for Excel (XlsIO)](https://help.syncfusion.com/document-processing/excel/getting-started/nuget-packages-required)
 * [Syncfusion .NET Excel (XlsIO) — Licensing overview](https://help.syncfusion.com/document-processing/licensing/overview)
 
