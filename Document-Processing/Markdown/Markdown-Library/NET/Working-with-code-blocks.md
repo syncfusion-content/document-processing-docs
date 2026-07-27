@@ -8,18 +8,18 @@ documentation: UG
 
 # Working with Code Blocks
 
-Code blocks are fundamental elements in technical documentation and Markdown documents used to display programming code, configuration files, command-line instructions, and other preformatted text. The Syncfusion<sup>&reg;</sup> Markdown library enables you to create, modify, and manage code blocks programmatically in a Markdown document. Code blocks are represented by the `MdCodeBlock` class.
+Code blocks are fundamental elements in technical documentation and Markdown documents. They are used to display programming code, configuration files, command-line instructions, and other preformatted text. The Syncfusion<sup>&reg;</sup> .NET Markdown library enables you to create, modify, and manage code blocks programmatically in a Markdown document. Code blocks are represented by the `MdCodeBlock` class.
 
 ## Types of code blocks
 
-The Syncfusion Markdown library supports two primary types of code blocks:
+The Syncfusion<sup>&reg;</sup> .NET Markdown library supports two primary types of code blocks:
 
 * **Fenced code blocks**: Code blocks enclosed with triple backticks (```) or triple tildes (~~~), allowing optional language specification for syntax highlighting.
 * **Indented code blocks**: Traditional code blocks created by indenting each line with four spaces or one tab.
 
 N> The `IsFencedCode` property controls the code block type. By default, code blocks are created as fenced code blocks.
 
-## Creating fenced code blocks
+## Creating a fenced code block
 
 You can add a code block to a `MarkdownDocument` by using the `AddCodeBlock` method. The following code example demonstrates how to create a fenced code block explicitly.
 
@@ -71,7 +71,7 @@ markdownDocument.Dispose();
 
 {% endtabs %}
 
-
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Code-Blocks/Add-fenced-code-blocks/.NET).
 
 ## Creating indented code blocks
 
@@ -123,11 +123,11 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Code-Blocks/Add-indented-code-block/.NET).
 
+## Modifying an existing code block
 
-## Modifying existing code blocks
-
-Existing code blocks in a parsed Markdown document can be modified by iterating through the blocks and updating the `Lines` collection. The following code example demonstrates how to modify code blocks.
+Existing code blocks in a parsed Markdown document can be modified by iterating through the blocks and updating the `Lines` collection. The following code example demonstrates how to modify a code block.
 
 {% tabs %}
 
@@ -181,6 +181,6 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Code-Blocks/Modifying-an-existing-code-block/.NET).
 
 

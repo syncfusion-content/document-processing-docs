@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Table of contents navigation in PDF Viewer | Syncfusion
-description: Learn how to navigate PDFs using the table of contents in the Syncfusion PDF Viewer control for React.
+title: Hyperlink navigation in React PDF Viewer | Syncfusion
+description: Learn how to configure hyperlink behavior in the Syncfusion React PDF Viewer, including navigation settings and link interaction options.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Table of contents navigation in PDF Viewer
+# Hyperlink navigation in React PDF Viewer
 
-## Overview:
+## Overview
 
-This guide shows how to configure hyperlink behavior in the React PDF Viewer: enable/disable links, control how links open, and handle hyperlink events.
+This guide shows how to configure hyperlink behavior in the React PDF Viewer: enable or disable links, control how links open, and handle hyperlink events. To use these features, ensure the [`@syncfusion/ej2-react-pdfviewer`](https://www.npmjs.com/package/@syncfusion/ej2-react-pdfviewer) package is installed and the `LinkAnnotation` service is included in the `Inject` block in every example below.
 
 ## Steps
 
 ### 1. Enable or disable hyperlink interaction
 
-By default hyperlinks are enabled. Set the [`enableHyperlink`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enablehyperlink) property to `false` to make links non-interactive.
+By default, [`enableHyperlink={true}`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enablehyperlink) is set on the [`PdfViewerComponent`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer), so links are interactive. Set the property to `false` to make links non-interactive.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -58,7 +58,7 @@ export default function App() {
 
 ### 2. Control how links open
 
-Use the [`hyperlinkOpenState`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#hyperlinkopenstate) property to choose whether external links open in the current tab or a new tab or in a whole new window.
+Use the [`hyperlinkOpenState`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#hyperlinkopenstate) property to choose whether external links open in the current tab, a new tab, or a new window. The allowed values are `CurrentTab` (default), `NewTab`, and `NewWindow`.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}

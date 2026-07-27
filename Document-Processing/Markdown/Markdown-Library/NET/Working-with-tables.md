@@ -8,7 +8,9 @@ documentation: UG
 
 # Working with Tables in Markdown Library
 
-Tables are essential components in Markdown documents used to organize and present data in a structured format of rows and columns. The Syncfusion<sup>&reg;</sup> Markdown library provides comprehensive support for creating, modifying, and managing tables programmatically in a Markdown document.
+Tables are essential components in Markdown documents used to organize and present data in a structured format of rows and columns. The Syncfusion<sup>&reg;</sup> .NET Markdown library provides comprehensive support for creating, modifying, and managing tables programmatically in a Markdown document.
+
+A table is represented by the following DOM types:
 
 * **Table**: Represented by `MdTable`, which is the root container for rows.
 * **Rows**: Represented by `MdTableRow`, which contains a collection of cells. A table must contain at least one row (typically the header row).
@@ -18,7 +20,7 @@ The first row in a Markdown table is typically treated as the header row, follow
 
 ## Adding a table
 
-You can add a table to a `MarkdownDocument` by using the `AddTable` method. The alignment for each column can be specified using the `ColumnAlignments` property. The supported alignment options are Left, Center, and Right.
+You can add a table to a `MarkdownDocument` by using the `AddTable` method. The alignment for each column can be specified using the `ColumnAlignments` property. The supported alignment options are `Left`, `Center`, and `Right`.
 
 The following code example demonstrates how to create a table 
 
@@ -108,7 +110,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C#*** for ASP.
 
 {% endtabs %}
 
-
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Tables/Add-an-table/.NET).
 
 N> Column alignment is set at the table level using the `ColumnAlignments` property and applies to the entire column, not individual cells.
 
@@ -186,7 +188,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Tables/Changing-column-alignment-in-existing-table/.NET).
 
 ## Removing tables
 
@@ -244,4 +246,4 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Tables/Remove-an-table/.NET).

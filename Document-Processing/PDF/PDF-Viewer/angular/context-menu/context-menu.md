@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Context Menu in Angular PDF Viewer | Syncfusion
-description: Learn about the contextual menu options in the Syncfusion Angular PDF Viewer, including default behavior and customization possibilities.
+description: Learn about the context menu options in the Syncfusion Angular PDF Viewer, default behavior, and links to built-in and customization guides.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -14,7 +14,7 @@ The Angular PDF Viewer provides a built-in context menu for interacting with tex
 
 ## Understanding the Context Menu
 
-The context menu is designed to be context-aware, meaning it dynamically updates its items based on the target element. For instance, right-clicking on selected text will show annotation options, while right-clicking on an annotation will display management options like copy, cut, and delete.
+The context menu is designed to be context-aware, meaning it dynamically updates its items based on the target element. For example, right-clicking on selected text shows text-related actions such as copy and highlight, while right-clicking on an annotation shows annotation management options such as copy, cut, paste, and delete. For the complete list of items by scenario, see the [Built-in Context Menu](builtin-context-menu.md) page.
 
 ### Core Capabilities
 
@@ -22,13 +22,14 @@ The context menu supports several configurations:
 
 * **Default Behavior**: Provides standard actions such as cut, copy, and annotation management.
 * **Customization**: Allows adding new menu items, removing default ones, or reordering them to meet specific application requirements.
-* **Granular Control**: Developers can fully disable the menu or replace it with custom logic using events.
+* **Granular Control**: Developers can fully disable the menu or replace it with custom logic using events. For details, see the [Customize Context Menu](custom-context-menu.md) page.
 
 ### Client-side Interaction
 
 The availability and behavior of the context menu are governed primarily by client-side logic. It is not affected by server-side configurations or cloud environments, ensuring consistent performance across different deployment scenarios.
 
-## Further Reading
+## See Also
 
-* [Built-in Context Menu](builtin-context-menu) – A technical reference for default menu behavior and items.
-* [Customize Context Menu](custom-context-menu) – A guide on how to implement custom menu items and dynamic updates.
+* [Built-in Context Menu](builtin-context-menu.md): A technical reference for default menu items by context (text, annotations, form fields, and empty space).
+* [Customize Context Menu](custom-context-menu.md): A guide on how to add custom menu items, handle click events, and disable the menu entirely.
+* [Angular PDF Viewer Getting Started](../getting-started.md): Installation, module registration, and license key registration.

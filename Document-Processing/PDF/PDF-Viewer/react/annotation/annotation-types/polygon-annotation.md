@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Polygon Annotation (Shape) in React PDF Viewer \ Syncfusion
+title: Polygon Annotation (Shape) in React PDF Viewer | Syncfusion
 description: Learn how to enable, apply, customize, and manage Polygon annotations in the Syncfusion React PDF Viewer.
 platform: document-processing
 control: PDF Viewer
@@ -15,7 +15,7 @@ Polygon annotations allow users to outline irregular regions, draw custom shapes
 
 ## Enable Polygon Annotation in the Viewer
 
-To enable Line annotations, inject the following modules into the React PDF Viewer:
+To enable Polygon annotations, inject the following modules into the React PDF Viewer:
 
 - [**Annotation**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#annotation)
 - [**Toolbar**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#toolbar)
@@ -46,7 +46,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-##  Add Polygon Annotation
+## Add Polygon Annotation
 
 ### Add Polygon Annotation Using the Toolbar
 1. Open the **Annotation Toolbar**.
@@ -60,7 +60,7 @@ N> When in Pan mode, selecting a shape tool automatically switches the viewer to
 
 ### Enable Polygon Mode
 
-Switch the viewer into highlight mode using `setAnnotationMode('Polygon')`.
+Switch the viewer into Polygon mode using `setAnnotationMode('Polygon')`.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -131,11 +131,11 @@ Configure default polygon appearance (fill color, stroke color, thickness, opaci
 
 ## Manage Polygon (Edit, Move, Resize, Delete)
 
-### Edit Circle
+### Edit Polygon
 
-#### Edit Circle (UI)
+#### Edit Polygon (UI)
 
-- Select a Circle to view resize handles.
+- Select a Polygon to view resize handles.
 - Drag any side/corner to resize; drag inside the shape to move it.
 - Edit **fill**, **stroke**, **thickness**, and **opacity** using the annotation toolbar.
 
@@ -156,7 +156,7 @@ Use the annotation toolbar:
 
 #### Edit Polygon Programmatically
 
-Modify an existing Circle programmatically using `editAnnotation()`.
+Modify an existing Polygon programmatically using `editAnnotation()`.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -185,7 +185,7 @@ See [**Delete Annotation**](../remove-annotations) for full behavior and workflo
 ### Comments
 Use the [**Comments panel**](../comments) to add, view, and reply to threaded discussions linked to polygon annotations. It provides a dedicated interface for collaboration and review within the PDF Viewer.
 
-## Set properties while adding Individual Annotation
+## Set properties while adding individual annotations
 Configure per-annotation appearance while adding a polygon using [`addAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation).
 
 
@@ -253,7 +253,7 @@ Disable shape annotations (Polygon, Line, Rectangle, Circle, Arrow) using the [`
 ## Handle Polygon Events
 
 The PDF viewer provides annotation life-cycle events that notify when Polygon annotations are added, modified, selected, or removed.
-For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event)
+For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event).
 
 ## Export and Import
 The PDF Viewer supports exporting and importing annotations. For details on supported formats and workflows, see [**Export and Import annotations**](../export-import-annotations).
