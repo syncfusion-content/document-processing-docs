@@ -1,6 +1,6 @@
 ---
 title: Performance benchmark results | Syncfusion
-description: Know about the performance benchmark results of .NET PowerPoint library with different slide count 
+description: Know about the performance benchmark results of the .NET PowerPoint library with different slide counts
 platform: document-processing
 control: Presentation
 documentation: UG
