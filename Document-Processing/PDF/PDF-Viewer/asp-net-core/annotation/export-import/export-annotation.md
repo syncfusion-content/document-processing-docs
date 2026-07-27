@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Export annotations in ASP.NET Core PDF Viewer
 
-PDF Viewer provides support to export annotations. You can export annotations from the PDF Viewer in two ways:
+PDF Viewer supports exporting annotations. You can export annotations from the PDF Viewer in two ways:
 
 - Using the built-in UI in the Comments panel (JSON or XFDF file)
 - Programmatically (JSON, XFDF, or as an object for custom handling)
