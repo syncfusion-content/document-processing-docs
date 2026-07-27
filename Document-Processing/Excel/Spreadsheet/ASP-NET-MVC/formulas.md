@@ -10,16 +10,26 @@ documentation: ug
 
 # Formulas in ASP.NET MVC Spreadsheet Control
 
-Formulas are used for calculating the data in a worksheet. You can refer the cell reference from same sheet or from different sheets.
+Formulas are used to calculate data in a worksheet. A formula can reference cells in the same worksheet or in other worksheets.
 
 ## Usage
 
-You can set formula for a cell in the following ways,
+You can set a formula for a cell in the following ways:
 
-* Using the `formula` property from `cell`, you can set the formula or expression to each cell at initial load.
+* Use the `formula` property of a cell to set a formula or expression during the initial rendering.
 * Set the formula or expression through data binding.
 * You can set formula for a cell by [`editing`](./editing).
 * Using the `updateCell` method, you can set or update the cell formula.
+
+The following example demonstrates how to set a formula for a cell using the `updateCell` method:
+
+```js
+spreadsheet.updateCell({
+    formula: '=SUM(A1:A5)'
+}, 'B1');
+```
+
+After running the example, verify that cell `B1` displays the sum of the values in the range `A1:A5`.
 
 ## Culture-Based Argument Separator
 
@@ -40,11 +50,20 @@ In the example below, the Spreadsheet control is rendered with the `German cultu
 {% endhighlight %}
 {% endtabs %}
 
+After running the sample, verify that formulas containing culture-specific argument separators and formatted numeric values are calculated correctly.
+
 ## Create User Defined Functions / Custom Functions
 
 The Spreadsheet includes a number of built-in formulas. For your convenience, a list of supported formulas can be found [here](https://ej2.syncfusion.com/aspnetcore/documentation/spreadsheet/formulas#supported-formulas).
 
 You can define and use an unsupported formula, i.e. a user defined/custom formula, in the spreadsheet by using the `addCustomFunction` function. Meanwhile, remember that you should define a user defined/custom formula whose results should only return a single value. If a user-defined/custom formula returns an array, it will be time-consuming to update adjacent cell values.
+
+To create and use a custom function:
+
+1. Define a function that accepts the required arguments and returns a single value.
+2. Register the function using the `addCustomFunction` method.
+3. Use the registered function in a cell formula.
+4. Verify that the target cell displays the expected result.
 
 The following code example shows an unsupported formula in the spreadsheet.
 
@@ -57,7 +76,11 @@ The following code example shows an unsupported formula in the spreadsheet.
 {% endhighlight %}
 {% endtabs %}
 
-Second, if you want to directly compute any formula or expression, you can use the `computeExpression` method. This method will work for both built-in and used-defined/custom formula.
+After running the sample, verify that the registered custom function returns the expected value in the target cell.
+
+## Compute a formula or expression
+
+Use the `computeExpression` method to directly evaluate a built-in or custom formula or expression. This method works with both built-in and custom formulas.
 
 The following code example shows how to use `computeExpression` method in the spreadsheet.
 
@@ -69,6 +92,8 @@ The following code example shows how to use `computeExpression` method in the sp
 {% include code-snippet/spreadsheet/asp-net-mvc/formula-cs2/formulaController.cs %}
 {% endhighlight %}
 {% endtabs %}
+
+After running the sample, verify that the formula or expression is evaluated and returns the expected result.
 
 ## Formula bar
 
@@ -120,11 +145,13 @@ The following code example demonstrates how to set the Automatic calculation mod
 {% endhighlight %}
 {% endtabs %}
 
+After running the sample, modify a dependent cell and verify that the formula result is recalculated automatically.
+
 ### Manual Mode
 
 In Manual Mode, formulas are not recalculated automatically when cell values are modified. Instead, recalculations must be triggered explicitly. This mode is ideal for scenarios where performance optimization is a priority, such as working with large datasets or computationally intensive formulas.
 
-For example, imagine a spreadsheet where cell `C1` contains the formula `=A1+B1`. When the value in `A1` or `B1` changes, the value in `C1` will not update automatically. Instead, the recalculation must be initiated manually using either the `Calculate Sheet` or `Calculate Workbook` option. To manually initiate recalculation, the Spreadsheet provides two options:
+For example, imagine a spreadsheet where cell `C1` contains the formula `=A1+B1`. When the value in `A1` or `B1` changes, the value in `C1` will not update automatically. Instead, the recalculation must be initiated manually using either the `Calculate Sheet` or `Calculate Workbook` option. To manually initiate recalculation, use one of the following options:
 
 * `Calculate Sheet`: Recalculates formulas for the active sheet only.
 * `Calculate Workbook`: Recalculates formulas across all sheets in the workbook.
@@ -140,6 +167,8 @@ The following code example demonstrates how to set the Manual calculation mode i
 {% endhighlight %}
 {% endtabs %}
 
+After running the sample, modify a dependent cell and verify that the formula result remains unchanged until **Calculate Sheet** or **Calculate Workbook** is selected.
+
 ## Supported Formulas
 
 The following are the list of formulas supported in spreadsheet,
@@ -151,7 +180,7 @@ The following are the list of formulas supported in spreadsheet,
 | AND | Returns TRUE if all the arguments are TRUE, otherwise returns FALSE. |
 | AVERAGE | Calculates average for the series of numbers and/or cells excluding text. |
 | AVERAGEA | Calculates the average for the cells evaluating TRUE as 1, text and FALSE as 0. |
-| AVERAGEIF | Clears content of the active cell and enables edit mode. |
+| AVERAGEIF | Calculates the average of cells that meet the specified condition. |
 | AVERAGEIFS | Calculates average for the cells based on specified conditions. |
 | CEILING | Rounds a number up to the nearest multiple of a given factor. |
 | CHOOSE | Returns a value from list of values, based on index number. |
@@ -160,7 +189,7 @@ The following are the list of formulas supported in spreadsheet,
 | CONCAT | Concatenates a list or a range of text strings. |
 | CONCATENATE | Combines two or more strings together. |
 | COUNT | Counts the cells that contain numeric values in a range. |
-| COUNTA | Counts the cells that contains values in a range. |
+| COUNTA | Counts the cells that contain values in a range. |
 | COUNTBLANK | Returns the number of empty cells in a specified range of cells. |
 | COUNTIF | Counts the cells based on specified condition. |
 | COUNTIFS | Counts the cells based on specified conditions. |
@@ -174,7 +203,7 @@ The following are the list of formulas supported in spreadsheet,
 | EDATE | Returns a date with given number of months before or after the specified date. |
 | EOMONTH | Returns the last day of the month that is a specified number of months before or after an initially supplied start date. |
 | EVEN | Rounds a positive number up and negative number down to the nearest even integer. |
-| EXACT | Checks whether a two text strings are exactly same and returns TRUE or FALSE. |
+| EXACT | Checks whether two text strings are exactly the same and returns `TRUE` or `FALSE`. |
 | EXP | Returns e raised to the power of the given number. |
 | FACT | Returns the factorial of a number. |
 | FIND | Returns the position of a string within another string, which is case sensitive.|
@@ -182,7 +211,7 @@ The following are the list of formulas supported in spreadsheet,
 | HLOOKUP | Looks for a value in the top row of the array of values and then returns a value in the same column from a row in the array that you specify. |
 | HOUR | Returns the number of hours in a specified time string. |
 | IF | Returns value based on the given expression. |
-| IFERROR | Returns value if no error found else it will return specified value. |
+| IFERROR | Returns a value when no error is found; otherwise, returns the specified value. |
 | IFS | Returns value based on the given multiple expressions. |
 | INDEX | Returns a value of the cell in a given range based on row and column number. |
 | INT | Rounds a number down to the nearest integer. |
@@ -198,8 +227,8 @@ The following are the list of formulas supported in spreadsheet,
 | MEDIAN | Returns the median of the given set of numbers. |
 | MINUTE | Returns the number of minutes in a specified time string. |
 | MIN | Returns the smallest number of the given arguments. |
-| MOD | Returns a remainder after a number is divided by divisor. |
-| MONTH | Returns the number of months in a specified date string. |
+| MOD | Returns the remainder after a number is divided by the divisor. |
+| MONTH | Returns the month number from a specified date as an integer from 1 to 12. |
 | NOT | Returns the inverse of a given logical expression. |
 | NOW | Returns the current date and time. |
 | ODD | Rounds a positive number up and negative number down to the nearest odd integer. |
@@ -223,28 +252,28 @@ The following are the list of formulas supported in spreadsheet,
 | SUM | Adds a series of numbers and/or cells. |
 | SUMIF | Adds the cells based on specified condition. |
 | SUMIFS | Adds the cells based on specified conditions. |
-| SUMPRODUCT | Returns the sum of the products of the corresponding array in given arrays. |
+| SUMPRODUCT | Returns the sum of the products of corresponding values in the given arrays. |
 | T | Checks whether a value is text or not and returns the text. |
 | TEXT | Converts the supplied value into text by using the user-specified format. |
-| TIME | Converts hours, minutes, seconds to the time formatted text. |
+| TIME | Converts the specified hours, minutes, and seconds to a time value. |
 | TODAY | Returns the current date. |
 | TRUNC | Truncates a supplied number to a specified number of decimal places. |
-| UNIQUE | Returns a unique values from a range or array. |
+| UNIQUE | Returns unique values from a range or array. |
 | VLOOKUP | Looks for a specific value in the first column of a lookup range and returns a corresponding value from a different column within the same row. |
 
 ## Formula Error Dialog
 
-If you enter an invalid formula in a cell, an error dialog with an error message will appear. For instance, a formula with the incorrect number of arguments, a formula without parenthesis, etc.
+If an invalid formula is entered in a cell, an error dialog displays the corresponding error message. For example, an error occurs when a formula contains an incorrect number of arguments or missing parentheses.
 
 | Error Message | Reason |
 |-------|---------|
-| We found that you typed a formula with an invalid arguments | Occurs when passing an argument even though it wasn't needed. |
+| We found that you typed a formula with invalid arguments | Occurs when passing an argument even though it wasn't needed. |
 | We found that you typed a formula with an empty expression | Occurs when passing an empty expression in the argument. |
-| We found that you typed a formula with one or more missing opening or closing parenthesis | Occurs when an open parenthesis or a close parenthesis is missing. |
+| We found that you typed a formula with one or more missing opening or closing parentheses | Occurs when an open parenthesis or a close parenthesis is missing. |
 | We found that you typed a formula which is improper | Occurs when passing a single reference but a range was needed. |
 | We found that you typed a formula with a wrong number of arguments | Occurs when the required arguments were not passed. |
 | We found that you typed a formula which requires 3 arguments | Occurs when the required 3 arguments were not passed. |
-| We found that you typed a formula with a mismatched quotes | Occurs when passing an argument with mismatched quotes. |
+| We found that you typed a formula with mismatched quotes | Occurs when passing an argument with mismatched quotes. |
 | We found that you typed a formula with a circular reference | Occurs when passing a formula with circular cell reference. |
 | We found that you typed a formula which is invalid | Except in the cases mentioned above, all other errors will fall into this broad category. |
 
