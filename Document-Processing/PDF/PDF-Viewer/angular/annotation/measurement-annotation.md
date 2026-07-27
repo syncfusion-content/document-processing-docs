@@ -112,7 +112,7 @@ export class AppComponent implements OnInit {
 {% endhighlight %}
 {% endtabs %}
 
-## Add a measurement annotation to the PDF document Programmatically
+## Add a measurement annotation to the PDF document programmatically
 
 The PDF Viewer library allows adding measurement annotations programmatically using the [addAnnotation()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation#addannotation) method.
 
@@ -338,7 +338,7 @@ export class AppComponent implements OnInit {
       if (pdfviewer.annotationCollection[i].subject === "Distance calculation") {
         pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
         pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-        pdfviewer.annotationCollection[i].thickness = 2 ;
+        pdfviewer.annotationCollection[i].thickness = 2;
         pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
         pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
       }
@@ -351,7 +351,7 @@ export class AppComponent implements OnInit {
       if (pdfviewer.annotationCollection[i].subject === "Perimeter calculation") {
         pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
         pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-        pdfviewer.annotationCollection[i].thickness = 2 ;
+        pdfviewer.annotationCollection[i].thickness = 2;
         pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
         pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
       }
@@ -364,7 +364,7 @@ export class AppComponent implements OnInit {
       if (pdfviewer.annotationCollection[i].subject === "Area calculation") {
         pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
         pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-        pdfviewer.annotationCollection[i].thickness = 2 ;
+        pdfviewer.annotationCollection[i].thickness = 2;
         pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
         pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
       }
@@ -377,7 +377,7 @@ export class AppComponent implements OnInit {
       if (pdfviewer.annotationCollection[i].subject === "Radius calculation") {
         pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
         pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-        pdfviewer.annotationCollection[i].thickness = 2 ;
+        pdfviewer.annotationCollection[i].thickness = 2;
         pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
         pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
       }
@@ -389,7 +389,7 @@ export class AppComponent implements OnInit {
       if (pdfviewer.annotationCollection[i].subject === "Volume calculation") {
         pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
         pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-        pdfviewer.annotationCollection[i].thickness = 2 ;
+        pdfviewer.annotationCollection[i].thickness = 2;
         pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
         pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
       }
@@ -441,7 +441,7 @@ export class AppComponent implements OnInit {
       if (pdfviewer.annotationCollection[i].subject === "Distance calculation") {
         pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
         pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-        pdfviewer.annotationCollection[i].thickness = 2 ;
+        pdfviewer.annotationCollection[i].thickness = 2;
         pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
         pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
       }
@@ -454,7 +454,7 @@ export class AppComponent implements OnInit {
       if (pdfviewer.annotationCollection[i].subject === "Perimeter calculation") {
         pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
         pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-        pdfviewer.annotationCollection[i].thickness = 2 ;
+        pdfviewer.annotationCollection[i].thickness = 2;
         pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
         pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
       }
@@ -467,7 +467,7 @@ export class AppComponent implements OnInit {
       if (pdfviewer.annotationCollection[i].subject === "Area calculation") {
         pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
         pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-        pdfviewer.annotationCollection[i].thickness = 2 ;
+        pdfviewer.annotationCollection[i].thickness = 2;
         pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
         pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
       }
@@ -480,7 +480,7 @@ export class AppComponent implements OnInit {
       if (pdfviewer.annotationCollection[i].subject === "Radius calculation") {
         pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
         pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-        pdfviewer.annotationCollection[i].thickness = 2 ;
+        pdfviewer.annotationCollection[i].thickness = 2;
         pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
         pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
       }
@@ -492,7 +492,7 @@ export class AppComponent implements OnInit {
       if (pdfviewer.annotationCollection[i].subject === "Volume calculation") {
         pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
         pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-        pdfviewer.annotationCollection[i].thickness = 2 ;
+        pdfviewer.annotationCollection[i].thickness = 2;
         pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
         pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
       }
@@ -646,7 +646,7 @@ The PDF Viewer supports the following measurement units:
 
 ![Scale ratio settings dialog for measurement annotations](../images/calibrate_scaledialog.png)
 
-## Setting default scale ratio settings during control initialization
+## Setting default scale ratio during control initialization
 
 The properties of scale ratio for measurement annotation can be set before creating the control using ScaleRatioSettings as shown in the following code snippet,
 

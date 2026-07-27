@@ -13,7 +13,7 @@ AI Assist requires a backend service to process prompts and return AI-generated 
 
 ## Prerequisites
 
-Ensure the following are available before you begin.
+Before you begin, ensure that the following prerequisites are available.
 
 ### Azure OpenAI credentials
 
@@ -163,7 +163,7 @@ Run the following command to start the server:
 npm start
 ```
 
-The server runs on `http://localhost:3000`. Update the AI Assist endpoint like below:
+By default, the server runs at `http://localhost:3000`. Configure AI Assist to use the following endpoint:
 
 ```
 http://localhost:3000/api/AIAssist/Chat
@@ -227,6 +227,6 @@ npm start
 
 [Download Node.js Server](https://drive.google.com/file/d/1V3TlO_6GS3dV986I7sDizmE9kwojkOrx/view?usp=drive_link)
 
-## See also
+## See Also
 
 * [Web API (.NET) server setup](./using-web-api)

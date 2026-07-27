@@ -294,8 +294,6 @@ lDoc.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Named%20Destination/Remove-and-modify-the-named-destination-in-a-PDF).
 
-> **Note:** The `Zoom` value of a [PdfDestination](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfDestination.html) represents a multiplier on the standard zoom level, where `1.0` equals 100 percent. A value of `4` therefore corresponds to a zoom level of 400 percent.
-
 ## Adding a named destination to bookmarks
 
 The following code example shows how to add a named destination to the [bookmarks](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-bookmarks) in the PDF document. When the named destination is assigned to a bookmark, the bookmark becomes navigable to the destination's location in the document.

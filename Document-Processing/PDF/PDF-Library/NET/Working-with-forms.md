@@ -2028,7 +2028,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 Please refer to the [actions](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-action#adding-an-action-to-the-form-field) section for more details.
 
-> **NOTE:** Essential<sup>&reg;</sup> PDF allows users to preserve the extended rights for form filling alone. To learn how to preserve extended rights, refer to the [Working with Document](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-document#performing-incremental-update-for-pdf-document) section.
+N> Essential<sup>&reg;</sup> PDF allows users to preserve the extended rights for form filling alone. To learn how to preserve extended rights, refer to the [Working with Document](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-document#performing-incremental-update-for-pdf-document) section.
 
 ## Filling form fields in an existing PDF Document
 

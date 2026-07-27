@@ -107,7 +107,7 @@ function addArea() {
 {% endtabs %}
 
 ## Customize Area Appearance
-Configure default properties using the [`Area Settings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#areasettings) property (for example, default **fill color**, **stroke color**, **opacity**).
+Configure default properties using the [`areaSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#areasettings) property (for example, default **fill color**, **stroke color**, **opacity**).
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -167,9 +167,9 @@ function editAreaProgrammatically() {
 {% endhighlight %}
 {% endtabs %}
 
-### Delete Distance Annotation
+### Delete Area Annotation
 
-Delete Distance Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
+Delete Area Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
 
 ## Set Default Properties During Initialization
 Apply defaults for Area using the [`areaSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#areasettings) property.

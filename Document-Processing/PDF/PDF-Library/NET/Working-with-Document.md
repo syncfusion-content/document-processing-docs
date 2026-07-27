@@ -286,7 +286,7 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/PDF%20Document/Change-the-page-orientation-from-portrait-to-landscape/).
 
-> **NOTE:** The PDF page orientation is normally inferred from the custom page size. However, if you set a custom orientation using the [Orientation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageSettings.html#Syncfusion_Pdf_PdfPageSettings_Orientation) property, the page dimensions are adjusted to match the selected orientation (for example, an A4 page set to landscape becomes 842 x 595 points). The `Orientation` property is intended for new documents; for existing documents, use the `Rotate` property of the `PdfPageSettings` class instead.
+N> The PDF page orientation is normally inferred from the custom page size. However, if you set a custom orientation using the [Orientation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageSettings.html#Syncfusion_Pdf_PdfPageSettings_Orientation) property, the page dimensions are adjusted to match the selected orientation (for example, an A4 page set to landscape becomes 842 x 595 points). The `Orientation` property is intended for new documents; for existing documents, use the `Rotate` property of the `PdfPageSettings` class instead.
 
 You can also change the orientation by setting a rotation angle using the [PdfPageRotateAngle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageRotateAngle.html) enumeration, as illustrated in the following code example.
 
@@ -382,8 +382,6 @@ document.Close(True)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/PDF%20Document/Rotate_PDF_based_on_angle/).
-
-> **TIP:** The [PdfPageRotateAngle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageRotateAngle.html) enumeration accepts the values **RotateAngle0**, **RotateAngle90**, **RotateAngle180**, and **RotateAngle270**. Rotation is a view-time setting; it does not change the underlying page dimensions, so existing layout and coordinates remain valid. Use the `Rotate` property for rotating pages in existing PDF documents, where the `Orientation` property cannot be applied.
 
 ## Creating sections in a PDF
 
@@ -523,29 +521,6 @@ SendToPrinter("Input.pdf")
 
 {% endtabs %}
 
-> **TIP:** To show the standard print dialog before printing, use the `PrintDialog` pattern so that the user can select a printer, choose a page range, or export to a file:
->
-> ```csharp
-> using System.Drawing.Printing;
-> using System.Windows.Forms;
-> using Syncfusion.Windows.Forms.PdfViewer;
->
-> using (PdfDocumentView viewer = new PdfDocumentView())
-> {
->     viewer.Load("Input.pdf");
->
->     PrintDialog dialog = new PrintDialog();
->     dialog.AllowPrintToFile = true;
->     dialog.AllowSomePages = true;
->     dialog.AllowCurrentPage = true;
->     dialog.Document = viewer.PrintDocument;
->     if (dialog.ShowDialog() == DialogResult.OK)
->     {
->         viewer.PrintDocument.Print();
->     }
-> }
-> ```
-
 ## Working with document properties
 
 Essential<sup>&reg;</sup> PDF allows you to set, read, and modify the document information of a PDF, such as Author, CreationDate, Subject, Title, and Producer. The [DocumentInformation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_DocumentInformation) property of the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) or [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) provides access to this information through the [PdfDocumentInformation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfDocumentInformation.html) class. These values are stored in the PDF information dictionary and are visible from the **File &gt; Properties &gt; Description** dialog in most PDF viewers.
@@ -658,8 +633,6 @@ document.Close(True)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/PDF%20Document/Add_PDF_document_properties/).
-
-> **NOTE:** The standard information entries that can be set or read through the [DocumentInformation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_DocumentInformation) property are **Author**, **Creator**, **Keywords**, **Subject**, **Title**, **Producer**, **CreationDate**, and **ModDate**. The **Producer** and **ModDate** entries are populated automatically by the library and should not be set manually in most scenarios.
 
 To read and modify the [DocumentInformation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_DocumentInformation) property of an existing PDF document, use the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class. The following code example explains how to do this.
 
@@ -814,8 +787,6 @@ document.Close(True)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/PDF%20Document/Remove-specific-keys-from-the-existing-document-information).
-
-> **IMPORTANT:** The **ModDate** entry is maintained automatically by the library when the document is saved and cannot be removed through the `Remove` method. Removing **Producer** is also not recommended in most workflows because it identifies the library that generated the document. If a key does not exist in the document information dictionary, the `Remove` method has no effect, and no exception is thrown.
 
 ## Performing incremental update for PDF document
 
