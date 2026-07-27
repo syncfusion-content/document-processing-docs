@@ -11,7 +11,8 @@ documentation: ug
 
 ## Localization
 
-The [Localization](https://ej2.syncfusion.com/javascript/documentation/common/localization) library allows you to localize the default text content of the Spreadsheet. The Spreadsheet has static text on features such as cell formatting, Merge, and Data validation. You can change this text to other cultures (Arabic, Deutsch, French, and so on) by setting the [`locale`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#locale) property and providing a translation object via the [`L10n`](https://ej2.syncfusion.com/javascript/documentation/api/base/l10n) class.
+The [`Localization`](https://ej2.syncfusion.com/javascript/documentation/common/localization) library allows you to localize the default text content of the Spreadsheet. The Spreadsheet has static text on some features (cell formatting, Merge, Data validation, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the
+[`locale`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#locale) value and translation object.
 
 The following list of properties and their values are used in the Spreadsheet.
 

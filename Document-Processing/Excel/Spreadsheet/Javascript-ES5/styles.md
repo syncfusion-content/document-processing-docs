@@ -49,7 +49,7 @@ Use the following CSS to customize the Spreadsheet formula bar panel.
 
 ```
 
-### Customizing the Spreadsheet formula bar tanel
+### Customizing the Spreadsheet formula bar text
 
 You can customize the Spreadsheet formula bar text by using this CSS.
 
@@ -111,7 +111,7 @@ Use the following CSS to customize the Spreadsheet column header.
 
 ### Customizing the Spreadsheet selection element
 
-The selection element is the highlighted range when one or more cells are selected. Use the following CSS to customize it.
+Customize the Spreadsheet selection element.
 
 ```
 
@@ -123,7 +123,7 @@ The selection element is the highlighted range when one or more cells are select
 
 ### Customizing the Spreadsheet active cell element
 
-The active cell element is the focused single cell within the selection. Use the following CSS to customize it.
+Customize the Spreadsheet active cell element.
 
 ```
 

@@ -109,7 +109,6 @@ The Spreadsheet control followed the [keyboard interaction](https://www.w3.org/W
 
 The Spreadsheet control's accessibility levels are verified through the [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-
 The accessibility compliance of the Spreadsheet control is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/spreadsheet.html) in a new window to evaluate the accessibility of the Spreadsheet control with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/spreadsheet.html" %}

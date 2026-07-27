@@ -7,7 +7,7 @@ control: Spreadsheet
 documentation: ug
 ---
 
-# Changing the active sheet in the EJ2 JavaScript Spreadsheet control
+# Changing the active sheet in EJ2 JavaScript Spreadsheet control
 
 You can change the active sheet of imported file by updating [`activeSheetIndex`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#activesheetindex) property on the [`openComplete`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#opencomplete) event.
 

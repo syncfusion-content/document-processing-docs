@@ -91,7 +91,8 @@ Your Spreadsheet is now integrated with AI Assist and ready to use.
 
 * **Open**: Click the **AI Assist** button in the ribbon toolbar.
 * **Close**: Click the **✕** button inside the panel header, or click the **AI Assist** ribbon button again.
-* **Start new conversation.**: Click the **↺ (Refresh)** button in the panel header.* **Resize the panel**: Drag the left edge of the panel to make it wider or narrower.
+* **Start new conversation.**: Click the **↺ (Refresh)** button in the panel header.
+* **Resize the panel**: Drag the left edge of the panel to make it wider or narrower.
 
 ### Undo an AI Action
 
@@ -122,6 +123,7 @@ You can also prevent the request entirely by setting `args.cancel = true`.
 ### How to Handle AI Responses
 
 Use the [`promptResponse`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#promptresponse) event to run custom logic after the AI completes its task, for example logging results or showing a notification.
+
 ```js
 ej.spreadsheet.Spreadsheet.Inject(ej.spreadsheet.AIAssist);
 
