@@ -119,7 +119,7 @@ You can also explore the Spreadsheet interactively using the live sample below.
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/getting-started-cs1" %}
 
-> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-react-spreadsheet-component) to explore the complete source code. You can also explore our [React Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/react/#/tailwind3/spreadsheet/default) that shows you how to present and manipulate data.
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-react-spreadsheet-component) to explore the complete source code.
 
 ## Video tutorial
 

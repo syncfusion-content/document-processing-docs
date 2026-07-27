@@ -14,33 +14,38 @@ Sheet protection helps you to prevent the users from modifying the data in the s
 
 ## Protect Sheet
 
-Protect sheet feature helps you to prevent the unknown users from accidentally changing, editing, moving, or deleting data in a spreadsheet. And you can also protect the sheet with password. You can use the [`isProtected`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_IsProtected) property to enable or disable the Protecting functionality.
+The Protect Sheet feature prevents users from accidentally changing, editing, moving, or deleting data in a worksheet. You can also protect the sheet with a password.
 
-N> The default value for `isProtected` property is `false`.
+Use the [`isProtected`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_IsProtected) property to enable or disable sheet protection.
 
-By default in protected sheet, selecting, formatting, inserting, deleting functionalities are disabled. To enable some of the above said functionalities the `protectSettings` options are used in a protected spreadsheet.
+N> The default value of the `isProtected` property is `false`.
+
+By default, selection, formatting, insertion, and deletion operations are disabled in a protected sheet. Use the `protectSettings` options to allow specific operations while the sheet remains protected.
 
 The available `protectSettings` options in spreadsheet are,
 
-| Options | Uses |
-|-----|------|
-| `Select Cells` | Used to perform Cell Selection. |
-| `Format Cells` | Used to perform Cell formatting. |
-| `Format Rows` | Used to perform Row formatting. |
-| `Format Columns` | Used to perform Column formatting. |
-| `Insert Link` | Used to perform Hyperlink Insertions. |
+| Option | Description |
+|--------|-------------|
+| `Select Cells` | Allows cell selection. |
+| `Format Cells` | Allows cell formatting. |
+| `Format Rows` | Allows row formatting. |
+| `Format Columns` | Allows column formatting. |
+| `Insert Link` | Allows hyperlink insertion. |
 
-N> * The default value for all `protectSettings` options are `false`.
+N> * The default value of each `protectSettings` option is `false`.
 
 By default, the `Protect Sheet` module is injected internally into the Spreadsheet to perform sheet protection function.
 
 **User Interface**:
 
-In the active Spreadsheet, the sheet protection can be done by any of the following ways:
+To protect a sheet through the user interface:
 
-* Select the Protect Sheet item in the Ribbon toolbar under the Data Tab, and then select your desired options.
-* Right-click the sheet tab, select the Protect Sheet item in the context menu, and then select your desired options.
-* Use the `protectSheet()` method programmatically.
+* Open the **Data** tab in the Ribbon and choose **Protect Sheet**. Alternatively, right-click the sheet tab and choose **Protect Sheet** from the context menu.
+* Select the operations that users are allowed to perform on the protected sheet.
+* Enter and confirm the password, if required.
+* Apply the protection settings.
+
+You can also use the `protectSheet()` method to protect a sheet programmatically.
 
 The following example shows `Protect Sheet` functionality with password in the Spreadsheet control.
 
@@ -61,19 +66,19 @@ The following example shows `Protect Sheet` functionality with password in the S
 
 ## Unprotect Sheet
 
-Unprotect sheet is used to enable all the functionalities that are already disabled in a protected spreadsheet.
+Unprotecting a sheet re-enables the functionality that was disabled when the sheet was protected.
 
-**User Interface**:
+To unprotect a sheet:
 
-In the active Spreadsheet, the sheet can be unprotected by any of the following ways:
+* Open the **Data** tab in the Ribbon and choose **Unprotect Sheet**. Alternatively, right-click the sheet tab and choose **Unprotect Sheet** from the context menu.
+* Enter the password, if the sheet is password-protected.
+* Confirm the operation.
 
-* Select the `Unprotect Sheet` item in the Ribbon toolbar under the Data Tab.
-* Right-click the sheet tab, select the `Unprotect Sheet` item in the context menu.
-* Use the `unprotectSheet()` method programmatically.
+You can also use the `unprotectSheet()` method to unprotect a sheet programmatically.
 
 ## Unlock the particular cells in the protected sheet
 
-In protected spreadsheet, to make some particular cell or range of cells are editable, you can use `lockCells()` method, with the parameter `range` and `isLocked` property as false.
+To make a specific cell or range editable in a protected sheet, use the `lockCells()` method. Pass the required range and set `isLocked` to `false`.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
@@ -91,10 +96,10 @@ Previously, you could make cells read-only by protecting the entire sheet using 
 Now, you can make an entire row, an entire column, or a specific range of cells read-only using the `setRangeReadOnly` method without protecting the entire sheet. This method accepts three parameters, as detailed in the following table:
 
 | Parameter | Description |
-|-----|------|
-| `readOnly` | Specifies whether an entire row, an entire column, or a specific range of cells should be set as read-only (**true**) or editable (**false**). |.
-| `range` | Specifies the particular range of cells to be set as read-only. |
-| `sheetIndex` | Specifies the index of the sheet. |
+|-----------|-------------|
+| `readOnly` | Specifies whether the row, column, or cell range is read-only (`true`) or editable (`false`). |
+| `range` | Specifies the row, column, or cell range to configure. |
+| `sheetIndex` | Specifies the index of the worksheet. |
 
 You can make an entire row, an entire column, or a specific range of cells read-only by passing the range as shown in the code snippet below:
 
@@ -147,9 +152,7 @@ The following example shows `Protect Workbook` by using the [`isProtected`](http
 {% endhighlight %}
 {% endtabs %}
 
-
-
-The following example shows `Protect Workbook` by using the [`password`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_Password) property in the Spreadsheet control. To unprotect the workbook, click the unprotect workbook button in the data tab and provide the password as Syncfusion<sup style="font-size:70%">&reg;</sup> in the dialog box.
+The following example shows `Protect Workbook` by using the [`password`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_Password) property in the Spreadsheet control. To unprotect the workbook, choose **Unprotect Workbook** from the **Data** tab and enter `Syncfusion` in the password dialog.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}

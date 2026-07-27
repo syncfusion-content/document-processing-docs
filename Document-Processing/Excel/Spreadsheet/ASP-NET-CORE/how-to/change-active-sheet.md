@@ -9,9 +9,16 @@ documentation: ug
 
 # Changing the active sheet in ASP.NET Core Spreadsheet control
 
-You can change the active sheet of imported file by updating [`activeSheetIndex`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_ActiveSheetIndex) property on the [`openComplete`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_OpenComplete) event.
+You can change the active sheet of the imported file by updating the [`activeSheetIndex`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_ActiveSheetIndex) property in the [`openComplete`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_OpenComplete) event.
 
-The following code example shows how to set the active sheet when importing an Excel file.
+To change the active sheet after importing an Excel file:
+
+1. Bind the `openComplete` event to the Spreadsheet.
+2. In the event handler, set the `activeSheetIndex` property to the index of the sheet you want to activate.
+3. Open an Excel file in the Spreadsheet.
+4. After the file is loaded, the Spreadsheet displays the sheet specified by the `activeSheetIndex` property.
+
+The following code example demonstrates how to change the active sheet after importing an Excel file.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
