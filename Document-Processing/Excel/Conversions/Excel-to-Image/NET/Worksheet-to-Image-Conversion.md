@@ -1,5 +1,5 @@
 ---
-title: Worksheet to Image Conversion in Excel Library | Syncfusion
+title: Convert Excel Worksheets to Images | Syncfusion
 description: Learn how to convert Excel worksheets into images using Syncfusion XlsIO, enabling easy sharing, previewing, and reporting of spreadsheet data.
 platform: document-processing
 control: XlsIO

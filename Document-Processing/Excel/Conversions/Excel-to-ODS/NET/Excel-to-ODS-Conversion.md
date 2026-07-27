@@ -10,8 +10,6 @@ documentation: UG
 
 The OpenDocument Format (ODF) is an XML-based file format for spreadsheets, charts, presentations, and word-processing documents. The OpenDocument Spreadsheet format is the spreadsheet counterpart used by OpenOffice. XlsIO converts XLS and XLSX workbooks to ODS.
 
-To write an OpenDocument Spreadsheet file, set `application.DefaultVersion` to a value that maps to OpenDocument Spreadsheet (`ExcelVersion.Excel2013` is shown in the samples below; older values such as `Excel2010` are also accepted) and call `workbook.SaveAs("Output.ods")`. All sheets in the workbook are exported.
-
 N> IMPORTANT: Before running the samples on this page, install the required NuGet package for your target platform and register your Syncfusion license key. For more information, see the [Licensing overview](https://help.syncfusion.com/document-processing/licensing/overview).
 
 ## Export to ODS
@@ -164,7 +162,7 @@ A complete working example to convert Excel to OpenDocument Spreadsheet in C# is
 
 ## Supported and unsupported elements in ODS conversion
 
-The table below summarizes the workbook features XlsIO preserves when writing an `.ods` file.
+The table below summarizes the workbook features XlsIO preserves when writing an `OpenDocument Spreadsheet` file.
 
 | Category | Subcategory | Supported |
 | -------- | ----------- | --------- |
