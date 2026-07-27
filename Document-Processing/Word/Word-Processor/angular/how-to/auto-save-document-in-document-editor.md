@@ -3,12 +3,12 @@ layout: post
 title: Auto Save Document in Angular DOCX Editor Component | Syncfusion
 description: Learn here all about Auto save document in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: DOCX Editor
+control: Auto save document
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Auto Save Document to AWS S3 in Angular DOCX Editor component
+# Auto Save Document to AWS S3 in Angular Document Editor component
 
 In this article, we are going to see how to auto save the document in AWS S3. You can automatically save the edited content at regular intervals of time. It helps reduce the risk of data loss by saving an open document automatically at customized intervals.
 
