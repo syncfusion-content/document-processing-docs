@@ -27,8 +27,8 @@ In the active spreadsheet, click the cell where you want to create a hyperlink. 
 
 You can update an existing hyperlink in your workbook by changing either:
 
-* **Destination Link** – Modify the link target (web address, cell reference, or sheet).  
-* **Display Text** – Change the text shown in the cell that represents the hyperlink.  
+* **Destination Link** – Modify the link target (web address, cell reference, or sheet).
+* **Display Text** – Change the text shown in the cell that represents the hyperlink.
 
 
 **User Interface**:
