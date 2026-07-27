@@ -11,16 +11,20 @@ documentation: UG
 
 ## Create a simple Excel report
 
-The below steps illustrates creating a simple Invoice formatted Excel document on Linux.
+The following steps illustrate creating a simple Invoice-formatted Excel document on Linux.
 
-Step 1: Execute the following command in Linux terminal to create a new .NET Core Console application.
+**Prerequisites:**
+- .NET 8.0 SDK or later installed on Linux.
+- A user account with write permissions to the project directory.
+
+Step 1: Execute the following command in the Linux terminal to create a new .NET Core Console application.
 {% tabs %}
 {% highlight KCONFIG %}
 dotnet new console
 {% endhighlight %}
 {% endtabs %}
 
-Step 2: Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/) by execute the following command.
+Step 2: Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/) by executing the following command.
 {% tabs %}
 {% highlight KCONFIG %}
 dotnet add package Syncfusion.XlsIO.Net.Core -v 22.1.34 -s https://www.nuget.org/
@@ -29,7 +33,7 @@ dotnet add package Syncfusion.XlsIO.Net.Core -v 22.1.34 -s https://www.nuget.org
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
 
-Step 3: Add the following namespaces in Program.cs file.
+Step 3: Add the following namespaces in the `Program.cs` file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 using Syncfusion.XlsIO;
@@ -37,7 +41,7 @@ using System.IO;
 {% endhighlight %}
 {% endtabs %}
 
-Step 4: Add the following code snippet in Program.cs file.
+Step 4: Add the following code snippet in the `Program.cs` file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 //Create an instance of ExcelEngine.
@@ -55,6 +59,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Add a picture
   FileStream imageStream = new FileStream("AdventureCycles-Logo.png", FileMode.Open, FileAccess.Read);
   IPictureShape shape = worksheet.Pictures.AddPicture(1, 1, imageStream, 20, 20);
+
+  //Ensure the sample image file exists in the current working directory before running.
 
   //Disable gridlines in the worksheet
   worksheet.IsGridLinesVisible = false;
@@ -215,11 +221,12 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
   workbook.SaveAs("Output.xlsx");
   imageStream.Dispose();
+  excelEngine.Dispose();
 }
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Execute the following command to restore the NuGet packages.
+Step 5: Execute the following command in the terminal to restore the NuGet packages.
 
 {% tabs %}
 {% highlight KCONFIG %}
@@ -227,7 +234,7 @@ dotnet restore
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Execute the following command in terminal to run the application.
+Step 6: Execute the following command in the terminal to run the application.
 {% tabs %}
 {% highlight KCONFIG %}
 dotnet run
@@ -236,11 +243,13 @@ dotnet run
 
 ## Read and Edit Excel file
 
-The below code snippet illustrates how to read and edit an Excel file on Linux.
+The following code snippet illustrates how to read and edit an Excel file on Linux.
+
+N> Make sure `Sample.xlsx` is present in the current working directory before running the application.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
-//New instance of ExcelEngine is created 
+//New instance of ExcelEngine is created
 //Equivalent to launching Microsoft Excel with no workbooks open
 //Instantiate the spreadsheet creation engine
 ExcelEngine excelEngine = new ExcelEngine();
@@ -258,7 +267,7 @@ IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
 IWorksheet worksheet = workbook.Worksheets[0];
 
 //Set Text in cell A3.
-worksheet.Range["A3"].Text ="Hello World";
+worksheet.Range["A3"].Text = "Hello World";
 
 //Access a cell value from Excel
 var value = worksheet.Range["A1"].Value;
@@ -273,4 +282,4 @@ excelEngine.Dispose();
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
-An online sample link to [create an Excel document](https://ej2.syncfusion.com/aspnetcore/Excel/Create#/material3) in ASP.NET Core.
+An online sample link to [create an Excel document](https://document.syncfusion.com/demos/excel/create#/tailwind3) in ASP.NET Core.
