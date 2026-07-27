@@ -110,7 +110,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C#*** for ASP.
 
 {% endtabs %}
 
-
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Tables/Add-an-table/.NET).
 
 N> Column alignment is set at the table level using the `ColumnAlignments` property and applies to the entire column, not individual cells.
 
@@ -188,7 +188,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Tables/Changing-column-alignment-in-existing-table/.NET).
 
 ## Removing tables
 
@@ -246,4 +246,4 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Tables/Remove-an-table/.NET).

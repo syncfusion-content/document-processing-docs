@@ -24,21 +24,21 @@ This page explains best practices for securing PDF content displayed in React ap
 
 This section outlines common security controls and how they interact with the viewer.
 
-- **Password protection**: Use user/owner passwords on PDFs. The viewer can open password-protected files when the password is provided at load time. Password-based encryption prevents opening without credentials. See [loading password protected PDFs](../document-handling/load-password-pdf) and [encrypting PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-security).
+- **Password protection**: Use user/owner passwords on PDFs. The viewer can open password-protected files only when the password is provided at load time. Password-based encryption prevents opening without credentials. See [loading password protected PDFs](../document-handling/load-password-pdf) and [encrypting PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-security).
 
-- **Permission restrictions**: Set PDF permissions (copy, print) using Syncfusion PDF library. The viewer respects these permissions at display time but cannot enforce protections if the client receives an unprotected full file. See [prevent copy and print permissions](./prevent-copy-and-print)
+- **Permission restrictions**: Set PDF permissions (copy, print) using Syncfusion PDF library. The viewer respects these permissions at display time but cannot enforce protections if the client receives an unprotected full file. See [prevent copy or print](./prevent-copy-and-print)
 
-- **Redaction**: Permanently remove text, images, or regions at the document level on the server before delivering the file. Redaction produces a new PDF with the sensitive content removed. See [redacting sensitive content](../Redaction/overview)
+- **Redaction**: Permanently remove text, images, or regions at the document level on the server before delivering the file. See [redacting sensitive content](../Redaction/overview)
 
 - **Preprocessing**: On the server, remove metadata, embedded files, hidden layers, form field values, JavaScript actions, and flatten form fields. Compress and linearize PDFs if needed. See [preprocessing PDFs](../document-handling/preprocess-pdf)
 
 ## Design decisions and trade-offs
 
-- Client vs server enforcement: Client-side settings which disable disabling print in the viewer improve user experience but are not a security boundary. True protection requires server-side changes which actually enforces the restrictions (encryption, permissions, redaction).
+- Client vs server enforcement: Client-side settings that disable print in the viewer improve user experience but are not a security boundary. True protection requires server-side changes that actually enforce the restrictions (encryption, permissions, redaction).
 
-- Usability vs security: Strong encryption and sanitizing heavily can break some workflows (search, form interactivity). Choose operations appropriate to the document life cycle.
+- Usability vs. security: Heavy sanitize and strong encryption can break some workflows (search, form interactivity). Choose operations appropriate to the document life cycle.
 
-- Redaction permanence: Redaction is irreversible; keep originals securely archived if needed for audit.
+- irreversible Redaction: Redaction is irreversible, so keep originals securely archived if needed for audit.
 
 ## Best practices
 
