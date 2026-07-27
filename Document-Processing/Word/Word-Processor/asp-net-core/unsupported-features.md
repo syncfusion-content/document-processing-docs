@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Unsupported Features in ASP.NET Core DOCX Editor
 
-This section describes the unsupported elements in [ASP.NET Core Docx Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) 
+This section describes the unsupported elements in [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) 
 
 ## Document formatting
 
@@ -45,7 +45,7 @@ This section describes the unsupported elements in [ASP.NET Core Docx Editor](ht
 |--------|----------------|
 | ActiveX Controls | No |
 | Embedded Objects | No |
-| Images | Bitmap images only |
+| Images | Bitmap, Metafile (EMF, WMF), and TIFF images |
 | Ink/Draw | No |
 | Video or audio files | No |
 | Macros | No |
