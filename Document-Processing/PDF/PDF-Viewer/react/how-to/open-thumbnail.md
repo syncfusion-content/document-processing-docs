@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open the thumbnail pane programmatically | Syncfusion
+title: Programmatically Display the Thumbnail Pane | Syncfusion
 description: Learn how to open the thumbnail pane programmatically in the Syncfusion React PDF Viewer using openThumbnailPane.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 ---
 
-# Open the thumbnail pane programmatically
+# Open the Thumbnail Pane Using Code
 
 The PDF Viewer exposes a `openThumbnailPane()` API to open the thumbnail pane from application code. Use this API when the UI needs to show the thumbnail pane in response to user actions or programmatic workflows.
 
@@ -22,9 +22,9 @@ Follow these steps to open the thumbnail pane from application code.
 
     <script>
    function openThumbnail() {
-    var viewer = document.getElementById('container').ej2_instances[0];
-    // Open Thumbnail pane
-    viewer.thumbnailViewModule.openThumbnailPane();
+      var viewer = document.getElementById('container').ej2_instances[0];
+      // Open Thumbnail pane
+      viewer.thumbnailViewModule.openThumbnailPane();
    }
    </script>
    ```
