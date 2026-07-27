@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Formatting Cells in React Spreadsheet component
+# Formatting Cells in React Spreadsheet Component
 
 Formatting options make your data easier to view and understand. The different types of formatting options in the Spreadsheet are:
 
