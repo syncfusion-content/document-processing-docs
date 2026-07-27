@@ -1,35 +1,43 @@
 ---
-title: Working with Flow layout | Syncfusion
-description: This section explains how to create a PDF document using the flow layout model with the Syncfusion .NET PDF library.
+title: Working with Flow Layout | Syncfusion
+description: Learn how to create PDF documents using the flow layout model with the Syncfusion .NET PDF library, including text, images, tables, and PdfLayoutResult.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 # Working with flow layout
 
-PDF documents can be created using flow model instead of adding elements through absolute positioning. To create a PDF document in flow model, please add references to the following set of assemblies. 
+PDF documents can be created using a flow layout (also referred to as the flow model) instead of positioning elements at absolute coordinates. The flow layout automatically wraps text across pages and lines, manages line spacing, and flows content from one element to the next based on the available page area. This is the recommended approach for documents that contain primarily text, such as reports, articles, and letters. To create a PDF document using the flow layout, add references to the following set of assemblies.
 <table>
 <tr>
-<th>
-Assembly Name<br/></th><th>
-Description<br/></th></tr>
+<th>Assembly</th>
+<th>NuGet package (recommended)</th>
+<th>Description</th>
+</tr>
 <tr>
-<td>
-Syncfusion.Pdf.Base<br/></td><td>
-This assembly contains the core feature for creating, manipulating and saving PDF documents.<br/></td></tr>
+<td>Syncfusion.Pdf.Base</td>
+<td>Syncfusion.Pdf.Net.Core</td>
+<td>Contains the core types for creating, manipulating, and saving PDF documents.</td>
+</tr>
 <tr>
-<td>
-Syncfusion.Compression.Base<br/></td><td>
-This assembly is required for compressing the internal contents of a PDF document.<br/></td></tr>
+<td>Syncfusion.Compression.Base</td>
+<td>Syncfusion.Compression.Net.Core</td>
+<td>Required for compressing the internal contents of a PDF document.</td>
+</tr>
 <tr>
-<td>
-Syncfusion.DocIO.Base<br/></td><td>
-This assembly contains the core features needed for creating, reading, manipulating a Word document.<br/></td></tr>
+<td>Syncfusion.DocIO.Base</td>
+<td>Syncfusion.DocIO.Net.Core</td>
+<td>Contains the core types for creating, reading, and manipulating Word documents.</td>
+</tr>
 <tr>
-<td>
-Syncfusion.DocToPdfConverter.Base<br/></td><td>
-This assembly is required for converting word to PDF<br/></td></tr>
+<td>Syncfusion.DocToPdfConverter.Base</td>
+<td>Syncfusion.DocToPdfConverter.Net.Core</td>
+<td>Required for converting a Word document to a PDF document.</td>
+</tr>
 </table>
+
+> **NOTE:** The table lists both the legacy assembly names and the recommended NuGet packages. For modern .NET (Core, .NET 5+, .NET Standard) projects, install the corresponding NuGet package using the NuGet Package Manager or the `Install-Package` command in the Package Manager Console. For traditional .NET Framework projects, you can continue to reference the assemblies directly.
+
 Include the following namespaces in your .cs or .vb file as shown below.
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -60,6 +68,11 @@ You can create a PDF document with multiple paragraph text using flow model with
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
+using Syncfusion.Drawing;
+using Syncfusion.DocIO.DLS;
+using Syncfusion.DocIORenderer;
+using Syncfusion.Pdf;
+
 //Creates a new Word document. 
 WordDocument wordDocument = new WordDocument();
 //Adds new section with single paragraph to the document.
@@ -93,11 +106,14 @@ wordDocument.Dispose();
 //Save and close the PDF document. 
 pdfDocument.Save("Output.pdf");
 pdfDocument.Close(true);
-//Close the document.
-wordDocument.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.DocIO.DLS;
+using Syncfusion.DocToPDFConverter;
+using Syncfusion.Pdf;
 
 //Creates a new Word document. 
 WordDocument wordDocument = new WordDocument();
@@ -129,12 +145,14 @@ PdfDocument pdfDocument = converter.ConvertToPDF(wordDocument);
 //Save and close the PDF document. 
 pdfDocument.Save("Output.pdf");
 pdfDocument.Close(true);
-//Close the document.
-wordDocument.Close();
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Imports Syncfusion.DocIO.DLS
+Imports Syncfusion.DocToPDFConverter
+Imports Syncfusion.Pdf
+
 'Creates a new Word document 
 Dim wordDocument As New WordDocument()
 'Adds new section with single paragraph to the document
@@ -165,8 +183,6 @@ Dim pdfDocument As PdfDocument = converter.ConvertToPDF(wordDocument)
 'Save and close the PDF document 
 pdfDocument.Save("Output.pdf")
 pdfDocument.Close(True)
-'Close the document
-wordDocument.Close()
 {% endhighlight %}
 
 {% endtabs %}
@@ -243,9 +259,10 @@ document.Close();
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using Syncfusion.Pdf;
+using System.Drawing;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.DocToPDFConverter;
+using Syncfusion.Pdf;
 
 //A new document is created.
 WordDocument document = new WordDocument();
@@ -302,6 +319,7 @@ document.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
 Imports Syncfusion.DocIO.DLS
 Imports Syncfusion.DocToPDFConverter
 Imports Syncfusion.Pdf
@@ -369,9 +387,9 @@ You can create PDF document with simple table using the following code snippet.
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-using Syncfusion.Pdf;
 using Syncfusion.DocIO.DLS;
-using Syncfusion.DocToPDFConverter;
+using Syncfusion.DocIORenderer;
+using Syncfusion.Pdf;
 
 //Creates a new Word document. 
 WordDocument wordDocument = new WordDocument();
@@ -445,15 +463,13 @@ wordDocument.Dispose();
 //Save and close the PDF document. 
 pdfDocument.Save("Output.pdf");
 pdfDocument.Close(true);
-//Close the document.
-wordDocument.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using Syncfusion.Pdf;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.DocToPDFConverter;
+using Syncfusion.Pdf;
 
 //Creates a new Word document. 
 WordDocument wordDocument = new WordDocument();
@@ -524,8 +540,6 @@ PdfDocument pdfDocument = converter.ConvertToPDF(wordDocument);
 //Save and close the PDF document. 
 pdfDocument.Save("Output.pdf");
 pdfDocument.Close(true);
-//Close the document.
-wordDocument.Close();
 
 {% endhighlight %}
 
@@ -604,8 +618,6 @@ Dim pdfDocument As PdfDocument = converter.ConvertToPDF(wordDocument)
 'Save and close the PDF document 
 pdfDocument.Save("Output.pdf")
 pdfDocument.Close(True)
-'Close the document
-wordDocument.Close()
 {% endhighlight %}
 
 {% endtabs %}
@@ -622,6 +634,8 @@ The following code snippet explains how to create a PDF document with image, par
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using System.Collections.Generic;
+using System.IO;
 using Syncfusion.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
@@ -664,18 +678,15 @@ layoutResult = line.Draw(page, new PointF(0, layoutResult.Bounds.Bottom + 5));
 
 //Initialize PdfGrid for drawing the table.
 PdfGrid grid = new PdfGrid();
-//Add values to list.
-List<object> data = new List<object>();
-Object grid1row1 = new { ID = "E01", Name = "Clay", Salary = "$10,000" };
-Object grid1row2 = new { ID = "E02", Name = "Thomas", Salary = "$10,500" };
-Object grid1row3 = new { ID = "E03", Name = "Simon", Salary = "$12,000" };
-data.Add(grid1row1);
-data.Add(grid1row2);
-data.Add(grid1row3);
-//Add list to IEnumerable.
-IEnumerable<object> dataTable = data;
-//Assign the DataTable as data source to grid.
-grid.DataSource = dataTable;
+//Create a list of records to use as the data source.
+List<object> data = new List<object>
+{
+    new { ID = "E01", Name = "Clay", Salary = "$10,000" },
+    new { ID = "E02", Name = "Thomas", Salary = "$10,500" },
+    new { ID = "E03", Name = "Simon", Salary = "$12,000" }
+};
+//Assign the list as data source to grid.
+grid.DataSource = data;
 //Set the grid cell padding.
 grid.Style.CellPadding.All = 5;
 //Apply built-in table style to the grid.
@@ -692,6 +703,7 @@ document.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using System.Data;
 using System.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
@@ -761,6 +773,7 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Data
 Imports System.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Graphics
@@ -782,7 +795,7 @@ Dim standardFont As PdfFont = New PdfStandardFont(PdfFontFamily.Helvetica, 12)
 'Load the paragraph text into PdfTextElement with initialized standard font
 Dim textElement As PdfTextElement = New PdfTextElement("Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based," &
                 " is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, " &
-                "European And Asian commercial markets. While its base operation Is located in Bothell, Washington with 290 employees, several regional" &
+                "European and Asian commercial markets. While its base operation is located in Bothell, Washington with 290 employees, several regional" &
                 " sales teams are located throughout their market base.", standardFont)
 'Draw the paragraph text on page and maintain the position in PdfLayoutResult
 Dim layoutResult As PdfLayoutResult = textElement.Draw(page, New RectangleF(0, 150, page.GetClientSize.Width, page.GetClientSize.Height))
@@ -794,6 +807,8 @@ textElement.Font = New PdfStandardFont(PdfFontFamily.Helvetica, 14, PdfFontStyle
 layoutResult = textElement.Draw(page, New PointF(0, (layoutResult.Bounds.Bottom + 20)))
 'Initialize PdfLine with start point and end point for drawing the line
 Dim line As PdfLine = New PdfLine(New PointF(0, 0), New PointF(page.GetClientSize.Width, 0))
+'Set the pen color used to draw the line.
+line.Pen = PdfPens.DarkGray
 'Draw the line on page, below the header text with a height gap of 5 and maintain the position in PdfLayoutResult
 layoutResult = line.Draw(page, New PointF(0, (layoutResult.Bounds.Bottom + 5)))
 

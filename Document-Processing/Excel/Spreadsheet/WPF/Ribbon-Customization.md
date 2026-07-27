@@ -13,15 +13,15 @@ Ribbon Customization can be done in two ways,
 
 ## Using Control Template
 
-User can customize the ribbon items by overriding the template of [SfSpreadsheetRibbon](http://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheetRibbon.html).
+You can customize the ribbon items by overriding the template of [SfSpreadsheetRibbon](http://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheetRibbon.html).
 
 ## Using Event
 
-By invoking SfSpreadsheetRibbon Loaded Event, User can add/delete the ribbon menu items.
+You can add or remove ribbon menu items by handling the `SfSpreadsheetRibbon.Loaded` event.
 
 ### Adding a RibbonTab
 
-To add a custom ribbon tab with user defined menu options in `SfSpreadsheetRibbon`, 
+To add a custom ribbon tab with user-defined menu options to `SfSpreadsheetRibbon`,
 
 {% tabs %}
 {% highlight xaml %}
@@ -61,9 +61,9 @@ void ribbon_Loaded(object sender, RoutedEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-### Adding a Ribbon Items in Existing Tab
+### Adding a Ribbon Item to an Existing Tab
 
-To add a ribbon items in already existing tab,
+To add a ribbon item to an already existing tab,
 
 {% tabs %}
 {% highlight xaml %}
@@ -96,7 +96,7 @@ void ribbon_Loaded(object sender, RoutedEventArgs e)
 
 ### Removing a RibbonTab
 
-To remove the ribbon tab in the SfSpreadsheetRibbon,
+To remove a ribbon tab from `SfSpreadsheetRibbon`,
 
 {% tabs %}
 {% highlight xaml %}
@@ -112,7 +112,7 @@ void ribbon_Loaded(object sender, RoutedEventArgs e)
 {
     var ribbon1 = GridUtil.GetVisualChild<Ribbon>(sender as FrameworkElement);
     
-    //To remove the Data tab from the ribbon,
+    // To remove the Data tab from the ribbon,
 
     if (ribbon1 != null)
     {
@@ -124,9 +124,9 @@ void ribbon_Loaded(object sender, RoutedEventArgs e)
 {% endtabs %}
 
 
-### Removing a Ribbon Items in a RibbonTab
+### Removing a Ribbon Item from a RibbonTab
 
-To remove the ribbon menu items in the ribbon tab of SfSpreadsheetRibbon,
+To remove ribbon menu items from a ribbon tab in `SfSpreadsheetRibbon`,
 
 {% tabs %}
 {% highlight xaml %}
@@ -142,7 +142,7 @@ void ribbon_Loaded(object sender, RoutedEventArgs e)
 {
     var ribbon1 = GridUtil.GetVisualChild<Ribbon>(sender as FrameworkElement);
     
-    // To remove the Freeze panes menu group in View tab,
+    // To remove the Freeze Panes menu group in the View tab,
     
     if (ribbon1 != null)
     {
@@ -153,12 +153,12 @@ void ribbon_Loaded(object sender, RoutedEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-### Canceling a Ribbon commands
+### Canceling a Ribbon Command
 
-You can cancel particular action of SpreadsheetRibbon commands by handling [CommandExecuting](http://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.Helpers.CommandExecutionEventArgs.html) event.
+You can cancel particular actions of SpreadsheetRibbon commands by handling the [CommandExecuting](http://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.Helpers.CommandExecutionEventArgs.html) event.
 
 {% tabs %}
-{% highlight xaml%}
+{% highlight xaml %}
 <syncfusion:SfSpreadsheetRibbon x:Name="ribbon" DataContext="{Binding ElementName=spreadsheet}" />
 {% endhighlight %}
 {% endtabs %}
@@ -169,12 +169,12 @@ this.ribbon.Commands.CommandExecuting += Commands_CommandExecuting;
 
 void Commands_CommandExecuting(object sender, CommandExecutingEventArgs args)
 {
-	//stops copy button command execution.
-	if(args.CommandName == "Copy")
+	// Stops the copy button's command execution.
+	if (args.CommandName == "Copy")
 	{
-		//set the bool value is true.
-		//the operation is not performed as you mentioned in CommandName
-		args.cancel = true;
+		// Set the bool value to true.
+		// The operation specified in CommandName will not be performed.
+		args.Cancel = true;
 	}
 }
 {% endhighlight %}

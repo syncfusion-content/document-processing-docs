@@ -7,14 +7,19 @@ documentation: UG
 ---
 # Create, read, and edit Excel files in ASP.NET Core
 
-[.NET Excel Library for ASP.NET Core platform](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) can be used to create, read, edit Excel files. This also convert Excel files to PDF.
+[.NET Excel Library for ASP.NET Core platform](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) can be used to create, read, edit Excel files. These can also convert [Excel files to PDF](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/convert-excel-to-pdf-in-asp-net-core).
 
 To quickly get started on creating an Excel document in ASP.NET Core, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=oLkSFvDLlEk" %}
 
 ## Create a simple Excel report
 
-The below steps illustrates creating a simple Invoice formatted Excel document in ASP.NET Core.
+The following steps illustrate creating a simple invoice-formatted Excel document in ASP.NET Core.
+
+**Prerequisites:**
+- Visual Studio 2022 (17.0 or later) with the **ASP.NET and web development** workload installed.
+- .NET 8.0 SDK or later.
+- A user account with write permissions to the project folder.
 
 {% tabcontents %}
 
@@ -28,13 +33,12 @@ Step 2: Select the framework for the project
 
 ![Select the framework](ASP-NET-Core_images/ASP-NET-Core_images_img2.png)
 
-Step 3: Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org).
-
+Step 3: Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package with the latest stable version as a reference to your ASP.NET Core application from [NuGet.org](https://www.nuget.org).
 ![Add XlsIO reference to the project](ASP-NET-Core_images/ASP-NET-Core_images_img3.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
 
-Step 4: A default controller with named HomeController.cs gets added on creation of ASP.NET Core project. Include the following namespaces in the HomeController.cs file.
+Step 4: A default controller named `HomeController.cs` is added on creation of an ASP.NET Core project. Include the following namespaces at the top of the `HomeController.cs` file.
 {% capture codesnippet1 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
@@ -52,9 +56,9 @@ Imports Syncfusion.Drawing
 {% endcapture %}
 {{ codesnippet1 | OrderList_Indent_Level_1 }}
 
-Step 5: A default action method named Index will be present in HomeController.cs. Right click on Index method and select Go To View where you will be directed to its associated view page Index.cshtml.
+Step 5: A default action method named `Index` will be present in `HomeController.cs`. Right-click the `Index` method and select **Go To View** where you will be directed to its associated view page, `Index.cshtml`.
 
-Step 6: Add a new button in the Index.cshtml as shown below.
+Step 6: Add a new button in the `Index.cshtml` view as shown below.
 {% capture codesnippet2 %}
 {% tabs %}  
 {% highlight CSHTML %}
@@ -71,7 +75,8 @@ Step 6: Add a new button in the Index.cshtml as shown below.
 {% endcapture %}
 {{ codesnippet2 | OrderList_Indent_Level_1 }}
 
-Step 7: Add a new action method CreateDocument in HomeController.cs and include the below code snippet to create an Excel file and download it.
+Step 7: Add a new action method `CreateDocument` in `HomeController.cs` and include the following code snippet to create an Excel file and download it. Also place the `AdventureCycles-Logo.png` image file in the project root or `wwwroot` folder so the code can load it via a relative path.
+
 {% capture codesnippet3 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
@@ -123,7 +128,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["D8"].Number = 564;
   worksheet.Range["E8"].Text = "Due Upon Receipt";
   
-  //Apply RGB backcolor to the cells from D5 to E8
+  //Apply an RGB background color to the cells from D5 to E8
   worksheet.Range["D5:E5"].CellStyle.Color = Color.FromArgb(42, 118, 189);
   worksheet.Range["D7:E7"].CellStyle.Color = Color.FromArgb(42, 118, 189);
   
@@ -199,7 +204,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["D16:E22"].NumberFormat = "$0.00";
   worksheet.Range["E23"].NumberFormat = "$0.00";
   
-  //Apply incremental formula for column Amount by multiplying Qty and UnitPrice
+  // Enable automatic increment of cell references when assigning a formula to a range.
   application.EnableIncrementalFormula = true;
   worksheet.Range["E16:E20"].Formula = "=C16*D16";
   
@@ -246,17 +251,19 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["A9:A14"].RowHeight = 15;
   worksheet.Range["A15:A23"].RowHeight = 18;  
   
-  //Saving the Excel to the MemoryStream 
+  //Saving the Excel file to a MemoryStream
   MemoryStream stream = new MemoryStream();  
   workbook.SaveAs(stream);
   
-  //Set the position as '0'.
+  //Set the position to 0
   stream.Position = 0;
-  
-  //Download the Excel file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/excel");  
-  fileStreamResult.FileDownloadName = "Output.xlsx";  
-  return fileStreamResult;
+
+  imageStream.Dispose();
+  //Return the Excel file for download
+  return new FileStreamResult(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
+  {
+      FileDownloadName = "CreateExcel.xlsx"
+  };
 }
 {% endhighlight %}
 
@@ -309,7 +316,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   worksheet.Range("D8").Number = 564
   worksheet.Range("E8").Text = "Due Upon Receipt"
   
-  'Apply RGB back color to the cells from D5 to E8
+  'Apply an RGB background color to the cells from D5 to E8
   worksheet.Range("D5:E5").CellStyle.Color = Color.FromArgb(42, 118, 189)
   worksheet.Range("D7:E7").CellStyle.Color = Color.FromArgb(42, 118, 189)
   
@@ -385,7 +392,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   worksheet.Range("D16:E22").NumberFormat = "$0.00"
   worksheet.Range("E23").NumberFormat = "$0.00"
   
-  'Apply incremental formula for column Amount by multiplying Qty and UnitPrice
+  'Enable automatic increment of cell references when assigning a formula to a range
   application.EnableIncrementalFormula = True
   worksheet.Range("E16:E20").Formula = "=C16*D16"
   
@@ -440,7 +447,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   stream.Position = 0
   
   'Download the Excel file in the browser
-  Dim fileStreamResult As FileStreamResult = New FileStreamResult(stream, "application/excel")
+  Dim fileStreamResult As FileStreamResult = New FileStreamResult(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
   fileStreamResult.FileDownloadName = "Output.xlsx"
   Return fileStreamResult
 End Using
@@ -454,7 +461,7 @@ End Using
 
 {% tabcontent Visual Studio Code %}
 
-Step 1: Create a new C# ASP.NET Core Web Application project using Create .NET Project option.
+Step 1: Create a new C# ASP.NET Core Web Application project using the **Create .NET Project** option.
 
 ![Create ASP.NET Core Web application in Visual Studio](ASP-NET-Core_images/ASP-NET-Core_VSimages_img1.png)
 
@@ -462,14 +469,14 @@ Step 2: Enter the project name and create the project.
 
 ![Select the framework](ASP-NET-Core_images/ASP-NET-Core_VSimages_img2.png)
 
-Alternatively, create a ASP.NET Core Web application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+Alternatively, create an ASP.NET Core Web application using the following command in the terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>):
 
 ```
 dotnet new webapp -o CreateExcel
 cd CreateExcel
 ```
 
-Step 3: To **create a Excel document in ASP.NET Core Web app**,run the following command to  install [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) package.
+Step 3: To **create an Excel document in the ASP.NET Core Web app**, run the following command to install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) package.
 
 ```
 dotnet add package Syncfusion.XlsIO.Net.Core
@@ -479,7 +486,7 @@ dotnet add package Syncfusion.XlsIO.Net.Core
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
 
-Step 4: A default controller with named HomeController.cs gets added on creation of ASP.NET Core project. Include the following namespaces in the HomeController.cs file.
+Step 4: A default controller named `HomeController.cs` is added on creation of an ASP.NET Core project. Include the following namespaces in the `HomeController.cs` file.
 {% capture codesnippet1 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
@@ -497,7 +504,7 @@ Imports Syncfusion.Drawing
 {% endcapture %}
 {{ codesnippet1 | OrderList_Indent_Level_1 }}
 
-Step 5: A default action method named Index will be present in HomeController.cs. Right click on Index method and select Go To View where you will be directed to its associated view page Index.cshtml.
+Step 5: A default action method named `Index` will be present in `HomeController.cs`. Right-click the `Index` method and select **Go To View** where you will be directed to its associated view page, `Index.cshtml`.
 
 Step 6: Add a new button in the Index.cshtml as shown below.
 {% capture codesnippet2 %}
@@ -516,7 +523,7 @@ Step 6: Add a new button in the Index.cshtml as shown below.
 {% endcapture %}
 {{ codesnippet2 | OrderList_Indent_Level_1 }}
 
-Step 7: Add a new action method CreateDocument in HomeController.cs and include the below code snippet to create an Excel file and download it.
+Step 7: Add a new action method `CreateDocument` in `HomeController.cs` and include the following code snippet to create an Excel file and download it.
 {% capture codesnippet3 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
@@ -699,7 +706,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   stream.Position = 0;
   
   //Download the Excel file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/excel");  
+  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");  
   fileStreamResult.FileDownloadName = "Output.xlsx";  
   return fileStreamResult;
 }
@@ -885,7 +892,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   stream.Position = 0
   
   'Download the Excel file in the browser
-  Dim fileStreamResult As FileStreamResult = New FileStreamResult(stream, "application/excel")
+  Dim fileStreamResult As FileStreamResult = New FileStreamResult(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
   fileStreamResult.FileDownloadName = "Output.xlsx"
   Return fileStreamResult
 End Using
@@ -904,55 +911,57 @@ By executing the program, you will get the Excel file as below.
 
 ## Read and Edit Excel file
 
-The below code snippet illustrates how to read and edit an Excel file in ASP.NET Core.
+The following code snippet illustrates how to read and edit an Excel file in ASP.NET Core.
+
+Step 1: Add the `Sample.xlsx` file in the project folder (or `wwwroot`) and configure the project to copy it to the output directory by setting **Copy to Output Directory** to **Copy if newer** in the file properties.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 //New instance of ExcelEngine is created 
 //Equivalent to launching Microsoft Excel with no workbooks open
-//Instantiate the spreadsheet creation engine
-ExcelEngine excelEngine = new ExcelEngine();
+//Create an instance of ExcelEngine
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
 
-//Instantiate the Excel application object
-IApplication application = excelEngine.Excel;
+  //Instantiate the Excel application object
+  IApplication application = excelEngine.Excel;
 
-//Assigns default application version
-application.DefaultVersion = ExcelVersion.Xlsx;
+  //Assigns default application version
+  application.DefaultVersion = ExcelVersion.Xlsx;
 
-//A existing workbook is opened.             
-IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
+  //A existing workbook is opened.             
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
 
-//Access first worksheet from the workbook.
-IWorksheet worksheet = workbook.Worksheets[0];
+  //Access first worksheet from the workbook.
+  IWorksheet worksheet = workbook.Worksheets[0];
 
-//Set Text in cell A3.
-worksheet.Range["A3"].Text ="Hello World";
+//Set the text in cell A3.
+  worksheet.Range["A3"].Text = "Hello World";
 
-//Access a cell value from Excel
-var value = worksheet.Range["A1"].Value;
+  //Access a cell value from Excel
+  var value = worksheet.Range["A1"].Value;
 
-//Defining the ContentType for excel file.
-string ContentType = "Application/msexcel";
+  //Defining the ContentType for the Excel file.
+  string ContentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
 
-//Define the file name.
-string fileName = "Output.xlsx";
+  //Define the file name.
+  string fileName = "Output.xlsx";
 
-//Creating stream object.
-MemoryStream stream = new MemoryStream();
+  //Creating stream object.
+  MemoryStream stream = new MemoryStream();
 
-//Saving the workbook to stream in XLSX format
-workbook.SaveAs(stream);
+  //Saving the workbook to the stream in XLSX format.
+  workbook.SaveAs(stream);
 
-stream.Position = 0;
+  stream.Position = 0;
 
-//Closing the workbook.
-workbook.Close();
+  //Closing the workbook and disposing the engine.
+  workbook.Close();
+  excelEngine.Dispose();
 
-//Dispose the Excel engine
-excelEngine.Dispose();
-
-//Creates a FileContentResult object by using the file contents, content type, and file name.
-return File(stream, ContentType, fileName);
+//Creates a FileStreamResult object by using the file contents, content type, and file name.
+  return File(stream, ContentType, fileName);
+}
 {% endhighlight %}
 {% endtabs %}
 
