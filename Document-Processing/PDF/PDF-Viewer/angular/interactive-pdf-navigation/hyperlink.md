@@ -287,4 +287,4 @@ export class AppComponent {
 
 - [Bookmark navigation](./bookmark)
 - [Page navigation](./page)
-- [Page thumbnail navigation](./page-thumbnail.md)
+- [Page thumbnail navigation](./page-thumbnail)
