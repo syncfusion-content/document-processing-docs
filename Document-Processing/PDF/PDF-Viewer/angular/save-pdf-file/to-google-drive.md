@@ -38,8 +38,6 @@ using Google.Apis.Util.Store;
 
 ```csharp
 private IConfiguration _configuration;
-private IWebHostEnvironment _hostingEnvironment;
-private IMemoryCache _cache;
 public readonly string folderId;
 public readonly string applicationName;
 public readonly string credentialPath;

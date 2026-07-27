@@ -39,8 +39,6 @@ using Box.V2.Models;
 
 ```csharp
 private IConfiguration _configuration;
-private IWebHostEnvironment _hostingEnvironment;
-private IMemoryCache _cache;
 public readonly string _accessToken;
 public readonly string _clientID;
 public readonly string _clientSecret;

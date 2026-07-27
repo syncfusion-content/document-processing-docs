@@ -135,8 +135,6 @@ using Dropbox.Api.Files;
 
 ```csharp
 private IConfiguration _configuration;
-private IWebHostEnvironment _hostingEnvironment;
-private IMemoryCache _cache;
 public readonly string _accessToken;
 public readonly string _folderName;
 

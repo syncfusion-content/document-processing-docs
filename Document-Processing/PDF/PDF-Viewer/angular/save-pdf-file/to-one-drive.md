@@ -39,8 +39,6 @@ using Helpers;
 
 ```csharp
 private IConfiguration _configuration;
-private IWebHostEnvironment _hostingEnvironment;
-private IMemoryCache _cache;
 public readonly string folderName;
 public readonly string applicationId;
 public readonly string tenantId;

@@ -37,8 +37,6 @@ using Google.Apis.Auth.OAuth2;
 private readonly StorageClient _storageClient;
 
 private IConfiguration _configuration;
-private IWebHostEnvironment _hostingEnvironment;
-private IMemoryCache _cache;
 
 public readonly string _bucketName;
 
