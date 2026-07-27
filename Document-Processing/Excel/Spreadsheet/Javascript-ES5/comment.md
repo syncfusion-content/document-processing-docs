@@ -29,31 +29,20 @@ The Syncfusion Spreadsheet does not automatically track user identity. To tag ne
 >If the author property is not set, "Guest User" will be displayed as the author for comment and replies by default.
 
 ## Adding a comment
-You can add a **comment** to a cell in several ways.
-
-**UI**
-
-1. Select the target cell.
-2. Open the comment editor using one of the following methods:
-    * **Context Menu**: Right-click the target cell and select **"New Comment"**.
-    * **Ribbon**: Go to **Review > Comment > New Comment**.
-    * **Keyboard Shortcut**: Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F2</kbd>.
-3. Type the comment text in the editor and click **Post** to add the comment.
-
-**Programmatically**
-
-You can also add a comment to a cell from code:
-
-* Use the `updateCell` method with the comment model to add a comment to a specific cell. The Spreadsheet instance must be available in scope.
-* Bind comments via cell data during initial load by associating the comment model with the cell model.
+You can add a **comment** to a cell in several ways:
+* **Context menu**: Right-click the target cell and select **"New Comment"**.
+* **Ribbon**: Go to **Review > Comment > New Comment**.
+* **Keyboard shortcut**: Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F2</kbd> to open the comment editor for the active cell.
+* **Programmatically**: 
+    * Use the `updateCell` method with the comment model to add a comment to a specific cell.
+    * Bind comments via code-behind during initial load by associating the comment model with the cell model.
 
 The image below shows that once a comment is posted, the cell displays an indicator, and the comment can be previewed on hover.
 
 ![Adding a comment in Spreadsheet](./images/spreadsheet_adding_a_comment.gif)
 
 ## Adding a reply
-You can add one or more replies to an existing comment to provide additional details or answers. Before you begin, select the cell that already contains a comment (the cell shows a comment indicator in its corner).
-
+You can add one or more replies to an existing comment to provide additional details or answers:
 * **Context Menu**: Right-click the cell that already has a comment, select **Comment > New Reply**, enter your reply, and click **Post**.
 * **Ribbon**: Go to **Review > Comment > New Comment** on a cell that contains a comment. This opens the comment editor in **reply mode**.
 * **Comment Editor**: Open the comment editor by hovering over the comment indicator, type your reply, and click **Post**.
@@ -90,7 +79,7 @@ You can also use the `isResolved` property in the comment model when initializin
 // Update a cell with a comment using the updateCell method
     spreadsheet.updateCell({
     comment: {
-        author: 'Christopher', text: 'Are you completed the report',
+        author: 'Christopher', text: 'Have you completed the report',
         createdTime: 'January 03, 2026 at 5:00 PM',
         // Set to true to mark the thread as resolved; false keeps it active
         isResolved: false,
@@ -143,7 +132,7 @@ The "Comments" review pane is rendered within the spreadsheet interface to provi
 
 The "Comments" review pane allows you to:
 
-* Add a new comment using the **New** button.
+* Add new comment using the **New** button.
 * Filter comments by **All**, **Active**, or **Resolved** to view specific comment threads.
 * Navigate between comments and synchronize selection with the corresponding cells.
 * Perform actions such as:
@@ -152,7 +141,7 @@ The "Comments" review pane allows you to:
   * **Delete** – Remove a reply or an entire thread.
   * **Resolve/Reopen** – Change the status of a comment.
 
-When the review pane is open, actions performed in the review pane or in the cell’s comment editor are synchronized in most cases:
+When the review pane is open, actions performed in the review pane or in the cell’s comment editor are synchronized:
 
 * Selecting a comment in the review pane highlights the corresponding cell in the sheet.
 * Selecting a cell with a comment focuses the respective comment thread in the review pane.
@@ -171,8 +160,8 @@ Threaded comments introduced in newer Excel versions require the **Open XML** st
 
 > To retain threaded comments, always save the workbook in **.xlsx** format.
 
-## Bind Comments via cell data
-You can bind **comment thread** to cells at initial load by providing a `comment` object in the cell model. Each cell supports a single comment thread, which can include:
+## Bind Comments via code-behind
+You can bind **comment thread** to cells at initial load by providing a `comment` object in the cell model. Each cell supports **per comment thread**, which can include:
 - **Comment**: `author`, `text`, `createdTime`, `isResolved`
 - **Replies**: A collection of replies. Each reply is an object containing its `author`, `text`, and `createdTime` (no nested replies-of-replies).
 
@@ -196,7 +185,7 @@ In the below sample, comments are added to a specific cell using cell data bindi
 
 ## Limitations
 * **Un-posted comments are not stored**: If you type in the comment editor and close it without clicking **Post**, the entered text is not saved and will not appear when you reopen the editor. Only posted content is persisted in the comment model.
-* **Comments and Notes cannot coexist**: When a cell contains a comment, notes cannot be added. Similarly, if a cell already has a note, a comment cannot be added.
+* **Comments and Notes cannot coexist**: When a cell contains a comment, notes cannot be added. Similarly, if a cell already has a notes, a comment cannot be added.
 * **Comments in Print**: Comments are not included in print output.
 * **Non-collaborative**: Real-time multi-user synchronization is not supported. However, when exporting and re-importing the workbook, the author information for each comment and reply is preserved.
 

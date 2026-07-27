@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Notes in EJ2 JavaScript Spreadsheet control | Syncfusion
-description: Learn about the notes feature in the EJ2 JavaScript Spreadsheet control of Syncfusion Essential JS 2.
+description: Learn here all about the notes feature in EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Notes
 documentation: ug
@@ -10,7 +10,7 @@ documentation: ug
 
 # Notes in EJ2 JavaScript Spreadsheet control
 
-The **Notes** feature is used to insert comments, provide feedback, suggest changes, or leave remarks on specific cells while reviewing documents in the Spreadsheet. You can enable or disable the notes functionality using the [enableNotes](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#enablenotes) property, which defaults to **true**.
+The **Notes** feature is used to insert comments, provide feedback, suggest changes, or leave remarks on specific cells while reviewing documents in the Spreadsheet. You can enable or disable the notes functionality using the [enableNotes](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#enablenotes) property, which defaults to **true**.
 
 When opening the Excel document with notes in the Spreadsheet, they will be displayed in the control. The cells containing notes will be indicated with a red colored triangle at the top-right corner. Hovering the mouse over these cells will display the content of the notes.
 
@@ -38,7 +38,7 @@ In the active worksheet, you can add a note in the following ways:
 * **Keyboard Shortcut**: Select the cell and press <kbd>Shift</kbd> + <kbd>F2</kbd>.
 * **Programmatically**:
     * Use the `updateCell` method with the note model to add a note to a specific cell.
-    * Bind notes via data binding during initial load by associating the note model with the cell model.
+    * Bind notes via code-behind during initial load by associating the note model with the cell model.
 
 A dialog box opens where you can enter the note content. After entering the content, you can either click on other cells or press the <kbd>Esc</kbd> button to automatically save the note and close the dialog box.
 
@@ -114,7 +114,7 @@ To activate:
 
 * Navigate to the **Review** tab, click the **Notes** dropdown, and select **Show All Notes**.
 
-All notes in the worksheet appear as floating text boxes near their respective cells.
+All notes in the worksheet will appear as floating text boxes near their respective cells.
 
 > **Note**: After using Show All Notes, you can hide individual notes selectively via the **Show/Hide Note** option. Additionally, any new notes added to the worksheet automatically appear as visible sticky notes when Show All Notes is active.
 
@@ -126,7 +126,7 @@ This functionality enhances workflow efficiency by providing flexible control ov
 
 The Spreadsheet data, including notes, can be saved and exported as an Excel document by selecting **File > Save As** in the ribbon menu. Exporting worksheets with notes is supported in Excel file formats such as Microsoft Excel (.xlsx) and Microsoft Excel 97-2003 (.xls).
 
-> When exporting the Spreadsheet to file formats such as Comma Separated Values (.csv), Excel Macro-Enabled Workbook (.xlsm), Excel Binary Workbook (.xlsb), and PDF Document (.pdf), the notes are not available.
+> When exporting the Spreadsheet to file formats such as Comma Separated Values (.csv), Excel Macro-Enabled Workbook (.xlsm), Excel Binary Workbook (.xlsb), and PDF Document (.pdf), the notes will not be available.
 
 ## Disabling notes
 

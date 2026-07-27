@@ -19,7 +19,7 @@ You can use the [`isProtected`](https://ej2.syncfusion.com/javascript/documentat
 
 > The default value for `isProtected` property is `false`.
 
-When a sheet is protected, selecting, formatting, inserting, and deleting operations are disabled by default. Use the `protectSettings` options to enable specific operations in a protected spreadsheet.
+When a sheet is protected, selecting, formatting, inserting, and deleting operations are disabled by default. To enable some of the above said functionalities the `protectSettings` options are used in a protected spreadsheet.
 
 The available `protectSettings` options in the spreadsheet are:
 
@@ -70,6 +70,7 @@ In the active Spreadsheet, the sheet Unprotection can be done by any of the foll
 
 * Select the `Unprotect Sheet` item in the Ribbon toolbar under the **Data** tab.
 * Right-click the sheet tab, and select the `Unprotect Sheet` item in the context menu.
+
 * Use the [`unprotectSheet()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#unprotectsheet) method programmatically.
 
 ## Unlock the particular cells in the protected sheet
@@ -148,10 +149,10 @@ The following example demonstrates how to make rows, columns, and cells read-onl
 
 ## Protect Workbook
 
-The Protect Workbook feature helps you protect the workbook so that users cannot insert, delete, rename, move, copy, hide, or unhide sheets in the spreadsheet.
+Protect workbook feature helps you protect the workbook so that users cannot insert, delete, rename, hide the sheets in the spreadsheet.
 
-* Use the [`password`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#password) property to protect the workbook with a password.
-* Use the [`isProtected`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#isprotected) property to protect or unprotect the workbook without a password.
+* You can use the [`password`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#password) property to protect the workbook with a password.
+* You can use the [`isProtected`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#isprotected) property to protect or unprotect the workbook without a password.
 
 > The default value of the `isProtected` property is `false`.
 

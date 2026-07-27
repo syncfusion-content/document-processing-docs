@@ -7,9 +7,9 @@ control: Scrolling
 documentation: ug
 ---
 
-# Scrolling in EJ2 JavaScript Spreadsheet control
+# Scrolling in EJ2 JavaScript Spreadsheet Control
 
-Scrolling helps you move quickly to different areas of the worksheet. Movement is faster when you use the horizontal and vertical scroll bars. You can enable scrolling by setting the [`allowScrolling`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowscrolling) property to `true`.
+Scrolling helps you move quickly to different areas of the worksheet. It moves faster when you use the horizontal and vertical scroll bars. Scrolling can be enabled by setting the [`allowScrolling`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowscrolling) property to `true`.
 
 > The default value for `allowScrolling` property is `true`.
 
@@ -44,7 +44,7 @@ You can scroll through the worksheet using one of the following ways:
 * Using the Horizontal and Vertical`scroll` bars.
 * Using the `mouse` wheel.
 
-## Finite Scrolling with Defined Rows and Columns
+## Finite scrolling with defined rows and columns
 
 If you want to perform scrolling with defined rows and columns, you must define `rowCount` and `colCount` in the [`sheets`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#sheets) property and set `isFinite` as true and `enableVirtualization` as false in `scrollSettings`.
 

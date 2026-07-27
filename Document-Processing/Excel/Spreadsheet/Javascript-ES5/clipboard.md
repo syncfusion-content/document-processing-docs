@@ -21,11 +21,9 @@ It is used to cut the data from selected range of cells, rows or columns in a sp
 
 Cut can be performed in one of the following ways.
 
-* Select the range, then click the **Cut** button in the Ribbon’s HOME tab.
-* Select the range, then choose **Cut** from the Context Menu.
-* Select the range, then press `Ctrl + X` (Windows) or `Command + X` (Mac).
-
-**Programmatically**:
+* Using Cut button in the Ribbon’s HOME tab to perform cut operation.
+* Using Cut option in the Context Menu.
+* Using `Ctrl + X` | `Command + X` keyboard shortcut.
 
 * Using the [`cut`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#cut) method.
 
@@ -37,17 +35,15 @@ It is used to copy the data from a selected range of cells, rows, or columns in 
 
 Copy can be performed in one of the following ways:
 
-* Select the range, then click the **Copy** button in the Ribbon’s HOME tab.
-* Select the range, then choose **Copy** from the Context Menu.
-* Select the range, then press `Ctrl + C` (Windows) or `Command + C` (Mac).
-
-**Programmatically**:
+* Using Copy button in the Ribbon’s HOME tab to perform copy operation.
+* Using Copy option in the Context Menu.
+* Using `Ctrl + C` | `Command + C` keyboard shortcut.
 
 * Using the [`copy`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#copy) method.
 
 ## Paste
 
-It is used to paste the clipboard data to the selected range, rows, or columns. The following options are available in the Paste dropdown:
+It is used to paste the clipboard data to the selected range, rows, or columns. You have the following options in Paste,
 
 * `Paste Special` - You can paste the values with formatting.
 * `Paste` - You can paste only the values without formatting.
@@ -58,11 +54,9 @@ It also performs for external clipboard operation. If you perform cut and paste,
 
 Paste can be performed in one of the following ways:
 
-* Select the destination range, then click the **Paste** button in the Ribbon’s HOME tab.
-* Select the destination range, then choose **Paste** from the Context Menu.
-* Select the destination range, then press `Ctrl + V` (Windows) or `Command + V` (Mac).
-
-**Programmatically**:
+* Using Paste button in the Ribbon’s HOME tab to perform paste operation.
+* Using Paste option in the Context Menu.
+* Using `Ctrl + V` | `Command + V` keyboard shortcut.
 
 * Using the [`paste`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#paste) method.
 
@@ -81,7 +75,7 @@ Paste can be performed in one of the following ways:
 
 ## Prevent the paste functionality
 
-The following example shows how to prevent the paste action in the Spreadsheet. In the [`actionBegin`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#actionbegin) event, you can cancel the action by setting the `cancel` argument to `true` when the `requestType` is `paste` and the action is `clipboard`.
+The following example shows, how to prevent the paste action in the Spreadsheet. In [`actionBegin`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#actionbegin) event, you can set `cancel` argument as false in paste request type.
 
 
 {% tabs %}
@@ -98,6 +92,6 @@ The following example shows how to prevent the paste action in the Spreadsheet. 
 ## Limitations
 
 * The external clipboard is not fully supported when copying data from another source and pasting into the Spreadsheet; only basic operations are supported (Values, Number formatting, cell formatting, and Text formatting).
-* When you copy a formula such as `=SUM(A2,B2)` and paste it, the formula reference is updated based on the destination cell address. Nested formula references are not supported and will not be adjusted on paste.
+* If you copy =SUM(A2,B2) and paste, the formula reference will change depending on the pasted cell address but we don't have support for nested formula(formula reference will be same).
 * Clipboard operations are not supported with conditional formatting; only values are pasted.
-* There is a limitation when copying the whole sheet data and pasting it into another sheet.
+* We have limitation while copying the whole sheet data and pasting it into another sheet.

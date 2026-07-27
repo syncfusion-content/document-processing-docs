@@ -11,7 +11,7 @@ documentation: ug
 
 Find and Replace helps you to search for the target text and replace the found text with alternative text within the sheet or workbook. You can use the [`allowFindAndReplace`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowfindandreplace) property to enable or disable the Find and Replace functionality.
  
-> The default value for `allowFindAndReplace` property is `true`.
+> * The default value for `allowFindAndReplace` property is `true`.
 
 ## Find
 
@@ -34,7 +34,7 @@ Find can be done by any of the following ways:
 
 ## Replace
 
-Replace feature is used to change the matched contents of a cell within the sheet or workbook. **Replace All** is used to change all the matched contents of a cell within the sheet or workbook.
+Replace feature is used to change the find contents of a cell within the sheet or workbook. **Replace All** is used to change all the matched contents of a cell within the sheet or workbook.
 
 **User Interface**:
 
