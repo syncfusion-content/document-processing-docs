@@ -3,7 +3,7 @@ layout: post
 title: Load document in Angular PDF Viewer component | Syncfusion
 description: Learn here all about Load document in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Load document
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -14,7 +14,7 @@ The PDF Viewer supports loading or switching PDF documents at runtime after the 
 
 The following steps show common approaches for loading documents dynamically.
 
-**Step 1:** Follow the getting started guide to create a basic Angular PDF Viewer sample: https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started
+**Step 1:** Follow the getting started guide to create a basic Angular PDF Viewer sample: [Angular PDF Viewer getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started)
 
 **Step 2:** Use the following code snippet to load the document from a Base64 string.
 

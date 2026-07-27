@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Retry Timeout | Syncfusion
-Description:  Learn here all about Retry Timeout in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: Learn here about the retry timeout in the Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Retry Timeout
 documentation: ug
@@ -35,7 +35,7 @@ Use cases:
 
 ```
 
-In the given example, the `retryTimeout` is set to 10 seconds, and the `retryCount` is set to 5. This means that if a request made by the PDF Viewer takes longer than 10 seconds to receive a response, it will be considered a timeout. In such cases, The PDF Viewer will resend the same request based on the retryCount. Here, this process will repeat up to maximum of 5 retries.
+In the given example, the `retryTimeout` is set to 10 seconds, and the `retryCount` is set to 5. This means that if a request made by the PDF Viewer takes longer than 10 seconds to receive a response, it will be considered a timeout. In such cases, the PDF Viewer will resend the same request based on the retryCount. Here, this process will repeat up to a maximum of 5 retries.
 
 When an AJAX request times out, the viewer decrements `retryCount` and retries the request until the count reaches zero. The viewer stops retrying when the request succeeds or when `retryCount` is exhausted, at which point the viewer surfaces an error to the application.
 

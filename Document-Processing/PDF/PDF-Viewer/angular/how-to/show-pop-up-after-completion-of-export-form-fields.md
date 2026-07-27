@@ -3,7 +3,7 @@ layout: post
 title: Show pop up in Angular PDF Viewer component | Syncfusion
 description: Learn here all about Show pop up after completion of export form fields in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Show pop up after completion of export form fields
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -31,7 +31,7 @@ public fireExportRequestSuccess() {
     .ej2_instances[0];
   //API to notify popup once the form is submitted.
   pdfViewer.viewerBase.openImportExportNotificationPopup(
-    'Your form information has been saved. You can resume it at any times.Form Information Saved'
+    'Your form information has been saved. You can resume it at any time.Form Information Saved'
   );
 }
 
@@ -53,7 +53,7 @@ public fireExportRequestSuccess() {
     .ej2_instances[0];
   //API to notify popup once the form is submitted.
   pdfViewer.viewerBase.openImportExportNotificationPopup(
-    'Your form information has been saved. You can resume it at any times.Form Information Saved'
+    'Your form information has been saved. You can resume it at any time.Form Information Saved'
   );
 }
 
