@@ -8,7 +8,7 @@ documentation: UG
 
 # Add Hyperlinks in Excel
 
-A hyperlink is a reference to a specific location, document, or webpage that the user can jump to by clicking the link in a cell. Hyperlinks are easily recognizable because this is a text highlighted with underlined blue color.
+A hyperlink is a reference to a specific location, document, or webpage that the user can jump to by clicking the link in a cell. Hyperlinks are easily recognizable because they are displayed as text highlighted with an underlined blue color.
 
 The following code shows how to add hyperlinks in Excel with Interop and XlsIO for .NET.
 
@@ -116,7 +116,7 @@ private void AddHyperlinks()
     //Create a hyperlink for a website
     IHyperLink hyperlink = worksheet.HyperLinks.Add(worksheet.Range["A1"]);
     hyperlink.Type = ExcelHyperLinkType.Url;
-    hyperlink.Address = "http://www.syncfusion.com";
+    hyperlink.Address = "https://www.syncfusion.com";
     hyperlink.ScreenTip = "To know more about Syncfusion products, go through this link.";
     hyperlink.TextToDisplay = "Syncfusion Site!";
 
@@ -143,7 +143,7 @@ private void AddHyperlinks()
     //Create a hyperlink for a website
     IHyperLink hyperlink = worksheet.HyperLinks.Add(worksheet.Range["A1"]);
     hyperlink.Type = ExcelHyperLinkType.Url;
-    hyperlink.Address = "http://www.syncfusion.com";
+    hyperlink.Address = "https://www.syncfusion.com";
     hyperlink.ScreenTip = "To know more about Syncfusion products, go through this link.";
     hyperlink.TextToDisplay = "Syncfusion Site!";
 
@@ -168,11 +168,11 @@ Private Sub AddHyperlinks()
     'Create a hyperlink for a website
     Dim hyperlink As IHyperLink = worksheet.HyperLinks.Add(worksheet.Range("A1"))
     hyperlink.Type = ExcelHyperLinkType.Url
-    hyperlink.Address = "http://www.syncfusion.com"
+    hyperlink.Address = "https://www.syncfusion.com"
     hyperlink.ScreenTip = "To know more about Syncfusion products, go through this link."
     hyperlink.TextToDisplay = "Syncfusion Site!"
 
-    'Save as Excel file
+    'Save the workbook
     workbook.SaveAs("XlsIOOutput_Hyperlinks.xlsx")
   End Using
 End Sub
