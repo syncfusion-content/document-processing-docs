@@ -31,11 +31,11 @@ curl --location 'http://localhost:8003/v1/conversion/markdown-to-pdf' \
 
 const formdata = new FormData();
 formdata.append("file", fileInput.files[0], "Input.md");
- formdata.append(
+formdata.append(
     "settings",
     JSON.stringify({
-      File: "file",
-      PdfCompliance: "PDF/A-1B", // use whatever your backend expects
+      InputFile: "file",
+      PdfCompliance: "PDF/A-1B",
       EnableAccessibility: false
     })
   );
@@ -60,8 +60,8 @@ var content = new MultipartFormDataContent();
 content.Add(new StreamContent(File.OpenRead("Input.md")), "file", "Input.md");
 var settings = new
 {
-    File = "file",
-    PdfCompliance = "PDF/A-1B",  
+    InputFile = "file",
+    PdfCompliance = "PDF/A-1B",
     EnableAccessibility = false
 };
 
@@ -79,13 +79,21 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 {% endtabs %}
 
 ## Markdown to PDF Settings
+**InputFile** 
+
+Specifies the key name of the uploaded Markdown file to be converted to PDF.
+
 **Password** 
 
 Specifies the password to protect the output PDF document after conversion. 
 
 **PdfCompliance** 
 
-Defines the PDF/A compliance level for archival and standards adherence. Supported levels include PDF/A‑1B, PDF/A‑2B, PDF/A‑3B, and PDF/A‑4. 
+Defines the PDF/A compliance level for archival and standards adherence. Supported levels include PDF/A‑1B, PDF/A‑2B, PDF/A‑3B, and PDF/A‑4.
+
+**EnableAccessibility**
+
+Specifies whether to enable accessibility (tagged PDF) support in the output PDF document.
 
 ## Markdown to PDF Job Response 
 Once the request is sent, it will create a conversion job to convert the Markdown document to PDF and return the job details as follows:
@@ -161,7 +169,7 @@ You will receive one of the following statuses until the job is completed. Upon 
 ```
 {
     "jobID": "ef0766ab-bc74-456c-8143-782e730a89df",
-    "status": "errror",
+    "status": "error",
     "code": "500",
     "message": "Failed to convert the document to PDF"        
 }

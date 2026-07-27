@@ -11,7 +11,7 @@ The Syncfusion Word to Markdown Web API allows you to convert Word documents int
 
 ## Convert Word to Markdown
 
-To convert a Word document to Markdown, send a request to the /v1/conversion/word-to-markdown endpoint, including both the Word file as input and the settings JSON.
+To convert a Word document to Markdown, send a request to the /v1/conversion/word-to-md endpoint, including both the Word file as input and the settings JSON.
 
 {% tabs %}
 
@@ -21,7 +21,7 @@ curl -v --location 'http://localhost:8003/v1/conversion/word-to-md' \
   --form 'file=@"Input.docx"' \
   --form 'settings={
     "File": "file",
-    "Password": null,
+    "Password": null
   }'
 {% endhighlight %}
 
@@ -29,7 +29,7 @@ curl -v --location 'http://localhost:8003/v1/conversion/word-to-md' \
 
 const formdata = new FormData();
 formdata.append("file", fileInput.files[0], "Input.docx");
- formdata.append(
+formdata.append(
     "settings",
     JSON.stringify({
       File: "file",
@@ -153,7 +153,7 @@ You will receive one of the following statuses until the job is completed. Upon 
 ```
 {
     "jobID": "ef0766ab-bc74-456c-8143-782e730a89df",
-    "status": "errror",
+    "status": "error",
     "code": "500",
     "message": "Failed to convert the document to Markdown"        
 }

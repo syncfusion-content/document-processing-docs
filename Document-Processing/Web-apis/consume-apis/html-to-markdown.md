@@ -52,7 +52,7 @@ fetch("http://localhost:8003/v1/conversion/html-to-markdown", requestOptions)
 {% highlight c# tabtitle="C#" %}
 
 var client = new HttpClient();
-var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/conversion/html-to-pdf");
+var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/conversion/html-to-markdown");
 var content = new MultipartFormDataContent();
 
 var settings = new
@@ -73,7 +73,7 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 {% endtabs %}
 
 ## HTML to Markdown Settings
-**File** 
+**InputFile** 
 
 Specifies the key name of the uploaded HTML file to be converted to Markdown.
 
@@ -151,7 +151,7 @@ You will receive one of the following statuses until the job is completed. Upon 
 ```
 {
     "jobID": "ef0766ab-bc74-456c-8143-782e730a89df",
-    "status": "errror",
+    "status": "error",
     "code": "500",
     "message": "Failed to convert the document to Markdown"        
 }

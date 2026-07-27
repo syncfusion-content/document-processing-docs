@@ -17,7 +17,7 @@ To convert a PDF document to Markdown, send a request to the /v1/conversion/pdf-
 
 {% highlight c# tabtitle="Curl" %}
 
-curl --location 'http://localhost:8003/v1/conversion/pdf-to-markdown"' \
+curl --location 'http://localhost:8003/v1/conversion/pdf-to-markdown' \
 --form 'file=@Input1.pdf' \
 --form 'settings={
   "File": "file"
@@ -74,6 +74,10 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 {% endtabs %}
 
 ## PDF to Markdown Settings
+**File** 
+
+Specifies the form field key name of the uploaded PDF file to be converted to Markdown. 
+
 **Password** 
 
 Specifies the password required to open a protected PDF document before converting it to Markdown. 
@@ -152,7 +156,7 @@ You will receive one of the following statuses until the job is completed. Upon 
 ```
 {
     "jobID": "ef0766ab-bc74-456c-8143-782e730a89df",
-    "status": "errror",
+    "status": "error",
     "code": "500",
     "message": "Failed to convert the document to Markdown"        
 }
