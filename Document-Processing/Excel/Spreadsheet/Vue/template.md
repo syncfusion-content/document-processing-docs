@@ -2,7 +2,7 @@
 layout: post
 title: Template in Vue Spreadsheet component | Syncfusion
 description: Learn here all about Template in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
-control: Template 
+control: Template
 platform: document-processing
 documentation: ug
 ---
@@ -161,7 +161,7 @@ Sample link: [`Cell template`](https://document.syncfusion.com/demos/spreadsheet
 
 ## Note
 
-You can refer to our [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/vue/#/tailwind3/spreadsheet/default.html) to knows how to present and manipulate data.
+You can refer to our [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations.
 
 ## See Also
 
