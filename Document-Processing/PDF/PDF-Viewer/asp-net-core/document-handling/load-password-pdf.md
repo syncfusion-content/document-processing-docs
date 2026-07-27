@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load a Password-Protected PDF in ASP.NET CORE
+# Load a Password-Protected PDF in ASP.NET Core
 
 This article explains how to open password-protected PDF files in the Syncfusion ASP.NET Core PDF Viewer. The viewer supports both user‑interactive loading (Open File dialog) and programmatic loading using APIs.
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Annotation Events in ASP.NET Core PDF Viewer
 
-The PDF Viewer component triggers various events based on user interactions and annotation changes. These events allow responding to specific annotation operations such as adding, removing, selecting, moving, and resizing annotations. Signature-related events can also be monitored for signature lifecycle management.
+The PDF Viewer component triggers various events based on user interactions and annotation changes. These events allow responding to specific annotation operations such as adding, removing, selecting, moving, and resizing annotations. Signature-related events can also be monitored for signature life cycle management.
 
 ## Available events
 

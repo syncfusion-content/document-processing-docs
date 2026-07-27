@@ -85,7 +85,7 @@ function exportAsBase64() {
 
 - Archive or share annotations as portable JSON/XFDF files
 - Save annotations alongside a document in your storage layer
-- Send annotations to a backend for collaboration or review workflows
+- Send annotations to a back end for collaboration or review workflows
 - Export as object for custom serialization and re-import later
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master)

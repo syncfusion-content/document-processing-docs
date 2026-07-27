@@ -13,7 +13,7 @@ Import/export events let developers monitor and control annotation data as it fl
 
 Common use cases:
 - Progress UI and user feedback
-- Validation and sanitization of imported annotation data
+- Validation and sanitation of imported annotation data
 - Audit logging and telemetry
 - Blocking or altering operations based on business rules
 
@@ -74,7 +74,7 @@ window.onload = function () {
 {% endhighlight %}
 {% endtabs %}
 
-N> `importStart`, `importSuccess`, and `importFailed` cover the lifecycle of annotation imports; `exportStart`, `exportSuccess`, and `exportFailed` cover the lifecycle of annotation exports.
+N> `importStart`, `importSuccess`, and `importFailed` cover the life cycle of annotation imports; `exportStart`, `exportSuccess`, and `exportFailed` cover the life cycle of annotation exports.
 
 ## See also
 
