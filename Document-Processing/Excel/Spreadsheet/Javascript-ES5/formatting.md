@@ -105,7 +105,7 @@ The following code example shows the number formatting in cell data.
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/format/number-cs1" %}
 
-## Configure Culture-based Custom Format
+## Configure culture-based Custom Format
 
 Previously, the custom format dialog always displayed formats using the English settings (group separator, decimal separator, and currency symbol were not updated based on the applied culture). Starting from version `27.1.*`, the custom format dialog will now display formats according to the applied culture. You can select a culture-based number format from the dialog or enter your own format using the culture-specific decimal separator, group separator, and currency symbol. Then, click "Apply" to apply the culture-specific custom format to the selected cells.
 

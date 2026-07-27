@@ -35,7 +35,7 @@ If the cell is in editable state, you can save the edited cell by one of the fol
 
 To cancel the editing without saving the changes, you can use one of the following ways,
 
-* Press `Escape`. This exits edit mode and restores the cell's previous value.
+* Press `Escape` key. This exits edit mode and restores the cell's previous value.
 
 * Using the [`closeEdit`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#closeedit) method.
 
