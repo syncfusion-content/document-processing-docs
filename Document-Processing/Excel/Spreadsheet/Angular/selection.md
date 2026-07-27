@@ -11,7 +11,7 @@ documentation: ug
 
 Selection provides interactive support to highlight the cell, row, or column that you select. Selection can be done through Mouse, Touch, or Keyboard interaction. To enable selection, set `mode` as `Single` | `Multiple` in [`selectionSettings`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#selectionsettings). If you set `mode` to `None`, it disables the UI selection.
 
-> * The default value for `mode` in  `selectionSettings` is `Multiple`.
+> * The default value for `mode` in `selectionSettings` is `Multiple`.
 
 You have the following options in Selection,
 
@@ -29,7 +29,7 @@ Cell selection is used to select a single or multiple cells. It can be performed
 * To select a range, select a cell, then use the left mouse button to select and drag over to other cells (or) use the `Shift + arrow` keys to select the range.
 * To select non-adjacent cells and cell ranges, hold `Ctrl` and select the cells.
 
-You can quickly locate and select specific cells or ranges by entering their names or cell references in the Name box, which is located to the left of the formula bar, and also select named or unnamed cells or ranges by using the Go To (`Ctrl+G`) command.
+You can quickly locate and select specific cells or ranges by entering their names or cell references in the Name box, which is located to the left of the formula bar. You can also select named or unnamed cells or ranges by using the Go To (`Ctrl+G`) command.
 
 ## Row selection
 
@@ -103,7 +103,7 @@ You can select single or multiple cells, rows, or columns using mouse and keyboa
 
 ## Remove Selection
 
-The following sample shows, how to remove the selection in the spreadsheet. Here changing the `mode` as `None` in [`selectionSettings`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#selectionsettings) to disable's the UI selection.
+The following sample shows how to remove the selection in the spreadsheet. Here, changing `mode` to `None` in [`selectionSettings`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#selectionsettings) disables the UI selection.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
