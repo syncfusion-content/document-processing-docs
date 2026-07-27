@@ -3,7 +3,7 @@ layout: post
 title: Data binding in Angular Spreadsheet component | Syncfusion
 description: Learn here all about Data binding in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Data binding 
+control: Data binding
 documentation: ug
 ---
 
@@ -107,7 +107,7 @@ You can use WebApiAdaptor to bind spreadsheet with Web API created using OData e
 
 ## Cell data binding
 
-The Spreadsheet control can bind the data to individual cell in a sheet . To achieve this you can use the `value` property.
+The Spreadsheet control can bind the data to an individual cell in a sheet. To achieve this you can use the `value` property.
 
 Refer to the following code example for cell data binding.
 

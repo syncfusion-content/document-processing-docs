@@ -55,7 +55,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 ![Ink tool](../../images/ink_tool.png)
 
 ### Enable Ink Mode
-Switch the viewer into a ink annotation mode programmatically.
+Switch the viewer into an ink annotation mode programmatically.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -90,10 +90,10 @@ function addInkProgrammatically() {
   const viewer = document.getElementById('container').ej2_instances[0];
   viewer.annotation.addAnnotation('Ink', {
     offset: { x: 150, y: 100 },
-        pageNumber: 1,
-        width: 200,
-        height: 60,
-        path: '[{"command":"M","x":244.83,"y":982.00},{"command":"L","x":250.83,"y":953.33}]'
+    pageNumber: 1,
+    width: 200,
+    height: 60,
+    path: '[{"command":"M","x":244.83,"y":982.00},{"command":"L","x":250.83,"y":953.33}]'
   });
 }
 {% endraw %}
@@ -166,14 +166,14 @@ function editInkProgrammatically() {
 {% endhighlight %}
 {% endtabs %}
 
-### Delete Stamp
+### Delete Ink
 
 Delete Ink via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
 
 ## Ink Annotation Events
 
 The PDF viewer provides annotation life‑cycle events that notify when Ink annotations are added, modified, selected, or removed.
-For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event)
+For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event).
 
 ## Export and Import
 

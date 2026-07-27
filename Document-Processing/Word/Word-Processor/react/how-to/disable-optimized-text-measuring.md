@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Disable optimized text measuring in React Document Editor | Syncfusion
-description: Learn here all about Disable optimized text measuring in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
-control: Disable optimized text measuring 
+title: Disable optimized text measuring in React DOCX Editor | Syncfusion
+description: Learn here all about Disable optimized text measuring in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+control: Disable optimized text measuring
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Disable optimized text measuring in React Document editor component
+# Disable optimized text measuring in React Document Editor component
 
-Starting from v19.3.0.x, the accuracy of text size measurements in [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) is improved such as to match Microsoft Word pagination for most Word documents. This improvement is included as default behavior along with an optional API [`enableOptimizedTextMeasuring`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorSettingsModel#enableoptimizedtextmeasuring) in Document editor settings.  
+Starting from v19.3.0.x, the accuracy of text size measurements in [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) is improved to match Microsoft Word pagination for most Word documents. This improvement is included as the default behavior along with an optional API [`enableOptimizedTextMeasuring`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorSettingsModel#enableoptimizedtextmeasuring) in Document Editor settings.
 
-If you want the Document editor component to retain the document pagination (display page-by-page) behavior like v19.2.0.x and older versions. Then you can disable this optimized text measuring improvement, by setting `false` to [`enableOptimizedTextMeasuring`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorSettingsModel#enableoptimizedtextmeasuring) property of  React Document Editor component.
+If you want the Document Editor component to retain the document pagination (display page-by-page) behavior like v19.2.0.x and older versions, then you can disable this optimized text measuring improvement, by setting `false` to [`enableOptimizedTextMeasuring`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorSettingsModel#enableoptimizedtextmeasuring) property of React Document Editor component.
 
 ## Disable optimized text measuring in `DocumentEditorContainer` instance
 
@@ -40,7 +40,6 @@ function App() {
         ref={(scope) => {
           container = scope;
         }}
-        style={{ height: '590px' }}
         enableToolbar={true}
         serviceUrl={hosturl}
         height={'590px'}
@@ -56,7 +55,7 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 ```
 {% endraw %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ## Disable optimized text measuring in `DocumentEditor` instance
 
@@ -67,7 +66,7 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 
 import {
-  DocumentEditorComponent, DocumentEditor, RequestNavigateEventArgs, ViewChangeEventArgs,
+  DocumentEditorComponent, DocumentEditor,
   Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory,
   ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog,
   PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog,
@@ -95,4 +94,4 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.

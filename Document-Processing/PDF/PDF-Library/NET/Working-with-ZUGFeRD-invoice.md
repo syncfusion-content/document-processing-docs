@@ -107,8 +107,8 @@ The PDF/A-3b conformance supports the external files as attachment to the PDF do
 {% highlight c# tabtitle="C# [Cross-platform]" %} 
 
 //Creates an attachment
-FileStream fontStream = new FileStream("../../Data/ZUGFeRD-invoice.xml", FileMode.Open, FileAccess.Read);
-PdfAttachment attachment = new PdfAttachment("ZUGFeRD-invoice.xml",invoiceStream);
+FileStream invoiceStream = new FileStream("../../Data/ZUGFeRD-invoice.xml", FileMode.Open, FileAccess.Read);
+PdfAttachment attachment = new PdfAttachment("ZUGFeRD-invoice.xml", invoiceStream);
 attachment.Relationship = PdfAttachmentRelationship.Alternative;
 attachment.ModificationDate = DateTime.Now;
 attachment.Description = "ZUGFeRD-invoice";
@@ -122,7 +122,7 @@ document.Attachments.Add(attachment);
 
 //Creates an attachment
 FileStream invoiceStream = new FileStream("../../Data/ZUGFeRD-invoice.xml", FileMode.Open, FileAccess.Read);
-PdfAttachment attachment = new PdfAttachment("ZUGFeRD-invoice.xml",invoiceStream);
+PdfAttachment attachment = new PdfAttachment("ZUGFeRD-invoice.xml", invoiceStream);
 attachment.Relationship = PdfAttachmentRelationship.Alternative;
 attachment.ModificationDate = DateTime.Now;
 attachment.Description = "ZUGFeRD-invoice";
@@ -231,19 +231,19 @@ document.Close(true);
 Imports Syncfusion.Pdf.Interactive
 Imports Syncfusion.Pdf
 
-' Create a new PDF document  
-Dim document As New PdfDocument(PdfConformanceLevel.Pdf_A3B)  
+'Create a new PDF document.
+Dim document As New PdfDocument(PdfConformanceLevel.Pdf_A3B)
 
-' Set ZUGFeRD conformance level  
-document.ZugferdConformanceLevel = ZugferdConformanceLevel.XRechnung  
+'Set ZUGFeRD conformance level.
+document.ZugferdConformanceLevel = ZugferdConformanceLevel.XRechnung
 
-' Set ZUGFeRD version  
-document.ZugferdVersion = ZugferdVersion.FacturX  
+'Set ZUGFeRD version.
+document.ZugferdVersion = ZugferdVersion.FacturX
 
-' Load the file as stream  
-Dim fontStream As New FileStream("xrechnung.xml", FileMode.Open, FileAccess.Read)  
-' Set an attachment  
-Dim attachment As New PdfAttachment("xrechnung.xml", fontStream)  
+'Load the XML file as a stream.
+Dim invoiceStream As New FileStream("xrechnung.xml", FileMode.Open, FileAccess.Read)
+'Set an attachment.
+Dim attachment As New PdfAttachment("xrechnung.xml", invoiceStream)
 attachment.Relationship = PdfAttachmentRelationship.Alternative  
 attachment.ModificationDate = DateTime.Now 
 attachment.Description = "ZUGFeRD-Xrechnung"  
@@ -279,9 +279,9 @@ PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A3B);
 //Set ZUGFeRD conformance level 
 document.ZugferdConformanceLevel = ZugferdConformanceLevel.Basic;
 
-//Creates an attachment 
-FileStream fontStream = new FileStream("ZUGFeRD - invoice.xml", FileMode.Open, FileAccess.Read);
-PdfAttachment attachment = new PdfAttachment("ZUGFeRD-invoice.xml",invoiceStream);
+//Creates an attachment
+FileStream invoiceStream = new FileStream("ZUGFeRD - invoice.xml", FileMode.Open, FileAccess.Read);
+PdfAttachment attachment = new PdfAttachment("ZUGFeRD-invoice.xml", invoiceStream);
 attachment.Relationship = PdfAttachmentRelationship.Alternative;
 attachment.ModificationDate = DateTime.Now;
 attachment.Description = "ZUGFeRD-invoice";
@@ -290,9 +290,9 @@ attachment.MimeType = "application/xml";
 document.Attachments.Add(attachment);
 
 //Save the document
-document.Save("Output.pdf"); 
-//Closes the document 
-document.Close(true); 
+document.Save("Output.pdf");
+//Close the document
+document.Close(true);
 
 {% endhighlight %}
 
@@ -306,9 +306,9 @@ PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A3B);
 //Set ZUGFeRD conformance level 
 document.ZugferdConformanceLevel = ZugferdConformanceLevel.Basic;
 
-//Creates an attachment 
+//Creates an attachment
 FileStream invoiceStream = new FileStream("ZUGFeRD - invoice.xml", FileMode.Open, FileAccess.Read);
-PdfAttachment attachment = new PdfAttachment("ZUGFeRD-invoice.xml",invoiceStream);
+PdfAttachment attachment = new PdfAttachment("ZUGFeRD-invoice.xml", invoiceStream);
 attachment.Relationship = PdfAttachmentRelationship.Alternative;
 attachment.ModificationDate = DateTime.Now;
 attachment.Description = "ZUGFeRD-invoice";
@@ -334,15 +334,11 @@ document.ZugferdConformanceLevel = ZugferdConformanceLevel.Basic
 
 'Creates an attachment
 Dim invoiceStream As FileStream = New FileStream("ZUGFeRD - invoice.xml", FileMode.Open, FileAccess.Read)
-Dim attachment As PdfAttachment = New PdfAttachment("ZUGFeRD-invoice.xml",invoiceStream)
-attachment.Relationship = PdfAttachmentRelationship.Alternative
-attachment.ModificationDate = DateTime.Now
-attachment.Description = "ZUGFeRD-invoice"
-attachment.MimeType = "application/xml"
-//Add attachment to PDF document
+Dim attachment As PdfAttachment = New PdfAttachment("ZUGFeRD-invoice.xml", invoiceStream)
+'Add attachment to PDF document.
 document.Attachments.Add(attachment)
 
-'Save and close the document
+'Save and close the document.
 document.Save("Zugferd.pdf")
 document.Close(True)
 
@@ -354,28 +350,29 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Extract ZUGFeRD invoice from PDF
 
-You can extract the ZUGFeRD invoice using [PdfAttachment](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAttachment.html) class.
+You can extract the ZUGFeRD invoice XML data from a PDF document using the [PdfAttachment](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAttachment.html) class. The following code sample iterates through the attachments collection of the loaded document and writes each attachment's raw bytes to a file on disk.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ZUGFeRD/Extract-ZUGFeRD-invoice-from-PDF-document/.NET/Extract-ZUGFeRD-invoice-from-PDF-document/Program.cs" %} 	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ZUGFeRD/Extract-ZUGFeRD-invoice-from-PDF-document/.NET/Extract-ZUGFeRD-invoice-from-PDF-document/Program.cs" %}
 
 using Syncfusion.Pdf.Interactive;
 using Syncfusion.Pdf.Parsing;
 
-//Loads the PDF document
+// Load the PDF document.
 PdfLoadedDocument document = new PdfLoadedDocument("Sample.pdf");
 
-//Iterates the attachments
+// Iterate through the attachments and save each one to disk.
 foreach (PdfAttachment attachment in document.Attachments)
 {
-    //Extracts the ZUGFeRD invoice attachment and saves it to the disk
-    FileStream s = new FileStream(attachment.FileName, FileMode.Create);
-    s.Write(attachment.Data, 0, attachment.Data.Length);
-    s.Dispose();
+    // Write the attachment data to a file stream.
+    using (FileStream stream = new FileStream(attachment.FileName, FileMode.Create, FileAccess.Write))
+    {
+        stream.Write(attachment.Data, 0, attachment.Data.Length);
+    }
 }
 
-//Saves and closes the document
+// Save and close the document.
 document.Save("Output.pdf");
 document.Close(true);
 
@@ -386,19 +383,20 @@ document.Close(true);
 using Syncfusion.Pdf.Interactive;
 using Syncfusion.Pdf.Parsing;
 
-//Loads the PDF document
+// Load the PDF document.
 PdfLoadedDocument document = new PdfLoadedDocument("Sample.pdf");
 
-//Iterates the attachments
+// Iterate through the attachments and save each one to disk.
 foreach (PdfAttachment attachment in document.Attachments)
 {
-    //Extracts the ZUGFeRD invoice attachment and saves it to the disk
-    FileStream s = new FileStream(attachment.FileName, FileMode.Create);
-    s.Write(attachment.Data, 0, attachment.Data.Length);
-    s.Dispose();
+    // Write the attachment data to a file stream.
+    using (FileStream stream = new FileStream(attachment.FileName, FileMode.Create, FileAccess.Write))
+    {
+        stream.Write(attachment.Data, 0, attachment.Data.Length);
+    }
 }
 
-//Saves and closes the document
+// Save and close the document.
 document.Save("Output.pdf");
 document.Close(true);
 
@@ -409,24 +407,26 @@ document.Close(true);
 Imports Syncfusion.Pdf.Interactive
 Imports Syncfusion.Pdf.Parsing
 
-'Loads the PDF document
+' Load the PDF document.
 Dim document As New PdfLoadedDocument("Sample.pdf")
 
-'Iterates the attachments
+' Iterate through the attachments and save each one to disk.
 For Each attachment As PdfAttachment In document.Attachments
-    'Extracts the attachment and saves it to the disk
-    Dim s As New FileStream(attachment.FileName, FileMode.Create)
-    s.Write(attachment.Data, 0, attachment.Data.Length)
-    s.Dispose()
+    ' Write the attachment data to a file stream.
+    Using stream As New FileStream(attachment.FileName, FileMode.Create, FileAccess.Write)
+        stream.Write(attachment.Data, 0, attachment.Data.Length)
+    End Using
 Next
 
-'Saves and closes the document
+' Save and close the document.
 document.Save("Output.pdf")
 document.Close(True)
 
 {% endhighlight %}
 
 {% endtabs %}
+
+N> The original sample called `s.Dispose()` manually to close the output stream. The equivalent and safer pattern is the `using` block shown above, which guarantees the stream is closed and its resources are released even if the write operation throws an exception.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/ZUGFeRD/Extract-ZUGFeRD-invoice-from-PDF-document).
 

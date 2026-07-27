@@ -6,13 +6,13 @@ control: XlsIO
 documentation: UG
 ---
 
-# Chart Plot Area in Excel document
+# Chart Plot Area in an Excel document
 
-The plot area refers to the region that represents the plotted data in a chart. Using XlsIO, you can **customize the plot area in the chart**.
+The plot area refers to the region that represents the plotted data in a chart. Using XlsIO, you can **customize the plot area**.
 
 ## Formatting
 
-###  Border
+### Border
 
 The following code snippet illustrates how to format the border of the plot area.
 
@@ -80,7 +80,7 @@ chartPlotArea.Fill.ForeColor = Color.White
 
 ### Transparency
 
-The following code snippet illustrates how to apply transparency in the plot area.
+The following code snippet illustrates how to apply transparency to the plot area. This snippet assumes `chartPlotArea` is already initialized from the [Border](#border) or [Color](#color) example.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -89,21 +89,21 @@ chartPlotArea.Fill.Transparency = 0.5;
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Set the transparency 
+//Set the transparency
 chartPlotArea.Fill.Transparency = 0.5;
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Set the transparency 
+'Set the transparency
 chartPlotArea.Fill.Transparency = 0.5
 {% endhighlight %}
 {% endtabs %}
 
-N> [Transparency](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IFill.html#Syncfusion_XlsIO_IFill_Transparency) is only applicable when [FillType](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IFill.html#Syncfusion_XlsIO_IFill_FillType) is set as SolidColor. Color-shaded fill is represented as a floating-point value ranging from 0.0 (Clear) to 1.0 (Opaque).
+N> [Transparency](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IFill.html#Syncfusion_XlsIO_IFill_Transparency) is only applicable when [FillType](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IFill.html#Syncfusion_XlsIO_IFill_FillType) is set as SolidColor. The value is a floating-point number ranging from 0.0 (Clear) to 1.0 (Opaque).
 
-## Set position
+## Set the Position
 
-The following code snippet illustrates how to set the position of the plot area.
+The following code snippet illustrates how to set the position of the plot area. This snippet assumes `chartPlotArea` is already initialized from the [Border](#border) or [Color](#color) example.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -117,8 +117,8 @@ chartPlotArea.Layout.Left = 5;
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Set the position 
-chartPlotArea.Layout.Left = 5;
+'Set the position
+chartPlotArea.Layout.Left = 5
 {% endhighlight %}
 {% endtabs %}
 
@@ -151,7 +151,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	//Set the position
 	chartPlotArea.Layout.Left = 5;
 
-	//Saving the workbook 
+	//Saving the workbook
 	workbook.SaveAs(Path.GetFullPath("Output/Output.xlsx"));
 }
 {% endhighlight %}

@@ -45,7 +45,7 @@ NuGet package name<br/></th></tr></thead>
 {{'[Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core)' | markdownify }}<br/></td></tr>
 </table>
 
-N> The `SkiaSharp.NativeAssets.Linux` and `HarfBuzzSharp.NativeAssets.Linux` packages are only required when deploying to Azure App Service (Linux) or other Linux-based Azure hosts. On Windows hosts, the required native assets are bundled with the `Syncfusion.DocIORenderer.Net.Core` NuGet package. For the latest package versions, refer to the [Syncfusion NuGet feed](https://www.nuget.org/profiles/Syncfusion).
+N> The `SkiaSharp.NativeAssets.Linux` and `HarfBuzzSharp.NativeAssets.Linux` packages are only required when deploying to Azure App Service (Linux) or other Linux-based Azure hosts. On Windows hosts, the required native assets are bundled with the `Syncfusion.DocIORenderer.Net.Core` NuGet package.
 
 ## See Also
 

@@ -6,11 +6,13 @@ control: XlsIO
 documentation: UG
 ---
 
-# Freeze and UnFreeze Panes in Excel Document
+# Freeze and Unfreeze Panes in Excel Document
+
+This article explains how to **freeze**, **unfreeze**, and **split** panes in an Excel worksheet using Syncfusion<sup>&reg;</sup> XlsIO.
 
 ## Freeze Panes
 
-Freezing panes allows you to keep a portion of the worksheet visible while you scroll through the rest of the sheet. The [FreezePanes](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_FreezePanes) method of the [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) interface can be used to achieve this.
+Freezing panes lets you keep a portion of the worksheet visible while you scroll through the rest of the sheet. Use the [FreezePanes](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_FreezePanes) method of the [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) interface to achieve this.
 
 You can set the first visible row and the first visible column in the non-frozen area through the [FirstVisibleRow](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_FirstVisibleRow) and [FirstVisibleColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_FirstVisibleColumn) properties.
 
@@ -158,7 +160,7 @@ A complete working example to freeze columns in C# is present on [this GitHub pa
 
 ## Unfreeze Panes
 
-Unfreezing panes allows you to remove any previously frozen sections in an Excel worksheet using the [RemovePanes](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_RemovePanes) method of the [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html) interface.
+Unfreezing panes lets you remove any previously frozen sections in an Excel worksheet using the [RemovePanes](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_RemovePanes) method of the [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html) interface.
 
 The following code example illustrates how to unfreeze panes in the worksheet.
 
@@ -211,7 +213,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
     'Unfreeze panes in the worksheet
     worksheet.RemovePanes()
 
-    //Saving the workbook
+    'Saving the workbook
     workbook.SaveAs("Output.xlsx")
 End Using
 {% endhighlight %}
@@ -294,3 +296,7 @@ End Using
 {% endtabs %}   
 
 A complete working example to split panes in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Split%20Panes/.NET/Split%20Panes).
+
+## See also
+
+- Explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features at [Syncfusion Excel Framework for .NET Core](https://www.syncfusion.com/document-sdk/net-excel-library).

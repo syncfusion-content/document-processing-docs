@@ -1,16 +1,16 @@
 ---
 layout: post
 title: Customize context menu in Angular PDF Viewer | Syncfusion
-description: Learn here all about how to add and customize custom context menu options in the Angular PDF Viewer using addCustomMenu, and related events.
+description: Learn here all about how to add and customize custom context menu options in the Angular PDF Viewer using the addCustomMenu method and related events.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to Customize the context menu in PDF Viewer in Angular
+# How to Customize the Context Menu in the PDF Viewer in Angular
 
-The PDF Viewer supports extensive customization of the context menu, including reaching specific goals like adding new items, hiding default options, and handling custom click events.
+The PDF Viewer supports extensive customization of the context menu, including adding new items, hiding default options, and handling custom click events.
 
 ## Add Custom Context Menu Items
 
@@ -244,7 +244,7 @@ The [customContextMenuSelect()](https://ej2.syncfusion.com/angular/documentation
 
 ## Dynamic Context Menu Customization
 
-The [customContextMenuBeforeOpen()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#customcontextmenuselect) event allows for dynamic showing or hiding of items based on selection or document state. The implementation is included in the Angular component above in the `customContextMenuBeforeOpen()` method.
+The [customContextMenuBeforeOpen](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#customcontextmenubeforeopen) event allows for dynamic showing or hiding of items based on selection or document state. The implementation is included in the Angular component above in the `customContextMenuBeforeOpen()` method.
 
 ## Disable the Context Menu Entirely
 
@@ -298,4 +298,4 @@ export class AppComponent {
 {% endhighlight %}
 {% endtabs %}
 
-N> The context menu customization works with standalone and non-standalone Angular components, providing flexible integration options for your application.
+> The context menu customization works with standalone and non-standalone Angular components, providing flexible integration options for your application.
