@@ -9,7 +9,7 @@ documentation: ug
 
 # Freeze pane in EJ2 TypeScript Spreadsheet control
 
-Freeze Panes help you keep particular rows or columns visible while scrolling the sheet content. You can specify the number of frozen rows and columns using the [`frozenRows`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#frozenrows) and [`frozenColumns`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#frozencolumns) properties inside the [`Sheet`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#sheets) configuration.
+Freeze Panes help you keep particular rows or columns visible while scrolling the sheet content. You can specify the number of frozen rows and columns using the [`frozenRows`](https://ej2.syncfusion.com/documentation/api/spreadsheet#frozenrows) and [`frozenColumns`](https://ej2.syncfusion.com/documentation/api/spreadsheet#frozencolumns) properties inside the [`Sheet`](https://ej2.syncfusion.com/documentation/api/spreadsheet#sheets) configuration.
 
 ## Apply freezepanes on UI
 
@@ -18,7 +18,7 @@ Freeze Panes help you keep particular rows or columns visible while scrolling th
 In the active spreadsheet, click the cell where you want to create freeze panes. You can freeze panes in any of the following ways:
 
 * Select the View tab in the Ribbon toolbar and choose the `Freeze Panes` item.
-* Use the [`freezePanes`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#freezepanes) method programmatically.
+* Use the [`freezePanes`](https://ej2.syncfusion.com/documentation/api/spreadsheet#freezepanes) method programmatically.
 
 ## FrozenRows
 

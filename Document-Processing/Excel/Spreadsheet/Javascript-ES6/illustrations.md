@@ -88,9 +88,9 @@ The following features have some limitations in Image:
 
 ## Chart
 
-A chart is a graphical representation of data; it organizes and represents a set of numerical or qualitative data. It typically displays the selected range of data in terms of the `x`-axis and `y`-axis. You can use the [`allowChart`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowchart) property to enable or disable the chart functionality.
+A chart is a graphical representation of data; it organizes and represents a set of numerical or qualitative data. It typically displays the selected range of data in terms of the `x`-axis and `y`-axis. You can use the [`allowChart`](https://ej2.syncfusion.com/documentation/api/spreadsheet#allowchart) property to enable or disable the chart functionality.
 
-> The default value for the [`allowChart`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowchart) property is `true`.
+> The default value for the [`allowChart`](https://ej2.syncfusion.com/documentation/api/spreadsheet#allowchart) property is `true`.
 
 ### Types of chart
 
@@ -108,9 +108,9 @@ The following types of charts are available in the Spreadsheet.
 You can insert the chart by using one of the following ways,
 
 * Select the chart icon in the Ribbon toolbar under the Insert Tab.
-* Use the [`insertChart()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#insertchart) method programmatically.
+* Use the [`insertChart()`](https://ej2.syncfusion.com/documentation/api/spreadsheet#insertchart) method programmatically.
 
-The available parameter in the [`insertChart()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#insertchart) method is,
+The available parameter in the [`insertChart()`](https://ej2.syncfusion.com/documentation/api/spreadsheet#insertchart) method is,
 
 | Parameter | Type | Description |
 |-----|------|----|
@@ -139,9 +139,9 @@ The available arguments in the `ChartModel` are:
 ### Delete Chart
 
 * If you want to delete the chart, just select the chart, and then press the Delete key.
-* Use the [`deleteChart()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#deletechart) method programmatically.
+* Use the [`deleteChart()`](https://ej2.syncfusion.com/documentation/api/spreadsheet#deletechart) method programmatically.
 
-The available parameter in the [`deleteChart()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#deletechart) method is,
+The available parameter in the [`deleteChart()`](https://ej2.syncfusion.com/documentation/api/spreadsheet#deletechart) method is,
 
 | Parameter | Type | Description |
 |-----|------|----|
@@ -168,7 +168,7 @@ Chart feature allows you to view and insert a chart in a spreadsheet, and you ca
 
 #### Customization of Line Chart Markers
 
-Using the [`actionBegin`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#actionbegin) event, you can change the shape, size, fill color, and border of the line chart marker. The following example shows how to modify the marker shape and size when creating a line chart through the UI.
+Using the [`actionBegin`](https://ej2.syncfusion.com/documentation/api/spreadsheet#actionbegin) event, you can change the shape, size, fill color, and border of the line chart marker. The following example shows how to modify the marker shape and size when creating a line chart through the UI.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}

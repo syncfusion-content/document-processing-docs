@@ -21,7 +21,7 @@ In the active sheet, select a range of cells to filter by value of the cell. The
 
 * Select the filter item in the Ribbon toolbar.
 * Right-click the sheet, and then select the filter item in the context menu.
-* Use the [`applyFilter()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#applyfilter) method programmatically.
+* Use the [`applyFilter()`](https://ej2.syncfusion.com/documentation/api/spreadsheet#applyfilter) method programmatically.
 
 * Use `Ctrl + Shift + L` keyboard shortcut to apply the filter.
 
@@ -29,10 +29,10 @@ In the active sheet, select a range of cells to filter by value of the cell. The
 
 ## Filter by criteria
 
-The [`applyFilter()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#applyfilter) method will apply the filter UI, based on the predicate and range given in the arguments.
+The [`applyFilter()`](https://ej2.syncfusion.com/documentation/api/spreadsheet#applyfilter) method will apply the filter UI, based on the predicate and range given in the arguments.
 
-> * The [`beforeFilter`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#beforefilter) event will be triggered before filtering the specified range.
-> * The [`filterComplete`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#filtercomplete) event will be triggered after the filter action is completed successfully.
+> * The [`beforeFilter`](https://ej2.syncfusion.com/documentation/api/spreadsheet#beforefilter) event will be triggered before filtering the specified range.
+> * The [`filterComplete`](https://ej2.syncfusion.com/documentation/api/spreadsheet#filtercomplete) event will be triggered after the filter action is completed successfully.
 
 The following code example shows `filter` functionality in the Spreadsheet control.
 
@@ -57,7 +57,7 @@ After applying a filter to a column, you may want to clear it to make all filter
 
 * Choose `Clear` option in ribbon toolbar under `Filter and Sort`. It clears the filters applied in the spreadsheet for all fields.
 
-* Use the [`clearFilter()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#clearfilter) method programmatically, to clear the applied filters in spreadsheet for all fields.
+* Use the [`clearFilter()`](https://ej2.syncfusion.com/documentation/api/spreadsheet#clearfilter) method programmatically, to clear the applied filters in spreadsheet for all fields.
 
 ## Clear filter on a field
 
@@ -65,7 +65,7 @@ After filtering, you can clear/reset the filter for a field alone. It can be don
 
 * Click the filter icon in the column's header and then choose the `Clear Filter` option from the filter dialog.
 * Right-click a filtered column cell and choose the `Clear Filter from <Column Name>` option from the context menu.
-* Use the [`clearFilter(field)`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#clearfilter) method programmatically to clear the filter on a particular column. The `field` argument accepts the column key (for example, `'A'`) or the column header name.
+* Use the [`clearFilter(field)`](https://ej2.syncfusion.com/documentation/api/spreadsheet#clearfilter) method programmatically to clear the filter on a particular column. The `field` argument accepts the column key (for example, `'A'`) or the column header name.
 
 ## Reapply filter
 

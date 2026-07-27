@@ -9,7 +9,7 @@ documentation: ug
 
 # Link in EJ2 TypeScript Spreadsheet control
 
-Hyperlink is used to navigate to web links, cell references within the sheet, or to other sheets in the Spreadsheet. You can use the [`allowHyperlink`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowhyperlink) property to enable or disable hyperlink functionality.
+Hyperlink is used to navigate to web links, cell references within the sheet, or to other sheets in the Spreadsheet. You can use the [`allowHyperlink`](https://ej2.syncfusion.com/documentation/api/spreadsheet#allowhyperlink) property to enable or disable hyperlink functionality.
 
 > * The default value for `allowHyperlink` property is `true`.
 
@@ -25,7 +25,7 @@ In the active spreadsheet, click the cell where you want to create a hyperlink. 
 * Right-click the cell and then click the Hyperlink item in the context menu.
 * Use the `Ctrl + K` keyboard shortcut to apply the hyperlink.
 
-* Use the [`addHyperlink`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#addhyperlink) method programmatically.
+* Use the [`addHyperlink`](https://ej2.syncfusion.com/documentation/api/spreadsheet#addhyperlink) method programmatically.
  
 ## Edit Hyperlink
 
@@ -49,7 +49,7 @@ Performing this operation removes a single hyperlink without losing the display 
 In the active spreadsheet, click the cell where you want to remove a hyperlink. remove hyperlink can be done by any of the following ways:
 
 * Right-click the cell and then click Remove Hyperlink item in the context menu.
-* Use the [`removeHyperlink()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#removehyperlink) method programmatically.
+* Use the [`removeHyperlink()`](https://ej2.syncfusion.com/documentation/api/spreadsheet#removehyperlink) method programmatically.
 
 ## How to change target attribute
 

@@ -17,7 +17,7 @@ You can dynamically add or insert a sheet in the following ways:
 
 * Click the `Add Sheet` button in the sheet tab. This adds a new empty sheet next to the current active sheet.
 * Right-click on the sheet tab, and then select `Insert` from the context menu to insert a new empty sheet before the current active sheet.
-* Use the [`insertSheet`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#insertsheet) method to insert one or more sheets at the desired index.
+* Use the [`insertSheet`](https://ej2.syncfusion.com/documentation/api/spreadsheet#insertsheet) method to insert one or more sheets at the desired index.
 
 The following code example shows the insert sheet operation in the Spreadsheet.
 
@@ -34,7 +34,7 @@ The following code example shows the insert sheet operation in the Spreadsheet.
 
 ### Insert a sheet programmatically and make it active sheet
 
-A sheet is a collection of cells organized in the form of rows and columns that allows you to store, format, and manipulate the data. Using [insertSheet](https://ej2.syncfusion.com/documentation/api/spreadsheet/#insertsheet) method, you can insert one or more sheets at the desired index. Then, you can make the inserted sheet as active sheet by focusing the start cell of that sheet using the [goTo](https://ej2.syncfusion.com/documentation/api/spreadsheet/#goto) method.
+A sheet is a collection of cells organized in the form of rows and columns that allows you to store, format, and manipulate the data. Using [insertSheet](https://ej2.syncfusion.com/documentation/api/spreadsheet#insertsheet) method, you can insert one or more sheets at the desired index. Then, you can make the inserted sheet as active sheet by focusing the start cell of that sheet using the [goTo](https://ej2.syncfusion.com/documentation/api/spreadsheet#goto) method.
 
 The following code example shows how to insert a sheet programmatically and make it the active sheet.
 
@@ -54,7 +54,7 @@ The following code example shows how to insert a sheet programmatically and make
 The Spreadsheet has support for removing an existing worksheet. You can dynamically delete the existing sheet by the following way,
 
 * Right-click on the sheet tab, and then select `Delete` option from context menu.
-* Using [`delete`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#delete ) method to delete the sheets.
+* Using [`delete`](https://ej2.syncfusion.com/documentation/api/spreadsheet#delete ) method to delete the sheets.
 
 ## Rename sheet
 
