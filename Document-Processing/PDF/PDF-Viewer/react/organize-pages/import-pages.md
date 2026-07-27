@@ -44,7 +44,7 @@ This guide explains how to import pages from another PDF into the current docume
 
 ## Expected result
 
-- Imported pages display as a single thumbnail in Organize Pages and are merged into the original PDF when saved or exported.
+- Imported pages display as thumbnails in Organize Pages and are merged into the original PDF when saved or exported.
 
 ## Enable or disable Import Pages button
 
