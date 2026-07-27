@@ -52,7 +52,7 @@ For detailed information, see [Customize Form Designer Toolbar](./form-designer-
 
 ### Mobile toolbar
 
-- A compact toolbar layout optimized for small screens and touch interactions. It appears automatically on mobile-sized viewports (or when a mobile layout is explicitly chosen) and contains the most frequently used actions in a space-efficient arrangement.
+- A compact toolbar layout optimized for small screens and touch interactions. It appears automatically on mobile-sized view ports (or when a mobile layout is explicitly chosen) and contains the most frequently used actions in a space-efficient arrangement.
 
     ![mobile toolbar](../../react/images/mobile-toolbar.png)
 
