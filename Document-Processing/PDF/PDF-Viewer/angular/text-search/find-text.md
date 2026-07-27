@@ -156,7 +156,7 @@ export class AppComponent {
 {% endhighlight %}
 {% endtabs %}
 
-### Find and get the bounds of the list of text
+### Find and get the bounds of a list of text
 
 Searches for an array of strings within the document and returns the bounding rectangles for each occurrence. The search can be case-sensitive based on the provided parameters and returns matches from all pages in the document where the strings were found.
 
@@ -220,14 +220,14 @@ export class AppComponent {
     'https://cdn.syncfusion.com/ej2/32.2.3/dist/ej2-pdfviewer-lib';
 
   findText(): void {
-    console.log(this.pdfviewerObj.textSearch.findText(['adobe', 'pdf'], false),2);
+    console.log(this.pdfviewerObj.textSearch.findText(['adobe', 'pdf'], false, 2));
   }
 }
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
-### Find and get the bounds of the list of text on desired page
+### Find and get the bounds of a list of text on the desired page
 
 Searches for an array of strings within the document and returns the bounding rectangles for each occurrence. The search can be case-sensitive based on the provided parameters. It returns the bounding rectangles for these search strings on that particular page where the strings were found.
 
@@ -298,7 +298,7 @@ export class AppComponent {
 {% endhighlight %}
 {% endtabs %}
 
-[View Sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples)
+[View Sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples)
 
 ## Find text with findTextAsync
 
