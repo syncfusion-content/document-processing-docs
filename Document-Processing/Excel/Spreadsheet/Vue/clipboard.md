@@ -72,7 +72,7 @@ Paste can be done in one of the following ways.
 
 ## Prevent the paste functionality
 
-The following example shows how to prevent the paste action in the Spreadsheet. In the [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#actionbegin) event, you can set `cancel` argument as false in paste request type.
+The following example shows, how to prevent the paste action in spreadsheet. In [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#actionbegin) event, you can set `cancel` argument as false in paste request type.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -94,4 +94,4 @@ The following example shows how to prevent the paste action in the Spreadsheet. 
 
 ## Note
 
-You can refer to our [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/vue/#/tailwind3/spreadsheet/default.html) to knows how to present and manipulate data.
+You can refer to our [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations.
