@@ -46,4 +46,4 @@ Follow these steps in order to diagnose and fix the double-header issue:
 
 * [Performance Best Practices](../performance-best-practices)
 * [Resize handling](../mobile-responsiveness)
-* [Freeze panes](../freeze-pane)
+* [Freeze Panes](../freeze-pane)
