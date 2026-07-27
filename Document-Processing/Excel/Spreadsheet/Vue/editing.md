@@ -33,7 +33,7 @@ If a cell is in edit mode, you can save the edited cell by one of the following 
 
 To cancel editing without saving the changes, you can use one of the following ways:
 
-* Press `Escape` key to exit edit mode and restore the unchanged cell content.
+* Press `ESCAPE` key, this will remove the editable state and update the unchanged cell content.
 * Using the [`closeEdit`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#closeedit) method.
 
 The following sample shows how to prevent the editing and cell save. Here `E` column prevent the editing by using cancel argument as true in [`cellEdit`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#celledit) event. In `D` column, prevent saving the edited changes by using cancel argument as true in [`beforeCellSave`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#beforecellsave) and use [`closeEdit`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#closeedit) method in spreadsheet.
@@ -55,7 +55,7 @@ The following sample shows how to prevent the editing and cell save. Here `E` co
 
 ## Note
 
-You can refer to our [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/vue/#/tailwind3/spreadsheet/default.html) to knows how to present and manipulate data.
+You can refer to our [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations.
 
 ## See Also
 

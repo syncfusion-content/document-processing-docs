@@ -108,7 +108,7 @@ The Spreadsheet provides a `Calculation Mode` feature like the calculation optio
 * `Automatic`: Formulas are recalculated instantly whenever a change occurs in the dependent cells.
 * `Manual`: Formulas are recalculated only when triggered explicitly by the user using options like `Calculate Sheet` or `Calculate Workbook`.
 
-You can configure the calculate mode using the [`calculationMode`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#calculationmode) property of the Spreadsheet. These modes let you balance real-time updates with performance optimization.
+You can configure the calculate mode using the [`calculationMode`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#calculationmode) property of the Spreadsheet. These modes offer flexibility to balance real-time updates and performance optimization.
 
 ### Automatic Mode
 
@@ -175,7 +175,7 @@ If you enter an invalid formula in a cell, an error dialog with an error message
 
 ## Note
 
-You can refer to our [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/vue/#/tailwind3/spreadsheet/default.html) to see how to present and manipulate data.
+You can refer to our [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations.
 
 ## See Also
 
