@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in EJ2 ASP.NET MVC Spreadsheet Control
-description: "Documentation for the accessibility in the Essential JS2 Spreadsheet, featuring WAI-ARIA standards."
+title: Accessibility in EJ2 ASP.NET MVC Spreadsheet Control | Syncfusion
+description: "Learn about accessibility support in the Syncfusion ASP.NET MVC Spreadsheet control, including WAI-ARIA attributes and keyboard navigation."
 platform: document-processing
 control: Accessibility
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in EJ2 ASP.NET MVC Spreadsheet Control
 
-The Spreadsheet control followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Spreadsheet control follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Spreadsheet control is outlined below.
 
@@ -39,7 +39,7 @@ The accessibility compliance for the Spreadsheet control is outlined below.
 
 ## WAI-ARIA attributes
 
-The Spreadsheet control followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Spreadsheet control:
+The Spreadsheet control follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Spreadsheet control:
 
 | Attributes | Purpose |
 |-------|---------|
@@ -61,7 +61,9 @@ The Spreadsheet control followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/
 
 ## Keyboard interaction
 
-The Spreadsheet control followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Spreadsheet control.
+The Spreadsheet control follows [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guidelines, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Spreadsheet control.
+
+### Navigation Mode
 
 | Press | To do this |
 |----------|-------------|
@@ -71,15 +73,15 @@ The Spreadsheet control followed the [keyboard interaction](https://www.w3.org/W
 | Right arrow | Navigate from the active cell to the next cell in the same row. |
 | Tab | Navigate the active cell to the next cell in the same row. |
 | Shift + Tab | Navigate the active cell to the previous cell in the same row. |
-| Home | Moves the selection to starting column in worksheet. |
+| Home | Move the selection to the first column in the worksheet. |
 | Ctrl + Home | Move the selection to the first visible cell on a worksheet. |
 | Shift + Home | Extend the cell selection to the first column of a worksheet. |
 | Ctrl + Shift + Home | Extend the selection of cells to the beginning of the worksheet. |
-| Ctrl + End | Move to the last cell on a worksheet, right most last column and last row cell. |
+| Ctrl + End | Move the selection to the last cell in the worksheet (the intersection of the last row and last column). |
 | Page Up | Move page up. |    
 | Page Down | Move page down. |
-| Shift + Page Up | Perform page up by selecting all cells between. |
-| Shift + Page Down | Perform page down by selecting all cells between. |
+| Shift + Page Up | Extend the selection upward by one page. |
+| Shift + Page Down | Extend the selection downward by one page. |
 | Ctrl + Up | Navigate to the non-blank cell before the active cell in the same column. |
 | Ctrl + Down | Navigate to the last non-blank cell in the same column as the active cell. |
 | Ctrl + Left | Navigate to the non-blank cell before the active cell in the same row. |
@@ -94,14 +96,26 @@ The Spreadsheet control followed the [keyboard interaction](https://www.w3.org/W
 | Ctrl + Shift + Right | Extend the cell selection to the last non-blank cell in the same row as the active cell. |
 | Enter | Navigate the active cell to the next cell in the same column. | 
 | Shift + Enter | Navigate to the previous cell in the same column from the active cell. |
-| Alt + Enter | While editing, add a new line. |
+
+
+### Edit Mode
+
+| Press | To do this |
+|----------|-------------|
+| Alt + Enter | Insert a new line while editing a cell. |
 | Enter | Complete the cell editing and select the cell below in the same column. |
 | Shift + Enter | Complete the cell editing and select the cell above in the same column. |
 | Tab | Complete the cell editing and select the next cell in the same row. |
 | Shift + Tab | Complete the cell editing and select the previous cell in the same row. |
+
+
+### Ribbon Navigation
+
+| Press | To do this |
+|----------|-------------|
 | Alt | Focus on the active ribbon tab. |
-| Left | Move the focus to the previous items in the ribbon content. |
-| Right | Move the focus to the next items in the ribbon content. |
+| Left arrow | Move the focus to the previous item in the ribbon content. |
+| Right arrow | Move the focus to the next item in the ribbon content. |
 | Alt + Down | Open the ribbon dropdown menu. |
 | Esc / Alt + Up | Close the ribbon dropdown menu. |
 
