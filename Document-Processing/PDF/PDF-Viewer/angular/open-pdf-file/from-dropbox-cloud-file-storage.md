@@ -94,8 +94,7 @@ using Dropbox.Api.Files;
 4. Add the following private fields and constructor parameters to the `PdfViewerController` class. In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
-private IWebHostEnvironment _hostingEnvironment;
-private IMemoryCache _cache;
+
 private IConfiguration _configuration;
 public readonly string _accessToken;
 public readonly string _folderName;

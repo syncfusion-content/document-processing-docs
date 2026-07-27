@@ -37,8 +37,6 @@ using Google.Apis.Util.Store;
 4. Add the following private fields and constructor parameters to PdfViewerController. In the constructor, assign values from configuration to the corresponding fields.
 
 ```csharp
-private IWebHostEnvironment _hostingEnvironment;
-private IMemoryCache _cache;
 private IConfiguration _configuration;
 public readonly string folderId;
 public readonly string applicationName;
