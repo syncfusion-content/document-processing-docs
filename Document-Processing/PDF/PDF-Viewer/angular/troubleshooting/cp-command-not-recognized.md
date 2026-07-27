@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'cp' is not recognized as a command in Angular PDF Viewer | Syncfusion
+title: Troubleshoot 'cp' is not recognized as a command in Angular PDF Viewer control | Syncfusion
 description: Learn here all about how to solve 'cp' is not recognized as a command in Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resolving the 'cp' Command Not Recognized Error in Angular PDF Viewer
+# Troubleshoot error 'cp' is not recognized as a command
 
 The error message you're seeing, "'cp' is not recognized as an internal or external command," is because the `cp` command you're trying to use is not recognized on Windows command prompt.
 
