@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Custom Data in annotations in React PDF Viewer | Syncfusion
-description: Learn here all about how to use add custom Data in annotation in Syncfusion React PDF Viewer Component.
+title: Custom data in annotations in React PDF Viewer | Syncfusion
+description: Learn how to add custom data to annotations in the Syncfusion React PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -62,7 +62,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## Custom data for Individual Annotation
+## Custom data for individual annotations
 
 Provide customData inside individual annotation-type settings when you want specific payloads for different tools.
 
@@ -170,14 +170,14 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 ## See also
 
 - [Annotation Overview](../overview)
-- [Annotation Types](../annotations/annotation-types/area-annotation)
+- [Annotation Types](../annotation/annotation-types/area-annotation)
 - [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
-- [Create and Modify Annotation](../annotations/create-modify-annotation)
-- [Customize Annotation](../annotations/customize-annotation)
-- [Remove Annotation](../annotations/delete-annotation)
-- [Handwritten Signature](../annotations/signature-annotation)
-- [Export and Import Annotation](../annotations/export-import/export-annotation)
-- [Annotation Permission](../annotations/annotation-permission)
-- [Annotation in Mobile View](../annotations/annotations-in-mobile-view)
-- [Annotation Events](../annotations/annotation-event)
-- [Annotation API](../annotations/annotations-api)
+- [Create and Modify Annotation](../annotation/create-modify-annotation)
+- [Customize Annotation](../annotation/customize-annotation)
+- [Remove Annotation](../annotation/delete-annotation)
+- [Handwritten Signature](../annotation/signature-annotation)
+- [Export and Import Annotation](../annotation/export-import/export-annotation)
+- [Annotation Permission](../annotation/annotation-permission)
+- [Annotation in Mobile View](../annotation/annotations-in-mobile-view)
+- [Annotation Events](../annotation/annotation-event)
+- [Annotation API](../annotation/annotations-api)

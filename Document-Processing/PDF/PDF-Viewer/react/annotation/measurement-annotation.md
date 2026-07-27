@@ -60,9 +60,9 @@ function App() {
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         style={{ 'height': '640px' }}>
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
-         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation,
-         FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
       </PdfViewerComponent>
     </div>
   </div>);
@@ -170,11 +170,11 @@ function App() {
     });
   }
   return (<div>
-    <button onClick={addDistanceAnnotation}>Add Distance Annotation programatically</button>
-    <button onClick={addPerimeterAnnotation}>Add Perimeter Annotation programatically</button>
-    <button onClick={addAreaAnnotation}>Add Area Annotation programatically</button>
-    <button onClick={addRadiusAnnotation}>Add Radius Annotation programatically</button>
-    <button onClick={addVolumeAnnotation}>Add Volume Annotation programatically</button>
+    <button onClick={addDistanceAnnotation}>Add Distance Annotation programmatically</button>
+    <button onClick={addPerimeterAnnotation}>Add Perimeter Annotation programmatically</button>
+    <button onClick={addAreaAnnotation}>Add Area Annotation programmatically</button>
+    <button onClick={addRadiusAnnotation}>Add Radius Annotation programmatically</button>
+    <button onClick={addVolumeAnnotation}>Add Volume Annotation programmatically</button>
     <div className='control-section'>
       <PdfViewerComponent
         ref={(scope) => { pdfviewer = scope; }}
@@ -248,11 +248,11 @@ function App() {
     });
   }
   return (<div>
-    <button onClick={addDistanceAnnotation}>Add Distance Annotation programatically</button>
-    <button onClick={addPerimeterAnnotation}>Add Perimeter Annotation programatically</button>
-    <button onClick={addAreaAnnotation}>Add Area Annotation programatically</button>
-    <button onClick={addRadiusAnnotation}>Add Radius Annotation programatically</button>
-    <button onClick={addVolumeAnnotation}>Add Volume Annotation programatically</button>
+    <button onClick={addDistanceAnnotation}>Add Distance Annotation programmatically</button>
+    <button onClick={addPerimeterAnnotation}>Add Perimeter Annotation programmatically</button>
+    <button onClick={addAreaAnnotation}>Add Area Annotation programmatically</button>
+    <button onClick={addRadiusAnnotation}>Add Radius Annotation programmatically</button>
+    <button onClick={addVolumeAnnotation}>Add Volume Annotation programmatically</button>
     <div className='control-section'>
       <PdfViewerComponent
         ref={(scope) => { pdfviewer = scope; }}
@@ -353,11 +353,11 @@ function App() {
     }
   }
   return (<div>
-    <button onClick={editDistanceAnnotation}>Edit Distance Annotation programatically</button>
-    <button onClick={editPerimeterAnnotation}>Edit Perimeter Annotation programatically</button>
-    <button onClick={editAreaAnnotation}>Edit Area Annotation programatically</button>
-    <button onClick={editRadiusAnnotation}>Edit Radius Annotation programatically</button>
-    <button onClick={editVolumeAnnotation}>Edit Volume Annotation programatically</button>
+    <button onClick={editDistanceAnnotation}>Edit Distance Annotation programmatically</button>
+    <button onClick={editPerimeterAnnotation}>Edit Perimeter Annotation programmatically</button>
+    <button onClick={editAreaAnnotation}>Edit Area Annotation programmatically</button>
+    <button onClick={editRadiusAnnotation}>Edit Radius Annotation programmatically</button>
+    <button onClick={editVolumeAnnotation}>Edit Volume Annotation programmatically</button>
     <div className='control-section'>
       <PdfViewerComponent
         ref={(scope) => { pdfviewer = scope; }}
@@ -450,11 +450,11 @@ function App() {
     }
   }
   return (<div>
-    <button onClick={editDistanceAnnotation}>Edit Distance Annotation programatically</button>
-    <button onClick={editPerimeterAnnotation}>Edit Perimeter Annotation programatically</button>
-    <button onClick={editAreaAnnotation}>Edit Area Annotation programatically</button>
-    <button onClick={editRadiusAnnotation}>Edit Radius Annotation programatically</button>
-    <button onClick={editVolumeAnnotation}>Edit Volume Annotation programatically</button>
+    <button onClick={editDistanceAnnotation}>Edit Distance Annotation programmatically</button>
+    <button onClick={editPerimeterAnnotation}>Edit Perimeter Annotation programmatically</button>
+    <button onClick={editAreaAnnotation}>Edit Area Annotation programmatically</button>
+    <button onClick={editRadiusAnnotation}>Edit Radius Annotation programmatically</button>
+    <button onClick={editVolumeAnnotation}>Edit Volume Annotation programmatically</button>
     <div className='control-section'>
       <PdfViewerComponent
         ref={(scope) => { pdfviewer = scope; }}
@@ -608,6 +608,7 @@ Supported units for measurement annotations:
 ## Set default scale ratio during initialization
 
 Configure scale ratio defaults using `measurementSettings` (for example, `scaleRatio`, `conversionUnit`, and `displayUnit`) before creating the viewer. The following snippet demonstrates these settings.
+
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
 {% raw %}

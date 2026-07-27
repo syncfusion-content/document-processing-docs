@@ -17,7 +17,7 @@ The PDF Viewer provides tools to add, edit, and remove free-text annotations.
 To add a free-text annotation:
 
 * Click the **Edit Annotation** button in the PDF Viewer toolbar to reveal the annotation toolbar.
-* Select the **Free Text Annotation** button to enter free*text annotation mode.
+* Select the **Free Text Annotation** button to enter free-text annotation mode.
 * Tap or click anywhere on the page to add text.
 
 When the viewer is in pan mode, selecting the Free Text annotation switches the viewer to text-selection mode.

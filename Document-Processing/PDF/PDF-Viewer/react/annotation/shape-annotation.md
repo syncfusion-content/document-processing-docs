@@ -168,11 +168,11 @@ function App() {
     });
   }
   return (<div>
-    <button onClick={addLineAnnotation}>add Line Annotation programatically</button>
-    <button onClick={addArrowAnnotation}>add Arrow Annotation programatically</button>
-    <button onClick={addRectangleAnnotation}>add Rectangle Annotation programatically</button>
-    <button onClick={addCircleAnnotation}>add Circle Annotation programatically</button>
-    <button onClick={addPolygonAnnotation}>add Polygon Annotation programatically</button>
+    <button onClick={addLineAnnotation}>add Line Annotation programmatically</button>
+    <button onClick={addArrowAnnotation}>add Arrow Annotation programmatically</button>
+    <button onClick={addRectangleAnnotation}>add Rectangle Annotation programmatically</button>
+    <button onClick={addCircleAnnotation}>add Circle Annotation programmatically</button>
+    <button onClick={addPolygonAnnotation}>add Polygon Annotation programmatically</button>
     <div className='control-section'>
       <PdfViewerComponent
         ref={(scope) => { pdfviewer = scope; }}
@@ -246,11 +246,11 @@ function App() {
     });
   }
   return (<div>
-    <button onClick={addLineAnnotation}>add Line Annotation programatically</button>
-    <button onClick={addArrowAnnotation}>add Arrow Annotation programatically</button>
-    <button onClick={addRectangleAnnotation}>add Rectangle Annotation programatically</button>
-    <button onClick={addCircleAnnotation}>add Circle Annotation programatically</button>
-    <button onClick={addPolygonAnnotation}>add Polygon Annotation programatically</button>
+    <button onClick={addLineAnnotation}>add Line Annotation programmatically</button>
+    <button onClick={addArrowAnnotation}>add Arrow Annotation programmatically</button>
+    <button onClick={addRectangleAnnotation}>add Rectangle Annotation programmatically</button>
+    <button onClick={addCircleAnnotation}>add Circle Annotation programmatically</button>
+    <button onClick={addPolygonAnnotation}>add Polygon Annotation programmatically</button>
     <div className='control-section'>
       <PdfViewerComponent
         ref={(scope) => { pdfviewer = scope; }}
@@ -350,11 +350,11 @@ function App() {
     }
   }
   return (<div>
-    <button onClick={editLineAnnotation}>edit Line Annotation programatically</button>
-    <button onClick={editArrowAnnotation}>edit Arrow Annotation programatically</button>
-    <button onClick={editRectangleAnnotation}>edit Rectangle Annotation programatically</button>
-    <button onClick={editCircleAnnotation}>edit Circle Annotation programatically</button>
-    <button onClick={editPolygonAnnotation}>edit Polygon Annotation programatically</button>
+    <button onClick={editLineAnnotation}>edit Line Annotation programmatically</button>
+    <button onClick={editArrowAnnotation}>edit Arrow Annotation programmatically</button>
+    <button onClick={editRectangleAnnotation}>edit Rectangle Annotation programmatically</button>
+    <button onClick={editCircleAnnotation}>edit Circle Annotation programmatically</button>
+    <button onClick={editPolygonAnnotation}>edit Polygon Annotation programmatically</button>
     <div className='control-section'>
       <PdfViewerComponent
         ref={(scope) => { pdfviewer = scope; }}
@@ -446,11 +446,11 @@ function App() {
     }
   }
   return (<div>
-    <button onClick={editLineAnnotation}>edit Line Annotation programatically</button>
-    <button onClick={editArrowAnnotation}>edit Arrow Annotation programatically</button>
-    <button onClick={editRectangleAnnotation}>edit Rectangle Annotation programatically</button>
-    <button onClick={editCircleAnnotation}>edit Circle Annotation programatically</button>
-    <button onClick={editPolygonAnnotation}>edit Polygon Annotation programatically</button>
+    <button onClick={editLineAnnotation}>edit Line Annotation programmatically</button>
+    <button onClick={editArrowAnnotation}>edit Arrow Annotation programmatically</button>
+    <button onClick={editRectangleAnnotation}>edit Rectangle Annotation programmatically</button>
+    <button onClick={editCircleAnnotation}>edit Circle Annotation programmatically</button>
+    <button onClick={editPolygonAnnotation}>edit Polygon Annotation programmatically</button>
     <div className='control-section'>
       <PdfViewerComponent
         ref={(scope) => { pdfviewer = scope; }}
@@ -471,8 +471,6 @@ root.render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
-## Editing the properties of the shape annotation
 
 ## Edit properties of shape annotations
 
@@ -512,7 +510,7 @@ Line and arrow annotations include additional options in the Line Properties dia
 
 Modify annotations programmatically using the `editAnnotation()` method. The example below demonstrates selecting and editing an annotation.
 ```
-<button onclick="editAnnotation()()">Edit Annotation</button>
+<button onclick="editAnnotation()">Edit Annotation</button>
 
 <script>
 

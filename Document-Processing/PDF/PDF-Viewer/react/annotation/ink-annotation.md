@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ink annotation in React PDF Viewer control | Syncfusion
-description: Learn about ink annotations in the Syncfusion React PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
+description: Learn about ink annotations in the Syncfusion React PDF Viewer: add, edit, delete, and default settings.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -325,7 +325,7 @@ Change the opacity using the range slider in the Edit Opacity tool.
 
 ![Change ink opacity](../images/ink_opacity.png)
 
-## Set default properties during the control initialization
+## Set default properties during initialization
 
 Default properties for ink annotations can be set before creating the control by using the `inkAnnotationSettings` property on `PdfViewerComponent` (example below).
 

@@ -27,7 +27,7 @@ Annotation comments are added using the comment panel.
 
 ## Add a sticky note annotation to the PDF document programmatically
 
-Use the [addAnnotation()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation#annotation) method to add a sticky note annotation programmatically.
+Use the [addAnnotation()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation#addannotation) method to add a sticky note annotation programmatically.
 
 The following example demonstrates using `addAnnotation()` to create a sticky note annotation.
 
@@ -53,7 +53,7 @@ function App() {
     });
   }
   return (<div>
-    <button onClick={addAnnotation}>Add Annotation programatically</button>
+    <button onClick={addAnnotation}>Add Annotation programmatically</button>
     <div className='control-section'>
       <PdfViewerComponent
         ref={(scope) => { pdfviewer = scope; }}
@@ -94,7 +94,7 @@ function App() {
     });
   }
   return (<div>
-    <button onClick={addAnnotation}>Add Annotation programatically</button>
+    <button onClick={addAnnotation}>Add Annotation programmatically</button>
     <div className='control-section'>
       <PdfViewerComponent
         ref={(scope) => { pdfviewer = scope; }}
@@ -148,7 +148,7 @@ function App() {
     }
   }
   return (<div>
-    <button onClick={editAnnotation}>Edit Annotation programatically</button>
+    <button onClick={editAnnotation}>Edit Annotation programmatically</button>
     <div className='control-section'>
       <PdfViewerComponent
         ref={(scope) => { pdfviewer = scope; }}
@@ -193,7 +193,7 @@ function App() {
     }
   }
   return (<div>
-    <button onClick={editAnnotation}>Edit Annotation programatically</button>
+    <button onClick={editAnnotation}>Edit Annotation programmatically</button>
     <div className='control-section'>
       <PdfViewerComponent
         ref={(scope) => { pdfviewer = scope; }}

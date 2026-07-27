@@ -228,7 +228,7 @@ function App() {
     });
   }
   return (<div>
-    <button onClick={addAnnotation}>Add Annotation programatically</button>
+    <button onClick={addAnnotation}>Add Annotation programmatically</button>
     <div className='control-section'>
       <PdfViewerComponent
         ref={(scope) => { pdfviewer = scope; }}
@@ -268,7 +268,7 @@ function App() {
     });
   }
   return (<div>
-    <button onClick={addAnnotation}>Add Annotation programatically</button>
+    <button onClick={addAnnotation}>Add Annotation programmatically</button>
     <div className='control-section'>
       <PdfViewerComponent
         ref={(scope) => { pdfviewer = scope; }}
@@ -501,7 +501,7 @@ function App() {
     })
   }
   return (<div>
-    <button onClick={addAnnotation}>Add Annotation programatically</button>
+    <button onClick={addAnnotation}>Add Annotation programmatically</button>
     <div className='control-section'>
       <PdfViewerComponent
         ref={(scope) => { pdfviewer = scope; }}
@@ -541,7 +541,7 @@ function App() {
     })
   }
   return (<div>
-    <button onClick={addAnnotation}>Add Annotation programatically</button>
+    <button onClick={addAnnotation}>Add Annotation programmatically</button>
     <div className='control-section'>
       <PdfViewerComponent
         ref={(scope) => { pdfviewer = scope; }}
@@ -779,7 +779,7 @@ function App() {
     });
   }
   return (<div>
-    <button onClick={addAnnotation}>Add Annotation programatically</button>
+    <button onClick={addAnnotation}>Add Annotation programmatically</button>
     <div className='control-section'>
       <PdfViewerComponent
         ref={(scope) => { pdfviewer = scope; }}
@@ -819,7 +819,7 @@ function App() {
     });
   }
   return (<div>
-    <button onClick={addAnnotation}>Add Annotation programatically</button>
+    <button onClick={addAnnotation}>Add Annotation programmatically</button>
     <div className='control-section'>
       <PdfViewerComponent
         ref={(scope) => { pdfviewer = scope; }}
@@ -1057,7 +1057,7 @@ function App() {
     });
   }
   return (<div>
-    <button onClick={addAnnotation}>Add Annotation programatically</button>
+    <button onClick={addAnnotation}>Add Annotation programmatically</button>
     <div className='control-section'>
       <PdfViewerComponent
         ref={(scope) => { pdfviewer = scope; }}
@@ -1097,7 +1097,7 @@ function App() {
     });
   }
   return (<div>
-    <button onClick={addAnnotation}>Add Annotation programatically</button>
+    <button onClick={addAnnotation}>Add Annotation programmatically</button>
     <div className='control-section'>
       <PdfViewerComponent
         ref={(scope) => { pdfviewer = scope; }}
@@ -1181,7 +1181,7 @@ function App() {
           highlightSettings = {{author: 'Guest User', subject: 'Important', color: '#ffff00', opacity: 0.9, modifiedDate: ''}}
           underlineSettings = {{author: 'Guest User', subject: 'Points to be remembered', color: '#00ffff', opacity: 0.9,modifiedDate: ''}}
           strikethroughSettings = {{author: 'Guest User', subject: 'Not Important', color: '#ff00ff', opacity: 0.9, modifiedDate: ''}}
-          squigglySettings - {{author: 'Guest User', subject: 'Corrections', color: '#00ff00', opacity: 0.9, modifiedDate: ''}}>
+          squigglySettings = {{author: 'Guest User', subject: 'Corrections', color: '#00ff00', opacity: 0.9, modifiedDate: ''}}>
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
                                   Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
         </PdfViewerComponent>

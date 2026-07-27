@@ -47,7 +47,7 @@ import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
          BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation,
          FormFields, FormDesigner, PageOrganizer, Inject, SignStampItem, StandardBusinessStampItem,
-         DynamicStampItem, Inject} from '@syncfusion/ej2-react-pdfviewer';
+         DynamicStampItem } from '@syncfusion/ej2-react-pdfviewer';
 function App() {
   function dynamicStamp() {
     var viewer = document.getElementById('container').ej2_instances[0];
@@ -91,7 +91,7 @@ import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
          BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation,
          FormFields, FormDesigner, PageOrganizer, Inject, SignStampItem, StandardBusinessStampItem,
-         DynamicStampItem, Inject} from '@syncfusion/ej2-react-pdfviewer';
+         DynamicStampItem } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
   function dynamicStamp() {
@@ -142,7 +142,7 @@ Only JPG and JPEG image formats are supported for custom stamp annotations.
 
 ## Add a stamp annotation programmatically
 
-Use the [addAnnotation()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation#annotation) method to add stamp annotations programmatically.
+Use the [addAnnotation()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation#addannotation) method to add stamp annotations programmatically.
 
 The examples below demonstrate using `addAnnotation()` to create stamp annotations.
 
@@ -333,7 +333,7 @@ function App() {
     }
   }
   return (<div>
-    <button onClick={editAnnotation}>Edit Annotation programatically</button>
+    <button onClick={editAnnotation}>Edit Annotation programmatically</button>
     <div className='control-section'>
       <PdfViewerComponent
         ref={(scope) => { pdfviewer = scope; }}
@@ -378,7 +378,7 @@ function App() {
     }
   }
   return (<div>
-    <button onClick={editAnnotation}>Edit Annotation programatically</button>
+    <button onClick={editAnnotation}>Edit Annotation programmatically</button>
     <div className='control-section'>
       <PdfViewerComponent
         ref={(scope) => { pdfviewer = scope; }}
